@@ -1,4 +1,6 @@
-Contenu de quelques enseignements à l'ENSAE autour de la programmation
+ï»¿
+
+Contenu de quelques enseignements Ã  l'ENSAE autour de la programmation
 ======================================================================
 
    
@@ -12,13 +14,13 @@ Contenu de quelques enseignements à l'ENSAE autour de la programmation
 Description        
 -----------
 
-J'ai commencé de projet pour bénéficier des outils d'automatisation que j'ai 
-implémentés sur des modules python. L'objectif est de pouvoir mettre en ligne
-des cours, des contenus principalement réalisés avec des
+J'ai commencÃ© de projet pour bÃ©nÃ©ficier des outils d'automatisation que j'ai 
+implÃ©mentÃ©s sur des modules python. L'objectif est de pouvoir mettre en ligne
+des cours, des contenus principalement rÃ©alisÃ©s avec des
 `notebooks <http://ipython.org/notebook.html>`_.
 
     
-Dépendences
+DÃ©pendences
 -----------
 
 * `numpy <http://www.numpy.org/>`_

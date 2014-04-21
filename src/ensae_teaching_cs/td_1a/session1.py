@@ -1,4 +1,4 @@
-# -*- coding: latin-1 -*-
+# -*- coding: utf8 -*-
 """
 @file
 @brief  quelques fonctions à propos de la première séance
