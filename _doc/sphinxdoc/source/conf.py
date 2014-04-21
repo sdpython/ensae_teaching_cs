@@ -27,6 +27,7 @@ def extract_version_from_setup():
     else:
         raise FileNotFoundError("unable to find setup.py, tried: " + setup)
 
+project_var_name_t = "ENSAE, Programmation"
 project_var_name = "ensae_teaching_cs"
 author           = "Xavier Dupré"
 version          = extract_version_from_setup()
@@ -71,7 +72,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = project_var_name + ' documentation'
+project = project_var_name_t
 copyright = '2014, ' + author
 
 # The full version, including alpha/beta/rc tags.
@@ -222,7 +223,7 @@ latex_elements = {
 latex_documents = [
   ( 'index', 
     '%s_doc.tex' % project_var_name, 
-    '%s Documentation' % project_var_name,
+    '%s' % project_var_name_t,
     author, 
     'manual'),
 ]
@@ -255,7 +256,7 @@ latex_documents = [
 man_pages = [
     (   'index', 
         '%s_doc' % project_var_name, 
-        '%s Documentation' % project_var_name,
+        '%s' % project_var_name_t,
         [author], 
         1)
 ]
@@ -270,10 +271,13 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', '%s_documentation' % project_var_name, '%s Documentation' % project_var_name,
-   author, '%s documentation' % project_var_name, 
-   'One line description of project.',
-   'Miscellaneous'),
+  ( 'index', 
+    '%s' % project_var_name, 
+    '%s' % project_var_name_t,
+    author, 
+    '%s' % project_var_name, 
+    'ENSAE, contenu des enseignements',
+    'teachings'),
 ]
 
 # Documents to append as an appendix to all manuals.

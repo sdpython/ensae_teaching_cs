@@ -4,27 +4,14 @@
 README
 ======
 
-   
-**Links:**
-    * `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs/>`_
+This page gives access to the content of practical sessions I give at the
+`ENSAE <http://www.ensae.fr/>`_. They are based on Python. The project
+is hosted on GitHub can be modified by sending me pull request:
+
+    * `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teching_cs/>`_
     * `documentation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_
     * `Windows Setup <http://www.xavierdupre.fr/site2013/index_code.html#ensae_teaching_cs>`_
-
-
-Description        
------------
-
-
-    
-Dependencies
-------------
-
-* `numpy <http://www.numpy.org/>`_
-* `pandas <http://pandas.pydata.org/>`_
-* `pyensae <https://pypi.python.org/pypi/pyensae>`_
-
-On Windows, most of the interesting modules can installed from `here <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
-
+    * :ref:`l-README`
 
 Contributions
 -------------
