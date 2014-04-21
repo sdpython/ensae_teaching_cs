@@ -62,7 +62,7 @@ Index
 
     * :ref:`modules <modindex>`, :ref:`modules v2 <l-modules>`
     * :ref:`l-classes`, :ref:`l-methods`, :ref:`l-functions`
-    * :ref:`genindex`, :ref:`glossary`
+    * :ref:`genindex`, :ref:`glossaire`
 
 **Les notebooks, les exemples ou questions fréquentes**
 
@@ -75,4 +75,13 @@ Index
     * :ref:`search`
     * :ref:`l-changes`
 
+Plan
+====
 
+.. toctree::
+    :maxdepth: 1
+
+    td_1a
+    all_notebooks
+    all_example
+    all_FAQ

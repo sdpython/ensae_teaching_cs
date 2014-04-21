@@ -1,6 +1,8 @@
 Glossaire
 =========
 
+.. glossaire:
+
 .. glossary::
     
     ENSAE ParisTech
