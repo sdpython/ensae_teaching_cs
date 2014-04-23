@@ -82,6 +82,8 @@ Plan
     :maxdepth: 1
 
     td_1a
+    expose_divers
     all_notebooks
     all_example
     all_FAQ
+    glossary
