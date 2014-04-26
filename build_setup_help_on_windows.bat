@@ -19,7 +19,7 @@ set pythonexe="c:\Python34_x64\python"
 %pythonexe% clean_pyd.py
 %pythonexe% setup.py build bdist_wininst --plat-name=win-amd64
 
-set pythonexe="c:\Python34\pythonw"
+set pythonexe="c:\Python34\python"
 %pythonexe% clean_pyd.py
 %pythonexe% setup.py sdist --formats=gztar,zip --verbose
 %pythonexe% setup.py bdist_wininst

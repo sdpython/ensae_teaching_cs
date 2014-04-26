@@ -45,10 +45,10 @@ Contenu des enseignements
 ----------------------------
 
     * :ref:`ENSAE, 1A, initiation à la programmation et l'algorithmie <l-td1a>`
+    * :ref:`Exposé divers non abordés en cours <l-extra>`
 
 Quelques liens:
 
-    * `syntaxe markdown <http://daringfireball.net/projects/markdown/syntax#em>`_
     * `Programmation avec le langage Python <http://www.xavierdupre.fr/site2013/documents/python/initiation_via_python_ellipse_mai_2010.pdf>`_
     * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_
     * `autres <http://www.xavierdupre.fr/site2013/index_documents.html>`_
@@ -58,12 +58,6 @@ Quelques liens:
 Index
 =====
     
-**Index des fonctions, classes utilisées durant les séances**
-
-    * :ref:`modules <modindex>`, :ref:`modules v2 <l-modules>`
-    * :ref:`l-classes`, :ref:`l-methods`, :ref:`l-functions`
-    * :ref:`genindex`, :ref:`glossaire`
-
 **Les notebooks, les exemples ou questions fréquentes**
 
     * :ref:`l-example`
@@ -73,6 +67,13 @@ Index
 **Pour chercher**
 
     * :ref:`search`
+    * :ref:`l-glossaire`
+
+**Index des fonctions, classes utilisées durant les séances**
+
+    * :ref:`modules <modindex>`, :ref:`modules v2 <l-modules>`
+    * :ref:`l-classes`, :ref:`l-methods`, :ref:`l-functions`
+    * :ref:`genindex`
     * :ref:`l-changes`
 
 Plan
@@ -83,7 +84,10 @@ Plan
 
     td_1a
     expose_divers
-    all_notebooks
     all_example
     all_FAQ
+    all_notebooks
     glossary
+    filechanges
+    README
+    index_modules
