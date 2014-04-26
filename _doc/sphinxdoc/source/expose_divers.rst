@@ -7,6 +7,8 @@ Exposés divers
 
     
 .. toctree::
+    :numbered:
 
-    notebooks/example_RWR
-    notebooks/Graphe_et_Map_Reduce
+    notebooks/expose_graphe_et_map_reduce
+    notebooks/expose_rwr_recommandation
+    

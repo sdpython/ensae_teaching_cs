@@ -1,7 +1,9 @@
-﻿Glossaire
-=========
-
+﻿
 .. _l-glossaire:
+
+
+Glossaire
+=========
 
 .. glossary::
     
