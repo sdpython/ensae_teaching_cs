@@ -61,7 +61,7 @@ Index
 **Les notebooks, les exemples ou questions fréquentes**
 
     * :ref:`l-example`
-    * :ref:`l-FAQ`
+    * :ref:`l-FAQs`
     * :ref:`l-notebooks`
 
 **Pour chercher**
@@ -85,8 +85,8 @@ Plan
     td_1a
     expose_divers
     all_example
-    all_FAQ
     all_notebooks
+    FAQ
     glossary
     filechanges
     README

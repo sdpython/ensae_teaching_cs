@@ -1,32 +1,68 @@
-# -*- coding: utf8 -*-
+# -*- coding: utf-8 -*-
 """
 @file
-@brief  quelques fonctions ‡ propos de la premiËre sÈance
+@brief  quelques fonctions √† propos de la premi√®re s√©ance
+
 """
+
+def commentaire_accentues():
+    """
+    L'aide de cette fonction contient assur√©ments des accents.
+    
+    @FAQ(Python n'accepte pas les accents)
+    Le langage Python a √©t√© con√ßu en langage anglais. D√®s qu'on on ajoute un caract√®re
+    qui ne fait pas partie de l'alphabet anglais (ponctuation comprise), il d√©clenche une erreur :
+
+    @code
+    File "faq_cvxopt.py", line 3
+    SyntaxError: Non-UTF-8 code starting with '\xe8' in file faq_cvxopt.py on line 4, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+    @endcode
+
+    Pour la r√©soudre, il faut dire √† l'interpr√©teur que des caract√®res non anglais peuvent appara√Ætre 
+    et √©crire sur la premi√®re ligne du programme :
+
+    @code
+    # -*- coding: latin-1 -*-
+    @endcode
+
+    Ou pour tout caract√®re y compris chinois :
+
+    @code
+    # -*- coding: utf-8 -*-
+    @endcode
+    
+    Si vous utilisez l'√©diteur `SciTE <http://www.scintilla.org/SciTE.html>`_ sous Windows,
+    apr√®s avoir ajout√© cette ligne avec l'encoding `utf-8`,
+    il est conseill√© de fermer le fichier puis de le r√©ouvrir.
+    SciTE le traitera diff√©remment.
+
+    @endFAQ
+    """
+    pass
 
 def dix_entiers_carre():
     """
-    fait la somme des dix premiers entiers au carrÈ
+    fait la somme des dix premiers entiers au carr√©
     
-    :returns: nombre rÈel
+    :returns: nombre r√©el
     
-    @FAQ(Quelle est la diffÈrence entre return et print ?)
-    La fonction ``print`` sert ‡ afficher un rÈsultat sur la sortie standard.
-    Elle peut Ítre utilisÈe ‡ tout moment
-    mais elle n'a pas d'impact sur le dÈroulement programme. Le mot-clÈ ``return``
-    n'est utilisÈ que dans une fonction. Lorsque le programme rencontre
-    une instruction commenÁant par ``return``, il quitte la fonction
-    et transmet le rÈsultat ‡ l'instruction qui a appelÈ la fonction.
+    @FAQ(Quelle est la diff√©rence entre return et print ?)
+    La fonction ``print`` sert √† afficher un r√©sultat sur la sortie standard.
+    Elle peut √™tre utilis√©e √† tout moment
+    mais elle n'a pas d'impact sur le d√©roulement programme. Le mot-cl√© ``return``
+    n'est utilis√© que dans une fonction. Lorsque le programme rencontre
+    une instruction commen√ßant par ``return``, il quitte la fonction
+    et transmet le r√©sultat √† l'instruction qui a appel√© la fonction.
     @endFAQ
     
-    @example(calcul de la somme des dix premiers entiers au carrÈ)
-    Ce calcul simple peut s'Ècrire de diffÈrentes maniËres.
+    @example(calcul de la somme des dix premiers entiers au carr√©)
+    Ce calcul simple peut s'√©crire de diff√®rentes mani√®res.
     @code
     s = 0
     for i in range(1,11):
         s += i**2
     @endcode
-    D'une faÁon abrÈgÈe :
+    D'une fa√ßon abr√©g√©e :
     @code
     s = sum ( [ i**2 for i in range(1,11) ] )
     @endcode
@@ -36,3 +72,4 @@ def dix_entiers_carre():
     for i in range(1,11):
         s += i**2
     return s
+    
