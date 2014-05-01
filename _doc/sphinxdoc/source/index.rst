@@ -42,52 +42,51 @@ Je recommande la version `64bit, v3.3 <https://www.python.org/downloads/release/
 
 
 Contenu des enseignements
-----------------------------
+-------------------------
 
     * :ref:`ENSAE, 1A, initiation à la programmation et l'algorithmie <l-td1a>`
     * :ref:`Exposé divers non abordés en cours <l-extra>`
 
-Quelques liens:
+Quelques références
+-------------------
 
     * `Programmation avec le langage Python <http://www.xavierdupre.fr/site2013/documents/python/initiation_via_python_ellipse_mai_2010.pdf>`_
     * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_
-    * `autres <http://www.xavierdupre.fr/site2013/index_documents.html>`_
-
-
+    * `Exercices de programmation <http://www.xavierdupre.fr/blog/2014-03-22_nojs.html>`_
+    * `Python avec la Khan Academy <http://www.xavierdupre.fr/blog/2013-11-29_nojs.html>`_
+    * `Python Tutor <http://www.pythontutor.com/>`_
     
-Index
-=====
+Python
+------
+
+    * `Questions Fréquentes <https://docs.python.org/3.4/faq/index.html>`_
+    * `Modules standards <https://docs.python.org/3.4/library/>`_
+    * `Installation de modules sous Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
     
-**Les notebooks, les exemples ou questions fréquentes**
+Articles de blog
+----------------
 
-    * :ref:`l-example`
-    * :ref:`l-FAQs`
-    * :ref:`l-notebooks`
+    * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
+    * `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_
+    * `Résoudre un sudoku avec Excel et VBA <http://www.xavierdupre.fr/blog/2014-02-08_nojs.html>`_
+    * `Fusionner deux tableaux <http://www.xavierdupre.fr/blog/2013-11-21_nojs.html>`_
+    * `De l'idée au programme informatique <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_
+    * `Compter les pièces de monnaie pour obtenir un montant <http://www.xavierdupre.fr/blog/2013-11-09_nojs.html>`_
+    * `Désactiver les logs de cvxopt <http://www.xavierdupre.fr/blog/2014-04-16_nojs.html>`_
+    * `Machine Learning with Python <http://www.xavierdupre.fr/blog/2013-08-10_nojs.html>`_
+    
 
-**Pour chercher**
-
-    * :ref:`search`
-    * :ref:`l-glossaire`
-
-**Index des fonctions, classes utilisées durant les séances**
-
-    * :ref:`modules <modindex>`, :ref:`modules v2 <l-modules>`
-    * :ref:`l-classes`, :ref:`l-methods`, :ref:`l-functions`
-    * :ref:`genindex`
-    * :ref:`l-changes`
-
-Plan
-====
 
 .. toctree::
     :maxdepth: 1
+    :hidden:
 
     td_1a
     expose_divers
-    all_example
-    all_notebooks
+    examples
     FAQ
     glossary
     filechanges
     README
-    index_modules
+    indexes
+    

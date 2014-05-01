@@ -14,7 +14,8 @@ pour un usage scientifique.
 .. toctree::
     :hidden:
     
-    TD 1 : Premiers pas en Python <notebooks/td1a_cenonce_session1>
-
+    td_1a_enonce
+    td_1a_correction
+    
     
     
