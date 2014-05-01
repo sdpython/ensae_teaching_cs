@@ -55,7 +55,7 @@ def dix_entiers_carre():
     et transmet le résultat à l'instruction qui a appelé la fonction.
     @endFAQ
     
-    @example(calcul de la somme des dix premiers entiers au carré)
+    @example(TD 1A___calcul de la somme des dix premiers entiers au carré)
     Ce calcul simple peut s'écrire de diffèrentes manières.
     @code
     s = 0

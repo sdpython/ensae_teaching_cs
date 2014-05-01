@@ -32,6 +32,26 @@ class TestConstructionClassique(unittest.TestCase):
         assert recherche([2,3,45],3)==1
         assert recherche([2,3,45],4)==-1
         assert minindex([2,3,45,-1,5]) == (-1,3)
-
+        li = range (0,100,2)
+        assert recherche_dichotomique (li, 48) == 24
+        assert recherche_dichotomique (li, 49) == -1
+        s = "case11;case12;case13|case21;case22;case23"
+        mat = text2mat(s,"|",";")
+        t = mat2text(mat,"|",";")
+        assert t == s
+        tab = ["zero", "un", "deux"]  
+        r = triindex(tab)
+        assert r == [('deux', 2), ('un', 1), ('zero', 0)]  
+        li = ["un", "deux", "un", "trois"]
+        r = compte(li)
+        assert r == {'trois': 1, 'deux': 1, 'un': 2}
+        mat = [[0,1,2],[3,4,5]]
+        r = mat2vect(mat)
+        assert r == [0, 1, 2, 3, 4, 5]
+        m = vect2mat(r,3)
+        assert m == mat
+        x2 = integrale( lambda x: x, 0, 2, 1000)
+        assert x2 == 2
+        
 if __name__ == "__main__"  :
     unittest.main ()    

@@ -7,4 +7,4 @@ Exemples, bouts de code
 .. toctree::
 
     all_example_constructionclassique
-    all_example
+    all_example_TD1A
