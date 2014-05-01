@@ -58,7 +58,7 @@ extensions = [  'sphinx.ext.autodoc',
                 'sphinx.ext.graphviz',
                 'sphinx.ext.inheritance_diagram',
                 ]
-
+                
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['phdoc_static']
 
@@ -217,6 +217,9 @@ latex_elements = {
 # Additional stuff for the LaTeX preamble.
 #'preamble': '',
 }
+
+latex_path  = r"C:\Program Files\MiKTeX 2.9\miktex\bin\x64"
+pandoc_path = r"%USERPROFILE%\AppData\Local\Pandoc"
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).

@@ -1,7 +1,7 @@
 ﻿
 
-ENSAE, Programmation
-====================
+ENSAE - Programmation - Xavier Dupré
+====================================
 
 Cette page donne accès au contenu des séances de travaux pratiques en programmation
 que je dispense à l'`ENSAE <http://www.ensae.fr/>`_. Ils s'appuient sur 

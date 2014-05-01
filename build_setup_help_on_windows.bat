@@ -29,3 +29,9 @@ rem help
 %pythonexe% -u make_help.py
 if not exist dist\html mkdir dist\html
 xcopy /E /C /I /Y _doc\sphinxdoc\build\html dist\html
+
+if not exist dist\latex mkdir dist\latex
+xcopy /E /C /I /Y _doc\sphinxdoc\build\latex dist\latex
+
+if not exist dist\singlehtml mkdir dist\singlehtml
+xcopy /E /C /I /Y _doc\sphinxdoc\build\latex dist\singlehtml
