@@ -10,12 +10,14 @@ Les six séances suivantes sont centrées autour de l'utilisation de la programm
 pour un usage scientifique.
 
 - :ref:`TD 1 : Premiers pas en Python <td1acenoncesession1rst>`  (:ref:`correction <td1acorrectionsession1rst>`)
+- :ref:`TD 2 : Variables, boucles, corrections <td1acenoncesession2rst>`  (:ref:`correction <td1acorrectionsession2rst>`)
 
 .. toctree::
     :hidden:
     
     td_1a_enonce
     td_1a_correction
+
     
     
     

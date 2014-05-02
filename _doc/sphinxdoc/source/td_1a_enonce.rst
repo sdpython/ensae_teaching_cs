@@ -8,6 +8,7 @@
 .. toctree::
     
     TD 1 : Premiers pas en Python <notebooks/td1a_cenonce_session1>
+    TD 2 : Variables, boucles, fonctions <notebooks/td1a_cenonce_session2>
 
     
     
