@@ -46,6 +46,7 @@ Contenu des enseignements
 
     * :ref:`ENSAE, 1A, initiation à la programmation et l'algorithmie <l-td1a>`
     * :ref:`Exposé divers non abordés en cours <l-extra>`
+    * :ref:`Exercices d'algorithmie <l-exoalgo>`
 
 Quelques références
 -------------------
@@ -55,6 +56,7 @@ Quelques références
     * `Exercices de programmation <http://www.xavierdupre.fr/blog/2014-03-22_nojs.html>`_
     * `Python avec la Khan Academy <http://www.xavierdupre.fr/blog/2013-11-29_nojs.html>`_
     * `Python Tutor <http://www.pythontutor.com/>`_
+    * `version PDF de ce site <http://www.xavierdupre.fr/app/ensae_teaching_cs/latex/ensae_teaching_cs_doc.pdf>`_
     
 Python
 ------
@@ -88,7 +90,9 @@ Des petits details
 
     td_1a
     expose_divers
+    exercices
     examples
+    all_example
     FAQ
     glossary
     filechanges
