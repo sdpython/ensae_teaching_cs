@@ -2,8 +2,8 @@
 .. _l-exoalgo:
 
 
-Exerices autour d'algorithmes
-=============================
+Exercices autour d'algorithmes
+==============================
 
     
 .. toctree::

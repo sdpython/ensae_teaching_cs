@@ -76,12 +76,16 @@ Articles de blog
     * `Compter les pièces de monnaie pour obtenir un montant <http://www.xavierdupre.fr/blog/2013-11-09_nojs.html>`_
     * `Désactiver les logs de cvxopt <http://www.xavierdupre.fr/blog/2014-04-16_nojs.html>`_
     * `Machine Learning with Python <http://www.xavierdupre.fr/blog/2013-08-10_nojs.html>`_
+    * `Quelques astuces pour accélérer un programme <http://www.xavierdupre.fr/blog/2014-04-12_nojs.html>`_
+    * `Quelques précisions sur les projets informatiques (finance) <http://www.xavierdupre.fr/blog/2014-04-05_nojs.html>`_
+    * `A small video on sorting algorithm <http://www.xavierdupre.fr/blog/2014-04-04_nojs.html>`_
     
 Des petits details
 ------------------
 
     * `Why Lists Can't Be Dictionary Keys <https://wiki.python.org/moin/DictionaryKeys>`_
-
+    * `Time Complexity <https://wiki.python.org/moin/TimeComplexity>`_
+    * `List of data structures <http://en.wikipedia.org/wiki/List_of_data_structures>`_
 
 
 .. toctree::
