@@ -73,3 +73,11 @@ def dix_entiers_carre():
         s += i**2
     return s
     
+def racine_carree(x):
+    """
+    retourne la racine carrée d'un nombre
+    
+    @param  x       nombre
+    @return         racine carrée
+    """
+    return x**0.5
