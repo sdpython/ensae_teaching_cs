@@ -1,4 +1,4 @@
-<footer>
+﻿<footer>
   {% if next or prev %}
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       {% if next %}
@@ -18,12 +18,12 @@
       {%- if hasdoc('copyright') %}
         {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
       {%- else %}
-        {% trans copyright=copyright|e %}&copy; Copyright {{ copyright }}.{% endtrans %}
+        {% trans copyright=copyright|e %} {{ copyright }}.{% endtrans %}
       {%- endif %}
     {%- endif %}
 
-    {%- if last_updated %}
-      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+  <a href="http://www.xavierdupre.fr/"><img src="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_static/project_ico.ico" width="15" /></a>  {%- if last_updated %}
+      {% trans last_updated=last_updated|e %}Dernière mise à jour : {{ last_updated }}.{% endtrans %}
     {%- endif %}
     </p>
   </div>

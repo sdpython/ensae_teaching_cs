@@ -1,4 +1,5 @@
 ﻿
+:tocdepth: 4
 
 ENSAE - Programmation - Xavier Dupré
 ====================================
@@ -89,7 +90,6 @@ Des petits details
 
 
 .. toctree::
-    :maxdepth: 1
     :hidden:
 
     td_1a

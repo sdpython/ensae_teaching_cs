@@ -10,5 +10,3 @@ Index
     index_method
     index_classe
     genindex
-    all_notebooks
-    all_indexes
