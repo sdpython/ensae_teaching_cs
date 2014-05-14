@@ -2,8 +2,8 @@
 .. _l-td1a:
 
 
-ENSAE : TD 1A, informatique
-===========================
+TD 1A
+=====
 
 **Enoncés des séances de programmation et d'algorithmie**
 

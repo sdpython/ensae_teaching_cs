@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 """
 @file
-@brief Quelques problèmes récurrents avec `CVXOPT <http://cvxopt.org/>`_.
+@brief Quelques questions d'ordre général autour du langage Python.
 
 """
 
 def entier_grande_taille():
     """
+    
     @FAQ(Quel est l'entier le plus grand ?)
     La version 3 du langage Python a supprimé la constante ``sys.maxint``
     qui définissait l'entier le plus grand (voir 
-    `What’s New In Python 3.0 <https://docs.python.org/3.1/whatsnew/3.0.html#integers>`_).
+    `What's New In Python 3.0 <https://docs.python.org/3.1/whatsnew/3.0.html#integers>`_).
     De ce fait la fonction `getrandbit <https://docs.python.org/3.4/library/random.html#random.getrandbits>`_
     retourne un entier aussi grand que l'on veut.
     

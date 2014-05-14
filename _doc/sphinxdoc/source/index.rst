@@ -96,7 +96,7 @@ Des petits details
     expose_divers
     exercices
     examples
-    all_example
+    projet_info
     FAQ
     glossary
     filechanges
