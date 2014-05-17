@@ -32,6 +32,14 @@ def entier_grande_taille():
     du langage Python (voir `Overview of gmpy2 <https://gmpy2.readthedocs.org/en/latest/overview.html>`_).
     
     @endFAQ
+    
+    @FAQ(Tabulations ou espace ?)
+    Il est préférable de ne pas utiliser les tabulations et de les remplacer par des espaces.
+    Lorsqu'on passe d'un Editeur à un autre, les espaces ne bougent pas. Les tabulations sont plus ou moins grandes visuellement.
+    L'essentiel est de ne pas mélanger.
+    Dans `SciTE <http://www.scintilla.org/SciTE.html>`_, il faut aller dans le menu Options / Change Indentation Settings...
+    Tous les éditeurs ont une option similaire.
+    @endFAQ
     """
     pass
 
