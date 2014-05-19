@@ -11,6 +11,7 @@
     TD 2 : Variables, boucles, fonctions <notebooks/td1a_cenonce_session2>
     TD 3 : Dictionnaires, fonctions <notebooks/td1a_cenonce_session3>
     TD 4 : Fichiers, modules, expressions régulières <notebooks/td1a_cenonce_session4>
+    TD 5 : Classes et carrés magiques <notebooks/td1a_cenonce_session5>
 
     
     
