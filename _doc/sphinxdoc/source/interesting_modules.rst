@@ -1,15 +1,17 @@
+Ôªø
 
-
-Modules intÈressants (pour un ENSAE)
+Modules int√©ressants (pour un ENSAE)
 ====================================
 
-Les modules indispensables sont intÈgrÈs ‡ la distribution 
-`WinPython <http://winpython.sourceforge.net/>`_.
+Les modules indispensables sont int√©gr√©s √† la distribution 
+`WinPython <http://winpython.sourceforge.net/>`_. 
+Tous ces modules ont parfois des d√©pendances qui ne sont pas n√©cessaires incluses dans cette liste.
+Elles ne sont pas toujours n√©cessaires.
 
 Les indispensables
 ------------------
 
-    * `ipython <http://ipython.org/index.html>`_ : gestion des notebooks (des pages blanches mÈlangeant code, Èquations, graphiques)
+    * `ipython <http://ipython.org/index.html>`_ : gestion des notebooks (des pages blanches m√©langeant code, √©quations, graphiques)
     * `matplotlib <http://matplotlib.org/>`_ : graphes scientifiques
     * `numpy <http://www.numpy.org/>`_ : calcul matriciel
     * `pandas <http://pandas.pydata.org/>`_ : gestion de `DataFrame <http://en.wikipedia.org/wiki/Data_frame>`_
@@ -20,27 +22,34 @@ Extensions
 
     * `cvxopt <http://cvxopt.org/>`_ : optimisation quadratique sous contraintes
     * `ggplot <https://github.com/yhat/ggplot/>`_
-    * `kivy <http://kivy.org/#home>`_ : pour faire des jeux ou des applications pour tablettes, tÈlÈphones
+    * `kivy <http://kivy.org/#home>`_ : pour faire des jeux ou des applications pour tablettes, t√©l√©phones
     * `networkx <http://networkx.github.io/>`_ : dessin de graphes (simple)
+    * `openpyxl <http://pythonhosted.org/openpyxl/>`_ : conversion de DataFrame en feuille Excel
     * `Pillow <https://github.com/python-imaging/Pillow>`_ : traitement d'image
     * `Scipy <http://www.scipy.org/>`_ : calcul scientifiques
-    * `statsmodels <http://statsmodels.sourceforge.net/>`_ : modËles linÈaires
+    * `statsmodels <http://statsmodels.sourceforge.net/>`_ : mod√®les lin√©aires
+
+Pour les TD et projets √† l'ENSAE
+--------------------------------
+
+    * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ : outils pour les √©l√®ves de l'ENSAE
+    * `pyquickhelper <http://www.xavierdupre.fr/app/`pyquickhelper/helpsphinx/index.html>`_ : d√©pendences de ``pyensae``
     
-SpÈcialistes
+Sp√©cialistes
 ------------
 
     * `Blosc <https://github.com/Blosc/python-blosc>`_
-    * `CGAL Python <http://cgal-python.gforge.inria.fr/>`_ : VoronoÔ, Delaunay, ...
-    * `GMPY <https://code.google.com/p/gmpy/>`_ : calcul en grande prÈcision
+    * `CGAL Python <http://cgal-python.gforge.inria.fr/>`_ : Vorono√Ø, Delaunay, ...
+    * `GMPY <https://code.google.com/p/gmpy/>`_ : calcul en grande pr√©cision
     * `liblinear <http://www.csie.ntu.edu.tw/~cjlin/liblinear/>`_ : calcul matriciel en grande dimension
     * `libsvm <http://www.csie.ntu.edu.tw/~cjlin/libsvm/>`_ : SVM
     * `opencv <http://opencv.org/>`_ : traitement d'image, reconnaissance des formes
     * `pygraphviz <http://pygraphviz.github.io/>`_ : dessin de graphes
     * `pyqt <http://www.riverbankcomputing.co.uk/software/pyqt/intro>`_ : interfaces graphiques
-    * `pytables <http://www.pytables.org/moin>`_ : manipuler de grands jeux de donnÈes
+    * `pytables <http://www.pytables.org/moin>`_ : manipuler de grands jeux de donn√©es
     * `pywavelets <http://www.pybytes.com/pywavelets/>`_ : ondelettes
     * `simplecv <http://simplecv.org/>`_ : Python et Kinect, vision
-    * `sphinx <http://sphinx-doc.org/>`_ : gÈnÈration de documentation (dont celle-ci)
+    * `sphinx <http://sphinx-doc.org/>`_ : g√©n√©ration de documentation (dont celle-ci)
     * `twisted <http://twistedmatrix.com/trac/>`_ : application client-serveur
     
 Python et autres langages
@@ -56,3 +65,4 @@ Pour faire du machine learning sans programmer
 ----------------------------------------------
 
     * `Orange <http://orange.biolab.si/>`_
+
