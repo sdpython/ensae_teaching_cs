@@ -65,6 +65,7 @@ Python
     * `Questions Fréquentes <https://docs.python.org/3.4/faq/index.html>`_
     * `Modules standards <https://docs.python.org/3.4/library/>`_
     * `Installation de modules sous Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
+    * `La boîte à outils Python 2014 <http://www.hautefeuille.eu/python-tools-2014.html>`_
     
 Articles de blog
 ----------------
@@ -81,12 +82,18 @@ Articles de blog
     * `Quelques précisions sur les projets informatiques (finance) <http://www.xavierdupre.fr/blog/2014-04-05_nojs.html>`_
     * `A small video on sorting algorithm <http://www.xavierdupre.fr/blog/2014-04-04_nojs.html>`_
     
-Des petits details
-------------------
+   
+Python dans le détail
+---------------------
 
     * `Why Lists Can't Be Dictionary Keys <https://wiki.python.org/moin/DictionaryKeys>`_
     * `Time Complexity <https://wiki.python.org/moin/TimeComplexity>`_
     * `List of data structures <http://en.wikipedia.org/wiki/List_of_data_structures>`_
+    * `Advanced Data Structures in Python <http://pypix.com/python/advanced-data-structures-python/>`_
+    * `Useful Python Functions and Features You Need to Know <http://pypix.com/tools-and-tips/python-functions/?utm_content=buffer2e408&utm_source=buffer&utm_medium=twitter&utm_campaign=Buffer>`_
+    * `Essential SQLAlchemy Tips and Techniques <http://pypix.com/tools-and-tips/essential-sqlalchemy/>`_
+    * `Parallélisation des traitements en Python <http://www.hautefeuille.eu/python-parallelism-multiprocessing.html>`_
+
 
 
 .. toctree::
@@ -97,6 +104,7 @@ Des petits details
     exercices
     examples
     projet_info
+    interesting_modules
     FAQ
     glossary
     filechanges
