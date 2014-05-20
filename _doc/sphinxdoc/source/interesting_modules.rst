@@ -1,4 +1,6 @@
 ﻿
+.. _modulesi:
+
 
 Modules intéressants (pour un ENSAE)
 ====================================
