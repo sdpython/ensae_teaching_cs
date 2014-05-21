@@ -12,6 +12,8 @@ is hosted on GitHub can be modified by sending me pull request:
     * `documentation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_
     * `Windows Setup <http://www.xavierdupre.fr/site2013/index_code.html#ensae_teaching_cs>`_
     * :ref:`l-README`
+    
+That will be probably one of the few pages in English.
 
 Contributions
 -------------

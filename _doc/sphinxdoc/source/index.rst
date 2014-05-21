@@ -46,8 +46,10 @@ Contenu des enseignements
 -------------------------
 
     * :ref:`ENSAE, 1A, initiation à la programmation et l'algorithmie <l-td1a>`
-    * :ref:`Exposé divers non abordés en cours <l-extra>`
+    * :ref:`Quelques exemples très courts <l-example-main>`
+    * :ref:`Quelques problématiques récurrentes <l-elcode>`
     * :ref:`Exercices d'algorithmie <l-exoalgo>`
+    * :ref:`Exposé divers non abordés en cours <l-extra>`
 
 Quelques références
 -------------------
@@ -67,6 +69,7 @@ Python
     * :ref:`modulesi`
     * `Installation de modules sous Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
     * `La boîte à outils Python 2014 <http://www.hautefeuille.eu/python-tools-2014.html>`_
+    * `Les recettes Python de Tyrtamos <http://python.jpvweb.com/mesrecettespython/doku.php?id=Sommaire>`_
     
 Articles de blog
 ----------------
@@ -101,9 +104,10 @@ Python dans le détail
     :hidden:
 
     td_1a
-    expose_divers
-    exercices
     examples
+    element_code
+    exercices
+    expose_divers
     projet_info
     interesting_modules
     FAQ
