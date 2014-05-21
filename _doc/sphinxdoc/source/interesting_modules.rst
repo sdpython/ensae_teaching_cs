@@ -28,6 +28,7 @@ Extensions
     * `networkx <http://networkx.github.io/>`_ : dessin de graphes (simple)
     * `openpyxl <http://pythonhosted.org/openpyxl/>`_ : conversion de DataFrame en feuille Excel
     * `Pillow <https://github.com/python-imaging/Pillow>`_ : traitement d'image
+    * `plotpy <https://plot.ly/python/>`_ : graphes élaborés
     * `Scipy <http://www.scipy.org/>`_ : calcul scientifiques
     * `statsmodels <http://statsmodels.sourceforge.net/>`_ : modèles linéaires
 
