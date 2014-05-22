@@ -1,5 +1,5 @@
 ﻿
-.. _l-codingparty:
+.. _l-codingparty1:
 
 
 Coding Party 22 mai 2014
@@ -19,12 +19,27 @@ d'une randonnée en vélo.
     * `Mulhouse - json <http://www.xavierdupre.fr/site2013/enseignements/tddata/mulhouse.zip>`_ ou `Mulhouse - dataframe <http://www.xavierdupre.fr/site2013/enseignements/tddata/mulhouse.df.txt.zip>`_
     * `Nancy - json <http://www.xavierdupre.fr/site2013/enseignements/tddata/nancy.zip>`_ ou `Nancy - dataframe <http://www.xavierdupre.fr/site2013/enseignements/tddata/nancy.df.txt.zip>`_
     * `Paris - json <http://www.xavierdupre.fr/site2013/enseignements/tddata/paris.zip>`_ ou `Paris - dataframe <http://www.xavierdupre.fr/site2013/enseignements/tddata/paris.df.txt.zip>`_
-
+    
 Elles ont été fabriquées en suivant l'exemple : 
 `Récupérer les données Velib et les visualiser <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/pyensae_velib.html>`_.
 
+**Données synthétiques**    
 
-On fournit le code de la distance de Haversine ::
+`données synthétiques - dataframe <http://www.xavierdupre.fr/site2013/enseignements/tddata/velib_synthetique.zip>`_
+
+Ce fichier contient plusieurs simulations, chacune disponible avec deux fichiers :
+    * La liste des trajets.
+    * Les places et vélos disponibles pour chaque station (de Besançon).
+    
+Les simulations vérifient quelques contraintes :
+    * Toutes les stations démarrent à 5 places et vélos disponibles.
+    * Il peut y avoir 1,2,3, 5, 10 vélos qui circulent en parallèle. Chaque nombre
+      fait l'objet d'une simulation différente.
+    * Au bout d'une heure, les vélos retournent à la première station à proximité (si elle est vide).
+
+
+
+On fournit le code de la `distance de Haversine <http://en.wikipedia.org/wiki/Haversine_formula>`_ ::
 
     def distance_haversine(lat1, lng1, lat2, lng2):
         radius = 6371
