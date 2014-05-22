@@ -10,7 +10,8 @@ d'une même ville de 2h du matin à 15h aujourd'hui. Il faut estimer la vitesse 
 d'une randonnée en vélo.
 
 
-**Données réelles**
+Données réelles
+^^^^^^^^^^^^^^^
 
 
     * `Amiens - json <http://www.xavierdupre.fr/site2013/enseignements/tddata/amiens.zip>`_ ou `Amiens - dataframe <http://www.xavierdupre.fr/site2013/enseignements/tddata/amiens.df.txt.zip>`_
@@ -23,7 +24,8 @@ d'une randonnée en vélo.
 Elles ont été fabriquées en suivant l'exemple : 
 `Récupérer les données Velib et les visualiser <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/pyensae_velib.html>`_.
 
-**Données synthétiques**    
+Données synthétiques
+^^^^^^^^^^^^^^^^^^^^
 
 `données synthétiques - dataframe <http://www.xavierdupre.fr/site2013/enseignements/tddata/velib_synthetique.zip>`_
 
@@ -37,7 +39,35 @@ Les simulations vérifient quelques contraintes :
       fait l'objet d'une simulation différente.
     * Au bout d'une heure, les vélos retournent à la première station à proximité (si elle est vide).
 
+Une façon d'estimer la vitesse moyenne des vélos est de reconstituer les trajectoires
+des vélos à partir des décomptes des places et vélos disponibles
+dans chaque stations.
 
+Les données synthétiques fournissent à la fois les décomptes et les trajectoires
+afin d'évaluer un algorithme. Une fois que celui-ci est bien calé, on peut 
+l'évaluer sur les données réelles.
+
+    
+Description des données
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Les colonnes importantes :
+    * *lng,lat* : longitude, latitude
+    * *name* : nom de la station
+    * *number* : numéro de la station
+    * *available_bike_stands* : nombre de places disponibles
+    * *available_bikes* : nombre de vélos disponibles
+    * *file* : fichier d'où sont tirés les données (à chaque minute, toutes les données relatives
+      à toutes les stations sont mises dans un fichier, c'est l'identifiant unique)
+    * *collect_date* : date à laquelle sont collectées les données (elle peut légèrement varier
+      au sein d'un même fichier)
+      
+Autres colonnes (uniquement pour les données réelles) :
+    * *status* : une station peut être fermée, en général, elle est ouvert (``OPEN``)
+    * *last_update* : dernière mise à jour de la station, cela correspond à la date du dernier mouvement
+
+Bouts de code
+^^^^^^^^^^^^^
 
 On fournit le code de la `distance de Haversine <http://en.wikipedia.org/wiki/Haversine_formula>`_ ::
 
