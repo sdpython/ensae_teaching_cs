@@ -97,6 +97,7 @@ Python dans le détail
     * `Useful Python Functions and Features You Need to Know <http://pypix.com/tools-and-tips/python-functions/?utm_content=buffer2e408&utm_source=buffer&utm_medium=twitter&utm_campaign=Buffer>`_
     * `Essential SQLAlchemy Tips and Techniques <http://pypix.com/tools-and-tips/essential-sqlalchemy/>`_
     * `Parallélisation des traitements en Python <http://www.hautefeuille.eu/python-parallelism-multiprocessing.html>`_
+    * `Why Python is Slow: Looking Under the Hood <http://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/>`_
 
 
 
@@ -109,6 +110,7 @@ Python dans le détail
     exercices
     expose_divers
     projet_info
+    coding_party
     interesting_modules
     FAQ
     glossary
