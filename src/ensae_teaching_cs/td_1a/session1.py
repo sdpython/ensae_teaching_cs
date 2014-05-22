@@ -35,7 +35,9 @@ def commentaire_accentues():
     après avoir ajouté cette ligne avec l'encoding `utf-8`,
     il est conseillé de fermer le fichier puis de le réouvrir.
     SciTE le traitera différemment.
-
+    
+    **L'encodage ``utf-8`` est la norme sur Internet.** C'est pourquoi il est préférable d'utiliser celui-ci pour 
+    partager son code via une page Web.
     @endFAQ
     """
     pass
