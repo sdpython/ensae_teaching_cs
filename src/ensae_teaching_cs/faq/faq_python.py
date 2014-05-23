@@ -43,3 +43,39 @@ def entier_grande_taille():
     """
     pass
 
+
+def difference_div():
+    """
+    @FAQ(Quelle est la différence entre / et // (division) ?)
+    Le résultat de la division avec l'opérateur ``/`` est toujours réel : 
+    la division de deux entiers ``1/2`` donne ``0.5``.
+    Le résultat de la division avec l'opérateur ``//`` est toujours entier.
+    Il correspond au quotient de la division.
+    
+    @code
+    div1 = 1/2
+    div2 = 4/2
+    div3 = 1//2
+    div4 = 1.0//2.0
+    print(div1,div2,div3,div4) # affiche (0.5, 2.0, 0, 0)
+    @endcode
+    
+    Le reste d'une division entière est obtenue avec l'opérateur ``%``.
+    
+    @code
+    print ( 5 % 2 )  # affiche 1
+    @endcode
+    
+    C'est uniquement vrai pour les version Python 3.x. 
+    Pour les versions 2.x, les opérateurs ``/`` et ``//`` avaient des comportements différents
+    (voir `What’s New In Python 3.0 <https://docs.python.org/3/whatsnew/3.0.html#integers>`_).
+    @endFAQ
+    """
+    div1 = 1/2
+    div2 = 4/2
+    div3 = 1//2
+    div4 = 1.0//2.0
+    return div1,div2,div3,div3
+    
+if __name__ == "__main__" :
+    print(difference_div())

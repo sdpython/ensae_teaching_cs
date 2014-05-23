@@ -83,3 +83,68 @@ def racine_carree(x):
     @return         racine carrée
     """
     return x**0.5
+    
+def repetition_a_eviter(serie):
+    """
+    @example(TD 1A___Eviter d'effectue le même appel deux fois)
+    
+    Dans cette fonction on calcule la variance d'une série d'observations.
+    
+    @code
+    def moyenne(serie):
+        return sum(serie) / len(serie)
+        
+    def variance_a_eviter(serie):
+        s = 0
+        for obs in serie :
+            s += (obs-moyenne(serie))**2
+        return s / len(serie)
+    @endcode
+    
+    La fonction ``variance_a_eviter`` appelle la fonction ``moyenne`` à chaque passage
+    dans la boucle. Or, rien ne change d'un passage à l'autre. Il vaut mieux stocker
+    le résultat dans une variable :
+    
+    @code
+    def moyenne(serie):
+        return sum(serie) / len(serie)
+        
+    def variance(serie):
+        s = 0
+        moy = moyenne(serie)
+        for obs in serie :
+            s += (obs-moy)**2
+        return s / len(serie)
+    @endcode
+    
+    Le coût de la variance passe alors d'un coût en :math:`O(n^2)` à :math:`O(n)`.
+    Ce n'est pas le seul endroit où cette erreur survient. Dans le code suivant,
+    on appelle deux fois la fonction ``major`` avec le même argument.
+    C'est à éviter.
+    
+    @code
+    meilleur = major(data)[0]  # retourne ("quelque chose", True)
+    if major(data)[1]: 
+        return {"leaf":guess} 
+    @endcode
+    
+    @endexample
+    """
+    
+    def moyenne(serie):
+        return sum(serie) / len(serie)
+        
+    def variance_a_eviter(serie):
+        s = 0
+        for obs in serie :
+            s += (obs-moyenne(serie))**2
+        return s / len(serie)
+        
+    def variance(serie):
+        s = 0
+        moy = moyenne(serie)
+        for obs in serie :
+            s += (obs-moy)**2
+        return s / len(serie)
+        
+    return variance (serie)
