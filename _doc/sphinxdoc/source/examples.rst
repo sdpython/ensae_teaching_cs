@@ -1,4 +1,4 @@
-
+﻿
 .. _l-example-main:
 
 Exemples, bouts de code
@@ -7,5 +7,6 @@ Exemples, bouts de code
 .. toctree::
 
     all_example_constructionclassique
+    all_example_Exemplesnégatifs
     all_example_TD1A
     all_example_numpy

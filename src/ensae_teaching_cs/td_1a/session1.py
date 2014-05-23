@@ -86,7 +86,7 @@ def racine_carree(x):
     
 def repetition_a_eviter(serie):
     """
-    @example(TD 1A___Eviter d'effectue le même appel deux fois)
+    @example(Exemples négatifs___Eviter d'effectue le même appel deux fois)
     
     Dans cette fonction on calcule la variance d'une série d'observations.
     
@@ -148,3 +148,74 @@ def repetition_a_eviter(serie):
         return s / len(serie)
         
     return variance (serie)
+
+def liste_modifie_dans_la_boucle():
+    """
+    @example(Exemples négatifs___Modifier un dictionnaire en le parcourant)
+    
+    Il faut éviter de modifier un container lorsqu'on le parcourt. 
+    Lorsqu'on supprime un élément d'un dictionnaire, la structure de celui-ci
+    s'en trouve modifiée et affecte la boucle qui le parcourt. La boucle parcourt
+    toujours l'ancienne structure du dictionnaire, celle qui existait au début
+    au début de la boucle.
+    
+    @code
+    d = { k:k for k in range(10) }
+    for k,v in d.items():
+        if k == 4 : 
+            del d[k]    
+    @endcode
+    
+    En Python, cela produit l'erreur qui suit mais d'autres langages ne préviennent 
+    pas (C++) et cela aboutit à une erreur qui intervient plus tard dans le code 
+    (comme une valeur numérique inattendue).
+    
+    @code
+    Traceback (most recent call last):
+      File "session1.py", line 176, in <module>
+        l = liste_modifie_dans_la_boucle()
+      File "session1.py", line 169, in liste_modifie_dans_la_boucle
+        for k,v in d.items():
+    RuntimeError: dictionary changed size during iteration
+    @endcode
+    
+    Il faut pour éviter cela stocker les éléments qu'on veut modifier pour les supprimer
+    ensuite.
+    
+    @code
+    d = { k:k for k in l }
+    rem = [ ]
+    for k,v in d.items():
+        if k == 4 : 
+            rem.append(k)
+    for r in rem :
+        del d[r]
+    @endcode
+    
+    Même si Python autorise cela pour les listes,
+    il est conseillé de s'en abstenir ainsi que pour tout type d'objets qui en contient d'autres.
+    C'est une habitude qui vous servira pour la plupart des autres langages.
+    
+    @endexample
+    """
+    l = [ 0 , 1 , 2 , 3 , 4 , 5 , 6 ]
+    for i in l :
+        if i == 2 : 
+            l.remove(3)
+    
+    d = { k:k for k in l }
+    rem = [ ]
+    for k,v in d.items():
+        if k == 4 : 
+            rem.append(k)
+    for r in rem :
+        del d[r]
+    
+    return l,d
+    
+if __name__ == "__main__" :
+    l,d = liste_modifie_dans_la_boucle()
+    print(l,d)
+    r = repetition_a_eviter(l)
+    print(r)
+    
