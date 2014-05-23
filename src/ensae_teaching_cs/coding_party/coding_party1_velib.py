@@ -124,10 +124,12 @@ def appariement(events, iter = 1000, fLOG = print):
         
     appariement = [ (i,i) for i in range( 0, len(positif) ) ]
     vit, mindist = distance(positif, negatif, appariement)
+    nbchange = 0
     
     for it in range(0,iter):
-        if it % 100 == 0 :
-            fLOG("iteration ", it, ":", mindist, "vitesse ", vit)
+        if it % 10 == 0 :
+            fLOG("iteration ", it, ":", mindist, "vitesse ", vit, " nbchange", nbchange)
+            nbchange = 0
         for ij in range(0,len(appariement)):
             i = random.randint(0,len(appariement)-1)
             j = random.randint(0,len(appariement)-1)
@@ -139,13 +141,35 @@ def appariement(events, iter = 1000, fLOG = print):
             if dist < mindist :
                 mindist = dist
                 vit = v
+                nbchange += 1
             else :
                 appariement[i],appariement[j] = ki,kj
                 
     moyenne = distance(positif, negatif, appariement)[0]
+    
+    def dd (a,b):
+        try:
+            return b-a
+        except:
+            return None
+    for a in appariement :
+        fLOG(a,dd(positif [a[0]][1],negatif[a[1]][1]), vitesse(positif [a[0]], negatif[a[1]]), positif [a[0]],"-->",negatif[a[1]])
                 
     return mindist, moyenne, appariement, positif, negatif
-        
+    
+def distance_path(dfp):
+    """
+    calcule la vitesse moyenne lorsque le chemin est connu
+    
+    @param  dfp     liste des chemins
+    @return         moyenne, stddev
+    """
+    dfp = dfp.copy()
+    dfp ["speed"] =  dfp["dist"] / dfp["hours"]
+    dfp ["dist"]  = dfp.apply( lambda r: DataVelibCollect.distance_haversine( r["lat0"],r["lng0"],r["lat1"],r["lng1"]), axis=1)
+    mean = sum( dfp["speed"]) / len(dfp)
+    std  = sum ( (x-mean)**2 for x in dfp["speed"]) / len(dfp)
+    return mean, std**0.5
     
 if __name__ == "__main__":
     dest = r"c:\temp\codpart1"
@@ -153,23 +177,24 @@ if __name__ == "__main__":
     get_data(dest)
     
     # récupère les données
-    jeu = os.path.join(dest, "out_simul_bike_nb2_sp10_data.txt")
-    df = pandas.read_csv(jeu, sep="\t")
+    jeu = os.path.join(dest, "besancon.df.txt")
+    df = pandas.read_csv(jeu, sep="\t", encoding="utf8")
     # conversion des dates
     df ["collect_date"] = df.apply( lambda r: str_to_datetime(r["collect_date"]),axis=1)
     #print(df.head())
     
     # on regarde s'il existe le fichier des trajectoires
-    path = jeu.replace(".data.",".path.")
-    if os.path.exists(path):
+    path = jeu.replace("_data.","_path.")
+    if path != jeu and os.path.exists(path):
         dfp = pandas.read_csv(path, sep="\t")
-        print(dfp.head())
-        
+        dfp = dfp [ dfp["beginend"] == "end" ]
+        mean, std = distance_path(dfp)
+        print("expected: vitesse moyenne ", mean, " stddev ", std)
     
     # on calcule les événements (1 vélo apparu, 1 vélo disparu)
     events = list(sorted(enumerate_events(df)))
     
-    mindist, moyenne, appariement, positif, negatif = appariement(events)
+    mindist, moyenne, appariement, positif, negatif = appariement(events, iter=200)
     print("vitesse moyenne", moyenne)
     
     
