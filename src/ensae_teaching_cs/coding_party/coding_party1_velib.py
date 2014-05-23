@@ -72,7 +72,7 @@ def distance ( positif, negatif, appariement ):
     la variance de la vitesse de chaque déplacement
     
     @param      positif     vélos pris (ou l'inverse)
-    @param      négatif     vélos remis (ou l'inverse)
+    @param      negatif     vélos remis (ou l'inverse)
     @return                 vitesse moyenne, distance
     """
     val = []

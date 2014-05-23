@@ -2,8 +2,8 @@
 .. _l-codingparty1:
 
 
-Coding Party 22 mai 2014
-========================
+Coding Party 22 mai 2014 : inférer des trajectoires de vélos
+============================================================
 
 On connaît toutes les minutes le nombre de places et vélos disponibles pour chaque station
 d'une même ville de 2h du matin à 15h aujourd'hui. Il faut estimer la vitesse moyenne
@@ -52,19 +52,19 @@ Description des données
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 Les colonnes importantes :
-    * *lng,lat* : longitude, latitude
-    * *name* : nom de la station
-    * *number* : numéro de la station
-    * *available_bike_stands* : nombre de places disponibles
-    * *available_bikes* : nombre de vélos disponibles
-    * *file* : fichier d'où sont tirés les données (à chaque minute, toutes les données relatives
+    * **lng,lat** : longitude, latitude
+    * **name** : nom de la station
+    * **number** : numéro de la station
+    * **available_bike_stands** : nombre de places disponibles
+    * **available_bikes** : nombre de vélos disponibles
+    * **file** : fichier d'où sont tirés les données (à chaque minute, toutes les données relatives
       à toutes les stations sont mises dans un fichier, c'est l'identifiant unique)
-    * *collect_date* : date à laquelle sont collectées les données (elle peut légèrement varier
+    * **collect_date** : date à laquelle sont collectées les données (elle peut légèrement varier
       au sein d'un même fichier)
       
 Autres colonnes (uniquement pour les données réelles) :
-    * *status* : une station peut être fermée, en général, elle est ouvert (``OPEN``)
-    * *last_update* : dernière mise à jour de la station, cela correspond à la date du dernier mouvement
+    * **status** : une station peut être fermée, en général, elle est ouvert (``OPEN``)
+    * **last_update** : dernière mise à jour de la station, cela correspond à la date du dernier mouvement
 
 Bouts de code
 ^^^^^^^^^^^^^

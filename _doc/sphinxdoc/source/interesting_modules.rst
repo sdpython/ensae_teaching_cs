@@ -19,6 +19,23 @@ Les indispensables
     * `pandas <http://pandas.pydata.org/>`_ : gestion de `DataFrame <http://en.wikipedia.org/wiki/Data_frame>`_
     * `scikit-learn <http://scikit-learn.org/stable/>`_ : machine learning, statistique descriptive
 
+Autres dépendances
+------------------
+
+ipython:
+
+    * `python-dateutils <https://labix.org/python-dateutil>`_ : boîte à outils pour les dates
+    * `jinja2 <http://jinja.pocoo.org/>|_ : moteur de rendu HTML
+    * `markupsafe <http://www.pocoo.org/projects/markupsafe/>`_
+    * `pygments <http://pygments.org/>`_ : meilleur rendu de la ligne de commande
+    * `pyzmq <http://zeromq.github.io/pyzmq/>`_ : connecteur pour `ØMQ <http://zeromq.org/>`_ (librairie de sockets, communication entre plusieurs machines)
+    * `six <https://pythonhosted.org/six/>`_ : librairie de conversion entre Python 2 et 3
+    * `tornado <http://www.tornadoweb.org/en/stable/>`_ : server web
+
+matplotlib:
+
+    * `pyparsing <http://pyparsing.wikispaces.com/>`_ : pour définir une gramme et interpréter un langage
+
 Extensions
 ----------
 
@@ -31,6 +48,7 @@ Extensions
     * `plotpy <https://plot.ly/python/>`_ : graphes élaborés
     * `Scipy <http://www.scipy.org/>`_ : calcul scientifiques
     * `statsmodels <http://statsmodels.sourceforge.net/>`_ : modèles linéaires
+    * `Flask <http://flask.pocoo.org/>`_ : outils pour produire un server web en Python (plus simple que `django <http://www.django-fr.org/>`_)
 
 Pour les TD et projets à l'ENSAE
 --------------------------------
@@ -68,4 +86,13 @@ Pour faire du machine learning sans programmer
 ----------------------------------------------
 
     * `Orange <http://orange.biolab.si/>`_
+
+Génération d'une documentation et thème Sphinx
+----------------------------------------------
+
+    * `Sphinx <http://sphinx-doc.org/>`_ : génération de documentation HTML/Javascript à partir du langage `reStructuredText <http://docutils.sourceforge.net/rst.html>`_
+    * `sphinxcontrib.fancybox <http://spinus.github.io/sphinxcontrib-fancybox/>`_ : pour traite les images
+    * `sphinx_rtd_theme <https://github.com/snide/sphinx_rtd_theme>`_ : thème de ce document
+    * `sphinxjp.themes.basicstrap <http://pythonhosted.org/sphinxjp.themes.basicstrap/>`_ : thème
+    
 
