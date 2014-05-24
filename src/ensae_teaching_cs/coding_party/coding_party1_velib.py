@@ -43,50 +43,131 @@ def enumerate_events(df):
             
         lastrow = row
         
-def vitesse( c,d):
+class ParemetreCoutTrajet:
     """
-    calcule la vitesse d'un déplacement
+    Regroupe l'ensembles des paramètres pour le calcul de la distance
+    associé à un appariement.
+    """
+    def __init__ (self, max_speed = 50, 
+                        high_speed = 25,
+                        low_speed = 5,
+                        high_time = 0.75,
+                        low_time = 0.1):
+        """
+        constructor
+        
+        @param      max_speed       au-delà, c'est une vitesse impossible
+        @param      high_speed      au-delà, c'est la vitesse d'un cycliste
+        @param      low_speed       en-deça, il vaut mieux marcher
+        @param      high_time       au-delà, c'est une randonnée
+        @param      low_time        en-deça, pourquoi un vélo
+        """
+        self.max_speed = max_speed
+        self.high_speed = high_speed
+        self.low_speed = low_speed
+        self.high_time = high_time
+        self.low_time = low_time
+        
+    def __str__(self):
+        """
+        usuel
+        """
+        return str(self.values)
+    
+    @property
+    def values(self):
+        """
+        retourne les valeurs dans un dictionnaire
+        """
+        return { k:self.__dict__[k] for k in self.__dict__.keys() if "time" in k or "speed" in k }
+        
+    def cost(self, dh, dt, v):
+        """
+        retourne un coût, plus il est bas, plus de déplacement est probable
+        
+        @param      dh      distance
+        @param      dt      durée
+        @param      v       vitesse
+        @return             coût
+        """
+        c = 0
+        if v > self.max_speed  : c += 1e3
+        if v > self.high_speed : c += (v-self.high_speed)**2 * 10
+        if v < self.low_speed  : c += (v-self.low_speed)**2 * 100
+        dt = dt.total_seconds()/3600
+        if dt > self.high_time : c += (dt-self.high_time)**2 * 10
+        if dt < self.low_time  : c += (dt-self.low_time)**2 * 10
+        return c
+        
+def vitesse( c,d, params):
+    """
+    Calcule la vitesse d'un déplacement.
     
     @param      c       tuple ("file", "collect_date", "name", "lat", "lng", +1 ou -1)
     @param      d       tuple ("file", "collect_date", "name", "lat", "lng", +1 ou -1)
-    @return             vitesse
+    @param      params  ParemetreCoutTrajet
+    @return             vitesse, cout
+    
+    La fonction retourne une valeur aberrante si le temps entre les deux événements est négatifs.
+    C'est une configuration impossible : on ne peut reposer un vélo avant de l'avoir retiré.
+    La valeur aberrante est ``1e8``.
+    
+    Il reste un cas pour lequel, je ne sais pas encore quelle valeur donner : 
+    il s'agit des demi-appariements : un vélo rétiré mais jamais reposé et réciproquement.
     """
     if c[0] == None or d[0] == None :
         # cas des vélos perdus
         if c[0] == None :
             if d[0] == None : return None
-            else : return 0.0   # je ne sais pas trop quoi mettre 
+            else : return 0.0, 0.0   # je ne sais pas trop quoi mettre 
         else :
-            return 0.0 # je ne sais pas trop quoi mettre 
+            return 0.0, 0.0 # je ne sais pas trop quoi mettre 
     else:
         lat1,lng1 = c[3],c[4]
         lat2,lng2 = d[3],d[4]
         dh = DataVelibCollect.distance_haversine(lat1,lng1,lat2,lng2)
         dt = d[1] - c[1]
-        if dt.total_seconds() <= 0 : return 1e8  #infini
-        return dh / (dt.total_seconds() / 3600)
+        if dt.total_seconds() <= 0 : return 1e8, 1e8  #infini
+        v = dh / (dt.total_seconds() / 3600)
+        cost = params.cost(dh, dt, v)
+        return v, cost
     
-def distance ( positif, negatif, appariement ):
+def distance ( positif, negatif, appariement, params ):
     """
     calcul une distance pour un appariement conçu ici comme
     la variance de la vitesse de chaque déplacement
     
     @param      positif     vélos pris (ou l'inverse)
     @param      negatif     vélos remis (ou l'inverse)
-    @return                 vitesse moyenne, distance
+    @param      appariement appariement (list de tuple (i,j))
+    @param      params      ParemetreCoutTrajet
+    @return                 tuple:
+                                - vitesse moyenne (sans appariements négatifs)
+                                - distance
+                                - vitesse moyenne avec
+                                - nombre d'appariements négatifs
     """
     val = []
+    nb_max = []
+    cost = 0
     for i,j in appariement:
         p = positif[i]
         n = negatif[j]
-        d = vitesse(p,n)
-        if d != None : val.append(d)
+        v,d = vitesse(p,n, params)
+        cost += d
+        if v > params.max_speed : nb_max.append(v)
+        if v != None : val.append(v)
     
     mean = sum(val) / len(val)
+    cor  = [ v for v in val if v < 1e8 ] # on enlève les appariements négatifs
+    mean_cor = sum(cor) / len(cor)
     dev  = sum( (x - mean)**2 for x in val ) / len(val)
-    return mean, dev**0.5
+    return  mean_cor,  \
+            cost + dev**0.5 * (1 +  len(nb_max)),  \
+            mean,  \
+            len(val) - len(cor)
     
-def appariement(events, iter = 1000, fLOG = print):
+def appariement(events, iter = 1000, params = ParemetreCoutTrajet(), fLOG = print):
     """
     on veut apparier les événemens -1 aux événemens +1
     
@@ -96,6 +177,7 @@ def appariement(events, iter = 1000, fLOG = print):
     @param      events      list d'événements produits par la fonction
                             @see fn enumerate_events
     @param      iter        nombre d'itérations
+    @param      params      ParemetreCoutTrajet
     @param      fLOG        logging function
     @return                 tuple (mindist, moyenne, appariement, positif, negatif)
     """
@@ -123,12 +205,13 @@ def appariement(events, iter = 1000, fLOG = print):
         positif.append( default ) 
         
     appariement = [ (i,i) for i in range( 0, len(positif) ) ]
-    vit, mindist = distance(positif, negatif, appariement)
+    vit, mindist, vitav, nbneg = distance(positif, negatif, appariement, params)
     nbchange = 0
     
     for it in range(0,iter):
         if it % 10 == 0 :
-            fLOG("iteration ", it, ":", mindist, "vitesse ", vit, " nbchange", nbchange)
+            fLOG("iteration ", it, ": app-", nbneg, "/", len(appariement),
+                  "min",mindist, "vitesse ", vit, " nbchange", nbchange)
             nbchange = 0
         for ij in range(0,len(appariement)):
             i = random.randint(0,len(appariement)-1)
@@ -137,7 +220,7 @@ def appariement(events, iter = 1000, fLOG = print):
             ki,kj = appariement[i],appariement[j]
             appariement[i] = ( ki[0],kj[1])
             appariement[j] = ( kj[0],ki[1])
-            v, dist = distance(positif, negatif, appariement)
+            v, dist, vt, nbneg = distance(positif, negatif, appariement, params)
             if dist < mindist :
                 mindist = dist
                 vit = v
@@ -145,15 +228,16 @@ def appariement(events, iter = 1000, fLOG = print):
             else :
                 appariement[i],appariement[j] = ki,kj
                 
-    moyenne = distance(positif, negatif, appariement)[0]
+    moyenne = distance(positif, negatif, appariement, params)[0]
     
     def dd (a,b):
         try:
             return b-a
         except:
             return None
-    for a in appariement :
-        fLOG(a,dd(positif [a[0]][1],negatif[a[1]][1]), vitesse(positif [a[0]], negatif[a[1]]), positif [a[0]],"-->",negatif[a[1]])
+    
+    #for a in appariement :
+    #    fLOG(a,dd(positif [a[0]][1],negatif[a[1]][1]), vitesse(positif [a[0]], negatif[a[1]], params), positif [a[0]],"-->",negatif[a[1]])
                 
     return mindist, moyenne, appariement, positif, negatif
     
@@ -171,6 +255,7 @@ def distance_path(dfp):
     std  = sum ( (x-mean)**2 for x in dfp["speed"]) / len(dfp)
     return mean, std**0.5
     
+    
 if __name__ == "__main__":
     dest = r"c:\temp\codpart1"
     if not os.path.exists(dest): os.makedirs(dest)
@@ -178,6 +263,7 @@ if __name__ == "__main__":
     
     # récupère les données
     jeu = os.path.join(dest, "besancon.df.txt")
+    jeu = os.path.join(dest, "out_simul_bike_nb1_sp10_data.txt")
     df = pandas.read_csv(jeu, sep="\t", encoding="utf8")
     # conversion des dates
     df ["collect_date"] = df.apply( lambda r: str_to_datetime(r["collect_date"]),axis=1)
@@ -194,7 +280,9 @@ if __name__ == "__main__":
     # on calcule les événements (1 vélo apparu, 1 vélo disparu)
     events = list(sorted(enumerate_events(df)))
     
-    mindist, moyenne, appariement, positif, negatif = appariement(events, iter=200)
+    params = ParemetreCoutTrajet()
+    print(params)
+    mindist, moyenne, appariement, positif, negatif = appariement(events, iter=200, params=params)
     print("vitesse moyenne", moyenne)
     
     

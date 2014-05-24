@@ -5,6 +5,8 @@
 
 """
 
+import os
+
 def entier_grande_taille():
     """
     
@@ -76,6 +78,37 @@ def difference_div():
     div3 = 1//2
     div4 = 1.0//2.0
     return div1,div2,div3,div3
+    
+def python_path():
+    """
+    @FAQ(Comment éviter sys.path.append... quand on développer un module ?)
+    Lorsqu'on développe un module, 
+    on ne veut pas l'installer. On ne veut pas qu'il soit présent dans le répertoire ``site-packages`` de la distribution
+    de Python car cela introduit deux versions : celle qu'on développe et celle qu'on a installer.
+    Avant, je faisais cela pour créer un petit programme utilisant mon propre module
+    (et on en trouve quelque trace dans mon code) :
+    
+    @code
+    import sys
+    sys.path.append("c:/moncode/monmodule/src")
+    import monmodule
+    @endcode
+    
+    Quand je récupère un programme utilisant ce module, il me faudrait ajouter 
+    ces petites lignes à chaque fois et c'est barbant.
+    Pour éviter cela, il est possible de dire à l'interpréteur Python d'aller chercher
+    ailleurs pour trouver des modules en ajoutant le chemin à la 
+    `variable d'environnement <http://fr.wikipedia.org/wiki/Variable_d'environnement>`_
+    `PYTHON_PATH <https://docs.python.org/3.4/using/cmdline.html#envvar-PYTHONPATH>`. 
+    Sous Windows :
+    
+    @code
+    set PYTHON_PATH=%PYTHON_PATH%;c:\\moncode\\monmodule\\src
+    @endcode
+    
+    @endFAQ
+    """
+    return os.environ.get("PYTHON_PATH","")
     
 if __name__ == "__main__" :
     print(difference_div())
