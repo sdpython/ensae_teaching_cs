@@ -25,7 +25,7 @@ Autres dépendances
 ipython:
 
     * `python-dateutils <https://labix.org/python-dateutil>`_ : boîte à outils pour les dates
-    * `jinja2 <http://jinja.pocoo.org/>|_ : moteur de rendu HTML
+    * `jinja2 <http://jinja.pocoo.org/>`_ : moteur de rendu HTML
     * `markupsafe <http://www.pocoo.org/projects/markupsafe/>`_
     * `pygments <http://pygments.org/>`_ : meilleur rendu de la ligne de commande
     * `pyzmq <http://zeromq.github.io/pyzmq/>`_ : connecteur pour `ØMQ <http://zeromq.org/>`_ (librairie de sockets, communication entre plusieurs machines)
@@ -43,7 +43,9 @@ Extensions
     * `ggplot <https://github.com/yhat/ggplot/>`_
     * `kivy <http://kivy.org/#home>`_ : pour faire des jeux ou des applications pour tablettes, téléphones
     * `networkx <http://networkx.github.io/>`_ : dessin de graphes (simple)
-    * `openpyxl <http://pythonhosted.org/openpyxl/>`_ : conversion de DataFrame en feuille Excel
+    * `openpyxl <http://pythonhosted.org/openpyxl/>`_ : conversion de DataFrame en feuille Excel, 
+      il est préférable d'installer la version 1.62 (``pip install openpyxl==1.6.2``) car la version 2.0.3
+      ne marche pas encore avec pandas.
     * `Pillow <https://github.com/python-imaging/Pillow>`_ : traitement d'image
     * `plotpy <https://plot.ly/python/>`_ : graphes élaborés
     * `Scipy <http://www.scipy.org/>`_ : calcul scientifiques
@@ -93,6 +95,6 @@ Génération d'une documentation et thème Sphinx
     * `Sphinx <http://sphinx-doc.org/>`_ : génération de documentation HTML/Javascript à partir du langage `reStructuredText <http://docutils.sourceforge.net/rst.html>`_
     * `sphinxcontrib.fancybox <http://spinus.github.io/sphinxcontrib-fancybox/>`_ : pour traite les images
     * `sphinx_rtd_theme <https://github.com/snide/sphinx_rtd_theme>`_ : thème de ce document
-    * `sphinxjp.themes.basicstrap <http://pythonhosted.org/sphinxjp.themes.basicstrap/>`_ : thème
-    
+    * `sphinxjp.themes.basicstrap <http://pythonhosted.org/sphinxjp.themes.basicstrap/>`_ : thème (voir `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_)
+    * `solar_theme <http://2vkvn.com/solar-theme/>`_ : voir `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_    
 

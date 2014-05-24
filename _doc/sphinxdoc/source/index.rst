@@ -39,7 +39,8 @@ A ces modules, il faut ajouter deux autres conçus pour ces enseignements :
 
 Lors de l'installation, il faut faire attention à installer le langage
 Python et ses modules en prenant soin d'utiliser la même version pour chaque composant.
-Je recommande la version `64bit, v3.3 <https://www.python.org/downloads/release/python-335/>`_.
+Je recommande la version `64bit, v3.3.5 <https://www.python.org/downloads/release/python-335/>`_.
+La version `64bit, v3.4.1 <https://www.python.org/downloads/release/python-341/>`_ a encore quelques bugs.
 
 
 Contenu des enseignements
