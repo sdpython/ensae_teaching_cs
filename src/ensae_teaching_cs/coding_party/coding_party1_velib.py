@@ -19,7 +19,7 @@ def get_data(whereto):
     
 def enumerate_events(df):
     """
-    construit la liste des événements
+    construit la liste des événements (vélo réposé ou retiré)
     
     @param      df      DataFrame
     @return             énumère événéments (ierator) ("file", "collect_date", "name", "lat", "lng", +1 ou -1)
@@ -135,7 +135,8 @@ def vitesse( c,d, params):
 def distance ( positif, negatif, appariement, params ):
     """
     calcul une distance pour un appariement conçu ici comme
-    la variance de la vitesse de chaque déplacement
+    la variance de la vitesse de chaque déplacement + la somme
+    des coûts de chaque appariement retourné par la fonction @see fn vitesse.
     
     @param      positif     vélos pris (ou l'inverse)
     @param      negatif     vélos remis (ou l'inverse)
@@ -173,6 +174,9 @@ def appariement(events, iter = 1000, params = ParemetreCoutTrajet(), fLOG = prin
     
     on s'attend aux colonnes suivantes:
         - "file", "collect_date", "name", "lat", "lng", +1 ou -1
+        
+    La fonction part des deux séries d'évéments rangés par ordre croissant, 
+    puis il permute deux appariements tant que cela diminue l'erreur d'appariement.
     
     @param      events      list d'événements produits par la fonction
                             @see fn enumerate_events
