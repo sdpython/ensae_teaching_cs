@@ -131,7 +131,8 @@ Elle présente deux inconvénients :
        Décaler ces deux peignes pour apparier leur dents n'a pas beaucoup d'impact
        sur la fonction de coût mais il a un grand impact sur la vitesse moyenne.
        
-[Voici](https://github.com/sdpython/ensae_teaching_cs/commit/7da003de4bb8bac7d3a59a5cfd372d8187cbc9aa) ce que j'ai rajouté en vitesse pour essayer d'avoir une solution probable.       
+`Voici <https://github.com/sdpython/ensae_teaching_cs/commit/7da003de4bb8bac7d3a59a5cfd372d8187cbc9aa>`_ 
+ce que j'ai rajouté en vitesse pour essayer d'avoir une solution probable.       
        
 Pour la solution d'inspiration bayésienne, elle revient à prendre des hypothèses 
 sur la vitesse moyenne. J'en dirai un peu plus tard.
