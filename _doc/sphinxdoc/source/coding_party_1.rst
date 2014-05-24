@@ -121,7 +121,7 @@ un coût d'appariement (une fonction d'erreur) et implémenter un algorithme
 qui minimise cette fonction de coût. 
 
 C'est l'option que j'ai choisie (voir :func:`appariement <coding_party.coding_party1_velib.appariement>`).
-C'est à mon sens celle qui était le plus facile à coder en quelques heures.
+C'est à mon sens celle qui était le plus facile à coder en quelques heures. 
 Elle présente deux inconvénients : 
 
     #. Je ne suis pas sûr qu'elle passe à l'échelle (la ville de Paris a plus de 1000 stations).
@@ -130,6 +130,8 @@ Elle présente deux inconvénients :
        de vélos (retirés et reposés), elles se comporte comme deux peignes.
        Décaler ces deux peignes pour apparier leur dents n'a pas beaucoup d'impact
        sur la fonction de coût mais il a un grand impact sur la vitesse moyenne.
+       
+[Voici](https://github.com/sdpython/ensae_teaching_cs/commit/7da003de4bb8bac7d3a59a5cfd372d8187cbc9aa) ce que j'ai rajouté en vitesse pour essayer d'avoir une solution probable.       
        
 Pour la solution d'inspiration bayésienne, elle revient à prendre des hypothèses 
 sur la vitesse moyenne. J'en dirai un peu plus tard.
