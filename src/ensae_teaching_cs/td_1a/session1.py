@@ -5,6 +5,8 @@
 
 """
 
+import datetime
+
 def commentaire_accentues():
     """
     L'aide de cette fonction contient assuréments des accents.
@@ -216,6 +218,28 @@ def dictionnaire_modifie_dans_la_boucle():
         del d[r]
     
     return l,d
+    
+def str2date(s, format = "%d/%m/%Y"):
+    """
+    convertit une chaîne de caractères en datetime
+    
+    @param      s       chaîne de caractères
+    @param      format  format de la conversion
+    
+    
+    @example(Impossible à retenir___conversion d'une chaîne de caractère en date)
+    C'est le genre de fonction qu'on n'utilise pas souvent mais qu'on peine à retrouver
+    lorsqu'on en a besoin.
+    Il faut utiliser la fonction `strftime <https://docs.python.org/3.4/library/datetime.html#strftime-and-strptime-behavior>`_.
+    
+    @code
+    import datetime
+    dt = datetime.datetime.strptime ("16/01/2014", "%d/%m/%Y")        
+    @endcode
+    @endexample
+    
+    """
+    return datetime.datetime.strptime (s, format)    
     
 if __name__ == "__main__" :
     l,d = liste_modifie_dans_la_boucle()

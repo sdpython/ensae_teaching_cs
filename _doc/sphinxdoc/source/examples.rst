@@ -9,4 +9,5 @@ Exemples, bouts de code
     all_example_constructionclassique
     all_example_Exemplesngatifs
     all_example_TD1A
+    all_example_Impossibleretenir
     all_example_numpy
