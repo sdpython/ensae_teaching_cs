@@ -97,4 +97,5 @@ Génération d'une documentation et thème Sphinx
     * `sphinx_rtd_theme <https://github.com/snide/sphinx_rtd_theme>`_ : thème de ce document
     * `sphinxjp.themes.basicstrap <http://pythonhosted.org/sphinxjp.themes.basicstrap/>`_ : thème (voir `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_)
     * `solar_theme <http://2vkvn.com/solar-theme/>`_ : voir `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_    
+    * `cloud_sptheme <http://pythonhosted.org/cloud_sptheme/>`_: voir `pysqllike <http://www.xavierdupre.fr/app/pysqllike/helpsphinx/index.html>`_
 
