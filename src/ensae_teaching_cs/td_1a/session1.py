@@ -90,7 +90,7 @@ def repetition_a_eviter(serie):
     """
     Une répétition à éviter.
     
-    @example(Exemples négatifs___Eviter d'effectue le même appel deux fois)
+    @example(Exemples négatifs___Eviter d'effectuer le même appel deux fois)
     
     Dans cette fonction on calcule la variance d'une série d'observations.
     
