@@ -81,7 +81,7 @@ def difference_div():
     
 def python_path():
     """
-    @FAQ(Comment éviter sys.path.append... quand on développer un module ?)
+    @FAQ(Comment éviter sys.path.append... quand on développe un module ?)
     Lorsqu'on développe un module, 
     on ne veut pas l'installer. On ne veut pas qu'il soit présent dans le répertoire ``site-packages`` de la distribution
     de Python car cela introduit deux versions : celle qu'on développe et celle qu'on a installer.
@@ -110,5 +110,64 @@ def python_path():
     """
     return os.environ.get("PYTHON_PATH","")
     
+def test_unitaire():
+    """
+    @FAQ(Qu'est-ce qu'un test unitaire ?)
+    
+    Un `test unitaire <http://fr.wikipedia.org/wiki/Test_unitaire>`_ 
+    une procédure permettant de vérifier le bon fonctionnement d'une partie précise.
+    Concrètement, cela consiste à écrire une fonction qui exécute la partie de code
+    à vérifier. Cette fonction retourne ``True`` si le test est valide, c'est-à-dire 
+    que la partie de code s'est comportée comme prévue : elle a retourné le résultat attendu.
+    Elle déclenche une exception si elle le code à vérifier ne se comporte pas comme prévu.
+    
+    Par example, si on voulait écrire un test unitaire pour la fonction 
+    `pow <https://docs.python.org/3.4/library/functions.html#pow>`_, on pourrait
+    écrire ::
+    
+        def test_pow():
+            assert pow(2,1) == 2   # on vérifie que 2^1 == 0
+            assert pow(2,0) == 1
+            assert pow(2,-1) == 0.5
+            assert pow(2,-1) == 0.5
+            assert pow(0,0) == 1     # convention, on s'assure qu'elle ne change pas
+            assert isinstance(pow(-2,3.4), complex)
+            return True
+            
+    
+    **A quoi ça sert ?**
+    
+    On écrit la fonction ``x_exp`` ($=y x^{-n}$) comme suit ::
+    
+        def x_exp(x,y,n):
+            return y / pow(x,n)
+            
+    La fonction retourne 0 si $x=y=n=0$.   
+    Admettons maintenant qu'un dévelopeur veuille changer la convention $0^0=1$ en $0^0=0$.
+    La fonction précédente produira une erreur à cause d'une division ``0/0``.
+    Un test unitaire détectera au plus tôt cette erreur.
+    
+    Les tests unitaires garantissent la qualité d'un logiciel qui est considéré comme bonne
+    si 80% du code est couvert par un test unitaire. Lorsque plusieurs personnes
+    travaillent sur un même programme, un dévelopeur utilisera une fonction faite par un
+    autre. Il s'attend donc à ce que la fonction produise les mêmes résultats
+    avec les mêmes entrées
+    **même si on la modifie ultérieurement**.
+    Les tests unitaires servent à s'assurer qu'il n'y a pas d'erreur
+    introduite au sein des résultats intermédiaire d'une chaîne de traitement, auquel
+    cas, c'est une cascade d'erreur qui est susceptible de se produite. La source
+    d'une erreur est plus facile à trouver lorsque les tests unitaires sont nombreux.
+            
+    @endFAQ
+    """
+    assert pow(2,1) == 2   # on vérifie que 2^1 == 0
+    assert pow(2,0) == 1
+    assert pow(2,-1) == 0.5
+    assert pow(2,-1) == 0.5
+    assert pow(0,0) == 1    
+    assert isinstance(pow(-2,3.4), complex)
+    return True
+    
 if __name__ == "__main__" :
-    print(difference_div())
+    #print(difference_div())
+    test_unitaire()
