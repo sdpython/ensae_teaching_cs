@@ -25,6 +25,18 @@ Resources
     * `données <http://www.xavierdupre.fr/site2013/enseignements/projets/donnees/>`_
     * `bibliographie <http://www.xavierdupre.fr/site2013/enseignements/projets/biblio/>`_     
     * `Barème indicatif des projets informatiques (année 2012-2013) <http://www.xavierdupre.fr/site2013/enseignements/bareme.html>`_
+    * `Barème indicatif des projets informatiques (année 2013-2014) <http://www.xavierdupre.fr/site2013/enseignements/bareme_2014.html>`_
+    
+Rapport / Programme / Soutenance
+--------------------------------
+
+Chaque projet doit inclure une composante numérique telles que celles enseignées à l'ENSAE 
+(statistique, économique, financière). 
+Le rapport doit souligner la contribution originale des élèves, illuster les résultats numériques obtenus et la 
+façon dont ils ont été obtenus. On suppose que le rapport s'adresse à un public expert.
+La soutenance doit reprendre les points principaux, décrire brièvement la façon dont le travail a été réparti
+au sein de l'équipe. On suppose que la soutenance s'adresse à un public non-expert.
+
 
 
 3 erreurs de design fréquentes
