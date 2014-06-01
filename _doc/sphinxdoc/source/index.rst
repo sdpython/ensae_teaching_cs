@@ -68,7 +68,7 @@ Python
     * `Questions Fréquentes <https://docs.python.org/3.4/faq/index.html>`_
     * `Modules standards <https://docs.python.org/3.4/library/>`_
     * :ref:`modulesi`
-    * `Installation de modules sous Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_  (**modules sours Windows**)
+    * `Installation de modules sous Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_  (**modules sous Windows**)
     * `La boîte à outils Python 2014 <http://www.hautefeuille.eu/python-tools-2014.html>`_
     * `Les recettes Python de Tyrtamos <http://python.jpvweb.com/mesrecettespython/doku.php?id=Sommaire>`_
     
