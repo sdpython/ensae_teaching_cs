@@ -7,8 +7,17 @@ Modules intéressants (pour un ENSAE)
 
 Les modules indispensables sont intégrés à la distribution 
 `WinPython <http://winpython.sourceforge.net/>`_. 
+L'autre solution est d'utiliser le module
+`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_::
+
+    from pymyinstall import complete_installation
+    for _ in complete_installation() :
+        _.install(temp_folder="install")
+        
+Cela suppose que `pip <http://pip.readthedocs.org/en/latest/>`_ est installé.
 Tous ces modules ont parfois des dépendances qui ne sont pas nécessaires incluses dans cette liste.
 Elles ne sont pas toujours nécessaires.
+
 
 Les indispensables
 ------------------
@@ -98,4 +107,5 @@ Génération d'une documentation et thème Sphinx
     * `sphinxjp.themes.basicstrap <http://pythonhosted.org/sphinxjp.themes.basicstrap/>`_ : thème (voir `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_)
     * `solar_theme <http://2vkvn.com/solar-theme/>`_ : voir `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_    
     * `cloud_sptheme <http://pythonhosted.org/cloud_sptheme/>`_: voir `pysqllike <http://www.xavierdupre.fr/app/pysqllike/helpsphinx/index.html>`_
+    * `sphinx_readable_theme <https://sphinx-readable-theme.readthedocs.org/en/latest/>`_: voir `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
 
