@@ -108,4 +108,6 @@ Génération d'une documentation et thème Sphinx
     * `solar_theme <http://2vkvn.com/solar-theme/>`_ : voir `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_    
     * `cloud_sptheme <http://pythonhosted.org/cloud_sptheme/>`_: voir `pysqllike <http://www.xavierdupre.fr/app/pysqllike/helpsphinx/index.html>`_
     * `sphinx_readable_theme <https://sphinx-readable-theme.readthedocs.org/en/latest/>`_: voir `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
-
+    * `sphinxjp.themes.sphinxjp <https://pythonhosted.org/sphinxjp.themes.sphinxjp/>`_ : voir `pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/>`_
+    * `hachibee_sphinx_theme <http://hachibeedi.github.io/Sphinx-hachibee-theme/index.html>`_ : voir `pyrsslocal <http://www.xavierdupre.fr/app/pyrsslocal/helpsphinx/>`_
+    

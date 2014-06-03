@@ -9,6 +9,18 @@ Sujets proposés année 2014-2015
 A venir.
 
 
+Contraintes
+-----------
+
+Chaque projet, quelque soit le sujet, devra comporter une **composante numérique** 
+(statistique, économique, financière, ...), que ce soit une stratégie de trading,
+l'optimisation d'une intelligence artificielle pour un jeu, une simulation économique.
+Cet aspect devra ressortir lors de la rédaction du rapport final qui devra exposer les résultats
+numériques obtenus et faire au moins une ou deux allusions à la façon dont ces calculs ont 
+été implémentés.
+
+
+
 Article de blogs
 ----------------
 

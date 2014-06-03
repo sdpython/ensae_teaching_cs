@@ -69,14 +69,17 @@ Python
     * `Modules standards <https://docs.python.org/3.4/library/>`_
     * :ref:`modulesi`
     * `Installation de modules sous Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_  (**modules sous Windows**)
-    * `La boîte à outils Python 2014 <http://www.hautefeuille.eu/python-tools-2014.html>`_
-    * `Les recettes Python de Tyrtamos <http://python.jpvweb.com/mesrecettespython/doku.php?id=Sommaire>`_
     
+Environnement de développement
+------------------------------
+
+    * `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_
+    * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
+    * `Débugger en Python <http://www.xavierdupre.fr/blog/2014-06-02_nojs.html>`_
+
 Articles de blog
 ----------------
 
-    * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
-    * `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_
     * `Résoudre un sudoku avec Excel et VBA <http://www.xavierdupre.fr/blog/2014-02-08_nojs.html>`_
     * `Fusionner deux tableaux <http://www.xavierdupre.fr/blog/2013-11-21_nojs.html>`_
     * `De l'idée au programme informatique <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_
@@ -91,6 +94,8 @@ Articles de blog
 Python dans le détail
 ---------------------
 
+    * `La boîte à outils Python 2014 <http://www.hautefeuille.eu/python-tools-2014.html>`_
+    * `Les recettes Python de Tyrtamos <http://python.jpvweb.com/mesrecettespython/doku.php?id=Sommaire>`_
     * `Why Lists Can't Be Dictionary Keys <https://wiki.python.org/moin/DictionaryKeys>`_
     * `Time Complexity <https://wiki.python.org/moin/TimeComplexity>`_
     * `List of data structures <http://en.wikipedia.org/wiki/List_of_data_structures>`_
@@ -99,7 +104,6 @@ Python dans le détail
     * `Essential SQLAlchemy Tips and Techniques <http://pypix.com/tools-and-tips/essential-sqlalchemy/>`_
     * `Parallélisation des traitements en Python <http://www.hautefeuille.eu/python-parallelism-multiprocessing.html>`_
     * `Why Python is Slow: Looking Under the Hood <http://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/>`_
-
 
 
 .. toctree::
