@@ -19,6 +19,12 @@ Cet aspect devra ressortir lors de la rédaction du rapport final qui devra expo
 numériques obtenus et faire au moins une ou deux allusions à la façon dont ces calculs ont 
 été implémentés.
 
+Rendu
+-----
+
+Le projet dure quatre mois au second semestre (de février à mai). Il se conclut par un programme
+et un rapport. Une soutenance suit mi-juin. 
+
 
 
 Article de blogs
