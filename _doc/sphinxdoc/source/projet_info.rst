@@ -3,10 +3,17 @@
 Projets informatiques
 =====================
 
+**Cette page est en cours de rédaction.**
+
+
 Sujets proposés année 2014-2015
 -------------------------------
 
-A venir.
+Les sujets proposés abordent différents domaines connexes aux enseignements proposés à l'ENSAE
+(finance, statistique, économie) et quelques jeux : :ref:`l-projetsinformatiques`.
+
+N'oubliez pas de lire la suite cette page qui donne quelques informations utiles
+afin de réaliser un bon projet.
 
 
 Contraintes
@@ -18,6 +25,11 @@ l'optimisation d'une intelligence artificielle pour un jeu, une simulation écon
 Cet aspect devra ressortir lors de la rédaction du rapport final qui devra exposer les résultats
 numériques obtenus et faire au moins une ou deux allusions à la façon dont ces calculs ont 
 été implémentés.
+
+Le rapport doit contenir les éléments suivants :
+    - le coût de votre ou de vos algorithmes
+    - un ou plusieurs résultats numériques (pour une optimisation de porte-feuille, on
+      s'attend à voir un porte-feuille)
 
 Rendu
 -----
@@ -168,3 +180,6 @@ de passer une instance de cette classe à chaque fonction qui en a besoin ::
             # ...
 
 
+.. toctree::
+
+    projets/listesp
