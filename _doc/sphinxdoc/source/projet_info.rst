@@ -90,8 +90,8 @@ Toutefois elles le rendent plus difficile à lire et à corriger en cas d'une *v
 La plupart des développeurs les font lorsqu'ils apprennent à programmer et ne les font plus par la suite.
 
 
-Un seul gros fichier
-++++++++++++++++++++
+**Un seul gros fichier**
+
 
 Chaque année, je vois plusieurs projets informatiques implémenter en un seul gros fichier. 
 C'est sans doute dû au fait que, lorsqu'on travaille à deux ou trois, il est plus facile de s'échanger un 
@@ -108,8 +108,8 @@ C'est celle que j'utilise pour développer ce cours : `sdpython/ensae_teaching_c
 Cela permet de suivre les modifications (`un commit <https://github.com/sdpython/ensae_teaching_cs/commit/796dcc695006f9bba44b649cb256f80c91f3a72b>`_),
 ou de revenir en arrière.
 
-Le copier/coller de plus de 10 lignes pour changer un caractère
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+**Le copier/coller de plus de 10 lignes pour changer un caractère**
+
 
 Je schématise un peu. Concrètement, lorsqu'on programme un jeu à deux joueurs, on
 fait des choses pour le premier joueur dans un bloc de code qu'on recopie pour l'autre
@@ -165,8 +165,8 @@ Et si on est vraiment pointilleux ::
     pr2[sym(eta_succ[U-2])]=0
 
 
-Les variables globales
-++++++++++++++++++++++
+**Les variables globales**
+
 
 Elles sont pratiques :
 
@@ -196,8 +196,8 @@ de passer une instance de cette classe à chaque fonction qui en a besoin ::
 3 oublis dans le rapport
 ------------------------
 
-Le code qu'on a jeté
-++++++++++++++++++++
+**Le code qu'on a jeté**
+
 
 Lorsqu'on fait un projet de la sorte, il arrive souvent qu'on jette du code qu'on a écrit.
 On découvre parfois que le programme tel qu'il est conçu ne permet pas de faire
@@ -209,8 +209,9 @@ C'est parfois utile dans votre rapport de décrire ces codes jetés. Dans le pre
 le code jeté sert de justification au nouveau. Dans le second cas, cela rassure de voir 
 que certains résultats ne sortent pas de nulle part.
 
-Qu'avez-vous appris ?
-+++++++++++++++++++++
+
+**Qu'avez-vous appris ?**
+
 
 Certaines conclusions mentionnent le fait qu'on apprend beaucoup à faire un projet informatique,
 seul, sans aide extérieure. On apprend autant que durant des séances de travaux pratiques.
@@ -224,8 +225,9 @@ un peu naïf, que les premiers résultats numériques ne sont pas aussi bons qu'
 Il faut retravailler l'idée initiale. Cette partie doit ressortir dans votre rapport et elle
 doit bien ressortir. 
 
-Qu'est-ce que le lecteur va retenir ?
-+++++++++++++++++++++++++++++++++++++
+
+**Qu'est-ce que le lecteur va retenir ?**
+
 
 Expliquer les choses, les illustrer, choisir le bon graphique, le bon tableau,
 pour défendre une idée n'est pas toujours simple. Il faut parfois imaginer qu'un rapport
