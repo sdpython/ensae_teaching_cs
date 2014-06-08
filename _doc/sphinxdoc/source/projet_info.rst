@@ -22,6 +22,7 @@ il est conseillé de parcourir les références bibliographiques suggérées.
     :maxdepth: 1
 
     projets/p_finance
+    projets/p_data_folie
 
 
 
