@@ -244,10 +244,10 @@ travail. C'est le point de départ. A partir de là, on navigue plus aisément d
 
 **Un example :**
 
-La phrase suivante est tirée d'un rapport à propos d'un jeu :
+La phrase suivante est librement inspirée d'un rapport à propos d'un jeu :
 
 
-    *Au niveau 2 de difficulté, on choisit à nouveau notre propre intelligence 
+    *On choisit finalement la première intelligence 
     artificielle mais en choisissant cette fois-ci de bons paramètres.*
 
 
@@ -274,7 +274,7 @@ rappeler au cours de ce discours les idées importantes qu'il devrait retenir.
 Un transparent part souvent d'une intention lorsqu'on crée la présentation. Devant le public, on s'aperçoit
 que l'intention est plus complexe qu'il n'y paraît. C'est à ce moment qu'il faut faire attention à ne pas noyer 
 ceux qui écoutent. Il ne faut pas hésiter alors à écrire au tableau les idées importantes même si elles n'étaient pas écrites
-initialement sur la présentation. Le pire est sans doute de rester plus de deux minutes sur le même transparents tout 
+initialement sur la présentation. Le pire est sans doute de rester plus de deux minutes sur le même transparent tout 
 en exposant des idées insufisamment préparées dont la perception est le plus souvent confuse.
 
 
