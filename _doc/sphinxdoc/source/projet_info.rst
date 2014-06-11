@@ -264,6 +264,45 @@ le rapport ne revient jamais sur cet aspect. Donc :
       que cela n'est qu'une contribution minime.
 
 
+3 maladresses lors de la soutenance
+-----------------------------------
+
+**Court transparent, grand discours**
+
+Lorsqu'on a beaucoup de choses à dire, on prend le risque de noyer l'auditoire sans pouvoir lui
+rappeler au cours de ce discours les idées importantes qu'il devrait retenir.
+Un transparent part souvent d'une intention lorsqu'on crée la présentation. Devant le public, on s'aperçoit
+que l'intention est plus complexe qu'il n'y paraît. C'est à ce moment qu'il faut faire attention à ne pas noyer 
+ceux qui écoutent. Il ne faut pas hésiter alors à écrire au tableau les idées importantes même si elles n'étaient pas écrites
+initialement sur la présentation. Le pire est sans doute de rester plus de deux minutes sur le même transparents tout 
+en exposant des idées insufisamment préparées dont la perception est le plus souvent confuse.
+
+
+**Suivre le plan du rapport**
+
+Il faut partir du principe que la soutenance s'adresse à un public non expert qui n'a probablement pas lu votre rapport.
+Selon ce critère, suivre le même plan que le rapport ne devrait sans doute pas poser de problème.
+Un bémol : en suivant le même plan que le rapport, on a parfois tendance à reproduire le même discours sans vraiment
+chercher à l'adapter à ce moyen d'expression. 
+
+
+
+**Tout dire**
+
+La soutenance est courte et impose souvent de faire un tri sur tout ce que vous voulez présenter.
+Le plus souvent, l'auditoire n'est pas un expert et quand bien même il le serait, la plupart des présentations
+abordent des sujets complexes qu'il est difficile d'appréhender en quelques minutes. 
+Vous n'avez pas l'occasion de démontrer la pertinence des résultats, il y a toujours
+une forme de confiance qui s'établit entre celui qui expose et celui qui écoute. Car à la fin,
+pour les derniers résultats, les plus intéressants, le public n'a pas d'autres choix que de croire
+celui qui les énonce. Il est impossible de les vérifier sur le moment.
+
+Comment installer cette relation de confiance ? Il n'y a pas de règles, juste quelques directions comme
+montrer comment un algorithme se comporte sur un problème simple, montrer comment l'algorithme s'est construit
+peu à peu en considérant quelques exemples précis, insister sur le fait que vous avez contrôlé chaque étape du développement
+et laisser l'auditoire supposer que vous avez appliqué la même rigueur jusqu'à l'obtention des résultats finaux.
+Au cinéma, cette figure s'appelle une `ellipse <http://fr.wikipedia.org/wiki/Ellipse_%28cin%C3%A9ma%29>`_ (voir aussi
+`L'ellipse - leçon (filmée) de cinéma <https://www.youtube.com/watch?v=BMwN2JloosE>`_).
 
 
 

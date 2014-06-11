@@ -22,7 +22,7 @@ Prérequis
 
 Les séances utilisent les `notebooks IPython <http://ipython.org/notebook.html>`_.
 Au début de chaque séance, il vous suffit de télécharger le notebook qui sert de point
-de départ. La correction est délivré également sous forme de notebook.
+de départ. La correction est également rédigée sous forme de notebook.
 
 Les prérequis sont bien sûr `Python <https://www.python.org/>`_ et
 `IPython <http://ipython.org/>`_ mais 
@@ -50,7 +50,7 @@ Contenu des enseignements
     * :ref:`Quelques exemples très courts <l-example-main>`
     * :ref:`Quelques problématiques récurrentes <l-elcode>`
     * :ref:`Exercices d'algorithmie <l-exoalgo>`
-    * :ref:`Exposé divers non abordés en cours <l-extra>`
+    * :ref:`Exposés divers non abordés en cours <l-extra>`
 
 Quelques références
 -------------------
@@ -76,6 +76,7 @@ Environnement de développement
     * `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_
     * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
     * `Débugger en Python <http://www.xavierdupre.fr/blog/2014-06-02_nojs.html>`_
+    * :ref:`l-devtools`
 
 Articles de blog
 ----------------
@@ -116,7 +117,7 @@ Python dans le détail
     expose_divers
     projet_info
     coding_party
-    interesting_modules
+    manytools
     FAQ
     glossary
     filechanges

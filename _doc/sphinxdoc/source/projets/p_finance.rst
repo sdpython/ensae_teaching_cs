@@ -64,7 +64,7 @@ d'information dans ce document : `finance_autostrat.pdf <http://www.xavierdupre.
 Optimisation de portefeuille
 ++++++++++++++++++++++++++++
 
-Optimiser un portefeuille d’action consiste à construire une moyenne pondéré d’action 
+Optimiser un portefeuille d'action consiste à construire une moyenne pondéré d'action 
 qui soit optimise le rendement à risque bornée soit minimise le risque à 
 rendement borné également. La présentation suivante 
 `Gestion de Portefeuille.pdf <http://www.xavierdupre.fr/enseignement/projet_data/Gestion%20de%20Portefeuille.pdf>`_
@@ -72,13 +72,13 @@ explique
 cela de façon sommaire. Le premier à avoir formalisé ce domaine est 
 `Harry Markowitz <http://en.wikipedia.org/wiki/Harry_Markowitz>`_ 
 (voir également `ici <http://fr.wikipedia.org/wiki/Th%C3%A9orie_moderne_du_portefeuille>`_). 
-L’optimisation est `quadratique <http://fr.wikipedia.org/wiki/Optimisation_quadratique>`_ ;  
+L'optimisation est `quadratique <http://fr.wikipedia.org/wiki/Optimisation_quadratique>`_ ;  
 lorsque le portefeuille est constitué de deux ou trois actions, il se résout en utilisant 
-la méthode des multiplicateurs de Lagrange. Lorsqu’il inclut plus d’actions, 
-il faut utiliser d’autres méthodes d’optimisation telles que 
+la méthode des multiplicateurs de Lagrange. Lorsqu'il inclut plus d'actions, 
+il faut utiliser d'autres méthodes d'optimisation telles que 
 le `Lagrangien augmenté <http://en.wikipedia.org/wiki/Augmented_Lagrangian_method>`_. 
-L’objectif est ici de choisir une façon de construire un portefeuille, 
-de l’optimiser sur la période d’apprentissage et de la tester sur la période de test. 
+L'objectif est ici de choisir une façon de construire un portefeuille, 
+de l'optimiser sur la période d'apprentissage et de la tester sur la période de test. 
 Il est fortement recommandé de relire le TD qui concerne l'optimisation sous contraine.
 
 Pair trading
@@ -101,6 +101,13 @@ Travail attendu
 
 Erreurs à éviter
 ----------------
+
+Aucun résultats d'optimisation
+++++++++++++++++++++++++++++++
+
+L'optimisation d'un portefeuille mène parfois à un protefeuille où tous les coefficients
+sont nuls sauf un. Il important certains résultats d'optimisation soient insérés dans le rapport.
+
 
 Nombre de paramètres et nombre de contraintes
 +++++++++++++++++++++++++++++++++++++++++++++
