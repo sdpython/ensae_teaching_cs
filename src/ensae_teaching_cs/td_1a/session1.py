@@ -90,7 +90,7 @@ def repetition_a_eviter(serie):
     """
     Une répétition à éviter.
     
-    @example(Exemples négatifs___Eviter d'effectuer le même appel deux fois)
+    @example(Négatifs___Eviter d'effectuer le même appel deux fois)
     
     Dans cette fonction on calcule la variance d'une série d'observations.
     
@@ -157,7 +157,7 @@ def dictionnaire_modifie_dans_la_boucle():
     """
     Dictionnaires, listes modifiés dans la boucle qui les parcourt.
     
-    @example(Exemples négatifs___Modifier un dictionnaire en le parcourant)
+    @example(Négatifs___Modifier un dictionnaire en le parcourant)
     
     Il faut éviter de modifier un container lorsqu'on le parcourt. 
     Lorsqu'on supprime un élément d'un dictionnaire, la structure de celui-ci

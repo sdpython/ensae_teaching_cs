@@ -15,7 +15,7 @@ def recherche(li, c):
     @param      c       élément à trouver
     @return             position
     
-    @example(construction classique___recherche avec index)
+    @example(Constructions Classiques___recherche avec index)
 
     Lorsqu'on cherche un élément dans un tableau, on cherche plus souvent 
     sa position que le fait que le tableau contient cet élément.
@@ -61,7 +61,7 @@ def minindex(li):
     @return         tuple (minimum,position)
     
 
-    @example(construction classique___minimum avec position)
+    @example(Constructions Classiques___minimum avec position)
     La fonction `min <https://docs.python.org/3.4/library/functions.html#min>`_ 
     retourne le minium d'un tableau mais pas sa position.
     Le premier réflexe est alors de recoder le parcours de la liste
@@ -98,7 +98,7 @@ def recherche_dichotomique(li, c):
     @param  c       élément à chercher
     @return         position
     
-    @example(construction classique___recherche dichotomique)
+    @example(Constructions Classiques___recherche dichotomique)
     La `recherche dichotomique <http://fr.wikipedia.org/wiki/Dichotomie>`_ 
     est plus rapide qu'une recherche classique mais elle 
     suppose que celle-ci s'effectue dans un ensemble trié. 
@@ -136,7 +136,7 @@ def text2mat(s, sep_row="\n", sep_col = "\t"):
     @param      sep_col     séparateur de colonnes
     @return                 liste de liste
     
-    @example(construction classique___conversion d'une chaîne de caractère en matrice)
+    @example(Constructions Classiques___conversion d'une chaîne de caractère en matrice)
     Les quelques lignes qui suivent permettent de décomposer une chaîne de caractères 
     en matrice. Chaque ligne et chaque colonne sont séparées par des 
     séparateurs différents. Ce procédé intervient souvent lorsqu'on récupère des 
@@ -165,7 +165,7 @@ def mat2text(mat, sep_row="\n", sep_col = "\t"):
     @param      sep_col     séparateur de colonnes
     @return                 liste de liste
     
-    @example(construction classique___conversion d'une matrice en chaîne de caractères)
+    @example(Constructions Classiques___conversion d'une matrice en chaîne de caractères)
     
     @code
     mat     = [['case11', 'case12', 'case13'], ['case21', 'case22', 'case23']]
@@ -186,7 +186,7 @@ def somme(li):
     @param      li      tableau
     @return             somme
     
-    @example(construction classique___calcul d'une somme)
+    @example(Constructions Classiques___calcul d'une somme)
     
     Le calcul d'une somme fait toujours intervenir une boucle car le langage 
     Python ne peut faire des additions qu'avec deux nombres. 
@@ -234,7 +234,7 @@ def triindex(li):
     @param      li      tableau 
     @return             liste triée
     
-    @example(construction classique___tri, garder les positions initiales)
+    @example(Constructions Classiques___tri, garder les positions initiales)
     
     Le tri est une opération fréquente. On n'a pas toujours le temps de programmer 
     le tri le plus efficace comme un tri `quicksort <http://fr.wikipedia.org/wiki/Tri_rapide>`_
@@ -283,7 +283,7 @@ def compte( li ) :
     @param  li      tableau
     @return         dictionnaire 
     
-    @example(construction classique___comptage)
+    @example(Constructions Classiques___comptage)
     
     On souhaite ici compter le nombre d'occurrences de chaque élément d'un tableau. 
     Par exemple, on pourrait connaître par ce moyen la popularité d'un mot dans un discours 
@@ -350,7 +350,7 @@ def mat2vect(mat):
     @param  mat     matrice
     @return         liste
     
-    @example(construction classique___conversion d'une matrice en un vecteur)
+    @example(Constructions Classiques___conversion d'une matrice en un vecteur)
     
     Dans un langage comme le *C++*, il arrive fréquemment qu'une matrice ne soit pas 
     représentée par une liste de listes mais par une seule liste car cette représentation 
@@ -384,7 +384,7 @@ def vect2mat(vect, ncol):
     @param  ncol    nombre de colonnes
     @return         matrice
     
-    @example(construction classique___conversion d'un vecteur en une matrice)
+    @example(Constructions Classiques___conversion d'un vecteur en une matrice)
     
     Dans un langage comme le *C++*, il arrive fréquemment qu'une matrice ne soit pas 
     représentée par une liste de listes mais par une seule liste car cette représentation 
@@ -410,7 +410,7 @@ def integrale(fonction,a,b,n):
     @param  n               nombre de division de l'intervalle
     @return                 valeur
     
-    @example(construction classique___fonction comme paramètre)
+    @example(Constructions Classiques___fonction comme paramètre)
     
     Une fonction peut aussi recevoir en paramètre une autre fonction. 
     L'exemple suivant inclut la fonction ``calcul_n_valeur`` 
