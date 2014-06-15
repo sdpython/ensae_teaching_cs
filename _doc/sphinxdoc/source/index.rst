@@ -89,6 +89,12 @@ Environnement de développement
     * `Débugger en Python <http://www.xavierdupre.fr/blog/2014-06-02_nojs.html>`_
     * :ref:`l-devtools`
 
+Vieilles versions
+-----------------
+
+    * `année 2004-2011 <http://www.xavierdupre.fr/enseignement/td_python/python_td_simple/index.html>`_
+    * `année 2011-2013 <http://www.xavierdupre.fr/enseignement/td_python/python_td_minute/index.html>`_
+    * `année 2013-2014 <http://www.xavierdupre.fr/site2013/enseignements/index.html>`_
 
 
 
@@ -96,10 +102,8 @@ Environnement de développement
     :hidden:
 
     td_1a
-    examples
-    element_code
-    exercices
-    expose_divers
+    exemple_index
+    exams
     projet_info
     coding_party
     manytools

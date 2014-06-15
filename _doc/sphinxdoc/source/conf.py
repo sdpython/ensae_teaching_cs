@@ -27,7 +27,7 @@ def extract_version_from_setup():
     else:
         raise FileNotFoundError("unable to find setup.py, tried: " + setup)
 
-project_var_name_t = "ENSAE<br />Programmation<br />Xavier Dupré"
+project_var_name_t = "ENSAE<br />Xavier Dupré"
 project_var_name = "ensae_teaching_cs"
 author           = "Xavier Dupré"
 version          = extract_version_from_setup()

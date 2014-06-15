@@ -18,6 +18,13 @@ Articles de blog
     * `Quelques précisions sur les projets informatiques (finance) <http://www.xavierdupre.fr/blog/2014-04-05_nojs.html>`_
     * `A small video on sorting algorithm <http://www.xavierdupre.fr/blog/2014-04-04_nojs.html>`_
     
+Exemples de code
+----------------
+
+    * `fusionner deux tableaux <http://www.xavierdupre.fr/blog/2013-11-21_nojs.html>`_
+    * `compter les fréquences de lettres et de couples de lettres <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_
+    * `composer un montant à partir d'un ensemble de pièces de monnaie <http://www.xavierdupre.fr/blog/2013-11-09_nojs.html>`_
+    
    
 Python dans le détail
 ---------------------
@@ -32,16 +39,40 @@ Python dans le détail
     * `Essential SQLAlchemy Tips and Techniques <http://pypix.com/tools-and-tips/essential-sqlalchemy/>`_
     * `Parallélisation des traitements en Python <http://www.hautefeuille.eu/python-parallelism-multiprocessing.html>`_
     * `Why Python is Slow: Looking Under the Hood <http://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/>`_
+    
+Langage Python
+--------------
+
+    * `Apprenez à programmer en Python <http://www.siteduzero.com/informatique/tutoriels/apprenez-a-programmer-en-python>`_ (*Vincent Le Goff*)
+      Le livre peut être acheté où téléchargé. Le livre est bien conçu, 
+      chaque concept est expliqué de façon concise et sans interférence avec d'autres concepts. 
+    * `Apprentissage de la programmation <http://inforef.be/swi/python.htm>`_ (*Gérard Swinnen*)
+       Le livre est mise à jour de façon régulière au gré des évolutions du langages, 
+       c'est un des rares livres à survivre d'années en années.
+    * `Programmation Python <http://www.editions-eyrolles.com/Livre/9782212124835/>`_ (*Tarek Ziadé*) 
+      Le livre est aussi constamment mis à jour. Le chapitre techniques avancées définit 
+      ce qu'est l'écriture d'un programme 
+      destiné à d'autres personnes qu'à soi-même (mise en production, tests unitaires). 
+    * `Python for Kids <http://shop.oreilly.com/product/9781593274078.do>`_ (*Jason R. Briggs*) It introduces the language bases, easy to read and colorful. 
+    * `Learning Python the Hard Way <http://learnpythonthehardway.org/book/>`_ (*Zed. A. Shaw*) Every chapter follows the sam pattern: concept, example, your turn. 
+    * `Raspberry Pi - Le guide de l'utilisateur <http://www.pearson.fr/livre/?GCOI=27440100230510>`_ (*Eben Upton*, *Gareth Halfacree*) 
+      Pour ceux qui veulent programmer en Python le plus petit ordinateur du monde 
+      (pour ceux qui ont l'âme de `Mister Q <https://fr.wikipedia.org/wiki/Q_%28James_Bond%29>`_).
 
 Machine Learning
 ----------------
 
     * `The Elements of Statistical Learning <http://statweb.stanford.edu/~tibs/ElemStatLearn/>`_ (*Trevor Hastie*, *Robert Tibshirani*, *Jerome Friedman*)
     * module `scikit-learn <http://scikit-learn.org/stable/>`_
-    * `Machine Learning with Python <http://www.xavierdupre.fr/blog/2013-08-10_nojs.html>`_
+    * `Machine Learning with Python <http://www.xavierdupre.fr/blog/2013-08-10_nojs.html>`_ (blog)
     * `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
-    * `Journal of Machine Learning Research (JMLR) <http://jmlr.org/>`_
-    * `arXiv Computer Science <http://arxiv.org/archive/cs>`_
+    * `Journal of Machine Learning Research (JMLR) <http://jmlr.org/>`_ (revue)
+    * `arXiv Computer Science <http://arxiv.org/archive/cs>`_ (tout venant)
+    * `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_ (*Wes McKinney*) 
+       Ce livre ne vous apprendra rien sur l'analyse des données mais il présente les outils les 
+       plus utilisés aujourd'hui pour faire de l'analyse des données avec Python. 
+    * `Building Machine Learning Systems with Python <http://www.packtpub.com/building-machine-learning-systems-with-python/book>`_ (*Willi Richert*, *Luis Pedro Coelho*) 
+       Revue des techniques les plus utilisées en machine learning aujourd'hui. 
     
 Compétitions Machine Learning
 -----------------------------
