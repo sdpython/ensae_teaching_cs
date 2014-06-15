@@ -7,7 +7,11 @@ Examples de toutes sortes
 
 .. toctree::
 
-    examples
+    all_example_ConstructionsClassiques
+    all_example_Ngatifs
+    all_example_TD1A
+    all_example_Impossibleretenir
+    all_example_numpy
     element_code
     exercices
     expose_divers
