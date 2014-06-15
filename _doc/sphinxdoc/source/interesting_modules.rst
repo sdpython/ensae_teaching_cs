@@ -40,10 +40,19 @@ ipython:
     * `pyzmq <http://zeromq.github.io/pyzmq/>`_ : connecteur pour `ØMQ <http://zeromq.org/>`_ (librairie de sockets, communication entre plusieurs machines)
     * `six <https://pythonhosted.org/six/>`_ : librairie de conversion entre Python 2 et 3
     * `tornado <http://www.tornadoweb.org/en/stable/>`_ : server web
+    
+plugin ipython
 
+    * `ipyD3 <https://github.com/z-m-k/ipyD3>`_ : plugin pour utiliser `d3.js <http://d3js.org/>`_ dans iPython
+    * `mpld3 <http://mpld3.github.io/>`_ : pour afficher un graph Matplotlib sous forme de graphe `d3.js <http://d3js.org/>`_
+    
 matplotlib:
 
     * `pyparsing <http://pyparsing.wikispaces.com/>`_ : pour définir une gramme et interpréter un langage
+
+plugin matplotlib:
+
+    * `prettyplotlib <http://olgabot.github.io/prettyplotlib/>`_
 
 Extensions
 ----------
