@@ -102,6 +102,11 @@ Python et autres langages
     * `rpy2 <https://bitbucket.org/lgautier/rpy2>`_ : Python et R
     * `shapely <https://github.com/Toblerity/Shapely>`_ : Python et `GEOS <http://trac.osgeo.org/geos/>`_
     
+Boîte à outils
+--------------
+
+    * `requests <http://docs.python-requests.org/>`_ : pratique pour se débrouiller avec internet (`exemples <http://docs.python-requests.org/en/latest/user/quickstart/#redirection-and-history>`_)
+    
 Pour faire du machine learning sans programmer
 ----------------------------------------------
 
