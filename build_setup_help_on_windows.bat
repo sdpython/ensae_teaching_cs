@@ -18,11 +18,13 @@ rem python 3.4
 set pythonexe="c:\Python34_x64\python"
 %pythonexe% clean_pyd.py
 %pythonexe% setup.py build bdist_wininst --plat-name=win-amd64
+%pythonexe% setup.py build bdist_msi --plat-name=win-amd64
 
 set pythonexe="c:\Python34\python"
 %pythonexe% clean_pyd.py
 %pythonexe% setup.py sdist --formats=gztar,zip --verbose
 %pythonexe% setup.py bdist_wininst
+%pythonexe% setup.py bdist_msi
 
 rem help
 
