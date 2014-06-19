@@ -20,6 +20,7 @@ Les six séances suivantes sont centrées autour de l'utilisation de la programm
 pour un usage scientifique.
 
 - :ref:`TD 7 : Programmation dynamique <td1acenoncesession7rst>`  (:ref:`correction <td1acorrectionsession7rst>`)
+- :ref:`TD 8 : Arbre et Trie <td1acenoncesession8rst>`  (:ref:`correction <td1acorrectionsession8rst>`)
 
 
 .. toctree::

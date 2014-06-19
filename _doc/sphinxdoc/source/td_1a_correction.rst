@@ -14,6 +14,7 @@ correction
     TD 5 : Classes et carrés magiques (correction) <notebooks/td1a_correction_session5>
     TD 6 : Classes et héritage <notebooks/td1a_correction_session6>
     TD 7 : Programmation dynamique <notebooks/td1a_correction_session7>
+    TD 8 : Arbre et Trie <notebooks/td1a_correction_session8>
 
     
     
