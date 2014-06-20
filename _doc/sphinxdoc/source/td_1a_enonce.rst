@@ -15,11 +15,11 @@
     TD 6 : Classes et héritage <notebooks/td1a_cenonce_session6>
     TD 7 : Programmation dynamique <notebooks/td1a_cenonce_session7>
     TD 8 : Arbre et Trie <notebooks/td1a_cenonce_session8>
+    TD 9 : Optimisation sous contrainte <notebooks/td1a_cenonce_session9>
     
 
 Next:
 
-* TD 9 : optimisation sous contraintes
 * TD 10 : calcul numérique
 * TD 11 : calcul numérique + dichotomie, cython
 * TD 12 : graphique avec matplotlib, networkx, ggplot
