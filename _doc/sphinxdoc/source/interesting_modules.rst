@@ -58,7 +58,7 @@ Extensions
 ----------
 
     * `cvxopt <http://cvxopt.org/>`_ : optimisation quadratique sous contraintes
-    * `ggplot <https://github.com/yhat/ggplot/>`_
+    * `ggplot <http://ggplot.yhathq.com/>`_ : extension très populaire sur *R* et portée sur Python
     * `kivy <http://kivy.org/#home>`_ : pour faire des jeux ou des applications pour tablettes, téléphones
     * `networkx <http://networkx.github.io/>`_ : dessin de graphes (simple)
     * `openpyxl <http://pythonhosted.org/openpyxl/>`_ : conversion de DataFrame en feuille Excel, 
