@@ -57,10 +57,10 @@ Contenu des enseignements
 -------------------------
 
     * :ref:`ENSAE, 1A, initiation à la programmation et l'algorithmie <l-td1a>`
-    * :ref:`Quelques exemples très courts <l-example-main>`
-    * :ref:`Quelques problématiques récurrentes <l-elcode>`
-    * :ref:`Exercices d'algorithmie <l-exoalgo>`
-    * :ref:`Exposés divers non abordés en cours <l-extra>`
+    * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
+    
+        * :ref:`Exercices d'algorithmie <l-exoalgo>`
+        * :ref:`Exposés divers non abordés en cours <l-extra>`
 
 Quelques références
 -------------------
@@ -88,6 +88,7 @@ Environnement de développement
     * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
     * `Débugger en Python <http://www.xavierdupre.fr/blog/2014-06-02_nojs.html>`_
     * :ref:`l-devtools`
+    * `Trouver chaussure à ses stats <file:///C:/xadupre/__home_/_data/GitHub/ensae_teaching_cs/dist/html/notebooks/td1a_cenonce_session_10.html#intro>`_
 
 Vieilles versions
 -----------------

@@ -28,6 +28,7 @@ On procède de cette façon par dichotomie. Le coût est **logarithmique**.
 - :ref:`TD 8 : Arbre et Trie <td1acenoncesession8rst>`  (:ref:`correction <td1acorrectionsession8rst>`)
 - :ref:`TD 9 : Optimisation sous contrainte <td1acenoncesession9rst>`  (:ref:`correction <td1acorrectionsession9rst>`) 
                (relecture conseillée à ceux qui souhaite optimiser des portefeuilles d'actions)
+- :ref:`TD 10 : Python pour Data Scientist <td1acenoncesession10rst>`  (:ref:`correction <td1acorrectionsession10rst>`) 
                
 
 

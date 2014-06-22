@@ -5,6 +5,7 @@
 Modules intéressants (pour un ENSAE)
 ====================================
 
+
 Les modules indispensables sont intégrés à la distribution 
 `WinPython <http://winpython.sourceforge.net/>`_. 
 L'autre solution est d'utiliser le module
@@ -111,7 +112,8 @@ Pour faire du machine learning sans programmer
 ----------------------------------------------
 
     * `Orange <http://orange.biolab.si/>`_
-
+    * `Trouver chaussure à ses stats <file:///C:/xadupre/__home_/_data/GitHub/ensae_teaching_cs/dist/html/notebooks/td1a_cenonce_session_10.html#intro>`_
+    
 Génération d'une documentation et thème Sphinx
 ----------------------------------------------
 
