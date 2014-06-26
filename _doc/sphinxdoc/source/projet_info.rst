@@ -13,9 +13,9 @@ Les sujets proposés abordent différents domaines connexes aux enseignements pr
 (finance, statistique, économie) et quelques jeux.
 Tous les projets proposés sont des suggestions, les élèves sont libres d'élaborer un sujet de leur choix
 ou de s'inspirer des énoncés ci-dessous à la condition de le faire valider par un encadrant.
-L'encadrant se réserve le droit de proposer des modifications si le même sujet est 
-choisi par un trop grand nombre d'élèves. Afin d'avoir un premier suivi productif, 
+Afin d'avoir un premier suivi productif, 
 il est conseillé de parcourir les références bibliographiques suggérées. 
+C'est souvent l'occasion de découvrir un sujet que vous ne verrez pas ou peu à l'ENSAE.
 
 
 .. toctree::
@@ -23,7 +23,10 @@ il est conseillé de parcourir les références bibliographiques suggérées.
 
     projets/p_finance
     projets/p_data_folie
+    projets/gen_ant
 
+L'encadrant se réserve le droit de proposer des modifications si le même sujet est 
+choisi par un trop grand nombre d'élèves. 
 
 
 Travail attendu
