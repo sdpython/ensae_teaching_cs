@@ -25,6 +25,7 @@ C'est souvent l'occasion de découvrir un sujet que vous ne verrez pas ou peu à
     projets/p_data_folie
     projets/gen_ant
     projets/jeux
+    projets/jeuxcartes
 
 L'encadrant se réserve le droit de proposer des modifications si le même sujet est 
 choisi par un trop grand nombre d'élèves. 
