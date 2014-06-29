@@ -94,8 +94,10 @@ Le trader achète un action pendant qu'il vend l'autre.
 Travail attendu
 ---------------
 
-- le rapport doit résumer ce que votre projet vous a appris, vous devez désigner 
-  une meilleure stratégie avec les meilleurs paramètres et la façon de les obtenir.
+Le rapport doit résumer ce que votre projet vous a appris, vous devez désigner 
+une meilleure stratégie avec les meilleurs paramètres et la façon de les obtenir.
+Et comme c'est un projet de finance, on s'attend sans doute à ce que vous pariez
+sur votre propre stratégie à moins que...
 
 
 
