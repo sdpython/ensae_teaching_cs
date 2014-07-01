@@ -45,7 +45,14 @@ qui facilitent l'archivage. Ils sont tellement pratiques qu'on a même du mal
 
 **Editeur de texte**
 
+* `SciTE <http://www.scintilla.org/SciTE.html>`_
 * `NotePad++ <http://notepad-plus-plus.org/fr/>`_
+
+**IDE**
+
+* `PyCharm <http://www.jetbrains.com/pycharm/>`_
+* `PyTools <http://pytools.codeplex.com/>`_ (fonctionne avec `Visual Studio <http://www.visualstudio.com/>`_)
+* `PyDev <http://pydev.org/>`_ (fonctionne avec `Eclipse <http://www.eclipse.org/>`_)
 
 
 Ressources

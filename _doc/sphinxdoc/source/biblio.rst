@@ -26,20 +26,7 @@ Exemples de code
     * `composer un montant à partir d'un ensemble de pièces de monnaie <http://www.xavierdupre.fr/blog/2013-11-09_nojs.html>`_
     
    
-Python dans le détail
----------------------
-
-    * `La boîte à outils Python 2014 <http://www.hautefeuille.eu/python-tools-2014.html>`_
-    * `Les recettes Python de Tyrtamos <http://python.jpvweb.com/mesrecettespython/doku.php?id=Sommaire>`_
-    * `Why Lists Can't Be Dictionary Keys <https://wiki.python.org/moin/DictionaryKeys>`_
-    * `Time Complexity <https://wiki.python.org/moin/TimeComplexity>`_
-    * `List of data structures <http://en.wikipedia.org/wiki/List_of_data_structures>`_
-    * `Advanced Data Structures in Python <http://pypix.com/python/advanced-data-structures-python/>`_
-    * `Useful Python Functions and Features You Need to Know <http://pypix.com/tools-and-tips/python-functions/?utm_content=buffer2e408&utm_source=buffer&utm_medium=twitter&utm_campaign=Buffer>`_
-    * `Essential SQLAlchemy Tips and Techniques <http://pypix.com/tools-and-tips/essential-sqlalchemy/>`_
-    * `Parallélisation des traitements en Python <http://www.hautefeuille.eu/python-parallelism-multiprocessing.html>`_
-    * `Why Python is Slow: Looking Under the Hood <http://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/>`_
-    
+  
 Langage Python
 --------------
 
@@ -58,10 +45,38 @@ Langage Python
     * `Raspberry Pi - Le guide de l'utilisateur <http://www.pearson.fr/livre/?GCOI=27440100230510>`_ (*Eben Upton*, *Gareth Halfacree*) 
       Pour ceux qui veulent programmer en Python le plus petit ordinateur du monde 
       (pour ceux qui ont l'âme de `Mister Q <https://fr.wikipedia.org/wiki/Q_%28James_Bond%29>`_).
+      
+Installation
+------------
+
+    * `Installing Scientific Packages for Python3 on MacOS 10.9 Mavericks <http://sebastianraschka.com/Articles/2014_install_python_sci_pkgs.html>`_
+
+
+Python dans le détail
+---------------------
+
+    * `La boîte à outils Python 2014 <http://www.hautefeuille.eu/python-tools-2014.html>`_
+    * `Les recettes Python de Tyrtamos <http://python.jpvweb.com/mesrecettespython/doku.php?id=Sommaire>`_
+    * `Why Lists Can't Be Dictionary Keys <https://wiki.python.org/moin/DictionaryKeys>`_
+    * `Time Complexity <https://wiki.python.org/moin/TimeComplexity>`_
+    * `List of data structures <http://en.wikipedia.org/wiki/List_of_data_structures>`_
+    * `Advanced Data Structures in Python <http://pypix.com/python/advanced-data-structures-python/>`_
+    * `Aller plus loin avec les hash maps en Python <http://sametmax.com/aller-plus-loin-avec-les-hash-maps-en-python/>`_
+    * `Useful Python Functions and Features You Need to Know <http://pypix.com/tools-and-tips/python-functions/?utm_content=buffer2e408&utm_source=buffer&utm_medium=twitter&utm_campaign=Buffer>`_
+    * `Essential SQLAlchemy Tips and Techniques <http://pypix.com/tools-and-tips/essential-sqlalchemy/>`_
+    * `Parallélisation des traitements en Python <http://www.hautefeuille.eu/python-parallelism-multiprocessing.html>`_
+    * `Why Python is Slow: Looking Under the Hood <http://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/>`_
+    * `An introduction to parallel programming using Python's multiprocessing module <http://sebastianraschka.com/Articles/2014_multiprocessing_intro.html>`_
+    * `The key differences between Python 2.7.x and Python 3.x with examples <http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html>`_
+    * `An evaluation of simple Python performance tweaks <http://sebastianraschka.com/Articles/2014_python_performance_tweaks.html>`_
+    * `A thorough guide to SQLite database operations in Python <http://sebastianraschka.com/Articles/2014_sqlite_in_python_tutorial.html>`_
+
 
 Machine Learning
 ----------------
 
+    * `Sebastian Raschka <http://sebastianraschka.com/articles.html>`_ (machine learning avec Python)
+    * `Data Science with Python <http://blog.yhathq.com/posts/data-science-in-python-tutorial.html>`_
     * `The Elements of Statistical Learning <http://statweb.stanford.edu/~tibs/ElemStatLearn/>`_ (*Trevor Hastie*, *Robert Tibshirani*, *Jerome Friedman*)
     * module `scikit-learn <http://scikit-learn.org/stable/>`_
     * `Machine Learning with Python <http://www.xavierdupre.fr/blog/2013-08-10_nojs.html>`_ (blog)
@@ -73,6 +88,13 @@ Machine Learning
        plus utilisés aujourd'hui pour faire de l'analyse des données avec Python. 
     * `Building Machine Learning Systems with Python <http://www.packtpub.com/building-machine-learning-systems-with-python/book>`_ (*Willi Richert*, *Luis Pedro Coelho*) 
        Revue des techniques les plus utilisées en machine learning aujourd'hui. 
+    * `Implementing a Principal Component Analysis (PCA) in Python step by step <http://sebastianraschka.com/Articles/2014_pca_step_by_step.html>`_
+    * `Implementing simple sequential feature selection algorithms in Python <http://sebastianraschka.com/Articles/2014_sequential_sel_algos.html>`_
+    * `Python Sparse Random Projections <http://blog.yhathq.com/posts/sparse-random-projections.html>`_
+    * `ggplot tutorial <http://blog.yhathq.com/posts/facebook-ggplot-tutorial.html>`_
+    * `Python Multi-armed Bandits (and Beer!) <http://blog.yhathq.com/posts/the-beer-bandit.html>`_
+    * `Predicting customer churn with scikit-learn <http://blog.yhathq.com/posts/predicting-customer-churn-with-sklearn.html>`_
+    * `Detecting Outlier Car Prices on the Web <http://blog.yhathq.com/posts/detecting-outlier-car-prices-on-the-web.html>`_
     
 Compétitions Machine Learning
 -----------------------------
