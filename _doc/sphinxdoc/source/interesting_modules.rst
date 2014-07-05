@@ -54,19 +54,32 @@ matplotlib:
 plugin matplotlib:
 
     * `prettyplotlib <http://olgabot.github.io/prettyplotlib/>`_
+    
+Visualisation
+-------------
+
+Visualisation des données :
+
+
+    * `matplotlib <http://matplotlib.org/>`_ : graphes scientifiques
+    * `prettyplotlib <http://olgabot.github.io/prettyplotlib/>`_ (nécessite matplotlib)
+    * `ggplot <http://ggplot.yhathq.com/>`_ : extension très populaire sur *R* et portée sur Python
+    * `plotly <https://plot.ly/python/>`_ : graphes élaborés
+    * `networkx <http://networkx.github.io/>`_ : dessin de graphes (simple)
+    
+Jeux :
+
+    * `pygame <http://www.pygame.org/>`_ 
+    * `kivy <http://kivy.org/#home>`_ : pour faire des jeux ou des applications pour tablettes, téléphones
 
 Extensions
 ----------
 
     * `cvxopt <http://cvxopt.org/>`_ : optimisation quadratique sous contraintes
-    * `ggplot <http://ggplot.yhathq.com/>`_ : extension très populaire sur *R* et portée sur Python
-    * `kivy <http://kivy.org/#home>`_ : pour faire des jeux ou des applications pour tablettes, téléphones
-    * `networkx <http://networkx.github.io/>`_ : dessin de graphes (simple)
     * `openpyxl <http://pythonhosted.org/openpyxl/>`_ : conversion de DataFrame en feuille Excel, 
       il est préférable d'installer la version 1.62 (``pip install openpyxl==1.6.2``) car la version 2.0.3
       ne marche pas encore avec pandas.
     * `Pillow <https://github.com/python-imaging/Pillow>`_ : traitement d'image
-    * `plotpy <https://plot.ly/python/>`_ : graphes élaborés
     * `Scipy <http://www.scipy.org/>`_ : calcul scientifiques
     * `statsmodels <http://statsmodels.sourceforge.net/>`_ : modèles linéaires
     * `Flask <http://flask.pocoo.org/>`_ : outils pour produire un server web en Python (plus simple que `django <http://www.django-fr.org/>`_)
