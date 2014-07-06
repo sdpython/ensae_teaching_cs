@@ -49,8 +49,7 @@ A ces modules, il faut ajouter deux autres conçus pour ces enseignements :
 
 Lors de l'installation, il faut faire attention à installer le langage
 Python et ses modules en prenant soin d'utiliser la même version pour chaque composant.
-Je recommande la version `64bit, v3.3.5 <https://www.python.org/downloads/release/python-335/>`_.
-La version `64bit, v3.4.1 <https://www.python.org/downloads/release/python-341/>`_ a encore quelques bugs.
+Je recommande la version `64bit, v3.4.1 <https://www.python.org/downloads/release/python-341/>`_.
 
 
 Contenu des enseignements
@@ -72,6 +71,7 @@ Quelques références
     * `Python Tutor <http://www.pythontutor.com/>`_
     * `version PDF de ce site <http://www.xavierdupre.fr/app/ensae_teaching_cs/latex/ensae_teaching_cs_doc.pdf>`_ (PDF)
     * `De l'idée au programme informatique <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_
+    * `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
     
 Python
 ------
