@@ -72,8 +72,8 @@ Python dans le détail
     * `A thorough guide to SQLite database operations in Python <http://sebastianraschka.com/Articles/2014_sqlite_in_python_tutorial.html>`_
 
 
-Machine Learning
-----------------
+Machine Learning / Data Science
+-------------------------------
 
     * `Sebastian Raschka <http://sebastianraschka.com/articles.html>`_ (machine learning avec Python)
     * `Data Science with Python <http://blog.yhathq.com/posts/data-science-in-python-tutorial.html>`_
@@ -108,5 +108,6 @@ Optimisation
 
     * module `cvxopt <http://cvxopt.org/>`_
     * `Introduction à l’optimisation - 2e édition <http://www.editions-ellipses.fr/product_info.php?products_id=8830>`_ (*Jean-Christophe Culioli*)
+    * `Numerical Optimization <http://www.ece.northwestern.edu/~nocedal/book/num-opt.html>`_, (*Jorge Nocedal, Stephen J. Wright*)
     
     
