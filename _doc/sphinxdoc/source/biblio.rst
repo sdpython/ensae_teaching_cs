@@ -45,12 +45,14 @@ Langage Python
     * `Raspberry Pi - Le guide de l'utilisateur <http://www.pearson.fr/livre/?GCOI=27440100230510>`_ (*Eben Upton*, *Gareth Halfacree*) 
       Pour ceux qui veulent programmer en Python le plus petit ordinateur du monde 
       (pour ceux qui ont l'âme de `Mister Q <https://fr.wikipedia.org/wiki/Q_%28James_Bond%29>`_).
+    * `Anti-Patterns in Python Programming <http://lignos.org/py_antipatterns/>`_
+    * `The real 10 algorithms that dominate our world <https://medium.com/@_marcos_otero/the-real-10-algorithms-that-dominate-our-world-e95fa9f16c04>`_
       
 Installation
 ------------
 
     * `Installing Scientific Packages for Python3 on MacOS 10.9 Mavericks <http://sebastianraschka.com/Articles/2014_install_python_sci_pkgs.html>`_
-
+    * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
 
 Python dans le détail
 ---------------------
