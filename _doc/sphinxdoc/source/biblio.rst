@@ -24,9 +24,7 @@ Exemples de code
     * `fusionner deux tableaux <http://www.xavierdupre.fr/blog/2013-11-21_nojs.html>`_
     * `compter les fréquences de lettres et de couples de lettres <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_
     * `composer un montant à partir d'un ensemble de pièces de monnaie <http://www.xavierdupre.fr/blog/2013-11-09_nojs.html>`_
-    
-   
-  
+       
 Langage Python
 --------------
 
@@ -85,6 +83,7 @@ Machine Learning / Data Science
     * `Python Multi-armed Bandits (and Beer!) <http://blog.yhathq.com/posts/the-beer-bandit.html>`_
     * `Predicting customer churn with scikit-learn <http://blog.yhathq.com/posts/predicting-customer-churn-with-sklearn.html>`_
     * `Detecting Outlier Car Prices on the Web <http://blog.yhathq.com/posts/detecting-outlier-car-prices-on-the-web.html>`_
+    * `pyvideo.org <http://pyvideo.org/>`_
     
 Compétitions Machine Learning
 -----------------------------
