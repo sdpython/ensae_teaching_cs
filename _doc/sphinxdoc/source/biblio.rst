@@ -30,21 +30,12 @@ Exemples de code
 Langage Python
 --------------
 
-    * `Apprenez à programmer en Python <http://www.siteduzero.com/informatique/tutoriels/apprenez-a-programmer-en-python>`_ (*Vincent Le Goff*)
-      Le livre peut être acheté où téléchargé. Le livre est bien conçu, 
-      chaque concept est expliqué de façon concise et sans interférence avec d'autres concepts. 
-    * `Apprentissage de la programmation <http://inforef.be/swi/python.htm>`_ (*Gérard Swinnen*)
-       Le livre est mise à jour de façon régulière au gré des évolutions du langages, 
-       c'est un des rares livres à survivre d'années en années.
-    * `Programmation Python <http://www.editions-eyrolles.com/Livre/9782212124835/>`_ (*Tarek Ziadé*) 
-      Le livre est aussi constamment mis à jour. Le chapitre techniques avancées définit 
-      ce qu'est l'écriture d'un programme 
-      destiné à d'autres personnes qu'à soi-même (mise en production, tests unitaires). 
+    * `Apprenez à programmer en Python <http://www.siteduzero.com/informatique/tutoriels/apprenez-a-programmer-en-python>`_ (*Vincent Le Goff*) Le livre peut être acheté où téléchargé. Le livre est bien conçu, chaque concept est expliqué de façon concise et sans interférence avec d'autres concepts. 
+    * `Apprentissage de la programmation <http://inforef.be/swi/python.htm>`_ (*Gérard Swinnen*) Le livre est mise à jour de façon régulière au gré des évolutions du langages, c'est un des rares livres à survivre d'années en années.
+    * `Programmation Python <http://www.editions-eyrolles.com/Livre/9782212124835/>`_ (*Tarek Ziadé*) Le livre est aussi constamment mis à jour. Le chapitre techniques avancées définit ce qu'est l'écriture d'un programme destiné à d'autres personnes qu'à soi-même (mise en production, tests unitaires). 
     * `Python for Kids <http://shop.oreilly.com/product/9781593274078.do>`_ (*Jason R. Briggs*) It introduces the language bases, easy to read and colorful. 
     * `Learning Python the Hard Way <http://learnpythonthehardway.org/book/>`_ (*Zed. A. Shaw*) Every chapter follows the sam pattern: concept, example, your turn. 
-    * `Raspberry Pi - Le guide de l'utilisateur <http://www.pearson.fr/livre/?GCOI=27440100230510>`_ (*Eben Upton*, *Gareth Halfacree*) 
-      Pour ceux qui veulent programmer en Python le plus petit ordinateur du monde 
-      (pour ceux qui ont l'âme de `Mister Q <https://fr.wikipedia.org/wiki/Q_%28James_Bond%29>`_).
+    * `Raspberry Pi - Le guide de l'utilisateur <http://www.pearson.fr/livre/?GCOI=27440100230510>`_ (*Eben Upton*, *Gareth Halfacree*) Pour ceux qui veulent programmer en Python le plus petit ordinateur du monde (pour ceux qui ont l'âme de `Mister Q <https://fr.wikipedia.org/wiki/Q_%28James_Bond%29>`_).
     * `Anti-Patterns in Python Programming <http://lignos.org/py_antipatterns/>`_
     * `The real 10 algorithms that dominate our world <https://medium.com/@_marcos_otero/the-real-10-algorithms-that-dominate-our-world-e95fa9f16c04>`_
       
@@ -85,11 +76,8 @@ Machine Learning / Data Science
     * `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
     * `Journal of Machine Learning Research (JMLR) <http://jmlr.org/>`_ (revue)
     * `arXiv Computer Science <http://arxiv.org/archive/cs>`_ (tout venant)
-    * `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_ (*Wes McKinney*) 
-       Ce livre ne vous apprendra rien sur l'analyse des données mais il présente les outils les 
-       plus utilisés aujourd'hui pour faire de l'analyse des données avec Python. 
-    * `Building Machine Learning Systems with Python <http://www.packtpub.com/building-machine-learning-systems-with-python/book>`_ (*Willi Richert*, *Luis Pedro Coelho*) 
-       Revue des techniques les plus utilisées en machine learning aujourd'hui. 
+    * `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_ (*Wes McKinney*) Ce livre ne vous apprendra rien sur l'analyse des données mais il présente les outils les plus utilisés aujourd'hui pour faire de l'analyse des données avec Python. 
+    * `Building Machine Learning Systems with Python <http://www.packtpub.com/building-machine-learning-systems-with-python/book>`_ (*Willi Richert*, *Luis Pedro Coelho*) Revue des techniques les plus utilisées en machine learning aujourd'hui. 
     * `Implementing a Principal Component Analysis (PCA) in Python step by step <http://sebastianraschka.com/Articles/2014_pca_step_by_step.html>`_
     * `Implementing simple sequential feature selection algorithms in Python <http://sebastianraschka.com/Articles/2014_sequential_sel_algos.html>`_
     * `Python Sparse Random Projections <http://blog.yhathq.com/posts/sparse-random-projections.html>`_
