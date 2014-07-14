@@ -227,3 +227,6 @@ version.txt
 */sphinxdoc/source/notebooks/*
 */notebooks/*.zip
 */notebooks/*.txt
+*/notebooks/td1a/*.txt
+*/notebooks/td1a/*.xlsx
+*/notebooks/td1a/*.zip

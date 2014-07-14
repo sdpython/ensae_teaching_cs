@@ -16,7 +16,7 @@
     TD 7 : Programmation dynamique <notebooks/td1a_cenonce_session7>
     TD 8 : Arbre et Trie <notebooks/td1a_cenonce_session8>
     TD 9 : Optimisation sous contrainte <notebooks/td1a_cenonce_session9>
-    TD 10 : Python pour Data Scientist <notebooks/td1a_cenonce_session_10>
+    TD 10 : DataFrame et Matrice <notebooks/td1a_cenonce_session_10>
     
 
 Next:
