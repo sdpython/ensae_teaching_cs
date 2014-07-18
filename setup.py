@@ -1,4 +1,4 @@
-#coding:ISO_8859-1
+#-*- coding: utf-8 -*-
 #  Copyright (C) 2013 ---------------
 #  All rights reserved.
 # 
@@ -94,25 +94,58 @@ if "--verbose" in sys.argv :
     print ("current     =", os.path.abspath(os.getcwd()))
     print ("---------------------------------")
 
-setup(
-    name                    = project_var_name,
-    version                 = '%s.%s' %(sversion, subversion) if "register" in sys.argv or "bdist_msi" in sys.argv else 'py%s-v%s.%s' % (versionPython, sversion, subversion),
-    author                  = 'Xavier Dupré',
-    author_email            = 'xavier.dupre AT gmail.com',
-    url                     = "http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html",
-    download_url            = "https://github.com/sdpython/ensae_teaching_cs/",
-    description             = DESCRIPTION,
-    long_description        = long_description,
-    keywords                = KEYWORDS,
-    classifiers             = CLASSIFIERS,
-    packages                = packages,
-    package_dir             = package_dir,
-    package_data            = package_data,
-    #data_files              = data_files,
-    install_requires        = [  "pyensae" ],
-    ext_modules             = EXT_MODULES,
-    #include_package_data    = True,
-    )
+if "build_sphinx" in sys.argv:
+    # we take a shortcut 
+    
+    try:
+        import pyquickhelper
+    except ImportError:
+        sys.path.append ( os.path.normpath (os.path.abspath(os.path.join("..", "pyquickhelper", "src" ))))
+        try:
+            import pyquickhelper
+        except ImportError as e :
+            raise ImportError("module pyquickhelper is needed to build the documentation") from e 
+    
+    if "--help" in sys.argv:
+        print(pyquickhelper.get_help_usage())
+    else :
+        
+        if not os.path.exists("_doc/sphinxdoc/source"):
+            raise FileNotFoundError("you must get the source from GitHub to build the documentation")
+        
+        from pyquickhelper import fLOG, generate_help_sphinx
 
+        fLOG (OutputPrint = True)
+        project_name = os.path.split(os.path.split(os.path.abspath(__file__))[0])[-1]
+        generate_help_sphinx(project_name)
+        
+elif "unittests" in sys.argv:        
     
+    if not os.path.exists("_unittests"):
+        raise FileNotFoundError("you must get the source from GitHub to run the unittests")
+        
+    sys.path.append("_unittests")
+    from run_unittests import main
+    main()
     
+else :
+    
+    setup(
+        name                    = project_var_name,
+        version                 = '%s.%s' %(sversion, subversion) if "register" in sys.argv or "bdist_msi" in sys.argv else 'py%s-v%s.%s' % (versionPython, sversion, subversion),
+        author                  = 'Xavier DuprÃ©',
+        author_email            = 'xavier.dupre AT gmail.com',
+        url                     = "http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html",
+        download_url            = "https://github.com/sdpython/ensae_teaching_cs/",
+        description             = DESCRIPTION,
+        long_description        = long_description,
+        keywords                = KEYWORDS,
+        classifiers             = CLASSIFIERS,
+        packages                = packages,
+        package_dir             = package_dir,
+        package_data            = package_data,
+        #data_files              = data_files,
+        install_requires        = [  "pyensae" ],
+        ext_modules             = EXT_MODULES,
+        #include_package_data    = True,
+        )
