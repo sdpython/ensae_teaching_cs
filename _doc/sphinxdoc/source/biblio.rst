@@ -9,14 +9,20 @@ Articles, Références, Blogs
 Articles de blog
 ----------------
 
-    * `Résoudre un sudoku avec Excel et VBA <http://www.xavierdupre.fr/blog/2014-02-08_nojs.html>`_
-    * `Fusionner deux tableaux <http://www.xavierdupre.fr/blog/2013-11-21_nojs.html>`_
-    * `Compter les pièces de monnaie pour obtenir un montant <http://www.xavierdupre.fr/blog/2013-11-09_nojs.html>`_
-    * `Désactiver les logs de cvxopt <http://www.xavierdupre.fr/blog/2014-04-16_nojs.html>`_
-    * `Machine Learning with Python <http://www.xavierdupre.fr/blog/2013-08-10_nojs.html>`_
-    * `Quelques astuces pour accélérer un programme <http://www.xavierdupre.fr/blog/2014-04-12_nojs.html>`_
-    * `Quelques précisions sur les projets informatiques (finance) <http://www.xavierdupre.fr/blog/2014-04-05_nojs.html>`_
-    * `A small video on sorting algorithm <http://www.xavierdupre.fr/blog/2014-04-04_nojs.html>`_
+    * **algorithmes**
+        * `Résoudre un sudoku avec Excel et VBA <http://www.xavierdupre.fr/blog/2014-02-08_nojs.html>`_
+        * `Compter les pièces de monnaie pour obtenir un montant <http://www.xavierdupre.fr/blog/2013-11-09_nojs.html>`_
+        * `A small video on sorting algorithm <http://www.xavierdupre.fr/blog/2014-04-04_nojs.html>`_
+    * **DataFrames**
+        * `Fusionner deux tableaux <http://www.xavierdupre.fr/blog/2013-11-21_nojs.html>`_
+    * **Machine Learning, Big Data**
+        * `Machine Learning with Python <http://www.xavierdupre.fr/blog/2013-08-10_nojs.html>`_
+        * `Gros DataFrame et SQL <http://www.xavierdupre.fr/blog/2014-07-19_nojs.html>`_
+    * **technique**
+        * `Désactiver les logs de cvxopt <http://www.xavierdupre.fr/blog/2014-04-16_nojs.html>`_
+        * `Quelques astuces pour accélérer un programme <http://www.xavierdupre.fr/blog/2014-04-12_nojs.html>`_
+    * **ENSAE**
+        * `Quelques précisions sur les projets informatiques (finance) <http://www.xavierdupre.fr/blog/2014-04-05_nojs.html>`_
     
 Exemples de code
 ----------------
