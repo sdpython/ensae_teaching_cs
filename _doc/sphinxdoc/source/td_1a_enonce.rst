@@ -22,6 +22,6 @@
 Next:
 
 * TD 11 : calcul numérique + dichotomie, cython
-* TD 12 : graphique avec matplotlib, networkx, ggplot
+* TD 12 : graphique avec matplotlib, pandas, networkx, ggplot
 * TD 13 : séance notée
     

@@ -16,6 +16,7 @@ correction
     TD 7 : Programmation dynamique (correction) <notebooks/td1a_correction_session7>
     TD 8 : Arbre et Trie (correction) <notebooks/td1a_correction_session8>
     TD 9 : Optimisation sous contrainte (correction) <notebooks/td1a_correction_session9>
+    TD 10 : DataFrame et Matrice (correction) <notebooks/td1a_correction_session10>
 
     
     
