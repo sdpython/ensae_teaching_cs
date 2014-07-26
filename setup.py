@@ -82,7 +82,11 @@ else :
 
 packages     = find_packages('src', exclude='src')
 package_dir  = { k: "src/" + k.replace(".","/") for k in packages }
-package_data = { project_var_name + ".subproject": ["*.tohelp"] }
+package_data = { project_var_name + ".pythonnet.py33": ["*.pyd","*.txt","*.dll"],
+                 project_var_name + ".pythonnet.py33x64": ["*.pyd","*.txt","*.dll"],
+                 project_var_name + ".pythonnet.py34": ["*.pyd","*.txt","*.dll"],
+                 project_var_name + ".pythonnet.py34x64": ["*.pyd","*.txt","*.dll"],
+                 }
     
 with open(readme) as f : long_description = f.read()
 
@@ -117,7 +121,9 @@ if "build_sphinx" in sys.argv:
 
         fLOG (OutputPrint = True)
         project_name = os.path.split(os.path.split(os.path.abspath(__file__))[0])[-1]
-        generate_help_sphinx(project_name)
+        generate_help_sphinx(project_name,
+                layout = [ "html", 
+                          ("html", "build2", {"html_theme":"basicstrap"})] )
         
 elif "unittests" in sys.argv:        
     
