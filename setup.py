@@ -82,9 +82,9 @@ else :
 
 packages     = find_packages('src', exclude='src')
 package_dir  = { k: "src/" + k.replace(".","/") for k in packages }
-package_data = { project_var_name + ".pythonnet.py33": ["*.pyd","*.txt","*.dll"],
+package_data = { project_var_name + ".pythonnet.py33"   : ["*.pyd","*.txt","*.dll"],
                  project_var_name + ".pythonnet.py33x64": ["*.pyd","*.txt","*.dll"],
-                 project_var_name + ".pythonnet.py34": ["*.pyd","*.txt","*.dll"],
+                 project_var_name + ".pythonnet.py34"   : ["*.pyd","*.txt","*.dll"],
                  project_var_name + ".pythonnet.py34x64": ["*.pyd","*.txt","*.dll"],
                  }
     
@@ -123,7 +123,10 @@ if "build_sphinx" in sys.argv:
         project_name = os.path.split(os.path.split(os.path.abspath(__file__))[0])[-1]
         generate_help_sphinx(project_name,
                 layout = [ "html", 
-                          ("html", "build2", {"html_theme":"basicstrap"})] )
+                          ("html", "build2", {"html_theme":"basicstrap",
+                                              "templates_path":"list(('phdoc_static2',))",
+                                              "html_static_path":"list(('phdoc_static2',))",
+                                              })] )
         
 elif "unittests" in sys.argv:        
     

@@ -11,7 +11,7 @@ Examples de toutes sortes
     all_example_Ngatifs
     all_example_TD1A
     all_example_Impossibleretenir
-    all_example_numpy
+    all_example_science
     element_code
     exercices
     expose_divers

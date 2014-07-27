@@ -14,7 +14,7 @@ def numpy_matrix2list(mat):
     @param      mat     matrix
     @return             liste de listes
     
-    @example(numpy___recherche avec index)
+    @example(science___opérations avec numpy.matrix)
     Voici quelques écritures classiques avec le module
     `numpy <http://www.numpy.org/>`_.
     
