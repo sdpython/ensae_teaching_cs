@@ -26,7 +26,7 @@ from src.ensae_teaching_cs.tutoriel.construction_classique import *
 
 class TestConstructionClassique(unittest.TestCase):
     
-    def test_fonctino(self) :
+    def test_fonction(self) :
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
         
         assert recherche([2,3,45],3)==1
