@@ -122,8 +122,10 @@ if "build_sphinx" in sys.argv:
         fLOG (OutputPrint = True)
         project_name = os.path.split(os.path.split(os.path.abspath(__file__))[0])[-1]
         generate_help_sphinx(project_name,
-                layout = [ "html", 
-                          ("html", "build2", {"html_theme":"basicstrap"}, "source/conf2")] )
+                layout = [ "pdf",
+                           "html", 
+                          ("html", "build2", {"html_theme":"basicstrap"}, "source/conf2"),
+                          ] )
         
 elif "unittests" in sys.argv:        
     
