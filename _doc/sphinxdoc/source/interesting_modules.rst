@@ -11,13 +11,13 @@ Les modules indispensables sont intégrés à la distribution
 L'autre solution est d'utiliser le module
 `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_::
 
-    from pymyinstall import complete_installation
-    for _ in complete_installation() :
-        _.install(temp_folder="install")
+    from pymyinstall import datascientist
+    datascientist ("install")
         
-Cela suppose que `pip <http://pip.readthedocs.org/en/latest/>`_ est installé.
-Tous ces modules ont parfois des dépendances qui ne sont pas nécessaires incluses dans cette liste.
-Elles ne sont pas toujours nécessaires.
+Cela suppose que `pip <http://pip.readthedocs.org/en/latest/>`_ est installé 
+(c'est le cas à partir de la version Python 3.4).
+Tous ces modules ont quelques dépendances optionnelles 
+qui ne sont pas incluses dans cette liste mais dont l'usage est rare.
 
 
 Les indispensables
@@ -32,7 +32,7 @@ Les indispensables
 Autres dépendances
 ------------------
 
-ipython:
+*ipython :*
 
     * `python-dateutils <https://labix.org/python-dateutil>`_ : boîte à outils pour les dates
     * `jinja2 <http://jinja.pocoo.org/>`_ : moteur de rendu HTML
@@ -42,23 +42,23 @@ ipython:
     * `six <https://pythonhosted.org/six/>`_ : librairie de conversion entre Python 2 et 3
     * `tornado <http://www.tornadoweb.org/en/stable/>`_ : server web
     
-plugin ipython
+*plugin ipython :*
 
     * `ipyD3 <https://github.com/z-m-k/ipyD3>`_ : plugin pour utiliser `d3.js <http://d3js.org/>`_ dans iPython
     * `mpld3 <http://mpld3.github.io/>`_ : pour afficher un graph Matplotlib sous forme de graphe `d3.js <http://d3js.org/>`_
     
-matplotlib:
+*matplotlib :*
 
     * `pyparsing <http://pyparsing.wikispaces.com/>`_ : pour définir une gramme et interpréter un langage
 
-plugin matplotlib:
+*plugin matplotlib :*
 
     * `prettyplotlib <http://olgabot.github.io/prettyplotlib/>`_
     
 Visualisation
 -------------
 
-Visualisation des données :
+*Visualisation des données :*
 
 
     * `matplotlib <http://matplotlib.org/>`_ : graphes scientifiques
@@ -67,7 +67,7 @@ Visualisation des données :
     * `plotly <https://plot.ly/python/>`_ : graphes élaborés
     * `networkx <http://networkx.github.io/>`_ : dessin de graphes (simple)
     
-Jeux :
+*Jeux :*
 
     * `pygame <http://www.pygame.org/>`_ 
     * `kivy <http://kivy.org/#home>`_ : pour faire des jeux ou des applications pour tablettes, téléphones
