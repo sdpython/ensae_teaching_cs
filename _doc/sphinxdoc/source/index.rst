@@ -38,14 +38,28 @@ Les prérequis sont bien sûr `Python <https://www.python.org/>`_ et
 `IPython <http://ipython.org/>`_ mais 
 les modules `pandas <http://fr.wikipedia.org/wiki/Panda>`_, 
 `numpy <http://www.numpy.org/>`_, 
-`openpyxl <http://pythonhosted.org/openpyxl/>`_. Sous Windows, ces modules
+`openpyxl <http://pythonhosted.org/openpyxl/>`_. 
+
+Sous Windows, ces modules
 sont accessibles depuis le site 
 `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
+
 Les étapes nécessaires à l'installation sont décrites ici :
-`Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_.
-A ces modules, il faut ajouter deux autres conçus pour ces enseignements : 
-`pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/>`_,
-`pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_.
+`Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_. 
+En résumé, il faut :
+
+1. Installer `python <https://www.python.org/>`_
+2. Ouvrir une ligne de commande et écrire ``pip install myinstall``.
+3. Utiliser le code suivant pour installer les modules supplémentaires ::
+
+    from pymyinstall import datascientist
+    datascientist("install")
+
+
+Cette instruction installe notamment eux modules qui ont été développés pour ces enseignements : 
+
+1. `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/>`_,
+2. `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_.
 
 Lors de l'installation, il faut faire attention à installer le langage
 Python et ses modules en prenant soin d'utiliser la même version pour chaque composant.
@@ -60,6 +74,14 @@ Contenu des enseignements
     
         * :ref:`Exercices d'algorithmie <l-exoalgo>`
         * :ref:`Exposés divers non abordés en cours <l-extra>`
+        
+    * Autres documents
+    
+        * :ref:`Modules <modulesi>`
+        * :ref:`Outils, ressources pour développer <l-devtools>`
+        * :ref:`Examens passés <l-examens>`
+        * :ref:`Projets informatiques <l-projinfo>`
+        * :ref:`Coding Party <l-codingparty>`
 
 Quelques références
 -------------------
