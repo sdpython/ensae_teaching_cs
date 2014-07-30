@@ -25,7 +25,7 @@ il y a deux questions qu'on doit se poser en premier pour entrevoir une solution
 1. Peut-on réécrire le problème par **récurrence** ? On aboutit le plus souvent à une solution issue de la programmation. Le coût est **quadratique**.
 2. Peut-on **couper le problème en deux**, construire une solution sur chaque moitié puis recoller les solutions ? On procède de cette façon par dichotomie. Le coût est **logarithmique**.
 
-Ces deux façons de faire sont présentée durant les trois séances qui suivent.
+Ces deux façons de faire sont présentées durant les trois séances qui suivent.
 
 - :ref:`TD 7 : Programmation dynamique <td1acenoncesession7rst>`  (:ref:`correction <td1acorrectionsession7rst>`)
 - :ref:`TD 8 : Arbre et Trie <td1acenoncesession8rst>`  (:ref:`correction <td1acorrectionsession8rst>`)
