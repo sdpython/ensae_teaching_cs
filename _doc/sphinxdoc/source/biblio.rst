@@ -90,6 +90,7 @@ Machine Learning / Data Science
     * `Predicting customer churn with scikit-learn <http://blog.yhathq.com/posts/predicting-customer-churn-with-sklearn.html>`_
     * `Detecting Outlier Car Prices on the Web <http://blog.yhathq.com/posts/detecting-outlier-car-prices-on-the-web.html>`_
     * `pyvideo.org <http://pyvideo.org/>`_
+    * `Getting started in data science: My thoughts <http://treycausey.com/getting_started.html>`_
     
 Compétitions Machine Learning
 -----------------------------
@@ -106,3 +107,9 @@ Optimisation
     * `Numerical Optimization <http://www.ece.northwestern.edu/~nocedal/book/num-opt.html>`_, (*Jorge Nocedal, Stephen J. Wright*)
     
     
+Enseignements
+-------------
+
+    * `Why Do Americans Stink at Math? <http://www.nytimes.com/2014/07/27/magazine/why-do-americans-stink-at-math.html>`_
+    * `Commencez avec Python <http://www.xavierdupre.fr/blog/2014-06-04_nojs.html>`_
+    * `Apprendre à programmer aux enfants : Le monde de Reeborg <http://www.xavierdupre.fr/blog/2014-07-12_nojs.html>`_

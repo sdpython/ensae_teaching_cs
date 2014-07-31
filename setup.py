@@ -86,6 +86,7 @@ package_data = { project_var_name + ".pythonnet.py33"   : ["*.pyd","*.txt","*.dl
                  project_var_name + ".pythonnet.py33x64": ["*.pyd","*.txt","*.dll"],
                  project_var_name + ".pythonnet.py34"   : ["*.pyd","*.txt","*.dll"],
                  project_var_name + ".pythonnet.py34x64": ["*.pyd","*.txt","*.dll"],
+                 project_var_name + ".pythonnet.csdll": ["*.dll"],
                  }
     
 with open(readme) as f : long_description = f.read()

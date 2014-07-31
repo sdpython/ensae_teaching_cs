@@ -30,6 +30,13 @@ class TestPythonnet(unittest.TestCase):
             d = Dictionary[String, String]()
             d["un"] = "1"
             assert d.Count == 1
+            
+    def test_voice(self):
+        fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
+        if sys.platform.startswith("win"):
+            from src.ensae_teaching_cs.pythonnet import vocal_synthesis
+            vocal_synthesis("test unitaire")
+        
 
 
 if __name__ == "__main__"  :
