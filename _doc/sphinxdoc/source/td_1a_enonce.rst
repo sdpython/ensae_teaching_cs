@@ -17,11 +17,11 @@
     TD 8 : Arbre et Trie <notebooks/td1a_cenonce_session8>
     TD 9 : Optimisation sous contrainte <notebooks/td1a_cenonce_session9>
     TD 10 : DataFrame et Matrice <notebooks/td1a_cenonce_session_10>
+    TD 11 : Calcul numérique, dichotomie et Cython <notebooks/td1a_cenonce_session_11>
     
 
 Next:
 
-* TD 11 : calcul numérique + dichotomie, cython
 * TD 12 : graphique avec matplotlib, pandas, networkx, ggplot
 * TD 13 : séance notée
     
