@@ -16,7 +16,7 @@ Les six premières séances font découvrir le langage Python.
 - :ref:`TD 5 : Classes et carrés magiques <td1acenoncesession5rst>`  (:ref:`correction <td1acorrectionsession5rst>`)
 - :ref:`TD 6 : Classes et héritage <td1acenoncesession6rst>`  (:ref:`correction <td1acorrectionsession6rst>`)
 
-Les six séances suivantes sont centrées autour de l'utilisation de la programmation
+Les six séances [#f1]_ suivantes sont centrées autour de l'utilisation de la programmation
 pour un usage scientifique. 
 Trois séances sont centrées sur trois algorithmes.
 Lorsqu'un problème paraît compliqué ou qu'un algorithme est trop long, 
@@ -29,7 +29,7 @@ Ces deux façons de faire sont présentées durant les trois séances qui suiven
 
 - :ref:`TD 7 : Programmation dynamique <td1acenoncesession7rst>`  (:ref:`correction <td1acorrectionsession7rst>`)
 - :ref:`TD 8 : Arbre et Trie <td1acenoncesession8rst>`  (:ref:`correction <td1acorrectionsession8rst>`)
-- :ref:`TD 9 : Optimisation sous contrainte <td1acenoncesession9rst>`  (:ref:`correction <td1acorrectionsession9rst>`) (relecture conseillée à ceux qui souhaite optimiser des portefeuilles d'actions)
+- :ref:`TD 9 : Optimisation sous contrainte <td1acenoncesession9rst>`  (:ref:`correction <td1acorrectionsession9rst>`) (relecture conseillée à ceux qui souhaite optimiser des portefeuilles d'actions) (**voir note**)
 
 Trois séances sont centrées sur les outils indispensables pour manipuler facilement les données et faire des calculs.
 Ces outils sont similaires à ceux qu'on trouve dans de nombreux languages à usage scientifique
@@ -51,5 +51,7 @@ si tel est le cas, ce sera très proche d'une solution proposée lors des TD.
     td_1a_correction
 
     
-    
+.. rubric:: Footnotes
+
+.. [#f1] Les quatre sujets importants des six dernières séances sont la programmation dynamique, la dichotomie, les dataframe, les graphiques. La séance 9, la fin de la séance 10 et la séance 11 ne sont pas indispensables. 
     

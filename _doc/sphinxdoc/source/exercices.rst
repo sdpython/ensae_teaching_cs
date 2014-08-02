@@ -24,6 +24,8 @@ puis à fusionner les deux solutions.
 
     notebooks/exercice_xn
     notebooks/exercice_echelle
+    notebooks/exercice_morse
+    notebooks/exercice_lcs
     
     
     

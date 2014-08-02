@@ -10,7 +10,7 @@ l'ordinateur. Le projet ne peut être validé que si :
 
 * Il est possible à un joueur de jouer contre l'ordinateur. 
 * Il est possible de choisir parmi au moins deux stratégies ou deux niveaux de difficulté (il peut 
-  s'agit de la même stratégie avec différents paramètres). 
+  s'agir de la même stratégie avec différents paramètres). 
 * Il doit être possible de faire jouer l'ordinateur contre lui-même afin de permettre l'optimisation
   des paramètres de la stratégies de jeux ou le calcul de statistiques sur un grand nombre
   de parties.
