@@ -112,7 +112,7 @@ Environnement de développement
     * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
     * `Débugger en Python <http://www.xavierdupre.fr/blog/2014-06-02_nojs.html>`_
     * :ref:`l-devtools`
-    * `Trouver chaussure à ses stats <file:///C:/xadupre/__home_/_data/GitHub/ensae_teaching_cs/dist/html/notebooks/td1a_cenonce_session_10.html#intro>`_
+    * `Trouver chaussure à ses stats <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/notebooks/td1a_cenonce_session_10.html#intro>`_
 
 Vieilles versions
 -----------------
