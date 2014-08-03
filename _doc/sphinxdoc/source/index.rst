@@ -70,7 +70,6 @@ Contenu des enseignements
 -------------------------
 
     * :ref:`ENSAE, 1A, initiation à la programmation et l'algorithmie <l-td1a>`
-    * :ref:`Python pour Data Scientist <l-data2a>`
     * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
     
         * :ref:`Exercices d'algorithmie <l-exoalgo>`
@@ -83,6 +82,8 @@ Contenu des enseignements
         * :ref:`Examens passés <l-examens>`
         * :ref:`Projets informatiques <l-projinfo>`
         * :ref:`Coding Party <l-codingparty>`
+
+    * :ref:`Python pour Data Scientist <l-data2a>`
 
 Quelques références
 -------------------
