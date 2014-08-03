@@ -1,5 +1,5 @@
 ﻿
-.. _l-proj_jeux:
+.. _l-proj_jeux_seul:
 
 Jeux de réflexion qui se jouent seul
 ====================================

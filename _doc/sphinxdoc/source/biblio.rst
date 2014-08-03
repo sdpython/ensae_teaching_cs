@@ -113,3 +113,4 @@ Enseignements
     * `Why Do Americans Stink at Math? <http://www.nytimes.com/2014/07/27/magazine/why-do-americans-stink-at-math.html>`_
     * `Commencez avec Python <http://www.xavierdupre.fr/blog/2014-06-04_nojs.html>`_
     * `Apprendre à programmer aux enfants : Le monde de Reeborg <http://www.xavierdupre.fr/blog/2014-07-12_nojs.html>`_
+    * `Scratch <http://scratch.mit.edu/>`_

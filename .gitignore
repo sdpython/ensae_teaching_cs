@@ -232,3 +232,10 @@ version.txt
 */notebooks/td1a/*.xlsx
 */notebooks/td1a/*.zip
 */notebooks/td1a/python*.png
+*/notebooks/td1a/*.c
+*/notebooks/td1a/*.cpp
+*/notebooks/td1a/*.pyx
+*/notebooks/td1a/*.pyd
+*/notebooks/td1a/setup.py
+
+

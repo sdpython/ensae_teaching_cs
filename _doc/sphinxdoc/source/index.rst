@@ -70,6 +70,7 @@ Contenu des enseignements
 -------------------------
 
     * :ref:`ENSAE, 1A, initiation à la programmation et l'algorithmie <l-td1a>`
+    * :ref:`Python pour Data Scientist <l-data2a>`
     * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
     
         * :ref:`Exercices d'algorithmie <l-exoalgo>`
@@ -91,7 +92,7 @@ Quelques références
     * `Exercices de programmation <http://www.xavierdupre.fr/blog/2014-03-22_nojs.html>`_
     * `Python avec la Khan Academy <http://www.xavierdupre.fr/blog/2013-11-29_nojs.html>`_
     * `Python Tutor <http://www.pythontutor.com/>`_
-    * `version PDF de ce site <http://www.xavierdupre.fr/app/ensae_teaching_cs/latex/ensae_teaching_cs_doc.pdf>`_ (PDF)
+    * `version PDF de ce site <http://www.xavierdupre.fr/app/ensae_teaching_cs/latex/ensae_teaching_cs_doc.pdf>`_
     * `De l'idée au programme informatique <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_
     * `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
     * `pyvideo.org <http://pyvideo.org/>`_
@@ -126,6 +127,7 @@ Vieilles versions
     :hidden:
 
     td_1a
+    data2a
     exemple_index
     exams
     projet_info

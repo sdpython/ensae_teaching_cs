@@ -29,7 +29,7 @@ Ces deux façons de faire sont présentées durant les trois séances qui suiven
 
 - :ref:`TD 7 : Programmation dynamique <td1acenoncesession7rst>`  (:ref:`correction <td1acorrectionsession7rst>`)
 - :ref:`TD 8 : Arbre et Trie <td1acenoncesession8rst>`  (:ref:`correction <td1acorrectionsession8rst>`)
-- :ref:`TD 9 : Optimisation sous contrainte <td1acenoncesession9rst>`  (:ref:`correction <td1acorrectionsession9rst>`) (relecture conseillée à ceux qui souhaite optimiser des portefeuilles d'actions) (**voir note**)
+- :ref:`TD 9 : Optimisation sous contrainte <td1acenoncesession9rst>`  (:ref:`correction <td1acorrectionsession9rst>`) (relecture conseillée à ceux qui souhaite optimiser des portefeuilles d'actions) [#f1]_
 
 Trois séances sont centrées sur les outils indispensables pour manipuler facilement les données et faire des calculs.
 Ces outils sont similaires à ceux qu'on trouve dans de nombreux languages à usage scientifique
@@ -37,7 +37,7 @@ Ces outils sont similaires à ceux qu'on trouve dans de nombreux languages à us
 `Julia <http://julialang.org/>`_, `Octave <http://www.gnu.org/software/octave/>`_, ...).
 
 - :ref:`TD 10 : DataFrame et Matrice <td1acenoncesession10rst>`  (:ref:`correction <td1acorrectionsession10rst>`), cette séance est particulièrement longue, il est recommandé de la lire avant la séance et de la relire après.
-- :ref:`TD 11 : Calcul numérique, dichotomie et Cython <td1acenoncesession11rst>`  (:ref:`correction <td1acorrectionsession11rst>`), le début de cette séance reprend la fin de la précédente, il est conseillé de la relire avant.
+- :ref:`TD 11 : Calcul numérique, dichotomie et Cython <td1acenoncesession11rst>`  (:ref:`correction <td1acorrectionsession11rst>`)[#f1]_, le début de cette séance reprend la fin de la précédente, il est conseillé de la relire avant.
 
 La dernière séance est une séance notée. Tous les documents sont autorisés. Quelques questions 
 peuvent requérir l'utilisation des outils présentées durant les séances 19 à 12. Toutefois,
