@@ -125,7 +125,7 @@ Pour faire du machine learning sans programmer
 ----------------------------------------------
 
     * `Orange <http://orange.biolab.si/>`_
-    * `Trouver chaussure à ses stats <file:///C:/xadupre/__home_/_data/GitHub/ensae_teaching_cs/dist/html/notebooks/td1a_cenonce_session_10.html#intro>`_
+    * `Trouver chaussure à ses stats <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/notebooks/td1a_cenonce_session_10.html#intro>`_
     
 Génération d'une documentation et thème Sphinx
 ----------------------------------------------
