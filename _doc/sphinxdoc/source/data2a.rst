@@ -104,14 +104,17 @@ Usage régulier
     
 7. Python et autres langages (C++, Cypthon, C#, R) 
     a. `Cython <http://cython.org/>`_ (voir aussi `cffi <https://cffi.readthedocs.org/>`_)
-    b. Écriture de librairies en C++
+    b. `PyPy <>`_ 
+    c. Écriture de librairies en C++
         - `boost.python <http://www.boost.org/doc/libs/1_55_0/libs/python/doc/>`_
         - `SWIG <http://www.swig.org/>`_
-    c. autres langages
+    d. autres langages
         - C# avec `pythonnet <https://github.com/renshawbay/pythonnet>`_
         - R avec `rpy2 <http://rpy.sourceforge.net/>`_
         - Java avec `py4j <http://py4j.sourceforge.net/>`_, `JPype <http://jpype.sourceforge.net/>`_, `pyjnius <http://pyjnius.readthedocs.org/en/latest/>`_
-        - Matlab avec `pymatbridge <https://github.com/jaderberg/python-matlab-bridge>`_, `mlab <https://github.com/ewiger/mlab>`_
+        - Octave avec ` <>`_, IPython reconnaît la syntaxe (Octave = équivalent gratuit de Matlab)
+        - Scilab avec ` <>`_
+        - Matlab avec `pymatbridge <https://github.com/jaderberg/python-matlab-bridge>`_, `mlab <https://github.com/ewiger/mlab>`_, néanmoins ces modules ne semblent pas très aboutis
 
 
 Usage irrégulier
