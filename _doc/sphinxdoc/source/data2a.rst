@@ -89,6 +89,7 @@ Usage régulier
         - `bokeh <http://bokeh.pydata.org/>`_
         - `d3js <http://d3js.org/>`_, `d3js gallery <http://christopheviau.com/d3list/>`_, ìpyD3 <http://nbviewer.ipython.org/github/z-m-k/ipyD3/blob/master/ipyD3sample.ipynb>`_, `nvd3 <http://nvd3.org/>`_
         - `python-nvd3 <https://pypi.python.org/pypi/python-nvd3/>`_
+        - `vispy <http://vispy.org/index.html>`_
     
 5. `Scikit-learn <http://scikit-learn.org/stable/>`_
     a. ADD avec Python (ACP, CAH, clustering)
@@ -112,9 +113,10 @@ Usage régulier
         - C# avec `pythonnet <https://github.com/renshawbay/pythonnet>`_
         - R avec `rpy2 <http://rpy.sourceforge.net/>`_
         - Java avec `py4j <http://py4j.sourceforge.net/>`_, `JPype <http://jpype.sourceforge.net/>`_, `pyjnius <http://pyjnius.readthedocs.org/en/latest/>`_
-        - Octave avec ` <>`_, IPython reconnaît la syntaxe (Octave = équivalent gratuit de Matlab)
-        - Scilab avec ` <>`_
+        - Octave avec `IPython <http://nbviewer.ipython.org/github/blink1073/oct2py/blob/master/example/octavemagic_extension.ipynb>`_, IPython reconnaît la syntaxe (Octave = équivalent gratuit de Matlab)
+        - Scilab avec `sciscipy <https://www.scilab.org/fr/scilab/interoperability/calculation_engine/python>`_
         - Matlab avec `pymatbridge <https://github.com/jaderberg/python-matlab-bridge>`_, `mlab <https://github.com/ewiger/mlab>`_, néanmoins ces modules ne semblent pas très aboutis
+        - Julia voir `IJulia <https://github.com/JuliaLang/IJulia.jl>`_
 
 
 Usage irrégulier
