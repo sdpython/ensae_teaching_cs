@@ -58,7 +58,7 @@ KEYWORDS = \
 project_var_name + ', ENSAE, sqllite, database, teachings'
 
 DESCRIPTION = \
-"""Helpers for teaching purposes (includes sqllite helpers)"""
+"""Module which contains materials for teaching puroposes, also includes pythonnet."""
 
 CLASSIFIERS = \
 [

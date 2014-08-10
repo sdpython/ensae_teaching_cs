@@ -35,12 +35,16 @@ Trois séances sont centrées sur les outils indispensables pour manipuler facil
 Ces outils sont similaires à ceux qu'on trouve dans de nombreux languages à usage scientifique
 (`R <http://www.r-project.org/>`_, `SciLab <http://www.scilab.org/fr>`_, 
 `Julia <http://julialang.org/>`_, `Octave <http://www.gnu.org/software/octave/>`_, ...).
+Ces trois séances peuvent paraître plus longues car elles s'appuient sur des modules qu'il faut découvrir 
+puis utiliser pour résoudre des exercices. Toutefois, les modules 
+`numpy <http://www.numpy.org/>`_, `pandas <http://pandas.pydata.org/>`_, `matplotlib <http://matplotlib.org/>`_
+sont incontournables pour manipuler les données en Python.
 
-- :ref:`TD 10 : DataFrame et Matrice <td1acenoncesession10rst>`  (:ref:`correction <td1acorrectionsession10rst>`), cette séance est particulièrement longue, il est recommandé de la lire avant la séance et de la relire après.
-- :ref:`TD 11 : Calcul numérique, dichotomie et Cython <td1acenoncesession11rst>`  (:ref:`correction <td1acorrectionsession11rst>`) [#f1]_ , le début de cette séance reprend la fin de la précédente, il est conseillé de la relire avant.
+- :ref:`TD 10 : DataFrame et Matrice <td1acenoncesession10rst>`  (:ref:`correction <td1acorrectionsession10rst>`) [#f1]_ 
+- :ref:`TD 11 : Calcul numérique, dichotomie et Cython <td1acenoncesession11rst>`  (:ref:`correction <td1acorrectionsession11rst>`) [#f1]_ 
 
 La dernière séance est une séance notée. Tous les documents sont autorisés. Quelques questions 
-peuvent requérir l'utilisation des outils présentées durant les séances 19 à 12. Toutefois,
+peuvent requérir l'utilisation des outils présentées durant les séances 9 à 12. Toutefois,
 si tel est le cas, ce sera très proche d'une solution proposée lors des TD.
 
 

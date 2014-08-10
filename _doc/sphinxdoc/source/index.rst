@@ -39,31 +39,45 @@ Les prérequis sont bien sûr `Python <https://www.python.org/>`_ et
 les modules `pandas <http://fr.wikipedia.org/wiki/Panda>`_, 
 `numpy <http://www.numpy.org/>`_, 
 `openpyxl <http://pythonhosted.org/openpyxl/>`_. 
-
 Sous Windows, ces modules
 sont accessibles depuis le site 
 `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
+En outre, quatre modules ont été développés pour ces enseignements :
 
-Les étapes nécessaires à l'installation sont décrites ici :
-`Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_. 
-En résumé, il faut :
++-------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/>`_                      | génère la documentation de ce module                   |
++-------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_                                  | code nécessaires aux TDs et aux projets informatiques  |
++-------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_                          | installe facilement des modules                        |
++-------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+| `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_    | ces enseignements compilés sous forme de modules       |
++-------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+
+
+Installer tous les modules
+--------------------------
+
+Lors de l'installation, il faut faire attention à installer le langage
+Python et ses modules en prenant soin d'utiliser la même version pour chaque composant.
+Je recommande la version `64bit, v3.4.1 <https://www.python.org/downloads/release/python-341/>`_.
+
+Le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_ propose une 
+façon simple d'installer tous les modules nécessaires en faisant attention à la version choisie
+à la première étape:
+
 
 1. Installer `python <https://www.python.org/>`_
-2. Ouvrir une ligne de commande et écrire ``pip install myinstall``.
+2. Ouvrir une ligne de commande et écrire ``pip install pymyinstall``.
 3. Utiliser le code suivant pour installer les modules supplémentaires ::
 
     from pymyinstall import datascientist
     datascientist("install")
 
 
-Cette instruction installe notamment eux modules qui ont été développés pour ces enseignements : 
+L'article `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
+donne plus de détails à ce sujet.
 
-1. `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/>`_,
-2. `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_.
-
-Lors de l'installation, il faut faire attention à installer le langage
-Python et ses modules en prenant soin d'utiliser la même version pour chaque composant.
-Je recommande la version `64bit, v3.4.1 <https://www.python.org/downloads/release/python-341/>`_.
 
 
 Contenu des enseignements
