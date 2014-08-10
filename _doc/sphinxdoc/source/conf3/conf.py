@@ -6,18 +6,18 @@
 #
 
 import sys, os, datetime, re
-import sphinx_bootstrap_theme
+import solar_theme
 
 source_path = os.path.normpath(os.path.join(os.path.abspath(os.path.split(__file__)[0]),".."))
 
 try :
-    from conf import *
+    from conf_base import *
 except ImportError :
     sys.path.append(source_path)
-    from conf import *
+    from conf_base import *
 
-html_theme = 'bootstrap'
-html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+html_theme = 'solar_theme'
+html_theme_path = [solar_theme.theme_path]
 templates_path = [ os.path.join(source_path,'phdoc_static3') ]
 html_static_path = templates_path
 

@@ -18,6 +18,7 @@ correction
     TD 9 : Optimisation sous contrainte (correction) <notebooks/td1a_correction_session9>
     TD 10 : DataFrame et Matrice (correction) <notebooks/td1a_correction_session_10>
     TD 11 : Calcul numérique, dichotomie et Cython (correction) <notebooks/td1a_correction_session_11>
+    TD 12 : Visualisation des données (correction) <notebooks/td1a_correction_session_12>
 
     
     

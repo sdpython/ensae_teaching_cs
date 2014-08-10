@@ -42,6 +42,7 @@ sont incontournables pour manipuler les données en Python.
 
 - :ref:`TD 10 : DataFrame et Matrice <td1acenoncesession10rst>`  (:ref:`correction <td1acorrectionsession10rst>`) [#f1]_ 
 - :ref:`TD 11 : Calcul numérique, dichotomie et Cython <td1acenoncesession11rst>`  (:ref:`correction <td1acorrectionsession11rst>`) [#f1]_ 
+- :ref:`TD 12 : Visualisation ds données <td1acenoncesession12rst>`  (:ref:`correction <td1acorrectionsession12rst>`) 
 
 La dernière séance est une séance notée. Tous les documents sont autorisés. Quelques questions 
 peuvent requérir l'utilisation des outils présentées durant les séances 9 à 12. Toutefois,
