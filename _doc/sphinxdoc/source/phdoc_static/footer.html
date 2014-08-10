@@ -14,15 +14,8 @@
 
   <div role="contentinfo">
     <p>
-    {%- if show_copyright %}
-      {%- if hasdoc('copyright') %}
-        {% trans path=pathto('copyright'), copyright=copyright|e %}&copy; <a href="{{ path }}">Copyright</a> {{ copyright }}.{% endtrans %}
-      {%- else %}
-        {% trans copyright=copyright|e %} {{ copyright }}.{% endtrans %}
-      {%- endif %}
-    {%- endif %}
 
-    <a href="http://www.xavierdupre.fr/"><img src="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_static/project_ico.ico" width="15" /></a>  
+    <a href="http://www.xavierdupre.fr/"><img src="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_static/project_ico_long.png" height="15" /></a>  
     {%- if last_updated %}
       {% trans last_updated=last_updated|e %}Dernière mise à jour : {{ last_updated }}.{% endtrans %}
     {%- endif %}
