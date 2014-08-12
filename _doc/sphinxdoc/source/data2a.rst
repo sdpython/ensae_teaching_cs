@@ -87,9 +87,10 @@ Usage régulier
     c. interactif (javascript)
         - `plotly <https://plot.ly/python/>`_
         - `bokeh <http://bokeh.pydata.org/>`_
-        - `d3js <http://d3js.org/>`_, `d3js gallery <http://christopheviau.com/d3list/>`_, ìpyD3 <http://nbviewer.ipython.org/github/z-m-k/ipyD3/blob/master/ipyD3sample.ipynb>`_, `nvd3 <http://nvd3.org/>`_
+        - `d3js <http://d3js.org/>`_, `d3js gallery <http://christopheviau.com/d3list/>`_, `ipyD3 <http://nbviewer.ipython.org/github/z-m-k/ipyD3/blob/master/ipyD3sample.ipynb>`_, `nvd3 <http://nvd3.org/>`_
         - `python-nvd3 <https://pypi.python.org/pypi/python-nvd3/>`_
         - `vispy <http://vispy.org/index.html>`_
+        - `IVisual <https://pypi.python.org/pypi/IVisual/>`_
     
 5. `Scikit-learn <http://scikit-learn.org/stable/>`_
     a. ADD avec Python (ACP, CAH, clustering)
@@ -105,7 +106,7 @@ Usage régulier
     
 7. Python et autres langages (C++, Cypthon, C#, R) 
     a. `Cython <http://cython.org/>`_ (voir aussi `cffi <https://cffi.readthedocs.org/>`_)
-    b. `PyPy <>`_ 
+    b. `PyPy <http://pypy.org/>`_ 
     c. Écriture de librairies en C++
         - `boost.python <http://www.boost.org/doc/libs/1_55_0/libs/python/doc/>`_
         - `SWIG <http://www.swig.org/>`_
@@ -126,7 +127,7 @@ Usage irrégulier
     a. Multithreading (local)
     b. Gpu : Pycuda, theano
     c. Plusieurs machines ou plusieurs coeurs (ipython, lzmq, ...)
-    d. Workflow (luigi, papy, http://arxiv.org/ftp/arxiv/papers/1407/1407.4378.pdf)
+    d. Workflow (luigi, `papy <http://arxiv.org/ftp/arxiv/papers/1407/1407.4378.pdf>`_)
     e. calcul en grande précision `gmpy2 <http://gmpy2.readthedocs.org/en/latest/>`_
     
 2. Outils pour mieux développer
@@ -172,7 +173,7 @@ Liens
 - Livres
     - Building Machine Learning Systems with Python by Willi Richert, Luis Pedro Coelho published by PACKT PUBLISHING (2013) 
     - Machine Learning in Action by Peter Harrington
-    - http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb
+    - `Probabilistic Programming and Bayesian Methods for Hackers <http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb>`_
 - Vidéo
     - http://www.microsoft.com/france/mstechdays/programmes/2014/fiche-session.aspx?ID=295be946-2c69-458a-8545-bcebe7970fd8
     - http://www.microsoft.com/france/mstechdays/programmes/2013/fiche-session.aspx?ID=bb6cbb87-c370-477e-8fd4-b46f9ca292d0
