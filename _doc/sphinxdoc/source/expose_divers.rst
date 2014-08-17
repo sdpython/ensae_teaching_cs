@@ -17,7 +17,7 @@ Exposés divers
     notebooks/expose_TSP
 
 
-**Autres thèmes possbiles**
+**Autres thèmes possibles**
 
     * paired bootstrap
         * http://www.stat.ncsu.edu/people/lu/courses/ST505/Ch2.pdf
