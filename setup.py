@@ -129,6 +129,45 @@ if "build_sphinx" in sys.argv:
                           ("html", "build3", {"html_theme":"solar_theme"}, "source/conf3"),
                           ] )
         
+elif "build_pres" in sys.argv:
+    # we generate the documentation for the presentation
+    
+    def get_executables_path() :
+        """
+        returns the paths to Python, Python Scripts
+        
+        @return     a list of paths
+        """
+        res  = [ os.path.split(sys.executable)[0] ]
+        res += [ os.path.join(res[-1], "Scripts") ]
+        if sys.platform.startswith("win") :
+            ver = "c:\\Python%d%d" % (sys.version_info.major, sys.version_info.minor)
+            res += [ver ]
+            res += [ os.path.join(res[-1], "Scripts") ]
+        return res    
+    
+    #  run the documentation generation
+    if sys.platform.startswith("win"):
+        temp = os.environ ["PATH"]
+        pyts = get_executables_path()
+        script = ";".join(pyts)
+        temp = script + ";" + temp
+        os.environ["PATH"] = temp
+        pa = os.getcwd ()
+        thispath = os.path.normpath(os.path.split(__file__)[0])
+        docpath  = os.path.normpath(os.path.join(thispath, "_doc","presentation"))
+        os.chdir (docpath)        
+        
+    lay     = "html"
+    build   = "build"
+    over    = ""
+    sconf   = ""
+    cmd     = "sphinx-build -b {1} -d {0}/doctrees{2}{3} source {0}/{1}".format(build, lay, over, sconf)
+    os.system(cmd)
+    
+    if sys.platform.startswith("win"):
+        os.chdir (pa)
+        
 elif "unittests" in sys.argv:        
     
     if not os.path.exists("_unittests"):

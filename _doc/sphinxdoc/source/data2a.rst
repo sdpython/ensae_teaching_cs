@@ -51,16 +51,16 @@ Usage régulier
         
 2. `Pandas <http://pandas.pydata.org/>`_
     a. Récupérer des données depuis un fichier plat
-    b. Notion de dataframe
-    c. Valeur manquantes
-    d. Manipuler les données façon SQL (group by, join, union, filter)
-    e. Manipulation customisée (avec fonction lambda)
-    f. Récupération depuis d'autre sources (SQL, fichiers Excel, sqlite3)
-    g. Représentation de données structurées (json, xml)
+    b. Encoding
+    c. Notion de dataframe
+    d. Valeur manquantes
+    e. Manipuler les données façon SQL (group by, join, union, filter)
+    f. Manipulation customisée (avec fonction lambda)
+    g. Récupération depuis d'autre sources (SQL, fichiers Excel, sqlite3)
     h. Séries temporelles
     i. Autres fonctionnalités (describe, histogram…)
     j. Données "sparse" ou creuses
-    k. Grandes tables (> 250Mo) (en dessous ça tient en mémoire facilement et les calculs sont assez rapides), modules pytables, blaze, SQLAchemy, http://www.pytables.org/docs/LargeDataAnalysis.pdf, SQLiteSpy
+    h. Grandes tables (> 250Mo) (en dessous ça tient en mémoire facilement et les calculs sont assez rapides), modules pytables, blaze, SQLAchemy, http://www.pytables.org/docs/LargeDataAnalysis.pdf, SQLiteSpy
     
 3. `Numpy <http://www.numpy.org/>`_, `Scipy <http://www.scipy.org/>`_, `cvxopt <http://cvxopt.org/>`_
     a. Notation avec ``:``
@@ -104,13 +104,23 @@ Usage régulier
     b. `Networkx <https://networkx.github.io/>`_
     c. `neo4j <http://www.neo4j.org/develop/python>`_
     
-7. Python et autres langages (C++, Cypthon, C#, R) 
+7. Représentation de données structurées, NoSQL
+    a. différences avec les bases de données traditionnelles (tables)
+    b. format `JSON <http://fr.wikipedia.org/wiki/JavaScript_Object_Notation>`_, `XML <http://fr.wikipedia.org/wiki/Extensible_Markup_Language>`_ pour les `données structurées <http://en.wikipedia.org/wiki/Semi-structured_data>`_
+    c. `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_ définition
+    d. `unqlitepy <https://github.com/nobonobo/unqlitepy>`_ (`unqlite <http://unqlite.org/>`_), `cassandra-driver <https://github.com/datastax/python-driver>`_ (`Cassandra <http://cassandra.apache.org/>`_)
+    e. `pymongo <http://docs.mongodb.org/ecosystem/drivers/python/>`_ (installation depuis `pymongo pipy <https://pypi.python.org/pypi/pymongo/>`_, `MongoDB <http://www.mongodb.org/>`_), `py-couchdb <https://py-couchdb.readthedocs.org/en/latest/>`_ (`CouchDB <http://couchdb.apache.org/>`_)
+    
+8. Calcul distribué  
+    a. Multithreading (local)
+    b. `GPU <http://fr.wikipedia.org/wiki/Processeur_graphique>`_ : `pycuda <http://mathema.tician.de/software/pycuda/>`_, `theano <http://deeplearning.net/software/theano/>`_
+    c. Plusieurs machines ou plusieurs coeurs (ipython, lzmq, ...)
+    d. Workflow (`luigi <http://luigi.readthedocs.org/en/latest/>`_, `papy <http://arxiv.org/ftp/arxiv/papers/1407/1407.4378.pdf>`_)
+    e. calcul en grande précision `gmpy2 <http://gmpy2.readthedocs.org/en/latest/>`_
+    
+9. Python et autres langages (C++, Cypthon, C#, R) 
     a. `Cython <http://cython.org/>`_ (voir aussi `cffi <https://cffi.readthedocs.org/>`_)
-    b. `PyPy <http://pypy.org/>`_ 
-    c. Écriture de librairies en C++
-        - `boost.python <http://www.boost.org/doc/libs/1_55_0/libs/python/doc/>`_
-        - `SWIG <http://www.swig.org/>`_
-    d. autres langages
+    b. autres langages
         - C# avec `pythonnet <https://github.com/renshawbay/pythonnet>`_
         - R avec `rpy2 <http://rpy.sourceforge.net/>`_
         - Java avec `py4j <http://py4j.sourceforge.net/>`_, `JPype <http://jpype.sourceforge.net/>`_, `pyjnius <http://pyjnius.readthedocs.org/en/latest/>`_
@@ -118,19 +128,16 @@ Usage régulier
         - Scilab avec `sciscipy <https://www.scilab.org/fr/scilab/interoperability/calculation_engine/python>`_
         - Matlab avec `pymatbridge <https://github.com/jaderberg/python-matlab-bridge>`_, `mlab <https://github.com/ewiger/mlab>`_, néanmoins ces modules ne semblent pas très aboutis
         - Julia voir `IJulia <https://github.com/JuliaLang/IJulia.jl>`_
+    c. `PyPy <http://pypy.org/>`_ 
+    d. Écriture de librairies en C++
+        - `boost.python <http://www.boost.org/doc/libs/1_55_0/libs/python/doc/>`_
+        - `SWIG <http://www.swig.org/>`_
 
 
 Usage irrégulier
 ++++++++++++++++
 
-1. Calcul distribué  
-    a. Multithreading (local)
-    b. Gpu : Pycuda, theano
-    c. Plusieurs machines ou plusieurs coeurs (ipython, lzmq, ...)
-    d. Workflow (luigi, `papy <http://arxiv.org/ftp/arxiv/papers/1407/1407.4378.pdf>`_)
-    e. calcul en grande précision `gmpy2 <http://gmpy2.readthedocs.org/en/latest/>`_
-    
-2. Outils pour mieux développer
+3. Outils pour mieux développer
     a. Tests unitaires
     b. Profiling (cprofile, yappi)
     c. debugger (avec pytools)
@@ -139,23 +146,23 @@ Usage irrégulier
     f. Créer un setup pour un module
     g. Créer un exécutable cx_Freeze
     
-3. Traitement d'images
+4. Traitement d'images
     a. Pillow
     b. Opencv
     
-4. Un siteweb en python
+5. Un siteweb en python
     a. Flask
     b. Django
     c. `brython <http://www.brython.info/>`_
     d. `pyjs <http://pyjs.org/>`_
     
-5. Python sur tablette, téléphone
+6. Python sur tablette, téléphone
     a. kivy
     
-6. Traitement du langage
+7. Traitement du langage
     a. Nltk
     
-7. Statistiques bayésiennes
+8. Statistiques bayésiennes
     a. pymc (je fais rarement du bayésien,)
 
 
