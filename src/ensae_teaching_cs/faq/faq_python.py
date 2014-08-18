@@ -48,7 +48,7 @@ def entier_grande_taille():
 
 def difference_div():
     """
-    @FAQ(Quelle est la différence entre / et // (division) ?)
+    @FAQ(Quelle est la différence entre / et // - division ?)
     Le résultat de la division avec l'opérateur ``/`` est toujours réel : 
     la division de deux entiers ``1/2`` donne ``0.5``.
     Le résultat de la division avec l'opérateur ``//`` est toujours entier.
@@ -137,13 +137,13 @@ def test_unitaire():
     
     **A quoi ça sert ?**
     
-    On écrit la fonction ``x_exp`` ($=y x^{-n}$) comme suit ::
+    On écrit la fonction ``x_exp`` (:math:`=y x^{-n}`) comme suit ::
     
         def x_exp(x,y,n):
             return y / pow(x,n)
             
-    La fonction retourne 0 si $x=y=n=0$.   
-    Admettons maintenant qu'un dévelopeur veuille changer la convention $0^0=1$ en $0^0=0$.
+    La fonction retourne 0 si :math:`x=y=n=0`.
+    Admettons maintenant qu'un dévelopeur veuille changer la convention :math:`0^0=1` en :math:`0^0=0`.
     La fonction précédente produira une erreur à cause d'une division ``0/0``.
     Un test unitaire détectera au plus tôt cette erreur.
     
