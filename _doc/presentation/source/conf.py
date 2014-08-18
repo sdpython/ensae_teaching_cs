@@ -107,8 +107,8 @@ html_theme_options = {
 
     # The "normal" size of the presentation, aspect ratio will be preserved
     # when the presentation is scaled to fit different resolutions
-    "width": '100%',
-    "height": '100%',
+    "width": 976,
+    "height": 700,
 
     # Factor of the display size that should remain empty around the content
     "margin": 0.1,
@@ -165,7 +165,7 @@ html_theme_options = {
     "theme": "blood",
 
     # Transition style (default/cube/page/concave/zoom/linear/fade/none)
-    "transition": "default",
+    "transition": "fade",
 
     # Transition speed (default/fast/slow)
     "transition_speed": "default",

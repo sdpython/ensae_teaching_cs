@@ -87,6 +87,7 @@ Contenu des enseignements
         
     * Autres documents
     
+        * :ref:`Articles, Références, Blog <l-biblio>`
         * :ref:`Modules <modulesi>`
         * :ref:`Outils, ressources pour développer <l-devtools>`
         * :ref:`Examens passés <l-examens>`
