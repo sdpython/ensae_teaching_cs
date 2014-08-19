@@ -239,5 +239,6 @@ version.txt
 */notebooks/td1a/*.pyx
 */notebooks/td1a/*.pyd
 */notebooks/td1a/setup.py
+*/notebooks/td1a/t_random*
 
 

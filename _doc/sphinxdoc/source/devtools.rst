@@ -57,6 +57,7 @@ un stockage dans un pays dont la loi limite l'usage qui peut être fait de vos d
 
 * `SciTE <http://www.scintilla.org/SciTE.html>`_
 * `NotePad++ <http://notepad-plus-plus.org/fr/>`_
+* `TextWrangler <http://www.barebones.com/products/textwrangler/>`_ (seulement sur iOS)
 
 **IDE**
 
