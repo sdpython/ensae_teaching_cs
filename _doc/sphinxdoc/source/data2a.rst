@@ -128,7 +128,7 @@ Usage régulier
         - Scilab avec `sciscipy <https://www.scilab.org/fr/scilab/interoperability/calculation_engine/python>`_
         - Matlab avec `pymatbridge <https://github.com/jaderberg/python-matlab-bridge>`_, `mlab <https://github.com/ewiger/mlab>`_, néanmoins ces modules ne semblent pas très aboutis
         - Julia voir `IJulia <https://github.com/JuliaLang/IJulia.jl>`_
-    c. `PyPy <http://pypy.org/>`_ 
+    c. `PyPy <http://pypy.org/>`_, `nuitka <http://nuitka.net/>`_, `mypy <http://www.mypy-lang.org/>`_
     d. Écriture de librairies en C++
         - `boost.python <http://www.boost.org/doc/libs/1_55_0/libs/python/doc/>`_
         - `SWIG <http://www.swig.org/>`_
@@ -139,12 +139,13 @@ Usage irrégulier
 
 3. Outils pour mieux développer
     a. Tests unitaires
-    b. Profiling (cprofile, yappi)
-    c. debugger (avec pytools)
-    d. Github, bitbucket, Tortoisegit, tortoisesvn
-    e. Génération d'une documentation avec sphinx
-    f. Créer un setup pour un module
-    g. Créer un exécutable cx_Freeze
+    b. `Vérification de types <http://www.xavierdupre.fr/blog/2014-08-20_nojs.html>`_
+    c. Profiling (cprofile, yappi)
+    d. debugger (avec pytools)
+    e. Github, bitbucket, Tortoisegit, tortoisesvn
+    f. Génération d'une documentation avec sphinx
+    g. Créer un setup pour un module
+    h. Créer un exécutable cx_Freeze
     
 4. Traitement d'images
     a. Pillow

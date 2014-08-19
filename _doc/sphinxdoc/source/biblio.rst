@@ -91,6 +91,7 @@ Machine Learning / Data Science
     * `Detecting Outlier Car Prices on the Web <http://blog.yhathq.com/posts/detecting-outlier-car-prices-on-the-web.html>`_
     * `pyvideo.org <http://pyvideo.org/>`_
     * `Getting started in data science: My thoughts <http://treycausey.com/getting_started.html>`_
+    * `Visualising data structures and algorithms through animation <http://www.comp.nus.edu.sg/~stevenha/visualization/index.html>`_
     
 Compétitions Machine Learning
 -----------------------------

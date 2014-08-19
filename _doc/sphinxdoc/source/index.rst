@@ -118,6 +118,13 @@ Python
     * :ref:`modulesi`
     * `Installation de modules sous Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_  (**modules sous Windows**)
     
+Trucs et astuces en Python
+--------------------------
+
+    * `Vérification de types <http://www.xavierdupre.fr/blog/2014-08-20_nojs.html>`_
+    * `Configurer IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_
+    * `Test unitaires <http://sametmax.com/un-gros-guide-bien-gras-sur-les-tests-unitaires-en-python-partie-1/>`_, `partie 2 <http://sametmax.com/un-gros-guide-bien-gras-sur-les-tests-unitaires-en-python-partie-2/>`_
+
 Environnement de développement
 ------------------------------
 
