@@ -8,10 +8,10 @@ Outils, ressources pour développer
 Outils
 ++++++
 
-Développer un programme informatique prend du tout et il est important d'être à l'aise. 
+Développer un programme informatique prend du temps et il est important d'être à l'aise. 
 Une grande difficulté lorsqu'on programme c'est de travailler à plusieurs sur le même projet.
 Il faut se sychroniser. Fort heureusement, le problème est connu depuis longtemps et il existe beaucoup
-d'outils open source dont on aurait de se passer ou des services gratuits sous certains conditions 
+d'outils open source dont on aurait tort de se passer ou des services gratuits sous certains conditions 
 qui facilitent l'archivage. Ils sont tellement pratiques qu'on a même du mal
 à s'en passer lorsqu'on travaille tout seul.
 
@@ -37,7 +37,7 @@ Ce ne sont pas les seuls, vous trouverez d'autres options ici :
 des données personnelles sensibles**. Les compagnies qui hébergent vos données
 se réservent parfois le droit de fermer votre compte sans avertissement préalable.
 Même si vos données sont protégées par un mot de passe et ne sont pas publiques, 
-il arrive que certains mots de passes soient interceptés.
+il arrive que certains mots de passe soient interceptés.
 Il est également préférable de choisir des hébergements qui proposent 
 un stockage dans un pays dont la loi limite l'usage qui peut être fait de vos données.
 

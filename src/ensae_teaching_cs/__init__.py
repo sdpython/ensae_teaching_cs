@@ -4,7 +4,7 @@
 @brief Main file
 """
 
-__version__ = "0.1"
+__version__ = "0.5"
 __author__ = "Xavier Dupré"
 __github__ = "https://github.com/sdpython/ensae_teaching_cs"
 __url__ = "http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html"

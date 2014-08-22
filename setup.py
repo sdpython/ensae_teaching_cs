@@ -1,5 +1,5 @@
 #-*- coding: utf-8 -*-
-#  Copyright (C) 2013 ---------------
+#  Copyright (C) 2014 ---------------
 #  All rights reserved.
 # 
 #  Redistribution and use in source and binary forms, with or without
@@ -48,7 +48,7 @@ else :
     subversion = 1   
 
 project_var_name    = "ensae_teaching_cs"
-sversion            = "0.1"
+sversion            = "0.5"
 versionPython       = "%s.%s" % (sys.version_info.major, sys.version_info.minor)
 path                = "Lib/site-packages/" + project_var_name
 readme              = 'README.rst'
@@ -123,6 +123,7 @@ if "build_sphinx" in sys.argv:
         fLOG (OutputPrint = True)
         project_name = os.path.split(os.path.split(os.path.abspath(__file__))[0])[-1]
         generate_help_sphinx(project_name,
+                nbformats=['ipynb', 'html', 'python', 'rst', 'docx','pdf'],
                 layout = [ "pdf",
                           "html", 
                           ("html", "build2", {"html_theme":"basicstrap"}, "source/conf2"),

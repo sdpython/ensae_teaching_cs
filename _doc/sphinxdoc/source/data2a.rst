@@ -60,7 +60,8 @@ Usage régulier
     h. Séries temporelles
     i. Autres fonctionnalités (describe, histogram…)
     j. Données "sparse" ou creuses
-    h. Grandes tables (> 250Mo) (en dessous ça tient en mémoire facilement et les calculs sont assez rapides), modules pytables, blaze, SQLAchemy, http://www.pytables.org/docs/LargeDataAnalysis.pdf, SQLiteSpy
+    h. Grandes tables (> 250Mo) (en dessous ça tient en mémoire facilement et les calculs sont assez rapides), modules pytables, blaze, SQLAchemy, http://www.pytables.org/docs/LargeDataAnalysis.pdf, SQLiteSpy, `HDF5 <http://www.h5py.org/>`_
+    
     
 3. `Numpy <http://www.numpy.org/>`_, `Scipy <http://www.scipy.org/>`_, `cvxopt <http://cvxopt.org/>`_
     a. Notation avec ``:``

@@ -22,10 +22,10 @@ Trois séances sont centrées sur trois algorithmes.
 Lorsqu'un problème paraît compliqué ou qu'un algorithme est trop long, 
 il y a deux questions qu'on doit se poser en premier pour entrevoir une solution. 
 
-1. Peut-on réécrire le problème par **récurrence** ? On aboutit le plus souvent à une solution issue de la programmation. Le coût est **quadratique**.
+1. Peut-on réécrire le problème par **récurrence** ? On aboutit le plus souvent à une solution issue de la programmation dynamique. Le coût est **quadratique**.
 2. Peut-on **couper le problème en deux**, construire une solution sur chaque moitié puis recoller les solutions ? On procède de cette façon par dichotomie. Le coût est **logarithmique**.
 
-Ces deux façons de faire sont présentées durant les trois séances qui suivent.
+Ces deux façons de faire sont présentées durant les trois séances.
 
 - :ref:`TD 7 : Programmation dynamique <td1acenoncesession7rst>`  (:ref:`correction <td1acorrectionsession7rst>`)
 - :ref:`TD 8 : Arbre et Trie <td1acenoncesession8rst>`  (:ref:`correction <td1acorrectionsession8rst>`)
@@ -46,7 +46,7 @@ sont incontournables pour manipuler les données en Python.
 
 La dernière séance est une séance notée. Tous les documents sont autorisés. Quelques questions 
 peuvent requérir l'utilisation des outils présentées durant les séances 9 à 12. Toutefois,
-si tel est le cas, ce sera très proche d'une solution proposée lors des TD.
+si tel était le cas, ce serait très proche d'une solution proposée lors des TD.
 
 
 .. toctree::

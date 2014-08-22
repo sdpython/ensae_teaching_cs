@@ -21,10 +21,11 @@ Avant-propos
 ------------
 
 On programme nécessairement avec un **langage** de `programmation <http://fr.wikipedia.org/wiki/Langage_de_programmation>`_.
-Ce langage a une grammaire et un vocabulaire. Il permet d'exprimer des idées sous la forme d'algorithmes.
-Comme toute langue qu'on apprend, les premiers pas sont rebutants et on y prend peu de plaisir.
-Mais cela devient plus facile avec une pratique régulière et le langage s'efface devant le problème à résoudre.
-    
+Ce langage a une grammaire et un vocabulaire. Il permet de concrétiser des idées.
+Comme toute langue qu'on apprend ou toute séance de solfège, 
+les premiers pas sont rebutants et on y prend peu de plaisir.
+Cela devient plus facile avec une pratique régulière. On passe alors plus de temps
+sur son idée et moins sur son programme.
 
 
 Prérequis
@@ -33,10 +34,9 @@ Prérequis
 Les séances utilisent les `notebooks IPython <http://ipython.org/notebook.html>`_.
 Au début de chaque séance, il vous suffit de télécharger le notebook qui sert de point
 de départ. La correction est également rédigée sous forme de notebook.
-
 Les prérequis sont bien sûr `Python <https://www.python.org/>`_ et
-`IPython <http://ipython.org/>`_ mais 
-les modules `pandas <http://fr.wikipedia.org/wiki/Panda>`_, 
+`IPython <http://ipython.org/>`_ mais aussi leurs dépendances
+`pandas <http://fr.wikipedia.org/wiki/Panda>`_, 
 `numpy <http://www.numpy.org/>`_, 
 `openpyxl <http://pythonhosted.org/openpyxl/>`_. 
 Sous Windows, ces modules
@@ -48,7 +48,7 @@ En outre, quatre modules ont été développés pour ces enseignements :
 * `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/>`_ : génère la documentation de ce module
 * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ : code nécessaires aux TDs et aux projets informatiques
 * `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_ : installe facilement des modules
-* `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_ : ces enseignements compilés sous forme de modules
+* `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_ : ces enseignements compilés sous forme de module
 
 
 Installer tous les modules
@@ -74,7 +74,7 @@ façon simple d'installer tous les modules nécessaires en faisant attention à 
 L'article `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
 donne plus de détails à ce sujet.
 
-
+**VIDEO**
 
 Contenu des enseignements
 -------------------------
