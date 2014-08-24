@@ -1,21 +1,23 @@
-﻿========================
+﻿
 ENSAE 1A - Programmation
 ========================
 
 .. revealjs:: ENSAE 1A - Programmation
+    :data-background: #DDDDDD
 
     .. image:: _static/project_ico.png
         
     Xavier Dupré (1999)
         
 .. revealjs:: Intervenants
+    :data-background: #DDDDDD
 
-    Professeur
+    **Professeur**
     
         * **site :** `Xavier Dupré <http://www.xavierdupre.fr/>`_ 
         * **mail :** `xavier.dupre AT ensae.fr <mailto:xavier.dupre AT ensae.fr>`_
 
-    Chargés de TD
+    **Chargés de TD**
 
         +-------------------------------------------------------+-----------------------------------------------------------------------------------+
         | Xavier Dupré                                          | `xavier.dupre AT ensae.fr <mailto:xavier.dupre AT ensae.fr>`_                     |
@@ -28,8 +30,11 @@ ENSAE 1A - Programmation
         +-------------------------------------------------------+-----------------------------------------------------------------------------------+
         | Edwin Grappin                                         | `edwin.grappin AT ensae.fr <mailto:edwin.grappin AT ensae.fr>`_                   |
         +-------------------------------------------------------+-----------------------------------------------------------------------------------+
+        | Alexis Leconte ou ...                                 |                                                                                   |
+        +-------------------------------------------------------+-----------------------------------------------------------------------------------+
         
-.. revealjs::        
+.. revealjs:: 
+    :data-background: #DDDDDD
 
     .. revealjs:: Semestre 1 
     
@@ -38,26 +43,38 @@ ENSAE 1A - Programmation
             * 6 séances d'initiation à la programmation
             * 3 séances sur 3 algorithmes classiques
             * 3 séances sur des outils pour manipuler des données
-            * +1 séance notée
+            * 1 séance notée
 
-        Plan complet :
+        **Plan complet**
         
-            * `séance <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_1a.html#l-td1a>`_
+        `séance <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_1a.html#l-td1a>`_
 
     .. revealjs:: Semestre 2
     
-        Cette partie est facultative.
+        - Cette partie est facultative.
     
-            * `sujets <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/projet_info.html#l-projinfo>`_.
+            * `sujets <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/projet_info.html#l-projinfo>`_.
             
-        Le projet permet de découvrir :
+        - Le projet permet de découvrir :
         
             * travail de façon plus autonome
             * travail collectif
             
-        Il permet aussi de pratiquer la programmation sur un sujet qui vous plaît.
+        - Il permet aussi de pratiquer la programmation sur un sujet qui vous plaît.
 
 
+    .. revealjs:: Evaluation
+    
+        * Semetre 1 (obligatoire)
+            * 4 interrogations écrites de 20 minutes sur 5 points
+            * 1 séance notée sur 20 points
+        * Semestre 2 (facultative)
+            * 1 projet informatique de 2 élèves évalué avec :
+                * un programme
+                * un rapport
+                * une soutenance
+            * `barême indicatif <http://www.xavierdupre.fr/site2013/enseignements/bareme-2014.html>`_
+    
     .. revealjs:: Notebooks
     
         Le cours utilise les `notebooks <http://ipython.org/notebook.html>`_.
@@ -74,8 +91,11 @@ ENSAE 1A - Programmation
         * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
 
 .. revealjs:: 
+    :data-background: #DDDDDD
 
     .. revealjs:: Le langage Python
+    
+        Pourquoi ?
 
         * Le langage est open source et donc gratuit.
         * Il fonctionne sur toutes les OS (Windows, Linux, Mac).
@@ -85,20 +105,25 @@ ENSAE 1A - Programmation
         * Il est en pleine expansion.
         
     .. revealjs:: Data Scientist
+    
+        `Data Science <http://datascience.net/fr/challenge>`_
 
         * `R <http://www.r-project.org/>`_ est le langage des chercheurs.
         * `Python <https://www.python.org/>`_ a rattrapé une bonne partie de son retard depuis 2012.
         * Python est très actif.
-        * voir `Python pour un Data Scientist <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/data2a.html>`_
+        * voir `Python pour un Data Scientist <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/data2a.html>`_
         
     .. revealjs:: Les difficultés de l'apprentissage
     
         * La programmation est abstraite. Il n'existe pas de façon évidente de représenter un algorithme ou un raisonnement.
         * Les programmes sont un long empilement de choses simples. L'objectif est simple résumer, la méthode moins.
         * Il existe beaucoup de bonnes pratiques qu'on adopte souvent après avoir fait le contraire (on ne programme pas de la même façon après le projet informatique.)
+        * On est vraiment à l'aise en programmation lorsqu'on a fait au moins un projet informatique.
+        
 
 
 .. revealjs:: 
+    :data-background: #DDDDDD
 
     .. revealjs:: Python à l'ENSAE
 
@@ -130,15 +155,27 @@ ENSAE 1A - Programmation
             
         Example :  `python syntax loop <https://duckduckgo.com/?q=python+syntax+loop>`_        
         
-    .. revealjs:: Editeur 
+    .. revealjs:: Notebook
+    
+            * Ils mélangent code, texte, formules, tableaux, graphiques.
+            * Ils sont convertibles au format HTML, Latex.
+            
+            * Ils sont pratiques pour garder la trace d'une série de petites étapes pour une étude scientifiques.
+            * Ils ne sont pas pratiques pour écrire de longs programme.
 
+        
+    .. revealjs:: Editeur 
+    
+        On n'écrit pas de modules ou de grands programmes dans un notebook. Il faut un éditeur.
         Il existe de nombreuses options :
             
             * `éditeurs, outils <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/devtools.html#l-devtools>`_
         
         La version gratuite de `PyCharm <http://www.jetbrains.com/pycharm/>`_ contient tout ce qu'il faut.
+        Il détecte quelques erreurs avant l'exécution.
         
 .. revealjs:: Contributions
+    :data-background: #DDDDDD
 
     Le contenu est disponible sur GitHub :
     
@@ -146,8 +183,12 @@ ENSAE 1A - Programmation
         * `pyensae <https://github.com/sdpython/pyensae/>`_
         
     Vous pouvez contribuer.
+    
+        * `pyquickhelper <https://github.com/sdpython/pyquickhelper/>`_
+        * `mymyinstall <https://github.com/sdpython/mymyinstall/>`_        
 
 .. revealjs:: Demain
+    :data-background: #DDDDDD
 
     * On sera connecté en permanence.
     * On sera entouré de capteurs.
