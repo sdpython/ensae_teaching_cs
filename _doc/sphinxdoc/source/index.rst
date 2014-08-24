@@ -6,26 +6,26 @@ ENSAE - Programmation - Xavier Dupré
 
 Cette page donne accès au contenu des séances de travaux pratiques en programmation
 que je dispense à l'`ENSAE <http://www.ensae.fr/>`_. Ils s'appuient principalement sur 
-le langage Python.
-
-    * `documentation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_
-    * `Windows Setup <http://www.xavierdupre.fr/site2013/index_code.html#ensae_teaching_cs>`_
-    * :ref:`l-README`
-    
-Pour contribuer, il suffit d'utiliser GitHub qui héberge les sources de ce document :
-
-    * `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs>`_
+le langage Python. Le contenu est librement disponible sur `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs>`_
+et permet à quiconque de contribuer à ce cours disponible sous trois formats différents : 
+`mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_,
+`compact/blanc <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_,
+`compact/noir <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
+La page :ref:`l-README` résume l'historique des modifications.
     
 
 Avant-propos
 ------------
 
 On programme nécessairement avec un **langage** de `programmation <http://fr.wikipedia.org/wiki/Langage_de_programmation>`_.
-Ce langage a une grammaire et un vocabulaire. Il permet de concrétiser des idées.
+Ce langage a une grammaire et un vocabulaire. Il n'est pas d'une poésie
+irréprochable mais il permet d'exprimer des idées avec une précision tâtillonne.
 Comme toute langue qu'on apprend ou toute séance de solfège, 
 les premiers pas sont rebutants et on y prend peu de plaisir.
 Cela devient plus facile avec une pratique régulière. On passe alors plus de temps
-sur son idée et moins sur son programme.
+sur son idée et moins sur son programme. Le langage Python est un de ceux
+qui demande le moins d'effort. Il est de plus en plus populaire comme en témoignent les 
+nombreux exemples sur Internet.
 
 
 Prérequis
@@ -68,7 +68,7 @@ façon simple d'installer tous les modules nécessaires en faisant attention à 
 3. Utiliser le code suivant pour installer les modules supplémentaires ::
 
     from pymyinstall import datascientist
-    datascientist("install")
+    datascientist("install", full = False)
 
 
 L'article `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
