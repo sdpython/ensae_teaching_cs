@@ -50,7 +50,7 @@ Contenu des enseignements
     * :ref:`Python pour Data Scientist <l-data2a>`
     
     
-.. _l-install::    
+.. _l-install:
 
 Prérequis et Installation
 -------------------------
@@ -99,7 +99,6 @@ L'article `Installer Python pour faire des statistiques <http://www.xavierdupre.
 donne plus de détails et d'options. La liste complète des modules est celle de la fonction
 `complete_installation <https://github.com/sdpython/pymyinstall/blob/master/src/pymyinstall/packaged/packaged_config.py>`_.
 
-``VIDEO``
 
 **Ouvrir un notebooks**
 
@@ -114,10 +113,7 @@ la mise en route est de suivre ces deux étapes :
 Il suffit ensuite de double cliquer sur ce lien pour ouvrir un notebook. Pour récupérer un notebook, il suffit
 de le télécharger puis de le copier dans le répertoire ``<dirnb>`` ou de le glisser dans le navigateur.
 Le seul raccourci à connaître est **SHIFT + ENTREE** qui lance l'exécution de la zone de code sélectionné.
-    
-``VIDEO``
-
-L'article `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_ de définir
+L'article `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_ décrit
 d'autres paramètres par défaut.
 
 
