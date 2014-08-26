@@ -27,9 +27,35 @@ sur son idée et moins sur son programme. Le langage Python est un de ceux
 qui demande le moins d'effort. Il est de plus en plus populaire comme en témoignent les 
 nombreux exemples sur Internet.
 
+Il faut bien entendu installer Python une première fois. Comme ce cours requiert de nombreux modules,
+les étapes ont été simplifiées le plus possibles. Il faudra néanmoins y consacrer une bonne demi-heure :
+:ref:`l-install`.
 
-Prérequis
----------
+
+Contenu des enseignements
+-------------------------
+
+    * :ref:`ENSAE, 1A, initiation à la programmation et l'algorithmie <l-td1a>`
+    * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
+        * :ref:`Exercices d'algorithmie <l-exoalgo>`
+        * :ref:`Exposés divers non abordés en cours <l-extra>`
+    * Autres documents
+        * `Présentation ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_
+        * :ref:`Articles, Références, Blog <l-biblio>`
+        * :ref:`Modules <modulesi>`
+        * :ref:`Outils, ressources pour développer <l-devtools>`
+        * :ref:`Examens passés <l-examens>`
+        * :ref:`Projets informatiques <l-projinfo>`
+        * :ref:`Coding Party <l-codingparty>`
+    * :ref:`Python pour Data Scientist <l-data2a>`
+    
+    
+.. _l-install::    
+
+Prérequis et Installation
+-------------------------
+
+**Notebooks**
 
 Les séances utilisent les `notebooks IPython <http://ipython.org/notebook.html>`_.
 Au début de chaque séance, il vous suffit de télécharger le notebook qui sert de point
@@ -51,51 +77,49 @@ En outre, quatre modules ont été développés pour ces enseignements :
 * `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_ : ces enseignements compilés sous forme de module
 
 
-Installer tous les modules
---------------------------
+**Installation de Python**
 
 Lors de l'installation, il faut faire attention à installer le langage
 Python et ses modules en prenant soin d'utiliser la même version pour chaque composant.
 Je recommande la version `64bit, v3.4.1 <https://www.python.org/downloads/release/python-341/>`_.
-
 Le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_ propose une 
 façon simple d'installer tous les modules nécessaires en faisant attention à la version choisie
 à la première étape:
 
 
-1. Installer `python <https://www.python.org/>`_
-2. Ouvrir une ligne de commande et écrire ``pip install pymyinstall``.
-3. Utiliser le code suivant pour installer les modules supplémentaires ::
+    1. Installer `python <https://www.python.org/>`_
+    2. Ouvrir une ligne de commande et aller dans le répertoire ``<python>/Scripts``
+    3. Ecrire ``pip install pymyinstall``.
+    4. Utiliser le code suivant pour installer les modules supplémentaires ::
 
-    from pymyinstall import datascientist
-    datascientist("install", full = False)
-
+        from pymyinstall import datascientist
+        datascientist("install", full = False)
 
 L'article `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
-donne plus de détails à ce sujet.
+donne plus de détails et d'options. La liste complète des modules est celle de la fonction
+`complete_installation <https://github.com/sdpython/pymyinstall/blob/master/src/pymyinstall/packaged/packaged_config.py>`_.
 
-**VIDEO**
+``VIDEO``
 
-Contenu des enseignements
--------------------------
+**Ouvrir un notebooks**
 
-    * :ref:`ENSAE, 1A, initiation à la programmation et l'algorithmie <l-td1a>`
-    * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
+L'ensemble des TDs a lieu sur les notebooks. Le plus simple pour écourter le plus possible
+la mise en route est de suivre ces deux étapes :
+
+    1. Créer un répertoire vide pour vos notebooks désigné par ``<dirnb>``.
+    2. Ajouter un raccourci sur votre bureau qui contient la ligne suivante::
+
+        set path=%path%;c:\Python34;c:\Python34\Scripts&ipython3 notebook --notebook-dir=<dirnb>
     
-        * :ref:`Exercices d'algorithmie <l-exoalgo>`
-        * :ref:`Exposés divers non abordés en cours <l-extra>`
-        
-    * Autres documents
+Il suffit ensuite de double cliquer sur ce lien pour ouvrir un notebook. Pour récupérer un notebook, il suffit
+de le télécharger puis de le copier dans le répertoire ``<dirnb>`` ou de le glisser dans le navigateur.
+Le seul raccourci à connaître est **SHIFT + ENTREE** qui lance l'exécution de la zone de code sélectionné.
     
-        * `Présentation ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_
-        * :ref:`Articles, Références, Blog <l-biblio>`
-        * :ref:`Modules <modulesi>`
-        * :ref:`Outils, ressources pour développer <l-devtools>`
-        * :ref:`Examens passés <l-examens>`
-        * :ref:`Projets informatiques <l-projinfo>`
-        * :ref:`Coding Party <l-codingparty>`
+``VIDEO``
 
-    * :ref:`Python pour Data Scientist <l-data2a>`
+L'article `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_ de définir
+d'autres paramètres par défaut.
+
 
 Quelques références
 -------------------
