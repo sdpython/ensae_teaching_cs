@@ -89,7 +89,7 @@ façon simple d'installer tous les modules nécessaires en faisant attention à 
 
     1. Installer `python <https://www.python.org/>`_
     2. Ouvrir une ligne de commande et aller dans le répertoire ``<python>/Scripts``
-    3. Ecrire ``pip install pymyinstall``.
+    3. Ecrire ``pip install pymyinstall``
     4. Utiliser le code suivant pour installer les modules supplémentaires ::
 
         from pymyinstall import datascientist
