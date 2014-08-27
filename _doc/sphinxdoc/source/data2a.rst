@@ -134,39 +134,42 @@ Usage régulier
         - `boost.python <http://www.boost.org/doc/libs/1_55_0/libs/python/doc/>`_
         - `SWIG <http://www.swig.org/>`_
 
+10. Data Cube
+    * sur `wikipedia <http://en.wikipedia.org/wiki/Data_cube>`_
+    * `cubes <https://github.com/Stiivi/cubes>`_
+    * `cubesviewer <https://github.com/jjmontesl/cubesviewer>`_
 
 Usage irrégulier
 ++++++++++++++++
 
-3. Outils pour mieux développer
+1. Outils pour mieux développer
     a. Tests unitaires
     b. `Vérification de types <http://www.xavierdupre.fr/blog/2014-08-20_nojs.html>`_
-    c. Profiling (cprofile, yappi)
-    d. debugger (avec pytools)
+    c. Profiling (`cprofile <https://docs.python.org/3.4/library/profile.html>`_, `yappi <https://pypi.python.org/pypi/yappi/>`_)
+    d. debugger (avec `pytools <http://pytools.codeplex.com/>`_)
     e. Github, bitbucket, Tortoisegit, tortoisesvn
     f. Génération d'une documentation avec sphinx
     g. Créer un setup pour un module
     h. Créer un exécutable cx_Freeze
     
-4. Traitement d'images
-    a. Pillow
-    b. Opencv
+2. Traitement d'images
+    a. `Pillow <http://pillow.readthedocs.org/en/latest/>`_
+    b. `Opencv <http://docs.opencv.org/master/doc/py_tutorials/py_tutorials.html>`_
     
-5. Un siteweb en python
-    a. Flask
-    b. Django
+3. Un siteweb en python
+    a. `Flask <http://flask.pocoo.org/>`_
+    b. `Django <http://www.django-fr.org/>`_
     c. `brython <http://www.brython.info/>`_
     d. `pyjs <http://pyjs.org/>`_
     
-6. Python sur tablette, téléphone
-    a. kivy
+4. Python sur tablette, téléphone
+    a. `kivy <http://kivy.org/#home>`_
     
-7. Traitement du langage
-    a. Nltk
+5. Traitement du langage
+    a. `NLTK <http://www.nltk.org/>`_
     
-8. Statistiques bayésiennes
-    a. pymc (je fais rarement du bayésien,)
-
+6. Statistiques bayésiennes
+    a. `pymc <https://github.com/pymc-devs/pymc>`_
 
 Liens
 +++++
