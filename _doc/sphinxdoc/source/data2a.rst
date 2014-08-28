@@ -135,9 +135,9 @@ Usage régulier
         - `SWIG <http://www.swig.org/>`_
 
 10. Data Cube
-    * sur `wikipedia <http://en.wikipedia.org/wiki/Data_cube>`_
-    * `cubes <https://github.com/Stiivi/cubes>`_
-    * `cubesviewer <https://github.com/jjmontesl/cubesviewer>`_
+    a. sur `wikipedia <http://en.wikipedia.org/wiki/Data_cube>`_
+    b. `cubes <https://github.com/Stiivi/cubes>`_
+    c. `cubesviewer <https://github.com/jjmontesl/cubesviewer>`_
 
 Usage irrégulier
 ++++++++++++++++
