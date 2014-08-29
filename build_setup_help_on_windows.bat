@@ -59,6 +59,7 @@ if not exist dist\html mkdir dist\html
 if not exist dist\html2 mkdir dist\html2
 if not exist dist\html3 mkdir dist\html3
 if not exist dist\latex mkdir dist\latex
+xcopy /E /C /I /Y _doc\presentation\build\html dist\html_pres
 xcopy /E /C /I /Y _doc\sphinxdoc\build\html dist\html
 xcopy /E /C /I /Y _doc\sphinxdoc\build2\html dist\html2
 xcopy /E /C /I /Y _doc\sphinxdoc\build3\html dist\html3
