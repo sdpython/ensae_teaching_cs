@@ -21,7 +21,7 @@ Articles de blog
     * **Techniques**
         * `Désactiver les logs de cvxopt <http://www.xavierdupre.fr/blog/2014-04-16_nojs.html>`_
         * `Quelques astuces pour accélérer un programme <http://www.xavierdupre.fr/blog/2014-04-12_nojs.html>`_
-        * Mettre des résultats en cache : `One line of code cut our Flask page load times by 60% <https://medium.com/@5hreyans/the-one-weird-trick-that-cut-our-flask-page-load-time-by-70-87145335f679>`_
+        * `Three ways to install a module <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/notebooks/install_module.html>`_
     * **ENSAE**
         * `Quelques précisions sur les projets informatiques (finance) <http://www.xavierdupre.fr/blog/2014-04-05_nojs.html>`_
     
@@ -68,6 +68,7 @@ Python dans le détail
     * `The key differences between Python 2.7.x and Python 3.x with examples <http://sebastianraschka.com/Articles/2014_python_2_3_key_diff.html>`_
     * `An evaluation of simple Python performance tweaks <http://sebastianraschka.com/Articles/2014_python_performance_tweaks.html>`_
     * `A thorough guide to SQLite database operations in Python <http://sebastianraschka.com/Articles/2014_sqlite_in_python_tutorial.html>`_
+    * `One line of code cut our Flask page load times by 60% <https://medium.com/@5hreyans/the-one-weird-trick-that-cut-our-flask-page-load-time-by-70-87145335f679>`_
 
 
 Machine Learning / Data Science
@@ -93,13 +94,8 @@ Machine Learning / Data Science
     * `pyvideo.org <http://pyvideo.org/>`_
     * `Getting started in data science: My thoughts <http://treycausey.com/getting_started.html>`_
     * `Visualising data structures and algorithms through animation <http://www.comp.nus.edu.sg/~stevenha/visualization/index.html>`_
-    
-Compétitions Machine Learning
------------------------------
-    
-    * `datascience.net <http://www.datascience.net/fr/home/>`_
-    * `kaggle <https://www.kaggle.com/>`_
-    
+    * `Donner <http://freakonometrics.hypotheses.org/11037>`_
+    * `Bar des sciences : débat sur le Big Data <http://freakonometrics.hypotheses.org/12135>`_
     
 Optimisation
 ------------
@@ -116,3 +112,4 @@ Enseignements
     * `Commencez avec Python <http://www.xavierdupre.fr/blog/2014-06-04_nojs.html>`_
     * `Apprendre à programmer aux enfants : Le monde de Reeborg <http://www.xavierdupre.fr/blog/2014-07-12_nojs.html>`_
     * `Scratch <http://scratch.mit.edu/>`_
+    

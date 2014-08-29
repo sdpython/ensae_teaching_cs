@@ -36,6 +36,8 @@ Contenu des enseignements
 -------------------------
 
     * :ref:`ENSAE, 1A, initiation à la programmation et l'algorithmie <l-td1a>`
+    * ENSAE 2A (à venir)
+    * ENSAE 3A (à venir)
     * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
         * :ref:`Exercices d'algorithmie <l-exoalgo>`
         * :ref:`Exposés divers non abordés en cours <l-extra>`
@@ -48,6 +50,7 @@ Contenu des enseignements
         * :ref:`Projets informatiques <l-projinfo>`
         * :ref:`Coding Party <l-codingparty>`
     * :ref:`Python pour Data Scientist <l-data2a>`
+    * :ref:`l-ressources`
     
     
 .. _l-install:
@@ -98,6 +101,8 @@ façon simple d'installer tous les modules nécessaires en faisant attention à 
 L'article `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
 donne plus de détails et d'options. La liste complète des modules est celle de la fonction
 `complete_installation <https://github.com/sdpython/pymyinstall/blob/master/src/pymyinstall/packaged/packaged_config.py>`_.
+Pour tout module supplémentaire, vous pouvez lire 
+`Three ways to install a module <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/notebooks/install_module.html>`_.
 
 
 **Ouvrir un notebooks**
@@ -174,6 +179,7 @@ Vieilles versions
     coding_party
     manytools
     biblio
+    ressources
     FAQ
     glossary
     filechanges
