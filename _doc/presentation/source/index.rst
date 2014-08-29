@@ -176,6 +176,12 @@ ENSAE 1A - Programmation
         La version gratuite de `PyCharm <http://www.jetbrains.com/pycharm/>`_ contient tout ce qu'il faut.
         Il détecte quelques erreurs avant l'exécution.
         
+    .. revealjs:: Démo
+    
+        * Editeur de texte : **Scite**
+        * Environnement mathématique : **Spyder**
+        * Notebooks : **IPython/Notebooks**
+        
 .. revealjs:: Contributions
     :data-background: #DDDDDD
 
@@ -195,3 +201,5 @@ ENSAE 1A - Programmation
     * On sera connecté en permanence.
     * On sera entouré de capteurs.
     * Les données n'attendent que vous.
+    * `Evénements, ressources <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/ressources.html>`_
+    
