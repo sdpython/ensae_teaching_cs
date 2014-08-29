@@ -124,7 +124,7 @@ html_theme_options = {
     "progress": True,
 
     # Push each slide change to the browser history
-    "history": True,
+    "history": False,
 
     # Enable keyboard shortcuts for navigation
     "keyboard": True,
@@ -159,7 +159,7 @@ html_theme_options = {
     "rolling_links": True,
 
     # Opens links in an iframe preview overlay
-    "preview_links": False,
+    "preview_links": True,
 
     # Theme (default/blood/beige/moon/night/serif/simple/sky/solarized)
     "theme": "solarized",
@@ -200,11 +200,11 @@ html_theme_options = {
     # Number of slides away from the current that are visible
     "view_distance": 3,
 
-    # Enable plguin javascript for reveal.js
+    # Enable plugin javascript for reveal.js
     "plugin_list": [
         "_static/plugin/leap/leap.js",
         "_static/plugin/multiplex/master.js",
-        "_static/plugin/search/search.js",
+        #"_static/plugin/search/search.js",
         "_static/plugin/remotes/remotes.js"
         "_static/plugin/notes-server/client.js",
         "_static/plugin/math/math.js",
@@ -222,11 +222,6 @@ html_theme_options = {
 html_theme = 'revealjs'
 html_use_index = False
 
-# Theme options are theme-specific and customize the look and feel of a theme
-# further.  For a list of options available for each theme, see the
-# documentation.
-#html_theme_options = {}
-
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
 
@@ -239,7 +234,7 @@ html_use_index = False
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-#html_logo = None
+html_logo = "_static/project_ico.ico"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32

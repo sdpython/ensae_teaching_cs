@@ -7,7 +7,9 @@ ENSAE 1A - Programmation
 
     .. image:: _static/project_ico.png
         
-    Xavier Dupré (1999)
+    `Xavier Dupré <http://www.xavierdupre.fr/>`_ (1999)
+    
+    Python a été choisi comme langage en 2004 à l'ENSAE.
         
 .. revealjs:: Intervenants
     :data-background: #DDDDDD
@@ -30,7 +32,7 @@ ENSAE 1A - Programmation
         +-------------------------------------------------------+-----------------------------------------------------------------------------------+
         | Edwin Grappin                                         | `edwin.grappin AT ensae.fr <mailto:edwin.grappin AT ensae.fr>`_                   |
         +-------------------------------------------------------+-----------------------------------------------------------------------------------+
-        | Alexis Leconte ou ...                                 |                                                                                   |
+        | Alexis Leconte                                        | `alexis.leconde AT gmail.com <mailto:alexis.leconte AT gmail.com>`_               |
         +-------------------------------------------------------+-----------------------------------------------------------------------------------+
         
 .. revealjs:: 
@@ -117,7 +119,7 @@ ENSAE 1A - Programmation
     
         * La programmation est abstraite. Il n'existe pas de façon évidente de représenter un algorithme ou un raisonnement.
         * Les programmes sont un long empilement de choses simples. L'objectif est simple résumer, la méthode moins.
-        * Il existe beaucoup de bonnes pratiques qu'on adopte souvent après avoir fait le contraire (on ne programme pas de la même façon après le projet informatique.)
+        * Il existe beaucoup de bonnes pratiques qu'on adopte souvent après avoir fait le contraire (on ne programme pas de la même façon après le projet informatique).
         * On est vraiment à l'aise en programmation lorsqu'on a fait au moins un projet informatique.
         
 
@@ -179,7 +181,7 @@ ENSAE 1A - Programmation
 
     Le contenu est disponible sur GitHub :
     
-        * `ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs/>`_.
+        * `ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs/>`_
         * `pyensae <https://github.com/sdpython/pyensae/>`_
         
     Vous pouvez contribuer.
