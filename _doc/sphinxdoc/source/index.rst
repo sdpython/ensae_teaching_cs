@@ -41,6 +41,7 @@ Contenu des enseignements
     * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
         * :ref:`Exercices d'algorithmie <l-exoalgo>`
         * :ref:`Exposés divers non abordés en cours <l-extra>`
+        * :ref:`Jeux autour des données <l-jdonnees>`
     * Autres documents
         * `Présentation ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_
         * :ref:`Articles, Références, Blog <l-biblio>`

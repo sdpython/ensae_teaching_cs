@@ -105,12 +105,15 @@ Usage régulier
     b. `Networkx <https://networkx.github.io/>`_
     c. `neo4j <http://www.neo4j.org/develop/python>`_
     
-#. Représentation de données structurées, NoSQL
+#. Représentation de données structurées, NoSQL, Cubes de données
     a. différences avec les bases de données traditionnelles (tables)
     b. format `JSON <http://fr.wikipedia.org/wiki/JavaScript_Object_Notation>`_, `XML <http://fr.wikipedia.org/wiki/Extensible_Markup_Language>`_ pour les `données structurées <http://en.wikipedia.org/wiki/Semi-structured_data>`_
     c. `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_ définition
     d. `unqlitepy <https://github.com/nobonobo/unqlitepy>`_ (`unqlite <http://unqlite.org/>`_), `cassandra-driver <https://github.com/datastax/python-driver>`_ (`Cassandra <http://cassandra.apache.org/>`_)
     e. `pymongo <http://docs.mongodb.org/ecosystem/drivers/python/>`_ (installation depuis `pymongo pipy <https://pypi.python.org/pypi/pymongo/>`_, `MongoDB <http://www.mongodb.org/>`_), `py-couchdb <https://py-couchdb.readthedocs.org/en/latest/>`_ (`CouchDB <http://couchdb.apache.org/>`_)
+    f. `Data Cube <http://en.wikipedia.org/wiki/Data_cube>`_ (Wikipédia)
+        * `cubes <https://github.com/Stiivi/cubes>`_
+        * `cubesviewer <https://github.com/jjmontesl/cubesviewer>`_
     
 #. Calcul distribué  
     a. Multithreading (local)
@@ -134,10 +137,6 @@ Usage régulier
         - `boost.python <http://www.boost.org/doc/libs/1_55_0/libs/python/doc/>`_
         - `SWIG <http://www.swig.org/>`_
 
-#. Cube de données
-    a. `Data Cube <http://en.wikipedia.org/wiki/Data_cube>`_ (Wikipédia)
-    b. `cubes <https://github.com/Stiivi/cubes>`_
-    c. `cubesviewer <https://github.com/jjmontesl/cubesviewer>`_
 
 
 Usage irrégulier

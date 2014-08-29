@@ -16,4 +16,5 @@ Examples de toutes sortes
     element_code
     exercices
     expose_divers
+    donnees
     
