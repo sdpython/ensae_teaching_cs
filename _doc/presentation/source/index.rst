@@ -59,12 +59,12 @@ ENSAE 1A - Programmation
     
         - Cette partie est facultative.
     
-            * `sujets <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/projet_info.html#l-projinfo>`_.
+            * `sujets <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/projet_info.html#l-projinfo>`_
             
         - Le projet permet de découvrir :
         
-            * travail de façon plus autonome
-            * travail collectif
+            * le travail de façon plus autonome
+            * le travail collectif
             
         - Il permet aussi de pratiquer la programmation sur un sujet qui vous plaît.
 
@@ -122,7 +122,7 @@ ENSAE 1A - Programmation
     .. revealjs:: Les difficultés de l'apprentissage
     
         * La programmation est abstraite. Il n'existe pas de façon évidente de représenter un algorithme ou un raisonnement.
-        * Les programmes sont un long empilement de choses simples. L'objectif est simple résumer, la méthode moins.
+        * Les programmes sont un long empilement de choses simples. L'objectif est souvent simple à résumer, la méthode moins.
         * Il existe beaucoup de bonnes pratiques qu'on adopte souvent après avoir fait le contraire (on ne programme pas de la même façon après le projet informatique).
         * On est vraiment à l'aise en programmation lorsqu'on a fait au moins un projet informatique.
         
@@ -135,21 +135,19 @@ ENSAE 1A - Programmation
 
         * L'environnement est installé pour vous.
         * Le système d'exploitation est Windows.
-        * Les packages sont installés en début d'année.
         
     .. revealjs:: Python chez vous
 
         * Vous installez votre environement (amenez votre ordinateur portable en TD en cas de problème).
         * Le système d'exploitation est celui que vous choisissez (Windows, Linux, Mac).
-        * Lire `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_.
+        * Lire `Prérequis et installation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html#prerequis-et-installation>`_.
         * Vous devriez avoir installé Python dès les premières séances.
         
     .. revealjs:: Version de Python
     
-        * Le cours est construit pour la version 3.4.
-        * La version 3.3 est très proche.
+        * Le cours est construit pour la version 3.3+.
         * Les exemples ne marcheront pas tous sur la version 2.7.
-        * Il faut choisir la version ``amd64``. C'est la seule capable de tirer partie d'une mémoire de plus de 4 Go.
+        * Il faut choisir la version *amd64*. C'est la seule capable de tirer partie d'une mémoire de plus de 4 Go.
         
     .. revealjs:: Utiliser Internet
     
@@ -166,8 +164,8 @@ ENSAE 1A - Programmation
             * Ils mélangent code, texte, formules, tableaux, graphiques.
             * Ils sont convertibles au format HTML, Latex.
             
-            * Ils sont pratiques pour garder la trace d'une série de petites étapes pour une étude scientifiques.
-            * Ils ne sont pas pratiques pour écrire de longs programme.
+            * Ils sont pratiques pour garder la trace d'une série de petites étapes pour une étude scientifique.
+            * Ils ne sont pas pratiques pour écrire de longs programmes.
 
         
     .. revealjs:: Editeur 
@@ -192,18 +190,51 @@ ENSAE 1A - Programmation
     Le contenu est disponible sur GitHub :
     
         * `ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs/>`_
+        
+    Autres modules :
+    
         * `pyensae <https://github.com/sdpython/pyensae/>`_
+        * `pyquickhelper <https://github.com/sdpython/pyquickhelper/>`_
+        * `pymyinstall <https://github.com/sdpython/pymyinstall/>`_        
         
     Vous pouvez contribuer.
-    
-        * `pyquickhelper <https://github.com/sdpython/pyquickhelper/>`_
-        * `mymyinstall <https://github.com/sdpython/mymyinstall/>`_        
 
-.. revealjs:: Demain
+.. revealjs:: 
     :data-background: #DDDDDD
 
-    * On sera connecté en permanence.
-    * On sera entouré de capteurs.
-    * Les données n'attendent que vous.
-    * `Evénements, ressources <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/ressources.html>`_
+    .. revealjs:: Les langages à l'ENSAE
+        
+        Le langage informatique majoritaire est différent selon  la filière.
+        
+        * `C++ <http://fr.wikipedia.org/wiki/C%2B%2B>`_, `C <http://fr.wikipedia.org/wiki/C_(langage)>`_ : finance (2A)
+        * `C# <http://fr.wikipedia.org/wiki/C_sharp>`_ : finance, actuariat, les nouveaux projets démarrent plus souvent en C# qu'en C++ (3A)
+        * `java <http://fr.wikipedia.org/wiki/Java_(langage)>`_ : Big Data, calcul distribué poussé (3A)
+        * `Python <https://www.python.org/>`_ : web, startup, machine learning (1A)
+        * `PIG <http://pig.apache.org/>`_ : Big Data, Map Reduce, calcul distribué (3A)
+        * `R <http://www.r-project.org/>`_ : recherche, actuariat, ... (1A)
+        * `SAS <http://www.sas.com/offices/europe/france/>`_ : actuariat, grosses entreprises (1A)
+        * `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_ : partout (1A)
+        * `VBA <http://fr.wikipedia.org/wiki/Visual_Basic_for_Applications>`_ : Excel (et quand on n'a pas le choix) (2A)
+
+    .. revealjs:: D'autres langages
     
+        Liste non exhaustive :
+        
+        * `Clojure <http://fr.wikipedia.org/wiki/Clojure>`_ : langage fonctionnel
+        * `Erlang <http://fr.wikipedia.org/wiki/Erlang_(langage)>`_ : message facebook, service internet ne pouvant pas s'arrêter
+        * `HTML <http://fr.wikipedia.org/wiki/Hypertext_Markup_Language>`_ : internet (pas vraiment un langage)
+        * `javascript <http://fr.wikipedia.org/wiki/JavaScript>`_ : application web, internet
+        * `Objective-C <http://fr.wikipedia.org/wiki/Objective-C>`_ : application iPhone
+        * `Scala <http://fr.wikipedia.org/wiki/Scala_(langage)>`_ : langage fonctionnel, `Spark <https://spark.apache.org/>`_
+
+    .. revealjs:: Demain
+        
+        * On sera connecté en permanence.
+        * On sera entouré de capteurs (voir `HealthKit <https://developer.apple.com/healthkit/>`_)
+        * Les données n'attendent que vous.
+        * `Evénements, ressources <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/ressources.html>`_
+    
+        ...
+
+        * `Quelle France dans dix ans ? Les chantiers de la décennie <http://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/archives/F10_Rapport_FINAL_23062014.pdf>`_
+        * `Quel sera le paysage Média en 2020 ? <http://www.udecam.fr/docs_paysagemedia/Paysage%20Media%202020%20-%203eme%20edition%20-UDECAM%202014.pdf>`_

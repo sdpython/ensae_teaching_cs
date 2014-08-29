@@ -32,7 +32,7 @@ sur les données.
 Usage régulier
 ++++++++++++++
 
-1. Introduction aux différents environnements de programmation (pas très long)
+#. Introduction aux différents environnements de programmation (pas très long)
     a. Installation : 
         - `WinPython <http://winpython.sourceforge.net/>`_, 
         - `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_ 
@@ -49,7 +49,7 @@ Usage régulier
     d. Liens
         - `Formation à Python scientifique - ENS Paris <http://python-prepa.github.io/index.html>`_
         
-2. `Pandas <http://pandas.pydata.org/>`_
+#. `Pandas <http://pandas.pydata.org/>`_
     a. Récupérer des données depuis un fichier plat
     b. Encoding
     c. Notion de dataframe
@@ -63,7 +63,7 @@ Usage régulier
     h. Grandes tables (> 250Mo) (en dessous ça tient en mémoire facilement et les calculs sont assez rapides), modules pytables, blaze, SQLAchemy, http://www.pytables.org/docs/LargeDataAnalysis.pdf, SQLiteSpy, `HDF5 <http://www.h5py.org/>`_
     
     
-3. `Numpy <http://www.numpy.org/>`_, `Scipy <http://www.scipy.org/>`_, `cvxopt <http://cvxopt.org/>`_
+#. `Numpy <http://www.numpy.org/>`_, `Scipy <http://www.scipy.org/>`_, `cvxopt <http://cvxopt.org/>`_
     a. Notation avec ``:``
     b. Calcul matriciel
     c. Convertir des boucles en calcul matriciel, écrire du code rapide
@@ -72,7 +72,7 @@ Usage régulier
     f. Optimisation, optimisation sous Contraintes
     g. Optimisation sous contrainte avec cvxopt
     
-4. Visualisation
+#. Visualisation
     a. images
         - `matplotlib <http://matplotlib.org/>`_
         - `prettyplotlib <http://olgabot.github.io/prettyplotlib/>`_
@@ -93,33 +93,33 @@ Usage régulier
         - `vispy <http://vispy.org/index.html>`_
         - `IVisual <https://pypi.python.org/pypi/IVisual/>`_
     
-5. `Scikit-learn <http://scikit-learn.org/stable/>`_
+#. `Scikit-learn <http://scikit-learn.org/stable/>`_
     a. ADD avec Python (ACP, CAH, clustering)
     b. Machine learning (régression, modèles prédictifs)
     c. `autres modules <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
     d. `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
     e. `DataFrame et SQLite3 <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/pyensae_flat2db3.html>`_
     
-6. Représentation de graphes
+#. Représentation de graphes
     a. `Graphviz <https://github.com/xflr6/graphviz>`_
     b. `Networkx <https://networkx.github.io/>`_
     c. `neo4j <http://www.neo4j.org/develop/python>`_
     
-7. Représentation de données structurées, NoSQL
+#. Représentation de données structurées, NoSQL
     a. différences avec les bases de données traditionnelles (tables)
     b. format `JSON <http://fr.wikipedia.org/wiki/JavaScript_Object_Notation>`_, `XML <http://fr.wikipedia.org/wiki/Extensible_Markup_Language>`_ pour les `données structurées <http://en.wikipedia.org/wiki/Semi-structured_data>`_
     c. `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_ définition
     d. `unqlitepy <https://github.com/nobonobo/unqlitepy>`_ (`unqlite <http://unqlite.org/>`_), `cassandra-driver <https://github.com/datastax/python-driver>`_ (`Cassandra <http://cassandra.apache.org/>`_)
     e. `pymongo <http://docs.mongodb.org/ecosystem/drivers/python/>`_ (installation depuis `pymongo pipy <https://pypi.python.org/pypi/pymongo/>`_, `MongoDB <http://www.mongodb.org/>`_), `py-couchdb <https://py-couchdb.readthedocs.org/en/latest/>`_ (`CouchDB <http://couchdb.apache.org/>`_)
     
-8. Calcul distribué  
+#. Calcul distribué  
     a. Multithreading (local)
     b. `GPU <http://fr.wikipedia.org/wiki/Processeur_graphique>`_ : `pycuda <http://mathema.tician.de/software/pycuda/>`_, `theano <http://deeplearning.net/software/theano/>`_
     c. Plusieurs machines ou plusieurs coeurs (ipython, lzmq, ...)
     d. Workflow (`luigi <http://luigi.readthedocs.org/en/latest/>`_, `papy <http://arxiv.org/ftp/arxiv/papers/1407/1407.4378.pdf>`_)
     e. calcul en grande précision `gmpy2 <http://gmpy2.readthedocs.org/en/latest/>`_
     
-9. Python et autres langages (C++, Cypthon, C#, R) 
+#. Python et autres langages (C++, Cypthon, C#, R) 
     a. `Cython <http://cython.org/>`_ (voir aussi `cffi <https://cffi.readthedocs.org/>`_)
     b. autres langages
         - C# avec `pythonnet <https://github.com/renshawbay/pythonnet>`_
@@ -134,10 +134,11 @@ Usage régulier
         - `boost.python <http://www.boost.org/doc/libs/1_55_0/libs/python/doc/>`_
         - `SWIG <http://www.swig.org/>`_
 
-10. Data Cube
-    a. sur `wikipedia <http://en.wikipedia.org/wiki/Data_cube>`_
+#. Cube de données
+    a. `Data Cube <http://en.wikipedia.org/wiki/Data_cube>`_ (Wikipédia)
     b. `cubes <https://github.com/Stiivi/cubes>`_
     c. `cubesviewer <https://github.com/jjmontesl/cubesviewer>`_
+
 
 Usage irrégulier
 ++++++++++++++++
