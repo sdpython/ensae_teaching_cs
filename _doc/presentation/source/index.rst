@@ -10,6 +10,10 @@ ENSAE 1A - Programmation
     `Xavier Dupré <http://www.xavierdupre.fr/>`_ (1999)
     
     Python a été choisi comme langage en 2004 à l'ENSAE.
+    
+    **Assistant à l'ENSAE**
+    
+    `Romain Lesauvage <mailto: romain.lesauvage AT ensae.fr>`_
         
 .. revealjs:: Intervenants
     :data-background: #DDDDDD

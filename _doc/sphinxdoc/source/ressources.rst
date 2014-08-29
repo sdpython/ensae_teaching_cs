@@ -20,7 +20,7 @@ Evénements réguliers
 --------------------
 
     * `Data Tuesday <http://data-tuesday.com/>`_
-    * `Big Data Meetup Paris <http://big-data.meetup.com/cities/fr/paris/>`_, voir aussi ` <http://big-data.meetup.com/cities/fr/paris/events/>`_
+    * `Big Data Meetup Paris <http://big-data.meetup.com/cities/fr/paris/>`_, voir aussi `search page <http://big-data.meetup.com/cities/fr/paris/events/>`_
     * `Paris Startup Job Fair <http://jobfair.rudebaguette.com/>`_ (a lieu régulièrement au `104 à Paris <http://www.104.fr/>`_)
     
 Compétitions Machine Learning
