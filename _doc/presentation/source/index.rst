@@ -9,7 +9,7 @@ ENSAE 1A - Programmation
         
     `Xavier Dupré <http://www.xavierdupre.fr/>`_ (1999)
     
-    Python a été choisi comme langage en 2004 à l'ENSAE.
+    Python a été choisi comme langage en 2005 à l'ENSAE.
     
     **Assistant à l'ENSAE**
     
@@ -126,7 +126,21 @@ ENSAE 1A - Programmation
         * Il existe beaucoup de bonnes pratiques qu'on adopte souvent après avoir fait le contraire (on ne programme pas de la même façon après le projet informatique).
         * On est vraiment à l'aise en programmation lorsqu'on a fait au moins un projet informatique.
         
-
+    .. revealjs:: Les supports de cours
+    
+        * `Le site <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_
+        * `Les énoncés des séances <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_1a.html>`_
+        * `Examples <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/exemple_index.html>`_
+        * `Examens passés <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/exams.html>`_
+        * `Résumé de la syntaxd Python <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_
+        * `FAQ <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/all_FAQ.html>`_
+        
+    .. revealjs:: Pour aller plus loin
+    
+        * `Coding Party à l'ENSAE <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/coding_party.html>`_
+        * `Modules et outils pour développer <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/manytools.html>`_
+        * `Articles, Références, Blogs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/biblio.html>`_
+        * `Python pour un Data Scientist <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/data2a.html>`_
 
 .. revealjs:: 
     :data-background: #DDDDDD

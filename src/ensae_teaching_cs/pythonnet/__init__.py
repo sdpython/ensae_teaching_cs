@@ -62,6 +62,7 @@ def vocal_synthesis(text, lang = "fr-FR", voice = "", filename = ""):
     Pour l'utiliser, il faut utiliser l'instruction :
     
     @code
+    from ensae_teaching_cs.pythonnet import clr
     from clr import AddReference
     AddReference("ENSAE.Voice")
     @endcode

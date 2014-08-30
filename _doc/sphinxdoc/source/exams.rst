@@ -11,7 +11,7 @@ Examens passés
     <p>
     Certains énoncés nécessitent des données ou des bouts de programmes.
     Ils sont accessibles ici :
-    <a href="http://www.xavierdupre.fr/site2013/enseignements/http://www.xavierdupre.fr/site2013/enseignements/tddata/">données complémentaires</a>.
+    <a href="http://www.xavierdupre.fr/site2013/enseignements/tddata/">données complémentaires</a>.
     </p>
 
     <h3>Séances notées</h3>
@@ -45,7 +45,7 @@ Examens passés
         </li>
     </ul>
 
-    Séances de rattrapage :
+    <b>Séances de rattrapage :</b>
     <ul>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2009_rattrape.pdf">énoncé 2008-2009</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2009_rattrape.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2009_rattrape.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (manipulation de fichier texte, fusion de données)</li>
@@ -77,7 +77,7 @@ Examens passés
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_45_minutes_2013_12.pdf">énoncé 2013-2014 (2)</a>, 
         <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/interro_rapide_45_minutes_2013_12.pdf">correction</a> 
         <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/interro_rapide_45_minutes_2013_12.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
-        (correction d'un programme, entiers parfaits, entiers divisible par 11)</li>
+        (correction d'un programme, entiers parfaits, entiers divisibles par 11)</li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_30_minutes_2013_12.pdf">énoncé 2013-2014 (3)</a>, 
         <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/interro_rapide_30_minutes_2013_12.pdf">correction</a> 
         <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/interro_rapide_30_minutes_2013_12.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
