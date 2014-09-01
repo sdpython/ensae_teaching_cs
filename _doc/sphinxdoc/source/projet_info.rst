@@ -29,6 +29,7 @@ C'est souvent l'occasion de découvrir un sujet que vous ne verrez pas ou peu à
     projets/jeux
     projets/jeuxcartes
     projets/jeux_seul
+    projets/jeux_maths
 
 L'encadrant se réserve le droit de proposer des modifications si le même sujet est 
 choisi par un trop grand nombre d'élèves. 

@@ -61,7 +61,7 @@ Usage régulier
     i. Autres fonctionnalités (describe, histogram…)
     j. Données "sparse" ou creuses
     h. Grandes tables (> 250Mo) (en dessous ça tient en mémoire facilement et les calculs sont assez rapides), modules pytables, blaze, SQLAchemy, http://www.pytables.org/docs/LargeDataAnalysis.pdf, SQLiteSpy, `HDF5 <http://www.h5py.org/>`_
-    
+    i. `pandas cookbook <http://pandas.pydata.org/pandas-docs/stable/cookbook.html>`_
     
 #. `Numpy <http://www.numpy.org/>`_, `Scipy <http://www.scipy.org/>`_, `cvxopt <http://cvxopt.org/>`_
     a. Notation avec ``:``
@@ -75,6 +75,7 @@ Usage régulier
 #. Visualisation
     a. images
         - `matplotlib <http://matplotlib.org/>`_
+        - `matplotlib et pandas <http://pandas.pydata.org/pandas-docs/stable/visualization.html>`_
         - `prettyplotlib <http://olgabot.github.io/prettyplotlib/>`_
         - `ggplot <https://github.com/yhat/ggplot>`_ 
     b. cartes
@@ -92,28 +93,30 @@ Usage régulier
         - `python-nvd3 <https://pypi.python.org/pypi/python-nvd3/>`_
         - `vispy <http://vispy.org/index.html>`_
         - `IVisual <https://pypi.python.org/pypi/IVisual/>`_
+    d. others directions (pas facile à mettre en place)
+        - `tessera <https://github.com/urbanairship/tessera>`_
+        - `graphite <https://github.com/graphite-project>`_
     
 #. `Scikit-learn <http://scikit-learn.org/stable/>`_
-    a. ADD avec Python (ACP, CAH, clustering)
-    b. Machine learning (régression, modèles prédictifs)
-    c. `autres modules <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
-    d. `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
-    e. `DataFrame et SQLite3 <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/pyensae_flat2db3.html>`_
+    a. `scikit lectures <http://scipy-lectures.github.io/>`_
+    b. ADD avec Python (ACP, CAH, clustering)
+    c. Machine learning (régression, modèles prédictifs)
+    d. `autres modules <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
+    e. `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
+    f. `DataFrame et SQLite3 <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/pyensae_flat2db3.html>`_
     
 #. Représentation de graphes
     a. `Graphviz <https://github.com/xflr6/graphviz>`_
     b. `Networkx <https://networkx.github.io/>`_
     c. `neo4j <http://www.neo4j.org/develop/python>`_
+    d. `python-igraph <http://igraph.org/python/>`_
     
-#. Représentation de données structurées, NoSQL, Cubes de données
+#. Représentation de données structurées, NoSQL
     a. différences avec les bases de données traditionnelles (tables)
     b. format `JSON <http://fr.wikipedia.org/wiki/JavaScript_Object_Notation>`_, `XML <http://fr.wikipedia.org/wiki/Extensible_Markup_Language>`_ pour les `données structurées <http://en.wikipedia.org/wiki/Semi-structured_data>`_
     c. `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_ définition
     d. `unqlitepy <https://github.com/nobonobo/unqlitepy>`_ (`unqlite <http://unqlite.org/>`_), `cassandra-driver <https://github.com/datastax/python-driver>`_ (`Cassandra <http://cassandra.apache.org/>`_)
     e. `pymongo <http://docs.mongodb.org/ecosystem/drivers/python/>`_ (installation depuis `pymongo pipy <https://pypi.python.org/pypi/pymongo/>`_, `MongoDB <http://www.mongodb.org/>`_), `py-couchdb <https://py-couchdb.readthedocs.org/en/latest/>`_ (`CouchDB <http://couchdb.apache.org/>`_)
-    f. `Data Cube <http://en.wikipedia.org/wiki/Data_cube>`_ (Wikipédia)
-        * `cubes <https://github.com/Stiivi/cubes>`_
-        * `cubesviewer <https://github.com/jjmontesl/cubesviewer>`_
     
 #. Calcul distribué  
     a. Multithreading (local)
@@ -170,6 +173,23 @@ Usage irrégulier
     
 6. Statistiques bayésiennes
     a. `pymc <https://github.com/pymc-devs/pymc>`_
+    
+7. `Data Cube <http://en.wikipedia.org/wiki/Data_cube>`_ (Wikipédia)
+    * modules plutôt expérimental
+        * `cubes <https://github.com/Stiivi/cubes>`_
+        * `cubesviewer <https://github.com/jjmontesl/cubesviewer>`_
+        
+8. Algorithmie        
+    * `Woodbury matrix identity <http://en.wikipedia.org/wiki/Woodbury_matrix_identity>`_
+    * `Blockwise inversion <http://en.wikipedia.org/wiki/Invertible_matrix#Blockwise_inversion>`_
+    
+    
+Articles
+++++++++
+    * `Gradient Boosted Regression Trees <http://orbi.ulg.ac.be/bitstream/2268/163521/1/slides.pdf>`_
+    * `A Reliable Effective Terascale Linear Learning System <http://arxiv.org/pdf/1110.4198v3.pdf>`_
+    * `Understanding Random Forest <http://orbi.ulg.ac.be/handle/2268/170309>`_
+    
 
 Liens
 +++++
