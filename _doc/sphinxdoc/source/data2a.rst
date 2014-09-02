@@ -60,7 +60,7 @@ Usage régulier
     h. Séries temporelles
     i. Autres fonctionnalités (describe, histogram…)
     j. Données "sparse" ou creuses
-    h. Grandes tables (> 250Mo) (en dessous ça tient en mémoire facilement et les calculs sont assez rapides), modules pytables, blaze, SQLAchemy, http://www.pytables.org/docs/LargeDataAnalysis.pdf, SQLiteSpy, `HDF5 <http://www.h5py.org/>`_
+    h. Grandes tables (> 250Mo) (en dessous ça tient en mémoire facilement et les calculs sont assez rapides), modules pytables, blaze, SQLAchemy, http://www.pytables.org/docs/LargeDataAnalysis.pdf, SQLiteSpy, `h5py <http://www.h5py.org/>`_
     i. `pandas cookbook <http://pandas.pydata.org/pandas-docs/stable/cookbook.html>`_
     
 #. `Numpy <http://www.numpy.org/>`_, `Scipy <http://www.scipy.org/>`_, `cvxopt <http://cvxopt.org/>`_
@@ -78,6 +78,7 @@ Usage régulier
         - `matplotlib et pandas <http://pandas.pydata.org/pandas-docs/stable/visualization.html>`_
         - `prettyplotlib <http://olgabot.github.io/prettyplotlib/>`_
         - `ggplot <https://github.com/yhat/ggplot>`_ 
+        - `vincent <http://vincent.readthedocs.org/>`_
     b. cartes
         - `cartopy <http://scitools.org.uk/cartopy/>`_
         - `basemap <http://matplotlib.org/basemap/>`_
@@ -189,6 +190,8 @@ Articles
     * `Gradient Boosted Regression Trees <http://orbi.ulg.ac.be/bitstream/2268/163521/1/slides.pdf>`_
     * `A Reliable Effective Terascale Linear Learning System <http://arxiv.org/pdf/1110.4198v3.pdf>`_
     * `Understanding Random Forest <http://orbi.ulg.ac.be/handle/2268/170309>`_
+    * `scikit lectures <http://scipy-lectures.github.io/>`_
+    * `Formation à Python scientifique - ENS Paris <http://python-prepa.github.io/index.html>`_
     
 
 Liens

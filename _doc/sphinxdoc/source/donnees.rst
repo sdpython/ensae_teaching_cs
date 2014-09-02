@@ -10,3 +10,4 @@ Jeux autour des données
     :numbered:
 
     notebooks/table_mortalite
+    notebooks/huge_datasets
