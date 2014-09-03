@@ -11,3 +11,4 @@ Jeux autour des données
 
     notebooks/table_mortalite
     notebooks/huge_datasets
+    notebooks/python_r
