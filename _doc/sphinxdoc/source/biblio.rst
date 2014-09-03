@@ -113,3 +113,8 @@ Enseignements
     * `Apprendre à programmer aux enfants : Le monde de Reeborg <http://www.xavierdupre.fr/blog/2014-07-12_nojs.html>`_
     * `Scratch <http://scratch.mit.edu/>`_
     
+Papers about machine learning
+-----------------------------
+    * `ABC model choice via random forests <http://arxiv.org/abs/1406.6288>`_
+    * `Mondrian Forests: Effcient Online Random Forests <http://arxiv.org/pdf/1406.2673v1.pdf>`_
+    

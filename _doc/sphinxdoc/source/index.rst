@@ -35,8 +35,8 @@ les étapes ont été simplifiées le plus possibles. Il faudra néanmoins y con
 Contenu des enseignements
 -------------------------
 
-    * :ref:`ENSAE, 1A, initiation à la programmation et l'algorithmie <l-td1a>`
-    * ENSAE 2A (à venir)
+    * :ref:`ENSAE, 1A, Initiation à la programmation et l'algorithmie <l-td1a>`
+    * :ref:`ENSAE, 2A, Données, Machine Learning et Programmation <l-td2a>`
     * ENSAE 3A (à venir)
     * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
         * :ref:`Exercices d'algorithmie <l-exoalgo>`
@@ -143,6 +143,7 @@ Python
     * `Modules standards <https://docs.python.org/3.4/library/>`_
     * :ref:`modulesi`
     * `Installation de modules sous Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_  (**modules sous Windows**)
+    * `Python is Now the Most Popular Introductory Teaching Language at Top U.S. Universities <http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-us-universities/fulltext>`_
     
 Trucs et astuces en Python
 --------------------------
@@ -173,6 +174,7 @@ Vieilles versions
     :hidden:
 
     td_1a
+    td_2a
     data2a
     exemple_index
     exams

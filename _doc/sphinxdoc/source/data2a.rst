@@ -192,23 +192,26 @@ Articles
     * `Understanding Random Forest <http://orbi.ulg.ac.be/handle/2268/170309>`_
     * `scikit lectures <http://scipy-lectures.github.io/>`_
     * `Formation à Python scientifique - ENS Paris <http://python-prepa.github.io/index.html>`_
+    * `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
+    * `Python Tools for Machine Learning <http://www.cbinsights.com/blog/python-tools-machine-learning/>`_
+    * `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
     
 
 Liens
 +++++
 
 - Blog: 
-    - http://sebastianraschka.com/articles.html
-    - http://blog.yhathq.com/
+    - `Sebastian Raschka <http://sebastianraschka.com/articles.html>`_
+    - `ŷhat <http://blog.yhathq.com/>`_
 - Sites
-    - http://numfocus.org/projects/index.html
-    - http://www.pythonworks.org/home (références de livres)
+    - `NumFOCUS Foundation <http://numfocus.org/projects/index.html>`_
+    - `pythonworks.org <http://www.pythonworks.org/home>`_ (références de livres)
 - Articles
-    - http://jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf (avec les auteurs de scikit-learn)
+    - `Scikit-learn: Machine Learning in Python <http://jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf>`_ (avec les auteurs de scikit-learn)
 - Livres
     - Building Machine Learning Systems with Python by Willi Richert, Luis Pedro Coelho published by PACKT PUBLISHING (2013) 
     - Machine Learning in Action by Peter Harrington
     - `Probabilistic Programming and Bayesian Methods for Hackers <http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb>`_
 - Vidéo
-    - http://www.microsoft.com/france/mstechdays/programmes/2014/fiche-session.aspx?ID=295be946-2c69-458a-8545-bcebe7970fd8
-    - http://www.microsoft.com/france/mstechdays/programmes/2013/fiche-session.aspx?ID=bb6cbb87-c370-477e-8fd4-b46f9ca292d0
+    - `Scikit-Learn: Machine Learning en Python <http://www.microsoft.com/france/mstechdays/programmes/2014/fiche-session.aspx?ID=295be946-2c69-458a-8545-bcebe7970fd8>`_
+    - `HDInsight : Hadoop en environnement Microsoft <http://www.microsoft.com/france/mstechdays/programmes/2013/fiche-session.aspx?ID=bb6cbb87-c370-477e-8fd4-b46f9ca292d0>`_

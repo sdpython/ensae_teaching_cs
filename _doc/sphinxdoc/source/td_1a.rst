@@ -5,8 +5,9 @@
 TD 1A
 =====
 
-**Enoncés des séances de programmation et d'algorithmie**
+`Algorithmes et programmation - OMI1C4 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100115>`_
 
+Ce cours s'étale sur 12 séances de travaux dirigés (TD) d'une durée de 2h. 
 Les six premières séances font découvrir le langage Python. 
 
 - :ref:`TD 1 : Premiers pas en Python <td1acenoncesession1rst>`  (:ref:`correction <td1acorrectionsession1rst>`)
