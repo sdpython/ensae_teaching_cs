@@ -12,5 +12,5 @@ Les sujets
 Ondes Wifi
 ++++++++++
 
-Tout tient dans cet article : `Helmhurts <_.http://jasmcole.com/2014/08/25/helmhurts/>`_.
+Tout tient dans cet article : `Helmhurts <http://jasmcole.com/2014/08/25/helmhurts/>`_.
 
