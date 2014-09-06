@@ -54,6 +54,8 @@ ENSAE 1A - Programmation
         **Plan complet**
         
         `séance <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_1a.html#l-td1a>`_
+        
+        Du vendredi 4 septembre au vendredi 5 décembre excepté le 19/09 et le 31/10, 16h30.
 
     .. revealjs:: Semestre 2
     

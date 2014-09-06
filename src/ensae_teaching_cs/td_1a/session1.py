@@ -57,6 +57,8 @@ def dix_entiers_carre():
     n'est utilisé que dans une fonction. Lorsque le programme rencontre
     une instruction commençant par ``return``, il quitte la fonction
     et transmet le résultat à l'instruction qui a appelé la fonction.
+    La fonction ``print`` ne modifie pas votre algorithme. La fonction ``return``
+    spécifie le résultat de votre fonction : elle modifie l'algorithme.
     @endFAQ
     
     @example(TD 1A___calcul de la somme des dix premiers entiers au carré)
