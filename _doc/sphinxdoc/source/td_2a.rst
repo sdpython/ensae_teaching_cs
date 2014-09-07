@@ -33,6 +33,9 @@ liste les différents modules proposés lors de ce cours.
     
 *contenu à venir*
 
+Bibliographie:
+
+* `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_
 
 
 .. toctree::
