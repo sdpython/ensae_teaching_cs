@@ -168,6 +168,64 @@ def test_unitaire():
     assert isinstance(pow(-2,3.4), complex)
     return True
     
+def same_variable(a,b):
+    """
+    Cette fonction dit si les deux objets sont en fait le même objet (True)
+    ou non (False) s'ils sont différents (même s'ils contiennent la même information).
+    
+    @param      a       n'importe quel objet
+    @param      b       n'importe quel objet
+    @return             ``True`` ou ``False``
+    
+    @FAQ(Qu'est-ce qu'un type _immuable_ ou _immutable_ ?)
+    Une variable de type _immuable_ ne peut être modifiée. Cela concerne :
+    
+        - ``int``
+        - ``float``
+        - ``str``
+        - ``tuple``
+        
+    Si une variable est de type _immuable_, lorsqu'on effectue une opération,
+    on créé implicitement une copie de l'objet.
+        
+    Les dictionnaires et les listes sont _modifiables_ (ou _mutable_). Pour une variable
+    de ce type, lorsqu'on écrit ``a = b``, ``a`` et ``b`` désigne le même objet même 
+    si ce sont deux noms différentes. C'est le même emplacement mémoire 
+    accessible de deux moyens.
+    
+    Par exemple ::
+    
+        a  = (2,3)
+        b  = a
+        a += (4,5)
+        print( a == b ) # --> False
+        print(a,b)      # --> (2, 3, 4, 5) (2, 3) 
+    
+        a  = [2,3]
+        b  = a
+        a += [4,5]
+        print( a == b ) # --> True
+        print(a,b)      # --> [2, 3, 4, 5] [2, 3, 4, 5]
+        
+    Dans le premier cas, le type (``tuple``) est _immutable_, l'opérateur ``+=`` cache implicitement une copie.
+    Dans le second cas, le type (``list``) est _mutable_, l'opérateur ``+=`` évite la copie
+    car la variable peut être modifiée. Même si ``b=a`` est exécutée avant l'instruction suivante,
+    elle n'a **pas** pour effet de conserver l'état de ``a`` avant l'ajout d'élément.
+    @endFAQ
+    """
+    return id(a) == id(b)
+    
 if __name__ == "__main__" :
     #print(difference_div())
-    test_unitaire()
+    #test_unitaire()
+    a  = (2,3)
+    b  = a
+    a += (4,5)
+    print( a == b ) # --> False
+    print(a,b)
+
+    a  = [2,3]
+    b  = a
+    a += [4,5]
+    print( a == b ) # --> True
+    print(a,b)
