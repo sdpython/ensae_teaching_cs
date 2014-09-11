@@ -244,4 +244,5 @@ version.txt
 */notebooks/donnees/*.gz
 */notebooks/donnees/*.db3
 */notebooks/donnees/*.hdf5
+*/notebooks/donnees/*.zip
 
