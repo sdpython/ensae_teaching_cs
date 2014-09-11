@@ -105,6 +105,7 @@ Usage régulier
     d. `autres modules <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
     e. `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
     f. `DataFrame et SQLite3 <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/pyensae_flat2db3.html>`_
+    g. `Choosing the right estimato <http://scikit-learn.org/stable/tutorial/machine_learning_map/index.html>`_
     
 #. Représentation de graphes
     a. `Graphviz <https://github.com/xflr6/graphviz>`_
