@@ -27,10 +27,10 @@ def extract_version_from_setup():
     else:
         raise FileNotFoundError("unable to find setup.py, tried: " + setup)
 
-project_var_name_t = "ENSAE<br />Xavier Dupré"
-project_var_name = "ensae_teaching_cs"
-author           = "Xavier Dupré"
-version          = extract_version_from_setup()
+project_var_name_t  = "ENSAE<br />Xavier Dupré"
+project_var_name    = "ensae_teaching_cs"
+author              = "Xavier Dupré"
+version             = extract_version_from_setup()
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -38,6 +38,7 @@ version          = extract_version_from_setup()
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0])))
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], project_var_name)))
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], "..", "..", "..", "..", "pyquickhelper", "src")))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], "..", "..", "..", "..", "pyensae", "src")))
 
 # -- General configuration -----------------------------------------------------
 
