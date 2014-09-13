@@ -83,7 +83,7 @@ def get_data(whereTo = "."):
             
     return edges
     
-def degre(edges):
+def graph_degree(edges):
     """
     calcul le degré de chaque noeud
     
@@ -249,7 +249,7 @@ def eulerien_extension(edges, iter = 20, fLOG = print, alpha = 0.5, distance = d
     fLOG("next")
     init        = bellman(edges, fLOG = fLOG, allow = lambda e : e in possibles)
     added       = kruskall(edges, init, fLOG = fLOG)
-    d           = degre(edges + added)
+    d           = graph_degree(edges + added)
     allow       = [ k for k,v in d.items() if v%2 == 1 ]
     totali      = 0
     while len(allow) > 0 :
@@ -259,7 +259,7 @@ def eulerien_extension(edges, iter = 20, fLOG = print, alpha = 0.5, distance = d
                         allow = lambda e : e in possibles or e[0] in allowset or e[1] in allowset, 
                         init = init)
         added    = kruskall(edges, init, fLOG = fLOG)
-        d        = degre(edges + added)
+        d        = graph_degree(edges + added)
         allow    = [ k for k,v in d.items() if v%2 == 1 ]
         totali  += 1
         if totali > 20 : 
@@ -267,6 +267,31 @@ def eulerien_extension(edges, iter = 20, fLOG = print, alpha = 0.5, distance = d
             break
     
     return added
+    
+def connected_components(edges):
+    """
+    computes the connected components
+    
+    @param      edges       edges
+    @return                 dictionary { vertex : id of connected components }
+    """
+    res = { }
+    for k in edges :
+        for _ in k[:2]:
+            if _ not in res :
+                res[_] = _
+    modif = 1
+    while modif > 0 :
+        modif = 0
+        for k in edges :
+            a,b = k[:2]
+            r,s = res[a],res[b]
+            if r != s :
+                m = min(res[a],res[b])
+                res[a] = res[b] = m
+                modif += 1
+    
+    return res
 
 def euler_path(edges, added_edges):
     """
@@ -291,7 +316,7 @@ def euler_path(edges, added_edges):
         edges_from[b].append ( alledges[a,b] )    
         somme += v
         
-    for e in added_edges:  # il ne faut enlever les doublons
+    for e in added_edges:  # il ne faut pas enlever les doublons
         k = e[:2]
         v = e[-1]
         a,b = k
@@ -322,10 +347,69 @@ def euler_path(edges, added_edges):
                 raise Exception("unable to find vertex {0} for edge {0},{1}".format(to,v))
             if to == v :
                 raise Exception("circular edge {0}".format(to))
-
-    path = [ (begin, None) ]
-    while len(edges_from) > 0 :
                 
+    # loop
+    path = _explore_path(edges_from, begin)
+    for p in path:
+        if len(p) == 0 :
+            stop
+    while len(edges_from) > 0 :
+        start = None
+        for i,p in enumerate(path):
+            if p[0] in edges_from :
+                start = i,p
+                break
+        sub = _explore_path(edges_from, start[1][0])
+        i = start[0]
+        path [i:i+1] = sub + path[i:i+1]
+    return path
+    
+def _delete_edge(edges_from, n, to):
+    """
+    removes an edge from the graph
+    
+    @param      edges_from      structure which contains the edges (will be modified)
+    @param      n               first vertex
+    @param      to              second vertex
+    @return                     the edge
+    """
+    l = edges_from[to]
+    f = None
+    for i,e in enumerate(l) :
+        if (e[1] == to and e[2] == n) or (e[2] == to and e[1] == n) :
+            f = i
+            break
+            
+    assert f is not None
+    del l[f]
+    if len(l) == 0 :  del edges_from[to]
+    
+    l = edges_from[n]
+    f = None
+    for i,e in enumerate(l) :
+        if (e[1] == to and e[2] == n) or (e[2] == to and e[1] == n) :
+            f = i
+            break
+            
+    assert f is not None
+    keep = l[f]
+    del l[f]
+    if len(l) == 0 :  del edges_from[n]
+    
+    return keep
+    
+def _explore_path(edges_from, begin) :
+    """
+    explore an eulerian path, remove used edges from edges_from
+    
+    @param      edges_from      structure which contains the edges (will be modified)
+    @param      begin           first vertex to use
+    @return                     path
+    """
+    path = [ (begin, None) ]
+    stay = True
+    while stay and len(edges_from) > 0 :
+        
         n = path [-1][0]
         if n not in edges_from:
             # fin
@@ -346,22 +430,14 @@ def euler_path(edges, added_edges):
                 nb -= 1
                 if nb < 0 :
                     raise Exception("algorithm issue {0}".format(len(path)))
+                    
+        if len( edges_from [to] ) == 1 :
+            if begin != to :
+                raise Exception("wrong algorithm")
+            else :
+                stay = False
         
-        print(n,to,len(path),len(l), edges_from[begin])
+        keep = _delete_edge(edges_from, n, to)
+        path.append( ( to, keep) )
         
-        path.append ( (to, e) )
-        del l[h]
-        if len(l) == 0 : del edges_from[n]
-        
-        l = edges_from[to]
-        f = None
-        for i,e in enumerate(l) :
-            if (e[1] == to and e[2] == n) or (e[2] == to and e[1] == n) :
-                f = i
-                break
-        assert f is not None
-        del l [f]
-        if len(l) == 0 :  del edges_from[to]
-     
-    print("nb edges", len(path), " à comparer avec ", len(edges) + len(added_edges)  )      
-    return path
+    return path[1:]
