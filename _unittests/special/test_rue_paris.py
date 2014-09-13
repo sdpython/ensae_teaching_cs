@@ -59,7 +59,7 @@ class TestRueParis (unittest.TestCase):
                 init = init)
         fLOG("---")
         added = kruskall(edges, init, fLOG = fLOG)
-        d = degre(edges + added)
+        d = graph_degree(edges + added)
         allow = sorted([ k for k,v in d.items() if v%2 == 1 ])
         fLOG("degrees", allow)
         
