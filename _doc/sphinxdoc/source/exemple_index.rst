@@ -17,5 +17,5 @@ Examples de toutes sortes
     exercices
     expose_divers
     donnees
-    trucs et astuces
+    tips_tricks
     

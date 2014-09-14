@@ -4,8 +4,8 @@
 @brief An example of a custom magic for IPython.
 """
 
-from IPython.core.magic import (Magics, magics_class, line_magic,
-                                cell_magic, line_cell_magic)
+from IPython.core.magic import Magics, magics_class, line_magic, cell_magic
+from IPython.core.magic import line_cell_magic
 from IPython.core.display import HTML                                
 
 @magics_class
@@ -67,6 +67,9 @@ class CustomMagics(Magics):
             raise Exception("unable to interpret:\n" + cell)
 
 def register_magics():
+    """
+    register magics function, can be called from a notebook
+    """
     ip = get_ipython()
     ip.register_magics(CustomMagics)
     
