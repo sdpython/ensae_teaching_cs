@@ -2,7 +2,7 @@
 .. _l-examplesindex:
 
 
-Examples de toutes sortes
+Exemples de toutes sortes
 -------------------------
 
 .. toctree::
