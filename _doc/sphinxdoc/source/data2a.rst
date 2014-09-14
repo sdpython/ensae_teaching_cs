@@ -62,6 +62,8 @@ Usage régulier
     j. Données "sparse" ou creuses
     h. Grandes tables (> 250Mo) (en dessous ça tient en mémoire facilement et les calculs sont assez rapides), modules pytables, blaze, SQLAchemy, http://www.pytables.org/docs/LargeDataAnalysis.pdf, SQLiteSpy, `h5py <http://www.h5py.org/>`_
     i. `pandas cookbook <http://pandas.pydata.org/pandas-docs/stable/cookbook.html>`_
+    j. `cytoolz <https://github.com/pytoolz/cytoolz/>`_
+    k. `toolz <https://github.com/pytoolz/toolz/>`_
     
 #. `Numpy <http://www.numpy.org/>`_, `Scipy <http://www.scipy.org/>`_, `cvxopt <http://cvxopt.org/>`_
     a. Notation avec ``:``
@@ -175,6 +177,7 @@ Usage irrégulier
     
 6. Statistiques bayésiennes
     a. `pymc <https://github.com/pymc-devs/pymc>`_
+    b. `pystan <http://pystan.readthedocs.org/en/latest/index.html>`_
     
 7. `Data Cube <http://en.wikipedia.org/wiki/Data_cube>`_ (Wikipédia)
     * modules plutôt expérimental

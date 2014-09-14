@@ -8,8 +8,16 @@ set pythonexe="c:\python34\python"
 
 rem help
 
-%pythonexe% -u setup.py build_pres
-echo #######################################################
+rem echo ####################################################### 1A
 
-if not exist dist\html_pres mkdir dist\html_pres
-xcopy /E /C /I /Y _doc\presentation\build\html dist\html_pres
+rem %pythonexe% -u setup.py build_pres
+
+rem if not exist dist\html_pres mkdir dist\html_pres
+rem xcopy /E /C /I /Y _doc\presentation\build\html dist\html_pres
+
+echo ####################################################### 2A
+
+%pythonexe% -u setup.py build_pres_2A
+
+if not exist dist\html_pres_2A mkdir dist\html_pres_2A
+xcopy /E /C /I /Y _doc\presentation_2A\build\html dist\html_pres_2A

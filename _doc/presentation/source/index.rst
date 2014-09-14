@@ -55,7 +55,7 @@ ENSAE 1A - Programmation
 
         **Plan complet**
         
-        `séance <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_1a.html#l-td1a>`_
+        `séances <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_1a.html#l-td1a>`_
         
         Du vendredi 4 septembre au vendredi 5 décembre excepté le 19/09 et le 31/10, 16h30.
 
@@ -97,7 +97,7 @@ ENSAE 1A - Programmation
         
     .. revealjs:: Liens
 
-        * `Contenu du cours <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_ (rendu `2 <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_ et `3 <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_)
+        * `Contenu du cours <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_1a.html>`_ (rendu `2 <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_ et `3 <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_)
         * `Blog <http://www.xavierdupre.fr/blog/xd_blog_nojs.html>`_
         * `Bibliographie <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/biblio.html>`_
         * `Apprentissage de la programmation <http://inforef.be/swi/python.htm>`_ de Gérard Swinnen

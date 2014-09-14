@@ -130,7 +130,7 @@ if "build_sphinx" in sys.argv:
                           ("html", "build3", {"html_theme":"solar_theme"}, "source/conf3"),
                           ] )
         
-elif "build_pres" in sys.argv:
+elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv :
     # we generate the documentation for the presentation
     
     def get_executables_path() :
@@ -146,6 +146,8 @@ elif "build_pres" in sys.argv:
             res += [ver ]
             res += [ os.path.join(res[-1], "Scripts") ]
         return res    
+        
+    suffix = "_2A" if "build_pres_2A" in sys.argv else ""
     
     #  run the documentation generation
     if sys.platform.startswith("win"):
@@ -156,7 +158,7 @@ elif "build_pres" in sys.argv:
         os.environ["PATH"] = temp
         pa = os.getcwd ()
         thispath = os.path.normpath(os.path.split(__file__)[0])
-        docpath  = os.path.normpath(os.path.join(thispath, "_doc","presentation"))
+        docpath  = os.path.normpath(os.path.join(thispath, "_doc","presentation" + suffix))
         os.chdir (docpath)        
         
     lay     = "html"
