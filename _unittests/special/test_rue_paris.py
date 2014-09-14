@@ -7,6 +7,7 @@ import os,sys,unittest
 try :
     import src
     import pyquickhelper
+    import pyensae
 except ImportError :
     path = os.path.normpath(os.path.abspath( os.path.join( os.path.split(__file__)[0], "..", "..")))
     if path not in sys.path : sys.path.append (path)
@@ -102,7 +103,7 @@ class TestRueParis (unittest.TestCase):
         for p in path[-5:]:
             fLOG(len(p),p)
         
-    def _test_algo_euler4(self):
+    def test_algo_euler4(self):
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
         folder = os.path.join(os.path.abspath(os.path.dirname(__file__)),"temp_rues5")
         if not os.path.exists(folder) : os.mkdir(folder)

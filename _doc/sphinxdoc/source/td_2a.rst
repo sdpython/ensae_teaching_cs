@@ -7,6 +7,13 @@ TD 2A
 
 **Données, Machine Learning et Programmation**
 
+Cours animé par :
+
+* Antoine Thabault
+* Nicolas Rousset
+* Jérémie Jakubowicz
+* Xavier Dupré
+
 Ce cours s'étale sur 6 séances de cours/TD d'une durée de 4h.
 Les outils proposés sont en langage `Python <https://www.python.org/>`_. 
 Ils sont tous `open source <http://fr.wikipedia.org/wiki/Open_source>`_,
@@ -30,6 +37,7 @@ Les thèmes suivants seront abordés :
     
 La page :ref:`Python pour Data Scientist <l-data2a>` 
 liste les différents modules proposés lors de ce cours.
+
     
 *contenu à venir*
 

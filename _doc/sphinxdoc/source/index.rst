@@ -53,6 +53,12 @@ Contenu des enseignements
     * :ref:`Python pour Data Scientist <l-data2a>`
     * :ref:`l-ressources`
     
+Et, j'ajoute parfois les questions qu'on me pose :
+
+    * :ref:`FAQ <l-FAQs>`
+    * :ref:`Glossaire <l-glossaire>`
+    
+
     
 .. _l-install:
 
