@@ -22,24 +22,19 @@ Python est récemment devenu une alternative plus que probante
 pour les scientifiques et comme c'est un langage générique, il est 
 possible de gérer l'ensemble des traitements appliqués aux données, depuis
 le traitements des sources de données jusqu'à leur visualisation sans changer de langage.
-Les thèmes suivants seront abordés :
 
-* Dataframe, SQL
-* Données non structurées (JSON, XML), Grandes données, Distribution des calculs
-* Visualisation, Graphiques interactifs
-* Calcul numérique Optimisation (numpy, scipy, cvxopt)
-* Machine Learning, Statistiques descriptives avec scikit-learn
-* Code jam, aperçu des exercices qui reviennent fréquemment lors des entretiens d'embauche
-* Sujets variés :
-    * Python et R
-    * Python et C#
-	* Quelques aspects techniques et légaux (tracer une carte veut dire parfois envoyer ses données à un service externe)
-    
-La page :ref:`Python pour Data Scientist <l-data2a>` 
+La présentation 
+`ENSAE 2A - Données, Machine Learning et Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_
+donne un aperçu des thèmes abordés. La page :ref:`Python pour Data Scientist <l-data2a>` 
 liste les différents modules proposés lors de ce cours.
+
+DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont les thèmes abordés durant les deux premières séances.
 
     
 - :ref:`TD 1 : Données et Graphes <td2acenoncesession1rst>`  (:ref:`correction <td2acorrectionsession1rst>`)
+- TD 2
+    - :ref:`TD 2A : Calcul Matriciel, Optimisation <td2acenoncesession2arst>`  (:ref:`correction <td2acorrectionsession2arst>`)
+    - :ref:`TD 2A : Calcul distribué, autres langages <td2acenoncesession2arst>`  (:ref:`correction <td2acorrectionsession2arst>`)
 
 Bibliographie:
 

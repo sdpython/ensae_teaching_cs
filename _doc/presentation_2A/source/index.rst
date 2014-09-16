@@ -29,7 +29,7 @@ ENSAE 2A - Programmation
         
         `séances <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_2a.html>`_
         
-        De lundi 22 septembre au lundi 3 novembre (excepté 27 Octobre)
+        De lundi 22 septembre au lundi 3 novembre (excepté 27 Octobre) de 8h30 à 13h.
 
     .. revealjs:: Objectifs du cours
     
@@ -254,6 +254,16 @@ ENSAE 2A - Programmation
         +---------------------------------------+-----------------------+-------------------------------+
         | > 1 milliard                          | Cluster (Map/Reduce)  | ``O(ln n)^2`` distribué       |
         +---------------------------------------+-----------------------+-------------------------------+
+        
+	.. revealjs:: Quelques aspects légaux
+    
+        * Technologies web : savoir quand on fait appel à un service extérieur
+            * cartographie
+            * formules
+        * Oublis du quotidien
+            * Petits exemples qui trainent, sorties d'un cluster
+            * Résilience des mails
+        
 
 .. revealjs:: 
     :data-background: #DDDDDD
