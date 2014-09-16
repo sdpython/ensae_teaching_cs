@@ -215,6 +215,7 @@ html_theme_options = {
         # See http://docs.mathjax.org/en/latest/config-files.html
         "config": 'TeX-AMS_HTML-full'
     },
+
 }
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for

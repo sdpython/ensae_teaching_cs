@@ -121,6 +121,15 @@ ENSAE 2A - Programmation
         La version gratuite de `PyCharm <http://www.jetbrains.com/pycharm/>`_ contient tout ce qu'il faut.
         Il détecte quelques erreurs avant l'exécution.
         
+    .. revealjs:: Environnement scientifique
+
+        * `Spyder <http://pythonhosted.org//spyder/>`_ (`Python <https://www.python.org/>`_) équivalent de `RStudio <http://www.rstudio.com/>`_ (`R <http://www.r-project.org/>`_)
+        * 4 fenêtres
+            * script
+            * command line
+            * explorateur de données
+            * graphiques
+        
     .. revealjs:: Démo
     
         * Editeur de texte : **Scite**
@@ -214,11 +223,17 @@ ENSAE 2A - Programmation
     
 .. revealjs:: 
     :data-background: #DDDDDD
-
-    .. revealjs:: Inventif
+        
+    .. revealjs:: Se cultiver, être inventif
     
         * Assembler les méthodes, modèles
-        * Sans être limité par les outils
+        * Mélanger les genres (statistiques, recherche opérationnelle)
+        * Ne pas être limité par les outils
+        
+        ...
+        
+        Example : correcteur orthographique ?
+        
         
     .. revealjs:: Customiser son outil
 
@@ -226,8 +241,27 @@ ENSAE 2A - Programmation
         * `R et notebooks <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/python_r.html>`_
         * `Custom Magics for IPython <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/ipython_custom_magics.html>`_
     
-    .. revealjs:: ...
+    .. revealjs:: Ordre de grandeur
     
+        +---------------------------------------+-----------------------+-------------------------------+
+        | Ordre de grandeur (observations)      | Outil / Langage       | Algorithme                    |
+        +=======================================+=======================+===============================+
+        | < 10000                               | Excel                 | ``O(n^a)``                    |
+        +---------------------------------------+-----------------------+-------------------------------+
+        | < 10 millions                         | Python, R             | ``O(ln n)^a``                 |
+        +---------------------------------------+-----------------------+-------------------------------+
+        | < 1 milliard                          | SQL                   | ``O(ln n)^2``                 |
+        +---------------------------------------+-----------------------+-------------------------------+
+        | > 1 milliard                          | Cluster (Map/Reduce)  | ``O(ln n)^2`` distribué       |
+        +---------------------------------------+-----------------------+-------------------------------+
+
+.. revealjs:: 
+    :data-background: #DDDDDD
+    
+        Séance 1 : données et dessin en quelques lignes
+        
+        DataFrame, Matplotlib
+        
         A vous.
 
         

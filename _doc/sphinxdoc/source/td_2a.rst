@@ -39,7 +39,7 @@ La page :ref:`Python pour Data Scientist <l-data2a>`
 liste les différents modules proposés lors de ce cours.
 
     
-*contenu à venir*
+- :ref:`TD 1 : Données et Graphes <td2acenoncesession1rst>`  (:ref:`correction <td2acorrectionsession1rst>`)
 
 Bibliographie:
 
