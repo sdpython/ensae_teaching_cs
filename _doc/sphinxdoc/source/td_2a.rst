@@ -32,6 +32,10 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
 
     
 - :ref:`TD 1 : Données et Graphes <td2acenoncesession1rst>`  (:ref:`correction <td2acorrectionsession1rst>`)
+    - import/export de données dans un DataFrame
+    - manipulation selon une logique SQL
+    - utilité des index
+    - lambda function
 - TD 2
     - :ref:`TD 1A : Calcul Matriciel, Optimisation <td2acenoncesession2arst>`  (:ref:`correction <td2acorrectionsession2arst>`)
     - :ref:`TD 2A : Calcul distribué, autres langages <td2acenoncesession2arst>`  (:ref:`correction <td2acorrectionsession2brst>`)
