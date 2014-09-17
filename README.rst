@@ -26,7 +26,9 @@ Started in 2014/04.
 Versions
 --------
 
-* **v0.5 - 2014/08/31**
+* **0.6 - 2014/??/??**
+    * **new:** first sessions in second year
+* **0.5 - 2014/08/31**
     * **new:** first version
 
 

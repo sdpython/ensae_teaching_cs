@@ -38,7 +38,7 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
     - lambda function
 - TD 2
     - :ref:`TD 1A : Calcul Matriciel, Optimisation <td2acenoncesession2arst>`  (:ref:`correction <td2acorrectionsession2arst>`)
-    - :ref:`TD 2A : Calcul distribué, autres langages <td2acenoncesession2arst>`  (:ref:`correction <td2acorrectionsession2brst>`)
+    - :ref:`TD 2A : Calcul distribué, autres langages <td2acenoncesession2brst>`  (:ref:`correction <td2acorrectionsession2brst>`)
 
 Bibliographie:
 

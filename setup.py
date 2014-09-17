@@ -48,7 +48,7 @@ else :
     subversion = 1   
 
 project_var_name    = "ensae_teaching_cs"
-sversion            = "0.5"
+sversion            = "0.6"
 versionPython       = "%s.%s" % (sys.version_info.major, sys.version_info.minor)
 path                = "Lib/site-packages/" + project_var_name
 readme              = 'README.rst'
