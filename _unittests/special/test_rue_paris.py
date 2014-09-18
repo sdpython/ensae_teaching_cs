@@ -159,8 +159,6 @@ class TestRueParis (unittest.TestCase):
         path = euler_path(edges, added)
         all = edges + added
         fLOG(len(all),len(path))
-        for p in path:
-            print(p)
         #assert len(all) == len(path)
         
 
