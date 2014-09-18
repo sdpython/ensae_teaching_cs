@@ -245,4 +245,7 @@ version.txt
 */notebooks/donnees/*.db3
 */notebooks/donnees/*.hdf5
 */notebooks/donnees/*.zip
+*/notebooks/td2a/*.zip
+*/notebooks/td2a/*.txt
+*/notebooks/td2a/*.dbf
 
