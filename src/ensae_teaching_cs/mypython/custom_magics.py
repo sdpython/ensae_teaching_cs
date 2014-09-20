@@ -111,7 +111,11 @@ class CustomMagics(Magics):
                     "   %%CS function_name dependency1;dependency2"
                     "   function code")
         else :
-            f = create_cs_function(name, cell, deps)
+            try:
+                f = create_cs_function(name, cell, deps)
+            except Exception as e :
+                print(e)
+                return 
             if self.shell is not None:
                 self.shell.user_ns[name] = f
             return f
