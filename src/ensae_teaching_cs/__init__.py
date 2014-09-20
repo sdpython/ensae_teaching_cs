@@ -10,3 +10,6 @@ __github__ = "https://github.com/sdpython/ensae_teaching_cs"
 __url__ = "http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html"
 __downloadUrl__ = "http://www.xavierdupre.fr/site2013/index_code.html#ensae_teaching_cs"
 __license__ = "BSD License"
+
+
+from .td_2a.session_pandas import dfs2excel
