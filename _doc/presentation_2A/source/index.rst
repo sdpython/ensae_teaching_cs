@@ -29,7 +29,8 @@ ENSAE 2A - Programmation
         
         `séances <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_2a.html>`_
         
-        De lundi 22 septembre au lundi 3 novembre (excepté 27 Octobre) de 8h30 à 13h.
+        De lundi 22 septembre au lundi 3 novembre 
+        (excepté le 27 Octobre) de 8h30 à 13h.
 
     .. revealjs:: Objectifs du cours
     
@@ -37,12 +38,15 @@ ENSAE 2A - Programmation
         * Passer plus de temps à les modéliser
         * Connaître les outils pour être agile
         * Savoir faire rapidement une étude statistique simple
+        * Avoir les moyens de se débrouiller en toute circonstance
         
     .. revealjs:: Notebooks
     
         Le cours utilise les `notebooks <http://ipython.org/notebook.html>`_.
         
-        .. image:: _static/notsnap.png        
+        .. image:: _static/notsnap.png       
+
+        La plupart des exemples sur Internet sont disponibles sous cette forme.
         
     .. revealjs:: Le langage Python et Machine Learning
     
@@ -55,6 +59,7 @@ ENSAE 2A - Programmation
         * Il est devenu une alternative intéressante pour un statisticien depuis 2013 et quelques modules :
             * `pandas <http://pandas.pydata.org/>`_, `ipython <http://ipython.org/>`_, `numpy <http://www.numpy.org/>`_, `matplotlib <http://matplotlib.org/>`_
             * `scikit-learn <http://scikit-learn.org/stable/>`_
+        * Les notebooks se répandent à grande vitesse : `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_.
         
     .. revealjs:: Liens
 
@@ -80,7 +85,10 @@ ENSAE 2A - Programmation
             * `pymyinstall <https://github.com/sdpython/pymyinstall/>`_        
             
         Vous pouvez participer.
-
+        
+.. revealjs:: Environnement de travail
+    :data-background: #DDDDFF    
+    
 .. revealjs:: 
     :data-background: #DDDDDD
 
@@ -93,7 +101,7 @@ ENSAE 2A - Programmation
     .. revealjs:: Python chez vous
 
         * Le système d'exploitation est celui que vous choisissez (Windows, Linux, Mac).
-        * Vous installez votre environement (amenez votre ordinateur portable en TD en cas de problème).
+        * Vous installez votre environnement (amenez votre ordinateur portable en TD en cas de problème).
         * Lire `Prérequis et installation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html#prerequis-et-installation>`_.
         * Vous devriez avoir installé Python dès les premières séances.
         
@@ -107,9 +115,9 @@ ENSAE 2A - Programmation
     
             * Ils mélangent code, texte, formules, tableaux, graphiques.
             * Ils sont convertibles au format HTML, Latex.
-            
             * Ils sont pratiques pour garder la trace d'une série de petites étapes pour une étude scientifique.
             * Ils ne sont pas pratiques pour écrire de longs programmes.
+            * Ils sont très utilisés, plein d'exemples sur Internet
         
     .. revealjs:: Editeur 
     
@@ -141,18 +149,19 @@ ENSAE 2A - Programmation
         * `PyCharm <http://www.jetbrains.com/pycharm/>`_
         * `PyTools <http://pytools.codeplex.com/>`_ 
         
+.. revealjs:: Contenu
+    :data-background: #DDDDFF
+    
+    * Manipuler les données
+    * Calcul matriciel
+    * Calcul distribué
+    * Visualisation
+    * Machine learning
+    * Algorithmie
+    
 .. revealjs:: 
     :data-background: #DDDDDD
 
-    .. revealjs:: Thèmes abordés
-    
-        * Manipuler les données
-        * Calcul matriciel
-        * Calcul distribué
-        * Visualisation
-        * Machine learning
-        * Algorithmie
-        
     .. revealjs:: Manipuler les données
     
         * Importer/Exporter des données en différents formats
@@ -180,7 +189,7 @@ ENSAE 2A - Programmation
     
         * distribuer pour aller plus vite
         * CPU - sur plusieurs machines ou threads (avec IPython)
-        * GPU - Monte Carlo - _non abordé cette année_
+        * GPU - Monte Carlo - *non abordé cette année*
         
         ...
         
@@ -204,7 +213,7 @@ ENSAE 2A - Programmation
     
         * Statistiques descriptives
         * Clustering
-        * Apprentissage statistiques
+        * Apprentissage statistique
     
         ...
     
@@ -221,6 +230,15 @@ ENSAE 2A - Programmation
             * joindre deux sources de données
             * grouper, trier dans le bon ordre sans perdre du temps
     
+        ...
+    
+        **Module de référence**
+        
+        Vous
+    
+.. revealjs:: Les données comme terrain de jeu
+    :data-background: #DDDDFF
+        
 .. revealjs:: 
     :data-background: #DDDDDD
         
@@ -232,7 +250,7 @@ ENSAE 2A - Programmation
         
         ...
         
-        Example : correcteur orthographique ?
+        **Exemple :** comment écrire un correcteur orthographique statistique ?
         
         
     .. revealjs:: Customiser son outil
@@ -241,34 +259,52 @@ ENSAE 2A - Programmation
         * `R et notebooks <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/python_r.html>`_
         * `Custom Magics for IPython <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/ipython_custom_magics.html>`_
     
-    .. revealjs:: Ordre de grandeur
+    .. revealjs:: Ordres de grandeur
     
-        +---------------------------------------+-----------------------+-------------------------------+
-        | Ordre de grandeur (observations)      | Outil / Langage       | Algorithme                    |
-        +=======================================+=======================+===============================+
-        | < 10000                               | Excel                 | ``O(n^a)``                    |
-        +---------------------------------------+-----------------------+-------------------------------+
-        | < 10 millions                         | Python, R             | ``O(ln n)^a``                 |
-        +---------------------------------------+-----------------------+-------------------------------+
-        | < 1 milliard                          | SQL                   | ``O(ln n)^2``                 |
-        +---------------------------------------+-----------------------+-------------------------------+
-        | > 1 milliard                          | Cluster (Map/Reduce)  | ``O(ln n)^2`` distribué       |
-        +---------------------------------------+-----------------------+-------------------------------+
-        
-	.. revealjs:: Quelques aspects légaux
+            +--------------------+-----------------------+--------------------------+
+            | Ordre de grandeur  | Outil / Langage       | Algorithme               |
+            | (observations)     | principal             | raisonnable              |
+            +====================+=======================+==========================+
+            | < 50000            | Excel                 | ``O(n^a)``               |
+            +--------------------+-----------------------+--------------------------+
+            | < 10 millions      | Python, R             | ``O(n (ln n)^a)``        |
+            +--------------------+-----------------------+--------------------------+
+            | < 1 milliard       | SQL                   | ``O(n ln n)``            |
+            +--------------------+-----------------------+--------------------------+
+            | > 200 millions     | Cluster (Map/Reduce)  | ``O(n ln n)`` distribué  |
+            +--------------------+-----------------------+--------------------------+
+            
+.. revealjs:: Légalement...
+    :data-background: #DDDDFF
+    
+.. revealjs::    
+    :data-background: #DDDDDD
+
+    .. revealjs:: Droits et données
+
+        * Restrictions
+            * Les données sont associées à une license.
+            * Elle détermine ce qu'on peut en faire.
+            * L'usage est parfois limité dans le temps.        
+        * Anonymisation
+            * C'est de plus en plus compliqué.
+    
+    .. revealjs:: Fuites possibles
     
         * Technologies web : savoir quand on fait appel à un service extérieur
             * cartographie
             * formules
         * Oublis du quotidien
-            * Petits exemples qui trainent, sorties d'un cluster
+            * Petits échantillons qui trainent sur le disque dur
+            * Résultats expérimentaux qui traînent
             * Résilience des mails
+            * Vol de portable
         
 
 .. revealjs:: 
     :data-background: #DDDDDD
     
-        Séance 1 : données et dessin en quelques lignes
+        `Séance 1 : données et graphes en quelques lignes <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td2a_cenonce_session_1.html>`_
         
         DataFrame, Matplotlib
         

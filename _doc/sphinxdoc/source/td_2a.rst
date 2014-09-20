@@ -36,14 +36,29 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
     - manipulation selon une logique SQL
     - utilité des index
     - lambda function
+    - premiers graphiques
 - TD 2
     - :ref:`TD 1A : Calcul Matriciel, Optimisation <td2acenoncesession2arst>`  (:ref:`correction <td2acorrectionsession2arst>`)
     - :ref:`TD 2A : Calcul distribué, autres langages <td2acenoncesession2brst>`  (:ref:`correction <td2acorrectionsession2brst>`)
+    
+Les deux séances suivantes auront pour thème le machine learning (séance 3) 
+et les données non structurées, de grandes tailles (séance 4).    
+
+La séance 5 abordera des visualisations un peu plus complexes et les graphes 
+(visualisation algorithme).
+
+La dernière séance sera consacrée à des problèmes d'algorithmie dont la connaissance
+est souvent utile lorsqu'il s'agit d'être astucieux avec les données.
+
 
 Bibliographie:
 
 * `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_
 
+Liens:
+
+* `Introduction to Data Processing with Python <http://opentechschool.github.io/python-data-intro/>`_
+* `Time series analysis with pandas <http://earthpy.org/pandas-basics.html>`_
 
 .. toctree::
     :hidden:
