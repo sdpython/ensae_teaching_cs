@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cs", "cs\cs.csproj", "{A4C0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ENSAE.Voice", "ENSAE.Voice\ENSAE.Voice.csproj", "{335C2863-423F-4ACB-9606-14AC1D1B8269}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicIPython", "MagicIPython\MagicIPython.csproj", "{3DB0FB1C-6375-47A2-A26C-9250018FEB03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestCSHelper", "UnitTestCSHelper\UnitTestCSHelper.csproj", "{041C1BE9-0CDD-474E-ACD4-D2153970E3D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{335C2863-423F-4ACB-9606-14AC1D1B8269}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{335C2863-423F-4ACB-9606-14AC1D1B8269}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{335C2863-423F-4ACB-9606-14AC1D1B8269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DB0FB1C-6375-47A2-A26C-9250018FEB03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB0FB1C-6375-47A2-A26C-9250018FEB03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB0FB1C-6375-47A2-A26C-9250018FEB03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB0FB1C-6375-47A2-A26C-9250018FEB03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{041C1BE9-0CDD-474E-ACD4-D2153970E3D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{041C1BE9-0CDD-474E-ACD4-D2153970E3D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{041C1BE9-0CDD-474E-ACD4-D2153970E3D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{041C1BE9-0CDD-474E-ACD4-D2153970E3D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

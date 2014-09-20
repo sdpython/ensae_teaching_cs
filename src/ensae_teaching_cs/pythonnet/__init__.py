@@ -78,23 +78,52 @@ def vocal_synthesis(text, lang = "fr-FR", voice = "", filename = ""):
     
     @endexample
     """
-    if not sys.platform.startswith("win") :
-        raise NotImplementedError("only available on Windows")
-        
-    path = os.path.abspath(os.path.split(__file__)[0])
-    path = os.path.join(path,"csdll")
-
-    from clr import AddReference
-    
-    try:
-        AddReference("ENSAE.Voice")
-    except Exception as e :
+    if "ENSAE.Voice" not in sys.modules:
+        if not sys.platform.startswith("win") :
+            raise NotImplementedError("only available on Windows")
+            
         path = os.path.abspath(os.path.split(__file__)[0])
         path = os.path.join(path,"csdll")
-        sys.path.append(path)
-        AddReference("ENSAE.Voice")
+
+        from clr import AddReference
+        
+        try:
+            AddReference("ENSAE.Voice")
+        except Exception as e :
+            path = os.path.abspath(os.path.split(__file__)[0])
+            path = os.path.join(path,"csdll")
+            if path not in sys.path:
+                sys.path.append(path)
+            AddReference("ENSAE.Voice")
             
     from ENSAE.Voice import Speech
-    
     Speech.VocalSynthesis(text, lang, voice, filename)
+    
+def import_magic_cs():
+    """    
+    import the C# DLL which helps doing C# in a notebooks
+    
+    @return     pointer on C# static class
+    """
+    if "MagicIPython" not in sys.modules:
+        if not sys.platform.startswith("win") :
+            raise NotImplementedError("only available on Windows")
+            
+        path = os.path.abspath(os.path.split(__file__)[0])
+        path = os.path.join(path,"csdll")
+
+        from clr import AddReference
+        
+        try:
+            AddReference("MagicIPython")
+        except Exception as e :
+            path = os.path.abspath(os.path.split(__file__)[0])
+            path = os.path.join(path,"csdll")
+            if path not in sys.path:
+                sys.path.append(path)
+            AddReference("MagicIPython")
+            
+    from MagicIPython import MagicCS
+    return MagicCS
+    
         

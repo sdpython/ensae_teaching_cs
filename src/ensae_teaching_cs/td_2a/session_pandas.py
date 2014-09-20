@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @file
-@brief  quelques fonctions à propos de la première séance
+@brief  Quelques fonctions à propos de la première séance (2A)
 
 """
 
