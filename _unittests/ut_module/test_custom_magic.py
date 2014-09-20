@@ -1,5 +1,5 @@
 """
-@brief      test log(time=1s)
+@brief      test log(time=4s)
 """
 
 import sys, os, unittest, re
@@ -20,19 +20,29 @@ except ImportError :
     import pyquickhelper
 
 from pyquickhelper import fLOG
-from src.ensae_teaching_cs.tips_tricks.pythoncs import create_cs_function, run_cs_function
+from src.ensae_teaching_cs.mypython.custom_magics import CustomMagics
 
 
-class TestPythonnetMagicCS(unittest.TestCase):
+
+class TestCustomMagic (unittest.TestCase):
     
-    def test_magic_cs(self):
+    def test_voice(self) :
+        fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
+        return
+        if sys.platform.startswith("win"):
+            cm = CustomMagics()
+            cm.SPEAK("fr-FR", "hello")
+            
+    def test_cs(self):
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
         if sys.platform.startswith("win"):
+            cm = CustomMagics()
             code = "public static double SquareX(double x) {return x*x ; }"
-            f = create_cs_function("SquareX", code)       
-            r = f ( 2.0 )
-            fLOG(r,type(r))
-            assert r == 4
+            f = cm.CS("SquareX", code)
+            x = f (2.0)
+            assert x == 4
+        
+        
 
 if __name__ == "__main__"  :
     unittest.main ()    

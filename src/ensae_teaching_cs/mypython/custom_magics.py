@@ -3,6 +3,7 @@
 @file
 @brief An example of a custom magic for IPython.
 """
+import sys
 
 from IPython.core.magic import Magics, magics_class, line_magic, cell_magic
 from IPython.core.magic import line_cell_magic
@@ -65,6 +66,55 @@ class CustomMagics(Magics):
                 return self.ENSAEl(line)
         else:
             raise Exception("unable to interpret:\n" + cell)
+    
+    @cell_magic
+    def SPEAK(self, line, cell):
+        """
+        If the OS is Windows, the magic command will tell the text.
+        
+        The function defines ``%%SPEAK``.
+        
+        """
+        if not sys.platform.startswith("win"):
+            raise Exception("Works only on Windows.")
+        
+        from ..pythonnet import vocal_synthesis
+        if line is not None:
+            spl = line.strip().split(" ")
+            lang = spl[0]
+            filename = " ".join(spl[1:]) if len(spl) > 1 else ""
+            
+        if lang == "-h": 
+            print(  "Usage: "
+                    "   %%SPEAK fr-FR [filename]"
+                    "   speech")
+        else :
+            vocal_synthesis(cell, lang, filename)
+            
+    @cell_magic
+    def CS(self, line, cell):
+        """
+        Defines command ``%%CS``.
+        """
+        if not sys.platform.startswith("win"):
+            raise Exception("Works only on Windows.")
+        
+        from ..tips_tricks.pythoncs import create_cs_function
+        if line is not None:
+            spl = line.strip().split(" ")
+            name = spl[0]
+            deps = " ".join(spl[1:]) if len(spl) > 1 else ""
+            deps = deps.split(";")
+            
+        if name == "-h": 
+            print(  "Usage: "
+                    "   %%CS function_name dependency1;dependency2"
+                    "   function code")
+        else :
+            f = create_cs_function(name, cell, deps)
+            if self.shell is not None:
+                self.shell.user_ns[name] = f
+            return f
 
 def register_magics():
     """
