@@ -2,7 +2,7 @@
 .. _l-td2a_enonce:
 
 
-Correction
+correction
 ==========
 
 .. toctree::
