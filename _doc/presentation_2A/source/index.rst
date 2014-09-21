@@ -53,12 +53,11 @@ ENSAE 2A - Programmation
         Pourquoi ?
 
         * Le langage est open source et donc gratuit.
-        * Il fonctionne sur toutes les OS (Windows, Linux, Mac).
-        * Il dispose de nombreuses extensions.
-        * Il peut tout faire.
+        * Il fonctionne sur tous les OS (Windows, Linux, Mac, bientôt `IPad <http://computableapp.com/>`_).
+        * Il dispose de nombreuses extensions, il peut tout faire.
         * Il est devenu une alternative intéressante pour un statisticien depuis 2013 et quelques modules :
-            * `pandas <http://pandas.pydata.org/>`_, `ipython <http://ipython.org/>`_, `numpy <http://www.numpy.org/>`_, `matplotlib <http://matplotlib.org/>`_
-            * `scikit-learn <http://scikit-learn.org/stable/>`_
+            * `pandas <http://pandas.pydata.org/>`_, `ipython <http://ipython.org/>`_, `matplotlib <http://matplotlib.org/>`_
+            * `numpy <http://www.numpy.org/>`_, `scikit-learn <http://scikit-learn.org/stable/>`_
         * Les notebooks se répandent à grande vitesse : `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_.
         
     .. revealjs:: Liens
@@ -201,7 +200,7 @@ ENSAE 2A - Programmation
         
         * De moins en moins de tableaux
         * De plus en plus de graphiques.    
-        * De plus en plus intéractifs.
+        * De plus en plus interactifs.
         
         ...
         
@@ -221,7 +220,7 @@ ENSAE 2A - Programmation
     
         * `scikit-learn <http://scikit-learn.org/stable/>`_
         
-        Gaël Varoquaux (INIRIA) viendra présenter ce module en tant que premier contributeur.
+        Gaël Varoquaux (`INRIA <http://www.inria.fr/>`_) viendra présenter ce module en tant que principal contributeur le 6 Octobre à 11h.
     
     .. revealjs:: Algorithmie
     
@@ -229,6 +228,7 @@ ENSAE 2A - Programmation
         * Cas récurrents :
             * joindre deux sources de données
             * grouper, trier dans le bon ordre sans perdre du temps
+        * Porte d'entrée aux entretiens d'embauche dans les startups
     
         ...
     
@@ -250,7 +250,8 @@ ENSAE 2A - Programmation
         
         ...
         
-        **Exemple :** comment écrire un correcteur orthographique statistique ?
+        **Exemple :** Je ne sais jamais où mettre les accents dans un mot.
+        Je veux écrire une fonction qui les corrige automatiquement ?
         
         
     .. revealjs:: Customiser son outil
@@ -274,6 +275,10 @@ ENSAE 2A - Programmation
             | > 200 millions     | Cluster (Map/Reduce)  | ``O(n ln n)`` distribué  |
             +--------------------+-----------------------+--------------------------+
             
+            ...
+            
+            Astucieux ou très (très) patient. A vous de choisir.
+            
 .. revealjs:: Légalement...
     :data-background: #DDDDFF
     
@@ -287,7 +292,8 @@ ENSAE 2A - Programmation
             * Elle détermine ce qu'on peut en faire.
             * L'usage est parfois limité dans le temps.        
         * Anonymisation
-            * C'est de plus en plus compliqué.
+            * Les données sont le plus souvent anonymisées (identifiant illisible)
+            * On sait beaucoup de choses sur ces anonymes (ensemble des achats, requêtes, trajets web)
     
     .. revealjs:: Fuites possibles
     
@@ -296,7 +302,7 @@ ENSAE 2A - Programmation
             * formules
         * Oublis du quotidien
             * Petits échantillons qui trainent sur le disque dur
-            * Résultats expérimentaux qui traînent
+            * Résultats expérimentaux qu'on garde
             * Résilience des mails
             * Vol de portable
         
