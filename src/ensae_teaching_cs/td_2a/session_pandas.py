@@ -15,7 +15,7 @@ def dfs2excel(dfs:dict, excel_file:str):
     @param  excel_file      nom du fichier Excel
     @return                 ExcelWriter
     
-    @example(Enregistrer plusieurs DataFrame dans un seul fichier Excel ?)
+    @example(science___Enregistrer plusieurs DataFrame dans un seul fichier Excel ?)
     
     Le code suivant enregistre deux DataFrame dans un seul fichier Excel.
     @code
@@ -28,10 +28,10 @@ def dfs2excel(dfs:dict, excel_file:str):
     
     Ou en utilisant cette fonction :
     @code
-    
-    @endcode
     dfs2excel( { 'Data 0':df1, 'Data 1':df2 }, "example.xlsx" )
+    @endcode
     @endexample
+    
     """
     writer = pandas.ExcelWriter(excel_file)
     for k,df in dfs.items():
