@@ -5,7 +5,7 @@
 
 """
 
-import os
+import os, io
 
 def entier_grande_taille():
     """
@@ -215,17 +215,88 @@ def same_variable(a,b):
     """
     return id(a) == id(b)
     
+def stringio(text):
+    """
+    returns a StringIO object on a text
+    
+    @param      text        any text
+    @return                 StringIO object
+    
+    @FAQ(A quoi sert un ``StringIO`` ?)
+    La plupart du temps, lorsqu'on récupère des données, elles sont sur le disque dur
+    de votre ordinateur dans un fichier texte. Lorsqu'on souhaite automatiser un processur
+    qu'on répète souvent avec ce fichier, on écrit une fonction qui prend le nom du fichier en entrée.
+    
+    @code
+    def processus_quotidien(nom_fichier) :
+        # on compte les lignes
+        nb = 0
+        with open(nom_fichier,"r") as f :
+            for line in f :
+                nb += 1
+        return nb
+    @endcode
+    
+    Et puis un jour, les données ne sont plus dans un fichier mais sur Internet.
+    Le plus simple dans ce cas est de recopier ces données sur disque dur et d'appeler la même fonction.
+    Simple. Un autre les données qu'on doit télécharger font plusieurs gigaoctets. Tout télécharger prend 
+    du temps pour finir pour s'apercevoir qu'elles sont corrompues. On a perdu plusieurs heures pour rien.
+    On aurait bien voulu que la fonction ``processus_quotidien`` commence à traiter les données
+    dès le début du téléchargement.
+    
+    Pour cela, on a inventé la notion de **stream** ou **flux** qui sert d'interface entre la fonction
+    qui traite les données et la source des données. Le flux lire les données depuis n'importe quel source
+    (fichier, internet, mémoire), la fonction qui les traite n'a pas besoin d'en connaître la provenance.
+    
+    `StringIO <https://docs.python.org/3.4/library/io.html#io.StringIO>`_ est un flux qui considère
+    la mémoire comme source de données.
+    
+    @code
+    def processus_quotidien(data_stream):
+        # on compte toujours les lignes
+        nb = 0
+        for line in data_stream :
+            nb += 1
+        return nb
+    @endcode
+    
+    La fonction ``processus_quotidien`` fonctionne pour des données en mémoire
+    et sur un fichier.
+    
+    @code
+    fichier = __file__
+    f = open(fichier,"r")
+    nb = processus_quotidien(f)
+    print(nb)
+    
+    text = "ligne1\nligne2"
+    st = io.StringIO(text)
+    nb = processus_quotidien(st)
+    print(nb)
+    @endcode
+    
+    @endFAQ
+    """
+    return io.StringIO(text)
+    
+    
 if __name__ == "__main__" :
-    #print(difference_div())
-    #test_unitaire()
-    a  = (2,3)
-    b  = a
-    a += (4,5)
-    print( a == b ) # --> False
-    print(a,b)
 
-    a  = [2,3]
-    b  = a
-    a += [4,5]
-    print( a == b ) # --> True
-    print(a,b)
+    def processus_quotidien(data_stream):
+        # on compte toujours les lignes
+        nb = 0
+        for line in data_stream :
+            nb += 1
+        return nb
+        
+    fichier = __file__
+    f = open(fichier,"r")
+    nb = processus_quotidien(f)
+    print(nb)
+    
+    text = "ligne1\nligne2"
+    st = io.StringIO(text)
+    nb = processus_quotidien(st)
+    print(nb)
+    
+    
