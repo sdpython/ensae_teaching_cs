@@ -9,4 +9,6 @@ correction
     
     TD 1 : Données et Graphes <notebooks/td2a_correction_session_1>
     TD 2A : Calcul Matriciel, Optimisation <notebooks/td2a_correction_session_2A>
-    TD 2B : Calcul distribué, autres langages <notebooks/td2a_correction_session_2B>
+    TD 2B : Python autres langages <notebooks/td2a_correction_session_2B>
+    TD 2C : IPython et commandes magiques <notebooks/td2a_correction_session_2C>
+    TD 2D : IPython et calcul distribué <notebooks/td2a_correction_session_2D>
