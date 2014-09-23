@@ -95,6 +95,27 @@ class CustomMagics(Magics):
     def CS(self, line, cell):
         """
         Defines command ``%%CS``.
+        
+        @example(Comment utiliser une fonction C# dans un notebook?)
+        
+        Deux cellules sont nécessaires, une pour définir la fonction :
+
+        @code
+        %%CS puissance System.dll
+        public static double puissance(double x, double y)
+        {
+            if (y == 0) return 1.0 ;
+            return System.Math.Pow(x,y) ;
+        }    
+        @endcode
+        
+        Et l'autre pour l'appeler :
+        
+        @code
+        puissance(3.0,3.0)
+        @endcode
+        @endexample
+                
         """
         if not sys.platform.startswith("win"):
             raise Exception("Works only on Windows.")
