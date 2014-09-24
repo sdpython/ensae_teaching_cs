@@ -188,6 +188,11 @@ Usage irrégulier
     * `Woodbury matrix identity <http://en.wikipedia.org/wiki/Woodbury_matrix_identity>`_
     * `Blockwise inversion <http://en.wikipedia.org/wiki/Invertible_matrix#Blockwise_inversion>`_
     
+9. Mining en tout genre
+    * `scrapy <http://scrapy.org/>`_ : scraping
+    * `whoosh <http://pythonhosted.org//Whoosh/>`_ (moteur de recherche)
+    * `elastic search <http://www.elasticsearch.org/guide/en/elasticsearch/client/python-api/current/>`_ 
+    
     
 Articles
 ++++++++
