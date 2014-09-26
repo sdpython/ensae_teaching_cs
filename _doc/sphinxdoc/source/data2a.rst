@@ -127,7 +127,7 @@ Usage régulier
     b. `GPU <http://fr.wikipedia.org/wiki/Processeur_graphique>`_ : `pycuda <http://mathema.tician.de/software/pycuda/>`_, `theano <http://deeplearning.net/software/theano/>`_
     c. Plusieurs machines ou plusieurs coeurs (ipython, lzmq, ...)
     d. Workflow (`luigi <http://luigi.readthedocs.org/en/latest/>`_, `papy <http://arxiv.org/ftp/arxiv/papers/1407/1407.4378.pdf>`_)
-    e. calcul en grande précision `gmpy2 <http://gmpy2.readthedocs.org/en/latest/>`_
+    e. `joblib <https://pythonhosted.org/joblib/>`_
     
 #. Python et autres langages (C++, Cypthon, C#, R) 
     a. `Cython <http://cython.org/>`_ (voir aussi `cffi <https://cffi.readthedocs.org/>`_)
@@ -192,6 +192,10 @@ Usage irrégulier
     * `scrapy <http://scrapy.org/>`_ : scraping
     * `whoosh <http://pythonhosted.org//Whoosh/>`_ (moteur de recherche)
     * `elastic search <http://www.elasticsearch.org/guide/en/elasticsearch/client/python-api/current/>`_ 
+    
+10. Calcul en grande dimension
+    a. calcul en grande précision `gmpy2 <http://gmpy2.readthedocs.org/en/latest/>`_
+
     
     
 Articles
