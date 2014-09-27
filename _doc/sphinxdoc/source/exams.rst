@@ -115,3 +115,12 @@ Examens passés
         (coloriage, sac-à-dos)</li>
     </ul>
     </p>
+
+Notebooks
+=========
+
+.. toctree::
+
+    notebooks/interro_rapide_20_minutes_2014_12
+
+    
