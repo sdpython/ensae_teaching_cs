@@ -39,9 +39,9 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
     - premiers graphiques
 - TD 2
     - :ref:`TD 2A : Calcul Matriciel, Optimisation <td2acenoncesession2arst>`  (:ref:`correction <td2acorrectionsession2arst>`)
-    - :ref:`TD 2A : Python autres langages <td2acenoncesession2brst>`  (:ref:`correction <td2acorrectionsession2brst>`)
-    - :ref:`TD 2A : IPython et commandes magiques <td2acenoncesession2crst>`  (:ref:`correction <td2acorrectionsession2crst>`)
-    - :ref:`TD 2A : IPython et calcul distribué <td2acenoncesession2drst>`  (:ref:`correction <td2acorrectionsession2drst>`)
+    - :ref:`TD 2B : Python autres langages <td2acenoncesession2brst>`  (:ref:`correction <td2acorrectionsession2brst>`)
+    - :ref:`TD 2C : IPython et commandes magiques <td2acenoncesession2crst>`  (:ref:`correction <td2acorrectionsession2crst>`)
+    - :ref:`TD 2D : IPython et calcul distribué <td2acenoncesession2drst>`  (:ref:`correction <td2acorrectionsession2drst>`)
     
 Les deux séances suivantes auront pour thème le machine learning (séance 3) 
 et les données non structurées, de grandes tailles (séance 4).    
