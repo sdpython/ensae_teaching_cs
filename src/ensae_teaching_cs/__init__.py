@@ -13,3 +13,4 @@ __license__ = "BSD License"
 
 
 from .td_2a.session_pandas import dfs2excel
+from .td_2a.parallel_thread import ParallelThread
