@@ -31,6 +31,8 @@ ENSAE 2A - Programmation
         
         De lundi 22 septembre au lundi 3 novembre 
         (excepté le 27 Octobre) de 8h30 à 13h.
+        
+        Deux suivis de projets sont prévus les 17 et 24 novembre (3h de 10h30 à 13h30).
 
     .. revealjs:: Objectifs du cours
     
