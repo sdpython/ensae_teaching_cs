@@ -43,8 +43,16 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
     - :ref:`TD 2C : IPython et commandes magiques <td2acenoncesession2crst>`  (:ref:`correction <td2acorrectionsession2crst>`)
     - :ref:`TD 2D : IPython et calcul distribué <td2acenoncesession2drst>`  (:ref:`correction <td2acorrectionsession2drst>`)
     
-Les deux séances suivantes auront pour thème le machine learning (séance 3) 
-et les données non structurées, de grandes tailles (séance 4).    
+La séance 3 aura pour thème le `machine learning <http://en.wikipedia.org/wiki/Machine_learning>`_. On le 
+traduit par `apprentissage statistique <http://fr.wikipedia.org/wiki/Apprentissage_automatique>`_. 
+
+
+- TD 3
+    - :ref:`TD 3A : Statistiques descriptives <td2acenoncesession3arst>`  (:ref:`correction <td2acorrectionsession3arst>`)
+    - :ref:`TD 3B : Arbres de décision et Random Forest <td2acenoncesession3brst>`  (:ref:`correction <td2acorrectionsession3brst>`)
+    
+Les données non structurées et de grandes tailles seront l'objet de la séance 4.
+
 
 La séance 5 abordera des visualisations un peu plus complexes et les graphes 
 (visualisation algorithme).
