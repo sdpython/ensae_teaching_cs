@@ -34,7 +34,9 @@ Usage régulier
 
 #. Introduction aux différents environnements de programmation (pas très long)
     a. Installation : 
-        - `WinPython <http://winpython.sourceforge.net/>`_, 
+        - `Anaconda <http://continuum.io/downloads#py34>`_
+        - `Canopy <https://www.enthought.com/products/canopy/>`_
+        - `WinPython <http://winpython.sourceforge.net/>`_ (seulement sur Windows)
         - `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_ 
         - `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_
     b. Environnements
@@ -42,10 +44,11 @@ Usage régulier
         - `ligne de commande IPython <http://ipython.org/ipython-doc/2/interactive/reference.html>`_
         - `Spyder <http://pythonhosted.org//spyder/>`_  (environnement de type `RStudio <http://www.rstudio.com/>`_)
         - `Notebooks <http://ipython.org/notebook.html>`_
-    c. Editeur de texte (pour des projets plus ambitieux, SciTE, PyCharm, PyTools)
+    c. Editeur de texte (pour des projets plus ambitieux, SciTE, PyCharm, PyTools, WingIDE)
         - `Scite <http://www.scintilla.org/SciTE.html>`_
         - `PyCharm <http://www.jetbrains.com/pycharm/>`_
         - `PyTools <http://pytools.codeplex.com/>`_
+        - `WingIDE <https://wingware.com/>`_
     d. Liens
         - `Formation à Python scientifique - ENS Paris <http://python-prepa.github.io/index.html>`_
         

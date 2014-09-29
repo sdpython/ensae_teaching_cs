@@ -129,6 +129,7 @@ ENSAE 2A - Programmation
         
         La version gratuite de `PyCharm <http://www.jetbrains.com/pycharm/>`_ contient tout ce qu'il faut.
         Il détecte quelques erreurs avant l'exécution.
+        Il existe aussi `WingIDE <https://wingware.com/>`_.
         
     .. revealjs:: Environnement scientifique
 

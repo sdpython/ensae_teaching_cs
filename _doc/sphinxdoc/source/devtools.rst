@@ -64,6 +64,7 @@ un stockage dans un pays dont la loi limite l'usage qui peut être fait de vos d
 * `PyCharm <http://www.jetbrains.com/pycharm/>`_
 * `PyTools <http://pytools.codeplex.com/>`_ (fonctionne avec `Visual Studio <http://www.visualstudio.com/>`_)
 * `PyDev <http://pydev.org/>`_ (fonctionne avec `Eclipse <http://www.eclipse.org/>`_)
+* `WingIDE <https://wingware.com/>`_
 
 **Python et Domotique**
 

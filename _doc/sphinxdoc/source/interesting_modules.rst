@@ -7,8 +7,8 @@ Modules intéressants (pour un ENSAE)
 
 
 Les modules indispensables sont intégrés à la distribution 
-`WinPython <http://winpython.sourceforge.net/>`_. 
-L'autre solution est d'utiliser le module
+`WinPython <http://winpython.sourceforge.net/>`_ ou `Anaconda <http://continuum.io/downloads#py34>`_. 
+Une autre solution est d'utiliser le module
 `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_::
 
     from pymyinstall import datascientist

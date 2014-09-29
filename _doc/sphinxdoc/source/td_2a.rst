@@ -67,6 +67,7 @@ Bibliographie:
 
 Liens:
 
+* `Python Scientific Lecture Notes <http://scipy-lectures.github.io/>`_
 * `Introduction to Data Processing with Python <http://opentechschool.github.io/python-data-intro/>`_
 * `Time series analysis with pandas <http://earthpy.org/pandas-basics.html>`_
 

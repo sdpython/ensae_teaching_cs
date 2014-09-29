@@ -41,6 +41,7 @@ On pourra ensuite utiliser des critères plus complexes comme celles suggérées
 
 Quelques références bibliographiques :
 
+- `BM25 <http://en.wikipedia.org/wiki/Okapi_BM25>`_ : c'est une des variables utilisées par les moteurs de recherches
 - `REPRÉSENTATIONS DU TEXTE POUR LA CLASSIFICATION ARBORÉE <http://www.xavierdupre.fr/enseignement/projet_data/texte_n187r1340_mellet_co.pdf>`_
 - `Tag Clusters as Information Retrieval Interfaces <http://www.xavierdupre.fr/enseignement/projet_data/texte_tag_cloud_Knautz_Soubusta_Stock.pdf>`_
 - `Sur la topologie d'un arbre phylogénétique... <http://www.xavierdupre.fr/enseignement/projet_data/texte_topo_MSH_1987__100__57_0.pdf>`_

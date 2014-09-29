@@ -70,7 +70,7 @@ def minindex(li):
     @code
     li = [ 0, 434, 43, 6436, 5 ]
     m  = 0
-    for i in xrange (0, len (li)) : 
+    for i in range (0, len (li)) : 
         if li [m] < li [i] : m = i
     @endcode
     
@@ -148,6 +148,16 @@ def text2mat(s, sep_row="\n", sep_col = "\t"):
     ligne   = s.split ("|")                     # lignes
     mat     = [ l.split (";") for l in ligne ]  # colonnes
     @endcode
+    
+    Comme cette opération est très fréquente lorsqu'on travaille avec les données,
+    on ne l'implémente plus soi-même. On préfère utiliser un module comme 
+    `pandas <http://pandas.pydata.org/>`_ qui est plus robuste et considère plus de cas.
+    Pour écrire, utilise la méthode `to_csv <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_csv.html>`_, 
+    pour lire, la fonction
+    `read_csv <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.io.parsers.read_csv.html>`_.
+    On peut également directement enregistrer au format Excel
+    `read_excel <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.io.excel.read_excel.html>`_ et écrire dans ce même format
+    `to_excel <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_excel.html>`_.
     
     @endexample
     """
@@ -248,7 +258,7 @@ def triindex(li):
     for i in xrange (0, len (li)) :
         # recherche du minimum entre i et len (li) exclu
         pos = i
-        for j in xrange (i+1, len (li)) :
+        for j in range (i+1, len (li)) :
             if li [j] < li [pos] : pos = j
         # échange
         ech      = li [pos]
@@ -270,6 +280,15 @@ def triindex(li):
     tab = ["zero", "un", "deux"]                       # tableau à trier
     pos = sorted(  (t,i) for i,t in enumerate(tab)  )  # tableau de couples
     print (pos)                # affiche [('deux', 2), ('un', 1), ('zero', 0)]    
+    @endcode
+    
+    Si cette écriture est trop succincte, on peut la décomposer en :
+    
+    @code
+    tab = ["zero", "un", "deux"]
+    tab_position = [ (t,i) for i,t in enumerate(tab) ]
+    tab_position.sort()
+    print(tab_position)
     @endcode
     
     @endexample
