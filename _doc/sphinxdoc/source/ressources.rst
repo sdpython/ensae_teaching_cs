@@ -15,6 +15,8 @@ Source de données
     * `data-publica <http://www.data-publica.com/explore>`_
     * `Quandl <http://www.quandl.com/>`_ (et son module python `quandl <https://pypi.python.org/pypi/Quandl/>`_, `quandl/API <http://pythonhosted.org//Quandl/>`_,)
     * `données vélib <https://developer.jcdecaux.com/#/home>`_
+    * `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_
+    * `dump wikipedia <https://dumps.wikimedia.org/backup-index.html>`_
     
 Evénements réguliers
 --------------------
