@@ -44,7 +44,9 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
     - :ref:`TD 2D : IPython et calcul distribué <td2acenoncesession2drst>`  (:ref:`correction <td2acorrectionsession2drst>`)
     
 La séance 3 aura pour thème le `machine learning <http://en.wikipedia.org/wiki/Machine_learning>`_. On le 
-traduit par `apprentissage statistique <http://fr.wikipedia.org/wiki/Apprentissage_automatique>`_. 
+traduit en français par `apprentissage statistique <http://fr.wikipedia.org/wiki/Apprentissage_automatique>`_. 
+Les deux modules principaux sont `statsmodels <http://statsmodels.sourceforge.net/devel/index.html>`_
+et `scikit-learn <>`_.
 
 
 - TD 3

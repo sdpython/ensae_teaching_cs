@@ -59,7 +59,7 @@ ENSAE 2A - Programmation
         * Il dispose de nombreuses extensions, il peut tout faire.
         * Il est devenu une alternative intéressante pour un statisticien depuis 2013 et quelques modules :
             * `pandas <http://pandas.pydata.org/>`_, `ipython <http://ipython.org/>`_, `matplotlib <http://matplotlib.org/>`_
-            * `numpy <http://www.numpy.org/>`_, `scikit-learn <http://scikit-learn.org/stable/>`_
+            * `numpy <http://www.numpy.org/>`_, `scikit-learn <http://scikit-learn.org/stable/>`_, `statsmodels <http://statsmodels.sourceforge.net/devel/index.html>`_
         * Les notebooks se répandent à grande vitesse : `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_.
         
     .. revealjs:: Liens
@@ -211,7 +211,7 @@ ENSAE 2A - Programmation
         
         * `matplotlib <http://matplotlib.org/>`_
     
-    .. revealjs:: Machine Learning
+    .. revealjs:: Machine Learning, Statistiques
     
         * Statistiques descriptives
         * Clustering
@@ -221,7 +221,7 @@ ENSAE 2A - Programmation
     
         **Module de référence**
     
-        * `scikit-learn <http://scikit-learn.org/stable/>`_
+        * `scikit-learn <http://scikit-learn.org/stable/>`_, `statsmodels <http://statsmodels.sourceforge.net/devel/index.html>`_
         
         Gaël Varoquaux (`INRIA <http://www.inria.fr/>`_) viendra présenter ce module en tant que principal contributeur le 6 Octobre à 11h.
     

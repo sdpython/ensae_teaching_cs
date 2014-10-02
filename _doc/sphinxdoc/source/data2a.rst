@@ -103,7 +103,7 @@ Usage régulier
         - `tessera <https://github.com/urbanairship/tessera>`_
         - `graphite <https://github.com/graphite-project>`_
     
-#. `Scikit-learn <http://scikit-learn.org/stable/>`_
+#. machine learning `Scikit-learn <http://scikit-learn.org/stable/>`_
     a. `scikit lectures <http://scipy-lectures.github.io/>`_
     b. ADD avec Python (ACP, CAH, clustering)
     c. Machine learning (régression, modèles prédictifs)
@@ -111,6 +111,8 @@ Usage régulier
     e. `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
     f. `DataFrame et SQLite3 <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/pyensae_flat2db3.html>`_
     g. `Choosing the right estimato <http://scikit-learn.org/stable/tutorial/machine_learning_map/index.html>`_
+    h. `statsmodels <http://statsmodels.sourceforge.net/>`_
+    i. `fastcluster <https://pypi.python.org/pypi/fastcluster>`_
     
 #. Représentation de graphes
     a. `Graphviz <https://github.com/xflr6/graphviz>`_
