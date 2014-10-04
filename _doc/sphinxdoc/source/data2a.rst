@@ -197,6 +197,7 @@ Usage irrégulier
     * `scrapy <http://scrapy.org/>`_ : scraping
     * `whoosh <http://pythonhosted.org//Whoosh/>`_ (moteur de recherche)
     * `elastic search <http://www.elasticsearch.org/guide/en/elasticsearch/client/python-api/current/>`_ 
+    * `pattern <http://www.clips.ua.ac.be/pattern>`_
     
 10. Calcul en grande dimension
     a. calcul en grande précision `gmpy2 <http://gmpy2.readthedocs.org/en/latest/>`_

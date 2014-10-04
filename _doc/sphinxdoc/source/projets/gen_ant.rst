@@ -86,4 +86,4 @@ Lectures complémentaires
 
 * 2009 - `Optimisation multi-objectif par colonies de fourmis, Cas des problèmes de sac à dos <http://tel.archives-ouvertes.fr/docs/00/60/37/80/PDF/TH2009_Alaya_-_Ines.pdf>`_ (thèse) (`autre accès <http://www.xavierdupre.fr/enseignement/projet_data/TH2009_Alaya_-_Ines.pdf>`_)
 * 2000 - `Algorithmes de fourmis artificielles : applications à la classification et à l'optimisation <http://www.hant.li.univ-tours.fr/webhant/pub/Mon00a.phd.pdf>`_  (thèse) (`autre accès <http://www.xavierdupre.fr/enseignement/projet_data/fourmi_Mon00a.phd.pdf>`_)
-
+* 2014 - `Modeling Creativity: Case Studies in Python <http://arxiv.org/abs/1410.0281>`_

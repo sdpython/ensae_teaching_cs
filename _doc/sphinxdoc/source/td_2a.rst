@@ -66,6 +66,7 @@ est souvent utile lorsqu'il s'agit d'être astucieux avec les données.
 Bibliographie:
 
 * `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_
+* `Modeling Creativity: Case Studies in Python <http://arxiv.org/abs/1410.0281>`_
 
 Liens:
 
