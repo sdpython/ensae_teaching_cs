@@ -51,7 +51,15 @@ et `scikit-learn <>`_.
 
 - TD 3
     - :ref:`TD 3A : Statistiques descriptives <td2acenoncesession3arst>`  (:ref:`correction <td2acorrectionsession3arst>`)
-    - :ref:`TD 3B : Arbres de décision et Random Forest <td2acenoncesession3brst>`  (:ref:`correction <td2acorrectionsession3brst>`)
+    - Présentation de `Gaël Varoquaux <http://gael-varoquaux.info/>`_ : machine learning et `scikit-learn <http://scikit-learn.org/stable/>`_
+        * `tutoriels sur scikit-learn <http://nbviewer.ipython.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_
+        * Quelques extraits :
+            * Par définition les plus proches voisins ne font pas d'erreur sur la base d'apprentissage, l'apprentissage consiste à forcer le modèle à faire des erreurs.
+            * `Overfitting <http://en.wikipedia.org/wiki/Overfitting>`_ et `régularisation <http://en.wikipedia.org/wiki/Regularization_(mathematics)>`_
+            * Erreur `L2 <http://en.wikipedia.org/wiki/Lp_space>`_ et pénalisation `L1 <http://fr.wikipedia.org/wiki/Espace_L1>`_
+            * `RandomizedPCA <http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.RandomizedPCA.html>`_, `GridSearch <http://scikit-learn.org/stable/modules/grid_search.html>`_, `LassoCV <http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html>`_
+            * `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_
+    - :ref:`TD 3B : Arbres de décision et Random Forests <td2acenoncesession3brst>`  (:ref:`correction <td2acorrectionsession3brst>`)
     
 Les données non structurées et de grandes tailles seront l'objet de la séance 4.
 
@@ -63,16 +71,39 @@ La dernière séance sera consacrée à des problèmes d'algorithmie dont la con
 est souvent utile lorsqu'il s'agit d'être astucieux avec les données.
 
 
-Bibliographie:
+Bibliographie :
 
 * `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_
+* `Learning scikit-learn: Machine Learning in Python <https://www.packtpub.com/big-data-and-business-intelligence/learning-scikit-learn-machine-learning-python>`_
 * `Modeling Creativity: Case Studies in Python <http://arxiv.org/abs/1410.0281>`_
 
-Liens:
+Liens :
 
 * `Python Scientific Lecture Notes <http://scipy-lectures.github.io/>`_
 * `Introduction to Data Processing with Python <http://opentechschool.github.io/python-data-intro/>`_
 * `Time series analysis with pandas <http://earthpy.org/pandas-basics.html>`_
+* Quelques idées de livres : `Python for Data Scientists <https://www.packtpub.com/books/content/python-data-scientists>`_
+* `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
+
+MOOC :
+
+* `Machine Learning par Andrew Y. Ng <https://www.class-central.com/mooc/835/coursera-machine-learning>`_
+* `Coursera Machine Learning <https://www.coursera.org/course/ml>`_
+
+Papers :
+
+* `Latent Dirichlet Allocation <http://ai.stanford.edu/~ang/papers/jair03-lda.pdf>`_, David M. Blei, Andrew Y. Ng, Michael I. Jordan 
+* `Analysis of a Random Forests Model <http://www.jmlr.org/papers/volume13/biau12a/biau12a.pdf>`_, Gerard Biau
+* `Adaptivity of Averaged Stochastic Gradient Descent to Local Strong Convexity for Logistic Regression <http://jmlr.csail.mit.edu/papers/volume15/bach14a/bach14a.pdf>`_, Francis Bach
+* `Counterfactual Reasoning and Learning Systems: The Example of Computational Advertising <http://jmlr.csail.mit.edu/papers/volume14/bottou13a/bottou13a.pdf>`_, Léon Bottou, Jonas Peter et Al.
+* `Tutorial on Practical Prediction Theory for Classification <http://www.jmlr.org/papers/volume6/langford05a/langford05a.pdf>`_, John Langford
+* `Sparse Online Learning via Truncated Gradient <http://jmlr.org/papers/volume10/langford09a/langford09a.pdf>`_, John Langford, Lihong Li, Tong Zhang
+
+
+Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_ :
+
+.. image:: http://scikit-learn.org/stable/_static/ml_map.png
+    :width: 500
 
 .. toctree::
     :hidden:
