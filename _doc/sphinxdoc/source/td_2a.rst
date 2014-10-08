@@ -2,8 +2,8 @@
 .. _l-td2a:
 
 
-TD 2A
-=====
+2A
+==
 
 **Données, Machine Learning et Programmation**
 
@@ -71,13 +71,14 @@ La dernière séance sera consacrée à des problèmes d'algorithmie dont la con
 est souvent utile lorsqu'il s'agit d'être astucieux avec les données.
 
 
-Bibliographie :
+**Bibliographie**
 
-* `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_
-* `Learning scikit-learn: Machine Learning in Python <https://www.packtpub.com/big-data-and-business-intelligence/learning-scikit-learn-machine-learning-python>`_
-* `Modeling Creativity: Case Studies in Python <http://arxiv.org/abs/1410.0281>`_
+* `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_, Wes McKinney
+* `Learning scikit-learn: Machine Learning in Python <https://www.packtpub.com/big-data-and-business-intelligence/learning-scikit-learn-machine-learning-python>`_, Raúl Garreta, Guillermo Moncecchi
+* `Modeling Creativity: Case Studies in Python <http://arxiv.org/abs/1410.0281>`_, Tom De Smedt
+* `Critical Mass: How One Thing Leads to Another <http://www.philipball.co.uk/index.php?option=com_content&view=article&id=15:critical-mass-how-one-thing-leads-to-another&catid=3:books&Itemid=4>`_, Philip Ball
 
-Liens :
+**Liens**
 
 * `Python Scientific Lecture Notes <http://scipy-lectures.github.io/>`_
 * `Introduction to Data Processing with Python <http://opentechschool.github.io/python-data-intro/>`_
@@ -85,12 +86,12 @@ Liens :
 * Quelques idées de livres : `Python for Data Scientists <https://www.packtpub.com/books/content/python-data-scientists>`_
 * `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
 
-MOOC :
+**MOOC**
 
 * `Machine Learning par Andrew Y. Ng <https://www.class-central.com/mooc/835/coursera-machine-learning>`_
 * `Coursera Machine Learning <https://www.coursera.org/course/ml>`_
 
-Papers :
+**Articles d'auteurs très connus**
 
 * `Latent Dirichlet Allocation <http://ai.stanford.edu/~ang/papers/jair03-lda.pdf>`_, David M. Blei, Andrew Y. Ng, Michael I. Jordan 
 * `Analysis of a Random Forests Model <http://www.jmlr.org/papers/volume13/biau12a/biau12a.pdf>`_, Gerard Biau

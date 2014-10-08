@@ -2,12 +2,13 @@
 .. _l-td1a:
 
 
-TD 1A
-=====
+1A
+==
 
 `Algorithmes et programmation - OMI1C4 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100115>`_
 
-Ce cours s'étale sur 12 séances de travaux dirigés (TD) d'une durée de 2h. 
+Ce cours s'étale sur 12 séances de travaux dirigés (TD) d'une durée de 2h. Le cours est décrit plus 
+en détail dans cette présentation : `ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_.
 Les six premières séances font découvrir le langage Python. 
 
 - :ref:`TD 1 : Premiers pas en Python <td1acenoncesession1rst>`  (:ref:`correction <td1acorrectionsession1rst>`)
@@ -48,6 +49,18 @@ sont incontournables pour manipuler les données en Python.
 La dernière séance est une séance notée. Tous les documents sont autorisés. Quelques questions 
 peuvent requérir l'utilisation des outils présentées durant les séances 9 à 12. Toutefois,
 si tel était le cas, ce serait très proche d'une solution proposée lors des TD.
+
+**Liens**
+
+* `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
+* `Data Science in Python <http://blog.yhathq.com/posts/data-science-in-python-tutorial.html>`_
+* `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
+
+**Bibliographie**
+
+* `Apprentissage de la programmation <http://inforef.be/swi/python.htm>`_, Gérald Swinnen
+* `Précis de recherche opérationnelle <http://www.eyrolles.com/Informatique/Livre/precis-de-recherche-operationnelle-9782100706129>`_, Robert Faure, Bernard Lemaire, Christophe Picouleau
+* `Problem Solving with Algorithms and Data Structures <https://www.cs.auckland.ac.nz/courses/compsci107s1c/resources/ProblemSolvingwithAlgorithmsandDataStructures.pdf>`_, Brad Miller, David Ranum (version `html <http://interactivepython.org/courselib/static/pythonds/index.html>`_)
 
 
 .. toctree::
