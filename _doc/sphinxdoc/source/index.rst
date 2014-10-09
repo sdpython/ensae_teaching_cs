@@ -37,7 +37,7 @@ Contenu des enseignements
 
     * :ref:`ENSAE, 1A, Initiation à la programmation et l'algorithmie <l-td1a>`
     * :ref:`ENSAE, 2A, Données, Machine Learning et Programmation <l-td2a>`
-    * ENSAE 3A (à venir)
+    * :ref:`ENSAE, 3A, Eléments logiciels pour le traitement des données massives <l-td3a>`
     * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
         * :ref:`Exercices d'algorithmie <l-exoalgo>`
         * :ref:`Exposés divers non abordés en cours <l-extra>`
@@ -182,6 +182,7 @@ Vieilles versions
 
     td_1a
     td_2a
+    td_3a
     data2a
     exemple_index
     exams
