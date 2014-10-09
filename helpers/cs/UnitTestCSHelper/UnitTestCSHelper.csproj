@@ -54,6 +54,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BlackBoardCSharp\BlackBoardCSharp.csproj">
+      <Project>{14d02a8e-59aa-475b-8137-2747907b77d4}</Project>
+      <Name>BlackBoardCSharp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MagicIPython\MagicIPython.csproj">
       <Project>{3db0fb1c-6375-47a2-a26c-9250018feb03}</Project>
       <Name>MagicIPython</Name>

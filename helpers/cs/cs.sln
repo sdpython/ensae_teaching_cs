@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicIPython", "MagicIPytho
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestCSHelper", "UnitTestCSHelper\UnitTestCSHelper.csproj", "{041C1BE9-0CDD-474E-ACD4-D2153970E3D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlackBoardCSharp", "BlackBoardCSharp\BlackBoardCSharp.csproj", "{14D02A8E-59AA-475B-8137-2747907B77D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{041C1BE9-0CDD-474E-ACD4-D2153970E3D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{041C1BE9-0CDD-474E-ACD4-D2153970E3D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{041C1BE9-0CDD-474E-ACD4-D2153970E3D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14D02A8E-59AA-475B-8137-2747907B77D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14D02A8E-59AA-475B-8137-2747907B77D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14D02A8E-59AA-475B-8137-2747907B77D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14D02A8E-59AA-475B-8137-2747907B77D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

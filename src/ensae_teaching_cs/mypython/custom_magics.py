@@ -124,16 +124,16 @@ class CustomMagics(Magics):
         if line is not None:
             spl = line.strip().split(" ")
             name = spl[0]
-            deps = " ".join(spl[1:]) if len(spl) > 1 else ""
-            deps = deps.split(";")
+            deps = spl[1].split(";") if len(spl)>1 else ""
+            suse = spl[2].split(";") if len(spl)>2 else ""
             
         if name == "-h": 
             print(  "Usage: "
-                    "   %%CS function_name dependency1;dependency2"
+                    "   %%CS function_name [dependency1;dependency2] [System;System.Linq]"
                     "   function code")
         else :
             try:
-                f = create_cs_function(name, cell, deps)
+                f = create_cs_function(name, cell, deps, suse)
             except Exception as e :
                 print(e)
                 return 

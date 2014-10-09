@@ -44,6 +44,7 @@ Contenu des enseignements
         * :ref:`Jeux autour des données <l-jdonnees>`
     * Autres documents
         * `Présentation ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_
+        * `Présentation ENSAE 2A - Données et machine learning <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_
         * :ref:`Articles, Références, Blog <l-biblio>`
         * :ref:`Modules <modulesi>`
         * :ref:`Outils, ressources pour développer <l-devtools>`
