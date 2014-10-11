@@ -2,8 +2,8 @@
 .. _l-examplesindex:
 
 
-Exemples de toutes sortes
--------------------------
+Exemples
+--------
 
 .. toctree::
 

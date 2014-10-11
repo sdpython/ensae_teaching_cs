@@ -2,8 +2,8 @@
 .. _l-exoalgo:
 
 
-Exercices autour d'algorithmes
-==============================
+Algorithmes classiques
+======================
 
 Ces exercices sont proches de ceux qu'on peut poser en entretien d'embauche. Le plus souvent,
 il existe une façon naïve d'arriver au résultat et il existe un algorithme plus rapide. 
@@ -26,6 +26,7 @@ puis à fusionner les deux solutions.
     notebooks/exercice_echelle
     notebooks/exercice_morse
     notebooks/exercice_lcs
+    notebooks/exercice_plus_grande_somme
     
     
     

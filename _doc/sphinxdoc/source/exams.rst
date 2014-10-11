@@ -3,8 +3,8 @@
 .. _l-examens:
 
 
-Examens passés
-==============
+Examens
+=======
 
 .. raw:: html
 
