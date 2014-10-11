@@ -17,6 +17,7 @@ Source de données
     * `données vélib <https://developer.jcdecaux.com/#/home>`_
     * `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_
     * `dump wikipedia <https://dumps.wikimedia.org/backup-index.html>`_
+    * `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_ (collection de jeux de données classés par type de problème - régression, classification, ...)
     
 Evénements réguliers
 --------------------

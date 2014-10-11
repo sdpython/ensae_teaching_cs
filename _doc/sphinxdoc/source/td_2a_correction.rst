@@ -14,5 +14,6 @@ correction
     TD 2D : IPython et calcul distribué <notebooks/td2a_correction_session_2D>
     TD 3A : Statistiques descriptives <notebooks/td2a_correction_session_3A>
     TD 3B : Arbres de décision et Random Forest <notebooks/td2a_correction_session_3B>
+    TD 4A : Machine Learning et Marketting <notebooks/td2a_correction_session_4A>
     
     

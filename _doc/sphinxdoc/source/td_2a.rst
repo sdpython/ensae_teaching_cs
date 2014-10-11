@@ -61,11 +61,14 @@ et `scikit-learn <>`_.
             * `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_
     - :ref:`TD 3B : Arbres de décision et Random Forests <td2acenoncesession3brst>`  (:ref:`correction <td2acorrectionsession3brst>`)
     
-Les données non structurées et de grandes tailles seront l'objet de la séance 4.
+- TD 4
+    - :ref:`TD 4A : Machine Learning et Marketting <td2acenoncesession4arst>`  (:ref:`correction <td2acorrectionsession4arst>`)
+        * machine learning
+        * `d3.js <http://d3js.org/>`_
+    
+    
+Les données non structurées et de grandes tailles seront l'objet de la séance 5.
 
-
-La séance 5 abordera des visualisations un peu plus complexes et les graphes 
-(visualisation algorithme).
 
 La dernière séance sera consacrée à des problèmes d'algorithmie dont la connaissance
 est souvent utile lorsqu'il s'agit d'être astucieux avec les données.
@@ -73,6 +76,7 @@ est souvent utile lorsqu'il s'agit d'être astucieux avec les données.
 
 **Bibliographie**
 
+* `The Elements of Statistical Learning <http://statweb.stanford.edu/~tibs/ElemStatLearn/>`_, Trevor Hastie, Robert Tibshirani, Jerome Friedman
 * `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_, Wes McKinney
 * `Learning scikit-learn: Machine Learning in Python <https://www.packtpub.com/big-data-and-business-intelligence/learning-scikit-learn-machine-learning-python>`_, Raúl Garreta, Guillermo Moncecchi
 * `Modeling Creativity: Case Studies in Python <http://arxiv.org/abs/1410.0281>`_, Tom De Smedt
