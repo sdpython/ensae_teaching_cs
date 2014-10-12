@@ -93,7 +93,7 @@ Usage régulier
         - `GDAL <https://pypi.python.org/pypi/GDAL/>`_
         - video `Spatial data and web mapping with Python <http://www.youtube.com/watch?v=qmgh14LUOjQ&feature=youtu.be>`_
     c. interactif (javascript)
-        - `plotly <https://plot.ly/python/>`_
+        - `mpld3 <http://mpld3.github.io/>`_
         - `bokeh <http://bokeh.pydata.org/>`_
         - `d3js <http://d3js.org/>`_, `d3js gallery <http://christopheviau.com/d3list/>`_, `ipyD3 <http://nbviewer.ipython.org/github/z-m-k/ipyD3/blob/master/ipyD3sample.ipynb>`_, `nvd3 <http://nvd3.org/>`_
         - `python-nvd3 <https://pypi.python.org/pypi/python-nvd3/>`_
@@ -102,6 +102,9 @@ Usage régulier
     d. others directions (pas facile à mettre en place)
         - `tessera <https://github.com/urbanairship/tessera>`_
         - `graphite <https://github.com/graphite-project>`_
+    e. services (il faut d'identifier)
+        - `plotly <https://plot.ly/python/>`_
+        - `datawrapper <https://datawrapper.de/>`_ (utiliser par le journal l'Equipe)    
     
 #. machine learning `Scikit-learn <http://scikit-learn.org/stable/>`_
     a. `scikit lectures <http://scipy-lectures.github.io/>`_
@@ -214,6 +217,7 @@ Articles
     * `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
     * `Python Tools for Machine Learning <http://www.cbinsights.com/blog/python-tools-machine-learning/>`_
     * `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
+    * `22 outils gratuits pour visualiser et analyser les données (1ère partie) <http://www.lemondeinformatique.fr/actualites/lire-22-outils-gratuits-pour-visualiser-et-analyser-les-donnees-1ere-partie-47241-page-3.html>`_
     
 
 Liens
