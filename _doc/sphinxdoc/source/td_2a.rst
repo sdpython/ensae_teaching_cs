@@ -81,6 +81,7 @@ est souvent utile lorsqu'il s'agit d'être astucieux avec les données.
 
 * `The Elements of Statistical Learning <http://statweb.stanford.edu/~tibs/ElemStatLearn/>`_, Trevor Hastie, Robert Tibshirani, Jerome Friedman
 * `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_, Wes McKinney
+* `Building Machine Learning Systems with Python <https://www.packtpub.com/big-data-and-business-intelligence/building-machine-learning-systems-python>`_, Willi Richert, Luis Pedro Coelho
 * `Learning scikit-learn: Machine Learning in Python <https://www.packtpub.com/big-data-and-business-intelligence/learning-scikit-learn-machine-learning-python>`_, Raúl Garreta, Guillermo Moncecchi
 * `Modeling Creativity: Case Studies in Python <http://arxiv.org/abs/1410.0281>`_, Tom De Smedt
 * `Critical Mass: How One Thing Leads to Another <http://www.philipball.co.uk/index.php?option=com_content&view=article&id=15:critical-mass-how-one-thing-leads-to-another&catid=3:books&Itemid=4>`_, Philip Ball
