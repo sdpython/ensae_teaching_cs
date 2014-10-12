@@ -65,6 +65,9 @@ et `scikit-learn <>`_.
     - :ref:`TD 4A : Machine Learning et Marketting <td2acenoncesession4arst>`  (:ref:`correction <td2acorrectionsession4arst>`)
         * machine learning
         * `d3.js <http://d3js.org/>`_
+    - culture algorithmique
+        * `Machine learning et algorithme <http://www.xavierdupre.fr/blog/2014-10-11_nojs.html>`_
+        * :ref:`exerciceplusgrandesommerst`
     
     
 Les données non structurées et de grandes tailles seront l'objet de la séance 5.
