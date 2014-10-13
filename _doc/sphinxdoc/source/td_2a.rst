@@ -65,7 +65,7 @@ et `scikit-learn <>`_.
     - :ref:`TD 4A : Machine Learning et Marketting <td2acenoncesession4arst>` (:ref:`correction <td2acorrectionsession4arst>`)
         - machine learning
         - `d3.js <http://d3js.org/>`_
-    - :ref:`Bien démarrer un projet de machine learning <debutermlprojet>`_
+    - :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
     - :ref:`TD 4B : Culture algorithmique <td2acenoncesession4brst>` (:ref:`correction <td2acorrectionsession4brst>`)
         - `Machine learning et algorithme <http://www.xavierdupre.fr/blog/2014-10-11_nojs.html>`_
         - :ref:`exerciceplusgrandesommerst`
@@ -126,5 +126,6 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
     
     td_2a_enonce
     td_2a_correction
+    debutermlprojet
 
     
