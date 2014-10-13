@@ -67,7 +67,7 @@ et `scikit-learn <http://scikit-learn.org/stable/>`_.
         - `d3.js <http://d3js.org/>`_
     - :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
     - :ref:`TD 4B : Culture algorithmique <td2acenoncesession4brst>` (:ref:`correction <td2acorrectionsession4brst>`)
-        - présentation `Eléments d'Algorithmique <Seance4_algorithme.pdf>`_
+        - présentation `Eléments d'Algorithmique <http://www.xavierdupre.fr/enseignement/complements/Seance4_algorithme.pdf>`_
         - `Machine learning et algorithme <http://www.xavierdupre.fr/blog/2014-10-11_nojs.html>`_
         - :ref:`exerciceplusgrandesommerst`
     
