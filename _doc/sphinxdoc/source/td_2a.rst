@@ -109,6 +109,12 @@ est souvent utile lorsqu'il s'agit d'être astucieux avec les données.
 * `Tutorial on Practical Prediction Theory for Classification <http://www.jmlr.org/papers/volume6/langford05a/langford05a.pdf>`_, John Langford
 * `Sparse Online Learning via Truncated Gradient <http://jmlr.org/papers/volume10/langford09a/langford09a.pdf>`_, John Langford, Lihong Li, Tong Zhang
 
+**Librairies de machine learning**
+
+* `scikit-learn <http://scikit-learn.org/stable/index.html>`_
+* `Vowpal Wabbit <https://github.com/JohnLangford/vowpal_wabbit/wiki>`_
+* `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
+
 
 Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_ :
 
