@@ -46,7 +46,7 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
 La séance 3 aura pour thème le `machine learning <http://en.wikipedia.org/wiki/Machine_learning>`_. On le 
 traduit en français par `apprentissage statistique <http://fr.wikipedia.org/wiki/Apprentissage_automatique>`_. 
 Les deux modules principaux sont `statsmodels <http://statsmodels.sourceforge.net/devel/index.html>`_
-et `scikit-learn <>`_.
+et `scikit-learn <http://scikit-learn.org/stable/>`_.
 
 
 - TD 3
