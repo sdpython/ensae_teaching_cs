@@ -40,6 +40,9 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], proj
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], "..", "..", "..", "..", "pyquickhelper", "src")))
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], "..", "..", "..", "..", "pyensae", "src")))
 
+import pyquickhelper
+import pyensae
+
 # -- General configuration -----------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.

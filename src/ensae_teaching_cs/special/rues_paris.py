@@ -3,9 +3,8 @@
 @file
 @brief Code implémentant la première solution proposée à `Parcourir les rues de Paris <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/rue_paris_parcours.html>`_.
 """
-import os, sys, copy, random
-
-import pyensae, math
+import os, sys, copy, random, math
+import pyensae
 
 def distance_paris(lat1, lng1, lat2, lng2):
     """
