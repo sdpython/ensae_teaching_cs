@@ -42,13 +42,6 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
     - :ref:`TD 2B : Python autres langages <td2acenoncesession2brst>` (:ref:`correction <td2acorrectionsession2brst>`)
     - :ref:`TD 2C : IPython et commandes magiques <td2acenoncesession2crst>` (:ref:`correction <td2acorrectionsession2crst>`)
     - :ref:`TD 2D : IPython et calcul distribué <td2acenoncesession2drst>` (:ref:`correction <td2acorrectionsession2drst>`)
-    
-La séance 3 aura pour thème le `machine learning <http://en.wikipedia.org/wiki/Machine_learning>`_. On le 
-traduit en français par `apprentissage statistique <http://fr.wikipedia.org/wiki/Apprentissage_automatique>`_. 
-Les deux modules principaux sont `statsmodels <http://statsmodels.sourceforge.net/devel/index.html>`_
-et `scikit-learn <http://scikit-learn.org/stable/>`_.
-
-
 - TD 3
     - :ref:`TD 3A : Statistiques descriptives <td2acenoncesession3arst>` (:ref:`correction <td2acorrectionsession3arst>`)
     - Présentation de `Gaël Varoquaux <http://gael-varoquaux.info/>`_ : machine learning et `scikit-learn <http://scikit-learn.org/stable/>`_
@@ -59,8 +52,7 @@ et `scikit-learn <http://scikit-learn.org/stable/>`_.
             - Erreur `L2 <http://en.wikipedia.org/wiki/Lp_space>`_ et pénalisation `L1 <http://fr.wikipedia.org/wiki/Espace_L1>`_
             - `RandomizedPCA <http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.RandomizedPCA.html>`_, `GridSearch <http://scikit-learn.org/stable/modules/grid_search.html>`_, `LassoCV <http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html>`_
             - `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_
-    - :ref:`TD 3B : Arbres de décision et Random Forests <td2acenoncesession3brst>`  (:ref:`correction <td2acorrectionsession3brst>`)
-    
+    - :ref:`TD 3B : Arbres de décision et Random Forests <td2acenoncesession3brst>`  (:ref:`correction <td2acorrectionsession3brst>`)    
 - TD 4
     - :ref:`TD 4A : Machine Learning et Marketting <td2acenoncesession4arst>` (:ref:`correction <td2acorrectionsession4arst>`)
         - machine learning
@@ -73,10 +65,10 @@ et `scikit-learn <http://scikit-learn.org/stable/>`_.
     
     
 Les données non structurées et de grandes tailles seront l'objet de la séance 5.
-
-
 La dernière séance sera consacrée à des problèmes d'algorithmie dont la connaissance
 est souvent utile lorsqu'il s'agit d'être astucieux avec les données.
+
+Le cours sera évalué avec un :ref:`projet informatique <l-projinfo2a>`.
 
 
 **Bibliographie**
