@@ -31,18 +31,19 @@ liste les différents modules proposés lors de ce cours.
 DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont les thèmes abordés durant les deux premières séances.
 
     
-- :ref:`TD 1 : Données et Graphes <td2acenoncesession1rst>` (:ref:`correction <td2acorrectionsession1rst>`)
-    - import/export de données dans un DataFrame
-    - manipulation selon une logique SQL
-    - utilité des index
-    - lambda function
-    - premiers graphiques
-- TD 2
+- **TD 1 : DataFrame** 
+    - `TD 1 : Données et Graphes <td2acenoncesession1rst>` (:ref:`correction <td2acorrectionsession1rst>`)
+        - import/export de données dans un DataFrame
+        - manipulation selon une logique SQL
+        - utilité des index
+        - lambda function
+        - premiers graphiques
+- **TD 2 : calcul matriciel**
     - :ref:`TD 2A : Calcul Matriciel, Optimisation <td2acenoncesession2arst>` (:ref:`correction <td2acorrectionsession2arst>`)
     - :ref:`TD 2B : Python autres langages <td2acenoncesession2brst>` (:ref:`correction <td2acorrectionsession2brst>`)
     - :ref:`TD 2C : IPython et commandes magiques <td2acenoncesession2crst>` (:ref:`correction <td2acorrectionsession2crst>`)
     - :ref:`TD 2D : IPython et calcul distribué <td2acenoncesession2drst>` (:ref:`correction <td2acorrectionsession2drst>`)
-- TD 3
+- **TD 3 : machine learning**
     - :ref:`TD 3A : Statistiques descriptives <td2acenoncesession3arst>` (:ref:`correction <td2acorrectionsession3arst>`)
     - Présentation de `Gaël Varoquaux <http://gael-varoquaux.info/>`_ : machine learning et `scikit-learn <http://scikit-learn.org/stable/>`_
         - `tutoriels sur scikit-learn <http://nbviewer.ipython.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_
@@ -53,7 +54,7 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
             - `RandomizedPCA <http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.RandomizedPCA.html>`_, `GridSearch <http://scikit-learn.org/stable/modules/grid_search.html>`_, `LassoCV <http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html>`_
             - `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_
     - :ref:`TD 3B : Arbres de décision et Random Forests <td2acenoncesession3brst>`  (:ref:`correction <td2acorrectionsession3brst>`)    
-- TD 4
+- **TD 4 : machine learning et algorithme**
     - :ref:`TD 4A : Machine Learning et Marketting <td2acenoncesession4arst>` (:ref:`correction <td2acorrectionsession4arst>`)
         - machine learning
         - `d3.js <http://d3js.org/>`_
@@ -62,11 +63,10 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
         - présentation `Eléments d'Algorithmique <http://www.xavierdupre.fr/enseignement/complements/Seance4_algorithme.pdf>`_
         - `Machine learning et algorithme <http://www.xavierdupre.fr/blog/2014-10-11_nojs.html>`_
         - :ref:`exerciceplusgrandesommerst`
-    
-    
-Les données non structurées et de grandes tailles seront l'objet de la séance 5.
-La dernière séance sera consacrée à des problèmes d'algorithmie dont la connaissance
-est souvent utile lorsqu'il s'agit d'être astucieux avec les données.
+- **TD 5 : modèle de données**
+    - :ref:`TD 5 : Modèles de données <td2acenoncesession5rst>` (:ref:`correction <td2acorrectionsession5rst>`)
+- **TD 6 : algorithme et puzzle**    
+
 
 Le cours sera évalué avec un :ref:`projet informatique <l-projinfo2a>`.
 

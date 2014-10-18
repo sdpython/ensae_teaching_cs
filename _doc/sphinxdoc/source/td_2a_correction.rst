@@ -16,4 +16,5 @@ correction
     TD 3B : Arbres de décision et Random Forest <notebooks/td2a_correction_session_3B>
     TD 4A : Machine Learning et Marketting <notebooks/td2a_correction_session_4A>
     TD 4B : Culture algorithmique <notebooks/td2a_correction_session_4B>
+    TD 5 : Modèles de données <notebooks/td2a_correction_session_5>
     
