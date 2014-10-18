@@ -25,6 +25,11 @@ Glossaire
         Voici par exemple un changement sur la librairie
         `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ :
         `add method plot <https://github.com/sdpython/pyensae/commit/b5c36ba7885d9d4d92c00e67c5a2d238c57d507a>`_.
+        
+    JIT
+        Just In Time (Compilation). Some modules such as `Cython <http://cython.org/>`_ offers the possibility to speed up
+        a Python programming by converting some part of it in C++. It is then compiled and executed.
+        See also: `Python Just In Time Compilation <http://www.xavierdupre.fr/blog/2014-10-17_nojs.html>`_.
     
     Markdown
         Langage utilisé par les notebooks et pour cette documentation écrit en `rst <http://fr.wikipedia.org/wiki/ReStructuredText>`_.
