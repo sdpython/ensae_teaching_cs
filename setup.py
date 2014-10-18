@@ -197,7 +197,7 @@ else :
         package_dir             = package_dir,
         package_data            = package_data,
         #data_files              = data_files,
-        install_requires        = [  "pyensae" ],
+        install_requires        = [  "pyensae>=0.8" ],
         ext_modules             = EXT_MODULES,
         #include_package_data    = True,
         )
