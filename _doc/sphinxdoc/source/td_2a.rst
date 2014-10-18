@@ -64,6 +64,17 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
         - `Machine learning et algorithme <http://www.xavierdupre.fr/blog/2014-10-11_nojs.html>`_
         - :ref:`exerciceplusgrandesommerst`
 - **TD 5 : modèle de données**
+    - `présentation <http://www.xavierdupre.fr/enseignement/complements/cours_structure_donnee.pdf>`_
+        - Structure relationnelles - tables multiple
+            - Exemple avec un peu d'aérien
+            - notion de foreign key
+        - Best practices, index et foreign key
+            - Importances des random access et accès séquentiel
+        - Propriétés des base de données : `ACID <http://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9s_ACID>`_
+        - Limites des structures relationnelles
+            - Données arborescente
+            - Données hétérogènes
+        - Base de données non relationnelles
     - :ref:`TD 5 : Modèles de données <td2acenoncesession5rst>` (:ref:`correction <td2acorrectionsession5rst>`)
 - **TD 6 : algorithme et puzzle**    
 
