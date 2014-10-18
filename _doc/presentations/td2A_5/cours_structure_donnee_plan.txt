@@ -1,0 +1,17 @@
+% Cours ensae - structure de donnée
+% Nicolas Rousset
+% 20 Octobre 2014
+
+# Introduction - question de l'accès aux données
+	=> Recherche binaire
+	=> Index
+# Structure relationnelles - tables multiple
+	=> Exemple avec un peu d'aérien
+	=> notion de foreign key
+# Best practices, index et foreign key
+	=> Importances des random access & sequential access
+# Propriétés des base de données : ACID
+# Limites des structures relationnelles
+	=> Données arborescente
+	=> Données hétérogène
+# Base de données non relationnelles

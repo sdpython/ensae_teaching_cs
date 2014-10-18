@@ -1,0 +1,168 @@
+% Cours ensae - structure de donnee
+% Nicolas Rousset
+% 20 Octobre 2014
+
+## Plan
+
+- Acces aux donnees
+- Modeles relationnels
+- Base de donnees usuelles
+- Modele NoSQL
+
+# Acces aux donnes
+
+## Facile ou difficile ?
+
+Vous avez un dictionnaire Larousse a disposition, est-il facile de :
+
+>- Trouver la definition de ziggourat ?  
+>- Trouver le mot dont la definition est "Se dit d'une corolle gamopetale en forme d'entonnoir (fleur de liseron)." ?  
+>- Pourquoi ?  
+>- Comment faire un dictionnaire inverse ?  
+
+## Structure de donnee - generalite
+
+1. Les problemes que nous allons aborder ici sont generaux, que l'on parle de base de donnees, de fichiers textes ou de donnees en memoire
+2. Il n'y a pas de solution optimale -> cela depend fortement de votre usage  
+3. Gagner en performance sur un type d'acces se traduit souvent par une perte de performance en insertion/suppression
+
+## Structure de donnee 
+
+Deux complexites a garder en tete :  
+- Acces par recherche binaire / arbre binaire => log(n)  
+- Acces par lecture completes ou partielle    => n  
+  
+Attention aussi a ce que la complexite ne fait pas tout ...
+
+## Recherche binaire  
+
+On cherche le nombre 13
+
+~~~
+[1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+             m |                 |
+               [8, 13, 21, 34, 55]
+               |     |  m
+               [8, 13]
+                m |  |
+                  [13]				 
+~~~
+
+## Recherche binaire (2)
+
+Supposons la liste suivante triee par nom :    
+(Nous reviendrons sur les structures pandas)  
+
+~~~
+## Liste Nom, Prenom, NumeroSecu, Age, Departement 
+
+[ ("Baudelaire", "Charles", 14256, 72, 75),
+  ("Dupont",     "Jean",    18123, 33, 78),
+  ("Guilloux",   "Anne",    29123, 23, 92),
+  ("Legrand",    "Jacques", 16348, 51, 24),
+  ("Martin",     "Anne",    27649, 38, 35) ]
+~~~ 
+
+Pouvez-vous utilisez une recherche binaire sur le critere "Nom" ?  
+Sur le critere NumeroSecu ?  
+
+## Exemple pandas
+
+~~~
+             Prenom  NumeroSecu  Age  Departement
+Nom
+Dupont         Jean       18123   33           78
+Martin         Anne       27649   38           35
+Legrand     Jacques       16348   51           24
+Baudelaire  Charles       14256   72           75
+Guilloux       Anne       29123   23           92
+~~~
+
+## Exemple pandas (2)
+
+In [19]: timeit_setup = "import pandas; df = pandas.DataFrame.from_csv( 'Data_exemple.csv', sep=';' )"  
+
+In [20]: timeit.timeit( "df.ix['Martin']", setup = timeit_setup )  
+Out[20]: 271.23531663940526  
+
+In [21]: timeit.timeit( "df.loc[ df['NumeroSecu'] == 16348 ]", setup = timeit_setup )  
+Out[21]: 569.269467418345  
+
+## Comment faire pour acceder rapidement par numero de secu ?
+
+## Comment faire pour acceder rapidement par numero de secu (2) ?
+
+~~~
+  Nom          Prenom  NumeroSecu  Age  Departement
+
+1 Dupont         Jean       18123   33           78
+2 Martin         Anne       27649   38           35
+3 Legrand     Jacques       16348   51           24
+4 Baudelaire  Charles       14256   72           75
+5 Guilloux       Anne       29123   23           92
+
+[("Baudelaire", 4), ("Dupont", 1), ("Guilloux", 5), 
+ ("Legrand", 3)   , ("Martin", 2)]
+[(14256, 4), (16348, 3), (18123, 1),     
+ (27649, 2), (29123, 5)]
+~~~ 
+
+## Notion d'index
+
+Un index est une structure de donnee (souvent un arbre de recherche binaire) permettant un acces en log(n) pour un ou plusieurs champs  
+
+<!-- \includegraphics[width=90mm]{./images/arbre_binaire.png}  -->
+
+Attention, un index n'est pas gratuit, il consomme de l'espace disque/de la memoire, et necessite une mise a jour a chaque insertion/suppression, ce n'est pas une panacee.    
+
+## Notion d'index (2)
+
+Un index peut avoir plusieurs niveau de cle, 
+
+# Modeles relationnels
+
+## Modeles relationnels - exemple
+
+~~~ 
+           Prenom  Dep DepName        Pref
+Nom                                                
+Dupont     Jean    78       Yvelines  Versailles
+Martin     Anne    92  Haut-de-Seine    Asnieres
+Legrand    Jacques 78       Yvelines  Versailles
+Baudelaire Charles 75          Paris       Paris
+Guilloux   Anne    92  Haut-de-Seine    Asnieres
+Richard    Laurent 78       Yvelines  Versailles
+Leclerc    Henri   75          Paris       Paris
+~~~ 
+
+## Modeles relationnels - sous-liste
+
+## Manipulation de modeles relationnels avec pandas (1)  
+
+## Manipulation de modeles relationnels avec pandas (2)  
+
+## Manipulation de modeles relationnels avec pandas (3)  
+
+## Manipulation de modeles relationnels avec pandas (4)  
+
+# Base de donnees usuelles
+
+## Base de donnees usuelles
+
+La majeur partie des bases de donnees actuelles 
+
+# Modele NoSQL
+
+## Limites des modeles relationnels  
+
+## Structure relationnel VS acces hierarchique  
+
+## Donnees non structurees
+
+## ACID VS Big data 
+
+- Le principe ACID implique une bonne gestion des undo-segment, qui peut être extremement couteuse.  
+- Dans un monde BigData, avons-nous vraiment besoin de donnees parfaites ? 
+
+## MongoDB & JSON  
+
