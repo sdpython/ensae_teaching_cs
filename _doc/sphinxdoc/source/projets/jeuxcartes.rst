@@ -37,6 +37,7 @@ Poker
 Quelques liens :
 
 * `Règles du Texas hold 'em <http://en.wikipedia.org/wiki/Texas_Hold'em>`_
+* `Power Stack Exchange <http://poker.stackexchange.com/>`_ : forum de discussion technique sur le Poker
 * `Probabilité au poker <http://fr.wikipedia.org/wiki/Probabilit%C3%A9_au_poker>`_ 
 * `Calculatrice de Probabilités de Poker de Pokerlistings France <http://fr.pokerlistings.com/calculatrice-probabilites-poker>`_,
   `Calculatrice Probabilités Poker <http://fr.pokernews.com/poker-tools/poker-odds-calculator.htm>`_

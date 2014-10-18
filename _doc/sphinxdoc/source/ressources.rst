@@ -19,12 +19,31 @@ Source de données
     * `dump wikipedia <https://dumps.wikimedia.org/backup-index.html>`_
     * `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_ (collection de jeux de données classés par type de problème - régression, classification, ...)
     
-Evénements réguliers
---------------------
+Code
+----
 
-    * `Data Tuesday <http://data-tuesday.com/>`_
-    * `Big Data Meetup Paris <http://big-data.meetup.com/cities/fr/paris/>`_, voir aussi `search page <http://big-data.meetup.com/cities/fr/paris/events/>`_
-    * `Paris Startup Job Fair <http://jobfair.rudebaguette.com/>`_ (a lieu régulièrement au `104 à Paris <http://www.104.fr/>`_)
+    * `nullege <http://nullege.com/>`_ : moteur de recherche dédié au code Python
+    * `stackoverflow <http://stackoverflow.com/>`_ : forum d'échanges sur des questions de code
+    * `stackexchange <http://stackoverflow.com/sites>`_ : liste de forums d'échanges autour de sujets scientifiques appliqués, dont
+      `datascience stackexchange <http://datascience.stackexchange.com/>`_,
+      `mathoverflow <http://mathoverflow.net/>`_,
+      `tex, latex <http://tex.stackexchange.com/>`_,
+      `Web Apps <http://webapps.stackexchange.com/>`_,
+      `Computer Science Theory <http://cstheory.stackexchange.com/>`_,
+      `Scientific Computation <http://scicomp.stackexchange.com/>`_,
+      `Computer Science <http://cs.stackexchange.com/>`_,
+      `Chess <http://chess.stackexchange.com/>`_,
+      `Open Data <http://opendata.stackexchange.com/>`_,
+      `Software Recommendations <http://softwarerecs.stackexchange.com/>`_,
+      `forum sur la langue française <http://french.stackexchange.com/>`_
+
+Puzzle, Enigme
+--------------
+
+    * `Code Golf <http://codegolf.stackexchange.com/>`_
+    * `Puzzle Stack Exchange <http://puzzling.stackexchange.com/>`_
+    * `Google Code Jam <https://code.google.com/codejam>`_
+    * `HackerRank <https://www.hackerrank.com/>`_
     
 Compétitions Machine Learning
 -----------------------------
@@ -33,11 +52,19 @@ Compétitions Machine Learning
     * `kaggle <https://www.kaggle.com/>`_
     * `Data Challenges Paris <http://opendata.paris.fr/page/datachallenges/>`_
     
+Evénements réguliers
+--------------------
+
+    * `Data Tuesday <http://data-tuesday.com/>`_
+    * `Big Data Meetup Paris <http://big-data.meetup.com/cities/fr/paris/>`_, voir aussi `search page <http://big-data.meetup.com/cities/fr/paris/events/>`_
+    * `Paris Startup Job Fair <http://jobfair.rudebaguette.com/>`_ (a lieu régulièrement au `104 à Paris <http://www.104.fr/>`_)
+    
 Incubateurs
 -----------
     
     * `Agoranov <http://www.agoranov.com/>`_ (Paris)
     * `Microsoft Spark <https://www.microsoftventures.com/Accelerators/paris>`_ (Paris)
+    * `TekTos <http://tektos.co/accelerateur-2/>`_
     * `Le Top des incubateurs et accélérateurs de start-up à Paris  <http://lentreprise.lexpress.fr/creation-entreprise/etapes-creation/le-top-des-incubateurs-et-accelerateurs-de-start-up-a-paris_1534130.html>`_
     
 Espaces de travail
