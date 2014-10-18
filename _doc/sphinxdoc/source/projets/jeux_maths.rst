@@ -69,7 +69,7 @@ vers des solutions. Ces méthodes sont souvent utilisées pour la recherche
 de sous-séquences ADN et sont très coûteuses en calcul. 
 
 Lorsque la séquence à chercher est courte, l'utilisation d'une 
-`distance de Levenstein http://en.wikipedia.org/wiki/Levenshtein_distance>`_
+`distance de Levenstein <http://en.wikipedia.org/wiki/Levenshtein_distance>`_
 (voir également `Smith-Waterman <http://en.wikipedia.org/wiki/Smith%E2%80%93Waterman_algorithm>`_ 
 ou encore `BLAST <http://en.wikipedia.org/wiki/BLAST>`_) 
 améliorée est encore possible pour un temps de calcul raisonnable.

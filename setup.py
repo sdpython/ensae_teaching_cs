@@ -184,7 +184,7 @@ else :
     
     setup(
         name                    = project_var_name,
-        version                 = '%s.%s' %(sversion, subversion) if "register" in sys.argv or "bdist_msi" in sys.argv else 'py%s-v%s.%s' % (versionPython, sversion, subversion),
+        version                 = '%s.%s' %(sversion, subversion) if "register" in sys.argv or "bdist_msi" in sys.argv else 'py%s-%s.%s' % (versionPython, sversion, subversion),
         author                  = 'Xavier Dupré',
         author_email            = 'xavier.dupre AT gmail.com',
         url                     = "http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html",

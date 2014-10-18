@@ -27,7 +27,8 @@ Versions
 --------
 
 * **0.6 - 2014/??/??**
-    * **new:** first sessions in second year
+    * **new:** first sessions in 2A
+    * **new:** first sessions in 3A
 * **0.5 - 2014/08/31**
     * **new:** first version
 
