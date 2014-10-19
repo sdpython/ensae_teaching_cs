@@ -1,38 +1,61 @@
-% Cours ensae - structure de donnee
+% Cours ensae - structure de donnée
 % Nicolas Rousset
 % 20 Octobre 2014
 
 ## Plan
 
-- Acces aux donnees
-- Modeles relationnels
-- Base de donnees usuelles
-- Modele NoSQL
+- Acces aux données
+- Modèles relationnels
+- Base de données usuelles
+- Modèle NoSQL
 
-# Acces aux donnes
+# Acces aux données
 
 ## Facile ou difficile ?
 
-Vous avez un dictionnaire Larousse a disposition, est-il facile de :
+Vous avez un dictionnaire Larousse à disposition, est-il facile de :
 
->- Trouver la definition de ziggourat ?  
->- Trouver le mot dont la definition est "Se dit d'une corolle gamopetale en forme d'entonnoir (fleur de liseron)." ?  
+>- Trouver la définition de ziggourat ?  
+>- Trouver le mot dont la définition est "Se dit d'une corolle gamopétale en forme d'entonnoir (fleur de liseron)." ?  
 >- Pourquoi ?  
->- Comment faire un dictionnaire inverse ?  
+>- Comment faire un dictionnaire inversé ?  
 
 ## Structure de donnee - generalite
 
-1. Les problemes que nous allons aborder ici sont generaux, que l'on parle de base de donnees, de fichiers textes ou de donnees en memoire
-2. Il n'y a pas de solution optimale -> cela depend fortement de votre usage  
-3. Gagner en performance sur un type d'acces se traduit souvent par une perte de performance en insertion/suppression
+1. Les problèmes que nous allons aborder ici sont généraux, que l'on parle de base de données, de fichiers textes ou de données en memoire
+2. Il n'y a pas de solution optimale universelle -> cela dépend fortement de votre usage  
+3. Gagner en performance sur un type d'accès se traduit souvent par une perte de performance en insertion/suppression
 
-## Structure de donnee 
+## Structure de donnee - complexité
 
-Deux complexites a garder en tete :  
-- Acces par recherche binaire / arbre binaire => log(n)  
-- Acces par lecture completes ou partielle    => n  
+Trois complexités à garder en tête :  
+- Accès séquentiel                            => O( 1 )  
+- Accès par recherche binaire / arbre binaire => O( log(n) )  
+- Accès par lecture complètes ou partielle    => O( n )  
+
+Attention aussi à ce que la complexité ne fait pas tout ...
+
+## Structure de donnee - complexité
+
+Reprenons notre dictionnaire ...  
+- Accès séquentiel => vous avez le numéro de la page, vous y aller  
+- Accès par recherche binaire => vous cherchez le mot par rapport à l'ordre alphabétique  
+- Accès par lecture complète => vous lisez tout le dictionnaire à la recherche de votre définition  
+
+## Et les tables de hachage dans tout cela ?  
+
+Les tables de hashage sont un type de conteneur spécial, qui permet un accès par index en O(1) quand tout va bien, O(n) quand tout va mal.  
+On ne les détaillera pas ici.  
+Elles sont très utilisés dans des structures à courte durée de vie, beaucoup moins sur des données persitante.  
+
+## Accès séquentiel  
+
+Un type d'accès très spécifique, avec une clé entière, qui peut se résumer en :  
+"Vous avez un tableau de 127 éléments, vous voulez accéder au 65ème"  
+"Vous avez un dictionnaire de 540 pages, vous voulez accéder à la 300ème" 
   
-Attention aussi a ce que la complexite ne fait pas tout ...
+Pensez-y, notamment pour les séries temporelles :  
+Si vous avez des données horaires annuelles, cela sera beaucoup plus rapide de faire la conversion heure => position de l'heure dans l'année qu'une recherche par date.  
 
 ## Recherche binaire  
 
@@ -50,7 +73,7 @@ On cherche le nombre 13
 
 ## Recherche binaire (2)
 
-Supposons la liste suivante triee par nom :    
+Supposons la liste suivante triée par nom :    
 (Nous reviendrons sur les structures pandas)  
 
 ~~~
@@ -88,9 +111,9 @@ Out[20]: 271.23531663940526
 In [21]: timeit.timeit( "df.loc[ df['NumeroSecu'] == 16348 ]", setup = timeit_setup )  
 Out[21]: 569.269467418345  
 
-## Comment faire pour acceder rapidement par numero de secu ?
+## Comment faire pour accéder rapidement par numéro de sécu ?
 
-## Comment faire pour acceder rapidement par numero de secu (2) ?
+## Comment faire pour accéder rapidement par numéro de sécu (2) ?
 
 ~~~
   Nom          Prenom  NumeroSecu  Age  Departement
@@ -109,15 +132,58 @@ Out[21]: 569.269467418345
 
 ## Notion d'index
 
-Un index est une structure de donnee (souvent un arbre de recherche binaire) permettant un acces en log(n) pour un ou plusieurs champs  
+Un index est une structure de donnée (souvent un arbre de recherche binaire) permettant un acces en log(n) pour un ou plusieurs champs  
 
 <!-- \includegraphics[width=90mm]{./images/arbre_binaire.png}  -->
 
-Attention, un index n'est pas gratuit, il consomme de l'espace disque/de la memoire, et necessite une mise a jour a chaque insertion/suppression, ce n'est pas une panacee.    
+Attention, un index n'est pas gratuit, il consomme de l'espace disque/de la mémoire, et nécessite une mise à jour à chaque insertion/suppression, ce n'est pas une panacée.  
 
 ## Notion d'index (2)
 
-Un index peut avoir plusieurs niveau de cle, 
+Un index peut avoir plusieurs niveau de clé (si la première clé est dupliquée).   
+Par exemple pour des personnes, vous pouvez avoir un index uniquement sur les noms, ou un index sur les noms et prénoms.  
+  
+Si vous avez un index sur les noms et que vous recherchez "Jacques Martin", vous allez devoir regarder toutes les personnes dont le nom est "Martin".  
+Si vous avez un index sur les noms et prénoms, vous ne regarderez que les personnes s'appelant "Jacques Martin".  
+
+## Notion d'index (3)  
+
+L'ordre des clés est important, un index sur Nom, Prénom n'est pas la même chose qu'un index sur Prénom, Nom.  
+
+Un index sur Prénom, Nom peut être utilisé efficacement dans une recherche par Prénom.  
+Un index sur Nom, Prénom peut être utilisé efficacement dans une recherche par Nom.  
+
+## Notion d'index (4) - exemple pandas  
+
+~~~
+In [41]: df
+Out[41]: 
+                    NumeroSecu  Age  Departement
+Nom        Prenom                               
+Dupont     Jean          18123   33           78
+Martin     Anne          27649   38           35
+Legrand    Jacques       16348   51           24
+Baudelaire Charles       14256   72           75
+Guilloux   Anne          29123   23           92
+~~~
+
+## En résumé  
+
+Il est nécessaire d'adapter votre structure de donnée à l'usage que vous voulez en faire, il n'y a pas de règle universelle.  
+
+### Exemple 1  
+
+Vous gérez le fichier de la sécurité sociale, vous voulez faire des recherches par numéro de sécu, par nom, par département.  
+
+### Exemple 2  
+
+Vous gérez un site internet, il y a beaucoup d'insertion concernant les données des visiteurs, et vous avez besoin de faire des statistiques sur ces entrées par heure ou par jour.   
+
+## Pouquoi ne faut-il pas mettre d'index par département ?  
+
+Un index par département sur une base de donnée de la sécurité sociale n'est pas du tout discriminant (environ 100 valeurs possibles pour toute la population).  
+  
+De plus une lecture complète (Full_scan) se fera par sequential read, 100 à 1000 fois plus rapide que les random read des accès par index.   
 
 # Modeles relationnels
 
@@ -149,20 +215,121 @@ Leclerc    Henri   75          Paris       Paris
 
 ## Base de donnees usuelles
 
-La majeur partie des bases de donnees actuelles 
+La majeur partie des bases de donnees actuelles (PostGres, MySql, Oracle, SQL Server, MariaDB, etc ...) sont des bases de données relationnelles & transactionnelles "classiques".  
+Elles assurent la cohérence des données selon les principes définies par l'acronyme ACID.  
+Ces principes impliquent des mécanismes assez coûteux, notamment les "undo-segment".  
+
+## Notion de transaction  
+
+Une transaction est un ensemble de requête qui amène la base d'un état cohérent vers un autre état cohérent.  
+
+Par exemple pour une base de donnée comptable, cela pourrait être :  
+  
+~~~  
+INSERT into DEBIT values( ... );
+INSERT into CREDIT values( ... );
+  
+INSERT into DEPARTEMENT( 78, 'Yvelines', 'Versailles' );
+INSERT into PERSON( 'Martin', 'Jacques', 32, 13245, 78 );
+~~~  
+
+## Principes ACID  
+
+- Atomicité  
+- Cohérence  
+- Isolation  
+- Durabilité  
+  
+Ces principes concernent à la fois la couche applicative (software) et physique (hardware). 
+
+## Principes ACID 
+
+### Atomicité 
+
+Une transaction doit être exécuté totalement ou pas du tout.  
+
+###
+- Cohérence  
+- Isolation  
+- Durabilité  
+
+## Principes ACID 
+
+###  
+- Atomicité  
+
+### Cohérence 
+
+Une transaction doit amener la base d'un état respectant toutes les règles de la base vers un autre état respectant ces mêmes règles.  
+
+###
+- Isolation  
+- Durabilité  
+
+## Principes ACID 
+
+###
+- Atomicité
+- Cohérence  
+
+### Isolation 
+
+Les transactions doivent être isolées les unes des autres, c'est à dire que les résultats d'une exécution parallèle doivent correspondre à ceux d'une execution séquentielle.
+
+###
+- Durabilité  
+
+## Principes ACID 
+
+###
+- Atomicité  
+- Cohérence  
+- Isolation  
+
+### Durabilité 
+
+Les données en base doivent être stockées de façon permanente, de façon à supporter une panne de courant.  
+
+## Problème des undo segment ...
+
+La propriété d'isolation peut être très coûteuse avec des grosses bases de données, lorsque le volume d'information et les temps d'exécution deviennent importants.  
+Pourquoi ?  
+
+~~~  
+SELECT * FROM DOCUMENT WHERE AGENCY_CODE = 'FR0076' 
+  and issue_date = '2014-10-19';  
+UPDATE DOCUMENT SET CANCELLED = 1 WHERE ID = 2001567345;  
+~~~  
+
+## Problème des undo segment (2)...  
+
+~~~  
+SELECT * FROM DOCUMENT WHERE AGENCY_CODE = 'FR0076' 
+  and issue_date = '2014-10-19';  
+UPDATE DOCUMENT SET CANCELLED = 1 WHERE ID = 2001567345;  
+~~~  
+  
+Le principe d'isolation signifie que la première query doit renvoyer un résultat identique que la deuxième soit faite ou non.  
+Comment cela est-il possible ? En fait on va devoir se souvenir de l'état de la base de donnée au moment où la première query a été lancée.  
+C'est le principe des undo segments, qui peut être très coûteux.  
+
+## Limites des bases de données classiques : ACID VS Big data 
+
+- Le principe ACID implique plusieurs systèmes qui peuvent être extrêmement coûteux.  
+- Dans un monde BigData, avons-nous vraiment besoin de donnees parfaites ? 
 
 # Modele NoSQL
 
-## Limites des modeles relationnels  
+## Limites des bases de données classiques
+
+- Elles reposent sur des principes de cohérence des données et de garantie de leur qualité qui peuvent être plus coûteux que bénéfique.  
+- Bien entendu cela dépend du contexte, si vous êtes une banque, vous avez intérêt à ce que votre base de donnée soit cohérente...  
+- Elles sont basés sur des modèles relationnels qui peuvent être assez coûteux, notamment sur des données un peu trop hétérogènes.  
 
 ## Structure relationnel VS acces hierarchique  
 
 ## Donnees non structurees
 
-## ACID VS Big data 
-
-- Le principe ACID implique une bonne gestion des undo-segment, qui peut être extremement couteuse.  
-- Dans un monde BigData, avons-nous vraiment besoin de donnees parfaites ? 
 
 ## MongoDB & JSON  
 
