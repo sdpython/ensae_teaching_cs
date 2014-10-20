@@ -255,3 +255,7 @@ version.txt
 */notebooks/td2a/arbrec.*
 */notebooks/td2a/bank*.csv
 _doc/presentations/*/cours*.pdf
+*/notebooks/td2a/*.csv
+*/notebooks/td2a/Exemple*.xml
+*/notebooks/td2a/data*.py
+

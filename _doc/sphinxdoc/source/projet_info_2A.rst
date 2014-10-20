@@ -59,15 +59,16 @@ Travail attendu
       une application smartphone, le modèle seulement...)
     * Lorsque le modèle se trompe, se trompe-t-il de beaucoup ? Quel serait le coût de l'erreur ?
       Peut-on le réduire ?
+* Une vidéo, pas plus de 5 minutes pour présenter votre projet.      
         
 Barème
 ++++++
 
-* rapport / introduction / conclusion : 4 points
+* rapport / introduction / conclusion / video : 5 points
 * rigueur : 4 points
 * graphiques : 4 points
 * code / feature : 4 points
-* prolongements / perspectives : 4 points
+* prolongements / perspectives : 3 points
 
 Le projet doit être réalisé par un seul élève ou par groupe de deux s'il valide
 les trois conditions suivantes :
@@ -76,9 +77,15 @@ les trois conditions suivantes :
 * L'un des deux modèles n'est pas linéaire et n'est pas un arbre de décision.
 * Il y a plus de 10 variables ou le jeu de données est un graphe.
 
-``Soutenance ?``
 
+Vidéo
++++++
 
+* `The best stats you've ever seen <http://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen>`_, Hans Rosling
+* `Let my dataset change your mindset <http://www.ted.com/talks/hans_rosling_at_state?language=en>`_, Hans Rosling
+* `Hans Rosling's 200 Countries, 200 Years, 4 Minutes - The Joy of Stats - BBC Four <https://www.youtube.com/watch?v=jbkSRLYSojo>`_, Hans Roslong (4 minutes)
+* `Convertir votre présentation en vidéo <http://office.microsoft.com/fr-fr/powerpoint-help/convertir-votre-presentation-en-video-HA010336763.aspx>`_
+    
 
 Liens
 +++++
