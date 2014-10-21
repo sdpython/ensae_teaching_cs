@@ -21,6 +21,14 @@ Cours animé par :
     * `liste chaînées <http://fr.wikipedia.org/wiki/Liste_cha%C3%AEn%C3%A9e>`_, `stack <http://fr.wikipedia.org/wiki/Pile_(informatique)>`_, `queue <http://en.wikipedia.org/wiki/Queue_(abstract_data_type)>`_, `dictionnaire <http://en.wikipedia.org/wiki/Associative_array>`_
     * graphe `BFS <http://en.wikipedia.org/wiki/Breadth-first_search>`_, `DFS <http://en.wikipedia.org/wiki/Depth-first_search>`_
     * `merge sort <http://en.wikipedia.org/wiki/Merge_sort>`_, `quicksort <http://en.wikipedia.org/wiki/Quicksort>`_, `heapsort <http://en.wikipedia.org/wiki/Heapsort>`_, `max heap <http://en.wikipedia.org/wiki/Min-max_heap>`_
+- Séance 2
+- Séance 3
+- Séance 4
+- Séance 5
+- :ref:`Séance 6 :  <td3acenoncesession6rst>`  (:ref:`correction <td3acorrectionsession6rst>`)
+    * manipulation de fichiers avec `HDFS <http://hadoop.apache.org/docs/r1.2.1/hdfs_design.html>`_
+    * premier job avec `PIG-latin <https://pig.apache.org/docs/r0.7.0/piglatin_ref2.html>`_
+    * parallèle entre la syntaxe PIG et `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_
 
 
 **Bibliographie**

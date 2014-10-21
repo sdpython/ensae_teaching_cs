@@ -73,7 +73,7 @@ Barème
 Le projet doit être réalisé par un seul élève ou par groupe de deux s'il valide
 les trois conditions suivantes :
 
-* Le jeu de données contient plus de 500.000 d'observations.
+* Le jeu de données contient plus de 100.000 d'observations.
 * L'un des deux modèles n'est pas linéaire et n'est pas un arbre de décision.
 * Il y a plus de 10 variables ou le jeu de données est un graphe.
 

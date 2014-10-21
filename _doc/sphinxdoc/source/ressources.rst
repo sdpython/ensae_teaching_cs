@@ -18,6 +18,7 @@ Source de données
     * `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_
     * `dump wikipedia <https://dumps.wikimedia.org/backup-index.html>`_
     * `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_ (collection de jeux de données classés par type de problème - régression, classification, ...)
+    * `Data Analysis, Modeling and Machine Learning Group <http://ama.liglab.fr/resourcestools/datasets/>`_
     
 Code
 ----

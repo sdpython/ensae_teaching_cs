@@ -258,4 +258,5 @@ _doc/presentations/*/cours*.pdf
 */notebooks/td2a/*.csv
 */notebooks/td2a/Exemple*.xml
 */notebooks/td2a/data*.py
+*/notebooks/td3a/Conf*
 
