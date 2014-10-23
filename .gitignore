@@ -259,4 +259,7 @@ _doc/presentations/*/cours*.pdf
 */notebooks/td2a/Exemple*.xml
 */notebooks/td2a/data*.py
 */notebooks/td3a/Conf*
+*/notebooks/td3a/essa*.pig
+*/notebooks/td3a/sel*.pig
+
 

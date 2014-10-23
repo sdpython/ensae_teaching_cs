@@ -19,7 +19,7 @@ Quelques notes de la séance 5
 * Données structurées / non structurées (`NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_)
     * `schéma de données <http://fr.wikipedia.org/wiki/Sch%C3%A9ma_conceptuel>`_
         * conçu pour éviter la réplication des données
-        * une colonne avec des données à choix multiple (départements dans l'exemple) :amth:`\rightarrow` 
+        * une colonne avec des données à choix multiple (départements dans l'exemple) :math:`\rightarrow` 
           replacement par un entier et création d'une table avec départements
         * plus facile de vérifier la validité de données (mauvais départements)
     * sans schéma de données

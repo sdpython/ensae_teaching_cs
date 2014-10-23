@@ -35,8 +35,8 @@ Usage régulier
 #. Introduction aux différents environnements de programmation (pas très long)
     a. Installation : 
         - `Anaconda <http://continuum.io/downloads#py34>`_
-        - `Canopy <https://www.enthought.com/products/canopy/>`_
-        - `WinPython <http://winpython.sourceforge.net/>`_ (seulement sur Windows)
+        - `WinPython <http://winpython.sourceforge.net/>`_ (seulement sur Windows, moins rapide au niveau des mises à jour que Anaconda)
+        - `Canopy <https://www.enthought.com/products/canopy/>`_ (Python 3 n'a pas l'air disponible)
         - `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_ 
         - `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_
     b. Environnements

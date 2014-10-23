@@ -25,6 +25,16 @@ Cours animé par :
 - Séance 3
 - Séance 4
 - Séance 5
+
+Les trois séances suivantes sont plus appliquées et dédiées à la découverte
+de `Hadoop <http://fr.wikipedia.org/wiki/Hadoop>`_, un environnement
+qui permet d'exécuter des tâches 
+`Map/Reduce <http://fr.wikipedia.org/wiki/MapReduce>`_. 
+Plusieurs angles d'approche sont possibles. Celles retenues est l'utilisation
+du langage `PIG-latin <http://en.wikipedia.org/wiki/Pig_Latin>`_ dont la logique
+ressemble beaucoup à celle du `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_.
+Les outils Python simplifie la communication avec le cluster.
+
 - :ref:`Séance 6 :  <td3acenoncesession6rst>`  (:ref:`correction <td3acorrectionsession6rst>`)
     * manipulation de fichiers avec `HDFS <http://hadoop.apache.org/docs/r1.2.1/hdfs_design.html>`_
     * premier job avec `PIG-latin <https://pig.apache.org/docs/r0.7.0/piglatin_ref2.html>`_
