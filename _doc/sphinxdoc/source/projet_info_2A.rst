@@ -83,7 +83,7 @@ Vidéo
 
 * `The best stats you've ever seen <http://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen>`_, Hans Rosling
 * `Let my dataset change your mindset <http://www.ted.com/talks/hans_rosling_at_state?language=en>`_, Hans Rosling
-* `Hans Rosling's 200 Countries, 200 Years, 4 Minutes - The Joy of Stats - BBC Four <https://www.youtube.com/watch?v=jbkSRLYSojo>`_, Hans Roslong (4 minutes)
+* `Hans Rosling's 200 Countries, 200 Years, 4 Minutes - The Joy of Stats - BBC Four <https://www.youtube.com/watch?v=jbkSRLYSojo>`_, Hans Rosling (4 minutes)
 * `Convertir votre présentation en vidéo <http://office.microsoft.com/fr-fr/powerpoint-help/convertir-votre-presentation-en-video-HA010336763.aspx>`_
     
 

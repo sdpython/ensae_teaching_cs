@@ -101,7 +101,7 @@ Optimisation
 ------------
 
     * module `cvxopt <http://cvxopt.org/>`_
-    * `Introduction à l’optimisation - 2e édition <http://www.editions-ellipses.fr/product_info.php?products_id=8830>`_ (*Jean-Christophe Culioli*)
+    * `Introduction à l'optimisation - 2e édition <http://www.editions-ellipses.fr/product_info.php?products_id=8830>`_ (*Jean-Christophe Culioli*)
     * `Numerical Optimization <http://www.ece.northwestern.edu/~nocedal/book/num-opt.html>`_, (*Jorge Nocedal, Stephen J. Wright*)
     
     
@@ -117,4 +117,37 @@ Papers about machine learning
 -----------------------------
     * `ABC model choice via random forests <http://arxiv.org/abs/1406.6288>`_
     * `Mondrian Forests: Effcient Online Random Forests <http://arxiv.org/pdf/1406.2673v1.pdf>`_
+    
+
+Livres sur la programmation
+--------------------
+
+    * `Thinking in C++ <http://mindview.net/Books/TICPP/ThinkingInCPP2e.html>`_, Bruce Eckel
+    * `Effective C++ <http://www.aristeia.com/books.html>`_, Scott Meyers
+    * `What Every Programmer Should Know About Memory <http://www.akkadia.org/drepper/cpumemory.pdf>`_, Ulrich Drepper
+    * `The Art of Multiprocessor Programming <http://edc.tversu.ru/elib/inf/0189.pdf>`_, Maurice Herlihy, Nir Shavit
+    * `Hadoop: The Definitive Guide, 2nd Edition <http://shop.oreilly.com/product/0636920010388.do>`_, Tom White  (voir aussi `GitHub <https://github.com/tomwhite/hadoop-book/>`_)
+    * `Hadoop in Practice <http://it-ebooks.info/book/1028/>`_, Alex Holmes
+    
+Livres sur le machine learning
+------------------------------
+
+    * `Data-Intensive Text Processing with MapReduce <http://lintool.github.io/MapReduceAlgorithms/>`_, Jimmy Lin, Chris Dyer
+    * `Introducing Microsoft Azure HDInsight <http://blogs.msdn.com/b/microsoft_press/archive/2014/05/27/free-ebook-introducing-microsoft-azure-hdinsight.aspx>`_, Avkash Chauhan, Valentine Fontama, Michele Hart, Wee Hyong Tok, Buck Woody
+    * `The Elements of Statistical Learning <http://statweb.stanford.edu/~tibs/ElemStatLearn/>`_, Trevor Hastie, Robert Tibshirani, Jerome Friedman
+    * `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_, Wes McKinney
+    * `Building Machine Learning Systems with Python <https://www.packtpub.com/big-data-and-business-intelligence/building-machine-learning-systems-python>`_, Willi Richert, Luis Pedro Coelho
+    * `Learning scikit-learn: Machine Learning in Python <https://www.packtpub.com/big-data-and-business-intelligence/learning-scikit-learn-machine-learning-python>`_, Raúl Garreta, Guillermo Moncecchi
+    * `Modeling Creativity: Case Studies in Python <http://arxiv.org/abs/1410.0281>`_, Tom De Smedt
+    * `Critical Mass: How One Thing Leads to Another <http://www.philipball.co.uk/index.php?option=com_content&view=article&id=15:critical-mass-how-one-thing-leads-to-another&catid=3:books&Itemid=4>`_, Philip Ball
+
+
+MOOC, cours, Lectures
+---------------------
+
+    * `Stanford From Languages to Information <https://web.stanford.edu/class/cs124/>`_  Dan Jurafsky 
+        * `Language Modeling, Introduction to N-Gram <https://web.stanford.edu/class/cs124/lec/languagemodeling.pdf>`_
+    * `Introduction to Apache Pig <http://www.cloudera.com/content/cloudera/en/resources/library/training/introduction-to-apache-pig.html>`_
+    * `Machine Learning par Andrew Y. Ng <https://www.class-central.com/mooc/835/coursera-machine-learning>`_
+    * `Coursera Machine Learning <https://www.coursera.org/course/ml>`_    
     

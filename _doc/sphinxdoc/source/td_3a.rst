@@ -38,7 +38,12 @@ Les outils Python simplifie la communication avec le cluster.
 - :ref:`Séance 6 :  <td3acenoncesession6rst>`  (:ref:`correction <td3acorrectionsession6rst>`)
     * manipulation de fichiers avec `HDFS <http://hadoop.apache.org/docs/r1.2.1/hdfs_design.html>`_
     * premier job avec `PIG-latin <https://pig.apache.org/docs/r0.7.0/piglatin_ref2.html>`_
-    * parallèle entre la syntaxe PIG et `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_
+    * parallèle entre la syntaxe `PIG <http://pig.apache.org/docs/r0.12.1/basic.html>`_ et `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_
+
+
+**Articles**
+
+* `Large Scale Distributed Deep Networks <http://www.cs.toronto.edu/~ranzato/publications/DistBeliefNIPS2012_withAppendix.pdf>`_, Jeffrey Dean, Greg S. Corrado, Rajat Monga, Kai Chen, Matthieu Devin, Quoc V. Le, Mark Z. Mao, Marc'Aurelio Ranzato, Andrew Senior, Paul Tucker, Ke Yang, Andrew Y. Ng
 
 
 **Bibliographie**
