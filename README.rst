@@ -29,6 +29,7 @@ Versions
 * **0.6 - 2014/??/??**
     * **new:** first sessions in 2A
     * **new:** first sessions in 3A
+    * **add:** Python version is now checked, ImportError is raised if it used on Python 2
 * **0.5 - 2014/08/31**
     * **new:** first version
 

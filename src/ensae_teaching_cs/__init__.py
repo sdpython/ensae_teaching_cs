@@ -4,6 +4,10 @@
 @brief Main file
 """
 
+import sys
+if sys.version_info[0] < 3 :
+    raise ImportError("ensae_teaching_cs only works with Python 3")
+
 __version__ = "0.6"
 __author__ = "Xavier Dupré"
 __github__ = "https://github.com/sdpython/ensae_teaching_cs"
