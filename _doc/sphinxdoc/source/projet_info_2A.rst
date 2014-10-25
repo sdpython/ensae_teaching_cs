@@ -110,6 +110,11 @@ Ci-dessous, un exemple réalisé avec `iMovie <https://www.apple.com/fr/mac/imov
     <source src="http://www.xavierdupre.fr/enseignement/complements/gonzague_van_bervesseles_traitement_donnees.mp4" type="video/mp4" />
     Gonzague Van Bervesselès
     </video>
+    <p>
+    <small>
+    Gonzague Van Bervesselès
+    </small>
+    </p>
   
 
 Liens
