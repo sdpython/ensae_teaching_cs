@@ -5,10 +5,18 @@
 2A - Projets informatiques
 ==========================
 
-**en construction**
-
 Le projet informatique sera centré sur la résolution d'un problème de 
-machine learning :
+machine learning. Il s'agit d'expérimenter deux modèles sur un même jeu de données,
+d'interpréter les résultats et de les présenter.
+
+Ce projet est un exercice, voici ce qu'il couvre peu ou pas :
+<a href="http://jvns.ca/blog/2014/06/19/machine-learning-isnt-kaggle-competitions/">Machine learning isn't Kaggle competitions</a>.
+
+
+**Date de rendu**
+    * dernier jour avant les vacances de Noël pour le rapport / notebook / programme
+    * première semaine de janvier pour la vidéo
+
 
 Jeux de données
 +++++++++++++++
@@ -22,7 +30,7 @@ Travail attendu
 +++++++++++++++
 
 * Un rapport (Word, PDF, Notebook - pour ce dernier, il faudra s'assurer que l'impression de le déforme pas trop, 
-  il peut être converti au format PDF avec `nbconvert <>` et Latex).
+  il peut être converti au format PDF avec `nbconvert <http://ipython.org/ipython-doc/1/interactive/nbconvert.html>` et Latex).
 * Une introduction : quel est le problème à résoudre, un aperçu des données ?
 * Une attention particulière sur la rigueur de la démarche (base d'apprentissage / test,
   overfitting, validation croisée, vérification sur quelques exemples, 
@@ -73,9 +81,11 @@ Barème
 Le projet doit être réalisé par un seul élève ou par groupe de deux s'il valide
 les trois conditions suivantes :
 
-* Le jeu de données contient plus de 100.000 d'observations.
-* L'un des deux modèles n'est pas linéaire et n'est pas un arbre de décision.
+* Le jeu de données contient plus de 100.000 d'observations ou il y a plus de 50 variables.
+* L'un des deux modèles à tester n'est pas linéaire et n'est pas un arbre de décision.
 * Il y a plus de 10 variables ou le jeu de données est un graphe.
+
+Voir aussi `pair programming <https://www.hackerschool.com/manual#sec-pairing>`_.
 
 
 Vidéo
@@ -85,7 +95,22 @@ Vidéo
 * `Let my dataset change your mindset <http://www.ted.com/talks/hans_rosling_at_state?language=en>`_, Hans Rosling
 * `Hans Rosling's 200 Countries, 200 Years, 4 Minutes - The Joy of Stats - BBC Four <https://www.youtube.com/watch?v=jbkSRLYSojo>`_, Hans Rosling (4 minutes)
 * `Convertir votre présentation en vidéo <http://office.microsoft.com/fr-fr/powerpoint-help/convertir-votre-presentation-en-video-HA010336763.aspx>`_
-    
+
+Logiciels
++++++++++
+
+* `Quelques outils pour faire des captures vidéo d'écrans <http://www.xavierdupre.fr/blog/2014-10-24_nojs.html>`_
+
+
+Ci-dessous, un exemple réalisé avec `iMovie <https://www.apple.com/fr/mac/imovie/>`_.
+
+.. raw:: html
+
+    <video width="400" height="222" controls="controls">
+    <source src="http://www.xavierdupre.fr/enseignement/complements/gonzague_van_bervesseles_traitement_donnees.mp4" type="video/mp4" />
+    Gonzague Van Bervesselès
+    </video>
+  
 
 Liens
 +++++
@@ -101,4 +126,8 @@ Sources de jeux de données
     collection de graphes
 * `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_ :
     collection de jeux de données classés par type de problème - régression, classification, ...
+* `Kaggle <https://www.kaggle.com/competitions/search?SearchVisibility=AllCompetitions&ShowActive=true&ShowCompleted=true&ShowProspect=true&ShowOpenToAll=true&ShowPrivate=true&ShowLimited=true&DeadlineColumnSort=Descending>`_ (`(2) <http://inclass.kaggle.com/>`_),
+  Toutefois, avant d'utiliser les données Kaggle, je vous encourage à lire les articles `Date use for teaching after competition concludes <http://www.kaggle.com/c/decoding-the-human-brain/forums/t/8331/date-use-for-teaching-after-competition-concludes>`_,
+  et `Using a Kaggle contest as a term project <http://www.kaggle.com/forums/t/2745/using-a-kaggle-contest-as-a-term-project>`_.
+  Les règles peuvent varier d'un projet à l'autre, prenez soin de les lire avant de choisir un projet.
 * Votre propre jeu de données (à valider avec l'encadrant).
