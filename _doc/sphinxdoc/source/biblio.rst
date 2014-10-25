@@ -18,6 +18,7 @@ Articles de blog
     * **Machine Learning, Big Data**
         * `Machine Learning with Python <http://www.xavierdupre.fr/blog/2013-08-10_nojs.html>`_
         * `Gros DataFrame et SQL <http://www.xavierdupre.fr/blog/2014-07-19_nojs.html>`_
+        * `Using Artificial Intelligence to solve the 2048 Game (JAVA code) <http://blog.datumbox.com/using-artificial-intelligence-to-solve-the-2048-game-java-code/>`_
     * **Techniques**
         * `Désactiver les logs de cvxopt <http://www.xavierdupre.fr/blog/2014-04-16_nojs.html>`_
         * `Quelques astuces pour accélérer un programme <http://www.xavierdupre.fr/blog/2014-04-12_nojs.html>`_
@@ -117,7 +118,6 @@ Papers about machine learning
 -----------------------------
     * `ABC model choice via random forests <http://arxiv.org/abs/1406.6288>`_
     * `Mondrian Forests: Effcient Online Random Forests <http://arxiv.org/pdf/1406.2673v1.pdf>`_
-    
 
 Livres sur la programmation
 --------------------
@@ -140,7 +140,6 @@ Livres sur le machine learning
     * `Learning scikit-learn: Machine Learning in Python <https://www.packtpub.com/big-data-and-business-intelligence/learning-scikit-learn-machine-learning-python>`_, Raúl Garreta, Guillermo Moncecchi
     * `Modeling Creativity: Case Studies in Python <http://arxiv.org/abs/1410.0281>`_, Tom De Smedt
     * `Critical Mass: How One Thing Leads to Another <http://www.philipball.co.uk/index.php?option=com_content&view=article&id=15:critical-mass-how-one-thing-leads-to-another&catid=3:books&Itemid=4>`_, Philip Ball
-
 
 MOOC, cours, Lectures
 ---------------------

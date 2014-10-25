@@ -27,7 +27,9 @@ Le plan suggéré est le suivant :
    
 Le modèle classique pour concevoir une stratégie consiste à utiliser une fonction d'évaluation qui 
 donne un score à chaque coup possible. On utilise ensuite un algorithme 
-`minimax <http://fr.wikipedia.org/wiki/Algorithme_minimax>`_ pour construire 
+`minimax <http://fr.wikipedia.org/wiki/Algorithme_minimax>`_ 
+(voir aussi `Using Artificial Intelligence to solve the 2048 Game (JAVA code) <http://blog.datumbox.com/using-artificial-intelligence-to-solve-the-2048-game-java-code/>`_)
+pour construire 
 différents niveaux de difficulté. On pourra par exemple vérifier qu'une stratégie utilisant la même 
 fonction d'évaluation qu'une autre mais avec un niveau de difficulté ou de profondeur plus élevée 
 est meilleure. Avant de commencer la partie graphique, je suggère la lecture de cet article : 
