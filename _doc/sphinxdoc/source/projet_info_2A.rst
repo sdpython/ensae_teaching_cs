@@ -108,11 +108,11 @@ Ci-dessous, un exemple réalisé avec `iMovie <https://www.apple.com/fr/mac/imov
 
     <video width="400" height="222" controls="controls">
     <source src="http://www.xavierdupre.fr/enseignement/complements/gonzague_van_bervesseles_traitement_donnees.mp4" type="video/mp4" />
-    Gonzague Van Bervesselès
+    Gonzague Van Bervesselès - Le traitement des données
     </video>
     <p>
     <small>
-    Gonzague Van Bervesselès
+    Gonzague Van Bervesselès - Le traitement des données
     </small>
     </p>
   

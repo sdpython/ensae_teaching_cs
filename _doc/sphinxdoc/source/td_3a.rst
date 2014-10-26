@@ -23,6 +23,20 @@ Cours animé par :
     * `merge sort <http://en.wikipedia.org/wiki/Merge_sort>`_, `quicksort <http://en.wikipedia.org/wiki/Quicksort>`_, `heapsort <http://en.wikipedia.org/wiki/Heapsort>`_, `max heap <http://en.wikipedia.org/wiki/Min-max_heap>`_
 - Séance 2
 - Séance 3
+    * Stockage de données, consistence, persistence, impossibilité de faire des rollbacks, corruption, 
+      absence de garanties sur la manière dont sont stockés les champs (exemple formats de date), pas d'index, etc.
+    * Introduction du SQL, type de requêtes, 
+      Notion de transaction, d'atomicité, capacité de rollback, garanties ACID, 
+      difficultés dans un SQL réparti (atomicité des transactions, double commit protocol)
+    * Systèmes NoSQL, Key-Value Pair Storage, transactionnalité multi-entités dans un Key-Value pair, 
+      écriture optimiste avec des timestamps.
+    * Base de données orientées Document, Bases de données orientées Graph
+    * Map/Reduce. Notions de mappers, de reducers, de calculs embarassingly parallel. 
+      problèmes des machines mortes, des stragglers, tradeof calcul/transfert des données,
+      exemples d'applications de MapReduce,
+      exemples d'algos difficilement parallélisables,
+    * Hadoop, Azure
+    * Queues distribuées.
 - Séance 4
 - Séance 5
 
@@ -44,7 +58,9 @@ Les outils Python simplifie la communication avec le cluster.
 **Articles**
 
 * `Large Scale Distributed Deep Networks <http://www.cs.toronto.edu/~ranzato/publications/DistBeliefNIPS2012_withAppendix.pdf>`_, Jeffrey Dean, Greg S. Corrado, Rajat Monga, Kai Chen, Matthieu Devin, Quoc V. Le, Mark Z. Mao, Marc'Aurelio Ranzato, Andrew Senior, Paul Tucker, Ke Yang, Andrew Y. Ng
-
+* `Stochastic Gradient Descent Tricks <http://research.microsoft.com/pubs/192769/tricks-2012.pdf>`_, Léon Bottou
+* `A Fast Distributed Stochastic Gradient Descent Algorithm for Matrix Factorization <http://jmlr.org/proceedings/papers/v36/li14.pdf>`_, Fanglin Li, Bin Wu, Liutong Xu, Chuan Shi, Jing Shi
+* `Parallelized Stochastic Gradient Descent <http://martin.zinkevich.org/publications/nips2010.pdf>`_, Martin A. Zinkevich, Markus Weimer, Alex Smola, Lihong Li
 
 **Bibliographie**
 
