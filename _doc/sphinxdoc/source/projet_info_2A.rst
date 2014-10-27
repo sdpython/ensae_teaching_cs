@@ -10,7 +10,7 @@ machine learning. Il s'agit d'expérimenter deux modèles sur un même jeu de do
 d'interpréter les résultats et de les présenter.
 
 Ce projet est un exercice, voici ce qu'il couvre peu ou pas :
-<a href="http://jvns.ca/blog/2014/06/19/machine-learning-isnt-kaggle-competitions/">Machine learning isn't Kaggle competitions</a>.
+`Machine learning isn't Kaggle competitions <http://jvns.ca/blog/2014/06/19/machine-learning-isnt-kaggle-competitions/>`_.
 
 
 **Date de rendu**
@@ -30,7 +30,7 @@ Travail attendu
 +++++++++++++++
 
 * Un rapport (Word, PDF, Notebook - pour ce dernier, il faudra s'assurer que l'impression de le déforme pas trop, 
-  il peut être converti au format PDF avec `nbconvert <http://ipython.org/ipython-doc/1/interactive/nbconvert.html>` et Latex).
+  il peut être converti au format PDF avec `nbconvert <http://ipython.org/ipython-doc/1/interactive/nbconvert.html>`_ et Latex).
 * Une introduction : quel est le problème à résoudre, un aperçu des données ?
 * Une attention particulière sur la rigueur de la démarche (base d'apprentissage / test,
   overfitting, validation croisée, vérification sur quelques exemples, 
@@ -102,19 +102,10 @@ Logiciels
 * `Quelques outils pour faire des captures vidéo d'écrans <http://www.xavierdupre.fr/blog/2014-10-24_nojs.html>`_
 
 
-Ci-dessous, un exemple réalisé avec `iMovie <https://www.apple.com/fr/mac/imovie/>`_.
+Un exemple réalisé avec `iMovie <https://www.apple.com/fr/mac/imovie/>`_ : 
+`Le traitement des données <http://www.xavierdupre.fr/blog/2014-10-27_nojs.html>`_.
 
-.. raw:: html
 
-    <video width="400" height="222" controls="controls">
-    <source src="http://www.xavierdupre.fr/enseignement/complements/gonzague_van_bervesseles_traitement_donnees.mp4" type="video/mp4" />
-    Gonzague Van Bervesselès - Le traitement des données
-    </video>
-    <p>
-    <small>
-    Gonzague Van Bervesselès - Le traitement des données
-    </small>
-    </p>
   
 
 Liens
