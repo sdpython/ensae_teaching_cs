@@ -19,6 +19,7 @@ Articles de blog
         * `Machine Learning with Python <http://www.xavierdupre.fr/blog/2013-08-10_nojs.html>`_
         * `Gros DataFrame et SQL <http://www.xavierdupre.fr/blog/2014-07-19_nojs.html>`_
         * `Using Artificial Intelligence to solve the 2048 Game (JAVA code) <http://blog.datumbox.com/using-artificial-intelligence-to-solve-the-2048-game-java-code/>`_
+        * `A Roundup of Recent Text Analytics and Vis Work <http://blogger.ghostweather.com/2014/10/a-roundup-of-recent-text-analytics-and.html>`_
     * **Techniques**
         * `Désactiver les logs de cvxopt <http://www.xavierdupre.fr/blog/2014-04-16_nojs.html>`_
         * `Quelques astuces pour accélérer un programme <http://www.xavierdupre.fr/blog/2014-04-12_nojs.html>`_

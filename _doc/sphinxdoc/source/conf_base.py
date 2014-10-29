@@ -29,6 +29,7 @@ def extract_version_from_setup():
 
 project_var_name_t  = "ENSAE<br />Xavier Dupré"
 project_var_name    = "ensae_teaching_cs"
+project_var_name_1l = project_var_name_t.replace("<br />"," - ")
 author              = "Xavier Dupré"
 version             = extract_version_from_setup()
 

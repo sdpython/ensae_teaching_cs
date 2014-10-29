@@ -113,9 +113,12 @@ Usage régulier
     d. `autres modules <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
     e. `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
     f. `DataFrame et SQLite3 <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/pyensae_flat2db3.html>`_
-    g. `Choosing the right estimato <http://scikit-learn.org/stable/tutorial/machine_learning_map/index.html>`_
+    g. `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/index.html>`_
     h. `statsmodels <http://statsmodels.sourceforge.net/>`_
     i. `fastcluster <https://pypi.python.org/pypi/fastcluster>`_
+    j. `lda <https://github.com/ariddell/lda>`_ (`LDA <http://en.wikipedia.org/wiki/Latent_Dirichlet_allocation>`_)
+    k. `nltk <http://www.nltk.org/install.html>`_ (natural language processing)
+    l. `glove-python <https://github.com/maciejkula/glove-python>`_
     
 #. Représentation de graphes
     a. `Graphviz <https://github.com/xflr6/graphviz>`_
