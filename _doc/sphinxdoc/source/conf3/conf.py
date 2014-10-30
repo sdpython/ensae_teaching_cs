@@ -34,21 +34,21 @@ html_logo = "project_ico_small.png"
 
 if html_theme == "bootstrap":
     html_theme_options = {
-        'navbar_title': "Home",
+        'navbar_title': "home",
         'navbar_site_name': "Site",
         'navbar_links': [
-            ("Blog", "http://www.xavierdupre.fr/blog/xd_blog_nojs.html", True),
+            ("XD", "http://www.xavierdupre.fr", True),
+            ("blog", "http://www.xavierdupre.fr/blog/xd_blog_nojs.html", True),
             ("pyensae", "http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html", True),
-            ("Racine", "http://www.xavierdupre.fr", True),
         ],
         'navbar_sidebarrel': True,
         'navbar_pagenav': True,
         'navbar_pagenav_name': "Page",
-        'globaltoc_depth': 2,
+        'globaltoc_depth': 3,
         'globaltoc_includehidden': "true",
         'navbar_class': "navbar navbar-inverse",
         'navbar_fixed_top': "true",
         'source_link_position': "nav",
-        'bootswatch_theme': "united",
+        'bootswatch_theme': "spacelab",
         'bootstrap_version': "3",
     }

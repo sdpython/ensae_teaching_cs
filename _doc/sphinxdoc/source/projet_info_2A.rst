@@ -106,14 +106,11 @@ Un exemple réalisé avec `iMovie <https://www.apple.com/fr/mac/imovie/>`_ :
 `Le traitement des données <http://www.xavierdupre.fr/blog/2014-10-27_nojs.html>`_.
 
 
-  
-
 Liens
 +++++
 
 * :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
 * `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
-
 
 Sources de jeux de données
 ++++++++++++++++++++++++++
@@ -127,3 +124,10 @@ Sources de jeux de données
   et `Using a Kaggle contest as a term project <http://www.kaggle.com/forums/t/2745/using-a-kaggle-contest-as-a-term-project>`_.
   Les règles peuvent varier d'un projet à l'autre, prenez soin de les lire avant de choisir un projet.
 * Votre propre jeu de données (à valider avec l'encadrant).
+
+Questions
++++++++++
+
+* :ref:`question_2014_projet_1_2A`
+
+

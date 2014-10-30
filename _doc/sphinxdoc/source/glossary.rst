@@ -25,6 +25,16 @@ Glossaire
         Voici par exemple un changement sur la librairie
         `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ :
         `add method plot <https://github.com/sdpython/pyensae/commit/b5c36ba7885d9d4d92c00e67c5a2d238c57d507a>`_.
+
+    Immuable 
+        voir Immutable
+    
+    Immutable
+        On dit qu'un type est **immutable** s'il ne peut être modifié. Un
+        tuple est **immutable**, c'est un tableau dont on ne peut pas changer les 
+        éléments contrairement à une liste. Voir aussi
+        :ref:`lm-Quest-cequuntypeimmuableouimmutable`, 
+        :ref:`question_1A_2014_1`.
         
     JIT
         Just In Time (Compilation). Some modules such as `Cython <http://cython.org/>`_ offers the possibility to speed up
@@ -36,6 +46,9 @@ Glossaire
         Sa syntaxe est décrite à `Markdown: Syntax <http://daringfireball.net/projects/markdown/syntax>`_.
         A l'instar du langage Python, il utilise l'indentation pour marquer la séparation entre les blocs.
         
+    Mutable
+        Voir Immutable.
+    
     Python
         Langage de programmation interprété. C'est le langage utilisé pour le support de ce cours.
         `Site officiel <https://www.python.org/>`_. 
