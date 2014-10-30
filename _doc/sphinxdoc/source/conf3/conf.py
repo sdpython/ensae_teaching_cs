@@ -34,12 +34,12 @@ html_logo = "project_ico_small.png"
 
 if html_theme == "bootstrap":
     html_theme_options = {
-        'navbar_title': project_var_name_1l,
+        'navbar_title': "Home",
         'navbar_site_name': "Site",
         'navbar_links': [
-            ("pyensae", "http://www.xavierdupre.fr/site2013/index_code.html", True),
             ("Blog", "http://www.xavierdupre.fr/blog/xd_blog_nojs.html", True),
-            ("Xavier Dupré", "http://www.xavierdupre.fr", True),
+            ("pyensae", "http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html", True),
+            ("Racine", "http://www.xavierdupre.fr", True),
         ],
         'navbar_sidebarrel': True,
         'navbar_pagenav': True,

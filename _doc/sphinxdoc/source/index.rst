@@ -10,7 +10,7 @@ le langage Python. Le contenu est librement disponible sur `GitHub/ensae_teachin
 et permet à quiconque de contribuer à ce cours disponible sous trois formats différents : 
 `mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_,
 `compact/blanc <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_,
-`compact/noir <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
+`compact/mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
 La page :ref:`l-README` résume l'historique des modifications.
     
 
