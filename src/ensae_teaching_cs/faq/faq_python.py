@@ -177,21 +177,18 @@ def same_variable(a,b):
     @param      b       n'importe quel objet
     @return             ``True`` ou ``False``
     
-    @FAQ(Qu'est-ce qu'un type _immuable_ ou _immutable_ ?)
-    Une variable de type _immuable_ ne peut être modifiée. Cela concerne :
+    @FAQ(Qu'est-ce qu'un type immuable ou immutable ?)
+    Une variable de type *immuable* ne peut être modifiée. Cela concerne principalement :
     
-        - ``int``
-        - ``float``
-        - ``str``
-        - ``tuple``
+        - ``int``, ``float``, ``str``, ``tuple``
         
-    Si une variable est de type _immuable_, lorsqu'on effectue une opération,
+    Si une variable est de type *immuable*, lorsqu'on effectue une opération,
     on créé implicitement une copie de l'objet.
         
-    Les dictionnaires et les listes sont _modifiables_ (ou _mutable_). Pour une variable
+    Les dictionnaires et les listes sont *modifiables* (ou *mutable*). Pour une variable
     de ce type, lorsqu'on écrit ``a = b``, ``a`` et ``b`` désigne le même objet même 
     si ce sont deux noms différentes. C'est le même emplacement mémoire 
-    accessible de deux moyens.
+    accessible paur deux moyens (deux identifiants).
     
     Par exemple ::
     
@@ -210,7 +207,68 @@ def same_variable(a,b):
     Dans le premier cas, le type (``tuple``) est _immutable_, l'opérateur ``+=`` cache implicitement une copie.
     Dans le second cas, le type (``list``) est _mutable_, l'opérateur ``+=`` évite la copie
     car la variable peut être modifiée. Même si ``b=a`` est exécutée avant l'instruction suivante,
-    elle n'a **pas** pour effet de conserver l'état de ``a`` avant l'ajout d'élément.
+    elle n'a **pas** pour effet de conserver l'état de ``a`` avant l'ajout d'élément. 
+    Un autre exemple ::
+    
+        a  = [1, 2]
+        b  = a
+        a [0] = -1
+        print(a)        # --> [-1, 2]
+        print(b)        # --> [-1, 2]
+        
+    Pour copier une liste, il faut expliciter la demander ::
+        
+        a  = [1, 2]
+        b  = list(a)
+        a [0] = -1
+        print(a)        # --> [-1, 2]
+        print(b)        # --> [1, 2]
+        
+    La page `Immutable Sequence Types <https://docs.python.org/3.4/library/stdtypes.html?highlight=immutable#immutable-sequence-types>`_
+    détaille un peu plus le type qui sont *mutable* et ceux qui sont *immutable*. Parmi les types standards :
+    
+        * **mutable**
+            * `bool <https://docs.python.org/3.4/library/functions.html#bool>`_
+            * `int <https://docs.python.org/3.4/library/functions.html#int>`_, `float <https://docs.python.org/3.4/library/functions.html#float>`_, `complex <https://docs.python.org/3.4/library/functions.html#complex>`_
+            * `str <https://docs.python.org/3.4/library/functions.html#func-str>`_, `bytes <https://docs.python.org/3.4/library/functions.html#bytes>`_
+            * `None <https://docs.python.org/3.4/library/constants.html?highlight=none#None>`_
+            * `tuple <https://docs.python.org/3.4/library/functions.html#func-tuple>`_, `frozenset <https://docs.python.org/3.4/library/functions.html#func-frozenset>`_
+        * **immutable**, par défaut tous les autres types dont :
+            * `list <https://docs.python.org/3.4/library/functions.html#func-list>`_
+            * `dict <https://docs.python.org/3.4/library/functions.html#func-dict>`_
+            * `set <https://docs.python.org/3.4/library/functions.html#func-set>`_
+            * `bytearray <https://docs.python.org/3.4/library/functions.html#bytearray>`_
+    
+    Une instance de classe est mutable. Il est possible de la rendre
+    immutable par quelques astuces :
+    
+        * `__slots__ <https://docs.python.org/3.4/reference/datamodel.html?highlight=_slots__#object.__slots__>`_
+        * `How to Create Immutable Classes in Python <http://www.blog.pythonlibrary.org/2014/01/17/how-to-create-immutable-classes-in-python/>`_
+        * `Ways to make a class immutable in Python <http://stackoverflow.com/questions/4996815/ways-to-make-a-class-immutable-in-python>`_
+        * `freeze <https://freeze.readthedocs.org/en/latest/>`_
+        
+    Enfin, pour les objects qui s'imbriquent les uns dans les autres, une liste de listes, une classe
+    qui incluent des dictionnaires et des listes, on distingue une copie simple d'une copie intégrale (**deepcopy**).
+    Dans le cas d'une liste de listes, la copie simple recopie uniquement la première liste ::
+    
+        import copy
+        l1 = [ [0,1], [2,3] ]
+        l2 = copy.copy(l1)
+        l1 [0][0] = '##'
+        print(l1,l2)        # --> [['##', 1], [2, 3]] [['##', 1], [2, 3]]
+    
+        l1 [0] = [10,10]
+        print(l1,l2)        # --> [[10, 10], [2, 3]] [['##', 1], [2, 3]]
+        
+    La copie intégrale recopie également les objets inclus ::
+        
+        import copy
+        l1 = [ [0,1], [2,3] ]
+        l2 = copy.deepcopy(l1)
+        l1 [0][0] = '##'
+        print(l1,l2)        # --> [['##', 1], [2, 3]] [[0, 1], [2, 3]]
+        
+    Les deux fonctions s'appliquent à tout object Python : `module copy <https://docs.python.org/3.4/library/copy.html>`_.
     @endFAQ
     """
     return id(a) == id(b)
@@ -299,4 +357,35 @@ if __name__ == "__main__" :
     nb = processus_quotidien(st)
     print(nb)
     
-    
+    class ImmutableClass(object):
+        __slots__ = [ "x","y" ]
+        
+        def __init__(self,x,y):
+            self.x,self.y = x,y
+        def __str__(self):
+            return "{},{}".format(self.x,self.y)
+            
+    i1 = ImmutableClass(1,2)
+    i2 = i1
+    i2.x = -1
+    print(i1,i2)
+
+    import copy
+    l1 = [ [0,1], [2,3] ]
+    l2 = copy.copy(l1)
+    l1 [0][0] = -1
+    print(l1,l2)
+
+    l1 [0] = [10,10]
+    print(l1,l2)
+
+    import copy
+    l1 = [ [0,1], [2,3] ]
+    l2 = copy.deepcopy(l1)
+    l1 [0][0] = -1
+    print(l1,l2)
+
+    a=[]
+    b=a
+    b += [2]
+    print(a)
