@@ -151,3 +151,7 @@ MOOC, cours, Lectures
     * `Machine Learning par Andrew Y. Ng <https://www.class-central.com/mooc/835/coursera-machine-learning>`_
     * `Coursera Machine Learning <https://www.coursera.org/course/ml>`_    
     
+Question des élèves
+-------------------
+
+    * :ref:`question_2014`

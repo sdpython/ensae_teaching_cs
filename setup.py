@@ -127,7 +127,7 @@ if "build_sphinx" in sys.argv:
                 layout = [ "pdf",
                           "html", 
                           ("html", "build2", {"html_theme":"basicstrap"}, "source/conf2"),
-                          ("html", "build3", {"html_theme":"solar_theme"}, "source/conf3"),
+                          ("html", "build3", {"html_theme":"bootstrap"}, "source/conf3"),
                           ] )
         
 elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv :

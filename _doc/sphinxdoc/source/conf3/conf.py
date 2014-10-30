@@ -32,7 +32,7 @@ if not os.path.exists(templates_path[0]):
 
 html_logo = "project_ico_small.png"
 
-if theme == "bootstrap":
+if html_theme == "bootstrap":
     html_theme_options = {
         'navbar_title': project_var_name_1l,
         'navbar_site_name': "Site",
