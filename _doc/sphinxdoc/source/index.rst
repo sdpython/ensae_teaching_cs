@@ -196,6 +196,7 @@ Vieilles versions
     ressources
     FAQ
     glossary
+    questions/questions
     filechanges
     README
     indexes

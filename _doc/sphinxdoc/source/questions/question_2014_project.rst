@@ -1,11 +1,11 @@
 ﻿
 
-.. _question_projet_2014
+.. _question_projet_2014:
 
 Questions Projets 2014
 ======================
 
-.. _question_2014_projet_1_2A
+.. _question_2014_projet_1_2A:
 
 Quel type de problème pour quelles données ?
 ++++++++++++++++++++++++++++++++++++++++++++

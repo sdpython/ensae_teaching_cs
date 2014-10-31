@@ -1,11 +1,11 @@
 ﻿
 
-.. _question_2014
+.. _question_2014:
 
 Questions TD 2014
 =================
 
-.. _question_1A_2014_1
+.. _question_1A_2014_1:
 
 Question à propos de trie
 +++++++++++++++++++++++++
