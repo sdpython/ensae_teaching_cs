@@ -48,11 +48,34 @@ Glossaire
         
     Mutable
         Voir Immutable.
+        
+    pyensae
+        C'est un module que j'ai développé à l'attention des élèves de l'ENSAE
+        (`documentation <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_).
+        Il sert le plus souvent à télécharger des documents depuis le site 
+        ``www.xavierdupre.fr`` et plus précisément des documents
+        accessibles depuis ce lien `documents <http://www.xavierdupre.fr/enseignement/complements/index_documents.html>`_.
+        
+    pyquickhelper
+        Ce module est utilisé par `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_.
+        Il sert principalement à générer cette documentation.
+        Il effectue des tâches avant et après la génération de la 
+        documentation avec `Sphinx <http://sphinx-doc.org/>`_.
     
     Python
         Langage de programmation interprété. C'est le langage utilisé pour le support de ce cours.
         `Site officiel <https://www.python.org/>`_. 
         C'est un `langage impératif <http://fr.wikipedia.org/wiki/Programmation_imp%C3%A9rative>`_.
+        
+    reStructuredText
+        Voir Sphinx.
+        
+    rst
+        rst = reStructuredText
+        
+    Sphinx
+        `Sphinx <http://sphinx-doc.org/>`_ est un moteur qui génère de la
+        documentation à partir de fichier au format `reStructuredText <http://docutils.sourceforge.net/rst.html>`_.
         
     SQL
         Le `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_ où *Structured Query Language*

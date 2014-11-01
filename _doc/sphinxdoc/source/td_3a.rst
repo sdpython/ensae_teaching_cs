@@ -38,6 +38,10 @@ Cours animé par :
     * Hadoop, Azure
     * Queues distribuées.
 - Séance 4
+    * distribuer un traitement de données à différent niveaux
+        * avec un langage haut niveau (comme PIG)
+        * utilisation du java pour distribuer un job de façon plus optimisée
+        * distribution personnalisée d'un traitement avec des librairies bas niveau (type MPI)
 - Séance 5
 
 Les trois séances suivantes sont plus appliquées et dédiées à la découverte
@@ -49,10 +53,14 @@ du langage `PIG-latin <http://en.wikipedia.org/wiki/Pig_Latin>`_ dont la logique
 ressemble beaucoup à celle du `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_.
 Les outils Python simplifie la communication avec le cluster.
 
-- :ref:`Séance 6 :  <td3acenoncesession6rst>`  (:ref:`correction <td3acorrectionsession6rst>`)
-    * manipulation de fichiers avec `HDFS <http://hadoop.apache.org/docs/r1.2.1/hdfs_design.html>`_
-    * premier job avec `PIG-latin <https://pig.apache.org/docs/r0.7.0/piglatin_ref2.html>`_
-    * parallèle entre la syntaxe `PIG <http://pig.apache.org/docs/r0.12.1/basic.html>`_ et `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_
+- Séance 6 : premier job Map/Reduce
+    * travaux pratiques
+        * `Cloudera <http://www.cloudera.com/content/cloudera/en/home.html>`_ : :ref:`Séance 6 : <td3acenoncesession6rst>`  (:ref:`correction <td3acorrectionsession6rst>`)
+        * `Azure HDInsight <http://azure.microsoft.com/fr-fr/services/hdinsight/>`_ : :ref:`Séance 6 : <td3acenoncesession6brst>`  (:ref:`correction <td3acorrectionsession6brst>`)
+    * contenu
+        * manipulation de fichiers avec `HDFS <http://hadoop.apache.org/docs/r1.2.1/hdfs_design.html>`_
+        * premier job avec `PIG-latin <https://pig.apache.org/docs/r0.7.0/piglatin_ref2.html>`_ [#fp1]_
+        * parallèle entre la syntaxe `PIG <http://pig.apache.org/docs/r0.12.1/basic.html>`_ et `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_
 
 
 **Articles**
@@ -94,5 +102,15 @@ Les outils Python simplifie la communication avec le cluster.
     
     td_3a_enonce
     td_3a_correction
-
     
+.. rubric:: Footnotes
+
+.. [#fp1] Les exercices des notebooks s'appuient sur le langage [PIG-latin](http://en.wikipedia.org/wiki/Pig_Latin) qui est un langage
+          haut niveau permettant d'écrire des tâches Map Reduce complexes. Le script est ensuite converti en un ensemble de 
+          [mapper / reducer](http://hadooptutorial.wikispaces.com/MapReduce). Ce langage suffit dans la plupart des cas
+          et le temps de développement est très réduit par rapport à un langage plus bas niveau.
+          L'autre langage haut niveau est [Hive](https://hive.apache.org/). Sa syntaxe est très proche de celle
+          du [SQL](http://fr.wikipedia.org/wiki/Structured_Query_Language). [PIG](http://en.wikipedia.org/wiki/Pig_Latin) a été choisi
+          car il offre plus de fonctionnalités que [Hive](https://hive.apache.org/) pour un coût d'apprentissage
+          très raisonnable.
+          
