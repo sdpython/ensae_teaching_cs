@@ -264,4 +264,6 @@ _doc/presentations/*/cours*.pdf
 */notebooks/td3a/solution*.pig
 */notebooks/td3a/*redirection*
 README
+*/notebooks/td3a/stderr.txt
+*/notebooks/td3a/results.txt
 

@@ -37,13 +37,17 @@ Cette couche est minimale, elle sert à donner des exemples pour les
 usages les plus courants et à ajouter des commandes magiques dans 
 les notebooks.
 
-* `AzureClient <http://www.xavierdupre.fr/app/pyensae/helpsphinx/pyensae/remote/remote_azure.html>`_
+* `AzureClient <http://www.xavierdupre.fr/app/pyensae/helpsphinx/pyensae/remote/azure_connection.html>`_
 * `commandes magiques <http://www.xavierdupre.fr/app/pyensae/helpsphinx/pyensae/remote/magic_azure.html>`_
 
 Ce n'est pas très compliqué une fois qu'on a l'exemple mais il faut souvent
 quelques essais et beaucoup de recherches pour trouver les 
 exemples qui fonctionnent sur internet. 
 
+L'exécution de job Pig est réalisé via l'API `WebHCat <http://docs.hortonworks.com/HDPDocuments/HDP1/HDP-1.2.1/bk_dataintegration/content/ch_using_hcatalog_1.html>`_ :
+
+* `start a Pig + Jython job in HDInsight thru WebHCat <http://blogs.msdn.com/b/benjguin/archive/2014/03/21/start-a-pig-jython-job-in-hdinsight-thru-webhcat.aspx>`_
+* `How to use HDInsight from Linux <http://blogs.msdn.com/b/benjguin/archive/2014/02/18/how-to-use-hdinsight-from-linux.aspx>`_
   
 Documentation
 +++++++++++++

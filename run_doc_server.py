@@ -20,6 +20,7 @@ for project in os.listdir(fold):
                 mappings [ project + i ] = doc
                 print("add ", project + i, " --> ", doc )
 
+print("running run_doc_server")
 run_doc_server( "localhost", 
                 mappings = mappings,
                 port = 8887)
