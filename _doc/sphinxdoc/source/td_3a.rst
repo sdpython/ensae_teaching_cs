@@ -92,6 +92,7 @@ Les outils Python simplifie la communication avec le cluster.
 * `HackerRank <https://www.hackerrank.com/>`_
 * `15+ Great Books for Hadoop <http://blog.matthewrathbone.com/2013/05/31/hadoop-resources---books.html>`_
 * `A Roundup of Recent Text Analytics and Vis Work <http://blogger.ghostweather.com/2014/10/a-roundup-of-recent-text-analytics-and.html>`_
+* :ref:`l-azurep`
 
 **Revue de presse**
 
@@ -102,6 +103,7 @@ Les outils Python simplifie la communication avec le cluster.
     
     td_3a_enonce
     td_3a_correction
+    specials/azure
     
 .. rubric:: Footnotes
 
