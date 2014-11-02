@@ -28,4 +28,27 @@ sont susceptibles d'évoluer dans un futur proche.
 * `azure-batch-apps-python <https://github.com/Azure/azure-batch-apps-python>`_ :  
   exécution de batch, création de machine virtuelles...
   
+pyensae
++++++++
+
+A ces modules est ajouté une surcouche présente dans 
+`pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_.
+Cette couche est minimale, elle sert à donner des exemples pour les 
+usages les plus courants et à ajouter des commandes magiques dans 
+les notebooks.
+
+* `AzureClient <http://www.xavierdupre.fr/app/pyensae/helpsphinx/pyensae/remote/remote_azure.html>`_
+* `commandes magiques <http://www.xavierdupre.fr/app/pyensae/helpsphinx/pyensae/remote/magic_azure.html>`_
+
+Ce n'est pas très compliqué une fois qu'on a l'exemple mais il faut souvent
+quelques essais et beaucoup de recherches pour trouver les 
+exemples qui fonctionnent sur internet. 
+
   
+Documentation
++++++++++++++
+
+* `azure-sdk-for-python <http://www.xavierdupre.fr/app/azure-sdk-for-python/helpsphinx/index.html>`_
+* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
+
+
