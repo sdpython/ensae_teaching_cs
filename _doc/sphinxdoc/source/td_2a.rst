@@ -77,64 +77,27 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
         - :ref:`l-td25asynthese`
     - :ref:`TD 5 : Modèles de données <td2acenoncesession5rst>` (:ref:`correction <td2acorrectionsession5rst>`)
 - **TD 6 : algorithme et puzzle**    
-    * correction de l'exercice de recouvrement proposé à la séance 4 (:ref:`TD 4B : Culture algorithmique <td2acenoncesession4brst>` - :ref:`correction <td2acorrectionsession4brst>`)
-    * :ref:`TD 6 : Problèmes et algorithmes <td2acenoncesession6rst>` - :ref:`correction <td2acorrectionsession6rst>` 
-      (ces problèmes sont tirées de `Google Code Jam <https://code.google.com/codejam/contests.html>`_)
-    * types de complexité : `force brute <http://fr.wikipedia.org/wiki/Recherche_exhaustive>`_, 
-      `glouton <http://fr.wikipedia.org/wiki/Algorithme_glouton>`_, `dynamique <http://fr.wikipedia.org/wiki/Programmation_dynamique>`_
-    * ordres de grandeur
-        * :math:`n \leqslant 10` : coût :math:`\leqslant O(2^n)`
-        * :math:`n \leqslant 15` : coût :math:`\leqslant O(n!)`
-        * :math:`n \leqslant 10^2` : coût :math:`\leqslant O(n^3)`
-        * :math:`n \leqslant 10^3` : coût :math:`\leqslant O(n^2)`
-        * :math:`n \leqslant 10^7` : coût :math:`\leqslant O(n \ln (n))`
-        * :math:`n > 10^6` : coût :math:`\leqslant O(n)`
-    * `recherche opérationnelle <http://fr.wikipedia.org/wiki/Recherche_op%C3%A9rationnelle>`_ (les liens
-      point vers Wikipédia version française, les versions anglaises des mêmes pages sont plus complètes) :
-        * Tri
-            * `tri fusion <http://fr.wikipedia.org/wiki/Tri_fusion>`_ **algo**
-            * `bucket sort <http://en.wikipedia.org/wiki/Bucket_sort>`_ **algo**
-            * `tri à bulles <http://fr.wikipedia.org/wiki/Tri_%C3%A0_bulles>`_ **algo**
-        * Programmation dynamique
-            * `distance d'édition <http://fr.wikipedia.org/wiki/Distance_de_Levenshtein>`_ **algo**
-            * `plus court chemin dans un graphe <orghttp://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra>`_ **algo**
-            * `problème d'ordonnancement <http://fr.wikipedia.org/wiki/Th%C3%A9orie_de_l'ordonnancement>`_ **algo**
-        * Problème non `NP-complet <http://fr.wikipedia.org/wiki/Liste_de_probl%C3%A8mes_NP-complets>`_
-            * `Problème du voyageur de commerce <http://fr.wikipedia.org/wiki/Probl%C3%A8me_du_voyageur_de_commerce>`_  **algo**
-              (ou `Graphe Hmiltonien <http://fr.wikipedia.org/wiki/Graphe_hamiltonien>`_)
-            * `problème d'affectation, méthode hongroise <http://fr.wikipedia.org/wiki/Algorithme_hongrois>`_ **algo**
-            * `arbre de poids miminum (Kruskal) <http://fr.wikipedia.org/wiki/Algorithme_de_Kruskal>`_ **algo**
-            * `problème du sac-à-dos <http://fr.wikipedia.org/wiki/Probl%C3%A8me_du_sac_%C3%A0_dos>`_ **algo**
-        * Graphes
-            * composantes connexes ou `parcours de graphe en profondeur <http://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_profondeur>`_, 
-              `parcours de graphe en largeur <http://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_largeur>`_ **déf/algo**
-            * `graphe orienté <http://fr.wikipedia.org/wiki/Graphe_orient%C3%A9>`_, `graphe acyclique <http://fr.wikipedia.org/wiki/Graphe_acyclique>`_ **déf**
-            * `degré <http://fr.wikipedia.org/wiki/Degr%C3%A9_(th%C3%A9orie_des_graphes)>`_ **déf**
-            * `FLoyd-Flukerson <http://fr.wikipedia.org/wiki/Algorithme_de_Ford-Fulkerson>`_ **algo**
-            * `minimum cut <http://en.wikipedia.org/wiki/Minimum_cut>`_ **algo**
-            * `maximum cut <http://en.wikipedia.org/wiki/Maximum_cut>`_ **algo**
-            * `graphe bi-parti <http://fr.wikipedia.org/wiki/Graphe_biparti>`_ **déf**
-            * `PageRank <http://fr.wikipedia.org/wiki/PageRank>`_ **algo**
-            * `Appariement <http://fr.wikipedia.org/wiki/Couplage_(th%C3%A9orie_des_graphes)>`_, `Edmonds Blossum <http://en.wikipedia.org/wiki/Blossom_algorithm>`_ **déf/algo**
-        * Autre - texte - statistique
-            * `distance de Jaccard <http://fr.wikipedia.org/wiki/Indice_et_distance_de_Jaccard>`_ **algo**
-            * `n-grammes <http://fr.wikipedia.org/wiki/N-gramme>`_ **déf**
-            * `table de hashage <http://fr.wikipedia.org/wiki/Table_de_hachage>`_ **déf**
-            * `codage Huffman <http://fr.wikipedia.org/wiki/Codage_de_Huffman>`_ (voir aussi `LZ77, LZ78 <http://fr.wikipedia.org/wiki/LZ77_et_LZ78>`_) **algo**
-            * `bootstrap, intervalles de confiance <http://fr.wikipedia.org/wiki/Bootstrap_(statistiques)#Intervalle_de_confiance>`_ **algo**
-            * `filtre de Bloom <http://fr.wikipedia.org/wiki/Filtre_de_Bloom>`_ **algo**
-        * Programmation
-            * `itérateur <http://fr.wikipedia.org/wiki/It%C3%A9rateur>`_ (mot-clé `yield <http://sametmax.com/comment-utiliser-yield-et-les-generateurs-en-python/>`_) **déf**
-            * `mémoïzation <http://fr.wikipedia.org/wiki/M%C3%A9mo%C3%AFsation>`_ **déf** (voir aussi `Mémoïzation d'une fonction Python <http://sametmax.com/memoization-dune-fonction-python/>`_)
-            * `programmation fonctionnelle <http://fr.wikipedia.org/wiki/Programmation_fonctionnelle>`_
-            * `récursivité <http://fr.wikipedia.org/wiki/R%C3%A9cursivit%C3%A9>`_
+    * Présentations
+        * `programmation dynamique <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance2.pdf>`_
+        * `graphe et  <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance3.pdf>`_
+    * notebooks
+        * correction de l'exercice de recouvrement proposé à la séance 4 (:ref:`TD 4B : Culture algorithmique <td2acenoncesession4brst>` - :ref:`correction <td2acorrectionsession4brst>`)
+        * :ref:`TD 6 : Problèmes et algorithmes <td2acenoncesession6rst>` - :ref:`correction <td2acorrectionsession6rst>` 
+          (ces problèmes sont tirées de plusieurs sites dont `Google Code Jam <https://code.google.com/codejam/contests.html>`_)
+    * liens
+        * types de complexité : `force brute <http://fr.wikipedia.org/wiki/Recherche_exhaustive>`_, 
+          `glouton <http://fr.wikipedia.org/wiki/Algorithme_glouton>`_, `dynamique <http://fr.wikipedia.org/wiki/Programmation_dynamique>`_
+        * :ref:`l-algoculture`
             
 
 
 Le cours sera évalué avec un :ref:`projet informatique <l-projinfo2a>`.
 
 
-**Bibliographie**
+Bibliographie
++++++++++++++
+
+**Livres sur le machine learning**
 
 * `The Elements of Statistical Learning <http://statweb.stanford.edu/~tibs/ElemStatLearn/>`_, Trevor Hastie, Robert Tibshirani, Jerome Friedman
 * `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_, Wes McKinney
@@ -142,6 +105,12 @@ Le cours sera évalué avec un :ref:`projet informatique <l-projinfo2a>`.
 * `Learning scikit-learn: Machine Learning in Python <https://www.packtpub.com/big-data-and-business-intelligence/learning-scikit-learn-machine-learning-python>`_, Raúl Garreta, Guillermo Moncecchi
 * `Modeling Creativity: Case Studies in Python <http://arxiv.org/abs/1410.0281>`_, Tom De Smedt
 * `Critical Mass: How One Thing Leads to Another <http://www.philipball.co.uk/index.php?option=com_content&view=article&id=15:critical-mass-how-one-thing-leads-to-another&catid=3:books&Itemid=4>`_, Philip Ball
+
+**Livres sur les algorithmes**
+
+* `Introduction to Algorithms <http://mitpress.mit.edu/books/introduction-algorithms>`_, Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest and Clifford Stein
+* `The Algorithm Design Manual <http://www.algorist.com/>`_, Steven S. Skiena
+* `Competitive Programming <http://www.comp.nus.edu.sg/~stevenha/myteaching/competitive_programming/cp1.pdf>`_, Steven Halim
 
 **Liens**
 
@@ -157,6 +126,8 @@ Le cours sera évalué avec un :ref:`projet informatique <l-projinfo2a>`.
 
 * `Machine Learning par Andrew Y. Ng <https://www.class-central.com/mooc/835/coursera-machine-learning>`_
 * `Coursera Machine Learning <https://www.coursera.org/course/ml>`_
+* `Coursera Machine Algorithm <https://www.coursera.org/course/algo>`_
+* `CSE373 - Analysis of Algorithms - 2007 SBU <https://www.youtube.com/playlist?list=PL5F43156F3F22C349>`_
 
 **Articles d'auteurs très connus**
 
@@ -174,6 +145,12 @@ Le cours sera évalué avec un :ref:`projet informatique <l-projinfo2a>`.
 * `Vowpal Wabbit <https://github.com/JohnLangford/vowpal_wabbit/wiki>`_
 * `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
 
+**Compétition de code**
+
+* `Google Code Jam <https://code.google.com/codejam>`_
+* `TopCoder <http://www.topcoder.com/>`_
+* `UVa Online Judge <http://uva.onlinejudge.org/>`_
+
 
 Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_ :
 
@@ -187,6 +164,6 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
     td_2a_correction
     td_2a_s5_synthese
     debutermlprojet
-    
+    specials/algorithm_culture
 
     
