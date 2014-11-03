@@ -17,4 +17,5 @@ correction
     TD 4A : Machine Learning et Marketting <notebooks/td2a_correction_session_4A>
     TD 4B : Culture algorithmique <notebooks/td2a_correction_session_4B>
     TD 5 : Modèles de données <notebooks/td2a_correction_session_5>
+    TD 6 : Problèmes et algorithmes <notebooks/td2a_correction_session_6>
     

@@ -55,8 +55,8 @@ Les outils Python simplifie la communication avec le cluster.
 
 - Séance 6 : premier job Map/Reduce
     * travaux pratiques
-        * `Cloudera <http://www.cloudera.com/content/cloudera/en/home.html>`_ : :ref:`Séance 6 : <td3acenoncesession6rst>`  (:ref:`correction <td3acorrectionsession6rst>`)
-        * `Azure HDInsight <http://azure.microsoft.com/fr-fr/services/hdinsight/>`_ : :ref:`Séance 6 : <td3acenoncesession6brst>`  (:ref:`correction <td3acorrectionsession6brst>`)
+        * `Cloudera <http://www.cloudera.com/content/cloudera/en/home.html>`_ :ref:`Séance 6 : <td3acenoncesession6rst>`  (:ref:`correction <td3acorrectionsession6rst>`)
+        * `Azure HDInsight <http://azure.microsoft.com/fr-fr/services/hdinsight/>`_ :ref:`Séance 6 : <td3acenoncesession6brst>`  (:ref:`correction <td3acorrectionsession6brst>`)
     * contenu
         * manipulation de fichiers avec `HDFS <http://hadoop.apache.org/docs/r1.2.1/hdfs_design.html>`_
         * premier job avec `PIG-latin <https://pig.apache.org/docs/r0.7.0/piglatin_ref2.html>`_ [#fp1]_
