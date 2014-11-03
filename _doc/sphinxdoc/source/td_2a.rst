@@ -115,12 +115,14 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
             * `maximum cut <http://en.wikipedia.org/wiki/Maximum_cut>`_ **algo**
             * `graphe bi-parti <http://fr.wikipedia.org/wiki/Graphe_biparti>`_ **déf**
             * `PageRank <http://fr.wikipedia.org/wiki/PageRank>`_ **algo**
+            * `Appariement <http://fr.wikipedia.org/wiki/Couplage_(th%C3%A9orie_des_graphes)>`_, `Edmonds Blossum <http://en.wikipedia.org/wiki/Blossom_algorithm>`_ **déf/algo**
         * Autre - texte - statistique
             * `distance de Jaccard <http://fr.wikipedia.org/wiki/Indice_et_distance_de_Jaccard>`_ **algo**
             * `n-grammes <http://fr.wikipedia.org/wiki/N-gramme>`_ **déf**
             * `table de hashage <http://fr.wikipedia.org/wiki/Table_de_hachage>`_ **déf**
             * `codage Huffman <http://fr.wikipedia.org/wiki/Codage_de_Huffman>`_ (voir aussi `LZ77, LZ78 <http://fr.wikipedia.org/wiki/LZ77_et_LZ78>`_) **algo**
             * `bootstrap, intervalles de confiance <http://fr.wikipedia.org/wiki/Bootstrap_(statistiques)#Intervalle_de_confiance>`_ **algo**
+            * `filtre de Bloom <http://fr.wikipedia.org/wiki/Filtre_de_Bloom>`_ **algo**
         * Programmation
             * `itérateur <http://fr.wikipedia.org/wiki/It%C3%A9rateur>`_ (mot-clé `yield <http://sametmax.com/comment-utiliser-yield-et-les-generateurs-en-python/>`_) **déf**
             * `mémoïzation <http://fr.wikipedia.org/wiki/M%C3%A9mo%C3%AFsation>`_ **déf** (voir aussi `Mémoïzation d'une fonction Python <http://sametmax.com/memoization-dune-fonction-python/>`_)
