@@ -46,8 +46,7 @@ Travail attendu
 * Une conclusion : le modèle est-il exploitable ou ses performances sont-elles trop faibles ?
 * Prolongements / perspectives : le problème à résoudre est souvent extrait de son contexte, 
   il s'agit de le replacer dans un environnement industriel. Cela peut passer par 
-  une réflexion autour des questions suivantes 
-  (qui ne s'appliquent pas forcément à tous les jeux de données) :
+  une réflexion autour des questions suivantes (qui ne s'appliquent pas forcément à tous les jeux de données) :
     * Le modèle est-il exploitable avec ses performances ?
     * Est-il exploitable seul ou associé à autre chose (est-il une feature d'un autre modèle) ?
     * Quel est sa durée de vie ? Ses performances vont-elle se dégrader dans le temps ? Peut-on le détecter ?
