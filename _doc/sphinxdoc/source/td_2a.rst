@@ -79,7 +79,7 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
 - **TD 6 : algorithme et puzzle**    
     * Présentations
         * `programmation dynamique <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance2.pdf>`_
-        * `graphe et  <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance3.pdf>`_
+        * `graphes et algorithmes <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance3.pdf>`_
     * notebooks
         * correction de l'exercice de recouvrement proposé à la séance 4 (:ref:`TD 4B : Culture algorithmique <td2acenoncesession4brst>` - :ref:`correction <td2acorrectionsession4brst>`)
         * :ref:`TD 6 : Problèmes et algorithmes <td2acenoncesession6rst>` - :ref:`correction <td2acorrectionsession6rst>` 
