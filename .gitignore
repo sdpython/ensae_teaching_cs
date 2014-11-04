@@ -266,4 +266,5 @@ _doc/presentations/*/cours*.pdf
 README
 */notebooks/td3a/stderr.txt
 */notebooks/td3a/results.txt
+*/notebooks/td3a/result*.txt
 
