@@ -48,10 +48,10 @@ Les trois séances suivantes sont plus appliquées et dédiées à la découvert
 de `Hadoop <http://fr.wikipedia.org/wiki/Hadoop>`_, un environnement
 qui permet d'exécuter des tâches 
 `Map/Reduce <http://fr.wikipedia.org/wiki/MapReduce>`_. 
-Plusieurs angles d'approche sont possibles. Celles retenues est l'utilisation
+Plusieurs angles d'approche sont possibles. Celle retenue est l'utilisation
 du langage `PIG-latin <http://en.wikipedia.org/wiki/Pig_Latin>`_ dont la logique
 ressemble beaucoup à celle du `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_.
-Les outils Python simplifie la communication avec le cluster.
+Les outils Python [#fp1]_ simplifient la communication avec le cluster.
 
 - Séance 6 : premier job Map/Reduce
     * travaux pratiques
@@ -59,7 +59,7 @@ Les outils Python simplifie la communication avec le cluster.
         * Azure HDInsight - :ref:`Séance 6 : <td3acenoncesession6brst>`  (:ref:`correction <td3acorrectionsession6brst>`)
     * contenu
         * manipulation de fichiers avec `HDFS <http://hadoop.apache.org/docs/r1.2.1/hdfs_design.html>`_
-        * premier job avec `PIG-latin <https://pig.apache.org/docs/r0.7.0/piglatin_ref2.html>`_ [#fp1]_
+        * premier job avec `PIG-latin <https://pig.apache.org/docs/r0.7.0/piglatin_ref2.html>`_ [#fp2]_
         * parallèle entre la syntaxe `PIG <http://pig.apache.org/docs/r0.12.1/basic.html>`_ et `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_
 
 
@@ -108,12 +108,30 @@ Les outils Python simplifie la communication avec le cluster.
     
 .. rubric:: Footnotes
 
-.. [#fp1] Les exercices des notebooks s'appuient sur le langage [PIG-latin](http://en.wikipedia.org/wiki/Pig_Latin) qui est un langage
+.. [#fp1] Pour PIG version Azure, il suffit d'ajouter le module `azure <https://github.com/Azure/azure-sdk-for-python>`_.
+          Pour PIG version Coudera, il faut ajouter les modules
+          `ansiconv <http://pythonhosted.org/ansiconv/>`_,
+          `ansi2html <https://github.com/ralphbean/ansi2html/>`_.
+           si vous avez utilisé `Anaconda <http://continuum.io/downloads#py34>`_. 
+           Il faut ajouter également
+          `paramiko <http://www.paramiko.org/>`_, `ecdsa <https://pypi.python.org/pypi/pycrypto/>`_, 
+          `pycrypto <https://pypi.python.org/pypi/pycrypto/>`_ si vous avez utilisé 
+          `WinPython <http://winpython.sourceforge.net/>`_. Enfin, avec 
+          `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_, il faut
+          mettre à jour le module lancer à nouveau l'installation pour obtenir
+          les modules manquants::
+          
+            from pymyinstall import datascientist
+            datascientist ("install", azure=True)          
+
+.. [#fp2] Les exercices des notebooks s'appuient sur le langage `PIG-latin` <http://en.wikipedia.org/wiki/Pig_Latin>`_ qui est un langage
           haut niveau permettant d'écrire des tâches Map Reduce complexes. Le script est ensuite converti en un ensemble de 
-          [mapper / reducer](http://hadooptutorial.wikispaces.com/MapReduce). Ce langage suffit dans la plupart des cas
+          `mapper / reducer <http://hadooptutorial.wikispaces.com/MapReduce>`_. 
+          Ce langage suffit dans la plupart des cas
           et le temps de développement est très réduit par rapport à un langage plus bas niveau.
-          L'autre langage haut niveau est [Hive](https://hive.apache.org/). Sa syntaxe est très proche de celle
-          du [SQL](http://fr.wikipedia.org/wiki/Structured_Query_Language). [PIG](http://en.wikipedia.org/wiki/Pig_Latin) a été choisi
-          car il offre plus de fonctionnalités que [Hive](https://hive.apache.org/) pour un coût d'apprentissage
+          L'autre langage haut niveau est `Hive <https://hive.apache.org/>`_. Sa syntaxe est très proche de celle
+          du `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_. 
+          `PIG <http://en.wikipedia.org/wiki/Pig_Latin>`_ a été choisi
+          car il offre plus de fonctionnalités que `Hive <https://hive.apache.org/>`_ pour un coût d'apprentissage
           très raisonnable.
           

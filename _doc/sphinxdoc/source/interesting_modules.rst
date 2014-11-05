@@ -9,7 +9,7 @@ Modules intéressants (pour un ENSAE)
 Les modules indispensables sont intégrés à la distribution 
 `Anaconda <http://continuum.io/downloads#py34>`_ ou `WinPython <http://winpython.sourceforge.net/>`_.
 Une autre solution est d'utiliser le module
-`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_::
+`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_ ::
 
     from pymyinstall import datascientist
     datascientist ("install")
@@ -19,6 +19,13 @@ Cela suppose que `pip <http://pip.readthedocs.org/en/latest/>`_ est installé
 Tous ces modules ont quelques dépendances optionnelles 
 qui ne sont pas incluses dans cette liste mais dont l'usage est rare.
 
+Parmi ces trois options, `Anaconda <http://continuum.io/downloads#py34>`_ est la plus à jour
+et la plus réactive. `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_ 
+contient la liste de tous les modules utilisés pour ces enseignements ::
+
+    from pymyinstall import datascientist
+    datascientist ("install", azure = True)
+        
 
 Les indispensables
 ------------------
@@ -32,7 +39,7 @@ Les indispensables
 Autres dépendances
 ------------------
 
-*ipython :*
+**ipython :**
 
     * `python-dateutils <https://labix.org/python-dateutil>`_ : boîte à outils pour les dates
     * `jinja2 <http://jinja.pocoo.org/>`_ : moteur de rendu HTML
@@ -42,16 +49,16 @@ Autres dépendances
     * `six <https://pythonhosted.org/six/>`_ : librairie de conversion entre Python 2 et 3
     * `tornado <http://www.tornadoweb.org/en/stable/>`_ : server web
     
-*plugin ipython :*
+**plugin ipython :**
 
     * `ipyD3 <https://github.com/z-m-k/ipyD3>`_ : plugin pour utiliser `d3.js <http://d3js.org/>`_ dans iPython
     * `mpld3 <http://mpld3.github.io/>`_ : pour afficher un graph Matplotlib sous forme de graphe `d3.js <http://d3js.org/>`_
     
-*matplotlib :*
+**matplotlib :**
 
     * `pyparsing <http://pyparsing.wikispaces.com/>`_ : pour définir une gramme et interpréter un langage
 
-*plugin matplotlib :*
+**plugin matplotlib :**
 
     * `prettyplotlib <http://olgabot.github.io/prettyplotlib/>`_
     
@@ -116,11 +123,18 @@ Python et autres langages
     * `rpy2 <https://bitbucket.org/lgautier/rpy2>`_ : Python et R
     * `shapely <https://github.com/Toblerity/Shapely>`_ : Python et `GEOS <http://trac.osgeo.org/geos/>`_
     
-Boîte à outils
+Internet / SSH
 --------------
 
     * `requests <http://docs.python-requests.org/>`_ : pratique pour se débrouiller avec internet (`exemples <http://docs.python-requests.org/en/latest/user/quickstart/#redirection-and-history>`_)
-    
+    * `paramiko <http://www.paramiko.org/>`_ : utile pour créer une connexion SSH
+    * `ecdsa <https://pypi.python.org/pypi/pycrypto/>`_ : dépendance de paramiko
+    * `pycrypto <https://pypi.python.org/pypi/pycrypto/>`_ : dépendance de paramiko
+    * `ansiconv <http://pythonhosted.org/ansiconv/>`_ : conversion de texte ANSI en unicode (sortie linux)
+    * `ansi2html <https://github.com/ralphbean/ansi2html/>`_ : conversion de texte ANSI en HTML (sortie linux)
+    * `azure <https://github.com/Azure/azure-sdk-for-python>`_ : pour communiquer avec Azure
+          
+
 Pour faire du machine learning sans programmer
 ----------------------------------------------
 
@@ -139,4 +153,9 @@ Génération d'une documentation et thème Sphinx
     * `sphinx_readable_theme <https://sphinx-readable-theme.readthedocs.org/en/latest/>`_: voir `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
     * `sphinxjp.themes.sphinxjp <https://pythonhosted.org/sphinxjp.themes.sphinxjp/>`_ : voir `pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/>`_
     * `hachibee_sphinx_theme <http://hachibeedi.github.io/Sphinx-hachibee-theme/index.html>`_ : voir `pyrsslocal <http://www.xavierdupre.fr/app/pyrsslocal/helpsphinx/>`_
+    
+Python
+------
+
+    * `pycontracts <https://andreacensi.github.io/contracts>`_ : utilisation des annotations en Python pour vérifier un code
     
