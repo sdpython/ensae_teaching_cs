@@ -42,13 +42,15 @@ Contenu des enseignements
         * :ref:`Exercices d'algorithmie <l-exoalgo>`
         * :ref:`Exposés divers non abordés en cours <l-extra>`
         * :ref:`Jeux autour des données <l-jdonnees>`
-    * Autres documents
+    * Présentations
         * `Présentation ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_
         * `Présentation ENSAE 2A - Données et machine learning <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_
+        * `Présentation ENSAE 3A - Map/Reduce <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_
+    * Autres documents
         * :ref:`Articles, Références, Blog <l-biblio>`
         * :ref:`Modules <modulesi>`
         * :ref:`Outils, ressources pour développer <l-devtools>`
-        * :ref:`Examens passés <l-examens>`
+        * :ref:`Examens passés <l-examens>` (1A)
         * :ref:`Projets informatiques <l-projinfo>`
         * :ref:`Coding Party <l-codingparty>`
     * Projets informatiques
