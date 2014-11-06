@@ -54,6 +54,7 @@ ressemble beaucoup à celle du `SQL <http://fr.wikipedia.org/wiki/Structured_Que
 Les outils Python [#fp1]_ simplifient la communication avec le cluster.
 
 - Séance 6 : premier job Map/Reduce
+    * `ENSAE 3A - Map/Reduce en pratique <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_
     * travaux pratiques
         * Cloudera - :ref:`Séance 6 : <td3acenoncesession6rst>`  (:ref:`correction <td3acorrectionsession6rst>`)
         * Azure HDInsight - :ref:`Séance 6 : <td3acenoncesession6brst>`  (:ref:`correction <td3acorrectionsession6brst>`)

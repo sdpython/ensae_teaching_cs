@@ -1,6 +1,6 @@
 ﻿
-ENSAE 3A - Map/Reduce sur un Cluster
-====================================
+ENSAE 3A - Map/Reduce en pratique
+=================================
 
 .. revealjs:: ENSAE 3A - The Hitchhiker Guide...
     :data-background: #DDDDDD
