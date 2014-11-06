@@ -1,15 +1,13 @@
 ﻿
-ENSAE 2A - Programmation
-========================
+ENSAE 3A - Map/Reduce sur un Cluster
+====================================
 
-.. revealjs:: ENSAE 2A - Données, Machine Learning et Programmation
+.. revealjs:: ENSAE 3A - The Hitchhiker Guide...
     :data-background: #DDDDDD
 
     .. image:: _static/project_ico.png
 
-    Antoine Thabault -
-    Nicolas Rousset -
-    Jérémie Jakubowicz -
+    Matthieu Durut
     `Xavier Dupré <http://www.xavierdupre.fr/>`_ 
 
     **Assistant à l'ENSAE**
@@ -22,49 +20,39 @@ ENSAE 2A - Programmation
 
     .. revealjs:: Déroulement du cours 
     
-            * 6 séances de 4h
+            * 8 séances de 2h
             * 1 projet
 
         **Plan complet**
         
-        `séances <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_2a.html>`_
+        `séances <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_3a.html>`_
         
-        De lundi 22 septembre au lundi 3 novembre 
-        (excepté le 27 Octobre) de 8h30 à 13h.
-        
-        Deux suivis de projets sont prévus en fin de semestre.
-
     .. revealjs:: Objectifs du cours
     
-        * Passer moins de temps à manipuler les données
-        * Passer plus de temps à les modéliser
-        * Connaître les outils pour être agile
-        * Savoir faire rapidement une étude statistique simple
-        * Avoir les moyens de se débrouiller en toute circonstance
+        * Initiation au calcul distribué
+        * Exercices pratiques avec Map / Reduce
         
     .. revealjs:: Notebooks
     
-        Le cours utilise les `notebooks <http://ipython.org/notebook.html>`_.
+        Les exercices utilisent les `notebooks <http://ipython.org/notebook.html>`_.
         
         .. image:: _static/notsnap.png       
 
         La plupart des exemples sur Internet sont disponibles sous cette forme.
         
-    .. revealjs:: Le langage Python et Machine Learning
+    .. revealjs:: Le langage Python
     
         Pourquoi ?
 
         * Le langage est open source et donc gratuit.
         * Il fonctionne sur tous les OS (Windows, Linux, Mac, bientôt `IPad <http://computableapp.com/>`_).
         * Il dispose de nombreuses extensions, il peut tout faire.
-        * Il est devenu une alternative intéressante pour un statisticien depuis 2013 et quelques modules :
-            * `pandas <http://pandas.pydata.org/>`_, `ipython <http://ipython.org/>`_, `matplotlib <http://matplotlib.org/>`_
-            * `numpy <http://www.numpy.org/>`_, `scikit-learn <http://scikit-learn.org/stable/>`_, `statsmodels <http://statsmodels.sourceforge.net/devel/index.html>`_
         * Les notebooks se répandent à grande vitesse : `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_.
+        * Même si les calculs distribués ne se font pas en Python, le langage sert de télécommande programmable.
         
     .. revealjs:: Liens
 
-        * `Contenu du cours <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_2a.html>`_
+        * `Contenu du cours <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_3a.html>`_
         * `Blog <http://www.xavierdupre.fr/blog/xd_blog_nojs.html>`_
         * `Bibliographie <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/biblio.html>`_
         * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
@@ -83,7 +71,8 @@ ENSAE 2A - Programmation
         
             * `pyensae <https://github.com/sdpython/pyensae/>`_
             * `pyquickhelper <https://github.com/sdpython/pyquickhelper/>`_
-            * `pymyinstall <https://github.com/sdpython/pymyinstall/>`_        
+            * `pymyinstall <https://github.com/sdpython/pymyinstall/>`_
+            * `azure <https://github.com/Azure/azure-sdk-for-python>`_
             
         Vous pouvez participer.
         
@@ -98,6 +87,7 @@ ENSAE 2A - Programmation
         * Le système d'exploitation est Windows.
         * L'environnement est installé pour vous (`WinPython <http://winpython.sourceforge.net/>`_)
         * Vous pouvez le recopier tel quel chez vous (avec un clé USB).
+        * `Anaconda <http://continuum.io/downloads#py34>`_ est plus complet et plus réactif
         
     .. revealjs:: Python chez vous
 
@@ -109,7 +99,7 @@ ENSAE 2A - Programmation
     .. revealjs:: Version de Python
     
         * Le cours est construit pour la version 3.3+.
-        * Les exemples ne marcheront pas tous sur la version 2.7.
+        * Les exemples ne marcheront pas sur la version 2.7.
         * Il faut choisir la version *amd64*. C'est la seule capable de tirer parti d'une mémoire de plus de 4 Go.
         
     .. revealjs:: Notebook
@@ -120,128 +110,9 @@ ENSAE 2A - Programmation
             * Ils ne sont pas pratiques pour écrire de longs programmes.
             * Ils sont très utilisés, plein d'exemples sur Internet
         
-    .. revealjs:: Editeur 
-    
-        On n'écrit pas de modules ou de grands programmes dans un notebook. Il faut un éditeur.
-        Il existe de nombreuses options :
-            
-            * `éditeurs, outils <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/devtools.html#l-devtools>`_
-        
-        La version gratuite de `PyCharm <http://www.jetbrains.com/pycharm/>`_ contient tout ce qu'il faut.
-        Il détecte quelques erreurs avant l'exécution.
-        Il existe aussi `WingIDE <https://wingware.com/>`_.
-        
-    .. revealjs:: Environnement scientifique
-
-        * `Spyder <http://pythonhosted.org//spyder/>`_ (`Python <https://www.python.org/>`_) équivalent de `RStudio <http://www.rstudio.com/>`_ (`R <http://www.r-project.org/>`_)
-        * 4 fenêtres
-            * script
-            * command line
-            * explorateur de données
-            * graphiques
-        
-    .. revealjs:: Démo
-    
-        * Editeur de texte : **Scite**
-        * Environnement mathématique : **Spyder**
-        * Notebooks : **IPython/Notebooks**
-        
-        Et des éditeurs plus complets :
-        
-        * `PyCharm <http://www.jetbrains.com/pycharm/>`_
-        * `PyTools <http://pytools.codeplex.com/>`_ 
-        
-.. revealjs:: Contenu
-    :data-background: #DDDDFF
-    
-    * Manipuler les données
-    * Calcul matriciel
-    * Calcul distribué
-    * Visualisation
-    * Machine learning
-    * Algorithmie
-    
-.. revealjs:: 
-    :data-background: #DDDDDD
-
-    .. revealjs:: Manipuler les données
-    
-        * Importer/Exporter des données en différents formats
-        * Fusionner, filter, grouper
-        * Echantillonner
-        
-        ...
-        
-        **Module de référence**
-        
-        * `pandas <http://pandas.pydata.org/>`_
-    
-    .. revealjs:: Calcul matriciel
-    
-        * Plus de choses en moins de lignes et plus rapides.    
-        * Python a de `bonnes performances <http://julialang.org/benchmarks/>`_
-        
-        ...
-        
-        **Module de référence**
-        
-        `numpy <http://www.numpy.org/>`_ 
-    
-    .. revealjs:: Calcul distribué
-    
-        * distribuer pour aller plus vite
-        * CPU - sur plusieurs machines ou threads (avec IPython)
-        * GPU - Monte Carlo - *non abordé cette année*
-        
-        ...
-        
-        **Module de référence**
-        
-        `ipython <http://ipython.org/>`_
-    
-    .. revealjs:: Visualisation
-        
-        * De moins en moins de tableaux
-        * De plus en plus de graphiques.    
-        * De plus en plus interactifs.
-        
-        ...
-        
-        **Module de référence**
-        
-        * `matplotlib <http://matplotlib.org/>`_
-    
-    .. revealjs:: Machine Learning, Statistiques
-    
-        * Statistiques descriptives
-        * Clustering
-        * Apprentissage statistique
-    
-        ...
-    
-        **Module de référence**
-    
-        * `scikit-learn <http://scikit-learn.org/stable/>`_, `statsmodels <http://statsmodels.sourceforge.net/devel/index.html>`_
-        
-        Gaël Varoquaux (`INRIA <http://www.inria.fr/>`_) viendra présenter ce module en tant que principal contributeur le 6 Octobre à 11h.
-    
-    .. revealjs:: Algorithmie
-    
-        * Manipuler 100 millions de lignes requiert d'être astucieux
-        * Cas récurrents :
-            * joindre deux sources de données
-            * grouper, trier dans le bon ordre sans perdre du temps
-        * Porte d'entrée aux entretiens d'embauche dans les startups
-    
-        ...
-    
-        **Module de référence**
-        
-        Vous
-    
 .. revealjs:: Les données comme terrain de jeu
     :data-background: #DDDDFF
-        
+
 .. revealjs:: 
     :data-background: #DDDDDD
         
@@ -308,17 +179,42 @@ ENSAE 2A - Programmation
             * Résultats expérimentaux qu'on garde
             * Résilience des mails
             * Vol de portable
+            * Les mots de passe qu'on laisse dans les notebooks
         
 
-.. revealjs:: 
+.. revealjs:: Contenu
+    :data-background: #DDDDFF
+    
+    * Séance 1-5 : éléments théoriques et logiciels
+    * Séance 6-8 : Map / Reduce sur un vrai cluster
+    
+.. revealjs::    
     :data-background: #DDDDDD
-    
-        `Séance 1 : données et graphes en quelques lignes <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td2a_cenonce_session_1.html>`_
-        
-        DataFrame, Matplotlib
-        
-        A vous.
 
+    .. revealjs:: Map / Reduce
+
+        * C'est une sorte de SQL distribué.
+        * Pratique pour toutes sortes d'aggrégation.
+        * A utiliser avec précaution pour des calculs sur des graphes.
         
+    .. revealjs:: Cluster
     
+        * Deux solutions
+            * Azure HD Insight : `Microsoft, partenaire de la filière Data Science de l'ENSAE ParisTech avec Microsoft Azure Machine <http://www.microsoft.com/france/Hub-Presse/communiques-de-presse/fiche-communique.aspx?eid=f7e7f695-fb08-4c6d-b4ec-3cde562ba429>`_
+            * Cloudera : distribution de Hadoop sur Linux
+        * Un seul langage PIG et presque les mêmes TDs
+            * Les mêmes scripts fonctionneront sur les deux systèmes
+            * Différence minimes au niveau des commandes et des chemins des données
+        
+    .. revealjs:: Accès
+    
+        * Azure : deux clusters
+            * un petit pour tester : disponible en permanence
+            * un plus gros : ouvert pendant les projets
+            * des identifiants unique pour tous les élèves
+        * Cloudera
+            * un cluster disponible en permanence (sauf notification)
+            * un identifiant différent pour chaque utilisateur
+        
+        
 

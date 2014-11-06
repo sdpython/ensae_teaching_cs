@@ -130,7 +130,8 @@ if "build_sphinx" in sys.argv:
                           ("html", "build3", {"html_theme":"bootstrap"}, "source/conf3"),
                           ] )
         
-elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv :
+elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv \
+     or "build_pres_3A" in sys.argv :
     # we generate the documentation for the presentation
     
     def get_executables_path() :
@@ -148,6 +149,7 @@ elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv :
         return res    
         
     suffix = "_2A" if "build_pres_2A" in sys.argv else ""
+    suffix = "_3A" if "build_pres_3A" in sys.argv else ""
     
     #  run the documentation generation
     if sys.platform.startswith("win"):

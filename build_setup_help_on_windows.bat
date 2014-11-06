@@ -53,6 +53,7 @@ rem help
 
 %pythonexe% -u setup.py build_pres
 %pythonexe% -u setup.py build_pres_2A
+%pythonexe% -u setup.py build_pres_3A
 %pythonexe% -u setup.py build_sphinx
 echo #######################################################
 
@@ -62,8 +63,10 @@ if not exist dist\html3 mkdir dist\html3
 if not exist dist\latex mkdir dist\latex
 if not exist dist\html_pres mkdir dist\html_pres
 if not exist dist\html_pres_2A mkdir dist\html_pres_2A
+if not exist dist\html_pres_3A mkdir dist\html_pres_3A
 
 xcopy /E /C /I /Y _doc\presentation_2A\build\html dist\html_pres_2A
+xcopy /E /C /I /Y _doc\presentation_3A\build\html dist\html_pres_3A
 xcopy /E /C /I /Y _doc\presentation\build\html dist\html_pres
 xcopy /E /C /I /Y _doc\sphinxdoc\build\html dist\html
 xcopy /E /C /I /Y _doc\sphinxdoc\build2\html dist\html2
