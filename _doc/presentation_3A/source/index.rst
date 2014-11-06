@@ -185,8 +185,8 @@ ENSAE 3A - Map/Reduce sur un Cluster
 .. revealjs:: Contenu
     :data-background: #DDDDFF
     
-    * Séance 1-5 : éléments théoriques et logiciels
-    * Séance 6-8 : Map / Reduce sur un vrai cluster
+    * Séances 1-5 : éléments théoriques et logiciels
+    * Séances 6-8 : Map / Reduce sur un vrai cluster
     
 .. revealjs::    
     :data-background: #DDDDDD
@@ -216,5 +216,39 @@ ENSAE 3A - Map/Reduce sur un Cluster
             * un cluster disponible en permanence (sauf notification)
             * un identifiant différent pour chaque utilisateur
         
-        
+    .. revealjs:: Approche du cours
 
+        * forte culture informatique
+            * interfaces graphiques limitées
+            * fichiers texte et ligne de commande plus efficaces
+        * `notebook <http://ipython.org/notebook.html>`_ + `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
+            * accès via des commandes magiques
+            * accès depuis le notebook
+            * python est une sorte de télécommande programmation
+
+    .. revealjs:: Choix de langage
+
+        * `PIG <http://en.wikipedia.org/wiki/Pig_Latin>`_ très proche du SQL sans index
+            * langage haut niveau, programme concis
+            * plus riche que `Hive <https://hive.apache.org/>`_
+        * Python
+            * notebook
+            * `streaming <http://hadoop.apache.org/docs/r1.2.1/streaming.html>`_
+
+    .. revealjs:: Objectif
+    
+        * introduire et pratiquer Map / Reduce
+        * réduire le coût d'entrée technique
+
+    .. revealjs:: Séances 6-8
+    
+        * S6 : introduction à PIG, parallèle avec SQL
+        * S7 : streaming, PIG + python
+        * S8 : coût selon la configuration des données et comment y remédier
+    
+.. revealjs:: Hadoop
+    :data-background: #DDDDFF
+    
+    `Notebook et PIG <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_3a.html>`_
+    
+    

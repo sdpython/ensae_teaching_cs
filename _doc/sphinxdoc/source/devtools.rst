@@ -25,6 +25,8 @@ qui facilitent l'archivage. Ils sont tellement pratiques qu'on a même du mal
 
 * `GitHub <https://github.com/>`_
 * `BitBucket <https://bitbucket.org/>`_
+* `SourceTree <http://www.sourcetreeapp.com/>`_
+* `TortoiseGit <https://code.google.com/p/tortoisegit/>`_
 
 
 **Archivage distant**
@@ -80,5 +82,5 @@ Ressources
 * `stackoverflow <http://stackoverflow.com/>`_ : énorme forum de discussion sur tout ce qui touche à la programmation
 * `Jardin Zen Css <http://www.csszengarden.com/>`_ (la même page avec une multitude de styles différents)
 * `Le blog univers domotique <http://blog.univers-domotique.com/>`_
-
+* `Tutoriel sur GIT <http://sixrevisions.com/resources/git-tutorials-beginners/>`_
 

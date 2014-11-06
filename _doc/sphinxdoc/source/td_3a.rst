@@ -63,6 +63,19 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
         * parallèle entre la syntaxe `PIG <http://pig.apache.org/docs/r0.12.1/basic.html>`_ et `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_
 
 
+Getting started
++++++++++++++++
+
+
+* `Anaconda <http://continuum.io/downloads#py34>`_
+* `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
+* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
+* `azure <https://github.com/Azure/azure-sdk-for-python>`_
+
+
+Bibliographie
++++++++++++++
+
 **Articles**
 
 * `Large Scale Distributed Deep Networks <http://www.cs.toronto.edu/~ranzato/publications/DistBeliefNIPS2012_withAppendix.pdf>`_, Jeffrey Dean, Greg S. Corrado, Rajat Monga, Kai Chen, Matthieu Devin, Quoc V. Le, Mark Z. Mao, Marc'Aurelio Ranzato, Andrew Senior, Paul Tucker, Ke Yang, Andrew Y. Ng
