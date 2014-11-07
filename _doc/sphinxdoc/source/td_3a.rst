@@ -64,14 +64,26 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
         * parallèle entre la syntaxe `PIG <http://pig.apache.org/docs/r0.12.1/basic.html>`_ et `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_
 
 
+.. _l-td3a-start:
+
 Getting started
 +++++++++++++++
 
+La plupart des modules requis sont inclus dans la distribution
+`Anaconda <http://continuum.io/downloads#py34>`_ de Python. A ceux-ci, il faut ajouter :
 
-* `Anaconda <http://continuum.io/downloads#py34>`_
 * `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
-* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
+* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ (version >= 0.9.1)
 * `azure <https://github.com/Azure/azure-sdk-for-python>`_
+
+Si vous avez uilisé le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_
+(voir :ref:`l-install`), il suffit d'exécuter ::
+
+        from pymyinstall import datascientist
+        datascientist("install", azure = True)
+
+
+.. _l-td3a-biblio:
 
 
 Bibliographie
@@ -87,7 +99,7 @@ Bibliographie
 * `Low-dimensional Embeddings for Interpretable Anchor-based Topic Inference <http://mimno.infosci.cornell.edu/papers/EMNLP2014138.pdf>`_, Moontae Lee, David Mimno
 * `Don't use Hadoop - your data isn't that big <http://www.chrisstucchio.com/blog/2013/hadoop_hatred.html>`_
 
-**Bibliographie**
+**Livres**
 
 * `Thinking in C++ <http://mindview.net/Books/TICPP/ThinkingInCPP2e.html>`_, Bruce Eckel
 * `Effective C++ <http://www.aristeia.com/books.html>`_, Scott Meyers
@@ -108,6 +120,7 @@ Bibliographie
 * `15+ Great Books for Hadoop <http://blog.matthewrathbone.com/2013/05/31/hadoop-resources---books.html>`_
 * `A Roundup of Recent Text Analytics and Vis Work <http://blogger.ghostweather.com/2014/10/a-roundup-of-recent-text-analytics-and.html>`_
 * :ref:`l-azurep`
+* `IPython Notebook sur Azure <http://azure.microsoft.com/fr-fr/documentation/articles/virtual-machines-python-ipython-notebook/>`_
 
 **Revue de presse**
 
@@ -126,8 +139,8 @@ Bibliographie
           Pour PIG version Coudera, il faut ajouter les modules
           `ansiconv <http://pythonhosted.org/ansiconv/>`_,
           `ansi2html <https://github.com/ralphbean/ansi2html/>`_.
-           si vous avez utilisé `Anaconda <http://continuum.io/downloads#py34>`_. 
-           Il faut ajouter également
+          si vous avez utilisé `Anaconda <http://continuum.io/downloads#py34>`_. 
+          Il faut ajouter également
           `paramiko <http://www.paramiko.org/>`_, `ecdsa <https://pypi.python.org/pypi/pycrypto/>`_, 
           `pycrypto <https://pypi.python.org/pypi/pycrypto/>`_ si vous avez utilisé 
           `WinPython <http://winpython.sourceforge.net/>`_. Enfin, avec 
@@ -138,7 +151,7 @@ Bibliographie
             from pymyinstall import datascientist
             datascientist ("install", azure=True)          
 
-.. [#fp2] Les exercices des notebooks s'appuient sur le langage `PIG-latin` <http://en.wikipedia.org/wiki/Pig_Latin>`_ qui est un langage
+.. [#fp2] Les exercices des notebooks s'appuient sur le langage `PIG-latin <http://en.wikipedia.org/wiki/Pig_Latin>`_ qui est un langage
           haut niveau permettant d'écrire des tâches Map Reduce complexes. Le script est ensuite converti en un ensemble de 
           `mapper / reducer <http://hadooptutorial.wikispaces.com/MapReduce>`_. 
           Ce langage suffit dans la plupart des cas
@@ -146,6 +159,7 @@ Bibliographie
           L'autre langage haut niveau est `Hive <https://hive.apache.org/>`_. Sa syntaxe est très proche de celle
           du `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_. 
           `PIG <http://en.wikipedia.org/wiki/Pig_Latin>`_ a été choisi
-          car il offre plus de fonctionnalités que `Hive <https://hive.apache.org/>`_ pour un coût d'apprentissage
+          car `Hive <https://hive.apache.org/>`_ est plus un moyen de lancer rapidement de petites
+          tâches, PIG est prévu pour des tâches plus conséquences pour un coût d'apprentissage
           très raisonnable.
           

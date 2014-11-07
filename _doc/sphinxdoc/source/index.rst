@@ -92,6 +92,8 @@ En outre, quatre modules ont été développés pour ces enseignements :
 * `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_ : installe facilement des modules
 * `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_ : ces enseignements compilés sous forme de modules
 
+Si des modules supplémentaires sont nécessaires, ils seront spécifiés sur la page
+de chaque cours : :ref:`l-td3a-start`.
 
 **Installation de Python**
 
@@ -157,13 +159,6 @@ Python
     * `Installation de modules sous Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_  (**modules sous Windows**)
     * `Python is Now the Most Popular Introductory Teaching Language at Top U.S. Universities <http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-us-universities/fulltext>`_
     
-Trucs et astuces en Python
---------------------------
-
-    * `Vérification de types <http://www.xavierdupre.fr/blog/2014-08-20_nojs.html>`_
-    * `Configurer IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_
-    * `Test unitaires <http://sametmax.com/un-gros-guide-bien-gras-sur-les-tests-unitaires-en-python-partie-1/>`_, `partie 2 <http://sametmax.com/un-gros-guide-bien-gras-sur-les-tests-unitaires-en-python-partie-2/>`_
-
 Environnement de développement
 ------------------------------
 

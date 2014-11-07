@@ -94,6 +94,8 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
 Le cours sera évalué avec un :ref:`projet informatique <l-projinfo2a>`.
 
 
+.. _l-td2a-biblio:
+
 Bibliographie
 +++++++++++++
 
@@ -139,6 +141,8 @@ Bibliographie
 * `Tutorial on Practical Prediction Theory for Classification <http://www.jmlr.org/papers/volume6/langford05a/langford05a.pdf>`_, John Langford
 * `Sparse Online Learning via Truncated Gradient <http://jmlr.org/papers/volume10/langford09a/langford09a.pdf>`_, John Langford, Lihong Li, Tong Zhang
 * `Low-dimensional Embeddings for Interpretable Anchor-based Topic Inference <http://mimno.infosci.cornell.edu/papers/EMNLP2014138.pdf>`_, Moontae Lee, David Mimno
+* `ABC model choice via random forests <http://arxiv.org/abs/1406.6288>`_, **todo**
+* `Mondrian Forests: Efficient Online Random Forests <http://arxiv.org/pdf/1406.2673v1.pdf>`_, **todo**
 
 **Librairies de machine learning**
 

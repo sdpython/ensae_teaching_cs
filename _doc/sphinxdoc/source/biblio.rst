@@ -49,8 +49,8 @@ Langage Python
 Installation
 ------------
 
-    * `Installing Scientific Packages for Python3 on MacOS 10.9 Mavericks <http://sebastianraschka.com/Articles/2014_install_python_sci_pkgs.html>`_
     * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
+    * `Installing Scientific Packages for Python3 on MacOS 10.9 Mavericks <http://sebastianraschka.com/Articles/2014_install_python_sci_pkgs.html>`_
 
 Python dans le détail
 ---------------------
@@ -72,6 +72,12 @@ Python dans le détail
     * `A thorough guide to SQLite database operations in Python <http://sebastianraschka.com/Articles/2014_sqlite_in_python_tutorial.html>`_
     * `One line of code cut our Flask page load times by 60% <https://medium.com/@5hreyans/the-one-weird-trick-that-cut-our-flask-page-load-time-by-70-87145335f679>`_
 
+Trucs et astuces en Python
+--------------------------
+
+    * `Vérification de types <http://www.xavierdupre.fr/blog/2014-08-20_nojs.html>`_
+    * `Configurer IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_
+    * `Test unitaires <http://sametmax.com/un-gros-guide-bien-gras-sur-les-tests-unitaires-en-python-partie-1/>`_, `partie 2 <http://sametmax.com/un-gros-guide-bien-gras-sur-les-tests-unitaires-en-python-partie-2/>`_
 
 Machine Learning / Data Science
 -------------------------------
@@ -111,14 +117,17 @@ Enseignements
 -------------
 
     * `Why Do Americans Stink at Math? <http://www.nytimes.com/2014/07/27/magazine/why-do-americans-stink-at-math.html>`_
+    * `Python is Now the Most Popular Introductory Teaching Language at Top U.S. Universities <http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-us-universities/fulltext>`_
     * `Commencez avec Python <http://www.xavierdupre.fr/blog/2014-06-04_nojs.html>`_
     * `Apprendre à programmer aux enfants : Le monde de Reeborg <http://www.xavierdupre.fr/blog/2014-07-12_nojs.html>`_
     * `Scratch <http://scratch.mit.edu/>`_
     
 Papers about machine learning
 -----------------------------
-    * `ABC model choice via random forests <http://arxiv.org/abs/1406.6288>`_
-    * `Mondrian Forests: Effcient Online Random Forests <http://arxiv.org/pdf/1406.2673v1.pdf>`_
+
+    * :ref:`l-td1a-biblio <Bibliographie 1A>` : apprendre à progroammer
+    * :ref:`l-td2a-biblio <Bibliographie 2A>` : Python pour faire des statistiques
+    * :ref:`l-td3a-biblio <Bibliographie 3A>` : Hadoop, PIG, calcul distribué
 
 Livres sur la programmation
 --------------------

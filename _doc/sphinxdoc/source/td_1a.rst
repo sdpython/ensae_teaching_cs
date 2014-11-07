@@ -50,13 +50,18 @@ La dernière séance est une séance notée. Tous les documents sont autorisés.
 peuvent requérir l'utilisation des outils présentées durant les séances 9 à 12. Toutefois,
 si tel était le cas, ce serait très proche d'une solution proposée lors des TD.
 
+.. _l-td1a-biblio:
+
+Bibliographie
+-------------
+
 **Liens**
 
 * `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
 * `Data Science in Python <http://blog.yhathq.com/posts/data-science-in-python-tutorial.html>`_
 * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
 
-**Bibliographie**
+**Livres**
 
 * `Apprentissage de la programmation <http://inforef.be/swi/python.htm>`_, Gérald Swinnen
 * `Précis de recherche opérationnelle <http://www.eyrolles.com/Informatique/Livre/precis-de-recherche-operationnelle-9782100706129>`_, Robert Faure, Bernard Lemaire, Christophe Picouleau

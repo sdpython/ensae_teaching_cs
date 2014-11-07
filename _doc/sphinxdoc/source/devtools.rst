@@ -15,19 +15,15 @@ d'outils open source dont on aurait tort de se passer ou des services gratuits s
 qui facilitent l'archivage. Ils sont tellement pratiques qu'on a même du mal
 à s'en passer lorsqu'on travaille tout seul.
 
-**Suivi de source en local**
-
-* `TortoiseSvn <http://tortoisesvn.net/>`_
-* `TortoiseGit <https://code.google.com/p/tortoisegit/>`_
-
-
-**Archivage distant et suivi de source**
+**Suivi de sources distance**
 
 * `GitHub <https://github.com/>`_
 * `BitBucket <https://bitbucket.org/>`_
-* `SourceTree <http://www.sourcetreeapp.com/>`_
-* `TortoiseGit <https://code.google.com/p/tortoisegit/>`_
 
+**Visual pour Git**
+
+* `TortoiseGit <https://code.google.com/p/tortoisegit/>`_
+* `SourceTree <http://www.sourcetreeapp.com/>`_
 
 **Archivage distant**
 
@@ -48,7 +44,6 @@ un stockage dans un pays dont la loi limite l'usage qui peut être fait de vos d
 
 * `kdiff3 <http://kdiff3.sourceforge.net/>`_
 * `Beyond and Compare <http://www.scootersoftware.com/>`_ : il est gratuit pendant un mois, c'est le plus convivial.
-
 
 **Partager des notes, des idées**
 
