@@ -23,13 +23,15 @@ Started in 2014/04.
 * First contributor: `Xavier Dupré <http://www.xavierdupre.fr/>`_.
 * Other contributors: ENSAE's students, ..., see :ref:`l-changes`.
 
-Versions
+Versions`
 --------
 
 * **0.6 - 2014/??/??**
     * **new:** first sessions in 2A
     * **new:** first sessions in 3A
     * **add:** Python version is now checked, ImportError is raised if it used on Python 2
+    * **todo:** terminer la correction de la séance 9 (1A)
+    * **todo:** il manque des auteurs pour quelques articles sur la page :ref:`l-td2a-biblio`
 * **0.5 - 2014/08/31**
     * **new:** first version
 
