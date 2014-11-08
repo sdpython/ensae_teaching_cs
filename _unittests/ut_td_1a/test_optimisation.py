@@ -37,7 +37,7 @@ class TestOptimisation (unittest.TestCase):
         fLOG("Arrow_Hurwicz")
         fLOG (sol2)
         fLOG ("solution:",sol2['x'])
-        
+
         x1 = sol1['x']
         x2 = sol2['x']
         d1 = x1[0] - x2[0]
