@@ -8,7 +8,7 @@ import os, sys, copy, random
 def create_cs_function(name, code, dependencies = None, usings = None):
     """
     creates a C# function from a string
-    
+
     @param      name            function name
     @param      code            function code
     @param      dependencies    dependencies, ex: 'System.Draw.dll'
@@ -27,7 +27,7 @@ def create_cs_function(name, code, dependencies = None, usings = None):
         myarray = myarray.ToArray()
     else:
         myarray = List[String]().ToArray()
-    
+
     if usings is not None and len(usings) > 0 :
         myusings = List[String]()
         for i,d in enumerate(usings):
@@ -35,14 +35,14 @@ def create_cs_function(name, code, dependencies = None, usings = None):
         myusings = myusings.ToArray()
     else:
         myusings = List[String]().ToArray()
-    
+
     obj = MagicCS.CreateFunction(name, code, myarray, myusings)
     return lambda *params: run_cs_function(obj, params)
 
 def run_cs_function(func, params):
     """
     runs a C# function with the given parameters
-    
+
     @param      func        object created by function @see fn create_cs_function
     @param      params      list of parameters
     @return                 result of the function ``func``
@@ -67,4 +67,3 @@ def list2arrayint(li):
     for i in li :
         par.Add(i)
     return par.ToArray()
-    

@@ -4,10 +4,9 @@
 """
 import os
 for root, dirs, files in os.walk("."):
-    for f in files : 
+    for f in files :
         if (".pyd" in f or ".so" in f or ".o" in f or ".def" in f) and "_externals" not in root and "exe.win" not in root :
             filename = os.path.join(root,f)
             if "pythonnet" not in filename :
                 print ("removing ", filename)
                 os.remove(filename)
-            

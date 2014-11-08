@@ -16,7 +16,7 @@ from pyquickhelper import fLOG
 
 
 class TestPythonnet(unittest.TestCase):
-    
+
     def test_pythonnet (self) :
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
         if sys.platform.startswith("win"):
@@ -25,19 +25,19 @@ class TestPythonnet(unittest.TestCase):
             s = String("example")
             x = s.Replace("e","j")
             assert "jxamplj" == x
-            
+
             from System.Collections.Generic import Dictionary
             d = Dictionary[String, String]()
             d["un"] = "1"
             assert d.Count == 1
-            
+
     def test_voice(self):
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
         if sys.platform.startswith("win"):
             from src.ensae_teaching_cs.pythonnet import vocal_synthesis
             vocal_synthesis("test unitaire")
-        
+
 
 
 if __name__ == "__main__"  :
-    unittest.main ()    
+    unittest.main ()

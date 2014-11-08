@@ -13,7 +13,7 @@ class ParallelThread (threading.Thread):
     def __init__(self, f, list_of_params):
         """
         Constructeur
-        
+
         @param      f                   fonction à exécuter
         @param      list_of_params      liste des paramètres à exécuter
         """
@@ -21,7 +21,7 @@ class ParallelThread (threading.Thread):
         self.f2run = f
         self.results = None
         self.list_of_params = list_of_params
-        
+
     def run(self):
         """
         Appelle une fonction plusieurs sur tous les paramètres dans une liste.
@@ -32,16 +32,16 @@ class ParallelThread (threading.Thread):
             self.results.append ( self.f2run(*l,**p) )
 
     @staticmethod
-    def parallel(f, 
+    def parallel(f,
                  list_of_params,
                  nbthread = 2,
-                 wait = True, 
-                 daemon = True, 
+                 wait = True,
+                 daemon = True,
                  delay_sec = 1) :
         """
         Parallélise l'appel à la fonction ``f``
         sur une liste de paramètres.
-        
+
         @param      f                   fonction à appeler sur chacun des paramètres de la liste
         @param      list_of_params      liste des paramètres
         @param      nbthread            nombre de threads
@@ -75,8 +75,7 @@ if __name__ == "__main__" :
     import numpy
     def inv ( m ) :
         return numpy.linalg.inv(m)
-    
+
     nps = [ [ numpy.random.random ( (5,5) ) ]  for i in range(0,1000) ]
     mm = ParallelThread.parallel ( inv, nps, 10)
     print(len(mm))
-    

@@ -25,14 +25,14 @@ from src.ensae_teaching_cs.tips_tricks.pythoncs import list2arrayint
 
 
 class TestCustomMagic (unittest.TestCase):
-    
+
     def test_voice(self) :
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
         return
         if sys.platform.startswith("win"):
             cm = CustomMagics()
             cm.SPEAK("fr-FR", "hello")
-            
+
     def test_cs(self):
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
         if sys.platform.startswith("win"):
@@ -41,7 +41,7 @@ class TestCustomMagic (unittest.TestCase):
             f = cm.CS("SquareX", code)
             x = f (2.0)
             assert x == 4
-            
+
     def test_cs2(self):
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
         if sys.platform.startswith("win"):
@@ -68,8 +68,8 @@ class TestCustomMagic (unittest.TestCase):
 
                             return res;
                         }
-                    }    
-                    
+                    }
+
                     public static long[] cs_qsort(string lis)
                     {
                         return cs_qsortl(lis.Split(';').Select(c=>long.Parse(c)).ToArray()) ;
@@ -85,4 +85,4 @@ class TestCustomMagic (unittest.TestCase):
 
 
 if __name__ == "__main__"  :
-    unittest.main ()    
+    unittest.main ()

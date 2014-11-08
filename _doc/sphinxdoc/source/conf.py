@@ -27,5 +27,3 @@ html_static_path = [ os.path.join(source_path,'phdoc_static') ]
 
 if not os.path.exists(templates_path[0]):
     raise FileNotFoundError(templates_path[0])
-
-

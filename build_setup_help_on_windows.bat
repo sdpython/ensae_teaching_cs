@@ -18,6 +18,7 @@ c:\Python34vir\install\Scripts\python -u setup.py install
 echo #######################################################
 
 set pythonexe="c:\Python34\python"
+%pythonexe% -u setup.py clean_space
 %pythonexe% -u setup.py unittests
 echo #######################################################
 
@@ -72,6 +73,3 @@ xcopy /E /C /I /Y _doc\sphinxdoc\build\html dist\html
 xcopy /E /C /I /Y _doc\sphinxdoc\build2\html dist\html2
 xcopy /E /C /I /Y _doc\sphinxdoc\build3\html dist\html3
 xcopy /E /C /I /Y _doc\sphinxdoc\build\latex dist\latex
-
-
-

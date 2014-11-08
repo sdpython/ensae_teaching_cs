@@ -25,11 +25,11 @@ from src.ensae_teaching_cs.td_1a.session1 import racine_carree
 
 
 class TestSession1 (unittest.TestCase):
-    
+
     def test_fonction1(self) :
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
         a = racine_carree(2)
         assert a == 2**0.5
 
 if __name__ == "__main__"  :
-    unittest.main ()    
+    unittest.main ()

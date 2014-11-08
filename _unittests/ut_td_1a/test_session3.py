@@ -25,12 +25,12 @@ from src.ensae_teaching_cs.td_1a.session3 import DecodeVigenereLongueurCle, Deco
 
 
 class TestSession3 (unittest.TestCase):
-    
+
     def test_vigenere(self) :
         fLOG (__file__, self._testMethodName, OutputPrint= __name__ == "__main__")
-        
+
         fold = os.path.join(os.path.split(__file__)[0], "data")
-        
+
         # on lit Victor Hugo
         with open (os.path.join(fold, "hugo_dernier_jour_condamne.txt"),"r") as f:
             message = f.read ()  # lit tout d'une seule traite
@@ -72,7 +72,7 @@ class TestSession3 (unittest.TestCase):
         decode      = DecodeVigenere (code, cle_code)
 
         assert "VIGENERES" == cle_code
-        
+
         casse = CasseVigenere(code)
         assert len(code) == len(casse)
         assert casse.startswith("IDERLACAUSEDUNCONDAMNEQUELCONQUEEXECUTEUNJOURQUELCO")
@@ -91,12 +91,12 @@ class TestSession3 (unittest.TestCase):
         fLOG(decode [:200])
         fLOG("------------------")
         if decode == message : fLOG("message bien retranscrit")
-        else : 
+        else :
             for i in xrange (0, len (decode)) :
                 if message[i] != decode [i] :
                     fLOG(i, message[i], decode[i])
             fLOG("message mal retranscrit")
-        
+
 
 if __name__ == "__main__"  :
-    unittest.main ()    
+    unittest.main ()

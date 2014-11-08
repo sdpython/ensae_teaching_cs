@@ -8,7 +8,7 @@
 def optimisation():
     """
     Quelques erreurs lorsqu'on cherche à optimiser avec `CVXOPT <http://cvxopt.org/>`_.
-    
+
     @FAQ(cvxopt___TypeError: 'q' must be a 'd' matrix with one column)
     Cette erreur survient même lorsque la dimension de la matrice ``q`` en question
     est la dimension attendue. Dans le cas présent, elle est définie comme suit :
@@ -17,7 +17,7 @@ def optimisation():
     q=matrix([[0,0,0]])
     @endcode
 
-    Mais la fonction `coneqp <http://abel.ee.ucla.edu/cvxopt/userguide/coneprog.html?highlight=coneqp#cvxopt.solvers.coneqp>`_ 
+    Mais la fonction `coneqp <http://abel.ee.ucla.edu/cvxopt/userguide/coneprog.html?highlight=coneqp#cvxopt.solvers.coneqp>`_
     retourne l'erreur :
 
     @code
@@ -47,7 +47,7 @@ def optimisation():
 
     @FAQ(cvxopt___ValueError: Rank[|A|] < p or Rank[|[P; A; G]|] < n)
 
-    La fonction `coneqp <http://abel.ee.ucla.edu/cvxopt/userguide/coneprog.html?highlight=coneqp#cvxopt.solvers.coneqp>`_ 
+    La fonction `coneqp <http://abel.ee.ucla.edu/cvxopt/userguide/coneprog.html?highlight=coneqp#cvxopt.solvers.coneqp>`_
     déclenche parfois cette erreur :
 
     @code
@@ -57,7 +57,7 @@ def optimisation():
       File "C:\Python34\lib\site-packages\cvxopt\coneprog.py", line 1996, in kktsolver
         return factor(W, P)
       File "C:\Python34\lib\site-packages\cvxopt\misc.py", line 1457, in factor
-        lapack.potrf(F['S']) 
+        lapack.potrf(F['S'])
     ArithmeticError: 3
 
     During handling of the above exception, another exception occurred:
@@ -83,4 +83,3 @@ def optimisation():
     @endFAQ
     """
     pass
-

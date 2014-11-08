@@ -51,11 +51,11 @@ import pyensae
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
-extensions = [  'sphinx.ext.autodoc', 
-                'sphinx.ext.todo', 
-                'sphinx.ext.coverage', 
-                'sphinx.ext.pngmath', 
-                'sphinx.ext.ifconfig', 
+extensions = [  'sphinx.ext.autodoc',
+                'sphinx.ext.todo',
+                'sphinx.ext.coverage',
+                'sphinx.ext.pngmath',
+                'sphinx.ext.ifconfig',
                 'sphinx.ext.viewcode',
                 'sphinxcontrib.fancybox',
                 'sphinxjp.themes.basicstrap',
@@ -63,7 +63,7 @@ extensions = [  'sphinx.ext.autodoc',
                 'sphinx.ext.graphviz',
                 'sphinx.ext.inheritance_diagram',
                 ]
-                
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = [ 'phdoc_static' ]
 
@@ -120,11 +120,11 @@ exclude_patterns = []
 pygments_style = 'sphinx'
 
 # A list of ignored prefixes for module index sorting.
-# A list of prefixes that are ignored for sorting the Python module index (e.g., if this is set to ['foo.'], then foo.bar is shown under B, not F). 
-# This can be handy if you document a project that consists of a single package. 
+# A list of prefixes that are ignored for sorting the Python module index (e.g., if this is set to ['foo.'], then foo.bar is shown under B, not F).
+# This can be handy if you document a project that consists of a single package.
 # Works only for the HTML builder currently. Default is [].
-modindex_common_prefix = [  
-                            project_var_name + ".", 
+modindex_common_prefix = [
+                            project_var_name + ".",
                             ]
 
 # -- Options for HTML output ---------------------------------------------------
@@ -232,10 +232,10 @@ pandoc_path = r"%USERPROFILE%\AppData\Local\Pandoc"
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ( 'index', 
-    '%s_doc.tex' % project_var_name, 
+  ( 'index',
+    '%s_doc.tex' % project_var_name,
     '%s' % project_var_name_t,
-    author, 
+    author,
     'manual'),
 ]
 
@@ -265,10 +265,10 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (   'index', 
-        '%s_doc' % project_var_name, 
+    (   'index',
+        '%s_doc' % project_var_name,
         '%s' % project_var_name_t,
-        [author], 
+        [author],
         1)
 ]
 
@@ -282,11 +282,11 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ( 'index', 
-    '%s' % project_var_name, 
+  ( 'index',
+    '%s' % project_var_name,
     '%s' % project_var_name_t,
-    author, 
-    '%s' % project_var_name, 
+    author,
+    '%s' % project_var_name,
     'ENSAE, contenu des enseignements',
     'teachings'),
 ]
@@ -310,11 +310,11 @@ graphviz_dot = r"C:\Program Files (x86)\Graphviz2.34\bin\dot.exe"
 
 if not os.path.exists(graphviz_dot):
     raise FileNotFoundError(graphviz_dot)
-                               
+
 def skip(app, what, name, obj, skip, options):
     if name.startswith("_") and name not in \
-            [   "__qualname__", 
-                "__module__", 
+            [   "__qualname__",
+                "__module__",
                 "__dict__",
                 "__doc__",
                 "__weakref__",
@@ -324,4 +324,3 @@ def skip(app, what, name, obj, skip, options):
 
 def setup(app):
     app.connect("autodoc-skip-member", skip)
-    

@@ -1,29 +1,29 @@
 #-*- coding: utf-8 -*-
 #  Copyright (C) 2014 ---------------
 #  All rights reserved.
-# 
+#
 #  Redistribution and use in source and binary forms, with or without
 #  modification, are permitted provided that the following conditions
 #  are met:
-# 
+#
 #  1. Redistributions of source code must retain the above copyright
 #     notice, this list of conditions and the following disclaimer.
-# 
+#
 #  2. Redistributions in binary form must reproduce the above copyright
 #     notice, this list of conditions and the following disclaimer in
 #     the documentation and/or other materials provided with the
 #     distribution.
-# 
+#
 #  3. All advertising materials mentioning features or use of this
 #     software must display the following acknowledgment:
 #     "This product includes software developed by
 #      Xavier Dupré <xavier.dupre AT gmail.com>"
-# 
+#
 #  4. Redistributions of any form whatsoever must retain the following
 #     acknowledgment:
 #     "This product includes software developed by
 #      Xavier Dupré <xavier.dupre AT gmail.com>."
-# 
+#
 #  THIS SOFTWARE IS PROVIDED BY Xavier Dupré ``AS IS'' AND ANY
 #  EXPRESSED OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
 #  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
@@ -45,7 +45,7 @@ if os.path.exists("version.txt") :
     with open("version.txt", "r") as f : lines = f.readlines()
     subversion = lines[0].strip("\r\n ")
 else :
-    subversion = 1   
+    subversion = 1
 
 project_var_name    = "ensae_teaching_cs"
 sversion            = "0.6"
@@ -72,9 +72,9 @@ CLASSIFIERS = \
 
 
 if "bdist_wininst" not in sys.argv :
-    EXT_MODULES = [ 
-                    #Extension(project_var_name + '.subproject.sample_module', 
-                    #    ['src/' + project_var_name + '/subproject/sample_module.cpp'], 
+    EXT_MODULES = [
+                    #Extension(project_var_name + '.subproject.sample_module',
+                    #    ['src/' + project_var_name + '/subproject/sample_module.cpp'],
                     #    include_dirs = ['src/' + project_var_name + '/subproject']),
                 ]
 else :
@@ -88,7 +88,7 @@ package_data = { project_var_name + ".pythonnet.py33"   : ["*.pyd","*.txt","*.dl
                  project_var_name + ".pythonnet.py34x64": ["*.pyd","*.txt","*.dll"],
                  project_var_name + ".pythonnet.csdll": ["*.dll"],
                  }
-    
+
 with open(readme) as f : long_description = f.read()
 
 if "--verbose" in sys.argv :
@@ -99,9 +99,8 @@ if "--verbose" in sys.argv :
     print ("current     =", os.path.abspath(os.getcwd()))
     print ("---------------------------------")
 
-if "build_sphinx" in sys.argv:
-    # we take a shortcut 
-    
+if "clean_space" in sys.argv:
+    # clean the extra space in all files
     try:
         import pyquickhelper
     except ImportError:
@@ -109,15 +108,32 @@ if "build_sphinx" in sys.argv:
         try:
             import pyquickhelper
         except ImportError as e :
-            raise ImportError("module pyquickhelper is needed to build the documentation") from e 
-    
+            raise ImportError("module pyquickhelper is needed to build the documentation") from e
+
+    fold = os.path.dirname(__file__)
+    fold = os.path.abspath(fold)
+    rem  = pyquickhelper.remove_extra_spaces_folder(fold, extensions=[".py","rst",".bat",".sh"])
+    print("number of impacted files", len(rem))
+
+elif "build_sphinx" in sys.argv:
+    # we take a shortcut
+
+    try:
+        import pyquickhelper
+    except ImportError:
+        sys.path.append ( os.path.normpath (os.path.abspath(os.path.join("..", "pyquickhelper", "src" ))))
+        try:
+            import pyquickhelper
+        except ImportError as e :
+            raise ImportError("module pyquickhelper is needed to build the documentation") from e
+
     if "--help" in sys.argv:
         print(pyquickhelper.get_help_usage())
     else :
-        
+
         if not os.path.exists("_doc/sphinxdoc/source"):
             raise FileNotFoundError("you must get the source from GitHub to build the documentation")
-        
+
         from pyquickhelper import fLOG, generate_help_sphinx
 
         fLOG (OutputPrint = True)
@@ -125,19 +141,19 @@ if "build_sphinx" in sys.argv:
         generate_help_sphinx(project_name,
                 nbformats=['ipynb', 'html', 'python', 'rst', 'docx','pdf'],
                 layout = [ "pdf",
-                          "html", 
+                          "html",
                           ("html", "build2", {"html_theme":"basicstrap"}, "source/conf2"),
                           ("html", "build3", {"html_theme":"bootstrap"}, "source/conf3"),
                           ] )
-        
+
 elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv \
      or "build_pres_3A" in sys.argv :
     # we generate the documentation for the presentation
-    
+
     def get_executables_path() :
         """
         returns the paths to Python, Python Scripts
-        
+
         @return     a list of paths
         """
         res  = [ os.path.split(sys.executable)[0] ]
@@ -146,11 +162,11 @@ elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv \
             ver = "c:\\Python%d%d" % (sys.version_info.major, sys.version_info.minor)
             res += [ver ]
             res += [ os.path.join(res[-1], "Scripts") ]
-        return res    
-        
+        return res
+
     suffix = "_2A" if "build_pres_2A" in sys.argv else ""
     suffix = "_3A" if "build_pres_3A" in sys.argv else ""
-    
+
     #  run the documentation generation
     if sys.platform.startswith("win"):
         temp = os.environ ["PATH"]
@@ -161,29 +177,29 @@ elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv \
         pa = os.getcwd ()
         thispath = os.path.normpath(os.path.split(__file__)[0])
         docpath  = os.path.normpath(os.path.join(thispath, "_doc","presentation" + suffix))
-        os.chdir (docpath)        
-        
+        os.chdir (docpath)
+
     lay     = "html"
     build   = "build"
     over    = ""
     sconf   = ""
     cmd     = "sphinx-build -b {1} -d {0}/doctrees{2}{3} source {0}/{1}".format(build, lay, over, sconf)
     os.system(cmd)
-    
+
     if sys.platform.startswith("win"):
         os.chdir (pa)
-        
-elif "unittests" in sys.argv:        
-    
+
+elif "unittests" in sys.argv:
+
     if not os.path.exists("_unittests"):
         raise FileNotFoundError("you must get the source from GitHub to run the unittests")
-        
+
     sys.path.append("_unittests")
     from run_unittests import main
     main()
-    
+
 else :
-    
+
     setup(
         name                    = project_var_name,
         version                 = '%s.%s' %(sversion, subversion) if "register" in sys.argv or "bdist_msi" in sys.argv else 'py%s-%s.%s' % (versionPython, sversion, subversion),
@@ -199,7 +215,7 @@ else :
         package_dir             = package_dir,
         package_data            = package_data,
         #data_files              = data_files,
-        install_requires        = [  "pyensae>=0.8" ],
+        install_requires        = [  "pyensae>=0.9.1" ],
         ext_modules             = EXT_MODULES,
         #include_package_data    = True,
         )

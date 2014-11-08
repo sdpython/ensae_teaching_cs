@@ -24,15 +24,15 @@ from src.ensae_teaching_cs.tips_tricks.pythoncs import create_cs_function, run_c
 
 
 class TestPythonnetMagicCS(unittest.TestCase):
-    
+
     def test_magic_cs(self):
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
         if sys.platform.startswith("win"):
             code = "public static double SquareX(double x) {return x*x ; }"
-            f = create_cs_function("SquareX", code)       
+            f = create_cs_function("SquareX", code)
             r = f ( 2.0 )
             fLOG(r,type(r))
             assert r == 4
 
 if __name__ == "__main__"  :
-    unittest.main ()    
+    unittest.main ()

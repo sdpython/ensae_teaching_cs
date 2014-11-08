@@ -10,14 +10,14 @@ from functools import reduce
 def numpy_matrix2list(mat):
     """
     Convertit une matrice `numpy <http://www.numpy.org/>`_ en list.
-    
+
     @param      mat     matrix
     @return             liste de listes
-    
+
     @example(science___opérations avec numpy.matrix)
     Voici quelques écritures classiques avec le module
     `numpy <http://www.numpy.org/>`_.
-    
+
     @code
     import numpy as np
     mat = np.matrix ( [[1,2],[3,4]] ) # crée une matrice 2*2
@@ -49,4 +49,3 @@ def numpy_matrix2list(mat):
     @endexample
     """
     return mat.tolist()
-                

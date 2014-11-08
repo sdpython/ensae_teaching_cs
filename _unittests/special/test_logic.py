@@ -19,7 +19,7 @@ from pyquickhelper import fLOG
 from src.ensae_teaching_cs.special.einstein_prolog import Enigma
 
 class TestSpecialLogic (unittest.TestCase):
-    
+
     def test_einstein_prolog(self) :
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
         en = Enigma ()
@@ -28,4 +28,4 @@ class TestSpecialLogic (unittest.TestCase):
         assert "jaune     , norvegien , eau       , Dunhill   , chats" in sol
 
 if __name__ == "__main__"  :
-    unittest.main ()    
+    unittest.main ()

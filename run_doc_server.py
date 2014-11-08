@@ -4,7 +4,7 @@ except ImportError:
     import sys
     sys.path.append(r"../pyquickhelper/src")
     import pyquickhelper
-    
+
 import os
 from pyquickhelper import run_doc_server
 
@@ -21,6 +21,6 @@ for project in os.listdir(fold):
                 print("add ", project + i, " --> ", doc )
 
 print("running run_doc_server")
-run_doc_server( "localhost", 
+run_doc_server( "localhost",
                 mappings = mappings,
                 port = 8887)

@@ -25,10 +25,10 @@ from src.ensae_teaching_cs.tutoriel.construction_classique import *
 
 
 class TestConstructionClassique(unittest.TestCase):
-    
+
     def test_fonction(self) :
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
-        
+
         assert recherche([2,3,45],3)==1
         assert recherche([2,3,45],4)==-1
         assert minindex([2,3,45,-1,5]) == (-1,3)
@@ -39,9 +39,9 @@ class TestConstructionClassique(unittest.TestCase):
         mat = text2mat(s,"|",";")
         t = mat2text(mat,"|",";")
         assert t == s
-        tab = ["zero", "un", "deux"]  
+        tab = ["zero", "un", "deux"]
         r = triindex(tab)
-        assert r == [('deux', 2), ('un', 1), ('zero', 0)]  
+        assert r == [('deux', 2), ('un', 1), ('zero', 0)]
         li = ["un", "deux", "un", "trois"]
         r = compte(li)
         assert r == {'trois': 1, 'deux': 1, 'un': 2}
@@ -52,6 +52,6 @@ class TestConstructionClassique(unittest.TestCase):
         assert m == mat
         x2 = integrale( lambda x: x, 0, 2, 1000)
         assert x2 == 2
-        
+
 if __name__ == "__main__"  :
-    unittest.main ()    
+    unittest.main ()
