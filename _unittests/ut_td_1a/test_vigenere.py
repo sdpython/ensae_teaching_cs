@@ -21,10 +21,10 @@ except ImportError :
     import pyquickhelper
 
 from pyquickhelper import fLOG
-from src.ensae_teaching_cs.td_1a.session3 import DecodeVigenereLongueurCle, DecodeVigenereCle, DecodeVigenere, CodeVigenere, CasseVigenere
+from src.ensae_teaching_cs.td_1a.vigenere import DecodeVigenereLongueurCle, DecodeVigenereCle, DecodeVigenere, CodeVigenere, CasseVigenere
 
 
-class TestSession3 (unittest.TestCase):
+class TestVigenere (unittest.TestCase):
 
     def test_vigenere(self) :
         fLOG (__file__, self._testMethodName, OutputPrint= __name__ == "__main__")

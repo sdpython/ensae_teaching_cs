@@ -21,10 +21,10 @@ except ImportError :
     import pyquickhelper
 
 from pyquickhelper import fLOG
-from src.ensae_teaching_cs.td_1a.session1 import racine_carree
+from src.ensae_teaching_cs.td_1a.classiques import racine_carree
 
 
-class TestSession1 (unittest.TestCase):
+class TestClassiques (unittest.TestCase):
 
     def test_fonction1(self) :
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
