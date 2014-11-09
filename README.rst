@@ -32,6 +32,7 @@ Versions`
     * **add:** Python version is now checked, ImportError is raised if it used on Python 2
     * **todo:** terminer la correction de la séance 9 (1A)
     * **todo:** il manque des auteurs pour quelques articles sur la page :ref:`l-td2a-biblio`
+    * **fix:** the setup does not need the file ``README.rst`` anymore
 * **0.5 - 2014/08/31**
     * **new:** first version
 
