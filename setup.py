@@ -89,7 +89,10 @@ package_data = { project_var_name + ".pythonnet.py33"   : ["*.pyd","*.txt","*.dl
                  project_var_name + ".pythonnet.csdll": ["*.dll"],
                  }
 
-with open(readme) as f : long_description = f.read()
+if os.path.exists(readme):
+    with open(readme) as f : long_description = f.read()
+else:
+    long_description = ""
 
 if "--verbose" in sys.argv :
     print ("---------------------------------")
