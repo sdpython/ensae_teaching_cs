@@ -22,6 +22,8 @@ Cours animé par :
     * graphe `BFS <http://en.wikipedia.org/wiki/Breadth-first_search>`_, `DFS <http://en.wikipedia.org/wiki/Depth-first_search>`_
     * `merge sort <http://en.wikipedia.org/wiki/Merge_sort>`_, `quicksort <http://en.wikipedia.org/wiki/Quicksort>`_, `heapsort <http://en.wikipedia.org/wiki/Heapsort>`_, `max heap <http://en.wikipedia.org/wiki/Min-max_heap>`_
 - Séance 2
+    * threads, application multi-threadées
+    * variables globales, synchronisation
 - Séance 3
     * Stockage de données, consistence, persistence, impossibilité de faire des rollbacks, corruption, 
       absence de garanties sur la manière dont sont stockés les champs (exemple formats de date), pas d'index, etc.
@@ -43,6 +45,9 @@ Cours animé par :
         * utilisation du java pour distribuer un job de façon plus optimisée
         * distribution personnalisée d'un traitement avec des librairies bas niveau (type MPI)
 - Séance 5
+    * algorithme distribué, descente de gradient distributé
+    * exemple des `k-means <http://fr.wikipedia.org/wiki/Algorithme_des_k-moyennes>`_ distribué
+    * `GPU <http://fr.wikipedia.org/wiki/Processeur_graphique>`_
 
 Les trois séances suivantes sont plus appliquées et dédiées à la découverte
 de `Hadoop <http://fr.wikipedia.org/wiki/Hadoop>`_, un environnement
@@ -55,10 +60,11 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
 
 - Séance 6 : premier job Map/Reduce
     * `ENSAE 3A - Map/Reduce en pratique <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_
-    * travaux pratiques
+    * Exercice recommandé : `SQL Magic Commands with SQLite in a Notebook <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/pyensae_sql_magic.html>`_
+    * Travaux pratiques
         * Cloudera - :ref:`Séance 6 : <td3acenoncesession6rst>`  (:ref:`correction <td3acorrectionsession6rst>`)
         * Azure HDInsight - :ref:`Séance 6 : <td3acenoncesession6brst>`  (:ref:`correction <td3acorrectionsession6brst>`)
-    * contenu
+    * Contenu
         * manipulation de fichiers avec `HDFS <http://hadoop.apache.org/docs/r1.2.1/hdfs_design.html>`_
         * premier job avec `PIG-latin <https://pig.apache.org/docs/r0.7.0/piglatin_ref2.html>`_ [#fp2]_
         * parallèle entre la syntaxe `PIG <http://pig.apache.org/docs/r0.12.1/basic.html>`_ et `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_
@@ -72,16 +78,31 @@ Getting started
 La plupart des modules requis sont inclus dans la distribution
 `Anaconda <http://continuum.io/downloads#py34>`_ de Python. A ceux-ci, il faut ajouter :
 
-* `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
-* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ (version >= 0.9.1)
-* `azure <https://github.com/Azure/azure-sdk-for-python>`_
+* `ansiconv <http://pythonhosted.org/ansiconv/>`_,
+* `ansi2html <https://github.com/ralphbean/ansi2html/>`_.
+* `azure <https://github.com/Azure/azure-sdk-for-python>`_ (pour Azure uniquement)
 
-Si vous avez uilisé le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_
+Les deux modules suivantes introduisent les commandes magiques utilisées dans les notebooks :
+
+* `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
+* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ (version >= 1.0)
+
+Si vous avez utilisé la distribution `WinPython <http://winpython.sourceforge.net/>`_,
+il faudra également (pour Cloudera uniquement) :
+
+* `paramiko <http://www.paramiko.org/>`_
+* `ecdsa <https://pypi.python.org/pypi/pycrypto/>`_
+* `pycrypto <https://pypi.python.org/pypi/pycrypto/>`_
+
+Le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_
 (voir :ref:`l-install`), il suffit d'exécuter ::
 
-        from pymyinstall import datascientist
-        datascientist("install", azure = True)
+    from pymyinstall import datascientist
+    datascientist("install", azure = True)
 
+Liens :
+
+* `Remote Notebook with Azure <http://www.xavierdupre.fr/blog/2014-11-09_nojs.html>`_
 
 .. _l-td3a-biblio:
 
@@ -97,7 +118,7 @@ Bibliographie
 * `Parallelized Stochastic Gradient Descent <http://martin.zinkevich.org/publications/nips2010.pdf>`_, Martin A. Zinkevich, Markus Weimer, Alex Smola, Lihong Li
 * `Topic Similarity Networks: Visual Analytics for Large Document Sets <http://arxiv.org/pdf/1409.7591v1.pdf>`_, Arun S. Maiya, Robert M. Rolfe
 * `Low-dimensional Embeddings for Interpretable Anchor-based Topic Inference <http://mimno.infosci.cornell.edu/papers/EMNLP2014138.pdf>`_, Moontae Lee, David Mimno
-* `Don't use Hadoop - your data isn't that big <http://www.chrisstucchio.com/blog/2013/hadoop_hatred.html>`_
+* ` K-means on Azure<http://apiacoa.org/publications/2010/durutrossi2010k-means-on.pdf>`_, Matthieu Durut, Fabrice Rossi
 
 **Livres**
 
@@ -121,7 +142,9 @@ Bibliographie
 * `15+ Great Books for Hadoop <http://blog.matthewrathbone.com/2013/05/31/hadoop-resources---books.html>`_
 * `A Roundup of Recent Text Analytics and Vis Work <http://blogger.ghostweather.com/2014/10/a-roundup-of-recent-text-analytics-and.html>`_
 * :ref:`l-azurep`
-* `IPython Notebook sur Azure <http://azure.microsoft.com/fr-fr/documentation/articles/virtual-machines-python-ipython-notebook/>`_
+* `Don't use Hadoop - your data isn't that big <http://www.chrisstucchio.com/blog/2013/hadoop_hatred.html>`_
+* `Remote Notebook with Azure <http://www.xavierdupre.fr/blog/2014-11-09_nojs.html>`_
+* `Mahout 1.0 Features by Engine <https://mahout.apache.org/users/basics/algorithms.html>`_
 
 **Revue de presse**
 
@@ -136,21 +159,7 @@ Bibliographie
     
 .. rubric:: Footnotes
 
-.. [#fp1] Pour PIG version Azure, il suffit d'ajouter le module `azure <https://github.com/Azure/azure-sdk-for-python>`_.
-          Pour PIG version Coudera, il faut ajouter les modules
-          `ansiconv <http://pythonhosted.org/ansiconv/>`_,
-          `ansi2html <https://github.com/ralphbean/ansi2html/>`_.
-          si vous avez utilisé `Anaconda <http://continuum.io/downloads#py34>`_. 
-          Il faut ajouter également
-          `paramiko <http://www.paramiko.org/>`_, `ecdsa <https://pypi.python.org/pypi/pycrypto/>`_, 
-          `pycrypto <https://pypi.python.org/pypi/pycrypto/>`_ si vous avez utilisé 
-          `WinPython <http://winpython.sourceforge.net/>`_. Enfin, avec 
-          `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_, il faut
-          mettre à jour le module lancer à nouveau l'installation pour obtenir
-          les modules manquants::
-          
-            from pymyinstall import datascientist
-            datascientist ("install", azure=True)          
+.. [#fp1] C'est l'objet du paragraphe :ref:`l-td3a-start`.
 
 .. [#fp2] Les exercices des notebooks s'appuient sur le langage `PIG-latin <http://en.wikipedia.org/wiki/Pig_Latin>`_ qui est un langage
           haut niveau permettant d'écrire des tâches Map Reduce complexes. Le script est ensuite converti en un ensemble de 
