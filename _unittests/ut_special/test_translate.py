@@ -33,11 +33,11 @@ class TestTranslate(unittest.TestCase):
             lines = f.readlines()
         lines = [ _ .strip(" \r\n\t") for _ in lines ]
         lines = [ _ for _ in lines if not _.startswith("#") and len(_) > 0 ]
-        
+
         temp = os.path.join(data,"..","temp_translate")
         if not os.path.exists(temp): os.mkdir(temp)
         dest = os.path.join(temp, "out_russe_en.txt")
-        
+
         if not os.path.exists(dest):
             import goslate
             gs = goslate.Goslate()
@@ -45,10 +45,10 @@ class TestTranslate(unittest.TestCase):
             for l in lines:
                 tt = gs.translate(l, 'en', 'ru')
                 tlines.append(tt)
-                
+
             with open(dest,"w",encoding="utf8") as f :
                 f.write("\n\n".join(tlines))
-                
+
         assert os.path.exists(dest)
 
 

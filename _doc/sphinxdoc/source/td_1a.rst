@@ -19,12 +19,8 @@ Les six premières séances font découvrir le langage Python.
 - :ref:`TD 6 : Classes et héritage <td1acenoncesession6rst>`  (:ref:`correction <td1acorrectionsession6rst>`)
 
 Au terme de ces six séances, si la programmation est nouvelle pour vous ou
-si le langage vous paraît encore peu naturel, je vous encourage à faire d'autres exercices :
-
-- :ref:`l-premierpas`
-- :ref:`l-exampleNgatifs`
-- :ref:`l-exampleTD1A`
-- :ref:`l-exampleConstructionsClassiques`
+si le langage vous paraît encore peu naturel, je vous encourage à faire d'autres exercices 
+:ref:`l-premierpas`.
 
 Les six séances [#f1]_ suivantes sont centrées autour de l'utilisation de la programmation
 pour un usage scientifique. 
