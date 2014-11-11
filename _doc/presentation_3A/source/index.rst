@@ -251,4 +251,7 @@ ENSAE 3A - Map/Reduce en pratique
     
     `Notebook et PIG <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_3a.html>`_
     
+    Dernier détail, sur Hadoop tout fichier texte
+    est encodé en `UTF-8 <http://fr.wikipedia.org/wiki/UTF-8>`_.
+    
     

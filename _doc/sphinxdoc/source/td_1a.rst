@@ -18,6 +18,14 @@ Les six premières séances font découvrir le langage Python.
 - :ref:`TD 5 : Classes et carrés magiques <td1acenoncesession5rst>`  (:ref:`correction <td1acorrectionsession5rst>`)
 - :ref:`TD 6 : Classes et héritage <td1acenoncesession6rst>`  (:ref:`correction <td1acorrectionsession6rst>`)
 
+Au terme de ces six séances, si la programmation est nouvelle pour vous ou
+si le langage vous paraît encore peu naturel, je vous encourage à faire d'autres exercices :
+
+- :ref:`l-premierpas`
+- :ref:`l-exampleNgatifs`
+- :ref:`l-exampleTD1A`
+- :ref:`l-exampleConstructionsClassiques`
+
 Les six séances [#f1]_ suivantes sont centrées autour de l'utilisation de la programmation
 pour un usage scientifique. 
 Trois séances sont centrées sur trois algorithmes.
@@ -31,7 +39,7 @@ Ces deux façons de faire sont présentées durant les trois séances.
 
 - :ref:`TD 7 : Programmation dynamique <td1acenoncesession7rst>`  (:ref:`correction <td1acorrectionsession7rst>`)
 - :ref:`TD 8 : Arbre et Trie <td1acenoncesession8rst>`  (:ref:`correction <td1acorrectionsession8rst>`)
-- :ref:`TD 9 : Optimisation sous contrainte <td1acenoncesession9rst>`  (:ref:`correction <td1acorrectionsession9rst>`) (relecture conseillée à ceux qui souhaite optimiser des portefeuilles d'actions) [#f1]_
+- :ref:`TD 9 : Optimisation sous contrainte <td1acenoncesession9rst>`  (:ref:`correction <td1acorrectionsession9rst>`) (relecture conseillée à ceux qui souhaitent optimiser des portefeuilles d'actions) [#f1]_
 
 Trois séances sont centrées sur les outils indispensables pour manipuler facilement les données et faire des calculs.
 Ces outils sont similaires à ceux qu'on trouve dans de nombreux languages à usage scientifique
@@ -74,6 +82,7 @@ Bibliographie
     td_1a_enonce
     td_1a_correction
     questions/question_2014
+    premierspas
     
 .. rubric:: Footnotes
 

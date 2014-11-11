@@ -191,9 +191,10 @@ Usage irrégulier
     b. `pystan <http://pystan.readthedocs.org/en/latest/index.html>`_
     
 7. `Data Cube <http://en.wikipedia.org/wiki/Data_cube>`_ (Wikipédia)
-    * modules plutôt expérimental
+    * modules plutôt expérimentaux
         * `cubes <https://github.com/Stiivi/cubes>`_
         * `cubesviewer <https://github.com/jjmontesl/cubesviewer>`_
+        * `cube-client <https://github.com/tsileo/cube-client>`_
         
 8. Algorithmie        
     * `Woodbury matrix identity <http://en.wikipedia.org/wiki/Woodbury_matrix_identity>`_

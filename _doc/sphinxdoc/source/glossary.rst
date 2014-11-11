@@ -6,6 +6,30 @@ Glossaire
 =========
 
 .. glossary::
+
+    algorithme
+        Un `algorithme <http://fr.wikipedia.org/wiki/Algorithme>`_ 
+        est une suite finie et non ambigüe 
+        d'opérations ou d'instructions permettant de résoudre un problème.
+
+    coût
+        Le coût d'un algorithme est le nombre d'opérations qu'il effectue lorsqu'il 
+        est exécuté. Ce coût dépend des données qu'il manipule. 
+        Il s'exprime en règle générale en fonction de la taille des données. 
+        Le plus souvent, on ne cherche pas le nombre exact d'opérations 
+        mais un nombre approché (notation en :math:`O(.)`). 
+        La plupart du temps, ce coût correspond au nombre d'exécution d'une 
+        instuction incluse dans la boucle la plus imbriquée.
+        
+    Dijkstra
+        Plus connu pour l'algorithme du plus court chemin dans un graphe,
+        `Edsger Dijkstra <http://fr.wikipedia.org/wiki/Edsger_Dijkstra>`_,
+        il a contribué à faire ce que le programmation est aujourd'hui. Il faut lire
+        `A Case against the GO TO statement <https://www.cs.utexas.edu/users/EWD/transcriptions/EWD02xx/EWD215.html>`_
+        `The humble programmer <https://www.cs.utexas.edu/~EWD/transcriptions/EWD03xx/EWD340.html>`_
+        (traduction française `Le programmeur modeste <http://old.adrahon.org/le-programmeur-modeste.html>`_).
+        Il est aussi l'auteur d'`aphorisme <http://fr.wikipedia.org/wiki/Edsger_Dijkstra#Aphorismes>`_
+        très sensés pour la plupart des programmeurs.        
     
     ENSAE ParisTech
         Ecole Nationale de la Statistique et de l'Administration Economique (`ENSAE <http://www.ensae.fr/>`_)
@@ -40,6 +64,12 @@ Glossaire
         Just In Time (Compilation). Some modules such as `Cython <http://cython.org/>`_ offers the possibility to speed up
         a Python programming by converting some part of it in C++. It is then compiled and executed.
         See also: `Python Just In Time Compilation <http://www.xavierdupre.fr/blog/2014-10-17_nojs.html>`_.
+        
+    Knuth
+        `Donald Knuth <http://www-cs-faculty.stanford.edu/~uno/>`_  est l'auteur de 
+        `The Art of Computer Programming <http://fr.wikipedia.org/wiki/Donald_Knuth>`_.
+        C'est une des grandes figures de l'informatique. Il est 
+        également l'inventeur du langage `TeX <http://fr.wikipedia.org/wiki/TeX>`_.
     
     Markdown
         Langage utilisé par les notebooks et pour cette documentation écrit en `rst <http://fr.wikipedia.org/wiki/ReStructuredText>`_.
@@ -70,8 +100,16 @@ Glossaire
     reStructuredText
         Voir Sphinx.
         
+    Rossum
+        `Guido van Rossum <http://fr.wikipedia.org/wiki/Guido_van_Rossum>`_
+        est l'inventeur du langage `Python <https://www.python.org/>`_.
+        
     rst
         rst = reStructuredText
+        
+    Stroustrup
+        `Bjarne Stroustrup <http://www.stroustrup.com/>`_ est l'inventeur du 
+        langage `C++ <http://fr.wikipedia.org/wiki/C%2B%2B>`_.
         
     Sphinx
         `Sphinx <http://sphinx-doc.org/>`_ est un moteur qui génère de la
