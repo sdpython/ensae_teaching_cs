@@ -119,6 +119,10 @@ Bibliographie
 * `Topic Similarity Networks: Visual Analytics for Large Document Sets <http://arxiv.org/pdf/1409.7591v1.pdf>`_, Arun S. Maiya, Robert M. Rolfe
 * `Low-dimensional Embeddings for Interpretable Anchor-based Topic Inference <http://mimno.infosci.cornell.edu/papers/EMNLP2014138.pdf>`_, Moontae Lee, David Mimno
 * `K-means on Azure <http://apiacoa.org/publications/2010/durutrossi2010k-means-on.pdf>`_, Matthieu Durut, Fabrice Rossi
+* `Efficient Estimation of Word Representations in Vector Space <http://arxiv.org/abs/1301.3781>`_, Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean,
+  ` <http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf>`_, Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, Jeff Dean,
+  `word2vec Parameter Learning Explained <http://arxiv.org/abs/1411.2738>`_, Xin Rong,
+  `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
 
 **Livres**
 
@@ -170,6 +174,6 @@ Bibliographie
           du `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_. 
           `PIG <http://en.wikipedia.org/wiki/Pig_Latin>`_ a été choisi
           car `Hive <https://hive.apache.org/>`_ est plus un moyen de lancer rapidement de petites
-          tâches, PIG est prévu pour des tâches plus conséquences pour un coût d'apprentissage
+          tâches, PIG permet des tâches plus conséquentes pour un coût d'apprentissage
           très raisonnable.
           

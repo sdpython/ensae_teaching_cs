@@ -32,7 +32,7 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
 
     
 - **TD 1 : DataFrame** 
-    - `TD 1 : Données et Graphes <td2acenoncesession1rst>` (:ref:`correction <td2acorrectionsession1rst>`)
+    - :ref:`TD 1 : Données et Graphes <td2acenoncesession1rst>` (:ref:`correction <td2acorrectionsession1rst>`)
         - import/export de données dans un DataFrame
         - manipulation selon une logique SQL
         - utilité des index
@@ -124,6 +124,10 @@ Bibliographie
 * `Don't use Hadoop - your data isn't that big <http://www.chrisstucchio.com/blog/2013/hadoop_hatred.html>`_
 * `A Roundup of Recent Text Analytics and Vis Work <http://blogger.ghostweather.com/2014/10/a-roundup-of-recent-text-analytics-and.html>`_
 * `A Tour of Machine Learning Algorithms <http://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/>`_
+* `Efficient Estimation of Word Representations in Vector Space <http://arxiv.org/abs/1301.3781>`_, Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean,
+  ` <http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf>`_, Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, Jeff Dean,
+  `word2vec Parameter Learning Explained <http://arxiv.org/abs/1411.2738>`_, Xin Rong,
+  `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
 
 **MOOC**
 
