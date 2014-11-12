@@ -246,6 +246,16 @@ ENSAE 3A - Map/Reduce en pratique
         * S7 : streaming, PIG + python
         * S8 : coût selon la configuration des données et comment y remédier
     
+.. reveals:: Notebooks et pyensae
+    :data-background: #DDDDFF
+    
+    * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
+        * un `wrapper <http://fr.wikipedia.org/wiki/Adaptateur_(patron_de_conception)>`_
+        * des `commandes magiques <http://nbviewer.ipython.org/github/ipython/ipython/blob/1.x/examples/notebooks/Cell%20Magics.ipynb>`_ pour gommer un peu l'aspect geek
+        * sans l'effacer complètement
+        * pour pouvoir s'adapter à des habitudes différentes en entreprise
+    * contribuer `github/pyensae <https://github.com/sdpython/pyensae/>`_
+    
 .. revealjs:: Hadoop
     :data-background: #DDDDFF
     
