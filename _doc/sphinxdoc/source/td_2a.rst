@@ -128,6 +128,8 @@ Bibliographie
   ` <http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf>`_, Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, Jeff Dean,
   `word2vec Parameter Learning Explained <http://arxiv.org/abs/1411.2738>`_, Xin Rong,
   `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
+* `Prédire les épidémies avec Wikipedia <http://www.lemonde.fr/sante/article/2014/11/13/predire-les-epidemies-avec-wikipedia_4523461_1651302.html>`_, Le Monde
+  
 
 **MOOC**
 
@@ -135,6 +137,11 @@ Bibliographie
 * `Coursera Machine Learning <https://www.coursera.org/course/ml>`_
 * `Coursera Machine Algorithm <https://www.coursera.org/course/algo>`_
 * `CSE373 - Analysis of Algorithms - 2007 SBU <https://www.youtube.com/playlist?list=PL5F43156F3F22C349>`_
+* `CS109 Data Science (Harvard) <http://cs109.github.io/2014/>`_ (la liste des vidéos disponibles est en bas)
+
+**Autres cours**
+
+* `CS109 Data Science (Harvard) <http://cs109.github.io/2014/>`_ - `TD <https://github.com/cs109/content>`_
 
 **Articles d'auteurs très connus**
 

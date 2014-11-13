@@ -5,7 +5,7 @@
 Ressources, Evénements
 ======================
 
-
+.. _l-datasources:
     
 Source de données
 -----------------
@@ -19,6 +19,7 @@ Source de données
     * `dump wikipedia <https://dumps.wikimedia.org/backup-index.html>`_
     * `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_ (collection de jeux de données classés par type de problème - régression, classification, ...)
     * `Data Analysis, Modeling and Machine Learning Group <http://ama.liglab.fr/resourcestools/datasets/>`_
+    * `Global Disease Monitoring and Forecasting with Wikipedia  <http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1003892>`_
     
 Code
 ----

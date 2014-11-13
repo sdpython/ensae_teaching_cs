@@ -76,6 +76,14 @@ ENSAE 3A - Map/Reduce en pratique
             
         Vous pouvez participer.
         
+.. revealjs:: Intermède
+    :data-background: #DDDDFF    
+        
+    Azure
+    
+        * Démarrer une machine virtuelle
+        * Démarrer un cluster Hadoop
+        
 .. revealjs:: Environnement de travail
     :data-background: #DDDDFF    
     
@@ -246,16 +254,38 @@ ENSAE 3A - Map/Reduce en pratique
         * S7 : streaming, PIG + python
         * S8 : coût selon la configuration des données et comment y remédier
     
-.. reveals:: Notebooks et pyensae
+.. reveals:: Python et Hadoop
     :data-background: #DDDDFF
     
-    * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
-        * un `wrapper <http://fr.wikipedia.org/wiki/Adaptateur_(patron_de_conception)>`_
-        * des `commandes magiques <http://nbviewer.ipython.org/github/ipython/ipython/blob/1.x/examples/notebooks/Cell%20Magics.ipynb>`_ pour gommer un peu l'aspect geek
-        * sans l'effacer complètement
-        * pour pouvoir s'adapter à des habitudes différentes en entreprise
-    * contribuer `github/pyensae <https://github.com/sdpython/pyensae/>`_
+    Différences entre les outils à l'ENSAE et les outils hors ENSAE
     
+.. reveals:: 
+    
+    .. reveals:: Outils disponibles
+        
+        * Cloudera (Linux)
+            * `Putty <http://www.putty.org/>`_ (ligne de commande)
+            * `Hue <http://gethue.com/>`_ (graphique - parfois lent)
+        * Azure (Windows)
+            * `Portail Azure <http://azure.microsoft.com/fr-fr/>`_ (graphique, limité)
+            * `Azure SDK <http://azure.microsoft.com/fr-fr/downloads/>`_ (tous les langages)
+            * `azure-sdk-for-python <https://github.com/Azure/azure-sdk-for-python>`_ (python)
+        
+    .. reveals:: Python
+    
+        * `pydoop <http://pydoop.sourceforge.net/docs/>`_
+        * intéressant pour la partie `HDFS <http://hortonworks.com/hadoop/hdfs/>`_
+        * script plus long qu'avec PIG
+        
+    .. reveals:: Notebooks et pyensae
+        
+        * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
+            * un `wrapper <http://fr.wikipedia.org/wiki/Adaptateur_(patron_de_conception)>`_
+            * des `commandes magiques <http://nbviewer.ipython.org/github/ipython/ipython/blob/1.x/examples/notebooks/Cell%20Magics.ipynb>`_ pour gommer un peu l'aspect geek
+            * sans l'effacer complètement
+            * pour pouvoir s'adapter à des habitudes différentes en entreprise
+        * contribuer `github/pyensae <https://github.com/sdpython/pyensae/>`_
+        
 .. revealjs:: Hadoop
     :data-background: #DDDDFF
     
@@ -264,4 +294,9 @@ ENSAE 3A - Map/Reduce en pratique
     Dernier détail, sur Hadoop tout fichier texte
     est encodé en `UTF-8 <http://fr.wikipedia.org/wiki/UTF-8>`_.
     
+.. revealjs:: Intermède
+    :data-background: #DDDDFF    
+        
+    Azure
     
+        * Installer Python sur la machine virtuelle

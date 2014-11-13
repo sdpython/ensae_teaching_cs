@@ -123,6 +123,8 @@ Sources de jeux de données
   Toutefois, avant d'utiliser les données Kaggle, je vous encourage à lire les articles `Date use for teaching after competition concludes <http://www.kaggle.com/c/decoding-the-human-brain/forums/t/8331/date-use-for-teaching-after-competition-concludes>`_,
   et `Using a Kaggle contest as a term project <http://www.kaggle.com/forums/t/2745/using-a-kaggle-contest-as-a-term-project>`_.
   Les règles peuvent varier d'un projet à l'autre, prenez soin de les lire avant de choisir un projet.
+* `Global Disease Monitoring and Forecasting with Wikipedia  <http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1003892>`_
+* :ref:`Autres suggestions <l-datasources>`
 * Votre propre jeu de données (à valider avec l'encadrant).
 
 Questions
