@@ -24,4 +24,4 @@ echo ####################################################### 3A
 %pythonexe% -u setup.py build_pres_3A
 
 if not exist dist\html_pres_3A mkdir dist\html_pres_3A
-xcopy /E /C /I /Y _doc\presentation_2A\build\html dist\html_pres_3A
+xcopy /E /C /I /Y _doc\presentation_3A\build\html dist\html_pres_3A
