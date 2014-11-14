@@ -287,6 +287,14 @@ ENSAE 3A - Map/Reduce en pratique
             * pour pouvoir s'adapter à des habitudes différentes en entreprise
         * contribuer `github/pyensae <https://github.com/sdpython/pyensae/>`_
         
+    .. reveals:: Hadoop ...
+    
+        * langage haut niveau (plus stable que le bas niveau)
+        * sa performance dépend aussi du compilateur
+        * autres solutions :
+            * `Storm <https://storm.apache.org/>`_
+            * `Spark <https://spark.apache.org/>`_
+        
 .. revealjs:: Hadoop
     :data-background: #DDDDFF
     
