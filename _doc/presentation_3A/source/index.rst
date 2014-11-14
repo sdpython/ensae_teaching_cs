@@ -276,6 +276,7 @@ ENSAE 3A - Map/Reduce en pratique
         * `pydoop <http://pydoop.sourceforge.net/docs/>`_
         * intéressant pour la partie `HDFS <http://hortonworks.com/hadoop/hdfs/>`_
         * script plus long qu'avec PIG
+        * ne fonctionne pas avec Azure
         
     .. reveals:: Notebooks et pyensae
         

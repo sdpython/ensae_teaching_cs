@@ -25,7 +25,11 @@ Jeux de données
 Travail attendu
 +++++++++++++++
 
-Utilisation de 
+Traitement d'un jeu de données de façon distribuée :
+
+* Map/Reduce
+* GPU
+* Azure Blog
 
 
 Sources de jeux de données
