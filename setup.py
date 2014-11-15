@@ -90,7 +90,14 @@ package_data = { project_var_name + ".pythonnet.py33"   : ["*.pyd","*.txt","*.dl
                  }
 
 if os.path.exists(readme):
-    with open(readme) as f : long_description = f.read()
+    try:
+        with open(readme, "r", encoding='utf-8') as f : long_description = f.read()
+        long_description = long_description.replace("\ufeff","")
+    except :
+        try:
+            with open(readme, "r") as f : long_description = f.read()
+        except:
+            long_description = ""
 else:
     long_description = ""
 
