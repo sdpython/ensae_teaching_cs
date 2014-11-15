@@ -296,6 +296,7 @@ ENSAE 3A - Map/Reduce en pratique
             * des `commandes magiques <http://nbviewer.ipython.org/github/ipython/ipython/blob/1.x/examples/notebooks/Cell%20Magics.ipynb>`_ pour gommer un peu l'aspect geek
             * sans l'effacer complètement
             * pour pouvoir s'adapter à des habitudes différentes en entreprise
+            * travail en mode `batch <http://fr.wikipedia.org/wiki/Traitement_par_lots>`_
         * contribuer `github/pyensae <https://github.com/sdpython/pyensae/>`_
         
     .. revealjs:: Hadoop ...
