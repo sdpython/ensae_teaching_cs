@@ -257,6 +257,7 @@ ENSAE 3A - Map/Reduce en pratique
     
         * introduire et pratiquer Map / Reduce
         * réduire le coût d'entrée technique
+        * travail en mode `batch <http://fr.wikipedia.org/wiki/Traitement_par_lots>`_
 
     .. revealjs:: Séances 6-8
     
@@ -286,7 +287,7 @@ ENSAE 3A - Map/Reduce en pratique
         * `pydoop <http://pydoop.sourceforge.net/docs/>`_
         * intéressant pour la partie `HDFS <http://hortonworks.com/hadoop/hdfs/>`_
         * scripts plus longs et plus bas niveau qu'avec PIG
-        * ne fonctionne pas avec Azure
+        * `pydoop <http://pydoop.sourceforge.net/docs/>`_ ne fonctionne pas avec Azure
         
     .. revealjs:: Notebooks et pyensae
         
