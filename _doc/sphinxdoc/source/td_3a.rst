@@ -90,13 +90,14 @@ Les deux modules suivantes introduisent les commandes magiques utilisées dans l
 * `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
 * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ (version >= 1.0)
 
-Si vous avez utilisé la distribution `WinPython <http://winpython.sourceforge.net/>`_,
-il faudra également (pour Cloudera uniquement) :
+Il faudra également installer (pour Cloudera uniquement) :
 
 * `paramiko <http://www.paramiko.org/>`_
 * `ecdsa <https://pypi.python.org/pypi/pycrypto/>`_
 * `pycrypto <https://pypi.python.org/pypi/pycrypto/>`_
 
+Ces modules sont plus faciles à installer avec `Anaconda <http://continuum.io/downloads#py34>`_ 
+(commande ``conda install paramiko``, lire `install extra packages <http://docs.continuum.io/anaconda/faq.html#install-packages>`_).
 Le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_
 (voir :ref:`l-install`), il suffit d'exécuter ::
 

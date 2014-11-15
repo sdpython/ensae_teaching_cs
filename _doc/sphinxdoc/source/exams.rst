@@ -92,6 +92,11 @@ Examens
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/interro_rapide_20_minutes_2014_10.html">
                     <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (fréquence des lettres dans un mot, anagrammes)</li>
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_20_minutes_2014_11.pdf">énoncé 2014-2015 (3)</a>, 
+        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_20_minutes_2014_11.pdf">correction</a> 
+        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/interro_rapide_20_minutes_2014_11.html">
+                    <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
+        (fréquence des lettres dans un mot, anagrammes)</li>
     </ul>
     </p>
 
@@ -124,9 +129,13 @@ Examens
 Correction sous forme de notebooks
 ++++++++++++++++++++++++++++++++++
 
+2014-2015
+---------
+
 .. toctree::
 
     notebooks/interro_rapide_20_minutes_2014_09
     notebooks/interro_rapide_20_minutes_2014_10
+    notebooks/interro_rapide_20_minutes_2014_11
 
     
