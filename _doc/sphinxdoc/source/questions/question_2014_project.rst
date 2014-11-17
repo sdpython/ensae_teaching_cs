@@ -120,5 +120,78 @@ sur le long terme. Recommander un best seller a beaucoup de chance de fonctionne
 qu'ils jugent peu-être un peu trop faciles.
 
 
+A propos de l'évaluation d'un système de recommandation
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Un système de recommandations consiste par exemple à proposer à un utilisateur des livres qu'il n'a pas 
+encore vu mais qu'il est susceptible d'apprécier. La seule information dont on dispose est ce que les utilisateurs ont acheté
+ou commenté. 
+On la décrit sous forme de `graphe bi-parti <http://fr.wikipedia.org/wiki/Graphe_biparti>`_ : 
+d'un côté, les utilisateurs, de l'autre les livres, entre les deux des arcs qui 
+représente un achat (ou un commentaire).
+
+**Pourquoi est tel système est-il difficile à évaluer ?**
+
+Pour calculer un taux d'erreur, il faut connaître la réponse attendue. Or le nombre de critiques est souvent bien inférieur 
+à l'ensemble des critiques possibles (le nombre de livres multiplié par le nombre d'utilisateurs). Autrement dit, 
+il est illusoire de compter sur cette information. On peut y remédier en supprimant quelques arcs du graphe pour vérifier que
+l'algorithme d'apprentissage arrive à retrouver cette information. On peut aussi demander à des juges humains d'évaluer
+certains recommandations, typiquement les meilleurs recommandations obtenues après un premier apprentissage.
+
+Pour s'assurer qu'un modèle ne fait pas de surapprentissage, il est courant de garder une partie des données
+(base de test) pour évaluer le modèle appris sur le reste (base d'apprentissage). Dans le cas d'un système de recommandation,
+les données sont liées dans graphe. Il est impossible de diviser le problème simplement. On peut clusteriser
+mais il n'est pas dit que les sous-graphes obtenues soient homogènes.
+
+On peut penser également que les données futures permettront de valider un modèle : une fois les recommandations en place,
+le taux d'achats des utilisateurs devrait augmenter. On appelle cette évaluation *online*. C'est souvent la plus fiable et 
+elle est réalisé au moyen d'un `test AB <http://fr.wikipedia.org/wiki/Test_A/B>`_ : on divise le traffic 
+d'un site en deux, chaque partie reçoit un système de recommandation différent. Cette évaluation n'est cependant 
+pas toujours disponibles.
+
+L'article `A Survey of Accuracy Evaluation Metrics of Recommendation Tasks <http://www.jmlr.org/papers/volume10/gunawardana09a/gunawardana09a.pdf>`_
+recense d'autres directions.
+
+Algorithmes de recommandations :
+
+    * `Matrix Factorization <http://en.wikipedia.org/wiki/Non-negative_matrix_factorization>`_
+    * `Collaborative Filtering <http://en.wikipedia.org/wiki/Collaborative_filtering>`_
+    * :ref:`Random Walk with Restart <>`_
+    
+Algorithms de clustering :
+
+    * `Spectral Clustering <http://en.wikipedia.org/wiki/Spectral_clustering>`_ (`tutoriel <http://www.xavierdupre.fr/enseignement/tutoriel_python/confirme_graph.pdf>`_)
+    * `Chinese Whiespering <http://wortschatz.uni-leipzig.de/~cbiemann/pub/2006/BiemannTextGraph06.pdf>`_
+    * `Louvain Method <http://perso.uclouvain.be/vincent.blondel/research/louvain.html>`_
+    * `RankClus <http://www1.se.cuhk.edu.hk/~hcheng/paper/edbt09_ysun.pdf>`_
+    * `Latent Dirichlet Association <http://en.wikipedia.org/wiki/Latent_Dirichlet_allocation>`_ (détection de thèmes, topic detection)
+
+
+Pourquoi la régression logistique marche bien lorsqu'une classe est sous-représentée ?
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Supposons qu'on doive constuire un classifieur binaire (deux classes). Lorsqu'une des classes est sous-représentée,
+les algorithmes d'apprentissages aboutissent parfois à des modèles qui retournent toujours la même réponse : la classe sur-représentée.
+Le taux d'erreur correspond à la proportion d'observations dans la classe sous-représentée.
+
+L'`analyse discriminante linéaire <http://fr.wikipedia.org/wiki/Analyse_discriminante_lin%C3%A9aire>`_ échappe à ce biais
+car elle consiste à trouver le meilleur hyperplan séparateur de deux nuages de points supposés gaussiens. Une
+classe peut être sous-représentée, le modèle produira toujours deux classes.
+
+L'analyse discriminante linéaire de la `régression logistique <http://fr.wikipedia.org/wiki/R%C3%A9gression_logistique>`_
+qui ne suppose plus les nuages de points gaussiens mais conserve toujours de bonnes propriétés. 
+
+La régression logistique est équivalente à un `réseau de neurones <http://fr.wikipedia.org/wiki/R%C3%A9seau_de_neurones_artificiels>`_ 
+de classification à une couche. Dans ce cas, l'algorithme d'apprentissage le plus courant
+est celui d'une `descente de gradient stochastique <http://en.wikipedia.org/wiki/Stochastic_gradient_descent>`_.
+Celui-ci est moins robuste dans le cas d'une classe sous-représenté tout simplement parce que 
+l'algorithme d'apprentissage utilisera plus beaucoup fréquemment les gradients calculés 
+pour des observations de l'autre classe. Il est souvent conseillé dans ce cas de modifier la distribution
+des classes dans l'échantillon d'apprentissage de façon à ce qu'elle soit plus uniforme.
+
+Il existe des algorithmes plus robustes comme `gradient boosting <http://en.wikipedia.org/wiki/Gradient_boosting>`_,
+`AdaBoost <http://fr.wikipedia.org/wiki/AdaBoost>`_. Il s'agit de donner plus de poids aux exemples
+qui produisent les plus grosses erreurs.
+
 
 
