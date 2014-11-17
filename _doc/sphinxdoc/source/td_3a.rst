@@ -69,6 +69,8 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
         * premier job avec `PIG-latin <https://pig.apache.org/docs/r0.7.0/piglatin_ref2.html>`_ [#fp2]_
         * parallèle entre la syntaxe `PIG <http://pig.apache.org/docs/r0.12.1/basic.html>`_ et `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_
 
+- Séance 7 : PIG, JSON, streaming
+    * :ref:`PIG et JSON <td3acenoncesession7arst>`  (:ref:`correction <td3acorrectionsession7arst>`) (avec Azure)
 
 Le cours sera évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 
@@ -116,6 +118,9 @@ Bibliographie
 
 **Articles**
 
+* `CUBE and ROLLUP: Two Apache Pig Functions That Every Data Scientist Should Know <http://joshualande.com/cube-rollup-pig-data-science/>`_
+* `How to Read and Write JSON-formatted Data With Apache Pig <http://joshualande.com/read-write-json-apache-pig/>`_
+* `What Every Data Scientist Needs to Know about SQL <http://joshualande.com/data-science-sql/>`_
 * `Large Scale Distributed Deep Networks <http://www.cs.toronto.edu/~ranzato/publications/DistBeliefNIPS2012_withAppendix.pdf>`_, Jeffrey Dean, Greg S. Corrado, Rajat Monga, Kai Chen, Matthieu Devin, Quoc V. Le, Mark Z. Mao, Marc'Aurelio Ranzato, Andrew Senior, Paul Tucker, Ke Yang, Andrew Y. Ng
 * `Stochastic Gradient Descent Tricks <http://research.microsoft.com/pubs/192769/tricks-2012.pdf>`_, Léon Bottou
 * `A Fast Distributed Stochastic Gradient Descent Algorithm for Matrix Factorization <http://jmlr.org/proceedings/papers/v36/li14.pdf>`_, Fanglin Li, Bin Wu, Liutong Xu, Chuan Shi, Jing Shi

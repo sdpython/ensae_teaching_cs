@@ -267,4 +267,8 @@ README
 */notebooks/td3a/stderr.txt
 */notebooks/td3a/results.txt
 */notebooks/td3a/result*.txt
+*/notebooks/td3a/paris*.txt
+*/notebooks/td3a/*.zip
+*/notebooks/td3a/*.pig
+*/notebooks/td3a/velib*.txt
 
