@@ -121,6 +121,7 @@ sur le long terme. Recommander un best seller a beaucoup de chance de fonctionne
 qu'ils jugent peu-être un peu trop faciles.
 
 
+.. _question_2014_projet_2_2A:
 
 A propos de l'évaluation d'un système de recommandation
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -156,7 +157,8 @@ recense d'autres directions.
 
 Algorithmes de recommandations :
 
-    * `Matrix Factorization <http://en.wikipedia.org/wiki/Non-negative_matrix_factorization>`_
+    * `Matrix Factorization <http://en.wikipedia.org/wiki/Non-negative_matrix_factorization>`_,
+      voir aussi `Matrix factorization example with VW (Vowpal Wabbit) <https://github.com/JohnLangford/vowpal_wabbit/wiki/Matrix-factorization-example>`_
     * `Collaborative Filtering <http://en.wikipedia.org/wiki/Collaborative_filtering>`_
     * :ref:`exposerwrrecommandationrst`
     
@@ -168,6 +170,7 @@ Algorithms de clustering :
     * `RankClus <http://www1.se.cuhk.edu.hk/~hcheng/paper/edbt09_ysun.pdf>`_
     * `Latent Dirichlet Association <http://en.wikipedia.org/wiki/Latent_Dirichlet_allocation>`_ (détection de thèmes, topic detection)
 
+.. _question_2014_projet_3_2A:
 
 Pourquoi la régression logistique marche bien lorsqu'une classe est sous-représentée ?
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -195,6 +198,11 @@ Il existe des algorithmes plus robustes comme `gradient boosting <http://en.wiki
 `AdaBoost <http://fr.wikipedia.org/wiki/AdaBoost>`_. Il s'agit de donner plus de poids aux exemples
 qui produisent les plus grosses erreurs.
 
+Une autre approche consiste à conserver l'algorithme d'optimisation de la régression logistique
+et à multiplier les caractéristiques non linéaires constuires à partir des features existantes :
+`Go non-linear with Vowpal Wabbit <http://fastml.com/go-non-linear-with-vowpal-wabbit/>`_.
+
+.. _question_2014_projet_4_2A:
 
 False positive, mais encore ?
 +++++++++++++++++++++++++++++
@@ -209,6 +217,7 @@ il faut faire attention si le cas *True Positive* correspond à :
 * un exemple de la classe *A* classé dans la classe *A*
 * un exemple d'une classe quelconque (*A*, *B*, ...) classé dans la bonne classe
 
+.. _question_2014_projet_5_2A:
 
 Aucun modèle ne fonctionne, que faire ? Des features ?
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -229,6 +238,7 @@ Si les deux modèles ne se trompent pas aux mêmes endroits, il est possible qu'
 suffisent à améliorer la performance ou qu'un troisième parvienne finalement à tirer un meilleur parti
 des features.
 
+.. _question_2014_projet_6_2A:
 
 A quoi doit ressembler une bonne courbe ROC ?
 +++++++++++++++++++++++++++++++++++++++++++++
@@ -244,7 +254,7 @@ Ce sont souvent des fonctions concaves (la précision est en rouge, le rappel en
 
 .. image:: roc_clean.png
 
-Lorsque le score est élevé, il ne reste que quelques points (rappel proches de zéros). 
+Lorsque le score est élevé, il ne reste que quelques points (rappel proche de zéros). 
 On obtient quelque chose comme ceci :
 
 .. image:: roc_a.png

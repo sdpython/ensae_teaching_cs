@@ -129,7 +129,7 @@ Bibliographie
   `word2vec Parameter Learning Explained <http://arxiv.org/abs/1411.2738>`_, Xin Rong,
   `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
 * `Prédire les épidémies avec Wikipedia <http://www.lemonde.fr/sante/article/2014/11/13/predire-les-epidemies-avec-wikipedia_4523461_1651302.html>`_, Le Monde
-  
+* `FastML <http://fastml.com/>`_  (blog sur le machine learning)
 
 **MOOC**
 

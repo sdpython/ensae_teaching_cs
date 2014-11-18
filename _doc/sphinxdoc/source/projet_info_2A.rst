@@ -35,6 +35,8 @@ Travail attendu
 * Une attention particulière sur la rigueur de la démarche (base d'apprentissage / test,
   overfitting, validation croisée, vérification sur quelques exemples, 
   type de variable - continues, discrètes, catégorielles).
+* On pourra également souligner le raisonnement ou l'intuition qui vous amène
+  à essayer tel modèle, tel feature, telle méthode.
 * La comparaison de deux modèles sur le même jeu de données (soit deux modèles différents,
   soit le même modèle avec des paramètres différents), on s'intéressera aux observations
   pour lesquelles les modèles sont en désaccords. On pourra également comparer 
@@ -67,7 +69,9 @@ Travail attendu
     * Lorsque le modèle se trompe, se trompe-t-il de beaucoup ? Quel serait le coût de l'erreur ?
       Peut-on le réduire ?
 * Une vidéo, pas plus de 5 minutes pour présenter votre projet.      
-        
+
+
+
 Barème
 ++++++
 
@@ -131,5 +135,10 @@ Questions
 +++++++++
 
 * :ref:`question_2014_projet_1_2A`
+* :ref:`question_2014_projet_2_2A`
+* :ref:`question_2014_projet_3_2A`
+* :ref:`question_2014_projet_4_2A`
+* :ref:`question_2014_projet_5_2A`
+* :ref:`question_2014_projet_6_2A`
 
 
