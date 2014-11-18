@@ -271,4 +271,8 @@ README
 */notebooks/td3a/*.zip
 */notebooks/td3a/*.pig
 */notebooks/td3a/velib*.txt
+*/notebooks/td3a/velib/*
+*/notebooks/td3a/velib2/*
+*/notebooks/td3a/velib3/*
+
 

@@ -7,6 +7,7 @@ Questions Projets 2014
 
 .. _question_2014_projet_1_2A:
 
+
 Quel type de problème pour quelles données ?
 ++++++++++++++++++++++++++++++++++++++++++++
 
@@ -120,6 +121,7 @@ sur le long terme. Recommander un best seller a beaucoup de chance de fonctionne
 qu'ils jugent peu-être un peu trop faciles.
 
 
+
 A propos de l'évaluation d'un système de recommandation
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -156,7 +158,7 @@ Algorithmes de recommandations :
 
     * `Matrix Factorization <http://en.wikipedia.org/wiki/Non-negative_matrix_factorization>`_
     * `Collaborative Filtering <http://en.wikipedia.org/wiki/Collaborative_filtering>`_
-    * :ref:`Random Walk with Restart <>`_
+    * :ref:`exposerwrrecommandationrst`
     
 Algorithms de clustering :
 
@@ -192,6 +194,60 @@ des classes dans l'échantillon d'apprentissage de façon à ce qu'elle soit plu
 Il existe des algorithmes plus robustes comme `gradient boosting <http://en.wikipedia.org/wiki/Gradient_boosting>`_,
 `AdaBoost <http://fr.wikipedia.org/wiki/AdaBoost>`_. Il s'agit de donner plus de poids aux exemples
 qui produisent les plus grosses erreurs.
+
+
+False positive, mais encore ?
++++++++++++++++++++++++++++++
+
+A vrai dire, je me trompe encore et je me tromperai probablement toujours. 
+Le terme n'est pas très bien choisi. Je vous invite à lire l'introduction
+de l'exercice du TD :ref:`td2acenoncesession4Arst`.
+
+La courbe ROC s'applique uniquement à un classifieur. Lorsqu'on présente des résultats,
+il faut faire attention si le cas *True Positive* correspond à :
+
+* un exemple de la classe *A* classé dans la classe *A*
+* un exemple d'une classe quelconque (*A*, *B*, ...) classé dans la bonne classe
+
+
+Aucun modèle ne fonctionne, que faire ? Des features ?
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Lorsque deux modèles différents retourne le même type de performance, on
+est souvent tenté d'en utiliser un troisième voire de jouer avec les meta-paramètres
+(voir la paramètre :math:`\alpha` de la régression `lasso <http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Lasso.html>`_).
+Que doit-on améliorer ? Le modèle, les features ?
+
+Une première indication consiste à regarder si les deux modèles obtenus se trompent sur les mêmes observations.
+Dans ce cas, il est plus probable que les modèles manquent d'informations sur ces observations.
+Il faut alors se pencher sur ces observations pour imaginer des features qui les différencient 
+du reste des données. On peut soit tirer un échantillon parmi ces erreurs, soit regarder en 
+priorité les erreurs pour lesquelles le score de confiance est le plus élevé. Si c'est un problème
+de classification, on peut aussi regarder les classes pour lesquelles le taux d'erreur est le plus élevé.
+
+Si les deux modèles ne se trompent pas aux mêmes endroits, il est possible qu'un mélange de modèles
+suffisent à améliorer la performance ou qu'un troisième parvienne finalement à tirer un meilleur parti
+des features.
+
+
+A quoi doit ressembler une bonne courbe ROC ?
++++++++++++++++++++++++++++++++++++++++++++++
+
+La courbe ROC illustre la performance d'un classifieur si celui-ci retourne une classe **et** un score.
+Plus le score est élevé, plus la confiance dans le résultat est bonne : plus la probabilité qu'il se 
+trompe est faible. Par conséquence, une bonne courbe ROC vérifie :
+
+* le taux de précision est croissant en fonction du score
+* le taux de rappel est décroissant
+
+Ce sont souvent des fonctions concaves (la précision est en rouge, le rappel en bleu).
+
+.. image:: roc_clean.png
+
+Lorsque le score est élevé, il ne reste que quelques points (rappel proches de zéros). 
+On obtient quelque chose comme ceci :
+
+.. image:: roc_a.png
 
 
 
