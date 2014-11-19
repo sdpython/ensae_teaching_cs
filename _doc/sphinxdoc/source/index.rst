@@ -100,24 +100,11 @@ de chaque cours : :ref:`l-td3a-start`.
 Lors de l'installation, il faut faire attention à installer le langage
 Python et ses modules en prenant soin d'utiliser la même version pour chaque composant.
 Je recommande la version `64bit, v3.4.1 <https://www.python.org/downloads/release/python-341/>`_.
-Le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_ propose une 
-façon simple d'installer tous les modules nécessaires en faisant attention à la version choisie
-à la première étape:
+La distribution `Anaconda <http://continuum.io/downloads#py34>`_ contient 
+tous les modules importants pour les deux premières années. 
+Le cours de troisième année utilise d'autres modules plus facilement installables
+sous Windows via cette distribution.
 
-
-    1. Installer `python <https://www.python.org/>`_
-    2. Ouvrir une ligne de commande et aller dans le répertoire ``<python>/Scripts``
-    3. Ecrire ``pip install pymyinstall``
-    4. Utiliser le code suivant pour installer les modules supplémentaires ::
-
-        from pymyinstall import datascientist
-        datascientist("install", full = False)
-
-L'article `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
-donne plus de détails et d'options. La liste complète des modules est celle de la fonction
-`complete_installation <https://github.com/sdpython/pymyinstall/blob/master/src/pymyinstall/packaged/packaged_config.py>`_.
-Pour tout module supplémentaire, vous pouvez lire 
-`Three ways to install a module <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/notebooks/install_module.html>`_.
 
 
 **Ouvrir un notebooks**

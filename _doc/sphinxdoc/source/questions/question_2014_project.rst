@@ -259,5 +259,39 @@ On obtient quelque chose comme ceci :
 
 .. image:: roc_a.png
 
+La courbe du rappel est directement relié à la distribution du score de confiance retournée par le modèle. 
+C'est presque une fonction de répartition : :math:`rappel(s) = \inf_{S>s} dS`.
+
+.. image:: roc_clean_hist.png
+
+Si le score est pertinent, la probabilité de bien classer une observation augmente avec le score
+mais cela veut dire aussi qu'on rejette des observations (on ne le classe pas) dont le score est trop faible.
+Cela revient à faire un compromis entre le nombre d'exemples classés (= rappel) et la performance du modèle
+sur ces exemples (= précision).
+
+**Pourquoi le seuil de confiance retourné par le classifieur est-il important ?**
+
+Dans le cas d'une reconnaissance de chèques, l'erreur coûte très chère. On considère qu'il est préférable 
+de traiter seulement les chèques pour lesquels
+on sait que le taux d'erreur ne sera pas très grand. Pour chaque chèque, on applique le modèle de reconnaissance,
+et si le seuil de confiance est inférieur à *s*, on traite le chèque manuellement. On a donc deux 
+chaînes de traitements et deux coûts différents :
+
+* Si le seuil de confiance est :math:`> S`, le coût est :math:`C_a(S) = c_1 + c_2 (1-P(s))` où
+  :math:`c_2 (1-P(s))` correspond au coût d'une erreur, :math:`c_1` correspond
+  correspond au coût du traitement du chèque, :math:`1-P(s)` au taux d'erreur en fonction de *s*.
+* Si le seuil de confiance est :math:`< S`, le chèque est reconnu manuellement et on
+  suppose que le taux d'erreur :math:`e \sim 1%` ne dépend pas du seuil. 
+  Le coût est alors :math:`C_m(s) = c_1 + c_1' + c_2 e` où :math:`c_1' >> c_1` 
+  est le coût du traitement manuel.
+  
+On cherche donc à minimiser le coût global 
+:math:`C = \min_s R(s) C_a(s) + (1-R(s)) C_m(s))`, 
+soit :math:`R(s) \left[ c_1 + c_2 (1-P(s)) \right ] + (1-R(s)) \left[ c_1 + c_1' + c_2 e \right]`.
+
+
+
+
+
 
 

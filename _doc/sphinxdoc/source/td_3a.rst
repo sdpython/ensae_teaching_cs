@@ -159,6 +159,17 @@ Bibliographie
 * `Remote Notebook with Azure <http://www.xavierdupre.fr/blog/2014-11-09_nojs.html>`_
 * `Mahout 1.0 Features by Engine <https://mahout.apache.org/users/basics/algorithms.html>`_
 
+**Librairies**
+
+* `Giraph <http://giraph.apache.org/>`_
+* `Mahout <http://mahout.apache.org/>`_
+* `Spark <https://spark.apache.org/>`_ (`DPark <https://github.com/douban/dpark>`_)
+* `Kafka <http://kafka.apache.org/>_
+* `Storm <https://storm.apache.org/>`_
+* `Chapel <http://chapel.cray.com/>`_
+* `pyCUDA <https://developer.nvidia.com/pycuda>`_ (`A Monte Carlo Option Pricer <http://nbviewer.ipython.org/gist/harrism/835a8ca39ced77fe751d>`_ avec `numbapro <http://docs.continuum.io/numbapro/>`_)
+* `Mesos <http://mesos.apache.org/>`_, `Elixi <https://github.com/ceteri/exelixi/wiki>`_
+
 **Revue de presse**
 
 * `Microsoft, partenaire de la filière Data Science de l'ENSAE ParisTech avec Microsoft Azure Machine <http://www.microsoft.com/france/Hub-Presse/communiques-de-presse/fiche-communique.aspx?eid=f7e7f695-fb08-4c6d-b4ec-3cde562ba429>`_
