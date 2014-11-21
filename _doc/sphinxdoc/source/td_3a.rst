@@ -62,15 +62,16 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
     * `ENSAE 3A - Map/Reduce en pratique <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_
     * Exercice recommandé : `SQL Magic Commands with SQLite in a Notebook <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/pyensae_sql_magic.html>`_
     * Travaux pratiques
-        * Cloudera - :ref:`Séance 6 : <td3acenoncesession6rst>`  (:ref:`correction <td3acorrectionsession6rst>`)
-        * Azure HDInsight - :ref:`Séance 6 : <td3acenoncesession6brst>`  (:ref:`correction <td3acorrectionsession6brst>`)
+        * Cloudera - :ref:`Séance 6 : premiers pas <td3acenoncesession6rst>`  (:ref:`correction <td3acorrectionsession6rst>`)
+        * Azure HDInsight - :ref:`Séance 6 : premiers pas <td3acenoncesession6brst>`  (:ref:`correction <td3acorrectionsession6brst>`)
     * Contenu
         * manipulation de fichiers avec `HDFS <http://hadoop.apache.org/docs/r1.2.1/hdfs_design.html>`_
         * premier job avec `PIG-latin <https://pig.apache.org/docs/r0.7.0/piglatin_ref2.html>`_ [#fp2]_
         * parallèle entre la syntaxe `PIG <http://pig.apache.org/docs/r0.12.1/basic.html>`_ et `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_
 
 - Séance 7 : PIG, JSON, streaming
-    * :ref:`PIG et JSON <td3acenoncesession7arst>`  (:ref:`correction <td3acorrectionsession7arst>`) (avec Azure)
+    * Le langage PIG est très proche du SQL et donc limité, le streaming permet de l'étendre.
+    * :ref:`PIG, JSON, streaming <td3acenoncesession7arst>`  (:ref:`correction <td3acorrectionsession7arst>`) (avec Cloudera)
 
 Le cours sera évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 
@@ -158,6 +159,8 @@ Bibliographie
 * `Don't use Hadoop - your data isn't that big <http://www.chrisstucchio.com/blog/2013/hadoop_hatred.html>`_
 * `Remote Notebook with Azure <http://www.xavierdupre.fr/blog/2014-11-09_nojs.html>`_
 * `Mahout 1.0 Features by Engine <https://mahout.apache.org/users/basics/algorithms.html>`_
+* `Pig Advantages and Disadvantages <http://bugra.github.io/work/notes/2014-02-08/pig-advantages-and-disadvantages/>`_
+* `Pig Not So Foreign Language Paper Notes <http://bugra.github.io/work/notes/2014-02-09/pig-not-so-foreign-language-paper-notes/>`_
 
 **Librairies**
 
