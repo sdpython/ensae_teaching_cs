@@ -51,11 +51,11 @@ Contenu des enseignements
         * :ref:`Modules <modulesi>`
         * :ref:`Outils, ressources pour développer <l-devtools>`
         * :ref:`Examens passés <l-examens>` (1A)
-        * :ref:`Projets informatiques <l-projinfo>`
         * :ref:`Coding Party <l-codingparty>`
     * Projets informatiques
         * :ref:`projet informatique 1A <l-projinfo>`
         * :ref:`projet informatique 2A <l-projinfo2a>`
+        * :ref:`projet informatique 3A <l-projinfo3a>`
     * :ref:`Python pour Data Scientist <l-data2a>`
     * :ref:`l-ressources`
     

@@ -132,10 +132,12 @@ Bibliographie
   `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
 * `Prédire les épidémies avec Wikipedia <http://www.lemonde.fr/sante/article/2014/11/13/predire-les-epidemies-avec-wikipedia_4523461_1651302.html>`_, Le Monde
 * `FastML <http://fastml.com/>`_  (blog sur le machine learning)
+* :ref:`question_projet_2014`
 
 **MOOC**
 
-* `Machine Learning par Andrew Y. Ng <https://www.class-central.com/mooc/835/coursera-machine-learning>`_
+* `Machine Learning par Andrew Y. Ng <https://www.class-central.com/mooc/835/coursera-machine-learning>`_ 
+  (les chapitres X et XI de la semaine 6 aborde la construction d'un système de machine learning).
 * `Coursera Machine Learning <https://www.coursera.org/course/ml>`_
 * `Coursera Machine Algorithm <https://www.coursera.org/course/algo>`_
 * `CSE373 - Analysis of Algorithms - 2007 SBU <https://www.youtube.com/playlist?list=PL5F43156F3F22C349>`_
