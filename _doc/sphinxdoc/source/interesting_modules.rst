@@ -82,7 +82,9 @@ Visualisation
 Extensions
 ----------
 
-    * `cvxopt <http://cvxopt.org/>`_ : optimisation quadratique sous contraintes
+    * `cvxopt <http://cvxopt.org/>`_ : optimisation quadratique sous contraintes 
+      (lire `Install cvxopt on Ubuntu <http://www.xavierdupre.fr/blog/2014-11-23_nojs.html>`_, sous Windows,
+      il faut aller à `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_)
     * `openpyxl <http://pythonhosted.org/openpyxl/>`_ : conversion de DataFrame en feuille Excel, 
       il est préférable d'installer la version 1.62 (``pip install openpyxl==1.6.2``) car la version 2.0.3
       ne marche pas encore avec pandas.

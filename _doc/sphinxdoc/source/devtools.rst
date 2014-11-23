@@ -22,8 +22,9 @@ qui facilitent l'archivage. Ils sont tellement pratiques qu'on a même du mal
 
 **Visual pour Git**
 
-* `TortoiseGit <https://code.google.com/p/tortoisegit/>`_
-* `SourceTree <http://www.sourcetreeapp.com/>`_
+* `TortoiseGit <https://code.google.com/p/tortoisegit/>`_ (Windows)
+* `SourceTree <http://www.sourcetreeapp.com/>`_ (Windows, Mac)
+* `Giggle <https://wiki.gnome.org/Apps/giggle>`_ (Linux)
 
 **Archivage distant**
 
