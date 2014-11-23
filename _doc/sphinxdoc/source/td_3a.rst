@@ -183,6 +183,7 @@ Bibliographie
     td_3a_enonce
     td_3a_correction
     specials/azure
+    entretiens
     
 .. rubric:: Footnotes
 

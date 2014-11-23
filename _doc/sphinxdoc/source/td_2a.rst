@@ -185,5 +185,6 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
     td_2a_s5_synthese
     debutermlprojet
     specials/algorithm_culture
+    entretiens
 
     

@@ -34,6 +34,9 @@ Glossaire
     ENSAE ParisTech
         Ecole Nationale de la Statistique et de l'Administration Economique (`ENSAE <http://www.ensae.fr/>`_)
         
+    entretien
+        Quelques révisions à faire afin de préparer un :ref:`l-entretiens.
+        
     Git
         Logiciel de suivi de source utilisé par exemple par GitHub. 
         Il est décentralisé. Chaque contributeur est libre de proposer ou d'importer
