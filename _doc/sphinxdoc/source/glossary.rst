@@ -110,6 +110,19 @@ Glossaire
     rst
         rst = reStructuredText
         
+    sparse
+        Les matrices `sparse <http://en.wikipedia.org/wiki/Sparse_matrix>`_ (ou creuses) sont des matrices 
+        de grandes dimensions dont la plupart des coefficients sont nuls. En tenant compte de cette information,
+        il est possible de réduire la taille de stockages et d'optimiser le calcul matriciel.
+        Il n'existe pas encore de modules standard pour gérer ce cas. Quelques liens :
+        `sparse et pandas <http://pandas.pydata.org/pandas-docs/dev/sparse.html>`_,
+        `sparse matrix avec scipy <http://docs.scipy.org/doc/scipy-0.14.0/reference/sparse.html#module-scipy.sparse>`_,
+        `Handling huge matrices in Python <http://www.philippsinger.info/?p=464>`_,
+        `sparse matrix et cvxopt <http://cvxopt.org/userguide/matrices.html>`_,
+        `présentation de blaze <http://fr.slideshare.net/pycontw/largescale-arrayoriented-computing-with-python>`_,
+        `blaze <http://blaze.pydata.org/docs/latest/index.html>`_ (peut-être le futur de `numpy <http://blog.digital.telefonica.com/2014/03/05/python-big-data/>`_),
+        `Introducing Blaze - HMDA Practice <http://continuum.io/blog/blaze-hmda>`_
+        
     Stroustrup
         `Bjarne Stroustrup <http://www.stroustrup.com/>`_ est l'inventeur du 
         langage `C++ <http://fr.wikipedia.org/wiki/C%2B%2B>`_.

@@ -20,6 +20,7 @@ Source de données
     * `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_ (collection de jeux de données classés par type de problème - régression, classification, ...)
     * `Data Analysis, Modeling and Machine Learning Group <http://ama.liglab.fr/resourcestools/datasets/>`_
     * `Global Disease Monitoring and Forecasting with Wikipedia  <http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1003892>`_
+    * `Home Mortgage Disclouse Act <http://www.ffiec.gov/hmda/>`_ (voir `Introducing Blaze - HMDA Practice <http://continuum.io/blog/blaze-hmda>`_
     
 Code
 ----

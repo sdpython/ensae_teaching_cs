@@ -158,6 +158,7 @@ Bibliographie
 * `Low-dimensional Embeddings for Interpretable Anchor-based Topic Inference <http://mimno.infosci.cornell.edu/papers/EMNLP2014138.pdf>`_, Moontae Lee, David Mimno
 * `ABC model choice via random forests <http://arxiv.org/abs/1406.6288>`_, Pierre Pudlo, Jean-Michel Marin, Arnaud Estoup, Jean-Marie Cornuet, Mathieu Gautier, Christian P. Robert 
 * `Mondrian Forests: Efficient Online Random Forests <http://arxiv.org/pdf/1406.2673v1.pdf>`_, Balaji Lakshminarayanan, Daniel M. Roy, Yee Whye Teh
+* `Stochastic Gradient Tricks <http://leon.bottou.org/papers/bottou-tricks-2012>`_
 
 **Librairies de machine learning**
 

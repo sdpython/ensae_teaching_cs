@@ -16,7 +16,7 @@ En matière de machine learning, le module à connaître est
 :ref:`statsmodels  <td2acenoncesession3Arst>`.
 
 Même si ce n'est pas encore très répandu, la connaissance de Hadoop, PIG est un plus : 
-:ref:`Hadoop, Steaming <td3acenoncesession7arst>` qu'on peut faire depuis une ligne de commande
+:ref:`Hadoop, Streaming <td3acenoncesession7arst>` qu'on peut faire depuis une ligne de commande
 ou depuis un notebook à condition d'utiliser le module `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_.
 
 
