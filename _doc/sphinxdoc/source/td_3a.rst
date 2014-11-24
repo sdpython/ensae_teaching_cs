@@ -71,7 +71,8 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
 
 - Séance 7 : PIG, JSON, streaming
     * Le langage PIG est très proche du SQL et donc limité, le streaming permet de l'étendre.
-    * :ref:`PIG, JSON, streaming <td3acenoncesession7arst>`  (:ref:`correction <td3acorrectionsession7arst>`) (avec Cloudera)
+    * :ref:`PIG, JSON, streaming <td3acenoncesession7arst>`  (:ref:`correction <td3acorrectionsession7arst>` avec Cloudera,
+      :ref:`correction <td3acorrectionsession7azrst>` avec Azure)
 
 Le cours sera évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 
@@ -91,7 +92,7 @@ La plupart des modules requis sont inclus dans la distribution
 Les deux modules suivantes introduisent les commandes magiques utilisées dans les notebooks :
 
 * `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
-* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ (version >= 1.0)
+* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ (version >= 1.1)
 
 Il faudra également installer (pour Cloudera uniquement) :
 
@@ -167,7 +168,7 @@ Bibliographie
 * `Giraph <http://giraph.apache.org/>`_
 * `Mahout <http://mahout.apache.org/>`_
 * `Spark <https://spark.apache.org/>`_ (`DPark <https://github.com/douban/dpark>`_)
-* `Kafka <http://kafka.apache.org/>_
+* `Kafka <http://kafka.apache.org/>`_
 * `Storm <https://storm.apache.org/>`_
 * `Chapel <http://chapel.cray.com/>`_
 * `pyCUDA <https://developer.nvidia.com/pycuda>`_ (`A Monte Carlo Option Pricer <http://nbviewer.ipython.org/gist/harrism/835a8ca39ced77fe751d>`_ avec `numbapro <http://docs.continuum.io/numbapro/>`_)
