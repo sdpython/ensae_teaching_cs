@@ -52,6 +52,14 @@ Glossaire
         Voici par exemple un changement sur la librairie
         `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ :
         `add method plot <https://github.com/sdpython/pyensae/commit/b5c36ba7885d9d4d92c00e67c5a2d238c57d507a>`_.
+    
+    HDFS
+        Hadoop File System : système de fichiers distribué propre à Hadoop : 
+        `commandes HDFS <http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/FileSystemShell.html>`_.
+        
+    Hive
+        Langage haut niveau pour implémenter des tâches Map/Reduce traitant des tables de données :
+        `Hive <https://hive.apache.org/>`_.
 
     Immuable 
         voir Immutable
@@ -81,6 +89,10 @@ Glossaire
         
     Mutable
         Voir Immutable.
+        
+    PIG
+        Langage haut niveau pour implémenter des tâches avec plusieurs Map/Reduce :
+        `PIG <http://pig.apache.org/>`_.
         
     pyensae
         C'est un module que j'ai développé à l'attention des élèves de l'ENSAE

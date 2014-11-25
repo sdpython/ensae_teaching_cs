@@ -118,6 +118,16 @@ Liens :
 Bibliographie
 +++++++++++++
 
+**Documentation**
+
+* `PIG <http://pig.apache.org/>`_, `PIG syntax <http://pig.apache.org/docs/r0.14.0/basic.html>`_
+* `commandes HDFS <http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/FileSystemShell.html>`_
+* `commandes linux <http://doc.ubuntu-fr.org/tutoriel/console_commandes_de_base>`_
+* `azure (python) <http://www.xavierdupre.fr/app/azure-sdk-for-python/helpsphinx/index.html>`_
+* `WebHCat <http://docs.hortonworks.com/HDPDocuments/HDP1/HDP-1.2.1/bk_dataintegration/content/ch_using_hcatalog_1.html>`_
+* `command pig <http://pig.apache.org/docs/r0.12.1/start.html#run>`_
+* `HIVE <https://hive.apache.org/>`_
+
 **Articles**
 
 * `CUBE and ROLLUP: Two Apache Pig Functions That Every Data Scientist Should Know <http://joshualande.com/cube-rollup-pig-data-science/>`_

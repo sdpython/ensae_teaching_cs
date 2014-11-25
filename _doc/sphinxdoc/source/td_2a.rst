@@ -143,9 +143,10 @@ Bibliographie
 * `CSE373 - Analysis of Algorithms - 2007 SBU <https://www.youtube.com/playlist?list=PL5F43156F3F22C349>`_
 * `CS109 Data Science (Harvard) <http://cs109.github.io/2014/>`_ (la liste des vidéos disponibles est en bas)
 
-**Autres cours**
+**Autres cours sous forme de notebooks**
 
 * `CS109 Data Science (Harvard) <http://cs109.github.io/2014/>`_ - `TD <https://github.com/cs109/content>`_
+* `Advanced Statistical Computing, Chris Fonnesbeck (Vanderbilt University) <http://nbviewer.ipython.org/github/fonnesbeck/Bios366/tree/master/notebooks/>`_
 
 **Articles d'auteurs très connus**
 
