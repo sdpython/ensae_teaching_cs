@@ -7,13 +7,18 @@
 
 def style():
     """
-    @FAQ(martplotlib___Changer le style de graphique pour ggplot)
+    @FAQ(matplotlib___Changer le style de graphique pour ggplot)
 
-    Je n'ai pas encore essayé.
+    .. index:: ggplot
+    
+    voir `Customizing plots with style sheets <http://matplotlib.org/users/style_sheets.html>`_
 
-    * `Sane color scheme for Matplotlib <http://www.huyng.com/posts/sane-color-scheme-for-matplotlib/>`_
-    * `style_sheets example code: plot_ggplot.py <http://matplotlib.org/examples/style_sheets/plot_ggplot.html>`_
-
+    @code
+    import matplotlib.pyplot as plt
+    plt.style.use('ggplot')
+    @encode
+    
     @endFAQ
     """
     pass
+    
