@@ -129,6 +129,9 @@ Sources de jeux de données
   Les règles peuvent varier d'un projet à l'autre, prenez soin de les lire avant de choisir un projet.
 * `Global Disease Monitoring and Forecasting with Wikipedia  <http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1003892>`_
 * :ref:`Autres suggestions <l-datasources>`
+* `urls, spam, ... <http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html>`_, jeux de données utilisés 
+  comme benchmark pour la libraire `libsvm <http://www.csie.ntu.edu.tw/~cjlin/libsvm/>`_
+* `Pascal Large Scale Learning Challenge <http://largescale.ml.tu-berlin.de/instructions/>`_
 * Votre propre jeu de données (à valider avec l'encadrant).
 
 Questions

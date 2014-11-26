@@ -11,6 +11,9 @@ Glossaire
         Un `algorithme <http://fr.wikipedia.org/wiki/Algorithme>`_ 
         est une suite finie et non ambigüe 
         d'opérations ou d'instructions permettant de résoudre un problème.
+        
+    benchmark
+        `banc d'essai <http://fr.wikipedia.org/wiki/Test_de_performance>`_
 
     coût
         Le coût d'un algorithme est le nombre d'opérations qu'il effectue lorsqu'il 

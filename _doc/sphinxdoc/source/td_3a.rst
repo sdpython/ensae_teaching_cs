@@ -73,6 +73,12 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
     * Le langage PIG est très proche du SQL et donc limité, le streaming permet de l'étendre.
     * :ref:`PIG, JSON, streaming <td3acenoncesession7arst>`  (:ref:`correction <td3acorrectionsession7arst>` avec Cloudera,
       :ref:`correction <td3acorrectionsession7azrst>` avec Azure)
+    * Les deux corrections présentent deux façons de faire du streaming, la seconde méthode (correction avec Azure)
+      est plus rapide car le Python/`Jython <http://www.jython.org/>`_ est transformé en Java et non interprété
+      (Java est le langage de Hadoop/PIG).
+      Cette solution est aussi accessible sous Cloudera :
+      `Writing Jython UDFs <http://archive.cloudera.com/cdh5/cdh/5/pig-0.12.0-cdh5.0.3/udf.html#jython-udfs>`_.
+
 
 Le cours sera évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 

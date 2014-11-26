@@ -337,6 +337,58 @@ def stringio(text):
     """
     return io.StringIO(text)
 
+def property_example():
+    """
+
+    @FAQ(property)
+
+    Une `property <https://docs.python.org/3.4/library/functions.html#property>`_ est
+    une écriture qui sert à transformer l'appel d'une méthode de classe
+    en un attribut.
+
+    @code
+
+    class ClasseAvecProperty:
+
+        def __init__(self,x,y):
+            self._x, self._y = x,y
+
+        @property
+        def x(self):
+            return self._x
+
+        @property
+        def y(self):
+            return self._y
+
+        @property
+        def norm2(self):
+            return self._y**2 + self._x**2
+
+    c = ClasseAvecProperty(1,2)
+    print(c.x)
+    print(c.y)
+
+    @endcode
+
+    ``x`` est définit comme une méthode mais elle retourne simplement l'attribut
+    ``_x``. De cette façon, il est impossible de changer ``x`` en écrivant::
+
+        c.x = 5
+
+    Cela déclenche l'erreur::
+
+        Traceback (most recent call last):
+          File "faq_python.py", line 455, in <module>
+            c.x = 5
+        AttributeError: can't set attribute
+
+    On fait cela parce que l'écriture est plus courte et que cela
+    évite certaines erreurs.
+
+    @endFAQ
+    """
+    pass
 
 if __name__ == "__main__" :
 
@@ -389,3 +441,25 @@ if __name__ == "__main__" :
     b=a
     b += [2]
     print(a)
+
+    class ClasseAvecProperty:
+
+        def __init__(self,x,y):
+            self._x, self._y = x,y
+
+        @property
+        def x(self):
+            return self._x
+
+        @property
+        def y(self):
+            return self._y
+
+        @property
+        def norm2(self):
+            return self._y**2 + self._x**2
+
+    c = ClasseAvecProperty(1,2)
+    print(c.x)
+    print(c.y)
+    c.x = 5
