@@ -80,6 +80,29 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
       `Writing Jython UDFs <http://archive.cloudera.com/cdh5/cdh/5/pig-0.12.0-cdh5.0.3/udf.html#jython-udfs>`_.
     * :ref:`td3acenoncesession7paramsrst` sur Cloudera (:ref:`correction <td3acorrectionsession7paramsrst>`),
       :ref:`td3acenoncesession7paramsazrst` sur Azure (:ref:`correction <td3acorrectionsession7paramsazrst>`)
+      
+- Séance 8 : données antipathiques
+    * particularité de map/reduce
+        * analogie avec les itérateurs (langage fonctionnels)
+        * non conservation de l'ordre des lignes lors d'un traitement
+        * algorithmes des graphes conre-indiqués, cas des composantes connexes
+        * synchroniser l'heure des machines est un problème difficile
+        * limite du Monte Carlo sur map reduce
+            * pseudo aléatoire distribué est compliqué
+            * initialisation seed
+                * Qu'en est-il de la fusion de deux séquences pseudo aléatoires ayant commencé avec la même seed ?
+                * Lorsqu'on distribue, on crée de nombreux processus qui commence avec la même seed si on n'y prend pas garde.
+            * impossibilité de reproduire les résultats
+    * problèmes récurrents de map/reduce
+        * pas mal d'écriture sur disque, 
+        * éviter les sort, 
+        * possible explosion des stream intermédiaires, 
+        * gestion de la mémoire au niveau des mapper/reducer, 
+        * difficulté avec les algorithmes itératifs
+    * skewed streams
+    * :ref:`Astuce pour distribuer un JOIN sur des données antipathique <>`
+
+
 
 
 Le cours sera évalué avec un :ref:`projet informatique <l-projinfo3a>`.
