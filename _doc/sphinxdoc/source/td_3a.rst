@@ -78,6 +78,8 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
       (Java est le langage de Hadoop/PIG).
       Cette solution est aussi accessible sous Cloudera :
       `Writing Jython UDFs <http://archive.cloudera.com/cdh5/cdh/5/pig-0.12.0-cdh5.0.3/udf.html#jython-udfs>`_.
+    * :ref:`td3acenoncesession7paramsrst` sur Cloudera (:ref:`correction <td3acorrectionsession7paramsrst>`),
+      :ref:`td3acenoncesession7paramsazrst` sur Azure (:ref:`correction <td3acorrectionsession7paramsazrst>`)
 
 
 Le cours sera évalué avec un :ref:`projet informatique <l-projinfo3a>`.
