@@ -13,3 +13,4 @@
     Séance 7 : PIG et JSON et streaming avec Cloudera <notebooks/td3acenoncesession7arst>
     Séance 7 : PIG et paramètres avec Cloudera <notebooks/td3acenoncesession7paramsrst>
     Séance 7 : PIG et paramètres avec Azure <notebooks/td3acenoncesession7paramsazrst>
+    Séance 8 : Données antipathiques (skewed), Appariement <notebooks/td3acenoncesession8rst>

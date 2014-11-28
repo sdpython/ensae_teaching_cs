@@ -14,4 +14,5 @@ correction
     Séance 7 : PIG et JSON et streaming avec Azure <notebooks/td3acorrectionsession7azrst>
     Séance 7 : PIG et paramètres avec Cloudera <notebooks/td3acorrectionsession7paramsrst>
     Séance 7 : PIG et paramètres avec Azure <notebooks/td3acorrectionsession7paramsazrst>
+    Séance 8 : Données antipathiques (skewed), Appariement <notebooks/td3acorrectionsession8arst>
     

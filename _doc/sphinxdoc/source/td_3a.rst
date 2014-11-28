@@ -100,7 +100,7 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
         * gestion de la mémoire au niveau des mapper/reducer, 
         * difficulté avec les algorithmes itératifs
     * skewed streams
-    * :ref:`Astuce pour distribuer un JOIN sur des données antipathique <>`
+    * :ref:`Appariement distribué et données antipathiques <td3acenoncesession8arst>`
 
 
 
@@ -151,6 +151,7 @@ Bibliographie
 
 **Documentation**
 
+* `PIG tutorial <https://developer.yahoo.com/hadoop/tutorial/pigtutorial.html>`_
 * `PIG <http://pig.apache.org/>`_, `PIG syntax <http://pig.apache.org/docs/r0.14.0/basic.html>`_
 * `commandes HDFS <http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/FileSystemShell.html>`_
 * `commandes linux <http://doc.ubuntu-fr.org/tutoriel/console_commandes_de_base>`_
