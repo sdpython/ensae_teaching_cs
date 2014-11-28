@@ -12,10 +12,11 @@ def commentaire_accentues():
     L'aide de cette fonction contient assuréments des accents.
 
     @FAQ(Python n'accepte pas les accents)
+
+    .. index:: accent, accents, utf8, encoding
+
     Le langage Python a été conçu en langage anglais. Dès qu'on on ajoute un caractère
     qui ne fait pas partie de l'alphabet anglais (ponctuation comprise), il déclenche une erreur :
-
-    .. index:: accent,accents,utf8,encoding
 
     @code
     File "faq_cvxopt.py", line 3
