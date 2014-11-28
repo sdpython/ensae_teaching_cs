@@ -281,7 +281,7 @@ chaînes de traitements et deux coûts différents :
   :math:`c_2 (1-P(s))` correspond au coût d'une erreur, :math:`c_1` correspond
   correspond au coût du traitement du chèque, :math:`1-P(s)` au taux d'erreur en fonction de *s*.
 * Si le seuil de confiance est :math:`< S`, le chèque est reconnu manuellement et on
-  suppose que le taux d'erreur :math:`e \sim 1%` ne dépend pas du seuil. 
+  suppose que le taux d'erreur :math:`e \sim 1\%` ne dépend pas du seuil. 
   Le coût est alors :math:`C_m(s) = c_1 + c_1' + c_2 e` où :math:`c_1' >> c_1` 
   est le coût du traitement manuel.
   
