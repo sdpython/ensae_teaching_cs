@@ -39,8 +39,8 @@ Examens
             (recherche dichotomique, distance d'édition). L'énoncé s'appuie sur les deux 
             programmes suivant :
         <ul>
-        <li><a href="http://www.xavierdupre.fr/site2013/enseignements/http://www.xavierdupre.fr/blog/2013-12-01_nojs.html">Recherche dichotomique, récursive, itérative et le logarithme</a></li>
-        <li><a href="http://www.xavierdupre.fr/site2013/enseignements/http://www.xavierdupre.fr/blog/2013-12-02_nojs.html">Distance d'édition et programmation dynamique</a></li>
+        <li><a href="http://www.xavierdupre.fr/blog/2013-12-01_nojs.html">Recherche dichotomique, récursive, itérative et le logarithme</a></li>
+        <li><a href="http://www.xavierdupre.fr/blog/2013-12-02_nojs.html">Distance d'édition et programmation dynamique</a></li>
         </ul>
         </li>
     </ul>
