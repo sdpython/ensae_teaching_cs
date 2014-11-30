@@ -54,6 +54,13 @@ La dernière séance est une séance notée. Tous les documents sont autorisés.
 peuvent requérir l'utilisation des outils présentées durant les séances 9 à 12. Toutefois,
 si tel était le cas, ce serait très proche d'une solution proposée lors des TD.
 
+
+Autres énoncés
+--------------
+
+* `décomposition mosaïque d'une image <http://www.xavierdupre.fr/site2013/enseignements/tddata/am_td_11_image.pdf>`_ (Arnaud de Myttenaere)
+
+
 .. _l-td1a-biblio:
 
 Bibliographie
