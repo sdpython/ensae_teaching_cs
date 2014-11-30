@@ -209,6 +209,7 @@ Bibliographie
 * `Mahout 1.0 Features by Engine <https://mahout.apache.org/users/basics/algorithms.html>`_
 * `Pig Advantages and Disadvantages <http://bugra.github.io/work/notes/2014-02-08/pig-advantages-and-disadvantages/>`_
 * `Pig Not So Foreign Language Paper Notes <http://bugra.github.io/work/notes/2014-02-09/pig-not-so-foreign-language-paper-notes/>`_
+* `Tutorial: Spark-GPU Cluster Dev in a Notebook <https://iamtrask.github.io/2014/11/22/spark-gpu/>`_
 
 **Librairies**
 
