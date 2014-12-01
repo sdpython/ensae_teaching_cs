@@ -180,7 +180,7 @@ Bibliographie
 **Livres Map/Reduce**
 
 * `Programming Pig <http://chimera.labs.oreilly.com/books/1234000001811/index.html>`_, Alan Gates (accessible en ligne)
-* `Programming Hive <http://chimera.labs.oreilly.com/books/1234000001811/index.html>`_, Alan Gates (accessible en ligne)
+* `Programming Hive <http://shop.oreilly.com/product/0636920023555.do>`_, Edward Capriolo, Dean Wampler, Jason Rutherglen
 * `Hadoop: The Definitive Guide, 2nd Edition <http://shop.oreilly.com/product/0636920010388.do>`_, Tom White  (voir aussi `GitHub <https://github.com/tomwhite/hadoop-book/>`_)
 * `Hadoop in Practice <http://it-ebooks.info/book/1028/>`_, Alex Holmes
 * `Data-Intensive Text Processing with MapReduce <http://lintool.github.io/MapReduceAlgorithms/>`_, Jimmy Lin, Chris Dyer
