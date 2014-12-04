@@ -11,6 +11,13 @@ except ImportError :
     path = os.path.normpath(os.path.abspath( os.path.join( os.path.split(__file__)[0], "..", "..")))
     if path not in sys.path : sys.path.append (path)
     import src
+    
+try :
+    import pyquickhelper
+except ImportError :
+    path = os.path.normpath(os.path.abspath( os.path.join( os.path.split(__file__)[0], "..", "..", "..", "pyquickhelper", "src")))
+    if path not in sys.path : sys.path.append (path)
+    import pyquickhelper    
 
 from pyquickhelper import fLOG
 
@@ -35,7 +42,18 @@ class TestPythonnet(unittest.TestCase):
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
         if sys.platform.startswith("win"):
             from src.ensae_teaching_cs.pythonnet import vocal_synthesis
-            vocal_synthesis("test unitaire")
+            try:
+                vocal_synthesis("test unitaire")
+            except Exception as e :
+                if "Audio device error encountered" in str(e):
+                    # maybe the script is running on a virtual machine (no Audia device)
+                    if os.environ["USERNAME"] == "ensaestudent":
+                        # I would prefer to catch a proper exception
+                        # it just exclude one user only used on remotre machines
+                        return
+                raise e
+                    
+                    
 
 
 
