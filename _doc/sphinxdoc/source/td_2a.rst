@@ -94,6 +94,18 @@ DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont l
 Le cours sera évalué avec un :ref:`projet informatique <l-projinfo2a>`.
 
 
+Python et autres langages, personnaliser ses notebooks
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    
+.. toctree::
+    :numbered:
+
+    notebooks/python_r
+    notebooks/python_csharp
+    notebooks/ipython_custom_magics
+
+
 .. _l-td2a-biblio:
 
 Bibliographie

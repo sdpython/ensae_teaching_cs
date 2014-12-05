@@ -2,8 +2,8 @@
 .. _l-extra:
 
 
-Exposés divers
-==============
+Exposés divers, machine learning
+================================
 
     
 .. toctree::
@@ -15,7 +15,9 @@ Exposés divers
     notebooks/expose_graphe_et_map_reduce
     notebooks/expose_rwr_recommandation
     notebooks/expose_TSP
-
+    notebooks/ml_table_mortalite
+    notebooks/ml_huge_datasets
+    notebooks/ml_rue_paris_parcours
 
 **Autres thèmes possibles**
 

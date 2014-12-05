@@ -16,7 +16,4 @@ Exemples
     element_code
     exercices
     expose_divers
-    donnees
-    tips_tricks
-    premierspas
     
