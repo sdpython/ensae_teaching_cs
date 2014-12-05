@@ -16,6 +16,8 @@ Cours animé par :
 * Xavier Dupré
 
 
+TD
+++
     
 - :ref:`Séance 1 :  <td3acenoncesession1rst>`  (:ref:`correction <td3acorrectionsession1rst>`)
     * `liste chaînées <http://fr.wikipedia.org/wiki/Liste_cha%C3%AEn%C3%A9e>`_, `stack <http://fr.wikipedia.org/wiki/Pile_(informatique)>`_, `queue <http://en.wikipedia.org/wiki/Queue_(abstract_data_type)>`_, `dictionnaire <http://en.wikipedia.org/wiki/Associative_array>`_

@@ -7,6 +7,14 @@
 
 `Algorithmes et programmation - OMI1C4 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100115>`_
 
+Cours animé par :
+
+* Xavier Dupré
+
+
+TD
+--
+
 Ce cours s'étale sur 12 séances de travaux dirigés (TD) d'une durée de 2h. Le cours est décrit plus 
 en détail dans cette présentation : `ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_.
 Les six premières séances font découvrir le langage Python. 
@@ -93,6 +101,13 @@ puis à fusionner les deux solutions.
     notebooks/exercice_morse
     notebooks/exercice_lcs
     notebooks/exercice_plus_grande_somme
+    
+Petites Fiches
+--------------
+
+.. toctree::
+
+    1a/graphes
     
     
 

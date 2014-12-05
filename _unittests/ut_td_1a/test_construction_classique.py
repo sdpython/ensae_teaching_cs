@@ -53,5 +53,11 @@ class TestConstructionClassique(unittest.TestCase):
         x2 = integrale( lambda x: x, 0, 2, 1000)
         assert x2 == 2
 
+    def test_matrice_carre(self):
+        fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
+        mat = construit_matrice_carree(10)
+        assert len(mat) == 10
+        assert len(mat[0]) == 10
+
 if __name__ == "__main__"  :
     unittest.main ()

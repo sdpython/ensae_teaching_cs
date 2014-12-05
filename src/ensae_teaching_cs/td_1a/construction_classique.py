@@ -463,3 +463,12 @@ def integrale(fonction,a,b,n):
     """
     h = (b-a) / n
     return sum ( fonction(a+h/2+h*i) for i in range(0,n) ) * h
+
+def construit_matrice_carree(n):
+    """
+    cette construit une matrice carrée remplie de zéro
+    sous la forme d'une liste de listes
+
+    @param      n       dimension de la matrice carrée
+    """
+    return [ [ 0 for i in range(n) ] for j in range(n) ]

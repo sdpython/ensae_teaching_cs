@@ -14,6 +14,7 @@ Cours animé par :
 * Jérémie Jakubowicz
 * Xavier Dupré
 
+
 Ce cours s'étale sur 6 séances de cours/TD d'une durée de 4h.
 Les outils proposés sont en langage `Python <https://www.python.org/>`_. 
 Ils sont tous `open source <http://fr.wikipedia.org/wiki/Open_source>`_,
@@ -31,6 +32,9 @@ liste les différents modules proposés lors de ce cours.
 DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont les thèmes abordés durant les deux premières séances.
 
     
+TD
+++
+
 - **TD 1 : DataFrame** 
     - :ref:`TD 1 : Données et Graphes <td2acenoncesession1rst>` (:ref:`correction <td2acorrectionsession1rst>`)
         - import/export de données dans un DataFrame
