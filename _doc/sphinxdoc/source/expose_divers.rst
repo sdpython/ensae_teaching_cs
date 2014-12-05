@@ -5,6 +5,9 @@
 Exposés divers, machine learning
 ================================
 
+
+Notebooks
+---------
     
 .. toctree::
     :numbered:
@@ -19,13 +22,15 @@ Exposés divers, machine learning
     notebooks/ml_huge_datasets
     notebooks/ml_rue_paris_parcours
 
-**Autres thèmes possibles**
+Quelques idées de notebooks pour le futur
+-----------------------------------------
 
-    * paired bootstrap
-        * http://www.stat.ncsu.edu/people/lu/courses/ST505/Ch2.pdf
-        * http://projecteuclid.org/euclid.aoms/1177729436
-        * http://www.cl.uni-heidelberg.de/~riezler/publications/papers/ACL05WS.pdf
-        * http://arxiv.org/pdf/cs/0008005v1.pdf
-        * http://www.statmt.org/wmt14/pdf/W14-3333.pdf
-        * http://masanjin.net/sigtest.pdf
-        * http://stat.duke.edu/courses/Spring13/sta101.001/slides/unit4lec1H.pdf
+bootstrap pair
+
+    * `slides <http://www.stat.ncsu.edu/people/lu/courses/ST505/Ch2.pdf>`_
+    * `The Large-Sample Power of Tests Based on Permutations of Observations <http://projecteuclid.org/euclid.aoms/1177729436>`_
+    * `On Some Pitfalls in Automatic Evaluation and Significance Testing for MT <http://www.cl.uni-heidelberg.de/~riezler/publications/papers/ACL05WS.pdf>`_
+    * `More accurate tests for the statistical significance of result differences <http://arxiv.org/pdf/cs/0008005v1.pdf>`_
+    * `Randomized Significance Tests in Machine Translation <http://www.statmt.org/wmt14/pdf/W14-3333.pdf>`_
+    * `Statistical Hypothesis Tests for NLP <http://masanjin.net/sigtest.pdf>`_
+    * `Unit 4: Inference for numerical variables Lecture 1: Bootstrap, paired, and two sample <http://stat.duke.edu/courses/Spring13/sta101.001/slides/unit4lec1H.pdf>`_
