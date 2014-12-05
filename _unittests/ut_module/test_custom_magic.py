@@ -21,7 +21,7 @@ except ImportError :
 
 from pyquickhelper import fLOG
 from src.ensae_teaching_cs.mypython.custom_magics import CustomMagics
-from src.ensae_teaching_cs.tips_tricks.pythoncs import list2arrayint
+from src.ensae_teaching_cs.td_2a.pythoncs import list2arrayint
 
 
 class TestCustomMagic (unittest.TestCase):

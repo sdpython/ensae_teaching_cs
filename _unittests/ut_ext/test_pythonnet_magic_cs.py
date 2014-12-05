@@ -20,7 +20,7 @@ except ImportError :
     import pyquickhelper
 
 from pyquickhelper import fLOG
-from src.ensae_teaching_cs.tips_tricks.pythoncs import create_cs_function, run_cs_function
+from src.ensae_teaching_cs.td_2a.pythoncs import create_cs_function, run_cs_function
 
 
 class TestPythonnetMagicCS(unittest.TestCase):

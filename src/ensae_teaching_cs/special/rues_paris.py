@@ -37,13 +37,14 @@ def distance_haversine(lat1, lng1, lat2, lng2):
     d = radius * c
     return d
 
-def get_data(whereTo = "."):
+def get_data(whereTo = ".", fLOG = print):
     """
     Retourne les données des rues de Paris. On suppose que les arcs sont uniques
     et qu'il si :math:`j \rightarrow k` est présent, :math:`j \rightarrow k` ne l'est pas.
     Ceci est vérifié par un test.
 
     @param      whereTo         répertoire dans lequel télécharger les données
+    @param      fLOG            fonction de logging
     @return                     liste d'arcs
 
     Un arc est défini par un 6-uple contenant les informations suivantes :
@@ -54,7 +55,7 @@ def get_data(whereTo = "."):
         - p2: coordonnées du noeud 2
         - d: distance
     """
-    data = pyensae.download_data("paris_54000.zip", whereTo=whereTo)
+    data = pyensae.download_data("paris_54000.zip", whereTo=whereTo, fLOG=fLOG)
     name = data[0]
     with open(name, "r") as f : lines = f.readlines()
 

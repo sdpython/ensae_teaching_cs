@@ -31,7 +31,7 @@ class TestRueParis (unittest.TestCase):
         for ext in [".txt",".zip"]:
             f = os.path.join(folder, "paris_54000" + ext)
             if os.path.exists(f): os.remove(f)
-        data = get_data(whereTo=folder)
+        data = get_data(whereTo=folder, fLOG=fLOG)
         fLOG(len(data))
         assert len(data)>0
         total = sum( _[-1] for _ in data )
@@ -41,7 +41,7 @@ class TestRueParis (unittest.TestCase):
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
         folder = os.path.join(os.path.abspath(os.path.dirname(__file__)),"temp_rues2")
         if not os.path.exists(folder) : os.mkdir(folder)
-        edges = get_data(whereTo=folder)
+        edges = get_data(whereTo=folder, fLOG=fLOG)
         edges = edges[:1000]
         max_segment = max ( e[-1] for e in edges )
         possibles = possible_edges(edges, max_segment/8, fLOG = fLOG)
@@ -68,7 +68,7 @@ class TestRueParis (unittest.TestCase):
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
         folder = os.path.join(os.path.abspath(os.path.dirname(__file__)),"temp_rues2")
         if not os.path.exists(folder) : os.mkdir(folder)
-        edges = get_data(whereTo=folder)
+        edges = get_data(whereTo=folder, fLOG=fLOG)
         edges = edges[:1000]
         added = eulerien_extension(edges, fLOG = fLOG, alpha = 1/8)
         assert len(added)>0
@@ -79,7 +79,7 @@ class TestRueParis (unittest.TestCase):
         return
         folder = os.path.join(os.path.abspath(os.path.dirname(__file__)),"temp_rues2")
         if not os.path.exists(folder) : os.mkdir(folder)
-        edges = get_data(whereTo=folder)
+        edges = get_data(whereTo=folder, fLOG=fLOG)
         fLOG("start")
         added = eulerien_extension(edges, fLOG=fLOG, distance = distance_paris)
         assert len(added)>0
@@ -91,9 +91,9 @@ class TestRueParis (unittest.TestCase):
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
         folder = os.path.join(os.path.abspath(os.path.dirname(__file__)),"temp_rues_euler")
         if not os.path.exists(folder) : os.mkdir(folder)
-        edges = get_data(whereTo=folder)
+        edges = get_data(whereTo=folder, fLOG=fLOG)
 
-        data = pyensae.download_data("added.zip", whereTo=folder)
+        data = pyensae.download_data("added.zip", whereTo=folder, fLOG=fLOG)
         with open(data[0],"r") as f : text = f.read()
         added_edges = eval(text)
         path = euler_path(edges, added_edges)
@@ -107,7 +107,7 @@ class TestRueParis (unittest.TestCase):
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
         folder = os.path.join(os.path.abspath(os.path.dirname(__file__)),"temp_rues5")
         if not os.path.exists(folder) : os.mkdir(folder)
-        edges = get_data(whereTo=folder)
+        edges = get_data(whereTo=folder, fLOG=fLOG)
         edges = edges[:3]
 
         vertices = { }

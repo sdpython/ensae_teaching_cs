@@ -21,7 +21,7 @@ except ImportError :
     import pyquickhelper
 
 from pyquickhelper import fLOG
-from src.ensae_teaching_cs.tutoriel.construction_classique import *
+from src.ensae_teaching_cs.td_1a.construction_classique import *
 
 
 class TestConstructionClassique(unittest.TestCase):
