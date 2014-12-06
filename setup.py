@@ -212,7 +212,7 @@ else :
 
     setup(
         name                    = project_var_name,
-        version                 = '%s.%s' %(sversion, subversion) if "register" in sys.argv or "bdist_msi" in sys.argv else 'py%s-%s.%s' % (versionPython, sversion, subversion),
+        version                 = '%s.%s' %(sversion, subversion) if "register" in sys.argv or "bdist_msi" in sys.argv or "install" in sys.argv  else 'py%s-%s.%s' % (versionPython, sversion, subversion),
         author                  = 'Xavier Dupré',
         author_email            = 'xavier.dupre AT gmail.com',
         url                     = "http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html",
@@ -225,7 +225,7 @@ else :
         package_dir             = package_dir,
         package_data            = package_data,
         #data_files              = data_files,
-        install_requires        = [  "pyensae>=1.1", "pyquickhelper>=0.9", "pymyinstall>=0.8" ],
+        install_requires        = [  "pyensae", "pyquickhelper", "pymyinstall" ],
         ext_modules             = EXT_MODULES,
         #include_package_data    = True,
         )

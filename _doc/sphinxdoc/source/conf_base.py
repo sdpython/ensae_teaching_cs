@@ -308,10 +308,8 @@ autosummary_generate = True
 graphviz_output_format = "svg"
 
 if sys.platform.startswith("win"):
-    graphviz_dot = r"C:\Program Files (x86)\Graphviz2.34\bin\dot.exe"
-
-    if not os.path.exists(graphviz_dot):
-        raise FileNotFoundError(graphviz_dot)
+    import pyquickhelper
+    graphviz_dot = pyquickhelper.helpgen.utils_sphinx_doc_helpers.find_graphviz_dot()
 else:
     graphviz_dot = "dot"
 
