@@ -97,6 +97,15 @@ Glossaire
         Langage haut niveau pour implémenter des tâches avec plusieurs Map/Reduce :
         `PIG <http://pig.apache.org/>`_.
         
+    PR
+        voir Pull Request
+        
+    Pull Request
+        Terme prope à `Git <http://fr.wikipedia.org/wiki/Git>`_ (`GitHub <http://fr.wikipedia.org/wiki/GitHub>`_, 
+        `BitBucket <http://en.wikipedia.org/wiki/Bitbucket>`_, `GitLab <http://fr.wikipedia.org/wiki/GitLab>`_). 
+        Cela veut dire que quelqu'un a forké un projet open source, l'a modifié et a demandé à son concepteur d'intégrer ses modifications. 
+        Il a envoyé une `pull request <http://www.blog-nouvelles-technologies.fr/13114/comprendre-github-fork-branch-track-squash-et-pull-request/>`_.
+        
     pyensae
         C'est un module que j'ai développé à l'attention des élèves de l'ENSAE
         (`documentation <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_).
@@ -155,4 +164,8 @@ Glossaire
         `SVN <http://fr.wikipedia.org/wiki/Apache_Subversion>`_ est un logiciel de suivi
         de source, de même que Git. Il est centralisé : une modification doit d'abord
         être appliquée à la branche centrale avant de pouvoir être propagée aux autres branches.
+        
+    warnings
+        Non-blocking error but it should be read and the cause removed.
+        See `Python: Use Warnings! <http://www.arruda.blog.br/programacao/python-use-warnings/>`_.
     
