@@ -47,7 +47,8 @@ class TestPythonnet(unittest.TestCase):
             except Exception as e :
                 if "Audio device error encountered" in str(e):
                     # maybe the script is running on a virtual machine (no Audia device)
-                    if os.environ["USERNAME"] == "ensaestudent":
+                    if os.environ["USERNAME"] == "ensaestudent" or \
+                       os.environ["USERNAME"].endswith("&"):  # anonymous Jenkins configuration
                         # I would prefer to catch a proper exception
                         # it just exclude one user only used on remotre machines
                         return
