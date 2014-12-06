@@ -43,6 +43,12 @@ Examens
         <li><a href="http://www.xavierdupre.fr/blog/2013-12-02_nojs.html">Distance d'édition et programmation dynamique</a></li>
         </ul>
         </li>
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2015.pdf">énoncé 2014-2015</a>, 
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2015.pdf">correction</a> 
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2015.html">
+                <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
+                </a>
+        </li>
     </ul>
 
     <b>Séances de rattrapage :</b>
