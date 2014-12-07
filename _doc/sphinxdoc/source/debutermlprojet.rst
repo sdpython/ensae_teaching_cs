@@ -12,25 +12,25 @@ Une fois qu'on a cela, les premières étapes débutent avec presque toujours le
 Etape 1 : quel est le type de problème ?
 ++++++++++++++++++++++++++++++++++++++++
 
-    * supervisé 
-        * régression : :math:`Y = f(X) + \epsilon`
-        * classification : :math:`(c_1,...,c_k) = f(X)` pour un problème à :math:`k` classes
-        * ranking
-    * non supervisé
-        * clustering
-        * réduction du nombre de dimension
-        * système de recommandations
+* supervisé 
+    * régression : :math:`Y = f(X) + \epsilon`
+    * classification : :math:`(c_1,...,c_k) = f(X)` pour un problème à :math:`k` classes
+    * ranking
+* non supervisé
+    * clustering
+    * réduction du nombre de dimension
+    * système de recommandations
         
 Etape 2 : quelles sont les données ?
 ++++++++++++++++++++++++++++++++++++
 
-    * Est-ce une table classique ou un graphe ?
-    * Y a-t-il une dimension temporelle ?
-    * Nombre d'observations ?
-    * Nombre de variables (ou features) ?
-    * Quelles sont les variables connues, les variables à prédire ?
-    * Valeurs manquantes ?
-    * Variables catégorielles, discrètes ou continues ?
+* Est-ce une table classique ou un graphe ?
+* Y a-t-il une dimension temporelle ?
+* Nombre d'observations ?
+* Nombre de variables (ou features) ?
+* Quelles sont les variables connues, les variables à prédire ?
+* Valeurs manquantes ?
+* Variables catégorielles, discrètes ou continues ?
     
 La plupart des algorithmes d'apprentissages utilisent des données numériques,
 il faut convertir les variables catégorielles au format numérique.
@@ -73,14 +73,15 @@ fonction des types de problèmes :
     * corrélation de rang
 
 Si la performance globale convient, on s'arrête souvent ici. Dans le cas contraire, il faut retourner à l'étape 4 :
-    * La base d'apprentissage contient peut-être des points aberrants.
-    * La distribution d'un variable n'est pas homogène dans les bases d'apprentissage et des tests.
-    * Le modèle a besoin de plus de variables :
-        * combinaison non linéaires des variables existantes (polynômes, fonctions en escalier, ...),
-        * recoupement de la base de données avec une autre base.
-    * Les valeurs manquantes empêchent le modèle d'apprendre.
-    * Une variables continues ne l'est pas vraiment : distribution selon deux modes par exemple.
-    * ...
+
+* La base d'apprentissage contient peut-être des points aberrants.
+* La distribution d'un variable n'est pas homogène dans les bases d'apprentissage et des tests.
+* Le modèle a besoin de plus de variables :
+    * combinaison non linéaires des variables existantes (polynômes, fonctions en escalier, ...),
+    * recoupement de la base de données avec une autre base.
+* Les valeurs manquantes empêchent le modèle d'apprendre.
+* Une variables continues ne l'est pas vraiment : distribution selon deux modes par exemple.
+* ...
     
 Voir également `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_.
 

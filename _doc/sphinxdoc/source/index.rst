@@ -45,33 +45,33 @@ Quoi qu'on en dise, il faut aussi être créatif.
 Contenu des enseignements
 -------------------------
 
-    * 3 niveaux
-        * :ref:`ENSAE, 1A, Initiation à la programmation et l'algorithmie <l-td1a>`
-        * :ref:`ENSAE, 2A, Données, Machine Learning et Programmation <l-td2a>`
-        * :ref:`ENSAE, 3A, Eléments logiciels pour le traitement des données massives <l-td3a>`
-    * Présentations
-        * `Présentation ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_
-        * `Présentation ENSAE 2A - Données et machine learning <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_
-        * `Présentation ENSAE 3A - Map/Reduce <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_
-    * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
-        * :ref:`Exercices d'algorithmie <l-exoalgo>`
-        * :ref:`Exposés divers non abordés en cours <l-extra>`
-        * :ref:`Jeux autour des données <l-jdonnees>`
-    * Projets informatiques
-        * :ref:`projet informatique 1A <l-projinfo>`
-        * :ref:`projet informatique 2A <l-projinfo2a>`
-        * :ref:`projet informatique 3A <l-projinfo3a>`
-    * Questions, termes, FAQ
-        * :ref:`FAQ <l-FAQs>`
-        * :ref:`Glossaire <l-glossaire>`
-        * :ref:`questions`
-        * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
-    * Autres documents
-        * :ref:`Articles, Références, Blog <l-biblio>`
-        * :ref:`Modules <modulesi>`
-        * :ref:`Outils, ressources pour développer <l-devtools>`
-        * :ref:`Examens passés <l-examens>` (1A)
-        * :ref:`Coding Party <l-codingparty>`
+* 3 niveaux
+    * :ref:`ENSAE, 1A, Initiation à la programmation et l'algorithmie <l-td1a>`
+    * :ref:`ENSAE, 2A, Données, Machine Learning et Programmation <l-td2a>`
+    * :ref:`ENSAE, 3A, Eléments logiciels pour le traitement des données massives <l-td3a>`
+* Présentations
+    * `Présentation ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_
+    * `Présentation ENSAE 2A - Données et machine learning <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_
+    * `Présentation ENSAE 3A - Map/Reduce <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_
+* Projets informatiques
+    * :ref:`projet informatique 1A <l-projinfo>`
+    * :ref:`projet informatique 2A <l-projinfo2a>`
+    * :ref:`projet informatique 3A <l-projinfo3a>`
+* :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
+    * :ref:`Exercices d'algorithmie <l-exoalgo>`
+    * :ref:`Exposés divers non abordés en cours <l-extra>`
+    * :ref:`Jeux autour des données <l-jdonnees>`
+* Questions, termes, FAQ
+    * :ref:`FAQ <l-FAQs>`
+    * :ref:`Glossaire <l-glossaire>`
+    * :ref:`questions`
+    * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
+* Autres documents
+    * :ref:`Articles, Références, Blog <l-biblio>`
+    * :ref:`Modules <modulesi>`
+    * :ref:`Outils, ressources pour développer <l-devtools>`
+    * :ref:`Examens passés <l-examens>` (1A)
+    * :ref:`Coding Party <l-codingparty>`
     
 
     
@@ -121,10 +121,10 @@ sous Windows via cette distribution.
 L'ensemble des TDs a lieu sur les notebooks. Le plus simple pour écourter le plus possible
 la mise en route est de suivre ces deux étapes :
 
-    1. Créer un répertoire vide pour vos notebooks désigné par ``<dirnb>``.
-    2. Ajouter un raccourci sur votre bureau qui contient la ligne suivante::
+1. Créer un répertoire vide pour vos notebooks désigné par ``<dirnb>``.
+2. Ajouter un raccourci sur votre bureau qui contient la ligne suivante::
 
-        set path=%path%;c:\Python34;c:\Python34\Scripts&ipython3 notebook --notebook-dir=<dirnb>
+    set path=%path%;c:\Python34;c:\Python34\Scripts&ipython3 notebook --notebook-dir=<dirnb>
     
 Il suffit ensuite de double cliquer sur ce lien pour ouvrir un notebook. Pour récupérer un notebook, il suffit
 de le télécharger puis de le copier dans le répertoire ``<dirnb>`` ou de le glisser dans le navigateur.
@@ -137,14 +137,14 @@ d'autres paramètres par défaut.
 Environnement de développement
 ------------------------------
 
-    * `Installation de modules sous Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_  (**modules sous Windows**)
-    * `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_
-    * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
-    * `Trouver chaussure à ses stats <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/notebooks/td1a_cenonce_session_10.html#intro>`_
-    * :ref:`Python pour Data Scientist <l-data2a>`
-    * :ref:`l-ressources`
-    * :ref:`l-devtools`
-    * :ref:`modulesi`
+* `Installation de modules sous Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_  (**modules sous Windows**)
+* `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_
+* `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
+* `Trouver chaussure à ses stats <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/notebooks/td1a_cenonce_session_10.html#intro>`_
+* :ref:`Python pour Data Scientist <l-data2a>`
+* :ref:`l-ressources`
+* :ref:`l-devtools`
+* :ref:`modulesi`
 
 
 
