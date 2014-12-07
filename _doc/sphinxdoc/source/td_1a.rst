@@ -121,10 +121,20 @@ Bibliographie
 * `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
 * `Data Science in Python <http://blog.yhathq.com/posts/data-science-in-python-tutorial.html>`_
 * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
+* `Exercices de programmation <http://www.xavierdupre.fr/blog/2014-03-22_nojs.html>`_
+* `De l'idée au programme informatique <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_
+* `Questions Fréquentes <https://docs.python.org/3.4/faq/index.html>`_
+* :ref:`FAQ`
+* :ref:`glossary`
+* :ref:`questions`
+* `Débugger en Python <http://www.xavierdupre.fr/blog/2014-06-02_nojs.html>`_
+* `Modules standards <https://docs.python.org/3.4/library/>`_
 
 **Livres**
 
+* `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
 * `Apprentissage de la programmation <http://inforef.be/swi/python.htm>`_, Gérald Swinnen
+* `Programmation avec le langage Python <http://www.xavierdupre.fr/site2013/documents/python/initiation_via_python_ellipse_mai_2010.pdf>`_ (PDF, ou version `Ellipse <http://www.editions-ellipses.fr/product_info.php?products_id=6891>`_)
 * `Teach Yourself Python in 24 Hours <http://www.pauahtun.org/TYPython/>`_, Ivan Van Laningham 
   (le site est visuellement difficile, `version PDF <http://ptgmedia.pearsoncmg.com/images/9780672336874/samplepages/0672336871.pdf>`_)
 * `Précis de recherche opérationnelle <http://www.eyrolles.com/Informatique/Livre/precis-de-recherche-operationnelle-9782100706129>`_, Robert Faure, Bernard Lemaire, Christophe Picouleau
@@ -133,11 +143,14 @@ Bibliographie
 **Cours**
 
 * `Apprenez à programmer en Python <http://openclassrooms.com/courses/apprenez-a-programmer-en-python>`_ (openclassrooms)
+* `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
+
 
 **MOOC**
 
 * `Code Academy Python <http://www.codecademy.com/tracks/python>`_ (utilise Python 2.7)
 * `Un premier Mooc Inria sur Python <https://www.france-universite-numerique-mooc.fr/courses/inria/41001/Trimestre_4_2014/about>`_
+* `pyvideo.org <http://pyvideo.org/>`_
 
 **Outils**
 

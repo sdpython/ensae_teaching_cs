@@ -15,7 +15,7 @@ d'outils open source dont on aurait tort de se passer ou des services gratuits s
 qui facilitent l'archivage. Ils sont tellement pratiques qu'on a même du mal
 à s'en passer lorsqu'on travaille tout seul.
 
-**Suivi de sources distance**
+**Suivi de sources distant**
 
 * `GitHub <https://github.com/>`_
 * `BitBucket <https://bitbucket.org/>`_
@@ -70,6 +70,10 @@ un stockage dans un pays dont la loi limite l'usage qui peut être fait de vos d
 * `Python et Arduino <http://playground.arduino.cc/Interfacing/Python>`_
 * `Python et RaspberryPI <http://www.raspberrypi.org/documentation/usage/python/README.md>`_
 
+**Scheduler, automatic build**
+
+* `Jenkins <http://jenkins-ci.org/>`_
+* `Buildbot <http://buildbot.net/>`_
 
 Ressources
 ++++++++++

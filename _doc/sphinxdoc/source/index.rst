@@ -11,8 +11,7 @@ et permet à quiconque de contribuer à ce cours disponible sous trois formats d
 `mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_,
 `compact/blanc <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_,
 `compact/mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
-La page :ref:`l-README` résume l'historique des modifications.
-    
+
 
 Avant-propos
 ------------
@@ -25,44 +24,54 @@ les premiers pas sont rebutants et on y prend peu de plaisir.
 Cela devient plus facile avec une pratique régulière. On passe alors plus de temps
 sur son idée et moins sur son programme. Le langage Python est un de ceux
 qui demande le moins d'effort. Il est de plus en plus populaire comme en témoignent les 
-nombreux exemples sur Internet.
+nombreux exemples sur Internet 
+(`Python is Now the Most Popular Introductory Teaching Language at Top U.S. Universities <http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-us-universities/fulltext>`_).
 
-Il faut bien entendu installer Python une première fois. Comme ce cours requiert de nombreux modules,
-les étapes ont été simplifiées le plus possibles. Il faudra néanmoins y consacrer une bonne demi-heure :
-:ref:`l-install`.
+
+
+**3 niveaux**
+
+Les cours proposés sont de difficultés croissantes et orientés pour un statisticien ou data scientist.
+La pratique est un élément essentiel de l'apprentissage de la programmation.
+Quoi qu'on en dise, il faut aussi être créatif.
+
+
+* **1A :** syntaxe de langage, premiers algorithmes, programmation dynamique, Data Frame, premiers graphes
+* **2A :** python pour un statisticien, Data Frames, calcul matriciel, machine learning, 
+  exercices d'algorithmie
+* **3A :** calculs distribués, Map/Reduce depuis un notebook
 
 
 Contenu des enseignements
 -------------------------
 
-    * :ref:`ENSAE, 1A, Initiation à la programmation et l'algorithmie <l-td1a>`
-    * :ref:`ENSAE, 2A, Données, Machine Learning et Programmation <l-td2a>`
-    * :ref:`ENSAE, 3A, Eléments logiciels pour le traitement des données massives <l-td3a>`
-    * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
-        * :ref:`Exercices d'algorithmie <l-exoalgo>`
-        * :ref:`Exposés divers non abordés en cours <l-extra>`
-        * :ref:`Jeux autour des données <l-jdonnees>`
+    * 3 niveaux
+        * :ref:`ENSAE, 1A, Initiation à la programmation et l'algorithmie <l-td1a>`
+        * :ref:`ENSAE, 2A, Données, Machine Learning et Programmation <l-td2a>`
+        * :ref:`ENSAE, 3A, Eléments logiciels pour le traitement des données massives <l-td3a>`
     * Présentations
         * `Présentation ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_
         * `Présentation ENSAE 2A - Données et machine learning <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_
         * `Présentation ENSAE 3A - Map/Reduce <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_
+    * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
+        * :ref:`Exercices d'algorithmie <l-exoalgo>`
+        * :ref:`Exposés divers non abordés en cours <l-extra>`
+        * :ref:`Jeux autour des données <l-jdonnees>`
+    * Projets informatiques
+        * :ref:`projet informatique 1A <l-projinfo>`
+        * :ref:`projet informatique 2A <l-projinfo2a>`
+        * :ref:`projet informatique 3A <l-projinfo3a>`
+    * Questions, termes, FAQ
+        * :ref:`FAQ <l-FAQs>`
+        * :ref:`Glossaire <l-glossaire>`
+        * :ref:`questions`
+        * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
     * Autres documents
         * :ref:`Articles, Références, Blog <l-biblio>`
         * :ref:`Modules <modulesi>`
         * :ref:`Outils, ressources pour développer <l-devtools>`
         * :ref:`Examens passés <l-examens>` (1A)
         * :ref:`Coding Party <l-codingparty>`
-    * Projets informatiques
-        * :ref:`projet informatique 1A <l-projinfo>`
-        * :ref:`projet informatique 2A <l-projinfo2a>`
-        * :ref:`projet informatique 3A <l-projinfo3a>`
-    * :ref:`Python pour Data Scientist <l-data2a>`
-    * :ref:`l-ressources`
-    
-Et, j'ajoute parfois les questions qu'on me pose :
-
-    * :ref:`FAQ <l-FAQs>`
-    * :ref:`Glossaire <l-glossaire>`
     
 
     
@@ -88,7 +97,7 @@ En outre, quatre modules ont été développés pour ces enseignements :
 
 
 * `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/>`_ : génère la documentation de ce module
-* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ : code nécessaires aux TDs et aux projets informatiques
+* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ : code nécessaires aux TDs, aux projets informatiques, Big Data, PIG
 * `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_ : installe facilement des modules
 * `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_ : ces enseignements compilés sous forme de modules
 
@@ -124,43 +133,18 @@ L'article `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014
 d'autres paramètres par défaut.
 
 
-Quelques références
--------------------
 
-    * `Programmation avec le langage Python <http://www.xavierdupre.fr/site2013/documents/python/initiation_via_python_ellipse_mai_2010.pdf>`_ (PDF, ou version `Ellipse <http://www.editions-ellipses.fr/product_info.php?products_id=6891>`_)
-    * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
-    * `Exercices de programmation <http://www.xavierdupre.fr/blog/2014-03-22_nojs.html>`_
-    * `Python avec la Khan Academy <http://www.xavierdupre.fr/blog/2013-11-29_nojs.html>`_
-    * `Python Tutor <http://www.pythontutor.com/>`_
-    * `version PDF de ce site <http://www.xavierdupre.fr/app/ensae_teaching_cs/latex/ensae_teaching_cs_doc.pdf>`_
-    * `De l'idée au programme informatique <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_
-    * `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
-    * `pyvideo.org <http://pyvideo.org/>`_
-    
-Python
-------
-
-    * `Questions Fréquentes <https://docs.python.org/3.4/faq/index.html>`_
-    * `Modules standards <https://docs.python.org/3.4/library/>`_
-    * :ref:`modulesi`
-    * `Installation de modules sous Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_  (**modules sous Windows**)
-    * `Python is Now the Most Popular Introductory Teaching Language at Top U.S. Universities <http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-us-universities/fulltext>`_
-    
 Environnement de développement
 ------------------------------
 
+    * `Installation de modules sous Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_  (**modules sous Windows**)
     * `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_
     * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
-    * `Débugger en Python <http://www.xavierdupre.fr/blog/2014-06-02_nojs.html>`_
-    * :ref:`l-devtools`
     * `Trouver chaussure à ses stats <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/notebooks/td1a_cenonce_session_10.html#intro>`_
-
-Vieilles versions
------------------
-
-    * `année 2004-2011 <http://www.xavierdupre.fr/enseignement/td_python/python_td_simple/index.html>`_
-    * `année 2011-2013 <http://www.xavierdupre.fr/enseignement/td_python/python_td_minute/index.html>`_
-    * `année 2013-2014 <http://www.xavierdupre.fr/site2013/enseignements/index.html>`_
+    * :ref:`Python pour Data Scientist <l-data2a>`
+    * :ref:`l-ressources`
+    * :ref:`l-devtools`
+    * :ref:`modulesi`
 
 
 

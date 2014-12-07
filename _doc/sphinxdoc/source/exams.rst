@@ -48,6 +48,7 @@ Examens
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2015.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
+            (parcours de graphe, distance d'édition, plus court chemin)
         </li>
     </ul>
 
@@ -92,17 +93,17 @@ Examens
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_20_minutes_2014_09.pdf">correction</a> 
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/interro_rapide_20_minutes_2014_09.html">
                     <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
-        (fréquence des lettres dans un mot, anagrammes)</li>
+        (multiple, minimum, liste triée)</li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_20_minutes_2014_10.pdf">énoncé 2014-2015 (2)</a>, 
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_20_minutes_2014_10.pdf">correction</a> 
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/interro_rapide_20_minutes_2014_10.html">
                     <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
-        (fréquence des lettres dans un mot, anagrammes)</li>
+        (matrice, somme, anagramme, coût)</li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_20_minutes_2014_11.pdf">énoncé 2014-2015 (3)</a>, 
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_20_minutes_2014_11.pdf">correction</a> 
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/interro_rapide_20_minutes_2014_11.html">
                     <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
-        (fréquence des lettres dans un mot, anagrammes)</li>
+        (syntaxe, dictionnaire, coût, liste, division)</li>
     </ul>
     </p>
 
