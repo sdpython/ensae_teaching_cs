@@ -70,8 +70,7 @@ Exercices supplémentaires
 * :ref:`l-exampleNgatifs`
 * :ref:`l-exampleTD1A`
 * :ref:`l-exampleConstructionsClassiques`
-* :ref:`ppexodevinerunnombrerst`
-* :ref:`ppexodevinerunnombrecorrectionrst`
+* :ref:`ppexodevinerunnombrerst`, :ref:`correction <ppexodevinerunnombrecorrectionrst>`
 * :ref:`codelistetuplerst`
 * :ref:`codemultinomialrst`
 

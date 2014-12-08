@@ -64,7 +64,7 @@ Contenu des enseignements
 * Questions, termes, FAQ
     * :ref:`FAQ <l-FAQs>`
     * :ref:`Glossaire <l-glossaire>`
-    * :ref:`questions`
+    * :ref:`question`
     * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
 * Autres documents
     * :ref:`Articles, Références, Blog <l-biblio>`
