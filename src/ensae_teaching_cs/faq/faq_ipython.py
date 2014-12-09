@@ -7,7 +7,6 @@
 
 def notebook_path():
     """
-
     change matplotlib style
 
     @param      style       style
@@ -29,6 +28,29 @@ def notebook_path():
 
         theNotebook
 
+    @endFAQ
+    """
+    pass
+    
+def fix_table_notebook():
+    """ 
+    @FAQ(ipython___Table des matières à position fixe dans un notebook)
+    Il est possible d'ajouter au notebook un menu fix, positionné sur la droite, qui ne bouge pas
+    et qui permet de passer d'une section à l'autre plus facilement.
+    
+    Voir `Example of a notebook with a fixed index <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/notebooks/exemple_of_fix_menu.html>`_.
+    
+    Exemple :
+    
+    @code
+    <div style="position:absolute; top:10px; right:5px; width:100px; height:90px; margin:10px;">
+    [Section 1](#section1) -- [Section 2](#section2) -- [This is the end](#end)
+    </div>
+    @endcode
+    
+    Cette solution peut probablement être améliorée. Elle passe mal lors de la conversion
+    du notebook en HTML.
+    
     @endFAQ
     """
     pass

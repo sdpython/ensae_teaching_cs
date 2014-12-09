@@ -27,3 +27,24 @@ def graph_style(style = 'ggplot'):
     """
     import matplotlib.pyplot as plt
     plt.style.use(style)
+        
+def close_all():
+    """
+    Close every graph with matploblib
+    
+    @FAQ(matplotlib__Plante après plusieurs graphes)
+    
+    Il peut arriver que matplotlib fasse planter python sans qu'aucune exception ne soit générée.
+    L'article `matplotlib crashing Python <http://stackoverflow.com/questions/26955017/matplotlib-crashing-python>`_
+    suggère la solution suivante ::
+    
+        import matplotlib.pyplot as plt
+        plt.close('all')    
+    
+    @endFAQ
+    """    
+    import matplotlib.pyplot as plt
+    plt.close('all')
+    
+    
+    

@@ -389,6 +389,32 @@ def property_example():
     @endFAQ
     """
     pass
+    
+def enumerate_regex_search(exp, text):
+    """
+    Cette fonction itère sur les différentes occurences d'une expression régulière.
+    
+    @param      exp     expression régulière
+    @param      text    text à parser
+    @return             itérateur
+    
+    @FAQ(Comment itérer sur les résultats d'une expression régulière ?
+    
+    On utilise la méthode `finditer <https://docs.python.org/3.4/library/re.html#re.regex.finditer>`_.
+    
+    @code
+    found = exp.search(text)
+    for m in exp.finditer(text):
+        # ...
+    @endcode
+    
+    Voir également `Petites subtilités avec les expressions régulières en Python <http://www.xavierdupre.fr/blog/2014-12-02_nojs.html>`_.
+    
+    @endFAQ
+    """
+    found = exp.search(text)
+    for m in exp.finditer(text):
+        yield m
 
 if __name__ == "__main__" :
 

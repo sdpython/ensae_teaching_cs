@@ -70,7 +70,6 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
         * manipulation de fichiers avec `HDFS <http://hadoop.apache.org/docs/r1.2.1/hdfs_design.html>`_
         * premier job avec `PIG-latin <https://pig.apache.org/docs/r0.7.0/piglatin_ref2.html>`_ [#fp2]_
         * parallèle entre la syntaxe `PIG <http://pig.apache.org/docs/r0.12.1/basic.html>`_ et `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_
-
 - Séance 7 : PIG, JSON, streaming
     * Le langage PIG est très proche du SQL et donc limité, le streaming permet de l'étendre.
     * :ref:`PIG, JSON, streaming <td3acenoncesession7arst>`  (:ref:`correction <td3acorrectionsession7arst>` avec Cloudera,
@@ -81,8 +80,7 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
       Cette solution est aussi accessible sous Cloudera :
       `Writing Jython UDFs <http://archive.cloudera.com/cdh5/cdh/5/pig-0.12.0-cdh5.0.3/udf.html#jython-udfs>`_.
     * :ref:`td3acenoncesession7paramsrst` sur Cloudera (:ref:`correction <td3acorrectionsession7paramsrst>`),
-      :ref:`td3acenoncesession7paramsazrst` sur Azure (:ref:`correction <td3acorrectionsession7paramsazrst>`)
-      
+      :ref:`td3acenoncesession7paramsazrst` sur Azure (:ref:`correction <td3acorrectionsession7paramsazrst>`)      
 - Séance 8 : données antipathiques
     * particularité de map/reduce
         * analogie avec les itérateurs (langage fonctionnels)
@@ -102,7 +100,7 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
         * gestion de la mémoire au niveau des mapper/reducer, 
         * difficulté avec les algorithmes itératifs
     * skewed streams
-    * :ref:`Appariement distribué et données antipathiques <td3acenoncesession8arst>`
+    * :ref:`Appariement distribué et données antipathiques <td3acenoncesession8arst>` (:ref:`correction, première partie <td3acorrecionsession8arst>`)
 
 
 
