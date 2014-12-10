@@ -21,7 +21,7 @@ def graph_style(style = 'ggplot'):
     @code
     import matplotlib.pyplot as plt
     plt.style.use('ggplot')
-    @encode
+    @endcode
 
     @endFAQ
     """
