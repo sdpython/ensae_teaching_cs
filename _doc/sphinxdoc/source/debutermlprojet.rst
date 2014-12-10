@@ -35,8 +35,8 @@ Etape 2 : quelles sont les données ?
 La plupart des algorithmes d'apprentissages utilisent des données numériques,
 il faut convertir les variables catégorielles au format numérique.
 
-Si une variable catégorielle est à choix unique et qu'elle contient $C$ catégories, 
-celle-ci sera multipliée en $n$ colonnes, une pour chaque modalité. Comme la somme de
+Si une variable catégorielle est à choix unique et qu'elle contient :math:`C` catégories, 
+celle-ci sera multipliée en :math:`n` colonnes, une pour chaque modalité. Comme la somme de
 ces colonnes est le vecteur colonne :math:`J=(1,...,1)`, la matrice :math:`X` modifiée sera corrélée.
     
 Etape 3 : séparation train/test
