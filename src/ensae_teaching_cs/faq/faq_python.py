@@ -398,7 +398,7 @@ def enumerate_regex_search(exp, text):
     @param      text    text à parser
     @return             itérateur
 
-    @FAQ(Comment itérer sur les résultats d'une expression régulière ?
+    @FAQ(Comment itérer sur les résultats d'une expression régulière ?)
 
     On utilise la méthode `finditer <https://docs.python.org/3.4/library/re.html#re.regex.finditer>`_.
 
