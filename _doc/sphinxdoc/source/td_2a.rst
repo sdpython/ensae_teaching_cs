@@ -5,7 +5,7 @@
 2A
 ==
 
-**Données, Machine Learning et Programmation**
+`Python Avancé Données, Machine Learning et Programmation <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/2me-anne-formationsdiplome-95.html?id=101352>`_
 
 Cours animé par :
 
@@ -188,6 +188,7 @@ Bibliographie
 * `Google Code Jam <https://code.google.com/codejam>`_
 * `TopCoder <http://www.topcoder.com/>`_
 * `UVa Online Judge <http://uva.onlinejudge.org/>`_
+* `Le problème des huit reines <http://zanotti.univ-tln.fr/algo/REINES.html>`_
 
 
 Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_ :

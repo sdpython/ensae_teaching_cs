@@ -134,6 +134,18 @@ Glossaire
     rst
         rst = reStructuredText
         
+    score
+        Le score n'a pas de définition théorique et il dépend de chaque modèle. 
+        Prenons l'exemple d'une classification avec LDA, le résultat est un hyperplan qui sépare deux classes. 
+        On détermine le meilleur hyperplan possible sur une base d'apprentissage. 
+        Le score dans ce cas est la distance d'un point à cet hyperplan mais c'est une définition propre au modèle LDA. 
+        D'une manière générale, un classifier réalise une partition, il permet de tracer des frontière entre 
+        les classes. Le score indique si on est plus ou moins proche de cette frontière. 
+        Plus on est proche, moins le classifieur est sûr de sa réponse. Voilà en résumé l'idée du score.
+        Donc le score est un chiffre qui exprime la proximité d'une observation à la frontière de la classe 
+        dans laquelle elle est classée. La frontière est apprise sur la base d'apprentissage, 
+        l'observation provient de n'importe quelle base.        
+        
     sparse
         Les matrices `sparse <http://en.wikipedia.org/wiki/Sparse_matrix>`_ (ou creuses) sont des matrices 
         de grandes dimensions dont la plupart des coefficients sont nuls. En tenant compte de cette information,
