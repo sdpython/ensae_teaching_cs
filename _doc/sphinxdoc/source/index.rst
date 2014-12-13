@@ -168,4 +168,4 @@ Environnement de développement
     filechanges
     README
     indexes
-    
+    all_report
