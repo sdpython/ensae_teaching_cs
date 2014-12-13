@@ -104,6 +104,11 @@ Examens
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/interro_rapide_20_minutes_2014_11.html">
                     <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (syntaxe, dictionnaire, coût, liste, division)</li>
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interrogation_rattrape_2014-12-12-yg.pdf">énoncé 2014-2015 (4) - rattrapage (Yves Gerey)</a>, 
+        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_10_minutes_2014_12.pdf">correction</a> 
+        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/interro_rapide_10_minutes_2014_12.html">
+                    <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
+        (syntaxe, dictionnaire, fonctions)</li>
     </ul>
     </p>
 
@@ -144,5 +149,6 @@ Correction sous forme de notebooks
     notebooks/interro_rapide_20_minutes_2014_09
     notebooks/interro_rapide_20_minutes_2014_10
     notebooks/interro_rapide_20_minutes_2014_11
+    notebooks/interro_rapide_20_minutes_2014_12
     notebooks/td_note_2015
     
