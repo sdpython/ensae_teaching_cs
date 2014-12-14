@@ -100,7 +100,7 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
         * gestion de la mémoire au niveau des mapper/reducer, 
         * difficulté avec les algorithmes itératifs
     * skewed streams
-    * :ref:`Appariement distribué et données antipathiques <td3acenoncesession8arst>` (:ref:`correction, première partie <td3acorrecionsession8arst>`)
+    * :ref:`Appariement distribué et données antipathiques <td3acenoncesession8arst>` (:ref:`correction, première partie <td3acorrectionsession8arst>`)
 
 
 
