@@ -54,3 +54,49 @@ def fix_table_notebook():
     @endFAQ
     """
     pass
+    
+def r_and_notebook():
+    """
+    @example(techniques___Utiliser R depuis un notebook)
+    
+    .. index:: R
+    
+    C'est l'objet des deux notebooks :ref:`td2acenoncesession2brst` et la :ref:`correction <td2acorrectionsession2brst>`.
+    
+    @endexample
+    
+    @FAQ(ipython___Comment utiliser R depuis un notebook ?)
+    
+    Voir notebooks :ref:`td2acenoncesession2brst`, :ref:`correction <td2acorrectionsession2brst>`.
+    
+    @endFAQ
+
+    """
+    pass
+    
+def ipython_convert_notebooks():
+    """
+    @example(techniques___Convertir le notebook en cours au format HTML)
+    
+    .. index:: conversion,html,rst
+    
+    C'est l'objet du notebook :ref:`notebook_convert`.
+    
+    @endexample
+    
+    @FAQ(ipython___Comment convertir le notebook en cours au format HTML ?)
+    
+    Voir notebook :ref:`notebook_convert`.
+    
+    @endFAQ
+    
+    @FAQ(ipython___Comment ajouter un lien vers un fichier local pour le télécharger ?)
+    
+    Voir notebook :ref:`notebook_convert`.
+    
+    @endFAQ
+    
+    """
+    pass
+    
+    

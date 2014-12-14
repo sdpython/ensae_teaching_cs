@@ -108,6 +108,7 @@ Python et autres langages, personnaliser ses notebooks
     notebooks/python_r
     notebooks/python_csharp
     notebooks/ipython_custom_magics
+    notebooks/matplotlib_zoomable
 
 
 .. _l-td2a-biblio:

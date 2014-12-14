@@ -75,7 +75,6 @@ Exercices supplémentaires
 * :ref:`codemultinomialrst`
 
 
-
 Algorithmes classiques
 ----------------------
 
@@ -108,6 +107,17 @@ Petites Fiches
 
     1a/graphes
     
+
+Trucs et astuces avec les notebooks
+-----------------------------------
+
+    
+.. toctree::
+    :numbered:
+
+    notebooks/notebook_convert
+    notebooks/ipython_custom_magics
+
     
 
 .. _l-td1a-biblio:

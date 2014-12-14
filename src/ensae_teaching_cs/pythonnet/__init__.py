@@ -36,6 +36,9 @@ def vocal_synthesis(text, lang = "fr-FR", voice = "", filename = ""):
     @param      filename    nom de fichier pour sauver le résultat au format wav (vide sinon)
 
     @example(techniques___Utiliser une DLL implémentée en C#)
+    
+    .. index:: C#,DLL
+    
     Le code de la DLL est le suivant. Il a été compilé sous forme de DLL.
     @code
     namespace ENSAE.Voice
@@ -75,6 +78,8 @@ def vocal_synthesis(text, lang = "fr-FR", voice = "", filename = ""):
     from ENSAE.Voice import Speech
     Speech.VocalSynthesis(text, lang, voice, filename)
     @endcode
+    
+    Il faut voir le notebook :ref:`pythoncsharprst`.
 
     @endexample
     """

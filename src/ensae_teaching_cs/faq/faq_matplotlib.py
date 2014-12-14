@@ -45,3 +45,14 @@ def close_all():
     """
     import matplotlib.pyplot as plt
     plt.close('all')
+
+def zoomable():
+    """    
+    @FAQ(matplotlib___Des graphiques zoomables dans un notebook ?)
+    
+    Voir le notebook :ref:`matplotlibzoomablerst`.
+    
+    @endFAQ
+    """
+    pass
+    
