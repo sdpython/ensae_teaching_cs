@@ -80,19 +80,19 @@ def ipython_convert_notebooks():
 
     .. index:: conversion,html,rst
 
-    C'est l'objet du notebook :ref:`notebook_convert`.
+    C'est l'objet du notebook :ref:`notebookconvertrst`.
 
     @endexample
 
     @FAQ(ipython___Comment convertir le notebook en cours au format HTML ?)
 
-    Voir notebook :ref:`notebook_convert`.
+    Voir notebook :ref:`notebookconvertrst`.
 
     @endFAQ
 
     @FAQ(ipython___Comment ajouter un lien vers un fichier local pour le télécharger ?)
 
-    Voir notebook :ref:`notebook_convert`.
+    Voir notebook :ref:`notebookconvertrst`.
 
     @endFAQ
 
