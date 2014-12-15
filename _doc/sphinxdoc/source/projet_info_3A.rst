@@ -5,40 +5,47 @@
 3A - Projets informatiques
 ==========================
 
-**page en construction**
+Le projet aura pour objectif l'implémentation d'un algorithme réparti, 
+soit en utilisant le calcul sur GPU, soit via Map/Reduce, 
+soit en implémentant vous-même la répartition des calculs sur plusieurs machines (virtuelles) 
+via des primitives telles que `MPI <http://fr.wikipedia.org/wiki/Message_Passing_Interface>`_ ou des 
+`Key-Value Pair Storages <http://en.wikipedia.org/wiki/NoSQL>`_.
 
-Le projet informatique sera centré sur le traitement
-de données de façon distribuée.
+Les technologies proposées sont donc :
 
-**Date de rendu**
-    * janvier
+* GPU : `CUDA <http://fr.wikipedia.org/wiki/Compute_Unified_Device_Architecture>`_ et C, ou CUDA et python via 
+  `pyCUDA <http://mathema.tician.de/software/pycuda/>`_
+* Map/Reduce : `PIG <http://en.wikipedia.org/wiki/Pig_Latin>`_, 
+  `Hive <http://fr.wikipedia.org/wiki/Hive>`_ ou Java sur un cluster Cloudera ou Azure
+* implémentation d'un calcul réparti : `QueueStorage <http://azure.microsoft.com/fr-fr/documentation/articles/storage-dotnet-how-to-use-queues/>`_ + 
+  `Blobstorage <http://azure.microsoft.com/fr-fr/documentation/articles/storage-dotnet-how-to-use-blobs/>`_ 
+  comme primitives de communication (C#, .Net) sur Azure.
 
+Vous êtes libres de traiter l'algorithme de votre choix. Nous vous en proposons certains dans les articles ci-dessous
 
-Jeux de données
-+++++++++++++++
-
-* Il devra être choisi parmi les sources proposées ci-dessous.
-* Aucun exemple d'algorithme de machine learning fonctionnant sur des graphes 
-  (clustering, recommandations) n'a été montré en TD mais il est possible de choisir un tel jeu.
-  
-
-Travail attendu
-+++++++++++++++
-
-Traitement d'un jeu de données de façon distribuée :
-
-* Map/Reduce
-* GPU
-* Azure Blog
+* `Parallel MCMC <http://arxiv.org/pdf/1010.1595v3.pdf>`_
+* `Parallel Gradient Descent in Minibatches <http://research.microsoft.com/pubs/158712/distr_mini_batch.pdf>`_
+* `FFT et convolutions sous GPU <http://cadik.posvete.cz/papers/cadikm-iv06-gpu.pdf>`_
+* `Algos de PageRank <http://lintool.github.io/MapReduceAlgorithms/MapReduce-book-final.pdf>`_ (p106)
+* `Recherche de valeurs propres en grande dimension <http://arxiv.org/pdf/1304.1467v3.pdf>`_
+* `Algorithmes LASSO parallèles <http://arxiv.org/pdf/1411.6520v1.pdf>`_
+* `Distributed Online Learning <http://arxiv.org/pdf/1308.4568v3.pdf>`_
 
 
-Sources de jeux de données
-++++++++++++++++++++++++++
+Nous vous recommandons d'adopter la démarche suivante:
 
-* `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_ :
-    collection de graphes
-* `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_ :
-    collection de jeux de données classés par type de problème - régression, classification, ...
+#. implémentation et débugging sur un petit jeu de données synthétiques où :
+    * les choses sont sensées bien se passer
+    * la taille du jeu de données rend le debugging plus rapide
+#. Un vrai jeu de données que vous aurez sélectionné sur un des sites suivants :
+    * `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_
+    * `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_
+
+
+
+Autres sources de jeux de données
++++++++++++++++++++++++++++++++++
+
 * `Kaggle <https://www.kaggle.com/competitions/search?SearchVisibility=AllCompetitions&ShowActive=true&ShowCompleted=true&ShowProspect=true&ShowOpenToAll=true&ShowPrivate=true&ShowLimited=true&DeadlineColumnSort=Descending>`_ `(2) <http://inclass.kaggle.com/>`_,
   Toutefois, avant d'utiliser les données Kaggle, je vous encourage à lire les articles `Date use for teaching after competition concludes <http://www.kaggle.com/c/decoding-the-human-brain/forums/t/8331/date-use-for-teaching-after-competition-concludes>`_,
   et `Using a Kaggle contest as a term project <http://www.kaggle.com/forums/t/2745/using-a-kaggle-contest-as-a-term-project>`_.
