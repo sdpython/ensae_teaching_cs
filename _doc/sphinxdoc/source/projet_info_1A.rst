@@ -317,4 +317,8 @@ Au cinéma, cette figure s'appelle une `ellipse <http://fr.wikipedia.org/wiki/El
 `L'ellipse - leçon (filmée) de cinéma <https://www.youtube.com/watch?v=BMwN2JloosE>`_).
 
 
+Git
+---
+
+* :ref:`gitnotebookrst`
 

@@ -30,6 +30,7 @@ Vous êtes libres de traiter l'algorithme de votre choix. Nous vous en proposons
 * `Recherche de valeurs propres en grande dimension <http://arxiv.org/pdf/1304.1467v3.pdf>`_
 * `Algorithmes LASSO parallèles <http://arxiv.org/pdf/1411.6520v1.pdf>`_
 * `Distributed Online Learning <http://arxiv.org/pdf/1308.4568v3.pdf>`_
+* `Large-scale L-BFGS using MapReduce <http://papers.nips.cc/paper/5333-large-scale-l-bfgs-using-mapreduce>`_
 
 
 Nous vous recommandons d'adopter la démarche suivante:
@@ -56,6 +57,12 @@ Autres sources de jeux de données
   comme benchmark pour la libraire `libsvm <http://www.csie.ntu.edu.tw/~cjlin/libsvm/>`_
 * `Pascal Large Scale Learning Challenge <http://largescale.ml.tu-berlin.de/instructions/>`_
 * Votre propre jeu de données (à valider avec l'encadrant).
+
+Git
++++
+
+* :ref:`gitnotebookrst`
+
 
 
 

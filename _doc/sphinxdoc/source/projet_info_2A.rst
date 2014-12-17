@@ -144,4 +144,8 @@ Questions
 * :ref:`question_2014_projet_5_2A`
 * :ref:`question_2014_projet_6_2A`
 
+Git
++++
+
+* :ref:`gitnotebookrst`
 
