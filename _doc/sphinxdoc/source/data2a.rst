@@ -179,6 +179,8 @@ Usage irrégulier
     b. `Django <http://www.django-fr.org/>`_
     c. `brython <http://www.brython.info/>`_
     d. `pyjs <http://pyjs.org/>`_
+    e. `brython <http://www.brython.info/index.html>`_  (pour remplacer le javascript par du python)
+    f. `autobahn/python <http://autobahn.ws/python/>`_ (programmation événementielle pour un site web)
     
 4. Python sur tablette, téléphone
     a. `kivy <http://kivy.org/#home>`_

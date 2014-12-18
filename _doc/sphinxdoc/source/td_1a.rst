@@ -106,6 +106,7 @@ Petites Fiches
 .. toctree::
 
     1a/graphes
+    1a/siteflask
     
 
 Trucs et astuces avec les notebooks
@@ -164,6 +165,8 @@ Bibliographie
 **Outils**
 
 * `PythonTutor <http://pythontutor.com/>`_ : pour suivre pas à pas l'exécution d'un programme (petit)
+
+
 
 
 .. toctree::
