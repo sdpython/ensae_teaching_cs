@@ -15,8 +15,8 @@ facilement un site web.
 Exemple
 -------
 
-* :ref:`f-simple_flask_site`
-* :ref:`f-flask_helper`
+* :ref:`f-simpleflasksite`
+* :ref:`f-flaskhelper`
 
 
 Unit Test

@@ -148,6 +148,16 @@ Environnement de développement
 * `(Très) Grand listing des libs tierce partie les plus utiles en Python <http://sametmax.com/tres-grand-listing-des-libs-tierce-partie-les-plus-utiles-en-python/>`_
 
 
+Index
+-----
+
+* :ref:`l-notebooks`
+* :ref:`l-modules`
+* :ref:`l-classes`
+* :ref:`l-functions`
+* :ref:`l-changes`
+
+
 
 .. toctree::
     :hidden:
