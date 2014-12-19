@@ -6,9 +6,24 @@
 
 
 from flask import Flask, Response, request
-from .flask_helper import Text2Response, Exception2Response
 
 app = Flask(__name__)
+
+if __name__ == "__main__":
+    import sys
+    sys.path.append("../..")
+    from ensae_teaching_cs.td_1a.flask_helper import Text2Response, Exception2Response
+else:
+    from .flask_helper import Text2Response, Exception2Response
+
+if __name__ != "__main__":
+    app.debug = False
+    app.logger.disabled = True
+    app.logger_name = 'custom_logger'
+
+    import logging
+    log = logging.getLogger('werkzeug')
+    log.setLevel(logging.ERROR)
 
 def shutdown_server():
     """
@@ -41,7 +56,7 @@ def help_command(command):
         return Text2Response("help for command: {0}".format(command))
     except Exception as e :
         return Exception2Response(e)
-        
+
 @app.route('/form/', methods=['POSTS'])
 def form():
     """
@@ -68,7 +83,6 @@ def main_page():
                             /form/              process a form
             """.replace("                            ","")
     return Text2Response(message)
-
 
 
 if __name__ == "__main__":
