@@ -26,3 +26,22 @@ Tout l'enjeu de cette méthode consiste à maximiser ces gains en améliorant sa
 à mesure. Tout au long du jeu, il devient possible d'estimer la probabilité d'apparition 
 des combinaisons gagnantes avec de plus en plus de précision. 
 L'apprentissage par renforcement est une façon d'optimiser ses gains tout en apprenant cette distribution.
+
+
+Algorithme de Chow-Liu
+++++++++++++++++++++++
+
+Cet algorithme `Chow Liu <http://en.wikipedia.org/wiki/Chow%E2%80%93Liu_tree>`_. 
+Il sert à construire des relations entre des variables aléatoires. On pourra procéder en deux étapes :
+
+* implémentation de l'algorithme et vérification sur un jeux de données synthétiques
+* application sur un jeu de données plus conséquent
+
+
+**Ressources**
+
+* `MOOC: Learning Tree Structured Networks <https://class.coursera.org/pgm/lecture/97>`_,  Daphne Koller
+  (pour aller plus loin `Probabilistic Graphical Models <https://class.coursera.org/pgm/lecture/preview>`_)
+* `http://pgm.stanford.edu/ <Probabilistic Graphical Models>`_, Daphne Koller, Nir Friedman
+* `Learning with Mixtures of Trees <http://www.jmlr.org/papers/volume1/meila00a/meila00a.pdf>`_, Marina Meila, Michael I. Jordan
+

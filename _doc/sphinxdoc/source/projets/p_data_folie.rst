@@ -55,3 +55,24 @@ Si besoin, voici d'autres données sur un autre blog :
 
 - http://sites.univ-provence.fr/veronis/Discours2007/
 - http://sites.univ-provence.fr/veronis/Premiers/
+
+Twitter
++++++++
+
+On peut faire beaucoup de choses avec `Twitter <https://twitter.com/>`_. La première étape consiste à récupérer des données
+avec des modules tels que :
+
+- `tweepy <http://www.tweepy.org/>`_
+- `twitter <https://pypi.python.org/pypi/twitter>`_
+- `python-twitter <https://pypi.python.org/pypi/python-twitter>`_
+
+
+Ensuite, l'exploitation des données peut varier. A partir de données historiques qu'on collectera tout au long du projet,
+on peut chercher à prédire un événément, la météo, des opinions...
+
+Quelques références :
+
+- `Competing Opinions and Stubborness: Connecting Models to Data <http://arxiv.org/pdf/1411.7415v1.pdf>`_
+- `Home Location Identification of Twitter Users <http://arxiv.org/ftp/arxiv/papers/1403/1403.2345.pdf>`_
+- `Opinion control in complex networks <http://arxiv.org/pdf/1412.2170v1.pdf>`_
+
