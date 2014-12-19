@@ -104,6 +104,7 @@ Machine Learning / Data Science
 * `Visualising data structures and algorithms through animation <http://www.comp.nus.edu.sg/~stevenha/visualization/index.html>`_
 * `Donner <http://freakonometrics.hypotheses.org/11037>`_
 * `Bar des sciences : débat sur le Big Data <http://freakonometrics.hypotheses.org/12135>`_
+* `Sequence to Sequence Learning with Neural Networks <http://arxiv.org/pdf/1409.3215.pdf>`_, Ilya Sutskever, Oriol Vinyals, Quoc V. Le
 
 Optimisation
 ------------
@@ -130,7 +131,7 @@ Papers about machine learning
 * :ref:`l-td3a-biblio <Bibliographie 3A>` : Hadoop, PIG, calcul distribué
 
 Livres sur la programmation
---------------------
+---------------------------
 
 * `Thinking in C++ <http://mindview.net/Books/TICPP/ThinkingInCPP2e.html>`_, Bruce Eckel
 * `Effective C++ <http://www.aristeia.com/books.html>`_, Scott Meyers
@@ -142,6 +143,7 @@ Livres sur la programmation
 Livres sur le machine learning
 ------------------------------
 
+* `Deep Learning: Methods and Applications <http://research.microsoft.com/apps/pubs/default.aspx?id=219984>`_, 
 * `Data-Intensive Text Processing with MapReduce <http://lintool.github.io/MapReduceAlgorithms/>`_, Jimmy Lin, Chris Dyer
 * `Introducing Microsoft Azure HDInsight <http://blogs.msdn.com/b/microsoft_press/archive/2014/05/27/free-ebook-introducing-microsoft-azure-hdinsight.aspx>`_, Avkash Chauhan, Valentine Fontama, Michele Hart, Wee Hyong Tok, Buck Woody
 * `The Elements of Statistical Learning <http://statweb.stanford.edu/~tibs/ElemStatLearn/>`_, Trevor Hastie, Robert Tibshirani, Jerome Friedman

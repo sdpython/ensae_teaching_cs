@@ -36,11 +36,9 @@ est meilleure. Avant de commencer la partie graphique, je suggère la lecture de
 `Frameworks for games in Python <http://www.xavierdupre.fr/blog/2014-01-01_nojs.html>`_.
 
 
-Les jeux
---------
 
 Puissance 4
-+++++++++++
+-----------
 
 
 Quelques liens : 
@@ -57,7 +55,7 @@ Quelques images regroupées par d'anciens élèves :
 pour ceux qui veulent réaliser une interface graphique. 
 
 Othello
-+++++++
+-------
 
 Quelques liens : 
 
@@ -70,7 +68,7 @@ Quelques images regroupées par d'anciens élèves :
 pour ceux qui veulent réaliser une interface graphique.
 
 Awalé
-+++++
+-----
 
 Quelques liens : 
 
@@ -83,7 +81,7 @@ Quelques images regroupées par d'anciens élèves :
 pour ceux qui veulent réaliser une interface graphique.
 
 Gomoku
-++++++
+------
 
 Quelques liens : 
 

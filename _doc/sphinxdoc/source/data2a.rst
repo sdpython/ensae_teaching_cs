@@ -61,7 +61,7 @@ Usage régulier
     f. Manipulation customisée (avec fonction lambda)
     g. Récupération depuis d'autre sources (SQL, fichiers Excel, sqlite3)
     h. Séries temporelles
-    i. Autres fonctionnalités (describe, histogram…)
+    i. Autres fonctionnalités (describe, histogram...)
     j. Données "sparse" ou creuses
     h. Grandes tables (> 250Mo) (en dessous ça tient en mémoire facilement et les calculs sont assez rapides), modules pytables, blaze, SQLAchemy, http://www.pytables.org/docs/LargeDataAnalysis.pdf, SQLiteSpy, `h5py <http://www.h5py.org/>`_
     i. `pandas cookbook <http://pandas.pydata.org/pandas-docs/stable/cookbook.html>`_
@@ -117,7 +117,7 @@ Usage régulier
     h. `statsmodels <http://statsmodels.sourceforge.net/>`_
     i. `fastcluster <https://pypi.python.org/pypi/fastcluster>`_
     j. `lda <https://github.com/ariddell/lda>`_ (`LDA <http://en.wikipedia.org/wiki/Latent_Dirichlet_allocation>`_)
-    k. `nltk <http://www.nltk.org/install.html>`_ (natural language processing)
+    k. `NLTK <http://www.nltk.org/install.html>`_ (natural language processing)
     l. `glove-python <https://github.com/maciejkula/glove-python>`_
     
 #. Représentation de graphes
@@ -177,38 +177,34 @@ Usage irrégulier
 3. Un siteweb en python
     a. `Flask <http://flask.pocoo.org/>`_
     b. `Django <http://www.django-fr.org/>`_
-    c. `brython <http://www.brython.info/>`_
-    d. `pyjs <http://pyjs.org/>`_
-    e. `brython <http://www.brython.info/index.html>`_  (pour remplacer le javascript par du python)
-    f. `autobahn/python <http://autobahn.ws/python/>`_ (programmation événementielle pour un site web)
+    c. `pyjs <http://pyjs.org/>`_
+    d. `brython <http://www.brython.info/index.html>`_  (pour remplacer le javascript par du python)
+    e. `autobahn/python <http://autobahn.ws/python/>`_ (programmation événementielle pour un site web)
     
 4. Python sur tablette, téléphone
     a. `kivy <http://kivy.org/#home>`_
     
-5. Traitement du langage
-    a. `NLTK <http://www.nltk.org/>`_
-    
-6. Statistiques bayésiennes
+5. Statistiques bayésiennes
     a. `pymc <https://github.com/pymc-devs/pymc>`_
     b. `pystan <http://pystan.readthedocs.org/en/latest/index.html>`_
     
-7. `Data Cube <http://en.wikipedia.org/wiki/Data_cube>`_ (Wikipédia)
+6. `Data Cube <http://en.wikipedia.org/wiki/Data_cube>`_ (Wikipédia)
     * modules plutôt expérimentaux
         * `cubes <https://github.com/Stiivi/cubes>`_
         * `cubesviewer <https://github.com/jjmontesl/cubesviewer>`_
         * `cube-client <https://github.com/tsileo/cube-client>`_
         
-8. Algorithmie        
+7. Algorithmie        
     * `Woodbury matrix identity <http://en.wikipedia.org/wiki/Woodbury_matrix_identity>`_
     * `Blockwise inversion <http://en.wikipedia.org/wiki/Invertible_matrix#Blockwise_inversion>`_
     
-9. Mining en tout genre
+8. Mining en tout genre
     * `scrapy <http://scrapy.org/>`_ : scraping
     * `whoosh <http://pythonhosted.org//Whoosh/>`_ (moteur de recherche)
     * `elastic search <http://www.elasticsearch.org/guide/en/elasticsearch/client/python-api/current/>`_ 
     * `pattern <http://www.clips.ua.ac.be/pattern>`_
     
-10. Calcul en grande dimension
+9. Calcul en grande dimension
     a. calcul en grande précision `gmpy2 <http://gmpy2.readthedocs.org/en/latest/>`_
 
     

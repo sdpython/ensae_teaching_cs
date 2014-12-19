@@ -28,11 +28,9 @@ qu'on fait la veille avant de rendre le projet.
 
 
 
-Les jeux
---------
 
 Poker
-+++++
+-----
 
 Quelques liens :
 
@@ -50,7 +48,7 @@ Quelques images regroupées par d'anciens élèves :
 `image_cartes.zip <http://www.xavierdupre.fr/enseignement/projet_data/image_cartes.zip>`_.
 
 Belotte
-+++++++
+-------
 
 Quelques liens :
 

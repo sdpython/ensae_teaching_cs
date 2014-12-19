@@ -41,11 +41,8 @@ prédire les actions pour la date *t+1*.
 
 
 
-Les statégies en détail
------------------------
-
 Trend following
-+++++++++++++++
+---------------
 
 Le `trend following <http://en.wikipedia.org/wiki/Trend_following>`_ est un algorithme
 qui fonctionne bien sur les `futures <http://fr.wikipedia.org/wiki/Contrat_%C3%A0_terme>`_.
@@ -62,7 +59,7 @@ d'information dans ce document : `finance_autostrat.pdf <http://www.xavierdupre.
 
 
 Optimisation de portefeuille
-++++++++++++++++++++++++++++
+----------------------------
 
 Optimiser un portefeuille d'action consiste à construire une moyenne pondéré d'action 
 qui soit optimise le rendement à risque bornée soit minimise le risque à 
@@ -82,7 +79,7 @@ de l'optimiser sur la période d'apprentissage et de la tester sur la période d
 Il est fortement recommandé de relire le TD qui concerne l'optimisation sous contraine.
 
 Pair trading
-++++++++++++
+------------
 
 Le `pair trading <http://en.wikipedia.org/wiki/Pairs_trade>`_ n'est pas vraiment une 
 stratégie. La différence vient ici du fait qu'on considère une paire d'action 

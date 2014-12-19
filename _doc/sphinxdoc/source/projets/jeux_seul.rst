@@ -25,11 +25,9 @@ Avant de commencer la partie graphique, je suggère la lecture de cet article :
 `Frameworks for games in Python <http://www.xavierdupre.fr/blog/2014-01-01_nojs.html>`_.
 
 
-Les jeux
---------
 
 2048
-++++
+----
 
 Ce jeu est devenu très populaire à sa sortie en février 2014. Il s'agit d'empiler des tuiles pour former
 le nombre 2048. Les tuiles ne peuvent s'empiler que si elles sont égales. On veut ici implémenter une stratégie gagnante

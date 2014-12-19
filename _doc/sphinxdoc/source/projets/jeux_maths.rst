@@ -6,16 +6,16 @@ Jeux mathématiques
 
 Ces sujets reposent sur un exposé mathématique.
 
-Les sujets
-----------
 
 Ondes Wifi
-++++++++++
+----------
 
 Tout tient dans cet article : `Helmhurts <http://jasmcole.com/2014/08/25/helmhurts/>`_.
 
 Pentomino
-+++++++++
+---------
+
+.. index:: pentomino, tétris
 
 Un pentomino est un puzzle style Tétris (voir la page `Wikipédia <http://fr.wikipedia.org/wiki/Pentamino>`_). 
 Sur une grille, on doit disposer des pièces toutes différentes mais constituée d'un nombre fixe 
@@ -31,8 +31,9 @@ est accessoire et la sortie pourrait tout-à-fait être réalisée en mode texte
 .. image:: pent2.png
 
 
+
 Recherche exacte d'un motif, d'une expression
-+++++++++++++++++++++++++++++++++++++++++++++
+---------------------------------------------
 
 L'objectif est assez simple puisqu'il s'agit de rechercher une expression, 
 un mot dans toutes les pages Wikipédia. Néanmoins, rechercher une expression parmi 
@@ -57,7 +58,9 @@ pour implémenter trois combinaisons logiques entre deux mots :
 •	Ce document doit contenir m1 et m2 avec au plus n mots entre m1 et m2.
 
 Recherche approximative d'un motif, d'une expression
-++++++++++++++++++++++++++++++++++++++++++++++++++++
+----------------------------------------------------
+
+.. index:: Smith-Waterman, Approximate String Matching
 
 Il arrive qu'on ne connaisse pas l'orthographe d'un mot qu'on cherche ou qu'on se 
 trompe tout simplement et pourtant on souhaite toujours retrouver 
@@ -84,3 +87,27 @@ L'objectif n'est pas nécessairement d'utiliser ces méthodes mais de développe
 des idées simples permettant de rechercher un long texte dans le corps de Wikipedia. 
 
 Saurez-vous ruser ?
+
+
+Problème du voyageur de commerce
+--------------------------------
+
+.. index:: TSP, hill climbing, salesman, circuit hamiltonien, hamiltonien
+
+C'est un problème assez classique : `problème du voyageur de commerce <http://fr.wikipedia.org/wiki/Probl%C3%A8me_du_voyageur_de_commerce>`_
+qui consiste à trouver le plus court chemin passant par tous les noeuds d'un graphe. 
+Le terme mathématique est : `circuit hamiltonien <http://fr.wikipedia.org/wiki/Graphe_hamiltonien>`_
+
+On pourra essayer différents
+algorithmes :
+
+
+* `Parcours eulériens et hamiltoniens <https://www.gerad.ca/~alainh/Euler-Hamilton.pdf>`_
+* `Hill Climbing <http://en.wikipedia.org/wiki/Hill_climbing>`_
+* `A New Algorithm For Finding Hamiltonian Ccircuits <http://www.dharwadker.org/hamilton/>`_
+* `Trouver un cycle hamiltonien sur un graphe <http://blog.neamar.fr/2-uncategorised/129-algorithme-cycle-hamiltonien-graphe>`_
+
+
+Exemple d'utilisation :
+
+* `multiroute avec Bing <https://www.multiroute.de/?locale=fr>`_

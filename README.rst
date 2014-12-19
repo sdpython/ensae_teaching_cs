@@ -24,7 +24,7 @@ Started in 2014/04.
 * First contributor: `Xavier Dupré <http://www.xavierdupre.fr/>`_.
 * Other contributors: ENSAE's students, ..., see :ref:`l-changes`.
 
-Versions`
+Versions
 --------
 
 * **0.6 - 2014/??/??**

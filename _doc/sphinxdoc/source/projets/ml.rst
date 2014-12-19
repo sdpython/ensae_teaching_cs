@@ -7,7 +7,7 @@ Machine Learning
 
 
 Apprentissage par renforcement
-++++++++++++++++++++++++++++++
+------------------------------
 
 
 Un problème souvent évoqué lorsqu'on parle d'apprentissage par renforcement est celui du 
@@ -29,7 +29,7 @@ L'apprentissage par renforcement est une façon d'optimiser ses gains tout en ap
 
 
 Algorithme de Chow-Liu
-++++++++++++++++++++++
+----------------------
 
 Cet algorithme `Chow Liu <http://en.wikipedia.org/wiki/Chow%E2%80%93Liu_tree>`_. 
 Il sert à construire des relations entre des variables aléatoires. On pourra procéder en deux étapes :
@@ -44,4 +44,5 @@ Il sert à construire des relations entre des variables aléatoires. On pourra p
   (pour aller plus loin `Probabilistic Graphical Models <https://class.coursera.org/pgm/lecture/preview>`_)
 * `http://pgm.stanford.edu/ <Probabilistic Graphical Models>`_, Daphne Koller, Nir Friedman
 * `Learning with Mixtures of Trees <http://www.jmlr.org/papers/volume1/meila00a/meila00a.pdf>`_, Marina Meila, Michael I. Jordan
+
 

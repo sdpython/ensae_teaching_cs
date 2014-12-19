@@ -9,11 +9,9 @@ Il s'agit toujours de triturer des données de différentes façons,
 machine learning, datamining, recherche opérationnelle, texte mining...
 
 
-Les sujets
-----------
 
 Inférer les trajectoirs de vélo vélib
-+++++++++++++++++++++++++++++++++++++
+-------------------------------------
 
 C'était le sujet de la première coding party que personne
 n'est vraiment arrivé à conclure. Avec un peu plus de temps, qui sait ?
@@ -22,7 +20,7 @@ n'est vraiment arrivé à conclure. Avec un peu plus de temps, qui sait ?
 
 
 Nuages de mots
-++++++++++++++
+--------------
 
 Les nuages de mots sont apparus récemment pour représenter les mots-clés les plus importants sur une page, 
 un ensemble de pages internet : `Tag Cloud <http://en.wikipedia.org/wiki/Tag_cloud>`_.
@@ -56,8 +54,10 @@ Si besoin, voici d'autres données sur un autre blog :
 - http://sites.univ-provence.fr/veronis/Discours2007/
 - http://sites.univ-provence.fr/veronis/Premiers/
 
+
+
 Twitter
-+++++++
+-------
 
 On peut faire beaucoup de choses avec `Twitter <https://twitter.com/>`_. La première étape consiste à récupérer des données
 avec des modules tels que :
@@ -76,3 +76,25 @@ Quelques références :
 - `Home Location Identification of Twitter Users <http://arxiv.org/ftp/arxiv/papers/1403/1403.2345.pdf>`_
 - `Opinion control in complex networks <http://arxiv.org/pdf/1412.2170v1.pdf>`_
 
+
+Recherche de texte dans n'importe quelle base de données avec Whoosh
+--------------------------------------------------------------------
+
+`Whoosh <http://pythonhosted.org//Whoosh/index.html>`_ est un module Python qui permet 
+de faire de la recherche dans une base de données de textes. Il faudra d'abord
+constituer un corpus de texte (discours politiques, 
+pages `wikipedia <http://dumps.wikimedia.org/>`_, Twitter, blogs, ...)
+
+Evaluer un moteur de recherche n'est pas chose facile, cela dépend
+de la tâche, du corpus...
+Une métrique possible est le `DCG <http://en.wikipedia.org/wiki/Discounted_cumulative_gain>`_.
+Le projet se déroulera en plusieurs étapes :
+
+* constitution du corpus de texte
+* premiers exemples avec Whoosh
+* définition de l'objectif de recherche
+* évaluation
+* possible extensions
+    * `query rewriting <http://hughewilliams.com/2012/03/19/query-rewriting-in-search-engines/>`_
+    * `Rewriting Queries <https://developers.google.com/custom-search/docs/queries>`_
+    * `Online Expansion of Rare Queries for Sponsored Search <https://classes.soe.ucsc.edu/ism293/Spring09/material/papers/lec6/quartz.pdf>`_

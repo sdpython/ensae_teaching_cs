@@ -9,11 +9,9 @@ est l'occasion de découvrir des algorithmes. Chaque sujet considère un problè
 simple et un algorithme d'optimisation génétique décrit par un document.
 
 
-Les sujets
-----------
 
 Optimisation à partir d'algorithmes génétiques
-++++++++++++++++++++++++++++++++++++++++++++++
+----------------------------------------------
 
 La plupart des algorithmes d'optimisation reposent sur le gradient. La plus classique est de se promener le long
 de la courbe à optimisation dans le long de la pente la plus forte : dans le sens du gradient s'il faut maximier,
@@ -30,7 +28,9 @@ de l'espace des observations croît.
 
 
 Problème du sac-à-dos et algorithmes génétiques
-+++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------
+
+.. index:: sac-à-dis, Knapsack
 
 Le `problème du sac-à-dos <http://fr.wikipedia.org/wiki/Probl%C3%A8me_du_sac_%C3%A0_dos>`_ est un 
 problème d'optimisation discrète linéaire avec contrainte. 
@@ -46,7 +46,9 @@ On étudiera la convergence et le coût des algorithmes en fonction de la dimens
   
 
 Problème du voyageur de commerce et algorithme génétique
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+--------------------------------------------------------
+
+.. index:: TSP
 
 Le `problème du voyageur de commerce <http://fr.wikipedia.org/wiki/Probl%C3%A8me_du_voyageur_de_commerce>`_ est un 
 problème d'optimisation discrète très connu. Il consiste à parcourir tous les sommets d'un graphe en minimisant
@@ -62,7 +64,9 @@ On étudiera la convergence et le coût des algorithmes en fonction de la dimens
 
 
 Colonie de fourmis et plus court chemin
-+++++++++++++++++++++++++++++++++++++++
+---------------------------------------
+
+.. index:: fourmi
 
 On dispose un trésor dans une pièce contenant de nombreux obstacles, à l'autre bout, une colonie
 de fourmis. Au gré de leurs explorations, ces fourmis vont trouver puis raccourcir le plus court
@@ -79,6 +83,15 @@ algorithmes. Le ou les élèves devront faire un choix entre ces deux directions
 * Direction 2 : un problème plus classique d'optimisation du plus court chemin dans un graphe, 
                 on comparera avec un algortihme de Djisktra, puis on s'intéressera aux propriétés de
                 l'algorithme lorsque le nombre de sommets augmentent (le réseau routier belge, français, américain, européen...)
+                
+                
+Recherche de motifs
+-------------------
+
+Pas encore bien défini mais inspiré de :
+
+* `Stochastic Local Search for Pattern Set Mining <http://arxiv.org/pdf/1412.5984v1.pdf>`_
+                
 
 
 Lectures complémentaires
