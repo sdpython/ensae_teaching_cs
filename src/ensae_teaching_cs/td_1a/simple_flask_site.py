@@ -41,6 +41,19 @@ def help_command(command):
         return Text2Response("help for command: {0}".format(command))
     except Exception as e :
         return Exception2Response(e)
+        
+@app.route('/form/', methods=['POSTS'])
+def form():
+    """
+    process a form
+    """
+    try:
+        rows= []
+        for k,v in request.form.to.dict().items():
+            rows.append ("{0}={1}".format(k,v) )
+        return Text2Response("\n".join(rows))
+    except Exception as e :
+        return Exception2Response(e)
 
 @app.route('/')
 def main_page():
@@ -52,6 +65,7 @@ def main_page():
                             /help/<command>     help on command command
                             /upload/            upload a file (use post)
                             /shutdown/          shutdown the server (for unit test)
+                            /form/              process a form
             """.replace("                            ","")
     return Text2Response(message)
 
