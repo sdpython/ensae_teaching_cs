@@ -29,13 +29,13 @@ Glossaire
         `Deep Learning: Methods and Applications <http://research.microsoft.com/apps/pubs/default.aspx?id=219984>`_
         Deep learning also means heavy computational algorithms which is not very well handled by Python. 
         All the available packages are implemented in C++ and ported to python (wrapped):
-            * `Deep Learning Tutorials <http://www.deeplearning.net/tutorial/>`_ (python) (see also `github/yaoli/GSN <https://github.com/yaoli/GSN)>`_)
-            * `Vowpal Wabbit <https://github.com/JohnLangford/vowpal_wabbit/wiki>`_ (C++)
+        - `Deep Learning Tutorials <http://www.deeplearning.net/tutorial/>`_ (python) (see also `github/yaoli/GSN <https://github.com/yaoli/GSN)>`_)
+        - `Vowpal Wabbit <https://github.com/JohnLangford/vowpal_wabbit/wiki>`_ (C++)
         The inventor of deep learning is Yoshua Bengio:
-            * `Yoshuas Bengion's talk <http://www.iro.umontreal.ca/~bengioy/yoshua_en/talks.html>`_. 
-            * `LeNet 5 <http://yann.lecun.com/exdb/lenet/>`_ (probably the first known deep network)
+        - `Yoshuas Bengion's talk <http://www.iro.umontreal.ca/~bengioy/yoshua_en/talks.html>`_. 
+        - `LeNet 5 <http://yann.lecun.com/exdb/lenet/>`_ (probably the first known deep network)
         See also:
-            * `Sequence to Sequence Learning with Neural Networks <http://arxiv.org/pdf/1409.3215.pdf>`_, Ilya Sutskever, Oriol Vinyals, Quoc V. Le
+        - `Sequence to Sequence Learning with Neural Networks <http://arxiv.org/pdf/1409.3215.pdf>`_, Ilya Sutskever, Oriol Vinyals, Quoc V. Le
         
     Dijkstra
         Plus connu pour l'algorithme du plus court chemin dans un graphe,
