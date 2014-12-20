@@ -83,7 +83,7 @@ Recherche de texte dans n'importe quelle base de données avec Whoosh
 `Whoosh <http://pythonhosted.org//Whoosh/index.html>`_ est un module Python qui permet 
 de faire de la recherche dans une base de données de textes. Il faudra d'abord
 constituer un corpus de texte (discours politiques, 
-pages `wikipedia <http://dumps.wikimedia.org/>`_, Twitter, blogs, ...)
+pages `wikipedia dumps <http://dumps.wikimedia.org/>`_, Twitter, blogs, ...)
 
 Evaluer un moteur de recherche n'est pas chose facile, cela dépend
 de la tâche, du corpus...
@@ -98,3 +98,9 @@ Le projet se déroulera en plusieurs étapes :
     * `query rewriting <http://hughewilliams.com/2012/03/19/query-rewriting-in-search-engines/>`_
     * `Rewriting Queries <https://developers.google.com/custom-search/docs/queries>`_
     * `Online Expansion of Rare Queries for Sponsored Search <https://classes.soe.ucsc.edu/ism293/Spring09/material/papers/lec6/quartz.pdf>`_
+    
+    
+Source de données
+-----------------
+
+* `wikipedia dumps <http://dumps.wikimedia.org/>`_
