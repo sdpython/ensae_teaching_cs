@@ -46,3 +46,37 @@ Il sert à construire des relations entre des variables aléatoires. On pourra p
 * `Learning with Mixtures of Trees <http://www.jmlr.org/papers/volume1/meila00a/meila00a.pdf>`_, Marina Meila, Michael I. Jordan
 
 
+Reconnaissance des visages de ses amis
+--------------------------------------
+
+.. index:: image processing
+
+La librairie `OpenCV <http://opencv.org/>`_ 
+permet d'effectuer des traitements d'images assez complexes comme localiser le
+visage d'une personne prise en photo. L'image suivante
+est extraite de `Face Detection in Static Images With Python <http://creatingwithcode.com/howto/face-detection-in-static-images-with-python/>`_.
+
+.. image:: http://s3.amazonaws.com/static.creatingwithcode.com/wp-content/uploads/2009/02/output.jpg
+
+
+La tâche qu'on veut pouvoir accomplir à l'aide d'un programme python est la suivante :
+
+* On suppose qu'on dispose d'une vingtaine de photos de personnes, chacun distincte et
+  identifiée. On suppose que les photos ont été prises avec le même appareil, un téléphone
+  portable par exemple.
+* On prend une nouvelle photo avec ce même appareil. On veut automatiquement ranger
+  cette photo dans un répertoire associé à la personne reconnue.
+  
+On pourra lire les articles suivant :
+
+* `Simple Face Detection using OpenCV <http://suksant.com/2013/04/03/simple-face-detection-using-opencv/>`_
+* `Facial Detection with OpenCV and Python (1) <http://calebmadrigal.com/facial-detection-opencv-python/>`_
+* `Facial Detection with openCV and Python (2) <http://fideloper.com/facial-detection>`_
+* `Face Recognition with OpenCV <http://docs.opencv.org/trunk/modules/contrib/doc/facerec/facerec_tutorial.html>`_
+* `Face Detection using Haar Cascades <http://docs.opencv.org/trunk/doc/py_tutorials/py_objdetect/py_face_detection/py_face_detection.html>`_
+
+La version `OpenCV pour Python 3 <http://opencv.org/opencv-3-0-alpha.html>`_ est très récente
+et la version finale devrait être prête pour fin 2014 / début 2015.
+
+
+

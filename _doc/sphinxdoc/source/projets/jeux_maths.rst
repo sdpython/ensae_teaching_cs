@@ -35,6 +35,8 @@ est accessoire et la sortie pourrait tout-à-fait être réalisée en mode texte
 Recherche exacte d'un motif, d'une expression
 ---------------------------------------------
 
+.. index:: TF-IDF, BM25
+
 L'objectif est assez simple puisqu'il s'agit de rechercher une expression, 
 un mot dans toutes les pages Wikipédia. Néanmoins, rechercher une expression parmi 
 plusieurs millions de pages est assez long et il est nécessaire d'optimiser 
@@ -44,18 +46,18 @@ ou la `version anglaise <http://en.wikipedia.org/wiki/String_searching_algorithm
 plus complète). 
 Dans un premier temps, on pourra comparer deux variantes parmi les cinq proposées :
 
-•	http://en.wikipedia.org/wiki/Rabin–Karp_string_search_algorithm
-•	http://en.wikipedia.org/wiki/Finite-state_machine
-•	http://en.wikipedia.org/wiki/Knuth–Morris–Pratt_algorithm
-•	http://en.wikipedia.org/wiki/Boyer–Moore_string_search_algorithm
-•	http://en.wikipedia.org/wiki/Bitap_algorithm
+* `Rabin–Karp algorithm <http://en.wikipedia.org/wiki/Rabin–Karp_string_search_algorithm>`_
+* `Finite-state machine <http://en.wikipedia.org/wiki/Finite-state_machine>`_
+* `Knuth–Morris–Pratt algorithm <http://en.wikipedia.org/wiki/Knuth–Morris–Pratt_algorithm>`_
+* `Boyer–Moore string search algorithm <http://en.wikipedia.org/wiki/Boyer–Moore_string_search_algorithm>`_
+* `Bitap algorithm <http://en.wikipedia.org/wiki/Bitap_algorithm>`_
 
 Dans un second temps, on s'intéressera à la meilleure approche possible 
 pour implémenter trois combinaisons logiques entre deux mots :
 
-•	Ce document doit contenir m1 et m2.
-•	Ce document doit contenir m1 ou m2.
-•	Ce document doit contenir m1 et m2 avec au plus n mots entre m1 et m2.
+* Ce document doit contenir m1 et m2.
+* Ce document doit contenir m1 ou m2.
+* Ce document doit contenir m1 et m2 avec au plus n mots entre m1 et m2.
 
 Recherche approximative d'un motif, d'une expression
 ----------------------------------------------------
@@ -111,3 +113,24 @@ algorithmes :
 Exemple d'utilisation :
 
 * `multiroute avec Bing <https://www.multiroute.de/?locale=fr>`_
+
+
+Construction d'une texture
+--------------------------
+
+.. index:: image processing
+
+On veut peindre une image à l'aide d'un motif présent sur une image plus petite. Le problème
+survient lorsqu'on la duplique, en collant deux fois la même image côte à côte, les deux bords
+s'ajustent rarement. L'article 
+`Texture Synthesis by Non-parametric Sampling <http://www.xavierdupre.fr/enseignement/projet_data/texture_efros-iccv99.pdf>`_ 
+propose une méthode pour contourner ce problème. 
+On pourra aussi regarder le site des auteurs. L'objectif est
+d'implémenter l'algorithme. Dans un deuxième temps, on pourra s'intéresser au même genre de méthode mais appliquer au
+débruitage d'une image. On s'inspire pour cela de l'article 
+`A Review Of Image Denoising Algorithms <http://www.xavierdupre.fr/enseignement/projet_data/debruitage_NLM_morel.pdf>`_
+(chapitre 5). L'idée consiste à utiliser la redondance dans les images pour trouver dans
+une partie non bruitée de l'image l'informatique cherchée.
+
+
+

@@ -40,19 +40,20 @@ On pourra ensuite utiliser des critères plus complexes comme celles suggérées
 Quelques références bibliographiques :
 
 - `BM25 <http://en.wikipedia.org/wiki/Okapi_BM25>`_ : c'est une des variables utilisées par les moteurs de recherches
-- `REPRÉSENTATIONS DU TEXTE POUR LA CLASSIFICATION ARBORÉE <http://www.xavierdupre.fr/enseignement/projet_data/texte_n187r1340_mellet_co.pdf>`_
+- `TF-IDF <http://fr.wikipedia.org/wiki/TF-IDF>`_
+- `Représentations du texte pour la classification arborée <http://www.xavierdupre.fr/enseignement/projet_data/texte_n187r1340_mellet_co.pdf>`_
 - `Tag Clusters as Information Retrieval Interfaces <http://www.xavierdupre.fr/enseignement/projet_data/texte_tag_cloud_Knautz_Soubusta_Stock.pdf>`_
 - `Sur la topologie d'un arbre phylogénétique... <http://www.xavierdupre.fr/enseignement/projet_data/texte_topo_MSH_1987__100__57_0.pdf>`_
 
 Deux blogs qui pourront vous donner d'autres idées comme calculer la richesse d'un vocabulaire :
 
-- http://pascal-marchand.fr/spip.php?article13
-- http://corpus.revues.org/index52.html
+- `Pascal Marchand, richesse lexicale <http://pascal-marchand.fr/spip.php?article13>`_
+- `Corpus - La distance intertextuelle <http://corpus.revues.org/index52.html>`_
 
 Si besoin, voici d'autres données sur un autre blog :
 
-- http://sites.univ-provence.fr/veronis/Discours2007/
-- http://sites.univ-provence.fr/veronis/Premiers/
+- `Veronis/Discours 2007 <http://sites.univ-provence.fr/veronis/Discours2007/>`_
+- `Veronis Premiers Ministres <http://sites.univ-provence.fr/veronis/Premiers/>`_
 
 
 
@@ -100,7 +101,9 @@ Le projet se déroulera en plusieurs étapes :
     * `Online Expansion of Rare Queries for Sponsored Search <https://classes.soe.ucsc.edu/ism293/Spring09/material/papers/lec6/quartz.pdf>`_
     
     
-Source de données
------------------
+Source de textes
+----------------
 
 * `wikipedia dumps <http://dumps.wikimedia.org/>`_
+* :ref:`f-discourspolitique` (pour récupérer les discours politiques de l'Elysées)
+* 
