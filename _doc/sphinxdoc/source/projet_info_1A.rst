@@ -37,7 +37,7 @@ C'est souvent l'occasion de découvrir un sujet que vous ne verrez pas ou peu à
     projets/technique
 
 L'encadrant se réserve le droit de proposer des modifications si le même sujet est 
-choisi par un trop grand nombre d'élèves. 
+choisi par un trop grand nombre d'élèves.
 
 
 Travail attendu
@@ -69,8 +69,24 @@ Chaque sujet précisera d'autres éléments (code, résultats) attendus
 lors du rendu final. Vous trouverez également quelques erreurs à éviter.
 
 
+Que faut-il en attendre ?
+-------------------------
 
+Vous serez plus **autonome**. Vous n'aurez plus l'assurance qu'une solution existe ni même quelqu'un 
+qui vous donnera la réponse tout de suite si vous ne trouvez pas.
 
+Vous devrez vous même **définir le problème et y répondre**. Cela veut dire parfois aussi faire un 
+compromis entre ce que vous rêvez de faire et le temps que vous avez pour le faire.
+
+Si vous travailler à deux, vous découvrirez qu'il n'est pas toujours évident de se **synchroniser**. 
+Heureusement, les outils ont beaucoup progressé ces dix dernières années.
+
+Un projet informatique s'effectue le plus souvent sur le **long terme**.
+Vous verrez que si on fait une pause de quelques semaines dans un projet, 
+on oublie beaucoup de petits détails qu'on redécouvre aux détours d'une exception. 
+Mais là encore, il existe des solutions.
+
+Et le plus important sans doute, programmer veut aussi dire être **créatif**.
 
 
 

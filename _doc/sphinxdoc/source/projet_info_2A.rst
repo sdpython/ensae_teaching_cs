@@ -113,8 +113,12 @@ Un exemple réalisé avec `iMovie <https://www.apple.com/fr/mac/imovie/>`_ :
 Liens
 +++++
 
-* :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
-* `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
+- :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
+- `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
+- Quelques exemples de ce qu'on peut faire avec Python :
+
+    - `Using Python to Dive into Signalling Data with CellNOpt and BioServices <http://arxiv.org/abs/1412.6386>`_
+    - `SPySort: Neuronal Spike Sorting with Python <http://arxiv.org/abs/1412.6383>`_
 
 Sources de jeux de données
 ++++++++++++++++++++++++++
