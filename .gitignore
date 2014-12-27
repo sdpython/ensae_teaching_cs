@@ -254,6 +254,9 @@ version.txt
 */notebooks/td2a/arbre.*
 */notebooks/td2a/arbrec.*
 */notebooks/td2a/bank*.csv
+*/notebooks/td2a/df_text.*
+*/notebooks/td2a/df_seriali*
+*/notebooks/td2a/objet_seriali*
 _doc/presentations/*/cours*.pdf
 */notebooks/td2a/*.csv
 */notebooks/td2a/Exemple*.xml
