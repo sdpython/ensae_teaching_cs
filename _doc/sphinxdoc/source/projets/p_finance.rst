@@ -86,6 +86,18 @@ stratégie. La différence vient ici du fait qu'on considère une paire d'action
 comme produit financier plutôt qu'une action seule.
 Le trader achète un action pendant qu'il vend l'autre.
 
+Machine learning et trading
+---------------------------
+
+Ce projet demande un peu de travail. La première étape consiste à choisir des actions puis à déterminer manuellement ou à l'aide d'une règle 
+les dates à laquelle il aurait fallu acheter ou vendre cette action pour obtenir un bon rendement. Lors de cett étape,
+on utilise le futur de l'action pour déterminer l'action idéale. On appelle cette série :math:`Y_t`.
+Ensuite, on constitue une base de features :math:`(X_t)` : à chaque temps :math:`t`, on construit
+des indicateurs comme la volatilité, la distance à différentes moyennes mobiles, la corrélation avec un indice ou
+une autre action, le `RSI <http://fr.wikipedia.org/wiki/Relative_strength_index>`_... Ces indicateurs ne dépendent que du passé de la série.
+L'objectif est de construire une fonction qui prédit la bonne décision :math:`Y_t = f(X_t) + \epsilon_t`. On utilise
+des techniques issues du machine learning et des modules tels que `scikit-learn <http://scikit-learn.org/stable/>`_.
+
 
 
 Travail attendu

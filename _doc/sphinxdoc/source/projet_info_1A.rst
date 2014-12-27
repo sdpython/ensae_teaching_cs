@@ -35,6 +35,7 @@ C'est souvent l'occasion de découvrir un sujet que vous ne verrez pas ou peu à
     projets/ml
     projets/p_security
     projets/technique
+    projets/simulation
 
 L'encadrant se réserve le droit de proposer des modifications si le même sujet est 
 choisi par un trop grand nombre d'élèves.

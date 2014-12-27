@@ -128,15 +128,17 @@ Bibliographie
 
 **Liens**
 
+* `Message de service aux débutants en Python <http://sametmax.com/message-de-service-aux-debutants-en-python/>`_
+* `Les trucmuchables en Python <http://sametmax.com/les-trucmuchables-en-python/>`_ (iterable, mutable, immutable, ...)
 * `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
 * `Data Science in Python <http://blog.yhathq.com/posts/data-science-in-python-tutorial.html>`_
 * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
 * `Exercices de programmation <http://www.xavierdupre.fr/blog/2014-03-22_nojs.html>`_
 * `De l'idée au programme informatique <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_
 * `Questions Fréquentes <https://docs.python.org/3.4/faq/index.html>`_
-* :ref:`FAQ`
-* :ref:`glossary`
-* :ref:`questions`
+* :ref:`l-FAQ`
+* :ref:`l-glossary`
+* :ref:`l-questions`
 * `Débugger en Python <http://www.xavierdupre.fr/blog/2014-06-02_nojs.html>`_
 * `Modules standards <https://docs.python.org/3.4/library/>`_
 
