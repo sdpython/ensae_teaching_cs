@@ -40,6 +40,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0])))
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], project_var_name)))
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], "..", "..", "..", "..", "pyquickhelper", "src")))
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], "..", "..", "..", "..", "pyensae", "src")))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], "..", "..", "..", "..", "pymmails", "src")))
 
 import pyquickhelper
 import pyensae
