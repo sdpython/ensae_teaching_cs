@@ -126,9 +126,9 @@ Enseignements
 Papers about machine learning
 -----------------------------
 
-* :ref:`l-td1a-biblio <Bibliographie 1A>` : apprendre à progroammer
-* :ref:`l-td2a-biblio <Bibliographie 2A>` : Python pour faire des statistiques
-* :ref:`l-td3a-biblio <Bibliographie 3A>` : Hadoop, PIG, calcul distribué
+* :ref:`Bibliographie 1A <l-td1a-biblio>` : apprendre à progroammer
+* :ref:`Bibliographie 2A <l-td2a-biblio>` : Python pour faire des statistiques
+* :ref:`Bibliographie 3A <l-td3a-biblio>` : Hadoop, PIG, calcul distribué
 
 Livres sur la programmation
 ---------------------------

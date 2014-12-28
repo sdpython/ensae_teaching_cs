@@ -1,6 +1,8 @@
 
 .. _question:
 
+.. _l-questions:
+
 Questions
 =========
 

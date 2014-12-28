@@ -28,7 +28,7 @@ Les six premières séances font découvrir le langage Python.
 
 Au terme de ces six séances, si la programmation est nouvelle pour vous ou
 si le langage vous paraît encore peu naturel, je vous encourage à faire d'autres exercices 
-:ref:`l-premierpas`.
+piochés dans les anciens :ref:`l-examens`.
 
 Les six séances [#f1]_ suivantes sont centrées autour de l'utilisation de la programmation
 pour un usage scientifique. 

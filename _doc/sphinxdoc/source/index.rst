@@ -60,7 +60,6 @@ Contenu des enseignements
 * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
     * :ref:`Exercices d'algorithmie <l-exoalgo>`
     * :ref:`Exposés divers non abordés en cours <l-extra>`
-    * :ref:`Jeux autour des données <l-jdonnees>`
 * Questions, termes, FAQ
     * :ref:`FAQ <l-FAQs>`
     * :ref:`Glossaire <l-glossaire>`

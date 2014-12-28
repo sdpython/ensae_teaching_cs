@@ -44,6 +44,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], ".."
 
 import pyquickhelper
 import pyensae
+import pymmails
 
 # -- General configuration -----------------------------------------------------
 

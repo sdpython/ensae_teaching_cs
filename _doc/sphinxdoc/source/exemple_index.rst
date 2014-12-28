@@ -13,7 +13,7 @@ Exemples
     all_example_Impossibleretenir
     all_example_science
     all_example_techniques
-    element_code
-    exercices
+    exemple_algo
+    all_example
     expose_divers
     
