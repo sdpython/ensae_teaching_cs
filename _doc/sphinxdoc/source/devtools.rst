@@ -53,9 +53,10 @@ un stockage dans un pays dont la loi limite l'usage qui peut être fait de vos d
 
 **Editeur de texte**
 
-* `SciTE <http://www.scintilla.org/SciTE.html>`_
-* `NotePad++ <http://notepad-plus-plus.org/fr/>`_
-* `TextWrangler <http://www.barebones.com/products/textwrangler/>`_ (seulement sur iOS)
+* `SciTE <http://www.scintilla.org/SciTE.html>`_ : le plus simple, pas d'explorateur de fichier, pas d'installeur, autocomplétion perturbante
+* `TextWrangler <http://www.barebones.com/products/textwrangler/>`_ (seulement sur iOS - Apple)
+* `SublimeText <http://www.sublimetext.com/>`_ : configuration nécessaire avant d'exécuter un script python
+* `NotePad++ <http://notepad-plus-plus.org/fr/>`_ : configuration nécessaire avant d'exécuter un script python
 
 **IDE**
 

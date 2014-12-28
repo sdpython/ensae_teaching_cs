@@ -12,7 +12,7 @@ def grab_mails(mailbox, emails, subfolder, date, no_domain=False, fLOG = noLOG):
     """
     look for some emails in a mail box
     from specific emails or sent to specific emails
-    
+
     @param      mailbox         MailBoxImap object (we assume you are logged in)
     @param      emails          list of emails
     @param      date            date (grab emails since ..., example ``1-Oct-2014``)
@@ -26,29 +26,28 @@ def grab_mails(mailbox, emails, subfolder, date, no_domain=False, fLOG = noLOG):
         ms = m.split('@')[0] if no_domain else m
         iter = mailbox.enumerate_search_person(ms, subfolder, date=date)
         mails = list(iter)
-        mails = [ _ for _ in mails if _.body is not None and len(_.body) > 0 ]
         fLOG("looking for mail:", m, ":", len(mails), " mails")
         res.extend(mails)
     return res
 
-def dump_mails_project(path, 
+def dump_mails_project(path,
                     mailbox,
-                    subfolder, 
+                    subfolder,
                     date,
-                    suivi = "suivi.rst", 
+                    suivi = "suivi.rst",
                     dest = "emails",
                     no_domain = False,
                     fLOG = noLOG):
     """
-    This function extract emails from a mailbox 
+    This function extract emails from a mailbox
     received from or sent to people
-    
+
     The function expects to find a file ``suivi.rst`` which contains some emails addresses,
     it will look for mails and will dump them into the folder
     in HTML format.
-    
+
     The function expects ``suivi.rst`` must be encoded in ``utf8``.
-    
+
     @param      path        folder
     @param      mailbox      MailBoxImap object (we assume you are logged in)
     @param      suivi       filename for ``suivi.rst``
@@ -64,32 +63,32 @@ def dump_mails_project(path,
     filename = os.path.join( path, suivi)
     if not os.path.exists(filename):
         raise FileNotFoundError(filename)
-    
+
     with open(filename, "r", encoding="utf8") as f :
         content = f.read()
-       
+
     global _email_regex
     mails = _email_regex.findall(content)
     if len(mails) == 0:
         raise Exception("unable to find the regular expresion {0} in {1}".format(_email_regex.pattern, filename))
-    
+
     allmails = [ ]
     for m in mails:
         allmails.extend ( m.strip("\n\r\t ").split(";") )
-    
+
     for a in allmails :
         ff = a.split("@")
         if len(ff) != 2:
             raise Exception("unable to understand mail {0} in {1} (mail separator is ;)".format(a, filename))
 
     fLOG("emails",allmails)
-    listmails = grab_mails(emails = allmails, mailbox=mailbox, 
+    listmails = grab_mails(emails = allmails, mailbox=mailbox,
                            subfolder=subfolder, date=date, fLOG=fLOG,
                            no_domain=no_domain)
-    
+
     absdest = os.path.join( path, dest)
     fs = mailbox.dump_html(listmails, absdest)
-    
+
     memo = [ ]
     for mail,filename in fs:
         memo.append ( (mail.get_date(), filename, mail) )
@@ -107,6 +106,5 @@ def dump_mails_project(path,
             ff.write(li)
         ff.write("</ul>\n")
         ff.write("</body></html>\n")
-        
+
     return [ _[1] for _ in memo ] + [ index ]
-    
