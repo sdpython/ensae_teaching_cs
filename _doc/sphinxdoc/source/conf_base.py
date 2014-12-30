@@ -64,6 +64,7 @@ extensions = [  'sphinx.ext.autodoc',
                 'sphinx.ext.autosummary',
                 'sphinx.ext.graphviz',
                 'sphinx.ext.inheritance_diagram',
+                'matplotlib.sphinxext.plot_directive',
                 ]
 
 # Add any paths that contain templates here, relative to this directory.
