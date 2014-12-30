@@ -55,7 +55,7 @@ def zoomable():
     @endFAQ
     """
     pass
-    
+
 def graph_ggplot_with_label(    x,
                                 y,
                                 labels,
@@ -67,30 +67,30 @@ def graph_ggplot_with_label(    x,
                                 **kwargs):
     """
     creates a graph with matplotlib
-    
+
     @param      x       x
-    @param      y       y   
+    @param      y       y
     @param      labels  x labels
     @param      bar     boolean, True, uses bar, plot otherwise
     @param      title   if not None, sets the title
     @param      figsize only if ax is not None
     @param      style   style
     @param      ax      existing `Axes <http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes>`_ or None if it must be created
-    @param      kwargs  others parameters 
+    @param      kwargs  others parameters
     @return             `Axes <http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes>`_
-    
+
     @FAQ(Comment ajuster les labels non numériques d'un graphe ?)
-    
+
     .. index:: date, matplotlib
-    
+
     Lorsqu'on trace un graphique et qu'on veut ajouter des labels non numériques
     sur l'axe des abscisses (en particulier des dates), *matplotlib*
     ne fait pas apparaître tous les labels. Ainsi, si on a 50 points,
-    50 abscisses et 50 labels, seuls les premiers labels apparaîtront 
+    50 abscisses et 50 labels, seuls les premiers labels apparaîtront
     comme ceci :
-    
+
     .. plot::
-    
+
         import matplotlib.pyplot as plt
         x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43]
         y = [1, 3, 10, 6, 3, 5, 3, 6, 4, 2, 3, 2, 11, 10, 4, 5, 2, 5, 4, 1, 1, 1, 3, 15, 5, 2, 1, 5, 3, 1, 3, 2, 4, 5, 2, 12, 12, 5, 11, 2, 19, 21, 5, 2]
@@ -103,11 +103,11 @@ def graph_ggplot_with_label(    x,
         ax.grid(True)
         ax.set_title("commits")
         plt.show()
-        
+
     Or c'est cela qu'on veut :
-    
+
     .. plot::
-    
+
         import matplotlib.pyplot as plt
         x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43]
         y = [1, 3, 10, 6, 3, 5, 3, 6, 4, 2, 3, 2, 11, 10, 4, 5, 2, 5, 4, 1, 1, 1, 3, 15, 5, 2, 1, 5, 3, 1, 3, 2, 4, 5, 2, 12, 12, 5, 11, 2, 19, 21, 5, 2]
@@ -125,14 +125,14 @@ def graph_ggplot_with_label(    x,
         ax.grid(True)
         ax.set_title("commits")
         plt.show()
-    
-    Pour cela il faut d'abord utiliser la méthode 
+
+    Pour cela il faut d'abord utiliser la méthode
     `get_xticks <http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes.get_xticks>`_
     pour récupérer d'abord les graduations et n'afficher les labels que
     pour celles-ci
     (voir aussi `Custom ticks autoscaled when using imshow? <http://stackoverflow.com/questions/13409006/custom-ticks-autoscaled-when-using-imshow>`_).
     Voici un exemple de code ::
-    
+
         import matplotlib.pyplot as plt
         x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43]
         y = [1, 3, 10, 6, 3, 5, 3, 6, 4, 2, 3, 2, 11, 10, 4, 5, 2, 5, 4, 1, 1, 1, 3, 15, 5, 2, 1, 5, 3, 1, 3, 2, 4, 5, 2, 12, 12, 5, 11, 2, 19, 21, 5, 2]
@@ -144,17 +144,17 @@ def graph_ggplot_with_label(    x,
         tig = ax.get_xticks()
         labs = [ ]
         for t in tig:
-            if t in x: 
+            if t in x:
                 labs.append(xl[x.index(t)])
-            else: 
+            else:
                 # une graduation peut être en dehors des labels proposés
                 labs.append("")
         ax.set_xticklabels( labs )
         ax.grid(True)
         ax.set_title("commits")
         plt.show()
-    
-    
+
+
     @endFAQ
     """
     import matplotlib.pyplot as plt
@@ -163,10 +163,10 @@ def graph_ggplot_with_label(    x,
         plt.close('all')
         fig,ax = plt.subplots(nrows=1,ncols=1,figsize=(10,4))
 
-    if bar: 
+    if bar:
         if style is None: ax.bar( x,y, **kwargs )
         else: ax.bar( x,y, style=style, **kwargs)
-    else: 
+    else:
         if style is None: ax.plot( x,y, **kwargs )
         else: ax.plot( x,y, style=style, **kwargs)
     tig = ax.get_xticks()
@@ -180,4 +180,3 @@ def graph_ggplot_with_label(    x,
     if title is not None:
         ax.set_title(title)
     return ax
-    
