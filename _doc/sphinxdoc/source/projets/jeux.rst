@@ -35,7 +35,7 @@ fonction d'évaluation qu'une autre mais avec un niveau de difficulté ou de pro
 est meilleure. Avant de commencer la partie graphique, je suggère la lecture de cet article : 
 `Frameworks for games in Python <http://www.xavierdupre.fr/blog/2014-01-01_nojs.html>`_.
 
-
+.. _l-jeu-p4:
 
 Puissance 4
 -----------
@@ -54,6 +54,8 @@ Quelques images regroupées par d'anciens élèves :
 `image_puissance_4.zip <http://www.xavierdupre.fr/enseignement/projet_data/image_puissance_4.zip>`_ 
 pour ceux qui veulent réaliser une interface graphique. 
 
+.. _l-jeu-oth:
+
 Othello
 -------
 
@@ -67,6 +69,8 @@ Quelques images regroupées par d'anciens élèves :
 `image_othello.zip <http://www.xavierdupre.fr/enseignement/projet_data/image_othello.zip>`_ 
 pour ceux qui veulent réaliser une interface graphique.
 
+.. _l-jeu-awa:
+
 Awalé
 -----
 
@@ -79,6 +83,8 @@ Quelques liens :
 Quelques images regroupées par d'anciens élèves : 
 `image_awale.zip <http://www.xavierdupre.fr/enseignement/projet_data/image_awale.zip>`_ 
 pour ceux qui veulent réaliser une interface graphique.
+
+.. _l-jeu-gomo:
 
 Gomoku
 ------

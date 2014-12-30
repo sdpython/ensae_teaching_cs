@@ -6,11 +6,14 @@ Jeux mathématiques
 
 Ces sujets reposent sur un exposé mathématique.
 
+.. _l-math-wifi:
 
 Ondes Wifi
 ----------
 
 Tout tient dans cet article : `Helmhurts <http://jasmcole.com/2014/08/25/helmhurts/>`_.
+
+.. _l-math-pento:
 
 Pentomino
 ---------
@@ -31,6 +34,7 @@ est accessoire et la sortie pourrait tout-à-fait être réalisée en mode texte
 .. image:: pent2.png
 
 
+.. _l-math-motif:
 
 Recherche exacte d'un motif, d'une expression
 ---------------------------------------------
@@ -58,6 +62,8 @@ pour implémenter trois combinaisons logiques entre deux mots :
 * Ce document doit contenir m1 et m2.
 * Ce document doit contenir m1 ou m2.
 * Ce document doit contenir m1 et m2 avec au plus n mots entre m1 et m2.
+
+.. _l-math-exp:
 
 Recherche approximative d'un motif, d'une expression
 ----------------------------------------------------
@@ -90,6 +96,7 @@ des idées simples permettant de rechercher un long texte dans le corps de Wikip
 
 Saurez-vous ruser ?
 
+.. _l-math-tsp:
 
 Problème du voyageur de commerce
 --------------------------------
@@ -100,9 +107,7 @@ C'est un problème assez classique : `problème du voyageur de commerce <http://
 qui consiste à trouver le plus court chemin passant par tous les noeuds d'un graphe. 
 Le terme mathématique est : `circuit hamiltonien <http://fr.wikipedia.org/wiki/Graphe_hamiltonien>`_
 
-On pourra essayer différents
-algorithmes :
-
+On pourra essayer différents algorithmes :
 
 * `Parcours eulériens et hamiltoniens <https://www.gerad.ca/~alainh/Euler-Hamilton.pdf>`_
 * `Hill Climbing <http://en.wikipedia.org/wiki/Hill_climbing>`_
@@ -114,6 +119,7 @@ Exemple d'utilisation :
 
 * `multiroute avec Bing <https://www.multiroute.de/?locale=fr>`_
 
+.. _l-math-text:
 
 Construction d'une texture
 --------------------------

@@ -27,6 +27,7 @@ il est également conseillé de commencer leur implémentation très tôt, ce n'
 qu'on fait la veille avant de rendre le projet.
 
 
+.. _l-carte-poker:
 
 
 Poker
@@ -46,6 +47,8 @@ Quelques liens :
 
 Quelques images regroupées par d'anciens élèves : 
 `image_cartes.zip <http://www.xavierdupre.fr/enseignement/projet_data/image_cartes.zip>`_.
+
+.. _l-carte-belotte:
 
 Belotte
 -------

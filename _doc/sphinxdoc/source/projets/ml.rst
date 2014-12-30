@@ -4,7 +4,7 @@
 Machine Learning
 ================
 
-
+.. _l-ml-renf:
 
 Apprentissage par renforcement
 ------------------------------
@@ -27,6 +27,7 @@ Tout l'enjeu de cette méthode consiste à maximiser ces gains en améliorant sa
 des combinaisons gagnantes avec de plus en plus de précision. 
 L'apprentissage par renforcement est une façon d'optimiser ses gains tout en apprenant cette distribution.
 
+.. _l-ml-chow:
 
 Algorithme de Chow-Liu
 ----------------------
@@ -44,6 +45,8 @@ Il sert à construire des relations entre des variables aléatoires. On pourra p
   (pour aller plus loin `Probabilistic Graphical Models <https://class.coursera.org/pgm/lecture/preview>`_)
 * `http://pgm.stanford.edu/ <Probabilistic Graphical Models>`_, Daphne Koller, Nir Friedman
 * `Learning with Mixtures of Trees <http://www.jmlr.org/papers/volume1/meila00a/meila00a.pdf>`_, Marina Meila, Michael I. Jordan
+
+.. _l-ml-visage:
 
 
 Reconnaissance des visages de ses amis

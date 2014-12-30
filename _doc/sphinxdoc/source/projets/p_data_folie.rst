@@ -8,6 +8,7 @@ Il est difficile de résumer les sujets de cette rubrique.
 Il s'agit toujours de triturer des données de différentes façons,
 machine learning, datamining, recherche opérationnelle, texte mining...
 
+.. _l-data-velib:
 
 
 Inférer les trajectoirs de vélo vélib
@@ -18,6 +19,7 @@ n'est vraiment arrivé à conclure. Avec un peu plus de temps, qui sait ?
 
 :ref:`l-codingparty1`
 
+.. _l-data-nuage:
 
 Nuages de mots
 --------------
@@ -55,7 +57,7 @@ Si besoin, voici d'autres données sur un autre blog :
 - `Veronis/Discours 2007 <http://sites.univ-provence.fr/veronis/Discours2007/>`_
 - `Veronis Premiers Ministres <http://sites.univ-provence.fr/veronis/Premiers/>`_
 
-
+.. _l-data-twitter:
 
 Twitter
 -------
@@ -77,6 +79,8 @@ Quelques références :
 - `Home Location Identification of Twitter Users <http://arxiv.org/ftp/arxiv/papers/1403/1403.2345.pdf>`_
 - `Opinion control in complex networks <http://arxiv.org/pdf/1412.2170v1.pdf>`_
 
+
+.. _l-data-whoosh:
 
 Recherche de texte dans n'importe quelle base de données avec Whoosh
 --------------------------------------------------------------------

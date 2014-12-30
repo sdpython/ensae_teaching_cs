@@ -341,3 +341,41 @@ Git
 
 * :ref:`gitnotebookrst`
 
+Liste des sujets cités
+----------------------
+
+#. ML algo : :ref:`l-ml-renf`
+#. ML algo : :ref:`l-ml-chow`
+#. ML algo : :ref:`l-ml-visage`
+#. Jeu 1 : :ref:`l-jeu-deuxmille`
+#. Jeu 1 : :ref:`l-jeuvoronoi`
+#. ML : :ref:`l-data-velib`
+#. ML : :ref:`l-data-nuage`
+#. ML : :ref:`l-data-twitter`
+#. ML : :ref:`l-data-whoosh`
+#. Finance : :ref:`l-fi-trend`
+#. Finance : :ref:`l-fi-port`
+#. Finance : :ref:`l-fi-pair`
+#. Finance : :ref:`l-fi-ml`
+#. Simulation : :ref:`l-sim-segre`
+#. Technique : :ref:`l-tech-smart`
+#. Technique : :ref:`l-tech-domo`
+#. Algo génétique : :ref:`l-gen-optim`
+#. Algo génétique : :ref:`l-gen-bag`
+#. Algo génétique : :ref:`l-gen-tsp`
+#. Algo génétique : :ref:`l-gen-ant`
+#. Algo génétique : :ref:`l-gen-motif`
+#. Jeu 2 : :ref:`l-jeu-p4`
+#. Jeu 2 : :ref:`l-jeu-oth`
+#. Jeu 2 : :ref:`l-jeu-awa`
+#. Jeu 2 : :ref:`l-jeu-gomo`
+#. Algo : :ref:`l-math-wifi`
+#. Algo : :ref:`l-math-pento`
+#. Algo : :ref:`l-math-motif`
+#. Algo : :ref:`l-math-exp`
+#. Algo : :ref:`l-math-tsp`
+#. Algo : :ref:`l-math-text`
+#. Jeu hasard : :ref:`l-carte-poker`
+#. Jeu hasard : :ref:`l-carte-belotte`
+
+

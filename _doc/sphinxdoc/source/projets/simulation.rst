@@ -14,6 +14,7 @@ des résultats sur l'ensemble d'une population. Le projet doit comporter les él
 * Réalisation de simulations plus poussées
 * Analyse des résultats obtenus avec le programme, comparaison avec la réalité
 
+.. _l-sim-segre:
 
 Simuler la ségégation sociale
 -----------------------------

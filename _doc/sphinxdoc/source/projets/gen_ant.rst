@@ -8,7 +8,7 @@ Les algorithmes génétiques ne sont pas ou peu enseignés à l'ENSAE. Chaque su
 est l'occasion de découvrir des algorithmes. Chaque sujet considère un problème
 simple et un algorithme d'optimisation génétique décrit par un document.
 
-
+.. _l-gen-optim:
 
 Optimisation à partir d'algorithmes génétiques
 ----------------------------------------------
@@ -26,6 +26,7 @@ de l'espace des observations croît.
 
 * `Algorithmes Génétiques <http://perso.limsi.fr/jps/enseignement/tutoriels/pcd/3.genetique/>`_
 
+.. _l-gen-bag:
 
 Problème du sac-à-dos et algorithmes génétiques
 -----------------------------------------------
@@ -44,6 +45,7 @@ L'objectif de ce projet est d'implémentation un algorithme de résolution de te
   
 On étudiera la convergence et le coût des algorithmes en fonction de la dimension du problème.
   
+.. _l-gen-tsp:  
 
 Problème du voyageur de commerce et algorithme génétique
 --------------------------------------------------------
@@ -61,7 +63,7 @@ la distance pour les parcourir. Ici encore, il s'agit de résoudre ce problème 
 On étudiera la convergence et le coût des algorithmes en fonction de la dimension du problème.
 
 
-
+.. _l-gen-ant:
 
 Colonie de fourmis et plus court chemin
 ---------------------------------------
@@ -83,7 +85,8 @@ algorithmes. Le ou les élèves devront faire un choix entre ces deux directions
 * Direction 2 : un problème plus classique d'optimisation du plus court chemin dans un graphe, 
                 on comparera avec un algortihme de Djisktra, puis on s'intéressera aux propriétés de
                 l'algorithme lorsque le nombre de sommets augmentent (le réseau routier belge, français, américain, européen...)
-                
+             
+.. _l-gen-motif:             
                 
 Recherche de motifs
 -------------------

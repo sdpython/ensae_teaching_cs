@@ -39,7 +39,7 @@ Les stratégies dépendent de paramètres qu'on optimise en utilisant des donné
 Il faut toujours faire attention à utiliser les données jusqu'à la date *t* pour
 prédire les actions pour la date *t+1*.
 
-
+.. _l-fi-trend:
 
 Trend following
 ---------------
@@ -57,6 +57,7 @@ Il existe de nombreuses variantes. En voici une :
 Vous trouverez plus
 d'information dans ce document : `finance_autostrat.pdf <http://www.xavierdupre.fr/enseignement/initiation/finance_autostrat.pdf>`_.
 
+.. _l-fi-port:
 
 Optimisation de portefeuille
 ----------------------------
@@ -78,6 +79,8 @@ L'objectif est ici de choisir une façon de construire un portefeuille,
 de l'optimiser sur la période d'apprentissage et de la tester sur la période de test. 
 Il est fortement recommandé de relire le TD qui concerne l'optimisation sous contraine.
 
+.. _l-fi-pair:
+
 Pair trading
 ------------
 
@@ -85,6 +88,8 @@ Le `pair trading <http://en.wikipedia.org/wiki/Pairs_trade>`_ n'est pas vraiment
 stratégie. La différence vient ici du fait qu'on considère une paire d'action 
 comme produit financier plutôt qu'une action seule.
 Le trader achète un action pendant qu'il vend l'autre.
+
+.. _l-fi-ml:
 
 Machine learning et trading
 ---------------------------
