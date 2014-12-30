@@ -105,10 +105,9 @@ On pourra lire les articles suivant :
 La version `OpenCV pour Python 3 <http://opencv.org/opencv-3-0-alpha.html>`_ est très récente
 et la version finale devrait être prête pour fin 2014 / début 2015.
 
-.. _l-ml-deepext:
-
 .. index:: deep learning, extreme machine learning
 
+.. _l-ml-deepext:
 
 Deep et Extreme Machine Learning
 --------------------------------
