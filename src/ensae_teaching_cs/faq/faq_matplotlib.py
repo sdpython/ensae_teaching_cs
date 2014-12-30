@@ -79,7 +79,7 @@ def graph_ggplot_with_label(    x,
     @param      kwargs  others parameters
     @return             `Axes <http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes>`_
 
-    @FAQ(Comment ajuster les labels non numériques d'un graphe ?)
+    @FAQ(matplotlib___Comment ajuster les labels non numériques d'un graphe ?)
 
     .. index:: date, matplotlib
 

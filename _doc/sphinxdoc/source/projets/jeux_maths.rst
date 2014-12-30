@@ -138,5 +138,7 @@ débruitage d'une image. On s'inspire pour cela de l'article
 (chapitre 5). L'idée consiste à utiliser la redondance dans les images pour trouver dans
 une partie non bruitée de l'image l'informatique cherchée.
 
+* `Texture Synthesis by Non-parametric Sampling <http://www.xavierdupre.fr/enseignement/projet_data/texture_efros-iccv99.pdf>`_, Alexei A. Efros and Thomas K. Leung
+* `Texture Synthesis by Non-parametric Sampling (web site) <http://graphics.cs.cmu.edu/people/efros/research/EfrosLeung.html>`_
 
 

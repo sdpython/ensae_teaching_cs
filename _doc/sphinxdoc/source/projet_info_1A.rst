@@ -347,6 +347,7 @@ Liste des sujets cités
 #. ML algo : :ref:`l-ml-renf`
 #. ML algo : :ref:`l-ml-chow`
 #. ML algo : :ref:`l-ml-visage`
+#. ML algo : :ref:`l-ml-deepext`
 #. Jeu 1 : :ref:`l-jeu-deuxmille`
 #. Jeu 1 : :ref:`l-jeuvoronoi`
 #. ML : :ref:`l-data-velib`
@@ -358,6 +359,7 @@ Liste des sujets cités
 #. Finance : :ref:`l-fi-pair`
 #. Finance : :ref:`l-fi-ml`
 #. Simulation : :ref:`l-sim-segre`
+#. Simulation : :ref:`l-sim-panique`
 #. Technique : :ref:`l-tech-smart`
 #. Technique : :ref:`l-tech-domo`
 #. Algo génétique : :ref:`l-gen-optim`

@@ -21,8 +21,9 @@ n'est vraiment arrivé à conclure. Avec un peu plus de temps, qui sait ?
 
 .. _l-data-nuage:
 
-Nuages de mots
---------------
+Nuages de mots, extraction de concepts
+--------------------------------------
+
 
 Les nuages de mots sont apparus récemment pour représenter les mots-clés les plus importants sur une page, 
 un ensemble de pages internet : `Tag Cloud <http://en.wikipedia.org/wiki/Tag_cloud>`_.
@@ -46,6 +47,10 @@ Quelques références bibliographiques :
 - `Représentations du texte pour la classification arborée <http://www.xavierdupre.fr/enseignement/projet_data/texte_n187r1340_mellet_co.pdf>`_
 - `Tag Clusters as Information Retrieval Interfaces <http://www.xavierdupre.fr/enseignement/projet_data/texte_tag_cloud_Knautz_Soubusta_Stock.pdf>`_
 - `Sur la topologie d'un arbre phylogénétique... <http://www.xavierdupre.fr/enseignement/projet_data/texte_topo_MSH_1987__100__57_0.pdf>`_
+
+Pour la partie extraction de concepts, on pourra s'inspirer de :
+
+- `Interactive Retrieval Based on Wikipedia Concepts <http://arxiv.org/abs/1412.8281>`_, Lanbo Zhang
 
 Deux blogs qui pourront vous donner d'autres idées comme calculer la richesse d'un vocabulaire :
 
