@@ -4,9 +4,10 @@
 """
 import re, os
 import pymmails
-from pyquickhelper import noLOG
+from pyquickhelper import noLOG, run_cmd
 
-_email_regex = re.compile("[*] *e?mails? *: *([^*]+)")
+_email_regex  = re.compile("[*] *e?mails? *: *([^*]+)")
+_gitlab_regex = re.compile("[*] *gitlab *: *([^*]+[.]git)")
 
 def grab_mails(mailbox, emails, subfolder, date, no_domain=False, fLOG = noLOG):
     """
@@ -46,8 +47,6 @@ def dump_mails_project(path,
     it will look for mails and will dump them into the folder
     in HTML format.
 
-    The function expects ``suivi.rst`` must be encoded in ``utf8``.
-
     @param      path        folder
     @param      mailbox      MailBoxImap object (we assume you are logged in)
     @param      suivi       filename for ``suivi.rst``
@@ -57,6 +56,39 @@ def dump_mails_project(path,
     @param      no_domain   remove domain when searching for emails
     @param      fLOG        logging function
     @return                 list of created files
+    
+    @example(Automation___Grab all emails from students)
+    
+    The following program assumes each folder contains the files 
+    of a student project.
+    
+    It assumes each folder contains a file ``suivi.rst`` 
+    and emails from students can be extracted with
+    by searching the following regular expression:
+    ``mails: ....``.
+    Then it stores everything into the folder in
+    subfolder called ``mails``.
+    
+    @code
+    from ensae_teaching_cs.automation.project_helper import dump_mails_project
+    imap = pymmails.MailBoxImap("gmail.account", "password", "imap.gmail.com", True)
+    imap.login()
+
+    sub = os.listdir(".")
+    for fold in sub:
+        print("***",fold)
+        dump_mails_project(
+                    os.path.abspath(fold), 
+                    imap,
+                    subfolder = "ensae",
+                    date = "1-Oct-2014",
+                    no_domain=True,
+                    fLOG=print)
+    @endcode
+    
+    The function expects ``suivi.rst`` must be encoded in ``utf8``.
+    
+    @endexample
     """
     if not os.path.exists(path):
         raise FileNotFoundError(path)
@@ -70,7 +102,7 @@ def dump_mails_project(path,
     global _email_regex
     mails = _email_regex.findall(content)
     if len(mails) == 0:
-        raise Exception("unable to find the regular expresion {0} in {1}".format(_email_regex.pattern, filename))
+        raise Exception("unable to find the regular expression {0} in {1}".format(_email_regex.pattern, filename))
 
     allmails = [ ]
     for m in mails:
@@ -108,3 +140,140 @@ def dump_mails_project(path,
         ff.write("</body></html>\n")
 
     return [ _[1] for _ in memo ] + [ index ]
+    
+def git_url_user_password(url_https, user, password):
+    """
+    builds a url (starting with https) and add the user and the password
+    to skip the authentification
+    
+    @param      url_https       example ``https://gitlab.server/folder/project_name``
+    @param      user            part 1 of the credentials
+    @param      password        part 2 of the credentials
+    @return                     url
+    """
+    url_user = url_https.replace("https://", "https://{0}:{1}@".format(user, password))
+    return url_user
+    
+def git_check_error(out, err, fLOG):
+    """
+    private function, analyse the output
+    """
+    if len(out) > 0 : 
+        fLOG("OUT:\n" + out)
+    if len(err) > 0 : 
+        if "error" in err.lower():
+            raise Exception("OUT:\n{0}\nERR:\n{1}".format(out,err))
+        fLOG("ERR:\n" + err)    
+    
+def git_clone(
+            local_folder, 
+            url_https,
+            user = None, 
+            password = None, 
+            timeout = 60,
+            fLOG = noLOG):
+    """
+    clone a project from a git repository in a non empty local folder,
+    it requires `GIT <http://git-scm.com/>`_ to be installed 
+    and uses the command line.
+    
+    @param      local_folder    local folder of the project
+    @param      url_https       url, example ``https://gitlab.server/folder/project_name``
+    @param      user            part 1 of the credentials
+    @param      password        part 2 of the credentials
+    @param      timeout         timeout for the command line
+    @param      fLOG            logging function
+    @return                     something
+    
+    If the reposity has already been cloned, it does not do it again.
+    We assume that git can be run without giving its full location.
+    """
+    url_user = git_url_user_password(url_https, user, password)
+    timeout = 60
+    local_folder = os.path.normpath(os.path.abspath(local_folder))
+    if not os.path.exists(local_folder):
+        fLOG("creating folder", local_folder)
+        os.mkdir(local_folder)
+        
+    hg = os.path.join(local_folder, ".git")
+    if not os.path.exists(hg):
+        cmds= """
+                cd {0}
+                git init
+                git remote add origin {1}
+                git fetch
+                """.format(local_folder, url_user).replace("                ","").strip(" \n\r\t")
+        cmd = cmds.replace("\n","&")
+        sin = "" #"{0}\n".format(password)
+        out, err = run_cmd(cmd, sin=sin,wait=True, timeout=timeout)
+        git_check_error(out, err, fLOG)
+        
+def git_commit_all(
+            local_folder, 
+            url_https,
+            message,
+            user = None, 
+            password = None,
+            timeout = 300,
+            fLOG = noLOG):
+    """
+    from a git repository,
+    it requires `GIT <http://git-scm.com/>`_ to be installed 
+    and uses the command line.
+    
+    @param      local_folder    local folder of the project
+    @param      url_https       url, example ``https://gitlab.server/folder/project_name``
+    @param      message         message for the commit
+    @param      user            part 1 of the credentials
+    @param      password        part 2 of the credentials
+    @param      timeout         timeout for the command line
+    @param      fLOG            logging function
+    @return                     something
+    
+    If the reposity has already been cloned, it does not do it again.
+    We assume that git can be run without giving its full location.
+    """
+    url_user = git_url_user_password(url_https, user, password)
+    cmds= """
+            cd {0}
+            git add -A
+            git commit -m "{2}"
+            git push -u origin master
+            """.format(local_folder, url_user, message).replace("                ","").strip(" \n\r\t")
+    cmd = cmds.replace("\n","&")
+    sin = "" #"{0}\n".format(password)
+    out, err = run_cmd(cmd, sin=sin,wait=True, timeout=timeout)
+    git_check_error(out, err, fLOG)
+        
+def git_first_commit_all_projects(
+            local_folder,
+            user = None, 
+            password = None,
+            timeout = 300,
+            suivi = "suivi.rst",
+            fLOG = noLOG):
+    """
+    @param      local_folder    folder
+    @param      user            part 1 of the credentials
+    @param      password        part 2 of the credentials
+    @param      timeout         timeout for the command line
+    @param      suivi           file to open to get the gitlab account
+    @param      fLOG            logging function
+    @return                     something
+    """
+    if not os.path.exists(local_folder):
+        raise FileNotFoundError(local_folder)
+    filename = os.path.join( local_folder, suivi)
+    if not os.path.exists(filename):
+        raise FileNotFoundError(filename)
+
+    with open(filename, "r", encoding="utf8") as f :
+        content = f.read()
+
+    global _gitlab_regex
+    gitlab = _gitlab_regex.findall(content)
+    if len(gitlab) == 0:
+        raise Exception("unable to find the regular expression {0} in {1}".format(_gitlab_regex.pattern, filename))
+
+    fLOG("gitlab", gitlab)
+    raise NotImplementedError()
