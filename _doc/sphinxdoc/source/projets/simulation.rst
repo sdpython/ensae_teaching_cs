@@ -14,6 +14,10 @@ des résultats sur l'ensemble d'une population. Le projet doit comporter les él
 * Réalisation de simulations plus poussées
 * Analyse des résultats obtenus avec le programme, comparaison avec la réalité
 
+Et encore : 
+
+* `Pourrait-on programmer une fourmilière ? <http://rue89.nouvelobs.com/2014/12/31/pourrait-programmer-fourmiliere-256679>`_
+
 .. _l-sim-segre:
 
 Simuler la ségégation sociale

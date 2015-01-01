@@ -23,3 +23,12 @@ Liens, Bibliographie
 * `THC-Hydra <https://www.thc.org/thc-hydra/>`_
 * `How to Crack a Wi-Fi Network's WEP Password with BackTrack <http://lifehacker.com/5305094/how-to-crack-a-wi-fi-networks-wep-password-with-backtrack>`_
 * `Journey into cryptography (Khan Academy) <https://www.khanacademy.org/computing/computer-science/cryptography>`_
+
+Modules Pythons
+---------------
+
+.. index:: pyarmor, pyshield, keyring
+
+* `keyring <https://pypi.python.org/pypi/keyring>`_ : package pour conserver des mots de passes en local
+* `pyarmor <https://pypi.python.org/pypi/pyarmor>`_ : crypter des scripts python et exécuter des scripts cryptés
+* `pyshield <https://pypi.python.org/pypi/pyshield>`_ : environnement de développement protégé
