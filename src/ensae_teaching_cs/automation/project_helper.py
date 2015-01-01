@@ -31,6 +31,39 @@ def grab_mails(mailbox, emails, subfolder, date, no_domain=False, fLOG = noLOG):
         res.extend(mails)
     return res
 
+def get_emails(path, suivi = "suivi.rst"):
+    """
+    retrieve student emails from file ``suivi.rst``
+    
+    @param      path            sub folder to look into
+    @param      suivi           name of the file ``suivi.rst``
+    @return                     list of mails
+    """
+    if not os.path.exists(path):
+        raise FileNotFoundError(path)
+    filename = os.path.join( path, suivi)
+    if not os.path.exists(filename):
+        raise FileNotFoundError(filename)
+
+    with open(filename, "r", encoding="utf8") as f :
+        content = f.read()
+
+    global _email_regex
+    mails = _email_regex.findall(content)
+    if len(mails) == 0:
+        raise Exception("unable to find the regular expression {0} in {1}".format(_email_regex.pattern, filename))
+
+    allmails = [ ]
+    for m in mails:
+        allmails.extend ( m.strip("\n\r\t ").split(";") )
+
+    for a in allmails :
+        ff = a.split("@")
+        if len(ff) != 2:
+            raise Exception("unable to understand mail {0} in {1} (mail separator is ;)".format(a, filename))
+
+    return allmails
+
 def dump_mails_project(path,
                     mailbox,
                     subfolder,
@@ -90,28 +123,7 @@ def dump_mails_project(path,
     
     @endexample
     """
-    if not os.path.exists(path):
-        raise FileNotFoundError(path)
-    filename = os.path.join( path, suivi)
-    if not os.path.exists(filename):
-        raise FileNotFoundError(filename)
-
-    with open(filename, "r", encoding="utf8") as f :
-        content = f.read()
-
-    global _email_regex
-    mails = _email_regex.findall(content)
-    if len(mails) == 0:
-        raise Exception("unable to find the regular expression {0} in {1}".format(_email_regex.pattern, filename))
-
-    allmails = [ ]
-    for m in mails:
-        allmails.extend ( m.strip("\n\r\t ").split(";") )
-
-    for a in allmails :
-        ff = a.split("@")
-        if len(ff) != 2:
-            raise Exception("unable to understand mail {0} in {1} (mail separator is ;)".format(a, filename))
+    allmails = get_emails(path, suivi)
 
     fLOG("emails",allmails)
     listmails = grab_mails(emails = allmails, mailbox=mailbox,
@@ -187,6 +199,14 @@ def git_clone(
     
     If the reposity has already been cloned, it does not do it again.
     We assume that git can be run without giving its full location.
+    
+    The function executes the following commands::
+    
+        cd [folder]
+        git init
+        git remote add origin [https://user.password@server/project.git]
+        git fetch
+        
     """
     url_user = git_url_user_password(url_https, user, password)
     timeout = 60
@@ -232,6 +252,14 @@ def git_commit_all(
     
     If the reposity has already been cloned, it does not do it again.
     We assume that git can be run without giving its full location.
+    
+    The function executes the following commands::
+    
+        cd [folder]
+        git add -A
+        git commit -m "[message]"
+        git push -u origin master
+    
     """
     url_user = git_url_user_password(url_https, user, password)
     cmds= """
