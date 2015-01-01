@@ -227,7 +227,7 @@ Liens
 
 - Blog: 
     - `Sebastian Raschka <http://sebastianraschka.com/articles.html>`_
-    - `ŷhat <http://blog.yhathq.com/>`_
+    - `yhat <http://blog.yhathq.com/>`_
 - Sites
     - `NumFOCUS Foundation <http://numfocus.org/projects/index.html>`_
     - `pythonworks.org <http://www.pythonworks.org/home>`_ (références de livres)

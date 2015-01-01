@@ -51,13 +51,13 @@ TD
 - **TD 3 : machine learning**
     - :ref:`TD 3A : Statistiques descriptives <td2acenoncesession3arst>` (:ref:`correction <td2acorrectionsession3arst>`)
     - Présentation de `Gaël Varoquaux <http://gael-varoquaux.info/>`_ : machine learning et `scikit-learn <http://scikit-learn.org/stable/>`_
-        - `tutoriels sur scikit-learn <http://nbviewer.ipython.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_
-        - Quelques extraits :
-            - Par définition les plus proches voisins ne font pas d'erreur sur la base d'apprentissage, l'apprentissage consiste à forcer le modèle à faire des erreurs.
-            - `Overfitting <http://en.wikipedia.org/wiki/Overfitting>`_ et `régularisation <http://en.wikipedia.org/wiki/Regularization_(mathematics)>`_
-            - Erreur `L2 <http://en.wikipedia.org/wiki/Lp_space>`_ et pénalisation `L1 <http://fr.wikipedia.org/wiki/Espace_L1>`_
-            - `RandomizedPCA <http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.RandomizedPCA.html>`_, `GridSearch <http://scikit-learn.org/stable/modules/grid_search.html>`_, `LassoCV <http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html>`_
-            - `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_
+      (tutoriels sur scikit-learn <http://nbviewer.ipython.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_),
+      quelques extraits :
+        - Par définition les plus proches voisins ne font pas d'erreur sur la base d'apprentissage, l'apprentissage consiste à forcer le modèle à faire des erreurs.
+        - `Overfitting <http://en.wikipedia.org/wiki/Overfitting>`_ et `régularisation <http://en.wikipedia.org/wiki/Regularization_(mathematics)>`_
+        - Erreur `L2 <http://en.wikipedia.org/wiki/Lp_space>`_ et pénalisation `L1 <http://fr.wikipedia.org/wiki/Espace_L1>`_
+        - `RandomizedPCA <http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.RandomizedPCA.html>`_, `GridSearch <http://scikit-learn.org/stable/modules/grid_search.html>`_, `LassoCV <http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html>`_
+        - `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_
     - :ref:`TD 3B : Arbres de décision et Random Forests <td2acenoncesession3brst>`  (:ref:`correction <td2acorrectionsession3brst>`)    
 - **TD 4 : machine learning et algorithme**
     - :ref:`TD 4A : Machine Learning et Marketting <td2acenoncesession4arst>` (:ref:`correction <td2acorrectionsession4arst>`)

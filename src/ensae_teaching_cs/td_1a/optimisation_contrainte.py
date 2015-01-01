@@ -10,7 +10,7 @@ from cvxopt import solvers, matrix
 import random
 
 def f_df_H(x=None,z=None) :
-    r"""
+    """
     fonction demandée par la fonction
     `solvers.cp <http://cvxopt.org/userguide/solvers.html#problems-with-nonlinear-objectives>`_.
 
@@ -24,7 +24,7 @@ def f_df_H(x=None,z=None) :
 
     Le problème d'optimisation est le suivant :
 
-    :math:`\left \{ \begin{array}{l} \min_{x,y} \left \{ x^2 + y^2 - xy + y \right \}  \\ \text{sous contrainte} \; x + 2y = 1 \end{array}\right .`
+    :math:`\\left \\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ \\text{sous contrainte} \\; x + 2y = 1 \\end{array}\\right .`
 
     """
     if x is None :
@@ -50,7 +50,7 @@ def Arrow_Hurwicz(F, C, X0, p0, epsilon = 0.1, rho = 0.1,
     On implémente l'algorithme de `Arrow-Hurwicz <https://hal.archives-ouvertes.fr/hal-00490826/document>`_
     d'une façon générique. Cela correspond au problème d'optimisation :
 
-    :math:`\left \{ \begin{array}{l} \min_{X} f(X)  \\ \text{sous contrainte} \; C(x) = 0 \end{array}\right .`
+    :math:`\\left \\{ \\begin{array}{l} \\min_{X} f(X)  \\\\ \\text{sous contrainte} \\; C(x) = 0 \\end{array}\\right .`
 
     @param      F           fonction qui retourne :math:`f(X)` et :math:`\nabla f(X)`
     @param      C           fonction qui retourne :math:`C(X)` et :math:`\nabla C(X)`
@@ -99,11 +99,11 @@ def contrainte(X) :
     return f, d
 
 def exercice_particulier1():
-    r"""
+    """
     @example(science___solver.cp de cvxopt)
     On résoud le problème suivant avec `cvxopt <http://cvxopt.org/userguide/index.html>`_ :
 
-    :math:`\left \{ \begin{array}{l} \min_{x,y} \left \{ x^2 + y^2 - xy + y \right \}  \\ \text{sous contrainte} \; x + 2y = 1 \end{array}\right .`
+    :math:`\\left \\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ \\text{sous contrainte} \\; x + 2y = 1 \\end{array}\\right .`
 
     @code
     def f_df_H(x=None,z=None) :
@@ -138,11 +138,11 @@ def exercice_particulier1():
     return sol
 
 def exercice_particulier2():
-    r"""
+    """
     @example(science___algorithme de Arrow-Hurwicz)
     On résoud le problème suivant avec l'algorithme de `Arrow-Hurwicz <https://hal.archives-ouvertes.fr/hal-00490826/document>`_.
 
-    :math:`\left \{ \begin{array}{l} \min_{x,y} \left \{ x^2 + y^2 - xy + y \right \}  \\ \text{sous contrainte} \; x + 2y = 1 \end{array}\right .`
+    :math:`\\left \\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ \\text{sous contrainte} \\; x + 2y = 1 \\end{array}\\right .`
 
     @code
     def f_df(X) :

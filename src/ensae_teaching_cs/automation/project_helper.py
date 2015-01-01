@@ -34,7 +34,7 @@ def grab_mails(mailbox, emails, subfolder, date, no_domain=False, fLOG = noLOG):
 def get_emails(path, suivi = "suivi.rst"):
     """
     retrieve student emails from file ``suivi.rst``
-    
+
     @param      path            sub folder to look into
     @param      suivi           name of the file ``suivi.rst``
     @return                     list of mails
@@ -89,19 +89,19 @@ def dump_mails_project(path,
     @param      no_domain   remove domain when searching for emails
     @param      fLOG        logging function
     @return                 list of created files
-    
+
     @example(Automation___Grab all emails from students)
-    
-    The following program assumes each folder contains the files 
+
+    The following program assumes each folder contains the files
     of a student project.
-    
-    It assumes each folder contains a file ``suivi.rst`` 
+
+    It assumes each folder contains a file ``suivi.rst``
     and emails from students can be extracted with
     by searching the following regular expression:
     ``mails: ....``.
     Then it stores everything into the folder in
     subfolder called ``mails``.
-    
+
     @code
     from ensae_teaching_cs.automation.project_helper import dump_mails_project
     imap = pymmails.MailBoxImap("gmail.account", "password", "imap.gmail.com", True)
@@ -111,16 +111,16 @@ def dump_mails_project(path,
     for fold in sub:
         print("***",fold)
         dump_mails_project(
-                    os.path.abspath(fold), 
+                    os.path.abspath(fold),
                     imap,
                     subfolder = "ensae",
                     date = "1-Oct-2014",
                     no_domain=True,
                     fLOG=print)
     @endcode
-    
+
     The function expects ``suivi.rst`` must be encoded in ``utf8``.
-    
+
     @endexample
     """
     allmails = get_emails(path, suivi)
@@ -152,12 +152,12 @@ def dump_mails_project(path,
         ff.write("</body></html>\n")
 
     return [ _[1] for _ in memo ] + [ index ]
-    
+
 def git_url_user_password(url_https, user, password):
     """
     builds a url (starting with https) and add the user and the password
     to skip the authentification
-    
+
     @param      url_https       example ``https://gitlab.server/folder/project_name``
     @param      user            part 1 of the credentials
     @param      password        part 2 of the credentials
@@ -165,30 +165,30 @@ def git_url_user_password(url_https, user, password):
     """
     url_user = url_https.replace("https://", "https://{0}:{1}@".format(user, password))
     return url_user
-    
+
 def git_check_error(out, err, fLOG):
     """
     private function, analyse the output
     """
-    if len(out) > 0 : 
+    if len(out) > 0 :
         fLOG("OUT:\n" + out)
-    if len(err) > 0 : 
+    if len(err) > 0 :
         if "error" in err.lower():
             raise Exception("OUT:\n{0}\nERR:\n{1}".format(out,err))
-        fLOG("ERR:\n" + err)    
-    
+        fLOG("ERR:\n" + err)
+
 def git_clone(
-            local_folder, 
+            local_folder,
             url_https,
-            user = None, 
-            password = None, 
+            user = None,
+            password = None,
             timeout = 60,
             fLOG = noLOG):
     """
     clone a project from a git repository in a non empty local folder,
-    it requires `GIT <http://git-scm.com/>`_ to be installed 
+    it requires `GIT <http://git-scm.com/>`_ to be installed
     and uses the command line.
-    
+
     @param      local_folder    local folder of the project
     @param      url_https       url, example ``https://gitlab.server/folder/project_name``
     @param      user            part 1 of the credentials
@@ -196,17 +196,17 @@ def git_clone(
     @param      timeout         timeout for the command line
     @param      fLOG            logging function
     @return                     something
-    
+
     If the reposity has already been cloned, it does not do it again.
     We assume that git can be run without giving its full location.
-    
+
     The function executes the following commands::
-    
+
         cd [folder]
         git init
         git remote add origin [https://user.password@server/project.git]
         git fetch
-        
+
     """
     url_user = git_url_user_password(url_https, user, password)
     timeout = 60
@@ -214,7 +214,7 @@ def git_clone(
     if not os.path.exists(local_folder):
         fLOG("creating folder", local_folder)
         os.mkdir(local_folder)
-        
+
     hg = os.path.join(local_folder, ".git")
     if not os.path.exists(hg):
         cmds= """
@@ -227,20 +227,20 @@ def git_clone(
         sin = "" #"{0}\n".format(password)
         out, err = run_cmd(cmd, sin=sin,wait=True, timeout=timeout)
         git_check_error(out, err, fLOG)
-        
+
 def git_commit_all(
-            local_folder, 
+            local_folder,
             url_https,
             message,
-            user = None, 
+            user = None,
             password = None,
             timeout = 300,
             fLOG = noLOG):
     """
     from a git repository,
-    it requires `GIT <http://git-scm.com/>`_ to be installed 
+    it requires `GIT <http://git-scm.com/>`_ to be installed
     and uses the command line.
-    
+
     @param      local_folder    local folder of the project
     @param      url_https       url, example ``https://gitlab.server/folder/project_name``
     @param      message         message for the commit
@@ -249,17 +249,17 @@ def git_commit_all(
     @param      timeout         timeout for the command line
     @param      fLOG            logging function
     @return                     something
-    
+
     If the reposity has already been cloned, it does not do it again.
     We assume that git can be run without giving its full location.
-    
+
     The function executes the following commands::
-    
+
         cd [folder]
         git add -A
         git commit -m "[message]"
         git push -u origin master
-    
+
     """
     url_user = git_url_user_password(url_https, user, password)
     cmds= """
@@ -272,10 +272,10 @@ def git_commit_all(
     sin = "" #"{0}\n".format(password)
     out, err = run_cmd(cmd, sin=sin,wait=True, timeout=timeout)
     git_check_error(out, err, fLOG)
-        
+
 def git_first_commit_all_projects(
             local_folder,
-            user = None, 
+            user = None,
             password = None,
             timeout = 300,
             suivi = "suivi.rst",
@@ -307,19 +307,19 @@ def git_first_commit_all_projects(
     if len(gitlab) != 1:
         raise Exception("more than one gitlab repo is mentioned {0} in {1}".format(_gitlab_regex.pattern, filename))
     gitlab = gitlab[0]
-    
+
     fLOG("* gitlab", gitlab)
     g = os.path.join(local_folder, ".git")
     commit = None
     if not os.path.exists(g):
         fLOG("* initialize", local_folder)
-        git_clone(local_folder, gitlab, 
+        git_clone(local_folder, gitlab,
                   user=user, password=password, fLOG=fLOG)
         sub = os.path.split(local_folder)[-1]
         fLOG("* first commit ", gitlab)
-        git_commit_all(local_folder, gitlab, 
-                       "first commit to " + sub, 
+        git_commit_all(local_folder, gitlab,
+                       "first commit to " + sub,
                        user=user, password=password, fLOG=print)
         commit= local_folder, gitlab
-                
+
     return commit

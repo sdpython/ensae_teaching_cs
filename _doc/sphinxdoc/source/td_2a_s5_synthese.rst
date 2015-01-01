@@ -24,9 +24,8 @@ Quelques notes de la séance 5
         * plus facile de vérifier la validité de données (mauvais départements)
     * sans schéma de données
         * on ne s'intéresse plus trop à bien structurer les données
-        * un peu plus de duplication d'information
-            * un document est décrit sans table supplémentaire (*self-contained*)
-            * plus facile d'avoir du bruit lors de la saisie de données
+        * un peu plus de duplication d'information, un document est décrit sans table supplémentaire (*self-contained*), 
+          gère mieux le bruit lors de la saisie de données
         * on s'intéresse surtout aux recherches qu'on va faire dessus
         * `JSON <http://fr.wikipedia.org/wiki/JavaScript_Object_Notation>`_, `XML <http://fr.wikipedia.org/wiki/Extensible_Markup_Language>`_ : 
           moyen fréquemment utilisé de décrire des structures de données
