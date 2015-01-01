@@ -48,12 +48,14 @@ def get_data(whereTo = ".", fLOG = print):
     @return                     liste d'arcs
 
     Un arc est défini par un 6-uple contenant les informations suivantes :
-        - v1: indice du premier noeud
-        - v2: indice du second noeud
-        - ways: sens unique ou deux sens
-        - p1: coordonnées du noeud 1
-        - p2: coordonnées du noeud 2
-        - d: distance
+    
+    - v1: indice du premier noeud
+    - v2: indice du second noeud
+    - ways: sens unique ou deux sens
+    - p1: coordonnées du noeud 1
+    - p2: coordonnées du noeud 2
+    - d: distance
+    
     """
     data = pyensae.download_data("paris_54000.zip", whereTo=whereTo, fLOG=fLOG)
     name = data[0]
