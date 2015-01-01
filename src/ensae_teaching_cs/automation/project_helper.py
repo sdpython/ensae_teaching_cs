@@ -259,7 +259,7 @@ def git_first_commit_all_projects(
     @param      timeout         timeout for the command line
     @param      suivi           file to open to get the gitlab account
     @param      fLOG            logging function
-    @return                     something
+    @return                     None or ( local_folder, gitlab )
     """
     if not os.path.exists(local_folder):
         raise FileNotFoundError(local_folder)
@@ -274,6 +274,24 @@ def git_first_commit_all_projects(
     gitlab = _gitlab_regex.findall(content)
     if len(gitlab) == 0:
         raise Exception("unable to find the regular expression {0} in {1}".format(_gitlab_regex.pattern, filename))
-
-    fLOG("gitlab", gitlab)
-    raise NotImplementedError()
+    if not isinstance (gitlab, list):
+        raise TypeError("we expect a list for: " + str(gitlab))
+    if len(gitlab) != 1:
+        raise Exception("more than one gitlab repo is mentioned {0} in {1}".format(_gitlab_regex.pattern, filename))
+    gitlab = gitlab[0]
+    
+    fLOG("* gitlab", gitlab)
+    g = os.path.join(local_folder, ".git")
+    commit = None
+    if not os.path.exists(g):
+        fLOG("* initialize", local_folder)
+        git_clone(local_folder, gitlab, 
+                  user=user, password=password, fLOG=fLOG)
+        sub = os.path.split(local_folder)[-1]
+        fLOG("* first commit ", gitlab)
+        git_commit_all(local_folder, gitlab, 
+                       "first commit to " + sub, 
+                       user=user, password=password, fLOG=print)
+        commit= local_folder, gitlab
+                
+    return commit
