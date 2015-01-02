@@ -162,10 +162,11 @@ Bibliographie
 * `CSE373 - Analysis of Algorithms - 2007 SBU <https://www.youtube.com/playlist?list=PL5F43156F3F22C349>`_
 * `CS109 Data Science (Harvard) <http://cs109.github.io/2014/>`_ (la liste des vidéos disponibles est en bas)
 
-**Autres cours sous forme de notebooks**
+**Autres cours, notebooks**
 
 * `CS109 Data Science (Harvard) <http://cs109.github.io/2014/>`_ - `TD <https://github.com/cs109/content>`_
 * `Advanced Statistical Computing, Chris Fonnesbeck (Vanderbilt University) <http://nbviewer.ipython.org/github/fonnesbeck/Bios366/tree/master/notebooks/>`_
+* `CS 188: Artificial Intelligence (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/lectures.html>`_ 
 
 **Articles d'auteurs très connus**
 
@@ -179,6 +180,9 @@ Bibliographie
 * `ABC model choice via random forests <http://arxiv.org/abs/1406.6288>`_, Pierre Pudlo, Jean-Michel Marin, Arnaud Estoup, Jean-Marie Cornuet, Mathieu Gautier, Christian P. Robert 
 * `Mondrian Forests: Efficient Online Random Forests <http://arxiv.org/pdf/1406.2673v1.pdf>`_, Balaji Lakshminarayanan, Daniel M. Roy, Yee Whye Teh
 * `Stochastic Gradient Tricks <http://leon.bottou.org/papers/bottou-tricks-2012>`_
+* `SiGMa: Simple Greedy Matching for Aligning Large Knowledge Bases <http://arxiv.org/abs/1207.4525>`_, Simon Lacoste-Julien, Konstantina Palla, Alex Davies, Gjergji Kasneci, Thore Graepel, Zoubin Ghahramani
+* `Learning from Partial Labels <http://www.seas.upenn.edu/~taskar/pubs/partial_labels_jmlr11.pdf>`_, Timothee Cour, Benjamin Sapp, Ben Taskar
+* `Word Alignment via Quadratic Assignment <http://www.seas.upenn.edu/~taskar/pubs/naacl06_qap.pdf>`_, Simon Lacoste-Julien, Ben Taskar, Dan Klein, Michael I. Jordan
 
 **Librairies de machine learning**
 
@@ -192,6 +196,7 @@ Bibliographie
 * `TopCoder <http://www.topcoder.com/>`_
 * `UVa Online Judge <http://uva.onlinejudge.org/>`_
 * `Le problème des huit reines <http://zanotti.univ-tln.fr/algo/REINES.html>`_
+* `Projet Euler <https://projecteuler.net/>`_
 
 
 Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_ :

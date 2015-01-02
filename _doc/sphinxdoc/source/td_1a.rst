@@ -156,7 +156,7 @@ Bibliographie
 
 * `Apprenez à programmer en Python <http://openclassrooms.com/courses/apprenez-a-programmer-en-python>`_ (openclassrooms)
 * `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
-
+* `Python en Prépas <http://prepas.org/ups.php?article=394>`_
 
 **MOOC**
 

@@ -156,11 +156,13 @@ Livres sur le machine learning
 MOOC, cours, Lectures
 ---------------------
 
+* `CS 188: Artificial Intelligence (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/lectures.html>`_
 * `Stanford From Languages to Information <https://web.stanford.edu/class/cs124/>`_  Dan Jurafsky 
     * `Language Modeling, Introduction to N-Gram <https://web.stanford.edu/class/cs124/lec/languagemodeling.pdf>`_
 * `Introduction to Apache Pig <http://www.cloudera.com/content/cloudera/en/resources/library/training/introduction-to-apache-pig.html>`_
 * `Machine Learning par Andrew Y. Ng <https://www.class-central.com/mooc/835/coursera-machine-learning>`_
 * `Coursera Machine Learning <https://www.coursera.org/course/ml>`_    
+* `Python en Prépas <http://prepas.org/ups.php?article=394>`_
 
 Question des élèves
 -------------------

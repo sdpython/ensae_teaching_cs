@@ -4,6 +4,12 @@
 Machine Learning
 ================
 
+Le site `CS 188: Artificial Intelligence (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/lectures.html>`_ 
+propose des projets informatiques qui ont la particularité de partir d'un squelette existant.
+Ce sont des problèmes de machines learning très guidés où l'essentiel de l'effort 
+est tourné vers les algorithmes.
+
+
 .. _l-ml-renf:
 
 Apprentissage par renforcement
@@ -49,6 +55,10 @@ Quelques applications envisageables dans le cadre de ce projets :
 * `Tétris <https://interstices.info/jcms/c_32764/la-carotte-et-le-baton-et-tetris>`_ (voir aussi `Tetris, Colin Fahey <http://www.colinfahey.com/tetris/tetris.html>`_)
 * `bandit manchot <http://www.xavierdupre.fr/enseignement/projet_data/apprentissage_renforcement_part3.pdf>`_
 * `jeux de stratégie <http://www.bgu.ac.il/~shanigu/Publications/LearningInCiv.pdf>`_
+
+On peut envisager des contextes différents tels que le jeu de Pacman
+
+* `Reinforcement Learning (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/projects/reinforcement/reinforcement.html>`_
 
 
 .. _l-ml-chow:
@@ -133,3 +143,13 @@ Librairies, modules :
 * `theano <http://deeplearning.net/software/theano/>`_, module Python spécialisé dans le deep learning, `caffe <http://caffe.berkeleyvision.org/>`_
 
 
+.. _l-ml-align:
+
+Alignement de mots dans l'optique de constuire un traducteur automatique
+------------------------------------------------------------------------
+
+L'algorithme est présentée dans l'article :
+`Word Alignment via Quadratic Assignment <http://www.seas.upenn.edu/~taskar/pubs/naacl06_qap.pdf>`_ 
+de Simon Lacoste-Julien, Ben Taskar, Dan Klein, Michael I. Jordan.
+On pourra commencer sur un jeu de données petit et fabriqué manuellement. On pourra ensuite s'attaquer à
+des sites web qui proposent des traductions anglais/français de leur contenu.
