@@ -18,6 +18,7 @@ les deux sources suivantes suffiront :
 
 - `Yahoo Finance <https://fr.finance.yahoo.com/>`_
 - `quandl <http://www.quandl.com/>`_
+- `zipline <https://github.com/quantopian/zipline>`_ (module de trading algorithmique)
 
 `quandl <http://www.quandl.com/>`_ est un aggrégateur de source données. Il
 est possible de récupérer facilement de nombreuses séries financières, des séries économiques
