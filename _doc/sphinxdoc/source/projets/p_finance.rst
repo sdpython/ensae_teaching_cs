@@ -80,6 +80,10 @@ L'objectif est ici de choisir une façon de construire un portefeuille,
 de l'optimiser sur la période d'apprentissage et de la tester sur la période de test. 
 Il est fortement recommandé de relire le TD qui concerne l'optimisation sous contraine.
 
+Quelques liens :
+
+* `Currency Portfolio Optimization Using ScienceOps <http://blog.yhathq.com/posts/currency-portfolio-optimization-using-scienceops.html>`_
+
 .. _l-fi-pair:
 
 Pair trading
