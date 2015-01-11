@@ -6,8 +6,9 @@ import re, os
 import pymmails
 from pyquickhelper import noLOG, run_cmd
 
-_email_regex  = re.compile("[*] *e?mails? *: *([^*]+)")
-_gitlab_regex = re.compile("[*] *gitlab *: *([^*]+[.]git)")
+_email_regex  = re.compile("[*] *e?mails? *: *([^*+]+)")
+_gitlab_regex = re.compile("[*] *gitlab *: *([^*+]+[.]git)")
+_video_regex = re.compile("[*] *videos? *: *([^*\\n]+)")
 
 def grab_mails(mailbox, emails, subfolder, date, no_domain=False, fLOG = noLOG):
     """
@@ -31,9 +32,9 @@ def grab_mails(mailbox, emails, subfolder, date, no_domain=False, fLOG = noLOG):
         res.extend(mails)
     return res
 
-def get_emails(path, suivi = "suivi.rst"):
+def get_regex(path, regex, suivi = "suivi.rst"):
     """
-    retrieve student emails from file ``suivi.rst``
+    retrieve data from file ``suivi.rst`` using a regular expression
 
     @param      path            sub folder to look into
     @param      suivi           name of the file ``suivi.rst``
@@ -48,21 +49,43 @@ def get_emails(path, suivi = "suivi.rst"):
     with open(filename, "r", encoding="utf8") as f :
         content = f.read()
 
-    global _email_regex
-    mails = _email_regex.findall(content)
+    mails = regex.findall(content)
     if len(mails) == 0:
-        raise Exception("unable to find the regular expression {0} in {1}".format(_email_regex.pattern, filename))
+        raise Exception("unable to find the regular expression {0} in {1}".format(regex.pattern, filename))
 
     allmails = [ ]
     for m in mails:
         allmails.extend ( m.strip("\n\r\t ").split(";") )
 
+    return allmails
+
+def get_emails(path, suivi = "suivi.rst"):
+    """
+    retrieve student emails from file ``suivi.rst``
+
+    @param      path            sub folder to look into
+    @param      suivi           name of the file ``suivi.rst``
+    @return                     list of mails
+    """
+    global _email_regex
+    allmails = get_regex(path, _email_regex, suivi)
     for a in allmails :
         ff = a.split("@")
         if len(ff) != 2:
             raise Exception("unable to understand mail {0} in {1} (mail separator is ;)".format(a, filename))
-
     return allmails
+        
+
+def get_videos(path, suivi = "suivi.rst"):
+    """
+    retrieve student emails from file ``suivi.rst``
+
+    @param      path            sub folder to look into
+    @param      suivi           name of the file ``suivi.rst``
+    @return                     list of mails
+    """
+    global _video_regex
+    return get_regex(path, _video_regex, suivi)
 
 def dump_mails_project(path,
                     mailbox,
