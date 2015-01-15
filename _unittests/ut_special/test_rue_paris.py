@@ -36,6 +36,8 @@ class TestRueParis (unittest.TestCase):
         except Exception as e:
             if "the connected party did not properly respond after a period of time" in str(e):
                 return
+            else:
+                raise Exception("*****" + str(e) + "*****") from e
             
         fLOG(len(data))
         assert len(data)>0
