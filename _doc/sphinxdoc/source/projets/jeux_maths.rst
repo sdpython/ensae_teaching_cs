@@ -142,7 +142,7 @@ une partie non bruitée de l'image l'informatique cherchée.
 * `Texture Synthesis by Non-parametric Sampling (web site) <http://graphics.cs.cmu.edu/people/efros/research/EfrosLeung.html>`_
 
 
-.. _l-math_simulloi
+.. _l-math_simulloi:
 
 Simulation d'une loi statistique avec un algorithme d'optimisation A*
 ---------------------------------------------------------------------
