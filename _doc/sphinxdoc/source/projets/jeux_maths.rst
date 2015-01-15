@@ -142,3 +142,10 @@ une partie non bruitée de l'image l'informatique cherchée.
 * `Texture Synthesis by Non-parametric Sampling (web site) <http://graphics.cs.cmu.edu/people/efros/research/EfrosLeung.html>`_
 
 
+.. _l-math_simulloi
+
+Simulation d'une loi statistique avec un algorithme d'optimisation A*
+---------------------------------------------------------------------
+
+L'objectif est d'implémenter l'algorithme décrit par l'article
+`A* Sampling <http://papers.nips.cc/paper/5449-a-sampling.pdf>`_, Chris J. Maddison, Daniel Tarlow, Tom Minka.

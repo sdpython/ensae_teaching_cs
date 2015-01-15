@@ -111,7 +111,8 @@ Je recommande la version `64bit, v3.4.1 <https://www.python.org/downloads/releas
 La distribution `Anaconda <http://continuum.io/downloads#py34>`_ contient 
 tous les modules importants pour les deux premières années. 
 Le cours de troisième année utilise d'autres modules plus facilement installables
-sous Windows via cette distribution.
+sous Windows via cette distribution. Sous Windows, il existe une autre alternative : 
+`WinPython <http://winpython.sourceforge.net/>`_.
 
 
 
