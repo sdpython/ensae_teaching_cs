@@ -74,7 +74,7 @@ def get_emails(path, suivi = "suivi.rst"):
         if len(ff) != 2:
             raise Exception("unable to understand mail {0} in {1} (mail separator is ;)".format(a, filename))
     return allmails
-        
+
 
 def get_videos(path, suivi = "suivi.rst"):
     """

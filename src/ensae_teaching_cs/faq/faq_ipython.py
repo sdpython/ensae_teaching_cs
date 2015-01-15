@@ -98,39 +98,39 @@ def ipython_convert_notebooks():
 
     """
     pass
-    
+
 def ipython_get_variable(name, magic_command_instance):
     """
     Retreive the value of a local variable in a notebook.
-    
+
     @param      name                        variable name
-    @param      magic_command_instance      instance of `Magics <http://ipython.org/ipython-doc/2/api/generated/IPython.core.magic.html#IPython.core.magic.Magics>`_, 
+    @param      magic_command_instance      instance of `Magics <http://ipython.org/ipython-doc/2/api/generated/IPython.core.magic.html#IPython.core.magic.Magics>`_,
                                             see `Defining your own magics <http://ipython.org/ipython-doc/2/interactive/reference.html#defining-your-own-magics>`_
-    @return                                 value 
-    
+    @return                                 value
+
     The function raises an exception if the context does not exists
     or if the variable name does not value
-    
+
     @FAQ(ipython___Accéder ou modifier une variable du notebook depuis une commande magique)
-    
-    Lorsqu'on écrit un notebook, toutes les variables qu'on crée sont 
+
+    Lorsqu'on écrit un notebook, toutes les variables qu'on crée sont
     en quelque sorte globales puisqu'on peut y accéder depuis chaque cellule
     mais leur périmètre est limité au notebook.
     Lorsqu'on crée un commande magique, il est possible d'accéder à ce contexte local
     via le membre ``self.shell.user_ns``. De cette façon, on peut accéder au contenu d'une
     variable, le modifier ou en ajouter une.
-    
+
     @code
-    
+
     class CustomMagics(Magics):
-    
+
         @line_magic
         def custom_cmd(self, line):
             context = self.shell.user_ns
             #...
-    
+
     @endcode
-    
+
     @endFAQ
     """
     if magic_command_instance.shell is None:
@@ -138,4 +138,3 @@ def ipython_get_variable(name, magic_command_instance):
     if name not in magic_command_instance.shell.user_ns:
         raise KeyError("variable {0} not found".format(name))
     return magic_command_instance.shell.user_ns[name]
-    
