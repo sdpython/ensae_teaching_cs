@@ -31,7 +31,12 @@ class TestRueParis (unittest.TestCase):
         for ext in [".txt",".zip"]:
             f = os.path.join(folder, "paris_54000" + ext)
             if os.path.exists(f): os.remove(f)
-        data = get_data(whereTo=folder, fLOG=fLOG, timeout=60)
+        try:
+            data = get_data(whereTo=folder, fLOG=fLOG, timeout=60)
+        except Exception as e:
+            if "the connected party did not properly respond after a period of time" in str(e):
+                return
+            
         fLOG(len(data))
         assert len(data)>0
         total = sum( _[-1] for _ in data )
