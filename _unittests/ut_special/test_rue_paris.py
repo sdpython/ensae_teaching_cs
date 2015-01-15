@@ -34,7 +34,7 @@ class TestRueParis (unittest.TestCase):
         try:
             data = get_data(whereTo=folder, fLOG=fLOG, timeout=60)
         except Exception as e:
-            if "the connected party did not properly respond after a period of time" in str(e):
+            if "unable to retrieve data" in str(e):
                 return
             else:
                 raise Exception("*****" + str(e) + "*****") from e
