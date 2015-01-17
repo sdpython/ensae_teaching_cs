@@ -109,8 +109,7 @@ if "--verbose" in sys.argv :
     print ("current     =", os.path.abspath(os.getcwd()))
     print ("---------------------------------")
 
-if "clean_space" in sys.argv:
-    # clean the extra space in all files
+def import_pyquickhelper():
     try:
         import pyquickhelper
     except ImportError:
@@ -118,24 +117,23 @@ if "clean_space" in sys.argv:
         try:
             import pyquickhelper
         except ImportError as e :
-            raise ImportError("module pyquickhelper is needed to build the documentation") from e
+            raise ImportError("module pyquickhelper is needed to build the documentation ({0})".format(sys.executable)) from e
+    return pyquickhelper
+
+if "clean_space" in sys.argv:
+    pyquickhelper = import_pyquickhelper()
 
     fold = os.path.dirname(__file__)
     fold = os.path.abspath(fold)
     rem  = pyquickhelper.remove_extra_spaces_folder(fold, extensions=[".py","rst",".bat",".sh"])
     print("number of impacted files", len(rem))
 
-elif "build_sphinx" in sys.argv:
-    # we take a shortcut
+elif "clean_pyd" in sys.argv:
+    pyquickhelper = import_pyquickhelper()
+    pyquickhelper.clean_exts()
 
-    try:
-        import pyquickhelper
-    except ImportError:
-        sys.path.append ( os.path.normpath (os.path.abspath(os.path.join("..", "pyquickhelper", "src" ))))
-        try:
-            import pyquickhelper
-        except ImportError as e :
-            raise ImportError("module pyquickhelper is needed to build the documentation") from e
+elif "build_sphinx" in sys.argv:
+    pyquickhelper = import_pyquickhelper()
 
     if "--help" in sys.argv:
         print(pyquickhelper.get_help_usage())
@@ -148,13 +146,24 @@ elif "build_sphinx" in sys.argv:
 
         fLOG (OutputPrint = True)
         project_name = os.path.split(os.path.split(os.path.abspath(__file__))[0])[-1]
-        generate_help_sphinx(project_name,
-                nbformats=['ipynb', 'html', 'python', 'rst', 'docx','pdf'],
-                layout = [ "pdf",
-                          "html",
-                          ("html", "build2", {"html_theme":"basicstrap"}, "source/conf2"),
-                          ("html", "build3", {"html_theme":"bootstrap"}, "source/conf3"),
-                          ] )
+
+        if sys.platform.startswith("win"):
+            generate_help_sphinx(project_name)
+        else:
+            # unable to test latex conversion due to adjustbox.sty missing package
+            generate_help_sphinx(project_name, nbformats = ["ipynb", "html", "python", "rst"])
+
+elif "unittests" in sys.argv:
+
+    if not os.path.exists("_unittests"):
+        raise FileNotFoundError("you must get the source from GitHub to run the unittests")
+
+    run_unit = os.path.join("_unittests", "run_unittests.py")
+    if not os.path.exists(run_unit):
+        raise FileNotFoundError("the folder should contain run_unittests.py")
+
+    pyquickhelper = import_pyquickhelper()
+    pyquickhelper.main_wrapper_tests(run_unit, add_coverage=True)
 
 elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv \
      or "build_pres_3A" in sys.argv :
@@ -198,15 +207,6 @@ elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv \
 
     if sys.platform.startswith("win"):
         os.chdir (pa)
-
-elif "unittests" in sys.argv:
-
-    if not os.path.exists("_unittests"):
-        raise FileNotFoundError("you must get the source from GitHub to run the unittests")
-
-    sys.path.append("_unittests")
-    from run_unittests import main
-    main()
 
 else :
 
