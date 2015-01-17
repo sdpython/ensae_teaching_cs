@@ -11,6 +11,11 @@ et permet à quiconque de contribuer à ce cours disponible sous trois formats d
 `compact/blanc <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_,
 `compact/mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
 
+.. toctree::
+    :maxdepth: 1
+
+    indexmenu
+
 
 Avant-propos
 ------------
@@ -45,50 +50,31 @@ Contenu des enseignements
 -------------------------
 
 * 3 niveaux
-
-    .. toctree::
-        :maxdepth: 1
-
-        ENSAE, 1A, Initiation à la programmation et l'algorithmie <td_1a> 
-        ENSAE, 2A, Données, Machine Learning et Programmation <td_2a>
-        ENSAE, 3A, Eléments logiciels pour le traitement des données massives <td_3a>
-    
+    * :ref:`1A, Initiation à la programmation et l'algorithmie <l-td1a>`
+    * :ref:`2A, Données, Machine Learning et Programmation <l-td2a>`
+    * :ref:`3A, Eléments logiciels pour le traitement des données massives <l-td3a>`    
 * Présentations
     * `Présentation ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_
     * `Présentation ENSAE 2A - Données et machine learning <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_
     * `Présentation ENSAE 3A - Map/Reduce <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_
 * Projets informatiques
-
-    .. toctree::
-        :maxdepth: 1
-
-        projet informatique 1A <projet_info_1A>
-        projet informatique 2A <projet_info_2A>
-        projet informatique 3A <projet_info_3A>
-        
+    * :ref:`projet informatique 1A <l-projinfo1a>`
+    * :ref:`projet informatique 2A <l-projinfo2a>`
+    * :ref:`projet informatique 3A <l-projinfo3a>`
 * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
-
-    .. toctree::
-        :maxdepth: 1
-
-        Exercices d'algorithmie <exemple_algo>
-        Exposés divers non abordés en cours <expose_divers>
-    
+    * :ref:`Exercices d'algorithmie <l-exoalgo>`
+    * :ref:`Exposés divers non abordés en cours <l-extra>`
 * Questions, termes, FAQ
     * :ref:`FAQ <l-FAQs>`
     * :ref:`Glossaire <l-glossaire>`
     * :ref:`question`
     * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
 * Autres documents
-
-    .. toctree::
-        :maxdepth: 1
-
-        Articles, Références, Blog <biblio>
-        Modules <interesting_modules>
-        Outils, ressources pour développer <devtools>
-        Examens passés (1A) <exams>
-        Coding Party <coding_party>
+    * :ref:`Articles, Références, Blog <l-biblio>`
+    * :ref:`Modules <modulesi>`
+    * :ref:`Outils, ressources pour développer <l-devtools>`
+    * :ref:`Examens passés <l-examens>` (1A)
+    * :ref:`Coding Party <l-codingparty>`
     
 
     
@@ -174,11 +160,6 @@ Index
 * :ref:`l-classes`
 * :ref:`l-functions`
 * :ref:`l-changes`
-
-.. toctree::
-    :maxdepth: 1
-
-    indexmenu
 
 
 .. toctree::

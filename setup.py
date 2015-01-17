@@ -130,7 +130,7 @@ if "clean_space" in sys.argv:
 
 elif "clean_pyd" in sys.argv:
     pyquickhelper = import_pyquickhelper()
-    pyquickhelper.clean_exts()
+    pyquickhelper.clean_exts(exts=[".so", ".o"])
 
 elif "build_sphinx" in sys.argv:
     pyquickhelper = import_pyquickhelper()

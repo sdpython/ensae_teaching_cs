@@ -223,6 +223,7 @@ out_*
 */sphinxdoc/source/readme.*
 */sphinxdoc/source/LICENSE.*
 */sphinxdoc/source/filechanges.*
+*/sphinxdoc/source/coverage/*
 version.txt
 */sphinxdoc/source/ensae_teaching_cs/*
 */sphinxdoc/source/all*.rst

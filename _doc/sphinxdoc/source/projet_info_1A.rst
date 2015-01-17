@@ -1,6 +1,7 @@
 ﻿
 
-.. _l-projinfo:
+.. _l-projinfo1a:
+
 
 1A - Projets informatiques
 ==========================
