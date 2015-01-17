@@ -38,7 +38,7 @@ class TestRueParis (unittest.TestCase):
                 return
             else:
                 raise Exception("*****" + str(e) + "*****") from e
-            
+
         fLOG(len(data))
         assert len(data)>0
         total = sum( _[-1] for _ in data )

@@ -1,5 +1,4 @@
 ﻿
-:tocdepth: 4
 
 ENSAE - Programmation - Xavier Dupré
 ====================================
@@ -46,31 +45,50 @@ Contenu des enseignements
 -------------------------
 
 * 3 niveaux
-    * :ref:`ENSAE, 1A, Initiation à la programmation et l'algorithmie <l-td1a>`
-    * :ref:`ENSAE, 2A, Données, Machine Learning et Programmation <l-td2a>`
-    * :ref:`ENSAE, 3A, Eléments logiciels pour le traitement des données massives <l-td3a>`
+
+    .. toctree::
+        :maxdepth: 1
+
+        ENSAE, 1A, Initiation à la programmation et l'algorithmie <td_1a> 
+        ENSAE, 2A, Données, Machine Learning et Programmation <td_2a>
+        ENSAE, 3A, Eléments logiciels pour le traitement des données massives <td_3a>
+    
 * Présentations
     * `Présentation ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_
     * `Présentation ENSAE 2A - Données et machine learning <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_
     * `Présentation ENSAE 3A - Map/Reduce <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_
 * Projets informatiques
-    * :ref:`projet informatique 1A <l-projinfo>`
-    * :ref:`projet informatique 2A <l-projinfo2a>`
-    * :ref:`projet informatique 3A <l-projinfo3a>`
+
+    .. toctree::
+        :maxdepth: 1
+
+        projet informatique 1A <projet_info_1A>
+        projet informatique 2A <projet_info_2A>
+        projet informatique 3A <projet_info_3A>
+        
 * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
-    * :ref:`Exercices d'algorithmie <l-exoalgo>`
-    * :ref:`Exposés divers non abordés en cours <l-extra>`
+
+    .. toctree::
+        :maxdepth: 1
+
+        Exercices d'algorithmie <exemple_algo>
+        Exposés divers non abordés en cours <expose_divers>
+    
 * Questions, termes, FAQ
     * :ref:`FAQ <l-FAQs>`
     * :ref:`Glossaire <l-glossaire>`
     * :ref:`question`
     * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
 * Autres documents
-    * :ref:`Articles, Références, Blog <l-biblio>`
-    * :ref:`Modules <modulesi>`
-    * :ref:`Outils, ressources pour développer <l-devtools>`
-    * :ref:`Examens passés <l-examens>` (1A)
-    * :ref:`Coding Party <l-codingparty>`
+
+    .. toctree::
+        :maxdepth: 1
+
+        Articles, Références, Blog <biblio>
+        Modules <interesting_modules>
+        Outils, ressources pour développer <devtools>
+        Examens passés (1A) <exams>
+        Coding Party <coding_party>
     
 
     
@@ -157,6 +175,10 @@ Index
 * :ref:`l-functions`
 * :ref:`l-changes`
 
+.. toctree::
+    :maxdepth: 1
+
+    indexmenu
 
 
 .. toctree::

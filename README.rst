@@ -1,8 +1,8 @@
 ﻿
 .. _l-README:
 
-README
-======
+README / Changes
+================
 
 This page gives access to the content of practical sessions I give at the
 `ENSAE <http://www.ensae.fr/>`_. They are based on Python. The project

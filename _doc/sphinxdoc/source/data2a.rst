@@ -80,6 +80,7 @@ Usage régulier
 #. Visualisation
     a. images
         - `matplotlib <http://matplotlib.org/>`_
+        - `seaborn <http://stanford.edu/~mwaskom/software/seaborn/installing.html>`_
         - `matplotlib et pandas <http://pandas.pydata.org/pandas-docs/stable/visualization.html>`_
         - `prettyplotlib <http://olgabot.github.io/prettyplotlib/>`_
         - `ggplot <https://github.com/yhat/ggplot>`_ 
@@ -119,6 +120,8 @@ Usage régulier
     j. `lda <https://github.com/ariddell/lda>`_ (`LDA <http://en.wikipedia.org/wiki/Latent_Dirichlet_allocation>`_)
     k. `NLTK <http://www.nltk.org/install.html>`_ (natural language processing)
     l. `glove-python <https://github.com/maciejkula/glove-python>`_
+    m. `patsy <http://patsy.readthedocs.org/en/latest/index.html>`_
+    n. `sqlite_bro <https://github.com/stonebig/sqlite_bro>`_
     
 #. Représentation de graphes
     a. `Graphviz <https://github.com/xflr6/graphviz>`_
