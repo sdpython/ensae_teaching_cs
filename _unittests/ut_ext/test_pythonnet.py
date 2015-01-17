@@ -49,6 +49,7 @@ class TestPythonnet(unittest.TestCase):
                     # maybe the script is running on a virtual machine (no Audia device)
                     if os.environ["USERNAME"] == "ensaestudent" or \
                        os.environ["USERNAME"] == "vsxavierdupre" or \
+                       "paris" in os.environ["COMPUTERNAME"].lower() or \
                        os.environ["USERNAME"].endswith("$"):  # anonymous Jenkins configuration
                         # I would prefer to catch a proper exception
                         # it just exclude one user only used on remotre machines
