@@ -146,6 +146,8 @@ def exercice_particulier2():
 
     :math:`\\left \\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ \\text{sous contrainte} \\; x + 2y = 1 \\end{array}\\right .`
 
+    Qui s'implémente à l'aide de la fonction suivante :
+
     @code
     def f_df(X) :
         x,y = X
