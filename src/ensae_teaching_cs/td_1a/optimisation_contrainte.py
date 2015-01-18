@@ -104,7 +104,7 @@ def exercice_particulier1():
     On résoud le problème suivant avec `cvxopt <http://cvxopt.org/userguide/index.html>`_ :
 
     :math:`\\left \\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ \\text{sous contrainte} \\; x + 2y = 1 \\end{array}\\right .`
-    
+
     Qui s'implémente à l'aide de la fonction suivante :
 
     @code

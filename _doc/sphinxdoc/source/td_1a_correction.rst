@@ -1,4 +1,4 @@
-﻿
+
 
 .. _l-td1a_correction:
 
