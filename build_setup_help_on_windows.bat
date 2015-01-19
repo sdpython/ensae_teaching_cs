@@ -106,6 +106,8 @@ if not exist dist\html_pres mkdir dist\html_pres
 if not exist dist\html_pres_2A mkdir dist\html_pres_2A
 if not exist dist\html_pres_3A mkdir dist\html_pres_3A
 
+echo #######################################################F
+
 xcopy /E /C /I /Y _doc\presentation_2A\build\html dist\html_pres_2A
 if %errorlevel% neq 0 exit /b %errorlevel%
 xcopy /E /C /I /Y _doc\presentation_3A\build\html dist\html_pres_3A

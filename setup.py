@@ -149,9 +149,24 @@ elif "build_sphinx" in sys.argv:
 
         if sys.platform.startswith("win"):
             generate_help_sphinx(project_name)
+            generate_help_sphinx(project_name,
+                    nbformats=['ipynb', 'html', 'python', 'rst', 'docx','pdf'],
+                    layout = [ "pdf",
+                              "html",
+                              ("html", "build2", {"html_theme":"basicstrap"}, "source/conf2"),
+                              ("html", "build3", {"html_theme":"bootstrap"}, "source/conf3"),
+                              ] )
         else:
             # unable to test latex conversion due to adjustbox.sty missing package
-            generate_help_sphinx(project_name, nbformats = ["ipynb", "html", "python", "rst"])
+            generate_help_sphinx(project_name,
+                    nbformats=['ipynb', 'html', 'python', 'rst'],
+                    layout = [ "pdf",
+                              "html",
+                              ("html", "build2", {"html_theme":"basicstrap"}, "source/conf2"),
+                              ("html", "build3", {"html_theme":"bootstrap"}, "source/conf3"),
+                              ] )
+            
+            
 
 elif "unittests" in sys.argv:
 
