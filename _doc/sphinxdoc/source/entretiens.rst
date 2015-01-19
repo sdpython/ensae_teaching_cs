@@ -1,4 +1,6 @@
+﻿
 
+.. issue.
 
 .. _l-entretiens:
 
@@ -30,3 +32,5 @@ teste votre capacité à résoudre des énigmes telles que
 ces :ref:`5 exercices <td2acenoncesession6rst>`.
 
 *La plupart des notebooks cités sont présentés sous forme d'exercice. La correction est disponible sur ce site.*
+
+

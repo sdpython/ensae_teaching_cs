@@ -1,10 +1,11 @@
-
+﻿
 
 .. _l-debutermlprojet:
 
 Bien démarrer un projet de machine learning
 ===========================================
 
+.. index:: projet, machine learning, démarrage
 
 Un projet de machine learning commence généralement avec un jeu de données et un problème à résoudre.
 Une fois qu'on a cela, les premières étapes débutent avec presque toujours les mêmes questions :
@@ -20,7 +21,7 @@ Etape 1 : quel est le type de problème ?
     * clustering
     * réduction du nombre de dimension
     * système de recommandations
-        
+
 Etape 2 : quelles sont les données ?
 ++++++++++++++++++++++++++++++++++++
 
@@ -31,14 +32,14 @@ Etape 2 : quelles sont les données ?
 * Quelles sont les variables connues, les variables à prédire ?
 * Valeurs manquantes ?
 * Variables catégorielles, discrètes ou continues ?
-    
+
 La plupart des algorithmes d'apprentissages utilisent des données numériques,
 il faut convertir les variables catégorielles au format numérique.
 
 Si une variable catégorielle est à choix unique et qu'elle contient :math:`C` catégories, 
 celle-ci sera multipliée en :math:`n` colonnes, une pour chaque modalité. Comme la somme de
 ces colonnes est le vecteur colonne :math:`J=(1,...,1)`, la matrice :math:`X` modifiée sera corrélée.
-    
+
 Etape 3 : séparation train/test
 +++++++++++++++++++++++++++++++
 
@@ -82,7 +83,7 @@ Si la performance globale convient, on s'arrête souvent ici. Dans le cas contra
 * Les valeurs manquantes empêchent le modèle d'apprendre.
 * Une variables continues ne l'est pas vraiment : distribution selon deux modes par exemple.
 * ...
-    
+
 Voir également `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_.
 
 Etape 6 : validation du modèle

@@ -1,3 +1,6 @@
+﻿
+
+.. issue.
 
 
 .. _l-td1a_correction:
@@ -21,5 +24,5 @@ correction
     TD 11 : Calcul numérique, dichotomie et Cython (correction) <notebooks/td1a_correction_session_11>
     TD 12 : Visualisation des données (correction) <notebooks/td1a_correction_session_12>
 
-    
+
     

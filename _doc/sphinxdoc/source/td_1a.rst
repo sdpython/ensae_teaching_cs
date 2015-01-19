@@ -1,4 +1,6 @@
+﻿
 
+.. issue.
 
 .. _l-td1a:
 
@@ -120,7 +122,7 @@ Trucs et astuces avec les notebooks
     notebooks/notebook_convert
     notebooks/ipython_custom_magics
 
-    
+
 
 .. _l-td1a-biblio:
 
@@ -174,12 +176,12 @@ Bibliographie
 
 .. toctree::
     :hidden:
-    
+
     td_1a_enonce
     td_1a_correction
     questions/question_2014
-    
+
 .. rubric:: Footnotes
 
-.. [#f1] Les quatre sujets importants des six dernières séances sont la programmation dynamique, la dichotomie, les dataframe, les graphiques. La séance 9, la fin de la séance 10 et la séance 11 ne sont pas indispensables. 
-    
+.. [#f1] Les quatre sujets importants des six dernières séances sont la programmation dynamique, la dichotomie, les dataframe, les graphiques. La séance 9, la fin de la séance 10 et la séance 11 ne sont pas indispensables.
+

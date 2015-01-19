@@ -1,4 +1,6 @@
+﻿
 
+.. issue.
 
 .. _l-codingparty1:
 
@@ -24,7 +26,7 @@ Données réelles
 * `Mulhouse - json <http://www.xavierdupre.fr/site2013/enseignements/tddata/mulhouse.zip>`_ ou `Mulhouse - dataframe <http://www.xavierdupre.fr/site2013/enseignements/tddata/mulhouse.df.txt.zip>`_
 * `Nancy - json <http://www.xavierdupre.fr/site2013/enseignements/tddata/nancy.zip>`_ ou `Nancy - dataframe <http://www.xavierdupre.fr/site2013/enseignements/tddata/nancy.df.txt.zip>`_
 * `Paris - json <http://www.xavierdupre.fr/site2013/enseignements/tddata/paris.zip>`_ ou `Paris - dataframe <http://www.xavierdupre.fr/site2013/enseignements/tddata/paris.df.txt.zip>`_
-    
+
 Elles ont été fabriquées en suivant l'exemple : 
 `Récupérer les données Velib et les visualiser <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/pyensae_velib.html>`_.
 
@@ -37,7 +39,7 @@ Ce fichier contient plusieurs simulations, chacune disponible avec deux fichiers
 
 * La liste des trajets.
 * Les places et vélos disponibles pour chaque station (de Besançon).
-    
+
 Les simulations vérifient quelques contraintes :
 
 * Toutes les stations démarrent à 5 places et vélos disponibles.
@@ -53,7 +55,7 @@ Les données synthétiques fournissent à la fois les décomptes et les trajecto
 afin d'évaluer un algorithme. Une fois que celui-ci est bien calé, on peut 
 l'évaluer sur les données réelles.
 
-    
+
 Description des données
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -68,7 +70,7 @@ Les colonnes importantes :
   à toutes les stations sont mises dans un fichier, c'est l'identifiant unique)
 * **collect_date** : date à laquelle sont collectées les données (elle peut légèrement varier
   au sein d'un même fichier)
-      
+
 Autres colonnes (uniquement pour les données réelles) :
 
 * **status** : une station peut être fermée, en général, elle est ouvert (``OPEN``)
@@ -88,13 +90,13 @@ On fournit le code de la `distance de Haversine <http://en.wikipedia.org/wiki/Ha
         c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
         d = radius * c
         return d   
-        
+
 Pour récupérer les données ::
 
     from pyensae import download_data
     download_data('velib_synthetique.zip', website = 'xdtd', whereTo = whereto)    
     download_data('besancon.df.txt.zip', website = 'xdtd', whereTo = whereto)  
-    
+
 Pour les charger dans un DataFrame ::
 
     import pandas
@@ -110,12 +112,12 @@ ce fut une autre paire de manches. Néanmoins, deux idées se sont dégagées :
 
 #. une solution basée sur l'appariement des sorties et des entrées de vélos,
 #. une solution d'inspiration bayésienne (Monte Carlo).
-    
+
 Si entre deux minutes consécuties et pour les mêmes stations, 
 le comte des places disponibles (ou celui des vélos) évolue, on est certain
 qu'un vélo est arrivé ou est parti. A partir de là, il est possible de construire 
 pour l'ensemble des stations deux séries :
-    
+
 #. la série des vélos retirés d'une station,
 #. la série des vélos réposés à une station.
 
@@ -135,10 +137,10 @@ Elle présente deux inconvénients :
    de vélos (retirés et reposés), elles se comporte comme deux peignes.
    Décaler ces deux peignes pour apparier leur dents n'a pas beaucoup d'impact
    sur la fonction de coût mais il a un grand impact sur la vitesse moyenne.
-       
+
 `Voici <https://github.com/sdpython/ensae_teaching_cs/commit/7da003de4bb8bac7d3a59a5cfd372d8187cbc9aa>`_ 
 ce que j'ai rajouté en vitesse pour essayer d'avoir une solution probable.       
-       
+
 Pour la solution d'inspiration bayésienne, elle revient à prendre des hypothèses 
 sur la vitesse moyenne. J'en dirai peut-être plus un peu plus tard. En attendant,
 vous pouvez reproduire la solution de l'appariement dans ce notebook :

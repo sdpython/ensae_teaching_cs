@@ -1,4 +1,6 @@
+﻿
 
+.. issue.
 
 .. _l-exoalgo:
 
@@ -17,5 +19,5 @@ Exemples d'algorithmie
     notebooks/exercice_xn
     notebooks/pp_exo_deviner_un_nombre
     notebooks/pp_exo_deviner_un_nombre_correction
-    
+
     

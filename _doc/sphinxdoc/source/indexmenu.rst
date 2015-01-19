@@ -1,4 +1,4 @@
-
+﻿
 Table des matières
 ==================
 
@@ -28,7 +28,7 @@ Cours
     README
     indexes
     
-Elements de code
+Eléments de code
 ----------------
     
 .. toctree::

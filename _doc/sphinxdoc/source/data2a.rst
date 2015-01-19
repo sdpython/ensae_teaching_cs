@@ -1,4 +1,6 @@
+﻿
 
+.. issue.
 
 .. _l-data2a:
 
@@ -52,7 +54,7 @@ Usage régulier
         - `WingIDE <https://wingware.com/>`_
     d. Liens
         - `Formation à Python scientifique - ENS Paris <http://python-prepa.github.io/index.html>`_
-        
+
 #. `Pandas <http://pandas.pydata.org/>`_
     a. Récupérer des données depuis un fichier plat
     b. Encoding
@@ -68,7 +70,7 @@ Usage régulier
     i. `pandas cookbook <http://pandas.pydata.org/pandas-docs/stable/cookbook.html>`_
     j. `cytoolz <https://github.com/pytoolz/cytoolz/>`_
     k. `toolz <https://github.com/pytoolz/toolz/>`_
-    
+
 #. `Numpy <http://www.numpy.org/>`_, `Scipy <http://www.scipy.org/>`_, `cvxopt <http://cvxopt.org/>`_
     a. Notation avec ``:``
     b. Calcul matriciel
@@ -77,7 +79,7 @@ Usage régulier
     e. Valeur propres / vecteur propres
     f. Optimisation, optimisation sous Contraintes
     g. Optimisation sous contrainte avec cvxopt
-    
+
 #. Visualisation
     a. images
         - `matplotlib <http://matplotlib.org/>`_
@@ -107,7 +109,7 @@ Usage régulier
     e. services (il faut d'identifier)
         - `plotly <https://plot.ly/python/>`_
         - `datawrapper <https://datawrapper.de/>`_ (utiliser par le journal l'Equipe)    
-    
+
 #. machine learning `Scikit-learn <http://scikit-learn.org/stable/>`_
     a. `scikit lectures <http://scipy-lectures.github.io/>`_
     b. ADD avec Python (ACP, CAH, clustering)
@@ -123,27 +125,27 @@ Usage régulier
     l. `glove-python <https://github.com/maciejkula/glove-python>`_
     m. `patsy <http://patsy.readthedocs.org/en/latest/index.html>`_
     n. `sqlite_bro <https://github.com/stonebig/sqlite_bro>`_
-    
+
 #. Représentation de graphes
     a. `Graphviz <https://github.com/xflr6/graphviz>`_
     b. `Networkx <https://networkx.github.io/>`_
     c. `neo4j <http://www.neo4j.org/develop/python>`_
     d. `python-igraph <http://igraph.org/python/>`_
-    
+
 #. Représentation de données structurées, NoSQL
     a. différences avec les bases de données traditionnelles (tables)
     b. format `JSON <http://fr.wikipedia.org/wiki/JavaScript_Object_Notation>`_, `XML <http://fr.wikipedia.org/wiki/Extensible_Markup_Language>`_ pour les `données structurées <http://en.wikipedia.org/wiki/Semi-structured_data>`_
     c. `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_ définition
     d. `unqlitepy <https://github.com/nobonobo/unqlitepy>`_ (`unqlite <http://unqlite.org/>`_), `cassandra-driver <https://github.com/datastax/python-driver>`_ (`Cassandra <http://cassandra.apache.org/>`_)
     e. `pymongo <http://docs.mongodb.org/ecosystem/drivers/python/>`_ (installation depuis `pymongo pipy <https://pypi.python.org/pypi/pymongo/>`_, `MongoDB <http://www.mongodb.org/>`_), `py-couchdb <https://py-couchdb.readthedocs.org/en/latest/>`_ (`CouchDB <http://couchdb.apache.org/>`_)
-    
+
 #. Calcul distribué  
     a. Multithreading (local)
     b. `GPU <http://fr.wikipedia.org/wiki/Processeur_graphique>`_ : `pycuda <http://mathema.tician.de/software/pycuda/>`_, `theano <http://deeplearning.net/software/theano/>`_
     c. Plusieurs machines ou plusieurs coeurs (ipython, lzmq, ...)
     d. Workflow (`luigi <http://luigi.readthedocs.org/en/latest/>`_, `papy <http://arxiv.org/ftp/arxiv/papers/1407/1407.4378.pdf>`_)
     e. `joblib <https://pythonhosted.org/joblib/>`_
-    
+
 #. Python et autres langages (C++, Cypthon, C#, R) 
     a. `Cython <http://cython.org/>`_ (voir aussi `cffi <https://cffi.readthedocs.org/>`_)
     b. autres langages
@@ -211,8 +213,8 @@ Usage irrégulier
 9. Calcul en grande dimension
     a. calcul en grande précision `gmpy2 <http://gmpy2.readthedocs.org/en/latest/>`_
 
-    
-    
+
+
 Articles
 ++++++++
     * `Gradient Boosted Regression Trees <http://orbi.ulg.ac.be/bitstream/2268/163521/1/slides.pdf>`_
@@ -224,7 +226,7 @@ Articles
     * `Python Tools for Machine Learning <http://www.cbinsights.com/blog/python-tools-machine-learning/>`_
     * `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
     * `22 outils gratuits pour visualiser et analyser les données (1ère partie) <http://www.lemondeinformatique.fr/actualites/lire-22-outils-gratuits-pour-visualiser-et-analyser-les-donnees-1ere-partie-47241-page-3.html>`_
-    
+
 
 Liens
 +++++
@@ -244,3 +246,4 @@ Liens
 - Vidéo
     - `Scikit-Learn: Machine Learning en Python <http://www.microsoft.com/france/mstechdays/programmes/2014/fiche-session.aspx?ID=295be946-2c69-458a-8545-bcebe7970fd8>`_
     - `HDInsight : Hadoop en environnement Microsoft <http://www.microsoft.com/france/mstechdays/programmes/2013/fiche-session.aspx?ID=bb6cbb87-c370-477e-8fd4-b46f9ca292d0>`_
+
