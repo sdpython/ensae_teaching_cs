@@ -165,8 +165,8 @@ elif "build_sphinx" in sys.argv:
                               ("html", "build2", {"html_theme":"basicstrap"}, "source/conf2"),
                               ("html", "build3", {"html_theme":"bootstrap"}, "source/conf3"),
                               ] )
-            
-            
+
+
 
 elif "unittests" in sys.argv:
 
@@ -198,8 +198,9 @@ elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv \
             res += [ os.path.join(res[-1], "Scripts") ]
         return res
 
-    suffix = "_2A" if "build_pres_2A" in sys.argv else ""
-    suffix = "_3A" if "build_pres_3A" in sys.argv else ""
+    suffix = ""
+    suffix = "_2A" if "build_pres_2A" in sys.argv else suffix
+    suffix = "_3A" if "build_pres_3A" in sys.argv else suffix
 
     #  run the documentation generation
     if sys.platform.startswith("win"):

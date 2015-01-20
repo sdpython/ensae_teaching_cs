@@ -81,11 +81,6 @@ if %errorlevel% neq 0 exit /b %errorlevel%
 if %errorlevel% neq 0 exit /b %errorlevel%
 echo #######################################################
 
-:documentation:
-%pythonexe% -u setup.py build_sphinx
-if %errorlevel% neq 0 exit /b %errorlevel%
-echo #######################################################
-
 :presentation:
 %pythonexe% -u setup.py build_pres
 if %errorlevel% neq 0 exit /b %errorlevel%
@@ -93,6 +88,9 @@ if %errorlevel% neq 0 exit /b %errorlevel%
 if %errorlevel% neq 0 exit /b %errorlevel%
 %pythonexe% -u setup.py build_pres_3A
 if %errorlevel% neq 0 exit /b %errorlevel%
+echo #######################################################
+
+:documentation:
 %pythonexe% -u setup.py build_sphinx
 if %errorlevel% neq 0 exit /b %errorlevel%
 echo #######################################################
