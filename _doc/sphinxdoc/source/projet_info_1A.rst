@@ -373,6 +373,7 @@ Liste des sujets cités
 #. Jeu 2 : :ref:`l-jeu-oth`
 #. Jeu 2 : :ref:`l-jeu-awa`
 #. Jeu 2 : :ref:`l-jeu-gomo`
+#. Jeu 2 : :ref:`l-jeu-go`
 #. Algo : :ref:`l-math-wifi`
 #. Algo : :ref:`l-math-pento`
 #. Algo : :ref:`l-math-motif`

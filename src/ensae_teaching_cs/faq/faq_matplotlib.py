@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @file
-@brief Quelques problèmes récurrents avec `CVXOPT <http://cvxopt.org/>`_.
+@brief Quelques problèmes récurrents avec `matplotlib <http://matplotlib.org/>`_.
 
 """
 

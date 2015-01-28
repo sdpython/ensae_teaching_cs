@@ -98,7 +98,17 @@ Quelques liens :
 Le Gomoku peut se jouer sur des grilles de tailles diverses. Il est aussi simple de la dessiner
 que d'utiliser des images.
 
+.. _l-jeu-go:
 
+Go
+--
+
+Le `Go <http://fr.wikipedia.org/wiki/Jeu_de_go>`_ est un jeu de réflexion qui se joue à deux.
+Si on admet que les ordinateurs sont devenus quasiment imbattable par un humain aux échecs,
+le jeu de Go résiste encore. Implémenter une intelligence artificielle semble encore une gageure
+dans le cadre d'un projet informatique. L'article 
+`Teaching Deep Convolutional Neural Networks to Play Go <http://arxiv.org/abs/1412.3409>`_, Christopher Clark, Amos Storkey
+propose une solution à base de machine learning.
 
 
 

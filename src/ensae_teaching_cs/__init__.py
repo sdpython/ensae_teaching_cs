@@ -19,3 +19,4 @@ from .faq.faq_matplotlib import graph_ggplot_with_label
 from .td_2a.session_pandas import dfs2excel
 from .td_2a.parallel_thread import ParallelThread
 from .td_2a.serialization import load_object, dump_object, df2list
+from .faq.faq_pandas import read_csv
