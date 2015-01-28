@@ -62,6 +62,10 @@ Examens
         (récurrence, matrice aléatoire, matrice de transition)</li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2013_rattrape.pdf">énoncé 2012-2013</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2013_rattrape.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (statistiques simples à partir de données publiques relative à la ville de Paris)</li>
+    <li><a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2015_rattrapage_enonce.pdf">énoncé 2014-2015</a> 
+        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2015_rattrapage_enonce.html">
+                <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
+        (2048 - google jam)</li>
     </ul>
     </p>
 
