@@ -309,7 +309,7 @@ def git_change_remote_origin(
                         url_https,
                         user = None,
                         password = None,
-                        add_fecth = True,
+                        add_fetch = False,
                         timeout = 10,
                         fLOG = noLOG
                         ):
