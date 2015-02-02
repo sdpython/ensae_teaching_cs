@@ -2,6 +2,8 @@
 
 .. _l-projinfo3a:
 
+.. index:: 3A
+
 3A - Projets informatiques
 ==========================
 

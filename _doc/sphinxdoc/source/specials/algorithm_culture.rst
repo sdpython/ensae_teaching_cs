@@ -1,5 +1,11 @@
 ﻿
+
+.. issue.
+
 .. _l-algoculture:
+
+.. index:: culture algorithmique, algorithme
+
 
 Survol algorithmique
 ====================
@@ -87,6 +93,7 @@ Tout ce qui suit vous donnera des idées.
     * `Algorithme de Rabin-Karp <http://fr.wikipedia.org/wiki/Algorithme_de_Rabin-Karp>`_ **algo**
     * `distance de Jaccard <http://fr.wikipedia.org/wiki/Indice_et_distance_de_Jaccard>`_ **algo**
     * `n-grammes <http://fr.wikipedia.org/wiki/N-gramme>`_ **déf**
+    * `Algorithme d'Aho-Corasick <http://fr.wikipedia.org/wiki/Algorithme_d%27Aho-Corasick>`_ **algo**
 * Autre
     * `codage Huffman <http://fr.wikipedia.org/wiki/Codage_de_Huffman>`_ (voir aussi `LZ77, LZ78 <http://fr.wikipedia.org/wiki/LZ77_et_LZ78>`_) **algo**
     * `bootstrap, intervalles de confiance <http://fr.wikipedia.org/wiki/Bootstrap_(statistiques)#Intervalle_de_confiance>`_ **algo**
@@ -98,3 +105,10 @@ Tout ce qui suit vous donnera des idées.
     * `mémoïzation <http://fr.wikipedia.org/wiki/M%C3%A9mo%C3%AFsation>`_ **déf** (voir aussi `Mémoïzation d'une fonction Python <http://sametmax.com/memoization-dune-fonction-python/>`_)
     * `programmation fonctionnelle <http://fr.wikipedia.org/wiki/Programmation_fonctionnelle>`_ **déf**
     * `récursivité <http://fr.wikipedia.org/wiki/R%C3%A9cursivit%C3%A9>`_ **déf**
+    
+Liens
++++++
+
+* `Liste d'algorithme sur Wikipédia <http://en.wikipedia.org/wiki/List_of_algorithms>`_ 
+  (`version française <http://fr.wikipedia.org/wiki/Liste_d%27algorithmes>`_)
+* `List of machine learning concepts <http://en.wikipedia.org/wiki/List_of_machine_learning_concepts>`_
