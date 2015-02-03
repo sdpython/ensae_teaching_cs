@@ -30,7 +30,7 @@ class TestLabel(unittest.TestCase):
         fhel = os.path.join(fold, "..", "..", "_doc","sphinxdoc","build3","html","specials","algorithm_culture.html")
         fhel = os.path.normpath(fhel)
         if os.path.exists(fhel):
-            with open(fhel, "r", encoding="utf8") as f : 
+            with open(fhel, "r", encoding="utf8") as f :
                 content = f.read()
             assert ".. _l-algoculture:</p>" not in content
         else:
