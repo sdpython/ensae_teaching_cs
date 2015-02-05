@@ -61,6 +61,7 @@ def clean_function_1a(code):
             "dictionnaire_depart.items() [0]",
             "iterateur(0,10) [0]",
             "# ...... à remplir",
+            'String.Join(",", a.Select(c=>c.ToString()).ToArray())',
             ]
     rep = [ ("# ...", "pass # "),
             ("%timeit", "#%timeit"),

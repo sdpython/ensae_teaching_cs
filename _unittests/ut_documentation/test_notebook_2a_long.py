@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=23s)
+@brief      test log(time=19s)
 """
 
 import sys, os, unittest, re
@@ -37,15 +37,15 @@ from pyquickhelper import fLOG, get_temp_folder
 from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
 
 
-class TestNotebookRunner2a_ (unittest.TestCase):
+class TestNotebookRunner2a_long (unittest.TestCase):
 
-    def test_notebook_runner_2a(self) :
+    def test_notebook_runner_2a_long(self) :
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
-        temp = get_temp_folder(__file__, "temp_notebook2a_")
+        temp = get_temp_folder(__file__, "temp_notebook2a_long_")
         keepnote = ls_notebooks("2a")
         assert len(keepnote)>0
         res = execute_notebooks(temp, keepnote,
-                lambda i,n : "git" not in n and "python_r" not in n,
+                lambda i,n : "python_r" in n,
                 fLOG=fLOG,
                 clean_function = clean_function_1a)
         assert len(res) > 0
