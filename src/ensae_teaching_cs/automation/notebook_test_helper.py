@@ -36,6 +36,7 @@ def get_additional_paths():
     addpath = [ os.path.dirname(pyquickhelper.__file__),
                 os.path.dirname(pyensae.__file__),
                 os.path.dirname(pymmails.__file__),
+                os.path.join(os.path.abspath(os.path.dirname(__file__)),".."),
                 ]
     addpath = [ os.path.normpath(os.path.join(_,"..")) for _ in addpath ]
     return addpath
@@ -57,6 +58,8 @@ def clean_function_1a(code):
             "return [ .... ]",
             "def __init__(self, ...) :",
             "if random.random() <= 0.7 :",
+            "dictionnaire_depart.items() [0]",
+            "iterateur(0,10) [0]",
             "# ...... à remplir",
             ]
     rep = [ ("# ...", "pass # "),
