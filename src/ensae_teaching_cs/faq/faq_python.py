@@ -6,6 +6,7 @@
 """
 
 import os, io
+import urllib.request
 
 def entier_grande_taille():
     """
@@ -415,6 +416,47 @@ def enumerate_regex_search(exp, text):
     found = exp.search(text)
     for m in exp.finditer(text):
         yield m
+        
+def download_from_url(url, filename):
+    """
+    
+    .. index:: dropbox
+    
+    downloads a file given a URL and stores it as binary file
+    
+    @param      url         url
+    @param      filename    local filename
+    @return                 filename
+    
+    @FAQ(Télécharger un fichier depuis un notebook?)
+    
+    L'exemple suivant illustre comment télécharger puis enregister ce fichier
+    sur le disque local. Il ne faut pas que ce fichier dépasse la taille de la mémoire.
+    L'url donné en exemple est celui utilisé sur DropBox.
+    
+    @code
+    url = "https://www.dropbox.com/[something]/[filename]?dl=1"  # dl=1 is important
+    import urllib.request
+    u = urllib.request.urlopen(url)
+    data = u.read()
+    u.close()
+     
+    with open([filename], "wb") as f :
+        f.write(data)
+    @endcode
+    
+    L'exemple est tiré de `Download a file from Dropbox with Python <http://www.xavierdupre.fr/blog/2015-01-20_nojs.html>`_.
+    
+    @endFAQ
+    
+    """
+    u = urllib.request.urlopen(url)
+    data = u.read()
+    u.close()
+     
+    with open(filename, "wb") as f :
+        f.write(data) 
+    return filename
 
 if __name__ == "__main__" :
 

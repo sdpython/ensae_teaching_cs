@@ -22,7 +22,7 @@ def xmlParsingLongestDiv (text) :
         to get rid of paragraphs, and bolded text
         """
         def __init__ (self) :
-            html.parser.HTMLParser.__init__(self)
+            html.parser.HTMLParser.__init__(self, convert_charrefs=True)
             self.mtag=[]
             self.mvalue=[]
             self.mall=[]

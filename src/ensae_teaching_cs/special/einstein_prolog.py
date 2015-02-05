@@ -33,7 +33,7 @@ def permutation (nb) :
     @endcode
 
     @param      nb      permutation over the set [[1..n]]
-    @return             list of all possible permutation
+    @return             list of all possible permutations
 
     @warning  This method can be very long if nb is high (>10).
 
