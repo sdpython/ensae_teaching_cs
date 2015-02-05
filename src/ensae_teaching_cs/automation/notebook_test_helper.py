@@ -62,6 +62,7 @@ def clean_function_1a(code):
             "iterateur(0,10) [0]",
             "# ...... à remplir",
             'String.Join(",", a.Select(c=>c.ToString()).ToArray())',
+            "# elle n'existe pas encore",
             ]
     rep = [ ("# ...", "pass # "),
             ("%timeit", "#%timeit"),

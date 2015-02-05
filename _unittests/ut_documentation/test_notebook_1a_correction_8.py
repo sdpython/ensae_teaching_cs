@@ -1,6 +1,8 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=50s)
+@brief      test log(time=200s)
+
+notebook test
 """
 
 import sys, os, unittest, re
@@ -37,23 +39,15 @@ from pyquickhelper import fLOG, get_temp_folder
 from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
 
 
-class TestNotebookRunner1a_enonce (unittest.TestCase):
+class TestNotebookRunner1a_correction (unittest.TestCase):
 
-    def test_notebook_runner_enonce_1_7(self) :
+    def test_notebook_runner_correction_8(self) :
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
-        temp = get_temp_folder(__file__, "temp_notebook1a_enonce_1_7")
+        temp = get_temp_folder(__file__, "temp_notebook1a_correction_8")
         keepnote = ls_notebooks("td1a")
         assert len(keepnote)>0
-        
         res = execute_notebooks(temp, keepnote,
-                lambda i,n : "_12" not in n \
-                        and "cenonce_session1." not in n \
-                        and "cenonce_session6." not in n \
-                        and "cenonce_session8." not in n \
-                        and "cenonce_session9." not in n \
-                        and "cenonce_session_10." not in n \
-                        and "cenonce_session_11." not in n \
-                        and "enonce" in n,
+                lambda i,n : "correction_session8." in n,
                 fLOG=fLOG,
                 clean_function = clean_function_1a)
         assert len(res) > 0

@@ -1,6 +1,8 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=50s)
+@brief      test log(time=90s)
+
+notebook test
 """
 
 import sys, os, unittest, re
@@ -34,28 +36,32 @@ except ImportError :
     import pymmails
 
 from pyquickhelper import fLOG, get_temp_folder
-from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
+from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
 
 
-class TestNotebookRunner1a_enonce (unittest.TestCase):
+class TestNotebookRunner1a_correction_12 (unittest.TestCase):
 
-    def test_notebook_runner_enonce_1_7(self) :
+    @staticmethod
+    def clean_function(code):
+        code = code.replace('run_cmd("exemple.xlsx"', 'skip_run_cmd("exemple.xlsx"')
+
+        skip = ['df["difference"] = ...',
+                "df.plot (...)",
+                ]
+        for s in skip:
+            if s in code:
+                return ""
+        return code
+
+    def test_notebook_runner_enonce_12(self) :
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
-        temp = get_temp_folder(__file__, "temp_notebook1a_enonce_1_7")
+        temp = get_temp_folder(__file__, "temp_notebook1a_correction_12")
         keepnote = ls_notebooks("td1a")
         assert len(keepnote)>0
-        
         res = execute_notebooks(temp, keepnote,
-                lambda i,n : "_12" not in n \
-                        and "cenonce_session1." not in n \
-                        and "cenonce_session6." not in n \
-                        and "cenonce_session8." not in n \
-                        and "cenonce_session9." not in n \
-                        and "cenonce_session_10." not in n \
-                        and "cenonce_session_11." not in n \
-                        and "enonce" in n,
+                lambda i,n : "correction_session_12" in n,
                 fLOG=fLOG,
-                clean_function = clean_function_1a)
+                clean_function = TestNotebookRunner1a_correction_12.clean_function)
         assert len(res) > 0
         fails = [ (os.path.split(k)[-1],v) for k,v in sorted(res.items()) if not v[0] ]
         for f in fails: fLOG(f)
