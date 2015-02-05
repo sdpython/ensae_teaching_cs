@@ -37,17 +37,30 @@ from pyquickhelper import fLOG, get_temp_folder
 from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
 
 
-class TestNotebookRunner2a_ (unittest.TestCase):
+class TestNotebookRunner2a_csharp (unittest.TestCase):
 
     def test_notebook_runner_2a(self) :
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
-        temp = get_temp_folder(__file__, "temp_notebook2a_")
+        temp = get_temp_folder(__file__, "temp_notebook2a_sharp")
         keepnote = ls_notebooks("2a")
         assert len(keepnote)>0
-        res = execute_notebooks(temp, keepnote,
-                lambda i,n : "git" not in n and "python_r" not in n and "csharp" not in n,
-                fLOG=fLOG,
-                clean_function = clean_function_1a)
+        try:
+            res = execute_notebooks(temp, keepnote,
+                    lambda i,n : "csharp" in n,
+                    fLOG=fLOG,
+                    clean_function = clean_function_1a)
+        except Exception as e:
+            if "Audio device error encountered" in str(e):
+                # maybe the script is running on a virtual machine (no Audia device)
+                if os.environ["USERNAME"] == "ensaestudent" or \
+                   os.environ["USERNAME"] == "vsxavierdupre" or \
+                   "paris" in os.environ["COMPUTERNAME"].lower() or \
+                   os.environ["USERNAME"].endswith("$"):  # anonymous Jenkins configuration
+                    # I would prefer to catch a proper exception
+                    # it just exclude one user only used on remotre machines
+                    return
+            raise e
+            
         assert len(res) > 0
         fails = [ (os.path.split(k)[-1],v) for k,v in sorted(res.items()) if not v[0] ]
         for f in fails: fLOG(f)
