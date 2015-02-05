@@ -61,7 +61,7 @@ Autres dépendances
 
 **plugin matplotlib :**
 
-* `prettyplotlib <http://olgabot.github.io/prettyplotlib/>`_
+* `seaborn <http://stanford.edu/~mwaskom/software/seaborn/>`_
     
 Visualisation
 -------------
@@ -70,7 +70,7 @@ Visualisation
 
 
 * `matplotlib <http://matplotlib.org/>`_ : graphes scientifiques
-* `prettyplotlib <http://olgabot.github.io/prettyplotlib/>`_ (nécessite matplotlib)
+* `seaborn <http://stanford.edu/~mwaskom/software/seaborn/>`_ (nécessite matplotlib)
 * `ggplot <http://ggplot.yhathq.com/>`_ : extension très populaire sur *R* et portée sur Python
 * `plotly <https://plot.ly/python/>`_ : graphes élaborés
 * `networkx <http://networkx.github.io/>`_ : dessin de graphes (simple)

@@ -85,7 +85,7 @@ Usage régulier
         - `matplotlib <http://matplotlib.org/>`_
         - `seaborn <http://stanford.edu/~mwaskom/software/seaborn/installing.html>`_
         - `matplotlib et pandas <http://pandas.pydata.org/pandas-docs/stable/visualization.html>`_
-        - `prettyplotlib <http://olgabot.github.io/prettyplotlib/>`_
+        - `seaborn <http://stanford.edu/~mwaskom/software/seaborn/>`_
         - `ggplot <https://github.com/yhat/ggplot>`_ 
         - `vincent <http://vincent.readthedocs.org/>`_
     b. cartes
