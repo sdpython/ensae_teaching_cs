@@ -44,7 +44,7 @@ class TestNotebookRunner1a_enonce (unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_notebook1a_enonce_1_7")
         keepnote = ls_notebooks("td1a")
         assert len(keepnote)>0
-        
+
         res = execute_notebooks(temp, keepnote,
                 lambda i,n : "_12" not in n \
                         and "cenonce_session1." not in n \

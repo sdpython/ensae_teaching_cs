@@ -44,12 +44,12 @@ class TestNotebookRunner1a_correction (unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_notebook1a_correction_1_7")
         keepnote = ls_notebooks("td1a")
         assert len(keepnote)>0
-        
+
         cp = os.path.join( temp, "..", "data", "seance4_excel.txt")
         shutil.copy(cp, temp)
         cp = os.path.join( temp, "..", "data", "seance4_excel.xlsx")
         shutil.copy(cp, temp)
-        
+
         res = execute_notebooks(temp, keepnote,
                 lambda i,n : "_12" not in n \
                         and "session6." not in n \

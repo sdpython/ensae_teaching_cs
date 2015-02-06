@@ -48,11 +48,11 @@ class TestNotebookRunner2a_csharp (unittest.TestCase):
                 lambda i,n : "csharp" in n,
                 fLOG=fLOG,
                 clean_function = clean_function_1a)
-                
+
         assert len(res) > 0
         fails = [ (os.path.split(k)[-1],v) for k,v in sorted(res.items()) if not v[0] ]
         for f in fails: fLOG(f)
-        if len(fails) > 0 : 
+        if len(fails) > 0 :
             e = str(fails[0][1][1])
             if "Audio device error encountered" in str(e):
                 # maybe the script is running on a virtual machine (no Audia device)
