@@ -1,8 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=90s)
-
-notebook test
+@brief      test log(time=51s)
 """
 
 import sys, os, unittest, re
@@ -35,7 +33,7 @@ except ImportError :
     if path not in sys.path : sys.path.append (path)
     import pymmails
 
-from pyquickhelper import fLOG, get_temp_folder
+from pyquickhelper import fLOG, get_temp_folder, noLOG
 from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
 
 
@@ -47,6 +45,7 @@ class TestNotebookRunner1a_correction_12 (unittest.TestCase):
 
         skip = ['df["difference"] = ...',
                 "df.plot (...)",
+                "from ggplot import *", # ggplot calls method show and it opens window blocking the offline execution
                 ]
         for s in skip:
             if s in code:
@@ -61,6 +60,7 @@ class TestNotebookRunner1a_correction_12 (unittest.TestCase):
         res = execute_notebooks(temp, keepnote,
                 lambda i,n : "correction_session_12" in n,
                 fLOG=fLOG,
+                deepfLOG=fLOG if __name__ == "__main__" else noLOG,
                 clean_function = TestNotebookRunner1a_correction_12.clean_function)
         assert len(res) > 0
         fails = [ (os.path.split(k)[-1],v) for k,v in sorted(res.items()) if not v[0] ]

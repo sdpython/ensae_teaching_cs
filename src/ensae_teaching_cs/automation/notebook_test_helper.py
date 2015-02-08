@@ -63,6 +63,7 @@ def clean_function_1a(code):
             "# ...... à remplir",
             'String.Join(",", a.Select(c=>c.ToString()).ToArray())',
             "# elle n'existe pas encore",
+            "from ggplot import *", # ggplot calls method show and it opens window blocking the offline execution
             ]
     rep = [ ("# ...", "pass # "),
             ("%timeit", "#%timeit"),
@@ -86,7 +87,8 @@ def clean_function_1a(code):
 
 def execute_notebooks(folder, notebooks, filter,
                         clean_function = None,
-                        fLOG = noLOG):
+                        fLOG = noLOG,
+                        deepfLOG = noLOG):
     """
     execute a list of notebooks
 
@@ -95,6 +97,7 @@ def execute_notebooks(folder, notebooks, filter,
     @param      filter          function which validate the notebooks
     @param      clean_function  cleaning function to apply to the code before running it
     @param      fLOG            logging function
+    @param      deepfLOG        logging function used to run the notebook
     @return                     dictionary { notebook_file: (isSuccess, outout) }
 
     The signature of function ``filter`` is::
@@ -119,7 +122,8 @@ def execute_notebooks(folder, notebooks, filter,
                 out = run_notebook(note, working_dir=folder, outfilename=outfile,
                         additional_path = addpath,
                         valid = valid_cell,
-                        clean_function = clean_function #,fLOG=fLOG
+                        clean_function = clean_function, 
+                        fLOG=deepfLOG
                         )
                 if not os.path.exists(outfile):
                     raise FileNotFoundError(outfile)
