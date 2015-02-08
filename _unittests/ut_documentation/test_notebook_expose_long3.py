@@ -49,6 +49,7 @@ class TestNotebookRunnerExposeLong3(unittest.TestCase):
         res = execute_notebooks(temp, keepnote,
                 lambda i,n : "mortalite" in n,
                 fLOG=fLOG,
+                deepfLOG=fLOG if __name__ == "__main__" else noLOG,
                 clean_function = clean_function_1a)
         assert len(res) > 0
         fails = [ (os.path.split(k)[-1],v) for k,v in sorted(res.items()) if not v[0] ]
