@@ -1,6 +1,7 @@
-#-*- coding: utf-8 -*-
 """
-@brief      test log(time=50s)
+@brief      test log(time=20s)
+
+notebook test
 """
 
 import sys, os, unittest, re
@@ -33,35 +34,21 @@ except ImportError :
     if path not in sys.path : sys.path.append (path)
     import pymmails
 
-from pyquickhelper import fLOG, get_temp_folder, noLOG
-from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
+from pyquickhelper import fLOG, get_temp_folder
+from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
 
 
-class TestNotebookRunner1a_enonce_12 (unittest.TestCase):
+class TestNotebookRunner2a_2_enonce_2b (unittest.TestCase):
 
-    @staticmethod
-    def clean_function(code):
-        code = code.replace('run_cmd("exemple.xlsx"', 'skip_run_cmd("exemple.xlsx"')
-
-        skip = ['df["difference"] = ...',
-                "df.plot (...)",
-                "from ggplot import *", # ggplot calls method show and it opens window blocking the offline execution
-                ]
-        for s in skip:
-            if s in code:
-                return ""
-        return code
-
-    def test_notebook_runner_enonce_12(self) :
+    def test_notebook_runner(self) :
         fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
-        temp = get_temp_folder(__file__, "temp_notebook1a_enonce_12")
-        keepnote = ls_notebooks("td1a")
+        temp = get_temp_folder(__file__, "temp_notebook2a_2_enonce_2B")
+        keepnote = ls_notebooks("td2a")
         assert len(keepnote)>0
-        res = execute_notebooks(temp, keepnote,
-                lambda i,n : "cenonce_session_12" in n,
-                fLOG=fLOG,
-                deepfLOG=fLOG if __name__ == "__main__" else noLOG,
-                clean_function = TestNotebookRunner1a_enonce_12.clean_function)
+        res = execute_notebooks(temp, keepnote, lambda i,n : "_2" in n \
+                            and "enonce" in n \
+                            and "_2B" in n,
+                    fLOG=fLOG, clean_function = clean_function_1a)
         assert len(res) > 0
         fails = [ (os.path.split(k)[-1],v) for k,v in sorted(res.items()) if not v[0] ]
         for f in fails: fLOG(f)

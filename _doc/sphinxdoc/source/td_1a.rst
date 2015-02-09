@@ -168,6 +168,10 @@ Bibliographie
 * `Un premier Mooc Inria sur Python <https://www.france-universite-numerique-mooc.fr/courses/inria/41001/Trimestre_4_2014/about>`_
 * `pyvideo.org <http://pyvideo.org/>`_
 
+**Jeux**
+
+* `codingame <http://www.codingame.com/>`_
+
 **Outils**
 
 * `PythonTutor <http://pythontutor.com/>`_ : pour suivre pas à pas l'exécution d'un programme (petit)

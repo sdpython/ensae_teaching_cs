@@ -47,7 +47,7 @@ class TestNotebookRunner2a_2_enonce_2D (unittest.TestCase):
         assert len(keepnote)>0
         res = execute_notebooks(temp, keepnote, lambda i,n : "_2" in n \
                             and "enonce" in n \
-                            and "_2D" in n, 
+                            and "_2D" in n,
                     fLOG=fLOG, clean_function = clean_function_1a)
         assert len(res) > 0
         fails = [ (os.path.split(k)[-1],v) for k,v in sorted(res.items()) if not v[0] ]

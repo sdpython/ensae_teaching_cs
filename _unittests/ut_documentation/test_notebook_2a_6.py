@@ -1,5 +1,5 @@
 """
-@brief      test log(time=5s)
+@brief      test log(time=15s)
 """
 
 import sys, os, unittest, re

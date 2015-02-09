@@ -122,7 +122,7 @@ def execute_notebooks(folder, notebooks, filter,
                 out = run_notebook(note, working_dir=folder, outfilename=outfile,
                         additional_path = addpath,
                         valid = valid_cell,
-                        clean_function = clean_function, 
+                        clean_function = clean_function,
                         fLOG=deepfLOG
                         )
                 if not os.path.exists(outfile):
