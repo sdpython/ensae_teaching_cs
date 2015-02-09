@@ -336,11 +336,11 @@ def git_change_remote_origin(
     cmds= """
             cd {0}
             git remote remove origin
-            git remote add origin {0}
-            """.format(local_folder, url_user).replace("                ","").strip(" \n\r\t")
+            git remote add origin {1}
+            """.format(local_folder, url_user).replace("            ","").strip(" \n\r\t")
     if add_fetch:
         cmds += "\ngit fetch"
-    cmd = cmds.replace("\n","&")
+    cmd = cmds.replace("\n","&")    
     sin = "" #"{0}\n".format(password)
     out, err = run_cmd(cmd, sin=sin,wait=True, timeout=timeout, fLOG=fLOG)
     git_check_error(out, err, fLOG)
@@ -384,7 +384,7 @@ def git_commit_all(
             git add -A
             git commit -m "{1}"
             git push -u origin master
-            """.format(local_folder, message).replace("                ","").strip(" \n\r\t")
+            """.format(local_folder, message).replace("            ","").strip(" \n\r\t")
     cmd = cmds.replace("\n","&")
     sin = "" #"{0}\n".format(password)
     out, err = run_cmd(cmd, sin=sin,wait=True, timeout=timeout, fLOG=fLOG)
