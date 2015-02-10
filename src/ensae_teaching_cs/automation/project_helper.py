@@ -248,11 +248,11 @@ def git_clone(
 
     for el in eleves.split(";"):
         cl = el.lower().replace(".","-")
-        fold = os.path.join(root, cl)
+        fold = os.path.join(root, el)
         if not os.path.exists(fold):
             print("clone", el)
             url = "https://versioning.ensae.fr/python-2a/{0}.git".format(cl)
-            git_clone(  root, url,user=user,password=password, init=False,fLOG=print)
+            git_clone(  fold, url,user=user,password=password, init=False,fLOG=print)
     @endcode
 
     @endexample
@@ -268,6 +268,9 @@ def git_clone(
             os.mkdir(local_folder)
 
         hg = os.path.join(local_folder, ".git")
+        if os.path.exists(hg):
+            raise Exception("folder {0} should not exist".format(local_folder))
+            
         if not os.path.exists(hg):
             cmds= """
                     cd {0}
@@ -283,10 +286,12 @@ def git_clone(
         return local_folder
     else:
         if not os.path.exists(local_folder):
-            raise FileNotFoundError(local_folder)
+            fLOG("creating folder", local_folder)
+            os.mkdir(local_folder)
+
         hg = os.path.join(local_folder, ".git")
         if os.path.exists(hg):
-            raise Exception("folder {0} should not exists (init is True)".format(local_folder))
+            raise Exception("folder {0} should not exist".format(local_folder))
 
         final = os.path.split(url_user)[-1].replace(".git","")
         locf = os.path.join(local_folder, final)
@@ -295,7 +300,7 @@ def git_clone(
 
         cmds= """
                 cd {0}
-                git clone {1}
+                git clone {1} .
                 """.format(local_folder, url_user).replace("                ","").strip(" \n\r\t")
         cmd = cmds.replace("\n","&")
         sin = "" #"{0}\n".format(password)
