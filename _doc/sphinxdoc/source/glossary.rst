@@ -30,6 +30,10 @@ Glossaire
         La plupart du temps, ce coût correspond au nombre d'exécution d'une 
         instuction incluse dans la boucle la plus imbriquée.
         
+    DropBox
+        `DropBox <https://www.dropbox.com/>`_, stockage dans le cloud. Pour récupérer automatiquement des 
+        fichiers, voir `Download a file from Dropbox with Python <http://www.xavierdupre.fr/blog/2015-01-20_nojs.html>`_.
+        
     Deep Learning
         Le concept `Deep Learning <http://en.wikipedia.org/wiki/Deep_learning>`_ évoque a commencé avec cet article
         `Deep Learning: Methods and Applications <http://research.microsoft.com/apps/pubs/default.aspx?id=219984>`_
@@ -75,6 +79,11 @@ Glossaire
         Voici par exemple un changement sur la librairie
         `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ :
         `add method plot <https://github.com/sdpython/pyensae/commit/b5c36ba7885d9d4d92c00e67c5a2d238c57d507a>`_.
+        
+    ggplot
+        `ggplot2 <http://ggplot2.org/>`_ est une librairie de graphiques sous R.
+        Elle est accessible via `matplotlib <http://matplotlib.org/>`_.
+        Voir `A few tricks with matplotlib <http://www.xavierdupre.fr/blog/2014-12-07_nojs.html>`_.
     
     HDFS
         Hadoop File System : système de fichiers distribué propre à Hadoop : 
@@ -93,6 +102,10 @@ Glossaire
         éléments contrairement à une liste. Voir aussi
         :ref:`lm-Quest-cequuntypeimmuableouimmutable`, 
         :ref:`question_1A_2014_1`.
+        
+    Jenkins
+        `Jenkins <http://jenkins-ci.org/>`_ est un logicial d'automatisation de build (et de tâches). 
+        Voir `Build automation with Jenkins <http://www.xavierdupre.fr/blog/2014-12-06_nojs.html>`_.
         
     JIT
         Just In Time (Compilation). Some modules such as `Cython <http://cython.org/>`_ offers the possibility to speed up
@@ -200,4 +213,8 @@ Glossaire
     warnings
         Non-blocking error but it should be read and the cause removed.
         See `Python: Use Warnings! <http://www.arruda.blog.br/programacao/python-use-warnings/>`_.
+        
+    Wheel
+        Nouveau format pour installer des modules Python.
+        Voir `Install a Python module with Wheel <http://www.xavierdupre.fr/blog/2015-01-19_nojs.html>`_.
     

@@ -8,34 +8,6 @@ Articles, Références, Blogs
 ===========================
 
 
-Articles de blog
-----------------
-
-* **Algorithmes**
-    * `Résoudre un sudoku avec Excel et VBA <http://www.xavierdupre.fr/blog/2014-02-08_nojs.html>`_
-    * `Compter les pièces de monnaie pour obtenir un montant <http://www.xavierdupre.fr/blog/2013-11-09_nojs.html>`_
-    * `A small video on sorting algorithm <http://www.xavierdupre.fr/blog/2014-04-04_nojs.html>`_
-* **DataFrames**
-    * `Fusionner deux tableaux <http://www.xavierdupre.fr/blog/2013-11-21_nojs.html>`_
-* **Machine Learning, Big Data**
-    * `Machine Learning with Python <http://www.xavierdupre.fr/blog/2013-08-10_nojs.html>`_
-    * `Gros DataFrame et SQL <http://www.xavierdupre.fr/blog/2014-07-19_nojs.html>`_
-    * `Using Artificial Intelligence to solve the 2048 Game (JAVA code) <http://blog.datumbox.com/using-artificial-intelligence-to-solve-the-2048-game-java-code/>`_
-    * `A Roundup of Recent Text Analytics and Vis Work <http://blogger.ghostweather.com/2014/10/a-roundup-of-recent-text-analytics-and.html>`_
-* **Techniques**
-    * `Désactiver les logs de cvxopt <http://www.xavierdupre.fr/blog/2014-04-16_nojs.html>`_
-    * `Quelques astuces pour accélérer un programme <http://www.xavierdupre.fr/blog/2014-04-12_nojs.html>`_
-    * `Three ways to install a module <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/notebooks/install_module.html>`_
-* **ENSAE**
-    * `Quelques précisions sur les projets informatiques (finance) <http://www.xavierdupre.fr/blog/2014-04-05_nojs.html>`_
-    
-Exemples de code
-----------------
-
-* `fusionner deux tableaux <http://www.xavierdupre.fr/blog/2013-11-21_nojs.html>`_
-* `compter les fréquences de lettres et de couples de lettres <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_
-* `composer un montant à partir d'un ensemble de pièces de monnaie <http://www.xavierdupre.fr/blog/2013-11-09_nojs.html>`_
-       
 Langage Python
 --------------
 
@@ -97,7 +69,6 @@ Machine Learning / Data Science
 * `Implementing a Principal Component Analysis (PCA) in Python step by step <http://sebastianraschka.com/Articles/2014_pca_step_by_step.html>`_
 * `Implementing simple sequential feature selection algorithms in Python <http://sebastianraschka.com/Articles/2014_sequential_sel_algos.html>`_
 * `Python Sparse Random Projections <http://blog.yhathq.com/posts/sparse-random-projections.html>`_
-* `ggplot tutorial <http://blog.yhathq.com/posts/facebook-ggplot-tutorial.html>`_
 * `Python Multi-armed Bandits (and Beer!) <http://blog.yhathq.com/posts/the-beer-bandit.html>`_
 * `Predicting customer churn with scikit-learn <http://blog.yhathq.com/posts/predicting-customer-churn-with-sklearn.html>`_
 * `Detecting Outlier Car Prices on the Web <http://blog.yhathq.com/posts/detecting-outlier-car-prices-on-the-web.html>`_
@@ -170,3 +141,33 @@ Question des élèves
 -------------------
 
 * :ref:`question_2014`
+
+Articles de blog
+----------------
+
+* **Algorithmes**
+    * `Résoudre un sudoku avec Excel et VBA <http://www.xavierdupre.fr/blog/2014-02-08_nojs.html>`_
+    * `Compter les pièces de monnaie pour obtenir un montant <http://www.xavierdupre.fr/blog/2013-11-09_nojs.html>`_
+    * `A small video on sorting algorithm <http://www.xavierdupre.fr/blog/2014-04-04_nojs.html>`_
+* **DataFrames**
+    * `Fusionner deux tableaux <http://www.xavierdupre.fr/blog/2013-11-21_nojs.html>`_
+* **Machine Learning, Big Data**
+    * `Machine Learning with Python <http://www.xavierdupre.fr/blog/2013-08-10_nojs.html>`_
+    * `Gros DataFrame et SQL <http://www.xavierdupre.fr/blog/2014-07-19_nojs.html>`_
+    * `Using Artificial Intelligence to solve the 2048 Game (JAVA code) <http://blog.datumbox.com/using-artificial-intelligence-to-solve-the-2048-game-java-code/>`_
+    * `A Roundup of Recent Text Analytics and Vis Work <http://blogger.ghostweather.com/2014/10/a-roundup-of-recent-text-analytics-and.html>`_
+* **Techniques**
+    * `Désactiver les logs de cvxopt <http://www.xavierdupre.fr/blog/2014-04-16_nojs.html>`_
+    * `Quelques astuces pour accélérer un programme <http://www.xavierdupre.fr/blog/2014-04-12_nojs.html>`_
+    * `Three ways to install a module <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/notebooks/install_module.html>`_
+* **ENSAE**
+    * `Quelques précisions sur les projets informatiques (finance) <http://www.xavierdupre.fr/blog/2014-04-05_nojs.html>`_
+    
+Exemples de code
+----------------
+
+* `fusionner deux tableaux <http://www.xavierdupre.fr/blog/2013-11-21_nojs.html>`_
+* `compter les fréquences de lettres et de couples de lettres <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_
+* `composer un montant à partir d'un ensemble de pièces de monnaie <http://www.xavierdupre.fr/blog/2013-11-09_nojs.html>`_
+       
+
