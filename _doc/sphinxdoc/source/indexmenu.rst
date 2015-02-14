@@ -11,22 +11,14 @@ Cours
     td_1a
     td_2a
     td_3a
-    projet_info_1A
-    projet_info_2A
-    projet_info_3A
-    data2a
+    projet_info
+    informations
     exemple_index
     exams
-    projet_info
     coding_party
-    manytools
-    biblio
-    ressources
-    FAQ
-    glossary
-    questions/questions
     README
-    indexes
+    index_apropos
+    license
     
 Eléments de code
 ----------------
@@ -43,8 +35,6 @@ Eléments de code
     all_notebooks
     glossary
     index_module
-    license
-    filechanges
-    README
     all_indexes
-    all_report    
+    all_report
+    
