@@ -1,6 +1,8 @@
 #-*- coding: utf-8 -*-
 """
 @brief      test log(time=50s)
+
+notebook test
 """
 
 import sys, os, unittest, re
