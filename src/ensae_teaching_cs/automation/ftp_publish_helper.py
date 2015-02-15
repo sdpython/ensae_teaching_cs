@@ -86,6 +86,59 @@ def publish_documentation(
     If one of the three first parameters is None, the function
     will open a popup windows to ask the missing information.
     See `open_window_params <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/funcwin/frame_params.html#pyquickhelper.funcwin.frame_params.open_window_params>`_.
+    
+    Here is an example of a program which pusblishes several documentations on the
+    same website::
+    
+        from pyquickhelper import TransferFTP, FileTreeNode, FolderTransferFTP, open_window_params
+        from ensae_teaching_cs.automation.ftp_publish_helper import publish_documentation
+
+        footer = '''
+        <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        _uacct = "something";
+        urchinTracker();
+        </script>
+        '''
+
+
+        login = "login"
+        params = { "password":"" }
+        params = open_window_params (params, title="password", help_string = "password", key_save="my_password")
+        password = params["password"]
+
+        location = os.path.abspath(r"..\GitHub\%s\dist\html")
+        this = os.path.abspath(os.path.dirname(__file__))
+        rootw = "/www/htdocs/app/%s/helpsphinx"
+
+        projects = [ ]
+        for module in [
+                "pyquickhelper",
+                "pyensae",
+                "pymyinstall",
+                "pysqllike",
+                "pyrsslocal",
+                "pymmails",
+                "python_project_template",
+                "ensae_teaching_cs",
+                ] :
+                    
+            root = os.path.abspath(location % module)
+            project = dict ( status_file = os.path.join(this, "status_%s.txt" % module),
+                             local = root,
+                             root_local = root,
+                             root_web = rootw % module)
+            projects.append (project)
+            
+        publish_documentation   (projects,
+                        ftpsite         = "ftp.something.cc",
+                        login           = login,
+                        password        = password,
+                        key_save        = "my_module_password",
+                        footer_html     = footer)
+    
+    
+    
     """
                     
     params = {"ftpsite":ftpsite,
