@@ -14,11 +14,19 @@ def trigger_on_specific_strings(content):
                 *COMPUTERNAME*, *LOGONSERVER*, and returns None if it was found
     or modifies the content to remove it
     """
+    strep = [(r"C:\\%s\\__home_\\_data\\" % os.environ["USERNAME"], "somewhere"),
+              ("C:\\%s\\__home_\\_data\\" % os.environ["USERNAME"], "somewhere"),  
+              ]
+    for s,b in strep:
+        if s in content:
+            content = content.replace(s, b)
+    
     lower_content = content.lower()
     for st in ["USERNAME", "USERDNSDOMAIN", "HOMEPATH", "USERNAME",
                 "COMPUTERNAME", "LOGONSERVER"]:
         s = os.environ[st].lower()
         if s in lower_content:
+            raise Exception("string {0}:{1} was found".format(st, s))
             return None
     return content
 
