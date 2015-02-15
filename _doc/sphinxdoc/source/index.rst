@@ -152,10 +152,22 @@ Table des matières
 ------------------
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
+    td_1a
+    td_2a
+    td_3a
+    projet_info
+    informations
+    exemple_index
+    exams
+    coding_party
+    README
+    index_apropos
+    glossary
+    all_FAQ
+    license
     indexmenu
-
 
 Index
 -----
