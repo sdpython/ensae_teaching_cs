@@ -11,12 +11,6 @@ et permet à quiconque de contribuer à ce cours disponible sous trois formats d
 `compact/blanc <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_,
 `compact/mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
 
-.. toctree::
-    :maxdepth: 1
-
-    indexmenu
-
-
 Avant-propos
 ------------
 
@@ -152,6 +146,15 @@ Environnement de développement
 * :ref:`l-devtools`
 * :ref:`modulesi`
 * `(Très) Grand listing des libs tierce partie les plus utiles en Python <http://sametmax.com/tres-grand-listing-des-libs-tierce-partie-les-plus-utiles-en-python/>`_
+
+
+Table des matières
+------------------
+
+.. toctree::
+    :maxdepth: 2
+
+    indexmenu
 
 
 Index

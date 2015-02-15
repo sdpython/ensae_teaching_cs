@@ -1,4 +1,9 @@
 ﻿
+.. issues.
+
+.. _l-indexmenu
+
+
 Table des matières
 ==================
 
@@ -18,6 +23,8 @@ Cours
     coding_party
     README
     index_apropos
+    glossary
+    all_FAQ
     license
     
 Eléments de code
@@ -26,14 +33,13 @@ Eléments de code
 .. toctree::
     :maxdepth: 2
 
+    notebook_index
     doctestunit
     generatedoc
     generatesetup
     installation
     all_example
-    all_FAQ
     all_notebooks
-    glossary
     index_module
     all_indexes
     all_report
