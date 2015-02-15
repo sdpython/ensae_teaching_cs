@@ -270,7 +270,7 @@ def git_clone(
         hg = os.path.join(local_folder, ".git")
         if os.path.exists(hg):
             raise Exception("folder {0} should not exist".format(local_folder))
-            
+
         if not os.path.exists(hg):
             cmds= """
                     cd {0}
@@ -345,7 +345,7 @@ def git_change_remote_origin(
             """.format(local_folder, url_user).replace("            ","").strip(" \n\r\t")
     if add_fetch:
         cmds += "\ngit fetch"
-    cmd = cmds.replace("\n","&")    
+    cmd = cmds.replace("\n","&")
     sin = "" #"{0}\n".format(password)
     out, err = run_cmd(cmd, sin=sin,wait=True, timeout=timeout, fLOG=fLOG)
     git_check_error(out, err, fLOG)
