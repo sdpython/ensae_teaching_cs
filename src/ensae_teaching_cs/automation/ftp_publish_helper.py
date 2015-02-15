@@ -6,7 +6,7 @@
 
 import os
 from pyquickhelper import TransferFTP, FileTreeNode, FolderTransferFTP, open_window_params
-from pyquickhelper.filehelper.ftp_transfer_files import content_as_binary
+from pyquickhelper.filehelper.ftp_transfer_files import content_as_binary as pqh_content_as_binary
 
 def trigger_on_specific_strings(content):
     """
@@ -29,6 +29,22 @@ def trigger_on_specific_strings(content):
             raise Exception("string {0}:{1} was found".format(st, s))
             return None
     return content
+    
+def content_as_binary(filename):
+    """
+    overloads function `content_as_finary <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/filehelper/ftp_transfer_files.html?highlight=content_as_binary#pyquickhelper.filehelper.ftp_transfer_files.content_as_binary>`_ from 
+    `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/">`_
+    
+    determines if filename is binary or None before transfering it
+
+    @param      filename        filename
+    @return                     boolean
+    """
+    if pqh_content_as_binary(filename):
+        return True
+    ff = os.path.split(filename)[-1]
+    if ff == "footer.html" : return True
+    return False
 
 def publish_documentation(
                 docs,
