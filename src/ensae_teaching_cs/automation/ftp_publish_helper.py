@@ -24,10 +24,11 @@ def trigger_on_specific_strings(content):
     lower_content = content.lower()
     for st in ["USERNAME", "USERDNSDOMAIN", "HOMEPATH", "USERNAME",
                 "COMPUTERNAME", "LOGONSERVER"]:
-        s = os.environ[st].lower()
-        if s in lower_content:
-            raise Exception("string {0}:{1} was found".format(st, s))
-            return None
+        if st in os.environ:
+            s = os.environ[st].lower()
+            if s in lower_content:
+                raise Exception("string {0}:{1} was found".format(st, s))
+                return None
     return content
 
 def content_as_binary(filename):
