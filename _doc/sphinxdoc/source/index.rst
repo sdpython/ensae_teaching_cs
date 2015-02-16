@@ -165,7 +165,7 @@ Table des matières
     README
     index_apropos
     glossary
-    all_FAQ
+    FAQ
     license
     indexmenu
 

@@ -100,7 +100,7 @@ def python_path():
     Pour éviter cela, il est possible de dire à l'interpréteur Python d'aller chercher
     ailleurs pour trouver des modules en ajoutant le chemin à la
     `variable d'environnement <http://fr.wikipedia.org/wiki/Variable_d'environnement>`_
-    `PYTHON_PATH <https://docs.python.org/3.4/using/cmdline.html#envvar-PYTHONPATH>`.
+    `PYTHON_PATH <https://docs.python.org/3.4/using/cmdline.html#envvar-PYTHONPATH>`_.
     Sous Windows :
 
     @code
