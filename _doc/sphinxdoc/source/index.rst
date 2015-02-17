@@ -86,8 +86,7 @@ Les prérequis sont bien sûr `Python <https://www.python.org/>`_ et
 `IPython <http://ipython.org/>`_ mais aussi leurs dépendances
 `pandas <http://fr.wikipedia.org/wiki/Panda>`_, 
 `numpy <http://www.numpy.org/>`_, 
-`matplotlib <http://matplotlib.org/>`_,
-ìpython <http://ipython.org/>`_. 
+`matplotlib <http://matplotlib.org/>`_. 
 Sous Windows, ces modules
 sont accessibles depuis le site 
 `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
