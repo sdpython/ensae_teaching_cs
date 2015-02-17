@@ -1,7 +1,10 @@
 ﻿
+
 .. issue.
 
 .. _l-biblio:
+
+.. index:: bibliographie
 
 
 Articles, Références, Blogs
