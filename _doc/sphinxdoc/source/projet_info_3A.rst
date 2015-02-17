@@ -33,6 +33,7 @@ Vous êtes libres de traiter l'algorithme de votre choix. Nous vous en proposons
 * `Algorithmes LASSO parallèles <http://arxiv.org/pdf/1411.6520v1.pdf>`_
 * `Distributed Online Learning <http://arxiv.org/pdf/1308.4568v3.pdf>`_
 * `Large-scale L-BFGS using MapReduce <http://papers.nips.cc/paper/5333-large-scale-l-bfgs-using-mapreduce>`_
+* `LightLDA: Big Topic Models on Modest Compute Clusters <http://arxiv.org/abs/1412.1576>`_
 
 
 Nous vous recommandons d'adopter la démarche suivante:

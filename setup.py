@@ -155,7 +155,8 @@ elif "build_sphinx" in sys.argv:
                               "html",
                               ("html", "build2", {"html_theme":"basicstrap"}, "source/conf2"),
                               ("html", "build3", {"html_theme":"bootstrap"}, "source/conf3"),
-                              ] )
+                              ],
+                    module_name = project_var_name)
         else:
             # unable to test latex conversion due to adjustbox.sty missing package
             generate_help_sphinx(project_name,
@@ -164,7 +165,8 @@ elif "build_sphinx" in sys.argv:
                               "html",
                               ("html", "build2", {"html_theme":"basicstrap"}, "source/conf2"),
                               ("html", "build3", {"html_theme":"bootstrap"}, "source/conf3"),
-                              ] )
+                              ],
+                    module_name = project_var_name)
 
 elif "unittests" in sys.argv:
 

@@ -1,6 +1,11 @@
 echo off
 IF EXIST dist del /Q dist\*.*
 
+if "%1"=="" goto default_value:
+set pythonexe="%1"
+goto custom_python:
+
+:default_value:
 IF NOT EXIST c:\Python34 GOTO checkinstall64:
 
 :checkinstall:
@@ -70,6 +75,7 @@ echo #######################################################
 
 :setup34_x64_msi_wheel:
 set pythonexe="c:\Python34_x64\python"
+:custom_python:
 %pythonexe% setup.py clean_pyd
 %pythonexe% setup.py sdist --formats=gztar,zip --verbose
 if %errorlevel% neq 0 exit /b %errorlevel%
