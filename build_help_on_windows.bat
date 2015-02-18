@@ -1,8 +1,12 @@
 echo off
 IF EXIST dist del /Q dist\*.*
 
-set pythonexe=c:\Python34_x64\python
+if "%1"=="" goto default_value:
+set pythonexe="%1"
+goto presentation:
 
+:default_value:
+set pythonexe="c:\python34_x64\python"
 
 :presentation:
 %pythonexe% -u setup.py build_pres
