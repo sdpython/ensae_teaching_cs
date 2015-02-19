@@ -210,8 +210,14 @@ La documentation et les tests unitaires nécessite les modules suivants :
 
     * `wheel <https://wheel.readthedocs.org/en/latest/>`_ 
     * `coverage <https://pypi.python.org/pypi/coverage>`_ 
+    * `sphinxcontrib-images <http://pythonhosted.org//sphinxcontrib-images/>`_
     * `sphinxjp.themes.sphinxjp <https://pypi.python.org/pypi/sphinxjp.themes.sphinxjp>`_ 
     * `sphinx_rtd_theme <https://github.com/snide/sphinx_rtd_theme>`_ 
     * `sphinx_bootstrap_theme <http://ryan-roemer.github.io/sphinx-bootstrap-theme/>`_ 
     * `sphinxjp.themes.basicstrap <https://pythonhosted.org/sphinxjp.themes.basicstrap/>`_ 
 
+Certaines séances pratiques utilisent des données depuis ce site. 
+Elles sont facilement téléchargeables avec ces deux modules :
+
+* `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
+* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_

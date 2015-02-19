@@ -123,6 +123,7 @@ Trucs et astuces avec les notebooks
     notebooks/notebook_convert
     notebooks/ipython_custom_magics
 
+.. _l-td1a-start:
 
 Getting started
 ---------------
@@ -151,6 +152,14 @@ s'installe avec ``pip install <module>``. Trois configurations possibles :
     
         from pymyinstall import datascientist
         datascientist("install", full = True)
+        
+Certaines séances pratiques utilisent des données depuis ce site. 
+Elles sont facilement téléchargeables avec ces deux modules :
+
+* `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
+* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
+
+
 
 
 .. _l-td1a-biblio:

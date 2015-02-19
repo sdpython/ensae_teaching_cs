@@ -116,14 +116,13 @@ Le cours sera évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 Getting started
 +++++++++++++++
 
-La plupart des modules requis sont inclus dans la distribution
-`Anaconda <http://continuum.io/downloads#py34>`_ de Python. A ceux-ci, il faut ajouter :
+En plus des prérequies pour :ref:`Getting started 1A <l-td1a-start>`, il faut ajouter :
 
 * `ansiconv <http://pythonhosted.org/ansiconv/>`_,
 * `ansi2html <https://github.com/ralphbean/ansi2html/>`_.
 * `azure <https://github.com/Azure/azure-sdk-for-python>`_ (pour Azure uniquement)
 
-Les deux modules suivantes introduisent les commandes magiques utilisées dans les notebooks :
+Les deux modules suivants introduisent les commandes magiques utilisées dans les notebooks :
 
 * `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
 * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ (version >= 1.1)

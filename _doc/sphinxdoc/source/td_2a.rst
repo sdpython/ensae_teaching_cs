@@ -118,34 +118,12 @@ Python et autres langages, personnaliser ses notebooks
     notebooks/ipython_custom_magics
     notebooks/matplotlib_zoomable
     
+.. _l-td2a-start:
+    
 Getting started
 +++++++++++++++
 
-La version recommandée est Python 3.4, 64 bit. Par défaut, les modules 
-s'installe avec ``pip install <module>``. Trois configurations possibles :
-
-* `Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac) +
-
-    * `cvxopt <http://cvxopt.org/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#cvxopt>`_)
-    * `goslate <http://pythonhosted.org/goslate/>`_
-    * `dbfread <http://dbfread.readthedocs.org/en/latest/>`_
-    * `rpy2 <http://rpy.sourceforge.net/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#rpy2>`_)
-    * `mpld3 <http://mpld3.github.io/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_)
-
-* `WinPython <https://winpython.github.io/>`_ (Windows) +
-
-    * `goslate <http://pythonhosted.org/goslate/>`_
-    * `dbfread <http://dbfread.readthedocs.org/en/latest/>`_
-    * `bokeh <http://bokeh.pydata.org/en/latest/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#bokeh>`_)
-    * `pywin32 <https://pypi.python.org/pypi/pywin32>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#pywin32>`_)
-    
-* `distribution standard de Python <https://www.python.org/>`_ +
-
-    * `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_ ::
-    
-        from pymyinstall import datascientist
-        datascientist("install", full = True)
-    
+Voir :ref:`Getting started 1A <l-td1a-start>`.
 
 
 .. _l-td2a-biblio:
