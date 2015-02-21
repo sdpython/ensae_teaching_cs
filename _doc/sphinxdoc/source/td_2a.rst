@@ -123,7 +123,12 @@ Python et autres langages, personnaliser ses notebooks
 Getting started
 +++++++++++++++
 
-Voir :ref:`Getting started 1A <l-td1a-start>`.
+Il faut vous reporter à la section :ref:`l-install` pour installer python.        
+Certaines séances pratiques utilisent des données depuis ce site. 
+Elles sont facilement téléchargeables avec ces deux modules :
+
+* `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
+* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
 
 
 .. _l-td2a-biblio:

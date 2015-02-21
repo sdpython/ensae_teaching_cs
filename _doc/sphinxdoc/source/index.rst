@@ -72,7 +72,6 @@ Contenu des enseignements
     
 
     
-.. _l-install:
 
 Prérequis et Installation
 -------------------------
@@ -82,7 +81,8 @@ Prérequis et Installation
 Les séances utilisent les `notebooks IPython <http://ipython.org/notebook.html>`_.
 Au début de chaque séance, il vous suffit de télécharger le notebook qui sert de point
 de départ. La correction est également rédigée sous forme de notebook.
-Les prérequis sont bien sûr `Python <https://www.python.org/>`_ et
+Les prérequis sont bien sûr `Python <https://www.python.org/>`_ et les modules qui l'ont rendu
+populaire :
 `IPython <http://ipython.org/>`_ mais aussi leurs dépendances
 `pandas <http://fr.wikipedia.org/wiki/Panda>`_, 
 `numpy <http://www.numpy.org/>`_, 
@@ -92,25 +92,18 @@ sont accessibles depuis le site
 `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
 En outre, quatre modules ont été développés pour ces enseignements :
 
-
 * `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/>`_ : génère la documentation de ce module
 * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ : code nécessaires aux TDs, aux projets informatiques, Big Data, PIG
 * `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_ : installe facilement des modules
 * `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_ : ces enseignements compilés sous forme de modules
 
+Il peuvent tous être installés avec l'instruction ::
+
+    pip install <module>
+
 Si des modules supplémentaires sont nécessaires, ils seront spécifiés sur la page
-de chaque cours : :ref:`l-td3a-start`.
-
-**Installation de Python**
-
-Lors de l'installation, il faut faire attention à installer le langage
-Python et ses modules en prenant soin d'utiliser la même version pour chaque composant.
-Je recommande la version `64bit, v3.4.1 <https://www.python.org/downloads/release/python-341/>`_.
-La distribution `Anaconda <http://continuum.io/downloads#py34>`_ contient 
-tous les modules importants pour les deux premières années. 
-Le cours de troisième année utilise d'autres modules plus facilement installables
-sous Windows via cette distribution. Sous Windows, il existe une autre alternative : 
-`WinPython <http://winpython.sourceforge.net/>`_.
+de chaque cours (voir :ref:`l-td3a-start`). La section :ref:`l-install` 
+précise comment installer Python et les différentes options à disposition.
 
 
 
@@ -177,14 +170,24 @@ Index
 * :ref:`l-functions`
 * :ref:`l-changes`
 
+.. _l-getting-started-main:
+.. _l-install:
+
 
 Getting started
 ---------------
 
-La version recommandée est Python 3.4, 64 bit. Par défaut, les modules 
-s'installe avec ``pip install <module>``. Trois configurations possibles :
+.. index:: R, Julia, WinPython, Anaconda, pyminstall
 
-* `Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac) +
+datascientist
+^^^^^^^^^^^^^
+
+La version recommandée est Python 3.4, 64 bit. Par défaut, les modules 
+s'installe avec ``pip install <module>``. Deux distrubutions possibles :
+
+* `Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac). 
+  Sous Linux ou Mac, la distribution n'interfère pas avec la distribution existante
+  souvent différente. C'est un point très appréciable. Pour suivre ces cours il faut ajouter :
 
     * `cvxopt <http://cvxopt.org/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#cvxopt>`_)
     * `goslate <http://pythonhosted.org/goslate/>`_
@@ -192,19 +195,43 @@ s'installe avec ``pip install <module>``. Trois configurations possibles :
     * `rpy2 <http://rpy.sourceforge.net/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#rpy2>`_)
     * `mpld3 <http://mpld3.github.io/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_)
 
-* `WinPython <https://winpython.github.io/>`_ (Windows) +
+* `WinPython <https://winpython.github.io/>`_ (Windows). Sous Windows, elle a l'avantage d'inclure
+  `R <http://www.r-project.org/>`_ ou `Julia <http://julialang.org/>`_. On passe alors
+  facilement de python à R ou Julia depuis le même notebooks. Pour suivre ces cours il faut ajouter :
 
     * `goslate <http://pythonhosted.org/goslate/>`_
     * `dbfread <http://dbfread.readthedocs.org/en/latest/>`_
     * `bokeh <http://bokeh.pydata.org/en/latest/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#bokeh>`_)
     * `pywin32 <https://pypi.python.org/pypi/pywin32>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#pywin32>`_)
     
-* `distribution standard de Python <https://www.python.org/>`_ +
-
-    * `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_ ::
     
+Sous Linux, l'installation ne pose pas de problèmes. Sous Windows, il faut installer
+les packages `wheel <http://wheel.readthedocs.org/en/latest/>`_. Ces modules
+sont accessibles depuis le site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
+Vous pouvez également utiliser le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
+et écrire ::
+
+    from pymyinstall import extend_anaconda, process_installation
+    process_installation(extend_anaconda())
+
+Ou ::
+    
+    from pymyinstall import extend_winpython, process_installation
+    process_installation(extend_winpython())
+    
+Enfin, il est possible d'utiliser la distribution standard de Python. La liste des modules
+nécessaire est assez longue et peut-être trouvée dans le code de la fonction
+`complete_installation <https://github.com/sdpython/pymyinstall/blob/master/src/pymyinstall/packaged/packaged_config.py>`_
+que vous pouvez exécuter après avoir installé le module 
+`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
+avec le code suivant ::    
+
         from pymyinstall import datascientist
         datascientist("install", full = True)
+        
+        
+developpeur
+^^^^^^^^^^^
         
 La documentation et les tests unitaires nécessite les modules suivants :
 

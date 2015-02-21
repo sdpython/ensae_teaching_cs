@@ -116,7 +116,8 @@ Le cours sera évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 Getting started
 +++++++++++++++
 
-En plus des prérequies pour :ref:`Getting started 1A <l-td1a-start>`, il faut ajouter :
+Il faut vous reporter à la section :ref:`l-install` pour installer python.        
+Il faut ajouter :
 
 * `ansiconv <http://pythonhosted.org/ansiconv/>`_,
 * `ansi2html <https://github.com/ralphbean/ansi2html/>`_.
