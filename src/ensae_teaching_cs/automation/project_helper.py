@@ -72,7 +72,7 @@ def get_emails(path, suivi = "suivi.rst"):
     for a in allmails :
         ff = a.split("@")
         if len(ff) != 2:
-            raise Exception("unable to understand mail {0} in {1} (mail separator is ;)".format(a, filename))
+            raise Exception("unable to understand mail {0} in {1} (suivi={2} (mail separator is ;)".format(a, path, suivi))
     return allmails
 
 
