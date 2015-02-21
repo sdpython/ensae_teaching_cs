@@ -1,9 +1,9 @@
 if "%1"=="" goto default_value:
-set path=%path%;%1;%1\Scripts
+set pythonexe=%1\python
 goto custom_python:
 
 :default_value:
-set path=%path%;c:\Python34;c:\Python34\Scripts
+set pythonexe=c:\Python34\python
 
 :custom_python:
 %pythonexe% setup.py sdist register upload
