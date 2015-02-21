@@ -102,7 +102,7 @@ Il peuvent tous être installés avec l'instruction ::
     pip install <module>
 
 Si des modules supplémentaires sont nécessaires, ils seront spécifiés sur la page
-de chaque cours (voir :ref:`l-td3a-start`). La section :ref:`l-install` 
+de chaque cours (voir :ref:`Getting Started 3A <l-td3a-start>`). La section :ref:`l-install` 
 précise comment installer Python et les différentes options à disposition.
 
 
@@ -139,36 +139,6 @@ Environnement de développement
 * :ref:`modulesi`
 * `(Très) Grand listing des libs tierce partie les plus utiles en Python <http://sametmax.com/tres-grand-listing-des-libs-tierce-partie-les-plus-utiles-en-python/>`_
 
-
-Table des matières
-------------------
-
-.. toctree::
-    :maxdepth: 1
-
-    td_1a
-    td_2a
-    td_3a
-    projet_info
-    informations
-    exemple_index
-    exams
-    coding_party
-    README
-    index_apropos
-    glossary
-    FAQ
-    license
-    indexmenu
-
-Index
------
-
-* :ref:`l-notebooks`
-* :ref:`l-modules`
-* :ref:`l-classes`
-* :ref:`l-functions`
-* :ref:`l-changes`
 
 .. _l-getting-started-main:
 .. _l-install:
@@ -255,3 +225,33 @@ Elles sont facilement téléchargeables avec ces deux modules :
 
 * `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
 * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
+
+Table des matières
+------------------
+
+.. toctree::
+    :maxdepth: 1
+
+    td_1a
+    td_2a
+    td_3a
+    projet_info
+    informations
+    exemple_index
+    exams
+    coding_party
+    README
+    index_apropos
+    glossary
+    FAQ
+    license
+    indexmenu
+
+Index
+-----
+
+* :ref:`l-notebooks`
+* :ref:`l-modules`
+* :ref:`l-classes`
+* :ref:`l-functions`
+* :ref:`l-changes`
