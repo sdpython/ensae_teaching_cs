@@ -194,6 +194,9 @@ s'installe avec ``pip install <module>``. Deux distrubutions possibles :
     * `dbfread <http://dbfread.readthedocs.org/en/latest/>`_
     * `rpy2 <http://rpy.sourceforge.net/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#rpy2>`_)
     * `mpld3 <http://mpld3.github.io/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_)
+    * `folium <https://github.com/python-visualization/folium>`_
+    * `graphviz <https://github.com/xflr6/graphviz>`_
+    * `numexpr <https://github.com/pydata/numexpr>`_
 
 * `WinPython <https://winpython.github.io/>`_ (Windows). Sous Windows, elle a l'avantage d'inclure
   `R <http://www.r-project.org/>`_ ou `Julia <http://julialang.org/>`_. On passe alors
@@ -203,7 +206,8 @@ s'installe avec ``pip install <module>``. Deux distrubutions possibles :
     * `dbfread <http://dbfread.readthedocs.org/en/latest/>`_
     * `bokeh <http://bokeh.pydata.org/en/latest/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#bokeh>`_)
     * `pywin32 <https://pypi.python.org/pypi/pywin32>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#pywin32>`_)
-    
+    * `folium <https://github.com/python-visualization/folium>`_
+    * `graphviz <https://github.com/xflr6/graphviz>`_    
     
 Sous Linux, l'installation ne pose pas de problèmes. Sous Windows, il faut installer
 les packages `wheel <http://wheel.readthedocs.org/en/latest/>`_. Ces modules
