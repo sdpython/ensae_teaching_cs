@@ -187,7 +187,10 @@ s'installe avec ``pip install <module>``. Deux distrubutions possibles :
 
 * `Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac). 
   Sous Linux ou Mac, la distribution n'interfère pas avec la distribution existante
-  souvent différente. C'est un point très appréciable. Pour suivre ces cours il faut ajouter :
+  souvent différente. C'est un point très appréciable. Les modules de la distribution ne sont 
+  pas tous à jour. Il faut penser à mettre à jour avec la commande ``conda install <module>``
+  depuis le répertoire ``Anaconda3/Scripts`` (``conda install pandas`` par exemple).
+  Pour suivre ces cours il faut ajouter :
 
     * `cvxopt <http://cvxopt.org/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#cvxopt>`_)
     * `goslate <http://pythonhosted.org/goslate/>`_
