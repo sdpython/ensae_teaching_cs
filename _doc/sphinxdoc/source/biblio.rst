@@ -68,7 +68,6 @@ Machine Learning / Data Science
 * `Journal of Machine Learning Research (JMLR) <http://jmlr.org/>`_ (revue)
 * `arXiv Computer Science <http://arxiv.org/archive/cs>`_ (tout venant)
 * `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_ (*Wes McKinney*) Ce livre ne vous apprendra rien sur l'analyse des données mais il présente les outils les plus utilisés aujourd'hui pour faire de l'analyse des données avec Python. 
-* `Building Machine Learning Systems with Python <http://www.packtpub.com/building-machine-learning-systems-with-python/book>`_ (*Willi Richert*, *Luis Pedro Coelho*) Revue des techniques les plus utilisées en machine learning aujourd'hui. 
 * `Implementing a Principal Component Analysis (PCA) in Python step by step <http://sebastianraschka.com/Articles/2014_pca_step_by_step.html>`_
 * `Implementing simple sequential feature selection algorithms in Python <http://sebastianraschka.com/Articles/2014_sequential_sel_algos.html>`_
 * `Python Sparse Random Projections <http://blog.yhathq.com/posts/sparse-random-projections.html>`_
