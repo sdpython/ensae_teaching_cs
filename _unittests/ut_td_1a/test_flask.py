@@ -6,7 +6,7 @@ will sort all test files by increasing time and run them.
 """
 
 
-import sys, os, unittest, requests
+import sys, os, unittest, requests, time
 
 
 try :
@@ -52,6 +52,18 @@ class TestSimpleFlask (unittest.TestCase):
         c = requests.post(site + "shutdown/")
         fLOG(c.text)
         assert "Server shutting down..." in c.text
+
+        nb = 0
+        while th.is_alive() and nb < 5:
+            fLOG("waiting...", nb)
+            time.sleep(1)
+            nb += 1
+
+        if th.is_alive():
+            fLOG("thread is still alive (1)?",th.is_alive())
+            assert False
+
+
 
 
 
