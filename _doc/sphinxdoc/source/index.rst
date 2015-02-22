@@ -206,6 +206,10 @@ avec le code suivant ::
         from pymyinstall import datascientist
         datascientist("install", full = True)
         
+Certains notebooks requièrent des outils supplémentaires :
+
+    * `graphviz <http://www.graphviz.org/>`_
+        
         
 developpeur
 ^^^^^^^^^^^
@@ -225,6 +229,21 @@ Elles sont facilement téléchargeables avec ces deux modules :
 
 * `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
 * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
+
+Pour être compilée, la documentation requiert également :
+
+    * `miktex <http://miktex.org/>`_ (Windows seulement)
+    
+Il est très utile d'avoir un éditeur de texte léger, quelques options :
+
+    * `Scite <http://www.scintilla.org/SciTE.html>`_
+    * `Notepad++ <http://notepad-plus-plus.org/>`_
+    
+Et un `IDE <http://en.wikipedia.org/wiki/Integrated_development_environment>`_ :
+
+    * `PyCharm <https://www.jetbrains.com/pycharm/>`_
+    * `PyTools <http://pytools.codeplex.com/>`_
+
 
 Table des matières
 ------------------
