@@ -4,7 +4,7 @@
 """
 import re, os
 import pymmails
-from pyquickhelper import noLOG, run_cmd
+from pyquickhelper import noLOG, run_cmd, remove_diacritics
 
 _email_regex  = re.compile("[*] *e?mails? *: *([^*+]+)")
 _gitlab_regex = re.compile("[*] *gitlab *: *([^*+]+[.]git)")
@@ -74,7 +74,6 @@ def get_emails(path, suivi = "suivi.rst"):
         if len(ff) != 2:
             raise Exception("unable to understand mail {0} in {1} (suivi={2} (mail separator is ;)".format(a, path, suivi))
     return allmails
-
 
 def get_videos(path, suivi = "suivi.rst"):
     """
@@ -445,3 +444,89 @@ def git_first_commit_all_projects(
         commit= local_folder, gitlab
 
     return commit
+    
+def create_folders_from_dataframe(df,
+                        root,
+                        report="suivi.rst",
+                        col_student="Eleves",
+                        col_group="Groupe",
+                        col_subject="Sujet",
+                        overwrite=False,
+                        email_function = None):
+    """
+    creates a series of folders for groups of students
+    
+    @param      root            where to create the folders
+    @param      col_student     column which contains the student name (firt name + last name)
+    @param      col_group       index of the grou
+    @param      col_subject     column which contains the subject
+    @param      df              DataFrame
+    @param      email_function  function which infers email from first and last names, see below
+    @param      report          report file
+    @param      overwrite       if False, skip if the report already exists
+    @return                 list of creates folders
+    
+    The function *email_function* has the following signature::
+        
+        def email_function(first_name, last_name):
+            # ....
+    """
+    
+    def split_name(name):
+        name = remove_diacritics(name).split(" ")
+        first = name [-1]
+        last = " ".join(name[:-1])
+        return first, last
+        
+    def ul(last):
+        res = ""
+        for i,c in enumerate(last):
+            if c == " " : res += "_"
+            elif i == 0 or last[i-1] in [" ","-","_"]:
+                res += c.upper()
+            else:
+                res += c.lower()
+        return res
+        
+    folds = []
+    
+    gr = df.groupby(col_group)
+    for name, group in gr:
+        s = list(set ( group[col_subject].copy() ))
+        if len(s) > 1:
+            raise Exception("more than one subject for group: " + str(name) + "\n" + str(s))
+        subject = s[0]
+        eleves = list( group[col_student] )
+        names = [ (_,) + split_name(_) for _ in eleves ]
+        eleves.sort()
+        
+        title = ", ".join(eleves)
+        content = [ title ]
+        content.append("=" * len(title))
+        content.append("")
+        
+        content.append("* subject: " + title)
+        content.append("* G: %d" % int(name))
+        
+        if email_function is not None:
+            mails = [ email_function(a[1], a[2]) for a in names ]
+            jmail = "; ".join(mails)
+            content.append ("* mails: " + jmail)
+            
+        content.append("")
+        content.append("")
+        
+        last = ".".join(  ul(a[-1]) for a in sorted(names)  )
+        
+        folder = os.path.join(root,last)
+        filename = os.path.join(folder, report)
+        
+        if not os.path.exists(folder):
+            os.mkdir(folder)
+            
+        if overwrite or not os.path.exists(filename):
+            with open(filename, "w", encoding="utf8") as f :
+                f.write("\n".join(content))
+            
+            folds.append(folder)
+    return folds
