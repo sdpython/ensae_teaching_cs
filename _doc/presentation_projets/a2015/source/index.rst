@@ -196,6 +196,26 @@ ENSAE 1A - Projets informatiques
         * commencer par de petites dimensions
         * découper le problème en petites fonctions
         * vérifier que chaque petite fonction fait ce qu'on attend d'elle
+        
+.. revealjs:: 
+    :data-background: #DDDDDD
+
+        
+    .. revealjs:: Simulation micro
+    
+        .. image:: images/e1.png
+
+    .. revealjs:: Propagation
+    
+        .. image:: images/e2.png
+
+    .. revealjs:: Fin
+    
+        .. image:: images/e3.png
+
+    .. revealjs:: Aspect Macro
+    
+        .. image:: images/e4.png
 
 .. revealjs:: 
     :data-background: #DDDDDD
