@@ -32,6 +32,7 @@ import os
 # ones.
 extensions = [
     'sphinxjp.themes.revealjs',
+    'sphinx.ext.pngmath',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
