@@ -62,7 +62,7 @@ Glossaire
         Ecole Nationale de la Statistique et de l'Administration Economique (`ENSAE <http://www.ensae.fr/>`_)
         
     entretien
-        Quelques révisions à faire afin de préparer un :ref:`l-entretiens.
+        Quelques révisions à faire afin de préparer un :ref:`l-entretiens`.
         
     Git
         Logiciel de suivi de source utilisé par exemple par GitHub. 
@@ -143,7 +143,7 @@ Glossaire
         C'est un module que j'ai développé à l'attention des élèves de l'ENSAE
         (`documentation <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_).
         Il sert le plus souvent à télécharger des documents depuis le site 
-        ``www.xavierdupre.fr`` et plus précisément des documents
+        `www.xavierdupre.fr <http://www.xavierdupre.fr/>`_ et plus précisément des documents
         accessibles depuis ce lien `documents <http://www.xavierdupre.fr/enseignement/complements/index_documents.html>`_.
         
     pyquickhelper
