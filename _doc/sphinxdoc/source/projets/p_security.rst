@@ -1,5 +1,7 @@
 ﻿
-.. _l-proj_finance:
+.. issues.
+
+.. _l-proj_crypto:
 
 Sécurité, Cryptographie
 =======================

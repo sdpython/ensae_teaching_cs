@@ -15,7 +15,7 @@ ENSAE 1A - Projets informatiques
     `Romain Lesauvage <mailto: romain.lesauvage AT ensae.fr>`_
         
         
-.. revealjs:: Quelques idées
+.. revealjs:: Vos choix de projets
     :data-background: #DDDDFF
 
             * Finance
@@ -24,6 +24,48 @@ ENSAE 1A - Projets informatiques
             * Mathématiques
             * Nuages de mots
             * Jeux de plates-formes, smartphone
+            
+            ...
+            
+            La présentation contient des extraits de projets réalisés par des élévèes de l'ENSAE.
+            Année 2012-2014.
+            
+.. revealjs:: Programmer, oui mais encore !
+    :data-background: #DDDDFF
+    
+    
+.. revealjs:: 
+    :data-background: #DDDDDD
+
+    .. revealjs:: Quelques dangers
+    
+        `The Code <http://en.wikipedia.org/wiki/The_Code_%282014_TV_series%29>`_
+        
+        .. raw:: html
+        
+            <div id='blogvision'><iframe src='http://www.allocine.fr/_video/iblogvision.aspx?cmedia=19550886' style='width:480px; height:270px'></iframe>
+            <br /><a href='http://www.allocine.fr/_video/iblogvision.aspx?cmedia=19550886'>link</a>
+            </div>
+
+            
+    .. revealjs:: Trouver le geek qui est en vous
+    
+        .. raw:: html
+
+            <div id='blogvision2'><iframe width="420" height="315" src="https://www.youtube.com/embed/0ZgiVicpZGk" frameborder="0" allowfullscreen></iframe>
+            <br /><a href="https://www.youtube.com/watch?v=hk-c5jlk48s">link</a>
+            </div>
+            
+    .. revealjs:: THE Geek
+    
+        .. image:: images/gourou.png
+        
+        THE gourou: I don't code, I invent coding.
+    
+.. revealjs:: Un peu plus en détail
+    :data-background: #DDDDFF
+
+    * quelques caricatures
             
 .. revealjs:: 
     :data-background: #DDDDDD
@@ -92,7 +134,7 @@ ENSAE 1A - Projets informatiques
     
             * implémenter votre propre algorithme de machine learning
             * jeu de données test
-            * jeu de données plus complexe si il y a le temps
+            * jeu de données plus complexe s'il y a le temps
             
     .. revealjs:: Machine Learning 4 : deep learning
     
@@ -185,17 +227,25 @@ ENSAE 1A - Projets informatiques
 .. revealjs:: 
     :data-background: #DDDDDD
 
-    .. revealjs:: Algorithme mathématiques
+    .. revealjs:: Algorithmes mathématiques
     
         * optimisation
+        * IA : `minimax <http://fr.wikipedia.org/wiki/Algorithme_minimax>`_, `alpha-beta <http://fr.wikipedia.org/wiki/%C3%89lagage_alpha-beta>`_
         * résolution de puzzle
         * `google jam <https://code.google.com/codejam/contest/6214486/dashboard#s=p3>`_
 
-    .. revealjs:: Algorithme mathématiques
+    .. revealjs:: Ca ne marchera pas mieux sur de grands problèmes
     
         * commencer par de petites dimensions
         * découper le problème en petites fonctions
         * vérifier que chaque petite fonction fait ce qu'on attend d'elle
+            
+    .. revealjs:: Cryptographie
+    
+        * `Merkle–Hellman knapsack cryptosystem <http://en.wikipedia.org/wiki/Merkle%E2%80%93Hellman_knapsack_cryptosystem>`_
+        * `Histoires des codes secrets <http://fr.wikipedia.org/wiki/Histoire_des_codes_secrets._De_l%27%C3%89gypte_des_pharaons_%C3%A0_l%27ordinateur_quantique>`_, Simon Singh
+        * `Tor <https://www.torproject.org/>`_
+    
         
 .. revealjs:: 
     :data-background: #DDDDDD
@@ -257,15 +307,20 @@ ENSAE 1A - Projets informatiques
 
     .. revealjs:: conclusion creuse
     
-        * Ce projet nous a permis de découvrir de multiples éléments et outils non abordés au 
-          cours du premier semestre et a donc été bénéfique pour notre appréhension 
-          de la programmation orientée objet en général.        
+        Ce projet nous a permis de découvrir de multiples éléments et outils non abordés au 
+        cours du premier semestre et a donc été bénéfique pour notre appréhension 
+        de la programmation orientée objet en général.    
+        
+        ... 
+        
+        Attends je relis.
 
-    .. revealjs:: dix pages de codes dans le rapport
+    .. revealjs:: dix pages de code dans le rapport
     
         * Mais j'ai le programme vous savez !
         * Je préfère dix lignes bien placées que cent qui me noient.
         * Le jury sait peu de choses mais il sait qu'il y a 52 cartes.
+        * La belotte... c'est quoi les règles déjà ? Ok, file-moi le lien.
     
     .. revealjs:: le programme
     
@@ -276,16 +331,59 @@ ENSAE 1A - Projets informatiques
         
             # il 3h du mat, j'en ai marre. 
             
-        * Ca m'aide pas beaucoup.
+        * Ca ne m'aide pas beaucoup.
     
-    .. revealjs:: 
+    .. revealjs:: indications
     
-        * Imaginer que le lecteur a trente rapports à lire et que voulez qu'il se souvienne de vous
-          car il a compris les points essentiels de votre travail.
-        * Si le projet vous a intéressé, il y a de bonne chance que le jury le soit aussi.
+        * Imaginer que le lecteur a trente rapports à lire.
+        * Il se souvient de vous car il a compris les points essentiels de votre travail.
+        * Si le projet vous a intéressé, il y a de bonnes chances que le jury le soit aussi.
+
+    .. revealjs:: mi-parcours, fin avril
     
+        * 200 lignes de codes
+        * un `pitch <http://fr.wikipedia.org/wiki/Pitch_%28fiction%29>`_
+
+    .. revealjs:: début juin
+    
+        * soutenances
+        * awesome
+
+
+.. revealjs:: Encadrement
+    :data-background: #DDDDFF
+    
+    
+
+.. revealjs:: 
+    :data-background: #DDDDDD
+
+    .. revealjs:: Encadrants
+        
+        * Emmanuel Guérin
+        * Arthur Renaud 
+        * Xavier Dupré
+
+    .. revealjs:: Domaine d'expertise
+        
+        * Géniel logiciel
+        * Machine Learning
+        * Hacking
+
+    .. revealjs:: Git
+        
+        * `Git <http://git-scm.com/>`_, `TortoiseGit <https://code.google.com/p/tortoisegit/>`_
+        * `GitHub <https://github.com/sdpython/ensae_teaching_cs/>`_
+        * `commit <https://github.com/sdpython/ensae_teaching_cs/commit/551380b913099b8c5a3ffd54664301da87d36812>`_
+
+    .. revealjs:: En cas d'incertitude
+    
+        * essayer
+        * `mail to <mailto:xavier.dupre AT gmail.com>`_
+        
+
 .. revealjs:: A vous
     :data-background: #DDDDFF
-
+    
     Questions ?
     
