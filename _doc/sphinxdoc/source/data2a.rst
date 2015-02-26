@@ -213,6 +213,8 @@ Usage irrégulier
 9. Calcul en grande dimension
     a. calcul en grande précision `gmpy2 <http://gmpy2.readthedocs.org/en/latest/>`_
 
+10. Algorithmes génétiques
+    a. `deap <http://deap.gel.ulaval.ca/doc/default/index.html>`_
 
 
 Articles
