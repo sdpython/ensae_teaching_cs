@@ -202,6 +202,9 @@ Bibliographie
 * `SiGMa: Simple Greedy Matching for Aligning Large Knowledge Bases <http://arxiv.org/abs/1207.4525>`_, Simon Lacoste-Julien, Konstantina Palla, Alex Davies, Gjergji Kasneci, Thore Graepel, Zoubin Ghahramani
 * `Learning from Partial Labels <http://www.seas.upenn.edu/~taskar/pubs/partial_labels_jmlr11.pdf>`_, Timothee Cour, Benjamin Sapp, Ben Taskar
 * `Word Alignment via Quadratic Assignment <http://www.seas.upenn.edu/~taskar/pubs/naacl06_qap.pdf>`_, Simon Lacoste-Julien, Ben Taskar, Dan Klein, Michael I. Jordan
+* `Contextual Bandit Learning with Predictable Rewards <http://arxiv.org/abs/1202.1334>`_, Alekh Agarwal, Miroslav Dudík, Satyen Kale, John Langford, Robert E. Schapire
+* `Learning from Logged Implicit Exploration Data <http://papers.nips.cc/paper/3977-learning-from-logged-implicit-exploration-data>`_, Alex Strehl, John Langford, Lihong LiSham, M. Kakade
+
 
 **Librairies de machine learning**
 

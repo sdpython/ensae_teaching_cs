@@ -29,7 +29,7 @@ La mémoire n'est plus un problème. Le temps de calcul l'est toujours.
 * :math:`n \leqslant 10^2` : coût :math:`\leqslant O(n^3)`
 * :math:`n \leqslant 10^3` : coût :math:`\leqslant O(n^2)`
 * :math:`n \leqslant 10^7` : coût :math:`\leqslant O(n \ln (n))`
-* :math:`n > 10^6` : coût :math:`\leqslant O(n)`
+* :math:`n > 10^8` : coût :math:`\leqslant O(n)`
 
 
 Mot-clé

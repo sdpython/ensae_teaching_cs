@@ -47,6 +47,7 @@ Glossaire
         See also:
             - `Sequence to Sequence Learning with Neural Networks <http://arxiv.org/pdf/1409.3215.pdf>`_, Ilya Sutskever, Oriol Vinyals, Quoc V. Le
             - `Why does Deep Learning work? - A perspective from Group Theory <http://arxiv.org/abs/1412.6621>`_, Arnab Paul, Suresh Venkatasubramanian
+            - `Deeply-Supervised Nets <http://arxiv.org/abs/1409.5185>`_, Chen-Yu Lee, Saining Xie, Patrick Gallagher, Zhengyou Zhang, Zhuowen Tu
         
     Dijkstra
         Plus connu pour l'algorithme du plus court chemin dans un graphe,
