@@ -121,10 +121,13 @@ Usage régulier
     h. `statsmodels <http://statsmodels.sourceforge.net/>`_
     i. `fastcluster <https://pypi.python.org/pypi/fastcluster>`_
     j. `lda <https://github.com/ariddell/lda>`_ (`LDA <http://en.wikipedia.org/wiki/Latent_Dirichlet_allocation>`_)
-    k. `NLTK <http://www.nltk.org/install.html>`_ (natural language processing)
-    l. `glove-python <https://github.com/maciejkula/glove-python>`_
-    m. `patsy <http://patsy.readthedocs.org/en/latest/index.html>`_
-    n. `sqlite_bro <https://github.com/stonebig/sqlite_bro>`_
+    k. `glove-python <https://github.com/maciejkula/glove-python>`_
+    l. `patsy <http://patsy.readthedocs.org/en/latest/index.html>`_
+    m. `sqlite_bro <https://github.com/stonebig/sqlite_bro>`_
+    
+#. Natural Language Processing
+    a. `NLTK <http://www.nltk.org/install.html>`_ (natural language processing)
+    b. `gensim <https://radimrehurek.com/gensim/>`_
 
 #. Représentation de graphes
     a. `Graphviz <https://github.com/xflr6/graphviz>`_
@@ -206,14 +209,16 @@ Usage irrégulier
     
 8. Mining en tout genre
     * `scrapy <http://scrapy.org/>`_ : scraping
-    * `whoosh <http://pythonhosted.org//Whoosh/>`_ (moteur de recherche)
-    * `elastic search <http://www.elasticsearch.org/guide/en/elasticsearch/client/python-api/current/>`_ 
     * `pattern <http://www.clips.ua.ac.be/pattern>`_
     
-9. Calcul en grande dimension
+9. moteur de recherches
+    * `whoosh <http://pythonhosted.org//Whoosh/>`_ (moteur de recherche)
+    * `elastic search <http://www.elasticsearch.org/guide/en/elasticsearch/client/python-api/current/>`_ 
+    
+10. Calcul en grande dimension
     a. calcul en grande précision `gmpy2 <http://gmpy2.readthedocs.org/en/latest/>`_
 
-10. Algorithmes génétiques
+11. Algorithmes génétiques
     a. `deap <http://deap.gel.ulaval.ca/doc/default/index.html>`_
 
 

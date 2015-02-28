@@ -138,8 +138,6 @@ def publish_documentation(
                         key_save        = "my_module_password",
                         footer_html     = footer)
 
-
-
     """
 
     params = {"ftpsite":ftpsite,
