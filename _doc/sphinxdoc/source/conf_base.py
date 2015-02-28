@@ -18,8 +18,6 @@ import pyquickhelper
 import pyensae
 import pymmails
 
-import ensae_teaching_cs
-
 from pyquickhelper.helpgen.default_conf import set_sphinx_variables
 
 project_var_name_t  = "ENSAE<br />Xavier Dupré"
