@@ -7,6 +7,14 @@
 
 from flask import Flask, Response, request
 
+try:
+    from .flask_helper import Text2Response, Exception2Response
+except ImportError:
+    pass
+
+
+# -- HELP BEGIN EXCLUDE --
+
 app = Flask(__name__)
 
 if __name__ == "__main__":
@@ -15,7 +23,7 @@ if __name__ == "__main__":
     from ensae_teaching_cs.td_1a.flask_helper import Text2Response, Exception2Response
 else:
     from .flask_helper import Text2Response, Exception2Response
-
+    
 if __name__ != "__main__":
     app.debug = False
     app.logger.disabled = True
@@ -24,6 +32,9 @@ if __name__ != "__main__":
     import logging
     log = logging.getLogger('werkzeug')
     log.setLevel(logging.ERROR)
+    
+# -- HELP END EXCLUDE --
+    
 
 def shutdown_server():
     """
@@ -33,6 +44,9 @@ def shutdown_server():
     if func is None:
         raise RuntimeError('Not running with the Werkzeug Server')
     r = func()
+
+
+# -- HELP BEGIN EXCLUDE --
 
 @app.route('/shutdown/', methods=['POST'])
 def shutdown():
@@ -84,6 +98,15 @@ def main_page():
             """.replace("                            ","")
     return Text2Response(message)
 
+# -- HELP END EXCLUDE --
 
+
+# -- HELP BEGIN EXCLUDE --
+    
 if __name__ == "__main__":
     app.run(host="localhost", port=8019)
+    
+# -- HELP END EXCLUDE --
+    
+
+    
