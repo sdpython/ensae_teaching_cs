@@ -4,7 +4,7 @@
 @brief Quelques problèmes récurrents avec `pandas <http://pandas.pydata.org/>`_.
 """
 
-import os, pandas
+import os
 
 def read_csv(filepath_or_buffer, encoding="utf8", sep="\t", **args):
     """
@@ -28,7 +28,7 @@ def read_csv(filepath_or_buffer, encoding="utf8", sep="\t", **args):
     Par exemple ::
 
         import pandas
-        df = pandas.read_csv("dataframe.txt",sep="\t", encoding="utf8")
+        df = pandas.read_csv("dataframe.txt",sep="\\t", encoding="utf8")
         print(df)
 
     Provoque une erreur des plus énervantes ::
@@ -38,11 +38,12 @@ def read_csv(filepath_or_buffer, encoding="utf8", sep="\t", **args):
     Pour contrecarrer ceci, il suffit de modifier l'encoding par `utf-8-sig <https://docs.python.org/3.4/library/codecs.html#encodings-and-unicode>`_ ::
 
         import pandas
-        df = pandas.read_csv("dataframe.txt",sep="\t", encoding="utf-8-sig")
+        df = pandas.read_csv("dataframe.txt",sep="\\t", encoding="utf-8-sig")
         print(df)
 
     @endFAQ
     """
+    import pandas
     if isinstance(filepath_or_buffer, str):
         if encoding in ["utf8", "utf-8"]:
             try:
