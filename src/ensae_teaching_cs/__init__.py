@@ -15,8 +15,8 @@ __url__ = "http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html
 __downloadUrl__ = "http://www.xavierdupre.fr/site2013/index_code.html#ensae_teaching_cs"
 __license__ = "BSD License"
 
-from .faq.faq_matplotlib import graph_ggplot_with_label
+#from .faq.faq_matplotlib import graph_ggplot_with_label
 #from .td_2a.session_pandas import dfs2excel
 #from .td_2a.parallel_thread import ParallelThread
 #from .td_2a.serialization import load_object, dump_object, df2list
-from .faq.faq_pandas import read_csv
+#from .faq.faq_pandas import read_csv
