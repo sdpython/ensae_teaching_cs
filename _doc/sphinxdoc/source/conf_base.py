@@ -11,12 +11,12 @@ import sphinx_rtd_theme
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0])))
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], "ensae_teaching_cs")))
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], "..", "..", "..", "..", "pyquickhelper", "src")))
-#sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], "..", "..", "..", "..", "pyensae", "src")))
-#sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], "..", "..", "..", "..", "pymmails", "src")))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], "..", "..", "..", "..", "pyensae", "src")))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0], "..", "..", "..", "..", "pymmails", "src")))
 
 import pyquickhelper
-#import pyensae
-#import pymmails
+import pyensae
+import pymmails
 
 from pyquickhelper.helpgen.default_conf import set_sphinx_variables
 

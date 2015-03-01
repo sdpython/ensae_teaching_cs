@@ -132,7 +132,7 @@ elif "clean_pyd" in sys.argv:
     pyquickhelper = import_pyquickhelper()
     pyquickhelper.clean_exts(exts=[".so", ".o"])
 
-elif "build_sphinx" in sys.argv:
+elif "build_sphinx_one" in sys.argv:
     pyquickhelper = import_pyquickhelper()
 
     if "--help" in sys.argv:
@@ -150,20 +150,14 @@ elif "build_sphinx" in sys.argv:
             os.path.split(os.path.abspath(__file__))[0])[-1]
 
         if sys.platform.startswith("win"):
-            try:
-                generate_help_sphinx(project_name, module_name=project_var_name)
-            except ImportError as e:
-                if '"<frozen importlib._bootstrap>"' in str(e):
-                    generate_help_sphinx(project_name, module_name=project_var_name)
-                else:
-                    raise ImportError("UNEXPECTED ERROR") from e
+            generate_help_sphinx(project_name, module_name=project_var_name)
         else:
             # unable to test latex conversion due to adjustbox.sty missing
             # package
             generate_help_sphinx(project_name, nbformats=["ipynb", "html", "python", "rst"],
                                  module_name=project_var_name)
 
-elif "build_sphinx_all" in sys.argv:
+elif "build_sphinx" in sys.argv:
     pyquickhelper = import_pyquickhelper()
 
     if "--help" in sys.argv:

@@ -78,6 +78,19 @@ echo #######################################################
 
 :documentation:
 %pythonexe% -u setup.py build_sphinx
+if %errorlevel% eq 0 goto sphinx_no_error:
+set errorlevel=0
+rem we do a second run to go around the error
+rem ImportError: No module named 'ensae_teaching_cs.faq'
+rem which disappear after a second run
+echo --------- SECOND RUN -----------
+echo --------- SECOND RUN -----------
+echo --------- SECOND RUN -----------
+echo --------- SECOND RUN -----------
+echo --------- SECOND RUN -----------
+%pythonexe% -u setup.py build_sphinx
+:sphinx_no_error:
+echo --------- ERRORS? -----------
 if %errorlevel% neq 0 exit /b %errorlevel%
 echo #######################################################
 
