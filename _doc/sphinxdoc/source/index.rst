@@ -170,6 +170,9 @@ s'installe avec ``pip install <module>``. Deux distrubutions possibles :
     * `folium <https://github.com/python-visualization/folium>`_
     * `graphviz <https://github.com/xflr6/graphviz>`_
     * `numexpr <https://github.com/pydata/numexpr>`_
+    
+   Il existe une version différente : `miniconda <http://conda.pydata.org/miniconda.html>`_.
+   La liste des packages manquant sera probablement différente.
 
 * `WinPython <https://winpython.github.io/>`_ (Windows). Sous Windows, elle a l'avantage d'inclure
   `R <http://www.r-project.org/>`_ ou `Julia <http://julialang.org/>`_. On passe alors
