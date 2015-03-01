@@ -61,8 +61,7 @@ def publish_documentation(
     footer_html=None,
     content_filter=trigger_on_specific_strings,
     is_binary=content_as_binary,
-    fLOG=print
-):
+    fLOG=print):
     """
     publish the documentation and the setups of a python module on a webiste,
     it assumes the modules is organized the same way as
