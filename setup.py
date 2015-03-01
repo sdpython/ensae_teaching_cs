@@ -157,6 +157,35 @@ elif "build_sphinx_one" in sys.argv:
             generate_help_sphinx(project_name, nbformats=["ipynb", "html", "python", "rst"],
                                  module_name=project_var_name)
 
+elif "build_sphinx_catch" in sys.argv:
+    pyquickhelper = import_pyquickhelper()
+
+    if "--help" in sys.argv:
+        print(pyquickhelper.get_help_usage())
+    else:
+
+        if not os.path.exists("_doc/sphinxdoc/source"):
+            raise FileNotFoundError(
+                "you must get the source from GitHub to build the documentation")
+
+        from pyquickhelper import fLOG, generate_help_sphinx
+
+        fLOG(OutputPrint=True)
+        project_name = os.path.split(
+            os.path.split(os.path.abspath(__file__))[0])[-1]
+
+        if sys.platform.startswith("win"):
+            try:
+                generate_help_sphinx(project_name, module_name=project_var_name)
+            except ImportError as e:
+                print(e)
+                return
+        else:
+            # unable to test latex conversion due to adjustbox.sty missing
+            # package
+            generate_help_sphinx(project_name, nbformats=["ipynb", "html", "python", "rst"],
+                                 module_name=project_var_name)
+
 elif "build_sphinx" in sys.argv:
     pyquickhelper = import_pyquickhelper()
 

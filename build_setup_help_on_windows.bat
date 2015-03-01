@@ -77,7 +77,7 @@ if %errorlevel% neq 0 exit /b %errorlevel%
 echo #######################################################
 
 :documentation:
-%pythonexe% -u setup.py build_sphinx
+%pythonexe% -u setup.py build_sphinx_catch
 if %errorlevel% eq 0 goto sphinx_no_error:
 set errorlevel=0
 rem we do a second run to go around the error
