@@ -179,7 +179,6 @@ elif "build_sphinx_catch" in sys.argv:
                 generate_help_sphinx(project_name, module_name=project_var_name)
             except ImportError as e:
                 print(e)
-                return
         else:
             # unable to test latex conversion due to adjustbox.sty missing
             # package
