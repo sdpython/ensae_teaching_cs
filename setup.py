@@ -150,7 +150,13 @@ elif "build_sphinx" in sys.argv:
             os.path.split(os.path.abspath(__file__))[0])[-1]
 
         if sys.platform.startswith("win"):
-            generate_help_sphinx(project_name, module_name=project_var_name)
+            try:
+                generate_help_sphinx(project_name, module_name=project_var_name)
+            except ImportError as e:
+                if '"<frozen importlib._bootstrap>"' in str(e):
+                    generate_help_sphinx(project_name, module_name=project_var_name)
+                else:
+                    raise ImportError("UNEXPECTED ERROR") from e
         else:
             # unable to test latex conversion due to adjustbox.sty missing
             # package
