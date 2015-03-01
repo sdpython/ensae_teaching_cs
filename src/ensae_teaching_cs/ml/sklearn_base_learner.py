@@ -6,7 +6,9 @@ than any scikit-learn learner.
 
 from .sklearn_parameters import SkLearnParameters
 
-class SkBaseLearner :
+
+class SkBaseLearner:
+
     """
     Defines a custom class to define a learner which follows the same API
     than any `scikit-learn <http://scikit-learn.org/stable/>`_ learner.
@@ -23,7 +25,7 @@ class SkBaseLearner :
         self.P = SkLearnParameters(**kwargs)
 
     ###################
-    ## API scikit-learn
+    # API scikit-learn
     ###################
 
     def fit(self, X, y=None, sample_weight=None):
@@ -68,10 +70,10 @@ class SkBaseLearner :
         raise NotImplementedError()
 
     ##############
-    ## cloning API
+    # cloning API
     ##############
 
-    def get_params(self, deep = True):
+    def get_params(self, deep=True):
         """
         returns the parameters mandatory to clone the class
 
@@ -81,7 +83,7 @@ class SkBaseLearner :
         return self.P.to_dict()
 
     #################
-    ## common methods
+    # common methods
     #################
 
     def __str__(self):

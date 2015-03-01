@@ -6,17 +6,36 @@ will sort all test files by increasing time and run them.
 """
 
 
-import sys, os, unittest, requests, time
+import sys
+import os
+import unittest
+import requests
+import time
 
 
-try :
+try:
     import src
     import pyquickhelper
-except ImportError :
-    path = os.path.normpath(os.path.abspath( os.path.join( os.path.split(__file__)[0], "..", "..")))
-    if path not in sys.path : sys.path.append (path)
-    path = os.path.normpath(os.path.abspath( os.path.join( os.path.split(__file__)[0], "..", "..", "..", "pyquickhelper", "src")))
-    if path not in sys.path : sys.path.append (path)
+except ImportError:
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..")))
+    if path not in sys.path:
+        sys.path.append(path)
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..",
+                "..",
+                "pyquickhelper",
+                "src")))
+    if path not in sys.path:
+        sys.path.append(path)
     import src
     import pyquickhelper
 
@@ -27,8 +46,11 @@ from src.ensae_teaching_cs.td_1a.flask_helper import FlaskInThread
 
 class TestSimpleFlask (unittest.TestCase):
 
-    def test_flask(self) :
-        fLOG (__file__, self._testMethodName, OutputPrint= __name__ == "__main__")
+    def test_flask(self):
+        fLOG(
+            __file__,
+            self._testMethodName,
+            OutputPrint=__name__ == "__main__")
 
         th = FlaskInThread(app, host="localhost", port=8025)
         th.start()
@@ -60,12 +82,9 @@ class TestSimpleFlask (unittest.TestCase):
             nb += 1
 
         if th.is_alive():
-            fLOG("thread is still alive (1)?",th.is_alive())
+            fLOG("thread is still alive (1)?", th.is_alive())
             assert False
 
 
-
-
-
-if __name__ == "__main__"  :
-    unittest.main ()
+if __name__ == "__main__":
+    unittest.main()

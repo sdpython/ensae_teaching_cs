@@ -7,7 +7,8 @@
 
 import pandas
 
-def dfs2excel(dfs:dict, excel_file:str):
+
+def dfs2excel(dfs: dict, excel_file: str):
     """
     Aggrège plusieurs DataFrame dans un seul fichiers excel
 
@@ -51,7 +52,7 @@ def dfs2excel(dfs:dict, excel_file:str):
 
     """
     writer = pandas.ExcelWriter(excel_file)
-    for k,df in dfs.items():
+    for k, df in dfs.items():
         df.to_excel(writer, k)
     writer.save()
     return writer

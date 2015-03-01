@@ -5,7 +5,7 @@
 """
 
 import sys
-if sys.version_info[0] < 3 :
+if sys.version_info[0] < 3:
     raise ImportError("ensae_teaching_cs only works with Python 3")
 
 __version__ = "0.6"

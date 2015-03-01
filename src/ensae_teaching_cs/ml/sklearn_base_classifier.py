@@ -6,10 +6,13 @@
 from .sklearn_base_learner import SkBaseLearner
 from sklearn.metrics import accuracy_score
 
+
 class SkBaseClassifier (SkBaseLearner):
+
     """
     Defines a custom classifier
     """
+
     def __init__(self, **kwargs):
         """
         constructor

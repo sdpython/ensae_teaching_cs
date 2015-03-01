@@ -5,6 +5,7 @@
 
 """
 
+
 def optimisation():
     """
     Quelques erreurs lorsqu'on cherche à optimiser avec `CVXOPT <http://cvxopt.org/>`_.

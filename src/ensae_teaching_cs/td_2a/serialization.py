@@ -7,6 +7,7 @@
 
 import pickle
 
+
 def df2list(df):
     """
     converts a dataframe into a list of lists
@@ -36,6 +37,7 @@ def df2list(df):
     """
     return df.vales.tolist()
 
+
 def dump_object(obj, filename_or_stream):
     """
     Sérialize un objet dans un stream ou un fichier
@@ -58,6 +60,7 @@ def dump_object(obj, filename_or_stream):
 
     if close:
         stream.close()
+
 
 def load_object(filename_or_stream):
     """

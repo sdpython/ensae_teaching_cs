@@ -9,10 +9,13 @@ from numpy import argsort, sqrt
 import numpy
 import pandas
 
+
 class SkCustomKnn (SkBaseClassifier):
+
     """
     implements the `k-Nearest Neighbors <http://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm>`_ as an example
     """
+
     def __init__(self, k=1):
         """
         constructor
@@ -34,18 +37,23 @@ class SkCustomKnn (SkBaseClassifier):
         if sample_weight is not None:
             raise NotImplementedError("sample_weight must be None")
         if len(X) < self.P.k:
-            raise SkException("number of samples cannot be smaller than k={0}".format(self.P.k))
+            raise SkException(
+                "number of samples cannot be smaller than k={0}".format(
+                    self.P.k))
         if isinstance(X, pandas.DataFrame):
             X = X.asmatrix()
         if isinstance(y, pandas.DataFrame):
             y = y.asmatrix()
         if len(X) != len(y):
-            raise SkException("X and y should have the same dimension not: {0} != {1}".format(len(X), len(y)))
+            raise SkException(
+                "X and y should have the same dimension not: {0} != {1}".format(
+                    len(X),
+                    len(y)))
         if min(y) < 0:
             raise SkException("class should be positive or null integer")
         self._TrainingX = X
         self._Trainingy = y
-        self._nbclass = max( y ) + 1
+        self._nbclass = max(y) + 1
         return self
 
     def predict(self, X):
@@ -71,18 +79,18 @@ class SkCustomKnn (SkBaseClassifier):
         @return         array, shape = (n_samples,.), Returns predicted values.
         """
         nb = len(X)
-        res = [ self.knn_search( X[i,:] ) for i in range(0,nb) ]
+        res = [self.knn_search(X[i, :]) for i in range(0, nb)]
         y = self._Trainingy
-        res = [ [ el + (y[el[-1]],) for el in m]  for m in res ]
-        mk  = numpy.zeros( (len(X), self._nbclass ) )
-        for i,row in enumerate(res) :
+        res = [[el + (y[el[-1]],) for el in m] for m in res]
+        mk = numpy.zeros((len(X), self._nbclass))
+        for i, row in enumerate(res):
             for el in row:
-                w = self.distance2weight( el[0] )
+                w = self.distance2weight(el[0])
                 mk[i, el[-1]] += w
         return mk
 
     ##################
-    ## private methods
+    # private methods
     ##################
 
     def distance2weight(self, d):
@@ -103,9 +111,8 @@ class SkCustomKnn (SkBaseClassifier):
         """
         K = self.P.k
         X = self._TrainingX
-        ones = numpy.ones( (len(X), len(x)) )
-        po = x*ones
+        ones = numpy.ones((len(X), len(x)))
+        po = x * ones
         X_x = X - po
-        prod = [ ( (X_x[i,:]**2).sum(), i) for i in range(0, len(X)) ]
-        prod.sort()
+        prod = sorted([((X_x[i, :]**2).sum(), i) for i in range(0, len(X))])
         return prod[:self.P.k]

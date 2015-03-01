@@ -2,14 +2,23 @@
 @brief      test log(time=0s)
 """
 
-import sys, os, unittest, re
+import sys
+import os
+import unittest
+import re
 
 
-try :
+try:
     import src
-except ImportError :
-    path = os.path.normpath(os.path.abspath( os.path.join( os.path.split(__file__)[0], "..", "..")))
-    if path not in sys.path : sys.path.append (path)
+except ImportError:
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..")))
+    if path not in sys.path:
+        sys.path.append(path)
     import src
 
 from src.ensae_teaching_cs import __version__
@@ -17,16 +26,21 @@ from src.ensae_teaching_cs import __version__
 
 class TestVersion (unittest.TestCase):
 
-    def test_version(self) :
-        setup = os.path.join(os.path.split(__file__)[0],"..", "..", "setup.py")
-        with open(setup,"r") as f : c = f.read()
+    def test_version(self):
+        setup = os.path.join(
+            os.path.split(__file__)[0],
+            "..",
+            "..",
+            "setup.py")
+        with open(setup, "r") as f:
+            c = f.read()
         reg = re.compile("sversion *= \\\"(.*)\\\"")
 
         f = reg.findall(c)
-        if len(f) != 1 :
+        if len(f) != 1:
             raise Exception("not only one version")
         assert f[0] == __version__
 
 
-if __name__ == "__main__"  :
-    unittest.main ()
+if __name__ == "__main__":
+    unittest.main()

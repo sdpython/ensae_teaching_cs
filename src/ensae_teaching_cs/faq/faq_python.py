@@ -5,8 +5,10 @@
 
 """
 
-import os, io
+import os
+import io
 import urllib.request
+
 
 def entier_grande_taille():
     """
@@ -74,11 +76,12 @@ def difference_div():
     (voir `What’s New In Python 3.0 <https://docs.python.org/3/whatsnew/3.0.html#integers>`_).
     @endFAQ
     """
-    div1 = 1/2
-    div2 = 4/2
-    div3 = 1//2
-    div4 = 1.0//2.0
-    return div1,div2,div3,div3
+    div1 = 1 / 2
+    div2 = 4 / 2
+    div3 = 1 // 2
+    div4 = 1.0 // 2.0
+    return div1, div2, div3, div3
+
 
 def python_path():
     """
@@ -109,7 +112,8 @@ def python_path():
 
     @endFAQ
     """
-    return os.environ.get("PYTHON_PATH","")
+    return os.environ.get("PYTHON_PATH", "")
+
 
 def test_unitaire():
     """
@@ -161,15 +165,16 @@ def test_unitaire():
 
     @endFAQ
     """
-    assert pow(2,1) == 2   # on vérifie que 2^1 == 0
-    assert pow(2,0) == 1
-    assert pow(2,-1) == 0.5
-    assert pow(2,-1) == 0.5
-    assert pow(0,0) == 1
-    assert isinstance(pow(-2,3.4), complex)
+    assert pow(2, 1) == 2   # on vérifie que 2^1 == 0
+    assert pow(2, 0) == 1
+    assert pow(2, -1) == 0.5
+    assert pow(2, -1) == 0.5
+    assert pow(0, 0) == 1
+    assert isinstance(pow(-2, 3.4), complex)
     return True
 
-def same_variable(a,b):
+
+def same_variable(a, b):
     """
     Cette fonction dit si les deux objets sont en fait le même objet (True)
     ou non (False) s'ils sont différents (même s'ils contiennent la même information).
@@ -274,6 +279,7 @@ def same_variable(a,b):
     """
     return id(a) == id(b)
 
+
 def stringio(text):
     """
     returns a StringIO object on a text
@@ -338,6 +344,7 @@ def stringio(text):
     """
     return io.StringIO(text)
 
+
 def property_example():
     """
 
@@ -391,6 +398,7 @@ def property_example():
     """
     pass
 
+
 def enumerate_regex_search(exp, text):
     """
     Cette fonction itère sur les différentes occurences d'une expression régulière.
@@ -416,6 +424,7 @@ def enumerate_regex_search(exp, text):
     found = exp.search(text)
     for m in exp.finditer(text):
         yield m
+
 
 def download_from_url(url, filename):
     """
@@ -454,21 +463,21 @@ def download_from_url(url, filename):
     data = u.read()
     u.close()
 
-    with open(filename, "wb") as f :
+    with open(filename, "wb") as f:
         f.write(data)
     return filename
 
-if __name__ == "__main__" :
+if __name__ == "__main__":
 
     def processus_quotidien(data_stream):
         # on compte toujours les lignes
         nb = 0
-        for line in data_stream :
+        for line in data_stream:
             nb += 1
         return nb
 
     fichier = __file__
-    f = open(fichier,"r")
+    f = open(fichier, "r")
     nb = processus_quotidien(f)
     print(nb)
 
@@ -478,42 +487,43 @@ if __name__ == "__main__" :
     print(nb)
 
     class ImmutableClass(object):
-        __slots__ = [ "x","y" ]
+        __slots__ = ["x", "y"]
 
-        def __init__(self,x,y):
-            self.x,self.y = x,y
+        def __init__(self, x, y):
+            self.x, self.y = x, y
+
         def __str__(self):
-            return "{},{}".format(self.x,self.y)
+            return "{},{}".format(self.x, self.y)
 
-    i1 = ImmutableClass(1,2)
+    i1 = ImmutableClass(1, 2)
     i2 = i1
     i2.x = -1
-    print(i1,i2)
+    print(i1, i2)
 
     import copy
-    l1 = [ [0,1], [2,3] ]
+    l1 = [[0, 1], [2, 3]]
     l2 = copy.copy(l1)
-    l1 [0][0] = -1
-    print(l1,l2)
+    l1[0][0] = -1
+    print(l1, l2)
 
-    l1 [0] = [10,10]
-    print(l1,l2)
+    l1[0] = [10, 10]
+    print(l1, l2)
 
     import copy
-    l1 = [ [0,1], [2,3] ]
+    l1 = [[0, 1], [2, 3]]
     l2 = copy.deepcopy(l1)
-    l1 [0][0] = -1
-    print(l1,l2)
+    l1[0][0] = -1
+    print(l1, l2)
 
-    a=[]
-    b=a
+    a = []
+    b = a
     b += [2]
     print(a)
 
     class ClasseAvecProperty:
 
-        def __init__(self,x,y):
-            self._x, self._y = x,y
+        def __init__(self, x, y):
+            self._x, self._y = x, y
 
         @property
         def x(self):
@@ -527,7 +537,7 @@ if __name__ == "__main__" :
         def norm2(self):
             return self._y**2 + self._x**2
 
-    c = ClasseAvecProperty(1,2)
+    c = ClasseAvecProperty(1, 2)
     print(c.x)
     print(c.y)
     c.x = 5

@@ -8,6 +8,7 @@ import os
 from pyquickhelper import TransferFTP, FileTreeNode, FolderTransferFTP, open_window_params
 from pyquickhelper.filehelper.ftp_transfer_files import content_as_binary as pqh_content_as_binary
 
+
 def trigger_on_specific_strings(content):
     """
     look for specific string such as
@@ -15,21 +16,23 @@ def trigger_on_specific_strings(content):
     and returns None if it was found or modifies the content to remove it
     """
     strep = [(r"C:\\%s\\__home_\\_data\\" % os.environ["USERNAME"], "somewhere"),
-              ("C:\\%s\\__home_\\_data\\" % os.environ["USERNAME"], "somewhere"),
-              ]
-    for s,b in strep:
+             ("C:\\%s\\__home_\\_data\\" %
+              os.environ["USERNAME"], "somewhere"),
+             ]
+    for s, b in strep:
         if s in content:
             content = content.replace(s, b)
 
     lower_content = content.lower()
     for st in ["USERNAME", "USERDNSDOMAIN", "HOMEPATH", "USERNAME",
-                "COMPUTERNAME", "LOGONSERVER"]:
+               "COMPUTERNAME", "LOGONSERVER"]:
         if st in os.environ:
             s = os.environ[st].lower()
             if s in lower_content:
                 raise Exception("string {0}:{1} was found".format(st, s))
                 return None
     return content
+
 
 def content_as_binary(filename):
     """
@@ -44,20 +47,22 @@ def content_as_binary(filename):
     if pqh_content_as_binary(filename):
         return True
     ff = os.path.split(filename)[-1]
-    if ff == "footer.html" : return True
+    if ff == "footer.html":
+        return True
     return False
 
+
 def publish_documentation(
-                docs,
-                ftpsite         = None,
-                login           = None,
-                password        = None,
-                key_save        = "my_password",
-                footer_html     = None,
-                content_filter  = trigger_on_specific_strings,
-                is_binary       = content_as_binary,
-                fLOG            = print
-                ):
+    docs,
+    ftpsite=None,
+    login=None,
+    password=None,
+    key_save="my_password",
+    footer_html=None,
+    content_filter=trigger_on_specific_strings,
+    is_binary=content_as_binary,
+    fLOG=print
+):
     """
     publish the documentation and the setups of a python module on a webiste,
     it assumes the modules is organized the same way as
@@ -140,16 +145,20 @@ def publish_documentation(
 
     """
 
-    params = {"ftpsite":ftpsite,
-              "login":login,
-              "password":password,
+    params = {"ftpsite": ftpsite,
+              "login": login,
+              "password": password,
               }
 
-    nbnone = len ( [ v for k,v in params.items() if v is None or len(v) == 0 ] )
+    nbnone = len([v for k, v in params.items() if v is None or len(v) == 0])
     if nbnone > 0:
-        params = open_window_params (params, title="Website and Credentials", help_string = "ftp site + login + password", key_save=key_save)
+        params = open_window_params(
+            params,
+            title="Website and Credentials",
+            help_string="ftp site + login + password",
+            key_save=key_save)
 
-    nbnone = [ v for k,v in params.items() if v is None or len(v) == 0 ]
+    nbnone = [v for k, v in params.items() if v is None or len(v) == 0]
     if len(nbnone) > 0:
         raise Exception("one of the parameters is None:\n" + str(nbnone))
 
@@ -158,9 +167,9 @@ def publish_documentation(
     ftpsite = params["ftpsite"]
 
     ftp = TransferFTP(ftpsite,
-                    login,
-                    password,
-                    fLOG=fLOG)
+                      login,
+                      password,
+                      fLOG=fLOG)
 
     for project in docs:
 
@@ -168,31 +177,30 @@ def publish_documentation(
         root_local = project["root_local"]
         root_web = project["root_web"]
 
-        fLOG("-------------------------",location)
+        fLOG("-------------------------", location)
 
         sfile = project["status_file"]
         rootw = project["root_web"]
 
-        ftn  = FileTreeNode(root_local)
-        fftp = FolderTransferFTP (ftn, ftp, sfile,
-                            root_web = rootw,
-                            fLOG=fLOG,
-                            footer_html = footer_html,
-                            content_filter=content_filter,
-                            is_binary=is_binary)
+        ftn = FileTreeNode(root_local)
+        fftp = FolderTransferFTP(ftn, ftp, sfile,
+                                 root_web=rootw,
+                                 fLOG=fLOG,
+                                 footer_html=footer_html,
+                                 content_filter=content_filter,
+                                 is_binary=is_binary)
 
         fftp.start_transfering()
 
-        ftn  = FileTreeNode(os.path.join(root_local,".."),
-                            filter = lambda root, path, f, dir: not dir)
-        fftp = FolderTransferFTP (ftn, ftp, sfile,
-                            root_web = root_web.replace("helpsphinx",""),
-                            fLOG=fLOG,
-                            footer_html = footer_html,
-                            content_filter=content_filter,
-                            is_binary=is_binary)
+        ftn = FileTreeNode(os.path.join(root_local, ".."),
+                           filter=lambda root, path, f, dir: not dir)
+        fftp = FolderTransferFTP(ftn, ftp, sfile,
+                                 root_web=root_web.replace("helpsphinx", ""),
+                                 fLOG=fLOG,
+                                 footer_html=footer_html,
+                                 content_filter=content_filter,
+                                 is_binary=is_binary)
 
         fftp.start_transfering()
-
 
     ftp.close()

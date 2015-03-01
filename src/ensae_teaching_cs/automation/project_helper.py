@@ -2,15 +2,17 @@
 @file
 @brief Some automation helpers to grab mails from student about project.
 """
-import re, os
+import re
+import os
 import pymmails
 from pyquickhelper import noLOG, run_cmd, remove_diacritics
 
-_email_regex  = re.compile("[*] *e?mails? *: *([^*+]+)")
+_email_regex = re.compile("[*] *e?mails? *: *([^*+]+)")
 _gitlab_regex = re.compile("[*] *gitlab *: *([^*+]+[.]git)")
 _video_regex = re.compile("[*] *videos? *: *([^*\\n]+)")
 
-def grab_mails(mailbox, emails, subfolder, date, no_domain=False, fLOG = noLOG):
+
+def grab_mails(mailbox, emails, subfolder, date, no_domain=False, fLOG=noLOG):
     """
     look for some emails in a mail box
     from specific emails or sent to specific emails
@@ -23,7 +25,7 @@ def grab_mails(mailbox, emails, subfolder, date, no_domain=False, fLOG = noLOG):
     @param      fLOG            logging function
     @return                     list of emails
     """
-    res = [ ]
+    res = []
     for m in emails:
         ms = m.split('@')[0] if no_domain else m
         iter = mailbox.enumerate_search_person(ms, subfolder, date=date)
@@ -32,7 +34,8 @@ def grab_mails(mailbox, emails, subfolder, date, no_domain=False, fLOG = noLOG):
         res.extend(mails)
     return res
 
-def get_regex(path, regex, suivi = "suivi.rst"):
+
+def get_regex(path, regex, suivi="suivi.rst"):
     """
     retrieve data from file ``suivi.rst`` using a regular expression
 
@@ -42,24 +45,28 @@ def get_regex(path, regex, suivi = "suivi.rst"):
     """
     if not os.path.exists(path):
         raise FileNotFoundError(path)
-    filename = os.path.join( path, suivi)
+    filename = os.path.join(path, suivi)
     if not os.path.exists(filename):
         raise FileNotFoundError(filename)
 
-    with open(filename, "r", encoding="utf8") as f :
+    with open(filename, "r", encoding="utf8") as f:
         content = f.read()
 
     mails = regex.findall(content)
     if len(mails) == 0:
-        raise Exception("unable to find the regular expression {0} in {1}".format(regex.pattern, filename))
+        raise Exception(
+            "unable to find the regular expression {0} in {1}".format(
+                regex.pattern,
+                filename))
 
-    allmails = [ ]
+    allmails = []
     for m in mails:
-        allmails.extend ( m.strip("\n\r\t ").split(";") )
+        allmails.extend(m.strip("\n\r\t ").split(";"))
 
     return allmails
 
-def get_emails(path, suivi = "suivi.rst"):
+
+def get_emails(path, suivi="suivi.rst"):
     """
     retrieve student emails from file ``suivi.rst``
 
@@ -69,13 +76,18 @@ def get_emails(path, suivi = "suivi.rst"):
     """
     global _email_regex
     allmails = get_regex(path, _email_regex, suivi)
-    for a in allmails :
+    for a in allmails:
         ff = a.split("@")
         if len(ff) != 2:
-            raise Exception("unable to understand mail {0} in {1} (suivi={2} (mail separator is ;)".format(a, path, suivi))
+            raise Exception(
+                "unable to understand mail {0} in {1} (suivi={2} (mail separator is ;)".format(
+                    a,
+                    path,
+                    suivi))
     return allmails
 
-def get_videos(path, suivi = "suivi.rst"):
+
+def get_videos(path, suivi="suivi.rst"):
     """
     retrieve student emails from file ``suivi.rst``
 
@@ -86,14 +98,15 @@ def get_videos(path, suivi = "suivi.rst"):
     global _video_regex
     return get_regex(path, _video_regex, suivi)
 
+
 def dump_mails_project(path,
-                    mailbox,
-                    subfolder,
-                    date,
-                    suivi = "suivi.rst",
-                    dest = "emails",
-                    no_domain = False,
-                    fLOG = noLOG):
+                       mailbox,
+                       subfolder,
+                       date,
+                       suivi="suivi.rst",
+                       dest="emails",
+                       no_domain=False,
+                       fLOG=noLOG):
     """
     This function extract emails from a mailbox
     received from or sent to people
@@ -147,17 +160,17 @@ def dump_mails_project(path,
     """
     allmails = get_emails(path, suivi)
 
-    fLOG("emails",allmails)
-    listmails = grab_mails(emails = allmails, mailbox=mailbox,
+    fLOG("emails", allmails)
+    listmails = grab_mails(emails=allmails, mailbox=mailbox,
                            subfolder=subfolder, date=date, fLOG=fLOG,
                            no_domain=no_domain)
 
-    absdest = os.path.join( path, dest)
+    absdest = os.path.join(path, dest)
     fs = mailbox.dump_html(listmails, absdest)
 
-    memo = [ ]
-    for mail,filename in fs:
-        memo.append ( (mail.get_date(), filename, mail) )
+    memo = []
+    for mail, filename in fs:
+        memo.append((mail.get_date(), filename, mail))
     memo.sort()
 
     index = os.path.join(path, "index_mail.html")
@@ -168,12 +181,17 @@ def dump_mails_project(path,
             fr = mail.get_from()[1]
             dt = date
             su = mail.get_field("subject")
-            li = '<li><a href="{0}">{1} - from {2} - {3}</a></li>\n'.format(filename, dt, fr, su)
+            li = '<li><a href="{0}">{1} - from {2} - {3}</a></li>\n'.format(
+                filename,
+                dt,
+                fr,
+                su)
             ff.write(li)
         ff.write("</ul>\n")
         ff.write("</body></html>\n")
 
-    return [ _[1] for _ in memo ] + [ index ]
+    return [_[1] for _ in memo] + [index]
+
 
 def git_url_user_password(url_https, user, password):
     """
@@ -185,28 +203,31 @@ def git_url_user_password(url_https, user, password):
     @param      password        part 2 of the credentials
     @return                     url
     """
-    url_user = url_https.replace("https://", "https://{0}:{1}@".format(user, password))
+    url_user = url_https.replace(
+        "https://", "https://{0}:{1}@".format(user, password))
     return url_user
+
 
 def git_check_error(out, err, fLOG):
     """
     private function, analyse the output
     """
-    if len(out) > 0 :
+    if len(out) > 0:
         fLOG("OUT:\n" + out)
-    if len(err) > 0 :
+    if len(err) > 0:
         if "error" in err.lower():
-            raise Exception("OUT:\n{0}\nERR:\n{1}".format(out,err))
+            raise Exception("OUT:\n{0}\nERR:\n{1}".format(out, err))
         fLOG("ERR:\n" + err)
 
+
 def git_clone(
-            local_folder,
-            url_https,
-            user = None,
-            password = None,
-            timeout = 60,
-            init = True,
-            fLOG = noLOG):
+        local_folder,
+        url_https,
+        user=None,
+        password=None,
+        timeout=60,
+        init=True,
+        fLOG=noLOG):
     """
     clone a project from a git repository in a non empty local folder,
     it requires `GIT <http://git-scm.com/>`_ to be installed
@@ -271,15 +292,16 @@ def git_clone(
             raise Exception("folder {0} should not exist".format(local_folder))
 
         if not os.path.exists(hg):
-            cmds= """
+            cmds = """
                     cd {0}
                     git init
                     git remote add origin {1}
                     git fetch
-                    """.format(local_folder, url_user).replace("                    ","").strip(" \n\r\t")
-            cmd = cmds.replace("\n","&")
-            sin = "" #"{0}\n".format(password)
-            out, err = run_cmd(cmd, sin=sin,wait=True, timeout=timeout, fLOG=fLOG)
+                    """.format(local_folder, url_user).replace("                    ", "").strip(" \n\r\t")
+            cmd = cmds.replace("\n", "&")
+            sin = ""  # "{0}\n".format(password)
+            out, err = run_cmd(
+                cmd, sin=sin, wait=True, timeout=timeout, fLOG=fLOG)
             git_check_error(out, err, fLOG)
 
         return local_folder
@@ -292,31 +314,33 @@ def git_clone(
         if os.path.exists(hg):
             raise Exception("folder {0} should not exist".format(local_folder))
 
-        final = os.path.split(url_user)[-1].replace(".git","")
+        final = os.path.split(url_user)[-1].replace(".git", "")
         locf = os.path.join(local_folder, final)
         if os.path.exists(locf):
-            raise Exception("folder {0} should not exists before cloning".format(locf))
+            raise Exception(
+                "folder {0} should not exists before cloning".format(locf))
 
-        cmds= """
+        cmds = """
                 cd {0}
                 git clone {1} .
-                """.format(local_folder, url_user).replace("                ","").strip(" \n\r\t")
-        cmd = cmds.replace("\n","&")
-        sin = "" #"{0}\n".format(password)
-        out, err = run_cmd(cmd, sin=sin,wait=True, timeout=timeout, fLOG=fLOG)
+                """.format(local_folder, url_user).replace("                ", "").strip(" \n\r\t")
+        cmd = cmds.replace("\n", "&")
+        sin = ""  # "{0}\n".format(password)
+        out, err = run_cmd(cmd, sin=sin, wait=True, timeout=timeout, fLOG=fLOG)
         git_check_error(out, err, fLOG)
 
         return locf
 
+
 def git_change_remote_origin(
-                        local_folder,
-                        url_https,
-                        user = None,
-                        password = None,
-                        add_fetch = False,
-                        timeout = 10,
-                        fLOG = noLOG
-                        ):
+    local_folder,
+    url_https,
+    user=None,
+    password=None,
+    add_fetch=False,
+    timeout=10,
+    fLOG=noLOG
+):
     """
     Change the origin of the repository. The url and the password
     refer to the new repository.
@@ -337,26 +361,27 @@ def git_change_remote_origin(
 
     """
     url_user = git_url_user_password(url_https, user, password)
-    cmds= """
+    cmds = """
             cd {0}
             git remote remove origin
             git remote add origin {1}
-            """.format(local_folder, url_user).replace("            ","").strip(" \n\r\t")
+            """.format(local_folder, url_user).replace("            ", "").strip(" \n\r\t")
     if add_fetch:
         cmds += "\ngit fetch"
-    cmd = cmds.replace("\n","&")
-    sin = "" #"{0}\n".format(password)
-    out, err = run_cmd(cmd, sin=sin,wait=True, timeout=timeout, fLOG=fLOG)
+    cmd = cmds.replace("\n", "&")
+    sin = ""  # "{0}\n".format(password)
+    out, err = run_cmd(cmd, sin=sin, wait=True, timeout=timeout, fLOG=fLOG)
     git_check_error(out, err, fLOG)
 
+
 def git_commit_all(
-            local_folder,
-            url_https,
-            message,
-            user = None,
-            password = None,
-            timeout = 300,
-            fLOG = noLOG):
+        local_folder,
+        url_https,
+        message,
+        user=None,
+        password=None,
+        timeout=300,
+        fLOG=noLOG):
     """
     from a git repository,
     it requires `GIT <http://git-scm.com/>`_ to be installed
@@ -383,24 +408,25 @@ def git_commit_all(
 
     """
     #url_user = git_url_user_password(url_https, user, password)
-    cmds= """
+    cmds = """
             cd {0}
             git add -A
             git commit -m "{1}"
             git push -u origin master
-            """.format(local_folder, message).replace("            ","").strip(" \n\r\t")
-    cmd = cmds.replace("\n","&")
-    sin = "" #"{0}\n".format(password)
-    out, err = run_cmd(cmd, sin=sin,wait=True, timeout=timeout, fLOG=fLOG)
+            """.format(local_folder, message).replace("            ", "").strip(" \n\r\t")
+    cmd = cmds.replace("\n", "&")
+    sin = ""  # "{0}\n".format(password)
+    out, err = run_cmd(cmd, sin=sin, wait=True, timeout=timeout, fLOG=fLOG)
     git_check_error(out, err, fLOG)
 
+
 def git_first_commit_all_projects(
-            local_folder,
-            user = None,
-            password = None,
-            timeout = 300,
-            suivi = "suivi.rst",
-            fLOG = noLOG):
+        local_folder,
+        user=None,
+        password=None,
+        timeout=300,
+        suivi="suivi.rst",
+        fLOG=noLOG):
     """
     @param      local_folder    folder
     @param      user            part 1 of the credentials
@@ -412,21 +438,27 @@ def git_first_commit_all_projects(
     """
     if not os.path.exists(local_folder):
         raise FileNotFoundError(local_folder)
-    filename = os.path.join( local_folder, suivi)
+    filename = os.path.join(local_folder, suivi)
     if not os.path.exists(filename):
         raise FileNotFoundError(filename)
 
-    with open(filename, "r", encoding="utf8") as f :
+    with open(filename, "r", encoding="utf8") as f:
         content = f.read()
 
     global _gitlab_regex
     gitlab = _gitlab_regex.findall(content)
     if len(gitlab) == 0:
-        raise Exception("unable to find the regular expression {0} in {1}".format(_gitlab_regex.pattern, filename))
-    if not isinstance (gitlab, list):
+        raise Exception(
+            "unable to find the regular expression {0} in {1}".format(
+                _gitlab_regex.pattern,
+                filename))
+    if not isinstance(gitlab, list):
         raise TypeError("we expect a list for: " + str(gitlab))
     if len(gitlab) != 1:
-        raise Exception("more than one gitlab repo is mentioned {0} in {1}".format(_gitlab_regex.pattern, filename))
+        raise Exception(
+            "more than one gitlab repo is mentioned {0} in {1}".format(
+                _gitlab_regex.pattern,
+                filename))
     gitlab = gitlab[0]
 
     fLOG("* gitlab", gitlab)
@@ -441,21 +473,22 @@ def git_first_commit_all_projects(
         git_commit_all(local_folder, gitlab,
                        "first commit to " + sub,
                        user=user, password=password, fLOG=print)
-        commit= local_folder, gitlab
+        commit = local_folder, gitlab
 
     return commit
-    
+
+
 def create_folders_from_dataframe(df,
-                        root,
-                        report="suivi.rst",
-                        col_student="Eleves",
-                        col_group="Groupe",
-                        col_subject="Sujet",
-                        overwrite=False,
-                        email_function = None):
+                                  root,
+                                  report="suivi.rst",
+                                  col_student="Eleves",
+                                  col_group="Groupe",
+                                  col_subject="Sujet",
+                                  overwrite=False,
+                                  email_function=None):
     """
     creates a series of folders for groups of students
-    
+
     @param      root            where to create the folders
     @param      col_student     column which contains the student name (firt name + last name)
     @param      col_group       index of the grou
@@ -465,68 +498,73 @@ def create_folders_from_dataframe(df,
     @param      report          report file
     @param      overwrite       if False, skip if the report already exists
     @return                 list of creates folders
-    
+
     The function *email_function* has the following signature::
-        
+
         def email_function(first_name, last_name):
             # ....
     """
-    
+
     def split_name(name):
         name = remove_diacritics(name).split(" ")
-        first = name [-1]
+        first = name[-1]
         last = " ".join(name[:-1])
         return first, last
-        
+
     def ul(last):
         res = ""
-        for i,c in enumerate(last):
-            if c == " " : res += "_"
-            elif i == 0 or last[i-1] in [" ","-","_"]:
+        for i, c in enumerate(last):
+            if c == " ":
+                res += "_"
+            elif i == 0 or last[i - 1] in [" ", "-", "_"]:
                 res += c.upper()
             else:
                 res += c.lower()
         return res
-        
+
     folds = []
-    
+
     gr = df.groupby(col_group)
     for name, group in gr:
-        s = list(set ( group[col_subject].copy() ))
+        s = list(set(group[col_subject].copy()))
         if len(s) > 1:
-            raise Exception("more than one subject for group: " + str(name) + "\n" + str(s))
+            raise Exception(
+                "more than one subject for group: " +
+                str(name) +
+                "\n" +
+                str(s))
         subject = s[0]
-        eleves = list( group[col_student] )
-        names = [ (_,) + split_name(_) for _ in eleves ]
+        eleves = list(group[col_student])
+        names = [(_,) + split_name(_) for _ in eleves]
         eleves.sort()
-        
+
         title = ", ".join(eleves)
-        content = [ title ]
+        content = [title]
         content.append("=" * len(title))
         content.append("")
-        
+
         content.append("* subject: " + title)
         content.append("* G: %d" % int(name))
-        
+
         if email_function is not None:
-            mails = [ email_function(a[1], a[2]) for a in names ]
+            mails = [email_function(a[1], a[2]) for a in names]
             jmail = "; ".join(mails)
-            content.append ("* mails: " + jmail)
-            
+            content.append("* mails: " + jmail)
+
         content.append("")
         content.append("")
-        
-        last = ".".join(  ul(a[-1]) for a in sorted(names)  )
-        
-        folder = os.path.join(root,last)
+
+        last = ".".join(ul(a[-1]) for a in sorted(names))
+
+        folder = os.path.join(root, last)
         filename = os.path.join(folder, report)
-        
+
         if not os.path.exists(folder):
             os.mkdir(folder)
-            
+
         if overwrite or not os.path.exists(filename):
-            with open(filename, "w", encoding="utf8") as f :
+            with open(filename, "w", encoding="utf8") as f:
                 f.write("\n".join(content))
-            
+
             folds.append(folder)
     return folds

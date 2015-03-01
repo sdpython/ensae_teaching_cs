@@ -188,13 +188,14 @@ html_theme_options = {
 
     # Parallax background image
     # CSS syntax, e.g. "a.jpg"
-    "parallax_background_image": '', #a.jpg',
+    "parallax_background_image": '',  # a.jpg',
 
     # Parallax background size
     # CSS syntax, e.g. "3000px 2000px"
-    "parallax_background_size": '', #3000px 2000px',
+    "parallax_background_size": '',  # 3000px 2000px',
 
-    # Focuses body when page changes visibility to ensure keyboard shortcuts work
+    # Focuses body when page changes visibility to ensure keyboard shortcuts
+    # work
     "focus_body_on_page_visibility_change": True,
 
     # Number of slides away from the current that are visible
@@ -300,22 +301,22 @@ htmlhelp_basename = 'ensae_1a'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
+    # The paper size ('letterpaper' or 'a4paper').
+    #'papersize': 'letterpaper',
 
-# The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
+    # The font size ('10pt', '11pt' or '12pt').
+    #'pointsize': '10pt',
 
-# Additional stuff for the LaTeX preamble.
-#'preamble': '',
+    # Additional stuff for the LaTeX preamble.
+    #'preamble': '',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'ensae_1a.tex', 'ENSAE 1A Programmation',
-   'Xavier Dupré', 'manual'),
+    ('index', 'ensae_1a.tex', 'ENSAE 1A Programmation',
+     'Xavier Dupré', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -358,9 +359,9 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Prsentation', 'Présentation Documentation',
-   'Xavier Dupré', 'ensae_1a', 'Présentation du cours, ENSAE 1A - Programmation',
-   '1h'),
+    ('index', 'Prsentation', 'Présentation Documentation',
+     'Xavier Dupré', 'ensae_1a', 'Présentation du cours, ENSAE 1A - Programmation',
+     '1h'),
 ]
 
 # Documents to append as an appendix to all manuals.

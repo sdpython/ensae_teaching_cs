@@ -5,6 +5,7 @@
 
 """
 
+
 def notebook_path():
     """
     change matplotlib style
@@ -32,6 +33,7 @@ def notebook_path():
     """
     pass
 
+
 def fix_table_notebook():
     """
     @FAQ(ipython___Table des matières à position fixe dans un notebook)
@@ -55,6 +57,7 @@ def fix_table_notebook():
     """
     pass
 
+
 def r_and_notebook():
     """
     @example(techniques___Utiliser R depuis un notebook)
@@ -73,6 +76,7 @@ def r_and_notebook():
 
     """
     pass
+
 
 def ipython_convert_notebooks():
     """
@@ -98,6 +102,7 @@ def ipython_convert_notebooks():
 
     """
     pass
+
 
 def ipython_get_variable(name, magic_command_instance):
     """
@@ -134,7 +139,8 @@ def ipython_get_variable(name, magic_command_instance):
     @endFAQ
     """
     if magic_command_instance.shell is None:
-        raise Exception("no context, you probably execute this function outside a notebook")
+        raise Exception(
+            "no context, you probably execute this function outside a notebook")
     if name not in magic_command_instance.shell.user_ns:
         raise KeyError("variable {0} not found".format(name))
     return magic_command_instance.shell.user_ns[name]

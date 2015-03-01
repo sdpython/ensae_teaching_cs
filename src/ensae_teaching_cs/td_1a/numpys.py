@@ -7,6 +7,7 @@ classiques.
 
 from functools import reduce
 
+
 def numpy_matrix2list(mat):
     """
     Convertit une matrice `numpy <http://www.numpy.org/>`_ en list.

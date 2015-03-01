@@ -9,6 +9,7 @@ from IPython.core.magic import Magics, magics_class, line_magic, cell_magic
 from IPython.core.magic import line_cell_magic
 from IPython.core.display import HTML
 
+
 @magics_class
 class CustomMagics(Magics):
 
@@ -21,9 +22,11 @@ class CustomMagics(Magics):
 
         """
         if "site" in line:
-            return HTML('<a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html">ENSAE TD</a>')
-        elif "blog" in line :
-            return HTML('<a href="http://www.xavierdupre.fr/blog/xd_blog_nojs.html">blog</a>')
+            return HTML(
+                '<a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html">ENSAE TD</a>')
+        elif "blog" in line:
+            return HTML(
+                '<a href="http://www.xavierdupre.fr/blog/xd_blog_nojs.html">blog</a>')
         else:
             raise Exception("unknown command: " + line)
 
@@ -56,13 +59,13 @@ class CustomMagics(Magics):
             line = line.strip()
             if line.startswith("download"):
                 spl = line.split()
-                if len(spl)==2:
+                if len(spl) == 2:
                     import pyensae
                     r = pyensae.download_data(spl[1])
                     return r
-                else :
+                else:
                     raise Exception("unable to interpret: " + line)
-            else :
+            else:
                 return self.ENSAEl(line)
         else:
             raise Exception("unable to interpret:\n" + cell)
@@ -85,10 +88,10 @@ class CustomMagics(Magics):
             filename = " ".join(spl[1:]) if len(spl) > 1 else ""
 
         if lang == "-h":
-            print(  "Usage: "
-                    "   %%SPEAK fr-FR [filename]"
-                    "   speech")
-        else :
+            print("Usage: "
+                  "   %%SPEAK fr-FR [filename]"
+                  "   speech")
+        else:
             vocal_synthesis(cell, lang, filename)
 
     @cell_magic
@@ -124,22 +127,23 @@ class CustomMagics(Magics):
         if line is not None:
             spl = line.strip().split(" ")
             name = spl[0]
-            deps = spl[1].split(";") if len(spl)>1 else ""
-            suse = spl[2].split(";") if len(spl)>2 else ""
+            deps = spl[1].split(";") if len(spl) > 1 else ""
+            suse = spl[2].split(";") if len(spl) > 2 else ""
 
         if name == "-h":
-            print(  "Usage: "
-                    "   %%CS function_name [dependency1;dependency2] [System;System.Linq]"
-                    "   function code")
-        else :
+            print("Usage: "
+                  "   %%CS function_name [dependency1;dependency2] [System;System.Linq]"
+                  "   function code")
+        else:
             try:
                 f = create_cs_function(name, cell, deps, suse)
-            except Exception as e :
+            except Exception as e:
                 print(e)
                 return
             if self.shell is not None:
                 self.shell.user_ns[name] = f
             return f
+
 
 def register_magics():
     """

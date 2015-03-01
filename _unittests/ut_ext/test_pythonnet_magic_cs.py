@@ -2,21 +2,39 @@
 @brief      test log(time=1s)
 """
 
-import sys, os, unittest, re
+import sys
+import os
+import unittest
+import re
 
 
-try :
+try:
     import src
-except ImportError :
-    path = os.path.normpath(os.path.abspath( os.path.join( os.path.split(__file__)[0], "..", "..")))
-    if path not in sys.path : sys.path.append (path)
+except ImportError:
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..")))
+    if path not in sys.path:
+        sys.path.append(path)
     import src
 
-try :
+try:
     import pyquickhelper
-except ImportError :
-    path = os.path.normpath(os.path.abspath( os.path.join( os.path.split(__file__)[0], "..", "..", "..", "pyquickhelper", "src")))
-    if path not in sys.path : sys.path.append (path)
+except ImportError:
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..",
+                "..",
+                "pyquickhelper",
+                "src")))
+    if path not in sys.path:
+        sys.path.append(path)
     import pyquickhelper
 
 from pyquickhelper import fLOG
@@ -26,13 +44,16 @@ from src.ensae_teaching_cs.td_2a.pythoncs import create_cs_function, run_cs_func
 class TestPythonnetMagicCS(unittest.TestCase):
 
     def test_magic_cs(self):
-        fLOG (__file__, self._testMethodName, OutputPrint = __name__ == "__main__")
+        fLOG(
+            __file__,
+            self._testMethodName,
+            OutputPrint=__name__ == "__main__")
         if sys.platform.startswith("win"):
             code = "public static double SquareX(double x) {return x*x ; }"
             f = create_cs_function("SquareX", code)
-            r = f ( 2.0 )
-            fLOG(r,type(r))
+            r = f(2.0)
+            fLOG(r, type(r))
             assert r == 4
 
-if __name__ == "__main__"  :
-    unittest.main ()
+if __name__ == "__main__":
+    unittest.main()

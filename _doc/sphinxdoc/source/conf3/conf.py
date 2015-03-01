@@ -4,16 +4,23 @@
 # sphinx-quickstart on Fri May 10 18:35:14 2013.
 #
 
-import sys, os, datetime, re
+import sys
+import os
+import datetime
+import re
 #import solar_theme
 import sphinx_bootstrap_theme
 
 
-source_path = os.path.normpath(os.path.join(os.path.abspath(os.path.split(__file__)[0]),".."))
+source_path = os.path.normpath(
+    os.path.join(
+        os.path.abspath(
+            os.path.split(__file__)[0]),
+        ".."))
 
-try :
+try:
     from conf_base import *
-except ImportError :
+except ImportError:
     sys.path.append(source_path)
     from conf_base import *
 
@@ -23,7 +30,7 @@ except ImportError :
 html_theme = 'bootstrap'
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 
-templates_path = [ os.path.join(source_path,'phdoc_static3') ]
+templates_path = [os.path.join(source_path, 'phdoc_static3')]
 html_static_path = templates_path
 
 if not os.path.exists(templates_path[0]):
@@ -39,7 +46,9 @@ if html_theme == "bootstrap":
         'navbar_links': [
             ("XD", "http://www.xavierdupre.fr", True),
             ("blog", "http://www.xavierdupre.fr/blog/xd_blog_nojs.html", True),
-            ("pyensae", "http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html", True),
+            ("pyensae",
+             "http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html",
+             True),
         ],
         'navbar_sidebarrel': True,
         'navbar_pagenav': True,

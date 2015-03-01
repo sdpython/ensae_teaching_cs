@@ -3,9 +3,13 @@
 @file
 @brief Helpers autour de C#
 """
-import os, sys, copy, random
+import os
+import sys
+import copy
+import random
 
-def create_cs_function(name, code, dependencies = None, usings = None):
+
+def create_cs_function(name, code, dependencies=None, usings=None):
     """
     creates a C# function from a string
 
@@ -20,24 +24,25 @@ def create_cs_function(name, code, dependencies = None, usings = None):
     from System import String
     from System.Collections.Generic import List
 
-    if dependencies is not None and len(dependencies) > 0 :
+    if dependencies is not None and len(dependencies) > 0:
         myarray = List[String]()
-        for i,d in enumerate(dependencies):
-            myarray.Add( d )
+        for i, d in enumerate(dependencies):
+            myarray.Add(d)
         myarray = myarray.ToArray()
     else:
         myarray = List[String]().ToArray()
 
-    if usings is not None and len(usings) > 0 :
+    if usings is not None and len(usings) > 0:
         myusings = List[String]()
-        for i,d in enumerate(usings):
-            myusings.Add( d )
+        for i, d in enumerate(usings):
+            myusings.Add(d)
         myusings = myusings.ToArray()
     else:
         myusings = List[String]().ToArray()
 
     obj = MagicCS.CreateFunction(name, code, myarray, myusings)
     return lambda *params: run_cs_function(obj, params)
+
 
 def run_cs_function(func, params):
     """
@@ -53,9 +58,10 @@ def run_cs_function(func, params):
     from System import Object
 
     par = List[Object]()
-    for p in params :
-        par.Add ( p )
+    for p in params:
+        par.Add(p)
     return MagicCS.RunFunction(func, par.ToArray())
+
 
 def list2arrayint(li):
     """
@@ -64,6 +70,6 @@ def list2arrayint(li):
     from ..pythonnet import import_magic_cs
     MagicCS = import_magic_cs()
     par = MagicCS.NewListIntLong()
-    for i in li :
+    for i in li:
         par.Add(i)
     return par.ToArray()

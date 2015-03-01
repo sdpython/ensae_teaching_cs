@@ -6,7 +6,9 @@
 
 from flask import Response
 
-import traceback, threading
+import traceback
+import threading
+
 
 def Text2Response(text):
     """
@@ -17,6 +19,7 @@ def Text2Response(text):
     """
     return Response(text, mimetype='text/plain')
 
+
 def Exception2Response(e):
     """
     convert an exception into plain text and display the stack trace
@@ -25,13 +28,15 @@ def Exception2Response(e):
     @return                 textReponse
     """
     text = traceback.format_exc()
-    return Text2Response("Exception: {0}\nSTACK:\n{1}".format(str(e),text))
+    return Text2Response("Exception: {0}\nSTACK:\n{1}".format(str(e), text))
 
 
 class FlaskInThread (threading.Thread):
+
     """
     defines a thread for the server
     """
+
     def __init__(self, app, host="localhost", port=8080):
         """
         constructor
@@ -48,7 +53,7 @@ class FlaskInThread (threading.Thread):
         """
         start the server
         """
-        self._app.run(host=self._host,port=self._port)
+        self._app.run(host=self._host, port=self._port)
 
     def shutdown(self):
         """
@@ -61,5 +66,5 @@ class FlaskInThread (threading.Thread):
               method `app.Flask.run <https://github.com/mitsuhiko/flask/blob/master/flask/app.py>`_
         """
         raise NotImplementedError()
-        #self.server.shutdown()
-        #self.server.server_close()
+        # self.server.shutdown()
+        # self.server.server_close()

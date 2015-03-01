@@ -4,12 +4,14 @@
 @brief  quelques fonctions sur l'optimisation quadratique avec contraintes
 """
 
-import numpy,random
+import numpy
+import random
 
 from cvxopt import solvers, matrix
 import random
 
-def f_df_H(x=None,z=None) :
+
+def f_df_H(x=None, z=None):
     """
     fonction demandée par la fonction
     `solvers.cp <http://cvxopt.org/userguide/solvers.html#problems-with-nonlinear-objectives>`_.
@@ -27,22 +29,23 @@ def f_df_H(x=None,z=None) :
     :math:`\\left \\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ \\text{sous contrainte} \\; x + 2y = 1 \\end{array}\\right .`
 
     """
-    if x is None :
+    if x is None:
         # cas 1
-        x0 = matrix ( [[ random.random(), random.random() ]])
-        return 0,x0
-    f = x[0]**2 + x[1]**2 - x[0]*x[1] + x[1]
-    d = matrix ( [ x[0]*2 - x[1], x[1]*2 - x[0] + 1 ] ).T
-    h = matrix ( [ [ 2.0, -1.0], [-1.0, 2.0] ])
+        x0 = matrix([[random.random(), random.random()]])
+        return 0, x0
+    f = x[0]**2 + x[1]**2 - x[0] * x[1] + x[1]
+    d = matrix([x[0] * 2 - x[1], x[1] * 2 - x[0] + 1]).T
+    h = matrix([[2.0, -1.0], [-1.0, 2.0]])
     if z is None:
         # cas 2
-        return  f, d
-    else :
+        return f, d
+    else:
         # cas 3
         return f, d, h
 
-def Arrow_Hurwicz(F, C, X0, p0, epsilon = 0.1, rho = 0.1,
-                do_print = True):
+
+def Arrow_Hurwicz(F, C, X0, p0, epsilon=0.1, rho=0.1,
+                  do_print=True):
     """
 
     .. _code_Arrow_Hurwicz:
@@ -63,40 +66,51 @@ def Arrow_Hurwicz(F, C, X0, p0, epsilon = 0.1, rho = 0.1,
     """
     diff = 1
     iter = 0
-    while diff > 1e-10 :
-        f,d   = F( X0 )
-        th,dt = C( X0 )
-        Xt    = [ X0[i] - epsilon*(d[i] + dt[i] * p0) for i in range(len(X0)) ]
+    while diff > 1e-10:
+        f, d = F(X0)
+        th, dt = C(X0)
+        Xt = [X0[i] - epsilon * (d[i] + dt[i] * p0) for i in range(len(X0))]
 
-        th,dt = C( Xt )
-        pt    = p0 + rho * th
+        th, dt = C(Xt)
+        pt = p0 + rho * th
 
         iter += 1
-        diff = sum ( [ abs(Xt[i] - X0[i]) for i in range(len(X0)) ] )
+        diff = sum([abs(Xt[i] - X0[i]) for i in range(len(X0))])
         X0 = Xt
         p0 = pt
-        if do_print and iter % 100 == 0 :
-            print ("i {0} diff {1:0.000}".format(iter,diff),":", f,X0,p0,th)
+        if do_print and iter % 100 == 0:
+            print(
+                "i {0} diff {1:0.000}".format(
+                    iter,
+                    diff),
+                ":",
+                f,
+                X0,
+                p0,
+                th)
 
-    return {'x':X0, 'iteration':iter }
+    return {'x': X0, 'iteration': iter}
 
-def f_df(X) :
+
+def f_df(X):
     """
     F dans @see fn Arrow_Hurwicz
     """
-    x,y = X
-    f = x**2 + y**2 - x*y + y
-    d = [ x*2 - y, y*2 - x + 1  ]
+    x, y = X
+    f = x**2 + y**2 - x * y + y
+    d = [x * 2 - y, y * 2 - x + 1]
     return f, d
 
-def contrainte(X) :
+
+def contrainte(X):
     """
     C dans @see fn Arrow_Hurwicz
     """
-    x,y = X
-    f = x+2*y-1
-    d = [ 1,2]
+    x, y = X
+    f = x + 2 * y - 1
+    d = [1, 2]
     return f, d
+
 
 def exercice_particulier1():
     """
@@ -133,11 +147,12 @@ def exercice_particulier1():
     """
     t = solvers.options.get('show_progress', True)
     solvers.options['show_progress'] = False
-    A = matrix([ [ 1.0, 2.0 ] ]).trans()
-    b = matrix ( [[ 1.0] ] )
-    sol = solvers.cp ( f_df_H, A = A, b = b)
+    A = matrix([[1.0, 2.0]]).trans()
+    b = matrix([[1.0]])
+    sol = solvers.cp(f_df_H, A=A, b=b)
     solvers.options['show_progress'] = t
     return sol
+
 
 def exercice_particulier2():
     """
@@ -167,8 +182,8 @@ def exercice_particulier2():
     @endcode
     @endexample
     """
-    X0  = [ random.random(),random.random() ]
-    p0  = random.random()
+    X0 = [random.random(), random.random()]
+    p0 = random.random()
     sol = Arrow_Hurwicz(f_df, contrainte, X0, p0, do_print=False)
     return sol
 
@@ -176,8 +191,8 @@ if __name__ == "__main__":
     sol1 = exercice_particulier1()
     sol2 = exercice_particulier2()
     print("cvxopt")
-    print (sol1)
-    print ("solution:",sol1['x'].T)
+    print(sol1)
+    print("solution:", sol1['x'].T)
     print("Arrow_Hurwicz")
-    print (sol2)
-    print ("solution:",sol2['x'])
+    print(sol2)
+    print("solution:", sol2['x'])

@@ -3,9 +3,11 @@
 @file
 @brief Some automation helpers to test notebooks and check they are still working fine.
 """
-import os, sys
+import os
+import sys
 from pyquickhelper import noLOG
 from pyquickhelper.ipythonhelper.notebook_helper import run_notebook
+
 
 def ls_notebooks(subfolder):
     """
@@ -15,15 +17,28 @@ def ls_notebooks(subfolder):
     @return                 list of files
     """
     this = os.path.abspath(os.path.dirname(__file__))
-    docnote = os.path.join(this, "..", "..", "..", "_doc", "notebooks", subfolder)
-    notes = [ os.path.normpath(os.path.join(docnote, _)) for _ in os.listdir(docnote) ]
+    docnote = os.path.join(
+        this,
+        "..",
+        "..",
+        "..",
+        "_doc",
+        "notebooks",
+        subfolder)
+    notes = [
+        os.path.normpath(
+            os.path.join(
+                docnote,
+                _)) for _ in os.listdir(docnote)]
 
-    keepnote = [ ]
-    for i,note in enumerate(notes):
+    keepnote = []
+    for i, note in enumerate(notes):
         ext = os.path.splitext(note)[-1]
-        if ext != ".ipynb" : continue
+        if ext != ".ipynb":
+            continue
         keepnote.append(note)
     return keepnote
+
 
 def get_additional_paths():
     """
@@ -32,14 +47,17 @@ def get_additional_paths():
 
     @return             list of paths
     """
-    import pyquickhelper, pyensae, pymmails
-    addpath = [ os.path.dirname(pyquickhelper.__file__),
-                os.path.dirname(pyensae.__file__),
-                os.path.dirname(pymmails.__file__),
-                os.path.join(os.path.abspath(os.path.dirname(__file__)),".."),
-                ]
-    addpath = [ os.path.normpath(os.path.join(_,"..")) for _ in addpath ]
+    import pyquickhelper
+    import pyensae
+    import pymmails
+    addpath = [os.path.dirname(pyquickhelper.__file__),
+               os.path.dirname(pyensae.__file__),
+               os.path.dirname(pymmails.__file__),
+               os.path.join(os.path.abspath(os.path.dirname(__file__)), ".."),
+               ]
+    addpath = [os.path.normpath(os.path.join(_, "..")) for _ in addpath]
     return addpath
+
 
 def clean_function_1a(code):
     """
@@ -48,7 +66,9 @@ def clean_function_1a(code):
     @param      code        cell content
     @return                 modified code
     """
-    code = code.replace('run_cmd("exemple.xlsx"', 'skip_run_cmd("exemple.xlsx"')
+    code = code.replace(
+        'run_cmd("exemple.xlsx"',
+        'skip_run_cmd("exemple.xlsx"')
 
     skip = ["faire une chose avec la probabilité 0.7",
             "# déclenche une exception",
@@ -63,14 +83,16 @@ def clean_function_1a(code):
             "# ...... à remplir",
             'String.Join(",", a.Select(c=>c.ToString()).ToArray())',
             "# elle n'existe pas encore",
-            "from ggplot import *", # ggplot calls method show and it opens window blocking the offline execution
+            "from ggplot import *",
+            # ggplot calls method show and it opens window blocking the offline
+            # execution
             ]
-    rep = [ ("# ...", "pass # "),
-            ("%timeit", "#%timeit"),
-            ]
-    spl = [ "# ......",
-            "# elle n'existe pas encore",
-            ]
+    rep = [("# ...", "pass # "),
+           ("%timeit", "#%timeit"),
+           ]
+    spl = ["# ......",
+           "# elle n'existe pas encore",
+           ]
 
     for s in skip:
         if s in code:
@@ -85,10 +107,11 @@ def clean_function_1a(code):
 
     return code
 
+
 def execute_notebooks(folder, notebooks, filter,
-                        clean_function = None,
-                        fLOG = noLOG,
-                        deepfLOG = noLOG):
+                      clean_function=None,
+                      fLOG=noLOG,
+                      deepfLOG=noLOG):
     """
     execute a list of notebooks
 
@@ -107,27 +130,30 @@ def execute_notebooks(folder, notebooks, filter,
     """
 
     def valid_cell(cell):
-        if "%system" in cell : return False
-        if "df.plot(...)" in cell : return False
-        if 'df["difference"] = ...' in cell : return False
+        if "%system" in cell:
+            return False
+        if "df.plot(...)" in cell:
+            return False
+        if 'df["difference"] = ...' in cell:
+            return False
         return True
 
     addpath = get_additional_paths()
-    results = { }
-    for i,note in enumerate(notebooks):
-        if filter(i,note):
-            fLOG("******",i,os.path.split(note)[-1])
+    results = {}
+    for i, note in enumerate(notebooks):
+        if filter(i, note):
+            fLOG("******", i, os.path.split(note)[-1])
             outfile = os.path.join(folder, "out_" + os.path.split(note)[-1])
             try:
                 out = run_notebook(note, working_dir=folder, outfilename=outfile,
-                        additional_path = addpath,
-                        valid = valid_cell,
-                        clean_function = clean_function,
-                        fLOG=deepfLOG
-                        )
+                                   additional_path=addpath,
+                                   valid=valid_cell,
+                                   clean_function=clean_function,
+                                   fLOG=deepfLOG
+                                   )
                 if not os.path.exists(outfile):
                     raise FileNotFoundError(outfile)
-                results [ note ] = (True, out)
-            except Exception as e :
-                results [ note ] = (False, e)
+                results[note] = (True, out)
+            except Exception as e:
+                results[note] = (False, e)
     return results

@@ -5,7 +5,8 @@
 
 """
 
-def graph_style(style = 'ggplot'):
+
+def graph_style(style='ggplot'):
     """
 
     change matplotlib style
@@ -28,6 +29,7 @@ def graph_style(style = 'ggplot'):
     import matplotlib.pyplot as plt
     plt.style.use(style)
 
+
 def close_all():
     """
     Close every graph with matploblib
@@ -46,6 +48,7 @@ def close_all():
     import matplotlib.pyplot as plt
     plt.close('all')
 
+
 def zoomable():
     """
     @FAQ(matplotlib___Des graphiques zoomables dans un notebook ?)
@@ -56,15 +59,16 @@ def zoomable():
     """
     pass
 
-def graph_ggplot_with_label(    x,
-                                y,
-                                labels,
-                                bar     = True,
-                                title   = None,
-                                figsize = (6,4),
-                                style   = None,
-                                ax      = None,
-                                **kwargs):
+
+def graph_ggplot_with_label(x,
+                            y,
+                            labels,
+                            bar=True,
+                            title=None,
+                            figsize=(6, 4),
+                            style=None,
+                            ax=None,
+                            **kwargs):
     """
     creates a graph with matplotlib
 
@@ -161,21 +165,27 @@ def graph_ggplot_with_label(    x,
     plt.style.use('ggplot')
     if ax is None:
         plt.close('all')
-        fig,ax = plt.subplots(nrows=1,ncols=1,figsize=(10,4))
+        fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(10, 4))
 
     if bar:
-        if style is None: ax.bar( x,y, **kwargs )
-        else: ax.bar( x,y, style=style, **kwargs)
+        if style is None:
+            ax.bar(x, y, **kwargs)
+        else:
+            ax.bar(x, y, style=style, **kwargs)
     else:
-        if style is None: ax.plot( x,y, **kwargs )
-        else: ax.plot( x,y, style=style, **kwargs)
+        if style is None:
+            ax.plot(x, y, **kwargs)
+        else:
+            ax.plot(x, y, style=style, **kwargs)
     tig = ax.get_xticks()
     xl = labels
-    labs = [ ]
+    labs = []
     for t in tig:
-        if t in x: labs.append(xl[x.index(t)])
-        else: labs.append("")
-    ax.set_xticklabels( labs )
+        if t in x:
+            labs.append(xl[x.index(t)])
+        else:
+            labs.append("")
+    ax.set_xticklabels(labs)
     ax.grid(True)
     if title is not None:
         ax.set_title(title)

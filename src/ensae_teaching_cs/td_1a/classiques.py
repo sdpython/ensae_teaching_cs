@@ -7,6 +7,7 @@
 
 import datetime
 
+
 def commentaire_accentues():
     """
     L'aide de cette fonction contient assuréments des accents.
@@ -47,6 +48,7 @@ def commentaire_accentues():
     """
     pass
 
+
 def dix_entiers_carre():
     """
     fait la somme des dix premiers entiers au carré
@@ -78,9 +80,10 @@ def dix_entiers_carre():
     @endexample
     """
     s = 0
-    for i in range(1,11):
+    for i in range(1, 11):
         s += i**2
     return s
+
 
 def racine_carree(x):
     """
@@ -90,6 +93,7 @@ def racine_carree(x):
     @return         racine carrée
     """
     return x**0.5
+
 
 def repetition_a_eviter(serie):
     """
@@ -145,18 +149,19 @@ def repetition_a_eviter(serie):
 
     def variance_a_eviter(serie):
         s = 0
-        for obs in serie :
-            s += (obs-moyenne(serie))**2
+        for obs in serie:
+            s += (obs - moyenne(serie))**2
         return s / len(serie)
 
     def variance(serie):
         s = 0
         moy = moyenne(serie)
-        for obs in serie :
-            s += (obs-moy)**2
+        for obs in serie:
+            s += (obs - moy)**2
         return s / len(serie)
 
-    return variance (serie)
+    return variance(serie)
+
 
 def dictionnaire_modifie_dans_la_boucle():
     """
@@ -209,22 +214,23 @@ def dictionnaire_modifie_dans_la_boucle():
 
     @endexample
     """
-    l = [ 0 , 1 , 2 , 3 , 4 , 5 , 6 ]
-    for i in l :
-        if i == 2 :
+    l = [0, 1, 2, 3, 4, 5, 6]
+    for i in l:
+        if i == 2:
             l.remove(3)
 
-    d = { k:k for k in l }
-    rem = [ ]
-    for k,v in d.items():
-        if k == 4 :
+    d = {k: k for k in l}
+    rem = []
+    for k, v in d.items():
+        if k == 4:
             rem.append(k)
-    for r in rem :
+    for r in rem:
         del d[r]
 
-    return l,d
+    return l, d
 
-def str2date(s, format = "%d/%m/%Y"):
+
+def str2date(s, format="%d/%m/%Y"):
     """
     convertit une chaîne de caractères en datetime
 
@@ -244,10 +250,10 @@ def str2date(s, format = "%d/%m/%Y"):
     @endexample
 
     """
-    return datetime.datetime.strptime (s, format)
+    return datetime.datetime.strptime(s, format)
 
-if __name__ == "__main__" :
-    l,d = liste_modifie_dans_la_boucle()
-    print(l,d)
+if __name__ == "__main__":
+    l, d = liste_modifie_dans_la_boucle()
+    print(l, d)
     r = repetition_a_eviter(l)
     print(r)

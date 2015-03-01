@@ -7,6 +7,7 @@ classiques.
 
 from functools import reduce
 
+
 def recherche(li, c):
     """
     Retourne l'index d'un élément ou -1 si non trouvé
@@ -48,10 +49,11 @@ def recherche(li, c):
     que la première version et la probabilité d'y faire une erreur plus faible.
     @endexample
     """
-    if c in li :
+    if c in li:
         return li.index(c)
     else:
         return -1
+
 
 def minindex(li):
     """
@@ -88,7 +90,8 @@ def minindex(li):
 
     @endexample
     """
-    return min  ( (v,i) for i,v in enumerate (li) )
+    return min((v, i) for i, v in enumerate(li))
+
 
 def recherche_dichotomique(li, c):
     """
@@ -118,15 +121,19 @@ def recherche_dichotomique(li, c):
     @endcode
     @endexample
     """
-    a,b = 0, len (li)-1
-    while a <= b :
-        m = (a+b)//2
-        if   c == li [m] : return m
-        elif c <  li [m] : b = m-1   # partie supérieure éliminée
-        else             : a = m+1   # partie inférieure éliminée
+    a, b = 0, len(li) - 1
+    while a <= b:
+        m = (a + b) // 2
+        if c == li[m]:
+            return m
+        elif c < li[m]:
+            b = m - 1   # partie supérieure éliminée
+        else:
+            a = m + 1   # partie inférieure éliminée
     return -1  # élément non trouvé
 
-def text2mat(s, sep_row="\n", sep_col = "\t"):
+
+def text2mat(s, sep_row="\n", sep_col="\t"):
     """
     convertit une chaîne de caractères en une matrice ( = liste de listes),
     réciproque de la fonction @see fn mat2text
@@ -161,11 +168,12 @@ def text2mat(s, sep_row="\n", sep_col = "\t"):
 
     @endexample
     """
-    ligne   = s.split (sep_row)                     # lignes
-    mat     = [ l.split (sep_col) for l in ligne ]  # colonnes
+    ligne = s.split(sep_row)                     # lignes
+    mat = [l.split(sep_col) for l in ligne]  # colonnes
     return mat
 
-def mat2text(mat, sep_row="\n", sep_col = "\t"):
+
+def mat2text(mat, sep_row="\n", sep_col="\t"):
     """
     convertit une matrice en une chaîne de caractères,
     réciproque de la fonction @see fn text2mat
@@ -185,9 +193,10 @@ def mat2text(mat, sep_row="\n", sep_col = "\t"):
 
     @endexample
     """
-    ligne   = [ ";".join (l) for l in mat ]     # colonnes
-    s       = "|".join (ligne)                  # lignes
+    ligne = [";".join(l) for l in mat]     # colonnes
+    s = "|".join(ligne)                  # lignes
     return s
+
 
 def somme(li):
     """
@@ -236,6 +245,7 @@ def somme(li):
     @endexample
     """
     return sum(li)
+
 
 def triindex(li):
     """
@@ -293,9 +303,10 @@ def triindex(li):
 
     @endexample
     """
-    return sorted (  (t,i) for i,t in enumerate(li) )
+    return sorted((t, i) for i, t in enumerate(li))
 
-def compte( li ) :
+
+def compte(li):
     """
     compte le nombre d'occurrences de chaque élément d'une liste
 
@@ -357,9 +368,11 @@ def compte( li ) :
 
     @endexample
     """
-    r = { }
-    for x in li : r[x] = r.get(x,0)+1
+    r = {}
+    for x in li:
+        r[x] = r.get(x, 0) + 1
     return r
+
 
 def mat2vect(mat):
     """
@@ -392,7 +405,8 @@ def mat2vect(mat):
 
     @endexample
     """
-    return reduce ( lambda x,y: x+y, mat )
+    return reduce(lambda x, y: x + y, mat)
+
 
 def vect2mat(vect, ncol):
     """
@@ -417,9 +431,11 @@ def vect2mat(vect, ncol):
     @endcode
     @endexample
     """
-    return [ vect[i*ncol: (i+1)*ncol] for i in range(0,len(vect)//ncol) ]
+    return [vect[i * ncol: (i + 1) * ncol]
+            for i in range(0, len(vect) // ncol)]
 
-def integrale(fonction,a,b,n):
+
+def integrale(fonction, a, b, n):
     """
     calcule l'intégrale d'une fonction avec la méthode de Rienmann
 
@@ -461,8 +477,9 @@ def integrale(fonction,a,b,n):
 
     @endexample
     """
-    h = (b-a) / n
-    return sum ( fonction(a+h/2+h*i) for i in range(0,n) ) * h
+    h = (b - a) / n
+    return sum(fonction(a + h / 2 + h * i) for i in range(0, n)) * h
+
 
 def construit_matrice_carree(n):
     """
@@ -471,4 +488,4 @@ def construit_matrice_carree(n):
 
     @param      n       dimension de la matrice carrée
     """
-    return [ [ 0 for i in range(n) ] for j in range(n) ]
+    return [[0 for i in range(n)] for j in range(n)]

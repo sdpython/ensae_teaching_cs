@@ -6,6 +6,7 @@
 
 import os
 
+
 def read_csv(filepath_or_buffer, encoding="utf8", sep="\t", **args):
     """
     Calls function `read_csv <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html?highlight=read_csv#pandas.read_csv>`_
@@ -47,17 +48,32 @@ def read_csv(filepath_or_buffer, encoding="utf8", sep="\t", **args):
     if isinstance(filepath_or_buffer, str):
         if encoding in ["utf8", "utf-8"]:
             try:
-                df = pandas.read_csv(filepath_or_buffer, encoding=encoding, sep=sep, **args)
+                df = pandas.read_csv(
+                    filepath_or_buffer,
+                    encoding=encoding,
+                    sep=sep,
+                    **args)
                 if df.columns[0].startswith("\ufeff"):
-                    raise UnicodeError("'charmap' codec can't encode characters in position 0-1325: character maps to <undefined>")
+                    raise UnicodeError(
+                        "'charmap' codec can't encode characters in position 0-1325: character maps to <undefined>")
                 return df
             except UnicodeError as e:
-                df = pandas.read_csv(filepath_or_buffer, encoding="utf-8-sig", sep=sep, **args)
+                df = pandas.read_csv(
+                    filepath_or_buffer,
+                    encoding="utf-8-sig",
+                    sep=sep,
+                    **args)
                 return df
             except UnicodeDecodeError as e:
-                df = pandas.read_csv(filepath_or_buffer, encoding="utf-8-sig", sep=sep, **args)
+                df = pandas.read_csv(
+                    filepath_or_buffer,
+                    encoding="utf-8-sig",
+                    sep=sep,
+                    **args)
                 return df
         else:
-            return pandas.read_csv(filepath_or_buffer, encoding=encoding, sep=sep, **args)
+            return pandas.read_csv(
+                filepath_or_buffer, encoding=encoding, sep=sep, **args)
     else:
-        return pandas.read_csv(filepath_or_buffer, encoding=encoding, sep=sep, **args)
+        return pandas.read_csv(
+            filepath_or_buffer, encoding=encoding, sep=sep, **args)
