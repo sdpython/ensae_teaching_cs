@@ -66,6 +66,7 @@ TD
         - `RandomizedPCA <http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.RandomizedPCA.html>`_, `GridSearch <http://scikit-learn.org/stable/modules/grid_search.html>`_, `LassoCV <http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html>`_
         - `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_
     - :ref:`TD 3B : Arbres de décision et Random Forests <td2acenoncesession3brst>`  (:ref:`correction <td2acorrectionsession3brst>`)    
+    - voir également :ref:`Travailleur les features ou changer de modèle <mlfeaturesmodelrst>`
 - **TD 4 : machine learning et algorithme**
     - :ref:`TD 4A : Machine Learning et Marketting <td2acenoncesession4arst>` (:ref:`correction <td2acorrectionsession4arst>`)
         - machine learning

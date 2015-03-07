@@ -28,6 +28,7 @@ def grab_mails(mailbox, emails, subfolder, date, no_domain=False, fLOG=noLOG):
     res = []
     for m in emails:
         ms = m.split('@')[0] if no_domain else m
+        ms = ms.strip()
         iter = mailbox.enumerate_search_person(ms, subfolder, date=date)
         mails = list(iter)
         fLOG("looking for mail:", m, ":", len(mails), " mails")

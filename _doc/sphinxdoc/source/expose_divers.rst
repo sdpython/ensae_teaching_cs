@@ -24,6 +24,7 @@ Notebooks
     notebooks/ml_table_mortalite
     notebooks/ml_huge_datasets
     notebooks/ml_rue_paris_parcours
+    notebooks/ml_features_model
 
 Quelques idées de notebooks pour le futur
 -----------------------------------------
