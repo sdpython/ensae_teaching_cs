@@ -152,7 +152,7 @@ def setup_jenkins_server(js_url,
                     new_dep.append(name)
                     created.append(name)
                     fLOG("create job", jname)
-                    loc = None if location is None else os.path.join(location, name)
+                    loc = None if location is None else os.path.join(location, jname)
                     js.create_job_template(jname,
                                 git_repo = github + "%s/" % mod,
                                 upstreams = [] if no_dep else dep[-1:],
