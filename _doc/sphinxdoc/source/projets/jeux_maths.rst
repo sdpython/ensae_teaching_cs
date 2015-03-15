@@ -151,3 +151,14 @@ Simulation d'une loi statistique avec un algorithme d'optimisation A*
 
 L'objectif est d'implémenter l'algorithme décrit par l'article
 `A* Sampling <http://papers.nips.cc/paper/5449-a-sampling.pdf>`_, Chris J. Maddison, Daniel Tarlow, Tom Minka.
+
+
+.. _l-math_appariement_graph:
+
+Recalage d'un réseau
+--------------------
+
+
+
+* `Mise en correspondance et recalage de graphes : application aux réeseaux routiers extraits d'un couple carte/image <https://hal.archives-ouvertes.fr/inria-00073156/document>`_, Christine Hivernat, Xavier Descombes, Sabine Randriamasy, Josiane Zerubia
+* `Deformable Graph Matching <https://www.ri.cmu.edu/pub_files/2013/6/dgm.pdf>`_, Feng Zhou, Fernando De la Torre

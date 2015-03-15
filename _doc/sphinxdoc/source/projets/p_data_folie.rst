@@ -115,4 +115,4 @@ Source de textes
 
 * `wikipedia dumps <http://dumps.wikimedia.org/>`_
 * :ref:`f-discourspolitique` (pour récupérer les discours politiques de l'Elysées)
-* 
+

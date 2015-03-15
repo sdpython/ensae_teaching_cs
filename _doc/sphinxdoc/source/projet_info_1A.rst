@@ -383,6 +383,7 @@ Liste des sujets cités
 #. Algo : :ref:`l-math-tsp`
 #. Algo : :ref:`l-math-text`
 #. Algo : :ref:`l-math_simulloi`
+#. Algo : :ref:`l-math_appariement_graph`
 #. Jeu hasard : :ref:`l-carte-poker`
 #. Jeu hasard : :ref:`l-carte-belotte`
 
