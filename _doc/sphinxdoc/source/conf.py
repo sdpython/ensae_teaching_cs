@@ -10,7 +10,9 @@ import sys
 import os
 import datetime
 import re
-import sphinx_bootstrap_theme
+#import sphinx_bootstrap_theme
+#import sphinxjp.themes.basicstrap
+import sphinx_rtd_theme
 
 
 source_path = os.path.normpath(
@@ -24,7 +26,6 @@ except ImportError:
     sys.path.append(source_path)
     from conf_base import *
 
-import sphinxjp.themes.basicstrap
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 templates_path = [os.path.join(source_path, 'phdoc_static')]
