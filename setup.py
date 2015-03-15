@@ -425,7 +425,7 @@ else:
         package_dir=package_dir,
         package_data=package_data,
         #data_files              = data_files,
-        install_requires=["pyensae", "pyquickhelper", "pymyinstall"],
+        install_requires=["pyensae", "pyquickhelper", "pymyinstall", "pymmails"],
         ext_modules=EXT_MODULES,
         #include_package_data    = True,
     )
