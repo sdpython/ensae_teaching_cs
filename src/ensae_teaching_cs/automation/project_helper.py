@@ -340,8 +340,7 @@ def git_change_remote_origin(
     password=None,
     add_fetch=False,
     timeout=10,
-    fLOG=noLOG
-):
+    fLOG=noLOG):
     """
     Change the origin of the repository. The url and the password
     refer to the new repository.
