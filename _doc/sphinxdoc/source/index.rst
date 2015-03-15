@@ -226,6 +226,7 @@ La documentation et les tests unitaires nécessite les modules suivants :
     * `sphinx_rtd_theme <https://github.com/snide/sphinx_rtd_theme>`_ 
     * `sphinx_bootstrap_theme <http://ryan-roemer.github.io/sphinx-bootstrap-theme/>`_ 
     * `sphinxjp.themes.basicstrap <https://pythonhosted.org/sphinxjp.themes.basicstrap/>`_ 
+    * `sphinx_py3doc_enhanced_theme <https://pypi.python.org/pypi/sphinx_py3doc_enhanced_theme>`_
 
 Certaines séances pratiques utilisent des données depuis ce site. 
 Elles sont facilement téléchargeables avec ces deux modules :
