@@ -240,7 +240,8 @@ elif "build_sphinx" in sys.argv:
                                          "html",
                                          ("html",
                                           "build2",
-                                          {"html_theme": "basicstrap"},
+                                          {"html_theme":
+                                              "sphinx_py3doc_enhanced_theme"},
                                           "source/conf2"),
                                          ("html",
                                           "build3",
@@ -257,7 +258,8 @@ elif "build_sphinx" in sys.argv:
                                          "html",
                                          ("html",
                                           "build2",
-                                          {"html_theme": "basicstrap"},
+                                          {"html_theme":
+                                              "sphinx_py3doc_enhanced_theme"},
                                           "source/conf2"),
                                          ("html",
                                           "build3",
@@ -425,7 +427,8 @@ else:
         package_dir=package_dir,
         package_data=package_data,
         #data_files              = data_files,
-        install_requires=["pyensae", "pyquickhelper", "pymyinstall", "pymmails"],
+        install_requires=[
+            "pyensae", "pyquickhelper", "pymyinstall", "pymmails"],
         ext_modules=EXT_MODULES,
         #include_package_data    = True,
     )

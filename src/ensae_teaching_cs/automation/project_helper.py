@@ -334,13 +334,13 @@ def git_clone(
 
 
 def git_change_remote_origin(
-    local_folder,
-    url_https,
-    user=None,
-    password=None,
-    add_fetch=False,
-    timeout=10,
-    fLOG=noLOG):
+        local_folder,
+        url_https,
+        user=None,
+        password=None,
+        add_fetch=False,
+        timeout=10,
+        fLOG=noLOG):
     """
     Change the origin of the repository. The url and the password
     refer to the new repository.

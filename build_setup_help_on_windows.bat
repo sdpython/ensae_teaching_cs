@@ -78,6 +78,7 @@ echo #######################################################
 
 :documentation:
 %pythonexe% -u setup.py build_sphinx_catch
+echo ############### full documentation generation ######################
 %pythonexe% -u setup.py build_sphinx
 if %errorlevel% neq 0 exit /b %errorlevel%
 echo #######################################################

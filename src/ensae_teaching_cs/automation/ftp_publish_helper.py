@@ -53,15 +53,15 @@ def content_as_binary(filename):
 
 
 def publish_documentation(
-    docs,
-    ftpsite=None,
-    login=None,
-    password=None,
-    key_save="my_password",
-    footer_html=None,
-    content_filter=trigger_on_specific_strings,
-    is_binary=content_as_binary,
-    fLOG=print):
+        docs,
+        ftpsite=None,
+        login=None,
+        password=None,
+        key_save="my_password",
+        footer_html=None,
+        content_filter=trigger_on_specific_strings,
+        is_binary=content_as_binary,
+        fLOG=print):
     """
     publish the documentation and the setups of a python module on a webiste,
     it assumes the modules is organized the same way as

@@ -91,7 +91,7 @@ class TestNotebookRunner2a_4 (unittest.TestCase):
         assert len(res) > 0
         fails = [(os.path.split(k)[-1], v)
                  for k, v in sorted(res.items()) if not v[0]]
-                 
+
         for f in fails:
             fLOG("******************** NB FAILED", f[0])
             fLOG(f)
