@@ -69,6 +69,7 @@ Evénements réguliers
 * `Big Data Meetup Paris <http://big-data.meetup.com/cities/fr/paris/>`_, voir aussi `search page <http://big-data.meetup.com/cities/fr/paris/events/>`_
 * `Paris Startup Job Fair <http://jobfair.rudebaguette.com/>`_ (a lieu régulièrement au `104 à Paris <http://www.104.fr/>`_)
 * `Paris Datageeks <http://www.meetup.com/Paris-Datageeks/>`_
+* `Data For Good - FR <http://www.meetup.com/Data-for-Good-FR/>`_
 
 Conférences, Communautés
 ------------------------

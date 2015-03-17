@@ -196,6 +196,9 @@ Usage irrégulier
 5. Statistiques bayésiennes
     a. `pymc <https://github.com/pymc-devs/pymc>`_
     b. `pystan <http://pystan.readthedocs.org/en/latest/index.html>`_
+    c. `bayespy <http://www.bayespy.org/>`_
+    d. `kabuki <https://github.com/hddm-devs/kabuki>`_
+    e. `HDDM <http://ski.clps.brown.edu/hddm_docs/>`_
     
 6. `Data Cube <http://en.wikipedia.org/wiki/Data_cube>`_ (Wikipédia)
     * modules plutôt expérimentaux
