@@ -1,5 +1,5 @@
 """
-@brief      test log(time=20s)
+@brief      test log(time=2s)
 
 notebook test
 """
@@ -71,10 +71,10 @@ except ImportError:
     import pymmails
 
 from pyquickhelper import fLOG, get_temp_folder
-from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
+from src.ensae_teaching_cs.faq.faq_ipython import ipython_cython_extension
 
 
-class TestNotebookRunner2a_2_enonce_2b (unittest.TestCase):
+class TestCheckCython(unittest.TestCase):
 
     def test_notebook_runner(self):
         fLOG(
@@ -82,20 +82,7 @@ class TestNotebookRunner2a_2_enonce_2b (unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
             
-        temp = get_temp_folder(__file__, "temp_notebook2a_2_enonce_2B")
-        keepnote = ls_notebooks("td2a")
-        assert len(keepnote) > 0
-        res = execute_notebooks(temp, keepnote, lambda i, n: "_2" in n
-                                and "enonce" in n
-                                and "_2B" in n,
-                                fLOG=fLOG, clean_function=clean_function_1a)
-        assert len(res) > 0
-        fails = [(os.path.split(k)[-1], v)
-                 for k, v in sorted(res.items()) if not v[0]]
-        for f in fails:
-            fLOG(f)
-        if len(fails) > 0:
-            raise fails[0][1][1]
+        ipython_cython_extension()
 
 if __name__ == "__main__":
     unittest.main()
