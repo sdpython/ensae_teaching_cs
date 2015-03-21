@@ -65,7 +65,6 @@ flake8
 pyflakes
 mccabe
 pep8
-pyensae
 feedparser
 pyensae
 pymyinstall
