@@ -21,6 +21,12 @@ before_install:
   - echo -e "[report]\nomit =\n    */python?.?/*\n    */site-packages/nose/*" > .coveragerc
   - pip install coveralls    
 install: 
+# If we aren't using system site packages then install everything from latest 
+# version that pip knows about using upgrade flag 
+    - if [[ $TRAVIS_PYTHON_VERSION != *"with_system_site_packages" ]]; then pip install --upgrade "file://$PWD#egg=pymdptoolbox[LP]"; fi 
+# If we are using system site packages then numpy/scipy/cvxopt won't be 
+ # installed if there is a version already available 
+    - if [[ $TRAVIS_PYTHON_VERSION == *"with_system_site_packages" ]]; then pip install "file://$PWD#egg=pymdptoolbox[LP]"; fi 
     - pip install -r requirements.txt
 script:
     - python setup.py unittests
