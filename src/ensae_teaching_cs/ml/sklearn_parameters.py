@@ -55,7 +55,7 @@ class SkLearnParameters:
                 return "'{0}'".format(v)
             else:
                 return str(v)
-        return ", ".join("{0}={1}".format(k, fmt(getattr(self, v)))
+        return ", ".join("{0}={1}".format(k, fmt(getattr(self, k)))
                          for k in sorted(self.Keys))
 
     def to_dict(self):

@@ -3,9 +3,6 @@
 @file
 @brief Code implémentant la première solution proposée à `Parcourir les rues de Paris <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/rue_paris_parcours.html>`_.
 """
-import os
-import sys
-import copy
 import random
 import math
 import pyensae
@@ -139,7 +136,7 @@ def possible_edges(edges, threshold, fLOG=None, distance=distance_haversine):
 
     possibles = {(e[0], e[1]): e[-1] for e in edges}
     possibles.update({(e[1], e[0]): e[-1] for e in edges})
-    initial = possibles.copy()
+    # initial = possibles.copy()
     for i1, v1 in vertices.items():
         for i2, v2 in vertices.items():
             if i1 >= i2:
@@ -426,7 +423,7 @@ def euler_path(edges, added_edges):
     path = _explore_path(edges_from, begin)
     for p in path:
         if len(p) == 0:
-            stop
+            raise Exception("this exception should not happen")
     while len(edges_from) > 0:
         start = None
         for i, p in enumerate(path):

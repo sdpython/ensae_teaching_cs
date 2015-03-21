@@ -4,7 +4,6 @@
 @brief Some automation helpers to test notebooks and check they are still working fine.
 """
 import os
-import sys
 from pyquickhelper import noLOG
 from pyquickhelper.ipythonhelper.notebook_helper import run_notebook
 

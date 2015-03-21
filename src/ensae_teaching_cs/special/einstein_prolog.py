@@ -5,8 +5,6 @@
 Français `Intégramme <http://fr.wikipedia.org/wiki/Int%C3%A9gramme>`_. The algorithm is based
 on logic and its `clause <http://en.wikipedia.org/wiki/Clause_(logic)>`_.
 """
-import os
-import sys
 import copy
 
 

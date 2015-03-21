@@ -8,6 +8,7 @@
 import os
 import sys
 
+
 def notebook_path():
     """
     change matplotlib style
@@ -146,10 +147,10 @@ def ipython_get_variable(name, magic_command_instance):
     if name not in magic_command_instance.shell.user_ns:
         raise KeyError("variable {0} not found".format(name))
     return magic_command_instance.shell.user_ns[name]
-    
+
+
 def ipython_cython_extension():
     """
-    
     The function raises an exception if cython has a good chance not 
     to work because Python does not find any suitable compiler
     (not `MinGW <http://www.mingw.org/>`_ or 
@@ -157,31 +158,32 @@ def ipython_cython_extension():
     or any expected version).
     In that case, the function displays a message with some indications
     on how to fix it.
-    
+
     @FAQ(ipython___Cython ne fonctionne pas sous Windows)
-    
+
     .. index:: vcvarsall, cython
     
     Cela se caractérise par le message ::
-    
+   
         Unable to find vcvarsall.bat
-        
+       
     Le blog post
     `Build a Python 64 bit extension on Windows <http://www.xavierdupre.fr/blog/2013-07-07_nojs.html>`_
     répond à cette question. 
     Le fichier à modifier est le suivant ::
-    
+   
         C:\Python34_x64\lib\distutils\msvc9compiler.py
-        
+       
     @endFAQ
     """
     if not sys.platform.startswith("win"):
         return True
-    
+   
     import distutils.msvc9compiler as mod
     fc = os.path.abspath(mod.__file__)
-    with open(fc, "r") as f : code = f.read()
-    
+    with open(fc, "r") as f: 
+        code = f.read()
+
     find = "'win-amd64' : 'x86_amd64'"
     if find not in code:
         url = "http://www.xavierdupre.fr/blog/2013-07-07_nojs.html"

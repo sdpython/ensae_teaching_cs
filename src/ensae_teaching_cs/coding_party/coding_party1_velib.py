@@ -129,10 +129,10 @@ def vitesse(c, d, params):
     Il reste un cas pour lequel, je ne sais pas encore quelle valeur donner :
     il s'agit des demi-appariements : un vélo rétiré mais jamais reposé et réciproquement.
     """
-    if c[0] == None or d[0] == None:
+    if c[0] is None or d[0] is None:
         # cas des vélos perdus
-        if c[0] == None:
-            if d[0] == None:
+        if c[0] is None:
+            if d[0] is None:
                 return None
             else:
                 return 0.0, 0.0   # je ne sais pas trop quoi mettre
@@ -180,11 +180,11 @@ def distance(positif, negatif, appariement, params):
             val.append(v)
 
     mean = sum(val) / len(val)
-    cor = [v for v in val if v < 1e8]  # on enlève les appariements négatifs
+    cor = [v_ for v_ in val if v < 1e8]  # on enlève les appariements négatifs
     mean_cor = sum(cor) / len(cor)
     dev = sum((x - mean)**2 for x in val) / len(val)
-    return  mean_cor,  \
-        cost + dev**0.5 * (1 +  len(nb_max)),  \
+    return mean_cor,  \
+        cost + dev**0.5 * (1 + len(nb_max)),  \
         mean,  \
         len(val) - len(cor)
 

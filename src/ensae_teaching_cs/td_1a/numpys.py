@@ -5,8 +5,6 @@
 classiques.
 """
 
-from functools import reduce
-
 
 def numpy_matrix2list(mat):
     """

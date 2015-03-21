@@ -4,6 +4,15 @@
 README / Changes
 ================
 
+
+.. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
+    :target: http://badge.fury.io/py/ensae_teaching_cs
+      
+.. image:: http://img.shields.io/pypi/dm/ensae_teaching_cs.png
+    :alt: PYPI Package
+    :target: https://pypi.python.org/pypi/ensae_teaching_cs  
+    
+
 This page gives access to the content of practical sessions I give at the
 `ENSAE <http://www.ensae.fr/>`_. They are based on Python. The project
 is hosted on GitHub can be modified by sending me pull requests:

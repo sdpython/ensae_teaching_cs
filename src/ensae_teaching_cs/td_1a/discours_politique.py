@@ -6,11 +6,12 @@
 """
 
 import re
-import os
 import json
 import io
 import html.parser
-from pyquickhelper import noLOG, get_url_content
+import html.entities as htmlentitydefs
+from pyquickhelper import get_url_content
+
 
 endLine = "\r\n"
 
@@ -101,9 +102,9 @@ def html_unescape(text):
         if text[:2] == "&#":
             try:
                 if text[:3] == "&#x":
-                    return unichr(int(text[3:-1], 16))
+                    return chr(int(text[3:-1], 16))
                 else:
-                    return unichr(int(text[2:-1]))
+                    return chr(int(text[2:-1]))
             except ValueError:
                 pass
         else:
@@ -116,7 +117,7 @@ def html_unescape(text):
                 elif text[1:-1] == "lt":
                     text = "&amp;lt;"
                 else:
-                    text = unichr(htmlentitydefs.name2codepoint[text[1:-1]])
+                    text = chr(htmlentitydefs.name2codepoint[text[1:-1]])
             except KeyError:
                 pass
         return text  # leave as is

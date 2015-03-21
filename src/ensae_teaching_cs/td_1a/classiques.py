@@ -251,9 +251,3 @@ def str2date(s, format="%d/%m/%Y"):
 
     """
     return datetime.datetime.strptime(s, format)
-
-if __name__ == "__main__":
-    l, d = liste_modifie_dans_la_boucle()
-    print(l, d)
-    r = repetition_a_eviter(l)
-    print(r)

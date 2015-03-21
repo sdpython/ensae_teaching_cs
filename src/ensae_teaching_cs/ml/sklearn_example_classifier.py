@@ -4,8 +4,7 @@
 """
 
 from .sklearn_base_classifier import SkBaseClassifier
-
-from numpy import argsort, sqrt
+from .sklearn_parameters import SkException
 import numpy
 import pandas
 
@@ -65,7 +64,7 @@ class SkCustomKnn (SkBaseClassifier):
         """
         scores = self.decision_function(X)
         if len(scores.shape) == 1:
-            indices = (scores > 0).astype(np.int)
+            indices = (scores > 0).astype(numpy.int)
         else:
             indices = scores.argmax(axis=1)
         return indices
@@ -109,7 +108,6 @@ class SkCustomKnn (SkBaseClassifier):
         @param      x       vector
         @return             k-nearest neighbors list( (distance**2, index) )
         """
-        K = self.P.k
         X = self._TrainingX
         ones = numpy.ones((len(X), len(x)))
         po = x * ones

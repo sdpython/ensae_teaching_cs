@@ -4,7 +4,6 @@
 """
 import re
 import os
-import pymmails
 from pyquickhelper import noLOG, run_cmd, remove_diacritics
 
 _email_regex = re.compile("[*] *e?mails? *: *([^*+]+)")
@@ -533,7 +532,7 @@ def create_folders_from_dataframe(df,
                 str(name) +
                 "\n" +
                 str(s))
-        subject = s[0]
+        # subject = s[0]
         eleves = list(group[col_student])
         names = [(_,) + split_name(_) for _ in eleves]
         eleves.sort()

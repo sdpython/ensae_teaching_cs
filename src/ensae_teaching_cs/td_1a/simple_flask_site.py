@@ -5,7 +5,7 @@
 """
 
 
-from flask import Flask, Response, request
+from flask import Flask, request
 
 try:
     from .flask_helper import Text2Response, Exception2Response
@@ -20,9 +20,9 @@ app = Flask(__name__)
 if __name__ == "__main__":
     import sys
     sys.path.append("../..")
-    from ensae_teaching_cs.td_1a.flask_helper import Text2Response, Exception2Response
+    from ensae_teaching_cs.td_1a.flask_helper import Text2Response
 else:
-    from .flask_helper import Text2Response, Exception2Response
+    from .flask_helper import Text2Response
 
 if __name__ != "__main__":
     app.debug = False
@@ -43,7 +43,7 @@ def shutdown_server():
     func = request.environ.get('werkzeug.server.shutdown')
     if func is None:
         raise RuntimeError('Not running with the Werkzeug Server')
-    r = func()
+    func()
 
 
 # -- HELP BEGIN EXCLUDE --

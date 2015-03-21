@@ -4,8 +4,6 @@
 @brief Quelques problèmes récurrents avec `pandas <http://pandas.pydata.org/>`_.
 """
 
-import os
-
 
 def read_csv(filepath_or_buffer, encoding="utf8", sep="\t", **args):
     """
@@ -57,14 +55,14 @@ def read_csv(filepath_or_buffer, encoding="utf8", sep="\t", **args):
                     raise UnicodeError(
                         "'charmap' codec can't encode characters in position 0-1325: character maps to <undefined>")
                 return df
-            except UnicodeError as e:
+            except UnicodeError:
                 df = pandas.read_csv(
                     filepath_or_buffer,
                     encoding="utf-8-sig",
                     sep=sep,
                     **args)
                 return df
-            except UnicodeDecodeError as e:
+            except UnicodeDecodeError:
                 df = pandas.read_csv(
                     filepath_or_buffer,
                     encoding="utf-8-sig",

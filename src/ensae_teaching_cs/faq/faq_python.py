@@ -80,7 +80,7 @@ def difference_div():
     div2 = 4 / 2
     div3 = 1 // 2
     div4 = 1.0 // 2.0
-    return div1, div2, div3, div3
+    return div1, div2, div3, div4
 
 
 def python_path():
@@ -421,7 +421,7 @@ def enumerate_regex_search(exp, text):
 
     @endFAQ
     """
-    found = exp.search(text)
+    # found = exp.search(text)
     for m in exp.finditer(text):
         yield m
 

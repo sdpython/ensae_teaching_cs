@@ -4,11 +4,8 @@
 @brief  quelques fonctions sur l'optimisation quadratique avec contraintes
 """
 
-import numpy
 import random
-
 from cvxopt import solvers, matrix
-import random
 
 
 def f_df_H(x=None, z=None):

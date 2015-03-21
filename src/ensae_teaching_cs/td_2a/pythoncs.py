@@ -3,10 +3,6 @@
 @file
 @brief Helpers autour de C#
 """
-import os
-import sys
-import copy
-import random
 
 
 def create_cs_function(name, code, dependencies=None, usings=None):

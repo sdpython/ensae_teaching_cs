@@ -63,9 +63,8 @@ class ParallelThread (threading.Thread):
 
         if wait:
             waits = th.copy()
-            nb = len(waits)
             while len(waits) > 0:
-                waits = [t for t in th if t.is_alive()]
+                waits = [t_ for t_ in th if t_.is_alive()]
                 if len(waits) > 0:
                     time.sleep(delay_sec)
             final = [None for i in range(len(list_of_params))]

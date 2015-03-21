@@ -149,5 +149,6 @@ def register_magics():
     """
     register magics function, can be called from a notebook
     """
+    from IPython import get_ipython
     ip = get_ipython()
     ip.register_magics(CustomMagics)

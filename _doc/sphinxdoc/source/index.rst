@@ -3,6 +3,15 @@
 ENSAE - Programmation - Xavier Dupré
 ====================================
 
+
+.. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
+    :target: http://badge.fury.io/py/ensae_teaching_cs
+      
+.. image:: http://img.shields.io/pypi/dm/ensae_teaching_cs.png
+    :alt: PYPI Package
+    :target: https://pypi.python.org/pypi/ensae_teaching_cs  
+    
+
 Cette page donne accès au contenu des séances de travaux pratiques en programmation
 que je dispense à l'`ENSAE <http://www.ensae.fr/>`_. Ils s'appuient principalement sur 
 le langage Python. Le contenu est librement disponible sur `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs>`_
