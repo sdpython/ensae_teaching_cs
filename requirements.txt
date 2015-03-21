@@ -69,4 +69,7 @@ feedparser
 pyensae
 pymyinstall
 pymmails
+h5py
+scipy
+bayespy
 cvxopt
