@@ -69,3 +69,4 @@ feedparser
 pyensae
 pymyinstall
 pymmails
+cvxopt
