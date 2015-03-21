@@ -69,4 +69,4 @@ feedparser
 pyensae
 pymyinstall
 pymmails
-h5py
+
