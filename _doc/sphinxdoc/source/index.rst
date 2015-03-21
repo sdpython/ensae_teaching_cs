@@ -3,6 +3,9 @@
 ENSAE - Programmation - Xavier Dupré
 ====================================
 
+.. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master
+    :target: https://travis-ci.org/sdpython/ensae_teaching_cs
+    :alt: Build status
 
 .. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
     :target: http://badge.fury.io/py/ensae_teaching_cs
