@@ -4,7 +4,10 @@
 README / Changes
 ================
 
-
+.. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master
+    :target: https://travis-ci.org/sdpython/ensae_teaching_cs
+    :alt: Build status
+    
 .. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
     :target: http://badge.fury.io/py/ensae_teaching_cs
       
@@ -36,13 +39,14 @@ Started in 2014/04.
 Versions
 --------
 
-* **0.6 - 2014/??/??**
+* **0.6 - 2015/??/??**
     * **new:** first sessions in 2A
     * **new:** first sessions in 3A
     * **add:** Python version is now checked, ImportError is raised if it used on Python 2
     * **todo:** terminer la correction de la séance 9 (1A)
     * **todo:** il manque des auteurs pour quelques articles sur la page :ref:`l-td2a-biblio`
     * **fix:** the setup does not need the file ``README.rst`` anymore
+    * **add:** add unit test to test the notebooks, separate notebooks using Cython from the others
 * **0.5 - 2014/08/31**
     * **new:** first version
 

@@ -57,10 +57,6 @@ import pymmails
 
 from pyquickhelper.helpgen.default_conf import set_sphinx_variables
 
-project_var_name_t = "ENSAE<br />Xavier Dupré"
-project_var_name = "ensae_teaching_cs"
-project_var_name_1l = project_var_name_t.replace("<br />", " - ")
-
 
 set_sphinx_variables(__file__,
                      "ensae_teaching_cs",
@@ -71,6 +67,10 @@ set_sphinx_variables(__file__,
                      locals(),
                      add_extensions=None)
 
+project_var_name_t = "ENSAE<br />Xavier Dupré"
+project_var_name = "ensae_teaching_cs"
+project_var_name_1l = project_var_name_t.replace("<br />", " - ")
+html_search_language = "fr"
 
 texinfo_documents = [
     ('index',
@@ -82,7 +82,3 @@ texinfo_documents = [
      'teachings'),
 ]
 
-
-autoclass_content = 'both'
-autosummary_generate = True
-graphviz_output_format = "svg"
