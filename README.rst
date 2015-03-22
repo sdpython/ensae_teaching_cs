@@ -4,9 +4,7 @@
 README / Changes
 ================
 
-.. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master
-    :target: https://travis-ci.org/sdpython/ensae_teaching_cs
-    :alt: Build status
+
     
 .. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
     :target: http://badge.fury.io/py/ensae_teaching_cs
@@ -57,5 +55,13 @@ Vieilles versions
     * `année 2004-2011 <http://www.xavierdupre.fr/enseignement/td_python/python_td_simple/index.html>`_
     * `année 2011-2013 <http://www.xavierdupre.fr/enseignement/td_python/python_td_minute/index.html>`_
     * `année 2013-2014 <http://www.xavierdupre.fr/site2013/enseignements/index.html>`_
+    
+Automated build
+---------------
 
+Not ready yet.
 
+.. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master
+    :target: https://travis-ci.org/sdpython/ensae_teaching_cs
+    :alt: Build status
+    
