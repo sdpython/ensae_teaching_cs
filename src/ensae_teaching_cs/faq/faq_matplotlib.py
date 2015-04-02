@@ -190,3 +190,35 @@ def graph_ggplot_with_label(x,
     if title is not None:
         ax.set_title(title)
     return ax
+    
+    
+def change_legend_location(ax, new_location = "lower center"):
+    """
+    Changes the location of the legend
+    
+    @param      ax              `Axes <http://matplotlib.org/api/axes_api.html#axes>`_
+    @param      new_location    new_location, see method `legend <http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes.legend>`_
+    @return                     ax
+    
+    @FAQ(matplotlib___Comment changer l'emplacement de la légende ?)
+    
+    On cherche ici à changer l'emplacement de la légende alors que celle-ci a déjà été
+    définie par ailleurs. C'est pratique lorsque celle-ci cache une partie du graphe 
+    qu'on veut absolument montrer.
+    On ne dispose que de l'objet *ax* de type `Axes <http://matplotlib.org/api/axes_api.html#axes>`_.
+    On utilise pour cela la méthode `legend <http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes.legend>`_
+    et le code suivant :
+    
+    @code
+    handles, labels = ax.get_legend_handles_labels()
+    ax.legend(handles, labels, loc="lower center")
+    @endcode
+    
+    Les différentes options pour le nouvel emplacement sont énoncées
+    dans l'aide associée à la méthode `legend <http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes.legend>`_.
+    
+    @endFAQ
+    """
+    handles, labels = ax.get_legend_handles_labels()
+    ax.legend(handles, labels, loc=new_location)
+    return ax
