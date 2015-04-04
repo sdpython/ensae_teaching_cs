@@ -218,7 +218,7 @@ Bibliographie
 **Librairies**
 
 * `Giraph <http://giraph.apache.org/>`_
-* `Mahout <http://mahout.apache.org/>`_
+* `MLlib <https://spark.apache.org/mllib/>`_ (`Mahout <http://mahout.apache.org/>`_ risque de disparaître)
 * `Spark <https://spark.apache.org/>`_ (`DPark <https://github.com/douban/dpark>`_)
 * `Kafka <http://kafka.apache.org/>`_
 * `Storm <https://storm.apache.org/>`_

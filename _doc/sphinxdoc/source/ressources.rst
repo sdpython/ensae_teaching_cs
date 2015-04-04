@@ -27,6 +27,8 @@ Source de données
 * `UN ComTrade <http://comtrade.un.org/db/>`_ : United Nations Commodity Trade Statistics Database
 * `Evénements GitHub <https://www.githubarchive.org/>`_ : tous les commit sur GitHub chaque jour (~15.000 commit par jour)
 * `Microsoft Research Letor <http://research.microsoft.com/en-us/um/beijing/projects/letor/letor4dataset.aspx>`_
+* `170 millions courses de taxi à New-York <http://chriswhong.com/open-data/foil_nyc_taxi/>`_ 
+  (via l'article `Building Azure ML Models on the NYC Taxi Dataset <http://blogs.technet.com/b/machinelearning/archive/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset.aspx>`_)
 
 Code
 ----
