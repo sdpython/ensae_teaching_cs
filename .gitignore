@@ -292,3 +292,7 @@ README
 */notebooks/td3a/infos.txt
 */notebooks/expose/demo*
 */notebooks/expose/mortalite.txt
+build_help.bat
+_doc/sphinxdoc/source/blog/*.rst
+_doc/sphinxdoc/source/blog/rss.xml
+_doc/sphinxdoc/source/phdoc_templates/*.html
