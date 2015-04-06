@@ -50,6 +50,25 @@ def content_as_binary(filename):
     if ff == "footer.html":
         return True
     return False
+    
+
+def text_transform(ftpp, filename, content):
+    """
+    if filename is rss.xml, replaces the string *__BLOG_ROOT__* by *self._root_web*
+    
+    @param      ftpp        object FolderTransferFTP
+    @param      filename    filename
+    @param      content     content of the file
+    @return                 new content
+    """
+    if filename.endswith("rss.xml"):
+        web = ftpp._root_web
+        if not web.startswith("http://"):
+            web = "http://" + web.strip("/")
+        ftpp.fLOG("[text_transform] replace __BLOG_ROOT__ by ", web)
+        return content.replace("__BLOG_ROOT__", web)
+    else:
+        return content
 
 
 def publish_documentation(
@@ -187,7 +206,8 @@ def publish_documentation(
                                  fLOG=fLOG,
                                  footer_html=footer_html,
                                  content_filter=content_filter,
-                                 is_binary=is_binary)
+                                 is_binary=is_binary,
+                                 text_transform=text_transform)
 
         fftp.start_transfering()
 
@@ -198,7 +218,8 @@ def publish_documentation(
                                  fLOG=fLOG,
                                  footer_html=footer_html,
                                  content_filter=content_filter,
-                                 is_binary=is_binary)
+                                 is_binary=is_binary,
+                                 text_transform=text_transform)
 
         fftp.start_transfering()
 
