@@ -29,6 +29,8 @@ Source de données
 * `Microsoft Research Letor <http://research.microsoft.com/en-us/um/beijing/projects/letor/letor4dataset.aspx>`_
 * `170 millions courses de taxi à New-York <http://chriswhong.com/open-data/foil_nyc_taxi/>`_ 
   (via l'article `Building Azure ML Models on the NYC Taxi Dataset <http://blogs.technet.com/b/machinelearning/archive/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset.aspx>`_)
+* `WordNet <https://wordnet.princeton.edu/wordnet/>`_, base de données anglaises sur le vocabulaire, la grammaire, les synonymes...
+* `ImageNet <http://image-net.org/>`_, base de données d'images avec leur contenu
 
 Code
 ----

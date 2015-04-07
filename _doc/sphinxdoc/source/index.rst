@@ -41,6 +41,10 @@ Quoi qu'on en dise, il faut aussi être créatif.
   exercices d'algorithmie
 * **3A :** calculs distribués, Map/Reduce depuis un notebook
 
+Le :ref:`blog <ap-main-0>` associé à ce site publie des liens vers des vidéos,
+des données, met en valeur certaines mise à jour, aborde des sujets qui 
+seront plus tard, peut-être intégrées au contenu des enseignements. 
+
 
 Contenu des enseignements
 -------------------------
