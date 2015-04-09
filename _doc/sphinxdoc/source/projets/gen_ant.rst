@@ -1,4 +1,4 @@
-﻿
+
 .. _l-gen_ant:
 
 Algorithmes génétiques, Fourmis
@@ -25,6 +25,7 @@ appliqué à des problèmes au même problème. On s'intéressera à la converge
 de l'espace des observations croît.
 
 * `Algorithmes Génétiques <http://perso.limsi.fr/jps/enseignement/tutoriels/pcd/3.genetique/>`_
+* `Ant Colony Optimization applications in Portfolio Construction and Algorithmic Trading <http://www.stuartreid.co.za/ant-colony-optimization-finance/>`_
 
 .. _l-gen-bag:
 

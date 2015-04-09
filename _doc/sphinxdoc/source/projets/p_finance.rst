@@ -40,6 +40,13 @@ Les stratégies dépendent de paramètres qu'on optimise en utilisant des donné
 Il faut toujours faire attention à utiliser les données jusqu'à la date *t* pour
 prédire les actions pour la date *t+1*.
 
+D'autres idées avec d'autres lectures :
+
+* `Random walks down Wall Street - Stochastic Processes in Python  <http://www.stuartreid.co.za/random-walks-down-wall-street-stochastic-processes-in-python/>`_,
+* `10 Common Misconceptions about Neural Networks <http://www.stuartreid.co.za/misconceptions-about-neural-networks/>`_
+* `Algorithmic trading system requirements <http://www.stuartreid.co.za/algorithmic-trading-system-requirements-post/>`_
+* `et d'autres articles de Stuart Reid <http://www.stuartreid.co.za/one-year-later-metapost-computational-finance-blog/>`_
+
 .. _l-fi-trend:
 
 Trend following
