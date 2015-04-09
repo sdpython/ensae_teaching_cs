@@ -55,7 +55,10 @@ def run_cs_function(func, params):
 
     par = List[Object]()
     for p in params:
-        par.Add(p)
+        try:
+            par.Add(p)
+        except TypeError as e:
+            raise TypeError(str(type(p)) + "-" + str(type(par))) from e
     return MagicCS.RunFunction(func, par.ToArray())
 
 

@@ -297,3 +297,4 @@ _doc/sphinxdoc/source/blog/*.rst
 _doc/sphinxdoc/source/blog/rss.xml
 _doc/sphinxdoc/source/phdoc_templates/*.html
 _doc/sphinxdoc/source/blog/feed-icon*.png
+_doc/notebooks/td2a/graph.html
