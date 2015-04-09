@@ -106,7 +106,7 @@ class TestNotebookRunner2a_csharp (unittest.TestCase):
                     # it just exclude one user only used on remotre machines
                     fLOG("no audio")
                     return
-            raise e
+            raise fails[0][1][1]
         else:
             fLOG("success")
 

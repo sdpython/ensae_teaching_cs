@@ -7,11 +7,6 @@
 
 from flask import Flask, request
 
-try:
-    from .flask_helper import Text2Response, Exception2Response
-except ImportError:
-    pass
-
 
 # -- HELP BEGIN EXCLUDE --
 
@@ -20,9 +15,9 @@ app = Flask(__name__)
 if __name__ == "__main__":
     import sys
     sys.path.append("../..")
-    from ensae_teaching_cs.td_1a.flask_helper import Text2Response
+    from ensae_teaching_cs.td_1a.flask_helper import Text2Response, Exception2Response
 else:
-    from .flask_helper import Text2Response
+    from .flask_helper import Text2Response, Exception2Response
 
 if __name__ != "__main__":
     app.debug = False

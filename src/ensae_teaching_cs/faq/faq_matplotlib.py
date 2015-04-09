@@ -192,7 +192,7 @@ def graph_ggplot_with_label(x,
     return ax
     
     
-def change_legend_location(ax, new_location = "lower center"):
+def change_legend_location(ax, new_location="lower center"):
     """
     Changes the location of the legend
     
