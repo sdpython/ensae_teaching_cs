@@ -6,6 +6,7 @@ import os
 import sys
 import unittest
 import socket
+import urllib
 
 try:
     import src
@@ -74,13 +75,24 @@ class TestTranslate(unittest.TestCase):
             import goslate
             gs = goslate.Goslate()
             tlines = []
-            for l in lines:
+            for i,l in enumerate(lines):
+                fLOG("try",len(l), len(tlines))
                 try:
                     tt = gs.translate(l, 'en', 'ru')
                 except socket.timeout:
                     # we miss some of the lines
                     continue
+                except urllib.error.HTTPError:
+                    # service unavailable (503)
+                    continue
+                except urllib.error.URLError:
+                    # time out
+                    continue
                 tlines.append(tt)
+                
+                if i > len(lines)/2 and len(tlines) == 0:
+                    # some connections did not work
+                    break
 
             with open(dest, "w", encoding="utf8") as f:
                 f.write("\n\n".join(tlines))
