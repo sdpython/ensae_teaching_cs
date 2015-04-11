@@ -39,6 +39,8 @@ if not os.path.exists(templates_path[0]):
 
 html_logo = "project_ico_small.png"
 
+html_sidebars = {}
+
 if html_theme == "bootstrap":
     html_theme_options = {
         'navbar_title': "home",
@@ -50,7 +52,7 @@ if html_theme == "bootstrap":
              "http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html",
              True),
         ],
-        'navbar_sidebarrel': True,
+        'navbar_sidebarrel': False,
         'navbar_pagenav': True,
         'navbar_pagenav_name': "Page",
         'globaltoc_depth': 3,
