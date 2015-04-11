@@ -76,3 +76,5 @@ texinfo_documents = [
      'teachings'),
 ]
 
+language = "fr"
+
