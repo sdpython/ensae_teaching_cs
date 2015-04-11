@@ -264,6 +264,7 @@ Table des matières
     td_1a
     td_2a
     td_3a
+    blog/blogindex
     projet_info
     informations
     exemple_index
