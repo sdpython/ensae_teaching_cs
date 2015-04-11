@@ -1,27 +1,19 @@
-rem we remove everything from dist
-echo off
+IF EXIST dist del /Q dist\*.*
 
-if "%1"=="" goto default_value:
+if "%1"=="" goto setup34_x64_msi_wheel:
 set pythonexe="%1"
+%pythonexe% setup.py write_version
 goto custom_python:
 
-:default_value:
-set pythonexe="c:\python34_x64\python"
-
+:setup34_x64_msi_wheel:
+set pythonexe="c:\Python34_x64\python"
 :custom_python:
-rem %pythonexe% clean_pyd.py
+%pythonexe% -u setup.py build_sphinx
+if %errorlevel% neq 0 exit /b %errorlevel%
+echo #######################################################
 
-
-%pythonexe% -u setup.py build_pres
-%pythonexe% -u setup.py build_pres_2A
-%pythonexe% -u setup.py build_pres_3A
-%pythonexe% -u setup.py build_pres_1Ap
-
-if not exist dist\html_pres mkdir dist\html_pres
-if not exist dist\html_pres_2A mkdir dist\html_pres_2A
-if not exist dist\html_pres_3A mkdir dist\html_pres_3A
-if not exist dist\html_pres_1Ap mkdir dist\html_pres_1Ap
-xcopy /E /C /I /Y _doc\presentation\build\html dist\html_pres
-xcopy /E /C /I /Y _doc\presentation_2A\build\html dist\html_pres_2A
-xcopy /E /C /I /Y _doc\presentation_3A\build\html dist\html_pres_3A
-xcopy /E /C /I /Y _doc\presentation_projets\a2015\build\html dist\html_pres_1Ap
+:copyfiles:
+if not exist dist\html mkdir dist\html
+xcopy /E /C /I /Y _doc\sphinxdoc\build\html dist\html
+if exist _doc\sphinxdoc\build\latex xcopy /E /C /I /Y _doc\sphinxdoc\build\latex\*.pdf dist\html
+if %errorlevel% neq 0 exit /b %errorlevel%
