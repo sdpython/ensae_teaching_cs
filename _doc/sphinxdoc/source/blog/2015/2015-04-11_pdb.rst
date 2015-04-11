@@ -1,0 +1,20 @@
+
+
+.. blogpost::
+    :title: Lancer le débugger après qu'une exception a lieu
+    :keywords: PyCharm, PyTools, excepthook, traceback
+    :date: 2015-04-11
+    :categories: debugger, exception
+    
+    Le débugger de Python s'utilise principalement
+    en ligne de commande. Il vaut mieux lui
+    préférer des outils comme `PyCharm <https://www.jetbrains.com/pycharm/>`_ 
+    ou `PyTools <https://pytools.codeplex.com/>`_
+    pour débugger un programme.
+    Cela veut dire placer des pointeurs d'arrêts aux bons endroits.
+    Ce n'est pas toujours évident lorsque l'erreur se produit une fois sur 1000
+    dans le code d'une fonction ou à l'intérieur d'une boucle
+    qui plante après énième itération.
+    Il peut être utile de savoir lancer le débugger de Python en ligne de commande
+    après que l'exécution s'est déclenchée :
+    `Lancer pdb dès qu’une exception a lieu <http://sametmax.com/lancer-pdb-des-quune-exception-a-lieu/>`_.
