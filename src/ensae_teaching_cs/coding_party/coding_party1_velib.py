@@ -102,14 +102,14 @@ class ParemetreCoutTrajet:
         if v > self.max_speed:
             c += 1e3
         if v > self.high_speed:
-            c += (v - self.high_speed)**2 * 10
+            c += (v - self.high_speed) ** 2 * 10
         if v < self.low_speed:
-            c += (v - self.low_speed)**2 * 100
+            c += (v - self.low_speed) ** 2 * 100
         dt = dt.total_seconds() / 3600
         if dt > self.high_time:
-            c += (dt - self.high_time)**2 * 10
+            c += (dt - self.high_time) ** 2 * 10
         if dt < self.low_time:
-            c += (dt - self.low_time)**2 * 10
+            c += (dt - self.low_time) ** 2 * 10
         return c
 
 
@@ -182,9 +182,9 @@ def distance(positif, negatif, appariement, params):
     mean = sum(val) / len(val)
     cor = [v_ for v_ in val if v < 1e8]  # on enlève les appariements négatifs
     mean_cor = sum(cor) / len(cor)
-    dev = sum((x - mean)**2 for x in val) / len(val)
+    dev = sum((x - mean) ** 2 for x in val) / len(val)
     return mean_cor,  \
-        cost + dev**0.5 * (1 + len(nb_max)),  \
+        cost + dev ** 0.5 * (1 + len(nb_max)),  \
         mean,  \
         len(val) - len(cor)
 
@@ -292,8 +292,8 @@ def distance_path(dfp):
             r["lng1"]),
         axis=1)
     mean = sum(dfp["speed"]) / len(dfp)
-    std = sum((x - mean)**2 for x in dfp["speed"]) / len(dfp)
-    return mean, std**0.5
+    std = sum((x - mean) ** 2 for x in dfp["speed"]) / len(dfp)
+    return mean, std ** 0.5
 
 
 if __name__ == "__main__":

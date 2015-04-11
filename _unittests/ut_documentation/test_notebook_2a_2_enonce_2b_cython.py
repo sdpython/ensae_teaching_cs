@@ -81,7 +81,7 @@ class TestNotebookRunner2a_2_enonce_2b (unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-            
+
         temp = get_temp_folder(__file__, "temp_notebook2a_2_enonce_2B")
         keepnote = ls_notebooks("td2a")
         assert len(keepnote) > 0

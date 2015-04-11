@@ -49,7 +49,7 @@ class TestClassiques (unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         a = racine_carree(2)
-        assert a == 2**0.5
+        assert a == 2 ** 0.5
 
 if __name__ == "__main__":
     unittest.main()

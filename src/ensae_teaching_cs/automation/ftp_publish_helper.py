@@ -50,12 +50,12 @@ def content_as_binary(filename):
     if ff == "footer.html":
         return True
     return False
-    
+
 
 def text_transform(ftpp, filename, content):
     """
     if filename is rss.xml, replaces the string *__BLOG_ROOT__* by *self._root_web*
-    
+
     @param      ftpp        object FolderTransferFTP
     @param      filename    filename
     @param      content     content of the file

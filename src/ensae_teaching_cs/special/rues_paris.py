@@ -18,7 +18,7 @@ def distance_paris(lat1, lng1, lat2, lng2):
     @param      lng2    longitude
     @return             distance
     """
-    return ((lat1 - lat2)**2 + (lng1 - lng2)**2)**0.5 * 90
+    return ((lat1 - lat2) ** 2 + (lng1 - lng2) ** 2) ** 0.5 * 90
 
 
 def distance_haversine(lat1, lng1, lat2, lng2):
@@ -147,7 +147,7 @@ def possible_edges(edges, threshold, fLOG=None, distance=distance_haversine):
                 possibles[i2, i1] = d
 
     if fLOG is not None:
-        total_possible_edges = (len(vertices)**2 - len(vertices)) / 2
+        total_possible_edges = (len(vertices) ** 2 - len(vertices)) / 2
         possible_edges = len(possibles) // 2
         leninit = len(edges)
         fLOG(
@@ -197,7 +197,7 @@ def bellman(edges, iter=20, fLOG=print, allow=None, init=None):
         edges_from[e[1]].append((e[1], e[0], e[2], e[4], e[3], e[5]))
 
     modif = 1
-    total_possible_edges = (len(edges_from)**2 - len(edges_from)) // 2
+    total_possible_edges = (len(edges_from) ** 2 - len(edges_from)) // 2
     it = 0
     while modif > 0:
         modif = 0

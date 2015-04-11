@@ -30,7 +30,7 @@ def f_df_H(x=None, z=None):
         # cas 1
         x0 = matrix([[random.random(), random.random()]])
         return 0, x0
-    f = x[0]**2 + x[1]**2 - x[0] * x[1] + x[1]
+    f = x[0] ** 2 + x[1] ** 2 - x[0] * x[1] + x[1]
     d = matrix([x[0] * 2 - x[1], x[1] * 2 - x[0] + 1]).T
     h = matrix([[2.0, -1.0], [-1.0, 2.0]])
     if z is None:
@@ -94,7 +94,7 @@ def f_df(X):
     F dans @see fn Arrow_Hurwicz
     """
     x, y = X
-    f = x**2 + y**2 - x * y + y
+    f = x ** 2 + y ** 2 - x * y + y
     d = [x * 2 - y, y * 2 - x + 1]
     return f, d
 

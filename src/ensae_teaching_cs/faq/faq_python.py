@@ -535,7 +535,7 @@ if __name__ == "__main__":
 
         @property
         def norm2(self):
-            return self._y**2 + self._x**2
+            return self._y ** 2 + self._x ** 2
 
     c = ClasseAvecProperty(1, 2)
     print(c.x)

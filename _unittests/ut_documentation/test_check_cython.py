@@ -81,7 +81,7 @@ class TestCheckCython(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-            
+
         ipython_cython_extension()
 
 if __name__ == "__main__":

@@ -75,8 +75,8 @@ class TestTranslate(unittest.TestCase):
             import goslate
             gs = goslate.Goslate()
             tlines = []
-            for i,l in enumerate(lines):
-                fLOG("try",len(l), len(tlines))
+            for i, l in enumerate(lines):
+                fLOG("try", len(l), len(tlines))
                 try:
                     tt = gs.translate(l, 'en', 'ru')
                 except socket.timeout:
@@ -89,8 +89,8 @@ class TestTranslate(unittest.TestCase):
                     # time out
                     continue
                 tlines.append(tt)
-                
-                if i > len(lines)/2 and len(tlines) == 0:
+
+                if i > len(lines) / 2 and len(tlines) == 0:
                     # some connections did not work
                     break
 

@@ -112,5 +112,5 @@ class SkCustomKnn (SkBaseClassifier):
         ones = numpy.ones((len(X), len(x)))
         po = x * ones
         X_x = X - po
-        prod = sorted([((X_x[i, :]**2).sum(), i) for i in range(0, len(X))])
+        prod = sorted([((X_x[i, :] ** 2).sum(), i) for i in range(0, len(X))])
         return prod[:self.P.k]

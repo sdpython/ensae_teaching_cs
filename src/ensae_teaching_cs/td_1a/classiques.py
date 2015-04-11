@@ -81,7 +81,7 @@ def dix_entiers_carre():
     """
     s = 0
     for i in range(1, 11):
-        s += i**2
+        s += i ** 2
     return s
 
 
@@ -92,7 +92,7 @@ def racine_carree(x):
     @param  x       nombre
     @return         racine carrée
     """
-    return x**0.5
+    return x ** 0.5
 
 
 def repetition_a_eviter(serie):
@@ -150,14 +150,14 @@ def repetition_a_eviter(serie):
     def variance_a_eviter(serie):
         s = 0
         for obs in serie:
-            s += (obs - moyenne(serie))**2
+            s += (obs - moyenne(serie)) ** 2
         return s / len(serie)
 
     def variance(serie):
         s = 0
         moy = moyenne(serie)
         for obs in serie:
-            s += (obs - moy)**2
+            s += (obs - moy) ** 2
         return s / len(serie)
 
     return variance(serie)

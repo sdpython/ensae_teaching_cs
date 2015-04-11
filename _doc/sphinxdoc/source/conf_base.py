@@ -77,4 +77,3 @@ texinfo_documents = [
 ]
 
 language = "fr"
-

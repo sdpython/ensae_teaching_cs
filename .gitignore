@@ -242,6 +242,8 @@ version.txt
 */notebooks/td1a/*.pyd
 */notebooks/td1a/setup.py
 */notebooks/td1a/t_random*
+*/notebooks/td1a/example_bokeh.*
+*/notebooks/td1a/osm.*
 */notebooks/donnees/*.txt
 */notebooks/donnees/*.gz
 */notebooks/donnees/*.db3
@@ -292,6 +294,8 @@ README
 */notebooks/td3a/infos.txt
 */notebooks/expose/demo*
 */notebooks/expose/mortalite.txt
+*/notebooks/expose/added.*
+*/notebooks/expose/paris_54000.*
 build_help.bat
 _doc/sphinxdoc/source/blog/*.rst
 _doc/sphinxdoc/source/blog/rss.xml
