@@ -296,6 +296,8 @@ README
 */notebooks/expose/mortalite.txt
 */notebooks/expose/added.*
 */notebooks/expose/paris_54000.*
+*/notebooks/expose/mortalite*.db3
+*/notebooks/expose/mortalite_5*.txt
 build_help.bat
 _doc/sphinxdoc/source/blog/*.rst
 _doc/sphinxdoc/source/blog/rss.xml
