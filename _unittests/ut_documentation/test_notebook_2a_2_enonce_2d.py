@@ -82,15 +82,16 @@ class TestNotebookRunner2a_2_enonce_2D (unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-            
+
         # this notebook describes how to distribute the work with multiple processors
         # it requires to start multiple clusters first (a command line)
         # and to stop them afterwards
         # it still needs to be implemented
         # we skip !
-        warnings.warn("TODO: implement a unit test testing the distribution on multiple processors")
+        warnings.warn(
+            "TODO: implement a unit test testing the distribution on multiple processors")
         return
-            
+
         temp = get_temp_folder(__file__, "temp_notebook2a_2_enonce_2D")
         keepnote = ls_notebooks("td2a")
         assert len(keepnote) > 0

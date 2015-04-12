@@ -71,7 +71,7 @@ except ImportError:
         sys.path.append(path)
     import pymmails
 
-from pyquickhelper import fLOG, get_temp_folder
+from pyquickhelper import fLOG, get_temp_folder, noLOG
 from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
 
 
