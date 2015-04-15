@@ -1,4 +1,5 @@
-# the file has to be copied in C:\Users\<username>\.ipython\profile_default\startup
+# the file has to be copied in
+# C:\Users\<username>\.ipython\profile_default\startup
 import os
 import sys
 path = os.path.abspath(os.path.dirname(__file__))
