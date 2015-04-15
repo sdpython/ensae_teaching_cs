@@ -12,4 +12,4 @@ set pythonexe=c:\Python34_x64
 
 :nextn:
 set path=%path%;%pythonexe%;%pythonexe%\Scripts
-ipython3 notebook --notebook-dir=_doc\notebooks
+ipython3 notebook --notebook-dir=_doc\notebooks --matplotlib=inline
