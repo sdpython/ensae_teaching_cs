@@ -16,9 +16,9 @@ urchinTracker();
 
 import sys
 import os
-sys.path.append(r"../github/pyquickhelper/src")
-sys.path.append(r"../github/pyensae/src")
-sys.path.append(r"../github/ensae_teaching_cs/src")
+sys.path.append(r"../pyquickhelper/src")
+sys.path.append(r"../pyensae/src")
+sys.path.append(r"../ensae_teaching_cs/src")
 
 from pyquickhelper import TransferFTP, FileTreeNode, FolderTransferFTP, open_window_params
 from ensae_teaching_cs.automation.ftp_publish_helper import publish_documentation
