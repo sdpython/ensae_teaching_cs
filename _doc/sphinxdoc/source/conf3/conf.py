@@ -1,14 +1,7 @@
-# -*- coding: utf-8 -*-
-#
-#  documentation build configuration file, created by
-# sphinx-quickstart on Fri May 10 18:35:14 2013.
-#
-
 import sys
 import os
 import datetime
 import re
-#import solar_theme
 import sphinx_bootstrap_theme
 
 
@@ -23,9 +16,6 @@ try:
 except ImportError:
     sys.path.append(source_path)
     from conf_base import *
-
-#html_theme = 'solar_theme'
-#html_theme_path = [solar_theme.theme_path]
 
 html_theme = 'bootstrap'
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()

@@ -221,7 +221,7 @@ temp_*
 out_*
 */sphinxdoc/source/index_*
 */sphinxdoc/source/readme.*
-*/sphinxdoc/source/LICENSE.*
+*/sphinxdoc/source/LICENSE.txt
 */sphinxdoc/source/filechanges.*
 */sphinxdoc/source/coverage/*
 version.txt

@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-#
-#  documentation build configuration file, created by
-# sphinx-quickstart on Fri May 10 18:35:14 2013.
-#
-
 import sys
 import os
 import datetime

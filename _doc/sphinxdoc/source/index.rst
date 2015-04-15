@@ -3,6 +3,7 @@
 ENSAE - Programmation - Xavier Dupré
 ====================================
 
+:ref:`l-README`, :ref:`blog <ap-main-0>`
 
 
 Cette page donne accès au contenu des séances de travaux pratiques en programmation
