@@ -170,7 +170,7 @@ def setup_jenkins_server(js_url,
                         location, jname)
                     js.create_job_template(jname,
                                            git_repo=github + "%s/" % mod,
-                                           upstreams=[] if no_dep else dep,
+                                           upstreams=[] if no_dep else dep[-1:],
                                            script=script,
                                            location=loc)
             elif j is not None:
