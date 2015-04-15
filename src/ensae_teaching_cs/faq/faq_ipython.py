@@ -63,6 +63,9 @@ def fix_table_notebook():
 
 def r_and_notebook():
     """
+    Cette fonction test si la variable ``R_HOME`` est définie et pointe sur une
+    version de R présente.
+
     @example(techniques___Utiliser R depuis un notebook)
 
     .. index:: R
@@ -78,7 +81,14 @@ def r_and_notebook():
     @endFAQ
 
     """
-    pass
+    if "R_HOME" not in os.environ:
+        raise KeyError("R_HOME not present")
+
+    path = os.environ["R_HOME"]
+    if path is None or not os.path.exists(path):
+        raise FileNotFoundError("unable to find R at {0}".format(path))
+
+    return True
 
 
 def ipython_convert_notebooks():

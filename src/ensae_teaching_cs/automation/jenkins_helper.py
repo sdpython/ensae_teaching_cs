@@ -60,9 +60,8 @@ def get_jenkins_script(job, pythonexe, winpython, anaconda):
 def setup_jenkins_server(js_url,
                          github="sdpython",
                          modules=["pyquickhelper",
-                                  ["pymyinstall", "pymyinstall [all]",
-                                      "pyquickhelper [anaconda]"],
-                                  "pyensae",
+                                  ["pymyinstall", "pyquickhelper [anaconda]"],
+                                  ["pyensae","pymyinstall [all]"],
                                   ["pymmails", "pysqllike", "pyrsslocal",
                                    "python3_module_template", "pyensae [anaconda]"],
                                   ["pymmails [anaconda]", "pysqllike [anaconda]", "pyrsslocal [anaconda]",
@@ -171,7 +170,7 @@ def setup_jenkins_server(js_url,
                         location, jname)
                     js.create_job_template(jname,
                                            git_repo=github + "%s/" % mod,
-                                           upstreams=[] if no_dep else dep[-1:],
+                                           upstreams=[] if no_dep else dep,
                                            script=script,
                                            location=loc)
             elif j is not None:
