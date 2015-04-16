@@ -541,3 +541,43 @@ if __name__ == "__main__":
     print(c.x)
     print(c.y)
     c.x = 5
+
+
+def sortable_class(cl):
+    """
+    @FAQ(Classe sortable)
+    
+    Il faut prononcer *sortable* à l'anglaise. Comment rendre une classe
+    *sortable* ? Pour faire simple, on veut écrire ::
+    
+        l = [ o1, o2 ]
+        l.sort()
+        
+    Où ``o1`` et ``o2`` sont des objets d'une classe
+    que vous avez définie ::
+    
+        class MaClasse:
+        
+            ...
+            
+    Pour que cela fonctionne, il suffit juste 
+    de surcharger l'opérateur ``<`` ou plus exactement 
+    ``__lt__``. Par exemple ::
+    
+        class MaClasse:
+        
+            def __lt__(self, autre_instance):
+                if self.jenesaispas < autre.jenesaispas:
+                    return True
+                elif self.jenesaispas > autre.jenesaispas:
+                    return False:
+                else:
+                    if self.jenesaispas2 < autre.jenesaispas2:
+                        return True
+                    else:
+                        return False
+                    
+    @endFAQ
+    """
+    pass
+    
