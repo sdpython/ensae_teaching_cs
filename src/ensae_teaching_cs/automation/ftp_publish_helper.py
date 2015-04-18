@@ -183,7 +183,7 @@ def publish_documentation(
     password = params["password"]
     login = params["login"]
     ftpsite = params["ftpsite"]
-    
+
     filter_out = "[/\\\\]((moduletoc.html)|(blogtoc.html))"
 
     ftp = TransferFTP(ftpsite,
@@ -196,7 +196,7 @@ def publish_documentation(
         location = project["local"]
         root_local = project["root_local"]
         root_web = project["root_web"]
-        
+
         m27 = os.path.join(root_local, "..", "..", "dist_module27")
         if os.path.exists(m27):
             # python 27.version
@@ -204,7 +204,8 @@ def publish_documentation(
             ftn = FileTreeNode(os.path.join(root_local, ".."),
                                filter=lambda root, path, f, dir: not dir)
             fftp = FolderTransferFTP(ftn, ftp, sfile,
-                                     root_web=root_web.replace("helpsphinx", ""),
+                                     root_web=root_web.replace(
+                                         "helpsphinx", ""),
                                      fLOG=fLOG,
                                      footer_html=footer_html,
                                      content_filter=content_filter,
@@ -234,7 +235,8 @@ def publish_documentation(
             ftn = FileTreeNode(os.path.join(root_local, ".."),
                                filter=lambda root, path, f, dir: not dir)
             fftp = FolderTransferFTP(ftn, ftp, sfile,
-                                     root_web=root_web.replace("helpsphinx", ""),
+                                     root_web=root_web.replace(
+                                         "helpsphinx", ""),
                                      fLOG=fLOG,
                                      footer_html=footer_html,
                                      content_filter=content_filter,
@@ -242,7 +244,5 @@ def publish_documentation(
                                      text_transform=text_transform)
 
             fftp.start_transfering()
-        
-            
 
     ftp.close()

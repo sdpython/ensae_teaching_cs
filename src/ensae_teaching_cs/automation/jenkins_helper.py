@@ -50,7 +50,7 @@ def get_jenkins_script(job, pythonexe, winpython, anaconda, anaconda2):
             cmd = "build_setup_help_on_windows_27.bat"
         else:
             cmd = "build_setup_help_on_windows.bat"
-            
+
         if "[anaconda]" in spl:
             if anaconda is not None:
                 cmd += " " + os.path.join(anaconda, "python")
@@ -71,14 +71,17 @@ def setup_jenkins_server(js_url,
                          github="sdpython",
                          modules=["pyquickhelper",
                                   ["pymyinstall", ],
-                                  ["pymyinstall [anaconda] [update]","pymyinstall [anaconda2] [update27]"],
-                                  ["pyquickhelper [anaconda]", "pyquickhelper [27] [anaconda2]"],
-                                  ["pyensae","pymyinstall [all]"],
+                                  ["pymyinstall [anaconda] [update]",
+                                      "pymyinstall [anaconda2] [update27]"],
+                                  ["pyquickhelper [anaconda]",
+                                      "pyquickhelper [27] [anaconda2]"],
+                                  ["pyensae", "pymyinstall [all]"],
                                   ["pymmails", "pysqllike", "pyrsslocal", "pymyinstall [27] [anaconda2]",
                                    "python3_module_template", "pyensae [anaconda]"],
                                   ["pymmails [anaconda]", "pysqllike [anaconda]", "pyrsslocal [anaconda]",
                                    "python3_module_template [anaconda]"],
-                                  ["actuariat_python", "python3_module_template [27] [anaconda]"],
+                                  ["actuariat_python",
+                                      "python3_module_template [27] [anaconda]"],
                                   ["actuariat_python [winpython]",
                                    "actuariat_python [anaconda]"],
                                   "code_beatrix",

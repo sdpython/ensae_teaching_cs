@@ -59,6 +59,7 @@ class TestRetrieveSpeeches(unittest.TestCase):
             if os.path.isfile(f):
                 os.remove(f)
 
+        i = 0
         for i, disc in enumerate(enumerate_speeches_from_elysees()):
             fLOG(i, disc)
             if i >= 2:
