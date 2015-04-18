@@ -19,13 +19,14 @@ def get_jenkins_job_name(job):
     return job.replace(" ", "_").replace("[", "").replace("]", "")
 
 
-def get_jenkins_script(job, pythonexe, winpython, anaconda):
+def get_jenkins_script(job, pythonexe, winpython, anaconda, anaconda2):
     """
     build the jenkins script for a module and its options
 
     @param      job             module and options
     @param      pythonexe       unused
     @param      anaconda        location of anaconda
+    @param      anaconda2       location of anaconda 2
     @param      winpython       location of winpython
     @return                     script
     """
@@ -41,9 +42,13 @@ def get_jenkins_script(job, pythonexe, winpython, anaconda):
             cmd = "bunittest_all.bat"
         elif "[notebooks]" in spl:
             cmd = "bunittest_notebooks.bat"
+        elif "[anaconda-update]" in spl:
+            cmd = "update_anaconda.bat"
+        elif "[anaconda-update27]" in spl:
+            cmd = "update_anaconda27.bat"
         else:
             cmd = "build_setup_help_on_windows.bat"
-
+            
         if "[anaconda]" in spl:
             if anaconda is not None:
                 cmd += " " + os.path.join(anaconda, "python")
@@ -62,13 +67,13 @@ def setup_jenkins_server(js_url,
                          modules=["pyquickhelper",
                                   ["pymyinstall", ],
                                   ["pymyinstall [anaconda-update]","pymyinstall [anaconda-update27]"],
-                                  ["pyquickhelper [anaconda]"],
+                                  ["pyquickhelper [anaconda]", "pyquickhelper [27] [anaconda]"],
                                   ["pyensae","pymyinstall [all]"],
                                   ["pymmails", "pysqllike", "pyrsslocal",
                                    "python3_module_template", "pyensae [anaconda]"],
                                   ["pymmails [anaconda]", "pysqllike [anaconda]", "pyrsslocal [anaconda]",
                                    "python3_module_template [anaconda]"],
-                                  "actuariat_python",
+                                  ["actuariat_python", "python3_module_template [27] [anaconda]"],
                                   ["actuariat_python [winpython]",
                                    "actuariat_python [anaconda]"],
                                   "code_beatrix",
@@ -84,6 +89,7 @@ def setup_jenkins_server(js_url,
                          pythonexe=os.path.dirname(sys.executable),
                          winpython=r"C:\WinPython-64bit-3.4.2.4FlavorRfull\python-3.4.2.amd64",
                          anaconda=r"c:\Anaconda3",
+                         anaconda2=r"c:\Anaconda2",
                          overwrite=False,
                          location=None,
                          no_dep=False,
@@ -163,7 +169,7 @@ def setup_jenkins_server(js_url,
                     js.delete_job(jname)
 
                 script = get_jenkins_script(
-                    job, pythonexe, winpython, anaconda)
+                    job, pythonexe, winpython, anaconda, anaconda2)
                 if script is not None:
                     new_dep.append(name)
                     created.append(name)
