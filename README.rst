@@ -1,4 +1,4 @@
-﻿
+
 .. _l-README:
 
 README / Changes
@@ -45,6 +45,7 @@ Versions
     * **todo:** il manque des auteurs pour quelques articles sur la page :ref:`l-td2a-biblio`
     * **fix:** the setup does not need the file ``README.rst`` anymore
     * **add:** add unit test to test the notebooks, separate notebooks using Cython from the others
+    * **add:** add a :ref:`Blog <ap-main-0>`
 * **0.5 - 2014/08/31**
     * **new:** first version
 
