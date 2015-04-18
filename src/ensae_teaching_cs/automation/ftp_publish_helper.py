@@ -196,34 +196,53 @@ def publish_documentation(
         location = project["local"]
         root_local = project["root_local"]
         root_web = project["root_web"]
+        
+        m27 = os.path.join(root_local, "..", "..", "dist_module27")
+        if os.path.exists(m27):
+            # python 27.version
+            fLOG("-------------------------", m27)
+            ftn = FileTreeNode(os.path.join(root_local, ".."),
+                               filter=lambda root, path, f, dir: not dir)
+            fftp = FolderTransferFTP(ftn, ftp, sfile,
+                                     root_web=root_web.replace("helpsphinx", ""),
+                                     fLOG=fLOG,
+                                     footer_html=footer_html,
+                                     content_filter=content_filter,
+                                     is_binary=is_binary,
+                                     text_transform=text_transform)
 
-        fLOG("-------------------------", location)
+            fftp.start_transfering()
+        else:
+            # python 3.4 documentation + setup
+            fLOG("-------------------------", location)
 
-        sfile = project["status_file"]
-        rootw = project["root_web"]
+            sfile = project["status_file"]
+            rootw = project["root_web"]
 
-        ftn = FileTreeNode(root_local)
-        fftp = FolderTransferFTP(ftn, ftp, sfile,
-                                 root_web=rootw,
-                                 fLOG=fLOG,
-                                 footer_html=footer_html,
-                                 content_filter=content_filter,
-                                 is_binary=is_binary,
-                                 text_transform=text_transform,
-                                 filter_out=filter_out)
+            ftn = FileTreeNode(root_local)
+            fftp = FolderTransferFTP(ftn, ftp, sfile,
+                                     root_web=rootw,
+                                     fLOG=fLOG,
+                                     footer_html=footer_html,
+                                     content_filter=content_filter,
+                                     is_binary=is_binary,
+                                     text_transform=text_transform,
+                                     filter_out=filter_out)
 
-        fftp.start_transfering()
+            fftp.start_transfering()
 
-        ftn = FileTreeNode(os.path.join(root_local, ".."),
-                           filter=lambda root, path, f, dir: not dir)
-        fftp = FolderTransferFTP(ftn, ftp, sfile,
-                                 root_web=root_web.replace("helpsphinx", ""),
-                                 fLOG=fLOG,
-                                 footer_html=footer_html,
-                                 content_filter=content_filter,
-                                 is_binary=is_binary,
-                                 text_transform=text_transform)
+            ftn = FileTreeNode(os.path.join(root_local, ".."),
+                               filter=lambda root, path, f, dir: not dir)
+            fftp = FolderTransferFTP(ftn, ftp, sfile,
+                                     root_web=root_web.replace("helpsphinx", ""),
+                                     fLOG=fLOG,
+                                     footer_html=footer_html,
+                                     content_filter=content_filter,
+                                     is_binary=is_binary,
+                                     text_transform=text_transform)
 
-        fftp.start_transfering()
+            fftp.start_transfering()
+        
+            
 
     ftp.close()
