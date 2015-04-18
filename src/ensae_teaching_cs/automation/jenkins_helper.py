@@ -46,6 +46,8 @@ def get_jenkins_script(job, pythonexe, winpython, anaconda, anaconda2):
             cmd = "update_anaconda.bat"
         elif "[update27]" in spl:
             cmd = "update_anaconda_27.bat"
+        elif "[27]" in spl:
+            cmd = "build_setup_help_on_windows_27.bat"
         else:
             cmd = "build_setup_help_on_windows.bat"
             
