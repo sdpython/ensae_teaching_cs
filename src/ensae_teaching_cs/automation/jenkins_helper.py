@@ -42,16 +42,19 @@ def get_jenkins_script(job, pythonexe, winpython, anaconda, anaconda2):
             cmd = "bunittest_all.bat"
         elif "[notebooks]" in spl:
             cmd = "bunittest_notebooks.bat"
-        elif "[anaconda-update]" in spl:
+        elif "[update]" in spl:
             cmd = "update_anaconda.bat"
-        elif "[anaconda-update27]" in spl:
-            cmd = "update_anaconda27.bat"
+        elif "[update27]" in spl:
+            cmd = "update_anaconda_27.bat"
         else:
             cmd = "build_setup_help_on_windows.bat"
             
         if "[anaconda]" in spl:
             if anaconda is not None:
                 cmd += " " + os.path.join(anaconda, "python")
+        elif "[anaconda2]" in spl:
+            if anaconda2 is not None:
+                cmd += " " + os.path.join(anaconda2, "python")
         elif "[winpython]" in spl:
             if winpython is not None:
                 cmd += " " + os.path.join(winpython, "python")
@@ -66,10 +69,10 @@ def setup_jenkins_server(js_url,
                          github="sdpython",
                          modules=["pyquickhelper",
                                   ["pymyinstall", ],
-                                  ["pymyinstall [anaconda-update]","pymyinstall [anaconda-update27]"],
-                                  ["pyquickhelper [anaconda]", "pyquickhelper [27] [anaconda]"],
+                                  ["pymyinstall [anaconda] [update]","pymyinstall [anaconda2] [update27]"],
+                                  ["pyquickhelper [anaconda]", "pyquickhelper [27] [anaconda2]"],
                                   ["pyensae","pymyinstall [all]"],
-                                  ["pymmails", "pysqllike", "pyrsslocal",
+                                  ["pymmails", "pysqllike", "pyrsslocal", "pymyinstall [27] [anaconda2]",
                                    "python3_module_template", "pyensae [anaconda]"],
                                   ["pymmails [anaconda]", "pysqllike [anaconda]", "pyrsslocal [anaconda]",
                                    "python3_module_template [anaconda]"],
