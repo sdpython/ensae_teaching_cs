@@ -183,6 +183,8 @@ def publish_documentation(
     password = params["password"]
     login = params["login"]
     ftpsite = params["ftpsite"]
+    
+    filter_out = "[/\\\\]((moduletoc.html)|(blogtoc.html))"
 
     ftp = TransferFTP(ftpsite,
                       login,
@@ -207,7 +209,8 @@ def publish_documentation(
                                  footer_html=footer_html,
                                  content_filter=content_filter,
                                  is_binary=is_binary,
-                                 text_transform=text_transform)
+                                 text_transform=text_transform,
+                                 filter_out=filter_out)
 
         fftp.start_transfering()
 
