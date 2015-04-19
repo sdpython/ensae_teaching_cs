@@ -1,4 +1,4 @@
-﻿
+
 
 ENSAE - Programmation - Xavier Dupré
 ====================================
@@ -194,6 +194,11 @@ s'installe avec ``pip install <module>``. Deux distrubutions possibles :
     * `folium <https://github.com/python-visualization/folium>`_
     * `graphviz <https://github.com/xflr6/graphviz>`_    
     
+    Uniquement disponible sous Windows, cette installation a l'avantage de ne pas 
+    nécessiter les droits administrateur pour être installée. Elle
+    ne modifie pas les registres et on peut la recopier telle quelle sur une clé USB
+    pour la recopier sur un autre ordinateur.
+    
 Sous Linux, l'installation ne pose pas de problèmes. Sous Windows, il faut installer
 les packages `wheel <http://wheel.readthedocs.org/en/latest/>`_. Ces modules
 sont accessibles depuis le site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
@@ -221,6 +226,26 @@ avec le code suivant ::
 Certains notebooks requièrent des outils supplémentaires :
 
     * `graphviz <http://www.graphviz.org/>`_
+        
+    
+Editeur de texte et navigateur
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. index:: éditeur, IDE
+
+* `SciTe <http://www.scintilla.org/SciTE.html>`_, le plus simple et le plus léger,
+  lire cet article pour le configurer
+  `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_.
+* `PyCharm <https://www.jetbrains.com/pycharm/>`_, c'est un environnement complet de développement,
+  très pratique pour débugger, repérer des erreurs avant l'exécution (nom de variable inconnus...)
+  
+.. index:: navigateur, notebook  
+
+Les navigateur sont importants pour l'utilisation des notebooks. Je recommande soit
+`Firefox <https://www.mozilla.org/fr/firefox/new/>`_, 
+soit `Chrome <http://www.google.com/chrome/>`_. Internet Explorer pose quelques problèmes
+avec l'utilisateur du Javascript. Ces deux navigateurs sont indispensables si vous insérez du javascript
+dans nos notebooks.
         
         
 developpeur
