@@ -198,9 +198,12 @@ def publish_documentation(
         root_web = project["root_web"]
 
         m27 = os.path.join(root_local, "..", "..", "dist_module27")
+        sfile = project["status_file"]
+        rootw = project["root_web"]
+
         if os.path.exists(m27):
             # python 27.version
-            fLOG("-------------------------", m27)
+            fLOG("-------------------------py27", m27)
             ftn = FileTreeNode(os.path.join(root_local, ".."),
                                filter=lambda root, path, f, dir: not dir)
             fftp = FolderTransferFTP(ftn, ftp, sfile,
@@ -215,10 +218,7 @@ def publish_documentation(
             fftp.start_transfering()
         else:
             # python 3.4 documentation + setup
-            fLOG("-------------------------", location)
-
-            sfile = project["status_file"]
-            rootw = project["root_web"]
+            fLOG("-------------------------py34", location)
 
             ftn = FileTreeNode(root_local)
             fftp = FolderTransferFTP(ftn, ftp, sfile,
