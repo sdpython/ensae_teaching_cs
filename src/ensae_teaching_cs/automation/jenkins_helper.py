@@ -95,7 +95,7 @@ def setup_jenkins_server(js_url,
                                    "ensae_teaching_cs [anaconda] [notebooks]"],
                                   ],
                          pythonexe=os.path.dirname(sys.executable),
-                         winpython=r"C:\WinPython-64bit-3.4.2.4FlavorRfull\python-3.4.2.amd64",
+                         winpython=r"C:\WinPython-64bit-3.4.3.2FlavorRfull\python-3.4.3.amd64",
                          anaconda=r"c:\Anaconda3",
                          anaconda2=r"c:\Anaconda2",
                          overwrite=False,
@@ -142,6 +142,8 @@ def setup_jenkins_server(js_url,
                                 location = r"c:\\jenkins\\pymy_nodep",
                                 no_dep=True,
                                 prefix = "_nodep_")
+                                
+    For WinPython, version 3.4.3+ is mandatory to get the latest version of IPython (3).
     """
 
     if isinstance(js_url, str):
