@@ -84,7 +84,8 @@ class TestNotebookRunner2a_3 (unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_notebook2a_3_enonce")
         keepnote = ls_notebooks("td2a")
         assert len(keepnote) > 0
-        res = execute_notebooks(temp, keepnote, lambda i, n: "_3" in n and "enonce" in n)
+        res = execute_notebooks(
+            temp, keepnote, lambda i, n: "_3" in n and "enonce" in n)
         assert len(res) > 0
         fails = [(os.path.split(k)[-1], v)
                  for k, v in sorted(res.items()) if not v[0]]
@@ -101,7 +102,8 @@ class TestNotebookRunner2a_3 (unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_notebook2a_3_correction")
         keepnote = ls_notebooks("td2a")
         assert len(keepnote) > 0
-        res = execute_notebooks(temp, keepnote, lambda i, n: "_3" in n and "correction" in n)
+        res = execute_notebooks(
+            temp, keepnote, lambda i, n: "_3" in n and "correction" in n)
         assert len(res) > 0
         fails = [(os.path.split(k)[-1], v)
                  for k, v in sorted(res.items()) if not v[0]]
