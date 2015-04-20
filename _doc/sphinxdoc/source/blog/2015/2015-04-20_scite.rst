@@ -1,0 +1,70 @@
+
+
+.. blogpost::
+    :title: Configurer SciTE
+    :keywords: Scite, éditeur de texte, configuration
+    :date: 2015-04-20
+    :categories: éditeur de texte
+        
+    Il y a un peu plus d'un an, j'ai écris cet article 
+    `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
+    La plupart des choses n'ont pas changé. Je reproduis ici la partie qui décrit la configuration
+    de `Scite <http://www.scintilla.org/>`_ qui reste un éditeur léger et donc très pratique.
+    La première chose à faire est de lui indiquer le chemin de l'interpréteur Python souhaité :
+    
+    .. image:: scitep.png
+    
+    Il faut ensuite modifier les lignes suivantes (à la fin du fichier) ::
+    
+        if PLAT_WIN
+            command.go.*.py=C:\monpython\pythonw -u "$(FileNameExt)"
+            command.go.subsystem.*.py=1
+            command.go.*.pyw=C:\monpython\pythonw -u "$(FileNameExt)"
+            command.go.subsystem.*.pyw=1
+            command.build.SConscript=scons.bat --up .
+            command.build.SConstruct=scons.bat .    
+            
+    .. index:: variable d'environnement, PATH
+            
+    ``monpython`` peut être remplacé par exemple par ``c:\Python34``, ``c:\Anaconda3``.
+    Il se peut que SciTE trouve Python sans avoir à appliquer cette étape supplémentaire
+    car la `variable d'environnement <http://fr.wikipedia.org/wiki/Variable_d%27environnement>`_ 
+    ``PATH`` contient le chemin d'accès à Python.
+    C'est à la fois pratique que cette variable contient le chemin d'accès à Python
+    et à la fois parfois problématique si vous souhaitez utiliser deux versions de Python sur
+    la même machine. Dans ce cas, il vaut mieux ne rien mettre pour éviter que l'ordinateur
+    ne fasse un choix implicite.
+    
+    .. index:: tabulation
+    
+    Autre recommandation, les **tabulations** : il vaut mieux les remplacer par des espaces.
+    C'est accessible depuis le menu options. C'est la norme pour les programmeurs.
+    Et cela évite que les tabulations apparaissent de différentes manières selon
+    l'éditeur choisi.
+    
+    Dans les options globales (*Global Option File*), on trouve les polices d'affichage que l'éditeur utilise
+    pour afficher tel ou tel élément du langage ::
+    
+        # Give symbolic names to the set of fonts used in the standard styles.
+        if PLAT_WIN
+            font.base=font:Consolas,size:9.4
+            font.small=font:Consolas,size:8
+            font.comment=font:Georgia,size:10.1
+            font.code.comment.box=$(font.comment)
+            font.code.comment.line=$(font.comment)
+            font.code.comment.doc=$(font.comment)
+            font.code.comment.nested=$(font.comment)
+            font.text=font:Consolas,size:11
+            font.text.comment=font:Verdana,size:9
+            font.embedded.base=font:Consolas,size:9
+            font.embedded.comment=font:Comic Sans MS,size:8
+            font.monospace=font:Consolas,size:8.9
+            font.vbs=font:Lucida Sans Unicode,size:10
+            
+    Il est facile de les modifier pour rendre l'affichage un peu plus à sa convenance.
+    
+    
+    
+    
+    
+    
