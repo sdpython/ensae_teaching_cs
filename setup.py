@@ -47,7 +47,7 @@ if os.path.exists("version.txt"):
         lines = f.readlines()
     subversion = lines[0].strip("\r\n ")
 else:
-    subversion = 1
+    raise FileNotFoundError("version.txt")
 
 project_var_name = "ensae_teaching_cs"
 sversion = "0.6"
@@ -89,6 +89,7 @@ package_data = {project_var_name + ".pythonnet.py33": ["*.pyd", "*.txt", "*.dll"
                 project_var_name + ".pythonnet.py33x64": ["*.pyd", "*.txt", "*.dll"],
                 project_var_name + ".pythonnet.py34": ["*.pyd", "*.txt", "*.dll"],
                 project_var_name + ".pythonnet.py34x64": ["*.pyd", "*.txt", "*.dll"],
+                project_var_name + ".pythonnet.py27x64": ["*.pyd", "*.txt", "*.dll"],
                 project_var_name + ".pythonnet.csdll": ["*.dll"],
                 }
 
