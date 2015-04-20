@@ -142,7 +142,7 @@ def setup_jenkins_server(js_url,
                                 location = r"c:\\jenkins\\pymy_nodep",
                                 no_dep=True,
                                 prefix = "_nodep_")
-                                
+
     For WinPython, version 3.4.3+ is mandatory to get the latest version of IPython (3).
     """
 
