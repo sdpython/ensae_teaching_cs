@@ -271,7 +271,7 @@ def git_clone(
         fold = os.path.join(root, el)
         if not os.path.exists(fold):
             print("clone", el)
-            url = "https://versioning.ensae.fr/python-2a/{0}.git".format(cl)
+            url = "https://<gitlab>/<group>/{0}.git".format(cl)
             git_clone(  fold, url,user=user,password=password, init=False,fLOG=print)
     @endcode
 
