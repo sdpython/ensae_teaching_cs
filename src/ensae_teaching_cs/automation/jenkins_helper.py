@@ -73,11 +73,11 @@ def setup_jenkins_server(js_url,
                                   ["pymyinstall", ],
                                   ["pymyinstall [anaconda] [update]",
                                       "pymyinstall [anaconda2] [update27]"],
-                                  ["pyquickhelper [anaconda]",
+                                  ["pyquickhelper [anaconda]","pyquickhelper [winpython]",
                                       "pyquickhelper [27] [anaconda2]"],
-                                  ["pyensae", "pymyinstall [all]"],
+                                  ["pyensae", ],
                                   ["pymmails", "pysqllike", "pyrsslocal", "pymyinstall [27] [anaconda2]",
-                                   "python3_module_template", "pyensae [anaconda]"],
+                                   "python3_module_template", "pyensae [anaconda]", "pyensae [winpython]"],
                                   ["pymmails [anaconda]", "pysqllike [anaconda]", "pyrsslocal [anaconda]",
                                    "python3_module_template [anaconda]"],
                                   ["actuariat_python",
@@ -92,7 +92,7 @@ def setup_jenkins_server(js_url,
                                    "ensae_teaching_cs [anaconda]"],
                                   "ensae_teaching_cs [notebooks]",
                                   ["ensae_teaching_cs [winpython] [notebooks]",
-                                   "ensae_teaching_cs [anaconda] [notebooks]"],
+                                   "ensae_teaching_cs [anaconda] [notebooks]", "pymyinstall [all]"],
                                   ],
                          pythonexe=os.path.dirname(sys.executable),
                          winpython=r"C:\WinPython-64bit-3.4.3.2FlavorRfull\python-3.4.3.amd64",
@@ -144,6 +144,19 @@ def setup_jenkins_server(js_url,
                                 prefix = "_nodep_")
 
     For WinPython, version 3.4.3+ is mandatory to get the latest version of IPython (3).
+    
+    Another example::
+    
+        import sys
+        sys.path.append(r"C:\<path>\ensae_teaching_cs\src")
+        sys.path.append(r"C:\<path>\pyquickhelper\src")
+        sys.path.append(r"C:\<path>\pyensae\src")
+        from ensae_teaching_cs.automation.jenkins_helper import setup_jenkins_server, JenkinsExt
+        js = JenkinsExt("http://<machine>:8080/", <user>, <password>)
+        setup_jenkins_server(js,
+                location=r"c:\jenkins\pymy",
+                overwrite=True,
+                fLOG=print)    
     """
 
     if isinstance(js_url, str):
@@ -191,6 +204,8 @@ def setup_jenkins_server(js_url,
                                            upstreams=[] if no_dep else dep[-1:],
                                            script=script,
                                            location=loc)
+                else:
+                    fLOG("skipping", job)
             elif j is not None:
                 new_dep.append(name)
 

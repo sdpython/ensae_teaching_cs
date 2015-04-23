@@ -156,11 +156,10 @@ Getting started
 
 .. index:: R, Julia, WinPython, Anaconda, pyminstall
 
-datascientist
-^^^^^^^^^^^^^
 
 La version recommandée est Python 3.4, 64 bit. Par défaut, les modules 
-s'installe avec ``pip install <module>``. Deux distrubutions possibles :
+s'installe avec ``pip install <module>``. Le plus simple est d'utiliser la 
+distribution `Anaconda <https://store.continuum.io/cshop/anaconda/>`_ :
 
 * `Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac). 
   Sous Linux ou Mac, la distribution n'interfère pas avec la distribution existante
@@ -183,53 +182,8 @@ s'installe avec ``pip install <module>``. Deux distrubutions possibles :
    Il suffit d'écrire sur la ligne de commande ``conda update --all`` 
    pour mettre à jour tous les modules.
 
-* `WinPython <https://winpython.github.io/>`_ (Windows). Sous Windows, elle a l'avantage d'inclure
-  `R <http://www.r-project.org/>`_ ou `Julia <http://julialang.org/>`_. On passe alors
-  facilement de python à R ou Julia depuis le même notebooks. Pour suivre ces cours il faut ajouter :
-
-    * `goslate <http://pythonhosted.org/goslate/>`_
-    * `dbfread <http://dbfread.readthedocs.org/en/latest/>`_
-    * `bokeh <http://bokeh.pydata.org/en/latest/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#bokeh>`_)
-    * `pywin32 <https://pypi.python.org/pypi/pywin32>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#pywin32>`_)
-    * `folium <https://github.com/python-visualization/folium>`_
-    * `graphviz <https://github.com/xflr6/graphviz>`_    
     
-    Uniquement disponible sous Windows, cette installation a l'avantage de ne pas 
-    nécessiter les droits administrateur pour être installée. Elle
-    ne modifie pas les registres et on peut la recopier telle quelle sur une clé USB
-    pour la recopier sur un autre ordinateur.
-    
-Sous Linux, l'installation ne pose pas de problèmes. Sous Windows, il faut installer
-les packages `wheel <http://wheel.readthedocs.org/en/latest/>`_. Ces modules
-sont accessibles depuis le site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
-Vous pouvez également utiliser le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
-et écrire ::
-
-    from pymyinstall import extend_anaconda, process_installation
-    process_installation(extend_anaconda())
-
-Ou ::
-    
-    from pymyinstall import extend_winpython, process_installation
-    process_installation(extend_winpython())
-    
-Enfin, il est possible d'utiliser la distribution standard de Python. La liste des modules
-nécessaire est assez longue et peut-être trouvée dans le code de la fonction
-`complete_installation <https://github.com/sdpython/pymyinstall/blob/master/src/pymyinstall/packaged/packaged_config.py>`_
-que vous pouvez exécuter après avoir installé le module 
-`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
-avec le code suivant ::    
-
-        from pymyinstall import datascientist
-        datascientist("install", full = True)
-        
-Certains notebooks requièrent des outils supplémentaires :
-
-    * `graphviz <http://www.graphviz.org/>`_
-        
-    
-Editeur de texte et navigateur
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Il faut également un éditeur de texte :
 
 .. index:: éditeur, IDE
 
@@ -239,49 +193,11 @@ Editeur de texte et navigateur
 * `PyCharm <https://www.jetbrains.com/pycharm/>`_, c'est un environnement complet de développement,
   très pratique pour débugger, repérer des erreurs avant l'exécution (nom de variable inconnus...)
   
-.. index:: navigateur, notebook  
+Pour les développeurs, il faut un environnement plus complet :
 
-Les navigateur sont importants pour l'utilisation des notebooks. Je recommande soit
-`Firefox <https://www.mozilla.org/fr/firefox/new/>`_, 
-soit `Chrome <http://www.google.com/chrome/>`_. Internet Explorer pose quelques problèmes
-avec l'utilisateur du Javascript. Ces deux navigateurs sont indispensables si vous insérez du javascript
-dans nos notebooks.
-        
-        
-developpeur
-^^^^^^^^^^^
-        
-La documentation et les tests unitaires nécessite les modules suivants :
+.. toctree::
 
-    * `wheel <https://wheel.readthedocs.org/en/latest/>`_ 
-    * `coverage <https://pypi.python.org/pypi/coverage>`_ 
-    * `sphinxcontrib-images <http://pythonhosted.org//sphinxcontrib-images/>`_
-    * `sphinxjp.themes.sphinxjp <https://pypi.python.org/pypi/sphinxjp.themes.sphinxjp>`_ 
-    * `sphinx_rtd_theme <https://github.com/snide/sphinx_rtd_theme>`_ 
-    * `sphinx_bootstrap_theme <http://ryan-roemer.github.io/sphinx-bootstrap-theme/>`_ 
-    * `sphinxjp.themes.basicstrap <https://pythonhosted.org/sphinxjp.themes.basicstrap/>`_ 
-    * `sphinx_py3doc_enhanced_theme <https://pypi.python.org/pypi/sphinx_py3doc_enhanced_theme>`_
-
-Certaines séances pratiques utilisent des données depuis ce site. 
-Elles sont facilement téléchargeables avec ces deux modules :
-
-* `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
-* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
-
-Pour être compilée, la documentation requiert également :
-
-    * `miktex <http://miktex.org/>`_ (Windows seulement)
-    
-Il est très utile d'avoir un éditeur de texte léger, quelques options :
-
-    * `Scite <http://www.scintilla.org/SciTE.html>`_
-    * `Notepad++ <http://notepad-plus-plus.org/>`_
-    
-Et un `IDE <http://en.wikipedia.org/wiki/Integrated_development_environment>`_ :
-
-    * `PyCharm <https://www.jetbrains.com/pycharm/>`_
-    * `PyTools <http://pytools.codeplex.com/>`_
-
+    getting_started
 
 Table des matières
 ------------------
