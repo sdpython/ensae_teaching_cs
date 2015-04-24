@@ -460,5 +460,6 @@ if not r:
             package_dir=package_dir,
             package_data=package_data,
             install_requires=[
-                "pyensae", "pyquickhelper", "pymyinstall", "pymmails"],
+                "pyensae", "pyquickhelper", "pymyinstall", "pymmails",
+                "scikit-learn",],
         )

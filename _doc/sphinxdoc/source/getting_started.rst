@@ -6,11 +6,14 @@ Getting started
 
 .. index:: R, Julia, WinPython, Anaconda, pyminstall
 
-datascientist
-+++++++++++++
+data scientist
+++++++++++++++
 
 La version recommandée est Python 3.4, 64 bit. Par défaut, les modules 
-s'installe avec ``pip install <module>``. Deux distrubutions possibles :
+s'installent avec ``pip install <module>`` ou avec ``conda install <module>``
+pour les modules distribués par Anaconda. 
+Le plus simple est sans doute d'utiliser une distribution qui inclut
+les modules les plus usités. Deux options possibles :
 
 * `Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac). 
   Sous Linux ou Mac, la distribution n'interfère pas avec la distribution existante
@@ -49,9 +52,12 @@ s'installe avec ``pip install <module>``. Deux distrubutions possibles :
     ne modifie pas les registres et on peut la recopier telle quelle sur une clé USB
     pour la recopier sur un autre ordinateur.
     
-Sous Linux, l'installation ne pose pas de problèmes. Sous Windows, il faut installer
-les packages `wheel <http://wheel.readthedocs.org/en/latest/>`_. Ces modules
-sont accessibles depuis le site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
+Sous Linux, l'installation de modules supplémentaires avec l'instruction
+``pip install <module>`` ne pose pas de problèmes (rarement).
+Sous Windows, certains packages utilisant le langage C nécessitent
+d'utiliser les packages `wheel <http://wheel.readthedocs.org/en/latest/>`_. 
+Ces modules sont accessibles depuis le site 
+`Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
 Vous pouvez également utiliser le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
 et écrire ::
 
@@ -63,7 +69,9 @@ Ou ::
     from pymyinstall import extend_winpython, process_installation
     process_installation(extend_winpython())
     
-Enfin, il est possible d'utiliser la distribution standard de Python. La liste des modules
+Enfin, il est possible d'utiliser la version officielle du language
+disponible depuis `python.org <https://www.python.org/>`_. C'est un peu plus long.
+La liste des modules
 nécessaire est assez longue et peut-être trouvée dans le code de la fonction
 `complete_installation <https://github.com/sdpython/pymyinstall/blob/master/src/pymyinstall/packaged/packaged_config.py>`_
 que vous pouvez exécuter après avoir installé le module 
