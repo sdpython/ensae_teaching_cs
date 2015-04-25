@@ -7,7 +7,18 @@
     
 Eléments de code inclus dans le module
 --------------------------------------
-    
+
+
+
++----------------------+---------------------+---------------------+--------------------+------------------------+------------------------------------------------+
+| :ref:`l-modules`     |  :ref:`l-functions` | :ref:`l-classes`    | :ref:`l-methods`   | :ref:`l-staticmethods` | :ref:`l-properties`                            |
++----------------------+---------------------+---------------------+--------------------+------------------------+------------------------------------------------+
+| :ref:`modindex`      |  :ref:`l-example`   | :ref:`search`       | :ref:`l-license`   | :ref:`l-changes`       | :ref:`l-README`                                |
++----------------------+---------------------+---------------------+--------------------+------------------------+------------------------------------------------+
+| :ref:`genindex`      |  :ref:`l-FAQ`       | :ref:`l-notebooks`  |                    | :ref:`l-statcode`      | `Unit Test Coverage <coverage/index.html>`_    |
++----------------------+---------------------+---------------------+--------------------+------------------------+------------------------------------------------+
+
+
 .. toctree::
     :maxdepth: 2
 
@@ -15,10 +26,11 @@ Eléments de code inclus dans le module
     doctestunit
     generatedoc
     generatesetup
-    installation
+    index_module
     all_example
     all_notebooks
-    index_module
     all_indexes
     all_report
+    
+    
     
