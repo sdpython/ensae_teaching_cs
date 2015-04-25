@@ -102,22 +102,28 @@ def setup_jenkins_server(js_url,
                          location=None,
                          no_dep=False,
                          prefix="",
-                         fLOG=noLOG):
+                         fLOG=noLOG,
+                         dependencies={'pymyinstall':['pyquickhelper'],
+                                       'pyensae': ['pyquickhelper'],
+                                       'ensae_teaching_cs':['pyquickhelper','pyensae','pyrsslocal','pymmails']
+                                       }):
     """
     Set up all the jobs to build these teachings
 
-    @param      js_url      url or jenkins server (specially if you need credentials)
-    @param      github      github account
-    @param      modules     modules for which to generate the
-    @param      pythonexe   location of Python (unused)
-    @param      winpython   location of WinPython (or None to skip)
-    @param      anaconda    location of Anaconda (or None to skip)
-    @param      overwrite   do not create the job if it already exists
-    @param      location    None for default or a local folder
-    @param      no_dep      if True, do not add dependencies
-    @param      prefix      add a prefix to the name
-    @param      fLOG        logging function
-    @return                 list of created jobs
+    @param      js_url          url or jenkins server (specially if you need credentials)
+    @param      github          github account
+    @param      modules         modules for which to generate the
+    @param      pythonexe       location of Python (unused)
+    @param      winpython       location of WinPython (or None to skip)
+    @param      anaconda        location of Anaconda (or None to skip)
+    @param      overwrite       do not create the job if it already exists
+    @param      location        None for default or a local folder
+    @param      no_dep          if True, do not add dependencies
+    @param      prefix          add a prefix to the name
+    @param      dependencies    some modules depend on others also being tested,
+                                this parameter gives the list
+    @param      fLOG            logging function
+    @return                     list of created jobs
 
     Example::
 
@@ -169,6 +175,7 @@ def setup_jenkins_server(js_url,
 
     dep = []
     created = []
+    locations = []
     for jobs in modules:
 
         if not isinstance(jobs, list):
@@ -181,7 +188,7 @@ def setup_jenkins_server(js_url,
             jname = prefix + name
 
             try:
-                j = js.get_job_config(jname)
+                j = js.get_job_config(jname) if not js._mock else None
             except jenkins.NotFoundException:
                 j = None
 
@@ -197,18 +204,63 @@ def setup_jenkins_server(js_url,
                     new_dep.append(name)
                     created.append(name)
                     fLOG("create job", jname)
-                    loc = None if location is None else os.path.join(
-                        location, jname)
-                    js.create_job_template(jname,
+                    loc = None if location is None else os.path.join(location, jname)
+                        
+                    deps = get_dependencies_path(name, locations, dependencies.get(name, None))
+                        
+                    js.create_job_template(job,
                                            git_repo=github + "%s/" % mod,
                                            upstreams=[] if no_dep else dep[-1:],
                                            script=script,
-                                           location=loc)
+                                           location=loc,
+                                           dependencies=deps)
+                    
+                    locations.append( (job, loc) )
                 else:
-                    fLOG("skipping", job)
+                    loc = None if location is None else os.path.join(location, jname)
+                    locations.append( (job, loc) )
+                    fLOG("skipping", job, "location", loc)
             elif j is not None:
                 new_dep.append(name)
 
         dep = new_dep
 
     return created
+
+
+def get_dependencies_path(job, locations, dependencies):
+    """
+    return the depeencies to add to the job based on the name and the past locations
+    
+    @param      job             job description
+    @param      locations       list of 2-uple ( job description, location )
+    @param      dependencies    None or list of dependencies
+    @return                     dictionary { module, location }
+    """
+    if dependencies is None:
+        return {}
+        
+    py27 = "[27]" in job
+    name = job.split()[0]
+    
+    res = { }
+    for dep in dependencies:
+        for j, loc in locations:
+            n = j.split()[0]
+            p27 = "[27]" in j
+            
+            if n == dep and p27 == py27:
+                if p27:
+                    res[dep] = os.path.join(loc, "src")
+                else:
+                    res[dep] = os.path.join(loc, "dist_module27", "src")
+                break
+                
+    if len(dependencies) != len(res):
+        raise Exception("lower number of dependencies, requested:\n{0}\nFOUND:\n{1}\nLOCATIONS:\n{2}".format(", ".join(dependencies), 
+                "\n".join( "{0} : {1}".format(k,v) for k,v in sorted(res.items())),
+                "\n".join( "{0} : {1}".format(k,v) for k,v in locations )))
+                
+    return res
+    
+    

@@ -6,7 +6,7 @@ Getting started
 
 .. index:: R, Julia, WinPython, Anaconda, pyminstall
 
-data scientist
+Data Scientist
 ++++++++++++++
 
 La version recommandée est Python 3.4, 64 bit. Par défaut, les modules 
@@ -31,10 +31,10 @@ les modules les plus usités. Deux options possibles :
     * `graphviz <https://github.com/xflr6/graphviz>`_
     * `numexpr <https://github.com/pydata/numexpr>`_
     
-   Il existe une version différente : `miniconda <http://conda.pydata.org/miniconda.html>`_.
-   La liste des packages manquant sera probablement différente.
-   Il suffit d'écrire sur la ligne de commande ``conda update --all`` 
-   pour mettre à jour tous les modules.
+  Il existe une version différente : `miniconda <http://conda.pydata.org/miniconda.html>`_.
+  La liste des packages manquant sera probablement différente.
+  Il suffit d'écrire sur la ligne de commande ``conda update --all`` 
+  pour mettre à jour tous les modules.
 
 * `WinPython <https://winpython.github.io/>`_ (Windows). Sous Windows, elle a l'avantage d'inclure
   `R <http://www.r-project.org/>`_ ou `Julia <http://julialang.org/>`_. On passe alors
@@ -47,10 +47,17 @@ les modules les plus usités. Deux options possibles :
     * `folium <https://github.com/python-visualization/folium>`_
     * `graphviz <https://github.com/xflr6/graphviz>`_    
     
-    Uniquement disponible sous Windows, cette installation a l'avantage de ne pas 
-    nécessiter les droits administrateur pour être installée. Elle
-    ne modifie pas les registres et on peut la recopier telle quelle sur une clé USB
-    pour la recopier sur un autre ordinateur.
+  Uniquement disponible sous Windows, cette installation a l'avantage de ne pas 
+  nécessiter les droits administrateur pour être installée. Elle
+  ne modifie pas les registres et on peut la recopier telle quelle sur une clé USB
+  pour la recopier sur un autre ordinateur.
+  
+* Distribution officielle de `python <https://www.python.org/>`_, il faut ensuite 
+  installer de nombreux modules (voir :ref:`l-data2a`) pour obtenir
+  une distribution équivalente aux deux précédentes.
+  
+Installer des modules soi-même
+++++++++++++++++++++++++++++++
     
 Sous Linux, l'installation de modules supplémentaires avec l'instruction
 ``pip install <module>`` ne pose pas de problèmes (rarement).
@@ -69,14 +76,15 @@ Ou ::
     from pymyinstall import extend_winpython, process_installation
     process_installation(extend_winpython())
     
-Enfin, il est possible d'utiliser la version officielle du language
-disponible depuis `python.org <https://www.python.org/>`_. C'est un peu plus long.
 La liste des modules
 nécessaire est assez longue et peut-être trouvée dans le code de la fonction
-`complete_installation <https://github.com/sdpython/pymyinstall/blob/master/src/pymyinstall/packaged/packaged_config.py>`_
-que vous pouvez exécuter après avoir installé le module 
+`complete_installation <https://github.com/sdpython/pymyinstall/blob/master/src/pymyinstall/packaged/packaged_config.py>`_.
+Celle-ci précise notamment quel module peut être installé avec `pip <https://pypi.python.org/pypi/pip>`_
+quel autre doit être installé avec un fichier *wheel*.
+Le module 
 `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
-avec le code suivant ::    
+fait cela pour vous. Après l'avoir installé (``pip install pymyinstall``), le code suivant
+procède à l'installation ::
 
     from pymyinstall import datascientist
     datascientist("install", full = True)
@@ -84,7 +92,45 @@ avec le code suivant ::
 Certains notebooks requièrent des outils supplémentaires :
 
 * `graphviz <http://www.graphviz.org/>`_
-        
+
+
+.. index:: pip, ligne de commande
+
+pip, python et ligne de commande
+++++++++++++++++++++++++++++++++
+
+
+Le language python s'est doté d'un système de distribution de modules (ou *packages*)
+qui est aisément accessible depuis la `ligne de commande <http://fr.wikipedia.org/wiki/Interface_en_ligne_de_commande>`_.
+Sous Windows, on peut lancer la ligne de commande par la commande ``cmd``. On obtient une fenêtre noire.
+Il suffit alors de se déplacer dans le répertoire d'installation de Python ::
+
+    cd c:\Python34\Scripts
+    
+Ou encore ::
+
+    cd c:\Anaconda3\Scripts
+    
+Puis d'écrire ::
+
+    pip install <module>
+    
+Sous Linux ou OS X (Apple), la ligne de commande s'appelle le `terminal <http://doc.ubuntu-fr.org/terminal>`_.
+Comme Python est déjà installé en version 2.7, je recommande l'installation de la distribution
+Anaconda en version 3.4 qui facilite la coexistence de plusieurs versions de Python. On procède de la même manière ::
+
+    cd /home/<alias>/anaconda3/bin
+    
+Puis ::
+
+    pip install <module>
+
+Pour vous assurer que cela correspond bien à la version de Python souhaitée,
+il suffit de demander la version installée ::
+
+    pip --version
+
+
     
 Editeur de texte et navigateur
 ++++++++++++++++++++++++++++++

@@ -5,8 +5,8 @@
 
 
     
-Eléments de code
-----------------
+Eléments de code inclus dans le module
+--------------------------------------
     
 .. toctree::
     :maxdepth: 2

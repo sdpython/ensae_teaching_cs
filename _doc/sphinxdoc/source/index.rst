@@ -114,7 +114,7 @@ précise comment installer Python et les différentes options à disposition.
 
 
 
-**Ouvrir un notebooks**
+**Ouvrir un notebook**
 
 L'ensemble des TDs a lieu sur les notebooks. Le plus simple pour écourter le plus possible
 la mise en route est de suivre ces deux étapes :
@@ -193,7 +193,7 @@ Il faut également un éditeur de texte :
 * `PyCharm <https://www.jetbrains.com/pycharm/>`_, c'est un environnement complet de développement,
   très pratique pour débugger, repérer des erreurs avant l'exécution (nom de variable inconnus...)
   
-Pour les développeurs, il faut un environnement plus complet :
+Pour les développeurs chevronnés, il faut un environnement plus complet :
 
 .. toctree::
 
