@@ -80,20 +80,19 @@ class TestJenkins(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-            
 
         js = JenkinsExt('http://machine:8080/', "user", "password", mock=True)
 
-        res =setup_jenkins_server(   js,
-                            anaconda=r"C:\\Anaconda3",
-                            anaconda2=r"C:\\Anaconda2",
-                            winpython=r"C:\\WinPython-64bit-3.4.2.3\\python-3.4.2.amd64",
-                            fLOG=fLOG,
-                            overwrite = True,
-                            location = r"c:\\jenkins\\pymy",
-                            prefix= "_node_")
+        res = setup_jenkins_server(js,
+                                   anaconda=r"C:\\Anaconda3",
+                                   anaconda2=r"C:\\Anaconda2",
+                                   winpython=r"C:\\WinPython-64bit-3.4.2.3\\python-3.4.2.amd64",
+                                   fLOG=fLOG,
+                                   overwrite=True,
+                                   location=r"c:\\jenkins\\pymy",
+                                   prefix="_node_")
         assert len(res) > 0
-            
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -73,7 +73,7 @@ def setup_jenkins_server(js_url,
                                   ["pymyinstall", ],
                                   ["pymyinstall [anaconda] [update]",
                                       "pymyinstall [anaconda2] [update27]"],
-                                  ["pyquickhelper [anaconda]","pyquickhelper [winpython]",
+                                  ["pyquickhelper [anaconda]", "pyquickhelper [winpython]",
                                       "pyquickhelper [27] [anaconda2]"],
                                   ["pyensae", ],
                                   ["pymmails", "pysqllike", "pyrsslocal", "pymyinstall [27] [anaconda2]",
@@ -103,9 +103,9 @@ def setup_jenkins_server(js_url,
                          no_dep=False,
                          prefix="",
                          fLOG=noLOG,
-                         dependencies={'pymyinstall':['pyquickhelper'],
+                         dependencies={'pymyinstall': ['pyquickhelper'],
                                        'pyensae': ['pyquickhelper'],
-                                       'ensae_teaching_cs':['pyquickhelper','pyensae','pyrsslocal','pymmails']
+                                       'ensae_teaching_cs': ['pyquickhelper', 'pyensae', 'pyrsslocal', 'pymmails']
                                        }):
     """
     Set up all the jobs to build these teachings
@@ -152,9 +152,9 @@ def setup_jenkins_server(js_url,
                                 prefix = "_nodep_")
 
     For WinPython, version 3.4.3+ is mandatory to get the latest version of IPython (3).
-    
+
     Another example::
-    
+
         import sys
         sys.path.append(r"C:\<path>\ensae_teaching_cs\src")
         sys.path.append(r"C:\<path>\pyquickhelper\src")
@@ -164,7 +164,7 @@ def setup_jenkins_server(js_url,
         setup_jenkins_server(js,
                 location=r"c:\jenkins\pymy",
                 overwrite=True,
-                fLOG=print)    
+                fLOG=print)
     """
 
     if isinstance(js_url, str):
@@ -206,21 +206,24 @@ def setup_jenkins_server(js_url,
                     new_dep.append(name)
                     created.append(name)
                     fLOG("create job", jname)
-                    loc = None if location is None else os.path.join(location, jname)
-                        
-                    deps = get_dependencies_path(name, locations, dependencies.get(name, None))
-                        
-                    js.create_job_template(job,
+                    loc = None if location is None else os.path.join(
+                        location, jname)
+
+                    deps = get_dependencies_path(
+                        job, locations, dependencies.get(mod, None))
+
+                    js.create_job_template(jname,
                                            git_repo=github + "%s/" % mod,
                                            upstreams=[] if no_dep else dep[-1:],
                                            script=script,
                                            location=loc,
                                            dependencies=deps)
-                    
-                    locations.append( (job, loc) )
+
+                    locations.append((job, loc))
                 else:
-                    loc = None if location is None else os.path.join(location, jname)
-                    locations.append( (job, loc) )
+                    loc = None if location is None else os.path.join(
+                        location, jname)
+                    locations.append((job, loc))
                     fLOG("skipping", job, "location", loc)
             elif j is not None:
                 new_dep.append(name)
@@ -233,7 +236,7 @@ def setup_jenkins_server(js_url,
 def get_dependencies_path(job, locations, dependencies):
     """
     return the depeencies to add to the job based on the name and the past locations
-    
+
     @param      job             job description
     @param      locations       list of 2-uple ( job description, location )
     @param      dependencies    None or list of dependencies
@@ -241,28 +244,27 @@ def get_dependencies_path(job, locations, dependencies):
     """
     if dependencies is None:
         return {}
-        
+
     py27 = "[27]" in job
     name = job.split()[0]
-    
-    res = { }
+
+    res = {}
     for dep in dependencies:
         for j, loc in locations:
             n = j.split()[0]
             p27 = "[27]" in j
-            
+
             if n == dep and p27 == py27:
                 if p27:
                     res[dep] = os.path.join(loc, "src")
                 else:
                     res[dep] = os.path.join(loc, "dist_module27", "src")
                 break
-                
+
     if len(dependencies) != len(res):
-        raise Exception("lower number of dependencies, requested:\n{0}\nFOUND:\n{1}\nLOCATIONS:\n{2}".format(", ".join(dependencies), 
-                "\n".join( "{0} : {1}".format(k,v) for k,v in sorted(res.items())),
-                "\n".join( "{0} : {1}".format(k,v) for k,v in locations )))
-                
+        raise Exception("lower number of dependencies, requested:\n{0}\nFOUND:\n{1}\nLOCATIONS:\n{2}".format(", ".join(dependencies),
+                                                                                                             "\n".join(
+                                                                                                                 "{0} : {1}".format(k, v) for k, v in sorted(res.items())),
+                                                                                                             "\n".join("{0} : {1}".format(k, v) for k, v in locations)))
+
     return res
-    
-    

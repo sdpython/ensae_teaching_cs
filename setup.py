@@ -461,5 +461,5 @@ if not r:
             package_data=package_data,
             install_requires=[
                 "pyensae", "pyquickhelper", "pymyinstall", "pymmails",
-                "scikit-learn",],
+                "scikit-learn", ],
         )
