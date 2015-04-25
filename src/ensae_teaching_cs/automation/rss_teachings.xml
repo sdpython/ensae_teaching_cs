@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+    <head>
+        <title>teachings subscriptions</title>
+    </head>
+    <body>
+        <outline text="XD blog" title="XD blog" type="rss"
+            xmlUrl="http://www.xavierdupre.fr/blog/xdbrss.xml" 
+            htmlUrl="http://www.xavierdupre.fr/blog/xd_blog.html" />
+        <outline text="ensae_teaching_cs" 
+            title="ensae_teaching_cs" 
+            type="rss"
+            xmlUrl="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/_downloads/rss.xml" 
+            htmlUrl="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/blog/main_0000.html" />
+        <outline text="pyquickhelper" 
+            title="pyquickhelper" 
+            type="rss"
+            xmlUrl="http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/_downloads/rss.xml" 
+            htmlUrl="http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/blog/main_0000.html" />
+        <outline text="pyensae" 
+            title="pyensae" 
+            type="rss"
+            xmlUrl="http://www.xavierdupre.fr/app/pyensae/helpsphinx/_downloads/rss.xml" 
+            htmlUrl="http://www.xavierdupre.fr/app/pyensae/helpsphinx/blog/main_0000.html" />
+    </body>
+</opml>
