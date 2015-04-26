@@ -129,8 +129,23 @@ Pour vous assurer que cela correspond bien à la version de Python souhaitée,
 il suffit de demander la version installée ::
 
     pip --version
+    
+    
+Installer le module ensae_teaching_cs
++++++++++++++++++++++++++++++++++++++
 
+Il suffit d'écrire sur la ligne de commande ::
 
+    pip install ensae_teaching_cs
+    
+Pour éviter d'installer également les dépendances ::
+
+    pip install ensae_teaching_cs --no-deps
+    
+Enfin, pour le mettre à jour ::
+
+    pip install ensae_teaching_cs --upgrade
+    
     
 Editeur de texte et navigateur
 ++++++++++++++++++++++++++++++
