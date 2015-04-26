@@ -55,6 +55,22 @@ except ImportError:
     import pyensae
 
 try:
+    import pyrsslocal
+except ImportError:
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..",
+                "..",
+                "pyrsslocal",
+                "src")))
+    if path not in sys.path:
+        sys.path.append(path)
+    import pyrsslocal
+
+try:
     import pymmails
 except ImportError:
     path = os.path.normpath(

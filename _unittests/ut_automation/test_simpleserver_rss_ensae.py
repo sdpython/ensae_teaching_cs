@@ -66,6 +66,7 @@ except ImportError:
 from pyquickhelper import fLOG
 from pyrsslocal.helper.download_helper import get_url_content_timeout
 from src.ensae_teaching_cs.automation import rss_teachings_update_run_server
+from pyrsslocal import RSSServer
 
 
 class TestSimpleServerRSSTeaching (unittest.TestCase):
@@ -81,11 +82,12 @@ class TestSimpleServerRSSTeaching (unittest.TestCase):
         path = os.path.abspath(os.path.split(__file__)[0])
         dbfile = os.path.join(path, "temp_rss_starver", "blogs_rss.db3")
 
-        #server = RSSServer(('localhost', 8093), dbfile)
-        #thread = RSSServer.run_server(server, dbfile, thread=True)
+        server = RSSServer(('localhost', 8093), dbfile)
 
-        rss_teachings_update_run_server(dbfile=dbfile)
+        thread = rss_teachings_update_run_server(dbfile=dbfile, browser="none",
+                                                 server=server, thread=True)
 
+        fLOG(thread)
         fLOG("fetching first url")
         url = "http://localhost:8093/"
         cont = get_url_content_timeout(url)
@@ -96,32 +98,8 @@ class TestSimpleServerRSSTeaching (unittest.TestCase):
         assert "RSS" in cont
         assert "XD blog" in cont
 
-        url = "http://localhost:8093/rss_status.html"
-        cont = get_url_content_timeout(url)
-        if "Traceback" in cont:
-            fLOG(cont)
-        assert "Traceback" not in cont
-        assert len(cont) > 0
-        assert "RSS" in cont
-        assert "interesting" in cont
-
-        url = "http://localhost:8093/rss_search.html?searchterm=pypi&usetag=usetag"
-        cont = get_url_content_timeout(url)
-        if "Traceback" in cont:
-            fLOG(cont)
-        assert "Traceback" not in cont
-        assert len(cont) > 0
-        assert "RSS" in cont
-        if "PyPI" not in cont:
-            fLOG(cont)
-            assert False
-        # if "added" not in cont:
-        #    fLOG(cont)
-        #    assert False
-        assert "Mozilla Continues" not in cont
-
         fLOG("fetching first url")
-        url = "http://localhost:8093/rss_search.html?searchterm=military"
+        url = "http://localhost:8093/rss_search.html?searchterm=command"
         cont = get_url_content_timeout(url)
         if "Traceback" in cont:
             fLOG(cont)
@@ -129,8 +107,7 @@ class TestSimpleServerRSSTeaching (unittest.TestCase):
         assert len(cont) > 0
         assert "RSS" in cont
         assert "interesting" not in cont
-        assert "Military" in cont
-        assert "Mozilla Continues" not in cont
+        assert "command" in cont
 
         thread.shutdown()
         assert not thread.is_alive()

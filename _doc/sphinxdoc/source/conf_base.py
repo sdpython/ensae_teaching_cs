@@ -37,10 +37,21 @@ sys.path.insert(
             "..",
             "pymmails",
             "src")))
-
+sys.path.insert(
+    0,
+    os.path.abspath(
+        os.path.join(
+            os.path.split(__file__)[0],
+            "..",
+            "..",
+            "..",
+            "..",
+            "pyrsslocal",
+            "src")))
 import pyquickhelper
 import pyensae
 import pymmails
+import pyrsslocal
 
 from pyquickhelper.helpgen.default_conf import set_sphinx_variables
 

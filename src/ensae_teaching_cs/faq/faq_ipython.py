@@ -40,8 +40,10 @@ def notebook_path():
 def fix_table_notebook():
     """
     @FAQ(ipython___Table des matières à position fixe dans un notebook)
-    Il est possible d'ajouter au notebook un menu fix, positionné sur la droite, qui ne bouge pas
-    et qui permet de passer d'une section à l'autre plus facilement.
+    Il est possible d'ajouter au notebook un menu fixe, positionné sur la droite,
+    qui permet de passer d'une section à l'autre plus facilement.
+    Ce menu ne bouge pas avec la version 2 de IPython, il
+    reste ancré au début de la page avec la version 3.
 
     Voir `Example of a notebook with a fixed index <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/notebooks/exemple_of_fix_menu.html>`_.
 
