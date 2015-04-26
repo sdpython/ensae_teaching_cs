@@ -105,6 +105,7 @@ def setup_jenkins_server(js_url,
                          fLOG=noLOG,
                          dependencies={'pymyinstall': ['pyquickhelper'],
                                        'pyensae': ['pyquickhelper'],
+                                       'python3_module_template': ['pyquickhelper'],
                                        'ensae_teaching_cs': ['pyquickhelper', 'pyensae', 'pyrsslocal', 'pymmails']
                                        }):
     """
@@ -246,7 +247,6 @@ def get_dependencies_path(job, locations, dependencies):
         return {}
 
     py27 = "[27]" in job
-    name = job.split()[0]
 
     res = {}
     for dep in dependencies:

@@ -184,8 +184,11 @@ def bellman(edges, iter=20, fLOG=print, allow=None, init=None):
         init = {(e[0], e[1]): e[-1] for e in edges}
         init.update({(e[1], e[0]): e[-1] for e in edges})
 
+    def always_true(e):
+        return True
+
     if allow is None:
-        allow = lambda e: True
+        allow = always_true
 
     edges_from = {}
     for e in edges:
