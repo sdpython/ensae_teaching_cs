@@ -23,3 +23,5 @@ html_static_path = templates_path
 
 if not os.path.exists(templates_path[0]):
     raise FileNotFoundError(templates_path[0])
+
+blog_root = "http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/"

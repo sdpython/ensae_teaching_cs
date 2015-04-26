@@ -53,3 +53,5 @@ if html_theme == "bootstrap":
         'bootswatch_theme': "spacelab",
         'bootstrap_version': "3",
     }
+
+blog_root = "http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/"
