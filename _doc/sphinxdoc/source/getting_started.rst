@@ -19,7 +19,7 @@ les modules les plus usités. Deux options possibles :
   Sous Linux ou Mac, la distribution n'interfère pas avec la distribution existante
   souvent différente. C'est un point très appréciable. Les modules de la distribution ne sont 
   pas tous à jour. Il faut penser à mettre à jour avec la commande ``conda install <module>``
-  depuis le répertoire ``Anaconda3/Scripts`` (``conda install pandas`` par exemple).
+  depuis le répertoire ``Anaconda3/Scripts`` (``conda install cvxopt`` par exemple).
   Pour suivre ces cours il faut ajouter :
 
     * `cvxopt <http://cvxopt.org/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#cvxopt>`_)
@@ -55,6 +55,13 @@ les modules les plus usités. Deux options possibles :
 * Distribution officielle de `python <https://www.python.org/>`_, il faut ensuite 
   installer de nombreux modules (voir :ref:`l-data2a`) pour obtenir
   une distribution équivalente aux deux précédentes.
+  
+Certains notebooks s'appuient sur des fonctions qui donnent accès
+à des données ou qui facilitent leur récupération. Elles sont disponibles
+via le module `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ ::
+
+    pip install pyensae
+  
   
 Installer des modules soi-même
 ++++++++++++++++++++++++++++++
