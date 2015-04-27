@@ -8,6 +8,7 @@ import sys
 import os
 import unittest
 import warnings
+import shutil
 
 try:
     import src
@@ -63,10 +64,11 @@ except ImportError:
     import pyensae
     import pyrsslocal
 
-from pyquickhelper import fLOG
+from pyquickhelper import fLOG, get_temp_folder
 from pyrsslocal.helper.download_helper import get_url_content_timeout
 from src.ensae_teaching_cs.automation import rss_teachings_update_run_server
 from pyrsslocal import RSSServer
+from src.ensae_teaching_cs.automation import __file__ as location
 
 
 class TestSimpleServerRSSTeaching (unittest.TestCase):
@@ -79,12 +81,19 @@ class TestSimpleServerRSSTeaching (unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        path = os.path.abspath(os.path.split(__file__)[0])
-        dbfile = os.path.join(path, "temp_rss_starver", "blogs_rss.db3")
+            
+        temp = get_temp_folder(__file__, "temp_rss_starter")
+        dirn = os.path.abspath(os.path.dirname(location))
+        xmlb = os.path.join(dirn, "rss_teachings.xml")
+        
+        data = os.path.join(temp, "..", "data", "ensae_teaching_cs_blogs.db3")
+        shutil.copy(data, temp)
+        dbfile = os.path.join(temp, "ensae_teaching_cs_blogs.db3")
 
         server = RSSServer(('localhost', 8093), dbfile)
 
-        thread = rss_teachings_update_run_server(dbfile=dbfile, browser="none",
+        thread = rss_teachings_update_run_server(dbfile=dbfile, xml_blogs=xmlb,
+                                                 browser="none",
                                                  server=server, thread=True)
 
         fLOG(thread)
