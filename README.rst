@@ -23,6 +23,7 @@ is hosted on GitHub can be modified by sending me pull requests:
     * `Windows Setup <http://www.xavierdupre.fr/site2013/index_code.html#ensae_teaching_cs>`_
     * :ref:`l-README`
     * `PDF of this site <http://www.xavierdupre.fr/app/ensae_teaching_cs/latex/ensae_teaching_cs_doc.pdf>`_
+    * `Blog <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/blog/main_0000.html#ap-main-0>`_
 
 That will be probably one of the few pages in English.
 
