@@ -40,6 +40,7 @@ install:
   - conda install mccabe
   - conda install pep8
   - conda install feedparser
+  - conda install cvxopt
   #- source activate test-environment
   - pip install -r requirements.txt
   - pip install -r requirements_ext.txt
