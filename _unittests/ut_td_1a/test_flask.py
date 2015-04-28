@@ -52,6 +52,10 @@ class TestSimpleFlask (unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
+        if "travis" in sys.executable:
+            # skip travis and Flask
+            return
+
         th = FlaskInThread(app, host="localhost", port=8025)
         th.start()
 

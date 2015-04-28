@@ -48,6 +48,10 @@ class TestR (unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
+            
+        if "travis" in sys.executable:
+            # skip travis and R
+            return
 
         assert r_and_notebook()
 

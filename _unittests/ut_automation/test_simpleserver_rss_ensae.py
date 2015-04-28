@@ -82,6 +82,10 @@ class TestSimpleServerRSSTeaching (unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
             
+        if "travis" in sys.executable:
+            # skip travis and Flask
+            return            
+            
         temp = get_temp_folder(__file__, "temp_rss_starter")
         dirn = os.path.abspath(os.path.dirname(location))
         xmlb = os.path.join(dirn, "rss_teachings.xml")
