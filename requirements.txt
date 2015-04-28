@@ -66,12 +66,4 @@ pyflakes
 mccabe
 pep8
 feedparser
-pyensae
-pymyinstall
-pymmails
-scipy
-cvxopt
-h5py
-bayespy
-scikit-learn
-pymc
+setuptools

@@ -59,7 +59,10 @@ def get_jenkins_script(job, pythonexe, winpython, anaconda, anaconda2):
                 cmd += " " + os.path.join(anaconda2, "python")
         elif "[winpython]" in spl:
             if winpython is not None:
-                cmd += " " + os.path.join(winpython, "python")
+                # with WinPython, nb_convert has some trouble when called
+                # from the command line within Python
+                # we skip for the time being
+                cmd += " " + os.path.join(winpython, "python") + " skip_sphinx"
 
         return cmd
 

@@ -10,9 +10,39 @@ install:
   - conda config --set always_yes yes --set changeps1 no
   - conda update -q conda
   - conda info -a
-  - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION cvxopt scipy h5py scikit-learn
-  - pip install -r requirements.txt
+  #- conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION actuariat_test
+  #- conda install -r requirements.txt
+  - conda install Cython
+  - conda install Flask
+  - conda install Jinja2
+  - conda install Markdown
+  - conda install MarkupSafe
+  - conda install PyYAML
+  - conda install Pygments
+  - conda install Sphinx
+  - conda install Werkzeug
+  - conda install XlsxWriter
+  - conda install coverage
+  - conda install ipython
+  - conda install jsonschema
+  - conda install lxml
+  - conda install matplotlib
+  - conda install numpy
+  - conda install openpyxl
+  - conda install pandas
+  - conda install pycparser
+  - conda install pyparsing
+  - conda install pytz
+  - conda install pyzmq
+  - conda install requests
+  - conda install six
+  - conda install virtualenv
+  - conda install mccabe
+  - conda install pep8
+  - conda install feedparser
   #- source activate test-environment
+  - pip install -r requirements.txt
+  - pip install -r requirements_ext.txt
   - python setup.py install
 script:
   - python setup.py unittests
