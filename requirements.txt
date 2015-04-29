@@ -67,3 +67,5 @@ mccabe
 pep8
 feedparser
 setuptools
+bayespy
+mpld3
