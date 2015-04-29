@@ -81,15 +81,15 @@ class TestSimpleServerRSSTeaching (unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-            
+
         if "travis" in sys.executable:
             # skip travis and Flask
-            return            
-            
+            return
+
         temp = get_temp_folder(__file__, "temp_rss_starter")
         dirn = os.path.abspath(os.path.dirname(location))
         xmlb = os.path.join(dirn, "rss_teachings.xml")
-        
+
         data = os.path.join(temp, "..", "data", "ensae_teaching_cs_blogs.db3")
         shutil.copy(data, temp)
         dbfile = os.path.join(temp, "ensae_teaching_cs_blogs.db3")

@@ -69,8 +69,26 @@ except ImportError:
         sys.path.append(path)
     import pymmails
 
+try:
+    import pyrsslocal
+except ImportError:
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..",
+                "..",
+                "pyrsslocal",
+                "src")))
+    if path not in sys.path:
+        sys.path.append(path)
+    import pyrsslocal
+
+
 from pyquickhelper import fLOG, get_temp_folder
-from src.ensae_teaching_cs.automation.jenkins_helper import setup_jenkins_server, JenkinsExt
+from pyquickhelper.jenkinshelper import JenkinsExt
+from src.ensae_teaching_cs.automation.jenkins_helper import setup_jenkins_server
 
 
 class TestJenkins(unittest.TestCase):

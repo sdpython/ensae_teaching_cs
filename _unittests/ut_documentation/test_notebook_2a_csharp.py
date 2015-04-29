@@ -80,11 +80,11 @@ class TestNotebookRunner2a_csharp (unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-            
+
         if "travis" in sys.executable:
             # skip C# on linux
             return
-        
+
         temp = get_temp_folder(__file__, "temp_notebook2a_sharp")
         keepnote = ls_notebooks("2a")
         assert len(keepnote) > 0
