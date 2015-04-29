@@ -1,6 +1,5 @@
 Cython
 Flask
-Flask-SQLAlchemy
 Jinja2
 Markdown
 MarkupSafe
