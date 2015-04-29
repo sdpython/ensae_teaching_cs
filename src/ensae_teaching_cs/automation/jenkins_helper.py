@@ -20,7 +20,7 @@ def setup_jenkins_server(js,
                                   ["pymmails", "pysqllike", "pyrsslocal", "pymyinstall [27] [anaconda2]",
                                    "python3_module_template", "pyensae [anaconda]", "pyensae [winpython]"],
                                   ["pymmails [anaconda]", "pysqllike [anaconda]", "pyrsslocal [anaconda]",
-                                   "python3_module_template [anaconda]", "python3_module_template [27] [anaconda]",
+                                   "python3_module_template [anaconda]", "python3_module_template [27] [anaconda2]",
                                    "pymyinstall [all]"],
                                   # actuariat
                                   [("actuariat_python", "H H(12-13) * * 0")
@@ -97,7 +97,7 @@ def setup_jenkins_server(js,
                   ["pymmails", "pysqllike", "pyrsslocal", "pymyinstall [27] [anaconda2]",
                    "python3_module_template", "pyensae [anaconda]", "pyensae [winpython]"],
                   ["pymmails [anaconda]", "pysqllike [anaconda]", "pyrsslocal [anaconda]",
-                   "python3_module_template [anaconda]", "python3_module_template [27] [anaconda]",
+                   "python3_module_template [anaconda]", "python3_module_template [27] [anaconda2]",
                    "pymyinstall [all]"],
                   # actuariat
                   [("actuariat_python", "H H(12-13) * * 0")],
