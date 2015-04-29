@@ -6,8 +6,6 @@ import os
 import sys
 
 from pyquickhelper import noLOG
-from pyquickhelper.jenkinshelper.jenkins_server import JenkinsExt, jenkins
-
 
 
 def setup_jenkins_server(js,
