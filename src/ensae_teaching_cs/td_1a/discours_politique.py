@@ -30,7 +30,10 @@ def xmlParsingLongestDiv(text):
         """
 
         def __init__(self):
-            html.parser.HTMLParser.__init__(self, convert_charrefs=True)
+            try:
+                html.parser.HTMLParser.__init__(self, convert_charrefs=True)
+            except TypeError as e:
+                raise Exception("unexpected issue py version {0}-{1}".format(sys.version_info, sys.executable)) from e
             self.mtag = []
             self.mvalue = []
             self.mall = []
