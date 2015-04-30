@@ -116,7 +116,7 @@ def execute_notebooks(folder, notebooks, filter,
 
     @param      folder          folder
     @param      notebooks       list of notebooks
-    @param      filter          function which validate the notebooks
+    @param      filter          function which validates the notebooks to test (True means will be tested)
     @param      clean_function  cleaning function to apply to the code before running it
     @param      fLOG            logging function
     @param      deepfLOG        logging function used to run the notebook

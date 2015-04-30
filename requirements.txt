@@ -68,3 +68,4 @@ feedparser
 setuptools
 bayespy
 mpld3
+bokeh

@@ -69,6 +69,22 @@ except ImportError:
         sys.path.append(path)
     import pymmails
 
+try:
+    import pyrsslocal
+except ImportError:
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..",
+                "..",
+                "pyrsslocal",
+                "src")))
+    if path not in sys.path:
+        sys.path.append(path)
+    import pyrsslocal
+
 from pyquickhelper import fLOG, get_temp_folder
 from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
 
@@ -83,8 +99,17 @@ class TestNotebookRunner2a_ (unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_notebook2a_")
         keepnote = ls_notebooks("2a")
         assert len(keepnote) > 0
+
+        def filter(i, n):
+            if "git" not in n and "python_r" not in n and "csharp" not in n:
+                if not sys.platform.startswith("win") and "_convert" in n:
+                    return False
+                else:
+                    return True
+            return False
+
         res = execute_notebooks(temp, keepnote,
-                                lambda i, n: "git" not in n and "python_r" not in n and "csharp" not in n,
+                                filter,
                                 fLOG=fLOG,
                                 clean_function=clean_function_1a)
         assert len(res) > 0

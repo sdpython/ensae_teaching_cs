@@ -85,6 +85,9 @@ class TestNotebookRunner2a_csharp (unittest.TestCase):
             # skip C# on linux
             return
 
+        if not sys.platform.startswith("win"):
+            return
+
         temp = get_temp_folder(__file__, "temp_notebook2a_sharp")
         keepnote = ls_notebooks("2a")
         assert len(keepnote) > 0
