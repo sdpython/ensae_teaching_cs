@@ -31,10 +31,11 @@ def xmlParsingLongestDiv(text):
         """
 
         def __init__(self):
-            try:
+            if sys.version_info.major >= 4 or (sys.version_info.minor >= 4 and \
+                sys.version_info.major >= 3):
                 html.parser.HTMLParser.__init__(self, convert_charrefs=True)
-            except TypeError as e:
-                raise Exception("unexpected issue py version {0}-{1}".format(sys.version_info, sys.executable)) from e
+            else:
+                html.parser.HTMLParser.__init__(self)
             self.mtag = []
             self.mvalue = []
             self.mall = []
