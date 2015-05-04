@@ -146,6 +146,7 @@ Bibliographie
 * `Modeling Creativity: Case Studies in Python <http://arxiv.org/abs/1410.0281>`_, Tom De Smedt
 * `Critical Mass: How One Thing Leads to Another <http://www.philipball.co.uk/index.php?option=com_content&view=article&id=15:critical-mass-how-one-thing-leads-to-another&catid=3:books&Itemid=4>`_, Philip Ball
 * `Bugra Akyildiz <http://bugra.github.io/>`_
+* `Deep Learning <http://www-labs.iro.umontreal.ca/~bengioy/dlbook/>`_, Yoshua Bengio, Ian Goodfellow and Aaron Courville
 
 
 **Livres sur les algorithmes**
