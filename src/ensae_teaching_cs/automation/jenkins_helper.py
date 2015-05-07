@@ -10,10 +10,11 @@ from pyquickhelper import noLOG
 
 def setup_jenkins_server(js,
                          github="sdpython",
-                         modules=[("pyquickhelper", "H H(10-11) * * 0"),
-                                  ["pymyinstall", ],
-                                  ["pymyinstall [anaconda] [update]",
-                                   "pymyinstall [anaconda2] [update27]"],
+                         modules=[ # update
+                                   ("pymyinstall [anaconda] [update]", "H H(9-10) * * 0"),
+                                    "pymyinstall [anaconda2] [update27]",
+                                   ("pyquickhelper", "H H(10-11) * * 0"),
+                                    ["pymyinstall", ],
                                   ["pyquickhelper [anaconda]", "pyquickhelper [winpython]",
                                    "pyquickhelper [27] [anaconda2]"],
                                   ["pyensae", ],
@@ -21,7 +22,7 @@ def setup_jenkins_server(js,
                                    "python3_module_template", "pyensae [anaconda]", "pyensae [winpython]"],
                                   ["pymmails [anaconda]", "pysqllike [anaconda]", "pyrsslocal [anaconda]",
                                    "python3_module_template [anaconda]", "python3_module_template [27] [anaconda2]",
-                                   "pymyinstall [all]"],
+                                   "pymyinstall [LONG]"],
                                   # actuariat
                                   [("actuariat_python", "H H(12-13) * * 0")
                                    ],
