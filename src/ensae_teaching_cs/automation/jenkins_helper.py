@@ -10,11 +10,11 @@ from pyquickhelper import noLOG
 
 def setup_jenkins_server(js,
                          github="sdpython",
-                         modules=[ # update
-                                   ("pymyinstall [anaconda] [update]", "H H(9-10) * * 0"),
-                                    "pymyinstall [anaconda2] [update27]",
+                         modules=[ # pyquickhelper,
                                    ("pyquickhelper", "H H(10-11) * * 0"),
-                                    ["pymyinstall", ],
+                                   "pymyinstall [anaconda] [update]",
+                                    "pymyinstall [anaconda2] [update27]",
+                                    "pymyinstall",
                                   ["pyquickhelper [anaconda]", "pyquickhelper [winpython]",
                                    "pyquickhelper [27] [anaconda2]"],
                                   ["pyensae", ],
