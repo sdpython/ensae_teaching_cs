@@ -28,7 +28,7 @@ def setup_jenkins_server(js,
                              ["pymmails", "pyrsslocal", ],
                              ["pyensae [anaconda]", "pyensae [winpython]",
                                         "pyrsslocal [anaconda]",
-                                        "pyrsslocal [winpython]"
+                                        "pyrsslocal [winpython]",
                                         "pymyinstall [LONG]"],
                              # actuariat
                              [("actuariat_python", "H H(12-13) * * 0")
