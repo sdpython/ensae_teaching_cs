@@ -232,7 +232,19 @@ if is_local() and "build_sphinx" not in sys.argv and \
         with open("auto_unittest_setup_help.bat", "r") as f:
             content = f.read()
 
-        content += "\n" + pres
+        addition = """
+                if not exist dist\\html2 mkdir dist\\html2
+                xcopy /E /C /I /Y _doc\\sphinxdoc\\build2\\html dist\\html2
+                if exist _doc\\sphinxdoc\\build2\\latex xcopy /E /C /I /Y _doc\\sphinxdoc\\build2\\latex\\*.pdf dist\\html2
+                if %errorlevel% neq 0 exit /b %errorlevel%
+
+                if not exist dist\\html3 mkdir dist\\html3
+                xcopy /E /C /I /Y _doc\\sphinxdoc\\build3\\html dist\\html3
+                if exist _doc\\sphinxdoc\\build3\\latex xcopy /E /C /I /Y _doc\\sphinxdoc\\build3\\latex\\*.pdf dist\\html3
+                if %errorlevel% neq 0 exit /b %errorlevel%
+                """.replace("                ", "")
+
+        content += "\n" + addition + "\n" + pres
 
         with open("auto_unittest_setup_help.bat", "w") as f:
             f.write(content)
@@ -519,6 +531,6 @@ if not r:
             package_data=package_data,
             install_requires=[
                 "pyensae", "pyquickhelper", "pymyinstall", "pymmails",
-                "scikit-learn", "pyrsslocal", "pandas", "numpy", 
+                "scikit-learn", "pyrsslocal", "pandas", "numpy",
                 "cvxopt"],
         )
