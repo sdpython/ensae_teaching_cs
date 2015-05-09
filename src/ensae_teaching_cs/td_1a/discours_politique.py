@@ -31,8 +31,8 @@ def xmlParsingLongestDiv(text):
         """
 
         def __init__(self):
-            if sys.version_info.major >= 4 or (sys.version_info.minor >= 4 and \
-                sys.version_info.major >= 3):
+            if sys.version_info.major >= 4 or (sys.version_info.minor >= 4 and
+                                               sys.version_info.major >= 3):
                 html.parser.HTMLParser.__init__(self, convert_charrefs=True)
             else:
                 html.parser.HTMLParser.__init__(self)

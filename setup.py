@@ -85,26 +85,38 @@ package_data = {project_var_name + ".pythonnet.py33": ["*.pyd", "*.txt", "*.dll"
 
 
 def is_local():
-    if "clean_space" in sys.argv or \
-            "write_version" in sys.argv or \
-            "clean_pyd" in sys.argv or \
-            "build_sphinx" in sys.argv or \
-            "unittests" in sys.argv or \
-            "copy27" in sys.argv or \
-            "build" in sys.argv or \
-            "sdist" in sys.argv or \
-            "register" in sys.argv or \
-            "bdist_wininst" in sys.argv or \
-            "bdist_msi" in sys.argv or \
-            "bdist_wheel" in sys.argv or \
-            "upload_docs" in sys.argv or \
-            "build_sphinx_one" in sys.argv or \
-            "build_sphinx_catch" in sys.argv or \
-            "unittests_all" in sys.argv or \
-            "build_pres" in sys.argv or \
-            "build_pres_2A" in sys.argv or \
-            "build_pres_3A" in sys.argv or \
-            "build_pres_1Ap" in sys.argv:
+    if \
+       "bdist_msi" in sys.argv or \
+       "build27" in sys.argv or \
+       "build_script" in sys.argv or \
+       "build_sphinx" in sys.argv or \
+       "bdist_wheel" in sys.argv or \
+       "bdist_wininst" in sys.argv or \
+       "clean_pyd" in sys.argv or \
+       "clean_space" in sys.argv or \
+       "copy27" in sys.argv or \
+       "copy_dist" in sys.argv or \
+       "local_pypi" in sys.argv or \
+       "notebook" in sys.argv or \
+       "publish" in sys.argv or \
+       "publish_doc" in sys.argv or \
+       "register" in sys.argv or \
+       "unittests" in sys.argv or \
+       "unittests_LONG" in sys.argv or \
+       "unittests_SKIP" in sys.argv or \
+       "run27" in sys.argv or \
+       "sdist" in sys.argv or \
+       "setupdep" in sys.argv or \
+       "test_local_pypi" in sys.argv or \
+       "upload_docs" in sys.argv or \
+       "write_version" in sys.argv or \
+       "build_sphinx_one" in sys.argv or \
+       "build_sphinx_catch" in sys.argv or \
+       "unittests_all" in sys.argv or \
+       "build_pres" in sys.argv or \
+       "build_pres_2A" in sys.argv or \
+       "build_pres_3A" in sys.argv or \
+       "build_pres_1Ap" in sys.argv:
         return True
     else:
         return False
@@ -181,6 +193,50 @@ if is_local() and "build_sphinx" not in sys.argv and \
     pyquickhelper = import_pyquickhelper()
     r = pyquickhelper.process_standard_options_for_setup(
         sys.argv, __file__, project_var_name)
+
+    if "build_script" in sys.argv and sys.platform.startswith("win"):
+        pres = """
+            :presentation:
+            %pythonexe% -u setup.py build_pres
+            if %errorlevel% neq 0 exit /b %errorlevel%
+            %pythonexe% -u setup.py build_pres_2A
+            if %errorlevel% neq 0 exit /b %errorlevel%
+            %pythonexe% -u setup.py build_pres_3A
+            if %errorlevel% neq 0 exit /b %errorlevel%
+            %pythonexe% -u setup.py build_pres_1Ap
+            if %errorlevel% neq 0 exit /b %errorlevel%
+            echo #######################################################
+
+            if not exist dist\\html_pres mkdir dist\\html_pres
+            if not exist dist\\html_pres_2A mkdir dist\\html_pres_2A
+            if not exist dist\\html_pres_3A mkdir dist\\html_pres_3A
+            if not exist dist\\html_pres_1Ap mkdir dist\\html_pres_1Ap
+
+            xcopy /E /C /I /Y _doc\\presentation_projets\\a2015\\build\\html dist\\html_pres_1Ap
+            if %errorlevel% neq 0 exit /b %errorlevel%
+            xcopy /E /C /I /Y _doc\\presentation_2A\\build\\html dist\\html_pres_2A
+            if %errorlevel% neq 0 exit /b %errorlevel%
+            xcopy /E /C /I /Y _doc\\presentation_3A\\build\\html dist\\html_pres_3A
+            if %errorlevel% neq 0 exit /b %errorlevel%
+            xcopy /E /C /I /Y _doc\\presentation\\build\\html dist\\html_pres
+            if %errorlevel% neq 0 exit /b %errorlevel%
+            """.replace("            ", "")
+
+        path_exe = os.path.dirname(sys.executable)
+        from pyquickhelper.pycode.windows_scripts import windows_prefix
+        with open("auto_setup_build_pres.bat", "w") as f:
+            f.write(windows_prefix.replace("__PY34_X64__", path_exe))
+            f.write("\n")
+            f.write(pres)
+
+        with open("auto_unittest_setup_help.bat", "r") as f:
+            content = f.read()
+
+        content += "\n" + pres
+
+        with open("auto_unittest_setup_help.bat", "w") as f:
+            f.write(content)
+
 else:
     r = False
 
@@ -268,6 +324,7 @@ if not r:
                                          'html',
                                          'python',
                                          'rst',
+                                         'slides',
                                          'docx',
                                          'pdf'],
                                      layout=["pdf",
@@ -288,7 +345,7 @@ if not r:
                 # package
                 generate_help_sphinx(project_name,
                                      nbformats=[
-                                         'ipynb', 'html', 'python', 'rst'],
+                                         'ipynb', 'html', 'python', 'rst', 'slides'],
                                      layout=["pdf",
                                              "html",
                                              ("html",
