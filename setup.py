@@ -96,6 +96,7 @@ def is_local():
        "clean_space" in sys.argv or \
        "copy27" in sys.argv or \
        "copy_dist" in sys.argv or \
+       "custom_left" in sys.argv or \
        "local_pypi" in sys.argv or \
        "notebook" in sys.argv or \
        "publish" in sys.argv or \
@@ -249,10 +250,24 @@ if is_local() and "build_sphinx" not in sys.argv and \
         with open("auto_unittest_setup_help.bat", "w") as f:
             f.write(content)
 
+        with open("auto_setup_unittests_left.bat", "w") as f:
+            f.write("auto_cmd_any_setup_command.bat custom_left default left")
+
 else:
     r = False
 
 if not r:
+
+    def skip_function(name, code):
+        if "notebook test" in code:
+            return True
+        if "test notebook" in code:
+            return True
+        return False
+
+    def not_skip_function(name, code):
+        return not skip_function(name, code)
+
     if "build_sphinx_one" in sys.argv:
         pyquickhelper = import_pyquickhelper()
 
@@ -383,20 +398,13 @@ if not r:
             raise FileNotFoundError(
                 "the folder should contain run_unittests.py")
 
-        def skip_function(name, code):
-            if "notebook test" in code:
-                return True
-            if "test notebook" in code:
-                return True
-            return False
-
         pyquickhelper = import_pyquickhelper()
         pyquickhelper.main_wrapper_tests(
             run_unit,
             add_coverage=True,
             skip_function=skip_function)
 
-    elif "unittests_all" in sys.argv:
+    elif "custom_left" in sys.argv:
 
         if not os.path.exists("_unittests"):
             raise FileNotFoundError(
@@ -408,7 +416,10 @@ if not r:
                 "the folder should contain run_unittests.py")
 
         pyquickhelper = import_pyquickhelper()
-        pyquickhelper.main_wrapper_tests(run_unit, add_coverage=True)
+        pyquickhelper.main_wrapper_tests(
+            run_unit,
+            add_coverage=True,
+            skip_function=not_skip_function)
 
     elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv \
          or "build_pres_3A" in sys.argv:
