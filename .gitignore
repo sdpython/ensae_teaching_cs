@@ -313,3 +313,7 @@ _doc/sphinxdoc/source/phdoc_static3/blogtoc.html
 _doc/notebooks/*/.ipynb_checkpoints/*
 _doc/notebooks/.ipynb_checkpoints/*
 auto_*.bat
+auto_*.py
+auto_*.xml
+auto_*.db3
+
