@@ -5,6 +5,7 @@
 """
 
 import sys
+import os
 if sys.version_info[0] < 3:
     raise ImportError("ensae_teaching_cs only works with Python 3")
 
@@ -14,6 +15,8 @@ __github__ = "https://github.com/sdpython/ensae_teaching_cs"
 __url__ = "http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html"
 __downloadUrl__ = "http://www.xavierdupre.fr/site2013/index_code.html#ensae_teaching_cs"
 __license__ = "BSD License"
+__blog__ = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "rss_teachings.xml"))
 
 from .faq.faq_matplotlib import graph_ggplot_with_label
 from .td_2a.session_pandas import dfs2excel

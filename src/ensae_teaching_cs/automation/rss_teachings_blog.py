@@ -6,10 +6,16 @@
 
 import os
 from pyrsslocal import rss_update_run_server
+from .. import __blog__
 
 
-def rss_teachings_update_run_server(dbfile=None, xml_blogs=None, port=8093, browser=None, period="week",
-                                    server=None, thread=False):
+def rss_teachings_update_run_server(dbfile=None,
+                                    xml_blogs=None,
+                                    port=8093,
+                                    browser=None,
+                                    period="week",
+                                    server=None,
+                                    thread=False):
     """
     create a database if it does not exists, add a table for blogs and posts,
     update the database, starts a server and open a browser,
@@ -32,8 +38,7 @@ def rss_teachings_update_run_server(dbfile=None, xml_blogs=None, port=8093, brow
     """
 
     if xml_blogs is None:
-        xml_blogs = os.path.abspath(os.path.dirname(__file__))
-        xml_blogs = os.path.join(xml_blogs, "rss_teachings.xml")
+        xml_blogs = __blog__
 
     if dbfile is None:
         user = os.path.abspath(os.environ["HOMEPATH"])
