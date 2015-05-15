@@ -66,27 +66,29 @@ def setup_jenkins_server(js,
                                        'actuariat_python': ['pyquickhelper', 'pyensae', 'pyrsslocal', 'pymmails'],
                                        'code_beatrix': ['pyquickhelper', 'pyensae', 'pyrsslocal', 'pymmails'],
                                        },
-                         platform=sys.platform):
+                         platform=sys.platform,
+                         default_engine_paths=None):
     """
     Set up many jobs on Jenkins
 
-    @param      js                  (JenkinsExt) jenkins server (specially if you need credentials)
-    @param      github              github account if it does not start with *http://*,
-                                    the link to git repository of the project otherwise
-    @param      modules             modules for which to generate the
-    @param      get_jenkins_script  see @see me get_jenkins_script (default value if this parameter is None)
-    @param      pythonexe           location of Python (unused)
-    @param      winpython           location of WinPython (or None to skip)
-    @param      anaconda            location of Anaconda (or None to skip)
-    @param      overwrite           do not create the job if it already exists
-    @param      location            None for default or a local folder
-    @param      no_dep              if True, do not add dependencies
-    @param      prefix              add a prefix to the name
-    @param      dependencies        some modules depend on others also being tested,
-                                    this parameter gives the list
-    @param      platform            platform of the Jenkins server
-    @param      fLOG                logging function
-    @return                         list of created jobs
+    @param      js                      (JenkinsExt) jenkins server (specially if you need credentials)
+    @param      github                  github account if it does not start with *http://*,
+                                        the link to git repository of the project otherwise
+    @param      modules                 modules for which to generate the
+    @param      get_jenkins_script      see @see me get_jenkins_script (default value if this parameter is None)
+    @param      pythonexe               location of Python (unused)
+    @param      winpython               location of WinPython (or None to skip)
+    @param      anaconda                location of Anaconda (or None to skip)
+    @param      overwrite               do not create the job if it already exists
+    @param      location                None for default or a local folder
+    @param      no_dep                  if True, do not add dependencies
+    @param      prefix                  add a prefix to the name
+    @param      dependencies            some modules depend on others also being tested,
+                                        this parameter gives the list
+    @param      platform                platform of the Jenkins server
+    @param      fLOG                    logging function
+    @param      default_engine_paths    define the default location for python engine, should be dictionary *{ engine: path }*, see below.
+    @return                             list of created jobs
 
     *modules* is a list defined as follows:
 
@@ -176,5 +178,6 @@ def setup_jenkins_server(js,
                                 prefix=prefix,
                                 fLOG=fLOG,
                                 dependencies=dependencies,
-                                platform=platform)
+                                platform=platform,
+                                default_engine_paths=default_engine_paths)
     return r
