@@ -53,7 +53,8 @@ def get_regex(path, regex, suivi="suivi.rst"):
         with open(filename, "r", encoding="utf8") as f:
             content = f.read()
     except UnicodeDecodeError as e:
-        raise ValueError('unable to parse file:\n  File "{0}", line 1'.format(filename)) from e
+        raise ValueError(
+            'unable to parse file:\n  File "{0}", line 1'.format(filename)) from e
 
     mails = regex.findall(content)
     if len(mails) == 0:
