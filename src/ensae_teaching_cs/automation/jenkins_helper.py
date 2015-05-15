@@ -49,6 +49,12 @@ def setup_jenkins_server(js,
                              "ensae_teaching_cs [custom_left]",
                              "ensae_teaching_cs [winpython] [custom_left]",
                              "ensae_teaching_cs [anaconda] [custom_left]", 
+                            # documentation
+                            ("pyquickhelper [doc]","H H(3-4) * * 1"),
+                            ["pymyinstall [doc]", "pysqllike [doc]", "pymmails [doc]",
+                             "pyrsslocal [doc]", "pyensae [doc]"],
+                            ["actuariat_python [doc]", "code_beatrix [doc]"],
+                            "ensae_teachings_cs [doc]",
                          ],
                          pythonexe=os.path.dirname(sys.executable),
                          winpython=r"C:\WinPython-64bit-3.4.3.2FlavorRfull\python-3.4.3.amd64",
@@ -130,6 +136,12 @@ def setup_jenkins_server(js,
                   ["ensae_teaching_cs [winpython] [notebooks]",
                    "ensae_teaching_cs [anaconda] [notebooks]", ],
                   ],
+                  # documentation
+                  ("pyquickhelper [doc]","H H(3-4) * * 1"),
+                  ["pymyinstall [doc]", "pysqllike [doc]", "pymmails [doc]",
+                  "pyrsslocal [doc]", "pyensae [doc]"],
+                  ["actuariat_python [doc]", "code_beatrix [doc]"],
+                  "ensae_teachings_cs [doc]",
 
 
     Example::
