@@ -69,7 +69,7 @@ except ImportError:
     import pymmails
 
 from pyquickhelper import fLOG, get_temp_folder
-from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
+from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, unittest_raise_exception_notebook
 
 
 class TestNotebookRunner2a_4 (unittest.TestCase):
@@ -88,15 +88,7 @@ class TestNotebookRunner2a_4 (unittest.TestCase):
             lambda i,
             n: "_4" in n and "enonce" in n,
             fLOG=fLOG)
-        assert len(res) > 0
-        fails = [(os.path.split(k)[-1], v)
-                 for k, v in sorted(res.items()) if not v[0]]
-
-        for f in fails:
-            fLOG("******************** NB FAILED", f[0])
-            fLOG(f)
-        if len(fails) > 0:
-            raise fails[0][1][1]
+        unittest_raise_exception_notebook(res, fLOG)
 
     def test_notebook_runner_correction(self):
         fLOG(
@@ -112,15 +104,7 @@ class TestNotebookRunner2a_4 (unittest.TestCase):
             lambda i,
             n: "_4" in n and "correction" in n,
             fLOG=fLOG)
-        assert len(res) > 0
-        fails = [(os.path.split(k)[-1], v)
-                 for k, v in sorted(res.items()) if not v[0]]
-
-        for f in fails:
-            fLOG("******************** NB FAILED", f[0])
-            fLOG(f)
-        if len(fails) > 0:
-            raise fails[0][1][1]
+        unittest_raise_exception_notebook(res, fLOG)
 
 if __name__ == "__main__":
     unittest.main()

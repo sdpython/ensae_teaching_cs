@@ -86,7 +86,7 @@ except ImportError:
     import pyrsslocal
 
 from pyquickhelper import fLOG, get_temp_folder
-from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
+from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
 
 
 class TestNotebookRunner2a_ (unittest.TestCase):
@@ -112,13 +112,7 @@ class TestNotebookRunner2a_ (unittest.TestCase):
                                 filter,
                                 fLOG=fLOG,
                                 clean_function=clean_function_1a)
-        assert len(res) > 0
-        fails = [(os.path.split(k)[-1], v)
-                 for k, v in sorted(res.items()) if not v[0]]
-        for f in fails:
-            fLOG(f)
-        if len(fails) > 0:
-            raise fails[0][1][1]
+        unittest_raise_exception_notebook(res, fLOG)
 
 if __name__ == "__main__":
     unittest.main()

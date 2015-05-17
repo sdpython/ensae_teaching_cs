@@ -69,7 +69,7 @@ except ImportError:
     import pymmails
 
 from pyquickhelper import fLOG, get_temp_folder
-from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
+from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, unittest_raise_exception_notebook
 
 
 class TestNotebookRunner2a_5 (unittest.TestCase):
@@ -82,19 +82,12 @@ class TestNotebookRunner2a_5 (unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_notebook2a_5")
         keepnote = ls_notebooks("td2a")
         assert len(keepnote) > 0
-        res = execute_notebooks(
-            temp,
-            keepnote,
-            lambda i,
-            n: "_5" in n,
-            fLOG=fLOG)
-        assert len(res) > 0
-        fails = [(os.path.split(k)[-1], v)
-                 for k, v in sorted(res.items()) if not v[0]]
-        for f in fails:
-            fLOG(f)
-        if len(fails) > 0:
-            raise fails[0][1][1]
+        res = execute_notebooks(temp,
+                                keepnote,
+                                lambda i,
+                                n: "_5" in n,
+                                fLOG=fLOG)
+        unittest_raise_exception_notebook(res, fLOG)
 
 if __name__ == "__main__":
     unittest.main()

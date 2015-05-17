@@ -102,7 +102,7 @@ class TestNotebookRunner2a_csharp (unittest.TestCase):
         for f in fails:
             fLOG(f)
         if len(fails) > 0:
-            e = str(fails[0][1][1])
+            e = str(fails[0][1][-1])
             if "Audio device error encountered" in str(e):
                 # maybe the script is running on a virtual machine (no Audia
                 # device)
@@ -119,7 +119,7 @@ class TestNotebookRunner2a_csharp (unittest.TestCase):
                 return
 
             fLOG(str(e).replace("\n", " EOL "))
-            raise fails[0][1][1]
+            raise fails[0][1][-1]
         else:
             fLOG("success")
 

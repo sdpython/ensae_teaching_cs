@@ -83,9 +83,9 @@ class TestNotebookRunner1 (unittest.TestCase):
 
         outfile = os.path.join(temp, "out_" + os.path.split(nbfile)[-1])
         assert not os.path.exists(outfile)
-        out = run_notebook(nbfile, working_dir=temp, outfilename=outfile,
-                           additional_path=addpath,
-                           valid=lambda code: '%system' not in code)
+        stat, out = run_notebook(nbfile, working_dir=temp, outfilename=outfile,
+                                 additional_path=addpath,
+                                 valid=lambda code: '%system' not in code)
         fLOG(out)
         assert os.path.exists(outfile)
 

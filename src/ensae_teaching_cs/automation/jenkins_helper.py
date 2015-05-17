@@ -47,10 +47,14 @@ def setup_jenkins_server(js,
                              "ensae_teaching_cs [winpython]",  # 1.5h
                              "ensae_teaching_cs [anaconda]",   # 1.5h
                              "ensae_teaching_cs [SKIP]",        # 1h
-                             "ensae_teaching_cs [LONG]",        # 1h  
-                             ("ensae_teaching_cs [custom_left]", "H H(15-16) * * 3"),  # 3h
-                             "ensae_teaching_cs [winpython] [custom_left]",            # 3h
-                             "ensae_teaching_cs [anaconda] [custom_left]",              # 3h
+                             "ensae_teaching_cs [LONG]",        # 1h
+                             # 3h
+                             ("ensae_teaching_cs [custom_left]",
+                                        "H H(15-16) * * 3"),
+                             # 3h
+                             "ensae_teaching_cs [winpython] [custom_left]",
+                             # 3h
+                             "ensae_teaching_cs [anaconda] [custom_left]",
                              # documentation
                              ("pyquickhelper [doc]", "H H(3-4) * * 1"),
                              ["pymyinstall [doc]", "pysqllike [doc]", "pymmails [doc]",
