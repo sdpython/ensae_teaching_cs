@@ -43,14 +43,14 @@ def setup_jenkins_server(js,
                                         "code_beatrix [anaconda]"],
                              # teachings
                              ("ensae_teaching_cs",
-                                        "H H(15-16) * * 0"),
-                             "ensae_teaching_cs [winpython]",
-                             "ensae_teaching_cs [anaconda]",
-                             "ensae_teaching_cs [SKIP]",
-                             "ensae_teaching_cs [LONG]",
-                             "ensae_teaching_cs [custom_left]",
-                             "ensae_teaching_cs [winpython] [custom_left]",
-                             "ensae_teaching_cs [anaconda] [custom_left]",
+                                        "H H(15-16) * * 0"),   # 1.5h
+                             "ensae_teaching_cs [winpython]",  # 1.5h
+                             "ensae_teaching_cs [anaconda]",   # 1.5h
+                             "ensae_teaching_cs [SKIP]",        # 1h
+                             "ensae_teaching_cs [LONG]",        # 1h  
+                             ("ensae_teaching_cs [custom_left]", "H H(15-16) * * 3"),  # 3h
+                             "ensae_teaching_cs [winpython] [custom_left]",            # 3h
+                             "ensae_teaching_cs [anaconda] [custom_left]",              # 3h
                              # documentation
                              ("pyquickhelper [doc]", "H H(3-4) * * 1"),
                              ["pymyinstall [doc]", "pysqllike [doc]", "pymmails [doc]",
