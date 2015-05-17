@@ -138,22 +138,55 @@ def publish_documentation(
         projects = [ ]
         for module in [
                 "pyquickhelper",
+                "anaconda2_pyquickhelper_27",
                 "pyensae",
                 "pymyinstall",
+                "anaconda2_pymyinstall_27",
                 "pysqllike",
                 "pyrsslocal",
                 "pymmails",
-                "python_project_template",
+                "python3_module_template",
+                "anaconda2_python3_module_template_27",
+                "actuariat_python",
+                #"code_beatrix",
                 "ensae_teaching_cs",
                 ] :
-
+                    
             root = os.path.abspath(location % module)
             project = dict ( status_file = os.path.join(this, "status_%s.txt" % module),
                              local = root,
                              root_local = root,
-                             root_web = rootw % module)
+                             root_web = rootw % module.replace("_no_clean","") \\
+                                                      .replace("anaconda2_", "") \\
+                                                      .replace("_27", ""))
+            projects.append (project)
+            
+        # doc    
+            
+        project = dict ( status_file = os.path.join(this, "status_%s.txt" % module),
+                         local = root.replace("\\html","\\html2"),
+                         root_local = root.replace("\\html","\\html2"),
+                         root_web = (rootw % module).replace("_no_clean","").replace("/helpsphinx","/helpsphinx2"))
+        projects.append (project)
+
+        root = os.path.abspath(location % module)
+        project = dict ( status_file = os.path.join(this, "status_%s.txt" % module),
+                         local = root.replace("\\html","\\html3"),
+                         root_local = root.replace("\\html","\\html3"),
+                         root_web = (rootw % module).replace("_no_clean","").replace("/helpsphinx","/helpsphinx3"))
+        projects.append (project)
+
+        # pres
+        for suffix in ["", "_2A", "_3A", "_1Ap"]:
+            root = os.path.abspath(location % module)
+            project = dict ( status_file = os.path.join(this, "status_%s.txt" % module),
+                             local = root.replace("\\html","\\html_pres" + suffix),
+                             root_local = root.replace("\\html","\\html_pres" + suffix),
+                             root_web = (rootw % module).replace("/helpsphinx","/pressphinx" + suffix).replace("_no_clean",""))
+            print(project)
             projects.append (project)
 
+        # publication
         publish_documentation   (projects,
                         ftpsite         = "ftp.something.cc",
                         login           = login,
