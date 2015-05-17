@@ -165,11 +165,11 @@ def unittest_raise_exception_notebook(res, fLOG):
     @param      res     output of @see fn execute_notebooks
     """
     assert len(res) > 0
-    fails = [(os.path.split(k)[-1], v[0], v[1])
+    fails = [(os.path.split(k)[-1], ) + v
              for k, v in sorted(res.items()) if not v[0]]
     for f in fails:
         fLOG(f)
     if len(fails) > 0:
-        raise fails[0][1][-1]
+        raise fails[0][-1]
     for k, v in sorted(res.items()):
         fLOG("final", os.path.split(k)[-1], v[0], v[1])
