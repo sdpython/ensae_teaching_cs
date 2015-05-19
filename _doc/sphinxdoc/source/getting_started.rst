@@ -1,4 +1,4 @@
-﻿
+
 
 
 Getting started
@@ -14,6 +14,8 @@ s'installent avec ``pip install <module>`` ou avec ``conda install <module>``
 pour les modules distribués par Anaconda. 
 Le plus simple est sans doute d'utiliser une distribution qui inclut
 les modules les plus usités. Deux options possibles :
+
+.. index:: anaconda, winpython
 
 * `Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac). 
   Sous Linux ou Mac, la distribution n'interfère pas avec la distribution existante
@@ -175,6 +177,7 @@ soit `Chrome <http://www.google.com/chrome/>`_. Internet Explorer pose quelques 
 avec l'utilisateur du Javascript. Ces deux navigateurs sont indispensables si vous insérez du javascript
 dans nos notebooks.
         
+.. index:: développeur
         
 Développeur
 +++++++++++
