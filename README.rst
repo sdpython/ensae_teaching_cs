@@ -15,6 +15,13 @@ README / Changes
     :alt: PYPI Package
     :target: https://pypi.python.org/pypi/ensae_teaching_cs  
     
+.. image:: http://img.shields.io/github/issues/sdpython/ensae_teaching_cs.png
+    :alt: GitHub Issues
+    :target: https://github.com/sdpython/ensae_teaching_cs/issues
+    
+.. image:: https://img.shields.io/badge/license-MIT-blue.svg
+    :alt: MIT License
+    :target: http://opensource.org/licenses/MIT       
 
 This page gives access to the content of practical sessions I give at the
 `ENSAE <http://www.ensae.fr/>`_. They are based on Python. The project

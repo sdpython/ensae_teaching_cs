@@ -127,6 +127,15 @@ Glossaire
         Sa syntaxe est décrite à `Markdown: Syntax <http://daringfireball.net/projects/markdown/syntax>`_.
         A l'instar du langage Python, il utilise l'indentation pour marquer la séparation entre les blocs.
         
+    Mock
+        Il est difficile de tester un programme qui lance des requêtes sur un service sans que ce 
+        service soit activé comme par exemple récupérer des données financières sur Internet
+        sans Internet. Lorsqu'on veut s'assuser qu'une fonction qui communique avec un service fonctionne, 
+        on créé ce qu'on appelle un mock : on créé un faux service qui retourne des réponses assez courtes
+        afin de tester la partie qu'on a besoin de tester. Ce genre de système permet de tester séparément le service
+        et la partie qui communique avec ce service. Lire également  `Mock Object <http://en.wikipedia.org/wiki/Mock_object>`_,
+        `Unit test et Mock <http://sametmax.com/un-gros-guide-bien-gras-sur-les-tests-unitaires-en-python-partie-5/>`_.
+        
     Mutable
         Voir Immutable.
         

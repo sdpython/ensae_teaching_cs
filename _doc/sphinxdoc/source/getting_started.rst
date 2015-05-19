@@ -1,4 +1,4 @@
-
+﻿
 
 
 Getting started
@@ -36,22 +36,23 @@ les modules les plus usités. Deux options possibles :
   Il suffit d'écrire sur la ligne de commande ``conda update --all`` 
   pour mettre à jour tous les modules.
 
-* `WinPython <https://winpython.github.io/>`_ (Windows). Sous Windows, elle a l'avantage d'inclure
-  `R <http://www.r-project.org/>`_ ou `Julia <http://julialang.org/>`_. On passe alors
+* `WinPython <https://winpython.github.io/>`_ (Windows). Sous Windows, elle inclut 
+  parfois `R <http://www.r-project.org/>`_ ou `Julia <http://julialang.org/>`_ (ces version ne sont 
+  pas aussi à jour que la version principale). On passe alors
   facilement de python à R ou Julia depuis le même notebooks. Pour suivre ces cours il faut ajouter :
 
-    * `bokeh <http://bokeh.pydata.org/en/latest/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#bokeh>`_)
+    * `bokeh <http://bokeh.pydata.org/en/latest/>`_
     * `dbfread <http://dbfread.readthedocs.org/en/latest/>`_
     * `folium <https://github.com/python-visualization/folium>`_
     * `goslate <http://pythonhosted.org/goslate/>`_
     * `graphviz <https://github.com/xflr6/graphviz>`_
-    * `pywin32 <https://pypi.python.org/pypi/pywin32>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#pywin32>`_)
     * `virtualenv <https://virtualenv.pypa.io/en/latest/>`_
     
   Uniquement disponible sous Windows, cette installation a l'avantage de ne pas 
   nécessiter les droits administrateur pour être installée. Elle
   ne modifie pas les registres et on peut la recopier telle quelle sur une clé USB
-  pour la recopier sur un autre ordinateur.
+  pour la recopier sur un autre ordinateur. On peut également préparer sa propre version
+  `How To Make WinPython <https://github.com/winpython/winpython/wiki/How-To-Make-WinPython>`_.
   
 * Distribution officielle de `python <https://www.python.org/>`_, il faut ensuite 
   installer de nombreux modules (voir :ref:`l-data2a`) pour obtenir

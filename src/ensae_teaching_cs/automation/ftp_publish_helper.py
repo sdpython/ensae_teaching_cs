@@ -151,7 +151,7 @@ def publish_documentation(
                 #"code_beatrix",
                 "ensae_teaching_cs",
                 ] :
-                    
+
             root = os.path.abspath(location % module)
             project = dict ( status_file = os.path.join(this, "status_%s.txt" % module),
                              local = root,
@@ -160,9 +160,9 @@ def publish_documentation(
                                                       .replace("anaconda2_", "") \\
                                                       .replace("_27", ""))
             projects.append (project)
-            
-        # doc    
-            
+
+        # doc
+
         project = dict ( status_file = os.path.join(this, "status_%s.txt" % module),
                          local = root.replace("\\html","\\html2"),
                          root_local = root.replace("\\html","\\html2"),

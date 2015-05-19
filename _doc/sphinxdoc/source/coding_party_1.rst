@@ -1,4 +1,4 @@
-﻿
+
 
 .. issue.
 
@@ -147,5 +147,8 @@ vous pouvez reproduire la solution de l'appariement dans ce notebook :
 `Déterminer la vitesse moyenne des vélib <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/expose_velib.html>`_.
 
 
+Suite possible
+--------------
 
+Voir :ref:`l-blog-velib`.
 

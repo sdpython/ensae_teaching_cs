@@ -1,4 +1,4 @@
-﻿
+
 .. _l-proj_jeux_seul:
 
 Jeux de réflexion qui se jouent seul
@@ -43,6 +43,7 @@ Quelques liens :
 
 * `2048 <http://fr.wikipedia.org/wiki/2048_(jeu_vid%C3%A9o)>`_
 * `2048 : la solution pour gagner (presque) à tous les coups <http://www.journaldunet.com/ebusiness/internet-mobile/solution-2048.shtml>`_
+* `Threes!, Fives, 1024!, and 2048 are Hard <http://arxiv.org/abs/1505.04274>`_
 
 
 .. _l-jeuvoronoi:
