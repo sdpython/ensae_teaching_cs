@@ -4,7 +4,7 @@
 .. blogpost::
     :title: Prédire l'occupation des vélib
     :keywords: velib, prédiction, article
-    :date: 2015-05-18
+    :date: 2015-05-19
     :categories: article, velib, machine learning
     
     C'est un article sur une façon d'exploiter les données d'un service de vélos dans une grande ville :
