@@ -1,4 +1,4 @@
-﻿
+
 
 .. issue.
 
@@ -31,6 +31,7 @@ Source de données
   (via l'article `Building Azure ML Models on the NYC Taxi Dataset <http://blogs.technet.com/b/machinelearning/archive/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset.aspx>`_)
 * `WordNet <https://wordnet.princeton.edu/wordnet/>`_, base de données anglaises sur le vocabulaire, la grammaire, les synonymes...
 * `ImageNet <http://image-net.org/>`_, base de données d'images avec leur contenu
+* `Données Croix-Rouge sur les dons reçus <https://github.com/dataforgoodfr/croixrouge>`_
 
 Code
 ----
