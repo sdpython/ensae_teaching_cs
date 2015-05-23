@@ -34,7 +34,7 @@
     Internet sans les enregistrer sur le disque ? Depuis des données
     stockées en mémoire ? On se pose presque toujours
     la question de la multiplicité **après** avoir commencé
-    au moment où on s'aperçoit qu'il faut changer beaucoup de chose
+    au moment où on s'aperçoit qu'il faut changer beaucoup de choses
     car on n'y avait pas pensé.
     
     Pour résumer, on s'intéresse au design d'un programme quand
