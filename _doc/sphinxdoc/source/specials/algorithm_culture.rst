@@ -1,4 +1,4 @@
-﻿
+
 
 .. issue.
 
@@ -88,6 +88,7 @@ Tout ce qui suit vous donnera des idées.
     * `graphe bi-parti <http://fr.wikipedia.org/wiki/Graphe_biparti>`_ **déf**
     * `PageRank <http://fr.wikipedia.org/wiki/PageRank>`_ **algo**
     * `Appariement <http://fr.wikipedia.org/wiki/Couplage_(th%C3%A9orie_des_graphes)>`_, `Edmonds Blossum <http://en.wikipedia.org/wiki/Blossom_algorithm>`_ **déf/algo**
+    * `Algorithme de Gale-Shapley <http://fr.wikipedia.org/wiki/Probl%C3%A8me_des_mariages_stables>`_, **algo**, problème des mariages stables
 * Texte
     * `Algorithme de Knuth-Morris-Pratt <http://fr.wikipedia.org/wiki/Algorithme_de_Knuth-Morris-Pratt>`_ **algo**
     * `Algorithme de Rabin-Karp <http://fr.wikipedia.org/wiki/Algorithme_de_Rabin-Karp>`_ **algo**

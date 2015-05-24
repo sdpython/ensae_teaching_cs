@@ -1,4 +1,6 @@
 
+.. _blog-design-program:
+
 .. blogpost::
     :title: Le design d'un code informatique
     :keywords: design, programmation
