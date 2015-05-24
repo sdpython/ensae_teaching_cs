@@ -81,6 +81,10 @@ def is_local():
        "build_pres_2A" in sys.argv or \
        "build_pres_3A" in sys.argv or \
        "build_pres_1Ap" in sys.argv:
+        try:
+            import_pyquickhelper()
+        except ImportError:
+            return False
         return True
     else:
         return False
