@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 """
 @file
-@brief Code implémentant la première solution proposée à `Parcourir les rues de Paris <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/rue_paris_parcours.html>`_.
+@brief Code implémentant la première solution proposée à :ref:`Parcourir les rues de Paris <mlrueparisparcoursrst>`.
 """
 import random
 import math

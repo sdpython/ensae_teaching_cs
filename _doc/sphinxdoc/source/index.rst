@@ -76,6 +76,7 @@ Contenu des enseignements
     * :ref:`Outils, ressources pour développer <l-devtools>`
     * :ref:`Examens passés <l-examens>` (1A)
     * :ref:`Coding Party <l-codingparty>`
+    * :ref:`l-algoculture`
     
 
     
@@ -139,7 +140,7 @@ Environnement de développement
 * `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_
 * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
 * `Remote Notebook with Azure <http://www.xavierdupre.fr/blog/2014-11-09_nojs.html>`_
-* `Trouver chaussure à ses stats <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/notebooks/td1a_cenonce_session_10.html#intro>`_
+* :ref:`Trouver chaussure à ses stats <td1acenoncesession10rst>`
 * :ref:`Python pour Data Scientist <l-data2a>`
 * :ref:`l-ressources`
 * :ref:`l-devtools`

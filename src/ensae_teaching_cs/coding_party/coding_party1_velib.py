@@ -2,7 +2,7 @@
 """
 @file
 @brief Une solution au problème proposée :
-`Reconstruction de trajectoire velib <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/coding_party_1.html>`_
+:ref:`Reconstruction de trajectoire velib <l-codingparty1>`
 """
 import os
 import pandas

@@ -144,7 +144,7 @@ ce que j'ai rajouté en vitesse pour essayer d'avoir une solution probable.
 Pour la solution d'inspiration bayésienne, elle revient à prendre des hypothèses 
 sur la vitesse moyenne. J'en dirai peut-être plus un peu plus tard. En attendant,
 vous pouvez reproduire la solution de l'appariement dans ce notebook :
-`Déterminer la vitesse moyenne des vélib <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/expose_velib.html>`_.
+:ref:`Déterminer la vitesse moyenne des vélib <exposevelibrst>`.
 
 
 Suite possible

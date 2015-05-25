@@ -4,7 +4,7 @@
 
 .. _l-algoculture:
 
-.. index:: culture algorithmique, algorithme
+.. index:: culture algorithmique, algorithme, culture
 
 
 Survol algorithmique

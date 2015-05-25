@@ -142,7 +142,7 @@ Pour faire du machine learning sans programmer
 ----------------------------------------------
 
 * `Orange <http://orange.biolab.si/>`_
-* `Trouver chaussure à ses stats <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/notebooks/td1a_cenonce_session_10.html#intro>`_
+* :ref:`Trouver chaussure à ses stats <td1acenoncesession10rst>`
     
 Génération d'une documentation et thème Sphinx
 ----------------------------------------------
