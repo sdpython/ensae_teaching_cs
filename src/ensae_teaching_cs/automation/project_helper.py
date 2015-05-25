@@ -6,8 +6,8 @@ import re
 import os
 from pyquickhelper import noLOG, run_cmd, remove_diacritics
 
-_email_regex = re.compile("[*] *e?mails? *: *([^*+]+)")
-_gitlab_regex = re.compile("[*] *gitlab *: *([^*+]+[.]git)")
+_email_regex = re.compile("[*] *e?mails? *: *([^*+\\n]+)")
+_gitlab_regex = re.compile("[*] *gitlab *: *([^*+\\n]+[.]git)")
 _video_regex = re.compile("[*] *videos? *: *([^*\\n]+)")
 
 
@@ -24,13 +24,18 @@ def grab_mails(mailbox, emails, subfolder, date, no_domain=False, fLOG=noLOG):
     @param      fLOG            logging function
     @return                     list of emails
     """
+    mid = {}
     res = []
     for m in emails:
         ms = m.split('@')[0] if no_domain else m
         ms = ms.strip()
         iter = mailbox.enumerate_search_person(ms, subfolder, date=date)
-        mails = list(iter)
-        fLOG("looking for mail:", m, ":", len(mails), " mails")
+        mails = []
+        for m in iter:
+            if m["Message-ID"] not in mid:
+                mails.append(m)
+                mid[m["Message-ID"]] = m
+        fLOG("looking for mail:", ms, ":", len(mails), " mails")
         res.extend(mails)
     return res
 
@@ -81,6 +86,9 @@ def get_emails(path, suivi="suivi.rst"):
     global _email_regex
     allmails = get_regex(path, _email_regex, suivi)
     for a in allmails:
+        if "\n" in a:
+            raise ValueError(
+                "unable to interpret " + str([a]) + " from path " + path)
         ff = a.split("@")
         if len(ff) != 2:
             raise Exception(
@@ -103,6 +111,33 @@ def get_videos(path, suivi="suivi.rst"):
     return get_regex(path, _video_regex, suivi)
 
 
+def get_mails_project(path,
+                      mailbox,
+                      subfolder,
+                      date,
+                      suivi="suivi.rst",
+                      no_domain=False,
+                      fLOG=noLOG):
+    """
+    This function extracts emails from a mailbox
+    received from or sent to people and returns a list of thoses.
+
+    @param      path        folder
+    @param      mailbox     MailBoxImap object (we assume you are logged in)
+    @param      suivi       filename for ``suivi.rst``
+    @param      date        date (grab emails since ..., example ``1-Oct-2014``)
+    @param      subfolder   folder of the mailbox to look into
+    @param      no_domain   remove domain when searching for emails
+    @param      fLOG        logging function
+    @return                 list of emails
+    """
+    allmails = get_emails(path, suivi)
+    listmails = grab_mails(emails=allmails, mailbox=mailbox,
+                           subfolder=subfolder, date=date, fLOG=fLOG,
+                           no_domain=no_domain)
+    return listmails
+
+
 def dump_mails_project(path,
                        mailbox,
                        subfolder,
@@ -112,7 +147,7 @@ def dump_mails_project(path,
                        no_domain=False,
                        fLOG=noLOG):
     """
-    This function extract emails from a mailbox
+    This function extracts emails from a mailbox
     received from or sent to people
 
     The function expects to find a file ``suivi.rst`` which contains some emails addresses,
@@ -120,9 +155,9 @@ def dump_mails_project(path,
     in HTML format.
 
     @param      path        folder
-    @param      mailbox      MailBoxImap object (we assume you are logged in)
+    @param      mailbox     MailBoxImap object (we assume you are logged in)
     @param      suivi       filename for ``suivi.rst``
-    @param      dest        destinaion folder for the emails (relative to path)
+    @param      dest        destination folder for the emails (relative to path)
     @param      date        date (grab emails since ..., example ``1-Oct-2014``)
     @param      subfolder   folder of the mailbox to look into
     @param      no_domain   remove domain when searching for emails

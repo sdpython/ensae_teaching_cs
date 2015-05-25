@@ -45,4 +45,7 @@
     d'intégrer à son code les tests unitaires et la documentation
     dès le début plutôt que de les ajouter après coup.
     
+    On écrit une fonction qui fait *A* et *B* puis on en a besoin 
+    d'un autre qui fait *A* et *C*. Deux ou trois fonctions ?
+    
     
