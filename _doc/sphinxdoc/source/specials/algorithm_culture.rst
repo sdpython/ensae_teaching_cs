@@ -87,7 +87,9 @@ Tout ce qui suit vous donnera des idées.
     * `maximum cut <http://en.wikipedia.org/wiki/Maximum_cut>`_ **algo**
     * `graphe bi-parti <http://fr.wikipedia.org/wiki/Graphe_biparti>`_ **déf**
     * `PageRank <http://fr.wikipedia.org/wiki/PageRank>`_ **algo**
-    * `Appariement <http://fr.wikipedia.org/wiki/Couplage_(th%C3%A9orie_des_graphes)>`_, `Edmonds Blossum <http://en.wikipedia.org/wiki/Blossom_algorithm>`_ **déf/algo**
+    * `Appariement <http://fr.wikipedia.org/wiki/Couplage_(th%C3%A9orie_des_graphes)>`_, 
+      `Edmonds Blossum <http://en.wikipedia.org/wiki/Blossom_algorithm>`_, 
+      `Hopcroft–Karp <http://en.wikipedia.org/wiki/Hopcroft%E2%80%93Karp_algorithm>`_ **déf/algo** (ou couplage)
     * `Algorithme de Gale-Shapley <http://fr.wikipedia.org/wiki/Probl%C3%A8me_des_mariages_stables>`_, **algo**, problème des mariages stables
 * Texte
     * `Algorithme de Knuth-Morris-Pratt <http://fr.wikipedia.org/wiki/Algorithme_de_Knuth-Morris-Pratt>`_ **algo**
