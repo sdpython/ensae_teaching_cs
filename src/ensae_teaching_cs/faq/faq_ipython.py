@@ -203,3 +203,21 @@ def ipython_cython_extension():
             'Unable to find string {1} in\n  File "{0}", line 1\nsee {2}'.format(fc, find, url))
 
     return True
+
+
+def ipython_install_mathjax():
+    """
+    @FAQ(ipython___Offline MathJax)
+    By default, IPython uses an online version of MathJax which means
+    the connection to internet must remain available.
+    To import mathjax locally, you need to run the following:
+    
+    @code
+    from IPython.external import mathjax
+    mathjax.install_mathjax()    
+    @endcode
+    @endFAQ
+    """
+    from IPython.external import mathjax
+    mathjax.install_mathjax()    
+    
