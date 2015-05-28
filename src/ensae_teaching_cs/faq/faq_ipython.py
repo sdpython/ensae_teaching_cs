@@ -211,13 +211,12 @@ def ipython_install_mathjax():
     By default, IPython uses an online version of MathJax which means
     the connection to internet must remain available.
     To import mathjax locally, you need to run the following:
-    
+
     @code
     from IPython.external import mathjax
-    mathjax.install_mathjax()    
+    mathjax.install_mathjax()
     @endcode
     @endFAQ
     """
     from IPython.external import mathjax
-    mathjax.install_mathjax()    
-    
+    mathjax.install_mathjax()
