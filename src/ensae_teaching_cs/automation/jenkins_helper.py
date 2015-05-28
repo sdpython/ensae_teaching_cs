@@ -17,7 +17,7 @@ def setup_jenkins_server(js,
                                     "standalone [local_pypi]",
                                     # pyquickhelper and others,
                              ("pyquickhelper", "H H(10-11) * * 0"),
-                             "pymyinstall",
+                             ("pymyinstall", None, dict(success_only=True)),
                              ["pysqllike", "python3_module_template", ],
                              "pyquickhelper [27] [anaconda2]",
                              ["pyquickhelper [winpython]",
@@ -34,16 +34,18 @@ def setup_jenkins_server(js,
                              # actuariat
                              [("actuariat_python", "H H(12-13) * * 0")
                               ],
-                             ["actuariat_python [winpython]",
+                             [("actuariat_python [winpython]", None, dict(success_only=True)),
                                         "actuariat_python [anaconda]"],
                              # code_beatrix
                              ("code_beatrix", "H H(14-15) * * 0"),
-                             ["code_beatrix [winpython]",
+                             [("code_beatrix [winpython]", None, dict(success_only=True)),
                                         "code_beatrix [anaconda]"],
                              # teachings
                              ("ensae_teaching_cs",
                                         "H H(15-16) * * 0"),   # 1.5h
-                             "ensae_teaching_cs [winpython]",  # 1.5h
+                             # 1.5h
+                             ("ensae_teaching_cs [winpython]", None, dict(
+                                 success_only=True)),
                              "ensae_teaching_cs [anaconda]",   # 1.5h
                              "ensae_teaching_cs [SKIP]",        # 1h
                              "ensae_teaching_cs [LONG]",        # 1h
