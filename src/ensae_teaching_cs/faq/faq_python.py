@@ -467,6 +467,103 @@ def download_from_url(url, filename):
         f.write(data)
     return filename
 
+
+def sortable_class(cl):
+    """
+    @FAQ(Classe sortable)
+
+    Il faut prononcer *sortable* à l'anglaise. Comment rendre une classe
+    *sortable* ? Pour faire simple, on veut écrire ::
+
+        l = [ o1, o2 ]
+        l.sort()
+
+    Où ``o1`` et ``o2`` sont des objets d'une classe
+    que vous avez définie ::
+
+        class MaClasse:
+
+            ...
+
+    Pour que cela fonctionne, il suffit juste
+    de surcharger l'opérateur ``<`` ou plus exactement
+    ``__lt__``. Par exemple ::
+
+        class MaClasse:
+
+            def __lt__(self, autre_instance):
+                if self.jenesaispas < autre.jenesaispas:
+                    return True
+                elif self.jenesaispas > autre.jenesaispas:
+                    return False:
+                else:
+                    if self.jenesaispas2 < autre.jenesaispas2:
+                        return True
+                    else:
+                        return False
+
+    @endFAQ
+    """
+    pass
+
+
+def list_of_installed_packages():
+    """
+    calls ``pip list`` to retrieve the list of packages
+
+
+    @FAQ(Obtenir des informations sur package installés)
+
+    Le module `pip <https://pip.pypa.io/en/stable/>`_ retourne des informations
+    sur n'importe quel module installé, sa version, sa license ::
+
+        pip show pandas
+
+    On peut également l'obtenir depuis l'interpréteur python ::
+
+        import pip
+        pip.main(["show", "pandas"])
+
+    Exemple ::
+
+        Name: pandas
+        Version: 0.16.0
+        Summary: Powerful data structures for data analysis, time series,and statistics
+        Home-page: http://pandas.pydata.org
+        Author: The PyData Development Team
+        Author-email: pydata@googlegroups.com
+        License: BSD
+        Location: c:\python34_x64\lib\site-packages
+        Requires: python-dateutil, pytz, numpy
+
+    @endFAQ
+    """
+    from pyquickhelper.pycode.pip_helper import get_packages_list
+    return get_packages_list()
+
+
+def information_about_package(name):
+    """
+    calls ``pip show`` to retrieve information about packages
+
+
+    @FAQ(Récupérer la liste des modules installés)
+
+    Le module `pip <https://pip.pypa.io/en/stable/>`_ permet d'installer
+    de nouveaux modules mais aussi d'obtenir la liste des packages installés ::
+
+        pip list
+
+    On peut également l'obtenir depuis l'interpréteur python ::
+
+        import pip
+        pip.main(["list"])
+
+    @endFAQ
+    """
+    from pyquickhelper.pycode.pip_helper import get_package_info
+    return get_package_info(name)
+
 if __name__ == "__main__":
 
     def processus_quotidien(data_stream):
@@ -541,42 +638,3 @@ if __name__ == "__main__":
     print(c.x)
     print(c.y)
     c.x = 5
-
-
-def sortable_class(cl):
-    """
-    @FAQ(Classe sortable)
-
-    Il faut prononcer *sortable* à l'anglaise. Comment rendre une classe
-    *sortable* ? Pour faire simple, on veut écrire ::
-
-        l = [ o1, o2 ]
-        l.sort()
-
-    Où ``o1`` et ``o2`` sont des objets d'une classe
-    que vous avez définie ::
-
-        class MaClasse:
-
-            ...
-
-    Pour que cela fonctionne, il suffit juste
-    de surcharger l'opérateur ``<`` ou plus exactement
-    ``__lt__``. Par exemple ::
-
-        class MaClasse:
-
-            def __lt__(self, autre_instance):
-                if self.jenesaispas < autre.jenesaispas:
-                    return True
-                elif self.jenesaispas > autre.jenesaispas:
-                    return False:
-                else:
-                    if self.jenesaispas2 < autre.jenesaispas2:
-                        return True
-                    else:
-                        return False
-
-    @endFAQ
-    """
-    pass
