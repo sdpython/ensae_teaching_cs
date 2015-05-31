@@ -1,4 +1,4 @@
-﻿
+
 
 .. _l-projinfo1a:
 
@@ -63,12 +63,15 @@ Cet aspect devra ressortir lors de la rédaction du rapport final qui devra expo
 numériques obtenus et faire au moins une ou deux allusions à la façon dont ces calculs ont 
 été implémentés. Le rapport doit contenir les éléments suivants :
 
-    - le coût de votre ou de vos algorithmes
-    - un ou plusieurs résultats numériques (pour une optimisation de porte-feuille, on
-      s'attend à voir un porte-feuille)
-    - 1 page ou plus qui détaille un aspect technique de votre projet
-      
-    
+* instructions pour exécuter le programme
+* description d'un point de design de code
+* description d'un algorithme du programme et son coût
+* description d'une difficulté qui vous a fait perdre beaucoup de temps
+* description d'une contribution originale
+* ce que vous avez appris de vos erreurs
+* description des résultats obtenus
+* prolongements et applications envisageables
+
 Chaque sujet précisera d'autres éléments (code, résultats) attendus
 lors du rendu final. Vous trouverez également quelques erreurs à éviter.
 
@@ -77,7 +80,9 @@ Que faut-il en attendre ?
 -------------------------
 
 Vous serez plus **autonome**. Vous n'aurez plus l'assurance qu'une solution existe ni même quelqu'un 
-qui vous donnera la réponse tout de suite si vous ne trouvez pas.
+qui vous donnera la réponse tout de suite si vous ne trouvez pas. Vous devrez parfois vous interroger sur 
+les résultats numériques que vous avez obtenus et qui sont si loin de votre intuition qu'ils cachent 
+sans doute une erreur d'implémentation.
 
 Vous devrez vous même **définir le problème et y répondre**. Cela veut dire parfois aussi faire un 
 compromis entre ce que vous rêvez de faire et le temps que vous avez pour le faire.
@@ -99,19 +104,19 @@ Références
 
 **Articles de blogs**
 
-    * `Deux ou trois choses à vérifier avant de rendre un projet informatique <http://www.xavierdupre.fr/blog/2014-05-14_nojs.html>`_
-    * `Récupérer des données financières <http://www.xavierdupre.fr/blog/2014-05-04_nojs.html>`_
-    * `Travailler à plusieurs sur le même projet informatique <http://www.xavierdupre.fr/blog/2014-02-12_nojs.html>`_
-    * `Quelques précisions sur les projets informatiques <http://www.xavierdupre.fr/blog/2013-02-03_nojs.html>`_
-    * `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_ 
-    * `Frameworks for games in Python <http://www.xavierdupre.fr/blog/2014-01-01_nojs.html>`_
+* `Deux ou trois choses à vérifier avant de rendre un projet informatique <http://www.xavierdupre.fr/blog/2014-05-14_nojs.html>`_
+* `Récupérer des données financières <http://www.xavierdupre.fr/blog/2014-05-04_nojs.html>`_
+* `Travailler à plusieurs sur le même projet informatique <http://www.xavierdupre.fr/blog/2014-02-12_nojs.html>`_
+* `Quelques précisions sur les projets informatiques <http://www.xavierdupre.fr/blog/2013-02-03_nojs.html>`_
+* `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_ 
+* `Frameworks for games in Python <http://www.xavierdupre.fr/blog/2014-01-01_nojs.html>`_
     
 **Resources**
 
-    * `données <http://www.xavierdupre.fr/site2013/enseignements/projets/donnees/>`_
-    * `bibliographie <http://www.xavierdupre.fr/site2013/enseignements/projets/biblio/>`_     
-    * `Barème indicatif des projets informatiques (année 2012-2013) <http://www.xavierdupre.fr/site2013/enseignements/bareme.html>`_
-    * `Barème indicatif des projets informatiques (année 2013-2014) <http://www.xavierdupre.fr/site2013/enseignements/bareme-2014.html>`_
+* `données <http://www.xavierdupre.fr/site2013/enseignements/projets/donnees/>`_
+* `bibliographie <http://www.xavierdupre.fr/site2013/enseignements/projets/biblio/>`_     
+* `Barème indicatif des projets informatiques (année 2012-2013) <http://www.xavierdupre.fr/site2013/enseignements/bareme.html>`_
+* `Barème indicatif des projets informatiques (année 2013-2014) <http://www.xavierdupre.fr/site2013/enseignements/bareme-2014.html>`_
     
 
 
