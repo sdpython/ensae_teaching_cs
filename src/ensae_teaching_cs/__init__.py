@@ -18,6 +18,15 @@ __license__ = "BSD License"
 __blog__ = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "rss_teachings.xml"))
 
+
+def _setup_hook(add_print=False, unit_test=False):
+    """
+    function executed before running the unit tests and the documentation,
+    does nothing
+    """
+    pass
+
+
 from .faq.faq_matplotlib import graph_ggplot_with_label
 from .td_2a.session_pandas import dfs2excel
 from .td_2a.parallel_thread import ParallelThread

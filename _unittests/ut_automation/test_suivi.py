@@ -95,9 +95,10 @@ class TestSuivi(unittest.TestCase):
         assert names == [
             '', 'extrait', 'next', 'pitch', 'programme', 'rapport', 'title']
         #for k,v in sections.items(): fLOG(k,v)
-        assert sections["next"] == ['* module tweepy']
-        assert sections["extrait"] == [
-            '::', '    paragraphe 1', '    paragraphe 2']
+        if sections["next"] != ['', '* module tweepy', '', '']:
+            raise Exception(sections["next"])
+        if sections["extrait"] != ['', '::', '', '    paragraphe 1', '', '    paragraphe 2', '', '']:
+            raise Exception(sections["extrait"])
 
 
 if __name__ == "__main__":
