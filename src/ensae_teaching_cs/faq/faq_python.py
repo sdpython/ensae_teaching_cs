@@ -535,22 +535,22 @@ def list_of_installed_packages():
         License: BSD
         Location: c:\python34_x64\lib\site-packages
         Requires: python-dateutil, pytz, numpy
-        
-    On utilise également ``pip freeze`` pour répliquer l'environnement 
+
+    On utilise également ``pip freeze`` pour répliquer l'environnement
     dans lequel on a développé un programme. `pip freeze <https://pip.pypa.io/en/latest/reference/pip_freeze.html>`_
     produit la liste des modules avec la version utilisée ::
-        
+
         docutils==0.11
         Jinja2==2.7.2
         MarkupSafe==0.19
         Pygments==1.6
-        Sphinx==1.2.2    
+        Sphinx==1.2.2
 
     Ce qu'on utilise pour répliquer l'environnement de la manière suivante ::
-    
+
         pip freeze > requirements.txt
         pip install -r requirements.txt
-        
+
     Cette façon de faire fonctionne très bien sous Linux mais n'est pas encore
     opérationnelle sous Windows à moins d'installer le compilateur C++ utilisée pour compiler
     Python.
@@ -579,41 +579,41 @@ def information_about_package(name):
         pip.main(["list"])
 
     @endFAQ
-    
+
     @FAQ(Pourquoi l'installation de pandas (ou numpy) ne marche pas sous Windows avec pip ?)
-    
+
     Python est un langage très lent et c'est pourquoi la plupart des modules de calculs numériques
-    incluent des parties implémentées en langage C++. 
+    incluent des parties implémentées en langage C++.
     `numpy <http://www.numpy.org/>`_,
     `pandas <http://pandas.pydata.org/>`_,
     `matplotlib <http://matplotlib.org/>`_,
     `scipy <http://www.scipy.org/>`_,
     `scikit-learn <http://scikit-learn.org/stable/>`_,
     ...
-    
-    Sous Linux, le compilateur est intégré au système et l'installation de ces modules via 
+
+    Sous Linux, le compilateur est intégré au système et l'installation de ces modules via
     l'instruction ``pip install <module>`` met implicitement le compilateur à contribution.
     Sous Windows, il n'existe pas de compilateur C++ par défaut à moins de l'installer.
     Il faut faire attention alors d'utiliser exactement le même que celui utilisé
-    pour compiler Python (voir 
+    pour compiler Python (voir
     `Compiling Python on Windows <https://docs.python.org/3.4/using/windows.html#compiling-python-on-windows>`_).
-    
-    C'est pour cela qu'on préfère utiliser des distributions comme 
+
+    C'est pour cela qu'on préfère utiliser des distributions comme
     `Anaconda <http://continuum.io/downloads#py34>`_
     qui propose par défaut
     une version de Python accompagnée des modules les plus utilisés. Elle propose également une façon
     simple d'installer des modules précompilés avec l'instruction ::
-    
+
         conda install <module_compile>
-        
-    L'autre option est d'utilser le site 
+
+    L'autre option est d'utilser le site
     `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
-    qui propose des versions compilées sous Windows d'un grand nombre de modules. 
+    qui propose des versions compilées sous Windows d'un grand nombre de modules.
     Il faut télécharger le fichier *.whl* puis l'installer avec l'instruction ``pip install <fichier.whl>``.
     La différence entre les deux ooptions tient aux environnements virtuels, voir
     `Python virtual environments <http://astropy.readthedocs.org/en/stable/development/workflow/virtual_pythons.html>`_.
-    
-    
+
+
     @endFAQ
     """
     from pyquickhelper.pycode.pip_helper import get_package_info

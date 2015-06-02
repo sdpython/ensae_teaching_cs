@@ -606,3 +606,82 @@ def create_folders_from_dataframe(df,
 
             folds.append(folder)
     return folds
+
+
+def get_sections(path, suivi="suivi.rst"):
+    """
+    extract sections from a filename used to follow a group of students
+
+    @param      path        where to find filename
+    @param      suivi       file, RST format, section are followed by ``+++++``
+    @return                 dictionary { section : content }
+
+    Example of a file::
+
+        rapport
+        +++++++
+
+        * bla 1
+
+        extrait
+        +++++++
+
+        ::
+
+            paragraphe 1
+
+            paragraphe 2
+
+    """
+    if not os.path.exists(path):
+        raise FileNotFoundError(path)
+    filename = os.path.join(path, suivi)
+    if not os.path.exists(filename):
+        raise FileNotFoundError(filename)
+
+    try:
+        with open(filename, "r", encoding="utf8") as f:
+            content = f.read()
+    except UnicodeDecodeError as e:
+        raise ValueError(
+            'unable to parse file:\n  File "{0}", line 1'.format(filename)) from e
+
+    lines = [_.strip("\r").rstrip() for _ in content.split("\n")]
+    added_in = []
+    sections = {"": []}
+    title = ""
+    for i, line in enumerate(lines):
+        if len(line) == 0:
+            sections[title].append(line)
+            added_in.append(title)
+        else:
+            f = line[0]
+            if f == " ":
+                if title is not None:
+                    sections[title].append(line)
+                    added_in.append(title)
+                else:
+                    sections[""].append(line)
+                    added_in.append("")
+            elif f in "=+-":
+                if line == f * len(line):
+                    title = lines[i - 1]
+                    if len(added_in) > 0:
+                        t = added_in[-1]
+                        sections[t] = sections[t][:-1]
+                        added_in[-1] = title
+                    if f == "=":
+                        sections["title"] = [title]
+                        added_in.append("title")
+                        title = "title"
+                    else:
+                        sections[title] = []
+                        added_in.append(title)
+                else:
+                    sections[title].append(line)
+                    added_in.append(title)
+            else:
+                sections[title].append(line)
+                added_in.append(title)
+
+    return sections
