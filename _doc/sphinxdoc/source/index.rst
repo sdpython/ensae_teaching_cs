@@ -43,7 +43,7 @@ Quoi qu'on en dise, il faut aussi être créatif.
 * **3A :** calculs distribués, Map/Reduce depuis un notebook
 
 Le :ref:`blog <ap-main-0>` associé à ce site publie des liens vers des vidéos,
-des données, met en valeur certaines mise à jour, aborde des sujets qui 
+des données, met en valeur certaines mises à jour, aborde des sujets qui 
 seront plus tard, peut-être intégrées au contenu des enseignements. 
 
 
@@ -70,9 +70,9 @@ Contenu des enseignements
     * :ref:`Glossaire <l-glossaire>`
     * :ref:`question`
     * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
-* Autres documents
+* Lectures
     * :ref:`Articles, Références, Blog <l-biblio>`
-    * :ref:`Modules <modulesi>`
+    * :ref:`modindex` (ou :ref:`Modules <modulesi>`)
     * :ref:`Outils, ressources pour développer <l-devtools>`
     * :ref:`Examens passés <l-examens>` (1A)
     * :ref:`Coding Party <l-codingparty>`
@@ -121,7 +121,7 @@ L'ensemble des TDs a lieu sur les notebooks. Le plus simple pour écourter le pl
 la mise en route est de suivre ces deux étapes :
 
 1. Créer un répertoire vide pour vos notebooks désigné par ``<dirnb>``.
-2. Ajouter un raccourci sur votre bureau qui contient la ligne suivante::
+2. Ajouter un raccourci sur votre bureau qui contient la ligne suivante (sous Windows) ::
 
     set path=%path%;c:\Python34;c:\Python34\Scripts&ipython3 notebook --notebook-dir=<dirnb>
     

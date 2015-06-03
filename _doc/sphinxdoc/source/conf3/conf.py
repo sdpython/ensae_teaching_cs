@@ -50,7 +50,7 @@ if html_theme == "bootstrap":
         'navbar_class': "navbar navbar-inverse",
         'navbar_fixed_top': "true",
         'source_link_position': "nav",
-        'bootswatch_theme': "spacelab",
+        'bootswatch_theme': "united",
         'bootstrap_version': "3",
     }
 

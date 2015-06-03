@@ -9,7 +9,7 @@ from setuptools import find_packages
 #########
 
 project_var_name = "ensae_teaching_cs"
-sversion = "0.6"
+sversion = "0.7"
 versionPython = "%s.%s" % (sys.version_info.major, sys.version_info.minor)
 path = "Lib/site-packages/" + project_var_name
 readme = 'README.rst'
