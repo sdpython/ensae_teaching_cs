@@ -71,12 +71,13 @@ Contenu des enseignements
     * :ref:`question`
     * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
 * Lectures
-    * :ref:`Articles, Références, Blog <l-biblio>`
+    * :ref:`Articles, Références, Blog <l-information>`
     * :ref:`modindex` (ou :ref:`Modules <modulesi>`)
     * :ref:`Outils, ressources pour développer <l-devtools>`
     * :ref:`Examens passés <l-examens>` (1A)
     * :ref:`Coding Party <l-codingparty>`
     * :ref:`l-algoculture`
+    * :ref:`blog <ap-main-0>`
     
 
     
@@ -132,22 +133,6 @@ L'article `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014
 d'autres paramètres par défaut.
 
 
-
-Environnement de développement
-------------------------------
-
-* `Installation de modules sous Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_  (**modules sous Windows**)
-* `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_
-* `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
-* `Remote Notebook with Azure <http://www.xavierdupre.fr/blog/2014-11-09_nojs.html>`_
-* :ref:`Trouver chaussure à ses stats <td1acenoncesession10rst>`
-* :ref:`Python pour Data Scientist <l-data2a>`
-* :ref:`l-ressources`
-* :ref:`l-devtools`
-* :ref:`modulesi`
-* `(Très) Grand listing des libs tierce partie les plus utiles en Python <http://sametmax.com/tres-grand-listing-des-libs-tierce-partie-les-plus-utiles-en-python/>`_
-
-
 .. _l-getting-started-main:
 .. _l-install:
 
@@ -155,7 +140,7 @@ Environnement de développement
 Getting started
 ---------------
 
-.. index:: R, Julia, WinPython, Anaconda, pyminstall
+.. index:: R, Julia, WinPython, Anaconda, pymyinstall
 
 
 La version recommandée est Python 3.4, 64 bit. Par défaut, les modules 
@@ -167,36 +152,31 @@ distribution `Anaconda <https://store.continuum.io/cshop/anaconda/>`_ :
   souvent différente. C'est un point très appréciable. Les modules de la distribution ne sont 
   pas tous à jour. Il faut penser à mettre à jour avec la commande ``conda install <module>``
   depuis le répertoire ``Anaconda3/Scripts`` (``conda install cvxopt`` par exemple).
-  Pour suivre ces cours il faut ajouter :
-
-    * `cvxopt <http://cvxopt.org/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#cvxopt>`_)
-    * `goslate <http://pythonhosted.org/goslate/>`_
-    * `dbfread <http://dbfread.readthedocs.org/en/latest/>`_
-    * `rpy2 <http://rpy.sourceforge.net/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#rpy2>`_)
-    * `mpld3 <http://mpld3.github.io/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_)
-    * `folium <https://github.com/python-visualization/folium>`_
-    * `graphviz <https://github.com/xflr6/graphviz>`_
-    * `numexpr <https://github.com/pydata/numexpr>`_
+  Pour suivre ces cours il faut ajouter : 
+  `cvxopt <http://cvxopt.org/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#cvxopt>`_),
+  `goslate <http://pythonhosted.org/goslate/>`_,
+  `dbfread <http://dbfread.readthedocs.org/en/latest/>`_,
+  `rpy2 <http://rpy.sourceforge.net/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#rpy2>`_),
+  `mpld3 <http://mpld3.github.io/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_),
+  `folium <https://github.com/python-visualization/folium>`_,
+  `graphviz <https://github.com/xflr6/graphviz>`_,
+  `numexpr <https://github.com/pydata/numexpr>`_.
     
   Il suffit d'écrire sur la ligne de commande ``conda update --all`` 
   pour mettre à jour tous les modules.
-  
-Certains notebooks s'appuient sur des fonctions qui donnent accès
-à des données ou qui facilitent leur récupération. Elles sont disponibles
-via le module `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ ::
-
-    pip install pyensae
 
     
 Il faut également un éditeur de texte :
 
-.. index:: éditeur, IDE
+.. index:: éditeur, IDE, rodeo, spyder, pycharm, r, r studio, scite
 
 * `SciTe <http://www.scintilla.org/SciTE.html>`_, le plus simple et le plus léger,
   lire cet article pour le configurer
   `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_.
 * `PyCharm <https://www.jetbrains.com/pycharm/>`_, c'est un environnement complet de développement,
   très pratique pour débugger, repérer des erreurs avant l'exécution (nom de variable inconnus...)
+* `Spyder <https://pythonhosted.org/spyder/>`_, ressemble beaucoup à `R Studio <http://www.rstudio.com/>`_
+* `Rodeo <http://blog.yhathq.com/posts/introducing-rodeo.html>`_, une sorte de Spyder très épuré
   
 Pour les développeurs chevronnés, il faut un environnement plus complet :
 
