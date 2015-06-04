@@ -50,7 +50,8 @@ if html_theme == "bootstrap":
         'navbar_class': "navbar navbar-inverse",
         'navbar_fixed_top': "true",
         'source_link_position': "nav",
-        'bootswatch_theme': "united",
+        'bootswatch_theme': "cosmo",  #united = weird colors
+                                     # to try, simplex, sandstone, yeti, flatly, paper
         'bootstrap_version': "3",
     }
 
