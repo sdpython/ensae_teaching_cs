@@ -1,4 +1,4 @@
-﻿
+
 
 .. _l-information:
 
@@ -8,6 +8,7 @@ Modules, Bibliographie, Articles...
 
 
 .. toctree::
+    :maxdepth: 1
 
     specials/algorithm_culture
     specials/azure
@@ -18,7 +19,6 @@ Modules, Bibliographie, Articles...
     FAQ
     glossary
     questions/questions
-
 
 
 

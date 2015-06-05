@@ -74,6 +74,7 @@ def is_local():
        "test_local_pypi" in sys.argv or \
        "upload_docs" in sys.argv or \
        "write_version" in sys.argv or \
+       "setup_hook" in sys.argv or \
        "build_sphinx_one" in sys.argv or \
        "build_sphinx_catch" in sys.argv or \
        "unittests_all" in sys.argv or \

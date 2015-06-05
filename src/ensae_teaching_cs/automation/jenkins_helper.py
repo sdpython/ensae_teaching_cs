@@ -31,7 +31,8 @@ def setup_jenkins_server(js,
                              ["pyensae [anaconda]", "pyensae [winpython]",
                                         "pyrsslocal [anaconda]",
                                         "pyrsslocal [winpython]"],
-                             ["pymyinstall [27] [anaconda2]", "pymyinstall [LONG]" ],
+                             ["pymyinstall [27] [anaconda2]",
+                                 "pymyinstall [LONG]"],
                              # actuariat
                              [("actuariat_python", "H H(12-13) * * 0")
                               ],

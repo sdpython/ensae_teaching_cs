@@ -181,8 +181,10 @@ Il faut également un éditeur de texte :
 Pour les développeurs chevronnés, il faut un environnement plus complet :
 
 .. toctree::
+    :maxdepth: 1
 
     getting_started
+    
 
 Table des matières
 ------------------

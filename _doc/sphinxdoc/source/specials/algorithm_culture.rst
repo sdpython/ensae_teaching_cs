@@ -1,10 +1,8 @@
 
 
-.. issue.
+.. index:: culture algorithmique, algorithme, culture
 
 .. _l-algoculture:
-
-.. index:: culture algorithmique, algorithme, culture
 
 
 Survol algorithmique
