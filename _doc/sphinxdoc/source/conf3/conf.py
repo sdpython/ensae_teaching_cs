@@ -51,11 +51,10 @@ if html_theme == "bootstrap":
         'navbar_class': "navbar navbar-inverse",
         'navbar_fixed_top': "true",
         'source_link_position': "nav",
-        'bootswatch_theme': "simplex",  
-        # united = weird colors, sandstone=green
+        'bootswatch_theme': "paper",  
+        # united = weird colors, sandstone=green, simplex=red
         # lumen: OK
-        # to try, simplex, yeti,
-        # flatly, paper
+        # to try, yeti, flatly, paper
         'bootstrap_version': "3",
     }
 
