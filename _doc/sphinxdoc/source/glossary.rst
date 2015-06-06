@@ -39,18 +39,25 @@ Glossaire
         `Deep Learning: Methods and Applications <http://research.microsoft.com/apps/pubs/default.aspx?id=219984>`_
         Deep learning signifie aussi des algorithmes gourmands en calculs 
         et il sont très rarement codés en Python seul mais en C++ et Python (wrapper) :
-            - `Deep Learning Tutorials <http://www.deeplearning.net/tutorial/>`_ (python) 
-              (voir aussi `github/yaoli/GSN <https://github.com/yaoli/GSN)>`_)
-            - `Vowpal Wabbit <https://github.com/JohnLangford/vowpal_wabbit/wiki>`_ (C++)
+        
+        - `Deep Learning Tutorials <http://www.deeplearning.net/tutorial/>`_ (python) 
+          (voir aussi `github/yaoli/GSN <https://github.com/yaoli/GSN)>`_)
+        - `Vowpal Wabbit <https://github.com/JohnLangford/vowpal_wabbit/wiki>`_ (C++)
+            
         L'inventeur du deep learning est Yoshua Bengio:
-            - `Yoshuas Bengion's talk <http://www.iro.umontreal.ca/~bengioy/yoshua_en/talks.html>`_. 
-            - `LeNet 5 <http://yann.lecun.com/exdb/lenet/>`_ (probably the first known deep network)
+        
+        - `Yoshuas Bengion's talk <http://www.iro.umontreal.ca/~bengioy/yoshua_en/talks.html>`_. 
+        - `LeNet 5 <http://yann.lecun.com/exdb/lenet/>`_ (probably the first known deep network)
+        
         Voir aussi :
-            - `Sequence to Sequence Learning with Neural Networks <http://arxiv.org/pdf/1409.3215.pdf>`_, Ilya Sutskever, Oriol Vinyals, Quoc V. Le
-            - `Why does Deep Learning work? - A perspective from Group Theory <http://arxiv.org/abs/1412.6621>`_, Arnab Paul, Suresh Venkatasubramanian
-            - `Deeply-Supervised Nets <http://arxiv.org/abs/1409.5185>`_, Chen-Yu Lee, Saining Xie, Patrick Gallagher, Zhengyou Zhang, Zhuowen Tu
+        
+        - `Sequence to Sequence Learning with Neural Networks <http://arxiv.org/pdf/1409.3215.pdf>`_, Ilya Sutskever, Oriol Vinyals, Quoc V. Le
+        - `Why does Deep Learning work? - A perspective from Group Theory <http://arxiv.org/abs/1412.6621>`_, Arnab Paul, Suresh Venkatasubramanian
+        - `Deeply-Supervised Nets <http://arxiv.org/abs/1409.5185>`_, Chen-Yu Lee, Saining Xie, Patrick Gallagher, Zhengyou Zhang, Zhuowen Tu
+        
         Quelques blogs :
-            - `Image Scaling using Deep Convolutional Neural Networks <http://engineering.flipboard.com/2015/05/scaling-convnets/>`_
+        
+        - `Image Scaling using Deep Convolutional Neural Networks <http://engineering.flipboard.com/2015/05/scaling-convnets/>`_
         
     Dijkstra
         Plus connu pour l'algorithme du plus court chemin dans un graphe,

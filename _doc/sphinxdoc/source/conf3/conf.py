@@ -41,6 +41,7 @@ if html_theme == "bootstrap":
             ("pyensae",
              "http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html",
              True),
+            ("index", "genindex.html"),
         ],
         'navbar_sidebarrel': False,
         'navbar_pagenav': True,
@@ -50,8 +51,9 @@ if html_theme == "bootstrap":
         'navbar_class': "navbar navbar-inverse",
         'navbar_fixed_top': "true",
         'source_link_position': "nav",
-        'bootswatch_theme': "lumen",  # united = weird colors
-        # lumen: blog violet
+        'bootswatch_theme': "sandstone",  
+        # united = weird colors
+        # lumen: OK
         # to try, simplex, sandstone, yeti,
         # flatly, paper
         'bootstrap_version': "3",

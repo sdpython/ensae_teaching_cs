@@ -113,6 +113,9 @@ Il peuvent tous être installés avec l'instruction ::
 Si des modules supplémentaires sont nécessaires, ils seront spécifiés sur la page
 de chaque cours (voir :ref:`Getting Started 3A <l-td3a-start>`). La section :ref:`l-install` 
 précise comment installer Python et les différentes options à disposition.
+Un dernier module a été ajouté en 2015 pour une autre formation :
+
+* `actuariat_python <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_
 
 
 
@@ -211,8 +214,9 @@ Table des matières
 Index
 -----
 
+* :ref:`genindex` 
 * :ref:`l-notebooks`
-* :ref:`l-modules`
+* :ref:`modindex` (avec résumé :ref:`l-modules`)
 * :ref:`l-classes`
 * :ref:`l-functions`
 * `Unit Test Coverage <coverage/index.html>`_
