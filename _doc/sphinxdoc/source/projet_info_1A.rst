@@ -8,9 +8,9 @@
 1A - Projets informatiques
 ==========================
 
-`Projet de programmation - OMI1C9 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100332>`_
-
-`Présentation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_1Ap/index.html>`_
+* `Projet de programmation - OMI1C9 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100332>`_ (ENSAE)
+* `Présentation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_1Ap/index.html>`_ 
+  (courte introduction en amphithéâtre)
 
 
 Sujets proposés année 2014-2015
@@ -95,7 +95,11 @@ Vous verrez que si on fait une pause de quelques semaines dans un projet,
 on oublie beaucoup de petits détails qu'on redécouvre aux détours d'une exception. 
 Mais là encore, il existe des solutions.
 
-Et le plus important sans doute, programmer veut aussi dire être **créatif**.
+Le plus important sans doute, programmer veut aussi dire être **créatif**.
+
+Pour finir, voici ce qu'en ont retiré les élèves de première année en 2015 :
+:ref:`l-extrait-projet-1A-2015`.
+
 
 
 
