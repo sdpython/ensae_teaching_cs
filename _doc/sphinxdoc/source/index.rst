@@ -216,9 +216,7 @@ Index
 
 * :ref:`genindex` 
 * :ref:`l-notebooks`
-* :ref:`modindex` (avec résumé :ref:`l-modules`)
-* :ref:`l-classes`
-* :ref:`l-functions`
+* :ref:`modindex` (avec résumé :ref:`l-modules`, et aussi :ref:`l-classes`, :ref:`l-functions`)
 * `Unit Test Coverage <coverage/index.html>`_
 * :ref:`l-changes`
 
