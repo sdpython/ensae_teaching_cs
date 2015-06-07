@@ -176,6 +176,7 @@ Glossaire
         Langage de programmation interprété. C'est le langage utilisé pour le support de ce cours.
         `Site officiel <https://www.python.org/>`_. 
         C'est un `langage impératif <http://fr.wikipedia.org/wiki/Programmation_imp%C3%A9rative>`_.
+        Un tutoriel : `Python Notes <http://www.thomas-cokelaer.info/tutorials/python/index.html>`_.
         
     reStructuredText
         Voir Sphinx.
@@ -219,6 +220,7 @@ Glossaire
     Sphinx
         `Sphinx <http://sphinx-doc.org/>`_ est un moteur qui génère de la
         documentation à partir de fichier au format `reStructuredText <http://docutils.sourceforge.net/rst.html>`_.
+        Voir également `Restructured Text (reST) and Sphinx CheatSheet <http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#images-and-figures>`_.
         
     SQL
         Le `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_ où *Structured Query Language*

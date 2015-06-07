@@ -35,4 +35,5 @@ Environnement de développement
 * :ref:`l-devtools`
 * :ref:`modulesi`
 * `(Très) Grand listing des libs tierce partie les plus utiles en Python <http://sametmax.com/tres-grand-listing-des-libs-tierce-partie-les-plus-utiles-en-python/>`_
+* `Python Notes <http://www.thomas-cokelaer.info/tutorials/python/index.html>`_
 
