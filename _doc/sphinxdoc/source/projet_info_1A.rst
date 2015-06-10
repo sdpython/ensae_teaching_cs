@@ -1,8 +1,9 @@
 
 
-.. _l-projinfo1a:
+.. index:: 1A, projet
 
-.. index:: 1A
+
+.. _l-projinfo1a:
 
 
 1A - Projets informatiques

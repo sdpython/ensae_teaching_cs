@@ -1,4 +1,7 @@
 
+.. index:: 2015, projet, 1A, extrait
+
+.. _l-extrait-projet-1A-2015:
 
 Extraits des projets informatique de première année à l'ENSAE en 2015
 =====================================================================
