@@ -198,23 +198,22 @@ Table des matières
     td_1a
     td_2a
     td_3a
-    blog/blogindex
+    blog/main_0000
     projet_info
     informations
     exemple_index
     exams
     coding_party
     README
-    index_apropos
     glossary
     FAQ
     license
     indexmenu
+    genindex
 
 Index
 -----
 
-* :ref:`genindex` 
 * :ref:`l-notebooks`
 * :ref:`modindex` (avec résumé :ref:`l-modules`, et aussi :ref:`l-classes`, :ref:`l-functions`)
 * `Unit Test Coverage <coverage/index.html>`_
