@@ -23,8 +23,8 @@ des données réelles.*
 *Tout d'abord, nous avons fait un effort sur le nom des variables.
 Cela peut sembler bête, mais comme pour nous deux c'était notre premier code,
 c'était loin d'être évident. Mais très vite nous nous sommes rendus compte que ce
-n'était pas possible d'appeler nos fonctions *f1, f2, ..* et nos variables *x,y,z*.
-Nous nous sommes donc renseignés sur ce qui se faisait dans la programmation de manière générale.
+n'était pas possible d'appeler nos fonctions* f1, f2, .. *et nos variables* x,y,z.
+*Nous nous sommes donc renseignés sur ce qui se faisait dans la programmation de manière générale.
 Ainsi nos noms de fonctions sont devenus bien plus compréhensibles.
 Cela nous a été d'autant plus utile que nous travaillons à deux.*
 
