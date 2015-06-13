@@ -163,7 +163,7 @@ if is_local() and "build_sphinx" not in sys.argv and \
     r = pyquickhelper.process_standard_options_for_setup(
         sys.argv, __file__, project_var_name,
         unittest_modules=["pyquickhelper"],
-        requirements=["pyquickhelper", "pyrsslocal", "pyensae", "pymmails"],
+        requirements=["pyquickhelper", "pymmails", "pyensae", "pyrsslocal"],
         blog_list=os.path.abspath(os.path.join("src", project_var_name, package_data[project_var_name][0])))
 
     if "build_script" in sys.argv and sys.platform.startswith("win"):
