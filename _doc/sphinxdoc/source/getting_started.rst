@@ -6,6 +6,46 @@ Getting started
 
 .. index:: R, Julia, WinPython, Anaconda, pyminstall
 
+Résumé
+++++++
+
+
+**Recommandations**
+
+* Linux/Mac OS : distribution `Anaconda <http://continuum.io/downloads#py34>`_ (python 3.4, 64 bit)
+* Windows : distribution `WinPython <https://winpython.github.io/>`_
+
+**Installer un module**
+
+Il faut ouvrir une fenêtre ligne de commande (Windows) ou une fenêtre terminal (Linux, OS/X) et se placer dans le répertoire de la distribution.
+
+* Anaconda: 
+
+    * module standard : ``conda install <module>``
+    * module rare : ``pip install <module>``
+    
+* WinPython
+
+    * module standard : télécharger le module sur le site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_ 
+      et l'installer avec la commande ``pip install <local_module.whl>``
+    * module rare : ``pip install <module>`` (à condition que celui-ci n'inclut pas de code C/C++) qui requiert un compilateur C/C++
+    
+**Problème de dépendance**
+
+Pour installer rapidement un module sans tenir compte de ses dépendances ::
+
+    pip install <module> --no-deps
+    
+**Mettre à jour un module**
+
+::
+
+    pip install <module> --upgrade --no-deps
+    
+L'extension *--no-deps* n'est pas obligatoire mais cela évite la mise à jour des dépendances.
+
+
+
 Data Scientist
 ++++++++++++++
 
