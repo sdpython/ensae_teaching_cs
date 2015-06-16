@@ -222,3 +222,25 @@ def change_legend_location(ax, new_location="lower center"):
     handles, labels = ax.get_legend_handles_labels()
     ax.legend(handles, labels, loc=new_location)
     return ax
+
+
+def avoid_overlapping_dates(fig, **options):
+    """
+    avoid overlapping dates by calling method
+    `autofmt_xdate <http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure.autofmt_xdate>`_
+
+    @FAQ(matplotlib___Comment éviter les dates qui se superposent ?)
+
+    La méthode `autofmt_xdate <http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure.autofmt_xdate>`_
+    permet d'éviter les problèmes de dates
+    qui se superposent.
+
+    @code
+    fig, ax = plt.subplots(...)
+    # ...
+    fig.autofmt_xdate()
+    @endcode
+
+    @endFAQ
+    """
+    fig.autofmt_xdate(**options)
