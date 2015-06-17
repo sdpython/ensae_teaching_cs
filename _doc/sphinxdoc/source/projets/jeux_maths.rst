@@ -1,4 +1,4 @@
-﻿
+
 .. issue.
 
 .. _l-proj_jeux_maths:
@@ -159,6 +159,21 @@ Recalage d'un réseau
 --------------------
 
 
-
 * `Mise en correspondance et recalage de graphes : application aux réeseaux routiers extraits d'un couple carte/image <https://hal.archives-ouvertes.fr/inria-00073156/document>`_, Christine Hivernat, Xavier Descombes, Sabine Randriamasy, Josiane Zerubia
 * `Deformable Graph Matching <https://www.ri.cmu.edu/pub_files/2013/6/dgm.pdf>`_, Feng Zhou, Fernando De la Torre
+
+
+.. index:: palindrome
+
+.. _l-palindrome-projet-structure:
+
+Structure de données adaptée à la recherche de palindromes
+----------------------------------------------------------
+
+Le projet a des aspects mathématiques et informatiques. Il part d'un problème :
+découvrir tous les palindromes inclus dans une chaîne de caractères. Il propose
+un algorithme rapide qui s'appuie sur une structure de données adaptées.
+Le projet consiste à implémenter la méthode décrite par l'article 
+et de l'adapter à d'autres problèmes.
+
+* `Eertree: An Efficient Data Structure for Processing Palindromes in Strings <http://arxiv.org/abs/1506.04862>`_.

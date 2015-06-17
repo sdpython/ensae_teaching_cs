@@ -394,6 +394,7 @@ Liste des sujets cités
 #. Algo : :ref:`l-math-text`
 #. Algo : :ref:`l-math_simulloi`
 #. Algo : :ref:`l-math_appariement_graph`
+#. Algo : :ref:`l-palindrome-projet-structure`
 #. Jeu hasard : :ref:`l-carte-poker`
 #. Jeu hasard : :ref:`l-carte-belotte`
 
