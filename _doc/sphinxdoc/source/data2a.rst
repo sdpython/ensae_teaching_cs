@@ -1,4 +1,4 @@
-﻿
+
 
 .. issue.
 
@@ -7,6 +7,9 @@
 
 Python pour un Data Scientist
 =============================
+
+
+
 
 Manipuler les données est différent de savoir programmer.
 Si le second est nécessaire au premier, il est impensable
@@ -29,6 +32,15 @@ surtout si les données sont de taille supérieure à 250 Mo.
 L'essentiel n'est pas de tout faire en Python, l'essentiel est d'être agile,
 de passer le moins de temps sur l'implémentation et le plus de temps possible
 sur les données.
+
+Autres sources d'inspiration :
+* `data-science-ipython-notebooks <https://github.com/donnemartin/data-science-ipython-notebooks>`_
+* `Awesome Python <https://github.com/vinta/awesome-python#environment-management>`_, répertoire de librairiees Python populaires (donc à regarder en premier)
+* `Trending Python <https://github.com/trending?l=python>`_
+* `Trending Python <https://github.com/trending?l=python&since=monthly>`_ (mensuel)
+* `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
+
+*Dernière mise à jour 2015-01-01*
 
 
 
@@ -139,8 +151,7 @@ Usage régulier
     a. différences avec les bases de données traditionnelles (tables)
     b. format `JSON <http://fr.wikipedia.org/wiki/JavaScript_Object_Notation>`_, `XML <http://fr.wikipedia.org/wiki/Extensible_Markup_Language>`_ pour les `données structurées <http://en.wikipedia.org/wiki/Semi-structured_data>`_
     c. `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_ définition
-    d. `unqlitepy <https://github.com/nobonobo/unqlitepy>`_ (`unqlite <http://unqlite.org/>`_), `cassandra-driver <https://github.com/datastax/python-driver>`_ (`Cassandra <http://cassandra.apache.org/>`_)
-    e. `pymongo <http://docs.mongodb.org/ecosystem/drivers/python/>`_ (installation depuis `pymongo pipy <https://pypi.python.org/pypi/pymongo/>`_, `MongoDB <http://www.mongodb.org/>`_), `py-couchdb <https://py-couchdb.readthedocs.org/en/latest/>`_ (`CouchDB <http://couchdb.apache.org/>`_)
+    d. `pymongo <http://docs.mongodb.org/ecosystem/drivers/python/>`_ (installation depuis `pymongo pipy <https://pypi.python.org/pypi/pymongo/>`_, `MongoDB <http://www.mongodb.org/>`_), `py-couchdb <https://py-couchdb.readthedocs.org/en/latest/>`_ (`CouchDB <http://couchdb.apache.org/>`_)
 
 #. Calcul distribué  
     a. Multithreading (local)

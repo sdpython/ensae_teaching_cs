@@ -8,6 +8,8 @@ FAQ
 .. toctree::
 
     all_FAQ
+    all_FAQ_cvxopt
+    all_FAQ_hadoop
     all_FAQ_ipython
     all_FAQ_matplotlib
-    all_FAQ_cvxopt
+    all_FAQ_pandas
