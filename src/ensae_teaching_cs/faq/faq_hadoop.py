@@ -7,7 +7,7 @@
 
 def putty_different_python():
     """
-    FAQ(hadoop___La version de Python est différente dans putty)
+    @FAQ(hadoop___La version de Python est différente dans putty)
     
     .. index:: putty, SSH, vi, nano
     

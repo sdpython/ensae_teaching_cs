@@ -34,6 +34,7 @@ de passer le moins de temps sur l'implémentation et le plus de temps possible
 sur les données.
 
 Autres sources d'inspiration :
+
 * `data-science-ipython-notebooks <https://github.com/donnemartin/data-science-ipython-notebooks>`_
 * `Awesome Python <https://github.com/vinta/awesome-python#environment-management>`_, répertoire de librairiees Python populaires (donc à regarder en premier)
 * `Trending Python <https://github.com/trending?l=python>`_
