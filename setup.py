@@ -48,6 +48,9 @@ package_data = {project_var_name + ".pythonnet.py33": ["*.pyd", "*.txt", "*.dll"
 
 
 def is_local():
+    file = os.path.abspath(__file__).replace("\\", "/").lower()
+    if "/temp/" in file and "pip-" in file:
+        return False
     if \
        "bdist_msi" in sys.argv or \
        "build27" in sys.argv or \
