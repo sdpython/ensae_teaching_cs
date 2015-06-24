@@ -1,4 +1,4 @@
-﻿
+
 
 .. issue.
 
@@ -145,6 +145,7 @@ Bibliographie
 **Liens**
 
 * `Message de service aux débutants en Python <http://sametmax.com/message-de-service-aux-debutants-en-python/>`_
+* `Cours et tutos <http://sametmax.com/cours-et-tutos/>`_ 
 * `Les trucmuchables en Python <http://sametmax.com/les-trucmuchables-en-python/>`_ (iterable, mutable, immutable, ...)
 * `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
 * `Data Science in Python <http://blog.yhathq.com/posts/data-science-in-python-tutorial.html>`_
