@@ -73,6 +73,7 @@ except ImportError:
 from pyquickhelper import fLOG, get_temp_folder
 from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, unittest_raise_exception_notebook
 
+
 class TestNotebookRunner2a_3 (unittest.TestCase):
 
     def test_notebook_runner_enonce(self):

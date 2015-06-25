@@ -18,6 +18,19 @@ Glossaire
         est une suite finie et non ambigüe 
         d'opérations ou d'instructions permettant de résoudre un problème.
         
+    auto-encoders
+        Le concept d'`auto-encoders <https://en.wikipedia.org/wiki/Autoencoder>`_ est
+        associé au deep learning. C'est aussi un moyen de réduire le bruit dans les données *X*
+        ou de les compresser
+        en considérant la fonction :math:`X=g ( f (X ) )` où *g* est une fonction
+        pseudo inverse de *f*. La fonction *f* est une sorte de projection dans un espace
+        de dimension inférieur à celui de départ. La fonction *g* reconstruit *X* à partir de sa projection.
+        Après cette première étape d'apprentissage,
+        les données transformées :math:`f(X)` sont moins bruitées et sont souvent de meilleurs
+        features que les données initiales. Cette étape est assez utile pour transformer des données
+        discrètes (voire binaires) en données continues, ce que les algorithmes d'optimisation à base de gradient préfèrent.
+        Voir aussi `Tutorial on auto-encoders <https://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_.
+        
     benchmark
         `banc d'essai <http://fr.wikipedia.org/wiki/Test_de_performance>`_
 
@@ -35,14 +48,16 @@ Glossaire
         fichiers, voir `Download a file from Dropbox with Python <http://www.xavierdupre.fr/blog/2015-01-20_nojs.html>`_.
         
     Deep Learning
-        Le concept `Deep Learning <http://en.wikipedia.org/wiki/Deep_learning>`_ évoque a commencé avec cet article
-        `Deep Learning: Methods and Applications <http://research.microsoft.com/apps/pubs/default.aspx?id=219984>`_
+        Le concept `Deep Learning <http://en.wikipedia.org/wiki/Deep_learning>`_ évoque souvent des réseaux
+        de neurones à plusieurs couches dont on retrouve l'histoire et les principaux concepts dans le livre
+        `Deep Learning: Methods and Applications <http://research.microsoft.com/apps/pubs/default.aspx?id=219984>`_.
         Deep learning signifie aussi des algorithmes gourmands en calculs 
-        et il sont très rarement codés en Python seul mais en C++ et Python (wrapper) :
+        et ils sont très rarement codés en Python seul mais en C++ et Python (wrapper) :
         
         - `Deep Learning Tutorials <http://www.deeplearning.net/tutorial/>`_ (python) 
           (voir aussi `github/yaoli/GSN <https://github.com/yaoli/GSN)>`_)
         - `Vowpal Wabbit <https://github.com/JohnLangford/vowpal_wabbit/wiki>`_ (C++)
+        - `Tutorial on auto-encoders <https://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_
             
         L'inventeur du deep learning est Yoshua Bengio:
         

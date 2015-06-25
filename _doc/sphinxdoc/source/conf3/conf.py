@@ -51,7 +51,7 @@ if html_theme == "bootstrap":
         'navbar_class': "navbar navbar-inverse",
         'navbar_fixed_top': "true",
         'source_link_position': "nav",
-        'bootswatch_theme': "yeti",  
+        'bootswatch_theme': "yeti",
         # united = weird colors, sandstone=green, simplex=red, paper=trop bleu
         # lumen: OK
         # to try, yeti, flatly, paper
