@@ -177,3 +177,18 @@ Le projet consiste à implémenter la méthode décrite par l'article
 et de l'adapter à d'autres problèmes.
 
 * `Eertree: An Efficient Data Structure for Processing Palindromes in Strings <http://arxiv.org/abs/1506.04862>`_.
+
+
+.. index:: grammaire
+
+.. _l-grammaire_context_free:
+
+Implémentation d'une grammaire probabiliste pour traiter le langage naturel
+---------------------------------------------------------------------------
+
+Les grammaires (voir `grammaires non contextuelles <https://fr.wikipedia.org/wiki/Grammaire_non_contextuelle>`_ 
+permettent d'analyser un texte en taggant les mots ou en les catégorisant.
+Le projet consiste à implémenter l'algorithme décrit dans le document suivant :
+`Probabilistic Context-Free Grammars (PCFGs) <http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf>`_
+puis d'appliquer cela sur des articles d'un journal, une page Wikipédia...
+

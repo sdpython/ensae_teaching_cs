@@ -161,6 +161,18 @@ Glossaire
     Mutable
         Voir Immutable.
         
+    NLTK
+        *Natural Language Toolkit*. 
+        La librairie `NTLK <http://www.nltk.org/>`_  est sans doute la plus connue lorsqu'il s'agit de 
+        traiter le langage.
+        
+    PCFG
+        *Probabilistic Context-Free Grammars*.
+        Les grammaires permettent de *tagger* les mots d'un texte : en s'appuyant sur des règles de proximité, on
+        arrive à reconnaître des noms, des verbes ou autre entités sémantiques.
+        Voir `Probabilistic Context-Free Grammars (PCFGs) <http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf>`_.
+        Voir aussi le module `NTLK <http://www.nltk.org/>`_.
+        
     PIG
         Langage haut niveau pour implémenter des tâches avec plusieurs Map/Reduce :
         `PIG <http://pig.apache.org/>`_.

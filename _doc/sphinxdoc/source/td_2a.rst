@@ -1,4 +1,4 @@
-﻿
+
 
 .. issue.
 
@@ -176,6 +176,7 @@ Bibliographie
 * `FastML <http://fastml.com/>`_  (blog sur le machine learning)
 * :ref:`question_projet_2014`
 * `Introduction to matplotlib <https://scipy-lectures.github.io/intro/matplotlib/matplotlib.html>`_
+* `Probabilistic Context-Free Grammars (PCFGs) <http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf>`_
 
 **MOOC**
 
