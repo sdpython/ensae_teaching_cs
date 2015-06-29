@@ -312,6 +312,9 @@ _doc/sphinxdoc/source/phdoc_static3/moduletoc.html
 _doc/sphinxdoc/source/phdoc_static3/blogtoc.html
 _doc/notebooks/*/.ipynb_checkpoints/*
 _doc/notebooks/.ipynb_checkpoints/*
+_doc/sphinxdoc/source/phdoc_static/reveal.js/*
+_doc/sphinxdoc/source/phdoc_static2/reveal.js/*
+_doc/sphinxdoc/source/phdoc_static3/reveal.js/*
 auto_*.bat
 auto_*.py
 auto_*.xml

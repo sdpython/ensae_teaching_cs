@@ -7,19 +7,20 @@ import os
 import shutil
 
 from pyquickhelper import remove_folder
-from pymyinstall import unzip_files
-from pymyinstall.win_installer.win_setup_r import r_run_script
 
 
 def last_function(innosetup, folders, verbose=False, fLOG=print):
     """
     applies last modifications to the setup
 
-    @param          innosetup
+    @param          innosetup   innosetup script which defines the setup
     @param          folders     dictionary with keys *workspace*, *python*, *tools*, *build*, *docs*
     @param          verbose     verbose
     @param          fLOG        logging function
     """
+    from pymyinstall import unzip_files
+    from pymyinstall.win_installer.win_setup_r import r_run_script
+    
     work = folders["workspace"]
     python = folders["python"]
     python = folders["tools"]
