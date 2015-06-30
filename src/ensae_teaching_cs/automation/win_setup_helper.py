@@ -23,7 +23,7 @@ def last_function(innosetup, folders, verbose=False, fLOG=print):
     
     work = folders["workspace"]
     python = folders["python"]
-    python = folders["tools"]
+    tools = folders["tools"]
     build = os.path.join(folders["build"], "custom_ensae_teaching_cs")
     docs = os.path.join(work, "docs")
     logs = folders["logs"]
@@ -57,12 +57,17 @@ def last_function(innosetup, folders, verbose=False, fLOG=print):
 
     # documentation
     fLOG("--- documentation, TDs +++")
-    for ipy in os.listdir(dist):
-        if ipy.endswith("ipynb"):
-            if verbose:
-                fLOG("copy ", ipy)
-            full = os.path.join(dist, ipy)
-            shutil.copy(full, docs)
+    for dist in doc_annee:
+        end = os.path.split(dist)[-1]
+        to = os.path.join(docs, end)
+        if not os.path.exists(to):
+            os.mkdir(to)
+        for ipy in os.listdir(dist):
+            if ipy.endswith("ipynb"):
+                if verbose:
+                    fLOG("copy ", ipy)
+                full = os.path.join(dist, ipy)
+                shutil.copy(full, to)
 
     # others packages not from Microsoft
     from pymyinstall import ModuleInstall
