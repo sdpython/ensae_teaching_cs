@@ -319,4 +319,4 @@ auto_*.bat
 auto_*.py
 auto_*.xml
 auto_*.db3
-
+.RData

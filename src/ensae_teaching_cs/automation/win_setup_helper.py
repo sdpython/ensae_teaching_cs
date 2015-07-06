@@ -52,7 +52,7 @@ def last_function(innosetup, folders, verbose=False, fLOG=print):
     fLOG("--- R install")
     r_script = os.path.join(os.path.dirname(__file__), "R_install.r")
     if os.path.exists(r_script):
-        r_run_script(os.path.join(tools, "R"), dest, os.path.join(
+        r_run_script(os.path.join(tools, "R"), r_script, os.path.join(
             logs, "r_ensae_teaching_cs.install.log.txt"))
 
     # documentation
