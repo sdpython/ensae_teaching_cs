@@ -36,6 +36,8 @@ Vous êtes libres de traiter l'algorithme de votre choix. Nous vous en proposons
 * `LightLDA: Big Topic Models on Modest Compute Clusters <http://arxiv.org/abs/1412.1576>`_
 * `A Reliable Effective Terascale Linear Learning System <http://jmlr.org/papers/volume15/agarwal14a/agarwal14a.pdf>`_
 * `Multi-Block ADMM for Big Data Optimization in Modern Communication Networks <http://arxiv.org/abs/1504.01809>`_, optimisation distribuée (ADMM)
+* `A scalable system for primal-dual optimization <http://arxiv.org/pdf/1507.01461v1.pdf>`_, optimisation sous contrainte avec Map/Reduce et Spark
+* `Sorting and Permuting without Bank Conflicts on GPUs <http://arxiv.org/abs/1507.01391>`_ 
 
 
 Nous vous recommandons d'adopter la démarche suivante:
