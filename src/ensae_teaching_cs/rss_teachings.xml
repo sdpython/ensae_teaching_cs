@@ -22,5 +22,10 @@
             type="rss"
             xmlUrl="http://www.xavierdupre.fr/app/pyensae/helpsphinx/_downloads/rss.xml" 
             htmlUrl="http://www.xavierdupre.fr/app/pyensae/helpsphinx/blog/main_0000.html" />
+        <outline text="pymyinstall" 
+            title="pymyinstall" 
+            type="rss"
+            xmlUrl="http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/_downloads/rss.xml" 
+            htmlUrl="http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/main_0000.html" />
     </body>
 </opml>

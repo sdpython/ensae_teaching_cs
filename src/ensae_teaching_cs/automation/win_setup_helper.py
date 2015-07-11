@@ -47,6 +47,13 @@ def last_function(innosetup, folders, verbose=False, fLOG=print):
     if os.path.exists(docs):
         remove_folder(docs)
     os.mkdir(docs)
+    
+    # RSS
+    fLOG("--- update rss.list.xml")
+    from .. import __blog__
+    rssfile = os.path.join(folders["config"], "rss_list.xml")
+    with open(rssfile, "w", encoding="utf8") as f:
+        f.write(__blog__)
 
     # R_install
     fLOG("--- R install")
