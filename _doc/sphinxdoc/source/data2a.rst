@@ -62,9 +62,11 @@ Usage régulier
         - `Notebooks <http://ipython.org/notebook.html>`_
     c. Editeur de texte (pour des projets plus ambitieux, SciTE, PyCharm, PyTools, WingIDE)
         - `Scite <http://www.scintilla.org/SciTE.html>`_
+        - `Notepad++ <https://notepad-plus-plus.org/>`_
+        - `SublimeText <http://www.sublimetext.com/>`_
         - `PyCharm <http://www.jetbrains.com/pycharm/>`_
         - `PyTools <http://pytools.codeplex.com/>`_
-        - `WingIDE <https://wingware.com/>`_
+        - `WingIDE <https://wingware.com/>`_ (version académique `Wing IDE 101 <https://wingware.com/downloads/wingide-101>`_)
     d. Liens
         - `Formation à Python scientifique - ENS Paris <http://python-prepa.github.io/index.html>`_
 
@@ -190,6 +192,7 @@ Usage irrégulier
     f. Génération d'une documentation avec sphinx
     g. Créer un setup pour un module
     h. Créer un exécutable cx_Freeze
+    i. `WinMerge <http://winmerge.org/>`_ (pour comparer des fichiers)
     
 2. Traitement d'images
     a. `Pillow <http://pillow.readthedocs.org/en/latest/>`_
