@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
     win_python_setup(module_list=list_modules, verbose=True,
                      download_only=False,
-                     no_setup=True,
+                     no_setup=False,
                      last_function=last_function,
                      selection={"R", "VS"},
                      documentation=False,

@@ -52,8 +52,7 @@ def last_function(innosetup, folders, verbose=False, fLOG=print):
     fLOG("--- update rss.list.xml")
     from .. import __blog__
     rssfile = os.path.join(folders["config"], "rss_list.xml")
-    with open(rssfile, "w", encoding="utf8") as f:
-        f.write(__blog__)
+    shutil.copy(__blog__, rssfile)
 
     # R_install
     fLOG("--- R install")
