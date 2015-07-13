@@ -48,7 +48,7 @@ Versions
 --------
 
 * **0.7 - 2015/??/??**
-    * 
+    * **new:** code to produce a Python distribution which includes R, Python, ...
 * **0.6 - 2015/06/03**
     * **new:** first sessions in 2A
     * **new:** first sessions in 3A
