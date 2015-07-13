@@ -18,6 +18,15 @@ Glossaire
         est une suite finie et non ambigüe 
         d'opérations ou d'instructions permettant de résoudre un problème.
         
+    Antlr4
+        `Antlr4 <http://www.antlr.org/>`_ est un outil qui permet de construire des grammaires ou des 
+        compilateurs. Cela peut servir à interpréter un code écrit dans un langage existant,
+        pour le réécrire avec un meilleur format par exemple ou lui ajouter quelques fonctionnalités.
+        On peut également vouloir définir rapidement un langage de script pour sa
+        propre application. Dans les deux cas, cet outil permet éviter de réécrire son propre
+        parseur et donc d'aller beaucoup plus vite. Il est intuitif.
+        Voir `Using Antlr4 to write a grammar <http://www.xavierdupre.fr/blog/2015-07-13_nojs.html>`_.
+        
     auto-encoders
         Le concept d'`auto-encoders <https://en.wikipedia.org/wiki/Autoencoder>`_ est
         associé au deep learning. C'est aussi un moyen de réduire le bruit dans les données *X*
@@ -192,6 +201,17 @@ Glossaire
         Il sert le plus souvent à télécharger des documents depuis le site 
         `www.xavierdupre.fr <http://www.xavierdupre.fr/>`_ et plus précisément des documents
         accessibles depuis ce lien `documents <http://www.xavierdupre.fr/enseignement/complements/index_documents.html>`_.
+        
+    PyQt
+        `PyQt <http://www.riverbankcomputing.co.uk/software/pyqt/intro>`_ est considéré comme le
+        standard en matière d'interface grahique. C'est d'abord un concept d'interface graphique
+        qu'on retrouve en Python sous deux implémentation :
+        `PyQt4 <http://www.riverbankcomputing.com/software/pyqt/download>`_,
+        `PyQt5 <http://www.riverbankcomputing.com/software/pyqt/download5>`_ (licence GPL),
+        `PySide <http://pyside.github.io/docs/pyside/>`_ (licence LGPL).
+        Il existe d'autres alternatives comme
+        `Phoenix <http://wxpython.org/Phoenix/docs/html/main.html>`_
+        mais moins populaires donc moins maintenus.
         
     pyquickhelper
         Ce module est utilisé par `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_.
