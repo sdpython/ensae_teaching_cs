@@ -515,7 +515,7 @@ if not r:
             package_dir=package_dir,
             package_data=package_data,
             install_requires=[
-                "pyensae", "pyquickhelper", "pymyinstall", "pymmails",
+                "pyquickhelper", "pyensae", "pymyinstall", "pymmails",
                 "scikit-learn", "pyrsslocal", "pandas", "numpy",
-                "cvxopt"],
+                "matplotlib", "ipython", "cvxopt"],
         )
