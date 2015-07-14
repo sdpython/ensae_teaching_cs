@@ -1,6 +1,4 @@
-﻿
 
-.. issue.
 
 .. _l-td3a:
 
@@ -109,6 +107,18 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
 
 
 Le cours sera évalué avec un :ref:`projet informatique <l-projinfo3a>`.
+
+
+.. index:: PageRank, k-means, factorisation de matrice
+
+Exemples de scripts PIG
++++++++++++++++++++++++
+
+Trois projets réalisés par les élèves lors de l'année 2014-2015 :
+
+* :ref:`2015pagerankrst`
+* :ref:`2015kmeansrst`
+* :ref:`2015factorisationmatricerst`
 
 
 .. _l-td3a-start:
