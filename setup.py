@@ -37,7 +37,7 @@ package_data = {project_var_name + ".pythonnet.py33": ["*.pyd", "*.txt", "*.dll"
                 project_var_name + ".pythonnet.py34x64": ["*.pyd", "*.txt", "*.dll"],
                 project_var_name + ".pythonnet.py27x64": ["*.pyd", "*.txt", "*.dll"],
                 project_var_name + ".pythonnet.csdll": ["*.dll"],
-                project_var_name + ".automation": ["*.xml"],
+                project_var_name + ".automation": ["*.xml", "*.r", "*.ico"],
                 project_var_name: ["rss_teachings.xml"],
                 }
 
@@ -166,7 +166,8 @@ if is_local() and "build_sphinx" not in sys.argv and \
     r = pyquickhelper.process_standard_options_for_setup(
         sys.argv, __file__, project_var_name,
         unittest_modules=["pyquickhelper"],
-        requirements=["pyquickhelper", "pymmails", "pyensae", "pyrsslocal", "pymyinstall"],
+        requirements=["pyquickhelper", "pymmails",
+                      "pyensae", "pyrsslocal", "pymyinstall"],
         blog_list=os.path.abspath(os.path.join("src", project_var_name, package_data[project_var_name][0])))
 
     if "build_script" in sys.argv and sys.platform.startswith("win"):

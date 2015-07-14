@@ -8,6 +8,10 @@
 import os
 import sys
 
+from pyquickhelper import fLOG
+
+from .faq_ipython_helper import nb_open
+
 
 def notebook_path():
     """
@@ -220,3 +224,56 @@ def ipython_install_mathjax():
     """
     from IPython.external import mathjax
     mathjax.install_mathjax()
+
+
+def ipython_open_notebook(filename, profile='default', fLOG=fLOG):
+    """
+    Calls @see fn nb_open, open a notebook with an existing server,
+    if no server can be found, it starts a new one
+    (and the function runs until the server is closed)
+
+    @param      filename        notebook
+    @param      profile         profile to use
+    @param      fLOG            logging function
+    @return                     a running server or None if not found
+
+    .. _i-launch_notebook-server:
+
+    @FAQ(ipython__Lancer le serveur de notebooks)
+
+    On suppose que le module `IPython <http://ipython.org/notebook.html>`_ a été bien installé.
+    Plusieurs options :
+
+    #. Utiliser la ligne de commande usuelle : ``ipython notebook``.
+       Ce script (ou programme *ipython.exe* sous Windows
+       est inclus dans le répertoire *Scripts* du répertoire d'installation.
+       Voir :ref:`l-ipython_notebook_commandline`.
+       Voir égalemnt `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_
+       Il est possible de créer un fichier `.bat <https://fr.wikipedia.org/wiki/.bat>`_ pour
+       automatiser la ligne de commande et l'ajouter en tant qu'icône sur le bureau.
+
+    #. Utiliser la fonction :func:`ipython_open_notebook <ensae_teaching_cs.faq.faq_ipython.ipython_open_notebook>` ::
+
+        from ensae_teaching_cs.faq import ipython_open_notebook
+        nbfile = "notebook.ipynb"
+        ipython_open_notebook(nbfile)
+
+    #. Utiliser le raccourci proposé par la distribution choisi pour installer Python.
+
+    @endFAQ
+
+    @FAQ(ipython___Le notebook ne répond plus)
+
+    On utilise les notebooks via un `navigateur web <https://fr.wikipedia.org/wiki/Navigateur_web>`_
+    mais ce n'est pas lui qui exécute le code Python, c'est un serveur.
+    Ce serveur tourne soit une machine distante, soit une machine locale.
+    Il s'agit d'une fenêtre terminale où l'on peut voir des informations
+    s'afficher à chaque qu'on ouvre, qu'on ferme, qu'on enregistre un notebook.
+    Si cette fenêtre est fermée, il n'existe plus de serveur de notebook qui
+    puisse exécuter le code inclus dans le notebook. Il ne se passe plus rien,
+    les modifications sont perdues.
+    Il faut redémarrer le serveur, qu'il soit distant ou local.
+
+    @endFAQ
+    """
+    return nb_open(filename, profile, fLOG)

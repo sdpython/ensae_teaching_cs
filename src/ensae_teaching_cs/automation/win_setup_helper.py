@@ -20,7 +20,7 @@ def last_function(innosetup, folders, verbose=False, fLOG=print):
     """
     from pymyinstall import unzip_files
     from pymyinstall.win_installer.win_setup_r import r_run_script
-    
+
     work = folders["workspace"]
     python = folders["python"]
     tools = folders["tools"]
@@ -47,7 +47,7 @@ def last_function(innosetup, folders, verbose=False, fLOG=print):
     if os.path.exists(docs):
         remove_folder(docs)
     os.mkdir(docs)
-    
+
     # RSS
     fLOG("--- update rss.list.xml")
     from .. import __blog__

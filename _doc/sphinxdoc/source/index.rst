@@ -5,19 +5,22 @@ ENSAE - Programmation - Xavier Dupré
 
 :ref:`l-README`, :ref:`blog <ap-main-0>`
 
+Contenu des séances de travaux pratiques en programmation
+que je dispense à l'`ENSAE <http://www.ensae.fr/>`_. 
 
-Cette page donne accès au contenu des séances de travaux pratiques en programmation
-que je dispense à l'`ENSAE <http://www.ensae.fr/>`_. Ils s'appuient principalement sur 
-le langage Python. Le contenu est librement disponible sur `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs>`_
+Avant-propos
+------------
+
+Ces cours s'appuient principalement sur 
+le langage `Python <https://www.python.org/>`_. 
+Le contenu est librement disponible sur `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs>`_
 et permet à quiconque de contribuer à ce cours disponible sous trois formats différents : 
 `mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_,
 `compact/blanc <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_,
 `compact/mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
 
-Avant-propos
-------------
-
-On programme nécessairement avec un **langage** de `programmation <http://fr.wikipedia.org/wiki/Langage_de_programmation>`_.
+On programme nécessairement avec un **langage** de 
+`programmation <http://fr.wikipedia.org/wiki/Langage_de_programmation>`_.
 Ce langage a une grammaire et un vocabulaire. Il n'est pas d'une poésie
 irréprochable mais il permet d'exprimer des idées avec une précision tâtillonne.
 Comme toute langue qu'on apprend ou toute séance de solfège, 
@@ -27,7 +30,6 @@ sur son idée et moins sur son programme. Le langage Python est un de ceux
 qui demande le moins d'effort. Il est de plus en plus populaire comme en témoignent les 
 nombreux exemples sur Internet 
 (`Python is Now the Most Popular Introductory Teaching Language at Top U.S. Universities <http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-us-universities/fulltext>`_).
-
 
 
 **3 niveaux**
@@ -40,7 +42,7 @@ Quoi qu'on en dise, il faut aussi être créatif.
 * **1A :** syntaxe de langage, premiers algorithmes, programmation dynamique, Data Frame, premiers graphes
 * **2A :** python pour un statisticien, Data Frames, calcul matriciel, machine learning, 
   exercices d'algorithmie
-* **3A :** calculs distribués, Map/Reduce depuis un notebook
+* **3A :** calculs distribués, Map/Reduce, Hadoop, PIG, Spark, depuis un notebook
 
 Le :ref:`blog <ap-main-0>` associé à ce site publie des liens vers des vidéos,
 des données, met en valeur certaines mises à jour, aborde des sujets qui 
@@ -82,10 +84,11 @@ Contenu des enseignements
 
     
 
+.. index: notebook, installation, prérequis
+
 Prérequis et Installation
 -------------------------
 
-**Notebooks**
 
 Les séances utilisent les `notebooks IPython <http://ipython.org/notebook.html>`_.
 Au début de chaque séance, il vous suffit de télécharger le notebook qui sert de point
@@ -98,13 +101,18 @@ populaire :
 `matplotlib <http://matplotlib.org/>`_. 
 Sous Windows, ces modules
 sont accessibles depuis le site 
-`Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
-En outre, quatre modules ont été développés pour ces enseignements :
+`Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
+et ne peuvent pas être installés avec l'instruction ``pip install <module>`` car ils
+nécessitent un compilateur C++.
+Des modules développés pour ces enseignements viennent compléter cet ensemble :
 
 * `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/>`_ : génère la documentation de ce module
 * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ : code nécessaires aux TDs, aux projets informatiques, Big Data, PIG
 * `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_ : installe facilement des modules
+* `pyrsslocal <http://www.xavierdupre.fr/app/pyrsslocal/helpsphinx/>`_ : lecteur de flux RSS
 * `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_ : ces enseignements compilés sous forme de modules
+* `actuariat_python <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_ : contient d'autres notebooks
+  et des exercices orientés un peu plus actuariat
 
 Il peuvent tous être installés avec l'instruction ::
 
@@ -113,27 +121,7 @@ Il peuvent tous être installés avec l'instruction ::
 Si des modules supplémentaires sont nécessaires, ils seront spécifiés sur la page
 de chaque cours (voir :ref:`Getting Started 3A <l-td3a-start>`). La section :ref:`l-install` 
 précise comment installer Python et les différentes options à disposition.
-Un dernier module a été ajouté en 2015 pour une autre formation :
-
-* `actuariat_python <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_
-
-
-
-**Ouvrir un notebook**
-
-L'ensemble des TDs a lieu sur les notebooks. Le plus simple pour écourter le plus possible
-la mise en route est de suivre ces deux étapes :
-
-1. Créer un répertoire vide pour vos notebooks désigné par ``<dirnb>``.
-2. Ajouter un raccourci sur votre bureau qui contient la ligne suivante (sous Windows) ::
-
-    set path=%path%;c:\Python34;c:\Python34\Scripts&ipython3 notebook --notebook-dir=<dirnb>
-    
-Il suffit ensuite de double cliquer sur ce lien pour ouvrir un notebook. Pour récupérer un notebook, il suffit
-de le télécharger puis de le copier dans le répertoire ``<dirnb>`` ou de le glisser dans le navigateur.
-Le seul raccourci à connaître est **SHIFT + ENTREE** qui lance l'exécution de la zone de code sélectionné.
-L'article `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_ décrit
-d'autres paramètres par défaut.
+Pour Ouvrir un notebook, voir :ref:`i-launch_notebook-server`.
 
 
 .. _l-getting-started-main:
@@ -143,11 +131,13 @@ d'autres paramètres par défaut.
 Getting started
 ---------------
 
-.. index:: R, Julia, WinPython, Anaconda, pymyinstall
+.. index:: R, Julia, WinPython, Anaconda, pymyinstall, setup
 
 
 La version recommandée est Python 3.4, 64 bit. Par défaut, les modules 
-s'installe avec ``pip install <module>``. Le plus simple est d'utiliser la 
+s'installe avec ``pip install <module>`` excepté
+sous Windows où il faut télécharger soi-même des versions pré-compilées des modules 
+qui nécessitent un compilateur C++. Le plus simple est d'utiliser la 
 distribution `Anaconda <https://store.continuum.io/cshop/anaconda/>`_ :
 
 * `Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac). 
@@ -207,9 +197,9 @@ Table des matières
     README
     glossary
     FAQ
-    license
     indexmenu
     genindex
+    license
 
 Index
 -----
