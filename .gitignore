@@ -224,6 +224,7 @@ out_*
 */sphinxdoc/source/LICENSE.txt
 */sphinxdoc/source/filechanges.*
 */sphinxdoc/source/coverage/*
+*-checkpoint.ipynb
 version.txt
 */sphinxdoc/source/ensae_teaching_cs/*
 */sphinxdoc/source/all*.rst
@@ -298,6 +299,12 @@ README
 */notebooks/expose/paris_54000.*
 */notebooks/expose/mortalite*.db3
 */notebooks/expose/mortalite_5*.txt
+*/notebooks/notebook_eleves/2014_2015/*.zip
+*/notebooks/notebook_eleves/2014_2015/*.gz
+*/notebooks/notebook_eleves/2014_2015/*.txt
+*/notebooks/notebook_eleves/2014_2015/*.pig
+*/notebooks/notebook_eleves/2014_2015/stdout
+*/notebooks/notebook_eleves/2014_2015/stderr
 build_help.bat
 _doc/sphinxdoc/source/blog/*.rst
 _doc/sphinxdoc/source/blog/rss.xml
