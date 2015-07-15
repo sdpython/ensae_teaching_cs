@@ -303,8 +303,10 @@ README
 */notebooks/notebook_eleves/2014_2015/*.gz
 */notebooks/notebook_eleves/2014_2015/*.txt
 */notebooks/notebook_eleves/2014_2015/*.pig
+*/notebooks/notebook_eleves/2014_2015/*.csv
 */notebooks/notebook_eleves/2014_2015/stdout
 */notebooks/notebook_eleves/2014_2015/stderr
+*/notebooks/notebook_eleves/2014_2015/ml-1m/*
 build_help.bat
 _doc/sphinxdoc/source/blog/*.rst
 _doc/sphinxdoc/source/blog/rss.xml
