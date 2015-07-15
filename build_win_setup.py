@@ -1,6 +1,6 @@
 """
 @file
-@brief Builds a setup for the teachings
+@brief Builds a setup for the teachings: ensae_teaching_cs
 """
 try:
     import pymyinstall
