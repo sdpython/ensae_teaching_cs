@@ -6,11 +6,7 @@
 """
 
 import os
-import sys
-
-import argparse
 import os.path
-import sys
 import warnings
 import webbrowser
 

@@ -18,7 +18,6 @@ def last_function(innosetup, folders, verbose=False, fLOG=print):
     @param          verbose     verbose
     @param          fLOG        logging function
     """
-    from pymyinstall import unzip_files
     from pymyinstall.win_installer.win_setup_r import r_run_script
 
     work = folders["workspace"]

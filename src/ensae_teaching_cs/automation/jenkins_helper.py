@@ -34,7 +34,8 @@ def setup_jenkins_server(js,
                              ["pymyinstall [27] [anaconda2]",
                                  "pymyinstall [LONG]"],
                              # update
-                             ("pymyinstall [update_modules]", "H H(10-11) * * 5"),
+                             ("pymyinstall [update_modules]",
+                                        "H H(10-11) * * 5"),
                              # actuariat
                              [("actuariat_python", "H H(12-13) * * 0")
                               ],
