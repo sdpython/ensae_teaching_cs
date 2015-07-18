@@ -44,7 +44,7 @@ def distance_haversine(lat1, lng1, lat2, lng2):
 def get_data(whereTo=".", timeout=None, fLOG=print):
     """
     Retourne les données des rues de Paris. On suppose que les arcs sont uniques
-    et qu'il si :math:`j \rightarrow k` est présent, :math:`j \rightarrow k` ne l'est pas.
+    et qu'il si :math:`j \\rightarrow k` est présent, :math:`j \\rightarrow k` ne l'est pas.
     Ceci est vérifié par un test.
 
     @param      whereTo         répertoire dans lequel télécharger les données

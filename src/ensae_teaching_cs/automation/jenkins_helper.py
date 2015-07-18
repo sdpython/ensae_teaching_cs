@@ -100,7 +100,8 @@ def setup_jenkins_server(js,
     @param      github                  github account if it does not start with *http://*,
                                         the link to git repository of the project otherwise
     @param      modules                 modules for which to generate the
-    @param      get_jenkins_script      see @see me get_jenkins_script (default value if this parameter is None)
+    @param      get_jenkins_script      see `get_jenkins_script <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/jenkinshelper/jenkins_server.html?highlight=get_jenkins_script#pyquickhelper.jenkinshelper.jenkins_server.JenkinsExt.get_jenkins_script>`_
+                                        (default value if this parameter is None)
     @param      pythonexe               location of Python (unused)
     @param      winpython               location of WinPython (or None to skip)
     @param      anaconda                location of Anaconda (or None to skip)
