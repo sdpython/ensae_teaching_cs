@@ -121,7 +121,7 @@ Il peuvent tous être installés avec l'instruction ::
 Si des modules supplémentaires sont nécessaires, ils seront spécifiés sur la page
 de chaque cours (voir :ref:`Getting Started 3A <l-td3a-start>`). La section :ref:`l-install` 
 précise comment installer Python et les différentes options à disposition.
-Pour Ouvrir un notebook, voir :ref:`i-launch_notebook-server`.
+Pour Ouvrir un notebook, voir :ref:`i-launch_notebook_server`.
 
 
 .. _l-getting-started-main:
@@ -138,27 +138,27 @@ La version recommandée est Python 3.4, 64 bit. Par défaut, les modules
 s'installe avec ``pip install <module>`` excepté
 sous Windows où il faut télécharger soi-même des versions pré-compilées des modules 
 qui nécessitent un compilateur C++. Le plus simple est d'utiliser la 
-distribution `Anaconda <https://store.continuum.io/cshop/anaconda/>`_ :
+distribution fournie par l'école. Dans le cas contraire, 
+`Anaconda <https://store.continuum.io/cshop/anaconda/>`_ est la distribution la plus répandue : 
+`Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac). 
 
-* `Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac). 
-  Sous Linux ou Mac, la distribution n'interfère pas avec la distribution existante
-  souvent différente. C'est un point très appréciable. Les modules de la distribution ne sont 
-  pas tous à jour. Il faut penser à mettre à jour avec la commande ``conda install <module>``
-  depuis le répertoire ``Anaconda3/Scripts`` (``conda install cvxopt`` par exemple).
-  Pour suivre ces cours il faut ajouter : 
-  `cvxopt <http://cvxopt.org/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#cvxopt>`_),
-  `goslate <http://pythonhosted.org/goslate/>`_,
-  `dbfread <http://dbfread.readthedocs.org/en/latest/>`_,
-  `rpy2 <http://rpy.sourceforge.net/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#rpy2>`_),
-  `mpld3 <http://mpld3.github.io/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_),
-  `folium <https://github.com/python-visualization/folium>`_,
-  `graphviz <https://github.com/xflr6/graphviz>`_,
-  `numexpr <https://github.com/pydata/numexpr>`_.
-    
-  Il suffit d'écrire sur la ligne de commande ``conda update --all`` 
-  pour mettre à jour tous les modules.
+Sous Linux ou Mac, la distribution n'interfère pas avec la distribution existante
+souvent différente. C'est un point très appréciable. Les modules de la distribution ne sont 
+pas tous à jour. Il faut penser à mettre à jour avec la commande ``conda install <module>``
+depuis le répertoire ``Anaconda3/Scripts`` (``conda install cvxopt`` par exemple).
+Pour suivre ces cours il faut ajouter : 
+`cvxopt <http://cvxopt.org/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#cvxopt>`_),
+`goslate <http://pythonhosted.org/goslate/>`_,
+`dbfread <http://dbfread.readthedocs.org/en/latest/>`_,
+`rpy2 <http://rpy.sourceforge.net/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#rpy2>`_),
+`mpld3 <http://mpld3.github.io/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_),
+`folium <https://github.com/python-visualization/folium>`_,
+`graphviz <https://github.com/xflr6/graphviz>`_,
+`numexpr <https://github.com/pydata/numexpr>`_.
 
-    
+Il suffit d'écrire sur la ligne de commande ``conda update --all`` 
+pour mettre à jour tous les modules.
+
 Il faut également un éditeur de texte :
 
 .. index:: éditeur, IDE, rodeo, spyder, pycharm, r, r studio, scite

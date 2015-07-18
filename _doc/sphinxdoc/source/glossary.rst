@@ -1,6 +1,5 @@
 
 
-.. issue.
 
 .. _l-glossaire:
 
@@ -175,6 +174,16 @@ Glossaire
         La librairie `NTLK <http://www.nltk.org/>`_  est sans doute la plus connue lorsqu'il s'agit de 
         traiter le langage.
         
+    optimisation
+        L'`optimisation <https://fr.wikipedia.org/wiki/Optimisation_%28math%C3%A9matiques%29>`_
+        se résume le plus souvent à maximiser ou minimiser une fonction réelle dépendant
+        de plusieurs paramètres. Il s'agit de trouver les paramètres optimaux : ceuw qui permettent
+        d'obtenir le minimum ou maximum trouvé. La plupart des problèmes de machine
+        learning se résume à un problème d'optimisation.
+        Parmi les différentes types de problèmes, on distingue les problèmes
+        linéaire, quadratique, non linéaire, avec ou sans contraintes.
+        Lire le blog :ref:`blog-optimisation-contrainte`.
+        
     PCFG
         *Probabilistic Context-Free Grammars*.
         Les grammaires permettent de *tagger* les mots d'un texte : en s'appuyant sur des règles de proximité, on
@@ -245,7 +254,10 @@ Glossaire
         Plus on est proche, moins le classifieur est sûr de sa réponse. Voilà en résumé l'idée du score.
         Donc le score est un chiffre qui exprime la proximité d'une observation à la frontière de la classe 
         dans laquelle elle est classée. La frontière est apprise sur la base d'apprentissage, 
-        l'observation provient de n'importe quelle base.        
+        l'observation provient de n'importe quelle base.  
+
+    skewed join
+        Voir :ref:`blog-skew-join`, :ref:`td3acenoncesession8arst`.
         
     sparse
         Les matrices `sparse <http://en.wikipedia.org/wiki/Sparse_matrix>`_ (ou creuses) sont des matrices 

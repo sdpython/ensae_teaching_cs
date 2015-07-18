@@ -1,7 +1,5 @@
 
 
-.. issue.
-
 .. _l-td2a:
 
 .. index:: 2A

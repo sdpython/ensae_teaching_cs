@@ -13,7 +13,7 @@ Résumé
 **Recommandations**
 
 * Linux/Mac OS : distribution `Anaconda <http://continuum.io/downloads#py34>`_ (python 3.4, 64 bit)
-* Windows : distribution `WinPython <https://winpython.github.io/>`_
+* Windows : la distribution fournie par l'école [#fpm1]_ ou la distribution  `WinPython <https://winpython.github.io/>`_
 
 **Installer un module**
 
@@ -305,3 +305,12 @@ Pour finir, quelques lignes de commandes utiles ::
     pip install bayespy
 
 
+.. rubric:: Footnotes
+
+.. index:: pymyinstall, distribution
+
+.. [#fpm1] Cette distribution est construite grâce à la fonction 
+           `win_python_setup <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/win_installer/win_setup_main.html#pymyinstall.win_installer.win_setup_main.win_python_setup>
+           du module
+           `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/>`_.
+           La construction du setup prend quelques heures.
