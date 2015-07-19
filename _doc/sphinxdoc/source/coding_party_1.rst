@@ -150,5 +150,5 @@ vous pouvez reproduire la solution de l'appariement dans ce notebook :
 Suite possible
 --------------
 
-Voir :ref:`l-blog-velib`.
+Voir :ref:`Prédire l'occupation des vélib <l-blog-velib>`.
 

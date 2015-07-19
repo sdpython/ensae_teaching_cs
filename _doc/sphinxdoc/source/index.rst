@@ -179,8 +179,8 @@ Pour les développeurs chevronnés, il faut un environnement plus complet :
     getting_started
     
 
-Table des matières
-------------------
+Contenu
+-------
 
 .. toctree::
     :maxdepth: 1
@@ -192,14 +192,13 @@ Table des matières
     projet_info
     informations
     exemple_index
+    all_notebooks
     exams
     coding_party
-    README
     glossary
     FAQ
     indexmenu
     genindex
-    license
 
 Index
 -----
@@ -208,6 +207,8 @@ Index
 * :ref:`modindex` (avec résumé :ref:`l-modules`, et aussi :ref:`l-classes`, :ref:`l-functions`)
 * `Unit Test Coverage <coverage/index.html>`_
 * :ref:`l-changes`
+* :ref:`l-license`
+* :ref:`l-README`
 
 
 .. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master

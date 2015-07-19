@@ -182,7 +182,7 @@ Glossaire
         learning se résume à un problème d'optimisation.
         Parmi les différentes types de problèmes, on distingue les problèmes
         linéaire, quadratique, non linéaire, avec ou sans contraintes.
-        Lire le blog :ref:`blog-optimisation-contrainte`.
+        Lire le blog :ref:`Optimisation avec contraintes, cvxopt, pulp, NLopt, ... <blog-optimisation-contrainte>`.
         
     PCFG
         *Probabilistic Context-Free Grammars*.
@@ -257,7 +257,7 @@ Glossaire
         l'observation provient de n'importe quelle base.  
 
     skewed join
-        Voir :ref:`blog-skew-join`, :ref:`td3acenoncesession8arst`.
+        Voir :ref:`Map Reduce et Skew Join <blog-skew-join>`, :ref:`td3acenoncesession8arst`.
         
     sparse
         Les matrices `sparse <http://en.wikipedia.org/wiki/Sparse_matrix>`_ (ou creuses) sont des matrices 
