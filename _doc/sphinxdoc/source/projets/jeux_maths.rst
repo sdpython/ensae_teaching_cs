@@ -192,3 +192,19 @@ Le projet consiste à implémenter l'algorithme décrit dans le document suivant
 `Probabilistic Context-Free Grammars (PCFGs) <http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf>`_
 puis d'appliquer cela sur des articles d'un journal, une page Wikipédia...
 
+.. index:: tree, arbre, distance, Robinson–Foulds, Levenshtein
+
+.. _l-distance_tree_robinson_foulds
+
+
+Distance entre deux arbres : Robinson–Foulds
+--------------------------------------------
+
+On sait calculer une distance entre deux séquences qu'on appelle distance d'édition
+ou `distance de Levenshtein <https://fr.wikipedia.org/wiki/Distance_de_Levenshtein>`_.
+Il paraît difficile d'adapter cette distance au cas de deux arbres mais une telle
+distance existe : 
+`distance de Robinson–Foulds <https://en.wikipedia.org/wiki/Robinson%E2%80%93Foulds_metric>`_.
+L'objectif du projet est d'implémenter cette distance et de l'application
+à des arbres de décision, telle que ceux produits par `scikit-learn <http://scikit-learn.org/>`_.
+
