@@ -119,6 +119,10 @@ Glossaire
         Elle est accessible via `matplotlib <http://matplotlib.org/>`_.
         Voir `A few tricks with matplotlib <http://www.xavierdupre.fr/blog/2014-12-07_nojs.html>`_.
     
+    Hadoop
+        Logiciel de distribution de traitement de données. 
+        Voir `Hadoop <https://hadoop.apache.org/>`_.
+    
     HDFS
         Hadoop File System : système de fichiers distribué propre à Hadoop : 
         `commandes HDFS <http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/FileSystemShell.html>`_.
@@ -234,6 +238,9 @@ Glossaire
         C'est un `langage impératif <http://fr.wikipedia.org/wiki/Programmation_imp%C3%A9rative>`_.
         Un tutoriel : `Python Notes <http://www.thomas-cokelaer.info/tutorials/python/index.html>`_.
         
+    Resilient Distributed Datasets (RDD)
+        Voir `Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing <http://www.cs.berkeley.edu/~matei/papers/2012/nsdi_spark.pdf>`_.
+        
     reStructuredText
         Voir Sphinx.
         
@@ -258,6 +265,12 @@ Glossaire
 
     skewed join
         Voir :ref:`Map Reduce et Skew Join <blog-skew-join>`, :ref:`td3acenoncesession8arst`.
+        
+    Spark
+        Couche logicielle au-dessus de Hadoop permettent de distribuer des calculs. 
+        Se distingue de Hadoop grâce aux *Resilient Distributed Datasets* (RDD)
+        qui sont plus efficace.
+        Voir `Spark <https://spark.apache.org/>`_.
         
     sparse
         Les matrices `sparse <http://en.wikipedia.org/wiki/Sparse_matrix>`_ (ou creuses) sont des matrices 
