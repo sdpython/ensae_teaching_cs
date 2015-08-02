@@ -1,5 +1,7 @@
 
 
+.. index:: glossary, glossaire
+
 
 .. _l-glossaire:
 

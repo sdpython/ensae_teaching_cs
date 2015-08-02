@@ -1,4 +1,4 @@
-﻿
+
 ENSAE 1A - Programmation
 ========================
 
@@ -32,8 +32,6 @@ ENSAE 1A - Programmation
         +-------------------------------------------------------+-----------------------------------------------------------------------------------+
         | Arnaud de Myttenaere                                  | `arnaud.de.myttenaere AT ensae.fr <mailto:Arnaud.De.Myttenaere AT ensae.fr>`_     |
         +-------------------------------------------------------+-----------------------------------------------------------------------------------+
-        | Edwin Grappin                                         | `edwin.grappin AT ensae.fr <mailto:edwin.grappin AT ensae.fr>`_                   |
-        +-------------------------------------------------------+-----------------------------------------------------------------------------------+
         | Yves Gerey                                            | `ggereyy AT gmail.com <mailto:ggereyy AT gmail.com>`_                             |
         +-------------------------------------------------------+-----------------------------------------------------------------------------------+
         | Arthur Renaud                                         | `arthur.b.renaud AT gmail.com <mailto:arthur.b.renaud AT gmail.com>`_             |
@@ -55,13 +53,13 @@ ENSAE 1A - Programmation
             * 6 séances d'initiation à la programmation
             * 3 séances sur 3 algorithmes classiques
             * 3 séances sur des outils pour manipuler des données
-            * 1 séance notée
+            * 1 séance notée (la dernière)
 
         **Plan complet**
         
         `séances <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_1a.html#l-td1a>`_
         
-        Du vendredi 4 septembre au vendredi 5 décembre excepté le 19/09 et le 31/10, 16h30.
+        Du vendredi 3 septembre au vendredi 10 décembre excepté le 17/09, 12/11,  et le 31/10, 16h30.
 
     .. revealjs:: Semestre 2
     
@@ -69,6 +67,7 @@ ENSAE 1A - Programmation
     
             * `sujets <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/projet_info.html#l-projinfo>`_
             * votre sujet est le bienvenu.
+            * `examens passés <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/exams.html>`_
             
         - Le projet permet de découvrir :
         
@@ -80,7 +79,7 @@ ENSAE 1A - Programmation
 
     .. revealjs:: Evaluation
     
-        * Semetre 1 (obligatoire)
+        * Semestre 1 (obligatoire)
             * 3 interrogations écrites de 20 minutes sur 5 points
             * 1 séance notée sur 20 points
         * Semestre 2 (facultatif)
@@ -97,7 +96,8 @@ ENSAE 1A - Programmation
         
         .. image:: _static/notsnap.png        
         
-        Plutôt fun. A vous de me dire.
+        Plutôt fun. Retours positifs des années précédentes. 
+        La plupart des exposés utilisent ce support lors des conférences.
         
     .. revealjs:: Liens
 
@@ -121,15 +121,17 @@ ENSAE 1A - Programmation
         * Il dispose de nombreuses extensions.
         * Il permet de nombreux usages (calcul scientifique, programmation, web, jeux).
         * Sa syntaxe est l'une des plus simples.
-        * Il est en pleine expansion.
+        * Il est en pleine expansion. 
         
     .. revealjs:: Data Scientist
     
         `Data Science en exemples <http://datascience.net/fr/challenge>`_ 
 
         * `R <http://www.r-project.org/>`_ est le langage des chercheurs.
-        * `Python <https://www.python.org/>`_ a rattrapé une bonne partie de son retard depuis 2012.
-        * Python est très actif.
+        * `Python <https://www.python.org/>`_ est préféré par les informaticiens.
+        * Plus d'options pour traiter les gros jeux de données (> 1 Go)
+        * Plus d'options de visualisation
+        * Python est très actif. Sa croissance est plus rapide que celle de R.
         * voir `Python pour un Data Scientist <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/data2a.html>`_
         
     .. revealjs:: Les difficultés de l'apprentissage
@@ -171,10 +173,11 @@ ENSAE 1A - Programmation
         * Vous installez votre environement (amenez votre ordinateur portable en TD en cas de problème).
         * Lire `Prérequis et installation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html#prerequis-et-installation>`_.
         * Vous devriez avoir installé Python dès les premières séances.
+        * Pour les utilisateurs de Windows, un setup vous sera fourni.
         
     .. revealjs:: Version de Python
     
-        * Le cours est construit pour la version 3.3+.
+        * Le cours est construit pour la version 3.4+.
         * Les exemples ne marcheront pas tous sur la version 2.7.
         * Il faut choisir la version *amd64*. C'est la seule capable de tirer parti d'une mémoire de plus de 4 Go.
         
@@ -210,13 +213,13 @@ ENSAE 1A - Programmation
     .. revealjs:: Démo
     
         * Editeur de texte : **Scite**
-        * Environnement mathématique : **Spyder**
+        * Environnement mathématique : **Spyder**, **Rodéo**
         * Notebooks : **IPython/Notebooks**
         
         Et des éditeurs plus complets :
         
+        * `PyTools <http://pytools.codeplex.com/>`_ (seulement sous Windows)
         * `PyCharm <http://www.jetbrains.com/pycharm/>`_
-        * `PyTools <http://pytools.codeplex.com/>`_ 
         
 .. revealjs:: 
     :data-background: #DDDDDD
@@ -257,6 +260,7 @@ ENSAE 1A - Programmation
             * `pyensae <https://github.com/sdpython/pyensae/>`_
             * `pyquickhelper <https://github.com/sdpython/pyquickhelper/>`_
             * `pymyinstall <https://github.com/sdpython/pymyinstall/>`_        
+            * `actuariat_python <https://github.com/sdpython/actuariat_python/>`_        
             
         Vous pouvez participer.
 
@@ -301,7 +305,7 @@ ENSAE 1A - Programmation
         * `Quelle France dans dix ans ? Les chantiers de la décennie <http://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/archives/F10_Rapport_FINAL_23062014.pdf>`_
         * `Quel sera le paysage Média en 2020 ? <http://www.udecam.fr/docs_paysagemedia/Paysage%20Media%202020%20-%203eme%20edition%20-UDECAM%202014.pdf>`_
 
-    .. revealjs:: Et pour finir: The Bug
+    .. revealjs:: Et pour finir : The Bug
         
         Un `bug <http://fr.wikipedia.org/wiki/Bug_(informatique)>`_, c'est tout ce qui sépare
         votre idée de votre programme. 

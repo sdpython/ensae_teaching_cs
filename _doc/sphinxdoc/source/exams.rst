@@ -1,4 +1,6 @@
-﻿
+
+
+.. index:: examens, examen, note, noté, interrogation
 
 .. _l-examens:
 
