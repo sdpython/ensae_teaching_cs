@@ -170,10 +170,10 @@ ENSAE 1A - Programmation
     .. revealjs:: Python chez vous
 
         * Le système d'exploitation est celui que vous choisissez (Windows, Linux, Mac).
-        * Vous installez votre environement (amenez votre ordinateur portable en TD en cas de problème).
+            * Windows : l'école vous fournit un setup
+            * Linux/Mac : Anaconda + une liste de modules à Installer
         * Lire `Prérequis et installation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html#prerequis-et-installation>`_.
         * Vous devriez avoir installé Python dès les premières séances.
-        * Pour les utilisateurs de Windows, un setup vous sera fourni.
         
     .. revealjs:: Version de Python
     

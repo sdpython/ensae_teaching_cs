@@ -29,8 +29,8 @@ ENSAE 2A - Programmation
         
         `séances <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_2a.html>`_
         
-        De lundi 22 septembre au lundi 3 novembre 
-        (excepté le 27 Octobre) de 8h30 à 13h.
+        De lundi 21 septembre au lundi 2 novembre 
+        (excepté le 26 Octobre) de 8h30 à 13h.
         
         Deux suivis de projets sont prévus en fin de semestre.
 
@@ -102,13 +102,14 @@ ENSAE 2A - Programmation
     .. revealjs:: Python chez vous
 
         * Le système d'exploitation est celui que vous choisissez (Windows, Linux, Mac).
-        * Vous installez votre environnement (amenez votre ordinateur portable en TD en cas de problème).
+            * Windows : l'école vous fournit un setup
+            * Linux/Mac : Anaconda + une liste de modules à Installer
         * Lire `Prérequis et installation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html#prerequis-et-installation>`_.
         * Vous devriez avoir installé Python dès les premières séances.
         
     .. revealjs:: Version de Python
     
-        * Le cours est construit pour la version 3.3+.
+        * Le cours est construit pour la version 3.4+.
         * Les exemples ne marcheront pas tous sur la version 2.7.
         * Il faut choisir la version *amd64*. C'est la seule capable de tirer parti d'une mémoire de plus de 4 Go.
         
@@ -197,7 +198,7 @@ ENSAE 2A - Programmation
         
         **Module de référence**
         
-        `ipython <http://ipython.org/>`_
+        `dask <http://dask.pydata.org/en/latest/>`_
     
     .. revealjs:: Visualisation
         
@@ -265,18 +266,18 @@ ENSAE 2A - Programmation
     
     .. revealjs:: Ordres de grandeur
     
-            +--------------------+-----------------------+--------------------------+
-            | Ordre de grandeur  | Outil / Langage       | Algorithme               |
-            | (observations)     | principal             | raisonnable              |
-            +====================+=======================+==========================+
-            | < 50000            | Excel                 | ``O(n^a)``               |
-            +--------------------+-----------------------+--------------------------+
-            | < 10 millions      | Python, R             | ``O(n (ln n)^a)``        |
-            +--------------------+-----------------------+--------------------------+
-            | < 1 milliard       | SQL                   | ``O(n ln n)``            |
-            +--------------------+-----------------------+--------------------------+
-            | > 200 millions     | Cluster (Map/Reduce)  | ``O(n ln n)`` distribué  |
-            +--------------------+-----------------------+--------------------------+
+            +--------------------+-------------------------------+--------------------------+
+            | Ordre de grandeur  | Outil / Langage               | Algorithme               |
+            | (observations)     | principal                     | raisonnable              |
+            +====================+===============================+==========================+
+            | < 50000            | Excel                         | ``O(n^a)``               |
+            +--------------------+-------------------------------+--------------------------+
+            | < 10 millions      | Python, R                     | ``O(n (ln n)^a)``        |
+            +--------------------+-------------------------------+--------------------------+
+            | < 1 milliard       | SQL, Python                   | ``O(n ln n)``            |
+            +--------------------+-------------------------------+--------------------------+
+            | > 200 millions     | Cluster (Map/Reduce), Python  | ``O(n ln n)`` distribué  |
+            +--------------------+-------------------------------+--------------------------+
             
             ...
             

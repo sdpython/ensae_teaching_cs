@@ -24,7 +24,7 @@ def f_df_H(x=None, z=None):
     Le problème d'optimisation est le suivant :
 
     .. math::
-    
+
         \\left \\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ \\text{sous contrainte} \\; x + 2y = 1 \\end{array}\\right .
 
     """
@@ -53,7 +53,7 @@ def Arrow_Hurwicz(F, C, X0, p0, epsilon=0.1, rho=0.1,
     d'une façon générique. Cela correspond au problème d'optimisation :
 
     .. math::
-    
+
         \\left \\{ \\begin{array}{l} \\min_{X} f(X)  \\\\ \\text{sous contrainte} \\; C(x) = 0 \\end{array}\\right .
 
     @param      F           fonction qui retourne :math:`f(X)` et :math:`\\nabla f(X)`
@@ -119,7 +119,7 @@ def exercice_particulier1():
     On résoud le problème suivant avec `cvxopt <http://cvxopt.org/userguide/index.html>`_ :
 
     .. math::
-        
+
         \\left \\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ \\text{sous contrainte} \\; x + 2y = 1 \\end{array}\\right .
 
     Qui s'implémente à l'aide de la fonction suivante :
@@ -163,7 +163,7 @@ def exercice_particulier2():
     On résoud le problème suivant avec l'algorithme de `Arrow-Hurwicz <https://hal.archives-ouvertes.fr/hal-00490826/document>`_.
 
     .. math::
-    
+
         \\left \\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ \\text{sous contrainte} \\; x + 2y = 1 \\end{array}\\right .
 
     Qui s'implémente à l'aide de la fonction suivante :

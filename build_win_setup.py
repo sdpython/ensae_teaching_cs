@@ -23,10 +23,11 @@ if __name__ == "__main__":
     from pyquickhelper import fLOG
     fLOG(OutputPrint=True)
 
-    from ensae_teaching_cs.automation.win_setup_helper import last_function
-    from pymyinstall import win_python_setup, installation_ensae, installation_teachings
+    from actuariat_python.automation.win_setup_helper import last_function
+    from pymyinstall import win_python_setup
+    from pymyinstall.packaged import ensae_fullset
 
-    list_modules = installation_ensae() + installation_teachings()
+    list_modules = ensae_fullset()
 
     win_python_setup(module_list=list_modules, verbose=True,
                      download_only=False,

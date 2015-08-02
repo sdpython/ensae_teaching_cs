@@ -4,7 +4,7 @@
 Getting started
 ---------------
 
-.. index:: R, Julia, WinPython, Anaconda, pyminstall
+.. index:: R, Julia, WinPython, Anaconda, pyminstall, getting started
 
 Résumé
 ++++++
@@ -62,17 +62,6 @@ les modules les plus usités. Deux options possibles :
   souvent différente. C'est un point très appréciable. Les modules de la distribution ne sont 
   pas tous à jour. Il faut penser à mettre à jour avec la commande ``conda install <module>``
   depuis le répertoire ``Anaconda3/Scripts`` (``conda install cvxopt`` par exemple).
-  Pour suivre ces cours il faut ajouter :
-
-    * `cvxopt <http://cvxopt.org/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#cvxopt>`_)
-    * `dbfread <http://dbfread.readthedocs.org/en/latest/>`_
-    * `folium <https://github.com/python-visualization/folium>`_
-    * `goslate <http://pythonhosted.org/goslate/>`_
-    * `graphviz <https://github.com/xflr6/graphviz>`_
-    * `mpld3 <http://mpld3.github.io/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_)
-    * `numexpr <https://github.com/pydata/numexpr>`_
-    * `rpy2 <http://rpy.sourceforge.net/>`_ (`Windows <http://www.lfd.uci.edu/~gohlke/pythonlibs/#rpy2>`_)
-    
   Il existe une version différente : `miniconda <http://conda.pydata.org/miniconda.html>`_.
   La liste des packages manquant sera probablement différente.
   Il suffit d'écrire sur la ligne de commande ``conda update --all`` 
@@ -81,15 +70,7 @@ les modules les plus usités. Deux options possibles :
 * `WinPython <https://winpython.github.io/>`_ (Windows). Sous Windows, elle inclut 
   parfois `R <http://www.r-project.org/>`_ ou `Julia <http://julialang.org/>`_ (ces version ne sont 
   pas aussi à jour que la version principale). On passe alors
-  facilement de python à R ou Julia depuis le même notebooks. Pour suivre ces cours il faut ajouter :
-
-    * `bokeh <http://bokeh.pydata.org/en/latest/>`_
-    * `dbfread <http://dbfread.readthedocs.org/en/latest/>`_
-    * `folium <https://github.com/python-visualization/folium>`_
-    * `goslate <http://pythonhosted.org/goslate/>`_
-    * `graphviz <https://github.com/xflr6/graphviz>`_
-    * `virtualenv <https://virtualenv.pypa.io/en/latest/>`_
-    
+  facilement de python à R ou Julia depuis le même notebooks.    
   Uniquement disponible sous Windows, cette installation a l'avantage de ne pas 
   nécessiter les droits administrateur pour être installée. Elle
   ne modifie pas les registres et on peut la recopier telle quelle sur une clé USB
@@ -105,6 +86,10 @@ Certains notebooks s'appuient sur des fonctions qui donnent accès
 via le module `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ ::
 
     pip install pyensae
+    
+Quelque soit l'option choisie, la page :ref:`l-data2a` décrit la liste
+des modules qu'il faut ajouter pour reproduire la distribution
+proposée par l'école.
   
   
 Installer des modules soi-même
@@ -222,17 +207,9 @@ dans nos notebooks.
 Développeur
 +++++++++++
         
-La documentation et les tests unitaires nécessite les modules suivants :
-
-* `wheel <https://wheel.readthedocs.org/en/latest/>`_ 
-* `coverage <https://pypi.python.org/pypi/coverage>`_ 
-* `sphinxcontrib-images <http://pythonhosted.org//sphinxcontrib-images/>`_
-* `sphinxjp.themes.sphinxjp <https://pypi.python.org/pypi/sphinxjp.themes.sphinxjp>`_ 
-* `sphinx_rtd_theme <https://github.com/snide/sphinx_rtd_theme>`_ 
-* `sphinx_bootstrap_theme <http://ryan-roemer.github.io/sphinx-bootstrap-theme/>`_ 
-* `sphinxjp.themes.basicstrap <https://pythonhosted.org/sphinxjp.themes.basicstrap/>`_ 
-* `sphinx_py3doc_enhanced_theme <https://pypi.python.org/pypi/sphinx_py3doc_enhanced_theme>`_
-
+La documentation et les tests unitaires les modules
+classés dans les catégories *SPHINX*, *TEACH*
+et répertorié par :ref:`l-data2a`.
 Certaines séances pratiques utilisent des données depuis ce site. 
 Elles sont facilement téléchargeables avec ces deux modules :
 
@@ -250,8 +227,8 @@ Il est très utile d'avoir un éditeur de texte léger, quelques options :
     
 Et un `IDE <http://en.wikipedia.org/wiki/Integrated_development_environment>`_ :
 
+* `PyTools <http://pytools.codeplex.com/>`_ (Windows uniquement)
 * `PyCharm <https://www.jetbrains.com/pycharm/>`_
-* `PyTools <http://pytools.codeplex.com/>`_
     
 
 Les outils pour développer
@@ -281,28 +258,6 @@ Optionnel :
 * `Visual Studio Community <https://www.visualstudio.com/>`_ : C++, C#, F#, Python avec `PythonTools <https://pytools.codeplex.com/>`_
 * `MinGW <http://www.mingw.org/>`_ : compilateur C++
 * `iTunes <https://www.apple.com/itunes/>`_ (+ de la musique)
-
-
-Pour finir, quelques lignes de commandes utiles ::
-
-    pip install sphinx
-    pip install autopep8
-    pip install wheel
-    pip install flake8
-    pip install goslate
-    pip install solar_theme
-    pip install wheel
-    pip install coverage
-    pip install sphinxcontrib-images
-    pip install sphinxjp.themes.sphinxjp
-    pip install sphinx_rtd_theme
-    pip install sphinx_bootstrap_theme
-    pip install sphinxjp.themes.basicstrap
-    pip install sphinx_py3doc_enhanced_theme
-    pip install python-jenkins
-    pip install cloud_sptheme
-    pip install wild_sphinx_theme
-    pip install bayespy
 
 
 .. rubric:: Footnotes

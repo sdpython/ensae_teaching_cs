@@ -1,12 +1,13 @@
 
-
-.. issue.
+.. index:: ressources, événements, source de données, données
 
 .. _l-ressources:
 
 
 Ressources, Evénements
 ======================
+
+.. index:: Croix-Rouge, opendata, data.gouv.fr, quandl, wikipedia, Letor, WordNet, ImageNet
 
 .. _l-datasources:
     
@@ -32,6 +33,9 @@ Source de données
 * `WordNet <https://wordnet.princeton.edu/wordnet/>`_, base de données anglaises sur le vocabulaire, la grammaire, les synonymes...
 * `ImageNet <http://image-net.org/>`_, base de données d'images avec leur contenu
 * `Données Croix-Rouge sur les dons reçus <https://github.com/dataforgoodfr/croixrouge>`_
+* `Geonames <http://download.geonames.org/export/dump/>`_
+
+.. index:: stackoverflow
 
 Code
 ----
@@ -60,12 +64,16 @@ Puzzle, Enigme, Jeux
 * `HackerRank <https://www.hackerrank.com/>`_
 * `Coding Game <http://www.codingame.com/>`_
 
+.. index:: Kagle, datascience, challenge, compétition
+
 Compétitions Machine Learning
 -----------------------------
 
 * `datascience.net <http://www.datascience.net/fr/home/>`_
 * `kaggle <https://www.kaggle.com/>`_
 * `Data Challenges Paris <http://opendata.paris.fr/page/datachallenges/>`_
+
+.. index:: meetup, Data Tuesday, Data For Good
 
 Evénements réguliers
 --------------------
@@ -76,11 +84,24 @@ Evénements réguliers
 * `Paris Datageeks <http://www.meetup.com/Paris-Datageeks/>`_
 * `Data For Good - FR <http://www.meetup.com/Data-for-Good-FR/>`_
 
+.. index:: conférence, communauté, pydata, pycon, pyvideo, tutoral, vidéo
+
 Conférences, Communautés
 ------------------------
 
 * `PyCon <http://www.pycon.org/>`_
 * `PyData <http://pydata.org/>`_
+
+Vidéo, tutorial
+---------------
+
+* `PyData channel <https://vimeo.com/channels/pydata>`_
+* `PyCon 2014 <https://www.youtube.com/user/PyCon2014>`_
+* `PyVideo <http://pyvideo.org/>`_
+* `Formation à Python scientifique - ENS Paris <http://python-prepa.github.io/index.html>`_
+
+
+.. index:: Agoranov, Microsoft, TekTos, numa
 
 Incubateurs
 -----------
