@@ -67,29 +67,23 @@ TD
       
     - :ref:`TD 3B : Arbres de décision et Random Forests <td2acenoncesession3brst>`  (:ref:`correction <td2acorrectionsession3brst>`)    
     - voir également :ref:`Travailleur les features ou changer de modèle <mlfeaturesmodelrst>`
-      
-- **TD 4 : machine learning et algorithme**
+- **TD 4 : machine learning, visualisation** (**modifié in 2015**)
     - :ref:`TD 4A : Machine Learning et Marketting <td2acenoncesession4arst>` (:ref:`correction <td2acorrectionsession4arst>`)
         - machine learning
+        - `bokeh <http://bokeh.pydata.org/en/latest/>`_, `pygal <http://www.pygal.org/en/latest/>`_
+        - `interactions <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/notebooks/having_a_form_in_a_notebook.html#havingaforminanotebookrst>`_
         - `d3.js <http://d3js.org/>`_
     - :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
     - :ref:`TD 4B : Culture algorithmique <td2acenoncesession4brst>` (:ref:`correction <td2acorrectionsession4brst>`)
         - présentation `Eléments d'Algorithmique <http://www.xavierdupre.fr/enseignement/complements/Seance4_algorithme.pdf>`_
         - `Machine learning et algorithme <http://www.xavierdupre.fr/blog/2014-10-11_nojs.html>`_
         - :ref:`exerciceplusgrandesommerst`
-- **TD 5 : modèle de données**
-    - `présentation <http://www.xavierdupre.fr/enseignement/complements/cours_structure_donnee.pdf>`_
-        - Propriétés des base de données : `ACID <http://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9s_ACID>`_, 
-          `relationnelle <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_relationnelle>`_,
-          `transactionnelle <http://fr.wikipedia.org/wiki/Transaction_informatique>`_
-        - Best practices, index et `foreign key <http://en.wikipedia.org/wiki/Foreign_key>`_ 
-          (importance des `random access <http://fr.wikipedia.org/wiki/Random_Access_Memories>`_ et `accès séquentiel <http://en.wikipedia.org/wiki/Sequential_access>`_)
-        - Limites des structures relationnelles 
-          (`données arborescentes <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_hi%C3%A9rarchique>`_, 
-          données hétérogènes)
-        - Base de données non relationnelles dont `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_
-        - :ref:`l-td25asynthese`
-    - :ref:`TD 5 : Modèles de données <td2acenoncesession5rst>` (:ref:`correction <td2acorrectionsession5rst>`)
+- **TD 5 : grosses données** (**nouveau en 2015**)
+    - base de données, langage SQL
+    - index
+    - NoSQL, représentation au format json, XML
+    - programmation fonctionnelle (`cytoolz <https://github.com/pytoolz/cytoolz>`_)
+    - giga octets en local, dask, odo, blaze, bcolz, cytoolz
 - **TD 6 : algorithme et puzzle**    
     * Présentations
         * `programmation dynamique <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance2.pdf>`_
@@ -103,7 +97,22 @@ TD
           `glouton <http://fr.wikipedia.org/wiki/Algorithme_glouton>`_, `dynamique <http://fr.wikipedia.org/wiki/Programmation_dynamique>`_
         * :ref:`l-algoculture`
             
+TD, séances passées
++++++++++++++++++++
 
+- **TD : modèle de données**
+    - `présentation <http://www.xavierdupre.fr/enseignement/complements/cours_structure_donnee.pdf>`_
+        - Propriétés des base de données : `ACID <http://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9s_ACID>`_, 
+          `relationnelle <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_relationnelle>`_,
+          `transactionnelle <http://fr.wikipedia.org/wiki/Transaction_informatique>`_
+        - Best practices, index et `foreign key <http://en.wikipedia.org/wiki/Foreign_key>`_ 
+          (importance des `random access <http://fr.wikipedia.org/wiki/Random_Access_Memories>`_ et `accès séquentiel <http://en.wikipedia.org/wiki/Sequential_access>`_)
+        - Limites des structures relationnelles 
+          (`données arborescentes <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_hi%C3%A9rarchique>`_, 
+          données hétérogènes)
+        - Base de données non relationnelles dont `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_
+        - :ref:`l-td25asynthese`
+    - :ref:`TD : Modèles de données <td2acenoncesession5rst>` (:ref:`correction <td2acorrectionsession5rst>`)
 
 Le cours sera évalué avec un :ref:`projet informatique <l-projinfo2a>`.
 
