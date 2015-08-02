@@ -97,22 +97,6 @@ TD
           `glouton <http://fr.wikipedia.org/wiki/Algorithme_glouton>`_, `dynamique <http://fr.wikipedia.org/wiki/Programmation_dynamique>`_
         * :ref:`l-algoculture`
             
-TD, séances passées
-+++++++++++++++++++
-
-- **TD : modèle de données**
-    - `présentation <http://www.xavierdupre.fr/enseignement/complements/cours_structure_donnee.pdf>`_
-        - Propriétés des base de données : `ACID <http://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9s_ACID>`_, 
-          `relationnelle <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_relationnelle>`_,
-          `transactionnelle <http://fr.wikipedia.org/wiki/Transaction_informatique>`_
-        - Best practices, index et `foreign key <http://en.wikipedia.org/wiki/Foreign_key>`_ 
-          (importance des `random access <http://fr.wikipedia.org/wiki/Random_Access_Memories>`_ et `accès séquentiel <http://en.wikipedia.org/wiki/Sequential_access>`_)
-        - Limites des structures relationnelles 
-          (`données arborescentes <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_hi%C3%A9rarchique>`_, 
-          données hétérogènes)
-        - Base de données non relationnelles dont `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_
-        - :ref:`l-td25asynthese`
-    - :ref:`TD : Modèles de données <td2acenoncesession5rst>` (:ref:`correction <td2acorrectionsession5rst>`)
 
 Le cours sera évalué avec un :ref:`projet informatique <l-projinfo2a>`.
 
@@ -238,6 +222,26 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
 
 .. image:: http://scikit-learn.org/stable/_static/ml_map.png
     :width: 500
+    
+    
+Séances passées
++++++++++++++++
+
+- **TD : modèle de données** (2014)
+    - `présentation <http://www.xavierdupre.fr/enseignement/complements/cours_structure_donnee.pdf>`_
+        - Propriétés des base de données : `ACID <http://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9s_ACID>`_, 
+          `relationnelle <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_relationnelle>`_,
+          `transactionnelle <http://fr.wikipedia.org/wiki/Transaction_informatique>`_
+        - Best practices, index et `foreign key <http://en.wikipedia.org/wiki/Foreign_key>`_ 
+          (importance des `random access <http://fr.wikipedia.org/wiki/Random_Access_Memories>`_ et `accès séquentiel <http://en.wikipedia.org/wiki/Sequential_access>`_)
+        - Limites des structures relationnelles 
+          (`données arborescentes <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_hi%C3%A9rarchique>`_, 
+          données hétérogènes)
+        - Base de données non relationnelles dont `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_
+        - :ref:`l-td25asynthese`
+    - :ref:`TD : Modèles de données <td2acenoncesession5rst>` (:ref:`correction <td2acorrectionsession5rst>`)
+
+    
 
 .. toctree::
     :hidden:
