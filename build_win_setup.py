@@ -15,7 +15,7 @@ except ImportError:
     import sys
     sys.path.append("../pyquickhelper/src")
     import pyquickhelper
-
+    
 
 if __name__ == "__main__":
     import sys
@@ -23,7 +23,7 @@ if __name__ == "__main__":
     from pyquickhelper import fLOG
     fLOG(OutputPrint=True)
 
-    from actuariat_python.automation.win_setup_helper import last_function
+    from ensae_teaching_cs.automation.win_setup_helper import last_function
     from pymyinstall import win_python_setup
     from pymyinstall.packaged import ensae_fullset
 
