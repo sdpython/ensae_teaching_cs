@@ -43,6 +43,10 @@ Glossaire
         
     benchmark
         `banc d'essai <http://fr.wikipedia.org/wiki/Test_de_performance>`_
+        
+    CheatSheet
+        Sorte d'anti-sèche. Quelques exemples pour le machine learning :
+        `8 Best Machine Learning Cheat Sheets <http://designimag.com/best-machine-learning-cheat-sheets/>`_
 
     coût
         Le coût d'un algorithme est le nombre d'opérations qu'il effectue lorsqu'il 
@@ -240,11 +244,17 @@ Glossaire
         C'est un `langage impératif <http://fr.wikipedia.org/wiki/Programmation_imp%C3%A9rative>`_.
         Un tutoriel : `Python Notes <http://www.thomas-cokelaer.info/tutorials/python/index.html>`_.
         
+    Recurrent Neural Network (RNN)
+        `The Unreasonable Effectiveness of Recurrent Neural Networks <http://karpathy.github.io/2015/05/21/rnn-effectiveness/>`_
+        
     Resilient Distributed Datasets (RDD)
         Voir `Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing <http://www.cs.berkeley.edu/~matei/papers/2012/nsdi_spark.pdf>`_.
         
     reStructuredText
         Voir Sphinx.
+        
+    RNN
+        Voir Recurrent Neural Network.
         
     Rossum
         `Guido van Rossum <http://fr.wikipedia.org/wiki/Guido_van_Rossum>`_
@@ -305,6 +315,15 @@ Glossaire
         `SVN <http://fr.wikipedia.org/wiki/Apache_Subversion>`_ est un logiciel de suivi
         de source, de même que Git. Il est centralisé : une modification doit d'abord
         être appliquée à la branche centrale avant de pouvoir être propagée aux autres branches.
+        
+    Theano
+        Librairie de deep learning pour Python. 
+        Voir `theano <http://deeplearning.net/software/theano/>`_.
+        
+    Torch
+        Librairie de deep learning pour Lua.
+        Voir `Torch <http://torch.ch/>`_.
+        Voir également `Torch vs Theano <http://fastml.com/torch-vs-theano/>`_.
         
     warnings
         Non-blocking error but it should be read and the cause removed.
