@@ -121,6 +121,18 @@ Exemple d'utilisation :
 
 * `multiroute avec Bing <https://www.multiroute.de/?locale=fr>`_
 
+
+.. _l-math-tsp-plus:
+
+Problème des tournées de véhicules
+----------------------------------
+
+Le `problème de tournées de véhicules <https://fr.wikipedia.org/wiki/Probl%C3%A8me_de_tourn%C3%A9es_de_v%C3%A9hicules>`_
+est une extension du voyageur de commerce. Pour le résoudre, on pourra s'inspirer 
+de l'article : 
+`Technical Note: Split algorithm in O(n) for the vehicle routing problem <http://arxiv.org/pdf/1508.02759v2.pdf>`_.
+
+
 .. _l-math-text:
 
 Construction d'une texture
@@ -194,7 +206,7 @@ puis d'appliquer cela sur des articles d'un journal, une page Wikipédia...
 
 .. index:: tree, arbre, distance, Robinson–Foulds, Levenshtein
 
-.. _l-distance_tree_robinson_foulds
+.. _l-distance_tree_robinson_foulds:
 
 
 Distance entre deux arbres : Robinson–Foulds
@@ -208,3 +220,18 @@ distance existe :
 L'objectif du projet est d'implémenter cette distance et de l'application
 à des arbres de décision, telle que ceux produits par `scikit-learn <http://scikit-learn.org/>`_.
 
+.. index:: inéquations, résolution, systèmes
+
+.. _l-maths-inequation:
+
+Résolution de systèmes d'inéquations
+------------------------------------
+
+On se débrouille beaucoup mieux avec la résolution d'un système linéaire d'équations.
+Mais des inéquations, on préfère quand il s'agit de minimiser ou maximiser.
+Et quand il ne s'agit de rien de tout ça, on peut s'orienter vers
+les idées proposées dans l'article :
+`Exact algorithms for linear matrix inequalities <http://arxiv.org/pdf/1508.03715v1.pdf>`_.
+
+Sujet plutôt très mathématique puisqu'il s'agit d'implémenter un algorithme
+de résolutions de tels systèmes.

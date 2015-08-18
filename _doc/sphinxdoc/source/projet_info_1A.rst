@@ -391,12 +391,14 @@ Liste des sujets cités
 #. Algo : :ref:`l-math-motif`
 #. Algo : :ref:`l-math-exp`
 #. Algo : :ref:`l-math-tsp`
+#. Algo : :ref:`l-math-tsp-plus`
 #. Algo : :ref:`l-math-text`
 #. Algo : :ref:`l-math_simulloi`
 #. Algo : :ref:`l-math_appariement_graph`
 #. Algo : :ref:`l-palindrome-projet-structure`
 #. Algo : :ref:`l-grammaire_context_free`
 #. Algo : :ref:`l-distance_tree_robinson_foulds`
+#. Algo : :ref:`l-maths-inequation`
 #. Jeu hasard : :ref:`l-carte-poker`
 #. Jeu hasard : :ref:`l-carte-belotte`
 
