@@ -147,6 +147,14 @@ Glossaire
         :ref:`lm-Quest-cequuntypeimmuableouimmutable`, 
         :ref:`question_1A_2014_1`.
         
+    Internet Of Things
+        Voir `Internet des Objets <https://fr.wikipedia.org/wiki/Internet_des_objets>`_.
+        Les objets qui nous entourent enregistrent des données et en retour nous permettent
+        de mieux interagir avec notre environnement.
+        
+    IoT
+        Voir Internet Of Things
+        
     Jenkins
         `Jenkins <http://jenkins-ci.org/>`_ est un logicial d'automatisation de build (et de tâches). 
         Voir `Build automation with Jenkins <http://www.xavierdupre.fr/blog/2014-12-06_nojs.html>`_.
