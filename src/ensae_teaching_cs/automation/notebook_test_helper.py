@@ -138,7 +138,7 @@ def execute_notebooks(folder, notebooks, filter,
         return True
 
     addpath = get_additional_paths()
-    kernel_name = install_python_kernel_for_unittest("ensae_teaching_cs")
+    kernel_name = None if "travis" in sys.executable else install_python_kernel_for_unittest("ensae_teaching_cs")
     results = {}
     for i, note in enumerate(notebooks):
         if filter(i, note):
