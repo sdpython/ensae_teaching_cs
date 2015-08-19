@@ -6,6 +6,7 @@ import sys
 import os
 import unittest
 import re
+import warnings
 
 
 try:
@@ -51,6 +52,7 @@ class TestR (unittest.TestCase):
 
         if "travis" in sys.executable:
             # skip travis and R
+            warnings.warn("travis, unable to test TestR.test_r")
             return
 
         assert r_and_notebook()
