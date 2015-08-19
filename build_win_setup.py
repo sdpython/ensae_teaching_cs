@@ -15,7 +15,7 @@ except ImportError:
     import sys
     sys.path.append("../pyquickhelper/src")
     import pyquickhelper
-    
+
 
 if __name__ == "__main__":
     import sys

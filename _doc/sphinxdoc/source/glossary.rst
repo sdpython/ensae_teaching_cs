@@ -187,6 +187,18 @@ Glossaire
     Mutable
         Voir Immutable.
         
+    Natural Language Processing
+        Ensemble de méthodes traitent du `langage naturel <https://en.wikipedia.org/wiki/Natural_language_processing>`_.
+        Les opérations les plus courantes consistent à `séparer un texte en mots <https://en.wikipedia.org/wiki/Text_segmentation>`_,
+        à `normaliser <https://en.wikipedia.org/wiki/Text_normalization>`_,
+        à faire du `stemming <https://en.wikipedia.org/wiki/Stemming>`_,
+        à enlever les `mots de liaison <https://en.wikipedia.org/wiki/Stop_words>`_ qui n'apportent pas de sens au texte.
+        Après ce nettoyage, on peut faire du `text mining <https://en.wikipedia.org/wiki/Text_mining>`_,
+        de l'`analyse de sentiments <https://en.wikipedia.org/wiki/Sentiment_analysis>`_...
+        
+    NLP
+        Voir Natural Language Processing
+        
     NLTK
         *Natural Language Toolkit*. 
         La librairie `NTLK <http://www.nltk.org/>`_  est sans doute la plus connue lorsqu'il s'agit de 
@@ -304,6 +316,16 @@ Glossaire
         `présentation de blaze <http://fr.slideshare.net/pycontw/largescale-arrayoriented-computing-with-python>`_,
         `blaze <http://blaze.pydata.org/docs/latest/index.html>`_ (peut-être le futur de `numpy <http://blog.digital.telefonica.com/2014/03/05/python-big-data/>`_),
         `Introducing Blaze - HMDA Practice <http://continuum.io/blog/blaze-hmda>`_
+        
+    Stemmer
+        Un *stemmer* permet de réduire les différentes formes d'un mot. Les mots apparaissent au singulier, au pluriel,
+        collés à une apostrophes, conjugués... Il n'est pas toujours évident de dire si un document contient un mot précis.
+        C'est pourquoi on effectue une étape de nettoyage qui consite à séparer un texte en mot et à 
+        les réduire à une forme canonique. Cette seconde étape est appelée le *stemming*.
+        `NLP & Sentiment Analysis <http://nbviewer.ipython.org/github/taposh/mlearning/blob/master/nlp/sentiment/bow/Sentiment.ipynb>`_
+        
+    Stemming
+        Voir stemmer.
         
     Stroustrup
         `Bjarne Stroustrup <http://www.stroustrup.com/>`_ est l'inventeur du 
