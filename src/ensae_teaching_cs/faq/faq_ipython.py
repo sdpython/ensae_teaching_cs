@@ -239,7 +239,7 @@ def ipython_open_notebook(filename, profile='default', fLOG=fLOG):
 
     .. _i-launch_notebook-server:
 
-    @FAQ(ipython__Lancer le serveur de notebooks)
+    @FAQ(ipython___Lancer le serveur de notebooks)
 
     On suppose que le module `IPython <http://ipython.org/notebook.html>`_ a été bien installé.
     Plusieurs options :

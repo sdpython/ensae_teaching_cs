@@ -294,6 +294,11 @@ Glossaire
         Donc le score est un chiffre qui exprime la proximité d'une observation à la frontière de la classe 
         dans laquelle elle est classée. La frontière est apprise sur la base d'apprentissage, 
         l'observation provient de n'importe quelle base.  
+        
+    Sérialisation
+        La `sérialisation <https://fr.wikipedia.org/wiki/S%C3%A9rialisation>`_ est le fait 
+        de transcrire une structure de données parfois cyclique (comme un graphe) en une seule séquence
+        d'octets. On s'en sert surtout pour transmettre ces données (via internet) ou les stocker.
 
     skewed join
         Voir :ref:`Map Reduce et Skew Join <blog-skew-join>`, :ref:`td3acenoncesession8arst`.

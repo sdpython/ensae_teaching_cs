@@ -68,19 +68,19 @@ Contenu des enseignements
     * :ref:`Exercices d'algorithmie <l-exoalgo>`
     * :ref:`Exposés divers non abordés en cours <l-extra>`
 * Questions, termes, FAQ
-    * :ref:`FAQ <l-FAQs>`
+    * :ref:`FAQ <l-FAQs>` (Foire aux Questions ou Frequently Asked Questions)
     * :ref:`Glossaire <l-glossaire>`
     * :ref:`question`
     * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
 * Lectures
-    * :ref:`Articles, Références, Blog <l-information>`
-    * :ref:`modindex` (ou :ref:`Modules <modulesi>`)
-    * :ref:`Outils, ressources pour développer <l-devtools>`
     * :ref:`Examens passés <l-examens>` (1A)
+    * :ref:`l-data2a` ou sa version allégée avec les modules qu'il faut connaître :ref:`modulesi`
+    * :ref:`Outils, ressources pour développer <l-devtools>`
+    * :ref:`Articles, Références, Blog <l-information>`
     * :ref:`Coding Party <l-codingparty>`
     * :ref:`l-algoculture`
-    * :ref:`blog <ap-main-0>`
-    
+    * :ref:`blog <ap-main-0>` de de cours
+    * :ref:`code associé à ce cours <modindex>`
 
     
 
@@ -97,7 +97,8 @@ populaire :
 `IPython <http://ipython.org/>`_ mais aussi leurs dépendances
 `pandas <http://fr.wikipedia.org/wiki/Panda>`_, 
 `numpy <http://www.numpy.org/>`_, 
-`matplotlib <http://matplotlib.org/>`_. 
+`matplotlib <http://matplotlib.org/>`_,
+`scikit-learn <http://scikit-learn.org/stable/>`_.
 Sous Windows, ces modules
 sont accessibles depuis le site 
 `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
@@ -112,6 +113,7 @@ Des modules développés pour ces enseignements viennent compléter cet ensemble
 * `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_ : ces enseignements compilés sous forme de modules
 * `actuariat_python <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_ : contient d'autres notebooks
   et des exercices orientés un peu plus actuariat
+* `code_beatrix <http://lesenfantscodaient.fr/>`_ : pour découvrir les algorithmes et `Scratch <https://scratch.mit.edu/>`_
 
 
 .. _l-getting-started-main:
@@ -124,15 +126,19 @@ Getting started
 .. index:: R, Julia, WinPython, Anaconda, pymyinstall, setup
 
 
-La version recommandée est Python 3.4, 64 bit. Par défaut, les modules 
-s'installe avec ``pip install <module>`` excepté
+La version recommandée est `Python 3.4, 64 bit <https://www.python.org/downloads/>`_. Par défaut, les modules 
+s'installent avec ``pip install <module>`` excepté
 sous Windows où il faut télécharger soi-même des versions pré-compilées des modules 
 qui nécessitent un compilateur C++ depuis le 
 site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
 
 **Windows**
 
-Le plus simple est d'utiliser la distribution fournie par l'école et de la compléter si besoin.
+Le plus simple est d'utiliser la distribution fournie par l'école et de la compléter si besoin. 
+La page :ref:`l-data2a` décrit tous les modules qu'elle contient.
+Les modules peuvent être mis à jour avec l'instruction ``Scripts/pymy_update`` qui vient 
+avec l'installation du module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_.
+Sinon, la distribution `Anaconda <http://continuum.io/downloads#py34>`_ est le choix le plus répandu.
 
 **Linux / Mac**
 
@@ -191,18 +197,21 @@ Contenu
     coding_party
     glossary
     FAQ
-    indexmenu
+    Notebooks, Exemples, Code <indexmenu>
     genindex
 
-Index
------
 
-* :ref:`l-notebooks`
-* :ref:`modindex` (avec résumé :ref:`l-modules`, et aussi :ref:`l-classes`, :ref:`l-functions`)
-* `Unit Test Coverage <coverage/index.html>`_
-* :ref:`l-changes`
-* :ref:`l-license`
-* :ref:`l-README`
+
+
++----------------------+---------------------+---------------------+--------------------+------------------------+------------------------------------------------+
+| :ref:`l-modules`     |  :ref:`l-functions` | :ref:`l-classes`    | :ref:`l-methods`   | :ref:`l-staticmethods` | :ref:`l-properties`                            |
++----------------------+---------------------+---------------------+--------------------+------------------------+------------------------------------------------+
+| :ref:`modindex`      |  :ref:`l-example`   | :ref:`search`       | :ref:`l-license`   | :ref:`l-changes`       | :ref:`l-README`                                |
++----------------------+---------------------+---------------------+--------------------+------------------------+------------------------------------------------+
+| :ref:`genindex`      |  :ref:`l-FAQ`       | :ref:`l-notebooks`  |                    | :ref:`l-statcode`      | `Unit Test Coverage <coverage/index.html>`_    |
++----------------------+---------------------+---------------------+--------------------+------------------------+------------------------------------------------+
+
+
 
 
 .. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master

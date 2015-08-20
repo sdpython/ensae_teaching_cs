@@ -33,7 +33,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'ENSAE 2A - Données, Machine Learning et Programmation'
-copyright = '2014, ENSAE'
+copyright = '2015, ENSAE'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

@@ -213,12 +213,15 @@ et répertorié par :ref:`l-data2a`.
 Certaines séances pratiques utilisent des données depuis ce site. 
 Elles sont facilement téléchargeables avec ces deux modules :
 
-* `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
-* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
+* `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_ : ce module compile ce cours
+* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ : outils variés pour les élèves de l'ENSAE
+* `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_ : installer facilement des modules sous Windows
 
 Pour être compilée, la documentation requiert également :
 
 * `miktex <http://miktex.org/>`_ (Windows seulement)
+* `pandoc <http://pandoc.org/>`_
+* `InkScape <https://inkscape.org/fr/>`_
     
 Il est très utile d'avoir un éditeur de texte léger, quelques options :
 
@@ -265,7 +268,8 @@ Optionnel :
 .. index:: pymyinstall, distribution
 
 .. [#fpm1] Cette distribution est construite grâce à la fonction 
-           `win_python_setup <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/win_installer/win_setup_main.html#pymyinstall.win_installer.win_setup_main.win_python_setup>
+           `win_python_setup <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/win_installer/win_setup_main.html#pymyinstall.win_installer.win_setup_main.win_python_setup>`_
            du module
            `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/>`_.
-           La construction du setup prend quelques heures.
+           La construction du setup prend quelques heures et inclut les modules
+           listés répertoriés par :ref:`l-data2a`.

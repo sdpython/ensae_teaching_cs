@@ -57,15 +57,17 @@ ENSAE 1A - Programmation
 
         **Plan complet**
         
-        `séances <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_1a.html#l-td1a>`_
+        `séances mobile <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_1a.html#l-td1a>`_,
+        `séances tablette <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/td_1a.html#l-td1a>`_,
+        `séances portable <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_1a.html#l-td1a>`_
         
-        Du vendredi 3 septembre au vendredi 10 décembre excepté le 17/09, 12/11,  et le 31/10, 16h30.
+        Du vendredi 4 septembre au vendredi 11 décembre excepté le 18/09 (WEI), 30/10 (Toussaint),  et le 13/11, 16h30.
 
     .. revealjs:: Semestre 2
     
         - Cette partie est facultative.
     
-            * `sujets <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/projet_info.html#l-projinfo>`_
+            * `sujets <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/projet_info_1A.html>`_
             * votre sujet est le bienvenu.
             * `examens passés <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/exams.html>`_
             
@@ -80,13 +82,18 @@ ENSAE 1A - Programmation
     .. revealjs:: Evaluation
     
         * Semestre 1 (obligatoire)
+        
             * 3 interrogations écrites de 20 minutes sur 5 points
             * 1 séance notée sur 20 points
+            
         * Semestre 2 (facultatif)
+        
             * 1 projet informatique de 1 ou 2 élèves évalué avec :
+            
                 * un programme
                 * un rapport
                 * une soutenance
+                
             * Le projet doit inclure une partie mathématique, statistique ou économique
             * `Barême indicatif <http://www.xavierdupre.fr/site2013/enseignements/bareme-2014.html>`_
     
@@ -101,13 +108,15 @@ ENSAE 1A - Programmation
         
     .. revealjs:: Liens
 
-        * `Contenu du cours <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_1a.html>`_ (rendu `2 <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_ et `3 <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_)
+        * `Contenu du cours <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/>`_ 
+          (rendu `2 <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_ 
+          et `3 <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_)
         * `Blog <http://www.xavierdupre.fr/blog/xd_blog_nojs.html>`_
         * `Bibliographie <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/biblio.html>`_
         * `Apprentissage de la programmation <http://inforef.be/swi/python.htm>`_ de Gérard Swinnen
         * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
         * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
-        * `xavierdupre.fr <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_
+        * `xavierdupre.fr <http://www.xavierdupre.fr/>`_
 
 .. revealjs:: 
     :data-background: #DDDDDD
@@ -121,18 +130,19 @@ ENSAE 1A - Programmation
         * Il dispose de nombreuses extensions.
         * Il permet de nombreux usages (calcul scientifique, programmation, web, jeux).
         * Sa syntaxe est l'une des plus simples.
-        * Il est en pleine expansion. 
+        * Il est en pleine expansion, notamment pour le machine learning.
         
     .. revealjs:: Data Scientist
     
-        `Data Science en exemples <http://datascience.net/fr/challenge>`_ 
+        `Data Science en exemples <http://datascience.net/fr/challenge>`_,
+        `Kaggle <https://www.kaggle.com/>`_ 
 
         * `R <http://www.r-project.org/>`_ est le langage des chercheurs.
         * `Python <https://www.python.org/>`_ est préféré par les informaticiens.
         * Plus d'options pour traiter les gros jeux de données (> 1 Go)
         * Plus d'options de visualisation
         * Python est très actif. Sa croissance est plus rapide que celle de R.
-        * voir `Python pour un Data Scientist <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/data2a.html>`_
+        * voir `Python pour un Data Scientist <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/data2a.html>`_
         
     .. revealjs:: Les difficultés de l'apprentissage
     
@@ -154,6 +164,7 @@ ENSAE 1A - Programmation
     .. revealjs:: Pour aller plus loin
     
         * `Coding Party à l'ENSAE <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/coding_party.html>`_
+          ou `Data Science Game 2015 <http://www.datasciencegame.com/>`_
         * `Modules et outils pour développer <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/manytools.html>`_
         * `Articles, Références, Blogs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/biblio.html>`_
         * `Données, Machine Learning et Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_2a.html>`_ (2A)
@@ -164,15 +175,17 @@ ENSAE 1A - Programmation
     .. revealjs:: Python à l'ENSAE
 
         * Le système d'exploitation est Windows.
-        * L'environnement est installé pour vous (`WinPython <http://winpython.sourceforge.net/>`_)
-        * Vous pouvez le recopier tel quel chez vous (avec un clé USB).
+        * L'environnement est installé pour vous.
+        * Vous pouvez appliquer le même setup chez vous.
         
     .. revealjs:: Python chez vous
 
         * Le système d'exploitation est celui que vous choisissez (Windows, Linux, Mac).
+        
             * Windows : l'école vous fournit un setup
             * Linux/Mac : Anaconda + une liste de modules à Installer
-        * Lire `Prérequis et installation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html#prerequis-et-installation>`_.
+
+        * Lire `Getting started <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html#getting-started>`_.
         * Vous devriez avoir installé Python dès les premières séances.
         
     .. revealjs:: Version de Python
@@ -209,6 +222,7 @@ ENSAE 1A - Programmation
         
         La version gratuite de `PyCharm <http://www.jetbrains.com/pycharm/>`_ contient tout ce qu'il faut.
         Il détecte quelques erreurs avant l'exécution.
+        Le débuggeur de `PyTools (Visual Studio) <https://pytools.codeplex.com/>`_ est très efficace.
         
     .. revealjs:: Démo
     
@@ -216,10 +230,6 @@ ENSAE 1A - Programmation
         * Environnement mathématique : **Spyder**, **Rodéo**
         * Notebooks : **IPython/Notebooks**
         
-        Et des éditeurs plus complets :
-        
-        * `PyTools <http://pytools.codeplex.com/>`_ (seulement sous Windows)
-        * `PyCharm <http://www.jetbrains.com/pycharm/>`_
         
 .. revealjs:: 
     :data-background: #DDDDDD
@@ -248,10 +258,11 @@ ENSAE 1A - Programmation
         * `javascript <http://fr.wikipedia.org/wiki/JavaScript>`_ : application web, internet
         * `Objective-C <http://fr.wikipedia.org/wiki/Objective-C>`_ : application iPhone
         * `Scala <http://fr.wikipedia.org/wiki/Scala_(langage)>`_ : langage fonctionnel, voir `Spark <https://spark.apache.org/>`_ (3A)
+        * `Ruby <https://www.ruby-lang.org/fr/>`_ : site web
 
     .. revealjs:: Contributions
 
-        Le contenu est disponible sur `GitHub <https://github.com/>`_ :
+        Le contenu est disponible sur `GitHub <https://github.com/sdpython>`_ :
         
             * `ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs/>`_
             
@@ -295,6 +306,7 @@ ENSAE 1A - Programmation
         
     .. revealjs:: Demain
         
+        * `Smart Cities, Internet Of Things <http://www.xavierdupre.fr/blog/2015-08-19_nojs.html>`_
         * On sera connecté en permanence.
         * On sera entouré de capteurs (voir `HealthKit <https://developer.apple.com/healthkit/>`_)
         * Les données n'attendent que vous.
@@ -305,7 +317,7 @@ ENSAE 1A - Programmation
         * `Quelle France dans dix ans ? Les chantiers de la décennie <http://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/archives/F10_Rapport_FINAL_23062014.pdf>`_
         * `Quel sera le paysage Média en 2020 ? <http://www.udecam.fr/docs_paysagemedia/Paysage%20Media%202020%20-%203eme%20edition%20-UDECAM%202014.pdf>`_
 
-    .. revealjs:: Et pour finir : The Bug
+    .. revealjs:: The Bug
         
         Un `bug <http://fr.wikipedia.org/wiki/Bug_(informatique)>`_, c'est tout ce qui sépare
         votre idée de votre programme. 
@@ -322,3 +334,11 @@ ENSAE 1A - Programmation
     .. revealjs:: L'image d'un bug
                 
         .. image:: _static/bug.png
+
+    .. revealjs:: Pour finir...
+    
+        Une histoire de données
+        
+        `Le dessert de la cantine <http://lesenfantscodaient.fr/donnees/dessert_cantine.html?highlight=cantine>`_
+        
+    

@@ -1,6 +1,5 @@
-﻿
 
-.. issue.
+
 
 .. _l-extra:
 
@@ -29,9 +28,7 @@ Notebooks
 Quelques idées de notebooks pour le futur
 -----------------------------------------
 
-bootstrap pair
-
-* `slides <http://www.stat.ncsu.edu/people/lu/courses/ST505/Ch2.pdf>`_
+* `bootstrap pair <http://www.stat.ncsu.edu/people/lu/courses/ST505/Ch2.pdf>`_
 * `The Large-Sample Power of Tests Based on Permutations of Observations <http://projecteuclid.org/euclid.aoms/1177729436>`_
 * `On Some Pitfalls in Automatic Evaluation and Significance Testing for MT <http://www.cl.uni-heidelberg.de/~riezler/publications/papers/ACL05WS.pdf>`_
 * `More accurate tests for the statistical significance of result differences <http://arxiv.org/pdf/cs/0008005v1.pdf>`_
