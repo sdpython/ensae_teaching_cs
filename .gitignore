@@ -79,6 +79,7 @@ build3/
 *.pidb
 *.log
 *.scc
+*.pyproj
 
 # Visual C++ cache files
 ipch/
@@ -250,6 +251,8 @@ version.txt
 */notebooks/donnees/*.db3
 */notebooks/donnees/*.hdf5
 */notebooks/donnees/*.zip
+*/notebooks/2a/*.rst
+*/notebooks/2a/*.html
 */notebooks/td2a/*.zip
 */notebooks/td2a/*.txt
 */notebooks/td2a/*.dbf

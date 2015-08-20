@@ -165,7 +165,8 @@ if is_local() and "build_sphinx" not in sys.argv and \
     pyquickhelper = import_pyquickhelper()
     r = pyquickhelper.process_standard_options_for_setup(
         sys.argv, __file__, project_var_name,
-        unittest_modules=["pyquickhelper"],
+        unittest_modules=["pyquickhelper", "pymmails",
+                          "pyensae", "pyrsslocal", "pymyinstall"],
         requirements=["pyquickhelper", "pymmails",
                       "pyensae", "pyrsslocal", "pymyinstall"],
         blog_list=os.path.abspath(os.path.join("src", project_var_name, package_data[project_var_name][0])))
