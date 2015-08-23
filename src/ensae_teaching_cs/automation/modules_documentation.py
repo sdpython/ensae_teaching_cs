@@ -19,6 +19,7 @@ def rst_table_modules():
     """
     mod = ensae_fullset()
     mod.sort()
-    df = pandas.DataFrame(_.as_dict() for _ in mod)
-    df = df[["usage", "name", "kind", "version", "purpose"]]
+    df = pandas.DataFrame(_.as_dict(rst_link=True) for _ in mod)
+    df = df[["usage", "rst_link", "kind", "version", "purpose"]]
+    df.columns=["usage", "name", "kind", "version", "purpose"]
     return df2rst(df)
