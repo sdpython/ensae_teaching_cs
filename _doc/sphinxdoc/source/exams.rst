@@ -1,12 +1,17 @@
 
 
-.. index:: examens, examen, note, noté, interrogation
+.. index:: examens, note, interrogation
 
 .. _l-examens:
 
 
 Examens
 =======
+
+Ces examens ont été proposés ces dix dernières années.
+Les énoncés sont plus guidés que les séances pratiques.
+Ils requiert peu de connaissances, évitent le plus souvent les classes.
+
 
 .. raw:: html
 

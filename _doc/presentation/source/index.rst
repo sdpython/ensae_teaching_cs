@@ -3,7 +3,7 @@ ENSAE 1A - Programmation
 ========================
 
 .. revealjs:: ENSAE 1A - Programmation
-    :data-background: #DDDDDD
+    :data-background: #EEEEEE
 
     .. image:: _static/project_ico.png
         
@@ -16,17 +16,11 @@ ENSAE 1A - Programmation
     `Romain Lesauvage <mailto: romain.lesauvage AT ensae.fr>`_
         
 .. revealjs:: Intervenants
-    :data-background: #DDDDDD
-
-    **Professeur**
-    
-        * **site :** `Xavier Dupré <http://www.xavierdupre.fr/>`_ 
-        * **mail :** `xavier.dupre AT ensae.fr <mailto:xavier.dupre AT ensae.fr>`_
-
-    **Chargés de TD**
+    :data-background: #EEEEEE
 
         +-------------------------------------------------------+-----------------------------------------------------------------------------------+
-        | Xavier Dupré                                          | `xavier.dupre AT ensae.fr <mailto:xavier.dupre AT ensae.fr>`_                     |
+        | Xavier Dupré                                          | `xavier.dupre AT ensae.fr <mailto:xavier.dupre AT ensae.fr>`_  (prof)             |
+        |                                                       |  **site, cours** `Xavier Dupré <http://www.xavierdupre.fr/>`_                     |
         +-------------------------------------------------------+-----------------------------------------------------------------------------------+
         | Emmanuel Guérin                                       | `emmanuel AT guerin.fr.eu.org <mailto:emmanuel AT guerin.fr.eu.org>`_             |
         +-------------------------------------------------------+-----------------------------------------------------------------------------------+
@@ -44,7 +38,7 @@ ENSAE 1A - Programmation
         
         
 .. revealjs:: 
-    :data-background: #DDDDDD
+    :data-background: #EEEEEE
 
     .. revealjs:: Semestre 1 
     
@@ -119,7 +113,7 @@ ENSAE 1A - Programmation
         * `xavierdupre.fr <http://www.xavierdupre.fr/>`_
 
 .. revealjs:: 
-    :data-background: #DDDDDD
+    :data-background: #EEEEEE
 
     .. revealjs:: Le langage Python
     
@@ -170,19 +164,20 @@ ENSAE 1A - Programmation
         * `Données, Machine Learning et Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_2a.html>`_ (2A)
 
 .. revealjs:: 
-    :data-background: #DDDDDD
+    :data-background: #EEEEEE
 
     .. revealjs:: Python à l'ENSAE
 
         * Le système d'exploitation est Windows.
         * L'environnement est installé pour vous.
-        * Vous pouvez appliquer le même setup chez vous.
+        * Vous pouvez appliquer le même `setup <http://www.xavierdupre.fr/enseignement/>`_ 
+          chez vous.
         
     .. revealjs:: Python chez vous
 
         * Le système d'exploitation est celui que vous choisissez (Windows, Linux, Mac).
         
-            * Windows : l'école vous fournit un setup
+            * Windows : `setup <http://www.xavierdupre.fr/enseignement/>`_ fourni
             * Linux/Mac : Anaconda + une liste de modules à Installer
 
         * Lire `Getting started <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html#getting-started>`_.
@@ -232,7 +227,7 @@ ENSAE 1A - Programmation
         
         
 .. revealjs:: 
-    :data-background: #DDDDDD
+    :data-background: #EEEEEE
 
     .. revealjs:: Les langages à l'ENSAE
         
@@ -276,7 +271,7 @@ ENSAE 1A - Programmation
         Vous pouvez participer.
 
 .. revealjs:: 
-    :data-background: #DDDDDD
+    :data-background: #EEEEEE
 
     .. revealjs:: Evaluer votre niveau (1)
     
@@ -335,10 +330,52 @@ ENSAE 1A - Programmation
                 
         .. image:: _static/bug.png
 
-    .. revealjs:: Pour finir...
+
+.. revealjs:: 
+    :data-background: #EEEEEE
     
-        Une histoire de données
+
+
+    .. revealjs:: Points difficiles quand on débute
+    
+        entre la 6ème et la 7ème séance (début des algorithmes)
         
-        `Le dessert de la cantine <http://lesenfantscodaient.fr/donnees/dessert_cantine.html?highlight=cantine>`_
+        **défi**
         
+        * faire seul une des `séances notées <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/exams.html>`_
+          avant la septième séance 
+        * crier au secours avant la septième séance (bien avant)
+
+
+    .. revealjs:: Points difficiles quand on a déjà programmé
+    
+        croire qu'on n'a plus rien à faire
+        
+        **défi**
+        
+        * choisir un algorithme dans cette liste
+          `survol algorithmique <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/specials/algorithm_culture.html#l-algoculture>`_
+          et le comprendre, voire l'implémenter
+
+
+    .. revealjs:: Points difficiles quand on est un geek
+    
+        la volonté de tout refaire par soi-même
+        
+        **défi**
+        
+        créer son propre module python et le mettre sur `GitHub <https://github.com/>`_
+        
+        `liste de modules <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/data2a.html#modules-python>`_
+
+
+        
+.. revealjs:: Pour finir...
+
+    Une histoire de données
+    
+    `Le dessert de la cantine <http://lesenfantscodaient.fr/donnees/dessert_cantine.html?highlight=cantine>`_
+        
+        
+
     

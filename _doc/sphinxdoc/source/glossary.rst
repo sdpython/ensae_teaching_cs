@@ -281,7 +281,7 @@ Glossaire
         est l'inventeur du langage `Python <https://www.python.org/>`_.
         
     rst
-        rst = reStructuredText
+        rst = `reStructuredText <https://en.wikipedia.org/wiki/ReStructuredText>`_, voir Sphinx
         
     score
         Le score n'a pas de définition théorique et il dépend de chaque modèle. 
@@ -321,6 +321,14 @@ Glossaire
         `présentation de blaze <http://fr.slideshare.net/pycontw/largescale-arrayoriented-computing-with-python>`_,
         `blaze <http://blaze.pydata.org/docs/latest/index.html>`_ (peut-être le futur de `numpy <http://blog.digital.telefonica.com/2014/03/05/python-big-data/>`_),
         `Introducing Blaze - HMDA Practice <http://continuum.io/blog/blaze-hmda>`_
+        
+    Sphinx
+        Dans le cadre de ce cours, `Sphinx <http://sphinx-doc.org/>`_ est un module Python qui
+        permet de générer la documentation de la grande majorité des modules Python incluant ce cours.
+        Le langage de la documentation est `RST <https://en.wikipedia.org/wiki/ReStructuredText>`_ (reStructuredText). 
+        Quelques exemples : 
+        `Cheat Sheet <http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html>`_,
+        `Sphinx and RST syntax guide <http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html>`_.
         
     Stemmer
         Un *stemmer* permet de réduire les différentes formes d'un mot. Les mots apparaissent au singulier, au pluriel,
