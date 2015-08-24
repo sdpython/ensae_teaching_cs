@@ -84,7 +84,8 @@ class TestNotebookRunner2a_long (unittest.TestCase):
 
         if "travis" in sys.executable:
             # skip travis and R
-            warnings.warn("travis, unable to test TestNotebookRunner2a_long.test_notebook_runner_2a_long")
+            warnings.warn(
+                "travis, unable to test TestNotebookRunner2a_long.test_notebook_runner_2a_long")
             return
 
         temp = get_temp_folder(__file__, "temp_notebook2a_long_")

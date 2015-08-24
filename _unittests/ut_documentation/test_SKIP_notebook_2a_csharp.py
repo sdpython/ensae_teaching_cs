@@ -84,7 +84,8 @@ class TestNotebookRunner2a_csharp (unittest.TestCase):
 
         if "travis" in sys.executable:
             # skip C# on linux
-            warnings.warn("travis, unable to test TestNotebookRunner2a_csharp.test_notebook_runner_2a")
+            warnings.warn(
+                "travis, unable to test TestNotebookRunner2a_csharp.test_notebook_runner_2a")
             return
 
         if not sys.platform.startswith("win"):

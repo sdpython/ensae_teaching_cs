@@ -85,7 +85,8 @@ class TestSimpleServerRSSTeaching (unittest.TestCase):
 
         if "travis" in sys.executable:
             # skip travis and Flask
-            warnings.warn("travis, unable to test TestSimpleServerRSSTeaching.test_server_start_run")
+            warnings.warn(
+                "travis, unable to test TestSimpleServerRSSTeaching.test_server_start_run")
             return
 
         temp = get_temp_folder(__file__, "temp_rss_starter")

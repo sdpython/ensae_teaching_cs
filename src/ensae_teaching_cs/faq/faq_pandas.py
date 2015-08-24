@@ -75,3 +75,32 @@ def read_csv(filepath_or_buffer, encoding="utf8", sep="\t", **args):
     else:
         return pandas.read_csv(
             filepath_or_buffer, encoding=encoding, sep=sep, **args)
+
+
+def df_to_clipboard(df, **args):
+    """
+    Copy a dataframe as csv text into the clipboard
+
+    @param      df      dataframe
+    @param      sep     by default the separator is ``\\t`` for this function until it is defined otherwise
+
+    It relies on method
+    `to_clipboard <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_clipboard.html>`_.
+
+    @FAQ(pandas___Copier un dataframe dans le presse-papier - clipboard)
+
+    Pour récupérer un dataframe dans Excel, on peut utiliser la méthode
+    `to_excel <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_excel.html>`_
+    puis ouvrir le fichier dans Excel ou le copier dans le presse-papier et le coller
+    dans une feuille ouverte dans Excel. C'est l'objet de la méthode
+    `to_clipboard <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_clipboard.html>`_ ::
+
+        df = pandas.DataFrame ( ... )
+        df.to_clipboard(sep="\\t")
+
+    @endFAQ
+    """
+    if "sep" in args:
+        df.to_clipboard(**args)
+    else:
+        df.to_clipboard(sep="\t", **args)

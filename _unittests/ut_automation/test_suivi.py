@@ -15,6 +15,7 @@ try:
     import pyquickhelper
     import pyensae
     import pyrsslocal
+    import pymyinstall
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -32,6 +33,17 @@ except ImportError:
                 "..",
                 "..",
                 "pyquickhelper",
+                "src")))
+    if path not in sys.path:
+        sys.path.append(path)
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..",
+                "..",
+                "pymyinstall",
                 "src")))
     if path not in sys.path:
         sys.path.append(path)

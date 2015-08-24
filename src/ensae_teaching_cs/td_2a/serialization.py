@@ -46,10 +46,10 @@ def dump_object(obj, filename_or_stream):
     @param      filename_or_stream      nom de fichier ou stream
 
     @FAQ(Comment gagner du temps lors de la lecture de données ?)
-    
+
     .. index:: sérialisation, pickle, dill
-    
-    Les languages informatiques définissent des structures de données 
+
+    Les languages informatiques définissent des structures de données
     qui permettent une utilisation rapide et cela n'a souvent rien
     à voir avec la façon dont on lit ces données.
     La plupart des données apparaissent dans des fichiers
@@ -57,26 +57,26 @@ def dump_object(obj, filename_or_stream):
     charges en mémoires ce qui peut prendre du temps.
     La première fois qu'on s'en sert, c'st inévitable.
     La seconde fois, on peut stocker les données
-    telles qu'elles sont en mémoire. 
+    telles qu'elles sont en mémoire.
     Le second chargement est plus rapide.
-    
+
     @code
     obj = ... # n'importe quoi de sérialisable
     dump_object(obj, "object_sur_disque.bin")
     @endcode
-    
+
     Pour recharger les données, on écrit :
-    
+
     @code
     obj = load_object("object_sur_disque.bin")
     @endcode
-    
-    Le code de ces deux fonctions fait intervenir 
+
+    Le code de ces deux fonctions fait intervenir
     le module `pickle <https://docs.python.org/3.4/library/pickle.html>`_.
     Il suffit pour la plupart des usages.
-    Pour un usage plus exotique, il faut voir le module 
+    Pour un usage plus exotique, il faut voir le module
     `dill <https://pypi.python.org/pypi/dill>`_.
-    
+
     @endFAQ
     """
     if isinstance(filename_or_stream, str):

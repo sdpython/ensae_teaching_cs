@@ -1,12 +1,11 @@
 """
-@brief      test log(time=0s)
+@brief      test log(time=1s)
 """
 
 import sys
 import os
 import unittest
 import re
-import warnings
 
 
 try:
@@ -38,24 +37,24 @@ except ImportError:
         sys.path.append(path)
     import pyquickhelper
 
-from pyquickhelper import fLOG
-from src.ensae_teaching_cs.faq.faq_jupyter import r_and_notebook
+from pyquickhelper import fLOG, get_temp_folder
 
 
-class TestR (unittest.TestCase):
+class TestModulesImport(unittest.TestCase):
 
-    def test_r(self):
+    def test_folium(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        if "travis" in sys.executable:
-            # skip travis and R
-            warnings.warn("travis, unable to test TestR.test_r")
-            return
+        import folium
+        temp = get_temp_folder(__file__, "temp_folium")
+        outfile = os.path.join(temp, "osm.map")
 
-        assert r_and_notebook()
+        map_osm = folium.Map(location=[48.85, 2.34])
+        map_osm.create_map(path=outfile)
+        assert os.path.exists(outfile)
 
 if __name__ == "__main__":
     unittest.main()

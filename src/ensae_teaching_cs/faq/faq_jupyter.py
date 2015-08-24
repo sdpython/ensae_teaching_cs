@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @file
-@brief Quelques problèmes récurrents avec `IPython <http://ipython.org/>`_.
+@brief Quelques problèmes récurrents avec `Jupyter <https://jupyter.org/>`_.
 
 """
 
@@ -9,8 +9,7 @@ import os
 import sys
 
 from pyquickhelper import fLOG
-
-from .faq_ipython_helper import nb_open
+from .faq_jupyter_helper import nb_open
 
 
 def notebook_path():
@@ -19,7 +18,7 @@ def notebook_path():
 
     @param      style       style
 
-    @FAQ(ipython___Récupérer le fichier du notebook depuis le notebook)
+    @FAQ(jupyter___Récupérer le fichier du notebook depuis le notebook)
 
     Voir `How to I get the current IPython Notebook name <http://stackoverflow.com/questions/12544056/how-to-i-get-the-current-ipython-notebook-name>`_
 
@@ -43,7 +42,7 @@ def notebook_path():
 
 def fix_table_notebook():
     """
-    @FAQ(ipython___Table des matières à position fixe dans un notebook)
+    @FAQ(jupyter___Table des matières à position fixe dans un notebook)
     Il est possible d'ajouter au notebook un menu fixe, positionné sur la droite,
     qui permet de passer d'une section à l'autre plus facilement.
     Ce menu ne bouge pas avec la version 2 de IPython, il
@@ -80,7 +79,7 @@ def r_and_notebook():
 
     @endexample
 
-    @FAQ(ipython___Comment utiliser R depuis un notebook ?)
+    @FAQ(jupyter___Comment utiliser R depuis un notebook ?)
 
     Voir notebooks :ref:`td2acenoncesession2brst`, :ref:`correction <td2acorrectionsession2brst>`.
 
@@ -97,7 +96,7 @@ def r_and_notebook():
     return True
 
 
-def ipython_convert_notebooks():
+def jupyter_convert_notebooks():
     """
     @example(techniques___Convertir le notebook en cours au format HTML)
 
@@ -107,13 +106,13 @@ def ipython_convert_notebooks():
 
     @endexample
 
-    @FAQ(ipython___Comment convertir le notebook en cours au format HTML ?)
+    @FAQ(jupyter___Comment convertir le notebook en cours au format HTML ?)
 
     Voir notebook :ref:`notebookconvertrst`.
 
     @endFAQ
 
-    @FAQ(ipython___Comment ajouter un lien vers un fichier local pour le télécharger ?)
+    @FAQ(jupyter___Comment ajouter un lien vers un fichier local pour le télécharger ?)
 
     Voir notebook :ref:`notebookconvertrst`.
 
@@ -123,9 +122,9 @@ def ipython_convert_notebooks():
     pass
 
 
-def ipython_get_variable(name, magic_command_instance):
+def jupyter_get_variable(name, magic_command_instance):
     """
-    Retreive the value of a local variable in a notebook.
+    Retrieve the value of a local variable in a notebook.
 
     @param      name                        variable name
     @param      magic_command_instance      instance of `Magics <http://ipython.org/ipython-doc/2/api/generated/IPython.core.magic.html#IPython.core.magic.Magics>`_,
@@ -135,7 +134,7 @@ def ipython_get_variable(name, magic_command_instance):
     The function raises an exception if the context does not exists
     or if the variable name does not value
 
-    @FAQ(ipython___Accéder ou modifier une variable du notebook depuis une commande magique)
+    @FAQ(jupyter___Accéder ou modifier une variable du notebook depuis une commande magique)
 
     Lorsqu'on écrit un notebook, toutes les variables qu'on crée sont
     en quelque sorte globales puisqu'on peut y accéder depuis chaque cellule
@@ -165,7 +164,7 @@ def ipython_get_variable(name, magic_command_instance):
     return magic_command_instance.shell.user_ns[name]
 
 
-def ipython_cython_extension():
+def jupyter_cython_extension():
     """
     The function raises an exception if cython has a good chance not
     to work because Python does not find any suitable compiler
@@ -175,7 +174,7 @@ def ipython_cython_extension():
     In that case, the function displays a message with some indications
     on how to fix it.
 
-    @FAQ(ipython___Cython ne fonctionne pas sous Windows)
+    @FAQ(jupyter___Cython ne fonctionne pas sous Windows)
 
     .. index:: vcvarsall, cython
 
@@ -188,7 +187,7 @@ def ipython_cython_extension():
     répond à cette question.
     Le fichier à modifier est le suivant ::
 
-        C:\Python34_x64\lib\distutils\msvc9compiler.py
+        C:\\Python34_x64\\lib\\distutils\\msvc9compiler.py
 
     @endFAQ
     """
@@ -209,10 +208,10 @@ def ipython_cython_extension():
     return True
 
 
-def ipython_install_mathjax():
+def jupyter_install_mathjax():
     """
-    @FAQ(ipython___Offline MathJax)
-    By default, IPython uses an online version of MathJax which means
+    @FAQ(jupyter___Offline MathJax)
+    By default, Jupyter uses an online version of MathJax which means
     the connection to internet must remain available.
     To import mathjax locally, you need to run the following:
 
@@ -226,7 +225,7 @@ def ipython_install_mathjax():
     mathjax.install_mathjax()
 
 
-def ipython_open_notebook(filename, profile='default', fLOG=fLOG):
+def jupyter_open_notebook(filename, profile='default', fLOG=fLOG):
     """
     Calls @see fn nb_open, open a notebook with an existing server,
     if no server can be found, it starts a new one
@@ -239,30 +238,34 @@ def ipython_open_notebook(filename, profile='default', fLOG=fLOG):
 
     .. _i-launch_notebook-server:
 
-    @FAQ(ipython___Lancer le serveur de notebooks)
+    @FAQ(jupyter___Lancer le serveur de notebooks)
 
     On suppose que le module `IPython <http://ipython.org/notebook.html>`_ a été bien installé.
+    Depuis août 2015, IPython est devenu Jupyter qui n'est pas plus automatiquement
+    associé à Python mais propose des notebooks pour de nombreux langages.
+    Il faut installer le module *jupyter* (``pip install jupyter``).
     Plusieurs options :
 
-    #. Utiliser la ligne de commande usuelle : ``ipython notebook``.
-       Ce script (ou programme *ipython.exe* sous Windows
+    #. Utiliser la ligne de commande usuelle : ``jupyter-notebook``.
+       Ce script (ou programme *jupyter-notebook.exe* sous Windows
        est inclus dans le répertoire *Scripts* du répertoire d'installation.
        Voir :ref:`l-ipython_notebook_commandline`.
-       Voir égalemnt `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_
+       Voir égalemnt `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_,
+       `Open the notebook with a different browser <http://www.xavierdupre.fr/blog/2015-08-24_nojs.html>`_
        Il est possible de créer un fichier `.bat <https://fr.wikipedia.org/wiki/.bat>`_ pour
        automatiser la ligne de commande et l'ajouter en tant qu'icône sur le bureau.
 
     #. Utiliser la fonction :func:`ipython_open_notebook <ensae_teaching_cs.faq.faq_ipython.ipython_open_notebook>` ::
 
-        from ensae_teaching_cs.faq import ipython_open_notebook
+        from ensae_teaching_cs.faq import jupyter_open_notebook
         nbfile = "notebook.ipynb"
-        ipython_open_notebook(nbfile)
+        jupyter_open_notebook(nbfile)
 
     #. Utiliser le raccourci proposé par la distribution choisi pour installer Python.
 
     @endFAQ
 
-    @FAQ(ipython___Le notebook ne répond plus)
+    @FAQ(jupyter___Le notebook ne répond plus)
 
     On utilise les notebooks via un `navigateur web <https://fr.wikipedia.org/wiki/Navigateur_web>`_
     mais ce n'est pas lui qui exécute le code Python, c'est un serveur.

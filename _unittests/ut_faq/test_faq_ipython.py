@@ -38,7 +38,7 @@ except ImportError:
     import pyquickhelper
 
 from pyquickhelper import fLOG
-from src.ensae_teaching_cs.faq.faq_ipython import ipython_open_notebook
+from src.ensae_teaching_cs.faq.faq_jupyter import jupyter_open_notebook
 
 
 class TestFaqIPython(unittest.TestCase):
@@ -55,7 +55,7 @@ class TestFaqIPython(unittest.TestCase):
         assert os.path.exists(nbfile)
 
         if __name__ == "__main__" and "travis" not in sys.executable.lower():
-            s = ipython_open_notebook(nbfile, fLOG=fLOG)
+            s = jupyter_open_notebook(nbfile, fLOG=fLOG)
             fLOG(s)
 
 

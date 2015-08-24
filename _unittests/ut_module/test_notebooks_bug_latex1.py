@@ -62,7 +62,8 @@ class TestNoteBooksBugLatex_ecs(unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_nb_bug_latex1")
 
         if "travis" in sys.executable:
-            warnings.warn("travis, unable to test TestNoteBooksBugLatex_ecs.test_notebook_latex1")
+            warnings.warn(
+                "travis, unable to test TestNoteBooksBugLatex_ecs.test_notebook_latex1")
             return
 
         res = process_notebooks(nbs, temp, temp, formats=formats)

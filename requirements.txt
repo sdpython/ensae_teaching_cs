@@ -84,3 +84,4 @@ setuptools
 bayespy
 mpld3
 bokeh
+folium

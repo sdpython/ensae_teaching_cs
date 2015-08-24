@@ -241,6 +241,7 @@ version.txt
 */notebooks/td1a/facebook*
 */notebooks/td1a/*.cpp
 */notebooks/td1a/*.pyx
+*/notebooks/td1a/FRA_adm*
 */notebooks/td1a/*.pyd
 */notebooks/td1a/setup.py
 */notebooks/td1a/t_random*
