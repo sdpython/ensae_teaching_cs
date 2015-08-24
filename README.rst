@@ -40,15 +40,14 @@ Contributions
 
 Started in 2014/04.
 
-* First contributor: `Xavier Dupré <http://www.xavierdupre.fr/>`_.
-* Other contributors: ENSAE's students, ..., see :ref:`l-changes`.
+* Contributor: `Xavier Dupré <http://www.xavierdupre.fr/>`_, ENSAE's students
 
 Versions
 --------
 
 * **0.7 - 2015/??/??**
     * **new:** code to produce a Python distribution which includes R, Python, ...
-    * **new:** refactoring, FAQ, fonction ipython_open_notebook
+    * **new:** refactoring, FAQ, fonction jupyter_open_notebook
 * **0.6 - 2015/06/03**
     * **new:** first sessions in 2A
     * **new:** first sessions in 3A
