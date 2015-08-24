@@ -71,7 +71,7 @@ except ImportError:
     import pymmails
 
 from pyquickhelper import fLOG, get_temp_folder
-from src.ensae_teaching_cs.faq.faq_ipython import ipython_cython_extension
+from src.ensae_teaching_cs.faq.faq_jupyter import jupyter_cython_extension
 
 
 class TestCheckCython(unittest.TestCase):
@@ -82,7 +82,7 @@ class TestCheckCython(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        ipython_cython_extension()
+        jupyter_cython_extension()
 
 if __name__ == "__main__":
     unittest.main()

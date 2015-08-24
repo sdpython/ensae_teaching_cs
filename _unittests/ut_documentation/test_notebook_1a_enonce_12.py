@@ -71,6 +71,23 @@ except ImportError:
         sys.path.append(path)
     import pymmails
 
+try:
+    import pymyinstall
+except ImportError:
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..",
+                "..",
+                "pymyinstall",
+                "src")))
+    if path not in sys.path:
+        sys.path.append(path)
+    import pymyinstall
+
+
 from pyquickhelper import fLOG, get_temp_folder, noLOG
 from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, unittest_raise_exception_notebook
 
@@ -86,6 +103,8 @@ class TestNotebookRunner1a_enonce_12 (unittest.TestCase):
         skip = ['df["difference"] = ...',
                 "df.plot (...)",
                 "from ggplot import *",
+                "folium.initialize_notebook()",
+                "map_osm.display()",
                 # ggplot calls method show and it opens window blocking the
                 # offline execution
                 ]
