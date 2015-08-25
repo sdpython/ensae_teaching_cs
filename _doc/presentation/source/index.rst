@@ -369,6 +369,17 @@ ENSAE 1A - Programmation
         `liste de modules <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/data2a.html#modules-python>`_
 
 
+.. revealjs:: 
+    :data-background: #EEEEEE
+    
+    .. revealjs:: Quelques jeux...
+    
+        * `Trouver 4 cartes manquantes <http://lesenfantscodaient.fr/sanso_algo/tri.html>`_
+        * Tri sur une rangée
+        * `Les oranges <http://lesenfantscodaient.fr/sanso_algo/orange.html>`_
+        * `L'énigme de Harry Potter (tome 1) <http://lesenfantscodaient.fr//sanso_algo/demineur.html#a-quoi-ca-sert>`_
+        
+        
         
 .. revealjs:: Pour finir...
 
