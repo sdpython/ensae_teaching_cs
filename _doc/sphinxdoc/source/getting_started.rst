@@ -30,6 +30,11 @@ Il faut ouvrir une fenêtre ligne de commande (Windows) ou une fenêtre terminal
       et l'installer avec la commande ``pip install <local_module.whl>``
     * module rare : ``pip install <module>`` (à condition que celui-ci n'inclut pas de code C/C++) qui requiert un compilateur C/C++
     
+* `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_ + mise à jour d'une 
+  distribution existante
+
+    * ``pymy_install`` pour installer de nouveaux modules ajoutés pour le cours
+    
 **Problème de dépendance**
 
 Pour installer rapidement un module sans tenir compte de ses dépendances ::
@@ -43,6 +48,10 @@ Pour installer rapidement un module sans tenir compte de ses dépendances ::
     pip install <module> --upgrade --no-deps
     
 L'extension *--no-deps* n'est pas obligatoire mais cela évite la mise à jour des dépendances.
+Ou `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_ ::
+
+    pymy_update --only=<module>
+
 
 
 

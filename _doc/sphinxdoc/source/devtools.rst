@@ -1,6 +1,4 @@
-﻿
 
-.. issue.
 
 
 .. _l-devtools:
@@ -32,8 +30,8 @@ qui facilitent l'archivage. Ils sont tellement pratiques qu'on a même du mal
 
 **Archivage distant**
 
-* `hubiC <https://hubic.com/fr/>`_  (25Go gratuit Juin - 2014)
-* `OneDrive <https://onedrive.live.com/about/fr-fr/>`_ (15Go gratuit Juin - 2014)
+* `hubiC <https://hubic.com/fr/>`_  (25 Go gratuit - août 2015)
+* `OneDrive <https://onedrive.live.com/about/fr-fr/>`_ (15 Go gratuit - août 2015)
 
 Ce ne sont pas les seuls, vous trouverez d'autres options ici :
 `cloud-gratuit <http://www.cloud-gratuit.com/>`_. Toutefois, **il est recommandé de ne pas mettre

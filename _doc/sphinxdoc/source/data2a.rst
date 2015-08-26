@@ -83,6 +83,9 @@ Les modules suivant font partie du setup proposés aux étudiants.
   que le module inclut une partie C++ qu'il est préférable de récupérer déjà compilée
   via le site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
 * **version** : la version à installer car d'autres peuvent provoquer des conflits
+* **license** : license du module, toutes ne permettent pas un usage commercial,
+  voir `choose a license <http://choosealicense.com/licenses/>`_, 
+  `licences commentées <http://www.gnu.org/licenses/license-list.fr.html>`_
 * **purpose** : description plus détaillée
 
 

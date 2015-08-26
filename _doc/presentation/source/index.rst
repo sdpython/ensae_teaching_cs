@@ -18,22 +18,15 @@ ENSAE 1A - Programmation
 .. revealjs:: Intervenants
     :data-background: #EEEEEE
 
-        +-------------------------------------------------------+-----------------------------------------------------------------------------------+
-        | Xavier Dupré                                          | `xavier.dupre AT ensae.fr <mailto:xavier.dupre AT ensae.fr>`_  (prof)             |
-        |                                                       |  **site, cours** `Xavier Dupré <http://www.xavierdupre.fr/>`_                     |
-        +-------------------------------------------------------+-----------------------------------------------------------------------------------+
-        | Emmanuel Guérin                                       | `emmanuel AT guerin.fr.eu.org <mailto:emmanuel AT guerin.fr.eu.org>`_             |
-        +-------------------------------------------------------+-----------------------------------------------------------------------------------+
-        | Arnaud de Myttenaere                                  | `arnaud.de.myttenaere AT ensae.fr <mailto:Arnaud.De.Myttenaere AT ensae.fr>`_     |
-        +-------------------------------------------------------+-----------------------------------------------------------------------------------+
-        | Yves Gerey                                            | `ggereyy AT gmail.com <mailto:ggereyy AT gmail.com>`_                             |
-        +-------------------------------------------------------+-----------------------------------------------------------------------------------+
-        | Arthur Renaud                                         | `arthur.b.renaud AT gmail.com <mailto:arthur.b.renaud AT gmail.com>`_             |
-        +-------------------------------------------------------+-----------------------------------------------------------------------------------+
-        | Marc-Antoine Weissner                                 | `marc-antoine.weisser AT supelec.fr <mailto:marc-antoine.weisser AT supelec.fr>`_ |
-        +-------------------------------------------------------+-----------------------------------------------------------------------------------+
-        | Mehdi Sebbar                                          | `mehdi.sebbar.0 AT gmail.com <mailto:mehdi.sebbar.0 AT gmail.com>`_               |
-        +-------------------------------------------------------+-----------------------------------------------------------------------------------+
+            **site, cours** `Xavier Dupré <http://www.xavierdupre.fr/>`_
+
+        * `Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_  (prof)
+        * `Emmanuel Guérin <mailto:emmanuel AT guerin.fr.eu.org>`_ 
+        * `Yves Gerey <mailto:ggereyy AT gmail.com>`_
+        * `Arthur Renaud <mailto:arthur.b.renaud AT gmail.com>`_
+        * `Marc-Antoine Weissner <mailto:marc-antoine.weisser AT supelec.fr>`_
+        * `Mehdi Sebbar <mailto:mehdi.sebbar.0 AT gmail.com>`_
+        * `Charles de Ravel d'Escalpon <mailto:charles.de.ravel.d.esclapon AT gmail.com>`_
         
         
         
@@ -49,13 +42,13 @@ ENSAE 1A - Programmation
             * 3 séances sur des outils pour manipuler des données
             * 1 séance notée (la dernière)
 
-        **Plan complet**
+        **Plan complet des séances**
         
-        `séances mobile <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_1a.html#l-td1a>`_,
-        `séances tablette <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/td_1a.html#l-td1a>`_,
-        `séances portable <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_1a.html#l-td1a>`_
+        `mobile <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_1a.html#l-td1a>`_,
+        `tablette <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/td_1a.html#l-td1a>`_,
+        `portable <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_1a.html#l-td1a>`_
         
-        Du vendredi 4 septembre au vendredi 11 décembre excepté le 18/09 (WEI), 30/10 (Toussaint),  et le 13/11, 16h30.
+        Chaque vendredi à 16h30 du 4 septembre au 11 décembre excepté le 18/09 (WEI), 30/10 (Toussaint), et le 13/11.
 
     .. revealjs:: Semestre 2
     
@@ -82,12 +75,8 @@ ENSAE 1A - Programmation
             
         * Semestre 2 (facultatif)
         
-            * 1 projet informatique de 1 ou 2 élèves évalué avec :
-            
-                * un programme
-                * un rapport
-                * une soutenance
-                
+            * 1 projet informatique de 1 ou 2 élèves évalué avec
+              un programme, un rapport et une soutenance
             * Le projet doit inclure une partie mathématique, statistique ou économique
             * `Barême indicatif <http://www.xavierdupre.fr/site2013/enseignements/bareme-2014.html>`_
     
@@ -128,9 +117,6 @@ ENSAE 1A - Programmation
         
     .. revealjs:: Data Scientist
     
-        `Data Science en exemples <http://datascience.net/fr/challenge>`_,
-        `Kaggle <https://www.kaggle.com/>`_ 
-
         * `R <http://www.r-project.org/>`_ est le langage des chercheurs.
         * `Python <https://www.python.org/>`_ est préféré par les informaticiens.
         * Plus d'options pour traiter les gros jeux de données (> 1 Go)
@@ -152,7 +138,7 @@ ENSAE 1A - Programmation
         * `Les énoncés des séances <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_1a.html>`_
         * `Examples de code <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/exemple_index.html>`_
         * `Résumé de la syntaxe Python <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_
-        * `FAQ <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/all_FAQ.html>`_
+        * `FAQ <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/all_FAQ.html>`_
         * `Examens passés <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/exams.html>`_
         
     .. revealjs:: Pour aller plus loin
@@ -162,6 +148,9 @@ ENSAE 1A - Programmation
         * `Modules et outils pour développer <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/manytools.html>`_
         * `Articles, Références, Blogs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/biblio.html>`_
         * `Données, Machine Learning et Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_2a.html>`_ (2A)
+        * compétition : `Data Science en exemples <http://datascience.net/fr/challenge>`_,
+          `Kaggle <https://www.kaggle.com/>`_ 
+
 
 .. revealjs:: 
     :data-background: #EEEEEE
@@ -221,9 +210,10 @@ ENSAE 1A - Programmation
         
     .. revealjs:: Démo
     
-        * Editeur de texte : **Scite**
-        * Environnement mathématique : **Spyder**, **Rodéo**
-        * Notebooks : **IPython/Notebooks**
+        * Editeur de texte : `Scite <http://www.scintilla.org/SciTE.html>`_
+        * Environnement mathématique : `Spyder <https://pythonhosted.org/spyder/>`_, 
+          `Rodeo <http://blog.yhathq.com/posts/introducing-rodeo.html>`_
+        * Notebooks : `Jupyter <https://jupyter.org/>`_
         
         
 .. revealjs:: 
@@ -273,45 +263,14 @@ ENSAE 1A - Programmation
 .. revealjs:: 
     :data-background: #EEEEEE
 
-    .. revealjs:: Evaluer votre niveau (1)
+    .. revealjs:: Evaluer votre niveau
     
-        * Avez-vous un ordinateur portable ?
-        * Avez-vous essayé de résoudre les énigmes mathématiques proposées par Cédric Villani dans Le Monde ?
-        * Votre grand-mère souhaite avoir une liste de montants en livres convertis en anciens francs (1£, 2£, 5£, 10£, ...). Elle a peur de trop dépenser.
-            a. Vous prenez une feuille blanche, une calculatrice et un stylo.
-            b. Vous ouvrez Excel.
-            c. Vous codez un programme qui le fait pour toutes les devises.
-            d. Vous montez une startup pour fabriquer des tie-shirt avec le cours du jour pour toutes les grand-mères du monde.
+        #. Vous considérez le HTML comme un langage de programmation.
+        #. Vous adorez les `puzzles probabilistes <http://www.agenarisk.com/resources/probability_puzzles/Making_sense_of_probability.html>`_.
+        #. Vous avez déjà programmé.
+        #. Vous pensez que la programmation requiert de l'imagination.
+        #. Vous préférez le clavier QWERTY plutôt qu'AZERTY.
             
-    .. revealjs:: Evaluer votre niveau (2)
-
-        * Pensez-vous que la programmation requiert de l'imagination ?
-        * Avez-vous déjà programmé ? 
-            * Si oui, en quel langage ? (compilé, interprêté, fonctionnel)
-            * Si non, seriez-vous prêt à participer à un `coding goûter <http://codinggouter.org/>`_ ?
-        * Préférez-vous le clavier AZERTY ou QWERTY ?
-        
-        *Répartition...*
-
-    .. revealjs:: Lectures
-
-        * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
-        * `Apprentissage de la programmation <http://inforef.be/swi/python.htm>`_ (*Gérard Swinnen*) Le livre est mis à jour de façon régulière au gré des évolutions du langages, c'est un des rares livres à survivre d'années en années.
-        * `Théorème vivant <http://grasset.fr/theoreme-vivant-9782246798828>`_ de Cédric Villani 
-        
-    .. revealjs:: Demain
-        
-        * `Smart Cities, Internet Of Things <http://www.xavierdupre.fr/blog/2015-08-19_nojs.html>`_
-        * On sera connecté en permanence.
-        * On sera entouré de capteurs (voir `HealthKit <https://developer.apple.com/healthkit/>`_)
-        * Les données n'attendent que vous.
-        * `Evénements, ressources <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/ressources.html>`_
-    
-        ...
-
-        * `Quelle France dans dix ans ? Les chantiers de la décennie <http://www.strategie.gouv.fr/sites/strategie.gouv.fr/files/archives/F10_Rapport_FINAL_23062014.pdf>`_
-        * `Quel sera le paysage Média en 2020 ? <http://www.udecam.fr/docs_paysagemedia/Paysage%20Media%202020%20-%203eme%20edition%20-UDECAM%202014.pdf>`_
-
     .. revealjs:: The Bug
         
         Un `bug <http://fr.wikipedia.org/wiki/Bug_(informatique)>`_, c'est tout ce qui sépare
@@ -331,14 +290,10 @@ ENSAE 1A - Programmation
         .. image:: _static/bug.png
 
 
-.. revealjs:: 
-    :data-background: #EEEEEE
-    
-
-
     .. revealjs:: Points difficiles quand on débute
     
-        entre la 6ème et la 7ème séance (début des algorithmes)
+        entre la `6ème <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td1a_cenonce_session6.html#td1acenoncesession6rst>`_
+        et la `7ème <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td1a_cenonce_session7.html#td1acenoncesession7rst>`_ séance (début des algorithmes)
         
         **défi**
         
@@ -372,11 +327,23 @@ ENSAE 1A - Programmation
 .. revealjs:: 
     :data-background: #EEEEEE
     
+    .. revealjs:: Demain
+        
+        * `Smart Cities, Internet Of Things <http://www.xavierdupre.fr/blog/2015-08-19_nojs.html>`_
+        * On sera connecté en permanence.
+        * On sera entouré de capteurs (voir `HealthKit <https://developer.apple.com/healthkit/>`_)
+        * Les données n'attendent que vous.
+        * `Evénements, ressources <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/ressources.html>`_
+        * Liberté individuelle, liberté numérique
+    
     .. revealjs:: Quelques jeux...
     
+        pour comprendre ce qu'est un algorithme
+    
         * `Trouver 4 cartes manquantes <http://lesenfantscodaient.fr/sanso_algo/tri.html>`_
-        * Tri sur une rangée
+        * `Tri sur une rangée <http://lesenfantscodaient.fr/sanso_algo/tri.html>`_
         * `Les oranges <http://lesenfantscodaient.fr/sanso_algo/orange.html>`_
+        * `Le jeu de l'échiquier <http://lesenfantscodaient.fr/programmation/parcours_echiquier.html#l-prog-parcours-echiquier>`_
         * `L'énigme de Harry Potter (tome 1) <http://lesenfantscodaient.fr//sanso_algo/demineur.html#a-quoi-ca-sert>`_
         
         
@@ -386,6 +353,8 @@ ENSAE 1A - Programmation
     Une histoire de données
     
     `Le dessert de la cantine <http://lesenfantscodaient.fr/donnees/dessert_cantine.html?highlight=cantine>`_
+    
+    Composition des groupes.
         
         
 

@@ -154,19 +154,17 @@ depuis le répertoire ``Anaconda3/Scripts``.
 **Installation existante ou 32 bit**
 
 Aucune distribution pour les vieux ordinateurs n'a été préparées (32 bit) mais il est facile
-d'en préparer une ou de la mettre à jour en trois étapes depuis le répertoire *Scripts* :
+d'en préparer une ou de la mettre à jour en trois étapes depuis le répertoire *Scripts* ::
 
-* ``pip install pymyinstall --upgrade`` : mise à jour du module 
-  `pymy_install <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
-* ``pymy_install`` : installation des modules
-* ``pymy_update`` : mise à jour
+    pip install pymyinstall --upgrade
+    pymy_install
+    pymy_update
+    
+Cela correspond à :
 
-**Extensions**
-
-Si des modules supplémentaires sont nécessaires, ils seront spécifiés sur la page
-de chaque cours (voir :ref:`Getting Started 3A <l-td3a-start>`). La section :ref:`l-install` 
-précise comment installer Python et les différentes options à disposition.
-Pour Ouvrir un notebook, voir :ref:`i-launch_notebook_server`.
+#. mise à jour du module `pymy_install <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
+#. installation des nouveaux modules
+#. mise à jour
 
 
 **Environnement de travail**
