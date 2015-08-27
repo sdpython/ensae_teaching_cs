@@ -42,9 +42,6 @@ Autres sources d'inspiration :
 * `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
 * conférence `pydata <http://pydata.org/>`_
 
-*Dernière mise à jour 2015-08-02*
-
-
 
 Installation
 ++++++++++++
@@ -98,10 +95,8 @@ Les modules suivant font partie du setup proposés aux étudiants.
 
 
 
-Articles
-++++++++
-
-Cette partie n'est pas mise à jour très régulièrement.
+Quelques articles
++++++++++++++++++
 
 * `Gradient Boosted Regression Trees <http://orbi.ulg.ac.be/bitstream/2268/163521/1/slides.pdf>`_
 * `A Reliable Effective Terascale Linear Learning System <http://arxiv.org/pdf/1110.4198v3.pdf>`_
@@ -114,10 +109,8 @@ Cette partie n'est pas mise à jour très régulièrement.
 * `22 outils gratuits pour visualiser et analyser les données (1ère partie) <http://www.lemondeinformatique.fr/actualites/lire-22-outils-gratuits-pour-visualiser-et-analyser-les-donnees-1ere-partie-47241-page-3.html>`_
 
 
-Liens
-+++++
-
-Cette partie n'est pas mise à jour très régulièrement.
+Quelques liens
+++++++++++++++
 
 - Blog
     - `FastML <http://fastml.com/>`_
@@ -140,5 +133,5 @@ Cette partie n'est pas mise à jour très régulièrement.
       (`second version <http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/>`_)
 - Vidéo
     - `Scikit-Learn: Machine Learning en Python <http://www.microsoft.com/france/mstechdays/programmes/2014/fiche-session.aspx?ID=295be946-2c69-458a-8545-bcebe7970fd8>`_
-    - `HDInsight : Hadoop en environnement Microsoft <http://www.microsoft.com/france/mstechdays/programmes/2013/fiche-session.aspx?ID=bb6cbb87-c370-477e-8fd4-b46f9ca292d0>`_
-
+    - `PyVideo <http://www.pyvideo.org/>`_
+    - `PyData TV <https://www.youtube.com/user/PyDataTV>`_

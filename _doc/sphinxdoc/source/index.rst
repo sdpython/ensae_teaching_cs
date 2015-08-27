@@ -79,7 +79,7 @@ Contenu des enseignements
     * :ref:`Articles, Références, Blog <l-information>`
     * :ref:`Coding Party <l-codingparty>`
     * :ref:`l-algoculture`
-    * :ref:`blog <ap-main-0>` de de cours
+    * :ref:`blog <ap-main-0>` de ce cours
     * :ref:`code associé à ce cours <modindex>`
 
     
@@ -123,14 +123,12 @@ Des modules développés pour ces enseignements viennent compléter cet ensemble
 Getting started
 ---------------
 
-.. index:: R, Julia, WinPython, Anaconda, pymyinstall, setup
+.. index:: R, Julia, WinPython, Anaconda, pymyinstall, setup, installation
 
 
 La version recommandée est `Python 3.4, 64 bit <https://www.python.org/downloads/>`_. Par défaut, les modules 
-s'installent avec ``pip install <module>`` excepté
-sous Windows où il faut télécharger soi-même des versions pré-compilées des modules 
-qui nécessitent un compilateur C++ depuis le 
-site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
+s'installent avec ``pip install <module>``. Python seul est très limité et on n'installe plus
+les modules un par un.
 
 **Windows**
 
@@ -139,6 +137,11 @@ La page :ref:`l-data2a` décrit tous les modules qu'elle contient.
 Les modules peuvent être mis à jour avec l'instruction ``Scripts/pymy_update`` qui vient 
 avec l'installation du module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_.
 Sinon, la distribution `Anaconda <http://continuum.io/downloads#py34>`_ est le choix le plus répandu.
+
+Pour l'ajout d'un module ponctuel, si l'instruction ``pip install <module>`` ne fonctionne pas,
+c'est vraisemblablement parce que ce module contient une partie en C++. 
+Dans ce cas, il faut aller voir sur ce site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
+s'il est disponible. S'il ne l'est pas, l'installation du module est réservée aux experts.
 
 **Linux / Mac**
 
@@ -165,6 +168,8 @@ Cela correspond à :
 #. mise à jour du module `pymy_install <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
 #. installation des nouveaux modules
 #. mise à jour
+
+Si un module échoue, l'option ``--skip=<modules séparés par des virgules>`` permettra de passer outre.
 
 
 **Environnement de travail**
