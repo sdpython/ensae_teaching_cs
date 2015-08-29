@@ -196,6 +196,11 @@ ENSAE 1A - Programmation
             * Ils sont pratiques pour garder la trace d'une série de petites étapes pour une étude scientifique.
             * Ils ne sont pas pratiques pour écrire de longs programmes.
 
+    .. revealjs:: Notebook example
+    
+        `Jupyter <https://jupyter.org/>`_
+    
+        .. image:: _static/notsnap.png        
         
     .. revealjs:: Editeur 
     
@@ -208,12 +213,24 @@ ENSAE 1A - Programmation
         Il détecte quelques erreurs avant l'exécution.
         Le débuggeur de `PyTools (Visual Studio) <https://pytools.codeplex.com/>`_ est très efficace.
         
-    .. revealjs:: Démo
+    .. revealjs:: Scite
     
-        * Editeur de texte : `Scite <http://www.scintilla.org/SciTE.html>`_
-        * Environnement mathématique : `Spyder <https://pythonhosted.org/spyder/>`_, 
-          `Rodeo <http://blog.yhathq.com/posts/introducing-rodeo.html>`_
-        * Notebooks : `Jupyter <https://jupyter.org/>`_
+        `Scite <http://www.scintilla.org/SciTE.html>`_
+        
+        .. image:: _static/scite.png
+        
+    .. revealjs:: Spyder
+    
+        `Spyder <https://pythonhosted.org/spyder/>`_
+        
+        .. image:: _static/spyder.png
+        
+    .. revealjs:: Rodeo
+    
+        `Rodeo <http://blog.yhathq.com/posts/introducing-rodeo.html>`_
+        
+        .. image:: _static/rodeo.png
+        
         
         
 .. revealjs:: 
