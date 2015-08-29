@@ -38,7 +38,7 @@ except ImportError:
     import pyquickhelper
 
 from pyquickhelper import fLOG
-from src.ensae_teaching_cs import read_csv
+from src.ensae_teaching_cs.pandas_helper import read_csv
 
 
 class TestFaqPandasIo(unittest.TestCase):
