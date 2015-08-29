@@ -39,7 +39,7 @@ except ImportError:
     import pyquickhelper
 
 from pyquickhelper import fLOG
-from src.ensae_teaching_cs import dfs2excel
+from src.ensae_teaching_cs.pandas_helper import dfs2excel
 
 
 class TestSessionPandas (unittest.TestCase):
