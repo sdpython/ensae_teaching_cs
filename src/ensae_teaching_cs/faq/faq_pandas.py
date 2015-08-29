@@ -209,8 +209,7 @@ def groupby_topn(df, by_keys, sort_keys, ascending=True, n=1, as_index=True):
               dict(k1="b", k2="b", v=1, i=2),
               dict(k1="b", k2="b", v=1, i=3)]
         df = pandas.DataFrame(l)
-        df.groupby(["k1", "k2"])
-          .apply(lambda x: x.sort(["v", "i"], ascending=True).head(1))
+        df.groupby(["k1", "k2"]).apply(lambda x: x.sort(["v", "i"], ascending=True).head(1))
 
     @endFAQ
     """
