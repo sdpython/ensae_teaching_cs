@@ -71,7 +71,7 @@ c. Editeur de texte (pour des projets plus ambitieux, SciTE, PyCharm, PyTools, W
 Modules Python
 ++++++++++++++
 
-Les modules suivant font partie du setup proposés aux étudiants.
+Les modules suivant font partie du setup proposés aux étudiants (voir plus bas).
 
 * **usage** : classification, la plus importante *DATA/ML* regroupe les modules les plus importantes
   pour faire du machine learning
@@ -93,6 +93,10 @@ Les modules suivant font partie du setup proposés aux étudiants.
     from ensae_teaching_cs.automation import rst_table_modules
     print(rst_table_modules())
 
+Liens :
+
+* `ENSAE, Python Setup <http://www.xavierdupre.fr/enseignement/>`_ (Windows)
+* `Instruction pour installer ces modules sous Linux/Mac <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-08-30_install_linux.html>`_
 
 
 Quelques articles
