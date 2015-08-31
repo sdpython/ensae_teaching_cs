@@ -168,6 +168,7 @@ Bibliographie
 * :ref:`question_projet_2014`
 * `Introduction to matplotlib <https://scipy-lectures.github.io/intro/matplotlib/matplotlib.html>`_
 * `Probabilistic Context-Free Grammars (PCFGs) <http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf>`_
+* `Ultimate guide for Data Exploration in Python using NumPy, Matplotlib and Pandas <http://www.analyticsvidhya.com/blog/2015/04/comprehensive-guide-data-exploration-sas-using-python-numpy-scipy-matplotlib-pandas/#One>`_
 
 **MOOC**
 
