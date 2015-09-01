@@ -147,7 +147,7 @@ html_theme_options = {
     "preview_links": True,
 
     # Theme (default/blood/beige/moon/night/serif/simple/sky/solarized)
-    "theme": "solarized",
+    "theme": "white",
 
     # Transition style (default/cube/page/concave/zoom/linear/fade/none)
     "transition": "linear",

@@ -4,10 +4,10 @@
 .. _l-ressources:
 
 
-Ressources, Evénements
-======================
+Ressources, Evénements, Source de données
+=========================================
 
-.. index:: Croix-Rouge, opendata, data.gouv.fr, quandl, wikipedia, Letor, WordNet, ImageNet
+.. index:: Croix-Rouge, opendata, data.gouv.fr, quandl, wikipedia, Letor, WordNet, ImageNet, données, OpenWeatherMap
 
 .. _l-datasources:
     
@@ -34,6 +34,7 @@ Source de données
 * `ImageNet <http://image-net.org/>`_, base de données d'images avec leur contenu
 * `Données Croix-Rouge sur les dons reçus <https://github.com/dataforgoodfr/croixrouge>`_
 * `Geonames <http://download.geonames.org/export/dump/>`_
+* `OpenWeatherMap <http://openweathermap.org/>`_
 
 .. index:: stackoverflow
 

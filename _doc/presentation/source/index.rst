@@ -3,7 +3,6 @@ ENSAE 1A - Programmation
 ========================
 
 .. revealjs:: ENSAE 1A - Programmation
-    :data-background: #EEEEEE
 
     .. image:: _static/project_ico.png
         
@@ -15,8 +14,9 @@ ENSAE 1A - Programmation
     
     `Romain Lesauvage <mailto: romain.lesauvage AT ensae.fr>`_
         
-.. revealjs:: Intervenants
-    :data-background: #EEEEEE
+.. revealjs:: 
+    
+    .. revealjs:: Intervenants
 
             **site, cours** `Xavier Dupré <http://www.xavierdupre.fr/>`_
 
@@ -28,10 +28,46 @@ ENSAE 1A - Programmation
         * `Mehdi Sebbar <mailto:mehdi.sebbar.0 AT gmail.com>`_
         * `Charles de Ravel d'Escalpon <mailto:charles.de.ravel.d.esclapon AT gmail.com>`_
         
+    .. revealjs:: Bio 1/3
+    
+        **Marc-Antoine Weisser** est docteur en informatique. 
+        Il est actuellement enseignant-chercheur à CentraleSupélec et membre du LRI, le laboratoire d'informatique d'Orsay. 
+        Il Travaille en particulier sur l'algorithmique de graphe, 
+        la complexité et l'approximabilité.
+
+        **Mehdi Sabbar** est étudiant en thèse `CIFRE <http://www.anrt.asso.fr/fr/espace_cifre/accueil.jsp#.VeYYlvntmko>`_
+        en stats/machine learning (problématique de clustering en haute dimension) 
+        à l'ENSAE et travaille chez `Little Big Data <http://www.little-big-data.com/>`_ (startup).
+
+    .. revealjs:: Bio 2/3
+    
+        **Arthur Renaud** est diplômé de l'ENSAE (2014) et de Sciences Po Paris (2015), 
+        entrepreneur en Data Sciences (2 projets : 
+        `RaisUP <http://www.raisup.com/fr/>`_  - notation automatisée des startups -,
+        Etaonis - conseil en Data Sciences (Analyse d'images/Web scraping, data for Business).
+        
+        **Yves Gerey** maîtrise de nombreux langages (assembleur, python, Haskell, C++, ...).
+        Il est titulaire d'une maîtrise de mathématiques pures, 
+        et travaille dans le domaine de l'intelligence artificielle pour la reconnaissance d'images
+        chez `A2iA <http://www.a2ia.com/en>`_.
+        Yves est aussi `Demomaker <http://www.pouet.net/groups.php?which=482>`_.
+        
+    .. revealjs:: Bio 3/3
+        
+        **Emmanuel Guérin** est ingénieur en développement depuis 15 ans au 
+        sein d'éditeurs de logiciels. C++, .NET, Python, Web. 
+        Il est architecte logiciel à `Talentsoft <http://www.talentsoft.com/>`_, fonction
+        qui englobe l'amélioration, l'automatisation et la diffusion 
+        des processus techniques de l'entreprise.
+        
+        **Xavier Dupré** travaille chez Microsoft depuis 2010 sur le moteur
+        de recherche Bing. Il enseigne à l'ENSAE depuis 2002.
+        Il est diplôme de l'ENSAE (1999).
+
+
         
         
 .. revealjs:: 
-    :data-background: #EEEEEE
 
     .. revealjs:: Semestre 1 
     
@@ -102,7 +138,6 @@ ENSAE 1A - Programmation
         * `xavierdupre.fr <http://www.xavierdupre.fr/>`_
 
 .. revealjs:: 
-    :data-background: #EEEEEE
 
     .. revealjs:: Le langage Python
     
@@ -153,7 +188,6 @@ ENSAE 1A - Programmation
 
 
 .. revealjs:: 
-    :data-background: #EEEEEE
 
     .. revealjs:: Python à l'ENSAE
 
@@ -234,7 +268,6 @@ ENSAE 1A - Programmation
         
         
 .. revealjs:: 
-    :data-background: #EEEEEE
 
     .. revealjs:: Les langages à l'ENSAE
         
@@ -278,7 +311,6 @@ ENSAE 1A - Programmation
         Vous pouvez participer.
 
 .. revealjs:: 
-    :data-background: #EEEEEE
 
     .. revealjs:: Evaluer votre niveau
     
@@ -342,7 +374,6 @@ ENSAE 1A - Programmation
 
 
 .. revealjs:: 
-    :data-background: #EEEEEE
     
     .. revealjs:: Demain
         

@@ -81,6 +81,7 @@ Contenu des enseignements
     * :ref:`l-algoculture`
     * :ref:`blog <ap-main-0>` de ce cours
     * :ref:`code associé à ce cours <modindex>`
+    * :ref:`l-ressources`
 
     
 
