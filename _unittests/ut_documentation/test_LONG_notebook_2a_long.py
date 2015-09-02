@@ -39,6 +39,22 @@ except ImportError:
     import pyquickhelper
 
 try:
+    import pymyinstall
+except ImportError:
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..",
+                "..",
+                "pymyinstall",
+                "src")))
+    if path not in sys.path:
+        sys.path.append(path)
+    import pymyinstall
+
+try:
     import pyensae
 except ImportError:
     path = os.path.normpath(
@@ -87,6 +103,14 @@ class TestNotebookRunner2a_long (unittest.TestCase):
             warnings.warn(
                 "travis, unable to test TestNotebookRunner2a_long.test_notebook_runner_2a_long")
             return
+
+        if "R_HOME" not in os.environ or not os.path.exists(os.environ["R_HOME"]):
+            paths = [r"C:\Program Files\R\R-3.2.2",
+                     r"C:\Program Files\R\R-3.1.2"]
+            for path in paths:
+                if os.path.exists(path):
+                    os.environ["R_HOME"] = path
+                    break
 
         temp = get_temp_folder(__file__, "temp_notebook2a_long_")
         keepnote = ls_notebooks("2a")
