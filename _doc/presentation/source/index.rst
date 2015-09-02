@@ -32,13 +32,17 @@ ENSAE 1A - Programmation
     
         **Marc-Antoine Weisser** est docteur en informatique. 
         Il est actuellement enseignant-chercheur à CentraleSupélec et membre du LRI, le laboratoire d'informatique d'Orsay. 
-        Il Travaille en particulier sur l'algorithmique de graphe, 
+        Il travaille en particulier sur l'algorithmique de graphe, 
         la complexité et l'approximabilité.
 
-        **Mehdi Sabbar** est étudiant en thèse `CIFRE <http://www.anrt.asso.fr/fr/espace_cifre/accueil.jsp#.VeYYlvntmko>`_
-        en stats/machine learning (problématique de clustering en haute dimension) 
-        à l'ENSAE et travaille chez `Little Big Data <http://www.little-big-data.com/>`_ (startup).
-
+        **Charles de Ravel d'Escalpon** est co-fondateur 
+        d'un cabinet de conseil en Data Science et est partie prenante dans 
+        d'autres projets de start-up. Auparavant, il a travaillé chez 
+        `MAPP <http://www.mapp-economics.com/>`_,
+        un cabinet d'expertise en économie de la concurrence.
+        Il est diplômé de l'ENSAE et de Polytechnique, il est titulaire d'un master II
+        en finance quantitative et d'un master I en droit de la concurrence.
+        
     .. revealjs:: Bio 2/3
     
         **Arthur Renaud** est diplômé de l'ENSAE (2014) et de Sciences Po Paris (2015), 
@@ -54,6 +58,10 @@ ENSAE 1A - Programmation
         
     .. revealjs:: Bio 3/3
         
+        **Mehdi Sabbar** est étudiant en thèse `CIFRE <http://www.anrt.asso.fr/fr/espace_cifre/accueil.jsp#.VeYYlvntmko>`_
+        en stats/machine learning (problématique de clustering en haute dimension) 
+        à l'ENSAE et travaille chez `Little Big Data <http://www.little-big-data.com/>`_ (startup).
+
         **Emmanuel Guérin** est ingénieur en développement depuis 15 ans au 
         sein d'éditeurs de logiciels. C++, .NET, Python, Web. 
         Il est architecte logiciel à `Talentsoft <http://www.talentsoft.com/>`_, fonction
@@ -62,7 +70,7 @@ ENSAE 1A - Programmation
         
         **Xavier Dupré** travaille chez Microsoft depuis 2010 sur le moteur
         de recherche Bing. Il enseigne à l'ENSAE depuis 2002.
-        Il est diplôme de l'ENSAE (1999).
+        Il est diplômé de l'ENSAE (1999).
 
 
         
