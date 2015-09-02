@@ -411,6 +411,19 @@ ENSAE 1A - Programmation
     `Le dessert de la cantine <http://lesenfantscodaient.fr/donnees/dessert_cantine.html?highlight=cantine>`_
     
     Composition des groupes.
+    
+
+.. revealjs:: Le grand fossé
+
+    .. image:: http://static.fnac-static.com/multimedia/FR/Images_Produits/FR/fnac.com/Visual_Principal_340/2/0/0/9782864970002.jpg
+    
+    Dans un certain pays, il existe un parti politique pétri d'inimitiés tenaces. 
+    Est-il possible de scinder le parti en deux pour que chaque paire d'ennemis 
+    intangibles se retrouve de part et d'autres du fossé ?
+
+    Cette devinette algorithmique est tirée d'une compétition 
+    `google code jam <https://code.google.com/codejam/contest/6234486/dashboard#s=p0>`_.
+
         
         
 
