@@ -1,9 +1,8 @@
-﻿
+
 ENSAE 2A - Programmation
 ========================
 
-.. revealjs:: ENSAE 2A - Données, Machine Learning et Programmation
-    :data-background: #DDDDDD
+.. revealjs:: ENSAE 2A - Données, Python pour un Data Scientist
 
     .. image:: _static/project_ico.png
 
@@ -18,7 +17,6 @@ ENSAE 2A - Programmation
         
         
 .. revealjs:: 
-    :data-background: #DDDDDD
 
     .. revealjs:: Déroulement du cours 
     
