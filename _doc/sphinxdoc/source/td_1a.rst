@@ -142,6 +142,11 @@ Elles sont facilement téléchargeables avec ces deux modules :
 Bibliographie
 -------------
 
+**Cheat Sheet**
+
+* `Aide Mémoire Python <http://www.le-memento.fr/python.html>`_
+* `Syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_
+
 **Liens**
 
 * `Message de service aux débutants en Python <http://sametmax.com/message-de-service-aux-debutants-en-python/>`_
