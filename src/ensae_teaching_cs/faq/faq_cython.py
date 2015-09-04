@@ -43,6 +43,14 @@ def compile_cython_single_script(script, fLOG=noLOG):
     pour réussir à utiliser une fonction codée en Cython.
     C'est ce que fait la fonction :func:`compile_cython_single_script`.
 
+    Etant donné que la partie en pseudo C est compilée afin de la rendre beaucoup
+    plus rapide, la partie la plus difficile est généralement celle qui consiste à faire 
+    en sorte que l'interpréteur Python trouve le <b>bon</b> compilateur.
+    Ce compilateur est nécessairement le même que celui utilisé pour compiler
+    Python et celui-ci change à chaque version.
+    Voir 
+    `Compiling Python on Windows <https://docs.python.org/3/using/windows.html?highlight=visual%20studio#compiling-python-on-windows>`_
+    et faire attention à la version de Python que vous utilisez.
 
     @endFAQ
     """
