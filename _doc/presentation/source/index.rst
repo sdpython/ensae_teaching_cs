@@ -58,7 +58,7 @@ ENSAE 1A - Programmation
         
     .. revealjs:: Bio 3/3
         
-        **Mehdi Sabbar** est étudiant en thèse `CIFRE <http://www.anrt.asso.fr/fr/espace_cifre/accueil.jsp#.VeYYlvntmko>`_
+        **Mehdi Sebbar** est étudiant en thèse `CIFRE <http://www.anrt.asso.fr/fr/espace_cifre/accueil.jsp#.VeYYlvntmko>`_
         en stats/machine learning (problématique de clustering en haute dimension) 
         à l'ENSAE et travaille chez `Little Big Data <http://www.little-big-data.com/>`_ (startup).
 
