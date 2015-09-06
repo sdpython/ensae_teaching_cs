@@ -12,11 +12,16 @@ def setup_jenkins_server(js,
                          github="sdpython",
                          modules=[  # update anaconda
                                     ("standalone [conda_update]",
-                                     "H H(8-9) * * 0"),
+                                     "H H(0-1) * * 0"),
                                     "standalone [conda_update27]",
                                     "standalone [local_pypi]",
+                                    "standalone [install]",
+                                    "standalone [update]",
                                     # pyquickhelper and others,
-                             ("pyquickhelper", "H H(10-11) * * 0"),
+                             # update
+                             ("pymyinstall [update_modules]",
+                                        "H H(0-1) * * 5"),
+                             ("pyquickhelper", "H H(2-3) * * 0"),
                              ("pysqllike", None, dict(success_only=True)),
                              ["python3_module_template", ],
                              "pyquickhelper [27] [anaconda2]",
@@ -33,21 +38,18 @@ def setup_jenkins_server(js,
                                         "pyrsslocal [winpython]"],
                              ["pymyinstall [27] [anaconda2]",
                                  "pymyinstall [LONG]"],
-                             # update
-                             ("pymyinstall [update_modules]",
-                                        "H H(10-11) * * 5"),
                              # actuariat
-                             [("actuariat_python", "H H(12-13) * * 0")
+                             [("actuariat_python", "H H(4-5) * * 0")
                               ],
                              [("actuariat_python [winpython]", None, dict(success_only=True)),
                                         "actuariat_python [anaconda]"],
                              # code_beatrix
-                             ("code_beatrix", "H H(14-15) * * 0"),
+                             ("code_beatrix", "H H(4-5) * * 0"),
                              [("code_beatrix [winpython]", None, dict(success_only=True)),
                                         "code_beatrix [anaconda]"],
                              # teachings
                              ("ensae_teaching_cs",
-                                        "H H(15-16) * * 0"),   # 1.5h
+                                        "H H(5-6) * * 0"),   # 1.5h
                              # 1.5h
                              ("ensae_teaching_cs [winpython]", None, dict(
                                  success_only=True)),
@@ -56,7 +58,7 @@ def setup_jenkins_server(js,
                              "ensae_teaching_cs [LONG]",        # 1h
                              # 3h
                              ("ensae_teaching_cs [custom_left]",
-                                        "H H(15-16) * * 3"),
+                                        "H H(10-11) * * 3"),
                              # 3h
                              "ensae_teaching_cs [winpython] [custom_left]",
                              # 3h
