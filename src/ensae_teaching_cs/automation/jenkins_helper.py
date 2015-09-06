@@ -17,10 +17,7 @@ def setup_jenkins_server(js,
                                     "standalone [local_pypi]",
                                     "standalone [install]",
                                     "standalone [update]",
-                                    # pyquickhelper and others,
-                             # update
-                             ("pymyinstall [update_modules]",
-                                        "H H(0-1) * * 5"),
+                             # pyquickhelper and others,
                              ("pyquickhelper", "H H(2-3) * * 0"),
                              ("pysqllike", None, dict(success_only=True)),
                              ["python3_module_template", ],
@@ -38,6 +35,9 @@ def setup_jenkins_server(js,
                                         "pyrsslocal [winpython]"],
                              ["pymyinstall [27] [anaconda2]",
                                  "pymyinstall [LONG]"],
+                             # update, do not move, it depends on pyquickhelper
+                             ("pymyinstall [update_modules]",
+                                        "H H(0-1) * * 5"),
                              # actuariat
                              [("actuariat_python", "H H(4-5) * * 0")
                               ],
