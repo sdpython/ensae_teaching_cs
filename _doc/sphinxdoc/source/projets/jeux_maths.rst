@@ -116,6 +116,10 @@ On pourra essayer différents algorithmes :
 * `A New Algorithm For Finding Hamiltonian Ccircuits <http://www.dharwadker.org/hamilton/>`_
 * `Trouver un cycle hamiltonien sur un graphe <http://blog.neamar.fr/2-uncategorised/129-algorithme-cycle-hamiltonien-graphe>`_
 
+Un article sur les heuristiques utilisées lors de la résolution :
+
+* `Evolving TSP heuristics using Multi Expression Programming <http://arxiv.org/abs/1509.02459>`_
+
 
 Exemple d'utilisation :
 
