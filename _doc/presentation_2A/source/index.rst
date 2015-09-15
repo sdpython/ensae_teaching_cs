@@ -14,6 +14,52 @@ ENSAE 2A - Programmation
     **Assistant à l'ENSAE**
     
     `Romain Lesauvage <mailto: romain.lesauvage AT ensae.fr>`_
+    
+.. revealjs:: 
+    
+    .. revealjs:: Intervenants
+
+            **site, cours** `Xavier Dupré <http://www.xavierdupre.fr/>`_
+
+        * `Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_  (ENSAE 1999)
+        * Elodie Royant (ENSAE 2008)
+        * Antoine Thabault (ENSAE 2012)
+        * Jérémie Jakubowicz (ENSAE 2002)
+        * Nicolas Pousset
+        * Antoine Ly (ENSAE 2015)
+        * Dominique Poudevigne
+        * Gaël Varoquaux
+        
+    .. revealjs:: Bio 1/3
+    
+        **Elodie Royant** a travaillé chez `MAPP <http://www.mapp-economics.com/fr/>`_ pendant 5 ans
+        et est data scientist chez `oscaro <http://www.oscaro.com/>`_ sur des problématiques
+        temps réel.
+    
+        **Antoine Thabault** a travaillé pendant 3 ans en finance, en particulier sur des problématiques 
+        de trading algorithmique et de trading haute fréquence. Il est actuellement Data Scientist chez 
+        `AlephD <https://www.alephd.com/>`_, 
+        une start-up française qui aide les éditeurs de contenu en ligne à vendre efficacement leurs espaces 
+        publicitaires dans le cadre d'enchères en temps réel.
+        
+    .. revealjs:: Bio 2/3
+    
+        **Jérémie Jakubowicz** est chercheur et professeur à l'ENSAE et à Télécom SudParis.
+        Il publie dans le domaine des statistiques, du traitement du signal et des images.
+        
+        **Xavier Dupré** est ingénieur chez Microsoft et professeur à l'ENSAE.
+        
+        ** Nicolas Pousset** 
+    
+    .. revealjs:: Bio 3/3
+    
+        **Anoine Ly**
+        
+        ** Dominique Poudevigne**
+        
+        **Gaël Varoquaux**
+    
+    
         
         
 .. revealjs:: 
@@ -42,7 +88,7 @@ ENSAE 2A - Programmation
         
     .. revealjs:: Notebooks
     
-        Le cours utilise les `notebooks <http://ipython.org/notebook.html>`_.
+        Le cours utilise les `notebooks <https://jupyter.org/>`_.
         
         .. image:: _static/notsnap.png       
 
@@ -81,28 +127,28 @@ ENSAE 2A - Programmation
         
             * `pyensae <https://github.com/sdpython/pyensae/>`_
             * `pyquickhelper <https://github.com/sdpython/pyquickhelper/>`_
-            * `pymyinstall <https://github.com/sdpython/pymyinstall/>`_        
+            * `pymyinstall <https://github.com/sdpython/pymyinstall/>`_
+            * `actuariat_python <https://github.com/sdpython/actuariat_python/>`_
             
         Vous pouvez participer.
         
-.. revealjs:: Environnement de travail
-    :data-background: #DDDDFF    
-    
 .. revealjs:: 
-    :data-background: #DDDDDD
 
     .. revealjs:: Python à l'ENSAE
 
         * Le système d'exploitation est Windows.
-        * L'environnement est installé pour vous (`WinPython <http://winpython.sourceforge.net/>`_)
-        * Vous pouvez le recopier tel quel chez vous (avec un clé USB).
+        * L'environnement est installé pour vous.
+        * Vous pouvez appliquer le même `setup <http://www.xavierdupre.fr/enseignement/>`_ 
+          chez vous.
         
     .. revealjs:: Python chez vous
 
         * Le système d'exploitation est celui que vous choisissez (Windows, Linux, Mac).
-            * Windows : l'école vous fournit un setup
+        
+            * Windows : `setup <http://www.xavierdupre.fr/enseignement/>`_ fourni
             * Linux/Mac : Anaconda + une liste de modules à Installer
-        * Lire `Prérequis et installation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html#prerequis-et-installation>`_.
+
+        * Lire `Getting started <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html#getting-started>`_.
         * Vous devriez avoir installé Python dès les premières séances.
         
     .. revealjs:: Version de Python
@@ -111,13 +157,29 @@ ENSAE 2A - Programmation
         * Les exemples ne marcheront pas tous sur la version 2.7.
         * Il faut choisir la version *amd64*. C'est la seule capable de tirer parti d'une mémoire de plus de 4 Go.
         
+    .. revealjs:: Utiliser Internet
+    
+        Quand on ne sait pas, il suffit d'utiliser un moteur de recherche et de chercher :
+        
+            python + question
+            
+        *en anglais de préférence*
+            
+        Example :  `python pandas dataframe merge <https://duckduckgo.com/?q=python+pandas+dataframe+merge&ia=qa>`_
+        
     .. revealjs:: Notebook
     
             * Ils mélangent code, texte, formules, tableaux, graphiques.
             * Ils sont convertibles au format HTML, Latex.
+            
             * Ils sont pratiques pour garder la trace d'une série de petites étapes pour une étude scientifique.
             * Ils ne sont pas pratiques pour écrire de longs programmes.
-            * Ils sont très utilisés, plein d'exemples sur Internet
+
+    .. revealjs:: Notebook example
+    
+        `Jupyter <https://jupyter.org/>`_
+    
+        .. image:: _static/notsnap.png        
         
     .. revealjs:: Editeur 
     
@@ -128,30 +190,29 @@ ENSAE 2A - Programmation
         
         La version gratuite de `PyCharm <http://www.jetbrains.com/pycharm/>`_ contient tout ce qu'il faut.
         Il détecte quelques erreurs avant l'exécution.
-        Il existe aussi `WingIDE <https://wingware.com/>`_.
+        Le débuggeur de `PyTools (Visual Studio) <https://pytools.codeplex.com/>`_ est très efficace.
         
-    .. revealjs:: Environnement scientifique
-
-        * `Spyder <http://pythonhosted.org//spyder/>`_ (`Python <https://www.python.org/>`_) équivalent de `RStudio <http://www.rstudio.com/>`_ (`R <http://www.r-project.org/>`_)
-        * 4 fenêtres
-            * script
-            * command line
-            * explorateur de données
-            * graphiques
-        
-    .. revealjs:: Démo
+    .. revealjs:: Scite
     
-        * Editeur de texte : **Scite**
-        * Environnement mathématique : **Spyder**
-        * Notebooks : **IPython/Notebooks**
+        `Scite <http://www.scintilla.org/SciTE.html>`_
         
-        Et des éditeurs plus complets :
+        .. image:: _static/scite.png
         
-        * `PyCharm <http://www.jetbrains.com/pycharm/>`_
-        * `PyTools <http://pytools.codeplex.com/>`_ 
+    .. revealjs:: Spyder
+    
+        `Spyder <https://pythonhosted.org/spyder/>`_
         
+        .. image:: _static/spyder.png
+        
+    .. revealjs:: Rodeo
+    
+        `Rodeo <http://blog.yhathq.com/posts/introducing-rodeo.html>`_
+        
+        .. image:: _static/rodeo.png
+        
+        
+
 .. revealjs:: Contenu
-    :data-background: #DDDDFF
     
     * Manipuler les données
     * Calcul matriciel
@@ -161,7 +222,6 @@ ENSAE 2A - Programmation
     * Algorithmie
     
 .. revealjs:: 
-    :data-background: #DDDDDD
 
     .. revealjs:: Manipuler les données
     
@@ -224,6 +284,16 @@ ENSAE 2A - Programmation
         
         Gaël Varoquaux (`INRIA <http://www.inria.fr/>`_) viendra présenter ce module en tant que principal contributeur le 6 Octobre à 11h.
     
+    .. revealjs:: Deep Learning
+    
+        * Vision, apprentissage
+    
+        ...
+    
+        **Module de référence**
+    
+        * `theano <http://deeplearning.net/software/theano/>`_
+        
     .. revealjs:: Algorithmie
     
         * Manipuler 100 millions de lignes requiert d'être astucieux
@@ -239,10 +309,8 @@ ENSAE 2A - Programmation
         Vous
     
 .. revealjs:: Les données comme terrain de jeu
-    :data-background: #DDDDFF
         
 .. revealjs:: 
-    :data-background: #DDDDDD
         
     .. revealjs:: Se cultiver, être inventif
     
@@ -282,10 +350,8 @@ ENSAE 2A - Programmation
             Astucieux ou très (très) patient. A vous de choisir.
             
 .. revealjs:: Légalement...
-    :data-background: #DDDDFF
     
 .. revealjs::    
-    :data-background: #DDDDDD
 
     .. revealjs:: Droits et données
 
@@ -310,7 +376,6 @@ ENSAE 2A - Programmation
         
 
 .. revealjs:: 
-    :data-background: #DDDDDD
     
         `Séance 1 : données et graphes en quelques lignes <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td2a_cenonce_session_1.html>`_
         
