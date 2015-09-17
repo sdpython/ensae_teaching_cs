@@ -8,14 +8,18 @@
 2A
 ==
 
-`Python Avancé Données, Machine Learning et Programmation <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/2me-anne-formationsdiplome-95.html?id=101352>`_
+`Python pour un Data Scientist <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/2me-anne-formationsdiplome-95.html?id=101352>`_
 
 Cours animé par :
 
-* Antoine Thabault
-* Nicolas Rousset
-* Jérémie Jakubowicz
-* Xavier Dupré
+* `Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_  (ENSAE 1999) [#fwrite1]_
+* Elodie Royant (ENSAE 2008)
+* Antoine Thabault (ENSAE 2012) [#fwrite2]_
+* Jérémie Jakubowicz (ENSAE 2002) [#fwrite2]_
+* Nicolas Pousset [#fwrite2]_
+* Antoine Ly (ENSAE 2015)
+* Dominique Poudevigne
+* Gaël Varoquaux [#fwrite2]_
 
 
 Ce cours s'étale sur 6 séances de cours/TD d'une durée de 4h.
@@ -160,7 +164,7 @@ Bibliographie
 * `A Roundup of Recent Text Analytics and Vis Work <http://blogger.ghostweather.com/2014/10/a-roundup-of-recent-text-analytics-and.html>`_
 * `A Tour of Machine Learning Algorithms <http://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/>`_
 * `Efficient Estimation of Word Representations in Vector Space <http://arxiv.org/abs/1301.3781>`_, Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean,
-  ` <http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf>`_, Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, Jeff Dean,
+  `Distributed Representations of Words and Phrases and their Compositionality <http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf>`_, Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, Jeff Dean,
   `word2vec Parameter Learning Explained <http://arxiv.org/abs/1411.2738>`_, Xin Rong,
   `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
 * `Prédire les épidémies avec Wikipedia <http://www.lemonde.fr/sante/article/2014/11/13/predire-les-epidemies-avec-wikipedia_4523461_1651302.html>`_, Le Monde
@@ -169,6 +173,7 @@ Bibliographie
 * `Introduction to matplotlib <https://scipy-lectures.github.io/intro/matplotlib/matplotlib.html>`_
 * `Probabilistic Context-Free Grammars (PCFGs) <http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf>`_
 * `Ultimate guide for Data Exploration in Python using NumPy, Matplotlib and Pandas <http://www.analyticsvidhya.com/blog/2015/04/comprehensive-guide-data-exploration-sas-using-python-numpy-scipy-matplotlib-pandas/#One>`_
+* `A Visual Introduction to Machine Learning <http://www.r2d3.us/visual-intro-to-machine-learning-part-1/>`_
 
 **MOOC**
 
@@ -208,6 +213,8 @@ Bibliographie
 
 * `scikit-learn <http://scikit-learn.org/stable/index.html>`_
 * `Vowpal Wabbit <https://github.com/JohnLangford/vowpal_wabbit/wiki>`_
+* `theano <http://deeplearning.net/software/theano/>`_
+* `xgboost <https://github.com/dmlc/xgboost>`_
 * `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
 
 **Compétition de code**
@@ -254,4 +261,6 @@ Séances passées
     specials/algorithm_culture
     entretiens
 
-    
+.. [#fwrite1] Contributeur, encadrant et coordinateur du cours.
+
+.. [#fwrite2] Contributeur, encadrant.

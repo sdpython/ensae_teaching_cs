@@ -2,7 +2,7 @@
 ENSAE 2A - Programmation
 ========================
 
-.. revealjs:: ENSAE 2A - Données, Python pour un Data Scientist
+.. revealjs:: ENSAE 2A - Python pour un Data Scientist
 
     .. image:: _static/project_ico.png
 
