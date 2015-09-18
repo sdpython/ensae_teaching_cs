@@ -374,6 +374,7 @@ Liste des sujets cités
 #. Finance : :ref:`l-fi-ml`
 #. Simulation : :ref:`l-sim-segre`
 #. Simulation : :ref:`l-sim-panique`
+#. Simulation : :ref:`l-sim-social`
 #. Technique : :ref:`l-tech-smart`
 #. Technique : :ref:`l-tech-domo`
 #. Algo génétique : :ref:`l-gen-optim`

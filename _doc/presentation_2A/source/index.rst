@@ -32,9 +32,11 @@ ENSAE 2A - Programmation
         
     .. revealjs:: Bio 1/3
     
-        **Elodie Royant** a travaillé chez `MAPP <http://www.mapp-economics.com/fr/>`_ pendant 5 ans
-        et est data scientist chez `oscaro <http://www.oscaro.com/>`_ sur des problématiques
-        temps réel.
+        **Elodie Royant** a travaillé 6 ans chez `MAPP <http://www.mapp-economics.com/fr/>`_, 
+        un cabinet d’expertise en économie de la concurrence. Elle est actuellement Data Scientist chez `Oscaro.com <http://www.oscaro.com/>`_,
+        un e-commerçant spécialisé dans la ventes de pièces détachées pour voiture. 
+        Elle est en charge de l'optimisation de l'acquisition de trafic sur le site (payant et gratuit) 
+        et de la mesure des actions marketing.
     
         **Antoine Thabault** a travaillé pendant 3 ans en finance, en particulier sur des problématiques 
         de trading algorithmique et de trading haute fréquence. Il est actuellement Data Scientist chez 

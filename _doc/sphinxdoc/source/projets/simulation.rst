@@ -1,4 +1,4 @@
-﻿
+
 .. _l-simulation:
 
 Simulations économiques, sociales
@@ -45,3 +45,25 @@ cas de panique par exemple.
 
 On pourra commencer par simuler une foule au repos dans une salle carrée avec une seule issue
 puis à créer un mouvement panique (un incendie par exemple).
+
+
+.. _l-sim-social:
+
+Simuler l'évolution d'un réseau social
+--------------------------------------
+
+Le projet consiste dans un premier temps à simuler l'évolution d'un réseau social
+`Evolving Social Networks via FriendRecommendations <http://arxiv.org/abs/1509.05160>`_.
+On cherchera à voir jusqu'où on peut aller avec un seul ordinateur.
+
+Dans un second temps, on utilisera le réseau simulé pour étudier la propagation d'un
+*tweet* ou d'un *like* au sein du réseau, de quantifier la propagation,
+le nombre de personnes atteinte, de se poser des questions comme :
+
+* Est-ce que cela dépend du point de départ ?
+* Est-ce que cela dépend tu taux de connexion ?
+
+On pourra mélanger différents types de profils tels que les "retweeter", 
+les jamais connectés...
+
+
