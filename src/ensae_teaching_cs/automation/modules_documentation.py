@@ -5,7 +5,12 @@
 
 import pandas
 
-from pymyinstall.packaged import ensae_fullset, classifiers2string
+from pymyinstall.packaged import ensae_fullset
+try:
+    from pymyinstall.packaged import classifiers2string
+except ImportError as e :
+    import pymyinstall
+    raise ImportError("unable to import classifiers2string from {}".format(pymyinstall.__file__)) from e
 from pyquickhelper import df2rst
 
 
