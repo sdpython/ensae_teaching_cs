@@ -33,6 +33,6 @@ if __name__ == "__main__":
                      download_only=False,
                      no_setup=False,
                      last_function=last_function,
-                     selection={"R", "VS"},
+                     selection={"R", "VS", "tdm"},
                      documentation=False,
                      fLOG=fLOG)
