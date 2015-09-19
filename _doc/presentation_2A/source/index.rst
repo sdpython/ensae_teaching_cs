@@ -30,7 +30,7 @@ ENSAE 2A - Programmation
         * Dominique Poudevigne
         * Gaël Varoquaux
         
-    .. revealjs:: Bio 1/3
+    .. revealjs:: Bio 1/4
     
         **Elodie Royant** a travaillé 6 ans chez `MAPP <http://www.mapp-economics.com/fr/>`_, 
         un cabinet d’expertise en économie de la concurrence. Elle est actuellement Data Scientist chez `Oscaro.com <http://www.oscaro.com/>`_,
@@ -44,22 +44,37 @@ ENSAE 2A - Programmation
         une start-up française qui aide les éditeurs de contenu en ligne à vendre efficacement leurs espaces 
         publicitaires dans le cadre d'enchères en temps réel.
         
-    .. revealjs:: Bio 2/3
+    .. revealjs:: Bio 2/4
     
         **Jérémie Jakubowicz** est chercheur et professeur à l'ENSAE et à Télécom SudParis.
         Il publie dans le domaine des statistiques, du traitement du signal et des images.
         
         **Xavier Dupré** est ingénieur chez Microsoft et professeur à l'ENSAE.
         
-        ** Nicolas Pousset** 
+        Après 8 ans d'expérience en temps qu'expert informatique dans différents domaine 
+        (informatique scientifique et optimisation pour GdfSuez, 
+        gestion de système temps réels à fort volumétrie de donnée pour Amadeus), 
+        **Nicolas Rousset** est depuis 1 an enseignant en informatique à l'ISEP et 
+        consultant indépendant. A ce titre, il accompagne des petites structures 
+        dans leurs besoins en informatique et statistique, en leur offrant 
+        la pédagogie et la réalisation des logiciels répondant à leurs besoins.
     
-    .. revealjs:: Bio 3/3
+    .. revealjs:: Bio 3/4
     
-        **Anoine Ly**
+        **Anoine Ly** commence sa thèse
         
         ** Dominique Poudevigne**
         
-        **Gaël Varoquaux**
+    .. revealjs:: Bio 4/4
+    
+        **Gaël Varoquaux** est chercheur à l'`INRIA <http://www.inria.fr/>`_, 
+        au sein de l'entité `Parietal <https://team.inria.fr/parietal/>`_,
+        chercheur associé à l'`INSERM <http://www.inserm.fr/>`_.
+        Il est également un des principaux contributeurs
+        de `sciki-learn <http://scikit-learn.org/stable/>`_,
+        `joblib <http://pythonhosted.org/joblib/>`_,
+        `mayavi <http://code.enthought.com/projects/mayavi/>`_,
+        `nilearn <http://nilearn.github.io/>`_.
     
     
         
@@ -95,29 +110,11 @@ ENSAE 2A - Programmation
         .. image:: _static/notsnap.png       
 
         La plupart des exemples sur Internet sont disponibles sous cette forme.
-        
-    .. revealjs:: Le langage Python et Machine Learning
-    
-        Pourquoi ?
-
-        * Le langage est open source et donc gratuit.
-        * Il fonctionne sur tous les OS (Windows, Linux, Mac, bientôt `IPad <http://computableapp.com/>`_).
-        * Il dispose de nombreuses extensions, il peut tout faire.
-        * Il est devenu une alternative intéressante pour un statisticien depuis 2013 et quelques modules :
-            * `pandas <http://pandas.pydata.org/>`_, `ipython <http://ipython.org/>`_, `matplotlib <http://matplotlib.org/>`_
-            * `numpy <http://www.numpy.org/>`_, `scikit-learn <http://scikit-learn.org/stable/>`_, `statsmodels <http://statsmodels.sourceforge.net/devel/index.html>`_
-        * Les notebooks se répandent à grande vitesse : `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_.
-        
+                
     .. revealjs:: Liens
 
         * `Contenu du cours <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_2a.html>`_
-        * `Blog <http://www.xavierdupre.fr/blog/xd_blog_nojs.html>`_
-        * `Bibliographie <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/biblio.html>`_
-        * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
-        * `Python pour un Data Scientist <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/data2a.html>`_
-        * `Modules et outils pour développer <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/manytools.html>`_
-        * `Coding Party à l'ENSAE <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/coding_party.html>`_
-        * `Evénements, ressources <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/ressources.html>`_
+        * `ENSAE, Python Setup <http://www.xavierdupre.fr/enseignement/>`_
 
     .. revealjs:: Contributions
 
@@ -134,72 +131,12 @@ ENSAE 2A - Programmation
             
         Vous pouvez participer.
         
-.. revealjs:: 
-
-    .. revealjs:: Python à l'ENSAE
-
-        * Le système d'exploitation est Windows.
-        * L'environnement est installé pour vous.
-        * Vous pouvez appliquer le même `setup <http://www.xavierdupre.fr/enseignement/>`_ 
-          chez vous.
-        
-    .. revealjs:: Python chez vous
-
-        * Le système d'exploitation est celui que vous choisissez (Windows, Linux, Mac).
-        
-            * Windows : `setup <http://www.xavierdupre.fr/enseignement/>`_ fourni
-            * Linux/Mac : Anaconda + une liste de modules à Installer
-
-        * Lire `Getting started <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html#getting-started>`_.
-        * Vous devriez avoir installé Python dès les premières séances.
-        
-    .. revealjs:: Version de Python
-    
-        * Le cours est construit pour la version 3.4+.
-        * Les exemples ne marcheront pas tous sur la version 2.7.
-        * Il faut choisir la version *amd64*. C'est la seule capable de tirer parti d'une mémoire de plus de 4 Go.
-        
-    .. revealjs:: Utiliser Internet
-    
-        Quand on ne sait pas, il suffit d'utiliser un moteur de recherche et de chercher :
-        
-            python + question
-            
-        *en anglais de préférence*
-            
-        Example :  `python pandas dataframe merge <https://duckduckgo.com/?q=python+pandas+dataframe+merge&ia=qa>`_
-        
-    .. revealjs:: Notebook
-    
-            * Ils mélangent code, texte, formules, tableaux, graphiques.
-            * Ils sont convertibles au format HTML, Latex.
-            
-            * Ils sont pratiques pour garder la trace d'une série de petites étapes pour une étude scientifique.
-            * Ils ne sont pas pratiques pour écrire de longs programmes.
-
     .. revealjs:: Notebook example
     
         `Jupyter <https://jupyter.org/>`_
     
         .. image:: _static/notsnap.png        
-        
-    .. revealjs:: Editeur 
-    
-        On n'écrit pas de modules ou de grands programmes dans un notebook. Il faut un éditeur.
-        Il existe de nombreuses options :
-            
-            * `éditeurs, outils <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/devtools.html#l-devtools>`_
-        
-        La version gratuite de `PyCharm <http://www.jetbrains.com/pycharm/>`_ contient tout ce qu'il faut.
-        Il détecte quelques erreurs avant l'exécution.
-        Le débuggeur de `PyTools (Visual Studio) <https://pytools.codeplex.com/>`_ est très efficace.
-        
-    .. revealjs:: Scite
-    
-        `Scite <http://www.scintilla.org/SciTE.html>`_
-        
-        .. image:: _static/scite.png
-        
+                
     .. revealjs:: Spyder
     
         `Spyder <https://pythonhosted.org/spyder/>`_
@@ -252,13 +189,13 @@ ENSAE 2A - Programmation
     
         * distribuer pour aller plus vite
         * CPU - sur plusieurs machines ou threads (avec IPython)
-        * GPU - Monte Carlo - *non abordé cette année*
         
         ...
         
         **Module de référence**
         
-        `dask <http://dask.pydata.org/en/latest/>`_
+        `dask <http://dask.pydata.org/en/latest/>`_, 
+        `joblib <https://pythonhosted.org/joblib/>`_
     
     .. revealjs:: Visualisation
         
@@ -283,18 +220,30 @@ ENSAE 2A - Programmation
         **Module de référence**
     
         * `scikit-learn <http://scikit-learn.org/stable/>`_, `statsmodels <http://statsmodels.sourceforge.net/devel/index.html>`_
-        
-        Gaël Varoquaux (`INRIA <http://www.inria.fr/>`_) viendra présenter ce module en tant que principal contributeur le 6 Octobre à 11h.
-    
+            
     .. revealjs:: Deep Learning
     
-        * Vision, apprentissage
+        * Vision, apprentissage, GPU
     
         ...
     
         **Module de référence**
     
         * `theano <http://deeplearning.net/software/theano/>`_
+        
+    .. revealjs:: Workflow
+    
+        * Automatisation
+    
+        ...
+    
+        **Module de référence**
+    
+        * `luigi <https://pypi.python.org/pypi/luigi>`_
+        
+        .. image:: https://raw.githubusercontent.com/spotify/luigi/master/doc/user_recs.png
+            :width: 500px
+            :target: https://raw.githubusercontent.com/spotify/luigi/master/doc/user_recs.png
         
     .. revealjs:: Algorithmie
     
@@ -309,6 +258,7 @@ ENSAE 2A - Programmation
         **Module de référence**
         
         Vous
+    
     
 .. revealjs:: Les données comme terrain de jeu
         
@@ -378,6 +328,8 @@ ENSAE 2A - Programmation
         
 
 .. revealjs:: 
+
+        `Le parcours de l'échiquier <http://lesenfantscodaient.fr/programmation/parcours_echiquier.html>`_
     
         `Séance 1 : données et graphes en quelques lignes <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td2a_cenonce_session_1.html>`_
         
