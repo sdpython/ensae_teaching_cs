@@ -27,6 +27,7 @@ ENSAE 2A - Programmation
         * Jérémie Jakubowicz (ENSAE 2002)
         * Nicolas Pousset
         * Antoine Ly (ENSAE 2015)
+        * Anoine Guillot (ENSAE 2015)
         * Dominique Poudevigne
         * Gaël Varoquaux
         
@@ -46,11 +47,6 @@ ENSAE 2A - Programmation
         
     .. revealjs:: Bio 2/4
     
-        **Jérémie Jakubowicz** est chercheur et professeur à l'ENSAE et à Télécom SudParis.
-        Il publie dans le domaine des statistiques, du traitement du signal et des images.
-        
-        **Xavier Dupré** est ingénieur chez Microsoft et professeur à l'ENSAE.
-        
         Après 8 ans d'expérience en temps qu'expert informatique dans différents domaine 
         (informatique scientifique et optimisation pour GdfSuez, 
         gestion de système temps réels à fort volumétrie de donnée pour Amadeus), 
@@ -58,13 +54,19 @@ ENSAE 2A - Programmation
         consultant indépendant. A ce titre, il accompagne des petites structures 
         dans leurs besoins en informatique et statistique, en leur offrant 
         la pédagogie et la réalisation des logiciels répondant à leurs besoins.
-    
+        
+        ** Dominique Poudevigne** à venir
+        
     .. revealjs:: Bio 3/4
     
-        **Anoine Ly** commence sa thèse
+        Actuaire diplômé en 2015, **Antoine Ly** a suivi le Master Données Apprentissage Connaissance de Jussieu 
+        en parallèle de ma troisième année à l'ENSAE ParisTech. 
+        Je travaille actuellement chez Milliman en tant que consultant dans l'équipe 
+        Recherche et Développement sur des problématiques de Machine Learning / Big Data appliquées 
+        à l'assurance et suis sur le point de commencer une thèse CIFRE en apprentissage statistique. 
         
-        ** Dominique Poudevigne**
-        
+        **Antoine Guillot** (à venir)
+    
     .. revealjs:: Bio 4/4
     
         **Gaël Varoquaux** est chercheur à l'`INRIA <http://www.inria.fr/>`_, 
@@ -77,6 +79,11 @@ ENSAE 2A - Programmation
         `nilearn <http://nilearn.github.io/>`_.
     
     
+        **Jérémie Jakubowicz** est chercheur et professeur à l'ENSAE et à Télécom SudParis.
+        Il publie dans le domaine des statistiques, du traitement du signal et des images.
+        
+        **Xavier Dupré** est ingénieur chez Microsoft et professeur à l'ENSAE.
+        
         
         
 .. revealjs:: 
