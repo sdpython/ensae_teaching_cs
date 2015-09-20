@@ -31,7 +31,7 @@ ENSAE 2A - Programmation
     .. revealjs:: Bio 1/4
     
         **Elodie Royant** a travaillé 6 ans chez `MAPP <http://www.mapp-economics.com/fr/>`_, 
-        un cabinet d’expertise en économie de la concurrence. Elle est actuellement Data Scientist chez `Oscaro.com <http://www.oscaro.com/>`_,
+        un cabinet d'expertise en économie de la concurrence. Elle est actuellement Data Scientist chez `Oscaro.com <http://www.oscaro.com/>`_,
         un e-commerçant spécialisé dans la ventes de pièces détachées pour voiture. 
         Elle est en charge de l'optimisation de l'acquisition de trafic sur le site (payant et gratuit) 
         et de la mesure des actions marketing.
@@ -52,7 +52,12 @@ ENSAE 2A - Programmation
         dans leurs besoins en informatique et statistique, en leur offrant 
         la pédagogie et la réalisation des logiciels répondant à leurs besoins.
         
-        ** Dominique Poudevigne** à venir
+        **Dominique Poudevigne**, ingénieur Supaéro de formation, a eu un parcours varié depuis 1992 : 
+        banquier et ingénieur financier dans les marchés de capitaux, 
+        consultant en gestion des risques financiers, CTO et fondateur de startup 
+        internet et enfin informaticien en banque d'investissement. 
+        Il n'a jamais quitté sa passion pour l'IT qui l'a emporté il y a très longtemps, 
+        quand Microsoft venait à peine de fêter son premier million de dollars de chiffre d'affaires.
         
     .. revealjs:: Bio 3/4
     
@@ -79,7 +84,7 @@ ENSAE 2A - Programmation
         **Jérémie Jakubowicz** est chercheur et professeur à l'ENSAE et à Télécom SudParis.
         Il publie dans le domaine des statistiques, du traitement du signal et des images.
         
-        **Xavier Dupré** est ingénieur chez Microsoft et professeur à l'ENSAE.
+        **Xavier Dupré** est ingénieur chez Microsoft et professeur à l'ENSAE depuis 2003.
         
         
         
