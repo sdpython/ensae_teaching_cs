@@ -6,10 +6,7 @@ ENSAE 2A - Programmation
 
     .. image:: _static/project_ico.png
 
-    Antoine Thabault -
-    Nicolas Rousset -
-    Jérémie Jakubowicz -
-    `Xavier Dupré <http://www.xavierdupre.fr/>`_ 
+    `Xavier Dupré <http://www.xavierdupre.fr/>`_ (professeur)
 
     **Assistant à l'ENSAE**
     
@@ -17,7 +14,7 @@ ENSAE 2A - Programmation
     
 .. revealjs:: 
     
-    .. revealjs:: Intervenants
+    .. revealjs:: Contributeurs et Intervenants
 
             **site, cours** `Xavier Dupré <http://www.xavierdupre.fr/>`_
 
@@ -27,7 +24,7 @@ ENSAE 2A - Programmation
         * Jérémie Jakubowicz (ENSAE 2002)
         * Nicolas Pousset
         * Antoine Ly (ENSAE 2015)
-        * Anoine Guillot (ENSAE 2015)
+        * Antoine Guillot (ENSAE 2015)
         * Dominique Poudevigne
         * Gaël Varoquaux
         
