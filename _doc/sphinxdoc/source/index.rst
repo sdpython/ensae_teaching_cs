@@ -133,7 +133,9 @@ les modules un par un.
 
 **Windows**
 
-Le plus simple est d'utiliser la distribution fournie par l'école et de la compléter si besoin. 
+Le plus simple est d'utiliser la distribution préparée pour ces enseignements
+`ENSAE Python Setup <http://www.xavierdupre.fr/enseignement/>`_
+et de la compléter si besoin. 
 La page :ref:`l-data2a` décrit tous les modules qu'elle contient.
 Les modules peuvent être mis à jour avec l'instruction ``Scripts/pymy_update`` qui vient 
 avec l'installation du module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_.
@@ -147,7 +149,7 @@ s'il est disponible. S'il ne l'est pas, l'installation du module est réservée 
 **Linux / Mac**
 
 `Anaconda <https://store.continuum.io/cshop/anaconda/>`_ est la distribution la plus répandue : 
-`Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac). 
+`Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac). Choisir **I want Python 3.4**.
 
 Sous Linux ou Mac, la distribution n'interfère pas avec la distribution existante
 souvent différente. C'est un point très appréciable. Les modules de la distribution ne sont 
@@ -157,7 +159,7 @@ depuis le répertoire ``Anaconda3/Scripts``.
 
 **Installation existante ou 32 bit**
 
-Aucune distribution pour les vieux ordinateurs n'a été préparées (32 bit) mais il est facile
+Aucune distribution pour les vieux ordinateurs n'a été préparée (32 bit) mais il est facile
 d'en préparer une ou de la mettre à jour en trois étapes depuis le répertoire *Scripts* ::
 
     pip install pymyinstall --upgrade
