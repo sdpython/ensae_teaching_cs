@@ -3,13 +3,16 @@ copy the documentation to the website
 """
 import sys
 import os
-sys.path.append(r"../pyquickhelper/src")
-sys.path.append(r"../pyensae/src")
-sys.path.append(r"../ensae_teaching_cs/src")
+sys.path.append("../pyquickhelper/src")
+sys.path.append("../pyensae/src")
+sys.path.append("../ensae_teaching_cs/src")
 
-from ensae_teaching_cs.automation.jenkins_helper import setup_jenkins_server, JenkinsExt
+from pyquickhelper import fLOG
+from ensae_teaching_cs.automation.jenkins_helper import setup_jenkins_server, JenkinsExt, engines_default
 
-js = JenkinsExt('http://localhost:8080/', None, None)
+
+js = JenkinsExt('http://localhost:8080/', None, None,
+                fLOG=fLOG, engines=engines_default)
 
 if True:
     setup_jenkins_server(js,
@@ -17,7 +20,7 @@ if True:
                          overwrite=True,
                          location=r"c:\\jenkins\\pymy")
 
-if True:
+if False:
     setup_jenkins_server(js,
                          fLOG=print,
                          overwrite=True,

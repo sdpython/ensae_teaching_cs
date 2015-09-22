@@ -35,25 +35,38 @@ this = os.path.abspath(os.path.dirname(__file__))
 
 projects = []
 for module in [
+        "anaconda2_pyquickhelper_27",
         "pyquickhelper",
         "pyensae",
+        "anaconda2_pymyinstall_27",
         "pymyinstall",
         "pysqllike",
         "pyrsslocal",
         "pymmails",
-        "python_project_template",
+        "anaconda2_python3_module_template_27",
+        "python3_module_template",
         "actuariat_python",
         "code_beatrix",
-        "ensae_teaching_cs",
-]:
+        "ensae_teaching_cs"]:
 
-    root = os.path.abspath(location % module)
-    root_web = rootw2 if module == "code_beatrix" else rootw % module
-    project = dict(status_file=os.path.join(this, "status_%s.txt" % module),
-                   local=root,
-                   root_local=root,
-                   root_web=root_web)
-    projects.append(project)
+    if module.endswith("27"):
+        root = os.path.abspath(location % (module + "\\dist_module27"))
+        root = os.path.join(root, "..")
+        for f in os.listdir(root):
+            ext = os.path.splitext(f)[-1]
+            if ext in [".whl"]:
+                dest = module.replace("anaconda2_", "").replace("_27", "")
+                dest = location % dest
+                dest = os.path.join(dest, "..")
+                shutil.copy(os.path.join(root, f), dest)
+    else:
+        root = os.path.abspath(location % module)
+        root_web = rootw2 if module == "code_beatrix" else rootw % module
+        project = dict(status_file=os.path.join(this, "status_%s.txt" % module),
+                       local=root,
+                       root_local=root,
+                       root_web=root_web)
+        projects.append(project)
 
     # others versions
     if module == "ensae_teaching_cs":

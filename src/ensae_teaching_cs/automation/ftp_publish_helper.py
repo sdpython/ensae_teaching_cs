@@ -279,3 +279,127 @@ def publish_documentation(
             fftp.start_transfering()
 
     ftp.close()
+
+
+def publish_teachings_to_web(
+    login,
+    ftpsite="ftp.xavierdupre.fr",
+    google_id=None,
+    location="C:\\jenkins\\pymy\\%s\\dist\\html",
+    rootw="/www/htdocs/app/%s/helpsphinx",
+    rootw2="/lesenfantscodaient.fr",
+    folder_status=".",
+    modules=["anaconda2_pyquickhelper_27",
+             "pyquickhelper",
+             "pyensae",
+             "anaconda2_pymyinstall_27",
+             "pymyinstall",
+             "pysqllike",
+             "pyrsslocal",
+             "pymmails",
+             "anaconda2_python3_module_template_27",
+             "python3_module_template",
+             "actuariat_python",
+             "code_beatrix",
+             "ensae_teaching_cs"]
+):
+    """
+    copy the documentation to the website
+
+    @param      login           login
+    @param      ftpsite         ftp site
+    @param      google_id       google_id
+    @param      location        location of Jenkins build
+    @param      rootw           root on ftp site
+    @param      rootw2          root for ``lesenfantscodaient.fr``
+    @param      folder_status   folder status
+    @param      modules         list of modules to publish
+    """
+    import sys
+    import os
+    import shutil
+    from pyquickhelper import TransferFTP, FileTreeNode, FolderTransferFTP, open_window_params
+    from ensae_teaching_cs.automation.ftp_publish_helper import publish_documentation
+
+    if google_id is None:
+        google_id = ""
+    else:
+        footer = """
+        <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        _uacct = "{}";
+        urchinTracker();
+        </script>
+        """.format(google_id)
+
+    params = {"password": ""}
+    params = open_window_params(
+        params, title="password", help_string="password", key_save="my_password")
+    password = params["password"]
+
+    location = os.path.abspath()
+    folder_status = os.path.abspath(os.path.dirname(__file__))
+
+    projects = []
+    for module in modules:
+
+        if module.endswith("27"):
+            # C:\jenkins\pymy\anaconda2_pyquickhelper_27\dist_module27\dist
+            root = os.path.abspath(location % (module + "\\dist_module27"))
+            root = os.path.join(root, "..")
+            for f in os.listdir(root):
+                ext = os.path.splitext(f)[-1]
+                if ext in [".whl"]:
+                    dest = module.replace("anaconda2_", "").replace("_27", "")
+                    dest = location % dest
+                    dest = os.path.join(dest, "..")
+                    shutil.copy(os.path.join(root, f), dest)
+        else:
+            root = os.path.abspath(location % module)
+            if module != "code_beatrix":
+                rw =  rootw % module.replace("_no_clean", "") \
+                                    .replace("anaconda2_", "") \
+                                    .replace("_27", "")
+            else:
+                rw = rootw2
+            project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
+                           local=root,
+                           root_local=root,
+                           root_web=rw)
+            projects.append(project)
+
+    # doc
+
+    project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
+                   local=root.replace("\\html", "\\html2"),
+                   root_local=root.replace("\\html", "\\html2"),
+                   root_web=(rootw % module).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx2"))
+    projects.append(project)
+
+    root = os.path.abspath(location % module)
+    project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
+                   local=root.replace("\\html", "\\html3"),
+                   root_local=root.replace("\\html", "\\html3"),
+                   root_web=(rootw % module).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
+    projects.append(project)
+
+    # pres
+
+    for suffix in ["", "_2A", "_3A", "_1Ap"]:
+        root = os.path.abspath(location % module)
+        project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
+                       local=root.replace("\\html", "\\html_pres" + suffix),
+                       root_local=root.replace(
+                           "\\html", "\\html_pres" + suffix),
+                       root_web=(rootw % module).replace("/helpsphinx", "/pressphinx" + suffix).replace("_no_clean", ""))
+        print(project)
+        projects.append(project)
+
+    # publish
+
+    publish_documentation(projects,
+                          ftpsite=ftpsite,
+                          login=login,
+                          password=password,
+                          key_save="my_module_password",
+                          footer_html=footer)

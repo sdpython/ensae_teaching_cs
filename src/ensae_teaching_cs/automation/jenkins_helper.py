@@ -8,15 +8,26 @@ import sys
 from pyquickhelper import noLOG
 
 
+engines_default = dict(anaconda2="c:\\Anaconda",
+                       anaconda3="c:\\Anaconda3",
+                       py35="c:\\Python35_x64",
+                       default="c:\\Python34_x64",
+                       winpython="c:\\APythonENSAE\\python")
+
+
 def setup_jenkins_server(js,
                          github="sdpython",
                          modules=[  # update anaconda
-                                    ("standalone [conda_update]",
+                                    ("standalone [conda_update] [anaconda3]",
                                      "H H(0-1) * * 0"),
-                                    "standalone [conda_update27]",
+                                    "standalone [conda_update] [anaconda2] [27]",
                                     "standalone [local_pypi]",
                                     "standalone [install]",
                                     "standalone [update]",
+                                    "standalone [install] [py35]",
+                                    "standalone [update] [py35]",
+                                    "standalone [install] [winpython]",
+                                    "standalone [update] [winpython]",
                              # pyquickhelper and others,
                              ("pyquickhelper", "H H(2-3) * * 0"),
                              ("pysqllike", None, dict(success_only=True)),
@@ -24,48 +35,70 @@ def setup_jenkins_server(js,
                              "pyquickhelper [27] [anaconda2]",
                              ["pyquickhelper [winpython]",
                                         "python3_module_template [27] [anaconda2]",
-                                        "pyquickhelper [anaconda]", ],
-                             "python3_module_template [anaconda]",
-                             "pysqllike [anaconda]",
-                             "pymmails [anaconda]",
+                                        "pyquickhelper [anaconda3]", ],
+                             "python3_module_template [anaconda3]",
+                             "pysqllike [anaconda3]",
+                             "pymmails [anaconda3]",
                              ["pymyinstall", "pyensae"],
                              ["pymmails", "pyrsslocal", ],
-                             ["pyensae [anaconda]", "pyensae [winpython]",
-                                        "pyrsslocal [anaconda]",
+                             ["pyensae [anaconda3]", "pyensae [winpython]",
+                                        "pyrsslocal [anaconda3]",
                                         "pyrsslocal [winpython]"],
                              ["pymyinstall [27] [anaconda2]",
                                  "pymyinstall [LONG]"],
                              # update, do not move, it depends on pyquickhelper
                              ("pymyinstall [update_modules]",
                                         "H H(0-1) * * 5"),
+                             # py35
+                             ("pyquickhelper [py35]", "H H(2-3) * * 1"),
+                             ["pysqllike [py35]", "pymmails [py35]",
+                                        "python3_module_template [py35]", "pymyinstall [py35]"],
+                             "pyensae [py35]",
+                             "pyrsslocal [py35]",
                              # actuariat
                              [("actuariat_python", "H H(4-5) * * 0")
                               ],
                              [("actuariat_python [winpython]", None, dict(success_only=True)),
-                                        "actuariat_python [anaconda]"],
+                                        "actuariat_python [anaconda3]", "actuariat_python [py35]"],
                              "actuariat_python [LONG]",
                              ["actuariat_python [LONG] [winpython]",
-                                        "actuariat_python [LONG] [anaconda]"],
+                                        "actuariat_python [LONG] [anaconda3]", "actuariat_python [LONG] [py35]"],
                              # code_beatrix
                              ("code_beatrix", "H H(4-5) * * 0"),
                              [("code_beatrix [winpython]", None, dict(success_only=True)),
-                                        "code_beatrix [anaconda]"],
+                                        "code_beatrix [anaconda3]", "code_beatrix [py35]"],
                              # teachings
                              ("ensae_teaching_cs",
                                         "H H(5-6) * * 0"),   # 1.5h
                              # 1.5h
                              ("ensae_teaching_cs [winpython]", None, dict(
                                  success_only=True)),
-                             "ensae_teaching_cs [anaconda]",   # 1.5h
-                             "ensae_teaching_cs [SKIP]",        # 1h
-                             "ensae_teaching_cs [LONG]",        # 1h
+                             "ensae_teaching_cs [anaconda3]",   # 1.5h
+                             "ensae_teaching_cs [py35]",        # 1.5h
+                             ["ensae_teaching_cs [SKIP]",        # 1h
+                                        "ensae_teaching_cs [LONG]",        # 1h
+                                        # 1h
+                                        "ensae_teaching_cs [LONG] [winpython]",
+                                        # 1h
+                                        "ensae_teaching_cs [SKIP] [winpython]",
+                                        # 1h
+                                        "ensae_teaching_cs [LONG] [anaconda3]",
+                                        # 1h
+                                        "ensae_teaching_cs [SKIP] [anaconda3]",
+                                        # 1h
+                                        "ensae_teaching_cs [LONG] [py35]",
+                                        # 1h
+                                        "ensae_teaching_cs [SKIP] [py35]",
+                              ]
                              # 3h
                              ("ensae_teaching_cs [custom_left]",
                                         "H H(10-11) * * 3"),
                              # 3h
                              "ensae_teaching_cs [winpython] [custom_left]",
                              # 3h
-                             "ensae_teaching_cs [anaconda] [custom_left]",
+                             "ensae_teaching_cs [anaconda3] [custom_left]",
+                             # 3h
+                             "ensae_teaching_cs [py35] [custom_left]",
                              # documentation
                              ("pyquickhelper [doc]", "H H(3-4) * * 1"),
                              ["pymyinstall [doc]", "pysqllike [doc]", "pymmails [doc]",
@@ -80,10 +113,6 @@ def setup_jenkins_server(js,
                                  "code_beatrix [setup]"],
                              "ensae_teaching_cs [setup]",
                          ],
-                         pythonexe=os.path.dirname(sys.executable),
-                         winpython=r"C:\WinPython-64bit-3.4.3.2FlavorRfull\python-3.4.3.amd64",
-                         anaconda=r"c:\Anaconda3",
-                         anaconda2=r"c:\Anaconda2",
                          overwrite=False,
                          location=None,
                          no_dep=False,
@@ -107,9 +136,6 @@ def setup_jenkins_server(js,
     @param      modules                 modules for which to generate the
     @param      get_jenkins_script      see `get_jenkins_script <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/jenkinshelper/jenkins_server.html?highlight=get_jenkins_script#pyquickhelper.jenkinshelper.jenkins_server.JenkinsExt.get_jenkins_script>`_
                                         (default value if this parameter is None)
-    @param      pythonexe               location of Python (unused)
-    @param      winpython               location of WinPython (or None to skip)
-    @param      anaconda                location of Anaconda (or None to skip)
     @param      overwrite               do not create the job if it already exists
     @param      location                None for default or a local folder
     @param      no_dep                  if True, do not add dependencies
@@ -137,29 +163,29 @@ def setup_jenkins_server(js,
                     # pyquickhelper and others,
                    ("pyquickhelper", "H H(10-11) * * 0"),
                     "pymyinstall",
-                  ["pyquickhelper [anaconda]", "pyquickhelper [winpython]",
+                  ["pyquickhelper [anaconda3]", "pyquickhelper [winpython]",
                       "pyquickhelper [27] [anaconda2]"],
                   ["pyensae", ],
                   ["pymmails", "pysqllike", "pyrsslocal", "pymyinstall [27] [anaconda2]",
-                   "python3_module_template", "pyensae [anaconda]", "pyensae [winpython]"],
-                  ["pymmails [anaconda]", "pysqllike [anaconda]", "pyrsslocal [anaconda]",
-                   "python3_module_template [anaconda]", "python3_module_template [27] [anaconda2]",
+                   "python3_module_template", "pyensae [anaconda3]", "pyensae [winpython]"],
+                  ["pymmails [anaconda3]", "pysqllike [anaconda3]", "pyrsslocal [anaconda3]",
+                   "python3_module_template [anaconda3]", "python3_module_template [27] [anaconda2]",
                    "pymyinstall [LONG]"],
                   # actuariat
                   [("actuariat_python", "H H(12-13) * * 0")],
                   ["actuariat_python [winpython]",
-                   "actuariat_python [anaconda]"],
+                   "actuariat_python [anaconda3]"],
                   # code_beatrix
                   ("code_beatrix", "H H(14-15) * * 0"),
                   ["code_beatrix [winpython]",
-                   "code_beatrix [anaconda]"],
+                   "code_beatrix [anaconda3]"],
                   # teachings
                   ("ensae_teaching_cs", "H H(15-16) * * 0"),
                   ["ensae_teaching_cs [winpython]",
-                   "ensae_teaching_cs [anaconda]"],
+                   "ensae_teaching_cs [anaconda3]"],
                   "ensae_teaching_cs [notebooks]",
                   ["ensae_teaching_cs [winpython] [notebooks]",
-                   "ensae_teaching_cs [anaconda] [notebooks]", ],
+                   "ensae_teaching_cs [anaconda3] [notebooks]", ],
                   ],
                   # documentation
                   ("pyquickhelper [doc]","H H(3-4) * * 1"),
@@ -178,9 +204,6 @@ def setup_jenkins_server(js,
         if True:
             js.setup_jenkins_server(github="sdpython",
                                 modules=modules,
-                                anaconda=r"C:\\Anaconda3",
-                                anaconda2=r"C:\\Anaconda2",
-                                winpython=r"C:\WinPython-64bit-3.4.3.2FlavorRfull\python-3.4.3.amd64",
                                 fLOG=print,
                                 overwrite = True,
                                 location = r"c:\\jenkins\\pymy")
@@ -205,10 +228,6 @@ def setup_jenkins_server(js,
     r = js.setup_jenkins_server(github=github,
                                 modules=modules,
                                 get_jenkins_script=None,
-                                pythonexe=pythonexe,
-                                winpython=winpython,
-                                anaconda=anaconda,
-                                anaconda2=anaconda2,
                                 overwrite=overwrite,
                                 location=location,
                                 no_dep=no_dep,
