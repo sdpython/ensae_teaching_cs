@@ -22,12 +22,12 @@ def setup_jenkins_server(js,
                                      "H H(0-1) * * 0"),
                                     "standalone [conda_update] [anaconda2] [27]",
                                     "standalone [local_pypi]",
-                                    "standalone [install]",
-                                    "standalone [update]",
-                                    "standalone [install] [py35]",
-                                    "standalone [update] [py35]",
-                                    "standalone [install] [winpython]",
-                                    "standalone [update] [winpython]",
+                                    #"standalone [install]",
+                                    #"standalone [update]",
+                                    #"standalone [install] [py35]",
+                                    #"standalone [update] [py35]",
+                                    #"standalone [install] [winpython]",
+                                    #"standalone [update] [winpython]",
                              # pyquickhelper and others,
                              ("pyquickhelper", "H H(2-3) * * 0"),
                              ("pysqllike", None, dict(success_only=True)),
@@ -49,6 +49,10 @@ def setup_jenkins_server(js,
                              # update, do not move, it depends on pyquickhelper
                              ("pymyinstall [update_modules]",
                                         "H H(0-1) * * 5"),
+                             "pymyinstall [update_modules] [winpython]",
+                             "pymyinstall [update_modules] [py35]",
+                             "pymyinstall [update_modules] [anaconda2]",
+                             "pymyinstall [update_modules] [anaconda3]",
                              # py35
                              ("pyquickhelper [py35]", "H H(2-3) * * 1"),
                              ["pysqllike [py35]", "pymmails [py35]",
@@ -89,7 +93,7 @@ def setup_jenkins_server(js,
                                         "ensae_teaching_cs [LONG] [py35]",
                                         # 1h
                                         "ensae_teaching_cs [SKIP] [py35]",
-                              ]
+                              ],
                              # 3h
                              ("ensae_teaching_cs [custom_left]",
                                         "H H(10-11) * * 3"),
@@ -124,9 +128,7 @@ def setup_jenkins_server(js,
                                        'ensae_teaching_cs': ['pyquickhelper', 'pyensae', 'pyrsslocal', 'pymmails'],
                                        'actuariat_python': ['pyquickhelper', 'pyensae', 'pyrsslocal', 'pymmails'],
                                        'code_beatrix': ['pyquickhelper', 'pyensae', 'pyrsslocal', 'pymmails'],
-                                       },
-                         platform=sys.platform,
-                         default_engine_paths=None):
+                                       }):
     """
     Set up many jobs on Jenkins
 
@@ -142,9 +144,7 @@ def setup_jenkins_server(js,
     @param      prefix                  add a prefix to the name
     @param      dependencies            some modules depend on others also being tested,
                                         this parameter gives the list
-    @param      platform                platform of the Jenkins server
     @param      fLOG                    logging function
-    @param      default_engine_paths    define the default location for python engine, should be dictionary *{ engine: path }*, see below.
     @return                             list of created jobs
 
     *modules* is a list defined as follows:
@@ -232,8 +232,5 @@ def setup_jenkins_server(js,
                                 location=location,
                                 no_dep=no_dep,
                                 prefix=prefix,
-                                fLOG=fLOG,
-                                dependencies=dependencies,
-                                platform=platform,
-                                default_engine_paths=default_engine_paths)
+                                dependencies=dependencies)
     return r

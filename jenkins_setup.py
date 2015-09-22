@@ -6,23 +6,25 @@ import os
 sys.path.append("../pyquickhelper/src")
 sys.path.append("../pyensae/src")
 sys.path.append("../ensae_teaching_cs/src")
+sys.path.append("../pymyinstall/src")
 
 from pyquickhelper import fLOG
-from ensae_teaching_cs.automation.jenkins_helper import setup_jenkins_server, JenkinsExt, engines_default
+from pyquickhelper.jenkinshelper import JenkinsExt
+from ensae_teaching_cs.automation.jenkins_helper import setup_jenkins_server, engines_default
 
+fLOG(OutputPrint=True)
+fLOG("start")
 
 js = JenkinsExt('http://localhost:8080/', None, None,
                 fLOG=fLOG, engines=engines_default)
 
 if True:
     setup_jenkins_server(js,
-                         fLOG=print,
                          overwrite=True,
                          location=r"c:\\jenkins\\pymy")
 
 if False:
     setup_jenkins_server(js,
-                         fLOG=print,
                          overwrite=True,
                          location=r"c:\\jenkins\\pymy_nodep",
                          no_dep=True,
