@@ -175,6 +175,7 @@ Bibliographie
 * `Probabilistic Context-Free Grammars (PCFGs) <http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf>`_
 * `Ultimate guide for Data Exploration in Python using NumPy, Matplotlib and Pandas <http://www.analyticsvidhya.com/blog/2015/04/comprehensive-guide-data-exploration-sas-using-python-numpy-scipy-matplotlib-pandas/#One>`_
 * `A Visual Introduction to Machine Learning <http://www.r2d3.us/visual-intro-to-machine-learning-part-1/>`_
+* `Mathematical optimization: finding minima of functions <http://scipy-lectures.github.io/advanced/mathematical_optimization/index.html>`_
 
 **MOOC**
 
