@@ -362,6 +362,7 @@ Liste des sujets cités
 #. ML algo : :ref:`l-ml-visage`
 #. ML algo : :ref:`l-ml-deepext`
 #. ML algo : :ref:`l-ml-align`
+#. ML algo : :ref:`l-fast-k-NN`
 #. Jeu 1 : :ref:`l-jeu-deuxmille`
 #. Jeu 1 : :ref:`l-jeuvoronoi`
 #. ML : :ref:`l-data-velib`

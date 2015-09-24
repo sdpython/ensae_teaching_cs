@@ -1,8 +1,8 @@
-﻿
+
 
 .. _l-projinfo:
 
-
+ 
 Projets informatiques
 =====================
 

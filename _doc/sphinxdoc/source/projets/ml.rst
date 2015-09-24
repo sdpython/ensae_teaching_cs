@@ -1,4 +1,4 @@
-﻿
+
 .. _l-ml:
 
 Machine Learning
@@ -153,3 +153,15 @@ L'algorithme est présentée dans l'article :
 de Simon Lacoste-Julien, Ben Taskar, Dan Klein, Michael I. Jordan.
 On pourra commencer sur un jeu de données petit et fabriqué manuellement. On pourra ensuite s'attaquer à
 des sites web qui proposent des traductions anglais/français de leur contenu.
+
+
+.. _l-fast-k-NN:
+
+Fast k-NN
+---------
+
+L'algorithme des `k plus proches voisins <https://fr.wikipedia.org/wiki/M%C3%A9thode_des_k_plus_proches_voisins>`_
+est un des plus simples algorithmes d'apprentissage mais très coûteux. L'article suivent propose une façon
+d'optimiser le calcul dans des espaces de grande dimension.
+
+`Fast k-NN search <http://arxiv.org/abs/1509.06957>`_
