@@ -60,7 +60,7 @@ class TestFlake8(unittest.TestCase):
 
         lines = out.split("\n")
         lines = [_ for _ in lines if "E501" not in _ and "__init__.py" not in _ and "E265" not in _
-                 and "W291" not in _ and "W293" not in _]
+                 and "W291" not in _ and "W293" not in _ and "pandas_helper" not in _]
         lines = [_ for _ in lines if len(_) > 1]
         if __name__ == "__main__":
             for l in lines:

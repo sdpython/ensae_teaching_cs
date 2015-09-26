@@ -315,10 +315,9 @@ def publish_teachings_to_web(
     @param      folder_status   folder status
     @param      modules         list of modules to publish
     """
-    import sys
     import os
     import shutil
-    from pyquickhelper import TransferFTP, FileTreeNode, FolderTransferFTP, open_window_params
+    from pyquickhelper import open_window_params
     from ensae_teaching_cs.automation.ftp_publish_helper import publish_documentation
 
     if google_id is None:
@@ -357,9 +356,8 @@ def publish_teachings_to_web(
         else:
             root = os.path.abspath(location % module)
             if module != "code_beatrix":
-                rw =  rootw % module.replace("_no_clean", "") \
-                                    .replace("anaconda2_", "") \
-                                    .replace("_27", "")
+                smod = module.replace("_no_clean", "").replace("anaconda2_", "").replace("_27", "")
+                rw = rootw % smod
             else:
                 rw = rootw2
             project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),

@@ -114,12 +114,13 @@ class TestJenkins(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-            
-        engines = dict(anaconda2="C:\\Anaconda2", anaconda3="C:\\Anaconda3",
-                        winpython="C:\\WinPython-64bit-3.4.2.3\\python-3.4.2.amd64",
-                        default="c:\\Python34_x64")
 
-        js = JenkinsExt('http://machine:8080/', "user", "password", mock=True, engines=engines, fLOG=fLOG)
+        engines = dict(anaconda2="C:\\Anaconda2", anaconda3="C:\\Anaconda3",
+                       winpython="C:\\WinPython-64bit-3.4.2.3\\python-3.4.2.amd64",
+                       default="c:\\Python34_x64")
+
+        js = JenkinsExt('http://machine:8080/', "user",
+                        "password", mock=True, engines=engines, fLOG=fLOG)
 
         if sys.platform.startswith("win"):
             res = setup_jenkins_server(js,
@@ -153,9 +154,6 @@ class TestJenkins(unittest.TestCase):
                        ]
 
             res = setup_jenkins_server(js,
-                                       anaconda=r"C:\\Anaconda3",
-                                       anaconda2=r"C:\\Anaconda2",
-                                       winpython=None,
                                        modules=modules,
                                        fLOG=fLOG,
                                        overwrite=True,

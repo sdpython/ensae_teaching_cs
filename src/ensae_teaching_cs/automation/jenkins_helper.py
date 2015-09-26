@@ -2,9 +2,6 @@
 @file
 @brief Set up a jenkins server with all the necessary job
 """
-import os
-import sys
-
 from pyquickhelper import noLOG
 
 
@@ -31,22 +28,23 @@ def setup_jenkins_server(js,
                              # pyquickhelper and others,
                              ("pyquickhelper", "H H(2-3) * * 0"),
                              ("pysqllike", None, dict(success_only=True)),
-                             ["python3_module_template", ],
-                             "pyquickhelper [27] [anaconda2]",
+                             ["python3_module_template",
+                                 "pyquickhelper [27] [anaconda2]"],
                              ["pyquickhelper [winpython]",
-                                        "python3_module_template [27] [anaconda2]",
-                                        "pyquickhelper [anaconda3]", ],
-                             "python3_module_template [anaconda3]",
-                             "pysqllike [anaconda3]",
-                             "pymmails [anaconda3]",
+                                 "python3_module_template [27] [anaconda2]", ],
                              ["pymyinstall", "pyensae"],
-                             ["pymmails", "pyrsslocal", ],
+                             ["pymmails", "pyrsslocal"],
+                             ["pymyinstall [27] [anaconda2]", "pymyinstall [LONG]"],
+                             # update, do not move, it depends on pyquickhelper
+                             ("pyquickhelper [anaconda3]", "H H(2-3) * * 1"),
+                             ["pyquickhelper [winpython]", "pysqllike [anaconda3]",
+                                        "pysqllike [winpython]", "python3_module_template [anaconda3]",
+                                        "python3_module_template [winpython]", "pymmails [anaconda3]",
+                                        "pymmails [winpython]", "pymyinstall [anaconda3]",
+                                        "pymyinstall [winpython]"],
                              ["pyensae [anaconda3]", "pyensae [winpython]",
                                         "pyrsslocal [anaconda3]",
                                         "pyrsslocal [winpython]"],
-                             ["pymyinstall [27] [anaconda2]",
-                                 "pymyinstall [LONG]"],
-                             # update, do not move, it depends on pyquickhelper
                              ("pymyinstall [update_modules]",
                                         "H H(0-1) * * 5"),
                              "pymyinstall [update_modules] [winpython]",
@@ -54,14 +52,13 @@ def setup_jenkins_server(js,
                              "pymyinstall [update_modules] [anaconda2]",
                              "pymyinstall [update_modules] [anaconda3]",
                              # py35
-                             ("pyquickhelper [py35]", "H H(2-3) * * 1"),
+                             ("pyquickhelper [py35]", "H H(2-3) * * 2"),
                              ["pysqllike [py35]", "pymmails [py35]",
                                         "python3_module_template [py35]", "pymyinstall [py35]"],
                              "pyensae [py35]",
                              "pyrsslocal [py35]",
                              # actuariat
-                             [("actuariat_python", "H H(4-5) * * 0")
-                              ],
+                             ("actuariat_python", "H H(4-5) * * 0"),
                              [("actuariat_python [winpython]", None, dict(success_only=True)),
                                         "actuariat_python [anaconda3]", "actuariat_python [py35]"],
                              "actuariat_python [LONG]",
@@ -69,31 +66,24 @@ def setup_jenkins_server(js,
                                         "actuariat_python [LONG] [anaconda3]", "actuariat_python [LONG] [py35]"],
                              # code_beatrix
                              ("code_beatrix", "H H(4-5) * * 0"),
-                             [("code_beatrix [winpython]", None, dict(success_only=True)),
-                                        "code_beatrix [anaconda3]", "code_beatrix [py35]"],
+                             ("code_beatrix [winpython]",
+                                        None, dict(success_only=True)),
+                             ["code_beatrix [anaconda3]", "code_beatrix [py35]"],
                              # teachings
-                             ("ensae_teaching_cs",
-                                        "H H(5-6) * * 0"),   # 1.5h
+                             ("ensae_teaching_cs", "H H(5-6) * * 0"),   # 1.5h
                              # 1.5h
-                             ("ensae_teaching_cs [winpython]", None, dict(
-                                 success_only=True)),
-                             "ensae_teaching_cs [anaconda3]",   # 1.5h
-                             "ensae_teaching_cs [py35]",        # 1.5h
-                             ["ensae_teaching_cs [SKIP]",        # 1h
-                                        "ensae_teaching_cs [LONG]",        # 1h
-                                        # 1h
-                                        "ensae_teaching_cs [LONG] [winpython]",
-                                        # 1h
-                                        "ensae_teaching_cs [SKIP] [winpython]",
-                                        # 1h
-                                        "ensae_teaching_cs [LONG] [anaconda3]",
-                                        # 1h
-                                        "ensae_teaching_cs [SKIP] [anaconda3]",
-                                        # 1h
-                                        "ensae_teaching_cs [LONG] [py35]",
-                                        # 1h
-                                        "ensae_teaching_cs [SKIP] [py35]",
-                              ],
+                             ["ensae_teaching_cs [SKIP]",
+                                 "ensae_teaching_cs [LONG]"],  # 1h ish
+                             ["ensae_teaching_cs [winpython]",
+                                        # 1.5h
+                                        "ensae_teaching_cs [anaconda3]",
+                                        "ensae_teaching_cs [py35]"],
+                             "ensae_teaching_cs [LONG] [winpython]",
+                             "ensae_teaching_cs [SKIP] [winpython]",
+                             "ensae_teaching_cs [LONG] [anaconda3]",
+                             "ensae_teaching_cs [SKIP] [anaconda3]",
+                             "ensae_teaching_cs [LONG] [py35]",
+                             "ensae_teaching_cs [SKIP] [py35]",
                              # 3h
                              ("ensae_teaching_cs [custom_left]",
                                         "H H(10-11) * * 3"),
