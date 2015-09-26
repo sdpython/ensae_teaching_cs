@@ -84,6 +84,9 @@ def clean_function_1a(code):
             'String.Join(",", a.Select(c=>c.ToString()).ToArray())',
             "# elle n'existe pas encore",
             "from ggplot import *",
+            "print(tab[i] + tab[i+1])",
+            "if n = 1:",
+            'y = "a" * 3 + 1',
             # ggplot calls method show and it opens window blocking the offline
             # execution
             ]
