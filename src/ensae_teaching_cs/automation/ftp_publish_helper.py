@@ -356,7 +356,8 @@ def publish_teachings_to_web(
         else:
             root = os.path.abspath(location % module)
             if module != "code_beatrix":
-                smod = module.replace("_no_clean", "").replace("anaconda2_", "").replace("_27", "")
+                smod = module.replace("_no_clean", "").replace(
+                    "anaconda2_", "").replace("_27", "")
                 rw = rootw % smod
             else:
                 rw = rootw2

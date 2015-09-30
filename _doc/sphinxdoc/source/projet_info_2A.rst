@@ -1,4 +1,4 @@
-﻿
+
 
 .. _l-projinfo2a:
 
@@ -139,6 +139,7 @@ Sources de jeux de données
   comme benchmark pour la libraire `libsvm <http://www.csie.ntu.edu.tw/~cjlin/libsvm/>`_
 * `Pascal Large Scale Learning Challenge <http://largescale.ml.tu-berlin.de/instructions/>`_
 * `Microsoft Research Letor <http://research.microsoft.com/en-us/um/beijing/projects/letor/letor4dataset.aspx>`_
+* Autres suggestions :ref:`l-datasources`.
 * Votre propre jeu de données (à valider avec l'encadrant).
 
 Questions

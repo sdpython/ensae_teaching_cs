@@ -35,6 +35,8 @@ Source de données
 * `Données Croix-Rouge sur les dons reçus <https://github.com/dataforgoodfr/croixrouge>`_
 * `Geonames <http://download.geonames.org/export/dump/>`_
 * `OpenWeatherMap <http://openweathermap.org/>`_
+* `Dépenses d'assurance maladie hors prestations hospitalières par caisse primaire/département <https://www.data.gouv.fr/fr/datasets/depenses-d-assurance-maladie-hors-prestations-hospitalieres-par-caisse-primaire-departement/>`_ (1 Go),
+  `La démographie des médecins (RPPS) <https://www.data.gouv.fr/fr/datasets/la-demographie-des-medecins-rpps/>`_
 
 .. index:: stackoverflow
 

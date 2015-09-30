@@ -49,10 +49,6 @@ sys.path.insert(
             "..",
             "pyrsslocal",
             "src")))
-import pyquickhelper
-import pyensae
-import pymmails
-import pyrsslocal
 
 from pyquickhelper.helpgen.default_conf import set_sphinx_variables
 
@@ -65,6 +61,13 @@ set_sphinx_variables(__file__,
                      None,
                      locals(),
                      add_extensions=None)
+
+# do not put it back otherwise sphinx import matplotlib before setting up its backend
+# for the sphinx command .. plot::
+# import pyquickhelper
+# import pyensae
+# import pymmails
+# import pyrsslocal
 
 project_var_name_t = "ENSAE<br />Xavier Dupré"
 project_var_name = "ensae_teaching_cs"
