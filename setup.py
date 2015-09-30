@@ -81,6 +81,7 @@ def is_local():
        "build_sphinx_one" in sys.argv or \
        "build_sphinx_catch" in sys.argv or \
        "unittests_all" in sys.argv or \
+       "copy_sphinx" in sys.argv or \
        "build_pres" in sys.argv or \
        "build_pres_2A" in sys.argv or \
        "build_pres_3A" in sys.argv or \
@@ -170,6 +171,8 @@ if is_local() and "build_sphinx" not in sys.argv and \
                                   "pyensae", "pyrsslocal", "pymyinstall"],
         requirements=["pyquickhelper", "pymmails",
                       "pyensae", "pyrsslocal", "pymyinstall"],
+        additional_local_path=["pyquickhelper", "pymmails",
+                               "pyensae", "pyrsslocal", "pymyinstall"],
         blog_list=os.path.abspath(os.path.join("src", project_var_name, package_data[project_var_name][0])))
 
     if "build_script" in sys.argv and sys.platform.startswith("win"):
@@ -184,7 +187,9 @@ if is_local() and "build_sphinx" not in sys.argv and \
             %pythonexe% -u setup.py build_pres_1Ap
             if %errorlevel% neq 0 exit /b %errorlevel%
             echo #######################################################
-
+            """.replace("            ", "")
+        
+        copy = """
             if not exist dist\\html_pres mkdir dist\\html_pres
             if not exist dist\\html_pres_2A mkdir dist\\html_pres_2A
             if not exist dist\\html_pres_3A mkdir dist\\html_pres_3A
@@ -200,12 +205,17 @@ if is_local() and "build_sphinx" not in sys.argv and \
             if %errorlevel% neq 0 exit /b %errorlevel%
             """.replace("            ", "")
 
+        # auto_setup_build_pres.bat
+
         path_exe = os.path.dirname(sys.executable)
         from pyquickhelper.pycode.windows_scripts import windows_prefix
         with open("auto_setup_build_pres.bat", "w") as f:
             f.write(windows_prefix.replace("__PY34_X64__", path_exe))
             f.write("\n")
             f.write(pres)
+            f.write(copy)
+            
+        # auto_unittest_setup_help.bat
 
         with open("auto_unittest_setup_help.bat", "r") as f:
             content = f.read()
@@ -222,13 +232,31 @@ if is_local() and "build_sphinx" not in sys.argv and \
                 if %errorlevel% neq 0 exit /b %errorlevel%
                 """.replace("                ", "")
 
-        content += "\n" + addition + "\n" + pres
+        content += "\n" + addition + "\n" + pres + copy
 
         with open("auto_unittest_setup_help.bat", "w") as f:
             f.write(content)
 
+        # auto_setup_unittests_left.bat
+
         with open("auto_setup_unittests_left.bat", "w") as f:
             f.write("auto_cmd_any_setup_command.bat custom_left default left")
+
+        # auto_setup_build_sphinx.bat
+
+        with open("auto_setup_build_sphinx.bat", "r") as f:
+            content = f.read()
+        content += "\n" + pres
+        with open("auto_setup_build_sphinx.bat", "w") as f:
+            f.write(content)
+
+        # auto_cmd_copy_sphinx.bat
+
+        with open("auto_cmd_copy_sphinx.bat", "r") as f:
+            content = f.read()
+        content += "\n" + copy
+        with open("auto_cmd_copy_sphinx.bat", "w") as f:
+            f.write(content)
 
 else:
     r = False
