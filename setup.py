@@ -188,7 +188,7 @@ if is_local() and "build_sphinx" not in sys.argv and \
             if %errorlevel% neq 0 exit /b %errorlevel%
             echo #######################################################
             """.replace("            ", "")
-        
+
         copy = """
             if not exist dist\\html_pres mkdir dist\\html_pres
             if not exist dist\\html_pres_2A mkdir dist\\html_pres_2A
@@ -214,7 +214,7 @@ if is_local() and "build_sphinx" not in sys.argv and \
             f.write("\n")
             f.write(pres)
             f.write(copy)
-            
+
         # auto_unittest_setup_help.bat
 
         with open("auto_unittest_setup_help.bat", "r") as f:
@@ -254,7 +254,7 @@ if is_local() and "build_sphinx" not in sys.argv and \
 
         with open("auto_cmd_copy_sphinx.bat", "r") as f:
             content = f.read()
-        content += "\n" + copy
+        content += "\n" + copy + "\n" + addition
         with open("auto_cmd_copy_sphinx.bat", "w") as f:
             f.write(content)
 
