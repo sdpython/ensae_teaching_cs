@@ -5,6 +5,7 @@
 """
 
 import os
+import warnings
 from pyquickhelper import TransferFTP, FileTreeNode, FolderTransferFTP, open_window_params
 from pyquickhelper.filehelper.ftp_transfer_files import content_as_binary as pqh_content_as_binary
 
@@ -282,27 +283,27 @@ def publish_documentation(
 
 
 def publish_teachings_to_web(
-    login,
-    ftpsite="ftp.xavierdupre.fr",
-    google_id=None,
-    location="C:\\jenkins\\pymy\\%s\\dist\\html",
-    rootw="/www/htdocs/app/%s/helpsphinx",
-    rootw2="/lesenfantscodaient.fr",
-    folder_status=".",
-    modules=["anaconda2_pyquickhelper_27",
-             "pyquickhelper",
-             "pyensae",
-             "anaconda2_pymyinstall_27",
-             "pymyinstall",
-             "pysqllike",
-             "pyrsslocal",
-             "pymmails",
-             "anaconda2_python3_module_template_27",
-             "python3_module_template",
-             "actuariat_python",
-             "code_beatrix",
-             "ensae_teaching_cs"]
-):
+        login,
+        ftpsite="ftp.xavierdupre.fr",
+        google_id=None,
+        location="C:\\jenkins\\pymy\\%s\\dist\\html",
+        rootw="/www/htdocs/app/%s/helpsphinx",
+        rootw2="/lesenfantscodaient.fr",
+        folder_status=".",
+        modules=["anaconda2_pyquickhelper_27",
+                 "pyquickhelper",
+                 "pyensae",
+                 "anaconda2_pymyinstall_27",
+                 "pymyinstall",
+                 "pysqllike",
+                 "pyrsslocal",
+                 "pymmails",
+                 "anaconda2_python3_module_template_27",
+                 "python3_module_template",
+                 "actuariat_python",
+                 "code_beatrix",
+                 "ensae_teaching_cs"],
+        password=None):
     """
     copy the documentation to the website
 
@@ -314,6 +315,7 @@ def publish_teachings_to_web(
     @param      rootw2          root for ``lesenfantscodaient.fr``
     @param      folder_status   folder status
     @param      modules         list of modules to publish
+    @param      password        if None, if will asked
     """
     import os
     import shutil
@@ -331,13 +333,17 @@ def publish_teachings_to_web(
         </script>
         """.format(google_id)
 
-    params = {"password": ""}
-    params = open_window_params(
-        params, title="password", help_string="password", key_save="my_password")
-    password = params["password"]
+    if password is None:
+        params = {"password": ""}
+        params = open_window_params(
+            params, title="password", help_string="password", key_save="my_password")
+        password = params["password"]
 
-    location = os.path.abspath()
-    folder_status = os.path.abspath(os.path.dirname(__file__))
+    location = os.path.abspath(location)
+    if folder_status is None:
+        folder_status = os.path.abspath(os.path.dirname(__file__))
+    else:
+        folder_status = os.path.abspath(folder_status)
 
     projects = []
     for module in modules:
@@ -346,6 +352,12 @@ def publish_teachings_to_web(
             # C:\jenkins\pymy\anaconda2_pyquickhelper_27\dist_module27\dist
             root = os.path.abspath(location % (module + "\\dist_module27"))
             root = os.path.join(root, "..")
+
+            if not os.path.exists(root):
+                warnings.warn(
+                    "unable to publish: {0},\n{1} not found".format(module, root))
+                continue
+
             for f in os.listdir(root):
                 ext = os.path.splitext(f)[-1]
                 if ext in [".whl"]:
