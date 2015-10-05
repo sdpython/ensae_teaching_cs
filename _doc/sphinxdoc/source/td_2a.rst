@@ -73,11 +73,13 @@ TD
     - :ref:`TD 3B : Arbres de décision et Random Forests <td2acenoncesession3brst>`  (:ref:`correction <td2acorrectionsession3brst>`)    
     - voir également :ref:`Travailleur les features ou changer de modèle <mlfeaturesmodelrst>`
 - **TD 4 : machine learning, visualisation** (**modifié in 2015**)
+    - `TD 4A : Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
+      (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_)
     - :ref:`TD 4A : Machine Learning et Marketting <td2acenoncesession4arst>` (:ref:`correction <td2acorrectionsession4arst>`)
         - machine learning
         - `bokeh <http://bokeh.pydata.org/en/latest/>`_, `pygal <http://www.pygal.org/en/latest/>`_
         - `interactions <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/notebooks/having_a_form_in_a_notebook.html#havingaforminanotebookrst>`_
-        - `d3.js <http://d3js.org/>`_
+        - `d3.js <http://d3js.org/>`_        
     - :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
     - :ref:`TD 4B : Culture algorithmique <td2acenoncesession4brst>` (:ref:`correction <td2acorrectionsession4brst>`)
         - présentation `Eléments d'Algorithmique <http://www.xavierdupre.fr/enseignement/complements/Seance4_algorithme.pdf>`_
