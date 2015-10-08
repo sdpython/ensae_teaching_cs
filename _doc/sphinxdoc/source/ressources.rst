@@ -37,6 +37,8 @@ Source de données
 * `OpenWeatherMap <http://openweathermap.org/>`_
 * `Dépenses d'assurance maladie hors prestations hospitalières par caisse primaire/département <https://www.data.gouv.fr/fr/datasets/depenses-d-assurance-maladie-hors-prestations-hospitalieres-par-caisse-primaire-departement/>`_ (1 Go),
   `La démographie des médecins (RPPS) <https://www.data.gouv.fr/fr/datasets/la-demographie-des-medecins-rpps/>`_
+* `Data Science at Microsoft Research <http://research.microsoft.com/en-us/projects/data-science-initiative/default.aspx#datasets>`_
+* autres pistes: `Where can I find large datasets open to the public? <https://www.quora.com/Where-can-I-find-large-datasets-open-to-the-public>`_
 
 .. index:: stackoverflow
 
