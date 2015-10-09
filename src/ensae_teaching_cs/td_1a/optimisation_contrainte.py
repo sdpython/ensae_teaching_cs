@@ -25,7 +25,7 @@ def f_df_H(x=None, z=None):
 
     .. math::
 
-        \\left \\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ \\text{sous contrainte} \\; x + 2y = 1 \\end{array}\\right .
+        \\left \\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ sous \\; contrainte \\; x + 2y = 1 \\end{array}\\right.
 
     """
     if x is None:
@@ -54,7 +54,7 @@ def Arrow_Hurwicz(F, C, X0, p0, epsilon=0.1, rho=0.1,
 
     .. math::
 
-        \\left \\{ \\begin{array}{l} \\min_{X} f(X)  \\\\ \\text{sous contrainte} \\; C(x) = 0 \\end{array}\\right .
+        \\left \\{ \\begin{array}{l} \\min_{X} f(X)  \\\\ sous \; contrainte \\; C(x) = 0 \\end{array}\\right .
 
     @param      F           fonction qui retourne :math:`f(X)` et :math:`\\nabla f(X)`
     @param      C           fonction qui retourne :math:`C(X)` et :math:`\\nabla C(X)`
@@ -120,7 +120,7 @@ def exercice_particulier1():
 
     .. math::
 
-        \\left \\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ \\text{sous contrainte} \\; x + 2y = 1 \\end{array}\\right .
+        \\left \\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ sous \; contrainte \\; x + 2y = 1 \\end{array}\\right .
 
     Qui s'implémente à l'aide de la fonction suivante :
 
@@ -164,7 +164,7 @@ def exercice_particulier2():
 
     .. math::
 
-        \\left \\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ \\text{sous contrainte} \\; x + 2y = 1 \\end{array}\\right .
+        \\left \\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ sous \; contrainte \\; x + 2y = 1 \\end{array}\\right .
 
     Qui s'implémente à l'aide de la fonction suivante :
 
