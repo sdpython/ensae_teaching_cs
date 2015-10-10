@@ -30,6 +30,10 @@ Les six premières séances font découvrir le langage Python.
 - :ref:`TD 5 : Classes et carrés magiques <td1acenoncesession5rst>`  (:ref:`correction <td1acorrectionsession5rst>`)
 - :ref:`TD 6 : Classes et héritage <td1acenoncesession6rst>`  (:ref:`correction <td1acorrectionsession6rst>`)
 
+Sessions alternatives :
+
+- :ref:`TD 4-5 : distance de Hamming <td1acenoncesession45hammingrst>` :ref:`correction <td1acorrectionsession45hammingrst>`)
+
 Au terme de ces six séances, si la programmation est nouvelle pour vous ou
 si le langage vous paraît encore peu naturel, je vous encourage à faire d'autres exercices 
 piochés dans les anciens :ref:`l-examens`.
@@ -87,6 +91,7 @@ Algorithmes classiques
 Ces exercices sont proches de ceux qu'on peut poser en entretien d'embauche. Le plus souvent,
 il existe une façon naïve d'arriver au résultat et il existe un algorithme plus rapide. 
 Tout est question de coût d'algorithme. Il y a deux grandes astuces pour aller plus vite :
+
     * la programmation dynamique, son coût est en :math:`O(n^2)`,
     * la dichotomie, son coût est en :math:`O(\ln_2 n)`.
     

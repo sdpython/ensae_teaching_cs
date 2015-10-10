@@ -360,6 +360,7 @@ if not r:
                                          'docx',
                                          'pdf'],
                                      layout=["pdf",
+                                             "epub",
                                              "html",
                                              ("html",
                                               "build2",
@@ -379,6 +380,7 @@ if not r:
                                      nbformats=[
                                          'ipynb', 'html', 'python', 'rst', 'slides'],
                                      layout=["pdf",
+                                             "epub",
                                              "html",
                                              ("html",
                                               "build2",

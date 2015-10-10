@@ -59,47 +59,65 @@ TD
     - :ref:`TD 2D : IPython et calcul distribué <td2acenoncesession2drst>` (:ref:`correction <td2acorrectionsession2drst>`)
     - :ref:`TD 2E : Sérialisation <td2acenoncesession2erst>` (:ref:`correction <td2acorrectionsession2erst>`) (avec le module `pickle <https://docs.python.org/3.4/library/pickle.html>`_)
 - **TD 3 : machine learning**
+
     - :ref:`TD 3A : Statistiques descriptives <td2acenoncesession3arst>` (:ref:`correction <td2acorrectionsession3arst>`)
     - Présentation - cours de `Gaël Varoquaux <http://gael-varoquaux.info/>`_ : `notes de lectures <https://github.com/GaelVaroquaux/sklearn_ensae_course>`_,
       autres liens :
+      
       - machine learning et `scikit-learn <http://scikit-learn.org/stable/>`_
         (`tutoriels sur scikit-learn <http://nbviewer.ipython.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_),
         quelques extraits :
+        
         - Par définition les plus proches voisins ne font pas d'erreur sur la base d'apprentissage, l'apprentissage consiste à forcer le modèle à faire des erreurs.
         - `Overfitting <http://en.wikipedia.org/wiki/Overfitting>`_ et `régularisation <http://en.wikipedia.org/wiki/Regularization_(mathematics)>`_
         - Erreur `L2 <http://en.wikipedia.org/wiki/Lp_space>`_ et pénalisation `L1 <http://fr.wikipedia.org/wiki/Espace_L1>`_
         - `RandomizedPCA <http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.RandomizedPCA.html>`_, `GridSearch <http://scikit-learn.org/stable/modules/grid_search.html>`_, `LassoCV <http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html>`_
         - `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_      
+        
     - :ref:`TD 3B : Arbres de décision et Random Forests <td2acenoncesession3brst>`  (:ref:`correction <td2acorrectionsession3brst>`)    
     - voir également :ref:`Travailleur les features ou changer de modèle <mlfeaturesmodelrst>`
+    
 - **TD 4 : machine learning, visualisation** (**modifié in 2015**)
+
     - `TD 4A : Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
       (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_)
     - :ref:`TD 4A : Machine Learning et Marketting <td2acenoncesession4arst>` (:ref:`correction <td2acorrectionsession4arst>`)
+    
         - machine learning
         - `bokeh <http://bokeh.pydata.org/en/latest/>`_, `pygal <http://www.pygal.org/en/latest/>`_
         - `interactions <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/notebooks/having_a_form_in_a_notebook.html#havingaforminanotebookrst>`_
         - `d3.js <http://d3js.org/>`_        
+        
     - :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
     - :ref:`TD 4B : Culture algorithmique <td2acenoncesession4brst>` (:ref:`correction <td2acorrectionsession4brst>`)
+    
         - présentation `Eléments d'Algorithmique <http://www.xavierdupre.fr/enseignement/complements/Seance4_algorithme.pdf>`_
         - `Machine learning et algorithme <http://www.xavierdupre.fr/blog/2014-10-11_nojs.html>`_
         - :ref:`exerciceplusgrandesommerst`
+        
 - **TD 5 : grosses données** (**nouveau en 2015**)
+
     - base de données, langage SQL
     - index
     - NoSQL, représentation au format json, XML
     - programmation fonctionnelle (`cytoolz <https://github.com/pytoolz/cytoolz>`_)
     - giga octets en local, dask, odo, blaze, bcolz, cytoolz
+    
 - **TD 6 : algorithme et puzzle**    
+
     * Présentations
+    
         * `programmation dynamique <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance2.pdf>`_
         * `graphes et algorithmes <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance3.pdf>`_
+        
     * notebooks
+    
         * correction de l'exercice de recouvrement proposé à la séance 4 (:ref:`TD 4B : Culture algorithmique <td2acenoncesession4brst>` - :ref:`correction <td2acorrectionsession4brst>`)
         * :ref:`TD 6 : Problèmes et algorithmes <td2acenoncesession6rst>` - :ref:`correction <td2acorrectionsession6rst>` 
           (ces problèmes sont tirées de plusieurs sites dont `Google Code Jam <https://code.google.com/codejam/contests.html>`_)
+          
     * liens
+    
         * types de complexité : `force brute <http://fr.wikipedia.org/wiki/Recherche_exhaustive>`_, 
           `glouton <http://fr.wikipedia.org/wiki/Algorithme_glouton>`_, `dynamique <http://fr.wikipedia.org/wiki/Programmation_dynamique>`_
         * :ref:`l-algoculture`
@@ -240,7 +258,9 @@ Séances passées
 +++++++++++++++
 
 - **TD : modèle de données** (2014)
+
     - `présentation <http://www.xavierdupre.fr/enseignement/complements/cours_structure_donnee.pdf>`_
+    
         - Propriétés des base de données : `ACID <http://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9s_ACID>`_, 
           `relationnelle <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_relationnelle>`_,
           `transactionnelle <http://fr.wikipedia.org/wiki/Transaction_informatique>`_
@@ -251,6 +271,7 @@ Séances passées
           données hétérogènes)
         - Base de données non relationnelles dont `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_
         - :ref:`l-td25asynthese`
+        
     - :ref:`TD : Modèles de données <td2acenoncesession5rst>` (:ref:`correction <td2acorrectionsession5rst>`)
 
     

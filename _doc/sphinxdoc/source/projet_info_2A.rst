@@ -51,6 +51,7 @@ Travail attendu
 * Prolongements / perspectives : le problème à résoudre est souvent extrait de son contexte, 
   il s'agit de le replacer dans un environnement industriel. Cela peut passer par 
   une réflexion autour des questions suivantes (qui ne s'appliquent pas forcément à tous les jeux de données) :
+  
     * Le modèle est-il exploitable avec ses performances ?
     * Est-il exploitable seul ou associé à autre chose (est-il une feature d'un autre modèle) ?
     * Quel est sa durée de vie ? Ses performances vont-elle se dégrader dans le temps ? Peut-on le détecter ?
@@ -70,6 +71,7 @@ Travail attendu
       une application smartphone, le modèle seulement...)
     * Lorsque le modèle se trompe, se trompe-t-il de beaucoup ? Quel serait le coût de l'erreur ?
       Peut-on le réduire ?
+
 * Une vidéo, pas plus de 5 minutes pour présenter votre projet.      
 
 
