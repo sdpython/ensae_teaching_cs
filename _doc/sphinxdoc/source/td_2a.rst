@@ -46,19 +46,24 @@ TD
 ++
 
 - **TD 1 : DataFrame** 
+
     - :ref:`TD 1 : Données et Graphes <td2acenoncesession1rst>` (:ref:`correction <td2acorrectionsession1rst>`)
+    
         - import/export de données dans un DataFrame
         - manipulation selon une logique SQL
         - utilité des index
         - lambda function
         - premiers graphiques
+        
 - **TD 2 : calcul matriciel et astuces**
+
     - :ref:`TD 2A : Calcul Matriciel, Optimisation <td2acenoncesession2arst>` (:ref:`correction <td2acorrectionsession2arst>`)
     - :ref:`TD 2B : Python autres langages <td2acenoncesession2brst>` (:ref:`correction <td2acorrectionsession2brst>`)
     - :ref:`TD 2C : IPython et commandes magiques <td2acenoncesession2crst>` (:ref:`correction <td2acorrectionsession2crst>`)
     - :ref:`TD 2D : IPython et calcul distribué <td2acenoncesession2drst>` (:ref:`correction <td2acorrectionsession2drst>`)
     - :ref:`TD 2E : Sérialisation <td2acenoncesession2erst>` (:ref:`correction <td2acorrectionsession2erst>`) (avec le module `pickle <https://docs.python.org/3.4/library/pickle.html>`_)
-- **TD 3 : machine learning**
+    
+- **TD 3-4 : machine learning, visualisation** (*modifié en 2015*)
 
     - :ref:`TD 3A : Statistiques descriptives <td2acenoncesession3arst>` (:ref:`correction <td2acorrectionsession3arst>`)
     - Présentation - cours de `Gaël Varoquaux <http://gael-varoquaux.info/>`_ : `notes de lectures <https://github.com/GaelVaroquaux/sklearn_ensae_course>`_,
@@ -76,11 +81,6 @@ TD
         
     - :ref:`TD 3B : Arbres de décision et Random Forests <td2acenoncesession3brst>`  (:ref:`correction <td2acorrectionsession3brst>`)    
     - voir également :ref:`Travailleur les features ou changer de modèle <mlfeaturesmodelrst>`
-    
-- **TD 4 : machine learning, visualisation** (**modifié in 2015**)
-
-    - `TD 4A : Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
-      (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_)
     - :ref:`TD 4A : Machine Learning et Marketting <td2acenoncesession4arst>` (:ref:`correction <td2acorrectionsession4arst>`)
     
         - machine learning
@@ -94,6 +94,9 @@ TD
         - présentation `Eléments d'Algorithmique <http://www.xavierdupre.fr/enseignement/complements/Seance4_algorithme.pdf>`_
         - `Machine learning et algorithme <http://www.xavierdupre.fr/blog/2014-10-11_nojs.html>`_
         - :ref:`exerciceplusgrandesommerst`
+        
+    - `TD 4C : Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
+      (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_)
         
 - **TD 5 : grosses données** (**nouveau en 2015**)
 
