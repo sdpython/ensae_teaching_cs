@@ -111,90 +111,6 @@ def publish_documentation(
     If one of the three first parameters is None, the function
     will open a popup windows to ask the missing information.
     See `open_window_params <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/funcwin/frame_params.html#pyquickhelper.funcwin.frame_params.open_window_params>`_.
-
-    Here is an example of a program which pusblishes several documentations on the
-    same website::
-
-        from pyquickhelper import TransferFTP, FileTreeNode, FolderTransferFTP, open_window_params
-        from ensae_teaching_cs.automation.ftp_publish_helper import publish_documentation
-
-        footer = '''
-        <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
-        <script type="text/javascript">
-        _uacct = "something";
-        urchinTracker();
-        </script>
-        '''
-
-
-        login = "login"
-        params = { "password":"" }
-        params = open_window_params (params, title="password", help_string = "password", key_save="my_password")
-        password = params["password"]
-
-        location = os.path.abspath(r"..\GitHub\%s\dist\html")
-        this = os.path.abspath(os.path.dirname(__file__))
-        rootw = "/www/htdocs/app/%s/helpsphinx"
-
-        projects = [ ]
-        for module in [
-                "pyquickhelper",
-                "anaconda2_pyquickhelper_27",
-                "pyensae",
-                "pymyinstall",
-                "anaconda2_pymyinstall_27",
-                "pysqllike",
-                "pyrsslocal",
-                "pymmails",
-                "python3_module_template",
-                "anaconda2_python3_module_template_27",
-                "actuariat_python",
-                #"code_beatrix",
-                "ensae_teaching_cs",
-                ] :
-
-            root = os.path.abspath(location % module)
-            project = dict ( status_file = os.path.join(this, "status_%s.txt" % module),
-                             local = root,
-                             root_local = root,
-                             root_web = rootw % module.replace("_no_clean","") \\
-                                                      .replace("anaconda2_", "") \\
-                                                      .replace("_27", ""))
-            projects.append (project)
-
-        # doc
-
-        project = dict ( status_file = os.path.join(this, "status_%s.txt" % module),
-                         local = root.replace("\\html","\\html2"),
-                         root_local = root.replace("\\html","\\html2"),
-                         root_web = (rootw % module).replace("_no_clean","").replace("/helpsphinx","/helpsphinx2"))
-        projects.append (project)
-
-        root = os.path.abspath(location % module)
-        project = dict ( status_file = os.path.join(this, "status_%s.txt" % module),
-                         local = root.replace("\\html","\\html3"),
-                         root_local = root.replace("\\html","\\html3"),
-                         root_web = (rootw % module).replace("_no_clean","").replace("/helpsphinx","/helpsphinx3"))
-        projects.append (project)
-
-        # pres
-        for suffix in ["", "_2A", "_3A", "_1Ap"]:
-            root = os.path.abspath(location % module)
-            project = dict ( status_file = os.path.join(this, "status_%s.txt" % module),
-                             local = root.replace("\\html","\\html_pres" + suffix),
-                             root_local = root.replace("\\html","\\html_pres" + suffix),
-                             root_web = (rootw % module).replace("/helpsphinx","/pressphinx" + suffix).replace("_no_clean",""))
-            print(project)
-            projects.append (project)
-
-        # publication
-        publish_documentation   (projects,
-                        ftpsite         = "ftp.something.cc",
-                        login           = login,
-                        password        = password,
-                        key_save        = "my_module_password",
-                        footer_html     = footer)
-
     """
 
     params = {"ftpsite": ftpsite,
@@ -286,10 +202,11 @@ def publish_teachings_to_web(
         login,
         ftpsite="ftp.xavierdupre.fr",
         google_id=None,
-        location="C:\\jenkins\\pymy\\%s\\dist\\html",
-        rootw="/www/htdocs/app/%s/helpsphinx",
+        location="C:\\jenkins\\pymy\\%s\\dist\\%s",
+        rootw="/www/htdocs/app/%s/%s",
         rootw2="/lesenfantscodaient.fr",
         folder_status=".",
+        layout=[("html", "helpsphinx"), ("epub", "epub")],
         modules=["anaconda2_pyquickhelper_27",
                  "pyquickhelper",
                  "pyensae",
@@ -316,6 +233,31 @@ def publish_teachings_to_web(
     @param      folder_status   folder status
     @param      modules         list of modules to publish
     @param      password        if None, if will asked
+    @param      layout          last part of the folders
+    
+    Example of use::
+    
+        import sys
+        import os
+
+        login = "emmanuelx-xav"
+        website = "ftp.xavierdupre.fr"
+        rootw = "/www/htdocs/app/%s/%s"
+        rootw2 = "/lesenfantscodaient.fr"
+
+        from pyquickhelper import TransferFTP, FileTreeNode, FolderTransferFTP, open_window_params
+        from ensae_teaching_cs.automation.ftp_publish_helper import publish_teachings_to_web
+
+        password = None
+
+        publish_teachings_to_web(login, ftpsite=website,
+            google_id="google_id",
+            location=<something>\\%s\\dist\\%s",
+            rootw=rootw, rootw2=rootw2, 
+            folder_status=os.path.abspath("."), password=password)
+
+
+    
     """
     import os
     import shutil
@@ -349,8 +291,9 @@ def publish_teachings_to_web(
     for module in modules:
 
         if module.endswith("27"):
+            lay = layout[0]
             # C:\jenkins\pymy\anaconda2_pyquickhelper_27\dist_module27\dist
-            root = os.path.abspath(location % (module + "\\dist_module27"))
+            root = os.path.abspath(location % (module + "\\dist_module27", lay[0]))
             root = os.path.join(root, "..")
 
             if not os.path.exists(root):
@@ -362,49 +305,52 @@ def publish_teachings_to_web(
                 ext = os.path.splitext(f)[-1]
                 if ext in [".whl"]:
                     dest = module.replace("anaconda2_", "").replace("_27", "")
-                    dest = location % dest
+                    dest = location % (dest, lay[0])
                     dest = os.path.join(dest, "..")
                     shutil.copy(os.path.join(root, f), dest)
         else:
-            root = os.path.abspath(location % module)
-            if module != "code_beatrix":
-                smod = module.replace("_no_clean", "").replace(
-                    "anaconda2_", "").replace("_27", "")
-                rw = rootw % smod
-            else:
-                rw = rootw2
+            for lay in layout:
+                root = os.path.abspath(location % (module, lay[0]))
+                if module != "code_beatrix":
+                    smod = module.replace("_no_clean", "").replace(
+                        "anaconda2_", "").replace("_27", "")
+                    rw = rootw % (smod, lay[1])
+                else:
+                    rw = rootw2
+
+                project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
+                               local=root,
+                               root_local=root,
+                               root_web=rw)
+                projects.append(project)
+
+        if module == "ensae_teaching_cs":
+            
+            lay = [ _ for _ in layout if _[0] == "html" ][0]
+            root = os.path.abspath(location % (module, lay[0]))
+
             project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
-                           local=root,
-                           root_local=root,
-                           root_web=rw)
+                           local=root.replace("\\html", "\\html2"),
+                           root_local=root.replace("\\html", "\\html2"),
+                           root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx2"))
             projects.append(project)
 
-    # doc
+            project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
+                           local=root.replace("\\html2", "\\html3"),
+                           root_local=root.replace("\\html2", "\\html3"),
+                           root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
+            projects.append(project)
 
-    project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
-                   local=root.replace("\\html", "\\html2"),
-                   root_local=root.replace("\\html", "\\html2"),
-                   root_web=(rootw % module).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx2"))
-    projects.append(project)
+            # pres
 
-    root = os.path.abspath(location % module)
-    project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
-                   local=root.replace("\\html", "\\html3"),
-                   root_local=root.replace("\\html", "\\html3"),
-                   root_web=(rootw % module).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
-    projects.append(project)
-
-    # pres
-
-    for suffix in ["", "_2A", "_3A", "_1Ap"]:
-        root = os.path.abspath(location % module)
-        project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
-                       local=root.replace("\\html", "\\html_pres" + suffix),
-                       root_local=root.replace(
-                           "\\html", "\\html_pres" + suffix),
-                       root_web=(rootw % module).replace("/helpsphinx", "/pressphinx" + suffix).replace("_no_clean", ""))
-        print(project)
-        projects.append(project)
+            for suffix in ["", "_2A", "_3A", "_1Ap"]:
+                root = os.path.abspath(location % (module, "html"))
+                project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
+                               local=root.replace("\\html", "\\html_pres" + suffix),
+                               root_local=root.replace(
+                                   "\\html", "\\html_pres" + suffix),
+                               root_web=(rootw % (module, lay[1])).replace("/helpsphinx", "/pressphinx" + suffix).replace("_no_clean", ""))
+                projects.append(project)
 
     # publish
 
