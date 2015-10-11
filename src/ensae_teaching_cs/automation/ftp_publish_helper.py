@@ -142,6 +142,10 @@ def publish_documentation(
                       fLOG=fLOG)
 
     for project in docs:
+        
+        fLOG("######################################################################")
+        for k,v in sorted(project.items()):
+            fLOG("  {}={}".format(k,v ))
 
         location = project["local"]
         root_local = project["root_local"]
@@ -220,7 +224,8 @@ def publish_teachings_to_web(
                  "actuariat_python",
                  "code_beatrix",
                  "ensae_teaching_cs"],
-        password=None):
+        password=None,
+        fLOG=print):
     """
     copy the documentation to the website
 
@@ -234,30 +239,30 @@ def publish_teachings_to_web(
     @param      modules         list of modules to publish
     @param      password        if None, if will asked
     @param      layout          last part of the folders
+    @param      fLOG            logging function
     
     Example of use::
     
         import sys
         import os
-
-        login = "emmanuelx-xav"
-        website = "ftp.xavierdupre.fr"
-        rootw = "/www/htdocs/app/%s/%s"
-        rootw2 = "/lesenfantscodaient.fr"
-
         from pyquickhelper import TransferFTP, FileTreeNode, FolderTransferFTP, open_window_params
         from ensae_teaching_cs.automation.ftp_publish_helper import publish_teachings_to_web
+
+        login = "..."
+        website = "ftp...."
+        rootw = "/www/htdocs/app/%s/%s"
+        rootw2 = "/lesenfantscodaient.fr"
 
         password = None
 
         publish_teachings_to_web(login, ftpsite=website,
             google_id="google_id",
-            location=<something>\\%s\\dist\\%s",
-            rootw=rootw, rootw2=rootw2, 
-            folder_status=os.path.abspath("."), password=password)
+            location="<something>\\\\%s\\\\dist\\\\%s",
+            rootw=rootw, 
+            rootw2=rootw2, 
+            folder_status=os.path.abspath("."), 
+            password=password)
 
-
-    
     """
     import os
     import shutil
@@ -289,6 +294,8 @@ def publish_teachings_to_web(
 
     projects = []
     for module in modules:
+        
+        fLOG("+", module, " -- ", layout)
 
         if module.endswith("27"):
             lay = layout[0]
@@ -336,8 +343,8 @@ def publish_teachings_to_web(
             projects.append(project)
 
             project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
-                           local=root.replace("\\html2", "\\html3"),
-                           root_local=root.replace("\\html2", "\\html3"),
+                           local=root.replace("\\html", "\\html3"),
+                           root_local=root.replace("\\html", "\\html3"),
                            root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
             projects.append(project)
 
@@ -359,4 +366,5 @@ def publish_teachings_to_web(
                           login=login,
                           password=password,
                           key_save="my_module_password",
-                          footer_html=footer)
+                          footer_html=footer,
+                          fLOG=fLOG)
