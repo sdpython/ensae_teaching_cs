@@ -92,7 +92,8 @@ TD
       (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_),
       ce notebook présente un moyen de faire une carte géographique
     - `TD 4C : Apprendre la note d'un expert en vin <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_enonce.html>`_
-      (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_correction.html>`_)
+      (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_correction.html>`_),
+      courbe ROC, précision, rappel
     - :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
     
 - **TD 5 : grosses données** (**nouveau en 2015**)
@@ -103,7 +104,7 @@ TD
     - programmation fonctionnelle (`cytoolz <https://github.com/pytoolz/cytoolz>`_)
     - giga octets en local, dask, odo, blaze, bcolz, cytoolz
     
-- **TD 6 : algorithme et puzzle**    
+- **TD 6 : algorithmes et puzzles**
 
     * Présentations
     
@@ -118,7 +119,7 @@ TD
             - `Machine learning et algorithme <http://www.xavierdupre.fr/blog/2014-10-11_nojs.html>`_
             - :ref:`exerciceplusgrandesommerst`
             
-        * :ref:`TD 6 : Problèmes et algorithmes <td2acenoncesession6rst>` - :ref:`correction <td2acorrectionsession6rst>` 
+        * :ref:`TD 6B : Problèmes et algorithmes <td2acenoncesession6brst>` - :ref:`correction <td2acorrectionsession6brst>` 
           (ces problèmes sont tirées de plusieurs sites dont `Google Code Jam <https://code.google.com/codejam/contests.html>`_)
           
     * liens
