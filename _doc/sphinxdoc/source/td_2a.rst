@@ -88,20 +88,13 @@ TD
         - `interactions <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/notebooks/having_a_form_in_a_notebook.html#havingaforminanotebookrst>`_
         - `d3.js <http://d3js.org/>`_        
         
-    - :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
-    - :ref:`TD 4B : Culture algorithmique <td2acenoncesession4brst>` (:ref:`correction <td2acorrectionsession4brst>`)
-    
-        - présentation `Eléments d'Algorithmique <http://www.xavierdupre.fr/enseignement/complements/Seance4_algorithme.pdf>`_
-        - `Machine learning et algorithme <http://www.xavierdupre.fr/blog/2014-10-11_nojs.html>`_
-        - :ref:`exerciceplusgrandesommerst`
-        
-    - `TD 4C : Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
+    - `TD 4B : Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
       (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_),
       ce notebook présente un moyen de faire une carte géographique
-        
-    - `TD 4D : Apprendre la note d'un expert en vin <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_enonce.html>`_
+    - `TD 4C : Apprendre la note d'un expert en vin <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_enonce.html>`_
       (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_correction.html>`_)
-        
+    - :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
+    
 - **TD 5 : grosses données** (**nouveau en 2015**)
 
     - base de données, langage SQL
@@ -119,7 +112,12 @@ TD
         
     * notebooks
     
-        * correction de l'exercice de recouvrement proposé à la séance 4 (:ref:`TD 4B : Culture algorithmique <td2acenoncesession4brst>` - :ref:`correction <td2acorrectionsession4brst>`)
+        * :ref:`TD 6A : Culture algorithmique <td2acenoncesession6arst>` (:ref:`correction <td2acorrectionsession6arst>`)
+        
+            - présentation `Eléments d'Algorithmique <http://www.xavierdupre.fr/enseignement/complements/Seance4_algorithme.pdf>`_
+            - `Machine learning et algorithme <http://www.xavierdupre.fr/blog/2014-10-11_nojs.html>`_
+            - :ref:`exerciceplusgrandesommerst`
+            
         * :ref:`TD 6 : Problèmes et algorithmes <td2acenoncesession6rst>` - :ref:`correction <td2acorrectionsession6rst>` 
           (ces problèmes sont tirées de plusieurs sites dont `Google Code Jam <https://code.google.com/codejam/contests.html>`_)
           
