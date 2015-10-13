@@ -32,7 +32,7 @@ Les six premières séances font découvrir le langage Python.
 
 Sessions alternatives :
 
-- :ref:`TD 4-5 : distance de Hamming <td1acenoncesession45hammingrst>` (:ref:`correction <td1acorrectionsession45hammingrst>`)
+- :ref:`TD 4-5 : distance de Jaccard <td1acenoncesession45jaccardrst>` (:ref:`correction <td1acorrectionsession45jaccardrst>`)
 
 Au terme de ces six séances, si la programmation est nouvelle pour vous ou
 si le langage vous paraît encore peu naturel, je vous encourage à faire d'autres exercices 
