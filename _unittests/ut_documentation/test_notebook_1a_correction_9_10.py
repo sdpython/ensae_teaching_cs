@@ -83,7 +83,7 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pymyinstall    
+    import pymyinstall
 
 from pyquickhelper import fLOG, get_temp_folder
 from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook

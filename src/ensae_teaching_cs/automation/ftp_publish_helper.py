@@ -10,15 +10,21 @@ from pyquickhelper import TransferFTP, FileTreeNode, FolderTransferFTP, open_win
 from pyquickhelper.filehelper.ftp_transfer_files import content_as_binary as pqh_content_as_binary
 
 
-def trigger_on_specific_strings(content):
+def trigger_on_specific_strings(content, filename=None):
     """
     look for specific string such as
     *USERNAME*, *USERDNSDOMAIN*, *HOMEPATH*, *USERNAME*, *COMPUTERNAME*, *LOGONSERVER*,
     and returns None if it was found or modifies the content to remove it
+    
+    @param      content     content of a file
+    @param      filename    only used when an exception is raised
+    @return                 modified content
     """
     strep = [(r"C:\\%s\\__home_\\_data\\" % os.environ["USERNAME"], "somewhere"),
-             ("C:\\%s\\__home_\\_data\\" %
-              os.environ["USERNAME"], "somewhere"),
+             ("C:\\%s\\__home_\\_data\\" % os.environ["USERNAME"], "somewhere"),
+             ("C:\\%s\\__home_\\_data\\" % os.environ["USERNAME"], "somewhere"),
+             ("C:%s__home__data" % os.environ["USERNAME"], "somewhere"),
+             ("%s__home__data" % os.environ["USERNAME"], "somewhere"),
              ]
     for s, b in strep:
         if s in content:
@@ -30,7 +36,7 @@ def trigger_on_specific_strings(content):
         if st in os.environ:
             s = os.environ[st].lower()
             if s in lower_content:
-                raise Exception("string {0}:{1} was found".format(st, s))
+                raise Exception('string {0}:{1} was found in\n  File "{2}", line 1'.format(st, s, filename))
                 return None
     return content
 
@@ -151,25 +157,26 @@ def publish_documentation(
         root_local = project["root_local"]
         root_web = project["root_web"]
 
-        m27 = os.path.join(root_local, "..", "..", "dist_module27")
         sfile = project["status_file"]
         rootw = project["root_web"]
-
-        if os.path.exists(m27):
+        
+        if "dist_module27" in location:
             # python 27.version
-            fLOG("-------------------------py27", m27)
-            ftn = FileTreeNode(os.path.join(root_local, ".."),
-                               filter=lambda root, path, f, dir: not dir)
-            fftp = FolderTransferFTP(ftn, ftp, sfile,
-                                     root_web=root_web.replace(
-                                         "helpsphinx", ""),
-                                     fLOG=fLOG,
-                                     footer_html=footer_html,
-                                     content_filter=content_filter,
-                                     is_binary=is_binary,
-                                     text_transform=text_transform)
+            m27 = os.path.join(root_local, "..", "..", "dist_module27")
+            if os.path.exists(m27):
+                fLOG("-------------------------py27", m27)
+                ftn = FileTreeNode(os.path.join(root_local, ".."),
+                                   filter=lambda root, path, f, dir: not dir)
+                fftp = FolderTransferFTP(ftn, ftp, sfile,
+                                         root_web=root_web.replace(
+                                             "helpsphinx", ""),
+                                         fLOG=fLOG,
+                                         footer_html=footer_html,
+                                         content_filter=content_filter,
+                                         is_binary=is_binary,
+                                         text_transform=text_transform)
 
-            fftp.start_transfering()
+                fftp.start_transfering()
         else:
             # python 3.4 documentation + setup
             fLOG("-------------------------py34", location)
