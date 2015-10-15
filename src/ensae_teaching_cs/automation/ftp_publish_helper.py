@@ -217,7 +217,7 @@ def publish_teachings_to_web(
         rootw="/www/htdocs/app/%s/%s",
         rootw2="/lesenfantscodaient.fr",
         folder_status=".",
-        layout=[("html", "helpsphinx"), ("epub", "epub")],
+        layout=[("epub", "epub"), ("html", "helpsphinx")],
         modules=["anaconda2_pyquickhelper_27",
                  "pyquickhelper",
                  "pyensae",
@@ -330,7 +330,10 @@ def publish_teachings_to_web(
                         "anaconda2_", "").replace("_27", "")
                     rw = rootw % (smod, lay[1])
                 else:
-                    rw = rootw2
+                    if lay[1] == "epub":
+                        rw = rootw2 + "/" + lay[1]
+                    else:
+                        rw = rootw2
 
                 project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
                                local=root,
