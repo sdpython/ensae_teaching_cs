@@ -1,6 +1,5 @@
 
 
-.. issue.
 
 .. _l-td1a:
 
@@ -52,6 +51,12 @@ Ces deux façons de faire sont présentées durant les trois séances.
 - :ref:`TD 7 : Programmation dynamique <td1acenoncesession7rst>`  (:ref:`correction <td1acorrectionsession7rst>`)
 - :ref:`TD 8 : Arbre et Trie <td1acenoncesession8rst>`  (:ref:`correction <td1acorrectionsession8rst>`)
 - :ref:`TD 9 : Optimisation sous contrainte <td1acenoncesession9rst>`  (:ref:`correction <td1acorrectionsession9rst>`) (relecture conseillée à ceux qui souhaitent optimiser des portefeuilles d'actions) [#f1]_
+
+Sessions alternatives :
+
+- :ref:`TD 7 : distance d'édition <td1acenoncesession7editionrst>` (:ref:`correction <td1acorrectionsession7editionrst>`),
+  cette séance fait écho à la distance de Jaccard évoquée par :ref:`TD 4-5 : distance de Jaccard <td1acenoncesession45jaccardrst>`
+
 
 Trois séances sont centrées sur les outils indispensables pour manipuler facilement les données et faire des calculs.
 Ces outils sont similaires à ceux qu'on trouve dans de nombreux languages à usage scientifique

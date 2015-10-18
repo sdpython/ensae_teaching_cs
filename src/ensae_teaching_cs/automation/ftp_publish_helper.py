@@ -15,14 +15,16 @@ def trigger_on_specific_strings(content, filename=None):
     look for specific string such as
     *USERNAME*, *USERDNSDOMAIN*, *HOMEPATH*, *USERNAME*, *COMPUTERNAME*, *LOGONSERVER*,
     and returns None if it was found or modifies the content to remove it
-    
+
     @param      content     content of a file
     @param      filename    only used when an exception is raised
     @return                 modified content
     """
     strep = [(r"C:\\%s\\__home_\\_data\\" % os.environ["USERNAME"], "somewhere"),
-             ("C:\\%s\\__home_\\_data\\" % os.environ["USERNAME"], "somewhere"),
-             ("C:\\%s\\__home_\\_data\\" % os.environ["USERNAME"], "somewhere"),
+             ("C:\\%s\\__home_\\_data\\" %
+              os.environ["USERNAME"], "somewhere"),
+             ("C:\\%s\\__home_\\_data\\" %
+              os.environ["USERNAME"], "somewhere"),
              ("C:%s__home__data" % os.environ["USERNAME"], "somewhere"),
              ("%s__home__data" % os.environ["USERNAME"], "somewhere"),
              ]
@@ -36,7 +38,8 @@ def trigger_on_specific_strings(content, filename=None):
         if st in os.environ:
             s = os.environ[st].lower()
             if s in lower_content:
-                raise Exception('string {0}:{1} was found in\n  File "{2}", line 1'.format(st, s, filename))
+                raise Exception(
+                    'string {0}:{1} was found in\n  File "{2}", line 1'.format(st, s, filename))
                 return None
     return content
 
@@ -148,10 +151,10 @@ def publish_documentation(
                       fLOG=fLOG)
 
     for project in docs:
-        
+
         fLOG("######################################################################")
-        for k,v in sorted(project.items()):
-            fLOG("  {}={}".format(k,v ))
+        for k, v in sorted(project.items()):
+            fLOG("  {}={}".format(k, v))
 
         location = project["local"]
         root_local = project["root_local"]
@@ -159,7 +162,7 @@ def publish_documentation(
 
         sfile = project["status_file"]
         rootw = project["root_web"]
-        
+
         if "dist_module27" in location:
             # python 27.version
             m27 = os.path.join(root_local, "..", "..", "dist_module27")
@@ -247,9 +250,9 @@ def publish_teachings_to_web(
     @param      password        if None, if will asked
     @param      layout          last part of the folders
     @param      fLOG            logging function
-    
+
     Example of use::
-    
+
         import sys
         import os
         from pyquickhelper import TransferFTP, FileTreeNode, FolderTransferFTP, open_window_params
@@ -265,9 +268,9 @@ def publish_teachings_to_web(
         publish_teachings_to_web(login, ftpsite=website,
             google_id="google_id",
             location="<something>\\\\%s\\\\dist\\\\%s",
-            rootw=rootw, 
-            rootw2=rootw2, 
-            folder_status=os.path.abspath("."), 
+            rootw=rootw,
+            rootw2=rootw2,
+            folder_status=os.path.abspath("."),
             password=password)
 
     """
@@ -301,13 +304,14 @@ def publish_teachings_to_web(
 
     projects = []
     for module in modules:
-        
+
         fLOG("+", module, " -- ", layout)
 
         if module.endswith("27"):
             lay = layout[0]
             # C:\jenkins\pymy\anaconda2_pyquickhelper_27\dist_module27\dist
-            root = os.path.abspath(location % (module + "\\dist_module27", lay[0]))
+            root = os.path.abspath(location % (
+                module + "\\dist_module27", lay[0]))
             root = os.path.join(root, "..")
 
             if not os.path.exists(root):
@@ -342,8 +346,8 @@ def publish_teachings_to_web(
                 projects.append(project)
 
         if module == "ensae_teaching_cs":
-            
-            lay = [ _ for _ in layout if _[0] == "html" ][0]
+
+            lay = [_ for _ in layout if _[0] == "html"][0]
             root = os.path.abspath(location % (module, lay[0]))
 
             project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
@@ -363,7 +367,8 @@ def publish_teachings_to_web(
             for suffix in ["", "_2A", "_3A", "_1Ap"]:
                 root = os.path.abspath(location % (module, "html"))
                 project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
-                               local=root.replace("\\html", "\\html_pres" + suffix),
+                               local=root.replace(
+                                   "\\html", "\\html_pres" + suffix),
                                root_local=root.replace(
                                    "\\html", "\\html_pres" + suffix),
                                root_web=(rootw % (module, lay[1])).replace("/helpsphinx", "/pressphinx" + suffix).replace("_no_clean", ""))

@@ -1,6 +1,5 @@
-﻿
 
-.. issue.
+
 
 .. _l-td2a_enonce:
 
@@ -19,6 +18,16 @@
     TD 3A : Statistiques descriptives <notebooks/td2a_cenonce_session_3A>
     TD 3B : Arbres de décision et Random Forest <notebooks/td2a_cenonce_session_3B>
     TD 4A : Machine Learning et Marketting <notebooks/td2a_cenonce_session_4A>
-    TD 4B : Culture algorithmique <notebooks/td2a_cenonce_session_4B>
+    Cours 5A : Données non structurées, programmation fonctionnelle : introduction <notebooks/seance_5_intro_et_json>
+    Cours 5B : programmation fonctionnelle <notebooks/seance_5_prog_fonctionnelle>
+    Cours 5C : dask <notebooks/seance_5_dask>
+    TD 5 : programmation fonctionnelle sur des données Twitter <notebooks/td2a_cenonce_session_5_donnees_non_structurees_et_programmation_fonctionnelle>
+    TD 6A : Culture algorithmique <notebooks/td2a_cenonce_session_6A>
+    TD 6B : Problèmes et algorithmes <notebooks/td2a_cenonce_session_6B>
+
+
+**alternatives**
+
+.. toctree::
+
     TD 5 : Modèles de données <notebooks/td2a_cenonce_session_5>
-    TD 6 : Problèmes et algorithmes <notebooks/td2a_cenonce_session_6>
