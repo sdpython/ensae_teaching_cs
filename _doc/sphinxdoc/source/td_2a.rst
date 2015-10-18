@@ -98,11 +98,14 @@ TD
     
 - **TD 5 : grosses données** (**nouveau en 2015**)
 
-    - base de données, langage SQL
-    - index
-    - NoSQL, représentation au format json, XML
-    - programmation fonctionnelle (`cytoolz <https://github.com/pytoolz/cytoolz>`_)
-    - giga octets en local, dask, odo, blaze, bcolz, cytoolz
+    * Support de cours (*Nicolas Rousset*)
+        
+        * :ref:`Données non structurées, programmation fonctionnelle : introduction <seance5introetjsonrst>`
+        * :ref:`programmation fonctionnelle <seance5progfonctionnellerst>`
+        * :ref:`dask <seance5daskrst>`
+        
+    * :ref:`TD 5 : programmation fonctionnelle sur des données Twitter <td2acenoncesession5donneesnonstructureesetprogrammationfonctionnellerst>`  
+      (:ref:`correction <td2acorrectionsession5donneesnonstructureesetprogrammationfonctionnellecorrigerst>`)
     
 - **TD 6 : algorithmes et puzzles**
 

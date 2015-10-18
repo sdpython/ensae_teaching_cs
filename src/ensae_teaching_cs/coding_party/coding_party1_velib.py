@@ -7,7 +7,8 @@
 import os
 import pandas
 import random
-from pyensae import download_data, DataVelibCollect
+from pyensae import download_data
+from pyensae.datasource import DataVelibCollect
 from pyquickhelper import str_to_datetime
 
 

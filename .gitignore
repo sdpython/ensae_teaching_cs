@@ -336,3 +336,4 @@ auto_*.db3
 .RData
 _doc/notebooks/td2a/iris.html
 _doc/notebooks/td2a/data_roc.csv
+_doc/notebooks/td2a/twitter_for_network_100000.db
