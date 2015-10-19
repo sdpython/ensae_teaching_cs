@@ -123,7 +123,7 @@ TD
             - :ref:`exerciceplusgrandesommerst`
             
         * :ref:`TD 6B : Problèmes et algorithmes <td2acenoncesession6brst>` - :ref:`correction <td2acorrectionsession6brst>` 
-          (ces problèmes sont tirées de plusieurs sites dont `Google Code Jam <https://code.google.com/codejam/contests.html>`_)
+          (ces problèmes sont tirés de plusieurs sites dont `Google Code Jam <https://code.google.com/codejam/contests.html>`_)
           
     * liens
     
