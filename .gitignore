@@ -337,3 +337,7 @@ auto_*.db3
 _doc/notebooks/td2a/iris.html
 _doc/notebooks/td2a/data_roc.csv
 _doc/notebooks/td2a/twitter_for_network_100000.db
+_doc/notebooks/td2a/log
+_doc/notebooks/td2a/*.json
+_doc/notebooks/td2a/*.db
+_doc/notebooks/td2a/data*
