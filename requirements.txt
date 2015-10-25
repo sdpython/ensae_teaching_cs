@@ -85,3 +85,5 @@ bayespy
 mpld3
 bokeh
 folium
+dask
+xray
