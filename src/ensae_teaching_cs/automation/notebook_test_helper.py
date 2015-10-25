@@ -50,9 +50,11 @@ def get_additional_paths():
     import pyquickhelper
     import pyensae
     import pymmails
+    import pymyinstall
     addpath = [os.path.dirname(pyquickhelper.__file__),
                os.path.dirname(pyensae.__file__),
                os.path.dirname(pymmails.__file__),
+               os.path.dirname(pymyinstall.__file__),
                os.path.join(os.path.abspath(os.path.dirname(__file__)), ".."),
                ]
     addpath = [os.path.normpath(os.path.join(_, "..")) for _ in addpath]
