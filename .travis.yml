@@ -45,6 +45,7 @@ install:
   - conda install scipy
   - conda install h5py
   - conda install networkx
+  - conda install dask
   #- source activate test-environment
   - pip install -r requirements.txt
   - pip install -r requirements_ext.txt
