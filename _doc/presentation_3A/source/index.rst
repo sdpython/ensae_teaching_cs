@@ -1,4 +1,4 @@
-﻿
+
 ENSAE 3A - Map/Reduce en pratique
 =================================
 
@@ -7,8 +7,9 @@ ENSAE 3A - Map/Reduce en pratique
 
     .. image:: _static/project_ico.png
 
-    Matthieu Durut
-    `Xavier Dupré <http://www.xavierdupre.fr/>`_ 
+    `Matthieu Durut <https://www.linkedin.com/in/matthieudurut>`_ (ENSAE 2005)
+    `Xavier Dupré <http://www.xavierdupre.fr/>`_  (ENSAE 1999)
+    `Antoine Ly <https://www.linkedin.com/pub/antoine-ly/80/867/771>`_ (ENSAE 2015)
 
     **Assistant à l'ENSAE**
     
@@ -35,6 +36,7 @@ ENSAE 3A - Map/Reduce en pratique
     .. revealjs:: Notebooks
     
         Les exercices utilisent les `notebooks <http://ipython.org/notebook.html>`_.
+        Voir `Setup <http://www.xavierdupre.fr/enseignement/>`_.
         
         .. image:: _static/notsnap.png       
 
@@ -47,7 +49,8 @@ ENSAE 3A - Map/Reduce en pratique
         * Le langage est open source et donc gratuit.
         * Il fonctionne sur tous les OS (Windows, Linux, Mac, bientôt `IPad <http://computableapp.com/>`_).
         * Il dispose de nombreuses extensions, il peut tout faire.
-        * Les notebooks se répandent à grande vitesse : `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_.
+        * Les notebooks se répandent à grande vitesse : 
+          `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_.
         * Même si les calculs distribués ne se font pas en Python, le langage sert de télécommande programmable.
         
     .. revealjs:: Notebooks
@@ -306,6 +309,7 @@ ENSAE 3A - Map/Reduce en pratique
         * autres solutions :
             * `Storm <https://storm.apache.org/>`_
             * `Spark <https://spark.apache.org/>`_
+            * `YARN <https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html>`_
             
     .. revealjs:: Paris
     

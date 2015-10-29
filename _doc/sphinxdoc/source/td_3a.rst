@@ -15,8 +15,9 @@ En cours de rédaction
 
 Cours animé par :
 
-* Matthieu Durut
-* Xavier Dupré
+* Matthieu Durut [#f3write1]_
+* Xavier Dupré [#f3write1]_
+* Antoine Ly [#f3write2]_
 
 
 TD
@@ -45,10 +46,69 @@ TD
     * Hadoop, Azure
     * Queues distribuées.
 - Séance 4
-    * distribuer un traitement de données à différent niveaux
-        * avec un langage haut niveau (comme PIG)
-        * utilisation du java pour distribuer un job de façon plus optimisée
-        * distribution personnalisée d'un traitement avec des librairies bas niveau (type MPI)
+	* SQL / NoSQL / clé-valeur / document
+		* Description d'un document (notion de structures, format json, xml)
+		* SQL : 
+			* notion d'index
+			* Ne scale pas pour la parallélisation d'un grande nombre de recherches sur des données modifiées en permanence (mais à une moindre fréquence)
+				* Cohérences des données
+				* ACID
+			* Traduction d'une base de documents en un schéma relationnel parfois complexe lorsque les documents ont une structure arborescente (plein de tables)
+			* Récupérer un document entier nécessite plein de lookups
+		* NoSQL
+			* Clé/valeur --> simple et recherche très simple
+			* Valeur = donnée simple comme document complexe
+			* Recherche rapide sur les clés
+			* Lente sur la plupart du reste
+			* Efficace lorsqu'on veut récupérer la totalité d'un document
+		* Autre type d'indexation
+			* Trie
+	* Montée en charge, Stratégie de répartition de charges sur plusieurs machines
+		* Dépend des données
+		* Dépend des usages
+		* Exemple
+			* Cas d'un système de auto-complétion (usage standard sur un site internet)
+			* Division en n machine --> comment faire
+		* Notion de hash --> distribution uniforme
+		* Transformée de Burrows-Wheeler (BWT) 
+        * Cache
+	* Maintenance des données
+		* Lecture et écriture simultanée
+		* Conflit dans les mises à jour
+		* Parler Section critiques --> très lent
+		* Timestamp (Lamport) : vision optimiste
+			* Récupération de données (données + timestamp)
+			* Écriture si timestamp identique
+			* Impossibilité d'une heure commune dans un cluster
+		* Exemple : index d'un moteur de recherche
+			* Données réparties sur plusieurs machines (résistante à la charge)
+			* Même données répliquées sur plusieurs machines (résistance aux pannes)
+			* Mise à jour d'un document ? Qui a la version la plus récente ? --> timestamp
+	* Hadoop
+		* Distribution des calculs
+		* Notion de mapper, reducer
+		* Avantage
+			* Répartition efficace si calculs indépendant d'une ligne à l'autre
+		* Inconvénient
+			* Grosses consommations réseau, I/O
+			* Pas de communication entre machine
+			* Peu de mémoire pour chaque traitement
+		* Java, langage évolué, PIG, HIVE, logique proche du SQL
+		* Distinguer le système de fichiers distribué (HDFS) du moteur de distribution de job
+		* Pas de communication entre machine --> algorithme sur les graphes pas efficaces
+		* Mahout
+		* Accès très lent aux données --> pas d'index
+		* Ordre des lignes dans une table imprévisible
+		* Langage fonctionnels très adaptés
+		* YARN
+	* Spark/Graphlab
+		* RDD --> effectuer plus de calculs en mémoire
+		* Dataframe --> SFrame
+		* Cours de Jérémie
+		* MLlib
+		* Langage evolué --> compilation / optimisation / allocation de machines
+	* MPI
+
 - Séance 5
     * algorithme distribué, descente de gradient distributé
     * exemple des `k-means <http://fr.wikipedia.org/wiki/Algorithme_des_k-moyennes>`_ distribué
@@ -264,4 +324,8 @@ Bibliographie
           car `Hive <https://hive.apache.org/>`_ est plus un moyen de lancer rapidement de petites
           tâches, PIG permet des tâches plus conséquentes pour un coût d'apprentissage
           très raisonnable.
+          
+.. [#f3write1] Contributeur et coordinateur du cours.
+
+.. [#f3write2] Contributeur, encadrant.
           
