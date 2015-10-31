@@ -17,7 +17,7 @@ fLOG("start")
 
 js = JenkinsExt('http://localhost:8080/', None, None,
                 fLOG=fLOG, engines=engines_default)
-#js.delete_all_jobs()
+# js.delete_all_jobs()
 
 if True:
     setup_jenkins_server(js,
