@@ -3,10 +3,10 @@ copy the documentation to the website
 """
 import sys
 import os
-sys.path.append("../pyquickhelper/src")
-sys.path.append("../pyensae/src")
-sys.path.append("../ensae_teaching_cs/src")
-sys.path.append("../pymyinstall/src")
+sys.path.append(os.path.abspath("../pyquickhelper/src"))
+sys.path.append(os.path.abspath("../pyensae/src"))
+sys.path.append(os.path.abspath("../ensae_teaching_cs/src"))
+sys.path.append(os.path.abspath("../pymyinstall/src"))
 
 from pyquickhelper import fLOG
 from pyquickhelper.jenkinshelper import JenkinsExt
@@ -22,11 +22,11 @@ js = JenkinsExt('http://localhost:8080/', None, None,
 if True:
     setup_jenkins_server(js,
                          overwrite=True,
-                         location=r"c:\\jenkins\\pymy")
+                         location="c:\\jenkins\\pymy")
 
 if False:
     setup_jenkins_server(js,
                          overwrite=True,
-                         location=r"c:\\jenkins\\pymy_nodep",
+                         location="c:\\jenkins\\pymy_nodep",
                          no_dep=True,
                          prefix="_nodep_")

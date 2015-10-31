@@ -45,7 +45,7 @@ TD
       exemples d'algos difficilement parallélisables,
     * Hadoop, Azure
     * Queues distribuées.
-- Séance 4
+- Séance 4-5
 	* SQL / NoSQL / clé-valeur / document
 		* Description d'un document (notion de structures, format json, xml)
 		* SQL : 
@@ -107,12 +107,13 @@ TD
 		* Cours de Jérémie
 		* MLlib
 		* Langage evolué --> compilation / optimisation / allocation de machines
-	* MPI
-
-- Séance 5
+    * distribuer un traitement de données à différent niveaux
+        * avec un langage haut niveau (comme PIG)
+        * utilisation du java pour distribuer un job de façon plus optimisée
+        * distribution personnalisée d'un traitement avec des librairies bas niveau (type MPI)
     * algorithme distribué, descente de gradient distributé
-    * exemple des `k-means <http://fr.wikipedia.org/wiki/Algorithme_des_k-moyennes>`_ distribué
-    * `GPU <http://fr.wikipedia.org/wiki/Processeur_graphique>`_
+        * exemple des `k-means <http://fr.wikipedia.org/wiki/Algorithme_des_k-moyennes>`_ distribué
+        * `GPU <http://fr.wikipedia.org/wiki/Processeur_graphique>`_
 
 Les trois séances suivantes sont plus appliquées et dédiées à la découverte
 de `Hadoop <http://fr.wikipedia.org/wiki/Hadoop>`_, un environnement

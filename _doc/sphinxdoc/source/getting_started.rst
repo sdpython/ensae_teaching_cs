@@ -9,13 +9,16 @@ Getting started
 Résumé
 ++++++
 
+Les instructions mentionnées ci-dessous fonctionnent sous Windows, Linux et Mac.
+Des différences peuvent apparaître mais elles seront explicitées.
+
 
 **Recommandations**
 
 * Linux/Mac OS : distribution `Anaconda <http://continuum.io/downloads#py34>`_ (python 3.4, 64 bit)
 * Windows : la distribution fournie par l'école [#fpm1]_ ou la distribution  `WinPython <https://winpython.github.io/>`_
 
-**Installer un module**
+**Installer un module soi-même**
 
 Il faut ouvrir une fenêtre ligne de commande (Windows) ou une fenêtre terminal (Linux, OS/X) et se placer dans le répertoire de la distribution.
 
@@ -24,34 +27,36 @@ Il faut ouvrir une fenêtre ligne de commande (Windows) ou une fenêtre terminal
     * module standard : ``conda install <module>``
     * module rare : ``pip install <module>``
     
-* WinPython
+* WinPython (Python sur Windows)
 
     * module standard : télécharger le module sur le site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_ 
       et l'installer avec la commande ``pip install <local_module.whl>``
     * module rare : ``pip install <module>`` (à condition que celui-ci n'inclut pas de code C/C++) qui requiert un compilateur C/C++
     
-* `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_ + mise à jour d'une 
-  distribution existante
+L'instruction ``pip install`` ne fonctionne pas sous Windows lorsque le module
+est implémenté en Python et C++. C'est pourquoi il est préférable d'installer
+une version précompilée. 
 
-    * ``pymy_install`` pour installer de nouveaux modules ajoutés pour le cours
-    
-**Problème de dépendance**
-
-Pour installer rapidement un module sans tenir compte de ses dépendances ::
+Par défaut, l'installation d'un module implique celle de ses dépendances
+ce qu'il est possible d'éviter : ::
 
     pip install <module> --no-deps
-    
-**Mettre à jour un module**
 
-::
 
-    pip install <module> --upgrade --no-deps
-    
-L'extension *--no-deps* n'est pas obligatoire mais cela évite la mise à jour des dépendances.
-Ou `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_ ::
+**Installer un module avec pymy_install**
 
-    pymy_update --only=<module>
+Le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_ 
+recherche la meilleure façon d'installer un module quelque soit votre installation. 
+Pour l'installer ou le mettre à jour : ::
 
+    pip install pymyinstall --upgrade
+
+L'installation du module crée deux scripts,
+``pymy_install3`` pour installer un module,
+``pymy_update3`` pour mettre à jour.
+Le module permet d'installer un ensemble de modules ::
+
+    pymy_install3 --set=pyensae
 
 
 
@@ -89,51 +94,33 @@ les modules les plus usités. Deux options possibles :
 * Distribution officielle de `python <https://www.python.org/>`_, il faut ensuite 
   installer de nombreux modules (voir :ref:`l-data2a`) pour obtenir
   une distribution équivalente aux deux précédentes.
+
+
+Configuration
++++++++++++++
+
+Les notebooks utilise le module `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ 
+développé pour ces enseignements. Pour installer ses dépendances, il faut utiliser le module
+`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
+
   
 Certains notebooks s'appuient sur des fonctions qui donnent accès
 à des données ou qui facilitent leur récupération. Elles sont disponibles
-via le module `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ ::
+via le module  ::
 
     pip install pyensae
     
-Quelque soit l'option choisie, la page :ref:`l-data2a` décrit la liste
-des modules qu'il faut ajouter pour reproduire la distribution
+Ce module requiert des dépendances qu'on peut installer comme
+suit ::
+
+    pymy_install3 --set=pyensae
+
+    
+La page :ref:`l-data2a` propose une liste exhaustive
+de modules qu'il faut ajouter pour reproduire la distribution
 proposée par l'école.
   
   
-Installer des modules soi-même
-++++++++++++++++++++++++++++++
-    
-Sous Linux, l'installation de modules supplémentaires avec l'instruction
-``pip install <module>`` ne pose pas de problèmes (rarement).
-Sous Windows, certains packages utilisant le langage C nécessitent
-d'utiliser les packages `wheel <http://wheel.readthedocs.org/en/latest/>`_. 
-Ces modules sont accessibles depuis le site 
-`Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
-Vous pouvez également utiliser le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
-et écrire ::
-
-    from pymyinstall import extend_anaconda, process_installation
-    process_installation(extend_anaconda())
-
-Ou ::
-    
-    from pymyinstall import extend_winpython, process_installation
-    process_installation(extend_winpython())
-    
-La liste des modules
-nécessaire est assez longue et peut-être trouvée dans le code de la fonction
-`complete_installation <https://github.com/sdpython/pymyinstall/blob/master/src/pymyinstall/packaged/packaged_config.py>`_.
-Celle-ci précise notamment quel module peut être installé avec `pip <https://pypi.python.org/pypi/pip>`_
-quel autre doit être installé avec un fichier *wheel*.
-Le module 
-`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
-fait cela pour vous. Après l'avoir installé (``pip install pymyinstall``), le code suivant
-procède à l'installation ::
-
-    from pymyinstall import datascientist
-    datascientist("install", full = True)
-        
 Certains notebooks requièrent des outils supplémentaires :
 
 * `graphviz <http://www.graphviz.org/>`_
@@ -150,7 +137,7 @@ qui est aisément accessible depuis la `ligne de commande <http://fr.wikipedia.o
 Sous Windows, on peut lancer la ligne de commande par la commande ``cmd``. On obtient une fenêtre noire.
 Il suffit alors de se déplacer dans le répertoire d'installation de Python ::
 
-    cd c:\Python34\Scripts
+    cd c:\Python34_x64\Scripts
     
 Ou encore ::
 
@@ -174,22 +161,7 @@ Pour vous assurer que cela correspond bien à la version de Python souhaitée,
 il suffit de demander la version installée ::
 
     pip --version
-    
-    
-Installer le module ensae_teaching_cs
-+++++++++++++++++++++++++++++++++++++
 
-Il suffit d'écrire sur la ligne de commande ::
-
-    pip install ensae_teaching_cs
-    
-Pour éviter d'installer également les dépendances ::
-
-    pip install ensae_teaching_cs --no-deps
-    
-Enfin, pour le mettre à jour ::
-
-    pip install ensae_teaching_cs --upgrade
     
     
 Editeur de texte et navigateur

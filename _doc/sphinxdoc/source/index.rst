@@ -149,7 +149,7 @@ s'il est disponible. S'il ne l'est pas, l'installation du module est réservée 
 **Linux / Mac**
 
 `Anaconda <https://store.continuum.io/cshop/anaconda/>`_ est la distribution la plus répandue : 
-`Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac). Choisir **I want Python 3.4**.
+`Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac). Choisir **Python 3.4**.
 
 Sous Linux ou Mac, la distribution n'interfère pas avec la distribution existante
 souvent différente. C'est un point très appréciable. Les modules de la distribution ne sont 
@@ -163,8 +163,8 @@ Aucune distribution pour les vieux ordinateurs n'a été préparée (32 bit) mai
 d'en préparer une ou de la mettre à jour en trois étapes depuis le répertoire *Scripts* ::
 
     pip install pymyinstall --upgrade
-    pymy_install
-    pymy_update
+    pymy_install3
+    pymy_update3
     
 Cela correspond à :
 
@@ -172,7 +172,7 @@ Cela correspond à :
 #. installation des nouveaux modules
 #. mise à jour
 
-Si un module échoue, l'option ``--skip=<modules séparés par des virgules>`` permettra de passer outre.
+Certains modules peuvent échouer mais cela n'interrompt pas le processus.
 
 
 **Environnement de travail**
