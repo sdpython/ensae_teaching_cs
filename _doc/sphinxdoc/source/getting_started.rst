@@ -16,7 +16,8 @@ Des différences peuvent apparaître mais elles seront explicitées.
 **Recommandations**
 
 * Linux/Mac OS : distribution `Anaconda <http://continuum.io/downloads#py34>`_ (python 3.4, 64 bit)
-* Windows : la distribution fournie par l'école [#fpm1]_ ou la distribution  `WinPython <https://winpython.github.io/>`_
+* Windows : une `distribution customisée <http://www.xavierdupre.fr/enseignement/>`_ [#fpm1]_ 
+  ou la distribution  `WinPython <https://winpython.github.io/>`_
 
 **Installer un module soi-même**
 
@@ -94,6 +95,11 @@ les modules les plus usités. Deux options possibles :
 * Distribution officielle de `python <https://www.python.org/>`_, il faut ensuite 
   installer de nombreux modules (voir :ref:`l-data2a`) pour obtenir
   une distribution équivalente aux deux précédentes.
+  
+* `Miniconda <http://conda.pydata.org/miniconda.html>`_ est une version light de Anaconda
+  sans tous ces packages. Elle peut être installée depuis une ligne de commande, via
+  une connexion SSH. 
+  Voir `Install Anaconda through SSH connection <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-11-01_anaconda_ssh.html>`_.
 
 
 Configuration
@@ -161,6 +167,45 @@ Pour vous assurer que cela correspond bien à la version de Python souhaitée,
 il suffit de demander la version installée ::
 
     pip --version
+    
+    
+pymyinstall
++++++++++++
+    
+Le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_    
+est conçu pour installer la plupart des modules en choisissant le moyen le plus
+approprié selon votre distribution. Pour l'installer ::
+
+    pip install pymyinstall
+    
+Puis ::
+
+    pymy_install3 <module_name>
+    
+Ou pour le mettre à jour ::
+
+    pymy_update3 <module_name>
+    
+Le module référence des lises de modules conseillés ::
+
+    pymy_install3 --set=pyensae
+    
+Ou ::    
+
+    pymy_install3 --set=ensae_teaching_cs
+
+    
+Désinstallation
++++++++++++++++
+
+Il est possible de désinstaller simplement les modules installés pour
+ces enseignements::
+
+::
+
+    pip uninstall pyquickhelper pyensae pymmails pyrsslocal pysqllike 
+    pip uninstall ensae_teachings_cs
+    pip uninstall code_beatrix actuariat_python 
 
     
     
