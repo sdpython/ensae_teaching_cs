@@ -309,6 +309,8 @@ def publish_teachings_to_web(
 
         if module.endswith("27"):
             prefix = ""
+            mn = module.replace("anaconda2_", "").replace("_27", "")
+            prefix2 = "_" if "_" not in mn else ""
             lay = layout[0]
             # C:\jenkins\pymy\anaconda2_pyquickhelper_27\dist_module27\dist
             root = os.path.abspath(location % (prefix,
@@ -324,13 +326,18 @@ def publish_teachings_to_web(
                 ext = os.path.splitext(f)[-1]
                 if ext in [".whl"]:
                     dest = module.replace("anaconda2_", "").replace("_27", "")
-                    dest = location % (prefix, dest, lay[0])
+                    dest = location % (prefix2, dest, lay[0])                        
                     dest = os.path.join(dest, "..")
+                    if not os.path.exists(dest):
+                        dest = location % ("", dest, lay[0])                        
+                        dest = os.path.join(dest, "..")
                     shutil.copy(os.path.join(root, f), dest)
         else:
-            prefix = = "_"
+            prefix = "_" if "_" not in module else ""
             for lay in layout:
                 root = os.path.abspath(location % (prefix, module, lay[0]))
+                if not os.path.exists(root):
+                    root = os.path.abspath(location % ("", module, lay[0]))
                 if module != "code_beatrix":
                     smod = module.replace("_no_clean", "").replace(
                         "anaconda2_", "").replace("_27", "")
@@ -348,9 +355,11 @@ def publish_teachings_to_web(
                 projects.append(project)
 
         if module == "ensae_teaching_cs":
-            prefix = "_"
+            prefix = "_" if "_" not in module else ""
             lay = [_ for _ in layout if _[0] == "html"][0]
             root = os.path.abspath(location % (prefix, module, lay[0]))
+            if not os.path.exists(root):
+                root = os.path.abspath(location % ("", module, lay[0]))
 
             project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
                            local=root.replace("\\html", "\\html2"),
@@ -368,6 +377,8 @@ def publish_teachings_to_web(
 
             for suffix in ["", "_2A", "_3A", "_1Ap"]:
                 root = os.path.abspath(location % (prefix, module, "html"))
+                if not os.path.exists(root):
+                    root = os.path.abspath(location % ("", module, "html"))
                 project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
                                local=root.replace(
                                    "\\html", "\\html_pres" + suffix),
