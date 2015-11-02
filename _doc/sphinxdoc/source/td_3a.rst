@@ -187,35 +187,18 @@ Trois projets réalisés par les élèves lors de l'année 2014-2015 :
 Getting started
 +++++++++++++++
 
-Il faut vous reporter à la section :ref:`l-install` pour installer python.        
-Il faut ajouter :
+Ces enseignements vous sont proposés via des notebooks. 
+Ils requièrent une surcouche apporté par le module 
+`pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_.
+Le python n'est pas l'objet de ce cours, les notebooks sont utilisés
+pour pouvoir regrouper dans un même document toutes les opérations 
+effectuées dans un langage Map/Reduce.
+La page :ref:`l-installation-courte` décrit comment installer 
+ces outils sur les trois OS principaux 
+`Windows <http://www.microsoft.com/fr-fr/windows>`_, 
+`OS X <http://www.apple.com/osx/>`_, 
+`Linux <https://en.wikipedia.org/wiki/Linux>`_.
 
-* `ansiconv <http://pythonhosted.org/ansiconv/>`_,
-* `ansi2html <https://github.com/ralphbean/ansi2html/>`_.
-* `azure <https://github.com/Azure/azure-sdk-for-python>`_ (pour Azure uniquement)
-
-Les deux modules suivants introduisent les commandes magiques utilisées dans les notebooks :
-
-* `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
-* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ (version >= 1.1)
-
-Il faudra également installer (pour Cloudera uniquement) :
-
-* `paramiko <http://www.paramiko.org/>`_
-* `ecdsa <https://pypi.python.org/pypi/pycrypto/>`_
-* `pycrypto <https://pypi.python.org/pypi/pycrypto/>`_
-
-Ces modules sont plus faciles à installer avec `Anaconda <http://continuum.io/downloads#py34>`_ 
-(commande ``conda install paramiko``, lire `install extra packages <http://docs.continuum.io/anaconda/faq.html#install-packages>`_).
-Le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_
-(voir :ref:`l-install`), il suffit d'exécuter ::
-
-    from pymyinstall import datascientist
-    datascientist("install", azure = True)
-
-Liens :
-
-* `Remote Notebook with Azure <http://www.xavierdupre.fr/blog/2014-11-09_nojs.html>`_
 
 .. _l-td3a-biblio:
 

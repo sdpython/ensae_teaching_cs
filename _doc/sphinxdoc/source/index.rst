@@ -124,12 +124,8 @@ Des modules développés pour ces enseignements viennent compléter cet ensemble
 Getting started
 ---------------
 
-.. index:: R, Julia, WinPython, Anaconda, pymyinstall, setup, installation
+En résumé :
 
-
-La version recommandée est `Python 3.4, 64 bit <https://www.python.org/downloads/>`_. Par défaut, les modules 
-s'installent avec ``pip install <module>``. Python seul est très limité et on n'installe plus
-les modules un par un.
 
 **Windows**
 
@@ -148,31 +144,8 @@ s'il est disponible. S'il ne l'est pas, l'installation du module est réservée 
 
 **Linux / Mac**
 
-`Anaconda <https://store.continuum.io/cshop/anaconda/>`_ est la distribution la plus répandue : 
-`Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac). Choisir **Python 3.4**.
-
-Sous Linux ou Mac, la distribution n'interfère pas avec la distribution existante
-souvent différente. C'est un point très appréciable. Les modules de la distribution ne sont 
-pas tous à jour. Il faut penser à mettre à jour avec la commande ``conda install <module>``
-ou ``conda update --all`` 
-depuis le répertoire ``Anaconda3/Scripts``.
-
-**Installation existante ou 32 bit**
-
-Aucune distribution pour les vieux ordinateurs n'a été préparée (32 bit) mais il est facile
-d'en préparer une ou de la mettre à jour en trois étapes depuis le répertoire *Scripts* ::
-
-    pip install pymyinstall --upgrade
-    pymy_install3
-    pymy_update3
-    
-Cela correspond à :
-
-#. mise à jour du module `pymy_install <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
-#. installation des nouveaux modules
-#. mise à jour
-
-Certains modules peuvent échouer mais cela n'interrompt pas le processus.
+La distribution `Anaconda <https://www.continuum.io/downloads>`_ (python 3.4, 64 bit)
+est la plus répandue.
 
 
 **Environnement de travail**
@@ -186,6 +159,7 @@ Certains modules peuvent échouer mais cela n'interrompt pas le processus.
   très pratique pour débugger, repérer des erreurs avant l'exécution (nom de variable inconnus...)
 * `Spyder <https://pythonhosted.org/spyder/>`_, ressemble beaucoup à `R Studio <http://www.rstudio.com/>`_
 * `Rodeo <http://blog.yhathq.com/posts/introducing-rodeo.html>`_, une sorte de Spyder très épuré
+* `Visual Studio Community <https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx>`_
   
 Pour les développeurs chevronnés, il faut un environnement plus complet :
 

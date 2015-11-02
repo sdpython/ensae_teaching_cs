@@ -175,11 +175,6 @@ if is_local() and "build_sphinx" not in sys.argv and \
                                "pyensae", "pyrsslocal", "pymyinstall"],
         blog_list=os.path.abspath(os.path.join("src", project_var_name, package_data[project_var_name][0])))
 
-    if not r and not ({"bdist_msi", "sdist",
-                       "bdist_wheel", "publish", "publish_doc", "register",
-                       "upload_docs", "bdist_wininst"} & set(sys.argv)):
-        raise Exception("unable to interpret command line: " + str(sys.argv))
-
     if "build_script" in sys.argv and sys.platform.startswith("win"):
         pres = """
             :presentation:
@@ -262,7 +257,6 @@ if is_local() and "build_sphinx" not in sys.argv and \
         content += "\n" + copy + "\n" + addition
         with open("auto_cmd_copy_sphinx.bat", "w") as f:
             f.write(content)
-
 else:
     r = False
 

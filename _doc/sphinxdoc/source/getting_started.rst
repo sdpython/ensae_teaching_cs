@@ -6,22 +6,67 @@ Getting started
 
 .. index:: R, Julia, WinPython, Anaconda, pyminstall, getting started
 
+Ce paragraphe décrit un moyen d'installation Python sur les trois
+systèmes principaux 
+`Windows <http://www.microsoft.com/fr-fr/windows>`_, 
+`OS X <http://www.apple.com/osx/>`_, 
+`Linux <https://en.wikipedia.org/wiki/Linux>`_
+avec les modules nécessaires présentés dans ce cours.
+Il requiert égalements des modules développés explicitement
+pour ce cours :
+
+* `pyquickhelper <https://pypi.python.org/pypi/pyquickhelper/>`_
+* `pyensae <https://pypi.python.org/pypi/pyensae/1.1.380>`_
+* `ensae_teaching_cs <https://pypi.python.org/pypi/ensae_teaching_cs/0.7.931>`_
+
+La page :ref:`l-data2a` décrit tous les modules présentés ou évoqués
+dans ces cours.
+
+
+.. _l-installation-courte:
+
 Résumé
 ++++++
 
 Les instructions mentionnées ci-dessous fonctionnent sous Windows, Linux et Mac.
-Des différences peuvent apparaître mais elles seront explicitées.
+
+Windows
+^^^^^^^
+
+* `distribution customisée <http://www.xavierdupre.fr/enseignement/>`_ [#fpm1]_ ou
+  distribution standard de `Python <https://www.python.org/downloads/>`_
+* puis la mise à jour depuis le répertoire ``python`` en ligne de commande ::
+
+    Scripts\pip install pymyinstall --upgrade
+    Scripts\pymy_install3 --set=ensae_teaching_cs
+    Scripts\pymy_update3 --set=ensae_teaching_cs
+    
+Linux / Mac
+^^^^^^^^^^^
+
+* distribution `Anaconda <https://www.continuum.io/downloads>`_ (python 3.4, 64 bit)
+* puis la mise à jour depuis le répetoire ``Scripts`` en ligne de commande ::
+
+    ./conda update --all
+    ./pip install pymyinstall --upgrade
+    ./pymy_install3 --set=ensae_teaching_cs
+    ./pymy_update3 --set=ensae_teaching_cs
+        
+    
+Linux en ligne de commande, connexion SSH
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Voir `Install Miniconda through SSH connection <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-11-01_anaconda_ssh.html>`_.
+La distribution testée est une distribution `Ubuntu 14.04 <http://releases.ubuntu.com/14.04/>`_.
 
 
-**Recommandations**
+Installer un module
++++++++++++++++++++
 
-* Linux/Mac OS : distribution `Anaconda <http://continuum.io/downloads#py34>`_ (python 3.4, 64 bit)
-* Windows : une `distribution customisée <http://www.xavierdupre.fr/enseignement/>`_ [#fpm1]_ 
-  ou la distribution  `WinPython <https://winpython.github.io/>`_
-
-**Installer un module soi-même**
-
-Il faut ouvrir une fenêtre ligne de commande (Windows) ou une fenêtre terminal (Linux, OS/X) et se placer dans le répertoire de la distribution.
+Il faut ouvrir une fenêtre ligne de commande (Windows) 
+ou une fenêtre terminal (Linux, OS/X) et se placer dans le répertoire de la distribution.
+L'installation dépend ensuite dy système d'exploitation et de la 
+distribution choisie. Dans tous les cas, il faut se place
 
 * Anaconda: 
 
@@ -38,13 +83,59 @@ L'instruction ``pip install`` ne fonctionne pas sous Windows lorsque le module
 est implémenté en Python et C++. C'est pourquoi il est préférable d'installer
 une version précompilée. 
 
+**dépendances**
+
 Par défaut, l'installation d'un module implique celle de ses dépendances
 ce qu'il est possible d'éviter : ::
 
     pip install <module> --no-deps
 
 
-**Installer un module avec pymy_install**
+pip, python et ligne de commande
+++++++++++++++++++++++++++++++++
+
+
+Le language python s'est doté d'un système de distribution de modules (ou *packages*)
+qui est aisément accessible depuis la `ligne de commande <http://fr.wikipedia.org/wiki/Interface_en_ligne_de_commande>`_.
+Sous Windows, on peut lancer la ligne de commande par la commande ``cmd``. On obtient une fenêtre noire.
+Il suffit alors de se déplacer dans le répertoire d'installation de Python ::
+
+    cd c:\Python34_x64\Scripts
+    
+Ou encore ::
+
+    cd c:\Anaconda3\Scripts
+    
+Puis d'écrire ::
+
+    pip install <module>
+    
+Sous Linux ou OS X (Apple), la ligne de commande s'appelle le `terminal <http://doc.ubuntu-fr.org/terminal>`_.
+Comme Python est déjà installé en version 2.7, je recommande l'installation de la distribution
+Anaconda en version 3.4 qui facilite la coexistence de plusieurs versions de Python. On procède de la même manière ::
+
+    cd /home/<alias>/anaconda3/bin
+    
+Puis ::
+
+    pip install <module>
+
+Pour vous assurer que cela correspond bien à la version de Python souhaitée,
+il suffit de demander la version installée ::
+
+    pip --version
+    
+Sous Windows, pour l'ajout d'un module ponctuel, 
+si l'instruction ``pip install <module>`` ne fonctionne pas,
+c'est vraisemblablement parce que ce module contient une partie en C++. 
+Dans ce cas, il faut aller voir sur ce site 
+`Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
+s'il est disponible. S'il ne l'est pas, l'installation du module est réservée aux experts.
+    
+    
+    
+Installer un module avec pymy_install
++++++++++++++++++++++++++++++++++++++
 
 Le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_ 
 recherche la meilleure façon d'installer un module quelque soit votre installation. 
@@ -61,16 +152,11 @@ Le module permet d'installer un ensemble de modules ::
 
 
 
-Data Scientist
-++++++++++++++
-
-La version recommandée est Python 3.4, 64 bit. Par défaut, les modules 
-s'installent avec ``pip install <module>`` ou avec ``conda install <module>``
-pour les modules distribués par Anaconda. 
-Le plus simple est sans doute d'utiliser une distribution qui inclut
-les modules les plus usités. Deux options possibles :
+Distributions
++++++++++++++
 
 .. index:: anaconda, winpython
+
 
 * `Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac). 
   Sous Linux ou Mac, la distribution n'interfère pas avec la distribution existante
@@ -134,67 +220,6 @@ Certains notebooks requièrent des outils supplémentaires :
 
 .. index:: pip, ligne de commande
 
-pip, python et ligne de commande
-++++++++++++++++++++++++++++++++
-
-
-Le language python s'est doté d'un système de distribution de modules (ou *packages*)
-qui est aisément accessible depuis la `ligne de commande <http://fr.wikipedia.org/wiki/Interface_en_ligne_de_commande>`_.
-Sous Windows, on peut lancer la ligne de commande par la commande ``cmd``. On obtient une fenêtre noire.
-Il suffit alors de se déplacer dans le répertoire d'installation de Python ::
-
-    cd c:\Python34_x64\Scripts
-    
-Ou encore ::
-
-    cd c:\Anaconda3\Scripts
-    
-Puis d'écrire ::
-
-    pip install <module>
-    
-Sous Linux ou OS X (Apple), la ligne de commande s'appelle le `terminal <http://doc.ubuntu-fr.org/terminal>`_.
-Comme Python est déjà installé en version 2.7, je recommande l'installation de la distribution
-Anaconda en version 3.4 qui facilite la coexistence de plusieurs versions de Python. On procède de la même manière ::
-
-    cd /home/<alias>/anaconda3/bin
-    
-Puis ::
-
-    pip install <module>
-
-Pour vous assurer que cela correspond bien à la version de Python souhaitée,
-il suffit de demander la version installée ::
-
-    pip --version
-    
-    
-pymyinstall
-+++++++++++
-    
-Le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_    
-est conçu pour installer la plupart des modules en choisissant le moyen le plus
-approprié selon votre distribution. Pour l'installer ::
-
-    pip install pymyinstall
-    
-Puis ::
-
-    pymy_install3 <module_name>
-    
-Ou pour le mettre à jour ::
-
-    pymy_update3 <module_name>
-    
-Le module référence des lises de modules conseillés ::
-
-    pymy_install3 --set=pyensae
-    
-Ou ::    
-
-    pymy_install3 --set=ensae_teaching_cs
-
-    
 Désinstallation
 +++++++++++++++
 
@@ -219,7 +244,10 @@ Editeur de texte et navigateur
   `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_.
 * `PyCharm <https://www.jetbrains.com/pycharm/>`_, c'est un environnement complet de développement,
   très pratique pour débugger, repérer des erreurs avant l'exécution (nom de variable inconnus...)
-  
+* `Spyder <https://pythonhosted.org/spyder/>`_, ressemble beaucoup à `R Studio <http://www.rstudio.com/>`_
+* `Rodeo <http://blog.yhathq.com/posts/introducing-rodeo.html>`_, une sorte de Spyder très épuré
+* `Visual Studio Community <https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx>`_
+
 .. index:: navigateur, notebook  
 
 Les navigateur sont importants pour l'utilisation des notebooks. Je recommande soit

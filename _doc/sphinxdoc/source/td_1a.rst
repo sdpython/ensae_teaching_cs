@@ -140,7 +140,7 @@ Trucs et astuces avec les notebooks
 Getting started
 ---------------
 
-Il faut vous reporter à la section :ref:`l-install` pour installer python.        
+Il faut vous reporter à la section :ref:`l-installation-courte` pour installer python.        
 Certaines séances pratiques utilisent des données depuis ce site. 
 Elles sont facilement téléchargeables avec ces deux modules :
 

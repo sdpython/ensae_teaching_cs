@@ -314,7 +314,7 @@ def publish_teachings_to_web(
             lay = layout[0]
             # C:\jenkins\pymy\anaconda2_pyquickhelper_27\dist_module27\dist
             root = os.path.abspath(location % (prefix,
-                module + "\\dist_module27", lay[0]))
+                                               module + "\\dist_module27", lay[0]))
             root = os.path.join(root, "..")
 
             if not os.path.exists(root):
@@ -326,10 +326,10 @@ def publish_teachings_to_web(
                 ext = os.path.splitext(f)[-1]
                 if ext in [".whl"]:
                     dest = module.replace("anaconda2_", "").replace("_27", "")
-                    dest = location % (prefix2, dest, lay[0])                        
+                    dest = location % (prefix2, dest, lay[0])
                     dest = os.path.join(dest, "..")
                     if not os.path.exists(dest):
-                        dest = location % ("", dest, lay[0])                        
+                        dest = location % ("", dest, lay[0])
                         dest = os.path.join(dest, "..")
                     shutil.copy(os.path.join(root, f), dest)
         else:
