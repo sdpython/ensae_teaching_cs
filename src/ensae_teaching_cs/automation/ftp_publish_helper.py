@@ -216,7 +216,7 @@ def publish_teachings_to_web(
         login,
         ftpsite="ftp.xavierdupre.fr",
         google_id=None,
-        location="C:\\jenkins\\pymy\\%s\\dist\\%s",
+        location="C:\\jenkins\\pymy\\%s%s\\dist\\%s",
         rootw="/www/htdocs/app/%s/%s",
         rootw2="/lesenfantscodaient.fr",
         folder_status=".",
@@ -267,7 +267,7 @@ def publish_teachings_to_web(
 
         publish_teachings_to_web(login, ftpsite=website,
             google_id="google_id",
-            location="<something>\\\\%s\\\\dist\\\\%s",
+            location="<something>\\\\%s%s\\\\dist\\\\%s",
             rootw=rootw,
             rootw2=rootw2,
             folder_status=os.path.abspath("."),
@@ -308,9 +308,10 @@ def publish_teachings_to_web(
         fLOG("+", module, " -- ", layout)
 
         if module.endswith("27"):
+            prefix = ""
             lay = layout[0]
             # C:\jenkins\pymy\anaconda2_pyquickhelper_27\dist_module27\dist
-            root = os.path.abspath(location % (
+            root = os.path.abspath(location % (prefix,
                 module + "\\dist_module27", lay[0]))
             root = os.path.join(root, "..")
 
@@ -323,12 +324,13 @@ def publish_teachings_to_web(
                 ext = os.path.splitext(f)[-1]
                 if ext in [".whl"]:
                     dest = module.replace("anaconda2_", "").replace("_27", "")
-                    dest = location % (dest, lay[0])
+                    dest = location % (prefix, dest, lay[0])
                     dest = os.path.join(dest, "..")
                     shutil.copy(os.path.join(root, f), dest)
         else:
+            prefix = = "_"
             for lay in layout:
-                root = os.path.abspath(location % (module, lay[0]))
+                root = os.path.abspath(location % (prefix, module, lay[0]))
                 if module != "code_beatrix":
                     smod = module.replace("_no_clean", "").replace(
                         "anaconda2_", "").replace("_27", "")
@@ -346,9 +348,9 @@ def publish_teachings_to_web(
                 projects.append(project)
 
         if module == "ensae_teaching_cs":
-
+            prefix = "_"
             lay = [_ for _ in layout if _[0] == "html"][0]
-            root = os.path.abspath(location % (module, lay[0]))
+            root = os.path.abspath(location % (prefix, module, lay[0]))
 
             project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
                            local=root.replace("\\html", "\\html2"),
@@ -365,7 +367,7 @@ def publish_teachings_to_web(
             # pres
 
             for suffix in ["", "_2A", "_3A", "_1Ap"]:
-                root = os.path.abspath(location % (module, "html"))
+                root = os.path.abspath(location % (prefix, module, "html"))
                 project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
                                local=root.replace(
                                    "\\html", "\\html_pres" + suffix),
