@@ -233,6 +233,7 @@ def publish_teachings_to_web(
                  "python3_module_template",
                  "actuariat_python",
                  "code_beatrix",
+                 "ensae_projects",
                  "ensae_teaching_cs"],
         password=None,
         fLOG=print):

@@ -107,6 +107,12 @@ def setup_jenkins_server(js,
                              "ensae_teaching_cs [anaconda3] [custom_left] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
                              # 3h
                              "ensae_teaching_cs [py35] [custom_left] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                             # code_beatrix
+                             ("ensae_projects <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall, actuariat_python, ensae_teaching_cs, code_beatrix", "H H(4-5) * * 3"),
+                             ("ensae_projects [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall, actuariat_python, ensae_teaching_cs, code_beatrix",
+                                        None, dict(success_only=True)),
+                             ["ensae_projects [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall, actuariat_python, ensae_teaching_cs, code_beatrix",
+                                        "ensae_projects [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall, actuariat_python, ensae_teaching_cs, code_beatrix"],
                              # documentation
                              ("pyquickhelper [doc] <-- pyquickhelper",
                                         "H H(3-4) * * 1"),
