@@ -84,3 +84,4 @@ pymyinstall
 colormap
 easydev
 qgrid
+cvxopt
