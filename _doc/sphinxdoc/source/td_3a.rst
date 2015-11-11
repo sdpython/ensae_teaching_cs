@@ -149,7 +149,7 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
     * particularité de map/reduce
         * analogie avec les itérateurs (langage fonctionnels)
         * non conservation de l'ordre des lignes lors d'un traitement
-        * algorithmes des graphes conre-indiqués, cas des composantes connexes
+        * algorithmes des graphes contre-indiqués, cas des composantes connexes
         * synchroniser l'heure des machines est un problème difficile
         * limite du Monte Carlo sur map reduce (pseudo aléatoire distribué est compliqué,
           qu'en est-il de la fusion de deux séquences pseudo aléatoires ayant commencé avec la même seed ?, 
@@ -162,6 +162,7 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
         * gestion de la mémoire au niveau des mapper/reducer, 
         * difficulté avec les algorithmes itératifs
     * skewed streams
+    * :ref:`Reservoir Sampling <td3acenoncereservoirsamplingrst>` (:ref:`correction <td3acorrectionreservoirsamplingrst>`)
     * :ref:`Appariement distribué et données antipathiques <td3acenoncesession8arst>` (:ref:`correction, première partie <td3acorrectionsession8arst>`)
 
 

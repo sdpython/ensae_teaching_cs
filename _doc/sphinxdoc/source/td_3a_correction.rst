@@ -1,6 +1,4 @@
-﻿
 
-.. issue.
 
 .. _l-td3a_correction:
 
@@ -17,5 +15,6 @@ correction
     Séance 7 : PIG et JSON et streaming avec Azure <notebooks/td3a_correction_session7az>
     Séance 7 : PIG et paramètres avec Cloudera <notebooks/td3a_correction_session7params>
     Séance 7 : PIG et paramètres avec Azure <notebooks/td3a_correction_session7paramsaz>
+    Séance 8 : Reservoir Sampling <notebooks/td3a_cenonce_reservoir_sampling>
     Séance 8 : Données antipathiques (skewed), Appariement <notebooks/td3a_correction_session8a>
     
