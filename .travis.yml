@@ -2,6 +2,9 @@ language: python
 python:
     - "3.4"
     - "3.5"
+before_install:
+    - sudo apt-get libblas-dev
+    - sudo apt-get liblapack-dev
 install: 
     - pip install -r requirements.txt
     - pip install -r requirements_ext.txt
