@@ -342,3 +342,5 @@ _doc/notebooks/td2a/*.json
 _doc/notebooks/td2a/*.db
 _doc/notebooks/td2a/data*
 _doc/notebooks/td2a/log
+_doc/notebooks/td3a/*.txt
+_doc/notebooks/td3a/*.jar
