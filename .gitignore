@@ -346,3 +346,7 @@ _doc/notebooks/td3a/*.txt
 _doc/notebooks/td3a/*.jar
 _doc/notebooks/td3a/reservoir_sample.py
 _doc/notebooks/td3a/reservoir_sample.temp.py
+_doc/notebooks/td3a/reservoir_sampling.temp.py
+_doc/notebooks/td3a/reservoir_sampling.py
+_doc/notebooks/td3a/reservoir_sample_code.py
+_doc/notebooks/td3a/reservoir_sample_code.temp.py
