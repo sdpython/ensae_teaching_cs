@@ -344,3 +344,5 @@ _doc/notebooks/td2a/data*
 _doc/notebooks/td2a/log
 _doc/notebooks/td3a/*.txt
 _doc/notebooks/td3a/*.jar
+_doc/notebooks/td3a/reservoir_sample.py
+_doc/notebooks/td3a/reservoir_sample.temp.py
