@@ -11,11 +11,9 @@ import os
 if sys.platform.startswith("win"):
     ver = sys.version_info
     arch = platform.architecture()[0]
-    if ver[:2] == (3, 3):
+    if ver[:2] == (3, 5):
         if "64" in arch:
-            from .py33x64 import clr
-        elif arch == "32bit":
-            from .py33 import clr
+            from .py35x64 import clr
         else:
             raise ImportError(
                 "unable to import pythonnet for this architecture " +
@@ -25,6 +23,15 @@ if sys.platform.startswith("win"):
             from .py34x64 import clr
         elif arch == "32bit":
             from .py34 import clr
+        else:
+            raise ImportError(
+                "unable to import pythonnet for this architecture " +
+                str(arch))
+    elif ver[:2] == (3, 3):
+        if "64" in arch:
+            from .py33x64 import clr
+        elif arch == "32bit":
+            from .py33 import clr
         else:
             raise ImportError(
                 "unable to import pythonnet for this architecture " +
