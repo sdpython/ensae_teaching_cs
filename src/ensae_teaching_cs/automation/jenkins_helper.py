@@ -113,6 +113,8 @@ def setup_jenkins_server(js,
                                         None, dict(success_only=True)),
                              ["ensae_projects [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
                                         "ensae_projects [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
+                             ["ensae_projects [SKIP] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", 
+                              "ensae_projects [SKIP] [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
                              # documentation
                              ("pyquickhelper [doc] <-- pyquickhelper",
                                         "H H(3-4) * * 1"),
