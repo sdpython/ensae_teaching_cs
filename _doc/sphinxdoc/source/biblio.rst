@@ -10,9 +10,20 @@
 Articles, Références, Blogs
 ===========================
 
+Autres bibliographies incluses sur ce site
+++++++++++++++++++++++++++++++++++++++++++
+
+* :ref:`Bibliographie 1A <l-td1a-biblio>` : apprendre à progroammer
+* :ref:`Bibliographie 2A <l-td2a-biblio>` : Python pour faire des statistiques
+* :ref:`Bibliographie 3A <l-td3a-biblio>` : Hadoop, PIG, calcul distribué
+
+
+
+Python / Programmation
+++++++++++++++++++++++
 
 Langage Python
---------------
+^^^^^^^^^^^^^^
 
 * `Apprenez à programmer en Python <http://www.siteduzero.com/informatique/tutoriels/apprenez-a-programmer-en-python>`_ (*Vincent Le Goff*) Le livre peut être acheté où téléchargé. Le livre est bien conçu, chaque concept est expliqué de façon concise et sans interférence avec d'autres concepts. 
 * `Apprentissage de la programmation <http://inforef.be/swi/python.htm>`_ (*Gérard Swinnen*) Le livre est mise à jour de façon régulière au gré des évolutions du langages, c'est un des rares livres à survivre d'années en années.
@@ -24,13 +35,13 @@ Langage Python
 * `The real 10 algorithms that dominate our world <https://medium.com/@_marcos_otero/the-real-10-algorithms-that-dominate-our-world-e95fa9f16c04>`_
   
 Installation
-------------
+^^^^^^^^^^^^
 
 * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
 * `Installing Scientific Packages for Python3 on MacOS 10.9 Mavericks <http://sebastianraschka.com/Articles/2014_install_python_sci_pkgs.html>`_
 
 Python dans le détail
----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 * `La boîte à outils Python 2014 <http://www.hautefeuille.eu/python-tools-2014.html>`_
 * `Les recettes Python de Tyrtamos <http://python.jpvweb.com/mesrecettespython/doku.php?id=Sommaire>`_
@@ -50,14 +61,34 @@ Python dans le détail
 * `One line of code cut our Flask page load times by 60% <https://medium.com/@5hreyans/the-one-weird-trick-that-cut-our-flask-page-load-time-by-70-87145335f679>`_
 
 Trucs et astuces en Python
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * `Vérification de types <http://www.xavierdupre.fr/blog/2014-08-20_nojs.html>`_
 * `Configurer IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_
 * `Test unitaires <http://sametmax.com/un-gros-guide-bien-gras-sur-les-tests-unitaires-en-python-partie-1/>`_, `partie 2 <http://sametmax.com/un-gros-guide-bien-gras-sur-les-tests-unitaires-en-python-partie-2/>`_
+* `Cheat Sheets Python <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/cheat_sheets.html>`_
 
-Machine Learning / Data Science
--------------------------------
+Livres sur la programmation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* `Thinking in C++ <http://mindview.net/Books/TICPP/ThinkingInCPP2e.html>`_, Bruce Eckel
+* `Effective C++ <http://www.aristeia.com/books.html>`_, Scott Meyers
+* `What Every Programmer Should Know About Memory <http://www.akkadia.org/drepper/cpumemory.pdf>`_, Ulrich Drepper
+* `The Art of Multiprocessor Programming <http://edc.tversu.ru/elib/inf/0189.pdf>`_, Maurice Herlihy, Nir Shavit
+* `Hadoop: The Definitive Guide, 2nd Edition <http://shop.oreilly.com/product/0636920010388.do>`_, Tom White  (voir aussi `GitHub <https://github.com/tomwhite/hadoop-book/>`_)
+* `Hadoop in Practice <http://it-ebooks.info/book/1028/>`_, Alex Holmes
+
+
+
+
+Machine Learning
+++++++++++++++++
+
+
+
+
+Machine Learning / Data Science - articles
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * `Sebastian Raschka <http://sebastianraschka.com/articles.html>`_ (machine learning avec Python)
 * `Data Science with Python <http://blog.yhathq.com/posts/data-science-in-python-tutorial.html>`_
@@ -81,42 +112,9 @@ Machine Learning / Data Science
 * `Bar des sciences : débat sur le Big Data <http://freakonometrics.hypotheses.org/12135>`_
 * `Sequence to Sequence Learning with Neural Networks <http://arxiv.org/pdf/1409.3215.pdf>`_, Ilya Sutskever, Oriol Vinyals, Quoc V. Le
 
-Optimisation
-------------
-
-* module `cvxopt <http://cvxopt.org/>`_
-* `Introduction à l'optimisation - 2e édition <http://www.editions-ellipses.fr/product_info.php?products_id=8830>`_ (*Jean-Christophe Culioli*)
-* `Numerical Optimization <http://www.ece.northwestern.edu/~nocedal/book/num-opt.html>`_, (*Jorge Nocedal, Stephen J. Wright*)
-
-
-Enseignements
--------------
-
-* `Why Do Americans Stink at Math? <http://www.nytimes.com/2014/07/27/magazine/why-do-americans-stink-at-math.html>`_
-* `Python is Now the Most Popular Introductory Teaching Language at Top U.S. Universities <http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-us-universities/fulltext>`_
-* `Commencez avec Python <http://www.xavierdupre.fr/blog/2014-06-04_nojs.html>`_
-* `Apprendre à programmer aux enfants : Le monde de Reeborg <http://www.xavierdupre.fr/blog/2014-07-12_nojs.html>`_
-* `Scratch <http://scratch.mit.edu/>`_
-
-Papers about machine learning
------------------------------
-
-* :ref:`Bibliographie 1A <l-td1a-biblio>` : apprendre à progroammer
-* :ref:`Bibliographie 2A <l-td2a-biblio>` : Python pour faire des statistiques
-* :ref:`Bibliographie 3A <l-td3a-biblio>` : Hadoop, PIG, calcul distribué
-
-Livres sur la programmation
----------------------------
-
-* `Thinking in C++ <http://mindview.net/Books/TICPP/ThinkingInCPP2e.html>`_, Bruce Eckel
-* `Effective C++ <http://www.aristeia.com/books.html>`_, Scott Meyers
-* `What Every Programmer Should Know About Memory <http://www.akkadia.org/drepper/cpumemory.pdf>`_, Ulrich Drepper
-* `The Art of Multiprocessor Programming <http://edc.tversu.ru/elib/inf/0189.pdf>`_, Maurice Herlihy, Nir Shavit
-* `Hadoop: The Definitive Guide, 2nd Edition <http://shop.oreilly.com/product/0636920010388.do>`_, Tom White  (voir aussi `GitHub <https://github.com/tomwhite/hadoop-book/>`_)
-* `Hadoop in Practice <http://it-ebooks.info/book/1028/>`_, Alex Holmes
 
 Livres sur le machine learning
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * `Deep Learning: Methods and Applications <http://research.microsoft.com/apps/pubs/default.aspx?id=219984>`_, 
 * `Data-Intensive Text Processing with MapReduce <http://lintool.github.io/MapReduceAlgorithms/>`_, Jimmy Lin, Chris Dyer
@@ -128,8 +126,39 @@ Livres sur le machine learning
 * `Modeling Creativity: Case Studies in Python <http://arxiv.org/abs/1410.0281>`_, Tom De Smedt
 * `Critical Mass: How One Thing Leads to Another <http://www.philipball.co.uk/index.php?option=com_content&view=article&id=15:critical-mass-how-one-thing-leads-to-another&catid=3:books&Itemid=4>`_, Philip Ball
 
+Mathématiques
++++++++++++++
+
+Optimisation
+^^^^^^^^^^^^
+
+* module `cvxopt <http://cvxopt.org/>`_
+* `Introduction à l'optimisation - 2e édition <http://www.editions-ellipses.fr/product_info.php?products_id=8830>`_ (*Jean-Christophe Culioli*)
+* `Numerical Optimization <http://www.ece.northwestern.edu/~nocedal/book/num-opt.html>`_, (*Jorge Nocedal, Stephen J. Wright*)
+
+
+Times Series
+^^^^^^^^^^^^
+
+* `Forecasting: principles and practice <https://www.otexts.org/fpp>`_
+
+
+Enseignements
++++++++++++++
+
+
+Liens variés
+^^^^^^^^^^^^
+
+* `Why Do Americans Stink at Math? <http://www.nytimes.com/2014/07/27/magazine/why-do-americans-stink-at-math.html>`_
+* `Python is Now the Most Popular Introductory Teaching Language at Top U.S. Universities <http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-us-universities/fulltext>`_
+* `Commencez avec Python <http://www.xavierdupre.fr/blog/2014-06-04_nojs.html>`_
+* `Apprendre à programmer aux enfants : Le monde de Reeborg <http://www.xavierdupre.fr/blog/2014-07-12_nojs.html>`_
+* `Scratch <http://scratch.mit.edu/>`_
+
+
 MOOC, cours, Lectures
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 * `CS 188: Artificial Intelligence (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/lectures.html>`_
 * `Stanford From Languages to Information <https://web.stanford.edu/class/cs124/>`_  Dan Jurafsky 
@@ -139,13 +168,29 @@ MOOC, cours, Lectures
 * `Coursera Machine Learning <https://www.coursera.org/course/ml>`_    
 * `Python en Prépas <http://prepas.org/ups.php?article=394>`_
 
+
+Vidéo, tutorial
+^^^^^^^^^^^^^^^
+
+* `PyData channel <https://vimeo.com/channels/pydata>`_
+* `PyCon 2014 <https://www.youtube.com/user/PyCon2014>`_
+* `PyVideo <http://pyvideo.org/>`_
+* `Formation à Python scientifique - ENS Paris <http://python-prepa.github.io/index.html>`_
+
+
 Question des élèves
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 * :ref:`question_2014`
 
+
+
+
+Exercices, Puzzle
++++++++++++++++++
+
 Articles de blog
-----------------
+^^^^^^^^^^^^^^^^
 
 * **Algorithmes**
     * `Résoudre un sudoku avec Excel et VBA <http://www.xavierdupre.fr/blog/2014-02-08_nojs.html>`_
@@ -166,7 +211,7 @@ Articles de blog
     * `Quelques précisions sur les projets informatiques (finance) <http://www.xavierdupre.fr/blog/2014-04-05_nojs.html>`_
     
 Exemples de code
-----------------
+^^^^^^^^^^^^^^^^
 
 * `fusionner deux tableaux <http://www.xavierdupre.fr/blog/2013-11-21_nojs.html>`_
 * `compter les fréquences de lettres et de couples de lettres <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_

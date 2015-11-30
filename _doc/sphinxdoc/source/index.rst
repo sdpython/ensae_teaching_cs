@@ -82,6 +82,7 @@ Contenu des enseignements
     * :ref:`blog <ap-main-0>` de ce cours
     * :ref:`code associé à ce cours <modindex>`
     * :ref:`l-ressources`
+    * :ref:`l-biblio`
 
     
 
@@ -181,6 +182,7 @@ Contenu
     blog/main_0000
     projet_info
     informations
+    biblio
     exemple_index
     all_notebooks
     exams

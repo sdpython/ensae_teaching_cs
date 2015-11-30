@@ -7,12 +7,12 @@
 Ressources, Evénements, Source de données
 =========================================
 
-.. index:: Croix-Rouge, opendata, data.gouv.fr, quandl, wikipedia, Letor, WordNet, ImageNet, données, OpenWeatherMap
+.. index:: Croix-Rouge, opendata, data.gouv.fr, quandl, wikipedia, Letor, WordNet, ImageNet, données, OpenWeatherMap, sources de données
 
 .. _l-datasources:
     
 Source de données
------------------
++++++++++++++++++
 
 * `data.gouv.fr <http://www.data.gouv.fr/>`_, `INSEE <http://www.insee.fr/fr/bases-de-donnees/>`_
 * `opendata Paris <http://opendata.paris.fr/page/home/>`_ (presque toutes les villes ont maintenant un site open data, il suffit de chercher avec un moteur de recherche `opendata + ville <https://duckduckgo.com/?q=opendata+montpellier>`_ pour le trouver)
@@ -41,10 +41,13 @@ Source de données
 * `soTweet: Studying Twitter at Scale <http://www-sop.inria.fr/members/Arnaud.Legout/Projects/sotweet.html>`_: base de 500 millions de tweets et 23 milliards de liens
 * autres pistes: `Where can I find large datasets open to the public? <https://www.quora.com/Where-can-I-find-large-datasets-open-to-the-public>`_
 
+Compétition, Codes
+++++++++++++++++++
+
 .. index:: stackoverflow
 
 Code
-----
+^^^^
 
 * `nullege <http://nullege.com/>`_ : moteur de recherche dédié au code Python
 * `stackoverflow <http://stackoverflow.com/>`_ : forum d'échanges sur des questions de code
@@ -62,7 +65,7 @@ Code
   `forum sur la langue française <http://french.stackexchange.com/>`_
 
 Puzzle, Enigme, Jeux
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 * `Code Golf <http://codegolf.stackexchange.com/>`_
 * `Puzzle Stack Exchange <http://puzzling.stackexchange.com/>`_
@@ -73,16 +76,20 @@ Puzzle, Enigme, Jeux
 .. index:: Kagle, datascience, challenge, compétition
 
 Compétitions Machine Learning
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * `datascience.net <http://www.datascience.net/fr/home/>`_
 * `kaggle <https://www.kaggle.com/>`_
 * `Data Challenges Paris <http://opendata.paris.fr/page/datachallenges/>`_
 
+
 .. index:: meetup, Data Tuesday, Data For Good
 
+Evénements, Médias
+++++++++++++++++++
+
 Evénements réguliers
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 * `Data Tuesday <http://data-tuesday.com/>`_
 * `Big Data Meetup Paris <http://big-data.meetup.com/cities/fr/paris/>`_, voir aussi `search page <http://big-data.meetup.com/cities/fr/paris/events/>`_
@@ -93,31 +100,19 @@ Evénements réguliers
 .. index:: conférence, communauté, pydata, pycon, pyvideo, tutoral, vidéo
 
 Conférences, Communautés
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 * `PyCon <http://www.pycon.org/>`_
 * `PyData <http://pydata.org/>`_
-
-Vidéo, tutorial
----------------
-
-* `PyData channel <https://vimeo.com/channels/pydata>`_
-* `PyCon 2014 <https://www.youtube.com/user/PyCon2014>`_
-* `PyVideo <http://pyvideo.org/>`_
-* `Formation à Python scientifique - ENS Paris <http://python-prepa.github.io/index.html>`_
 
 
 .. index:: Agoranov, Microsoft, TekTos, numa
 
 Incubateurs
------------
++++++++++++
 
 * `Agoranov <http://www.agoranov.com/>`_ (Paris)
 * `Microsoft Spark <https://www.microsoftventures.com/Accelerators/paris>`_ (Paris)
 * `TekTos <http://tektos.co/accelerateur-2/>`_
 * `Le Top des incubateurs et accélérateurs de start-up à Paris  <http://lentreprise.lexpress.fr/creation-entreprise/etapes-creation/le-top-des-incubateurs-et-accelerateurs-de-start-up-a-paris_1534130.html>`_
-
-Espaces de travail
-------------------
-
 * `numa <https://www.numa.paris/>`_ (Paris)

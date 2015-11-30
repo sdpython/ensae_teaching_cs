@@ -44,9 +44,10 @@ Glossaire
     benchmark
         `banc d'essai <http://fr.wikipedia.org/wiki/Test_de_performance>`_
         
-    CheatSheet
+    Cheat Sheet
         Sorte d'anti-sèche. Quelques exemples pour le machine learning :
-        `8 Best Machine Learning Cheat Sheets <http://designimag.com/best-machine-learning-cheat-sheets/>`_
+        `8 Best Machine Learning Cheat Sheets <http://designimag.com/best-machine-learning-cheat-sheets/>`_,
+        `Cheat Sheets Python <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/cheat_sheets.html>`_
 
     coût
         Le coût d'un algorithme est le nombre d'opérations qu'il effectue lorsqu'il 
