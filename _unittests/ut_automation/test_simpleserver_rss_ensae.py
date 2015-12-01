@@ -120,7 +120,7 @@ class TestSimpleServerRSSTeaching (unittest.TestCase):
         fLOG("fetching first url")
         url = "http://localhost:8093/"
         cont = get_url_content_timeout(url)
-        #if "Traceback" in cont and not "l''exception ::      Traceback" in cont:
+        # if "Traceback" in cont and not "l''exception ::      Traceback" in cont:
         #    raise Exception(cont)
         assert len(cont) > 0
         assert "RSS" in cont
@@ -131,7 +131,7 @@ class TestSimpleServerRSSTeaching (unittest.TestCase):
         cont = get_url_content_timeout(url)
         if "Traceback" in cont:
             fLOG(cont)
-        #if "Traceback" in cont and not "l''exception ::      Traceback" in cont:
+        # if "Traceback" in cont and not "l''exception ::      Traceback" in cont:
             #raise Exception(cont)
         assert len(cont) > 0
         assert "RSS" in cont

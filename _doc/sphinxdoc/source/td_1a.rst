@@ -56,6 +56,7 @@ Sessions alternatives :
 
 - :ref:`TD 7 : distance d'édition <td1acenoncesession7editionrst>` (:ref:`correction <td1acorrectionsession7editionrst>`),
   cette séance fait écho à la distance de Jaccard évoquée par :ref:`TD 4-5 : distance de Jaccard <td1acenoncesession45jaccardrst>`
+- :ref:`TD 8 : Parcours dans un graphe <td1acenoncesession8wikirootrst>` (:ref:`correction <td1acorrectionsession8wikirootrst>`)  
 
 
 Trois séances sont centrées sur les outils indispensables pour manipuler facilement les données et faire des calculs.

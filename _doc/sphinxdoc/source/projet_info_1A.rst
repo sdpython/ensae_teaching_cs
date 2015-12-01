@@ -14,7 +14,7 @@
   (courte introduction en amphithéâtre)
 
 
-Sujets proposés année 2014-2015
+Sujets proposés année 2015-2016
 -------------------------------
 
 Les sujets proposés abordent différents domaines connexes aux enseignements proposés à l'ENSAE
@@ -363,6 +363,7 @@ Liste des sujets cités
 #. ML algo : :ref:`l-ml-deepext`
 #. ML algo : :ref:`l-ml-align`
 #. ML algo : :ref:`l-fast-k-NN`
+#. ML algo : :ref:`l-ml-gradient-geom`
 #. Jeu 1 : :ref:`l-jeu-deuxmille`
 #. Jeu 1 : :ref:`l-jeuvoronoi`
 #. ML : :ref:`l-data-velib`

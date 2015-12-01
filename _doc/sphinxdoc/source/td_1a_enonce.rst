@@ -1,6 +1,4 @@
-﻿
 
-.. issue.
 
 .. _l-td1a_enonce:
 
@@ -20,6 +18,7 @@
     TD 7 : Programmation dynamique <notebooks/td1a_cenonce_session7>
     TD 7 : Distance d'édition <notebooks/td1a_cenonce_session7_edition>
     TD 8 : Arbre et Trie <notebooks/td1a_cenonce_session8>
+    TD 8 : Parcours dans un graphe <notebooks/td1a_cenonce_session8_wikiroot>
     TD 9 : Optimisation sous contrainte <notebooks/td1a_cenonce_session9>
     TD 10 : DataFrame et Matrice <notebooks/td1a_cenonce_session_10>
     TD 11 : Calcul numérique, dichotomie et Cython <notebooks/td1a_cenonce_session_11>

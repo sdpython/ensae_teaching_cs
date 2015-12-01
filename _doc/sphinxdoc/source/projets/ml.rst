@@ -165,3 +165,27 @@ est un des plus simples algorithmes d'apprentissage mais très coûteux. L'artic
 d'optimiser le calcul dans des espaces de grande dimension.
 
 `Fast k-NN search <http://arxiv.org/abs/1509.06957>`_
+
+
+.. _l-ml-gradient-geom:
+
+Accélération de la descente de gradient dans le cadre d'une optimisation convexe
+--------------------------------------------------------------------------------
+
+.. index:: gradient descente, descente de gradient, convexe
+
+La `descente de gradient <https://en.wikipedia.org/wiki/Gradient_descent>`_ est une technique
+d'optimisation très connue utilisée lorsqu'on ne sait pas exprimer de façon explicite 
+la solution d'un problème d'optimisation : on cherche le minimum ou le maximum de la fonction.
+
+Si l'algorithme converge lorsque la fonction à optimiser est convexe, 
+il existe des cas particuliers où on peut accélérer la convergence
+comme dans le cas de cet article qui propose une façon intuitive de le faire :
+`A geometric alternative to Nesterov's accelerated gradient descent <http://arxiv.org/abs/1506.08187>`_.
+
+L'objectif est d'implémenter cet algorithme puis de le comparer avec 
+d'autres méthodes.
+
+On pourra également regarder :
+`Linear Coupling: An Ultimate Unification of Gradient and Mirror Descent <http://arxiv.org/abs/1407.1537>`_
+et `Revisiting Nesterov’s Acceleration <https://blogs.princeton.edu/imabandit/2015/06/30/revisiting-nesterovs-acceleration/>`_.

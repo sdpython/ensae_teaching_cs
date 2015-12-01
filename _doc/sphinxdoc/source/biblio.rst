@@ -1,6 +1,5 @@
-﻿
 
-.. issue.
+
 
 .. _l-biblio:
 
@@ -135,7 +134,7 @@ Optimisation
 * module `cvxopt <http://cvxopt.org/>`_
 * `Introduction à l'optimisation - 2e édition <http://www.editions-ellipses.fr/product_info.php?products_id=8830>`_ (*Jean-Christophe Culioli*)
 * `Numerical Optimization <http://www.ece.northwestern.edu/~nocedal/book/num-opt.html>`_, (*Jorge Nocedal, Stephen J. Wright*)
-
+* `Convex Optimization: Algorithms and Complexity <http://arxiv.org/abs/1405.4980>`_, (`Sébastien Brubeck <https://blogs.princeton.edu/imabandit/>`_)
 
 Times Series
 ^^^^^^^^^^^^
