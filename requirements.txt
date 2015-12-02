@@ -85,3 +85,4 @@ colormap
 easydev
 qgrid
 cvxopt
+scikit-learn
