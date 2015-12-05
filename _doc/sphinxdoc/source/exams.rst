@@ -14,6 +14,7 @@ Ils requiert peu de connaissances, évitent le plus souvent les classes.
 
 
 .. contents::
+    :local:
 
 
 .. raw:: html
