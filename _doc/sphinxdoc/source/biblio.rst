@@ -3,11 +3,13 @@
 
 .. _l-biblio:
 
-.. index:: bibliographie
+
 
 
 Articles, Références, Blogs
 ===========================
+
+.. index:: bibliographie
 
 Autres bibliographies incluses sur ce site
 ++++++++++++++++++++++++++++++++++++++++++
