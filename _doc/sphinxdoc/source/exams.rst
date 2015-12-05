@@ -13,15 +13,22 @@ Les énoncés sont plus guidés que les séances pratiques.
 Ils requiert peu de connaissances, évitent le plus souvent les classes.
 
 
+.. contents::
+
+
 .. raw:: html
 
-    <p>
-    Certains énoncés nécessitent des données ou des bouts de programmes.
-    Ils sont accessibles ici :
-    <a href="http://www.xavierdupre.fr/site2013/enseignements/tddata/">données complémentaires</a>.
-    </p>
+    <p><b>Certains énoncés nécessitent des données ou des bouts de programmes. Les liens sont parfois
+    cassés. Dans ce cas, il faut essayer
+    <a href="http://www.xavierdupre.fr/site2013/enseignements/index_documents.html">données complémentaires</a>.
+    </b></p>
 
-    <h3>Séances notées</h3>
+
+
+Séances notées
+++++++++++++++
+
+.. raw:: html
 
     <p>
 
@@ -41,7 +48,12 @@ Ils requiert peu de connaissances, évitent le plus souvent les classes.
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2012.pdf">énoncé 2011-2012</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2012.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2012.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
             (statistiques simples sur un fichier plat de données - temps passé devant la télévision)</li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2013.pdf">énoncé 2012-2013</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2013.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2013.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
-            (coloriage)</li>
+            (coloriage)
+            <ul>
+            <li><a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2013_bout_de_code_coloriage.html">éléments de code dans un notebook pour le coloriage</a></li>
+            <li><a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2013_coloriage_correction.html">correction pour le coloriage</a></li></li>
+            </ul>
+            </li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2014.pdf">énoncé 2013-2014</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2014.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2014.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
             (recherche dichotomique, distance d'édition). L'énoncé s'appuie sur les deux 
             programmes suivant :
@@ -58,8 +70,15 @@ Ils requiert peu de connaissances, évitent le plus souvent les classes.
             (parcours de graphe, distance d'édition, plus court chemin)
         </li>
     </ul>
+    </p>
 
-    <b>Séances de rattrapage :</b>
+
+Séances de rattrapage
++++++++++++++++++++++
+
+.. raw:: html
+
+    <p>
     <ul>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2009_rattrape.pdf">énoncé 2008-2009</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2009_rattrape.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2009_rattrape.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (manipulation de fichier texte, fusion de données)</li>
@@ -76,7 +95,10 @@ Ils requiert peu de connaissances, évitent le plus souvent les classes.
     </ul>
     </p>
 
-    <h3>Interrogations rapides</h3>
+Interrogations rapides
+++++++++++++++++++++++
+
+.. raw:: html
 
     <p>
     <ul>
@@ -123,7 +145,12 @@ Ils requiert peu de connaissances, évitent le plus souvent les classes.
     </ul>
     </p>
 
-    <h3>Examens écrits</h3>
+
+Examens écrits
+++++++++++++++
+
+
+.. raw:: html
 
     <p>
     <ul>
@@ -151,11 +178,13 @@ Ils requiert peu de connaissances, évitent le plus souvent les classes.
     
     
 
-Correction sous forme de notebooks
-++++++++++++++++++++++++++++++++++
+Corrections sous forme de notebooks
++++++++++++++++++++++++++++++++++++
 
-2014-2015
----------
+à partir de 2014-2015
+
+interrogations écrites
+^^^^^^^^^^^^^^^^^^^^^^
 
 .. toctree::
     :maxdepth: 1
@@ -164,7 +193,25 @@ Correction sous forme de notebooks
     notebooks/interro_rapide_20_minutes_2014_10
     notebooks/interro_rapide_20_minutes_2014_11
     notebooks/interro_rapide_20_minutes_2014_12
-    notebooks/td_note_2015
     notebooks/interro_rapide_20_minutes_2015_09
     notebooks/interro_rapide_20_minutes_2015_11
-    
+
+TD notés, éléments de code donnés dans l'énoncé
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. toctree::
+    :maxdepth: 1
+
+    notebooks/td_note_2013_bout_de_code_coloriage
+
+
+
+TD notés, correction
+^^^^^^^^^^^^^^^^^^^^
+
+.. toctree::
+    :maxdepth: 1
+
+    notebooks/td_note_2013_coloriage_correction
+    notebooks/td_note_2015
+
