@@ -16,7 +16,6 @@ autopep8
 brewer2mpl
 cloud-sptheme
 coverage
-dateutils
 docutils
 folium
 hachibee-sphinx-theme

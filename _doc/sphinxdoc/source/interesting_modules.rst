@@ -42,7 +42,7 @@ Autres dépendances
 
 **ipython :**
 
-* `python-dateutils <https://labix.org/python-dateutil>`_ : boîte à outils pour les dates
+* `python-dateutil <https://labix.org/python-dateutil>`_ : boîte à outils pour les dates
 * `jinja2 <http://jinja.pocoo.org/>`_ : moteur de rendu HTML
 * `pyzmq <http://zeromq.github.io/pyzmq/>`_ : connecteur pour `ØMQ <http://zeromq.org/>`_ (librairie de sockets, communication entre plusieurs machines)
 * `six <https://pythonhosted.org/six/>`_ : librairie de conversion entre Python 2 et 3

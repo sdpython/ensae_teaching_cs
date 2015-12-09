@@ -21,7 +21,7 @@ Ils requiert peu de connaissances, évitent le plus souvent les classes.
 
     <p><b>Certains énoncés nécessitent des données ou des bouts de programmes. Les liens sont parfois
     cassés. Dans ce cas, il faut essayer
-    <a href="http://www.xavierdupre.fr/site2013/enseignements/index_documents.html">données complémentaires</a>.
+    <a href="http://www.xavierdupre.fr/enseignement/complements/index_documents.html">données complémentaires</a>.
     </b></p>
 
 
