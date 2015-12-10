@@ -83,7 +83,4 @@ pymyinstall
 colormap
 easydev
 qgrid
-cvxopt
-scipy
-scikit-learn
 pandas_datareader

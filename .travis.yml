@@ -10,6 +10,8 @@ addons:
     - gfortran 
 install: 
     - pip install -r requirements.txt
+    - pip freeze
+    - pip install -r requirements_scikit.txt
     - pip install -r requirements_ext.txt
 script:
     - python setup.py unittests
