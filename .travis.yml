@@ -2,8 +2,12 @@ language: python
 python:
     - "3.4"
     - "3.5"
-before_install:
-    - sudo apt-get install -qq gcc libatlas-dev liblapack-dev gfortran libgmp-dev libmpfr-dev ccache
+addons:
+  apt:
+    packages:
+    - libblas-dev
+    - liblapack-dev
+    - gfortran 
 install: 
     - pip install -r requirements.txt
     - pip install -r requirements_ext.txt

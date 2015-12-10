@@ -1,4 +1,4 @@
-﻿
+
 
 .. _l-debutermlprojet:
 
@@ -64,6 +64,7 @@ fonction des types de problèmes :
     * précision / rappel
 * régression
     * erreur de prédiction
+    * graphe valeur à prédire / valeur prédite
 * ranking
     * `DCG <http://en.wikipedia.org/wiki/Discounted_cumulative_gain>`_
     * `corrélation de rang <http://en.wikipedia.org/wiki/Rank_correlation>`_
@@ -86,7 +87,60 @@ Si la performance globale convient, on s'arrête souvent ici. Dans le cas contra
 
 Voir également `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_.
 
-Etape 6 : validation du modèle
+Etape 6 : utliser les données
++++++++++++++++++++++++++++++
+
+On atteint vite un plafond lorsqu'on essaye les modèles une par une. 
+Il faut maintenant extraire tout ce qu'on sait des données ou tout ce qu'on imagine savoir
+pour améliorer la performance. 
+
+Quelques idées...
+
+`Forest Fires Data Set  <https://archive.ics.uci.edu/ml/datasets/Forest+Fires>`_
+
+Ce jeu de données recense la surface brûlée par des feux de forêts. 
+On connaît la vitesse du vent, l'humidité, la témpérature de la zone où a eu lieu
+l'incendie. Il faut prédire  la surface brûlée en fonction de ces paramètres.
+
+Un grand nombre de valeurs sont nulles. Pourquoi ?
+
+Pas évident de savoir, peut-être que les pompiers étaient tout proche, 
+peut-être qu'il n'y a pas eu de feu. Difficile de savoir. Il n'est pas évident de savoir si on peut 
+garder ces données ou en tout cas les traiter séparément avec une classification préalable.
+
+Des incendies par temps de pluie en hiver ?
+
+C'est probablement un orage avec de la foudre. En hiver, il y a peu de feu, les pompiers ne sont
+pas sollicités trop souvent et ils auront le temps d'intervenir. Il n'est pas
+forcément utile d'être aussi précis quant à la précision de la prédiction en hiver.
+
+Et ::
+
+    surface = a * température + b * vent
+    
+Ou :: 
+
+    surface = a * température * vent
+    
+Pour résumer, un feu aura des conditions favorables si la température
+est élevée et si le vent est fort. Les effets s'additionnent ou ils 
+se combinent ? Dans le second cas, regrésser sur le logarithme des variables
+ou ajouter le produit de tous les couples de variables est une piste à étudier.
+
+
+`Bike Sharing Dataset Data Set  <https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset>`_
+
+On veut prévoir le nombre de vélo utilisés en fonction du temps.
+La date fait partie des variables disponibles. Elle indique la saison.
+On remarque également que le nombre de vélo partagés croît avec le temps,
+signe d'une demande croissante. Les données cachent donc deux effets : la croissance
+de la demande et l'impact de la météo sur la demande. Le plus simple, 
+pour avoir un modèle robuste dans le temps, est d'enlever la tendance
+avant de passer à un problème de machine learning.
+
+
+
+Etape 7 : validation du modèle
 ++++++++++++++++++++++++++++++
 
 On regarde sur quelques exemples bien choisi que le modèle proposent une réponse acceptables.

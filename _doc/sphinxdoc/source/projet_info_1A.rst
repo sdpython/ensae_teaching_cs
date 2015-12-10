@@ -362,10 +362,11 @@ Liste des sujets cités
 #. ML algo : :ref:`l-ml-visage`
 #. ML algo : :ref:`l-ml-deepext`
 #. ML algo : :ref:`l-ml-align`
-#. ML algo : :ref:`l-fast-k-NN`
-#. ML algo : :ref:`l-ml-gradient-geom`
+#. ML algo : :ref:`l-fast-k-NN` *(2016)*
+#. ML algo : :ref:`l-ml-gradient-geom` *(2016)*
 #. Jeu 1 : :ref:`l-jeu-deuxmille`
 #. Jeu 1 : :ref:`l-jeuvoronoi`
+#. Jeu 1 : :ref:`l-puzzle-GCHQ` *(2016)*
 #. ML : :ref:`l-data-velib`
 #. ML : :ref:`l-data-nuage`
 #. ML : :ref:`l-data-twitter`
@@ -400,8 +401,8 @@ Liste des sujets cités
 #. Algo : :ref:`l-math_appariement_graph`
 #. Algo : :ref:`l-palindrome-projet-structure`
 #. Algo : :ref:`l-grammaire_context_free`
-#. Algo : :ref:`l-distance_tree_robinson_foulds`
-#. Algo : :ref:`l-maths-inequation`
+#. Algo : :ref:`l-distance_tree_robinson_foulds`  *(2016)*
+#. Algo : :ref:`l-maths-inequation`  *(2016)*
 #. Jeu hasard : :ref:`l-carte-poker`
 #. Jeu hasard : :ref:`l-carte-belotte`
 
