@@ -84,3 +84,4 @@ colormap
 easydev
 qgrid
 pandas_datareader
+beautifulsoup4

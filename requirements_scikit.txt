@@ -4,3 +4,7 @@ statsmodels
 seaborn
 cvxopt
 dask
+cytoolz
+bayespy
+networkx
+mpld3
