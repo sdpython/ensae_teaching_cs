@@ -1,0 +1,6 @@
+cvxopt
+dask
+cytoolz
+bayespy
+networkx
+mpld3
