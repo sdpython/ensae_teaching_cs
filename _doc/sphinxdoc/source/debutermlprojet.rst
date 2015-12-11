@@ -50,7 +50,9 @@ dans les deux bases. C'est particulièrement important si l'une d'elles comporte
 Etape 4 : apprentissage d'un modèle
 +++++++++++++++++++++++++++++++++++
 
-On cale un ou plusieurs modèles sur les données d'apprentissage.
+On cale un ou plusieurs modèles sur les données d'apprentissage. 
+C'est de moins en moins sorcier : 
+`Machine learning automatique <http://www.xavierdupre.fr/blog/2015-12-11_nojs.html>`_.
 
 Etape 5 : mesure de la performance
 ++++++++++++++++++++++++++++++++++
@@ -64,7 +66,7 @@ fonction des types de problèmes :
     * précision / rappel
 * régression
     * erreur de prédiction
-    * graphe valeur à prédire / valeur prédite
+    * graphe XY valeur à prédire / valeur prédite
 * ranking
     * `DCG <http://en.wikipedia.org/wiki/Discounted_cumulative_gain>`_
     * `corrélation de rang <http://en.wikipedia.org/wiki/Rank_correlation>`_
@@ -90,13 +92,13 @@ Voir également `Quelques astuces pour faire du machine learning <http://www.xav
 Etape 6 : utliser les données
 +++++++++++++++++++++++++++++
 
-On atteint vite un plafond lorsqu'on essaye les modèles une par une. 
+On atteint vite un plafond lorsqu'on essaye les modèles un par un. 
 Il faut maintenant extraire tout ce qu'on sait des données ou tout ce qu'on imagine savoir
 pour améliorer la performance. 
 
 Quelques idées...
 
-`Forest Fires Data Set  <https://archive.ics.uci.edu/ml/datasets/Forest+Fires>`_
+`Forest Fires Data Set <https://archive.ics.uci.edu/ml/datasets/Forest+Fires>`_
 
 Ce jeu de données recense la surface brûlée par des feux de forêts. 
 On connaît la vitesse du vent, l'humidité, la témpérature de la zone où a eu lieu
@@ -116,11 +118,11 @@ forcément utile d'être aussi précis quant à la précision de la prédiction 
 
 Et ::
 
-    surface = a * température + b * vent
+    surface = a * température + b * vent + ...
     
 Ou :: 
 
-    surface = a * température * vent
+    surface = a * température * vent + ...
     
 Pour résumer, un feu aura des conditions favorables si la température
 est élevée et si le vent est fort. Les effets s'additionnent ou ils 
