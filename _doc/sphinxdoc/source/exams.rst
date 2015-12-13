@@ -70,6 +70,13 @@ Séances notées
                 </a>
             (parcours de graphe, distance d'édition, plus court chemin)
         </li>
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2016.pdf">énoncé 2015-2016</a>, 
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2016.pdf">correction</a> 
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2016.html">
+                <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
+                </a>
+            (parcours de graphe, distance d'édition, plus court chemin)
+        </li>
     </ul>
     </p>
 
@@ -215,4 +222,5 @@ TD notés, correction
 
     notebooks/td_note_2013_coloriage_correction
     notebooks/td_note_2015
+    notebooks/td_note_2016
 
