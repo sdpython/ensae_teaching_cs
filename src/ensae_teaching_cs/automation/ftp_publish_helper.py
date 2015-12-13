@@ -143,7 +143,7 @@ def publish_documentation(
     login = params["login"]
     ftpsite = params["ftpsite"]
 
-    filter_out = "[/\\\\]((moduletoc.html)|(blogtoc.html))"
+    filter_out = "[/\\\\]((moduletoc.html)|(blogtoc.html)|(searchbox.html))"
 
     ftp = TransferFTP(ftpsite,
                       login,
