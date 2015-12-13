@@ -12,6 +12,7 @@ addons:
 install: 
     - pip install -r requirements.txt
     - pip freeze
+    - pip install scipy
     - pip install -r requirements_scikit.txt
     - pip install -r requirements_scikit2.txt
     - pip install -r requirements_ext.txt

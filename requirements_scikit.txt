@@ -1,4 +1,3 @@
-scipy
 scikit-learn
 statsmodels
 seaborn
