@@ -217,9 +217,15 @@ Bibliographie
 
 **Autres cours, notebooks**
 
-* `CS109 Data Science (Harvard) <http://cs109.github.io/2014/>`_ - `TD <https://github.com/cs109/content>`_
+* `CS109 Data Science (Harvard) <http://cs109.github.io/2014/>`_ - 
+  `TD <https://github.com/cs109/content>`_ - 
+  `Talks <http://cm.dce.harvard.edu/2015/01/14328/publicationListing.shtml>`_
+* `Notes and assignments for Stanford CS class CS231n <https://github.com/cs231n/cs231n.github.io>`_ 
+  `Convolutional Neural Networks for Visual Recognition <http://vision.stanford.edu/teaching/cs231n/>`_
 * `Advanced Statistical Computing, Chris Fonnesbeck (Vanderbilt University) <http://nbviewer.ipython.org/github/fonnesbeck/Bios366/tree/master/notebooks/>`_
 * `CS 188: Artificial Intelligence (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/lectures.html>`_ 
+* `IAPR: Teaching materials for machine learning <http://homepages.inf.ed.ac.uk/rbf/IAPR/researchers/MLPAGES/mlteach.htm>`_
+
 
 **Articles d'auteurs très connus**
 
@@ -245,8 +251,10 @@ Bibliographie
 * `scikit-learn <http://scikit-learn.org/stable/index.html>`_
 * `Vowpal Wabbit <https://github.com/JohnLangford/vowpal_wabbit/wiki>`_
 * `theano <http://deeplearning.net/software/theano/>`_
+* `Keras <http://keras.io/>`_
 * `xgboost <https://github.com/dmlc/xgboost>`_
 * `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
+* `TensorFlow <https://github.com/tensorflow/tensorflow>`_
 
 **Compétition de code**
 
