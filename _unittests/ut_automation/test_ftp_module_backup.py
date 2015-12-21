@@ -122,7 +122,7 @@ class TestFtpBackup(unittest.TestCase):
             fLOG(mod)
             assert len(mod) > 0
         else:
-            for k,v in sorted(os.environ.items()):
+            for k, v in sorted(os.environ.items()):
                 fLOG(k, v)
             warnings.warn(
                 "You need to setup CS_FTPSITE, CS_FTPLOGIN, CS_FTPPASSWORD")

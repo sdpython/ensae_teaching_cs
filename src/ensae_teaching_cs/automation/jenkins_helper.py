@@ -5,11 +5,17 @@
 from pyquickhelper import noLOG
 
 
-engines_default = dict(anaconda2="c:\\Anaconda",
-                       anaconda3="c:\\Anaconda3",
-                       py35="c:\\Python35_x64",
-                       default="c:\\Python34_x64",
-                       winpython="c:\\APythonENSAE\\python")
+def engines_default():
+    """
+    returns a dictionary with default values for Jenkins server
+
+    @return     dictionary
+    """
+    return dict(anaconda2="c:\\Anaconda",
+                anaconda3="c:\\Anaconda3",
+                py35="c:\\Python35_x64",
+                default="c:\\Python34_x64",
+                winpython="c:\\APythonENSAE\\python")
 
 
 def setup_jenkins_server(js,
