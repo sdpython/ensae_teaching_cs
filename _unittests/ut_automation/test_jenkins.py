@@ -129,6 +129,10 @@ class TestJenkins(unittest.TestCase):
                                        location=r"c:\\jenkins\\pymy",
                                        prefix="_node_")
             assert len(res) > 0
+            
+            job = "pyrsslocal [py35] <-- pyquickhelper, pyensae"
+            cmd = "\n".join(js.get_jenkins_script(job))
+            assert "Python34" not in cmd
 
 
 if __name__ == "__main__":
