@@ -7,17 +7,18 @@ ENSAE - Programmation - Xavier Dupré
 
 Contenu des séances de travaux pratiques en programmation
 que je dispense à l'`ENSAE <http://www.ensae.fr/>`_. 
+Ces cours s'appuient principalement sur 
+le langage `Python <https://www.python.org/>`_. 
+Le contenu est librement disponible sur `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs>`_
+et permet à quiconque de contribuer à ce cours. 
+Il existe trois formats disponibles :
+`mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_,
+`compact/blanc <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_,
+`compact/mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
 
 Avant-propos
 ------------
 
-Ces cours s'appuient principalement sur 
-le langage `Python <https://www.python.org/>`_. 
-Le contenu est librement disponible sur `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs>`_
-et permet à quiconque de contribuer à ce cours disponible sous trois formats différents : 
-`mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_,
-`compact/blanc <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_,
-`compact/mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
 
 On programme nécessairement avec un **langage** de 
 `programmation <http://fr.wikipedia.org/wiki/Langage_de_programmation>`_.
