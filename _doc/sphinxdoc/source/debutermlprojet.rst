@@ -130,7 +130,7 @@ se combinent ? Dans le second cas, regrésser sur le logarithme des variables
 ou ajouter le produit de tous les couples de variables est une piste à étudier.
 
 
-`Bike Sharing Dataset Data Set  <https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset>`_
+`Bike Sharing Dataset Data Set <https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset>`_
 
 On veut prévoir le nombre de vélo utilisés en fonction du temps.
 La date fait partie des variables disponibles. Elle indique la saison.
@@ -139,6 +139,20 @@ signe d'une demande croissante. Les données cachent donc deux effets : la crois
 de la demande et l'impact de la météo sur la demande. Le plus simple, 
 pour avoir un modèle robuste dans le temps, est d'enlever la tendance
 avant de passer à un problème de machine learning.
+
+`Congressional Voting Records Data Set <https://archive.ics.uci.edu/ml/datasets/Congressional+Voting+Records>`_
+
+Dialogue improvisé... Il faut prédire le parti d'un sénaeur en fonction de ses votes passés.
+
+* La prédiction repose presqu'entièrment sur un seul vote, 
+  on m'a dit qu'il fallait l'enlever dans ce cas mais je ne sais pas pourquoi.
+* Ah... Et si on le faisait, que se passerait-il ?
+* ...
+* Si le taux de prédiction ne descend pas ?
+* Cela veut dire sans doute que les démocrates et les républicains votent toujours un peu pareil.
+* Si le taux de prédiction décroît fortement ?
+* Leurs votes ne dépendent pas nécessairement de leur parti d'appartenance.
+* Et maintenant, n'as tu pas envie de savoir ?
 
 
 
