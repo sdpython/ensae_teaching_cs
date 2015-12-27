@@ -164,6 +164,8 @@ if "--verbose" in sys.argv:
 if is_local() and "build_sphinx" not in sys.argv and \
         "unittests" not in sys.argv:
     pyquickhelper = import_pyquickhelper()
+    logging_function = pyquickhelper.fLOG
+    logging_function(OutputPrint=True)
     r = pyquickhelper.process_standard_options_for_setup(
         sys.argv, __file__, project_var_name,
         unittest_modules=["pyquickhelper"],
@@ -173,7 +175,8 @@ if is_local() and "build_sphinx" not in sys.argv and \
                       "pyensae", "pyrsslocal", "pymyinstall"],
         additional_local_path=["pyquickhelper", "pymmails",
                                "pyensae", "pyrsslocal", "pymyinstall"],
-        blog_list=os.path.abspath(os.path.join("src", project_var_name, package_data[project_var_name][0])))
+        blog_list=os.path.abspath(os.path.join("src", project_var_name, package_data[project_var_name][0])),
+        fLOG=logging_function)
 
     if "build_script" in sys.argv and sys.platform.startswith("win"):
         pres = """
