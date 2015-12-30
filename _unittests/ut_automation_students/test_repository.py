@@ -9,6 +9,7 @@ import os
 import unittest
 import warnings
 import shutil
+import pandas
 
 try:
     import src
@@ -80,22 +81,7 @@ from pyquickhelper import fLOG, get_temp_folder
 from src.ensae_teaching_cs.automation_students import ProjectsRepository
 
 
-class TestSuivi(unittest.TestCase):
-
-    def test_emails(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        data = os.path.abspath(os.path.dirname(__file__))
-        data = os.path.join(data, "data")
-        repo = ProjectsRepository(data)
-        self.assertEqual(len(repo.Groups), 1)
-        gr = repo.Groups[0]
-        emails = repo.get_emails(gr)
-        assert emails == [
-            'name.lastname@something.fr', ' name.lastname@something']
+class TestRepository(unittest.TestCase):
 
     def test_sections(self):
         fLOG(
@@ -105,18 +91,34 @@ class TestSuivi(unittest.TestCase):
 
         data = os.path.abspath(os.path.dirname(__file__))
         data = os.path.join(data, "data")
-        repo = ProjectsRepository(data)
-        self.assertEqual(len(repo.Groups), 1)
-        gr = repo.Groups[0]
-        sections = repo.get_sections(gr)
-        names = [k for k in sorted(sections)]
-        assert names == [
-            '', 'extrait', 'next', 'pitch', 'programme', 'rapport', 'title']
-        #for k,v in sections.items(): fLOG(k,v)
-        if sections["next"] != ['', '* module tweepy', '', '']:
-            raise Exception(sections["next"])
-        if sections["extrait"] != ['', '::', '', '    paragraphe 1', '', '    paragraphe 2', '', '']:
-            raise Exception(sections["extrait"])
+        dfile = os.path.join(data, "notes_eleves_2104_2015.xlsx")
+        df = pandas.read_excel(dfile, skiprows=5)
+        df = df[df["Groupe"] != "moyenne"].copy()
+        fLOG(df.columns)
+        fLOG(df.tail())
+        fLOG(df.shape)
+        emails = ["firstname.ABOUT@machin.fr".lower(),
+                  "one_name.another_name.third.fourth@machin.fr"]
+        temp = get_temp_folder(__file__, "temp_repository")
+        try:
+            proj = ProjectsRepository.create_folders_from_dataframe(df, temp, col_subject="sujet",
+                                                                    fLOG=fLOG, col_group=None, email_function=emails,
+                                                                    skip_if_nomail=True)
+        except ProjectsRepository.MailNotFound:
+            pass
+
+        proj = ProjectsRepository.create_folders_from_dataframe(df, temp, col_subject="sujet",
+                                                                fLOG=fLOG, col_group=None, email_function=emails,
+                                                                must_have_email=False)
+        suivi = os.path.join(temp, "firstname.SECOND", "suivi.rst")
+        with open(suivi, "r", encoding="utf8") as f:
+            content = f.read()
+        assert "* mails: firstname.about@machin.fr" in content
+
+        self.assertEqual(len(proj.Groups), 3)
+        mails = proj.get_emails(proj.Groups[0])
+        fLOG(mails)
+        self.assertEqual(mails, ['firstname.about@machin.fr'])
 
 
 if __name__ == "__main__":

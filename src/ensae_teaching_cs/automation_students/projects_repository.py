@@ -5,6 +5,7 @@
 import re
 import os
 from .repository_exception import RegexRepositoryException, TooManyProjectsException
+from ..td_1a import edit_distance
 from pyquickhelper import noLOG, run_cmd, remove_diacritics
 
 
@@ -13,11 +14,17 @@ class ProjectsRepository:
     handle a repository of students projects
     """
 
+    class MailNotFound(Exception):
+        """
+        raises an exception if mail not found
+        """
+        pass
+
     _email_regex = re.compile("[*] *e?mails? *: *([^*+\\n]+)")
     _gitlab_regex = re.compile("[*] *gitlab *: *([^*+\\n]+[.]git)")
     _video_regex = re.compile("[*] *videos? *: *([^*\\n]+)")
 
-    def __init__(self, location, suivi="suivi.rst"):
+    def __init__(self, location, suivi="suivi.rst", fLOG=noLOG):
         """
         location of the repository
 
@@ -26,6 +33,7 @@ class ProjectsRepository:
         """
         self._location = location
         self._suivi = suivi
+        self.fLOG = fLOG
 
     @property
     def Location(self):
@@ -33,6 +41,14 @@ class ProjectsRepository:
         @return     location of the repository
         """
         return self._location
+
+    @property
+    def Groups(self):
+        """
+        returns all available groups in the repository
+        """
+        return [_ for _ in os.listdir(self._location)
+                if os.path.isdir(os.path.join(self._location, _))]
 
     @staticmethod
     def get_regex(path, regex, suivi="suivi.rst"):
@@ -69,14 +85,16 @@ class ProjectsRepository:
 
         return allmails
 
-    def get_emails(self):
+    def get_emails(self, group):
         """
         retrieve student emails from file ``suivi.rst``
 
+        @param      group           group
         @return                     list of mails
         """
+        path = os.path.join(self._location, group)
         allmails = ProjectsRepository.get_regex(
-            self._location, ProjectsRepository._email_regex, self._suivi)
+            path, ProjectsRepository._email_regex, self._suivi)
         for a in allmails:
             if "\n" in a:
                 raise ValueError(
@@ -90,18 +108,21 @@ class ProjectsRepository:
                         self._suivi))
         return allmails
 
-    def get_videos(self):
+    def get_videos(self, group):
         """
         retrieve student emails from file ``suivi.rst``
+
+        @param      group           group
         @return                     list of videos
         """
-        return get_regex(self._location, ProjectsRepository._video_regex, self._suivi)
+        return get_regex(group, ProjectsRepository._video_regex, self._suivi)
 
-    def get_sections(self):
+    def get_sections(self, group):
         """
         extract sections from a filename used to follow a group of students
 
-        @return                 dictionary { section : content }
+        @param      group           group
+        @return                     dictionary { section : content }
 
         Example of a file::
 
@@ -120,7 +141,7 @@ class ProjectsRepository:
                 paragraphe 2
 
         """
-        path = self._location
+        path = os.path.join(self._location, group)
         if not os.path.exists(path):
             raise FileNotFoundError(path)
         filename = os.path.join(path, self._suivi)
@@ -174,6 +195,62 @@ class ProjectsRepository:
 
         return sections
 
+    _regex_split = re.compile("[-;,. ]")
+
+    @staticmethod
+    def match_mail(name, emails, threshold=3, exc=True):
+        """
+        tries to match a name among a list of mails
+
+        @param      name        a name (first name last name separated by a space)
+        @param      emails      list of emails
+        @param      threshold   above this threshold, mails and names don't match
+        @param      exc         raise an Exception if not found
+        @return                 list of available mails, boolean
+
+        The second results is True if no email were found in the list.
+        """
+        pieces = [_.strip() for _ in ProjectsRepository._regex_split.split(
+            remove_diacritics(name.lower()))]
+        pieces.sort()
+        pieces = " ".join(pieces)
+        res = []
+        for email in emails:
+            spl = [_.strip() for _ in ProjectsRepository._regex_split.split(
+                remove_diacritics(email.split("@")[0].lower()))]
+            spl.sort()
+            mail = " ".join(spl)
+            d, p = edit_distance(mail, pieces)
+            res.append((d, email))
+        res = [_ for _ in res if _[0] <= threshold]
+        res.sort()
+        if exc and len(res) == 0:
+            raise ProjectsRepository.MailNotFound(
+                "unable to find a mail for {0} among\n{1}".format(name, "\n".join(emails)))
+        return res
+
+    @staticmethod
+    def match_mails(names, emails, threshold=3, exc=True):
+        """
+        tries to match a series of names among a list of mails
+
+        @param      names       list of names (first name last name separated by a space)
+        @param      emails      list of emails
+        @param      threshold   above this threshold, mails and names don't match
+        @param      exc         raise an Exception if not found
+        @return                 list of available mails, boolean
+
+        The second results is True if no email were found in the list.
+        """
+        res = []
+        skip = False
+        for name in names:
+            r = ProjectsRepository.match_mail(name, emails, threshold, exc)
+            if not r:
+                skip = True
+            res.extend([_[1] for _ in r])
+        return res, skip
+
     @staticmethod
     def create_folders_from_dataframe(df,
                                       root,
@@ -182,25 +259,43 @@ class ProjectsRepository:
                                       col_group="Groupe",
                                       col_subject="Sujet",
                                       overwrite=False,
-                                      email_function=None):
+                                      email_function=None,
+                                      must_have_email=True,
+                                      skip_if_nomail=False,
+                                      fLOG=noLOG):
         """
         creates a series of folders for groups of students
 
-        @param      root            where to create the folders
-        @param      col_student     column which contains the student name (firt name + last name)
-        @param      col_group       index of the grou
-        @param      col_subject     column which contains the subject
-        @param      df              DataFrame
-        @param      email_function  function which infers email from first and last names, see below
-        @param      report          report file
-        @param      overwrite       if False, skip if the report already exists
-        @return                 list of creates folders
+        @param      root                where to create the folders
+        @param      col_student         column which contains the student name (firt name + last name)
+        @param      col_group           index of the group (it can be None if each student is a group)
+        @param      col_subject         column which contains the subject
+        @param      df                  DataFrame
+        @param      email_function      function which infers email from first and last names, see below
+        @param      report              report file
+        @param      overwrite           if False, skip if the report already exists
+        @param      must_have_email     if True, raises an exception if no mail is found
+        @param      skip_if_nomail      skip a name if no mail is found
+        @return                         list of creates folders
 
         The function *email_function* has the following signature::
 
-            def email_function(first_name, last_name):
-                # ....
+            def email_function(names):
+                # part of a names is a list of tokens
+                # ...
+                return list of mails, skip=boolean
+
+        The boolean tells the function to skip this group.
+        *email_function* can be a list of mails. In that case,
+        this function is replaced by @see me match_mails.
         """
+        def local_email_function(names):
+            return ProjectsRepository.match_mails(names, email_function, exc=False)
+
+        if isinstance(email_function, list):
+            local_function = local_email_function
+        else:
+            local_function = email_function
 
         def split_name(name):
             name = remove_diacritics(name).split(" ")
@@ -212,16 +307,23 @@ class ProjectsRepository:
             res = ""
             for i, c in enumerate(last):
                 if c == " ":
-                    res += "_"
-                elif i == 0 or last[i - 1] in [" ", "-", "_"]:
-                    res += c.upper()
+                    res += "."
                 else:
-                    res += c.lower()
+                    res += c
             return res
 
         folds = []
 
-        gr = df.groupby(col_group)
+        if col_group:
+            gr = df.groupby(col_group)
+        else:
+            df2 = df.copy()
+            df2["gid"] = df.index
+            df2["gid2"] = df2.gid.apply(lambda x: "G%d" % x)
+            gr = df2.groupby("gid2")
+
+        fLOG("number of groups", len(gr))
+
         for name, group in gr:
             s = list(set(group[col_subject].copy()))
             if len(s) > 1:
@@ -230,28 +332,47 @@ class ProjectsRepository:
                     str(name) +
                     "\n" +
                     str(s))
-            # subject = s[0]
+
+            subject = s[0]
+
             eleves = list(group[col_student])
-            names = [(_,) + split_name(_) for _ in eleves]
             eleves.sort()
 
-            title = ", ".join(eleves)
-            content = [title]
-            content.append("=" * len(title))
+            if email_function is not None:
+                mails, skip = local_function(eleves)
+                if must_have_email and (skip or len(mails) == 0):
+                    if isinstance(email_function, list):
+                        raise ProjectsRepository.MailNotFound("unable to find a mail for {0} among\n{1}".format(" ;".join(eleves),
+                                                                                                                "\n".join(email_function)))
+                    else:
+                        raise ProjectsRepository.MailNotFound(
+                            "unable to find a mail for {0} with function\n{1}".format(" ;".join(eleves), email_function))
+                if skip_if_nomail and (skip or len(mails) == 0):
+                    fLOG("skipping {0}".format("; ".join(eleves)))
+                    continue
+                if mails:
+                    jmail = "; ".join(mails)
+                else:
+                    jmails = None
+            else:
+                jmail = None
+
+            members = ", ".join(eleves)
+            content = [members]
+            content.append("=" * len(members))
             content.append("")
 
-            content.append("* subject: " + title)
-            content.append("* G: %d" % int(name))
+            content.append("* members: {0}".format(members))
+            content.append("* subject: {0}".format(subject))
+            content.append("* G: {0}".format(name))
 
-            if email_function is not None:
-                mails = [email_function(a[1], a[2]) for a in names]
-                jmail = "; ".join(mails)
+            if jmail:
                 content.append("* mails: " + jmail)
 
             content.append("")
             content.append("")
 
-            last = ".".join(ul(a[-1]) for a in sorted(names))
+            last = "-".join(ul(a) for a in sorted(eleves))
 
             folder = os.path.join(root, last)
             filename = os.path.join(folder, report)
@@ -265,4 +386,4 @@ class ProjectsRepository:
 
                 folds.append(folder)
 
-        return ProjectsRepository(root, suivi=report)
+        return ProjectsRepository(root, suivi=report, fLOG=fLOG)
