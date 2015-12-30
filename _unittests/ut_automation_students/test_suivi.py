@@ -77,7 +77,7 @@ except ImportError:
     import pyrsslocal
 
 from pyquickhelper import fLOG, get_temp_folder
-from src.ensae_teaching_cs.automation.project_helper import get_sections, get_emails
+from src.ensae_teaching_cs.automation_students import ProjectsRepository
 
 
 class TestSuivi(unittest.TestCase):
@@ -90,7 +90,8 @@ class TestSuivi(unittest.TestCase):
 
         data = os.path.abspath(os.path.dirname(__file__))
         data = os.path.join(data, "data")
-        emails = get_emails(path=data)
+        repo = ProjectsRepository(data)
+        emails = repo.get_emails()
         assert emails == [
             'name.lastname@something.fr', ' name.lastname@something']
 
@@ -102,7 +103,8 @@ class TestSuivi(unittest.TestCase):
 
         data = os.path.abspath(os.path.dirname(__file__))
         data = os.path.join(data, "data")
-        sections = get_sections(path=data)
+        repo = ProjectsRepository(data)
+        sections = repo.get_sections()
         names = [k for k in sorted(sections)]
         assert names == [
             '', 'extrait', 'next', 'pitch', 'programme', 'rapport', 'title']

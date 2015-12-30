@@ -178,7 +178,8 @@ if is_local() and "build_sphinx" not in sys.argv and \
                       "pyensae", "pyrsslocal", "pymyinstall"],
         additional_local_path=["pyquickhelper", "pymmails",
                                "pyensae", "pyrsslocal", "pymyinstall"],
-        blog_list=os.path.abspath(os.path.join("src", project_var_name, package_data[project_var_name][0])),
+        blog_list=os.path.abspath(os.path.join(
+            "src", project_var_name, package_data[project_var_name][0])),
         fLOG=logging_function)
 
     if "build_script" in sys.argv and sys.platform.startswith("win"):
