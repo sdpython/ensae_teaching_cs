@@ -50,6 +50,15 @@ class ProjectsRepository:
         return [_ for _ in os.listdir(self._location)
                 if os.path.isdir(os.path.join(self._location, _))]
 
+    def get_group_location(self, group):
+        """
+        return the local folder associated to a group
+
+        @param      group       group name
+        @return                 local folder
+        """
+        return os.path.join(self._location, group)
+
     @staticmethod
     def get_regex(path, regex, suivi="suivi.rst"):
         """
@@ -83,7 +92,7 @@ class ProjectsRepository:
         for m in mails:
             allmails.extend(m.strip("\n\r\t ").split(";"))
 
-        return allmails
+        return [_.strip() for _ in allmails for _ in allmails]
 
     def get_emails(self, group):
         """
@@ -222,6 +231,9 @@ class ProjectsRepository:
             mail = " ".join(spl)
             d, p = edit_distance(mail, pieces)
             res.append((d, email))
+        if "foy" in name.lower():
+            res.sort()
+            print(name, res)
         res = [_ for _ in res if _[0] <= threshold]
         res.sort()
         if exc and len(res) == 0:
@@ -308,6 +320,8 @@ class ProjectsRepository:
             for i, c in enumerate(last):
                 if c == " ":
                     res += "."
+                elif c == "-":
+                    res += "."
                 else:
                     res += c
             return res
@@ -322,18 +336,22 @@ class ProjectsRepository:
             df2["gid2"] = df2.gid.apply(lambda x: "G%d" % x)
             gr = df2.groupby("gid2")
 
-        fLOG("number of groups", len(gr))
+        fLOG("ProjectsRepository.create_folders_from_dataframe [number of groups {0}]".format(
+            len(gr)))
 
         for name, group in gr:
-            s = list(set(group[col_subject].copy()))
-            if len(s) > 1:
-                raise TooManyProjectsException(
-                    "more than one subject for group: " +
-                    str(name) +
-                    "\n" +
-                    str(s))
+            if col_subject:
+                s = list(set(group[col_subject].copy()))
+                if len(s) > 1:
+                    raise TooManyProjectsException(
+                        "more than one subject for group: " +
+                        str(name) +
+                        "\n" +
+                        str(s))
 
-            subject = s[0]
+                subject = s[0]
+            else:
+                subject = None
 
             eleves = list(group[col_student])
             eleves.sort()
@@ -348,7 +366,8 @@ class ProjectsRepository:
                         raise ProjectsRepository.MailNotFound(
                             "unable to find a mail for {0} with function\n{1}".format(" ;".join(eleves), email_function))
                 if skip_if_nomail and (skip or len(mails) == 0):
-                    fLOG("skipping {0}".format("; ".join(eleves)))
+                    fLOG("ProjectsRepository.create_folders_from_dataframe [skipping {0}]".format(
+                        "; ".join(eleves)))
                     continue
                 if mails:
                     jmail = "; ".join(mails)
@@ -363,7 +382,8 @@ class ProjectsRepository:
             content.append("")
 
             content.append("* members: {0}".format(members))
-            content.append("* subject: {0}".format(subject))
+            if subject:
+                content.append("* subject: {0}".format(subject))
             content.append("* G: {0}".format(name))
 
             if jmail:
@@ -387,3 +407,75 @@ class ProjectsRepository:
                 folds.append(folder)
 
         return ProjectsRepository(root, suivi=report, fLOG=fLOG)
+
+    def enumerate_group_mails(self, group, mailbox, subfolder, date=None,
+                              skip_function=None, max_dest=5):
+        """
+        enumerates all mails sent by or sent to a given group
+
+        @param      group           group (if None, goes through all mails)
+        @param      mailbox         mailbox (see `pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/>`_)
+        @param      subfolder       which subfolder of the mailbox to look into
+        @param      date            date
+        @param      skip_function   if not None, use this function on the header/body to avoid loading the entire message (and skip it)
+        @param      max_dest        maximum number of receivers
+        @return                     iterator on mails
+        """
+        if group is None:
+            for group in self.Groups:
+                self.fLOG(
+                    "ProjectsRepository.enumerate_group_mails [group={0}]".format(group))
+                iter = self.enumerate_group_mails(group, mailbox, subfolder=subfolder,
+                                                  date=date, skip_function=skip_function, max_dest=max_dest)
+                for mail in iter:
+                    yield mail
+        else:
+            mails = self.get_emails(group)
+            self.fLOG("ProjectsRepository.enumerate_group_mails [mails={0} folder={1} date={2}]".format(
+                str(mails), subfolder, date))
+            iter = mailbox.enumerate_search_person(
+                person=mails,
+                folder=subfolder,
+                skip_function=skip_function,
+                date=date,
+                max_dest=5)
+            for mail in iter:
+                yield mail
+
+    def dump_group_mails(self, renderer, group, mailbox, subfolder, date=None,
+                         skip_function=None, max_dest=5, filename="index_mails.html",
+                         overwrite=False):
+        """
+        enumerates all mails sent by or sent to a given group
+
+        @param      renderer        instance of class `EmailMessageListRenderer <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/render/email_message_list_renderer.html>`_
+        @param      group           group
+        @param      mailbox         mailbox (see `pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/>`_)
+        @param      subfolder       which subfolder of the mailbox to look into
+        @param      date            date
+        @param      skip_function   if not None, use this function on the header/body to avoid loading the entire message (and skip it)
+        @param      max_dest        maximum number of receivers
+        @param      filename        filename which gathers a link to every mail
+        @param      overwrite       overwrite
+        @return                     list of files (see `EmailMessageListRenderer.write <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/render/email_message_list_renderer.html>`_)
+        """
+        if group is None:
+            res = []
+            for group in self.Groups:
+                self.fLOG(
+                    "ProjectsRepository.dump_group_mails [group={0}]".format(group))
+                r = self.dump_group_mails(renderer, group, mailbox, subfolder=subfolder,
+                                          date=date, skip_function=skip_function, max_dest=max_dest)
+                res.extend(r)
+            return res
+        else:
+            mails = self.get_emails(group)
+            self.fLOG("ProjectsRepository.dump_group_mails [mails={0} folder={1} date={2}]".format(
+                str(mails), subfolder, date))
+            iter = mailbox.enumerate_search_person(person=mails, folder=subfolder,
+                                                   skip_function=skip_function, date=date, max_dest=max_dest)
+            location = self.get_group_location(group)
+            r = renderer.write(iter=iter, location=location,
+                               filename=filename, overwrite=overwrite)
+            renderer.flush()
+            return r
