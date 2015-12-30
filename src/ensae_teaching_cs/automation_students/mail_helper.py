@@ -7,7 +7,7 @@ import os
 from pyquickhelper import noLOG, run_cmd, remove_diacritics
 
 
-def grab_addresses(mailbox, subfolder, date, no_domain=False, fLOG=noLOG):
+def grab_addresses(mailbox, subfolder, date, no_domain=False, max_dest=5, fLOG=noLOG):
     """
     look for some emails in a mail box
     from specific emails or sent to specific emails
@@ -16,6 +16,7 @@ def grab_addresses(mailbox, subfolder, date, no_domain=False, fLOG=noLOG):
     @param      date            date (grab emails since ..., example ``1-Oct-2014``)
     @param      subfolder       folder of the mailbox to look into
     @param      no_domain       remove domain when searching for emails
+    @param      max_dest        number of receivers to have a valid mail
     @param      fLOG            logging function
     @return                     list of emails
     """
@@ -25,8 +26,13 @@ def grab_addresses(mailbox, subfolder, date, no_domain=False, fLOG=noLOG):
     res = []
     for mail in emails:
         tos = mail.get_to()
-        tos = [(m[1].split('@')[0] if no_domain else m[1])
-               for m in tos if m and m[1]]
-        res.extend(tos)
+        if max_dest > 0 and len(tos) <= max_dest:
+            tos = [(m[1].split('@')[0] if no_domain else m[1])
+                   for m in tos if m and m[1]]
+            res.extend(tos)
+        frs = [mail.get_from()]
+        frs = [(m[1].split('@')[0] if no_domain else m[1])
+               for m in frs if m and m[1]]
+        res.extend(frs)
     res = list(sorted(set(res)))
     return res

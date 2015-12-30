@@ -7,6 +7,8 @@ import os
 from .repository_exception import RegexRepositoryException, TooManyProjectsException
 from ..td_1a import edit_distance
 from pyquickhelper import noLOG, run_cmd, remove_diacritics
+from pyquickhelper.filehelper import remove_folder, explore_folder_iterfile
+from pyquickhelper.filehelper import zip_files
 
 
 class ProjectsRepository:
@@ -479,3 +481,41 @@ class ProjectsRepository:
                                filename=filename, overwrite=overwrite)
             renderer.flush()
             return r
+
+    def remove_group(self, group):
+        """
+        remove a group
+
+        @param      group       group
+        @return                 list of removed files
+
+        see `remove_folder <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx//pyquickhelper/filehelper/synchelper.html#module-pyquickhelper.filehelper.synchelper>`_
+        """
+        loc = self.get_group_location(group)
+        return remove_folder(loc)
+
+    def enumerate_group_files(self, group):
+        """
+        enumerate all files in a group
+
+        @param      group       group
+        @return                 iterator on files
+        """
+        if group is None:
+            for g in self.Groups:
+                for _ in self.enumerate_group_files(g):
+                    yield _
+        else:
+            loc = self.get_group_location(group)
+            for _ in explore_folder_iterfile(loc):
+                yield _
+
+    def zip_group(self, group, outfile):
+        """
+        zip a group
+
+        @param      group       group
+        @param      outfile     output file
+        @return                 list of zipped files
+        """
+        return zip_files(outfile, self.enumerate_group_files(group), root=self._location)
