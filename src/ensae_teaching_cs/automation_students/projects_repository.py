@@ -14,6 +14,104 @@ from pyquickhelper.filehelper import zip_files
 class ProjectsRepository:
     """
     handle a repository of students projects
+
+    @example(AutoTeachings___Collect students work)
+
+    The following example dumps mails from students
+    and their attachments as well in a folder.
+
+    ::
+
+        from pyquickhelper import fLOG
+        fLOG(OutputPrint=True)
+
+        from ensae_teaching_cs.automation_students import ProjectsRepository, grab_addresses
+        from pymmails import MailBoxImap, EmailMessageRenderer, EmailMessageListRenderer
+        from pymmails.render.email_message_style import template_email_html_short
+        import pandas
+
+        # gather mails
+
+        fLOG("fetch mails")
+        filename = "emails.txt"
+
+        user = "xavier.dupre"
+        pwd = "***"
+        server = "imap.gmail.com"
+        mailfolder = ["ensae/ENSAE_2016", "ensae/ensae_interro_2015"]
+        date = "1-Dec-2015"
+
+        if os.path.exists(filename):
+            with open(filename, "r", encoding="utf8") as f:
+                lines = f.readlines()
+            emails = [l.strip("\r\t\n ") for l in lines]
+        else:
+            box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
+            box.login()
+            emails = grab_addresses(box, mailfolder, date, fLOG=fLOG)
+            box.logout()
+
+            with open(filename, "w", encoding="utf8") as f:
+                f.write("\n".join(emails))
+
+        fLOG(emails)
+        if True:
+            xd = [_ for _ in emails if "xavier" in _ and "dupre" in _]
+            fLOG(xd)
+            # no picked up later unles a name is too close of this address
+
+        # gathers groups for students
+
+        def replace_parts(s):
+            # in case there is something to do
+            return s.replace("to replace", "")
+
+        folder = os.path.abspath(".")
+        df = pandas.read_excel("notes_eleves_2015_2016.xlsx", skiprows=5)
+        df = df[(df["Groupe"] != "moyenne") & (~df["Eleves"].isnull())].copy()
+        df["Eleves"] = df["Eleves"].apply(lambda f: replace_parts(f))
+
+        proj = ProjectsRepository(folder, fLOG=fLOG)
+        groups = proj.Groups
+        if len(groups) < 10:
+            fLOG("creation")
+            proj = ProjectsRepository.create_folders_from_dataframe(df, folder,
+                        col_subject=None, fLOG=fLOG, col_group=None,
+                        email_function=emails, skip_if_nomail=True,
+                        must_have_email=False)
+
+        # gathers mails
+
+        if True:
+            email_render = EmailMessageRenderer(tmpl=template_email_html_short, fLOG=fLOG)
+            render = EmailMessageListRenderer(title="list of mails",
+                            email_renderer=email_render, fLOG=fLOG)
+
+            box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
+            box.login()
+            mails = proj.dump_group_mails(render, group=None,
+                            mailbox=box, subfolder=mailfolder, date=date)
+
+            box.logout()
+
+        # cleaning files
+
+        if True:
+            for group in proj.Groups:
+                files = list(proj.enumerate_group_files(group))
+                att = [_ for _ in files if ".html" in _]
+                if len(att) <= 1:
+                    fLOG("remove ", group)
+                    proj.remove_group(group)
+
+        # zip everything
+
+        if True:
+            filename = "td_note_2015.zip"
+            os.remove(filename)
+            proj.zip_group(None, filename)
+
+    @endexample
     """
 
     class MailNotFound(Exception):

@@ -17,4 +17,4 @@ Exemples
     exemple_algo
     all_example
     expose_divers
-    
+    all_example_AutoTeachings
