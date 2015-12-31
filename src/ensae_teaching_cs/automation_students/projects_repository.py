@@ -4,11 +4,12 @@
 """
 import re
 import os
-from .repository_exception import RegexRepositoryException, TooManyProjectsException
-from ..td_1a import edit_distance
 from pyquickhelper import noLOG, run_cmd, remove_diacritics
 from pyquickhelper.filehelper import remove_folder, explore_folder_iterfile
 from pyquickhelper.filehelper import zip_files
+from pymmails import EmailMessageRenderer
+from .repository_exception import RegexRepositoryException, TooManyProjectsException
+from ..td_1a import edit_distance
 
 
 class ProjectsRepository:
@@ -55,10 +56,6 @@ class ProjectsRepository:
                 f.write("\n".join(emails))
 
         fLOG(emails)
-        if True:
-            xd = [_ for _ in emails if "xavier" in _ and "dupre" in _]
-            fLOG(xd)
-            # no picked up later unles a name is too close of this address
 
         # gathers groups for students
 
@@ -104,12 +101,25 @@ class ProjectsRepository:
                     fLOG("remove ", group)
                     proj.remove_group(group)
 
-        # zip everything
+        # summary
 
         if True:
-            filename = "td_note_2015.zip"
-            os.remove(filename)
+            proj.write_summary()
+
+        # zip everything
+        filename = "td_note_2015.zip"
+
+        if True:
+            if os.path.exists(filename):
+                os.remove(filename)
             proj.zip_group(None, filename)
+            
+        # encryption
+        enc = filename + ".enc"
+
+        if True:
+            fLOG("encryption")
+            encrypt_stream(b"password" * 2, filename, enc, chunksize=2**30)            
 
     @endexample
     """
@@ -617,3 +627,74 @@ class ProjectsRepository:
         @return                 list of zipped files
         """
         return zip_files(outfile, self.enumerate_group_files(group), root=self._location)
+        
+    def write_summary(self, render=None, link="index_mails.html", 
+                      outfile="index.html", title="summary"):
+        """
+        produces a summary and uses a Jinja2 template
+        
+        @param      render      instance of `EmailMessageRenderer <http://www.xavierdupre.fr/app/pymmails/helpsphinx//pymmails/render/email_message_renderer.html>`_),
+                                can be None
+        @param      link        look for this file in each folder
+        @param      outfile     output file
+        @return                 summary
+        
+        the current default template is::
+        
+            <?xml version="1.0" encoding="utf-8"?>
+            <body>
+            <html>
+            <head>
+            <title>{{ title }}</title>
+            <link rel="stylesheet" type="text/css" href="{{ css }}">
+            </head>
+            <body>
+            <h1>{{ title }}</h1>
+            <ul>
+            {% for link, group, nb, size in groups %}
+                <li><a href="{{ link }}">{{ group }}</a> {{ nb }} files, {{ size }} bytes</li>
+            {% endfor %}
+            </ul>
+            </body>
+            </html> 
+        
+        """
+        groups = []
+        for group in self.Groups:
+            l = os.path.join(self.get_group_location(group), link)
+            if os.path.exists(l):
+                c = os.path.relpath(l, self._location), group
+            else:
+                c = "file:///{0}".format(group), group
+            nb_files = 0
+            size = 0
+            for name in self.enumerate_group_files(group):
+                loc = self.get_group_location(group)
+                nb_files += 1
+                size += os.stat(os.path.join(loc, name)).st_size
+            c =  (c[0].replace("\\", "/"), c[1], nb_files, size)
+            groups.append(c)
+        
+        if render is None:
+            tmpl = """<?xml version="1.0" encoding="utf-8"?>
+                    <body>
+                    <html>
+                    <head>
+                    <title>{{ title }}</title>
+                    <link rel="stylesheet" type="text/css" href="{{ css }}">
+                    </head>
+                    <body>
+                    <h1>{{ title }}</h1>
+                    <ul>
+                    {% for link, group, nb, size in groups %}
+                        <li><a href="{{ link }}">{{ group }}</a> {{ nb }} files, {{ size }} bytes</li>
+                    {% endfor %}
+                    </ul>
+                    </body>
+                    </html> 
+                    """.replace("                    ", "")
+            render = EmailMessageRenderer(tmpl=tmpl)
+            return render.write(filename=outfile, location=".", 
+                        mail=None, attachments=None, groups=groups,
+                        title=title)
+            
