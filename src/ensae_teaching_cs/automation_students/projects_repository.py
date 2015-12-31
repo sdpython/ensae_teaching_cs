@@ -7,7 +7,7 @@ import os
 from pyquickhelper import noLOG, run_cmd, remove_diacritics
 from pyquickhelper.filehelper import remove_folder, explore_folder_iterfile
 from pyquickhelper.filehelper import zip_files
-from pymmails import EmailMessageRenderer
+from pymmails import EmailMessageRenderer, EmailMessage
 from .repository_exception import RegexRepositoryException, TooManyProjectsException
 from ..td_1a import edit_distance
 
@@ -618,15 +618,22 @@ class ProjectsRepository:
             for _ in explore_folder_iterfile(loc):
                 yield _
 
-    def zip_group(self, group, outfile):
+    def zip_group(self, group, outfile, addition=None):
         """
         zip a group
 
         @param      group       group
         @param      outfile     output file
+        @param      addition    additional files (sequence)
         @return                 list of zipped files
         """
-        return zip_files(outfile, self.enumerate_group_files(group), root=self._location)
+        def iter_files():
+            for _ in self.enumerate_group_files(group):
+                yield _
+            if addition:
+                for _ in addition:
+                    yield _
+        return zip_files(outfile, iter_files(), root=self._location)
 
     def write_summary(self, render=None, link="index_mails.html",
                       outfile="index.html", title="summary"):
@@ -652,13 +659,13 @@ class ProjectsRepository:
             <h1>{{ title }}</h1>
             <ul>
             {% for ps in groups %}
-                <li><a href="{{ ps["link"] }}">{{ ps["group"] }}</a>
+                <li><a href="{{ ps["link"] }}">{{ ps["group"] }}</a><small><i>
                     {{ ps["nb"] }} files, {{ ps["size"] }} bytes,
-                    {{ len(ps["attachments"]) }} attachments
+                    {{ len(ps["attachments"]) }} attachments</i></small>
                 {% if len(ps["attachments"]) > 0 %}
                     <ul>
-                    {% for att in ps["attachments"] %}
-                        <li><a href="{{ att }}">{{ os.path.split(att)[-1] }}</a></li>
+                    {% for day, att, data in ps["attachments"] %}
+                        <li>{{ day }} - <a href="{{ att }}">{{ os.path.split(att)[-1] }}</a></li>
                     {% endfor %}
                     </ul>
                 {% endif %}
@@ -680,11 +687,22 @@ class ProjectsRepository:
             size = 0
             atts = []
             for name in self.enumerate_group_files(group):
+                if name.endswith(".metadata"):
+                    continue
                 loc = self.get_group_location(group)
                 nb_files += 1
                 size += os.stat(os.path.join(loc, name)).st_size
                 if os.path.split(name)[0].endswith("attachments"):
-                    atts.append(os.path.relpath(name, self._location))
+                    meta = name + ".metadata"
+                    if os.path.exists(meta):
+                        data = EmailMessage.read_metadata(meta)
+                        day = data["date"].strftime("%Y-%m-%d")
+                    else:
+                        data = None
+                        day = ""
+                    atts.append((day, os.path.relpath(
+                        name, self._location), data))
+            atts.sort()
             c = dict(link=c[0].replace("\\", "/"),
                      group=c[1],
                      nb=nb_files,
@@ -704,13 +722,13 @@ class ProjectsRepository:
                     <h1>{{ title }}</h1>
                     <ul>
                     {% for ps in groups %}
-                        <li><a href="{{ ps["link"] }}">{{ ps["group"] }}</a>
+                        <li><a href="{{ ps["link"] }}">{{ ps["group"] }}</a><small><i>
                             {{ ps["nb"] }} files, {{ ps["size"] }} bytes,
-                            {{ len(ps["attachments"]) }} attachments
+                            {{ len(ps["attachments"]) }} attachments</i></small>
                         {% if len(ps["attachments"]) > 0 %}
                             <ul>
-                            {% for att in ps["attachments"] %}
-                                <li><a href="{{ att }}">{{ os.path.split(att)[-1] }}</a></li>
+                            {% for day, att, data in ps["attachments"] %}
+                                <li>{{ day }} - <a href="{{ att }}">{{ os.path.split(att)[-1] }}</a></li>
                             {% endfor %}
                             </ul>
                         {% endif %}
@@ -721,6 +739,12 @@ class ProjectsRepository:
                     </html>
                     """.replace("                    ", "")
             render = EmailMessageRenderer(tmpl=tmpl)
-            return render.write(filename=outfile, location=".",
-                                mail=None, attachments=None, groups=groups,
-                                title=title, len=len, os=os)
+            dof = True
+        else:
+            dof = False
+        res = render.write(filename=outfile, location=".",
+                           mail=None, attachments=None, groups=groups,
+                           title=title, len=len, os=os)
+        if dof:
+            render.flush()
+        return res
