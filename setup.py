@@ -172,7 +172,7 @@ if is_local() and "build_sphinx" not in sys.argv and \
     r = pyquickhelper.process_standard_options_for_setup(
         sys.argv, __file__, project_var_name,
         unittest_modules=["pyquickhelper"],
-        additional_notebook_path=["pyquickhelper",
+        additional_notebook_path=["pyquickhelper", "pymmails",
                                   "pyensae", "pyrsslocal", "pymyinstall"],
         requirements=["pyquickhelper", "pymmails",
                       "pyensae", "pyrsslocal", "pymyinstall"],
