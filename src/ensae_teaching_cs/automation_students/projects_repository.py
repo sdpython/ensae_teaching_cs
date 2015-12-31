@@ -113,13 +113,13 @@ class ProjectsRepository:
             if os.path.exists(filename):
                 os.remove(filename)
             proj.zip_group(None, filename)
-            
+
         # encryption
         enc = filename + ".enc"
 
         if True:
             fLOG("encryption")
-            encrypt_stream(b"password" * 2, filename, enc, chunksize=2**30)            
+            encrypt_stream(b"password" * 2, filename, enc, chunksize=2**30)
 
     @endexample
     """
@@ -627,20 +627,20 @@ class ProjectsRepository:
         @return                 list of zipped files
         """
         return zip_files(outfile, self.enumerate_group_files(group), root=self._location)
-        
-    def write_summary(self, render=None, link="index_mails.html", 
+
+    def write_summary(self, render=None, link="index_mails.html",
                       outfile="index.html", title="summary"):
         """
         produces a summary and uses a Jinja2 template
-        
+
         @param      render      instance of `EmailMessageRenderer <http://www.xavierdupre.fr/app/pymmails/helpsphinx//pymmails/render/email_message_renderer.html>`_),
                                 can be None
         @param      link        look for this file in each folder
         @param      outfile     output file
         @return                 summary
-        
+
         the current default template is::
-        
+
             <?xml version="1.0" encoding="utf-8"?>
             <body>
             <html>
@@ -651,13 +651,23 @@ class ProjectsRepository:
             <body>
             <h1>{{ title }}</h1>
             <ul>
-            {% for link, group, nb, size in groups %}
-                <li><a href="{{ link }}">{{ group }}</a> {{ nb }} files, {{ size }} bytes</li>
+            {% for ps in groups %}
+                <li><a href="{{ ps["link"] }}">{{ ps["group"] }}</a>
+                    {{ ps["nb"] }} files, {{ ps["size"] }} bytes,
+                    {{ len(ps["attachments"]) }} attachments
+                {% if len(ps["attachments"]) > 0 %}
+                    <ul>
+                    {% for att in ps["attachments"] %}
+                        <li><a href="{{ att }}">{{ os.path.split(att)[-1] }}</a></li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+                </li>
             {% endfor %}
             </ul>
             </body>
-            </html> 
-        
+            </html>
+
         """
         groups = []
         for group in self.Groups:
@@ -668,13 +678,20 @@ class ProjectsRepository:
                 c = "file:///{0}".format(group), group
             nb_files = 0
             size = 0
+            atts = []
             for name in self.enumerate_group_files(group):
                 loc = self.get_group_location(group)
                 nb_files += 1
                 size += os.stat(os.path.join(loc, name)).st_size
-            c =  (c[0].replace("\\", "/"), c[1], nb_files, size)
+                if os.path.split(name)[0].endswith("attachments"):
+                    atts.append(os.path.relpath(name, self._location))
+            c = dict(link=c[0].replace("\\", "/"),
+                     group=c[1],
+                     nb=nb_files,
+                     size=size,
+                     attachments=atts)
             groups.append(c)
-        
+
         if render is None:
             tmpl = """<?xml version="1.0" encoding="utf-8"?>
                     <body>
@@ -686,15 +703,24 @@ class ProjectsRepository:
                     <body>
                     <h1>{{ title }}</h1>
                     <ul>
-                    {% for link, group, nb, size in groups %}
-                        <li><a href="{{ link }}">{{ group }}</a> {{ nb }} files, {{ size }} bytes</li>
+                    {% for ps in groups %}
+                        <li><a href="{{ ps["link"] }}">{{ ps["group"] }}</a>
+                            {{ ps["nb"] }} files, {{ ps["size"] }} bytes,
+                            {{ len(ps["attachments"]) }} attachments
+                        {% if len(ps["attachments"]) > 0 %}
+                            <ul>
+                            {% for att in ps["attachments"] %}
+                                <li><a href="{{ att }}">{{ os.path.split(att)[-1] }}</a></li>
+                            {% endfor %}
+                            </ul>
+                        {% endif %}
+                        </li>
                     {% endfor %}
                     </ul>
                     </body>
-                    </html> 
+                    </html>
                     """.replace("                    ", "")
             render = EmailMessageRenderer(tmpl=tmpl)
-            return render.write(filename=outfile, location=".", 
-                        mail=None, attachments=None, groups=groups,
-                        title=title)
-            
+            return render.write(filename=outfile, location=".",
+                                mail=None, attachments=None, groups=groups,
+                                title=title, len=len, os=os)
