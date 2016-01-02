@@ -15,6 +15,7 @@ argparse
 autopep8
 brewer2mpl
 cloud-sptheme
+codecov
 coverage
 docutils
 folium
