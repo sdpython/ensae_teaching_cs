@@ -416,7 +416,8 @@ if not r:
         pyquickhelper.main_wrapper_tests(
             run_unit,
             add_coverage=True,
-            skip_function=skip_function)
+            skip_function=skip_function,
+            covtoken=("5e030cea-7d27-46e7-bb2e-2fc3db0ae9f6", "'jenkins' in outfile"))
 
     elif "custom_left" in sys.argv:
 

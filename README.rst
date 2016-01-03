@@ -21,7 +21,11 @@ README / Changes
     
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
     :alt: MIT License
-    :target: http://opensource.org/licenses/MIT       
+    :target: http://opensource.org/licenses/MIT
+
+.. image:: https://codecov.io/github/sdpython/ensae_teaching_cs/coverage.svg?branch=master
+    :target: https://codecov.io/github/sdpython/ensae_teaching_cs?branch=master
+
 
 This page gives access to the content of practical sessions I give at the
 `ENSAE <http://www.ensae.fr/>`_. They are based on Python. The project
