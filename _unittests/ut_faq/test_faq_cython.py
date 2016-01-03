@@ -8,6 +8,7 @@ import unittest
 import re
 import shutil
 import warnings
+import platform
 
 try:
     import src
@@ -64,7 +65,16 @@ class TestFaqCython(unittest.TestCase):
         compile_cython_single_script(newfile, fLOG=fLOG)
 
         # we checked it worked
-        assert os.path.exists(os.path.join(temp, "primes.pyd"))
+        if sys.version_info[:2] < (3, 5):
+            assert os.path.exists(os.path.join(temp, "primes.pyd"))
+        else:
+            res = platform.architecture()
+            ext = "win_amd64" if res[0] == "64bit" else "win32"
+            name = "primes.cp%d%d-%s.pyd" % (
+                sys.version_info[0], sys.version_info[1], ext)
+            fname = os.path.join(temp, name)
+            fLOG(fname)
+            assert os.path.exists(fname)
 
         sys.path.append(temp)
         import primes

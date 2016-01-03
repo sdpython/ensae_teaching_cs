@@ -1,5 +1,5 @@
 """
-@brief      test log(time=55s)
+@brief      test log(time=92s)
 """
 
 import sys
@@ -85,7 +85,8 @@ class TestNotebookRunner1 (unittest.TestCase):
         assert not os.path.exists(outfile)
         stat, out = run_notebook(nbfile, working_dir=temp, outfilename=outfile,
                                  additional_path=addpath,
-                                 valid=lambda code: '%system' not in code)
+                                 valid=lambda code: '%system' not in code,
+                                 fLOG=fLOG)
         fLOG(out)
         assert os.path.exists(outfile)
 
