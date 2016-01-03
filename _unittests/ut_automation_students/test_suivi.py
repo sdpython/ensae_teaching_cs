@@ -16,6 +16,7 @@ try:
     import pyensae
     import pyrsslocal
     import pymyinstall
+    import pymmails
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -54,6 +55,17 @@ except ImportError:
                 "..",
                 "..",
                 "..",
+                "pymmails",
+                "src")))
+    if path not in sys.path:
+        sys.path.append(path)
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..",
+                "..",
                 "pyensae",
                 "src")))
     if path not in sys.path:
@@ -75,6 +87,7 @@ except ImportError:
     import pyquickhelper
     import pyensae
     import pyrsslocal
+    import pymmails
 
 from pyquickhelper import fLOG, get_temp_folder
 from src.ensae_teaching_cs.automation_students import ProjectsRepository
@@ -94,8 +107,9 @@ class TestSuivi(unittest.TestCase):
         self.assertEqual(len(repo.Groups), 1)
         gr = repo.Groups[0]
         emails = repo.get_emails(gr)
-        assert emails == [
-            'name.lastname@something.fr', ' name.lastname@something']
+        fLOG(emails)
+        self.assertEqual(emails, ['name.lastname@something.fr',
+                                  'name.lastname@something', 'name.lastname@something.fr', 'name.lastname@something'])
 
     def test_sections(self):
         fLOG(
