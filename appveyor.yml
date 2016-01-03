@@ -1,0 +1,44 @@
+environment:
+
+  global:
+    # SDK v7.0 MSVC Express 2008's SetEnv.cmd script will fail if the
+    # /E:ON and /V:ON options are not enabled in the batch script intepreter
+    # See: http://stackoverflow.com/a/13751649/163740
+    WITH_COMPILER: "cmd /E:ON /V:ON /C .\\appveyor\\run_with_compiler.cmd"
+
+  matrix:
+
+    # Pre-installed Python versions, which Appveyor may upgrade to
+    # a later point release.
+    # See: http://www.appveyor.com/docs/installed-software#python
+
+    - PYTHON: "C:\\Python34-x64"
+      PYTHON_VERSION: "3.4.x"
+      PYTHON_ARCH: "64"
+      WINDOWS_SDK_VERSION: "v7.1"
+
+    - PYTHON: "C:\\Python35-x64"
+      PYTHON_VERSION: "3.5.x"
+      PYTHON_ARCH: "64"
+      WINDOWS_SDK_VERSION: "v7.2"
+
+init:
+  - "ECHO %PYTHON% %PYTHON_VERSION% %PYTHON_ARCH%"
+
+install:
+  - "%PYTHON%\\python -m pip install --upgrade pip"
+  - "%PYTHON%\\Scripts\\pip install pymyinstall"
+  - "%PYTHON%\\Scripts\\pymy_install3 --set=ensae_teaching_cs"
+  - "%PYTHON%\\Scripts\\pip install pyquickhelper"
+  - "%PYTHON%\\Scripts\\pip install cryptography"
+  - "%PYTHON%\\Scripts\\pip install pycryptodome"
+  - "%PYTHON%\\Scripts\\pip install pymmails"
+  - "%PYTHON%\\Scripts\\pip install pmymyinstall"
+  - "%PYTHON%\\Scripts\\pip install pyensae"
+  - "%PYTHON%\\Scripts\\pip install pyrsslocal"
+
+build: off
+
+test_script:
+  - "%PYTHON%\\python -u setup.py build_script"
+  - "%PYTHON%\\python -u setup.py unittests"

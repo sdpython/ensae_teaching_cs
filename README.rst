@@ -8,6 +8,10 @@ README / Changes
     :target: https://travis-ci.org/sdpython/ensae_teaching_cs
     :alt: Build status
     
+.. image:: https://ci.appveyor.com/api/projects/status/4chpamq95rh5h245?svg=true
+    :target: https://ci.appveyor.com/project/sdpython/ensae_teaching_cs
+    :alt: Build Status Windows    
+    
 .. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
     :target: http://badge.fury.io/py/ensae_teaching_cs
       
