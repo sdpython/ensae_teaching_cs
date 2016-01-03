@@ -33,7 +33,7 @@ install:
   - "%PYTHON%\\Scripts\\pip install cryptography"
   - "%PYTHON%\\Scripts\\pip install pycryptodome"
   - "%PYTHON%\\Scripts\\pip install pymmails"
-  - "%PYTHON%\\Scripts\\pip install pmymyinstall"
+  - "%PYTHON%\\Scripts\\pip install pymyinstall"
   - "%PYTHON%\\Scripts\\pip install pyensae"
   - "%PYTHON%\\Scripts\\pip install pyrsslocal"
 
