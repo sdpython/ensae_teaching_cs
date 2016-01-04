@@ -3,8 +3,6 @@
 ENSAE - Programmation - Xavier Dupré
 ====================================
 
-:ref:`l-README`, :ref:`blog <ap-main-0>`
-
 Contenu des séances de travaux pratiques en programmation
 que je dispense à l'`ENSAE <http://www.ensae.fr/>`_. 
 Ces cours s'appuient principalement sur 
@@ -15,6 +13,10 @@ Il existe trois formats disponibles :
 `mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_,
 `compact/blanc <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_,
 `compact/mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
+Les changements importants sont notés sur la page :ref:`l-README` et sur le :ref:`blog <ap-main-0>` 
+associé à ce cours.
+
+
 
 Avant-propos
 ------------
