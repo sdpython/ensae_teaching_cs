@@ -53,6 +53,22 @@ except ImportError:
     import pyensae
 
 try:
+    import pymyinstall
+except ImportError:
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..",
+                "..",
+                "pymyinstall",
+                "src")))
+    if path not in sys.path:
+        sys.path.append(path)
+    import pymyinstall
+
+try:
     import pymmails
 except ImportError:
     path = os.path.normpath(
