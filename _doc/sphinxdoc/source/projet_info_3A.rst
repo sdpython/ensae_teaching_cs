@@ -35,9 +35,12 @@ Vous êtes libres de traiter l'algorithme de votre choix. Nous vous en proposons
 * `Large-scale L-BFGS using MapReduce <http://papers.nips.cc/paper/5333-large-scale-l-bfgs-using-mapreduce>`_
 * `LightLDA: Big Topic Models on Modest Compute Clusters <http://arxiv.org/abs/1412.1576>`_
 * `A Reliable Effective Terascale Linear Learning System <http://jmlr.org/papers/volume15/agarwal14a/agarwal14a.pdf>`_
-* `Multi-Block ADMM for Big Data Optimization in Modern Communication Networks <http://arxiv.org/abs/1504.01809>`_, optimisation distribuée (ADMM)
-* `A scalable system for primal-dual optimization <http://arxiv.org/pdf/1507.01461v1.pdf>`_, optimisation sous contrainte avec Map/Reduce et Spark
-* `Sorting and Permuting without Bank Conflicts on GPUs <http://arxiv.org/abs/1507.01391>`_ 
+* `Multi-Block ADMM for Big Data Optimization in Modern Communication Networks <http://arxiv.org/abs/1504.01809>`_, optimisation distribuée (ADMM) (2015)
+* `A scalable system for primal-dual optimization <http://arxiv.org/pdf/1507.01461v1.pdf>`_, optimisation sous contrainte avec Map/Reduce et Spark (2015)
+* `Sorting and Permuting without Bank Conflicts on GPUs <http://arxiv.org/abs/1507.01391>`_ (2015)
+* `Building Balanced k-d Tree with MapReduce <http://arxiv.org/abs/1512.06389>`_ (2015)
+* `Scalable Models for Computing Hierarchies in Information Networks <http://arxiv.org/abs/1601.00626>`_ (2015),
+  Distributed Random Walks with Restart
 
 
 Nous vous recommandons d'adopter la démarche suivante:
