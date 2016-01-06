@@ -41,6 +41,7 @@ Vous êtes libres de traiter l'algorithme de votre choix. Nous vous en proposons
 * `Building Balanced k-d Tree with MapReduce <http://arxiv.org/abs/1512.06389>`_ (2015)
 * `Scalable Models for Computing Hierarchies in Information Networks <http://arxiv.org/abs/1601.00626>`_ (2015),
   Distributed Random Walks with Restart
+* `Optimally Pruning Decision Tree Ensembles With Feature Cost <http://arxiv.org/pdf/1601.00955v1.pdf>`_ (2016), voir section 5
 
 
 Nous vous recommandons d'adopter la démarche suivante:

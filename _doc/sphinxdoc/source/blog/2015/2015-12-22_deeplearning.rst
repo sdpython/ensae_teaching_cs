@@ -33,5 +33,7 @@
     `Why Python is Slow: Looking Under the Hood <https://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/>`_ and
     `Frequentism and Bayesianism: A Practical Introduction <https://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/>`_
     still from the same source.
+    
+    **Addition (01/06/16)**: see also `Comparative Study of Caffe, Neon, Theano, and Torch for Deep Learning <http://arxiv.org/pdf/1511.06435v2.pdf>`_
 
     Source: `XD Blogs <http://www.xavierdupre.fr/blog/2015-12-22_nojs.html>`_.
