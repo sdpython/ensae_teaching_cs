@@ -25,7 +25,7 @@ and to compile them with VS 2015 on your machine.
 It will import the missing DLL which I'm still trying to find out.
 The DLL was compiled on an Azure Virtual Machine.
 
-#endFAQ
+@endFAQ
 """
 
 import sys
