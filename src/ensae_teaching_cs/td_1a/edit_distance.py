@@ -39,7 +39,7 @@ def edit_distance(mot1, mot2):
 
     p = (len(mot1) - 1, len(mot2) - 1)
     chemin = []
-    while p != None:
+    while p is not None:
         chemin.append(p)
         p = pred[p]
     chemin.reverse()

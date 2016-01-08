@@ -2,7 +2,7 @@
 @file
 @brief Some automation helpers to grab mails from students about projects.
 """
-import re
+
 import os
 from pyquickhelper import noLOG, run_cmd, remove_diacritics
 

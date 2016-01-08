@@ -4,7 +4,7 @@
 """
 import re
 import os
-from pyquickhelper import noLOG, run_cmd, remove_diacritics
+from pyquickhelper import noLOG, remove_diacritics
 from pyquickhelper.filehelper import remove_folder, explore_folder_iterfile
 from pyquickhelper.filehelper import zip_files
 from pymmails import EmailMessageRenderer, EmailMessage
@@ -234,7 +234,7 @@ class ProjectsRepository:
         @param      group           group
         @return                     list of videos
         """
-        return get_regex(group, ProjectsRepository._video_regex, self._suivi)
+        return ProjectsRepository.get_regex(group, ProjectsRepository._video_regex, self._suivi)
 
     def get_sections(self, group):
         """
@@ -482,7 +482,7 @@ class ProjectsRepository:
                 if mails:
                     jmail = "; ".join(mails)
                 else:
-                    jmails = None
+                    jmail = None
             else:
                 jmail = None
 

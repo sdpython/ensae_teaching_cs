@@ -164,9 +164,9 @@ if "--verbose" in sys.argv:
 
 if is_local() and "build_sphinx" not in sys.argv and \
         "unittests" not in sys.argv and \
-        "unittests_LONG" not in sys.argv and \
-        "unittests_SKIP" not in sys.argv and \
         "custom_left" not in sys.argv:
+        # "unittests_LONG" not in sys.argv and \
+        # "unittests_SKIP" not in sys.argv and \
     pyquickhelper = import_pyquickhelper()
     logging_function = pyquickhelper.fLOG
     logging_function(OutputPrint=True)

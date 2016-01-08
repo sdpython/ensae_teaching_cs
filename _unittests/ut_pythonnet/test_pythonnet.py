@@ -92,27 +92,25 @@ class TestPythonnet(unittest.TestCase):
             from src.ensae_teaching_cs.pythonnet import clr
             from System import IntPtr, Array, Double
             from System.Runtime.InteropServices import Marshal
-            
-            if sys.version_info[:2] <= (3, 4):            
-                array = numpy.ones((2,2))
-                ar = IntPtr.__overloads__[int](array.__array_interface__['data'][0])
-                ar2 = Array[int]([0,0,0,0]*2)
+
+            if sys.version_info[:2] <= (3, 4):
+                array = numpy.ones((2, 2))
+                ar = IntPtr.__overloads__[int](
+                    array.__array_interface__['data'][0])
+                ar2 = Array[int]([0, 0, 0, 0] * 2)
                 fLOG(type(ar))
                 fLOG(type(ar2), list(ar2))
                 Marshal.Copy(ar, ar2, 0, len(ar2))
                 fLOG(list(ar2))
             else:
-                array = numpy.ones((2,2))
+                array = numpy.ones((2, 2))
                 from clr import IntPtr_long
                 ar = IntPtr_long(array.__array_interface__['data'][0])
-                ar2 = Array[int]([0,0,0,0]*2)
+                ar2 = Array[int]([0, 0, 0, 0] * 2)
                 fLOG(type(ar))
                 fLOG(type(ar2), list(ar2))
                 Marshal.Copy(ar, ar2, 0, len(ar2))
                 fLOG(list(ar2))
-                
-                
-            
 
 
 if __name__ == "__main__":

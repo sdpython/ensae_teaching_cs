@@ -2,9 +2,8 @@
 @file
 @brief Some automation helpers to grab mails from student about project.
 """
-import re
-import os
-from pyquickhelper import noLOG, run_cmd, remove_diacritics
+
+from pyquickhelper import noLOG
 
 
 def grab_addresses(mailbox, subfolder, date, no_domain=False, max_dest=5, fLOG=noLOG):
@@ -42,7 +41,6 @@ def grab_addresses(mailbox, subfolder, date, no_domain=False, max_dest=5, fLOG=n
     """
     emails = mailbox.enumerate_mails_in_folder(
         subfolder, date=date, body=False)
-    mid = {}
     res = []
     for mail in emails:
         tos = mail.get_to()
