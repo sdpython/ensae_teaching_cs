@@ -104,7 +104,7 @@ class TestSuivi(unittest.TestCase):
         data = os.path.abspath(os.path.dirname(__file__))
         data = os.path.join(data, "data")
         repo = ProjectsRepository(data)
-        self.assertEqual(len(repo.Groups), 1)
+        self.assertEqual(len(repo.Groups), 2)
         gr = repo.Groups[0]
         emails = repo.get_emails(gr)
         fLOG(emails)
@@ -120,7 +120,10 @@ class TestSuivi(unittest.TestCase):
         data = os.path.abspath(os.path.dirname(__file__))
         data = os.path.join(data, "data")
         repo = ProjectsRepository(data)
-        self.assertEqual(len(repo.Groups), 1)
+        if len(repo.Groups) != 2:
+            for f in repo.Groups:
+                fLOG(f)
+            self.assertEqual(len(repo.Groups), 2)
         gr = repo.Groups[0]
         sections = repo.get_sections(gr)
         names = [k for k in sorted(sections)]
