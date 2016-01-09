@@ -113,7 +113,7 @@ class TestRepository(unittest.TestCase):
         suivi = os.path.join(temp, "firstname.SECOND", "suivi.rst")
         with open(suivi, "r", encoding="utf8") as f:
             content = f.read()
-        assert "* mails: firstname.about@machin.fr" in content
+        self.assertIn("* mails: firstname.about@machin.fr", content)
 
         self.assertEqual(len(proj.Groups), 3)
         mails = proj.get_emails(proj.Groups[0])
