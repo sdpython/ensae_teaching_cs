@@ -341,9 +341,6 @@ class ProjectsRepository:
             mail = " ".join(spl)
             d, p = edit_distance(mail, pieces)
             res.append((d, email))
-        if "foy" in name.lower():
-            res.sort()
-            print(name, res)
         res = [_ for _ in res if _[0] <= threshold]
         res.sort()
         if exc and len(res) == 0:
@@ -660,7 +657,8 @@ class ProjectsRepository:
             <ul>
             {% for ps in groups %}
                 <li><a href="{{ ps["link"] }}">{{ ps["group"] }}</a><small><i>
-                    {{ ps["nb"] }} files, {{ ps["size"] }} bytes,
+                    {{ ps["nb"] }} files - {{ format_size(ps["size"]) }} -
+                    last mail {{ ps["emails"][-1]["date"] }} ---
                     {{ len(ps["attachments"]) }} attachments</i></small>
                 {% if len(ps["attachments"]) > 0 %}
                     <ul>
@@ -676,6 +674,16 @@ class ProjectsRepository:
             </html>
 
         """
+        def format_size(s):
+            if s <= 2 ** 11:
+                return "{0} bytes".format(s)
+            elif s <= 2 ** 21:
+                return "{0} Kb".format(s // (2 ** 10))
+            elif s <= 2 ** 31:
+                return "{0} Mb".format(s // (2 ** 20))
+            else:
+                return "{0} Gb".format(s // (2 ** 30))
+
         groups = []
         for group in self.Groups:
             l = os.path.join(self.get_group_location(group), link)
@@ -686,6 +694,7 @@ class ProjectsRepository:
             nb_files = 0
             size = 0
             atts = []
+            emails = []
             for name in self.enumerate_group_files(group):
                 if name.endswith(".metadata"):
                     continue
@@ -702,12 +711,21 @@ class ProjectsRepository:
                         day = ""
                     atts.append((day, os.path.relpath(
                         name, self._location), data))
+                else:
+                    mail = os.path.split(name)[-1]
+                    res = EmailMessage.interpret_default_filename(mail)
+                    if "date" in res and "uid" in res and "from" in res:
+                        emails.append(
+                            (res["date"], res["from"], res["uid"], res))
+
             atts.sort()
+            emails = [_[-1] for _ in sorted(emails)]
             c = dict(link=c[0].replace("\\", "/"),
                      group=c[1],
                      nb=nb_files,
                      size=size,
-                     attachments=atts)
+                     attachments=atts,
+                     emails=emails)
             groups.append(c)
 
         if render is None:
@@ -723,7 +741,8 @@ class ProjectsRepository:
                     <ul>
                     {% for ps in groups %}
                         <li><a href="{{ ps["link"] }}">{{ ps["group"] }}</a><small><i>
-                            {{ ps["nb"] }} files, {{ ps["size"] }} bytes,
+                            {{ ps["nb"] }} files - {{ format_size(ps["size"]) }} -
+                            last mail {{ ps["emails"][-1]["date"] }} ---
                             {{ len(ps["attachments"]) }} attachments</i></small>
                         {% if len(ps["attachments"]) > 0 %}
                             <ul>
@@ -738,13 +757,14 @@ class ProjectsRepository:
                     </body>
                     </html>
                     """.replace("                    ", "")
-            render = EmailMessageRenderer(tmpl=tmpl)
+            render = EmailMessageRenderer(tmpl=tmpl, fLOG=self.fLOG)
             dof = True
         else:
             dof = False
-        res = render.write(filename=outfile, location=".",
+        res = render.write(filename=outfile, location=self.Location,
                            mail=None, attachments=None, groups=groups,
-                           title=title, len=len, os=os)
+                           title=title, len=len, os=os,
+                           format_size=format_size)
         if dof:
             render.flush()
         return res
