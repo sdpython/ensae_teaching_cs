@@ -66,4 +66,30 @@ le nombre de personnes atteinte, de se poser des questions comme :
 On pourra mélanger différents types de profils tels que les "retweeter", 
 les jamais connectés...
 
+.. _l-sim-autoroute:
 
+
+Pourquoi la ligne 13 est-elle surchargée ?
+------------------------------------------
+
+Tous les élèves de l'ENSAE connaissentles déboires que connaît la ligne 13.
+On trouve une explication de ce phénomène dans le 
+`paradoxe de Braess <https://fr.wikipedia.org/wiki/Paradoxe_de_Braess>`_
+illustrée par l'article suivant : 
+`La plus large autoroute du monde est déjà bouchée <http://rue89.nouvelobs.com/2016/01/06/plus-large-autoroute-monde-est-deja-bouchee-262729>`_.
+Pour résumé, si un réseau de transport est surchargé, 
+augmenter sa capacité ne fait que le soulager temporairement. 
+Dans un second temps, les utilisateurs modifient leur comportement pour optimiser
+leur parcours au sein de ce réseau. Ce déplacement des habitudes n'aboutit pas 
+forcément à une amélioration par rapport à la situation précédente.
+C'est le `paradoxe de Braess <https://fr.wikipedia.org/wiki/Paradoxe_de_Braess>`_.
+
+Ce projet s'articule en deux étapes. La première consiste à implémenter
+une simulation sur des réseaux très simples. Quelques liens pour cela :
+
+* `paradoxe de Braess <https://fr.wikipedia.org/wiki/Paradoxe_de_Braess>`_
+* `algorithme de Floyd-Fulkerson <https://en.wikipedia.org/wiki/Ford%E2%80%93Fulkerson_algorithm>`_
+* `problème de flot maximum <https://fr.wikipedia.org/wiki/Probl%C3%A8me_de_flot_maximum>`_
+
+Dans un second temps, en utilisant ce que la première étape
+vous a appris, que pourriez-vous dire du `Grand Paris <http://www.societedugrandparis.fr/projet#la-carte-du-projet>`_ ?
