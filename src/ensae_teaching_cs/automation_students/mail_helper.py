@@ -42,8 +42,13 @@ def grab_addresses(mailbox, subfolder, date, no_domain=False, max_dest=5, fLOG=n
     emails = mailbox.enumerate_mails_in_folder(
         subfolder, date=date, body=False)
     res = []
-    for mail in emails:
+    for i, mail in enumerate(emails):
+        if i % 25 == 0:
+            fLOG("[grab_addresses] {0} collected {1}".format(i, len(res)))
         tos = mail.get_to()
+        cc = mail.get_to(cc=True)
+        if cc:
+            tos.extend(cc)
         if max_dest > 0 and len(tos) <= max_dest:
             tos = [(m[1].split('@')[0] if no_domain else m[1])
                    for m in tos if m and m[1]]

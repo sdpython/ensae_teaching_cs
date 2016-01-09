@@ -467,11 +467,12 @@ class ProjectsRepository:
                 mails, skip = local_function(eleves)
                 if must_have_email and (skip or len(mails) == 0):
                     if isinstance(email_function, list):
-                        raise ProjectsRepository.MailNotFound("unable to find a mail for {0} among\n{1}".format(" ;".join(eleves),
-                                                                                                                "\n".join(email_function)))
+                        raise ProjectsRepository.MailNotFound("unable to find a mail for\n{0}\nname={1}\namong\n{3}\nGROUP\n{2}".format(
+                            "; ".join(eleves), name, group, "\n".join(email_function)))
                     else:
                         raise ProjectsRepository.MailNotFound(
-                            "unable to find a mail for {0} with function\n{1}".format(" ;".join(eleves), email_function))
+                            "unable to find a mail for {0}\nname={1}\n with function\n{3}\nGROUP\n{2}".format(
+                                " ;".join(eleves), name, group, email_function))
                 if skip_if_nomail and (skip or len(mails) == 0):
                     fLOG("ProjectsRepository.create_folders_from_dataframe [skipping {0}]".format(
                         "; ".join(eleves)))
