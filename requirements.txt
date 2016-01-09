@@ -88,3 +88,5 @@ pandas_datareader
 beautifulsoup4
 bokeh
 psutil
+toolz
+cytoolz
