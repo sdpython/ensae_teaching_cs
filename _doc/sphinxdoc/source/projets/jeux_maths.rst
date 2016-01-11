@@ -213,8 +213,8 @@ puis d'appliquer cela sur des articles d'un journal, une page Wikipédia...
 .. _l-distance_tree_robinson_foulds:
 
 
-Distance entre deux arbres : Robinson–Foulds
---------------------------------------------
+Distance entre deux arbres : Robinson–Foulds (2016)
+---------------------------------------------------
 
 On sait calculer une distance entre deux séquences qu'on appelle distance d'édition
 ou `distance de Levenshtein <https://fr.wikipedia.org/wiki/Distance_de_Levenshtein>`_.
@@ -228,8 +228,8 @@ L'objectif du projet est d'implémenter cette distance et de l'application
 
 .. _l-maths-inequation:
 
-Résolution de systèmes d'inéquations
-------------------------------------
+Résolution de systèmes d'inéquations (2016)
+-------------------------------------------
 
 On se débrouille beaucoup mieux avec la résolution d'un système linéaire d'équations.
 Mais des inéquations, on préfère quand il s'agit de minimiser ou maximiser.

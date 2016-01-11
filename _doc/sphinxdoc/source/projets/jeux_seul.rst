@@ -66,8 +66,8 @@ Le jeu est constitué de trois éléments :
 
 .. _l-puzzle-GCHQ:
 
-Puzzle GCHD
------------
+Puzzle GCHD (2016)
+------------------
 
 Ecrire un programme qui résoud le puzzle suivant :
 

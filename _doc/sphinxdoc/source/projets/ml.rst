@@ -157,8 +157,8 @@ des sites web qui proposent des traductions anglais/français de leur contenu.
 
 .. _l-fast-k-NN:
 
-Fast k-NN
----------
+Fast k-NN (2016)
+----------------
 
 L'algorithme des `k plus proches voisins <https://fr.wikipedia.org/wiki/M%C3%A9thode_des_k_plus_proches_voisins>`_
 est un des plus simples algorithmes d'apprentissage mais très coûteux. L'article suivent propose une façon
@@ -169,8 +169,8 @@ d'optimiser le calcul dans des espaces de grande dimension.
 
 .. _l-ml-gradient-geom:
 
-Accélération de la descente de gradient dans le cadre d'une optimisation convexe
---------------------------------------------------------------------------------
+Accélération de la descente de gradient dans le cadre d'une optimisation convexe (2016)
+---------------------------------------------------------------------------------------
 
 .. index:: gradient descente, descente de gradient, convexe
 
