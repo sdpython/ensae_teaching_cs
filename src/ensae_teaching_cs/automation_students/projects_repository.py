@@ -570,16 +570,15 @@ class ProjectsRepository:
         if group is None:
             res = []
             for group in self.Groups:
-                self.fLOG(
-                    "ProjectsRepository.dump_group_mails [group={0}]".format(group))
                 r = self.dump_group_mails(renderer, group, mailbox, subfolder=subfolder,
-                                          date=date, skip_function=skip_function, max_dest=max_dest)
+                                          date=date, skip_function=skip_function, max_dest=max_dest,
+                                          overwrite=overwrite)
                 res.extend(r)
             return res
         else:
             mails = self.get_emails(group)
-            self.fLOG("ProjectsRepository.dump_group_mails [mails={0} folder={1} date={2}]".format(
-                str(mails), subfolder, date))
+            self.fLOG("ProjectsRepository.dump_group_mails [group={0} folder={1} date={2} mails={3}]".format(
+                group, subfolder, date, str(mails)))
             iter = mailbox.enumerate_search_person(person=mails, folder=subfolder,
                                                    skip_function=skip_function, date=date, max_dest=max_dest)
             location = self.get_group_location(group)
