@@ -4,6 +4,7 @@
 """
 import re
 import os
+from urllib.parse import urlparse
 from pyquickhelper import noLOG, remove_diacritics
 from pyquickhelper.filehelper import remove_folder, explore_folder_iterfile
 from pyquickhelper.filehelper import zip_files
@@ -632,8 +633,15 @@ class ProjectsRepository:
                     yield _
         return zip_files(outfile, iter_files(), root=self._location)
 
+    _link_regex = re.compile("(https?[:][^ \\\"<>)(]+)")
+
+    _known_strings = ["xavierdupre.fr", "doodle", "ensaenotebook", "teralab",
+                      "outlook.com", "gohlke", "support.google", "help.github",
+                      "api.jcdecaux"]
+
     def write_summary(self, render=None, link="index_mails.html",
-                      outfile="index.html", title="summary"):
+                      outfile="index.html", title="summary",
+                      nolink_if=None):
         """
         produces a summary and uses a Jinja2 template
 
@@ -641,11 +649,15 @@ class ProjectsRepository:
                                 can be None
         @param      link        look for this file in each folder
         @param      outfile     output file
+        @param      nolink_if   link containing those strings will be removed (if None, a default set will be assigned)
         @return                 summary
 
         the current default template is::
 
             <?xml version="1.0" encoding="utf-8"?>
+            <head>
+            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+            </head>
             <body>
             <html>
             <head>
@@ -663,7 +675,10 @@ class ProjectsRepository:
                 {% if len(ps["attachments"]) > 0 %}
                     <ul>
                     {% for day, att, data in ps["attachments"] %}
-                        <li>{{ day }} - <a href="{{ att }}">{{ os.path.split(att)[-1] }}</a></li>
+                        <li>att: {{ day }} - <a href="{{ att }}">{{ os.path.split(att)[-1] }}</a></li>
+                    {% endfor %}
+                    {% for date, from_, url, domain, last in ps["links"] %}
+                        <li>link: {{ date }} <a href="{{ url }}">{{ domain }} // {{ last }}</a> from {{ from_ }}</li>
                     {% endfor %}
                     </ul>
                 {% endif %}
@@ -674,6 +689,34 @@ class ProjectsRepository:
             </html>
 
         """
+        if nolink_if is None:
+            nolink_if = ProjectsRepository._known_strings
+
+        def filter_in(url):
+            if "\n" in url or "\r" in u or "\t" in u:
+                return False
+            if url.endswith("&quot;"):
+                return False
+            for _ in nolink_if:
+                if _ in url:
+                    return False
+            return True
+
+        def clean_url(u):
+            u = u.replace("&#43;", "+").strip(".#'/ \r\n\t ")
+            if u.endswith("&nbsp;"):
+                u = u[:-6]
+            return u
+
+        def url_domain_name(url):
+            r = urlparse(url)
+            domain = r.netloc
+            name = [_ for _ in url.split("/") if _]
+            last = name[-1] if len(name) > 0 else domain
+            if len(last) > 30:
+                last = last[-30:]
+            return domain, clean_url(last)
+
         def format_size(s):
             if s <= 2 ** 11:
                 return "{0} bytes".format(s)
@@ -695,6 +738,7 @@ class ProjectsRepository:
             size = 0
             atts = []
             emails = []
+            links = []
             for name in self.enumerate_group_files(group):
                 if name.endswith(".metadata"):
                     continue
@@ -717,19 +761,49 @@ class ProjectsRepository:
                     if "date" in res and "uid" in res and "from" in res:
                         emails.append(
                             (res["date"], res["from"], res["uid"], res))
+                        with open(os.path.join(loc, mail), "r", encoding="utf8") as f:
+                            content = f.read()
+                        urls = ProjectsRepository._link_regex.findall(content)
+                        if urls:
+                            for u in set(urls):
+                                u = clean_url(u)
+                                if not filter_in(u):
+                                    continue
+                                domain, last = url_domain_name(u)
+                                links.append(
+                                    (res["date"], res["from"], clean_url(u), domain, last))
 
+            # we sort
             atts.sort()
+            links.sort()
+
+            # we clean dupicated links
+            mlinks = links
+            links = []
+            done = {}
+            for date, from_, url, domain, last in mlinks:
+                if url in done:
+                    continue
+                links.append((date, from_, url, domain, last))
+                done[url] = True
+
+            # we create the variable for the template
             emails = [_[-1] for _ in sorted(emails)]
             c = dict(link=c[0].replace("\\", "/"),
                      group=c[1],
                      nb=nb_files,
                      size=size,
                      attachments=atts,
-                     emails=emails)
+                     emails=emails,
+                     links=links)
+
             groups.append(c)
 
         if render is None:
             tmpl = """<?xml version="1.0" encoding="utf-8"?>
+                    <head>
+                    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+                    </head>
                     <body>
                     <html>
                     <head>
@@ -747,7 +821,10 @@ class ProjectsRepository:
                         {% if len(ps["attachments"]) > 0 %}
                             <ul>
                             {% for day, att, data in ps["attachments"] %}
-                                <li>{{ day }} - <a href="{{ att }}">{{ os.path.split(att)[-1] }}</a></li>
+                                <li>att: {{ day }} - <a href="{{ att }}">{{ os.path.split(att)[-1] }}</a></li>
+                            {% endfor %}
+                            {% for date, from_, url, domain, last in ps["links"] %}
+                                <li>link: {{ date }} <a href="{{ url }}">{{ domain }} // {{ last }}</a> from {{ from_ }}</li>
                             {% endfor %}
                             </ul>
                         {% endif %}
