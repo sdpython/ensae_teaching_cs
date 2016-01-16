@@ -1,6 +1,7 @@
-cvxopt
-dask
-cytoolz
 bayespy
-networkx
+cloudpickle
+cvxopt
+cytoolz
 mpld3
+dask
+networkx
