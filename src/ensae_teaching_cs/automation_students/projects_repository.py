@@ -580,8 +580,19 @@ class ProjectsRepository:
             mails = self.get_emails(group)
             self.fLOG("ProjectsRepository.dump_group_mails [group={0} folder={1} date={2} mails={3}]".format(
                 group, subfolder, date, str(mails)))
-            iter = mailbox.enumerate_search_person(person=mails, folder=subfolder,
-                                                   skip_function=skip_function, date=date, max_dest=max_dest)
+
+            def iter_mail(body=True):
+                return mailbox.enumerate_search_person(person=mails, folder=subfolder,
+                                                       skip_function=skip_function, date=date, max_dest=max_dest,
+                                                       body=body)
+            nbmails = len(self.list_mails(group))
+            nbcur = len(list(iter_mail(body=False)))
+            if nbmails != nbcur:
+                overwrite = True
+                self.fLOG("[group={0}] new mails".format(
+                    group), nbcur, "<", "nbmails")
+
+            iter = iter_mail(body=True)
             location = self.get_group_location(group)
             r = renderer.write(iter=iter, location=location,
                                filename=filename, overwrite=overwrite)
@@ -615,6 +626,23 @@ class ProjectsRepository:
             loc = self.get_group_location(group)
             for _ in explore_folder_iterfile(loc):
                 yield _
+
+    def list_mails(self, group):
+        """
+        return the number of mails of a group
+
+        @param          group       group name
+        @return                     list of mails
+        """
+        names = list(self.enumerate_group_files(group))
+        mails = []
+        for name in names:
+            if "attachments" in name:
+                continue
+            name_d = os.path.split(name)[-1]
+            if name_d.startswith("d_") and name_d.endswith(".html"):
+                mails.append(name)
+        return mails
 
     def zip_group(self, group, outfile, addition=None):
         """
