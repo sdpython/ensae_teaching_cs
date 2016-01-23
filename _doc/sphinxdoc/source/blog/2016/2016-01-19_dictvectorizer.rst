@@ -34,4 +34,4 @@
         newdf = trans.transform(df)
         print(newdf)
         
-    Voir :ref:`CategoriesToIntegers <ensae_teaching_cs.ml.CategoriesToIntegers>`.
+    Voir :ref:`CategoriesToIntegers <ensae_teaching_cs.ml.categories_to_integers.CategoriesToIntegers>`.
