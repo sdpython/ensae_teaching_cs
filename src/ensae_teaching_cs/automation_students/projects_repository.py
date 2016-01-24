@@ -583,7 +583,7 @@ class ProjectsRepository:
 
             def iter_mail(body=True):
                 return mailbox.enumerate_search_person(person=mails, folder=subfolder,
-                                                       skip_function=skip_function, date=date, 
+                                                       skip_function=skip_function, date=date,
                                                        max_dest=max_dest, body=body)
             nbmails = len(self.list_mails(group))
             nbcur = len(list(iter_mail(body=False)))

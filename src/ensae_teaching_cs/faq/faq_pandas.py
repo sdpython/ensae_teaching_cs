@@ -219,3 +219,20 @@ def groupby_topn(df, by_keys, sort_keys, ascending=True, n=1, as_index=True):
     if not as_index:
         res = res.reset_index(drop=True)
     return res
+
+
+def speed_dataframe():
+    """
+    @FAQ(Comment créer un dataframe rapidement ?)
+
+    Le notebook :ref:`dataframematrixspeedrst` compare différentes manières
+    de créer un `dataframe <http://pandas-docs.github.io/pandas-docs-travis/enhancingperf.html?highlight=dataframe>`_
+    ou un `array <http://docs.scipy.org/doc/numpy/reference/generated/numpy.array.html>`_.
+    Quelques enseignemens :
+
+    * Même si les données sont produites par un générateur, pandas les convertit en liste.
+    * La création d'un array est plus rapide à partir d'un générateur plutôt que d'une liste.
+
+    @endFAQ
+    """
+    pass
