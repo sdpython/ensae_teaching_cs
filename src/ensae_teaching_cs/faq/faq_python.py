@@ -693,3 +693,44 @@ if __name__ == "__main__":
     print(c.x)
     print(c.y)
     c.x = 5
+
+
+def get_month_name(date):
+    """
+    returns the month name for a give date
+
+    @param      date        datatime
+    @return                 month name
+
+    @FAQ(Récupérer le nom du mois à partir d'une date)
+
+    ::
+
+        import datetime
+        dt = datetime.datetime(2016, 1, 1)
+        print(dt.strftime("%B"))
+
+
+    @endFAQ
+    """
+    return date.strftime("%B")
+
+
+def get_day_name(date):
+    """
+    returns the day name for a give date
+
+    @param      date        datatime
+    @return                 month name
+
+    @FAQ(Récupérer le nom du jour à partir d'une date)
+
+    ::
+
+        import datetime
+        dt = datetime.datetime(2016, 1, 1)
+        print(dt.strftime("%A"))
+
+    @endFAQ
+    """
+    return date.strftime("%A")
