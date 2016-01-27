@@ -88,3 +88,9 @@ Trois projets réalisés par les élèves lors de l'année 2014-2015 :
 * :ref:`2015kmeansrst`
 * :ref:`2015factorisationmatricerst`
 
+Code de survie
+++++++++++++++
+
+* :ref:`blogpost_azure_file_attente`
+
+
