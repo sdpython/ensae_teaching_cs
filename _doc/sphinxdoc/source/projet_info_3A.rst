@@ -43,6 +43,11 @@ Vous êtes libres de traiter l'algorithme de votre choix. Nous vous en proposons
   Distributed Random Walks with Restart
 * `Optimally Pruning Decision Tree Ensembles With Feature Cost <http://arxiv.org/pdf/1601.00955v1.pdf>`_ (2016), voir section 5
 * `Scalable Matrix Inversion Using MapReduce <https://cs.uwaterloo.ca/~ashraf/pubs/hpdc14matrix.pdf>`_ (2016)
+* `The Part-Time Parliament <http://research.microsoft.com/en-us/um/people/lamport/pubs/pubs.html#lamport-paxos>`_, 
+  ce papier introduit l'algorithme `Paxos <https://en.wikipedia.org/wiki/Paxos_(computer_science)>`_ qui gère les problèmes
+  de consensus entre machines. Une machine souhaite déléguer un travail à une autre mais elle a le choix.
+  Comment s'assurer qu'une seule et une seule machine ne fait ce travail ? 
+  On pourra traiter n'importe qu'elle autre variance de l'algorithme plus récene. (2017)
 
 
 Nous vous recommandons d'adopter la démarche suivante:
