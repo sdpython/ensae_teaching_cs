@@ -14,51 +14,63 @@ Ressources, Evénements, Source de données
 Source de données
 +++++++++++++++++
 
-* *open data France* `data.gouv.fr <http://www.data.gouv.fr/>`_, `INSEE <http://www.insee.fr/fr/bases-de-donnees/>`_
-* *open data Paris* `opendata Paris <http://opendata.paris.fr/page/home/>`_ (presque toutes les villes ont maintenant un site open data, il suffit de chercher avec un moteur de recherche `opendata + ville <https://duckduckgo.com/?q=opendata+montpellier>`_ pour le trouver)
-* *open data* `data-publica <http://www.data-publica.com/explore>`_
-* *API* `données vélib <https://developer.jcdecaux.com/#/home>`_
-* *données réseaux* `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_
-* *wikipedia* `dump wikipedia <https://dumps.wikimedia.org/backup-index.html>`_
-* *ML* `Kaggle Datasets <https://www.kaggle.com/datasets>`_
-* *ML* `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_ (collection de jeux de données classés par type de problème - régression, classification, ...)
-* `Data Analysis, Modeling and Machine Learning Group <http://ama.liglab.fr/resourcestools/datasets/>`_
-* `Global Disease Monitoring and Forecasting with Wikipedia  <http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1003892>`_
-* `Home Mortgage Disclouse Act <http://www.ffiec.gov/hmda/>`_ (voir `Introducing Blaze - HMDA Practice <http://continuum.io/blog/blaze-hmda>`_
-* `UN ComTrade <http://comtrade.un.org/db/>`_ : United Nations Commodity Trade Statistics Database
-* `Evénements GitHub <https://www.githubarchive.org/>`_ : tous les commit sur GitHub chaque jour (~15.000 commit par jour)
-* `Microsoft Research Letor <http://research.microsoft.com/en-us/um/beijing/projects/letor/letor4dataset.aspx>`_
-* `170 millions courses de taxi à New-York <http://chriswhong.com/open-data/foil_nyc_taxi/>`_ 
-  (via l'article `Building Azure ML Models on the NYC Taxi Dataset <http://blogs.technet.com/b/machinelearning/archive/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset.aspx>`_)
-* *texte* `WordNet <https://wordnet.princeton.edu/wordnet/>`_, base de données anglaises sur le vocabulaire, la grammaire, les synonymes...
-* *images* `ImageNet <http://image-net.org/>`_, base de données d'images avec leur contenu
-* `Données Croix-Rouge sur les dons reçus <https://github.com/dataforgoodfr/croixrouge>`_
-* `Geonames <http://download.geonames.org/export/dump/>`_
-* `OpenWeatherMap <http://openweathermap.org/>`_
-* *open data* `Dépenses d'assurance maladie hors prestations hospitalières par caisse primaire/département <https://www.data.gouv.fr/fr/datasets/depenses-d-assurance-maladie-hors-prestations-hospitalieres-par-caisse-primaire-departement/>`_ (1 Go),
-  `La démographie des médecins (RPPS) <https://www.data.gouv.fr/fr/datasets/la-demographie-des-medecins-rpps/>`_
-* *ML* `Data Science at Microsoft Research <http://research.microsoft.com/en-us/projects/data-science-initiative/default.aspx#datasets>`_
-* `soTweet: Studying Twitter at Scale <http://www-sop.inria.fr/members/Arnaud.Legout/Projects/sotweet.html>`_: base de 500 millions de tweets et 23 milliards de liens
-* *musique* projets, librairies Python, données sur la musique `LabROSA (Columbia) <http://labrosa.ee.columbia.edu/projects/>`_,
-  `librosa <https://github.com/bmcfee/librosa>`_, `Music Similarity <http://labrosa.ee.columbia.edu/projects/>`_,
-  `Million Song Dataset <https://aws.amazon.com/fr/datasets/million-song-dataset/>`_
-* *ML* `Ensembles de données publics AWS (Amazon) <https://aws.amazon.com/public-data-sets/>`_, `AWS Public Data Sets <https://aws.amazon.com/datasets/>`_
-* *musique* `Semantic Artist Similarity Dataset <http://mtg.upf.edu/download/datasets/semantic-similarity>`_
-* *musique* `The Music Matrix – Exploring tags in the Million Song Dataset <http://musicmachinery.com/2011/11/27/the-music-matrix-exploring-tags-in-the-million-song-dataset/>`_
-* *musique* `Audio Content Analysis Datasets <http://www.audiocontentanalysis.org/data-sets/>`_
-* *musique* `MusicBrainz Database <https://musicbrainz.org/doc/MusicBrainz_Database/Download>`_
+**API**
+
+* `données vélib <https://developer.jcdecaux.com/#/home>`_
+
+**Jeux de données**
+
+* *banque* `Home Mortgage Disclouse Act <http://www.ffiec.gov/hmda/>`_ (voir `Introducing Blaze - HMDA Practice <http://continuum.io/blog/blaze-hmda>`_
+* *code* `Evénements GitHub <https://www.githubarchive.org/>`_ : tous les commit sur GitHub chaque jour (~15.000 commit par jour)
+* *climat* `OpenWeatherMap <http://openweathermap.org/>`_
 * *climat* `Land-Based Datasets and Products <http://www.ncdc.noaa.gov/data-access/land-based-station-data/land-based-datasets>`_,
   `Daily Global Weather Measurements, 1929-2009 (NCDC, GSOD) <https://aws.amazon.com/fr/datasets/daily-global-weather-measurements-1929-2009-ncdc-gsod/?tag=datasets%23keywords%23climate>`_,
   voir aussi `Daily Global Weather Measurements (http://spatial-analyst.net/) <http://spatial-analyst.net/book/getGSOD.R>`_
+* *images* `ImageNet <http://image-net.org/>`_, base de données d'images avec leur contenu
+* *ML* `Kaggle Datasets <https://www.kaggle.com/datasets>`_
+* *ML* `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_ (collection de jeux de données classés par type de problème - régression, classification, ...)
+* *ML* `Data Science at Microsoft Research <http://research.microsoft.com/en-us/projects/data-science-initiative/default.aspx#datasets>`_
+* *ML* `Ensembles de données publics AWS (Amazon) <https://aws.amazon.com/public-data-sets/>`_, `AWS Public Data Sets <https://aws.amazon.com/datasets/>`_
+* *ML* `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_
+* *ML* `Data Analysis, Modeling and Machine Learning Group <http://ama.liglab.fr/resourcestools/datasets/>`_
+* *ML* `Microsoft Research Letor <http://research.microsoft.com/en-us/um/beijing/projects/letor/letor4dataset.aspx>`_
+* *ML* `170 millions courses de taxi à New-York <http://chriswhong.com/open-data/foil_nyc_taxi/>`_ 
+  (via l'article `Building Azure ML Models on the NYC Taxi Dataset <http://blogs.technet.com/b/machinelearning/archive/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset.aspx>`_)
+* *musique* `Semantic Artist Similarity Dataset <http://mtg.upf.edu/download/datasets/semantic-similarity>`_
+* *musique* `The Music Matrix – Exploring tags in the Million Song Dataset <http://musicmachinery.com/2011/11/27/the-music-matrix-exploring-tags-in-the-million-song-dataset/>`_
+* *musique* `Audio Content Analysis Datasets <http://www.audiocontentanalysis.org/data-sets/>`_
+* *musique* projets, librairies Python, données sur la musique `LabROSA (Columbia) <http://labrosa.ee.columbia.edu/projects/>`_,
+  `librosa <https://github.com/bmcfee/librosa>`_, `Music Similarity <http://labrosa.ee.columbia.edu/projects/>`_,
+  `Million Song Dataset <https://aws.amazon.com/fr/datasets/million-song-dataset/>`_
+* *ONG* `Données Croix-Rouge sur les dons reçus <https://github.com/dataforgoodfr/croixrouge>`_
+* *santé* `Dépenses d'assurance maladie hors prestations hospitalières par caisse primaire/département <https://www.data.gouv.fr/fr/datasets/depenses-d-assurance-maladie-hors-prestations-hospitalieres-par-caisse-primaire-departement/>`_ (1 Go),
+  `La démographie des médecins (RPPS) <https://www.data.gouv.fr/fr/datasets/la-demographie-des-medecins-rpps/>`_
+* *santé* `Epidemium <http://www.epidemium.cc/>`_ : challenge big data sur le cancer (voir `Les challenges <http://www.epidemium.cc/theme/search>`_),
+  le site référence également un nombre important de jeux de données autour des thèmes liés à la santé `data.epidemium <http://data.epidemium.cc/fr#>`_
+* *santé* `Global Disease Monitoring and Forecasting with Wikipedia  <http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1003892>`_
+* *texte* `soTweet: Studying Twitter at Scale <http://www-sop.inria.fr/members/Arnaud.Legout/Projects/sotweet.html>`_: base de 500 millions de tweets et 23 milliards de liens
+* *texte* `WordNet <https://wordnet.princeton.edu/wordnet/>`_, base de données anglaises sur le vocabulaire, la grammaire, les synonymes...
+* *texte* `dump wikipedia <https://dumps.wikimedia.org/backup-index.html>`_
 * autres pistes: `Where can I find large datasets open to the public? <https://www.quora.com/Where-can-I-find-large-datasets-open-to-the-public>`_
+
+**Graphiques, cartes**
+
+* `Geonames <http://download.geonames.org/export/dump/>`_
+
 
 **moteurs de recherches sur les données**
 
+* `data.gouv.fr <http://www.data.gouv.fr/>`_, `INSEE <http://www.insee.fr/fr/bases-de-donnees/>`_
+* `opendata Paris <http://opendata.paris.fr/page/home/>`_ (presque toutes les villes ont maintenant un site open data, il suffit de chercher avec un moteur de recherche `opendata + ville <https://duckduckgo.com/?q=opendata+montpellier>`_ pour le trouver)
+* `data-publica <http://www.data-publica.com/explore>`_
+* `data.epidemium <http://data.epidemium.cc/fr#>`_
 * `Quandl <http://www.quandl.com/>`_ (et son module python `quandl <https://pypi.python.org/pypi/Quandl/>`_, `quandl/API <http://pythonhosted.org//Quandl/>`_,)
 * `Datahub <https://datahub.io/dataset>`_
 * `AWS Public Data Sets <https://aws.amazon.com/datasets/>`_ (Amazon) 
   (voir `Using Public Data Sets <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-public-data-sets.html>`_ et
   `boto <https://github.com/boto/boto>`_)
+* `UN ComTrade <http://comtrade.un.org/db/>`_ : United Nations Commodity Trade Statistics Database
+* `MusicBrainz Database <https://musicbrainz.org/doc/MusicBrainz_Database/Download>`_
 
 
 Compétition, Codes

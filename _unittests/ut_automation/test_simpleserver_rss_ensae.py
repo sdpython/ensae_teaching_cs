@@ -129,6 +129,8 @@ class TestSimpleServerRSSTeaching (unittest.TestCase):
         fLOG("fetching first url")
         url = "http://localhost:8093/rss_search.html?searchterm=command"
         cont = get_url_content_timeout(url)
+        if cont is None:
+            raise Exception("cond is None for url: " + str(url))
         if "Traceback" in cont:
             fLOG(cont)
         # if "Traceback" in cont and not "l''exception ::      Traceback" in cont:

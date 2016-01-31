@@ -48,6 +48,8 @@ Vous êtes libres de traiter l'algorithme de votre choix. Nous vous en proposons
   de consensus entre machines. Une machine souhaite déléguer un travail à une autre mais elle a le choix.
   Comment s'assurer qu'une seule et une seule machine ne fait ce travail ? 
   On pourra traiter n'importe qu'elle autre variance de l'algorithme plus récene. (2017)
+* `Schönhage-Strassen Algorithm with MapReduce for Multiplying Terabit Integers <http://people.apache.org/~szetszwo/ssmr20110429.pdf>`_ (2017)
+* `Dimension Independent Matrix Square using MapReduce (DIMSUM) <http://stanford.edu/~rezab/papers/dimsum.pdf>`_ (2017)
 
 
 Nous vous recommandons d'adopter la démarche suivante:
