@@ -171,12 +171,13 @@ class ProjectsRepository:
         return os.path.join(self._location, group)
 
     @staticmethod
-    def get_regex(path, regex, suivi="suivi.rst"):
+    def get_regex(path, regex, suivi="suivi.rst", skip_if_empty=False):
         """
         retrieve data from file ``suivi.rst`` using a regular expression
 
         @param      path            sub folder to look into
         @param      suivi           name of the file ``suivi.rst``
+        @param      skip_if_empty   skip of no mail?
         @return                     list of mails
         """
         if not os.path.exists(path):
@@ -194,10 +195,11 @@ class ProjectsRepository:
 
         mails = regex.findall(content)
         if len(mails) == 0:
+            if skip_if_empty:
+                return []
             raise Exception(
                 "unable to find the regular expression {0} in {1}".format(
-                    regex.pattern,
-                    filename))
+                    regex.pattern, filename))
 
         allmails = []
         for m in mails:
@@ -205,16 +207,18 @@ class ProjectsRepository:
 
         return [_.strip() for _ in allmails for _ in allmails]
 
-    def get_emails(self, group):
+    def get_emails(self, group, skip_if_empty=False):
         """
         retrieve student emails from file ``suivi.rst``
 
         @param      group           group
+        @param      skip_if_empty   skip if no mail?
         @return                     list of mails
         """
         path = os.path.join(self._location, group)
-        allmails = ProjectsRepository.get_regex(
-            path, ProjectsRepository._email_regex, self._suivi)
+        allmails = ProjectsRepository.get_regex(path, 
+            ProjectsRepository._email_regex, self._suivi,
+            skip_if_empty=skip_if_empty)
         for a in allmails:
             if "\n" in a:
                 raise ValueError(
@@ -350,7 +354,7 @@ class ProjectsRepository:
         return res
 
     @staticmethod
-    def match_mails(names, emails, threshold=3, exc=True):
+    def match_mails(names, emails, threshold=3, exc=True, skip_names=None):
         """
         tries to match a series of names among a list of mails
 
@@ -358,6 +362,8 @@ class ProjectsRepository:
         @param      emails      list of emails
         @param      threshold   above this threshold, mails and names don't match
         @param      exc         raise an Exception if not found
+        @param      skip_names  the second boolean is True is one of the name
+                                belongs to this list
         @return                 list of available mails, boolean
 
         The second results is True if no email were found in the list.
@@ -365,9 +371,9 @@ class ProjectsRepository:
         res = []
         skip = False
         for name in names:
-            r = ProjectsRepository.match_mail(name, emails, threshold, exc)
-            if not r:
+            if skip_names is not None and name in skip_names:
                 skip = True
+            r = ProjectsRepository.match_mail(name, emails, threshold, exc)
             res.extend([_[1] for _ in r])
         return res, skip
 
@@ -382,6 +388,7 @@ class ProjectsRepository:
                                       email_function=None,
                                       must_have_email=True,
                                       skip_if_nomail=False,
+                                      skip_names=None,
                                       fLOG=noLOG):
         """
         creates a series of folders for groups of students
@@ -396,6 +403,7 @@ class ProjectsRepository:
         @param      overwrite           if False, skip if the report already exists
         @param      must_have_email     if True, raises an exception if no mail is found
         @param      skip_if_nomail      skip a name if no mail is found
+        @param      skip_names          less checking for a given set of names
         @return                         list of creates folders
 
         The function *email_function* has the following signature::
@@ -409,8 +417,9 @@ class ProjectsRepository:
         *email_function* can be a list of mails. In that case,
         this function is replaced by @see me match_mails.
         """
-        def local_email_function(names):
-            return ProjectsRepository.match_mails(names, email_function, exc=False)
+        def local_email_function(names, skip_names):
+            return ProjectsRepository.match_mails(names, email_function, 
+                        exc=False, skip_names=skip_names)
 
         if isinstance(email_function, list):
             local_function = local_email_function
@@ -465,16 +474,19 @@ class ProjectsRepository:
             eleves.sort()
 
             if email_function is not None:
-                mails, skip = local_function(eleves)
-                if must_have_email and (skip or len(mails) == 0):
+                mails, skip = local_function(eleves, skip_names)
+                if must_have_email and (not skip and len(mails) == 0):
+                    # we skip only if a group has no mails at all
                     if isinstance(email_function, list):
-                        raise ProjectsRepository.MailNotFound("unable to find a mail for\n{0}\nname={1}\namong\n{3}\nGROUP\n{2}".format(
-                            "; ".join(eleves), name, group, "\n".join(email_function)))
+                        raise ProjectsRepository.MailNotFound("unable to find a mail for\n{0}\nname={1}\nskip:{4}\n{5}\namong\n{3}\nGROUP\n{2}".format(
+                            "; ".join("'%s'" % _ for _ in eleves), 
+                            name, group, "\n".join(email_function),
+                            skip, skip_names))
                     else:
                         raise ProjectsRepository.MailNotFound(
                             "unable to find a mail for {0}\nname={1}\n with function\n{3}\nGROUP\n{2}".format(
                                 " ;".join(eleves), name, group, email_function))
-                if skip_if_nomail and (skip or len(mails) == 0):
+                if skip_if_nomail and (not skip and len(mails) == 0):
                     fLOG("ProjectsRepository.create_folders_from_dataframe [skipping {0}]".format(
                         "; ".join(eleves)))
                     continue
@@ -553,7 +565,7 @@ class ProjectsRepository:
 
     def dump_group_mails(self, renderer, group, mailbox, subfolder, date=None,
                          skip_function=None, max_dest=5, filename="index_mails.html",
-                         overwrite=False):
+                         overwrite=False, skip_if_empty=False):
         """
         enumerates all mails sent by or sent to a given group
 
@@ -566,6 +578,7 @@ class ProjectsRepository:
         @param      max_dest        maximum number of receivers
         @param      filename        filename which gathers a link to every mail
         @param      overwrite       overwrite
+        @param      skip_if_empty   skip if no mail?
         @return                     list of files (see `EmailMessageListRenderer.write <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/render/email_message_list_renderer.html>`_)
         """
         if group is None:
@@ -573,13 +586,18 @@ class ProjectsRepository:
             for group in self.Groups:
                 r = self.dump_group_mails(renderer, group, mailbox, subfolder=subfolder,
                                           date=date, skip_function=skip_function, max_dest=max_dest,
-                                          overwrite=overwrite)
+                                          overwrite=overwrite, skip_if_empty=skip_if_empty)
                 res.extend(r)
             return res
         else:
-            mails = self.get_emails(group)
-            self.fLOG("ProjectsRepository.dump_group_mails [group={0} folder={1} date={2} mails={3}]".format(
-                group, subfolder, date, str(mails)))
+            mails = self.get_emails(group, skip_if_empty=skip_if_empty)
+            if skip_if_empty and len(mails) == 0:
+                self.fLOG("ProjectsRepository.dump_group_mails [SKIP group={0} folder={1} date={2} mails={3}]".format(
+                    group, subfolder, date, str(mails)))
+                return []
+            else:
+                self.fLOG("ProjectsRepository.dump_group_mails [group={0} folder={1} date={2} mails={3}]".format(
+                    group, subfolder, date, str(mails)))
 
             def iter_mail(body=True):
                 return mailbox.enumerate_search_person(person=mails, folder=subfolder,
@@ -694,7 +712,7 @@ class ProjectsRepository:
             </head>
             <body>
             <h1>{{ title }}</h1>
-            <ul>
+            <ol type="1">
             {% for ps in groups %}
                 <li><a href="{{ ps["link"] }}">{{ ps["group"] }}</a><small><i>
                     {{ ps["nb"] }} files - {{ format_size(ps["size"]) }} -
@@ -712,7 +730,7 @@ class ProjectsRepository:
                 {% endif %}
                 </li>
             {% endfor %}
-            </ul>
+            </ol>
             </body>
             </html>
 
@@ -840,7 +858,7 @@ class ProjectsRepository:
                     </head>
                     <body>
                     <h1>{{ title }}</h1>
-                    <ul>
+                    <ol type="1">
                     {% for ps in groups %}
                         <li><a href="{{ ps["link"] }}">{{ ps["group"] }}</a><small><i>
                             {{ ps["nb"] }} files - {{ format_size(ps["size"]) }} -
@@ -858,7 +876,7 @@ class ProjectsRepository:
                         {% endif %}
                         </li>
                     {% endfor %}
-                    </ul>
+                    </ol>
                     </body>
                     </html>
                     """.replace("                    ", "")
