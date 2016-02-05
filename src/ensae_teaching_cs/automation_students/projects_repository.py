@@ -4,6 +4,7 @@
 """
 import re
 import os
+import numpy
 from urllib.parse import urlparse
 from pyquickhelper import noLOG, remove_diacritics
 from pyquickhelper.filehelper import remove_folder, explore_folder_iterfile
@@ -459,13 +460,15 @@ class ProjectsRepository:
         for name, group in gr:
             if col_subject:
                 s = list(set(group[col_subject].copy()))
+                s = [_ for _ in s if not isinstance(_, float) or ~numpy.isnan(_)]
                 if len(s) > 1:
                     raise TooManyProjectsException(
                         "more than one subject for group: " +
                         str(name) +
                         "\n" +
                         str(s))
-
+                elif len(s) == 0:
+                    s = ["unknown"]
                 subject = s[0]
             else:
                 subject = None

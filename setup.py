@@ -203,7 +203,9 @@ if is_local() and "build_sphinx" not in sys.argv and \
             if not exist dist\\html_pres_3A mkdir dist\\html_pres_3A
             if not exist dist\\html_pres_1Ap mkdir dist\\html_pres_1Ap
 
-            xcopy /E /C /I /Y _doc\\presentation_projets\\a2015\\build\\html dist\\html_pres_1Ap
+            xcopy /E /C /I /Y _doc\\presentation_projets\\a2015\\build\\html dist\\html_pres_1Ap\\2015
+            if %errorlevel% neq 0 exit /b %errorlevel%
+            xcopy /E /C /I /Y _doc\\presentation_projets\\a2016\\build\\html dist\\html_pres_1Ap
             if %errorlevel% neq 0 exit /b %errorlevel%
             xcopy /E /C /I /Y _doc\\presentation_2A\\build\\html dist\\html_pres_2A
             if %errorlevel% neq 0 exit /b %errorlevel%
@@ -508,36 +510,39 @@ if not r:
                 res += [os.path.join(res[-1], "Scripts")]
             return res
 
-        #  run the documentation generation
-        if sys.platform.startswith("win"):
-            temp = os.environ["PATH"]
-            pyts = get_executables_path()
-            script = ";".join(pyts)
-            temp = script + ";" + temp
-            os.environ["PATH"] = temp
-            pa = os.getcwd()
-            thispath = os.path.normpath(os.path.split(__file__)[0])
-            docpath = os.path.normpath(
-                os.path.join(
-                    thispath,
-                    "_doc",
-                    "presentation_projets",
-                    "a2015"))
-            os.chdir(docpath)
+        for year in [2015, 2016]:
+            #  run the documentation generation
+            if sys.platform.startswith("win"):
+                temp = os.environ["PATH"]
+                pyts = get_executables_path()
+                script = ";".join(pyts)
+                temp = script + ";" + temp
+                os.environ["PATH"] = temp
+                pa = os.getcwd()
+                thispath = os.path.normpath(os.path.split(__file__)[0])
+                docpath = os.path.normpath(
+                    os.path.join(
+                        thispath,
+                        "_doc",
+                        "presentation_projets",
+                        "a%d" % year))
+                os.chdir(docpath)
+            else:
+                raise NotImplementedError()
 
-        lay = "html"
-        build = "build"
-        over = ""
-        sconf = ""
-        cmd = "sphinx-build -b {1} -d {0}/doctrees{2}{3} source {0}/{1}".format(
-            build,
-            lay,
-            over,
-            sconf)
-        os.system(cmd)
+            lay = "html"
+            build = "build"
+            over = ""
+            sconf = ""
+            cmd = "sphinx-build -b {1} -d {0}/doctrees{2}{3} source {0}/{1}".format(
+                build,
+                lay,
+                over,
+                sconf)
+            os.system(cmd)
 
-        if sys.platform.startswith("win"):
-            os.chdir(pa)
+            if sys.platform.startswith("win"):
+                os.chdir(pa)
 
     else:
 
