@@ -1,6 +1,6 @@
 """
 @file
-@brief Some automation helpers to grab mails from student about project.
+@brief Some automation helpers to grab mails from students about their projects.
 """
 import re
 import os
@@ -217,9 +217,9 @@ class ProjectsRepository:
         @return                     list of mails
         """
         path = os.path.join(self._location, group)
-        allmails = ProjectsRepository.get_regex(path, 
-            ProjectsRepository._email_regex, self._suivi,
-            skip_if_empty=skip_if_empty)
+        allmails = ProjectsRepository.get_regex(path,
+                                                ProjectsRepository._email_regex, self._suivi,
+                                                skip_if_empty=skip_if_empty)
         for a in allmails:
             if "\n" in a:
                 raise ValueError(
@@ -419,8 +419,8 @@ class ProjectsRepository:
         this function is replaced by @see me match_mails.
         """
         def local_email_function(names, skip_names):
-            return ProjectsRepository.match_mails(names, email_function, 
-                        exc=False, skip_names=skip_names)
+            return ProjectsRepository.match_mails(names, email_function,
+                                                  exc=False, skip_names=skip_names)
 
         if isinstance(email_function, list):
             local_function = local_email_function
@@ -460,7 +460,8 @@ class ProjectsRepository:
         for name, group in gr:
             if col_subject:
                 s = list(set(group[col_subject].copy()))
-                s = [_ for _ in s if not isinstance(_, float) or ~numpy.isnan(_)]
+                s = [_ for _ in s if not isinstance(
+                    _, float) or ~numpy.isnan(_)]
                 if len(s) > 1:
                     raise TooManyProjectsException(
                         "more than one subject for group: " +
@@ -482,7 +483,7 @@ class ProjectsRepository:
                     # we skip only if a group has no mails at all
                     if isinstance(email_function, list):
                         raise ProjectsRepository.MailNotFound("unable to find a mail for\n{0}\nname={1}\nskip:{4}\n{5}\namong\n{3}\nGROUP\n{2}".format(
-                            "; ".join("'%s'" % _ for _ in eleves), 
+                            "; ".join("'%s'" % _ for _ in eleves),
                             name, group, "\n".join(email_function),
                             skip, skip_names))
                     else:
