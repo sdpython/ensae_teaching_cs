@@ -72,6 +72,10 @@ Source de données
 * `UN ComTrade <http://comtrade.un.org/db/>`_ : United Nations Commodity Trade Statistics Database
 * `MusicBrainz Database <https://musicbrainz.org/doc/MusicBrainz_Database/Download>`_
 
+**annuaire de données**
+
+* `Data Sources on the Web (MRAN) <https://mran.microsoft.com/documents/data/>`_
+* `Awesome Public Datasets <https://github.com/caesar0301/awesome-public-datasets>`_
 
 Compétition, Codes
 ++++++++++++++++++
