@@ -37,7 +37,6 @@ is hosted on GitHub can be modified by sending me pull requests:
 
 * `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs/>`_
 * `documentation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_
-* `Windows Setup <http://www.xavierdupre.fr/site2013/index_code.html#ensae_teaching_cs>`_
 * `PDF of this site <http://www.xavierdupre.fr/app/ensae_teaching_cs/latex/ensae_teaching_cs_doc.pdf>`_
 * `Blog <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/blog/main_0000.html#ap-main-0>`_
 
@@ -53,7 +52,7 @@ Started in 2014/04.
 Versions
 --------
 
-* **0.7 - 2015/??/??**
+* **0.7 - 2016/??/??**
     * **new:** code to produce a Python distribution which includes R, Python, ...
     * **new:** refactoring, FAQ, fonction jupyter_open_notebook
 * **0.6 - 2015/06/03**
