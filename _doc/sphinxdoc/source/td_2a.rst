@@ -95,6 +95,8 @@ TD
       (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_correction.html>`_),
       courbe ROC, précision, rappel
     - :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
+    - :ref:`question_projet_2014`
+
     
 - **TD 5 : grosses données** (**nouveau en 2015**)
 
@@ -199,7 +201,6 @@ Bibliographie
   `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
 * `Prédire les épidémies avec Wikipedia <http://www.lemonde.fr/sante/article/2014/11/13/predire-les-epidemies-avec-wikipedia_4523461_1651302.html>`_, Le Monde
 * `FastML <http://fastml.com/>`_  (blog sur le machine learning)
-* :ref:`question_projet_2014`
 * `Introduction to matplotlib <https://scipy-lectures.github.io/intro/matplotlib/matplotlib.html>`_
 * `Probabilistic Context-Free Grammars (PCFGs) <http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf>`_
 * `Ultimate guide for Data Exploration in Python using NumPy, Matplotlib and Pandas <http://www.analyticsvidhya.com/blog/2015/04/comprehensive-guide-data-exploration-sas-using-python-numpy-scipy-matplotlib-pandas/#One>`_
@@ -212,6 +213,7 @@ Bibliographie
 
 * `PyData Seattle 2015 Scikit-learn Tutorial <https://github.com/jakevdp/sklearn_pydata2015>`_ *(2015/12)*
 * `Pythonic Perambulations <https://jakevdp.github.io/>`_ *(2015/12)*
+* `Python Scripts posted on Kaggle <https://www.kaggle.com/scripts?language=Python>`_ *(2016/02)*
 
 **MOOC**
 
@@ -266,6 +268,7 @@ Bibliographie
 
 **Compétition de code**
 
+* `Google Hash Code <https://hashcode.withgoogle.com/>`_, a lieu chaque année en deux tours, le second tour a lieu chez Google à Paris.
 * `Google Code Jam <https://code.google.com/codejam>`_
 * `TopCoder <http://www.topcoder.com/>`_
 * `UVa Online Judge <http://uva.onlinejudge.org/>`_
