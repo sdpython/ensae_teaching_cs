@@ -13,23 +13,11 @@ import pandas
 import os
 
 
-def extract_students_mails_from_gmail_and_stores_in_folders(
-    folder=".",
-    filemails="emails.txt",
-    user=None,
-    pwd=None,
-    server="imap.gmail.com",
-    mailfolder=["ensae/ENSAE_2016_3A"],
-    date="1-Jan-2016",
-    zipfilename="projet_3A_2016.zip",
-    zipencpwd=b"sixteenbyteskeys",
-    dataframe=None,
-    columns={"name": "nom_prenom", "group": "groupe", "subject": "sujet"},
-    skip_names=None,
-    process_name=None,
-    title="List of emails",
-    nolink_if=None,
-    fLOG=fLOG):
+def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemails="emails.txt",
+                                                            user=None, pwd=None, server="imap.gmail.com", mailfolder=["ensae/ENSAE_2016_3A"],
+                                                            date="1-Jan-2016", zipfilename="projet_3A_2016.zip", zipencpwd=b"sixteenbyteskeys",
+                                                            dataframe=None, columns={"name": "nom_prenom", "group": "groupe", "subject": "sujet"},
+                                                            skip_names=None, process_name=None, title="List of emails", nolink_if=None, fLOG=fLOG):
     """
     The scenario is the following:
 
@@ -117,20 +105,13 @@ def extract_students_mails_from_gmail_and_stores_in_folders(
 
     fLOG("### create groups folders in", folder)
     proj = ProjectsRepository(folder, fLOG=fLOG)
-    groups = proj.Groups
 
     proj = ProjectsRepository.create_folders_from_dataframe(df, folder,
                                                             col_subject=columns[
-                                                                "subject"],
-                                                            fLOG=fLOG,
-                                                            col_group=columns[
-                                                                "group"],
+                                                                "subject"], fLOG=fLOG, col_group=columns["group"],
                                                             col_student=columns[
-                                                                "name"],
-                                                            email_function=emails,
-                                                            skip_if_nomail=False,
-                                                            must_have_email=True,
-                                                            skip_names=skip_names)
+                                                                "name"], email_function=emails, skip_if_nomail=False,
+                                                            must_have_email=True, skip_names=skip_names)
     fLOG("### nb groups", len(proj.Groups))
 
     # gathers mails
@@ -142,9 +123,8 @@ def extract_students_mails_from_gmail_and_stores_in_folders(
 
     box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
     box.login()
-    mails = proj.dump_group_mails(render, group=None,
-                                  mailbox=box, subfolder=mailfolder, date=date,
-                                  overwrite=False, skip_if_empty=True)
+    proj.dump_group_mails(render, group=None, mailbox=box, subfolder=mailfolder, date=date,
+                          overwrite=False, skip_if_empty=True)
 
     box.logout()
 
