@@ -193,6 +193,7 @@ Bibliographie
 * `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
 * `Python en Prépas <http://prepas.org/ups.php?article=394>`_
 * `Python Notes <http://www.thomas-cokelaer.info/tutorials/python/index.html>`_
+* `Program Arcade Games With Python And Pygame <http://programarcadegames.com/>`_
 
 **MOOC**
 
