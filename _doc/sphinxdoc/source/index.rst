@@ -29,8 +29,10 @@ irréprochable mais il permet d'exprimer des idées avec une précision tâtillo
 Comme toute langue qu'on apprend ou toute séance de solfège, 
 les premiers pas sont rebutants et on y prend peu de plaisir.
 Cela devient plus facile avec une pratique régulière. On passe alors plus de temps
-sur son idée et moins sur son programme. Le langage Python est un de ceux
-qui demande le moins d'effort. Il est de plus en plus populaire comme en témoignent les 
+sur son idée et moins sur son programme. 
+
+Le langage Python est le langage qui demande le moins d'effort d'apprentissage. 
+Il est de plus en plus populaire comme en témoignent les 
 nombreux exemples sur Internet 
 (`Python is Now the Most Popular Introductory Teaching Language at Top U.S. Universities <http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-us-universities/fulltext>`_).
 
