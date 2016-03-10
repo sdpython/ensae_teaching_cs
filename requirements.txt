@@ -89,3 +89,4 @@ bokeh
 psutil
 toolz
 cytoolz
+pyscopg2
