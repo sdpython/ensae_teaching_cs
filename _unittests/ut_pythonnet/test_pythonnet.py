@@ -81,7 +81,7 @@ class TestPythonnet(unittest.TestCase):
                         # it just exclude one user only used on remotre
                         # machines
                         return
-                raise e
+                raise Exception("USERNAME: " + os.environ.get("USERNAME", "-"))
 
     def test_pythonnet_array(self):
         fLOG(

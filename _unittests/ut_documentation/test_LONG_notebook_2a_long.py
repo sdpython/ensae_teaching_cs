@@ -111,6 +111,9 @@ class TestNotebookRunner2a_long (unittest.TestCase):
                 if os.path.exists(path):
                     os.environ["R_HOME"] = path
                     break
+        if "R_HOME" not in os.environ:
+            warnings.warn("No installed R")
+            return
 
         temp = get_temp_folder(__file__, "temp_notebook2a_long_")
         keepnote = ls_notebooks("2a")

@@ -193,7 +193,6 @@ def git_commit_all(
         git push -u origin master
 
     """
-    #url_user = git_url_user_password(url_https, user, password)
     cmds = """
             cd {0}
             git add -A
@@ -433,3 +432,30 @@ def get_sections(path, suivi="suivi.rst"):
                 added_in.append(title)
 
     return sections
+
+
+def git_url_user_password(url_https, user, password):
+    """
+    builds a url (starting with https) and add the user and the password
+    to skip the authentification
+
+    :param      url_https:       example ``https://gitlab.server/folder/project_name``
+    :param      user:            part 1 of the credentials
+    :param      password:        part 2 of the credentials
+    :return:                     url
+    """
+    url_user = url_https.replace(
+        "https://", "https://{0}:{1}@".format(user, password))
+    return url_user
+
+
+def git_check_error(out, err, fLOG):
+    """
+    private function, analyse the output
+    """
+    if len(out) > 0:
+        fLOG("OUT:\n" + out)
+    if len(err) > 0:
+        if "error" in err.lower():
+            raise Exception("OUT:\n{0}\nERR:\n{1}".format(out, err))
+        raise Exception(err)

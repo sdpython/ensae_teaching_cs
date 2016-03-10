@@ -9,7 +9,7 @@ README / Changes
     :alt: Build status
     
 .. image:: https://ci.appveyor.com/api/projects/status/4chpamq95rh5h245?svg=true
-    :target: https://ci.appveyor.com/project/sdpython/ensae_teaching_cs
+    :target: https://ci.appveyor.com/project/sdpython/ensae-teaching-cs
     :alt: Build Status Windows    
     
 .. image:: https://badge.fury.io/py/ensae_teaching_cs.svg

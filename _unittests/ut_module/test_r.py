@@ -50,9 +50,8 @@ class TestR (unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        if "travis" in sys.executable:
-            # skip travis and R
-            warnings.warn("travis, unable to test TestR.test_r")
+        if "R_HOME" in os.environ:
+            warnings.warn("R is not installed")
             return
 
         assert r_and_notebook()
