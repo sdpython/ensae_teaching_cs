@@ -90,3 +90,4 @@ psutil
 toolz
 cytoolz
 psycopg2
+ujson
