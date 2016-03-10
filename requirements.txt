@@ -91,3 +91,4 @@ toolz
 cytoolz
 psycopg2
 ujson
+partd
