@@ -50,7 +50,7 @@ class TestR (unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        if "R_HOME" in os.environ:
+        if "R_HOME" not in os.environ:
             warnings.warn("R is not installed")
             return
 
