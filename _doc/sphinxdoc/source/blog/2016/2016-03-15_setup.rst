@@ -1,0 +1,10 @@
+
+
+.. blogpost::
+    :title: Setup Python 3.5
+    :keywords: python, setup
+    :date: 2016-03-15
+    :categories: setup
+    
+    Une nouvelle version du `setup <http://www.xavierdupre.fr/enseignement/>`_ pour Windows
+    est prête. Il s'appuie sur la version 3.5 de Python.

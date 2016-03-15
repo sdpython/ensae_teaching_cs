@@ -275,6 +275,11 @@ Bibliographie
 * `Le problème des huit reines <http://zanotti.univ-tln.fr/algo/REINES.html>`_
 * `Projet Euler <https://projecteuler.net/>`_
 
+**Articles sur des librairies de machine learning**
+
+* `XGBoost: A Scalable Tree Boosting System <http://arxiv.org/pdf/1603.02754v1.pdf>`_,
+  Tianqi Chen, Carlos Guestrin
+
 
 Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_ :
 
