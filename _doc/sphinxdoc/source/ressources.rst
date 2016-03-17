@@ -51,6 +51,7 @@ Source de données
 * *texte* `soTweet: Studying Twitter at Scale <http://www-sop.inria.fr/members/Arnaud.Legout/Projects/sotweet.html>`_: base de 500 millions de tweets et 23 milliards de liens
 * *texte* `WordNet <https://wordnet.princeton.edu/wordnet/>`_, base de données anglaises sur le vocabulaire, la grammaire, les synonymes...
 * *texte* `dump wikipedia <https://dumps.wikimedia.org/backup-index.html>`_
+* *vidéo* `Jiku <http://www.jiku.org/index.html>`_, vidéo d'événements, de concerts
 * autres pistes: `Where can I find large datasets open to the public? <https://www.quora.com/Where-can-I-find-large-datasets-open-to-the-public>`_
 
 **Graphiques, cartes**
