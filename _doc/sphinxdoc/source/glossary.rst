@@ -105,6 +105,13 @@ Glossaire
     entretien
         Quelques révisions à faire afin de préparer un :ref:`l-entretiens`.
         
+    expression régulière
+        Chercher un mot dans un texte est facile, chercher un nombres réelles ou un date est plus complexe
+        car toutes les séquences de chiffres ne sont pas des nombres ou des dates. Dans ce cas, il faut utiliser un
+        outil plus adaptés comme les `expressions régulières <https://fr.wikipedia.org/wiki/Expression_rationnelle>`_
+        qui permettent de chercher ou remplacer des motifs ce qu'illustre parfaitement l'article
+        `8 Regular Expressions You Should Know <http://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149>`_.
+        
     Git
         Logiciel de suivi de source utilisé par exemple par GitHub. 
         Il est décentralisé. Chaque contributeur est libre de proposer ou d'importer
@@ -267,6 +274,9 @@ Glossaire
         
     Recurrent Neural Network (RNN)
         `The Unreasonable Effectiveness of Recurrent Neural Networks <http://karpathy.github.io/2015/05/21/rnn-effectiveness/>`_
+        
+    regular expression
+        Voir expression régulière.
         
     Resilient Distributed Datasets (RDD)
         Voir `Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing <http://www.cs.berkeley.edu/~matei/papers/2012/nsdi_spark.pdf>`_.

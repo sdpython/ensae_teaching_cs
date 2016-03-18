@@ -265,6 +265,7 @@ Bibliographie
 * `xgboost <https://github.com/dmlc/xgboost>`_
 * `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
 * `TensorFlow <https://github.com/tensorflow/tensorflow>`_
+* `Related Projects (of machine learning) <http://scikit-learn.org/stable/related_projects.html>`_ (2016/03)
 
 **Compétition de code**
 

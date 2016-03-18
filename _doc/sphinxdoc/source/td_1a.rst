@@ -176,6 +176,8 @@ Bibliographie
 * :ref:`l-questions`
 * `Débugger en Python <http://www.xavierdupre.fr/blog/2014-06-02_nojs.html>`_
 * `Modules standards <https://docs.python.org/3.4/library/>`_
+* `8 Regular Expressions You Should Know <http://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149>`_ (2016/03)
+* `Love Python <http://love-python.blogspot.fr/>`_ (2016/03)
 
 **Livres**
 
@@ -186,6 +188,8 @@ Bibliographie
   (le site est visuellement difficile, `version PDF <http://ptgmedia.pearsoncmg.com/images/9780672336874/samplepages/0672336871.pdf>`_)
 * `Précis de recherche opérationnelle <http://www.eyrolles.com/Informatique/Livre/precis-de-recherche-operationnelle-9782100706129>`_, Robert Faure, Bernard Lemaire, Christophe Picouleau
 * `Problem Solving with Algorithms and Data Structures <https://www.cs.auckland.ac.nz/courses/compsci107s1c/resources/ProblemSolvingwithAlgorithmsandDataStructures.pdf>`_, Brad Miller, David Ranum (version `html <http://interactivepython.org/courselib/static/pythonds/index.html>`_)
+* `Automate Boring Stuff with Python <https://automatetheboringstuff.com/>`_ (2016/03)
+* `Intermediate Python Release <http://pythontips.com/2015/08/17/intermediate-python-released/#more-665>`_ (2016/03)
 
 **Cours**
 
