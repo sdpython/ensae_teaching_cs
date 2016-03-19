@@ -45,6 +45,7 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
         constructor
 
         @param      columns         specify a columns selection
+        @param      remove          modalities to remove
         @param      skip_errors     skip when a new categories appear (no 1)
         """
         BaseEstimator.__init__(self)
@@ -52,17 +53,18 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
         self._p_columns = columns if isinstance(
             columns, list) or columns is None else [columns]
         self._p_skip_errors = skip_errors
+        self._p_remove = remove
 
     def __repr__(self):
         """
         usual
         """
-        s = ', '.join("'{0}'".format(_)
-                      for _ in self._p_columns) if self._p_columns else None
-        if s is not None:
-            s = '[{0}]'.format(s)
-        s = "DictVectorizerTransformer(columns={0}, skip_errors={1})".format(
-            s, self._p_skip_errors)
+        s1 = ', '.join("'{0}'".format(_)
+                       for _ in self._p_columns) if self._p_columns else None
+        s2 = ', '.join("'{0}'".format(_)
+                       for _ in self._p_remove) if self._p_remove else None
+        s = "DictVectorizerTransformer(columns=[{0}], remove=[{1}], skip_errors={2})".format(
+            s1, s2, self._p_skip_errors)
         return "\n".join(textwrap.wrap(s))
 
     def __str__(self):
@@ -116,14 +118,19 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
         """
         schema = []
         position = {}
+        new_vector = {}
         last = 0
         for c, v in self._categories.items():
-            sch = ["{0}={1}".format(c, _[1])
-                   for _ in sorted((n, c) for c, n in v.items())]
+            sch = [(_[1], "{0}={1}".format(c, _[1]))
+                   for _ in sorted((n, d) for d, n in v.items())]
+            if self._p_remove:
+                sch = [d for d in sch if d[1] not in self._p_remove]
             position[c] = last
+            new_vector[c] = {d[0]: i for i, d in enumerate(sch)}
             last += len(sch)
-            schema.extend(sch)
-        return schema, position
+            schema.extend(_[1] for _ in sch)
+
+        return schema, position, new_vector
 
     def transform(self, X, y=None, **fit_params):
         """
@@ -150,8 +157,8 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
 
         dfcat = X[self._fit_columns]
         dfnum = X[[c for c in X.columns if c not in self._fit_columns]]
-        sch, pos = self._schema
-        vec = self._categories
+        sch, pos, new_vector = self._schema
+        vec = new_vector
 
         res = numpy.zeros((X.shape[0], len(sch)))
         b = not self._p_skip_errors
