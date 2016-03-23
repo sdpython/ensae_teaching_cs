@@ -6,11 +6,14 @@
 
 def edit_distance(mot1, mot2):
     """
-    computes the edit distance between two strings
+    Computes the edit distance between two strings.
 
     @param      mot1        first string
     @param      mot2        second string
     @return                 distance, path
+
+    More alternatives are available in the following paper
+    `Harry: A Tool for Measuring String Similarity <http://jmlr.org/papers/v17/rieck16a.html>`_.
 
     *distance* is an integer,
     *path* is a series of 2-uples of positions
