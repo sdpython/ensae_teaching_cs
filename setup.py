@@ -295,7 +295,7 @@ if not r:
                     "you must get the source from GitHub to build the documentation")
 
             from pyquickhelper.loghelper import fLOG
-            from pyquickhepler.helpgen import generate_help_sphinx
+            from pyquickhelper.helpgen import generate_help_sphinx
 
             fLOG(OutputPrint=True)
             project_name = os.path.split(
@@ -322,7 +322,7 @@ if not r:
                     "you must get the source from GitHub to build the documentation")
 
             from pyquickhelper.loghelper import fLOG
-            from pyquickhepler.helpgen import generate_help_sphinx
+            from pyquickhelper.helpgen import generate_help_sphinx
 
             fLOG(OutputPrint=True)
             project_name = os.path.split(
@@ -355,7 +355,7 @@ if not r:
                     "you must get the source from GitHub to build the documentation")
 
             from pyquickhelper.loghelper import fLOG
-            from pyquickhepler.helpgen import generate_help_sphinx
+            from pyquickhelper.helpgen import generate_help_sphinx
 
             fLOG(OutputPrint=True)
             project_name = os.path.split(
