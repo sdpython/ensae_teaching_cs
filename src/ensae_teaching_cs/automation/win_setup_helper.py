@@ -6,7 +6,7 @@
 import os
 import shutil
 
-from pyquickhelper import remove_folder
+from pyquickhelper.filehelper import remove_folder
 
 
 def last_function(innosetup, folders, verbose=False, fLOG=print):

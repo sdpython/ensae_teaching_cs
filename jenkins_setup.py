@@ -8,7 +8,7 @@ sys.path.append(os.path.abspath("../pyensae/src"))
 sys.path.append(os.path.abspath("../ensae_teaching_cs/src"))
 sys.path.append(os.path.abspath("../pymyinstall/src"))
 
-from pyquickhelper import fLOG
+from pyquickhelper.loghelper import fLOG
 from pyquickhelper.jenkinshelper import JenkinsExt
 from ensae_teaching_cs.automation.jenkins_helper import setup_jenkins_server, engines_default
 

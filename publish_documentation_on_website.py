@@ -20,7 +20,8 @@ sys.path.append(r"../pyquickhelper/src")
 sys.path.append(r"../pyensae/src")
 sys.path.append(r"../ensae_teaching_cs/src")
 
-from pyquickhelper import TransferFTP, FileTreeNode, FolderTransferFTP, open_window_params
+from pyquickhelper.filehelper import TransferFTP, FileTreeNode, FolderTransferFTP
+from pyquickhelper.funcwin import open_window_params
 from ensae_teaching_cs.automation.ftp_publish_helper import publish_documentation
 
 params = {"password": ""}

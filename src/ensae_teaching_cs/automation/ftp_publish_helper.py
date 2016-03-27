@@ -257,7 +257,8 @@ def publish_teachings_to_web(
 
         import sys
         import os
-        from pyquickhelper import TransferFTP, FileTreeNode, FolderTransferFTP, open_window_params
+        from pyquickhelper.filehelper import TransferFTP, FileTreeNode, FolderTransferFTP
+        from pyquickhelper.funcwin import open_window_params
         from ensae_teaching_cs.automation.ftp_publish_helper import publish_teachings_to_web
 
         login = "..."
@@ -278,7 +279,7 @@ def publish_teachings_to_web(
     """
     import os
     import shutil
-    from pyquickhelper import open_window_params
+    from pyquickhelper.funcwin import open_window_params
     from ensae_teaching_cs.automation.ftp_publish_helper import publish_documentation
 
     if google_id is None:

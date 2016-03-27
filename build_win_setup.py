@@ -20,7 +20,7 @@ except ImportError:
 if __name__ == "__main__":
     import sys
     sys.path.append("src")
-    from pyquickhelper import fLOG
+    from pyquickhelper.loghelper import fLOG
     fLOG(OutputPrint=True)
 
     from ensae_teaching_cs.automation.win_setup_helper import last_function

@@ -6,7 +6,7 @@ except ImportError:
     import pyquickhelper
 
 import os
-from pyquickhelper import run_doc_server
+from pyquickhelper.serverdoc import run_doc_server
 
 mappings = {}
 fold = os.path.abspath(os.path.dirname(__file__))

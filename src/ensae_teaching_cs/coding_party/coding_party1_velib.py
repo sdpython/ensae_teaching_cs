@@ -9,7 +9,7 @@ import pandas
 import random
 from pyensae import download_data
 from pyensae.datasource import DataVelibCollect
-from pyquickhelper import str_to_datetime
+from pyquickhelper.loghelper import str2datetime
 
 
 def get_data(whereto):

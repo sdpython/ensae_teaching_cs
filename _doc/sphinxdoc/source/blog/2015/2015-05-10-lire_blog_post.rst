@@ -23,7 +23,7 @@
     et puis dans ce module Python, il existe une façon de lire
     ce blog ::
     
-        from pyquickhelper import write_module_scripts
+        from pyquickhelper.pycode import write_module_scripts
         from ensae_teachins_cs import __blog__
         write_module_scripts(".", blog_list=__blog__)
     
