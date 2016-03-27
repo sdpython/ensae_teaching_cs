@@ -104,7 +104,7 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.jenkinshelper import JenkinsExt
-from src.ensae_teaching_cs.automation.jenkins_helper import setup_jenkins_server
+from src.ensae_teaching_cs.automation.jenkins_helper import setup_jenkins_server, default_jenkins_jobs
 
 
 class TestJenkins(unittest.TestCase):
@@ -133,6 +133,16 @@ class TestJenkins(unittest.TestCase):
             job = "pyrsslocal [py35] <-- pyquickhelper, pyensae"
             cmd = "\n".join(js.get_jenkins_script(job))
             assert "Python34" not in cmd
+
+    def test_jenkins_local27(self):
+        fLOG(
+            __file__,
+            self._testMethodName,
+            OutputPrint=__name__ == "__main__")
+
+        modules = default_jenkins_jobs(".*27.*", ".*update.*")
+        fLOG(modules)
+        self.assertEqual(len(modules), 4)
 
 
 if __name__ == "__main__":
