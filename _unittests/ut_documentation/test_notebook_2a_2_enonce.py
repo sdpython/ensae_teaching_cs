@@ -5,7 +5,7 @@
 import sys
 import os
 import unittest
-import re
+
 
 try:
     import src
@@ -21,7 +21,7 @@ except ImportError:
     import src
 
 try:
-    import pyquickhelper
+    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -34,57 +34,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyquickhelper
+    import pyquickhelper as skip_
 
-try:
-    import pyensae
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyensae",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyensae
-
-try:
-    import pymyinstall
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pymyinstall",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pymyinstall
-
-try:
-    import pymmails
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pymmails",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pymmails
-
-from pyquickhelper import fLOG, get_temp_folder
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import get_temp_folder
 from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
 
 
@@ -98,10 +51,10 @@ class TestNotebookRunner2a_2_enonce (unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_notebook2a_2_enonce")
         keepnote = ls_notebooks("td2a")
         assert len(keepnote) > 0
-        res = execute_notebooks(temp, keepnote, lambda i, n: "_2" in n
-                                and "enonce" in n
-                                and "_2D" not in n
-                                and "_2B" not in n,
+        res = execute_notebooks(temp, keepnote, lambda i, n: "_2" in n and
+                                "enonce" in n and
+                                "_2D" not in n and
+                                "_2B" not in n,
                                 fLOG=fLOG, clean_function=clean_function_1a)
         unittest_raise_exception_notebook(res, fLOG)
 

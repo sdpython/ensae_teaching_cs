@@ -6,7 +6,6 @@
 import sys
 import os
 import unittest
-import re
 import shutil
 
 try:
@@ -23,7 +22,7 @@ except ImportError:
     import src
 
 try:
-    import pyquickhelper
+    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -36,57 +35,11 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyquickhelper
+    import pyquickhelper as skip_
 
-try:
-    import pyensae
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyensae",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyensae
 
-try:
-    import pymyinstall
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pymyinstall",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pymyinstall
-
-try:
-    import pymmails
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pymmails",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pymmails
-
-from pyquickhelper import fLOG, get_temp_folder
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import get_temp_folder
 from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
 
 
@@ -107,13 +60,13 @@ class TestNotebookRunner1a_correction (unittest.TestCase):
         shutil.copy(cp, temp)
 
         res = execute_notebooks(temp, keepnote,
-                                lambda i, n: "_12" not in n
-                                and "session6." not in n
-                                and "session8." not in n
-                                and "session9." not in n
-                                and "session_10." not in n
-                                and "session_11." not in n
-                                and "correction" in n,
+                                lambda i, n: "_12" not in n and
+                                "session6." not in n and
+                                "session8." not in n and
+                                "session9." not in n and
+                                "session_10." not in n and
+                                "session_11." not in n and
+                                "correction" in n,
                                 fLOG=fLOG,
                                 clean_function=clean_function_1a)
         unittest_raise_exception_notebook(res, fLOG)

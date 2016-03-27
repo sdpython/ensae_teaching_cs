@@ -5,7 +5,7 @@
 import sys
 import os
 import unittest
-import re
+
 
 try:
     import src
@@ -21,7 +21,7 @@ except ImportError:
     import src
 
 try:
-    import pyquickhelper
+    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -34,26 +34,13 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyquickhelper
-
-try:
-    import pyensae
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyensae",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyensae
+    import pyquickhelper as skip_
 
 from pyquickhelper.ipythonhelper.notebook_helper import run_notebook
-from pyquickhelper import get_temp_folder, fLOG
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper import __file__ as location
+from pyensae import __file__ as location2
 
 
 class TestNotebookRunner1 (unittest.TestCase):
@@ -76,9 +63,7 @@ class TestNotebookRunner1 (unittest.TestCase):
         nbfile = os.path.normpath(nbfile)
         assert os.path.exists(nbfile)
         addpath = [
-            os.path.dirname(
-                pyquickhelper.__file__), os.path.dirname(
-                pyensae.__file__)]
+            os.path.dirname(location), os.path.dirname(location2)]
         addpath = [os.path.normpath(os.path.join(_, "..")) for _ in addpath]
 
         outfile = os.path.join(temp, "out_" + os.path.split(nbfile)[-1])

@@ -9,14 +9,10 @@ import os
 import unittest
 import warnings
 import shutil
-import warnings
 
 try:
     import src
-    import pyquickhelper
-    import pyensae
-    import pyrsslocal
-    import pymyinstall
+    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -37,51 +33,13 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pymyinstall",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyensae",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    if path not in sys.path:
-        sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyrsslocal",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
     import src
-    import pyquickhelper
-    import pyensae
-    import pyrsslocal
-    import pymyinstall
+    import pyquickhelper as skip_
 
-from pyquickhelper import fLOG, get_temp_folder
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import get_temp_folder
 from pyrsslocal.helper.download_helper import get_url_content_timeout
 from pyrsslocal import RSSServer
-from src.ensae_teaching_cs.automation import __file__ as location
 from src.ensae_teaching_cs.automation.rss_teachings_blog import rss_teachings_update_run_server
 
 
@@ -103,7 +61,6 @@ class TestSimpleServerRSSTeaching (unittest.TestCase):
             return
 
         temp = get_temp_folder(__file__, "temp_rss_starter")
-        dirn = os.path.abspath(os.path.dirname(location))
         xmlb = None
 
         data = os.path.join(temp, "..", "data", "ensae_teaching_cs_blogs.db3")

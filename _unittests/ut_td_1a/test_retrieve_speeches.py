@@ -13,7 +13,7 @@ import unittest
 
 try:
     import src
-    import pyquickhelper
+    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -35,9 +35,9 @@ except ImportError:
     if path not in sys.path:
         sys.path.append(path)
     import src
-    import pyquickhelper
+    import pyquickhelper as skip_
 
-from pyquickhelper import fLOG
+from pyquickhelper.loghelper import fLOG
 from src.ensae_teaching_cs.td_1a.discours_politique import enumerate_speeches_from_elysees
 
 

@@ -5,7 +5,7 @@
 """
 import os
 import sys
-from pyquickhelper import noLOG
+from pyquickhelper.loghelper import noLOG
 from pyquickhelper.ipythonhelper.notebook_helper import run_notebook, install_python_kernel_for_unittest
 
 

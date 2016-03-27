@@ -6,7 +6,7 @@
 import pandas
 
 from pymyinstall.packaged import ensae_fullset, classifiers2string
-from pyquickhelper import df2rst
+from pyquickhelper.pandashelper import df2rst
 
 
 def rst_table_modules():

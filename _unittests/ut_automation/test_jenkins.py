@@ -6,7 +6,7 @@
 import sys
 import os
 import unittest
-import re
+
 
 try:
     import src
@@ -22,7 +22,7 @@ except ImportError:
     import src
 
 try:
-    import pyquickhelper
+    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -35,10 +35,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyquickhelper
+    import pyquickhelper as skip_
 
 try:
-    import pyensae
+    import pyensae as skip__
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -51,10 +51,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyensae
+    import pyensae as skip__
 
 try:
-    import pymmails
+    import pymmails as skip___
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -67,10 +67,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pymmails
+    import pymmails as skip___
 
 try:
-    import pyrsslocal
+    import pyrsslocal as skip_____
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -83,10 +83,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyrsslocal
+    import pyrsslocal as skip_____
 
 try:
-    import pymyinstall
+    import pymyinstall as skip______
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -99,10 +99,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pymyinstall
+    import pymyinstall as skip______
 
 
-from pyquickhelper import fLOG, get_temp_folder
+from pyquickhelper.loghelper import fLOG
 from pyquickhelper.jenkinshelper import JenkinsExt
 from src.ensae_teaching_cs.automation.jenkins_helper import setup_jenkins_server
 

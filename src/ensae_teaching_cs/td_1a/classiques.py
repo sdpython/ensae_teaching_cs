@@ -21,7 +21,8 @@ def commentaire_accentues():
 
     @code
     File "faq_cvxopt.py", line 3
-    SyntaxError: Non-UTF-8 code starting with '\xe8' in file faq_cvxopt.py on line 4, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+    SyntaxError: Non-UTF-8 code starting with '\xe8' in file faq_cvxopt.py on line 4, but no encoding declared;
+        see http://python.org/dev/peps/pep-0263/ for details
     @endcode
 
     Pour la résoudre, il faut dire à l'interpréteur que des caractères non anglais peuvent apparaître

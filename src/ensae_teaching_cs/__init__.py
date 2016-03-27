@@ -25,8 +25,3 @@ def _setup_hook(add_print=False, unit_test=False):
     does nothing
     """
     pass
-
-
-from .faq.faq_matplotlib import graph_ggplot_with_label
-from .td_2a.parallel_thread import ParallelThread
-from .td_2a.serialization import load_object, dump_object, df2list

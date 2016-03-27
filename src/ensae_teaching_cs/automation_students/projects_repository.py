@@ -6,7 +6,8 @@ import re
 import os
 import numpy
 from urllib.parse import urlparse
-from pyquickhelper import noLOG, remove_diacritics
+from pyquickhelper.loghelper import noLOG
+from pyquickhelper.texthelper import remove_diacritics
 from pyquickhelper.filehelper import remove_folder, explore_folder_iterfile
 from pyquickhelper.filehelper import zip_files
 from pymmails import EmailMessageRenderer, EmailMessage
@@ -25,7 +26,7 @@ class ProjectsRepository:
 
     ::
 
-        from pyquickhelper import fLOG
+        from pyquickhelper.loghelper import fLOG
         fLOG(OutputPrint=True)
 
         from ensae_teaching_cs.automation_students import ProjectsRepository, grab_addresses

@@ -8,8 +8,8 @@ import unittest
 
 try:
     import src
-    import pyquickhelper
-    import pyensae
+    import pyquickhelper as skip_
+    import pyensae as skip__
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -42,10 +42,11 @@ except ImportError:
     if path not in sys.path:
         sys.path.append(path)
     import src
-    import pyquickhelper
-    import pyensae
+    import pyquickhelper as skip_
+    import pyensae as skip__
 
-from pyquickhelper import fLOG
+from pyquickhelper.loghelper import fLOG
+from pyensae.datasource import download_data
 from src.ensae_teaching_cs.special.rues_paris import get_data, bellman, kruskall, possible_edges, eulerien_extension, distance_paris, euler_path, connected_components, distance_haversine, graph_degree
 
 
@@ -168,7 +169,7 @@ class TestRueParis (unittest.TestCase):
             os.mkdir(folder)
         edges = get_data(whereTo=folder, fLOG=fLOG)
 
-        data = pyensae.download_data("added.zip", whereTo=folder, fLOG=fLOG)
+        data = download_data("added.zip", whereTo=folder, fLOG=fLOG)
         with open(data[0], "r") as f:
             text = f.read()
         added_edges = eval(text)
@@ -215,7 +216,7 @@ class TestRueParis (unittest.TestCase):
         if __name__ == "__main__":
             import matplotlib.pyplot as plt
             import networkx as nx
-            fig = plt.figure()
+            plt.figure()
             G = nx.Graph()
             for e in edges:
                 a, b = e[:2]
@@ -231,9 +232,9 @@ class TestRueParis (unittest.TestCase):
             for e in added:
                 a, b = e[:2]
                 G.add_edge(a, b)
-            fig = plt.figure()
+            plt.figure()
             pos = nx.spring_layout(G)
-            deg = graph_degree(edges + added)
+            graph_degree(edges + added)
             #labels={ v:"{0}".format(deg[v]) for v in G.nodes() }
             nx.draw(G, pos, node_color='#A0CBE2'  # ,labels=labels
                     )

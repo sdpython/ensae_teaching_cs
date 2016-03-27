@@ -5,7 +5,6 @@
 import sys
 import os
 import unittest
-import re
 import numpy
 
 
@@ -23,7 +22,7 @@ except ImportError:
     import src
 
 try:
-    import pyquickhelper
+    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -36,9 +35,9 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyquickhelper
+    import pyquickhelper as skip_
 
-from pyquickhelper import fLOG
+from pyquickhelper.loghelper import fLOG
 
 
 class TestPythonnet(unittest.TestCase):
@@ -49,7 +48,7 @@ class TestPythonnet(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         if sys.platform.startswith("win"):
-            from src.ensae_teaching_cs.pythonnet import clr
+            from src.ensae_teaching_cs.pythonnet import clr as skip__
             from System import String
             s = String("example")
             x = s.Replace("e", "j")
@@ -89,9 +88,12 @@ class TestPythonnet(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         if sys.platform.startswith("win"):
-            from src.ensae_teaching_cs.pythonnet import clr
+            from src.ensae_teaching_cs.pythonnet import clr as skip__
             from System import IntPtr, Array, Double
             from System.Runtime.InteropServices import Marshal
+            assert Double is not None
+            assert Array is not None
+            assert IntPtr is not None
 
             if sys.version_info[:2] <= (3, 4):
                 array = numpy.ones((2, 2))

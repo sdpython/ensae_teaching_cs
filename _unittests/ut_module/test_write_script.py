@@ -6,9 +6,6 @@
 import sys
 import os
 import unittest
-import re
-import shutil
-import warnings
 
 try:
     import src
@@ -24,7 +21,7 @@ except ImportError:
     import src
 
 try:
-    import pyquickhelper
+    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -37,10 +34,11 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyquickhelper
+    import pyquickhelper as skip_
 
-from pyquickhelper import fLOG, get_temp_folder
-from pyquickhelper import write_module_scripts
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode.setup_helper import write_module_scripts
 
 from src.ensae_teaching_cs import __blog__
 

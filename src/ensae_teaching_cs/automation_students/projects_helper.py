@@ -3,7 +3,7 @@
 @brief A couple of functons which automates everything.
 """
 
-from pyquickhelper import fLOG
+from pyquickhelper.loghelper import fLOG
 from pyquickhelper.filehelper import encrypt_stream
 from pymmails import MailBoxImap, EmailMessageRenderer, EmailMessageListRenderer
 from pymmails.render.email_message_style import template_email_html_short

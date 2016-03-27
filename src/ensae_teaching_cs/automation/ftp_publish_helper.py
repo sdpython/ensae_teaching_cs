@@ -6,7 +6,8 @@
 
 import os
 import warnings
-from pyquickhelper import TransferFTP, FileTreeNode, FolderTransferFTP, open_window_params
+from pyquickhelper.filehelper import TransferFTP, FileTreeNode, FolderTransferFTP
+from pyquickhelper.funcwin import open_window_params
 from pyquickhelper.filehelper.ftp_transfer_files import content_as_binary as pqh_content_as_binary
 
 

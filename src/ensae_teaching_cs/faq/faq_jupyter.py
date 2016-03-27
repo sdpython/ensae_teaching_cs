@@ -8,7 +8,7 @@
 import os
 import sys
 
-from pyquickhelper import fLOG
+from pyquickhelper.loghelper import fLOG
 from .faq_jupyter_helper import nb_open
 
 
@@ -28,7 +28,8 @@ def notebook_path():
         var kernel = IPython.notebook.kernel;
         var body = document.body,
             attribs = body.attributes;
-        var command = "theNotebook = os.path.join(" + "r'"+attribs['data-project'].value+"'," + "r'"+attribs['data-notebook-path'].value+"'," + "r'"+attribs['data-notebook-name'].value+"')";
+        var command = "theNotebook = os.path.join(" + "r'"+attribs['data-project'].value+"'," +
+                      "r'"+attribs['data-notebook-path'].value+"'," + "r'"+attribs['data-notebook-name'].value+"')";
         kernel.execute(command);
 
     On peut vérifier que cela fonctionne ::

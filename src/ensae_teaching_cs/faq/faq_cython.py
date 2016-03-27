@@ -8,7 +8,7 @@
 import os
 import sys
 
-from pyquickhelper import run_cmd, noLOG
+from pyquickhelper.loghelper import run_cmd, noLOG
 
 
 class CustomCythonError:

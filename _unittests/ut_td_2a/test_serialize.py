@@ -15,7 +15,6 @@ import io
 
 try:
     import src
-    import pyquickhelper
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -25,6 +24,11 @@ except ImportError:
                 "..")))
     if path not in sys.path:
         sys.path.append(path)
+    import src
+
+try:
+    import pyquickhelper as skip_
+except ImportError:
     path = os.path.normpath(
         os.path.abspath(
             os.path.join(
@@ -36,11 +40,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import src
-    import pyquickhelper
+    import pyquickhelper as skip_
 
-from pyquickhelper import fLOG
-from src.ensae_teaching_cs import load_object, dump_object
+from pyquickhelper.loghelper import fLOG
+from src.ensae_teaching_cs.td_2a import load_object, dump_object
 
 
 class TestSerialization (unittest.TestCase):

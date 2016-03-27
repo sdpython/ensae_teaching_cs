@@ -134,7 +134,7 @@ def verbose():
 if is_local():
     def write_version():
         pyquickhelper = import_pyquickhelper()
-        from pyquickhelper import write_version_for_setup
+        from pyquickhelper.pycode import write_version_for_setup
         return write_version_for_setup(__file__)
 
     write_version()
@@ -168,9 +168,10 @@ if is_local() and "build_sphinx" not in sys.argv and \
         # "unittests_LONG" not in sys.argv and \
         # "unittests_SKIP" not in sys.argv and \
     pyquickhelper = import_pyquickhelper()
-    logging_function = pyquickhelper.fLOG
+    from pyquickhelper.loghelper import fLOG as logging_function
     logging_function(OutputPrint=True)
-    r = pyquickhelper.process_standard_options_for_setup(
+    from pyquickhelper.pycode import process_standard_options_for_setup
+    r = process_standard_options_for_setup(
         sys.argv, __file__, project_var_name,
         unittest_modules=["pyquickhelper"],
         additional_notebook_path=["pyquickhelper", "pymmails",
@@ -293,7 +294,8 @@ if not r:
                 raise FileNotFoundError(
                     "you must get the source from GitHub to build the documentation")
 
-            from pyquickhelper import fLOG, generate_help_sphinx
+            from pyquickhelper.loghelper import fLOG
+            from pyquickhepler.helpgen import generate_help_sphinx
 
             fLOG(OutputPrint=True)
             project_name = os.path.split(
@@ -319,7 +321,8 @@ if not r:
                 raise FileNotFoundError(
                     "you must get the source from GitHub to build the documentation")
 
-            from pyquickhelper import fLOG, generate_help_sphinx
+            from pyquickhelper.loghelper import fLOG
+            from pyquickhepler.helpgen import generate_help_sphinx
 
             fLOG(OutputPrint=True)
             project_name = os.path.split(
@@ -351,7 +354,8 @@ if not r:
                 raise FileNotFoundError(
                     "you must get the source from GitHub to build the documentation")
 
-            from pyquickhelper import fLOG, generate_help_sphinx
+            from pyquickhelper.loghelper import fLOG
+            from pyquickhepler.helpgen import generate_help_sphinx
 
             fLOG(OutputPrint=True)
             project_name = os.path.split(
@@ -415,7 +419,8 @@ if not r:
                 "the folder should contain run_unittests.py")
 
         pyquickhelper = import_pyquickhelper()
-        pyquickhelper.main_wrapper_tests(
+        from pyquickhelper.pycode import main_wrapper_tests
+        main_wrapper_tests(
             run_unit,
             add_coverage=True,
             skip_function=skip_function,
@@ -433,7 +438,8 @@ if not r:
                 "the folder should contain run_unittests.py")
 
         pyquickhelper = import_pyquickhelper()
-        pyquickhelper.main_wrapper_tests(
+        from pyquickhelper.pycode import main_wrapper_tests
+        main_wrapper_tests(
             run_unit,
             add_coverage=True,
             skip_function=not_skip_function)

@@ -13,7 +13,7 @@ import unittest
 
 try:
     import src
-    import pyquickhelper
+    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -35,9 +35,9 @@ except ImportError:
     if path not in sys.path:
         sys.path.append(path)
     import src
-    import pyquickhelper
+    import pyquickhelper.loghelper as skip_
 
-from pyquickhelper import fLOG
+from pyquickhelper.loghelper import fLOG
 from src.ensae_teaching_cs.td_1a.vigenere import DecodeVigenereLongueurCle, DecodeVigenereCle, DecodeVigenere, CodeVigenere, CasseVigenere
 
 
@@ -116,7 +116,7 @@ class TestVigenere (unittest.TestCase):
         if decode == message:
             fLOG("message bien retranscrit")
         else:
-            for i in xrange(0, len(decode)):
+            for i in range(0, len(decode)):
                 if message[i] != decode[i]:
                     fLOG(i, message[i], decode[i])
             fLOG("message mal retranscrit")

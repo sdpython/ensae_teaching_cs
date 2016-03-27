@@ -4,7 +4,8 @@
 """
 
 import os
-from pyquickhelper import noLOG, run_cmd, remove_diacritics
+from pyquickhelper.loghelper import noLOG, run_cmd
+from pyquickhelper.texthelper import remove_diacritics
 
 
 def git_clone(

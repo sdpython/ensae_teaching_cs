@@ -17,7 +17,7 @@ except ImportError:
     from IPython.html import notebookapp
     from IPython.html.utils import url_path_join
 
-from pyquickhelper import fLOG
+from pyquickhelper.loghelper import fLOG
 
 
 def find_best_server(filename, profile='default'):

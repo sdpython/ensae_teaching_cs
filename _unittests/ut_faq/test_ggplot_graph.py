@@ -5,7 +5,6 @@
 import sys
 import os
 import unittest
-import re
 
 
 try:
@@ -22,7 +21,7 @@ except ImportError:
     import src
 
 try:
-    import pyquickhelper
+    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -35,10 +34,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyquickhelper
+    import pyquickhelper as skip_
 
-from pyquickhelper import fLOG
-from src.ensae_teaching_cs import graph_ggplot_with_label
+from pyquickhelper.loghelper import fLOG
+from src.ensae_teaching_cs.faq import graph_ggplot_with_label
 
 
 class TestGGplotGraph (unittest.TestCase):
@@ -183,7 +182,7 @@ class TestGGplotGraph (unittest.TestCase):
             '2014-w50',
             '2014-w51',
             '2014-w52']
-        ax = graph_ggplot_with_label(x, y, xl)
+        graph_ggplot_with_label(x, y, xl)
         if __name__ == "__main__":
             import matplotlib.pyplot as plt
             plt.show()

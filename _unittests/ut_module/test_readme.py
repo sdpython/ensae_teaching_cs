@@ -5,10 +5,7 @@
 import sys
 import os
 import unittest
-import re
-import shutil
-import warnings
-import pandas
+
 
 try:
     import src
@@ -24,8 +21,7 @@ except ImportError:
     import src
 
 try:
-    import src
-    import pyquickhelper
+    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -46,10 +42,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import src
-    import pyquickhelper
+    import pyquickhelper as skip_
 
-from pyquickhelper import fLOG, get_temp_folder
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import get_temp_folder
 
 if sys.version_info[0] == 2:
     from codecs import open
@@ -69,6 +65,7 @@ class TestReadme(unittest.TestCase):
         with open(readme, "r", encoding="utf8") as f:
             content = f.read()
 
+        assert len(content) > 0
         temp = get_temp_folder(__file__, "temp_readme")
 
         if __name__ != "__main__":
@@ -76,7 +73,6 @@ class TestReadme(unittest.TestCase):
             return
 
         from pyquickhelper.pycode import check_readme_syntax
-        from pyquickhelper.helpgen.markdown_helper import yield_sphinx_only_markup_for_pipy
 
         check_readme_syntax(readme, folder=temp, fLOG=fLOG)
 

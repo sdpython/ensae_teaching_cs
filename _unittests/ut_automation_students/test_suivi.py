@@ -7,16 +7,15 @@
 import sys
 import os
 import unittest
-import warnings
-import shutil
+
 
 try:
     import src
-    import pyquickhelper
-    import pyensae
-    import pyrsslocal
-    import pymyinstall
-    import pymmails
+    import pyquickhelper as skip_
+    import pyensae as skip__
+    import pyrsslocal as skip___
+    import pymyinstall as skip____
+    import pymmails as skip_____
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -84,12 +83,12 @@ except ImportError:
     if path not in sys.path:
         sys.path.append(path)
     import src
-    import pyquickhelper
-    import pyensae
-    import pyrsslocal
-    import pymmails
+    import pyquickhelper as skip_
+    import pyensae as skip__
+    import pyrsslocal as skip___
+    import pymmails as skip____
 
-from pyquickhelper import fLOG, get_temp_folder
+from pyquickhelper.loghelper import fLOG
 from src.ensae_teaching_cs.automation_students import ProjectsRepository
 
 

@@ -2,7 +2,7 @@
 @file
 @brief Set up a jenkins server with all the necessary job
 """
-from pyquickhelper import noLOG
+from pyquickhelper.loghelper import noLOG
 
 
 def engines_default():

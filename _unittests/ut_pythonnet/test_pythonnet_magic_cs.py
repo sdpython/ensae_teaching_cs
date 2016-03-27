@@ -5,7 +5,6 @@
 import sys
 import os
 import unittest
-import re
 
 
 try:
@@ -22,7 +21,7 @@ except ImportError:
     import src
 
 try:
-    import pyquickhelper
+    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -35,10 +34,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyquickhelper
+    import pyquickhelper as skip_
 
-from pyquickhelper import fLOG
-from src.ensae_teaching_cs.td_2a.pythoncs import create_cs_function, run_cs_function
+from pyquickhelper.loghelper import fLOG
+from src.ensae_teaching_cs.td_2a.pythoncs import create_cs_function
 
 
 class TestPythonnetMagicCS(unittest.TestCase):

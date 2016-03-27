@@ -6,7 +6,6 @@
 import sys
 import os
 import unittest
-import re
 import warnings
 
 try:
@@ -23,7 +22,7 @@ except ImportError:
     import src
 
 try:
-    import pyquickhelper
+    import pyquickhelper as skip______
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -36,10 +35,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyquickhelper
+    import pyquickhelper as skip______
 
 try:
-    import pyensae
+    import pyensae as skip_____
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -52,10 +51,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyensae
+    import pyensae as skip_____
 
 try:
-    import pymmails
+    import pymmails as skip___
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -68,10 +67,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pymmails
+    import pymmails as skip___
 
 try:
-    import pyrsslocal
+    import pyrsslocal as skip__
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -84,10 +83,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyrsslocal
+    import pyrsslocal as skip__
 
 try:
-    import pymyinstall
+    import pymyinstall as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -100,12 +99,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pymyinstall
+    import pymyinstall as skip_
 
 
-from pyquickhelper import fLOG, get_temp_folder
-from pyquickhelper.jenkinshelper import JenkinsExt
-from src.ensae_teaching_cs.automation.jenkins_helper import setup_jenkins_server
+from pyquickhelper.loghelper import fLOG
 from src.ensae_teaching_cs.automation import ftp_list_modules
 
 

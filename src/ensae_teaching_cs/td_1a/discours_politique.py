@@ -11,7 +11,7 @@ import json
 import io
 import html.parser
 import html.entities as htmlentitydefs
-from pyquickhelper import get_url_content
+from pyquickhelper.loghelper import get_url_content
 
 
 endLine = "\r\n"

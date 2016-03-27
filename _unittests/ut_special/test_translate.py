@@ -10,8 +10,7 @@ import urllib
 
 try:
     import src
-    import pyquickhelper
-    import pyensae
+    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -32,23 +31,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyensae",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
     import src
-    import pyquickhelper
-    import pyensae
+    import pyquickhelper as skip_
 
-from pyquickhelper import fLOG
-from src.ensae_teaching_cs.special.rues_paris import get_data, bellman, kruskall, possible_edges, eulerien_extension, distance_paris, euler_path, connected_components, distance_haversine, graph_degree
+from pyquickhelper.loghelper import fLOG
 
 
 class TestTranslate(unittest.TestCase):

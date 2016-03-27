@@ -7,17 +7,16 @@
 import sys
 import os
 import unittest
-import warnings
-import shutil
 import pandas
 import datetime
 
+
 try:
     import src
-    import pyquickhelper
-    import pyensae
-    import pyrsslocal
-    import pymyinstall
+    import pyquickhelper as skip_____
+    import pyensae as skip___
+    import pyrsslocal as skip__
+    import pymyinstall as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -85,13 +84,14 @@ except ImportError:
     if path not in sys.path:
         sys.path.append(path)
     import src
-    import pyquickhelper
-    import pyensae
-    import pyrsslocal
-    import pymmails
+    import pyquickhelper as skip____
+    import pyensae as skip___
+    import pyrsslocal as skip__
+    import pymmails as skip_
 
-from pyquickhelper import fLOG, get_temp_folder
-from pymmails import MailBoxImap, EmailMessage, MailBoxMock, EmailMessageRenderer, EmailMessageListRenderer
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import get_temp_folder
+from pymmails import MailBoxMock, EmailMessageRenderer, EmailMessageListRenderer
 from pymmails.render.email_message_style import template_email_html_short
 from src.ensae_teaching_cs.automation_students import ProjectsRepository
 

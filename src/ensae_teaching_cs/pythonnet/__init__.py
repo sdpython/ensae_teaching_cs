@@ -11,11 +11,18 @@ When running for the first time on Python 3.5, the following error came up::
     Operation is not supported. (Exception from HRESULT: 0x80131515) ---> System.NotSupportedException: An attempt was made to load an assembly
     from a network location which would have caused the assembly to be sandboxed in previous versions of the .NET Framework.
     This release of the .NET Framework does not enable CAS policy by default, so this load may be dangerous.
-    If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch. See http://go.microsoft.com/fwlink/?LinkId=155569 for more information.
+    If this load is not intended to sandbox the assembly,
+    please enable the loadFromRemoteSources switch.
+    See http://go.microsoft.com/fwlink/?LinkId=155569 for more information.
        --- End of inner exception stack trace ---
-       at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-       at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
-       at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+       at System.Reflection.RuntimeAssembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity,
+          RuntimeAssembly locationHint, StackCrawlMark& stackMark, IntPtr pPrivHostBinder, Boolean throwOnFileNotFound,
+          Boolean forIntrospection, Boolean suppressSecurityChecks)
+       at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef,
+          Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark,
+          IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
+       at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue,
+          AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
        at System.Reflection.Assembly.LoadFrom(String assemblyFile)
        at clrModule.PyInit_clr()
 
@@ -134,7 +141,7 @@ def vocal_synthesis(text, lang="fr-FR", voice="", filename=""):
 
         try:
             AddReference("ENSAE.Voice")
-        except Exception as e:
+        except Exception:
             path = os.path.abspath(os.path.split(__file__)[0])
             path = os.path.join(path, "csdll")
             if path not in sys.path:
@@ -162,7 +169,7 @@ def import_magic_cs():
 
         try:
             AddReference("MagicIPython")
-        except Exception as e:
+        except Exception:
             path = os.path.abspath(os.path.split(__file__)[0])
             path = os.path.join(path, "csdll")
             if path not in sys.path:

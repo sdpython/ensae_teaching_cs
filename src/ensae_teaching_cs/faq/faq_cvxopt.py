@@ -24,7 +24,7 @@ def optimisation():
     @code
     Traceback (most recent call last):
       File "toutbiss.py", line 236, in <module>
-        liste_composition,liquide = actualisation(liste_df,index,liquide,liste_composition,nb_jours_rendement,nb_jours_volatilite,volatilite_max) #on actualise le portefeuille (-> Actualisation)
+        liste_composition,liquide = actualisation(liste_df,index,liquide,liste_composition,nb_jours_rendement,nb_jours_volatilite,volatilite_max)
       File "toutbiss.py", line 136, in actualisation
         objectif_repartition=volatilite_quadra2(liste_df,index,nb_jours_rendement,nb_jours_volatilite,volatilite_max)
       File "toutbiss.py", line 121, in volatilite_quadra2
@@ -65,7 +65,7 @@ def optimisation():
 
     Traceback (most recent call last):
       File "toutbiss.py", line 237, in <module>
-        liste_composition,liquide = actualisation(liste_df,index,liquide,liste_composition,nb_jours_rendement,nb_jours_volatilite,volatilite_max) #on actualise le portefeuille (-> Actualisation)
+        liste_composition,liquide = actualisation(liste_df,index,liquide,liste_composition,nb_jours_rendement,nb_jours_volatilite,volatilite_max)
       File "toutbiss.py", line 137, in actualisation
         objectif_repartition=volatilite_quadra2(liste_df,index,nb_jours_rendement,nb_jours_volatilite,volatilite_max)
       File "toutbiss.py", line 122, in volatilite_quadra2

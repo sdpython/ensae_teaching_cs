@@ -3,7 +3,7 @@
 @brief Some automation helpers to grab mails from student about project.
 """
 
-from pyquickhelper import noLOG
+from pyquickhelper.loghelper import noLOG
 
 
 def grab_addresses(mailbox, subfolder, date, no_domain=False, max_dest=5, fLOG=noLOG):

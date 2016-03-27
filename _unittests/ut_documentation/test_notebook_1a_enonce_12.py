@@ -8,7 +8,7 @@ notebook test
 import sys
 import os
 import unittest
-import re
+
 
 try:
     import src
@@ -24,7 +24,7 @@ except ImportError:
     import src
 
 try:
-    import pyquickhelper
+    import pyquickhelper as skip_____
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -37,10 +37,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyquickhelper
+    import pyquickhelper as skip_____
 
 try:
-    import pyensae
+    import pyensae as skip___
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -53,10 +53,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyensae
+    import pyensae as skip___
 
 try:
-    import pymmails
+    import pymmails as skip__
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -69,10 +69,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pymmails
+    import pymmails as skip__
 
 try:
-    import pymyinstall
+    import pymyinstall as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -85,10 +85,11 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pymyinstall
+    import pymyinstall as skip_
 
 
-from pyquickhelper import fLOG, get_temp_folder, noLOG
+from pyquickhelper.loghelper import fLOG, noLOG
+from pyquickhelper.pycode import get_temp_folder
 from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, unittest_raise_exception_notebook
 
 

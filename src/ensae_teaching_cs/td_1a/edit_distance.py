@@ -19,7 +19,7 @@ def edit_distance(mot1, mot2):
     *path* is a series of 2-uples of positions
     """
     dist = {(-1, -1): 0}
-    pred = {(-1, -1):  None}
+    pred = {(-1, -1): None}
     for i, c in enumerate(mot1):
         dist[i, -1] = dist[i - 1, -1] + 1
         pred[i, -1] = (i - 1, -1)
