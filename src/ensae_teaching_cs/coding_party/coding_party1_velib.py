@@ -309,7 +309,7 @@ if __name__ == "__main__":
     df = pandas.read_csv(jeu, sep="\t", encoding="utf8")
     # conversion des dates
     df["collect_date"] = df.apply(
-        lambda r: str_to_datetime(
+        lambda r: str2datetime(
             r["collect_date"]),
         axis=1)
     # print(df.head())
