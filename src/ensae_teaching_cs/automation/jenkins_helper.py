@@ -18,25 +18,25 @@ def engines_default():
                 py27="c:\\Python27",
                 default="c:\\Python34_x64",
                 winpython="c:\\APythonENSAE\\python")
-        
+
 
 def default_jenkins_jobs(filter=None, neg_filter=None):
     """
     default list of Jenkins jobs
-    
+
     @param              keep a subset of jobs
     @return             list
-    
+
     It produces a subset of the following list of jobs:
-    
+
     .. runpython::
-    
+
         import textwrap
         from ensae_teaching_cs.automation.jenkins_helper import default_jenkins_jobs
         modules = default_jenkins_jobs()
         text = str(modules)
         print(textwrap.wrap(text))
-        
+
     """
     if filter is not None or neg_filter is not None:
         reg = re.compile(filter if filter else ".*")
@@ -59,7 +59,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None):
                             sub.append(item)
                     elif isinstance(item, tuple):
                         if reg.search(item[0]) and not neg_reg.search(item[0]):
-                            sub.append(tu)
+                            sub.append(item)
                     else:
                         raise TypeError("{0} - {1}".format(item, type(item)))
                 if len(sub) > 0:
@@ -68,138 +68,136 @@ def default_jenkins_jobs(filter=None, neg_filter=None):
                 raise TypeError("{0} - {1}".format(row, type(row)))
         return new_res
     else:
-        return [  # update anaconda
-                    ("standalone [conda_update] [anaconda3]",
-                     "H H(0-1) * * 0"),
-                    "standalone [conda_update] [anaconda2] [27]",
-                    "standalone [local_pypi]",
-                    #"standalone [install]",
-                    #"standalone [update]",
-                    #"standalone [install] [py35]",
-                    #"standalone [update] [py35]",
-                    #"standalone [install] [winpython]",
-                    #"standalone [update] [winpython]",
-             # pyquickhelper and others,
-             ("pyquickhelper", "H H(2-3) * * 0"),
-             ("pysqllike <-- pyquickhelper",
-                        None, dict(success_only=True)),
-             ["python3_module_template <-- pyquickhelper",
-              "pymyinstall <-- pyquickhelper", 
-              "pymmails <-- pyquickhelper"],
-              "pyensae <-- pyquickhelper, pymyinstall",
-              "pyrsslocal <-- pyquickhelper, pyensae",
-             # Python 27
-             ("pyquickhelper [py27] [27]", "H H(2-3) * * 1"),
-             ["pymyinstall [py27] [27] <-- pyquickhelper",
-              "python3_module_template [py27] [27] <-- pyquickhelper"],
-             # WinPython
-             ("pyquickhelper [winpython]", "H H(5-6) * * 1"),
-             ["pysqllike [winpython] <-- pyquickhelper",
-                        "pymmails [winpython] <-- pyquickhelper",
-                        "python3_module_template [winpython] <-- pyquickhelper",
-                        "pymyinstall [winpython] <-- pyquickhelper"],
-              "pyensae [winpython] <-- pyquickhelper, pymyinstall",
-              "pyrsslocal [winpython] <-- pyquickhelper, pyensae",
-             # Anaconda 3
-             ("pyquickhelper [anaconda3]", "H H(2-3) * * 1"),
-             ["pysqllike [anaconda3] <-- pyquickhelper",
-                        "pymmails [anaconda3] <-- pyquickhelper",
-                        "python3_module_template [anaconda3] <-- pyquickhelper",
-                        "pymyinstall [anaconda3] <-- pyquickhelper"],
-              "pyensae [anaconda3] <-- pyquickhelper, pymyinstall",
-              "pyrsslocal [anaconda3] <-- pyquickhelper, pyensae",
-             # Anaconda 2
-             ("pyquickhelper [anaconda2] [27]", "H H(2-3) * * 1"),
-             ["pymyinstall [anaconda2] [27] <-- pyquickhelper",
-              "python3_module_template [anaconda2] [27] <-- pyquickhelper"],
-             # update
-             ("pymyinstall [update_modules]",
-                        "H H(0-1) * * 5"),
-             "pymyinstall [update_modules] [winpython]",
-             "pymyinstall [update_modules] [py35]",
-             "pymyinstall [update_modules] [py27]",
-             "pymyinstall [update_modules] [anaconda2]",
-             "pymyinstall [update_modules] [anaconda3]",
-             # py35
-             ("pyquickhelper [py35]", "H H(2-3) * * 2"),
-             ["pysqllike [py35] <-- pyquickhelper",
-                        "pymmails [py35] <-- pyquickhelper",
-                        "python3_module_template [py35] <-- pyquickhelper",
-                        "pymyinstall [py35] <-- pyquickhelper"],
-             "pyensae [py35] <-- pyquickhelper, pymyinstall",
-             "pyrsslocal [py35] <-- pyquickhelper, pyensae",
-             # actuariat
-             ("actuariat_python <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(4-5) * * 0"),
-             [("actuariat_python [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", None, dict(success_only=True)),
-                        "actuariat_python [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                        "actuariat_python [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
-             # code_beatrix
-             ("code_beatrix <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(4-5) * * 0"),
-             ("code_beatrix [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                        None, dict(success_only=True)),
-             ["code_beatrix [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                        "code_beatrix [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
-             # teachings
-             # 1.5h
-             ("ensae_teaching_cs <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(5-6) * * 0"),
-             ["ensae_teaching_cs [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                        # 1.5h
-                        "ensae_teaching_cs [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                        "ensae_teaching_cs [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
-             # code_beatrix
-             ("ensae_projects <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(4-5) * * 3"),
-             ("ensae_projects [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                        None, dict(success_only=True)),
-             ["ensae_projects [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                        "ensae_projects [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
-             # documentation
-             ("pyquickhelper [doc] <-- pyquickhelper",
-                        "H H(3-4) * * 1"),
-             ["pymyinstall [doc] <-- pyquickhelper",
-                        "pysqllike [doc] <-- pyquickhelper",
-                        "pymmails [doc] <-- pyquickhelper",
-                        "pyrsslocal [doc] <-- pyquickhelper",
-                        "pyensae [doc] <-- pyquickhelper"],
-             ["actuariat_python [doc] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                        "code_beatrix [doc] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
-             "ensae_teaching_cs [doc] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             # setup
-             ("pyquickhelper [setup] <-- pyquickhelper",
-                        "H H(6-7) * * 1"),
-             ["pymyinstall [setup] <-- pyquickhelper",
-                        "pysqllike [setup] <-- pyquickhelper",
-                        "pymmails [setup] <-- pyquickhelper",
-                        "pyrsslocal [setup] <-- pyquickhelper, pyensae",
-                        "pyensae [setup] <-- pyquickhelper"],
-             ["actuariat_python [setup] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+        return [("standalone [conda_update] [anaconda3]",
+                 "H H(0-1) * * 0"),
+                "standalone [conda_update] [anaconda2] [27]",
+                "standalone [local_pypi]",
+                #"standalone [install]",
+                #"standalone [update]",
+                #"standalone [install] [py35]",
+                #"standalone [update] [py35]",
+                #"standalone [install] [winpython]",
+                #"standalone [update] [winpython]",
+                # pyquickhelper and others,
+                ("pyquickhelper", "H H(2-3) * * 0"),
+                ("pysqllike <-- pyquickhelper",
+                    None, dict(success_only=True)),
+                ["python3_module_template <-- pyquickhelper",
+                 "pymyinstall <-- pyquickhelper",
+                 "pymmails <-- pyquickhelper"],
+                "pyensae <-- pyquickhelper, pymyinstall",
+                "pyrsslocal <-- pyquickhelper, pyensae",
+                # Python 27
+                ("pyquickhelper [py27] [27]", "H H(2-3) * * 1"),
+                ["pymyinstall [py27] [27] <-- pyquickhelper",
+                 "python3_module_template [py27] [27] <-- pyquickhelper"],
+                # WinPython
+                ("pyquickhelper [winpython]", "H H(5-6) * * 1"),
+                ["pysqllike [winpython] <-- pyquickhelper",
+                    "pymmails [winpython] <-- pyquickhelper",
+                    "python3_module_template [winpython] <-- pyquickhelper",
+                    "pymyinstall [winpython] <-- pyquickhelper"],
+                "pyensae [winpython] <-- pyquickhelper, pymyinstall",
+                "pyrsslocal [winpython] <-- pyquickhelper, pyensae",
+                # Anaconda 3
+                ("pyquickhelper [anaconda3]", "H H(2-3) * * 1"),
+                ["pysqllike [anaconda3] <-- pyquickhelper",
+                    "pymmails [anaconda3] <-- pyquickhelper",
+                    "python3_module_template [anaconda3] <-- pyquickhelper",
+                    "pymyinstall [anaconda3] <-- pyquickhelper"],
+                "pyensae [anaconda3] <-- pyquickhelper, pymyinstall",
+                "pyrsslocal [anaconda3] <-- pyquickhelper, pyensae",
+                # Anaconda 2
+                ("pyquickhelper [anaconda2] [27]", "H H(2-3) * * 1"),
+                ["pymyinstall [anaconda2] [27] <-- pyquickhelper",
+                 "python3_module_template [anaconda2] [27] <-- pyquickhelper"],
+                # update
+                ("pymyinstall [update_modules]", "H H(0-1) * * 5"),
+                "pymyinstall [update_modules] [winpython]",
+                "pymyinstall [update_modules] [py35]",
+                "pymyinstall [update_modules] [py27]",
+                "pymyinstall [update_modules] [anaconda2]",
+                "pymyinstall [update_modules] [anaconda3]",
+                # py35
+                ("pyquickhelper [py35]", "H H(2-3) * * 2"),
+                ["pysqllike [py35] <-- pyquickhelper",
+                    "pymmails [py35] <-- pyquickhelper",
+                    "python3_module_template [py35] <-- pyquickhelper",
+                    "pymyinstall [py35] <-- pyquickhelper"],
+                "pyensae [py35] <-- pyquickhelper, pymyinstall",
+                "pyrsslocal [py35] <-- pyquickhelper, pyensae",
+                # actuariat
+                ("actuariat_python <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(4-5) * * 0"),
+                [("actuariat_python [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", None, dict(success_only=True)),
+                    "actuariat_python [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                    "actuariat_python [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
+                # code_beatrix
+                ("code_beatrix <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(4-5) * * 0"),
+                ("code_beatrix [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                    None, dict(success_only=True)),
+                ["code_beatrix [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                    "code_beatrix [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
+                # teachings
+                # 1.5h
+                ("ensae_teaching_cs <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(5-6) * * 0"),
+                ["ensae_teaching_cs [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                 # 1.5h
+                 "ensae_teaching_cs [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                 "ensae_teaching_cs [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
+                # code_beatrix
+                ("ensae_projects <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(4-5) * * 3"),
+                ("ensae_projects [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                 None, dict(success_only=True)),
+                ["ensae_projects [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                 "ensae_projects [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
+                # documentation
+                ("pyquickhelper [doc] <-- pyquickhelper",
+                 "H H(3-4) * * 1"),
+                ["pymyinstall [doc] <-- pyquickhelper",
+                 "pysqllike [doc] <-- pyquickhelper",
+                 "pymmails [doc] <-- pyquickhelper",
+                 "pyrsslocal [doc] <-- pyquickhelper",
+                 "pyensae [doc] <-- pyquickhelper"],
+                ["actuariat_python [doc] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                 "code_beatrix [doc] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
+                "ensae_teaching_cs [doc] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                # setup
+                ("pyquickhelper [setup] <-- pyquickhelper",
+                 "H H(6-7) * * 1"),
+                ["pymyinstall [setup] <-- pyquickhelper",
+                 "pysqllike [setup] <-- pyquickhelper",
+                 "pymmails [setup] <-- pyquickhelper",
+                 "pyrsslocal [setup] <-- pyquickhelper, pyensae",
+                 "pyensae [setup] <-- pyquickhelper"],
+                ["actuariat_python [setup] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
                  "code_beatrix [setup] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
-             "ensae_teaching_cs [setup] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             # LONG
-             ("pymyinstall [LONG] <-- pyquickhelper",
-                        "H(0,30) 02 01 * *"),
-             "actuariat_python [LONG] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             "actuariat_python [LONG] [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             "actuariat_python [LONG] [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             "actuariat_python [LONG] [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             "ensae_teaching_cs [LONG] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             "ensae_teaching_cs [LONG] [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             "ensae_teaching_cs [LONG] [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             "ensae_teaching_cs [LONG] [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             # SKIP
-             ("ensae_projects [SKIP] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                        "H(0,30) 05 01 * *"),
-             "ensae_projects [SKIP] [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             "ensae_teaching_cs [SKIP] [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             "ensae_teaching_cs [SKIP] [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             "ensae_teaching_cs [SKIP] [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             "ensae_teaching_cs [SKIP] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             # LEFT
-             # 3h
-             ("ensae_teaching_cs [custom_left] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H(0,30) 02 10 * *"),
-             "ensae_teaching_cs [winpython] [custom_left] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             "ensae_teaching_cs [anaconda3] [custom_left] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-             "ensae_teaching_cs [py35] [custom_left] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-         ]                
+                "ensae_teaching_cs [setup] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                # LONG
+                ("pymyinstall [LONG] <-- pyquickhelper",
+                 "H(0,30) 02 01 * *"),
+                "actuariat_python [LONG] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                "actuariat_python [LONG] [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                "actuariat_python [LONG] [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                "actuariat_python [LONG] [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                "ensae_teaching_cs [LONG] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                "ensae_teaching_cs [LONG] [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                "ensae_teaching_cs [LONG] [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                "ensae_teaching_cs [LONG] [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                # SKIP
+                ("ensae_projects [SKIP] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                 "H(0,30) 05 01 * *"),
+                "ensae_projects [SKIP] [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                "ensae_teaching_cs [SKIP] [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                "ensae_teaching_cs [SKIP] [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                "ensae_teaching_cs [SKIP] [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                "ensae_teaching_cs [SKIP] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                # LEFT
+                # 3h
+                ("ensae_teaching_cs [custom_left] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H(0,30) 02 10 * *"),
+                "ensae_teaching_cs [winpython] [custom_left] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                "ensae_teaching_cs [anaconda3] [custom_left] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                "ensae_teaching_cs [py35] [custom_left] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                ]
 
 
 def setup_jenkins_server(js,
