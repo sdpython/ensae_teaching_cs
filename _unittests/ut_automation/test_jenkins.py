@@ -118,6 +118,7 @@ class TestJenkins(unittest.TestCase):
         engines = dict(anaconda2="C:\\Anaconda2", anaconda3="C:\\Anaconda3",
                        winpython="C:\\WinPython-64bit-3.4.2.3\\python-3.4.2.amd64",
                        default="c:\\Python34_x64",
+                       py27="c:\\Python27",
                        py35="c:\\Python35_x64")
 
         js = JenkinsExt('http://machine:8080/', "user",
