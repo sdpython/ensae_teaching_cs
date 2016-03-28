@@ -39,10 +39,14 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder
-from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
 
 
 class TestNotebookRunner2a_long (unittest.TestCase):
+    
+    def setUp(self):
+        from pyquickhelper.pycode import add_missing_development_version
+        add_missing_development_version(["pymyinstall", "pyensae", "pymmails"], 
+            __file__, hide=__name__=="__main__")
 
     def test_notebook_runner_2a_long(self):
         fLOG(
@@ -57,8 +61,10 @@ class TestNotebookRunner2a_long (unittest.TestCase):
             return
 
         if "R_HOME" not in os.environ or not os.path.exists(os.environ["R_HOME"]):
-            paths = [r"C:\Program Files\R\R-3.2.2",
-                     r"C:\Program Files\R\R-3.1.2"]
+            paths = [r"C:\Program Files\R\R-3.2.4revised",
+                     r"C:\Program Files\R\R-3.2.4",
+                     r"C:\Program Files\R\R-3.2.3",
+                     r"C:\Program Files\R\R-3.2.2"]
             for path in paths:
                 if os.path.exists(path):
                     os.environ["R_HOME"] = path
@@ -67,6 +73,8 @@ class TestNotebookRunner2a_long (unittest.TestCase):
             warnings.warn("No installed R")
             return
 
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
+        from src.ensae_teaching_cs.automation.notebook_test_helper import clean_function_1a, unittest_raise_exception_notebook
         temp = get_temp_folder(__file__, "temp_notebook2a_long_")
         keepnote = ls_notebooks("2a")
         assert len(keepnote) > 0
