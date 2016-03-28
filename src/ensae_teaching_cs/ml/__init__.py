@@ -1,5 +1,6 @@
 """
-Shortcuts
+@file
+@brief Shortcuts for ML
 """
 
 from .sklearn_parameters import SkException, SkLearnParameters

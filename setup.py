@@ -38,6 +38,7 @@ package_data = {project_var_name + ".pythonnet.py33": ["*.pyd", "*.txt", "*.dll"
                 project_var_name + ".pythonnet.py27x64": ["*.pyd", "*.txt", "*.dll"],
                 project_var_name + ".pythonnet.py35x64": ["*.pyd", "*.txt", "*.dll"],
                 project_var_name + ".pythonnet.csdll": ["*.dll"],
+                project_var_name + ".data.data_gutenberg": ["*.txt"],
                 project_var_name + ".automation": ["*.xml", "*.r", "*.ico"],
                 project_var_name: ["rss_teachings.xml"],
                 }
