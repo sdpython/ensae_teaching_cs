@@ -14,7 +14,7 @@
 
     .. raw:: html
     
-        <video width="400" autoplay="" height="400">
+        <video width="400" autoplay="" height="400" control="" loop="">
         <source src="http://www.xavierdupre.fr/enseignement/complements/epidemic.mp4" type="video/mp4" />
         </video>    
         
@@ -22,7 +22,7 @@
     avec `matplotlib <http://matplotlib.org/>`_, 
     `pygame <http://pygame.org/hifi.html>`_ ou autre.
     Dans le cas présent, c'est la fonction
-    :func:`pygame_simulation <ensae_teaching_cs.special.propagation_epidemic.pygame_simulation>`
+    :func:`pygame_simulation.pygame_simulation <ensae_teaching_cs.special.propagation_epidemic.pygame_simulation>`
     qui enregistre 1000 images.
     On utilise ensuite  `opencv <http://opencv.org/>`_ pour construire la 
     vidéo. C'est ce que fait la fonction 
@@ -30,4 +30,13 @@
     Un logiciel comme `MovieMaker <http://windows.microsoft.com/en-us/windows/movie-maker>`_
     permet de convertir la vidéo dans un format qui passe mieux dans un navigateur,
     d'ajouter une bande son ou de faire un court montage.
+    
+    Voici une autre vidéo obtenue de façon similaire
+    avec la fonction :func:`corde.pygame_simulation <ensae_teaching_cs.special.corde.pygame_simulation>` :
+    
+    .. raw:: html
+    
+        <video width="400" autoplay="" height="300" control="" loop="">
+        <source src="http://www.xavierdupre.fr/enseignement/complements/corde.mp4" type="video/mp4" />
+        </video>      
     

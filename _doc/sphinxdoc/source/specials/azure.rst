@@ -1,6 +1,4 @@
-﻿
 
-.. issue.
 
 .. index:: azure, Microsoft, partenariat, azure sdk, sdk
 

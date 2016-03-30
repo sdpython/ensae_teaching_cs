@@ -10,9 +10,9 @@ def make_video(images, outvid=None, fps=5, size=None,
     """
     Create a video from a list of images.
 
-    @param      outvid      output images (can be None)
+    @param      outvid      output video
     @param      images      list of images to use in the video
-    @param      fps         frame per second
+    @param      fps         frames per second
     @param      size        size of each frame
     @param      is_color    color
     @param      format      see `fourcc <http://www.fourcc.org/codecs.php>`_

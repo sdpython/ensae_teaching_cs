@@ -26,7 +26,7 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import check_pep8
-from pyquickhelper.pycode.utils_tests_helper import _extended_refectoring
+from pyquickhelper.pycode.utils_tests_helper import _extended_refactoring
 
 
 class TestFlake8(unittest.TestCase):
@@ -45,7 +45,7 @@ class TestFlake8(unittest.TestCase):
 
         thi = os.path.abspath(os.path.dirname(__file__))
         src_ = os.path.normpath(os.path.join(thi, "..", "..", "src"))
-        check_pep8(src_, fLOG=fLOG, extended=[("fLOG", _extended_refectoring)],
+        check_pep8(src_, fLOG=fLOG, extended=[("fLOG", _extended_refactoring)],
                    neg_filter="((.*pandas_helper.*)|(.*faq_python.*))")
 
     def test_flake8_test(self):
@@ -71,7 +71,7 @@ class TestFlake8(unittest.TestCase):
                          "'skip_____' imported but unused",
                          "'skip______' imported but unused",
                          ],
-                   extended=[("fLOG", _extended_refectoring)],
+                   extended=[("fLOG", _extended_refactoring)],
                    max_line_length=320)
 
 

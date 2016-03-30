@@ -1,10 +1,13 @@
 """
 @file
-@brief simple simulation of an epidemic
+@brief Simple simulation of an epidemic. It makes a couple of assumption
+on how the disease is transmitted and its effect on a person. The user
+can specify many parameters.
 """
 import random
 import copy
 import os
+import sys
 from collections import Counter
 from pyquickhelper.loghelper import noLOG
 from ..helpers.pygame_helper import wait_event
@@ -389,9 +392,13 @@ def display_population(self, screen, pygame, font, back_ground):
 def pygame_simulation(pygame, first_click=False, folder=None,
                       iter=1000, cote=600, nb=(200, 20), **params):
     """
-    run a graphic simulation
+    Run a graphic simulation. The user can a pygame screen showing
+    the evolution of population. A healthy person is white, green is sick,
+    blue is healed, black is dead. The function can save an image for
+    every iteration. They can be merged into a video with
+    function @see fn make_video.
 
-    @param      pygame          module pygame
+    @param      pygame          module pygame (avoids importing in this file)
     @param      first_click     starts the simulation after a first click
     @param      folder          to save the simulation, an image per simulation
     @param      iter            number of iterations to run
@@ -412,6 +419,13 @@ def pygame_simulation(pygame, first_click=False, folder=None,
         wait_event(pygame)
 
     for i in range(0, iter):
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
+            if event.type == pygame.MOUSEBUTTONUP:
+                wait_event()
+
         nb = pop.evolution()
         display_population(pop, screen, pygame, font, back_ground)
         pygame.display.flip()
@@ -427,9 +441,9 @@ def pygame_simulation(pygame, first_click=False, folder=None,
         wait_event()
 
 
-def simulation(nb=(200, 20), cote=600, iter=1000, fLOG=noLOG, **params):
+def numerical_simulation(nb=(200, 20), cote=600, iter=1000, fLOG=noLOG, **params):
     """
-    run a simulation, @see cl EpidemicPopulation
+    Run a simulation, @see cl EpidemicPopulation.
 
     @param      iter            number of iterations to run
     @param      cote            @see cl EpidemicPopulation
