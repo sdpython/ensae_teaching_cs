@@ -4,6 +4,8 @@
 """
 import random
 import copy
+import os
+from collections import Counter
 from pyquickhelper.loghelper import noLOG
 from ..helpers.pygame_helper import wait_event
 
@@ -14,39 +16,72 @@ class Point:
     """
 
     def __init__(self, x, y):
+        """
+        constructor
+
+        @param      x       x
+        @param      y       y
+        """
         self.x, self.y = float(x), float(y)
 
     def norm(self):
+        """
+        return the norm l2
+        """
         return (self.x ** 2 + self.y ** 2) ** 0.5
 
     def __add__(self, p):
+        """
+        addition
+        """
         return Point(self.x + p.x, self.y + p.y)
 
     def __sub__(self, p):
+        """
+        soustraction
+        """
         return Point(self.x - p.x, self.y - p.y)
 
     def __mul__(self, p):
+        """
+        multiplication by a scalar
+        """
         return Point(self.x * p, self.y * p)
 
     def __div__(self, p):
+        """
+        division by a scalar
+        """
         return Point(self.x / p, self.y / p)
 
     def __iadd__(self, p):
+        """
+        addition inplace
+        """
         self.x += p.x
         self.y += p.y
         return self
 
     def __isub__(self, p):
+        """
+        soustraction inplace
+        """
         self.x -= p.x
         self.y -= p.y
         return self
 
     def __imul__(self, p):
+        """
+        multiplication by a scalar inplace
+        """
         self.x *= p
         self.y *= p
         return self
 
     def __idiv__(self, p):
+        """
+        divsion by a scalar inplace
+        """
         self.x /= p
         self.y /= p
         return self
@@ -58,10 +93,20 @@ class Rect:
     """
 
     def __init__(self, a, b):
+        """
+        constructor
+
+        @param      a       Point
+        @param      b       Point
+        """
         self.a = a
         self.b = b
 
     def limit(self, pos):
+        """
+        tells if point *pos* belongs to the area
+        defined by the rectangle
+        """
         r = False
         if pos.x < self.a.x:
             pos.x = self.a.x
@@ -88,6 +133,9 @@ class Person:
     * 1: malade
     * 2: mort
     * 3: gueris
+
+    A person moves by drawing a random gaussian vector added to
+    its current acceleration.
     """
     colors = {0: (255, 255, 255), 1: (0, 255, 0),
               2: (0, 0, 0), 3: (50, 50, 200)}
@@ -99,14 +147,16 @@ class Person:
         constructor
 
         @param      position        position
-        @param      borne_pos       l
-        @param      borne_acc       l
-        @param      alea_acc        l
-        @param      sick_vit        l
-        @param      rayon           l
-        @param      nb_day          l
-        @param      prob_die        l
-        @param      prob_cont       l
+        @param      borne_pos       upper bound for the position (rectangle)
+        @param      borne_acc       upper bound for the acceleration (rectangle)
+        @param      alea_acc        sigma to draw random acceleration
+        @param      sick_vit        when people are sick, they go slower, this muliplies
+                                    the acceleration by a factor
+        @param      rayon           radius, below that distance, a sick person is contagious for the neighbours
+        @param      nb_day          number of days a person will be sick, after, the person
+                                    either recovers, either dies
+        @param      prob_die        probability to die at each iteration
+        @param      prob_cont       probability to transmit the disease to a neighbour
         """
         self.pos = position
         self.vit = Point(0, 0)
@@ -122,20 +172,30 @@ class Person:
         self.prob_die = prob_die
         self.prob_cont = prob_cont
 
+        # memorize the day the person got sick
         self._since = 0
 
     def __str__(self):
+        """
+        usual
+        """
         return str(self.__dict__)
 
     def distance(self, p):
+        """
+        return the distance between this person and another one
+        """
         d = self.pos - p.pos
         return d.norm()
 
-    def _get_new_acceleration(self, population):
+    def _get_new_acceleration(self):
+        """
+        update the acceleration by adding a random gaussian vector
+        to the current acceleration, check that acceleration
+        is not beyond some boundary
+        """
         x = random.gauss(0, self.alea_acc)
         y = random.gauss(0, self.alea_acc)
-        # print x,y
-        #res = self.acc + Point (x,y)
         res = Point(x, y)
         if self.borne_acc is not None:
             r = self.borne_acc.limit(res)
@@ -145,6 +205,15 @@ class Person:
         return res
 
     def state_evolution(self, population):
+        """
+        update the state of the person: healthy --> sick --> cured or dead
+
+        @param  population      sets of other persons
+
+        The function updates the state of the persons.
+        One of steps involves looking over the entire population to check
+        if some sick people are close enough to transmis the disease.
+        """
         if self.state in [2, 3]:
             return
         elif self.state == 1:
@@ -177,6 +246,12 @@ class Person:
     def evolution(self, dt, population):
         """
         update the population, random acceleration
+
+        @param      dt          time delta (only used to update the position)
+        @param      population  other set of people
+
+        The function updates the state of the person,
+        draws a new acceleration and updates the position.
         """
         self.state_evolution(population)
 
@@ -187,7 +262,7 @@ class Person:
 
         self.pos += self.vit * dt
         self.vit += self.acc * dt
-        self.acc = self._get_new_acceleration(population)
+        self.acc = self._get_new_acceleration()
         if self.borne_pos is not None:
             r = self.borne_pos.limit(self.pos)
             if r:
@@ -208,8 +283,7 @@ class EpidemicPopulation:
         @param      nb          tuple number of people (healthy, sick)
         @param      params      others parameters
 
-        On tire au hasard les gens
-
+        Draws a population.
         """
         if cote is None:
             pass
@@ -229,33 +303,38 @@ class EpidemicPopulation:
                 self.gens.append(p)
 
     def __getitem__(self, i):
+        """
+        usual
+        """
         return self.gens[i]
 
     def __iter__(self):
+        """
+        usual
+        """
         return self.gens.__iter__()
 
     def __len__(self):
+        """
+        usual
+        """
         return len(self.gens)
 
     def count(self):
         """
         return the distribution of healthy, sick, cured people
         """
-        d = {}
-        for p in self:
-            s = p.state
-            if s in d:
-                d[s] += 1
-            else:
-                d[s] = 1
-        return d
+        return Counter(map(lambda p: p.state, self))
 
     def evolution(self, dt=0.5):
         """
-        iteration
+        new iteration
 
         @param          dt      dt
         @return                 nb1,nb2
+
+        We walk through everybody and call
+        :meth:`evolution <ensae_teaching_cs.special.propragation_epidemics.Person.evolution>`.
         """
 
         # on renouvelle une certaine proportion de pates (renouvellement)
@@ -267,6 +346,13 @@ class EpidemicPopulation:
 
 
 def display_person(self, screen, pygame):
+    """
+    display a person on a pygame screen
+
+    @param      self        Person
+    @param      screen      screen
+    @param      pygame      module pygame
+    """
     c = Person.colors[self.state]
     pygame.draw.rect(screen, c, pygame.Rect(
         self.pos.x - 4, self.pos.y - 4, 8, 8))
@@ -276,7 +362,11 @@ def display_population(self, screen, pygame, font, back_ground):
     """
     affichage
 
-    @param      screen      screen
+    @param      self            Person
+    @param      screen          screen
+    @param      font            font (pygame)
+    @param      back_ground     back ground color
+    @param      pygame          module pygame
     """
     screen.fill(back_ground)
     for p in self.gens:
@@ -296,12 +386,19 @@ def display_population(self, screen, pygame, font, back_ground):
     screen.blit(text, (self.cote, 205))
 
 
-def pygame_simulation(pygame):
+def pygame_simulation(pygame, first_click=False, folder=None,
+                      iter=1000, cote=600, nb=(200, 20), **params):
+    """
+    run a graphic simulation
 
-    nb = (200, 20)
-    iter = 1000
-    cote = 600
-
+    @param      pygame          module pygame
+    @param      first_click     starts the simulation after a first click
+    @param      folder          to save the simulation, an image per simulation
+    @param      iter            number of iterations to run
+    @param      cote            @see cl EpidemicPopulation
+    @param      nb              @see cl EpidemicPopulation
+    @param      params          @see cl EpidemicPopulation
+    """
     pygame.init()
     size = cote + 200, cote
     screen = pygame.display.set_mode(size)
@@ -309,31 +406,37 @@ def pygame_simulation(pygame):
     back_ground = (128, 128, 128)
 
     pop = EpidemicPopulation(cote, nb)
-
     display_population(pop, screen, pygame, font, back_ground)
     pygame.display.flip()
-    wait_event(pygame)
-    print(pop.count())
+    if first_click:
+        wait_event(pygame)
 
     for i in range(0, iter):
         nb = pop.evolution()
-        if i % 10 == 0:
-            print("iteration ", i, " pop ", nb)
         display_population(pop, screen, pygame, font, back_ground)
         pygame.display.flip()
-        #pygame.image.save (screen, "c:/temp/epidemie_%03d.jpg" %i)
         pygame.event.peek()
+        if folder is not None:
+            image = os.path.join(folder, "image_%04d.png" % i)
+            pygame.image.save(screen, image)
         pygame.time.wait(50)
         if 1 not in nb or nb[1] == 0:
             break
 
-    print(pop.count())
-    wait_event()
+    if first_click:
+        wait_event()
 
 
 def simulation(nb=(200, 20), cote=600, iter=1000, fLOG=noLOG, **params):
     """
     run a simulation, @see cl EpidemicPopulation
+
+    @param      iter            number of iterations to run
+    @param      cote            @see cl EpidemicPopulation
+    @param      nb              @see cl EpidemicPopulation
+    @param      params          @see cl EpidemicPopulation
+    @param      fLOG            to display status every 10 iterations
+    @return                     population count
     """
     pop = EpidemicPopulation(cote, nb, **params)
 
@@ -346,14 +449,3 @@ def simulation(nb=(200, 20), cote=600, iter=1000, fLOG=noLOG, **params):
 
     r = pop.count()
     return r, i
-
-
-def numeric_simulation():
-
-    cote = 600
-
-    for val in [0.01 * i for i in range(0, 101)]:
-        print("val\t", val * 10, "\t",)
-        values = simulation(nb=(100 - int(val * 100), int(val * 100)),
-                            cote=cote, display=False)
-        print(values)

@@ -26,7 +26,7 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import check_pep8
-from pyquickhelper.pycode.utils_tests import _extended_refectoring
+from pyquickhelper.pycode.utils_tests_helper import _extended_refectoring
 
 
 class TestFlake8(unittest.TestCase):

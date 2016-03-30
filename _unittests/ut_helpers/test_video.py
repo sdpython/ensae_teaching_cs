@@ -36,38 +36,28 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder
-from src.ensae_teaching_cs.special.propagation_epidemic import simulation, pygame_simulation
 from src.ensae_teaching_cs.helpers.video_helper import make_video
 
 
-class TestEpidemicPropagation(unittest.TestCase):
+class TestVideo(unittest.TestCase):
 
-    def test_simulation(self):
+    def test_make_video(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        res = simulation(fLOG=fLOG, iter=10)
-        fLOG(res)
-
-    def test_image_video(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-        temp = get_temp_folder(__file__, "temp_image_video")
-        import pygame
-        pygame_simulation(pygame, fLOG=fLOG, iter=10, folder=temp)
-        files = os.listdir(temp)
-        assert len(files) > 9
-        png = [os.path.join(temp, _)
-               for _ in files if os.path.splitext(_)[-1] == ".png"]
+        temp = get_temp_folder(__file__, "temp_make_video")
+        img = os.path.join(temp, "..", "data")
+        imgs = os.listdir(img)
+        png = [os.path.join(img, _)
+               for _ in imgs if os.path.splitext(_)[-1] == ".png"]
         assert len(png) > 0
-        out = os.path.join(temp, "epidemic.avi")
-        v = make_video(png, out, size=(300, 300), format="XVID")
+        out = os.path.join(temp, "out_video.avi")
+        v = make_video(png, out, size=(1000, 300))
+        assert os.path.exists(out)
+        assert os.stat(out).st_size > 90000
         assert v is not None
-
 
 if __name__ == "__main__":
     unittest.main()
