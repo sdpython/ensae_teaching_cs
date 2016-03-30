@@ -36,7 +36,7 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder
-from src.ensae_teaching_cs.special.propagation_epidemic import simulation, pygame_simulation
+from src.ensae_teaching_cs.special.propagation_epidemic import numerical_simulation, pygame_simulation
 from src.ensae_teaching_cs.helpers.video_helper import make_video
 
 
@@ -48,7 +48,7 @@ class TestEpidemicPropagation(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        res = simulation(fLOG=fLOG, iter=10)
+        res = numerical_simulation(fLOG=fLOG, iter=10)
         fLOG(res)
 
     def test_image_video_epidemic(self):
