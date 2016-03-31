@@ -52,7 +52,7 @@ plus la corde convergera rapidement vers sa position d'équilibre.
 
     \forall i \in [[1..n]], \; p_i = -x_0 + 2x_0 \frac{i-1}{n-1}
     
-Pour chaque masse, on calcule une accélération :math:`a_i \in \R^2` et 
+Pour chaque masse, on calcule une accélération :math:`a_i \in \mathbb{R}^2` et 
 :math:`a_0 = a_n = 0` (les extrémités sont fixes). On met à la jour 
 comme suit :
 
