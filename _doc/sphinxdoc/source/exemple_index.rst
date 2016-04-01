@@ -1,4 +1,4 @@
-﻿
+
 
 .. _l-examplesindex:
 
@@ -18,3 +18,4 @@ Exemples
     all_example
     expose_divers
     all_example_AutoTeachings
+    specials/index_expose

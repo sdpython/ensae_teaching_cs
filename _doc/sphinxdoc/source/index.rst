@@ -72,6 +72,7 @@ Contenu des enseignements
 * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
     * :ref:`Exercices d'algorithmie <l-exoalgo>`
     * :ref:`Exposés divers non abordés en cours <l-extra>`
+    * :ref:`Coups de projectecteur <l-expose-explication>`
 * Questions, termes, FAQ
     * :ref:`FAQ <l-FAQs>` (Foire aux Questions ou Frequently Asked Questions)
     * :ref:`Glossaire <l-glossaire>`
