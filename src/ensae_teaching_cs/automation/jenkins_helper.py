@@ -134,15 +134,16 @@ def default_jenkins_jobs(filter=None, neg_filter=None):
                 # code_beatrix
                 ("code_beatrix <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(4-5) * * 0"),
                 ("code_beatrix [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                    None, dict(success_only=True)),
+                 None, dict(success_only=True)),
                 ["code_beatrix [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
                     "code_beatrix [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
                 # teachings
                 # 1.5h
                 ("ensae_teaching_cs <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(5-6) * * 0"),
-                ["ensae_teaching_cs [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 # 1.5h
-                 "ensae_teaching_cs [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                ("ensae_teaching_cs [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                 None, dict(success_only=True)),
+                # 1.5h
+                ["ensae_teaching_cs [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
                  "ensae_teaching_cs [py35] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
                 # code_beatrix
                 ("ensae_projects <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(4-5) * * 3"),
