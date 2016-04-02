@@ -5,18 +5,19 @@
 
 .. index:: 1A
 
-1A
-==
+Algorithmes et programmation
+============================
 
-`Algorithmes et programmation - OMI1C4 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100115>`_
+`ENSAE - OMI1C4 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100115>`_,
+`ENSAE - OMI1C9 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100332>`_
 
 Cours animé par :
 
 * Xavier Dupré
 
 
-TD
---
+TD - les bases
+--------------
 
 Ce cours s'étale sur 12 séances de travaux dirigés (TD) d'une durée de 2h. Le cours est décrit plus 
 en détail dans cette présentation : `ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_.
@@ -34,8 +35,16 @@ Sessions alternatives :
 - :ref:`TD 4-5 : distance de Jaccard <td1acenoncesession45jaccardrst>` (:ref:`correction <td1acorrectionsession45jaccardrst>`)
 
 Au terme de ces six séances, si la programmation est nouvelle pour vous ou
-si le langage vous paraît encore peu naturel, je vous encourage à faire d'autres exercices 
-piochés dans les anciens :ref:`l-examens`.
+si le langage vous paraît encore peu naturel, je vous encourage à faire d':ref:`autres exercices <l-examplesindex>`,
+à piocher dans les anciens :ref:`l-examens`, à regarder la liste des exercices
+proposées à `Quelques exercices du Project Euler <http://mathprepa.fr/python-project-euler-mpsi/>`_.
+La plupart de ces notions font déjà partie du programme des classes préparatoires
+scientifiques.
+
+
+
+TD - algorithmes
+----------------
 
 Les six séances [#f1]_ suivantes sont centrées autour de l'utilisation de la programmation
 pour un usage scientifique. 
@@ -43,14 +52,19 @@ Trois séances sont centrées sur trois algorithmes.
 Lorsqu'un problème paraît compliqué ou qu'un algorithme est trop long, 
 il y a deux questions qu'on doit se poser en premier pour entrevoir une solution. 
 
-1. Peut-on réécrire le problème par **récurrence** ? On aboutit le plus souvent à une solution issue de la programmation dynamique. Le coût est **quadratique**.
-2. Peut-on **couper le problème en deux**, construire une solution sur chaque moitié puis recoller les solutions ? On procède de cette façon par dichotomie. Le coût est **logarithmique**.
+#. Peut-on réécrire le problème par **récurrence** ? 
+   On aboutit le plus souvent à une solution issue de la programmation dynamique. 
+   Le coût est **quadratique**.
+#. Peut-on **couper le problème en deux**, construire une solution sur 
+   chaque moitié puis recoller les solutions ? On procède de cette façon par dichotomie. 
+   Le coût est **logarithmique**.
 
 Ces deux façons de faire sont présentées durant les trois séances.
 
 - :ref:`TD 7 : Programmation dynamique <td1acenoncesession7rst>`  (:ref:`correction <td1acorrectionsession7rst>`)
 - :ref:`TD 8 : Arbre et Trie <td1acenoncesession8rst>`  (:ref:`correction <td1acorrectionsession8rst>`)
-- :ref:`TD 9 : Optimisation sous contrainte <td1acenoncesession9rst>`  (:ref:`correction <td1acorrectionsession9rst>`) (relecture conseillée à ceux qui souhaitent optimiser des portefeuilles d'actions) [#f1]_
+- :ref:`TD 9 : Optimisation sous contrainte <td1acenoncesession9rst>`  (:ref:`correction <td1acorrectionsession9rst>`) 
+  (relecture conseillée à ceux qui souhaitent optimiser des portefeuilles d'actions) [#f1]_
 
 Sessions alternatives :
 
@@ -58,6 +72,9 @@ Sessions alternatives :
   cette séance fait écho à la distance de Jaccard évoquée par :ref:`TD 4-5 : distance de Jaccard <td1acenoncesession45jaccardrst>`
 - :ref:`TD 8 : Parcours dans un graphe <td1acenoncesession8wikirootrst>` (:ref:`correction <td1acorrectionsession8wikirootrst>`)  
 
+
+TD - librairies numériques
+--------------------------
 
 Trois séances sont centrées sur les outils indispensables pour manipuler facilement les données et faire des calculs.
 Ces outils sont similaires à ceux qu'on trouve dans de nombreux languages à usage scientifique
@@ -195,9 +212,15 @@ Bibliographie
 
 * `Apprenez à programmer en Python <http://openclassrooms.com/courses/apprenez-a-programmer-en-python>`_ (openclassrooms)
 * `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
-* `Python en Prépas <http://prepas.org/ups.php?article=394>`_
 * `Python Notes <http://www.thomas-cokelaer.info/tutorials/python/index.html>`_
 * `Program Arcade Games With Python And Pygame <http://programarcadegames.com/>`_
+* `Python cours et TPs <http://mathcpge.org/index.php?option=com_content&view=article&id=55&Itemid=146>`_ (2016/04)
+* `Le Python en prépas <http://web.isen-bretagne.fr/livres/python/>`_ (2016/04)
+* `Algorithmique et programmation en CPGE <http://python-liesse.enseeiht.fr/cours/index.html>`_ (2016/04)
+
+**Exercices**
+
+*  `Quelques exercices du Project Euler <http://mathprepa.fr/python-project-euler-mpsi/>`_ (2016/04)
 
 **MOOC**
 

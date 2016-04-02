@@ -5,10 +5,10 @@
 .. index:: 2A
 
 
-2A
-==
+Python pour un Data Scientist
+=============================
 
-`Python pour un Data Scientist <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/2me-anne-formationsdiplome-95.html?id=101352>`_
+`ENSAE - OMI2F2 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/2me-anne-formationsdiplome-95.html?id=101352>`_
 
 Cours animé par :
 
@@ -36,14 +36,15 @@ La présentation
 `ENSAE 2A - Données, Machine Learning et Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_
 donne un aperçu des thèmes abordés. La page :ref:`Python pour Data Scientist <l-data2a>` 
 liste les différents modules proposés lors de ce cours.
+Le cours est évalué avec un :ref:`projet informatique <l-projinfo2a>`.
 
-DataFrame, calcul matriciel, calcul distribué, Python et autres langages sont les thèmes abordés durant les deux premières séances.
+
 
 .. index:: sérialisation, index, dataframe
 
     
-TD
-++
+TD - numpy pandas matplotlib
+++++++++++++++++++++++++++++
 
 - **TD 1 : DataFrame** 
 
@@ -62,7 +63,11 @@ TD
     - :ref:`TD 2C : IPython et commandes magiques <td2acenoncesession2crst>` (:ref:`correction <td2acorrectionsession2crst>`)
     - :ref:`TD 2D : IPython et calcul distribué <td2acenoncesession2drst>` (:ref:`correction <td2acorrectionsession2drst>`)
     - :ref:`TD 2E : Sérialisation <td2acenoncesession2erst>` (:ref:`correction <td2acorrectionsession2erst>`) (avec le module `pickle <https://docs.python.org/3.4/library/pickle.html>`_)
-    
+
+TD - machine learning
++++++++++++++++++++++
+
+
 - **TD 3-4 : machine learning, visualisation** (*modifié en 2015*)
 
     - :ref:`TD 3A : Statistiques descriptives <td2acenoncesession3arst>` (:ref:`correction <td2acorrectionsession3arst>`)
@@ -96,6 +101,10 @@ TD
       courbe ROC, précision, rappel
     - :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
     - :ref:`question_projet_2014`
+    
+
+TD - big data sans cluster
+++++++++++++++++++++++++++
 
     
 - **TD 5 : grosses données** (**nouveau en 2015**)
@@ -108,6 +117,10 @@ TD
         
     * :ref:`TD 5 : programmation fonctionnelle sur des données Twitter <td2acenoncesession5donneesnonstructureesetprogrammationfonctionnellerst>`  
       (:ref:`correction <td2acorrectionsession5donneesnonstructureesetprogrammationfonctionnellecorrigerst>`)
+      
+      
+Algorithmique ludique
++++++++++++++++++++++
     
 - **TD 6 : algorithmes et puzzles**
 
@@ -133,8 +146,6 @@ TD
           `glouton <http://fr.wikipedia.org/wiki/Algorithme_glouton>`_, `dynamique <http://fr.wikipedia.org/wiki/Programmation_dynamique>`_
         * :ref:`l-algoculture`
             
-
-Le cours sera évalué avec un :ref:`projet informatique <l-projinfo2a>`.
 
 
 Python et autres langages, personnaliser ses notebooks

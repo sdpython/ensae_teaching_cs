@@ -5,10 +5,10 @@
 .. index:: 3A
 
 
-3A
-==
+Eléments logiciels pour le traitement des données massives
+==========================================================
 
-`Eléments logiciels pour le traitement des données massives - OMI309 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/3me-anne-voies-de-spcialisation-formationsdiplome-96/data-science-cours-3a.html?id=100729>`_
+`ENSAE - OMI309 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/3me-anne-voies-de-spcialisation-formationsdiplome-96/data-science-cours-3a.html?id=100729>`_
 
 
 En cours de rédaction
@@ -19,9 +19,12 @@ Cours animé par :
 * Xavier Dupré [#f3write1]_
 * Antoine Ly [#f3write2]_
 
+Le cours est évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 
-TD
-++
+
+
+Notions et concepts
++++++++++++++++++++
     
 - :ref:`Séance 1 :  <td3acenoncesession1rst>`  (:ref:`correction <td3acorrectionsession1rst>`)
     * `liste chaînées <http://fr.wikipedia.org/wiki/Liste_cha%C3%AEn%C3%A9e>`_, `stack <http://fr.wikipedia.org/wiki/Pile_(informatique)>`_, `queue <http://en.wikipedia.org/wiki/Queue_(abstract_data_type)>`_, `dictionnaire <http://en.wikipedia.org/wiki/Associative_array>`_
@@ -114,6 +117,10 @@ TD
     * algorithme distribué, descente de gradient distributé
         * exemple des `k-means <http://fr.wikipedia.org/wiki/Algorithme_des_k-moyennes>`_ distribué
         * `GPU <http://fr.wikipedia.org/wiki/Processeur_graphique>`_
+        
+
+Séances pratiques, Map Reduce
++++++++++++++++++++++++++++++
 
 Les trois séances suivantes sont plus appliquées et dédiées à la découverte
 de `Hadoop <http://fr.wikipedia.org/wiki/Hadoop>`_, un environnement
@@ -167,8 +174,6 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
 
 
 
-
-Le cours sera évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 
 
 .. index:: PageRank, k-means, factorisation de matrice

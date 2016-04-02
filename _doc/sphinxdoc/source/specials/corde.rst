@@ -16,7 +16,7 @@ de masse nulle qui exercent une traction lorsque leur longueur dépasse un certa
 On considère une corde de longueur *L* et de masse *M*, elle est divisée en 
 *n* masses de masses :math:`\frac{M}{n}`. Ces masses sont reliées par *n-1* ressorts 
 qui exercent une traction sur les masses qu'ils relient lorsque leur 
-longueur dépasse le seuil :amth:`\frac{L}{n-1}`. Les masses sont initialement 
+longueur dépasse le seuil :math:`\frac{L}{n-1}`. Les masses sont initialement 
 placées sur une droite reliant les deux extremités fixes de la corde. 
 
 Chaque masse est soumis à une accélération égale à la somme de trois 
@@ -56,22 +56,19 @@ Pour chaque masse, on calcule une accélération :math:`a_i \in \mathbb{R}^2` et
 :math:`a_0 = a_n = 0` (les extrémités sont fixes). On met à la jour 
 comme suit :
 
-.. math::
 
-    a_i \longleftarrow (0, - m_i g) - f v_i
-    
-Si :math:`\left\Vert\overset{\longrightarrow}{p_{i-1},p_i }\right\Vert  > \frac{L}{n-1}` alors
-:math:`a_i \longleftarrow a_i + k \left[ \left\Vert\overset{\longrightarrow}{p_{i-1},p_i }\right\Vert - \frac{L}{n-1} \right] \frac{\overset{\longrightarrow}{p_{i-1},p_i }}{ \left\Vert\overset{\longrightarrow}{p_{i-1},p_i }\right\Vert }`.
 
-Si :math:`\left\Vert\overset{\longrightarrow}{p_{i+1},p_i }\right\Vert  > \frac{L}{n-1}` alors
-:math:`a_i \longleftarrow a_i + k \left[ \left\Vert\overset{\longrightarrow}{p_{i+1},p_i }\right\Vert - \frac{L}{n-1} \right] \frac{\overset{\longrightarrow}{p_{i+1},p_i }}{ \left\Vert\overset{\longrightarrow}{p_{i+1},p_i }\right\Vert }`.
+#. :math:`a_i \longleftarrow (0, - m_i g) - f v_i`
+#. Si :math:`\left\Vert\overset{\longrightarrow}{p_{i-1},p_i }\right\Vert  > \frac{L}{n-1}` alors
+   :math:`a_i \longleftarrow a_i + k \left[ \left\Vert\overset{\longrightarrow}{p_{i-1},p_i }\right\Vert - \frac{L}{n-1} \right] \frac{\overset{\longrightarrow}{p_{i-1},p_i }}{ \left\Vert\overset{\longrightarrow}{p_{i-1},p_i }\right\Vert }`.
+#. Si :math:`\left\Vert\overset{\longrightarrow}{p_{i+1},p_i }\right\Vert  > \frac{L}{n-1}` alors
+   :math:`a_i \longleftarrow a_i + k \left[ \left\Vert\overset{\longrightarrow}{p_{i+1},p_i }\right\Vert - \frac{L}{n-1} \right] \frac{\overset{\longrightarrow}{p_{i+1},p_i }}{ \left\Vert\overset{\longrightarrow}{p_{i+1},p_i }\right\Vert }`.
 
 La mise à jour des positions se fait en appliquant les lois de la mécanique :
 
 .. math::
 
-    p_i \longleftarrow p_i + v_i dt
-    v_i \longleftarrow v_i + a_i dt 
+    \begin{array}{l} p_i \longleftarrow p_i + v_i dt \\ v_i \longleftarrow v_i + a_i dt \end{array}
 
 Tant que l'algorithme n'a pas convergé, on retourne à la première étape.
-L'implémentation est faite dans le module :mod:`corde <ensae_teaching_cs.special.corde>`.
+L'implémentation est réalisée dans le module :mod:`corde <ensae_teaching_cs.special.corde>`.
