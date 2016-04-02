@@ -14,7 +14,7 @@
 
     .. raw:: html
     
-        <video width="400" autoplay="" height="400" control="" loop="">
+        <video autoplay=" control="" loop="">
         <source src="http://www.xavierdupre.fr/enseignement/complements/epidemic.mp4" type="video/mp4" />
         </video>    
         
@@ -36,7 +36,7 @@
     
     .. raw:: html
     
-        <video width="400" autoplay="" height="300" control="" loop="">
+        <video autoplay="" control="" loop="">
         <source src="http://www.xavierdupre.fr/enseignement/complements/corde.mp4" type="video/mp4" />
         </video>      
     

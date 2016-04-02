@@ -11,9 +11,9 @@ Le contenu est librement disponible sur `GitHub/ensae_teaching_cs <https://githu
 et permet à quiconque de contribuer à ce cours. 
 Il existe trois formats disponibles :
 `mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_,
-`compact/blanc <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_,
-`compact/mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
-Les changements importants sont notés sur la page :ref:`l-README` et sur le :ref:`blog <ap-main-0>` 
+`blanc <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_,
+`bleu <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
+Les changements importants sont notés sur le :ref:`blog <ap-main-0>` 
 associé à ce cours.
 
 
@@ -21,20 +21,24 @@ associé à ce cours.
 Avant-propos
 ------------
 
+Les langages `R <https://www.r-project.org/>`_ et 
+`Python <https://www.python.org/>`_ sont devenus 
+incontournables dans le domaine des statistiques.
+Ils sont simples, open source, s'apprennent rapidement, sont utilisés
+par beaucoup et dispose de nombreuses pages, blogs, listes
+de diffusions qui leur sont dédiées.
+`R <https://www.r-project.org/>`_ est le terrain de jeu préféré des chercheurs
+mais il est peu pratique pour développer un site web ou un jeu.
+`Python <https://www.python.org/>`_ est beaucoup plus polyvalent
+et de plus en plus populaire. Il est enseigné à l'ENSAE depuis 2004.
+Les premiers pas sont parfois rebutants mais on arrive vite à 
+quelque chose à condition d'y passer un peu de temps au démarrage.
+Passer les premiers jeux (voir `lesenfantscodaient.fr <http://lesenfantscodaient.fr/>`_),
+la programmation se révèle assez pratique pour traiter les données,
+les visualiser, automatiser les tâches les plus répétitives, et
+s'amuser.
 
-On programme nécessairement avec un **langage** de 
-`programmation <http://fr.wikipedia.org/wiki/Langage_de_programmation>`_.
-Ce langage a une grammaire et un vocabulaire. Il n'est pas d'une poésie
-irréprochable mais il permet d'exprimer des idées avec une précision tâtillonne.
-Comme toute langue qu'on apprend ou toute séance de solfège, 
-les premiers pas sont rebutants et on y prend peu de plaisir.
-Cela devient plus facile avec une pratique régulière. On passe alors plus de temps
-sur son idée et moins sur son programme. 
 
-Le langage Python est le langage qui demande le moins d'effort d'apprentissage. 
-Il est de plus en plus populaire comme en témoignent les 
-nombreux exemples sur Internet 
-(`Python is Now the Most Popular Introductory Teaching Language at Top U.S. Universities <http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-us-universities/fulltext>`_).
 
 
 **3 niveaux**
@@ -118,6 +122,7 @@ Des modules développés pour ces enseignements viennent compléter cet ensemble
 * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ : code nécessaires aux TDs, aux projets informatiques, Big Data, PIG
 * `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_ : installe facilement des modules
 * `pyrsslocal <http://www.xavierdupre.fr/app/pyrsslocal/helpsphinx/>`_ : lecteur de flux RSS
+* `ensae_projects <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_ : démarré à l'occasion d'un hackathon
 * `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_ : ces enseignements compilés sous forme de modules
 * `actuariat_python <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_ : contient d'autres notebooks
   et des exercices orientés un peu plus actuariat

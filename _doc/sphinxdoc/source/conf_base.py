@@ -56,7 +56,7 @@ from pyquickhelper.helpgen.default_conf import set_sphinx_variables
 set_sphinx_variables(__file__,
                      "ensae_teaching_cs",
                      "Xavier Dupré",
-                     2015,
+                     2016,
                      "sphinx_rtd_theme",
                      None,
                      locals(),
