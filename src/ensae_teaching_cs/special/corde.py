@@ -181,7 +181,7 @@ def pygame_simulation(pygame, first_click=False, folder=None,
 
     .. raw:: html
 
-        <video autoplay="" control="" loop="">
+        <video autoplay="" controls="" loop="" height="400">
         <source src="http://www.xavierdupre.fr/enseignement/complements/corde.mp4" type="video/mp4" />
         </video>
 

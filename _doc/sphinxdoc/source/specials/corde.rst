@@ -33,7 +33,7 @@ de la corde atteignant sa position d'équilibre.
 
 .. raw:: html
 
-    <video width="400" autoplay="" height="300" control="" loop="">
+    <video autoplay="" height="400" controls="" loop="">
     <source src="http://www.xavierdupre.fr/enseignement/complements/corde.mp4" type="video/mp4" />
     </video>
 
