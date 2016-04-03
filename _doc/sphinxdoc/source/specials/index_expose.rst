@@ -19,3 +19,4 @@ qu'on peut résoudre grâce à un algorithme et un peu d'imagination.
 
     corde
     puzzle_girafe
+    hermionne

@@ -118,7 +118,7 @@ class Rule:
                         break
                 return s
         else:
-            return "None"
+            return None
 
     def combine(self, cl1, cl2):
         """
