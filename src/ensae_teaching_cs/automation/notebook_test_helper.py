@@ -6,7 +6,8 @@
 import os
 import sys
 from pyquickhelper.loghelper import noLOG
-from pyquickhelper.ipythonhelper.notebook_helper import run_notebook, install_python_kernel_for_unittest
+from pyquickhelper.ipythonhelper.notebook_helper import install_python_kernel_for_unittest
+from pyquickhelper.ipythonhelper import run_notebook
 
 
 def ls_notebooks(subfolder):
