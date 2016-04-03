@@ -52,7 +52,7 @@ except ImportError:
         sys.path.append(path)
     import pyensae as skip__
 
-from pyquickhelper.ipythonhelper.notebook_helper import run_notebook
+from pyquickhelper.ipythonhelper import run_notebook
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder
 from pyquickhelper import __file__ as location
