@@ -5,9 +5,8 @@
 """
 import os
 import math
-import sys
 from pyquickhelper.loghelper import fLOG
-from ..helpers.pygame_helper import wait_event
+from ..helpers.pygame_helper import wait_event, empty_main_loop
 
 
 class Point (object):
@@ -185,6 +184,12 @@ def pygame_simulation(pygame, first_click=False, folder=None,
         <source src="http://www.xavierdupre.fr/enseignement/complements/corde.mp4" type="video/mp4" />
         </video>
 
+    Pour lancer la simulation::
+
+        from ensae_teaching_cs.special.corde import pygame_simulation
+        import pygame
+        pygame_simulation(pygame)
+
     """
     pygame.init()
     white = 255, 255, 255
@@ -206,16 +211,10 @@ def pygame_simulation(pygame, first_click=False, folder=None,
     dep = len(c.list) * (size[0] * size[0] + size[1] * size[1])
     while dep > 1e-4 and it < iter:
 
-        # keep it or the screen might freeze
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
-            if event.type == pygame.MOUSEBUTTONUP:
-                wait_event()
-
         if it % step == 0:
             if it % (step * 10) == 0:
                 fLOG("it={0}/{1} dep={2} #{3}".format(it, iter, dep, len(images)))
+            empty_main_loop(pygame)
             screen.fill(white)
             display_corde(c, screen, pygame)
             pygame.display.flip()

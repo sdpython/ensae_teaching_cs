@@ -7,10 +7,9 @@ can specify many parameters.
 import random
 import copy
 import os
-import sys
 from collections import Counter
 from pyquickhelper.loghelper import noLOG
-from ..helpers.pygame_helper import wait_event
+from ..helpers.pygame_helper import wait_event, empty_main_loop
 
 
 class Point:
@@ -405,6 +404,21 @@ def pygame_simulation(pygame, first_click=False, folder=None,
     @param      cote            @see cl EpidemicPopulation
     @param      nb              @see cl EpidemicPopulation
     @param      params          @see cl EpidemicPopulation
+
+    The simulation looks like this:
+
+    .. raw:: html
+
+        <video autoplay="" controls="" loop="" height="400">
+        <source src="http://www.xavierdupre.fr/enseignement/complements/epidemic.mp4" type="video/mp4" />
+        </video>
+
+    Pour lancer la simulation::
+
+        from ensae_teaching_cs.special.propagation_epidemic import pygame_simulation
+        import pygame
+        pygame_simulation(pygame)
+
     """
     pygame.init()
     size = cote + 200, cote
@@ -420,12 +434,7 @@ def pygame_simulation(pygame, first_click=False, folder=None,
 
     for i in range(0, iter):
 
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                sys.exit()
-            if event.type == pygame.MOUSEBUTTONUP:
-                wait_event()
-
+        empty_main_loop(pygame)
         nb = pop.evolution()
         display_population(pop, screen, pygame, font, back_ground)
         pygame.display.flip()

@@ -18,12 +18,12 @@ On considère une corde de longueur *L* et de masse *M*, elle est divisée en
 qui exercent une traction sur les masses qu'ils relient lorsque leur 
 longueur dépasse le seuil :math:`\frac{L}{n-1}`. Les masses sont initialement 
 placées sur une droite reliant les deux extremités fixes de la corde. 
-
 Chaque masse est soumis à une accélération égale à la somme de trois 
 forces qui sont son poids et les tractions exercées par les ressorts 
 auxquels elle est attachée
 
 .. image:: corde.png
+    :width: 500
 
 
 A chaque instant *t*, on peut calculer cette accélération, en déduire la vitesse 

@@ -37,7 +37,8 @@ if html_theme == "bootstrap":
         'navbar_site_name': "Site",
         'navbar_links': [
             ("XD", "http://www.xavierdupre.fr", True),
-            ("blog", "http://www.xavierdupre.fr/blog/xd_blog_nojs.html", True),
+            ("blog site", "blog/main_0000", True),
+            ("blog XD", "http://www.xavierdupre.fr/blog/xd_blog_nojs.html", True),
             ("pyensae",
              "http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html",
              True),

@@ -69,15 +69,15 @@ Contenu des enseignements
 -------------------------
 
 
-+----+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
-|    | Contenu       | Projet                                       | Présentation - Mise en perspective                                                                                                |
-+----+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 1A | :ref:`td_1a>` | :ref:`projet informatique 1A <l-projinfo1a>` | `Présentation ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_                  |
-+----+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 2A | :ref:`td_2a>` | :ref:`projet informatique 2A <l-projinfo2a>` | `Présentation ENSAE 2A - Données et machine learning <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_ |
-+----+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 3A | :ref:`td_3a>` | :ref:`projet informatique 3A <l-projinfo3a>` | `Présentation ENSAE 3A - Map/Reduce <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_                  |
-+----+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
++--------+--------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| Niveau | Contenu      | Projet                                       | Présentation - Mise en perspective                                                                                                |
++--------+--------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| 1A     | :ref:`td_1a` | :ref:`projet informatique 1A <l-projinfo1a>` | `Présentation ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_                  |
++--------+--------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| 2A     | :ref:`td_2a` | :ref:`projet informatique 2A <l-projinfo2a>` | `Présentation ENSAE 2A - Données et machine learning <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_ |
++--------+--------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| 3A     | :ref:`td_3a` | :ref:`projet informatique 3A <l-projinfo3a>` | `Présentation ENSAE 3A - Map/Reduce <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_                  |
++--------+--------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
 
 Autres liens, exercices, algorithmes, jeux de données, démonstrations...
 
@@ -89,7 +89,7 @@ Autres liens, exercices, algorithmes, jeux de données, démonstrations...
 * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
     * :ref:`Exercices d'algorithmie <l-exoalgo>`
     * :ref:`Exposés divers non abordés en cours <l-extra>`
-    * :ref:`Coups de projectecteur <l-expose-explication>`
+    * :ref:`l-expose-explication`
 * Lectures
     * :ref:`Examens passés <l-examens>` (1A)
     * :ref:`l-data2a` ou sa version allégée avec les modules qu'il faut connaître :ref:`modulesi`
@@ -232,7 +232,7 @@ Table des matières
     td_1a
     td_2a
     td_3a
-    blog/main_0000
+    blog site <blog/main_0000>
     projet_info
     informations
     biblio

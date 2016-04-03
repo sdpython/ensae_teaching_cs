@@ -24,5 +24,6 @@ def rst_table_modules():
         lambda row: classifiers2string(row["classifier"]), axis=1)
     df.columns = ["usage", "name", "kind", "version",
                   "license", "purpose", "classifier"]
-    df = df.sort_values("name")
+    df["lname"] = df["name"].apply(lambda s: s.lower())
+    df = df.sort_values("lname").drop("lname")
     return df2rst(df)

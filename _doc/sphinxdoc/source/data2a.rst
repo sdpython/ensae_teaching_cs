@@ -1,12 +1,10 @@
 
 
-.. issue.
-
 .. _l-data2a:
 
 
-Python pour un Data Scientist
-=============================
+Distribution Python pour un Data Scientist
+==========================================
 
 
 
@@ -71,7 +69,7 @@ c. Editeur de texte (pour des projets plus ambitieux, SciTE, PyCharm, PyTools, W
 Modules Python
 ++++++++++++++
 
-Les modules suivant font partie du setup proposés aux étudiants (voir plus bas).
+Les modules suivant font partie du setup proposé aux étudiants (voir plus bas).
 
 * **usage** : classification, la plus importante *DATA/ML* regroupe les modules les plus importantes
   pour faire du machine learning

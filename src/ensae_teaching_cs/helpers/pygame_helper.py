@@ -28,3 +28,20 @@ def wait_event(pygame):
                     return (KEY, event.key)
             elif event.type == pygame.QUIT:
                 return None
+
+
+def empty_main_loop(pygame):
+    """
+    remove all events in the main loop,
+    a mouse click make the program halt,
+    another click makes it start again
+
+    @param      pygame      module pygame
+    @return                 event ``pygame.QUIT``?
+    """
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            return False
+        if event.type == pygame.MOUSEBUTTONUP:
+            wait_event(pygame)
+    return True
