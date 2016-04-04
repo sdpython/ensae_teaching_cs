@@ -42,5 +42,5 @@ Et la solution est :
 .. runpython::
     :showcode:
 
-    from ensae_teaching_cs.special.hermionne_classe import solution
+    from ensae_teaching_cs.special.hermionne_classes import solution
     print(solution())
