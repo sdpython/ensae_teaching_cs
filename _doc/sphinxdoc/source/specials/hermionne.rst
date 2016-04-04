@@ -36,7 +36,7 @@ La première fonction
 :func:`solution <ensae_teaching_cs.special.hermionne.solution>`
 n'utilise que des fonctions pour trouver la solution,
 la seconde implémente le même algorithme avec des classes :
-:func:`solution <ensae_teaching_cs.special.hermionne.solution_classe>`.
+:func:`solution <ensae_teaching_cs.special.hermionne_classes.solution>`.
 Et la solution est :
 
 .. runpython::

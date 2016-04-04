@@ -9,13 +9,9 @@ Résolution d'un puzzle
 ======================
 
 
-
-
-
-
-C'est un cadeau que j'ai reçu à Noël sous forme de puzzle.
+C'est un cadeau que j'ai reçu à Noël il y a longtemps sous forme de puzzle.
 A vrai dire, je n'ai même pas essayé de résoudre le puzzle moi-même.
-Lais je me suis qu'en scannant les pièces du puzzle (au nombre de neuf), 
+Mais je me suis qu'en scannant les pièces du puzzle (au nombre de neuf), 
 je devrais être en mesure d'écrire un programme pour le résoudre à ma place. 
 Ce document décrit comment je m'y suis pris. D'abord les pièces.
 
@@ -84,22 +80,22 @@ Les classes ne sont pas indispensables d'autant plus que aucun héritage
 ne sera nécessaire dans ce cas présent. Toutefois, elles simplifient 
 la description de chaque pièce : le puzzle comporte neuf pièces qui chacune possède 
 quatre bords. Le programme contiendra trois classes : 
-:class:`PuzzleGirafeBord <ensae_teaching_cs.special.special_girafe.PuzzleGirafeBord>`, 
-:class:`PuzzleGirafePiece <ensae_teaching_cs.special.special_girafe.PuzzleGirafePiece>`, 
-:class:`PuzzleGirafe <ensae_teaching_cs.special.special_girafe.PuzzleGirafe>`, 
+:class:`PuzzleGirafeBord <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafeBord>`, 
+:class:`PuzzleGirafePiece <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafePiece>`, 
+:class:`PuzzleGirafe <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafe>`, 
 Ces trois classes contiendront à la fois des données et des méthodes qui 
 s'appliquent à ces données.
 
 Bord
 ++++
 
-La classe :class:`PuzzleGirafeBord <ensae_teaching_cs.special.special_girafe.PuzzleGirafeBord>`
+La classe :class:`PuzzleGirafeBord <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafeBord>`
 ne contient que deux attributs, *partie* qui désigne la partie du corps de la girafe 
 et *couleur*, sa couleur. Ce sont les seules données. Il n'y a pas besoin de 
 données supplémentaires pour dire si deux bords peuvent être appariés, 
 ce sera la méthode 
-:meth:`compatible <ensae_teaching_cs.special.special_girafe.PuzzleGirafeBord.compatible>`
-et incluse dans la classe :class:`PuzzleGirafeBord <ensae_teaching_cs.special.special_girafe.PuzzleGirafeBord>`. 
+:meth:`compatible <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafeBord.compatible>`
+et incluse dans la classe :class:`PuzzleGirafeBord <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafeBord>`. 
 Deux bords pourront seront compatibles s'ils ont la même couleur et des parties opposées.
 
 :: 
@@ -112,9 +108,9 @@ Piece
 
 
 Une pièce est tout d'abord composée de quatre bords, la classe 
-:class:`PuzzleGirafePiece <ensae_teaching_cs.special.special_girafe.PuzzleGirafePiece>`
+:class:`PuzzleGirafePiece <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafePiece>`
 doit nécessairement contenir une liste de quatre instances de la classe 
-:class:`PuzzleGirafeBord <ensae_teaching_cs.special.special_girafe.PuzzleGirafeBord>`.
+:class:`PuzzleGirafeBord <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafeBord>`.
 La seule difficulté consiste à préciser à quel bord de la pièce correspond le premier 
 bord de la liste. On décide de tourner dans le sens trigonométrique. 
 
@@ -134,13 +130,13 @@ son orientation (le fait de tourner la pièce de 0,90,180 ou 270 degrés)
 par rapport à sa description d'origine. Ce ne sont pas des informations 
 immuables, elles seront le résultat de la résolution du puzzle mais il faut 
 décider où placer ces informations : au sein de la classe 
-:class:`PuzzleGirafePiece <ensae_teaching_cs.special.special_girafe.PuzzleGirafePiece>`
+:class:`PuzzleGirafePiece <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafePiece>`
 ou au sein de la classe 
-:class:`PuzzleGirafe <ensae_teaching_cs.special.special_girafe.PuzzleGirafe>`. 
+:class:`PuzzleGirafe <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafe>`. 
 Il n'y a pas de meilleur choix, tout dépend de la manière de rédiger l'algorithme 
 ou de comment ces classes seront utilisées par la suite. 
 Dans notre cas, le choix est de les insérer dans la classe 
-:class:`PuzzleGirafePiece <ensae_teaching_cs.special.special_girafe.PuzzleGirafePiece>`, 
+:class:`PuzzleGirafePiece <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafePiece>`, 
 ce seront les attributs *orientation* et *position*. 
 Ce dernier mérite un peu plus d'attention car son type sera entier et 
 non un t-uple de deux entiers.
@@ -151,7 +147,7 @@ d'après la position :math:`n \in \left\{1,...,0 \right\}` :
 
 .. math::
 
-    \begin{array}{rcl} x & = & (n-1 \mod 3) + 1 \\ y & = & \left\[\frac{n-1}{3}\right\] + 1  \end{array}
+    \begin{array}{rcl} x & = & (n-1 \mod 3) + 1 \\ y & = & \left[\frac{n-1}{3}\right] + 1  \end{array}
         
 Réciproquement, la position *n* est obtenue à partir des coordonnées 
 :math:`(x,y) \in \left\{1,...,3\right\}^2` :
@@ -160,7 +156,7 @@ Réciproquement, la position *n* est obtenue à partir des coordonnées
 
     n = (y-1) * 3 + x 
     
-La position est un entier dans l'ensemble :math:`\left\{1,...9\right\}. 
+La position est un entier dans l'ensemble :math:`\left\{1,..,9\right\}`.
 Lors de la résolution, certaines pièces seront placées et d'autres pas encore. 
 La convention choisie pour une pièce non encore placée est de lui affecter 
 une position nulle. Dans ce cas, l'orientation n'a pas d'importance.
@@ -169,7 +165,7 @@ La connaissance de l'orientation et de la position de deux pièces permet
 également de savoir si elles peuvent être voisines étant donné 
 le motif de leur bord conjoint s'il existe. 
 Ce sera l'objectif de la méthode 
-:meth:`voisin_possible <ensae_teaching_cs.special.special_girafe.PuzzleGirafePiece.voisin_possible>`
+:meth:`voisin_possible <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafePiece.voisin_possible>`
 qui retourne ``True`` si les deux pièces font bon ménage ensemble. 
 Le premier test porte sur les positions des pièces et de savoir si elles sont 
 effectivement voisines. Pour cela, on calcule la différence *d* des positions. 
@@ -203,10 +199,11 @@ est l'indice du bord cherché.
 
 .. math::
 
-    \newcommand{\girafedec}[3]{ \begin{array}{ccccc} #1 &=& #2 &+& #3 \\ a' &=& a &-& o  \end{array}}
-    \begin{array}{c|c|c} & \girafedec{0}{90}{90} & \\ \hline
-    \girafedec{90}{180}{90} &  \begin{array}{c} piece \\ tournee de \\ 90 degres \end{array} & 
-    \girafedec{270}{360}{90} \\ \hline & \girafedec{180}{270}{90} & \end(array}
+    \begin{array}{c|c|c} & \girafedec{0}{90}{90} & \\ \hline 
+                        \girafedec{90}{180}{90} &  \begin{array}{c} piece \\ tournee de \\ 90 degres \end{array} & 
+                        \girafedec{270}{360}{90} \\ \hline 
+                        & \girafedec{180}{270}{90} & 
+                        \end(array}
     
 C'est la correspondance entre *a*, *o*, *a'* lorsqu'une pièce est 
 tournée de 90 degrés dans le sens trigonométrique. 
@@ -226,7 +223,7 @@ Les bords voisins sont dans le premier cas 0 et 180, dans le second,
 90 et 270 (indices *a'*). 
 
 Les autres méthodes de la classe 
-:class:`PuzzleGirafePiece <ensae_teaching_cs.special.special_girafe.PuzzleGirafePiece>`
+:class:`PuzzleGirafePiece <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafePiece>`
 concernent l'affichage et la création des pièces à partir du format 
 décrit précédemment et stocké dans un fichier texte. 
 Les autres attributs sont également liés à l'affichage, 
@@ -245,22 +242,22 @@ doivent être renseignés ; c'est à dire être compris en 1 et 9 pour la positi
 dans l'ensemble :math:`\acc{0,90,180,270}` pour l'orientation.
 
 La classe 
-:class:`PuzzleGirafe <ensae_teaching_cs.special.special_girafe.PuzzleGirafe>` 
+:class:`PuzzleGirafe <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafe>` 
 contiendra donc une liste de 
-:class:`PuzzleGirafePiece <ensae_teaching_cs.special.special_girafe.PuzzleGirafePiece>`
+:class:`PuzzleGirafePiece <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafePiece>`
 précédemment décrite et incluera les méthodes nécessaires à la résolution du puzzle. 
 La description du principe général de la résolution interviendra après celles 
 de méthodes simples de la classe 
-:class:`PuzzleGirafe <ensae_teaching_cs.special.special_girafe.PuzzleGirafe>`.
+:class:`PuzzleGirafe <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafe>`.
 
 
-:meth:`piece_position <ensae_teaching_cs.special.special_girafe.PuzzleGirafe.piece_position>`
+:meth:`piece_position <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafe.piece_position>`
 
 La liste résultante n'est pas forcément ordonnée en ce sens que la pièce en première position 
 dans la liste n'est pas forcément la première pièce du puzzle. 
 C'est l'attribut *position* de chaque pièce qui détermine la position de celle-ci. 
 La méthode 
-:meth:`piece_position <ensae_teaching_cs.special.special_girafe.PuzzleGirafe.piece_position>`
+:meth:`piece_position <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafe.piece_position>`
 retourne la pièce à une certaine position donnée ou 
 ``None`` si l'algorithme n'a pas encore posé de pièce à cet endroit.
 
@@ -272,12 +269,12 @@ retourne la pièce à une certaine position donnée ou
                 return p
         return None
 
-:meth:`ensemble_voisin <ensae_teaching_cs.special.special_girafe.PuzzleGirafe.ensemble_voisin>`
+:meth:`ensemble_voisin <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafe.ensemble_voisin>`
 
 Cette méthode a pour objectif de retourner la liste des positions voisines à une 
 position donnée.
 
-.. image:: s4vois
+.. image:: s4vois.png
 
 
 ::
@@ -298,7 +295,7 @@ position donnée.
         return [ j+1 for j in res ]
 
 
-:meth:`angle_possible <ensae_teaching_cs.special.special_girafe.PuzzleGirafe.angle_possible>`
+:meth:`angle_possible <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafe.angle_possible>`
 
 
 Il s'agit ici de déterminer une orientation possible pour la pièce ``p`` sachant 
@@ -440,14 +437,14 @@ Le principe de la résolution repose sur la récurrence de la méthode
 \codes{solution}. 
 Il y a 4x9 possibilités pour le choix en première position. 
 La méthode 
-:meth:`solution <ensae_teaching_cs.special.special_girafe.PuzzleGirafe.solution>`
+:meth:`solution <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafe.solution>`
 en choisit une puis appelle la méthode 
-:meth:`solution <ensae_teaching_cs.special.special_girafe.PuzzleGirafe.solution>`
+:meth:`solution <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafe.solution>`
 sur la seconde position, si celle-ci retourne ``True`` alors ce premier 
 choix était le bon, sinon on passe au choix suivant. 
 Au second appel, une pièce est choisie pour la seconde position puis on 
 appelle encore la méthode 
-:meth:`solution <ensae_teaching_cs.special.special_girafe.PuzzleGirafe.solution>`.
+:meth:`solution <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafe.solution>`.
 Le schéma est le suivant :
 
 * On calcule la liste des choix pour la position *p*.
@@ -455,19 +452,19 @@ Le schéma est le suivant :
   il n'y a pas de solution possible dans cette voie.
 * Sinon on choisit la première possibilité.
 * On appelle la méthode 
-  :meth:`solution <ensae_teaching_cs.special.special_girafe.PuzzleGirafe.solution>`
+  :meth:`solution <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafe.solution>`
   pour la position :math:`p+1`.
 * Si cette méthode retourne ``True``, une solution a été trouvée.
 * Sinon, on passe au choix suivant jusqu'à ce qu'il n'y en ait plus.
 
 L'implémentation proposée ne suit pas tout-à-fait ce schéma puisqu'on ne calcule pas 
 l'ensemble des choix possibles au début de la méthode 
-:meth:`solution <ensae_teaching_cs.special.special_girafe.PuzzleGirafe.solution>`
+:meth:`solution <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafe.solution>`
 mais on calcule un premier choix 
-:meth:`meilleur_choix <ensae_teaching_cs.special.special_girafe.PuzzleGirafe.meilleur_choix>`
+:meth:`meilleur_choix <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafe.meilleur_choix>`
 en tenant des compte des pièces déjà placées dans la liste ``free``. 
 Si la solution finale utilise cette pièce, c'est terminé sinon, la fonction 
-:meth:`meilleur_choix <ensae_teaching_cs.special.special_girafe.PuzzleGirafe.meilleur_choix>`
+:meth:`meilleur_choix <ensae_teaching_cs.special.puzzle_girafe.PuzzleGirafe.meilleur_choix>`
 est appelée une seconde fois pour obtenir un second choix de pièce en tenant 
 compte des pièces placées et essayées. 
 
