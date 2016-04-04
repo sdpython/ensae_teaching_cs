@@ -199,11 +199,7 @@ est l'indice du bord cherché.
 
 .. math::
 
-    \begin{array}{c|c|c} & \girafedec{0}{90}{90} & \\ \hline 
-                        \girafedec{90}{180}{90} &  \begin{array}{c} piece \\ tournee de \\ 90 degres \end{array} & 
-                        \girafedec{270}{360}{90} \\ \hline 
-                        & \girafedec{180}{270}{90} & 
-                        \end(array}
+    \begin{array}{c|c|c} & \girafedec{0}{90}{90} & \\ \hline \girafedec{90}{180}{90} &  \begin{array}{c} piece \\ tournee de \\ 90 degres \end{array} &  \girafedec{270}{360}{90} \\ \hline  & \girafedec{180}{270}{90} &  \end(array}
     
 C'est la correspondance entre *a*, *o*, *a'* lorsqu'une pièce est 
 tournée de 90 degrés dans le sens trigonométrique. 
