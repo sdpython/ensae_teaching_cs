@@ -74,21 +74,7 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
     zipfilename = os.path.join(folder, zipfilename)
     zipfilenameenc = zipfilename + ".enc"
 
-    if os.path.exists(filemails):
-        fLOG("### read addresses from ", filemails)
-        with open(filemails, "r", encoding="utf8") as f:
-            lines = f.readlines()
-        emails = [l.strip("\r\t\n ") for l in lines]
-    else:
-        fLOG("### mine address ")
-        box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
-        box.login()
-        emails = grab_addresses(box, mailfolder, date, fLOG=fLOG)
-        box.logout()
-
-        with open(filemails, "w", encoding="utf8") as f:
-            f.write("\n".join(emails))
-
+    # load the groups
     if isinstance(dataframe, pandas.DataFrame):
         df = dataframe
     elif dataframe.endswith("xlsx"):
@@ -97,6 +83,27 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
     else:
         df = pandas.read_csv(dataframe, sep="\t", encoding="utf8")
 
+    # check mails
+    if "mail" not in columns:
+        if os.path.exists(filemails):
+            fLOG("### read addresses from ", filemails)
+            with open(filemails, "r", encoding="utf8") as f:
+                lines = f.readlines()
+            emails = [l.strip("\r\t\n ") for l in lines]
+        else:
+            fLOG("### mine address ")
+            box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
+            box.login()
+            emails = grab_addresses(box, mailfolder, date, fLOG=fLOG)
+            box.logout()
+
+            with open(filemails, "w", encoding="utf8") as f:
+                f.write("\n".join(emails))
+    else:
+        # nothing to do mail already present
+        emails = set(df[columns["mail"]])
+
+    # we remove empty names
     df = df[~df[columns["name"]].isnull()].copy()
 
     if process_name:
@@ -111,7 +118,7 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
                                                                 "subject"], fLOG=fLOG, col_group=columns["group"],
                                                             col_student=columns[
                                                                 "name"], email_function=emails, skip_if_nomail=False,
-                                                            must_have_email=True, skip_names=skip_names)
+                                                            col_mail=columns["mail"], must_have_email=True, skip_names=skip_names)
     fLOG("### nb groups", len(proj.Groups))
 
     # gathers mails

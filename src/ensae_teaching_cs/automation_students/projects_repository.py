@@ -386,6 +386,7 @@ class ProjectsRepository:
                                       col_student="Eleves",
                                       col_group="Groupe",
                                       col_subject="Sujet",
+                                      col_mail=None,
                                       overwrite=False,
                                       email_function=None,
                                       must_have_email=True,
@@ -399,6 +400,7 @@ class ProjectsRepository:
         @param      col_student         column which contains the student name (firt name + last name)
         @param      col_group           index of the group (it can be None if each student is a group)
         @param      col_subject         column which contains the subject
+        @param      col_mail            if there is a column which contains the mail in the input dataframe
         @param      df                  DataFrame
         @param      email_function      function which infers email from first and last names, see below
         @param      report              report file
@@ -423,8 +425,26 @@ class ProjectsRepository:
             return ProjectsRepository.match_mails(names, email_function,
                                                   exc=False, skip_names=skip_names)
 
-        if isinstance(email_function, list):
-            local_function = local_email_function
+        def local_email_function_column(names, skip_names, mapping):
+            res = []
+            skip = False
+            for name in names:
+                if skip_names is not None and name in skip_names:
+                    skip = True
+                r = mapping.get(name, None)
+                if r:
+                    res.append(r)
+            return res, skip
+
+        if isinstance(email_function, (list, set)):
+            if col_mail is None:
+                local_function = local_email_function
+            else:
+                mapping = {}
+                for row in df.itertuples():
+                    mapping[getattr(row, col_student)] = getattr(row, col_mail)
+                local_function = lambda names, skip, mapping=mapping: local_email_function_column(
+                    names, skip_names, mapping)
         else:
             local_function = email_function
 

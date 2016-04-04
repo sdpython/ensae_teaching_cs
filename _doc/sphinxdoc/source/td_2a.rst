@@ -2,11 +2,11 @@
 
 .. _l-td2a:
 
-.. index:: 2A
-
 
 Python pour un Data Scientist
 =============================
+
+.. index:: 2A
 
 `ENSAE - OMI2F2 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/2me-anne-formationsdiplome-95.html?id=101352>`_
 

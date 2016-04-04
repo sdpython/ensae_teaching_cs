@@ -157,7 +157,7 @@ est la plus répandue. Voir également
 
 **Environnement de travail**
 
-.. index:: éditeur, IDE, rodeo, spyder, pycharm, r, r studio, scite
+.. index:: éditeur, IDE, rodeo, spyder, pycharm, R, R studio, scite
 
 * `SciTe <http://www.scintilla.org/SciTE.html>`_, le plus simple et le plus léger,
   lire cet article pour le configurer

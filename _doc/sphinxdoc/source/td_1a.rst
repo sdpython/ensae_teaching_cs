@@ -3,10 +3,12 @@
 
 .. _l-td1a:
 
-.. index:: 1A
+
 
 Algorithmes et programmation
 ============================
+
+.. index:: 1A
 
 `ENSAE - OMI1C4 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100115>`_,
 `ENSAE - OMI1C9 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100332>`_
