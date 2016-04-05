@@ -67,12 +67,3 @@ Versions
     * **add:** add a blog
 * **0.5 - 2014/08/31**
     * **new:** first version
-
-
-Vieilles versions
------------------
-
-* `année 2004-2011 <http://www.xavierdupre.fr/enseignement/td_python/python_td_simple/index.html>`_
-* `année 2011-2013 <http://www.xavierdupre.fr/enseignement/td_python/python_td_minute/index.html>`_
-* `année 2013-2014 <http://www.xavierdupre.fr/site2013/enseignements/index.html>`_
-    
