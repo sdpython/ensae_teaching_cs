@@ -49,52 +49,22 @@ a. Installation :
     - `WinPython <http://winpython.sourceforge.net/>`_ (seulement sur Windows, moins rapide au niveau des mises à jour que Anaconda)
     - `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_ 
     - `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_
+      (utilisé pour construire ce `setup <http://www.xavierdupre.fr/enseignement/>`_)
+    - `Instructions pour installer ces modules sous Linux/Mac <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-08-30_install_linux.html>`_
 b. Environnements
     - `IDLE <https://docs.python.org/3.4/library/idle.html>`_
     - `ligne de commande IPython <http://ipython.org/ipython-doc/2/interactive/reference.html>`_
     - `Spyder <http://pythonhosted.org//spyder/>`_  (environnement de type `RStudio <http://www.rstudio.com/>`_)
     - `Rodeo <https://pypi.python.org/pypi/rodeo>`_  (Spyder version web et épurée)
     - `Notebooks <http://ipython.org/notebook.html>`_
-c. Editeur de texte (pour des projets plus ambitieux, SciTE, PyCharm, PyTools, WingIDE)
+c. Editeur de texte (pour des projets plus ambitieux, SciTE, PyCharm, PTVS, WingIDE)
     - `Scite <http://www.scintilla.org/SciTE.html>`_
     - `Notepad++ <https://notepad-plus-plus.org/>`_
     - `SublimeText <http://www.sublimetext.com/>`_
     - `PyCharm <http://www.jetbrains.com/pycharm/>`_
-    - `PyTools <http://pytools.codeplex.com/>`_
+    - `PTVS <http://microsoft.github.io/PTVS/>`_
     - `WingIDE <https://wingware.com/>`_ (version académique `Wing IDE 101 <https://wingware.com/downloads/wingide-101>`_)
         
-
-.. index:: wheel
-
-Modules Python
-++++++++++++++
-
-Les modules suivant font partie du setup proposé aux étudiants (voir plus bas).
-
-* **usage** : classification, la plus importante *DATA/ML* regroupe les modules les plus importantes
-  pour faire du machine learning
-* **name** : nom du module
-* **kind** : façon d'installer le module sous Windows, si c'est *wheel*, cela signifie
-  que le module inclut une partie C++ qu'il est préférable de récupérer déjà compilée
-  via le site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
-* **version** : la version à installer car d'autres peuvent provoquer des conflits
-* **license** : license du module, toutes ne permettent pas un usage commercial,
-  voir `choose a license <http://choosealicense.com/licenses/>`_, 
-  `licences commentées <http://www.gnu.org/licenses/license-list.fr.html>`_
-* **purpose** : description plus détaillée
-
-
-.. runpython::
-    :showcode:
-    :rst:
-    
-    from ensae_teaching_cs.automation import rst_table_modules
-    print(rst_table_modules())
-
-Liens :
-
-* `ENSAE, Python Setup <http://www.xavierdupre.fr/enseignement/>`_ (Windows)
-* `Instruction pour installer ces modules sous Linux/Mac <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-08-30_install_linux.html>`_
 
 
 Quelques articles
@@ -137,3 +107,33 @@ Quelques liens
     - `Scikit-Learn: Machine Learning en Python <http://www.microsoft.com/france/mstechdays/programmes/2014/fiche-session.aspx?ID=295be946-2c69-458a-8545-bcebe7970fd8>`_
     - `PyVideo <http://www.pyvideo.org/>`_
     - `PyData TV <https://www.youtube.com/user/PyDataTV>`_
+
+
+.. index:: wheel
+
+Modules Python
+++++++++++++++
+
+Les modules suivant font partie du setup proposé aux étudiants (voir plus bas).
+
+* **usage** : classification, la plus importante *DATA/ML* regroupe les modules les plus importantes
+  pour faire du machine learning
+* **name** : nom du module
+* **kind** : façon d'installer le module sous Windows, si c'est *wheel*, cela signifie
+  que le module inclut une partie C++ qu'il est préférable de récupérer déjà compilée
+  via le site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
+* **version** : la version à installer car d'autres peuvent provoquer des conflits
+* **license** : license du module, toutes ne permettent pas un usage commercial,
+  voir `choose a license <http://choosealicense.com/licenses/>`_, 
+  `licences commentées <http://www.gnu.org/licenses/license-list.fr.html>`_
+* **purpose** : description plus détaillée
+
+
+.. runpython::
+    :showcode:
+    :rst:
+    
+    from ensae_teaching_cs.automation import rst_table_modules
+    print(rst_table_modules())
+
+

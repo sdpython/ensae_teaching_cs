@@ -9,29 +9,26 @@ Modules intéressants (pour un ENSAE)
 
 Les modules indispensables sont intégrés à la distribution 
 `Anaconda <http://continuum.io/downloads#py34>`_ ou `WinPython <http://winpython.sourceforge.net/>`_.
-Une autre solution est d'utiliser le module
-`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_ ::
+Une autre solution est d'installer le module
+`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
+puis d'exécuter la commande depuis de répertoire *Scripts* ::
 
-    from pymyinstall import datascientist
-    datascientist ("install")
+    pymy_install
+    
+Pour les mettre à jour ::
+
+    pymy_update
+
         
-Cela suppose que `pip <http://pip.readthedocs.org/en/latest/>`_ est installé 
-(c'est le cas à partir de la version Python 3.4).
-Tous ces modules ont quelques dépendances optionnelles 
-qui ne sont pas incluses dans cette liste mais dont l'usage est rare.
-
 Parmi ces trois options, `Anaconda <http://continuum.io/downloads#py34>`_ est la plus à jour
-et la plus réactive. `pymyinstall <https://github.com/sdpython/pymyinstall/blob/master/src/pymyinstall/packaged/packaged_config.py>`_ 
-contient la liste de tous les modules utilisés pour ces enseignements ::
-
-    from pymyinstall import datascientist
-    datascientist ("install", azure = True)
+et la plus réactive. `pymyinstall <https://github.com/sdpython/pymyinstall/>`_ 
+est développé pour ces cours et contient la liste de tous les modules utilisés pour ces enseignements
         
 
 Les indispensables
 ------------------
 
-* `ipython <http://ipython.org/index.html>`_ : gestion des notebooks (des pages blanches mélangeant code, équations, graphiques)
+* `Jupyter <http://jupyter.org/>`_ : gestion des notebooks (des pages blanches mélangeant code, équations, graphiques)
 * `matplotlib <http://matplotlib.org/>`_ : graphes scientifiques
 * `numpy <http://www.numpy.org/>`_ : calcul matriciel
 * `pandas <http://pandas.pydata.org/>`_ : gestion de `DataFrame <http://en.wikipedia.org/wiki/Data_frame>`_
@@ -40,7 +37,7 @@ Les indispensables
 Autres dépendances
 ------------------
 
-**ipython :**
+**jupyter**
 
 * `python-dateutil <https://labix.org/python-dateutil>`_ : boîte à outils pour les dates
 * `jinja2 <http://jinja.pocoo.org/>`_ : moteur de rendu HTML
@@ -48,21 +45,22 @@ Autres dépendances
 * `six <https://pythonhosted.org/six/>`_ : librairie de conversion entre Python 2 et 3
 * `tornado <http://www.tornadoweb.org/en/stable/>`_ : server web
     
-**plugin ipython :**
+**plugin jupyter**
 
 * `ipyD3 <https://github.com/z-m-k/ipyD3>`_ : plugin pour utiliser `d3.js <http://d3js.org/>`_ dans iPython
 * `mpld3 <http://mpld3.github.io/>`_ : pour afficher un graph Matplotlib sous forme de graphe `d3.js <http://d3js.org/>`_
+* `qgrid <https://pypi.python.org/pypi/qgrid>`_ : pour afficher des dataframe interactifs
     
 Visualisation
 -------------
 
-*Visualisation des données :*
+*Visualisation des données*
 
 * `matplotlib <http://matplotlib.org/>`_ : graphes scientifiques
 * `seaborn <http://stanford.edu/~mwaskom/software/seaborn/>`_ (nécessite matplotlib)
 * `networkx <http://networkx.github.io/>`_ : dessin de graphes (simple)
     
-*Jeux :*
+*Jeux*
 
 * `pygame <http://www.pygame.org/>`_ 
 * `kivy <http://kivy.org/#home>`_ : pour faire des jeux ou des applications pour tablettes, téléphones
@@ -100,7 +98,7 @@ Python et autres langages
 -------------------------
 
 * `Cython <http://www.cython.org/>`_ : Python et C++
-* `pythonnet <http://pythonnet.sourceforge.net/>`_ : Python et C# (pour Windows, utiliser `sdpython/pythonnet <https://github.com/sdpython/pythonnet>`_)
+* `pythonnet <https://github.com/pythonnet/pythonnet>`_ : Python et C# (pour Python 3.5, voir aussi `sdpython/pythonnet3 <https://github.com/sdpython/pythonnet3>`_)
 * `rpy2 <https://bitbucket.org/lgautier/rpy2>`_ : Python et R
     
 Internet / SSH
@@ -109,9 +107,10 @@ Internet / SSH
 * `requests <http://docs.python-requests.org/>`_ : pratique pour se débrouiller avec internet (`exemples <http://docs.python-requests.org/en/latest/user/quickstart/#redirection-and-history>`_)
 * `paramiko <http://www.paramiko.org/>`_ : utile pour créer une connexion SSH
 * `ecdsa <https://pypi.python.org/pypi/pycrypto/>`_ : dépendance de paramiko
-* `pycrypto <https://pypi.python.org/pypi/pycrypto/>`_ : dépendance de paramiko
+* `pycryptodomex <https://pypi.python.org/pypi/pycryptodomex/>`_ : crypographie
 * `ansiconv <http://pythonhosted.org/ansiconv/>`_ : conversion de texte ANSI en unicode (sortie linux)
 * `ansi2html <https://github.com/ralphbean/ansi2html/>`_ : conversion de texte ANSI en HTML (sortie linux)
+* `BeautifulSoup <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_ : parser du HTML
           
 
 Pour faire du machine learning sans programmer
