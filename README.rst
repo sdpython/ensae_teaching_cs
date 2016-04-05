@@ -52,7 +52,10 @@ Started in 2014/04.
 Versions
 --------
 
-* **0.7 - 2016/??/??**
+* **0.8 - 2016/??/??**
+    * **add:** add code for enigma, puzzle, simulation
+    * **add:** function *make_video* to create a video
+* **0.7 - 2016/03/01**
     * **new:** code to produce a Python distribution which includes R, Python, ...
     * **new:** refactoring, FAQ, fonction jupyter_open_notebook
 * **0.6 - 2015/06/03**
