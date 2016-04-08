@@ -82,7 +82,7 @@ qui est l'opérateur ``ET``.
 ::
 
     for i in range(4**7):
-        l = [(i >> (2*k)  & 4 for k in range(0,7)]
+        l = [(i >> (2*k) & 4 for k in range(0,7)]
         
 Pour chaque des solutions, utilise une fonction qui vérifie les cinq règles du programme :
 

@@ -69,7 +69,10 @@ set_sphinx_variables(__file__,
 # import pymmails
 # import pyrsslocal
 
-imgmath_latex_preamble += "\n\\newcommand{\\girafedec}[3]{ \\begin{array}{ccccc} #1 &=& #2 &+& #3 \\\\ a' &=& a &-& o  \\end{array}}"
+imgmath_latex_preamble += """\n\\newcommand{\\girafedec}[3]{ \\begin{array}{ccccc} #1 &=& #2 &+& #3 \\\\ a' &=& a &-& o  \\end{array}}
+            \\newcommand{\\vecteur}[2]{\\pa{#1,\\dots,#2}}
+            \\newcommand{\\R}[0]{\\mathbb{R}}
+            """
 
 project_var_name_t = "ENSAE<br />Xavier Dupré"
 project_var_name = "ensae_teaching_cs"
