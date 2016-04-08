@@ -129,3 +129,4 @@ que les potions cases 2 et 6 sont identiques. ::
             solutions.append(l)
     print(solutions)
     
+On parcourt 4 fois moins de solutions.

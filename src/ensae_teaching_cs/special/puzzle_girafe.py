@@ -502,10 +502,7 @@ def pygame_simulation(pygame, first_click=False, folder=None,
     # on rafraîchit l'écran pour que le puzzle apparaissent
     pygame.display.flip()
 
-    if folder is not None:
-        images = []
-    else:
-        images = None
+    images = [] if folder is not None else None
 
     # on trouve la solution
     r = p.solution(screen=screen, pygame=pygame, images=images, delay=delay)
