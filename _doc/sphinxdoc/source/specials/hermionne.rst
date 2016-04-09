@@ -70,9 +70,12 @@ Soit :
 
 .. runpython::
 
-    for i in range(7):
-        l = [(i % (4**k)) // (4**(k-1)) for k in range(1,8)]
+    for ri in range(9):
+        l = []
+        for k in range(1, 8):
+            l.append((ri % (4**k)) // (4**(k-1)))
         print(l)
+    print("...")
 
 Cela revient à écrire un nombre entier en base 4. Comme 4 est une puissance
 de deux, on peut utiliser des opérateurs binaires ``>>`` qui déplacent les bits
