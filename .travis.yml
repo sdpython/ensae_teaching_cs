@@ -10,6 +10,7 @@ addons:
     - gfortran
     - libhdf5-serial-dev
     - python-opencv
+    - python-pygame
 install: 
     - pip install -r requirements.txt
     - pip install -U git+https://github.com/quantopian/qgrid --no-deps
@@ -17,6 +18,5 @@ install:
     - pip install -r requirements_scikit.txt
     - pip install -r requirements_scikit2.txt
     - pip install -r requirements_ext.txt
-    - pip install -r requirements_video.txt
 script:
     - python setup.py unittests
