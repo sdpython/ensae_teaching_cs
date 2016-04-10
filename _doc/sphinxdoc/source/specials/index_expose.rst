@@ -22,3 +22,4 @@ qu'on peut résoudre grâce à un algorithme et un peu d'imagination.
     puzzle_girafe
     hermionne
     tsp_kohonen
+    graph_distance

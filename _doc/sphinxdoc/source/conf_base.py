@@ -73,6 +73,7 @@ imgmath_latex_preamble += """\n\\newcommand{\\girafedec}[3]{ \\begin{array}{cccc
             \\newcommand{\\vecteur}[2]{\\pa{#1,\\dots,#2}}
             \\newcommand{\\R}[0]{\\mathbb{R}}
             \\newcommand{\\R}[0]{\\mathbb{N}}
+            \\newcommand{\\indicatrice}[1]{\\mathbf{1\!\!1}_{\\acc{#1}}}
             """
 
 project_var_name_t = "ENSAE<br />Xavier Dupré"

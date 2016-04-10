@@ -55,6 +55,8 @@ Versions
 * **0.8 - 2016/??/??**
     * **add:** add code for enigma, puzzle, simulation
     * **add:** function *make_video* to create a video
+    * **add:** function to call graphviz
+    * **add:** add many *coup de projecteur* (old but refreshed work)
 * **0.7 - 2016/03/01**
     * **new:** code to produce a Python distribution which includes R, Python, ...
     * **new:** refactoring, FAQ, fonction jupyter_open_notebook
