@@ -28,6 +28,7 @@ commerce, les temps de préparation entre deux tâches jouent le rôle de distan
 
 
 .. image:: checour6.png
+    :height: 300
 
 Il existe plusieurs algorithmes pour déterminer ce plus court chemin. 
 Deux seront présentés. Le premier est celui des cartes de 
@@ -42,6 +43,7 @@ de l'ensemble des villes, les deux méthodes proposées sont deux manières
 différentes d'explorer l'ensemble des permutations possibles.
 
 .. image:: checour300.png
+    :height: 300
 
 *Plus court chemin passant par les 300 villes, solution retournée par l'algorithme
 de Kohonen. Certaines erreurs cerclées de noir sont évidentes comme deux segments du 
@@ -88,6 +90,7 @@ la recherche de mot-clé dans un texte, l'analyse en composantes principales (AC
 
 
 .. image:: som1.png
+    :height: 300
 
 Exemple de cartes de Kohonen après convergence. Il s'agit de projeter dans un plan
 un nuage de points en trois dimensions.	Chaque neurone possède six voisins. Plane au départ,
@@ -97,6 +100,7 @@ papillon. Ces figures sont tirées de l'article
 `Clustering of the Self-Organizing Map <http://lib.tkk.fi/Diss/2002/isbn951226093X/article4.pdf>`_.
 
 .. image:: som2.png
+    :height: 300
 
 
 On suppose qu'un chemin est constitué de points ou neurones, 
