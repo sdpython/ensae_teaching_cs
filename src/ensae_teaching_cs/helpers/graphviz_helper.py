@@ -35,23 +35,23 @@ def run_graphviz(filename, image, engine="dot"):
     return out
 
 
-def draw_graph_graphviz(vertices, edges, image, engine="dot"):
+def edges2gv(vertices, edges):
     """
-    dessine un graph en utilisant `Graphviz <http://www.graphviz.org/>`_,
+    converts a graph into a graphviz file format
 
     @param      edges           see below
     @param      vertices        see below
-    @param      image           output image
-    @param      engine          *dot* or *neato*
-    @return                     output of graphviz
+    @return                     gv format
 
     The function creates a file ``<image>.gv``.
 
-    ::
+    .. runpython::
+        :showcode:
 
-        edges    = [ (1,2, label, couleur), (3,4), (1,3), ... ]  , liste d'arcs
-        vertices = [ (1, label, couleur), (2), ... ]  , liste de noeuds
-        image = nom d'image (format png)
+        from ensae_teaching_cs.helpers.graphviz_helper import edges2gv
+        gv = edges2gv([(1, "eee", "red")],
+                      [(1, 2, "blue"), (3, 4), (1, 3)])
+        print(gv)
 
     """
     memovertex = {}
@@ -93,7 +93,29 @@ def draw_graph_graphviz(vertices, edges, image, engine="dot"):
     li.append("}")
 
     text = "\n".join(li)
+    return text
 
+
+def draw_graph_graphviz(vertices, edges, image, engine="dot"):
+    """
+    dessine un graph en utilisant `Graphviz <http://www.graphviz.org/>`_,
+
+    @param      edges           see below
+    @param      vertices        see below
+    @param      image           output image
+    @param      engine          *dot* or *neato*
+    @return                     output of graphviz
+
+    The function creates a file ``<image>.gv``.
+
+    ::
+
+        edges    = [ (1,2, label, couleur), (3,4), (1,3), ... ]  , liste d'arcs
+        vertices = [ (1, label, couleur), (2), ... ]  , liste de noeuds
+        image = nom d'image (format png)
+
+    """
+    text = edges2gv(vertices, edges)
     filename = image + ".gv"
     with open(filename, "w", encoding="utf-8") as f:
         f.write(text)
