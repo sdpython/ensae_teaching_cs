@@ -213,16 +213,20 @@ class Graph:
                 vert[k[0]] += 1
         for r in roots:
             if self.labelBegin not in self.vertices:
-                self.vertices[self.labelBegin] = Vertex(self.labelBegin, self.labelBegin, weight_vertex)
+                self.vertices[self.labelBegin] = Vertex(
+                    self.labelBegin, self.labelBegin, weight_vertex)
             if r != self.labelBegin:
-                self.edges[self.labelBegin, r] = Edge(self.labelBegin, r, "", weight_edge)
+                self.edges[self.labelBegin, r] = Edge(
+                    self.labelBegin, r, "", weight_edge)
 
         leaves = [k for k, v in vert.items() if v == 0]
         for r in leaves:
             if self.labelEnd not in self.vertices:
-                self.vertices[self.labelEnd] = Vertex(self.labelEnd, self.labelEnd, weight_vertex)
+                self.vertices[self.labelEnd] = Vertex(
+                    self.labelEnd, self.labelEnd, weight_vertex)
             if r != self.labelEnd:
-                self.edges[r, self.labelEnd] = Edge(r, self.labelEnd, "", weight_edge)
+                self.edges[r, self.labelEnd] = Edge(
+                    r, self.labelEnd, "", weight_edge)
 
     def get_order_vertices(self):
         edges = self.edges

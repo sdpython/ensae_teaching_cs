@@ -69,7 +69,7 @@ Before describing the edit distance, let's denote :math:`p_1` as a path
 from the first graph, :math:`p_2` as a path from the second one. 
 :math:`p_k(i)` is the element *i* of this sequence. Following Levenstein description, 
 we denote *d(i,j)* as the distance between the two subsequences 
-:math:`$p_1(1..i), p_2(1..j)`. Based on that, we use an edit distance defined as follows:
+:math:`p_1(1..i), p_2(1..j)`. Based on that, we use an edit distance defined as follows:
 
 .. math::
 
@@ -147,7 +147,7 @@ Step 3: Matching
 Now that we have a kind of bijection between paths, it also means we have a series 
 of alignments between paths: one from the first graph, one from the second 
 graph and an alignment between them computed during the step. 
-We build two matrices, one for the edges $M_e$, one for 
+We build two matrices, one for the edges :math:`M_e`, one for 
 the vertices :math:`M_v` defined as follows:
 
 * :math:`M_e(i,j)` contains the number of times edge *i* from graph 1 
@@ -175,8 +175,8 @@ What's left is to add the left over to the picture which is shown by next Figure
 *Red and symbol - means deleted from graph~1 and not present in graph 2. 
 Green and symbol + means not present in graph 1 and added in graph 2. 
 The black pieces remains unchanged.*
-        														}}
-    
+
+
 The main drawback of this algorithm is its speed. It is very time consuming. 
 We need to compute distances between all paths which is ok when graphs are small but very long 
 when graphs are bigger. Many paths share the same beginning and we could certainly 
