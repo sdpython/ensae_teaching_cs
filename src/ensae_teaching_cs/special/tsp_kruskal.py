@@ -12,7 +12,7 @@ import math
 import os
 from pyquickhelper.loghelper import noLOG
 from .tsp_bresenham import draw_line
-from ..helpers.pygame_helper import wait_event
+from ..helpers.pygame_helper import wait_event, empty_main_loop
 
 
 def construit_ville(n, x=1000, y=700):
@@ -49,6 +49,55 @@ def distance(p1, p2):
     x = p1[0] - p2[0]
     y = p1[1] - p2[1]
     return math.sqrt(x * x + y * y)
+
+
+def vecteur_points(p1, p2):
+    """
+    retourne le vecteur entre les points p1 et p2
+    """
+    return (p2[0] - p1[0], p2[1] - p1[1])
+
+
+def vecteur_norme(vec):
+    """
+    retourne la norme d'un vecteur
+    """
+    return math.sqrt(vec[0] * vec[0] + vec[1] * vec[1])
+
+
+def vecteur_cosinus(vec1, vec2):
+    """
+    retourne le cosinus entre deux vecteurs, utilise le produit scalaire
+    """
+    norm1 = vecteur_norme(vec1)
+    norm2 = vecteur_norme(vec2)
+    if norm1 == 0:
+        return 1
+    if norm2 == 0:
+        return 1
+    scal = vec1[0] * vec2[0] + vec1[1] * vec2[1]
+    return scal / (norm1 * norm2)
+
+
+def vecteur_sinus(vec1, vec2):
+    """
+    retourne le sinus entre deux vecteurs, utilise le produit vectoriel
+    """
+    norm1 = vecteur_norme(vec1)
+    norm2 = vecteur_norme(vec2)
+    if norm1 == 0:
+        return 0
+    if norm2 == 0:
+        return 0
+    scal = vec1[0] * vec2[1] - vec1[1] * vec2[0]
+    return scal / (norm1 * norm2)
+
+
+def oppose_vecteur(vec):
+    """
+    retourne le vecteur opposé
+    """
+    return (-vec[0], -vec[1])
 
 
 def repartition_zone(villes, zone_taille, ask_zone=False):
@@ -169,86 +218,53 @@ def arbre_poids_minimal(villes, zone_taille):
     # liste des villes par composante connexe
     list_comp = [[i] for i in range(0, len(villes))]
 
-    iii = 0
-    for c in li:
-        iii += 1
-        i, j = c[0], c[1]
-        if num_comp[i] != num_comp[j]:
-            # on relie les villes i et j car elles appartiennent
-            # à des composantes connexes différentes
-            arbre[i].append(j)        # i est voisine de j
-            arbre[j].append(i)        # j est voisine de i
-            cl = num_comp[i]           # composante connexe restante
-            # composante connexe à agréger à la précédente
-            ki = num_comp[j]
-            for k in list_comp[ki]:
-                num_comp[k] = cl
-                list_comp[cl].append(k)
-            list_comp[ki] = []
-            nb_comp -= 1                # une composante connexe en moins
+    while(nb_comp > 1):
+        iii = 0
+        for c in li:
+            iii += 1
+            i, j = c[0], c[1]
+            if num_comp[i] != num_comp[j]:
+                # on relie les villes i et j car elles appartiennent
+                # à des composantes connexes différentes
+                arbre[i].append(j)        # i est voisine de j
+                arbre[j].append(i)        # j est voisine de i
+                cl = num_comp[i]           # composante connexe restante
+                # composante connexe à agréger à la précédente
+                ki = num_comp[j]
+                for k in list_comp[ki]:
+                    num_comp[k] = cl
+                    list_comp[cl].append(k)
+                list_comp[ki] = []
+                nb_comp -= 1                # une composante connexe en moins
 
-        if nb_comp <= 1:
-            break  # il n'y a plus qu'une seule composante connexe, inutile de continuer
+                if nb_comp <= 1:
+                    break  # il n'y a plus qu'une seule composante connexe, inutile de continuer
+
+        if nb_comp > 1:
+            # it usually means that zone_taille is too small and some edges
+            # we find lost connected components
+            # so for these, assuming they are not too many
+            # we look for the closest point outside the connected component
+            first_count = min((len(l), i)
+                              for i, l in enumerate(list_comp) if len(l) > 0)
+            comp = first_count[1]
+            city = list_comp[comp][random.randint(0, len(list_comp[comp]) - 1)]
+            # city is not the best choice, just a random one
+            dist = min((distance(villes[city], v), i) for i, v in enumerate(villes)
+                       if city != i and num_comp[i] != num_comp[city])
+            li = [(city, dist[1])]
 
     return dict(arbre=arbre, X=X, Y=Y, mx=mx, my=my, Zmax=Zmax)
 
 
-def vecteur_points(p1, p2):
-    """
-    retourne le vecteur entre les points p1 et p2
-    """
-    return (p2[0] - p1[0], p2[1] - p1[1])
-
-
-def vecteur_norme(vec):
-    """
-    retourne la norme d'un vecteur
-    """
-    return math.sqrt(vec[0] * vec[0] + vec[1] * vec[1])
-
-
-def vecteur_cosinus(vec1, vec2):
-    """
-    retourne le cosinus entre deux vecteurs, utilise le produit scalaire
-    """
-    norm1 = vecteur_norme(vec1)
-    norm2 = vecteur_norme(vec2)
-    if norm1 == 0:
-        return 1
-    if norm2 == 0:
-        return 1
-    scal = vec1[0] * vec2[0] + vec1[1] * vec2[1]
-    return scal / (norm1 * norm2)
-
-
-def vecteur_sinus(vec1, vec2):
-    """
-    retourne le sinus entre deux vecteurs, utilise le produit vectoriel
-    """
-    norm1 = vecteur_norme(vec1)
-    norm2 = vecteur_norme(vec2)
-    if norm1 == 0:
-        return 0
-    if norm2 == 0:
-        return 0
-    scal = vec1[0] * vec2[1] - vec1[1] * vec2[0]
-    return scal / (norm1 * norm2)
-
-
-def oppose_vecteur(vec):
-    """
-    retourne le vecteur opposé
-    """
-    return (-vec[0], -vec[1])
-
-
-def circuit_eulerien(villes, arbre):
+def circuit_eulerien(villes, arbre, screen, pygame, fLOG):
     """
     définit un circuit eulérien, villes contient la liste des villes,
     tandis que arbre est une liste de listes, arbre [i] est la liste des villes
     connectées à la ville i,
     on suppose que arbre est un graphe de poids minimal non orienté,
-    l'algorithme ne marche pas s'il existe des villes confondues
+    l'algorithme ne marche pas s'il existe des villes confondues,
+    un circuit eulérien passe par tous les arêtes une et une seule fois
     """
 
     # on choisit une ville qui est une extrémité et parmi celle-là on la
@@ -267,9 +283,12 @@ def circuit_eulerien(villes, arbre):
     # le graphe eulérien d'un arbre de poids minimal non orienté
     vec = (1, 1)
     chemin = [bm]
-    while len(chemin) < 2 * len(villes) - 1:
+    done = set()
+    done.add(bm)
+    iter = []
+    while len(done) < len(villes):
+        iter.append(len(done))
         v = villes[bm]
-
         ma = - math.pi - 1
         bvec = vec
         opvec = oppose_vecteur(vec)
@@ -285,24 +304,25 @@ def circuit_eulerien(villes, arbre):
                 angle = math.atan2(sin, cos)
             if angle > ma:
                 ma = angle
-                bl = k
+                bl = l
                 bvec = vec2
 
         if bl is not None:
-            b = arbre[bm][bl]
-            chemin.append(b)
-            del arbre[bm][bl]  # on supprime l'arc pour ne plus l'utiliser
-            bm = b
+            if bl not in done:
+                chemin.append(bl)
+                done.add(bl)
+            bm = bl
             vec = bvec
         else:
-            break
+            raise Exception("this case should not happen")
 
     return chemin
 
 
 def circuit_hamiltonien(chemin):
     """
-    extrait un circuit hamiltonien depuis un circuit eulérien
+    extrait un circuit hamiltonien depuis un circuit eulérien,
+    passe par tous les sommets une et une seule fois
     """
     nb = max(chemin) + 1
     res = []
@@ -832,10 +852,11 @@ def amelioration_chemin(chemin, taille_zone, X, Y, taille=10, screen=None,
         nb = retournement(chemin, taille, fLOG=fLOG)
         if screen is not None:
             screen.fill(white)
-            display_neurone(chemin, screen, 0, pygame=pygame)
+            display_chemin(chemin, 0, screen, pygame=pygame)
             pygame.display.flip()
             if images is not None:
                 images.append(screen.copy())
+            empty_main_loop(pygame)
         iter += 1
 
     # amélioration
@@ -844,25 +865,28 @@ def amelioration_chemin(chemin, taille_zone, X, Y, taille=10, screen=None,
         nb = retournement(chemin, taille, fLOG=fLOG)
         if screen is not None:
             screen.fill(white)
-            display_neurone(chemin, screen, 0, pygame=pygame)
+            display_chemin(chemin, 0, screen=screen, pygame=pygame)
             pygame.display.flip()
             if images is not None:
                 images.append(screen.copy())
+            empty_main_loop(pygame)
         nb += echange_position(chemin, taille // 2,
                                taille_zone, X, Y, fLOG=fLOG)
         if screen is not None:
             screen.fill(white)
-            display_neurone(chemin, screen, 0, pygame=pygame)
+            display_chemin(chemin, 0, screen=screen, pygame=pygame)
             pygame.display.flip()
             if images is not None:
                 images.append(screen.copy())
+            empty_main_loop(pygame)
         nb += supprime_croisement(chemin, taille_zone, X, Y, fLOG=fLOG)
         if screen is not None:
             screen.fill(white)
-            display_neurone(chemin, screen, 0, pygame=pygame)
+            display_chemin(chemin, 0, screen=screen, pygame=pygame)
             pygame.display.flip()
             if images is not None:
                 images.append(screen.copy())
+            empty_main_loop(pygame)
         iter += 1
 
 
@@ -886,11 +910,30 @@ def tsp_kruskal_algorithm(points, size=20, length=10, max_iter=None,
     X, Y = di["X"], di["Y"]
     if screen is not None:
         display_arbre(points, arbre, screen=screen, pygame=pygame)
-    chemin = circuit_eulerien(points, arbre)
+        pygame.display.flip()
+        if images is not None:
+            c = screen.copy()
+            for i in range(0, 5):
+                images.append(c)
+    chemin = circuit_eulerien(points, arbre, screen, pygame, fLOG)
+
+    if len(chemin) != len(points):
+        raise Exception("The path should include all points: path:{0} points:{1}".format(
+            len(chemin), len(points)))
+
+    if screen is not None:
+        display_chemin([points[c] for c in chemin], 0,
+                       screen=screen, pygame=pygame)
+        pygame.display.flip()
+        if images is not None:
+            c = screen.copy()
+            for i in range(0, 5):
+                images.append(c)
+
     neurone = circuit_hamiltonien(chemin)
     neurones = [points[i] for i in neurone]
     if screen is not None:
-        display_neurone(neurones, screen, 0, pygame=pygame)
+        display_chemin(neurones, 0, screen=screen, pygame=pygame)
     amelioration_chemin(neurones, size, X, Y, length, screen,
                         fLOG=fLOG, pygame=pygame, max_iter=max_iter,
                         images=images)
@@ -909,9 +952,9 @@ def display_ville(villes, screen, bv, pygame):
     pygame.draw.circle(screen, color2, (int(v[0]), int(v[1])), 3)
 
 
-def display_neurone(neurones, screen, bn, pygame):
+def display_chemin(neurones, bn, screen, pygame):
     """
-    dessine les neurones à l'écran
+    dessine le chemin à l'écran
     """
     color = 0, 0, 255
     color2 = 0, 255, 0
@@ -960,11 +1003,10 @@ def pygame_simulation(size=(800, 500), zone=20, length=10, max_iter=None,
     La simulation ressemble à ceci :
 
 
-    ::
+    .. raw:: html
 
-        .. raw:: html
-        <video autoplay="" controls="" loop="" height="125">
-        <source src="http://www.xavierdupre.fr/enseignement/complements/tsp_kohonen.mp4" type="video/mp4" />
+        <video autoplay="" controls="" loop="" height="250">
+        <source src="http://www.xavierdupre.fr/enseignement/complements/tsp_kruskal.mp4" type="video/mp4" />
         </video>
 
     Pour lancer la simulation::
