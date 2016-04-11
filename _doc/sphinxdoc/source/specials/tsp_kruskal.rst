@@ -8,6 +8,9 @@
 Circuit hamiltonien et Kruskal
 ==============================
 
+Le module :mod:`tsp_kruskal <ensae_teaching_cs.specials.tsp_kruskal>` implémente l'algorithme
+ci-dessus.
+
 Arbre de poids minimal et circuit hamiltonien
 +++++++++++++++++++++++++++++++++++++++++++++
 
