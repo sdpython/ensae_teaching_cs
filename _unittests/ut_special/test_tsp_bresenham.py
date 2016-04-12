@@ -36,7 +36,7 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
-from src.ensae_teaching_cs.special.tsp_bresenham import draw_line
+from src.ensae_teaching_cs.special.tsp_bresenham import draw_line, draw_ellipse
 
 
 class TestTspBresenham(unittest.TestCase):
@@ -59,6 +59,20 @@ class TestTspBresenham(unittest.TestCase):
             self.assertEqual(len(ligne1), len(ligne2))
             draw_line(x2, y1, x1, y2)
             draw_line(x1, y2, x2, y1)
+
+    def test_bresenham_ellipses(self):
+        fLOG(
+            __file__,
+            self._testMethodName,
+            OutputPrint=__name__ == "__main__")
+
+        x, y = 500, 500
+        for n in range(0, 10):
+            x1 = random.randint(0, x - 1)
+            y1 = random.randint(0, y - 1)
+            xa = random.randint(50, 100)
+            xb = random.randint(50, 100)
+            draw_ellipse(x1, y1, xa, xb)
 
 
 if __name__ == "__main__":
