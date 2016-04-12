@@ -999,9 +999,7 @@ def pygame_simulation(size=(800, 500), zone=20, length=10, max_iter=None,
     @param      fLOG            logging function
     @return                     @see cl PuzzleGirafe
 
-
     La simulation ressemble à ceci :
-
 
     .. raw:: html
 
@@ -1015,7 +1013,7 @@ def pygame_simulation(size=(800, 500), zone=20, length=10, max_iter=None,
         import pygame
         pygame_simulation(pygame)
 
-    Voir :ref:`l-puzzle_girafe`.
+    Voir :ref:`l-tsp_kruskal`.
     """
     pygame.init()
     size = width, height = x, y = size[0], size[1]

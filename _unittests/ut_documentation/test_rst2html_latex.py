@@ -68,6 +68,10 @@ class TestRst2HtmlLatex(unittest.TestCase):
                     \\newcommand{\\N}[0]{\\mathbb{N}}
                     \\newcommand{\\indicatrice}[1]{\\mathbf{1\\!\\!1}_{\\acc{#1}}}
                     \\usepackage[all]{xy}
+                    \\newcommand{\\infegal}[0]{\\leqslant}
+                    \\newcommand{\\supegal}[0]{\\geqslant}
+                    \\newcommand{\\ensemble}[2]{\\acc{#1,\\dots,#2}}
+                    \\newcommand{\\fleche}[1]{\\overrightarrow{ #1 }}
                     """
 
         temp = get_temp_folder(__file__, "temp_rst2html_png_latex")

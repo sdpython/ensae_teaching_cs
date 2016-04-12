@@ -158,7 +158,7 @@ rapport à *t*. Il est conseillé de choisir des fonctions qui vérifient :
 .. math::
 
     \begin{array}{rcl} \forall x \in \R^+, \;&& \sum_{t=1}^{\infty} \epsilon \pa{t,x} = \infty 
-    \text{ et }\sum_{t=1}^{\infty} \epsilon^2 \pa{t,x} < \infty \\
+    et \sum_{t=1}^{\infty} \epsilon^2 \pa{t,x} < \infty \\
     \forall t,x,y \in \N \times \R^+ \times \R^+, \; && \eta \pa{t,x,y} < \epsilon \pa{t,x}
     \end{array}
 

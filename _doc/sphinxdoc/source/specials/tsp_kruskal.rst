@@ -32,14 +32,13 @@ Si le chemin doit parcourir *n* villes, cette première étape permet de
 réduire l'ensemble des arcs possibles :math:`\frac{n(n-1)}{2}` 
 à un multiple de *n*.
 
+    On suppose qu'il faut déterminer le plus court chemin passant par *n* villes. 
+    L'algorithme se décompose en quatre étapes :
 
-		On suppose qu'il faut déterminer le plus court chemin passant par *n* villes. 
-        L'algorithme se décompose en quatre étapes :
-        
-        * construction de l'arbre de poids minimum
-        * construction d'un circuit eulérien
-        * construction d'un circuit hamiltonien
-        * simplification du circuit hamiltonien
+    * construction de l'arbre de poids minimum
+    * construction d'un circuit eulérien
+    * construction d'un circuit hamiltonien
+    * simplification du circuit hamiltonien
 
 Le circuit eulérien parcourt tous les arcs de poids minimal et 
 passe donc plusieurs fois par le même sommet. En enlevant les sommets 
@@ -57,25 +56,25 @@ d'optimisation avec contrainte. Il s'agit de réduire
 l'ensemble des arcs tout en conservant un graphe composé 
 d'une seule composante connexe.
 
-		Une composante connexe *C* d'un graphe est un ensemble de noeuds 
-        tel que pour tout couple de noeuds 
-		:math:`(s,t) \in C^2`, il existe un chemin allant de 
-        *s* à *t* dont tous les n\oe uds intermédiaires sont
-		inclus dans *C*.
+    Une composante connexe *C* d'un graphe est un ensemble de noeuds 
+    tel que pour tout couple de noeuds 
+    :math:`(s,t) \in C^2`, il existe un chemin allant de 
+    *s* à *t* dont tous les n\oe uds intermédiaires sont
+    inclus dans *C*.
 		
 Il est maintenant possible d'exprimer la contrainte liée au 
 problème de l'arbre de poids minimum.		
 		
-		Soit un graphe *G=(X,E)*, un arbre de poids minimum
-        :math:`G^*=\pa{X^*, E^*}` est un sous-arbre de *G* qui vérifie :
-        
-        * :math:`X^* = X`, le graphe de poids minimum partage les mêmes 
-          sommets que le graphe initial.
-        * :math:`E^* \subset E`, les arcs graphe de poids minimum possède 
-          forme un sous-ensemble de l'ensemble des arcs du graphe initial.
-        * La somme des poids des arcs de :math:`E^*` est minimale.
-        * Le graphe :math:`G^*` contient autant de composantes 
-          connexes que le graphe initial.
+    Soit un graphe *G=(X,E)*, un arbre de poids minimum
+    :math:`G^*=\pa{X^*, E^*}` est un sous-arbre de *G* qui vérifie :
+    
+    * :math:`X^* = X`, le graphe de poids minimum partage les mêmes 
+      sommets que le graphe initial.
+    * :math:`E^* \subset E`, les arcs graphe de poids minimum possède 
+      forme un sous-ensemble de l'ensemble des arcs du graphe initial.
+    * La somme des poids des arcs de :math:`E^*` est minimale.
+    * Le graphe :math:`G^*` contient autant de composantes 
+      connexes que le graphe initial.
 		
 L'algorithme qui suit n'est pas le seul permettant d'obtenir une 
 solution approchée à ce problème d'optimisation. Il ne considère 
@@ -84,37 +83,38 @@ Il consiste à partir d'un graphe débarrassé de tous ses arcs puis
 à ajouter des arcs reliant deux composantes connexes différentes 
 jusqu'à ce qu'il n'en reste plus qu'une.
 		
-		On suppose que *G(X,E)* est un graphe, *X* est l'ensemble des sommets, 
-		*E* est l'ensemble des arcs. Si :math:`e \in E`, *f(e)* désigne son poids. Cet algorithme
-		a pour but d'obtenir un sous-ensemble :math:`F \subset E` 
-        de poids minimal tel que le graphe *G(X,F)* 
-		ne forme qu'une seule composante connexe. 
-        Le nombre de sommets est *N*. 
-		L'arc *e* relie les sommets :math:`a(e) \longrightarrow b(e)`.
-        
-        **initialisation**
-		
-		On trie les arcs par ordre croissant de poids, on obtient la suite 
-        :math:`\vecteur{e_1}{e_n}`. A chaque sommet *x*, on associe la composante connexe *c(x)*. 
-		:math:`n \longleftarrow N`, *n* désigne le nombre de composantes connexes.
-		:math:`F \longleftarrow \emptyset`
-        
-        **itération**
+    On suppose que *G(X,E)* est un graphe, *X* est l'ensemble des sommets,
+    *E* est l'ensemble des arcs. Si :math:`e \in E`, *f(e)* désigne son poids. Cet algorithme
+    a pour but d'obtenir un sous-ensemble :math:`F \subset E` de
+    poids minimal tel que le graphe *G(X,F)* ne
+    forme qu'une seule composante connexe.
+    Le nombre de sommets est *N*.
+    L'arc *e* relie les sommets :math:`a(e) \longrightarrow b(e)`.
+    
+    **initialisation**
+    
+    On trie les arcs par ordre croissant de poids, on obtient la suite
+    :math:`\vecteur{e_1}{e_n}`.
+    A chaque sommet *x*, on associe la composante connexe *c(x)*.
+    :math:`n \longleftarrow N`, *n* désigne le nombre de composantes connexes.
+    :math:`F \longleftarrow \emptyset`.
+    
+    **itération**
 
-        :: 
-        
-            $i \longleftarrow 1$ \\
-            \begin{xwhile}{$ N > 1$ }
-                    \begin{xif}{ $c (a(e_i)) \neq c (b(e_i))$ }
-                        $F \longleftarrow F \cup \acc{e_i}$ \\
-                        \begin{xforeach}{x}{X}
-                        $c(x) =  \left\{ \begin{array}{ll}
-                                                            c(x) & \text{ si } c(x) \neq c (b(e_i)) \\
-                                                            c(a(e_i)) & \text{ si } c(x) = c (b(e_i)) 
-                                                            \end{array} \right.$
-                        \end{xforeach}
-                    \end{xif} \\
-                    $i \longleftarrow i + 1$
+    .. math::
+    
+        \begin{array}{l}
+        i = 1 \\
+        while \; N > 1 \\
+        \quad if \; c (a(e_i)) \neq c (b(e_i)) \\
+        \quad \quad F \longleftarrow F \cup \acc{e_i} \\
+        \quad \quad foreach \; x \in X \\
+        \quad \quad \quad c(x) = \left\{ \begin{array}{ll}
+                                    c(x) & \text{ si } c(x) \neq c (b(e_i)) \\
+                                    c(a(e_i)) & \text{ si } c(x) = c (b(e_i)) 
+                                    \end{array} \right. \\
+        \quad i \longleftarrow i + 1
+        \end{array}
 
 Cet algorithme ne retourne pas la solution optimale mais une solution 
 approchée. Son coût est proportionnel au cardinal de l'ensemble *E*. 
@@ -170,52 +170,42 @@ Parcours de l'arbre de poids minimal de façon à former un circuit eulérien. O
 part d'une extrémité puis on parcourt le graphe dans le sens trigonométrique inverse
 jusqu'à revenir au point de départ.
 
+    On suppose que le graphe dont il faut obtenir un circuit eulérien
+    est un arbre non-orienté de poids minimal
+    comme celui retourné par l'algorithme.
+    On suppose également qu'à chaque sommet *x* sont
+    associés des coordonnées *p(x)* et que deux sommets ne sont jamais confondus.
+    L'arbre contient *n* sommets et *2n* arcs.
 
-		On suppose que le graphe dont il faut obtenir un circuit eulérien 
-        est un arbre non-orienté de poids minimal
-		comme celui retourné par l'algorithme. 
-        On suppose également qu'à chaque sommet *x*
-		sont associés des coordonnées *p(x)* et que deux sommets ne sont jamais confondus. 
-        L'arbre contient *n* sommets et *2n* arcs.
-		
-		**initialisation**
-        
-		On choisit un noeud *x* connecté à un seul autre sommet.
-		:math:`ch \longleftarrow (x)` et :math:`t \longleftarrow 1`. 
-		Pour chaque arc *e*, 
-        
-        .. math::
-        
-                u(e) = \left\{ \begin{array}{ll} 1 & \text{ si l'arc a été parcouru } \\
-                        0 & \text{ sinon } \end{array} \right.
-                        
-		
-		**itération**
-        
-        :: 
-        
-            \begin{xwhile}{$t < 2n$}
-                    $x$ désigne le dernier sommet visité, $x^-$ désigne le sommet précédent dans le chemin $ch$.
-                    On choisit le sommet suivant $x^+$ de telle sorte que~: 
-                            \begin{enumerate}
-                            \item L'arc $e = ( x \longrightarrow x^+ )$ existe et vérifie $c(e) = 0$.
-                            \item Parmi tous les arcs vérifiant la première condition, on choisit celui qui maximise
-                                        l'ange $\pa{ \fleche{p(x^-)p(x)},\fleche{p(x)p(x^+)}}$.
-                            \end{enumerate}
-                    $\begin{array}{lll}
-                    t 										&\longleftarrow& t + 1 \\
-                    ch 										&\longleftarrow& ch \cup (x^+) \\
-                    c (x\rightarrow x^+)  &\longleftarrow& 1
-                    \end{array}$
-            \end{xwhile}
+    **initialisation**
+
+    On choisit un noeud *x* connecté à un seul autre sommet.
+    :math:`ch \longleftarrow (x)` et :math:`t \longleftarrow 1`.
+    Pour chaque arc *e*,
+    
+    .. math::
+
+            u(e) = \left\{ \begin{array}{ll} 1 & si \; (P) \\
+            0 & sinon \end{array} \right.
             
-		*ch* est le chemin eulérien cherché.
+    *(P)*: si l'arc a été parcouru
+
+    **itération**
+    
+    Notation : *x* désigne le dernier sommet visité, 
+    :math:`x^-` désigne le sommet précédent dans le chemin *ch*.
+    Tant que :math:`t < 2n`, on choisit le sommet suivant :math:`x^+` de telle sorte que : 
+
+    * L'arc :math:`e = ( x \longrightarrow x^+ )` existe et vérifie :math:`c(e) = 0`.
+    * Parmi tous les arcs vérifiant la première condition, on choisit celui qui maximise
+      l'ange :math:`\pa{ \fleche{p(x^-)p(x)},\fleche{p(x)p(x^+)}}`.
+    * :math:`\begin{array}{lll} t &\longleftarrow& t + 1 \\ ch &\longleftarrow& ch \cup (x^+) \\ 
+      c (x\rightarrow x^+)  &\longleftarrow& 1 \end{array}`
+
+    *ch* est le chemin eulérien cherché.
 		
 
 Le coût de cet algorithme est en *O(n)*.
-
-
-
 
 
 
@@ -229,24 +219,26 @@ Cette construction est possible puisque le graphe est entièrement
 connecté. Il est donc possible de passer d'un noeud quelconque à 
 un autre noeud quelconque lui aussi. Il est possible que cet arc n'appartienne pas au graphe.
 
-		On suppose que le graphe *G=(X,E)* est entièrement connecté. 
+		On suppose que le graphe *G=(X,E)* est entièrement connecté.
         *ch* désigne un chemin eulérien.
-		
+
 		**initialisation**
-        
-		Pour les sommets :math:`x \in X`, on pose :math:`c(x) = 0`. 
+
+		Pour les sommets :math:`x \in X`, on pose :math:`c(x) = 0`.
         :math:`H \longleftarrow \emptyset`, *H* est le chemin
 		hamiltonien cherché.
-		
+
 		**parcours**
-        
-		On parcourt le chemin eulérien *ch* dans l'ordre. 
-        Pour chaque sommet *x* du chemin, si *x* n'a pas encore 
-		été visité :math:`c(x) = 0` alors :math:`H \longleftarrow H \cup (x)` et 
+
+		On parcourt le chemin eulérien *ch* dans l'ordre.
+        Pour chaque sommet *x* du chemin, si *x* n'a pas encore
+		été visité :math:`c(x) = 0` alors :math:`H \longleftarrow H \cup (x)` et
         :math:`c (x) = 1`. On poursuit avec les sommets suivants.
 		
 
 .. image:: krusk.png
+    :height: 400
+
 
 Résultat obtenu pour un ensemble de 300 villes, la solution retournée est obtenue
 rapidement mais présente des erreurs évidentes qu'il est possible de corriger
@@ -295,29 +287,29 @@ et le retournement d'une portion du chemin entre deux villes.
 
 L'algorithme qui suit reprend le schéma développé par `Lin-Kernighan <https://en.wikipedia.org/wiki/Lin%E2%80%93Kernighan_heuristic>`_
 
-		Soit un circuit hamiltonien :math:`v = \vecteur{v_1}{v_n}` 
-        passant par les *n* noeuds - ou villes - d'un graphe.
-		Pour tout :math:`i \notin \ensemble{1}{n}`, on définit la ville :math:`v_i` 
-        par :math:`v_i = v_{i \equiv n}`.
-		Il est possible d'associer à ce chemin un coût égal à la somme des poids 
-		associés aux arêtes :math:`c = \sum_{i=1}^{n} c\pa{v_i,v_{i+1}}`. 
-        Cet algorithme consiste à opérer des 
-		modifications simples sur le chemin *v* tant que son coût 
-        *c* décroît. Les opérations proposées sont :
-		
-		* Le retournement consiste à retourner une
-          sous-partie du chemin. Si on retourne le sous-chemin entre les villes *i* et *j*,
-		  le chemin complet devient :math:`\pa{v_1,...,v_{i-1},v_j,v_{j-1},...,v_i,v_{j+1},...,v_n}`. 
-          Le retournement dépend de deux paramètres.
-		* Le déplacement : il consiste à déplacer une
-          sous-partie du chemin. Si on déplace le sous-chemin entre les villes 
-          *i* et *j* entre les villes *k* et *k+1*,
-		  le chemin complet devient :math:`\pa{v_1,...,v_{i-1},v_{j+1},...,v_k,v_i,v_{i+1},...,v_j,v_{k+1},v_n}`. 
-		  Le déplacement dépend de trois paramètres.
-		* Le déplacement retourné, il allie les deux procédés précédents.
-          Si on déplace et on retourne le sous-chemin entre les villes *i* et *j* entre les villes *k* et *k+1*,
-          le chemin complet devient :math:`\pa{v_1,...,v_{i-1},v_{j+1},...,v_k,v_j,v_{j-1},...,v_i,v_{k+1},v_n}`. 
-          Le déplacement retourné dépend aussi de trois paramètres.
+    Soit un circuit hamiltonien :math:`v = \vecteur{v_1}{v_n}` passant
+    par les *n* noeuds - ou villes - d'un graphe.
+    Pour tout :math:`i \notin \ensemble{1}{n}`, on définit la ville :math:`v_i` par
+    :math:`v_i = v_{i \equiv n}`.
+    Il est possible d'associer à ce chemin un coût égal à la somme des poids
+    associés aux arêtes :math:`c = \sum_{i=1}^{n} c\pa{v_i,v_{i+1}}`.
+    Cet algorithme consiste à opérer des
+    modifications simples sur le chemin *v* tant que son coût
+    *c* décroît. Les opérations proposées sont :
+
+    * Le retournement consiste à retourner une
+      sous-partie du chemin. Si on retourne le sous-chemin entre les villes *i* et *j*,
+      le chemin complet devient :math:`\pa{v_1,...,v_{i-1},v_j,v_{j-1},...,v_i,v_{j+1},...,v_n}`. 
+      Le retournement dépend de deux paramètres.
+    * Le déplacement : il consiste à déplacer une
+      sous-partie du chemin. Si on déplace le sous-chemin entre les villes 
+      *i* et *j* entre les villes *k* et *k+1*,
+      le chemin complet devient :math:`\pa{v_1,...,v_{i-1},v_{j+1},...,v_k,v_i,v_{i+1},...,v_j,v_{k+1},v_n}`. 
+      Le déplacement dépend de trois paramètres.
+    * Le déplacement retourné, il allie les deux procédés précédents.
+      Si on déplace et on retourne le sous-chemin entre les villes *i* et *j* entre les villes *k* et *k+1*,
+      le chemin complet devient :math:`\pa{v_1,...,v_{i-1},v_{j+1},...,v_k,v_j,v_{j-1},...,v_i,v_{k+1},v_n}`. 
+      Le déplacement retourné dépend aussi de trois paramètres.
 
 
 Ces deux opérations	(retournement, déplacement) dépendent d'au 
@@ -399,6 +391,13 @@ Exemples de décroissance de la longueur du chemin obtenue avec
 l'algorithme. L'essentiel des améliorations est 
 faite dans la première moitié des itérations. Pour ces deux expériences, 500 villes, puis 1500 villes,
 ont été réparties aléatoirement dans un rectangle :math:`800 \times 500`.
+La vidéo :
+
+.. raw:: html
+
+    <video autoplay="" controls="" loop="" height="250">
+    <source src="http://www.xavierdupre.fr/enseignement/complements/tsp_kruskal.mp4" type="video/mp4" />
+    </video>
 
 
 
