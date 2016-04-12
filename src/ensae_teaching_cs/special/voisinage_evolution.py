@@ -67,10 +67,10 @@ class Ville:
             self.delay = delay
             self.renouvellement = renouvellement
             c = len(self.mat) / 2
-            R = c**2 / 4
+            R = c ** 2 / 4
             for i in range(0, len(self.mat)):
                 for j in range(0, len(self.mat[0])):
-                    d = (i - c)**2 + (j - c)**2
+                    d = (i - c) ** 2 + (j - c) ** 2
                     if d > R:
                         self.mat[i][j] = -1
 
@@ -217,8 +217,8 @@ class VilleImage (Ville):
                 for k, v in Ville.colors_grade.items():
                     s = 0
                     for z in [0, 1, 2]:
-                        s += (v[z] - p[z])**2
-                    s = s**0.5
+                        s += (v[z] - p[z]) ** 2
+                    s = s ** 0.5
                     if s < mins:
                         mins = s
                         best = k
