@@ -116,10 +116,11 @@ jusqu'à ce qu'il n'en reste plus qu'une.
         \quad i \longleftarrow i + 1
         \end{array}
 
+
 Cet algorithme ne retourne pas la solution optimale mais une solution 
 approchée. Son coût est proportionnel au cardinal de l'ensemble *E*. 
 A priori, pour le problème du voyageur de commerce, si le graphe 
-contient *n* villes, le nombre d'arcs possibles est :math:`\frac{n(n-1)}{2}$. 
+contient *n* villes, le nombre d'arcs possibles est :math:`\frac{n(n-1)}{2}`. 
 `Dans cet ensemble, la majeure partie des arcs ne sera pas utilisée pour 
 le meilleur chemin puisque les arcs entre plus proches voisins leur seront 
 préférés. Afin de réduire cet ensemble, il est possible de quadriller 
@@ -219,22 +220,21 @@ Cette construction est possible puisque le graphe est entièrement
 connecté. Il est donc possible de passer d'un noeud quelconque à 
 un autre noeud quelconque lui aussi. Il est possible que cet arc n'appartienne pas au graphe.
 
-		On suppose que le graphe *G=(X,E)* est entièrement connecté.
-        *ch* désigne un chemin eulérien.
+    On suppose que le graphe *G=(X,E)* est entièrement
+    connecté. *ch* désigne un chemin eulérien.
 
-		**initialisation**
+    **initialisation**
 
-		Pour les sommets :math:`x \in X`, on pose :math:`c(x) = 0`.
-        :math:`H \longleftarrow \emptyset`, *H* est le chemin
-		hamiltonien cherché.
+    Pour les sommets :math:`x \in X`, on pose :math:`c(x) = 0`. :math:`H \longleftarrow \emptyset`, *H* est
+    le chemin hamiltonien cherché.
 
-		**parcours**
+    **parcours**
 
-		On parcourt le chemin eulérien *ch* dans l'ordre.
-        Pour chaque sommet *x* du chemin, si *x* n'a pas encore
-		été visité :math:`c(x) = 0` alors :math:`H \longleftarrow H \cup (x)` et
-        :math:`c (x) = 1`. On poursuit avec les sommets suivants.
-		
+    On parcourt le chemin eulérien *ch* dans l'ordre.
+    Pour chaque sommet *x* du chemin, si *x* n'a pas encore
+    été visité :math:`c(x) = 0` alors :math:`H \longleftarrow H \cup (x)` et :math:`c (x) = 1`. 
+    On poursuit avec les sommets suivants.
+
 
 .. image:: krusk.png
     :height: 400
