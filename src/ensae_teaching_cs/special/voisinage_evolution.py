@@ -116,7 +116,7 @@ class Ville:
         # on renouvelle une certaine proportion de pâtés (renouvellement)
         # tiré au hasard
         nb1, nb2 = 0, 0
-        for n in range(0, int(len(self.mat)**2 * self.renouvellement)):
+        for n in range(0, int(len(self.mat) ** 2 * self.renouvellement)):
 
             # on tire deux voisins au hasard
             i = random.randint(0, len(self.mat) - 1)
