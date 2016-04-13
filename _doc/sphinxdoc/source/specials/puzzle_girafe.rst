@@ -211,6 +211,7 @@ Deux pièces sont voisines si elles sont à gauche et droite l'une de l'autre (p
 ou en haut et bas l'une de l'autre (second cas). 
 
 .. image:: s4possi.png
+    :height: 300
 
 
 Le dessin permet de trouver les paires d'indices
@@ -275,6 +276,7 @@ Cette méthode a pour objectif de retourner la liste des positions voisines à u
 position donnée.
 
 .. image:: s4vois.png
+    :height: 300
 
 
 ::

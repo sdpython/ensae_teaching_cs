@@ -25,4 +25,4 @@ qu'on peut résoudre grâce à un algorithme et un peu d'imagination.
     tsp_kruskal
     graph_distance
     voisinage
-    
+    image_synthese

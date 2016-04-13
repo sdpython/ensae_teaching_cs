@@ -40,9 +40,6 @@ For example, let's consider the following graphs:
 .. image:: graphmerge1.png
     :height: 400
 
-.. image:: graphmerge2.png
-    :height: 400
-
 
 We would like to merge them and to know which vertices were merged, 
 which ones were added and deleted. 
@@ -173,6 +170,7 @@ associated with vertices and edges from the other graph.
 What's left is to add the left over to the picture which is shown by next Figure:
 
 .. image:: graphmergeall.png
+    :height: 400
 
 *Red and symbol - means deleted from graph~1 and not present in graph 2. 
 Green and symbol + means not present in graph 1 and added in graph 2. 

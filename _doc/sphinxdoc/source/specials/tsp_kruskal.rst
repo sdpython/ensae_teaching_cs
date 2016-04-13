@@ -8,7 +8,7 @@
 Circuit hamiltonien et Kruskal
 ==============================
 
-Le module :mod:`tsp_kruskal <ensae_teaching_cs.specials.tsp_kruskal>` implémente l'algorithme
+Le module :mod:`tsp_kruskal <ensae_teaching_cs.special.tsp_kruskal>` implémente l'algorithme
 ci-dessus.
 
 Arbre de poids minimal et circuit hamiltonien
@@ -199,7 +199,10 @@ jusqu'à revenir au point de départ.
 
     * L'arc :math:`e = ( x \longrightarrow x^+ )` existe et vérifie :math:`c(e) = 0`.
     * Parmi tous les arcs vérifiant la première condition, on choisit celui qui maximise
-      l'ange :math:`\pa{ \fleche{p(x^-)p(x)},\fleche{p(x)p(x^+)}}`.
+      l'angle :math:`\pa{ \fleche{p(x^-)p(x)},\fleche{p(x)p(x^+)}}`.
+      
+    Puis on met à jour les variables :
+    
     * :math:`\begin{array}{lll} t &\longleftarrow& t + 1 \\ ch &\longleftarrow& ch \cup (x^+) \\ 
       c (x\rightarrow x^+)  &\longleftarrow& 1 \end{array}`
 
@@ -237,7 +240,7 @@ un autre noeud quelconque lui aussi. Il est possible que cet arc n'appartienne p
 
 
 .. image:: krusk.png
-    :height: 400
+    :height: 300
 
 
 Résultat obtenu pour un ensemble de 300 villes, la solution retournée est obtenue
@@ -265,7 +268,7 @@ envisagées sont inspirées de
 et sont illustrées par les figures suivantes.
 
 .. image:: tsptour.png
-    :height: 100
+    :height: 75
     
 .. image:: tsptour1.png
     :height: 100
@@ -379,13 +382,15 @@ chemin étape après étape. La courbe décroît rapidement au cours des
 premières itérations puis décroît lentement ensuite.
 
 
+*500 villes*
+
 .. image:: tspc.png
 
-*500 villes*
+*1500 villes*
+
 
 .. image:: tspc2.png
 
-*1500 villes*
     		
 Exemples de décroissance de la longueur du chemin obtenue avec
 l'algorithme. L'essentiel des améliorations est 
