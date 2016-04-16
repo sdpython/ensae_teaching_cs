@@ -392,7 +392,8 @@ def readStyleFile(filename):
         return py_style
     else:
         try:
-            lines = file(filename, 'r').readlines()
+            with open(filename, 'r') as ff:
+                lines = ff.readlines()
             appliedstyle = {}
             for line in lines:
                 line = line.strip()
@@ -439,9 +440,8 @@ def file2HTML(file_name, format, style, Replace, entity="1"):
     if file_name == "<stdin>":
         file_name = "temp_stdin.py2html.tmp"
         lines = sys.stdin.readlines()
-        f = file(file_name, "w")
-        f.writelines(lines)
-        f.close()
+        with open(file_name, "w") as f:
+            f.writelines(lines)
         removeFile = file_name
     elif len(file_name) < 1000 and os.path.exists(file_name):
         try:

@@ -114,10 +114,8 @@ def clean_function_1a(code):
     return code
 
 
-def execute_notebooks(folder, notebooks, filter,
-                      clean_function=None,
-                      fLOG=noLOG,
-                      deepfLOG=noLOG):
+def execute_notebooks(folder, notebooks, filter, clean_function=None,
+                      fLOG=noLOG, deepfLOG=noLOG, replacements=None):
     """
     execute a list of notebooks
 
@@ -127,6 +125,7 @@ def execute_notebooks(folder, notebooks, filter,
     @param      clean_function  cleaning function to apply to the code before running it
     @param      fLOG            logging function
     @param      deepfLOG        logging function used to run the notebook
+    @param      replacements    replacements
     @return                     dictionary { notebook_file: (isSuccess, outout) }
 
     The signature of function ``filter`` is::
@@ -154,12 +153,9 @@ def execute_notebooks(folder, notebooks, filter,
             outfile = os.path.join(folder, "out_" + os.path.split(note)[-1])
             try:
                 stat, out = run_notebook(note, working_dir=folder, outfilename=outfile,
-                                         additional_path=addpath,
-                                         valid=valid_cell,
-                                         clean_function=clean_function,
-                                         fLOG=deepfLOG,
-                                         kernel_name=kernel_name
-                                         )
+                                         additional_path=addpath, valid=valid_cell,
+                                         clean_function=clean_function, fLOG=deepfLOG,
+                                         kernel_name=kernel_name, replacements=replacements)
                 if not os.path.exists(outfile):
                     raise FileNotFoundError(outfile)
                 results[note] = (True, stat, out)
