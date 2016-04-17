@@ -2,8 +2,10 @@
 """
 @file
 @brief Quelques problèmes récurrents avec `matplotlib <http://matplotlib.org/>`_.
-
 """
+from mpl_toolkits.basemap import Basemap
+import numpy
+import matplotlib.pyplot as plt
 
 
 def graph_style(style='ggplot'):
@@ -260,3 +262,61 @@ def avoid_overlapping_dates(fig, **options):
     @endFAQ
     """
     fig.autofmt_xdate(**options)
+
+
+def graph_cities(df, names=["Longitude", "Latitude", "City"], ax=None, linked=False, **params):
+    """
+    plots the cities on a map
+
+    @param      df      dataframe
+    @param      names   names of the column Latitude, Longitude, City
+    """
+    xx = list(df[names[0]])
+    yy = list(df[names[1]])
+    nn = list(df[names[2]]) if len(names) > 2 else [""] * len(xx)
+
+    if ax is None:
+        fig, ax = plt.subplots(**params)
+
+    minx, maxx = min(xx), max(xx)
+    miny, maxy = min(yy), max(yy)
+    avex, avey = numpy.mean(xx), numpy.mean(yy)
+
+    m = Basemap(llcrnrlon=params.get('llcrnrlon', minx),
+                llcrnrlat=params.get('llcrnrlat', miny),
+                urcrnrlon=params.get('urcrnrlon', maxx),
+                urcrnrlat=params.get('urcrnrlat', maxy),
+                resolution=params.get('resolution', 'i'),
+                projection=params.get('projection', 'merc'),
+                lon_0=avex, lat_0=avey)
+    m.drawcoastlines()
+    m.drawcountries()
+    m.fillcontinents(color=params.get('color', 'lightgrey'),
+                     lake_color=params.get('lake_color', '#AAAAFF'))
+    m.drawparallels(numpy.arange(miny, maxy, 5.))
+    m.drawmeridians(numpy.arange(minx, maxx, 5.))
+    m.drawmapboundary(fill_color=params.get('fill_color', 'aqua'))
+    # on ajoute Paris sur la carte
+    if linked:
+        xs, ys = [], []
+        i = 0
+        for lon, lat in zip(xx, yy):
+            x, y = m(lon, lat)
+            xs.append(x)
+            ys.append(y)
+            if nn[i] is not None and len(nn[i]) > 0:
+                plt.text(x, y, nn[i])
+            i += 1
+
+        m.plot(xs, yy, params.get('style', 'bo'),
+               markersize=params.get('markersize', 6))
+    else:
+        i = 0
+        for lon, lat in zip(xx, yy):
+            x, y = m(lon, lat)
+            m.plot(x, y, params.get('style', 'bo'),
+                   markersize=params.get('markersize', 6))
+            if nn[i] is not None and len(nn[i]) > 0:
+                plt.text(x, y, nn[i])
+            i += 1
+    return ax

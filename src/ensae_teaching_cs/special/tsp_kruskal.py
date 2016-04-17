@@ -42,7 +42,7 @@ def construit_ville(n, x=1000, y=700):
     return l
 
 
-def distance(p1, p2):
+def distance_euclidian(p1, p2):
     """
     calcule la distance entre deux villes
     """
@@ -174,7 +174,7 @@ def voisinage_zone(z, Zmax, X, Y):
     return voisin
 
 
-def arbre_poids_minimal(villes, zone_taille):
+def arbre_poids_minimal(villes, zone_taille, distance):
     """
     construit l'arbre de poids minimal, retourne une liste de
     listes, chaque sous-liste associée à une ville contient la liste des ses voisins,
@@ -374,7 +374,7 @@ def intersection_segment(p1, p2, p3, p4):
         return False
 
 
-def longueur_chemin(chemin):
+def longueur_chemin(chemin, distance):
     """
     retourne la longueur d'un chemin
     """
@@ -385,7 +385,7 @@ def longueur_chemin(chemin):
     return s
 
 
-def retournement_essai(chemin, i, j, negligeable=1e-5):
+def retournement_essai(chemin, i, j, negligeable=1e-5, distance=None):
     """
     dit s'il est judicieux de parcourir le chemin entre les sommets i et j
     en sens inverse, si c'est judicieux, change le chemin et retourne True,
@@ -433,7 +433,7 @@ def retournement_essai(chemin, i, j, negligeable=1e-5):
     return True
 
 
-def retournement(chemin, taille, fLOG):
+def retournement(chemin, taille, fLOG, distance):
     """
     amélioration du chemin par un algorithme simple,
     utilise des retournements de taille au plus <taille>,
@@ -451,17 +451,17 @@ def retournement(chemin, taille, fLOG):
             retour[t] = 0
             for i in range(0, nb):
                 j = (i + t) % nb
-                b = retournement_essai(chemin, i, j)
+                b = retournement_essai(chemin, i, j, distance=distance)
                 if b:
                     retour[t] += 1
                     nb_change += 1
         nbtout += nb_change
     fLOG("nombre de retournements %d longueur : \t %10.0f --- \t"
-         % (nbtout, longueur_chemin(chemin)), " --- : ", retour)
+         % (nbtout, longueur_chemin(chemin, distance)), " --- : ", retour)
     return nbtout
 
 
-def echange_position_essai(chemin, a, b, x, inversion, negligeable=1e-5):
+def echange_position_essai(chemin, a, b, x, inversion, negligeable=1e-5, distance=None):
     """
     échange la place des villes ka et kb pour les placer entre les villes i et i+1,
     si inversion est True, on inverse également le chemin inséré, si inversion est False,
@@ -633,7 +633,7 @@ def voisinage_zone_xy(x, y, X, Y):
     return voisin
 
 
-def echange_position(chemin, taille, taille_zone, X, Y, grande=0.5, fLOG=None):
+def echange_position(chemin, taille, taille_zone, X, Y, grande=0.5, fLOG=None, distance=None):
     """
     regarde si on ne peut pas déplacer un segment de longueur taille
     pour supprimer les arêtes les plus longues,
@@ -717,7 +717,7 @@ def echange_position(chemin, taille, taille_zone, X, Y, grande=0.5, fLOG=None):
                 # on essaye d'insérer le sous-chemin (x- t + 1 + nb)  --> x
                 # au milieu de l'arête i,i+1
                 b = echange_position_essai(
-                    chemin, (x - t + 1 + nb) % nb, x, i, False)
+                    chemin, (x - t + 1 + nb) % nb, x, i, False, distance=distance)
                 if b:
                     nb_change += 1
                     retour[t] += 1
@@ -726,7 +726,7 @@ def echange_position(chemin, taille, taille_zone, X, Y, grande=0.5, fLOG=None):
                 # on essaye d'insérer le sous-chemin (xm+ t - 1)  --> xm
                 # au milieu de l'arête i,i+1
                 b = echange_position_essai(
-                    chemin, (xm + t - 1) % nb, xm, i, False)
+                    chemin, (xm + t - 1) % nb, xm, i, False, distance=distance)
                 if b:
                     nb_change += 1
                     retour[t] += 1
@@ -734,27 +734,29 @@ def echange_position(chemin, taille, taille_zone, X, Y, grande=0.5, fLOG=None):
 
                 # on essaye de casser l'arête x,xm en insérant
                 # le sous-chemin i --> (i+t) % nb
-                b = echange_position_essai(chemin, i, (i + t) % nb, x, False)
-                if b:
-                    nb_change += 1
-                    retour[t] += 1
-                    continue
-                # idem
-                b = echange_position_essai(chemin, i, (i + t) % nb, x, True)
-                if b:
-                    retour[t] += 1
-                    nb_change += 1
-                    continue
-                # idem
                 b = echange_position_essai(
-                    chemin, (i - t + nb) % nb, i, x, False)
+                    chemin, i, (i + t) % nb, x, False, distance=distance)
                 if b:
                     nb_change += 1
                     retour[t] += 1
                     continue
                 # idem
                 b = echange_position_essai(
-                    chemin, (i - t + nb) % nb, i, x, True)
+                    chemin, i, (i + t) % nb, x, True, distance=distance)
+                if b:
+                    retour[t] += 1
+                    nb_change += 1
+                    continue
+                # idem
+                b = echange_position_essai(
+                    chemin, (i - t + nb) % nb, i, x, False, distance=distance)
+                if b:
+                    nb_change += 1
+                    retour[t] += 1
+                    continue
+                # idem
+                b = echange_position_essai(
+                    chemin, (i - t + nb) % nb, i, x, True, distance=distance)
                 if b:
                     retour[t] += 1
                     nb_change += 1
@@ -763,11 +765,11 @@ def echange_position(chemin, taille, taille_zone, X, Y, grande=0.5, fLOG=None):
         nbtout += nb_change
 
     fLOG("nombre de déplacements %d longueur :   \t %10.0f --- \t"
-         % (nbtout, longueur_chemin(chemin)), " --- : ", retour)
+         % (nbtout, longueur_chemin(chemin, distance=distance)), " --- : ", retour)
     return nbtout
 
 
-def supprime_croisement(chemin, taille_zone, X, Y, fLOG):
+def supprime_croisement(chemin, taille_zone, X, Y, fLOG, distance=None):
     """
     supprime les croisements d'arêtes,
     retourne le nombre de changement effectués,
@@ -812,11 +814,11 @@ def supprime_croisement(chemin, taille_zone, X, Y, fLOG):
 
         nb_change = 0
         for v in ville:
-            b = retournement_essai(chemin, i, v)
+            b = retournement_essai(chemin, i, v, distance=distance)
             if b:
                 nb_change += 1
                 continue
-            b = retournement_essai(chemin, im, v)
+            b = retournement_essai(chemin, im, v, distance=distance)
             if b:
                 nb_change += 1
                 continue
@@ -824,12 +826,13 @@ def supprime_croisement(chemin, taille_zone, X, Y, fLOG):
         nbtout += nb_change
 
     fLOG("nombre de croisements %d longueur :      \t %10.0f --- \t"
-         % (nbtout, longueur_chemin(chemin)))
+         % (nbtout, longueur_chemin(chemin, distance=distance)))
     return nbtout
 
 
 def amelioration_chemin(chemin, taille_zone, X, Y, taille=10, screen=None,
-                        fLOG=None, pygame=None, max_iter=None, images=None):
+                        fLOG=None, pygame=None, max_iter=None, images=None,
+                        distance=None):
     """
     amélioration du chemin par un algorithme simple,
     utilise des retournements de taille au plus *taille*,
@@ -849,7 +852,7 @@ def amelioration_chemin(chemin, taille_zone, X, Y, taille=10, screen=None,
     iter = 0
     nb = 1
     while nb > 0 and (max_iter is None or iter < max_iter):
-        nb = retournement(chemin, taille, fLOG=fLOG)
+        nb = retournement(chemin, taille, fLOG=fLOG, distance=distance)
         if screen is not None:
             screen.fill(white)
             display_chemin(chemin, 0, screen, pygame=pygame)
@@ -862,7 +865,7 @@ def amelioration_chemin(chemin, taille_zone, X, Y, taille=10, screen=None,
     # amélioration
     nb = 1
     while nb > 0 and (max_iter is None or iter < max_iter):
-        nb = retournement(chemin, taille, fLOG=fLOG)
+        nb = retournement(chemin, taille, fLOG=fLOG, distance=distance)
         if screen is not None:
             screen.fill(white)
             display_chemin(chemin, 0, screen=screen, pygame=pygame)
@@ -871,7 +874,8 @@ def amelioration_chemin(chemin, taille_zone, X, Y, taille=10, screen=None,
                 images.append(screen.copy())
             empty_main_loop(pygame)
         nb += echange_position(chemin, taille // 2,
-                               taille_zone, X, Y, fLOG=fLOG)
+                               taille_zone, X, Y, fLOG=fLOG,
+                               distance=distance)
         if screen is not None:
             screen.fill(white)
             display_chemin(chemin, 0, screen=screen, pygame=pygame)
@@ -879,7 +883,8 @@ def amelioration_chemin(chemin, taille_zone, X, Y, taille=10, screen=None,
             if images is not None:
                 images.append(screen.copy())
             empty_main_loop(pygame)
-        nb += supprime_croisement(chemin, taille_zone, X, Y, fLOG=fLOG)
+        nb += supprime_croisement(chemin, taille_zone,
+                                  X, Y, fLOG=fLOG, distance=distance)
         if screen is not None:
             screen.fill(white)
             display_chemin(chemin, 0, screen=screen, pygame=pygame)
@@ -891,7 +896,8 @@ def amelioration_chemin(chemin, taille_zone, X, Y, taille=10, screen=None,
 
 
 def tsp_kruskal_algorithm(points, size=20, length=10, max_iter=None,
-                          fLOG=noLOG, pygame=None, screen=None, images=None):
+                          fLOG=noLOG, pygame=None, screen=None, images=None,
+                          distance=None):
     """
     find the shortest path going through all points
 
@@ -903,9 +909,12 @@ def tsp_kruskal_algorithm(points, size=20, length=10, max_iter=None,
     @param      screen      with pygame
     @param      fLOG        logging function
     @param      images      save intermediate images
+    @param      distance    distance function
     @return                 path
     """
-    di = arbre_poids_minimal(points, size)
+    if distance is None:
+        distance = distance_euclidian
+    di = arbre_poids_minimal(points, size, distance)
     arbre = di["arbre"]
     X, Y = di["X"], di["Y"]
     if screen is not None:
@@ -936,7 +945,7 @@ def tsp_kruskal_algorithm(points, size=20, length=10, max_iter=None,
         display_chemin(neurones, 0, screen=screen, pygame=pygame)
     amelioration_chemin(neurones, size, X, Y, length, screen,
                         fLOG=fLOG, pygame=pygame, max_iter=max_iter,
-                        images=images)
+                        images=images, distance=distance)
     return neurones
 
 
@@ -986,7 +995,7 @@ def display_arbre(villes, arbre, mult=1, screen=None, pygame=None):
 
 def pygame_simulation(size=(800, 500), zone=20, length=10, max_iter=None,
                       nb=700, fLOG=noLOG, pygame=None, folder=None,
-                      first_click=False):
+                      first_click=False, distance=None):
     """
     @param      pygame          module pygame
     @param      nb              number of cities
@@ -997,6 +1006,7 @@ def pygame_simulation(size=(800, 500), zone=20, length=10, max_iter=None,
     @param      folder          folder where to save images
     @param      first_click     pause
     @param      fLOG            logging function
+    @param      distance        distance function
     @return                     @see cl PuzzleGirafe
 
     La simulation ressemble à ceci :
@@ -1027,7 +1037,8 @@ def pygame_simulation(size=(800, 500), zone=20, length=10, max_iter=None,
 
     images = [] if folder is not None else None
     tsp_kruskal_algorithm(points, size=zone, length=length, max_iter=max_iter,
-                          fLOG=fLOG, pygame=pygame, screen=screen, images=images)
+                          fLOG=fLOG, pygame=pygame, screen=screen, images=images,
+                          distance=distance)
     fLOG("folder", folder)
     fLOG("images", len(images))
 
