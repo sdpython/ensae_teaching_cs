@@ -165,50 +165,6 @@ def jupyter_get_variable(name, magic_command_instance):
     return magic_command_instance.shell.user_ns[name]
 
 
-def jupyter_cython_extension():
-    """
-    The function raises an exception if cython has a good chance not
-    to work because Python does not find any suitable compiler
-    (not `MinGW <http://www.mingw.org/>`_ or
-    `Visual Studio Express <https://www.visualstudio.com/en-us/products/visual-studio-express-vs.aspx>`_
-    or any expected version).
-    In that case, the function displays a message with some indications
-    on how to fix it.
-
-    @FAQ(jupyter___Cython ne fonctionne pas sous Windows)
-
-    .. index:: vcvarsall, cython
-
-    Cela se caractérise par le message ::
-
-        Unable to find vcvarsall.bat
-
-    Le blog post
-    `Build a Python 64 bit extension on Windows <http://www.xavierdupre.fr/blog/2013-07-07_nojs.html>`_
-    répond à cette question.
-    Le fichier à modifier est le suivant ::
-
-        C:\\Python34_x64\\lib\\distutils\\msvc9compiler.py
-
-    @endFAQ
-    """
-    if not sys.platform.startswith("win"):
-        return True
-
-    import distutils.msvc9compiler as mod
-    fc = os.path.abspath(mod.__file__)
-    with open(fc, "r") as f:
-        code = f.read()
-
-    find = "'win-amd64' : 'x86_amd64'"
-    if find not in code:
-        url = "http://www.xavierdupre.fr/blog/2013-07-07_nojs.html"
-        raise Exception(
-            'Unable to find string {1} in\n  File "{0}", line 1\nsee {2}'.format(fc, find, url))
-
-    return True
-
-
 def jupyter_install_mathjax():
     """
     @FAQ(jupyter___Offline MathJax)

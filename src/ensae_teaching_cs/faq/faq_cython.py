@@ -53,6 +53,17 @@ def compile_cython_single_script(script, fLOG=noLOG):
     et faire attention à la version de Python que vous utilisez.
 
     @endFAQ
+
+    The compilation requires a compiler
+    (not `MinGW <http://www.mingw.org/>`_ or
+    `Visual Studio (Community Edition) <https://www.microsoft.com/france/visual-studio/produits/community/Default.aspx>`_).
+    If none was found, Python usually displays an error message like::
+
+        Unable to find vcvarsall.bat
+
+    You can also read this old blog post:
+    `Build a Python 64 bit extension on Windows <http://www.xavierdupre.fr/blog/2013-07-07_nojs.html>`_
+    about this file:: ``C:\\Python34_x64\\lib\\distutils\\msvc9compiler.py``.
     """
     ext = os.path.splitext(script)[-1]
     if ext != ".pyx":
