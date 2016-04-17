@@ -6,7 +6,6 @@
 """
 
 import os
-import sys
 
 from pyquickhelper.loghelper import fLOG
 from .faq_jupyter_helper import nb_open
