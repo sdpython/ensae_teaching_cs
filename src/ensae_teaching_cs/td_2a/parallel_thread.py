@@ -73,13 +73,3 @@ class ParallelThread (threading.Thread):
             return final
         else:
             return th
-
-if __name__ == "__main__":
-    import numpy
-
-    def inv(m):
-        return numpy.linalg.inv(m)
-
-    nps = [[numpy.random.random((5, 5))] for i in range(0, 1000)]
-    mm = ParallelThread.parallel(inv, nps, 10)
-    print(len(mm))

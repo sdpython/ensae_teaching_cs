@@ -9,14 +9,8 @@ import os
 import os.path
 import warnings
 import webbrowser
-
-try:
-    from notebook import notebookapp
-    from notebook.utils import url_path_join
-except ImportError:
-    from IPython.html import notebookapp
-    from IPython.html.utils import url_path_join
-
+from notebook import notebookapp
+from notebook.utils import url_path_join
 from pyquickhelper.loghelper import fLOG
 
 
@@ -40,7 +34,7 @@ def find_best_server(filename, profile='default'):
         return None
 
 
-def nb_open(filename, profile='default', fLOG=fLOG):
+def nb_open(filename, profile='default', open_browser=True, fLOG=fLOG):
     """
     open a notebook with an existing server,
     if no server can be found, it starts a new one
@@ -48,6 +42,7 @@ def nb_open(filename, profile='default', fLOG=fLOG):
 
     @param      filename        notebook
     @param      profile         profile to use
+    @param      open_browser    open browser or not
     @param      fLOG            logging function
     @return                     a running server or None if not found
     """
@@ -64,7 +59,7 @@ def nb_open(filename, profile='default', fLOG=fLOG):
         home_dir = os.path.dirname(filename)
         server = notebookapp.launch_new_instance(file_to_run=os.path.abspath(filename),
                                                  notebook_dir=home_dir,
-                                                 open_browser=True,
+                                                 open_browser=open_browser,
                                                  # Avoid it seeing our own argv
                                                  argv=[],
                                                  )

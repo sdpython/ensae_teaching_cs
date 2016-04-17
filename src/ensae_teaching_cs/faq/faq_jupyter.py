@@ -164,23 +164,6 @@ def jupyter_get_variable(name, magic_command_instance):
     return magic_command_instance.shell.user_ns[name]
 
 
-def jupyter_install_mathjax():
-    """
-    @FAQ(jupyter___Offline MathJax)
-    By default, Jupyter uses an online version of MathJax which means
-    the connection to internet must remain available.
-    To import mathjax locally, you need to run the following:
-
-    @code
-    from IPython.external import mathjax
-    mathjax.install_mathjax()
-    @endcode
-    @endFAQ
-    """
-    from IPython.external import mathjax
-    mathjax.install_mathjax()
-
-
 def jupyter_open_notebook(filename, profile='default', fLOG=fLOG):
     """
     Calls @see fn nb_open, open a notebook with an existing server,

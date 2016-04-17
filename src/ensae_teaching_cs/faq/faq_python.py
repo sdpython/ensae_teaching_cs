@@ -7,6 +7,7 @@
 
 import os
 import io
+import re
 import urllib.request
 
 
@@ -422,6 +423,8 @@ def enumerate_regex_search(exp, text):
     @endFAQ
     """
     # found = exp.search(text)
+    if isinstance(exp, str):
+        exp = re.compile(exp)
     for m in exp.finditer(text):
         yield m
 
@@ -446,9 +449,8 @@ def download_from_url(url, filename):
     @code
     url = "https://www.dropbox.com/[something]/[filename]?dl=1"  # dl=1 is important
     import urllib.request
-    u = urllib.request.urlopen(url)
-    data = u.read()
-    u.close()
+    with urllib.request.urlopen(url) as u:
+        data = u.read()
 
     with open([filename], "wb") as f :
         f.write(data)
@@ -459,9 +461,8 @@ def download_from_url(url, filename):
     @endFAQ
 
     """
-    u = urllib.request.urlopen(url)
-    data = u.read()
-    u.close()
+    with urllib.request.urlopen(url) as u:
+        data = u.read()
 
     with open(filename, "wb") as f:
         f.write(data)
@@ -618,81 +619,6 @@ def information_about_package(name):
     """
     from pyquickhelper.pycode.pip_helper import get_package_info
     return get_package_info(name)
-
-if __name__ == "__main__":
-
-    def processus_quotidien(data_stream):
-        # on compte toujours les lignes
-        nb = 0
-        for line in data_stream:
-            nb += 1
-        return nb
-
-    fichier = __file__
-    f = open(fichier, "r")
-    nb = processus_quotidien(f)
-    print(nb)
-
-    text = "ligne1\nligne2"
-    st = io.StringIO(text)
-    nb = processus_quotidien(st)
-    print(nb)
-
-    class ImmutableClass(object):
-        __slots__ = ["x", "y"]
-
-        def __init__(self, x, y):
-            self.x, self.y = x, y
-
-        def __str__(self):
-            return "{},{}".format(self.x, self.y)
-
-    i1 = ImmutableClass(1, 2)
-    i2 = i1
-    i2.x = -1
-    print(i1, i2)
-
-    import copy
-    l1 = [[0, 1], [2, 3]]
-    l2 = copy.copy(l1)
-    l1[0][0] = -1
-    print(l1, l2)
-
-    l1[0] = [10, 10]
-    print(l1, l2)
-
-    import copy
-    l1 = [[0, 1], [2, 3]]
-    l2 = copy.deepcopy(l1)
-    l1[0][0] = -1
-    print(l1, l2)
-
-    a = []
-    b = a
-    b += [2]
-    print(a)
-
-    class ClasseAvecProperty:
-
-        def __init__(self, x, y):
-            self._x, self._y = x, y
-
-        @property
-        def x(self):
-            return self._x
-
-        @property
-        def y(self):
-            return self._y
-
-        @property
-        def norm2(self):
-            return self._y ** 2 + self._x ** 2
-
-    c = ClasseAvecProperty(1, 2)
-    print(c.x)
-    print(c.y)
-    c.x = 5
 
 
 def get_month_name(date):
