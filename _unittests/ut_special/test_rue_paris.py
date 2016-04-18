@@ -47,7 +47,7 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyensae.datasource import download_data
-from src.ensae_teaching_cs.special.rues_paris import get_data, bellman, kruskall, possible_edges, eulerien_extension, distance_paris, euler_path, connected_components, distance_haversine, graph_degree
+from src.ensae_teaching_cs.special.rues_paris import get_data, bellman, kruskal, possible_edges, eulerien_extension, distance_paris, euler_path, connected_components, distance_haversine, graph_degree
 
 
 class TestRueParis (unittest.TestCase):
@@ -103,7 +103,7 @@ class TestRueParis (unittest.TestCase):
             allow=lambda e: e in possibles,
             init=init)
         fLOG("---")
-        added = kruskall(edges, init, fLOG=fLOG)
+        added = kruskal(edges, init, fLOG=fLOG)
         d = graph_degree(edges + added)
         allow = sorted([k for k, v in d.items() if v % 2 == 1])
         fLOG("degrees", allow)
@@ -114,7 +114,7 @@ class TestRueParis (unittest.TestCase):
                            0] in allow or e[1] in allow,
                        init=init)
         fLOG("---")
-        added = kruskall(edges, init, fLOG=fLOG)
+        added = kruskal(edges, init, fLOG=fLOG)
         d = graph_degree(edges + added)
         allow = sorted([k for k, v in d.items() if v % 2 == 1])
         fLOG("degrees", allow)
