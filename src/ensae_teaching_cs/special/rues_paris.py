@@ -5,7 +5,7 @@
 """
 import random
 import math
-import pyensae
+from pyquickhelper.loghelper import noLOG
 
 
 def distance_paris(lat1, lng1, lat2, lng2):
@@ -41,7 +41,7 @@ def distance_haversine(lat1, lng1, lat2, lng2):
     return d
 
 
-def get_data(whereTo=".", timeout=None, fLOG=print):
+def get_data(whereTo=".", timeout=None, fLOG=noLOG):
     """
     Retourne les données des rues de Paris. On suppose que les arcs sont uniques
     et qu'il si :math:`j \\rightarrow k` est présent, :math:`j \\rightarrow k` ne l'est pas.
@@ -62,7 +62,8 @@ def get_data(whereTo=".", timeout=None, fLOG=print):
     - d: distance
 
     """
-    data = pyensae.download_data(
+    from pyensae import download_data
+    data = download_data(
         "paris_54000.zip",
         whereTo=whereTo,
         fLOG=fLOG,
@@ -169,10 +170,11 @@ def possible_edges(edges, threshold, fLOG=None, distance=distance_haversine):
     return possibles
 
 
-def bellman(edges, iter=20, fLOG=print, allow=None, init=None):
+def bellman(edges, iter=20, fLOG=noLOG, allow=None, init=None):
     """
     Implémente l'algorithme de `Bellman-Ford <http://fr.wikipedia.org/wiki/Algorithme_de_Bellman-Ford>`_.
 
+    @param      edges       liste de tuples (noeud 1, noeud 2, ?, ?, ?, poids)
     @param      iter        nombre d'itérations maximal
     @param      fLOG        logging function
     @param      allow       fonction déterminant si l'algorithme doit envisager cette liaison ou pas
@@ -197,7 +199,15 @@ def bellman(edges, iter=20, fLOG=print, allow=None, init=None):
         if e[1] not in edges_from:
             edges_from[e[1]] = []
         edges_from[e[0]].append(e)
-        edges_from[e[1]].append((e[1], e[0], e[2], e[4], e[3], e[5]))
+        if len(e) == 2:
+            edges_from[e[1]].append((e[1], e[0], 1.0))
+        elif len(e) == 3:
+            edges_from[e[1]].append((e[1], e[0], e[2]))
+        elif len(e) == 6:
+            edges_from[e[1]].append((e[1], e[0], e[2], e[4], e[3], e[5]))
+        else:
+            raise ValueError(
+                "an edge should be a tuple of 2, 3, or 6 elements, last item is the weight, not:\n{0".format(e))
 
     modif = 1
     total_possible_edges = (len(edges_from) ** 2 - len(edges_from)) // 2
@@ -230,7 +240,7 @@ def bellman(edges, iter=20, fLOG=print, allow=None, init=None):
     return init
 
 
-def kruskall(edges, extension, fLOG=None):
+def kruskal(edges, extension, fLOG=None):
     """
     Applique l'algorithme de Kruskal (ou ressemblant) pour choisir les arcs à ajouter.
 
@@ -291,7 +301,7 @@ def kruskall(edges, extension, fLOG=None):
 
 
 def eulerien_extension(
-        edges, iter=20, fLOG=print, alpha=0.5, distance=distance_haversine):
+        edges, iter=20, fLOG=noLOG, alpha=0.5, distance=distance_haversine):
     """
     Contruit une extension eulérienne d'un graphe.
 
@@ -312,7 +322,7 @@ def eulerien_extension(
         distance=distance)
     fLOG("next")
     init = bellman(edges, fLOG=fLOG, allow=lambda e: e in possibles)
-    added = kruskall(edges, init, fLOG=fLOG)
+    added = kruskal(edges, init, fLOG=fLOG)
     d = graph_degree(edges + added)
     allow = [k for k, v in d.items() if v % 2 == 1]
     totali = 0
@@ -323,7 +333,7 @@ def eulerien_extension(
                        allow=lambda e: e in possibles or e[
                            0] in allowset or e[1] in allowset,
                        init=init)
-        added = kruskall(edges, init, fLOG=fLOG)
+        added = kruskal(edges, init, fLOG=fLOG)
         d = graph_degree(edges + added)
         allow = [k for k, v in d.items() if v % 2 == 1]
         totali += 1

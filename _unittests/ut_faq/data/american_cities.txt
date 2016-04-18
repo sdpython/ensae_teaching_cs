@@ -1,4 +1,4 @@
-Name,Latitude,Longitude,City,States
+Name,Latitude,Longitude,City,State
 [ANB],33.58,85.85,Anniston,AL
 [AUO],32.67,85.44,Auburn,AL
 [BHM],33.57,86.75,Birmingham,AL

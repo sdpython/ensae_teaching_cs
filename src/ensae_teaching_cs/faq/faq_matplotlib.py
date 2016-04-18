@@ -62,15 +62,8 @@ def zoomable():
     pass
 
 
-def graph_ggplot_with_label(x,
-                            y,
-                            labels,
-                            bar=True,
-                            title=None,
-                            figsize=(6, 4),
-                            style=None,
-                            ax=None,
-                            **kwargs):
+def graph_ggplot_with_label(x, y, labels, bar=True, title=None, figsize=(6, 4), style=None,
+                            ax=None, **kwargs):
     """
     creates a graph with matplotlib
 
@@ -264,12 +257,31 @@ def avoid_overlapping_dates(fig, **options):
     fig.autofmt_xdate(**options)
 
 
-def graph_cities(df, names=["Longitude", "Latitude", "City"], ax=None, linked=False, **params):
+def graph_cities(df, names=["Longitude", "Latitude", "City"], ax=None, linked=False,
+                 fLOG=None, loop=False, **params):
     """
     plots the cities on a map
 
     @param      df      dataframe
     @param      names   names of the column Latitude, Longitude, City
+    @param      ax      existing ax
+    @param      linked  draw lines between points
+    @param      loop    add a final line to link the first point to the final one
+    @param      fLOG    logging function
+    @param      params  see below
+    @return             ax
+
+    Other parameters:
+
+    * llcrnrlon, llcrnrlat, urcrnrlon, urcrnrlat
+    * resolution
+    * projection
+    * color, lake_color
+    * style
+    * markersize
+    * fontname, fontcolor, fontsize, fontweight, fontvalign
+    * slon, slat: space between meridians and parellels
+
     """
     xx = list(df[names[0]])
     yy = list(df[names[1]])
@@ -281,6 +293,15 @@ def graph_cities(df, names=["Longitude", "Latitude", "City"], ax=None, linked=Fa
     minx, maxx = min(xx), max(xx)
     miny, maxy = min(yy), max(yy)
     avex, avey = numpy.mean(xx), numpy.mean(yy)
+    dx = (maxx - minx) / 10
+    dy = (maxy - miny) / 10
+    if fLOG:
+        fLOG("[graph_cities] Lon:[{0}, {1}] x Lat:[{2}, {3}] - mean={4}, {5} - linked={6}".format(minx,
+                                                                                                  maxx, miny, maxy, avex, avey, linked))
+    minx -= dx
+    maxx += dx
+    miny -= dy
+    maxy += dy
 
     m = Basemap(llcrnrlon=params.get('llcrnrlon', minx),
                 llcrnrlat=params.get('llcrnrlat', miny),
@@ -293,11 +314,22 @@ def graph_cities(df, names=["Longitude", "Latitude", "City"], ax=None, linked=Fa
     m.drawcountries()
     m.fillcontinents(color=params.get('color', 'lightgrey'),
                      lake_color=params.get('lake_color', '#AAAAFF'))
-    m.drawparallels(numpy.arange(miny, maxy, 5.))
-    m.drawmeridians(numpy.arange(minx, maxx, 5.))
+    m.drawparallels(numpy.arange(miny, maxy, params.get('slat', 10.)))
+    m.drawmeridians(numpy.arange(minx, maxx, params.get('slon', 10.)))
     m.drawmapboundary(fill_color=params.get('fill_color', 'aqua'))
     # on ajoute Paris sur la carte
+
+    style = params.get('style', 'ro')
+    markersize = params.get('markersize', 6)
+    fontname = params.get('fontname', 'Arial')
+    fontsize = params.get('fontsize', '16')
+    fontcolor = params.get('fontcolor', 'black')
+    fontweight = params.get('fontweight', 'normal')
+    fontvalign = params.get('fontvalign', 'bottom')
+
     if linked:
+        if "-" not in style:
+            style += "-"
         xs, ys = [], []
         i = 0
         for lon, lat in zip(xx, yy):
@@ -305,18 +337,23 @@ def graph_cities(df, names=["Longitude", "Latitude", "City"], ax=None, linked=Fa
             xs.append(x)
             ys.append(y)
             if nn[i] is not None and len(nn[i]) > 0:
-                plt.text(x, y, nn[i])
+                plt.text(x, y, nn[i], fontname=fontname, size=fontsize,
+                         color=fontcolor, weight=fontweight,
+                         verticalalignment=fontvalign)
             i += 1
+        if loop:
+            xs.append(xs[0])
+            ys.append(ys[0])
 
-        m.plot(xs, yy, params.get('style', 'bo'),
-               markersize=params.get('markersize', 6))
+        m.plot(xs, ys, style, markersize=markersize)
     else:
         i = 0
         for lon, lat in zip(xx, yy):
             x, y = m(lon, lat)
-            m.plot(x, y, params.get('style', 'bo'),
-                   markersize=params.get('markersize', 6))
+            m.plot(x, y, style, markersize=markersize)
             if nn[i] is not None and len(nn[i]) > 0:
-                plt.text(x, y, nn[i])
+                plt.text(x, y, nn[i], fontname=fontname, size=fontsize,
+                         color=fontcolor, weight=fontweight,
+                         verticalalignment=fontvalign)
             i += 1
     return ax

@@ -260,7 +260,7 @@ def pygame_simulation(pygame, first_click=False, folder=None,
     @param      th2             ...
     @param      max_iter        nombre d'itérations
     @param      image           définition de la ville
-    @return                     @see cl PuzzleGirafe
+    @return                     @see cl Ville
 
     La simulation ressemble à ceci :
 

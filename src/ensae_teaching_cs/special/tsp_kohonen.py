@@ -298,7 +298,6 @@ def pygame_simulation(pygame, folder=None, size=(800, 500), nb=200,
     @param      folder          répertoire où stocker les images de la simulation
     @param      size            taille de l'écran
     @param      delay           delay between two tries
-    @return                     @see cl PuzzleGirafe
 
 
     La simulation ressemble à ceci :

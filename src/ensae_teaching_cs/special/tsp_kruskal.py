@@ -4,7 +4,8 @@
 @brief Implémente un algorithme qui cherche le plus court chemin passant
 par tous les noeuds d'un graphe (TSP). Applique un algorithme de Kruskal
 puis cherche à améliorer le chemin localement.
-Voir :ref:`l-tsp_kruskal`.
+Voir :ref:`l-tsp_kruskal`. La fonction principale est
+@see fn tsp_kruskal_algorithm.
 """
 import functools
 import random
@@ -181,6 +182,14 @@ def arbre_poids_minimal(villes, zone_taille, distance):
     zone_taille permet de découper l'image en zones,
     les distances ne seront calculées que si
     deux éléments sont dans la même zone ou dans une zone voisine
+
+    @param      villes          list of tuples (tuple = coordinates)
+    @param      zone_taille     @see fn repartition_zone
+    @param      distance        distance function which returns the distance between two
+                                elements
+    @return                     list of lists: each sublist *r[i]* contains the indexes of
+                                neighbors of node *i* so that the whole graph is
+                                only one connected component
     """
 
     def tri_distance(u, v):
@@ -191,7 +200,8 @@ def arbre_poids_minimal(villes, zone_taille, distance):
         else:
             return 0
 
-    zones, X, Y, mx, my, Zmax = repartition_zone(villes, zone_taille)
+    zones, X, Y, mx, my, Zmax = repartition_zone(
+        villes, zone_taille=zone_taille)
 
     # calcul des distances
     li = []
@@ -218,7 +228,7 @@ def arbre_poids_minimal(villes, zone_taille, distance):
     # liste des villes par composante connexe
     list_comp = [[i] for i in range(0, len(villes))]
 
-    while(nb_comp > 1):
+    while nb_comp > 1:
         iii = 0
         for c in li:
             iii += 1
@@ -288,6 +298,12 @@ def circuit_eulerien(villes, arbre, screen, pygame, fLOG):
     iter = []
     while len(done) < len(villes):
         iter.append(len(done))
+        if len(iter) % 1000 == 0:
+            fLOG("  circuit_eulerien: iter={0} len(done)={1} len(villes)={2}".format(
+                len(iter), len(done), len(villes)))
+            if len(done) == iter[-1000]:
+                # there is apparently something wrong
+                break
         v = villes[bm]
         ma = - math.pi - 1
         bvec = vec
@@ -296,7 +312,17 @@ def circuit_eulerien(villes, arbre, screen, pygame, fLOG):
         for k in range(0, len(arbre[bm])):
             l = arbre[bm][k]
             vec2 = vecteur_points(v, villes[l])
-            if opvec == vec2:
+            if vec2 == (0.0, 0.0):
+                # same point, we keep the same direction
+                if l not in done:
+                    bl = l
+                    bvec = vec2
+                    # no need to go further if the points are equal
+                    break
+                else:
+                    # we skip
+                    continue
+            elif opvec == vec2:
                 angle = -math.pi
             else:
                 cos = vecteur_cosinus(vec, vec2)
@@ -312,9 +338,36 @@ def circuit_eulerien(villes, arbre, screen, pygame, fLOG):
                 chemin.append(bl)
                 done.add(bl)
             bm = bl
-            vec = bvec
+            if bvec != (0.0, 0.0):
+                vec = bvec
         else:
-            raise Exception("this case should not happen")
+            # something is wrong (it might an issue with duplicated points)
+            rows = []
+            for i, p in enumerate(villes):
+                rows.append("p{0}: {1},{2}".format(i, p[0], p[1]))
+            for i, c in enumerate(chemin):
+                rows.append("c{0}: i={1} -> {2},{3}".format(i,
+                                                            c, villes[c][0], villes[c][1]))
+            rows.append("bm={0} ma={1} bvec={2} vec={3} bl={4}".format(
+                bm, ma, vec2, vec, bl))
+            rows.append("arbre[{0}]={1}".format(bm, arbre[bm]))
+            rows.append("arbre[{0}]={1}".format(
+                arbre[bm][0], arbre[arbre[bm][0]]))
+            mes = "\n".join(rows)
+            raise Exception("this case should not happen\n" + mes)
+
+    if len(done) < len(villes):
+        # something is wrong (it might an issue with duplicated points)
+        rows = []
+        for i, p in enumerate(villes):
+            rows.append("p{0}: {1},{2}".format(i, p[0], p[1]))
+        for i, c in enumerate(chemin):
+            rows.append("c{0}: i={1} -> {2},{3}".format(i,
+                                                        c, villes[c][0], villes[c][1]))
+        rows.append("bm={0} ma={1} bvec={2} vec={3} bl={4}".format(
+            bm, ma, vec2, vec, bl))
+        mes = "\n".join(rows)
+        raise Exception("circuit_eulerien cannot give a path:\n" + mes)
 
     return chemin
 
@@ -332,7 +385,6 @@ def circuit_hamiltonien(chemin):
             continue
         res.append(c)
         coche[c] = True
-
     return res
 
 
@@ -596,11 +648,15 @@ def dessin_arete_zone(chemin, taille_zone, X, Y):
     """
     res = [[[] for j in range(0, Y + 1)] for i in range(0, X + 1)]
     nb = len(chemin)
+    mx = min(_[0] for _ in chemin)
+    my = min(_[1] for _ in chemin)
     for i in range(0, nb):
         a = chemin[i]
         b = chemin[(i + 1) % nb]
-        x1, x2 = int(a[0] // taille_zone), int(b[0] // taille_zone)
-        y1, y2 = int(a[1] // taille_zone), int(b[1] // taille_zone)
+        x1, x2 = int(
+            (a[0] - mx) // taille_zone), int((b[0] - mx) // taille_zone)
+        y1, y2 = int(
+            (a[1] - my) // taille_zone), int((b[1] - my) // taille_zone)
         line = draw_line(x1, y1, x2, y2)
         for x, y in line:
             res[x][y].append(i)
@@ -655,6 +711,9 @@ def echange_position(chemin, taille, taille_zone, X, Y, grande=0.5, fLOG=None, d
         else:
             return 0
 
+    tmx = min(v[0] for v in chemin)
+    tmy = min(v[1] for v in chemin)
+
     # list des arêtes triés par ordre décroissant
     la = []
     for i in range(0, nb):
@@ -662,7 +721,7 @@ def echange_position(chemin, taille, taille_zone, X, Y, grande=0.5, fLOG=None, d
         la.append((i, im, distance(chemin[i], chemin[im])))
     la = list(sorted(la, key=functools.cmp_to_key(tri_arete)))
 
-    # zone associé à chaque arête
+    # zone associée à chaque arête
     zone = dessin_arete_zone(chemin, taille_zone, X, Y)
 
     dseuil = la[int(nb * grande)][2]
@@ -686,8 +745,10 @@ def echange_position(chemin, taille, taille_zone, X, Y, grande=0.5, fLOG=None, d
             break    # arête trop petite
 
         # zone traversée par la ligne
-        x1, x2 = int(a[0] // taille_zone), int(b[0] // taille_zone)
-        y1, y2 = int(a[1] // taille_zone), int(b[1] // taille_zone)
+        x1, x2 = int((a[0] - tmx) //
+                     taille_zone), int((b[0] - tmx) // taille_zone)
+        y1, y2 = int((a[1] - tmy) //
+                     taille_zone), int((b[1] - tmy) // taille_zone)
         ens = draw_line(x1, y1, x2, y2)
         ville = []
         for k, l in ens:
@@ -779,6 +840,8 @@ def supprime_croisement(chemin, taille_zone, X, Y, fLOG, distance=None):
     """
 
     nb = len(chemin)
+    tmx = min(v[0] for v in chemin)
+    tmy = min(v[1] for v in chemin)
 
     # zone associée à chaque arête
     zone = dessin_arete_zone(chemin, taille_zone, X, Y)
@@ -790,8 +853,10 @@ def supprime_croisement(chemin, taille_zone, X, Y, fLOG, distance=None):
         b = chemin[im]
 
         # zone traversée par la ligne
-        x1, x2 = int(a[0] // taille_zone), int(b[0] // taille_zone)
-        y1, y2 = int(a[1] // taille_zone), int(b[1] // taille_zone)
+        x1, x2 = int((a[0] - tmx) //
+                     taille_zone), int((b[0] - tmx) // taille_zone)
+        y1, y2 = int((a[1] - tmy) //
+                     taille_zone), int((b[1] - tmy) // taille_zone)
         ens = draw_line(x1, y1, x2, y2)
         ville = []
         for k, l in ens:
@@ -899,7 +964,8 @@ def tsp_kruskal_algorithm(points, size=20, length=10, max_iter=None,
                           fLOG=noLOG, pygame=None, screen=None, images=None,
                           distance=None):
     """
-    find the shortest path going through all points
+    find the shortest path going through all points, points require to
+    be a 2 dimensional space
 
     @param      points      list 2-tuple (X,Y)
     @param      size        the 2D plan is split into square zones
@@ -911,10 +977,42 @@ def tsp_kruskal_algorithm(points, size=20, length=10, max_iter=None,
     @param      images      save intermediate images
     @param      distance    distance function
     @return                 path
+
+    The distance is a function which takes two tuples and returns a distance::
+
+        def distance(p1, p2):
+            # ...
+            return d
+
+    Les points identiques sont enlevés puis ajouté à la fin.
     """
+    # verification
     if distance is None:
         distance = distance_euclidian
-    di = arbre_poids_minimal(points, size, distance)
+    unique = set()
+    for point in points:
+        if isinstance(point, list):
+            raise TypeError("points cannot be list")
+        unique.add(point)
+
+    # remove duplicates
+    groups = {}
+    for p in points:
+        x, y = p[:2]
+        if (x, y) in groups:
+            groups[x, y].append(p)
+        else:
+            groups[x, y] = [p]
+
+    before = len(points)
+    points = [v[0] for v in groups.values()]
+    fLOG("[tsp_kruskal_algorithm] with no duplicates {0} <= {1}".format(
+        len(points), before))
+
+    # begin of the algortihm
+    fLOG("[tsp_kruskal_algorithm] arbre_poids_minimal nb={0}".format(
+        len(points)))
+    di = arbre_poids_minimal(points, size, distance=distance)
     arbre = di["arbre"]
     X, Y = di["X"], di["Y"]
     if screen is not None:
@@ -924,6 +1022,7 @@ def tsp_kruskal_algorithm(points, size=20, length=10, max_iter=None,
             c = screen.copy()
             for i in range(0, 5):
                 images.append(c)
+    fLOG("[tsp_kruskal_algorithm] circuit_eulerien X={0} Y={1}".format(X, Y))
     chemin = circuit_eulerien(points, arbre, screen, pygame, fLOG)
 
     if len(chemin) != len(points):
@@ -939,14 +1038,26 @@ def tsp_kruskal_algorithm(points, size=20, length=10, max_iter=None,
             for i in range(0, 5):
                 images.append(c)
 
+    fLOG("[tsp_kruskal_algorithm] circuit_hamiltonien")
     neurone = circuit_hamiltonien(chemin)
     neurones = [points[i] for i in neurone]
     if screen is not None:
         display_chemin(neurones, 0, screen=screen, pygame=pygame)
+    fLOG("[tsp_kruskal_algorithm] amelioration_chemin")
     amelioration_chemin(neurones, size, X, Y, length, screen,
                         fLOG=fLOG, pygame=pygame, max_iter=max_iter,
                         images=images, distance=distance)
-    return neurones
+
+    # we add duplicates back
+    final = []
+    for p in neurones:
+        x, y = p[:2]
+        g = groups[x, y]
+        if len(g) == 1:
+            final.append(p)
+        else:
+            final.extend(g)
+    return final
 
 
 def display_ville(villes, screen, bv, pygame):
@@ -1007,7 +1118,7 @@ def pygame_simulation(size=(800, 500), zone=20, length=10, max_iter=None,
     @param      first_click     pause
     @param      fLOG            logging function
     @param      distance        distance function
-    @return                     @see cl PuzzleGirafe
+    @return                     @see fn tsp_kruskal_algorithm
 
     La simulation ressemble à ceci :
 

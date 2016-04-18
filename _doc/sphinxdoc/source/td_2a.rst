@@ -145,6 +145,7 @@ Algorithmique ludique
         * types de complexité : `force brute <http://fr.wikipedia.org/wiki/Recherche_exhaustive>`_, 
           `glouton <http://fr.wikipedia.org/wiki/Algorithme_glouton>`_, `dynamique <http://fr.wikipedia.org/wiki/Programmation_dynamique>`_
         * :ref:`l-algoculture`
+        * :ref:`l-expose-explication` 
             
 
 

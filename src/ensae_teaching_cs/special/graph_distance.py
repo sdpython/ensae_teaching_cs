@@ -106,7 +106,7 @@ class Edge:
         return self.label
 
 
-class Graph:
+class GraphDistance:
     """
     defines a graph
 
@@ -124,10 +124,8 @@ class Graph:
         vertices.sort()
         return vertices
 
-    def __init__(self, edge_list, vertex_label={},
-                 add_loop=False,
-                 weight_vertex=1.,
-                 weight_edge=1.):
+    def __init__(self, edge_list, vertex_label={}, add_loop=False,
+                 weight_vertex=1., weight_edge=1.):
         """
         constructor
 
@@ -143,7 +141,7 @@ class Graph:
             self.edges = {}
             self.labelBegin = "00"
             self.labelEnd = "11"
-            vid = Graph.get_list_of_vertices(edge_list)
+            vid = GraphDistance.get_list_of_vertices(edge_list)
             for u in vid:
                 self.vertices[u] = Vertex(
                     u, vertex_label.get(u, str(u)), weight_vertex)
@@ -191,7 +189,7 @@ class Graph:
                 vertex_label[g[0]] = g[1]
         if len(vertex_label) == 0 or len(edge_list) == 0:
             raise OSError("unable to parse file " + filename)
-        return Graph(edge_list, vertex_label, add_loop)
+        return GraphDistance(edge_list, vertex_label, add_loop)
 
     def _private__init__(self, add_loop, weight_vertex, weight_edge):
         if add_loop:
@@ -379,7 +377,7 @@ class Graph:
         function_mach_vertices, function_match_edges = \
             self.get_matching_functions(
                 function_mach_vertices, function_match_edges)
-        g = Graph([])
+        g = GraphDistance([])
         vfirst = Vertex(self.labelBegin, "%s-%s" % (self.labelBegin, self.labelBegin),
                         (self.vertices[self.labelBegin].weight +
                          graph2.vertices[self.labelBegin].weight) / 2)
@@ -707,7 +705,7 @@ class Graph:
         count_vertex_left, count_vertex_right = self.private_count_left_right(
             reduction_vertex)
 
-        res_graph = Graph([])
+        res_graph = GraphDistance([])
         doneVertex = {}
         done_edge = {}
 
