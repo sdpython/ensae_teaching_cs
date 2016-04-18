@@ -37,7 +37,7 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder
-from src.ensae_teaching_cs.special.graph_distance import Graph
+from src.ensae_teaching_cs.special.graph_distance import GraphDistance
 from src.ensae_teaching_cs.helpers.graphviz_helper import draw_graph_graphviz
 
 
@@ -51,7 +51,7 @@ class TestGraphDistance(unittest.TestCase):
 
         this = os.path.abspath(os.path.dirname(__file__))
         graph = os.path.join(this, "data", "graph.gv")
-        g = Graph.load_from_file(graph, False)
+        g = GraphDistance.load_from_file(graph, False)
         paths = list(g.enumerate_all_paths(True))
         assert len(paths) > 0
 
@@ -71,8 +71,8 @@ class TestGraphDistance(unittest.TestCase):
              ("a", "k"), ("k", "l"), ("k", "C"),
              ]
 
-        graph1 = Graph(graph1)
-        graph2 = Graph(graph2)
+        graph1 = GraphDistance(graph1)
+        graph2 = GraphDistance(graph2)
 
         graph2["C"].label = "c"
         store = {}
@@ -110,8 +110,8 @@ class TestGraphDistance(unittest.TestCase):
                   ("c", "d"), ("d", "e"), ("0", "b")]
         graph2 = [("a", "b"), ("b", "c"), ("b", "X"), ("X", "c"),
                   ("c", "t"), ("t", "d"), ("d", "e"), ("d", "g")]
-        graph1 = Graph(graph1)
-        graph2 = Graph(graph2)
+        graph1 = GraphDistance(graph1)
+        graph2 = GraphDistance(graph2)
         store = {}
         distance, graph = graph1.distance_matching_graphs_paths(graph2,
                                                                 use_min=False, store=store)

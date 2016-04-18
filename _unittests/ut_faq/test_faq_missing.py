@@ -52,7 +52,7 @@ from src.ensae_teaching_cs.faq.faq_jupyter import jupyter_open_notebook
 
 class TestFaqMissing (unittest.TestCase):
 
-    def _test_faq_pythonm(self):
+    def test_faq_pythonm(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -76,7 +76,7 @@ class TestFaqMissing (unittest.TestCase):
         self.assertEqual(get_month_name(datetime(2016, 4, 5)), 'April')
         self.assertEqual(get_day_name(datetime(2016, 4, 17)), 'Sunday')
 
-    def _test_faq_pandas(self):
+    def test_faq_pandas(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -89,7 +89,7 @@ class TestFaqMissing (unittest.TestCase):
         assert df_equal(df, df)
         speed_dataframe()
 
-    def _test_faq_matplotlib(self):
+    def test_faq_matplotlib(self):
         fLOG(
             __file__,
             self._testMethodName,
