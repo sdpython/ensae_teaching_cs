@@ -119,7 +119,7 @@ def py_to_html_folder(folder, addGoogleTracking=True):
     return res
 
 
-def py_to_html_file(file, writehtml="", addGoogleTracking=True):
+def py_to_html_file(file, writehtml="", addGoogleTracking=True, title=None):
     """
     convert a python script into a html file
 
@@ -138,38 +138,38 @@ def py_to_html_file(file, writehtml="", addGoogleTracking=True):
     racine, ext = os.path.splitext(file)
 
     try:
-        tf = open(file, "r")
-        content = tf.read()
-        tf.close()
+        with open(file, "r", encoding="utf-8") as tf:
+            content = tf.read()
+        encoding = "utf-8"
     except UnicodeDecodeError as e:
         try:
-            tf = open(file, "r", encoding="latin1")
-            content = tf.read()
-            tf.close()
+            with open(file, "r", encoding="latin-1") as tf:
+                content = tf.read()
+            encoding = "utf-8"
         except UnicodeDecodeError:
-            tf = open(file, "r", encoding="utf8")
-            content = tf.read()
-            tf.close()
+            with open(file, "r", encoding="utf-8", errors="utf-8") as tf:
+                content = tf.read()
+            encoding = "utf-8"
 
     content = cleanFileFromtohtmlreplace(content)
 
     appliedstyle = readStyleFile(None)
     try:
-        data = file2HTML(content, "0", appliedstyle, False, "1")
+        data = file2HTML(content, "0", appliedstyle,
+                         False, "1", encoding=encoding)
         block = makeBlock(data)
         page = py_page.replace(googleTrackerMarker, googlet)
-        html = page % (f, f, block, py2html__version__)
+        html = page % (title or f, title or f, block, py2html__version__)
     except Exception as e:
-        fLOG("not python file, running it again ", file, " error ", e)
-        raise e
+        raise Exception(
+            "not python file, running it again {0}".format(file)) from e
 
     if len(writehtml) > 0:
         outfile = writehtml
     else:
         outfile = racine + ".html"
 
-    file = open(outfile, "w")  # , encoding="utf8")
-    file.write(html)
-    file.close()
+    with open(outfile, "w", encoding=encoding) as f:
+        f.write(html)
 
     return outfile

@@ -5,14 +5,17 @@
 import re
 import os
 import numpy
+import warnings
 from urllib.parse import urlparse
-from pyquickhelper.loghelper import noLOG
+from pyquickhelper.loghelper import noLOG, unzip_files
 from pyquickhelper.texthelper import remove_diacritics
 from pyquickhelper.filehelper import remove_folder, explore_folder_iterfile
 from pyquickhelper.filehelper import zip_files
+from pyquickhelper.helpgen import nb2html
 from pymmails import EmailMessageRenderer, EmailMessage
 from .repository_exception import RegexRepositoryException, TooManyProjectsException
 from ..td_1a import edit_distance
+from ..homeblog.python_exemple_py_to_html import py_to_html_file
 
 
 class ProjectsRepository:
@@ -380,18 +383,9 @@ class ProjectsRepository:
         return res, skip
 
     @staticmethod
-    def create_folders_from_dataframe(df,
-                                      root,
-                                      report="suivi.rst",
-                                      col_student="Eleves",
-                                      col_group="Groupe",
-                                      col_subject="Sujet",
-                                      col_mail=None,
-                                      overwrite=False,
-                                      email_function=None,
-                                      must_have_email=True,
-                                      skip_if_nomail=False,
-                                      skip_names=None,
+    def create_folders_from_dataframe(df, root, report="suivi.rst", col_student="Eleves", col_group="Groupe",
+                                      col_subject="Sujet", col_mail=None, overwrite=False, email_function=None,
+                                      must_have_email=True, skip_if_nomail=False, skip_names=None,
                                       fLOG=noLOG):
         """
         creates a series of folders for groups of students
@@ -440,9 +434,11 @@ class ProjectsRepository:
             if col_mail is None:
                 local_function = local_email_function
             else:
+                ind_student = list(df.columns).index(col_student) + 1
+                ind_mail = list(df.columns).index(col_mail) + 1
                 mapping = {}
                 for row in df.itertuples():
-                    mapping[getattr(row, col_student)] = getattr(row, col_mail)
+                    mapping[row[ind_student]] = row[ind_mail]
                 local_function = lambda names, skip, mapping=mapping: local_email_function_column(
                     names, skip_names, mapping)
         else:
@@ -502,15 +498,15 @@ class ProjectsRepository:
                 mails, skip = local_function(eleves, skip_names)
                 if must_have_email and (not skip and len(mails) == 0):
                     # we skip only if a group has no mails at all
-                    if isinstance(email_function, list):
-                        raise ProjectsRepository.MailNotFound("unable to find a mail for\n{0}\nname={1}\nskip:{4}\n{5}\namong\n{3}\nGROUP\n{2}".format(
+                    if isinstance(email_function, (list, set)):
+                        raise ProjectsRepository.MailNotFound("unable to find a mail for\n{0}\nname={1}\nskip:{4}\n{5}\namong\n{3}\nGROUP\n{2}\nlocal_function: {6}".format(
                             "; ".join("'%s'" % _ for _ in eleves),
                             name, group, "\n".join(email_function),
-                            skip, skip_names))
+                            skip, skip_names, local_function))
                     else:
                         raise ProjectsRepository.MailNotFound(
-                            "unable to find a mail for {0}\nname={1}\n with function\n{3}\nGROUP\n{2}".format(
-                                " ;".join(eleves), name, group, email_function))
+                            "unable to find a mail for {0}\nname={1}\n with function\n{3}\nGROUP\n{2}\nTYPE:\n{4}".format(
+                                " ;".join(eleves), name, group, email_function, type(email_function)))
                 if skip_if_nomail and (not skip and len(mails) == 0):
                     fLOG("ProjectsRepository.create_folders_from_dataframe [skipping {0}]".format(
                         "; ".join(eleves)))
@@ -753,6 +749,13 @@ class ProjectsRepository:
                     {% endfor %}
                     </ul>
                 {% endif %}
+                {% if len(ps["created_files"]) > 0 %}
+                    <ul>
+                    {% for name, relpath, size in ps["created_files"] %}
+                        <li>added: <a href="{{ relpath }}">{{ name }}</a> {{ size }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
                 </li>
             {% endfor %}
             </ol>
@@ -810,13 +813,17 @@ class ProjectsRepository:
             atts = []
             emails = []
             links = []
+            created_files = []
             for name in self.enumerate_group_files(group):
                 if name.endswith(".metadata"):
                     continue
                 loc = self.get_group_location(group)
                 nb_files += 1
-                size += os.stat(os.path.join(loc, name)).st_size
-                if os.path.split(name)[0].endswith("attachments"):
+                tn = os.path.join(loc, name)
+                size += os.stat(tn).st_size
+                folder = os.path.split(name)[0]
+                splf = folder.replace("\\", "/").split("/")
+                if folder.endswith("attachments"):
                     meta = name + ".metadata"
                     if os.path.exists(meta):
                         data = EmailMessage.read_metadata(meta)
@@ -826,6 +833,13 @@ class ProjectsRepository:
                         day = ""
                     atts.append((day, os.path.relpath(
                         name, self._location), data))
+                elif "attachments" in splf:
+                    rel = os.path.relpath(name, loc)
+                    dest = os.path.relpath(name, self._location)
+                    if rel == dest:
+                        raise Exception("weird\n{0}\n{1}".format(rel, dest))
+                    ssize = format_size(os.stat(name).st_size)
+                    created_files.append((rel, dest, ssize))
                 else:
                     mail = os.path.split(name)[-1]
                     res = EmailMessage.interpret_default_filename(mail)
@@ -860,13 +874,9 @@ class ProjectsRepository:
 
             # we create the variable for the template
             emails = [_[-1] for _ in sorted(emails)]
-            c = dict(link=c[0].replace("\\", "/"),
-                     group=c[1],
-                     nb=nb_files,
-                     size=size,
-                     attachments=atts,
-                     emails=emails,
-                     links=links)
+            c = dict(link=c[0].replace("\\", "/"), group=c[1], nb=nb_files,
+                     size=size, attachments=atts, emails=emails, links=links,
+                     created_files=created_files)
 
             groups.append(c)
 
@@ -899,6 +909,13 @@ class ProjectsRepository:
                             {% endfor %}
                             </ul>
                         {% endif %}
+                        {% if len(ps["created_files"]) > 0 %}
+                            <ul>
+                            {% for name, relpath, size in ps["created_files"] %}
+                                <li>added: <a href="{{ relpath }}">{{ name }}</a> {{ size }}</li>
+                            {% endfor %}
+                            </ul>
+                        {% endif %}
                         </li>
                     {% endfor %}
                     </ol>
@@ -916,3 +933,75 @@ class ProjectsRepository:
         if dof:
             render.flush()
         return res
+
+    def unzip_convert(self, group):
+        """
+        unzip files and convert notebooks into html
+
+        @param          group       group name
+        @return                     list of new files
+        """
+        self.unzip_files(group)
+        return self.convert_files(group)
+
+    def unzip_files(self, group):
+        """
+        unzip files and convert notebooks into html
+
+        @param          group       group name
+        @return                     list of new filess
+        """
+        names = list(self.enumerate_group_files(group))
+        files = []
+        for name in names:
+            if "attachments" not in name:
+                continue
+            ext = os.path.splitext(name)[-1]
+            if ext == ".zip":
+                folder = os.path.splitext(name)[0] + "_zip"
+                folder = folder.replace(" ", "_").replace(",", "_")
+                if not os.path.exists(folder):
+                    self.fLOG(
+                        "ProjectsRepository.unzip_files [unzip {0}]".format(name))
+                    self.fLOG(
+                        "ProjectsRepository.unzip_files [creating {0}]".format(folder))
+                    os.mkdir(folder)
+                    l = unzip_files(name, folder, fLOG=self.fLOG)
+                    files.extend(l)
+                else:
+                    # already done, we do not do it again
+                    pass
+        return files
+
+    def convert_files(self, group):
+        """
+        convert notebook into html
+
+        @param          group       group name
+        @return                     list of new files
+        """
+        names = list(self.enumerate_group_files(group))
+        files = []
+        for name in names:
+            if "attachments" not in name:
+                continue
+            ext = os.path.splitext(name)[-1]
+            if ext == ".ipynb":
+                self.fLOG(
+                    "ProjectsRepository.convert_files [convert {0}]".format(name))
+                out = name + ".html"
+                nb2html(name, out)
+                files.append(out)
+            elif ext == ".py":
+                self.fLOG(
+                    "ProjectsRepository.convert_files [convert {0}]".format(name))
+                out = name + ".html"
+                try:
+                    py_to_html_file(name, out, False, title=os.path.relpath(
+                        name, self.get_group_location(group)))
+                    files.append(out)
+                except Exception as e:
+                    # the syntax of the python file might be wrong
+                    warnings.warn(
+                        "unable to convert File \"{0}\"".format(name))
+        return files

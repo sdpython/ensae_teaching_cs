@@ -122,7 +122,6 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
     fLOG("### nb groups", len(proj.Groups))
 
     # gathers mails
-
     email_render = EmailMessageRenderer(
         tmpl=template_email_html_short, fLOG=fLOG)
     render = EmailMessageListRenderer(title=title,
@@ -136,13 +135,16 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
     box.logout()
 
     # cleaning files
-
     for group in proj.Groups:
         files = list(proj.enumerate_group_files(group))
         att = [_ for _ in files if ".html" in _]
         if len(att) <= 1:
             fLOG("### remove ", group)
             proj.remove_group(group)
+
+    # unzip files and convert notebooks
+    for group in proj.Groups:
+        proj.unzip_convert(group)
 
     fLOG("### summary ")
     summary = os.path.join(folder, "index.html")

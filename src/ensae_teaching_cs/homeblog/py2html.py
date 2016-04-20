@@ -197,7 +197,7 @@ py_page = """
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1 (Latin-1)" >
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
 <title>%s</title>
 <style type="text/css">
     h1 {    color: green;
@@ -425,7 +425,7 @@ def replaceCodes(text=""):
     return text
 
 
-def file2HTML(file_name, format, style, Replace, entity="1"):
+def file2HTML(file_name, format, style, Replace, entity="1", encoding="utf-8"):
     """Reads a file and returns the contents as a string,
     highlighted with HTML styles. This function uses the
     output of the tokenize module to decide what to colour.
@@ -440,26 +440,26 @@ def file2HTML(file_name, format, style, Replace, entity="1"):
     if file_name == "<stdin>":
         file_name = "temp_stdin.py2html.tmp"
         lines = sys.stdin.readlines()
-        with open(file_name, "w") as f:
+        with open(file_name, "w", encoding=encoding) as f:
             f.writelines(lines)
         removeFile = file_name
     elif len(file_name) < 1000 and os.path.exists(file_name):
         try:
             # , encoding="utf8").readlines() #copy all lines into lines list
-            lines = open(file_name, 'r').readlines()
+            with open(file_name, 'r', encoding=encoding) as f:
+                lines = f.readlines()
         except UnicodeDecodeError as e:
             print("issue with file ", file_name)
             raise e
     else:
         lines = file_name.split("\n")
         file_name = "temp_py2html.tmp"
-        f = open(file_name, "w")
-        f.writelines("\n".join(lines))
-        f.close()
+        with open(file_name, "w", encoding=encoding) as f:
+            f.writelines("\n".join(lines))
         removeFile = file_name
 
     lines = ['', ] + lines
-    tempPointer = open(file_name, 'r')
+    tempPointer = open(file_name, 'r', encoding=encoding)
     read_line = tempPointer.readline  # , encoding="utf8").readline
     # use tokenize to interate through tokens
     tok = tokenize.generate_tokens(read_line)
