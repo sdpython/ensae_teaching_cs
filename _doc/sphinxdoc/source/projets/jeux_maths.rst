@@ -239,3 +239,15 @@ les idées proposées dans l'article :
 
 Sujet plutôt très mathématique puisqu'il s'agit d'implémenter un algorithme
 de résolutions de tels systèmes.
+
+.. _l-maths-meilleur-clavier:
+
+Elaboration d'un clavier (2017)
+-------------------------------
+
+Le clavier `Azerty <https://fr.wikipedia.org/wiki/AZERTY>`_ n'est pas le plus aimé mais il a encore
+la vie dure. L'article suivant
+`Bépo, Dvorak, Colemak... A la recherche du clavier français qui pourrait remplacer l'azerty <http://www.lemonde.fr/pixels/article/2016/04/23/bepo-dvorak-colemak-a-la-recherche-du-clavier-francais-qui-pourrait-remplacer-l-azerty_4907632_4408996.html>`_
+aborde quelques façons de concevoir un clavier.
+L'idée de ce projet est de concevoir un clavier qui minimise une fonction d'utilité,
+de voir si cette utilité est différente pour un programmeur et un romancier.

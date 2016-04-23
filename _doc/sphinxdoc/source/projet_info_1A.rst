@@ -404,6 +404,7 @@ Liste des sujets cités
 #. Algo : :ref:`l-grammaire_context_free`
 #. Algo : :ref:`l-distance_tree_robinson_foulds`
 #. Algo : :ref:`l-maths-inequation`
+#. Algo : :ref:`l-maths-meilleur-clavier`
 #. Jeu hasard : :ref:`l-carte-poker`
 #. Jeu hasard : :ref:`l-carte-belotte`
 
