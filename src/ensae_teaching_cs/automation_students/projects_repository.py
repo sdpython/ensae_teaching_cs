@@ -499,7 +499,8 @@ class ProjectsRepository:
                 if must_have_email and (not skip and len(mails) == 0):
                     # we skip only if a group has no mails at all
                     if isinstance(email_function, (list, set)):
-                        raise ProjectsRepository.MailNotFound("unable to find a mail for\n{0}\nname={1}\nskip:{4}\n{5}\namong\n{3}\nGROUP\n{2}\nlocal_function: {6}".format(
+                        mes = "unable to find a mail for\n{0}\nname={1}\nskip:{4}\n{5}\namong\n{3}\nGROUP\n{2}\nlocal_function: {6}"
+                        raise ProjectsRepository.MailNotFound(mes.format(
                             "; ".join("'%s'" % _ for _ in eleves),
                             name, group, "\n".join(email_function),
                             skip, skip_names, local_function))
@@ -1000,7 +1001,7 @@ class ProjectsRepository:
                     py_to_html_file(name, out, False, title=os.path.relpath(
                         name, self.get_group_location(group)))
                     files.append(out)
-                except Exception as e:
+                except Exception:
                     # the syntax of the python file might be wrong
                     warnings.warn(
                         "unable to convert File \"{0}\"".format(name))
