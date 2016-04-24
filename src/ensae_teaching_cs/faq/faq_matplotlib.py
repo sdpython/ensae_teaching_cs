@@ -296,8 +296,8 @@ def graph_cities(df, names=["Longitude", "Latitude", "City"], ax=None, linked=Fa
     dx = (maxx - minx) / 10
     dy = (maxy - miny) / 10
     if fLOG:
-        fLOG("[graph_cities] Lon:[{0}, {1}] x Lat:[{2}, {3}] - mean={4}, {5} - linked={6}".format(minx,
-                                                                                                  maxx, miny, maxy, avex, avey, linked))
+        mes = "[graph_cities] Lon:[{0}, {1}] x Lat:[{2}, {3}] - mean={4}, {5} - linked={6}"
+        fLOG(mes.format(minx, maxx, miny, maxy, avex, avey, linked))
     minx -= dx
     maxx += dx
     miny -= dy
