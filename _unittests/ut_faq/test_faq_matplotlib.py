@@ -1,5 +1,5 @@
 """
-@brief      test log(time=7s)
+@brief      test log(time=35s)
 """
 
 import sys
@@ -41,6 +41,7 @@ except ImportError:
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder
 from src.ensae_teaching_cs.faq.faq_matplotlib import graph_cities
+import mpld3
 
 
 class TestFaqMatplotlib(unittest.TestCase):
@@ -51,8 +52,9 @@ class TestFaqMatplotlib(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        filter = {"NewYork": "NY", "Chicago": "CH", "SanFrancisco": "SF"}
-        temp = get_temp_folder(__file__, "temp_matplotlib")
+        filter = {"NewYork": "NY", "Chicago": "CH",
+                  "SanFrancisco": "SF", "Seattle": "Sea"}
+        temp = get_temp_folder(__file__, "temp_american_cities")
         data = os.path.join(temp, "..", "data", "american_cities.txt")
         df = pandas.read_csv(data)
         df["Longitude"] = -df["Longitude"]
@@ -60,11 +62,15 @@ class TestFaqMatplotlib(unittest.TestCase):
         fig, ax = plt.subplots(figsize=(32, 32))
         df = df[df.Latitude < 52]
         df = df[df.Longitude > -130].copy()
-        ax = graph_cities(df, ax=ax, markersize=3)
+        ax = graph_cities(df, ax=ax, markersize=3, fontcolor=(0, 1.0, 0), fontsize='40',
+                          fontname="Courrier", fontweight="bold")
         assert ax is not None
         img = os.path.join(temp, "img.png")
         fig.savefig(img)
         assert os.path.exists(img)
+        name2 = os.path.join(temp, "picture.html")
+        mpld3.save_html(fig, name2)
+        assert os.path.exists(name2)
         if __name__ == "__main__":
             fig.show()
 

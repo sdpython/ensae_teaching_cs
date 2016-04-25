@@ -132,7 +132,19 @@ def build_diff_image(pygame, screen, h, maxw, seq1=None, seq2=None, diff=None, f
     if diff is not None:
         if progress is None:
             # just the diff
+            opcodes = []
             for opcode in diff.get_opcodes():
+                if opcode[0] in {'delete', 'equal', 'insert'}:
+                    opcodes.append(opcode)
+                elif opcode[0] == "replace":
+                    opcodes.append(
+                        ('delete', opcode[1], opcode[2], None, None))
+                    opcodes.append(
+                        ('insert', None, None, opcode[3], opcode[4]))
+                else:
+                    raise ValueError("unexpected: {0}".format(opcode))
+
+            for opcode in opcodes:
                 if opcode[0] == "delete":
                     for i in range(opcode[1], opcode[2]):
                         text = seq1[i]
@@ -176,7 +188,19 @@ def build_diff_image(pygame, screen, h, maxw, seq1=None, seq2=None, diff=None, f
         else:
             # animation
             positions = []
+            opcodes = []
             for opcode in diff.get_opcodes():
+                if opcode[0] in {'delete', 'equal', 'insert'}:
+                    opcodes.append(opcode)
+                elif opcode[0] == "replace":
+                    opcodes.append(
+                        ('delete', opcode[1], opcode[2], None, None))
+                    opcodes.append(
+                        ('insert', None, None, opcode[3], opcode[4]))
+                else:
+                    raise ValueError("unexpected: {0}".format(opcode))
+
+            for opcode in opcodes:
                 if opcode[0] == "delete":
                     for i in range(opcode[1], opcode[2]):
                         row = (seq1[i], i, seq2.index(seq1[i]) if seq1[i] in seq2 else None,
