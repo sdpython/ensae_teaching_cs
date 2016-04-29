@@ -247,7 +247,7 @@ Bibliographie
 * `CS 188: Artificial Intelligence (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/lectures.html>`_ 
 * `IAPR: Teaching materials for machine learning <http://homepages.inf.ed.ac.uk/rbf/IAPR/researchers/MLPAGES/mlteach.htm>`_
 * machine learning et musique `Audio Content Analysis, teachings <http://www.audiocontentanalysis.org/teaching/>`_
-
+* `ogrisel's notebook <https://github.com/ogrisel/notebooks>`_ (2016/04)
 
 **Articles d'auteurs très connus**
 
@@ -267,17 +267,6 @@ Bibliographie
 * `Contextual Bandit Learning with Predictable Rewards <http://arxiv.org/abs/1202.1334>`_, Alekh Agarwal, Miroslav Dudík, Satyen Kale, John Langford, Robert E. Schapire
 * `Learning from Logged Implicit Exploration Data <http://papers.nips.cc/paper/3977-learning-from-logged-implicit-exploration-data>`_, Alex Strehl, John Langford, Lihong LiSham, M. Kakade
 * `The Metropolis-Hastings algorithm <http://arxiv.org/abs/1504.01896>`_, Christian P. Robert
-
-**Librairies de machine learning**
-
-* `scikit-learn <http://scikit-learn.org/stable/index.html>`_
-* `Vowpal Wabbit <https://github.com/JohnLangford/vowpal_wabbit/wiki>`_
-* `theano <http://deeplearning.net/software/theano/>`_
-* `Keras <http://keras.io/>`_
-* `xgboost <https://github.com/dmlc/xgboost>`_
-* `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
-* `TensorFlow <https://github.com/tensorflow/tensorflow>`_
-* `Related Projects (of machine learning) <http://scikit-learn.org/stable/related_projects.html>`_ (2016/03)
 
 **Compétition de code**
 
@@ -299,6 +288,35 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
 .. image:: http://scikit-learn.org/stable/_static/ml_map.png
     :width: 500
     
+
+Librairies Python
++++++++++++++++++
+
+**Librairies de machine learning**
+
+* `scikit-learn <http://scikit-learn.org/stable/index.html>`_
+* `Vowpal Wabbit <https://github.com/JohnLangford/vowpal_wabbit/wiki>`_
+* `theano <http://deeplearning.net/software/theano/>`_
+* `Keras <http://keras.io/>`_
+* `xgboost <https://github.com/dmlc/xgboost>`_
+* `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
+* `TensorFlow <https://github.com/tensorflow/tensorflow>`_
+* `Related Projects (of machine learning) <http://scikit-learn.org/stable/related_projects.html>`_ (2016/03)
+* `CNTK <https://github.com/Microsoft/CNTK>`_ (2016/04)
+
+**Librairies de visualisation**
+
+* `matplotlib <http://matplotlib.org/>`_
+* `bokeh <http://bokeh.pydata.org/en/latest/>`_
+* `ggplot <http://ggplot.yhathq.com/>`_
+* `vincent <https://vincent.readthedocs.io/en/latest/>`_
+* `basemap <http://matplotlib.org/basemap/>`_, `phshp <https://pypi.python.org/pypi/pyshp>`_, `shapely <https://pypi.python.org/pypi/Shapely>`_
+* `cartopy <http://scitools.org.uk/cartopy/>`_
+* `python-lightening <http://lightning-viz.org/clients/#python>`_
+* `pygal <http://www.pygal.org/en/latest/>`_
+* `seaborn <https://stanford.edu/~mwaskom/software/seaborn/>`_
+* `plotly <https://plot.ly/python/>`_
+
     
 Séances passées
 +++++++++++++++
