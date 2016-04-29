@@ -316,6 +316,11 @@ Librairies Python
 * `pygal <http://www.pygal.org/en/latest/>`_
 * `seaborn <https://stanford.edu/~mwaskom/software/seaborn/>`_
 * `plotly <https://plot.ly/python/>`_
+* `holoviews <http://holoviews.org/>`_
+* `networkx <http://networkx.github.io/>`_
+* `Graphviz <www.graphviz.org/>`_
+
+Quelques essais de librairies sont regroupés à :ref:`l-visualisation`.
 
     
 Séances passées

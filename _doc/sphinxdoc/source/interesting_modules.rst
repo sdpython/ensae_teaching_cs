@@ -59,6 +59,7 @@ Visualisation
 * `matplotlib <http://matplotlib.org/>`_ : graphes scientifiques
 * `seaborn <http://stanford.edu/~mwaskom/software/seaborn/>`_ (nécessite matplotlib)
 * `networkx <http://networkx.github.io/>`_ : dessin de graphes (simple)
+* voir aussi :ref:`l-visualisation`
     
 *Jeux*
 

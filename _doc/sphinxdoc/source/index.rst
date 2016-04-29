@@ -101,6 +101,7 @@ Autres liens, exercices, algorithmes, jeux de données, démonstrations...
     * :ref:`code associé à ce cours <modindex>`
     * :ref:`l-ressources`
     * :ref:`l-biblio`
+    * :ref:`l-visualisation`
 
     
 
@@ -226,6 +227,8 @@ Et `code_beatrix <http://lesenfantscodaient.fr/>`_ pour découvrir les algorithm
 Table des matières
 ------------------
 
+**Contenu**
+
 .. toctree::
     :maxdepth: 1
 
@@ -236,9 +239,16 @@ Table des matières
     projet_info
     informations
     biblio
+    exams
+    
+**Index**
+    
+.. toctree::
+    :maxdepth: 1
+
+    visualisation
     exemple_index
     all_notebooks
-    exams
     coding_party
     glossary
     FAQ
