@@ -231,7 +231,8 @@ Table des matières
 
 .. toctree::
     :maxdepth: 1
-
+    :numbered:
+    
     td_1a
     td_2a
     td_3a
@@ -245,6 +246,7 @@ Table des matières
     
 .. toctree::
     :maxdepth: 1
+    :numbered:
 
     visualisation
     exemple_index

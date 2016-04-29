@@ -6,8 +6,8 @@
 Visualisation
 =============
 
-Ces notebooks regroupent différent de visualisations avec différentes librairies.
-Liste non exhaustives.
+Ces notebooks parcourent différents exemples de visualisations avec différentes librairies.
+Liste non exhaustive.
 
 .. toctree::
     :maxdepth:
