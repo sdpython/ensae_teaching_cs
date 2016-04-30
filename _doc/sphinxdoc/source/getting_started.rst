@@ -1,5 +1,7 @@
 
 
+.. _l-getting_started_full:
+
 
 Getting started
 ---------------

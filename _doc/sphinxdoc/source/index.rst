@@ -192,10 +192,7 @@ nécessitent un compilateur C++.
 Développeurs chevronnés
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-.. toctree::
-    :maxdepth: 1
-
-    getting_started
+:ref:`l-getting_started_full`
     
 
 Autres extensions
@@ -238,8 +235,8 @@ Table des matières
     td_3a
     blog site <blog/main_0000>
     projet_info
-    informations
     exams
+    informations
     
 **Index**
     
@@ -247,6 +244,7 @@ Table des matières
     :maxdepth: 1
 
     visualisation
+    getting_started
     exemple_index
     all_notebooks
     coding_party
@@ -256,13 +254,13 @@ Table des matières
 
 
 
-+----------------------+---------------------+---------------------+--------------------+------------------------+------------------------------------------------+
-| :ref:`l-modules`     |  :ref:`l-functions` | :ref:`l-classes`    | :ref:`l-methods`   | :ref:`l-staticmethods` | :ref:`l-properties`                            |
-+----------------------+---------------------+---------------------+--------------------+------------------------+------------------------------------------------+
-| :ref:`modindex`      |  :ref:`l-example`   | :ref:`search`       | :ref:`l-license`   | :ref:`l-changes`       | :ref:`l-README`                                |
-+----------------------+---------------------+---------------------+--------------------+------------------------+------------------------------------------------+
-| :ref:`genindex`      |  :ref:`l-FAQs`      | :ref:`l-notebooks`  |                    | :ref:`l-statcode`      | `Unit Test Coverage <coverage/index.html>`_    |
-+----------------------+---------------------+---------------------+--------------------+------------------------+------------------------------------------------+
++----------------------+---------------------+---------------------+--------------------------------+------------------------+------------------------------------------------+
+| :ref:`l-modules`     |  :ref:`l-functions` | :ref:`l-classes`    | :ref:`l-methods`               | :ref:`l-staticmethods` | :ref:`l-properties`                            |
++----------------------+---------------------+---------------------+--------------------------------+------------------------+------------------------------------------------+
+| :ref:`modindex`      |  :ref:`l-example`   | :ref:`search`       | :ref:`l-license`               | :ref:`l-changes`       | :ref:`l-README`                                |
++----------------------+---------------------+---------------------+--------------------------------+------------------------+------------------------------------------------+
+| :ref:`genindex`      |  :ref:`l-FAQs`      | :ref:`l-notebooks`  | :ref:`l-getting_started_full`  | :ref:`l-statcode`      | `Unit Test Coverage <coverage/index.html>`_    |
++----------------------+---------------------+---------------------+--------------------------------+------------------------+------------------------------------------------+
 
 
 

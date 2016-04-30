@@ -16,6 +16,7 @@ ces enseignements.
 
 .. toctree::
     :maxdepth: 1
+    :numbered:
 
     projet_info_1A
     projet_info_2A

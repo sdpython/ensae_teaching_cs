@@ -6,7 +6,7 @@
     :date: 2016-04-29
     :categories: visualisation
     
-    La page :ref:`l-visualisation`a été ajoutée.
+    La page :ref:`l-visualisation` a été ajoutée.
     Elle va grossir régulièrement pour montrer comment utiliser
     les nombreuses librairies graphiques disponibles sous Python.
     Le premier notebook est juste un essai de la librairie
