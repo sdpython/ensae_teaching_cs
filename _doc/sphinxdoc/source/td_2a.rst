@@ -306,19 +306,22 @@ Librairies Python
 
 **Librairies de visualisation**
 
-* `matplotlib <http://matplotlib.org/>`_
-* `bokeh <http://bokeh.pydata.org/en/latest/>`_
-* `ggplot <http://ggplot.yhathq.com/>`_
-* `vincent <https://vincent.readthedocs.io/en/latest/>`_
-* `basemap <http://matplotlib.org/basemap/>`_, `phshp <https://pypi.python.org/pypi/pyshp>`_, `shapely <https://pypi.python.org/pypi/Shapely>`_
-* `cartopy <http://scitools.org.uk/cartopy/>`_
-* `python-lightening <http://lightning-viz.org/clients/#python>`_
-* `pygal <http://www.pygal.org/en/latest/>`_
+* `matplotlib <http://matplotlib.org/>`_ : la bible
+* `bokeh <http://bokeh.pydata.org/en/latest/>`_ : graphes interactifs, zoom, déplacements
+* `ggplot <http://ggplot.yhathq.com/>`_ : style ggplot avec une synthèse différente de matplotlib
+* `vincent <https://vincent.readthedocs.io/en/latest/>`_ : petit projet mais qui revient regulièrmenet
+* `basemap <http://matplotlib.org/basemap/>`_, `phshp <https://pypi.python.org/pypi/pyshp>`_, `shapely <https://pypi.python.org/pypi/Shapely>`_ : tout ce qu'il
+  faut pour tracer des cartes
+* `cartopy <http://scitools.org.uk/cartopy/>`_ : cartes
+* `python-lightening <http://lightning-viz.org/clients/#python>`_ : graphes interactifs
+* `pygal <http://www.pygal.org/en/latest/>`_ : graphes interactifs
 * `seaborn <https://stanford.edu/~mwaskom/software/seaborn/>`_
-* `plotly <https://plot.ly/python/>`_
-* `holoviews <http://holoviews.org/>`_
-* `networkx <http://networkx.github.io/>`_
-* `Graphviz <www.graphviz.org/>`_
+* `plotly <https://plot.ly/python/>`_ : graphes interactifs, un des plus populaires
+* `holoviews <http://holoviews.org/>`_ : multigraphes faciles
+* `networkx <http://networkx.github.io/>`_ : graphes (petits)
+* `Graphviz <www.graphviz.org/>`_ : pas de python mais la bible en ce qui concerne le dessin de graphes
+* `qbplot <https://github.com/bloomberg/bqplot>`_: graphes interactifs (probablement un de ceux qui vont rester)
+* `folium <https://github.com/python-visualization/folium>`_ : Open Street Map dans un notebook
 
 Quelques essais de librairies sont regroupés à :ref:`l-visualisation`.
 

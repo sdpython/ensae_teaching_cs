@@ -231,7 +231,7 @@ Table des matières
 
 .. toctree::
     :maxdepth: 1
-    :numbered:
+    :numbered: 1
     
     td_1a
     td_2a
@@ -239,21 +239,17 @@ Table des matières
     blog site <blog/main_0000>
     projet_info
     informations
-    biblio
     exams
     
 **Index**
     
 .. toctree::
     :maxdepth: 1
-    :numbered:
 
     visualisation
     exemple_index
     all_notebooks
     coding_party
-    glossary
-    FAQ
     Notebooks, Exemples, Code <indexmenu>
     genindex
 

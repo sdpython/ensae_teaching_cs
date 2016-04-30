@@ -10,6 +10,6 @@ Ces notebooks parcourent différents exemples de visualisations avec différente
 Liste non exhaustive.
 
 .. toctree::
-    :maxdepth:
+    :maxdepth: 1
     
     notebooks/lightning_python
