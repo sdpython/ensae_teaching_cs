@@ -64,10 +64,10 @@ un stockage dans un pays dont la loi limite l'usage qui peut être fait de vos d
 
 * `Ninja IDE <http://ninja-ide.org/home/>`_
 * `PyCharm <http://www.jetbrains.com/pycharm/>`_
-* `PyTools <http://pytools.codeplex.com/>`_ (fonctionne avec `Visual Studio <http://www.visualstudio.com/>`_)
 * `PyDev <http://pydev.org/>`_ (fonctionne avec `Eclipse <http://www.eclipse.org/>`_)
+* `PyTools <http://pytools.codeplex.com/>`_ (fonctionne avec `Visual Studio <http://www.visualstudio.com/>`_)
+* `Pyzo <http://www.pyzo.org/>`_ : ressemble à Matlab  (anciennement `IEP <http://www.iep-project.org/index.html>`_)
 * `WingIDE <https://wingware.com/>`_
-* `IEP <http://www.iep-project.org/index.html>`_
 
 **Python et Domotique**
 

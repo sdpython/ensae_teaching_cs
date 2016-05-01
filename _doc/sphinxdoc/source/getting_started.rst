@@ -299,7 +299,7 @@ Impératif :
 * `Scite <http://www.scintilla.org/SciTE.html>`_ : éditeur de texte très léger
 * `7zip <http://www.7-zip.org/>`_ : pour compresser, décompresser tous les formats
 * `Firefox <https://www.mozilla.org/fr-FR/firefox/new/>`_, `Chrome <http://www.google.com/chrome/>`_ : navigateurs 
-  (il faut éviter Internet Explorer pour les notebooks IPython)
+  (il faut éviter Internet Explorer pour les notebooks Jupyter)
 * `Miktex <http://miktex.org/>`_, `TexnicCenter <http://www.texniccenter.org/>`_ : compiler du latex (et obtenir des PDF)
 * `Java <http://www.java.com/fr/download/>`_ : nécessaire pour Jenkins et `Antlr <http://www.antlr.org/>`_
 * `Jenkins <https://jenkins-ci.org/>`_ (plus les plugins pour `GitHub <https://wiki.jenkins-ci.org/display/JENKINS/GitHub+Plugin>`_, 

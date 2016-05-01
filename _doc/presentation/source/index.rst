@@ -126,7 +126,7 @@ ENSAE 1A - Programmation
     
     .. revealjs:: Notebooks
     
-        Le cours utilise les `notebooks <http://ipython.org/notebook.html>`_.
+        Le cours utilise les `notebooks <http://jupyter.org/notebook.html>`_.
         
         .. image:: _static/notsnap.png        
         

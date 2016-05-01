@@ -126,7 +126,7 @@ ENSAE 1A - Projets informatiques
 
             * problème de la collecte
                 * `scrappy <http://scrapy.org/>`_
-                * `twitter <http://nbviewer.ipython.org/github/alexhanna/hse-twitter/blob/master/docs/Collecting%20Twitter%20data%20from%20the%20API%20with%20Python.ipynb>`_
+                * `twitter <http://nbviewer.jupyter.org/github/alexhanna/hse-twitter/blob/master/docs/Collecting%20Twitter%20data%20from%20the%20API%20with%20Python.ipynb>`_
                 * ...
             * Machine Learning : `scikit-learn <http://scikit-learn.org/stable/>`_
             

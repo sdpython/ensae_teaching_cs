@@ -168,6 +168,7 @@ est la plus répandue. Voir également
 * `Spyder <https://pythonhosted.org/spyder/>`_, ressemble beaucoup à `R Studio <http://www.rstudio.com/>`_
 * `Rodeo <http://blog.yhathq.com/posts/introducing-rodeo.html>`_, une sorte de Spyder très épuré
 * `Visual Studio Community <https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx>`_
+* `Pyzo <http://www.pyzo.org/>`_ : ressemble à Matlab
 
 
 Librairies clé

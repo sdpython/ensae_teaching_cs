@@ -35,7 +35,7 @@ L'objectif est de construire ces nuages de points pour les discours du premier m
 du président de la République. Le rendu graphique peut être réalisé simplement 
 à partir du langage HTML (voir l'`exemple suivant <http://www.xavierdupre.fr/enseignement/projet_data/tag_cloud.html>`_) 
 ou en utilisant des représentations dynamiques 
-(voir `More about interactive graphs using Python, d3.js, R, shiny, IPython, vincent, d3py, python-nvd3 <http://www.xavierdupre.fr/blog/2013-11-30_nojs.html>`_).
+(voir `More about interactive graphs using Python, d3.js, R, shiny, Jupyter, vincent, d3py, python-nvd3 <http://www.xavierdupre.fr/blog/2013-11-30_nojs.html>`_).
 Pour déterminer l'importance des termes, les premiers essais pourront être faits en fonction 
 de la fréquence de chaque mot bien que cette méthode a tendance à favoriser les petits mots. 
 On pourra ensuite utiliser des critères plus complexes comme celles suggérées sur la page 

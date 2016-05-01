@@ -35,7 +35,7 @@ ENSAE 3A - Map/Reduce en pratique
         
     .. revealjs:: Notebooks
     
-        Les exercices utilisent les `notebooks <http://ipython.org/notebook.html>`_.
+        Les exercices utilisent les `notebooks <http://jupyter.org/notebook.html>`_.
         Voir `Setup <http://www.xavierdupre.fr/enseignement/>`_.
         
         .. image:: _static/notsnap.png       
@@ -50,7 +50,7 @@ ENSAE 3A - Map/Reduce en pratique
         * Il fonctionne sur tous les OS (Windows, Linux, Mac, bientôt `IPad <http://computableapp.com/>`_).
         * Il dispose de nombreuses extensions, il peut tout faire.
         * Les notebooks se répandent à grande vitesse : 
-          `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_.
+          `A gallery of interesting Jupyter Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_.
         * Même si les calculs distribués ne se font pas en Python, le langage sert de télécommande programmable.
         
     .. revealjs:: Notebooks
@@ -150,7 +150,7 @@ ENSAE 3A - Map/Reduce en pratique
 
         * Tout faire depuis un notebook, pourquoi pas ?
         * `R et notebooks <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/python_r.html>`_
-        * `Custom Magics for IPython <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/ipython_custom_magics.html>`_
+        * `Custom Magics for Jupyter <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/jupyter_custom_magics.html>`_
     
     .. revealjs:: Ordres de grandeur
     
@@ -241,7 +241,7 @@ ENSAE 3A - Map/Reduce en pratique
             * fichiers texte et ligne de commande plus efficaces
             * nécessité d'une certaine aisance informatique
         * Outils un peu modifiés
-            * `notebook <http://ipython.org/notebook.html>`_ + `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
+            * `notebook <http://jupyter.org/notebook.html>`_ + `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
             * accès via des commandes magiques
             * accès depuis le notebook
             * python est une sorte de télécommande programmation
@@ -296,7 +296,7 @@ ENSAE 3A - Map/Reduce en pratique
         
         * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
             * un `wrapper <http://fr.wikipedia.org/wiki/Adaptateur_(patron_de_conception)>`_
-            * des `commandes magiques <http://nbviewer.ipython.org/github/ipython/ipython/blob/1.x/examples/notebooks/Cell%20Magics.ipynb>`_ pour gommer un peu l'aspect geek
+            * des `commandes magiques <http://nbviewer.jupyter.org/github/jupyter/jupyter/blob/1.x/examples/notebooks/Cell%20Magics.ipynb>`_ pour gommer un peu l'aspect geek
             * sans l'effacer complètement
             * pour pouvoir s'adapter à des habitudes différentes en entreprise
             * travail en mode `batch <http://fr.wikipedia.org/wiki/Traitement_par_lots>`_

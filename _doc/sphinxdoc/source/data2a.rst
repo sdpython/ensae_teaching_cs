@@ -53,10 +53,10 @@ a. Installation :
     - `Instructions pour installer ces modules sous Linux/Mac <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-08-30_install_linux.html>`_
 b. Environnements
     - `IDLE <https://docs.python.org/3.4/library/idle.html>`_
-    - `ligne de commande IPython <http://ipython.org/ipython-doc/2/interactive/reference.html>`_
+    - `ligne de commande Jupyter <http://jupyter-notebook.readthedocs.io/en/latest/config.html>`_
     - `Spyder <http://pythonhosted.org//spyder/>`_  (environnement de type `RStudio <http://www.rstudio.com/>`_)
     - `Rodeo <https://pypi.python.org/pypi/rodeo>`_  (Spyder version web et épurée)
-    - `Notebooks <http://ipython.org/notebook.html>`_
+    - `Notebooks <http://jupyter.org/notebook.html>`_
 c. Editeur de texte (pour des projets plus ambitieux, SciTE, PyCharm, PTVS, WingIDE)
     - `Scite <http://www.scintilla.org/SciTE.html>`_
     - `Notepad++ <https://notepad-plus-plus.org/>`_
@@ -101,7 +101,7 @@ Quelques liens
       by Willi Richert, Luis Pedro Coelho published by PACKT PUBLISHING (2013) 
     - `Machine Learning <https://github.com/pbharrin/machinelearninginaction>`_
       in Action by Peter Harrington
-    - `Probabilistic Programming and Bayesian Methods for Hackers <http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb>`_,
+    - `Probabilistic Programming and Bayesian Methods for Hackers <http://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb>`_,
       (`second version <http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/>`_)
 - Vidéo
     - `Scikit-Learn: Machine Learning en Python <http://www.microsoft.com/france/mstechdays/programmes/2014/fiche-session.aspx?ID=295be946-2c69-458a-8545-bcebe7970fd8>`_

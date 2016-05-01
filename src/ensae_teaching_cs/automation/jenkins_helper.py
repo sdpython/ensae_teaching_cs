@@ -261,8 +261,6 @@ def setup_jenkins_server(js,
                                 location = r"d:\\jenkins\\pymy")
 
 
-    For WinPython, version 3.4.3+ is mandatory to get the latest version of IPython (3).
-
     Another example::
 
         import sys

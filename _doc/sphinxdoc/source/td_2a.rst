@@ -60,8 +60,8 @@ TD - numpy pandas matplotlib
 
     - :ref:`TD 2A : Calcul Matriciel, Optimisation <td2acenoncesession2arst>` (:ref:`correction <td2acorrectionsession2arst>`)
     - :ref:`TD 2B : Python autres langages <td2acenoncesession2brst>` (:ref:`correction <td2acorrectionsession2brst>`)
-    - :ref:`TD 2C : IPython et commandes magiques <td2acenoncesession2crst>` (:ref:`correction <td2acorrectionsession2crst>`)
-    - :ref:`TD 2D : IPython et calcul distribué <td2acenoncesession2drst>` (:ref:`correction <td2acorrectionsession2drst>`)
+    - :ref:`TD 2C : Jupyter et commandes magiques <td2acenoncesession2crst>` (:ref:`correction <td2acorrectionsession2crst>`)
+    - :ref:`TD 2D : Jupyter et calcul distribué <td2acenoncesession2drst>` (:ref:`correction <td2acorrectionsession2drst>`)
     - :ref:`TD 2E : Sérialisation <td2acenoncesession2erst>` (:ref:`correction <td2acorrectionsession2erst>`) (avec le module `pickle <https://docs.python.org/3.4/library/pickle.html>`_)
 
 TD - machine learning
@@ -75,7 +75,7 @@ TD - machine learning
       autres liens :
       
       - machine learning et `scikit-learn <http://scikit-learn.org/stable/>`_
-        (`tutoriels sur scikit-learn <http://nbviewer.ipython.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_),
+        (`tutoriels sur scikit-learn <http://nbviewer.jupyter.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_),
         quelques extraits :
         
         - Par définition les plus proches voisins ne font pas d'erreur sur la base d'apprentissage, l'apprentissage consiste à forcer le modèle à faire des erreurs.
@@ -158,7 +158,7 @@ Python et autres langages, personnaliser ses notebooks
 
     notebooks/python_r
     notebooks/python_csharp
-    notebooks/ipython_custom_magics
+    notebooks/jupyter_custom_magics
     notebooks/matplotlib_zoomable
     
 .. _l-td2a-start:
@@ -243,7 +243,7 @@ Bibliographie
   `Talks <http://cm.dce.harvard.edu/2015/01/14328/publicationListing.shtml>`_
 * `Notes and assignments for Stanford CS class CS231n <https://github.com/cs231n/cs231n.github.io>`_ 
   `Convolutional Neural Networks for Visual Recognition <http://vision.stanford.edu/teaching/cs231n/>`_
-* `Advanced Statistical Computing, Chris Fonnesbeck (Vanderbilt University) <http://nbviewer.ipython.org/github/fonnesbeck/Bios366/tree/master/notebooks/>`_
+* `Advanced Statistical Computing, Chris Fonnesbeck (Vanderbilt University) <http://nbviewer.jupyter.org/github/fonnesbeck/Bios366/tree/master/notebooks/>`_
 * `CS 188: Artificial Intelligence (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/lectures.html>`_ 
 * `IAPR: Teaching materials for machine learning <http://homepages.inf.ed.ac.uk/rbf/IAPR/researchers/MLPAGES/mlteach.htm>`_
 * machine learning et musique `Audio Content Analysis, teachings <http://www.audiocontentanalysis.org/teaching/>`_

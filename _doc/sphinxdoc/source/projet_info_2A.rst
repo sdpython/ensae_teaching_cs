@@ -32,7 +32,7 @@ Travail attendu
 +++++++++++++++
 
 * Un rapport (Word, PDF, Notebook - pour ce dernier, il faudra s'assurer que l'impression de le déforme pas trop, 
-  il peut être converti au format PDF avec `nbconvert <http://ipython.org/ipython-doc/1/interactive/nbconvert.html>`_ et Latex).
+  il peut être converti au format PDF avec `nbconvert <https://nbconvert.readthedocs.io/en/latest/>`_ et Latex).
 * Une introduction : quel est le problème à résoudre, un aperçu des données ?
 * Une attention particulière sur la rigueur de la démarche (base d'apprentissage / test,
   overfitting, validation croisée, vérification sur quelques exemples, 

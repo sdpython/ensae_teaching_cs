@@ -19,7 +19,7 @@ def notebook_path():
 
     @FAQ(jupyter___Récupérer le fichier du notebook depuis le notebook)
 
-    Voir `How to I get the current IPython Notebook name <http://stackoverflow.com/questions/12544056/how-to-i-get-the-current-ipython-notebook-name>`_
+    Voir `How to I get the current Jupyter Notebook name <http://stackoverflow.com/questions/12544056/how-to-i-get-the-current-ipython-notebook-name>`_
 
     Il suffit d'insérer la cellule suivante dans le notebook ::
 
@@ -47,6 +47,7 @@ def fix_table_notebook():
     qui permet de passer d'une section à l'autre plus facilement.
     Ce menu ne bouge pas avec la version 2 de IPython, il
     reste ancré au début de la page avec la version 3.
+    A vérifier pour la version 4 (Jupyter).
 
     Voir `Example of a notebook with a fixed index <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/notebooks/exemple_of_fix_menu.html>`_.
 
@@ -127,8 +128,8 @@ def jupyter_get_variable(name, magic_command_instance):
     Retrieve the value of a local variable in a notebook.
 
     @param      name                        variable name
-    @param      magic_command_instance      instance of `Magics <http://ipython.org/ipython-doc/2/api/generated/IPython.core.magic.html#IPython.core.magic.Magics>`_,
-                                            see `Defining your own magics <http://ipython.org/ipython-doc/2/interactive/reference.html#defining-your-own-magics>`_
+    @param      magic_command_instance      instance of `Magics <http://ipython.readthedocs.io/en/stable/api/generated/IPython.core.magic.html#IPython.core.magic.Magics>`_,
+                                            see `Defining your own magics <http://ipython.readthedocs.io/en/stable/config/custommagics.html?defining-custom-magics>`_
     @return                                 value
 
     The function raises an exception if the context does not exists
@@ -179,7 +180,7 @@ def jupyter_open_notebook(filename, profile='default', fLOG=fLOG):
 
     @FAQ(jupyter___Lancer le serveur de notebooks)
 
-    On suppose que le module `IPython <http://ipython.org/notebook.html>`_ a été bien installé.
+    On suppose que le module `Jupyter <http://jupyter.org/notebook.html>`_ a été bien installé.
     Depuis août 2015, IPython est devenu Jupyter qui n'est pas plus automatiquement
     associé à Python mais propose des notebooks pour de nombreux langages.
     Il faut installer le module *jupyter* (``pip install jupyter``).
@@ -188,13 +189,13 @@ def jupyter_open_notebook(filename, profile='default', fLOG=fLOG):
     #. Utiliser la ligne de commande usuelle : ``jupyter-notebook``.
        Ce script (ou programme *jupyter-notebook.exe* sous Windows
        est inclus dans le répertoire *Scripts* du répertoire d'installation.
-       Voir :ref:`l-ipython_notebook_commandline`.
+       Voir :ref:`l-jupyter_notebook_commandline`.
        Voir égalemnt `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_,
        `Open the notebook with a different browser <http://www.xavierdupre.fr/blog/2015-08-24_nojs.html>`_
        Il est possible de créer un fichier `.bat <https://fr.wikipedia.org/wiki/.bat>`_ pour
        automatiser la ligne de commande et l'ajouter en tant qu'icône sur le bureau.
 
-    #. Utiliser la fonction :func:`ipython_open_notebook <ensae_teaching_cs.faq.faq_ipython.ipython_open_notebook>` ::
+    #. Utiliser la fonction :func:`jupyter_open_notebook <ensae_teaching_cs.faq.faq_jupyter.jupyter_open_notebook>` ::
 
         from ensae_teaching_cs.faq import jupyter_open_notebook
         nbfile = "notebook.ipynb"

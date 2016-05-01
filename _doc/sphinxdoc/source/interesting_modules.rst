@@ -47,7 +47,7 @@ Autres dépendances
     
 **plugin jupyter**
 
-* `ipyD3 <https://github.com/z-m-k/ipyD3>`_ : plugin pour utiliser `d3.js <http://d3js.org/>`_ dans iPython
+* `ipyD3 <https://github.com/z-m-k/ipyD3>`_ : plugin pour utiliser `d3.js <http://d3js.org/>`_ dans Jupyter
 * `mpld3 <http://mpld3.github.io/>`_ : pour afficher un graph Matplotlib sous forme de graphe `d3.js <http://d3js.org/>`_
 * `qgrid <https://pypi.python.org/pypi/qgrid>`_ : pour afficher des dataframe interactifs
     

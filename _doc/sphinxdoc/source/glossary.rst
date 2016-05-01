@@ -346,7 +346,7 @@ Glossaire
         collés à une apostrophes, conjugués... Il n'est pas toujours évident de dire si un document contient un mot précis.
         C'est pourquoi on effectue une étape de nettoyage qui consite à séparer un texte en mot et à 
         les réduire à une forme canonique. Cette seconde étape est appelée le *stemming*.
-        `NLP & Sentiment Analysis <http://nbviewer.ipython.org/github/taposh/mlearning/blob/master/nlp/sentiment/bow/Sentiment.ipynb>`_
+        `NLP & Sentiment Analysis <http://nbviewer.jupyter.org/github/taposh/mlearning/blob/master/nlp/sentiment/bow/Sentiment.ipynb>`_
         
     Stemming
         Voir stemmer.

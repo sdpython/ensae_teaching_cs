@@ -153,7 +153,7 @@ Trucs et astuces avec les notebooks
     :numbered:
 
     notebooks/notebook_convert
-    notebooks/ipython_custom_magics
+    notebooks/jupyter_custom_magics
 
 .. _l-td1a-start:
 
@@ -213,7 +213,7 @@ Bibliographie
 **Cours**
 
 * `Apprenez à programmer en Python <http://openclassrooms.com/courses/apprenez-a-programmer-en-python>`_ (openclassrooms)
-* `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
+* `A gallery of interesting Jupyter Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
 * `Python Notes <http://www.thomas-cokelaer.info/tutorials/python/index.html>`_
 * `Program Arcade Games With Python And Pygame <http://programarcadegames.com/>`_
 * `Python cours et TPs <http://mathcpge.org/index.php?option=com_content&view=article&id=55&Itemid=146>`_ (2016/04)

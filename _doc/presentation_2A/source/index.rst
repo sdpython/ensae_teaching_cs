@@ -197,7 +197,7 @@ ENSAE 2A - Programmation
     .. revealjs:: Calcul distribué
     
         * distribuer pour aller plus vite
-        * CPU - sur plusieurs machines ou threads (avec IPython)
+        * CPU - sur plusieurs machines ou threads (avec Jupyter)
         
         ...
         
@@ -289,7 +289,7 @@ ENSAE 2A - Programmation
 
         * Tout faire depuis un notebook
         * `R et notebooks <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/python_r.html>`_
-        * `Custom Magics for IPython <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/ipython_custom_magics.html>`_
+        * `Custom Magics for Jupyter <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/jupyter_custom_magics.html>`_
     
     .. revealjs:: Ordres de grandeur
     

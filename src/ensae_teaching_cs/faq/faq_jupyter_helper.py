@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @file
-@brief Helpers for ipython, inspired from `nbopen.py <https://github.com/takluyver/nbopen/blob/master/nbopen.py>`_
+@brief Helpers for jupyter, inspired from `nbopen.py <https://github.com/takluyver/nbopen/blob/master/nbopen.py>`_
 
 """
 

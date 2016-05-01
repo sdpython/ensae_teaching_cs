@@ -158,7 +158,7 @@ def import_magic_cs():
 
     @return     pointer on C# static class
     """
-    if "MagicIPython" not in sys.modules:
+    if "MagicJupyter" not in sys.modules:
         if not sys.platform.startswith("win"):
             raise NotImplementedError("only available on Windows")
 
@@ -168,13 +168,13 @@ def import_magic_cs():
         from clr import AddReference
 
         try:
-            AddReference("MagicIPython")
+            AddReference("MagicJupyter")
         except Exception:
             path = os.path.abspath(os.path.split(__file__)[0])
             path = os.path.join(path, "csdll")
             if path not in sys.path:
                 sys.path.append(path)
-            AddReference("MagicIPython")
+            AddReference("MagicJupyter")
 
-    from MagicIPython import MagicCS
+    from MagicJupyter import MagicCS
     return MagicCS
