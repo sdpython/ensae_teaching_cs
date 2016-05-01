@@ -7,8 +7,8 @@
     <ProjectGuid>{3DB0FB1C-6375-47A2-A26C-9250018FEB03}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MagicIPython</RootNamespace>
-    <AssemblyName>MagicIPython</AssemblyName>
+    <RootNamespace>MagicJupyter</RootNamespace>
+    <AssemblyName>MagicJupyter</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

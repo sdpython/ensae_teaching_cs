@@ -1,6 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MagicIPython;
+using MagicJupyter;
 using BlackBoardCSharp;
 
 namespace UnitTestCSHelper

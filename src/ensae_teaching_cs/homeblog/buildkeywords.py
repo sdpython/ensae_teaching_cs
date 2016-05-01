@@ -210,7 +210,8 @@ def build_bloc_months(res, rootfile):
     """
     builds the months bloc (we assume the page name is YYYY-MM-DD-something-.html
 
-    @param      res                     ....
+    @param      res             list of blog per months
+    @param      rootfile        files location
     """
     months = {}
     for a, b in res.items():

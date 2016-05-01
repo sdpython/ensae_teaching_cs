@@ -101,6 +101,8 @@ class TestCustomMagic (unittest.TestCase):
                     }
                     """
             f = cm.CS("cs_qsort", code)
+            if f is None:
+                raise Exception(code)
             li = [2, 4, 5, 3, 1]
             lis = ";".join(str(i) for i in li)
             x = f(lis)

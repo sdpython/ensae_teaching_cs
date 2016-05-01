@@ -7,7 +7,7 @@ using System.CodeDom.Compiler;
 using Microsoft.CSharp;
 using System.Reflection;
 
-namespace MagicIPython
+namespace MagicJupyter
 {
     public static class MagicCS
     {
