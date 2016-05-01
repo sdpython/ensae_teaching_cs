@@ -660,3 +660,15 @@ def get_day_name(date):
     @endFAQ
     """
     return date.strftime("%A")
+
+
+def annotations():
+    """
+    .. todoext::
+        :title: annotations
+        :tag: cours
+
+        Les annotations ne sont pas mentionnées dans le cours.
+        C'est une façon d'écrire des signatures de fonctions typées.
+    """
+    pass
