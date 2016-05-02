@@ -113,7 +113,7 @@ class TestFeedback(unittest.TestCase):
         xls = os.path.join(data, "groupes_eleves_pitch.xlsx")
         df = pandas.read_excel(xls, sheetname=0, index=False)
         comment = pandas.read_excel(xls, sheetname=1, header=None, index=False)
-        mails = list(enumerate_feedback(df, comment))
+        mails = list(enumerate_feedback(df, comment, exc=False, fLOG=fLOG))
         for i, m in enumerate(mails):
             fLOG("------------", i)
             name = os.path.join(temp, "m%d.html" % i)

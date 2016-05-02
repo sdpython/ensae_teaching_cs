@@ -29,7 +29,7 @@ def enumerate_feedback(df1, df2, col_group="Groupe", col_subject="Sujet",
                        col_name="Name", subject="Projet informatique, feedback sur le pitch",
                        begin="Bonjour,\n\nVoici mon feedback sur votre pitch. Ce mail est automatisé. Veuillez vérifier les informations.\n\n",
                        end="Xavier", text_comments="Remarques générales", cc=None,
-                       template=template_mail_feedback, engine="jinja2", fLOG=noLOG):
+                       template=template_mail_feedback, engine="jinja2", exc=True, fLOG=noLOG):
     """
     sends feedback to students
 
@@ -47,6 +47,7 @@ def enumerate_feedback(df1, df2, col_group="Groupe", col_subject="Sujet",
     @param      template        template of the mail
     @param      text_comments   sentance before the general comments
     @param      engine          engine for the template
+    @param      exc             raise an exception if there is no mail
     @return                     list of mails
 
     Example of dataframe containing feedback:
@@ -108,4 +109,9 @@ def enumerate_feedback(df1, df2, col_group="Groupe", col_subject="Sujet",
                 k = k[4:]
             context[k] = v
         text = apply_template(template, context, engine=engine)
+        if mail is None or "@" not in mail:
+            if exc:
+                raise ValueError("No mail for:\n" + text)
+            else:
+                fLOG("No mail for:\n" + text)
         yield (mail, text)
