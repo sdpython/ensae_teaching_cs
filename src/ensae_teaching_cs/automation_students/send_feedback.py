@@ -4,8 +4,12 @@
 @brief Some automation helpers to grab mails from students about projects.
 """
 
+import time
+import random
 from pyquickhelper.loghelper import noLOG
 from pyquickhelper.texthelper.templating import apply_template
+from pymmails.sender import send_email
+
 
 template_mail_feedback = """
 {{ begin }}
@@ -28,7 +32,7 @@ def enumerate_feedback(df1, df2, col_group="Groupe", col_subject="Sujet",
                        col_pitch="Pitch", col_code="Code", col_mail="Mail",
                        col_name="Name", subject="Projet informatique, feedback sur le pitch",
                        begin="Bonjour,\n\nVoici mon feedback sur votre pitch. Ce mail est automatisé. Veuillez vérifier les informations.\n\n",
-                       end="Xavier", text_comments="Remarques générales", cc=None,
+                       end="Xavier", text_comments="Remarques générales",
                        template=template_mail_feedback, engine="jinja2", exc=True, fLOG=noLOG):
     """
     sends feedback to students
@@ -43,12 +47,11 @@ def enumerate_feedback(df1, df2, col_group="Groupe", col_subject="Sujet",
     @param      col_name        name of the column which contains the names of the members
     @param      subject         subject of the mail
     @param      intro           beginning of the mail
-    @param      cc              list of ccs
     @param      template        template of the mail
     @param      text_comments   sentance before the general comments
     @param      engine          engine for the template
     @param      exc             raise an exception if there is no mail
-    @return                     list of mails
+    @return                     enumerate mails content as tuple *(mail, html, text)*
 
     Example of dataframe containing feedback:
 
@@ -114,4 +117,39 @@ def enumerate_feedback(df1, df2, col_group="Groupe", col_subject="Sujet",
                 raise ValueError("No mail for:\n" + text)
             else:
                 fLOG("No mail for:\n" + text)
-        yield (mail, text)
+        html = ('<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head><body>\n' + text + "\n</body></html>\n")
+        text = text.replace("<b>", "").replace("</b>", "").replace("<br />", "\n")
+        yield (mail, html, text)
+
+
+def enumerate_send_email(mailbox, subject, fr, df1, df2, cc=None, delay=[500, 1000], delay_sending=False, exc=True, **params):
+    """
+    Send feedback to students
+
+    @param      mailbox         mailbox, see `create_smtp_server <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/sender/email_sender.html?pymmails.sender.email_sender.create_smtp_server>`_
+    @param      fr              from
+    @param      df1             first dataframe
+    @param      df2             a draframe or a list or a list of general comments to add at the end
+    @param      cc              additional receivers
+    @param      delay           random delay between two mails
+    @param      delay_sending   returns functions
+    @param      exc             raise exception when mail is empty
+    @param      params          see @see fn enumerate_feedback
+    @return                     enumerate mails
+    """
+    for mails, html, text in enumerate_feedback(df1, df2, exc=exc, **params):
+        if mails is None or "@" not in mails:
+            # if there is an issue, it should been cautch by the previous function (we skip)
+            continue
+        res = send_email(mailbox, fr=fr, to=mails.split(";"), cc=cc, delay_sending=delay_sending,
+                         body_html=html, body_text=text, subject=subject)
+        if delay_sending:
+            def delay():
+                res()
+                rnd = random.randint(*delay)
+                time.sleep(rnd)
+            yield delay
+        else:
+            yield res
+            rnd = random.randint(*delay)
+            time.sleep(rnd)

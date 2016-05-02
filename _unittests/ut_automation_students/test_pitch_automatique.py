@@ -92,7 +92,7 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder
-from src.ensae_teaching_cs.automation_students import enumerate_feedback
+from src.ensae_teaching_cs.automation_students import enumerate_feedback, enumerate_send_email
 
 
 class TestFeedback(unittest.TestCase):
@@ -118,12 +118,29 @@ class TestFeedback(unittest.TestCase):
             fLOG("------------", i)
             name = os.path.join(temp, "m%d.html" % i)
             with open(name, "w", encoding="utf-8") as f:
-                f.write(
-                    '<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head><body>\n')
                 f.write(m[1])
-                f.write("\n</body></html>")
             if i < len(exp):
                 assert exp[i] in m[1]
+
+    def test_enumerate_send_email(self):
+        fLOG(
+            __file__,
+            self._testMethodName,
+            OutputPrint=__name__ == "__main__")
+
+        data = os.path.abspath(os.path.dirname(__file__))
+        data = os.path.join(data, "data")
+        xls = os.path.join(data, "groupes_eleves_pitch.xlsx")
+        mailbox = None  # pymmails.sender.create_smtp_server("gmail", login, pwd)
+        df = pandas.read_excel(xls, sheetname=0, index=False)
+        comment = pandas.read_excel(xls, sheetname=1, header=None, index=False)
+        mails = list(enumerate_send_email(mailbox, "subject", "me", df, comment, exc=False, fLOG=fLOG, delay_sending=True))
+        for i, m in enumerate(mails):
+            fLOG("------------", m)
+            try:
+                m()
+            except AttributeError:
+                continue
 
 
 if __name__ == "__main__":
