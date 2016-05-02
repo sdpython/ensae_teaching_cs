@@ -188,7 +188,7 @@ class ElectionResults:
                     return None
             return res
         rows = list(map(lambda r: proc(r), tour.values))
-        rows = [_ for _ in rows if _ != None]
+        rows = [_ for _ in rows if _ is not None]
         return pandas.DataFrame(rows)
 
     def vote_transfer(self):
@@ -226,7 +226,7 @@ class ElectionResults:
 
         Q = None
         for m in pX:
-            if Q == None:
+            if Q is None:
                 Q = +m
             else:
                 Q += m * 2
@@ -237,7 +237,7 @@ class ElectionResults:
             tr = bigX[i].transpose()
             y2 = Y[:, i] * (-2)
             t = tr * y2
-            if p == None:
+            if p is None:
                 p = t
             else:
                 p += t
@@ -361,7 +361,7 @@ class ElectionResults:
         @param      params      parameters to give to ``method``
         @return                 four matrices, averaged results, sigma, lower bound, higher bound
         """
-        if fLOG == None:
+        if fLOG is None:
             fLOG = lambda *x: ""
         fLOG("sampling", iter)
         samples = [self.resample() for i in range(iter)]

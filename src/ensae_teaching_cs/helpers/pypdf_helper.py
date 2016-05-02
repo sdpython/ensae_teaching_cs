@@ -30,6 +30,8 @@ def pdf_read_content(filename):
     If a line ends by "-", it is assumed a word was split. It is replaced by "---".
 
     This function only works with  `sdpython/pyPdf <https://github.com/sdpython/pyPdf>`_.
+    The module was modified to work better with spaces.
+    Every line ending by ``'---'`` is a split word.
     """
     texts = []
     with open(filename, "rb") as f:

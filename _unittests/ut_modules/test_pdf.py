@@ -38,7 +38,7 @@ except ImportError:
     import pyquickhelper as skip_
 
 try:
-    import pyPdf
+    from pyPdf import PdfFileReader
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -50,12 +50,11 @@ except ImportError:
                 "pyPdf")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyPdf
+    from pyPdf import PdfFileReader
 
 
 from pyquickhelper.loghelper import fLOG
-from src.ensae_teaching_cs.helpers.pypdf2_helper import pdf_read_content
-from pyPdf import PdfFileReader
+from src.ensae_teaching_cs.helpers.pypdf_helper import pdf_read_content
 
 
 class TestModulesPdfReader(unittest.TestCase):
@@ -100,7 +99,9 @@ class TestModulesPdfReader(unittest.TestCase):
         text = pdf_read_content(pdffile)
         assert " " in text
         assert "\n" in text
-        if "algorithms:theirinability" not in text:
+        if "algorithms:theirinability" not in text.replace(" ", ""):
+            raise Exception(text)
+        if "their inability" not in text:
             raise Exception(text)
 
 if __name__ == "__main__":
