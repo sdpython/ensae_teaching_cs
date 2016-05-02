@@ -47,7 +47,7 @@ class TestFlake8(unittest.TestCase):
         src_ = os.path.normpath(os.path.join(thi, "..", "..", "src"))
         check_pep8(src_, fLOG=fLOG, extended=[("fLOG", _extended_refactoring)],
                    ignore=('E501', 'E265', 'E731'),
-                   neg_filter="((.*pandas_helper.*)|(.*faq_python.*))")
+                   neg_filter="((.*pandas_helper.*)|(.*faq_python.*)|(.*send_feedback.*))")
 
     def test_flake8_test(self):
         fLOG(
