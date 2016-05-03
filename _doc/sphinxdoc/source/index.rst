@@ -229,8 +229,7 @@ Table des matières
 
 .. toctree::
     :maxdepth: 1
-    :numbered: 1
-    
+
     1. Algorithmes et programmation <td_1a>
     2. Python pour un Data Scientist <td_2a>
     3. Eléments logiciels pour le traitement des données massives <td_3a>
