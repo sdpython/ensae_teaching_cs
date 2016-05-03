@@ -30,7 +30,7 @@ template_mail_feedback = """
 
 def enumerate_feedback(df1, df2, col_group="Groupe", col_subject="Sujet",
                        col_pitch="Pitch", col_code="Code", col_mail="Mail",
-                       col_name="Name", subject="Projet informatique, feedback sur le pitch",
+                       col_name="Nom", subject="Projet informatique, feedback sur le pitch",
                        begin="Bonjour,\n\nVoici mon feedback sur votre pitch. Ce mail est automatisé. Veuillez vérifier les informations.\n\n",
                        end="Xavier", text_comments="Remarques générales",
                        template=template_mail_feedback, engine="jinja2", exc=True, fLOG=noLOG):
@@ -117,12 +117,15 @@ def enumerate_feedback(df1, df2, col_group="Groupe", col_subject="Sujet",
                 raise ValueError("No mail for:\n" + text)
             else:
                 fLOG("No mail for:\n" + text)
-        html = ('<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head><body>\n' + text + "\n</body></html>\n")
-        text = text.replace("<b>", "").replace("</b>", "").replace("<br />", "\n")
+        html = ('<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head><body>\n' +
+                text + "\n</body></html>\n")
+        text = text.replace("<b>", "").replace(
+            "</b>", "").replace("<br />", "\n")
         yield (mail, html, text)
 
 
-def enumerate_send_email(mailbox, subject, fr, df1, df2, cc=None, delay=[500, 1000], delay_sending=False, exc=True, **params):
+def enumerate_send_email(mailbox, subject, fr, df1, df2, cc=None, delay=[1000, 1500],
+                         delay_sending=False, exc=True, skip=0, only=None, **params):
     """
     Send feedback to students
 
@@ -134,22 +137,64 @@ def enumerate_send_email(mailbox, subject, fr, df1, df2, cc=None, delay=[500, 10
     @param      delay           random delay between two mails
     @param      delay_sending   returns functions
     @param      exc             raise exception when mail is empty
+    @param      skip            skip the first mail
+    @param      only            send only to these groups (group id)
     @param      params          see @see fn enumerate_feedback
     @return                     enumerate mails
+
+    Code example::
+
+        import pandas
+        import sys
+        import os
+
+        cc = ["cc@cc.org"]
+        sujet = "Projet informatique, feedback sur le pitch"
+        only = None # {28, 20, 19}
+
+        from pyquickhelper.loghelper import fLOG
+        fLOG(OutputPrint=True)
+
+        from ensae_teaching_cs.automation_students import enumerate_feedback, enumerate_send_email
+        import pymmails
+
+        df = pandas.read_excel("groupes_eleves_pitch.xlsx", sheetname=0)
+        comment = pandas.read_excel("groupes_eleves_pitch.xlsx", sheetname=1, header=None)
+
+
+        mailbox = pymmails.sender.create_smtp_server("gmail", "xavier.dupre", "****")
+        mails = enumerate_send_email(mailbox, sujet, "xavier.dupre AT gmail.com",
+                                          df, comment, exc=True, fLOG=fLOG, delay_sending=False,
+                                          cc=cc, only=only)
+        mailbox.close()
+
     """
+    loop = 0
     for mails, html, text in enumerate_feedback(df1, df2, exc=exc, **params):
-        if mails is None or "@" not in mails:
-            # if there is an issue, it should been cautch by the previous function (we skip)
+        if loop < skip:
+            loop += 1
             continue
+        if only is not None and loop not in only:
+            loop += 1
+            continue
+        if mails is None or "@" not in mails:
+            # if there is an issue, it should been cautch by the previous
+            # function (we skip)
+            continue
+        if not delay_sending and "fLOG" in params:
+            params["fLOG"](loop, "send mail to ", mails)
         res = send_email(mailbox, fr=fr, to=mails.split(";"), cc=cc, delay_sending=delay_sending,
                          body_html=html, body_text=text, subject=subject)
         if delay_sending:
             def delay():
+                if "fLOG" in params:
+                    params["fLOG"](loop, "send mail to ", mails)
                 res()
                 rnd = random.randint(*delay)
-                time.sleep(rnd)
+                time.sleep(rnd / 1000.0)
             yield delay
         else:
             yield res
             rnd = random.randint(*delay)
-            time.sleep(rnd)
+            time.sleep(rnd / 1000.0)
+        loop += 1

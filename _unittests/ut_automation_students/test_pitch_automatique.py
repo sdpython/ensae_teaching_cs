@@ -131,10 +131,12 @@ class TestFeedback(unittest.TestCase):
         data = os.path.abspath(os.path.dirname(__file__))
         data = os.path.join(data, "data")
         xls = os.path.join(data, "groupes_eleves_pitch.xlsx")
-        mailbox = None  # pymmails.sender.create_smtp_server("gmail", login, pwd)
+        # pymmails.sender.create_smtp_server("gmail", login, pwd)
+        mailbox = None
         df = pandas.read_excel(xls, sheetname=0, index=False)
         comment = pandas.read_excel(xls, sheetname=1, header=None, index=False)
-        mails = list(enumerate_send_email(mailbox, "subject", "me", df, comment, exc=False, fLOG=fLOG, delay_sending=True))
+        mails = list(enumerate_send_email(mailbox, "subject", "me",
+                                          df, comment, exc=False, fLOG=fLOG, delay_sending=True))
         for i, m in enumerate(mails):
             fLOG("------------", m)
             try:
