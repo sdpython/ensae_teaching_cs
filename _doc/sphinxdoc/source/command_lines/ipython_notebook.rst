@@ -97,5 +97,8 @@ To see all available configurables, use `--help-all`
 Examples
 --------
 
-    jupyter notebook                       # start the notebook
-    jupyter notebook --certfile=mycert.pem # use SSL/TLS certificate
+::
+
+    jupyter notebook                            # start the notebook
+    jupyter notebook --certfile=mycert.pem      # use SSL/TLS certificate
+    jupyter notebook --notebook-dir=<folder>    # change the notebook folder
