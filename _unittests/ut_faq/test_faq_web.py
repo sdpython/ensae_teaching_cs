@@ -1,0 +1,89 @@
+"""
+@brief      test log(time=4s)
+"""
+
+import sys
+import os
+import unittest
+
+
+try:
+    import src
+except ImportError:
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..")))
+    if path not in sys.path:
+        sys.path.append(path)
+    import src
+
+try:
+    import pyquickhelper as skip_
+except ImportError:
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..",
+                "..",
+                "pyquickhelper",
+                "src")))
+    if path not in sys.path:
+        sys.path.append(path)
+    import pyquickhelper as skip_
+
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import get_temp_folder
+from src.ensae_teaching_cs.faq.faq_web import webshot, webhtml
+
+
+class TestFaqWeb(unittest.TestCase):
+
+    def _test_selenium_html(self):
+        fLOG(
+            __file__,
+            self._testMethodName,
+            OutputPrint=__name__ == "__main__")
+
+        url = "http://www.xavierdupre.fr"
+        html = webhtml(url)
+        assert len(html) > 0
+        self.assertEqual(len(html[0]), 2)
+        if "href" not in html[0][1]:
+            raise Exception(html)
+
+        html = webhtml(url, module='splinter')
+        assert len(html) > 0
+        self.assertEqual(len(html[0]), 2)
+        if "href" not in html[0][1]:
+            raise Exception(html)
+
+    def test_selenium_image(self):
+        fLOG(
+            __file__,
+            self._testMethodName,
+            OutputPrint=__name__ == "__main__")
+
+        temp = get_temp_folder(__file__, "temp_selenium_image")
+        img = os.path.join(temp, "image_selenium.png")
+        url = "http://www.xavierdupre.fr"
+        res = webshot(img, url)
+        assert os.path.exists(img)
+        fLOG(res)
+        self.assertEqual(len(res), 1)
+        self.assertEqual(len(res[0]), 2)
+
+        img = os.path.join(temp, "image_splinter.png")
+        res = webshot(img, url, module='splinter')
+        img = res[0][1]
+        assert os.path.exists(img)
+        fLOG(res)
+        self.assertEqual(len(res), 1)
+        self.assertEqual(len(res[0]), 2)
+
+if __name__ == "__main__":
+    unittest.main()

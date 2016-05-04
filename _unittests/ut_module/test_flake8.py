@@ -47,7 +47,8 @@ class TestFlake8(unittest.TestCase):
         src_ = os.path.normpath(os.path.join(thi, "..", "..", "src"))
         check_pep8(src_, fLOG=fLOG, extended=[("fLOG", _extended_refactoring)],
                    ignore=('E501', 'E265', 'E731'),
-                   neg_filter="((.*pandas_helper.*)|(.*faq_python.*)|(.*send_feedback.*))")
+                   skip=["skip_' imported but unused"],
+                   neg_filter="((.*pandas_helper.*)|(.*faq_python.*)|(.*send_feedback.*)|(.*python_exemple_py_to_html.*))")
 
     def test_flake8_test(self):
         fLOG(
@@ -64,13 +65,13 @@ class TestFlake8(unittest.TestCase):
         thi = os.path.abspath(os.path.dirname(__file__))
         test = os.path.normpath(os.path.join(thi, "..", ))
         check_pep8(test, fLOG=fLOG, neg_filter="temp_.*",
-                   skip=["'src' imported but unused",
-                         "'skip_' imported but unused",
-                         "'skip__' imported but unused",
-                         "'skip___' imported but unused",
-                         "'skip____' imported but unused",
-                         "'skip_____' imported but unused",
-                         "'skip______' imported but unused",
+                   skip=["src' imported but unused",
+                         "skip_' imported but unused",
+                         "skip__' imported but unused",
+                         "skip___' imported but unused",
+                         "skip____' imported but unused",
+                         "skip_____' imported but unused",
+                         "skip______' imported but unused",
                          ],
                    extended=[("fLOG", _extended_refactoring)],
                    max_line_length=320)

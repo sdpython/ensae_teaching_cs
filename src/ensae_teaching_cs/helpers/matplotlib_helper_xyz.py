@@ -8,6 +8,7 @@ from matplotlib.mlab import griddata
 import numpy
 from scipy import ndimage
 from .colorsdef import colors_definition
+from mpl_toolkits.mplot3d import Axes3D as skip_  # do remove this line
 
 
 def scatter_xy_id(xy_id, legend=None, ax=None, **options):
@@ -43,6 +44,8 @@ def scatter_xy_id(xy_id, legend=None, ax=None, **options):
                                 legend={0: "c0", 1: "c1"})
         plt.show()
 
+    The error ``ValueError: Unknown projection '3d'`` is raised when the line
+    ``from mpl_toolkits.mplot3d import Axes3D`` is missing.
     """
     curves = {}
     for x, y, zid in xy_id:
@@ -112,6 +115,8 @@ def scatter_xyc(points, smooth=0, div=10, ax=None, **options):
         fig, ax = scatter_xyc(nuage, title="example with random observations")
         plt.show()
 
+    The error ``ValueError: Unknown projection '3d'`` is raised when the line
+    ``from mpl_toolkits.mplot3d import Axes3D`` is missing.
     """
     if ax is None:
         fig, ax = plt.subplots(figsize=options.get('figsize', None))
@@ -193,6 +198,8 @@ def scatter_xyz(points, smooth=0, div=100, ax=None, **options):
         fig, ax = scatter_xyz(nuage, title="example with random observations")
         plt.show()
 
+    The error ``ValueError: Unknown projection '3d'`` is raised when the line
+    ``from mpl_toolkits.mplot3d import Axes3D`` is missing.
     """
     x = [_[0] for _ in points]
     y = [_[1] for _ in points]

@@ -39,7 +39,7 @@ from pyquickhelper.pycode import get_temp_folder
 from src.ensae_teaching_cs.helpers.video_helper import make_video
 
 
-class TestVideo(unittest.TestCase):
+class TestVideoHelper(unittest.TestCase):
 
     def test_make_video(self):
         fLOG(
@@ -51,7 +51,7 @@ class TestVideo(unittest.TestCase):
         img = os.path.join(temp, "..", "data")
         imgs = os.listdir(img)
         png = [os.path.join(img, _)
-               for _ in imgs if os.path.splitext(_)[-1] == ".png"]
+               for _ in imgs if os.path.splitext(_)[-1] == ".png" and "00" in _]
         assert len(png) > 0
         out = os.path.join(temp, "out_video.avi")
         v = make_video(png, out, size=(1000, 300))

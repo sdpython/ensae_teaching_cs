@@ -39,6 +39,12 @@ For those that want a GUI you can try py2htmTk.pyw -
                         3 - Substitute <> & " and '
                         4 - Substitute all non-ASCIIalphanumeric
 """
+
+
+import tokenize
+import os
+
+
 help_styles = """
 The default styles applied are as follows:
     <style type="text/css">
@@ -116,8 +122,6 @@ Revisions:
 0.62 Added  -   additional entity replacement options
 """
 
-import tokenize
-import os
 __author__ = "Paul Hardwick <paul@peck.org.uk>"
 __date__ = "07 March 2004"
 __version__ = "0.62"
