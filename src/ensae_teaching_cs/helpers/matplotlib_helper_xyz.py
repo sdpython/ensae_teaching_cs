@@ -3,13 +3,10 @@
 @brief      scatter plots
 """
 
-import random
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 from matplotlib.mlab import griddata
 import numpy
-from numpy.random import uniform, seed
-from scipy import ndimage, signal
+from scipy import ndimage
 from .colorsdef import colors_definition
 
 
@@ -64,7 +61,7 @@ def scatter_xy_id(xy_id, legend=None, ax=None, **options):
         v = curves[k]
         f, = ax.plot([_[0] for _ in v], [_[1] for _ in v],
                      marker, color=colors_definition[color][1])
-        if legend != None:
+        if legend is not None:
             legs.append((f, legend.get(k, "unknown:" + str(k))))
         color += 1
 
@@ -128,8 +125,6 @@ def scatter_xyc(points, smooth=0, div=10, ax=None, **options):
     bound = [min(x), min(y), max(x), max(y)]
     xi = numpy.linspace(bound[0], bound[2], div)
     yi = numpy.linspace(bound[1], bound[3], div)
-    dx = xi[1:] - xi[0:-1]
-    dy = yi[1:] - yi[0:-1]
 
     zi = griddata(x, y, z, xi, yi, interp='nn')
 
@@ -139,9 +134,9 @@ def scatter_xyc(points, smooth=0, div=10, ax=None, **options):
         for i in range(smooth):
             zi = ndimage.convolve(zi, iii)
 
-    CS = plt.contour(xi, yi, zi, 15, linewidths=0.5, colors='k')
-    CS = plt.contourf(xi, yi, zi, 15, cmap=plt.cm.rainbow,
-                      vmax=abs(zi).max(), vmin=abs(zi).min())
+    plt.contour(xi, yi, zi, 15, linewidths=0.5, colors='k')
+    plt.contourf(xi, yi, zi, 15, cmap=plt.cm.rainbow,
+                 vmax=abs(zi).max(), vmin=abs(zi).min())
     plt.colorbar(ax=ax)
     ax.scatter(x, y, c='b', s=5, zorder=10)
     ax.set_xlim(bound[0], bound[2])
@@ -206,8 +201,6 @@ def scatter_xyz(points, smooth=0, div=100, ax=None, **options):
     bound = [min(x), min(y), max(x), max(y)]
     xi = numpy.linspace(bound[0], bound[2], div)
     yi = numpy.linspace(bound[1], bound[3], div)
-    dx = xi[1:] - xi[0:-1]
-    dy = yi[1:] - yi[0:-1]
 
     zi = griddata(x, y, z, xi, yi, interp='nn')
     if smooth > 0:
@@ -229,7 +222,7 @@ def scatter_xyz(points, smooth=0, div=100, ax=None, **options):
     X = numpy.row_stack(tuple([xi] * len(yi)))
     Y = numpy.column_stack(tuple([yi] * len(xi)))
 
-    surf = ax.plot_surface(X, Y, zi, cmap='autumn', cstride=5, rstride=5)
+    ax.plot_surface(X, Y, zi, cmap='autumn', cstride=5, rstride=5)
 
     if "xlabel" in options:
         ax.set_xlabel(options["xlabel"])
