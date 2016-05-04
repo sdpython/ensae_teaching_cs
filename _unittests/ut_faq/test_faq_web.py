@@ -43,7 +43,7 @@ from src.ensae_teaching_cs.faq.faq_web import webshot, webhtml
 
 class TestFaqWeb(unittest.TestCase):
 
-    def _test_selenium_html(self):
+    def test_selenium_html(self):
         fLOG(
             __file__,
             self._testMethodName,
