@@ -15,9 +15,11 @@ List of almost reusable algorithms implemented in this module
 * @see fn connected_components: computes the `connected components <https://en.wikipedia.org/wiki/Connected_component_(graph_theory)>`_
 * @see fn graph_degree: computes the degree of each node in a graph `degree <https://en.wikipedia.org/wiki/Degree_(graph_theory)>`_
 * @see cl GraphDistance: computes a distance between two graphs (acyclic), see :ref:`l-graph_distance`
+* @see fn resolution_sudoku: solves a `sudoku <https://fr.wikipedia.org/wiki/Sudoku>`_
 """
 
-from .tsp_kruskal import tsp_kruskal_algorithm
-from .tsp_bresenham import draw_line, draw_ellipse
-from .rues_paris import distance_haversine, bellman, connected_components, graph_degree
 from .graph_distance import GraphDistance
+from .rues_paris import distance_haversine, bellman, connected_components, graph_degree
+from .sudoku import sudoku2str, resolution_sudoku
+from .tsp_bresenham import draw_line, draw_ellipse
+from .tsp_kruskal import tsp_kruskal_algorithm

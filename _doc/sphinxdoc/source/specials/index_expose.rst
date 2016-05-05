@@ -27,6 +27,7 @@ qu'on peut résoudre grâce à un algorithme et un peu d'imagination.
     voisinage
     image_synthese
     elections
+    sudoku
     
     
 Certains de ces algorithmes sont réutilisables :
@@ -39,4 +40,5 @@ Certains de ces algorithmes sont réutilisables :
 * :func:`connected_components <ensae_teaching_cs.special.rues_paris.connected_components>`: computes the `connected components <https://en.wikipedia.org/wiki/Connected_component_(graph_theory)>`_
 * :func:`graph_degree <ensae_teaching_cs.special.rues_paris.graph_degree>`: computes the degree of each node in a graph `degree <https://en.wikipedia.org/wiki/Degree_(graph_theory)>`_
 * :class:`GraphDistance <ensae_teaching_cs.special.graph_distance.GraphDistance>`: computes a distance between two graphs (acyclic), see :ref:`l-graph_distance`
+* :func:`resolution_sudoku <ensae_teaching_cs.special.sudoku.resolution_sudoku>`: solves a `sudoku <https://fr.wikipedia.org/wiki/Sudoku>`_
 
