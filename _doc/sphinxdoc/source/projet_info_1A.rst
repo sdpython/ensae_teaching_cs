@@ -391,6 +391,7 @@ Liste des sujets cités
 #. Jeu 2 : :ref:`l-jeu-awa`
 #. Jeu 2 : :ref:`l-jeu-gomo`
 #. Jeu 2 : :ref:`l-jeu-go`
+#. Jeu 2 : :ref:`l-jeu-tic-tac-toe-99`
 #. Algo : :ref:`l-math-wifi`
 #. Algo : :ref:`l-math-pento`
 #. Algo : :ref:`l-math-motif`

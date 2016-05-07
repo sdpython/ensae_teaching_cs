@@ -1,4 +1,4 @@
-﻿
+
 .. _l-proj_jeux:
 
 Jeux de réflexion
@@ -110,6 +110,29 @@ dans le cadre d'un projet informatique. L'article
 `Teaching Deep Convolutional Neural Networks to Play Go <http://arxiv.org/abs/1412.3409>`_, Christopher Clark, Amos Storkey
 propose une solution à base de machine learning.
 
+
+
+
+.. _l-jeu-tic-tac-toe-99:
+
+Tic Tac Toe 9x9 (2016)
+----------------------
+
+Le principe du tic tac toe consiste à aligner trois croix ou trois cercles
+dans un carré 3x3. Le jeu est connu et à moins d'une erreur d'inattention,
+la partie se termine par un nul.
+
+Le tic-tac-toe 9x9 est inspiré de ce jeu mais se compose de 9 carrés 3x3 disposés
+en carré. Chaque joueur joue chacun son tour et il faut aligner trois croix ou
+trois cercles dans un carré. On ajoute une règle qui rend le jeu plus intéressant :
+lorsqu'on décide de jour dans un carré, on pose un pion dans une des neuf cases du petit
+carré. Cette case détermine le carré dans lequel l'adversaire doit jouer.
+Ainsi chaque ne détermine pas le grand carré dans lequel il joue sauf au premier tour.
+
+Deux questions :
+
+#. Démontrer que l'on peut toujours jouer.
+#. Imaginer une intelligence artificielle pour ce jeu.
 
 
 

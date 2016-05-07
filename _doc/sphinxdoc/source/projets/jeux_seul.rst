@@ -77,3 +77,4 @@ Ecrire un programme qui résoud le puzzle suivant :
 Les règles du jeu sont décrites ici : 
 `Can you solve GCHQ's infuriatingly complex Christmas puzzle? <http://www.theguardian.com/uk-news/2015/dec/09/can-you-solve-the-gchqs-infuriatingly-complex-christmas-puzzle?CMP=Share_AndroidApp_Email>`_.
 
+
