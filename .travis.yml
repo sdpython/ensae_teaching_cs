@@ -54,17 +54,18 @@ matrix:
     # https://github.com/travis-ci/apt-package-whitelist/issues/2407
     # Once libatlas3gf-base is on the whitelist it will be possible to replace
     # the before_install step with and addons/apt/packages declaration.
-    -  python: 3.5
-       env: DISTRIB="scipy-dev-wheels"
-            CACHED_BUILD_DIR="$HOME/ensae_teaching_cs_build_numpy_dev"
-       sudo: True
-       before_install: sudo apt-get install -yqq libatlas3gf-base libatlas-dev
-       install: 
-        - pip install -r requirements.txt
-        - pip install -U git+https://github.com/sdpython/qgrid --no-deps
-        - pip install -r requirements_scikit.txt
-        - pip install -r requirements_scikit2.txt
-        - pip install -r requirements_ext.txt
-  
-install: source travis_install.sh
-script: python setup.py unittests
+      - python: 3.5
+          env:
+          - DISTRIB="scipy-dev-wheels" 
+          - CACHED_BUILD_DIR="$HOME/ensae_teaching_cs_build_numpy_dev"
+          sudo: True
+          before_install: sudo apt-get install -yqq libatlas3gf-base libatlas-dev
+          install: 
+              - pip install -r requirements.txt
+              - pip install -U git+https://github.com/sdpython/qgrid --no-deps
+              - pip install -r requirements_scikit.txt
+              - pip install -r requirements_scikit2.txt
+              - pip install -r requirements_ext.txt
+              - pip install https://github.com/sdpython/pyPdf/archive/trunk.zip
+              - source travis_install.sh
+          script: python setup.py unittests

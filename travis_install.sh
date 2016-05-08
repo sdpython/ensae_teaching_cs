@@ -62,9 +62,6 @@ if [[ "$DISTRIB" == "conda" ]]; then
     fi
     source activate testenv
 
-    # Install nose-timer via pip
-    pip install nose-timer
-
 elif [[ "$DISTRIB" == "ubuntu" ]]; then
     # At the time of writing numpy 1.9.1 is included in the travis
     # virtualenv but we want to use the numpy installed through apt-get
@@ -74,7 +71,7 @@ elif [[ "$DISTRIB" == "ubuntu" ]]; then
     # and scipy
     virtualenv --system-site-packages testvenv
     source testvenv/bin/activate
-    pip install nose nose-timer cython
+    pip install cython
 
 elif [[ "$DISTRIB" == "scipy-dev-wheels" ]]; then
     # Set up our own virtualenv environment to avoid travis' numpy.
@@ -89,7 +86,7 @@ elif [[ "$DISTRIB" == "scipy-dev-wheels" ]]; then
     pip install --pre --upgrade --no-index --timeout=60 \
         --trusted-host travis-dev-wheels.scipy.org \
         -f https://travis-dev-wheels.scipy.org/ numpy scipy
-    pip install nose nose-timer cython
+    pip install cython
 fi
 
 

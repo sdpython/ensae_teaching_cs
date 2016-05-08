@@ -34,6 +34,7 @@ install:
   - "%PYTHON%\\Scripts\\pip install pygame"
   - "%PYTHON%\\Scripts\\pymy_install3 opencv_python"
   - "%PYTHON%\\Scripts\\pymy_install3 yaml"
+  - "%PYTHON%\\Scripts\\pip install https://github.com/sdpython/pyPdf/archive/trunk.zip"
 
 build: off
 
