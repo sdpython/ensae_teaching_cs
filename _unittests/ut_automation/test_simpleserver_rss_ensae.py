@@ -37,13 +37,14 @@ except ImportError:
     import pyquickhelper as skip_
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
-from pyrsslocal.helper.download_helper import get_url_content_timeout
-from pyrsslocal import RSSServer
-from src.ensae_teaching_cs.automation.rss_teachings_blog import rss_teachings_update_run_server
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
 
 
 class TestSimpleServerRSSTeaching (unittest.TestCase):
+
+    def setUp(self):
+        add_missing_development_version(
+            ["pyensae", "pymyinstall", "pymmails", "pyrsslocal"], __file__)
 
     def test_server_start_run(self):
         """
@@ -54,6 +55,10 @@ class TestSimpleServerRSSTeaching (unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
+        from pyrsslocal.helper.download_helper import get_url_content_timeout
+        from pyrsslocal import RSSServer
+        from src.ensae_teaching_cs.automation.rss_teachings_blog import rss_teachings_update_run_server
+
         if "travis" in sys.executable:
             # skip travis and Flask
             warnings.warn(
@@ -61,7 +66,8 @@ class TestSimpleServerRSSTeaching (unittest.TestCase):
             return
 
         temp = get_temp_folder(__file__, "temp_rss_starter")
-        xmlb = None
+        xmlb = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "src",
+                                            "ensae_teaching_cs", "rss_teachings.xml"))
 
         data = os.path.join(temp, "..", "data", "ensae_teaching_cs_blogs.db3")
         shutil.copy(data, temp)

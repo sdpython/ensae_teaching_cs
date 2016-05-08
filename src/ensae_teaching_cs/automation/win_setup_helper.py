@@ -49,7 +49,10 @@ def last_function(innosetup, folders, verbose=False, fLOG=print):
 
     # RSS
     fLOG("--- update rss.list.xml")
-    from .. import __blog__
+    # flake8 is no happy with: from .. import __blog__
+    __blog__ = os.path.abspath(os.path.join(
+        os.path.dirname(__file__), "..", "rss_teachings.xml"))
+
     rssfile = os.path.join(folders["config"], "rss_list.xml")
     shutil.copy(__blog__, rssfile)
 
