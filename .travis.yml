@@ -66,7 +66,5 @@ matrix:
         - pip install -r requirements_scikit2.txt
         - pip install -r requirements_ext.txt
   
-install:
-  - travis_install.sh
-script:
-  - python setup.py unittests
+install: source travis_install.sh
+script: python setup.py unittests
