@@ -46,13 +46,13 @@ env:
     - CACHED_BUILD_DIR="$HOME/ensae_teaching_cs_build_latest"
 
 install: 
+  - source travis_install.sh
   - pip install -r requirements.txt
   - pip install -U git+https://github.com/sdpython/qgrid --no-deps
   - pip install -r requirements_scikit.txt
   - pip install -r requirements_scikit2.txt
   - pip install -r requirements_ext.txt
   - pip install https://github.com/sdpython/pyPdf/archive/trunk.zip
-  - source travis_install.sh
 
 script: 
   - python setup.py unittests
