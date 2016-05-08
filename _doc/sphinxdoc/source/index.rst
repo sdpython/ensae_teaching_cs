@@ -68,44 +68,18 @@ joué une partie.
 Contenu des enseignements
 -------------------------
 
+.. toctree::
+    :maxdepth: 1
 
-+--------+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| Niveau | **Contenu**   | Projet                                       | Présentation - Mise en perspective                                                                                                |
-+--------+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 1A     | :ref:`l-td1a` | :ref:`projet informatique 1A <l-projinfo1a>` | `Présentation ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_                  |
-+--------+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 2A     | :ref:`l-td2a` | :ref:`projet informatique 2A <l-projinfo2a>` | `Présentation ENSAE 2A - Données et machine learning <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_ |
-+--------+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 3A     | :ref:`l-td3a` | :ref:`projet informatique 3A <l-projinfo3a>` | `Présentation ENSAE 3A - Map/Reduce <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_                  |
-+--------+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
-
-Autres liens, exercices, algorithmes, jeux de données, démonstrations...
-
-* Questions, termes, FAQ
-    * :ref:`FAQ <l-FAQs>` (Foire aux Questions ou Frequently Asked Questions)
-    * :ref:`Glossaire <l-glossaire>`
-    * :ref:`question`
-    * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
-* :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
-    * :ref:`Exercices d'algorithmie <l-exoalgo>`
-    * :ref:`Exposés divers non abordés en cours <l-extra>`
-    * :ref:`l-expose-explication`
-* Lectures
-    * :ref:`Examens passés <l-examens>` (1A)
-    * :ref:`l-data2a` ou sa version allégée avec les modules qu'il faut connaître :ref:`modulesi`
-    * :ref:`Outils, ressources pour développer <l-devtools>`
-    * :ref:`Articles, Références, Blog <l-information>`
-    * :ref:`Coding Party <l-codingparty>`
-    * :ref:`l-algoculture`
-    * :ref:`blog <ap-main-0>` de ce cours
-    * :ref:`code associé à ce cours <modindex>`
-    * :ref:`l-ressources`
-    * :ref:`l-biblio`
-    * :ref:`l-visualisation`
-
-    
-
-
+    1. Algorithmes et programmation <td_1a>
+    2. Python pour un Data Scientist <td_2a>
+    3. Eléments logiciels pour le traitement des données massives <td_3a>
+    4. Projets informatiques <projet_info>
+    5. Examens <exams>
+    6. Modules, Bibliographie, Articles... <informations>
+    7. Exemples et digressions <exemple_index>
+    8. Visualisation <visualisation>
+    9. Getting started <getting_started>
 
 
 Getting started
@@ -219,38 +193,56 @@ proposés dans la formation `Data Science <http://www.institutdesactuaires.com/g
 maison des actuaires.
 Et `code_beatrix <http://lesenfantscodaient.fr/>`_ pour découvrir les algorithmes et la programmation.
 
+En diagonal
+-----------
 
-
-
-Table des matières
-------------------
-
-**Contenu**
-
-.. toctree::
-    :maxdepth: 1
-
-    1. Algorithmes et programmation <td_1a>
-    2. Python pour un Data Scientist <td_2a>
-    3. Eléments logiciels pour le traitement des données massives <td_3a>
-    4. blog site <blog/main_0000>
-    5. Projets informatiques <projet_info>
-    6. Examens <exams>
-    7. Modules, Bibliographie, Articles... <informations>
-    
 **Index**
     
 .. toctree::
+    :hidden:
     :maxdepth: 1
 
-    visualisation
-    getting_started
-    exemple_index
     all_notebooks
-    coding_party
     Notebooks, Exemples, Code <indexmenu>
-    genindex
 
+
+
+**Autres liens, exercices, algorithmes, jeux de données, démonstrations...**
+
+* :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
+    * :ref:`l-exoalgo`
+    * :ref:`l-extra`
+* Questions, termes, FAQ
+    * :ref:`FAQ <l-FAQs>` (Foire aux Questions ou Frequently Asked Questions)
+    * :ref:`Glossaire <l-glossaire>`
+    * :ref:`question`
+    * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
+* Lectures
+    * :ref:`l-data2a` ou sa version allégée avec les modules qu'il faut connaître :ref:`modulesi`
+    * :ref:`Outils, ressources pour développer <l-devtools>`
+    * :ref:`Articles, Références, Blog <l-information>`
+    * :ref:`l-codingparty`
+    * :ref:`l-algoculture`
+    * :ref:`blog <ap-main-0>` de ce cours
+    * :ref:`code associé à ce cours <modindex>`
+    * :ref:`l-ressources`
+    * :ref:`l-biblio`
+    * :ref:`l-visualisation`
+
+    
+
+
+
+
++--------+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| Niveau | **Contenu**   | Projet                                       | Présentation - Mise en perspective                                                                                                |
++--------+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| 1A     | :ref:`l-td1a` | :ref:`projet informatique 1A <l-projinfo1a>` | `Présentation ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_                  |
++--------+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| 2A     | :ref:`l-td2a` | :ref:`projet informatique 2A <l-projinfo2a>` | `Présentation ENSAE 2A - Données et machine learning <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_ |
++--------+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+| 3A     | :ref:`l-td3a` | :ref:`projet informatique 3A <l-projinfo3a>` | `Présentation ENSAE 3A - Map/Reduce <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_                  |
++--------+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
 
 
 

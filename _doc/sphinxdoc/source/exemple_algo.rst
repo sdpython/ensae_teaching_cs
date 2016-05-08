@@ -1,14 +1,13 @@
 
 
-.. issue.
-
 .. _l-exoalgo:
 
 
 Exemples d'algorithmie
-----------------------
+======================
 
-Simples et moins simples :
+Simples et moins simples
+------------------------
 
 .. toctree::
 
@@ -19,7 +18,8 @@ Simples et moins simples :
     
 .. index:: entretien, entretien d'embauche, algorithme
     
-Exercice classique d'algorithmie :    
+Exercice classique d'algorithmie
+--------------------------------
     
 .. toctree::
 

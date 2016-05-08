@@ -1,13 +1,10 @@
-﻿
-
-.. issue.
 
 
 .. _l-codingparty:
 
 
-Coding Party
-============
+Coding Parties
+==============
 
 
 .. toctree::

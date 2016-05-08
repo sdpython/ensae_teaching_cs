@@ -20,6 +20,6 @@ Eléments de code inclus dans le module
     all_indexes
     all_report
     notebook_index
-    
+    genindex
     
     

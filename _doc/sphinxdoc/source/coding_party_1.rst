@@ -1,6 +1,5 @@
 
 
-.. issue.
 
 .. _l-codingparty1:
 

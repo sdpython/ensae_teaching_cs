@@ -1,21 +1,72 @@
+# inspired from scikit-learn
+# make it explicit that we favor the new container-based travis workers
+sudo: false
+
 language: python
-python:
-    - "3.5"
+
+# Pre-install packages for the ubuntu distribution
+cache:
+  apt: true
+  # We use three different cache directory
+  # to work around a Travis bug with multi-platform cache
+  directories:
+  - $HOME/ensae_teaching_cs_build_ubuntu
+  - $HOME/ensae_teaching_cs_build_oldest
+  - $HOME/ensae_teaching_cs_build_latest
+  - $HOME/ensae_teaching_cs_build_numpy_dev
+  - $HOME/.cache/pip
+  - $HOME/download
 addons:
   apt:
     packages:
-    - libblas-dev
+    - libatlas3gf-base
+    - libatlas-dev
+    # only required by the DISTRIB="ubuntu" build:
+    - python-scipy
     - liblapack-dev
     - gfortran
     - libhdf5-serial-dev
     - python-opencv
     - python-pygame
-install: 
-    - pip install -r requirements.txt
-    - pip install -U git+https://github.com/quantopian/qgrid --no-deps
-    - pip install scipy
-    - pip install -r requirements_scikit.txt
-    - pip install -r requirements_scikit2.txt
-    - pip install -r requirements_ext.txt
+    
+env:
+  global:
+    # Directory where tests are run from
+    - OMP_NUM_THREADS=4
+    - OPENBLAS_NUM_THREADS=4
+  matrix:
+    # This environment tests the newest supported anaconda env
+    - DISTRIB="conda" PYTHON_VERSION="3.5" INSTALL_MKL="true"
+      NUMPY_VERSION="1.10.4" SCIPY_VERSION="0.17.0" CYTHON_VERSION="0.23.4"
+      CACHED_BUILD_DIR="$HOME/ensae_teaching_cs_build_latest"
+
+matrix:
+  allow_failures:
+    # allow_failures seems to be keyed on the python version
+    # We are using this to allow failures for DISTRIB=scipy-dev-wheels
+    - python: 3.5
+
+  include:
+    # This environment tests scikit-learn against numpy and scipy master
+    # installed from their CI wheels in a virtualenv with the Python
+    # interpreter provided by travis.
+    # Note: libatlas3gf-base is not allowed yet so we need 'sudo':
+    # https://github.com/travis-ci/apt-package-whitelist/issues/2407
+    # Once libatlas3gf-base is on the whitelist it will be possible to replace
+    # the before_install step with and addons/apt/packages declaration.
+    -  python: 3.5
+       env: DISTRIB="scipy-dev-wheels"
+            CACHED_BUILD_DIR="$HOME/ensae_teaching_cs_build_numpy_dev"
+       sudo: True
+       before_install: sudo apt-get install -yqq libatlas3gf-base libatlas-dev
+       install: 
+        - pip install -r requirements.txt
+        - pip install -U git+https://github.com/sdpython/qgrid --no-deps
+        - pip install -r requirements_scikit.txt
+        - pip install -r requirements_scikit2.txt
+        - pip install -r requirements_ext.txt
+  
+install:
+  - travis_install.sh
 script:
-    - python setup.py unittests
+  - python setup.py unittests
