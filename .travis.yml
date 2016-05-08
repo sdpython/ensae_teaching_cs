@@ -45,8 +45,12 @@ env:
     - CYTHON_VERSION="0.23.4"
     - CACHED_BUILD_DIR="$HOME/ensae_teaching_cs_build_latest"
 
+sudo: true
+
 before_install:
   - sudo apt-get install -yqq libatlas3gf-base libatlas-dev
+
+sudo: false
 
 install: 
   - pip install -r requirements.txt
