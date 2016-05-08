@@ -55,9 +55,7 @@ matrix:
     # Once libatlas3gf-base is on the whitelist it will be possible to replace
     # the before_install step with and addons/apt/packages declaration.
       - python: 3.5
-          env:
-          - DISTRIB="scipy-dev-wheels" 
-          - CACHED_BUILD_DIR="$HOME/ensae_teaching_cs_build_numpy_dev"
+          env: DISTRIB="scipy-dev-wheels" CACHED_BUILD_DIR="$HOME/ensae_teaching_cs_build_numpy_dev"
           sudo: True
           before_install: sudo apt-get install -yqq libatlas3gf-base libatlas-dev
           install: 
