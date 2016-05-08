@@ -41,7 +41,7 @@ env:
     - PYTHON_VERSION="3.5"
     - INSTALL_MKL="true"
     - NUMPY_VERSION="1.11.0"
-    - SCIPY_VERSION="0.17.1"
+    - SCIPY_VERSION="0.17.0"
     - CYTHON_VERSION="0.23.4"
     - CACHED_BUILD_DIR="$HOME/ensae_teaching_cs_build_latest"
 
