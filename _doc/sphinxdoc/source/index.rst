@@ -196,19 +196,6 @@ Et `code_beatrix <http://lesenfantscodaient.fr/>`_ pour découvrir les algorithm
 En diagonal
 -----------
 
-**Index**
-    
-.. toctree::
-    :hidden:
-    :maxdepth: 1
-
-    all_notebooks
-    Notebooks, Exemples, Code <indexmenu>
-
-
-
-**Autres liens, exercices, algorithmes, jeux de données, démonstrations...**
-
 * :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
     * :ref:`l-exoalgo`
     * :ref:`l-extra`
