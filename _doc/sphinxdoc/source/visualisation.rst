@@ -9,11 +9,11 @@ Visualisation
 Modules
 +++++++
 
-[*matplotlib](http://matplotlib.org/) reste la référence en matièce de graphique mais la librairie ne 
+`matplotlib <http://matplotlib.org/>`_ reste la référence en matièce de graphique mais la librairie ne 
 produit que des images statiques. D'autres libraires utilisent pleinement le javascript au sein d'un
-notebook. La première est [bokeh](http://bokeh.pydata.org/en/latest/) mais il en existe d'autres qui
+notebook. La première est `bokeh <http://bokeh.pydata.org/en/latest/>`_ mais il en existe d'autres qui
 migrent une librairie javascript existant vers Python ou qui sont développées spécifiquement pour 
-les notebooks. C'est le cas de [bqplot](https://github.com/bloomberg/bqplot) qui permet
+les notebooks. C'est le cas de `bqplot <https://github.com/bloomberg/bqplot>`_ qui permet
 assez facilement de modifier le graphique en fonction des actions de la souris. Pour choisir une librairie, 
 il faut vous demander :
 
