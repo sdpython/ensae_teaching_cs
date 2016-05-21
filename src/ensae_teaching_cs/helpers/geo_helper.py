@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 @file
 @brief helpers about longitude, latitude
@@ -17,6 +18,16 @@ def lambert93_to_WGPS(lambertE, lambertN):
 
     The function is inspired from
     ` lam93toLatLon.py <https://gist.github.com/flire/0a305eeec77bc84a73af8ddc8f9ec043>`_.
+
+    @FAQ(Les fichiers GEOFLA ne contiennent pas de longitude, latitude ?)
+
+    Les coordonnées contenues dans les fichiers `GEOFLA <http://professionnels.ign.fr/geofla>`_
+    ne sont pas toujours des longitudes, latitudes mais des coordonnées exprimées dans un système
+    de projection conique `Lambert 93 <https://fr.wikipedia.org/wiki/Projection_conique_conforme_de_Lambert>`_.
+    Il faut convertir les coordonnées avant de pouvoir tracer la carte ou changer la projection
+    utilisée par basemap : `Lambert Conformal Projection <http://matplotlib.org/basemap/users/lcc.html>`_.
+
+    @endFAQ
     """
     class constantes:
         GRS80E = 0.081819191042816
