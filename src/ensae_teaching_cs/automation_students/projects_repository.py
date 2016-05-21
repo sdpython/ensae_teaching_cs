@@ -7,10 +7,10 @@ import os
 import numpy
 import warnings
 from urllib.parse import urlparse
-from pyquickhelper.loghelper import noLOG, unzip_files
+from pyquickhelper.loghelper import noLOG
 from pyquickhelper.texthelper import remove_diacritics
 from pyquickhelper.filehelper import remove_folder, explore_folder_iterfile
-from pyquickhelper.filehelper import zip_files
+from pyquickhelper.filehelper import unzip_files, zip_files, ungzip_files, un7zip_files
 from pyquickhelper.helpgen import nb2html
 from pymmails import EmailMessageRenderer, EmailMessage
 from .repository_exception import RegexRepositoryException, TooManyProjectsException
@@ -952,6 +952,13 @@ class ProjectsRepository:
         @param          group       group name
         @return                     list of new filess
         """
+        def fvalid(zip_name, local_name):
+            if "__pycache__" in zip_name:
+                return False
+            if zip_name.endswith(".pyc"):
+                return False
+            return True
+
         names = list(self.enumerate_group_files(group))
         files = []
         for name in names:
@@ -967,11 +974,44 @@ class ProjectsRepository:
                     self.fLOG(
                         "ProjectsRepository.unzip_files [creating {0}]".format(folder))
                     os.mkdir(folder)
-                    l = unzip_files(name, folder, fLOG=self.fLOG)
+                    l = unzip_files(
+                        name, folder, fLOG=self.fLOG, fvalid=fvalid)
                     files.extend(l)
                 else:
                     # already done, we do not do it again
                     pass
+            elif ext == ".7z":
+                folder = os.path.splitext(name)[0] + "_7z"
+                folder = folder.replace(" ", "_").replace(",", "_")
+                if not os.path.exists(folder):
+                    self.fLOG(
+                        "ProjectsRepository.un7zip_files [un7zip {0}]".format(name))
+                    self.fLOG(
+                        "ProjectsRepository.un7zip_files [creating {0}]".format(folder))
+                    os.mkdir(folder)
+                    l = un7zip_files(
+                        name, folder, fLOG=self.fLOG, fvalid=fvalid)
+                    files.extend(l)
+                else:
+                    # already done, we do not do it again
+                    pass
+            elif ext == ".gz":
+                folder = os.path.splitext(name)[0] + "_gz"
+                folder = folder.replace(" ", "_").replace(",", "_")
+                if not os.path.exists(folder):
+                    self.fLOG(
+                        "ProjectsRepository.ungzip_files [ungzip {0}]".format(name))
+                    self.fLOG(
+                        "ProjectsRepository.ungzip_files [creating {0}]".format(folder))
+                    os.mkdir(folder)
+                    l = ungzip_files(
+                        name, folder, fLOG=self.fLOG, fvalid=fvalid)
+                    files.extend(l)
+                else:
+                    # already done, we do not do it again
+                    pass
+            elif ext == ".tar.gz":
+                raise Exception("unable to process such a file: " + name)
         return files
 
     def convert_files(self, group):
