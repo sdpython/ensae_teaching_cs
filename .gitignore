@@ -250,6 +250,7 @@ version.txt
 */notebooks/td1a/t_random*
 */notebooks/td1a/example_bokeh.*
 */notebooks/td1a/osm.*
+*/notebooks/td1a/shapefiles/*
 */notebooks/donnees/*.txt
 */notebooks/donnees/*.gz
 */notebooks/donnees/*.db3
@@ -354,3 +355,4 @@ _doc/notebooks/td3a/reservoir_sample_code.py
 _doc/notebooks/td3a/reservoir_sample_code.temp.py
 _doc/notebooks/log
 log
+_doc/notebooks/td1a/GEOFLA_2-1_DEPARTEMENT_SHP_LAMB93_FXX_2015-12-01.7z

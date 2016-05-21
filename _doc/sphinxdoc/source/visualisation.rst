@@ -18,11 +18,11 @@ assez facilement de modifier le graphique en fonction des actions de la souris. 
 il faut vous demander :
 
 * si le graphique que vous souhaitez faire est disponible,
-* si vous souhaiez un graphique statique ou en javascript (zoom, déplacement),
+* si vous souhaitez un graphique statique ou en javascript (zoom, déplacement),
 * si vous souhaitez ajouter des animations en fonction de ce que fait la souris (afficher une valeur, changer la couleur),
 * si vous souhaitez faire une animations (avec un curseur pour le temps par exemple),
 * si vous souhaitez interagir avec l'utilisateur via le graphique,
-* si vous souhaitez que le graphique fasse partir d'un site web et puisse être exploité en dehors du notebook).
+* si vous souhaitez que le graphique fasse parti d'un site web et puisse être exploité en dehors du notebook).
 
 
 Ces notebooks parcourent différents exemples de visualisations avec différentes librairies.
