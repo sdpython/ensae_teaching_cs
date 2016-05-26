@@ -1,58 +1,18 @@
-# inspired from scikit-learn
-# make it explicit that we favor the new container-based travis workers
-sudo: false
-
 language: python
-
 python:
     - "3.5"
-
-# Pre-install packages for the ubuntu distribution
-cache:
-  apt: true
-  # We use three different cache directory
-  # to work around a Travis bug with multi-platform cache
-  directories:
-  - $HOME/ensae_teaching_cs_build_ubuntu
-  - $HOME/ensae_teaching_cs_build_oldest
-  - $HOME/ensae_teaching_cs_build_latest
-  - $HOME/ensae_teaching_cs_build_numpy_dev
-  - $HOME/.cache/pip
-  - $HOME/download
 addons:
   apt:
     packages:
-    - libatlas3gf-base
-    - libatlas-dev
-    # only required by the DISTRIB="ubuntu" build:
-    - python-scipy
+    - libblas-dev
     - liblapack-dev
-    - gfortran
-    - libhdf5-serial-dev
-    - python-opencv
-    - python-pygame
-    
-env:
-  global:
-    # Directory where tests are run from
-    - OMP_NUM_THREADS=4
-    - OPENBLAS_NUM_THREADS=4
-    - DISTRIB="conda"
-    - PYTHON_VERSION="3.5"
-    - INSTALL_MKL="true"
-    - NUMPY_VERSION="1.11.0"
-    - SCIPY_VERSION="0.17.0"
-    - CYTHON_VERSION="0.23.4"
-    - CACHED_BUILD_DIR="$HOME/ensae_teaching_cs_build_latest"
-
+    - gfortran 
 install: 
-  - source travis_install.sh
-  - pip install -r requirements.txt
-  - pip install -U git+https://github.com/sdpython/qgrid --no-deps
-  - pip install -r requirements_scikit.txt
-  - pip install -r requirements_scikit2.txt
-  - pip install -r requirements_ext.txt
-  - pip install https://github.com/sdpython/pyPdf/archive/trunk.zip
-
-script: 
-  - python setup.py unittests
+    - pip install -r requirements.txt
+    - pip install -U git+https://github.com/quantopian/qgrid --no-deps
+    - pip install scipy
+    - pip install -r requirements_scikit.txt
+    - pip install -r requirements_scikit2.txt
+    - pip install -r requirements_ext.txt
+script:
+    - python setup.py unittests

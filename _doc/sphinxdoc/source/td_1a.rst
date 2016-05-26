@@ -34,7 +34,7 @@ Les six premières séances font découvrir le langage Python.
 
 Sessions alternatives :
 
-- :ref:`TD 3-4 : Test unitaire, suivi de source, profiling <td1a-session-production>` (2016) (à venir, test unitaire, profiling, suivi de source)
+- :ref:`TD 3-4 : Test unitaire, suivi de source, profiling <l-production>` (2016)
 - :ref:`TD 4-5 : distance de Jaccard <td1acenoncesession45jaccardrst>` (:ref:`correction <td1acorrectionsession45jaccardrst>`) (2016)
 
 Au terme de ces six séances, si la programmation est nouvelle pour vous ou

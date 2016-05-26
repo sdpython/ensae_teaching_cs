@@ -19,6 +19,8 @@ Exemple
 * :ref:`f-simpleflasksite`
 * :ref:`f-flaskhelper`
 
+.. _l-flask-unittest:
+
 
 Unit Test
 ---------
