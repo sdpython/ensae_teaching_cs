@@ -6,7 +6,8 @@ addons:
     packages:
     - libblas-dev
     - liblapack-dev
-    - gfortran 
+    - gfortran
+    - libhdf5
 install: 
     - pip install -r requirements.txt
     - pip install -U git+https://github.com/quantopian/qgrid --no-deps
