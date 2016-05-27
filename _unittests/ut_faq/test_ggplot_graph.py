@@ -1,5 +1,5 @@
 """
-@brief      test log(time=4s)
+@brief      test log(time=3s)
 """
 
 import sys
@@ -37,6 +37,7 @@ except ImportError:
     import pyquickhelper as skip_
 
 from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import fix_tkinter_issues_virtualenv
 from src.ensae_teaching_cs.faq import graph_ggplot_with_label
 
 
@@ -182,6 +183,7 @@ class TestGGplotGraph (unittest.TestCase):
             '2014-w50',
             '2014-w51',
             '2014-w52']
+        fix_tkinter_issues_virtualenv()
         import matplotlib.pyplot as plt
         fig, ax = plt.subplots(figsize=(8, 3))
         graph_ggplot_with_label(x, y, xl, ax=ax)
