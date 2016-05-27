@@ -59,6 +59,8 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
     def test_viz_scatter_scatter_xyid(self):
         fLOG(__file__, self._testMethodName,
              OutputPrint=__name__ == "__main__")
+        if sys.version_info[:2] <= (3, 4):
+            return
         fix_tkinter_issues_virtualenv()
         if __name__ == "__main__":
             rcParams["backend"] = "TkAgg"
@@ -93,6 +95,8 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
     def test_viz_scatter_scatter_xyc(self):
         fLOG(__file__, self._testMethodName,
              OutputPrint=__name__ == "__main__")
+        if sys.version_info[:2] <= (3, 4):
+            return
         fix_tkinter_issues_virtualenv()
         if __name__ == "__main__":
             rcParams["backend"] = "TkAgg"
@@ -130,6 +134,8 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
     def test_viz_scatter_scatter_xyz(self):
         fLOG(__file__, self._testMethodName,
              OutputPrint=__name__ == "__main__")
+        if sys.version_info[:2] <= (3, 4):
+            return
         fix_tkinter_issues_virtualenv()
         if __name__ == "__main__":
             rcParams["backend"] = "TkAgg"
