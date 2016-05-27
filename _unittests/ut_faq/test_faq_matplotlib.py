@@ -51,7 +51,8 @@ class TestFaqMatplotlib(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-
+        if sys.version_info[:2] <= (3, 4):
+            return
         filter = {"NewYork": "NY", "Chicago": "CH",
                   "SanFrancisco": "SF", "Seattle": "Sea"}
         temp = get_temp_folder(__file__, "temp_american_cities")
