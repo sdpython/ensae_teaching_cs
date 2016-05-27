@@ -36,6 +36,7 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import fix_tkinter_issues_virtualenv
 from src.ensae_teaching_cs.helpers.matplotlib_helper_xyz import scatter_xy_id, scatter_xyc, scatter_xyz
 import matplotlib
 import matplotlib.pyplot as plt
@@ -58,7 +59,9 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
     def test_viz_scatter_scatter_xyid(self):
         fLOG(__file__, self._testMethodName,
              OutputPrint=__name__ == "__main__")
-        rcParams["backend"] = "TkAgg"
+        fix_tkinter_issues_virtualenv()
+        if __name__ == "__main__":
+            rcParams["backend"] = "TkAgg"
         fold = os.path.abspath(os.path.split(__file__)[0])
         fold = os.path.join(fold, "temp_graph_xyz")
         im = os.path.join(fold, self._testMethodName + ".png")
@@ -78,7 +81,8 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
             nuage, title=self._testMethodName, legend={0: "c0", 1: "c1"})
         fig.savefig(im)
         assert os.path.exists(im)
-        rcParams["backend"] = TestMatplotlibHelperVizScatterPlots.backend
+        if __name__ == "__main__":
+            rcParams["backend"] = TestMatplotlibHelperVizScatterPlots.backend
         plt.close('all')
         fLOG(plt.style.available)
         # ['seaborn-bright', 'ggplot', 'seaborn-paper', 'seaborn-dark-palette', 'seaborn-dark',
@@ -89,7 +93,9 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
     def test_viz_scatter_scatter_xyc(self):
         fLOG(__file__, self._testMethodName,
              OutputPrint=__name__ == "__main__")
-        rcParams["backend"] = "TkAgg"
+        fix_tkinter_issues_virtualenv()
+        if __name__ == "__main__":
+            rcParams["backend"] = "TkAgg"
         fold = os.path.abspath(os.path.split(__file__)[0])
         fold = os.path.join(fold, "temp_graph_xyz")
         im = os.path.join(fold, self._testMethodName + ".png")
@@ -117,13 +123,16 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
             nuage, smooth=1, title=self._testMethodName + " - smooth 10")
         fig.savefig(im.replace(".png", ".s10.png"))
         assert os.path.exists(im)
-        rcParams["backend"] = TestMatplotlibHelperVizScatterPlots.backend
+        if __name__ == "__main__":
+            rcParams["backend"] = TestMatplotlibHelperVizScatterPlots.backend
         plt.close('all')
 
     def test_viz_scatter_scatter_xyz(self):
         fLOG(__file__, self._testMethodName,
              OutputPrint=__name__ == "__main__")
-        rcParams["backend"] = "TkAgg"
+        fix_tkinter_issues_virtualenv()
+        if __name__ == "__main__":
+            rcParams["backend"] = "TkAgg"
         fold = os.path.abspath(os.path.split(__file__)[0])
         fold = os.path.join(fold, "temp_graph_xyz")
         im = os.path.join(fold, self._testMethodName + ".png")
@@ -151,7 +160,8 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
             nuage, smooth=2, title=self._testMethodName + " - smooth 10")
         fig.savefig(im.replace(".png", ".s10.png"))
         assert os.path.exists(im)
-        rcParams["backend"] = TestMatplotlibHelperVizScatterPlots.backend
+        if __name__ == "__main__":
+            rcParams["backend"] = TestMatplotlibHelperVizScatterPlots.backend
         plt.close('all')
 
 

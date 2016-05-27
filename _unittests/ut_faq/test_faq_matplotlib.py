@@ -73,6 +73,8 @@ class TestFaqMatplotlib(unittest.TestCase):
         assert os.path.exists(name2)
         if __name__ == "__main__":
             fig.show()
+        plt.close('all')
+        fLOG("end")
 
 
 if __name__ == "__main__":

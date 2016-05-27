@@ -182,10 +182,14 @@ class TestGGplotGraph (unittest.TestCase):
             '2014-w50',
             '2014-w51',
             '2014-w52']
-        graph_ggplot_with_label(x, y, xl)
+        import matplotlib.pyplot as plt
+        fig, ax = plt.subplots(figsize=(8, 3))
+        graph_ggplot_with_label(x, y, xl, ax=ax)
         if __name__ == "__main__":
             import matplotlib.pyplot as plt
             plt.show()
+        plt.close('all')
+        fLOG("end")
 
 if __name__ == "__main__":
     unittest.main()

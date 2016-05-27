@@ -106,3 +106,13 @@ intervient avant la mise à jour du code d'un logiciel.
 C'est l'occasion pour un dévelopeur de partager ses modifications avec le reste de son équipe
 qui commentent les parties du code qui leur déplaisent ou approuvent si la mise à jour leur convient.
 
+
+Design
+------
+
+* petites fonctions
+* séparation GUI / web / algorithme
+* long process : prévoir une interruption, logging, processus asynchrone
+* GUI réactive : asynchrone
+
+à suivre

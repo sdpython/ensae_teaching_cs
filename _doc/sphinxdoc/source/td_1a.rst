@@ -17,6 +17,18 @@ Cours animé par :
 
 * Xavier Dupré
 
+Intervenants 2016 :
+
+* Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_
+* Emmanuel Guérin, `TalendSoft <http://www.talentsoft.com/>`_
+* Arthur Renaud, `Etaonis <http://www.etaonis.fr/>`_
+* Mehdi Seddar, `Artfact <http://www.artefact.is/>`_
+* Yves Gerey, `A2iA <http://www.a2ia.com/en>`_
+* Marc-Antoine Weisser, `Supélec <http://www.supelec.fr/>`_
+* Charles de Ravel d'Esclapon, `Etaonis <http://www.etaonis.fr/>`_
+* Félix Revert, `CapGemini Consulting <https://www.capgemini-consulting.com/>`_
+
+
 
 TD - les bases
 --------------
@@ -34,7 +46,7 @@ Les six premières séances font découvrir le langage Python.
 
 Sessions alternatives :
 
-- :ref:`TD 3-4 : Test unitaire, suivi de source, profiling <l-production>` (2016)
+- :ref:`TD 3-4 : Tests unitaires, suivi de source, profiling, design <l-production>` (2016)
 - :ref:`TD 4-5 : distance de Jaccard <td1acenoncesession45jaccardrst>` (:ref:`correction <td1acorrectionsession45jaccardrst>`) (2016)
 
 Au terme de ces six séances, si la programmation est nouvelle pour vous ou
@@ -144,6 +156,7 @@ Petites Fiches
 
     1a/graphes
     1a/siteflask
+    1a/unittest_coverage_git_profling
     
 
 Trucs et astuces avec les notebooks
