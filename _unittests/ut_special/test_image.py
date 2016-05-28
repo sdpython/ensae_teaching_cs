@@ -58,7 +58,7 @@ class TestImageSynthese(unittest.TestCase):
         u = Vecteur(0, 1, 2)
         w = u + v
         fLOG(u, v, w)
-        print(w * 6)
+        fLOG(w * 6)
         p = Pixel(5, 5)
         fLOG(p)
         c = Couleur(1, 1, 1)
