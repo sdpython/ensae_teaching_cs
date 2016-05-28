@@ -176,6 +176,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None):
                 # LONG
                 ("pymyinstall [LONG] <-- pyquickhelper",
                  "H(0,30) 02 01 * *"),
+                "pymyinstall [LONG] [py35] <-- pyquickhelper",
                 ("actuariat_python [LONG] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
                  None, dict(timeout=4800)),
                 ("actuariat_python [LONG] [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
