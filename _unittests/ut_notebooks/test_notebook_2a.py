@@ -38,7 +38,7 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
 
 
@@ -59,6 +59,9 @@ class TestNotebookRunner2a_ (unittest.TestCase):
                     return False
                 else:
                     return True
+            if is_travis_or_appveyor() and "notebook_convert.ipynb" in n:
+                # this one requires pandoc
+                return False
             return False
 
         res = execute_notebooks(temp, keepnote,

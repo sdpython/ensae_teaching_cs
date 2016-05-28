@@ -32,9 +32,13 @@ install:
   - "%PYTHON%\\Scripts\\pip install pyensae"
   - "%PYTHON%\\Scripts\\pip install pyrsslocal"
   - "%PYTHON%\\Scripts\\pip install pygame"
+  - "%PYTHON%\\Scripts\\pip install pydub"
+  - "%PYTHON%\\Scripts\\pip install goslate"  
   - "%PYTHON%\\Scripts\\pymy_install3 opencv_python"
   - "%PYTHON%\\Scripts\\pymy_install3 yaml"
+  - "%PYTHON%\\Scripts\\pymy_install3 psycopg2"
   - "%PYTHON%\\Scripts\\pip install https://github.com/sdpython/pyPdf/archive/trunk.zip"
+  - "%PYTHON%\\Scripts\\pymy_install3 tool graphviz"
 
 build: off
 

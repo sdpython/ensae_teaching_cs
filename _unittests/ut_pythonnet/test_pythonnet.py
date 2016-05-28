@@ -74,6 +74,7 @@ class TestPythonnet(unittest.TestCase):
                     # Audia device)
                     if os.environ["USERNAME"] == "ensaestudent" or \
                        os.environ["USERNAME"] == "vsxavierdupre" or \
+                       os.environ["USERNAME"] == "appveyor" or \
                        "paris" in os.environ["COMPUTERNAME"].lower() or \
                        os.environ["USERNAME"].endswith("$"):  # anonymous Jenkins configuration
                         # I would prefer to catch a proper exception
