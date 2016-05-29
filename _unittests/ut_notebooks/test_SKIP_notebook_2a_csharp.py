@@ -38,7 +38,7 @@ except ImportError:
     import pyquickhelper as skip_
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
 
 
@@ -50,10 +50,9 @@ class TestNotebookRunner2a_csharp (unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        if "travis" in sys.executable:
-            # skip C# on linux
-            warnings.warn(
-                "travis, unable to test TestNotebookRunner2a_csharp.test_notebook_runner_2a")
+        if is_travis_or_appveyor():
+            # too long for appveyor
+            # not available on linux
             return
 
         if not sys.platform.startswith("win"):

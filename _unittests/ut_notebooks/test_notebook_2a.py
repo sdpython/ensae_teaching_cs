@@ -49,6 +49,9 @@ class TestNotebookRunner2a_ (unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
+        if is_travis_or_appveyor() == "appveyor":
+            # too long for appveyor
+            return
         temp = get_temp_folder(__file__, "temp_notebook2a_")
         keepnote = ls_notebooks("2a")
         assert len(keepnote) > 0
