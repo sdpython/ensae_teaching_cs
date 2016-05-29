@@ -17,7 +17,7 @@ Cours animé par :
 
 * Xavier Dupré
 
-Intervenants 2016 :
+Intervenants 2015-2016 :
 
 * Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_
 * Emmanuel Guérin, `TalendSoft <http://www.talentsoft.com/>`_

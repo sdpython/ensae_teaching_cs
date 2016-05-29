@@ -11,11 +11,15 @@ pour travailler à plusieurs et produire un logiciel avec peu d'erreurs.
 
 (en construction)
 
-.. content::
+.. toc::
+
+
+Tests
+-----
 
 
 Tests unitaires
----------------
+^^^^^^^^^^^^^^^
 
 `tests unitaires <https://fr.wikipedia.org/wiki/Test_unitaire>`_
 
@@ -52,20 +56,23 @@ Pour vérifier certains aspects du site web tels qu'ils seront par un internaute
 
 
 Mock
-----
+^^^^
 
 * `unittest.mock <https://docs.python.org/3/library/unittest.mock.html>`_
 
 
 
 Couverture des tests unitaires
-------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * `coverage <http://coverage.readthedocs.io/>`_
 
+Vitesse
+-------
+
 
 Profiling
----------
+^^^^^^^^^
 
 * `profile <https://docs.python.org/3/library/profile.html>`_, 
   `cProfile <https://docs.python.org/3/library/profile.html#module-cProfile>`_
@@ -78,25 +85,14 @@ Profiling
 * `SnakeViz <https://jiffyclub.github.io/snakeviz/>`_
 
 
+Outils
+++++++
+
 Logiciel de suivi de source
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * `git <https://git-scm.com/>`_
 * `GitHub <https://github.com/>`_
-
-Annotations
------------
-
-* `Tutorial <http://code.tutsplus.com/tutorials/python-3-function-annotations--cms-25689>`_
-* `pep-484 <https://www.python.org/dev/peps/pep-0484/>`_, `pep-3107 <https://www.python.org/dev/peps/pep-3107/>`_
-* `mypy <http://www.mypy-lang.org/>`_
-
-Style
------
-
-* `pep8 <https://pypi.python.org/pypi/pep8>`_
-* `pyflakes <https://pypi.python.org/pypi/pyflakes>`_, `flake8 <https://pypi.python.org/pypi/flake8/>`_
-* `pylint <https://www.pylint.org/>`_
 
 Revue de code
 -------------
@@ -107,8 +103,27 @@ C'est l'occasion pour un dévelopeur de partager ses modifications avec le reste
 qui commentent les parties du code qui leur déplaisent ou approuvent si la mise à jour leur convient.
 
 
+Style
++++++
+
+
+Annotations
+^^^^^^^^^^^
+
+* `Tutorial <http://code.tutsplus.com/tutorials/python-3-function-annotations--cms-25689>`_
+* `pep-484 <https://www.python.org/dev/peps/pep-0484/>`_, `pep-3107 <https://www.python.org/dev/peps/pep-3107/>`_
+* `mypy <http://www.mypy-lang.org/>`_
+
+PEP8
+^^^^
+
+* `pep8 <https://pypi.python.org/pypi/pep8>`_
+* `pyflakes <https://pypi.python.org/pypi/pyflakes>`_, `flake8 <https://pypi.python.org/pypi/flake8/>`_
+* `pylint <https://www.pylint.org/>`_
+
+
 Design
-------
+^^^^^^
 
 * petites fonctions
 * séparation GUI / web / algorithme

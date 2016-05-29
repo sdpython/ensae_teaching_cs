@@ -6,7 +6,7 @@ import sys
 import os
 import unittest
 import pandas
-import matplotlib.pyplot as plt
+import warnings
 
 
 try:
@@ -39,7 +39,7 @@ except ImportError:
     import pyquickhelper as skip_
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, fix_tkinter_issues_virtualenv
 from src.ensae_teaching_cs.faq.faq_matplotlib import graph_cities
 from src.ensae_teaching_cs.special import tsp_kruskal_algorithm, distance_haversine
 
@@ -51,6 +51,12 @@ class TestFaqMatplotlibVideo(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
+
+        if sys.version_info[:2] <= (3, 4):
+            warnings.warn("Issue with Python 3.4, bug probably related to wrong pointers")
+            return
+        fix_tkinter_issues_virtualenv()
+        import matplotlib.pyplot as plt
 
         def haversine(p1, p2):
             return distance_haversine(p1[0], p1[1], p2[0], p2[1])
@@ -93,6 +99,8 @@ class TestFaqMatplotlibVideo(unittest.TestCase):
         assert os.path.exists(img)
         if __name__ == "__main__":
             fig.show()
+        plt.close('all')
+        fLOG("end")
 
 
 if __name__ == "__main__":

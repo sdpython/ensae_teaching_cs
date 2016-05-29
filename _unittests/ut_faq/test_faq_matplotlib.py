@@ -6,7 +6,7 @@ import sys
 import os
 import unittest
 import pandas
-import matplotlib.pyplot as plt
+import warnings
 
 
 try:
@@ -39,9 +39,8 @@ except ImportError:
     import pyquickhelper as skip_
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, fix_tkinter_issues_virtualenv
 from src.ensae_teaching_cs.faq.faq_matplotlib import graph_cities
-import mpld3
 
 
 class TestFaqMatplotlib(unittest.TestCase):
@@ -52,7 +51,11 @@ class TestFaqMatplotlib(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         if sys.version_info[:2] <= (3, 4):
+            warnings.warn("Issue with Python 3.4, bug probably related to wrong pointers")
             return
+        fix_tkinter_issues_virtualenv()
+        import matplotlib.pyplot as plt
+        import mpld3
         filter = {"NewYork": "NY", "Chicago": "CH",
                   "SanFrancisco": "SF", "Seattle": "Sea"}
         temp = get_temp_folder(__file__, "temp_american_cities")

@@ -222,15 +222,15 @@ def publish_teachings_to_web(
         rootw2="/lesenfantscodaient.fr",
         folder_status=".",
         layout=[("epub", "epub"), ("html", "helpsphinx")],
-        modules=["anaconda2_pyquickhelper_27",
-                 "pyquickhelper",
+        modules=["pyquickhelper",
                  "pyensae",
-                 "anaconda2_pymyinstall_27",
+                 # "anaconda2_pyquickhelper_27",
+                 # "anaconda2_pymyinstall_27",
                  "pymyinstall",
                  "pysqllike",
                  "pyrsslocal",
                  "pymmails",
-                 "anaconda2_python3_module_template_27",
+                 # "anaconda2_python3_module_template_27",
                  "python3_module_template",
                  "actuariat_python",
                  "code_beatrix",
@@ -336,7 +336,7 @@ def publish_teachings_to_web(
                         dest = os.path.join(dest, "..")
                     shutil.copy(os.path.join(root, f), dest)
         else:
-            prefix = "_" if "_" not in module else ""
+            prefix = "py35_"  # "_" if "_" not in module else ""
             for lay in layout:
                 root = os.path.abspath(location % (prefix, module, lay[0]))
                 if not os.path.exists(root):
@@ -358,7 +358,7 @@ def publish_teachings_to_web(
                 projects.append(project)
 
         if module == "ensae_teaching_cs":
-            prefix = "_" if "_" not in module else ""
+            prefix = "py35_"  # "_" if "_" not in module else ""
             lay = [_ for _ in layout if _[0] == "html"][0]
             root = os.path.abspath(location % (prefix, module, lay[0]))
             if not os.path.exists(root):
