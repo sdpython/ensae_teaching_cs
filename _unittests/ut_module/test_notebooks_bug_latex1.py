@@ -38,7 +38,7 @@ except ImportError:
     import pyquickhelper as skip_
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from pyquickhelper.helpgen import process_notebooks
 
 
@@ -62,9 +62,9 @@ class TestNoteBooksBugLatex_ecs(unittest.TestCase):
 
         temp = get_temp_folder(__file__, "temp_nb_bug_latex1")
 
-        if "travis" in sys.executable:
+        if is_travis_or_appveyor():
             warnings.warn(
-                "travis, unable to test TestNoteBooksBugLatex_ecs.test_notebook_latex1")
+                "travis or appveyor, unable to test TestNoteBooksBugLatex_ecs.test_notebook_latex1")
             return
 
         res = process_notebooks(nbs, temp, temp, formats=formats)

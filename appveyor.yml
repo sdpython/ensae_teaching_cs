@@ -34,7 +34,6 @@ install:
   - "%PYTHON%\\Scripts\\pip install pygame"
   - "%PYTHON%\\Scripts\\pip install pydub"
   - "%PYTHON%\\Scripts\\pip install goslate"  
-  - "%PYTHON%\\Scripts\\pip install selenium"  
   - "%PYTHON%\\Scripts\\pymy_install3 opencv_python"
   - "%PYTHON%\\Scripts\\pymy_install3 yaml"
   - "%PYTHON%\\Scripts\\pymy_install3 psycopg2"
