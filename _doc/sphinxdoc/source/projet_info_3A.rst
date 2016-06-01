@@ -54,33 +54,23 @@ Vous êtes libres de traiter l'algorithme de votre choix. Nous vous en proposons
 
 Nous vous recommandons d'adopter la démarche suivante:
 
-#. implémentation et débugging sur un petit jeu de données synthétiques où :
-    * les choses sont sensées bien se passer
-    * la taille du jeu de données rend le debugging plus rapide
-#. Un vrai jeu de données que vous aurez sélectionné sur un des sites suivants :
-    * `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_
-    * `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_
+#. implémentation et débugging sur un petit jeu de données synthétiques 
+   où les choses sont sensées bien se passer 
+   et la taille du jeu de données rend le debugging plus rapide,
+#. application à un vrai jeu de données que vous aurez sélectionné sur un des sites suivants
+   `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_, 
+   `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_
+   ou autre (voir :ref:`l-datasources`).
 
 
-
-Autres sources de jeux de données
-+++++++++++++++++++++++++++++++++
-
-* `Kaggle <https://www.kaggle.com/competitions/search?SearchVisibility=AllCompetitions&ShowActive=true&ShowCompleted=true&ShowProspect=true&ShowOpenToAll=true&ShowPrivate=true&ShowLimited=true&DeadlineColumnSort=Descending>`_ `(2) <http://inclass.kaggle.com/>`_,
-  Toutefois, avant d'utiliser les données Kaggle, je vous encourage à lire les articles `Date use for teaching after competition concludes <http://www.kaggle.com/c/decoding-the-human-brain/forums/t/8331/date-use-for-teaching-after-competition-concludes>`_,
-  et `Using a Kaggle contest as a term project <http://www.kaggle.com/forums/t/2745/using-a-kaggle-contest-as-a-term-project>`_.
-  Les règles peuvent varier d'un projet à l'autre, prenez soin de les lire avant de choisir un projet.
-* `Global Disease Monitoring and Forecasting with Wikipedia  <http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1003892>`_
-* :ref:`Autres suggestions <l-datasources>`
-* `urls, spam, ... <http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html>`_, jeux de données utilisés 
-  comme benchmark pour la libraire `libsvm <http://www.csie.ntu.edu.tw/~cjlin/libsvm/>`_
-* `Pascal Large Scale Learning Challenge <http://largescale.ml.tu-berlin.de/instructions/>`_
-* Votre propre jeu de données (à valider avec l'encadrant).
-
-Git
-+++
-
-* :ref:`gitnotebookrst`
+Le site 
+`Kaggle <https://www.kaggle.com/competitions/search?SearchVisibility=AllCompetitions&ShowActive=true&ShowCompleted=true&ShowProspect=true&ShowOpenToAll=true&ShowPrivate=true&ShowLimited=true&DeadlineColumnSort=Descending>`_ `(2) <http://inclass.kaggle.com/>`_
+référence de nombreuses compétitions intéressantes.
+Toutefois, avant d'utiliser les données Kaggle, je vous encourage à lire les articles 
+`Date use for teaching after competition concludes <http://www.kaggle.com/c/decoding-the-human-brain/forums/t/8331/date-use-for-teaching-after-competition-concludes>`_
+et `Using a Kaggle contest as a term project <http://www.kaggle.com/forums/t/2745/using-a-kaggle-contest-as-a-term-project>`_.
+Les règles peuvent varier d'un projet à l'autre, prenez soin de les lire avant de choisir un projet
+car on ne peut pas tout faire avec les données disponibles sur ce site.
 
 
 .. index:: PageRank, k-means, factorisation de matrice

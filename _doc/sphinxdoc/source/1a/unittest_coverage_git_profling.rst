@@ -67,6 +67,11 @@ Couverture des tests unitaires
 
 * `coverage <http://coverage.readthedocs.io/>`_
 
+Logging
+^^^^^^^
+
+* ... logging
+
 Vitesse
 -------
 

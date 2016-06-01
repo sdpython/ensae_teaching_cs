@@ -35,7 +35,21 @@ Ce genre de préoccupation paraît futile à tous ceux qui commencent à program
 beaucoup pour ceux qui ont passés plusieurs à chercher une erreur dans une partie
 insufissamment testée.
 
+.. _question_2015_projet_2_2A:
 
+:math:`R^2` est proche de 1 et le modèle est mauvais ?
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+Le coefficient :math:`R^2` qui juge de la pertinence d'une régression
+est souvent proche de 1 dans le cas de la prédiction de le valeur d'une action pour demain
+à partir de ses valeurs passées. La valeur de l'action est considérée comme
+une série temporelle :math:`(Y_t)`.
+En fait, le :math:`R^2` est aussi grand si on 
+utilise :math:`Y_{t-1}` comme estimateur de :math:`Y_t`.
+Cela signifie que la série temporelle n'est pas stationnaire et que la tendance
+est d'un ordre de grandeur plus grand que les oscillations locales.
+Dans le cas de l'action, il passer à la série dérivée des rendements.
+Dans le cas général, il faudrait soit enlever la tendance soit comparer le 
+:math:`R^2` obtenu à celui obtenu en utilisant :math:`Y_{t-1}` comme prédiction.
 
 

@@ -22,6 +22,11 @@ Etape 1 : quel est le type de problème ?
     * réduction du nombre de dimension
     * système de recommandations
 
+Il n'est pas rare qu'un projet requiert un assemblage de modèles de types différents.
+La première étape consiste à imaginer un chemin entre les données initiales
+et la valeur à prédire.
+
+
 Etape 2 : quelles sont les données ?
 ++++++++++++++++++++++++++++++++++++
 
@@ -35,7 +40,6 @@ Etape 2 : quelles sont les données ?
 
 La plupart des algorithmes d'apprentissages utilisent des données numériques,
 il faut convertir les variables catégorielles au format numérique.
-
 Si une variable catégorielle est à choix unique et qu'elle contient :math:`C` catégories, 
 celle-ci sera multipliée en :math:`n` colonnes, une pour chaque modalité. Comme la somme de
 ces colonnes est le vecteur colonne :math:`J=(1,...,1)`, la matrice :math:`X` modifiée sera corrélée.
@@ -76,7 +80,11 @@ fonction des types de problèmes :
 * système de recommandation
     * corrélation de rang
 
-Si la performance globale convient, on s'arrête souvent ici. Dans le cas contraire, il faut retourner à l'étape 4 :
+Un modèle peut être considéré comme bon par un indicateur (:math:`R^2` par exemple)
+et pourtant ne pas être assez bon pour l'usage qu'on doit en faire
+(prédictions de séries temporelles).
+Si la performance globale convient, on s'arrête souvent ici.
+Dans le cas contraire, il faut retourner à l'étape 4 :
 
 * La base d'apprentissage contient peut-être des points aberrants.
 * La distribution d'un variable n'est pas homogène dans les bases d'apprentissage et des tests.
@@ -89,8 +97,8 @@ Si la performance globale convient, on s'arrête souvent ici. Dans le cas contra
 
 Voir également `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_.
 
-Etape 6 : utliser les données
-+++++++++++++++++++++++++++++
+Etape 6 : utiliser les données
+++++++++++++++++++++++++++++++
 
 On atteint vite un plafond lorsqu'on essaye les modèles un par un. 
 Il faut maintenant extraire tout ce qu'on sait des données ou tout ce qu'on imagine savoir
@@ -152,7 +160,7 @@ Dialogue improvisé... Il faut prédire le parti d'un sénaeur en fonction de se
 * Cela veut dire sans doute que les démocrates et les républicains votent toujours un peu pareil.
 * Si le taux de prédiction décroît fortement ?
 * Leurs votes ne dépendent pas nécessairement de leur parti d'appartenance.
-* Et maintenant, n'as tu pas envie de savoir ?
+* Et maintenant, n'as-tu pas envie de savoir ?
 
 
 

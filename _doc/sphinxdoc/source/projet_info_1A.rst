@@ -24,6 +24,8 @@ Intervenants 2016 :
 * Arthur Renaud, `Etaonis <http://www.etaonis.fr/>`_
 * Pierre Cordier, `Effiscience <http://effiscience.solutions/>`_
 
+.. toc::
+
 
 Sujets proposés année 2015-2016
 -------------------------------
@@ -35,6 +37,7 @@ ou de s'inspirer des énoncés ci-dessous à la condition de le faire valider pa
 Afin d'avoir un premier suivi productif, 
 il est conseillé de parcourir les références bibliographiques suggérées. 
 C'est souvent l'occasion de découvrir un sujet que vous ne verrez pas ou peu à l'ENSAE.
+Par genre :
 
 
 .. toctree::
@@ -51,9 +54,63 @@ C'est souvent l'occasion de découvrir un sujet que vous ne verrez pas ou peu à
     projets/p_security
     projets/technique
     projets/simulation
+    
+Liste exhaustive :
 
-L'encadrant se réserve le droit de proposer des modifications si le même sujet est 
-choisi par un trop grand nombre d'élèves.
+#. ML algo : :ref:`l-ml-renf`
+#. ML algo : :ref:`l-ml-chow`
+#. ML algo : :ref:`l-ml-visage`
+#. ML algo : :ref:`l-ml-deepext`
+#. ML algo : :ref:`l-ml-align`
+#. ML algo : :ref:`l-fast-k-NN`
+#. ML algo : :ref:`l-ml-gradient-geom`
+#. Jeu 1 : :ref:`l-jeu-deuxmille`
+#. Jeu 1 : :ref:`l-jeuvoronoi`
+#. Jeu 1 : :ref:`l-puzzle-GCHQ`
+#. ML : :ref:`l-data-velib`
+#. ML : :ref:`l-data-nuage`
+#. ML : :ref:`l-data-twitter`
+#. ML : :ref:`l-data-whoosh`
+#. Finance : :ref:`l-fi-trend`
+#. Finance : :ref:`l-fi-port`
+#. Finance : :ref:`l-fi-pair`
+#. Finance : :ref:`l-fi-ml`
+#. Simulation : :ref:`l-sim-segre`
+#. Simulation : :ref:`l-sim-panique`
+#. Simulation : :ref:`l-sim-social`
+#. Simulation : :ref:`l-sim-autoroute`
+#. Technique : :ref:`l-tech-smart`
+#. Technique : :ref:`l-tech-domo`
+#. Algo génétique : :ref:`l-gen-optim`
+#. Algo génétique : :ref:`l-gen-bag`
+#. Algo génétique : :ref:`l-gen-tsp`
+#. Algo génétique : :ref:`l-gen-ant`
+#. Algo génétique : :ref:`l-gen-motif`
+#. Jeu 2 : :ref:`l-jeu-p4`
+#. Jeu 2 : :ref:`l-jeu-oth`
+#. Jeu 2 : :ref:`l-jeu-awa`
+#. Jeu 2 : :ref:`l-jeu-gomo`
+#. Jeu 2 : :ref:`l-jeu-go`
+#. Jeu 2 : :ref:`l-jeu-tic-tac-toe-99`
+#. Algo : :ref:`l-math-wifi`
+#. Algo : :ref:`l-math-pento`
+#. Algo : :ref:`l-math-motif`
+#. Algo : :ref:`l-math-exp`
+#. Algo : :ref:`l-math-tsp`
+#. Algo : :ref:`l-math-tsp-plus`
+#. Algo : :ref:`l-math-text`
+#. Algo : :ref:`l-math_simulloi`
+#. Algo : :ref:`l-math_appariement_graph`
+#. Algo : :ref:`l-palindrome-projet-structure`
+#. Algo : :ref:`l-grammaire_context_free`
+#. Algo : :ref:`l-distance_tree_robinson_foulds`
+#. Algo : :ref:`l-maths-inequation`
+#. Algo : :ref:`l-maths-meilleur-clavier`
+#. Jeu hasard : :ref:`l-carte-poker`
+#. Jeu hasard : :ref:`l-carte-belotte`
+
+
+
 
 
 Travail attendu
@@ -66,7 +123,7 @@ illuster les résultats numériques obtenus et la
 façon dont ils ont été obtenus. On suppose que le rapport s'adresse à un public expert.
 La soutenance doit reprendre les points principaux, 
 décrire brièvement la façon dont le travail a été réparti
-au sein de l'équipe. On suppose que la soutenance s'adresse à un public non-expert.
+au sein de l'équipe.
 
 Chaque projet, quelque soit le sujet, devra comporter une **composante numérique** 
 (statistique, économique, financière, ...), que ce soit une stratégie de trading,
@@ -78,14 +135,11 @@ numériques obtenus et faire au moins une ou deux allusions à la façon dont ce
 * instructions pour exécuter le programme
 * description d'un point de design de code
 * description d'un algorithme du programme et son coût
-* description d'une difficulté qui vous a fait perdre beaucoup de temps
+* description d'une difficulté qui vous a fait perdre beaucoup de temps 
+  (hors celles liées à votre apprentissage de la programmation)
 * description d'une contribution originale
-* ce que vous avez appris de vos erreurs
 * description des résultats obtenus
 * prolongements et applications envisageables
-
-Chaque sujet précisera d'autres éléments (code, résultats) attendus
-lors du rendu final. Vous trouverez également quelques erreurs à éviter.
 
 
 Que faut-il en attendre ?
@@ -95,20 +149,15 @@ Vous serez plus **autonome**. Vous n'aurez plus l'assurance qu'une solution exis
 qui vous donnera la réponse tout de suite si vous ne trouvez pas. Vous devrez parfois vous interroger sur 
 les résultats numériques que vous avez obtenus et qui sont si loin de votre intuition qu'ils cachent 
 sans doute une erreur d'implémentation.
-
-Vous devrez vous même **définir le problème et y répondre**. Cela veut dire parfois aussi faire un 
+Vous devrez vous-même **définir le problème et y répondre**. Cela veut dire parfois aussi faire un 
 compromis entre ce que vous rêvez de faire et le temps que vous avez pour le faire.
-
 Si vous travailler à deux, vous découvrirez qu'il n'est pas toujours évident de se **synchroniser**. 
 Heureusement, les outils ont beaucoup progressé ces dix dernières années.
-
 Un projet informatique s'effectue le plus souvent sur le **long terme**.
 Vous verrez que si on fait une pause de quelques semaines dans un projet, 
 on oublie beaucoup de petits détails qu'on redécouvre aux détours d'une exception. 
 Mais là encore, il existe des solutions.
-
 Le plus important sans doute, programmer veut aussi dire être **créatif**.
-
 Pour finir, voici ce qu'en ont retiré les élèves de première année en 2015 :
 :ref:`l-extrait-projet-1A-2015`.
 
@@ -130,15 +179,17 @@ Références
 **Resources**
 
 * `données <http://www.xavierdupre.fr/site2013/enseignements/projets/donnees/>`_
+* :ref:`l-datasources`.
 * `bibliographie <http://www.xavierdupre.fr/site2013/enseignements/projets/biblio/>`_     
 * `Barème indicatif des projets informatiques (année 2012-2013) <http://www.xavierdupre.fr/site2013/enseignements/bareme.html>`_
 * `Barème indicatif des projets informatiques (année 2013-2014) <http://www.xavierdupre.fr/site2013/enseignements/bareme-2014.html>`_
     
 
+Ce que vous ne lisez jamais mais que j'observe chaque année
+-----------------------------------------------------------
 
-
-3 erreurs de design fréquentes
-------------------------------
+Erreurs de design fréquentes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ce ne sont pas à proprement parler des erreurs car elles n'altèrent pas l'exécution du programme.
 Toutefois elles le rendent plus difficile à lire et à corriger en cas d'une *vraie* erreur.
@@ -247,9 +298,107 @@ de passer une instance de cette classe à chaque fonction qui en a besoin ::
         for i in range(0,varglob.iter):
             # ...
 
+Façons d'écrire du code lent
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-3 oublis dans le rapport
-------------------------
+
+**if if if if**
+
+::
+
+    if x == 1:
+        r = 0
+    if x == 2:
+        r = 1
+        
+Le second ``if`` porte sur une condition qui n'a aucune chance d'être vérifiée
+si la première l'est. Il faut utiliser ``elif``.
+
+::
+
+    if x == 1:
+        r = 0
+    elif x == 2:
+        r = 1
+        
+
+**sort à la place d'un top k**
+
+::
+
+    def deux_meilleures_options(l):
+        l.sort()
+        return l[0:2]
+        
+Trier toute une liste pour n'extraire que deux éléments est plus coûteux que nécessaire
+même si c'est simple à coder.
+
+::
+
+    def deux_meilleures_options(l):
+        ens = ((v, i) for i, v in enumerate(l))
+        return min(ens)[0], min(ens[1:])[0]
+
+
+
+**Appel de fonction inutile**
+
+:: 
+
+    def mean_vector(x):
+        return sum(x) / len(x)
+
+    if mean_vector(x)[0] < mean_vector(x)[1]:
+        # ...
+        
+Le test appelle deux fois la fonction ``mean_vector`` avec les mêmes paramètres.
+Le résultat sera forcément identique.
+
+:: 
+
+    def mean_vector(x):
+        return sum(x) / len(x)
+
+    v = mean_vector(x)
+    if v[0] < v[1]:
+        # ...
+        
+        
+**deepcopy inutile**
+
+::
+    
+    def enumerate_transposition(li):
+        for i in range(1, len(li)):
+            cl = copy.deepcopy(li)
+            cl[0], cl[i] = li[i], li[0]
+            yield cl
+
+Est-il vraiment nécessaire de faire une copie la liste ? 
+Autant ne pas le faire et l'indiquer dans la documentation.
+        
+
+::
+    
+    def enumerate_transposition(li):
+        """
+        the function does not return a copy,
+        do not modify the returned list
+        """
+        for i in range(1, len(li)):
+            li[0], li[i] = li[i], li[0]
+            yield li
+            li[0], li[i] = li[i], li[0]
+            
+**langue**
+
+Si vous hésitez entre l'anglais et le français, préférez l'anglais.
+
+
+
+
+Oublis dans le rapport
+^^^^^^^^^^^^^^^^^^^^^^
 
 **Le code qu'on a jeté**
 
@@ -271,6 +420,7 @@ que certains résultats ne sortent pas de nulle part.
 Certaines conclusions mentionnent le fait qu'on apprend beaucoup à faire un projet informatique,
 seul, sans aide extérieure. On apprend autant que durant des séances de travaux pratiques.
 C'est un des objectifs de l'exercice : apprendre à maîtriser cet outil qu'est la programmation.
+Mais il n'est pas utile de préciser cela dans le rapport.
 
 
 Mais ce projet demande aussi une part d'imagination, que ce soit pour concevoir une fonction d'évaluation
@@ -296,9 +446,6 @@ plus difficile à cerner qu'il est long. Le rapport est la version la plus acces
 travail. C'est le point de départ. A partir de là, on navigue plus aisément dans votre programme.
 
 
-
-**Un example :**
-
 La phrase suivante est librement inspirée d'un rapport à propos d'un jeu :
 
 
@@ -317,10 +464,25 @@ le rapport ne revient jamais sur cet aspect. Donc :
     * Je comprends qu'un travail d'optimisation a été effectué mais je n'ai aucune idée
       de l'importance qu'il revêt. Si le rapport n'en fait pas mention, c'est sans doute
       que cela n'est qu'une contribution minime.
+      
+**Un exemple ou une copie d'écran**
+
+Les copies d'écran est indispensable pour une interface graphique ou un site web.
+Le résultats de vos algorithmes doit être illustrés sur au moins un exemple qui fonctionne
+et, si cela a du sens, un autre qui ne fonctionne pas.
+
+**Imprécision**
+
+Je paraphrase :
+
+    On a comparé les deux intelligences artificielles en jouant contre elles,
+    la seconde est meilleure.
+    
+Et en chiffres ?
 
 
-3 maladresses lors de la soutenance
------------------------------------
+Maladresses lors de la soutenance
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Court transparent, grand discours**
 
@@ -359,65 +521,9 @@ et laisser l'auditoire supposer que vous avez appliqué la même rigueur jusqu'�
 Au cinéma, cette figure s'appelle une `ellipse <http://fr.wikipedia.org/wiki/Ellipse_%28cin%C3%A9ma%29>`_ (voir aussi
 `L'ellipse - leçon (filmée) de cinéma <https://www.youtube.com/watch?v=BMwN2JloosE>`_).
 
+**Déduction rapide**
 
-Git
----
-
-* :ref:`gitnotebookrst`
-
-Liste des sujets cités
-----------------------
-
-#. ML algo : :ref:`l-ml-renf`
-#. ML algo : :ref:`l-ml-chow`
-#. ML algo : :ref:`l-ml-visage`
-#. ML algo : :ref:`l-ml-deepext`
-#. ML algo : :ref:`l-ml-align`
-#. ML algo : :ref:`l-fast-k-NN`
-#. ML algo : :ref:`l-ml-gradient-geom`
-#. Jeu 1 : :ref:`l-jeu-deuxmille`
-#. Jeu 1 : :ref:`l-jeuvoronoi`
-#. Jeu 1 : :ref:`l-puzzle-GCHQ`
-#. ML : :ref:`l-data-velib`
-#. ML : :ref:`l-data-nuage`
-#. ML : :ref:`l-data-twitter`
-#. ML : :ref:`l-data-whoosh`
-#. Finance : :ref:`l-fi-trend`
-#. Finance : :ref:`l-fi-port`
-#. Finance : :ref:`l-fi-pair`
-#. Finance : :ref:`l-fi-ml`
-#. Simulation : :ref:`l-sim-segre`
-#. Simulation : :ref:`l-sim-panique`
-#. Simulation : :ref:`l-sim-social`
-#. Simulation : :ref:`l-sim-autoroute`
-#. Technique : :ref:`l-tech-smart`
-#. Technique : :ref:`l-tech-domo`
-#. Algo génétique : :ref:`l-gen-optim`
-#. Algo génétique : :ref:`l-gen-bag`
-#. Algo génétique : :ref:`l-gen-tsp`
-#. Algo génétique : :ref:`l-gen-ant`
-#. Algo génétique : :ref:`l-gen-motif`
-#. Jeu 2 : :ref:`l-jeu-p4`
-#. Jeu 2 : :ref:`l-jeu-oth`
-#. Jeu 2 : :ref:`l-jeu-awa`
-#. Jeu 2 : :ref:`l-jeu-gomo`
-#. Jeu 2 : :ref:`l-jeu-go`
-#. Jeu 2 : :ref:`l-jeu-tic-tac-toe-99`
-#. Algo : :ref:`l-math-wifi`
-#. Algo : :ref:`l-math-pento`
-#. Algo : :ref:`l-math-motif`
-#. Algo : :ref:`l-math-exp`
-#. Algo : :ref:`l-math-tsp`
-#. Algo : :ref:`l-math-tsp-plus`
-#. Algo : :ref:`l-math-text`
-#. Algo : :ref:`l-math_simulloi`
-#. Algo : :ref:`l-math_appariement_graph`
-#. Algo : :ref:`l-palindrome-projet-structure`
-#. Algo : :ref:`l-grammaire_context_free`
-#. Algo : :ref:`l-distance_tree_robinson_foulds`
-#. Algo : :ref:`l-maths-inequation`
-#. Algo : :ref:`l-maths-meilleur-clavier`
-#. Jeu hasard : :ref:`l-carte-poker`
-#. Jeu hasard : :ref:`l-carte-belotte`
-
+Beaucoup de groupes tirent des conclusions de peu d'expérimentations : 
+une simulation n'est pas une preuve mathématique, 
+et il faut répéter plusieurs fois la même simulation pour une avoir une certitude statistique.
 

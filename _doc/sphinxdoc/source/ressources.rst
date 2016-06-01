@@ -4,6 +4,7 @@
 .. _l-ressources:
 
 
+
 Ressources, Evénements, Source de données
 =========================================
 
@@ -28,7 +29,9 @@ Source de données
   voir aussi `Daily Global Weather Measurements (http://spatial-analyst.net/) <http://spatial-analyst.net/book/getGSOD.R>`_
 * *images* `ImageNet <http://image-net.org/>`_, base de données d'images avec leur contenu
 * *ML* `Kaggle Datasets <https://www.kaggle.com/datasets>`_
-* *ML* `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_ (collection de jeux de données classés par type de problème - régression, classification, ...)
+* *ML* `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_ 
+  (collection de jeux de données classés par type de problème - régression, classification, ...) 
+  Les jeux **UCI** apparaissent dans de nombreux scientifiques.
 * *ML* `Data Science at Microsoft Research <http://research.microsoft.com/en-us/projects/data-science-initiative/default.aspx#datasets>`_
 * *ML* `Ensembles de données publics AWS (Amazon) <https://aws.amazon.com/public-data-sets/>`_, `AWS Public Data Sets <https://aws.amazon.com/datasets/>`_
 * *ML* `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_
@@ -36,6 +39,9 @@ Source de données
 * *ML* `Microsoft Research Letor <http://research.microsoft.com/en-us/um/beijing/projects/letor/letor4dataset.aspx>`_
 * *ML* `170 millions courses de taxi à New-York <http://chriswhong.com/open-data/foil_nyc_taxi/>`_ 
   (via l'article `Building Azure ML Models on the NYC Taxi Dataset <http://blogs.technet.com/b/machinelearning/archive/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset.aspx>`_)
+* *ML* `urls, spam, ... <http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html>`_, jeux de données utilisés 
+  comme benchmark pour la libraire `libsvm <http://www.csie.ntu.edu.tw/~cjlin/libsvm/>`_
+* *ML* * `Pascal Large Scale Learning Challenge <http://largescale.ml.tu-berlin.de/instructions/>`_
 * *musique* `Semantic Artist Similarity Dataset <http://mtg.upf.edu/download/datasets/semantic-similarity>`_
 * *musique* `The Music Matrix – Exploring tags in the Million Song Dataset <http://musicmachinery.com/2011/11/27/the-music-matrix-exploring-tags-in-the-million-song-dataset/>`_
 * *musique* `Audio Content Analysis Datasets <http://www.audiocontentanalysis.org/data-sets/>`_
