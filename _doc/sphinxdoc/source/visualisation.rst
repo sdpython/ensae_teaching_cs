@@ -26,18 +26,42 @@ il faut vous demander :
 
 
 Ces notebooks parcourent différents exemples de visualisations avec différentes librairies.
-Liste non exhaustive.
+
+**images**
 
 .. toctree::
     :maxdepth: 1
     
+    notebooks/matplotlib
+    notebooks/seaborn
+    notebooks/networkx
+    notebook/basemap
+    
+**javascript**
+
+.. toctree::
+    :maxdepth: 1
+    
+    notebooks/bokeh
+    notebooks/mpld3
     notebooks/lightning_python
     notebooks/bqplot
-    
-    
-.. holoviews.
-.. matplotlib roc.
+    notebooks/plotly
+    notebooks/pygal
 
+**combinaison**
+
+.. toctree::
+    :maxdepth: 1
+    
+    notebooks/holoviews
+
+
+Modules complémentaires
++++++++++++++++++++++++
+
+* `geopy <https://pypi.python.org/pypi/geopy>`_ : pour appeler les services de géocoding les plus connus
+    
 
 Galleries
 +++++++++
