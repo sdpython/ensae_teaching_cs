@@ -48,6 +48,7 @@ Ces notebooks parcourent différents exemples de visualisations avec différente
     notebooks/bqplot
     notebooks/plotly
     notebooks/pygal
+    notebooks/datashader
 
 **combinaison**
 
