@@ -14,7 +14,8 @@ Il existe trois formats disponibles :
 `blanc <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_,
 `bleu <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
 Les changements importants sont notés sur le :ref:`blog <ap-main-0>` 
-associé à ce cours.
+associé à ce cours, les autres 
+:ref:`l-issues-todolist`.
 
 
 
@@ -259,10 +260,6 @@ En diagonal
     :alt: PYPI Package
     :target: https://pypi.python.org/pypi/ensae_teaching_cs  
     
-.. image:: http://img.shields.io/github/issues/sdpython/ensae_teaching_cs.png
-    :alt: GitHub Issues
-    :target: https://github.com/sdpython/ensae_teaching_cs/issues
-    
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
     :alt: MIT License
     :target: http://opensource.org/licenses/MIT
@@ -270,3 +267,10 @@ En diagonal
 .. image:: https://codecov.io/github/sdpython/ensae_teaching_cs/coverage.svg?branch=master
     :target: https://codecov.io/github/sdpython/ensae_teaching_cs?branch=master
     
+.. image:: http://img.shields.io/github/issues/sdpython/ensae_teaching_cs.png
+    :alt: GitHub Issues
+    :target: https://github.com/sdpython/ensae_teaching_cs/issues
+    
+.. image:: https://badge.waffle.io/sdpython/ensae_teaching_cs.png?label=ready&title=Ready
+    :alt: Waffle
+    :target: https://waffle.io/sdpython/ensae_teaching_cs      

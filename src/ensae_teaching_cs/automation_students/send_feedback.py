@@ -16,39 +16,36 @@ template_mail_feedback = """
 <br /><br />
 <b>{{ col_name }}</b><br /><br />
 {{ name }}<br /><br />
-<b>{{ col_subject }}</b><br /><br />
-{{ subject }}<br /><br />
-<b>{{ col_pitch}}</b><br /><br />
-{{ pitch }}<br /><br />
-<b>{{ col_code}}</b><br /><br />
-{{ code }}<br /><br />
-<b>{{ text_comments }}</b><br /><br />
-{{ comments }}<br /><br />
+{{ content }}
+<br /><br />
 {{ end }}
 """
 
+template_mail_columns = "<b>{{ key }}</b><br />{{ value }}<br />\n"
 
-def enumerate_feedback(df1, df2, col_group="Groupe", col_subject="Sujet",
-                       col_pitch="Pitch", col_code="Code", col_mail="Mail",
-                       col_name="Nom", subject="Projet informatique, feedback sur le pitch",
-                       begin="Bonjour,\n\nVoici mon feedback sur votre pitch. Ce mail est automatisé. Veuillez vérifier les informations.\n\n",
-                       end="Xavier", text_comments="Remarques générales",
-                       template=template_mail_feedback, engine="jinja2", exc=True, fLOG=noLOG):
+
+def enumerate_feedback(df1, col_group="Groupe",
+                       col_mail="Mail", col_name="Name",
+                       cols=["Sujet", "Rapport", "Code", "Soutenance"],
+                       subject=None, begin=None, end=None, 
+                       template=template_mail_feedback,
+                       template_col=template_mail_columns,
+                       engine="jinja2", exc=True, fLOG=noLOG):
     """
     sends feedback to students
 
-    @param      df1             first dataframe
-    @param      df2             a draframe or a list or a list of general comments to add at the end
+    @param      df1             dataframe
     @param      col_group       name of the column which contains the group definition
-    @param      col_subject     name of the column which contains the subject of each group
-    @param      col_pitch       name of the column which contains the comments on the report or the pitch
-    @param      col_code        name of the column which contains the comments on the code
     @param      col_mail        name of the column which contains the mail of the members
     @param      col_name        name of the column which contains the names of the members
+    @param      cols            list of columns to add to the mails, if there are multiple values
+                                per group, they will be joined by space or another separator
+                                if an element in this list is a tuple ``(col_name, sep)``
     @param      subject         subject of the mail
-    @param      intro           beginning of the mail
+    @param      begin           beginning of the mail
     @param      template        template of the mail
-    @param      text_comments   sentance before the general comments
+    @param      template_col    template for additional columns, the outcome will be joined
+                                to fill ``{{ content }}`` in the other template
     @param      engine          engine for the template
     @param      exc             raise an exception if there is no mail
     @return                     enumerate mails content as tuple *(mail, html, text)*
@@ -74,6 +71,14 @@ def enumerate_feedback(df1, df2, col_group="Groupe", col_subject="Sujet",
     +------+-----------+--------+---------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
     """
+    
+    if begin is None:
+        raise ValueError("begin cannot be None, it should be string.")
+    if end is None:
+        raise ValueError("end cannot be None, it should be you signature.")
+    if subject is None:
+        raise ValueError("subject cannot be None, it should be the subject of the mail.")
+    
     def sums(spl):
         spl = [_ for _ in spl if isinstance(_, str) if "??" not in _]
         return ";".join(spl)
@@ -82,28 +87,41 @@ def enumerate_feedback(df1, df2, col_group="Groupe", col_subject="Sujet",
         spl = [_ for _ in spl if isinstance(_, str)]
         return ", ".join(spl)
 
-    if df2 is not None:
-        if isinstance(df2, (list, tuple)):
-            comments = "\n".join(df2)
-        else:
-            comments = "\n\n".join(df2[df2.columns[0]])
-    else:
-        comments = ""
-    comments = comments.replace("\n", "<br />\n")
+    def sums3(spl, sep):
+        spl = [_ for _ in spl if isinstance(_, str)]
+        return sep.join(spl)
+
     begin = begin.replace("\n", "<br />\n")
     end = end.replace("\n", "<br />\n")
 
-    group = df1.groupby(col_group).agg({col_mail: sums, col_name: sums2,
-                                        col_subject: sums, col_pitch: sums,
-                                        col_code: sums})
-    common = dict(begin=begin, col_group=col_group, col_pitch=col_pitch,
-                  col_subject=col_subject, col_code=col_code, col_name=col_name,
-                  text_comments=text_comments, comments=comments, end=end, col_mail=col_mail)
+    aggs = {col_mail: sums, col_name: sums2}
+    for c in cols:
+        if isinstance(c, tuple):
+            aggs[c[0]] = lambda s, sep=c[1]: sums3(s, sep)
+        else:
+            aggs[c] = lambda s: sums3(s, " ")
+
+    group = df1.groupby(col_group).agg(aggs)
+    common = dict(begin=begin, col_group=col_group, col_name=col_name, col_mail=col_mail, end=end)
     common_rev = {v: k for k, v in common.items()}
+    lc = list(group.columns)
+    colsi = [lc.index(c[0] if isinstance(c, tuple) else c) for c in cols]
 
     for row in group.itertuples(index=False):
+        # key, value pairs
+        content = []
+        for c, i in zip(cols, colsi):
+            cn = c[0] if isinstance(c, tuple) else c
+            ct = dict(key=cn, value=row[i])
+            text = apply_template(template_col, ct, engine=engine)
+            content.append(text)
+            
+        # main mail
         context = common.copy()
+        context["content"] = content
         mail = None
+        
+        # rest of columns
         for k, v in zip(group.columns, row):
             if k == col_mail:
                 mail = v
@@ -124,7 +142,7 @@ def enumerate_feedback(df1, df2, col_group="Groupe", col_subject="Sujet",
         yield (mail, html, text)
 
 
-def enumerate_send_email(mailbox, subject, fr, df1, df2, cc=None, delay=[1000, 1500],
+def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=[1000, 1500],
                          delay_sending=False, exc=True, skip=0, only=None, **params):
     """
     Send feedback to students
@@ -132,7 +150,6 @@ def enumerate_send_email(mailbox, subject, fr, df1, df2, cc=None, delay=[1000, 1
     @param      mailbox         mailbox, see `create_smtp_server <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/sender/email_sender.html?pymmails.sender.email_sender.create_smtp_server>`_
     @param      fr              from
     @param      df1             first dataframe
-    @param      df2             a draframe or a list or a list of general comments to add at the end
     @param      cc              additional receivers
     @param      delay           random delay between two mails
     @param      delay_sending   returns functions
@@ -170,7 +187,7 @@ def enumerate_send_email(mailbox, subject, fr, df1, df2, cc=None, delay=[1000, 1
 
     """
     loop = 0
-    for mails, html, text in enumerate_feedback(df1, df2, exc=exc, **params):
+    for mails, html, text in enumerate_feedback(df1, exc=exc, subject=subject, **params):
         if loop < skip:
             loop += 1
             continue
