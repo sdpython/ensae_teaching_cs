@@ -220,6 +220,8 @@ Bibliographie
 * `Mathematical optimization: finding minima of functions <http://scipy-lectures.github.io/advanced/mathematical_optimization/index.html>`_
 * `Out-of-Core Dataframes in Python: Dask and OpenStreetMap <https://jakevdp.github.io/blog/2015/08/14/out-of-core-dataframes-in-python/>`_ *(2015/12)*
 * `Evaluation of Deep Learning Toolkits <https://github.com/zer0n/deepframeworks/blob/master/README.md>`_ *(2015/12)*
+* `12 Algorithms Every Data Scientist Should Know <https://datafloq.com/read/12-algorithms-every-data-scientist-should-know/2024>`_ *(2016/06)*
+* `10+2 Data Science Methods that Every Data Scientist Should Know in 2016 <http://tjo-en.hatenablog.com/entry/2016/04/18/190000>`_ *(2016/06)*
 
 **Tutorial**
 
@@ -248,6 +250,7 @@ Bibliographie
 * `IAPR: Teaching materials for machine learning <http://homepages.inf.ed.ac.uk/rbf/IAPR/researchers/MLPAGES/mlteach.htm>`_
 * machine learning et musique `Audio Content Analysis, teachings <http://www.audiocontentanalysis.org/teaching/>`_
 * `ogrisel's notebook <https://github.com/ogrisel/notebooks>`_ (2016/04)
+* `L'apprentissage profond <https://www.college-de-france.fr/site/yann-lecun/course-2015-2016.htm>`_, Yann LeCun au Collège de France *(2016/06)*
 
 **Articles d'auteurs très connus**
 
@@ -293,17 +296,19 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
 Librairies Python
 +++++++++++++++++
 
+* `Simple/limited/incomplete benchmark for scalability, speed and accuracy of machine learning libraries for classification <https://github.com/szilard/benchm-ml>`_
+* `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
+* `Related Projects (of machine learning) <http://scikit-learn.org/stable/related_projects.html>`_ (2016/03)
+
 **Librairies de machine learning**
 
-* `scikit-learn <http://scikit-learn.org/stable/index.html>`_
-* `Vowpal Wabbit <https://github.com/JohnLangford/vowpal_wabbit/wiki>`_
-* `theano <http://deeplearning.net/software/theano/>`_
-* `Keras <http://keras.io/>`_
-* `xgboost <https://github.com/dmlc/xgboost>`_
-* `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
-* `TensorFlow <https://github.com/tensorflow/tensorflow>`_
-* `Related Projects (of machine learning) <http://scikit-learn.org/stable/related_projects.html>`_ (2016/03)
 * `CNTK <https://github.com/Microsoft/CNTK>`_ (2016/04)
+* `Keras <http://keras.io/>`_
+* `scikit-learn <http://scikit-learn.org/stable/index.html>`_
+* `TensorFlow <https://github.com/tensorflow/tensorflow>`_
+* `theano <http://deeplearning.net/software/theano/>`_
+* `Vowpal Wabbit <https://github.com/JohnLangford/vowpal_wabbit/wiki>`_
+* `xgboost <https://github.com/dmlc/xgboost>`_
 
 **Librairies de visualisation**
 

@@ -1,8 +1,8 @@
 
 .. _l-README:
 
-README / Changes
-================
+README
+======
 
 .. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master
     :target: https://travis-ci.org/sdpython/ensae_teaching_cs
@@ -51,24 +51,3 @@ Contributions
 Started in 2014/04.
 
 * Contributor: `Xavier Dupré <http://www.xavierdupre.fr/>`_, ENSAE's students
-
-Versions
---------
-
-* **0.8 - 2016/??/??**
-    * **add:** add code for enigma, puzzle, simulation
-    * **add:** function *make_video* to create a video
-    * **add:** function to call graphviz
-    * **add:** add many *coup de projecteur* (old but refreshed work)
-* **0.7 - 2016/03/01**
-    * **new:** code to produce a Python distribution which includes R, Python, ...
-    * **new:** refactoring, FAQ, fonction jupyter_open_notebook
-* **0.6 - 2015/06/03**
-    * **new:** first sessions in 2A
-    * **new:** first sessions in 3A
-    * **add:** Python version is now checked, ImportError is raised if it used on Python 2
-    * **fix:** the setup does not need the file ``README.rst`` anymore
-    * **add:** add unit test to test the notebooks, separate notebooks using Cython from the others
-    * **add:** add a blog
-* **0.5 - 2014/08/31**
-    * **new:** first version
