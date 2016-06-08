@@ -209,8 +209,9 @@ Bibliographie
 * :ref:`l-questions`
 * `Débugger en Python <http://www.xavierdupre.fr/blog/2014-06-02_nojs.html>`_
 * `Modules standards <https://docs.python.org/3.4/library/>`_
-* `8 Regular Expressions You Should Know <http://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149>`_ (2016/03)
-* `Love Python <http://love-python.blogspot.fr/>`_ (2016/03)
+* `8 Regular Expressions You Should Know <http://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149>`_ *(2016/03)*
+* `Love Python <http://love-python.blogspot.fr/>`_ *(2016/03)*
+* `The Hitchhiker's Guide to Python! <http://docs.python-guide.org/en/latest/>`_ *(2016/06)*
 
 **Livres**
 
@@ -230,13 +231,13 @@ Bibliographie
 * `A gallery of interesting Jupyter Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
 * `Python Notes <http://www.thomas-cokelaer.info/tutorials/python/index.html>`_
 * `Program Arcade Games With Python And Pygame <http://programarcadegames.com/>`_
-* `Python cours et TPs <http://mathcpge.org/index.php?option=com_content&view=article&id=55&Itemid=146>`_ (2016/04)
+* `Python cours et TPs <http://mathcpge.org/index.php?option=com_content&view=article&id=55&Itemid=146>`_ *(2016/04)*
 * `Le Python en prépas <http://web.isen-bretagne.fr/livres/python/>`_ (2016/04)
-* `Algorithmique et programmation en CPGE <http://python-liesse.enseeiht.fr/cours/index.html>`_ (2016/04)
+* `Algorithmique et programmation en CPGE <http://python-liesse.enseeiht.fr/cours/index.html>`_ *(2016/04)*
 
 **Exercices**
 
-*  `Quelques exercices du Project Euler <http://mathprepa.fr/python-project-euler-mpsi/>`_ (2016/04)
+*  `Quelques exercices du Project Euler <http://mathprepa.fr/python-project-euler-mpsi/>`_ *(2016/04)*
 
 **MOOC**
 
