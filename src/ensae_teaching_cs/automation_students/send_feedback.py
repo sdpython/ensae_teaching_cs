@@ -6,22 +6,21 @@
 
 import time
 import random
+import numpy
 from pyquickhelper.loghelper import noLOG
 from pyquickhelper.texthelper.templating import apply_template
 from pymmails.sender import send_email
 
 
 template_mail_feedback = """
-{{ begin }}
-<br /><br />
-<b>{{ col_name }}</b><br /><br />
-{{ name }}<br /><br />
+<p>{{ begin }}</p>
+<p><b>{{ col_name }}</b></p>
+<p>{{ name }}</p>
 {{ content }}
-<br /><br />
-{{ end }}
+<p>{{ end }}</p>
 """
 
-template_mail_columns = "<b>{{ key }}</b><br />{{ value }}<br />\n"
+template_mail_columns = "<p><b>{{ key }}</b></p><p>{{ value }}</p>\n"
 
 
 def enumerate_feedback(df1, col_group="Groupe",
@@ -88,8 +87,43 @@ def enumerate_feedback(df1, col_group="Groupe",
         return ", ".join(spl)
 
     def sums3(spl, sep):
-        spl = [_ for _ in spl if isinstance(_, str)]
-        return sep.join(spl)
+        res = []
+        for _ in spl:
+            if isinstance(_, str):
+                try:
+                    i = int(_)
+                    _ = i
+                except ValueError:
+                    try:
+                        i = float(_)
+                        _ = i
+                    except ValueError:
+                        pass
+            if isinstance(_, float):
+                if numpy.isnan(_):
+                    continue
+                elif int(_) == _:
+                    s_ = str(int(_))
+                else:
+                    s_ = str(_)
+            else:
+                s_ = str(_)
+            if s_ not in res:
+                res.append(s_)
+        # pandas seems to change the type of the value
+        # if extra characters are not added
+        return sep.join(res)
+
+    def clean_value(s):
+        if isinstance(s, float):
+            if numpy.isnan(s):
+                return ""
+            elif int(s) == s:
+                return str(int(s))
+            else:
+                return str(s)
+        else:
+            return str(s).strip()
 
     begin = begin.replace("\n", "<br />\n")
     end = end.replace("\n", "<br />\n")
@@ -102,7 +136,7 @@ def enumerate_feedback(df1, col_group="Groupe",
             aggs[c] = lambda s: sums3(s, " ")
 
     group = df1.groupby(col_group).agg(aggs)
-    common = dict(begin=begin, col_group=col_group, col_name=col_name, col_mail=col_mail, end=end)
+    common = dict(col_group=col_group, col_name=col_name, col_mail=col_mail)
     common_rev = {v: k for k, v in common.items()}
     lc = list(group.columns)
     colsi = [lc.index(c[0] if isinstance(c, tuple) else c) for c in cols]
@@ -112,29 +146,36 @@ def enumerate_feedback(df1, col_group="Groupe",
         content = []
         for c, i in zip(cols, colsi):
             cn = c[0] if isinstance(c, tuple) else c
-            ct = dict(key=cn, value=row[i])
-            text = apply_template(template_col, ct, engine=engine)
-            content.append(text)
+            v = clean_value(row[i])
+            if v:
+                ct = dict(key=cn, value=v)
+                text = apply_template(template_col, ct, engine=engine)
+                content.append(text)
             
         # main mail
         context = common.copy()
-        context["content"] = content
+        context["begin"] = begin
+        context["end"] = end
+        context["content"] = "\n".join(content)
         mail = None
         
-        # rest of columns
+        # rest of columns add to the context
         for k, v in zip(group.columns, row):
             if k == col_mail:
                 mail = v
             k = common_rev.get(k, k)
             if k.startswith("col_"):
                 k = k[4:]
-            context[k] = v
+            context[k] = clean_value(v)
+
         text = apply_template(template, context, engine=engine)
+
         if mail is None or "@" not in mail:
             if exc:
                 raise ValueError("No mail for:\n" + text)
             else:
                 fLOG("No mail for:\n" + text)
+
         html = ('<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head><body>\n' +
                 text + "\n</body></html>\n")
         text = text.replace("<b>", "").replace(
@@ -143,11 +184,13 @@ def enumerate_feedback(df1, col_group="Groupe",
 
 
 def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=[1000, 1500],
-                         delay_sending=False, exc=True, skip=0, only=None, **params):
+                         delay_sending=False, exc=True, skip=0, only=None,
+                         **params):
     """
     Send feedback to students
 
-    @param      mailbox         mailbox, see `create_smtp_server <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/sender/email_sender.html?pymmails.sender.email_sender.create_smtp_server>`_
+    @param      mailbox         mailbox, see `create_smtp_server <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/sender/email_sender.html?pymmails.sender.email_sender.create_smtp_server>`_,
+                                if mailbox is None, the function displays the message and fails
     @param      fr              from
     @param      df1             first dataframe
     @param      cc              additional receivers
@@ -176,13 +219,16 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=[1000, 1500],
         import pymmails
 
         df = pandas.read_excel("groupes_eleves_pitch.xlsx", sheetname=0)
-        comment = pandas.read_excel("groupes_eleves_pitch.xlsx", sheetname=1, header=None)
-
 
         mailbox = pymmails.sender.create_smtp_server("gmail", "xavier.dupre", "****")
-        mails = enumerate_send_email(mailbox, sujet, "xavier.dupre AT gmail.com",
-                                          df, comment, exc=True, fLOG=fLOG, delay_sending=False,
-                                          cc=cc, only=only)
+        mails = enumerate_send_email(mailbox, sujet, "xavier.dupre@gmail.com", 
+                      df, exc=True, fLOG=fLOG, delay_sending=False,
+                      begin=begin, end=end,
+                      cc=cc, only=only, col_group="Groupe",
+                      col_name="Nom", col_mail="Mail",
+                      cols=["Sujet", "Rapport", "Code", "Soutenance", "Question code",
+                            "Note rapport / 5", "Note code / 7", "Note soutenance / 5",
+                            "Suivi  et Bonus / 3 ou 4", "Bonus raison"])
         mailbox.close()
 
     """
@@ -197,9 +243,23 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=[1000, 1500],
         if mails is None or "@" not in mails:
             # if there is an issue, it should been cautch by the previous
             # function (we skip)
+            loop += 1
             continue
         if not delay_sending and "fLOG" in params:
             params["fLOG"](loop, "send mail to ", mails)
+        if mailbox is None:
+            if "fLOG" not in params:
+                raise KeyError("fLOG should be send to the function as a parameter, it is used to display the message when mailbox is None")
+            fLOG = params["fLOG"]
+            fLOG("***********************")
+            fLOG("fr={0}".format(fr))
+            fLOG("to={0}".format(mails))
+            fLOG("cc={0}".format(cc))
+            fLOG("subject={0}".format(subject))
+            fLOG("body\n{0}".format(html))
+            with open(r"c:\temp\i.html", "w", encoding="utf-8") as f:
+                f.write(html)
+            raise ValueError("mailbox si None")
         res = send_email(mailbox, fr=fr, to=mails.split(";"), cc=cc, delay_sending=delay_sending,
                          body_html=html, body_text=text, subject=subject)
         if delay_sending:
