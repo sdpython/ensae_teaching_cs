@@ -34,6 +34,7 @@ Ces notebooks parcourent différents exemples de visualisations avec différente
     
     notebooks/v_matplotlib
     notebooks/v_seaborn
+    notebooks/v_lifelines
     notebooks/v_networkx
     notebooks/v_basemap
     
