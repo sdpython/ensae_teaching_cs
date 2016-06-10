@@ -140,6 +140,7 @@ class TestFeedback(unittest.TestCase):
             mails = list(enumerate_send_email(mailbox, fr="me", col_name="Nom", cols=["Pitch", "Code"],
                                               df1=df, exc=False, fLOG=fLOG, delay_sending=True,
                                               begin="BEGIN", end="END", subject="SUBJECT"))
+            assert mails is not None
         except ValueError as e:
             if "mailbox is None" in str(e):
                 pass

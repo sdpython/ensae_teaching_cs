@@ -25,6 +25,8 @@ Les technologies proposées sont donc :
 
 Vous êtes libres de traiter l'algorithme de votre choix. Nous vous en proposons certains dans les articles ci-dessous
 
+*2014-2015*
+
 * `Parallel MCMC <http://arxiv.org/pdf/1010.1595v3.pdf>`_
 * `Parallel Gradient Descent in Minibatches <http://research.microsoft.com/pubs/158712/distr_mini_batch.pdf>`_
 * `FFT et convolutions sous GPU <http://cadik.posvete.cz/papers/cadikm-iv06-gpu.pdf>`_
@@ -35,21 +37,29 @@ Vous êtes libres de traiter l'algorithme de votre choix. Nous vous en proposons
 * `Large-scale L-BFGS using MapReduce <http://papers.nips.cc/paper/5333-large-scale-l-bfgs-using-mapreduce>`_
 * `LightLDA: Big Topic Models on Modest Compute Clusters <http://arxiv.org/abs/1412.1576>`_
 * `A Reliable Effective Terascale Linear Learning System <http://jmlr.org/papers/volume15/agarwal14a/agarwal14a.pdf>`_
-* `Multi-Block ADMM for Big Data Optimization in Modern Communication Networks <http://arxiv.org/abs/1504.01809>`_, optimisation distribuée (ADMM) (2015)
-* `A scalable system for primal-dual optimization <http://arxiv.org/pdf/1507.01461v1.pdf>`_, optimisation sous contrainte avec Map/Reduce et Spark (2015)
-* `Sorting and Permuting without Bank Conflicts on GPUs <http://arxiv.org/abs/1507.01391>`_ (2015)
-* `Building Balanced k-d Tree with MapReduce <http://arxiv.org/abs/1512.06389>`_ (2015)
-* `Scalable Models for Computing Hierarchies in Information Networks <http://arxiv.org/abs/1601.00626>`_ (2015),
+
+*2015-2016*
+  
+* `Multi-Block ADMM for Big Data Optimization in Modern Communication Networks <http://arxiv.org/abs/1504.01809>`_, optimisation distribuée (ADMM)
+* `A scalable system for primal-dual optimization <http://arxiv.org/pdf/1507.01461v1.pdf>`_, optimisation sous contrainte avec Map/Reduce et Spark
+* `Sorting and Permuting without Bank Conflicts on GPUs <http://arxiv.org/abs/1507.01391>`_
+* `Building Balanced k-d Tree with MapReduce <http://arxiv.org/abs/1512.06389>`_
+* `Scalable Models for Computing Hierarchies in Information Networks <http://arxiv.org/abs/1601.00626>`_,
   Distributed Random Walks with Restart
-* `Optimally Pruning Decision Tree Ensembles With Feature Cost <http://arxiv.org/pdf/1601.00955v1.pdf>`_ (2016), voir section 5
-* `Scalable Matrix Inversion Using MapReduce <https://cs.uwaterloo.ca/~ashraf/pubs/hpdc14matrix.pdf>`_ (2016)
+* `Optimally Pruning Decision Tree Ensembles With Feature Cost <http://arxiv.org/pdf/1601.00955v1.pdf>`_, voir section 5
+* `Scalable Matrix Inversion Using MapReduce <https://cs.uwaterloo.ca/~ashraf/pubs/hpdc14matrix.pdf>`_
+
+*2016-2017*
+
 * `The Part-Time Parliament <http://research.microsoft.com/en-us/um/people/lamport/pubs/pubs.html#lamport-paxos>`_, 
   ce papier introduit l'algorithme `Paxos <https://en.wikipedia.org/wiki/Paxos_(computer_science)>`_ qui gère les problèmes
   de consensus entre machines. Une machine souhaite déléguer un travail à une autre mais elle a le choix.
   Comment s'assurer qu'une seule et une seule machine ne fait ce travail ? 
-  On pourra traiter n'importe qu'elle autre variance de l'algorithme plus récene. (2017)
-* `Schönhage-Strassen Algorithm with MapReduce for Multiplying Terabit Integers <http://people.apache.org/~szetszwo/ssmr20110429.pdf>`_ (2017)
-* `Dimension Independent Matrix Square using MapReduce (DIMSUM) <http://stanford.edu/~rezab/papers/dimsum.pdf>`_ (2017)
+  On pourra traiter n'importe qu'elle autre variance de l'algorithme plus récene.
+* `Schönhage-Strassen Algorithm with MapReduce for Multiplying Terabit Integers <http://people.apache.org/~szetszwo/ssmr20110429.pdf>`_
+* `Dimension Independent Matrix Square using MapReduce (DIMSUM) <http://stanford.edu/~rezab/papers/dimsum.pdf>`_
+* `A Fast Parallel Stochastic Gradient Method for Matrix Factorization in Shared Memory Systems <http://jmlr.org/papers/v17/15-471.html>`_
+
 
 
 Nous vous recommandons d'adopter la démarche suivante:
