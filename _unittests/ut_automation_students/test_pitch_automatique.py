@@ -104,7 +104,7 @@ class TestFeedback(unittest.TestCase):
             OutputPrint=__name__ == "__main__")
 
         exp = [
-            "<br />ok<br />",
+            "<p>ok</p>",
         ]
 
         temp = get_temp_folder(__file__, "temp_enumerate_feedback")
@@ -136,15 +136,15 @@ class TestFeedback(unittest.TestCase):
         # pymmails.sender.create_smtp_server("gmail", login, pwd)
         mailbox = None
         df = pandas.read_excel(xls, sheetname=0, index=False)
-        mails = list(enumerate_send_email(mailbox, fr="me", col_name="Nom", cols=["Pitch", "Code"],
-                                          df1=df, exc=False, fLOG=fLOG, delay_sending=True,
-                                          begin="BEGIN", end="END", subject="SUBJECT"))
-        for i, m in enumerate(mails):
-            fLOG("------------", m)
-            try:
-                m()
-            except AttributeError:
-                continue
+        try:
+            mails = list(enumerate_send_email(mailbox, fr="me", col_name="Nom", cols=["Pitch", "Code"],
+                                              df1=df, exc=False, fLOG=fLOG, delay_sending=True,
+                                              begin="BEGIN", end="END", subject="SUBJECT"))
+        except ValueError as e:
+            if "mailbox is None" in str(e):
+                pass
+            else:
+                raise e
 
 
 if __name__ == "__main__":

@@ -259,7 +259,7 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=[1000, 1500],
             fLOG("body\n{0}".format(html))
             with open(r"c:\temp\i.html", "w", encoding="utf-8") as f:
                 f.write(html)
-            raise ValueError("mailbox si None")
+            raise ValueError("mailbox is None, first mail is display and the process is stopped.")
         res = send_email(mailbox, fr=fr, to=mails.split(";"), cc=cc, delay_sending=delay_sending,
                          body_html=html, body_text=text, subject=subject)
         if delay_sending:
