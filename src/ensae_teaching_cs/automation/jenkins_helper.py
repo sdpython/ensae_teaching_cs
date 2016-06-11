@@ -138,6 +138,12 @@ def default_jenkins_jobs(filter=None, neg_filter=None):
                  None, dict(success_only=True)),
                 ["code_beatrix [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
                     "code_beatrix [py34] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
+                # jupytalk
+                ("jupytalk <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(4-5) * * 1"),
+                ("jupytalk [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                 None, dict(success_only=True)),
+                ["jupytalk [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                    "jupytalk [py34] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
                 # teachings
                 # 1.5h
                 ("ensae_teaching_cs <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(5-6) * * 0"),
