@@ -275,16 +275,6 @@ else:
 
 if not r:
 
-    def skip_function(name, code):
-        if "notebook test" in code:
-            return True
-        if "test notebook" in code:
-            return True
-        return False
-
-    def not_skip_function(name, code):
-        return not skip_function(name, code)
-
     if "build_sphinx_one" in sys.argv:
         pyquickhelper = import_pyquickhelper()
 
@@ -422,6 +412,15 @@ if not r:
 
         pyquickhelper = import_pyquickhelper()
         from pyquickhelper.pycode import main_wrapper_tests
+        from pyquickhelper.pycode.utils_tests import default_skip_function
+
+        def skip_function(name, code):
+            if "notebook test" in code:
+                return True
+            if "test notebook" in code:
+                return True
+            return default_skip_function(name, code)
+
         main_wrapper_tests(
             run_unit,
             add_coverage=True,
@@ -441,10 +440,33 @@ if not r:
 
         pyquickhelper = import_pyquickhelper()
         from pyquickhelper.pycode import main_wrapper_tests
+        from pyquickhelper.pycode.utils_tests import default_skip_function
+
+        def skip_function(name, code):
+            if "notebook test" in code:
+                return True
+            if "test notebook" in code:
+                return True
+            return False
+
+        def not_skip_function(name, code):
+            return not skip_function(name, code)
+
         main_wrapper_tests(
             run_unit,
             add_coverage=True,
             skip_function=not_skip_function)
+
+    elif "unittests_LONG" in sys.argv or "unittests_SKIP" in sys.argv:
+
+        pyquickhelper = import_pyquickhelper()
+        logging_function = pyquickhelper.get_fLOG()
+        logging_function(OutputPrint=True)
+        from pyquickhelper.pycode import process_standard_options_for_setup
+        r = process_standard_options_for_setup(
+            sys.argv, __file__, project_var_name, port=8067,
+            requirements=requirements,
+            fLOG=logging_function)
 
     elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv \
          or "build_pres_3A" in sys.argv:

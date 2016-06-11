@@ -185,7 +185,8 @@ class TestGGplotGraph (unittest.TestCase):
             '2014-w51',
             '2014-w52']
         if sys.version_info[:2] <= (3, 4):
-            warnings.warn("Issue with Python 3.4, bug probably related to wrong pointers")
+            warnings.warn(
+                "Issue with Python 3.4, bug probably related to wrong pointers")
             return
         fix_tkinter_issues_virtualenv()
         import matplotlib.pyplot as plt

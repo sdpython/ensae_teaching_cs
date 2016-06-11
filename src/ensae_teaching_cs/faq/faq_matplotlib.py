@@ -173,9 +173,7 @@ def graph_ggplot_with_label(x, y, labels, bar=True, title=None, figsize=(6, 4), 
     @endFAQ
     """
     import matplotlib.pyplot as plt
-    plt.style.use('ggplot')
     if ax is None:
-        plt.close('all')
         fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(10, 4))
 
     if bar:

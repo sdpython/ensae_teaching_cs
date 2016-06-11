@@ -51,7 +51,8 @@ class TestFaqMatplotlib(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         if sys.version_info[:2] <= (3, 4):
-            warnings.warn("Issue with Python 3.4, bug probably related to wrong pointers")
+            warnings.warn(
+                "Issue with Python 3.4, bug probably related to wrong pointers")
             return
         fix_tkinter_issues_virtualenv()
         import matplotlib.pyplot as plt

@@ -26,7 +26,7 @@ template_mail_columns = "<p><b>{{ key }}</b></p><p>{{ value }}</p>\n"
 def enumerate_feedback(df1, col_group="Groupe",
                        col_mail="Mail", col_name="Name",
                        cols=["Sujet", "Rapport", "Code", "Soutenance"],
-                       subject=None, begin=None, end=None, 
+                       subject=None, begin=None, end=None,
                        template=template_mail_feedback,
                        template_col=template_mail_columns,
                        engine="jinja2", exc=True, fLOG=noLOG):
@@ -70,14 +70,15 @@ def enumerate_feedback(df1, col_group="Groupe",
     +------+-----------+--------+---------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 
     """
-    
+
     if begin is None:
         raise ValueError("begin cannot be None, it should be string.")
     if end is None:
         raise ValueError("end cannot be None, it should be you signature.")
     if subject is None:
-        raise ValueError("subject cannot be None, it should be the subject of the mail.")
-    
+        raise ValueError(
+            "subject cannot be None, it should be the subject of the mail.")
+
     def sums(spl):
         spl = [_ for _ in spl if isinstance(_, str) if "??" not in _]
         return ";".join(spl)
@@ -151,14 +152,14 @@ def enumerate_feedback(df1, col_group="Groupe",
                 ct = dict(key=cn, value=v)
                 text = apply_template(template_col, ct, engine=engine)
                 content.append(text)
-            
+
         # main mail
         context = common.copy()
         context["begin"] = begin
         context["end"] = end
         context["content"] = "\n".join(content)
         mail = None
-        
+
         # rest of columns add to the context
         for k, v in zip(group.columns, row):
             if k == col_mail:
@@ -221,7 +222,7 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=[1000, 1500],
         df = pandas.read_excel("groupes_eleves_pitch.xlsx", sheetname=0)
 
         mailbox = pymmails.sender.create_smtp_server("gmail", "xavier.dupre", "****")
-        mails = enumerate_send_email(mailbox, sujet, "xavier.dupre@gmail.com", 
+        mails = enumerate_send_email(mailbox, sujet, "xavier.dupre@gmail.com",
                       df, exc=True, fLOG=fLOG, delay_sending=False,
                       begin=begin, end=end,
                       cc=cc, only=only, col_group="Groupe",
@@ -249,7 +250,8 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=[1000, 1500],
             params["fLOG"](loop, "send mail to ", mails)
         if mailbox is None:
             if "fLOG" not in params:
-                raise KeyError("fLOG should be send to the function as a parameter, it is used to display the message when mailbox is None")
+                raise KeyError(
+                    "fLOG should be send to the function as a parameter, it is used to display the message when mailbox is None")
             fLOG = params["fLOG"]
             fLOG("***********************")
             fLOG("fr={0}".format(fr))
@@ -259,7 +261,8 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=[1000, 1500],
             fLOG("body\n{0}".format(html))
             with open(r"c:\temp\i.html", "w", encoding="utf-8") as f:
                 f.write(html)
-            raise ValueError("mailbox is None, first mail is display and the process is stopped.")
+            raise ValueError(
+                "mailbox is None, first mail is display and the process is stopped.")
         res = send_email(mailbox, fr=fr, to=mails.split(";"), cc=cc, delay_sending=delay_sending,
                          body_html=html, body_text=text, subject=subject)
         if delay_sending:

@@ -139,7 +139,8 @@ def default_jenkins_jobs(filter=None, neg_filter=None):
                 ["code_beatrix [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
                     "code_beatrix [py34] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
                 # jupytalk
-                ("jupytalk <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(4-5) * * 1"),
+                ("jupytalk <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                 "H H(4-5) * * 1"),
                 ("jupytalk [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
                  None, dict(success_only=True)),
                 ["jupytalk [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
