@@ -1,12 +1,11 @@
 
 
-.. _blog-skew-join:
-
 .. blogpost::
     :title: Map Reduce et Skew Join
     :keywords: map reduce, skew join
     :date: 2015-07-17
     :categories: map-reduce
+    :lid: blog-skew-join
     
     .. index:: skew join
 

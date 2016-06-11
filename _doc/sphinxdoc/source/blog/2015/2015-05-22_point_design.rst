@@ -1,11 +1,11 @@
 
-.. _blog-design-program:
 
 .. blogpost::
     :title: Le design d'un code informatique
     :keywords: design, programmation
     :date: 2015-05-22
     :categories: programmation
+    :lid: blog-design-program
     
     On écrit rarement un programme au hasard et même si ça 
     paraît évident et logique, on fait du *design*.

@@ -1,11 +1,11 @@
 
-.. _blogpost_azure_file_attente:
 
 .. blogpost::
     :title: File d'attente sur Azure HD Insight
     :keywords: Hadoop, Azure, job, queue, HD Insight
     :date: 2016-01-27
     :categories: Azure
+    :lid: blogpost_azure_file_attente
     
     La plupart du temps, un job reste coincé dans la file d'attente
     car celle-ci est pleine. Voici un code pour s'en assurer

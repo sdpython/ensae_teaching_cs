@@ -1,12 +1,12 @@
 
 
-.. _blog-optimisation-contrainte:
 
 .. blogpost::
     :title: Optimisation avec contraintes, cvxopt, pulp, NLopt, ...
     :keywords: optimisation, contrainte, cvxopt, pulp, NLopt, picos
     :date: 2015-07-17
     :categories: optimisation, machine learning
+    :lid: blog-optimisation-contrainte
 
     Mon premier réflexe pour faire de l'optimisation avec contrainte était
     de me tourner vers 

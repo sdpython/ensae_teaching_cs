@@ -235,6 +235,7 @@ def publish_teachings_to_web(
                  "actuariat_python",
                  "code_beatrix",
                  "ensae_projects",
+                 "jupytalk",
                  "ensae_teaching_cs"],
         password=None,
         fLOG=print):
