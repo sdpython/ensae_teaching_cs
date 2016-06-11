@@ -41,7 +41,7 @@ from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from src.ensae_teaching_cs.faq.faq_web import webshot, webhtml
 
 
-class TestFaqWeb(unittest.TestCase):
+class TestLONGFaqWeb(unittest.TestCase):
 
     def test_selenium_html(self):
         fLOG(
