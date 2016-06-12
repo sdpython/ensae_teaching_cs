@@ -32,23 +32,25 @@ Ces notebooks parcourent différents exemples de visualisations avec différente
 .. toctree::
     :maxdepth: 1
     
-    notebooks/v_matplotlib
-    notebooks/v_seaborn
-    notebooks/v_lifelines
-    notebooks/v_networkx
-    notebooks/v_basemap
+    notebooks/im_matplotlib
+    notebooks/im_seaborn
+    notebooks/im_lifelines
+    notebooks/im_networkx
+    notebooks/im_basemap
+    notebooks/im_reportlab
     
 **javascript**
 
 .. toctree::
     :maxdepth: 1
     
-    notebooks/v_bokeh
-    notebooks/v_mpld3
-    notebooks/v_lightning_python
-    notebooks/v_bqplot
-    notebooks/v_plotly
-    notebooks/v_pygal
+    notebooks/js_bokeh
+    notebooks/js_mpld3
+    notebooks/js_lightning_python
+    notebooks/jspy_bqplot
+    notebooks/js_plotly
+    notebooks/js_pygal
+    notebooks/js_folium
     notebooks/v_datashader
 
 **combinaison**
