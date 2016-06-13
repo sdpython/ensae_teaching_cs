@@ -1,0 +1,38 @@
+
+
+.. blogpost::
+    :title: Nouvelles références, nouveaux articles
+    :keywords: Jupyter, magic commands, documenation
+    :date: 2016-06-13
+    :categories: references
+    
+    J'ajoute régulièrement des liens sur le site qui finissent un peu noyés dans ce qui existe déjà.
+    Voici les derniers liens ajoutés.
+    
+    **CPU**
+    
+    * `How CPU load averages work (and using them to triage webserver performance!) <http://jvns.ca/blog/2016/02/07/cpu-load-averages/>`_
+    * `TIL: clock skew exists (distributed system) <http://jvns.ca/blog/2016/02/10/til-clock-skew-exists/>`_
+    
+    **Python pour un Data Scientist**
+    
+    * `Pandas cookbook <https://github.com/jvns/pandas-cookbook>`_
+    * `L'apprentissage profond <https://www.college-de-france.fr/site/yann-lecun/course-2015-2016.htm>`_, Yann LeCun au Collège de France
+    * `12 Algorithms Every Data Scientist Should Know <https://datafloq.com/read/12-algorithms-every-data-scientist-should-know/2024>`_
+    * `10+2 Data Science Methods that Every Data Scientist Should Know in 2016 <http://tjo-en.hatenablog.com/entry/2016/04/18/190000>`_
+    * `you can take the derivative of a regular expression?! <http://jvns.ca/blog/2016/04/25/how-regular-expressions-go-fast/>`_
+    * `"Why Should I Trust You?" Explaining the Predictions of Any Classifier <http://arxiv.org/pdf/1602.04938v1.pdf>`_
+    * `How to trick a neural network into thinking a panda is a vulture <https://codewords.recurse.com/issues/five/why-do-neural-networks-think-a-panda-is-a-vulture>`_
+
+    **Apprentissage de Python**
+    
+    * `The Hitchhiker's Guide to Python! <http://docs.python-guide.org/en/latest/>`_
+    
+    **Parler en public**
+    
+    * `Ideas for making better conference talks & conferences <http://jvns.ca/blog/2016/06/06/make-better-conference-talks/>`_
+
+    **Economie**
+    
+    * `Les algorithmes peuvent creuser les inégalités et saper la démocratie <http://rue89.nouvelobs.com/2016/06/12/les-algorithmes-peuvent-creuser-les-inegalites-saper-democratie-264275>`_,
+      ou *Weapons of math destruction* (voir `blog <https://mathbabe.org/>`_)

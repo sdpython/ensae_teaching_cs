@@ -175,6 +175,7 @@ Références
 * `Quelques précisions sur les projets informatiques <http://www.xavierdupre.fr/blog/2013-02-03_nojs.html>`_
 * `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_ 
 * `Frameworks for games in Python <http://www.xavierdupre.fr/blog/2014-01-01_nojs.html>`_
+* `Ideas for making better conference talks & conferences <http://jvns.ca/blog/2016/06/06/make-better-conference-talks/>`_ *(2016/06)*
     
 **Resources**
 
