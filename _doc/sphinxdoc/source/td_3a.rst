@@ -289,6 +289,7 @@ Bibliographie
 * `Chapel <http://chapel.cray.com/>`_
 * `pyCUDA <https://developer.nvidia.com/pycuda>`_ (`A Monte Carlo Option Pricer <http://nbviewer.jupyter.org/gist/harrism/835a8ca39ced77fe751d>`_ avec `numbapro <http://docs.continuum.io/numbapro/>`_)
 * `Mesos <http://mesos.apache.org/>`_, `Elixi <https://github.com/ceteri/exelixi/wiki>`_
+* `amazon-dsstne <https://github.com/amznlabs/amazon-dsstne>`_, moteur de recommandation d'Amazon
 
 **Revue de presse**
 

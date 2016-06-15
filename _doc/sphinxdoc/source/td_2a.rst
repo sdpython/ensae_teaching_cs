@@ -224,7 +224,8 @@ Bibliographie
 * `10+2 Data Science Methods that Every Data Scientist Should Know in 2016 <http://tjo-en.hatenablog.com/entry/2016/04/18/190000>`_ *(2016/06)*
 * `you can take the derivative of a regular expression?! <http://jvns.ca/blog/2016/04/25/how-regular-expressions-go-fast/>`_ *(2016/06)*
 * `"Why Should I Trust You?" Explaining the Predictions of Any Classifier <http://arxiv.org/pdf/1602.04938v1.pdf>`_ *(2016/06)*
-* `How to trick a neural network into thinking a panda is a vulture <https://codewords.recurse.com/issues/five/why-do-neural-networks-think-a-panda-is-a-vulture>`_ (*2016/06)*
+* `How to trick a neural network into thinking a panda is a vulture <https://codewords.recurse.com/issues/five/why-do-neural-networks-think-a-panda-is-a-vulture>`_ *(2016/06)*
+* `Matrix Factorization: A Simple Tutorial and Implementation in Python <http://www.quuxlabs.com/blog/2010/09/matrix-factorization-a-simple-tutorial-and-implementation-in-python/>`_ *(2016/06)*
 
 
 **Tutorial**
