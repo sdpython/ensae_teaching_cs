@@ -27,97 +27,104 @@ Le cours est évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 Notions et concepts
 +++++++++++++++++++
     
-- :ref:`Séance 1 :  <td3acenoncesession1rst>`  (:ref:`correction <td3acorrectionsession1rst>`)
-    * `liste chaînées <http://fr.wikipedia.org/wiki/Liste_cha%C3%AEn%C3%A9e>`_, `stack <http://fr.wikipedia.org/wiki/Pile_(informatique)>`_, `queue <http://en.wikipedia.org/wiki/Queue_(abstract_data_type)>`_, `dictionnaire <http://en.wikipedia.org/wiki/Associative_array>`_
-    * graphe `BFS <http://en.wikipedia.org/wiki/Breadth-first_search>`_, `DFS <http://en.wikipedia.org/wiki/Depth-first_search>`_
-    * `merge sort <http://en.wikipedia.org/wiki/Merge_sort>`_, `quicksort <http://en.wikipedia.org/wiki/Quicksort>`_, `heapsort <http://en.wikipedia.org/wiki/Heapsort>`_, `max heap <http://en.wikipedia.org/wiki/Min-max_heap>`_
-- Séance 2
-    * threads, application multi-threadées
-    * variables globales, synchronisation
-- Séance 3
-    * Stockage de données, consistence, persistence, impossibilité de faire des rollbacks, corruption, 
-      absence de garanties sur la manière dont sont stockés les champs (exemple formats de date), pas d'index, etc.
-    * Introduction du SQL, type de requêtes, 
-      Notion de transaction, d'atomicité, capacité de rollback, garanties ACID, 
-      difficultés dans un SQL réparti (atomicité des transactions, double commit protocol)
-    * Systèmes NoSQL, Key-Value Pair Storage, transactionnalité multi-entités dans un Key-Value pair, 
-      écriture optimiste avec des timestamps.
-    * Base de données orientées Document, Bases de données orientées Graph
-    * Map/Reduce. Notions de mappers, de reducers, de calculs embarassingly parallel. 
-      problèmes des machines mortes, des stragglers, tradeof calcul/transfert des données,
-      exemples d'applications de MapReduce,
-      exemples d'algos difficilement parallélisables,
-    * Hadoop, Azure
-    * Queues distribuées.
-- Séance 4-5
-	* SQL / NoSQL / clé-valeur / document
-		* Description d'un document (notion de structures, format json, xml)
-		* SQL : 
-			* notion d'index
-			* Ne scale pas pour la parallélisation d'un grande nombre de recherches sur des données modifiées en permanence (mais à une moindre fréquence)
-				* Cohérences des données
-				* ACID
-			* Traduction d'une base de documents en un schéma relationnel parfois complexe lorsque les documents ont une structure arborescente (plein de tables)
-			* Récupérer un document entier nécessite plein de lookups
-		* NoSQL
-			* Clé/valeur --> simple et recherche très simple
-			* Valeur = donnée simple comme document complexe
-			* Recherche rapide sur les clés
-			* Lente sur la plupart du reste
-			* Efficace lorsqu'on veut récupérer la totalité d'un document
-		* Autre type d'indexation
-			* Trie
-	* Montée en charge, Stratégie de répartition de charges sur plusieurs machines
-		* Dépend des données
-		* Dépend des usages
-		* Exemple
-			* Cas d'un système de auto-complétion (usage standard sur un site internet)
-			* Division en n machine --> comment faire
-		* Notion de hash --> distribution uniforme
-		* Transformée de Burrows-Wheeler (BWT) 
-        * Cache
-	* Maintenance des données
-		* Lecture et écriture simultanée
-		* Conflit dans les mises à jour
-		* Parler Section critiques --> très lent
-		* Timestamp (Lamport) : vision optimiste
-			* Récupération de données (données + timestamp)
-			* Écriture si timestamp identique
-			* Impossibilité d'une heure commune dans un cluster
-		* Exemple : index d'un moteur de recherche
-			* Données réparties sur plusieurs machines (résistante à la charge)
-			* Même données répliquées sur plusieurs machines (résistance aux pannes)
-			* Mise à jour d'un document ? Qui a la version la plus récente ? --> timestamp
-	* Hadoop
-		* Distribution des calculs
-		* Notion de mapper, reducer
-		* Avantage
-			* Répartition efficace si calculs indépendant d'une ligne à l'autre
-		* Inconvénient
-			* Grosses consommations réseau, I/O
-			* Pas de communication entre machine
-			* Peu de mémoire pour chaque traitement
-		* Java, langage évolué, PIG, HIVE, logique proche du SQL
-		* Distinguer le système de fichiers distribué (HDFS) du moteur de distribution de job
-		* Pas de communication entre machine --> algorithme sur les graphes pas efficaces
-		* Mahout
-		* Accès très lent aux données --> pas d'index
-		* Ordre des lignes dans une table imprévisible
-		* Langage fonctionnels très adaptés
-		* YARN
-	* Spark/Graphlab
-		* RDD --> effectuer plus de calculs en mémoire
-		* Dataframe --> SFrame
-		* Cours de Jérémie
-		* MLlib
-		* Langage evolué --> compilation / optimisation / allocation de machines
-    * distribuer un traitement de données à différent niveaux
-        * avec un langage haut niveau (comme PIG)
-        * utilisation du java pour distribuer un job de façon plus optimisée
-        * distribution personnalisée d'un traitement avec des librairies bas niveau (type MPI)
-    * algorithme distribué, descente de gradient distributé
-        * exemple des `k-means <http://fr.wikipedia.org/wiki/Algorithme_des_k-moyennes>`_ distribué
-        * `GPU <http://fr.wikipedia.org/wiki/Processeur_graphique>`_
+:ref:`Séance 1 :  <td3acenoncesession1rst>`  (:ref:`correction <td3acorrectionsession1rst>`)
+
+* `liste chaînées <http://fr.wikipedia.org/wiki/Liste_cha%C3%AEn%C3%A9e>`_, `stack <http://fr.wikipedia.org/wiki/Pile_(informatique)>`_, `queue <http://en.wikipedia.org/wiki/Queue_(abstract_data_type)>`_, `dictionnaire <http://en.wikipedia.org/wiki/Associative_array>`_
+* graphe `BFS <http://en.wikipedia.org/wiki/Breadth-first_search>`_, `DFS <http://en.wikipedia.org/wiki/Depth-first_search>`_
+* `merge sort <http://en.wikipedia.org/wiki/Merge_sort>`_, `quicksort <http://en.wikipedia.org/wiki/Quicksort>`_, `heapsort <http://en.wikipedia.org/wiki/Heapsort>`_, `max heap <http://en.wikipedia.org/wiki/Min-max_heap>`_
+
+**Séance 2**
+
+* threads, application multi-threadées
+* variables globales, synchronisation
+
+**Séance 3**
+
+* Stockage de données, consistence, persistence, impossibilité de faire des rollbacks, corruption, 
+  absence de garanties sur la manière dont sont stockés les champs (exemple formats de date), pas d'index, etc.
+* Introduction du SQL, type de requêtes, 
+  Notion de transaction, d'atomicité, capacité de rollback, garanties ACID, 
+  difficultés dans un SQL réparti (atomicité des transactions, double commit protocol)
+* Systèmes NoSQL, Key-Value Pair Storage, transactionnalité multi-entités dans un Key-Value pair, 
+  écriture optimiste avec des timestamps.
+* Base de données orientées Document, Bases de données orientées Graph
+* Map/Reduce. Notions de mappers, de reducers, de calculs embarassingly parallel. 
+  problèmes des machines mortes, des stragglers, tradeof calcul/transfert des données,
+  exemples d'applications de MapReduce,
+  exemples d'algos difficilement parallélisables,
+* Hadoop, Azure
+* Queues distribuées.
+
+**Séance 4-5**
+
+* SQL / NoSQL / clé-valeur / document
+    * Description d'un document (notion de structures, format json, xml)
+    * SQL : 
+        * notion d'index
+        * Ne scale pas pour la parallélisation d'un grande nombre de recherches sur des données modifiées en permanence (mais à une moindre fréquence)
+            * Cohérences des données
+            * ACID
+        * Traduction d'une base de documents en un schéma relationnel parfois complexe lorsque les documents ont une structure arborescente (plein de tables)
+        * Récupérer un document entier nécessite plein de lookups
+    * NoSQL
+        * Clé/valeur --> simple et recherche très simple
+        * Valeur = donnée simple comme document complexe
+        * Recherche rapide sur les clés
+        * Lente sur la plupart du reste
+        * Efficace lorsqu'on veut récupérer la totalité d'un document
+    * Autre type d'indexation
+        * Trie
+* Montée en charge, Stratégie de répartition de charges sur plusieurs machines
+    * Dépend des données
+    * Dépend des usages
+    * Exemple
+        * Cas d'un système de auto-complétion (usage standard sur un site internet)
+        * Division en n machine --> comment faire
+    * Notion de hash --> distribution uniforme
+    * Transformée de Burrows-Wheeler (BWT) 
+    * Cache
+* Maintenance des données
+    * Lecture et écriture simultanée
+    * Conflit dans les mises à jour
+    * Parler Section critiques --> très lent
+    * Timestamp (Lamport) : vision optimiste
+        * Récupération de données (données + timestamp)
+        * Écriture si timestamp identique
+        * Impossibilité d'une heure commune dans un cluster
+    * Exemple : index d'un moteur de recherche
+        * Données réparties sur plusieurs machines (résistante à la charge)
+        * Même données répliquées sur plusieurs machines (résistance aux pannes)
+        * Mise à jour d'un document ? Qui a la version la plus récente ? --> timestamp
+* Hadoop
+    * Distribution des calculs
+    * Notion de mapper, reducer
+    * Avantage
+        * Répartition efficace si calculs indépendant d'une ligne à l'autre
+    * Inconvénient
+        * Grosses consommations réseau, I/O
+        * Pas de communication entre machine
+        * Peu de mémoire pour chaque traitement
+    * Java, langage évolué, PIG, HIVE, logique proche du SQL
+    * Distinguer le système de fichiers distribué (HDFS) du moteur de distribution de job
+    * Pas de communication entre machine --> algorithme sur les graphes pas efficaces
+    * Mahout
+    * Accès très lent aux données --> pas d'index
+    * Ordre des lignes dans une table imprévisible
+    * Langage fonctionnels très adaptés
+    * YARN
+* Spark/Graphlab
+    * RDD --> effectuer plus de calculs en mémoire
+    * Dataframe --> SFrame
+    * Cours de Jérémie
+    * MLlib
+    * Langage evolué --> compilation / optimisation / allocation de machines
+* distribuer un traitement de données à différent niveaux
+    * avec un langage haut niveau (comme PIG)
+    * utilisation du java pour distribuer un job de façon plus optimisée
+    * distribution personnalisée d'un traitement avec des librairies bas niveau (type MPI)
+* algorithme distribué, descente de gradient distributé
+    * exemple des `k-means <http://fr.wikipedia.org/wiki/Algorithme_des_k-moyennes>`_ distribué
+    * `GPU <http://fr.wikipedia.org/wiki/Processeur_graphique>`_
         
 
 Séances pratiques, Map Reduce
@@ -132,46 +139,51 @@ du langage `PIG-latin <http://en.wikipedia.org/wiki/Pig_Latin>`_ dont la logique
 ressemble beaucoup à celle du `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_.
 Les outils Python [#fp1]_ simplifient la communication avec le cluster.
 
-- Séance 6 : premier job Map/Reduce
-    * `ENSAE 3A - Map/Reduce en pratique <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_
-    * Exercice recommandé : `SQL Magic Commands with SQLite in a Notebook <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/pyensae_sql_magic.html>`_
-    * Travaux pratiques
-        * Cloudera - :ref:`Séance 6 : premiers pas <td3acenoncesession6rst>`  (:ref:`correction <td3acorrectionsession6rst>`)
-        * Azure HDInsight - :ref:`Séance 6 : premiers pas <td3acenoncesession6brst>`  (:ref:`correction <td3acorrectionsession6brst>`)
-    * Contenu
-        * manipulation de fichiers avec `HDFS <http://hadoop.apache.org/docs/r1.2.1/hdfs_design.html>`_
-        * premier job avec `PIG-latin <https://pig.apache.org/docs/r0.7.0/piglatin_ref2.html>`_ [#fp2]_
-        * parallèle entre la syntaxe `PIG <http://pig.apache.org/docs/r0.12.1/basic.html>`_ et `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_
-- Séance 7 : PIG, JSON, streaming
-    * Le langage PIG est très proche du SQL et donc limité, le streaming permet de l'étendre.
-    * :ref:`PIG, JSON, streaming <td3acenoncesession7arst>`  (:ref:`correction <td3acorrectionsession7arst>` avec Cloudera,
-      :ref:`correction <td3acorrectionsession7azrst>` avec Azure)
-    * Les deux corrections présentent deux façons de faire du streaming, la seconde méthode (correction avec Azure)
-      est plus rapide car le Python/`Jython <http://www.jython.org/>`_ est transformé en Java et non interprété
-      (Java est le langage de Hadoop/PIG).
-      Cette solution est aussi accessible sous Cloudera :
-      `Writing Jython UDFs <http://archive.cloudera.com/cdh5/cdh/5/pig-0.12.0-cdh5.0.3/udf.html#jython-udfs>`_.
-    * :ref:`td3acenoncesession7paramsrst` sur Cloudera (:ref:`correction <td3acorrectionsession7paramsrst>`),
-      :ref:`td3acenoncesession7paramsazrst` sur Azure (:ref:`correction <td3acorrectionsession7paramsazrst>`)      
-- Séance 8 : données antipathiques
-    * particularité de map/reduce
-        * analogie avec les itérateurs (langage fonctionnels)
-        * non conservation de l'ordre des lignes lors d'un traitement
-        * algorithmes des graphes contre-indiqués, cas des composantes connexes
-        * synchroniser l'heure des machines est un problème difficile
-        * limite du Monte Carlo sur map reduce (pseudo aléatoire distribué est compliqué,
-          qu'en est-il de la fusion de deux séquences pseudo aléatoires ayant commencé avec la même seed ?, 
-          lorsqu'on distribue, on crée de nombreux processus qui commence avec la même seed si on n'y prend pas garde,
-          impossibilité de reproduire les résultats)
-    * problèmes récurrents de map/reduce
-        * pas mal d'écriture sur disque, 
-        * éviter les sort, 
-        * possible explosion des stream intermédiaires, 
-        * gestion de la mémoire au niveau des mapper/reducer, 
-        * difficulté avec les algorithmes itératifs
-    * skewed streams
-    * :ref:`Reservoir Sampling <td3acenoncereservoirsamplingrst>` (:ref:`correction <td3acorrectionreservoirsamplingrst>`)
-    * :ref:`Appariement distribué et données antipathiques <td3acenoncesession8arst>` (:ref:`correction, première partie <td3acorrectionsession8arst>`)
+**Séance 6 : premier job Map/Reduce**
+
+* `ENSAE 3A - Map/Reduce en pratique <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_
+* Exercice recommandé : `SQL Magic Commands with SQLite in a Notebook <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/pyensae_sql_magic.html>`_
+* Travaux pratiques
+    * Cloudera - :ref:`Séance 6 : premiers pas <td3acenoncesession6rst>`  (:ref:`correction <td3acorrectionsession6rst>`)
+    * Azure HDInsight - :ref:`Séance 6 : premiers pas <td3acenoncesession6brst>`  (:ref:`correction <td3acorrectionsession6brst>`)
+* Contenu
+    * manipulation de fichiers avec `HDFS <http://hadoop.apache.org/docs/r1.2.1/hdfs_design.html>`_
+    * premier job avec `PIG-latin <https://pig.apache.org/docs/r0.7.0/piglatin_ref2.html>`_ [#fp2]_
+    * parallèle entre la syntaxe `PIG <http://pig.apache.org/docs/r0.12.1/basic.html>`_ et `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_
+
+**Séance 7 : PIG, JSON, streaming**
+
+* Le langage PIG est très proche du SQL et donc limité, le streaming permet de l'étendre.
+* :ref:`PIG, JSON, streaming <td3acenoncesession7arst>`  (:ref:`correction <td3acorrectionsession7arst>` avec Cloudera,
+  :ref:`correction <td3acorrectionsession7azrst>` avec Azure)
+* Les deux corrections présentent deux façons de faire du streaming, la seconde méthode (correction avec Azure)
+  est plus rapide car le Python/`Jython <http://www.jython.org/>`_ est transformé en Java et non interprété
+  (Java est le langage de Hadoop/PIG).
+  Cette solution est aussi accessible sous Cloudera :
+  `Writing Jython UDFs <http://archive.cloudera.com/cdh5/cdh/5/pig-0.12.0-cdh5.0.3/udf.html#jython-udfs>`_.
+* :ref:`td3acenoncesession7paramsrst` sur Cloudera (:ref:`correction <td3acorrectionsession7paramsrst>`),
+  :ref:`td3acenoncesession7paramsazrst` sur Azure (:ref:`correction <td3acorrectionsession7paramsazrst>`)      
+
+**Séance 8 : données antipathiques**
+
+* particularité de map/reduce
+    * analogie avec les itérateurs (langage fonctionnels)
+    * non conservation de l'ordre des lignes lors d'un traitement
+    * algorithmes des graphes contre-indiqués, cas des composantes connexes
+    * synchroniser l'heure des machines est un problème difficile
+    * limite du Monte Carlo sur map reduce (pseudo aléatoire distribué est compliqué,
+      qu'en est-il de la fusion de deux séquences pseudo aléatoires ayant commencé avec la même seed ?, 
+      lorsqu'on distribue, on crée de nombreux processus qui commence avec la même seed si on n'y prend pas garde,
+      impossibilité de reproduire les résultats)
+* problèmes récurrents de map/reduce
+    * pas mal d'écriture sur disque, 
+    * éviter les sort, 
+    * possible explosion des stream intermédiaires, 
+    * gestion de la mémoire au niveau des mapper/reducer, 
+    * difficulté avec les algorithmes itératifs
+* skewed streams
+* :ref:`Reservoir Sampling <td3acenoncereservoirsamplingrst>` (:ref:`correction <td3acorrectionreservoirsamplingrst>`)
+* :ref:`Appariement distribué et données antipathiques <td3acenoncesession8arst>` (:ref:`correction, première partie <td3acorrectionsession8arst>`)
 
 
 

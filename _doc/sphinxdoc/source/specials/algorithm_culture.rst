@@ -29,6 +29,33 @@ La mémoire n'est plus un problème. Le temps de calcul l'est toujours.
 * :math:`n \leqslant 10^7` : coût :math:`\leqslant O(n \ln (n))`
 * :math:`n > 10^8` : coût :math:`\leqslant O(n)`
 
+Comprendre le coût d'un algorithme
+++++++++++++++++++++++++++++++++++
+
+Le coût de nombreux algorithmes non NP-complet se décomposer comme suit : 
+:math:`O(n^\alpha) O( \ln^\beta n ) O(1)`. Chaque terme correspond à :
+
+* :math:`O(n^\alpha)` avec :math:`\alpha \in \mathbb{N} > 1` : un probème combinatoire se résume à un algorithme
+  de coût quadratique, cela est dû à la `programmation dynamique <https://fr.wikipedia.org/wiki/Programmation_dynamique>`_.
+  Dans la plupart des cas, on obtient ce coût après avoir transformé le problème dans une forme
+  récurrente : on écrit ce qu'il faut faire pour calculer la solution avec *n+1* éléments
+  sachant qu'on connaît la solution avec *n* éléments.
+* :math:`O(\n^\beta n)` avec :math:`\beta \in \mathbb{N} > 0`, 
+  coût `dichotomique <https://fr.wikipedia.org/wiki/Recherche_dichotomique>`_, 
+  on coupe le problème en deux à chaque itération.
+* :math:`O(1)` : `table de hashage <https://fr.wikipedia.org/wiki/Table_de_hachage>`_
+
+Dès qu'on sort des puissances entières, il faut s'attendre à un algorithme non trivial
+tel que l'`algorithme de Strassen <https://fr.wikipedia.org/wiki/Algorithme_de_Strassen>`_
+pour la multiplication de matrice (:math:`n^{2.807}), ou celui
+de `Marco Bodrato <http://www.bodrato.it/papers/>`_ 
+(`A Strassen-like Matrix Multiplication Suited for Squaring and Higher Power Computation <http://marco.bodrato.it/papers/Bodrato2010-StrassenLikeMatrixMultiplicationForSquares.pdf>`_).
+
+Le coût minimal d'un algorithme de tri est :math:`O(n \ln n)` dans le cas générique 
+c'est-à-dire sans hypothèse sur les données. En revanche, dans le cas où les données
+sont issues d'un ensemble fini de cardinal *m*, le meilleur tri revient à calculer un histogramme
+et est de coût inférieur à :math:`O( \inf \{ n \ln n, m \} )`.
+
 
 Mot-clé
 +++++++
@@ -41,7 +68,8 @@ On peut l'utiliser pour trouver les mots les plus proches d'un autre
 à condition que ces mots ne soient pas nombreux (:math:`\sim 10^4`).
 Que faire quand ils sont un milliard ? Ce serait plus facile
 si les mots étaient représentés par des vecteurs (voir 
-`word2vec <https://pypi.python.org/pypi/word2vec>`_).
+`word2vec <https://pypi.python.org/pypi/word2vec>`_,
+`Auto Encoders <https://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_).
 
 On veut comparer deux modèles de ranking. 
 On veut pouvoir comparer visuellement les résultats. Quel ordre
@@ -50,6 +78,9 @@ de deux moteurs de recherche de telle sorte que l'oeil
 humain saisisse rapidement la différence ?
 
 Tout ce qui suit vous donnera des idées.
+
+Catalogue
++++++++++
 
     
 * Tri
@@ -89,7 +120,9 @@ Tout ce qui suit vous donnera des idées.
     * `PageRank <http://fr.wikipedia.org/wiki/PageRank>`_ **algo**
     * `Appariement <http://fr.wikipedia.org/wiki/Couplage_(th%C3%A9orie_des_graphes)>`_, 
       `Edmonds Blossum <http://en.wikipedia.org/wiki/Blossom_algorithm>`_, 
-      `Hopcroft–Karp <http://en.wikipedia.org/wiki/Hopcroft%E2%80%93Karp_algorithm>`_ **déf/algo** (ou couplage)
+      `Hopcroft–Karp <http://en.wikipedia.org/wiki/Hopcroft%E2%80%93Karp_algorithm>`_,
+      `Blossom 5 <http://pub.ist.ac.at/~vnk/papers/blossom5.pdf>`_,
+      **déf/algo** (ou couplage)
     * `Algorithme de Gale-Shapley <http://fr.wikipedia.org/wiki/Probl%C3%A8me_des_mariages_stables>`_, **algo**, problème des mariages stables
     * `distance de Robinson–Foulds <https://en.wikipedia.org/wiki/Robinson%E2%80%93Foulds_metric>`_, **algo**, distance entre deux arbres
 * Texte
@@ -108,6 +141,7 @@ Tout ce qui suit vous donnera des idées.
     * `Simplexe <http://fr.wikipedia.org/wiki/Simplexe>`_ **algo**
     * `Woodbury matrix identity <http://en.wikipedia.org/wiki/Woodbury_matrix_identity>`_ **algo**
     * `Blockwise inversion <http://en.wikipedia.org/wiki/Invertible_matrix#Blockwise_inversion>`_ **algo**
+    * `Toom-Cook <https://en.wikipedia.org/wiki/Toom%E2%80%93Cook_multiplication>`_ **algo**
 * Programmation
     * `itérateur <http://fr.wikipedia.org/wiki/It%C3%A9rateur>`_ (mot-clé `yield <http://sametmax.com/comment-utiliser-yield-et-les-generateurs-en-python/>`_) **déf**
     * `mémoïzation <http://fr.wikipedia.org/wiki/M%C3%A9mo%C3%AFsation>`_ **déf** (voir aussi `Mémoïzation d'une fonction Python <http://sametmax.com/memoization-dune-fonction-python/>`_)

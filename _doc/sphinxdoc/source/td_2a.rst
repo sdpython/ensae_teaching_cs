@@ -46,107 +46,96 @@ Le cours est évalué avec un :ref:`projet informatique <l-projinfo2a>`.
 TD - numpy pandas matplotlib
 ++++++++++++++++++++++++++++
 
-- **TD 1 : DataFrame** 
+**TD 1 : DataFrame** : :ref:`TD 1 : Données et Graphes <td2acenoncesession1rst>` (:ref:`correction <td2acorrectionsession1rst>`)
 
-    - :ref:`TD 1 : Données et Graphes <td2acenoncesession1rst>` (:ref:`correction <td2acorrectionsession1rst>`)
-    
-        - import/export de données dans un DataFrame
-        - manipulation selon une logique SQL
-        - utilité des index
-        - lambda function
-        - premiers graphiques
+- import/export de données dans un DataFrame
+- manipulation selon une logique SQL
+- utilité des index
+- lambda function
+- premiers graphiques
         
-- **TD 2 : calcul matriciel et astuces**
+**TD 2 : calcul matriciel et astuces**
 
-    - :ref:`TD 2A : Calcul Matriciel, Optimisation <td2acenoncesession2arst>` (:ref:`correction <td2acorrectionsession2arst>`)
-    - :ref:`TD 2B : Python autres langages <td2acenoncesession2brst>` (:ref:`correction <td2acorrectionsession2brst>`)
-    - :ref:`TD 2C : Jupyter et commandes magiques <td2acenoncesession2crst>` (:ref:`correction <td2acorrectionsession2crst>`)
-    - :ref:`TD 2D : Jupyter et calcul distribué <td2acenoncesession2drst>` (:ref:`correction <td2acorrectionsession2drst>`)
-    - :ref:`TD 2E : Sérialisation <td2acenoncesession2erst>` (:ref:`correction <td2acorrectionsession2erst>`) (avec le module `pickle <https://docs.python.org/3.4/library/pickle.html>`_)
+- :ref:`TD 2A : Calcul Matriciel, Optimisation <td2acenoncesession2arst>` (:ref:`correction <td2acorrectionsession2arst>`)
+- :ref:`TD 2B : Python autres langages <td2acenoncesession2brst>` (:ref:`correction <td2acorrectionsession2brst>`)
+- :ref:`TD 2C : Jupyter et commandes magiques <td2acenoncesession2crst>` (:ref:`correction <td2acorrectionsession2crst>`)
+- :ref:`TD 2D : Jupyter et calcul distribué <td2acenoncesession2drst>` (:ref:`correction <td2acorrectionsession2drst>`)
+- :ref:`TD 2E : Sérialisation <td2acenoncesession2erst>` (:ref:`correction <td2acorrectionsession2erst>`) (avec le module `pickle <https://docs.python.org/3.4/library/pickle.html>`_)
 
 TD - machine learning
 +++++++++++++++++++++
 
 
-- **TD 3-4 : machine learning, visualisation** (*modifié en 2015*)
+**TD 3-4 : machine learning, visualisation** (*modifié en 2015*)
 
-    - :ref:`TD 3A : Statistiques descriptives <td2acenoncesession3arst>` (:ref:`correction <td2acorrectionsession3arst>`)
-    - Présentation - cours de `Gaël Varoquaux <http://gael-varoquaux.info/>`_ : `notes de lectures <https://github.com/GaelVaroquaux/sklearn_ensae_course>`_,
-      autres liens :
-      
-      - machine learning et `scikit-learn <http://scikit-learn.org/stable/>`_
-        (`tutoriels sur scikit-learn <http://nbviewer.jupyter.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_),
-        quelques extraits :
-        
-        - Par définition les plus proches voisins ne font pas d'erreur sur la base d'apprentissage, l'apprentissage consiste à forcer le modèle à faire des erreurs.
-        - `Overfitting <http://en.wikipedia.org/wiki/Overfitting>`_ et `régularisation <http://en.wikipedia.org/wiki/Regularization_(mathematics)>`_
-        - Erreur `L2 <http://en.wikipedia.org/wiki/Lp_space>`_ et pénalisation `L1 <http://fr.wikipedia.org/wiki/Espace_L1>`_
-        - `RandomizedPCA <http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.RandomizedPCA.html>`_, `GridSearch <http://scikit-learn.org/stable/modules/grid_search.html>`_, `LassoCV <http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html>`_
-        - `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_      
-        
-    - :ref:`TD 3B : Arbres de décision et Random Forests <td2acenoncesession3brst>`  (:ref:`correction <td2acorrectionsession3brst>`)    
-    - voir également :ref:`Travailleur les features ou changer de modèle <mlfeaturesmodelrst>`
-    - :ref:`TD 4A : Machine Learning et Marketting <td2acenoncesession4arst>` (:ref:`correction <td2acorrectionsession4arst>`)
+- :ref:`TD 3A : Statistiques descriptives <td2acenoncesession3arst>` (:ref:`correction <td2acorrectionsession3arst>`)
+- Présentation - cours de `Gaël Varoquaux <http://gael-varoquaux.info/>`_ : `notes de lectures <https://github.com/GaelVaroquaux/sklearn_ensae_course>`_,
+  autres liens :
+  - machine learning et `scikit-learn <http://scikit-learn.org/stable/>`_
+    (`tutoriels sur scikit-learn <http://nbviewer.jupyter.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_),
+    quelques extraits :
+    - Par définition les plus proches voisins ne font pas d'erreur sur la base d'apprentissage, l'apprentissage consiste à forcer le modèle à faire des erreurs.
+    - `Overfitting <http://en.wikipedia.org/wiki/Overfitting>`_ et `régularisation <http://en.wikipedia.org/wiki/Regularization_(mathematics)>`_
+    - Erreur `L2 <http://en.wikipedia.org/wiki/Lp_space>`_ et pénalisation `L1 <http://fr.wikipedia.org/wiki/Espace_L1>`_
+    - `RandomizedPCA <http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.RandomizedPCA.html>`_, `GridSearch <http://scikit-learn.org/stable/modules/grid_search.html>`_, `LassoCV <http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html>`_
+    - `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_      
     
-        - machine learning
-        - `bokeh <http://bokeh.pydata.org/en/latest/>`_, `pygal <http://www.pygal.org/en/latest/>`_
-        - `interactions <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/notebooks/having_a_form_in_a_notebook.html#havingaforminanotebookrst>`_
-        - `d3.js <http://d3js.org/>`_        
-        
-    - `TD 4B : Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
-      (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_),
-      ce notebook présente un moyen de faire une carte géographique, des graphes zoomables
-    - `TD 4C : Apprendre la note d'un expert en vin <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_enonce.html>`_
-      (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_correction.html>`_),
-      courbe ROC, précision, rappel
-    - :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
-    - :ref:`question_projet_2014`
+- :ref:`TD 3B : Arbres de décision et Random Forests <td2acenoncesession3brst>`  (:ref:`correction <td2acorrectionsession3brst>`)    
+- voir également :ref:`Travailleur les features ou changer de modèle <mlfeaturesmodelrst>`
+- :ref:`TD 4A : Machine Learning et Marketting <td2acenoncesession4arst>` (:ref:`correction <td2acorrectionsession4arst>`)
+    - machine learning
+    - `bokeh <http://bokeh.pydata.org/en/latest/>`_, `pygal <http://www.pygal.org/en/latest/>`_
+    - `interactions <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/notebooks/having_a_form_in_a_notebook.html#havingaforminanotebookrst>`_
+    - `d3.js <http://d3js.org/>`_        
+    
+- `TD 4B : Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
+  (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_),
+  ce notebook présente un moyen de faire une carte géographique, des graphes zoomables
+- `TD 4C : Apprendre la note d'un expert en vin <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_enonce.html>`_
+  (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_correction.html>`_),
+  courbe ROC, précision, rappel
+- :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
+- :ref:`question_projet_2014`
     
 
 TD - big data sans cluster
 ++++++++++++++++++++++++++
 
     
-- **TD 5 : grosses données** (**nouveau en 2015**)
+**TD 5 : grosses données** (**nouveau en 2015**)
 
-    * Support de cours (*Nicolas Rousset*)
-        
-        * :ref:`Données non structurées, programmation fonctionnelle : introduction <seance5introetjsonrst>`
-        * :ref:`programmation fonctionnelle <seance5progfonctionnellerst>`
-        * :ref:`dask <seance5daskrst>`
-        
-    * :ref:`TD 5 : programmation fonctionnelle sur des données Twitter <td2acenoncesession5donneesnonstructureesetprogrammationfonctionnellerst>`  
-      (:ref:`correction <td2acorrectionsession5donneesnonstructureesetprogrammationfonctionnellecorrigerst>`)
+* Support de cours (*Nicolas Rousset*)
+    * :ref:`Données non structurées, programmation fonctionnelle : introduction <seance5introetjsonrst>`
+    * :ref:`programmation fonctionnelle <seance5progfonctionnellerst>`
+    * :ref:`dask <seance5daskrst>`
+    
+* :ref:`TD 5 : programmation fonctionnelle sur des données Twitter <td2acenoncesession5donneesnonstructureesetprogrammationfonctionnellerst>`  
+  (:ref:`correction <td2acorrectionsession5donneesnonstructureesetprogrammationfonctionnellecorrigerst>`)
       
       
 Algorithmique ludique
 +++++++++++++++++++++
     
-- **TD 6 : algorithmes et puzzles**
+**TD 6 : algorithmes et puzzles**
 
-    * Présentations
+* Présentations
+    * `programmation dynamique <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance2.pdf>`_
+    * `graphes et algorithmes <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance3.pdf>`_
     
-        * `programmation dynamique <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance2.pdf>`_
-        * `graphes et algorithmes <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance3.pdf>`_
+* notebooks
+    * :ref:`TD 6A : Culture algorithmique <td2acenoncesession6arst>` (:ref:`correction <td2acorrectionsession6arst>`)
+        - présentation `Eléments d'Algorithmique <http://www.xavierdupre.fr/enseignement/complements/Seance4_algorithme.pdf>`_
+        - `Machine learning et algorithme <http://www.xavierdupre.fr/blog/2014-10-11_nojs.html>`_
+        - :ref:`exerciceplusgrandesommerst`        
+    * :ref:`TD 6B : Problèmes et algorithmes <td2acenoncesession6brst>` - :ref:`correction <td2acorrectionsession6brst>` 
+      (ces problèmes sont tirés de plusieurs sites dont `Google Code Jam <https://code.google.com/codejam/contests.html>`_)
+      
+* liens
+    * types de complexité : `force brute <http://fr.wikipedia.org/wiki/Recherche_exhaustive>`_, 
+      `glouton <http://fr.wikipedia.org/wiki/Algorithme_glouton>`_, `dynamique <http://fr.wikipedia.org/wiki/Programmation_dynamique>`_
+    * :ref:`l-algoculture`
+    * :ref:`l-expose-explication` 
         
-    * notebooks
-    
-        * :ref:`TD 6A : Culture algorithmique <td2acenoncesession6arst>` (:ref:`correction <td2acorrectionsession6arst>`)
-        
-            - présentation `Eléments d'Algorithmique <http://www.xavierdupre.fr/enseignement/complements/Seance4_algorithme.pdf>`_
-            - `Machine learning et algorithme <http://www.xavierdupre.fr/blog/2014-10-11_nojs.html>`_
-            - :ref:`exerciceplusgrandesommerst`
-            
-        * :ref:`TD 6B : Problèmes et algorithmes <td2acenoncesession6brst>` - :ref:`correction <td2acorrectionsession6brst>` 
-          (ces problèmes sont tirés de plusieurs sites dont `Google Code Jam <https://code.google.com/codejam/contests.html>`_)
-          
-    * liens
-    
-        * types de complexité : `force brute <http://fr.wikipedia.org/wiki/Recherche_exhaustive>`_, 
-          `glouton <http://fr.wikipedia.org/wiki/Algorithme_glouton>`_, `dynamique <http://fr.wikipedia.org/wiki/Programmation_dynamique>`_
-        * :ref:`l-algoculture`
-        * :ref:`l-expose-explication` 
-            
 
 
 Python et autres langages, personnaliser ses notebooks
@@ -318,45 +307,31 @@ Librairies Python
 
 **Librairies de visualisation**
 
-* `matplotlib <http://matplotlib.org/>`_ : la bible
-* `bokeh <http://bokeh.pydata.org/en/latest/>`_ : graphes interactifs, zoom, déplacements
-* `ggplot <http://ggplot.yhathq.com/>`_ : style ggplot avec une synthèse différente de matplotlib
-* `vincent <https://vincent.readthedocs.io/en/latest/>`_ : petit projet mais qui revient regulièrmenet
+* `10 plotting libraries <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_
+* :ref:`l-visualisation`
 * `basemap <http://matplotlib.org/basemap/>`_, `phshp <https://pypi.python.org/pypi/pyshp>`_, `shapely <https://pypi.python.org/pypi/Shapely>`_ : tout ce qu'il
   faut pour tracer des cartes
-* `cartopy <http://scitools.org.uk/cartopy/>`_ : cartes
-* `python-lightening <http://lightning-viz.org/clients/#python>`_ : graphes interactifs
-* `pygal <http://www.pygal.org/en/latest/>`_ : graphes interactifs
-* `seaborn <https://stanford.edu/~mwaskom/software/seaborn/>`_
-* `plotly <https://plot.ly/python/>`_ : graphes interactifs, un des plus populaires
-* `holoviews <http://holoviews.org/>`_ : multigraphes faciles
-* `networkx <http://networkx.github.io/>`_ : graphes (petits)
-* `Graphviz <www.graphviz.org/>`_ : pas de python mais la bible en ce qui concerne le dessin de graphes
-* `qbplot <https://github.com/bloomberg/bqplot>`_: graphes interactifs (probablement un de ceux qui vont rester)
-* `folium <https://github.com/python-visualization/folium>`_ : Open Street Map dans un notebook
-
-Quelques essais de librairies sont regroupés à :ref:`l-visualisation`.
 
     
 Séances passées
 +++++++++++++++
 
-- **TD : modèle de données** (2014)
+**TD : modèle de données** (2014)
 
-    - `présentation <http://www.xavierdupre.fr/enseignement/complements/cours_structure_donnee.pdf>`_
+- `présentation <http://www.xavierdupre.fr/enseignement/complements/cours_structure_donnee.pdf>`_
+
+    - Propriétés des base de données : `ACID <http://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9s_ACID>`_, 
+      `relationnelle <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_relationnelle>`_,
+      `transactionnelle <http://fr.wikipedia.org/wiki/Transaction_informatique>`_
+    - Best practices, index et `foreign key <http://en.wikipedia.org/wiki/Foreign_key>`_ 
+      (importance des `random access <http://fr.wikipedia.org/wiki/Random_Access_Memories>`_ et `accès séquentiel <http://en.wikipedia.org/wiki/Sequential_access>`_)
+    - Limites des structures relationnelles 
+      (`données arborescentes <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_hi%C3%A9rarchique>`_, 
+      données hétérogènes)
+    - Base de données non relationnelles dont `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_
+    - :ref:`l-td25asynthese`
     
-        - Propriétés des base de données : `ACID <http://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9s_ACID>`_, 
-          `relationnelle <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_relationnelle>`_,
-          `transactionnelle <http://fr.wikipedia.org/wiki/Transaction_informatique>`_
-        - Best practices, index et `foreign key <http://en.wikipedia.org/wiki/Foreign_key>`_ 
-          (importance des `random access <http://fr.wikipedia.org/wiki/Random_Access_Memories>`_ et `accès séquentiel <http://en.wikipedia.org/wiki/Sequential_access>`_)
-        - Limites des structures relationnelles 
-          (`données arborescentes <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_hi%C3%A9rarchique>`_, 
-          données hétérogènes)
-        - Base de données non relationnelles dont `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_
-        - :ref:`l-td25asynthese`
-        
-    - :ref:`TD : Modèles de données <td2acenoncesession5rst>` (:ref:`correction <td2acorrectionsession5rst>`)
+- :ref:`TD : Modèles de données <td2acenoncesession5rst>` (:ref:`correction <td2acorrectionsession5rst>`)
 
     
 
