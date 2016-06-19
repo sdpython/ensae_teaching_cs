@@ -236,6 +236,7 @@ def publish_teachings_to_web(
                  "code_beatrix",
                  "ensae_projects",
                  "jupytalk",
+                 "mlstatpy",
                  "ensae_teaching_cs"],
         password=None,
         fLOG=print):
