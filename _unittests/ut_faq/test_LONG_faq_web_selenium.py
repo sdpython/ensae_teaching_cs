@@ -36,9 +36,25 @@ except ImportError:
         sys.path.append(path)
     import pyquickhelper as skip_
 
+try:
+    import pyensae as skip__
+except ImportError:
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..",
+                "..",
+                "pyensae",
+                "src")))
+    if path not in sys.path:
+        sys.path.append(path)
+    import pyensae as skip__
+
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
-from src.ensae_teaching_cs.faq.faq_web import webshot, webhtml
+from src.ensae_teaching_cs.faq.faq_web import webshot, webhtml, download_chromedriver
 
 
 class TestLONGFaqWeb(unittest.TestCase):
@@ -76,8 +92,10 @@ class TestLONGFaqWeb(unittest.TestCase):
 
         temp = get_temp_folder(__file__, "temp_selenium_image")
         img = os.path.join(temp, "image_selenium.png")
-        url = "http://www.xavierdupre.fr"
-        res = webshot(img, url)
+        url = "http://www.xavierdupre.fr/"
+        # download_chromedriver(dest=temp)
+        # os.environ["PATH"] += ";" + temp
+        res = webshot(img, url, navigator="firefox")
         assert os.path.exists(img)
         fLOG(res)
         self.assertEqual(len(res), 1)

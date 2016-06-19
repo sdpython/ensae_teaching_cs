@@ -38,6 +38,7 @@ install:
   - "%PYTHON%\\Scripts\\pymy_install3 yaml"
   - "%PYTHON%\\Scripts\\pymy_install3 psycopg2"
   - "%PYTHON%\\Scripts\\pip install https://github.com/sdpython/pyPdf/archive/trunk.zip"
+  - "%PYTHON%\\Scripts\\pip install python-jenkins"
   - "%PYTHON%\\Scripts\\pymy_install3 --task=tool --source=zip graphviz"
   - "set PATH=%PATH%;%PYTHON%\\build\\update_modules\\Graphviz\\Scripts\\bin"
 

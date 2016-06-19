@@ -11,7 +11,7 @@ addons:
 install: 
     - pip install -r requirements.txt
     - pip install -U git+https://github.com/quantopian/qgrid --no-deps
-    - pip install scipy
+  - pip install --pre --upgrade --no-index --timeout=60 --trusted-host travis-dev-wheels.scipy.org -f https://travis-dev-wheels.scipy.org/ scipy
     - pip install -r requirements_scikit.txt
     - pip install -r requirements_scikit2.txt
     - pip install -r requirements_ext.txt

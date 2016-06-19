@@ -4,8 +4,29 @@
 @brief A few functions about scrapping
 
 """
+import sys
 import os
 import datetime
+from pyensae.datasource import download_data
+
+
+def download_chromedriver(dest, version="2.22", url="http://chromedriver.storage.googleapis.com/"):
+    """
+    download chrome driver and unzip it in folder *dest*.
+
+    @param      dest        folder where chromedriver will be downloaded.
+    @param      version     version
+    @param      url         location of chrome driver
+    @return                 list of flies
+    """
+    url = "{0}{1}/".format(url, version)
+    if sys.platform.startswith("win"):
+        name = "chromedriver_win32.zip"
+    else:
+        name = "chromedriver_linux32.zip"
+    # else:
+    #       name = "chromedriver_mac32.zip"
+    return download_data(name, url=url, whereTo=dest)
 
 
 def webshot(img, url, navigator="firefox", add_date=False,
@@ -27,6 +48,9 @@ def webshot(img, url, navigator="firefox", add_date=False,
     Check the list of available webdriver at
     `selenium/webdriver <https://github.com/SeleniumHQ/selenium/tree/master/py/selenium/webdriver>`_
     and add one to the code if needed.
+
+    Chrome requires the `chromedriver <http://chromedriver.storage.googleapis.com/index.html>`_.
+    See function @see fn download_chromedriver.
     """
     if navigator is None:
         try:
