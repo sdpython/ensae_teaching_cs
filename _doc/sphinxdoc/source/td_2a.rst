@@ -311,6 +311,13 @@ Librairies Python
 * :ref:`l-visualisation`
 * `basemap <http://matplotlib.org/basemap/>`_, `phshp <https://pypi.python.org/pypi/pyshp>`_, `shapely <https://pypi.python.org/pypi/Shapely>`_ : tout ce qu'il
   faut pour tracer des cartes
+  
+**Modèles pré-entraînés**
+
+* `Places CNN <http://places.csail.mit.edu/downloadCNN.html>`_,
+  `Pre-release of Places365-CNNs <https://github.com/metalbubble/places365>`_
+  (deep learning)
+
 
     
 Séances passées
