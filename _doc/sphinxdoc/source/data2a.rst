@@ -61,6 +61,7 @@ c. Editeur de texte (pour des projets plus ambitieux, SciTE, PyCharm, PTVS, Wing
     - `Scite <http://www.scintilla.org/SciTE.html>`_
     - `Notepad++ <https://notepad-plus-plus.org/>`_
     - `SublimeText <http://www.sublimetext.com/>`_
+    - `Atom <https://atom.io/>`_
     - `PyCharm <http://www.jetbrains.com/pycharm/>`_
     - `PTVS <http://microsoft.github.io/PTVS/>`_
     - `WingIDE <https://wingware.com/>`_ (version académique `Wing IDE 101 <https://wingware.com/downloads/wingide-101>`_)

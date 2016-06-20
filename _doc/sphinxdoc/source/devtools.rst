@@ -62,6 +62,7 @@ un stockage dans un pays dont la loi limite l'usage qui peut être fait de vos d
 
 **IDE**
 
+* `Atom <https://atom.io/>`_
 * `Ninja IDE <http://ninja-ide.org/home/>`_
 * `PyCharm <http://www.jetbrains.com/pycharm/>`_
 * `PyDev <http://pydev.org/>`_ (fonctionne avec `Eclipse <http://www.eclipse.org/>`_)

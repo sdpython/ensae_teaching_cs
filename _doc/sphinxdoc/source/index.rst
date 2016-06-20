@@ -140,6 +140,7 @@ est la plus répandue. Voir également
   `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_.
 * `PyCharm <https://www.jetbrains.com/pycharm/>`_, c'est un environnement complet de développement,
   très pratique pour débugger, repérer des erreurs avant l'exécution (nom de variable inconnus...)
+* `Atom <https://atom.io/>`_ : comme PyCharm, voir `Install and Configure the Atom Editor for Python <http://www.marinamele.com/install-and-configure-atom-editor-for-python>`_
 * `Spyder <https://pythonhosted.org/spyder/>`_, ressemble beaucoup à `R Studio <http://www.rstudio.com/>`_
 * `Rodeo <http://blog.yhathq.com/posts/introducing-rodeo.html>`_, une sorte de Spyder très épuré
 * `Visual Studio Community <https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx>`_
