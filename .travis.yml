@@ -25,13 +25,14 @@ install:
 
   - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION numpy scipy nose cython scikit-learn
   - source activate test-environment
-  - make all
-  - conda build build_tools/conda-recipe --quiet
-
+  # - make all
+  #- conda build build_tools/conda-recipe --quiet
+  - conda install -q --file=requirements_conda.txt
   - pip install -r requirements.txt
-  - pip install -U git+https://github.com/quantopian/qgrid --no-deps
+  - pip install -r requirements2.txt
   - pip install -r requirements_scikit.txt
   - pip install -r requirements_scikit2.txt
   - pip install -r requirements_ext.txt
+  - pip install -U git+https://github.com/quantopian/qgrid --no-deps  
 script:
     - python setup.py unittests
