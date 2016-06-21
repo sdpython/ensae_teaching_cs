@@ -34,5 +34,6 @@ install:
   - pip install -r requirements_scikit2.txt
   - pip install -r requirements_ext.txt
   - pip install -U git+https://github.com/quantopian/qgrid --no-deps  
+  - pip install -U git+https://github.com/sdpython/pyPdf --no-deps
 script:
     - python setup.py unittests
