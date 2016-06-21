@@ -21,6 +21,7 @@ pylzma
 pyquickhelper
 pyreadline
 pyreadline
+python-jenkins
 requests-oauthlib
 version_information
 xmltodict
