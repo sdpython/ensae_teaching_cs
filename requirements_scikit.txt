@@ -1,4 +1,4 @@
-scikit-learn
-statsmodels
-seaborn
 dask
+scikit-learn
+seaborn
+statsmodels

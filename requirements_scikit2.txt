@@ -1,7 +1,3 @@
 bayespy
 cloudpickle
-cvxopt
-cytoolz
 mpld3
-dask
-networkx
