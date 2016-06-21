@@ -7,6 +7,7 @@ cytoolz
 datashader
 datashape
 flake8
+flask
 h5py
 ipykernel
 ipyparallel
