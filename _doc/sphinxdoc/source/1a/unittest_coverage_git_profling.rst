@@ -3,8 +3,8 @@
 .. _l-production:
 
 
-Coder facilement, coder à plusieurs, qualité du code
-====================================================
+Coder facilement, coder à plusieurs, qualité du code, gestion de projets
+========================================================================
 
 L'industrie logiciel a beaucoup évolué en 20 ans et plusieurs standards ont émergé
 pour travailler à plusieurs et produire un logiciel avec peu d'erreurs.
@@ -98,6 +98,20 @@ Logiciel de suivi de source
 
 * `git <https://git-scm.com/>`_
 * `GitHub <https://github.com/>`_
+* `GitLab <https://gitlab.com/>`_
+
+Gestion de projet
+^^^^^^^^^^^^^^^^^
+
+* `KanBan <https://en.wikipedia.org/wiki/Kanban>`_
+* `5 open source alternatives to Trello <https://opensource.com/business/15/8/5-open-source-alternatives-trello>`_
+* `Waffle <https://waffle.io/>`_
+* `Top Agile Tools – Best Kanban Tools <http://agilescout.com/best-kanban-tools/>`_
+* `Portable Kanban <https://dmitryivanov.net/>`_
+* `Kanboard <https://kanboard.net/>`_
+* `Restyaboard <http://restya.com/board>`_
+* `Taiga <https://taiga.io/>`_
+
 
 Revue de code
 -------------
@@ -134,5 +148,6 @@ Design
 * séparation GUI / web / algorithme
 * long process : prévoir une interruption, logging, processus asynchrone
 * GUI réactive : asynchrone
+
 
 à suivre
