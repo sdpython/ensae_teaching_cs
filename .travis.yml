@@ -6,11 +6,9 @@ addons:
 -  apt:
 -    packages:
       - ffmpeg
-before_install:
-  # pygame
-  - sudo apt-get update
-  - sudo apt-get build-dep python-pygame
-  - sudo apt-get install mercurial
+      - build-dep 
+      - python-pygame
+      - mercurial
 install:
   # We do this conditionally because it saves us some downloading if the
   # version is the same.
