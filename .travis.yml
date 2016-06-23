@@ -7,18 +7,13 @@ addons:
 -    packages:
       - ffmpeg
       - build-dep 
-      - python-pygame
-      - mercurial
-      - libsdl2-dev
-      - libsdl-image1.2-dev
-      - libsdl-ttf2.0-dev
-      - libsdl-mixer1.2-dev
-      - python-dev
-before_install:
-    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update; fi
-    - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install sdl sdl_image sdl_mixer sdl_ttf smpeg jpeg libpng portmidi freetype homebrew/python/numpy; fi
-    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update; fi
-    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install python-dev libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsdl1.2-dev libportmidi-dev libjpeg-dev libtiff4-dev libx11-6 libX11-dev xfonts-base xfonts-100dpi xfonts-75dpi xfonts-cyrillic; fi    
+      # - python-pygame
+      # - mercurial
+      # - libsdl2-dev
+      # - libsdl-image1.2-dev
+      # - libsdl-ttf2.0-dev
+      # - libsdl-mixer1.2-dev
+      # - python-dev
 env:
   - SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=disk
 install:
@@ -49,6 +44,6 @@ install:
   - pip install -r requirements_ext.txt
   - pip install -U git+https://github.com/quantopian/qgrid --no-deps  
   - pip install -U git+https://github.com/sdpython/pyPdf --no-deps
-  - pip install hg+http://bitbucket.org/pygame/pygame
+  # - pip install hg+http://bitbucket.org/pygame/pygame
 script:
     - python setup.py unittests
