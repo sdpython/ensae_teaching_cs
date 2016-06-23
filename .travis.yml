@@ -6,6 +6,9 @@ addons:
 -  apt:
 -    packages:
       - ffmpeg
+before_install:
+  # pygame
+  - sudo apt-get install --fix-missing mercurial libav-tools libsdl-image1.2-dev libsdl-mixer1.2-dev libsdl-ttf2.0-dev libsmpeg-dev libsdl1.2-dev libportmidi-dev libswscale-dev libavformat-dev libavcodec-dev
 install:
   # We do this conditionally because it saves us some downloading if the
   # version is the same.
@@ -35,5 +38,6 @@ install:
   - pip install -r requirements_ext.txt
   - pip install -U git+https://github.com/quantopian/qgrid --no-deps  
   - pip install -U git+https://github.com/sdpython/pyPdf --no-deps
+  - pip install hg+http://bitbucket.org/pygame/pygame
 script:
     - python setup.py unittests

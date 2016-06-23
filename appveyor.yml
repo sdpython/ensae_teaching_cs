@@ -18,6 +18,7 @@ init:
 install:
   - "%PYTHON%\\python -m pip install --upgrade pip"
   - "%PYTHON%\\Scripts\\pip install pymyinstall"
+  - "%PYTHON%\\Scripts\\pip install pycodestyle"  
   - "%PYTHON%\\Scripts\\pymy_install3 --set=ensae_teaching_cs"
   - "%PYTHON%\\Scripts\\pip install xlrd"
   - "%PYTHON%\\Scripts\\pip install flask"
@@ -34,7 +35,6 @@ install:
   - "%PYTHON%\\Scripts\\pip install pygame"
   - "%PYTHON%\\Scripts\\pip install pydub"
   - "%PYTHON%\\Scripts\\pip install goslate"  
-  - "%PYTHON%\\Scripts\\pip install pycodestyle"  
   - "%PYTHON%\\Scripts\\pymy_install3 opencv_python"
   - "%PYTHON%\\Scripts\\pymy_install3 yaml"
   - "%PYTHON%\\Scripts\\pymy_install3 psycopg2"
