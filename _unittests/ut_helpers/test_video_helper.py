@@ -5,6 +5,7 @@
 import os
 import sys
 import unittest
+import warnings
 
 
 try:
@@ -35,7 +36,7 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from src.ensae_teaching_cs.helpers.video_helper import make_video
 
 
@@ -54,6 +55,11 @@ class TestVideoHelper(unittest.TestCase):
                for _ in imgs if os.path.splitext(_)[-1] == ".png" and "00" in _]
         assert len(png) > 0
         out = os.path.join(temp, "out_video.avi")
+
+        if is_travis_or_appveyor() == "travis":
+            warnings.warn("cv2 is not available")
+            return
+
         v = make_video(png, out, size=(1000, 300))
         assert os.path.exists(out)
         assert os.stat(out).st_size > 90000

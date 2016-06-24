@@ -5,6 +5,7 @@
 import os
 import sys
 import unittest
+import warnings
 
 
 try:
@@ -35,7 +36,7 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from pyquickhelper.loghelper import unzip
 from src.ensae_teaching_cs.helpers.sound_helper import convert_music_file
 
@@ -55,6 +56,10 @@ class TestSoundHelper(unittest.TestCase):
         ff = unzip(ffmpeg, temp)
         mp3 = os.path.join(data, "podcasts_example.mp3")
         wav = os.path.join(temp, "podcasts_example.wav")
+
+        if is_travis_or_appveyor() == "travis":
+            warnings.warn("pydub is not available")
+            return
 
         convert_music_file(mp3, wav, ffmpeg=ff)
         assert os.path.exists(wav)

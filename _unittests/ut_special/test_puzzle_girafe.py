@@ -5,6 +5,7 @@
 import os
 import sys
 import unittest
+import warnings
 
 
 try:
@@ -35,7 +36,7 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from src.ensae_teaching_cs.special.puzzle_girafe import pygame_simulation, PuzzleGirafe
 from src.ensae_teaching_cs.helpers.video_helper import make_video
 
@@ -59,6 +60,11 @@ class TestPuzzleGirafe(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         temp = get_temp_folder(__file__, "temp_image_video_girafe")
+
+        if is_travis_or_appveyor() == "travis":
+            warnings.warn("pygame is not available")
+            return
+
         import pygame
         pygame_simulation(pygame, fLOG=fLOG, folder=temp,
                           delay=200 if __name__ == "__main__" else 2)

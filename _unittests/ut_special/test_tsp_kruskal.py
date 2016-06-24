@@ -5,6 +5,7 @@
 import os
 import sys
 import unittest
+import warnings
 
 
 try:
@@ -35,7 +36,7 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from src.ensae_teaching_cs.helpers.video_helper import make_video
 from src.ensae_teaching_cs.special.tsp_kruskal import construit_ville, pygame_simulation, tsp_kruskal_algorithm
 
@@ -61,6 +62,10 @@ class TestTspKruskal(unittest.TestCase):
             OutputPrint=__name__ == "__main__")
 
         temp = get_temp_folder(__file__, "temp_kruskal_pygame_simulation")
+
+        if is_travis_or_appveyor() == "travis":
+            warnings.warn("pygame is not available")
+            return
 
         import pygame
         pygame.init()
