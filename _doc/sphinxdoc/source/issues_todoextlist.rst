@@ -2,7 +2,7 @@
 
 .. _l-issues-todolist:
 
-Bugs et améliorations 
+Bugs et amÃ©liorations 
 =====================
 
 .. index:: issues, todo
@@ -17,7 +17,7 @@ Bugs
     :tag: bug
 
 
-Amélioration
+AmÃ©lioration
 ++++++++++++
 
 .. todoextlist::

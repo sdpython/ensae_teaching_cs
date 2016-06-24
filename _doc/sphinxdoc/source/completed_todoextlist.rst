@@ -2,7 +2,7 @@
 
 .. _l-completed-todolist:
 
-Terminé
+TerminÃ©
 =======
 
 

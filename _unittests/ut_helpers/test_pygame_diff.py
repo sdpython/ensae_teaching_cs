@@ -10,6 +10,7 @@ import sys
 import os
 import unittest
 import random
+import warnings
 from difflib import SequenceMatcher
 
 
@@ -40,7 +41,7 @@ except ImportError:
     import pyquickhelper.loghelper as skip_
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from src.ensae_teaching_cs.helpers.pygame_helper import build_diff_image, get_pygame_screen_font
 
 
