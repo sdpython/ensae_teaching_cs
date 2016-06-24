@@ -12,7 +12,6 @@ lifelines
 lightning-python
 mechanize
 metakernel
-natgrid
 pkgtools
 pkgtools
 plotly
