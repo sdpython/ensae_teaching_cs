@@ -35,7 +35,7 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from src.ensae_teaching_cs.helpers.graphviz_helper import draw_graph_graphviz
 
 
@@ -46,6 +46,10 @@ class TestGraphviz(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
+
+        if is_travis_or_appveyor() == "travis":
+            warnings.warn("graphviz is not available")
+            return
 
         temp = get_temp_folder(__file__, "temp_graphviz")
         fout = os.path.join(temp, "image.png")

@@ -68,7 +68,7 @@ class TestImageSyntheseImage(unittest.TestCase):
         s.ajoute_source(Source(Vecteur(7, 2, 8), Couleur(0.2, 0.2, 0.2)))
         s.ajoute_source(Source(Vecteur(12.5, 3, 5), Couleur(0.2, 0.2, 0.2)))
         s.ajoute_source(Source(Vecteur(-12.5, 1, 6), Couleur(0.2, 0.2, 0.2)))
-        
+
         s.ajoute_objet(Rectangle(Vecteur(-12.4, 0.99, 5.9), Vecteur(-12.6, 0.99, 5.9),
                                  Vecteur(-12.6, 0.99, 6.1), None, Couleur(0, 0, 0)))
 

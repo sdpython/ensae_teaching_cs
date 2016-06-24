@@ -35,7 +35,7 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from src.ensae_teaching_cs.special.tsp_kohonen import pygame_simulation
 from src.ensae_teaching_cs.helpers.video_helper import make_video
 
@@ -48,6 +48,10 @@ class TestTspKohonen(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         temp = get_temp_folder(__file__, "temp_image_video_tsp_kohonen")
+        if is_travis_or_appveyor() == "travis":
+            warnings.warn("pygame is not available")
+            return
+
         import pygame
         pygame_simulation(pygame, fLOG=fLOG, folder=temp,
                           nb=200 if __name__ == "__main__" else 20,

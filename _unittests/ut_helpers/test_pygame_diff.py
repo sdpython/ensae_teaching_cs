@@ -65,6 +65,9 @@ class TestDiff(unittest.TestCase):
         size = 500, 500
         white = 255, 255, 255
 
+        if is_travis_or_appveyor() == "travis":
+            warnings.warn("pygame is not available")
+            return
         pygame, screen, fonts = get_pygame_screen_font(h, size)
 
         from src.ensae_teaching_cs.helpers.pygame_helper import wait_event

@@ -7,10 +7,12 @@ codecov
 codecov
 entrypoints
 ete3
+folium
 lifelines
 lightning-python
 mechanize
 metakernel
+natgrid
 pkgtools
 pkgtools
 plotly
