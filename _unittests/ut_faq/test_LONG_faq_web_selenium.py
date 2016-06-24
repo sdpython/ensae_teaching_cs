@@ -54,7 +54,7 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
-from src.ensae_teaching_cs.faq.faq_web import webshot, webhtml, download_chromedriver
+from src.ensae_teaching_cs.faq.faq_web import webshot, webhtml
 
 
 class TestLONGFaqWeb(unittest.TestCase):

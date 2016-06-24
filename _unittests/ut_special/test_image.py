@@ -5,8 +5,8 @@
 import os
 import sys
 import unittest
-import pygame
 import math
+import warnings
 
 
 try:
@@ -37,13 +37,12 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from src.ensae_teaching_cs.special.image.image_synthese_base import Vecteur, Couleur, Pixel, Rayon, Source, Repere
 from src.ensae_teaching_cs.special.image.image_synthese_sphere import Sphere
 from src.ensae_teaching_cs.special.image.image_synthese_scene import Scene
 from src.ensae_teaching_cs.special.image.image_synthese_phong import ScenePhong
 from src.ensae_teaching_cs.special.image.image_synthese_facette import Facette, Rectangle
-from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
 
 
 class TestImageSynthese(unittest.TestCase):
@@ -98,6 +97,13 @@ class TestImageSynthese(unittest.TestCase):
                               396, Couleur(0.5, 0.5, 0.5)))
         fLOG(s)
 
+        if is_travis_or_appveyor() == "travis":
+            warnings.warn("pygame is not available")
+            return
+
+        import pygame
+        from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
+
         screen = pygame.display.set_mode(s.dim)
         screen.fill((255, 255, 255))
         s.construit_image(screen, fLOG=fLOG)
@@ -123,10 +129,16 @@ class TestImageSynthese(unittest.TestCase):
         s.ajoute_objet(Sphere(Vecteur(0, -400, 12),
                               396, Couleur(0.5, 0.5, 0.5)))
 
+        if is_travis_or_appveyor() == "travis":
+            warnings.warn("pygame is not available")
+            return
+
+        import pygame
         screen = pygame.display.set_mode(s.dim)
         screen.fill((255, 255, 255))
         s.construit_image(screen, fLOG=fLOG)
 
+        from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
         pygame.image.save(screen, os.path.join(temp, "scene_phong.png"))
 
         if __name__ == "__main__":
@@ -153,10 +165,16 @@ class TestImageSynthese(unittest.TestCase):
         s.ajoute_objet(Rectangle(Vecteur(0, -2.5, 6), Vecteur(-2, -2.5, 3),
                                  Vecteur(-2, 2.8, 3.5), None, Couleur(0, 0, 1)))
 
+        if is_travis_or_appveyor() == "travis":
+            warnings.warn("pygame is not available")
+            return
+
+        import pygame
         screen = pygame.display.set_mode(s.dim)
         screen.fill((255, 255, 255))
         s.construit_image(screen, fLOG=fLOG)
 
+        from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
         pygame.image.save(screen, os.path.join(temp, "scene_facette.png"))
 
         if __name__ == "__main__":

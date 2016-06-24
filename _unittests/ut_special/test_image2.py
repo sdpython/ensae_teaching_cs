@@ -5,8 +5,8 @@
 import os
 import sys
 import unittest
-import pygame
 import math
+import warnings
 
 
 try:
@@ -37,13 +37,12 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from src.ensae_teaching_cs.special.image.image_synthese_base import Vecteur, Couleur, Source, Repere
 from src.ensae_teaching_cs.special.image.image_synthese_sphere import Sphere
 from src.ensae_teaching_cs.special.image.image_synthese_phong import ScenePhong
 from src.ensae_teaching_cs.special.image.image_synthese_facette import Rectangle
 from src.ensae_teaching_cs.special.image.image_synthese_facette_image import RectangleImage, SphereReflet
-from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
 
 
 class TestImageSyntheseImage(unittest.TestCase):
@@ -75,6 +74,13 @@ class TestImageSyntheseImage(unittest.TestCase):
 
         s.ajoute_objet(Rectangle(Vecteur(-12.4, 0.99, 5.9), Vecteur(-12.6, 0.99, 5.9),
                                  Vecteur(-12.6, 0.99, 6.1), None, Couleur(0, 0, 0)))
+
+        if is_travis_or_appveyor() == "travis":
+            warnings.warn("pygame is not available")
+            return
+
+        import pygame
+        from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
 
         screen = pygame.display.set_mode(s.dim)
         screen.fill((255, 255, 255))
