@@ -6,6 +6,7 @@ import os
 import sys
 import unittest
 import copy
+import warnings
 
 
 try:
@@ -36,7 +37,7 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from src.ensae_teaching_cs.special.graph_distance import GraphDistance
 from src.ensae_teaching_cs.helpers.graphviz_helper import draw_graph_graphviz
 
@@ -93,6 +94,10 @@ class TestGraphDistance(unittest.TestCase):
         outfile1 = os.path.join(temp, "unittest_GraphDistance4_sub1.png")
         outfile2 = os.path.join(temp, "unittest_GraphDistance4_sub2.png")
         outfilef = os.path.join(temp, "unittest_GraphDistance4_subf.png")
+
+        if is_travis_or_appveyor() == "travis":
+            warnings.warn("graphviz is not available")
+            return
 
         vertices, edges = graph1.draw_vertices_edges()
         draw_graph_graphviz(vertices, edges, outfile1)
