@@ -33,3 +33,15 @@ On représente la matrice d'adjacence souvent sous forme de dictionnaire car
 cette matrice est souvent creuse : beaucoup de coefficients sont nuls car le nombre d'arcs
 comparé au nombre total d'arcs (:math:`n^2` pour un graphe de :math:`n` noeuds) 
 est très petit. 
+
+
+.. todoext::
+    :title: terminer la page sur les graphes ou la déplacer vers mlstatpy
+    :tag: bug
+    :date: 2016-06-24
+    
+    A terminer.
+
+    
+    
+    

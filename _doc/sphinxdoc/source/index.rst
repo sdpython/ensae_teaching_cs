@@ -7,16 +7,16 @@ Contenu des séances de travaux pratiques en programmation
 que je dispense à l'`ENSAE <http://www.ensae.fr/>`_. 
 Ces cours s'appuient principalement sur 
 le langage `Python <https://www.python.org/>`_. 
-Le contenu est librement disponible sur `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs>`_
+Le contenu est librement disponible sur `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs>`_ |gitlogo|
 et permet à quiconque de contribuer à ce cours. 
 Il existe trois formats disponibles :
 `mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_,
 `blanc <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_,
 `bleu <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
 Les changements importants sont notés sur le :ref:`blog <ap-main-0>` 
-associé à ce cours, les autres 
-:ref:`l-issues-todolist`.
+associé à ce cours, les autres :ref:`l-completed-todolist`.
 
+.. |gitlogo| image:: git_logo.png
 
 
 Avant-propos
@@ -77,10 +77,11 @@ Contenu des enseignements
     3. Eléments logiciels pour le traitement des données massives <td_3a>
     4. Projets informatiques <projet_info>
     5. Examens <exams>
-    6. Modules, Bibliographie, Articles... <informations>
-    7. Exemples et digressions <exemple_index>
-    8. Visualisation <visualisation>
-    9. Getting started <getting_started>
+    6. Découvrir <specials/index>
+    7. Modules, Bibliographie, Articles... <informations>
+    8. Exemples et digressions <exemple_index>
+    9. Visualisation <visualisation>
+    10. Getting started <getting_started>
 
 
 Getting started
@@ -217,21 +218,13 @@ En diagonal
     * :ref:`l-ressources`
     * :ref:`l-biblio`
     * :ref:`l-visualisation`
-
-    
-
-
-
-
-+--------+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| Niveau | **Contenu**   | Projet                                       | Présentation - Mise en perspective                                                                                                |
-+--------+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 1A     | :ref:`l-td1a` | :ref:`projet informatique 1A <l-projinfo1a>` | `Présentation ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_                  |
-+--------+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 2A     | :ref:`l-td2a` | :ref:`projet informatique 2A <l-projinfo2a>` | `Présentation ENSAE 2A - Données et machine learning <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_ |
-+--------+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
-| 3A     | :ref:`l-td3a` | :ref:`projet informatique 3A <l-projinfo3a>` | `Présentation ENSAE 3A - Map/Reduce <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_                  |
-+--------+---------------+----------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------+
+* A propos de ce cours
+    * :ref:`l-issues-todolist`
+    * :ref:`l-completed-todolist`
+* Autres supports
+    * `Python et actuariat <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_
+    * `Présentations en notebooks <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
+    * `Machine Learning, Statistiques et Programmation <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_ (théorique)
 
 
 

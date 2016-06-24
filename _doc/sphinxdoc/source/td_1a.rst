@@ -141,7 +141,6 @@ puis à fusionner les deux solutions.
 
     
 .. toctree::
-    :numbered:
 
     notebooks/exercice_xn
     notebooks/exercice_echelle
@@ -164,7 +163,6 @@ Trucs et astuces avec les notebooks
 
     
 .. toctree::
-    :numbered:
 
     notebooks/notebook_convert
     notebooks/jupyter_custom_magics
@@ -254,6 +252,16 @@ Bibliographie
 * `PythonTutor <http://pythontutor.com/>`_ : pour suivre pas à pas l'exécution d'un programme (petit)
 
 
+.. todoext::
+    :title: insister plus sur les algorithmes numériques pour les 1A écos
+    :issue: 8
+    :tag: plus
+    :date: 2016-06-24
+    
+    Les étudiants souhaiteraient passer plus de temps au premier semestre sur 
+    la partie dédiées aux algorithmes pour être mieux préparés au second semestre
+    lors de la réalisation des projets.
+    
 
 
 .. toctree::

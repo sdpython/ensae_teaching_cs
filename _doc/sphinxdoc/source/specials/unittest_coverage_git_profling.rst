@@ -150,4 +150,17 @@ Design
 * GUI réactive : asynchrone
 
 
-à suivre
+
+
+
+
+.. todoext::
+    :title: terminer la page dédiée aux outils et pratiques dans l'industrie logicielle
+    :issue: 7
+    :tag: plus
+    :date: 2016-05-24
+    
+    Chaque année, les étudiants poussent de plus en plus loin leur réflexion
+    sur les différents moyens de travailler à plusieurs sur un projet.
+    Il s'agit d'exposer les pratiques actuelles liées à la gestion
+    d'un projet informatique.

@@ -4,7 +4,6 @@
 @brief définition d'une scène
 """
 import math
-import pygame
 from .image_synthese_base import Pixel, Vecteur, Rayon, Couleur
 
 
@@ -148,7 +147,7 @@ class Scene (object):
             c.borne()
         return c
 
-    def construit_image(self, screen, fLOG):
+    def construit_image(self, screen, pygame, fLOG):
         """construit l'image de synthèse où screen est un objet du module pygame"""
         count = 0
         nbpixel = int(self.dim[0] * self.dim[1] / 100)

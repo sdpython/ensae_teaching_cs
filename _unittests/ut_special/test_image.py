@@ -106,7 +106,7 @@ class TestImageSynthese(unittest.TestCase):
 
         screen = pygame.display.set_mode(s.dim)
         screen.fill((255, 255, 255))
-        s.construit_image(screen, fLOG=fLOG)
+        s.construit_image(screen, pygame=pygame, fLOG=fLOG)
 
         pygame.image.save(screen, os.path.join(temp, "scene.png"))
 
@@ -136,7 +136,7 @@ class TestImageSynthese(unittest.TestCase):
         import pygame
         screen = pygame.display.set_mode(s.dim)
         screen.fill((255, 255, 255))
-        s.construit_image(screen, fLOG=fLOG)
+        s.construit_image(screen, pygame, pygame, fLOG=fLOG)
 
         from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
         pygame.image.save(screen, os.path.join(temp, "scene_phong.png"))
@@ -172,7 +172,7 @@ class TestImageSynthese(unittest.TestCase):
         import pygame
         screen = pygame.display.set_mode(s.dim)
         screen.fill((255, 255, 255))
-        s.construit_image(screen, fLOG=fLOG)
+        s.construit_image(screen, pygame=pygame, fLOG=fLOG)
 
         from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
         pygame.image.save(screen, os.path.join(temp, "scene_facette.png"))

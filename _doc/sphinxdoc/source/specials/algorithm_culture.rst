@@ -155,3 +155,4 @@ Liens
 * `Liste d'algorithme sur Wikipédia <http://en.wikipedia.org/wiki/List_of_algorithms>`_ 
   (`version française <http://fr.wikipedia.org/wiki/Liste_d%27algorithmes>`_)
 * `List of machine learning concepts <http://en.wikipedia.org/wiki/List_of_machine_learning_concepts>`_
+* `Machine Learning, Statistiques et Programmation <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_

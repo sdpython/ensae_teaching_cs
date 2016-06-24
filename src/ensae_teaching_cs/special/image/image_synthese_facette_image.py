@@ -4,7 +4,6 @@
 @brief image et synthèse
 """
 
-import pygame
 from .image_synthese_facette import Rectangle
 from .image_synthese_base import Rayon, Couleur
 from .image_synthese_sphere import Sphere
@@ -13,7 +12,7 @@ from .image_synthese_sphere import Sphere
 class RectangleImage(Rectangle):
     """définit un rectangle contenant un portrait"""
 
-    def __init__(self, a, b, c, d, nom_image, invertx=False):
+    def __init__(self, a, b, c, d, nom_image, pygame, invertx=False):
         """initialisation, si d == None, d est calculé comme étant
         le symétrique de b par rapport au milieu du segment [ac],
         la texture est une image,

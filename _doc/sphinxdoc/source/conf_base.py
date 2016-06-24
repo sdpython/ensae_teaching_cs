@@ -56,7 +56,8 @@ from pyquickhelper.helpgen.default_conf import set_sphinx_variables
 set_sphinx_variables(__file__, "ensae_teaching_cs", "Xavier Dupré",
                      2016, "sphinx_rtd_theme", None,
                      locals(), add_extensions=None,
-                     extlinks=dict(issue=('https://github.com/sdpython/ensae_teaching_cs/issues/%s', 'issue')))
+                     extlinks=dict(issue=('https://github.com/sdpython/ensae_teaching_cs/issues/%s', 'issue')),
+                     book=True)
 
 # do not put it back otherwise sphinx import matplotlib before setting up its backend
 # for the sphinx command .. plot::
