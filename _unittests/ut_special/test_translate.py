@@ -57,8 +57,9 @@ class TestTranslate(unittest.TestCase):
             os.mkdir(temp)
         dest = os.path.join(temp, "out_russe_en.txt")
 
+        fLOG("dest", dest)
         if not os.path.exists(dest):
-            import goslate
+            from src.ensae_teaching_cs.external import goslate
             gs = goslate.Goslate()
             tlines = []
             for i, l in enumerate(lines):

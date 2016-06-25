@@ -88,7 +88,7 @@ class TestRst2HtmlLatex(unittest.TestCase):
         for full in fulls:
             if os.path.splitext(full)[-1] != ".rst":
                 continue
-            if "index_expose" in full:
+            if "index_expose" in full or "index.rst" in full:
                 continue
             rem = []
             if "hermionne" in full:
