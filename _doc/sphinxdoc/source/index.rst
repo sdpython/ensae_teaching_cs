@@ -3,6 +3,7 @@
 Python dans tous ses états
 ==========================
 
+
 Contenu des séances de travaux pratiques en programmation
 que je dispense à l'`ENSAE <http://www.ensae.fr/>`_. 
 Ces cours s'appuient principalement sur 
@@ -17,7 +18,7 @@ Les changements importants sont notés sur le :ref:`blog <ap-main-0>`
 associé à ce cours, les autres :ref:`l-completed-todolist`.
 
 .. |gitlogo| image:: _static/git_logo.png
-
+             :height: 20
 
 Avant-propos
 ------------
