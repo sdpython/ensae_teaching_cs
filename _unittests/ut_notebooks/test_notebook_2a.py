@@ -6,6 +6,7 @@
 import sys
 import os
 import unittest
+import warnings
 
 try:
     import src
@@ -66,6 +67,10 @@ class TestNotebookRunner2a_ (unittest.TestCase):
                 # this one requires pandoc
                 return False
             return False
+
+        if is_travis_or_appveyor() == "travis":
+            warnings.warn("execution does not stop")
+            return
 
         res = execute_notebooks(temp, keepnote,
                                 filter,
