@@ -9,7 +9,7 @@ Séances dirigées
 .. toctree::
     :maxdepth: 2
     
-    notebooks/_gs3a_hadoop_decouverte
+    notebooks/_gs3a_hadoop_streaming
 
 Lectures conseillées
 ++++++++++++++++++++
