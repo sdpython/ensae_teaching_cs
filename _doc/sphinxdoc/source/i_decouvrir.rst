@@ -23,7 +23,7 @@ Culture
 .. toctree::
     :maxdepth: 1
     
-    algorithm_culture
+    specials/algorithm_culture
 
 
 Algorithmes
@@ -136,8 +136,8 @@ Simulation
 .. toctree::
     :maxdepth: 1
 
-    corde
-    voisinage
+    specials/corde
+    specials/voisinage
     
 Coding parties
 ^^^^^^^^^^^^^^
@@ -157,8 +157,8 @@ Web, cloud
 .. toctree::
     :maxdepth: 1
     
-    azure
-    siteflask
+    specials/azure
+    specials/siteflask
         
     
 Pratiques
@@ -167,7 +167,7 @@ Pratiques
 .. toctree::
     :maxdepth: 1
     
-    unittest_coverage_git_profling    
+    specials/unittest_coverage_git_profling    
     
 Inclassables
 ------------

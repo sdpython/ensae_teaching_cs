@@ -3,6 +3,7 @@
 .. _l-td3a:
 
 
+==========================================================
 Eléments logiciels pour le traitement des données massives
 ==========================================================
 
@@ -24,111 +25,37 @@ Le cours est évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 
 
 
-Notions et concepts
-+++++++++++++++++++
-    
-:ref:`Séance 1 :  <td3acenoncesession1rst>`  (:ref:`correction <td3acorrectionsession1rst>`)
+Concepts, théorie
+=================
+
+Structures de données
++++++++++++++++++++++
+
+.. toctree::
+
+    :ref:`Séance 1 :  <td3acenoncesession1rst>`  (:ref:`correction <td3acorrectionsession1rst>`)
 
 * `liste chaînées <http://fr.wikipedia.org/wiki/Liste_cha%C3%AEn%C3%A9e>`_, `stack <http://fr.wikipedia.org/wiki/Pile_(informatique)>`_, `queue <http://en.wikipedia.org/wiki/Queue_(abstract_data_type)>`_, `dictionnaire <http://en.wikipedia.org/wiki/Associative_array>`_
 * graphe `BFS <http://en.wikipedia.org/wiki/Breadth-first_search>`_, `DFS <http://en.wikipedia.org/wiki/Depth-first_search>`_
 * `merge sort <http://en.wikipedia.org/wiki/Merge_sort>`_, `quicksort <http://en.wikipedia.org/wiki/Quicksort>`_, `heapsort <http://en.wikipedia.org/wiki/Heapsort>`_, `max heap <http://en.wikipedia.org/wiki/Min-max_heap>`_
 
-**Séance 2**
+Threads et synchronisation
+++++++++++++++++++++++++++
 
 * threads, application multi-threadées
 * variables globales, synchronisation
 
-**Séance 3**
+Distribution des calculs, stratégies de stockage, SQL NoSQL
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-* Stockage de données, consistence, persistence, impossibilité de faire des rollbacks, corruption, 
-  absence de garanties sur la manière dont sont stockés les champs (exemple formats de date), pas d'index, etc.
-* Introduction du SQL, type de requêtes, 
-  Notion de transaction, d'atomicité, capacité de rollback, garanties ACID, 
-  difficultés dans un SQL réparti (atomicité des transactions, double commit protocol)
-* Systèmes NoSQL, Key-Value Pair Storage, transactionnalité multi-entités dans un Key-Value pair, 
-  écriture optimiste avec des timestamps.
-* Base de données orientées Document, Bases de données orientées Graph
-* Map/Reduce. Notions de mappers, de reducers, de calculs embarassingly parallel. 
-  problèmes des machines mortes, des stragglers, tradeof calcul/transfert des données,
-  exemples d'applications de MapReduce,
-  exemples d'algos difficilement parallélisables,
-* Hadoop, Azure
-* Queues distribuées.
+.. toctree::
+    :maxdepth: 2
 
-**Séance 4-5**
+    td_2a_s5_synthese
 
-* SQL / NoSQL / clé-valeur / document
-    * Description d'un document (notion de structures, format json, xml)
-    * SQL : 
-        * notion d'index
-        * Ne scale pas pour la parallélisation d'un grande nombre de recherches sur des données modifiées en permanence (mais à une moindre fréquence)
-            * Cohérences des données
-            * ACID
-        * Traduction d'une base de documents en un schéma relationnel parfois complexe lorsque les documents ont une structure arborescente (plein de tables)
-        * Récupérer un document entier nécessite plein de lookups
-    * NoSQL
-        * Clé/valeur --> simple et recherche très simple
-        * Valeur = donnée simple comme document complexe
-        * Recherche rapide sur les clés
-        * Lente sur la plupart du reste
-        * Efficace lorsqu'on veut récupérer la totalité d'un document
-    * Autre type d'indexation
-        * Trie
-* Montée en charge, Stratégie de répartition de charges sur plusieurs machines
-    * Dépend des données
-    * Dépend des usages
-    * Exemple
-        * Cas d'un système de auto-complétion (usage standard sur un site internet)
-        * Division en n machine --> comment faire
-    * Notion de hash --> distribution uniforme
-    * Transformée de Burrows-Wheeler (BWT) 
-    * Cache
-* Maintenance des données
-    * Lecture et écriture simultanée
-    * Conflit dans les mises à jour
-    * Parler Section critiques --> très lent
-    * Timestamp (Lamport) : vision optimiste
-        * Récupération de données (données + timestamp)
-        * Écriture si timestamp identique
-        * Impossibilité d'une heure commune dans un cluster
-    * Exemple : index d'un moteur de recherche
-        * Données réparties sur plusieurs machines (résistante à la charge)
-        * Même données répliquées sur plusieurs machines (résistance aux pannes)
-        * Mise à jour d'un document ? Qui a la version la plus récente ? --> timestamp
-* Hadoop
-    * Distribution des calculs
-    * Notion de mapper, reducer
-    * Avantage
-        * Répartition efficace si calculs indépendant d'une ligne à l'autre
-    * Inconvénient
-        * Grosses consommations réseau, I/O
-        * Pas de communication entre machine
-        * Peu de mémoire pour chaque traitement
-    * Java, langage évolué, PIG, HIVE, logique proche du SQL
-    * Distinguer le système de fichiers distribué (HDFS) du moteur de distribution de job
-    * Pas de communication entre machine --> algorithme sur les graphes pas efficaces
-    * Mahout
-    * Accès très lent aux données --> pas d'index
-    * Ordre des lignes dans une table imprévisible
-    * Langage fonctionnels très adaptés
-    * YARN
-* Spark/Graphlab
-    * RDD --> effectuer plus de calculs en mémoire
-    * Dataframe --> SFrame
-    * Cours de Jérémie
-    * MLlib
-    * Langage evolué --> compilation / optimisation / allocation de machines
-* distribuer un traitement de données à différent niveaux
-    * avec un langage haut niveau (comme PIG)
-    * utilisation du java pour distribuer un job de façon plus optimisée
-    * distribution personnalisée d'un traitement avec des librairies bas niveau (type MPI)
-* algorithme distribué, descente de gradient distributé
-    * exemple des `k-means <http://fr.wikipedia.org/wiki/Algorithme_des_k-moyennes>`_ distribué
-    * `GPU <http://fr.wikipedia.org/wiki/Processeur_graphique>`_
-        
 
-Séances pratiques, Map Reduce
-+++++++++++++++++++++++++++++
+Map Reduce avec PIG sur Azure et Cloudera
++++++++++++++++++++++++++++++++++++++++++
 
 Les trois séances suivantes sont plus appliquées et dédiées à la découverte
 de `Hadoop <http://fr.wikipedia.org/wiki/Hadoop>`_, un environnement
@@ -192,7 +119,7 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
 .. index:: PageRank, k-means, factorisation de matrice
 
 Exemples de scripts PIG
-+++++++++++++++++++++++
+=======================
 
 Trois projets réalisés par les élèves lors de l'année 2014-2015 :
 
@@ -204,7 +131,7 @@ Trois projets réalisés par les élèves lors de l'année 2014-2015 :
 .. _l-td3a-start:
 
 Getting started
-+++++++++++++++
+===============
 
 Ces enseignements vous sont proposés via des notebooks. 
 Ils requièrent une surcouche apporté par le module 
@@ -223,7 +150,7 @@ ces outils sur les trois OS principaux
 
 
 Bibliographie
-+++++++++++++
+=============
 
 **Documentation**
 

@@ -2,12 +2,12 @@
 
 .. _l-visualisation:
 
-
+=============
 Visualisation
 =============
 
-Modules
-+++++++
+Modules et exemples
+===================
 
 `matplotlib <http://matplotlib.org/>`_ reste la référence en matièce de graphique mais la librairie ne 
 produit que des images statiques. D'autres libraires utilisent pleinement le javascript au sein d'un
@@ -25,50 +25,11 @@ il faut vous demander :
 * si vous souhaitez que le graphique fasse parti d'un site web et puisse être exploité en dehors du notebook).
 
 
-Ces notebooks parcourent différents exemples de visualisations avec différentes librairies.
+Lire `10 plotting librairies <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_.
 
-**images**
-
-.. toctree::
-    :maxdepth: 1
-    
-    notebooks/im_matplotlib
-    notebooks/im_seaborn
-    notebooks/im_lifelines
-    notebooks/im_networkx
-    notebooks/im_basemap
-    notebooks/im_reportlab
-    
-**javascript**
-
-.. toctree::
-    :maxdepth: 1
-    
-    notebooks/js_bokeh
-    notebooks/js_mpld3
-    notebooks/js_lightning_python
-    notebooks/jspy_bqplot
-    notebooks/js_plotly
-    notebooks/js_pygal
-    notebooks/js_folium
-    notebooks/v_datashader
-
-**combinaison**
-
-.. toctree::
-    :maxdepth: 1
-    
-    notebooks/v_holoviews
-
-
-Modules complémentaires
-+++++++++++++++++++++++
-
-* `geopy <https://pypi.python.org/pypi/geopy>`_ : pour appeler les services de géocoding les plus connus
-    
 
 Galleries
-+++++++++
+=========
 
 *Quelques fonctions en guise d'exemples*
 
@@ -93,7 +54,7 @@ Galleries
 
   
 Trucs et astuces
-++++++++++++++++
+================
 
   
 * :func:`avoid_overlapping_dates <ensae_teaching_cs.faq.faq_matplotlib.avoid_overlapping_dates>` : 

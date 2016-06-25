@@ -16,7 +16,7 @@ Il existe trois formats disponibles :
 Les changements importants sont notés sur le :ref:`blog <ap-main-0>` 
 associé à ce cours, les autres :ref:`l-completed-todolist`.
 
-.. |gitlogo| image:: git_logo.png
+.. |gitlogo| image:: _static/git_logo.png
 
 
 Avant-propos
@@ -81,6 +81,7 @@ Contenu des enseignements
     7. Visualisation <i_visualisation>
     8. Modules, Bibliographie, Articles... <i_informations>
     9. Getting started <i_getting_started>
+    10. Index
 
 
 Getting started

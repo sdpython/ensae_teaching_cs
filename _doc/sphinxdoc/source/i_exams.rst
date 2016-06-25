@@ -8,7 +8,8 @@
 Examens
 =======
 
-Ces examens ont été proposés ces dix dernières années.
+Ces examens ont été proposés ces dix dernières années
+à la fin du cours d'initiation à l'algorithmie et à la programmation.
 Les énoncés sont plus guidés que les séances pratiques.
 Ils requiert peu de connaissances, évitent le plus souvent les classes.
 

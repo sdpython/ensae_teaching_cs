@@ -3,8 +3,9 @@
 .. _l-getting_started_full:
 
 
+===============
 Getting started
----------------
+===============
 
 .. index:: R, Julia, WinPython, Anaconda, pyminstall, getting started
 
@@ -28,12 +29,12 @@ dans ces cours.
 .. _l-installation-courte:
 
 Résumé
-++++++
+======
 
 Les instructions mentionnées ci-dessous fonctionnent sous Windows, Linux et Mac.
 
 Windows
-^^^^^^^
++++++++
 
 * `distribution customisée <http://www.xavierdupre.fr/enseignement/>`_ [#fpm1]_ ou
   distribution standard de `Python <https://www.python.org/downloads/>`_
@@ -44,7 +45,7 @@ Windows
     Scripts\pymy_update3 --set=ensae_teaching_cs
     
 Linux / Mac
-^^^^^^^^^^^
++++++++++++
 
 * distribution `Anaconda <https://www.continuum.io/downloads>`_ (python 3.4, 64 bit)
 * puis la mise à jour depuis le répetoire ``Scripts`` en ligne de commande ::
@@ -56,14 +57,14 @@ Linux / Mac
         
     
 Linux en ligne de commande, connexion SSH
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++++
 
 Voir `Install Miniconda through SSH connection <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-11-01_anaconda_ssh.html>`_.
 La distribution testée est une distribution `Ubuntu 14.04 <http://releases.ubuntu.com/14.04/>`_.
 
 
 Installer un module
-+++++++++++++++++++
+===================
 
 Il faut ouvrir une fenêtre ligne de commande (Windows) 
 ou une fenêtre terminal (Linux, OS/X) et se placer dans le répertoire de la distribution.
@@ -94,7 +95,10 @@ ce qu'il est possible d'éviter : ::
 
 
 pip, python et ligne de commande
-++++++++++++++++++++++++++++++++
+================================
+
+La base
++++++++
 
 
 Le language python s'est doté d'un système de distribution de modules (ou *packages*)
@@ -102,7 +106,7 @@ qui est aisément accessible depuis la `ligne de commande <http://fr.wikipedia.o
 Sous Windows, on peut lancer la ligne de commande par la commande ``cmd``. On obtient une fenêtre noire.
 Il suffit alors de se déplacer dans le répertoire d'installation de Python ::
 
-    cd c:\Python34_x64\Scripts
+    cd c:\Python35_x64\Scripts
     
 Ou encore ::
 
@@ -135,7 +139,6 @@ Dans ce cas, il faut aller voir sur ce site
 s'il est disponible. S'il ne l'est pas, l'installation du module est réservée aux experts.
     
     
-    
 Installer un module avec pymy_install
 +++++++++++++++++++++++++++++++++++++
 
@@ -153,9 +156,53 @@ Le module permet d'installer un ensemble de modules ::
     pymy_install3 --set=pyensae
 
 
+Désinstallation
++++++++++++++++
+
+Il est possible de désinstaller simplement les modules installés pour
+ces enseignements ::
+
+    pip uninstall pyquickhelper pyensae pymmails pyrsslocal pysqllike 
+    pip uninstall ensae_teachings_cs
+    pip uninstall code_beatrix actuariat_python
+    pip uninstall ensae_projects
+    
+
+Configuration pour ces cours
+++++++++++++++++++++++++++++
+
+Les notebooks utilise le module `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ 
+développé pour ces enseignements. Pour installer ses dépendances, il faut utiliser le module
+`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
+
+  
+Certains notebooks s'appuient sur des fonctions qui donnent accès
+à des données ou qui facilitent leur récupération. Elles sont disponibles
+via le module  ::
+
+    pip install pyensae
+    
+Ce module requiert des dépendances qu'on peut installer comme
+suit ::
+
+    pymy_install3 --set=pyensae
+
+    
+La page :ref:`l-data2a` propose une liste exhaustive
+de modules qu'il faut ajouter pour reproduire la distribution
+proposée par l'école.
+  
+  
+Certains notebooks requièrent des outils supplémentaires :
+
+* `graphviz <http://www.graphviz.org/>`_
+
+
+.. index:: pip, ligne de commande
+    
 
 Distributions
-+++++++++++++
+=============
 
 .. index:: anaconda, winpython
 
@@ -190,53 +237,10 @@ Distributions
   Voir `Install Anaconda through SSH connection <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-11-01_anaconda_ssh.html>`_.
 
 
-Configuration
-+++++++++++++
-
-Les notebooks utilise le module `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ 
-développé pour ces enseignements. Pour installer ses dépendances, il faut utiliser le module
-`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
-
-  
-Certains notebooks s'appuient sur des fonctions qui donnent accès
-à des données ou qui facilitent leur récupération. Elles sont disponibles
-via le module  ::
-
-    pip install pyensae
-    
-Ce module requiert des dépendances qu'on peut installer comme
-suit ::
-
-    pymy_install3 --set=pyensae
-
-    
-La page :ref:`l-data2a` propose une liste exhaustive
-de modules qu'il faut ajouter pour reproduire la distribution
-proposée par l'école.
-  
-  
-Certains notebooks requièrent des outils supplémentaires :
-
-* `graphviz <http://www.graphviz.org/>`_
-
-
-.. index:: pip, ligne de commande
-
-Désinstallation
-+++++++++++++++
-
-Il est possible de désinstaller simplement les modules installés pour
-ces enseignements ::
-
-    pip uninstall pyquickhelper pyensae pymmails pyrsslocal pysqllike 
-    pip uninstall ensae_teachings_cs
-    pip uninstall code_beatrix actuariat_python
-    pip uninstall ensae_projects
-
     
     
 Editeur de texte et navigateur
-++++++++++++++++++++++++++++++
+==============================
 
 .. index:: éditeur, IDE
 
