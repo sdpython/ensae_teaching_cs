@@ -76,12 +76,11 @@ Contenu des enseignements
     2. Python pour un Data Scientist <td_2a>
     3. Eléments logiciels pour le traitement des données massives <td_3a>
     4. Projets informatiques <projet_info>
-    5. Examens <exams>
-    6. Découvrir <specials/index>
-    7. Modules, Bibliographie, Articles... <informations>
-    8. Exemples et digressions <exemple_index>
-    9. Visualisation <visualisation>
-    10. Getting started <getting_started>
+    5. Examens <i_exams>
+    6. Découvrir <i_decouvrir>
+    7. Visualisation <i_visualisation>
+    8. Modules, Bibliographie, Articles... <i_informations>
+    9. Getting started <i_getting_started>
 
 
 Getting started

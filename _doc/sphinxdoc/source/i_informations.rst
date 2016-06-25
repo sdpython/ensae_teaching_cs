@@ -10,7 +10,6 @@ Modules, Bibliographie, Articles...
 .. toctree::
     :maxdepth: 1
 
-    specials/algorithm_culture
     specials/azure
     data2a
     manytools
