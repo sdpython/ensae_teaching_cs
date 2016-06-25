@@ -102,7 +102,9 @@ class TestRst2HtmlLatex(unittest.TestCase):
                 content = f.read()
             try:
                 text = rst2html(content, outdir=temp,
-                                imgmath_latex_preamble=preamble)
+                                imgmath_latex_preamble=preamble,
+                                extlinks=dict(issue=('https://link/%s',
+                                                     'issue {0} on GitHub')))
             except NotImplementedError as e:
                 if "Unknown node: todoext_node" in str(e):
                     warnings.warn("todoext has no outputs in latex")
