@@ -53,7 +53,7 @@ sys.path.insert(
 from pyquickhelper.helpgen.default_conf import set_sphinx_variables
 
 
-set_sphinx_variables(__file__, "ensae_teaching_cs", "Xavier Dupré",
+set_sphinx_variables(__file__, "Python dans tous ses états", "Xavier Dupré",
                      2016, "sphinx_rtd_theme", None,
                      locals(), add_extensions=None,
                      extlinks=dict(

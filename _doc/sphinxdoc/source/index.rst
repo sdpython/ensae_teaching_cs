@@ -1,7 +1,7 @@
 
 
-ENSAE - Programmation - Xavier Dupré
-====================================
+Python dans tous ses états
+==========================
 
 Contenu des séances de travaux pratiques en programmation
 que je dispense à l'`ENSAE <http://www.ensae.fr/>`_. 
