@@ -117,9 +117,9 @@ class TestJenkins(unittest.TestCase):
 
         engines = dict(anaconda2="C:\\Anaconda2", anaconda3="C:\\Anaconda3",
                        winpython="C:\\WinPython-64bit-3.4.2.3\\python-3.4.2.amd64",
-                       default="c:\\Python35_x64",
+                       default="c:\\PythonXX_x64",
                        py27="c:\\Python27",
-                       py35="c:\\Python34_x64")
+                       py35="c:\\Python35_x64")
 
         js = JenkinsExt('http://machine:8080/', "user",
                         "password", mock=True, engines=engines, fLOG=fLOG)
@@ -133,7 +133,8 @@ class TestJenkins(unittest.TestCase):
 
             job = "pyrsslocal [py35] <-- pyquickhelper, pyensae"
             cmd = "\n".join(js.get_jenkins_script(job))
-            assert "Python34" not in cmd
+            if "PythonXX" in cmd:
+                raise Exception(cmd)
 
     def test_jenkins_local27(self):
         fLOG(
