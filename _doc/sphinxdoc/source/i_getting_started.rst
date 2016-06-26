@@ -141,10 +141,7 @@ ce qu'il est possible d'éviter : ::
 
 
 pip, python et ligne de commande
-================================
-
-La base
-+++++++
+++++++++++++++++++++++++++++++++
 
 
 Le language python s'est doté d'un système de distribution de modules (ou *packages*)
@@ -283,95 +280,6 @@ Distributions
   Voir `Install Anaconda through SSH connection <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-11-01_anaconda_ssh.html>`_.
 
     
-    
-Outils adaptés aux projets de long terme
-========================================
-
-Navigateur
-++++++++++
-
-.. index:: navigateur, notebook  
-
-Les navigateur sont importants pour l'utilisation des notebooks. Je recommande soit
-`Firefox <https://www.mozilla.org/fr/firefox/new/>`_, 
-soit `Chrome <http://www.google.com/chrome/>`_. Internet Explorer pose quelques problèmes
-avec l'utilisateur du Javascript. Ces deux navigateurs sont indispensables si vous insérez du javascript
-dans nos notebooks. Le débuggeur de Chrome est le plus pratique à utiliser quand il s'agit d'aller
-fouiller dans les feuilles de styles ou de voir l'exécution du javascript.
-        
-.. index:: développeur
-        
-Développeur
-+++++++++++
-        
-La documentation et les tests unitaires les modules
-classés dans les catégories *SPHINX*, *TEACH*
-et répertorié par :ref:`l-data2a`.
-Certaines séances pratiques utilisent des données depuis ce site. 
-Elles sont facilement téléchargeables avec ces deux modules :
-
-* `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_ : ce module compile ce cours
-* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ : outils variés pour les élèves de l'ENSAE
-* `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_ : installer facilement des modules sous Windows
-
-Pour être compilée, la documentation requiert également :
-
-* `miktex <http://miktex.org/>`_ (Windows seulement)
-* `pandoc <http://pandoc.org/>`_
-* `InkScape <https://inkscape.org/fr/>`_
-    
-Il est très utile d'avoir un éditeur de texte léger, quelques options :
-
-* `Scite <http://www.scintilla.org/SciTE.html>`_
-* `Notepad++ <http://notepad-plus-plus.org/>`_
-    
-Et un `IDE <http://en.wikipedia.org/wiki/Integrated_development_environment>`_ :
-
-* `PTVS <https://microsoft.github.io/PTVS/>`_ (Windows uniquement)
-* `PyCharm <https://www.jetbrains.com/pycharm/>`_
-    
-
-Les outils pour développer
-++++++++++++++++++++++++++
-
-**Impératif**
-
-* `Python 3.4 64 bit <https://www.python.org/downloads/>`_
-* `R <http://www.r-project.org/>`_
-* `Scite <http://www.scintilla.org/SciTE.html>`_ : éditeur de texte très léger
-* `7zip <http://www.7-zip.org/>`_ : pour compresser, décompresser tous les formats
-* `Firefox <https://www.mozilla.org/fr-FR/firefox/new/>`_, `Chrome <http://www.google.com/chrome/>`_ : navigateurs 
-  (il faut éviter Internet Explorer pour les notebooks Jupyter)
-* `Miktex <http://miktex.org/>`_, `TexnicCenter <http://www.texniccenter.org/>`_ : compiler du latex (et obtenir des PDF)
-* `Java <http://www.java.com/fr/download/>`_ : nécessaire pour Jenkins et `Antlr <http://www.antlr.org/>`_
-* `Jenkins <https://jenkins-ci.org/>`_ (plus les plugins pour `GitHub <https://wiki.jenkins-ci.org/display/JENKINS/GitHub+Plugin>`_, 
-  `git <https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin>`_, 
-  `python <https://wiki.jenkins-ci.org/display/JENKINS/Python+Plugin>`_, 
-  `pipeline <https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin>`_) : automatisation de build
-* `pandoc <http://pandoc.org/>`_ : conversion de tout type de format en tout autre (notebook --> PDF)
-* `TortoiseGit <https://tortoisegit.org>`_ : sous Windows, pour éviter la ligne de commande avec Git
-* `Git <http://git-scm.com/>`_ + `GitHub <https://github.com/>`_ : pour suivre ses projets avec Git
-* `GraphViz <http://www.graphviz.org/>`_ : représenter des graphes
-
-**Impératif pour le C++ sous Windows**
-
-* `Visual Studio Community <https://www.visualstudio.com/>`_ : C++, C#, F#, Python avec `PTVS <https://microsoft.github.io/PTVS/>`_
-* `MinGW <http://www.mingw.org/>`_ : compilateur C++
-
-
-.. rubric:: Footnotes
-
-.. index:: pymyinstall, distribution
-
-.. [#fpm1] Cette distribution est construite grâce à la fonction 
-           `win_python_setup <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/win_installer/win_setup_main.html#pymyinstall.win_installer.win_setup_main.win_python_setup>`_
-           du module
-           `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/>`_.
-           La construction du setup prend quelques heures et inclut les modules
-           listés répertoriés par :ref:`l-data2a`.
-           
-           
-
 
 
 
@@ -385,23 +293,19 @@ ou le setup préparée pour l'école `Windows Setup <http://www.xavierdupre.fr/e
 construit avec le module
 `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_.
 
-        
 
-Les indispensables
-------------------
+**Les indispensables**
 
 * `dask <http://dask.pydata.org/en/latest/>`_ : dataframe distribué et capables de gérer des gros volumes de données (> 5Go)
 * `Jupyter <http://jupyter.org/>`_ : gestion des notebooks (des pages blanches mélangeant code, équations, graphiques)
 * `matplotlib <http://matplotlib.org/>`_ : graphes scientifiques
 * `numpy <http://www.numpy.org/>`_ : calcul matriciel
 * `pandas <http://pandas.pydata.org/>`_ : gestion de `DataFrame <http://en.wikipedia.org/wiki/Data_frame>`_
+* `Scipy <http://www.scipy.org/>`_ : calcul scientifiques
 * `scikit-learn <http://scikit-learn.org/stable/>`_ : machine learning, statistique descriptive
 * `statsmodels <http://statsmodels.sourceforge.net/>`_ : séries temporelles
 
-Dépendances
------------
-
-**jupyter**
+**Dépendances**
 
 * `jinja2 <http://jinja.pocoo.org/>`_ : moteur de rendu HTML
 * `pyzmq <http://zeromq.github.io/pyzmq/>`_ : connecteur pour `ØMQ <http://zeromq.org/>`_ (librairie de sockets, communication entre plusieurs machines)
@@ -409,19 +313,22 @@ Dépendances
 * `tornado <http://www.tornadoweb.org/en/stable/>`_ : server web
 
     
-Visualisation
--------------
+**Visualisation**
 
 Voir `10 plotting libraries at PyData 06/14/2016 in Paris <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_.
     
-Jeux
-----
+**Jeux**
 
 * `pygame <http://www.pygame.org/>`_ 
 * `kivy <http://kivy.org/#home>`_ : pour faire des jeux ou des applications pour tablettes, téléphones
 
-Extensions
-----------
+
+**Pour les TD et projets à l'ENSAE**
+
+* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ : outils pour les élèves de l'ENSAE
+* `pyquickhelper <http://www.xavierdupre.fr/app/`pyquickhelper/helpsphinx/index.html>`_ : outils d'automatisation
+    
+**Spécialistes**
 
 * `cvxopt <http://cvxopt.org/>`_ : optimisation quadratique sous contraintes 
   (lire `Install cvxopt on Ubuntu <http://www.xavierdupre.fr/blog/2014-11-23_nojs.html>`_, sous Windows,
@@ -429,32 +336,20 @@ Extensions
 * `Flask <http://flask.pocoo.org/>`_ : outils pour produire un server web en Python (plus simple que `django <http://www.django-fr.org/>`_)
 * `openpyxl <http://pythonhosted.org/openpyxl/>`_ : conversion de DataFrame en feuille Excel, 
 * `Pillow <https://github.com/python-imaging/Pillow>`_ : traitement d'image
-* `Scipy <http://www.scipy.org/>`_ : calcul scientifiques
-
-Pour les TD et projets à l'ENSAE
---------------------------------
-
-* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ : outils pour les élèves de l'ENSAE
-* `pyquickhelper <http://www.xavierdupre.fr/app/`pyquickhelper/helpsphinx/index.html>`_ : outils d'automatisation
-    
-Spécialistes
-------------
-
 * `liblinear <http://www.csie.ntu.edu.tw/~cjlin/liblinear/>`_ : calcul matriciel en grande dimension
 * `opencv <http://opencv.org/>`_ : traitement d'image, reconnaissance des formes
 * `simplecv <http://simplecv.org/>`_ : Python et Kinect, vision
 * `PyQt4 <https://www.riverbankcomputing.com/software/pyqt/download>`_ : interfaces graphiques
 * `sphinx <http://sphinx-doc.org/>`_ : génération de documentation (dont celle-ci)
     
-Python et autres langages
--------------------------
+**Python et autres langages**
 
 * `Cython <http://www.cython.org/>`_ : Python et C++
 * `pythonnet <https://github.com/pythonnet/pythonnet>`_ : Python et C#
 * `rpy2 <https://bitbucket.org/lgautier/rpy2>`_ : Python et R
+* `sas7bdat <https://pypi.python.org/pypi/sas7bdat>`_ : Python et SAS
     
-Internet / SSH
---------------
+**Internet / SSH**
 
 * `ansiconv <http://pythonhosted.org/ansiconv/>`_ : conversion de texte ANSI en unicode (sortie linux)
 * `ansi2html <https://github.com/ralphbean/ansi2html/>`_ : conversion de texte ANSI en HTML (sortie linux)
@@ -465,20 +360,14 @@ Internet / SSH
 * `requests <http://docs.python-requests.org/>`_ : pratique pour se débrouiller avec internet (`exemples <http://docs.python-requests.org/en/latest/user/quickstart/#redirection-and-history>`_)
           
 
-Pour faire du machine learning sans programmer
-----------------------------------------------
+**Pour faire du machine learning sans programmer**
 
 * `Orange3 <http://orange.biolab.si/orange3/>`_
     
 
 
-
-
 Outils, ressources pour développer
 ==================================
-
-Outils
-++++++
 
 Développer un programme informatique prend du temps et il est important d'être à l'aise. 
 Une grande difficulté lorsqu'on programme c'est de travailler à plusieurs sur le même projet.
@@ -490,10 +379,12 @@ qui facilitent l'archivage. Ils sont tellement pratiques qu'on a même du mal
 **Suivi de sources distant**
 
 * `GitHub <https://github.com/>`_
+* `GitLab <https://about.gitlab.com/>`_
 * `BitBucket <https://bitbucket.org/>`_
 
 **Visual pour Git**
 
+* `Git <http://git-scm.com/>`_ + `GitHub <https://github.com/>`_ : pour suivre ses projets avec Git
 * `TortoiseGit <https://code.google.com/p/tortoisegit/>`_ (Windows)
 * `SourceTree <http://www.sourcetreeapp.com/>`_ (Windows, Mac)
 * `Giggle <https://wiki.gnome.org/Apps/giggle>`_ (Linux)
@@ -546,19 +437,78 @@ un stockage dans un pays dont la loi limite l'usage qui peut être fait de vos d
 * `Python et Arduino <http://playground.arduino.cc/Interfacing/Python>`_
 * `Python et RaspberryPI <http://www.raspberrypi.org/documentation/usage/python/README.md>`_
 
-**Scheduler, automatic build**
 
-* `Jenkins <http://jenkins-ci.org/>`_
+**Navigateur**
+
+.. index:: navigateur, notebook  
+
+Les navigateur sont importants pour l'utilisation des notebooks. Je recommande soit
+`Firefox <https://www.mozilla.org/fr/firefox/new/>`_, 
+soit `Chrome <http://www.google.com/chrome/>`_. Internet Explorer pose quelques problèmes
+avec l'utilisateur du Javascript. Ces deux navigateurs sont indispensables si vous insérez du javascript
+dans nos notebooks. Le débuggeur de Chrome est le plus pratique à utiliser quand il s'agit d'aller
+fouiller dans les feuilles de styles ou de voir l'exécution du javascript.
+        
+.. index:: développeur
+        
+**Documentation**
+        
+La documentation et les tests unitaires les modules
+classés dans les catégories *SPHINX*, *TEACH* (voir table ci-dessous).
+Certaines séances pratiques utilisent des données depuis ce site. 
+Elles sont facilement téléchargeables avec ces deux modules :
+
+* `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_ : ce module compile ce cours
+* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ : outils variés pour les élèves de l'ENSAE
+* `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_ : installer facilement des modules sous Windows
+
+Pour être compilée, la documentation requiert également :
+
+* `GraphViz <http://www.graphviz.org/>`_ : représenter des graphes
+* `InkScape <https://inkscape.org/fr/>`_
+* `miktex <http://miktex.org/>`_ (Windows seulement)
+* `pandoc <http://pandoc.org/>`_
+    
+
+**Continuous build**
+
 * `Buildbot <http://buildbot.net/>`_
+* `Java <http://www.java.com/fr/download/>`_ : nécessaire pour Jenkins et `Antlr <http://www.antlr.org/>`_
+* `Jenkins <https://jenkins-ci.org/>`_ (plus les plugins pour `GitHub <https://wiki.jenkins-ci.org/display/JENKINS/GitHub+Plugin>`_, 
+  `git <https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin>`_, 
+  `python <https://wiki.jenkins-ci.org/display/JENKINS/Python+Plugin>`_, 
+  `pipeline <https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin>`_) : automatisation de build
+* `Visual Studio Community <https://www.visualstudio.com/>`_ : C++, C#, F#, Python avec `PTVS <https://microsoft.github.io/PTVS/>`_
+* `MinGW <http://www.mingw.org/>`_ : compilateur C++
 
-Ressources
-++++++++++
+
+**Compression**
+
+* `7zip <http://www.7-zip.org/>`_ : pour compresser, décompresser tous les formats
+
+
+**Ressources**
 
 * `Developpez.com <http://www.developpez.com/>`_ : beaucoup de choses autour de la programmation et en français
 * `stackoverflow <http://stackoverflow.com/>`_ : énorme forum de discussion sur tout ce qui touche à la programmation
 * `Jardin Zen Css <http://www.csszengarden.com/>`_ (la même page avec une multitude de styles différents)
 * `Le blog univers domotique <http://blog.univers-domotique.com/>`_
 * `Tutoriel sur GIT <http://sixrevisions.com/resources/git-tutorials-beginners/>`_
+
+
+
+.. rubric:: Footnotes
+
+.. index:: pymyinstall, distribution
+
+.. [#fpm1] Cette distribution est construite grâce à la fonction 
+           `win_python_setup <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/win_installer/win_setup_main.html#pymyinstall.win_installer.win_setup_main.win_python_setup>`_
+           du module
+           `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/>`_.
+           La construction du setup prend quelques heures et inclut les modules
+           listés répertoriés par :ref:`l-data2a`.
+           
+           
 
 
 
@@ -601,35 +551,7 @@ Autres sources d'inspiration :
 * conférence `pydata <http://pydata.org/>`_
 
 
-Installation
-++++++++++++
-
-a. Installation : 
-    - `Anaconda <http://continuum.io/downloads#py34>`_
-    - `WinPython <http://winpython.sourceforge.net/>`_ (seulement sur Windows, moins rapide au niveau des mises à jour que Anaconda)
-    - `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_ 
-    - `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_
-      (utilisé pour construire ce `setup <http://www.xavierdupre.fr/enseignement/>`_)
-    - `Instructions pour installer ces modules sous Linux/Mac <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-08-30_install_linux.html>`_
-b. Environnements
-    - `IDLE <https://docs.python.org/3.4/library/idle.html>`_
-    - `ligne de commande Jupyter <http://jupyter-notebook.readthedocs.io/en/latest/config.html>`_
-    - `Spyder <http://pythonhosted.org//spyder/>`_  (environnement de type `RStudio <http://www.rstudio.com/>`_)
-    - `Rodeo <https://pypi.python.org/pypi/rodeo>`_  (Spyder version web et épurée)
-    - `Notebooks <http://jupyter.org/notebook.html>`_
-c. Editeur de texte (pour des projets plus ambitieux, SciTE, PyCharm, PTVS, WingIDE)
-    - `Scite <http://www.scintilla.org/SciTE.html>`_
-    - `Notepad++ <https://notepad-plus-plus.org/>`_
-    - `SublimeText <http://www.sublimetext.com/>`_
-    - `Atom <https://atom.io/>`_
-    - `PyCharm <http://www.jetbrains.com/pycharm/>`_
-    - `PTVS <http://microsoft.github.io/PTVS/>`_ (Python Tools for Visual Studop)
-    - `WingIDE <https://wingware.com/>`_ (version académique `Wing IDE 101 <https://wingware.com/downloads/wingide-101>`_)
-        
-
-
-Quelques articles
-+++++++++++++++++
+**Quelques articles**
 
 * `scikit lectures <http://scipy-lectures.github.io/>`_
 * `Formation à Python scientifique - ENS Paris <http://python-prepa.github.io/index.html>`_
@@ -642,32 +564,28 @@ Quelques articles
 * `Understanding Random Forest <http://orbi.ulg.ac.be/handle/2268/170309>`_
 
 
-Quelques liens
-++++++++++++++
+**Liens, blogs à suivre**
+- `FastML <http://fastml.com/>`_
+- `no free hunch (Kaggle Blog) <http://blog.kaggle.com/>`_
+- `Sebastian Raschka <http://sebastianraschka.com/articles.html>`_
+- `yhat <http://blog.yhathq.com/>`_
+- `NumFOCUS Foundation <http://numfocus.org/projects/index.html>`_
+- `pythonworks.org <http://www.pythonworks.org/home>`_ (références de livres)
 
-- Blog
-    - `FastML <http://fastml.com/>`_
-    - `no free hunch (Kaggle Blog) <http://blog.kaggle.com/>`_
-    - `Sebastian Raschka <http://sebastianraschka.com/articles.html>`_
-    - `yhat <http://blog.yhathq.com/>`_
-- Sites
-    - `NumFOCUS Foundation <http://numfocus.org/projects/index.html>`_
-    - `pythonworks.org <http://www.pythonworks.org/home>`_ (références de livres)
-- Articles
-    - `Scikit-learn: Machine Learning in Python <http://jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf>`_ (avec les auteurs de scikit-learn)
-- Livres
-    - `Deep Learning <http://www-labs.iro.umontreal.ca/~bengioy/dlbook/>`_
-      by Yoshua Bengio, Ian Goodfellow and Aaron Courville
-    - `Building Machine Learning Systems with Python <https://github.com/luispedro/BuildingMachineLearningSystemsWithPython>`_
-      by Willi Richert, Luis Pedro Coelho published by PACKT PUBLISHING (2013) 
-    - `Machine Learning <https://github.com/pbharrin/machinelearninginaction>`_
-      in Action by Peter Harrington
-    - `Probabilistic Programming and Bayesian Methods for Hackers <http://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb>`_,
-      (`second version <http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/>`_)
-- Vidéo
-    - `Scikit-Learn: Machine Learning en Python <http://www.microsoft.com/france/mstechdays/programmes/2014/fiche-session.aspx?ID=295be946-2c69-458a-8545-bcebe7970fd8>`_
-    - `PyVideo <http://www.pyvideo.org/>`_
-    - `PyData TV <https://www.youtube.com/user/PyDataTV>`_
+**Articles Livres, Vidéos**
+
+- `Scikit-learn: Machine Learning in Python <http://jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf>`_ (avec les auteurs de scikit-learn)
+- `Deep Learning <http://www-labs.iro.umontreal.ca/~bengioy/dlbook/>`_
+  by Yoshua Bengio, Ian Goodfellow and Aaron Courville
+- `Building Machine Learning Systems with Python <https://github.com/luispedro/BuildingMachineLearningSystemsWithPython>`_
+  by Willi Richert, Luis Pedro Coelho published by PACKT PUBLISHING (2013) 
+- `Machine Learning <https://github.com/pbharrin/machinelearninginaction>`_
+  in Action by Peter Harrington
+- `Probabilistic Programming and Bayesian Methods for Hackers <http://nbviewer.jupyter.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/blob/master/Prologue/Prologue.ipynb>`_,
+  (`second version <http://camdavidsonpilon.github.io/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/>`_)
+- `Scikit-Learn: Machine Learning en Python <http://www.microsoft.com/france/mstechdays/programmes/2014/fiche-session.aspx?ID=295be946-2c69-458a-8545-bcebe7970fd8>`_
+- `PyVideo <http://www.pyvideo.org/>`_
+- `PyData TV <https://www.youtube.com/user/PyDataTV>`_
 
 
 .. index:: wheel

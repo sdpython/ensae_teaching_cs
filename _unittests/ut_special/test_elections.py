@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=100s)
+@brief      test log(time=180s)
 
 """
 import os
@@ -50,7 +50,7 @@ class TestElections (unittest.TestCase):
             temp = get_temp_folder(__file__, "temp_loading_elections_2012")
             zip = os.path.join(path, "data", "elections.zip")
             unzip(zip, temp)
-            file = os.path.join(temp, "election_2012.xls")
+            file = os.path.join(temp, "election_2012.xlsx")
         assert os.path.exists(file)
 
         el = ElectionResults(year=2012, file=file)
@@ -113,7 +113,7 @@ class TestElections (unittest.TestCase):
             temp = get_temp_folder(__file__, "temp_loading_elections_2007")
             zip = os.path.join(path, "data", "elections.zip")
             unzip(zip, temp)
-            file = os.path.join(temp, "election_2007.xls")
+            file = os.path.join(temp, "election_2007.xlsx")
         assert os.path.exists(file)
 
         el = ElectionResults(year=2007, file=file)
@@ -130,13 +130,13 @@ class TestElections (unittest.TestCase):
         for year in [2012, 2002, 2007]:
             for level in ["Départements", "Cantons", ]:
                 fLOG("******reading ", year, level)
-                file = os.path.join(path, "data", "election_%d.xls" % year)
+                file = os.path.join(path, "data", "election_%d.xlsx" % year)
                 if not os.path.exists(file):
-                    file = os.path.join(temp, "election_%d.xls" % year)
+                    file = os.path.join(temp, "election_%d.xlsx" % year)
                 if not os.path.exists(file):
                     zip = os.path.join(path, "data", "elections.zip")
                     unzip(zip, temp)
-                    file = os.path.join(temp, "election_%d.xls" % year)
+                    file = os.path.join(temp, "election_%d.xlsx" % year)
                 assert os.path.exists(file)
 
                 el = ElectionResults(year=year, file=file, level=level)
