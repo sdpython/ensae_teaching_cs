@@ -52,10 +52,16 @@ les mêmes choses. Voici une idée de ces *mêmes choses* qu'on fait tout le tem
 et qu'il est important de comprendre.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     all_example_ConstructionsClassiques
     notebooks/code_liste_tuple
+    all_example_Ngatifs
+    all_example_Impossibleretenir    
+    all_example_TD1A
+    all_example_science
+    all_example_techniques
+    
     
 Le premier jeu qu'on demande d'implémenter à tous ceux qui commencent la 
 programmation :
