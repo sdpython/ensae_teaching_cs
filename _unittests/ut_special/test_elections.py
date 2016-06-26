@@ -54,6 +54,11 @@ class TestElections (unittest.TestCase):
             file = os.path.join(temp, "election_2012.xlsx")
         assert os.path.exists(file)
 
+        if is_travis_or_appveyor() == "travis":
+            warnings.warn(
+                "The test cannot read an excel file using xlrd. Disabling it.")
+            return
+
         el = ElectionResults(year=2012, file=file)
         fLOG(el.get_candidates_votes(0))
         el.correct("cand")
@@ -108,6 +113,11 @@ class TestElections (unittest.TestCase):
     def test_loading_elections_2007(self):
         fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
         path = os.path.abspath(os.path.split(__file__)[0])
+
+        if is_travis_or_appveyor() == "travis":
+            warnings.warn(
+                "The test cannot read an excel file using xlrd. Disabling it.")
+            return
 
         file = os.path.join(path, "data", "election_2007.xls")
         if not os.path.exists(file):
