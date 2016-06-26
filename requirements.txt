@@ -6,7 +6,6 @@ codecov
 entrypoints
 ete3
 folium
-goslate
 lifelines
 lightning-python
 mechanize
