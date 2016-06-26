@@ -10,6 +10,7 @@ ete3
 folium
 lifelines
 lightning-python
+lxml
 mechanize
 metakernel
 openpyxl
