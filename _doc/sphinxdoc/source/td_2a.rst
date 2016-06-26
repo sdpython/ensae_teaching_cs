@@ -2,7 +2,7 @@
 
 .. _l-td2a:
 
-
+=============================
 Python pour un Data Scientist
 =============================
 
@@ -16,7 +16,7 @@ Cours animé par :
 * Elodie Royant (ENSAE 2008)
 * Antoine Thabault (ENSAE 2012) [#fwrite2]_
 * Jérémie Jakubowicz (ENSAE 2002) [#fwrite2]_
-* Nicolas Pousset [#fwrite2]_
+* Nicolas Rousset [#fwrite2]_
 * Antoine Ly (ENSAE 2015)
 * Antoine Guillot (ENSAE 2015)
 * Dominique Poudevigne
@@ -43,117 +43,250 @@ Le cours est évalué avec un :ref:`projet informatique <l-projinfo2a>`.
 .. index:: sérialisation, index, dataframe
 
     
-TD - numpy pandas matplotlib
-++++++++++++++++++++++++++++
+Numpy pandas matplotlib jupyter
+===============================
 
-**TD 1 : DataFrame** : :ref:`TD 1 : Données et Graphes <td2acenoncesession1rst>` (:ref:`correction <td2acorrectionsession1rst>`)
+Notions abordées :
 
 - import/export de données dans un DataFrame
 - manipulation selon une logique SQL
 - utilité des index
 - lambda function
 - premiers graphiques
-        
-**TD 2 : calcul matriciel et astuces**
+- commandes magiques
 
-- :ref:`TD 2A : Calcul Matriciel, Optimisation <td2acenoncesession2arst>` (:ref:`correction <td2acorrectionsession2arst>`)
-- :ref:`TD 2B : Python autres langages <td2acenoncesession2brst>` (:ref:`correction <td2acorrectionsession2brst>`)
-- :ref:`TD 2C : Jupyter et commandes magiques <td2acenoncesession2crst>` (:ref:`correction <td2acorrectionsession2crst>`)
-- :ref:`TD 2D : Jupyter et calcul distribué <td2acenoncesession2drst>` (:ref:`correction <td2acorrectionsession2drst>`)
-- :ref:`TD 2E : Sérialisation <td2acenoncesession2erst>` (:ref:`correction <td2acorrectionsession2erst>`) (avec le module `pickle <https://docs.python.org/3.4/library/pickle.html>`_)
-
-TD - machine learning
-+++++++++++++++++++++
-
-
-**TD 3-4 : machine learning, visualisation** (*modifié en 2015*)
-
-- :ref:`TD 3A : Statistiques descriptives <td2acenoncesession3arst>` (:ref:`correction <td2acorrectionsession3arst>`)
-- Présentation - cours de `Gaël Varoquaux <http://gael-varoquaux.info/>`_ : `notes de lectures <https://github.com/GaelVaroquaux/sklearn_ensae_course>`_,
-  autres liens :
-  - machine learning et `scikit-learn <http://scikit-learn.org/stable/>`_
-    (`tutoriels sur scikit-learn <http://nbviewer.jupyter.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_),
-    quelques extraits :
-    - Par définition les plus proches voisins ne font pas d'erreur sur la base d'apprentissage, l'apprentissage consiste à forcer le modèle à faire des erreurs.
-    - `Overfitting <http://en.wikipedia.org/wiki/Overfitting>`_ et `régularisation <http://en.wikipedia.org/wiki/Regularization_(mathematics)>`_
-    - Erreur `L2 <http://en.wikipedia.org/wiki/Lp_space>`_ et pénalisation `L1 <http://fr.wikipedia.org/wiki/Espace_L1>`_
-    - `RandomizedPCA <http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.RandomizedPCA.html>`_, `GridSearch <http://scikit-learn.org/stable/modules/grid_search.html>`_, `LassoCV <http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html>`_
-    - `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_      
-    
-- :ref:`TD 3B : Arbres de décision et Random Forests <td2acenoncesession3brst>`  (:ref:`correction <td2acorrectionsession3brst>`)    
-- voir également :ref:`Travailleur les features ou changer de modèle <mlfeaturesmodelrst>`
-- :ref:`TD 4A : Machine Learning et Marketting <td2acenoncesession4arst>` (:ref:`correction <td2acorrectionsession4arst>`)
-    - machine learning
-    - `bokeh <http://bokeh.pydata.org/en/latest/>`_, `pygal <http://www.pygal.org/en/latest/>`_
-    - `interactions <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/notebooks/having_a_form_in_a_notebook.html#havingaforminanotebookrst>`_
-    - `d3.js <http://d3js.org/>`_        
-    
-- `TD 4B : Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
-  (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_),
-  ce notebook présente un moyen de faire une carte géographique, des graphes zoomables
-- `TD 4C : Apprendre la note d'un expert en vin <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_enonce.html>`_
-  (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_correction.html>`_),
-  courbe ROC, précision, rappel
-- :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
-- :ref:`question_projet_2014`
-    
-
-TD - big data sans cluster
-++++++++++++++++++++++++++
-
-    
-**TD 5 : grosses données** (**nouveau en 2015**)
-
-* Support de cours (*Nicolas Rousset*)
-    * :ref:`Données non structurées, programmation fonctionnelle : introduction <seance5introetjsonrst>`
-    * :ref:`programmation fonctionnelle <seance5progfonctionnellerst>`
-    * :ref:`dask <seance5daskrst>`
-    
-* :ref:`TD 5 : programmation fonctionnelle sur des données Twitter <td2acenoncesession5donneesnonstructureesetprogrammationfonctionnellerst>`  
-  (:ref:`correction <td2acorrectionsession5donneesnonstructureesetprogrammationfonctionnellecorrigerst>`)
-      
-      
-Algorithmique ludique
-+++++++++++++++++++++
-    
-**TD 6 : algorithmes et puzzles**
-
-* Présentations
-    * `programmation dynamique <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance2.pdf>`_
-    * `graphes et algorithmes <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance3.pdf>`_
-    
-* notebooks
-    * :ref:`TD 6A : Culture algorithmique <td2acenoncesession6arst>` (:ref:`correction <td2acorrectionsession6arst>`)
-        - présentation `Eléments d'Algorithmique <http://www.xavierdupre.fr/enseignement/complements/Seance4_algorithme.pdf>`_
-        - `Machine learning et algorithme <http://www.xavierdupre.fr/blog/2014-10-11_nojs.html>`_
-        - :ref:`exerciceplusgrandesommerst`        
-    * :ref:`TD 6B : Problèmes et algorithmes <td2acenoncesession6brst>` - :ref:`correction <td2acorrectionsession6brst>` 
-      (ces problèmes sont tirés de plusieurs sites dont `Google Code Jam <https://code.google.com/codejam/contests.html>`_)
-      
-* liens
-    * types de complexité : `force brute <http://fr.wikipedia.org/wiki/Recherche_exhaustive>`_, 
-      `glouton <http://fr.wikipedia.org/wiki/Algorithme_glouton>`_, `dynamique <http://fr.wikipedia.org/wiki/Programmation_dynamique>`_
-    * :ref:`l-algoculture`
-    * :ref:`l-expose-explication` 
-        
-
-
-Python et autres langages, personnaliser ses notebooks
-++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-    
 .. toctree::
-    :numbered:
+    :maxdepth: 2
+    
+    notebooks/_gs2a_dataframe
+    notebooks/_gs2a_magic_commands
+    
 
-    notebooks/python_r
-    notebooks/python_csharp
-    notebooks/jupyter_custom_magics
-    notebooks/matplotlib_zoomable
+Parallélisation et autres techniques
+====================================
+
+Notion abordées :
+
+* techniques de parallélisation
+* utiliser un autre langage pour accélérer les calculs
+* sérialisation : le fait de convertir n'importe quelle structure de données en un
+  tableau d'octets, c'est indispensable pour la communication entre deux machines,
+  deux processus
+
+.. toctree::
+    :maxdepth: 2
+    
+    notebooks/_gs2a_parallelisation
+    notebooks/_gs2a_langages
+    notebooks/_gs2a_serialisation
+    
+.. todoext::
+    :title: ajouter un notebook sur joblib
+    :tag: plus
+    
+    joblib est utilisé par scikit-learn pour 
+    paralléliser les calculs
+
+.. todoext::
+    :title: ajouter un notebook sur numba, llvmlite
+    :tag: plus
+    
+    Il n'y pas que CPython pour ooptimiser les calculs.
+    Aborder les notions de JIT.
+        
+.. todoext::
+    :title: sérialisation JSON
+    :tag: plus
+    
+    Très utilisée sur internet donc incontournable.
+
+
+Machine Learning
+================
+
+
+Présentation - cours de `Gaël Varoquaux <http://gael-varoquaux.info/>`_ : 
+
+* `notes de lectures <https://github.com/GaelVaroquaux/sklearn_ensae_course>`_
+* machine learning et `scikit-learn <http://scikit-learn.org/stable/>`_
+  (`tutoriels sur scikit-learn <http://nbviewer.jupyter.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_),  
+
+Quelques extraits :
+
+- Par définition les plus proches voisins ne font pas d'erreur sur la base d'apprentissage,
+  l'apprentissage consiste à forcer le modèle à faire des erreurs.
+- `Overfitting <http://en.wikipedia.org/wiki/Overfitting>`_ et 
+  `régularisation <http://en.wikipedia.org/wiki/Regularization_(mathematics)>`_
+- Erreur `L2 <http://en.wikipedia.org/wiki/Lp_space>`_ 
+  et pénalisation `L1 <http://fr.wikipedia.org/wiki/Espace_L1>`_
+- `RandomizedPCA <http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.RandomizedPCA.html>`_, 
+  `GridSearch <http://scikit-learn.org/stable/modules/grid_search.html>`_, `LassoCV <http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html>`_
+- `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_      
+
+
+.. toctree::
+    :maxdepth: 2
+    
+    notebooks/_gs2a_statdes
+    notebooks/_gs2a_ml
+
+    
+**Lectures**
+
+* :ref:`Travailleur les features ou changer de modèle <mlfeaturesmodelrst>`
+* :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
+* :ref:`question_projet_2014`
+
+.. todoext::
+    :title: aborder d'autres librairies
+    :tag: plus
+    
+    scikit-learn, h2o, xgboost, scikit-learn-contrib
+
+
+Deep Learning
+=============
+
+.. todoext::
+    :title: Aborder theano, keras, GPU et les types de deep strucures
+    :tag: plus
+    
+    Et les autres caffee, tensorflow, cntk, torch, h2o
+    (voir `libraries <http://www.teglor.com/b/deep-learning-libraries-language-cm569/>`_,
+    `librairies 1 <http://machinelearningmastery.com/popular-deep-learning-libraries/>`_,
+    `librairies 2 <http://www.datasciencecentral.com/profiles/blogs/here-are-15-libraries-in-various-languages-to-help-implement-your>`_,
+    `comparison <https://en.wikipedia.org/wiki/Comparison_of_deep_learning_software>`_
+    et différents types de structures DNN, CNN
+    `deep learning <https://en.wikipedia.org/wiki/Deep_learning>`_
+    
+    
+
+
+**Modèles pré-entraînés**
+
+* `Places CNN <http://places.csail.mit.edu/downloadCNN.html>`_,
+  `Pre-release of Places365-CNNs <https://github.com/metalbubble/places365>`_
+  (deep learning)
+
+
+
+
+Visualisation
+=============
+
+Plan
+
+* Présenter `10 plotting libraries at PyData 2016 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_.
+* Grouper les étudiants par deux
+* Considérer un jeu de données
+* Chaque groupe essaye une librairie différente
+* Insister sur la visualisation de gros jeu de données
+
+
+
+
+.. todoext:: 
+    :title: Retravailler la partie visualisation de Python pour un data scientist
+    :tag: plus
+    
+    Il manque un notebooks sur les visualisations les plus utilisées en machine learning,
+    ROC, régression, visualisation d'arbres de décision avec ete3, les cartes.
+    Insister sur l'interactivité.
+    Voir `TD 4B : Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
+    (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_),
+    ce notebook présente un moyen de faire une carte géographique, des graphes zoomables.
+    
+
+Big data sans cluster
+=====================
+
+**Données structurées**
+
+* `présentation données structurées <http://www.xavierdupre.fr/enseignement/complements/cours_structure_donnee.pdf>`_
+
+.. toctree::
+    :maxdepth: 2
+    
+    notebooks/_gs2a_sql
+    
+**Données non structurées**
+
+* JSON
+* programmation fonctionnelle
+
+.. toctree::
+    :maxdepth: 2
+
+    notebooks/_gs2a_no_sql_exo
+    notebooks/_gs2a_no_sql_twitter
+
+
+**Lectures**
+
+- Propriétés des base de données : `ACID <http://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9s_ACID>`_, 
+  `relationnelle <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_relationnelle>`_,
+  `transactionnelle <http://fr.wikipedia.org/wiki/Transaction_informatique>`_
+- Best practices, index et `foreign key <http://en.wikipedia.org/wiki/Foreign_key>`_ 
+  (importance des `random access <http://fr.wikipedia.org/wiki/Random_Access_Memories>`_ et `accès séquentiel <http://en.wikipedia.org/wiki/Sequential_access>`_)
+- Limites des structures relationnelles 
+  (`données arborescentes <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_hi%C3%A9rarchique>`_, 
+  données hétérogènes)
+- Base de données non relationnelles dont `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_
+- :ref:`l-td25asynthese`
+    
+
+Traitement du langage
+=====================
+
+.. todoext::
+    :title: rédige un notebook sur le traitement du langage
+    :tag: plus
+    
+    Aborder la distance d'édition, n-grams, NLTK, gensim,
+    word2vec, LDA (Latent Dirichlet Application), traduction statistique,
+    td-idf, coocurrence, analyse de sentiment, stemming
+    `SMT <https://en.wikipedia.org/wiki/Statistical_machine_translation>`_,
+    alignement
+    
+
+
+      
+Puzzle= algorithmiques
+======================
+    
+
+** Présentations**
+
+* `programmation dynamique <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance2.pdf>`_
+* `graphes et algorithmes <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance3.pdf>`_
+* `Eléments d'Algorithmique <http://www.xavierdupre.fr/enseignement/complements/Seance4_algorithme.pdf>`_
+    
+**Notebooks**
+
+Ces problèmes sont tirés de plusieurs sites dont
+`Google Code Jam <https://code.google.com/codejam/contests.html>`_.
+
+.. toctree::
+    :maxdepth: 2
+    
+    _gs2a_puzzle
+
+      
+**Lectures**
+
+* types de complexité : `force brute <http://fr.wikipedia.org/wiki/Recherche_exhaustive>`_, 
+  `glouton <http://fr.wikipedia.org/wiki/Algorithme_glouton>`_, `dynamique <http://fr.wikipedia.org/wiki/Programmation_dynamique>`_
+* :ref:`l-algoculture`
+* :ref:`l-expose-explication` 
+    
+
+
+
     
 .. _l-td2a-start:
     
 Getting started
-+++++++++++++++
+===============
 
 Il faut vous reporter à la section :ref:`l-install` pour installer python.        
 Certaines séances pratiques utilisent des données depuis ce site. 
@@ -166,7 +299,7 @@ Elles sont facilement téléchargeables avec ces deux modules :
 .. _l-td2a-biblio:
 
 Bibliographie
-+++++++++++++
+=============
 
 **Livres sur le machine learning**
 
@@ -289,7 +422,7 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
     
 
 Librairies Python
-+++++++++++++++++
+=================
 
 * `Simple/limited/incomplete benchmark for scalability, speed and accuracy of machine learning libraries for classification <https://github.com/szilard/benchm-ml>`_
 * `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
@@ -309,48 +442,13 @@ Librairies Python
 
 * `10 plotting libraries <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_
 * :ref:`l-visualisation`
-* `basemap <http://matplotlib.org/basemap/>`_, `phshp <https://pypi.python.org/pypi/pyshp>`_, `shapely <https://pypi.python.org/pypi/Shapely>`_ : tout ce qu'il
-  faut pour tracer des cartes
+* `basemap <http://matplotlib.org/basemap/>`_, `phshp <https://pypi.python.org/pypi/pyshp>`_, `shapely <https://pypi.python.org/pypi/Shapely>`_ : 
+  tout ce qu'il faut pour tracer des cartes
   
-**Modèles pré-entraînés**
-
-* `Places CNN <http://places.csail.mit.edu/downloadCNN.html>`_,
-  `Pre-release of Places365-CNNs <https://github.com/metalbubble/places365>`_
-  (deep learning)
-
-
-    
-Séances passées
-+++++++++++++++
-
-**TD : modèle de données** (2014)
-
-- `présentation <http://www.xavierdupre.fr/enseignement/complements/cours_structure_donnee.pdf>`_
-
-    - Propriétés des base de données : `ACID <http://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9s_ACID>`_, 
-      `relationnelle <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_relationnelle>`_,
-      `transactionnelle <http://fr.wikipedia.org/wiki/Transaction_informatique>`_
-    - Best practices, index et `foreign key <http://en.wikipedia.org/wiki/Foreign_key>`_ 
-      (importance des `random access <http://fr.wikipedia.org/wiki/Random_Access_Memories>`_ et `accès séquentiel <http://en.wikipedia.org/wiki/Sequential_access>`_)
-    - Limites des structures relationnelles 
-      (`données arborescentes <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_hi%C3%A9rarchique>`_, 
-      données hétérogènes)
-    - Base de données non relationnelles dont `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_
-    - :ref:`l-td25asynthese`
-    
-- :ref:`TD : Modèles de données <td2acenoncesession5rst>` (:ref:`correction <td2acorrectionsession5rst>`)
 
     
 
-.. toctree::
-    :hidden:
     
-    td_2a_enonce
-    td_2a_correction
-    td_2a_s5_synthese
-    debutermlprojet
-    specials/algorithm_culture
-    entretiens
 
 .. [#fwrite1] Contributeur, encadrant et coordinateur du cours.
 
