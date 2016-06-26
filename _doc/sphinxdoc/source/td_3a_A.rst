@@ -20,3 +20,14 @@ Exercices et lectures recommandées
 * `ENSAE 3A - Map/Reduce en pratique <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_3A/index.html>`_
 * `SQL Magic Commands with SQLite in a Notebook <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/pyensae_sql_magic.html>`_
 
+.. [#fp2] Les exercices des notebooks s'appuient sur le langage `PIG-latin <http://en.wikipedia.org/wiki/Pig_Latin>`_ qui est un langage
+          haut niveau permettant d'écrire des tâches Map Reduce complexes. Le script est ensuite converti en un ensemble de 
+          `mapper / reducer <http://hadooptutorial.wikispaces.com/MapReduce>`_. 
+          Ce langage suffit dans la plupart des cas
+          et le temps de développement est très réduit par rapport à un langage plus bas niveau.
+          L'autre langage haut niveau est `Hive <https://hive.apache.org/>`_. Sa syntaxe est très proche de celle
+          du `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_. 
+          `PIG <http://en.wikipedia.org/wiki/Pig_Latin>`_ a été choisi
+          car `Hive <https://hive.apache.org/>`_ est plus un moyen de lancer rapidement de petites
+          tâches, PIG permet des tâches plus conséquentes pour un coût d'apprentissage
+          très raisonnable.

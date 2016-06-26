@@ -48,6 +48,8 @@ Glossaire
         Sorte d'anti-sèche. Quelques exemples pour le machine learning :
         `8 Best Machine Learning Cheat Sheets <http://designimag.com/best-machine-learning-cheat-sheets/>`_,
         `Cheat Sheets Python <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/cheat_sheets.html>`_
+        Ce mot-clé fonctionne très bien quand on cherche des informations sur un language, un module...
+        Essayez avec *python cheatsheet* sur n'importe quel moteur de recherche.
 
     coût
         Le coût d'un algorithme est le nombre d'opérations qu'il effectue lorsqu'il 
@@ -111,6 +113,10 @@ Glossaire
         outil plus adaptés comme les `expressions régulières <https://fr.wikipedia.org/wiki/Expression_rationnelle>`_
         qui permettent de chercher ou remplacer des motifs ce qu'illustre parfaitement l'article
         `8 Regular Expressions You Should Know <http://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149>`_.
+        
+    FAQ
+        *Frequently Asked Questions*, titre de sections très souvent utilisés pour regroupés les
+        questions envoyées par les utilisateurs d'un produit.
         
     Git
         Logiciel de suivi de source utilisé par exemple par GitHub. 

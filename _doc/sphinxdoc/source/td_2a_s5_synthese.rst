@@ -116,7 +116,7 @@ Structurer les données
     * parfois il vaut mieux, supprimer l'index, insérer toutes les données à insérer, recréer l'index
 * Index sur de grosses bases de données depuis un fichier
     * si deux `accès aléatoire <http://en.wikipedia.org/wiki/Random_access>`_ au même fichier à des données 
-      :math:`rightarrow` il vaut mieux parfois lire toutes les bases (aussi rapide, la tête de lecture fera le même chemin)
+      :math:`\rightarrow` il vaut mieux parfois lire toutes les bases (aussi rapide, la tête de lecture fera le même chemin)
     * `Disque SSD <http://fr.wikipedia.org/wiki/Solid-state_drive>`_ - accès lecture réduit, il n'y a plus d'usure physique
     
 **Données structurées / non structurées** (`NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_)

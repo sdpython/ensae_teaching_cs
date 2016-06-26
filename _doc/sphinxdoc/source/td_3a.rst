@@ -70,6 +70,7 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
 .. toctree::
     :maxdepth: 2
     
+    specials/azure
     td_3a_A
     td_3a_B
     td_3a_C
@@ -83,9 +84,12 @@ Exemples de scripts PIG
 
 Trois projets réalisés par les élèves lors de l'année 2014-2015 :
 
-* :ref:`2015pagerankrst`
-* :ref:`2015kmeansrst`
-* :ref:`2015factorisationmatricerst`
+.. toctree::
+    :maxdepth: 1
+
+    notebooks/2015_page_rank`
+    notebooks/2015_kmeans`
+    notebooks/2015_factorisation_matrice`
 
 
 .. _l-td3a-start:
@@ -196,30 +200,12 @@ Bibliographie
 
 * `Microsoft, partenaire de la filière Data Science de l'ENSAE ParisTech avec Microsoft Azure Machine <http://www.microsoft.com/france/Hub-Presse/communiques-de-presse/fiche-communique.aspx?eid=f7e7f695-fb08-4c6d-b4ec-3cde562ba429>`_
 
-.. toctree::
-    :hidden:
-    
-    td_3a_enonce
-    td_3a_correction
-    specials/azure
-    entretiens
+
     
 .. rubric:: Footnotes
 
 .. [#fp1] C'est l'objet du paragraphe :ref:`l-td3a-start`.
-
-.. [#fp2] Les exercices des notebooks s'appuient sur le langage `PIG-latin <http://en.wikipedia.org/wiki/Pig_Latin>`_ qui est un langage
-          haut niveau permettant d'écrire des tâches Map Reduce complexes. Le script est ensuite converti en un ensemble de 
-          `mapper / reducer <http://hadooptutorial.wikispaces.com/MapReduce>`_. 
-          Ce langage suffit dans la plupart des cas
-          et le temps de développement est très réduit par rapport à un langage plus bas niveau.
-          L'autre langage haut niveau est `Hive <https://hive.apache.org/>`_. Sa syntaxe est très proche de celle
-          du `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_. 
-          `PIG <http://en.wikipedia.org/wiki/Pig_Latin>`_ a été choisi
-          car `Hive <https://hive.apache.org/>`_ est plus un moyen de lancer rapidement de petites
-          tâches, PIG permet des tâches plus conséquentes pour un coût d'apprentissage
-          très raisonnable.
-          
+        
 .. [#f3write1] Contributeur et coordinateur du cours.
 
 .. [#f3write2] Contributeur, encadrant.

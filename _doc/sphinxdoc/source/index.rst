@@ -80,9 +80,9 @@ Contenu des enseignements
     5. Examens <i_exams>
     6. Découvrir <i_decouvrir>
     7. Visualisation <i_visualisation>
-    8. Modules, Bibliographie, Articles... <i_informations>
+    8. Modules, Bibliographie, Articles, FAQ... <i_informations>
     9. Getting started <i_getting_started>
-    10. Index
+    10. Index <i_index>
 
 
 Getting started
