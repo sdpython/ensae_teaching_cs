@@ -251,7 +251,7 @@ Traitement du langage
 
 
       
-Puzzle= algorithmiques
+Puzzles algorithmiques
 ======================
     
 
