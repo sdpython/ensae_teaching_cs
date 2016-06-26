@@ -26,8 +26,8 @@ il faudra lire les suivants si vos besoins vont au delà.
 
 .. _l-installation-courte:
 
-Résumé : Anaconda
-=================
+En résumé : Anaconda
+====================
 
 En résumé, le conseil le plus fréquent qu'on donne à ceux qui souhaitent 
 installer Python est d'utiliser la distribution `Anaconda <https://www.continuum.io/downloads>`_.
@@ -45,6 +45,13 @@ les instructions mentionnées ci-dessous fonctionnent sous Windows, Linux et Mac
 Windows
 +++++++
 
+Pour tous les modules nécessaires une compilation C++,
+allez à `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
+
+* distribution `Anaconda <https://www.continuum.io/downloads>`_ (python 64 bit)
+
+**ou**
+
 * `distribution customisée <http://www.xavierdupre.fr/enseignement/>`_ [#fpm1]_ ou
   distribution standard de `Python <https://www.python.org/downloads/>`_
 * puis la mise à jour depuis le répertoire ``python`` en ligne de commande ::
@@ -56,7 +63,7 @@ Windows
 Linux / Mac
 +++++++++++
 
-* distribution `Anaconda <https://www.continuum.io/downloads>`_ (python 3.4, 64 bit)
+* distribution `Anaconda <https://www.continuum.io/downloads>`_ (python 64 bit)
 * puis la mise à jour depuis le répetoire ``Scripts`` en ligne de commande ::
 
     ./conda update --all
@@ -70,6 +77,36 @@ Linux en ligne de commande, connexion SSH
 
 Voir `Install Miniconda through SSH connection <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-11-01_anaconda_ssh.html>`_.
 La distribution testée est une distribution `Ubuntu 14.04 <http://releases.ubuntu.com/14.04/>`_.
+
+
+IDE
++++
+
+Un IDE est un `environnement de développemen <Environnement de développement>`_.
+Et comme on ne fait pas tout depuis un notebook, il faut en choisir un un.
+
+* `Atom <https://atom.io/>`_
+* `Ninja IDE <http://ninja-ide.org/home/>`_
+* `PTVS <http://microsoft.github.io/PTVS/>`_ (Python Tools for Visual Studop) (** debug, notebook **)
+* `PyCharm <http://www.jetbrains.com/pycharm/>`_ (** * **)
+* `PyDev <http://pydev.org/>`_ (fonctionne avec `Eclipse <http://www.eclipse.org/>`_)
+* `Pyzo <http://www.pyzo.org/>`_ : ressemble à Matlab  (anciennement `IEP <http://www.iep-project.org/index.html>`_)
+* `WingIDE <https://wingware.com/>`_
+
+Editeur de texte
+++++++++++++++++
+
+Si vous êtes dans le train et que vous n'avez pas beaucoup de batterie,
+il faut revenir à l'essentiel : un `éditeur de texte <https://fr.wikipedia.org/wiki/%C3%89diteur_de_texte>`_.
+
+* `Emacs <https://www.gnu.org/software/emacs/>`_
+* `nano <https://www.nano-editor.org/>`_ (linux)
+* `Notepad++ <https://notepad-plus-plus.org/>`_
+* `SciTe <http://www.scintilla.org/SciTE.html>`_, le plus simple et le plus léger,
+  lire cet article pour le configurer
+  `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_.
+  (** * **)
+
 
 
 Installer un module
@@ -245,22 +282,13 @@ Distributions
   une connexion SSH. 
   Voir `Install Anaconda through SSH connection <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-11-01_anaconda_ssh.html>`_.
 
-
     
     
-Editeur de texte et navigateur
-==============================
+Outils adaptés aux projets de long terme
+========================================
 
-.. index:: éditeur, IDE
-
-* `SciTe <http://www.scintilla.org/SciTE.html>`_, le plus simple et le plus léger,
-  lire cet article pour le configurer
-  `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_.
-* `PyCharm <https://www.jetbrains.com/pycharm/>`_, c'est un environnement complet de développement,
-  très pratique pour débugger, repérer des erreurs avant l'exécution (nom de variable inconnus...)
-* `Spyder <https://pythonhosted.org/spyder/>`_, ressemble beaucoup à `R Studio <http://www.rstudio.com/>`_
-* `Rodeo <http://blog.yhathq.com/posts/introducing-rodeo.html>`_, une sorte de Spyder très épuré
-* `Visual Studio Community <https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx>`_
+Navigateur
+++++++++++
 
 .. index:: navigateur, notebook  
 
@@ -268,7 +296,8 @@ Les navigateur sont importants pour l'utilisation des notebooks. Je recommande s
 `Firefox <https://www.mozilla.org/fr/firefox/new/>`_, 
 soit `Chrome <http://www.google.com/chrome/>`_. Internet Explorer pose quelques problèmes
 avec l'utilisateur du Javascript. Ces deux navigateurs sont indispensables si vous insérez du javascript
-dans nos notebooks.
+dans nos notebooks. Le débuggeur de Chrome est le plus pratique à utiliser quand il s'agit d'aller
+fouiller dans les feuilles de styles ou de voir l'exécution du javascript.
         
 .. index:: développeur
         
@@ -298,14 +327,14 @@ Il est très utile d'avoir un éditeur de texte léger, quelques options :
     
 Et un `IDE <http://en.wikipedia.org/wiki/Integrated_development_environment>`_ :
 
-* `PyTools <http://pytools.codeplex.com/>`_ (Windows uniquement)
+* `PTVS <https://microsoft.github.io/PTVS/>`_ (Windows uniquement)
 * `PyCharm <https://www.jetbrains.com/pycharm/>`_
     
 
 Les outils pour développer
 ++++++++++++++++++++++++++
 
-Impératif :
+**Impératif**
 
 * `Python 3.4 64 bit <https://www.python.org/downloads/>`_
 * `R <http://www.r-project.org/>`_
@@ -324,11 +353,10 @@ Impératif :
 * `Git <http://git-scm.com/>`_ + `GitHub <https://github.com/>`_ : pour suivre ses projets avec Git
 * `GraphViz <http://www.graphviz.org/>`_ : représenter des graphes
 
-Optionnel :
+**Impératif pour le C++ sous Windows**
 
-* `Visual Studio Community <https://www.visualstudio.com/>`_ : C++, C#, F#, Python avec `PythonTools <https://pytools.codeplex.com/>`_
+* `Visual Studio Community <https://www.visualstudio.com/>`_ : C++, C#, F#, Python avec `PTVS <https://microsoft.github.io/PTVS/>`_
 * `MinGW <http://www.mingw.org/>`_ : compilateur C++
-* `iTunes <https://www.apple.com/itunes/>`_ (+ de la musique)
 
 
 .. rubric:: Footnotes
@@ -508,7 +536,7 @@ un stockage dans un pays dont la loi limite l'usage qui peut être fait de vos d
 * `Ninja IDE <http://ninja-ide.org/home/>`_
 * `PyCharm <http://www.jetbrains.com/pycharm/>`_
 * `PyDev <http://pydev.org/>`_ (fonctionne avec `Eclipse <http://www.eclipse.org/>`_)
-* `PyTools <http://pytools.codeplex.com/>`_ (fonctionne avec `Visual Studio <http://www.visualstudio.com/>`_)
+* `PTVS <https://microsoft.github.io/PTVS/>`_ (fonctionne avec `Visual Studio <http://www.visualstudio.com/>`_)
 * `Pyzo <http://www.pyzo.org/>`_ : ressemble à Matlab  (anciennement `IEP <http://www.iep-project.org/index.html>`_)
 * `WingIDE <https://wingware.com/>`_
 

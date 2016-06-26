@@ -109,48 +109,8 @@ pouvoir aisément *jouer* avec la solution.
 Démarrage
 ^^^^^^^^^
 
+Voir :ref:`l-installation-courte`.
 
-
-**Windows**
-
-Le plus simple est d'utiliser la distribution préparée pour ces enseignements
-`ENSAE Python Setup <http://www.xavierdupre.fr/enseignement/>`_
-et de la compléter si besoin. Elle inclut également le langage `R <https://www.r-project.org/>`_.
-La page :ref:`l-data2a` décrit tous les modules qu'elle contient.
-Les modules peuvent être mis à jour avec l'instruction ``Scripts/pymy_update`` qui vient 
-avec l'installation du module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_.
-Sinon, la distribution `Anaconda <http://continuum.io/downloads#py34>`_ est le choix le plus répandu.
-
-Pour l'ajout d'un module ponctuel, si l'instruction ``pip install <module>`` ne fonctionne pas,
-c'est vraisemblablement parce que ce module contient une partie en C++. 
-Dans ce cas, il faut aller voir sur ce site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
-s'il est disponible. S'il ne l'est pas, l'installation du module est réservée aux experts.
-
-**Linux / Mac**
-
-La distribution `Anaconda <https://www.continuum.io/downloads>`_ (python 3.5, 64 bit)
-est la plus répandue. Voir également
-`Install Anaconda through SSH connection <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx//blog/main_0001.html#hblog-2015-11-01-install-anaconda-through-ssh-connection>`_.
-
-
-**Environnement de travail**
-
-.. index:: éditeur, IDE, rodeo, spyder, pycharm, R, R studio, scite
-
-* `SciTe <http://www.scintilla.org/SciTE.html>`_, le plus simple et le plus léger,
-  lire cet article pour le configurer
-  `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_.
-* `PyCharm <https://www.jetbrains.com/pycharm/>`_, c'est un environnement complet de développement,
-  très pratique pour débugger, repérer des erreurs avant l'exécution (nom de variable inconnus...)
-* `Atom <https://atom.io/>`_ : comme PyCharm, voir `Install and Configure the Atom Editor for Python <http://www.marinamele.com/install-and-configure-atom-editor-for-python>`_
-* `Spyder <https://pythonhosted.org/spyder/>`_, ressemble beaucoup à `R Studio <http://www.rstudio.com/>`_
-* `Rodeo <http://blog.yhathq.com/posts/introducing-rodeo.html>`_, une sorte de Spyder très épuré
-* `Visual Studio Community <https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx>`_
-* `Pyzo <http://www.pyzo.org/>`_ : ressemble à Matlab
-
-
-Librairies clé
-^^^^^^^^^^^^^^
 
 Le langage est devenu populaire aussi parmi les data scientists grâce à un ensemble 
 de librairies qui ont offert un service équivalent à ce que propose `R <https://www.r-project.org/>`_,
@@ -166,15 +126,9 @@ sont accessibles depuis le site
 et ne peuvent pas être installés avec l'instruction ``pip install <module>`` car ils
 nécessitent un compilateur C++.
 
-
-  
-Développeurs chevronnés
-^^^^^^^^^^^^^^^^^^^^^^^
-
-:ref:`l-getting_started_full`
     
 
-Autres extensions
+Extensions maison
 ^^^^^^^^^^^^^^^^^
 
 Ces cours représentent plus de 60 heures de cours et travaux pratiques suivis
@@ -196,6 +150,7 @@ et cherche encore son chemin.
 proposés dans la formation `Data Science <http://www.institutdesactuaires.com/gene/main.php?base=943>`_ à la 
 maison des actuaires.
 Et `code_beatrix <http://lesenfantscodaient.fr/>`_ pour découvrir les algorithmes et la programmation.
+
 
 En diagonal
 -----------

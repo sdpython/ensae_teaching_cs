@@ -4,7 +4,7 @@
 .. _l-td1a:
 
 
-
+============================
 Algorithmes et programmation
 ============================
 
@@ -31,41 +31,104 @@ Intervenants 2015-2016 :
 
 
 TD - les bases
---------------
+==============
 
 Ce cours s'étale sur 12 séances de travaux dirigés (TD) d'une durée de 2h. Le cours est décrit plus 
 en détail dans cette présentation : `ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_.
-Les six premières séances font découvrir le langage Python. 
+Les six premières séances font les éléments de syntaxe propres à 
+la `programmation impérative <https://fr.wikipedia.org/wiki/Programmation_imp%C3%A9rative>`_.
 
-- :ref:`TD 1 : Premiers pas en Python <td1acenoncesession1rst>`  (:ref:`correction <td1acorrectionsession1rst>`)
-- :ref:`TD 2 : Variables, boucles, corrections <td1acenoncesession2rst>`  (:ref:`correction <td1acorrectionsession2rst>`)
-- :ref:`TD 3 : Dictionnaires, fonctions <td1acenoncesession3rst>`  (:ref:`correction <td1acorrectionsession3rst>`)
-- :ref:`TD 4 : Fichiers, modules, expressions régulières <td1acenoncesession4rst>`  (:ref:`correction <td1acorrectionsession4rst>`)
-- :ref:`TD 5 : Classes et carrés magiques <td1acenoncesession5rst>`  (:ref:`correction <td1acorrectionsession5rst>`)
-- :ref:`TD 6 : Classes et héritage <td1acenoncesession6rst>`  (:ref:`correction <td1acorrectionsession6rst>`)
+.. toctree::
+    :maxdepth: 2
 
-Sessions alternatives :
+    notebooks/_gs1a_1_premiers_pas
+    notebooks/_gs1a_2_variables
+    notebooks/_gs1a_3_dictionnaires_fonctions
+    notebooks/_gs1a_4_fichier_module
+    notebooks/_gs1a_5_classes
 
-- :ref:`TD 3-4 : Tests unitaires, suivi de source, profiling, design <l-production>` (2016)
-- :ref:`TD 4-5 : distance de Jaccard <td1acenoncesession45jaccardrst>` (:ref:`correction <td1acorrectionsession45jaccardrst>`) (2016)
+Les programmes sont des assemblages de petites fonctions qui font souvent 
+les mêmes choses. Voici une idée de ces *mêmes choses* qu'on fait tout le temps
+et qu'il est important de comprendre.
+
+.. toctree::
+    :maxdepth: 2
+
+    all_example_ConstructionsClassiques
+    notebooks/code_liste_tuple
+    
+Le premier jeu qu'on demande d'implémenter à tous ceux qui commencent la 
+programmation :
+    
+.. toctree::
+    :maxdepth: 1
+
+    notebooks/pp_exo_deviner_un_nombre
+    notebooks/pp_exo_deviner_un_nombre_correction
+    
+
+A la fin des premières séances, on peut réfléchir à l'implémentation
+d'un algorithme :
+
+.. toctree::
+    :maxdepth: 2
+
+    notebooks/_gs_6_jaccard
+    
 
 Au terme de ces six séances, si la programmation est nouvelle pour vous ou
-si le langage vous paraît encore peu naturel, je vous encourage à faire d':ref:`autres exercices <l-examplesindex>`,
-à piocher dans les anciens :ref:`l-examens`, à regarder la liste des exercices
+si le langage vous paraît encore peu naturel, 
+je vous encourage à faire d'autres exercices comme 
+piocher dans les anciens :ref:`l-examens`, à regarder la liste des exercices
 proposées à `Quelques exercices du Project Euler <http://mathprepa.fr/python-project-euler-mpsi/>`_.
 La plupart de ces notions font déjà partie du programme des classes préparatoires
 scientifiques.
 
 
 
-TD - algorithmes
-----------------
+TD - Site web et pratiques logiciels
+==================================   
 
-Les six séances [#f1]_ suivantes sont centrées autour de l'utilisation de la programmation
-pour un usage scientifique. 
-Trois séances sont centrées sur trois algorithmes.
-Lorsqu'un problème paraît compliqué ou qu'un algorithme est trop long, 
-il y a deux questions qu'on doit se poser en premier pour entrevoir une solution. 
+Le langage Python est au programme des classes préparatoires scientifique
+(`Prise en main du logiciel Python <https://www.ac-paris.fr/portail/jcms/p1_742307/prise-en-main-du-logiciel-python>`_)
+et les étudiants ont déjà vu ou parcouru des exercices algorithmiques
+(voir `MathPrepas, Programmation en Python <http://mathprepa.fr/python-project-euler-mpsi/>`_).
+**Cette partie s'adesse essentiellement à ceux qui ont déjà programmé.**
+On peut se pencher sur d'autres aspects logiciels tels que les 
+tests unitaires, le templating, les sites Web, le scraping, encoding, les notebooks...
+
+.. toctree::
+    :maxdepth: 1
+
+    specials/graphes
+    specials/siteflask
+    specials/unittest_coverage_git_profling
+    notebooks/notebook_convert
+    notebooks/jupyter_custom_magics    
+
+.. todoext::
+    :title: Ajouter un exercice sur le templating (jinja2, mako)
+    :issue:
+    :tag: plus
+
+    Le templating fonction comme la fonction ``format`` et permet
+    en plus de faire des répétitions. C'est très utiliser
+    dans le domaine du web, notamment par `django <https://www.djangoproject.com/>`_.
+
+
+
+
+
+TD - algorithmes
+================
+
+Ces séances sont centrées autour de l'utilisation de la programmation
+pour un usage scientifique. On commence par les algorithmes et à la façon
+d'écrire un algorithme efficace car le principal défaut des algorithmes
+est leur lenteur. On a souvent des idées pour énumérer les solutions d'un problème 
+et décrire les premières étapes avec les mains. Et puis, on se pose rapidement
+la question : **Comment le faire rapidement ?**
+Il y a deux questions qu'on doit se poser en premier pour entrevoir une solution. 
 
 #. Peut-on réécrire le problème par **récurrence** ? 
    On aboutit le plus souvent à une solution issue de la programmation dynamique. 
@@ -74,24 +137,76 @@ il y a deux questions qu'on doit se poser en premier pour entrevoir une solution
    chaque moitié puis recoller les solutions ? On procède de cette façon par dichotomie. 
    Le coût est **logarithmique**.
 
-Ces deux façons de faire sont présentées durant les trois séances.
+Ces deux façons de faire sont présentées durant trois séances à choisir parmi :
 
-- :ref:`TD 7 : Programmation dynamique <td1acenoncesession7rst>`  (:ref:`correction <td1acorrectionsession7rst>`)
-- :ref:`TD 8 : Arbre et Trie <td1acenoncesession8rst>`  (:ref:`correction <td1acorrectionsession8rst>`)
-- :ref:`TD 9 : Optimisation sous contrainte <td1acenoncesession9rst>`  (:ref:`correction <td1acorrectionsession9rst>`) 
-  (relecture conseillée à ceux qui souhaitent optimiser des portefeuilles d'actions) [#f1]_
+.. toctree::
+    :maxdepth: 2
+    
+    notebooks/_gs1a_A_programmation_dynamique
+    notebooks/_gs1a_A_arbre_trie
+    notebooks/_gs1a_A_optimisation_contrainte
+    notebooks/_gs1a_A_edit_distance
+    notebooks/_gs1a_A_parcours_graphe
+    
+**Notes**    
 
-Sessions alternatives :
+La relecture du TD sur l'optimisation sous contrainte est conseillée 
+à ceux qui souhaitent optimiser des portefeuilles d'actions [#f1]_.
+Il est préférable d'avoir fait la séance sur la distance de Jaccard
+avant de faire celle sur la distance d'édition. 
+L'efficacité d'un algorithme est étroitement liée à la représentation des 
+données choisies. Le `trie <https://fr.wikipedia.org/wiki/Trie_(informatique)>`_
+en est l'illustration. 
 
-- :ref:`TD 7 : distance d'édition <td1acenoncesession7editionrst>` (:ref:`correction <td1acorrectionsession7editionrst>`),
-  cette séance fait écho à la distance de Jaccard évoquée par :ref:`TD 4-5 : distance de Jaccard <td1acenoncesession45jaccardrst>`
-- :ref:`TD 8 : Parcours dans un graphe <td1acenoncesession8wikirootrst>` (:ref:`correction <td1acorrectionsession8wikirootrst>`)  
+.. toctree:: 
+    :maxdepth: 2
+
+    questions/question_2014
 
 
-TD - librairies numériques
---------------------------
+**Entretiens d'embauche**
 
-Trois séances sont centrées sur les outils indispensables pour manipuler facilement les données et faire des calculs.
+Les recruteurs testent de plus en plus votre capacité à programmer avec des exercices
+où ils vérifient que vous savez écrire du code et comparer la vitesse de deux
+algorithmes. Le plus souvent,
+il existe une façon naïve d'arriver au résultat et il existe un algorithme plus rapide. 
+Il y a deux grandes astuces pour aller plus vite :
+
+    * la programmation dynamique, son coût est en :math:`O(n^2)`,
+    * la dichotomie, son coût est en :math:`O(\ln_2 n)`.
+    
+Le tout est d'exprimer la solution en faisant apparaître l'un ou l'autre ou une 
+combinaison des deux pour les problèmes 
+les plus complexes.
+La programmation dynamique apparaît souvent quand on considère la solution sous forme récurrente.
+La dichotomie consiste à résoudre à couper l'ensemble de départ en deux, 
+à résoudre le problème pour les deux sous-ensembles, 
+puis à fusionner les deux solutions. Ce cela ne dépend pas du langage Python.
+Pour vous exercer :
+
+    
+.. toctree::
+    :maxdepth: 1
+
+    notebooks/exercice_xn
+    notebooks/exercice_echelle
+    notebooks/exercice_morse
+    notebooks/exercice_lcs
+    notebooks/exercice_plus_grande_somme
+
+
+TD - calcul matriciel, graphes, données
+=======================================
+
+Les quatre sujets importants des six dernières séances sont la programmation dynamique,
+la dichotomie, les dataframe, les graphiques. La séance 9, la fin de la séance 
+10 et la séance 11 ne sont pas indispensables et seront vus plus en détail l'année prochaine.
+Toutefois, **la séance sur les dataframes propose des outils de manipulation et visualisation 
+des données utiles pour tous les projets réalisés à l'école**.
+
+
+Ces séances sont centrées sur les outils indispensables pour manipuler 
+facilement les données et faire des calculs rapides.
 Ces outils sont similaires à ceux qu'on trouve dans de nombreux languages à usage scientifique
 (`R <http://www.r-project.org/>`_, `SciLab <http://www.scilab.org/fr>`_, 
 `Julia <http://julialang.org/>`_, `Octave <http://www.gnu.org/software/octave/>`_, ...).
@@ -100,77 +215,41 @@ puis utiliser pour résoudre des exercices. Toutefois, les modules
 `numpy <http://www.numpy.org/>`_, `pandas <http://pandas.pydata.org/>`_, `matplotlib <http://matplotlib.org/>`_
 sont incontournables pour manipuler les données en Python.
 
-- :ref:`TD 10 : DataFrame et Matrice <td1acenoncesession10rst>`  (:ref:`correction <td1acorrectionsession10rst>`) [#f1]_ 
-- :ref:`TD 11 : Calcul numérique, dichotomie et Cython <td1acenoncesession11rst>`  (:ref:`correction <td1acorrectionsession11rst>`) [#f1]_ 
-- :ref:`TD 12 : Visualisation des données <td1acenoncesession12rst>`  (:ref:`correction <td1acorrectionsession12rst>`)
-- alternative `TD 12 : graphes <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
-  (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_)
+.. toctree::
+    :maxdepth: 2
+    
+    notebooks/_gs1a_D_dataframe_matrice
+    notebooks/_gs1a_D_calcul_dicho_cython
+    notebooks/_gs1a_D_visualisation
+    
+Il existe de nombreuses libraires de visualisation des données en Python et
+elles se sont multipliées depuis l'avènement des notebooks :
+`10 plotting libraries at PyData 2016 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_.
+La simulation du hasard est revient fréquemment pour éviter qu'un programme retourne toujours
+les mêmes résultats. Voici quelques exemples :
+    
+.. toctree::
+    :maxdepth: 1
+
+    notebooks/code_multinomial
+    
+
 
 La dernière séance est une séance notée. Tous les documents sont autorisés. Quelques questions 
 peuvent requérir l'utilisation des outils présentées durant les séances 9 à 12. Toutefois,
 si tel était le cas, ce serait très proche d'une solution proposée lors des TD.
 
 
-Exercices supplémentaires
--------------------------
 
-* `décomposition mosaïque d'une image <http://www.xavierdupre.fr/site2013/enseignements/tddata/am_td_11_image.pdf>`_ (Arnaud de Myttenaere)
-* :ref:`l-exampleNgatifs`
-* :ref:`l-exampleTD1A`
-* :ref:`l-exampleConstructionsClassiques`
-* :ref:`ppexodevinerunnombrerst`, :ref:`correction <ppexodevinerunnombrecorrectionrst>`
-* :ref:`codelistetuplerst`
-* :ref:`codemultinomialrst`
-
-
-Algorithmes classiques
-----------------------
-
-Ces exercices sont proches de ceux qu'on peut poser en entretien d'embauche. Le plus souvent,
-il existe une façon naïve d'arriver au résultat et il existe un algorithme plus rapide. 
-Tout est question de coût d'algorithme. Il y a deux grandes astuces pour aller plus vite :
-
-    * la programmation dynamique, son coût est en :math:`O(n^2)`,
-    * la dichotomie, son coût est en :math:`O(\ln_2 n)`.
-    
-Le tout est d'exprimer la solution en faisant apparaître l'un ou l'autre ou une combinaison des deux pour les problèmes 
-les plus complexes.
-La programmation dynamique apparaît souvent quand on considère la solution sous forme récurrente.
-La dichotomie consiste à résoudre à couper l'ensemble de départ en deux, à résoudre le problème pour les deux sous-ensembles, 
-puis à fusionner les deux solutions.
 
     
-.. toctree::
 
-    notebooks/exercice_xn
-    notebooks/exercice_echelle
-    notebooks/exercice_morse
-    notebooks/exercice_lcs
-    notebooks/exercice_plus_grande_somme
-    
-Petites Fiches
---------------
 
-.. toctree::
-
-    1a/graphes
-    1a/siteflask
-    1a/unittest_coverage_git_profling
-    
-
-Trucs et astuces avec les notebooks
------------------------------------
-
-    
-.. toctree::
-
-    notebooks/notebook_convert
-    notebooks/jupyter_custom_magics
 
 .. _l-td1a-start:
 
 Getting started
----------------
+===============
 
 Il faut vous reporter à la section :ref:`l-installation-courte` pour installer python.        
 Certaines séances pratiques utilisent des données depuis ce site. 
@@ -184,7 +263,7 @@ Elles sont facilement téléchargeables avec ces deux modules :
 .. _l-td1a-biblio:
 
 Bibliographie
--------------
+=============
 
 **Cheat Sheet**
 
@@ -264,14 +343,6 @@ Bibliographie
     
 
 
-.. toctree::
-    :hidden:
 
-    td_1a_enonce
-    td_1a_correction
-    questions/question_2014
 
-.. rubric:: Footnotes
-
-.. [#f1] Les quatre sujets importants des six dernières séances sont la programmation dynamique, la dichotomie, les dataframe, les graphiques. La séance 9, la fin de la séance 10 et la séance 11 ne sont pas indispensables.
-
+    
