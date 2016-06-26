@@ -6,6 +6,7 @@
 import os
 import sys
 import unittest
+import warnings
 
 
 try:
@@ -36,7 +37,7 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG, unzip
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from src.ensae_teaching_cs.special.elections import ElectionResults
 
 
@@ -127,6 +128,10 @@ class TestElections (unittest.TestCase):
         temp = os.path.join(path, "temp_read_all_elections")
         if not os.path.exists(temp):
             os.mkdir(temp)
+        if is_travis_or_appveyor() == "travis":
+            warnings.warn(
+                "The test cannot read an excel file using xlrd. Disabling it.")
+            return
         for year in [2012, 2002, 2007]:
             for level in ["Départements", "Cantons", ]:
                 fLOG("******reading ", year, level)
