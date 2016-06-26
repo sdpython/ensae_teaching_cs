@@ -4,7 +4,7 @@
 .. _l-extra:
 .. _l-expose-explication:
 
-
+=========
 Découvrir
 =========
 
@@ -13,12 +13,7 @@ est indépendante des autres et propose un problème ou un jeu
 qu'on peut résoudre grâce à un algorithme et un peu d'imagination.
 
 
-Algorithme
-----------
-
-
-Culture
-^^^^^^^
+**Culture**
 
 .. toctree::
     :maxdepth: 1
@@ -27,7 +22,12 @@ Culture
 
 
 Algorithmes
-^^^^^^^^^^^
+===========
+
+
+
+
+**Graphes**
 
 .. toctree::
     :maxdepth: 1
@@ -38,11 +38,8 @@ Algorithmes
     notebooks/expose_graphe_et_map_reduce
     notebooks/expose_rwr_recommandation
     notebooks/expose_TSP
-    image_synthese
 
-
-Puzzles
-^^^^^^^
+**Puzzles**
 
 .. toctree::
     :maxdepth: 1
@@ -55,34 +52,15 @@ Puzzles
 
 .. index:: entretien, entretien d'embauche, algorithme
 
-Exercice classique d'algorithmie
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    
-.. toctree::
-    :maxdepth: 1
-
-    notebooks/exercice_xn
-    notebooks/exercice_echelle
-    notebooks/exercice_morse
-    notebooks/exercice_lcs
-    notebooks/exercice_plus_grande_somme
-
-Exemples simples et moins simples
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Images**
 
 .. toctree::
     :maxdepth: 1
 
-    notebooks/pp_exo_deviner_un_nombre
-    notebooks/pp_exo_deviner_un_nombre_correction
-    notebooks/code_liste_tuple
-    notebooks/code_multinomial
-    all_example_ConstructionsClassiques
+    image_synthese
+    specials/corde
     
-        
-
-Algorithmes réutilisables
-^^^^^^^^^^^^^^^^^^^^^^^^^
+**Algorithmes réutilisables**
 
 * :func:`tsp_kruskal_algorithm <ensae_teaching_cs.special.tsp_kruskal.tsp_kruskal_algorithm>`: `TSP <https://en.wikipedia.org/wiki/Travelling_salesman_problem>`_
 * :func:`draw_line <ensae_teaching_cs.special.tsp_bresenham.draw_line>`: `Bresenham <https://en.wikipedia.org/wiki/Bresenham%27s_line_algorithm>`_ algorithm (line)
@@ -113,11 +91,10 @@ Algorithmes réutilisables
 
 
 Machine learning
-----------------
+================
 
 
-Ca tient presque dans un notebook
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Ca tient presque dans un notebook**
 
 .. toctree::
     :maxdepth: 1
@@ -128,31 +105,20 @@ Ca tient presque dans un notebook
     notebooks/ml_huge_datasets
     notebooks/ml_rue_paris_parcours
     notebooks/ml_features_model
+    coding_party
     
-
-Simulation
-^^^^^^^^^^
+**Simulation**
 
 .. toctree::
     :maxdepth: 1
 
-    specials/corde
     specials/voisinage
-    
-Coding parties
-^^^^^^^^^^^^^^
-
-.. toctree::
-    :maxdepth: 2
-    
-    coding_party
-    
+        
 
 Techniques
-----------
+==========
 
-Web, cloud
-^^^^^^^^^^
+**Web, cloud**
 
 .. toctree::
     :maxdepth: 1
@@ -161,28 +127,19 @@ Web, cloud
     specials/siteflask
         
     
-Pratiques
-^^^^^^^^^
+**Pratiques**
 
 .. toctree::
     :maxdepth: 1
     
     specials/unittest_coverage_git_profling    
     
-Inclassables
-------------
+**Automatisation**
 
 .. toctree::
     :maxdepth: 1
     
-    all_example_Ngatifs
-    all_example_Impossibleretenir    
-    all_example_TD1A
-    all_example_science
-    all_example_techniques
     all_example_AutoTeachings    
-    
-    
 
 
 
