@@ -1,7 +1,9 @@
 ansiconv
 autopep8
+beautifulsoup4
 bqplot
 brewer2mpl
+dbfread
 codecov
 entrypoints
 ete3
@@ -10,6 +12,7 @@ lifelines
 lightning-python
 mechanize
 metakernel
+openpyxl
 pkgtools
 plotly
 pygal
