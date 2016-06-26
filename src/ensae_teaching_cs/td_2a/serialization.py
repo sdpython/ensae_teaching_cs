@@ -72,7 +72,7 @@ def dump_object(obj, filename_or_stream):
     @endcode
 
     Le code de ces deux fonctions fait intervenir
-    le module `pickle <https://docs.python.org/3.4/library/pickle.html>`_.
+    le module `pickle <https://docs.python.org/3/library/pickle.html>`_.
     Il suffit pour la plupart des usages.
     Pour un usage plus exotique, il faut voir le module
     `dill <https://pypi.python.org/pypi/dill>`_.

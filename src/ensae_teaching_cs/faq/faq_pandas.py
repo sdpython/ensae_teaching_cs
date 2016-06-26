@@ -34,7 +34,7 @@ def read_csv(filepath_or_buffer, encoding="utf8", sep="\t", **args):
 
         UnicodeEncodeError: 'charmap' codec can't encode character '\\ufeff' in position 0: character maps to <undefined>
 
-    Pour contrecarrer ceci, il suffit de modifier l'encoding par `utf-8-sig <https://docs.python.org/3.4/library/codecs.html#encodings-and-unicode>`_ ::
+    Pour contrecarrer ceci, il suffit de modifier l'encoding par `utf-8-sig <https://docs.python.org/3/library/codecs.html#encodings-and-unicode>`_ ::
 
         import pandas
         df = pandas.read_csv("dataframe.txt",sep="\\t", encoding="utf-8-sig")

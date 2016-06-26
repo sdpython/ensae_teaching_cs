@@ -18,7 +18,7 @@ def entier_grande_taille():
     La version 3 du langage Python a supprimé la constante ``sys.maxint``
     qui définissait l'entier le plus grand (voir
     `What's New In Python 3.0 <https://docs.python.org/3.1/whatsnew/3.0.html#integers>`_).
-    De ce fait la fonction `getrandbit <https://docs.python.org/3.4/library/random.html#random.getrandbits>`_
+    De ce fait la fonction `getrandbit <https://docs.python.org/3/library/random.html#random.getrandbits>`_
     retourne un entier aussi grand que l'on veut.
 
     @code
@@ -104,7 +104,7 @@ def python_path():
     Pour éviter cela, il est possible de dire à l'interpréteur Python d'aller chercher
     ailleurs pour trouver des modules en ajoutant le chemin à la
     `variable d'environnement <http://fr.wikipedia.org/wiki/Variable_d'environnement>`_
-    `PYTHON_PATH <https://docs.python.org/3.4/using/cmdline.html#envvar-PYTHONPATH>`_.
+    `PYTHON_PATH <https://docs.python.org/3/using/cmdline.html#envvar-PYTHONPATH>`_.
     Sous Windows :
 
     @code
@@ -128,7 +128,7 @@ def test_unitaire():
     Elle déclenche une exception si elle le code à vérifier ne se comporte pas comme prévu.
 
     Par example, si on voulait écrire un test unitaire pour la fonction
-    `pow <https://docs.python.org/3.4/library/functions.html#pow>`_, on pourrait
+    `pow <https://docs.python.org/3/library/functions.html#pow>`_, on pourrait
     écrire ::
 
         def test_pow():
@@ -231,25 +231,25 @@ def same_variable(a, b):
         print(a)        # --> [-1, 2]
         print(b)        # --> [1, 2]
 
-    La page `Immutable Sequence Types <https://docs.python.org/3.4/library/stdtypes.html?highlight=immutable#immutable-sequence-types>`_
+    La page `Immutable Sequence Types <https://docs.python.org/3/library/stdtypes.html?highlight=immutable#immutable-sequence-types>`_
     détaille un peu plus le type qui sont *mutable* et ceux qui sont *immutable*. Parmi les types standards :
 
         * **mutable**
-            * `bool <https://docs.python.org/3.4/library/functions.html#bool>`_
-            * `int <https://docs.python.org/3.4/library/functions.html#int>`_, `float <https://docs.python.org/3.4/library/functions.html#float>`_, `complex <https://docs.python.org/3.4/library/functions.html#complex>`_
-            * `str <https://docs.python.org/3.4/library/functions.html#func-str>`_, `bytes <https://docs.python.org/3.4/library/functions.html#bytes>`_
-            * `None <https://docs.python.org/3.4/library/constants.html?highlight=none#None>`_
-            * `tuple <https://docs.python.org/3.4/library/functions.html#func-tuple>`_, `frozenset <https://docs.python.org/3.4/library/functions.html#func-frozenset>`_
+            * `bool <https://docs.python.org/3/library/functions.html#bool>`_
+            * `int <https://docs.python.org/3/library/functions.html#int>`_, `float <https://docs.python.org/3/library/functions.html#float>`_, `complex <https://docs.python.org/3/library/functions.html#complex>`_
+            * `str <https://docs.python.org/3/library/functions.html#func-str>`_, `bytes <https://docs.python.org/3/library/functions.html#bytes>`_
+            * `None <https://docs.python.org/3/library/constants.html?highlight=none#None>`_
+            * `tuple <https://docs.python.org/3/library/functions.html#func-tuple>`_, `frozenset <https://docs.python.org/3/library/functions.html#func-frozenset>`_
         * **immutable**, par défaut tous les autres types dont :
-            * `list <https://docs.python.org/3.4/library/functions.html#func-list>`_
-            * `dict <https://docs.python.org/3.4/library/functions.html#func-dict>`_
-            * `set <https://docs.python.org/3.4/library/functions.html#func-set>`_
-            * `bytearray <https://docs.python.org/3.4/library/functions.html#bytearray>`_
+            * `list <https://docs.python.org/3/library/functions.html#func-list>`_
+            * `dict <https://docs.python.org/3/library/functions.html#func-dict>`_
+            * `set <https://docs.python.org/3/library/functions.html#func-set>`_
+            * `bytearray <https://docs.python.org/3/library/functions.html#bytearray>`_
 
     Une instance de classe est mutable. Il est possible de la rendre
     immutable par quelques astuces :
 
-        * `__slots__ <https://docs.python.org/3.4/reference/datamodel.html?highlight=_slots__#object.__slots__>`_
+        * `__slots__ <https://docs.python.org/3/reference/datamodel.html?highlight=_slots__#object.__slots__>`_
         * `How to Create Immutable Classes in Python <http://www.blog.pythonlibrary.org/2014/01/17/how-to-create-immutable-classes-in-python/>`_
         * `Ways to make a class immutable in Python <http://stackoverflow.com/questions/4996815/ways-to-make-a-class-immutable-in-python>`_
         * `freeze <https://freeze.readthedocs.org/en/latest/>`_
@@ -275,7 +275,7 @@ def same_variable(a, b):
         l1 [0][0] = '##'
         print(l1,l2)        # --> [['##', 1], [2, 3]] [[0, 1], [2, 3]]
 
-    Les deux fonctions s'appliquent à tout object Python : `module copy <https://docs.python.org/3.4/library/copy.html>`_.
+    Les deux fonctions s'appliquent à tout object Python : `module copy <https://docs.python.org/3/library/copy.html>`_.
     @endFAQ
     """
     return id(a) == id(b)
@@ -314,7 +314,7 @@ def stringio(text):
     qui traite les données et la source des données. Le flux lire les données depuis n'importe quel source
     (fichier, internet, mémoire), la fonction qui les traite n'a pas besoin d'en connaître la provenance.
 
-    `StringIO <https://docs.python.org/3.4/library/io.html#io.StringIO>`_ est un flux qui considère
+    `StringIO <https://docs.python.org/3/library/io.html#io.StringIO>`_ est un flux qui considère
     la mémoire comme source de données.
 
     @code
@@ -351,7 +351,7 @@ def property_example():
 
     @FAQ(property)
 
-    Une `property <https://docs.python.org/3.4/library/functions.html#property>`_ est
+    Une `property <https://docs.python.org/3/library/functions.html#property>`_ est
     une écriture qui sert à transformer l'appel d'une méthode de classe
     en un attribut.
 
@@ -410,7 +410,7 @@ def enumerate_regex_search(exp, text):
 
     @FAQ(Comment itérer sur les résultats d'une expression régulière ?)
 
-    On utilise la méthode `finditer <https://docs.python.org/3.4/library/re.html#re.regex.finditer>`_.
+    On utilise la méthode `finditer <https://docs.python.org/3/library/re.html#re.regex.finditer>`_.
 
     @code
     found = exp.search(text)
@@ -597,7 +597,7 @@ def information_about_package(name):
     Sous Windows, il n'existe pas de compilateur C++ par défaut à moins de l'installer.
     Il faut faire attention alors d'utiliser exactement le même que celui utilisé
     pour compiler Python (voir
-    `Compiling Python on Windows <https://docs.python.org/3.4/using/windows.html#compiling-python-on-windows>`_).
+    `Compiling Python on Windows <https://docs.python.org/3/using/windows.html#compiling-python-on-windows>`_).
 
     C'est pour cela qu'on préfère utiliser des distributions comme
     `Anaconda <http://continuum.io/downloads#py34>`_

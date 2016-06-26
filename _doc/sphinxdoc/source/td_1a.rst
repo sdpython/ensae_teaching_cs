@@ -286,12 +286,12 @@ Bibliographie
 * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
 * `Exercices de programmation <http://www.xavierdupre.fr/blog/2014-03-22_nojs.html>`_
 * `De l'idée au programme informatique <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_
-* `Questions Fréquentes <https://docs.python.org/3.4/faq/index.html>`_
+* `Questions Fréquentes <https://docs.python.org/3/faq/index.html>`_
 * :ref:`l-FAQ`
 * :ref:`l-glossary`
 * :ref:`l-questions`
 * `Débugger en Python <http://www.xavierdupre.fr/blog/2014-06-02_nojs.html>`_
-* `Modules standards <https://docs.python.org/3.4/library/>`_
+* `Modules standards <https://docs.python.org/3/library/>`_
 * `8 Regular Expressions You Should Know <http://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149>`_ *(2016/03)*
 * `Love Python <http://love-python.blogspot.fr/>`_ *(2016/03)*
 * `The Hitchhiker's Guide to Python! <http://docs.python-guide.org/en/latest/>`_ *(2016/06)*

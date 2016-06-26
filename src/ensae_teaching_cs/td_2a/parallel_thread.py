@@ -50,7 +50,7 @@ class ParallelThread (threading.Thread):
         @param      list_of_params      liste des paramètres
         @param      nbthread            nombre de threads
         @param      wait                attendre pour la fin
-        @param      daemon              voir `daemon <https://docs.python.org/3.4/library/threading.html#threading.Thread.daemon>`_
+        @param      daemon              voir `daemon <https://docs.python.org/3/library/threading.html#threading.Thread.daemon>`_
         @param      delay_sec           la fonction inclut une boucle qui attend les threads, elle vérifie cela toutes ``delay_sec`` secondes
         """
         th = []

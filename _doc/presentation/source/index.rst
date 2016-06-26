@@ -216,7 +216,7 @@ ENSAE 1A - Programmation
         
     .. revealjs:: Version de Python
     
-        * Le cours est construit pour la version 3.4+.
+        * Le cours est construit pour la version 3.5+.
         * Les exemples ne marcheront pas tous sur la version 2.7.
         * Il faut choisir la version *amd64*. C'est la seule capable de tirer parti d'une mémoire de plus de 4 Go.
         

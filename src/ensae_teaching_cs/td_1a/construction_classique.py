@@ -64,7 +64,7 @@ def minindex(li):
 
 
     @example(Constructions Classiques___minimum avec position)
-    La fonction `min <https://docs.python.org/3.4/library/functions.html#min>`_
+    La fonction `min <https://docs.python.org/3/library/functions.html#min>`_
     retourne le minium d'un tableau mais pas sa position.
     Le premier réflexe est alors de recoder le parcours de la liste
     tout en conservant la position du minimum.
@@ -218,7 +218,7 @@ def somme(li):
         s += l                   # addition
     @endcode
 
-    Ce code est équivalent à la fonction `sum <https://docs.python.org/3.4/library/functions.html#sum>`_.
+    Ce code est équivalent à la fonction `sum <https://docs.python.org/3/library/functions.html#sum>`_.
     Dans ce cas où la somme intègre le résultat d'une fonction et non les éléments d'une liste,
     il faudrait écrire :
 
@@ -276,7 +276,7 @@ def triindex(li):
         li [i]   = ech
     @endcode
 
-    La fonction `sorted <https://docs.python.org/3.4/library/functions.html#sorted>`_
+    La fonction `sorted <https://docs.python.org/3/library/functions.html#sorted>`_
     trie également une liste mais selon un algorithme plus efficace
     que celui-ci (voir `Timsort <http://en.wikipedia.org/wiki/Timsort>`_).
     On est parfois amené à reprogrammer un tri parce qu'on veut conserver la position des éléments
@@ -397,7 +397,7 @@ def mat2vect(mat):
                 for j in range (0, len (mat [i])) ]
     @endcode
 
-    Vous pouvez aussi utiliser des fonctions telles `reduce <https://docs.python.org/3.4/library/functools.html?highlight=reduce#module-functools>`_.
+    Vous pouvez aussi utiliser des fonctions telles `reduce <https://docs.python.org/3/library/functools.html?highlight=reduce#module-functools>`_.
 
     @code
     lin = reduce ( lambda x,y: x+y, mat )

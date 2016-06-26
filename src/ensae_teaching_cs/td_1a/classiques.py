@@ -242,7 +242,7 @@ def str2date(s, format="%d/%m/%Y"):
     @example(Impossible à retenir___conversion d'une chaîne de caractère en date)
     C'est le genre de fonction qu'on n'utilise pas souvent mais qu'on peine à retrouver
     lorsqu'on en a besoin.
-    Il faut utiliser la fonction `strftime <https://docs.python.org/3.4/library/datetime.html#strftime-and-strptime-behavior>`_.
+    Il faut utiliser la fonction `strftime <https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior>`_.
 
     @code
     import datetime

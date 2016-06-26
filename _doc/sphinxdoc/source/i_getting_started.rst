@@ -161,7 +161,7 @@ Puis d'écrire ::
     
 Sous Linux ou OS X (Apple), la ligne de commande s'appelle le `terminal <http://doc.ubuntu-fr.org/terminal>`_.
 Comme Python est déjà installé en version 2.7, je recommande l'installation de la distribution
-Anaconda en version 3.4 qui facilite la coexistence de plusieurs versions de Python. On procède de la même manière ::
+Anaconda en version 3.5 qui facilite la coexistence de plusieurs versions de Python. On procède de la même manière ::
 
     cd /home/<alias>/anaconda3/bin
     

@@ -59,7 +59,7 @@ class FlaskInThread (threading.Thread):
         """
         shuts down the server, the function could work if:
             * method run keeps a pointer on a server instance
-              (the one owning method `serve_forever <https://docs.python.org/3.4/library/socketserver.html#socketserver.BaseServer.serve_forever>`_)
+              (the one owning method `serve_forever <https://docs.python.org/3/library/socketserver.html#socketserver.BaseServer.serve_forever>`_)
             * module `werkzeug <http://werkzeug.pocoo.org/>`_ returns this instance
               in function `serving.run_simple <https://github.com/mitsuhiko/werkzeug/blob/master/werkzeug/serving.py>`_
             * module `Flask <http://flask.pocoo.org/>`_ returns this instance in

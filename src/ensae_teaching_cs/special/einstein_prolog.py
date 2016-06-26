@@ -38,7 +38,7 @@ def permutation(nb):
 
     @warning  This method can be very long if nb is high (>10).
 
-    This function does something very similar to `itertools.permutations <https://docs.python.org/3.4/library/itertools.html#itertools.permutations>`_.
+    This function does something very similar to `itertools.permutations <https://docs.python.org/3/library/itertools.html#itertools.permutations>`_.
     """
     per = []
     p = [i for i in range(0, nb)]
