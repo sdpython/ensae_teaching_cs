@@ -255,7 +255,7 @@ Puzzles algorithmiques
 ======================
     
 
-** Présentations**
+**Présentations**
 
 * `programmation dynamique <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance2.pdf>`_
 * `graphes et algorithmes <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance3.pdf>`_

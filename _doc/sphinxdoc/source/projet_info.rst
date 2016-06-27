@@ -16,8 +16,7 @@ Les liens qui suivent détaillent les modalités des projets proposés pour
 ces enseignements.
 
 .. toctree::
-    :maxdepth: 1
-    :numbered:
+    :maxdepth: 2
 
     projet_info_1A
     projet_info_2A

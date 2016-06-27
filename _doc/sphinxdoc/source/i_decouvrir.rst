@@ -32,9 +32,9 @@ Algorithmes
 .. toctree::
     :maxdepth: 1
 
-    tsp_kohonen
-    tsp_kruskal
-    graph_distance
+    specials/tsp_kohonen
+    specials/tsp_kruskal
+    specials/graph_distance
     notebooks/expose_graphe_et_map_reduce
     notebooks/expose_rwr_recommandation
     notebooks/expose_TSP
@@ -46,9 +46,9 @@ Algorithmes
 
     notebooks/expose_vigenere
     notebooks/expose_einstein_riddle
-    puzzle_girafe
-    hermionne
-    sudoku
+    specials/puzzle_girafe
+    specials/hermionne
+    specials/sudoku
 
 .. index:: entretien, entretien d'embauche, algorithme
 
@@ -57,7 +57,7 @@ Algorithmes
 .. toctree::
     :maxdepth: 1
 
-    image_synthese
+    specials/image_synthese
     specials/corde
     
 **Algorithmes réutilisables**

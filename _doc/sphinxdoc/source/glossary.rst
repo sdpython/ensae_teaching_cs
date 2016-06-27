@@ -91,6 +91,13 @@ Glossaire
         
         - `Image Scaling using Deep Convolutional Neural Networks <http://engineering.flipboard.com/2015/05/scaling-convnets/>`_
         
+    Deep Q Network (DQN)
+    
+        Deep Learning + Reinforcement Learning.
+        Voir `DQN <https://en.wikipedia.org/wiki/Deep_learning#Deep_Q-networks>`_.
+        Lire `Human-level control through deep reinforcement learning <https://storage.googleapis.com/deepmind-data/assets/papers/DeepMindNature14236Paper.pdf>`_,
+        in Nature Volume 518, `Deep Reinforcement Learning from Self-Play in Imperfect-Information Games <https://arxiv.org/pdf/1603.01121.pdf>`_ (ArXiv)
+        
     Dijkstra
         Plus connu pour l'algorithme du plus court chemin dans un graphe,
         `Edsger Dijkstra <http://fr.wikipedia.org/wiki/Edsger_Dijkstra>`_,

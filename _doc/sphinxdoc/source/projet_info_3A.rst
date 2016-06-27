@@ -7,7 +7,10 @@
 3A - Projets informatiques
 ==========================
 
-Le projet aura pour objectif l'implémentation d'un algorithme réparti, 
+Travail attendu
++++++++++++++++
+
+Le projet a pour objectif l'implémentation d'un algorithme réparti, 
 soit en utilisant le calcul sur GPU, soit via Map/Reduce, 
 soit en implémentant vous-même la répartition des calculs sur plusieurs machines (virtuelles) 
 via des primitives telles que `MPI <http://fr.wikipedia.org/wiki/Message_Passing_Interface>`_ ou des 
@@ -23,7 +26,11 @@ Les technologies proposées sont donc :
   `Blobstorage <http://azure.microsoft.com/fr-fr/documentation/articles/storage-dotnet-how-to-use-blobs/>`_ 
   comme primitives de communication (C#, .Net) sur Azure.
 
-Vous êtes libres de traiter l'algorithme de votre choix. Nous vous en proposons certains dans les articles ci-dessous
+Vous êtes libres de traiter l'algorithme de votre choix.
+Nous vous en proposons certains dans les articles ci-dessous.
+
+Suggestions d'articles
+++++++++++++++++++++++
 
 *2014-2015*
 
@@ -59,6 +66,7 @@ Vous êtes libres de traiter l'algorithme de votre choix. Nous vous en proposons
 * `Schönhage-Strassen Algorithm with MapReduce for Multiplying Terabit Integers <http://people.apache.org/~szetszwo/ssmr20110429.pdf>`_
 * `Dimension Independent Matrix Square using MapReduce (DIMSUM) <http://stanford.edu/~rezab/papers/dimsum.pdf>`_
 * `A Fast Parallel Stochastic Gradient Method for Matrix Factorization in Shared Memory Systems <http://jmlr.org/papers/v17/15-471.html>`_
+* `Asynchronous Methods for Deep Reinforcement Learning <http://arxiv.org/pdf/1602.01783.pdf>`_
 
 
 

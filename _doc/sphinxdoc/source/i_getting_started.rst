@@ -87,8 +87,8 @@ Et comme on ne fait pas tout depuis un notebook, il faut en choisir un un.
 
 * `Atom <https://atom.io/>`_
 * `Ninja IDE <http://ninja-ide.org/home/>`_
-* `PTVS <http://microsoft.github.io/PTVS/>`_ (Python Tools for Visual Studop) (** debug, notebook **)
-* `PyCharm <http://www.jetbrains.com/pycharm/>`_ (** * **)
+* `PTVS <http://microsoft.github.io/PTVS/>`_ (Python Tools for Visual Studop)
+* `PyCharm <http://www.jetbrains.com/pycharm/>`_
 * `PyDev <http://pydev.org/>`_ (fonctionne avec `Eclipse <http://www.eclipse.org/>`_)
 * `Pyzo <http://www.pyzo.org/>`_ : ressemble à Matlab  (anciennement `IEP <http://www.iep-project.org/index.html>`_)
 * `WingIDE <https://wingware.com/>`_
@@ -105,7 +105,6 @@ il faut revenir à l'essentiel : un `éditeur de texte <https://fr.wikipedia.org
 * `SciTe <http://www.scintilla.org/SciTE.html>`_, le plus simple et le plus léger,
   lire cet article pour le configurer
   `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_.
-  (** * **)
 
 
 
@@ -117,16 +116,16 @@ ou une fenêtre terminal (Linux, OS/X) et se placer dans le répertoire de la di
 L'installation dépend ensuite dy système d'exploitation et de la 
 distribution choisie. Dans tous les cas, il faut se place
 
-* Anaconda: 
+**Anaconda**
 
-    * module standard : ``conda install <module>``
-    * module rare : ``pip install <module>``
+* module standard : ``conda install <module>``
+* module rare : ``pip install <module>``
     
-* WinPython (Python sur Windows)
+**WinPython (Python sur Windows)**
 
-    * module standard : télécharger le module sur le site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_ 
-      et l'installer avec la commande ``pip install <local_module.whl>``
-    * module rare : ``pip install <module>`` (à condition que celui-ci n'inclut pas de code C/C++) qui requiert un compilateur C/C++
+* module standard : télécharger le module sur le site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_ 
+  et l'installer avec la commande ``pip install <local_module.whl>``
+* module rare : ``pip install <module>`` (à condition que celui-ci n'inclut pas de code C/C++) qui requiert un compilateur C/C++
     
 L'instruction ``pip install`` ne fonctionne pas sous Windows lorsque le module
 est implémenté en Python et C++. C'est pourquoi il est préférable d'installer
@@ -230,12 +229,7 @@ suit ::
 
     pymy_install3 --set=pyensae
 
-    
-La page :ref:`l-data2a` propose une liste exhaustive
-de modules qu'il faut ajouter pour reproduire la distribution
-proposée par l'école.
-  
-  
+      
 Certains notebooks requièrent des outils supplémentaires :
 
 * `graphviz <http://www.graphviz.org/>`_
@@ -395,13 +389,12 @@ qui facilitent l'archivage. Ils sont tellement pratiques qu'on a même du mal
 * `OneDrive <https://onedrive.live.com/about/fr-fr/>`_ (15 Go gratuit - août 2015)
 
 Ce ne sont pas les seuls, vous trouverez d'autres options ici :
-`cloud-gratuit <http://www.cloud-gratuit.com/>`_. Toutefois, **il est recommandé de ne pas mettre
-des données personnelles sensibles**. Les compagnies qui hébergent vos données
-se réservent parfois le droit de fermer votre compte sans avertissement préalable.
+`cloud-gratuit <http://www.cloud-gratuit.com/>`_. Toutefois, **il est recommandé de faire attention
+avec les données personnelles sensibles**. Ils n'est pas toujours possible de choisir
+le lieu de stockage et chaque pays a une législation différente. Il faut vérifier
+ce que cette loi autorise et interdit.
 Même si vos données sont protégées par un mot de passe et ne sont pas publiques, 
 il arrive que certains mots de passe soient interceptés.
-Il est également préférable de choisir des hébergements qui proposent 
-un stockage dans un pays dont la loi limite l'usage qui peut être fait de vos données.
 
 
 **Comparaison de fichiers**
@@ -495,19 +488,6 @@ Pour être compilée, la documentation requiert également :
 * `Le blog univers domotique <http://blog.univers-domotique.com/>`_
 * `Tutoriel sur GIT <http://sixrevisions.com/resources/git-tutorials-beginners/>`_
 
-
-
-.. rubric:: Footnotes
-
-.. index:: pymyinstall, distribution
-
-.. [#fpm1] Cette distribution est construite grâce à la fonction 
-           `win_python_setup <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/win_installer/win_setup_main.html#pymyinstall.win_installer.win_setup_main.win_python_setup>`_
-           du module
-           `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/>`_.
-           La construction du setup prend quelques heures et inclut les modules
-           listés répertoriés par :ref:`l-data2a`.
-           
            
 
 
@@ -565,6 +545,7 @@ Autres sources d'inspiration :
 
 
 **Liens, blogs à suivre**
+
 - `FastML <http://fastml.com/>`_
 - `no free hunch (Kaggle Blog) <http://blog.kaggle.com/>`_
 - `Sebastian Raschka <http://sebastianraschka.com/articles.html>`_
@@ -616,3 +597,14 @@ Les modules suivant font partie du setup proposé aux étudiants (voir plus bas)
     print(rst_table_modules())
 
 
+.. rubric:: Footnotes
+
+.. index:: pymyinstall, distribution
+
+.. [#fpm1] Cette distribution est construite grâce à la fonction 
+           `win_python_setup <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/win_installer/win_setup_main.html#pymyinstall.win_installer.win_setup_main.win_python_setup>`_
+           du module
+           `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/>`_.
+           La construction du setup prend quelques heures et inclut les modules
+           listés répertoriés par :ref:`l-data2a`.
+           

@@ -40,7 +40,7 @@ Le coût de nombreux algorithmes non NP-complet se décomposer comme suit :
   Dans la plupart des cas, on obtient ce coût après avoir transformé le problème dans une forme
   récurrente : on écrit ce qu'il faut faire pour calculer la solution avec *n+1* éléments
   sachant qu'on connaît la solution avec *n* éléments.
-* :math:`O(\n^\beta n)` avec :math:`\beta \in \mathbb{N} > 0`, 
+* :math:`O(n^\beta n)` avec :math:`\beta \in \mathbb{N} > 0`, 
   coût `dichotomique <https://fr.wikipedia.org/wiki/Recherche_dichotomique>`_, 
   on coupe le problème en deux à chaque itération.
 * :math:`O(1)` : `table de hashage <https://fr.wikipedia.org/wiki/Table_de_hachage>`_

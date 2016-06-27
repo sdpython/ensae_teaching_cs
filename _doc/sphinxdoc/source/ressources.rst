@@ -41,7 +41,9 @@ Source de données
   (via l'article `Building Azure ML Models on the NYC Taxi Dataset <http://blogs.technet.com/b/machinelearning/archive/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset.aspx>`_)
 * *ML* `urls, spam, ... <http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html>`_, jeux de données utilisés 
   comme benchmark pour la libraire `libsvm <http://www.csie.ntu.edu.tw/~cjlin/libsvm/>`_
-* *ML* * `Pascal Large Scale Learning Challenge <http://largescale.ml.tu-berlin.de/instructions/>`_
+* *ML* `Pascal Large Scale Learning Challenge <http://largescale.ml.tu-berlin.de/instructions/>`_
+* *ML* `Labeled Faces in the Wild <http://vis-www.cs.umass.edu/lfw/>`_ : 1323 images, 5749 personnes, 1680 personnes avec 2 ou plus d'images,
+  lire `How well do facial recognition algorithms cope with a million strangers? <http://www.washington.edu/news/2016/06/23/how-well-do-facial-recognition-algorithms-cope-with-a-million-strangers/>`_
 * *musique* `Semantic Artist Similarity Dataset <http://mtg.upf.edu/download/datasets/semantic-similarity>`_
 * *musique* `The Music Matrix – Exploring tags in the Million Song Dataset <http://musicmachinery.com/2011/11/27/the-music-matrix-exploring-tags-in-the-million-song-dataset/>`_
 * *musique* `Audio Content Analysis Datasets <http://www.audiocontentanalysis.org/data-sets/>`_
