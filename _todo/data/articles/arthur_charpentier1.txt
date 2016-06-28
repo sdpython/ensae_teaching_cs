@@ -1,0 +1,37 @@
+Les vacances sont l'occasion de se poser des questions que l'on n'a pas l'occasion de se poser d'ordinaire. Par exemple quand je m’étais demandé pourquoi, dans un petit village perdu, je continuais de fermer la porte de la voiture a clé (ici), il y a maintenant plusieurs mois.
+Mais surtout, les longs trajets en voiture sont une opportunité pour discuter avec le copilote (qui en l’occurrence était la mère de mes enfants), et d'essayer de la convaincre du bien-fondé de certaines de nos décisions. Après une petite heure de route, la semaine dernière, je l'ai entendue m’interpeller "ralentis,  il y un radar et tu est à 115 !". Bon, je dois avouer que l'argument "non non, je respecte la vitesse, mais de ton point de vue tu dois avoir une vision déformée et biaisée du tableau de bord car si tu étais pile en face, tu verrais que je suis un peu en dessous de 105 km/h" me marche plus.... car elle avait raison, j’étais bien à 115 km/h. Mais instinctivement, ma réponse a été la même que des millions d'automobilistes qui doivent faire face aux foudres de leur copilote: "oui, mais c'est pas ma faute"... Sans y réfléchir, cette excuse plus-que-centenaire, que je sortais a mes parents après avoir cassé la porte d’entrée après avoir donné un coup de pied dedans, ou que me ressortent mes enfants après lancé leur avion Playmobil par la fenêtre, est sortie toute seule de ma bouche. Et au moment de la sortir, j'ai compris immédiatement dans quel pétrin je me mettais... surtout que dans les yeux de ma copilote, je sentais pétiller le goût de la victoire (ou plutôt du je-sens-qu'on-va-rigoler-un-peu-avec-une-histoire-a-dormir-debout). "ah oui ? mais c'est la faute de qui alors... ?".
+Bon, alors la, on commence à visualiser en une fraction de seconde la liste des boucs émissaires possibles (le voisin, les enfants, mes parents, la belle-mère, la petite vieille du coin de la rue, la police, la pluie , le soleil, la fatigue, internet, la société, Nicolas Sarkozy, les normes IFRS, que sais-je encore....), et je ne sais pourquoi, j'ai retenu "ben c'est de la faute de l'autre, là, devant" (encore un 75 tiens !).
+C'est vrai quoi, si ça se trouve, avec un effet d’entraînement, il m'aspire et sans que je fasse rien, il me fait gagner 10 km/h. Bon, mes compétences en mécanique des fluides sont limitées. Donc j'aurai du mal a justifier cette théorie (un peu fumeuse, j'en conviens). J'ai personnellement opté pour "quand on conduit. on ne peut pas passer son temps le nez sur le tableau de bord... donc on regarde très occasionnellement... Et la plupart du temps, on se positionne par rapport aux autres, et en particulier la voiture juste devant... on essaye de maintenir une distance à peu près constante, et donc on roule a la même vitesse. Si j'allais trop vite, c'est que lui allait trop vite !". Et toc... pas mal ma théorie, non ?
+Bon, maintenant va falloir le vérifier.
+Mais ça tombe bien, car il y a quelque temps, j'avais travaillé sur des données de passage de voitures, dans la banlieue parisienne (ici).
+Dans un premier temps, on peut faire un petit test d’indépendance, dichotomique (je dépasse la vitesse autorisée, versus la voiture devant dépasse la vitesse autorisée). Plaçons nous un moment ou ça ne bouchonne pas (disons entre 15 et 16 heures, un jour de semaine) et regardons la fréquence de véhicules en excès de vitesse, ainsi que la même fréquence pour les véhicules immédiatement derrières,
+> M
+     [,1] [,2]
+[1,]  879  104
+[2,]  103   36
+avec par lignes le véhicule qui suit, et par colonne celui qui précède. Ici, 103 véhicules dépassaient la vitesse autorisée sans que le véhicule qui précédait ne dépasse les 110 km/h. Un test d’indépendance du chi-deux donne ici,
+> chisq.test(M)
+ 
+	Pearson's Chi-squared test with Yates' continuity correction
+ 
+data:  M 
+X-squared = 24.7862, df = 1, p-value = 6.405e-07
+ 
+ 
+> chisq.test(M)$expected
+         [,1]      [,2]
+[1,] 860.3440 122.65597
+[2,] 121.6560  17.34403
+Bref, il semble que l'on rejette l’hypothèse d'indépendance.
+On peut d'ailleurs le faire à plusieurs heures de la journée, et étudier l'évolution de la p-value du test d'indépendance,
+
+Moralité, on rejette indépendance entre les vitesses de véhicules qui se suivent aux heures normales (i.e. en dehors des heures de pointe, et la nuit).
+On peut aussi regarder en fonction de la vitesse du premier véhicule, la vitesse du véhicule juste derrière, avec une régression lissée,
+
+Enfin, on peut aussi tenter une régression logistique, afin de quantifier la probabilité de faire un excès de vitesse, conditionnellement a la vitesse du véhicule qui le précède,
+
+Si au lieu de le faire sur une journée, on regarde sur 38 jours (c'est ce dont je dispose dans ma base), on a
+
+Autrement dit, la probabilité que je dépasse la vitesse autorisée (ici 110 km/h) dépend très fortement - et de manière sensiblement croissante - de la vitesse du véhicule qui me précède...
+Moralité, mon argument pourrait être valide: si on va vite, c'est en partie parce que la voiture devant va vite, Mais si mon argumentaire me convainc (et pourrait - presque - convaincre ma femme), on verra s'il convainc la police. Car s'ils me contactent pour m'avoir flashé a une vitesse excessive, j'aurais envie de leur sortir ma théorie.... En plus ma théorie est basée sur une étude de corrélation (je fais des régressions toutes simples), et pas de causalité... ma conclusion pourrait alors parfaitement être inversée, ou complétée: je pourrais tout aussi légitimement expliquer à ma copilote "ben si j'allais trop vite, c'est de la faute de l'autre, la, derrière... il me collait, alors j'allais vite".
+Bref, il semble donc que l'excuse du "c'est pas ma faute, c'est l'autre" a de beaux jours devant elle... surtout que les élections approchent en France, donc je pense qu'on n'a pas fini de l'entendre !

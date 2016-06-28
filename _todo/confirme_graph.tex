@@ -1,0 +1,238 @@
+\input{../../common/livre_begin.tex}%
+\firstpassagedo{\input{../tutoriels/tutoriel_titre.tex}}
+\input{../../common/livre_table_begin2.tex}%
+%\firstpassagedo{\input{python_cours_chapter.tex}}
+
+\firstpassagedo{\chapter{Commencer à programmer}}
+
+\begin{xtutorial}{Graphe}{tutoriel_graphe_cor}\label{tutoriel_graphe}
+
+\input{../tutoriels/consigne.tex}
+
+Ce tutoriel s'intéresse à des algorithmes non abordés lors des travaux pratiques. On se propose de manipuler des graphes. Les premières questions ont pour but de personnaliser l'énoncé pour chaque élève afin que chacun travaille sur des données différentes. Par la suite de l'énoncé, il faudra répondre avec le jeu de données que les premières questions vous attribueront. 
+
+\input{../tutoriels/debutant_common_part.tex}
+
+
+Les données contiennent deux dictionnaires~:
+
+\begin{center}\begin{minipage}{11cm}
+\begin{tabular}{ll}  %tabularX ?
+\codes{noeuds[i]} & contient la valeur associée au n\oe ud \codes{i} \\
+\codes{arcs}      & si le dictionnaire contient le tuple \codes{(i,j)}, alors les n\oe uds \codes{i} et \codes{j} sont reliés.
+\end{tabular}
+\end{minipage}\end{center}
+
+Quelque soit les données qui correspondent à votre nom, ce graphe sera semblable à celui de la figure~\ref{label_tutgraphcp}. L'énoncé propose dans la troisième partie une fonction qui permet de dessiner ce graphe et ainsi de vérifier les manipulations opérées sur ce genre de structure.
+
+			\begin{figure}[ht]
+			\figureoneimage	{\caption{Exemple de graphe défini par les variables \codes{noeuds} et \codes{arcs}. 
+																Le graphe est connexe~: il existe toujours un chemin pour passer d'un n\oe ud à un autre.
+																En coupant un arc, le graphe devient composé de deux composantes connexes.
+																}}
+											{\includegraphics[width=13cm]{../tutoriels/images/tutgraphcp.png}}
+											{\label{label_tutgraphcp}}
+			\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\partieenonce{Partie 1}
+
+Pour la première partie, on utilise une représentation différente d'un graphe en utilisant une classe~:
+
+\begin{verbatimx}
+class MonGraphe :
+    def __init__ (self, num, valeur) :
+        self.valeur = valeur
+        self.num    = num
+        self.arcs   = [] # liste d’éléments MonGraphe
+\end{verbatimx}
+
+Du graphe (celui de la figure~\ref{label_tutgraphcp} par exemple), on ne connaît alors qu'un seul n\oe ud appelé \textit{racine}. Pour trouver les autres n\oe uds, on part de la racine et on explore de proche en proche les voisins. Cette représentation est inévitable lorsqu'il s'agit d'un grand graphe comme Internet. Chaque page ou n\oe ud ne donne accès qu'à ses voisins et il est impossible de connaître à un instant l'ensemble d'un graphe en constante évolution. L'inconvénient est qu'il n'est plus aussi évident de compter le nombre de n\oe uds que contient le graphe. 
+
+
+\exequest Ecrire une fonction qui transforme les dictionnaires \codes{noeuds} et \codes{arcs} en une liste d'éléments \codes{MonGraphe}. Il peut y avoir des arcs redondants.  (1,5~point)
+
+\begin{verbatimx}
+def ConstruireMonGraphe (noeuds, arcs) :
+    ...
+    return mongraphe
+\end{verbatimx}    
+
+On appellera le premier n\oe ud retourné par la fonction le n\oe ud racine. On pensera tout particulièrement au fait que le graphe est symétrique.
+
+\exequest On ajoute la méthode~:
+\begin{verbatimx}
+class MonGraphe :
+    def NombreTotalNoeud (self) :
+        r = 1
+        for a in self.arcs :
+            r += a.NombreTotalNoeud()
+        return r
+\end{verbatimx}
+
+En principe, cette fonction devrait provoquer une erreur. Expliquez pourquoi~? (1~point) On pourra s'intéresser au cas où il existe des cycles (il existe un chemin d'un n\oe ud du graphe vers lui-même)
+
+\exequest Il existe des graphes pour lesquelles cette fonction retourne le bon résultat (à savoir le nombre de n\oe uds), quelle particularité ont ces graphes~? (2~points)
+
+\begin{center}
+\begin{minipage}{6cm}
+\xymatrix{  
+e_1 \ar[r] & e_2  \ar[r] & e_i \ar[r] & e_n \ar@/_1pc/[ll]
+}
+\end{minipage}
+\end{center}
+
+
+
+
+\exequest Adapter (ou réécrire) la fonction précédente pour qu'elle retourne le bon résultat quelque soit le graphe. (3~points)
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\partieenonce{Partie 2}
+
+Pour cette seconde partie, on revient à la représentation du graphe avec les deux dictionnaires \codes{noeuds} et \codes{arcs}.
+
+\exequest On souhaite obtenir deux composantes connexes en enlevant le minimum d'arcs. Pour cela, on pense à un algorithme appelé \textit{Minimum Spanning Tree} (avec \codes{Wikipedia} par exemple). Est-ce que cet algorithme vous satisfait~? Expliquer. (1~point)
+
+\exequest On définit le degré d'un n\oe ud comme étant le nombre d'arcs reliés à ce n\oe ud. Ecrire une fonction qui calcule le degré pour un n\oe ud donné. (1~point)
+
+\exequest On construit le Laplacien du graphe. C'est une matrice carrée $n\times n$ où $n$ est le nombre de n\oe uds du graphe. Soit $M=(m_{ij})$ ce laplacien~: 
+
+\begin{eqnarray}
+m_{ij} &=& \left \{ \begin{array}{ll}
+										d_i & \text{ si } i = j \\
+										-1  & \text{ s'il existe un arc reliant } i \text{ et } j \\
+										0 & \text{ sinon} 
+										\end{array}
+				 \right .
+\end{eqnarray}
+
+
+%On note $V$ le nombre de n\oe uds et $E$ le nombre d'arcs, on construit la matrice $A \in Mn(V,E)$ de telle sorte que~:
+%$$
+%A_{i,j} = \left \{ \begin{array}{ll}
+%											1 & \text{ si le n \oe ud} i \text{ est connecté à l'arc } j \\ 
+%											0 & \text{ sinon } 
+%									\end{array} \right. 
+%$$
+
+Construisez cette matrice. On rappelle que le graphe est toujours non-directionnel. Montrez que la somme des valeurs de chaque colonne est~0. (2~points)
+
+
+\exequest Montrez que l'une des valeurs propres\footnote{En anglais, valeurs propres et vecteurs propres se traduisent par \textit{eigen values} et \textit{eigen vectors}.} de cette matrice est~0. Quel est le vecteur propre associé~? (1~point)
+
+\exequest Calculez les valeurs propres à l'aide du module \codes{numpy}. Vous vous assurerez que le résultat théorique précédent est vérifié numériquement.  (1~point)
+
+\exequest Toutes les valeurs propres sont positives ou nulles, quel est le vecteur propre associé à la plus petite des valeurs propres non nulles~? Ces deux classes sont également décrites par les expressions (\ref{classe_a_positive}) et  (\ref{classe_b_negative}). (1~point)
+
+\exequest On classe les n\oe uds en deux classes selon qu'ils sont associés à une valeur positive ou négative d'après ce vecteur propre. On peut maintenant déterminer quel n\oe ud appartient à la première composante, quel n\oe ud appartient à la seconde. Ecrire une fonction qui calcule le nombre d'arcs qui relient un n\oe ud de la première composante à un n\oe ud de la seconde. Quel est le résultat~? (3~points)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\partieenonce{Dessin du graphe}
+
+Pour vérifier, on souhaite dessiner le graphe dans une image. Pour cela on utilise le programme\footnote{voir \httpstyle{http://www.xavierdupre.fr/enseignement/tutoriel\_python/graphviz/use\_graphivz.py}} suivant qui s'appuie sur le logiciel \textit{Graphviz}\footnote{\httpstyle{http://www.graphviz.org/}}.
+
+\inputcode{../tutoriels/solution/graph/use_graphivz.py}{utilisation de Graphviz}
+
+Le système informatique de l'école ne permet pas l'installation de logiciels, le programme utilisé n'est pas la version officiel de \textit{Graphivz} mais une version recompilée à partir des sources. Les graphes seront moins jolis que ceux que vous pourriez obtenir en installant la dernière version du logiciel. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\partieenonce{Partie facultative~: intermède théorique}
+
+Les résultats suivants sont extraits du livre \textit{Statistical Analysis of Network Data} de Eric D. Kolaczyk. $G$~désigne un graphe connexe, avec une seule composante connexe. On définit $S$ un ensemble de sommets du graphe, $\bar{S}$ est son complémentaire. $E(S,\bar{S})$ désigne l'ensemble des arcs qui relient un sommet de $S$ à un sommet de son complémentaire. $\abs{S}$ désigne le nombre de sommets inclus dans~$S$. Enfin~:
+
+\begin{eqnarray}
+\Phi(G) &=& \min_{\abs{S} \infegal \frac{\abs{G}} {2} } \frac{ \abs{ E (S,\bar{S}) }} { \abs{ S } } \label{connex_component_mini}
+\end{eqnarray}
+
+On cherche toujours à couper un graphe connexe en deux composantes connexes en supprimant le moins d'arcs possibles. Cela dit, on souhaite aussi éviter couper un seul sommet du reste du graphe tout simplement parce qu'il est relié par un seul arc. La fonction $\Phi(G)$ exprime ce compromis. 
+
+Résoudre ce problème de minimisation est un problème NP-complet\footnote{Il n'existe pas d'algorithme capable de résoudre ce problème en un temps polynomiale.}. $\lambda_2$ désigne la plus petite des valeurs propres non nulles et $d_{max}$ le plus grand nombre d'arcs reliés au même sommet (degré maximal du graphe). On peut montrer dans ce cas~:
+
+\begin{eqnarray}
+\frac{\lambda_2}{2} &\infegal& \Phi(G) \infegal \sqrt{ \lambda_2 (2 d_{max} - \lambda_2) }
+\end{eqnarray}
+
+De plus, si $V=(x_1,...x_n)$ le vecteur propre associé à cette valeur propre, on définit $S$ et $\bar{S}$ comme suit~:
+
+\begin{eqnarray}
+S &=& \acc{ v \in V | x_v > 0 }  \label{classe_a_positive}\\
+\bar{S} &=& \acc{ v \in V | x_v < 0 } \label{classe_b_negative} 
+\end{eqnarray}
+
+On s'assure que $\abs{S} \infegal \abs{\bar{S}}$. Alors, on peut montrer que~:
+
+\begin{eqnarray}
+\Phi(G) &\infegal& \frac{ \abs{ E (S,\bar{S}) }} { \abs{ S } } \infegal \frac{ \Phi^2(G) } { d_{max} } \infegal \lambda_2
+\end{eqnarray}
+
+Le vecteur $V$ est donc une réponse approchée au problème de minimisation~(\ref{connex_component_mini}).
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\partieenonce{Partie facultative~: si vous êtes curieux}
+
+On applique cette méthode à un problème de \textit{clusterisation}. Prenons l'exemple de la figure~\ref{label_tutgraphcl}.
+
+			\begin{figure}[ht]
+			\figureoneimage	{\caption{Problème de \textit{clusterisation}. 
+			                  On souhaite automatiquement classer les points du centre et ceux de 
+																la périphérie en deux classes différentes.}}
+											{\includegraphics[height=5cm]{../tutoriels/images/tutgraphcl.png}}
+											{\label{label_tutgraphcl}}
+			\end{figure}
+			
+
+On note $d(X_1,X_2)$ la distance euclidienne entre deux points $X_1$~et~$X_2$. On construit le Laplacien suivant à partir d'un ensemble de points du plan $(X_i)_i$.
+
+\begin{eqnarray}
+m_{ij} &=& \left \{ \begin{array}{ll}
+										-e^{-d(X_i,X_j)^2}  & \text{ si } i \neq j \\
+										\sum_{i \neq j} e^{-d(X_i,X_j)^2} & \text{ si } i = j 
+										\end{array}
+				 \right .
+\end{eqnarray}
+
+\exequest Créer une fonction qui génère un tel ensemble de points en deux dimensions de façon aléatoires~? (pas de point)
+
+\exequest Implémentez la méthode suggérée et dessiner le résultat. (A l'aide du module \codes{matplotlib} par exemple.) (pas de point)
+
+
+
+
+
+\end{xtutorial}
+
+
+
+\begin{xtutorialcor}{tutoriel_graphe}\label{tutoriel_graphe_cor}
+
+Correction de la première partie qui consistait à récupérer un certain jeu de données~:
+
+\inputcode{../tutoriels/solution/graph/correction_graph_part1.py}{recherche du nom}
+
+Correction du reste du tutoriel~:
+
+\inputcode{../tutoriels/solution/graph/correction_graph_parts.py}{clustering dans un graphe}
+
+
+\end{xtutorialcor}
+
+
+
+\input{../../common/livre_table_end.tex}%
+\input{../../common/livre_end.tex}%

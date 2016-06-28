@@ -1,0 +1,238 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+\firstpassagedo{\refstepcounter{cxtdcor}\refstepcounter{cxtdcor}\refstepcounter{cxtdcor}\refstepcounter{cxtdcor}
+					\refstepcounter{cxtdcor}\refstepcounter{cxtdcor}\refstepcounter{cxtdcor}\refstepcounter{cxtdcor}\refstepcounter{cxtdcor}}
+
+
+
+\begin{xtdcor}{seance10_2013_pdyn}\label{seance10_2013_pdyn_cor}
+
+\textbf{Exercice 1 }
+
+%%% récupération de la liste des villes (sans doublons) %%%
+\begin{verbatimx}
+vil = { }
+for row in df.values :
+    vil [row[0]] = 0
+    vil [row[1]] = 1
+vil = list(vil.keys())
+print (len(vil))
+\end{verbatimx}
+
+\textbf{Exercice 2 }
+
+%%% construction d'un dictionnaire { (a,b):d, (b,a):d } %%%
+\begin{verbatimx}
+dist = { }
+for row in df.values :
+    a = row[0]
+    b = row[1]
+    dist[a,b] = dist[b,a] = row[2]
+print (len(dist))
+\end{verbatimx}
+
+
+
+%%% distance Charleville-Mezieres --> Bordeaux %%%
+\begin{verbatimx}
+print ( dist["Charleville-Mezieres","Bordeaux"] )
+\end{verbatimx}
+
+
+\partietdb{L'algorithme du plus court chemin (Dikjstra)}
+
+
+\textbf{Exercice 3}
+
+On peut remplir facilement toutes les cases correspondant aux villes reliées à Charleville-Mezieres.
+
+%%% initialisation du tableau d %%%
+\begin{verbatimx}
+d = { }
+d['Charleville-Mezieres'] = 0
+for v in vil : d[v] = 1e10
+for v,w in dist :
+    if v == 'Charleville-Mezieres': 
+        d[w] = dist[v,w]
+\end{verbatimx}
+
+
+\textbf{Exercice 4}
+
+Si on découvre que $d[w] > d[v] + dist[w,v]$, cela veut dire qu'il faut mettre à jour le tableau $d$ car il ne contient pas la distance optimale. On passe en revue toutes les distance connue~:
+
+%%% une itération de l'algorithme de Dikjstra %%%
+\begin{verbatimx}
+for v,w in dist :
+    d2 = d[v] + dist[v,w]
+    if d2 < d[w] :
+        d[w] = d2
+\end{verbatimx}
+
+On trouve 829140 mètres pour la distance (Charleville-Mezieres, Bordeaux). Ce n'est pas forcément la meilleure. Pour être sûr, il faut répéter la même itération autant de fois qu'il y a de villes (car le plus long chemin contient autant d'étapes qu'il y a de villes). 
+
+%%% l'algorithme de Dikjstra %%%
+\begin{verbatimx}
+for i in range(0,len(d)) :        
+    for v,w in dist :
+        d2 = d[v] + dist[v,w]
+        if d2 < d[w] :
+            d[w] = d2
+\end{verbatimx}
+
+On trouve 795670 mètres.
+
+        
+\partietdc{La répartition des skis}
+
+\textbf{Exercice facultatif}
+
+Pour montrer que l'algorithme suggéré permettra d'obtenir la solution optimale, il faut montrer qu'il n'est pas nécessaire d'envisager aucun autre ordre que celui des skieurs et des paires triés par taille croissante. On considère donc un appariement $\sigma$ qui associé le skieur $t_i$ à la paire $s_{\sigma(i)}$. Il suffit que montrer que~:
+
+$$
+\forall i,j,  \; t_i \infegal t_j \Longleftrightarrow s_{\sigma(i)} \infegal s_{\sigma(j)}
+$$
+
+Pour montrer cela, on fait un raisonnement par l'absurde~: pour $i$ et $j$ quelconques, on suppose qu'il existe un appariement optimal tel que  $t_i >  t_j$ et $s_{\sigma(i)} \infegal s_{\sigma(j)}$. Le coût $C(\sigma)$ de cet appariement est~:
+
+\begin{eqnarray}
+C(\sigma) &=& \sum_{k=1}^{N} \abs{ t_k - s_{\sigma(k)} } = \alpha + \abs{ t_i - s_{\sigma(i)} } + \abs{ t_j - s_{\sigma(j)} } 
+\end{eqnarray}
+
+Le coût de l'appariement en permutant les skieurs $i$ et $j$ (donc en les rangeant dans l'ordre croissant) est~:
+
+\begin{eqnarray}
+C(\sigma') &=& \sum_{k=1}^{N} \abs{ t_k - s_{\sigma(k)} } = \alpha + \abs{ t_j - s_{\sigma(i)} } + \abs{ t_i - s_{\sigma(j)} } 
+\end{eqnarray}
+
+On calcule~:
+
+\begin{eqnarray}
+C(\sigma) - C(\sigma') 
+				&=& \abs{ t_i - s_{\sigma(i)} } + \abs{ t_j - s_{\sigma(j)} }  - \abs{ t_j - s_{\sigma(i)} } - \abs{ t_i - s_{\sigma(j)} } 
+\end{eqnarray}
+
+Premier cas~: $t_j \supegal s_{\sigma(i)} $ et $t_i > t_j \supegal s_{\sigma(i)}$
+
+\begin{eqnarray}
+C(\sigma) - C(\sigma') 
+				&=& \abs{ t_i - s_{\sigma(i)} } + \abs{ t_j - s_{\sigma(j)} }  - \pa{  t_j - s_{\sigma(j)} + s_{\sigma(j)} - s_{\sigma(i)}} - \abs{ t_i - s_{\sigma(j)} } \\
+				&=&  t_i - s_{\sigma(i)}  + \abs{ t_j - s_{\sigma(j)} }  - \pa{  t_j - s_{\sigma(j)}} -\pa{ s_{\sigma(j)} - s_{\sigma(i)}} - \abs{ t_i - s_{\sigma(j)} } \\
+				&=&  t_i - s_{\sigma(i)}- \abs{ t_i - s_{\sigma(i)}}  + \abs{ t_j - s_{\sigma(j)} }  - \pa{  t_j - s_{\sigma(j)}} \\
+				&=&  \abs{ t_j - s_{\sigma(j)} }  - \pa{  t_j - s_{\sigma(j)}} \\
+				&\supegal& 0
+\end{eqnarray}
+
+Second cas~: $t_j \infegal s_{\sigma(i)} $ et $t_j \infegal s_{\sigma(i)} \infegal s_{\sigma(j)}$
+
+\begin{eqnarray}
+C(\sigma) - C(\sigma') 
+				&=& \abs{ t_i - s_{\sigma(i)} } + s_{\sigma(j)} -t_j  - \pa{  s_{\sigma(i)} - t_j} - \abs{ t_i - s_{\sigma(j)} } \\
+				&=& \abs{ t_i - s_{\sigma(i)} } + s_{\sigma(j)} -  s_{\sigma(i)} - \abs{ t_i - s_{\sigma(j)} } \\
+				&\supegal& \abs{ t_i - s_{\sigma(j)}} - \abs{  s_{\sigma(j)} -  s_{\sigma(i)} } + s_{\sigma(j)} -  s_{\sigma(i)} - \abs{ t_i - s_{\sigma(j)} } \\
+				&\supegal& 0
+\end{eqnarray}
+
+Dans les deux cas, on montre donc qu'il existe un meilleur appariement global en permutant les deux skieurs~$i$ et~$j$, c'est-à-dire en les triant par ordre croissant de taille. Nous avons donc montré que, si les paires de ski sont triées par ordre croissant de taille, l'appariement optimal est nécessaire un appariement pour lequel les skieurs sont aussi triés par ordre croissant. Lors de la recherche de cet appariement optimal, on peut se restreindre à ces cas de figure.
+
+				
+\textbf{Exercice 5}
+
+$$
+p(n,m) = \min \acc { p(n-1,m-1) + \abs{ t_n - s_m }, p(n,m-1) }
+$$
+
+Lorsqu'on considère le meilleur appariement des paires $1..m$ et des skieurs $1..n$, il n'y a que deux choix possibles pour la paire~$m$~:
+\begin{enumerate}
+\item soit elle n'est associée à aucun skieur et dans ce cas~: $p(n,m) = p(n,m-1)$,
+\item soit elle est associée au skieur $n$ (et à aucun autre)~: $p(n,m) = p(n-1,m-1) + \abs{ t_n - s_m }$.
+\end{enumerate}
+
+
+\partietdd{La répartition des skis (suite et fin)}
+
+\textbf{Exercice 6}
+
+%%% coût de la meilleure distribution des skis  %%%
+\begin{verbatimx}
+p = { }
+p [-1,-1] = 0
+for n,taille in enumerate(skieurs) : p[n,-1] = p[n-1,-1] + taille
+for m,paire  in enumerate(paires ) : p[-1,m] = 0
+for n,taille in enumerate(skieurs) :
+    for m,paire in enumerate(paires) :
+        p1 = p.get ( (n  ,m-1), 1e10 ) 
+        p2 = p.get ( (n-1,m-1), 1e10 ) + abs(taille - paire)
+        p[n,m] = min(p1,p2)
+        
+print (p[len(skieurs)-1,len(paires)-1])
+\end{verbatimx}
+
+\textbf{Exercice 7}
+
+Il faut imaginer que $p$ peut être représenté sous forme de matrice et qu'à chaque fois, on prend le meilleur chemin parmi 2~:
+
+$$
+\xymatrix{  & m-1  & m \\
+     n-1   &  p(n-1,m-1) \ar[dr]^{ + \abs{t_n - s_m}} &  p(n-1,m) \\
+     n     &  p(n,m-1)   \ar[r] & p(n,m) \\
+				}
+$$
+
+\begin{itemize}
+\item Chemin horizontal~: on ne choisit pas la paire $m$.
+\item Chemin diagonal~: on choisit la paire $m$ pour le skieur $n$.
+\end{itemize}
+
+Pour retrouver la distribution, il suffit de conserver à chaque étape le meilleur des deux chemins.
+
+
+
+%%% récupération de la meilleure distribution %%%
+\begin{verbatimx}
+p = { }
+p [-1,-1] = 0
+best = { }
+for n,taille in enumerate(skieurs) : p[n,-1] = p[n-1,-1] + taille
+for m,paire  in enumerate(paires ) : p[-1,m] = 0
+for n,taille in enumerate(skieurs) :
+    for m,paire in enumerate(paires) :
+        p1 = p.get ( (n  ,m-1), 1e10 ) 
+        p2 = p.get ( (n-1,m-1), 1e10 ) + abs(taille - paire)
+        p[n,m] = min(p1,p2)
+        
+        if p[n,m] == p1 : best [n,m] = n,m-1
+        else : best [n,m] = n-1,m-1
+        
+print (p[len(skieurs)-1,len(paires)-1])
+
+chemin = [ ]
+pos = len(skieurs)-1,len(paires)-1
+while pos in best :
+    print (pos)
+    chemin.append(pos)
+    pos = best[pos]
+chemin.reverse()
+print (chemin)
+\end{verbatimx}
+
+
+
+
+\partietdEND
+
+
+Les deux algorithmes ont un coût quadratique.
+
+
+
+
+
+
+\end{xtdcor}
+
+
+
+
+
+\input{../../common/exo_end.tex}%

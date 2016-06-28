@@ -1,0 +1,171 @@
+\input{../../common/exo_begin.tex}%
+\firstpassagedo{\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}}
+
+
+
+\begin{xtd}{Graphe minuté}{graphe_minute_cor}\label{graphe_minute_label}
+
+\partietdVU{classes}{algorithme sur les graphes}
+
+Les graphes\footnote{\httpstyle{http://fr.wikipedia.org/wiki/Th\%C3\%A9orie\_des\_graphes}} sont un peu partout sans qu'on s'en rende compte car ils sont une façon simple et visuelle de représenter des relations. Un réseau social est un graphe, l'illustration~\ref{graphe_lworld} est un graphe.
+
+\begin{figure}[ht]
+\begin{center}\begin{tabular}{|c|}\hline 
+\includegraphics[width=10cm]{../python_td_minute/image/El_chart.png} \\ \hline
+\end{tabular}
+\end{center}
+\caption{Image extraite de \httpstyle{http://fr.wikipedia.org/wiki/The\_L\_Word}.}
+\label{graphe_lworld}
+\end{figure}
+
+
+
+
+\partietda{construire un graphe}
+
+On considère la liste des relations décrite comme suit\footnote{La liste complète est diponible à l'adresse suivante~: \httpstyle{http://www.xavierdupre.fr/enseignement/td\_python/python\_td\_minute/data/lworld/pairs.txt}.}~:
+\begin{verbatimx}
+coleman,frank
+dana,lara
+dana,melanie
+dana,ralph
+danny,dylan
+dona,jenny
+...
+\end{verbatimx}
+
+Vous pouvez le récupérer directement en utilisant la fonction suivante~:
+
+\begin{verbatimx}
+def lit_donnees_depuis_un_fichier_ou_internet (fichier) :
+    """
+    cette fonction lit un fichier où le télécharge depuis un site internet,
+    si le fichier n'existe pas, il est téléchargé puis enregisté sur disque
+    """
+    if not os.path.exists (fichier) :
+        url = "http://www.xavierdupre.fr/enseignement/complements/" + fichier
+        import urllib2
+        f = urllib2.urlopen (url)
+        t = f.read()
+        f.close()
+        f = open(fichier, "w")
+        f.write(t)
+        f.close()
+\end{verbatimx}
+
+
+\tdquest Le programme suivant est à compléter (...), il permet de récupérer une matrice à partir du fichier téléchargé~:
+
+\begin{verbatimx}
+f = open (".......", "r")
+lines = f.readlines ()
+f.close ()
+
+# la partie après le if sert à enlever les lignes vides
+couples = [ l.strip(" \n\r").split ( ... ) for l in lines if ... ]
+\end{verbatimx}
+
+\tdquest Comment compter le nombre de prénoms différents~?
+
+\tdquest On souhaite compter le nombre de relations directes pour chaque individu, que suggérez-vous en vous inspirant de la question précécente~?
+
+
+\partietdb{les amis}
+
+Si on considère que chaque arc relie deux amis, on souhaite connaître pour chaque personne combien elle a d'amis d'amis. C'est l'objectif des questions suivantes.
+
+\tdquest Si vous avez deux amis qui ont chacun 50 amis, avez-vous nécessairement 100 amis d'amis~?
+
+\tdquest On considère la classe suivante~:
+
+\begin{verbatimx}
+class Personne :
+    def __init__ (self, nom):
+        self.nom = nom
+        self.amis = []
+        
+    def ajout_ami (self, ami) :
+        self.amis.append (ami)
+\end{verbatimx}
+
+Ajouter une méthode qui retourne le nombre d'amis.
+
+\tdquest On récupère la liste des prénoms distincts dans un dictionnaire~:
+
+\begin{verbatimx}
+graph = { }
+for prenom in liste_prenoms :
+    graph [ prenom ] = Personne ( prenom )
+\end{verbatimx}
+
+Complétez le programme suivant (\codes{couples} est la liste créée à la première question)~:
+
+\begin{verbatimx}
+for a,b in couples :
+    graph [ ... ].ajout_ami ( ... )
+    graph [ ... ].ajout_ami ( ... )
+\end{verbatimx}
+
+Pourquoi faut-il ajouter la seconde ligne~? Que se passe-t-il si le fichier contient une relation dans un sens puis dans l'autre~?
+
+
+\partietdc{les amis d'amis}
+
+\tdquest Ecrire une méthode qui compte les amis d'amis~:
+
+
+\begin{verbatimx}
+class Personne :
+    ...
+    def nombre_amis_amis(self) :
+        nb = 0
+        ....
+        return nb 
+\end{verbatimx}
+
+\tdquest Créer une seconde fonction pour calculer les amis d'amis d'amis~?
+
+\tdquest Pourquoi le terme d'amis d'amis d'amis n'est-il pas très exact~?
+
+
+\partietdd{composantes connexes}
+
+
+
+\tdquest On propose de créer une fonction qui calcule la somme de tous les amis, amis d'amis, amis d'amis... La figure~\ref{graphe_lworld2}\footnote{Ce graphe a été réalisé grâce à l'outil \textit{Graphviz} disponible à \httpstyle{http://www.graphviz.org/}.} représente le graphe déduit des relations présentes dans le fichier de la première question.
+
+\begin{figure}[ht]
+\begin{center}\begin{tabular}{|c|}\hline 
+\includegraphics[width=16cm]{../python_td_minute/image/lworld_gr.png} \\ \hline
+\end{tabular}
+\end{center}
+\caption{Image qui représente le graphe décrit par les relations présentes dans le fichier téléchargé à la question~1.}
+\label{graphe_lworld2}
+\end{figure}
+
+Expliquer pourquoi, quelque soit la personne choisie, il n'y a que deux réponses possibles.
+
+\tdquest Implémenter la fonction qui retourne le nombre total d'amis~?
+
+\tdquest Vérifiez qu'il n'y a que deux réponses différentes quelque soit la personne.
+
+
+\partietdEND
+
+\tdquest Comptez le nombre de triplets d'amis tous connectés entre eux~?
+
+\tdquest Une personne lance une rumeur. En un jour, il propage la rumeur à tous ses amis. En deux jours, tous ses amis d'amis la connaissent et ainsi de suite les jours suivant. Dans le pire des cas, combien de jours faut-il pour qu'une rumeur se propage dans la plus grande composante connexe~? 
+
+La réponse à cette dernière question n'est pas évidente sauf si on connaît déjà certains algorithmes comme celui de Bellman-Ford mais il est possible dans un premier temps de commencer à y réfléchir seul.
+
+
+
+%\partietdCOMMENT
+
+
+\end{xtd}
+
+
+
+
+\input{../../common/exo_end.tex}%

@@ -1,0 +1,156 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+\firstpassagedo{\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}}
+
+% dataset
+
+
+
+\begin{xtd}{Programmation dynamique}{seance10_2013_pdyn_cor}\label{seance10_2013_pdyn}
+
+\partietdVU{calcul numérique}{programmation dynamique}
+
+
+La programmation dynamique\footnote{\httpstyle{http://fr.wikipedia.org/wiki/Programmation\_dynamique}} est une façon de résoudre de manière similaire une classe de problèmes d'optimisation qui vérifie la même propriété. On suppose qu'il est possible de découper le problème $P$ en plusieurs parties $P_1$, $P_2$,~... Si $S$ est la solution optimale du problème~$P$, alors chaque partie $S_1$, $S_2$ de cette solution appliquée aux sous-problèmes est aussi optimale.
+
+Par exemple, on cherche le plus court chemin $c(A,B)$ entre les villes $A$ et $B$. Si celui-ci passe par la ville~$M$ alors les chemins $c(A,M)+c(M,B) = c(A,B)$ sont aussi les plus courts chemins entre les villes $A,M$ et $M,B$.
+
+
+
+\partietda{Le plus court chemin}
+
+On récupère le fichier \codes{matrix\_distance\_7398.txt} qui contient des distances entre différentes villes (pas toutes).
+
+%%% récupération des données pour le plus court chemin %%%
+\begin{verbatimx}
+import pyensae
+pyensae.download_data("matrix_distance_7398.zip", website  = "xd")
+\end{verbatimx}
+
+Il contient des données du type~:
+\begin{verbatimx}
+Boulogne-Billancourt	Beauvais	85597
+Courbevoie	Sevran	26564
+Colombes	Alfortville	36843
+Bagneux	Marcq-En-Baroeul	233455
+...
+\end{verbatimx}
+
+On lit les données comme ceci~:
+
+%%% lire le fichiers des distance avec pandas %%%
+\begin{verbatimx}
+import pandas
+df = pandas.read_csv("matrix_distance_7398.txt", sep="\t")
+print (df.head())
+\end{verbatimx}
+
+
+\textbf{Exercice 1}
+
+Construire la liste des villes sans doublons ?
+
+\textbf{Exercice 2}
+
+Constuire un dictionnaire \codes{ \{ (a,b) : d, (b,a) : d \} } où \codes{a,b} sont des villes et \codes{d} la distance qui les sépare~?
+
+
+On veut calculer la distance entre la ville de \codes{Charleville-Mezieres} et \codes{Bordeaux}~? Est-ce que cette distance existe dans la liste des distances dont on dispose~?
+
+
+\partietdb{L'algorithme du plus court chemin (Dikjstra)}
+
+
+On créé un tableau \codes{d[v]} qui contient la distance optimale entre les villes \codes{v} et \codes{Charleville-Mezieres}. La valeur qu'on cherche est \codes{d['Bordeaux']}. On initialise le tableau comme suit~:
+
+\begin{itemize}
+\item \codes{d['Charleville-Mezieres'] = 0 }
+\item \codes{d[v] = infini } pour tout $v \neq 'Charleville-Mezieres'$.
+\end{itemize}
+
+
+\textbf{Exercice 3}
+
+Quelles sont les premières cases qu'on peut remplir facilement~?
+
+
+\textbf{Exercice 4}
+
+
+Soit une ville $v$ et une autre $w$, on s'aperçoit que $d[w] > d[v] + dist[w,v]$. Que proposez-vous de faire~? En déduire un algorithme qui permet de déterminer la distance la plus courte entre Charleville-Mezieres et Bordeaux.
+
+
+
+\partietdc{La répartition des skis}
+
+$N=10$ skieurs rentrent dans un magasins pour louer 10 paires de skis (parmi~$M>N$). On souhaite leur donner à tous une paire qui leur convient (on suppose que la taille de la paire de skis doit être au plus proche de la taille du skieurs. On cherche donc à minimiser~:
+
+$$
+\arg \min_\sigma \sum_{i=1}^{N} \abs{ t_i - s_{\sigma(i)} } 
+$$
+
+Où $\sigma$ est un ensemble de $N$ paires de skis parmi~$M$ (un arrangement\footnote{\httpstyle{http://fr.wikipedia.org/wiki/Arrangement}} pour être plus précis).
+
+A première vue, il faut chercher la solution du problème dans l'ensemble des arrangements de $N$ paires parmi~$M$. Mais si on ordonne les paires et les skieurs par taille croissantes~: $t_1 \infegal t_2 \infegal ... \infegal t_N$ (tailles de skieurs) et $s_1 \infegal s_2 \infegal ... \infegal s_M$ (tailles de skis), résoudre le problème revient à prendre les skieurs dans l'ordre croissant et à les placer en face d'une paire dans l'ordre où elles viennent. C'est comme si on insérait des espaces dans la séquence des skieurs sans changer l'ordre~:
+
+$$
+\begin{array}{|c|c|c|c|c|c|c|c|c|c|c|c|} \hline
+t_1 &     & t_2 & t_3 &      &      & t_4 & ... & t_{N-1} &         & t_{N}   &     \\ \hline
+s_1 & s_2 & s_3 & s_4 & s_5  & s_6  & s_7 & ... & s_{M-3} & s_{M-2} & s_{M-1} & s_M \\ \hline
+\end{array}
+$$
+
+
+\textbf{Exercice facultatif}
+
+Il faut d'abord prouver que l'algorithme suggéré ci-dessus permet bien d'obtenir la solution optimale.
+
+
+\textbf{Exercice 5}
+
+Après avoir avoir trié les skieurs et les paires par tailles croissantes. On définit~:
+
+$$
+p(n,m) = \sum_{i=1}^{n} \abs{ t_i - s_(\sigma_m^*{i})} 
+$$ 
+
+Où $\sigma_m^*$ est le meilleur choix possible de $n$ paires de skis parmi les $m$ premières. Exprimer $p(n,m)$ par récurrence (en fonction de $p(n,m-1)$ et $p(n-1,m-1)$. On suppose qu'un skieur sans paire de ski correspond au cas où la paire est de taille nulle.
+
+\partietdd{La répartition des skis (suite et fin)}
+
+\textbf{Exercice 6}
+
+Ecrire une fonction qui calcule l'erreur pour la distribution optimale~? On pourra choisir des skieurs et des paires de tailles aléatoires par exemple.
+
+%%% choix aléatoires des skieurs et des paires  %%%
+\begin{verbatimx}
+import random
+skieur = [ random.gauss(1.75, 0.1) for i in range(0,10) ]
+paires = [ random.gauss(1.75, 0.1) for i in range(0,15) ]
+skieurs.sort()
+paires.sort()
+\end{verbatimx}
+
+
+\textbf{Exercice 7}
+
+Quelle est la meilleure distribution~?
+
+
+
+\partietdEND
+
+Quels sont les coûts des deux algorithmes (plus court chemin et ski)~?
+
+
+
+\partietdCOMMENT
+
+
+
+\end{xtd}
+
+
+
+
+\input{../../common/exo_end.tex}%

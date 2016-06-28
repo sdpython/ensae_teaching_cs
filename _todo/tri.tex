@@ -1,0 +1,328 @@
+\input{../../common/livre_begin.tex}%
+\firstpassagedo{\input{../python_cours_exemple/python_petitcours_titre.tex}}
+\input{../../common/livre_table_begin2.tex}%
+%\firstpassagedo{\input{python_cours_chapter.tex}}
+
+
+\begin{xexempleprog2}{Différents tris d'une liste}{exemple_tri_cor}\label{exemple_tri}
+\indexfrr{méthode}{sort}
+
+\subsubsectionx{Trier une liste avec \python}
+
+Pour trier une liste par ordre croissant, il suffit d'utiliser la méthode \codes{sort} associée aux listes.
+%
+\begin{verbatimx}
+x = [1,3,2,5,8,4,9,0,7,6] 
+x.sort ()
+print x
+\end{verbatimx}
+%
+\indexfrr{tri}{rapide}\indexfrr{tri}{quicksort}\indexfrr{tri}{sélection}\indexfrr{tri}{fusion}\indexfrr{tri}{insertion dichotomique}
+Cependant, le tri est très courant en informatique et il est parfois utile de s'inspirer de telles méthodes pour résoudre des problèmes similaires. On distingue principalement deux familles d'algorithmes qui permettent de trier un ensemble. La première, la plus simple, inclus notemment le \emph{tri par sélection}. Les algorithmes de cette classe ont un coût\indexfr{coût}\footnote{Le coût d'un algorithme est une estimation ou l'exact nombre d'opérations nécessaires à l'algorithme pour traiter les informations qu'il reçoit. Le coût sera en général exprimé à l'aide du symbol~$O(...)$  qui désigne un multiple d'une expression. $O(n)$ désigne par exemple un multiple de~$n$.} en $O(n^2)$ où $n$ est le nombre d'éléments à trier. La seconde classe d'algorithmes inclut le tri rapide ou \emph{quicksort} qui est détaillé dans le TD~4. Elle inclut également le \emph{tri par fusion} décrit au paragraphe~\ref{par_tri_fusion} ou le tri par insertion dichotomique décrit au paragraphe~\ref{par_tri_insertion}. Le point commun de ces algorithmes est leur coût qui est en $O(n \ln n)$.
+
+
+
+\subsubsectionx{Tri par sélection}
+
+Bien que moins performant que d'autres algorithmes de tri, le tri par sélection est pourtant souvent utilisé sur de petits ensembles parce qu'il est très simple et très court à programmer.
+
+
+            \begin{xalgorithm}{tri par sélection}\label{algo_tri_selection}
+            On suppose qu'on possède une suite finie quelconque de $n$ éléments $\vecteur{u_1}{u_n}$. 
+            On pose $l \longleftarrow n$.
+            
+            \begin{xalgostep}{recherche du maximum}\label{tristep}
+            On détermine l'indice $i^*$ de l'élément le plus grand inclus dans la suite
+            $\vecteur{u_1}{u_l}$~: $i^* = \arg \max \acc{ u_i \sac i \in \ensemble{1}{l}}$.
+            \end{xalgostep}
+
+            \begin{xalgostep}{échange}\label{tristepb}
+            On échange les positions des éléments $u_l$ et $u_{i^*}$. Puis on décrémente $l \longleftarrow l-1$.
+            Si $l > 1$, on retourne à l'étape~\ref{tristep}, dans le cas contraire, le tri est terminé.
+            \end{xalgostep}
+            \end{xalgorithm}
+
+\indexfrr{algorithme}{coût}
+Ce tri s'appelle \emph{tri par sélection} car, à chaque étape~\ref{tristepb}, le plus grand élément remonte vers le haut de la liste, vers la surface. On peut se demander si, après l'application de cet algorithme, la liste est effectivement triée et comment cet algorithme serait implémenté en langage \python. Le coût de cet algorithme est en $O(n^2)$.
+
+
+\subsubsectionx{Tri par fusion}
+\label{par_tri_fusion}
+\indexfrr{tri}{fusion}
+
+\indexfrr{tri}{fusion}\indexfr{diviser pour régner}
+Le tri par fusion applique le principe \emph{diviser pour régner}. Etant données deux suites d'éléments triés, de longueurs respectives $l_1$ et $l_2$, il est très facile d'obtenir une troisième suite d'éléments triés de longueur $l_1$ + $l_2$, par interclassement ou fusion des deux précédentes suites. On dispose de deux indices pour chacunes des listes. On suppose que tous les éléments ayant un indice inférieur ont déjà été insérés dans la liste final. La fusion consiste à comparer les deux éléments indicés de chaque liste puis à choisir le plus petit des deux. Il reste à incrémenter l'indice de la liste à laquelle appartient le dernier élément inséré.
+
+
+                \begin{xalgorithm}{fusion de deux listes triées}\label{algo_fusion_liste}
+                On suppose que $\vecteur{a_1}{a_{l_1}}$ et $\vecteur{b_1}{b_{l_2}}$ sont deux listes triées dans l'ordre
+                croissant. L'objectif de l'algorithme est de construire la liste
+                $\vecteur{c_1}{c_{l_1+l_2}}$ égale la fusion des deux listes précédentes de sorte que cette liste
+                soit triée dans l'ordre croissant.
+                
+                $\begin{array}{lll}
+                i &\longleftarrow& 1 \\ 
+                j &\longleftarrow& 1 \\ 
+                k &\longleftarrow& 1 
+                \end{array}$
+                
+                \begin{xwhile2}{$k \infegal l_1 + l_2$} 
+                        \begin{xif}{$j > l_2$ ou ($i \infegal l_1$ et $a_i \infegal b_j$)}
+                            $\begin{array}{lll}
+                            c_k &\longleftarrow& a_i \\ 
+                            i &\longleftarrow& i + 1 \\ 
+                            k &\longleftarrow& k + 1 
+                            \end{array}$
+                        \xelse
+                            $\begin{array}{lll}
+                            c_k &\longleftarrow& b_j \\ 
+                            j &\longleftarrow& j + 1 \\ 
+                            k &\longleftarrow& k + 1 
+                            \end{array}$ \\
+                        \end{xif} 
+                    \end{xwhile2}
+                \end{xalgorithm}
+                
+                
+Pour trier un ensemble $E$ en utilisant la méthode du tri par fusion, on trie d'abord toutes les paires d'éléments de $E$. On fusionne ensemble ces paires d'éléments deux par deux pour obtenir des ensembles de quatre éléments. On fusionne à nouveau des groupes de quatre éléments deux par deux pour obtenir des groupes de huit éléments. On réitère le processus jusqu'à ce que l'ensemble $E$ soit trié, ce qui mène à l'algorithme suivant.
+
+
+                \begin{xalgorithm}{tri par fusion}\label{algo_tri_fusion}
+                On suppose que $\vecteur{a_1}{a_{l}}$ est une liste qu'il faut trier par ordre croissant. \\
+                On suppose que $l > 1$.
+                
+                $n \longleftarrow 1$ \\
+                \begin{xwhile2}{$n < l$}
+                        $i \longleftarrow 1$ \\
+                        \begin{xwhile2}{$i \infegal l$}
+                            $\begin{array}{lll}
+                            m &\longleftarrow& \min\pa{l, i + n} \\
+                            b &\longleftarrow& \min\pa{l, m + n}
+                            \end{array}$ \\
+                            \begin{xif}{$m < b$}
+                                    On utilise l'algorithme~\ref{algo_fusion_liste} de fusion de listes sur les deux sous-listes
+                                    $\vecteur{a_i}{a_{m}}$ et $\vecteur{a_{m+1}}{a_{b}}$. La liste fusionnée est la liste
+                                    $\vecteur{t_i}{t_{b}}$. \\
+                                    \begin{xfor}{j}{i}{b}
+                                    $a_j \longleftarrow t_j$
+                                    \end{xfor}
+                            \end{xif}\\
+                            $i \longleftarrow b+1$
+                        \end{xwhile2} \\
+                        $n \longleftarrow n * 2$
+                \end{xwhile2}
+            
+                \end{xalgorithm}
+                
+                
+\indexfrr{algorithme}{coût}
+Le coût de cet algorithme est en $O(n \ln n)$. Cependant, l'algorithme~\ref{algo_fusion_liste} implique de conserver en mémoire un tableau d'indices le temps de la fusion et ce tableau temporaire est de même taille que la liste fusionnée. Cette contrainte n'existe pas avec le tri par sélection ou le tri rapide mais le coût de ces algorithmes est supérieur à celui du tri par fusion.
+
+
+\subsubsectionx{Tri par insertion}
+\label{par_tri_insertion}
+\indexfrr{tri}{insertion}
+
+Le tri par insertion nécessite lui aussi l'utilisation d'un tableau intermédiaire. On prend un par un les éléments de la liste de départ pour les insérer dans une autre liste, initialement vide, de sorte que celle-ci reste constamment triée. On vide la première liste pour emplir la seconde. A chaque insertion d'un nouvel élément dans la liste triée, il faut chercher la position adéquate pour qu'elle reste triée. Cette étape utilise une recherche dichotomique. \indexfr{recherche dichotomique}
+
+            \begin{xalgorithm}{recherche dichotomique}\label{recherche_dicho_algo}
+            Soit $l = \vecteur{l_1}{l_n}$ une liste supposée triée par ordre croissant. On cherche à 
+            déterminer la position d'insertion d'un nouvel élément $x$ de sorte que la liste $l$
+            reste triée.
+            
+            $\begin{array}{lll}
+            a &\longleftarrow& 1 \\
+            b &\longleftarrow& n 
+            \end{array}$ \\
+            \begin{xwhile2}{$a \infegal b$}
+                    $m = \left\lfloor \frac{a+b}{2}\right\rfloor$ \\
+                    \begin{xif}{$ x = l_m$}
+                        $\begin{array}{lll}
+                        a &\longleftarrow& m \\
+                        b &\longleftarrow& m 
+                        \end{array}$
+                    \xelse
+                            \begin{xif}{$x < l_m$}
+                                $b \longleftarrow m-1$
+                            \xelse
+                                $a \longleftarrow m +1$
+                            \end{xif}
+                    \end{xif}
+            \end{xwhile2} \\
+            $x$ doit être inséré entre les éléments $l_{a-1}$ et $l_a$. La position cherchée est $a$.
+            \end{xalgorithm}
+                            
+On utilise l'algorithme suivant pour trier une liste par insertion dichotomique. 
+                            
+            \begin{xalgorithm}{tri par insertion dichotomique}
+            On suppose que $\vecteur{l_1}{l_n}$ est une liste qu'il faut trier par ordre croissant. 
+            On suppose que $n > 1$. Le résultat cherché est la liste $c$.
+            
+            $c \longleftarrow \pa{l_1}$ 
+            
+            \begin{xfor2}{i}{2}{n}
+                    $m$ est la position déterminée par l'algorithme~\ref{recherche_dicho_algo} de recherche dichotomique
+                    appliqué à l'élément $l_i$ et la liste $c$. On insère l'élément $l_m$ dans la liste $c$ entre
+                    les éléments d'indice $m-1$ et $m$.
+            \end{xfor2}
+            
+            \end{xalgorithm}
+
+\indexfrr{algorithme}{coût}
+Le coût d'une recherche dichotomique est en $O(\ln n)$ où $n$ est le cardinal de l'ensemble de recherche. Le coût d'un algorithme par insertion dichotomique est en $O(n \ln n)$. Ce coût peut varier en fonction de la structure utilisée pour stocker les données. Si c'est sous forme de graphe, le tri par insertion est en fait un tri rapide ou \emph{quicksort}.\indexfrr{algorithme}{quicksort} \indexfrr{algorithme}{tri rapide} En revanche, si les données sont insérées dans un tableau, même si la recherche de la position d'un élément à insérer est rapide, insérer cette information dans le tableau revient à décaler les données pour créer une place vide. Dans ce cas, tout dépend du coût de ce décalage.
+
+\subsubsectionx{Démonstration de l'algorithme de tri par fusion}
+
+La démonstration que l'algorithme~\ref{algo_tri_selection} trie la suite $\vecteur{u_1}{u_n}$ s'effectue par récurrence. Cet algorithme permet bien de classer un ensemble composé d'un seul élément puisque tout ensemble d'un élément est trié. On suppose maintenant que l'algorithme peut trier une suite de $n-1$ éléments et on cherche à démontrer que l'algorithme peut trier une suite de $n$ éléments. 
+
+Le premier passage par les étapes~\ref{tristep} et~\ref{tristepb} permet de décomposer la suite $\vecteur{u_1}{u_n}$ en deux sous-suites. La première suite $(v_k)_{1 \infegal k \infegal n-1}$ est composée de $n-1$ éléments, la seconde suite $(w_k)_{k = 1}$ contient un seul élément, supérieur à tous les autres, $w_1 = \arg \max \acc{u_n \sac n \in \ensemble{1}{n}}$. 
+
+Les $n-1$ passages qui suivent (étapes~\ref{tristep} et~\ref{tristepb}) correspondent à l'application de l'algorithme~\ref{algo_tri_selection} sur une suite de $n-1$ éléments, ici $(v_k)_{1 \infegal k \infegal n-1}$. D'après l'hypothèse de récurrence, l'algorithme trie correctement cette suite $(v_k)_{1 \infegal k \infegal n-1}$ pour donner la suite ordonnée $(v^*_k)_{1 \infegal k \infegal n-1}$ vérifiant $v^*_1 \infegal v^*_2 \infegal ... \infegal v^*_{n-1}$. Etant donné que $\forall k, \; w_1 \supegal v^*_k$, la suite $\pa{ v^*_1,v^*_2, ..., v^*_{n-1}, w_1}$ est aussi une suite ordonnée dont les éléments sont ceux de la suite $\vecteur{u_1}{u_n}$.
+
+\subsubsectionx{A propos de coût d'algorithme}
+
+Le tri par fusion est en $O(n\ln n)$. Il consiste à diviser un tableau en deux parties égales, à trier chacune des parties puis à fusionner les deux listes triées. Le coût de cette dernière opération est entre $O(n)$ s'il y a $n$ éléments à trier. Si on note le coût de l'algorithme $f(n)$ alors la fonction $f$ vérifie la récurrence~:
+\begin{eqnarray}
+f(2n) &=& 2f(n) + 2n \label{tri_fusion_recurrence}
+\end{eqnarray}
+
+Si on prolonge la récurrence, cela donne~:
+\begin{eqnarray}
+f(n) 							&=& 2 f\pa{\frac{n}{2}} + n \\
+f\pa{\frac{n}{2}} &=& 2 f\pa{\frac{n}{4}} + \frac{n}{2} \\
+f\pa{\frac{n}{4}} &=& 2 f\pa{\frac{n}{8}} + \frac{n}{4} \\
+...&&
+\end{eqnarray}
+
+Et~:
+\begin{eqnarray}
+f(n) 		&=& 2 f\pa{\frac{n}{2}} +  n \\
+ 				&=& 4 f\pa{\frac{n}{4}} + 2n \\
+				&=& 8 f\pa{\frac{n}{8}} + 3n \\
+...&&
+\end{eqnarray}
+
+La récurrence s'arrête lorsque $\frac{n}{2^k} < 1$ auquel cas le coût est nul. Le coût de l'algorithme par fusion est donc $n \frac{\ln n}{\ln 2}$ soit $O(n\ln n)$. On peut montrer que le coût du tri par fusion est $O(n \ln n)$ simplement à partir de la récurrence. On va tout d'abord déterminer le lien entre deux fonctions de classe~$C^1$ vérifiant la récurrence (\ref{tri_fusion_recurrence}). On suppose pour cela qu'il existe deux fonctions $f$ et $g$ qui vérifient (\ref{tri_fusion_recurrence}). On pose $h = f -g$. $h$ vérifie~:
+\begin{eqnarray}
+h(2n) &=& f(2n) - g(2n) = 2 f(n) - 2 g(n) = 2 h(n) \label{eq_fonc_10}
+\end{eqnarray}
+
+Comme $f$ et $g$ sont de classe $C^1$ sur $[0, \infty[$, $h$ l'est aussi. On en déduit que~:
+\begin{eqnarray}
+\forall k \in \N, \; h(x) &=& 2^k h \pa{2^{-k}x} \\
+\forall k \in \N, \; h'(x) &=& h' \pa{2^{-k}x} 
+\end{eqnarray}
+
+La dérivée $h'$ est continue, on démontre donc que $\forall x \in \R, h'(x) = h'(0)= \alpha$. Par extension, $h(x) = \alpha x + \beta$. Afin que la fonction $h$ vérifie la condition~\ref{eq_fonc_10}, il faut que $\beta = 0$. L'ensemble des solutions de l'équation \ref{eq_fonc_10} est donc $\acc{ h(x) = \alpha x \sac \alpha \in \R }$.
+
+On pose $f(n) = n \frac{\ln n}{\ln 2}$. Si $g$ vérifie également $g(2n) = 2 g(n) + 2n$ alors il existe $\alpha \in \R$ tel qu'on puisse écrire $g$ de la manière suivante~:
+\begin{eqnarray}
+g(n) &=& f(n) + \alpha n
+\end{eqnarray}
+
+Comme $O(n)$ est négligeable devant $O (n \ln n)$, ceci démontre d'une autre façon que le coût d'un tri par fusion est en $O(n \ln n)$.
+
+\subsubsectionx{Coût minimal d'un tri}  \label{tri_cost_minimal_2}
+
+Tous les tris présentés ici sont des tris par comparaison successives (excepté le tri d'entiers présenté au paragraphe~\ref{par_tri_entiers}). \indexfrr{tri}{comparaisons successives} En effet, ils n'utilisent que le résultat de la comparaison entre deux éléments. Pour tous les tris de ce type là, il est possible de démontrer que leur coût ne peut être plus rapide que $O(n \ln n)$.
+
+Le tri consiste à ordonner des éléments $\vecteur{x_1}{x_n}$. On considère que cette suite est aussi une permutation~$\sigma$ de l'ensemble ordonné $\vecteur{x_1=y_{\sigma(1)}}{x_n=y_{\sigma(n)}}$. Le tri revient à trouver la permutation~$\sigma$ dans l'ensemble des permutations qui en contient~$n!$. Il faut préciser aussi que le tri doit permettre de retrouver cette permutation quelle qu'elle soit et ne pas s'appliquer uniquement sur un ensemble réduit de permutations. Pour cela, on peut seulement comparer deux éléments et le résultat de cette comparaison est binaire. 
+
+Au mieux, chaque comparaison permet d'éliminer la moitié des permutations. Admettons que chaque comparaison permette de diviser l'ensemble des permutations possibles par~2, on définit $k$ tel que $2^k \supegal n!$~; il faudra donc au moins~$k$ comparaisons afin de déterminer la permutation~$\sigma$. \indexfr{Stirling}\indexfrr{formule}{Stirling}\indexfr{factorielle} Il ne reste plus qu'à trouver un équivalent de~$k$, la formule de Stirling va nous aider~:
+\begin{eqnarray}
+n! &\sim& \sqrt{2 \pi n} \pa{\frac{n}{e}}^n
+\end{eqnarray}
+%
+On cherche donc $k$ tel que~:
+\begin{eqnarray}
+2^k &\sim& \sqrt{2 \pi n} \pa{\frac{n}{e}}^n \nonumber \\
+  k &\sim& \ln \sqrt{2 \pi n} + n \ln \frac{n}{e} \\
+  k &\sim&  n \ln n 
+\end{eqnarray}
+%
+Le coût d'un tri par comparaisons successives est au mieux de $O(n\ln n)$. Comme c'est le coût du tri par fusion, ce raisonnement permet d'affirmer qu'un tri de coût $O(n \ln n)$ existe et qu'il est impossible de faire mieux.
+
+
+\subsubsectionx{Tri d'entiers}
+\label{par_tri_entiers}
+\indexfrr{tri}{entiers}
+
+Dans certains cas, il est possible d'utiliser une méthode de tri plus rapide encore à condition que l'ensemble à trier le soit dans un ensemble discret tel que les entiers. Cette information supplémentaire sur les éléments à trier exclu ce tri des tris à comparaisons successives. La démonstration du paragraphe~\ref{tri_cost_minimal_2} ne s'applique pas dans ce cas.
+
+
+
+            \begin{xalgorithm}{tri d'entiers}
+            On suppose que $\vecteur{l_1}{l_n}$ est une liste d'entiers qu'il faut trier par ordre croissant. 
+            On détermine tout d'abord $m = \min\vecteur{l_1}{l_n}$ et $M = \max\vecteur{l_1}{l_n}$. On définit
+            la suite $\vecteur{p_m}{p_M}$. La première étape va compter le nombre d'occurrences de chaque valeur.
+
+            \begin{xalgostep}{nombre d'occurrences}\label{tri_entier_occ}
+            \begin{xfor2}{k}{m}{M}
+                $p_k = 0$
+            \end{xfor2}
+            
+            \begin{xfor2}{i}{1}{n}
+                $p_{l_i} \longleftarrow p_{l_i} + 1$
+            \end{xfor2}
+            \end{xalgostep}
+            
+            On détermine ensuite le nombre de valeurs inférieures à un certain niveau, $\vecteur{P_m}{P_M}$. Elle
+            correspond à la fonction de répartition du vecteur $\vecteur{l_1}{l_n}$ tandis que le vecteur
+            $\vecteur{p_m}{p_M}$ correspond à sa fonction de densité.
+            
+            \begin{xalgostep}{fonction de répartition}\label{tri_entier_dens}
+            $P_m \longleftarrow p_m$
+            \begin{xfor2}{k}{m+1}{M}
+                $P_k \longleftarrow P_{k-1} + p_k$
+            \end{xfor2}
+            \end{xalgostep}
+            
+            On termine par l'obtention de la suite triée $\vecteur{s_1}{s_n}$.
+
+            \begin{xalgostep}{tri}\label{tri_entier_tri}
+						$ k \longleftarrow 0 $  \\
+            \begin{xfor2}{i}{2}{n}
+            		\begin{xwhile2}{ $P_k < i$ }
+            				$k \longleftarrow k + 1$
+            		\end{xwhile2} \\
+                $s_{i-1} \longleftarrow k + m$
+            \end{xfor2}
+            \end{xalgostep}
+            
+            \end{xalgorithm}
+
+
+Chaque boucle de cet algorithme excepté est une boucle qui dépend soit de la taille de l'échantillon à trier soit de l'écart entre le maximum et le minimum. La dernière étape est de façon évidente la plus coûteuse ou au moins aussi coûteuse que toutes les autres. Le coût de l'algorithme est en $O(\max(n,M-m))$. Cet algorithme est lié à un théorème statistique. Si $X$ est une variable aléatoire et $P$ sa fonction de répartition alors $P^{-1}(X)$ suit une loi uniforme sur l'intervalle $\cro{0,1}$. Il suffit d'appliquer ce théorème à une loi discrète, $P^{-1}(x)$ correspond à la position de $x$ dans la liste triée. Ce tri ne s'applique qu'à des entiers, il serait néanmoins possible de discrétiser un tableau de réels à condition de savoir l'écart minimum entre deux valeurs du tableaux, information qu'il est aisé de déterminer une fois le tableau trié.
+
+\end{xexempleprog2}
+
+
+
+
+
+
+\begin{xexempleprog2cor}{exemple_tri}\label{exemple_tri_cor}
+
+
+
+\subsubsectionx{Programme du tri par sélection}
+\inputcode{../python_cours_exemple/programme/tri_selection.py}{tri par sélection}
+
+
+\subsubsectionx{Programme du tri par fusion}
+\inputcode{../python_cours_exemple/programme/tri_fusion.py}{tri fusion}
+
+
+\subsubsectionx{Programme du tri par insertion dichotomique}
+\inputcode{../python_cours_exemple/programme/tri_insertion.py}{tri par insertion}
+
+\subsubsectionx{Programme du tri d'entiers}
+\inputcode{../python_cours_exemple/programme/tri_entiers.py}{tri d'entiers}
+
+
+
+\end{xexempleprog2cor}
+
+
+\input{../../common/livre_table_end.tex}%
+\input{../../common/livre_end.tex}%

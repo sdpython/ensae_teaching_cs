@@ -1,0 +1,939 @@
+\input{../../common/livre_begin.tex}%
+\firstpassagedo{\input{../python_cours_exemple/python_petitcours_titre.tex}}
+\input{../../common/livre_table_begin2.tex}%
+%\firstpassagedo{\input{python_cours_chapter.tex}}
+
+
+\begin{xexempleprog}{Optimisation de Newton, méthodes du gradient}{exemple_gradient_cor}\label{exemple_gradient}
+
+\indexfr{optimisation}%
+\indexfrr{optimisation}{Newton}%
+\indexfr{gradient}%
+\indexfrr{gradient}{descente}%
+\indexfrr{descente}{gradient}%
+\indexfr{Newton}
+
+Lorsqu'on doit trouver le minimum d'une fonction définie sur un espace vectoriel, le premier réflexe consiste à dériver la fonction puis à l'annuler de manière à obtenir un système d'équation. Il reste ensuite à déterminer si les zéros de la dérivée correspondent à un minimum ou à un maximum. Cependant, il n'est pas toujours possible de résoudre le système d'équation obtenu. Par exemple, la fonction $f(x) = \cos (x) + e^x$ a pour dérivée $f'(x) = - \sin(x) = e^x$. Résoudre l'équation $f'(x) = 0$ est impossible. 
+
+C'est pourquoi il existe des méthodes de résolution approchées qui déterminent numériquement le minimum de la fonction.
+Il existe des algorithmes permettant de trouver une solution approchée à condition toutefois que la fonction à maximiser ou minimiser soit dérivable. Plusieurs variantes sont proposées regroupées sous le terme de \emph{descente de gradient} ou \emph{méthode de Newton}. Par la suite, on cherchera à minimiser une fonction~$g$. Maximiser cette même fonction revient à minimiser la fonction~$-g$.
+
+
+
+\subsubsectionx{Algorithme et convergence}
+\label{optimisation_newton}
+
+Soit $g : \ensemblereel^d \dans \ensemblereel $ une fonction dérivable dont il faut trouver $ \overset{*}{x} = \underset{x \in \ensemblereel}{\arg \min} \; g\parenthese{x}$. L'algorithme suivant propose une méthode permettant à partir d'un $x_0 \in \R^d$ quelconque de se rapprocher petit à petit du minimum $x^*$ comme le montre le schéma~\ref{figure_descente_gradient} dans le cas où $g \parenthese{x} = x^2 $.
+
+		\begin{xalgorithm}{descente de gradient de Newton}\label{algo_descente_newton}
+		Soit $g : \R^d \longrightarrow \R$ une fonction dérivable et minorée. On cherche à déterminer 
+		le minimum de la fonction $g$. Soit $x_0 \in \R^d$. Soit $\pa{\epsilon_t}_{t \supegal 0}$ une suite 
+		réelle positive vérifiant~: 
+						$$ \summy{t=0}{\infty} \epsilon_t = \infty \text{ et } \summy{t=0}{\infty} \epsilon_t^2 < \infty$$
+		
+		\begin{xalgostep}{initialisation}
+		$t \longleftarrow 0$
+		\end{xalgostep}
+			
+		\begin{xalgostep}{mise à jour}\label{step_algo_newton}
+		$\begin{array}{lll} 
+		t 	&\longleftarrow& t + 1 \\
+		x_t &\longleftarrow& x_{t-1} - \epsilon_t \, \partialfrac{g}{x}\pa{x_t}
+		\end{array}$
+		\end{xalgostep}
+
+		\begin{xalgostep}{condition d'arrêt}\label{step_algo_newton_arret}
+		Si $f(x_t) \approx f(x_{t-1})$, l'algorithme s'arrête, sinon on retourne à l'étape~\ref{step_algo_newton}.
+		\end{xalgostep}
+		
+		\end{xalgorithm}
+
+		\begin{figure}[ht]
+    \[
+    \frame{$%
+    \begin{array}
+    [c]{lc}%
+    \begin{array}
+    [c]{l}%
+    \text{On note }x_{t}\text{ l'abscisse à l'itération }t\text{.}\\
+    \text{On note }\dfrac{\partial g\left(  x_{t}\right)  }{\partial x}\text{ le
+    gradient de }g\left(  x\right)  =x^{2}\text{.}\\
+    \text{L'abscisse à l'itération }t+1\text{ sera :}\\
+    x_{t+1}=x_{t}-\varepsilon_{t}\left[  \dfrac{\partial g\left(  x_{t}\right)
+    }{\partial x}\right] \\
+    \varepsilon_{t}\text{ est le pas de gradient à l'itération }t\text{.}\\
+    \end{array}
+    &
+    \begin{array}
+    [c]{c}%
+    {\includegraphics[ height=1.8593in, width=3.096in]{\filext{../python_cours_exemple/image/rn_courbe}}}%
+    \end{array}
+    \end{array}
+    $}%
+    \]
+    \caption{	Minimisation par descente de gradient. A chaque itération, on se déplace dans le sens opposé
+    					à celui du gradient, direction le minimum est susceptible de se trouver.}
+    \label{figure_descente_gradient}
+    \indexfrr{gradient}{descente}
+		\end{figure}
+
+
+L'étape~\ref{step_algo_newton_arret} détermine si l'algorithme doit continuer à chercher le minimum de la fonction~$g$ ou si la valeur approchée est satisfaisante puisque, aux alentours de ce minimum, le gradient est presque nul et la suite $\pa{x_t}$ presque constante. La condition $f(x_t) \approx f(x_{t-1})$ peut par exemple être interprétée comme une différence relative d'une itération à la suivante~: $\abs{\frac{f(x_t) - f(x_{t-1})}{f(x_{t-1})}} < A$ où $A$ est une constante positive petite. Plus elle est petite, plus la précision sera grande. Il est aussi possible d'arrêter l'algorithme dès que $f(x_t) > f(x_{t-1})$ mais la suite $\pa{f(x_t)}_t$ n'est pas toujours décroissante, c'est pourquoi la condition d'arrêt précédente est préférable.
+
+\indexfr{condition d'arrêt}
+
+La suite $\pa{\epsilon_t}_t$ doit vérifier quelques contraintes comme la suite $\epsilon_t = \frac{\epsilon_0}{1 + t}$. Ces contraintes assurent la convergence de l'algorithme vers un minimum de la fonction comme le montre le théorème suivant.
+
+		\begin{xtheorem}{convergence de la méthode de Newton (Bottou1991)} \label{theoreme_convergence}
+		Soit une fonction continue $ g : W \in \ensemblereel^M \dans \ensemblereel $, de classe $C^{1}$.
+		On suppose les hypothèses suivantes vérifiées~:
+		
+		\begin{description}
+		
+		\item[\textbf{H1}] $\underset{W\in \ensemblereel^q}{\arg\min} \; 
+												g\left(  W\right) =\left\{  W^{\ast}\right\} $ est un singleton
+		
+		\item[\textbf{H2}] $\forall\varepsilon>0, \; \underset{\left|  W-W^{\ast}\right|
+		            >\varepsilon}{\inf}\left[  \left(  W-W^{\ast}\right)  ^{\prime}.\nabla
+		            g\left(  W\right)  \right]  >0$
+		
+		\item[\textbf{H3}] $\exists\left(  A,B\right)  \in \ensemblereel^2$ tels que $\forall W\in\ensemblereel^p,\; \left\|
+		            \nabla g\left( W\right) \right\| ^{2}\leqslant A^{2}+B^{2}\left\|  W-W^{\ast}\right\|  ^{2}$
+		
+		\item[\textbf{H4}] la suite $\left(  \varepsilon_{t}\right)  _{t\geqslant0}$ vérifie,
+								 $\forall t>0,\quad\varepsilon_{t}\in
+		            \ensemblereel_{+}^{\ast}\; $ et\quad\ $\underset{t\geqslant0}{\sum}\varepsilon_{t}=+\infty,\quad
+		            \underset{t\geqslant0}{\sum}\varepsilon_{t}^{2}<+\infty$
+		
+		\end{description}
+		
+		Alors la suite $\left(  W_{t}\right)  _{t\geqslant0}$ construite de la manière suivante~:
+		$$W_{0}\in \ensemblereel^M \text{ et } \forall t\geqslant0, 
+					\; W_{t+1}=W_{t}-\varepsilon_{t}\,\nabla g\left(  W_{t}\right) $$
+		 vérifie $\underset{t \dans+\infty}{\lim}W_{t}=W^{\ast}$
+		\end{xtheorem}
+
+
+
+L'hypothèse \textit{H1} implique que le minimum de la fonction $g$ est unique et l'hypothèse \textit{H2} implique que le demi-espace défini par l'opposé du gradient contienne toujours le minimum de la fonction $g$. 
+
+
+
+\begin{xdemo}{théorème}{\ref{theoreme_convergence}}
+
+\itemdemo
+
+Soit la suite $u_{t}=\ln\left(  1+\varepsilon_{t}^{2}x^{2}\right)$ avec $x\in\ensemblereel,$ comme $\underset {t\geqslant0}
+{\sum}\varepsilon_{t}^{2} < +\infty, \; u_{t}\thicksim\varepsilon_{t}^{2}x^{2},$ on a $\underset{t\geqslant0} {\sum}u_{t} < +\infty $
+
+Par conséquent, si $v_{t}=e^{u_{t}}$ alors $\overset{T} {\underset{t=1}{\prod} } v_{t}\overset{T \rightarrow \infty}{\longrightarrow}D \in \ensemblereel$
+
+\itemdemo
+
+On pose $h_{t}=\left\|  W_{t}-W^{\ast}\right\|  ^{2}$
+
+Donc~:
+
+    \begin{eqnarray}
+    h_{t+1} -h_{t} &=&\left\|  W_{t}-\varepsilon_{t}\,\nabla g\left( W_{t}\right) -W^{\ast }\right\|
+    			  ^{2}-\left\|W_{t}-W^{\ast}\right\| ^{2}
+    \label{equation_convergence_un}
+    \end{eqnarray}
+
+Par conséquent~:
+
+    $$
+    h_{t+1}-h_{t}=-2\varepsilon_{t}\underset{>0} {\underbrace{\left(  W_{t}-W^{\ast}\right) 
+     ^{\prime}\,\nabla g\left( W_{t}\right)
+    }}+\varepsilon_{t}^{2}\,\left\|  \,\nabla C\left( W_{t}\right) \right\|  
+    ^{2}\leqslant\varepsilon_{t}^{2}\,\left\|  \,\nabla g\left( W_{t}\right)
+    \right\|  ^{2}\leqslant\varepsilon_{t}^{2}\,\left(  A^{2}  +B^{2}h_{t}\right)
+    $$
+    
+D'où~:
+
+    $$
+    h_{t+1}-h_{t}\left(  1+\varepsilon_{t}^{2}B^{2}\right) \leqslant\varepsilon_{t}^{2}\,A^{2}
+    $$
+    
+On pose $\pi_{t}=\overset{t}{\underset{k=1}{ {\displaystyle\prod} }}\left(  1+\varepsilon_{k}^{2}B^{2}\right)  ^{-1}$ alors, en multipliant des deux côtés par $\pi_{t+1},$ on obtient~:
+
+    \begin{eqnarray*}
+    \pi_{t+1}h_{t+1}-\pi_{t}h_{t} &\leqslant& \varepsilon_{t}^{2}\,A^{2}\pi_{t+1}\\
+    \text{d'où }\pi_{q+1}h_{q+1}-\pi_{p}h_{p} &\leqslant&
+    				 \underset{t=p}{\overset{q}{\sum}}\varepsilon_{t}^{2}\,A^{2}\pi_{t+1} \leqslant
+    \summy{t=p}{q} \varepsilon_{t}^{2} \, A^{2}\Pi  \leqslant \summy{t=p}{q} \varepsilon_{t}^{2}\,A^{2}\Pi
+    			 \underset{t \longrightarrow
+    \infty}{\longrightarrow} 0
+    \end{eqnarray*}
+
+Comme la série $\; \summyone{t} \pa{\pi_{t+1}h_{t+1}-\pi_{t}h_{t}} \;$ vérifie le critère de Cauchy, \indexfr{Cauchy}
+\indexfrr{critère}{Cauchy} elle est convergente. Par conséquent~:
+    
+    $$
+    \underset{q\rightarrow\infty}{\lim}\pi_{q+1}h_{q+1}=0=\underset{q\rightarrow \infty}{\lim}\Pi h_{q+1}
+    $$
+    
+D'où~:
+    
+    \begin{eqnarray}
+    \underset{q\rightarrow\infty}{\lim}h_{q}=0
+    \end{eqnarray}
+
+\itemdemo
+
+
+La série $\;\summyone{t}\pa{h_{t+1}-h_{t}}\;$ est convergente car $\Pi h_t \sim \pi_t h_t$.
+
+$\underset{t\geqslant0}{\sum}\varepsilon_{t}^{2}\,\left\| \,\nabla g\left( W_{t}\right) \right\|  ^{2}$ l'est aussi (d'après H3).
+
+D'après (\ref{equation_convergence_un}), la série $\underset{t\geqslant0}{\sum}\varepsilon_{t}\left( W_{t}-W^{\ast }\right) ^{\prime}\,\nabla g\left( W_{t}\right)  $ est donc convergente. Or d'après les hypothèses (H2, H4), elle ne peut l'être que si~:
+    
+    \begin{eqnarray}
+    \underset{t\rightarrow\infty}{\lim}W_{t}=W^{\ast}
+    \end{eqnarray}
+
+\end{xdemo}
+
+
+
+Ce théorème peut être étendu dans le cas où la fonction $g$ n'a plus un seul minimum global mais plusieurs minima locaux (voir \citeindex{Bottou1991}), dans ce cas, la suite $\parenthese{W_{t}}$ converge vers un mimimum local. Une généralisation de ce théorème est présentée dans \citeindex{Driancourt1996}.
+
+Si ce théorème prouve la convergence \indexfr{convergence} de la méthode de Newton, il ne précise pas à quelle vitesse cette convergence s'effectue et celle-ci peut parfois être très lente. Plusieurs variantes ont été développées regroupées sous le terme de méthodes de quasi-Newton, ou méthodes du second ordre, \indexfr{quasi-Newton} dans le but d'améliorer la vitesse de convergence. \indexfrr{convergence}{vitesse}
+
+
+
+
+
+\subsubsectionx{Méthode du second ordre}
+
+\indexfrr{apprentissage}{second ordre}%
+\indexfrr{méthode}{second ordre} 
+\indexfrr{ordre}{méthode du second ordre}
+\label{rn_optim_second_ordre}
+
+
+L'algorithme~\ref{algo_descente_newton} fournit le canevas des méthodes d'optimisation du second ordre. Seule la mise à jour des coefficients (étape~\ref{step_algo_newton}) est différente~: elle prend en compte les dernières valeurs des coefficients ainsi que les derniers gradients calculés. Ce passé va être utilisé pour estimer une direction de recherche pour le minimum différente de celle du gradient, cette direction est appelée \emph{gradient conjugué} (voir \citeindex{Moré1977}). 
+
+La figure~\ref{figure_gradient_conjugue} est couramment employée pour illustrer l'intérêt des méthodes d'optimisation du second ordre ou méthode de gradient conjugué. \indexfrr{gradient}{conjugué} Le problème consiste à trouver le minimum d'une fonction quadratique, par exemple, $G\pa{x,y} = 3x^2 + y^2$. Tandis que le gradient est orthogonal aux lignes de niveaux de la fonction $G$, le gradient conjugué se dirige plus sûrement vers le minimum global. \indexfrr{gradient}{conjugué} 
+
+		\begin{figure}[ht]
+    \[
+    \begin{tabular}{|c|} \hline
+		\filefig{../python_cours_exemple/fig_rn_02}
+    \\ \hline
+    \end{tabular}
+    \]
+    \caption{Gradient et gradient conjugué sur une ligne de niveau de la fonction $G\pa{x,y} = 3x^2 + y^2$, 
+    					le gradient est
+              orthogonal aux lignes de niveaux de la fonction $G$, mais cette direction est rarement 
+              orientée vers le minimum à moins
+              que le point $\pa{x,y}$ se situe sur un des axes des ellipses, le gradient conjugué agrège les derniers
+              déplacements et propose une direction de recherche plus plausible pour le minimum de la fonction.}
+    \label{figure_gradient_conjugue}
+		\end{figure}
+
+
+Ces techniques sont basées sur une approximation du second degré de la fonction à minimiser. On note toujours $g: \ensemblereel^{d} \dans \ensemblereel $ la fonction à minimiser. Au voisinage de $x_{0}$, un développement limité donne~:
+    $$
+    g \pa {x}     =   g\pa {x_0}  + \frac{\partial g\left( x_{0}\right)  }{\partial x}\left( x-x_{0}\right) +\left(
+    x-x_{0}\right) ^{\prime}\frac{\partial^{2}g\left(  x_{0}\right)  }{\partial x^{2}}\left( x-x_{0}\right) +o\left\|
+    x-x_{0}\right\|  ^{2}
+    $$
+
+Par conséquent, sur un voisinage de $x_{0}$, la fonction $g\left( x\right)$ admet un minimum local si
+$\frac{\partial^{2}g\left( x_{0}\right) }{\partial x^{2}}$ est définie positive strictement\footnote{
+    \para{Rappel :} $\dfrac{\partial^{2}g\left(  x_{0}\right)  }{\partial x^{2}%
+    }$ est définie positive strictement $\Longleftrightarrow\forall Z\in\R^{N},\; Z\neq0\Longrightarrow
+    Z^{\prime}\dfrac{\partial ^{2}g\left( x_{0}\right)  }{\partial x^{2}}Z>0$
+    }. Une matrice symétrique définie strictement positive est inversible, et le minimum est atteint pour la valeur~:
+    
+    
+    \begin{eqnarray}
+    x_{\min}= x_0 + \frac{1}{2}\left[  \dfrac{\partial^{2}g\left(  x_{0}\right) }
+    		{\partial x^{2}}\right]  ^{-1}\left[  \frac{\partial g\left(  x_{0}\right)
+    }{\partial x}\right] \label{rn_hessien}
+    \end{eqnarray}
+
+Néanmoins, pour un réseau de neurones, le calcul de la dérivée seconde est coûteux, son inversion également. C'est pourquoi les dernières valeurs des coefficients et du gradient sont utilisées afin d'approcher cette dérivée seconde ou directement son inverse. Une méthode couramment employée est l'algorithme BFGS (Broyden-Fletcher-Goldfarb-Shano, voir \citeindex{Broyden1967}, \citeindex{Fletcher1993}). \indexfr{BFGS}\indexfrr{optimisation}{BFGS}
+
+Ces méthodes proposent une estimation de la dérivée seconde (ou de son inverse) utilisée en (\ref{rn_hessien}). Dans les méthodes du premier ordre, une itération permet de calculer les poids $x_{t+1}$ à partir des poids $x_t$ et du gradient $g_t$. Si ce gradient est petit, on peut supposer que $g_{t+1}$ est presque égal au produit de la dérivée seconde par $g_t$. Cette relation est mise à profit pour construire une estimation de la dérivée seconde. Cette matrice notée $B_t$ dans l'algorithme~\ref{rn_algo_bfgs} est d'abord supposée égale à l'identité puis actualisée à chaque itération en tenant de l'information apportée par chaque déplacement. 
+
+
+
+		\begin{xalgorithm} {algorithme BFGS}
+		\label{rn_algo_bfgs}%
+		\indexfr{BFGS}
+		
+		Soit $g : \R^d \longrightarrow \R$ une fonction dérivable et minorée. On cherche à déterminer 
+		le minimum de la fonction $g$. Soit $x_0 \in \R^d$. 		
+		Le nombre de paramètres de la fonction $f$ est $d$. $n$ est un entier strictement positif.
+		
+		\begin{xalgostep}{initialisation}
+		    Le premier jeu de coefficients $x_0$ du réseau de neurones est choisi aléatoirement. \newline%
+		    $
+		    \begin{array}{lcl}
+		    t   &\longleftarrow&    0 \\
+		    E_0 &\longleftarrow&    f(x_0) \\
+		    B_0 &\longleftarrow&    I_d \\
+		    i   &\longleftarrow&    0
+		    \end{array}
+		    $
+		\end{xalgostep}
+		
+		\begin{xalgostep}{calcul du gradient}\label{algo_global_bfgs_step_back}
+		    $
+		    \begin{array}{lcl}
+		    g_t &\longleftarrow& \partialfrac{f}{x} \pa {x_t} \\
+		    c_t &\longleftarrow& B_t g_t
+		    \end{array}
+		    $
+		\end{xalgostep}
+
+		\possiblecut
+		
+		\begin{xalgostep}{recherche de $\epsilon^*$}
+		    $\epsilon^*  \longleftarrow    \epsilon_0$ \newline
+		    \begin{xdowhile}{$f_{x_{t+1}} \supegal E_t$ et $\epsilon^* \gg 0$}
+		        $
+		        \begin{array}{lcl}
+		        \epsilon^*  &\longleftarrow&   \frac{\epsilon^*}{2} \\
+		        x_{t+1}     &\longleftarrow&    x_t - \epsilon^* c_t \\
+		        \end{array}
+		        $
+		    \end{xdowhile}\newline
+		    \begin{xif}{$\epsilon_* \approx 0$ et $B_t \neq I_d$}
+		        $
+		        \begin{array}{lcl}
+		        B_{t}       &\longleftarrow&    I_d \\
+		        i           &\longleftarrow&    t
+		        \end{array}
+		        $ \newline
+		        retour à l'étape~\ref{algo_global_bfgs_step_back}.
+		    \end{xif}
+		\end{xalgostep}
+
+		
+		\begin{xalgostep}{mise à jour des coefficients}\label{algo_global_bfgs_step_maj}
+		    $
+		    \begin{array}{lcl}
+		    x_{t+1}     &\longleftarrow&    x_t - \epsilon^* c_t \\
+		    E_{t+1}     &\longleftarrow&    f(x_{t+1}) \\
+		    t           &\longleftarrow&    t+1
+		    \end{array}
+		    $
+		\end{xalgostep}
+
+		\begin{xalgostep}{mise à jour de la matrice $B_t$}\label{bfgs_aglo_step_update_matreice}
+		    \begin{xif}{   $t - i \supegal nd$ ou %
+		            $g'_{t-1} B_{t-1} g_{t-1} \infegal 0$ ou %
+		            $g'_{t-1} B_{t-1} \pa {g_t - g_{t-1}} \infegal 0$}
+		        $
+		        \begin{array}{lcl}
+		        B_{t}       &\longleftarrow&    I_d \\
+		        i           &\longleftarrow&    t
+		        \end{array}
+		        $
+		    \xelse
+		        $
+		        \begin{array}{lcl}
+		        s_t         &\longleftarrow&    x_t - x_{t-1} \\
+		        d_t         &\longleftarrow&    g_t - g_{t-1} \\
+		        B_{t}       &\longleftarrow&    B_{t-1} +   \pa{1 + \dfrac{ d'_t B_{t-1} d_t}{d'_t s_t}}
+		                                                            \dfrac{s_t s'_t} {s'_t d_t}
+		                                                - \dfrac{s_t d'_t B_{t-1} +  B_{t-1} d_t s'_t } { d'_t s_t }
+		        \end{array}
+		        $
+		    \end{xif}
+		\end{xalgostep}
+		
+		\begin{xalgostep}{terminaison}
+		    si $\frac{E_t}{E_{t-1}} \approx 1 $ alors l'apprentissage a convergé sinon retour à
+		    l'étape~\ref{algo_global_bfgs_step_back}.
+		\end{xalgostep}
+		\end{xalgorithm}
+
+
+
+
+Lorsque la matrice $B_t$ est égale à l'identité ($I_d$), le gradient conjugué est égal au gradient. Au fur et à mesure des itérations, cette matrice toujours symétrique évolue en améliorant la convergence de l'optimisation. Néanmoins, la matrice $B_t$ doit être "nettoyée" (égale à l'identité) fréquemment afin d'éviter qu'elle n'agrège un passé trop lointain. Elle est aussi nettoyée lorsque le gradient conjugué semble trop s'éloigner du véritable gradient et devient plus proche d'une direction perpendiculaire.
+
+		
+L'algorithme DFP (Davidon-Fletcher-Powell, voir \citeindex{Davidon1959}, \citeindex{Fletcher1963}) est aussi un algorithme de gradient conjugué qui propose une approximation différente de l'inverse de la dérivée seconde.
+\indexfr{DFP}\indexfrr{optimisation}{DFP} Pour appliquer cette méthode, il suffit de remplacer la mise à jour de la matrice $B_t$ dans l'étape~\ref{bfgs_aglo_step_update_matreice} de l'algorithme~\ref{rn_algo_bfgs} par la suivante~:
+                          
+  		\begin{eqnarray}
+		        B_{t}       &\longleftarrow&    B_{t-1} +     \dfrac{d_t d'_t} {d'_t s_t}
+		                                                    - \dfrac{B_{t-1} s_t s'_t B_{t-1} } { s'_t B_{t-1} s_t }
+			\end{eqnarray}
+
+
+
+\subsubsectionx{Minimisation avec gradient stochastique}
+
+\indexfrr{gradient}{stochastique} 
+\indexfr{stochastique}%
+
+
+La méthode du gradient stochastique s'applique lorsque la fonction à minimiser est une somme de fonctions dérivables et minorées.
+
+			\begin{eqnarray}
+			g(x) = \summy{i=1}{N} e_i(x)
+			\end{eqnarray}
+			
+
+Compte tenu des courbes d'erreurs très "accidentées" (figure~\ref{figure_courbe_accident}) dessinées par ces fonctions, il existe une multitude de minima locaux. De ce fait, l'apprentissage global converge rarement vers le minimum global de la fonction d'erreur lorsqu'on applique les algorithmes basés sur le gradient global. L'optimisation avec gradient stochastique est une solution permettant de mieux explorer ces courbes d'erreurs. 
+
+De plus, les méthodes de gradient conjugué nécessite le stockage d'une matrice trop grande parfois pour des fonctions ayant quelques milliers de paramètres ($g : \R^{1000} \longrightarrow \R$). C'est pourquoi l'apprentissage avec gradient stochastique est souvent préféré à des méthodes du second ordre trop coûteuses en calcul et en espace mémoire. En contrepartie, la convergence est plus lente. La démonstration de cette convergence nécessite l'utilisation de quasi-martingales et est une convergence presque sûre (voir \citeindex{Bottou1991}).
+
+		\begin{figure}[ht]
+    $$\frame{$\begin{array}[c|c]{c}\includegraphics[height=3cm, width=6cm] 
+    {\filext{../python_cours_exemple/image/errminloc}}\end{array}$}$$
+    \caption{Exemple de minima locaux.}
+    \label{figure_courbe_accident}
+		\end{figure}
+
+
+		\begin{xalgorithm} {optimisation stochastique}
+		\label{rn_algorithme_apprentissage_2}%
+		\indexfr{stochastique}
+		\indexfrr{optimisation}{stochastique}
+		Soit $g = \summy{i=1}{N} e_i (x)$, $\forall i, \; e_i : \R^d \longrightarrow \R$ 
+		une fonction dérivable et minorée. On cherche à déterminer 
+		le minimum de la fonction $g$. Soit $x_0 \in \R^d$. Soit $\pa{\epsilon_t}_{t \supegal 0}$ une suite 
+		réelle positive vérifiant~: 
+						$$ \summy{t=0}{\infty} \epsilon_t = \infty \text{ et } \summy{t=0}{\infty} \epsilon_t^2 < \infty$$
+		
+		\begin{xalgostep}{initialisation}
+		    $
+		    \begin{array}{lcl}
+		    t       &\longleftarrow&    0 \\
+		    E_0 &\longleftarrow&    \summy{i=1}{N} e_i\pa {x_0} 
+		    \end{array}
+		    $
+		\end{xalgostep}
+		
+		\begin{xalgostep}{récurrence}\label{algo_global_sto_step_back}
+		    $x_{t,0} \longleftarrow    W_0$ \newline
+		    \begin{xfor}{t'}{0}{N-1}
+		        $
+		        \begin{array}{lcl}
+		        i           &\longleftarrow&    \text{ nombre aléatoire dans } \ensemble{1}{N} \\
+		        g           &\longleftarrow&    \partialfrac{e_i}{x} \pa {x_{t,t'}}\\
+		        x_{t,t'+1}  &\longleftarrow&    x_{t,t'} - \epsilon_t g
+		        \end{array}
+		        $
+		    \end{xfor} \medskip \newline
+		    $
+		    \begin{array}{lcl}
+		        x_{t+1}     &\longleftarrow& x_{t,N} \\
+		        E_{t+1}     &\longleftarrow& \summy{i=1}{N} e_i\pa {x_{t+1}} \\
+		        t           &\longleftarrow& t+1
+		    \end{array}
+		    $
+		\end{xalgostep}
+		
+		\begin{xalgostep}{terminaison}
+		    si $\frac{E_t}{E_{t-1}} \approx 1 $ alors l'apprentissage a convergé sinon retour à
+		    l'étape~\ref{algo_global_sto_step_back}.
+		\end{xalgostep}
+		\end{xalgorithm}
+		
+
+En pratique, il est utile de converser le meilleur jeu de coefficients : $x^* = \underset{u \supegal 0}{\arg \min} \; E_{u}$ car la suite $\pa {E_u}_{u \supegal 0}$ n'est pas une suite constamment décroissante. 
+
+
+
+\subsubsectionx{Premier exemple~: optimisation d'une fonction quadratique}
+\indexfr{fonction quadratique}
+
+La figure~\ref{figure_gradient_conjugue} illustre un exemple pour lequel l'utilisation d'un algorithme d'optimisation du second degré est pertinente et pour le vérifier concrètement, on choisit la fonction suivante~:
+		\begin{eqnarray}
+		f(x,y) &=& x^4 + x^3 + \dfrac{y^2 + y}{100}
+		\end{eqnarray}
+
+Le miminum est atteint pour $(x,y) = \pa{-\frac{3}{4}, \, -\frac{1}{2}}$. Toutefois, du fait du coefficient très faible devant les termes en $y^2$ et $y$, l'utilisation d'un algorithme de descente de gradient du premier ordre doit converger très lentement contrairement à une méthode du second ordre, ce que le programme décrit au paragraphe~\ref{correction_premier_exemple_bfgs} montrera numériquement.
+
+
+
+\subsubsectionx{Court rappel sur l'estimateur du maximum de vraisemblance}
+\indexfr{estimateur du maximum de vraisemblance}\indexfr{emv}\indexfr{vraisemblance}
+
+\indexfr{moyenne}\indexfr{écart-type}
+La méthode de l'estimateur du maximum de vraisemblance est une méthode permettant d'estimer les paramètres d'une densité. Par exemple, on mesure les tailles d'une trentaine de personnes pour obtenir un échantillon $\vecteur{X_1}{X_n}$. On calcule pour cet échantillon l'espérance (ou la moyenne) et l'écart-type~:
+
+				\begin{eqnarray}
+				\mu = \esp{X} &=& \frac{1}{n}\summy{i=1}{n} X_i \text{ et } 
+				\sigma = \sqrt{\var{X}} = \sqrt{ \frac{1}{n} \summy{i=1}{n} \pa{X_i - \esp{X}}^2}
+				\end{eqnarray}
+
+\indexfr{espérance}\indexfr{écart-type}\indexfr{variance}
+Ces valeurs apparaissent souvent en statistiques, elles proviennent d'une hypothèse faite sur la loi que suivent les variables de l'échantillon $\vecteur{X_1}{X_n}$~: une loi normale de moyenne $\mu$ et d'écart-type $\sigma$. On suppose alors que toutes les variables $X_i$ sont indépendantes et suivent la même loi normale de moyenne $\mu$ et d'écart-type $\sigma$ pour l'instant inconnus. Cela signifie aussi que la densité de la variable $X_i$ a pour expression~:
+
+				\begin{eqnarray}
+				f(x) &=&  \frac{1}{\sqrt{2 \pi} \sigma} \; \exp \pa{ - \frac{\pa{x - \mu}^2}{2 \sigma^2}}
+				\end{eqnarray}
+
+Cette expression permet par exemple de calculer la probabilité d'un événement comme le fait que les tailles des $n$ personnes soient inférieures à 1,80 mètres et supérieures à 1,60 mètres. Notons $A$ cet événement.
+
+			\begin{eqnarray}
+			\pr{A} = \pr{ 1,6 \infegal X_1 \infegal 1,8 \text{ et } ... \text{ et } 1,6 \infegal X_n \infegal 1,8 }
+			\end{eqnarray}
+
+Etant donné que les variables de l'échantillon sont toutes indépendantes. Il est possible d'écrire que~:
+
+			\begin{eqnarray}
+			\pr{A} = \pr{ 1,6 \infegal X_1 \infegal 1,8 } \times ... \times \pr{ 1,6 \infegal X_n \infegal 1,8 } 
+			= \prody{i=1}{n} \pr{ 1,6 \infegal X_i \infegal 1,8 }
+			\end{eqnarray}
+
+On utilise maintenant le fait que $X_i$ a pour densité $f$~:
+
+			\begin{eqnarray}
+			\pr{A} &=&  \prody{i=1}{n}\cro{ \int^{1,8}_{1,6} f(x) dx} = \prody{i=1}{n} \cro{\int^{1,8}_{1,6} 
+									\frac{1}{\sqrt{2 \pi} \sigma} \; \exp \pa{ - \frac{\pa{x - \mu}^2}{2 \sigma^2}} dx} \\
+						 &=&  \int^{1,8}_{1,6} ... \int^{1,8}_{1,6}
+									\frac{1}{\sqrt{2 \pi} \sigma} \; \exp \pa{ - \frac{\pa{x_1 - \mu}^2}{2 \sigma^2}} ...
+									\frac{1}{\sqrt{2 \pi} \sigma} \; \exp \pa{ - \frac{\pa{x_n - \mu}^2}{2 \sigma^2}} 
+									dx_1 ... dx_n
+			\end{eqnarray}
+			
+Cette dernière écriture fait référence à la densité d'un vecteur de variables aléatoires et indépendantes comme par exemple le vecteur $\vecteur{X_1}{X_n}$. Puisque la densité d'une variable $X_i$ est $f(x) =\frac{1}{\sqrt{2 \pi} \sigma} \; exp \pa{ - \frac{\pa{x - \mu}^2}{2 \sigma^2}}$, la densité de l'échantillon $\vecteur{X_1}{X_n}$ est~:
+
+			\begin{eqnarray}
+			f\pa{x_1, ..., x_n} &=& \prody{i=1}{n} f(x_i) \label{emv_maximisation}\\
+									&=&	\cro{\frac{1}{\sqrt{2 \pi} \sigma}}^n \;
+										\prody{i=1}{n} \exp \pa{ - \frac{\pa{x_n - \mu}^2}{2 \sigma^2}} 
+			\end{eqnarray}
+
+\indexfrr{variables}{indépendantes}\indexfr{indépendance}
+On utilise pour cela le fait que la densité d'un ensemble de variables indépendantes est le produit des densités. En fait, cela revient à construire la probabilité infinitésimale $dP$ correspondant au fait que chaque variables $X_i$ appartient à l'intervalle $\cro{x_i, \, x_i + dx_i}$. A partir de cette densité, on construit la vraisemblance\footnote{La vraisemblance est souvent noté $L$ pour \emph{likelihood} en anglais.\indexfr{likelihood}} $L$ égale à la valeur de la densité $f$ obtenue en remplaçant les $x_i$ par les valeurs observées des variables $X_i$.
+
+			\begin{eqnarray}
+			L\pa{X_1, ..., X_n} &=& \cro{\frac{1}{\sqrt{2 \pi} \sigma}}^n \;
+										\prody{i=1}{n} \exp \pa{ - \frac{\pa{X_n - \mu}^2}{2 \sigma^2}} \label{emv_maximim_loglike}
+			\end{eqnarray}
+
+\indexfr{log-vraisemblance}
+Plutôt que d'avoir un produit, on préfère la log-vraisemblance (ou log-likelihood)~:
+
+			\begin{eqnarray}
+			\log L\pa{X_1, ..., X_n} &=& n \log \cro{\frac{1}{\sqrt{2 \pi} \sigma}} +
+																		 \summy{i=1}{n}  \pa{ - \frac{\pa{X_n - \mu}^2}{2 \sigma^2}}  \\
+										 					 &=& n \log \cro{\frac{1}{\sqrt{2 \pi} \sigma}} -
+																		 \frac{1}{2\sigma^2} \summy{i=1}{n}  \pa{X_n - \mu}^2  \nonumber \\
+										 					 &=& n \log \frac{1}{\sqrt{2 \pi}}  -n \log \sigma -
+																		 \frac{1}{2\sigma^2} \summy{i=1}{n}  \pa{X_n - \mu}^2  
+			\end{eqnarray}
+
+
+On cherche maintenant à maximiser cette fonction par rapport à $\mu$ et $\sigma$. En dérivant et en cherchant à annuler les dérivées partielles, on obtient le système d'équations suivant~:
+
+		\begin{eqnarray} \left\{ \begin{array}{llll}
+		\partialdfrac{L}{\mu} 		&=& \dfrac{1}{\sigma^2}  \summy{i=1}{n} \pa{X_i - \mu}  &= 0 \\
+		\partialdfrac{L}{\sigma} &=& - \dfrac{n}{\sigma} + \dfrac{1}{\sigma^3} \summy{i=1}{n} \pa{X_i - \mu}^2  &= 0 
+		\end{array}\right.\end{eqnarray}
+
+On résoud d'abord la première équation puis la seconde pour obtenir~:
+
+		\begin{eqnarray}
+		\mu^* &=& \frac{1}{n} \summy{i=1}{n} X_i \text{ et } (\sigma^*)^2 = \frac{1}{n} \summy{i=1}{n} \pa{X_i - \mu}^2
+		\end{eqnarray}
+
+\label{par_emv_calcul}
+
+\indexfr{échantillon}\indexfr{histogramme}
+On retrouve la moyenne et la variance de l'échantillon $\vecteur{X_1}{X_n}$. La loi normale la plus appropriée pour modéliser cet échantillon a pour paramètre $\mu^*$ et $\sigma^*$. Et la loi la plus appropriée est celle qui maximise l'expression (\ref{emv_maximim_loglike}). La figure~\ref{figure_emv_approprie} suggère que la courbe qui maximise cette expression est celle qui épouse au mieux la forme de l'histogramme de l'échantillon\footnote{Un histogramme de l'échantillon $\vecteur{X_1}{X_n}$ est une liste de couples de valeurs $\pa{t_j, h_j}_{1 \infegal j \infegal k}$ où $(t_j)_j$ est une suite croissante de $\R$ et $h_j$ est un nombre entier positif égal au nombre de variables $X_i$ appartenant à l'intervalle $[t_j, \, t_{j+1} [$. Autrement dit~:
+			$$
+			h_j = \frac{1}{n} \summy{i=1}{n} \indicatrice{ X_i \in [t_j, \, t_{j+1} [}
+			$$}. Si cet histogramme est l'ensemble des couples $\pa{t_j, h_j}_{1 \infegal j \infegal k}$, on peut presque écrire que~:
+			
+		\begin{eqnarray}
+		\prody{i=1}{n} f\pa{X_i} &\approx& \prody{j=1}{k} \cro{f\pa{t_j}}^{h_j} \label{emv_eq_final}
+		\end{eqnarray}
+
+Cette dernière expression montre que la fonction $f$ doit éviter d'être nulle en $t_j$ lorsque $h_j$ n'est pas nulle. C'est pour cela que la meilleure courbe $f$ est celle qui épouse au mieux la forme de l'histogramme. Lorsqu'on cherche les meilleurs paramètres d'une densité à l'aide de la méthode de l'estimateur de maximum de vraisemblance, cela revient à choisir une forme de densité\footnote{Une forme de densité ou plus exactement un modèle, loi normale, loi de Poisson, ... une loi dépendant d'un ou plusieurs paramètres.} et à chercher les paramètres qui font que cette courbe épouse au mieux la vraie distribution des variables observées. L'histogramme est une approximation de cette distribution. 
+
+		\begin{figure}[ht]
+    $$\frame{$\begin{array}[c|c]{c}\includegraphics[height=5cm, width=10cm] 
+    {\filext{../python_cours_exemple/image/lnemv}}\end{array}$}$$
+    \caption{ Ce graphique contient un histogramme qui approche la densité de l'échantillon
+    					$\vecteur{X_1}{X_n}$. La première courbe en trait d'union est celle de la densité 
+    					d'une loi normale de paramètres tirés au hasard.
+    					De manière évidente, l'expression (\ref{emv_maximim_loglike}) calculée pour la courbe de ce graphique
+    					est inférieure au résultat obtenu pour une même courbe mais centrée sur l'histogramme. 
+    					Et le calcul du paragraphe~\ref{par_emv_calcul} montre que la meilleure courbe épouse la forme
+    					de l'histogramme.}
+    \label{figure_emv_approprie}
+		\end{figure}
+
+\indexfrr{méthode}{paramétrique}\indexfrr{méthode}{non-paramétrique}\indexfrr{méthode}{noyaux}\indexfr{noyau}\indexfrr{distribution}{queue}
+L'estimateur du maximum de vraisemblance est ce qu'on appelle une méthode paramétrique. Il existe des méthodes non paramétriques comme la méthode des noyaux qui ne fait pas d'hypothèse sur la forme de la densité. D'autres méthodes encore ne s'intéressent qu'à une partie de la densité, plus précisément les queues de distributions. 
+
+\indexfr{vague}
+Par exemple, lors de la construction d'une plateforme pétrolière, il est important de connaître la hauteur de la plus grande vague pour placer la plateforme juste au-dessus. Le coût de construction est plus élevé lorsque la plateforme est surélevée mais elle est hors de portée des vagues qui ne peuvent plus l'emporter. A partir de séries de mesures de hauteurs de vagues, les statisticiens s'intéressent non plus à la distribution de cette hauteur mais à la distribution de la hauteur maximale, c'est-à-dire la probabilité d'événements très rares. 
+
+\indexfr{énénement rare}
+La méthode de l'estimateur du maximum de vraisemblance n'est plus applicable lorsqu'on s'intéresse aux queues de distributions. La densité calculée par ce moyen est proche de la véritable distribution à proximité de la moyenne, là où il y a beaucoup de données. Mais elle est peu précise lorsqu'il y a peu de données car, même si on fait des erreurs, elles sont peu nombreuses.
+
+Les événements rares forment une branche à part dans la théorie statistique, elle prend de plus en plus d'importance en assurance par exemple car on cherche de plus en plus à estimer la probabilité d'événements rares comme les catastrophes naturels.
+
+
+
+
+
+\textbf{Pour aller plus loin~:}
+
+L'expression (\ref{emv_eq_final}) équivaut à la suivante~:
+
+		\begin{eqnarray}
+		(\ref{emv_eq_final}) \Longleftrightarrow 
+		\summy{i=1}{n} \log f\pa{X_i} &\approx& \summy{j=1}{k} h_i \log f\pa{t_j} \label{emv_eq_final2}
+		\end{eqnarray}
+
+Et si on note $g$ la véritable densité de l'échantillon $\vecteur{X_1}{X_n}$, l'expression (\ref{emv_eq_final2}) converge vers une limite lorsque $n \longrightarrow \infty$~:
+
+		\begin{eqnarray}
+		\frac{1}{n} \summy{i=1}{n} \log f\pa{X_i} \underset{n\rightarrow \infty}{\longrightarrow }
+		\int_{\R} g(x) \log f(x) dx = \espf{g}{\log f}
+		\end{eqnarray}
+
+\indexfrr{distance}{Kullback-Leiber}\indexfr{Kullback-Leiber}
+Or l'expression $-\int_{\R} g(x) \log f(x) dx$ est aussi appelée \emph{distance de Kullback-Leiber} entre deux densités. La densité $f$ cherchée est celle qui minimise cette distance~:
+
+			\begin{xproblem}{distance de Kullback-Leiber}\label{probleme_emv}
+			Soit l'ensemble $F$ des fonctions définies sur l'ensemble $D \subset \R$. Toute fonction $f \in F$ vérifie
+			$\forall x \in D, \; f(x) > 0$ et $\int_D f = 1$. Soit $g \in F$. On cherche la fonction $f^*$ solution du 
+			problème~:
+					$$
+					f^* = \underset{f \in F}{\arg \min} -\int_D g(x)  \log f(x) dx
+					$$
+			\end{xproblem}
+
+			\begin{xtheorem}{distance de Kullback-Leiber}
+			La solution du problème d'optimisation~\ref{probleme_emv} est $f^* = g$.
+			\end{xtheorem}
+
+On peut démontrer ce théorème lorsque l'ensemble $D$ est un sous-ensemble fini de $\N$. La fonction $g$ est définie par une liste de couple $\pa{j,g_j}_{j \in D}$ et $\sum_{j \in D} g_j = 1$. C'est un histogramme. La fonction $f$ est définie de même~: $\pa{j,f_j}_{j \in D}$ et $\sum_{j \in D} f_j = 1$. La distance de Kullback-Leiber entre $f$ et $g$ s'écrit~:
+
+			\begin{eqnarray}
+			\summyone{j \in D} -g_j \log f_j
+			\end{eqnarray}
+
+On cherche à démontrer que quelque soit la fonction $f$ choisie, elle vérifie~:
+
+			\begin{eqnarray}
+														&& \summyone{j \in D} g_j \log f_j \infegal \summyone{j \in D} g_j \log g_j \\
+			\Longleftrightarrow   && \summyone{j \in D} g_j \pa{\log f_j - \log g_j} \infegal 0 \\
+			\Longleftrightarrow   && \summyone{j \in D} g_j \log \frac{f_j}{g_j} \infegal 0
+			\end{eqnarray}
+
+Comme la fonction $x \longrightarrow \log x$ est concave et que $\sum_{j \in D} g_j = 1$~:
+
+			\begin{eqnarray}
+			\summyone{j \in D} g_j \log \frac{f_j}{g_j} \infegal \summyone{j \in D} \log \pa{g_j \frac{f_j}{g_j}} =
+			\summyone{j \in D} \log f_j \infegal 0
+			\end{eqnarray}
+
+Cette dernière inégalité suffit à démontrer que la disbribution qui minimise la distance de Kullback-Leiber à une autre distribution est elle-même. Cette démonstration convient pour un ensemble $D$ fini. Il reste à l'adapter pour un ensemble dénombrable et plus généralement pour une densité définie sur $\R$, ce qui sort du cadre de ce document\footnote{Cette démonstration utilise l'inégalité de Jensen.\indexfr{Jensen}\indexfr{inégalité de Jensen} Si $f$ est une fonction convexe sur $\R$ et $X$ une variable aléatoire réelle, alors~: $\esp{f(X)} \infegal f\pa{\esp{X}}$.}.
+
+
+
+
+
+
+
+
+\subsubsectionx{Second exemple~: proportion de mâles chez les poissons}
+\indexfr{poisson}
+
+Un biologiste cherche à étudier la population d'une certaine espèce de poissons. Plus exactement, il voudrait savoir quelle est la proportion de mâles et de femelles. Il a réussi à récupérer une base de données contenant les tailles des poissons de cette espèce capturés par les pêcheurs sur une année entière. Malheureusement, les pêcheurs n'ont pas distingué les mâles des femelles. Pour estimer cette proportion, le biologiste dispose de deux informations~:
+
+		\begin{enumerate}
+		\item La taille moyenne des mâles est différente de la taille moyenne des femelles, elle est même supérieure.
+		\item La taille des mâles est distribuée selon une loi normale, il en est de même pour les femelles.
+		\end{enumerate}
+
+A partir de ces deux informations (ou hypothèses), le biologiste suppose que la distribution des tailles des poissons suit un mélange de loi normales~:
+
+			\begin{eqnarray}
+			f(x) &=&  \frac{\alpha_m}{\sqrt{2 \pi} \sigma_m} \; exp\pa{- \frac{ \pa{x - \mu_m}^2 } {2\sigma_m^2} } +
+								\frac{\alpha_f}{\sqrt{2 \pi} \sigma_f} \; exp\pa{- \frac{ \pa{x - \mu_f}^2 } {2\sigma_f^2} } 
+			\label{fonction_module_densite_poisson}
+			\end{eqnarray}
+
+\indexfr{estimateur du maximum de vraisemblance}
+On sait d'après les hypothèses de modélisation que $\alpha_m + \alpha_f = 1$, $\alpha_m > 0$, $\alpha_f >0$ et $\mu_m > \mu_f$. Il reste à estimer ces paramètres. La méthode choisie est celle de l'estimateur du maximum de vraisemblance. On note les tailles mesurées par les pêcheurs $\vecteur{X_1}{X_N}$. On cherche donc à calculer~:
+
+			\begin{eqnarray}
+			\pa{\alpha^*, \mu_m^*, \sigma_m^*, \mu_f^*, \sigma_f^*} &=& 
+					\underset{\alpha, \mu_m, \sigma_m, \mu_f, \sigma_f}{\arg \max} \; 
+							\prody { i = 1}{N} 	\bigggcro {		\frac{\alpha}{\sqrt{2 \pi} \sigma_m}  \; 
+											exp\pa{- \frac{ \pa{X_i - \mu_m}^2 } {2\sigma_m^2} } + \nonumber \\ &&
+																	 \quad\quad\quad\quad\quad\quad\quad\quad\quad
+								\frac{1 - \alpha}{\sqrt{2 \pi} \sigma_f} \; 
+											exp\pa{- \frac{ \pa{X_i - \mu_f}^2 } {2\sigma_f^2} }		}
+			\end{eqnarray}
+
+On passe au logarithme, il faut donc maximiser la fonction $g$ définie par~:
+	
+			\begin{eqnarray}
+			g\pa{\alpha, \mu_m, \sigma_m, \mu_f, \sigma_f} &=& 
+							\summy { i = 1}{N} \log	\cro{		\frac{\alpha}{\sqrt{2 \pi} \sigma_m} \; 
+												exp\pa{- \frac{ \pa{X_i - \mu_m}^2 } {2\sigma_m^2} } +
+								\frac{1 - \alpha}{\sqrt{2 \pi} \sigma_f}\; 
+											exp\pa{- \frac{ \pa{X_i - \mu_f}^2 } {2\sigma_f^2} }					}
+			\label{fonction_poisson_optimise}
+			\end{eqnarray}
+	
+
+On note~:
+			$$
+			h\pa{X_i,\alpha, \mu_m, \sigma_m, \mu_f, \sigma_f} = 
+			\log	\cro{		\frac{\alpha}{\sqrt{2 \pi} \sigma_m} \; 
+											exp\pa{- \frac{ \pa{X_i - \mu_m}^2 } {2\sigma_m^2} } +
+								\frac{1 - \alpha}{\sqrt{2 \pi} \sigma_f} \; 
+											exp\pa{- \frac{ \pa{X_i - \mu_f}^2 } {2\sigma_f^2} }}
+			$$
+			
+Afin de trouver le maximum de la fonction $h$, on calcule les dérivées de $h$ par rapport à $\alpha, \mu_m, \sigma_m, \mu_f, \sigma_f$~:
+
+			\begin{eqnarray}
+			\partialfrac{g}{\alpha}\pa{\alpha, \mu_m, \sigma_m, \mu_f, \sigma_f} &=& \summy{i=1}{N}
+							\frac{ 		\frac{1}{\sqrt{2 \pi} \sigma_m} \;
+												exp\pa{- \frac{ \pa{X_i - \mu_m}^2 } {2\sigma_m^2} } - 
+												\frac{1 }{\sqrt{2 \pi} \sigma_f} \;
+												exp\pa{- \frac{ \pa{X_i - \mu_f}^2 } {2\sigma_f^2} }}
+									{h\pa{X_i,\alpha, \mu_m, \sigma_m, \mu_f, \sigma_f} } 
+												\label{fonction_poisson_optimise_grad1} \\
+			\partialfrac{g}{\mu_m}\pa{\alpha, \mu_m, \sigma_m, \mu_f, \sigma_f} &=& \summy{i=1}{N}
+							\frac{  \frac{X_i - \mu_m}{\sigma_m^2} \; \frac{\alpha}{\sqrt{2 \pi} \sigma_m}  \;
+										exp\pa{- \frac{ \pa{X_i - \mu_m}^2 } {2\sigma_m^2} }	}
+									{h\pa{X_i,\alpha, \mu_m, \sigma_m, \mu_f, \sigma_f} } \\
+			\partialfrac{g}{\mu_f}\pa{\alpha, \mu_m, \sigma_m, \mu_f, \sigma_f} &=& \summy{i=1}{N}
+							\frac{  \frac{X_i - \mu_f}{\sigma_f^2}\; 	\frac{1 - \alpha}{\sqrt{2 \pi} \sigma_f} \;
+										exp\pa{- \frac{ \pa{X_i - \mu_f}^2 } {2\sigma_f^2} }	}
+									{h\pa{X_i,\alpha, \mu_m, \sigma_m, \mu_f, \sigma_f} } \\
+			\partialfrac{g}{\sigma_m}\pa{\alpha, \mu_m, \sigma_m, \mu_f, \sigma_f} &=& \summy{i=1}{N}
+							\frac{ 
+											\frac{\pa{X_i - \mu_m}^2}{\sigma_m^3}\; \frac{\alpha}{\sqrt{2 \pi} \sigma_m} \;
+											exp\pa{- \frac{ \pa{X_i - \mu_m}^2 } {2\sigma_m^2} }	-
+											 \frac{\alpha}{\sqrt{2 \pi} \sigma_m^2} \;
+											exp\pa{- \frac{ \pa{X_i - \mu_m}^2 } {2\sigma_m^2} }	
+									}
+									{h\pa{X_i,\alpha, \mu_m, \sigma_m, \mu_f, \sigma_f} } \\
+			\partialfrac{g}{\sigma_f}\pa{\alpha, \mu_m, \sigma_m, \mu_f, \sigma_f} &=& \summy{i=1}{N}
+							\frac{ 
+											\frac{\pa{X_i - \mu_f}^2}{\sigma_f^3}\; \frac{1 - \alpha}{\sqrt{2 \pi} \sigma_f} \;
+											exp\pa{- \frac{ \pa{X_i - \mu_f}^2 } {2\sigma_f^2} }	-
+											 \frac{1 - \alpha}{\sqrt{2 \pi} \sigma_f^2} \;
+											exp\pa{- \frac{ \pa{X_i - \mu_f}^2 } {2\sigma_f^2} }	
+											}
+									{h\pa{X_i,\alpha, \mu_m, \sigma_m, \mu_f, \sigma_f} } 
+									\label{fonction_poisson_optimise_gradn}
+			\end{eqnarray}
+
+Annuler ces dérivées est impossible tout comme obtenir la solution exacte correspondant au maximum de la fonction~$f$. Il faut utiliser un algorithme approché, par exemple, une méthode d'optimisation de Newton. Dans cet exemple, le calcul de la proportion des mâles et de femelles reposent sur le choix d'un modèle pour la densité et d'une méthode numérique pour estimer ces paramètres. 
+
+Tout d'abord, on vérifie que la méthode numérique permettant d'estimer les paramètres du modèle (\ref{fonction_module_densite_poisson}) permet effectivement de les retrouver dans une situation où ils sont connus. On simule donc un échantillon de tailles de poissons générées aléatoirement selon la densité (\ref{fonction_module_densite_poisson}) avec des paramètres $\alpha$, $\mu_m$, $\sigma_m$, $\mu_f$, $\sigma_f$ puis on vérifie que l'algorithme~\ref{algo_descente_newton} ou~\ref{rn_algo_bfgs} convergent vers ces paramètres.
+
+Cette première étape, si elle est réussie, valide en quelque sorte la méthodologie proposée. Il est alors envisageable de considérer que les résultats obtenus avec des données réelles seront fiables.
+
+\begin{xremark}{Algorithme Expectation-Maximisation}
+Il existe un autre algorithme permettant d'estimer les paramètres d'une densité faite d'un mélange de lois normales, c'est l'algorithme Expectation-Maximisation (ou EM) établi par Dempster (voir \citeindex{Dempster1977}). \indexfr{EM}\indexfr{Expectation-Maximisation}  Cet algorithme s'applique pour tout modèle contenant des informations cachées -~pour cet exemple, c'est la proportion de mâles et de femelles. Il est souvent préféré à un algorithme d'optimisation classique comme ceux présentés dans ce chapitre~: le paragraphe~\ref{optimiation_simple_poisson_melange} montrera que le paramètre $\alpha$ liée à l'information cachée fait de la résistance à l'algorithme~\ref{algo_descente_newton}.
+\end{xremark}
+
+
+
+\end{xexempleprog}
+
+
+
+
+
+
+\begin{xexempleprogcor}{exemple_gradient}\label{exemple_gradient_cor}
+
+
+\subsubsectionx{Premier exemple, fonction quadratique}\label{correction_premier_exemple_bfgs}
+
+On cherche à tester l'algorithme BFGS pour la fonction $f(x,y) = x^4 + x^3 + \dfrac{y^2 + y}{100}$. Pour cela, on crée la classe \codes{optimisation\_bfgs}. Son constructeur prend entre autres comme paramètres \codes{f}, \codes{derivee}, \codes{args}.
+
+			\begin{itemize}
+			\item \codes{f(x,...)} est la fonction à minimiser, cette fonction retourne la valeur de $f$ au point \codes{x}.
+			\item \codes{derivee(x,...)} retourne un vecteur égal au gradient de la fonction \codes{f} au point \codes{x}.
+			\item \codes{args} est une liste d'arguments supplémentaires hormis \codes{x} dont les fonctions \codes{f} et \codes{derivee} ont besoin.
+			\end{itemize}
+			
+Les deux fonctions \codes{f} et \codes{derivee} sont appelées par les méthodes \codes{erreur} et \codes{gradient}, elles-mêmes appelées par la méthode \codes{optimise} qui implémente l'algorithme BFGS~\ref{rn_algo_bfgs}. Toutes ces méthodes utilisent l'objet \codes{array} du module \codes{Numeric} qui permet de stocker des vecteurs et des matrices. Le module \codes{Numeric} définit également toutes les opérations matricielles dont l'algorithme BFGS a besoin.
+
+
+
+Pour appliquer l'algorithme BFGS sur la fonction $f(x,y) = x^4 + x^3 + \dfrac{y^2 + y}{100}$, on définit les fonctions suivantes~:
+
+\indexexemples{BFGS, scipy}{}
+\begin{verbatimx}
+    def fonction (x, a,b,c) :
+        return x [0]**4 + a * x[0]**3 + b * x[1]**2 + c * x [1]
+    def derivee (x, a,b,c) :
+        return Num.array ( [4 * x[0]**3 + 3 * a * x[0]**2, b * 2 * x [1] + c] )
+\end{verbatimx}
+
+Puis on applique l'algorithme BFGS~:
+\indexexemples{BFGS, scipy}{}
+\begin{verbatimx}
+    opt = optimisation_bfgs (fonction, derivee, (1,0.01,0.01))
+    x0  = Num.array ( [ 3, 4] )
+    x   = opt.optimise (x0)
+\end{verbatimx}
+
+Ces extraits ainsi que l'algorithme BFGS sont présents dans le programme qui suit.
+
+\indexfrr{module}{Numeric}\indexfrr{module}{psyco}
+\inputcode{../python_cours_exemple/programme/bfgs.py}{algorithme BFGS}
+
+Après exécution, on vérifie que la solution trouvée correspond bien à $\pa{-\frac{3}{4}, \, -\frac{1}{2}}$. Pour comparer avec l'algorithme d'optimisation du premier degré, on remplace la ligne suivante~:
+
+\indexexemples{BFGS, scipy}{}
+\begin{verbatimx}
+    x   = opt.optimise (x0, classic = False)
+\end{verbatimx}
+
+Par~:
+
+\begin{verbatimx}
+    x   = opt.optimise (x0, classic = True)
+\end{verbatimx}
+
+Alors qu'il faut moins d'une centaine d'itérations à l'algorithme BFGS pour converger la solution, il en faut plus d'un millier à l'algorithme du premier ordre. 
+
+
+
+\subsubsectionx{Second exemple, proportion de mâles et de femelles chez les poissons}
+
+
+Pour vérifier la pertinence d'une méthode numérique, on cherche d'abord à vérifier qu'elle marche bien sur un échantillon $\pa{X_i}_i$ dont on sait qu'il vérifie les hypothèses du problème à résoudre -~la distribution des $X_i$ est un mélange de deux lois normales. Une fois cette première étape validée, il est alors utilisé sur des données réelles ce qui ne sera pas fait ici.
+
+\subsubsectionx{Simulation d'une série $\pa{X_i}_i$}
+\indexfrr{simulation}{mélange de lois normales}
+
+Tout d'abord, on cherche à simuler une série $\pa{X_i}_{1 \infegal i \infegal N}$ où chaque $X_i$ suit une loi de densité (voir figure~\ref{densite_poisson_taille})~:
+			\begin{eqnarray}
+			f(x) &=&  \frac{\alpha}{\sqrt{2 \pi} \sigma_m} \; exp\pa{- \frac{ \pa{x - \mu_m}^2 } {2\sigma_m^2} } +
+								\frac{1 - \alpha}{\sqrt{2 \pi} \sigma_f} \; exp\pa{- \frac{ \pa{x - \mu_f}^2 } {2\sigma_f^2} }  \label{densite_taille_poisson_eq}
+			\end{eqnarray}
+
+				\begin{figure}[ht]
+				$$\begin{array}{|c|}\hline
+    		\includegraphics[height=6cm, width=6cm]{\filext{../python_cours_exemple/image/poissond}} \\ \hline
+    		\end{array}$$
+    		\caption{ Distribution des tailles de poissons selon le mélange de lois (\ref{densite_taille_poisson_eq})
+    							avec pour paramètres 
+    							$\alpha = 0,55$, $\mu_m = 0,40$, $\mu_f = 0,35$, $\sigma_m = 0,020$, $\sigma = 0,015$.}
+    		\label{densite_poisson_taille}
+    		\end{figure}
+
+
+On choisi par exemple $N = 10000$, $\alpha = 0,55$, $\mu_m = 0,40$, $\mu_f = 0,35$, $\sigma_m = 0,020$, $\sigma = 0,015$. Les mâles ont une taille moyenne de $40$ cm et un écart-type de $2 cm$. Ceci signifie que 95\% des mâles ont une taille comprises entre 36cm et 44cm. Les femelles ont une taille moyenne de $40$ cm et un écart-type de $1,5$ cm. Ceci signifie que 95\% des femelles ont une taille comprise entre 32cm et 38cm. Pour cela, on applique l'alogirthme suivant~:
+
+			\begin{xalgorithm}{simulation d'une variable selon un mélange de deux lois normales}
+			\label{simulation_melange_loi_normale}
+			On cherche à simuler une variable aléatoire $X$ selon un mélange de deux lois normales~:
+						$$X \sim \frac{\alpha}{\sqrt{2 \pi} \sigma_m} \; exp\pa{- \frac{ \pa{x - \mu_m}^2 } {2\sigma_m^2} } +
+								\frac{1 - \alpha}{\sqrt{2 \pi} \sigma_f} \; exp\pa{- \frac{ \pa{x - \mu_f}^2 } {2\sigma_f^2} } $$
+		  où $\alpha \in \cro{0,1}$, $\mu_m, \; \mu_f \in \R$, $\sigma_m, \; \sigma_f > 0$.
+		  
+		  \begin{xalgostep}{choix de la composante normale}
+		  Soit $U \sim U \cro{0,1}$, $U$ est une variable aléatoire uniforme sur $\cro{0,1}$.
+		  \end{xalgostep}
+
+		  \begin{xalgostep}{simulation loi normale}
+		  On simule $V$ selon une loi normale de moyenne nulle et de variance un.
+		  Autrement dit, soit $A$, $B$ deux variables générées selon
+		  une loi uniforme sur $\cro{0,1}$ (voir \citeindex{Robert1996})~: 
+		  		$$V = \sqrt{- 2 \log A} \,  \cos (2\pi B)$$
+		  \end{xalgostep}
+
+		  \begin{xalgostep}{construction de $X$}
+		  On calcule~:
+		  		$$X = \indicatrice{U \infegal \alpha}\pa{ \sigma_m V + \mu_m }+ 
+		  					\indicatrice{U > \alpha} \pa{\sigma_f V + \mu_f}$$
+		  $X$ est la valeur cherchée.
+		  \end{xalgostep}
+		  
+			\end{xalgorithm}
+
+Pour obtenir la série $\pa{X_i}_{1 \infegal i \infegal N}$, il suffit de calculer $N$ valeurs avec l'algorithme~\ref{simulation_melange_loi_normale}.
+
+
+\subsubsectionx{Estimation des paramètres avec une méthode du premier degré}
+\label{optimiation_simple_poisson_melange}
+
+On implémente le premier algorithme~\ref{algo_descente_newton} afin de retrouver les paramètres qui ont permis de simuler l'échantillon $\pa{X_i}_{1 \infegal i \infegal N}$. On cherche donc à maximiser la fonction $g$ définie par l'expression~(\ref{fonction_poisson_optimise}) dont le gradient est définie par les expressions (\ref{fonction_poisson_optimise_grad1}) à (\ref{fonction_poisson_optimise_gradn}).
+
+\indexfrr{optimisation}{valeurs initiale}
+Il n'est pas toujours possible de choisir des valeurs initiales pour l'algorithme d'optimisation. Toutefois, dans le cas présent, les paramètres de la fonction $g$ ont un sens presque physique. On peut donc choisir des valeurs sensées pour la solution initiale de manière à accélérer la convergence de l'algorithme~:
+
+			\begin{eqnarray}
+			\alpha = \frac{1}{2} \quad \mu_m = \esp{X_i} + \sqrt{\variance{X_i}} 
+							\quad \mu_f = \esp{X_i} - \sqrt{\variance{X_i}} \quad
+					\sigma_m = \sigma_f = \sqrt{\frac{\variance{X_i}}{2}} 
+			\end{eqnarray}
+
+\indexfr{vraisemblance}\indexfr{log-vraisemblance}
+L'algorithme converge alors en une dizaine d'itérations vers le résultat de la figure~\ref{densite_poisson_taille_simple}. La log-vraisemblance est très proche de celle obtenue avec le modèle initial et on remarque que pour cet exemple, elle est très peu sensible au paramètre $\alpha$ et beaucoup plus aux autres paramètres puisque le paramètre $\alpha$ n'a pas varié de sa valeur initiale\footnote{Le résultat est le même si la valeur initiale pour $\alpha$ est différente~: lors de l'optimisation, ce paramètre évolue très peu.}.
+
+				\begin{figure}[ht]
+				$$\begin{array}{|c|}\hline
+    		\includegraphics[height=6cm, width=6cm]{\filext{../python_cours_exemple/image/optimd}} \\ \hline
+    		\end{array}$$
+    		\caption{ Comparaison de la distribution qui a servi à générer les données 
+    							($\alpha = 0,55$, $\mu_m = 0,4$, $\mu_f = 0,35$, $\sigma_m = 0,020$, $\sigma = 0,15$) 
+    							avec la distribution qui a été estimée 
+    							($\alpha = 0,50$, $\mu_m = 0,40$, $\mu_f = 0,35$, $\sigma_m = 0,019$, $\sigma = 0,016$).}
+    		\label{densite_poisson_taille_simple}
+    		\end{figure}
+
+Pour implémenter cet algorithme, on crée la classe \codes{poisson\_loi}. Cette classe permet de simuler un échantillon de taille (méthodes \codes{simulation}, méthodes \codes{generate}), de calculer la log-vraisemblance pour un échantillon (méthodes \codes{densite}, \codes{log\_densite}, \codes{log\_densite\_list}), de calculer le gradient pour un point $x$ (méthode \codes{gradient}) ou pour un échantillon méthodes \codes{gradient\_total}). Enfin, cette classe implémtente l'algorithme d'optimisation~\ref{algo_descente_newton} par le biais de la méthode \codes{optimisation}.
+
+La partie principale du programme consiste tout d'abord à créer une instance de cette classe afin de générer une série de 10000 tailles de poisson. Une seconde instance est ensuite créée qui estime ses coefficients à l'aide de la méthode \codes{optimisation}. Le résultat est affiché puis les densités sont comparées graphiquement (méthode \codes{trace\_densite}).
+
+\indexfrr{module}{math}\indexfrr{module}{random}
+\inputcode{../python_cours_exemple/programme/poisson.py}{simulation de tailles de poissons}
+
+
+
+\subsubsectionx{Estimation des paramètres avec une méthode du second degré}
+
+Le second programme utilise l'algorithme BFGS pour déterminer le maximum de vraisemblance (voir figure~\ref{densite_poisson_taille_bfgs}). Cette méthode du second degré permet de corriger le fait que le gradient par rapport au paramètre $\alpha$ est plus faible que les dérivées partielles par rapport aux autres coefficients. On trouve cette fois-ci des valeurs proches du modèle qui a permis de simuler les observations.
+
+				\begin{figure}[ht]
+				$$\begin{array}{|c|}\hline
+    		\includegraphics[height=6cm, width=6cm]{\filext{../python_cours_exemple/image/optimbf}} \\ \hline
+    		\end{array}$$
+    		\caption{ Comparaison de la distribution qui a servi à générer les données 
+    							($\alpha = 0,55$, $\mu_m = 0,4$, $\mu_f = 0,35$, $\sigma_m = 0,020$, $\sigma = 0,15$) 
+    							avec la distribution qui a été estimée 
+    							($\alpha = 0,54$, $\mu_m = 0,40$, $\mu_f = 0,35$, $\sigma_m = 0,020$, $\sigma = 0,015$).}
+    		\label{densite_poisson_taille_bfgs}
+    		\end{figure}
+
+\indexfrr{module}{psyco}
+Ces méthodes sont très calculatoires et pour accélérer la vitesse de convergence de l'algorithme, il est possible d'utiliser le module \codes{pysco} en utilisant ces deux lignes.
+
+\indexexemples{\codesindex{psyco}}{}
+\begin{verbatimx}
+import psyco
+psyco.full ()
+\end{verbatimx}
+
+La vitesse du programme est multipliée par trois ou quatre lorsque celui-ci passe la plus grande partie de son temps à faire des calculs.
+
+\inputcode{../python_cours_exemple/programme/poisson_bfgs.py}{déterminer la taille des poissons}
+
+
+\end{xexempleprogcor}
+
+
+\input{../../common/livre_table_end.tex}%
+\input{../../common/livre_end.tex}%

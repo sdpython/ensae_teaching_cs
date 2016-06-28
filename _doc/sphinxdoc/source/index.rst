@@ -155,25 +155,18 @@ Et `code_beatrix <http://lesenfantscodaient.fr/>`_ pour découvrir les algorithm
 En diagonal
 -----------
 
-* :ref:`Exemples de toutes sortes <l-examplesindex>` dont :
-    * :ref:`l-exoalgo`
-    * :ref:`l-extra`
 * Questions, termes, FAQ
     * :ref:`FAQ <l-FAQs>` (Foire aux Questions ou Frequently Asked Questions)
     * :ref:`Glossaire <l-glossaire>`
     * :ref:`question`
     * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
 * Lectures
-    * :ref:`l-data2a` ou sa version allégée avec les modules qu'il faut connaître :ref:`modulesi`
-    * :ref:`Outils, ressources pour développer <l-devtools>`
     * :ref:`Articles, Références, Blog <l-information>`
     * :ref:`l-codingparty`
-    * :ref:`l-algoculture`
     * :ref:`blog <ap-main-0>` de ce cours
     * :ref:`code associé à ce cours <modindex>`
     * :ref:`l-ressources`
     * :ref:`l-biblio`
-    * :ref:`l-visualisation`
 * A propos de ce cours
     * :ref:`l-issues-todolist`
     * :ref:`l-completed-todolist`

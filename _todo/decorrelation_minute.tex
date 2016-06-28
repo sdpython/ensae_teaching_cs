@@ -1,0 +1,171 @@
+\input{../../common/exo_begin.tex}%
+\firstpassagedo{\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}}
+
+
+
+\begin{xtd}{Variables normales corrélées}{decorrelation_minute_cor}\label{decorrelation_minute_label}
+
+\partietdVU{\codes{numpy} ou calcul matriciel}{décorrélation de variables normales}
+
+Le calcul matriciel est aujourd'hui très répandu et présent dans la plupart des logiciels mathématiques gratuits tels que \textit{R}\footnote{\httpstyle{http://www.r-project.org/}, c'est le plus utilisé par les chercheurs dans des domaines à ceux que l'ENSAE aborde.}, \textit{SciLab}\footnote{\httpstyle{http://www.scilab.org/}}, \textit{Octave}\footnote{\httpstyle{http://www.gnu.org/software/octave/}} ou payants \textit{Gauss}\footnote{\httpstyle{http://www.aptech.com/}}, \textit{Matlab}\footnote{\httpstyle{http://www.mathworks.com/}},  \textit{S+}\footnote{\httpstyle{http://spotfire.tibco.com/products/s-plus/statistical-analysis-software.aspx}}. Le language \pythons propose un module qui reprend le calcul matriciel proposé par tous ces langages avec des notations similaires. C'est un module qu'il faut télécharger sur Internet à l'adresse suivante~: \httpstyle{http://numpy.scipy.org/}\footnote{Il faut faire attention de bien choisir la version correspondant à votre système d'exploitation (Windows, Linux, Apple) et à la version de votre langage \python.}. Un tutoriel en anglais est aussi disponible à l'adresse suivante~: \httpstyle{http://www.scipy.org/Tentative\_NumPy\_Tutorial}\footnote{voir aussi \httpstyle{http://www.scipy.org/NumPy\_for\_Matlab\_Users}}. 
+
+Ce TD appliquera le calcul matriciel aux vecteurs de variables normales corrélées\footnote{voir \httpstyle{http://fr.wikipedia.org/wiki/Covariance}, ou aussi \httpstyle{http://fr.wikipedia.org/wiki/D\%C3\%A9composition\_en\_valeurs\_singuli\%C3\%A8res}.}.
+
+
+
+
+
+\partietda{création d'un jeu de données aléatoires}
+
+\tdquest La première étape consiste à construire des variables aléatoires normales corrélées dans une matrice $N \times 3$. En vous inspirant du TD précédent, on cherche à construire cette matrice au format \codes{numpy}. Le programme suivant est un moyen de construire un tel ensemble à l'aide de combinaisons linéaires. Complétez les lignes contenant des \codes{.......}
+
+\begin{verbatimx}
+import random
+import numpy as np
+
+def combinaison () :
+    x = random.gauss(0,1) # génère un nombre aléatoire
+    y = random.gauss(0,1) # selon une loi normale
+    z = random.gauss(0,1) # de moyenne null et de variance 1
+    x2 = x
+    y2 = 3*x + y
+    z2 = -2*x + y + 0.2*z
+    return [x2, y2, z2]
+    
+mat = [ ............. ]
+npm = np.matrix ( mat )
+\end{verbatimx}
+
+\tdquest A partir de la matrice \codes{npm}, on veut construire la matrice des corrélations.
+
+\begin{verbatimx}
+npm = ...               # voir question précédente
+t   = npm.transpose ()
+a   = t * npm 
+a  /= npm.shape[0]
+\end{verbatimx} 
+
+A quoi correspond la matrice \codes{a}~? 
+
+
+
+
+
+\partietdb{matrice de corrélation}
+
+\tdquest Construire la matrice des corrélations à partir de la matrice \codes{a}. Si besoin, on pourra utiliser le module \codes{copy}.
+
+\begin{verbatimx}
+import copy
+b = copy.copy (a)    # remplacer cette ligne par b = a
+b [0,0] = 44444444  
+print b              # et comparer le résultat ici
+\end{verbatimx}
+
+
+\tdquest Construire une fonction qui prend comme argument la matrice \codes{npm} et qui retourne la matrice de corrélation. Cette fonction servira plus pour vérifier que nous avons bien réussi à décorréler.
+
+\begin{verbatimx}
+def correlation ( npm ) :
+    ..........
+    return .....
+\end{verbatimx}
+
+Pour la suite, un peu de mathématique. On note $M$ la matrice \codes{npm}. $V=\frac{1}{n}M'M$ correspond à la matrice des \textbf{covariances} et elle est nécessairement symétrique. C'est une matrice diagonale si et seulement si les variables normales sont indépendantes. Comme toute matrice symétrique, elle est diagonalisable. On peut écrire~:
+
+\begin{eqnarray}
+\frac{1}{n}M'M &=& P \Lambda P'
+\end{eqnarray}
+
+$P$ vérifie $P'P= PP' = I$. La matrice $\Lambda$ est diagonale et on peut montrer que toutes les valeurs propres sont positives ($\Lambda = \frac{1}{n}P'M'MP = \frac{1}{n}(MP)'(MP)$).
+ 
+On définit alors la racine carrée de la matrice $\Lambda$ par~: 
+
+\begin{eqnarray}
+\Lambda 							&=& diag(\lambda_1,\lambda_2,\lambda_3) \\ 
+\Lambda^{\frac{1}{2}} &=& diag\pa{\sqrt{\lambda_1},\sqrt{\lambda_2},\sqrt{\lambda_3}}
+\end{eqnarray}
+
+On définit ensuite la racine carrée de la matrice~$V$~:
+
+\begin{eqnarray}
+V^{\frac{1}{2}} &=& P \Lambda^{\frac{1}{2}} P'
+\end{eqnarray}
+
+On vérifie que $\pa{V^{\frac{1}{2}}}^2 = P \Lambda^{\frac{1}{2}} P' P \Lambda^{\frac{1}{2}} P' = P \Lambda^{\frac{1}{2}}\Lambda^{\frac{1}{2}} P' = V = P \Lambda P' = V$.
+
+
+
+
+
+\partietdc{calcul de la racine carrée}
+
+\tdquest Le module \codes{numpy} propose une fonction qui retourne la matrice $P$ et le vecteur des valeurs propres~$L$~:
+
+\begin{verbatimx}
+L,P = np.linalg.eig(a)
+\end{verbatimx}
+
+Vérifier que $P'P=I$. Est-ce rigoureusement égal à la matrice identité~?
+
+\tdquest Que fait l'instruction suivante~:
+
+\begin{verbatimx}
+print np.diag(L)
+\end{verbatimx}
+
+
+
+\tdquest Ecrire une fonction qui calcule la racine carrée de la matrice $\frac{1}{n}M'M$ (on rappelle que $M$ est la matrice \codes{npm})\footnote{\httpstyle{http://fr.wikipedia.org/wiki/Racine\_carr\%C3\%A9e\_d'une\_matrice}}.
+
+
+
+
+
+
+\partietdd{décorrélation}
+
+La fonction suivante permet d'obtenir l'inverse de la matrice \codes{a}.
+
+\begin{verbatimx}
+np.linalg.inv(a)
+\end{verbatimx}
+
+\tdquest Chaque ligne de la matrice $M$ représente un vecteur de trois variables corrélées. La matrice de covariance est $V=\frac{1}{n}M'M$. Calculer la matrice de covariance de la matrice $N=M V^{-\frac{1}{2}}$ (mathématiquement).
+
+\tdquest Vérifier numériquement.
+
+
+
+
+
+
+\partietdEND
+
+
+\tdquest A partir du résultat précédent, proposer une méthode pour simuler un vecteur de variables corrélées selon une matrice de covariance~$V$ à partir d'un vecteur de lois normales indépendantes.
+
+\tdquest Proposer une fonction qui crée cet échantillon~:
+
+\begin{verbatimx}
+def simultation (N, cov) :
+    # simule un échantillon de variables corrélées
+    # N : nombre de variables
+    # cov : matrice de covariance
+    ...
+    return M
+\end{verbatimx}
+
+\tdquest Vérifier que votre échantillon a une matrice de corrélations proche de celle choisie pour simuler l'échantillon.
+
+
+
+
+
+
+\end{xtd}
+
+
+
+
+\input{../../common/exo_end.tex}

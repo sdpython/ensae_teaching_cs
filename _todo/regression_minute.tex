@@ -1,0 +1,204 @@
+\input{../../common/exo_begin.tex}%
+\firstpassagedo{\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}}
+
+
+
+\begin{xtd}{Régression linéaire}{regression_minute_cor}\label{regression_minute_label}
+
+\partietdVU{\codes{numpy} ou calcul matriciel}{régression linéaire}
+
+Le calcul matriciel est aujourd'hui très répandu et présent dans la plupart des logiciels mathématiques gratuits tels que \textit{R}\footnote{\httpstyle{http://www.r-project.org/}, c'est le plus utilisé par les chercheurs dans des domaines à ceux que l'ENSAE aborde.}, \textit{SciLab}\footnote{\httpstyle{http://www.scilab.org/}}, \textit{Octave}\footnote{\httpstyle{http://www.gnu.org/software/octave/}} ou payants \textit{Gauss}\footnote{\httpstyle{http://www.aptech.com/}}, \textit{Matlab}\footnote{\httpstyle{http://www.mathworks.com/}},  \textit{S+}\footnote{\httpstyle{http://spotfire.tibco.com/products/s-plus/statistical-analysis-software.aspx}}. Le language \pythons propose un module qui reprend le calcul matriciel proposé par tous ces langages avec des notations similaires. C'est un module qu'il faut télécharger sur Internet à l'adresse suivante~: \httpstyle{http://numpy.scipy.org/}\footnote{Il faut faire attention de bien choisir la version correspondant à votre système d'exploitation (Windows, Linux, Apple) et à la version de votre langage \python.}. Un tutoriel en anglais est aussi disponible à l'adresse suivante~: \httpstyle{http://www.scipy.org/Tentative\_NumPy\_Tutorial}\footnote{voir aussi \httpstyle{http://www.scipy.org/NumPy\_for\_Matlab\_Users}}. Ce TD appliquera le calcul matriciel à une régression linéaire\footnote{\httpstyle{http://fr.wikipedia.org/wiki/R\%C3\%A9gression\_lin\%C3\%A9aire}, \\ \httpstyle{http://fr.wikipedia.org/wiki/R\%C3\%A9gression\_lin\%C3\%A9aire\_multiple} ou \\ \httpstyle{http://en.wikipedia.org/wiki/Linear\_regression}}.
+
+
+
+
+
+\partietda{données}
+
+\tdquest
+On applique le principe de la régression aux temps de parcours du marathon au fil des années\footnote{\httpstyle{http://www.xavierdupre.fr/enseignement/td\_python/python\_td\_minute/data/regression/marathon.txt}, ces données proviennent du blog d'Arthur Charpentier~\httpstyle{http://freakonometrics.blog.free.fr/index.php?post/2011/09/27/agacant-cette-manie-de-battre-des-records}.}. Ce fichier contient quatre colonnes~: villes, année, temps, temps en seconde. On peut le convertir en une matrice comme suit~:
+
+\inputcode{../python_td_minute/data/regression/marathon.py}{chargement de données depuis internet}
+
+\tdquest Le premier réflexe est ensuite de dessiner les données. On utilise le module \textit{matplotlib}\footnote{\httpstyle{http://matplotlib.sourceforge.net/}, il faut préalablement télécharger et installer ce module.} Pour dessiner, il est assez simple d'aller à la gallerie pour choisir le graphique\footnote{\httpstyle{http://matplotlib.sourceforge.net/gallery.html}} qui vous convient et de cliquer dessus pour voir le programme qui permet de le tracer\footnote{\httpstyle{http://matplotlib.sourceforge.net/examples/api/unicode\_minus.html}}.
+
+\inputcode{../python_td_minute/data/regression/marathon_gr.py}{dessin des données du marathon}
+
+  
+
+\partietdb{\codes{numpy}}
+
+On crée une matrice \codes{numpy} comme suit~:
+
+\begin{verbatimx}
+from marathon import *
+import numpy as np
+
+donnees = charge_donnees ()
+mat = np.matrix(donnees)
+\end{verbatimx}
+
+\tdquest Qu'affichent les différentes instructions suivantes~:
+
+\begin{verbatimx}
+print mat.ndim
+print mat.shape
+print mat.size
+\end{verbatimx}
+
+On peut manipuler les matrices facilement en utilisant le symbol "\codes{:}". Que permettent de faire les instructions suivantes~?
+
+\begin{verbatimx}
+a = mat[0,0]
+b = mat[:,0]
+c = mat[0,:]
+d = mat[4:10,:]
+e = mat.transpose()
+\end{verbatimx}
+
+\tdquest 
+On peut aussi extraire deux colonnes et les coller ensemble~:
+
+\begin{verbatimx}
+ms = np.column_stack ( (mat[:,1], mat[:,3]))
+ms = mat[:,[1,3]]  # seconde écriture
+\end{verbatimx}
+
+Quelle erreur provoque l'instruction suivante et pourquoi~?
+\begin{verbatimx}
+ms * 3.0
+\end{verbatimx}
+
+L'instruction \codes{ms*3.0} ne fait rien de visible, il faudrait pour cela utiliser \codes{print \; ms*3.0} ou encore conserver le résultat dans une variable~: \codes{y = ms*3.0}. Est-ce que la même erreur apparaît avec les deux instructions suivantes~:
+
+
+\begin{verbatimx}
+xy = np.matrix ( ms, dtype=float)
+xy * 3.0
+\end{verbatimx}
+
+Complétez la ligne suivante pour calculer la moyenne des temps obtenus pour le marathon~?
+
+\begin{verbatimx}
+print xy [ ... ].sum() / xy.shape [ ...]
+\end{verbatimx}
+
+\tdquest On souhaite ajouter une colonne de zéros à la matrice \codes{mat}, complétez le programme suivant~:
+
+\begin{verbatimx}
+z   = np.zeros ( mat.shape[ ... ] )
+mat = np.column_stack ( (mat, z))
+\end{verbatimx}
+
+\tdquest Que fait l'instruction suivante~:
+
+\begin{verbatimx}
+mat [:,4] = 1.0
+\end{verbatimx}
+
+
+
+
+
+
+
+
+
+
+\partietdc{régression linéaire}
+
+La régression linéaire est une façon de relier une variable $Y$ à une autre $X$. On écrit le modèle suivant~:
+
+\begin{eqnarray}
+Y = \alpha X + \beta + \epsilon
+\end{eqnarray}
+ 
+Pour estimer les coefficients $\alpha$ et $\beta$, on utilise plusieurs observations (ici 360) puis on minimise l'écart $\epsilon_i$ entre la valeur observée $Y_i$ et la valeur estimée $\hat{Y_i}=\alpha X_i + \beta$ pour chaque observation~$i$. Si les écarts sont indépendants et distribués selon une loi normale, cela revient à minimiser l'expression suivante~:
+
+\begin{eqnarray}
+E &=& \underset{\alpha,\beta}{\min} \pa{\sum_i \epsilon_i^2} \\
+	&=& \underset{\alpha,\beta}{\min} \pa{\sum_i \pa{ Y_i - (\alpha X_i + \beta)}^2}
+\end{eqnarray}
+
+Afin de simplifier l'écriture du problème, on suggère de considérer une seconde variable constante $X_2=1$ et d'écrire~:
+
+\begin{eqnarray}
+\alpha X + \beta = \alpha_1 X_1 + \alpha_2 X_2 =  X \pa{\alpha_1,\alpha_2} = X A  
+\end{eqnarray}
+
+Où $X$ est la matrice composée des colonnes $(X_1,X_2)$. Dans ce cas, on résoud ce problème en annulant la dérivée et $A$ vaut~:
+
+\begin{eqnarray}
+A = \pa{X'X}^{-1} X' Y 
+\end{eqnarray} 
+
+\tdquest Calculer $A$.
+
+\tdquest Construire une matrice contenant les trois colonnes suivantes~:  année, temps de course, temps de course estimé.
+
+\tdquest Adapter la fonction utilisée lors de la première demie-heure pour dessiner le temps de course, le temps de cours estimé en fonction des années.
+
+
+
+
+
+
+\partietdd{ajout d'une variable}
+
+
+
+\tdquest On souhaite ajouter la dénivellation maximum de chaque marathon. Voici les altitudes minimales et maximales observées sur chaque parcours\footnote{source~: \httpstyle{http://www.marathonguide.com/races/races.cfm}}~:
+
+
+\begin{center}\begin{tabular}{|l|r|}\hline
+Paris 			& 30-70  \\ \hline
+Berlin 			& 25-77  \\ \hline
+Amsterdam 	& 0-10   \\ \hline
+Londres 		& 5-40   \\ \hline
+Stockholm 	& 0-35   \\ \hline
+Fukuoka 		& 0-8    \\ \hline
+Boston 			& 0-120  \\ \hline
+Chicago			& 172-180 \\ \hline
+\end{tabular}\end{center}
+
+Il faut remplacer le zéro de la dernière colonne par la différence entre le minimum est le maximum. On s'aidera pour cela de l'instruction suivante~:
+
+\begin{verbatimx}
+mat[ mat[:,0] == "PARIS" , 4 ] = nouvelle valeur
+\end{verbatimx}
+
+\tdquest Calculer les nouveaux coefficients en considérant le modèle suivant~:
+
+\begin{eqnarray}
+Y &=& \alpha_1 X_1 + \alpha_2 X_2 + \alpha_3 X_3 + \epsilon
+\end{eqnarray}
+
+Où $Y$ est le temps de course, $X_1$ est l'année, $X_2$ est la dénivellation, $X_3$ est une constante~(=1).
+
+
+
+
+
+\partietdEND
+
+
+
+\tdquest Dessiner le temps de course, le premier temps de cours estimé, le second temps de course, en fonction des années.
+
+\tdquest En quelle année le temps de course estimé devient-il nul~? Qu'est-ce que cela vous suggère sur la pertinence du modèle linéaire dans ce cas~?
+
+\tdquest Il est possible de "tester" la nullité d'un coefficient pour vérifier si une variable est importante lors de la régression\footnote{voir \textit{Probabilités, Analyse des Données et Statistiques} de Gilles Saporta, Editions Technip.}. En particulier pour la dénivellation, on cherche à savoir si le coefficient est presque nul ou pas. On calcule pour cela la valeur~:
+
+\begin{eqnarray}
+t_{n-p-1} &=& \frac{ a_j } 
+								   { \sqrt{ \frac{ \norm{ y - XA }^2} { n-p-1 } (X'X)^{-1}_{jj} }}
+\end{eqnarray}
+
+Où $n$ est le nombre d'observations, $p$ la dimension du problème, $M_{jj}$ le $j^{\text{ieme}}$ coefficient sur la diagonale. Ce coefficient suit une loi de Student\footnote{http://fr.wikipedia.org/wiki/Loi\_de\_Student}. Il suffit de comparer la valeur obtenue avec la table de la loi de Student.
+
+\end{xtd}
+
+
+
+
+\input{../../common/exo_end.tex}

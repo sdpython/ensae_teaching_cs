@@ -1,0 +1,116 @@
+\input{../../common/livre_begin.tex}%
+
+
+
+
+
+\begin{xtd}{Tri quicksort, représentation sous forme de graphes}{tdd_cor}\label{tdd}%\indexfrr{TD}{TD 4}
+
+\label{quickost_exo_label}
+Cet énoncé a pour objectif de présenter l'algorithme de tri \emph{quicksort} qui permet de trier par ordre croissant un ensemble d'éléments (ici des chaînes de caractères) avec un coût moyen\footnote{Lorsqu'on parle de coût moyen, cela signifie que le coût n'est pas constant en fonction de la dimension du problème. Ici, le coût moyen désigne le coût moyen d'un tri \textit{quicksort} obtenu en faisant la moyenne du coût du même algorithme sur toutes les permutations possibles de l'ensemble de départ.} en $O\pa{n \ln n}$ où $n$ est le nombre d'éléments à classer. Le tri \textit{quicksort} apparaît rarement sous la forme d'un graphe~: il est plus simple à programmer sans les graphes mais il est plus simple à appréhender avec les graphes. Dans cette dernière version, l'algorithme insère un à un les éléments d'une liste à trier dans un graphe comme celui de la figure~\ref{td4_graphe} (page~\pageref{td4_graphe}). Chaque n\oe ud de ce graphe est relié à deux autres n\oe uds~: \indexfr{quicksort}\indexfrr{tri}{quicksort}\indexfr{n\oe ud}\indexfr{arc}\indexfr{graphe}
+
+\begin{small}
+		\begin{enumerate}
+		\item Un n\oe ud \codesmall{avant} ou \codesmall{"<"} qui permet d'accéder à des éléments classés avant celui de ce n\oe ud.
+		\item Un n\oe ud \codesmall{apres} ou \codesmall{">"} qui permet d'accéder à des éléments classés après celui de ce n\oe ud.
+		\end{enumerate}
+\end{small}
+
+Les n\oe uds \codes{avant} et \codes{apres} sont appelés les successeurs. Le terme opposé est prédécesseur. Ces deux n\oe uds ont nécessairement un prédécesseur mais un n\oe ud n'a pas forcément de successeurs. S'il en avait toujours un, l'arbre serait infini.\indexfr{successeur}\indexfr{prédécesseur}
+		
+\tdquest On cherche à construire une classe ayant pour nom \codes{NoeudTri} et qui contient une chaîne de caractères initialisée lors de la création de la classe~: \codes{n = NoeudTri ("essai")}.
+
+\tdquest On écrit la méthode \codes{\_\_str\_\_} de sorte que l'instruction \codes{print \; n} affiche la chaîne de caractères que contient \codes{n}.
+
+\tdquest On cherche maintenant à définir d'autres n\oe uds, reliés à des attributs \codes{avant} et \codes{apres}. On suppose que les n\oe uds utilisent l'attribut \codes{mot}, on crée alors une méthode \codes{insere(s)} qui~:
+
+\begin{small}
+			\begin{itemize}
+			\item Si \codesmall{s < self.mot}, alors on ajoute l'attribut \codesmall{avant = NoeudTri(s)}.
+			\item Si \codesmall{s > self.mot}, alors on ajoute l'attribut \codesmall{apres = NoeudTri(s)}.
+			\end{itemize}
+\end{small}
+
+		\indexfonction{cmp}
+		\begin{center}\begin{tabularx}{\textwidth}{|lX|} \hline
+		\textbf{Fonction utile :} & \\ \hline
+		\codes{cmp(s1,s2)}				&	%\begin{minipage}{10cm}
+																	Compare deux chaînes de caractères, retourne -1,0,1 selon que
+																	\codes{s1} est classée avant, est égale ou est classée après \codes{s2}.
+																	%\end{minipage}
+																	\\ \hline
+		\end{tabularx}\end{center}
+
+\tdquest La méthode \codes{\_\_str\_\_} n'affiche pour le moment qu'un mot. Il s'agit maintenant de prendre en compte les attributs \codes{avant} et \codes{apres} afin que l'instruction \codes{print \; n} affiche \codes{avant.\_\_str\_\_ ()} et \codes{apres.\_\_str\_\_ ()}. Il faudra également faire en sorte que la méthode \codes{avant.\_\_str\_\_ ()} ne soit appelée que si l'attribut \codes{avant} existe. Comme la liste des mots à trier est finie, il faut bien que certains n\oe uds n'aient pas de successeurs. On pourra s'inspirer du programme page~\pageref{programme_in_dict_rnd} (attribut \codes{\_\_dict\_\_}). Qu'est-ce qu'affiche le programme suivant~? 
+%
+\vspaceneg
+\begin{verbatimx}			
+racine = NoeudTri ("un")
+racine.insere ("unite")
+racine.insere ("deux")
+print racine
+\end{verbatimx}
+\vspaceneg
+
+\tdquest Est-il possible de trier plus de trois mots avec ce programme~? Que faut-il modifier dans la méthode \codes{insere} afin de pouvoir trier un nombre quelconque de mots~?
+
+\tdquest Ajouter le code nécessaire afin que la méthode \codes{insere} génère une exception lorsqu'un mot déjà présent dans l'arbre est à nouveau inséré.
+
+\tdquest On se propose de construire une image représentant l'arbre contenant les mots triés par l'algorithme \textit{quicksort}. Cette représentation utilise le module \codes{pydot}\indexmoduleext{pydot} qui utilise l'outil \textit{Graphviz}\footnote{\httpstyle{http://www.graphviz.org/}}\indexoutil{Graphviz} ainsi que le module \codes{pyparsing}\footnote{\httpstyle{http://pyparsing.wikispaces.com/}}.\indexmoduleext{pyparsing} Leur installation est assez facile sous \textit{Windows} puisqu'elle consiste seulement à exécuter un programme d'installation. Il faut ensuite installer manuellement le module \codes{pydot}\footnote{\httpstyle{http://code.google.com/p/pydot/}}. Après avoir décompressé les fichiers de ce module, il faut se placer dans le même répertoire et utiliser la ligne de commande suivante~:
+\vspaceneg
+\begin{verbatimx}
+c:\python26\python setup.py install
+\end{verbatimx}
+\vspaceneg
+%
+Le tracé d'un graphe passe par l'écriture d'un fichier dans lequel on indique les n\oe uds et les arcs. Un n\oe ud est un numéro suivi de \codes{[label="deux"]} qui indique que ce n\oe ud contient le mot \codes{deux}. Si on ajoute \codes{,style=filled,shape=record}, le n\oe ud est représenté par un rectangle au fond grisé. Un arc est un couple de numéros séparés par \texttt{->}. Le texte \texttt{[label="<"]} permet d'étiqueter cet arc. Selon cette syntaxe, le texte suivant décrit l'image située à droite~:\label{label_graph_small_dot}
+%
+\vspaceneg
+\begin{center}\begin{tabular}{@{}lr@{}}
+\begin{minipage}{11cm}
+\begin{verbatimx}
+digraph GA {
+    2 [label="deux",style=filled,shape=record]
+    3 [label="abc" ,style=filled,shape=record]
+    2 -> 3 [label="<"]
+}
+\end{verbatimx}
+\end{minipage}
+&
+\begin{minipage}{2.4cm}
+\includegraphics[width=1.15cm]{\filextellipse{../python_td/image/graphs}{../python_td/image_ellipse/graphs}}
+\end{minipage}
+\end{tabular}\end{center}
+
+		\indexfonction{id}
+		\begin{center}\begin{tabularx}{\textwidth}{|lX|} \hline
+		\textbf{Fonction}& \textbf{utile :}  \\ \hline
+		\codes{id(obj)}				&	%\begin{minipage}{10cm}
+																	Retourne un identifiant entier unique pour chaque variable \codes{obj}.
+																	%\end{minipage}
+																	\\ \hline
+		\end{tabularx}\end{center}
+
+
+%
+Une fois que cette chaîne de caractères a été construite, il suffit de l'écrire dans un fichier puis d'appeler le module \codes{pydot} pour le convertir en image avec le code suivant~:
+\vspaceneg
+\begin{verbatimx}
+g = open ("graph.txt", "w")  #
+g.write (graph)              # partie écriture dans un fichier
+g.close ()                   #
+dot = pydot.graph_from_dot_file ("graph.txt") # partie graphe
+dot.write_png ("graph.png", prog="dot")       # avec pydot
+\end{verbatimx}
+\vspaceneg
+%
+L'objectif de cette question est de construire une chaîne de caractères pour l'ensemble du graphe. La correction de cette exercice envisage également de construire une page HTML contenant le graphe et la liste triée ainsi que la création automatique d'un fichier au format PDF par le biais de \textit{Latex}\footnote{\textit{Latex} est un langage adapté aux publications scientifiques, également à l'écriture de livres comme celui-ci. En utilisant sa syntaxe, il permet de créer rapidement un fichier au format PDF.}.\indexfr{Latex}
+
+
+\end{xtd}
+
+
+
+
+
+\input{../../common/livre_end.tex}%

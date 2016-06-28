@@ -1,0 +1,630 @@
+\input{../../common/livre_begin.tex}%
+\firstpassagedo{\input{../python_cours_exemple/python_petitcours_titre.tex}}
+\input{../../common/livre_table_begin2.tex}%
+%\firstpassagedo{\input{python_cours_chapter.tex}}
+
+
+\begin{xexempleprog}{Images de synthèse, lancer de rayon}{exemple_image_synthese_cor}\label{exemple_image_synthese}
+\indexfr{image de synthèse}\indexfr{lancer de rayon}\indexfr{rayon}
+
+
+Le lancer de rayon est une méthode couramment utilisée pour réaliser des images de synthèse. L'exposé se limite au dessin de décor incluant des sphères et des facettes triangulaires ou quadrilaètres. La méthode peut être aisément étendue à d'autres figures.
+
+
+
+
+
+
+\subsubsection{La scène}
+
+
+\indexfr{scène}
+La \emph{scène} est l'ensemble des objets et des sources de lumière qui doivent être représentés par l'image de synthèse. La surface de ces objets peut avoir différentes propriétés (surface mate, réfléchissante, création d'un rayon réfracté). L'image de synthèse est une vue possible de cette scène définie par la position de l'\oe il d'un obervateur, matérialisé par un point (le centre de l'\oe il), un angle de vue et un écran de projection qui sert de rétine.
+
+Un \oe il -~ou un appareil photographique~- capte tous les rayons de lumière qui traversent l'objectif jusqu'à la pellicule (voir figure~\ref{principe_appareil_photo}). La première idée pour construire une image de synthèse est simplement de prendre une à une les sources de lumière, de calculer tous les rayons qu'elles produisent et de s'intéresser à ceux qui interceptent notre écran (voir figure~\ref{principe_lancer_rayon}). Malheureusement, le nombre de rayons qui viennent toucher l'écran est négligeable par rapport à ceux émis par les sources de lumière. Il est préférable de ne considérer que ceux qui nous sont utiles pour calculer l'image de synthèse, c'est-à-dire ceux qui atteignent la pellicule.
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|}\hline
+    		\includegraphics[height=3cm, width=6cm]{\filext{../python_cours_exemple/image/chambre_noire}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Principe des appareils photographiques, la lentille fait converger tous les rayons parallèles 
+    							en un seul point de l'écran. Lors du calcul d'une image de synthèse, 
+    							on se concentre sur le seul rayon qui
+    							passe par le centre de la lentille.}
+    		\label{principe_appareil_photo}
+    		\end{figure}
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|}\hline
+    		\includegraphics[height=5cm, width=10cm]{\filext{../python_cours_exemple/image/illustration3}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Peu nombreux les rayons qui partent de la source lumineuse et qui atteignent l'\oe il.
+    							L'idée du lancer de rayon consiste donc à partir de l'\oe il pour atteindre la source lumineuse.}
+    		\label{principe_lancer_rayon}
+    		\end{figure}
+
+
+\indexfr{lancer de rayon}\indexfr{chambre noire}
+
+On considère que tous les rayons utiles pour l'image arrivent en un même point $O$ qui est le centre de l'\oe il de l'observateur. C'est le principe de la chambre noire. L'idée du lancer de rayon est de parcourir le même chemin que la lumière mais en sens inverse (voir figure~\ref{principe_lancer_rayon_deux}), c'est-à-dire de l'\oe il vers la source de lumière.
+
+Pour cela, un écran quadrillé en pixel est placé devant le point $O$ (ou derrière comme sur la figure~\ref{principe_appareil_photo}). On lance un rayon partant de $O$, passant par le pixel de coordonnées $\pa{i,j}$ de l'image et on calcule la trajectoire de ce rayon afin de déterminer la couleur de ce pixel. Si le rayon n'intercepte aucun objet et se perd à l'infini (le ciel par exemple), la couleur de l'image au point de l'écran traversé par le rayon sera donc noire (ou bleue si le rayon atteint le ciel). En revanche, si le rayon intercepte un objet de couleur rouge en un point $P$, on regarde si le point P est éclairé par une source de lumière~:
+
+\begin{itemize}
+\item Si c'est le cas, la couleur de l'image au point de l'écran traversé par le rayon sera donc rouge.
+\item Si ce n'est pas le cas, cela veut dire que ce point de l'objet n'est pas éclairé (il y a un objet entre la source et le point P ou la source n'éclaire pas dans cette direction), l'image au point de l'écran traversé par le rayon sera noire.
+\end{itemize}
+
+\indexfr{couleur}
+
+Une couleur est composée de trois couleurs primaires~: rouge, vert, bleu. La définition d'une couleur repose donc sur trois intensités. Par soucis d'économie de mémoire et de traitement, les ordinateurs utilisent en général 256 niveaux d'intensité pour chaque couleur primaire, soit $256\times 256\times 256=2^{24}=16\times 2^{20}\approx$ 16 millions de couleurs. Le tableau suivant contient quelques couleurs triplets correspondant à des couleurs usuelles.
+
+\begin{center}\begin{tabular}{ll|ll}
+(0,0,0) 			& noir			& (0,0,255) 		&	bleu				\\
+(255,255,255) &	blanc			& (100,100,100) &	gris foncé	\\
+(255,0,0) 		&	rouge			& (200,200,200) &	gris clair	\\
+(0,255,0) 		&	vert			& (200,200,0) 	&	jaune clair	
+\end{tabular}\end{center}
+
+
+Selon cette définition, une source de lumière ponctuelle sera composée en fait de trois sources de lumières ponctuelles. Dans l'algorithme du lancer de rayon, chaque couleur sera traitée séparément. Une source de lumière est en fait la juxtaposition de trois sources de couleurs indépendantes. De cette manière un objet parfaitement bleu éclairé par une lumière parfaitement rouge sera noir.
+
+
+\indexfr{réfraction}\indexfr{réflexion}
+
+La méthode décrite plus haut ne considère que des objets avec des surfaces régulières et mates. Le rayon de lumière ne peut les traverser (réfration dans une goutte d'eau) ou rebondir comme dans un miroir (réflexion). Le schéma~\ref{principe_lancer_rayon_deux} (voir également la figure~\ref{lancer_rayon_deux}) illustre de quelle manière ce problème peut être résolu partiellement.
+
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|}\hline
+    		\includegraphics[height=5cm, width=10cm]{\filext{../python_cours_exemple/image/illustration4}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Le rayon réfracté et le rayon réfléchi peuvent être
+    							considérés comme deux autres rayons émanents de l'\oe il même s'ils n'en viennent pas 
+    							directement. On peut de cette manière voir un objet à travers un miroir,
+    							mais il n'est pas possible qu'un objet mate soit éclairé à travers un miroir.}
+    		\label{principe_lancer_rayon_deux}
+    		\end{figure}
+
+
+\subsubsection{Modèle d'illumination}
+\indexfr{illumination}\indexfrr{modèle}{illumination}
+
+Les images produites par la méthode précédente ne sont pas satisfaisantes. Les surfaces non directement accessibles depuis une source lumière n'apparaissent pas à l'écran alors que dans la réalité, il existe une lumière diffuse qui illumine toute la pièce et qui fait que l'on peut voir sous une table même si les lumières sont fixées au plafond. De même, un plan faisant face à une source lumière sera beaucoup plus éclairé qu'un plan incliné par rapport à cette même source.
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|}\hline
+    		\includegraphics[height=4cm, width=8cm]{\filext{../python_cours_exemple/image/plan_incline}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Les deux plans de cette figure ont la même taille mais le second est incliné, il reçoit
+    							moins de lumière et en renvoie d'autant moins.}
+    		\label{plan_incline}
+    		\end{figure}
+
+
+La figure~\ref{plan_incline} permet de comparer l'illumination d'un plan $Y$ incliné d'un angle $c$ par rapport à un plan $X$ non incliné. La quantité de lumière $I$ reçue par les plans $X$ et $Y$ est proportionnelle aux angles $a$ et $b$. Le plan $Y$ est incliné et sur le schéma $b<a$, par conséquent $Y$ recevra moins de lumière que $X$.
+
+Les modèles d'illumination proposent des moyens de calculer l'intensité lumineuse de chaque rayon de manière à se rapprocher le plus possible de la réalité. Plus le modèle est complexe, plus le temps de calcul d'une image est long. Les modèles d'illumination sont des compromis entre temps de calcul et réalisme. Par exemple~:
+
+\begin{itemize}
+\item Une source de lumière réelle est rarement ponctuelle et éclaire rarement dans toute les directions mais sa modélisation peut l'être car cette simplification ne nuit pas trop à la qualité de l'image.
+\item Une surface peut être parfaitement réfléchissante comme un miroir mais aussi simplement brillante ou mate, ces trois différents types de surfaces ne captent pas la lumière de la même manière. Si un miroir est facile à modéliser, une surface brillante n'est jamais tout-à-fait réfléchissante ni tout-à-fait mate~: c'est un compromis entre les deux. On pourra considérer qu'une partie $k$ du rayon est réfléchie, l'autre $1-k$ est diffusée dans toutes les directions.
+\end{itemize}
+
+
+
+
+
+
+\subsubsection{Géométrie et sphère}
+
+Le technique du lancer de rayon nécessite le calcul d'intersection entre une droite et tout type d'objet représenté. Par la suite, le modèle d'illumination choisi (voir paragraphe~\ref{synth_modele_illumination}) requiert le calcul du vecteur normal en tout point de la surface de l'objet. Ce paragraphe s'intéresse au cas particulier où les objets de la scène sont tous des sphères. 
+
+			\indexfr{rayon}
+			\begin{xdefinition}{rayon}
+			Un rayon est simplement une demi-droite avec une origine et un sens de direction. L'origine est en général
+			le centre de l'\oe il.
+			\end{xdefinition}
+
+
+\indexfr{intersection}
+
+Dans le cas du lancer de rayon, chaque rayon partira de l'\oe il de l'observateur, ira ou non intercepter un objet. Dans le cas où le rayon est intercepté, on regarde si un rayon provenant d'une source de lumière peut atteindre ce point donc si le rayon reliant ce point à la source de lumière n'intercepte pas un autre objet. 
+
+Les calculs du point d'intersection sont présentés dans le cas où cet objet est une sphère. Un rayon est représenté de manière paramétrique comme suit~:
+
+\indexfr{représentation paramétrique}%
+
+			\begin{eqnarray}
+			\left\{
+			\begin{array}{l}
+			x=\lambda v_{x}+O_{x} \\
+			y=\lambda v_{y}+O_{y} \\
+			z=\lambda v_{z}+O_{z}
+			\end{array}
+			,\lambda \geqslant 0\right. \text{où }O\text{ est l'origine du rayon et }%
+			\overrightarrow{V}=\left(
+			\begin{array}{l}
+			v_{x} \\
+			v_{y} \\
+			v_{z}
+			\end{array}
+			\right) \text{ sa direction}
+			\end{eqnarray}
+			
+L'équation d'une sphère est la suivante~:%
+\indexfr{équation d'une shère}%
+
+			\begin{eqnarray}
+			\left( x-C_{x}\right) ^{2}+\left( y-C_{y}\right) ^{2}+\left( z-C_{z}\right)
+			^{2}=R^{2}
+			\end{eqnarray}
+		
+$R$ est le rayon et $C$ le centre de la sphère. \indexfr{centre d'une sphère} Un point $M=\left( x,y,z\right) $ est l'intersection d'une droite et d'une sphère s'il appartient à la fois à la droite et à la sphère. On obtient l'équation~:
+
+			\begin{eqnarray}
+			\left( \lambda v_{x}+O_{x}-C_{x}\right) ^{2}+\left( \lambda
+			v_{y}+O_{y}-C_{y}\right) ^{2}+\left( \lambda v_{z}+O_{z}-C_{z}\right)
+			^{2}=R^{2}
+			\end{eqnarray}
+			
+On pose $\fleche{OC} = \pa{ C_x - O_x, C_y - O_y, C_z - O_z}$ et~:
+			
+			\begin{eqnarray}
+			\Leftrightarrow \lambda ^{2}\left\| \overrightarrow{V}\right\| ^{2} - 2\lambda
+			\overrightarrow{V}.\overrightarrow{OC}+\left\| \overrightarrow{OC}\right\|
+			^{2}-R^{2}=0
+			\end{eqnarray}
+		
+Cette équation admet des solutions si son discriminant réduit vérifie~: \indexfr{discriminant}
+
+			\begin{eqnarray}
+			\Delta' = \pa{\fleche{V} \,.\,\fleche{OC}}^2 - \norme{\fleche{V}}^2 \pa{\norme {\fleche{OC}}^2 - R^2 } \supegal 0
+			\end{eqnarray}
+		
+C'est une équation du second degré qui a au plus deux solutions $ \lambda _{1}$ et $\lambda _{2}$~:
+
+			\begin{eqnarray}
+			\left\{
+			\begin{array}{rcl}
+			\lambda_1 &=& \frac{ \fleche{V} \,.\,\fleche{OC} - \sqrt{\Delta '}} {\norme{\fleche{V}}^2 } = 
+								\frac{ \fleche{V} \cdot \fleche{OC} - 
+										\sqrt{\pa{\fleche{V} \,.\,\fleche{OC}}^2 - \norme{\fleche{V}}^2 \pa{\norme {\fleche{OC}}^2 - R^2 } } } 
+								{ \norme{ \fleche{V} } ^2} 
+							\\
+			\lambda_2 &=& \frac{ \fleche{V} \,.\,\fleche{OC} + \sqrt{\Delta '}} {\norme{\fleche{V}}^2 } = 
+								\frac{ \fleche{V} \cdot \fleche{OC} + 
+										\sqrt{\pa{\fleche{V} \,.\,\fleche{OC}}^2 - \norme{\fleche{V}}^2 \pa{\norme {\fleche{OC}}^2 - R^2 } } } 
+								{ \norme{ \fleche{V} } ^2} 
+							\\
+			\end{array}
+			\right.
+			\end{eqnarray}
+
+En remplaçant $\lambda $ dans la représentation paramètrique de la droite, on obtient les coordonnées des intersections $T\left( \lambda _{1}\right) $ et $T\left( \lambda _{2}\right) $ si elles existent. Dans ce cas, on sait que $T\left( \lambda _{1}\right) $ est placé devant $T\left( \lambda _{2}\right)$ et devant l'observateur si~:
+
+			\begin{eqnarray}
+			0\leqslant \overrightarrow{V}.\overrightarrow{OT\left( \lambda _{1}\right) }%
+			\leqslant \overrightarrow{V}.\overrightarrow{OT\left( \lambda _{2}\right) }%
+			\Longleftrightarrow 0\leqslant \lambda _{1}\leqslant \lambda _{2}
+			\end{eqnarray}
+
+Pour un rayon, on calcule l'intersection de ce rayon avec chaque objet de la scène. L'observateur ne pourra percevoir que l'objet le plus proche placé devant lui, c'est-à-dire le plus proche des points d'intersection. De plus, ce point le plus proche ne sera visible que s'il éclairé (voir figure~\ref{partie_cachee}). Ceci signifie qu'il existe un autre rayon qui relie une source lumineuse à ce point, qui n'intercepte aucun objet y compris celui dont fait partie ce point.
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|}\hline
+    		\includegraphics[height=4cm, width=8cm]{\filext{../python_cours_exemple/image/partie_cachee}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Partie non éclairées par la source lumineuse, la plus petite des trois sphères 
+    							s'interposent entre la plus grande et 
+    							la source lumineuse. La grande sphère arborera une zone d'ombre. 
+    							Elle s'interpose également entre l'\oe il et 
+    							l'autre petite sphère dont une partie seulement sera visible.}
+    		\label{partie_cachee}
+    		\end{figure}
+
+		
+\indexfr{normale d'une shpère}
+
+A partir du moment où on connaît le centre $C$ d'une sphère, on peut déterminer la normale à cette sphère en tout point $P$ de cette surface~:
+
+			\begin{eqnarray}
+			\overrightarrow{N}=\dfrac{\overrightarrow{CP}}{CP}=\dfrac{ \overrightarrow{CP}}{R}
+			\end{eqnarray}
+
+
+\subsubsection{Géométrie et facettes}
+
+\indexfr{quadrilatère}
+Le paragraphe précédent étudiait l'intersection d'un rayon et d'une sphère. Celui-ci étudie l'intersection d'un rayon et d'une triangle ou d'un quadrilatère plan. Ces résultats peuvent être étendus à tout polygone inscrit dans un même plan.
+
+\indexfr{facette}\indexfr{plan}
+Il faut d'abord calculer l'intersection entre une droite et un plan de l'espace. Tout d'abord, on suppose que les points A,B,C forment un triangle non réduit à une droite. $A$~a pour coordonnées $\pa{x_a,y_a,z_a}$, $B$~a pour coordonnées $\pa{x_b,y_b,z_b}$, $C$~a pour coordonnées $\pa{x_c,y_c,z_c}$. Un vecteur normal au plan qui contient ce triangle est obtenu par~:
+
+				\begin{eqnarray}
+				\fleche{AB} \wedge \fleche{AC} &=& \pa{\begin{array}{c}
+																\pa{y_b - y_a}\pa{z_c - z_a} - \pa{y_c - y_a}\pa{z_b - z_a} \\
+																\pa{z_b - z_a}\pa{x_c - x_a} - \pa{z_c - z_a}\pa{x_b - x_a} \\
+																\pa{x_b - x_a}\pa{y_c - y_a} - \pa{x_c - x_a}\pa{y_b - y_a} 
+																\end{array} } = \pa{\begin{array}{c} n_x \\ n_y \\ n_z \end{array} } = \fleche{n}
+				\end{eqnarray}																
+
+Soit $M$ un point de coordonnées $M (x,y,z)$, le plan $P$ qui contient le triangle $ABC$ a pour équation cartésienne~:
+
+				\begin{eqnarray}
+				\fleche{AB} \wedge \fleche{AC} \cdot \fleche{AM} = 0 \Longleftrightarrow
+						n_x \pa{x - x_a} + n_y \pa{y - y_a} + n_z \pa{ z - z_n} = 0
+				\end{eqnarray}																
+				
+
+
+On suppose que la droite $D$ passant par $O = \pa{x_o,y_o,z_o}$ et de vecteur directeur $\fleche{v} = \pa{v_x, v_y, v_z}$ a pour équation paramétrique~:
+
+			\begin{eqnarray}
+			D = \left\{\begin{array}{l}
+						x_o + \lambda v_x \\
+						y_o + \lambda v_y \\
+						z_o + \lambda v_z 
+						\end{array} \right. , \; \lambda \in \R
+			\end{eqnarray}
+
+L'intersection entre le plan $P$ et la droite $D$ est la solution de l'équation~:
+
+			\begin{eqnarray}		
+			n_x \pa{x_o + \lambda v_x - x_a} + n_y \pa{y_o + \lambda v_y - y_a} + n_z \pa{ z_o + \lambda v_z - z_a} &=& 0 
+							\nonumber\\
+			\lambda \pa{ n_x v_x + n_y v_y + n_z v_z } + n_x \pa{x_o - x_a} + n_y \pa{y_o - y_a} + n_z \pa{z_o - z_a} &=& 0 
+							\nonumber\\
+			\lambda \fleche{n} \cdot \fleche{v} + \fleche{n} \cdot \fleche{AO} &=& 0
+			\end{eqnarray}		
+
+On suppose que la droite n'est pas parallèle au plan (c'est-à-dire $\fleche{n} \cdot \fleche{v} \neq 0$). Dans ce cas, on peut écrire que~:
+
+			\begin{eqnarray}		
+			\lambda &=& - \frac{ \fleche{n} \cdot \fleche{AO} } {\fleche{n} \cdot \fleche{v}}
+			\end{eqnarray}		
+
+Le point d'intersection $I$ entre le plan $P$ et la droite $D$ est donc~:
+
+			\begin{eqnarray}		
+			I = O - \frac{ \fleche{n} \cdot \fleche{AO} } {\fleche{n} \cdot \fleche{v}} \fleche{v} =
+					O + \frac{ \fleche{n} \cdot \fleche{OA} } {\fleche{n} \cdot \fleche{v}} \fleche{v}
+			\end{eqnarray}		
+			
+Après avoir calculé l'intersection entre la droite $D$ et le plan $P$, il faut déterminer si le point d'intersection appartient au triangle $ABC$. Si c'est le cas, la somme des angles est égale à $2 \pi$ (voir figure~\ref{tdsynthese_angle})~:
+
+			\begin{eqnarray}
+			\pa{\fleche{IA},\fleche{IB}} + \pa{\fleche{IB},\fleche{IC}} + \pa{\fleche{IC},\fleche{IA}} &=& 2 \pi
+			\end{eqnarray}
+
+Pour savoir si un point $I$ appartient à un quadrilatère plan $ABCD$, la condition précédente devient~:
+			
+			\begin{eqnarray}
+			\pa{\fleche{IA},\fleche{IB}} + \pa{\fleche{IB},\fleche{IC}} + \pa{\fleche{IC},\fleche{ID}} + 
+			\pa{\fleche{ID},\fleche{IA}} &=& 2 \pi
+			\end{eqnarray}
+
+\indexfr{polygone}
+Il est facile d'adapter l'expression précédente pour tout polygone inscrit dans un plan dont l'intérieur ne forme qu'une seule composante connexe. \indexfr{composante connexe}
+			
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|}\hline
+    		\includegraphics[height=4cm, width=9cm]{\filext{../python_cours_exemple/image/angle}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Si $I$ est à l'intérieur du rectangle, la somme des angles de centre $I$ est égale à $2 \pi$.
+    							Si $I$ est à l'extérieur du rectangle, la somme des angles ce centre $I$ est nulle.}
+    		\label{tdsynthese_angle}
+    		\end{figure}
+			
+
+\subsubsection{Lancer de rayon}
+\indexfr{lancer de rayon}
+
+Cette partie n'utilise plus le fait que les objets soient des sphères, seuls comptent les coordonnées des points d'intersection et la normale à la surface des objets en ces points. Il ne reste plus qu'à placer l'\oe il de l'observateur dans la scène et construire une image en fonction d'un angle de vue $\hat{a}$ qui décrit l'ouverture de l'\oe il. \indexfr{pixel} Nous allons pour le moment lancer un seul rayon par pixel. Ce rayon a pour origine l'\oe il $O$ et pour direction un vecteur que nous allons constuire. Les figures~\ref{lancer_rayon_un}, \ref{lancer_rayon_deux}, \ref{lancer_rayon_trois} illustrent cela.
+
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|}\hline
+    		\includegraphics[height=6cm, width=8cm]{\filext{../python_cours_exemple/image/illustration2}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Lancer d'un rayon, il part du centre de l'\oe il, traverse l'écran avant d'atteindre un objet.}
+    		\label{lancer_rayon_un}
+    		\end{figure}
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|}\hline
+    		\includegraphics[height=6cm, width=8cm]{\filext{../python_cours_exemple/image/illustration2_prime}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Lancer d'un rayon, autre vue, le quadrillage matérialise les pixels. Le pixel prendra la couleur
+    							de l'objet qui recouvra le centre du pixel.}
+    		\label{lancer_rayon_deux}
+    		\end{figure}
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|}\hline
+    		\includegraphics[height=6cm, width=8cm]{\filext{../python_cours_exemple/image/img54}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Lancer d'un rayon, le rayon part du centre de l'\oe il, 
+    							coupe l'écran en un pixel puis s'en va intercepter un objet.}
+    		\label{lancer_rayon_trois}
+    		\end{figure}
+
+Pour caractériser précisement le point de vue en plus de l'angle de vue, il est nécessaire d'avoir une direction de visée $\overrightarrow{D}$ qui détermine un cône de visée et un axe $ \overrightarrow{A}$ orthogonal au précédent qui détermine la verticale. $\left( \overrightarrow{D},\overrightarrow{A},\overrightarrow{D} \wedge \overrightarrow{A}\right) $ forme une base orthonormée de l'espace, $\left( \overrightarrow{A},\overrightarrow{D}\wedge \overrightarrow{A}\right) $ forme une base de l'écran. On suppose que l'image à construire admet une résolution de $n$ pixels sur $m$ pixels. La figure~\ref{repere} illustre ces notations. On considère l'ensemble de points~:
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|}\hline
+    		\includegraphics[height=6cm, width=5cm]{\filext{../python_cours_exemple/image/pixel_ecran}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Choix du repère, le vecteur $\stackrel{\rightarrow}{D} \wedge \stackrel{\rightarrow}{A}$ 
+    							pointe vers le lecteur.}
+    		\label{repere}
+				\indexfr{repère}
+    		\end{figure}
+
+			\begin{eqnarray}
+			\mathbf{P}_{n}=\left\{ P_{ij}^{nm}=O+\overrightarrow{D}+\frac{i\tan \frac{\hat{a}%
+			}{2}}{n}\overrightarrow{A}+\frac{j\tan \frac{\hat{a}}{2}}{n}\overrightarrow{D%
+			}\wedge \overrightarrow{A}, \quad \left( i,j\right) \in \ensemble{-\frac{n}{2}}{\frac{n}{2}} \times 
+																\ensemble{-\frac{m}{2}}{\frac{m}{2}}\right\}
+			\end{eqnarray}
+			
+Le rayon $\left( O,\overrightarrow{OP_{ij}^{nm}}\right) $ est le rayon qui partira de l'\oe il de l'observateur en $O$ et passera par le pixel de l'image de coordonnées $\left( i+\frac{n}{2},j+\frac{m}{2}\right)$.  On peut maintenant décrire l'algorithme du lancer de rayon.
+
+			\begin{xalgorithm}{lancer de rayon}
+			On suppose que l'\oe il est placé à l'origine. Le vecteur $\fleche{D} = (0,0,1)$ 
+			sépare l'\oe il du centre de l'écran composé
+			de $n \times m$ pixels. $\fleche{A} = (1,0,0)$ et $\fleche{D} \wedge \fleche{A} = (0,1,0)$. 
+			La scène contient $N$ objets
+			$\vecteur{O_1}{O_N}$ et $M$ sources lumineuses $\vecteur{S_1}{S_M}$.
+			
+			\begin{xfor2}{i}{0}{n-1}
+				\begin{xfor}{j}{0}{m-1}
+						On calcule les coordonnées du point $P (x,y,z)$. \\
+						$\begin{array}{lll}
+						x &\longleftarrow& \frac{ \pa{i - \frac{n}{2} } \tan \frac{\hat{a}}{2}} {n} \\
+						y &\longleftarrow& \frac{ \pa{j - \frac{m}{2} } \tan \frac{\hat{a}}{2}} {n} \\
+						z &\longleftarrow& 1
+						\end{array}$ \\
+						\begin{xfor}{k}{1}{N}
+								On calcul le point d'intersection entre l'objet $O_k$ et le rayon $\pa{O, \fleche{OP}}$. 
+								On obtient le point $P_k$ et la normale à la surface de l'objet au point d'intersection $\fleche{N_k}$.
+						\end{xfor} 
+						On s'intéresse au point $P_{k^*}$ qui minimise $\fleche{OP} \cdot \fleche{OP_k}$ et vérifie 
+						$\fleche{OP} \cdot \fleche{OP_k} > 0$. \\
+						$I = (0,0,0)$ est l'intensité lumineuse du pixel de coordonnées $\pa{i,j}$. \\
+						\begin{xfor}{l}{1}{S}
+							Si la source lumineuse $S_l$ éclaire le point $P_k$, 
+							donc si le rayon $\pa{P_{k^*}, \fleche{P_{k^*} S_l}}$ 
+							n'est intercepté par aucun objet, on calcule uen intensité $I'$ selon le modèle d'illumination choisi
+							et on l'ajoute à $I$.
+						\end{xfor} \\
+						Le pixel de coordonnées $\pa{i,j}$ a pour intensité lumineuse (ou couleur) $I$.
+				\end{xfor} 
+			\end{xfor2}
+			\end{xalgorithm}
+
+	
+
+\subsubsection{Antialiasing}
+\indexfr{antialiasing}
+
+L'antialiasing a pour but de palier aux défauts de la discrétisation des images en pixels. Il est possible que deux rayons très proches l'un de l'autre aient des trajectoires très différentes, il suffit que l'un d'eux intercepte un objet et l'autre non, que l'un deux soit presque tangente à la surface de l'objet et l'autre ne fasse que l'effleurer. Dans ce cas, l'image montrera quelques irrégularités. Pour y remédier, on lance plusieurs rayons par pixel et l'intensité d'un pixel sera une moyenne des intensités obtenues pour chaque rayon. Sans antialiasing, l'arête oblique d'un cube sera en forme d'escalier, l'antialiasing permet d'introduire un peu de flou plus
+discret pour l'\oe il (voir figure~\ref{antialiasing}).
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|}\hline
+    		\includegraphics[height=4cm, width=5cm]{\filext{../python_cours_exemple/image/antialiasing}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Utilisation de l'antialiasing, les contours ne sont plus saccadés. 
+    							Le nombre de pixels de l'image n'a pas augmenté mais on ne passe plus brutalement de la couleur
+    							du fond à celle de l'objet, ce passage est lissé par l'antialiasing.}
+    		\label{antialiasing}
+    		\end{figure}
+
+
+L'antialiasing consiste à découper chaque pixel en un un carré de $p$ petits pixels de côté. On note $c_{ip + p_1j,jp + p_2}^{nmp}$ le vecteur des intensités des trois registres de couleurs obtenus par lancer de rayon pour le rayon $\left( O,\overrightarrow{OP_{ij}^{n}}\right) $ pour une image de $np \times mp $ pixels. Le vecteur $ \overrightarrow{a_{ij}^{n,m,p}}$ obtenu par antialiasing d'ordre $p$ sur une image de $n\times m$ pixels est~:
+
+			\begin{eqnarray}
+			a_{ij}^{n,m,p}&=&\frac{1}{p^2} \summyone {  0 \infegal p_1,p_2 \infegal p }
+			 			c_{pi+p_1, pj+p_2}^{nmp}
+			\end{eqnarray}
+	
+
+
+\subsubsection{Modèle d'illumination de Phong}
+\label{synth_modele_illumination}
+\indexfr{illumination}%
+\indexfrr{modèle}{illumination}
+\indexfr{Phong}
+
+Selon le modèle d'illumination de Phong, l'intensité (ou quantité de lumière) de chacune des trois composantes (rouge, vert, bleu) d'un rayon interceptant un objet est calculée comme suit~:
+
+			\begin{eqnarray}
+			I = \underset{I_1}{ \underbrace{k_a C_s} } +
+				\summyone{j} \; S_j \;
+					\frac   {
+								\overset{I_2} { \overbrace{k_d \, C_s \fleche{N} . \fleche{L_j}}} +
+								\overset{I_3} { \overbrace{k_s \, C_r \pa{\fleche{N} . \frac{\fleche{L_j} + \fleche{E}}
+								 {\norme{\fleche{L_j} + \fleche{E}}}    }^n}}
+							}
+							{C + D_j}
+			\end{eqnarray}
+
+Chaque intensité modélise une facette de la réalité~:
+
+\begin{itemize}
+\item $I_{1}$ modélise la lumière ambiente~: même en pleine nuit, une faible lumière éclaire les objets en masquant les reliefs : c'est cette lumière qui est modélisée.
+
+\item $I_{2}$ modélise les impressions de relief~: un plan incliné par rapport à la source de lumière reçoit moins de lumière qu'un plan faisant face à cette source.
+
+\item $I_{3}$ modélise les reflets~: certaines surfaces ont des propriétés réfléchissantes, une surface brillante éblouit plus qu'une surface mate.
+\end{itemize}
+
+Chaque paramètre à un sens physique dans le modèle choisi~:
+
+\begin{itemize}
+\item $k_{a},k_{d},k_{s}$ sont des coefficients.
+
+\item $C_{s}$ est la couleur de l'objet.
+
+\item $C_{r}$ est la couleur de réflexion de la surface, en générale égale à celle de la source.
+
+\item $S_{j}$ est l'intensité de la $j{{}^{\circ }}$ source de lumière.
+
+\item $\overrightarrow{N}$ est la normale à la surface de l'objet au point d'interception.
+
+\item $\overrightarrow{L_{j}}$ est la direction de la droite passant par le point d'interception et la source de lumière.
+
+\item $\overrightarrow{E}$ est la direction de la droite passant par l'\oe il et le point d'interception.
+
+\item $\frac{\overrightarrow{L_{j}}+\overrightarrow{E}}{\left\| \overrightarrow{L_{j}}+\overrightarrow{E}\right\| }$ est alors la bissectrice entre $\overrightarrow{L_{j}}$ et $\overrightarrow{E}$.
+
+\item $n$ est un paramètre (égal à 6 dans le programme) ce paramètre modélise l'étendue du reflet ($n$ grand $\Rightarrow$ faible étendue).
+
+\item $D_{j}$ est un coefficient lié à l'objet.
+
+\item $C$ est une constante.
+\end{itemize}
+
+La figure~\ref{exemple1} illustre deux exemples obtenus avec le modèle d'illumination de Phong.
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|c|}\hline
+    		\includegraphics[height=7cm, width=7cm]{\filext{../python_cours_exemple/image/image}} &
+    		\includegraphics[height=7cm, width=7cm]{\filext{../python_cours_exemple/image/image2}}	\\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Deux exemples d'image de synthèse obtenues avec le modèle d'illumination de Phong.}
+    		\label{exemple1}
+    		\end{figure}
+
+				
+
+\subsubsection{Interpolation de Gouraud}
+\indexfr{Gouraud}\indexfr{interpolation}\indexfr{facette}
+
+Les surfaces complexes des objets sont souvent approchés à l'aide d'une multitude de facettes triangulaires. Ce modèle introduit des discontinuités visibles lors du calcul de l'image de synthèse. Ces points de discontinuités sont les arêtes et les sommets des surfaces. Gouraud propose dans un premier temps de définir la normale à une jonction entre facettes comme la moyenne des vecteurs normaux de chaque facette.
+
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|c|}\hline
+    		\includegraphics[height=7cm, width=7cm]{\filext{../python_cours_exemple/image/g_flat}} &
+    		\includegraphics[height=7cm, width=7cm]{\filext{../python_cours_exemple/image/g_gour}}	\\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	La première est obtenue sans utiliser la méthode Gouraud, la seconde l'utilise.}
+    		\label{exemple_gouraud}
+    		\end{figure}
+
+\indexfr{barycentre}
+Chaque facette est un triangle plan, la normale le long de cette surface est constante. Dans le modèle de Gourand, afin de réduire encore les discontinuités, la couleur est le barycentre des couleurs calculées à l'aide des normales estimées en chaque sommet des facettes. Par extension, il est possible d'associer les modèles d'illumination de Phong et de Gouraud en supposant que la normale en un point d'une facette est le barycentre des normales en chaque sommet.
+
+
+
+\subsubsection{Horizons}
+\indexfr{radiosité}
+
+La méthode du lancer de rayon permet d'obtenir des images de synthèse de bonne qualité. Cependant, elle gère difficilement les multiples réflexions qui découle de la présence d'un miroir dans la scène. Lorsqu'un rayon issu de l'\oe il touche une surface, comment savoir quels seront les rayons qui atteindront une source de lumière après plusieurs reflexions dans des miroirs. 
+
+\indexfr{lumière ambiente}
+Une autre technique, complémentaire à celle du lancer de rayon permet de traiter ce genre de problème ainsi que celui de la lumière ambiente. C'est la radiosité. Gourmande en calcul, elle découpe les surfaces en morceaux infinitésimaux afin d'estimer une intensité lumineuse ambiente. Il ne s'agit plus d'un rayon qui traverse l'espace mais d'une densité lumineuse qui occupe l'espace.
+
+
+\end{xexempleprog}
+
+
+
+
+
+
+
+
+
+\begin{xexempleprogcor}{exemple_image_synthese}\label{exemple_image_synthese_cor}
+
+Le programme est scindé en cinq fichiers. Le premier implémente les objets de base tels que les vecteurs, les pixels, les couleurs, les rayons. Un rayon est défini par une origine et une direction. Cette classe contient aussi sa couleur et le pixel de l'image auquel il correspond. Ce fichier définit aussi l'interface pour un objet et une source. Une source n'est qu'un point. La classe \codes{objet} définit cinq fonctions que tout objet doit posséder pour pouvoir être dessiné.
+
+\begin{itemize}
+\item La méthode \codes{intersection} calcule l'intersection entre l'objet et un rayon, elle retourne \codes{None} si elle n'existe pas.
+\item Les méthodes \codes{normale} et \codes{couleur} retourne la normale et la couleur en un point de la surface de l'objet.
+\item Les méthodes \codes{rayon\_refracte} et \codes{rayon\_reflechi} retournent les rayons réfractés et réfléchis s'ils existent.
+\end{itemize}
+
+\subsubsection{Fichier~: \codes{image\_synthese\_base.py}}
+\inputcode{../python_cours_exemple/programme/image_synthese_base.py}{image de synthèse, base}
+
+\subsubsection{Fichier~: \codes{image\_synthese\_sphere.py}}
+
+Le fichier suivant décrit une sphère. Cette classe hérite de \codes{objet} et surcharge les méthodes \codes{intersection}, \codes{normale}, \codes{couleur}. Cette sphère ne réfléchit aucun rayon et ne produit aucun rayon réfracté.
+
+
+\inputcode{../python_cours_exemple/programme/image_synthese_sphere.py}{image de synthèse, sphère}
+
+\subsubsection{Fichier~: \codes{image\_synthese\_scene.py}}
+
+Le troisième fichier définit ce qu'est une scène, elle implémente les fonctions qui permettent de calculer les intersections entre un rayon et les objets. La méthode \codes{modele\_illumination} implémente un modèle d'illumination simplifiée pour lequel l'intensité des couleurs est proportionnelle au cosinus entre la normale à un objet et la provenance de la lumière. Ce petit exemple, qui ne dépend d'aucun paramètre, permet de corriger les différentes fonctions jusqu'ici implémentées. En effet, il est préférable de tester son programme avant que celui-ci ne soit terminé. La détection des erreurs est une étape parfois aussi longue que sa conception. Il est important de réduire le plus possible les sources possibles d'erreurs en ne testant que des petites portions de codes.
+
+\inputcode{../python_cours_exemple/programme/image_synthese_scene.py}{image de synthèse, scène}
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|c|}\hline
+    		\includegraphics[height=6cm, width=8cm]{\filext{../python_cours_exemple/image/synth1}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Image de synthèse créée lors de l'éxecution du fichier \codes{image\_synthese\_scene.py}.
+    							Le modèle d'illumination est plus simple que celui de Phong. 
+    							L'intensité des couleurs perceptible par l'observateur est proportionnelle 
+    							au cosinus entre la normale à la sphère et la direction de la lumière. La scène est composée
+    							de deux sources de lumière, une petite sphère, une grande qui joue le rôle du sol.
+    							Aucun anti-aliasing n'a été implémenté et on peut observer que le contour de la sphère est
+    							en escalier.} 
+    		\label{exemple_scene_cosinus}
+    		\end{figure}
+
+
+\subsubsection{Fichier~: \codes{image\_synthese\_phong.py}}
+
+Le programme précédent permet d'obtenir l'image de la figure~\ref{exemple_scene_cosinus}. La grande sphère et le bas de la sphère centrale sont plutôt réussis. En revanche, le haut de sphère centrale est uniformément rouge, le modèle est encore éloigné de la réalité. Le dernier fichier construit la classe \codes{scene\_phong} qui hérite de \codes{scene}. Elle redéfinit la méthode \codes{modele\_illumination} qui calcule la couleur d'un rayon lancé depuis l'\oe il.
+
+\inputcode{../python_cours_exemple/programme/image_synthese_phong.py}{image de synthèse, complet}
+
+\indexfr{reflet}
+La figure~\ref{exemple_scene_phong} est la même scène que la figure~\ref{exemple_scene_cosinus} mais calculée avec le modèle d'illumination de Phong implémenté dans le dernier fichier. La sphère rouge paraît plus pâle, la couleur est attenuée par le reflet.
+
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|c|}\hline
+    		\includegraphics[height=6cm, width=8cm]{\filext{../python_cours_exemple/image/synth2}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Cette scène est la même que celle de la figure~\ref{exemple_scene_cosinus} mais 
+    							calculée avec le modèle d'illumination de Phong.} 
+    		\label{exemple_scene_phong}
+    		\end{figure}
+
+
+\subsubsection{Fichier~: \codes{image\_synthese\_facette.py}}
+
+\indexfr{quadrilatère}\indexfr{triangle}\indexfr{facette}
+Le dernier fichier implémente les facettes triangulaires et quadrilatères. Une facette triangulaire dérive de la classe \codes{objet} définie dans le module \codes{image\_synthese\_base.py}. Elle définit l'intersection entre un rayon et une facette. L'objet qui implémente une facette en forme de quadrilatère dérive à son tour d'une facette triangulaire. Le résultat de ce programme est donné par la figure~\ref{exemple_scene_phong_facette}. 
+
+Lorsque les interfaces des objets sont bien conçues, l'ajout de classe d'objets devient une tâche indépendante du choix d'un modèle d'illumination. Pour construire un nouvel objet, il n'est pas nécessaire de connaître l'objet \codes{scene} ou \codes{scene\_phong}, il suffit de surcharger les méthodes de la classe \codes{objet} pour adapter son comportement à celui du nouvel objet.
+
+
+
+\inputcode{../python_cours_exemple/programme/image_synthese_facette.py}{image de synthèse, facette}
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|c|}\hline
+    		\includegraphics[height=6cm, width=8cm]{\filext{../python_cours_exemple/image/synth3}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Cette scène est la même que celle de la figure~\ref{exemple_scene_phong}, une facette triangulaire
+    							et une facette en forme de quadrilatère ont été ajoutées.} 
+    		\label{exemple_scene_phong_facette}
+    		\end{figure}
+
+
+\end{xexempleprogcor}
+
+
+
+
+
+\input{../../common/livre_table_end.tex}%
+\input{../../common/livre_end.tex}%

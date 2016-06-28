@@ -1,0 +1,127 @@
+\input{../../common/exo_begin.tex}%
+\firstpassagedo{\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}\refstepcounter{cxtd}}
+
+
+
+\begin{xtd}{Expression régulières et discours des présidents}{regex_minute_cor}\label{regex_minute_label}
+
+\partietdVU{expression régulières}{comptage}
+
+Dès qu'on cherche à analyser du texte de façon intelligente, on utilise nécessairement les expressions régulières qui offrent un moyen simple et rapide de chercher des motifs dans un texte. Tous les langages proposent maintenant les mêmes outils, le langage \pythons propose quant à lui le module \codes{re}\footnote{\httpstyle{http://docs.python.org/library/re.html}}. Il s'agit d'explorer cette fonctionnalité lors de cette séance.
+
+
+\partietda{données}
+
+\tdquest
+On récupère les voeux des présidents au soir du 31 décembre de quelques années et quelques présidents différents grâce au programme suivant. \footnote{\httpstyle{ttp://www.xavierdupre.fr/enseignement/td\_python/python\_td\_minute/data/voeux\_presidents/VOEUX*.txt}, ces données proviennent du blog d'Arthur Charpentier~\httpstyle{http://freakonometrics.blog.free.fr/index.php?post/2011/05/12/De-quoi-parle-un-president-francais-le-31-decembre}.}
+
+\inputcode{../python_td_minute/data/voeux_presidents/discours.py}{chargement de v\oe ux des présidents depuis internet}
+
+On pourra enregistrer ce programme sous le nom \codes{discours.py} et s'y référer en utilisant l'instruction~:
+
+\begin{verbatimx}
+import discours
+textes = discours.charge_discours()
+\end{verbatimx}
+
+\tdquest On va dans un premier temps construire des statistiques sur l'ensemble des textes plutôt que sur chaque texte pris séparément. Ecrire une fonction qui fait la concaténation de tous les textes.
+
+\begin{verbatimx}
+import discours
+textes = discours.charge_discours()
+
+def somme_texte (textes):
+    ...
+    return ...
+\end{verbatimx}
+
+\tdquest Les accents sont toujours un problème car une lettre majuscule n'a pas d'accent~: l'ordinateur considère que "A", "à", "a" sont des mots différents. On écrit alors une fonction qui remplace les accents par des lettres non accentuées. La fonction fait aussi autre chose, qu'est-ce ?
+
+\begin{verbatimx}
+accent = {     'à':'a', 'â':'a',  'ä':'a',  
+                    'é':'e', 'è':'e', 'ê':'e', 'ë':'e',
+                    'î':'i', 'ï':'i',
+                    'ù':'u', 'û':'u', 'ü':'u',
+                    'ô':'o', 'ö':'o',
+                }
+    
+def pas_daccent (texte) :
+    res = ""
+    for c in texte :
+        c = c.lower ()
+        res += accent.get (c,c)
+    return res
+\end{verbatimx}
+
+
+\partietdb{compter les mots}
+
+\tdquest On écrit une fonction à compléter qui découpe en mots avec la fonction \codes{split}~:
+\begin{verbatimx}
+def decoupe_mot (texte) :
+    return ....
+\end{verbatimx}
+    
+\tdquest On écrit une fonction à compléter qui compte la fréquence de chaque mot distinct~:
+\begin{verbatimx}
+def compte_mots (mots) :
+    d = { }
+    for mot in mots :
+        ...
+        ...
+    return d
+\end{verbatimx}
+    
+\tdquest On écrit une fonction à compléter qui trie les mots par ordre de fréquence décroissant~:
+\begin{verbatimx}
+def mot_tries (d):
+    l = [ (n,m) for ... in d.iteritems () ]
+    l.sort (reverse = True)
+    return l
+\end{verbatimx}
+
+\tdquest On veut afficher les 25 mots les plus fréquents, comment utiliser les trois fonctions précédentes~? Que pensez-vous de ces mots~?
+
+
+\partietdc{expression régulières}
+
+\tdquest En vous aidant de la page \httpstyle{http://docs.python.org/library/re.html}, expliquez ce que fait la fonction suivante~?
+\begin{verbatimx}
+def decoupe_mot2 (texte) :
+    exp = re.compile ("\\w+", re.IGNORECASE)
+    return exp.findall(texte)
+\end{verbatimx}
+
+\tdquest Comparer les résultats avec la dernière question de la partie précédente. Pourquoi le mot \codes{l} est-il présent~?
+
+\tdquest Comment modifier l'expression \codes{"\backslash\backslash w+"} pour ne compter que les mots de plus de six lettres~?
+
+
+\partietdd{expressions plus complexes}
+
+\tdquest Toujours en vous aidant de la page \httpstyle{http://docs.python.org/library/re.html}, expliquez ce que fait la fonction suivante~?
+\begin{verbatimx}
+def trouver_expression(texte) :
+    exp = re.compile ("je .{1,60}", re.IGNORECASE)
+    return exp.findall(texte)
+\end{verbatimx}
+    
+\tdquest Utiliser cette fonction sur le texte entier puis sur chaque texte pris séparément.
+
+    
+   
+
+\partietdEND
+
+\tdquest Avec la même expression régulière, rechercher indifféremment le mot \textit{securite} ou \textit{insecurite}.
+
+
+
+
+
+\end{xtd}
+
+
+
+
+\input{../../common/exo_end.tex}

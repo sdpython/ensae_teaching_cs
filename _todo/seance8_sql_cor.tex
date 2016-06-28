@@ -1,0 +1,152 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+\firstpassagedo{\refstepcounter{cxtdcor}\refstepcounter{cxtdcor}\refstepcounter{cxtdcor}\refstepcounter{cxtdcor}
+					\refstepcounter{cxtdcor}\refstepcounter{cxtdcor}\refstepcounter{cxtdcor}}
+
+
+
+\begin{xtdcor}{seance8_2013_sql}\label{seance8_2013_sql_cor}
+
+\partietda{Récupérer les données}
+
+\textbf{Exercice 1}
+
+%%% compter le nombre de dates distinctes %%%
+\begin{verbatimx}
+SELECT COUNT(*) FROM (
+    SELECT DISTINCT last_update FROM td8_velib
+) ;
+\end{verbatimx}
+ 
+
+%%% première et dernière date %%%
+\begin{verbatimx}
+SELECT MIN(last_update), MAX(last_update) FROM td8_velib ;
+\end{verbatimx}
+
+
+\partietdb{GROUP BY}
+
+
+%%% exercice 2 %%%
+\begin{verbatimx}
+SELECT number, COUNT(*) AS nb 
+FROM td8_velib
+WHERE available_bikes==0 AND last_update >= '2013-09-10 11:30:19'
+GROUP BY number
+ORDER BY nb DESC
+\end{verbatimx}
+
+%%% exercice 3 : plage horaires de cinq minutes où il n'y a aucun vélo disponible %%%
+\begin{verbatimx}
+SELECT nb, COUNT(*) AS nb_station
+FROM (
+  -- requête de l'exercice précédent
+  SELECT number, COUNT(*) AS nb 
+  FROM td8_velib
+  WHERE available_bikes==0 AND last_update >= '2013-09-10 11:30:19'
+  GROUP BY number
+)
+GROUP BY nb
+\end{verbatimx}
+
+
+\partietdc{JOIN}
+
+%%% exercice 4 : distribution horaire par station et par tranche de 5 minutes %%%
+\begin{verbatimx}
+SELECT A.number, A.heure, A.minute, 1.0 * A.nb_velo / B.nb_velo_tot  AS distribution_temporelle
+FROM (
+  SELECT number, heure, minute, SUM(available_bikes) AS nb_velo
+  FROM td8_velib
+  WHERE last_update >= '2013-09-10 11:30:19'
+  GROUP BY heure, minute, number
+) AS A
+JOIN (
+  SELECT number, heure, minute, SUM(available_bikes) AS nb_velo_tot
+  FROM td8_velib
+  WHERE last_update >= '2013-09-10 11:30:19'
+  GROUP BY number
+) AS B
+ON A.number == B.number
+--WHERE A.number in (8001, 8003, 15024, 15031)  -- pour n'afficher que quelques stations
+ORDER BY A.number, A.heure, A.minute
+\end{verbatimx}
+
+
+\partietdd{zones de travail et zones de résidences}
+
+
+
+%%% Zone de travail et zone de résidence %%%
+\begin{verbatimx}
+SELECT number, SUM(distribution_temporelle) AS velo_jour
+FROM (
+  -- requête de l'exercice 4
+	SELECT A.number, A.heure, A.minute, 1.0 * A.nb_velo / B.nb_velo_tot  AS distribution_temporelle
+	FROM (
+		SELECT number, heure, minute, SUM(available_bikes) AS nb_velo
+		FROM td8_velib
+		WHERE last_update >= '2013-09-10 11:30:19'
+		GROUP BY heure, minute, number
+	) AS A
+	JOIN (
+		SELECT number, heure, minute, SUM(available_bikes) AS nb_velo_tot
+		FROM td8_velib
+		WHERE last_update >= '2013-09-10 11:30:19'
+		GROUP BY number
+	) AS B
+	ON A.number == B.number
+)
+WHERE heure >= 10 AND heure <= 16 
+GROUP BY number
+\end{verbatimx}
+
+
+
+
+\partietdEND
+
+
+On trouve les arrondissements où les stations de vélib sont les plus remplies en journée au centre de Paris.
+
+%%% JOIN avec la table stations et les stations "travail" %%%
+\begin{verbatimx}
+SELECT C.number, name, lat, lng, velo_jour FROM 
+(
+  -- requête de la partie précédente
+	SELECT number, SUM(distribution_temporelle) AS velo_jour
+	FROM (
+		-- requête de l'exercice 4
+		SELECT A.number, A.heure, A.minute, 1.0 * A.nb_velo / B.nb_velo_tot  AS distribution_temporelle
+		FROM (
+			SELECT number, heure, minute, SUM(available_bikes) AS nb_velo
+			FROM td8_velib
+			WHERE last_update >= '2013-09-10 11:30:19'
+			GROUP BY heure, minute, number
+		) AS A
+		JOIN (
+			SELECT number, heure, minute, SUM(available_bikes) AS nb_velo_tot
+			FROM td8_velib
+			WHERE last_update >= '2013-09-10 11:30:19'
+			GROUP BY number
+		) AS B
+		ON A.number == B.number
+	)
+	WHERE heure >= 10 AND heure <= 16 
+	GROUP BY number
+) AS C
+INNER JOIN stations
+ON C.number == stations.number 
+\end{verbatimx}
+
+
+
+
+\end{xtdcor}
+
+
+
+
+
+\input{../../common/exo_end.tex}%

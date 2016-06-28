@@ -1,0 +1,93 @@
+This summer, we have been told that some financial series broke some records (here, in French)
+
+For instance, the French CAC40 had negative return for 11 consecutive days (which has never been seen, so far). 
+
+> library(tseries)
+> x<-get.hist.quote("^FCHI")
+> Y=x$Close
+> Z=diff(log(Y))
+> RUN=rle(as.character(Z>=0))$lengths
+> n=length(RUN)
+> LOSS=RUN[seq(2,n,by=2)]
+> GAIN=RUN[seq(1,n,by=2)]
+> TG=sort(table(GIN))
+> TG[as.character(1:13)]
+GAIN
+   1    2    3    4    5    6    7    8    9 <NA> <NA> <NA>   13
+ 645  336  170   72   63   21    7    3    4   NA   NA   NA    1
+ 
+> TL=sort(table(LOSS))
+> TL[as.character(1:15)]
+LOSS
+   1    2    3    4    5    6    7    8    9 <NA>   11 <NA> <NA> 
+ 664  337  186   68   42   14    5    3    1   NA    1   NA   NA 
+ 
+> TR=sort(table(RUN))
+> TR[as.character(1:15)]
+RUN
+   1    2    3    4    5    6    7    8    9 <NA>   11 <NA>   13 
+1309  673  356  140  105   35   12    6    5   NA    1   NA    1 
+Indeed 11 consecutive days of negative returns is a record. But one should keep in mind the fact that the real records for runs is 13 consecutive days with positive returns...
+But what does that mean ? Can we still assume time independence of log-returns (since today, a lot of financial models are still based on that assumption) ?
+Actually. if financial series were time-independence, such a probability, indeed, should be rather small. At least on 11 or 10 runs. Something like
+
+(assuming that each day, the probability to observe a negative return is 50%). But maybe not over 25 years (6250 trading days): the probability to observe a sub-sequence of 10 consecutive negative value (with daily probability of one half) over 6250 observations will be much larger. My guess is that is would be
+
+where at the numerator we have the number of favourable cases over the total number of cases. At the numerator, the first number the number of cases where the first 10 (at least) are negative, then for the second one, we count the number of cases where the first is positive, then the next 10 (at least) are negative (and then the second is positive and then the next 10 are negative, the third is positive etc). For those interested by more details (and a more general formula on runs), an answer can be found here.
+But note that the probability is quite large... So it is not that unlikely to observe such a sequence over 25 years.
+A classical idea when looking at time series is to look at the autocorrelation function of the returns,
+
+which might suggest that there is no correlation with past returns. But it should be possible to do more advanced tests.
+On the CAC40 series, we can run an independence run test on the latest 100 consecutive days, and look at the p-value,
+> library(lawstat)
+> u=as.vector(Z[(n-100):n])
+> runs.test(u,plot=TRUE)
+ 
+	Runs Test - Two sided
+ 
+data:  u 
+Standardized Runs Statistic = -0.4991, p-value = 0.6177
+
+The B's here are returns lower than the median (almost null, so they might be considered as negative returns). With such a high p-value, we accept the null hypothesis, i.e. time independence.
+If we consider a moving-time window
+
+we can see that we accept the assumption of independence most the the time.
+Actually, here, the time window is 100 days (+/- 50 days). But it is possible to consider 200 days,
+
+or even 400 days,
+
+So, except if we focus on 2006, it looks like we should reject the idea of time dependence in financial markets.
+It is also possible to look more carefully at the distribution of runs, and to compare it with the case of independent samples (here we consider monte carlo generation of sequences having the same size),
+> m=length(Z)
+> ns=100000
+> HIST=matrix(NA,ns,15)
+> for(j in 1:ns){
++ XX=sample(c("A","B"),size=m,replace=TRUE)
++ RUNX=rle(as.character(XX))$lengths
++ S=sort(table(RUNX))
++ HIST[j,]=S[as.character(1:15)]
++ }
+> meana=function(x){sum(x[is.na(x)==FALSE])/length(x)}
+> cbind(TR[as.character(1:15)],apply(HIST,2,meana),
++       round(m/(2^(1+1:15))))
+ 
+     [,1]       [,2] [,3]
+1    1309 1305.12304 1305
+2     673  652.46513  652
+3     356  326.21119  326
+4     140  163.05101  163
+5     105   81.52366   82
+6      35   40.74539   41
+7      12   20.38198   20
+8       6   10.16383   10
+9       5    5.09871    5
+10     NA    2.56239    3
+11      1    1.26939    1
+12     NA    0.63731    1
+13      1    0.31815    0
+14     NA    0.15812    0
+15     NA    0.08013    0
+The first column above is the empirical frequency of runs of length 1,2,3, etc. The second one is the average frequencies obtained on random simulation of independent sample. The third one is the theoretical frequency based on a (geometric distribution with mean 1).
+
+Here again, it looks like our time series behave like an independent sample. Here is also a nice paper by Mark Schilling on the longest run of heads.
+So it is not that odd to observe such a series of losses on financial markets...

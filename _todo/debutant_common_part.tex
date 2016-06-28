@@ -1,0 +1,47 @@
+\partieenonce{Personnalisation des données}
+
+\exequest Dans l'exemple qui suit, la première ligne permet d'ajouter des accents dans le programme. Autrement, le moindre accent provoque une erreur. Tous les langages de programmation manipulent les caractères comme s'ils étaient des nombres. Ainsi, si on crée la chaîne de caractères suivante~:
+
+\begin{verbatimx}
+# coding : latin-1    
+nom_prenom = "Xavier Dupré"
+\end{verbatimx}
+
+On peut récupérer la valeur numérique du caractère à la position~\codes{i} on écrivant~:
+
+\begin{verbatimx}
+i      = 3                       # i=3 mais on fait référence au 4ème caractère
+valeur = ord ( nom_prenom [i] ) 
+\end{verbatimx}
+
+En remplaçant le nom cité en exemple par votre prénom suivi de votre nom, quel résultat cela vous donne-t-il~? (0,5~point)
+
+
+\exequest La fonction \codes{len} retourne le nombre d'éléments d'un tableau ou la longueur d'une chaîne de caractères par exemple. En utilisant une boucle \codes{for}\footnote{On pourra aussi utiliser les fonctions \codes{len}, \codes{range} ou \codes{xrange}.}, écrire un mini-programme qui calcule la somme des valeurs des caractères de la chaîne de caractères utilisée à la question précédente. (1~point)
+
+\exequest Transformer le mini-programme précédent pour en faire une fonction qui retourne un entier~: (1~point)
+
+\begin{verbatimx}
+def somme_caractere (nom_prenom) :
+    ...
+    return ...
+\end{verbatimx}
+
+On suppose que la variable \codes{s} contient le résultat de la fonction précédente appliquée à votre nom prénom, les lignes suivantes vous donneront accès aux données à insérer dans votre programme pour la suite du tutoriel~:
+
+\begin{verbatimx}
+s   = somme_caractere ("Xavier Dupre") % 200
+url = "http://www.xavierdupre.fr/enseignement/tutoriels_data/tutoriel_%d.py" % s
+print url
+\end{verbatimx}
+
+On commence maintenant un nouveau programme en laissant celui-ci de côté. Le fichier téléchargé sera copié à côté de ce nouveau programme. En supposant que 99 soit le nombre sur lequel vous soyez tombé, le nouveau programme commencera par la ligne~:
+
+\begin{verbatimx}
+from tutoriel_99.py import *
+\end{verbatimx}
+
+Cette ligne permettra d'inclure les données utilisées.
+
+
+

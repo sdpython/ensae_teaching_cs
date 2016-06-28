@@ -1,0 +1,192 @@
+\input{../../common/livre_begin.tex}%
+\firstpassagedo{\input{../tutoriels/tutoriel_titre.tex}}
+\input{../../common/livre_table_begin2.tex}%
+%\firstpassagedo{\input{python_cours_chapter.tex}}
+
+\firstpassagedo{\chapter{Commencer à programmer}}
+
+
+\begin{xtutorial}{Levenshtein, Viterbi}{tutoriel_viterbi_cor}\label{tutoriel_viteri}
+
+\input{../tutoriels/consigne.tex}
+
+
+Ce tutoriel s'intéresse à des algorithmes non abordés lors des travaux pratiques. On se propose d'aborder la programmation dynamique\footnote{\httpstyle{http://fr.wikipedia.org/wiki/Programmation\_dynamique}} au travers de deux exemples. Ce concept cache une méthode d'optimisation qui revient relativement souvent. Ce tutoriel en présentera deux formes appliquées dans des contextes différents.
+
+
+
+\partieenonce{Partie 1 : Levenstein}
+
+La distance de Levenstein\footnote{\httpstyle{http://fr.wikipedia.org/wiki/Distance\_de\_Levenshtein}} est un algorithme qui permet de construire une distance entre deux séquences, ici des mots. On l'appelle aussi distance d'édition. Elle consiste à définir une transformation minimale permettant de passer d'un mot à un autre à partir de trois opérations simples~: suppression, addition ou substitution de caractères. Par exemple, l'utilisateur d'un moteur de recherche souhaite des résultats concernant \textit{restaurant} mais au lieu de cela, il a rentré \codes{rstairnts}.
+
+\begin{verbatimx}
+r   s t a i r   n t s 
+r e s t a u r a n t
+\end{verbatimx}
+
+En alignant les lettres entre elles, on construit une transformation qui permet de passer de l'un à l'autre~:
+\begin{itemize}
+\item ajout d'un \textit{e}
+\item substitution d'un \textit{i} par un \textit{u}
+\item ajout d'un \textit{a}
+\item suppression d'un \textit{s}
+\end{itemize}
+
+\medskip
+
+La distance d'édition est définie par le nombre d'opérations de la transformation minimale -~à savoir celle qui contient le moins d'opérations~-. Ici, on obtient~:~4 = 2~ajouts + 1~suppression + 1~substitution. La page \httpstyle{http://fr.wikipedia.org/wiki/Distance\_de\_Levenshtein} contient une description de l'algorithme qui permet de calculer cette distance~:
+
+\begin{verbatimx}
+entier DistanceDeLevenshtein(caractere chaine1[1..longueurChaine1],
+                             caractere chaine2[1..longueurChaine2])
+   // d est un tableau de longueurChaine1+1 rangées et longueurChaine2+1 colonnes
+   declarer entier d[0..longueurChaine1, 0..longueurChaine2]
+   // i et j itèrent sur chaine1 et chaine2
+   declarer entier i, j, coût
+ 
+   pour i de 0 à longueurChaine1
+       d[i, 0] := i
+   pour j de 0 à longueurChaine2
+       d[0, j] := j
+ 
+   pour i de 1 à longueurChaine1
+       pour j de 1 à longueurChaine2
+           si chaine1[i] = chaine2[j] alors coût := 0
+                                sinon coût := 1
+           d[i, j] := minimum(
+                                d[i-1, j  ] + 1,     // effacement
+                                d[i,   j-1] + 1,     // insertion
+                                d[i-1, j-1] + coût   // substitution
+                             )
+ 
+   retourner d[longueurChaine1, longueurChaine2]
+\end{verbatimx}
+
+\exequest Transcriver ce pseudo-code en programme \pythons et vérifier que l'on obtient bien une distance de 4 pour l'exemple cité. (2~points)
+
+\exequest On remplace la partie suivante~:
+
+\begin{verbatimx}
+           d[i, j] := minimum(
+                                d[i-1, j  ] + 1,     // effacement
+                                d[i,   j-1] + 1,     // insertion
+                                d[i-1, j-1] + coût   // substitution
+                             )
+\end{verbatimx}
+
+Par~:
+
+\begin{verbatimx}
+           e = d[i-1, j  ] + 1
+           i = d[i,   j-1] + 1
+           s = d[i-1, j-1] + coût
+           if s <= min (e,i) :                        # ligne A
+               d [i, j] := s
+               predecessor [i,j] = (i-1, j-1)
+           elif e < min (s,i) :
+               d [i, j] := e
+               predecessor [i,j] = (i-1, j)
+           else :
+               d [i, j] := i
+               predecessor [i,j] = (i, j-1)
+\end{verbatimx}
+
+En supposant que \codes{predecessor} a été initialisé comme il le fallait, que contient-il~? (1~point)
+
+\exequest Que contient \codes{predecessor[longueurChaine1, longueurChaine2]}~? (valeur numérique attendue) (1~point)
+
+
+\exequest En déduire (et implémenter) un moyen de construire la séquence d'opérations qui permet de passer du premier mot au second~? (2~points)
+
+
+
+\partieenonce{Partie 2 : dés pipés, simulation d'un tirage}
+
+On dispose de trois dès pipés dont les probabilités de sortie de chacune des faces sont~:
+
+\begin{center}\begin{tabular}{l|lll|lll} 
+face & 1 & 2 & 3 & 4 & 5 & 6  \\ \hline
+dé 1 & 0.1 & 0.2 & 0.3 & 0.1 & 0.1 & 0.2 \\ 
+dé 2 & 0.3 & 0.1 & 0.1 & 0.1 & 0.1 & 0.3 \\ 
+dé 3 & 0.1 & 0.2 & 0.2 & 0.2 & 0.1 & 0.2 
+\end{tabular}\end{center}
+
+On commence par le dé 1. Au lancer suivant, on choisit~:
+\begin{itemize}
+\item le dé 1 si le nombre sorti est 1 ou 2,  
+\item le dé 2 si le nombre sorti est 3 ou 4,  
+\item le dé 3 si le nombre sorti est 5 ou 6,  
+\end{itemize}
+
+On effectue trois tirages et on se demande quelle est la séquence de trois chiffres la plus probable. On procède d'abord empiriquement.
+
+\exequest Ecrire une fonction qui tire un nombre aléatoire entre 1 et 6 selon un vecteur de six probabilités déterminées à l'avance. On utilisera la fonction \codes{randint} du module \codes{random} (on pourra utiliser la fonction de répartition d'une variable aléatoire discrète). (2~points)
+
+\exequest Créer une fonction qui simule une séquence de trois tirages consécutifs en suivant les règles décrites en introduction. (1~point) 
+
+\exequest Générer 10000 tirages et compter le nombre de fois qu'apparaît chaque séquence. (1~point)
+
+\exequest Quelle est la probabilité de la séquence~666~? (1~point)
+
+\exequest Ecrire une fonction qui détermine la séquence la plus probable. (1~point)
+
+
+
+
+
+
+
+\partieenonce{Partie 3 : matrice de transition}
+
+
+On définit une matrice $6\times6$ notée $A_{ij}$ ou matrice de transition.
+
+\begin{center}\begin{minipage}{10cm}
+$a_{ij}$ est la probabilité d'obtenir le nombre $j$ au second tirage sachant qu'on le premier tirage était~$i$.
+\end{minipage}\end{center}
+
+\exequest Démontrer que la probabilité ne change pas lorsqu'on passe du second tirage au troisième. (1~point)
+
+
+
+
+\partieenonce{Partie 4 : Viterbi}
+
+
+L'algorithme de Viterbi repose sur la constatation suivante~: si on note la $S_t(i)$ la probabilité de la séquence la plus probable de $t$ tirages se terminant par~$i$ alors au tirage $t+1$, on vérifie que~:
+
+\begin{eqnarray}
+S_{t+1}(j) &=& \max_{i} S_t(i) a_{ij}
+\end{eqnarray}
+
+\exequest Que vaut $S_0(i)$~? (1~point)
+
+
+
+\exequest Ecrire une fonction qui calcule $S_{t+1}(j)$ pour tout $j$ si on suppose connu $S_{t}(i)$ pour tout $i$.  (2~points)
+
+\exequest Quelle est la probabilité de la séquence de trois tirages la plus probable et quelle est son dernier chiffre~? On pourra s'intéresser à ce que vaut $\max_i S_3(i)$. (1~point)
+
+\exequest En vous inspirant de la première partie, écrire une fonction qui retourne la séquence la plus probable (et pas seulement sa probabilité ni son dernier chiffre~?) (2~points)
+
+
+\exequest On suppose maintenant qu'on lance 10 fois les dés, toujours en suivant la règle qui détermine le dé utilisé au tirage suivant. Parmi les deux méthodes présentées (parties 2 et 4), quelle est celle que vous préconisez pour déterminer la séquence la plus probable et pourquoi~? (1~point)
+
+
+
+
+
+\end{xtutorial}
+
+
+\begin{xtutorialcor}{tutoriel_viterbi}\label{tutoriel_viterbi_cor}
+
+
+\inputcode{../tutoriels/solution/viterbi/correction_viterbi.py}{distance de Levenstein et Viterbi}
+
+
+\end{xtutorialcor}
+
+
+\input{../../common/livre_table_end.tex}%
+\input{../../common/livre_end.tex}%

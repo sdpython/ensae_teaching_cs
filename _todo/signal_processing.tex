@@ -1,0 +1,165 @@
+\input{../../common/exo_begin.tex}%
+
+\begin{xexempleprog}{Filtrage d'un signal sonore}{exemple_signal_fourier_cor}\label{exemple_signal_fourier}
+
+\indexfr{CD}\indexfr{compact disque}\indexfr{son}\indexfr{compression}\indexfr{MP3}
+Un signal sonore est une série temporelle où chaque valeur est une amplitude qui définit le son pendant une très courte durée -~quelques dizaines de microsecondes~- (voir la figure~\ref{exemple_signal}). Cette information est celle qu'on trouve sur des supports numériques comme le compact disque. Les algorithmes de compression condensent cette information en minimisant la dégradation du son. Via des formats de codage tels que le format MP3, le son peut être stocké sous une forme compressée. Compressé, le son peut aussi voyager plus facilement. La téléphonie mobile utilise sans cesse des algorithmes de compression afin de réduire les coûts de transmission.
+
+\subsubsection{Transformée de Fourier discrète}\label{fourier_transformeee_lentre}
+\indexfrr{transformée de Fourier}{discrète}
+
+\indexfr{Fourier}
+La transformée de Fourier est une des méthodes utilisée pour compresser le son. Le son est composé d'ondes, sa nature se prête bien à sa décomposition en somme de fonctions sinusoïdales. La transformée de Fourier discrète permet de décomposer une série temporelle de période $T$, $\vecteur{Y_0}{Y_{T-1}}$~:
+
+
+				\begin{eqnarray}
+				\forall t \supegal 0, \; Y_t = \frac{1}{T} \; \summy{n=0}{T-1} \widehat{Y_n} \exp\pa{\frac{2i \pi t n}{T}}
+				\end{eqnarray}
+				
+Les coefficients $\pa{\widehat{Y_n}}_n$ sont calculés comme suit~:
+
+				\begin{eqnarray}
+				\forall t \supegal 0, \;  \widehat{Y_p} = \summy{n=0}{T-1} Y_n \exp\pa{ - \frac{ 2 i \pi p n}{T}}
+				\end{eqnarray}
+				
+\indexfrr{algorithme}{coût}
+Le calcul des coefficients nécessite $N^2$ additions et multiplications complexes. 
+
+
+
+
+
+\subsubsection{Transformée de Fourier rapide}
+\indexfrr{transformée de Fourier}{rapide}\indexfr{FFT}\indexfr{Fast Fourier Transform}
+
+La transformée de Fourier rapide ou Fast Fourier Transform (FFT) permet de calculer les coefficients de la transformée en un coût de $O(T \ln T)$ au lieu de $O(T^2)$ comme le suggère le paragraphe~\ref{fourier_transformeee_lentre}. L'algorithme est itératif, on calcule des transformée de Fourier sur des échantillons de taille croissante jusqu'à obtenir les coefficients de la transformée de Fourier sur l'échantillon initiale. On considère la série temporelle $\vecteur{Y_0}{Y_{T-1}}$, on suppose que $T$ est paire et $T = 2R$.
+
+				\begin{eqnarray}
+				\forall t \supegal 0, \;  \widehat{Y_p} &=& \summy{n=0}{T-1} Y_n \exp\pa{ - \frac{ 2 i \pi p n}{T}} \nonumber \\
+				 &=& \summy{n=0}{R-1} Y_{2n} \exp\pa{ - \frac{ 2 i \pi p (2n)}{2R}} + 
+				  	 \summy{n=0}{R-1} Y_{2n+1} \exp\pa{ - \frac{ 2 i \pi p (2n+1)}{2R}} \nonumber \\
+				 &=& \summy{n=0}{R-1} Y_{2n} \exp\pa{ - \frac{ 2 i \pi p n}{R}} + 
+				  	 \exp\pa{- \frac{2i \pi p}{2R}} \summy{n=0}{R-1} Y_{2n+1} 
+				  	 \exp\pa{ - \frac{ 2 i \pi p (2n)}{2R}} \nonumber \\
+				 &=& \summy{n=0}{R-1} Y_{2n} \exp\pa{ - \frac{ 2 i \pi p n}{R}} + 
+				  	 \exp\pa{- \frac{2i \pi p}{2R}} \summy{n=0}{R-1} Y_{2n+1} \exp\pa{ - \frac{ 2 i \pi p n}{R}}  \label{fft_eq1}
+				\end{eqnarray}
+
+On construit les deux sous-suites extraites de la suite $\vecteur{Y_0}{Y_{T-1}}$. $T$ est toujours pair, $T = 2R$. La première suite contient les termes pairs $\pa{Y_{2t}}_{0 \infegal t < R}$, la seconde contient les termes impairs, $\pa{Y_{2t+1}}_{0 \infegal t < R}$. Pour ces deux sous-suites, on calcule la transformée de Fourier pour obtenir les coefficients de la série paire $\pa{\widehat{Y^a_p}}_{0 \infegal t < R}$ et de la série impaire $\pa{\widehat{Y^b_p}}_{0 \infegal t < R}$. L'équation (\ref{fft_eq1}) peut être écrite sous la forme~:
+
+				\begin{eqnarray}
+				\forall t \supegal 0, \;  \widehat{Y_p} &=& \left\{ \begin{array}{ll}
+													\widehat{Y^a_p} + \exp\pa{- \frac{2i \pi p}{2R}} \widehat{Y^b_p} 
+																		& \text{si } 0 \infegal p < R \\
+													\widehat{Y^a_{R-p}} + \exp\pa{- \frac{2i \pi p}{2R}} \widehat{Y^b_{R-p}} 
+																		& \text{si } R \infegal p < 2R \\
+													\end{array} \right.  \label{fft_eq2}
+				\end{eqnarray}
+
+Si on suppose que $T$ est une puissance de deux, $T = 2^q$, il est possible de réitérer ce calcul de manière récursive jusqu'à obtenir des sous suites de deux valeurs. Et à chaque étape, l'expression (\ref{fft_eq1}) utilise $T$ additions et multiplications. Le coût global du calcul de la transformée de Fourier est en $O\pa{T \log_2 T}$. Ce gain est très intéressant lorsqu'on fait du traitement du signal en temps réel. 
+
+Le livre \citeindex{Mallat2000} dresse sommairement le portrait de la transformée de Fourier rapide, il fait référence au livre \citeindex{Nussbaumer1982} ou encore à l'article \citeindex{Duhamel1990} qui s'intéresse particulièrement à ce sujet car il existe des variantes plus rapide encore de la transformée de Fourier rapide.
+
+
+
+
+\subsubsection{Filtrage}
+\indexfr{filtrage}
+
+\indexfrr{filtre}{passe-haut}\indexfrr{filtre}{passe-bas}
+La méthode de filtrage proposée est assez simple. 
+
+		\begin{enumerate}
+		\item On décompose tout d'abord le signal sonore avec la transformée de Fourier rapide. 
+		\item On élimine ensuite une partie des coefficients. Un filtre passe haut éliminera les fréquences basses, un filtre passe-bas éliminera les hautres fréquences. On peut choisir de conserver uniquement les fréquences pour lesquels les coefficients $\widehat{Y_n}$ sont de module élevé. 
+		\item Cette étape terminée, on recompose le signal avec les coefficients restants.
+		\end{enumerate}
+
+\indexfr{compression}
+L'objectif de la compression est de supprimer le plus de coefficients sans trop dégrader le signal lors de sa recomposition. Pour des signaux longs -~une conversion téléphonique par exemple~-, il est impossible de traiter l'ensemble du signal. C'est pourquoi, on découpe la série temporelle en petits segments de longueur fixe, on applique le processus décrit ci-dessus sur chacun des segments. Cette étape est appelée \emph{échantillonnage}. On choisira de préférence des segments de longueur une puissance de deux, 256 ou 512 par exemple, ils correspondent à des signaux sonores de 10 ou 20 millisecondes. La longueur des échantillons est souvent choisie en fonction des capacités de calcul. L'échantillonnage limite l'estimation des coefficients associés aux basses fréquences, ceci a pour conséquence que l'estimation des coefficients associés aux hautes fréquences est elle aussi faussée. Ce phénomène est appelé \indexfr{aliasing}\emph{aliasing}. On dit que les hautes fréquences se replie sur les basses fréquences. Ce phénomène a tendance à produire des discontinuités entre deux segments lorsque le signal est reconstitué. Pour corriger ce phénomène, le signal est souvent modifié ou modulé avant d'être échantillonné. \indexfr{modulation de fréquence}
+
+
+
+
+\subsubsection{Horizons}
+
+\indexfr{propagation de la chaleur}
+La transformée de Fourier date du début du XVIII$^\circ$ siècle, à l'époque de Napoléon (voir \citeindex{Math2000}). Fourier essayait de prévoir la propagation de la chaleur dans les corps solides. Il eut l'idée de cette décomposition en 1807 et la publia sous une forme achevée en 1822 dans son livre intitulée \textit{Théorie analytique de la chaleur}. Fourier y affirmait que toute fonction, éventuellement discontinue, pouvait être décomposée sous la forme d'une somme de fonctions sinusoïdales. Fourier ne démontrait pas la convergence de sa série, problème qui trouva sa solution à la fin du XIX$^\circ$ siècle lorsque lord Kelvin inventa un calculateur mécanique permettant de prévoir la hauteur des marées. \indexfr{Kelvin}
+
+\indexfr{Gibbs}
+De grands noms jalonnent l'histoire de l'analyse de Fourier comme Josiah Willard Gibbss qui se pencha sur le problème de la convergence de la série de Fourier en un point de discontinuité en 1899. Laurant Schwartz au milieu du XX$^\circ$ siècle rapprocha l'analyse de Fourier avec la théorie de la distribution. \indexfr{Schwartz} James Cooley inventa en 1965 la transformée de Fourier rapide. \indexfr{Cooley} Cette théorie a permis aussi de découvrir la structure de l'ADN, utilisée pour décrypter la diffraction des rayons~X.\indexfr{diffraction}
+
+\indexfr{Hartley}\indexfr{transformée de Hartley}
+Entre les deux guerres, Hartley émit l'idée que l'homme localisait la provenance d'un son grâce au déphasage relatif des ondes atteignant ses deux oreilles. Ses recherches aboutirent à la transformée de Hartley, qui décompose elle-aussi une fonction réelles en somme de fonctions sinusoïdales sans recourir aux nombres complexes.
+
+				\begin{eqnarray}
+				\forall t \in \N \cap \cro{-T+1,T-1}, \;  
+					\widehat{Y_t^H} = \summy{n=0}{T-1} Y_n \cro{ \cos{ \frac{ 2 i \pi k n}{N}}
+																				+ \sin{ \frac{ 2 i \pi k n}{N}} }
+				\end{eqnarray}
+
+
+Les coefficients de la transformée de Fourier peuvent se déduire de ceux obtenus pour la transformée de Hartley qui présente l'avantage d'être plus rapide à calculer. Il existe également une version rapide de la transformée de Hartley mise au point en 1984 (voir \citeindex{Bracewell1986}).
+
+
+\end{xexempleprog}
+
+
+
+\begin{xexempleprogcor}{exemple_signal_fourier}\label{exemple_signal_fourier_cor}
+
+
+Le programme suivant filtre un signal sonore. Il décompose le signal à l'aide d'une transformée de Fourier discrète puis le recompose après qu'une partie de son spectre a été enlevée. Les figures~\ref{exemple_signal} et~\ref{exemple_fourierl} illustrent les signaux originaux et modifiée ainsi que le spectre du signal pour un court extrait du signal sonore choisi au milieu du \codes{sound10.wav}. Les moyennes fréquences ont été conservées, intervalles $\cro{20,30}$.
+
+
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|c|c|}\hline
+    		\includegraphics[height=8cm, width=17cm]{\filext{../python_cours_exemple/image/signal}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Signal original et signal filtrée. Les basses et hautes fréquences ont été enlevées.
+    							Le spectre correspond est donné par la figure~\ref{exemple_fourierl}.}
+    		\label{exemple_signal}
+    		\end{figure}
+
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|c|c|}\hline
+    		\includegraphics[height=6cm, width=6cm]{\filext{../python_cours_exemple/image/fourier}} 	\\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Transformée de Fourier du signal de la figure~\ref{exemple_signal}. }
+    		\label{exemple_fourierl}
+    		\end{figure}
+
+
+\indexfrr{module}{pygame}
+\indexfrr{module}{FFT}
+\indexfrr{module}{math}
+\indexfrr{module}{Numeric}\indexfrr{module}{numarray}
+\indexfrr{module}{math}
+\indexfrr{module}{string}
+\indexfrr{module}{biggles}
+\indexfrr{module}{copy}
+\indexfrr{module}{scipy}
+\indexfrr{fonction}{fft}
+
+La principale fonction du programme est la fonction \codes{filtre\_son\_extrait} qui décompose un signal par l'intermédiaire de la fonction \codes{fft} du module \codes{Numeric.FFT}. Le signal est filtré, seules sont conservées les fréquences comprises entre $a$ et $b$. Puis le signal est recomposé grâce à la fonction \codes{inverse\_fft}.
+
+La fonction \codes{filtre\_son} se contente de découper le signal par période de longueur \codes{div} puis envoie chaque segment à la fonction précédemment décrite. Les autres fonctions effectuent les tâches annexes, lire un fichier contenant un signal sonore, le jouer, afficher un segment, afficher les coefficients de sa décomposition.
+
+
+
+
+
+\inputcode{../python_cours_exemple/programme/exemple_fourier.py}{filtrage d'un signal sonore}
+
+\end{xexempleprogcor}
+
+\firstpassagedo{
+	\newpage
+	\begin{thebibliography}{99}
+	\input{python_cours_exemple_biblio.tex}
+	\end{thebibliography}
+}
+
+\input{../../common/exo_end.tex}%

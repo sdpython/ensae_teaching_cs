@@ -1,0 +1,60 @@
+Pendant nos vacances dans l'Aubrac avec des amis, Christian avait acheté Libé, et machinalement, j'ai entrepris de le survoler le lendemain matin (en sirotant mon café). Je suis tombé sur le paragraphe suivant qui a retenu mon attention pendant plusieurs jours...
+
+L'auteur n'est pas n'importe qui, puisqu'il s'agit de Kenneth Rogoff (ici), grand spécialiste de l'économie américaine. Relisons la phrase afin de mieux comprendre ce qu'il dit: pour "25% des propriétaires immobiliers aux États-Unis" [...] "la valeur de leur maison serait inférieure à leur crédit immobilier" 1. Je me permettrais de réécrire la phrase sous la forme suivante "pour un quart des propriétaires immobiliers américains n'ayant pas fini de rembourser leur crédit, la vente de leur maison ne leur permettrait pas de rembourser leur crédit" (c'est en tous les cas comme ça que je la comprends).
+Cette petite phrase pourrait être intéressante, En tous les cas, elle semble importante dans l'argumentation visant à expliquer que les américains sont beaucoup trop endettés2. Mais 25%, en quoi est-ce vraiment exceptionnel ou incroyable voire inquiétant ? C'est quoi le pourcentage acceptable ou normal que l'on s'attendrait à avoir ? 
+N'ayant pas de statistiques sur le sujet, faisons des calculs.
+un peu de calcul d'actualisation de crédits
+Car intuitivement, si un acheteur emprunte avec un faible apport, et sur une longue durée, son crédit va lui coûter cher, éventuellement plus cher que la maison. Au moins au début. Car avec le temps, la valeur du crédit diminue, alors que le prix de la maison, habituellement, augmente.
+Considérons une maison de valeur 1 (a l'achat, histoire de simplifier, et de raisonner en pourcentage pour l'apport initial, par exemple). On dispose d'un capital initial  (correspondant à l'apport), on contracte un crédit pour une durée , et on suppose que le taux pour le crédit est , et que le taux d'inflation est (la valeur de la maison peut augmenter dans le temps, mais aussi éventuellement baisser si la valeur de  est négative). A la date , à son actif, le propriétaire possède la maison, d'une valeur  (ce qu'il touche s'il revend la maison, si l'on oublie les frais associés); et au passif, il doit rembourser à la banque un montant , où  est le montant des remboursement effectues tous les ans, i.e. solution de
+
+Si on veut faire les choses proprement, il faudrait intégrer les frais de notaire (disons 7% de la valeur de la maison), ici notés ,
+
+La valeur de la maison est inférieure à la valeur du crédit si
+
+(les frais de notaires étant payés à l'achat comme on l'évoquait auparavant, mais aussi en cas de revente3). On peut faire le calcul facilement, sous R,
+valeur = function(t,T,a,r=.05,i=0,delta=.07){
+k=(1-a+delta)/sum(1/(1+r)^(0:(T-1)))
+s=(1+i)^t
+v=(T-t)*k
+return(c(s*(1-delta),v))}
+Par exemple, si  est nul, on compare la valeur du crédit à la valeur de la maison au moment de l'achat. Pour quelqu'un ayant un apport de 25%, prenant un crédit avec 20 échéances (sur 20 ans) que l'on commence à rembourser le jour de la signature, la valeur de son crédit (sur une somme empruntée de 0.75) est de 1.2533, environ, si le taux de crédit est de l'ordre de 5%. C'est plus que la valeur (brute) de la maison (ici 1), voire beaucoup plus que ce que rapporterait la revente la maison, qui rapporterait 0.93, ce qui ne lui permet pas de rembourser le crédit....
+> valeur(0,20,.25,.05,0)
+[1] 0.9300 1.2533
+Sur la même durée, vu après la 5ieme échéance (i.e. au bout de 25% des échéances) avec toujours un apport initial de 25%, la valeur du crédit restant à payer à la banque est de l'ordre de 0.94, c'est à dire à peu de choses près, la valeur de revente de la maison s'il n'y a pas d'inflation (ou de perte de valeur du bien immobilier).
+> valeur(5,20,.25,.05,0)
+[1] 0.9300000 0.9399846
+Autrement dit, dans un monde avec une inflation nulle, avec des cohortes d'acheteurs constantes dans le temps, qui prendraient des crédits de 20 ans avec un apport de 25% de la valeur de la maison, 25% des emprunteurs ont, en moyenne, un crédit à rembourser supérieur à la valeur de revente de leur maison, comme le dit l'article. Cette proportion augment
+quand les taux d'emprunt augmentent
+quand la durée des emprunts augmente
+quand l'apport initial diminue
+Mais on peut essayer de visualiser tout ça,
+visualisation des valeurs du crédit, et de la maison
+dessin=fonction(T=20,a=.333,r=.05,i=.02,delta=.07){
+S=V=rep(NA,T)
+for(j in 1:T){
+S[j]=valeur(j-1,T,a,r,i)[1]
+V[j]=valeur(j-1,T,a,r,i)[2]}
+YL=range(S,V)
+plot(1:T-.5,V,type="b",col="red",ylim=YL)
+lines(1:T-.5,S,col="blue",type="b")
+}
+Comme on le voit sur le dessin ci-dessous, la proportion des acheteurs dont la valeur du crédit excède la valeur de la maison est d'environ 20% (même avec un apport non négligeable, ici un tiers, et une inflation non nulle, ici 2%). On le voit sur le graphique ci-dessous, avec en bleu la valeur de la maison, et en rouge, la valeur du crédit,
+
+On peut d'ailleurs faire varier les différents paramètres, comme le taux d'emprunt, avec une baisse (passant de 5% à 3%),
+
+ou avec une hausse (passant de 5% à 7%),
+
+On peut aussi faire varier l'apport initial (passant à 50%),
+
+On peut enfin supprimer l'inflation, et supposer que le prix de la maison n'augmente pas vraiment...
+
+Moralité? 25% semble effectivement important, trop important (pour une économie en bonne santé). Mais il ne faut pas se leurrer, car un pourcentage raisonnable (ou viable) semblerait être davantage aux alentours de 15% que de 0%.
+du crédit immobilier au crédit automobile
+Et cela dit, 25% serait un pourcentage relativement faible si on regardait non pas les crédit immobiliers, mais les crédit automobiles. Car par rapport à la situation précédente, on est dans un cas où les taux sont élevés, et où la valeur du bien ne cesse de se dégrader. Par contre la durée est souvent plus courte. Une déflation de 10% n'est peut-être pas la meilleure modélisation qui soit de la perte de valeur du véhicule, mais en première approximation, ça devrait convenir,,,
+Graphiquement, on a
+
+Bref, dans le cas du crédit auto (où l'acheteur achèterait intégralement à crédit), dans une situation normale entre 70% et 80% des acheteurs de voiture à crédit sont dans une situation où la revente de leur voiture ne permettrait pas de rembourser leur crédit... Ne faudrait-il pas s'en inquiéter également ? Acheter à crédit un bien dont la valeur ne cesse de baisser, n'est-ce pas dangereux ?
+ 
+1 au début de l’été, en discutant avec des couples d'amis, dont deux venaient d'avoir des postes de profs à l'autre bout de la France (et qui devaient revendre leur maison), j'ai été surpris de voir que quand ils parlaient de "ne pas perdre d'argent lors de la revente", ils valorisaient la maison à partir du prix initial, auquel ils ajoutaient les frais de notaires, mais oubliaient le coût du crédit.
+2 je me contenterais ici de discuter ce chiffre de 25%, et non pas de savoir si c'est grave que la revente de la maison ne permette pas de rembourser le crédit. 
+3 je préfère prendre en compte ces frais, car sinon, comme je l'avais déjà évoqué ici, l'achat d'une maison semble toujours une opération gagnante. 

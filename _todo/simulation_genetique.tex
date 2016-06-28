@@ -1,0 +1,81 @@
+\input{../../common/exo_begin.tex}%
+
+\begin{xexempleprog}{Gênes porteurs de maladie, simulation de la consanguinité}{exemple_genes_cor}\label{exemple_genes}
+\indexfr{gêne}\indexfr{consanguinité}\indexfr{Courrier International}\indexfr{Finlande}\indexfr{The Independent}
+
+L'article qui suit est extrait du \textit{Courrier International} daté du Jeudi 16 septembre 2004 qui reprend un article du journal \textit{The Independent}. Il concerne une province finlandaise dont la population est en grande partie issue d'un noyau de 40 à 60 familles qui vivaient là au XVI$^e$ siècle. Quelques siècles plus tard, la fréquence de certaines maladies est anormalement élevée.
+
+\begin{center}\begin{minipage}{14cm}
+"La population de l'est de la Finlande est bien connue pour être malade", note The Independent. Dans cette région isolée, on constate non seulement l'un des plus forts taux de maladies cardio-vasculaires au monde, mais aussi des taux anormalement élevés de diabète, de schizophrénie et de dépression, énumère le quotidien britannique. Alors que la mortalité infantile y est l'une des plus faibles au monde, dès que les gens atteignent la quarantaine, "leur espérance de vie est bien inférieure à celle des autres Européens".
+
+Cette spécificité régionale intrigue la communauté scientifique depuis plus de vingt ans. Certains croyaient tenir l'explication en pointant les mauvaises habitudes alimentaires des Finlandais, ainsi que leur consommation d'alcool. En effet, "alors qu'en moyenne ils boivent moins que les Français ou les Italiens, par exemple, ils consomment de grandes quantités d'alcool en peu de temps, et ce dans un seul but~: se soûler".
+
+Mais la véritable explication de la mauvaise santé de cette population serait d'ordre génétique. Descendant d'un tout petit groupe de colons installés dans la région au XVIe siècle par le roi de Suède -~"les historiens estiment qu'il s'agissait de 40~à~60~familles", précise The Independent~-, les habitants de la région ont ensuite pratiqué des mariages consanguins pendant plusieurs centaines d'années. "Cela veut dire que les Finlandais de l'Est possèdent aujourd'hui des traits génétiques extraordinairement homogènes."
+
+Cette homogénéité "s'est maintenue pendant des siècles parce que très peu de gens ont immigré dans la région". Autrement dit, "l'isolement géographique, religieux et linguistique des Finlandais de l'Est a abouti à un héritage génétique commun" qui en fait "un matériau parfait pour la science", explique le quotidien. Et, de fait, les chercheurs ont déjà identifié 31~gènes différents qui seraient impliqués dans des pathologies caractéristiques de la région. Selon une scientifique de l'université d'Helsinki, chaque habitant est porteur d'au moins un de ces gènes. 	
+\end{minipage}\end{center}
+
+\indexfr{simulation numérique}
+Comment pourrait-on reproduire en \pythons cette micro-population~? 
+
+L'ensemble des chromosomes d'une personne est réduit à un gêne récessif porteur d'une maladie. Chaque personne est définie par un couple de booléen $\pa{b_1,b_2}$. Si $b_1 = b_2 = true$ alors la personne porteuse de ce couple tombera malade. Si $b_1 \neq b_2$, la personne sera dit porteuse. Dans le dernier cas, la personne sera considérée comme saine. Pour simplifier, on suppose que la population de départ contient 40 couples qui ont à chaque génération un garçon et une fille. Chaque enfant prendra au hasard un gêne de sa mère et un gêne de son père. A la génération suivante, les enfants forment des couples au hasard et ont à leur tour des enfants tandis que leurs parents ont à nouveau des enfants. Chaque couple ne peut avoir d'enfants que pendant deux générations. La population évolue presque (sans tenir compte des malades) comme la suite de Fibonacci\footnote{La suite de Fibonacci\indexfr{Fibonacci} (ou Léonard de Pise,\indexfr{Léonard de Pise} son vrai nom) répond au \emph{problème des lapins}~: "Possédant au départ un couple de lapins, combien de couples de lapins obtient-on en douze mois si chaque couple engendre tous les mois un nouveau couple à compter du second mois de son existence~?". La réponse débouche sur la suite dite de Fibonacci définie par récurrence~: $u_n = u_{n-1} + u_{n-2}$. Au mois $n$, la population est égale à la population du mois précédent $n-1$ et les enfants du mois $n-2$. Ce mathématicien a réuni dans son livre \emph{Liber Abacci}, écrit en 1202, l'ensemble des connaissances mathématiques de l'époque, notamment le signe zéro venu d'Inde à travers l'Orient, secoué par les Croisades. Pendant cette période, les marchands pisans, génois, vénitien, suivirent les soldats et étendirent leur zone d'influence aux ports de la Méditerrannée et de la mer Noire. "Alors qu'il était jeune garçon, son père, qui dirigeait pour le compte de l'Ordre des Marchands de Pise, le bureau des douanes de Bougie en Algérie, le rappela près de lui et lui fit suivre les meilleurs cours sur les méthodes de calcul indo-arabes. C'est ainsi qu'il s'initia aux mathématiques~; lors de ses fréquents voyages professionnels pour le compte des marchands pisans, il rencontrait des mathématiciens en Egypte, en Syrie, en Provence, en Grèce, et en Sicile. Il en relevait au cours de \textit{disputes}, des défis mathématiques et étudiait en profondeur les \textit{Eléments} d'Euclide qu'il a toujours considérés comme un modèle de style et de rigueur logique.", extrait de \textit{Les mathématiciens}, collection Bibliothèque scientifique, Belin pour la science. Son livre servit de référence à l'enseignement des mathématiques pendant près de trois siècles.}~:
+
+			\begin{center}$\begin{array}{rcl}
+			u_0 &=& 40 \\
+			u_1 &=& 80 \\
+			u_2 &=& 120 = u_1 + u_0 \\
+			&...& \\
+			u_n &=& u_{n-1} + u_{n-2}
+			\end{array}$\end{center}
+			
+Si on suppose qu'il existait à la première génération, un porteur du gêne récessif, comment évolue par la suite la proportion de malades, de porteurs du gêne récessif et de personnes saines~?
+				
+
+
+
+
+
+\end{xexempleprog}
+
+
+
+\begin{xexempleprogcor}{exemple_genes}\label{exemple_genes_cor}
+
+La figure~\ref{exemple_finlandais1} présente les résultats d'une simulation. Au début, une seule personne parmi~80 est porteuse du gêne de la maladie. On suppose que les mariages sont consanguins pour la plupart. Selon l'article, ces maladies ne surviennent qu'à un âge avancé. Il est fort probable qu'elles soient longtemps passées inaperçues. Il n'est pas absurde que des personnes malades aient eu des enfants tout autant que les personnes saines. 
+
+Les résultats obtenus peuvent être assez variables d'une simulation à l'autre. Ceci est dû au fait que la première génération ne contient qu'un seul porteur du gêne. Ce gêne peut tout-à-fait disparaître après quelques générations ou se répandre très rapidement. Mais après quelques génération, la progression se statibilise. Il serait néanmoins nécessaire d'agréger les résultats de plusieurs simulations pour obtenir des estimateurs fiables de la population finale. Pour cette simulation, à peu près 1,6 \% de la population est porteuse de gêne déficient. Cela paraît peu en comparaison des conclusions de l'article mais il faudrait étoffer cette maquette informatique avec 31 gêne et non plus un seul.
+
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|c|c|}\hline
+    		\includegraphics[height=5.5cm, width=5.5cm]{\filext{../python_cours_exemple/image/fin11}} &
+    		\includegraphics[height=5.5cm, width=5.5cm]{\filext{../python_cours_exemple/image/fin12}} &
+    		\includegraphics[height=5.5cm, width=5.5cm]{\filext{../python_cours_exemple/image/fin13}} 
+    		\\ \textit{(a)} & \textit{(b)} & \textit{(c)}\\ \hline
+    		\end{tabular}\end{center}
+    		\caption{	Simulation de la progression du gêne malade. L'image (a) montre l'évolution de 
+    							la population et des personnes non porteuses du gênes. L'image (b) montre l'évolution
+    							des porteurs et des malades. L'image (c) montre l'évolution de ces mêmes populations
+    							mais rapportées à la population globale. On suppose que les mariages sont 
+    							consanguins à 60\%, et que les malades ont des enfants pendant deux générations.
+    							La première génération contient 80 personnes dont une porteuse du gêne. 
+    							La population finale est composée de 
+    							six millions de personnes dont 78710 porteurs du gêne et 18903 malades, soit
+    							respectivement 1,3\% et 0,3\% de la population. Ces deux chiffres semblent 
+    							se stabiliser.}
+    		\label{exemple_finlandais1}
+    		\end{figure}
+    		
+
+
+\end{xexempleprogcor}
+	
+
+\firstpassagedo{
+	\newpage
+	\begin{thebibliography}{99}
+	\input{python_cours_exemple_biblio.tex}
+	\end{thebibliography}
+}
+
+\input{../../common/exo_end.tex}%

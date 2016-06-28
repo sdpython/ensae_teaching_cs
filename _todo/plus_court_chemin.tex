@@ -1,0 +1,491 @@
+\input{../../common/livre_begin.tex}%
+\firstpassagedo{\input{../python_cours_exemple/python_petitcours_titre.tex}}
+\input{../../common/livre_table_begin2.tex}%
+%\firstpassagedo{\input{python_cours_chapter.tex}}
+
+
+\begin{xexempleprog}{Plus court chemin dans un graphe}{exemple_court_chemin_cor}\label{exemple_court_chemin}
+\indexfrr{graphe}{plus court chemin}
+La figure~\ref{exemple_plus_court_chemin} représente un mini réseau routier. Chaque n\oe ud désigne une ville tandis que chaque arc dissimule une route reliant deux villes ainsi que sa longueur. Comment définir une méthode qui permette dans tous les cas de déterminer le chemin entre deux n\oe uds d'un graphe~?
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|}\hline
+    		\includegraphics[height=8cm, width=11cm]{\filext{../python_cours_exemple/image/courtch}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{ Chaque n\oe ud de ce graphe symbolise une ville tandis que chaque arc
+    							symbolise une route et sa distance. On cherche à savoir quelle est 
+    							le chemin de plus court pour relier les villes numéro~0 et numéro~4.}
+    		\label{exemple_plus_court_chemin}
+    		\end{figure}
+
+On définit un graphe $G$ par le couple $G = (X,E)$ où $X$ est l'ensemble des sommets du graphe, et $E$ celui de ses arêtes. Appliqué au graphe de la figure~\ref{exemple_plus_court_chemin}, cela donne~:
+
+			\begin{eqnarray}
+			X &=& \acc{ 0, 1, ..., 14 } \nonumber \\
+			E &=& \{  (0,1), (0,2), (0,8), \; (1,2), (1,3), \; (2,3), \; (3,7), (3,8), (3,10), \; (4,5), (4,12), (4,13) \;
+													 \nonumber \\
+					&&			(5,14), \; (6,10), (6,11), (6,13), (6,14), \; (7,8), (7,10), (7,11), \; (8,9) \; \nonumber \\
+					&&			(9,12), \; (11,12), (11,14) \} \label{graphe_description_E}
+			\end{eqnarray}
+			
+\indexfrr{graphe}{orienté}\indexfrr{graphe}{non-orienté}
+Les arcs sont souvent pondérés comme ici puisque à chaque arc est associée la distance séparant deux n\oe uds ou plus généralement la valeur d'une fonction $f : E \longrightarrow \R$. Il s'agit de déterminer le chemin le plus court ou celui de poids minimum, c'est-à-dire que la somme des valeurs de la fonction~$f$ associées à chaque arc du chemin doit être minimum.
+
+Le graphe de la figure~\ref{exemple_plus_court_chemin} est supposé non-orienté puisque chaque route qui relie deux villes peut être parcourue dans un sens ou dans l'autre. Un graphe orienté n'autorise le parcours d'un arc que dans un sens, comme les rues en sens interdit dans une ville. Les arcs orientés sont représentés graphiquement par des flèches, qui sont absentes du graphe de la figure~\ref{exemple_plus_court_chemin} puisque le graphe est non-orienté. 
+
+L'ensemble~$E$ (\ref{graphe_description_E}) est décrit par une suite de couples de sommets~: $E \subset X^2$. Il existe toutefois d'autres manières de représenter l'ensemble des arcs. La première consiste à associer à chaque sommet de $X$ l'ensemble de ses successeurs~:
+
+			\begin{eqnarray*}
+			S : x \in X \longrightarrow S(x) = \acc{ y \in X \sac (x,y) \in E }
+			\end{eqnarray*}
+
+\indexfrr{graphe}{matrice d'adjacence}\indexfrr{graphe}{successeur}
+Par exemple, pour le sommet~7 de la figure~\ref{exemple_plus_court_chemin}, $S(7) = { 3, 8, 10, 11}$. Cette représentation est utilisée dans le TD~4 et l'est généralement lorsque les graphes à manipuler contiennent peu d'arcs. Une autre façon de représenter l'ensemble $E$ est une matrice appelée \emph{matrice d'adjacence} notée $A$. Il suffit pour cela d'indexer les sommets de $X$ par des entiers~:
+
+			\begin{eqnarray*}
+			A &=& \pa{a_{ij}}_{ij} \\
+			\text{ avec }\forall i,j, \; a_{ij} &=&  \left \{ \begin{array}{ll}
+													1 & \text{ si } 	(i,j) \in E \\
+													0 & \text{ sinon }
+													\end{array}\right.
+			\end{eqnarray*}
+
+
+Cette matrice est souvent utilisée pour de petits graphes tels que ceux employés dans cet exercice. Elle permet également d'associer facilement un poids à chaque arc~:
+
+
+			\begin{eqnarray*}
+			a_{ij} &=&  \left \{ \begin{array}{ll}
+													\text{poids de l'arc } i \longrightarrow j & \text{ si } 	(i,j) \in E \\
+													0 \text{ ou } \infty  & \text{ sinon }
+													\end{array}\right.
+			\end{eqnarray*}
+
+La valeur associée à un arc inexistant ($\notin E$) dépend du problème à résoudre. Dans le cas de la recherche du plus court chemin, on prendra comme valeur $\infty$. Tout chemin passant par un arc inexistant est de longueur infinie. Dans le cas de la recherche du plus long chemin entre deux n\oe uds, les arcs inexistant auront un poids nul. La matrice d'adjacence possède quelques propriétés intéressantes~:
+
+		\begin{enumerate}
+		\item Si elle est symétrique, $A = A'$, alors le graphe est non-orienté.
+		\item Si les arcs inexistants sont pondérés par la valeur~0 et les arcs existants par des valeurs 
+					strictement positives, si $(A^n)_{ij} > 0$, alors il existe un
+					chemin de longueur $n$ entre les n\oe uds $i$ et $j$.
+		\end{enumerate}					
+
+Cette seconde propriété se démontre par récurrence. Pour $n = 2$, on a $(A^2)_{ij} = \sum_k  a_{ik} a_{kj}$. Par conséquent, si $(A^2)_{ij} > 0$ alors il existe un sommet $k$ tel que les arêtes $(i,k)$ et $(k,j)$ existent. Il est facile de continuer la démonstration pour $n > 2$.
+
+Les matrices d'adjacence sont peu adaptées pour des graphes ayant un grand nombre de sommets et un petit nombre d'arêtes. D'un point de vue informatique, beaucoup de mémoire est utilisée pour stocker une information inutile puisque la matrice est presque uniforme sauf pour un petit nombre d'arêtes. Presque tous ces éléments sont nuls ou égaux à $\infty$ selon la convention choisie. D'un point de vue informatique, la matrice d'adjacence est rarement une représentation optimale mais c'est pour sa simplicité qu'elle sera utilisée dans ce programme d'exemple chargé de déterminer le plus court chemin dans un graphe.
+
+Afin de se concentrer sur l'algorithme de recherche du plus court chemin, une partie du programme est déjà développée. Elle contient différentes fonctions permettant de constuire aléatoirement un certain nombre de villes et de routes puis d'afficher le résultat dans une image. Il ne reste plus qu'à lui ajouter la fonction qui détermine le plus court chemin entre deux villes. \indexfrr{module}{Matrix}\indexfrr{module}{UserArray}\indexfrr{module}{Numeric}\indexfrr{module}{PIL}
+\indexfrr{module}{PIL.Image}\indexfrr{module}{PIL.ImageDraw}\indexfrr{module}{PIL.random}\indexfrr{module}{math}
+Ce programme utilise le type \codes{Matrix} fourni avec les sous-modules \codes{Matrix} et \codes{UserArray} du module \codes{Numeric}. Mis à part les deux lignes qui servent à créer une matrice d'adjacence carrée et nulle de taille $nb$, pour comprendre le programme, il suffit de savoir qu'un élément d'indice $(i,j)$ de la matrice d'adjacence~\codes{m} est désigné par \codes{m [i,j]}.
+
+\indexexemples{plus court chemin dans un graphe}{}
+\begin{verbatimx}
+# coding: cp1252
+import random                 # pour tirer aléatoirement des nombres
+import Matrix as mat          # pour les matrices
+import UserArray as ua        # pour les matrices
+import math                   # fonction sqrt
+import PIL.Image as Im        # pour les images
+import PIL.ImageDraw as Id    # pour dessiner
+
+def construit_ville(n, x =500, y = 500):
+    """tire aléatoirement n villes dans un carrée x * y"""
+    l = []
+    for i in range(0,n):
+        xx = x * random.random ()
+        yy = y * random.random ()
+        l.append ((xx,yy))
+    return l
+
+def distance_ville (l,i,j):
+    """calcule la distance entre deux villes i et j de la liste l"""
+    x = l [i][0] - l [j][0]
+    y = l [i][1] - l [j][1]
+    return math.sqrt (float (x*x+y*y))
+
+def construit_arete (l,part = 0.15):
+    """tire aléatoirement part * len (l) arêtes et construit la matrice
+    d'adjacence"""
+    nb  = len (l)
+    m   = mat.Matrix ( [ 0 for i in range(0,nb) ]) # crée un vecteur de nb zéros
+    m   = ua.transpose (m) * m                     # effectue une multiplication du vecteur
+                                                   # précédent avec son vecteur transposé
+                                                   # pour obtenir une matrice carrée nulle
+    are = int (part * nb * nb)
+    while are > 0:
+        i = random.randint (0,nb-1)
+        j = random.randint (0,nb-1)
+        if m [i,j] > 0: continue               # si l'arête existe déjà, on recommence
+        m [i,j] = int (distance_ville (l,i,j)) # on affecte comme poids à l'arête 
+                                               # la distance entre les deux villes
+        are -= 1
+    return m
+
+def dessin_ville_arete (l,m,chemin):
+    """dessine la ville et les routes dans une image"""
+    mx, my = 0,0
+    for i in l:
+        mx = max (mx, i [0])
+        my = max (my, i [1])
+    mx += 25
+    my += 25
+    mx, my = int (mx), int (my)
+    im = Im.new ("RGB", (mx, my), (255,255,255)) # création d'une image blanche
+    draw = Id.Draw(im)
+
+    # dessin des villes
+    for i in l:
+        j  = (int (i [0]), int (i[1]))
+        j2 = (j [0] + 10, j [1] + 10)
+        draw.ellipse ((j,j2), fill = (0,0,0))
+
+    # dessin des arêtes        
+    for i in range (0,len(l)):
+        for j in range (0,len(l)):
+            if m [i,j] > 0:
+                a = (int (l [i][0]+5), int (l [i][1]+5))
+                b = (int (l [j][0]+5), int (l [j][1]+5))
+                draw.line ((a,b),fill=(255,0,0))
+
+    # dessin des villes de départ et d'arrivée
+    v1 = chemin [0]
+    v2 = chemin [ len (chemin)-1]
+    a = (int (l [v1][0]), int (l [v1][1]))
+    b = (int (l [v1][0]+10), int (l [v1][1]+10))
+    draw.ellipse ((a,b), fill = (0,255,0))
+    a = (int (l [v2][0]), int (l [v2][1]))
+    b = (int (l [v2][0]+10), int (l [v2][1]+10))
+    draw.ellipse ((a,b), fill = (0,255,0))
+    
+    # dessin du chemin
+    for c in range (0,len(chemin)-1):
+        i = chemin [c]
+        j = chemin [c+1]
+        print i,j
+        if m [i,j] > 0:
+            a = (int (l [i][0]+5), int (l [i][1]+5))
+            b = (int (l [j][0]+5), int (l [j][1]+5))
+            draw.line ((a,b),fill=(0,0,255))
+        else:
+            a = (int (l [i][0]+5), int (l [i][1]+5))
+            b = (int (l [j][0]+5), int (l [j][1]+5))
+            draw.line ((a,b),fill=(0,0,50))
+
+    # on retourne l'image    
+    return im
+
+# programme principal
+# construction des villes
+l = construit_ville (10)
+print l
+
+# construction des arêtes
+m = construit_arete (l)
+print m
+
+# choix de la ville de départ de d'arrivée
+a,b = 0,0
+while a == b:
+    a = random.randint (0,len(l)-1)
+    b = random.randint (0,len(l)-1)
+
+print "ville de départ et d'arrivée : ",a,b    
+
+# construction de l'image du résultat
+im = dessin_ville_arete(l,m,[a,b])
+im.show ()  # on affiche l'image
+\end{verbatimx}
+
+\end{xexempleprog}
+
+
+
+\begin{xexempleprogcor}{exemple_court_chemin}\label{exemple_court_chemin_cor}
+
+
+\subsubsectionx{Théorie des graphes, un peu d'histoire}
+
+\indexfrr{graphe}{théorie}
+Cette brève histoire de la théorie des graphes est extraite du site \textit{http://www.sciences.ch/}.
+
+
+
+L'histoire de la théorie des graphes (ou des "complexes cellulaires") débute peut-être avec les travaux d'Euler au 18e siècle et trouve son origine dans l'étude de certains problèmes, tels que celui des ponts de Königsberg -~les habitants de Königsberg se demandaient s'il était possible, en partant d'un quartier quelconque de la ville, de traverser tous les ponts sans passer deux fois par le même et de revenir à leur point de départ, voir figures~\ref{pont_konisberg} et~\ref{pont_konisberg2}~-, la marche du cavalier sur l'échiquier ou le problème de coloriage de cartes.
+
+La théorie des graphes s'est alors développée dans diverses disciplines telles que la chimie (isomères), la biologie, les sciences sociales (réseaux de transports), gestion de projets (C.P.M.), informatique (topologie des réseaux), etc.. Depuis le début du 20e siècle, elle constitue une branche à part entière des mathématiques, grâce aux travaux de König, Menger, Cayley puis de Berge et d'Erdös.
+
+De manière générale, un graphe permet de représenter la structure, les connexions d'un ensemble complexe en exprimant les relations entre ses éléments~: réseau de communication, réseaux routiers, interaction de diverses espèces animales, circuits électriques,~... Les graphes constituent donc une méthode de pensée qui permet de modéliser une grande variété de problèmes en se ramenant à l'étude de sommets et d'arcs.
+
+Les derniers travaux en théorie des graphes sont souvent effectués par des informaticiens, du fait de l'importance qu'y revêt l'aspect algorithmique. La théorie des graphes connaît un assez grand engouement ces trente dernières, peut-être est-ce parce qu'elle ne nécessite pas dans ses concepts élémentaires de bagage mathématique considérable.
+
+
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|}\hline
+    		\includegraphics[height=6cm, width=7cm]{\filext{../python_cours_exemple/image/koni}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{ Les sept ponts de Könisberg, existe-t-il un chemin qui permettent revenir à son point de 
+    							départ en ne parcourant chacun des sept ponts qu'une seule fois~?}
+    		\label{pont_konisberg}
+    		\end{figure}
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|}\hline
+    		\includegraphics[height=4cm, width=9cm]{\filext{../python_cours_exemple/image/koni2}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{ Les sept ponts de Könisberg de la figure~\ref{pont_konisberg} et un graphe qui les représente.
+    							Chaque arc correspond à un pont. Chaque n\oe ud correspond à un quartier.
+    							Il est impossible de revenir au n\oe ud de départ
+    							en ne parcourant toutes les arêtes qu'une seule fois. Pour que cela fût possible, il eut fallu
+    							que ce graphe ne comportât au plus que deux n\oe uds reliés à un nombre impair d'arcs.}
+    		\label{pont_konisberg2}
+    		\end{figure}
+
+
+
+\subsubsectionx{Principe d'optimalité}
+
+\indexfrr{graphe}{plus court chemin}\indexfr{programmation dynamique}\indexfr{Fermat}\indexfr{principe d'optimalité}
+Déterminer le plus court chemin dans un graphe fait partie d'une classe de problème résolus par ce qu'on appelle la programmation dynamique qui découle elle-même du principe d'optimalité défini dans l'\oe uvre du mathématicien Pierre de Fermat. Le principe de Fermat contient les postulats fondamentaux de l'optique géométrique et permet de retrouver le principe de propagation rectiligne, le principe de retour inverse et les lois de Snell-Descartes sur la réfraction.
+
+\begin{center}\begin{minipage}{10cm}
+Le trajet réellement suivi par la lumière pour se rendre d'un point A à un point B, correspond à un temps de parcours minimum ou, si l'on tient compte de la nature des différents milieux traversés, à un chemin optique minimum.
+\end{minipage}\end{center}
+
+En d'autres termes, appliqué à la recherche du plus court chemin dans un graphe comme celui de la figure~\ref{exemple_plus_court_chemin2}, ce principe peut être interprété selon une récurrence de la forme~:
+    		
+    		
+\begin{center}\begin{minipage}{10cm}
+Toute partie d'un chemin optimal est elle-même optimale~: si le trajet le plus court pour se rendre d'un point~A à un point~C passe par le point~B, alors ce trajet est aussi le plus court pour aller de~A à~B et de~B à~C.
+\end{minipage}\end{center}
+
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|}\hline
+    		\includegraphics[height=8cm, width=11cm]{\filext{../python_cours_exemple/image/courtch2}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{ Ce graphe est identique à celui de la figure~\ref{exemple_plus_court_chemin}. 
+    							Le chemin bleu est le chemin le plus court qui permette de relier les n\oe uds 
+    							numéro~0 et numéro~4.}
+    		\label{exemple_plus_court_chemin2}
+    		\end{figure}
+    		
+\subsubsectionx{Plus court chemin dans un graphe}
+
+On désigne par $G = (X,S)$ un graphe dont l'ensemble des sommets est~$X$ et l'ensemble des arêtes est~$S$. On note également $d(i,j)$ le poids associé à l'arc $(i,j) \in S$. Pour le graphe de la figure~\ref{exemple_plus_court_chemin2}, $d(i,j)$ est la longueur de la route reliant les villes~$i$ et~$j$ ou plus simplement la distance à vol d'oiseau. La fonction $d$ est symétrique si seulement le graphe est non-orienté, comme celui de la figure~\ref{exemple_plus_court_chemin2}.
+
+A partir du principe d'optimalité, il est possible de construire un algorithme fonctionnant par récurrence permettant de trouver le plus court chemin entre deux n\oe uds. On suppose que $v^*(i,j)$ représente la distance minimale entre deux n\oe uds. Le principe précédent signifie que~:
+
+			$$
+			v^*(i,j) = \min \acc{ v^*(i,k) + d(k,j) \sac (k\rightarrow j) \in S }
+			$$
+
+Autrement dit, le plus court chemin entre les n\oe uds~$i$ et~$j$ correspond au meilleur des plus courts chemins entre le n\oe ud~$i$ et ses voisins~$k$ auxquels est ajoutée la distance $d(k,j)$. Plusieurs algorithmes équivalents existent pour calculer la fonction~$v^*$ (algorithmes de Bellman, Dijkstra ou Ford). 
+
+L'algorithme de Bellman propose de calculer tous les chemins les plus courts. On suppose qu'il y a $n$~n\oe uds notés $\vecteur{N_1}{N_n}$. Les distances entre chaque n\oe ud sont données par la matrice $D = (d_{ij})$ où $d_{ij}$ est la distance du chemin direct qui relie les n\oe uds $n_i$ et $n_j$. On cherche alors la distance de tous les chemins les plus courts entre deux n\oe uds qu'on note également par le biais d'une matrice $M=(m_{ij})$. 
+
+
+			\begin{xalgorithm}{algorithme du plus court chemin (Bellman)}\label{algo_bellman_plus_court_bellman}
+			On reprend les notations décrites au paragraphe précédent.
+			
+			\begin{xalgostep}{initialisation}\label{step_bellman_init}
+			$\forall i,j , \; M_{ij} = d_{ij}$
+			\end{xalgostep}																				
+			
+			\begin{xalgostep}{mise à jour}\label{step_bellman_update}
+			$m \longleftarrow 0$ \\
+			\begin{xfor}{l}{1}{N}
+				\begin{xfor}{i}{1}{N}
+					\begin{xfor}{j}{1}{N}
+						\begin{xfor}{k}{1}{N}
+							$M_{ij} \longleftarrow \min\acc{ M_{ij}, M_{ik} + d_{kj}}$ 
+						\end{xfor}
+					\end{xfor}
+				\end{xfor}
+			\end{xfor}
+			\end{xalgostep}
+
+			\end{xalgorithm}
+
+
+
+L'algorithme de Ford est le moins restrictif puisqu'il suppose seulement que le graphe n'inclut pas de cycle de poids négatif, condition également nécessaire aux autres algorithmes. L'algorithme de Dijkstra suppose quant à lui que les poids sont strictement positifs et utilise cette hypothèse supplémentaire pour trouver ce meilleur chemin plus rapidement.
+\indexfr{Dijstra}\indexfrr{graphe}{Dijkstra}
+\indexfr{Bellman}\indexfrr{graphe}{Bellman}
+\indexfr{Ford}\indexfrr{graphe}{Ford}
+
+
+			\indexfrr{graphe}{cycle} 
+			\indexfrr{graphe}{chemin, poids} 
+			\begin{xdefinition}{cycle dans un graphe}
+			Un cycle est un chemin qui part d'un n\oe ud $i$ et qui y revient.
+			Le poids d'un chemin est la somme des poids des arêtes qu'il emprunte.
+			\end{xdefinition}
+
+
+
+			\begin{xalgorithm}{algorithme du plus court chemin (Ford)}\label{algo_ford_plus_court}
+			On suppose qu'un graphe est défini par un ensemble de $N$ sommets indicés de~$1$ à~$N$. 
+			$X = \ensemble{1}{N}$.
+			Ces arêtes et leurs poids sont définis par une matrice d'adjacence $A = (a_{ij})_{(i,j) \in X^2}$
+			de telle sorte que $a_{ij}$ soit égal au poids de l'arête si elle existe, égal à l'infini si l'arête 
+			n'existe pas. On suppose que le graphe ne contient pas de cycle de poids négatifs. Dans le cas contraire,
+			l'algorithme est sans fin. On cherche le chemin le plus court du n\oe ud~$i_0$ au n\oe ud~$i_1$.
+			
+			\begin{xalgostep}{initialisation}\label{step_ford_init}
+			$\forall i \in X, \; v(i_0,i) = \left\{ \begin{array}{ll}
+																				0 & \text{si } i = i_0 \\
+																				\infty & \text{sinon} \end{array}\right.$ \\
+			$\forall i \in X, \; p(i_0,i)	= \emptyset$
+			\end{xalgostep}																				
+			
+			\begin{xalgostep}{mise à jour}\label{step_ford_update}
+			$m \longleftarrow 0$ \\
+			\begin{xfor}{i}{1}{N}
+				\begin{xfor}{j}{1}{N}
+						$t \longleftarrow v(i_0,i) + d(i,j)$ \\
+						\begin{xif}{$t < v(i_0,j)$}
+							$\begin{array}{lll}
+							v(i_0,j) &\longleftarrow& t \\
+							p(i_0,j) &\longleftarrow& \acc{i} \\
+							m &\longleftarrow& m +1
+							\end{array}$		
+						\end{xif}
+				\end{xfor}
+			\end{xfor}
+			\end{xalgostep}
+
+			\begin{xalgostep}{récurrence}
+			Si $m > 0$, cela signifie qu'une meilleure solution a été trouvée. On retourne à l'étape~\ref{step_ford_update}.
+			\end{xalgostep}
+			
+			\begin{xalgostep}{meilleur chemin}\label{step_ford_meilleur_chemin}
+			La longueur du meilleur chemin est donnée par $v(i_0,i_1)$. Le meilleur chemin utilise les valeurs 
+			$\pa{p(i_0,i)}_i$ qui mémorisent les prédécesseurs, ceux qui ont permis d'obtenir le meilleur chemin.
+			$p(i_0,i_1)$ est le prédécesseur de $i_1$, $p\pa{i_0,p(i_0,i_1)}$ est le prédécesseur $p(i_0,i_1)$.
+			Le plus court chemin à l'envers 
+			correspond donc à la suite définie par récurrence $u_0 = i_1$ et $u_n = p\pa{i_0,u_{n-1}}$.
+			La construction de cette suite s'arrête lorsque $u_n = \emptyset$.
+			\end{xalgostep}
+			\end{xalgorithm}
+
+Lorsqu'un graphe contient un cycle de poids négatif, il est toujours possible de trouver des valeurs meilleures pour la fonction~$v$. La dernière étape~\ref{step_ford_meilleur_chemin} n'arrive jamais. 
+
+
+\subsubsectionx{Coût de l'algorithme}
+\indexfrr{algorithme}{coût}\indexfrr{coût}{algorithme}
+
+			\begin{xdefinition}{coût d'un algorithme}
+			Le coût d'un algorithme est le nombre d'opérations élémentaires (opération numérique, test, affectation, ...)
+			nécessaire à sa complète réalisation. Ce coût est généralement exprimé comme un 
+			multiple constant d'une fonction tenant compte des dimensions
+			des données manipulées par l'algorithme.
+			\end{xdefinition}
+
+Par exemple, l'étape~\ref{step_ford_init} de l'algorithme~\ref{algo_ford_plus_court} effectue pour chaque sommet du graphe un test et deux affectations. Le coût de cette étape est donc un multiple de $N$. On dit que son
+coût est $O(N)$.
+
+L'étape~\ref{step_ford_update} effectue d'abord une affectation, puis se lance dans deux boucles imbriquées qui visitent les $N$ sommets du graphe. A chaque itération, l'algorithme effectue une additation, un test et selon la valeur de ce test, une ou quatre affectations. Le coût de cette étape est un multiple de $N^2$ auquel il faut ajouter $1$ pour la première affectation. Cette affectation étant négligeable devant les $N^2$ autres opérations élémentaires, on dit que le coût de cette étape est $O(N^2)$.
+
+Le coût de la dernière étape est fonction de la longueur du meilleur chemin qui ne peut inclure plus d'arêtes que n'en peut contenir le graphe, soit $N^2$. Le coût de l'étape~\ref{step_ford_meilleur_chemin} est au plus $O(N^2)$.
+
+Si le graphe ne contient pas de poids négatifs, il est alors possible d'affirmer que le plus court chemin inclut au plus $N$ arêtes où $N$ est le nombre de sommets du graphe. L'étape~\ref{step_ford_update} est visitée au plus $N$~fois.
+
+Finalement, le coût de l'algorithme est au plus~: $C = O(N) + N O(N^2) + O (N^2)$. On élimine de cette expression les termes négligeables pour obtenir un coût au plus égal à $C = O(N^3)$. Dans ce cas, le coût est fonction d'une puissance de~$N$, on dit que le coût est \emph{polynômial}. \indexfrr{coût}{polynômial}
+
+
+
+
+\begin{xremark}{coût dépendant du contenu des données}
+Il n'est pas toujours possible d'obtenir un coût dépendant seulement de la dimension des données manipulées. L'exemple le plus courant est l'algorithme de tri rapide (ou tri quicksort) dont le coût dépend de l'ordre du tableau à trier. Le coût de l'algorithme est alors défini comme un coût moyen sur l'ensemble des configurations possibles, ou des ordres possibles en ce qui concerne le tri rapide ($N!$).\indexfrr{tri}{quicksort}
+\end{xremark}
+
+
+\subsubsectionx{A propos des graphes}
+
+\indexfrr{graphe}{ordonnancement}
+\indexfr{ordonnancement}
+\indexfr{méthode des potentiels}
+Les graphes sont également utilisés pour résoudre les problèmes d'ordonnancement par l'intermédiaire de la méthode des potentiels (ou MPM). Cette méthode fait intervenir les graphes pour modéliser les dépendances entre des tâches et définir la date à laquelle chacun d'elles peut être commencée. Cette méthode combinent des chemins les plus courts et des chemins les plus longs afin de déterminer une plage temporelle pendant laquelle une tâche doit être exécutée.
+
+\indexfrr{graphe}{flot}\indexfr{flot maximal}\indexfr{Ford-Fulkerson}
+Les graphes sont également utilisés pour optimiser les débits dans un réseau par l'intermédiaire de l'algorithme de Ford-Fulkerson. Ce problème est souvent désigné par "problème de flot maximal".
+
+\indexfr{coloriage des cartes}
+La théorie des graphes a permis aussi de résoudre le problème de coloriage des cartes~: combien faut-il de couleurs au minimum pour colorier une carte sans que deux régions voisines soient de la même couleur~?
+
+\indexfr{chaînes de Markov}\indexfr{Markov}
+Les graphes apparaissent encore comme une possible représentation de modèles probabilistes tels que les chaînes de Markov. La matrice d'adjacence équivaut pour ces modèles à la matrice de transition qui contient des probabilités de transitions d'un état à un autre. 
+
+
+\subsubsectionx{Programme}
+
+
+Le programme suivant implémente la recherche du meilleur chemin dans un graphe. La fonction \codes{meilleur\_chemin} est la trascription de l'algorithme~\ref{algo_ford_plus_court} en langage \python. Les autres fonctions ne servent qu'à générer un graphe décrivant un réseau routier aléatoire. Les villes sont placées de telle sorte qu'elles soient suffisamment espacées pour rendre l'affichage graphique lisible. Pour la même raison, le graphe ne contient pas trop d'arêtes. La figure~\ref{exemple_plus_court_chemin5} montre un exemple de l'image construite par le programme.
+
+				\begin{figure}[ht]
+				\begin{center}\begin{tabular}{|c|}\hline
+    		\includegraphics[height=8cm, width=14cm]{\filext{../python_cours_exemple/image/checour}} \\ \hline
+    		\end{tabular}\end{center}
+    		\caption{ Exemple d'image construite par le programme cherchant le plus court chemin dans un graphe.
+    							Les villes vertes sont les points de départ et d'arrivée. Les arêtes bleues et épaisses
+    							sont les arêtes faisant partie du meilleur chemin.}
+    		\label{exemple_plus_court_chemin5}
+    		\end{figure}
+    		
+Après avoir généré les villes et les arêtes de manière aléatoire grâce aux fonctions \codes{construit\_ville} et \codes{construit\_arete}, la fonction \codes{choix\_villes\_depart\_arrive} détermine deux villes de départ et d'arrivée. Cette fonction utilise la fonction \codes{meilleur\_chemin} afin d'éviter les chemins trop courts (moins de quatre villes). Enfin, la fonction \codes{dessin\_ville\_arete} termine le programme par la construction d'une image contenant le graphe et le meilleur chemin trouvé. Toutes ces fonctions ne servent qu'à planter un décor pour la fonction \codes{meilleur\_chemin} et ainsi vérifier visuellement que la solution trouvée est bien la bonne. Ceci explique la longueur du programme alors que la fonction \codes{meilleur\_chemin} n'en forme qu'une petite partie.
+
+\indexfr{problème jouet}\indexfr{toy problem}
+Ce genre de problème facile -~appelé \emph{problème jouet} ou \emph{toy problem}~- est souvent présent dans les programme en tant que fonction de test. Il permet de vérifier qu'un algorithme a été implémenté correctement et fonctionne pour une configuration dans laquelle le programmeur peut rapidement évaluer la validité d'un résultat. Il peut ainsi valider ou invalider une portion de son code.
+
+
+
+
+\inputcode{../python_cours_exemple/programme/plus_court_chemin.py}{plus court chemin dans un graphe}
+
+\subsubsectionx{Distance d'édition}
+
+Il est possible de définir une distance entre deux mots qu'on nomme le plus souvent une distance d'édition ou distance de Levenstein.\indexfrr{distance}{édition}\indexfrr{distance}{Levenstein}\indexfr{Levenstein} On définit tout d'abord une distance entre caractère $C\pa{x,y}$. $C\pa{x,y} = 0 \Longleftrightarrow x =y$. Chaque mot est une séquence de caractères, $m=\vecteur{c_1}{c_l}$ et $m'=\vecteur{c'_1}{c'_{l'}}$. On définit la fonction $d(i,j)$ qui est égale à la distance entre les mots $m=\vecteur{c_1}{c_i}$ et $m'=\vecteur{c'_1}{c'_j}$. La distance d'édition est définie par $d(l,l')$. Cette fonction se construit par récurrence~:
+\begin{eqnarray}
+d(0,0) &=& 0 \\
+d(i,0) &=& C\pa{c_i,\emptyset} \\
+d(0,j) &=& C\pa{\emptyset,c_j} \\
+d(i,j) &=& \min \acc{ \begin{array}{l} 
+                      d(i-1,j) + C\pa{\emptyset,c_j}, \\ 
+                      d(i,j-1) + C\pa{c_j,\emptyset}, \\ 
+                      d(i-1,j-1) + C\pa{c_i,c_j}
+                      \end{array}
+                    }
+\end{eqnarray}                    
+
+Cette distance peut se concevoir également comme la recherche d'un plus court chemin dans un graphe. Ici, les n\oe uds sont constitués des couples de positions $(i,j)$. Chaque n\oe ud $(i,j)$ a trois prédécesseur $(i-1,j), (i,j-1), (i-1,j-1)$ et le coût associé à chaque arc correspondant aux valeurs de la fonction~$C$.
+
+On peut par exemple appliquer ce type d'algorithme pour déterminer les différences entre deux fichiers textes, quelles ont été les lignes ajoutées, supprimées comme le montre l'exemple suivant.
+
+
+\inputcode{../python_cours_exemple/programme/filedistance.py}{distance d'édition}
+%
+Ce programme compare deux versions d'un même programme, il fait précéder chaque ligne de \codes{-} ou \codes{+} selon qu'elle a été supprimée ou insérée.
+%
+\begin{verbatimx}
+def distance (line1, line2) :
+      """construit une distance entre deux tableaux de lignes"""
+-     d = { (-1,-1):(0,(-1,-1)) }
++     d = { (-1,-1):(0,(-1,-1), "") }
++     for i in xrange (0, len (line1)) :
++         d [ i,-1 ] = (i+1, (i-1,-1), "+ " + line1 [i])
++     for j in xrange (0, len (line2)) :
++         d [ -1,j ] = (j+1, (-1,j-1), "- " + line2 [j])
+      
+      for i in xrange (0, len (line1)) :
+          l1 = line1 [i]
+          for j in xrange (0, len (line2)) :
+\end{verbatimx}
+
+
+
+
+\end{xexempleprogcor}
+
+\input{../../common/livre_table_end.tex}%
+\input{../../common/livre_end.tex}%

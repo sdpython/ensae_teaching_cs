@@ -1,0 +1,504 @@
+\input{../../common/livre_begin.tex}%
+\firstpassagedo{\input{../python_cours_exemple/python_petitcours_titre.tex}}
+\input{../../common/livre_table_begin2.tex}%
+%\firstpassagedo{\input{python_cours_chapter.tex}}
+
+
+\begin{xexempleprog}{Classification à l'aide des plus proches voisins}{exemple_kppv_cor}\label{exemple_kppv}
+\indexfr{classification}\indexfr{kPPV}\indexfr{plus proches voisins}
+
+La figure~\ref{classification_exemple} représente un problème de classification classique. On dispose d'un nuage de points réparti en deux classes. Un nouveau point semblable aux précédents se présente, sa classe est inconnue. L'objectif est de lui attribuer une classe en utilisant le fait qu'on connaît la classe d'appartenance des autres points.
+
+
+				\begin{figure}[ht]
+				$$\begin{array}{|c|}\hline
+    		\includegraphics[height=5cm, width=7cm]{\filext{../python_cours_exemple/image/classif}} \\ \hline
+    		\end{array}$$
+    		\caption{	Problème de classification classique. Cette image représente un nuage de points, chacun d'entre
+    							eux appartient à l'une des deux classes, ici représentées par un cercle ou une croix.
+    							A partir d'un nuage de points pour lesquels la classe d'appartenance est connue, comment classer
+    							un nouveau point pour lequel cette classe est inconnue~?}
+    		\label{classification_exemple}
+    		\end{figure}
+
+\indexfr{classification}\indexfr{k-ppv}\indexfr{plus proches voisins}
+Une méthode simple consiste à attribuer à ce nouveau point la même classe que le plus proche des points appartenant au nuage initial. C'est la méthode des plus proches voisins (ou \emph{nearest neighbours}). Elle est facile à implémenter mais peu utilisée car souvent très gourmande en temps de calcul lorsque le nuage de points est conséquent. Le premier paragraphe décrit cette méthode, les suivants cherchent à accélérer l'algorithme selon que le nuage de points appartient à un espace vectoriel ou non. La dernière partie présente l'algorithme LAESA pour le cas où le nuage de points appartient à un espace métrique quelconque.
+
+
+
+%--------------------------------------------------------------------------------------------------------------------
+\subsubsectionx{Principe}
+%--------------------------------------------------------------------------------------------------------------------
+\indexfr{plus proches voisins}
+\label{clas_super_ppv_par}
+
+Cette méthode est la plus simple puisqu'elle consiste à associer à $x$, l'élément à classer, le label $c\pa{x_{i^*}}$ de l'élément le plus proche $x_{i^*}$ dans l'ensemble $\vecteur{x_1}{x_N}$. Ceci mène à l'algorithme de classification suivant~:
+
+
+		\begin{xalgorithm}{1-PPV ou plus proche voisin}
+		\label{clas_super_1ppv_algo}
+		Soit $X = \vecteur{x_1}{x_N} \subset E$ un ensemble d'éléments d'un espace métrique quelconque, 
+		soit $\vecteur{c\pa{x_1}}{c\pa{x_N}}$ les classes associées à chacun des éléments de $X$. On note 
+		$d$ la distance définie sur l'espace métrique $E$. Soit $x$
+		un élément à classer, on cherche à déterminer la classe $\hat{c}(x)$ associée à $x$. On définit $x_{i^*}$ 
+		comme étant~:
+						\begin{eqnarray*}
+						x_{i^*} &=& \underset{i \in \intervalle{1}{N}}{\arg \min} \; d\pa{x_i,x}
+						\end{eqnarray*}
+		Alors~: $\hat{c}(x) = c\pa{x_i^*}$
+		\end{xalgorithm}
+
+\indexfrr{PPV}{1-PPV}
+\indexfrr{PPV}{k-PPV}
+\indexfr{nearest neighbors}
+
+Cet algorithme est souvent appelé \emph{1-PPV} (ou \emph{1-NN} pour Nearest Neighbors). Il existe une version améliorée \emph{k-PPV} qui consiste à attribuer à $x$ la classe la plus représentée parmi ses $k$ plus proches voisins.
+
+
+
+		\begin{xalgorithm}{k-PPV ou k-plus proches voisins}
+		\label{clas_super_kppv_simple}
+		Soit $X = \vecteur{x_1}{x_N} \subset E$ un ensemble d'éléments d'un espace métrique quelconque, 
+		soit $\vecteur{c\pa{x_1}}{c\pa{x_N}}$ les classes associées à chacun des éléments de $X$. On note 
+		$d$ la distance définie sur l'espace métrique $E$. $\omega\pa{x,y}$ est une fonction strictement positive
+		mesurant la ressemblance entre $x$ et $y$.
+		Soit $x$ un élément à classer, on cherche à déterminer la classe $c(x)$ associée à $x$. 
+		On définit l'ensemble $S^*_k$
+		incluant les $k$-plus proches voisins de $x$, cet ensemble vérifie~:
+						\begin{eqnarray*}
+						\card{S^*_k} = 0 \text{ et } 
+																		 \underset{y \in S^*_k}{\max} \; d\pa{y,x} \infegal
+																		 \underset{y \in X - S^*_k}{\min} \; d\pa{y,x} 
+						\end{eqnarray*}
+		On calcule les occurrences $f(i)$ de chaque classe $i$ dans l'ensemble $S^*_k$~: 
+						\begin{eqnarray}
+						f(i) = \summyone{y \in S^*_k} \, \omega\pa{x,y} \, \indicatrice{c(y) = i} 
+						\label{class_super_kppv_contribution_eq}
+						\end{eqnarray}
+		On assigne alors à $x$ la classe $c(x)$ choisie dans l'ensemble~:
+						\begin{eqnarray*}
+						\hat{c}(x) \in \underset{i \in \N}{\arg \max} \; f(i)
+						\end{eqnarray*}
+		\end{xalgorithm}
+
+Dans sa version la plus simple, la fonction $\omega\pa{x,y}$ utilisée lors du calcul de la contribution $f$ (\ref{class_super_kppv_contribution_eq}) est constante. Mais il est possible de lui affecter une valeur tenant compte de la proximité entre $x$ et $y$. La table~\ref{clas_super_omega_contribution} donne quelques exemples de contributions possibles.
+
+
+		\begin{table}[ht]
+		$$\begin{tabular}{|ll|} \hline 
+		fonction constante 	& $\omega\pa{x,y} = 1$   \\ \hline
+		distance inverse		&	$\omega\pa{x,y} = \frac{1}{1 + d\pa{x,y}}$ \\  \hline
+		noyau								& $\omega\pa{x,y} = \exp\pa{ - d^2 \pa{x,y}}$ \\ \hline
+		\end{tabular}$$
+		\caption{Exemple de contribution $w\pa{x,y}$ pour l'algorithme~\ref{clas_super_kppv_simple} des k-PPV. 
+							Ces fonctions sont toutes décroissantes (strictement ou non) par rapport à la distance $d$.}
+		\label{clas_super_omega_contribution}
+		\end{table}
+
+\indexfrr{espace}{métrique}\indexfrr{espace}{vectoriel}
+L'inconvénient majeur de la méthode des plus proches voisins est sa longueur puisqu'elle implique le calcul des distances entre $x$ et chacun des éléments de l'ensemble $\vecteur{x_1}{x_N}$. C'est pourquoi de nombreuses méthodes d'optimisation ont été développées afin d'accélérer ce processus. Les deux premiers paragraphes traitent le cas où les points $x_i$ appartiennent à un espace vectoriel et ont donc des coordonnées. Les suivant traitent le cas où les points $x_i$ n'ont pas de coordonnées et appartiennent à un espace métrique quelconque.
+
+
+
+
+
+
+
+
+
+\subsubsectionx{B+ tree}
+\indexfr{B+ tree}
+
+Ce premier algorithme s'applique dans le cas réel afin d'ordonner des nombres dans un arbre de sorte que chaque n\oe ud ait un père et pas plus de $n$ fils (voir figure~\ref{space_metric_btree}). 
+
+
+				\begin{figure}[ht]
+				$$\begin{array}{|c|}\hline
+    		\includegraphics[height=5cm, width=7cm]{\filext{../python_cours_exemple/image/btree}} \\ \hline
+    		\end{array}$$
+    		\caption{Illustration d'un B+ tree.}
+    		\label{space_metric_btree}
+    		\end{figure}
+
+		\begin{xdefinition}{B+ tree}
+		Soit $B_n$ un B+ tree, soit $N$ un n\oe ud de $B_n$, il contient un vecteur $V\pa{N} = \vecteur{x_1}{x_t}$ 
+		avec $0 \infegal t \infegal n$ et $x_1 < ... < x_t$. Ce n\oe ud contient aussi exactement $t-1$ n\oe uds fils 
+		notés $\vecteur{N_1}{N_{t-1}}$. On désigne par $D\pa{N_t}$ l'ensemble des descendants du n\oe ud $N_t$ et 
+		$G\pa{N_t} = \acc{ V\pa{M} \sac M \in D\pa{N_t}}$. Le n\oe ud $N$ vérifie~:
+					\begin{eqnarray*}
+					&& \forall x \in G\pa{N_t}, \; x_{t} \infegal x < x_{t+1} \\
+					&& \text{avec par convention } x_0 = -\infty \text{ et } x_{t+1} = + \infty
+					\end{eqnarray*}
+		\end{xdefinition}
+		
+\indexfr{quicksort}
+\indexfrr{tri}{quicksort}
+		
+Cet arbre permet de trier une liste de nombres, c'est une généralisation du tri "quicksort" pour lequel $n=2$. Comme pour le tri quicksort, l'arbre est construit à partir d'une série d'insertions et de cet ordre dépend la rapidité du tri. L'espérance du coût (moyenne sur tous les permutations possibles de $k$ éléments), le coût de l'algorithme est en $O\pa{k \log_n k}$. 
+
+
+
+
+
+
+
+
+\subsubsectionx{R-tree ou Rectangular Tree}
+\indexfr{R-tree}
+
+L'arbre R-tree est l'adaptation du mécanisme du B+ tree au cas multidimensionnel (voir \citeindex{Guttman1984}). La construction de cet arbre peut se faire de manière globale -~construction de l'arbre sachant l'ensemble de points à classer~- ou de manière progressive -~insertion des points dans l'arbre les uns à la suite des autres~-. Toutefois, ces méthodes sont resteintes à des espaces vectoriels.
+
+				\begin{figure}[ht]
+				$$\begin{array}{|c|c|}\hline
+    		\includegraphics[height=6cm, width=6cm]{\filext{../python_cours_exemple/image/rtree1}} &
+    		\includegraphics[height=5cm, width=11cm]{\filext{../python_cours_exemple/image/rtree2}} \\ \hline
+    		\end{array}$$
+    		\caption{	Illustration d'un R-tree en deux dimensions, 
+    							figure extraite de \citeindexfig{Sellis1987}, la première image montre des rectangles
+    							pointillés englobant d'autres rectangles en trait plein. Chaque style de trait correspond
+    							à un niveau dans le graphe de la seconde image.
+    							}
+    		\label{space_metric_rtree}
+    		\end{figure}
+    		
+\indexfrr{boîte}{englobante}
+\indexfrr{boîte}{objet}
+\indexfrr{boîte}{fenêtre}
+
+Il n'existe pas une seule manière de construire un R-tree, les n\oe uds de ces arbres suivent toujours la contrainte des B+~Tree qui est d'avoir un père et au plus $n$ fils. Les R-Tree ont la même structure que les B+~Tree ôtée de leurs contraintes d'ordonnancement des fils. De plus, ces arbres organisent spatialement des rectangles ou boîtes en plusieurs dimensions comme le suggère la figure~\ref{space_metric_rtree}. Les boîtes à organiser seront nommés les objets, ces objets sont ensuite regroupés dans des boîtes englobantes. Un n\oe ud $n$ d'un R-tree est donc soit une feuille, auquel cas la boîte qu'il désigne est un objet, dans ce cas, il n'a aucun fils, soit le n\oe ud désigne une boîte englobante $B\pa{n}$. On désigne par $\mathcal{B}$ l'ensemble des boîtes d'un espace vectoriel quelconque et $v\pa{b}$ désigne son volume. Pour un n\oe ud $n$ non feuille, $A\pa{n}$ désigne l'ensemble des descendants de ce n\oe ud. $B\pa{n}$ est défini par~:
+
+			$$
+			B\pa{n} = \arg \min \acc{ v\pa{b} \sac b \in \mathcal{B} \text{ et } 
+										\forall n' \in A\pa{n'}, \; B\pa{n'} \subset B\pa{n} }
+			$$
+
+
+
+La recherche dans un R-tree consiste à trouver tous les objets ayant une intersection avec une autre boîte ou fenêtre $W$, soit l'ensemble $L$~:
+
+		$$
+		L = \acc{ B\pa{n} \sac B\pa{n} \text{ est un objet et } B\pa{n} \cap W \neq \emptyset }
+		$$ 
+
+
+Cet ensemble est construit grâce à l'algorithme suivant~:
+
+
+		\begin{xalgorithm}{recherche dans un R-tree}  \label{space_metric_algo_r_tree_search}
+		Les notations sont celles utilisées dans ce paragraphe. On désigne par $r$ le n\oe ud racine d'un R-tree. 
+		Soit $n$ un n\oe ud, on désigne par $F\pa{n}$ l'ensemble des fils de ce n\oe ud.
+		
+		\begin{xalgostep}{initialisation}
+		$L \longleftarrow 0$ \\
+		$N \longleftarrow \acc{r}$
+		\end{xalgostep}
+		
+		\begin{xalgostep}{itération}
+		\begin{xwhile}{$N \neq \emptyset$}
+			\begin{xforeach}{n}{N}
+				\begin{xif}{$W \cap B\pa{n} \neq \emptyset$} 
+				  $N \longleftarrow N \cup F\pa{n}$ \\
+					\begin{xif}{$B\pa{n}$ est un objet}
+							$L \longleftarrow B\pa{n}$ 
+					\end{xif}
+				\end{xif}
+			\end{xforeach}
+		\end{xwhile}
+		\end{xalgostep}
+	
+		$L$ est l'ensemble cherché.
+		
+		\end{xalgorithm}
+
+
+Il reste à construire le R-tree, opération effectuée par la répétition successive de l'algorithme~\ref{space_metric_algo_r_tree_insert} permettant d'insérer un objet dans un R-tree.
+
+		\begin{xalgorithm}{insertion d'un objet dans un R-tree} \label{space_metric_algo_r_tree_insert}
+		Les notations utilisées sont les mêmes que celles de l'algorithme~\ref{space_metric_algo_r_tree_search}.
+		On cherche à insérer l'object $E$ désigné par son n\oe ud feuille $e$. On suppose que l'arbre contient au
+		moins un n\oe ud, sa racine $r$. On désigne également par $p\pa{n}$ le père du n\oe ud $n$. Chaque n\oe ud 
+		ne peut contenir plus de $s$ fils. On désigne par  
+		$v^*\pa{G} = \min \acc{ P \sac P \in \mathcal{B} \text{ et } 
+				\unionone{g \in G} B\pa{g}  \subset P }$.
+		
+		\begin{xalgostep}{sélection du n\oe ud d'insertion}
+		$n^* \longleftarrow r$ \\
+		\begin{xwhile}{$n^*$ n'est pas un n\oe ud feuille}
+		    On choisit le fils $f$ de $n^*$ qui minimise l'accroissement $v_f - v\pa{B\pa{f}}$ 
+		    du volume avec $v_f$ défini par~: 
+				\begin{eqnarray}
+				v_f = \min \acc{ v\pa{P} \sac P \in \mathcal{B} \text{ et } B\pa{f} \cup B\pa{e}  \subset P }  
+				\label{space_metric_r_tree_b_n_update}
+				\end{eqnarray}
+				$n^* \longleftarrow f$
+		\end{xwhile}
+		\end{xalgostep}
+		
+		\begin{xalgostep}{ajout du n\oe ud}
+		Si $p\pa{n^*}$ a moins de $s$ fils, alors le n\oe ud $e$ devient le fils de $p\pa{n^*}$ et $B\pa{p\pa{n^*}}$ est 
+		mis à jour d'après l'expression (\ref{space_metric_r_tree_b_n_update}). L'insertion est terminée.
+		Dans le cas contraire, on sépare découpe le n\oe ud $p\pa{n^*}$ en deux grâce à l'étape suivante.
+		\end{xalgostep}
+		
+		%\possiblecut 
+
+		\begin{xalgostep}{découpage des n\oe uds} \label{space_metric_insertion_decoupage_r_tree}
+		L'objectif est de diviser le groupe $G$ composé de $s+1$ n\oe uds en deux groupes $G_1$ et $G_1$. 
+		Tout d'abord, on cherche 
+		le couple $\pa{n_1,n_2}$ qui minimise le critère $$ d = v^*\pa{\acc{n_1,n_2}} - v\pa{B\pa{n_1}} - v\pa{B\pa{n_2}}$$ Alors~:
+		$G_1 \longleftarrow n_1$, $G_2 \longleftarrow n_2$ et $G \longleftarrow G - G_1 \cup G_2$ \\
+		\begin{xwhile}{$G \neq \emptyset$}
+				On choisit un n\oe ud $n \in G$, on détermine $i^*$ 
+				tel que $v\pa{\acc{n} \cup G_i} - v\pa{G_i}$ soit minimal. \\
+				$G \longleftarrow G - \acc{n}$ \\
+				$G_{i^*} \longleftarrow G_{i^*} \cup \acc{n}$
+		\end{xwhile}
+		\end{xalgostep}
+
+
+		\end{xalgorithm}
+
+
+
+
+
+
+
+
+\indexfr{R$^*$ tree}
+\indexfr{R$^*$ tree}
+\indexfr{R+ Tree}
+Si la recherche est identique quel que soit l'arbre construit, chaque variante de la construction de l'arbre tente de minimiser les intersections des boîtes et leur couverture. Plus précisément, l'étape~\ref{space_metric_insertion_decoupage_r_tree} qui permet de découper les n\oe uds est conçue de manière à obtenir des boîtes englobantes de volume minimale et/ou d'intersection minimale avec d'autres boîtes englobantes. L'algorithme R+~Tree (voir \citeindex{Sellis1987}) essaye de minimiser les intersections entre boîtes et les objets à organiser sont supposés n'avoir aucune intersection commune. La variante R$^*$~Tree (voir \citeindex{Beckmann1990}) effectue un compromis entre l'intersection et la couverture des boîtes englobantes. L'algorithme X-Tree (voir \citeindex{Berchtold1996}) conserve l'historique de la construction de l'arbre ce qui lui permet de mieux éviter les intersections communes entre boîtes. Ces techniques appartiennent à une classe plus larges d'algorithmes de type \emph{Branch and Bound}. \indexfr{Branch and bound}
+
+
+
+
+
+\subsubsectionx{LAESA}
+
+\label{space_metric_laesa_laesa}
+\indexfr{LAESA}\indexfr{pivot}
+
+Cet algorithme permet de chercher les plus proches voisins dans un ensemble inclus dans un espace métrique quelconque. Il s'appuie sur l'inégalité triangulaire. L'algorithme LAESA (Linear Approximating Eliminating Search Algorithm, voir \citeindex{Rico-Juan2003}) consiste à éviter un trop grand nombre de calculs de distances en se servant de distances déjà calculées entre les éléments de $E$ et un sous-ensemble $B$ inclus dans $E$ contenant des "pivots". La sélection des pivots peut être aléatoire ou plus élaborée comme celle effectuée par l'algorithme qui suit, décrit dans l'article~\citeindex{Moreno2003}.
+
+
+			\begin{xalgorithm}{LAESA : sélection des pivots}
+			\label{space_metric_algo_laesa_pivtos_sel}
+			\indexfrr{pivot}{sélection}
+			
+			Soit $E = \ensemble{y_1}{y_N}$ un ensemble de points, on cherche à déterminer 
+			l'ensemble $B = \ensemble{p_1}{p_P} \subset E$ utilisé par l'algorithme~\ref{space_metric_algo_laesa}.
+			
+			\begin{xalgostep}{initialisation}
+				$B \longleftarrow y \in E$ choisi arbitrairement.
+			\end{xalgostep}
+			
+			\begin{xalgostep}{calcul de la fonction $g$} \label{space_metric_laesa_pivots_sel_b}
+					\begin{xforeach}{y}{E - B}
+						$g\pa{y} \longleftarrow 0$ \\
+						\begin{xforeach}{p}{B}
+						$g\pa{y} \longleftarrow g\pa{y} + d\pa{y,p}$
+						\end{xforeach}
+					\end{xforeach}
+			\end{xalgostep}
+			
+			\begin{xalgostep}{mise à jour de $B$}
+					Trouver $p^* \in \arg \max \acc { g\pa{p} \sac p \in E - B}$\\
+					$B \longleftarrow B \cup \acc{ p^*}$ \\
+					Si $\card{B} < P$, retour à l'étape~\ref{space_metric_laesa_pivots_sel_b} sinon fin.
+			\end{xalgostep}
+			
+			\end{xalgorithm}
+
+L'algorithme LAESA utilise les pivots pour diminuer le nombre de calculs en utilisant l'inégalité triangulaire. Par exemple, soit $x$ un élément à classer, $p_j$ un pivot, $y_i$ un point du nuage. On suppose qu'on connaît $d\pa{x,p_j}$, $d\pa{p_j,y_i}$ et $d^*$ la distance du point $x$ à un autre point du nuage. L'inégalité triangulaire permet d'affirmer que si~: $d\pa{x,y_i} \supegal \abs{ d\pa{x,p_j} - d\pa{p_j,y_i}} > d^*$, alors il n'est pas nécessaire de calculer la distance $d\pa{x,y_i}$ pour affirmer que $d\pa{x,y_i} > d^*$. L'élément $y_i$ ne peut être l'élément le plus proche.
+
+
+
+
+			\begin{xalgorithm}{LAESA}
+			\label{space_metric_algo_laesa_prime}
+			\indexfr{LAESA}
+			
+			Soit $E = \ensemble{y_1}{y_N}$ un ensemble de points, $B = \ensemble{p_1}{p_P} \subset E$ 
+			un ensemble de pivots inclus dans $E$. On cherche à déterminer le voisinage $V\pa{x}$ de $x$ 
+			inclus dans $E$ vérifiant~:
+			
+						$$
+						\forall y \in V\pa{x}, \; d\pa{x,y} \infegal \rho
+						$$
+						
+			On suppose que la matrice $M = \pa{m_{ij}}_ { \begin{subarray} 1 \infegal i \infegal P \\ 
+			1 \infegal j \infegal N \end{subarray} }$ a été calculée préalablement comme suit~:
+			
+						$$
+						\forall \pa{i,j}, \; m_{ij} = d\pa{p_i, y_j}
+						$$
+						
+			\begin{xalgostep}{initialisation}
+			\begin{xfor}{i}{1}{P}
+				$d_i \longleftarrow d\pa{x, p_i}$
+			\end{xfor} \\
+			$d^* \longleftarrow  \min \acc{ d_i \sac 1 \infegal i \infegal P }$. \\
+			$d^*$ est la distance du point $x$ au pivot le plus proche.
+			\end{xalgostep}		
+			
+			\begin{xalgostep}{recherche du plus proche élément}
+			$S \longleftarrow \emptyset$ \\
+			\begin{xfor}{i}{1}{N}
+					$d' \longleftarrow \max \acc{ \abs{ d_j - m_{ji} } }$ \\
+					\begin{xif}{$d' < d^*$}
+							$d \longleftarrow d\pa{x,y_i}$ \\
+							\begin{xif}{$d' \infegal d^*$}
+									$\begin{array}{lll}
+									d^* &\longleftarrow& d' \\
+									S &\longleftarrow& \acc{y_i}
+									\end{array}$
+							\end{xif}
+					\end{xif}
+			\end{xfor}
+			\end{xalgostep}
+
+\end{xalgorithm}
+
+
+
+
+
+\subsubsectionx{Résultats théoriques}
+
+\indexfr{mesure}\indexfr{densité}
+L'article~\citeindex{Farag\'o1993} démontre également qu'il existe une majoration du nombre moyen de calcul de distances pour peu que la mesure de l'espace contenant l'ensemble $E$ et l'élément $x$ soit connue et que l'ensemble $B = \ensemble{p_1}{p_P}$ des pivots vérifie~:
+
+			\begin{eqnarray}
+			\exists \pa{\alpha,\beta} \in \R^+_* \text{ tels que } && \nonumber\\
+			\forall \pa{x,y} \in E^2, \; \forall i\, && \alpha \, d\pa{x,y} \supegal 
+							\abs{d\pa{x,p_i} - d\pa{p_i,y}} \label{space_metric_cond_1} \\
+			\forall \pa{x,y} \in E^2, && \underset{i}{\max} \; \abs{d\pa{x,p_i} - d\pa{p_i,y}} \supegal 
+							\beta \, d\pa{x,y} \label{space_metric_cond_1}
+			\end{eqnarray}
+
+
+L'algorithme développé dans~\citeindex{Farag\'o1993} permet de trouver le point de plus proche d'un élément $x$ dans un ensemble $E = \ensemble{x_1}{x_N}$ selon l'algorithme suivant~:
+
+
+			\begin{xalgorithm}{plus proche voisin d'après [Farag\'o1993]}\label{space_metric_algo_farago}
+			Soit $E = \ensemble{x_1}{x_N}$ et $B = \ensemble{p_1}{p_P} \subset E \subset X$. Soit $x \in X$ 
+			un élément quelconque. 
+			On suppose que les valeurs $m_{ij} = d\pa{x_i, p_j}$ ont été préalablement calculées.
+			
+			\begin{xalgostep}{initialisation}
+			On calcule préalablement les coefficients $\gamma\pa{x_i}$~:
+			  				$$
+								\forall i \in \ensemble{1}{N}, \; \gamma\pa{x_i} \longleftarrow \underset{j 
+														\in \ensemble{1}{P} } {\max} \;
+											\abs{ m_{ij} - d\pa{x,p_j} }
+								$$
+			\end{xalgostep}		
+			
+			\begin{xalgostep}{élaguage}
+			On définit $t_0 \longleftarrow \underset{i} {\min} \; \gamma\pa{x_i}$. \\
+			Puis on construit l'ensemble $F\pa{x} = \acc{ x_i \in E \sac \gamma\pa{x_i} }\infegal
+						 \frac{\alpha}{\beta} \, t_0$.
+			\end{xalgostep}		
+			
+			\begin{xalgostep}{plus proche voisin}
+			Le plus proche $x^*$ voisin est défini par~: $x^* \in \arg \min \acc{ d\pa{x,y} \sac y \in F\pa{x}}$.
+			\end{xalgostep}		
+			
+			\end{xalgorithm}
+
+
+
+			\begin{xtheorem}{[Farag\'o1993]$^1$}
+																\label{space_metric_farago_1}
+			Les notations sont celles de l'algorithme~\ref{space_metric_algo_farago}.		
+			L'algorithme~\ref{space_metric_algo_farago} retourne le plus proche voisin $x^*$ de $x$ inclus dans $E$. 
+			Autrement dit, $\forall x \in X, \; x^* \in F\pa{x}$.
+			\end{xtheorem}
+
+
+
+
+			\begin{xtheorem}{[Farag\'o1993]$^2$}
+																\label{space_metric_farago_2}
+			Les notations sont celles de l'algorithme~\ref{space_metric_algo_farago}. On définit une mesure 
+			sur l'ensemble $X$, $B\pa{x,r}$ désigne la boule de centre $x$ et de rayon $r$, $Z \in X$ une variable 
+			aléatoire, de plus~:
+						$$
+						p\pa{x,r} = P_X \pa{B\pa{x,r}} = \pr{  Z \in B\pa{x,r}}
+						$$
+						
+			On suppose qu'il existe $d > 0$ et une fonction $f : X \longrightarrow \R$ tels que~:
+						$$
+						\underset { r \rightarrow 0 } { \lim } \; \frac{ p\pa{x,r} } { r^d } = f\pa{x} > 0
+						$$
+		  La convergence doit être uniforme et presque sûre.
+		  On note également $F_N$ le nombre de calculs de dissimilarité effectués par 
+		  l'algorithme~\ref{space_metric_algo_farago} où $N$ est le nombre d'élément de $E$, 
+		  $P$ désigne toujours le nombre de pivots, alors~:
+		  
+		  			$$
+		  			\underset{ n \rightarrow \infty } { \lim \sup } \;
+		  							\esp{F_N} \infegal k + \pa{\frac{\alpha}{\beta}}^{2d}
+		  			$$
+																			
+			\end{xtheorem}
+
+
+\end{xexempleprog}
+
+
+
+
+
+
+
+
+
+
+
+\begin{xexempleprogcor}{exemple_kppv}\label{exemple_kppv_cor}
+
+
+\subsubsectionx{Programmes annexes}
+\indexfrr{reconnaissance}{manuscrite}\indexfr{chiffres manuscrits}
+Ces deux programmes permettent d'obtenir un jeu de données permettant d'utiliser la méthode des plus proches voisins afin de reconnaître de chiffres manuscrits. Le premier programme \codes{html\_file.py} permet d'écrire un fichier au format HTML, il est utilisé afin de générer une page internet permettant de prendre connaissance des résultats de classification (ou de reconnaissance).
+
+\inputcode{../python_cours_exemple/programme/html_file.py}{écrire un rapport au format HTML}
+
+\indexfr{MNIST}
+Le second fichier permet de lire la base de données (MNIST) regroupant les images de caractères. Celle-ci est disponible à l'adresse \textit{http://yann.lecun.com/exdb/mnist/}. La base MNIST est scindée en deux sous-bases d'apprentissage et de tests. La première sert à estimer les paramètres d'un système de classification, la seconde sert à évaluer les performances de ce système sur des données non apprises. Ce site internet référence des performances obtenues avec des méthodes classiques de classification telles que les réseaux de neurones, les Support Vector Machines (SVM), les plus proches voisins... Le programme \codes{mnist.py} permet d'extraire les images de chiffres des fichiers présents sur ce site.
+
+\inputcode{../python_cours_exemple/programme/mnist.py}{récupération de chiffre de la base MNIST}
+
+
+\subsubsectionx{Programme de classification}
+
+Les deux premiers fichiers implémentent la méthode de classification des plus proches voisins dans le cas d'une reconnaissance de caractères. Aucune optimisation n'est effectuée. Le premier fichier \codes{kppv.py} concrétise l'algorithme de classification, le second fichier \codes{kppv\_image.py} s'occupent de charger les images de caractères et d'utiliser le fichier précédent pour les classer, ce qui équivaut à les reconnaître.
+
+Le premier fichier contient la classe \codes{nuage\_points}. La méthode \codes{ppv} recherche le plus proches voisins dans le nuage \codes{nuage}. La méthode \codes{ppv\_nuage} l'utilise pour classer tous les éléments d'un nuage qu'elle reçoit en paramètre. Pour utiliser, il faut créer une classe qui dérive de celle-ci afin de surcharger les méthodes \codes{distance} et \codes{label} dont le code dépend des éléments à classer.
+
+\inputcode{../python_cours_exemple/programme/kppv.py}{plus proches voisins}
+
+Le second fichier contient la classe \codes{nuage\_point\_distance\_label} qui dérive de \codes{nuage\_points} pour redéfinir les méthodes \codes{distance} et \label{label} pour des images de taille fixe 32x32. La distance entre deux images est le nombre de pixels qui différent entre elles. La seconde classe se contente de charger les images aux travers des méthodes \codes{image} et \codes{\_\_init\_\_}. La méthode \codes{html\_couple} construit un fichier HTML permettant de visionner les erreurs de reconnaissance. 
+
+Enfin, la méthode \codes{ppv\_nuage} appelle la classification d'un ensemble d'images test à l'aide d'un ensemble d'image apprentissage pour lesquelles la classe est supposée connue.
+
+\inputcode{../python_cours_exemple/programme/kppv_image.py}{plus proches voisins sur des images}
+
+\subsubsectionx{Optimisation}
+
+Encore deux fichiers pour réaliser la méthode des plus proches voisins à l'aide de l'algorithme LAESA. Ils sont construits selon le même schéma que les deux fichiers précédents. Le premier contient la classe \codes{nuage\_point\_laesa} qui hérite de \codes{nuage\_points}. Elle redéfinit la méthode \codes{ppv} pour déterminer plus rapidement le plus proche voisins. La méthode \codes{selection\_pivots} sélectionne aléatoirement les pivots.
+
+\inputcode{../python_cours_exemple/programme/kppv_laesa.py}{plus proches voisins LAESA}
+
+Le dernier fichier est construit exactement selon le même principe que \codes{kppv\_image.py}. La classe \codes{nuage\_image\_leasa}. Elle redéfinit son constructeur pour appeler la sélection ds pivots.
+
+\inputcode{../python_cours_exemple/programme/kppv_laesa_image.py}{plus proches voisins LAESA sur des images}
+
+
+\end{xexempleprogcor}
+
+
+\input{../../common/livre_table_end.tex}%
+\input{../../common/livre_end.tex}%

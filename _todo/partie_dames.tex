@@ -1,0 +1,121 @@
+\input{../../common/livre_begin.tex}%
+
+\begin{xexempleprog}{Partie de dames, tableaux à deux dimensions}{exemple_dame_cor}\label{exemple_dame}
+\indexfr{jeu de dames}\indexfrr{matrice}{représentation}\indexfr{dames}\label{exercice_dame_dico_matrice}
+
+Une partie de dames met en jeu quarante pions, vingt noirs, vingt blancs, chacun sur des cases différentes. L'objectif est de savoir si un pion est en mesure d'en prendre un autre. On ne traitera pas le cas des dames. Chaque pion est défini par~:
+
+\begin{small}
+		\begin{itemize}
+		\item deux coordonnées entières, chacune comprise entre 1 et 10
+		\item une couleur, noir ou blanc
+		\end{itemize}
+\end{small}
+		
+\exemplequest		\indexfr{représentation des données}
+On propose deux représentations de l'ensemble de pions~:
+
+\begin{small}
+		\begin{enumerate}
+		\item Un tableau de 40 pions indicés de 0 à 39 inclus, chaque pion étant défini par~:
+						\begin{itemize}
+						\item deux coordonnées comprises entre 1 et 10, ou (0,0) si le pion n'est plus sur le damier
+						\item un entier qui vaut 1 pour blanc, 2 pour noir
+						\end{itemize}
+		\item Un tableau d'entiers à deux dimensions, chaque case contient~:
+						\begin{itemize}
+						\item soit 0 s'il n'y a pas de pion
+						\item soit 1 si la case contient un pion blanc
+						\item soit 2 si la case contient un pion noir
+						\end{itemize}
+		\end{enumerate}
+\end{small}
+
+
+\indexfr{efficacité}
+Y a-t-il d'autres représentations de ces informations~? Si on considère que l'efficacité d'une méthode est reliée à sa vitesse -~autrement dit aux coûts des algorithmes qu'elles utilisent~-, parmi ces deux représentations, quelle est celle qui semble la plus efficace pour savoir si un pion donné du damier est en mesure d'en prendre un autre~?
+
+\exemplequest \indexfrr{type}{dictionnaire}
+Comment représenter un tableau d'entiers à deux dimensions en langage \pythons à l'aide des types standards qu'il propose, à savoir t-uple, liste ou dictionnaire~?
+
+\exemplequest
+On cherche à écrire l'algorithme qui permet de savoir si un pion donné est un mesure de prendre un pion. Quels sont les paramètres d'entrées et les résultats de cet algorithme~? 
+
+\exemplequest Il ne reste plus qu'à écrire cet algorithme.
+
+\end{xexempleprog}
+
+
+\begin{xexempleprogcor}{exemple_dame}\label{exemple_dame_cor}
+
+\exemplequest La seconde représentation sous forme de tableau à deux dimensions est plus pratique pour effectuer les tests de voisinages. Chaque case a quatre voisines aux quatre coins, il est ensuite facile de déterminer si ces quatre voisines sont libres ou si elles contiennent un pion. On sait rapidement le contenu d'une case.
+
+Avec la première représentation -~le tableau des pions~- pour savoir s'il existe un pion dans une case voisine, il faut passer en revue tous les pions pour savoir si l'un d'eux occupe ou non cette case. Avec la seconde représentation -~le tableau à deux dimensions~- on accède directement à cette information sans avoir à la rechercher. On évite une boucle sur les pions avec la seconde représentation.
+
+\exemplequest Pour représenter le tableau en deux dimensions, il existe trois solutions~:
+\indexfrr{type}{dictionnaire}\indexfrr{type}{liste}
+
+\begin{small}
+		\begin{enumerate}
+		\item Une liste de listes, chaque ligne est représentée par une liste. Toutes ces listes sont elles-mêmes
+					assemblées dans une liste globale.
+		\item Une seule liste, il suffit de numéroter les cases du damier de~0 à~99,
+					en utilisant comme indice pour la case $(i,j)$~: $k = 10*i+j$. Réciproquement, 
+					la case d'indice $k$ aura pour coordonnées $\pa{k / 10, \, k \% 10}$.
+		\item Un dictionnaire dont la clé est un couple d'entiers.
+		\end{enumerate}										
+\end{small}
+
+\exemplequest On désire savoir si le pion de la case $(i,j)$ peut en prendre un autre. On suppose que le tableau à deux dimensions est une liste de dix listes appelée \codes{damier}. \codes{damier[i][j]} est donc la couleur du pion de la case $(i,j)$, à savoir 0 si la case est vide, 1 si le pion est blanc, 2 si le pion est noir. Pour ces deux derniers cas, la couleur des pions de l'adversaire sera donc \codes{3 - damier[i][j]}. Les entrées de la fonctions sont donc les indices \codes{i}, \codes{j} et le damier \codes{damier}. La sortie est une variable booléenne qui indique la possibilité ou non de prendre. On ne souhaite pas déplacer les pions.
+
+\exemplequest 
+\vspaceneg
+\inputcodes{../python_cours_exemple/programme/dames_1.py}{damier}{ (1)}
+\vspaceneg
+%
+
+Voici une fonction équivalente lorsque le damier est un dictionnaire dont la clé est un couple d'entiers.
+%
+\vspaceneg
+\inputcodes{../python_cours_exemple/programme/dames_2.py}{damier}{ (2)}
+\vspaceneg
+%
+La même fonction lorsque le damier est représenté par une seule liste.
+%
+\vspaceneg
+\inputcodes{../python_cours_exemple/programme/dames_3.py}{damier}{ (3)}
+\vspaceneg
+%
+Pour ces trois cas, aucun effet de bord n'a été envisagé. Si la case est trop près d'un des bords, un des indices $i,\;j,\;i-1,\;j-1,\;i+1,\;j+1,\;i-2,\;j-2,\;i+2,\;j+2$ désignera une case hors du damier. Le code de la fonction \codes{pion\_prendre} devra donc vérifier que chaque case dont elle vérifie le contenu appartient au damier.
+%
+\vspaceneg
+\inputcodes{../python_cours_exemple/programme/dames_4.py}{damier}{ (4)}
+\vspaceneg
+%
+Une autre option consiste à entourer le damier d'un ensemble de cases dont le contenu sera égal à une constante différente de \codes{0}, \codes{-1} par exemple. Dans ce cas, si le damier est représenté par une liste de listes, la première case du damier aura pour coordonnées $(1,1)$ au lieu de $(0,0)$ car les listes n'acceptent pas les indices négatifs. Ce n'est pas le cas lorsque le damier est représenté par un dictionnaire car une case peut tout à fait avoir pour coordonnées $(-1,-1)$. 
+
+Avec cette convention, les tests introduits dans le dernier programme ne seront plus nécessaires. Il faudra juste réécrire la seconde ligne de chaque fonction \codes{pion\_prendre} par~:
+\vspaceneg
+\begin{verbatimx}
+    if c <= 0 : return False  # au lieu de if c == 0 : return False
+\end{verbatimx}
+\vspaceneg
+\begin{xremark}{matrice et dictionnaire}
+Les structures représentées ici sont des tableaux à deux dimensions~: ce sont des matrices. Les dictionnaires sont particulièrement indiqués dans le cas où ces matrices sont \textit{creuses}~: elles contiennent beaucoup de valeurs nulles. Pour une liste ou une liste de listes, toutes les cases sont représentées. Dans le cas d'un dictionnaire, il est possible d'adopter comme convention que si un couple de coordonnées n'existe pas en tant que clé, cela veut dire que la case associée est nulle. Il en résulte un gain de place équivalent à la proportion de cases nulles.\indexfrr{matrice}{creuse}
+\end{xremark}
+
+\begin{xremark}{dictionnaire et clé de type tuple}
+Le second exemple utilise un dictionnaire avec comme clé un \codes{tuple}. Dans ce cas, les parenthèses sont superflues.
+\vspaceneg
+\begin{verbatimx}
+    damier [(i-1,j-1)]   # est équivalent à    
+    damier [ i-1,j-1 ]   # cette ligne
+\end{verbatimx}
+\end{xremark}
+
+
+\end{xexempleprogcor}
+
+
+
+\input{../../common/livre_end.tex}%

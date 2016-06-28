@@ -1,0 +1,204 @@
+\input{../../common/livre_begin.tex}%
+
+
+
+
+
+\begin{xtdcor}{tdd}\label{tdd_cor}%\indexfrr{correction}{TD 4}
+
+\tdquest La chaîne de caractères que contient \codes{NoeudTri} s'appelle \codes{mot}.
+\vspaceneg
+\begin{verbatimx}
+class NoeudTri (object):
+    def __init__(self,s):
+        self.mot = s
+\end{verbatimx}
+\vspaceneg
+
+\tdquest
+\vspaceneg
+\begin{verbatimx}
+class NoeudTri (object):
+    def __init__(self,s): self.mot = s
+    def __str__(self)   : return self.mot + "\n"  # \n : passage à la ligne
+\end{verbatimx}
+\vspaceneg
+
+\tdquest \indexfonction{cmp}
+\vspaceneg
+\begin{verbatimx}
+class NoeudTri (object):
+    def __init__(self,s): self.mot = s
+    def __str__(self)   : return self.mot + "\n"
+
+    def insere (self,s):
+        c = cmp (s, self.mot)
+        if   c == -1 : self.avant = NoeudTri (s)  # ajout d'un successeur
+        elif c ==  1 : self.apres = NoeudTri (s)  # ajout d'un successeur
+\end{verbatimx}
+\vspaceneg
+La méthode \codes{insere} prévoit de ne rien faire dans le cas où le mot \codes{s} passé en argument est égal à l'attribut \codes{mot}~: cela revient à ignorer les doublons dans la liste de mots à trier.
+ 
+\tdquest
+\vspaceneg
+\begin{verbatimx}
+class NoeudTri (object):
+    def __init__(self,s): self.mot = s
+        
+    def __str__(self):
+        s = ""
+        if "avant" in self.__dict__: s += self.avant.__str__ ()
+        s += self.mot + "\n"
+        if "apres" in self.__dict__: s += self.apres.__str__()
+        return s
+
+    def insere (self,s):
+        c = cmp (s, self.mot)
+        if   c == -1 : self.avant = NoeudTri (s)
+        elif c ==  1 : self.apres = NoeudTri (s)
+\end{verbatimx}            
+\vspaceneg
+%
+L'insertion des mots donnés dans l'énoncé produit le code suivant~:
+%
+\vspaceneg
+\begin{verbatimx}
+deux
+un
+unite
+\end{verbatimx}            
+\vspaceneg
+
+
+\tdquest \tdquest Il reste à compléter la fonction \codes{insere} afin qu'elle puisse trouver le bon n\oe ud où insérer un nouveau mot. Cette méthode est récursive~: si un n\oe ud contient deux attributs \codes{avant} et \codes{apres}, cela signifie que le nouveau mot doit être inséré plus bas, dans des n\oe uds reliés soit à \codes{avant} soit à \codes{apres}. La méthode \codes{insere} choisit donc un des attributs et délègue le problème à la méthode \codes{insere} de ce n\oe ud.
+%
+\vspaceneg
+\inputcodes{../python_td/programme/quicksort.py}{tri rapide}{ (1)}
+\vspaceneg
+%
+Chaque nouveau mot va partir du tronc pour s'accrocher à une feuille de l'arbre pour devenir à son tour une feuille. La méthode \codes{nouveau\_noeud} crée un nouveau n\oe ud dans le graphe. Son utilité est mise en évidence par le prochain programme.
+
+\tdquest La figure~\ref{td4_graphe} détient le graphe obtenu par le programme qui suit. Plutôt que de modifier la classe \codes{NoeudTri}, une seconde est créée qui hérite de la première. On lui adjoint la méthode \codes{chaine\_graphe} qui convertit un graphe en une chaîne de caractères dont le format reprend celui énoncé plus haut. Cette fonction s'occupe de construire récursivement cette chaîne de caractères. Pour identifier chaque n\oe ud, on utilise la fonction \codes{id} qui retourne un identifiant distinct pour chaque instance de classe.\indexfonction{id}
+%
+				\begin{figure}[ht]
+				\figureoneimage{     		\caption{	Graphe de tri obtenu lors du tri quicksort. Chaque
+    							n\oe ud du graphe inclut un mot. Les symboles "<" et ">" des arcs désignent
+    							les membres \codescaption{avant} et \codescaption{apres} de la classe \codescaption{NoeudTri}. Tous les mots attachés
+    							à un arc "<" d'un n\oe ud sont classés avant le mot de ce n\oe ud. De même, 
+    							tous les mots attachés à un arc ">" d'un n\oe ud sont classés après le mot de ce n\oe ud.} }
+				{ \includegraphics[height=6cm, width=4cm]{\filextellipse{../python_td/image/td4gr}{../python_td/image_ellipse/td4gr}} }
+    		{ \label{td4_graphe} }
+    		\end{figure}
+%
+\indexfonction{id}
+\vspaceneg
+\inputcodes{../python_td/programme/quicksort2.py}{tri rapide}{ (2)}
+\vspaceneg
+%
+La méthode \codes{nouveau\_noeud} permet de s'assurer que tous les n\oe uds insérés lors de la création du graphe seront bien du type \codes{NoeudTri2} qui inclut la méthode \codes{chaine\_graphe}. Cette méthode serait inutile s'il n'y avait qu'une seule classe \codes{NoeudTri} contenant toutes les méthodes. Si on la met en commentaire, le message d'erreur suivant apparaît~:
+\vspaceneg
+\begin{verbatimx}
+Traceback (most recent call last):
+  File "quicksort2.py", line 53, in <module>
+    racine.image ("graph.txt", "graph.png")
+  File "quicksort2.py", line 27, in image
+    graph = self.chaine_graphe ()
+  File "quicksort2.py", line 14, in chaine_graphe
+    h  = self.avant.chaine_graphe ()
+AttributeError: NoeudTri instance has no attribute 'chaine_graphe'
+\end{verbatimx}
+\vspaceneg
+L'erreur signifie que le programmeur cherche à appeler une méthode qui n'existe pas dans la classe \codes{NoeudTri} parce que seul le premier n\oe ud de l'arbre est de type \codes{NoeudTri2} contrairement aux n\oe uds insérés par la méthode \codes{nouveau\_noeud} de la classe \codes{NoeudTri}.\indexfrr{classe}{surcharge} En surchargeant cette méthode, on s'assure que tous les n\oe uds sont du même type \codes{NoeudTri2}. Il existe néanmoins une façon d'éviter de surcharger cette fonction à chaque fous. Il suffit qu'elle crée automatiquement la bonne classe, que l'objet soit une instance de \codes{NoeudTri} ou \codes{NoeudTri2}. C'est ce que fait l'exemple suivant où \codes{self.\_\_class\_\_} correspond à la classe de l'objet.
+
+\begin{verbatimx}
+def nouveau_noeud (self, s) : return self.__class__ (s)
+\end{verbatimx}
+
+
+
+Au final, la méthode \codes{image} construit l'image du graphe. Le fichier \codes{graphe.txt} doit ressembler à ce qui suit~:
+\vspaceneg
+\begin{verbatimx}
+digraph GA {
+18853120 [label="un",style=filled,shape=record]
+28505472 [label="deux",style=filled,shape=record]
+28505712 [label="abc",style=filled,shape=record]
+28505472 -> 28505712 [label="<"]
+28505552 [label="dizaine",style=filled,shape=record]
+28505592 [label="dire",style=filled,shape=record]
+28505552 -> 28505592 [label="<"]
+28505632 [label="exception",style=filled,shape=record]
+28505672 [label="programme",style=filled,shape=record]
+28505792 [label="opera",style=filled,shape=record]
+28505672 -> 28505792 [label="<"]
+28505832 [label="quel",style=filled,shape=record]
+28505672 -> 28505832 [label=">"]
+28505632 -> 28505672 [label=">"]
+28505552 -> 28505632 [label=">"]
+28505472 -> 28505552 [label=">"]
+18853120 -> 28505472 [label="<"]
+28505512 [label="unite",style=filled,shape=record]
+28505752 [label="xyz",style=filled,shape=record]
+28505512 -> 28505752 [label=">"]
+18853120 -> 28505512 [label=">"]
+}
+\end{verbatimx}
+\vspaceneg
+%
+La numérotation des n\oe uds importe peu du moment que chaque n\oe ud reçoit un identifiant unique. C'est pour cela que la fonction \codes{id} est pratique dans ce cas-là.\indexfonction{id} Le programme suivant construit une sortie au format HTML mélangeant image et texte. Il commence par importer le programme \codes{quicksort2} qui n'est autre que celui incluant la classe \codes{NoeudTri2}. Il termine en appelant le navigateur \textit{Mozilla Firefox}\indexoutil{Mozilla Firefox} afin d'afficher le résultat automatiquement.
+%
+\label{html_exo_exemple_pdf_latex}\indexfr{HTML}\indexext{html}
+%
+\vspaceneg
+\inputcode{../python_td/programme/quicksort3.py}{sortie HTML}
+\vspaceneg
+%
+Le fichier \codes{page.html} contient les lignes suivantes excepté les points de suspension qui remplacent la partie tronquée qu'on peut aisément deviner.\indexext{png}\indexext{dot}\ifnotellipse{\indexfrr{image}{png}}
+%
+\vspaceneg
+\begin{verbatimx}
+<body><html>
+<H1> liste triée </H1>
+abc<BR>
+deux<BR>
+...
+unite<BR>
+xyz<BR>
+<H1> graphe </H1>
+<img src="graph.png" width=400/>
+<H1> code du graphe </H1>
+<pre>
+13697312 [label="un",style=filled,shape=record,fontsize=60]
+13697192 [label="deux",style=filled,shape=record,fontsize=60]
+34692472 [label="abc",style=filled,shape=record,fontsize=60]
+...
+13697232 -> 34692592 [label=">",fontsize=60]
+13697312 -> 13697232 [label=">",fontsize=60]
+</pre>
+</html></body>
+\end{verbatimx}
+\vspaceneg
+%
+On veut modifier ce programme pour que la sortie ne soit plus au format HTML mais au format PDF. Pour cela, on utilise comme intermédiaire le langage \textit{Latex}\indexfr{Latex}\indexoutil{Latex} qui s'occupe de créer ce fichier au format PDF. Les dernières lignes sont propres au système \textit{Windows} où on suppose que la version de \textit{Latex} installée est \textit{Miktex~2.7}\footnote{\httpstyle{http://miktex.org/}, ce logiciel est volumineux et assez long à télécharger.}.\indexoutil{Miktex} Il faut également le logiciel \textit{Adobe Reader}\footnote{\httpstyle{http://www.adobe.com/fr/products/acrobat/readstep2.html}}.\indexoutil{Adobe Reader}\indexext{pdf}\indexext{tex}\indexfr{PDF}\indexoutil{Latex}\indexfr{Latex}\label{exeplpe_fichier_pdf_latec_acrobat}
+%
+\vspaceneg
+\inputcode{../python_td/programme/quicksort4.py}{sortie PDF}
+\vspaceneg
+%
+La partie \codes{header} est longue dans cet exemple, elle inclut des packages Latex qui ne sont pas utilisés mais qui pourraient l'être dans le cas d'un rapport plus long. Il faut bien sûr connaître quelques rudiments de ce langage pour construire le document PDF. L'avantage de ce système est de pouvoir retravailler manuellement le document final. Il est également indiqué lorsque le rapport mélange tableaux de chiffres récupérés depuis différentes sources et graphiques qui peuvent être générés par \pythons via un module comme \codes{matplotlib}\footnote{\httpstyle{http://matplotlib.sourceforge.net/}}.\indexmoduleext{matplotlib}
+
+Sous \textit{Linux}, il suffit de modifier les chemins d'accès aux différentes applications. Une dernière remarque, il existe sous \textit{Windows} un éditeur convenable qui est \textit{TeXnicCenter}\footnote{\httpstyle{http://www.toolscenter.org/}}.\indexoutil{TeXnicCenter}
+
+\end{xtdcor}
+
+
+
+
+
+
+
+
+
+
+
+\input{../../common/livre_end.tex}%

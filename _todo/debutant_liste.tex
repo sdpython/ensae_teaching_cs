@@ -1,0 +1,177 @@
+\input{../../common/livre_begin.tex}%
+\firstpassagedo{\input{../tutoriels/tutoriel_titre.tex}}
+\input{../../common/livre_table_begin2.tex}%
+%\firstpassagedo{\input{python_cours_chapter.tex}}
+
+\firstpassagedo{\chapter{Commencer à programmer}}
+
+
+\begin{xtutorial}{Liste}{tutoriel_liste_cor}\label{tutoriel_liste}
+
+Ce tutoriel propose des exercices simples pour débuter la programmation. Les premières questions ont pour but de personnaliser l'énoncé pour chaque élève afin que chacun travaille sur des données différentes. La suite de l'énoncé est identique mais il faudra répondre avec le jeu de données que les premières questions vous attribueront. Ce tutoriel se propose de manipuler des listes de différentes manières.
+
+\input{../tutoriels/debutant_common_part.tex}
+
+\exequest La fonction \codes{sort} permet de trier une liste en utilisant le tri quicksort. Elle peut trier tout type d'élément à condition qu'on puisse les ordonner. C'est le cas de tuple par exemple~:
+
+\begin{verbatimx}
+(1, 2) >  (0,9) 
+(1, 2) >  (1,1) 
+(1, 2) == (1, 2)
+(1, 2) <  (2, 0)
+\end{verbatimx}
+
+Le premier élément est d'abord utilisé pour la comparaison et s'il ne permet pas de conclure, on utilise le second. On récupère le tableau \codes{tri} obtenu à la question précédente (c'est-à-dire celui inclus dans le fichier \codes{tutoriel\_\%d.py} qui a été téléchargé) pour construire la liste de tuple suivante~:
+
+\begin{center}
+\begin{tabular}{ll}
+\begin{minipage}{5cm}
+\begin{verbatimx}
+[ 4.6,
+  6.4,
+  4.3,
+  7.8 ]
+\end{verbatimx}
+\end{minipage}
+&
+\begin{minipage}{5cm}
+\begin{verbatimx}
+[ (4.6, 1),
+  (6.4, 2),
+  (4.3, 3),
+  (7.8, 4) ]
+\end{verbatimx}
+\end{minipage}
+\end{tabular}
+\end{center}
+
+La seconde colonne contient la position de chaque élément. Ecrire une fonction qui construit cette "matrice" à deux colonnes où la seconde contient la position de l'élément dans le tableau initial.
+
+\begin{verbatimx}
+def ajoute_position (tableau) :
+    ...
+    return matrice
+\end{verbatimx} 
+
+\exequest Que se passe-t-il si on applique la fonction \codes{sort} à la matrice précédemment construite. On nomme cette matrice \codes{mat}. A quoi correspondent \codes{mat[i][0]} et \codes{mat[i][1]}~?
+
+\exequest Le tableau \codes{attribut} contient une couleur associée à chaque élément du tableau \codes{tri} avant qu'il ne soit trié. A quoi correspond \codes{attribut [ mat[i][1] ]}~?
+
+\exequest Comment utiliser cette information pour réarranger le tableau \codes{attribut} de sorte que chaque élément retrouve sa couleur. Si un élément est en position~\codes{i} après tri, l'élément \codes{attribut [i]} doit correspondre à sa couleur initiale. Exemple~:
+
+
+\begin{center}
+\begin{tabular}{ll}
+\begin{minipage}{5cm}
+Avant tri
+\begin{verbatimx}
+[ 4.6,    [ "rouge",
+  6.4,      "bleu",
+  4.3,      "rouge",
+  7.8 ]     "bleu" ]
+\end{verbatimx}
+\end{minipage}
+&
+\begin{minipage}{5cm}
+Après tri
+\begin{verbatimx}
+[ 4.3,    [ "rouge",
+  4.6,      "rouge",
+  6.4,      "bleu",
+  7.8 ]     "bleu" ]
+\end{verbatimx}
+\end{minipage}
+\end{tabular}
+\end{center}
+
+Ecrire une fonction qui crée un nouveau tableau \codes{attibut} à partir du tableau \codes{attribut} initial et de la matrice \codes{mat}.
+
+\begin{verbatimx}
+def rearrange_attribut (attribut, mat) :
+    ...
+    return nouveau_attribut
+\end{verbatimx}
+    
+
+\exequest La seconde colonne de la matrice \codes{mat} peut être comprise comme une permutation. On construit la liste suivante~:
+
+\begin{verbatimx}
+permutation = [ m[1]  for m in mat ]
+nouveau     = [ -1    for i in permutation ]
+
+for i in xrange (0, len (permutation)) :
+    nouveau [ permutation [i] ] = i
+\end{verbatimx}
+    
+Reste-t-il des valeurs \codes{-1} dans le tableau \codes{nouveau}~? A quoi correspond-il~? On pourra par exemple se demander ce que vaut \codes{permutation [ nouveau [i] ]} ou \codes{nouveau [ permutation [i] ]} pour chaque~\codes{i}~?
+
+\exequest On souhaite ajouter un élément au tableau initial. Dans le tableau initial, il aurait été rangé à la dernière position (à savoir~150). Il sera en dixième position dans le tableau trié. Comment modifier les tableaux \codes{permutation} et \codes{nouveau} pour en tenir compte (sans trier à nouveau)~?
+
+\exequest Quel est l'élément qui occupe la position~20~?
+
+\exequest On dispose d'une matrice $M$ symétrique. On calcule ses valeurs propres et ses vecteurs propres comme suit à l'aide du module \codes{numpy}~:
+
+\begin{verbatimx}
+import numpy                  # import du module numpy
+mat  = numpy.array (pmat)     # on transforme une liste en liste en matrice format numpy
+l, v = numpy.linalg.eig(mat)  # calcul des valeurs propres et vecteurs propres 
+pl   = list (l)               # on tranforme un vecteur numpy en liste
+pv   = list (v)               # on tranforme une matrice numpy en liste
+\end{verbatimx}
+
+A partir des astuces suggérées lors des questions précédentes, proposer une méthode pour ordonner les vecteurs propres de la matrice~\codes{pv} selon les valeurs propres~\codes{pl}.
+
+
+\exequest La seconde application de ce genre d'astuce est la création d'une permutation aléatoire. Le langage \pythons dispose d'une fonction \codes{randint} incluse dans le module \codes{random} qui retourne un nombre entier aléatoire. En utilisant cette fonction ainsi que la fonction \codes{sort}, proposer un moyen de créer une permutation aléatoire de la liste~:
+
+\begin{verbatimx}
+l = range (1, 100)   # soit la liste [ 1, 2, 3, ..., 99 ] 
+\end{verbatimx}
+
+\exequest Quel est le coût (ou nombre de comparaisons) du tri le plus rapide~? En déduire le coût de cette permutation aléatoire.
+
+\exequest Un concepteur de jeux vidéos souhaite, pour un jeu, construire des parties aléatoires de basket-ball. Pour ce faire, il décide au départ du nombre de paniers, à 1~point, 2~points, 3~points qu'il y aura pour chaque équipe. Il reste à les répartir de façon aléatoire pour rendre cette fausse partie crédible. Voici la liste des paniers présentée de façon ordonnée~:
+
+\begin{verbatimx}
+l = [ -3, -3, -3, -3, +3, +3, +3, +3, -2, ... ] 
+\end{verbatimx}
+
+Il faut tirer des milliers de parties et cela prend du temps. Il devient préférable de générer les parties aléatoires autrement. Il utilise un dictionnaire~:
+
+\begin{verbatimx}
+d = { -3:4, +3:4, -2:10, +2:15, ... } 
+\end{verbatimx}
+
+Il choisit le premier élément $c$ au hasard dans la liste $[-3, +3, -2, +2, -1, +1]$ puis diminue le nombre de paniers associé à~$c$. Pour le second élément, il recommence en s'assurant que le compteur associé à l'élément~$c$ est positif.
+
+Pourquoi cette façon de faire est-elle plus rapide~?
+
+\exequest Dans une partie, il y a moins de paniers à trois points par rapport aux autres types de paniers et dans les parties générées par le concepteur de jeux vidéos avec sa nouvelle méthode, il n'y en a quasiment jamais à la fin des parties aléatoires. Pourquoi~?
+
+\exequest Que proposeriez-vous pour corriger ce défault tout en étant aussi rapide (en terme de nombres de comparaisons)~? Implémentez-le.
+
+\exequest Proposez un moyen de vérifier que les parties aléatoires sont correctement tirées. Appliquez-le à votre solution.
+
+
+
+
+
+\end{xtutorial}
+
+
+\if 0
+\begin{xtutorialcor}{tutoriel_liste}\label{tutoriel_liste_cor}
+
+
+%\subsectionx{Premier exemple, fonction quadratique}\label{correction_premier_exemple_bfgs}
+
+
+%\inputcode{../python_cours_exemple/programme/poisson_bfgs.py}{déterminer la taille des poissons}
+
+
+\end{xtutorialcor}
+\fi
+
+
+\input{../../common/livre_table_end.tex}%
+\input{../../common/livre_end.tex}%

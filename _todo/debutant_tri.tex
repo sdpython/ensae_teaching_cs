@@ -1,0 +1,151 @@
+\input{../../common/livre_begin.tex}%
+\firstpassagedo{\input{../tutoriels/tutoriel_titre.tex}}
+\input{../../common/livre_table_begin2.tex}%
+%\firstpassagedo{\input{python_cours_chapter.tex}}
+
+\firstpassagedo{\chapter{Commencer à programmer}}
+
+
+\begin{xtutorial}{Tri}{tutoriel_tri_cor}\label{tutoriel_tri}
+
+Ce tutoriel propose des exercices simples pour débuter la programmation. Les premières questions ont pour but de personnaliser l'énoncé pour chaque élève afin que chacun travaille sur des données différentes. La suite de l'énoncé est identique mais il faudra répondre avec le jeu de données que les premières questions vous attribueront. L'objectif final est de programmer un tri tout d'abord simple puis ensuite un tri fusion. Il est vivement encouragé de tester le programme à chaque question.
+
+\input{../tutoriels/debutant_common_part.tex}
+
+\exequest On souhaite classer le tableau \codes{tri} (présent dans le fichier \codes{tutotiel\_\%d.py} déduit des premières questions) par ordre croissant, que ce tableau contienne des nombres ou des chaînes de caractères. Un des tris les plus simples est le tri bulle. Prenons deux éléments consécutifs dans un tableau~:
+
+\begin{verbatimx}
+0.56  # position i   --> tri [i]
+0.43  # position i+1 --> tri [i+1]
+\end{verbatimx}
+
+Si ceux-ci apparaissent dans le bon ordre, on ne fait rien. Dans le cas contraire, on les permute. On souhaite tout d'abord écrire une fonction qui permute deux éléments, remplacez les "..." dans le code suivant~:
+
+\begin{verbatimx}
+def permutation ( tri, ...) :
+    ...
+\end{verbatimx}
+
+\exequest On souhaite appliquer la fonction \codes{permutation} sur tous les éléments du tableau. Complétez le programme suivant~:
+
+\begin{verbatimx} 
+tri = ....
+for i in xrange (0, len (n)-1) :
+    permutation (tri, ...)
+\end{verbatimx} 
+
+\exequest Que peut-on dire des premier et dernier éléments après l'exécution du programme précédent~?
+
+\exequest Que peut-on dire des deux premiers et deux derniers éléments après l'exécution du programme suivant~?
+
+\begin{verbatimx} 
+tri = ....
+for i in xrange (0, len (n)-1) :
+    permutation (tri, ...)
+for i in xrange (0, len (n)-1) :
+    permutation (tri, ...)
+\end{verbatimx} 
+
+\exequest En se rappelant que l'objectif est de trier tous les éléments d'un tableau dans l'ordre croissant, comment utiliser les réponses aux questions précédentes pour aboutir à un programme de tri~? On souhaite que celui-ci soit écrit dans une fonction~:
+
+\begin{verbatimx}
+def tri_bulle (tri) :
+    ...
+    
+tri_bulle (tri)
+for el in tri :
+    print el
+\end{verbatimx}
+
+\exequest Le programme précédent utilise des boucles \codes{for} ou \codes{while}, vérifiez que votre algorithme ne fait pas de calcul inutile. En supposant cela fait et que votre implémentation du tri bulle est optimale, quelle est le nombre de comparaisons effectuées~? 
+
+\exequest On s'intéresse maintenant au \textbf{tri fusion}. Supposons que nous découpions le tableau \codes{tri} non trié en deux parties qu'on trie chacune séparément avec l'algorithme du tri bulle précédent~:
+
+\begin{verbatimx}
+m    = len(tri)/2
+
+tri1 = tri [0:m]
+tri2 = tri [m:len(tri)]
+
+tri_bulle(tri1)
+tri_bulle(tri2)
+\end{verbatimx}
+
+On s'intéresse à un moyen efficace d'assembler ces deux tableaux triés en un seul toujours trié. Première question~: quel sera le premier élément du tableau final trié~?
+
+\exequest Quel sera le second~?
+
+\exequest Le fait de regrouper ces deux tableaux triés en un seul trié est appelé une \textit{fusion}. On se propose d'implémenter la fusion de deux tableaux triés comme ceci~:
+
+\begin{verbatimx}
+def fusion (tri1, tri2) :
+    res = []
+    i1  = 0
+    i2  = 0
+    while i1 + i2 < len (tri1) + len(tri2) :
+       if tri1 [i1] < tri2 [i2] :
+           res.append ( tri1 [i1] )
+           ...
+       else :
+           res.append ( tri2 [i2] )
+           ...
+    return res
+\end{verbatimx}
+
+Complétez les deux lignes contenant des points de suspension.
+
+\exequest Malheureusement, la fonction précédente ne fonctionne pas toujours et retourne souvent une erreur. Pourquoi~? Comment la corriger~?
+
+\exequest Combien de comparaisons ont été effectuées en comptant celles des deux tris bulles pour chacune des sous-parties puis celles de la fusion~?
+
+\exequest Comment faire si on décide de couper le tableau en quatre parties~?
+
+\begin{verbatimx}
+m    = len(tri)/4
+
+tri1 = tri [0:m]
+tri2 = tri [m:2*m]
+tri3 = tri [2*m:3*m]
+tri4 = tri [3*m:len(tri)]
+
+tri_bulle(tri1)
+tri_bulle(tri2)
+tri_bulle(tri3)
+tri_bulle(tri4)
+
+...
+\end{verbatimx}
+
+\exequest Combien de comparaison ont été effectuées avec ce nouveau découpage (toujours en comptant celles des quatre tris bulle et de celles utilisées lors de la fusion)~? Est-ce plus grand ou plus petit que le calcul précédent~? Que vous suggère ce résultat~?
+
+\exequest Ecrire une fonction \codes{tri\_deux\_elements} dont le rôle est de trier un tableau de deux éléments et uniquement deux éléments~?
+
+\exequest Que signifie une \textit{fonction récurrente}~?
+
+\exequest Utiliser ce genre de fonction pour implémenter un tri qui n'utilise plus le tri bulle mais uniquement des fusions et la fonction \codes{tri\_deux\_elements}.
+
+\exequest Quel est le nombre de comparaisons utilisées par ce tri~? Quel tri recommander~?
+
+
+\end{xtutorial}
+
+
+
+
+
+\if 0
+\begin{xtutorialcor}{tutoriel_tri}\label{tutoriel_tri_cor}
+
+
+%\subsectionx{Premier exemple, fonction quadratique}\label{correction_premier_exemple_bfgs}
+
+
+%\inputcode{../python_cours_exemple/programme/poisson_bfgs.py}{déterminer la taille des poissons}
+
+
+\end{xtutorialcor}
+\fi
+
+
+\input{../../common/livre_table_end.tex}%
+\input{../../common/livre_end.tex}%

@@ -1,0 +1,227 @@
+\input{../../common/exo_begin.tex}%
+%\firstpassagedo{\refstepcounter{cxtd}\refstepcounter{cxtd}}
+
+
+\input{../python_td_minute/description_cours.tex}
+
+
+\begin{xtd}{Recherche dichotomique minutée}{dicho_minute_cor}\label{dicho_minute_label}
+
+\partietdVU{variables, opérations, boucles, tests}{recherche dichotomique}
+
+Au cours de cette première séance, le chargé de TD vous fera découvrir les bases du langage \pythons et la façon d'écrire des programmes à l'ENSAE, notamment l'usage de l'éditeur de texte \textit{SciTe} utilisé à l'ENSAE et de ses deux parties d'écran, l'une pour le programme, l'autre pour son exécution. 
+
+L'objectif de cette séance est aussi de programme la recherche dichotomique\footnote{\httpstyle{http://fr.wikipedia.org/wiki/Dichotomie}} qui est un algorithme simple mais qu'il est souvent utile de connaître pour comprendre pourquoi certaines façons de faire sont plus efficaces que d'autres.
+
+\partietda{premiers pas}
+
+Pour ce premier TD et cette première demi-heure, l'objectif est de réussir à exécuter le simple programme suivant~:
+
+\begin{verbatimx}
+x = 3
+y = x + 5
+print x
+print x,y
+# commentaire
+\end{verbatimx} 
+
+Parvenir à la réalisation de cet objectif nécessite l'ouverture d'un éditeur de texte, l'écriture du programme, la conservation de ce programme sous forme d'un fichier texte, le nom de ce fichier texte devant se terminer par \codes{.py}, l'interprétation de l'instruction \codes{x = 3}, l'interprétation de l'instruction \codes{print}, la correction des erreurs éventuels, l'exécution du programme, l'utilisation de commentaires... 
+
+
+\partietdb{variable, type}
+
+On cherche à jouer avec les différents types de variables et certains opérations qu'on peut faire avec ou non. 
+
+\begin{verbatimx}
+i = 3                    # entier
+r = 3.3                  # réel 
+s = "exemple"            # chaîne de caractères   
+c = (4,5)                # couple de valeurs (ou tuple)
+l = [ 4, 5, 6.5]         # listes de valeurs ou tableaux
+x = l [0]                # obtention du premier élément de la liste l
+d = { "un":1, "deux":2 } # dictionnaire de valeurs
+y = d ["un"]             # obtention de la valeur associée à l'élément "un"
+couple = 4, 5            # collage de deux valeurs en un couple ou (tuple)
+print type (l)           # on affiche le type de la variable l
+mat = [ [0,1], [2,3] ]   # liste de listes
+print mat [0][1]         # obtention du second élément de la première liste
+n = None                 # None signifie que la variable existe mais qu'elle ne contient rien
+                         # elle est souvent utilisé pour signifier qu'il n'y a pas de résultat
+                         # car... une erreur s'est produite, une liste était vide...
+\end{verbatimx}
+
+Chaque lettre ou groupe de lettres désigne une variable, c'est une lettre qui permet de la manipuler quelque soit le contenu qui lui est affecté. Dans l'exemple précédent, \codes{i} désigne 3 mais~:
+ 
+\begin{verbatimx}
+i = 3
+i = i + 5
+\end{verbatimx}
+
+La variable \codes{i} va d'abord correspondre à 3 puis 8 car on lui affecte une nouvelle valeur déduite de la première. L'ajout du mot-clé \codes{print} permet de voir le résultat si celui-ci est syntaxiquement correct. Sans celui-ci, le programme peut marcher ou non mais rien n'apparaîtra dans la seconde partie d'écran de \textit{SciTe}.
+
+On cherche maintenant à voir comment se comporte les différents types de variables avec différentes opérations. \codes{x} et \codes{y} désigne des objets de même type. 
+
+\begin{verbatimx}
+print x + y          # addition
+print x - y          # soustraction
+print x / y          # division 
+print x * y          # multiplication
+print x % y          # modulo
+print x == y         # égalité
+print x < y          # inférieur
+print x <= y         # inférieur ou égal
+print min (x,y)      # minimum
+print max (x,y)      # maximum
+print zip (x,y)      # zip ( [4,5], ["a", "b"] ) donne [ (4,"a"), (5,"b") ]
+                     # de deux listes, on passe à une sorte de matrice
+print True and False # et logique
+print True or False  # ou logique
+print (5 < 4) or (5 > 4) # condition                   
+\end{verbatimx}
+
+Ou encore de manipuler des variables~:
+
+\begin{verbatimx}
+print -x             # opposé   
+print len ( [ 4,5] ) # obtention du nombre d'éléments d'une liste 
+print not False      # négation
+\end{verbatimx}
+
+
+Les opérations marchent aussi parfois lorsque \codes{x} et \codes{y} ne sont pas de même nature, de type différent~:
+\begin{verbatimx}
+print [ 3,4 ] * 5
+print "azerty" * 4
+print 4 * "azerty" 
+print [ 3,4 ] + (3,4) 
+\end{verbatimx}
+
+\tdquest Le tableau suivant reprend tous les types standards du langage \python. Pourriez-vous remplir les deux cases correspondant à une opération entre les types \codes{int} et \codes{tuple} dans cet ordre puis dans l'autre. Est-ce la même liste~?
+
+\begin{center}\begin{tabular}{|l|l|l|l|l|l|l|l|l|} \hline
+       & None & bool & int & float & str & tuple & list & dict \\ \hline
+None   & == &&&&&&&\\ \hline
+bool   & == & and or &&&&&&\\ \hline  
+int    &      &      & \begin{minipage}{2cm}\begin{footnotesize}+ - * / min max \% == < <= \end{footnotesize}\end{minipage} & \begin{minipage}{2cm}\begin{footnotesize}+ - * / min max \% == < <= \end{footnotesize}\end{minipage}  &&    &&\\ \hline  
+float & &&&&&&&\\ \hline  
+str    &      &      & * &&&&&\\ \hline  
+tuple  & &&&&&&&\\ \hline  
+list   & &&&&&&&\\ \hline  
+dict   & &&&&&&&\\ \hline
+\end{tabular}\end{center}
+
+\tdquest Le langage \pythons propose des conversions d'un type à un autre. Ainsi, il est possible de convertir un nombre en une chaîne de caractères. Quelques sont les lignes parmi les suivantes qui n'ont pas de sens selon le langage \python~:
+
+\begin{verbatimx}
+print int (3.4)
+print list ( (4,5) )
+print tuple ( [ 4,5] )
+print dict ( [4,5] )
+print str ( { "un":1, "deux":2 } )
+\end{verbatimx}
+
+\tdquest 
+Une chaîne de caractères (\codes{str}) contient toujours du texte. Par exemple, si on veut afficher le message, quelle sont les lignes valides parmi les suivantes~:
+
+\begin{verbatimx}
+x = 1.2
+y = 1.2 * 6.55
+print "Le prix de la baguette est ", x, "francs."
+print "Le prix de la baguette est " + x + "francs."
+print "Le prix de la baguette est " + str(x) + "francs."
+\end{verbatimx}
+
+A chaque fois qu'on affiche un résultat numérique, il est implicitement converti en chaîne de caractères.
+
+\tdquest Que vaut l'expression \codes{ (0,1) <= (0, 2) }~? Une idée de comment ce résultat est construit~?
+
+
+\partietdc{boucles}
+
+Le tri d'un tableau est une fonctionnalité indispensable et présente dans tous les langages de programmation. En \python, on écrira pour une liste~:
+
+\begin{verbatimx}
+l = [ 4, 6, 3, 4, 2, 9]  # n'importe quelle liste au hasard
+l.sort ()
+print l                  # le programme affiche la liste triée
+\end{verbatimx}
+
+\tdquest En utilisant la documentation \pythons ou Internet ou un moteur de recherche, trouver comment classer des éléments en sens décroissant. L'instruction \codes{help} dans le programme lui-même retourne l'aide associée à ce qu'il y a entre parenthèses comme \codes{help(l.sort)}. Toute requête sur un moteur de recherche de type \textit{python <élement recherché>} retourne souvent des résultats pertinents.
+
+\tdquest Le programme suivant affiche tous les éléments du tableau un par un grâce à une boucle \codes{for}~:
+
+\begin{verbatimx}
+for i in xrange (0, len (l)) :
+    print l [i]
+\end{verbatimx}
+
+Il utilise une boucle pour parcourir le tableau du début à la fin. Utilisez l'aide concernant la fonction\footnote{Une fonction est différente d'une variable, on la reconnaît grâce aux parenthèses qui suivent un nom. \codesnote{min}, \codesnote{max}, \codesnote{len}, \codesnote{xrange} sont des fonctions. Entre parenthèses, on trouve les variables dont la fonction a besoin pour fonctionner. Chaque fonction effectue des traitements simples ou complexes mais surtout qu'on souhaite répéter plusieurs fois simplement.} \codes{xrange} pour parcourir le tableau en sens inverse. 
+
+\tdquest On souhaite écrire un petit programme qui vérifie que le tableau est trié. Il suffit de compléter le programme suivant~:
+
+\begin{verbatimx}
+resultat = ...
+for i in xrange (0, ...) :
+    if ... > ... :
+        resultat = False
+        break
+print "le tableau est-il trié : ", resultat
+\end{verbatimx}
+
+\tdquest Il existe une autre boucle \codes{while}. Complétez le programe suivant pour obtenir la même chose qu'à la question précédente~:
+
+\begin{verbatimx}
+resultat = ...
+i = ...
+while i < ...
+    if ... > ... :
+        resultat = False
+        break
+print "le tableau est-il trié : ", resultat
+\end{verbatimx}
+
+
+
+\partietdd{recherche dichotomique}
+
+
+La recherche dichotomique\footnote{\httpstyle{http://fr.wikipedia.org/wiki/Dichotomie}} consiste à chercher un élément \codes{e} dans un tableau trié \codes{l}. On cherche sa position~:
+\begin{itemize}
+\item On commence par comparer \codes{e} à l'élément placé au milieu du tableau d'indice \codes{m}, s'ils sont égaux, on a trouvé,
+\item s'il est inférieur, on sait qu'il se trouve entre les indices 0 et \codes{m-1},
+\item s'il est supérieur, on sait qu'il se trouve entre les indices \codes{m+1} et la fin du tableau.
+\end{itemize}
+
+Avec une comparaison, on a déjà éliminé une moitié de tableau dans laquelle on sait que \codes{p} ne se trouve pas. On applique le même raisonnement à l'autre moitié pour réduire la partie du tableau dans laquelle on doit chercher.
+
+
+\tdquest 
+Il ne reste plus qu'à écrire le programme qui effectue cette recherche. On cherche à déterminer la position de l'élément~\codes{e} dans la liste~\codes{l}. On utilise les indications suivantes~:
+\begin{itemize}
+\item il y a une boucle, de préférence \codes{while}
+\item il y a deux tests
+\item la liste des variables pourrait être \codes{e}, \codes{l}, \codes{a}, \codes{b}, \codes{m}
+\end{itemize}
+
+
+\tdquest Que se passe-t-il lorsqu'on cherche un élément qui ne se trouve pas dans le tableau~?
+
+\partietdEND
+
+
+
+\tdquest Si deux joueurs de tennis ont autant de chance l'un que l'autre de gagner un point, combien de points a en moyenne le vainqueur d'un tie-break~? Ecrire un programme qui permette de répondre à la question. Le module \codes{random} permet de générer des nombres aléatoires.
+
+\tdquest Que se passe-t-il si chaque joueur a 75\% de chance de gagner un point sur son service~?
+
+\end{xtd}
+
+
+
+
+\input{../../common/exo_end.tex}%
+
+
+
+
+
