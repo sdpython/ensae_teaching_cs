@@ -182,8 +182,8 @@ def publish_documentation(
 
                 fftp.start_transfering()
         else:
-            # python 3.4 documentation + setup
-            fLOG("-------------------------py34", location)
+            # documentation + setup
+            fLOG("-------------------------", location)
 
             ftn = FileTreeNode(root_local)
             fftp = FolderTransferFTP(ftn, ftp, sfile,
