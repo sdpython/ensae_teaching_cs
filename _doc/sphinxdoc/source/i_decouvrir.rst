@@ -19,13 +19,14 @@ qu'on peut résoudre grâce à un algorithme et un peu d'imagination.
     :maxdepth: 1
     
     specials/algorithm_culture
+    
+**Finance**
 
-
-Algorithmes
-===========
-
-
-
+.. toctree::
+    :maxdepth: 1
+    
+    specials/finance_autostrat
+    
 
 **Graphes**
 
@@ -39,6 +40,14 @@ Algorithmes
     notebooks/expose_rwr_recommandation
     notebooks/expose_TSP
 
+**Images**
+
+.. toctree::
+    :maxdepth: 1
+
+    specials/image_synthese
+    specials/corde
+    
 **Puzzles**
 
 .. toctree::
@@ -52,13 +61,7 @@ Algorithmes
 
 .. index:: entretien, entretien d'embauche, algorithme
 
-**Images**
 
-.. toctree::
-    :maxdepth: 1
-
-    specials/image_synthese
-    specials/corde
     
 **Algorithmes réutilisables**
 
