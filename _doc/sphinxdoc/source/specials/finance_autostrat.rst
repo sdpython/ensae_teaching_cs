@@ -867,6 +867,727 @@ les rangs obtenus sont additionnés et c'est le rang
 final qui servira à sélectionner les sociétés.
 
 
+.. _finance_portefeuille_build:
+
+Gestion de portefeuille
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Un nom est incontestablement associé à ce thème qu'est la gestion de portefeuille, 
+c'est l'économiste `Harry Markowitz <https://en.wikipedia.org/wiki/Harry_Markowitz>`_ 
+qui reçut le prix Nobel d'économie pour ses travaux en 1990. L'idée repose sur 
+la construction d'un portefeuille d'action qui permet 
+d'obtenir un rendement donné avec un risque moindre comparé à 
+celui de chaque action prise séparément.
+
+Chaque action est ici décrit par son rendement moyen :math:`R_i` et sa volatilité :math:`\sigma_i`. 
+Construire un portefeuille consiste à répartir son argent entre les différents 
+actifs financiers. On affecte un poids :math:`\alpha_i` à chaque action :math:`i`. 
+La somme des poids vérifie les contraintes suivantes~:
+
+.. math::
+    :nowrap:
+    
+    \begin{eqnarray*}
+    \summy{i=1}{N} \alpha_i = 1 && \\
+    \forall i \in \ensemble{1}{N}, \; 0 \infegal \alpha_i \infegal 1 
+    \end{eqnarray*}
+
+Le rendement moyen du portefeuille est défini par :
+
+.. math::
+    :nowrap:
+
+    \begin{eqnarray*}
+    R\vecteur{\alpha_1}{\alpha_N} &=& \sum_{i=1}^{N} \alpha_i R_i
+    \end{eqnarray*}
+
+
+Si on note :math:`\rho_{ij}` la corrélation entre les deux 
+actions :math:`i` et :math:`j`, le risque ou la volatilité du portefeuille 
+est définie par :
+
+.. math::
+    :nowrap:
+
+    \begin{eqnarray}
+    \sigma\vecteur{\alpha_1}{\alpha_N} &=& \sqrt{ \summyone{i,j} \alpha_i \alpha_j \sigma_i \sigma_j \rho_{ij} }
+    \end{eqnarray}
+
+Si on note :math:`\Sigma` la matrice des covariances des sous-jacents et 
+:math:`X` les poids du portefeuille (:math:`X'` sa transposée),  
+la variance du portefeuille s'exprime :
+
+.. math::
+    :nowrap:
+
+    \begin{eqnarray}
+    \sigma^2 \vecteur{\alpha_1}{\alpha_N} &=&  X' \Sigma X
+    \end{eqnarray}
+
+La construction du portefeuille optimal passe par l'optimisation 
+sous contrainte d'un des deux problèmes suivant :
+
+.. mathdef::
+    :title: optimisation d'un portefeuille
+    :lid: fin-optim-portfolio
+    :tag: Problème
+    
+    *Version 1 : minimisation du risque sous contrainte de rendement*
+
+    .. math::
+        \begin{array}{|ll}
+        & \underset{\vecteur{\alpha_1}{\alpha_n}}{\min}  \sigma\vecteur{\alpha_1}{\alpha_N}  \\ \\
+        \text{avec} & R\vecteur{\alpha_1}{\alpha_N} \supegal R_{min} \\
+        & \sum_{i=1}^{N} \alpha_i = 1 \\
+        & \forall i, \; 0 \infegal \alpha_i \infegal 1 
+        \end{array}
+        
+    *Version 2 : maximisation du rendement sous contraine de risque*
+    
+    .. math::
+        
+        \begin{array}{|ll}
+        & \underset{\vecteur{\alpha_1}{\alpha_n}}{\max}  R\vecteur{\alpha_1}{\alpha_N} \\ \\
+        \text{avec} & \sigma\vecteur{\alpha_1}{\alpha_N}  \infegal \sigma_{max} \\
+        & \sum_{i=1}^{N} \alpha_i = 1 \\
+        & \forall i, \; 0 \infegal \alpha_i \infegal 1 
+        \end{array}
+
+Lorsque les exigences sur le rendement minimal :math:`R_{min}` ou la volatilité maximale 
+:math:`\sigma_{max}` ne sont pas trop fortes, la solution mène à des poids 
+situés dans l'intervalle :math:`\left ] 0,1 \right [`. 
+Il se peut qu'il n'y ait pas de solution, dans ce cas, 
+il faudra assouplir la contrainte sur le rendement minimal 
+ou la volatilité maximale. Dans tous les cas, ces problèmes se 
+résolvent grâce à la méthode des `multiplicateurs de Lagrange <https://fr.wikipedia.org/wiki/Multiplicateur_de_Lagrange>`_. 
+Ce problème est un problème d'optimisation convexe avec des 
+contraintes convexes. Il existe d'autres méthodes de résolution 
+comme la `programmation séquentielle quadratique <https://en.wikipedia.org/wiki/Sequential_quadratic_programming>`_, 
+l'algorithme du gradient projeté avec contraintes d'inéglité, 
+ou plus récemment `Stephen Boyd <http://stanford.edu/~boyd/>`_ 
+avec les `ADMM <http://stanford.edu/~boyd/admm.html>`_
+([Boyd2012]_, 
+`Distributed Optimization and Statistical Learning via the Alternating Direction Method of Multipliers <http://stanford.edu/~boyd/papers/admm_distr_stats.html>`_,
+logiciel `CVXGEN <http://cvxgen.com/docs/index.html>`_).
+
+Si les positions vendeuses sont acceptées alors la contrainte sur les poids 
+devient :math:`\forall i, \; -1 \infegal \alpha_i \infegal 1`. 
+Pour une stratégie *Equity Market Neutral*, on ajoute une contrainte supplémentaire 
+qui correspond à l'exigence d'avoir autant de positions vendeuses qu'acheteuses : 
+:math:`\sum_{i=1}^{N} \alpha_i p_i = 0` où :math:`p_i` est le prix de chaque actif.
+
+On a supposé que le portefeuille était un portefeuille d'actions mais dans 
+la mesure où ce dernier est défini par un ensemble de poids affectés à des 
+objets décrits par leur rendement et leur volatilité, la méthode s'applique
+à n'importe quel actif financier. La méthode de Markowitz revient à répartir 
+intelligemment son argent entre les différentes stratégies de trading.
+
+
+
+Horizon de trading, intraday, daily
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Il ne paraît pas plus compliqué d'appliquer ces stratégies au trading 
+intraday qu'au trading daily. Dans le second cas, les positions 
+sont tenues plusieurs jours, plusieurs mois et on s'intéresse peu aux variations 
+dans une même journée. Dans le premier cas, on s'intéresse plus particulièrement 
+aux variations qui ont lieu dans une même journée et qui peuvent être importantes. 
+Le prix de clôture peut être équivalent au prix d'ouverture alors que les prix 
+ont montré des variations de 1% ou 2% au cours de la journée.
+
+Les séries financières, les indicateurs s'expriment de la même façon que la période 
+soit de un jour ou de cinq minutes. En pratique, certaines contraintes font que 
+le trading intraday est plus complexe à mettre en \oe uvre. Le premier obstacle est 
+informatique : stocker des prix toutes les cinq minutes est autrement plus coûteux 
+que de stocker un prix par jour. Les temps de calcul sont également plus longs. 
+Pour des données tick by tick, il vaut mieux être épaulé par un informaticien 
+chevronné. Le second obstacle est statistique : il faut contrôler les données en trading intraday. 
+Il n'est pas rare de manquer de données pendant 15 minutes puis d'obtenir des 
+volumes de transactions quatre fois plus important pour les cinq minutes suivantes. 
+Ceci est illustré par l'exemple suivant :
+
+date       time   Open    High    Low     Close   Volume   Remarque
+---------- ------ ------- ------- ------- ------- -------- ------------------------------- 
+07/11/2007 19:42  7822    7823    7818    7819.5  1130
+07/11/2007 19:48  7819.5  7830    7819.5  7822.5  1543
+07/11/2007 19:54  7823    7827.5  7819.5  7824    1244
+07/11/2007 20:00  7824    7825.5  7822.5  7824.5   216      # 20.00
+07/11/2007 20:24  7828    7833    7825.5  7830     640      # 20.24, il manque 3 périodes
+07/11/2007 20:30  7829.5  7831.5  7827    7829.5   478
+07/11/2007 20:36  7830    7830.5  7821    7829     716
+07/11/2007 20:42  7829.5  7834.5  7826    7828     681
+
+A l'inverse, il peut arriver qu'aucun ordre n'ait été passé pendant 
+cinq minutes, au tout début de l'ouverture d'un marché, ou durant la 
+nuit sur un marché ouvert 24h/24. Dans ce cas, le volume 
+sera nul et les prix immobiles. 
+
+Les périodes d'ouverture et de fermeture des marchés ne sont pas les mêmes 
+d'une année sur l'autre, les bourses ont tendance à rester ouverte 
+de plus en plus tard au fur et à mesure qu'elles s'informatisent. 
+Il faut en tenir compte dans les historiques de données.
+
+En conclusion, la première chose à faire lorsqu'on traite des données financières
+est de s'assurer qu'elles sont exploitables, qu'il n'y a pas de données manquantes
+ou incohérentes.
+
+
+.. _analyse_finace_strategie:
+
+Analyse d'une stratégie
++++++++++++++++++++++++
+
+Cette partie décrit les principales étapes de la mise au point 
+d'une stratégie automatique. Elle sera illustrée avec une stratégie 
+appliquée sur le cours de la :ref:`BNP <finance_graph_ohlc_bnp>` de début 2003 à mi-2008. 
+C'est une stratégie Trend Following fonctionnant avec trois paramètres.
+
+* La longueur :math:`d` de la moyenne mobile, par défaut :math:`d =200` jours.
+* Le coefficient mulitplicatif devant les bandes de Bollinger :math:`\alpha`. 
+  Par défaut :math:`\alpha = 1` et la largeur des bandes est la distance moyenne de la série
+  à sa moyenne mobile.
+* Lorsque la stratégie a pris une position acheteuse au prix :math:`p`, 
+  si le prix redescend en deça de :math:`p (1-\beta)`, la position est coupée. 
+  A l'opposé, si la stratégie prend une position vendeuse, 
+  si le prix monte au-dessus de :math:`p (1+\beta)`, la position est également coupée. 
+  Par défaut, :math:`\beta = 0.05`.
+
+La stratégie est définie par trois règles :
+
+* La première règle définit l'ouverture d'une position lorsque la position est nulle. 
+  Si le cours d'une action dépasse la bande de Bollinger supérieure, la stratégie entre 
+  en position acheteuse, si le cours dépasse la bande de Bollinger 
+  inférieure, la stratégie entre en position vendeuse.
+* La seconde règle est appliquée lorsque le cours franchit à nouveau 
+  ses bandes de Bollinger alors que la position n'est plus nulle. Si le cours 
+  franchit la bande de Bollinger supérieure et que la position est vendeuse, 
+  celle-ci est coupée. Si le cours franchit la bande de Bollinger inférieure 
+  et que la position est acheteuse, la position est aussi coupée.
+* La troisième règle est destinée à limiter les pertes, si la stratégie 
+  a ouvert une position acheteuse au prix~$p$ et que le cours redescend à 
+  un niveau :math:`p (1-\beta)`, la position est coupée. A l'inverse, si la stratégie 
+  a ouvert une position vendeuse au prix :math:`p` et que le cours remonte à 
+  un niveau :math:`p (1+\beta)`, la position est aussi coupée.
+
+.. mathdef::
+    :title: Le cours de la BNP entre début 2003 et mi 2008
+    :tag: Figure
+    :lid: finance_graph_ohlc_bnp
+
+    .. image:: finimg/bnpf.png
+
+    		
+Cette stratégie très simple est très inefficace sur de courtes 
+périodes très volatiles alors que le cours de l'action 
+sort des bandes de Bollinger puis revient très rapidement à un niveau 
+où la position est coupé par la seconde règle. Une stratégie 
+réellement utilisée par un Hedge Funds s'appuie sur plus 
+d'une dizaine de règles et autant de paramètres.
+    	
+
+Backtest
+^^^^^^^^
+
+.. mathdef::
+    :title: NAV
+    :tag: Figure
+    :lid: finance_graph_ohlc_bnp_nav_
+    
+    .. image:: finimg/navstrat.png
+    
+    .. image:: finimg/navstratp.png
+
+    NAV de la stratégie Trend Following décrite au paragraphe :ref:`analyse_finace_strategie`. 
+    Le second graphe représente la position de la stratégie, une position positive signifie une position
+    acheteuse (long), une position négative signife une position vendeuse (short). C'est un graphe
+    qui ne représente pas la position mais la quantité d'actions achetées ou vendues pour une position proche de un euros.
+    Ceci explique que cette seconde courbe présente des paliers de hauteurs différentes, il s'agit de l'inverse du prix
+    observé lors de l'ouverture d'une position.}
+
+
+La validation d'une stratégie passe par son évaluation sur le passé de 
+l'action sur laquelle on souhaite l'appliquer. On appelle cette méthode 
+`backtest <https://en.wikipedia.org/wiki/Backtesting>`_.
+Ce passé doit être suffisamment grand : il n'est pas difficile de concevoir une stratégie 
+gagnante sur six mois, sur dix ans c'est moins facile. 
+Toutefois, cette validation a quelques biais :
+
+
+* Il est impossible de valider la stratégie sur des situations probables dans 
+  le futur mais absentes du backtest. Ceci signifie que la stratégie est 
+  susceptible de mal se comporter pour toute situation imprévue.
+* Les situations de crises ne sont pas fréquentes : elles sont statistiquement peu significatives. 
+  Par conséquent, la stratégie n'est validée que sur des jours de trading "normaux" 
+  et c'est dans ces périodes qu'elle fait l'essentiel de ses gains. 
+  En temps de crise, son comportement peut décevoir.
+* L'utilisation de plus en plus grande de l'informatique a tendance à modifier 
+  les comportements du marché. Les algorithmes de trading intraday augmente les 
+  volumes échangées. L'introduction des stop order peut provoquer des 
+  opérations en cascades. Utiliser vingt ans d'historique est sans doute peu pertinent.
+
+Le backtest n'est pas toujours suffisant pour valider une stratégie. 
+Sur un historique de cinq ans, il n'y figure que quelques crises et 
+certainement pas le scénario de la prochaine. C'est pourquoi il faut 
+être vigilant lors de l'utilisation de telles stratégies ou alors lui 
+faire confiance et supposer que l'algorithme se remettra à gagner une 
+fois la crise passée. Il peut être intéressant de valider la stratégie sur 
+d'autres backtest provenant d'actions plus ou moins corrélées à la première. 
+C'est une autre façon d'améliorer la qualité du backtest.
+
+En règle générale, **les stratégies sont éprouvées avec un levier de 100% et un investissement de 1** : 
+la position maximale (= la somme des positions acheteuses et vendeuses en valeur absolue) 
+ne doit pas dépasser la somme initiale. Ce principe permet de comparer les stratégies 
+entre elles. D'autres part, utiliser un levier plus ou 
+plus grand modifie certes les rendements et la volatilité mais ne modifie pas leur rapport. 
+Une bonne stratégie est de préférence une stratégie peu volatile, 
+un levier adéquat permettra d'en augmenter le rendement.
+
+Au final, la validation d'une stratégie sur un backtest aboutit à la courbe 
+des gains ou Net Asset Value (NAV), ce sont les gains qui ne tiennent 
+pas compte des frais de gestion, des charges de la société financière.
+Il est fréquent aussi qu'on parle de NAV non réinvestie, ceci signifie 
+que la position est constante tout le temps du backtest même si en réalité, 
+les gains sont réinvestis. 
+
+On observe souvent que la recherche de la meilleure stratégie sur un backtest 
+donne des résultats nettement supérieure à ceux que la stratégie obtient lorsqu'elle 
+est vraiment utilisée. Ceci signifie aussi que la stratégie est parfaite sur le passé : 
+elle est trop bien ajustée. Cee écueil est quasiment inévitable, il est très difficile 
+de savoir si une stratégie est trop performante sur le passé et risque de ne plus l'être après.
+
+Lors de la simulation d'une stratégie sur un backtest, il peut arriver que plusieurs ordres 
+soient passés durant la même journée. Il est impossible de savoir dans 
+quel ordre ceux-ci doivent être passés car seules quatre prix sont connus 
+au cours de cette période. Il n'est pas possible de savoir si la valeur maximale a 
+été atteinte avant la valeur minimale par exemple. On suppose malgré tout que ce 
+genre de situation a peu d'impact sur le résultat final. S'il survient de façon 
+trop fréquente, alors il serait sans doute avisé d'en tenir compte lors de 
+l'attribution de valeurs aux coûts de transactions et au slippage définis ci-dessous.
+
+
+Modélisation
+^^^^^^^^^^^^
+
+Pour améliorer la validation des stratégies sur un backtest, on intègre dans le 
+modèle deux défauts qui surviennent lors des passages d'ordres. 
+Même utilisée sur des marchés liquides, si la stratégie impose un achat 
+d'action à un prix donné :math:`p`, il y a toujours un décalage entre le temps 
+où le prix dépasse ce niveau :math:`p` et celui où l'ordre est passé. 
+Ce décalage ou `slippage <https://en.wikipedia.org/wiki/Slippage_(finance)>`_ 
+peut être dans un sens ou dans l'autre mais par principe, 
+ce décalage sera toujours supposé être en défaveur de la stratégie. 
+
+Le slippage est souvent exprimé en nombre de ticks. En effet, le prix de tout produit 
+côté n'est pas continu, il évolue de tick en tick. Le tick est une fraction 
+de l'action et dépend de chaque action. Une action de 5 euros aura un 
+tick faible, le tick d'une action de 1000 euros sera plus élevé. 
+Un bon ordre de grandeur pour le slippage est de quelques ticks.
+
+Passer des ordres a un coût, de quelques pourcents du prix de 
+l'action pour un particulier, de quelques dizième de pourcents pour un 
+Hedge Fund. Une stratégie performante mais qui beaucoup d'ordres 
+gagnera moins d'argent. Ce sont des paramètres qu'il ne faut pas négliger 
+pour des stratégies Mean Reversing qui cherchent à profiter d'une forte volatilité 
+grâce à de fréquents passages d'ordres. Il faut prendre en compte 
+ce qu'on appelle les `coûts de transaction <https://en.wikipedia.org/wiki/Transaction_cost>`_ .
+
+Ces deux défauts peuvent être mesurés une fois que la stratégie est mise 
+en place. Néanmoins, il est préférable de les surestimer 
+pour tenir compte du fait qu'une fois validée sur backtest, 
+la stratégie sera toujours utilisée sur des données nouvelles. 
+Certains Hedge Funds donnent à ces paramètres non pas les valeurs 
+qu'ils observent en pratique mais des valeurs plus fortes qui 
+leur permettent de faire décroître les performances des 
+backtests jusqu'aux performances réellement observées.	
+
+Le slippage est ici modélisé comme une constante mais il serait sans 
+doute plus judicieux de l'ajuster en fonction d'une variabilité locale 
+(par rapport à la différence High - Low) qui pourrait pénaliser davantage 
+la stratégie en temps de crise. Par exemple, lors de la vente d'une action 
+au prix :math:`p`, on considèrera le prix :math:`p - \alpha \abs{p} - \beta`. 
+:math:`\alpha` est le coût de transaction est proportionnelle au prix, 
+:math:`\beta` est le slippage qui s'exprime en un multiple 
+entier du tick (donc différent pour chaque action).
+
+
+Résultats standards
+^^^^^^^^^^^^^^^^^^^
+
+Même si le rendement d'une stratégie est le résultat important, 
+il faut aussi regarder comment il est obtenu. C'est pour cela qu'on 
+regarde d'autres indicateurs comme 
+l'`Information Ratio <https://en.wikipedia.org/wiki/Information_ratio>`_ ou le 
+`ratio de Sharpe <https://fr.wikipedia.org/wiki/Ratio_de_Sharpe>`_. 
+La première étape consiste à annualiser la performance et la volatilité 
+obtenus sur le backtest (voir paragraphe~\ref{finance_rendemnt_annee}). 
+On cherche ensuite à construire le tableau suivant qui n'est pas exhaustif.
+
+
+Indicateur          Description
+=================== ==================================================================================================================== 
+Information Ratio   C'est le rendement rapporté sur la volatilité :math:`\frac{R}{\sigma}`. 
+                    :math:`R` mesure la performance, :math:`\sigma` le risque pour l'obtenir. Si ce ratio est inférieur à 1, 
+                    cela signifie que le risque est plus élevé que la performance qui est sujette à caution
+                    même si elle est importante.
+------------------- -------------------------------------------------------------------------------------------------------------------- 
+ratio de Sharpe     Les Hedge Funds partiquent souvent un levier supérieur à 200%. Cela veut dire qu'ils empruntent pour 
+                    placer le double ou le triple de l'argent qu'ils gèrent. Cet emprunt n'est pas gratuit, c'est pourquoi on 
+                    retranche à la performance obtenu par le Hedge Fund le taux sans risque~$r$ qui correspond au taux de l'emprunt :
+                    :math:`\frac{R-r}{\sigma}`.
+------------------- -------------------------------------------------------------------------------------------------------------------- 
+drawdown            C'est la perte maximale de la stratégie. Obtenir 10% en fin d'année ne veut pas dire que le système n'est pas
+                    passé par -5% en cours d'année. La perte maximale n'est pas le niveau le plus bas depuis le début de l'année, 
+                    c'est le plus grand écart entre un gain maximal et une perte maximale qui lui succède.
+------------------- -------------------------------------------------------------------------------------------------------------------- 
+rendement roulant   Lorsqu'on construit une stratégie à long terme, il peut être intéressant de construire la courbe des rendements
+                    roulant qui est par exemple pour une date :math:`t`, la performance obtenue entre 
+                    :math:`t-6` mois et :math:`t` par exemple. 
+                    Pour une stratégie à long terme, il devrait exister très peu de rendements roulant à un an négatifs.
+------------------- -------------------------------------------------------------------------------------------------------------------- 
+corrélation		    Lorsqu'un investisseur cherche à investir son argent dans un placement alternatif, il regarde si ce placement
+                    lui offre des rendements qui ne sont pas corrélés au marché. Dans le cas d'une stratégie appliquée à une
+                    action, il s'agit de calculer la corrélation entre le cours de l'action et la NAV de la stratégie.
+                    Une corrélation de 1 ou -1 signifie que la stratégie a été d'acheter ou de vendre une action puis
+                    de conserver cette position. Il est intéressant d'avoir une corrélation faible, d'avoir une stratégie
+                    qui ne reproduisent pas les pertes et les gains d'une action. C'est aussi avoir de la valeur 
+                    ajoutée : la stratégie atteint son objectif, elle propose un placement alternatif.
+
+Il existe de nombreuses manières de mesurer la performance d'une stratégie. 
+D'autres critères peuvent être mesurés comme le nombre d'ordres passés, 
+la VAR (`Value At Risk <https://fr.wikipedia.org/wiki/Value_at_risk>`_)
+qui mesure les pertes maximales quotidiennes.
+Cela dépend de la stratégie et des écueils qu'on la souhaite la voir éviter.
+
+Pour calculer la VAR, on considère les rendements de l'année écoulée qu'on trie par ordre croissant. 
+On considère que les plus grandes pertes représentent ce que la stratégie peut perdre au pire le lendemain. 
+Ce calcul est appelé VAR historique.
+
+Il est également intéressant de se pencher sur les plus mauvais jours 
+comme les meilleurs jours de la stratégie obtenus sur le backtest. 
+Leur étude fournit en général des informations importantes sur son 
+comportement en temps de crise. Le tableau suivant présente les résultats pour la 
+stratégie décrite au paragraphe :ref:`analyse_finace_strategie`.
+
+
+Indicateur              Valeur
+======================= =========
+rendement annualisé 	 7,7%
+volatilité annualisée    8,5%
+Information Ratio 		 0.88
+ratio de Sharpe 		 0.42
+corrélation 			82,6%
+drawdown 				24,4%
+
+La stratégie est ici peu efficace. La volatilité est élevée, 
+le drawdown maximal est très élevé.
+
+Variation de paramètres
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Une stratégie dépend de paramètres. Un trend following simple 
+dépend de la longueur de la moyenne mobile (20, 200 jours) 
+et de l'écart entre les bandes de Bollinger. On peut se poser 
+la question de savoir si la stratégie est sensible ou non à 
+la modification d'un paramètre. Etant donné que les stratégies 
+sont testées sur un backtest, les paramètres sont ajustés en 
+fonction de ce backtest, une stratégie sensible à un paramètre 
+signifie qu'un backtest un peu différent aura vraisemblement 
+des répercussions importantes sur la performance de la stratégie.
+
+Dans le cas de notre stratégie, on a fait varier les trois 
+paramètres et mesurer le rendement et la volatilité pour 
+chaque expérience. Ceci aboutit aux graphes de la figure suivante.
+
+.. mathdef::
+    :title: NAV d'une stratégie
+    :lid: finance_graph_ohlc_bnp_nav_var
+    :tag: Figure
+    
+    +-----------------------------------+-----------------------------------+-----------------------------------+
+    | .. image:: finimg/stratdist.png   | .. image:: finimg/stratdist.png   | .. image:: finimg/stratdist.png   |
+    +-----------------------------------+-----------------------------------+-----------------------------------+
+    | :math:`\alpha`                    | :math:`\beta`                     | :math:`d`                         |
+    +-----------------------------------+-----------------------------------+-----------------------------------+
+
+    Variations selon les trois paramètres :math:`\alpha`, :mah:`\beta`, :math:`d`. 
+    Le pic obtenu pour la valeur :math:`\alpha\sim 1.2` est très localisé
+    autour de cette valeur, il faut s'attendre à ce que la stratégie obtienne des résultats très différents
+    sur des séries similaires. La courbe pour $\beta$ est stable, on choisira une valeur dans cette zone.
+    Les rendements passent du simple au double en fonction de la largeur 
+    des bandes de Bollinger. Ces graphes ne montrent que l'évolution des rendements et de la volatilité,
+    ils pourraient aussi montrer l'évolution des drawdowns ou du ratio de Sharpe.
+
+
+Autres séries financières de même nature
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Il existe nécessairement d'autres séries financières 
+corrélées avec celles du backtest. Si le backtest est le 
+cours de l'action d'une banque, il faut tester la stratégie 
+sur l'action d'une autre banque pour vérifier qu'elle a 
+le même comportement sur une série fortement corrélée. 
+Ceci permet de confirmer la robustesse de la stratégie.
+
+A l'inverse, il est également souhaitable de tester la 
+stratégie sur des séries financières décorrélées, issues de 
+secteurs économiques différents. Deux conclusions sont possibles, 
+soit la stratégie est encore positive auquel cas elle est très 
+robuste, soit la stratégie présente des résultats négatifs qui 
+permettront peut-être d'appréhender les limites de l'algorithme 
+et de pouvoir identifier des scénari dans lesquels la 
+stratégie ne produira pas de bons résultats.
+
+La figure suivante montre les cours de trois banques, la BNP, 
+la Société Générale, le Crédit Agricole et une série issue 
+d'un autre secteur Danone. 
+
+.. mathdef::
+    :title: 4 actions françaises
+    :lid: finance_graph_ohlc_bnp_autres
+    :tag: Figure
+    
+    +-----------------------------------+-----------------------------------+
+    | BNP                               | Société Générale                  |
+    +-----------------------------------+-----------------------------------+
+    | .. image:: finimg/bnpf.png        | .. image:: finimg/socgenf.png     |
+    +-----------------------------------+-----------------------------------+
+    | .. image:: finimg/caf.png         | .. image:: finimg/danone.png      |
+    +-----------------------------------+-----------------------------------+
+    | Crédit Agricole                   | Danone                            |
+    +-----------------------------------+-----------------------------------+
+    
+    Quatre actions, trois banquaires (BNP, Société Générale, Crédit Agricole) et une société
+    issue de l'alimentaire Danone.
+            
+La table suivante contient la matrice des autocorrélations. 
+
+.. mathdef::
+    :title: Indicateurs BNP, Crédit Agricole, Danone, Société Générale
+    :lid: finance_graph_ohlc_correlation
+    :tag: Table
+
+                **BNP**     **SG**      **CA**      **Danone**  
+    =========== =========== =========== =========== ===========
+    **BNP** 	1,00        0,75        0,67        0,44
+    **SG**  	0,75        1,00        0,63        0,42
+    **CA**  	0,67        0,63        1,00        0,35
+    **Danone**  0,44        0,42        0,35        1,00
+
+    Matrice des autocorrélations pour les rendements quotidiens des quatre actions 
+    BNP, Société Générale, Crédit Agricole et Danone. Les corrélations sont moins fortes entre Danone et
+    une banque qu'entre banques. Bien que les données quotidiennes soient beaucoup plus propres que des données intraday,
+    il faut quand même vérifier que les séries sont homogènes et contiennent 
+    les mêmes dates avant de calculer les corrélations sur les rendements.
+
+Enfin, la dernière figure
+montre les résultats de la stratégie sur chacune des quatre séries.            
+
+.. mathdef::
+    :title: Rendement pour 4 actions françaises
+    :lid: finance_graph_ohlc_bnp_autres_result
+    :tag: Figure
+    
+    +-----------------------------------+-----------------------------------+
+    | BNP                               | Société Générale                  |
+    +-----------------------------------+-----------------------------------+
+    | .. image:: finimg/rbnpf.png       | .. image:: finimg/rsocgenf.png    |
+    +-----------------------------------+-----------------------------------+
+    | .. image:: finimg/rcaf.png        | .. image:: finimg/rdanf.png       |
+    +-----------------------------------+-----------------------------------+
+    | Crédit Agricole                   | Danone                            |
+    +-----------------------------------+-----------------------------------+
+
+    La stratégie Trend Following est appliquée aux quatre séries avec des résultats mitigés. 
+    Elle réagit bien sur la BNP et la Société Générale, elle donne de mauvais résultats sur le Crédit Agricole.
+    Sur Danone, la stratégie conserve une position acheteuse puis perd 
+    tout ce qu'elle avait gagné par la suite alors que la 
+    série n'a plus de trend aussi évident et que sa volatilité est élevée.
+    La série du Crédit Agricole est plus longue de deux ans mais cela n'explique pas ses mauvais résultats,
+    la stratégie prend une série de mauvaises décisions ce qui tend à montrer qu'elle n'est pas suffisamment robuste.}
+    		
+Il est très peu probable qu'une stratégie soit efficace sur chaque action 
+mais il est souhaitable qu'elle soit positive sur 
+des séries corrélées et qu'elle limite les pertes sur 
+les autres séries financières.
+
+
+
+Décomposition en deals
+^^^^^^^^^^^^^^^^^^^^^^
+
+Ce procédé permet parfois de découvrir le style d'une stratégie 
+ou de mesurer la pertinence de l'algorithme lorsqu'il coupe sa pose. 
+Un `deal <https://en.wikipedia.org/wiki/Financial_transaction>`_ est 
+le fait d'ouvrir puis de fermer une position. 
+Un deal est donc défini par :
+
+* une date d'ouverture de la position :math:`t_1`
+* une date de fermeture de la position :math:`t_2`
+* la quantité :math:`q` (positive si on a acheté, négative si on a vendu)
+* le prix d'ouverture :math:`p_1`
+* le prix de fermeture :math:`p_2`
+
+.. mathdef::
+    :title: Deal
+    :lid: finance_graph_ohlc_position_deal
+    :tag: Figure
+    
+    .. image:: finimg/posdeal.png
+
+    Les deals sont construits à partir de la position de la stratégie. Chaque flèche à double sens désigne un deal
+    Lorsqu'un ordre d'achat est passé alors que la position est déjà positive, on décompose en deal dont les temps de vie
+    se superposent.
+
+Ces informations permettent de calculer le gain associé au deal : 
+:math:`q(p_2 - p_1)`. Si on note un deal comme un 
+5-uplet :math:`d_i=\pa{t_1^i,t_2^i,q^i,p_1^i,p_2^i}`, 
+le gain de la stratégie sur l'ensemble du backtest devient : 
+:math:`\sum_i q^i(p_2^i - p_1^i)`. Cette décomposition s'inspire de l'article [Potters2005]_ 
+qui étudie la répartition des gains d'une stratégie Trend Following, 
+elle présente des caractéristiques qui la différencie d'autres stratégies. 
+Un Trend Following se reconnaît car il aboutit à un grand nombre 
+de petits deals négatifs et quelques gros deals 
+positifs.
+
+.. mathdef::
+    :title: Deal en image
+    :tag: Figure
+    :lid: finance_graph_ohlc_deal
+    
+    +-----------------------------------+-----------------------------------+-----------------------------------+
+    | .. image:: finimg/bouchaud.png    | .. image:: finimg/stratdd.png     | .. image:: finimg/stratddu.png    |
+    +-----------------------------------+-----------------------------------+-----------------------------------+
+
+    La première image est celle de la distribution théorique des gains calculée par 
+    Bouchaud et Potters dans leur article [Potters2005]_.
+    La distribution empirique n'est pas toujours facile à construire sur des historiques qui ne sont pas assez longs~:
+    dans le cas de notre stratégie Trend Following, il n'existe que cinq deals.
+    Il faut donc assembler les deals de la même stratégie sur plusieurs séries. Le résultat
+    correspond assez bien à la distribution théorique. Le troisème graphe représente la distribution
+    des durées des deals exprimées en jours (axe des abscisses). Les deals négatifs sont nombreux et de 
+    courtes durées.
+    		
+On peut s'interroger sur le cas d'une stratégie exclusivement 
+Trend Following dont la distribution des deals sur backtest est 
+différente de ce profil décrit par la figure précédente. 
+Ses paramètres pourraient avoir été trop bien calculés 
+pour s'ajuster au backtest, ceci implique que cette stratégie 
+aurait sans doute plus de mal à reproduire des rendements 
+équivalents sur des données futures. On peut envisager 
+cette distribution comme un test statistique.
+    	
+Le second intérêt de la décomposition en deals est le calcul 
+de la perte et du gain maximale que la stratégie aurait pu observer 
+en coupant plus tôt sa position. On définit :math:`H(t_1,t_2)` 
+le prix maximal observé dans la période :math:`\cro{t_1,t_2}` et 
+:math:`L(t_1,t_2)` le prix minimal observé dans la même période. 
+Pour chaque deal long (position positive), ces deux prix vérifient l'inégalité :
+
+.. math::
+    :nowrap:
+    
+    \begin{eqnarray*}
+    q \pa{L(t_1,t_2) - p_1}  \infegal q(p_2 - p_1) \infegal q \pa{H(t_1,t_2) - p_1}
+    \end{eqnarray*}
+
+Le graphe :math:`\pa{  q(p_2 - p_1), \; q \pa{H(t_1,t_2) - p_1} }` 
+permet de représenter l'écart entre le gain et le gain maximal qu'on 
+aurait pu obtenir sur chaque deal long. Un deal short (position négative), 
+on s'intéresse à l'ensemble des points :math:`\pa{  q(p_2 - p_1), \; q \pa{L(t_1,t_2) - p_1 } }`.
+
+.. mathdef::
+    :title: Deal positifs, négatifs, logns, courts
+    :lid: finance_graph_ohlc_deal_line
+    :tag: Figure
+    
+    .. image:: finimg/stratd.png
+
+    Dans ce graphe, pour un deal positif, plus il est proche de la diagonale, plus la décision de coupure
+    de la position a été proche du maximum envisageable. Dans ce graphe, on voit que la stratégie est meilleure 
+    lorsqu'elle coupe une position vendeuse plutôt qu'acheteuse. Il faudrait sans doute pour l'améliorer
+    tenir compte du signe de la position avant de couper même si cette conclusion est osée
+    étant donné le peu de deals short positifs.
+
+
+Pour aller plus loin
+^^^^^^^^^^^^^^^^^^^^
+
+Sur des stratégies Trend Following, le passé d'une action ne suffit pas 
+à tester une stratégie : moins d'une dizaine d'ordres vont être exécutés. 
+La première solution est de tester cette stratégie sur plus de séries 
+similaires. La seconde solution est plus ambitieuse car 
+elle suppose l'altération de la série initiale.
+
+Le premier objectif est de créer une série proche mais suffisamment 
+différente pour tester la robustesse de la stratégie. 
+On peut par exemple construire une seconde série où chaque 
+rendement quotidien sera tiré aléatoirement parmi les cinq derniers 
+rendements quotidiens. Le second objectif est d'ajouter à 
+la série des scénarios de crises. On peut soit s'inspirer des crises 
+déjà présentes ou créer artificiellement des scénarios 
+volontairement exagérés de façon à tester la stratégie 
+dans des cas extrêmes. 
+
+Bruiter les séries financières est un projet ambitieux en terme de 
+conception et de temps de calcul. Certaines directions de recherches 
+visent à modéliser les acteurs des marchés financiers pour reproduire 
+artificiellement le fonctionnement d'une salle des marchés et ses crises. 
+Cette voie est plus proche de l'intelligence artificielle, 
+des sytèmes multi-agents ou de la microéconomie que de la finance elle-même.
+
+
+Diversification
+^^^^^^^^^^^^^^^
+
+Gagner de l'argent à partir d'une seule stratégie et 
+d'une seule action est beaucoup trop risqué. 
+Il faut constuire un portefeuille afin de réduire les risques. 
+Ce portefeuille n'est plus simplement composé d'actions 
+mais de couples action - stratégie qui sont décrits par 
+un rendement et une volatilité.
+
+L'objectif reste le même que celui présenté au paragraphe 
+:ref:`finance_portefeuille_build` et sa résolution est identique également. 
+L'intérêt de combiner des actions de secteurs économiques 
+différents est toujours de composer un portefeuille d'actions 
+qui ne soient pas trop corrélées afin d'éviter que 
+toutes les actions montent ou baissent en même temps.
+
+Une stratégie n'est jamais performante tout le temps, 
+l'intérêt de combiner des stratégies différentes sur la 
+même action est de pouvoir compenser la perte d'un algorithme 
+par le gain d'un autre. Autrement dit, la combinaison de 
+plusieurs stratégies ne sera pas forcément plus rentable 
+mais aura tendance à faire diminuer la volatilité.
+
+
+Conclusion
+++++++++++
+
+Ce document présente quelques concepts qui permettent de mieux 
+appréhender la conception d'un algorithme automatique de trading. 
+Ils suppléent de plus en plus les traders et comme ils accélèrent 
+la vitesse des échanges, il devient difficile de s'en passer. 
+Les stratégies présentées ne sont pas assez évoluées pour être 
+performantes, il serait préférable de se tourner vers des techniques 
+issues du machine learning. En règle générale, si une stratégie 
+est connue, c'est qu'elle ne fonctionne plus.
+
+Il faut retenir que ces techniques, de par la manière dont elles sont construites, 
+capturent un fonctionnement normal des séries et sont plus ou moins imprévisibles 
+en temps de crise. Plus elles sont rapides, plus il est essentiel de les tester 
+en profondeur. Il ne faut pas choisir des paramètres qui maximisent 
+seulement leur rendement, il est préférable d'intégrer une notion 
+de risque dans le critère à optimiser car construire un tel 
+algorithme revient à résoudre un problème d'optimisation.
+    		
+
+
+
+.. [Boyd2012] An ADMM Algorithm for a Class of Total Variation Regularized Estimation Problems ? (2012)
+   B. Wahlberg, S. Boyd, M. Annergren, and Y. Wang, 
+   *Proceedings 16th IFAC Symposium on System Identification, 16(1), July 2012.*
+
 .. [Henry2008] Hedge Funds (2008),
    Gérard-Marie Henry, *Eyrolles*
 
@@ -876,8 +1597,14 @@ final qui servira à sélectionner les sociétés.
 .. [Jacquillat2008] Hedge funds, private equity, marchés financiers les frères ennemis ? (2008)
    Bertrand Jacquillat, *PUF*
 
-.. [Wilmott2008] La finance quantitative en 50 questions (2008)
-   Paul Willmott, *Edition d'Organisation*
+.. [Potters2005] Trend followers lose more often than they gain (2005),
+   Marc Potters, Jean-Philippe Bouchaud,
+   Référencé depuis le site `EconPapers <http://econpapers.repec.org/>`_, 
+   accessible à l'adresse `arxiv <http://arxiv.org/pdf/physics/0508104v1.pdf>`_
 
 .. [RocchiChristiaens2007] Hedge Funds, tome 1, Histoire de la gestion alternative et de ses techniques (2007)
    Jean-Michel Rocchi, Arnaud Christiaens, *Séfi Editions*
+
+.. [Wilmott2008] La finance quantitative en 50 questions (2008)
+   Paul Willmott, *Edition d'Organisation*
+

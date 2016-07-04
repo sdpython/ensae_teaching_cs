@@ -79,7 +79,7 @@ d'un algorithme :
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs_6_jaccard
+    notebooks/_gs1a_6_jaccard
     
 
 Au terme de ces six séances, si la programmation est nouvelle pour vous ou
@@ -93,7 +93,7 @@ scientifiques.
 
 
 TD - Site web et pratiques logiciels
-==================================   
+====================================   
 
 Le langage Python est au programme des classes préparatoires scientifique
 (`Prise en main du logiciel Python <https://www.ac-paris.fr/portail/jcms/p1_742307/prise-en-main-du-logiciel-python>`_)
@@ -157,7 +157,7 @@ Ces deux façons de faire sont présentées durant trois séances à choisir par
 **Notes**    
 
 La relecture du TD sur l'optimisation sous contrainte est conseillée 
-à ceux qui souhaitent optimiser des portefeuilles d'actions [#f1]_.
+à ceux qui souhaitent optimiser des portefeuilles d'actions.
 Il est préférable d'avoir fait la séance sur la distance de Jaccard
 avant de faire celle sur la distance d'édition. 
 L'efficacité d'un algorithme est étroitement liée à la représentation des 

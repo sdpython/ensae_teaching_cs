@@ -11,7 +11,7 @@ pour travailler à plusieurs et produire un logiciel avec peu d'erreurs.
 
 (en construction)
 
-.. toc::
+.. contents::
 
 
 Tests

@@ -160,7 +160,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None):
                 # 1.5h
                 ["ensae_teaching_cs [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
                  "ensae_teaching_cs [py34] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
-                # code_beatrix
+                # ensae_projects
                 ("ensae_projects <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(4-5) * * 3"),
                 ("ensae_projects [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
                  None, dict(success_only=True)),
@@ -177,6 +177,8 @@ def default_jenkins_jobs(filter=None, neg_filter=None):
                 ["actuariat_python [doc] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
                  "code_beatrix [doc] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
                 "ensae_teaching_cs [doc] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                ["mlstatpy [doc] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
+                 "jupytalk [doc] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
                 # setup
                 ("pyquickhelper [setup] <-- pyquickhelper",
                  "H H(6-7) * * 1"),

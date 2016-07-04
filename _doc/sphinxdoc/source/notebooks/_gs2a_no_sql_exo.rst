@@ -6,6 +6,6 @@ Programmation fonctionnelle
 .. toctree::
     :maxdepth: 2
 
-    seance5_intro_et_json
-    seance5_prog_fonctionnelle
-    seance5_dask
+    seance_5_intro_et_json
+    seance_5_prog_fonctionnelle
+    seance_5_dask

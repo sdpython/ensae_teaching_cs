@@ -87,9 +87,9 @@ Trois projets réalisés par les élèves lors de l'année 2014-2015 :
 .. toctree::
     :maxdepth: 1
 
-    notebooks/2015_page_rank`
-    notebooks/2015_kmeans`
-    notebooks/2015_factorisation_matrice`
+    notebooks/2015_page_rank
+    notebooks/2015_kmeans
+    notebooks/2015_factorisation_matrice
 
 
 .. _l-td3a-start:

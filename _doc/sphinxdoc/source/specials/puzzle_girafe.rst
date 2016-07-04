@@ -100,8 +100,8 @@ Deux bords pourront seront compatibles s'ils ont la même couleur et des parties
 
 :: 
 
-def compatible (self, bord) :
-        return self.couleur == bord.couleur and self.partie != bord.partie
+    def compatible (self, bord) :
+            return self.couleur == bord.couleur and self.partie != bord.partie
 
 Piece
 +++++

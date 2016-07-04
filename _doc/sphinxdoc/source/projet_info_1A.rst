@@ -24,7 +24,7 @@ Intervenants 2016 :
 * Arthur Renaud, `Etaonis <http://www.etaonis.fr/>`_
 * Pierre Cordier, `Effiscience <http://effiscience.solutions/>`_
 
-.. toc::
+.. contents::
 
 
 Sujets proposés année 2015-2016
