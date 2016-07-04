@@ -40,8 +40,8 @@ install:
   - "%PYTHON%\\Scripts\\pip install https://github.com/sdpython/pyPdf/archive/trunk.zip"
   - "%PYTHON%\\Scripts\\pip install python-jenkins"
   - "%PYTHON%\\Scripts\\pymy_install3 --task=tool --source=zip graphviz"
-  - "set PATH=%PATH%;C:\\projects\\ensae_teaching_cs\\build\\update_modules\\Graphviz\\bin"
-  - "dir C:\\projects"  # \\ensae_teaching_cs\\build\\update_modules\\Graphviz\\bin"
+  - "set PATH=%PATH%;C:\\projects\\ensae-teaching-cs\\build\\update_modules\\Graphviz\\bin"
+  - "dir C:\\projects\\ensae-teaching-cs\\build" # \\update_modules\\Graphviz\\bin"
 
 build: off
 
