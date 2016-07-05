@@ -70,37 +70,20 @@ joué une partie.
 Contenu des enseignements
 -------------------------
 
-.. only:: html
+.. toctree::
+    :maxdepth: 1
 
-    .. toctree::
-        :maxdepth: 1
+    1. Algorithmes et programmation <td_1a>
+    2. Python pour un Data Scientist <td_2a>
+    3. Eléments logiciels pour le traitement des données massives <td_3a>
+    4. Projets informatiques <projet_info>
+    5. Examens <i_exams>
+    6. Découvrir <i_decouvrir>
+    7. Visualisation <i_visualisation>
+    8. Modules, Bibliographie, Articles, FAQ... <i_informations>
+    9. Getting started <i_getting_started>
+    10. Index <i_index>
 
-        1. Algorithmes et programmation <td_1a>
-        2. Python pour un Data Scientist <td_2a>
-        3. Eléments logiciels pour le traitement des données massives <td_3a>
-        4. Projets informatiques <projet_info>
-        5. Examens <i_exams>
-        6. Découvrir <i_decouvrir>
-        7. Visualisation <i_visualisation>
-        8. Modules, Bibliographie, Articles, FAQ... <i_informations>
-        9. Getting started <i_getting_started>
-        10. Index <i_index>
-
-.. only:: latex
-
-    .. toctree::
-        :maxdepth: 2
-
-        1. Algorithmes et programmation <td_1a>
-        2. Python pour un Data Scientist <td_2a>
-        3. Eléments logiciels pour le traitement des données massives <td_3a>
-        4. Projets informatiques <projet_info>
-        5. Examens <i_exams>
-        6. Découvrir <i_decouvrir>
-        7. Visualisation <i_visualisation>
-        8. Modules, Bibliographie, Articles, FAQ... <i_informations>
-        9. Getting started <i_getting_started>
-        10. Index <i_index>
 
 
 Getting started

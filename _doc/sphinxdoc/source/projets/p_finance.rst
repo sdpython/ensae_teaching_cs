@@ -1,4 +1,4 @@
-﻿
+
 .. _l-proj_finance:
 
 Algorithmes de trading
@@ -62,8 +62,8 @@ Il existe de nombreuses variantes. En voici une :
         - si la moyenne à court terme est plus élevée que la moyenne à long terme, nous sommes sur une tendance haussière :math:`\rightarrow` on achète
         - si la moyenne à court terme est inférieure à la moyenne à long terme, la tendance est baissière :math:`\rightarrow` on vend
 
-Vous trouverez plus
-d'information dans ce document : `finance_autostrat.pdf <http://www.xavierdupre.fr/enseignement/initiation/finance_autostrat.pdf>`_.
+Vous trouverez plus à cette page :
+:ref:`_finance_strategie_automatique`.
 
 .. _l-fi-port:
 

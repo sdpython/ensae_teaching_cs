@@ -190,7 +190,7 @@ Cette différence est positive. Le prix d'une action n'évolue pas de manière c
 il ne peut augmenter ou diminuer que d'un nombre entier de ticks. 
 Fournir des données financières nettoyées est un service qui se vend 
 assez cher et qui sert principalement à l'`hyper trading <https://fr.wikipedia.org/wiki/Transactions_%C3%A0_haute_fr%C3%A9quence>`_. 
-En agissant suffisamment vite (100~millisecondes pour aller retour bourse-banque-bourse), 
+En agissant suffisamment vite (100 millisecondes pour aller retour bourse-banque-bourse), 
 il est possible de placer un ordre à un prix qui assure son exécution.
     		
 .. mathdef::
@@ -254,7 +254,7 @@ et identiquement distribués, par conséquent :
 
 .. math::
 
-    \sigma^{year} = \sqrt{\esp{(R^{year})^2}} = \sqrt{ \esp{\sum_1^N (R_i^{day})^2}} = \sqrt{ \esp{N(R^{day})^2}} = \sqrt{N} \sigma^{day}
+    \sigma^{year} = \sqrt{\esp\acc{(R^{year})^2}} = \sqrt{ \esp\acc{\sum_1^N (R_i^{day})^2}} = \sqrt{ \esp\acc{N(R^{day})^2}} = \sqrt{N} \sigma^{day}
 
 
 Un dernier indicateur souvent utilisée est l'indice de corrélation 
@@ -324,7 +324,7 @@ moyenne entre la série et sa moyenne :
     :nowrap:
 
     \begin{eqnarray*}
-    dist(n,t) = \sqrt{\frac{1}{n} \summy{i=0}{n-1} \pa{X_{t-i} - MM(n,i)}^2}
+    dist(n,t) = \sqrt{\frac{1}{n} \sum_{i=0}^{n-1} \pa{X_{t-i} - MM(n,i)}^2}
     \end{eqnarray*}
 
 Les bandes de Bollinger sont définies par l'intervale 
@@ -337,61 +337,62 @@ leur analyse technique. Le tableau suivant en reprend quelques-uns.
 On note par :math:`\pa{O_t, H_t, L_t, C_t}` les quatre prix Open High Low Close 
 pour la période :math:`t`. 
 
-----------------------------------  ---------------------------------------------------------------------------------------------- 
-Indicateur                          Description
-==================================  ==============================================================================================
-moyenne mobile exponentielle        C'est une moyenne mobile qui accorde plus de poids aux valeurs récentes. 
-                                    Elle est définie par un paramètre.
-                                    :math:`\alpha` : :math:`MME_{\alpha}(t) = \alpha X_t + (1-\alpha) MME_{\alpha}(t-1)`. 
-                                    Le paramètre :math:`\alpha` est souvent défini
-                                    comme étant :math:`\alpha = \frac{2}{d+1}` où :math:`d` 
-                                    est un nombre de périodes.
-                                    MME = EMA pour Exponential Moving Average en anglais.
-                                    `wikipedia <https://fr.wikipedia.org/wiki/Moyenne_glissante#Moyenne_mobile_exponentielle>`_
-----------------------------------  ---------------------------------------------------------------------------------------------- 
-True Range 					        Il est défini par :math:`TR_t = \max\acc{C_{t-1}, H_t} - \min\acc{L_t, C_{t-1}}`. 
-                                    Il donne une estimation différente des variations
-                                    opérées par une série financière durant la période. L'indicateur $TR_t$ permet
-                                    de prendre en compte la variabilité intra-période (intraday si les périodes sont des jours).
-                                    Rapporté à la série elle-même, c'est une mesure semblable à la volatilité mais beaucoup plus 
-                                    réactive puisque ce n'est pas une moyenne.
-                                    `wikipedia <https://en.wikipedia.org/wiki/Average_true_range>`_
-----------------------------------  ---------------------------------------------------------------------------------------------- 
-MACD 								Cet indicateur sert à détecter les changements de tendance 
-                                    en calculant la différence entre deux moyennes 
-                                    mobiles d'horizons différents :math:`n > m` : 
-                                    :math:`MACD_{m,n}(t) = EMA_m(t) - EMA_n(t)`. Un changement de signe indique 
-                                    un changement de tendance. Pour un trading daily, les 
-                                    horizons sont souvent choisis dans l'ensemble
-                                    :math:`(n,m) \in \acc{9,12,26}^2`. En pratique, l'indicateur 
-                                    utilisé n'est pas directement le MACD mais une 
-                                    moyenne mobile de celui-ci.
-                                    `wikipedia <https://fr.wikipedia.org/wiki/MACD>`_
-----------------------------------  ---------------------------------------------------------------------------------------------- 
-Parabolic SAR (Stop And Reverse)    Cet indicateur cherche à détecter les tendances, il est défini par~:
-                                    :math:`SAR(t) = SAR(t-1) + \alpha \pa{ EP(t) - SAR(t-1)}`. 
-                                    :math:`\alpha` est un paramètre en général fixé à 0,02.
-                                    et qui croît de 0,02 à chaque changement de tendance jusqu'à la valeur 0,2. 
-                                    :math:`EP(t)` désigne le prix extrême observé
-                                    au cours de la tendance en cours, il correspond à un prix maximal 
-                                    pour un trend haussier et un prix minimal
-                                    pour un trend baissier. Le $SAR$ détermine si le trend est 
-                                    haussier s'il se situe en-dessous du prix actuel, 
-                                    le trend est baissier s'il se situe au-dessus du prix actuel.
-                                    `wikipedia <https://en.wikipedia.org/wiki/Parabolic_SAR>`_
-----------------------------------  ---------------------------------------------------------------------------------------------- 
-RSI (Relative Strength Indicator)   Cet indicateur sert à comparer les forces des mouvements 
-                                    baissiers et haussiers. On définit tout
-                                    d'abord les deux séries :math:`U_t = \max\acc{0,C_t - C_{t-1}}` et 
-                                    :math:`D_t = \max\acc{0,C_{t-1} - C_t}`. 
-                                    On définit ensuite
-                                    :math:`EMU_n(t)` et :math:`EMD_n(t)` comme étant les moyennes mobiles 
-                                    exponentielles des séries :math:`(U_t)` et :math:`(D_t)`. 
-                                    On définit l'indicateur 
-                                    :math:`RS_n(t) = \frac{EMU_n(t)}{EMD_n(t)}`. 
-                                    Enfin, l'indicateur :math:`RSI_n(t) = 100 - \frac{100}{1+RS_n(t)}`.
-                                    `wikipedia <https://fr.wikipedia.org/wiki/Relative_strength_index>`_
-----------------------------------  ---------------------------------------------------------------------------------------------- 
++-----------------------------------+-----------------------------------------------------------------------------------------------+
+| Indicateur                        | Description                                                                                   |
++===================================+===============================================================================================+
+| moyenne mobile exponentielle      | C'est une moyenne mobile qui accorde plus de poids aux valeurs récentes.                      |
+|                                   | Elle est définie par un paramètre.                                                            |
+|                                   | :math:`\alpha` : :math:`MME_{\alpha}(t) = \alpha X_t + (1-\alpha) MME_{\alpha}(t-1)`.         |
+|                                   | Le paramètre :math:`\alpha` est souvent défini                                                |
+|                                   | comme étant :math:`\alpha = \frac{2}{d+1}` où :math:`d`                                       |
+|                                   | est un nombre de périodes.                                                                    |
+|                                   | MME = EMA pour Exponential Moving Average en anglais.                                         |
+|                                   | `lien wikipedia                                                                               |
+|                                   | <https://fr.wikipedia.org/wiki/Moyenne_glissante#Moyenne_mobile_exponentielle>`_              |
++-----------------------------------+-----------------------------------------------------------------------------------------------+
+| True Range 					    | Il est défini par :math:`TR_t = \max\acc{C_{t-1}, H_t} - \min\acc{L_t, C_{t-1}}`.             |
+|                                   | Il donne une estimation différente des variations                                             |
+|                                   | opérées par une série financière durant la période. L'indicateur $TR_t$ permet                |
+|                                   | de prendre en compte la variabilité intra-période (intraday si les périodes sont des jours).  |
+|                                   | Rapporté à la série elle-même, c'est une mesure semblable à la volatilité mais beaucoup plus  |
+|                                   | réactive puisque ce n'est pas une moyenne.                                                    |
+|                                   | `lien wikipedia <https://en.wikipedia.org/wiki/Average_true_range>`_                          |
++-----------------------------------+-----------------------------------------------------------------------------------------------+
+| MACD 								|et indicateur sert à détecter les changements de tendance                                      |
+|                                   | en calculant la différence entre deux moyennes                                                |
+|                                   | mobiles d'horizons différents :math:`n > m` :                                                 |
+|                                   | :math:`MACD_{m,n}(t) = EMA_m(t) - EMA_n(t)`. Un changement de signe indique                   |
+|                                   | un changement de tendance. Pour un trading daily, les                                         |
+|                                   | horizons sont souvent choisis dans l'ensemble                                                 |
+|                                   | :math:`(n,m) \in \acc{9,12,26}^2`. En pratique, l'indicateur                                  |
+|                                   | utilisé n'est pas directement le MACD mais une                                                |
+|                                   | moyenne mobile de celui-ci.                                                                   |
+|                                   | `lien wikipedia <https://fr.wikipedia.org/wiki/MACD>`_                                        |
++-----------------------------------+-----------------------------------------------------------------------------------------------+
+| Parabolic SAR (Stop And Reverse)  | Cet indicateur cherche à détecter les tendances, il est défini par :                          |
+|                                   | :math:`SAR(t) = SAR(t-1) + \alpha \pa{ EP(t) - SAR(t-1)}`.                                    |
+|                                   | :math:`\alpha` est un paramètre en général fixé à 0,02.                                       |
+|                                   | et qui croît de 0,02 à chaque changement de tendance jusqu'à la valeur 0,2.                   |
+|                                   | :math:`EP(t)` désigne le prix extrême observé                                                 |
+|                                   | au cours de la tendance en cours, il correspond à un prix maximal                             |
+|                                   | pour un trend haussier et un prix minimal                                                     |
+|                                   | pour un trend baissier. Le $SAR$ détermine si le trend est                                    |
+|                                   | haussier s'il se situe en-dessous du prix actuel,                                             |
+|                                   | le trend est baissier s'il se situe au-dessus du prix actuel.                                 |
+|                                   | `lien wikipedia <https://en.wikipedia.org/wiki/Parabolic_SAR>`_                               |
++-----------------------------------+-----------------------------------------------------------------------------------------------+
+| RSI (Relative Strength Indicator) | Cet indicateur sert à comparer les forces des mouvements                                      |
+|                                   | baissiers et haussiers. On définit tout                                                       |
+|                                   | d'abord les deux séries :math:`U_t = \max\acc{0,C_t - C_{t-1}}` et                            |
+|                                   | :math:`D_t = \max\acc{0,C_{t-1} - C_t}`.                                                      |
+|                                   | On définit ensuite                                                                            |
+|                                   | :math:`EMU_n(t)` et :math:`EMD_n(t)` comme étant les moyennes mobiles                         |
+|                                   | exponentielles des séries :math:`(U_t)` et :math:`(D_t)`.                                     |
+|                                   | On définit l'indicateur                                                                       |
+|                                   | :math:`RS_n(t) = \frac{EMU_n(t)}{EMD_n(t)}`.                                                  |
+|                                   | Enfin, l'indicateur :math:`RSI_n(t) = 100 - \frac{100}{1+RS_n(t)}`.                           |
+|                                   | `lien wikipedia <https://fr.wikipedia.org/wiki/Relative_strength_index>`_                     |
++-----------------------------------+-----------------------------------------------------------------------------------------------+
 
 
 Achats, ventes, levier
@@ -438,6 +439,7 @@ très courts termes (quelques mois) et sont fortement leveragés.
     Source *Lipper* Mars 2007, extrait de [Jacquillat2008]_.
 
 
+    ----------------------  -----------
     Lieu                    Répartition
     ----------------------  -----------
     Iles Cayman             34 % 
@@ -450,8 +452,9 @@ très courts termes (quelques mois) et sont fortement leveragés.
     Bahamas                 3 % 
     Guernsey                2 % 
     Antilles Néerlandaises  2 % 
+    ----------------------  -----------
 
-
+    ----------------------------------  -----------
     Stratégie                           Répartition
     ----------------------------------  -----------
     Multi-stratégie                     31%
@@ -462,6 +465,7 @@ très courts termes (quelques mois) et sont fortement leveragés.
     Emerging Markets                    4%
     Global Macro                        4%
     Equity Market Neutral               4%
+    ----------------------------------  -----------
 
 
 
@@ -624,8 +628,8 @@ Après avoir coupé sa position, le portefeuille n'est plus constitué que d'arg
     
     Cours de l'action \textit{BNP} accompagné par sa moyenne mobile 50 et ses bandes de Bollinger. Une stratégie simple de 
     trend following consiste à acheter lorsque le cours dépasse sa bande 
-    supérieure de Bollinger (point~A) et à revendre lorsque
-    le cours passe sa bande inférieure (point~B). 
+    supérieure de Bollinger (point A) et à revendre lorsque
+    le cours passe sa bande inférieure (point B). 
     Le gain est alors la différence des cours d'achat et de vente. Lorsque la tendance 
     est baissière, il suffit de vendre d'abord puis d'acheter ensuite.
 
@@ -710,9 +714,9 @@ position inverse à celle qu'elle aurait dû prendre.
 
     Cours de l'action \textit{BNP} accompagné par sa moyenne mobile 50 et ses bandes de Bollinger. 
     Une stratégie simple de 
-    mean reversing consiste à acheter lorsque le cours dépasse sa bande inférieure de Bollinger (point~A) 
+    mean reversing consiste à acheter lorsque le cours dépasse sa bande inférieure de Bollinger (point A) 
     et à revendre lorsque
-    le cours revient vers sa borne supérieure (point~B). 
+    le cours revient vers sa borne supérieure (point B). 
     Le gain est alors la différence des cours d'achat et de vente.
     		
 
@@ -822,6 +826,7 @@ Pour cet indicateur, une petite valeur suggère une position
 acheteuse. Par conséquent, on va prendre une position acheteuse 
 pour les premiers 10% et une position vendeuse pour les derniers 10%.
 
+----------------------  ---------------------
 société                 position
 ----------------------  ---------------------
 :math:`\sigma(1)`   	acheteuse
@@ -833,6 +838,7 @@ société                 position
 :math:`\sigma(N-10)`    vendeuse
 ...		  			    vendeuse
 :math:`\sigma(N)`       vendeuse
+----------------------  ---------------------
 
 Le mois d'après, le classement a changé, quatre cas sont possibles :
 
@@ -882,13 +888,13 @@ celui de chaque action prise séparément.
 Chaque action est ici décrit par son rendement moyen :math:`R_i` et sa volatilité :math:`\sigma_i`. 
 Construire un portefeuille consiste à répartir son argent entre les différents 
 actifs financiers. On affecte un poids :math:`\alpha_i` à chaque action :math:`i`. 
-La somme des poids vérifie les contraintes suivantes~:
+La somme des poids vérifie les contraintes suivantes :
 
 .. math::
     :nowrap:
     
     \begin{eqnarray*}
-    \summy{i=1}{N} \alpha_i = 1 && \\
+    \sum_{i=1}^{N} \alpha_i = 1 && \\
     \forall i \in \ensemble{1}{N}, \; 0 \infegal \alpha_i \infegal 1 
     \end{eqnarray*}
 
@@ -910,7 +916,7 @@ est définie par :
     :nowrap:
 
     \begin{eqnarray}
-    \sigma\vecteur{\alpha_1}{\alpha_N} &=& \sqrt{ \summyone{i,j} \alpha_i \alpha_j \sigma_i \sigma_j \rho_{ij} }
+    \sigma\vecteur{\alpha_1}{\alpha_N} &=& \sqrt{ \sum_{i,j} \alpha_i \alpha_j \sigma_i \sigma_j \rho_{ij} }
     \end{eqnarray}
 
 Si on note :math:`\Sigma` la matrice des covariances des sous-jacents et 
@@ -1006,6 +1012,7 @@ Il n'est pas rare de manquer de données pendant 15 minutes puis d'obtenir des
 volumes de transactions quatre fois plus important pour les cinq minutes suivantes. 
 Ceci est illustré par l'exemple suivant :
 
+---------- ------ ------- ------- ------- ------- -------- ------------------------------- 
 date       time   Open    High    Low     Close   Volume   Remarque
 ---------- ------ ------- ------- ------- ------- -------- ------------------------------- 
 07/11/2007 19:42  7822    7823    7818    7819.5  1130
@@ -1016,6 +1023,7 @@ date       time   Open    High    Low     Close   Volume   Remarque
 07/11/2007 20:30  7829.5  7831.5  7827    7829.5   478
 07/11/2007 20:36  7830    7830.5  7821    7829     716
 07/11/2007 20:42  7829.5  7834.5  7826    7828     681
+---------- ------ ------- ------- ------- ------- -------- ------------------------------- 
 
 A l'inverse, il peut arriver qu'aucun ordre n'ait été passé pendant 
 cinq minutes, au tout début de l'ouverture d'un marché, ou durant la 
@@ -1064,7 +1072,7 @@ La stratégie est définie par trois règles :
   celle-ci est coupée. Si le cours franchit la bande de Bollinger inférieure 
   et que la position est acheteuse, la position est aussi coupée.
 * La troisième règle est destinée à limiter les pertes, si la stratégie 
-  a ouvert une position acheteuse au prix~$p$ et que le cours redescend à 
+  a ouvert une position acheteuse au prix $p$ et que le cours redescend à 
   un niveau :math:`p (1-\beta)`, la position est coupée. A l'inverse, si la stratégie 
   a ouvert une position vendeuse au prix :math:`p` et que le cours remonte à 
   un niveau :math:`p (1+\beta)`, la position est aussi coupée.
@@ -1093,9 +1101,10 @@ Backtest
     :tag: Figure
     :lid: finance_graph_ohlc_bnp_nav_
     
-    .. image:: finimg/navstrat.png
     
-    .. image:: finimg/navstratp.png
+    +-----------------------------------+-----------------------------------+
+    | .. image:: finimg/navstrat.png    | .. image:: finimg/navstratp.png   |
+    +-----------------------------------+-----------------------------------+
 
     NAV de la stratégie Trend Following décrite au paragraphe :ref:`analyse_finace_strategie`. 
     Le second graphe représente la position de la stratégie, une position positive signifie une position
@@ -1219,38 +1228,40 @@ regarde d'autres indicateurs comme
 l'`Information Ratio <https://en.wikipedia.org/wiki/Information_ratio>`_ ou le 
 `ratio de Sharpe <https://fr.wikipedia.org/wiki/Ratio_de_Sharpe>`_. 
 La première étape consiste à annualiser la performance et la volatilité 
-obtenus sur le backtest (voir paragraphe~\ref{finance_rendemnt_annee}). 
+obtenus sur le backtest (voir paragraphe \ref{finance_rendemnt_annee}). 
 On cherche ensuite à construire le tableau suivant qui n'est pas exhaustif.
 
 
-Indicateur          Description
-=================== ==================================================================================================================== 
-Information Ratio   C'est le rendement rapporté sur la volatilité :math:`\frac{R}{\sigma}`. 
-                    :math:`R` mesure la performance, :math:`\sigma` le risque pour l'obtenir. Si ce ratio est inférieur à 1, 
-                    cela signifie que le risque est plus élevé que la performance qui est sujette à caution
-                    même si elle est importante.
-------------------- -------------------------------------------------------------------------------------------------------------------- 
-ratio de Sharpe     Les Hedge Funds partiquent souvent un levier supérieur à 200%. Cela veut dire qu'ils empruntent pour 
-                    placer le double ou le triple de l'argent qu'ils gèrent. Cet emprunt n'est pas gratuit, c'est pourquoi on 
-                    retranche à la performance obtenu par le Hedge Fund le taux sans risque~$r$ qui correspond au taux de l'emprunt :
-                    :math:`\frac{R-r}{\sigma}`.
-------------------- -------------------------------------------------------------------------------------------------------------------- 
-drawdown            C'est la perte maximale de la stratégie. Obtenir 10% en fin d'année ne veut pas dire que le système n'est pas
-                    passé par -5% en cours d'année. La perte maximale n'est pas le niveau le plus bas depuis le début de l'année, 
-                    c'est le plus grand écart entre un gain maximal et une perte maximale qui lui succède.
-------------------- -------------------------------------------------------------------------------------------------------------------- 
-rendement roulant   Lorsqu'on construit une stratégie à long terme, il peut être intéressant de construire la courbe des rendements
-                    roulant qui est par exemple pour une date :math:`t`, la performance obtenue entre 
-                    :math:`t-6` mois et :math:`t` par exemple. 
-                    Pour une stratégie à long terme, il devrait exister très peu de rendements roulant à un an négatifs.
-------------------- -------------------------------------------------------------------------------------------------------------------- 
-corrélation		    Lorsqu'un investisseur cherche à investir son argent dans un placement alternatif, il regarde si ce placement
-                    lui offre des rendements qui ne sont pas corrélés au marché. Dans le cas d'une stratégie appliquée à une
-                    action, il s'agit de calculer la corrélation entre le cours de l'action et la NAV de la stratégie.
-                    Une corrélation de 1 ou -1 signifie que la stratégie a été d'acheter ou de vendre une action puis
-                    de conserver cette position. Il est intéressant d'avoir une corrélation faible, d'avoir une stratégie
-                    qui ne reproduisent pas les pertes et les gains d'une action. C'est aussi avoir de la valeur 
-                    ajoutée : la stratégie atteint son objectif, elle propose un placement alternatif.
++---------------------+---------------------------------------------------------------------------------------------------------------------+
+| Indicateur          | Description                                                                                                         |
++=====================+=====================================================================================================================+
+| Information Ratio   | C'est le rendement rapporté sur la volatilité :math:`\frac{R}{\sigma}`.                                             |
+|                     | :math:`R` mesure la performance, :math:`\sigma` le risque pour l'obtenir. Si ce ratio est inférieur à 1,            |
+|                     | cela signifie que le risque est plus élevé que la performance qui est sujette à caution                             |
+|                     | même si elle est importante.                                                                                        |
++---------------------+---------------------------------------------------------------------------------------------------------------------+
+| ratio de Sharpe     | Les Hedge Funds partiquent souvent un levier supérieur à 200%. Cela veut dire qu'ils empruntent pour                |
+|                     | placer le double ou le triple de l'argent qu'ils gèrent. Cet emprunt n'est pas gratuit, c'est pourquoi on           |
+|                     | retranche à la performance obtenu par le Hedge Fund le taux sans risque $r$ qui correspond au taux de l'emprunt :   |
+|                     | :math:`\frac{R-r}{\sigma}`.                                                                                         |
++---------------------+---------------------------------------------------------------------------------------------------------------------+
+| drawdown            | C'est la perte maximale de la stratégie. Obtenir 10% en fin d'année ne veut pas dire que le système n'est pas       |
+|                     | passé par -5% en cours d'année. La perte maximale n'est pas le niveau le plus bas depuis le début de l'année,       |
+|                     | c'est le plus grand écart entre un gain maximal et une perte maximale qui lui succède.                              |
++---------------------+---------------------------------------------------------------------------------------------------------------------+
+| rendement roulant   | Lorsqu'on construit une stratégie à long terme, il peut être intéressant de construire la courbe des rendements     |
+|                     | roulant qui est par exemple pour une date :math:`t`, la performance obtenue entre                                   |
+|                     | :math:`t-6` mois et :math:`t` par exemple.                                                                          |
+|                     | Pour une stratégie à long terme, il devrait exister très peu de rendements roulant à un an négatifs.                |
++---------------------+---------------------------------------------------------------------------------------------------------------------+
+| corrélation		  | Lorsqu'un investisseur cherche à investir son argent dans un placement alternatif, il regarde si ce placement       |
+|                     | lui offre des rendements qui ne sont pas corrélés au marché. Dans le cas d'une stratégie appliquée à une            |
+|                     | action, il s'agit de calculer la corrélation entre le cours de l'action et la NAV de la stratégie.                  |
+|                     | Une corrélation de 1 ou -1 signifie que la stratégie a été d'acheter ou de vendre une action puis                   |
+|                     | de conserver cette position. Il est intéressant d'avoir une corrélation faible, d'avoir une stratégie               |
+|                     | qui ne reproduisent pas les pertes et les gains d'une action. C'est aussi avoir de la valeur                        |
+|                     | ajoutée : la stratégie atteint son objectif, elle propose un placement alternatif.                                  |
++---------------------+---------------------------------------------------------------------------------------------------------------------+
 
 Il existe de nombreuses manières de mesurer la performance d'une stratégie. 
 D'autres critères peuvent être mesurés comme le nombre d'ordres passés, 
@@ -1269,6 +1280,7 @@ comportement en temps de crise. Le tableau suivant présente les résultats pour
 stratégie décrite au paragraphe :ref:`analyse_finace_strategie`.
 
 
+======================= =========
 Indicateur              Valeur
 ======================= =========
 rendement annualisé 	 7,7%
@@ -1277,6 +1289,7 @@ Information Ratio 		 0.88
 ratio de Sharpe 		 0.42
 corrélation 			82,6%
 drawdown 				24,4%
+======================= =========
 
 La stratégie est ici peu efficace. La volatilité est élevée, 
 le drawdown maximal est très élevé.
@@ -1366,12 +1379,14 @@ La table suivante contient la matrice des autocorrélations.
     :lid: finance_graph_ohlc_correlation
     :tag: Table
 
+    =========== =========== =========== =========== ===========
                 **BNP**     **SG**      **CA**      **Danone**  
     =========== =========== =========== =========== ===========
     **BNP** 	1,00        0,75        0,67        0,44
     **SG**  	0,75        1,00        0,63        0,42
     **CA**  	0,67        0,63        1,00        0,35
     **Danone**  0,44        0,42        0,35        1,00
+    =========== =========== =========== =========== ===========
 
     Matrice des autocorrélations pour les rendements quotidiens des quatre actions 
     BNP, Société Générale, Crédit Agricole et Danone. Les corrélations sont moins fortes entre Danone et
@@ -1460,7 +1475,7 @@ positifs.
 
     La première image est celle de la distribution théorique des gains calculée par 
     Bouchaud et Potters dans leur article [Potters2005]_.
-    La distribution empirique n'est pas toujours facile à construire sur des historiques qui ne sont pas assez longs~:
+    La distribution empirique n'est pas toujours facile à construire sur des historiques qui ne sont pas assez longs :
     dans le cas de notre stratégie Trend Following, il n'existe que cinq deals.
     Il faut donc assembler les deals de la même stratégie sur plusieurs séries. Le résultat
     correspond assez bien à la distribution théorique. Le troisème graphe représente la distribution
@@ -1501,6 +1516,7 @@ on s'intéresse à l'ensemble des points :math:`\pa{  q(p_2 - p_1), \; q \pa{L(t
     :tag: Figure
     
     .. image:: finimg/stratd.png
+        :width: 500px
 
     Dans ce graphe, pour un deal positif, plus il est proche de la diagonale, plus la décision de coupure
     de la position a été proche du maximum envisageable. Dans ce graphe, on voit que la stratégie est meilleure 

@@ -82,6 +82,10 @@ que le cas où le graphe ne contient qu'une seule composante connexe.
 Il consiste à partir d'un graphe débarrassé de tous ses arcs puis 
 à ajouter des arcs reliant deux composantes connexes différentes 
 jusqu'à ce qu'il n'en reste plus qu'une.
+
+.. mathdef::
+    :title: Kruskal
+    :tag: Algorithme
 		
     On suppose que *G(X,E)* est un graphe, *X* est l'ensemble des sommets,
     *E* est l'ensemble des arcs. Si :math:`e \in E`, *f(e)* désigne son poids. Cet algorithme
@@ -126,7 +130,7 @@ le meilleur chemin puisque les arcs entre plus proches voisins leur seront
 préférés. Afin de réduire cet ensemble, il est possible de quadriller 
 le plan en zones et d'associer à chaque ville la zone à laquelle 
 il appartient. On peut ainsi se contenter de construire l'arbre de poids 
-minimal à l'aide des arcs entre villes de même zone ou de zones voisines 
+minimal à l'aide des arcs entre villes de même zone ou de zones voisines.
 
 .. image:: kruskz.png
 
@@ -170,6 +174,10 @@ arbre selon le sens trigonométrique inverse.
 Parcours de l'arbre de poids minimal de façon à former un circuit eulérien. On
 part d'une extrémité puis on parcourt le graphe dans le sens trigonométrique inverse
 jusqu'à revenir au point de départ.
+
+.. mathdef::
+    :title: Circuit Eulérien
+    :tag: Algorithme
 
     On suppose que le graphe dont il faut obtenir un circuit eulérien
     est un arbre non-orienté de poids minimal
@@ -222,6 +230,10 @@ en évitant simplement les n\oe uds déjà parcourus.
 Cette construction est possible puisque le graphe est entièrement 
 connecté. Il est donc possible de passer d'un noeud quelconque à 
 un autre noeud quelconque lui aussi. Il est possible que cet arc n'appartienne pas au graphe.
+
+.. mathdef::
+    :title: Circuit hamiltonien
+    :tag: Algorithme
 
     On suppose que le graphe *G=(X,E)* est entièrement
     connecté. *ch* désigne un chemin eulérien.
@@ -286,9 +298,12 @@ représente le schéma d'un retournement d'une portion du chemin. Ceci permet d'
 chemin décrive une figure en forme de :math:`\infty`. La troisième figure présente le déplacement
 d'une portion du chemin entre deux autres n\oe uds. La dernière image présente le déplacement
 et le retournement d'une portion du chemin entre deux villes.
+L'algorithme qui suit reprend le schéma développé par 
+`Lin-Kernighan <https://en.wikipedia.org/wiki/Lin%E2%80%93Kernighan_heuristic>`_
 
-
-L'algorithme qui suit reprend le schéma développé par `Lin-Kernighan <https://en.wikipedia.org/wiki/Lin%E2%80%93Kernighan_heuristic>`_
+.. mathdef::
+    :title: TSP
+    :tag: Algorithme
 
     Soit un circuit hamiltonien :math:`v = \vecteur{v_1}{v_n}` passant
     par les *n* noeuds - ou villes - d'un graphe.

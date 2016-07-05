@@ -1,5 +1,4 @@
 
-.. issue.
 
 .. _l-proj_jeux_maths:
 

@@ -1,6 +1,6 @@
 import dot2tex
 source = \
-"""
+    """
 graph {
 1 [label="Paris"] ;
 2 [label="Lyon"] ;
@@ -38,5 +38,4 @@ graph {
 }
 """
 
-print dot2tex.dot2tex (source, format="")
-
+print dot2tex.dot2tex(source, format="")

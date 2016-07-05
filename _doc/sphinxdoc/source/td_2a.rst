@@ -269,7 +269,7 @@ Ces problèmes sont tirés de plusieurs sites dont
 .. toctree::
     :maxdepth: 2
     
-    _gs2a_puzzle
+    notebooks/_gs2a_puzzle
 
       
 **Lectures**

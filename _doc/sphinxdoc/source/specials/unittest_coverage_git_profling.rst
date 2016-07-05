@@ -48,7 +48,7 @@ Pour vérifier certains aspects du site web tels qu'ils seront par un internaute
 
 *GUI*
 
-* *autopy3 <https://pypi.python.org/pypi/autopy3/>`_
+* `autopy3 <https://pypi.python.org/pypi/autopy3/>`_
 
 *autre module intéressants*
 
@@ -120,7 +120,7 @@ Gestion de projet
 
 
 Revue de code
--------------
+^^^^^^^^^^^^^
 
 Une `revue de code <https://fr.wikipedia.org/wiki/Revue_de_code>`_  
 intervient avant la mise à jour du code d'un logiciel.

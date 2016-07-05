@@ -61,3 +61,7 @@ if html_theme == "bootstrap":
 
 blog_root = "http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/"
 blog_background = False
+
+html_context = {
+    'css_files': ['_static/my-styles.css'],
+}
