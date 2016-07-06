@@ -10,6 +10,11 @@ Ressources, Evénements, Source de données
 
 .. index:: Croix-Rouge, opendata, data.gouv.fr, quandl, wikipedia, Letor, WordNet, ImageNet, données, OpenWeatherMap, sources de données
 
+.. contents::
+    :local:
+
+
+
 .. _l-datasources:
     
 Source de données

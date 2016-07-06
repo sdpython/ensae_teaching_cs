@@ -31,6 +31,11 @@ qui sont effectués manuellement par un trader ou servent d'outils
 d'aide à la décision. Plus la fréquence des opérations est élevée, 
 plus l'investissement nécessaire à leur mise en place est important. 
 
+.. contents::
+    :local:
+
+
+
 Quelques références
 +++++++++++++++++++
 
@@ -358,7 +363,7 @@ pour la période :math:`t`.
 |                                   | réactive puisque ce n'est pas une moyenne.                                                    |
 |                                   | `lien wikipedia <https://en.wikipedia.org/wiki/Average_true_range>`_                          |
 +-----------------------------------+-----------------------------------------------------------------------------------------------+
-| MACD 								|et indicateur sert à détecter les changements de tendance                                      |
+| MACD 								| et indicateur sert à détecter les changements de tendance                                     |
 |                                   | en calculant la différence entre deux moyennes                                                |
 |                                   | mobiles d'horizons différents :math:`n > m` :                                                 |
 |                                   | :math:`MACD_{m,n}(t) = EMA_m(t) - EMA_n(t)`. Un changement de signe indique                   |
@@ -439,9 +444,9 @@ très courts termes (quelques mois) et sont fortement leveragés.
     Source *Lipper* Mars 2007, extrait de [Jacquillat2008]_.
 
 
-    ----------------------  -----------
+    ======================  ===========
     Lieu                    Répartition
-    ----------------------  -----------
+    ======================  ===========
     Iles Cayman             34 % 
     USA 				    20 % 
     British Virgin Islands  14 % 
@@ -452,12 +457,12 @@ très courts termes (quelques mois) et sont fortement leveragés.
     Bahamas                 3 % 
     Guernsey                2 % 
     Antilles Néerlandaises  2 % 
-    ----------------------  -----------
+    ======================  ===========
 
-    ----------------------------------  -----------
+    ==================================  ===========
     Stratégie                           Répartition
-    ----------------------------------  -----------
-    Multi-stratégie                     31%
+    ==================================  ===========
+    Multi=stratégie                     31%
     Long / Short Equity                 23%
     Event Driven                        13%
     Commodity Trading Advisor (CTA)     6%
@@ -465,7 +470,7 @@ très courts termes (quelques mois) et sont fortement leveragés.
     Emerging Markets                    4%
     Global Macro                        4%
     Equity Market Neutral               4%
-    ----------------------------------  -----------
+    ==================================  ===========
 
 
 
@@ -826,9 +831,9 @@ Pour cet indicateur, une petite valeur suggère une position
 acheteuse. Par conséquent, on va prendre une position acheteuse 
 pour les premiers 10% et une position vendeuse pour les derniers 10%.
 
-----------------------  ---------------------
+======================  ====================
 société                 position
-----------------------  ---------------------
+======================  ====================
 :math:`\sigma(1)`   	acheteuse
 ...  			   		acheteuse
 :math:`\sigma(10)`  	acheteuse
@@ -838,7 +843,7 @@ société                 position
 :math:`\sigma(N-10)`    vendeuse
 ...		  			    vendeuse
 :math:`\sigma(N)`       vendeuse
-----------------------  ---------------------
+======================  ====================
 
 Le mois d'après, le classement a changé, quatre cas sont possibles :
 
@@ -1012,9 +1017,9 @@ Il n'est pas rare de manquer de données pendant 15 minutes puis d'obtenir des
 volumes de transactions quatre fois plus important pour les cinq minutes suivantes. 
 Ceci est illustré par l'exemple suivant :
 
----------- ------ ------- ------- ------- ------- -------- ------------------------------- 
+========== ====== ======= ======= ======= ======= ======== =============================== 
 date       time   Open    High    Low     Close   Volume   Remarque
----------- ------ ------- ------- ------- ------- -------- ------------------------------- 
+========== ====== ======= ======= ======= ======= ======== =============================== 
 07/11/2007 19:42  7822    7823    7818    7819.5  1130
 07/11/2007 19:48  7819.5  7830    7819.5  7822.5  1543
 07/11/2007 19:54  7823    7827.5  7819.5  7824    1244
@@ -1023,7 +1028,7 @@ date       time   Open    High    Low     Close   Volume   Remarque
 07/11/2007 20:30  7829.5  7831.5  7827    7829.5   478
 07/11/2007 20:36  7830    7830.5  7821    7829     716
 07/11/2007 20:42  7829.5  7834.5  7826    7828     681
----------- ------ ------- ------- ------- ------- -------- ------------------------------- 
+========== ====== ======= ======= ======= ======= ======== =============================== 
 
 A l'inverse, il peut arriver qu'aucun ordre n'ait été passé pendant 
 cinq minutes, au tout début de l'ouverture d'un marché, ou durant la 

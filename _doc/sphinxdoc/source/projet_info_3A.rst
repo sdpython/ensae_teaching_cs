@@ -7,6 +7,11 @@
 3A - Projets informatiques
 ==========================
 
+.. contents::
+    :local:
+
+
+
 Travail attendu
 +++++++++++++++
 

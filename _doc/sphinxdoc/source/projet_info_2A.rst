@@ -28,6 +28,11 @@ car on ne peut pas tout faire avec les données disponibles sur ce site.
 **Date de rendu**
     * dernier jour avant les vacances de Noël pour le rapport / notebook / programme
     * première semaine de janvier pour la vidéo
+    
+.. contents::
+    :local:
+
+    
 
 
 Travail attendu

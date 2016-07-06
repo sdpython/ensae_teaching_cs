@@ -9,6 +9,11 @@
 Articles, Références, Blogs
 ===========================
 
+.. contents::
+    :local:
+
+
+
 .. index:: bibliographie
 
 Autres bibliographies incluses sur ce site

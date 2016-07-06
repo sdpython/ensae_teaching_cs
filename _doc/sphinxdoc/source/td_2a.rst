@@ -39,6 +39,10 @@ liste les différents modules proposés lors de ce cours.
 Le cours est évalué avec un :ref:`projet informatique <l-projinfo2a>`.
 
 
+.. contents::
+    :local:
+
+
 
 .. index:: sérialisation, index, dataframe
 

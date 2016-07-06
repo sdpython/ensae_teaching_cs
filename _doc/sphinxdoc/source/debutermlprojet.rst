@@ -10,6 +10,9 @@ Bien démarrer un projet de machine learning
 Un projet de machine learning commence généralement avec un jeu de données et un problème à résoudre.
 Une fois qu'on a cela, les premières étapes débutent avec presque toujours les mêmes questions :
 
+.. contents::
+    :local:
+
 Etape 1 : quel est le type de problème ?
 ++++++++++++++++++++++++++++++++++++++++
 

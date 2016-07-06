@@ -29,6 +29,9 @@ Intervenants 2015-2016 :
 * Félix Revert, `CapGemini Consulting <https://www.capgemini-consulting.com/>`_
 
 
+.. contents::
+    :local:
+
 
 TD - les bases
 ==============

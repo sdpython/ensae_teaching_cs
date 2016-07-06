@@ -25,6 +25,7 @@ Intervenants 2016 :
 * Pierre Cordier, `Effiscience <http://effiscience.solutions/>`_
 
 .. contents::
+    :local:
 
 
 Sujets proposés année 2015-2016

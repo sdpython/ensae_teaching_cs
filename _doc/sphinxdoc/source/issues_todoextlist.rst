@@ -8,6 +8,7 @@ Bugs et améliorations
 .. index:: issues, todo
 
 .. contents::
+    :local:
 
 
 Bugs
