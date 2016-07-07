@@ -28,7 +28,7 @@ def last_function(innosetup, folders, verbose=False, fLOG=print):
     logs = folders["logs"]
     this = os.path.abspath(os.path.dirname(__file__))
     doc_annee = [os.path.join(this, "..", "..", "..", "_doc", "notebooks", sub)
-                 for sub in ["td1a", "td2a", "td3a", "1a", "2a", "visualisation", "expose"]]
+                 for sub in ["td1a", "td2a", "td3a", "1a", "2a", "expose"]]
 
     if not os.path.exists(build):
         os.mkdir(build)
