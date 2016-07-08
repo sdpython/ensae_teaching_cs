@@ -259,10 +259,10 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=[1000, 1500],
             fLOG("cc={0}".format(cc))
             fLOG("subject={0}".format(subject))
             fLOG("body\n{0}".format(html))
-            with open(r"c:\temp\i.html", "w", encoding="utf-8") as f:
+            with open("enumerate_send_email_debug.html", "w", encoding="utf-8") as f:
                 f.write(html)
             raise ValueError(
-                "mailbox is None, first mail is display and the process is stopped.")
+                "mailbox is None, first mail is display and the process is stopped, see enumerate_send_email_debug.html.")
         res = send_email(mailbox, fr=fr, to=mails.split(";"), cc=cc, delay_sending=delay_sending,
                          body_html=html, body_text=text, subject=subject)
         if delay_sending:
