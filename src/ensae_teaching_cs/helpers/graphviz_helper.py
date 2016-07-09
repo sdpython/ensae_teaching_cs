@@ -5,7 +5,7 @@
 import os
 import sys
 from pyquickhelper.loghelper import run_cmd
-from pyquickhelper.helpgen.conf_path_tools import get_graphviz_dot
+from pyquickhelper.helpgen.conf_path_tools import find_graphviz_dot
 
 
 def run_graphviz(filename, image, engine="dot"):
@@ -21,7 +21,7 @@ def run_graphviz(filename, image, engine="dot"):
     if ext != ".png":
         raise Exception("extension should be .png not " + str(ext))
     if sys.platform.startswith("win"):
-        bin = os.path.dirname(get_graphviz_dot())
+        bin = os.path.dirname(find_graphviz_dot())
         # if bin not in os.environ["PATH"]:
         #    os.environ["PATH"] = os.environ["PATH"] + ";" + bin
         cmd = '"{0}\\{3}" -Tpng "{1}" -o "{2}"'.format(
