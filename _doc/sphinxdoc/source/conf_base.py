@@ -72,7 +72,6 @@ imgmath_latex_preamble += """\n\\newcommand{\\girafedec}[3]{ \\begin{array}{cccc
             \\newcommand{\\N}[0]{\\mathbb{N}}
             \\newcommand{\\indicatrice}[1]{\\mathbf{1\\!\\!1}_{\\acc{#1}}}
             \\usepackage[all]{xy}
-            \\usepackage{eepic}
             \\newcommand{\\infegal}[0]{\\leqslant}
             \\newcommand{\\supegal}[0]{\\geqslant}
             \\newcommand{\\ensemble}[2]{\\acc{#1,\\dots,#2}}
@@ -92,6 +91,7 @@ imgmath_latex_preamble += """\n\\newcommand{\\girafedec}[3]{ \\begin{array}{cccc
             \\newcommand{\\trace}[1]{tr\\pa{#1}}
             \\newcommand{\\abs}[1]{\\left|#1\\right|}
             """
+            #\\usepackage{eepic}
 
 project_var_name_t = "ENSAE<br />Xavier Dupré"
 project_var_name = "ensae_teaching_cs"

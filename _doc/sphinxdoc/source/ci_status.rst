@@ -6,63 +6,234 @@
 Dépendances
 ===========
 
-=========================================================================================================== =================================================================================================== ===========================================================================================
-Module                                                                                                      Travis                                                                                              AppVeyor
-=========================================================================================================== =================================================================================================== ===========================================================================================
-`actuariat_python <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_                  .. image:: https://travis-ci.org/sdpython/actuariat_python.svg?branch=master                        .. image:: https://ci.appveyor.com/api/projects/status/plhkoh1rkw70avwq?svg=true
-                                                                                                                :target: https://travis-ci.org/sdpython/actuariat_python                                            :target: https://ci.appveyor.com/project/sdpython/actuariat-python
-                                                                                                                :alt: Build status                                                                                  :alt: Build Status Windows    
-`code_beatrix <http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/index.html>`_                          .. image:: https://travis-ci.org/sdpython/code_beatrix.svg?branch=master                            .. image:: https://ci.appveyor.com/api/projects/status/jf1l4choe2ty22jr?svg=true
-                                                                                                                :target: https://travis-ci.org/sdpython/code_beatrix                                                :target: https://ci.appveyor.com/project/sdpython/code-beatrix
-                                                                                                                :alt: Build status                                                                                  :alt: Build Status Windows    
-`ensae_projects <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_                      .. image:: https://travis-ci.org/sdpython/ensae_projects.svg?branch=master                          .. image:: https://ci.appveyor.com/api/projects/status/66db8wa3a566u6b7?svg=true
-                                                                                                                :target: https://travis-ci.org/sdpython/ensae_projects                                              :target: https://ci.appveyor.com/project/sdpython/ensae-projects
-                                                                                                                :alt: Build status                                                                                  :alt: Build Status Windows    
-`ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_               .. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master                       .. image:: https://ci.appveyor.com/api/projects/status/4chpamq95rh5h245?svg=true
-                                                                                                                :target: https://travis-ci.org/sdpython/ensae_teaching_cs                                           :target: https://ci.appveyor.com/project/sdpython/ensae-teaching-cs
-                                                                                                                :alt: Build status                                                                                  :alt: Build Status Windows    
-`jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_                                  .. image:: https://travis-ci.org/sdpython/jupytalk.svg?branch=master                                .. image:: https://ci.appveyor.com/api/projects/status/by2p84twqmfcdd21?svg=true
-                                                                                                                :target: https://travis-ci.org/sdpython/jupytalk                                                    :target: https://ci.appveyor.com/project/sdpython/jupytalk
-                                                                                                                :alt: Build status                                                                                  :alt: Build Status Windows    
-`mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_                                  .. image:: https://travis-ci.org/sdpython/mlstatpy.svg?branch=master                                .. image:: https://ci.appveyor.com/api/projects/status/j5poldtnij0a3ac0?svg=true
-                                                                                                                :target: https://travis-ci.org/sdpython/mlstatpy                                                    :target: https://ci.appveyor.com/project/sdpython/mlstatpy
-                                                                                                                :alt: Build status                                                                                  :alt: Build Status Windows    
-`pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_                                    .. image:: https://travis-ci.org/sdpython/pyensae.svg?branch=master                                 .. image:: https://ci.appveyor.com/api/projects/status/hw3ixda4622h34qb?svg=true
-                                                                                                                :target: https://travis-ci.org/sdpython/pyensae                                                     :target: https://ci.appveyor.com/project/sdpython/pyensae
-                                                                                                                :alt: Build status                                                                                  :alt: Build Status Windows    
-`pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/index.html>`_                                  .. image:: https://travis-ci.org/sdpython/pymmails.svg?branch=master                                .. image:: https://ci.appveyor.com/api/projects/status/isbawgkh38kmw0lw?svg=true
-                                                                                                                :target: https://travis-ci.org/sdpython/pymmails                                                    :target: https://ci.appveyor.com/project/sdpython/pymmails
-                                                                                                                :alt: Build status                                                                                  :alt: Build Status Windows    
-`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_                            .. image:: https://travis-ci.org/sdpython/pymyinstall.svg?branch=master                             
-                                                                                                                :target: https://travis-ci.org/sdpython/pymyinstall                                             
-                                                                                                                :alt: Build status                                                                              
-`pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_                        .. image:: https://travis-ci.org/sdpython/pyquickhelper.svg?branch=master                           .. image:: https://ci.appveyor.com/api/projects/status/54vl69ssd8ud4l64?svg=true
-                                                                                                                :target: https://travis-ci.org/sdpython/pyquickhelper                                               :target: https://ci.appveyor.com/project/sdpython/pyquickhelper
-                                                                                                                :alt: Build status                                                                                  :alt: Build Status Windows    
-`pyrsslocal <http://www.xavierdupre.fr/app/pyrsslocal/helpsphinx/index.html>`_                              .. image:: https://travis-ci.org/sdpython/pyrsslocal.svg?branch=master                              .. image:: https://ci.appveyor.com/api/projects/status/3v5swlh83cp2wdpt?svg=true
-                                                                                                                :target: https://travis-ci.org/sdpython/pyrsslocal                                                  :target: https://ci.appveyor.com/project/sdpython/pyrsslocal
-                                                                                                                :alt: Build status                                                                                  :alt: Build Status Windows    
-`pysqllike <http://www.xavierdupre.fr/app/pysqllike/helpsphinx/index.html>`_                                .. image:: https://travis-ci.org/sdpython/pysqllike.svg?branch=master                               .. image:: https://ci.appveyor.com/api/projects/status/67ljkgh36klak07a?svg=true
-                                                                                                                :target: https://travis-ci.org/sdpython/pysqllike                                                   :target: https://ci.appveyor.com/project/sdpython/pysqllike
-                                                                                                                :alt: Build status                                                                                  :alt: Build Status Windows    
-`python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_    .. image:: https://travis-ci.org/sdpython/python3_module_template.svg?branch=master                 .. image:: https://ci.appveyor.com/api/projects/status/6qp50sxl22aqwtb5?svg=true
-                                                                                                                :target: https://travis-ci.org/sdpython/python3_module_template                                     :target: https://ci.appveyor.com/project/sdpython/python3-module-template
-                                                                                                                :alt: Build status                                                                                  :alt: Build Status Windows    
-=========================================================================================================== =================================================================================================== ===========================================================================================
+.. list-table::
+    :widths: 15 10 10 10 10 10 10
+    :header-rows: 1
 
 
-    
-    
-
-    
-
-    
-    
-
-    
-
-    
-    
-
-    
-
+    * - Module
+      - Travis
+      - AppVeyor
+      - PyPi
+      - Downloads
+      - Issues
+      - Coverage
+    * - `actuariat_python <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/actuariat_python.svg?branch=master                        
+            :target: https://travis-ci.org/sdpython/actuariat_python                                            
+            :alt: Build status                                                                                  
+      - .. image:: https://ci.appveyor.com/api/projects/status/plhkoh1rkw70avwq?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/actuariat-python
+            :alt: Build Status Windows    
+      - .. image:: https://badge.fury.io/py/actuariat_python.svg
+            :target: http://badge.fury.io/py/actuariat_python
+      - .. image:: http://img.shields.io/pypi/dm/actuariat_python.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/actuariat_python  
+      - .. image:: http://img.shields.io/github/issues/sdpython/actuariat_python.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/actuariat_python/issues    
+      - .. image:: https://codecov.io/github/sdpython/actuariat_python/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/actuariat_python?branch=master    
+    * - `code_beatrix <http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/code_beatrix.svg?branch=master                        
+            :target: https://travis-ci.org/sdpython/code_beatrix                                            
+            :alt: Build status                                                                                  
+      - .. image:: https://ci.appveyor.com/api/projects/status/jf1l4choe2ty22jr?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/code-beatrix
+            :alt: Build Status Windows    
+      - .. image:: https://badge.fury.io/py/code_beatrix.svg
+            :target: http://badge.fury.io/py/code_beatrix
+      - .. image:: http://img.shields.io/pypi/dm/code_beatrix.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/code_beatrix  
+      - .. image:: http://img.shields.io/github/issues/sdpython/code_beatrix.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/code_beatrix/issues    
+      - .. image:: https://codecov.io/github/sdpython/code_beatrix/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/code_beatrix?branch=master    
+    * - `ensae_projects <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/ensae_projects.svg?branch=master                        
+            :target: https://travis-ci.org/sdpython/ensae_projects                                            
+            :alt: Build status                                                                                  
+      - .. image:: https://ci.appveyor.com/api/projects/status/66db8wa3a566u6b7?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/ensae-projects
+            :alt: Build Status Windows    
+      - .. image:: https://badge.fury.io/py/ensae_projects.svg
+            :target: http://badge.fury.io/py/ensae_projects
+      - .. image:: http://img.shields.io/pypi/dm/ensae_projects.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/ensae_projects  
+      - .. image:: http://img.shields.io/github/issues/sdpython/ensae_projects.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/ensae_projects/issues    
+      - .. image:: https://codecov.io/github/sdpython/ensae_projects/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/ensae_projects?branch=master    
+    * - `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master                        
+            :target: https://travis-ci.org/sdpython/ensae_teaching_cs                                            
+            :alt: Build status                                                                                  
+      - .. image:: https://ci.appveyor.com/api/projects/status/4chpamq95rh5h245?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/ensae-teaching-cs
+            :alt: Build Status Windows    
+      - .. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
+            :target: http://badge.fury.io/py/ensae_teaching_cs
+      - .. image:: http://img.shields.io/pypi/dm/ensae_teaching_cs.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/ensae_teaching_cs  
+      - .. image:: http://img.shields.io/github/issues/sdpython/ensae_teaching_cs.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/ensae_teaching_cs/issues    
+      - .. image:: https://codecov.io/github/sdpython/ensae_teaching_cs/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/ensae_teaching_cs?branch=master    
+    * - `jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/jupytalk.svg?branch=master                        
+            :target: https://travis-ci.org/sdpython/jupytalk                                            
+            :alt: Build status                                                                                  
+      - .. image:: https://ci.appveyor.com/api/projects/status/by2p84twqmfcdd21?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/jupytalk
+            :alt: Build Status Windows    
+      - .. image:: https://badge.fury.io/py/jupytalk.svg
+            :target: http://badge.fury.io/py/jupytalk
+      - .. image:: http://img.shields.io/pypi/dm/jupytalk.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/jupytalk  
+      - .. image:: http://img.shields.io/github/issues/sdpython/jupytalk.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/jupytalk/issues    
+      - .. image:: https://codecov.io/github/sdpython/jupytalk/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/jupytalk?branch=master    
+    * - `mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/mlstatpy.svg?branch=master                        
+            :target: https://travis-ci.org/sdpython/mlstatpy                                            
+            :alt: Build status                                                                                  
+      - .. image:: https://ci.appveyor.com/api/projects/status/j5poldtnij0a3ac0?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/mlstatpy
+            :alt: Build Status Windows    
+      - .. image:: https://badge.fury.io/py/mlstatpy.svg
+            :target: http://badge.fury.io/py/mlstatpy
+      - .. image:: http://img.shields.io/pypi/dm/mlstatpy.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/mlstatpy  
+      - .. image:: http://img.shields.io/github/issues/sdpython/mlstatpy.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/mlstatpy/issues    
+      - .. image:: https://codecov.io/github/sdpython/mlstatpy/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/mlstatpy?branch=master    
+    * - `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/pyensae.svg?branch=master                        
+            :target: https://travis-ci.org/sdpython/pyensae                                            
+            :alt: Build status                                                                                  
+      - .. image:: https://ci.appveyor.com/api/projects/status/hw3ixda4622h34qb?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/pyensae
+            :alt: Build Status Windows    
+      - .. image:: https://badge.fury.io/py/pyensae.svg
+            :target: http://badge.fury.io/py/pyensae
+      - .. image:: http://img.shields.io/pypi/dm/pyensae.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/pyensae  
+      - .. image:: http://img.shields.io/github/issues/sdpython/pyensae.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/pyensae/issues    
+      - .. image:: https://codecov.io/github/sdpython/pyensae/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/pyensae?branch=master    
+    * - `pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/pymmails.svg?branch=master                        
+            :target: https://travis-ci.org/sdpython/pymmails                                            
+            :alt: Build status                                                                                  
+      - .. image:: https://ci.appveyor.com/api/projects/status/isbawgkh38kmw0lw?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/pymmails
+            :alt: Build Status Windows    
+      - .. image:: https://badge.fury.io/py/pymmails.svg
+            :target: http://badge.fury.io/py/pymmails
+      - .. image:: http://img.shields.io/pypi/dm/pymmails.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/pymmails  
+      - .. image:: http://img.shields.io/github/issues/sdpython/pymmails.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/pymmails/issues    
+      - .. image:: https://codecov.io/github/sdpython/pymmails/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/pymmails?branch=master    
+    * - `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/pymyinstall.svg?branch=master                        
+            :target: https://travis-ci.org/sdpython/pymyinstall                                            
+            :alt: Build status                                                                                  
+      - 
+      - .. image:: https://badge.fury.io/py/pymyinstall.svg
+            :target: http://badge.fury.io/py/pymyinstall
+      - .. image:: http://img.shields.io/pypi/dm/pymyinstall.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/pymyinstall  
+      - .. image:: http://img.shields.io/github/issues/sdpython/pymyinstall.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/pymyinstall/issues    
+      - .. image:: https://codecov.io/github/sdpython/pymyinstall/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/pymyinstall?branch=master    
+    * - `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/pyquickhelper.svg?branch=master                        
+            :target: https://travis-ci.org/sdpython/pyquickhelper                                            
+            :alt: Build status                                                                                  
+      - .. image:: https://ci.appveyor.com/api/projects/status/54vl69ssd8ud4l64?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/pyquickhelper
+            :alt: Build Status Windows    
+      - .. image:: https://badge.fury.io/py/pyquickhelper.svg
+            :target: http://badge.fury.io/py/pyquickhelper
+      - .. image:: http://img.shields.io/pypi/dm/pyquickhelper.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/pyquickhelper  
+      - .. image:: http://img.shields.io/github/issues/sdpython/pyquickhelper.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/pyquickhelper/issues    
+      - .. image:: https://codecov.io/github/sdpython/pyquickhelper/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/pyquickhelper?branch=master    
+    * - `pyrsslocal <http://www.xavierdupre.fr/app/pyrsslocal/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/pyrsslocal.svg?branch=master                        
+            :target: https://travis-ci.org/sdpython/pyrsslocal                                            
+            :alt: Build status                                                                                  
+      - .. image:: https://ci.appveyor.com/api/projects/status/3v5swlh83cp2wdpt?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/pyrsslocal
+            :alt: Build Status Windows    
+      - .. image:: https://badge.fury.io/py/pyrsslocal.svg
+            :target: http://badge.fury.io/py/pyrsslocal
+      - .. image:: http://img.shields.io/pypi/dm/pyrsslocal.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/pyrsslocal  
+      - .. image:: http://img.shields.io/github/issues/sdpython/pyrsslocal.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/pyrsslocal/issues    
+      - .. image:: https://codecov.io/github/sdpython/pyrsslocal/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/pyrsslocal?branch=master    
+    * - `pysqllike <http://www.xavierdupre.fr/app/pysqllike/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/pysqllike.svg?branch=master                        
+            :target: https://travis-ci.org/sdpython/pysqllike                                            
+            :alt: Build status                                                                                  
+      - .. image:: https://ci.appveyor.com/api/projects/status/67ljkgh36klak07a?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/pysqllike
+            :alt: Build Status Windows    
+      - .. image:: https://badge.fury.io/py/pysqllike.svg
+            :target: http://badge.fury.io/py/pysqllike
+      - .. image:: http://img.shields.io/pypi/dm/pysqllike.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/pysqllike  
+      - .. image:: http://img.shields.io/github/issues/sdpython/pysqllike.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/pysqllike/issues    
+      - .. image:: https://codecov.io/github/sdpython/pysqllike/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/pysqllike?branch=master    
+    * - `python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/python3_module_template.svg?branch=master                        
+            :target: https://travis-ci.org/sdpython/python3_module_template                                            
+            :alt: Build status                                                                                  
+      - .. image:: https://ci.appveyor.com/api/projects/status/6qp50sxl22aqwtb5?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/python3-module-template
+            :alt: Build Status Windows    
+      - .. image:: https://badge.fury.io/py/python3_module_template.svg
+            :target: http://badge.fury.io/py/python3_module_template
+      - .. image:: http://img.shields.io/pypi/dm/python3_module_template.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/python3_module_template  
+      - .. image:: http://img.shields.io/github/issues/sdpython/python3_module_template.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/python3_module_template/issues    
+      - .. image:: https://codecov.io/github/sdpython/python3_module_template/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/python3_module_template?branch=master    
