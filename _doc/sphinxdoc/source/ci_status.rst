@@ -7,7 +7,7 @@ Dépendances
 ===========
 
 .. list-table::
-    :widths: 15 10 10 10 10 10 10
+    :widths: 12 10 10 15 10 10 10
     :header-rows: 1
 
 
@@ -30,9 +30,9 @@ Dépendances
       - .. image:: http://img.shields.io/pypi/dm/actuariat_python.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/actuariat_python  
-      - .. image:: http://img.shields.io/github/issues/sdpython/actuariat_python.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/actuariat_python/issues    
+      - .. image:: https://badge.waffle.io/sdpython/actuariat_python.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/actuariat_python 
       - .. image:: https://codecov.io/github/sdpython/actuariat_python/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/actuariat_python?branch=master    
     * - `code_beatrix <http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/index.html>`_
@@ -47,9 +47,9 @@ Dépendances
       - .. image:: http://img.shields.io/pypi/dm/code_beatrix.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/code_beatrix  
-      - .. image:: http://img.shields.io/github/issues/sdpython/code_beatrix.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/code_beatrix/issues    
+      - .. image:: https://badge.waffle.io/sdpython/code_beatrix.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/code_beatrix    
       - .. image:: https://codecov.io/github/sdpython/code_beatrix/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/code_beatrix?branch=master    
     * - `ensae_projects <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_
@@ -61,12 +61,10 @@ Dépendances
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/ensae_projects.svg
             :target: http://badge.fury.io/py/ensae_projects
-      - .. image:: http://img.shields.io/pypi/dm/ensae_projects.png
-            :alt: PYPI Package
-            :target: https://pypi.python.org/pypi/ensae_projects  
-      - .. image:: http://img.shields.io/github/issues/sdpython/ensae_projects.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/ensae_projects/issues    
+      - 
+      - .. image:: https://badge.waffle.io/sdpython/ensae_projects.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/ensae_projects    
       - .. image:: https://codecov.io/github/sdpython/ensae_projects/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/ensae_projects?branch=master    
     * - `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_
@@ -81,9 +79,9 @@ Dépendances
       - .. image:: http://img.shields.io/pypi/dm/ensae_teaching_cs.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/ensae_teaching_cs  
-      - .. image:: http://img.shields.io/github/issues/sdpython/ensae_teaching_cs.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/ensae_teaching_cs/issues    
+      - .. image:: https://badge.waffle.io/sdpython/ensae_teaching_cs.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/ensae_teaching_cs    
       - .. image:: https://codecov.io/github/sdpython/ensae_teaching_cs/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/ensae_teaching_cs?branch=master    
     * - `jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
@@ -95,12 +93,10 @@ Dépendances
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/jupytalk.svg
             :target: http://badge.fury.io/py/jupytalk
-      - .. image:: http://img.shields.io/pypi/dm/jupytalk.png
-            :alt: PYPI Package
-            :target: https://pypi.python.org/pypi/jupytalk  
-      - .. image:: http://img.shields.io/github/issues/sdpython/jupytalk.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/jupytalk/issues    
+      - 
+      - .. image:: https://badge.waffle.io/sdpython/jupytalk.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/jupytalk    
       - .. image:: https://codecov.io/github/sdpython/jupytalk/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/jupytalk?branch=master    
     * - `mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
@@ -112,12 +108,10 @@ Dépendances
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/mlstatpy.svg
             :target: http://badge.fury.io/py/mlstatpy
-      - .. image:: http://img.shields.io/pypi/dm/mlstatpy.png
-            :alt: PYPI Package
-            :target: https://pypi.python.org/pypi/mlstatpy  
-      - .. image:: http://img.shields.io/github/issues/sdpython/mlstatpy.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/mlstatpy/issues    
+      - 
+      - .. image:: https://badge.waffle.io/sdpython/mlstatpy.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/mlstatpy    
       - .. image:: https://codecov.io/github/sdpython/mlstatpy/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/mlstatpy?branch=master    
     * - `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
@@ -132,9 +126,9 @@ Dépendances
       - .. image:: http://img.shields.io/pypi/dm/pyensae.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pyensae  
-      - .. image:: http://img.shields.io/github/issues/sdpython/pyensae.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/pyensae/issues    
+      - .. image:: https://badge.waffle.io/sdpython/pyensae.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/pyensae    
       - .. image:: https://codecov.io/github/sdpython/pyensae/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/pyensae?branch=master    
     * - `pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/index.html>`_
@@ -149,9 +143,9 @@ Dépendances
       - .. image:: http://img.shields.io/pypi/dm/pymmails.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pymmails  
-      - .. image:: http://img.shields.io/github/issues/sdpython/pymmails.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/pymmails/issues    
+      - .. image:: https://badge.waffle.io/sdpython/pymmails.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/pymmails      
       - .. image:: https://codecov.io/github/sdpython/pymmails/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/pymmails?branch=master    
     * - `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
@@ -164,9 +158,9 @@ Dépendances
       - .. image:: http://img.shields.io/pypi/dm/pymyinstall.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pymyinstall  
-      - .. image:: http://img.shields.io/github/issues/sdpython/pymyinstall.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/pymyinstall/issues    
+      - .. image:: https://badge.waffle.io/sdpython/pymyinstall.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/pymyinstall      
       - .. image:: https://codecov.io/github/sdpython/pymyinstall/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/pymyinstall?branch=master    
     * - `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
@@ -181,9 +175,9 @@ Dépendances
       - .. image:: http://img.shields.io/pypi/dm/pyquickhelper.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pyquickhelper  
-      - .. image:: http://img.shields.io/github/issues/sdpython/pyquickhelper.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/pyquickhelper/issues    
+      - .. image:: https://badge.waffle.io/sdpython/pyquickhelper.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/pyquickhelper
       - .. image:: https://codecov.io/github/sdpython/pyquickhelper/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/pyquickhelper?branch=master    
     * - `pyrsslocal <http://www.xavierdupre.fr/app/pyrsslocal/helpsphinx/index.html>`_
@@ -198,9 +192,9 @@ Dépendances
       - .. image:: http://img.shields.io/pypi/dm/pyrsslocal.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pyrsslocal  
-      - .. image:: http://img.shields.io/github/issues/sdpython/pyrsslocal.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/pyrsslocal/issues    
+      - .. image:: https://badge.waffle.io/sdpython/pyrsslocal.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/pyrsslocal      
       - .. image:: https://codecov.io/github/sdpython/pyrsslocal/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/pyrsslocal?branch=master    
     * - `pysqllike <http://www.xavierdupre.fr/app/pysqllike/helpsphinx/index.html>`_
@@ -215,9 +209,9 @@ Dépendances
       - .. image:: http://img.shields.io/pypi/dm/pysqllike.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pysqllike  
-      - .. image:: http://img.shields.io/github/issues/sdpython/pysqllike.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/pysqllike/issues    
+      - .. image:: https://badge.waffle.io/sdpython/pysqllike.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/pysqllike      
       - .. image:: https://codecov.io/github/sdpython/pysqllike/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/pysqllike?branch=master    
     * - `python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
@@ -227,13 +221,10 @@ Dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/6qp50sxl22aqwtb5?svg=true
             :target: https://ci.appveyor.com/project/sdpython/python3-module-template
             :alt: Build Status Windows    
-      - .. image:: https://badge.fury.io/py/python3_module_template.svg
-            :target: http://badge.fury.io/py/python3_module_template
-      - .. image:: http://img.shields.io/pypi/dm/python3_module_template.png
-            :alt: PYPI Package
-            :target: https://pypi.python.org/pypi/python3_module_template  
-      - .. image:: http://img.shields.io/github/issues/sdpython/python3_module_template.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/python3_module_template/issues    
+      - 
+      - 
+      - .. image:: https://badge.waffle.io/sdpython/python3_module_template.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/python3_module_template    
       - .. image:: https://codecov.io/github/sdpython/python3_module_template/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/python3_module_template?branch=master    
