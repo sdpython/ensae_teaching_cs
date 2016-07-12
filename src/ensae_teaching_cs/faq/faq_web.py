@@ -61,18 +61,7 @@ def webshot(img, url, navigator="firefox", add_date=False,
 
     res = []
     if module == "selenium":
-        from selenium import webdriver
-
-        if navigator == "firefox":
-            browser = webdriver.Firefox()
-        elif navigator == "chrome":
-            browser = webdriver.Chrome()
-        elif navigator == "ie":
-            browser = webdriver.Ie()
-        elif navigator == "edge":
-            browser = webdriver.Edge()
-        else:
-            raise Exception("unable to interpret the navigator")
+        browser = _get_selenium_browser(navigator)
 
         if size is not None:
             browser.set_window_size(size[0], size[1])
@@ -123,6 +112,26 @@ def webshot(img, url, navigator="firefox", add_date=False,
     return res
 
 
+def _get_selenium_browser(navigator):
+    from selenium import webdriver
+    from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+
+    if navigator == "firefox":
+        firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
+        firefox_capabilities['marionette'] = True
+        browser = webdriver.Firefox(capabilities=firefox_capabilities,
+                                    firefox_binary=r"C:\Program Files (x86)\Mozilla Firefox\firefox.exe")
+    elif navigator == "chrome":
+        browser = webdriver.Chrome()
+    elif navigator == "ie":
+        browser = webdriver.Ie()
+    elif navigator == "edge":
+        browser = webdriver.Edge()
+    else:
+        raise Exception("unable to interpret the navigator")
+    return browser
+
+
 def webhtml(url, navigator="firefox", module="selenium"):
     """
     Uses the modules `selenium <http://selenium-python.readthedocs.io/>`_ to retrieve the html of a website
@@ -147,19 +156,7 @@ def webhtml(url, navigator="firefox", module="selenium"):
 
     res = []
     if module == "selenium":
-        from selenium import webdriver
-
-        if navigator == "firefox":
-            browser = webdriver.Firefox()
-        elif navigator == "chrome":
-            browser = webdriver.Chrome()
-        elif navigator == "ie":
-            browser = webdriver.Ie()
-        elif navigator == "edge":
-            browser = webdriver.Edge()
-        else:
-            raise Exception("unable to interpret the navigator")
-
+        browser = _get_selenium_browser(navigator)
         if not isinstance(url, list):
             url = [url]
         for u in url:

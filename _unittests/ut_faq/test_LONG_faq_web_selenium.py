@@ -59,7 +59,7 @@ from src.ensae_teaching_cs.faq.faq_web import webshot, webhtml
 
 class TestLONGFaqWeb(unittest.TestCase):
 
-    def test_selenium_html(self):
+    def _test_selenium_html(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -75,7 +75,7 @@ class TestLONGFaqWeb(unittest.TestCase):
         if "href" not in html[0][1]:
             raise Exception(html)
 
-        html = webhtml(url, module='splinter')
+        html = webhtml(url) #module='splinter')
         assert len(html) > 0
         self.assertEqual(len(html[0]), 2)
         if "href" not in html[0][1]:

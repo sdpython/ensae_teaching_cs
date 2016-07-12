@@ -91,7 +91,7 @@ imgmath_latex_preamble += """\n\\newcommand{\\girafedec}[3]{ \\begin{array}{cccc
             \\newcommand{\\trace}[1]{tr\\pa{#1}}
             \\newcommand{\\abs}[1]{\\left|#1\\right|}
             """
-            #\\usepackage{eepic}
+#\\usepackage{eepic}
 
 project_var_name_t = "ENSAE<br />Xavier Dupré"
 project_var_name = "ensae_teaching_cs"
