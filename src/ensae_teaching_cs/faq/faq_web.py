@@ -7,29 +7,10 @@
 import sys
 import os
 import datetime
-from pyensae.datasource import download_data
+from pymyinstall.installcustom import where_in_path, install_chromedriver
 
 
-def download_chromedriver(dest, version="2.22", url="http://chromedriver.storage.googleapis.com/"):
-    """
-    download chrome driver and unzip it in folder *dest*.
-
-    @param      dest        folder where chromedriver will be downloaded.
-    @param      version     version
-    @param      url         location of chrome driver
-    @return                 list of flies
-    """
-    url = "{0}{1}/".format(url, version)
-    if sys.platform.startswith("win"):
-        name = "chromedriver_win32.zip"
-    else:
-        name = "chromedriver_linux32.zip"
-    # else:
-    #       name = "chromedriver_mac32.zip"
-    return download_data(name, url=url, whereTo=dest)
-
-
-def webshot(img, url, navigator="firefox", add_date=False,
+def webshot(img, url, navigator="chrome", add_date=False,
             module="selenium", size=None):
     """
     Uses the modules `selenium <http://selenium-python.readthedocs.io/>`_ to take a picture of a website
@@ -113,15 +94,39 @@ def webshot(img, url, navigator="firefox", add_date=False,
 
 
 def _get_selenium_browser(navigator):
+    """
+    Returns the associated driver with some custom settings.
+
+    The function automatically gets chromedriver if not present (Windows only).
+
+    @FAQ(Issue with Selenium and Firefox)
+
+    Firefox >= v47 does not work on Windows.
+    See `Selenium WebDriver and Firefox 47 <http://www.theautomatedtester.co.uk/blog/2016/selenium-webdriver-and-firefox-47.html>`_.
+
+    @endFAQ
+
+    @FAQ(Issue with Selenium and Chrome)
+
+    http://chromedriver.storage.googleapis.com/index.html
+    http://stackoverflow.com/questions/29858752/error-message-chromedriver-executable-needs-to-be-available-in-the-path
+
+    @endFAQ
+    """
     from selenium import webdriver
     from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
     if navigator == "firefox":
         firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
         firefox_capabilities['marionette'] = True
-        browser = webdriver.Firefox(capabilities=firefox_capabilities,
-                                    firefox_binary=r"C:\Program Files (x86)\Mozilla Firefox\firefox.exe")
+        firefox_capabilities[
+            'binary'] = r"C:\Program Files (x86)\Mozilla Firefox\firefox.exe"
+        browser = webdriver.Firefox(capabilities=firefox_capabilities)
     elif navigator == "chrome":
+        if sys.platform.startswith("win"):
+            chromed = where_in_path("chromedriver.exe")
+            if chromed is None:
+                install_chromedriver()
         browser = webdriver.Chrome()
     elif navigator == "ie":
         browser = webdriver.Ie()
@@ -132,7 +137,7 @@ def _get_selenium_browser(navigator):
     return browser
 
 
-def webhtml(url, navigator="firefox", module="selenium"):
+def webhtml(url, navigator="chrome", module="selenium"):
     """
     Uses the modules `selenium <http://selenium-python.readthedocs.io/>`_ to retrieve the html of a website
     (or the module `splinter <http://splinter.readthedocs.io/en/latest/>`_ - does not work with IE).

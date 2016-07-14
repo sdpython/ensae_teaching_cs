@@ -52,6 +52,23 @@ except ImportError:
         sys.path.append(path)
     import pyensae as skip__
 
+try:
+    import pymyinstall as skip____
+except ImportError:
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..",
+                "..",
+                "pymyinstall",
+                "src")))
+    if path not in sys.path:
+        sys.path.append(path)
+    import pymyinstall as skip____
+
+
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from src.ensae_teaching_cs.faq.faq_web import webshot, webhtml
@@ -59,7 +76,7 @@ from src.ensae_teaching_cs.faq.faq_web import webshot, webhtml
 
 class TestLONGFaqWeb(unittest.TestCase):
 
-    def _test_selenium_html(self):
+    def test_selenium_html(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -69,13 +86,14 @@ class TestLONGFaqWeb(unittest.TestCase):
             return
 
         url = "http://www.xavierdupre.fr"
-        html = webhtml(url)
+        navigator = "chrome"
+        html = webhtml(url, navigator=navigator)
         assert len(html) > 0
         self.assertEqual(len(html[0]), 2)
         if "href" not in html[0][1]:
             raise Exception(html)
 
-        html = webhtml(url) #module='splinter')
+        html = webhtml(url, navigator=navigator)  # module='splinter')
         assert len(html) > 0
         self.assertEqual(len(html[0]), 2)
         if "href" not in html[0][1]:
@@ -93,16 +111,17 @@ class TestLONGFaqWeb(unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_selenium_image")
         img = os.path.join(temp, "image_selenium.png")
         url = "http://www.xavierdupre.fr/"
+        navigator = "chrome"
         # download_chromedriver(dest=temp)
         # os.environ["PATH"] += ";" + temp
-        res = webshot(img, url, navigator="firefox")
+        res = webshot(img, url, navigator=navigator)
         assert os.path.exists(img)
         fLOG(res)
         self.assertEqual(len(res), 1)
         self.assertEqual(len(res[0]), 2)
 
         img = os.path.join(temp, "image_splinter.png")
-        res = webshot(img, url, module='splinter')
+        res = webshot(img, url, module='splinter', navigator=navigator)
         img = res[0][1]
         assert os.path.exists(img)
         fLOG(res)
