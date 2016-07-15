@@ -1,6 +1,6 @@
 #coding:latin-1
 import sys
-sys.path.append(r"C:\xadupre\__home_\_data\program\python\pyensae\src")
+sys.path.append(r"pyensae\src")
 
 import numpy, datetime
 from matplotlib.mlab import csv2rec
@@ -10,7 +10,7 @@ from matplotlib.ticker import Formatter
 
 
 import sys, datetime
-sys.path.append(r"D:\Dupre\_data\program\python\pyensae\src")
+sys.path.append(r"python\pyensae\src")
 import pyensae
 file = pyensae.download_data("velib_vanves.zip", website = "xd")
 file = file[0]
@@ -32,7 +32,7 @@ print ("max_place", df["available_bike_stands"].max())
 
 #print(df.describe())
 
-print ("pas de vélo", len(df [ df["available_bikes"]==0 ]) / len(df) )
+print ("pas de vï¿½lo", len(df [ df["available_bikes"]==0 ]) / len(df) )
 print ("pas de place", len(df [ df["available_bike_stands"]==0 ]) / len(df) )
 
 add = df["available_bikes"] + df["available_bike_stands"]
@@ -65,7 +65,7 @@ thispiv = piv
 
 ################# exercice 1 (ou part de df2)
 
-# on somme la série complète 12 fois mais décalé à chaque fois
+# on somme la sï¿½rie complï¿½te 12 fois mais dï¿½calï¿½ ï¿½ chaque fois
 nbperiod = 12
 mat = numpy.matrix ( [0.0] * (len( df2 ) - nbperiod+1) ).transpose()
 for i in range(0,nbperiod) :
@@ -74,11 +74,11 @@ for i in range(0,nbperiod) :
     mat += m
 mat /= 1.0 * nbperiod
 
-# on élimine les premières et dernières valeurs
+# on ï¿½limine les premiï¿½res et derniï¿½res valeurs
 df2 = df2[nbperiod/2:-nbperiod/2+1]
 df2["lisse"] = mat
 
-# on répète la même manipulation pour superposer les semaines
+# on rï¿½pï¿½te la mï¿½me manipulation pour superposer les semaines
 sp = "lisse weekday weekno".split()
 sem = df2.ix[:,sp]
 piv = sem.pivot ('weekday', "weekno", "lisse")
