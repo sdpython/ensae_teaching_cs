@@ -108,7 +108,9 @@ Dépendances
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/mlstatpy.svg
             :target: http://badge.fury.io/py/mlstatpy
-      - 
+      - .. image:: http://img.shields.io/pypi/dm/mlstatpy.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/mlstatpy  
       - .. image:: https://badge.waffle.io/sdpython/mlstatpy.png?label=ready&title=Ready
             :alt: Waffle
             :target: https://waffle.io/sdpython/mlstatpy    
