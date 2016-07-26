@@ -17,7 +17,7 @@ readme = 'README.rst'
 KEYWORDS = project_var_name + ', ENSAE, sqllite, database, teachings'
 DESCRIPTION = """Module which contains materials for teaching puroposes, also includes pythonnet."""
 CLASSIFIERS = [
-    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: %d' % sys.version_info[0],
     'Intended Audience :: Developers',
     'Topic :: Scientific/Engineering',
     'Topic :: Education',
@@ -74,17 +74,18 @@ def is_local():
        "unittests" in sys.argv or \
        "unittests_LONG" in sys.argv or \
        "unittests_SKIP" in sys.argv or \
+       "unittests_GUI" in sys.argv or \
        "run27" in sys.argv or \
        "sdist" in sys.argv or \
        "setupdep" in sys.argv or \
        "test_local_pypi" in sys.argv or \
        "upload_docs" in sys.argv or \
-       "write_version" in sys.argv or \
        "setup_hook" in sys.argv or \
        "build_sphinx_one" in sys.argv or \
        "build_sphinx_catch" in sys.argv or \
        "unittests_all" in sys.argv or \
        "copy_sphinx" in sys.argv or \
+       "write_version" in sys.argv:
        "build_pres" in sys.argv or \
        "build_pres_2A" in sys.argv or \
        "build_pres_3A" in sys.argv or \
@@ -108,7 +109,8 @@ def import_pyquickhelper():
                     os.path.join(
                         os.path.dirname(__file__),
                         "..",
-                        "pyquickhelper",
+                        "pyquickhelper" if sys.version_info[
+                            0] >= 3 else "py27_pyquickhelper_27",
                         "src"))))
         try:
             import pyquickhelper
@@ -133,18 +135,21 @@ def verbose():
 # version
 ##########
 
-if is_local():
+if is_local() and "--help" not in sys.argv and "--help-commands" not in sys.argv:
     def write_version():
         pyquickhelper = import_pyquickhelper()
         from pyquickhelper.pycode import write_version_for_setup
         return write_version_for_setup(__file__)
 
-    write_version()
+    if sys.version_info[0] != 2:
+        write_version()
 
     if os.path.exists("version.txt"):
         with open("version.txt", "r") as f:
             lines = f.readlines()
         subversion = "." + lines[0].strip("\r\n ")
+        if subversion == ".0":
+            raise Exception("subversion is wrong: " + subversion)
     else:
         raise FileNotFoundError("version.txt")
 else:
@@ -156,6 +161,8 @@ else:
 ##############
 
 if os.path.exists(readme):
+    if sys.version_info[0] == 2:
+        from codecs import open
     with open(readme, "r", encoding='utf-8-sig') as f:
         long_description = f.read()
 else:
@@ -170,9 +177,9 @@ if is_local() and "build_sphinx" not in sys.argv and \
         # "unittests_LONG" not in sys.argv and \
         # "unittests_SKIP" not in sys.argv and \
     pyquickhelper = import_pyquickhelper()
-    from pyquickhelper.loghelper import fLOG as logging_function
-    logging_function(OutputPrint=True)
+    logging_function = pyquickhelper.get_fLOG()
     from pyquickhelper.pycode import process_standard_options_for_setup
+    logging_function(OutputPrint=True)
     r = process_standard_options_for_setup(
         sys.argv, __file__, project_var_name,
         unittest_modules=["pyquickhelper"],
@@ -274,6 +281,10 @@ else:
     r = False
 
 if not r:
+    if len(sys.argv) in (1, 2) and sys.argv[-1] in ("--help-commands",):
+        pyquickhelper = import_pyquickhelper()
+        from pyquickhelper.pycode import process_standard_options_for_setup_help
+        process_standard_options_for_setup_help(sys.argv)
 
     if "build_sphinx_one" in sys.argv:
         pyquickhelper = import_pyquickhelper()
