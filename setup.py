@@ -425,12 +425,12 @@ if not r:
         from pyquickhelper.pycode import main_wrapper_tests
         from pyquickhelper.pycode.utils_tests import default_skip_function
 
-        def skip_function(name, code):
+        def skip_function(name, code, duration):
             if "notebook test" in code:
                 return True
             if "test notebook" in code:
                 return True
-            return default_skip_function(name, code)
+            return default_skip_function(name, code, duration)
 
         main_wrapper_tests(
             run_unit,
@@ -453,15 +453,15 @@ if not r:
         from pyquickhelper.pycode import main_wrapper_tests
         from pyquickhelper.pycode.utils_tests import default_skip_function
 
-        def skip_function(name, code):
+        def skip_function(name, code, duration):
             if "notebook test" in code:
                 return True
             if "test notebook" in code:
                 return True
             return False
 
-        def not_skip_function(name, code):
-            return not skip_function(name, code)
+        def not_skip_function(name, code, duration):
+            return not skip_function(name, code, duration)
 
         main_wrapper_tests(
             run_unit,
