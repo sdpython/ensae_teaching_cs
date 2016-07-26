@@ -85,7 +85,7 @@ def is_local():
        "build_sphinx_catch" in sys.argv or \
        "unittests_all" in sys.argv or \
        "copy_sphinx" in sys.argv or \
-       "write_version" in sys.argv:
+       "write_version" in sys.argv or \
        "build_pres" in sys.argv or \
        "build_pres_2A" in sys.argv or \
        "build_pres_3A" in sys.argv or \
