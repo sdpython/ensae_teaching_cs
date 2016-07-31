@@ -90,7 +90,7 @@ custom_preamble = """\n\\newcommand{\\girafedec}[3]{ \\begin{array}{ccccc} #1 &=
 \\newcommand{\\loimultinomiale}[1]{{\\cal M}\\pa{#1}}
 \\newcommand{\\trace}[1]{tr\\pa{#1}}
 \\newcommand{\\abs}[1]{\\left|#1\\right|}
-"""        
+"""
 #\\usepackage{eepic}
 imgmath_latex_preamble += custom_preamble
 latex_elements['preamble'] += custom_preamble
