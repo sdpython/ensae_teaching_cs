@@ -6,6 +6,9 @@
 Dépendances
 ===========
 
+Tableau de bord
++++++++++++++++
+
 .. list-table::
     :widths: 12 10 10 15 10 10 10
     :header-rows: 1
@@ -230,3 +233,72 @@ Dépendances
             :target: https://waffle.io/sdpython/python3_module_template    
       - .. image:: https://codecov.io/github/sdpython/python3_module_template/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/python3_module_template?branch=master    
+
+Automatisation
+++++++++++++++
+
+`pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
+
+Génère la documentation associé à ce site, surcouche sur `sphinx <http://www.sphinx-doc.org/en/stable/>`_.
+Le module propose également différentes fonctions pour synchroniser des répertoires,
+exécuter les tests unitaires ou 
+uploader des fichiers en FTP (publication de ce site), quelques outils 
+pour `Jupyter <http://jupyter.org/>`_ ou `Jenkins <https://jenkins.io/>`_.
+
+`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
+
+Le module sert avant tout à installer plusieurs centaines de modules avec peu d'instructions,
+quelques outils comme `Scite <http://www.scintilla.org/SciTE.html>`_ ou 
+`Graphviz <http://www.graphviz.org/>`_.
+Il sert aussi à fabriquer un setup.
+
+`pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/index.html>`_
+
+J'ai reçu plus de 120 projets par mail durant l'année 2015-2016 pour plus de 220 élèves.
+Je ne plus plus grand chose manuellement. Ce module s'occupe de télécharger tous les projets
+depuis une boîte mail ou d'envoyer des séries de mails de façon automatiser.
+
+Outils
+++++++
+
+`python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
+
+Modèle de module Python utilisé pour ce cours. C'est un module vide facile à adapter.
+
+`pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
+
+Fonctionnalité uilisé pour un ENSAE ou plus généralement pour un datascientist,
+récupération de données, commandes magiques, échanges avec un cluster HADOOP
+depuis un notebook, quelques graphes.
+
+`pyrsslocal <http://www.xavierdupre.fr/app/pyrsslocal/helpsphinx/index.html>`_
+
+Récupération de flux RSS.
+
+Contenu
++++++++
+
+
+`jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
+
+Présentations sous formes de notebooks données lors de conférences ou de cours.
+
+`mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
+
+Contenu plus théorique associé à la datascience.
+
+`ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_
+
+Contenu des enseignements donnés à l'ENSAE.
+Le module inclut également des fonctions d'automatisation et des morceaux de codes
+illustrant des exercices (voir :ref:`modindex`).
+
+`actuariat_python <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_
+
+Contenu des enseignemetns donnés à l'Institut des Actuaires.
+
+`code_beatrix <http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/index.html>`_
+
+Contenu des jeux et exercices pour les enfants.
+
+
