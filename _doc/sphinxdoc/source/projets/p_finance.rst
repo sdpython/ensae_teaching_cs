@@ -72,8 +72,9 @@ Optimisation de portefeuille
 
 Optimiser un portefeuille d'action consiste à construire une moyenne pondéré d'action 
 qui soit optimise le rendement à risque bornée soit minimise le risque à 
-rendement borné également. La présentation suivante 
-`Gestion de Portefeuille.pdf <http://www.xavierdupre.fr/enseignement/projet_data/Gestion%20de%20Portefeuille.pdf>`_
+rendement borné également. La page 
+:ref:`finance_strategie_automatique`
+(`ancienne version pdf <http://www.xavierdupre.fr/enseignement/projet_data/Gestion%20de%20Portefeuille.pdf>`_)
 explique 
 cela de façon sommaire. Le premier à avoir formalisé ce domaine est 
 `Harry Markowitz <http://en.wikipedia.org/wiki/Harry_Markowitz>`_ 
@@ -86,10 +87,10 @@ le `Lagrangien augmenté <http://en.wikipedia.org/wiki/Augmented_Lagrangian_meth
 L'objectif est ici de choisir une façon de construire un portefeuille, 
 de l'optimiser sur la période d'apprentissage et de la tester sur la période de test. 
 Il est fortement recommandé de relire le TD qui concerne l'optimisation sous contraine.
-
 Quelques liens :
 
 * `Currency Portfolio Optimization Using ScienceOps <http://blog.yhathq.com/posts/currency-portfolio-optimization-using-scienceops.html>`_
+* :ref:`finance_strategie_automatique`
 
 .. _l-fi-pair:
 

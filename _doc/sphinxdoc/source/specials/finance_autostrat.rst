@@ -1332,7 +1332,7 @@ chaque expérience. Ceci aboutit aux graphes de la figure suivante.
     | :math:`\alpha`                    | :math:`\beta`                     | :math:`d`                         |
     +-----------------------------------+-----------------------------------+-----------------------------------+
 
-    Variations selon les trois paramètres :math:`\alpha`, :mah:`\beta`, :math:`d`. 
+    Variations selon les trois paramètres :math:`\alpha`, :math:`\beta`, :math:`d`. 
     Le pic obtenu pour la valeur :math:`\alpha\sim 1.2` est très localisé
     autour de cette valeur, il faut s'attendre à ce que la stratégie obtienne des résultats très différents
     sur des séries similaires. La courbe pour $\beta$ est stable, on choisira une valeur dans cette zone.
