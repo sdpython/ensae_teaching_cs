@@ -17,6 +17,7 @@ des résultats sur l'ensemble d'une population. Le projet doit comporter les él
 Et encore : 
 
 * `Pourrait-on programmer une fourmilière ? <http://rue89.nouvelobs.com/2014/12/31/pourrait-programmer-fourmiliere-256679>`_
+* `Economics Simulation <http://nbviewer.jupyter.org/url/norvig.com/ipython/Economics.ipynb>`_ *(2016/08)*
 
 .. _l-sim-segre:
 

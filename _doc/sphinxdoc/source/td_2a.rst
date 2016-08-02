@@ -315,6 +315,9 @@ Bibliographie
 * `Critical Mass: How One Thing Leads to Another <http://www.philipball.co.uk/index.php?option=com_content&view=article&id=15:critical-mass-how-one-thing-leads-to-another&catid=3:books&Itemid=4>`_, Philip Ball
 * `Bugra Akyildiz <http://bugra.github.io/>`_
 * `Deep Learning <http://www-labs.iro.umontreal.ca/~bengioy/dlbook/>`_, Yoshua Bengio, Ian Goodfellow and Aaron Courville
+* `Artificial Intelligence: A Modern Approach <http://aima.cs.berkeley.edu/>`_, Stuart Russell, Peter Norvig *(2016/08)*
+* `Speech and Language Processing <http://www.cs.colorado.edu/~martin/slp.html>`_,  Daniel Jurafsky and James H. Martin *(2016/08)*,
+  see also `Draft chapters in progress <https://web.stanford.edu/~jurafsky/slp3/>`_
 
 
 **Livres sur les algorithmes**

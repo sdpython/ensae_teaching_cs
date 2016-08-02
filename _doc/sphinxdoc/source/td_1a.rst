@@ -321,19 +321,18 @@ Bibliographie
 * `Le Python en prépas <http://web.isen-bretagne.fr/livres/python/>`_ (2016/04)
 * `Algorithmique et programmation en CPGE <http://python-liesse.enseeiht.fr/cours/index.html>`_ *(2016/04)*
 
-**Exercices**
+**Exercices et jeux**
 
-*  `Quelques exercices du Project Euler <http://mathprepa.fr/python-project-euler-mpsi/>`_ *(2016/04)*
+* `codingame <http://www.codingame.com/>`_
+* `Quelques exercices du Project Euler <http://mathprepa.fr/python-project-euler-mpsi/>`_ *(2016/04)*
+* `Countdown to 2016 <http://nbviewer.jupyter.org/url/norvig.com/ipython/Countdown.ipynb>`_ *(2016/08)*
+* `The Convex Hull Problem <http://nbviewer.jupyter.org/url/norvig.com/ipython/Convex%20Hull.ipynb>`_ *(2016/08)*
 
 **MOOC**
 
 * `Code Academy Python <http://www.codecademy.com/tracks/python>`_ (utilise Python 2.7)
 * `Un premier Mooc Inria sur Python <https://www.france-universite-numerique-mooc.fr/courses/inria/41001/Trimestre_4_2014/about>`_
 * `pyvideo.org <http://pyvideo.org/>`_
-
-**Jeux**
-
-* `codingame <http://www.codingame.com/>`_
 
 **Outils**
 
