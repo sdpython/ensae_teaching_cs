@@ -13,7 +13,7 @@ Modules, Bibliographie, Articles...
 
     biblio
     ressources
-    FAQ
+    i_FAQ
     questions/questions
     debutermlprojet
 

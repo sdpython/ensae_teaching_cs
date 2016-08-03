@@ -3,8 +3,8 @@
 .. _l-siteflask:
 
 
-Site Web avec Flask
-===================
+Site Web
+========
 
 En entreprise, on a parfois besoin d'exposer de partager des données d'une machine 
 à une autre, d'exécution des scripts sur une machine distante sans avoir
@@ -91,7 +91,6 @@ Pour un plus petit site, il existe le module
 `bottle <http://bottlepy.org/docs/dev/index.html>`_
 mais celui ne permet d'écrire simplement 
 des tests unitaires.
-
 Pour des sites plus conséquents, la référnce est
 `django <https://www.djangoproject.com/>`_.
 
@@ -99,7 +98,6 @@ Pour des sites plus conséquents, la référnce est
 permet d'écrire simplement des sites qu'on programme
 par événements. Cela permet de ne pas laisser le serveur bloqué
 pendant qu'il effectue un traitement.
-
 Enfin, `brython <http://www.brython.info/>`_ permet de remplacer le javascript par python.
 Plus simple à coder lorsqu'on ne connaît pas javascript mais cela
 revient à se priver de tout un tas d'outils écrit dans ce langage :
@@ -108,4 +106,18 @@ revient à se priver de tout un tas d'outils écrit dans ce langage :
 `node.js <http://nodejs.org/>`_,
 `meteor <https://www.meteor.com/>`_ ...
 
+Une dizaine de modules Python permettant de créer un site web
+sont comparées par
+`Python's Web Framework Benchmarks <http://klen.github.io/py-frameworks-bench/>`_.
+`django <https://www.djangoproject.com/>`_ est le choix le plus connu
+pour un site web professionnel écrit en Python.
+`Flask <http://flask.pocoo.org/>`_ est la référence pour un site minimaliste
+ou `micro-frameworks <https://wiki.python.org/moin/WebFrameworks>`_ mais
+il ne gère pas très bien la désynchronisation et une seule requête peut être
+géré en même temps.
+Le projet `falcon <https://falconframework.org/>`_ est plus rapide.
+
+* `Django vs Flask vs Pyramid: Choosing a Python Web Framework <https://www.airpair.com/python/posts/django-flask-pyramid>`_
+* `What are the best Python microframeworks? <https://www.slant.co/topics/532/~python-microframeworks>`_
+* `13 Best Python Framework For Python Geeks <http://www.techaltair.com/best-python-framework-python-geeks/>`_
 

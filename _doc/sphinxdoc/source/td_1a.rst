@@ -113,7 +113,20 @@ tests unitaires, le templating, les sites Web, le scraping, encoding, les notebo
     specials/siteflask
     specials/unittest_coverage_git_profling
     notebooks/notebook_convert
-    notebooks/jupyter_custom_magics    
+    notebooks/jupyter_custom_magics
+
+Deux exercices sont suggérés pour une séance de deux heures à choisir parmi :
+
+#. Constuire un site web avec `Flask <http://flask.pocoo.org/>`_, 
+   `Django <https://www.djangoproject.com/>`_ ou 
+   `Falcon <https://falconframework.org/>`_
+#. Ecrire un test unitaire pour un exercice d'une séance précédente
+#. Appliquer une des méthodes décrites dans `Profiling <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/completion_profiling.html#completionprofilingrst>`_
+   à un exercice d'une séance précédente
+#. Constuire la documentation d'un module avec `Sphinx <http://www.sphinx-doc.org/en/stable/>`_
+#. Implémenter une nouvelle commande magique sur Jupyter
+#. Concevoir une campagne publicataire avec `Mako <http://www.makotemplates.org/>`_
+   ou `Jinja2 <http://jinja.pocoo.org/docs/dev/>`_
 
 .. todoext::
     :title: Ajouter un exercice sur le templating (jinja2, mako)

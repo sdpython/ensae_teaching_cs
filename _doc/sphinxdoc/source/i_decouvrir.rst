@@ -8,18 +8,21 @@
 Découvrir
 =========
 
+Culture algorithmique
+=====================
+
 Programmation récréative, algorithmes, bouts de code, chaque exemple
 est indépendante des autres et propose un problème ou un jeu 
 qu'on peut résoudre grâce à un algorithme et un peu d'imagination.
-
-
-**Culture**
 
 .. toctree::
     :maxdepth: 1
     
     specials/algorithm_culture
     
+Algorithmes illustrés
+=====================
+
 **Finance**
 
 .. toctree::
@@ -93,8 +96,8 @@ qu'on peut résoudre grâce à un algorithme et un peu d'imagination.
 
 
 
-Machine learning
-================
+Machine learning illustré
+=========================
 
 
 **Ca tient presque dans un notebook**
@@ -118,26 +121,26 @@ Machine learning
     specials/voisinage
         
 
-Techniques
-==========
-
-**Web, cloud**
+Cloud illustré
+==============
 
 .. toctree::
     :maxdepth: 1
     
     specials/azure
-    specials/siteflask
         
     
-**Pratiques**
+Génie logiciel illustré
+=======================
 
 .. toctree::
     :maxdepth: 1
     
     specials/unittest_coverage_git_profling    
+    specials/siteflask
     
-**Automatisation**
+Aspects cachés de ce cours
+==========================
 
 .. toctree::
     :maxdepth: 1
