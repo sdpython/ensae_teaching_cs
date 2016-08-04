@@ -22,7 +22,13 @@ FAQ Cython
 .. faqreflist::
     :tag: cython
     
-
+FAQ Geo coordinates and Maps
+============================
+    
+.. faqreflist::
+    :tag: geo
+    
+    
 FAQ Hadoop
 ===========
     
@@ -63,3 +69,8 @@ FAQ web
 .. faqreflist::
     :tag: web
 
+FAQ Windows
+===========
+    
+.. faqreflist::
+    :tag: windows

@@ -15,25 +15,28 @@ def df2list(df):
     @param      df      DataFrame
     @return             list of lists
 
-    @FAQ(Convertir un DataFrame en une liste de listes ?)
-    @code
-    df = DataFrame( ... )
-    l  = df.values.tolist()
-    @endcode
-    @endFAQ
+    .. faqref::
+        :tag: pandas
+        :title: Convertir un DataFrame en une liste de listes ?
 
-    @FAQ(Comment vérifier que deux DataFrame sont égaux ?)
-    Comparer deux `DataFrame <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html>`_
-    avec l'opérateur ``==`` ne fonctionne pas.
-    On obtient un message d'erreur ::
+    ::
 
-        ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+        df = DataFrame( ... )
+        l  = df.values.tolist()
 
-    Il faut au préalable convertir le Dataframe en le convertissant en liste ::
+    .. faqref::
+        :tag: pandas
+        :title: Comment vérifier que deux DataFrame sont égaux (2) ?
 
-        df.values.tolist() == df2.values.tolist()
+        Comparer deux `DataFrame <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html>`_
+        avec l'opérateur ``==`` ne fonctionne pas.
+        On obtient un message d'erreur ::
 
-    @endFAQ
+            ValueError: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+
+        Il faut au préalable convertir le Dataframe en le convertissant en liste ::
+
+            df.values.tolist() == df2.values.tolist()
     """
     return df.vales.tolist()
 
@@ -45,39 +48,39 @@ def dump_object(obj, filename_or_stream):
     @param      obj                     objet à sérialiser
     @param      filename_or_stream      nom de fichier ou stream
 
-    @FAQ(Comment gagner du temps lors de la lecture de données ?)
+    .. faqref::
+        :tag: python
+        :title: Comment gagner du temps lors de la lecture de données ?
 
-    .. index:: sérialisation, pickle, dill
+        .. index:: sérialisation, pickle, dill
 
-    Les languages informatiques définissent des structures de données
-    qui permettent une utilisation rapide et cela n'a souvent rien
-    à voir avec la façon dont on lit ces données.
-    La plupart des données apparaissent dans des fichiers
-    texte ou fichiers plat. Pour les utiliser, le programme les
-    charges en mémoires ce qui peut prendre du temps.
-    La première fois qu'on s'en sert, c'st inévitable.
-    La seconde fois, on peut stocker les données
-    telles qu'elles sont en mémoire.
-    Le second chargement est plus rapide.
+        Les languages informatiques définissent des structures de données
+        qui permettent une utilisation rapide et cela n'a souvent rien
+        à voir avec la façon dont on lit ces données.
+        La plupart des données apparaissent dans des fichiers
+        texte ou fichiers plat. Pour les utiliser, le programme les
+        charges en mémoires ce qui peut prendre du temps.
+        La première fois qu'on s'en sert, c'st inévitable.
+        La seconde fois, on peut stocker les données
+        telles qu'elles sont en mémoire.
+        Le second chargement est plus rapide.
 
-    @code
-    obj = ... # n'importe quoi de sérialisable
-    dump_object(obj, "object_sur_disque.bin")
-    @endcode
+        ::
 
-    Pour recharger les données, on écrit :
+            obj = ... # n'importe quoi de sérialisable
+            dump_object(obj, "object_sur_disque.bin")
 
-    @code
-    obj = load_object("object_sur_disque.bin")
-    @endcode
+        Pour recharger les données, on écrit :
 
-    Le code de ces deux fonctions fait intervenir
-    le module `pickle <https://docs.python.org/3/library/pickle.html>`_.
-    Il suffit pour la plupart des usages.
-    Pour un usage plus exotique, il faut voir le module
-    `dill <https://pypi.python.org/pypi/dill>`_.
+        ::
 
-    @endFAQ
+            obj = load_object("object_sur_disque.bin")
+
+        Le code de ces deux fonctions fait intervenir
+        le module `pickle <https://docs.python.org/3/library/pickle.html>`_.
+        Il suffit pour la plupart des usages.
+        Pour un usage plus exotique, il faut voir le module
+        `dill <https://pypi.python.org/pypi/dill>`_.
     """
     if isinstance(filename_or_stream, str):
         stream = open(filename_or_stream, "wb")

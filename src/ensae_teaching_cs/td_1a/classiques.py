@@ -12,40 +12,41 @@ def commentaire_accentues():
     """
     L'aide de cette fonction contient assuréments des accents.
 
-    @FAQ(Python n'accepte pas les accents)
+    .. faqref::
+        :tag: python
+        :title: Python n'accepte pas les accents
 
-    .. index:: accent, accents, utf8, encoding
+        .. index:: accent, accents, utf8, encoding
 
-    Le langage Python a été conçu en langage anglais. Dès qu'on on ajoute un caractère
-    qui ne fait pas partie de l'alphabet anglais (ponctuation comprise), il déclenche une erreur :
+        Le langage Python a été conçu en langage anglais. Dès qu'on on ajoute un caractère
+        qui ne fait pas partie de l'alphabet anglais (ponctuation comprise), il déclenche une erreur :
 
-    @code
-    File "faq_cvxopt.py", line 3
-    SyntaxError: Non-UTF-8 code starting with '\xe8' in file faq_cvxopt.py on line 4, but no encoding declared;
-        see http://python.org/dev/peps/pep-0263/ for details
-    @endcode
+        ::
 
-    Pour la résoudre, il faut dire à l'interpréteur que des caractères non anglais peuvent apparaître
-    et écrire sur la première ligne du programme :
+            File "faq_cvxopt.py", line 3
+            SyntaxError: Non-UTF-8 code starting with '\xe8' in file faq_cvxopt.py on line 4, but no encoding declared;
+                see http://python.org/dev/peps/pep-0263/ for details
 
-    @code
-    # -*- coding: latin-1 -*-
-    @endcode
+        Pour la résoudre, il faut dire à l'interpréteur que des caractères non anglais peuvent apparaître
+        et écrire sur la première ligne du programme :
 
-    Ou pour tout caractère y compris chinois :
+        ::
 
-    @code
-    # -*- coding: utf-8 -*-
-    @endcode
+            # -*- coding: latin-1 -*-
 
-    Si vous utilisez l'éditeur `SciTE <http://www.scintilla.org/SciTE.html>`_ sous Windows,
-    après avoir ajouté cette ligne avec l'encoding `utf-8`,
-    il est conseillé de fermer le fichier puis de le réouvrir.
-    SciTE le traitera différemment.
+        Ou pour tout caractère y compris chinois :
 
-    **L'encodage ``utf-8`` est la norme sur Internet.** C'est pourquoi il est préférable d'utiliser celui-ci pour
-    partager son code via une page Web.
-    @endFAQ
+        ::
+
+            # -*- coding: utf-8 -*-
+
+        Si vous utilisez l'éditeur `SciTE <http://www.scintilla.org/SciTE.html>`_ sous Windows,
+        après avoir ajouté cette ligne avec l'encoding `utf-8`,
+        il est conseillé de fermer le fichier puis de le réouvrir.
+        SciTE le traitera différemment.
+
+        **L'encodage ``utf-8`` est la norme sur Internet.** C'est pourquoi il est préférable d'utiliser celui-ci pour
+        partager son code via une page Web.
     """
     pass
 
@@ -56,16 +57,18 @@ def dix_entiers_carre():
 
     :returns: nombre réel
 
-    @FAQ(Quelle est la différence entre return et print ?)
-    La fonction ``print`` sert à afficher un résultat sur la sortie standard.
-    Elle peut être utilisée à tout moment
-    mais elle n'a pas d'impact sur le déroulement programme. Le mot-clé ``return``
-    n'est utilisé que dans une fonction. Lorsque le programme rencontre
-    une instruction commençant par ``return``, il quitte la fonction
-    et transmet le résultat à l'instruction qui a appelé la fonction.
-    La fonction ``print`` ne modifie pas votre algorithme. La fonction ``return``
-    spécifie le résultat de votre fonction : elle modifie l'algorithme.
-    @endFAQ
+    .. faqref::
+        :tag: python
+        :title: Quelle est la différence entre return et print ?
+
+        La fonction ``print`` sert à afficher un résultat sur la sortie standard.
+        Elle peut être utilisée à tout moment
+        mais elle n'a pas d'impact sur le déroulement programme. Le mot-clé ``return``
+        n'est utilisé que dans une fonction. Lorsque le programme rencontre
+        une instruction commençant par ``return``, il quitte la fonction
+        et transmet le résultat à l'instruction qui a appelé la fonction.
+        La fonction ``print`` ne modifie pas votre algorithme. La fonction ``return``
+        spécifie le résultat de votre fonction : elle modifie l'algorithme.
 
     @example(TD 1A___calcul de la somme des dix premiers entiers au carré)
     Ce calcul simple peut s'écrire de diffèrentes manières.

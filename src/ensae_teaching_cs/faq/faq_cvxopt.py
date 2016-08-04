@@ -13,19 +13,19 @@ def optimisation():
     .. faqref::
         :tag: cvxopt
         :title: TypeError: 'q' must be a 'd' matrix with one column
-        
+
         Cette erreur survient même lorsque la dimension de la matrice ``q`` en question
         est la dimension attendue. Dans le cas présent, elle est définie comme suit :
 
-        :: 
-        
+        ::
+
             q=matrix([[0,0,0]])
 
         Mais la fonction `coneqp <http://abel.ee.ucla.edu/cvxopt/userguide/coneprog.html?highlight=coneqp#cvxopt.solvers.coneqp>`_
         retourne l'erreur :
 
-        :: 
-        
+        ::
+
             Traceback (most recent call last):
               File "toutbiss.py", line 236, in <module>
                 liste_composition,liquide = actualisation(liste_df,index,liquide,liste_composition,nb_jours_rendement,nb_jours_volatilite,volatilite_max)
@@ -41,7 +41,7 @@ def optimisation():
         Il suffit juste d'écrire :
 
         ::
-        
+
             q=matrix([[0.0,0.0,0.0]])
 
         Bien sûr, si l'erreur est vraiment un problème de dimension, cette correction
@@ -55,7 +55,7 @@ def optimisation():
         déclenche parfois cette erreur :
 
         ::
-        
+
             Traceback (most recent call last):
               File "C:\\Python35_x64\\lib\\site-packages\\cvxopt\\coneprog.py", line 2271, in coneqp
                 try: f3 = kktsolver(W)

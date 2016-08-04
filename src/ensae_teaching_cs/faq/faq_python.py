@@ -17,7 +17,7 @@ def entier_grande_taille():
     .. faqref::
         :tag: python
         :title: Quel est l'entier le plus grand ?
-        
+
         La version 3 du langage Python a supprimé la constante ``sys.maxint``
         qui définissait l'entier le plus grand (voir
         `What's New In Python 3.0 <https://docs.python.org/3.1/whatsnew/3.0.html#integers>`_).
@@ -25,7 +25,7 @@ def entier_grande_taille():
         retourne un entier aussi grand que l'on veut.
 
         ::
-        
+
             import random,sys
             x = random.getrandbits(2048)
             print(type(x),x)
@@ -43,7 +43,7 @@ def entier_grande_taille():
     .. faqref::
         :tag: python
         :title: Tabulations ou espace ?
-            
+
         Il est préférable de ne pas utiliser les tabulations et de les remplacer par des espaces.
         Lorsqu'on passe d'un Editeur à un autre, les espaces ne bougent pas. Les tabulations sont plus ou moins grandes visuellement.
         L'essentiel est de ne pas mélanger.
@@ -58,14 +58,14 @@ def difference_div():
     .. faqref::
         :tag: python
         :title: Quelle est la différence entre / et // - division ?
-        
+
         Le résultat de la division avec l'opérateur ``/`` est toujours réel :
         la division de deux entiers ``1/2`` donne ``0.5``.
         Le résultat de la division avec l'opérateur ``//`` est toujours entier.
         Il correspond au quotient de la division.
 
         ::
-            
+
             div1 = 1/2
             div2 = 4/2
             div3 = 1//2
@@ -75,7 +75,7 @@ def difference_div():
         Le reste d'une division entière est obtenue avec l'opérateur ``%``.
 
         ::
-        
+
             print ( 5 % 2 )  # affiche 1
 
         C'est uniquement vrai pour les version Python 3.x.
@@ -94,7 +94,7 @@ def python_path():
     .. faqref::
         :tag: python
         :title: Comment éviter sys.path.append... quand on développe un module ?
-        
+
         Lorsqu'on développe un module,
         on ne veut pas l'installer. On ne veut pas qu'il soit présent dans le répertoire ``site-packages`` de la distribution
         de Python car cela introduit deux versions : celle qu'on développe et celle qu'on a installer.
@@ -102,7 +102,7 @@ def python_path():
         (et on en trouve quelque trace dans mon code) :
 
         ::
-            
+
             import sys
             sys.path.append("c:/moncode/monmodule/src")
             import monmodule
@@ -116,7 +116,7 @@ def python_path():
         Sous Windows :
 
         ::
-        
+
             set PYTHON_PATH=%PYTHON_PATH%;c:\\moncode\\monmodule\\src
     """
     return os.environ.get("PYTHON_PATH", "")
@@ -194,7 +194,7 @@ def same_variable(a, b):
     .. faqref::
         :tag: python
         :title: Qu'est-ce qu'un type immuable ou immutable ?
-        
+
         Une variable de type *immuable* ne peut être modifiée. Cela concerne principalement :
 
         - ``int``, ``float``, ``str``, ``tuple``
@@ -300,13 +300,13 @@ def stringio(text):
     .. faqref::
         :tag: python
         :title: A quoi sert un ``StringIO`` ?
-        
+
         La plupart du temps, lorsqu'on récupère des données, elles sont sur le disque dur
         de votre ordinateur dans un fichier texte. Lorsqu'on souhaite automatiser un processur
         qu'on répète souvent avec ce fichier, on écrit une fonction qui prend le nom du fichier en entrée.
 
         ::
-        
+
             def processus_quotidien(nom_fichier) :
                 # on compte les lignes
                 nb = 0
@@ -330,7 +330,7 @@ def stringio(text):
         la mémoire comme source de données.
 
         ::
-        
+
             def processus_quotidien(data_stream):
                 # on compte toujours les lignes
                 nb = 0
@@ -342,7 +342,7 @@ def stringio(text):
         et sur un fichier.
 
         ::
-        
+
             fichier = __file__
             f = open(fichier,"r")
             nb = processus_quotidien(f)
@@ -423,7 +423,7 @@ def enumerate_regex_search(exp, text):
         On utilise la méthode `finditer <https://docs.python.org/3/library/re.html#re.regex.finditer>`_.
 
         ::
-        
+
             found = exp.search(text)
             for m in exp.finditer(text):
                 # ...
@@ -445,7 +445,7 @@ def download_from_url(url, filename):
     @param      url         url
     @param      filename    local filename
     @return                 filename
-    
+
     .. index:: dropbox
 
     .. faqref::
@@ -457,7 +457,7 @@ def download_from_url(url, filename):
         L'url donné en exemple est celui utilisé sur DropBox.
 
         ::
-        
+
             url = "https://www.dropbox.com/[something]/[filename]?dl=1"  # dl=1 is important
             import urllib.request
             with urllib.request.urlopen(url) as u:

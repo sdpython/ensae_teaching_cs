@@ -87,7 +87,7 @@ def df_to_clipboard(df, **args):
     It relies on method
     `to_clipboard <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_clipboard.html>`_.
 
-    .. faqref:: 
+    .. faqref::
         :title: Copier un dataframe dans le presse-papier - clipboard
         :tag: pandas
 
@@ -124,7 +124,7 @@ def df_equal(df1, df2):
     The function does not handle well NaN values because ``numpy.nan != numpy.nan`` is true.
     It also compares types:
 
-    .. faqref:: 
+    .. faqref::
         :tag: pandas
         :title: Comment comparer deux dataframe?
 
@@ -150,9 +150,9 @@ def df_equal(df1, df2):
             t = (df1 == df2).all()
             s = set(t)
             return False not in s
-            
+
         Autres alternatives :
-        
+
         * `equals <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.equals.html>`_
         * `assert_frame_equal <https://github.com/pydata/pandas/blob/29de89c1d961bea7aa030422b56b061c09255b96/pandas/util/testing.py#L621>`_
     """

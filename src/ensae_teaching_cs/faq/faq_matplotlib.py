@@ -16,7 +16,7 @@ def graph_style(style='ggplot'):
     @param      style       style
 
     .. faqref::
-        :tag: matplotlib 
+        :tag: matplotlib
         :title: Changer le style de graphique pour ggplot
 
         .. index:: ggplot
@@ -24,7 +24,7 @@ def graph_style(style='ggplot'):
         Voir `Customizing plots with style sheets <http://matplotlib.org/users/style_sheets.html>`_
 
         ::
-            
+
             import matplotlib.pyplot as plt
             plt.style.use('ggplot')
     """
@@ -46,7 +46,7 @@ def close_all():
 
             import matplotlib.pyplot as plt
             plt.close('all')
-            
+
         Voir `close <http://matplotlib.org/api/pyplot_api.html?highlight=close#matplotlib.pyplot.close>`_.
     """
     import matplotlib.pyplot as plt
@@ -210,7 +210,7 @@ def change_legend_location(ax, new_location="lower center"):
     @param      new_location    new_location, see method `legend <http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes.legend>`_
     @return                     ax
 
-    .. faqref:: 
+    .. faqref::
         :tag: matplotlib
         :title: Comment changer l'emplacement de la légende ?
 
@@ -222,7 +222,7 @@ def change_legend_location(ax, new_location="lower center"):
         et le code suivant :
 
         ::
-        
+
             handles, labels = ax.get_legend_handles_labels()
             ax.legend(handles, labels, loc="lower center")
 
@@ -248,7 +248,7 @@ def avoid_overlapping_dates(fig, **options):
         qui se superposent.
 
         ::
-        
+
             fig, ax = plt.subplots(...)
             # ...
             fig.autofmt_xdate()
