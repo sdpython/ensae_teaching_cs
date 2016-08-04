@@ -13,7 +13,7 @@ permettant d'améliorer la qualité du code.
 Ces pratiques ne sont sans doute pas utiles 
 si votre code est juste une étude et n'a pas vocation à durer.
 Dans ce cas, je recommande tout de même l'utilisation d'un 
-:ref:`l-suivi-source-p`. Les :ref:`_l-unittest-p` et la 
+:ref:`l-suivi-source-p`. Les :ref:`l-unittest-p` et la 
 :ref:`l-doc-p` sont à considérer dès le début du projet
 dans le cas contraire. Il est beaucoup plus difficile
 de les ajouter par la suite.
@@ -62,13 +62,13 @@ avec le concept de `mock <https://fr.wikipedia.org/wiki/Mock_%28programmation_or
 
 Une des réponses est d'introduire plusieurs séries de tests :
 
-* **tests unitaires ou fonctionnels** : teste une fonction en particulier, ces tests sont très rapides.
-* **tests d'intégration** : vérifier qu'une librairie fonctionne toujours avec ses dépendances,
+* *tests unitaires ou fonctionnels* : teste une fonction en particulier, ces tests sont très rapides.
+* *tests d'intégration* : vérifier qu'une librairie fonctionne toujours avec ses dépendances,
   surtout après une mise à jour. C'est important surtout si on écrit du code
   différencié selon la version d'une dépendance.
-* **tests de non régression** : teste un algorithme et vérifie que sa réponse ne se dégrage 
+* *tests de non régression* : teste un algorithme et vérifie que sa réponse ne se dégrage 
   après une modification, qu'un bug fixé le reste.
-* **tests système ou end to end** : teste une fonctionnalité impliquant une ressource externe
+* *tests système ou end to end* : teste une fonctionnalité impliquant une ressource externe
   (serveur SQL, Internet), sur un environnement précis.
 
 **site web, serveur**
@@ -257,7 +257,7 @@ sont bien choisis.
 
 
 Style
-+++++
+-----
 
 
 Annotations
@@ -316,7 +316,7 @@ son adoption rapide est due à la simplicité de son interface, de son design.
 
 
 Outils
-++++++
+------
 
 .. _l-suivi-source-p:
 
