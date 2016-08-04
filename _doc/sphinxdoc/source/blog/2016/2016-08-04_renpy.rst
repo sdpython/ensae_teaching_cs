@@ -1,0 +1,20 @@
+
+
+.. blogpost::
+    :title: Présentations, RenPy et Scratch
+    :keywords: RenPy, Manga, Scratch, Flash
+    :date: 2016-08-04
+    :categories: modules
+    
+    Le module `RenPy <https://www.renpy.org/>`_ 
+    permet de créer des jeux interactifs ou des mangas
+    simples. Je me demande si je verrai un jour des présentations
+    réalisées avec ce type d'outils ou avec 
+    `Scratch <https://scratch.mit.edu/info/faq/>`_
+    même si apparemment les vidéos ne peuvent pas dépasser 60 secondes
+    mais cela paraît plus simple de convertir 
+    `Scratch <https://scratch.mit.edu/>`_ en Flash
+    `junebeetle <http://junebeetle.github.io/converter/?scratch.mit.edu>`_.
+    C'est en tout cas dans ce format que sont montrées les 
+    `exemples <https://scratch.mit.edu/starter_projects/>`_.
+    

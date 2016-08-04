@@ -262,8 +262,13 @@ peuvent requérir l'utilisation des outils présentées durant les séances 9 à
 si tel était le cas, ce serait très proche d'une solution proposée lors des TD.
 
 
-
-
+.. todoext::
+    :title: ajouter un notebook sur flexx
+    :issue: 13
+    :tag: plus
+    :date: 2016-08-04
+    
+    Voir blog post sur :ref:`Flexx <blog-post-flexx>`.
     
 
 
