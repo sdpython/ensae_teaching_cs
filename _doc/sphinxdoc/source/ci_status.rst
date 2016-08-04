@@ -161,7 +161,9 @@ Tableau de bord
       - .. image:: https://travis-ci.org/sdpython/pymyinstall.svg?branch=master                        
             :target: https://travis-ci.org/sdpython/pymyinstall                                            
             :alt: Build status                                                                                  
-      - 
+      - .. image:: https://ci.appveyor.com/api/projects/status/yy4aripbhp38wo17?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/pymyinstall
+            :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/pymyinstall.svg
             :target: http://badge.fury.io/py/pymyinstall
       - .. image:: http://img.shields.io/pypi/dm/pymyinstall.png
