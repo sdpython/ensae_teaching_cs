@@ -64,7 +64,9 @@ Tableau de bord
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/ensae_projects.svg
             :target: http://badge.fury.io/py/ensae_projects
-      - 
+      - .. image:: http://img.shields.io/pypi/dm/ensae_projects.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/ensae_projects
       - .. image:: https://badge.waffle.io/sdpython/ensae_projects.png?label=ready&title=Ready
             :alt: Waffle
             :target: https://waffle.io/sdpython/ensae_projects    
@@ -96,7 +98,9 @@ Tableau de bord
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/jupytalk.svg
             :target: http://badge.fury.io/py/jupytalk
-      - 
+      - .. image:: http://img.shields.io/pypi/dm/jupytalk.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/jupytalk
       - .. image:: https://badge.waffle.io/sdpython/jupytalk.png?label=ready&title=Ready
             :alt: Waffle
             :target: https://waffle.io/sdpython/jupytalk    
