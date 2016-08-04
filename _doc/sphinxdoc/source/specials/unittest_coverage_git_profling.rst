@@ -45,7 +45,7 @@ ajoutée au code et chaque bug découvert.
 Dans la pratique, si on ne le fait pas tout de suite, on le fait
 rarement. Il est impensable de vendre ou écrire un projet open source
 sans ces tests. La plupart des langages permettent d'écrire cela
-rapidement. En Python :ref:`lm-Quest-cequuntestunitaire`
+rapidement. En Python :ref:`faq-python-tu`
 avec les modules :
 
 * `unittest <https://docs.python.org/3/library/unittest.html>`_
@@ -84,7 +84,7 @@ du javascript pour lesquels il faudrait simuler des événements au clavier
 (touches, souris) une fois le site lancé.
 Pour vérifier certains aspects du site web tels qu'ils seront par un internaute :
 
-* `Selenium with Python <http://selenium-python.readthedocs.io/>`_ (voir aussi :ref:`lm-IssuewithSeleniumandChrome`)
+* `Selenium with Python <http://selenium-python.readthedocs.io/>`_ (voir aussi :ref:`faq-web-selenium`)
 * `Splinter <http://splinter.readthedocs.io/en/latest/>`_
 
 **GUI**

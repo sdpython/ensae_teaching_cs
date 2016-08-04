@@ -242,8 +242,13 @@ Big data sans cluster
 Traitement du langage
 =====================
 
+* `Système de complétion <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_nlp/completion.html>`_ :
+  la complétion est utilisée par tous les sites Internet pour aider les utilisateurs
+  à saisir leur recherche. N'importe quel site commercial l'utiliser
+  pour guider les utilisateurs plus rapidement vers le produit qu'ils recherchent.
+
 .. todoext::
-    :title: rédige un notebook sur le traitement du langage
+    :title: rédiger un notebook sur le traitement du langage
     :tag: plus
     
     Aborder la distance d'édition, n-grams, NLTK, gensim,

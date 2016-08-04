@@ -16,31 +16,31 @@ def read_csv(filepath_or_buffer, encoding="utf8", sep="\t", **args):
     @param      sep                     column separator
     @return                             DataFrame
 
-    @FAQ(pandas___Caractères bizarres en utf8 et sous Windows (BOM) ?)
+    .. faqref::
+        :tag: pandas
+        :title: Caractères bizarres en utf8 et sous Windows (BOM) ?
 
-    .. index:: encoding, BOM, UTF8
+        .. index:: encoding, BOM, UTF8
 
-    Sous Windows, certains logiciels comme `Notepad <http://fr.wikipedia.org/wiki/Bloc-notes_%28Windows%29>`_
-    permettent d'enregister un fichier sous différents `encodings <http://en.wikipedia.org/wiki/Character_encoding>`_.
-    Avec l'encoding `UTF8 <http://fr.wikipedia.org/wiki/UTF-8>`_, on a parfois un problème avec le premier caractère
-    ``\\ufeff`` car Notepad ajoute ce qu'on appelle un `BOM <http://fr.wikipedia.org/wiki/Indicateur_d%27ordre_des_octets>`_.
-    Par exemple ::
+        Sous Windows, certains logiciels comme `Notepad <http://fr.wikipedia.org/wiki/Bloc-notes_%28Windows%29>`_
+        permettent d'enregister un fichier sous différents `encodings <http://en.wikipedia.org/wiki/Character_encoding>`_.
+        Avec l'encoding `UTF8 <http://fr.wikipedia.org/wiki/UTF-8>`_, on a parfois un problème avec le premier caractère
+        ``\\ufeff`` car Notepad ajoute ce qu'on appelle un `BOM <http://fr.wikipedia.org/wiki/Indicateur_d%27ordre_des_octets>`_.
+        Par exemple ::
 
-        import pandas
-        df = pandas.read_csv("dataframe.txt",sep="\\t", encoding="utf8")
-        print(df)
+            import pandas
+            df = pandas.read_csv("dataframe.txt",sep="\\t", encoding="utf8")
+            print(df)
 
-    Provoque une erreur des plus énervantes ::
+        Provoque une erreur des plus énervantes ::
 
-        UnicodeEncodeError: 'charmap' codec can't encode character '\\ufeff' in position 0: character maps to <undefined>
+            UnicodeEncodeError: 'charmap' codec can't encode character '\\ufeff' in position 0: character maps to <undefined>
 
-    Pour contrecarrer ceci, il suffit de modifier l'encoding par `utf-8-sig <https://docs.python.org/3/library/codecs.html#encodings-and-unicode>`_ ::
+        Pour contrecarrer ceci, il suffit de modifier l'encoding par `utf-8-sig <https://docs.python.org/3/library/codecs.html#encodings-and-unicode>`_ ::
 
-        import pandas
-        df = pandas.read_csv("dataframe.txt",sep="\\t", encoding="utf-8-sig")
-        print(df)
-
-    @endFAQ
+            import pandas
+            df = pandas.read_csv("dataframe.txt",sep="\\t", encoding="utf-8-sig")
+            print(df)
     """
     import pandas
     if isinstance(filepath_or_buffer, str):
@@ -87,18 +87,18 @@ def df_to_clipboard(df, **args):
     It relies on method
     `to_clipboard <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_clipboard.html>`_.
 
-    @FAQ(pandas___Copier un dataframe dans le presse-papier - clipboard)
+    .. faqref:: 
+        :title: Copier un dataframe dans le presse-papier - clipboard
+        :tag: pandas
 
-    Pour récupérer un dataframe dans Excel, on peut utiliser la méthode
-    `to_excel <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_excel.html>`_
-    puis ouvrir le fichier dans Excel ou le copier dans le presse-papier et le coller
-    dans une feuille ouverte dans Excel. C'est l'objet de la méthode
-    `to_clipboard <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_clipboard.html>`_ ::
+        Pour récupérer un dataframe dans Excel, on peut utiliser la méthode
+        `to_excel <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_excel.html>`_
+        puis ouvrir le fichier dans Excel ou le copier dans le presse-papier et le coller
+        dans une feuille ouverte dans Excel. C'est l'objet de la méthode
+        `to_clipboard <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_clipboard.html>`_ ::
 
-        df = pandas.DataFrame ( ... )
-        df.to_clipboard(sep="\\t")
-
-    @endFAQ
+            df = pandas.DataFrame ( ... )
+            df.to_clipboard(sep="\\t")
     """
     if "sep" in args:
         df.to_clipboard(**args)
@@ -124,31 +124,37 @@ def df_equal(df1, df2):
     The function does not handle well NaN values because ``numpy.nan != numpy.nan`` is true.
     It also compares types:
 
-    @FAQ(pandas___Comment comparer deux dataframe?)
+    .. faqref:: 
+        :tag: pandas
+        :title: Comment comparer deux dataframe?
 
-    Ecrire ``df1 == df2`` ne compare pas deux dataframes entre deux
-    car le sens n'est pas forcément le même pour tout le monde.
-    Même si les valeurs sont les mêmes, est-ce l'ordre des colonnes
-    est important ?
-    Il faut donc le faire soi-même. Le code ci-dessus
-    compare d'abord les dimensions, ensuite compare l'ordre
-    des colonnes puis enfin les valeurs ::
+        Ecrire ``df1 == df2`` ne compare pas deux dataframes entre deux
+        car le sens n'est pas forcément le même pour tout le monde.
+        Même si les valeurs sont les mêmes, est-ce l'ordre des colonnes
+        est important ?
+        Il faut le faire soi-même pour une comparaison spécifique à
+        vos besoins. Le code ci-dessus
+        compare d'abord les dimensions, ensuite compare l'ordre
+        des colonnes puis enfin les valeurs ::
 
-        if df1.shape != df2.shape:
-            return False
-        l1 = list(df1.columns)
-        l2 = list(df2.columns)
-        l1.sort()
-        l2.sort()
-        if l1 != l2:
-            return False
-        df1 = df1[l1]
-        df2 = df2[l2]
-        t = (df1 == df2).all()
-        s = set(t)
-        return False not in s
-
-    @endFAQ
+            if df1.shape != df2.shape:
+                return False
+            l1 = list(df1.columns)
+            l2 = list(df2.columns)
+            l1.sort()
+            l2.sort()
+            if l1 != l2:
+                return False
+            df1 = df1[l1]
+            df2 = df2[l2]
+            t = (df1 == df2).all()
+            s = set(t)
+            return False not in s
+            
+        Autres alternatives :
+        
+        * `equals <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.equals.html>`_
+        * `assert_frame_equal <https://github.com/pydata/pandas/blob/29de89c1d961bea7aa030422b56b061c09255b96/pandas/util/testing.py#L621>`_
     """
     if df1.shape != df2.shape:
         return False
@@ -179,40 +185,40 @@ def groupby_topn(df, by_keys, sort_keys, ascending=True, n=1, as_index=True):
     @param      as_index    if False, remove the index after the group by
     @return                 result
 
-    @FAQ(pandas___top n lignes avec pandas)
+    .. faqref::
+        :tag: pandas
+        :title: top n lignes avec pandas
 
-    Grouper puis garder les premières observations de ce groupe est un problème
-    classique. Il n'existe pas de meilleure façon de le faire,
-    cela dépend du nombre d'obervations par groupe. Le moyen le plus simple
-    de le faire avec pandas est :
+        Grouper puis garder les premières observations de ce groupe est un problème
+        classique. Il n'existe pas de meilleure façon de le faire,
+        cela dépend du nombre d'obervations par groupe. Le moyen le plus simple
+        de le faire avec pandas est :
 
-    * grouper les lignes
-    * trier les lignes dans chaque groupe
-    * garder les premières lignes dans chaque groupe
+        * grouper les lignes
+        * trier les lignes dans chaque groupe
+        * garder les premières lignes dans chaque groupe
 
-    Ceci donne ::
+        Ceci donne ::
 
-        df.groupby(by_keys)
-          .apply(lambda x: x.sort(sort_keys, ascending=ascending).head(head))
-          .reset_index(drop=True)
+            df.groupby(by_keys)
+              .apply(lambda x: x.sort(sort_keys, ascending=ascending).head(head))
+              .reset_index(drop=True)
 
-    La dernière instruction supprimer l'index ce qui donne au dataframe final
-    la même structure que le dataframe initial.
+        La dernière instruction supprimer l'index ce qui donne au dataframe final
+        la même structure que le dataframe initial.
 
-    .. runpython::
-        :showcode:
+        .. runpython::
+            :showcode:
 
-        import pandas
-        l = [ dict(k1="a", k2="b", v=4, i=1),
-              dict(k1="a", k2="b", v=5, i=1),
-              dict(k1="a", k2="b", v=4, i=2),
-              dict(k1="b", k2="b", v=1, i=2),
-              dict(k1="b", k2="b", v=1, i=3)]
-        df = pandas.DataFrame(l)
-        df.groupby(["k1", "k2"]).apply(lambda x: x.sort(["v", "i"], ascending=True).head(1))
-        print(df)
-
-    @endFAQ
+            import pandas
+            l = [ dict(k1="a", k2="b", v=4, i=1),
+                  dict(k1="a", k2="b", v=5, i=1),
+                  dict(k1="a", k2="b", v=4, i=2),
+                  dict(k1="b", k2="b", v=1, i=2),
+                  dict(k1="b", k2="b", v=1, i=3)]
+            df = pandas.DataFrame(l)
+            df.groupby(["k1", "k2"]).apply(lambda x: x.sort(["v", "i"], ascending=True).head(1))
+            print(df)
     """
     res = df.groupby(by_keys).apply(lambda x: x.sort(
         sort_keys, ascending=ascending).head(n))
@@ -223,16 +229,16 @@ def groupby_topn(df, by_keys, sort_keys, ascending=True, n=1, as_index=True):
 
 def speed_dataframe():
     """
-    @FAQ(Comment créer un dataframe rapidement ?)
+    .. faqref::
+        :tag: pandas
+        :title: Comment créer un dataframe rapidement ?
 
-    Le notebook :ref:`dataframematrixspeedrst` compare différentes manières
-    de créer un `dataframe <http://pandas-docs.github.io/pandas-docs-travis/enhancingperf.html?highlight=dataframe>`_
-    ou un `array <http://docs.scipy.org/doc/numpy/reference/generated/numpy.array.html>`_.
-    Quelques enseignemens :
+        Le notebook :ref:`dataframematrixspeedrst` compare différentes manières
+        de créer un `dataframe <http://pandas-docs.github.io/pandas-docs-travis/enhancingperf.html?highlight=dataframe>`_
+        ou un `array <http://docs.scipy.org/doc/numpy/reference/generated/numpy.array.html>`_.
+        Quelques enseignemens :
 
-    * Même si les données sont produites par un générateur, pandas les convertit en liste.
-    * La création d'un array est plus rapide à partir d'un générateur plutôt que d'une liste.
-
-    @endFAQ
+        * Même si les données sont produites par un générateur, pandas les convertit en liste.
+        * La création d'un array est plus rapide à partir d'un générateur plutôt que d'une liste.
     """
     pass

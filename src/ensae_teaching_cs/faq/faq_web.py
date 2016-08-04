@@ -99,19 +99,16 @@ def _get_selenium_browser(navigator):
 
     The function automatically gets chromedriver if not present (Windows only).
 
-    @FAQ(Issue with Selenium and Firefox)
+    ..faqref::
+        :tag: web
+        :title: Issue with Selenium and Firefox
+        :lid: faq-web-selenium
 
-    Firefox >= v47 does not work on Windows.
-    See `Selenium WebDriver and Firefox 47 <http://www.theautomatedtester.co.uk/blog/2016/selenium-webdriver-and-firefox-47.html>`_.
+        Firefox >= v47 does not work on Windows.
+        See `Selenium WebDriver and Firefox 47 <http://www.theautomatedtester.co.uk/blog/2016/selenium-webdriver-and-firefox-47.html>`_.
 
-    @endFAQ
-
-    @FAQ(Issue with Selenium and Chrome)
-
-    http://chromedriver.storage.googleapis.com/index.html
-    http://stackoverflow.com/questions/29858752/error-message-chromedriver-executable-needs-to-be-available-in-the-path
-
-    @endFAQ
+        Voir `ChromeDriver download <http://chromedriver.storage.googleapis.com/index.html>`_,
+        `Error message: 'chromedriver' executable needs to be available in the path <http://stackoverflow.com/questions/29858752/error-message-chromedriver-executable-needs-to-be-available-in-the-path>`_.
     """
     from selenium import webdriver
     from selenium.webdriver.common.desired_capabilities import DesiredCapabilities

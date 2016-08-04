@@ -1,6 +1,6 @@
 """
 @file
-@brief shortcuts for FAQ
+@breif shortcuts for FAQ
 """
 
 from .faq_python import enumerate_regex_search, download_from_url

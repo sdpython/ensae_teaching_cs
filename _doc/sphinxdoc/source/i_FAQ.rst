@@ -6,12 +6,60 @@
 FAQ
 ===
 
-.. toctree::
+.. contents::
+    :local:
 
-    all_FAQ
-    all_FAQ_cvxopt
-    all_FAQ_hadoop
-    all_FAQ_jupyter
-    all_FAQ_matplotlib
-    all_FAQ_pandas
-    all_FAQ_Cython
+FAQ cvxopt
+==========
+    
+.. faqreflist::
+    :tag: cvxopt
+    
+
+FAQ Cython
+==========
+    
+.. faqreflist::
+    :tag: cython
+    
+
+FAQ Hadoop
+===========
+    
+.. faqreflist::
+    :tag: hadoop
+    
+
+FAQ Jupyter
+===========
+    
+.. faqreflist::
+    :tag: jupyter
+    
+
+FAQ matplotlib
+==============
+    
+.. faqreflist::
+    :tag: matplotlib
+
+
+FAQ pandas
+==========
+    
+.. faqreflist::
+    :tag: pandas
+
+FAQ python
+==========
+    
+.. faqreflist::
+    :tag: python
+
+
+FAQ web
+=======
+    
+.. faqreflist::
+    :tag: web
+

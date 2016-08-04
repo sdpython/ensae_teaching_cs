@@ -17,52 +17,25 @@ def notebook_path():
 
     @param      style       style
 
-    @FAQ(jupyter___Récupérer le fichier du notebook depuis le notebook)
+    .. faqref::
+        :tag: jupyter
+        :title: Récupérer le fichier du notebook depuis le notebook
 
-    Voir `How to I get the current Jupyter Notebook name <http://stackoverflow.com/questions/12544056/how-to-i-get-the-current-ipython-notebook-name>`_
+        Voir `How to I get the current Jupyter Notebook name <http://stackoverflow.com/questions/12544056/how-to-i-get-the-current-ipython-notebook-name>`_
 
-    Il suffit d'insérer la cellule suivante dans le notebook ::
+        Il suffit d'insérer la cellule suivante dans le notebook ::
 
-        %%javascript
-        var kernel = IPython.notebook.kernel;
-        var body = document.body,
-            attribs = body.attributes;
-        var command = "theNotebook = os.path.join(" + "r'"+attribs['data-project'].value+"'," +
-                      "r'"+attribs['data-notebook-path'].value+"'," + "r'"+attribs['data-notebook-name'].value+"')";
-        kernel.execute(command);
+            %%javascript
+            var kernel = IPython.notebook.kernel;
+            var body = document.body,
+                attribs = body.attributes;
+            var command = "theNotebook = os.path.join(" + "r'"+attribs['data-project'].value+"'," +
+                          "r'"+attribs['data-notebook-path'].value+"'," + "r'"+attribs['data-notebook-name'].value+"')";
+            kernel.execute(command);
 
-    On peut vérifier que cela fonctionne ::
+        On peut vérifier que cela fonctionne ::
 
-        theNotebook
-
-    @endFAQ
-    """
-    pass
-
-
-def fix_table_notebook():
-    """
-    @FAQ(jupyter___Table des matières à position fixe dans un notebook)
-    Il est possible d'ajouter au notebook un menu fixe, positionné sur la droite,
-    qui permet de passer d'une section à l'autre plus facilement.
-    Ce menu ne bouge pas avec la version 2 de IPython, il
-    reste ancré au début de la page avec la version 3.
-    A vérifier pour la version 4 (Jupyter).
-
-    Voir `Example of a notebook with a fixed index <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/notebooks/exemple_of_fix_menu.html>`_.
-
-    Exemple :
-
-    @code
-    <div style="position:absolute; top:10px; right:5px; width:100px; height:90px; margin:10px;">
-    [Section 1](#section1) -- [Section 2](#section2) -- [This is the end](#end)
-    </div>
-    @endcode
-
-    Cette solution peut probablement être améliorée. Elle passe mal lors de la conversion
-    du notebook en HTML.
-
-    @endFAQ
+            theNotebook
     """
     pass
 
@@ -80,12 +53,12 @@ def r_and_notebook():
 
     @endexample
 
-    @FAQ(jupyter___Comment utiliser R depuis un notebook ?)
+    .. faqref::
+        :tag: jupyter
+        :title: Comment utiliser R depuis un notebook ?
 
-    Voir notebooks :ref:`td2acenoncesession2brst`, :ref:`correction <td2acorrectionsession2brst>`.
-
-    @endFAQ
-
+        Voir notebooks :ref:`td2acenoncesession2brst`,
+        :ref:`correction <td2acorrectionsession2brst>`.
     """
     if "R_HOME" not in os.environ:
         raise KeyError("R_HOME not present")
@@ -107,18 +80,17 @@ def jupyter_convert_notebooks():
 
     @endexample
 
-    @FAQ(jupyter___Comment convertir le notebook en cours au format HTML ?)
+    .. faqref::
+        :tag: jupyter
+        :title: Comment convertir le notebook en cours au format HTML ?
 
-    Voir notebook :ref:`notebookconvertrst`.
+        Voir notebook :ref:`notebookconvertrst`.
 
-    @endFAQ
+    .. faqref::
+        :tag: jupyter
+        :title: Comment ajouter un lien vers un fichier local pour le télécharger ?
 
-    @FAQ(jupyter___Comment ajouter un lien vers un fichier local pour le télécharger ?)
-
-    Voir notebook :ref:`notebookconvertrst`.
-
-    @endFAQ
-
+        Voir notebook :ref:`notebookconvertrst`.
     """
     pass
 
@@ -135,27 +107,25 @@ def jupyter_get_variable(name, magic_command_instance):
     The function raises an exception if the context does not exists
     or if the variable name does not value
 
-    @FAQ(jupyter___Accéder ou modifier une variable du notebook depuis une commande magique)
+    .. faqref::
+        :tag: jupyter
+        :title: Accéder ou modifier une variable du notebook depuis une commande magique
 
-    Lorsqu'on écrit un notebook, toutes les variables qu'on crée sont
-    en quelque sorte globales puisqu'on peut y accéder depuis chaque cellule
-    mais leur périmètre est limité au notebook.
-    Lorsqu'on crée un commande magique, il est possible d'accéder à ce contexte local
-    via le membre ``self.shell.user_ns``. De cette façon, on peut accéder au contenu d'une
-    variable, le modifier ou en ajouter une.
+        Lorsqu'on écrit un notebook, toutes les variables qu'on crée sont
+        en quelque sorte globales puisqu'on peut y accéder depuis chaque cellule
+        mais leur périmètre est limité au notebook.
+        Lorsqu'on crée un commande magique, il est possible d'accéder à ce contexte local
+        via le membre ``self.shell.user_ns``. De cette façon, on peut accéder au contenu d'une
+        variable, le modifier ou en ajouter une.
 
-    @code
+        ::
 
-    class CustomMagics(Magics):
+            class CustomMagics(Magics):
 
-        @line_magic
-        def custom_cmd(self, line):
-            context = self.shell.user_ns
-            #...
-
-    @endcode
-
-    @endFAQ
+                @line_magic
+                def custom_cmd(self, line):
+                    context = self.shell.user_ns
+                    #...
     """
     if magic_command_instance.shell is None:
         raise Exception(
@@ -176,47 +146,47 @@ def jupyter_open_notebook(filename, profile='default', fLOG=fLOG):
     @param      fLOG            logging function
     @return                     a running server or None if not found
 
-    .. _i-launch_notebook-server:
+    .. faqref::
+        :tag: jupyter
+        :title: Lancer le serveur de notebooks
+        :lid: i-launch_notebook-server
 
-    @FAQ(jupyter___Lancer le serveur de notebooks)
+        On suppose que le module `Jupyter <http://jupyter.org/notebook.html>`_ a été bien installé.
+        Depuis août 2015, IPython est devenu Jupyter qui n'est pas plus automatiquement
+        associé à Python mais propose des notebooks pour de nombreux langages.
+        Il faut installer le module *jupyter* (``pip install jupyter``).
+        Plusieurs options :
 
-    On suppose que le module `Jupyter <http://jupyter.org/notebook.html>`_ a été bien installé.
-    Depuis août 2015, IPython est devenu Jupyter qui n'est pas plus automatiquement
-    associé à Python mais propose des notebooks pour de nombreux langages.
-    Il faut installer le module *jupyter* (``pip install jupyter``).
-    Plusieurs options :
+        #. Utiliser la ligne de commande usuelle : ``jupyter-notebook``.
+           Ce script (ou programme *jupyter-notebook.exe* sous Windows
+           est inclus dans le répertoire *Scripts* du répertoire d'installation.
+           Voir :ref:`l-jupyter_notebook_commandline`.
+           Voir égalemnt `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_,
+           `Open the notebook with a different browser <http://www.xavierdupre.fr/blog/2015-08-24_nojs.html>`_
+           Il est possible de créer un fichier `.bat <https://fr.wikipedia.org/wiki/.bat>`_ pour
+           automatiser la ligne de commande et l'ajouter en tant qu'icône sur le bureau.
 
-    #. Utiliser la ligne de commande usuelle : ``jupyter-notebook``.
-       Ce script (ou programme *jupyter-notebook.exe* sous Windows
-       est inclus dans le répertoire *Scripts* du répertoire d'installation.
-       Voir :ref:`l-jupyter_notebook_commandline`.
-       Voir égalemnt `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_,
-       `Open the notebook with a different browser <http://www.xavierdupre.fr/blog/2015-08-24_nojs.html>`_
-       Il est possible de créer un fichier `.bat <https://fr.wikipedia.org/wiki/.bat>`_ pour
-       automatiser la ligne de commande et l'ajouter en tant qu'icône sur le bureau.
+        #. Utiliser la fonction :func:`jupyter_open_notebook <ensae_teaching_cs.faq.faq_jupyter.jupyter_open_notebook>` ::
 
-    #. Utiliser la fonction :func:`jupyter_open_notebook <ensae_teaching_cs.faq.faq_jupyter.jupyter_open_notebook>` ::
+            from ensae_teaching_cs.faq import jupyter_open_notebook
+            nbfile = "notebook.ipynb"
+            jupyter_open_notebook(nbfile)
 
-        from ensae_teaching_cs.faq import jupyter_open_notebook
-        nbfile = "notebook.ipynb"
-        jupyter_open_notebook(nbfile)
+        #. Utiliser le raccourci proposé par la distribution choisi pour installer Python.
 
-    #. Utiliser le raccourci proposé par la distribution choisi pour installer Python.
+    .. faqref::
+        :tag: jupyter
+        :title: Le notebook ne répond plus
 
-    @endFAQ
-
-    @FAQ(jupyter___Le notebook ne répond plus)
-
-    On utilise les notebooks via un `navigateur web <https://fr.wikipedia.org/wiki/Navigateur_web>`_
-    mais ce n'est pas lui qui exécute le code Python, c'est un serveur.
-    Ce serveur tourne soit une machine distante, soit une machine locale.
-    Il s'agit d'une fenêtre terminale où l'on peut voir des informations
-    s'afficher à chaque qu'on ouvre, qu'on ferme, qu'on enregistre un notebook.
-    Si cette fenêtre est fermée, il n'existe plus de serveur de notebook qui
-    puisse exécuter le code inclus dans le notebook. Il ne se passe plus rien,
-    les modifications sont perdues.
-    Il faut redémarrer le serveur, qu'il soit distant ou local.
-
-    @endFAQ
+        On utilise les notebooks via un
+        `navigateur web <https://fr.wikipedia.org/wiki/Navigateur_web>`_
+        mais ce n'est pas lui qui exécute le code Python, c'est un serveur.
+        Ce serveur tourne soit une machine distante, soit une machine locale.
+        Il s'agit d'une fenêtre terminale où l'on peut voir des informations
+        s'afficher à chaque qu'on ouvre, qu'on ferme, qu'on enregistre un notebook.
+        Si cette fenêtre est fermée, il n'existe plus de serveur de notebook qui
+        puisse exécuter le code inclus dans le notebook. Il ne se passe plus rien,
+        les modifications sont perdues.
+        Il faut redémarrer le serveur, qu'il soit distant ou local.
     """
     return nb_open(filename, profile, fLOG)

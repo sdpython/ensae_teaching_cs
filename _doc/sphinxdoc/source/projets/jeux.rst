@@ -134,6 +134,16 @@ Deux questions :
 #. Démontrer que l'on peut toujours jouer.
 #. Imaginer une intelligence artificielle pour ce jeu.
 
+.. _l-jeu-pai-sho:
 
+Pai Sho (2016)
+--------------
 
+Je n'ai pas très bien compris si ce jeu avait été créé par les auteurs
+de la série animée
+`Avatar <https://fr.wikipedia.org/wiki/Avatar,_le_dernier_ma%C3%AEtre_de_l%27air>`_
+ou si ce jeu existait depuis la nuit des temps. 
+C'est un jeu de réflexion qui se joue à deux.
 
+* `How to Play the Ancient Game of Pai Sho <http://www.wikihow.com/Play-the-Ancient-Game-of-Pai-Sho>`_
+* `Official Pai Sho Rules And Gameplay <http://lyrislaser.com/wp-content/uploads/2014/08/Pai-Sho-Rules-Gameplay.pdf>`_
