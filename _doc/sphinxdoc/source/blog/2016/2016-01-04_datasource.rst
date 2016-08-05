@@ -23,7 +23,7 @@
 
     Et :
 
-    * `Quandl <http://www.quandl.com/>`_ (et son module python `quandl <https://pypi.python.org/pypi/Quandl/>`_, `quandl/API <http://pythonhosted.org//Quandl/>`_,)
+    * `quandl <http://www.quandl.com/>`_ (et son module python `quandl <https://pypi.python.org/pypi/Quandl/>`_, `quandl/API <http://pythonhosted.org//Quandl/>`_,)
     * `Datahub <https://datahub.io/dataset>`_
     * `AWS Public Data Sets <https://aws.amazon.com/datasets/>`_ (Amazon) 
       (voir `Using Public Data Sets <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-public-data-sets.html>`_ et

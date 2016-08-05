@@ -5,7 +5,7 @@
 
 .. faqref::
     :tag: windows
-    :python: Unhandled Exception: System.IO.FileLoadException when using Python.Runtime.dll with Python 3.5)
+    :title: Unhandled Exception: System.IO.FileLoadException when using Python.Runtime.dll with Python 3.5)
 
     When running for the first time on Python 3.5, the following error came up::
 

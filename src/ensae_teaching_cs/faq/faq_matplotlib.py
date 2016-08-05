@@ -82,7 +82,7 @@ def graph_ggplot_with_label(x, y, labels, bar=True, title=None, figsize=(6, 4), 
 
     .. faqref::
         :tag: matplotlib
-        :tile: Comment ajuster les labels non numériques d'un graphe ?
+        :title: Comment ajuster les labels non numériques d'un graphe ?
 
         .. index:: date, matplotlib
 
