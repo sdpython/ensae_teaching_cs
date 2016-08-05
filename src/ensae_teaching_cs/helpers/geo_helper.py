@@ -19,7 +19,7 @@ def lambert93_to_WGPS(lambertE, lambertN):
     The function is inspired from
     ` lam93toLatLon.py <https://gist.github.com/flire/0a305eeec77bc84a73af8ddc8f9ec043>`_.
 
-    .. faqreg::
+    .. faqref::
         :tag: geo
         :title: Les fichiers GEOFLA ne contiennent pas de longitude, latitude ?
 
