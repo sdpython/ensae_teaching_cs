@@ -11,13 +11,14 @@ Articles, Références, Blogs
 
 .. contents::
     :local:
+    :depth: 2
 
 
 
 .. index:: bibliographie
 
-Autres bibliographies incluses sur ce site
-++++++++++++++++++++++++++++++++++++++++++
+Bibliographies associées à chaque cours
++++++++++++++++++++++++++++++++++++++++
 
 * :ref:`Bibliographie 1A <l-td1a-biblio>` : apprendre à progroammer
 * :ref:`Bibliographie 2A <l-td2a-biblio>` : Python pour faire des statistiques
@@ -25,11 +26,13 @@ Autres bibliographies incluses sur ce site
 
 
 
-Python / Programmation
-++++++++++++++++++++++
+Autres suggestions
+++++++++++++++++++
 
-Langage Python
-^^^^^^^^^^^^^^
+Python / Programmation
+^^^^^^^^^^^^^^^^^^^^^^
+
+**Langage Python**
 
 * `Apprenez à programmer en Python <http://www.siteduzero.com/informatique/tutoriels/apprenez-a-programmer-en-python>`_ (*Vincent Le Goff*) Le livre peut être acheté où téléchargé. Le livre est bien conçu, chaque concept est expliqué de façon concise et sans interférence avec d'autres concepts. 
 * `Apprentissage de la programmation <http://inforef.be/swi/python.htm>`_ (*Gérard Swinnen*) Le livre est mise à jour de façon régulière au gré des évolutions du langages, c'est un des rares livres à survivre d'années en années.
@@ -40,14 +43,12 @@ Langage Python
 * `Anti-Patterns in Python Programming <http://lignos.org/py_antipatterns/>`_
 * `The real 10 algorithms that dominate our world <https://medium.com/@_marcos_otero/the-real-10-algorithms-that-dominate-our-world-e95fa9f16c04>`_
   
-Installation
-^^^^^^^^^^^^
+**Installation**
 
 * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
 * `Installing Scientific Packages for Python3 on MacOS 10.9 Mavericks <http://sebastianraschka.com/Articles/2014_install_python_sci_pkgs.html>`_
 
-Python dans le détail
-^^^^^^^^^^^^^^^^^^^^^^
+**Python dans le détail**
 
 * `La boîte à outils Python 2014 <http://www.hautefeuille.eu/python-tools-2014.html>`_
 * `Les recettes Python de Tyrtamos <http://python.jpvweb.com/mesrecettespython/doku.php?id=Sommaire>`_
@@ -66,16 +67,14 @@ Python dans le détail
 * `A thorough guide to SQLite database operations in Python <http://sebastianraschka.com/Articles/2014_sqlite_in_python_tutorial.html>`_
 * `One line of code cut our Flask page load times by 60% <https://medium.com/@5hreyans/the-one-weird-trick-that-cut-our-flask-page-load-time-by-70-87145335f679>`_
 
-Trucs et astuces en Python
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Trucs et astuces en Python**
 
 * `Vérification de types <http://www.xavierdupre.fr/blog/2014-08-20_nojs.html>`_
 * `Configurer IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_
 * `Test unitaires <http://sametmax.com/un-gros-guide-bien-gras-sur-les-tests-unitaires-en-python-partie-1/>`_, `partie 2 <http://sametmax.com/un-gros-guide-bien-gras-sur-les-tests-unitaires-en-python-partie-2/>`_
 * `Cheat Sheets Python <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/cheat_sheets.html>`_
 
-Livres sur la programmation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Livres sur la programmation**
 
 * `Thinking in C++ <http://mindview.net/Books/TICPP/ThinkingInCPP2e.html>`_, Bruce Eckel
 * `Effective C++ <http://www.aristeia.com/books.html>`_, Scott Meyers
@@ -88,13 +87,9 @@ Livres sur la programmation
 
 
 Machine Learning
-++++++++++++++++
+^^^^^^^^^^^^^^^^
 
-
-
-
-Machine Learning / Data Science - articles
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Machine Learning / Data Science - articles**
 
 * `Sebastian Raschka <http://sebastianraschka.com/articles.html>`_ (machine learning avec Python)
 * `Data Science with Python <http://blog.yhathq.com/posts/data-science-in-python-tutorial.html>`_
@@ -119,8 +114,7 @@ Machine Learning / Data Science - articles
 * `Sequence to Sequence Learning with Neural Networks <http://arxiv.org/pdf/1409.3215.pdf>`_, Ilya Sutskever, Oriol Vinyals, Quoc V. Le
 
 
-Livres sur le machine learning
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Livres sur le machine learning**
 
 * `Deep Learning: Methods and Applications <http://research.microsoft.com/apps/pubs/default.aspx?id=219984>`_, 
 * `Data-Intensive Text Processing with MapReduce <http://lintool.github.io/MapReduceAlgorithms/>`_, Jimmy Lin, Chris Dyer
@@ -133,28 +127,24 @@ Livres sur le machine learning
 * `Critical Mass: How One Thing Leads to Another <http://www.philipball.co.uk/index.php?option=com_content&view=article&id=15:critical-mass-how-one-thing-leads-to-another&catid=3:books&Itemid=4>`_, Philip Ball
 
 Mathématiques
-+++++++++++++
+^^^^^^^^^^^^^
 
-Optimisation
-^^^^^^^^^^^^
+**Optimisation**
 
 * module `cvxopt <http://cvxopt.org/>`_
 * `Introduction à l'optimisation - 2e édition <http://www.editions-ellipses.fr/product_info.php?products_id=8830>`_ (*Jean-Christophe Culioli*)
 * `Numerical Optimization <http://www.ece.northwestern.edu/~nocedal/book/num-opt.html>`_, (*Jorge Nocedal, Stephen J. Wright*)
 * `Convex Optimization: Algorithms and Complexity <http://arxiv.org/abs/1405.4980>`_, (`Sébastien Brubeck <https://blogs.princeton.edu/imabandit/>`_)
 
-Times Series
-^^^^^^^^^^^^
+**Times Series**
 
 * `Forecasting: principles and practice <https://www.otexts.org/fpp>`_
 
 
 Enseignements
-+++++++++++++
+^^^^^^^^^^^^^
 
-
-Liens variés
-^^^^^^^^^^^^
+**Articles**
 
 * `Why Do Americans Stink at Math? <http://www.nytimes.com/2014/07/27/magazine/why-do-americans-stink-at-math.html>`_
 * `Python is Now the Most Popular Introductory Teaching Language at Top U.S. Universities <http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-us-universities/fulltext>`_
@@ -163,8 +153,7 @@ Liens variés
 * `Scratch <http://scratch.mit.edu/>`_
 
 
-MOOC, cours, Lectures
-^^^^^^^^^^^^^^^^^^^^^
+**MOOC, cours, Lectures**
 
 * `CS 188: Artificial Intelligence (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/lectures.html>`_
 * `Stanford From Languages to Information <https://web.stanford.edu/class/cs124/>`_  Dan Jurafsky 
@@ -175,8 +164,7 @@ MOOC, cours, Lectures
 * `Python en Prépas <http://prepas.org/ups.php?article=394>`_
 
 
-Vidéo, tutorial
-^^^^^^^^^^^^^^^
+**Vidéo, tutorial**
 
 * `PyData channel <https://vimeo.com/channels/pydata>`_
 * `PyCon 2014 <https://www.youtube.com/user/PyCon2014>`_
@@ -193,10 +181,9 @@ Question des élèves
 
 
 Exercices, Puzzle
-+++++++++++++++++
+^^^^^^^^^^^^^^^^^
 
-Articles de blog
-^^^^^^^^^^^^^^^^
+**Articles de blog**
 
 * **Algorithmes**
     * `Résoudre un sudoku avec Excel et VBA <http://www.xavierdupre.fr/blog/2014-02-08_nojs.html>`_
@@ -216,8 +203,7 @@ Articles de blog
 * **ENSAE**
     * `Quelques précisions sur les projets informatiques (finance) <http://www.xavierdupre.fr/blog/2014-04-05_nojs.html>`_
     
-Exemples de code
-^^^^^^^^^^^^^^^^
+**Exemples de code**
 
 * `fusionner deux tableaux <http://www.xavierdupre.fr/blog/2013-11-21_nojs.html>`_
 * `compter les fréquences de lettres et de couples de lettres <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_

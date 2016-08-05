@@ -37,7 +37,8 @@ TD - les bases
 ==============
 
 Ce cours s'étale sur 12 séances de travaux dirigés (TD) d'une durée de 2h. Le cours est décrit plus 
-en détail dans cette présentation : `ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_.
+en détail dans cette présentation : 
+`ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_. |slideslogo|
 Les six premières séances font les éléments de syntaxe propres à 
 la `programmation impérative <https://fr.wikipedia.org/wiki/Programmation_imp%C3%A9rative>`_.
 

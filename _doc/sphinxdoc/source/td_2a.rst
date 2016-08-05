@@ -33,7 +33,7 @@ possible de gérer l'ensemble des traitements appliqués aux données, depuis
 le traitements des sources de données jusqu'à leur visualisation sans changer de langage.
 
 La présentation 
-`ENSAE 2A - Données, Machine Learning et Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_
+`ENSAE 2A - Données, Machine Learning et Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_ |slideslogo|
 donne un aperçu des thèmes abordés. La page :ref:`Python pour Data Scientist <l-data2a>` 
 liste les différents modules proposés lors de ce cours.
 Le cours est évalué avec un :ref:`projet informatique <l-projinfo2a>`.
@@ -330,6 +330,15 @@ Bibliographie
 * `Introduction to Algorithms <http://mitpress.mit.edu/books/introduction-algorithms>`_, Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest and Clifford Stein
 * `The Algorithm Design Manual <http://www.algorist.com/>`_, Steven S. Skiena
 * `Competitive Programming <http://www.comp.nus.edu.sg/~stevenha/myteaching/competitive_programming/cp1.pdf>`_, Steven Halim
+
+**Livres sur la programmation**
+
+* `High Performance Python <http://shop.oreilly.com/product/0636920028963.do>`_, Micha Gorelick, Ian Ozsvald.
+   Le livre est très bien conçu et les exemples sont très clairs. Si vous souhaitez accélérer un programme Python
+   en utilisant le multithreading, `OpenMP <http://openmp.org/wp/>`_, 
+   `Numba <http://numba.pydata.org/>`_, `Cython <http://cython.org/>`_
+   `PyPy <http://cython.org/>`_, ou `CPython <https://en.wikipedia.org/wiki/CPython>`_, 
+   je recommande d'y jeter un coup d'oeil d'abord.
 
 **Liens**
 

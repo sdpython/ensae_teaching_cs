@@ -15,10 +15,14 @@ Il existe trois formats disponibles :
 `blanc <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_,
 `bleu <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
 Les changements importants sont notés sur le :ref:`blog <ap-main-0>` 
-associé à ce cours, les autres :ref:`l-completed-todolist`.
+associé à ce cours, les autres :ref:`l-completed-todolist`, les améliorations envisagées
+:ref:`l-issues-todolis`.
 
 .. |gitlogo| image:: _static/git_logo.png
              :height: 20
+             
+.. |slideslogo| image:: _static/slides_logo.png
+             :height: 20             
 
 Avant-propos
 ------------

@@ -77,14 +77,22 @@ ENSAE 1A - Programmation
         
 .. revealjs:: 
 
+    .. revealjs:: Poins importants
+    
+        * Contenu
+        * Evaluation
+        * Python
+
     .. revealjs:: Semestre 1 
     
         Cette partie est obligatoire.
     
-            * 6 séances d'initiation à la programmation
+            * 6 séances d'initiation à la programmation,
+              programme différiencié selon les niveaux
             * 3 séances sur 3 algorithmes classiques
             * 3 séances sur des outils pour manipuler des données
             * 1 séance notée (la dernière)
+              `examens passés <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/exams.html>`_
 
         **Plan complet des séances**
         
@@ -92,41 +100,45 @@ ENSAE 1A - Programmation
         `tablette <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/td_1a.html#l-td1a>`_,
         `portable <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_1a.html#l-td1a>`_
         
-        Chaque vendredi à 16h30 du 4 septembre au 11 décembre excepté le 18/09 (WEI), 30/10 (Toussaint), et le 13/11.
+        Chaque vendredi à 16h30 de septembre à décembre excepté pendant les vacances.
 
     .. revealjs:: Semestre 2
     
         - Cette partie est facultative.
     
-            * `sujets <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/projet_info_1A.html>`_
-            * votre sujet est le bienvenu.
-            * `examens passés <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/exams.html>`_
+            * `base de sujets <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/projet_info_1A.html>`_
+              à adapter selon vos envies
+            * votre sujet est le bienvenu
             
         - Le projet permet de découvrir :
         
             * le travail de façon plus autonome
             * le travail collectif
-            
-        - C'est l'occasion de s'exercer sur un sujet qui vous plaît.
+            * des aspects de génie logiciel
+            * les erreurs numériques
 
 
     .. revealjs:: Evaluation
     
         * Semestre 1 (obligatoire)
         
-            * 3 interrogations écrites de 20 minutes sur 5 points
-            * 1 séance notée sur 20 points
+            * 2 `interrogations écrites <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/i_exams.html#interrogations-rapides>`_
+              de 15 minutes sur 5 points
+            * L'`étude d'un algorithme en binôme <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/i_exams_algo_1a.html>`_
+              sur 5 points.
+            * 1 `séance notée <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/i_exams.html#seances-notees>`_ 
+              sur 20 points
             
         * Semestre 2 (facultatif)
         
             * 1 projet informatique de 1 ou 2 élèves évalué avec
-              un programme, un rapport et une soutenance
-            * Le projet doit inclure une partie mathématique, statistique ou économique
+              un programme, un rapport et une soutenance.
+            * Le projet doit inclure une partie numérique (mathématique, statistique ou économique).
             * `Barême indicatif <http://www.xavierdupre.fr/site2013/enseignements/bareme-2014.html>`_
     
     .. revealjs:: Notebooks
     
-        Le cours utilise les `notebooks <http://jupyter.org/notebook.html>`_.
+        Le cours utilise principalement les `notebooks <http://jupyter.org/notebook.html>`_.
         
         .. image:: _static/notsnap.png        
         
@@ -135,14 +147,11 @@ ENSAE 1A - Programmation
         
     .. revealjs:: Liens
 
-        * `Contenu du cours <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/>`_ 
-          (rendu `2 <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_ 
-          et `3 <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_)
+        * `Contenu du cours <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/>`_ 
+          (rendu `1 <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_ 
+          et `2 <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_)
         * `Blog <http://www.xavierdupre.fr/blog/xd_blog_nojs.html>`_
         * `Bibliographie <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/biblio.html>`_
-        * `Apprentissage de la programmation <http://inforef.be/swi/python.htm>`_ de Gérard Swinnen
-        * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
-        * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
         * `xavierdupre.fr <http://www.xavierdupre.fr/>`_
 
 .. revealjs:: 
@@ -157,6 +166,7 @@ ENSAE 1A - Programmation
         * Il permet de nombreux usages (calcul scientifique, programmation, web, jeux).
         * Sa syntaxe est l'une des plus simples.
         * Il est en pleine expansion, notamment pour le machine learning.
+        * Il est mentionné sur les offres d'emploi.
         
     .. revealjs:: Data Scientist
     
@@ -165,34 +175,29 @@ ENSAE 1A - Programmation
         * Plus d'options pour traiter les gros jeux de données (> 1 Go)
         * Plus d'options de visualisation
         * Python est très actif. Sa croissance est plus rapide que celle de R.
-        * voir `Python pour un Data Scientist <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/data2a.html>`_
         
     .. revealjs:: Les difficultés de l'apprentissage
     
-        * La programmation est abstraite. 
-        * Il n'existe pas de façon évidente de représenter un algorithme ou un raisonnement.
-        * Les programmes sont un long empilement de choses simples. 
-        * L'objectif est souvent simple à résumer, la méthode moins.
+        * La programmation est **abstraite**.
+          Il n'existe pas de façon évidente de représenter un algorithme ou un raisonnement.
+        * Les programmes sont un **long empilement de choses simples**.
+          L'objectif est souvent simple à résumer, la méthode moins.
         * Il existe beaucoup de bonnes pratiques qu'on adopte souvent après avoir fait le contraire.
-        * On ne programme pas de la même façon après le projet informatique.
+          On ne programme pas de la même façon après le projet informatique.
+          **Faire des erreurs, c'est apprendre.**
         
     .. revealjs:: Les supports de cours
     
-        * `Les énoncés des séances <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_1a.html>`_
-        * `Examples de code <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/exemple_index.html>`_
+        * `Les énoncés des séances <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_1a.html>`_
+        * `Examples de code <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/exemple_index.html>`_
         * `Résumé de la syntaxe Python <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_
         * `FAQ <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/all_FAQ.html>`_
-        * `Examens passés <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/exams.html>`_
+        * `Examens passés <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/exams.html>`_
         
-    .. revealjs:: Pour aller plus loin
+    .. revealjs:: L'objectif à atteindre
     
-        * `Coding Party à l'ENSAE <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/coding_party.html>`_
-          ou `Data Science Game 2015 <http://www.datasciencegame.com/>`_
-        * `Modules et outils pour développer <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/manytools.html>`_
-        * `Articles, Références, Blogs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/biblio.html>`_
-        * `Données, Machine Learning et Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_2a.html>`_ (2A)
-        * compétition : `Data Science en exemples <http://datascience.net/fr/challenge>`_,
-          `Kaggle <https://www.kaggle.com/>`_ 
+        * `datascience.net <http://datascience.net/fr/challenge>`_
+        * `Kaggle <https://www.kaggle.com/>`_ 
 
 
 .. revealjs:: 
@@ -249,7 +254,7 @@ ENSAE 1A - Programmation
         On n'écrit pas de modules ou de grands programmes dans un notebook. Il faut un éditeur.
         Il existe de nombreuses options :
             
-            * `éditeurs, outils <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/devtools.html#l-devtools>`_
+            * `éditeurs, outils <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/devtools.html#l-devtools>`_
         
         La version gratuite de `PyCharm <http://www.jetbrains.com/pycharm/>`_ contient tout ce qu'il faut.
         Il détecte quelques erreurs avant l'exécution.
@@ -284,12 +289,12 @@ ENSAE 1A - Programmation
         * `C++ <http://fr.wikipedia.org/wiki/C%2B%2B>`_, `C <http://fr.wikipedia.org/wiki/C_(langage)>`_ : finance (2A)
         * `C# <http://fr.wikipedia.org/wiki/C_sharp>`_ : finance, actuariat, les nouveaux projets démarrent plus souvent en C# qu'en C++ (3A)
         * `java <http://fr.wikipedia.org/wiki/Java_(langage)>`_ : Big Data, calcul distribué poussé (3A)
-        * `PIG <http://pig.apache.org/>`_ : Big Data, Map Reduce, calcul distribué (3A)
+        * `Python <https://www.python.org/>`_ : web, startup, machine learning, ... (1A, 2A, 3A)
         * `R <http://www.r-project.org/>`_ : recherche, actuariat, statistiques... (1A)
         * `SAS <http://www.sas.com/offices/europe/france/>`_ : actuariat, grosses entreprises (1A)
+        * `Spark SQL <http://spark.apache.org/sql/>`_ : bientôt partout (3A)
         * `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_ : partout (1A)
         * `VBA <http://fr.wikipedia.org/wiki/Visual_Basic_for_Applications>`_ : Excel (et quand on n'a pas le choix) (2A)
-        * `Python <https://www.python.org/>`_ : web, startup, machine learning, ... (1A, 2A, 3A)
 
     .. revealjs:: D'autres langages
     
@@ -297,6 +302,7 @@ ENSAE 1A - Programmation
         
         * `Clojure <http://fr.wikipedia.org/wiki/Clojure>`_ : langage fonctionnel
         * `Erlang <http://fr.wikipedia.org/wiki/Erlang_(langage)>`_ : message facebook, service internet ne pouvant pas s'arrêter
+        * `Go <https://golang.org/>`_ : Google
         * `HTML <http://fr.wikipedia.org/wiki/Hypertext_Markup_Language>`_ : internet (pas vraiment un langage)
         * `javascript <http://fr.wikipedia.org/wiki/JavaScript>`_ : application web, internet
         * `Objective-C <http://fr.wikipedia.org/wiki/Objective-C>`_ : application iPhone
@@ -308,44 +314,11 @@ ENSAE 1A - Programmation
         Le contenu est disponible sur `GitHub <https://github.com/sdpython>`_ :
         
             * `ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs/>`_
+            * `autres modules <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/ci_status.html>`_
             
-        Autres modules :
+        .. image:: _static/fork.png 
         
-            * `pyensae <https://github.com/sdpython/pyensae/>`_
-            * `pyquickhelper <https://github.com/sdpython/pyquickhelper/>`_
-            * `pymyinstall <https://github.com/sdpython/pymyinstall/>`_        
-            * `actuariat_python <https://github.com/sdpython/actuariat_python/>`_        
-            
-        Vous pouvez participer.
-
-.. revealjs:: 
-
-    .. revealjs:: Evaluer votre niveau
-    
-        #. Vous considérez le HTML comme un langage de programmation.
-        #. Vous adorez les `puzzles probabilistes <http://www.agenarisk.com/resources/probability_puzzles/Making_sense_of_probability.html>`_.
-        #. Vous avez déjà programmé.
-        #. Vous pensez que la programmation requiert de l'imagination.
-        #. Vous préférez le clavier QWERTY plutôt qu'AZERTY.
-            
-    .. revealjs:: The Bug
-        
-        Un `bug <http://fr.wikipedia.org/wiki/Bug_(informatique)>`_, c'est tout ce qui sépare
-        votre idée de votre programme. 
-        
-        La première est parfaite, le second l'est moins.
-        
-        **Que faire ?**
-        
-        * fuire
-        * demander de l'aide au prof
-        * réciter une incantation magique
-        * chercher la cause ?
-        
-    .. revealjs:: L'image d'un bug
-                
-        .. image:: _static/bug.png
-
+        .. image:: _static/edit.png
 
     .. revealjs:: Points difficiles quand on débute
     
@@ -358,28 +331,9 @@ ENSAE 1A - Programmation
           avant la septième séance 
         * crier au secours avant la septième séance (bien avant)
 
-
-    .. revealjs:: Points difficiles quand on a déjà programmé
-    
-        croire qu'on n'a plus rien à faire
-        
-        **défi**
-        
-        * choisir un algorithme dans cette liste
-          `survol algorithmique <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/specials/algorithm_culture.html#l-algoculture>`_
-          et le comprendre, voire l'implémenter
-
-
-    .. revealjs:: Points difficiles quand on est un geek
-    
-        la volonté de tout refaire par soi-même
-        
-        **défi**
-        
-        créer son propre module python et le mettre sur `GitHub <https://github.com/>`_
-        
-        `liste de modules <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/data2a.html#modules-python>`_
-
+    .. revealjs:: L'image d'un bug
+                
+        .. image:: _static/bug.png
 
 .. revealjs:: 
     
@@ -391,18 +345,8 @@ ENSAE 1A - Programmation
         * Les données n'attendent que vous.
         * `Evénements, ressources <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/ressources.html>`_
         * Liberté individuelle, liberté numérique
-    
-    .. revealjs:: Quelques jeux...
-    
-        pour comprendre ce qu'est un algorithme
-    
-        * `Trouver 4 cartes manquantes <http://lesenfantscodaient.fr/sanso_algo/tri.html>`_
-        * `Tri sur une rangée <http://lesenfantscodaient.fr/sanso_algo/tri.html>`_
-        * `Les oranges <http://lesenfantscodaient.fr/sanso_algo/orange.html>`_
-        * `Le jeu de l'échiquier <http://lesenfantscodaient.fr/programmation/parcours_echiquier.html#l-prog-parcours-echiquier>`_
-        * `L'énigme de Harry Potter (tome 1) <http://lesenfantscodaient.fr//sanso_algo/demineur.html#a-quoi-ca-sert>`_
-        
-        
+        * `Pokémon Go <http://www.pokemongo.com/>`_
+            
         
 .. revealjs:: Pour finir...
 
@@ -410,8 +354,9 @@ ENSAE 1A - Programmation
     
     `Le dessert de la cantine <http://lesenfantscodaient.fr/donnees/dessert_cantine.html?highlight=cantine>`_
     
-    Composition des groupes.
-    
+.. revealjs:: Du motif aux mots
+
+    * `Le jeu de l'échiquier <http://lesenfantscodaient.fr/programmation/parcours_echiquier.html#l-prog-parcours-echiquier>`_
 
 .. revealjs:: Le grand fossé
 
@@ -424,7 +369,18 @@ ENSAE 1A - Programmation
     Cette devinette algorithmique est tirée d'une compétition 
     `google code jam <https://code.google.com/codejam/contest/6234486/dashboard#s=p0>`_.
 
-        
-        
+.. revealjs:: Algorithme dans un site web
 
+    Histoire autour d'un système de complétion, mesure, impact, test A/B, économie.
     
+    .. image:: http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/_images/wiki.png
+
+.. revealjs:: Algorithme en binôme
+
+    `Etude d'un algorithme en binôme <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/i_exams_algo_1a.html>`_
+    
+    * Objectif
+    * Aspects algorithmique, économique
+    * Travail à rendre
+    * Répartition en deux groupes
+
