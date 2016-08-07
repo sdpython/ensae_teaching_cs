@@ -165,7 +165,7 @@ Glossaire
         On dit qu'un type est **immutable** s'il ne peut être modifié. Un
         tuple est **immutable**, c'est un tableau dont on ne peut pas changer les 
         éléments contrairement à une liste. Voir aussi
-        :ref:`lm-Quest-cequuntypeimmuableouimmutable`, 
+        :ref:`Qu'est-ce qu'un type immuable ou immutable ? <faq-py-immutable>`, 
         :ref:`question_1A_2014_1`.
         
     Internet Of Things

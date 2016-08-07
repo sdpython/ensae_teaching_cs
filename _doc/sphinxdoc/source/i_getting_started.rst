@@ -265,7 +265,7 @@ Distributions
   `How To Make WinPython <https://github.com/winpython/winpython/wiki/How-To-Make-WinPython>`_.
   
 * Distribution officielle de `python <https://www.python.org/>`_, il faut ensuite 
-  installer de nombreux modules (voir :ref:`l-data2a`) pour obtenir
+  installer de nombreux modules (voir :ref:`l-data2amod`) pour obtenir
   une distribution équivalente aux deux précédentes.
   
 * `Miniconda <http://conda.pydata.org/miniconda.html>`_ est une version light de Anaconda
@@ -569,10 +569,12 @@ Autres sources d'inspiration :
 - `PyData TV <https://www.youtube.com/user/PyDataTV>`_
 
 
-.. index:: wheel
+.. _l-data2amod:
 
-Modules Python
-++++++++++++++
+Liste exhaustive de modules Python
+++++++++++++++++++++++++++++++++++
+
+.. index:: wheel
 
 Les modules suivant font partie du setup proposé aux étudiants (voir plus bas).
 
@@ -606,5 +608,5 @@ Les modules suivant font partie du setup proposé aux étudiants (voir plus bas)
            du module
            `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/>`_.
            La construction du setup prend quelques heures et inclut les modules
-           listés répertoriés par :ref:`l-data2a`.
+           listés répertoriés par :ref:`l-data2amod`.
            

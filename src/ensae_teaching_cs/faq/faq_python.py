@@ -194,6 +194,7 @@ def same_variable(a, b):
     .. faqref::
         :tag: python
         :title: Qu'est-ce qu'un type immuable ou immutable ?
+        :lid: faq-py-immutable
 
         Une variable de type *immuable* ne peut être modifiée. Cela concerne principalement :
 

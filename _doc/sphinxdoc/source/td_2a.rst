@@ -34,8 +34,7 @@ le traitements des sources de données jusqu'à leur visualisation sans changer 
 
 La présentation 
 `ENSAE 2A - Données, Machine Learning et Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_ |slideslogo|
-donne un aperçu des thèmes abordés. La page :ref:`Python pour Data Scientist <l-data2a>` 
-liste les différents modules proposés lors de ce cours.
+donne un aperçu des thèmes abordés.
 Le cours est évalué avec un :ref:`projet informatique <l-projinfo2a>`.
 
 

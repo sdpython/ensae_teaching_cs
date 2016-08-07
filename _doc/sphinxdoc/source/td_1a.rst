@@ -186,6 +186,7 @@ en est l'illustration.
 
     questions/question_2014
 
+.. _l-entretiens:
 
 **Entretiens d'embauche**
 
@@ -309,7 +310,7 @@ Bibliographie
 * `Exercices de programmation <http://www.xavierdupre.fr/blog/2014-03-22_nojs.html>`_
 * `De l'idée au programme informatique <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_
 * `Questions Fréquentes <https://docs.python.org/3/faq/index.html>`_
-* :ref:`l-FAQ`
+* :ref:`l-FAQs`
 * :ref:`l-glossary`
 * :ref:`l-questions`
 * `Débugger en Python <http://www.xavierdupre.fr/blog/2014-06-02_nojs.html>`_
