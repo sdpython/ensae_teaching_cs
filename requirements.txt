@@ -1,5 +1,6 @@
 ansiconv
 autopep8
+azure
 beautifulsoup4
 bqplot
 brewer2mpl
