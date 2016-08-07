@@ -1,3 +1,4 @@
+pyquickhelper
 pyensae
 pymmails
 pymyinstall
