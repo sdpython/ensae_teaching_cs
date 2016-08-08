@@ -1,7 +1,7 @@
 
 
 .. blogpost::
-    :title: Un libre intéressant
+    :title: Un livre intéressant
     :keywords: 
     :date: 2016-08-05
     :categories: livres

@@ -175,6 +175,8 @@ utilisée par Ariane Espace le sont. On rentre dans le domaine des mathématique
 * `Mechanized Formal Semantics and Verified Compilation for C++ Objects <http://gallium.inria.fr/~tramanan/cxx/>`_, Tahina Ramananandro
 * `Frama-C <http://frama-c.com/index.html>`_
 * `Static Source Code Analysis Tools for C <http://www.spinroot.com/static/>`_
+* `Microsoft Z3Prover <https://github.com/Z3Prover/z3>`_ (Python + C++), 
+  `Microsoft Ivy <https://github.com/Microsoft/ivy>`_
 
 Ces outils ne s'appliquent pas aux langages faiblement typés.
 Ils s'intéressent entre autres aux erreurs d'arrondis.
