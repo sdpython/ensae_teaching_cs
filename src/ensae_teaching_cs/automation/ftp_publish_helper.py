@@ -125,11 +125,13 @@ def publish_documentation(
 
     params = {"ftpsite": ftpsite,
               "login": login,
-              "password": password,
-              }
+              "password": password}
 
     nbnone = len([v for k, v in params.items() if v is None or len(v) == 0])
     if nbnone > 0:
+        fLOG("retrying to get parameters from users")
+        for k, v in sorted(params.items()):
+            fLOG("  {0}={1}".format(k, v))
         params = open_window_params(
             params,
             title="Website and Credentials",
