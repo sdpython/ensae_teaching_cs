@@ -1,5 +1,5 @@
 
-.. _ci_status:
+.. _ci-status:
 
 
 
@@ -243,68 +243,69 @@ Tableau de bord
 Automatisation
 ++++++++++++++
 
-`pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
+.. list-table::
+    :widths: 5 15
+    :header-rows: 1
 
-Génère la documentation associé à ce site, surcouche sur `sphinx <http://www.sphinx-doc.org/en/stable/>`_.
-Le module propose également différentes fonctions pour synchroniser des répertoires,
-exécuter les tests unitaires ou 
-uploader des fichiers en FTP (publication de ce site), quelques outils 
-pour `Jupyter <http://jupyter.org/>`_ ou `Jenkins <https://jenkins.io/>`_.
-
-`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
-
-Le module sert avant tout à installer plusieurs centaines de modules avec peu d'instructions,
-quelques outils comme `Scite <http://www.scintilla.org/SciTE.html>`_ ou 
-`Graphviz <http://www.graphviz.org/>`_.
-Il sert aussi à fabriquer un setup.
-
-`pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/index.html>`_
-
-J'ai reçu plus de 120 projets par mail durant l'année 2015-2016 pour plus de 220 élèves.
-Je ne plus plus grand chose manuellement. Ce module s'occupe de télécharger tous les projets
-depuis une boîte mail ou d'envoyer des séries de mails de façon automatiser.
+    * - module
+      - description
+    * - `pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/index.html>`_
+      - J'ai reçu plus de 120 projets par mail durant l'année 2015-2016 pour plus de 220 élèves.
+        Je ne plus plus grand chose manuellement. Ce module s'occupe de télécharger tous les projets
+        depuis une boîte mail ou d'envoyer des séries de mails de façon automatiser.
+    * - `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
+      - Le module sert avant tout à installer plusieurs centaines de modules avec peu d'instructions,
+        quelques outils comme `Scite <http://www.scintilla.org/SciTE.html>`_ ou 
+        `Graphviz <http://www.graphviz.org/>`_.
+        Il sert aussi à fabriquer un setup.
+    * - `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
+      - Génère la documentation associé à ce site, surcouche sur `sphinx <http://www.sphinx-doc.org/en/stable/>`_.
+        Le module propose également différentes fonctions pour synchroniser des répertoires,
+        exécuter les tests unitaires ou 
+        uploader des fichiers en FTP (publication de ce site), quelques outils 
+        pour `Jupyter <http://jupyter.org/>`_ ou `Jenkins <https://jenkins.io/>`_.
+    * - `pyrsslocal <http://www.xavierdupre.fr/app/pyrsslocal/helpsphinx/index.html>`_
+      - Récupération de flux RSS.
 
 Outils
 ++++++
 
-`python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
+.. list-table::
+    :widths: 5 15
+    :header-rows: 1
 
-Modèle de module Python utilisé pour ce cours. C'est un module vide facile à adapter.
-
-`pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
-
-Fonctionnalité uilisé pour un ENSAE ou plus généralement pour un datascientist,
-récupération de données, commandes magiques, échanges avec un cluster HADOOP
-depuis un notebook, quelques graphes.
-
-`pyrsslocal <http://www.xavierdupre.fr/app/pyrsslocal/helpsphinx/index.html>`_
-
-Récupération de flux RSS.
+    * - module
+      - description
+    * - `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
+      - Fonctionnalités uilisées par un ENSAE ou plus généralement pour un datascientist,
+        récupération de données, commandes magiques, échanges avec un cluster HADOOP
+        depuis un notebook, quelques graphes.
+    * - `python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
+      - Modèle de module Python utilisé pour ce cours. C'est un module vide facile à adapter.
 
 Contenu
 +++++++
 
+.. list-table::
+    :widths: 5 15
+    :header-rows: 1
 
-`jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
-
-Présentations sous formes de notebooks données lors de conférences ou de cours.
-
-`mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
-
-Contenu plus théorique associé à la datascience.
-
-`ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_
-
-Contenu des enseignements donnés à l'ENSAE.
-Le module inclut également des fonctions d'automatisation et des morceaux de codes
-illustrant des exercices (voir :ref:`modindex`).
-
-`actuariat_python <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_
-
-Contenu des enseignemetns donnés à l'Institut des Actuaires.
-
-`code_beatrix <http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/index.html>`_
-
-Contenu des jeux et exercices pour les enfants.
-
-
+    * - module
+      - description
+    * - `actuariat_python <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_
+      - Contenu des enseignements donnés à l'Institut des Actuaires.
+    * - `code_beatrix <http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/index.html>`_
+      - Contenu des jeux et exercices pour les enfants disponible
+        à `lesenfantscodaient.fr <http://lesenfantscodaient.fr/>`_.
+        Ce sont des jeux pour apprendre à programmer avec ou sans ordinateurs
+        et que j'utilise parfois durant les cours avec les plus grands.
+    * - `jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
+      - Présentations sous formes de notebooks données lors de conférences ou de cours.
+    * - `mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
+      - Contenu plus théorique associé à la datascience, au machine learning,
+        au traitement naturel du langage. Avec un peu plus de démonstrations
+        mathématiques que dans les autres modules.
+    * - `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_
+      - Contenu des enseignements donnés à l'ENSAE.
+        Le module inclut également des fonctions d'automatisation et des morceaux de codes
+        illustrant des exercices (voir :ref:`modindex`).

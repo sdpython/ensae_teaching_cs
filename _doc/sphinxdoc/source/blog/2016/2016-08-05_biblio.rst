@@ -12,8 +12,7 @@
     `Numba <http://numba.pydata.org/>`_, `Cython <http://cython.org/>`_
     `PyPy <http://cython.org/>`_, ou `CPython <https://en.wikipedia.org/wiki/CPython>`_, 
     je recommande d'y jeter un coup d'oeil d'abord.
-
     L'autre livre est réservé à un usage spécifique mais 
-    le titre est sumpathique :
+    le titre est sympathique :
     `Violent Python <http://store.elsevier.com/Violent-Python/TJ-OConnor/isbn-9781597499576/>`_.
     Pour ceux qui veulent jouer avec le wifi, les antivirus...

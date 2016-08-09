@@ -133,28 +133,14 @@ nécessitent un compilateur C++.
 
     
 
-Extensions maison
-^^^^^^^^^^^^^^^^^
+Dépendences et automatisation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ces cours représentent plus de 60 heures de cours et travaux pratiques suivis
 par plus de 200 élèves de l'ENSAE répartis sur trois années, la réception d'une centaine
 de projets. Cela nécessite un peu d'automatisation implémentée en Python
-car il est facile de créer et de partager ses propres librairies.
-`pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/>`_  automatise la création de ce site web,
-`pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_ offre des fonctions développées pour les 
-travaux pratiques et aux projets informatiques. 
-`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/>`_ facilite la mise à jour des modules
-et la création d'un setup dédié. 
-`pyrsslocal <http://www.xavierdupre.fr/app/pyrsslocal/helpsphinx/>`_ est un lecteur très léger de flux RSS pour s'abonner
-aux blogs du cours.
-`ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_ contient ces enseignements 
-compilés aussi sous forme de module. 
-`ensae_projects <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_ fut démarré à l'occasion d'un hackathon
-et cherche encore son chemin. 
-`actuariat_python <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_ contient d'autres notebooks
-proposés dans la formation `Data Science <http://www.institutdesactuaires.com/gene/main.php?base=943>`_ à la 
-maison des actuaires.
-Et `code_beatrix <http://lesenfantscodaient.fr/>`_ pour découvrir les algorithmes et la programmation.
+mise à disposition sous forme de modules :ref:`listes des dépendances <ci-status>`.
+
 
 
 En diagonal

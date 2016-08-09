@@ -72,7 +72,8 @@ Suggestions d'articles
 * `Dimension Independent Matrix Square using MapReduce (DIMSUM) <http://stanford.edu/~rezab/papers/dimsum.pdf>`_
 * `A Fast Parallel Stochastic Gradient Method for Matrix Factorization in Shared Memory Systems <http://jmlr.org/papers/v17/15-471.html>`_
 * `Asynchronous Methods for Deep Reinforcement Learning <http://arxiv.org/pdf/1602.01783.pdf>`_
-
+* `Parallelizing Word2Vec in Shared and Distributed Memory <http://arxiv.org/abs/1604.04661>`_
+* `Exploiting Multiple Levels of Parallelism in Sparse Matrix-Matrix Multiplication <http://arxiv.org/abs/1510.00844>`_
 
 
 Nous vous recommandons d'adopter la démarche suivante:
