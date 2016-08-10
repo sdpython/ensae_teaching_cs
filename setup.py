@@ -184,11 +184,11 @@ if is_local() and "build_sphinx" not in sys.argv and \
         sys.argv, __file__, project_var_name,
         unittest_modules=["pyquickhelper"],
         additional_notebook_path=["pyquickhelper", "pymmails",
-                                  "pyensae", "pyrsslocal", "pymyinstall"],
+                                  "pyensae", "pyrsslocal", "pymyinstall", "mlstatpy"],
         requirements=["pyquickhelper", "pymmails",
-                      "pyensae", "pyrsslocal", "pymyinstall"],
+                      "pyensae", "pyrsslocal", "pymyinstall", "mlstatpy"],
         additional_local_path=["pyquickhelper", "pymmails",
-                               "pyensae", "pyrsslocal", "pymyinstall"],
+                               "pyensae", "pyrsslocal", "pymyinstall", "mlstatpy"],
         blog_list=os.path.abspath(os.path.join(
             "src", project_var_name, package_data[project_var_name][0])),
         fLOG=logging_function)
@@ -604,5 +604,6 @@ if not r:
             install_requires=[
                 "pyquickhelper", "pyensae", "pymyinstall", "pymmails",
                 "scikit-learn", "pyrsslocal", "pandas", "numpy",
-                "matplotlib", "ipython", "cvxopt", "jupyter"],
+                "matplotlib", "ipython", "cvxopt", "jupyter"m
+                "mlstatpy"],
         )
