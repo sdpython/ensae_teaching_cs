@@ -604,6 +604,6 @@ if not r:
             install_requires=[
                 "pyquickhelper", "pyensae", "pymyinstall", "pymmails",
                 "scikit-learn", "pyrsslocal", "pandas", "numpy",
-                "matplotlib", "ipython", "cvxopt", "jupyter"m
+                "matplotlib", "ipython", "cvxopt", "jupyter",
                 "mlstatpy"],
         )
