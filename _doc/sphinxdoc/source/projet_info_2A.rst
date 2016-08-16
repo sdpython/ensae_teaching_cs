@@ -21,6 +21,10 @@ et `Using a Kaggle contest as a term project <http://www.kaggle.com/forums/t/274
 Les règles peuvent varier d'un projet à l'autre, prenez soin de les lire avant de choisir un projet
 car on ne peut pas tout faire avec les données disponibles sur ce site.
 
+Les publications scientifiques mettent parfois leurs données à dispositions :
+
+* `Patient Risk Stratiﬁcation with Time-Varying Parameters: A Multitask Learning Approach <http://www.jmlr.org/papers/volume17/15-177/15-177.pdf>`_
+* `Trend Filtering on Graphs <http://www.jmlr.org/papers/volume17/15-147/15-147.pdf>`_
 
 
 

@@ -46,6 +46,7 @@ D'autres idées avec d'autres lectures :
 * `10 Common Misconceptions about Neural Networks <http://www.stuartreid.co.za/misconceptions-about-neural-networks/>`_
 * `Algorithmic trading system requirements <http://www.stuartreid.co.za/algorithmic-trading-system-requirements-post/>`_
 * `et d'autres articles de Stuart Reid <http://www.stuartreid.co.za/one-year-later-metapost-computational-finance-blog/>`_
+* `OLPS:AToolboxforOn-LinePortfolioSelection <http://www.jmlr.org/papers/volume17/15-317/15-317.pdf>`_ *(2016/08)*
 
 .. _l-fi-trend:
 
