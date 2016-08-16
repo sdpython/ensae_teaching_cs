@@ -142,5 +142,10 @@ def check_encoding(file):
     @param      file        file to check
     """
     f = open(file, "r")
-    f.read()
+    try:
+        f.read()
+    except Exception as e:
+        size = os.stat(file).st_size
+        raise Exception(
+            "issue with file (size {1})\n  File \"{0}\", line 1".format(file, size)) from e
     f.close()
