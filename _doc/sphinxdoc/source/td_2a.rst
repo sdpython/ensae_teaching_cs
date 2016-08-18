@@ -32,6 +32,9 @@ pour les scientifiques et comme c'est un langage générique, il est
 possible de gérer l'ensemble des traitements appliqués aux données, depuis
 le traitements des sources de données jusqu'à leur visualisation sans changer de langage.
 
+Le cours est prévu pour des profils plutôt statistiques |pystatpng| 
+ou plutôt économiques |pyecopng|. Ces images reviendront pour indiquer 
+si les contenus s'adressent plutôt aux uns ou aux autres.
 La présentation 
 `ENSAE 2A - Données, Machine Learning et Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_ |slideslogo|
 donne un aperçu des thèmes abordés.
@@ -42,12 +45,20 @@ Le cours est évalué avec un :ref:`projet informatique <l-projinfo2a>`.
     :local:
 
 
+La séance dédiées :ref:`l-puzzlealgo2A` requiert de la part des participants
+puisque trois exercices seront choisis parmi ceux que vous aurez envoyés par mail.
+Les exercices doivent être choisis sur le site
+`Google Code Jam <https://code.google.com/codejam/contests.html>`_.
+
+
 
 .. index:: sérialisation, index, dataframe
 
     
 Numpy pandas matplotlib jupyter
 ===============================
+
+|pyecopng| |pystatpng|
 
 Notions abordées :
 
@@ -67,6 +78,8 @@ Notions abordées :
 
 Parallélisation et autres techniques
 ====================================
+
+|pystatpng|
 
 Notion abordées :
 
@@ -107,6 +120,7 @@ Notion abordées :
 Machine Learning
 ================
 
+|pyecopng| |pystatpng|
 
 Présentation - cours de `Gaël Varoquaux <http://gael-varoquaux.info/>`_ : 
 
@@ -144,11 +158,21 @@ Quelques extraits :
     :title: aborder d'autres librairies
     :tag: plus
     
-    scikit-learn, h2o, xgboost, scikit-learn-contrib
+    scikit-learn, h2o, xgboost, scikit-learn-contrib, mlxtend, gensim, 
+    py-earth, polylearn, lightning, imbalanced-learn, theano, pytorch
+    forest-confidence-interval, boruta, wendelin.core, zodb,
+    (requires transaction, zc.lockfile, zodbpickle, ZODB, zdaemon, ZEO, ZODB3, wendelin.core),
+    ghost.py (scrapping)
+    h5py, PyTables
+    See `Related Projects <http://scikit-learn.org/stable/related_projects.html>`_,
+    `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
+    
 
 
 Deep Learning
 =============
+
+|pystatpng|
 
 .. todoext::
     :title: Aborder theano, keras, GPU et les types de deep strucures
@@ -177,6 +201,8 @@ Deep Learning
 Visualisation
 =============
 
+|pyecopng|
+
 Plan
 
 * Présenter `10 plotting libraries at PyData 2016 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_.
@@ -202,6 +228,8 @@ Plan
 
 Big data sans cluster
 =====================
+
+|pystatpng|
 
 **Données structurées**
 
@@ -241,6 +269,8 @@ Big data sans cluster
 Traitement du langage
 =====================
 
+|pyecopng| |pystatpng|
+
 * `Système de complétion <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_nlp/completion.html>`_ :
   la complétion est utilisée par tous les sites Internet pour aider les utilisateurs
   à saisir leur recherche. N'importe quel site commercial l'utiliser
@@ -257,11 +287,13 @@ Traitement du langage
     alignement
     
 
-
+.. _l-puzzlealgo2A:
       
 Puzzles algorithmiques
 ======================
-    
+
+|pystatpng|
+
 
 **Présentations**
 
@@ -286,9 +318,6 @@ Ces problèmes sont tirés de plusieurs sites dont
   `glouton <http://fr.wikipedia.org/wiki/Algorithme_glouton>`_, `dynamique <http://fr.wikipedia.org/wiki/Programmation_dynamique>`_
 * :ref:`l-algoculture`
 * :ref:`l-expose-explication` 
-    
-
-
 
     
 .. _l-td2a-start:
@@ -370,12 +399,15 @@ Bibliographie
 * `Matrix Factorization: A Simple Tutorial and Implementation in Python <http://www.quuxlabs.com/blog/2010/09/matrix-factorization-a-simple-tutorial-and-implementation-in-python/>`_ *(2016/06)*
 
 
-**Tutorial**
+**Tutoriels**
 
 * `PyData Seattle 2015 Scikit-learn Tutorial <https://github.com/jakevdp/sklearn_pydata2015>`_ *(2015/12)*
 * `Pythonic Perambulations <https://jakevdp.github.io/>`_ *(2015/12)*
 * `Python Scripts posted on Kaggle <https://www.kaggle.com/scripts?language=Python>`_ *(2016/02)*
 * `Pandas cookbook <https://github.com/jvns/pandas-cookbook>`_ *(2016/06)*
+* `Machine Learning & Deep Learning Tutorials <https://github.com/ujjwalkarn/Machine-Learning-Tutorials>`_ *(2016/06)* :
+  lien vers une liste assez longue de tutoriels, on y trouve aussi des *cheat sheets* comme
+  `Probability Cheatsheet <http://static1.squarespace.com/static/54bf3241e4b0f0d81bf7ff36/t/55e9494fe4b011aed10e48e5/1441352015658/probability_cheatsheet.pdf>`_
 
 **MOOC**
 

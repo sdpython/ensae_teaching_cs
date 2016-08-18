@@ -28,6 +28,9 @@ Intervenants 2015-2016 :
 * Charles de Ravel d'Esclapon, `Etaonis <http://www.etaonis.fr/>`_
 * Félix Revert, `CapGemini Consulting <https://www.capgemini-consulting.com/>`_
 
+Ce cours s'étale sur 12 séances de travaux dirigés (TD) d'une durée de 2h. Le cours est décrit plus 
+en détail dans cette présentation : 
+`ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_. |slideslogo|
 
 .. contents::
     :local:
@@ -36,9 +39,6 @@ Intervenants 2015-2016 :
 TD - les bases
 ==============
 
-Ce cours s'étale sur 12 séances de travaux dirigés (TD) d'une durée de 2h. Le cours est décrit plus 
-en détail dans cette présentation : 
-`ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_. |slideslogo|
 Les six premières séances font les éléments de syntaxe propres à 
 la `programmation impérative <https://fr.wikipedia.org/wiki/Programmation_imp%C3%A9rative>`_.
 
@@ -92,8 +92,12 @@ je vous encourage à faire d'autres exercices comme
 piocher dans les anciens :ref:`l-examens`, à regarder la liste des exercices
 proposées à `Quelques exercices du Project Euler <http://mathprepa.fr/python-project-euler-mpsi/>`_.
 La plupart de ces notions font déjà partie du programme des classes préparatoires
-scientifiques.
+scientifiques. Il faudra dans tous les cas participer au jeu suivant :
 
+.. toctree::
+    :maxdepth: 1
+    
+    i_exams_algo_1a
 
 
 TD - Site web et pratiques logiciels
