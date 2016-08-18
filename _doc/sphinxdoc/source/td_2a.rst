@@ -163,7 +163,7 @@ Quelques extraits :
     forest-confidence-interval, boruta, wendelin.core, zodb,
     (requires transaction, zc.lockfile, zodbpickle, ZODB, zdaemon, ZEO, ZODB3, wendelin.core),
     ghost.py (scrapping)
-    h5py, PyTables
+    h5py, PyTables, lda
     See `Related Projects <http://scikit-learn.org/stable/related_projects.html>`_,
     `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
     
