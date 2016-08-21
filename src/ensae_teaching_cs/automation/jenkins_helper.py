@@ -57,7 +57,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
     for c in yml:
         if not os.path.exists(c):
             warnings.warn("unable to find '{0}'".format(c))
-    
+
     if filter is not None or neg_filter is not None:
         reg = re.compile(filter if filter else ".*")
         neg_reg = re.compile(neg_filter if neg_filter else ".*")
@@ -252,7 +252,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
                  None, dict(timeout=4800)),
                 ("ensae_teaching_cs [py34] [custom_left] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
                  None, dict(timeout=4800)),
-                ]        
+                ]
         return res
 
 
