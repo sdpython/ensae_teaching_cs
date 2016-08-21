@@ -3,6 +3,8 @@
 @brief Set up a jenkins server with all the necessary job
 """
 import re
+import warnings
+import os
 from pyquickhelper.loghelper import noLOG
 
 
@@ -28,12 +30,14 @@ def engines_default():
     return res
 
 
-def default_jenkins_jobs(filter=None, neg_filter=None):
+def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
     """
     default list of Jenkins jobs
 
-    @param              keep a subset of jobs
-    @return             list
+    @param      filter          keep a subset of jobs (regular expression)
+    @param      neg_filter      remove a subset of jobs (regular expression)
+    @param      root            where to find yml project
+    @return                     list
 
     It produces a subset of the following list of jobs:
 
@@ -46,6 +50,14 @@ def default_jenkins_jobs(filter=None, neg_filter=None):
         print(textwrap.wrap(text))
 
     """
+    yml = []
+    if root is not None:
+        yml_python3_module_template = os.path.join(root, "python3_module_template", ".local.jenkins.win.yml")
+        yml.append(yml_python3_module_template)
+    for c in yml:
+        if not os.path.exists(c):
+            warnings.warn("unable to find '{0}'".format(c))
+    
     if filter is not None or neg_filter is not None:
         reg = re.compile(filter if filter else ".*")
         neg_reg = re.compile(neg_filter if neg_filter else ".*")
@@ -76,7 +88,9 @@ def default_jenkins_jobs(filter=None, neg_filter=None):
                 raise TypeError("{0} - {1}".format(row, type(row)))
         return new_res
     else:
-        return [("standalone [conda_update] [anaconda3]",
+        res = []
+        res.extend(('yml', c, 'H H(0-1) * * %d' % (i % 7)) for i, c in enumerate(yml))
+        res += [("standalone [conda_update] [anaconda3]",
                  "H H(0-1) * * 0"),
                 "standalone [conda_update] [anaconda2] [27]",
                 "standalone [local_pypi]",
@@ -90,20 +104,17 @@ def default_jenkins_jobs(filter=None, neg_filter=None):
                 ("pyquickhelper", "H H(2-3) * * 0"),
                 ("pysqllike <-- pyquickhelper",
                     None, dict(success_only=True)),
-                ["python3_module_template <-- pyquickhelper",
-                 "pymyinstall <-- pyquickhelper",
+                ["pymyinstall <-- pyquickhelper",
                  "pymmails <-- pyquickhelper"],
                 "pyensae <-- pyquickhelper, pymyinstall",
                 "pyrsslocal <-- pyquickhelper, pyensae",
                 # Python 27
                 ("pyquickhelper [py27] [27]", "H H(2-3) * * 1"),
-                ["pymyinstall [py27] [27] <-- pyquickhelper",
-                 "python3_module_template [py27] [27] <-- pyquickhelper"],
+                ["pymyinstall [py27] [27] <-- pyquickhelper"],
                 # WinPython
                 ("pyquickhelper [winpython]", "H H(5-6) * * 1"),
                 ["pysqllike [winpython] <-- pyquickhelper",
                     "pymmails [winpython] <-- pyquickhelper",
-                    "python3_module_template [winpython] <-- pyquickhelper",
                     "pymyinstall [winpython] <-- pyquickhelper"],
                 "pyensae [winpython] <-- pyquickhelper, pymyinstall",
                 "pyrsslocal [winpython] <-- pyquickhelper, pyensae",
@@ -111,14 +122,12 @@ def default_jenkins_jobs(filter=None, neg_filter=None):
                 ("pyquickhelper [anaconda3]", "H H(2-3) * * 1"),
                 ["pysqllike [anaconda3] <-- pyquickhelper",
                     "pymmails [anaconda3] <-- pyquickhelper",
-                    "python3_module_template [anaconda3] <-- pyquickhelper",
                     "pymyinstall [anaconda3] <-- pyquickhelper"],
                 "pyensae [anaconda3] <-- pyquickhelper, pymyinstall",
                 "pyrsslocal [anaconda3] <-- pyquickhelper, pyensae",
                 # Anaconda 2
                 ("pyquickhelper [anaconda2] [27]", "H H(2-3) * * 1"),
-                ["pymyinstall [anaconda2] [27] <-- pyquickhelper",
-                 "python3_module_template [anaconda2] [27] <-- pyquickhelper"],
+                ["pymyinstall [anaconda2] [27] <-- pyquickhelper"],
                 # update
                 ("pymyinstall [update_modules]", "H H(0-1) * * 5"),
                 "pymyinstall [update_modules] [winpython]",
@@ -130,7 +139,6 @@ def default_jenkins_jobs(filter=None, neg_filter=None):
                 ("pyquickhelper [py34]", "H H(2-3) * * 2"),
                 ["pysqllike [py34] <-- pyquickhelper",
                     "pymmails [py34] <-- pyquickhelper",
-                    "python3_module_template [py34] <-- pyquickhelper",
                     "pymyinstall [py34] <-- pyquickhelper"],
                 "pyensae [py34] <-- pyquickhelper, pymyinstall",
                 "pyrsslocal [py34] <-- pyquickhelper, pyensae",
@@ -244,11 +252,17 @@ def default_jenkins_jobs(filter=None, neg_filter=None):
                  None, dict(timeout=4800)),
                 ("ensae_teaching_cs [py34] [custom_left] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
                  None, dict(timeout=4800)),
-                ]
+                ]        
+        return res
 
 
-def setup_jenkins_server(js, github="sdpython", modules=default_jenkins_jobs(),
-                         overwrite=False, location=None, prefix="", fLOG=noLOG):
+def setup_jenkins_server(js,
+                         github="sdpython",
+                         modules=default_jenkins_jobs(),
+                         overwrite=False,
+                         location=None,
+                         prefix="",
+                         fLOG=noLOG):
     """
     Set up many jobs on Jenkins
 
