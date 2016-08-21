@@ -12,13 +12,20 @@ def engines_default():
 
     @return     dictionary
     """
-    return dict(anaconda2="c:\\Anaconda",
-                anaconda3="c:\\Anaconda3",
-                py35="c:\\Python35_x64",
-                py34="c:\\Python34_x64",
-                py27="c:\\Python27",
-                default="c:\\Python35_x64",
-                winpython="c:\\APythonENSAE\\python")
+    res = dict(anaconda2="c:\\Anaconda",
+               anaconda3="c:\\Anaconda3",
+               py35="c:\\Python35_x64",
+               py34="c:\\Python34_x64",
+               py27="c:\\Python27",
+               default="c:\\Python35_x64",
+               winpython="c:\\APythonENSAE\\python")
+    res["Python27"] = res["py27"]
+    res["Python34"] = res["py34"]
+    res["Python35"] = res["py35"]
+    res["Anaconda2"] = res["anaconda2"]
+    res["Anaconda3"] = res["anaconda3"]
+    res["WinPython35"] = res["winpython"]
+    return res
 
 
 def default_jenkins_jobs(filter=None, neg_filter=None):
@@ -240,13 +247,8 @@ def default_jenkins_jobs(filter=None, neg_filter=None):
                 ]
 
 
-def setup_jenkins_server(js,
-                         github="sdpython",
-                         modules=default_jenkins_jobs(),
-                         overwrite=False,
-                         location=None,
-                         prefix="",
-                         fLOG=noLOG):
+def setup_jenkins_server(js, github="sdpython", modules=default_jenkins_jobs(),
+                         overwrite=False, location=None, prefix="", fLOG=noLOG):
     """
     Set up many jobs on Jenkins
 
