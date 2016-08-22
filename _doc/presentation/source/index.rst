@@ -13,7 +13,40 @@ ENSAE 1A - Programmation
     **Assistant à l'ENSAE**
     
     `Romain Lesauvage <mailto: romain.lesauvage AT ensae.fr>`_
+    
+.. revealjs:: Algorithme ?
+    
+    
+    
+.. revealjs:: 
+    
+    .. revealjs:: Trois concepts en algorithmie
+    
+        * la séquence
+        * le test
+        * la boucle
         
+    .. revealjs:: Une bille tombe où va-t-elle ?
+    
+        .. image:: _static/bille.png  
+
+    .. revealjs:: Décrire le chemin de la bille ?
+    
+        .. image:: _static/bille.png
+            :width: 200px
+            
+        * avec les trois concepts
+        * le plus succintement possible
+        
+    .. revealjs:: Etoffer son langage
+    
+        * Il pleut sur la grille.
+        * Les gouttes d'eau suivent le même chemin que la bille.
+        * Quelle case reçoit le plus d'eau ?
+
+.. revealjs:: A l'ENSAE
+    
+
 .. revealjs:: 
     
     .. revealjs:: Intervenants
@@ -21,7 +54,7 @@ ENSAE 1A - Programmation
             **site, cours** `Xavier Dupré <http://www.xavierdupre.fr/>`_
 
         * `Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_  (prof)
-        * `Emmanuel Guérin <mailto:emmanuel AT guerin.fr.eu.org>`_ 
+        * `Pierre Cordier <mailto:>`_ 
         * `Yves Gerey <mailto:ggereyy AT gmail.com>`_
         * `Arthur Renaud <mailto:arthur.b.renaud AT gmail.com>`_
         * `Marc-Antoine Weissner <mailto:marc-antoine.weisser AT supelec.fr>`_
@@ -62,11 +95,9 @@ ENSAE 1A - Programmation
         en stats/machine learning (problématique de clustering en haute dimension) 
         à l'ENSAE et travaille chez `Little Big Data <http://www.little-big-data.com/>`_ (startup).
 
-        **Emmanuel Guérin** est ingénieur en développement depuis 15 ans au 
-        sein d'éditeurs de logiciels. C++, .NET, Python, Web. 
-        Il est architecte logiciel à `Talentsoft <http://www.talentsoft.com/>`_, fonction
-        qui englobe l'amélioration, l'automatisation et la diffusion 
-        des processus techniques de l'entreprise.
+        **Pierre Corder** est co-fondateur de 
+        `Effecience <http://www.effiscience.solutions/>`_
+        et diplômé l'ENSAE (2014).
         
         **Xavier Dupré** travaille chez Microsoft depuis 2010 sur le moteur
         de recherche Bing. Il enseigne à l'ENSAE depuis 2002.
