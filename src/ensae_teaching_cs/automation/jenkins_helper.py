@@ -13,9 +13,14 @@ def engines_default():
     returns a dictionary with default values for Jenkins server
 
     @return     dictionary
+
+    ..warning::
+
+        Virtual environment with conda must be created on the same disk
+        as the original interpreter. The other scenario is not supported.
     """
-    res = dict(anaconda2="c:\\Anaconda",
-               anaconda3="c:\\Anaconda3",
+    res = dict(anaconda2="d:\\Anaconda",
+               anaconda3="d:\\Anaconda3",
                py35="c:\\Python35_x64",
                py34="c:\\Python34_x64",
                py27="c:\\Python27",
@@ -52,7 +57,8 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
     """
     yml = []
     if root is not None:
-        yml_python3_module_template = os.path.join(root, "python3_module_template", ".local.jenkins.win.yml")
+        yml_python3_module_template = os.path.join(
+            root, "python3_module_template", ".local.jenkins.win.yml")
         yml.append(yml_python3_module_template)
     for c in yml:
         if not os.path.exists(c):
@@ -89,7 +95,8 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
         return new_res
     else:
         res = []
-        res.extend(('yml', c, 'H H(0-1) * * %d' % (i % 7)) for i, c in enumerate(yml))
+        res.extend(('yml', c, 'H H(0-1) * * %d' % (i % 7))
+                   for i, c in enumerate(yml))
         res += [("standalone [conda_update] [anaconda3]",
                  "H H(0-1) * * 0"),
                 "standalone [conda_update] [anaconda2] [27]",
