@@ -16,17 +16,9 @@ fLOG(OutputPrint=True)
 fLOG("start")
 
 js = JenkinsExt('http://localhost:8080/', None, None,
-                fLOG=fLOG, engines=engines_default)
-# js.delete_all_jobs()
+                fLOG=fLOG, engines=engines_default())
 
-if True:
-    setup_jenkins_server(js,
-                         overwrite=True,
-                         location="c:\\jenkins\\pymy")
-
-if False:
-    setup_jenkins_server(js,
-                         overwrite=True,
-                         location="c:\\jenkins\\pymy_nodep",
-                         no_dep=True,
-                         prefix="_nodep_")
+setup_jenkins_server(js,
+                     overwrite=True,
+                     delete_first=True,
+                     location="d:\\jenkins\\pymy")

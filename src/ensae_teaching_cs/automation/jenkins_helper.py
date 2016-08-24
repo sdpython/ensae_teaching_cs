@@ -4,6 +4,7 @@
 """
 import re
 from pyquickhelper.loghelper import noLOG
+from pyquickhelper.jenkinshelper import setup_jenkins_server_yml
 
 
 def engines_default():
@@ -55,9 +56,11 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
     """
     yml = []
     pattern = "https://raw.githubusercontent.com/sdpython/%s/master/.local.jenkins.win.yml"
-    for c in ["pyquickhelpr", "python3_module_template", "pymmmails", "pymyinstall",
+    modules = ["pyquickhelper", "python3_module_template",
+              "pymmmails", "pymyinstall",
               "pyensae", "pyrsslocal", "enseae_cs_teaching",
-              "code_beatrix", "actuariat_python", "mldtatpy", "jupytalk"]:
+              "code_beatrix", "actuariat_python", "mldtatpy", "jupytalk"] 
+    for c in modules[:2]:
         yml.append(pattern % c)
 
     if filter is not None or neg_filter is not None:
@@ -122,7 +125,6 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
                 "pyensae [winpython] <-- pyquickhelper, pymyinstall",
                 "pyrsslocal [winpython] <-- pyquickhelper, pyensae",
                 # Anaconda 3
-                ("pyquickhelper [anaconda3]", "H H(2-3) * * 1"),
                 ["pysqllike [anaconda3] <-- pyquickhelper",
                     "pymmails [anaconda3] <-- pyquickhelper",
                     "pymyinstall [anaconda3] <-- pyquickhelper"],
@@ -138,8 +140,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
                 "pymyinstall [update_modules] [py27]",
                 "pymyinstall [update_modules] [anaconda2]",
                 "pymyinstall [update_modules] [anaconda3]",
-                # py35
-                ("pyquickhelper [py34]", "H H(2-3) * * 2"),
+                # py34
                 ["pysqllike [py34] <-- pyquickhelper",
                     "pymmails [py34] <-- pyquickhelper",
                     "pymyinstall [py34] <-- pyquickhelper"],
@@ -260,7 +261,8 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
 
 
 def setup_jenkins_server(js, github="sdpython", modules=default_jenkins_jobs(),
-                         overwrite=False, location=None, prefix="", fLOG=noLOG):
+                         overwrite=False, location=None, prefix="", 
+                         delete_first=False, fLOG=noLOG):
     """
     Set up many jobs on Jenkins
 
@@ -273,6 +275,7 @@ def setup_jenkins_server(js, github="sdpython", modules=default_jenkins_jobs(),
     @param      overwrite               do not create the job if it already exists
     @param      location                None for default or a local folder
     @param      prefix                  add a prefix to the name
+    @param      delete_first            remove all jobs first
     @param      fLOG                    logging function
     @return                             list of created jobs
 
@@ -282,39 +285,8 @@ def setup_jenkins_server(js, github="sdpython", modules=default_jenkins_jobs(),
     * if it is a list, it contains a list of elements defined as previously
     * the job at position i is not scheduled, it will start after the last
       job at position i-1 whether or not it fails
-
-    Example::
-
-        from ensae_teaching_cs.automation.jenkins_helper import setup_jenkins_server, JenkinsExt
-
-        js = JenkinsExt('http://machine:8080/', "user", "password")
-
-        if True:
-            js.setup_jenkins_server(github="sdpython",
-                                modules=modules,
-                                fLOG=print,
-                                overwrite = True,
-                                location = r"d:\\jenkins\\pymy")
-
-
-    Another example::
-
-        import sys
-        sys.path.append(r"C:\\<path>\\ensae_teaching_cs\\src")
-        sys.path.append(r"C:\\<path>\\pyquickhelper\\src")
-        sys.path.append(r"C:\\<path>\\pyensae\\src")
-        sys.path.append(r"C:\\<path>\\pyrsslocal\\src")
-        from ensae_teaching_cs.automation.jenkins_helper import setup_jenkins_server, JenkinsExt
-        js = JenkinsExt("http://<machine>:8080/", <user>, <password>)
-        setup_jenkins_server(js,
-                location=r"c:\\jenkins\\pymy",
-                overwrite=True,
-                fLOG=print)
     """
-    r = js.setup_jenkins_server(github=github,
-                                modules=modules,
-                                get_jenkins_script=None,
-                                overwrite=overwrite,
-                                location=location,
-                                prefix=prefix)
+    r = setup_jenkins_server_yml(js, github=github, modules=modules, get_jenkins_script=None,
+                                overwrite=overwrite, location=location, prefix=prefix,
+                                delete_first=delete_first)
     return r
