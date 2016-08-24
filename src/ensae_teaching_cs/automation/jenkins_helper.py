@@ -3,8 +3,6 @@
 @brief Set up a jenkins server with all the necessary job
 """
 import re
-import warnings
-import os
 from pyquickhelper.loghelper import noLOG
 
 
@@ -14,7 +12,7 @@ def engines_default():
 
     @return     dictionary
 
-    ..warning::
+    .. warning::
 
         Virtual environment with conda must be created on the same disk
         as the original interpreter. The other scenario is not supported.
@@ -56,13 +54,11 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
 
     """
     yml = []
-    if root is not None:
-        yml_python3_module_template = os.path.join(
-            root, "python3_module_template", ".local.jenkins.win.yml")
-        yml.append(yml_python3_module_template)
-    for c in yml:
-        if not os.path.exists(c):
-            warnings.warn("unable to find '{0}'".format(c))
+    pattern = "https://raw.githubusercontent.com/sdpython/%s/master/.local.jenkins.win.yml"
+    for c in ["pyquickhelpr", "python3_module_template", "pymmmails", "pymyinstall",
+              "pyensae", "pyrsslocal", "enseae_cs_teaching",
+              "code_beatrix", "actuariat_python", "mldtatpy", "jupytalk"]:
+        yml.append(pattern % c)
 
     if filter is not None or neg_filter is not None:
         reg = re.compile(filter if filter else ".*")
@@ -263,13 +259,8 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
         return res
 
 
-def setup_jenkins_server(js,
-                         github="sdpython",
-                         modules=default_jenkins_jobs(),
-                         overwrite=False,
-                         location=None,
-                         prefix="",
-                         fLOG=noLOG):
+def setup_jenkins_server(js, github="sdpython", modules=default_jenkins_jobs(),
+                         overwrite=False, location=None, prefix="", fLOG=noLOG):
     """
     Set up many jobs on Jenkins
 
@@ -287,10 +278,10 @@ def setup_jenkins_server(js,
 
     *modules* is a list defined as follows:
 
-        * each element can be a string or a tuple (string, schedule time) or a list
-        * if it is a list, it contains a list of elements defined as previously
-        * the job at position i is not scheduled, it will start after the last
-          job at position i-1 whether or not it fails
+    * each element can be a string or a tuple (string, schedule time) or a list
+    * if it is a list, it contains a list of elements defined as previously
+    * the job at position i is not scheduled, it will start after the last
+      job at position i-1 whether or not it fails
 
     Example::
 

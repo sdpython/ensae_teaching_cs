@@ -24,11 +24,6 @@ associé à ce cours, les autres :ref:`l-completed-todolist`, les améliorations
 .. |slideslogo| image:: _static/slides_logo.png
              :height: 20
 
-.. |pyecopng| image:: _static/pyeco.png
-            :alt: Economie
-            
-.. |pystatpng| image:: _static/pystat.png
-            :alt: Statistique
 
 Avant-propos
 ------------

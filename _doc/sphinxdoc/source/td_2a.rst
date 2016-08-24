@@ -51,12 +51,18 @@ Les exercices doivent être choisis sur le site
 `Google Code Jam <https://code.google.com/codejam/contests.html>`_.
 
 
+.. |pyecopng| image:: _static/pyeco.png
+            :alt: Economie
+            
+.. |pystatpng| image:: _static/pystat.png
+            :alt: Statistique
+
 
 .. index:: sérialisation, index, dataframe
 
     
-Numpy pandas matplotlib jupyter
-===============================
+Matrices et DataFrames - numpy pandas
+=====================================
 
 |pyecopng| |pystatpng|
 
@@ -76,46 +82,34 @@ Notions abordées :
     notebooks/_gs2a_magic_commands
     
 
-Parallélisation et autres techniques
-====================================
 
-|pystatpng|
+Visualisation
+=============
 
-Notion abordées :
+|pyecopng|
 
-* techniques de parallélisation
-* utiliser un autre langage pour accélérer les calculs
-* sérialisation : le fait de convertir n'importe quelle structure de données en un
-  tableau d'octets, c'est indispensable pour la communication entre deux machines,
-  deux processus
+Plan
 
-.. toctree::
-    :maxdepth: 2
-    
-    notebooks/_gs2a_parallelisation
-    notebooks/_gs2a_langages
-    notebooks/_gs2a_serialisation
-    
-.. todoext::
-    :title: ajouter un notebook sur joblib
+* Présenter `10 plotting libraries at PyData 2016 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_.
+* Grouper les étudiants par deux
+* Considérer un jeu de données
+* Chaque groupe essaye une librairie différente
+* Insister sur la visualisation de gros jeu de données
+
+
+
+
+.. todoext:: 
+    :title: Retravailler la partie visualisation de Python pour un data scientist
     :tag: plus
     
-    joblib est utilisé par scikit-learn pour 
-    paralléliser les calculs
-
-.. todoext::
-    :title: ajouter un notebook sur numba, llvmlite
-    :tag: plus
-    
-    Il n'y pas que CPython pour ooptimiser les calculs.
-    Aborder les notions de JIT.
+    Il manque un notebooks sur les visualisations les plus utilisées en machine learning,
+    ROC, régression, visualisation d'arbres de décision avec ete3, les cartes.
+    Insister sur l'interactivité.
+    Voir `TD 4B : Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
+    (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_),
+    ce notebook présente un moyen de faire une carte géographique, des graphes zoomables.
         
-.. todoext::
-    :title: sérialisation JSON
-    :tag: plus
-    
-    Très utilisée sur internet donc incontournable.
-
 
 Machine Learning
 ================
@@ -168,7 +162,6 @@ Quelques extraits :
     `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
     
 
-
 Deep Learning
 =============
 
@@ -198,32 +191,44 @@ Deep Learning
 
 
 
-Visualisation
-=============
+    
 
-|pyecopng|
+Traitement du langage
+=====================
 
-Plan
+|pyecopng| |pystatpng|
 
-* Présenter `10 plotting libraries at PyData 2016 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_.
-* Grouper les étudiants par deux
-* Considérer un jeu de données
-* Chaque groupe essaye une librairie différente
-* Insister sur la visualisation de gros jeu de données
+* `Système de complétion <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_nlp/completion.html>`_ :
+  la complétion est utilisée par tous les sites Internet pour aider les utilisateurs
+  à saisir leur recherche. N'importe quel site commercial l'utiliser
+  pour guider les utilisateurs plus rapidement vers le produit qu'ils recherchent.
 
-
-
-
-.. todoext:: 
-    :title: Retravailler la partie visualisation de Python pour un data scientist
+.. todoext::
+    :title: rédiger un ou deux notebook sur le traitement du langage
     :tag: plus
     
-    Il manque un notebooks sur les visualisations les plus utilisées en machine learning,
-    ROC, régression, visualisation d'arbres de décision avec ete3, les cartes.
-    Insister sur l'interactivité.
-    Voir `TD 4B : Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
-    (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_),
-    ce notebook présente un moyen de faire une carte géographique, des graphes zoomables.
+    Aborder la distance d'édition, n-grams, NLTK, gensim,
+    word2vec, LDA (Latent Dirichlet Application), traduction statistique,
+    td-idf, coocurrence, analyse de sentiment, stemming
+    `SMT <https://en.wikipedia.org/wiki/Statistical_machine_translation>`_,
+    alignement
+    
+
+
+Webscrapping
+============
+
+|pyecopng| 
+
+.. todoext::
+    :title: techniques de webscrapping
+    :tag: plus
+    
+    * beautifulsoup, ghost.py, scrappy
+    * structure de données JSON, HTML, XML
+    * créer son site web Flask, `Falcon <https://falconframework.org/>`_, Django
+    * `Python's Web Framework Benchmarks <http://klen.github.io/py-frameworks-bench/>`_
+
     
 
 Big data sans cluster
@@ -264,28 +269,56 @@ Big data sans cluster
   données hétérogènes)
 - Base de données non relationnelles dont `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_
 - :ref:`l-td25asynthese`
-    
-
-Traitement du langage
-=====================
-
-|pyecopng| |pystatpng|
-
-* `Système de complétion <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_nlp/completion.html>`_ :
-  la complétion est utilisée par tous les sites Internet pour aider les utilisateurs
-  à saisir leur recherche. N'importe quel site commercial l'utiliser
-  pour guider les utilisateurs plus rapidement vers le produit qu'ils recherchent.
 
 .. todoext::
-    :title: rédiger un notebook sur le traitement du langage
+    :title: aborder les formats de données sparses (CRS, ...)
     :tag: plus
     
-    Aborder la distance d'édition, n-grams, NLTK, gensim,
-    word2vec, LDA (Latent Dirichlet Application), traduction statistique,
-    td-idf, coocurrence, analyse de sentiment, stemming
-    `SMT <https://en.wikipedia.org/wiki/Statistical_machine_translation>`_,
-    alignement
+    See `Compressed Sparse Row Format (CSR) <http://www.scipy-lectures.org/advanced/scipy_sparse/csr_matrix.html>`_.
+
+
+
+
+Parallélisation et autres techniques
+====================================
+
+|pystatpng|
+
+Notion abordées :
+
+* techniques de parallélisation
+* utiliser un autre langage pour accélérer les calculs
+* sérialisation : le fait de convertir n'importe quelle structure de données en un
+  tableau d'octets, c'est indispensable pour la communication entre deux machines,
+  deux processus
+
+.. toctree::
+    :maxdepth: 2
     
+    notebooks/_gs2a_parallelisation
+    notebooks/_gs2a_langages
+    notebooks/_gs2a_serialisation
+    
+.. todoext::
+    :title: ajouter un notebook sur joblib
+    :tag: plus
+    
+    joblib est utilisé par scikit-learn pour 
+    paralléliser les calculs
+
+.. todoext::
+    :title: ajouter un notebook sur numba, llvmlite
+    :tag: plus
+    
+    Il n'y pas que CPython pour ooptimiser les calculs.
+    Aborder les notions de JIT.
+        
+.. todoext::
+    :title: sérialisation JSON
+    :tag: plus
+    
+    Très utilisée sur internet donc incontournable.
+
 
 .. _l-puzzlealgo2A:
       
@@ -398,6 +431,7 @@ Bibliographie
 * `How to trick a neural network into thinking a panda is a vulture <https://codewords.recurse.com/issues/five/why-do-neural-networks-think-a-panda-is-a-vulture>`_ *(2016/06)*
 * `Matrix Factorization: A Simple Tutorial and Implementation in Python <http://www.quuxlabs.com/blog/2010/09/matrix-factorization-a-simple-tutorial-and-implementation-in-python/>`_ *(2016/06)*
 * `Complete Guide to Parameter Tuning in XGBoost (with codes in Python) <https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/>`_ *(2016/08)*
+* `colah's blog <http://colah.github.io/>`_ *(2016/08)* blog/cours sur le deep learning 
 
 
 **Tutoriels**

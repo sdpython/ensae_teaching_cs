@@ -39,7 +39,7 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
 
 
 class TestNotebookRunner1a_enonce (unittest.TestCase):
