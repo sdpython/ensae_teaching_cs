@@ -56,11 +56,10 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
     """
     yml = []
     pattern = "https://raw.githubusercontent.com/sdpython/%s/master/.local.jenkins.win.yml"
-    modules = ["pyquickhelper", "python3_module_template",
-              "pymmmails", "pymyinstall",
-              "pyensae", "pyrsslocal", "enseae_cs_teaching",
-              "code_beatrix", "actuariat_python", "mldtatpy", "jupytalk"] 
-    for c in modules[:2]:
+    modules = ["pyquickhelper", "python3_module_template", "pymmails", "pymyinstall",
+              "pyensae", "pyrsslocal", "pysqllike",
+              "enseae_cs_teaching", "code_beatrix", "actuariat_python", "mldtatpy", "jupytalk"] 
+    for c in modules[:7]:
         yml.append(pattern % c)
 
     if filter is not None or neg_filter is not None:
@@ -117,22 +116,6 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
                 # Python 27
                 ("pyquickhelper [py27] [27]", "H H(2-3) * * 1"),
                 ["pymyinstall [py27] [27] <-- pyquickhelper"],
-                # WinPython
-                ("pyquickhelper [winpython]", "H H(5-6) * * 1"),
-                ["pysqllike [winpython] <-- pyquickhelper",
-                    "pymmails [winpython] <-- pyquickhelper",
-                    "pymyinstall [winpython] <-- pyquickhelper"],
-                "pyensae [winpython] <-- pyquickhelper, pymyinstall",
-                "pyrsslocal [winpython] <-- pyquickhelper, pyensae",
-                # Anaconda 3
-                ["pysqllike [anaconda3] <-- pyquickhelper",
-                    "pymmails [anaconda3] <-- pyquickhelper",
-                    "pymyinstall [anaconda3] <-- pyquickhelper"],
-                "pyensae [anaconda3] <-- pyquickhelper, pymyinstall",
-                "pyrsslocal [anaconda3] <-- pyquickhelper, pyensae",
-                # Anaconda 2
-                ("pyquickhelper [anaconda2] [27]", "H H(2-3) * * 1"),
-                ["pymyinstall [anaconda2] [27] <-- pyquickhelper"],
                 # update
                 ("pymyinstall [update_modules]", "H H(0-1) * * 5"),
                 "pymyinstall [update_modules] [winpython]",
@@ -140,12 +123,6 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
                 "pymyinstall [update_modules] [py27]",
                 "pymyinstall [update_modules] [anaconda2]",
                 "pymyinstall [update_modules] [anaconda3]",
-                # py34
-                ["pysqllike [py34] <-- pyquickhelper",
-                    "pymmails [py34] <-- pyquickhelper",
-                    "pymyinstall [py34] <-- pyquickhelper"],
-                "pyensae [py34] <-- pyquickhelper, pymyinstall",
-                "pyrsslocal [py34] <-- pyquickhelper, pyensae",
                 # actuariat
                 ("actuariat_python <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(4-5) * * 0"),
                 [("actuariat_python [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", None, dict(success_only=True)),
