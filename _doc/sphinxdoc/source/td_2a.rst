@@ -211,7 +211,8 @@ Traitement du langage
     word2vec, LDA (Latent Dirichlet Application), traduction statistique,
     td-idf, coocurrence, analyse de sentiment, stemming
     `SMT <https://en.wikipedia.org/wiki/Statistical_machine_translation>`_,
-    alignement
+    alignement, 
+    `moses <http://www.statmt.org/moses/>`_
     
 
 
