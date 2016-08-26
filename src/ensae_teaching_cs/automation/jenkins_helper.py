@@ -57,8 +57,8 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
     yml = []
     pattern = "https://raw.githubusercontent.com/sdpython/%s/master/.local.jenkins.win.yml"
     modules = ["pyquickhelper", "python3_module_template", "pymmails", "pymyinstall",
-              "pyensae", "pyrsslocal", "pysqllike",
-              "enseae_cs_teaching", "code_beatrix", "actuariat_python", "mldtatpy", "jupytalk"] 
+               "pyensae", "pyrsslocal", "pysqllike",
+               "enseae_cs_teaching", "code_beatrix", "actuariat_python", "mldtatpy", "jupytalk"]
     for c in modules[:7]:
         yml.append(pattern % c)
 
@@ -238,7 +238,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
 
 
 def setup_jenkins_server(js, github="sdpython", modules=default_jenkins_jobs(),
-                         overwrite=False, location=None, prefix="", 
+                         overwrite=False, location=None, prefix="",
                          delete_first=False, fLOG=noLOG):
     """
     Set up many jobs on Jenkins
@@ -264,6 +264,6 @@ def setup_jenkins_server(js, github="sdpython", modules=default_jenkins_jobs(),
       job at position i-1 whether or not it fails
     """
     r = setup_jenkins_server_yml(js, github=github, modules=modules, get_jenkins_script=None,
-                                overwrite=overwrite, location=location, prefix=prefix,
-                                delete_first=delete_first)
+                                 overwrite=overwrite, location=location, prefix=prefix,
+                                 delete_first=delete_first)
     return r

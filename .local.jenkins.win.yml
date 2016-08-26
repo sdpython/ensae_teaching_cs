@@ -15,6 +15,10 @@ script:
   - { CMD: "python setup.py unittests_LONG", NAME: "UT_LONG" }
   - { CMD: "python setup.py unittests_SKIP", NAME: "UT_SKIP" }
   - { CMD: "python setup.py unittests custom_left", NAME: "UT_LEFT" }
+  - { CMD: "python setup.py unittests -e .*_1A_.*", NAME: "UT_1A" }
+  - { CMD: "python setup.py unittests -e .*_2A_.*", NAME: "UT_2A" }
+  - { CMD: "python setup.py unittests -e .*_3A_.*", NAME: "UT_3A" }
+  - { CMD: "python setup.py unittests -e .*_EX_.*", NAME: "UT_EX" }
 after_script:
   - python setup.py bdist_wheel
   - if [ ${DIST} != "conda" and ${VERSION} != "3.4" ] then copy dist\*.whl ..\..\local_pypi\local_pypi_server fi
