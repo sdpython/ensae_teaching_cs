@@ -59,7 +59,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
     modules = ["pyquickhelper", "python3_module_template", "pymmails", "pymyinstall",
                "pyensae", "pyrsslocal", "pysqllike",
                "enseae_cs_teaching", "code_beatrix", "actuariat_python", "mldtatpy", "jupytalk"]
-    for c in modules[:7]:
+    for c in modules:
         yml.append(pattern % c)
 
     if filter is not None or neg_filter is not None:
@@ -95,27 +95,9 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
         res = []
         res.extend(('yml', c, 'H H(0-1) * * %d' % (i % 7))
                    for i, c in enumerate(yml))
-        res += [("standalone [conda_update] [anaconda3]",
-                 "H H(0-1) * * 0"),
+        res += [("standalone [conda_update] [anaconda3]", "H H(0-1) * * 0"),
                 "standalone [conda_update] [anaconda2] [27]",
                 "standalone [local_pypi]",
-                #"standalone [install]",
-                #"standalone [update]",
-                #"standalone [install] [py34]",
-                #"standalone [update] [py34]",
-                #"standalone [install] [winpython]",
-                #"standalone [update] [winpython]",
-                # pyquickhelper and others,
-                ("pyquickhelper", "H H(2-3) * * 0"),
-                ("pysqllike <-- pyquickhelper",
-                    None, dict(success_only=True)),
-                ["pymyinstall <-- pyquickhelper",
-                 "pymmails <-- pyquickhelper"],
-                "pyensae <-- pyquickhelper, pymyinstall",
-                "pyrsslocal <-- pyquickhelper, pyensae",
-                # Python 27
-                ("pyquickhelper [py27] [27]", "H H(2-3) * * 1"),
-                ["pymyinstall [py27] [27] <-- pyquickhelper"],
                 # update
                 ("pymyinstall [update_modules]", "H H(0-1) * * 5"),
                 "pymyinstall [update_modules] [winpython]",
@@ -123,116 +105,6 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
                 "pymyinstall [update_modules] [py27]",
                 "pymyinstall [update_modules] [anaconda2]",
                 "pymyinstall [update_modules] [anaconda3]",
-                # actuariat
-                ("actuariat_python <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(4-5) * * 0"),
-                [("actuariat_python [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", None, dict(success_only=True)),
-                    "actuariat_python [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                    "actuariat_python [py34] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
-                # code_beatrix
-                ("code_beatrix <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(4-5) * * 0"),
-                ("code_beatrix [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(success_only=True)),
-                ["code_beatrix [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                    "code_beatrix [py34] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
-                # jupytalk
-                ("jupytalk <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 "H H(4-5) * * 1"),
-                ("jupytalk [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(success_only=True)),
-                ["jupytalk [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                    "jupytalk [py34] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
-                # mlstatpy
-                ("mlstatpy <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 "H H(4-5) * * 2"),
-                ("mlstatpy [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(success_only=True)),
-                ["mlstatpy [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                    "mlstatpy [py34] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
-                # teachings
-                # 1.5h
-                ("ensae_teaching_cs <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(5-6) * * 0"),
-                ("ensae_teaching_cs [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(success_only=True)),
-                # 1.5h
-                ["ensae_teaching_cs [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 "ensae_teaching_cs [py34] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
-                # ensae_projects
-                ("ensae_projects <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall", "H H(4-5) * * 3"),
-                ("ensae_projects [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(success_only=True)),
-                ["ensae_projects [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 "ensae_projects [py34] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
-                # documentation
-                ("pyquickhelper [doc] <-- pyquickhelper",
-                 "H H(3-4) * * 1"),
-                ["pymyinstall [doc] <-- pyquickhelper",
-                 "pysqllike [doc] <-- pyquickhelper",
-                 "pymmails [doc] <-- pyquickhelper",
-                 "pyrsslocal [doc] <-- pyquickhelper",
-                 "pyensae [doc] <-- pyquickhelper"],
-                ["actuariat_python [doc] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 "code_beatrix [doc] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
-                "ensae_teaching_cs [doc] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                ["mlstatpy [doc] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 "jupytalk [doc] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
-                # setup
-                ("pyquickhelper [setup] <-- pyquickhelper",
-                 "H H(6-7) * * 1"),
-                ["pymyinstall [setup] <-- pyquickhelper",
-                 "pysqllike [setup] <-- pyquickhelper",
-                 "pymmails [setup] <-- pyquickhelper",
-                 "pyrsslocal [setup] <-- pyquickhelper, pyensae",
-                 "pyensae [setup] <-- pyquickhelper"],
-                ["actuariat_python [setup] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 "code_beatrix [setup] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall"],
-                "ensae_teaching_cs [setup] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                # LONG
-                ("pymyinstall [LONG] <-- pyquickhelper",
-                 "H(0,30) 02 01 * *"),
-                "pymyinstall [LONG] [py34] <-- pyquickhelper",
-                "mlstatpy [LONG] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                "mlstatpy [LONG] [py34] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                "mlstatpy [LONG] [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                "mlstatpy [LONG] [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                ("actuariat_python [LONG] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(timeout=4800)),
-                ("actuariat_python [LONG] [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(timeout=4800)),
-                ("actuariat_python [LONG] [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(timeout=4800)),
-                ("actuariat_python [LONG] [py34] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(timeout=4800)),
-                ("ensae_teaching_cs [LONG] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(timeout=4800)),
-                ("ensae_teaching_cs [LONG] [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(timeout=4800)),
-                ("ensae_teaching_cs [LONG] [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(timeout=4800)),
-                ("ensae_teaching_cs [LONG] [py34] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(timeout=4800)),
-                # SKIP
-                ("ensae_projects [SKIP] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 "H(0,30) 05 01 * *", dict(timeout=4800)),
-                ("ensae_projects [SKIP] [py34] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(timeout=4800)),
-                ("ensae_teaching_cs [SKIP] [anaconda3] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(timeout=4800)),
-                ("ensae_teaching_cs [SKIP] [py34] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(timeout=4800)),
-                ("ensae_teaching_cs [SKIP] [winpython] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(timeout=4800)),
-                ("ensae_teaching_cs [SKIP] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(timeout=4800)),
-                # LEFT
-                # 3h
-                ("ensae_teaching_cs [custom_left] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 "H(0,30) 02 10 * *", dict(timeout=4800)),
-                ("ensae_teaching_cs [winpython] [custom_left] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(timeout=4800)),
-                ("ensae_teaching_cs [anaconda3] [custom_left] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(timeout=4800)),
-                ("ensae_teaching_cs [py34] [custom_left] <-- pyquickhelper, pyensae, pymmails, pyrsslocal, pymyinstall",
-                 None, dict(timeout=4800)),
                 ]
         return res
 
