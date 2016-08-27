@@ -24,7 +24,8 @@ def engines_default():
                py34="c:\\Python34_x64",
                py27="c:\\Python27",
                default="c:\\Python35_x64",
-               winpython="c:\\APythonENSAE\\python")
+               winpython="c:\\APythonENSAE\\python",
+               Python35pyq="D:\\jenkins\\venv\\py35\\pyq\\Scripts")
     res["Python27"] = res["py27"]
     res["Python34"] = res["py34"]
     res["Python35"] = res["py35"]
