@@ -36,7 +36,6 @@ documentation:
   - if [ ${PYTHON} == "{{Python35}}" and ${NAME} == "UT" ] then xcopy /E /C /I /Y _doc\presentation_2A\build\html dist\html_pres_2A fi
   - if [ ${PYTHON} == "{{Python35}}" and ${NAME} == "UT" ] then xcopy /E /C /I /Y _doc\presentation_3A\build\html dist\html_pres_3A fi
   - if [ ${PYTHON} == "{{Python35}}" and ${NAME} == "UT" ] then xcopy /E /C /I /Y _doc\presentation\build\html dist\html_pres fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} == "UT" ] then copy _doc\sphinxdoc\build\htmlhelp\*.chm dist\html fi
   - if [ ${PYTHON} == "{{Python35}}" and ${NAME} == "UT" ] then xcopy /E /C /I /Y _doc\sphinxdoc\build\latex\*.pdf dist\html fi
   - if [ ${PYTHON} == "{{Python35}}" and ${NAME} == "UT" ] then xcopy /E /C /I /Y _doc\sphinxdoc\build2\latex\*.pdf dist\html2 fi
   - if [ ${PYTHON} == "{{Python35}}" and ${NAME} == "UT" ] then xcopy /E /C /I /Y _doc\sphinxdoc\build3\latex\*.pdf dist\html3 fi
