@@ -6,7 +6,7 @@ python:
 virtualenv:
   - path: {{ospathjoin(root_path, pickname("%NAME_JENKINS%", project_name + "_%VERSION%_%DIST%_%NAME%"), "_venv")}}
 install:
-  - pip install --no-cache-dir --index http://localhost:8067/simple/ pyquickhelper pyensae pymmails pymyinstall pyrsslocal
+  - pip install --no-cache-dir --no-deps --index http://localhost:8067/simple/ pyquickhelper pyensae pymmails pymyinstall pyrsslocal
   - pip install -r requirements.txt
   - pip freeze
 script:
