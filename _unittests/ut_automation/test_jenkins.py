@@ -109,7 +109,7 @@ from src.ensae_teaching_cs.automation.jenkins_helper import setup_jenkins_server
 
 class TestJenkins(unittest.TestCase):
 
-    def _test_jenkins_local(self):
+    def test_jenkins_local(self):
         fLOG(
             __file__,
             self._testMethodName,
