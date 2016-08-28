@@ -39,12 +39,15 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
-from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
 
 
 class TestNotebookRunner2a_ (unittest.TestCase):
 
+    def setUp(self):
+        add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
+                                        __file__, hide=True)
+                                        
     def test_notebook_runner_2a(self):
         fLOG(
             __file__,
@@ -53,16 +56,16 @@ class TestNotebookRunner2a_ (unittest.TestCase):
         if is_travis_or_appveyor() == "appveyor":
             # too long for appveyor
             return
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
         temp = get_temp_folder(__file__, "temp_notebook2a_")
         keepnote = ls_notebooks("2a")
         assert len(keepnote) > 0
 
         def filter(i, n):
-            if "git" not in n and "python_r" not in n and "csharp" not in n:
-                if not sys.platform.startswith("win") and "_convert" in n:
-                    return False
-                else:
-                    return True
+            if not sys.platform.startswith("win") and "_convert" in n:
+                return False
+            if "git_" not in n and "python_r" not in n and "csharp" not in n:
+                return True
             if is_travis_or_appveyor() and "notebook_convert.ipynb" in n:
                 # this one requires pandoc
                 return False

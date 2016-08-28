@@ -37,51 +37,23 @@ except ImportError:
         sys.path.append(path)
     import pyquickhelper as skip____
 
-try:
-    import pyensae as skip___
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyensae",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyensae as skip___
-
-try:
-    import pymmails as skip__
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pymmails",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pymmails as skip__
-
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
-from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
 
 
 class TestNotebookRunner1a_correction (unittest.TestCase):
 
+    def setUp(self):
+        add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
+                                        __file__, hide=True)
+                                        
     def test_notebook_runner_correction_9_10(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
         temp = get_temp_folder(__file__, "temp_notebook1a_correction_9_10")
         keepnote = ls_notebooks("td1a")
         assert len(keepnote) > 0

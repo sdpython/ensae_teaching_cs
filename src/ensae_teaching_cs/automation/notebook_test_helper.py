@@ -147,9 +147,11 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
     kernel_name = None if "travis" in sys.executable else install_python_kernel_for_unittest(
         "ensae_teaching_cs")
     results = {}
+    tested = []
     for i, note in enumerate(notebooks):
         if filter(i, note):
             fLOG("******", i, os.path.split(note)[-1])
+            tested.append(note)
             outfile = os.path.join(folder, "out_" + os.path.split(note)[-1])
             try:
                 stat, out = run_notebook(note, working_dir=folder, outfilename=outfile,
@@ -161,6 +163,8 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
                 results[note] = (True, stat, out)
             except Exception as e:
                 results[note] = (False, None, e)
+    if len(tested) == 0:
+        raise Exception("no notebook were tested with '{0}'".format(filter))
     return results
 
 
