@@ -40,7 +40,7 @@ from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
 
 
-class TestSimpleServerRSSTeaching (unittest.TestCase):
+class TestSKIPSimpleServerRSSTeaching (unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(
