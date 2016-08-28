@@ -20,5 +20,5 @@ js = JenkinsExt('http://localhost:8080/', None, None,
 
 setup_jenkins_server(js,
                      overwrite=True,
-                     delete_first=True,
+                     delete_first=False,
                      location="d:\\jenkins\\pymy")
