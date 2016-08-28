@@ -47,7 +47,7 @@ class TestNotebookRunner1a_correction (unittest.TestCase):
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
                                         __file__, hide=True)
-                                        
+
     def test_notebook_runner_correction_9_10(self):
         fLOG(
             __file__,
