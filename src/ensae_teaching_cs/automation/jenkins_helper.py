@@ -65,7 +65,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
 
     if filter is not None or neg_filter is not None:
         reg = re.compile(filter if filter else ".*")
-        neg_reg = re.compile(neg_filter if neg_filter else ".*")
+        neg_reg = re.compile(neg_filter if neg_filter else "^$")
         res = default_jenkins_jobs()
         new_res = []
         for row in res:
