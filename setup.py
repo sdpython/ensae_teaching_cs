@@ -364,51 +364,17 @@ if not r:
             project_name = os.path.split(
                 os.path.split(os.path.abspath(__file__))[0])[-1]
 
-            if sys.platform.startswith("win"):
-                #generate_help_sphinx(project_name, module_name=project_var_name)
-                generate_help_sphinx(project_name,
-                                     nbformats=[
-                                         'ipynb',
-                                         'html',
-                                         'python',
-                                         'rst',
-                                         'slides',
-                                         'docx',
-                                         'pdf'],
-                                     layout=["pdf",
-                                             "epub",
-                                             "html",
-                                             ("html",
-                                              "build2",
-                                              {"html_theme":
-                                                  "sphinx_py3doc_enhanced_theme"},
-                                              "source/conf2"),
-                                             ("html",
-                                              "build3",
-                                              {"html_theme": "bootstrap"},
-                                              "source/conf3"),
-                                             ],
-                                     module_name=project_var_name)
-            else:
-                # unable to test latex conversion due to adjustbox.sty missing
-                # package
-                generate_help_sphinx(project_name,
-                                     nbformats=[
-                                         'ipynb', 'html', 'python', 'rst', 'slides'],
-                                     layout=["pdf",
-                                             "epub",
-                                             "html",
-                                             ("html",
-                                              "build2",
-                                              {"html_theme":
-                                                  "sphinx_py3doc_enhanced_theme"},
-                                              "source/conf2"),
-                                             ("html",
-                                              "build3",
-                                              {"html_theme": "bootstrap"},
-                                              "source/conf3"),
-                                             ],
-                                     module_name=project_var_name)
+            nbformats = ['ipynb', 'html', 'python',
+                         'rst', 'slides', 'docx', 'pdf']
+            layout = ["html",
+                      ("html", "build2", {
+                          "html_theme": "sphinx_py3doc_enhanced_theme"}, "source/conf2"),
+                      ("html", "build3", {"html_theme": "bootstrap"}, "source/conf3")]
+
+            generate_help_sphinx(project_name,
+                                 nbformats=nbformats,
+                                 layout=layout,
+                                 module_name=project_var_name)
 
     elif "unittests" in sys.argv:
 
@@ -479,8 +445,8 @@ if not r:
             requirements=requirements,
             fLOG=logging_function)
 
-    elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv \
-         or "build_pres_3A" in sys.argv:
+    elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv or \
+         "build_pres_3A" in sys.argv:
         # we generate the documentation for the presentation
 
         def get_executables_path():
