@@ -14,10 +14,10 @@ script:
   - { CMD: "python setup.py unittests_LONG", NAME: "UT_LONG" }
   - { CMD: "python setup.py unittests_SKIP", NAME: "UT_SKIP" }
   - { CMD: "python setup.py unittests custom_left", NAME: "UT_LEFT" }
-  - { CMD: "python setup.py unittests -e .*_1A_.*", NAME: "UT_1A" }
-  - { CMD: "python setup.py unittests -e .*_2A_.*", NAME: "UT_2A" }
-  - { CMD: "python setup.py unittests -e .*_3A_.*", NAME: "UT_3A" }
-  - { CMD: "python setup.py unittests -e .*_EX_.*", NAME: "UT_EX" }
+  - { CMD: "python setup.py unittests -g .*_1A_.*", NAME: "UT_1A" }
+  - { CMD: "python setup.py unittests -g .*_2A_.*", NAME: "UT_2A" }
+  - { CMD: "python setup.py unittests -g .*_3A_.*", NAME: "UT_3A" }
+  - { CMD: "python setup.py unittests -g .*_EX_.*", NAME: "UT_EX" }
   - if [ ${VERSION} == "3.5" and ${DIST} == "std" ]
       then 
         --CMD=python setup.py build_sphinx;
