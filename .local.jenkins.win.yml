@@ -27,10 +27,10 @@ after_script:
   - python setup.py bdist_wheel
   - if [ ${DIST} != "conda" and ${VERSION} != "3.4" and ${NAME} == "UT" ] then copy dist\*.whl ..\..\local_pypi\local_pypi_server fi
 documentation:
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} == "UT" ] then python setup.py build_pres fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} == "UT" ] then python setup.py build_pres_2A fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} == "UT" ] then python setup.py build_pres_3A fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} == "UT" ] then python setup.py build_pres_1Ap fi
+  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python setup.py build_pres fi
+  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python setup.py build_pres_2A fi
+  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python setup.py build_pres_3A fi
+  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python setup.py build_pres_1Ap fi
   - if [ ${PYTHON} == "{{Python35}}" and ${NAME} == "UT" ] then python setup.py build_sphinx fi
   - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\sphinxdoc\build\html dist\html fi
   - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\sphinxdoc\build2\html dist\html2 fi
