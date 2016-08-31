@@ -1,5 +1,5 @@
 """
-@brief      test log(time=7s)
+@brief      test log(time=450s)
 """
 
 import sys
@@ -41,9 +41,9 @@ from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, fix_tkinter_issues_virtualenv
 
 
-class TestFaqMatplotlibVideo(unittest.TestCase):
+class TestLONGFaqMatplotlibVideo(unittest.TestCase):
 
-    def test_american_cities(self):
+    def test_all_american_cities(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -58,8 +58,8 @@ class TestFaqMatplotlibVideo(unittest.TestCase):
             from .american_cities import american_cities
         except (ImportError, SystemError):
             from american_cities import american_cities
-        temp = get_temp_folder(__file__, "temp_matplotlib_video")
-        american_cities(40, fLOG, temp)
+        temp = get_temp_folder(__file__, "temp_LONG_matplotlib_video")
+        american_cities(-1, fLOG, temp)
 
 
 if __name__ == "__main__":
