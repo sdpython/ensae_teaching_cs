@@ -1,13 +1,16 @@
 import os
 import pandas
+from pyquickhelper.pycode import fix_tkinter_issues_virtualenv
 from src.ensae_teaching_cs.faq.faq_matplotlib import graph_cities
 from src.ensae_teaching_cs.special import tsp_kruskal_algorithm, distance_haversine
-import matplotlib.pyplot as plt
 
 
 def american_cities(nb_cities, fLOG, temp):
     def haversine(p1, p2):
         return distance_haversine(p1[0], p1[1], p2[0], p2[1])
+        
+    fix_tkinter_issues_virtualenv()
+    import matplotlib.pyplot as plt
 
     data = os.path.join(temp, "..", "data", "american_cities.txt")
     df = pandas.read_csv(data)
@@ -45,7 +48,5 @@ def american_cities(nb_cities, fLOG, temp):
     img = os.path.join(temp, "img.png")
     fig.savefig(img)
     assert os.path.exists(img)
-    if __name__ == "__main__":
-        fig.show()
     plt.close('all')
     fLOG("end")
