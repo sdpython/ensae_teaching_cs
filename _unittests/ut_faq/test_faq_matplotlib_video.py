@@ -44,10 +44,10 @@ from pyquickhelper.pycode import get_temp_folder, fix_tkinter_issues_virtualenv
 class TestFaqMatplotlibVideo(unittest.TestCase):
 
     def test_american_cities(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
+        #fLOG(
+        #    __file__,
+        #    self._testMethodName,
+        #    OutputPrint=__name__ == "__main__")
 
         if sys.version_info[:2] <= (3, 4):
             warnings.warn(
@@ -59,6 +59,7 @@ class TestFaqMatplotlibVideo(unittest.TestCase):
         except (ImportError, SystemError):
             from american_cities import american_cities
         temp = get_temp_folder(__file__, "temp_matplotlib_video")
+        fLOG = print
         american_cities(40, fLOG, temp)
 
 
