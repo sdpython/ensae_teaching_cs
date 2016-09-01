@@ -49,7 +49,7 @@ class TestVideoHelper(unittest.TestCase):
         """
         This test does not work under a virtual environment.
         """
-        fLOG(__file__, self._testMethodName, OutputPrint=True)
+        fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
 
         if is_travis_or_appveyor() == "travis":
             warnings.warn("cv2 is not available")
@@ -73,7 +73,8 @@ class TestVideoHelper(unittest.TestCase):
             # we run it with the original interpreter
             import pyquickhelper
             fLOG("switch from virtual environment", sys.base_prefix)
-            fold = os.path.abspath(os.path.join(os.path.dirname(pyquickhelper.__file__), ".."))
+            fold = os.path.abspath(os.path.join(
+                os.path.dirname(pyquickhelper.__file__), ".."))
             os.environ["PYTHONPATH"] = fold
             this = os.path.abspath(__file__)
             if sys.version_info[0] == 2:

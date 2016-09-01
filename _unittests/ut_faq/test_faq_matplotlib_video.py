@@ -45,7 +45,7 @@ from src.ensae_teaching_cs.tests.american_cities import american_cities
 class TestFaqMatplotlibVideo(unittest.TestCase):
 
     def test_american_cities(self):
-        fLOG(__file__, self._testMethodName, OutputPrint=True)
+        fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
 
         if sys.version_info[:2] <= (3, 4):
             warnings.warn(
