@@ -10,7 +10,6 @@ import warnings
 
 try:
     import src
-    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -20,6 +19,11 @@ except ImportError:
                 "..")))
     if path not in sys.path:
         sys.path.append(path)
+    import src
+
+try:
+    import pyquickhelper as skip_
+except ImportError:
     path = os.path.normpath(
         os.path.abspath(
             os.path.join(
@@ -31,7 +35,6 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import src
     import pyquickhelper as skip_
 
 
@@ -46,10 +49,7 @@ class TestVideoHelper(unittest.TestCase):
         """
         This test does not work under a virtual environment.
         """
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
+        fLOG(__file__, self._testMethodName, OutputPrint=True)
 
         if is_travis_or_appveyor() == "travis":
             warnings.warn("cv2 is not available")

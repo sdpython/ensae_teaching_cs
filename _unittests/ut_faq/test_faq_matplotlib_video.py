@@ -39,6 +39,7 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, fix_tkinter_issues_virtualenv
+from src.ensae_teaching_cs.tests.american_cities import american_cities
 
 
 class TestFaqMatplotlibVideo(unittest.TestCase):
@@ -51,12 +52,11 @@ class TestFaqMatplotlibVideo(unittest.TestCase):
                 "Issue with Python 3.4, bug probably related to wrong pointers")
             return
         fix_tkinter_issues_virtualenv()
-        try:
-            from .american_cities import american_cities
-        except (ImportError, SystemError):
-            from american_cities import american_cities
         temp = get_temp_folder(__file__, "temp_matplotlib_video")
-        american_cities(40, fLOG, temp)
+        name = os.path.join(temp, "..", "data", "american_cities.txt")
+        img = os.path.join(temp, "img.png")
+        res = american_cities(name, 40, img, fLOG)
+        assert res is not None
 
 
 if __name__ == "__main__":

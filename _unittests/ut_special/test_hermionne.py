@@ -36,8 +36,6 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
-from src.ensae_teaching_cs.special.hermionne import solution, affiche_solution
-from src.ensae_teaching_cs.special.hermionne_classes import solution as solution_classe
 
 
 class TestHermionne(unittest.TestCase):
@@ -48,6 +46,7 @@ class TestHermionne(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
+        from src.ensae_teaching_cs.special.hermionne import solution, affiche_solution
         begin = time.clock()
         for i in range(0, 100):
             res = solution()
@@ -62,6 +61,7 @@ class TestHermionne(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
+        from src.ensae_teaching_cs.special.hermionne_classes import solution as solution_classe
         begin = time.clock()
         for i in range(0, 100):
             res = solution_classe()
