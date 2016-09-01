@@ -71,12 +71,16 @@ class TestVideoHelper(unittest.TestCase):
             assert v is not None
         else:
             # we run it with the original interpreter
+            import pyquickhelper
             fLOG("switch from virtual environment", sys.base_prefix)
+            fold = os.path.abspath(os.path.join(os.path.dirname(pyquickhelper.__file__), ".."))
+            os.environ["PYTHONPATH"] = fold
             this = os.path.abspath(__file__)
             if sys.version_info[0] == 2:
                 this = this.replace(".pyc", ".py")
             out = run_base_script(this, file=True, fLOG=fLOG)
             fLOG(out)
+            os.environ["PYTHONPATH"] = ""
 
 
 if __name__ == "__main__":
