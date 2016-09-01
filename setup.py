@@ -171,26 +171,34 @@ else:
 if "--verbose" in sys.argv:
     verbose()
 
-if is_local() and "build_sphinx" not in sys.argv and \
-        "unittests" not in sys.argv and \
-        "custom_left" not in sys.argv:
-        # "unittests_LONG" not in sys.argv and \
-        # "unittests_SKIP" not in sys.argv and \
+if is_local() and "custom_left" not in sys.argv:
     pyquickhelper = import_pyquickhelper()
     logging_function = pyquickhelper.get_fLOG()
     from pyquickhelper.pycode import process_standard_options_for_setup
     logging_function(OutputPrint=True)
+    deps = ["pyquickhelper", "pymmails", "pyensae",
+            "pyrsslocal", "pymyinstall", "mlstatpy"]
+    layout = ["html", ("html", "build2", {"html_theme": "sphinx_py3doc_enhanced_theme"}, "source/conf2"),
+              ("html", "build3", {"html_theme": "bootstrap"}, "source/conf3")]
+
+    def skip_function(name, code, duration):
+        if "notebook test" in code:
+            return True
+        if "test notebook" in code:
+            return True
+        return default_skip_function(name, code, duration)
+
     r = process_standard_options_for_setup(
-        sys.argv, __file__, project_var_name,
-        unittest_modules=["pyquickhelper"],
-        additional_notebook_path=["pyquickhelper", "pymmails",
-                                  "pyensae", "pyrsslocal", "pymyinstall", "mlstatpy"],
-        requirements=["pyquickhelper", "pymmails",
-                      "pyensae", "pyrsslocal", "pymyinstall", "mlstatpy"],
-        additional_local_path=["pyquickhelper", "pymmails",
-                               "pyensae", "pyrsslocal", "pymyinstall", "mlstatpy"],
+        sys.argv, __file__, project_var_name, unittest_modules=[
+            "pyquickhelper"],
+        additional_notebook_path=deps, requirements=deps, additional_local_path=deps,
         blog_list=os.path.abspath(os.path.join(
             "src", project_var_name, package_data[project_var_name][0])),
+        covtoken=("5e030cea-7d27-46e7-bb2e-2fc3db0ae9f6",
+                  "'_UT_35_std' in outfile"),
+        nbformats=['ipynb', 'html', 'python',
+                   'rst', 'slides', 'docx', 'pdf'],
+        layout=layout,
         fLOG=logging_function)
 
     if "build_script" in sys.argv and sys.platform.startswith("win"):
@@ -207,76 +215,16 @@ if is_local() and "build_sphinx" not in sys.argv and \
             echo #######################################################
             """.replace("            ", "")
 
-        copy = """
-            if not exist dist\\html_pres mkdir dist\\html_pres
-            if not exist dist\\html_pres_2A mkdir dist\\html_pres_2A
-            if not exist dist\\html_pres_3A mkdir dist\\html_pres_3A
-            if not exist dist\\html_pres_1Ap mkdir dist\\html_pres_1Ap
-
-            xcopy /E /C /I /Y _doc\\presentation_projets\\a2015\\build\\html dist\\html_pres_1Ap\\2015
-            if %errorlevel% neq 0 exit /b %errorlevel%
-            xcopy /E /C /I /Y _doc\\presentation_projets\\a2016\\build\\html dist\\html_pres_1Ap
-            if %errorlevel% neq 0 exit /b %errorlevel%
-            xcopy /E /C /I /Y _doc\\presentation_2A\\build\\html dist\\html_pres_2A
-            if %errorlevel% neq 0 exit /b %errorlevel%
-            xcopy /E /C /I /Y _doc\\presentation_3A\\build\\html dist\\html_pres_3A
-            if %errorlevel% neq 0 exit /b %errorlevel%
-            xcopy /E /C /I /Y _doc\\presentation\\build\\html dist\\html_pres
-            if %errorlevel% neq 0 exit /b %errorlevel%
-            """.replace("            ", "")
-
         # auto_setup_build_pres.bat
 
         path_exe = os.path.dirname(sys.executable)
         from pyquickhelper.pycode.windows_scripts import windows_prefix
         with open("auto_setup_build_pres.bat", "w") as f:
-            f.write(windows_prefix.replace("__PY34_X64__", path_exe))
+            f.write(windows_prefix.replace("__PY35_X64__", path_exe))
             f.write("\n")
             f.write(pres)
             f.write(copy)
 
-        # auto_unittest_setup_help.bat
-
-        with open("auto_unittest_setup_help.bat", "r") as f:
-            content = f.read()
-
-        addition = """
-                if not exist dist\\html2 mkdir dist\\html2
-                xcopy /E /C /I /Y _doc\\sphinxdoc\\build2\\html dist\\html2
-                if exist _doc\\sphinxdoc\\build2\\latex xcopy /E /C /I /Y _doc\\sphinxdoc\\build2\\latex\\*.pdf dist\\html2
-                if %errorlevel% neq 0 exit /b %errorlevel%
-
-                if not exist dist\\html3 mkdir dist\\html3
-                xcopy /E /C /I /Y _doc\\sphinxdoc\\build3\\html dist\\html3
-                if exist _doc\\sphinxdoc\\build3\\latex xcopy /E /C /I /Y _doc\\sphinxdoc\\build3\\latex\\*.pdf dist\\html3
-                if %errorlevel% neq 0 exit /b %errorlevel%
-                """.replace("                ", "")
-
-        content += "\n" + addition + "\n" + pres + copy
-
-        with open("auto_unittest_setup_help.bat", "w") as f:
-            f.write(content)
-
-        # auto_setup_unittests_left.bat
-
-        with open("auto_setup_unittests_left.bat", "w") as f:
-            f.write("auto_cmd_any_setup_command.bat custom_left default left")
-
-        # auto_setup_build_sphinx.bat
-
-        with open("auto_setup_build_sphinx.bat", "r") as f:
-            content = f.read()
-        content += "\n" + pres
-        with open("auto_setup_build_sphinx.bat", "w") as f:
-            f.write(content)
-
-        # auto_cmd_copy_sphinx.bat
-
-        with open("auto_cmd_copy_sphinx.bat", "r") as f:
-            content = f.read()
-        content += "\n" + copy + "\n" + addition
-        with open("auto_cmd_copy_sphinx.bat", "w") as f:
-            f.write(content)
 else:
     r = False
 
@@ -286,167 +234,8 @@ if not r:
         from pyquickhelper.pycode import process_standard_options_for_setup_help
         process_standard_options_for_setup_help(sys.argv)
 
-    if "build_sphinx_one" in sys.argv:
-        pyquickhelper = import_pyquickhelper()
-
-        if "--help" in sys.argv:
-            print(pyquickhelper.get_help_usage())
-        else:
-
-            if not os.path.exists("_doc/sphinxdoc/source"):
-                raise FileNotFoundError(
-                    "you must get the source from GitHub to build the documentation")
-
-            from pyquickhelper.loghelper import fLOG
-            from pyquickhelper.helpgen import generate_help_sphinx
-
-            fLOG(OutputPrint=True)
-            project_name = os.path.split(
-                os.path.split(os.path.abspath(__file__))[0])[-1]
-
-            if sys.platform.startswith("win"):
-                generate_help_sphinx(
-                    project_name, module_name=project_var_name)
-            else:
-                # unable to test latex conversion due to adjustbox.sty missing
-                # package
-                generate_help_sphinx(project_name, nbformats=["ipynb", "html", "python", "rst"],
-                                     module_name=project_var_name)
-
-    elif "build_sphinx_catch" in sys.argv:
-        pyquickhelper = import_pyquickhelper()
-
-        if "--help" in sys.argv:
-            print(pyquickhelper.get_help_usage())
-        else:
-
-            if not os.path.exists("_doc/sphinxdoc/source"):
-                raise FileNotFoundError(
-                    "you must get the source from GitHub to build the documentation")
-
-            from pyquickhelper.loghelper import fLOG
-            from pyquickhelper.helpgen import generate_help_sphinx
-
-            fLOG(OutputPrint=True)
-            project_name = os.path.split(
-                os.path.split(os.path.abspath(__file__))[0])[-1]
-
-            if sys.platform.startswith("win"):
-                try:
-                    generate_help_sphinx(
-                        project_name,
-                        module_name=project_var_name)
-                except ImportError as e:
-                    print(
-                        "################### IMPORT ERROR on build_sphinx_catch #######")
-                    sys.exit(0)
-            else:
-                # unable to test latex conversion due to adjustbox.sty missing
-                # package
-                generate_help_sphinx(project_name, nbformats=["ipynb", "html", "python", "rst"],
-                                     module_name=project_var_name)
-
-    elif "build_sphinx" in sys.argv:
-        pyquickhelper = import_pyquickhelper()
-
-        if "--help" in sys.argv:
-            print(pyquickhelper.get_help_usage())
-        else:
-
-            if not os.path.exists("_doc/sphinxdoc/source"):
-                raise FileNotFoundError(
-                    "you must get the source from GitHub to build the documentation")
-
-            from pyquickhelper.loghelper import fLOG
-            from pyquickhelper.helpgen import generate_help_sphinx
-
-            fLOG(OutputPrint=True)
-            project_name = os.path.split(
-                os.path.split(os.path.abspath(__file__))[0])[-1]
-
-            nbformats = ['ipynb', 'html', 'python',
-                         'rst', 'slides', 'docx', 'pdf']
-            layout = ["html",
-                      ("html", "build2", {
-                          "html_theme": "sphinx_py3doc_enhanced_theme"}, "source/conf2"),
-                      ("html", "build3", {"html_theme": "bootstrap"}, "source/conf3")]
-
-            generate_help_sphinx(project_name,
-                                 nbformats=nbformats,
-                                 layout=layout,
-                                 module_name=project_var_name)
-
-    elif "unittests" in sys.argv:
-
-        if not os.path.exists("_unittests"):
-            raise FileNotFoundError(
-                "you must get the source from GitHub to run the unittests")
-
-        run_unit = os.path.join("_unittests", "run_unittests.py")
-        if not os.path.exists(run_unit):
-            raise FileNotFoundError(
-                "the folder should contain run_unittests.py")
-
-        pyquickhelper = import_pyquickhelper()
-        from pyquickhelper.pycode import main_wrapper_tests
-        from pyquickhelper.pycode.utils_tests import default_skip_function
-
-        def skip_function(name, code, duration):
-            if "notebook test" in code:
-                return True
-            if "test notebook" in code:
-                return True
-            return default_skip_function(name, code, duration)
-
-        main_wrapper_tests(
-            run_unit,
-            add_coverage=True,
-            skip_function=skip_function,
-            covtoken=("5e030cea-7d27-46e7-bb2e-2fc3db0ae9f6", "'_UT_35_std' in outfile"))
-
-    elif "custom_left" in sys.argv:
-
-        if not os.path.exists("_unittests"):
-            raise FileNotFoundError(
-                "you must get the source from GitHub to run the unittests")
-
-        run_unit = os.path.join("_unittests", "run_unittests.py")
-        if not os.path.exists(run_unit):
-            raise FileNotFoundError(
-                "the folder should contain run_unittests.py")
-
-        pyquickhelper = import_pyquickhelper()
-        from pyquickhelper.pycode import main_wrapper_tests
-        from pyquickhelper.pycode.utils_tests import default_skip_function
-
-        def skip_function(name, code, duration):
-            if "notebook test" in code:
-                return True
-            if "test notebook" in code:
-                return True
-            return False
-
-        def not_skip_function(name, code, duration):
-            return not skip_function(name, code, duration)
-
-        main_wrapper_tests(
-            run_unit,
-            add_coverage=True,
-            skip_function=not_skip_function)
-
-    elif "unittests_LONG" in sys.argv or "unittests_SKIP" in sys.argv:
-
-        pyquickhelper = import_pyquickhelper()
-        logging_function = pyquickhelper.get_fLOG()
-        logging_function(OutputPrint=True)
-        from pyquickhelper.pycode import process_standard_options_for_setup
-        r = process_standard_options_for_setup(
-            sys.argv, __file__, project_var_name, port=8067,
-            requirements=requirements,
-            fLOG=logging_function)
-
-    elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv or \
-         "build_pres_3A" in sys.argv:
+    if "build_pres" in sys.argv or "build_pres_2A" in sys.argv or \
+            "build_pres_3A" in sys.argv:
         # we generate the documentation for the presentation
 
         def get_executables_path():

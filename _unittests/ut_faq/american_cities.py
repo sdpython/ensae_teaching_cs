@@ -8,7 +8,7 @@ from src.ensae_teaching_cs.special import tsp_kruskal_algorithm, distance_havers
 def american_cities(nb_cities, fLOG, temp):
     def haversine(p1, p2):
         return distance_haversine(p1[0], p1[1], p2[0], p2[1])
-        
+
     fix_tkinter_issues_virtualenv()
     import matplotlib.pyplot as plt
 

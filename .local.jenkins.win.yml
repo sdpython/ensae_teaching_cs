@@ -13,7 +13,6 @@ script:
   - { CMD: "python setup.py unittests", NAME: "UT" }
   - { CMD: "python setup.py unittests_LONG", NAME: "UT_LONG" }
   - { CMD: "python setup.py unittests_SKIP", NAME: "UT_SKIP" }
-  - { CMD: "python setup.py unittests custom_left", NAME: "UT_LEFT" }
   - { CMD: "python setup.py unittests -g .*_1A_.*", NAME: "UT_1A" }
   - { CMD: "python setup.py unittests -g .*_2A_.*", NAME: "UT_2A" }
   - { CMD: "python setup.py unittests -g .*_3A_.*", NAME: "UT_3A" }
