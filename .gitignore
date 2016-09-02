@@ -236,7 +236,6 @@ version.txt
 !*/sphinxdoc/source/notebooks/_gs*
 */notebooks/*.zip
 */notebooks/*.txt
-*/notebooks/td1a/*.txt
 */notebooks/td1a/*.xlsx
 */notebooks/td1a/*.zip
 */notebooks/td1a/*.dbf
@@ -367,3 +366,4 @@ _unittests/ut_faq/chromedriver.exe
 _unittests/ut_faq/chromedriver_win32.zip
 enumerate_send_email_debug.html
 _unittests/run_unittests.py.out
+_doc/notebooks/td1a/lisezmoi_MAR2012.txt
