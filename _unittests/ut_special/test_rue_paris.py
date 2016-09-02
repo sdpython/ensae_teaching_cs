@@ -1,5 +1,5 @@
 """
-@brief      test log(time=17s)
+@brief      test log(time=25s)
 
 """
 import os
@@ -88,7 +88,7 @@ class TestRueParis (unittest.TestCase):
         folder = os.path.join(
             os.path.abspath(
                 os.path.dirname(__file__)),
-            "temp_rues2")
+            "temp_algo")
         if not os.path.exists(folder):
             os.mkdir(folder)
         edges = get_data(whereTo=folder, fLOG=fLOG)
@@ -127,7 +127,7 @@ class TestRueParis (unittest.TestCase):
         folder = os.path.join(
             os.path.abspath(
                 os.path.dirname(__file__)),
-            "temp_rues2")
+            "temp_algo2")
         if not os.path.exists(folder):
             os.mkdir(folder)
         edges = get_data(whereTo=folder, fLOG=fLOG)
@@ -145,7 +145,7 @@ class TestRueParis (unittest.TestCase):
         folder = os.path.join(
             os.path.abspath(
                 os.path.dirname(__file__)),
-            "temp_rues2")
+            "temp_algo3")
         if not os.path.exists(folder):
             os.mkdir(folder)
         edges = get_data(whereTo=folder, fLOG=fLOG)
@@ -188,7 +188,7 @@ class TestRueParis (unittest.TestCase):
         folder = os.path.join(
             os.path.abspath(
                 os.path.dirname(__file__)),
-            "temp_rues5")
+            "temp_algo_euler4")
         if not os.path.exists(folder):
             os.mkdir(folder)
         edges = get_data(whereTo=folder, fLOG=fLOG)
@@ -224,6 +224,7 @@ class TestRueParis (unittest.TestCase):
             pos = nx.spring_layout(G)
             nx.draw(G, pos, node_color='#A0CBE2')
             plt.savefig(os.path.join(folder, "graph1.png"))
+            plt.close('all')
 
         added = eulerien_extension(edges, fLOG=lambda *l: None,
                                    distance=distance_paris)
@@ -239,6 +240,7 @@ class TestRueParis (unittest.TestCase):
             nx.draw(G, pos, node_color='#A0CBE2'  # ,labels=labels
                     )
             plt.savefig(os.path.join(folder, "graph2.png"))
+            plt.close('all')
 
         path = euler_path(edges, added)
         all = edges + added

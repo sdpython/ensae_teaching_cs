@@ -43,6 +43,9 @@ from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, is_virt
 from src.ensae_teaching_cs.helpers.video_helper import make_video
 
 
+context = {}
+
+
 class TestVideoHelper(unittest.TestCase):
 
     def test_make_video(self):
@@ -55,7 +58,7 @@ class TestVideoHelper(unittest.TestCase):
             warnings.warn("cv2 is not available")
             return
 
-        if not is_virtual_environment():
+        if "--force" in context or not is_virtual_environment():
             fLOG("running in base environment", sys.prefix)
             temp = get_temp_folder(__file__, "temp_make_video")
             img = os.path.join(temp, "..", "data")
@@ -69,6 +72,8 @@ class TestVideoHelper(unittest.TestCase):
             assert os.path.exists(out)
             assert os.stat(out).st_size > 90000
             assert v is not None
+            if "--force" in context:
+                fLOG("success")
         else:
             # we run it with the original interpreter
             import pyquickhelper
@@ -79,10 +84,17 @@ class TestVideoHelper(unittest.TestCase):
             this = os.path.abspath(__file__)
             if sys.version_info[0] == 2:
                 this = this.replace(".pyc", ".py")
-            out = run_base_script(this, file=True, fLOG=fLOG)
-            fLOG(out)
+            out = run_base_script(this, file=True, fLOG=fLOG, argv=["--force"])
             os.environ["PYTHONPATH"] = ""
+            if "success" not in out:
+                raise Exception(
+                    "CMD:\n{0}\nOUT:\n{1}\nERR:\n{2}".format(cmd, out, err))
 
 
 if __name__ == "__main__":
+
+    if "--force" in sys.argv:
+        context["--force"] = True
+        del sys.argv[sys.argv.index('--force')]
+
     unittest.main()

@@ -5,6 +5,7 @@
 """
 import os
 import sys
+import shutil
 from pyquickhelper.loghelper import noLOG
 from pyquickhelper.ipythonhelper.notebook_helper import install_python_kernel_for_unittest
 from pyquickhelper.ipythonhelper import run_notebook
@@ -187,3 +188,28 @@ def unittest_raise_exception_notebook(res, fLOG):
         raise fails[0][-1]
     for k, v in sorted(res.items()):
         fLOG("final", os.path.split(k)[-1], v[0], v[1])
+
+
+def copy_data_file(notebook_folder, filename, dest, fLOG=noLOG):
+    """
+    copy a data file from a notebook folder to the current folder
+
+    @param      notebook_folder     notebook_folder
+    @param      filename            filename or list of file names
+    @param      destination         destination folder
+    @parm       fLOG                logging function
+    @return                         copied files
+    """
+    if isinstance(filename, list):
+        return [copy_data_file(notebook_folder, f, dest) for f in filename]
+    else:
+        src = os.path.abspath(os.path.join(os.path.dirname(
+            __file__), "..", "..", "..", "_doc", "notebooks", notebook_folder, filename))
+        if not os.path.exists(src):
+            raise FileNotFoundError(src)
+        if not os.path.exists(dest):
+            raise FileNotFoundError(dest)
+        shutil.copy(src, dest)
+        res = os.path.join(dest, os.path.split(src)[-1])
+        fLOG("copy", res)
+        return res

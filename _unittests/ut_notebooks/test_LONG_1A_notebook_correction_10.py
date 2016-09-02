@@ -54,7 +54,7 @@ class TestNotebookRunner1a_correction_10 (unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
-        temp = get_temp_folder(__file__, "temp_notebook1a_correction_9_10")
+        temp = get_temp_folder(__file__, "temp_notebook1a_correction_10")
         keepnote = ls_notebooks("td1a")
         assert len(keepnote) > 0
         if is_travis_or_appveyor() == "travis":
