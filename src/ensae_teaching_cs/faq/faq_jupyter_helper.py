@@ -9,8 +9,6 @@ import os
 import os.path
 import warnings
 import webbrowser
-from notebook import notebookapp
-from notebook.utils import url_path_join
 from pyquickhelper.loghelper import fLOG
 
 
@@ -49,6 +47,7 @@ def nb_open(filename, profile='default', open_browser=True, fLOG=fLOG):
     filename = os.path.abspath(filename)
     server_inf = find_best_server(filename, profile)
     if server_inf is not None:
+        from notebook.utils import url_path_join
         fLOG("Using existing server at", server_inf['notebook_dir'])
         path = os.path.relpath(filename, start=server_inf['notebook_dir'])
         url = url_path_join(server_inf['url'], 'notebooks', path)
@@ -57,6 +56,7 @@ def nb_open(filename, profile='default', open_browser=True, fLOG=fLOG):
     else:
         fLOG("Starting new server")
         home_dir = os.path.dirname(filename)
+        from notebook import notebookapp
         server = notebookapp.launch_new_instance(file_to_run=os.path.abspath(filename),
                                                  notebook_dir=home_dir,
                                                  open_browser=open_browser,

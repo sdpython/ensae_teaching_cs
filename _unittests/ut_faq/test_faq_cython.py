@@ -40,7 +40,6 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder
-from src.ensae_teaching_cs.faq.faq_cython import compile_cython_single_script
 
 
 class TestFaqCython(unittest.TestCase):
@@ -51,6 +50,7 @@ class TestFaqCython(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
+        from src.ensae_teaching_cs.faq.faq_cython import compile_cython_single_script
         temp = get_temp_folder(__file__, "temp_cython_primes")
         primes = os.path.join(temp, "..", "primes.pyx")
         shutil.copy(primes, temp)
