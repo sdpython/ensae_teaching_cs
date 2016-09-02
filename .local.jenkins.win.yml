@@ -11,7 +11,7 @@ install:
   - pip freeze
 script:
   - { CMD: "python setup.py unittests", NAME: "UT" }
-  - { CMD: "python setup.py unittests_LONG", NAME: "UT_LONG" }
+  - { CMD: "python setup.py unittests_LONG", NAME: "UT_LONG", TIMEOUT: 2400 }
   - { CMD: "python setup.py unittests_SKIP", NAME: "UT_SKIP" }
   - { CMD: "python setup.py unittests -g .*_1A_.*", NAME: "UT_1A" }
   - { CMD: "python setup.py unittests -g .*_2A_.*", NAME: "UT_2A" }

@@ -57,6 +57,7 @@ class TestNotebookRunner1a_correction_9 (unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_notebook1a_correction_9")
         keepnote = ls_notebooks("td1a")
         copy_data_file("td1a", "seance4_excel.txt", temp, fLOG=fLOG)
+        copy_data_file("td1a", "seance4_excel.xlsx", temp, fLOG=fLOG)
         assert len(keepnote) > 0
         if is_travis_or_appveyor() == "travis":
             warnings.warn("too long")

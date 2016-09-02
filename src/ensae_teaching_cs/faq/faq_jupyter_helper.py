@@ -20,6 +20,7 @@ def find_best_server(filename, profile='default'):
     @param      profile         profile to use
     @return                     a running server or None if not found
     """
+    from notebook import notebookapp
     kwargs = {}
     if profile != 'default':
         warnings.warn("Jupyter doesn't have profiles")

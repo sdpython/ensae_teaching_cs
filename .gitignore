@@ -236,7 +236,6 @@ version.txt
 !*/sphinxdoc/source/notebooks/_gs*
 */notebooks/*.zip
 */notebooks/*.txt
-*/notebooks/td1a/*.xlsx
 */notebooks/td1a/*.zip
 */notebooks/td1a/*.dbf
 */notebooks/td1a/python*.png
