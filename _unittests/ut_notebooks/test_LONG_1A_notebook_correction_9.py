@@ -64,7 +64,7 @@ class TestNotebookRunner1a_correction_9 (unittest.TestCase):
             return
         res = execute_notebooks(temp, keepnote,
                                 lambda i, n: "_12" not in n and
-                                "session9." not in n and
+                                "session9." in n and
                                 "correction" in n,
                                 fLOG=fLOG,
                                 clean_function=clean_function_1a)
