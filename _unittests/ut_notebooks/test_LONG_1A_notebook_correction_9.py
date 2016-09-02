@@ -42,13 +42,13 @@ from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
 
 
-class TestNotebookRunner1a_correction (unittest.TestCase):
+class TestNotebookRunner1a_correction_9 (unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
                                         __file__, hide=True)
 
-    def test_notebook_runner_correction_9_10(self):
+    def test_notebook_runner_correction_9(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -62,15 +62,7 @@ class TestNotebookRunner1a_correction (unittest.TestCase):
             return
         res = execute_notebooks(temp, keepnote,
                                 lambda i, n: "_12" not in n and
-                                "session1." not in n and
-                                "session2." not in n and
-                                "session3." not in n and
-                                "session4." not in n and
-                                "session5." not in n and
-                                "session6." not in n and
-                                "session7." not in n and
-                                "session8." not in n and
-                                "session_11." not in n and
+                                "session9." not in n and
                                 "correction" in n,
                                 fLOG=fLOG,
                                 clean_function=clean_function_1a)
