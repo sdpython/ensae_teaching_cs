@@ -141,6 +141,10 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
             return False
         if 'df["difference"] = ...' in cell:
             return False
+        if 'remote_open' in cell:
+            return None
+        if 'blobpassword' in cell:
+            return None
         return True
 
     addpath = get_additional_paths()
