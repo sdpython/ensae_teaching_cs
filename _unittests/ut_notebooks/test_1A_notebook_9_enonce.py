@@ -49,27 +49,17 @@ class TestNotebookRunner1a_enonce (unittest.TestCase):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
                                         __file__, hide=True)
 
-    def test_notebook_runner_enonce_9_10(self):
+    def test_notebook_runner_enonce_9(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        temp = get_temp_folder(__file__, "temp_notebook1a_enonce_9_10")
+        temp = get_temp_folder(__file__, "temp_notebook1a_enonce_9")
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
         keepnote = ls_notebooks("td1a")
         assert len(keepnote) > 0
         res = execute_notebooks(temp, keepnote,
-                                lambda i, n: "_12" not in n and
-                                "cenonce_session1." not in n and
-                                "cenonce_session2." not in n and
-                                "cenonce_session3." not in n and
-                                "cenonce_session4." not in n and
-                                "cenonce_session5." not in n and
-                                "cenonce_session6." not in n and
-                                "cenonce_session7." not in n and
-                                "cenonce_session8." not in n and
-                                "cenonce_session_11." not in n and
-                                "enonce" in n,
+                                lambda i, n: "cenonce_session9." in n,
                                 fLOG=fLOG,
                                 clean_function=clean_function_1a)
         unittest_raise_exception_notebook(res, fLOG)
