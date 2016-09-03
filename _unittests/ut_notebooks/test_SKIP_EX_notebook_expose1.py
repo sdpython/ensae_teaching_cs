@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=27s)
+@brief      test log(time=60s)
 """
 
 import sys
@@ -44,6 +44,7 @@ from pyquickhelper.pycode import get_temp_folder, add_missing_development_versio
 class TestNotebookRunnerExpose1(unittest.TestCase):
 
     def setUp(self):
+        fLOG("add missing dependencies")
         add_missing_development_version(
             ["pyensae", "pymyinstall", "pymmails"], __file__)
 

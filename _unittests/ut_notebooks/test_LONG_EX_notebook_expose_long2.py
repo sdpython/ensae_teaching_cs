@@ -40,17 +40,22 @@ except ImportError:
     import pyquickhelper as skip_
 
 from pyquickhelper.loghelper import fLOG, noLOG
-from pyquickhelper.pycode import get_temp_folder
-from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
 
 
 class TestNotebookRunnerExposeLong2(unittest.TestCase):
+
+    def setUp(self):
+        fLOG("add missing dependencies")
+        add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
+                                        __file__, hide=True)
 
     def test_notebook_runner_exposelong2(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
         temp = get_temp_folder(__file__, "temp_notebookexposelong2_")
         keepnote = ls_notebooks("expose")
         assert len(keepnote) > 0

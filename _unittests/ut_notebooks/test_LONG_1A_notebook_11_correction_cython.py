@@ -41,11 +41,15 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
-from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, unittest_raise_exception_notebook
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
 
 
 class TestNotebookRunner1a_correction_11 (unittest.TestCase):
+
+    def setUp(self):
+        fLOG("add missing dependencies")
+        add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
+                                        __file__, hide=True)
 
     @staticmethod
     def clean_function(code):
@@ -64,6 +68,7 @@ class TestNotebookRunner1a_correction_11 (unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, unittest_raise_exception_notebook
         temp = get_temp_folder(__file__, "temp_notebook1a_correction_11")
         keepnote = ls_notebooks("td1a")
         assert len(keepnote) > 0

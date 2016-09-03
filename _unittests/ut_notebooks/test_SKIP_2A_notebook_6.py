@@ -43,6 +43,7 @@ from pyquickhelper.pycode import get_temp_folder, add_missing_development_versio
 class TestNotebookRunner2a_6 (unittest.TestCase):
 
     def setUp(self):
+        fLOG("add missing dependencing")
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
                                         __file__, hide=True)
 
