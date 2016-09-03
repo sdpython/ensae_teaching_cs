@@ -5,6 +5,7 @@
 import sys
 import os
 import unittest
+import warnings
 
 
 try:
@@ -69,15 +70,19 @@ class TestData1a(unittest.TestCase):
         text = marathon(local=True)
         assert text is not None
 
-        text2 = marathon(local=False, cache_folder=temp)
-        assert text2 is not None
-        self.assertEqual(len(text), len(text2))
-
-        self.maxDiff = None
-        self.assertEqual(text, text2)
-
         name = marathon(local=True, filename=True)
         assert name.endswith("marathon.txt")
+
+        try:
+            text2 = marathon(local=False, cache_folder=temp)
+        except ConnectionResetError as e:
+            warnings.warn("Cannot check remote marathon.txt.\n" + str(e))
+            return
+
+        assert text2 is not None
+        self.assertEqual(len(text), len(text2))
+        self.maxDiff = None
+        self.assertEqual(text, text2)
 
 
 if __name__ == "__main__":

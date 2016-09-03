@@ -17,6 +17,7 @@ script:
   - { CMD: "python setup.py unittests -g .*_2A_.*", NAME: "UT_2A" }
   - { CMD: "python setup.py unittests -g .*_3A_.*", NAME: "UT_3A" }
   - { CMD: "python setup.py unittests -g .*_EX_.*", NAME: "UT_EX" }
+  - { CMD: "python setup.py unittests -g .*_GUI_.*", NAME: "UT_GUI" }
   - if [ ${VERSION} == "3.5" and ${DIST} == "std" ]
       then 
         --CMD=python setup.py build_sphinx;
