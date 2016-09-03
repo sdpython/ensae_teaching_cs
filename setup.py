@@ -235,7 +235,26 @@ if not r:
         from pyquickhelper.pycode import process_standard_options_for_setup_help
         process_standard_options_for_setup_help(sys.argv)
 
-    if "build_pres" in sys.argv or "build_pres_2A" in sys.argv or \
+    if "try_import" in sys.argv:
+        pyq = import_pyquickhelper()
+        sys.path.append("src")
+        from ensae_teaching_cs.automation import *
+        from ensae_teaching_cs.automation_students import *
+        from ensae_teaching_cs.coding_party import *
+        from ensae_teaching_cs.data import *
+        from ensae_teaching_cs.faq import *
+        from ensae_teaching_cs.helpers import *
+        from ensae_teaching_cs.homeblog import *
+        from ensae_teaching_cs.ml import *
+        from ensae_teaching_cs.mypython import *
+        from ensae_teaching_cs.pythonnet import *
+        from ensae_teaching_cs.special import *
+        from ensae_teaching_cs.mypython import *
+        from ensae_teaching_cs.td_1a import *
+        from ensae_teaching_cs.td_2a import *
+        from ensae_teaching_cs.tests import *
+
+    elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv or \
             "build_pres_3A" in sys.argv:
         # we generate the documentation for the presentation
 

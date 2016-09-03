@@ -367,3 +367,4 @@ enumerate_send_email_debug.html
 _unittests/run_unittests.py.out
 _doc/notebooks/td1a/lisezmoi_MAR2012.txt
 _doc/notebooks/1a/pdf.prof
+.eggs/README.txt
