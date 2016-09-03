@@ -44,7 +44,7 @@ from pyquickhelper.pycode import get_temp_folder, add_missing_development_versio
 class TestNotebookRunnerExpose1(unittest.TestCase):
 
     def setUp(self):
-        fLOG("add missing dependencies")
+        fLOG("add missing dependencies", OutputPrint=__name__ == "__main__")
         add_missing_development_version(
             ["pyensae", "pymyinstall", "pymmails"], __file__)
 

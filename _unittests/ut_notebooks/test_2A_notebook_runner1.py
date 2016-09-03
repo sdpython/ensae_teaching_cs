@@ -54,18 +54,25 @@ except ImportError:
 
 from pyquickhelper.ipythonhelper import run_notebook
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
 from pyquickhelper import __file__ as location
 from pyensae import __file__ as location2
+from src import __file__ as init_file
 
 
 class TestNotebookRunner1 (unittest.TestCase):
+
+    def setUp(self):
+        add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
+                                        __file__, hide=True)
 
     def test_notebook_runner(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks
+        assert ls_notebooks
         temp = get_temp_folder(__file__, "temp_notebook1")
         nbfile = os.path.join(
             temp,
@@ -81,6 +88,7 @@ class TestNotebookRunner1 (unittest.TestCase):
         addpath = [
             os.path.dirname(location), os.path.dirname(location2)]
         addpath = [os.path.normpath(os.path.join(_, "..")) for _ in addpath]
+        addpath.append(os.path.abspath(os.path.dirname(init_file)))
 
         outfile = os.path.join(temp, "out_" + os.path.split(nbfile)[-1])
         assert not os.path.exists(outfile)

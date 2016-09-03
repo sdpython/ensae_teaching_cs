@@ -45,7 +45,7 @@ from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_mis
 class TestNotebookRunner1a_correction_9 (unittest.TestCase):
 
     def setUp(self):
-        fLOG("add missing dependencies")
+        fLOG("add missing dependencies", OutputPrint=__name__ == "__main__")
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
                                         __file__, hide=True)
 
