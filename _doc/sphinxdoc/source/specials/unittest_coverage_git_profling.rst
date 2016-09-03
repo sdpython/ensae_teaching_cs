@@ -131,7 +131,10 @@ Si un programme lent ou gros consommateur de mémoire,
 on veut savoir où le programme perd du temps ou 
 occasionne des pics de mémoire. Le profiling permet de 
 mesurer la vitesse d'exécution et la consommation de chaque fonction ou chaque ligne.
-Voir `Exemples de profiling <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/completion_profiling.html#completionprofilingrst>`_
+Voir :
+
+* :ref:`profilingexamplerst`
+* `Exemples de profiling <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/completion_profiling.html#completionprofilingrst>`_
 
 Couverture des tests unitaires
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
