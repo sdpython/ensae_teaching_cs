@@ -4,6 +4,7 @@
 """
 import os
 from pyquickhelper.loghelper import noLOG
+from pyensae.file_helper.decompress_helper import decompress_zip
 
 
 def anyzip(filename, local=True, cache_folder=".", fLOG=noLOG, **kwargs):
@@ -22,11 +23,12 @@ def anyzip(filename, local=True, cache_folder=".", fLOG=noLOG, **kwargs):
         this = os.path.join(this, "zips", filename)
         if not os.path.exists(this):
             raise FileNotFoundError(this)
+        return decompress_zip(this, whereTo=cache_folder, fLOG=fLOG)
     else:
         import pyensae
         this = pyensae.download_data(
             filename, whereTo=cache_folder, fLOG=fLOG, **kwargs)
-    return this
+        return this
 
 
 def besancon_df(local=True, cache_folder=".", fLOG=noLOG):
