@@ -10,30 +10,30 @@ install:
   - pip install -r requirements.txt
   - pip freeze
 before_script:
-  - python setup.py try_import
+  - python -u setup.py try_import
 script:
-  - { CMD: "python setup.py unittests", NAME: "UT" }
-  - { CMD: "python setup.py unittests_LONG", NAME: "UT_LONG", TIMEOUT: 2400 }
-  - { CMD: "python setup.py unittests_SKIP", NAME: "UT_SKIP" }
-  - { CMD: "python setup.py unittests -g .*_1A_.*", NAME: "UT_1A" }
-  - { CMD: "python setup.py unittests -g .*_2A_.*", NAME: "UT_2A" }
-  - { CMD: "python setup.py unittests -g .*_3A_.*", NAME: "UT_3A" }
-  - { CMD: "python setup.py unittests -g .*_EX_.*", NAME: "UT_EX" }
-  - { CMD: "python setup.py unittests -g .*_GUI_.*", NAME: "UT_GUI", TIMEOUT: 2400 }
+  - { CMD: "python -u setup.py unittests", NAME: "UT" }
+  - { CMD: "python -u setup.py unittests_LONG", NAME: "UT_LONG", TIMEOUT: 2400 }
+  - { CMD: "python -u setup.py unittests_SKIP", NAME: "UT_SKIP" }
+  - { CMD: "python -u setup.py unittests -g .*_1A_.*", NAME: "UT_1A" }
+  - { CMD: "python -u setup.py unittests -g .*_2A_.*", NAME: "UT_2A" }
+  - { CMD: "python -u setup.py unittests -g .*_3A_.*", NAME: "UT_3A" }
+  - { CMD: "python -u setup.py unittests -g .*_EX_.*", NAME: "UT_EX" }
+  - { CMD: "python -u setup.py unittests -g .*_GUI_.*", NAME: "UT_GUI", TIMEOUT: 2400 }
   - if [ ${VERSION} == "3.5" and ${DIST} == "std" ]
       then 
-        --CMD=python setup.py build_sphinx;
+        --CMD=python -u setup.py build_sphinx;
         --NAME=DOC;
       fi  
 after_script:
-  - python setup.py bdist_wheel
+  - python -u setup.py bdist_wheel
   - if [ ${DIST} != "conda" and ${VERSION} != "3.4" and ${NAME} == "UT" ] then copy dist\*.whl ..\..\local_pypi\local_pypi_server fi
 documentation:
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python setup.py build_pres fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python setup.py build_pres_2A fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python setup.py build_pres_3A fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python setup.py build_pres_1Ap fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} == "UT" ] then python setup.py build_sphinx fi
+  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres fi
+  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres_2A fi
+  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres_3A fi
+  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres_1Ap fi
+  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} == "UT" ] then python -u setup.py build_sphinx fi
   - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\sphinxdoc\build\html dist\html fi
   - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\sphinxdoc\build2\html dist\html2 fi
   - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\sphinxdoc\build3\html dist\html3 fi
