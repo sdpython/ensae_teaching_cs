@@ -23,12 +23,15 @@ def anyzip(filename, local=True, cache_folder=".", fLOG=noLOG, **kwargs):
         this = os.path.join(this, "zips", filename)
         if not os.path.exists(this):
             raise FileNotFoundError(this)
-        return decompress_zip(this, whereTo=cache_folder, fLOG=fLOG)
+        res = decompress_zip(this, whereTo=cache_folder, fLOG=fLOG)
     else:
         import pyensae
         this = pyensae.download_data(
             filename, whereTo=cache_folder, fLOG=fLOG, **kwargs)
-        return this
+        res = this
+    if isinstance(res, list):
+        res = res[0]
+    return res
 
 
 def besancon_df(local=True, cache_folder=".", fLOG=noLOG):

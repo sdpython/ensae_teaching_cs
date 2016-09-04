@@ -70,12 +70,14 @@ class TestDataZip(unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_besancon")
         text = besancon_df(local=True, fLOG=fLOG)
         assert text is not None
+        assert isinstance(text, str)
 
         try:
             text2 = besancon_df(local=False, cache_folder=temp, fLOG=fLOG)
             assert text2
+            assert isinstance(text2, str)
         except (ConnectionResetError, DownloadDataException) as e:
-            warnings.warn("Cannot check remote marathon.txt.\n" + str(e))
+            warnings.warn("Cannot check remote besancon_df.txt.\n" + str(e))
             return
 
     def test_added(self):
@@ -88,12 +90,14 @@ class TestDataZip(unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_added")
         text = besancon_df(local=True, fLOG=fLOG)
         assert text is not None
+        assert isinstance(text, str)
 
         try:
             text2 = added(local=False, cache_folder=temp, fLOG=fLOG)
             assert text2
+            assert isinstance(text2, str)
         except (ConnectionResetError, DownloadDataException) as e:
-            warnings.warn("Cannot check remote marathon.txt.\n" + str(e))
+            warnings.warn("Cannot check remote added.txt.\n" + str(e))
             return
 
 
