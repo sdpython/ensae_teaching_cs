@@ -335,6 +335,7 @@ auto_*.bat
 auto_*.py
 auto_*.xml
 auto_*.db3
+status_*.txt
 .RData
 _doc/notebooks/td2a/iris.html
 _doc/notebooks/td2a/data_roc.csv

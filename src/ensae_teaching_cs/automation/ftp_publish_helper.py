@@ -5,7 +5,6 @@
 """
 
 import os
-import warnings
 from pyquickhelper.filehelper import TransferFTP, FileTreeNode, FolderTransferFTP
 from pyquickhelper.funcwin import open_window_params
 from pyquickhelper.filehelper.ftp_transfer_files import content_as_binary as pqh_content_as_binary
@@ -82,16 +81,9 @@ def text_transform(ftpp, filename, content):
         return content
 
 
-def publish_documentation(
-        docs,
-        ftpsite=None,
-        login=None,
-        password=None,
-        key_save="my_password",
-        footer_html=None,
-        content_filter=trigger_on_specific_strings,
-        is_binary=content_as_binary,
-        fLOG=print):
+def publish_documentation(docs, ftpsite=None, login=None, password=None,
+                          key_save="my_password", footer_html=None, content_filter=trigger_on_specific_strings,
+                          is_binary=content_as_binary, fLOG=print):
     """
     publish the documentation and the setups of a python module on a webiste,
     it assumes the modules is organized the same way as
@@ -110,10 +102,11 @@ def publish_documentation(
 
     *docs* is a list of dictionaries which must contain for each folder
     to transfer:
-        - ``local``: local folder
-        - ``root_local``: local paths will be related to this root
-        - ``root_web``: prefix to add to the remote paths
-        - ``status_file``: a file where the function populates the transfered files and some information about them
+
+    - ``local``: local folder
+    - ``root_local``: local paths will be related to this root
+    - ``root_web``: prefix to add to the remote paths
+    - ``status_file``: a file where the function populates the transfered files and some information about them
 
     A local file is composed by ``<local_root>/<relative_path>``, it
     will be uploaded to ``<web_root>/<relative_path>``.
@@ -148,10 +141,7 @@ def publish_documentation(
 
     filter_out = "[/\\\\]((moduletoc.html)|(blogtoc.html)|(searchbox.html))"
 
-    ftp = TransferFTP(ftpsite,
-                      login,
-                      password,
-                      fLOG=fLOG)
+    ftp = TransferFTP(ftpsite, login, password, fLOG=fLOG)
 
     for project in docs:
 
@@ -166,82 +156,57 @@ def publish_documentation(
         sfile = project["status_file"]
         rootw = project["root_web"]
 
-        if "dist_module27" in location:
-            # python 27.version
-            m27 = os.path.join(root_local, "..", "..", "dist_module27")
-            if os.path.exists(m27):
-                fLOG("-------------------------py27", m27)
-                ftn = FileTreeNode(os.path.join(root_local, ".."),
-                                   filter=lambda root, path, f, dir: not dir)
-                fftp = FolderTransferFTP(ftn, ftp, sfile,
-                                         root_web=root_web.replace(
-                                             "helpsphinx", ""),
-                                         fLOG=fLOG,
-                                         footer_html=footer_html,
-                                         content_filter=content_filter,
-                                         is_binary=is_binary,
-                                         text_transform=text_transform)
+        # documentation + setup
+        fLOG("-------------------------", location)
 
-                fftp.start_transfering()
-        else:
-            # documentation + setup
-            fLOG("-------------------------", location)
+        ftn = FileTreeNode(root_local)
+        fftp = FolderTransferFTP(ftn, ftp, sfile,
+                                 root_web=rootw,
+                                 fLOG=fLOG,
+                                 footer_html=footer_html,
+                                 content_filter=content_filter,
+                                 is_binary=is_binary,
+                                 text_transform=text_transform,
+                                 filter_out=filter_out)
 
-            ftn = FileTreeNode(root_local)
-            fftp = FolderTransferFTP(ftn, ftp, sfile,
-                                     root_web=rootw,
-                                     fLOG=fLOG,
-                                     footer_html=footer_html,
-                                     content_filter=content_filter,
-                                     is_binary=is_binary,
-                                     text_transform=text_transform,
-                                     filter_out=filter_out)
+        fftp.start_transfering()
 
-            fftp.start_transfering()
+        ftn = FileTreeNode(os.path.join(root_local, ".."),
+                           filter=lambda root, path, f, dir: not dir)
+        fftp = FolderTransferFTP(ftn, ftp, sfile,
+                                 root_web=root_web.replace(
+                                     "helpsphinx", ""),
+                                 fLOG=fLOG,
+                                 footer_html=footer_html,
+                                 content_filter=content_filter,
+                                 is_binary=is_binary,
+                                 text_transform=text_transform)
 
-            ftn = FileTreeNode(os.path.join(root_local, ".."),
-                               filter=lambda root, path, f, dir: not dir)
-            fftp = FolderTransferFTP(ftn, ftp, sfile,
-                                     root_web=root_web.replace(
-                                         "helpsphinx", ""),
-                                     fLOG=fLOG,
-                                     footer_html=footer_html,
-                                     content_filter=content_filter,
-                                     is_binary=is_binary,
-                                     text_transform=text_transform)
-
-            fftp.start_transfering()
+        fftp.start_transfering()
 
     ftp.close()
 
 
-def publish_teachings_to_web(
-        login,
-        ftpsite="ftp.xavierdupre.fr",
-        google_id=None,
-        location="C:\\jenkins\\pymy\\%s%s\\dist\\%s",
-        rootw="/www/htdocs/app/%s/%s",
-        rootw2="/lesenfantscodaient.fr",
-        folder_status=".",
-        layout=[("epub", "epub"), ("html", "helpsphinx")],
-        modules=["pyquickhelper",
-                 "pyensae",
-                 # "anaconda2_pyquickhelper_27",
-                 # "anaconda2_pymyinstall_27",
-                 "pymyinstall",
-                 "pysqllike",
-                 "pyrsslocal",
-                 "pymmails",
-                 # "anaconda2_python3_module_template_27",
-                 "python3_module_template",
-                 "actuariat_python",
-                 "code_beatrix",
-                 "ensae_projects",
-                 "jupytalk",
-                 "mlstatpy",
-                 "ensae_teaching_cs"],
-        password=None,
-        fLOG=print):
+def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None,
+                             location="d:\\jenkins\\pymy\\%s%s\\dist\\%s", rootw="/www/htdocs/app/%s/%s",
+                             rootw2="/lesenfantscodaient.fr", folder_status=".",
+                             layout=[("html", "helpsphinx")],
+                             modules=["pyquickhelper",
+                                      "pyensae",
+                                      "pymyinstall",
+                                      "pysqllike",
+                                      "pyrsslocal",
+                                      "pymmails",
+                                      "python3_module_template",
+                                      "actuariat_python",
+                                      "code_beatrix",
+                                      "ensae_projects",
+                                      "jupytalk",
+                                      "mlstatpy",
+                                      "ensae_teaching_cs"],
+                             password=None,
+                             suffix=("_UT_35_std", "_DOC_35_std", ""),
+                             fLOG=print):
     """
     copy the documentation to the website
 
@@ -255,6 +220,7 @@ def publish_teachings_to_web(
     @param      modules         list of modules to publish
     @param      password        if None, if will asked
     @param      layout          last part of the folders
+    @param      suffix          suffixes to append to the project name
     @param      fLOG            logging function
 
     Example of use::
@@ -282,7 +248,6 @@ def publish_teachings_to_web(
 
     """
     import os
-    import shutil
     from pyquickhelper.funcwin import open_window_params
     from ensae_teaching_cs.automation.ftp_publish_helper import publish_documentation
 
@@ -309,64 +274,36 @@ def publish_teachings_to_web(
     else:
         folder_status = os.path.abspath(folder_status)
 
+    if not isinstance(suffix, (tuple, list)):
+        suffix = [suffix]
+
     projects = []
     for module in modules:
 
         fLOG("+", module, " -- ", layout)
 
-        if module.endswith("27"):
-            prefix = ""
-            mn = module.replace("anaconda2_", "").replace("_27", "")
-            prefix2 = "_" if "_" not in mn else ""
-            lay = layout[0]
-            # C:\jenkins\pymy\anaconda2_pyquickhelper_27\dist_module27\dist
-            root = os.path.abspath(location % (prefix,
-                                               module + "\\dist_module27", lay[0]))
-            root = os.path.join(root, "..")
-
+        for lay in layout:
+            for suf in suffix:
+                root = os.path.abspath(location % (module, suf, lay[0]))
+                keepsuf = suf
+                if os.path.exists(root):
+                    break
             if not os.path.exists(root):
-                warnings.warn(
-                    "unable to publish: {0},\n{1} not found".format(module, root))
-                continue
+                raise FileNotFoundError(os.path.abspath(
+                    location % (module, suffix[0], lay[0])))
+            if module != "code_beatrix":
+                rw = rootw % (module, lay[1])
+            else:
+                rw = rootw2
 
-            for f in os.listdir(root):
-                ext = os.path.splitext(f)[-1]
-                if ext in [".whl"]:
-                    dest = module.replace("anaconda2_", "").replace("_27", "")
-                    dest = location % (prefix2, dest, lay[0])
-                    dest = os.path.join(dest, "..")
-                    if not os.path.exists(dest):
-                        dest = location % ("", dest, lay[0])
-                        dest = os.path.join(dest, "..")
-                    shutil.copy(os.path.join(root, f), dest)
-        else:
-            prefix = "py35_"  # "_" if "_" not in module else ""
-            for lay in layout:
-                root = os.path.abspath(location % (prefix, module, lay[0]))
-                if not os.path.exists(root):
-                    root = os.path.abspath(location % ("", module, lay[0]))
-                if module != "code_beatrix":
-                    smod = module.replace("_no_clean", "").replace(
-                        "anaconda2_", "").replace("_27", "")
-                    rw = rootw % (smod, lay[1])
-                else:
-                    if lay[1] == "epub":
-                        rw = rootw2 + "/" + lay[1]
-                    else:
-                        rw = rootw2
-
-                project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
-                               local=root,
-                               root_local=root,
-                               root_web=rw)
-                projects.append(project)
+            project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
+                           local=root, root_local=root, root_web=rw)
+            projects.append(project)
 
         if module == "ensae_teaching_cs":
-            prefix = "py35_"  # "_" if "_" not in module else ""
             lay = [_ for _ in layout if _[0] == "html"][0]
-            root = os.path.abspath(location % (prefix, module, lay[0]))
             if not os.path.exists(root):
-                root = os.path.abspath(location % ("", module, lay[0]))
+                raise FileNotFoundError(root)
 
             project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
                            local=root.replace("\\html", "\\html2"),
@@ -383,9 +320,9 @@ def publish_teachings_to_web(
             # pres
 
             for suffix in ["", "_2A", "_3A", "_1Ap"]:
-                root = os.path.abspath(location % (prefix, module, "html"))
+                root = os.path.abspath(location % (module, keepsuf, "html"))
                 if not os.path.exists(root):
-                    root = os.path.abspath(location % ("", module, "html"))
+                    raise FileNotFoundError(root)
                 project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
                                local=root.replace(
                                    "\\html", "\\html_pres" + suffix),
@@ -396,10 +333,5 @@ def publish_teachings_to_web(
 
     # publish
 
-    publish_documentation(projects,
-                          ftpsite=ftpsite,
-                          login=login,
-                          password=password,
-                          key_save="my_module_password",
-                          footer_html=footer,
-                          fLOG=fLOG)
+    publish_documentation(projects, ftpsite=ftpsite, login=login, password=password,
+                          key_save="my_module_password", footer_html=footer, fLOG=fLOG)
