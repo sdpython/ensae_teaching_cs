@@ -288,23 +288,23 @@ if not r:
             pa = os.getcwd()
             thispath = os.path.normpath(os.path.split(__file__)[0])
             docpath = os.path.normpath(
-                os.path.join(
-                    thispath,
-                    "_doc",
-                    "presentation" +
-                    suffix))
+                os.path.join(thispath, "_doc", "presentation" + suffix))
             os.chdir(docpath)
 
         lay = "html"
         build = "build"
         over = ""
         sconf = ""
-        cmd = "sphinx-build -b {1} -d {0}/doctrees{2}{3} source {0}/{1}".format(
-            build,
-            lay,
-            over,
-            sconf)
-        os.system(cmd)
+
+        import_pyquickhelper()
+        from pyquickhelper.helpgen import process_sphinx_cmd
+        cmd_file = os.path.abspath(process_sphinx_cmd.__file__)
+        cmd = '"{4}" "{5}" -b {1} -d {0}/doctrees{2}{3} source {0}/{1}'.format(
+            build, lay, over, sconf, sys.executable, cmd_file)
+        from pyquickhelper.loghelper import run_cmd
+        out, err = run_cmd(cmd, wait=True, fLOG=print)
+        print(out)
+        print(err)
 
         if sys.platform.startswith("win"):
             os.chdir(pa)
@@ -351,12 +351,16 @@ if not r:
             build = "build"
             over = ""
             sconf = ""
-            cmd = "sphinx-build -b {1} -d {0}/doctrees{2}{3} source {0}/{1}".format(
-                build,
-                lay,
-                over,
-                sconf)
-            os.system(cmd)
+
+            import_pyquickhelper()
+            from pyquickhelper.helpgen import process_sphinx_cmd
+            cmd_file = os.path.abspath(process_sphinx_cmd.__file__)
+            cmd = '"{4}" "{5}" -b {1} -d {0}/doctrees{2}{3} source {0}/{1}'.format(
+                build, lay, over, sconf, sys.executable, cmd_file)
+            from pyquickhelper.loghelper import run_cmd
+            out, err = run_cmd(cmd, wait=True, fLOG=print)
+            print(out)
+            print(err)
 
             if sys.platform.startswith("win"):
                 os.chdir(pa)
