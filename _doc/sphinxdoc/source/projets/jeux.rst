@@ -147,3 +147,16 @@ C'est un jeu de réflexion qui se joue à deux.
 
 * `How to Play the Ancient Game of Pai Sho <http://www.wikihow.com/Play-the-Ancient-Game-of-Pai-Sho>`_
 * `Official Pai Sho Rules And Gameplay <http://lyrislaser.com/wp-content/uploads/2014/08/Pai-Sho-Rules-Gameplay.pdf>`_
+
+.. _l-jeu-pokemon:
+
+Pokémon (2016)
+--------------
+
+Il y a presque chaque année un projet qui s'articule autour de ce jeu.
+Je laisse ceux qui s'y essayent définir leur projet qui tôt ou tard
+fait intervenir des statistiques sur la pokémon. Quelques jeux
+de données à ce sujet :
+
+* `Pokémon GO <https://www.kaggle.com/abcsds/pokemongo>`_
+* `Pokémon Stat <https://www.kaggle.com/abcsds/pokemon>`_

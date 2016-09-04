@@ -94,6 +94,7 @@ Liste exhaustive :
 #. Jeu 2 : :ref:`l-jeu-go`
 #. Jeu 2 : :ref:`l-jeu-pai-sho`
 #. Jeu 2 : :ref:`l-jeu-tic-tac-toe-99`
+#. Jeu 2 : :ref:`l-jeu-pokemon`
 #. Algo : :ref:`l-math-wifi`
 #. Algo : :ref:`l-math-pento`
 #. Algo : :ref:`l-math-motif`

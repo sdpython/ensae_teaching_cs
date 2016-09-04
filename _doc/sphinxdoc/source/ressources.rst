@@ -27,11 +27,14 @@ Source de données
 **Jeux de données**
 
 * *banque* `Home Mortgage Disclouse Act <http://www.ffiec.gov/hmda/>`_ (voir `Introducing Blaze - HMDA Practice <http://continuum.io/blog/blaze-hmda>`_
-* *code* `Evénements GitHub <https://www.githubarchive.org/>`_ : tous les commit sur GitHub chaque jour (~15.000 commit par jour)
+* *cinéma* `IMDB 5000 Movie Dataset <https://www.kaggle.com/deepmatrix/imdb-5000-movie-dataset>`_
 * *climat* `OpenWeatherMap <http://openweathermap.org/>`_
 * *climat* `Land-Based Datasets and Products <http://www.ncdc.noaa.gov/data-access/land-based-station-data/land-based-datasets>`_,
   `Daily Global Weather Measurements, 1929-2009 (NCDC, GSOD) <https://aws.amazon.com/fr/datasets/daily-global-weather-measurements-1929-2009-ncdc-gsod/?tag=datasets%23keywords%23climate>`_,
   voir aussi `Daily Global Weather Measurements (http://spatial-analyst.net/) <http://spatial-analyst.net/book/getGSOD.R>`_
+* *code* `Evénements GitHub <https://www.githubarchive.org/>`_ : tous les commit sur GitHub chaque jour (~15.000 commit par jour)
+* *consommation* `World Food Facts <https://www.kaggle.com/openfoodfacts/world-food-facts>`_
+* *finance* `Daily News for Stock Market Prediction <https://www.kaggle.com/aaron7sun/stocknews>`_
 * *images* `ImageNet <http://image-net.org/>`_, base de données d'images avec leur contenu
 * *ML* `Kaggle Datasets <https://www.kaggle.com/datasets>`_
 * *ML* `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_ 
@@ -56,11 +59,13 @@ Source de données
   `librosa <https://github.com/bmcfee/librosa>`_, `Music Similarity <http://labrosa.ee.columbia.edu/projects/>`_,
   `Million Song Dataset <https://aws.amazon.com/fr/datasets/million-song-dataset/>`_
 * *ONG* `Données Croix-Rouge sur les dons reçus <https://github.com/dataforgoodfr/croixrouge>`_
+* *politique* `Hillary Clinton's Emails <https://www.kaggle.com/kaggle/hillary-clinton-emails>`_
 * *santé* `Dépenses d'assurance maladie hors prestations hospitalières par caisse primaire/département <https://www.data.gouv.fr/fr/datasets/depenses-d-assurance-maladie-hors-prestations-hospitalieres-par-caisse-primaire-departement/>`_ (1 Go),
   `La démographie des médecins (RPPS) <https://www.data.gouv.fr/fr/datasets/la-demographie-des-medecins-rpps/>`_
 * *santé* `Epidemium <http://www.epidemium.cc/>`_ : challenge big data sur le cancer (voir `Les challenges <http://www.epidemium.cc/theme/search>`_),
   le site référence également un nombre important de jeux de données autour des thèmes liés à la santé `data.epidemium <http://data.epidemium.cc/fr#>`_
 * *santé* `Global Disease Monitoring and Forecasting with Wikipedia  <http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1003892>`_
+* *sports* `European Soccer Database <https://www.kaggle.com/hugomathien/soccer>`_
 * *texte* `soTweet: Studying Twitter at Scale <http://www-sop.inria.fr/members/Arnaud.Legout/Projects/sotweet.html>`_: base de 500 millions de tweets et 23 milliards de liens
 * *texte* `WordNet <https://wordnet.princeton.edu/wordnet/>`_, base de données anglaises sur le vocabulaire, la grammaire, les synonymes...
 * *texte* `dump wikipedia <https://dumps.wikimedia.org/backup-index.html>`_
