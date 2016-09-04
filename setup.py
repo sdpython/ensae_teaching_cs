@@ -225,7 +225,6 @@ if is_local() and "custom_left" not in sys.argv:
             f.write(windows_prefix.replace("__PY35_X64__", path_exe))
             f.write("\n")
             f.write(pres)
-            f.write(copy)
 
 else:
     r = False
