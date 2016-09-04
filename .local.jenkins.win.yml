@@ -16,7 +16,7 @@ script:
   - { CMD: "python -u setup.py unittests_LONG", NAME: "UT_LONG", TIMEOUT: 3600 }
   - { CMD: "python -u setup.py unittests_SKIP", NAME: "UT_SKIP" }
   - { CMD: "python -u setup.py unittests -g .*_1A_.*", NAME: "UT_1A" }
-  - { CMD: "python -u setup.py unittests -g .*_2A_.*", NAME: "UT_2A", TIMEOUT: 2400 }
+  - { CMD: "python -u setup.py unittests -g .*_2A_.*", NAME: "UT_2A", TIMEOUT: 3600 }
   - { CMD: "python -u setup.py unittests -g .*_3A_.*", NAME: "UT_3A" }
   - { CMD: "python -u setup.py unittests -g .*_EX_.*", NAME: "UT_EX", TIMEOUT: 3600 }
   - { CMD: "python -u setup.py unittests -g .*_GUI_.*", NAME: "UT_GUI", TIMEOUT: 2400 }
