@@ -62,7 +62,7 @@ class TestNotebookRunner2a_3 (unittest.TestCase):
             clean_function=clean_function_1a)
         unittest_raise_exception_notebook(res, fLOG)
 
-    def _test_notebook_runner_correction(self):
+    def test_notebook_runner_correction(self):
         fLOG(
             __file__,
             self._testMethodName,
