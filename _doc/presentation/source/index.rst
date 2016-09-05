@@ -95,7 +95,7 @@ ENSAE 1A - Programmation
         en stats/machine learning (problématique de clustering en haute dimension) 
         à l'ENSAE et travaille chez `Little Big Data <http://www.little-big-data.com/>`_ (startup).
 
-        **Pierre Corder** est co-fondateur de 
+        **Pierre Cordier** est co-fondateur de 
         `Effecience <http://www.effiscience.solutions/>`_
         et diplômé l'ENSAE (2014).
         
@@ -402,10 +402,11 @@ ENSAE 1A - Programmation
 
 .. revealjs:: Algorithme dans un site web
 
-    Histoire autour d'un système de complétion, mesure, impact, test A/B, économie.
+    Histoire autour d'un `système de complétion <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_nlp/completion.html>`_, 
+    mesure, impact, test A/B, économie.
     
     .. image:: http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/_images/wiki.png
-
+    
 .. revealjs:: Algorithme en binôme
 
     `Etude d'un algorithme en binôme <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/i_exams_algo_1a.html>`_

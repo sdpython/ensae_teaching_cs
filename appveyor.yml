@@ -46,5 +46,4 @@ install:
 build: off
 
 test_script:
-  - "%PYTHON%\\python -u setup.py build_script"
   - "%PYTHON%\\python -u setup.py unittests"

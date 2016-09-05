@@ -133,8 +133,8 @@ occasionne des pics de mémoire. Le profiling permet de
 mesurer la vitesse d'exécution et la consommation de chaque fonction ou chaque ligne.
 Voir :
 
-* :ref:`profilingexamplerst`
-* `Exemples de profiling <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/completion_profiling.html#completionprofilingrst>`_
+* :ref:`Profiling d'une fonction scipy <profilingexamplerst>`
+* `Revue d'outil de profiling <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/completion_profiling.html#completionprofilingrst>`_
 
 Couverture des tests unitaires
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

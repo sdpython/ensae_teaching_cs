@@ -13,7 +13,8 @@ Python pour un Data Scientist
 Cours animé par :
 
 * `Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_  (ENSAE 1999) [#fwrite1]_
-* Elodie Royant (ENSAE 2008)
+* Anne Muller (ENSAE 2008) [#fwrite1]_
+* Elodie Royant (ENSAE 2008) [#fwrite2]_
 * Antoine Thabault (ENSAE 2012) [#fwrite2]_
 * Jérémie Jakubowicz (ENSAE 2002) [#fwrite2]_
 * Nicolas Rousset [#fwrite2]_

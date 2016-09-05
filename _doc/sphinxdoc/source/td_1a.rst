@@ -20,20 +20,29 @@ Cours animé par :
 Intervenants 2015-2016 :
 
 * Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_
-* Emmanuel Guérin, `TalendSoft <http://www.talentsoft.com/>`_
+* Pierre Cordier, `Effiscience <http://effiscience.solutions/>`_
+* Yves Gerey, `A2iA <http://www.a2ia.com/en>`_
+* Charles de Ravel d'Esclapon, `Etaonis <http://www.etaonis.fr/>`_
 * Arthur Renaud, `Etaonis <http://www.etaonis.fr/>`_
 * Mehdi Seddar, `Artfact <http://www.artefact.is/>`_
-* Yves Gerey, `A2iA <http://www.a2ia.com/en>`_
 * Marc-Antoine Weisser, `Supélec <http://www.supelec.fr/>`_
-* Charles de Ravel d'Esclapon, `Etaonis <http://www.etaonis.fr/>`_
-* Félix Revert, `CapGemini Consulting <https://www.capgemini-consulting.com/>`_
 
 Ce cours s'étale sur 12 séances de travaux dirigés (TD) d'une durée de 2h. Le cours est décrit plus 
 en détail dans cette présentation : 
-`ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_. |slideslogo|
+
+* `ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_. |slideslogo|
+* :ref:`l-examens-1A-algo`
+
 
 .. contents::
     :local:
+
+
+.. |slideslogo| image:: _static/slides_logo.png
+             :height: 20
+             
+Le cours est évalué au premier semestre par un examen et au second par un 
+:ref:`projet informatique <l-projinfo1a>`.
 
 
 TD - les bases

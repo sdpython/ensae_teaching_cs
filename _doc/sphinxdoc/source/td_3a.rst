@@ -19,7 +19,7 @@ Cours animé par :
 
 * Matthieu Durut [#f3write1]_
 * Xavier Dupré [#f3write1]_
-* Antoine Ly [#f3write2]_
+* Antoine Ly [#f3write1]_
 
 Le cours est évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 
