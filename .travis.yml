@@ -30,9 +30,6 @@ install:
   - conda info -a
   - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION numpy scipy nose cython scikit-learn
   - source activate test-environment
-  # we change that, cvxopt does not seem to work anymore without mkl
-  # - conda install --yes nomkl
-  - conda install --yes mkl mkl-service
     # - make all
   #- conda build build_tools/conda-recipe --quiet
   - conda install -q --file=requirements_conda.txt
@@ -45,5 +42,9 @@ install:
   - pip install -U git+https://github.com/sdpython/pyPdf --no-deps
   - pip install -U git+https://github.com/matplotlib/natgrid --no-deps
   # - pip install hg+http://bitbucket.org/pygame/pygame
+  # we change that, cvxopt does not seem to work anymore without mkl
+  # we add it at the end since it seems to modify existing packages
+  # - conda install --yes nomkl
+  - conda install --yes mkl mkl-service
 script:
     - python setup.py unittests
