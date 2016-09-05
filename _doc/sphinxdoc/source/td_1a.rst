@@ -230,6 +230,10 @@ Pour vous exercer :
     notebooks/exercice_morse
     notebooks/exercice_lcs
     notebooks/exercice_plus_grande_somme
+    
+**Quelques sources d'exercices**
+
+* `Rosalind <http://rosalind.info/problems/topics/>`_
 
 
 TD - calcul matriciel, graphes, données
@@ -360,6 +364,7 @@ Bibliographie
 * `Quelques exercices du Project Euler <http://mathprepa.fr/python-project-euler-mpsi/>`_ *(2016/04)*
 * `Countdown to 2016 <http://nbviewer.jupyter.org/url/norvig.com/ipython/Countdown.ipynb>`_ *(2016/08)*
 * `The Convex Hull Problem <http://nbviewer.jupyter.org/url/norvig.com/ipython/Convex%20Hull.ipynb>`_ *(2016/08)*
+* `Rosalind <http://rosalind.info/problems/topics/>`_ *(2016/09)*
 
 **MOOC**
 

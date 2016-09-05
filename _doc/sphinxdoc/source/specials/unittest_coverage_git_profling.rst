@@ -136,6 +136,10 @@ Voir :
 * :ref:`Profiling d'une fonction scipy <profilingexamplerst>`
 * `Revue d'outil de profiling <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/completion_profiling.html#completionprofilingrst>`_
 
+On peut aussi regarder le `bytecode <https://docs.python.org/3/glossary.html#term-bytecode>`_
+généré par l'interpréteur Python :
+`Fun with Python bytecode  <http://multigrad.blogspot.fr/2014/06/fun-with-python-bytecode.html>`_.
+
 Couverture des tests unitaires
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -184,7 +188,9 @@ utilisée par Ariane Espace le sont. On rentre dans le domaine des mathématique
 Ces outils ne s'appliquent pas aux langages faiblement typés.
 Ils s'intéressent entre autres aux erreurs d'arrondis.
 Il est difficile de prévoir la valeur d'un résultat si le type
-change au cours des calculs.
+change au cours des calculs. Néanmoins, il existe des approches
+intermédiaires comme le module 
+`hypothesis <https://hypothesis.readthedocs.io/en/latest/index.html>`_.
 
 
 Pratiques utiles
@@ -379,6 +385,8 @@ Poussé à l'extrême, cela devient le
 `pair programming <https://en.wikipedia.org/wiki/Pair_programming>`_ qui
 consiste à programmer à deux devant le même écran.
 C'est assez cauchemardesque si c'est permanent.
+En pratique, la revue de code est un exercice utile.
+Un logiciel open source : `gerrit <https://www.gerritcodereview.com/index.md>`_.
 
 Continuous integration
 ^^^^^^^^^^^^^^^^^^^^^^
