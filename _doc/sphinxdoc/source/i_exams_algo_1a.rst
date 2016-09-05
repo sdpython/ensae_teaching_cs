@@ -53,17 +53,17 @@ Ces histoires sont fictives.
 
 **histoire 1**
 
-#. Il balaye devant lui.
+#. Il balaye devant lui (il agite son téléphone portable).
 #. L'application cherche si un trésor est virtuellement caché
    devant lui.
-#. La position d'un des trésor correspond. 
+#. La position d'un des trésors correspond. 
    L'application affiche ses caractéristiques.
 #. L'utilisateur *swipe* et stocke le trésor dans son
    coffre fort virtuel.
 #. L'application envoie l'information aux ordinateurs
    des créateurs de l'application. Elle envoie également l'image
    du paysage où le trésor a été attrapé.
-#. Ces ordinateurs détermine si le joueur a gagné.
+#. Ces ordinateurs déterminent si le joueur a gagné.
    Mais il n'a pas gagné.
    
 **histoire 2**
@@ -94,7 +94,6 @@ Ces histoires sont fictives.
 #. 5 magasins font une offre. Le meilleur est choisi.
 #. L'utilisateur reçoit le message qu'un indice se trouve dans ce magasin.
 #. L'application lui indique le chemin le plus court jusqu'au magasin.
-#. L'utilisateur partage l'indice avec ses amis sur l'application.
    
 **histoire 4**
 
@@ -117,6 +116,8 @@ Algorithmes implémentables
 * `Distance d'édition <https://fr.wikipedia.org/wiki/Distance_de_Levenshtein>`_
 * `Enchères de Vickrey <https://fr.wikipedia.org/wiki/Ench%C3%A8re_de_Vickrey>`_,
   `Mécanisme de Vickrey-Clarke-Groves <https://fr.wikipedia.org/wiki/M%C3%A9canisme_de_Vickrey-Clarke-Groves>`_
+* `Filtre de Sobel <https://fr.wikipedia.org/wiki/Filtre_de_Sobel>`_
+* `Générateur de nombre pseudo-aléatoires <https://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9rateur_de_nombres_pseudo-al%C3%A9atoires>`_
 * `Plus court chemin <https://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra>`_
 * Recherche dans un `index <https://fr.wikipedia.org/wiki/Index_(base_de_donn%C3%A9es)>`_
 * `Test A/B <https://fr.wikipedia.org/wiki/Test_A/B>`_ 

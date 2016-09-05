@@ -29,10 +29,7 @@ Intervenants 2015-2016 :
 
 Ce cours s'étale sur 12 séances de travaux dirigés (TD) d'une durée de 2h. Le cours est décrit plus 
 en détail dans cette présentation : 
-
-* `ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_. |slideslogo|
-* :ref:`l-examens-1A-algo`
-
+`ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_. |slideslogo|
 
 .. contents::
     :local:
@@ -40,9 +37,9 @@ en détail dans cette présentation :
 
 .. |slideslogo| image:: _static/slides_logo.png
              :height: 20
-             
-Le cours est évalué au premier semestre par un examen et au second par un 
-:ref:`projet informatique <l-projinfo1a>`.
+
+Le cours est évalué au premier semestre par un examen et aussi :ref:`l-examens-1A-algo`.
+Le second semestre et facultatif et est évalué par :ref:`projet informatique <l-projinfo1a>`.
 
 
 TD - les bases

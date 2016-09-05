@@ -37,7 +37,7 @@ except ImportError:
     import pyquickhelper as skip_
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, is_travis_or_appveyor
 
 
 class TestNotebookRunner2a_4 (unittest.TestCase):
@@ -73,6 +73,9 @@ class TestNotebookRunner2a_4 (unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
+        if is_travis_or_appveyor() == "travis":
+            # requires MKL
+            return
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, unittest_raise_exception_notebook
         temp = get_temp_folder(__file__, "temp_notebook2a_4_correction")
         keepnote = ls_notebooks("td2a")
