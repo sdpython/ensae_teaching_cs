@@ -28,3 +28,4 @@ requests-oauthlib
 version_information
 xmltodict
 xlrd
+xlwt
