@@ -33,7 +33,7 @@ if __name__ == "__main__":
                      download_only=False,
                      no_setup=False,
                      last_function=last_function,
-                     selection={"R", "tdm", "jdk", "VS"},
+                     selection={"R==3.2.5", "tdm", "jdk"},
                      documentation=False,
                      source="2",
                      fLOG=fLOG)

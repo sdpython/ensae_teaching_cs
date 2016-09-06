@@ -203,7 +203,8 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                                       "ensae_projects",
                                       "jupytalk",
                                       "mlstatpy",
-                                      "ensae_teaching_cs"],
+                                      "ensae_teaching_cs"
+                                      ],
                              password=None,
                              suffix=("_UT_35_std", "_DOC_35_std", ""),
                              fLOG=print):
@@ -330,6 +331,17 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                                    "\\html", "\\html_pres" + suffix),
                                root_web=(rootw % (module, lay[1])).replace("/helpsphinx", "/pressphinx" + suffix).replace("_no_clean", ""))
                 projects.append(project)
+
+        elif module == "python3_module_template":
+            lay = [_ for _ in layout if _[0] == "html"][0]
+            if not os.path.exists(root):
+                raise FileNotFoundError(root)
+
+            project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
+                           local=root.replace("\\html", "\\html2"),
+                           root_local=root.replace("\\html", "\\html2"),
+                           root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx2"))
+            projects.append(project)
 
     # publish
 
