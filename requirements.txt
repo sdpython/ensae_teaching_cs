@@ -26,6 +26,7 @@ pyreadline
 python-jenkins
 requests-oauthlib
 version_information
+xlsxwriter
 xmltodict
 xlrd
 xlwt
