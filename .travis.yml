@@ -6,7 +6,8 @@ addons:
 -  apt:
 -    packages:
       - ffmpeg
-      - build-dep 
+      - build-dep
+      - graphviz
       # - python-pygame
       # - mercurial
       # - libsdl2-dev

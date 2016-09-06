@@ -9,6 +9,7 @@ codecov
 entrypoints
 ete3
 folium
+graphviz
 lifelines
 lightning-python
 lxml
