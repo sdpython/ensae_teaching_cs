@@ -1,7 +1,7 @@
 #-*- coding: utf8 -*-
 """
 @file
-@brief  Contains TableFormulaCore.
+@brief  Implements TableFormula.
 """
 import copy
 import os
@@ -14,26 +14,29 @@ import json
 import pandas
 from xlwt import Formatting as EXf
 from xlwt import Style as EXs
-from xlwt import Workbook as EXw
+import xlwt as EXw
 from xlsxwriter import workbook as EXxw
 from xlrd import open_workbook
 
 from pyquickhelper.loghelper import fLOG, noLOG
 from pyquickhelper.loghelper.convert_helper import str2datetime
 from pyensae.sql import Database
+from .table_formula_stat import TableFormulaStat
 
 
-class TableFormulaCore:
+class TableFormula(TableFormulaStat):
     """
     This class aims at representating a table, it provides
     some "SQL like" functionalities such groupby or innerjoin, select, where...
+    This was a custom implementation of a DataFrame before I discovers
+    `pandas <http://pandas.pydata.org/>`_.
 
     The class provides an easy to go through the row table by converting each row
-    in a dictionary { column_name: value } on the run, Example:
+    in a dictionary ``{ column_name: value }`` on the run. Example:
 
     ::
 
-        tbl = TableFormulaCore(...)
+        tbl = TableFormula(...)
         newtbl = tbl.filter(lambda v: v["criteria"] == 5)
 
     see op __init__ for others ways to create a table.
@@ -46,9 +49,7 @@ class TableFormulaCore:
 
     ::
 
-        TableFormula = TableFormulaCore
-
-        table = TableFormula("name d_a d_b d_c#A 1 2 3#A 1.1 2.1 3.1#B 3 4 5".replace(" ", "\t").replace("#","\n"))
+        table = TableFormula("name d_a d_b d_c#A 1 2 3#A 1.1 2.1 3.1#B 3 4 5".replace(" ", "\\t").replace("#","\\n"))
         print(table)
         print("one value 0,1:", table[0,1])
 
@@ -117,7 +118,7 @@ class TableFormulaCore:
 
         print("--------- innerjoin")
         innerjoin = table.innerjoin(group, lambda v: v["name"],
-                                            lambda v: v["name"], "group")
+                                           lambda v: v["name"], "group")
         print(innerjoin)
 
         print("------------- extraction")
@@ -159,7 +160,7 @@ class TableFormulaCore:
             print(table[:10])
 
         print("--------------- groupby_implicit")
-        table = TableFormula("key_name sum_a len_b avg_c#A 1 2 3#A 1.1 2.1 3.1#B 3 4 5".replace(" ", "\t").replace("#","\n"))
+        table = TableFormula("key_name sum_a len_b avg_c#A 1 2 3#A 1.1 2.1 3.1#B 3 4 5".replace(" ", "\\t").replace("#","\\n"))
         print(table)
         gr = table.groupby_implicit(lambda v: v ["key_name"])
         print(gr)
@@ -201,7 +202,7 @@ class TableFormulaCore:
             su = sum(map(lambda _: 1 if _ in header else 0, firstline.split("\t")))
             if su < len(header) / 2.0:
                 logFunction("add_header_if_not_present: adding header(%f<%f)" % (su,
-                            len(header) / 2) + str(header) + " to " + filename + " firstline " + firstline)
+                                                                                 len(header) / 2) + str(header) + " to " + filename + " firstline " + firstline)
                 with open(filename, "r") as f:
                     text = f.read()
                 text = "\t".join(header) + "\n" + text
@@ -215,7 +216,7 @@ class TableFormulaCore:
             su = sum(map(lambda _: 1 if _ in header else 0, firstline.split("\t")))
             if su < len(header) / 2.0:
                 logFunction("add_header_if_not_present: adding header(%f<%f)" % (su,
-                            len(header) / 2) + str(header) + " to " + filename + " firstline " + firstline)
+                                                                                 len(header) / 2) + str(header) + " to " + filename + " firstline " + firstline)
                 with open(filename, "r", encoding=encoding) as f:
                     text = f.read()
                 text = "\t".join(header) + "\n" + text
@@ -246,7 +247,8 @@ class TableFormulaCore:
                 with open(filename, "r", encoding=encoding) as f:
                     firstline = f.readline().strip("\n\r ")
 
-            logFunction("random_split_file: file %s has header %s" % (filename, firstline))
+            logFunction("random_split_file: file %s has header %s" %
+                        (filename, firstline))
 
         logFunction("random_split_file: split %s in %d parts" % (filename, nb))
         fileName = [outfileprefix + (".%04d.txt" % n) for n in range(0, nb)]
@@ -267,7 +269,8 @@ class TableFormulaCore:
                     line = f.readline()
                     nbline += 1
                     if nbline % 1000000 == 0:
-                        logFunction("random_split_file: processed %d lines" % nbline)
+                        logFunction(
+                            "random_split_file: processed %d lines" % nbline)
         else:
             filesP = [open(_, "w", encoding=encoding) for _ in fileName]
             if firstline is not None:
@@ -283,7 +286,8 @@ class TableFormulaCore:
                     line = f.readline()
                     nbline += 1
                     if nbline % 1000000 == 0:
-                        logFunction("random_split_file: processed %d lines" % nbline)
+                        logFunction(
+                            "random_split_file: processed %d lines" % nbline)
 
         for _ in filesP:
             _.close()
@@ -336,7 +340,8 @@ class TableFormulaCore:
         @return                     correlation factor or correlation, sigma1, sigma2 if deviations is True
         """
         if len(values) <= 1:
-            raise ValueError("expecting more than one observation, not %d" % len(values))
+            raise ValueError(
+                "expecting more than one observation, not %d" % len(values))
 
         mx = 0.
         my = 0.
@@ -380,7 +385,7 @@ class TableFormulaCore:
     def __init__(self, file, numeric_column=[], sep="\t", encoding=None,
                  read_n_lines=-1, sheet=0, **options):
         """
-        constructor, it can either take a filename, an object TableFormulaCore,
+        constructor, it can either take a filename, an object TableFormula,
         a list of columns and values.
 
         @param      file                filename or a list of column names or a dictionary,
@@ -392,48 +397,63 @@ class TableFormulaCore:
         @param      suffix_nb           if True, adds an integer to the column name if it is a duplicate
 
         Example:
-        @code
-        table = TableFormula("name d_a d_b d_c#A 1 2 3#A 1.1 2.1 3.1#B 3 4 5"
-                             .replace(" ", "\\t").replace("#","\\n"))
-        @endcode
+
+        ::
+
+            table = TableFormula("name d_a d_b d_c#A 1 2 3#A 1.1 2.1 3.1#B 3 4 5".replace(" ", "\\t").replace("#","\\n"))
+
         or
-        @code
-        table = TableFormula("file.txt", ["nb"])
-        @endcode
+
+        ::
+
+            table = TableFormula("file.txt", ["nb"])
+
         or
-        @code
-        table  = TableFormula(["date", "Y", "Y2", "xl"], values)
-        @endcode
+
+        ::
+
+            table  = TableFormula(["date", "Y", "Y2", "xl"], values)
+
         or
-        @code
-        data = [{ "one":1, "two":2 }, {"two":2.1, "three":3 }]
-        table = TableFormula(data)
-        @endcode
+
+        ::
+
+            data = [{ "one":1, "two":2 }, {"two":2.1, "three":3 }]
+            table = TableFormula(data)
+
         or
-        @code
-        data = { 1:{ "one":2.3, "two":2.2 }, 2:{"one":2.1, "two":3 }
-        table = TableFormula("__byrow__", data)
-        @endcode
+
+        ::
+
+            data = { 1:{ "one":2.3, "two":2.2 }, 2:{"one":2.1, "two":3 }
+            table = TableFormula("__byrow__", data)
+
         or
-        @code
+
+        ::
+
         table = TableFormula(numpy.matrix(...))
-        @endcode
+
         or
-        @code
-        table = TableFormula(numpy.array(...))
-        @endcode
+
+        ::
+
+            table = TableFormula(numpy.array(...))
+
 
         @warning In this second case, rows and header are not copied.
         """
         if isinstance(file, str):
             if os.path.exists(file):
-                self._read_file(file, numeric_column, sep, encoding, read_n_lines, sheet=sheet)
+                self._read_file(file, numeric_column, sep,
+                                encoding, read_n_lines, sheet=sheet)
             elif file == "__byrow__" and isinstance(numeric_column, dict):
                 self._fill_by_row(numeric_column)
             else:
                 lines = file.split("\n")
                 if len(lines) == 1:
-                    raise FileNotFoundError("a file was probably expected but was not found: " + file)
+                    raise FileNotFoundError(
+                        "a file was probably expected but was not found: " + file)
                 self._readlines(lines, numeric_column, sep)
 
         elif isinstance(file, list):
@@ -475,13 +495,15 @@ class TableFormulaCore:
                 self.index = {}
                 for i, h in enumerate(self.header):
                     self.index[h] = i
-                self.values = [[float(numeric_column[i, j]) for j in range(numeric_column.shape[1])] for i in range(numeric_column.shape[0])]
+                self.values = [[float(numeric_column[i, j]) for j in range(
+                    numeric_column.shape[1])] for i in range(numeric_column.shape[0])]
             elif isinstance(numeric_column, numpy.ndarray):
                 self.header = file
                 self.index = {}
                 for i, h in enumerate(self.header):
                     self.index[h] = i
-                self.values = [[float(numeric_column[i, j]) for j in range(numeric_column.shape[1])] for i in range(numeric_column.shape[0])]
+                self.values = [[float(numeric_column[i, j]) for j in range(
+                    numeric_column.shape[1])] for i in range(numeric_column.shape[0])]
             elif isinstance(file[0], list):
                 if len(file) == 1:
                     self.header = file[0]
@@ -502,27 +524,31 @@ class TableFormulaCore:
                 for i, h in enumerate(self.header):
                     self.index[h] = i
             else:
-                raise RuntimeError("this case should not happen " + str(type(file[0])))
+                raise RuntimeError(
+                    "this case should not happen " + str(type(file[0])))
 
         elif isinstance(file, numpy.matrix):
             self.header = ["c%d" % d for d in range(file.shape[1])]
             self.index = {}
             for i, h in enumerate(self.header):
                 self.index[h] = i
-            self.values = [[float(file[i, j]) for j in range(file.shape[1])] for i in range(file.shape[0])]
+            self.values = [[float(file[i, j]) for j in range(
+                file.shape[1])] for i in range(file.shape[0])]
 
         elif isinstance(file, numpy.ndarray):
             self.header = ["c%d" % d for d in range(file.shape[1])]
             self.index = {}
             for i, h in enumerate(self.header):
                 self.index[h] = i
-            self.values = [[float(file[i, j]) for j in range(file.shape[1])] for i in range(file.shape[0])]
+            self.values = [[float(file[i, j]) for j in range(
+                file.shape[1])] for i in range(file.shape[0])]
 
         else:
             try:
                 import pandas
             except ImportError:
-                raise TypeError("file has an unexpected type: " + str(type(file)))
+                raise TypeError(
+                    "file has an unexpected type: " + str(type(file)))
 
             if isinstance(file, pandas.DataFrame):
                 def convert(x):
@@ -542,7 +568,8 @@ class TableFormulaCore:
                 for i, h in enumerate(self.header):
                     self.index[h] = i
             else:
-                raise TypeError("file has an unexpected type: " + str(type(file)))
+                raise TypeError(
+                    "file has an unexpected type: " + str(type(file)))
 
         unique = {}
         for i, c in enumerate(self.header):
@@ -551,18 +578,22 @@ class TableFormulaCore:
                     c = "%s_%d" % (c, i)
                     self.header[i] = c
                 else:
-                    raise KeyError("column " + c + " already exists in %s" % str(self.header))
+                    raise KeyError("column " + c +
+                                   " already exists in %s" % str(self.header))
             unique[c] = True
 
     def __add__(self, other):
-        """do an addition, add values if types are matching
+        """
+        do an addition, add values if types are matching
         @param   other      matrix or float or string
         @return             new matrix, keep the header of the first matrix
         """
         if len(self) != len(other):
-            raise ValueError("both matrices should have the same number of rows")
+            raise ValueError(
+                "both matrices should have the same number of rows")
         if len(self.header) != len(other.header):
-            raise ValueError("both matrices should have the same number of columns")
+            raise ValueError(
+                "both matrices should have the same number of columns")
         values = []
         for row, rowo in zip(self.values, other.values):
             r = []
@@ -576,7 +607,8 @@ class TableFormulaCore:
         return self._private_getclass()(self.header, values)
 
     def __mul__(self, other):
-        """do a multiplication(by a number)
+        """
+        do a multiplication(by a number)
         @param   other      matrix or float or string
         @return             new matrix, keep the header of the first matrix
         """
@@ -603,9 +635,11 @@ class TableFormulaCore:
         @return             new matrix, keep the header of the first matrix
         """
         if len(self) != len(other):
-            raise ValueError("both matrices should have the same number of rows")
+            raise ValueError(
+                "both matrices should have the same number of rows")
         if len(self.header) != len(other.header):
-            raise ValueError("both matrices should have the same number of columns")
+            raise ValueError(
+                "both matrices should have the same number of columns")
         values = []
         for row, rowo in zip(self.values, other.values):
             r = []
@@ -661,7 +695,8 @@ class TableFormulaCore:
                 self.values[k][self.index[col]] = to
 
     def __getitem__(self, irow):
-        """operator [], accepts slices
+        """
+        operator [], accepts slices
         @param      irow        integer, tuple, slice or list
         @return                 depends on irow
                                     - int --> a table with one row
@@ -686,7 +721,8 @@ class TableFormulaCore:
             raise TypeError("Invalid argument type: " + str(type(irow)))
 
     def __setitem__(self, irow, value):
-        """operator [], just accepts tuple(to change a value)
+        """
+        operator [], just accepts tuple(to change a value)
         @param      irow        2-uple
         @param      value       new value
         """
@@ -698,7 +734,8 @@ class TableFormulaCore:
             else:
                 self.values[irow[0]][irow[1]] = value
         else:
-            raise TypeError("Invalid argument type(only tuple accepted): " + str(type(irow)))
+            raise TypeError(
+                "Invalid argument type(only tuple accepted): " + str(type(irow)))
 
     def __len__(self):
         """
@@ -714,13 +751,13 @@ class TableFormulaCore:
 
     def __deepcopy__(self, memo):
         """
-        operator deepcopy
+        operator ``deepcopy``
         """
         return self._private_getclass()(copy.deepcopy(self.header, memo), copy.deepcopy(self.values, memo))
 
     def copy(self):
         """
-        call copy.deepcopy(self)
+        call ``copy.deepcopy(self)``
         """
         return copy.deepcopy(self)
 
@@ -733,7 +770,7 @@ class TableFormulaCore:
         """
         if other is None:
             return False
-        if not isinstance(other, TableFormulaCore):
+        if not isinstance(other, TableFormula):
             raise TypeError("other is not a table: " + str(type(other)))
         if len(self.header) != len(other.header):
             return ["different number of columns"]
@@ -762,7 +799,7 @@ class TableFormulaCore:
         """
         if other is None:
             return False
-        if not isinstance(other, TableFormulaCore):
+        if not isinstance(other, TableFormula):
             return False
         if len(self.header) != len(other.header):
             return False
@@ -805,7 +842,8 @@ class TableFormulaCore:
         clth = ' class="%s"' % class_th if class_th is not None else ""
 
         rows = ["<table%s>" % clta]
-        rows.append(("<tr%s><th%s>" % (cltr, clth)) + ("</th><th%s>" % clth).join(self.header) + "</th></tr>")
+        rows.append(("<tr%s><th%s>" % (cltr, clth)) +
+                    ("</th><th%s>" % clth).join(self.header) + "</th></tr>")
         septd = "</td><td%s>" % cltd
         strtd = "<tr%s><td%s>" % (cltr, cltd)
         for row in self.values:
@@ -818,16 +856,17 @@ class TableFormulaCore:
     def __rst__(self, add_line=True):
         """
         convert the table into rst format
-        @code
-        +------------------------+------------+----------+----------+
-        | Header row, column 1   | Header 2   | Header 3 | Header 4 |
-        | (header rows optional) |            |          |          |
-        +========================+============+==========+==========+
-        | body row 1, column 1   | column 2   | column 3 | column 4 |
-        +------------------------+------------+----------+----------+
-        | body row 2             | ...        | ...      |          |
-        +------------------------+------------+----------+----------+
-        @endcode
+
+        ::
+
+            +------------------------+------------+----------+----------+
+            | Header row, column 1   | Header 2   | Header 3 | Header 4 |
+            | (header rows optional) |            |          |          |
+            +========================+============+==========+==========+
+            | body row 1, column 1   | column 2   | column 3 | column 4 |
+            +------------------------+------------+----------+----------+
+            | body row 2             | ...        | ...      |          |
+            +------------------------+------------+----------+----------+
 
         @param      add_line        add a line separator between each row
         """
@@ -850,9 +889,11 @@ class TableFormulaCore:
                 s += " " * (i - len(s))
             return s
 
-        res.append("| %s |" % " | ".join(map(complete, zip(tbl.header, length))))
+        res.append("| %s |" % " | ".join(
+            map(complete, zip(tbl.header, length))))
         res.append(slineb)
-        res.extend(["| %s |" % " | ".join(map(complete, zip(row, length))) for row in tbl.values])
+        res.extend(["| %s |" % " | ".join(map(complete, zip(row, length)))
+                    for row in tbl.values])
         if add_line:
             t = len(res)
             for i in range(t - 1, 3, -1):
@@ -904,12 +945,14 @@ class TableFormulaCore:
     def change_header(self, new_header):
         """
         change the column names
+
         @param      new_header      a list or a function which modifies the header
 
         Example:
-        @code
-        tbl.change_header(lambda h: h if h != "column" else "new_name")
-        @endcode
+
+        ::
+
+            tbl.change_header(lambda h: h if h != "column" else "new_name")
 
         @warning Do not do that yourself, the class holds a dictionary up to date with the column index.
         """
@@ -925,6 +968,7 @@ class TableFormulaCore:
     def rename_column(self, old_name, new_name):
         """
         rename a column
+
         @param      old_name    old name
         @param      new_name    new name
         """
@@ -934,6 +978,7 @@ class TableFormulaCore:
     def save(self, filename, sep="\t", encoding=None, newline="\n"):
         """
         saves the tables in a text file, first row is the column names
+
         @param      filename        filename
         @param      sep             column separator
         @param      encoding        encoding
@@ -1003,7 +1048,8 @@ class TableFormulaCore:
                     elif isinstance(row[i], float):
                         row[i] = datetime.datetime.utcfromtimestamp(row[i])
                     else:
-                        raise Exception("unable to extract a date from type {0}".format(type(row[i])))
+                        raise Exception(
+                            "unable to extract a date from type {0}".format(type(row[i])))
             elif condition(k):
                 for row in self.values:
                     row[i] = float(row[i])
@@ -1054,14 +1100,15 @@ class TableFormulaCore:
         @param      position    where to insert the column, -1 for the end
 
         Example:
-        @code
-        table.add_column("has_A", lambda v: 1 if "A" in v["name"] else 0, 0)
 
-        table.add_column(("has_A", "has_B"),(lambda v: 1 if "A" in v["name"] else 0,
-                                                lambda v: 1 if "B" in v["name"] else 0))
+        ::
 
-        table.add_column(("has_A", "has_B"),(lambda v:(1 if "A" in v["name"] else 0, 1 if "B" in v["name"] else 0))
-        @endcode
+            table.add_column("has_A", lambda v: 1 if "A" in v["name"] else 0, 0)
+
+            table.add_column(("has_A", "has_B"),(lambda v: 1 if "A" in v["name"] else 0,
+                                                    lambda v: 1 if "B" in v["name"] else 0))
+
+            table.add_column(("has_A", "has_B"),(lambda v:(1 if "A" in v["name"] else 0, 1 if "B" in v["name"] else 0))
         """
         if isinstance(colname, str):
             if position == -1:
@@ -1083,14 +1130,16 @@ class TableFormulaCore:
 
         elif isinstance(function, list):
             if len(colname) != len(function):
-                raise ValueError("unable to continue, colname and function do not have the same number of elements")
+                raise ValueError(
+                    "unable to continue, colname and function do not have the same number of elements")
             if position == -1:
                 position = [-1] * len(colname)
             elif isinstance(position, int):
                 position = [position] * len(colname)
             else:
                 if len(position) != len(colname):
-                    raise RuntimeError("unable to continue, colname and position do not have the same number of elements")
+                    raise RuntimeError(
+                        "unable to continue, colname and position do not have the same number of elements")
             dec = 0
             for a, b, c in zip(colname, function, position):
                 self.add_column(a, b, c + dec)
@@ -1121,9 +1170,10 @@ class TableFormulaCore:
     def add_column_index(self, colname="index", start=0):
         """
         Example:
-        @code
-        table.add_column("index_row")
-        @endcode
+
+        ::
+
+            table.add_column("index_row")
         """
         self.index[colname] = len(self.index)
         for i, row in enumerate(self.values):
@@ -1140,10 +1190,11 @@ class TableFormulaCore:
     def add_column_recursive(self, colname, functionValue, functionAgg):
         """
         Example:
-        @code
-        table.add_column_recursive(lambda v: v ["norm_%s" % loi],
-                        lambda li, v: li[-1] + v)
-        @endcode
+
+        ::
+
+            table.add_column_recursive(lambda v: v ["norm_%s" % loi],
+                                       lambda li, v: li[-1] + v)
         """
         self.index[colname] = len(self.index)
         values = []
@@ -1159,11 +1210,12 @@ class TableFormulaCore:
     def add_column_recursive_row(self, colname, functionAgg):
         """
         Example:
-        @code
-        table.add_column_recursive_row("w_%s" % loi,
-                        lambda li, v: li[-1] + v ["norm_%s" % loi] \
-                        if len(li)> 0 else v ["norm_%s" % loi])
-        @endcode
+
+        ::
+
+            table.add_column_recursive_row("w_%s" % loi,
+                            lambda li, v: li[-1] + v ["norm_%s" % loi] \
+                            if len(li)> 0 else v ["norm_%s" % loi])
         """
         self.index[colname] = len(self.index)
         values = []
@@ -1194,10 +1246,11 @@ class TableFormulaCore:
     def add_column_smooth(self, colname, function, position, weights):
         """
         Example:
-        @code
-        x = 1./3
-        table.add_column_smooth("has_A_smooth", lambda v: v["has_A"], [-1,0,1], [x,x,x])
-        @endcode
+
+        ::
+
+            x = 1./3
+            table.add_column_smooth("has_A_smooth", lambda v: v["has_A"], [-1,0,1], [x,x,x])
         """
         if len(position) != len(weights):
             raise ValueError("position and weights must have the same length")
@@ -1229,9 +1282,10 @@ class TableFormulaCore:
     def aggregate_column(self, colname, aggregated_function=sum):
         """
         Example:
-        @code
-        total = table.aggregate_column("d_c", sum)
-        @endcode
+
+        ::
+
+            total = table.aggregate_column("d_c", sum)
         """
         function = lambda v: v[colname]
         return self.aggregate(function, aggregated_function)
@@ -1239,9 +1293,10 @@ class TableFormulaCore:
     def aggregate(self, function, aggregated_function=sum):
         """
         Example:
-        @code
-        total = table.aggregate_column(lambda v: v["d_c"], len)
-        @endcode
+
+        ::
+
+            total = table.aggregate_column(lambda v: v["d_c"], len)
         """
         return aggregated_function([function(self._interpret_row(row)) for row in self.values])
 
@@ -1254,9 +1309,10 @@ class TableFormulaCore:
     def filter(self, condition_function):
         """
         Example:
-        @code
-        fil = table.filter(lambda v: v["d_b"] == 2)
-        @endcode
+
+        ::
+
+            fil = table.filter(lambda v: v["d_b"] == 2)
 
         @warning Rows are not copied.
         """
@@ -1274,9 +1330,10 @@ class TableFormulaCore:
         use prefix of a column name to know which function to use
         as an aggregated(sum, avg, len, key, none, max, min)
         Example:
-        @code
-        group = table.groupby_implicit(lambda v: v["name"])
-        @endcode
+
+        ::
+
+            group = table.groupby_implicit(lambda v: v["name"])
         """
         def identical(col, v):
             return v[col]
@@ -1285,7 +1342,7 @@ class TableFormulaCore:
             return vec[0]
 
         def avg(vec):
-            return TableFormulaCore.ratio(sum(vec), len(vec))
+            return TableFormula.ratio(sum(vec), len(vec))
 
         functions = []
         labels = ["key"]
@@ -1312,27 +1369,28 @@ class TableFormulaCore:
                 elif logging is not None:
                     end = min(len(keep), 10)
                     mes = ",".join([str(_) for _ in keep[:end]])
-                    logging("removing column " + col + " no unique value: " + str(len(dd)) + ": " + mes)
+                    logging("removing column " + col +
+                            " no unique value: " + str(len(dd)) + ": " + mes)
             elif col.startswith("sum"):
-                    functions.append(lambda v, col=col: identical(col, v))
-                    labels.append(col)
-                    functionsAgg.append(sum)
+                functions.append(lambda v, col=col: identical(col, v))
+                labels.append(col)
+                functionsAgg.append(sum)
             elif col.startswith("len"):
-                    functions.append(lambda v, col=col: 1)
-                    labels.append(col)
-                    functionsAgg.append(len)
+                functions.append(lambda v, col=col: 1)
+                labels.append(col)
+                functionsAgg.append(len)
             elif col.startswith("min"):
-                    functions.append(lambda v, col=col: 1)
-                    labels.append(col)
-                    functionsAgg.append(min)
+                functions.append(lambda v, col=col: 1)
+                labels.append(col)
+                functionsAgg.append(min)
             elif col.startswith("max"):
-                    functions.append(lambda v, col=col: 1)
-                    labels.append(col)
-                    functionsAgg.append(max)
+                functions.append(lambda v, col=col: 1)
+                labels.append(col)
+                functionsAgg.append(max)
             elif col.startswith("avg"):
-                    functions.append(lambda v, col=col: identical(col, v))
-                    labels.append(col)
-                    functionsAgg.append(avg)
+                functions.append(lambda v, col=col: identical(col, v))
+                labels.append(col)
+                functionsAgg.append(avg)
             elif col.startswith("none"):
                 pass
             else:
@@ -1343,20 +1401,23 @@ class TableFormulaCore:
     def groupby(self, functionKey, functionsValue, columns=None, functionsAgg=None, functionWeight=None):
         """
         Example:
-        @code
-        group = table.groupby(lambda v: v["name"],
-                                [lambda v: v["d_a"],
-                                  lambda v: v["d_b"]],
-                                ["name", "sum_d_a", "sum_d_b"])
-        @endcode
+
+        ::
+
+            group = table.groupby(lambda v: v["name"],
+                                    [lambda v: v["d_a"],
+                                      lambda v: v["d_b"]],
+                                    ["name", "sum_d_a", "sum_d_b"])
+
         or
-        @code
-        groupmax = table.groupby(lambda v: v["name"],
-                                [lambda v: v["d_a"],
-                                  lambda v: v["d_b"]],
-                                ["name", "max_d_a", "max_d_b"],
-                                [max, max])
-        @endcode
+
+        ::
+
+            groupmax = table.groupby(lambda v: v["name"],
+                                    [lambda v: v["d_a"],
+                                      lambda v: v["d_b"]],
+                                    ["name", "max_d_a", "max_d_b"],
+                                    [max, max])
         """
         if not isinstance(functionsValue, list):
             functionsValue = [functionsValue]
@@ -1364,12 +1425,15 @@ class TableFormulaCore:
             functionsAgg = [sum for f in functionsValue]
         if functionWeight is None:
             if columns is not None and len(columns) != len(functionsValue) + 1:
-                raise Exception("columns should have %d names not(%d)" % (len(functionsValue) + 1, len(columns)))
+                raise Exception("columns should have %d names not(%d)" % (
+                    len(functionsValue) + 1, len(columns)))
         else:
             if columns is not None and len(columns) != len(functionsValue) + 2:
-                raise Exception("columns should have %d names not(%d)" % (len(functionsValue) + 2, len(columns)))
+                raise Exception("columns should have %d names not(%d)" % (
+                    len(functionsValue) + 2, len(columns)))
         if columns is not None and not isinstance(columns[0], str):
-            raise TypeError("expecting type str not %s in columns" % (str(type(columns[0]))))
+            raise TypeError("expecting type str not %s in columns" %
+                            (str(type(columns[0]))))
 
         hist = {}
         if functionWeight is not None:
@@ -1399,7 +1463,8 @@ class TableFormulaCore:
             histValues = [[k, sum(histWeight[k])] + v for k, v in f()]
 
             if columns is None:
-                columns = ["key", "weight"] + ["val%d" % i for i, f in enumerate(functionsValue)]
+                columns = ["key", "weight"] + ["val%d" %
+                                               i for i, f in enumerate(functionsValue)]
             ret = self._private_getclass()(columns, histValues)
             return ret
         else:
@@ -1422,18 +1487,21 @@ class TableFormulaCore:
             histValues = [[k] + v for k, v in f()]
 
             if columns is None:
-                columns = ["key"] + ["val%d" % i for i, f in enumerate(functionsValue)]
+                columns = ["key"] + ["val%d" %
+                                     i for i, f in enumerate(functionsValue)]
             ret = self._private_getclass()(columns, histValues)
         return ret
 
     def sort(self, functionValue, reverse=False):
         """
         Example:
-        @code
-        table.sort(lambda v: v["d_b"] + v["d_c"])
-        @endcode
+
+        ::
+
+            table.sort(lambda v: v["d_b"] + v["d_c"])
         """
-        values = [(functionValue(self._interpret_row(row)), i) for i, row in enumerate(self.values)]
+        values = [(functionValue(self._interpret_row(row)), i)
+                  for i, row in enumerate(self.values)]
         values.sort(reverse=reverse)
         self.values = [self.values[_[1]] for _ in values]
         return self
@@ -1448,12 +1516,14 @@ class TableFormulaCore:
         @return                     table
 
         Example:
-        @code
-        ext = table.extract_columns(["name", "d_a"])
-        @endcode
+
+        ::
+
+            ext = table.extract_columns(["name", "d_a"])
         """
         if isinstance(listColumns, list):
-            indexes = [(self.index[col] if isinstance(col, str) else col) for col in listColumns]
+            indexes = [(self.index[col] if isinstance(col, str) else col)
+                       for col in listColumns]
             header = listColumns
             values = [[row[i] for i in indexes] for row in self.values]
             return self._private_getclass()(header, values)
@@ -1471,12 +1541,14 @@ class TableFormulaCore:
         @return                     table
 
         Example:
-        @code
-        rem = table.remove("d_a")
-        @endcode
+
+        ::
+
+            rem = table.remove("d_a")
         """
         if isinstance(listColumns, list):
-            cols = [_ for i, _ in enumerate(self.header) if _ not in listColumns and i not in listColumns]
+            cols = [_ for i, _ in enumerate(
+                self.header) if _ not in listColumns and i not in listColumns]
             return self.extract_columns(cols)
         elif isinstance(listColumns, str):
             cols = [_ for _ in self.header if _ != listColumns]
@@ -1504,10 +1576,11 @@ class TableFormulaCore:
         @return                     a table
 
         Example:
-        @code
-        innerjoin = table.innerjoin(group, lambda v: v["name"],
-                                            lambda v: v["name"], "group")
-        @endcode
+
+        ::
+
+            innerjoin = table.innerjoin(group, lambda v: v["name"],
+                                               lambda v: v["name"], "group")
         """
         defaultVal1 = [missingValue for k in self.header]
         defaultVal2 = [missingValue for k in table.header]
@@ -1695,9 +1768,10 @@ class TableFormulaCore:
                                     is within the two quantiles
 
         Example:
-        @code
-        fil = table.filter_quantile(lambda v: v["d_b"], 0, 0.4)
-        @endcode
+
+        ::
+
+            fil = table.filter_quantile(lambda v: v["d_b"], 0, 0.4)
 
         @warning Rows are not copied.
         """
@@ -1727,12 +1801,14 @@ class TableFormulaCore:
 
         concatenates two tables by rows, they must have the same header, rows of both tables are merged into a single matrix
         Example:
-        @code
-        union = table.union(table2)
-        @endcode
+
+        ::
+
+            union = table.union(table2)
         """
         if len(self.header) != len(table.header):
-            raise ValueError("tables do not have the same number of columns\ntbl1: %s\ntbl2: %s" % (",".join(self.header), ",".join(table.header)))
+            raise ValueError("tables do not have the same number of columns\ntbl1: %s\ntbl2: %s" % (
+                ",".join(self.header), ",".join(table.header)))
         for a, b in zip(self.header, table.header):
             if a != b:
                 raise ValueError("tables do not have the same column names")
@@ -1750,7 +1826,8 @@ class TableFormulaCore:
         values = []
         for i in range(0, maxr):
             r1 = self.values[i] if i < len(self) else [None] * len(self.header)
-            r2 = table.values[i] if i < len(table) else [None] * len(self.table)
+            r2 = table.values[i] if i < len(
+                table) else [None] * len(self.table)
             values.append(r1 + r2)
         return self._private_getclass()(header, values)
 
@@ -1764,9 +1841,10 @@ class TableFormulaCore:
         @return             a table
 
         Example:
-        @code
-        rnd = table.random(10)
-        @endcode
+
+        ::
+
+            rnd = table.random(10)
         """
         if unique:
             if n > len(self):
@@ -1797,9 +1875,10 @@ class TableFormulaCore:
         @return                     a dictionary { key:row } or { key: [row1, row2, ...] }
 
         Example:
-        @code
-        d = table.todict(lambda v: v["name"], lambda v: v["d_b"], True)
-        @endcode
+
+        ::
+
+            d = table.todict(lambda v: v["name"], lambda v: v["d_b"], True)
         """
         res = {}
         if useList:
@@ -1831,10 +1910,11 @@ class TableFormulaCore:
         @return                   table
 
         Example:
-        @code
-        d = table.select(lambda v:(v["name"], v["d_b"]))
-        print(list(d))
-        @endcode
+
+        ::
+
+            d = table.select(lambda v:(v["name"], v["d_b"]))
+            print(list(d))
         """
         for row in self.values:
             v = self._interpret_row(row)
@@ -1848,16 +1928,18 @@ class TableFormulaCore:
         @return                                 new table
 
         The signature of the function is the following one:
-        @code
-        def function(value, column_name):
-            # ....
-            return new_value
-        @endcode
+
+        ::
+
+            def function(value, column_name):
+                # ....
+                return new_value
 
         Example:
-        @code
-        tbl = tbl.modify_all(lambda v,c: {"string":"", "numerical":0}.get(c,None) if v is None else v)
-        @endcode
+
+        ::
+
+            tbl = tbl.modify_all(lambda v,c: {"string":"", "numerical":0}.get(c,None) if v is None else v)
         """
         values = []
         for row in self.values:
@@ -1888,26 +1970,32 @@ class TableFormulaCore:
 
         Then we would type:
         Example:
-        @code
-        mul = table.multiply_column_by_row_instance(
-                            lambda v: v["date"],
-                            lambda v: v["city"])
-        @endcode
+
+        ::
+
+            mul = table.multiply_column_by_row_instance(
+                                lambda v: v["date"],
+                                lambda v: v["city"])
+
         The input table would be like:
-        @code
-        city   date
-        A      jan
-        A      feb
-        B      feb
-        @endcode
+
+        ::
+
+            city   date
+            A      jan
+            A      feb
+            B      feb
+
         It returns:
-        @code
-        KEY	    A|city	A|date	B|city	B|date
-        feb	    A	    feb	    B	    feb
-        jan	    A	    jan	    None	None
-        @endcode
+
+        ::
+
+            KEY	    A|city	A|date	B|city	B|date
+            feb	    A	    feb	    B	    feb
+            jan	    A	    jan	    None	None
         """
-        values = [functionInstance(self._interpret_row(row)) for row in self.values]
+        values = [functionInstance(self._interpret_row(row))
+                  for row in self.values]
         distinct = {}
         for v in values:
             distinct[v] = 0
@@ -1929,7 +2017,8 @@ class TableFormulaCore:
             else:
                 colkey = table.header[0]
                 table = table.innerjoin(table2, functionKey if nbJoin == 0 else lambda v: v[colkey],
-                                        functionKey, nameKey=nameKey, prefixToAdd=str(val) + "|",
+                                        functionKey, nameKey=nameKey, prefixToAdd=str(
+                                            val) + "|",
                                         full=full, keepKey=nbJoin == 0,
                                         putKeyInColumn=None if nbJoin == 0 else 0,
                                         uniqueKey=True)
@@ -1972,18 +2061,20 @@ class TableFormulaCore:
         this method creates an index,
         to get an indexes row, use method get
         Example:
-        @code
-        table.create_index(lambda v:(v["name"], v["d_a"]))
-        row = table.get(('A', 1.1))
-        value = table.get(('A', 1.1), 2)
-        @endcode
+
+        ::
+
+            table.create_index(lambda v:(v["name"], v["d_a"]))
+            row = table.get(('A', 1.1))
+            value = table.get(('A', 1.1), 2)
         """
         self.indexspecial = {}
         for row in self.values:
             v = self._interpret_row(row)
             nr = functionIndex(v)
             if nr in self.indexspecial:
-                raise KeyError("unable to add %s because it is already present" % str(nr))
+                raise KeyError(
+                    "unable to add %s because it is already present" % str(nr))
             self.indexspecial[nr] = row
         return self
 
@@ -1991,11 +2082,12 @@ class TableFormulaCore:
         """
         use the index created by method create_index
         Example:
-        @code
-        table.create_index(lambda v:(v["name"], v["d_a"]))
-        row = table.get(('A', 1.1))
-        value = table.get(('A', 1.1), 2)
-        @endcode
+
+        ::
+
+            table.create_index(lambda v:(v["name"], v["d_a"]))
+            row = table.get(('A', 1.1))
+            value = table.get(('A', 1.1), 2)
         """
         if "indexspecial" not in self.__dict__:
             raise Exception("no index was created")
@@ -2037,12 +2129,13 @@ class TableFormulaCore:
         """
         also called the Gini function
         Example:
-        @code
-        table.add_column_cumulative("index_%s" % col, "dist_%s" % col,
-                                    lambda v: v["sum_nbclient"], lambda v: v[col],
-                                    functionSort = lambda v: v [col] / v["sum_nbclient"],
-                                    normalize=True)
-        @endcode
+
+        ::
+
+            table.add_column_cumulative("index_%s" % col, "dist_%s" % col,
+                                        lambda v: v["sum_nbclient"], lambda v: v[col],
+                                        functionSort = lambda v: v [col] / v["sum_nbclient"],
+                                        normalize=True)
         """
         if functionSort is None:
             functionSort = functionValue
@@ -2067,7 +2160,8 @@ class TableFormulaCore:
                 if sumi != 0 and sumv != 0:
                     res = [(_[0] / sumi, _[1] / sumv) for _ in res]
                 else:
-                    raise ZeroDivisionError("cannot divide by zero, all indexes or all values are null")
+                    raise ZeroDivisionError(
+                        "cannot divide by zero, all indexes or all values are null")
         else:
             res = [(i, v) for s, i, v in val]
 
@@ -2077,7 +2171,8 @@ class TableFormulaCore:
                 if sumi != 0 and sumv != 0:
                     res = [(_[0] / sumi, _[1] / sumv) for _ in res]
                 else:
-                    raise ZeroDivisionError("cannot divide by zero, all indexes or all values are null")
+                    raise ZeroDivisionError(
+                        "cannot divide by zero, all indexes or all values are null")
 
         for row, add in zip(self.values, res):
             row.extend(add)
@@ -2136,7 +2231,8 @@ class TableFormulaCore:
         cov /= N
         head = ["var"] + self.header
         size = cov.shape
-        values = [[self.header[i]] + [float(cov[i, j]) for j in range(0, size[1])] for i in range(0, size[0])]
+        values = [[self.header[
+            i]] + [float(cov[i, j]) for j in range(0, size[1])] for i in range(0, size[0])]
         tbl = self._private_getclass()(head, values)
         return tbl
 
@@ -2148,9 +2244,11 @@ class TableFormulaCore:
         @param      noCenter    does the computation without removing the average
         @return                 float(covariance)
         """
-        values = [[self._interpret_row(row)[col1], self._interpret_row(row)[col2]] for row in self.values]
+        values = [[self._interpret_row(row)[col1], self._interpret_row(row)[
+            col2]] for row in self.values]
         if len(values) <= 1:
-            raise ValueError("expecting more than one observation, not %d" % len(values))
+            raise ValueError(
+                "expecting more than one observation, not %d" % len(values))
         mx = 0.
         my = 0.
         vx = 0.
@@ -2192,7 +2290,8 @@ class TableFormulaCore:
                    self._interpret_row(row)[col2]] for row in self.values]
 
         if len(values) <= 1:
-            raise ValueError("expecting more than one observation, not %d" % len(values))
+            raise ValueError(
+                "expecting more than one observation, not %d" % len(values))
 
         mx = 0.
         my = 0.
@@ -2220,7 +2319,8 @@ class TableFormulaCore:
         """
         values = [[a, b] for a, b in zip(self.values[row1], self.values[row2])]
         if len(values) <= 1:
-            raise ValueError("expecting more than one observation, not %d" % len(values))
+            raise ValueError(
+                "expecting more than one observation, not %d" % len(values))
         mx = 0.
         my = 0.
         vx = 0.
@@ -2260,7 +2360,8 @@ class TableFormulaCore:
         """
         values = [[a, b] for a, b in zip(self.values[row1], self.values[row2])]
         if len(values) <= 1:
-            raise ValueError("expecting more than one observation, not %d" % len(values))
+            raise ValueError(
+                "expecting more than one observation, not %d" % len(values))
         mx = 0.
         my = 0.
         co = 0.
@@ -2297,13 +2398,14 @@ class TableFormulaCore:
                 values[i][0] = self.header[i]
                 for j in range(len(self.header)):
                     vs = [[row[i], row[j]] for row in self.values]
-                    bo = TableFormulaCore.bootstrap(vs, function=TableFormulaCore.correlation_bicolumn,
-                                                    nbdraws=nbdraws, alpha=alpha)
+                    bo = TableFormula.bootstrap(vs, function=TableFormula.correlation_bicolumn,
+                                                nbdraws=nbdraws, alpha=alpha)
                     if collapseFormat:
                         st = functionKeepValue(bo[0], bo[2], bo[3])
                         values[i][j + 1] = st
                     else:
-                        raise NotImplementedError("collapseFormat False is not implemented yet")
+                        raise NotImplementedError(
+                            "collapseFormat False is not implemented yet")
             tbl = self._private_getclass()(head, values)
             return tbl
         else:
@@ -2328,7 +2430,8 @@ class TableFormulaCore:
 
             head = ["var"] + self.header
             size = cov.shape
-            values = [[self.header[i]] + [float(cov[i, j]) for j in range(0, size[1])] for i in range(0, size[0])]
+            values = [[self.header[
+                i]] + [float(cov[i, j]) for j in range(0, size[1])] for i in range(0, size[0])]
             tbl = self._private_getclass()(head, values)
             return tbl
 
@@ -2343,7 +2446,8 @@ class TableFormulaCore:
         """
         tbl = self.copy()
         if subset_columns is not None:
-            subset = {i: True for i, v in enumerate(self.header) if v in subset_columns}
+            subset = {i: True for i, v in enumerate(
+                self.header) if v in subset_columns}
         if only_if_possible:
             for row in tbl.values:
                 for i in range(0, len(row)):
@@ -2370,7 +2474,8 @@ class TableFormulaCore:
         """
         tbl = self.copy()
         if subset_columns is not None:
-            subset = {i: True for i, v in enumerate(self.header) if v in subset_columns}
+            subset = {i: True for i, v in enumerate(
+                self.header) if v in subset_columns}
 
         if format is None:
             for row in tbl.values:
@@ -2396,10 +2501,12 @@ class TableFormulaCore:
         """
         tbl = self.copy()
         if subset_columns is not None:
-            subset = {i: True for i, v in enumerate(self.header) if v in subset_columns}
+            subset = {i: True for i, v in enumerate(
+                self.header) if v in subset_columns}
         if only_if_possible:
             if subset_columns is not None:
-                subset = {i: True for i, v in enumerate(self.header) if v in subset_columns}
+                subset = {i: True for i, v in enumerate(
+                    self.header) if v in subset_columns}
 
             for row in tbl.values:
                 for i in range(0, len(row)):
@@ -2427,12 +2534,14 @@ class TableFormulaCore:
         @param      removeExtreme           remove extreme values at both sides(0.05 means 0.025 on each side)
         @return                             table with two columns
         """
-        values = list([functionValue(self._interpret_row(row)) for row in self.values])
+        values = list([functionValue(self._interpret_row(row))
+                       for row in self.values])
         if removeExtreme is not None and removeExtreme > 0:
             values.sort()
             al = int(len(values) * removeExtreme / 2)
             if al == 0:
-                raise Exception("removeExtreme has no impact(%d,%f)" % (len(values), len(values) * removeExtreme / 2))
+                raise Exception("removeExtreme has no impact(%d,%f)" % (
+                    len(values), len(values) * removeExtreme / 2))
             if al * 2 < len(values):
                 values = values[al:len(values) - al]
 
@@ -2489,7 +2598,8 @@ class TableFormulaCore:
             values.sort()
             al = int(len(values) * removeExtreme / 2)
             if al == 0:
-                raise Exception("removeExtreme has no impact(%d,%f)" % (len(values), len(values) * removeExtreme / 2))
+                raise Exception("removeExtreme has no impact(%d,%f)" % (
+                    len(values), len(values) * removeExtreme / 2))
             if al * 2 < len(values):
                 values = values[al:len(values) - al]
 
@@ -2498,7 +2608,8 @@ class TableFormulaCore:
         W = len(values)
         div = (ma - mi) / nbDiv
         if div == 0:
-            raise RuntimeError("unable to continue since div is null: min,max = %f,%f" % (mi, ma))
+            raise RuntimeError(
+                "unable to continue since div is null: min,max = %f,%f" % (mi, ma))
         hist = [[mi + n * div, 0.] for n in range(0, nbDiv + 1)]
         value = {i: {histxName: hist[i][0]} for i in range(len(hist))}
         su = {}
@@ -2554,10 +2665,11 @@ class TableFormulaCore:
             values.sort()
             al = int(len(values) * removeExtreme / 2)
             if al == 0:
-                raise Exception("removeExtreme has no impact(%d,%f)" % (len(values), len(values) * removeExtreme / 2))
+                raise Exception("removeExtreme has no impact(%d,%f)" % (
+                    len(values), len(values) * removeExtreme / 2))
             if al * 2 < len(values):
                 values = values[al:len(values) - al]
-            tbl = TableFormulaCore(["x"], [[_] for _ in values])
+            tbl = TableFormula(["x"], [[_] for _ in values])
             return tbl.mu_sigma(lambda v: v["x"], 0)
         else:
             mu = 0.
@@ -2639,10 +2751,12 @@ class TableFormulaCore:
         @return                         the same table(with only the considered columns)
         """
         if op not in [None, "mean", "norm"]:
-            raise ValueError('expecting a value in [None, "mean", "norm"] for op')
+            raise ValueError(
+                'expecting a value in [None, "mean", "norm"] for op')
         if columnsSet is None:
             columnsSet = self.header
-        mus = self.mu_sigma_each_column(columnsSet, removeExtreme) if mu_sigma is None else mu_sigma
+        mus = self.mu_sigma_each_column(
+            columnsSet, removeExtreme) if mu_sigma is None else mu_sigma
         tbl = self.extract_columns(columnsSet)
         n = len(self.header)
         for row in tbl.values:
@@ -2692,7 +2806,8 @@ class TableFormulaCore:
         @param      encoding        encoding
         @return                     object Workbook
         """
-        ext = os.path.splitext(filename)[-1].lower() if filename is not None else None
+        ext = os.path.splitext(
+            filename)[-1].lower() if filename is not None else None
         if ext is not None and ext == ".xls":
             font0 = EXf.Font()
             font0.name = font
@@ -2700,7 +2815,8 @@ class TableFormulaCore:
             style0 = EXs.XFStyle()
             style0.font = font0
 
-            wb = EXw.Workbook(encoding=encoding) if encoding is not None else EXw.Workbook()
+            wb = EXw.Workbook(
+                encoding=encoding) if encoding is not None else EXw.Workbook()
             for sheetname, self in list_table:
                 ws0 = wb.add_sheet(sheetname)
 
@@ -2731,7 +2847,8 @@ class TableFormulaCore:
             return wb
 
         elif ext is None or ext == ".xlsx":
-            wb = EXxw.Workbook(filename) if filename is not None else EXxw.Workbook()
+            wb = EXxw.Workbook(
+                filename) if filename is not None else EXxw.Workbook()
             for sheetname, self in list_table:
                 ws0 = wb.add_worksheet(sheetname)
 
@@ -2763,7 +2880,8 @@ class TableFormulaCore:
                 wb.close()
             return wb
         else:
-            raise NameError("extension should be .xls or .xlsx for file " + filename)
+            raise NameError(
+                "extension should be .xls or .xlsx for file " + filename)
 
     def save_as_excel(self, filename, font="Calibri", sheetname="sheet0",
                       close=True, encoding=None):
@@ -2778,8 +2896,8 @@ class TableFormulaCore:
         @param      encoding        encoding
         @return                     object Workbook
         """
-        return TableFormulaCore.save_multiple_as_excel(filename, [(sheetname, self)],
-                                                       font=font, close=close, encoding=encoding)
+        return TableFormula.save_multiple_as_excel(filename, [(sheetname, self)],
+                                                   font=font, close=close, encoding=encoding)
 
     def schema_database(self, add_id=True):
         """
