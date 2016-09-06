@@ -24,11 +24,16 @@ def anyzip(filename, local=True, cache_folder=".", fLOG=noLOG, **kwargs):
         if not os.path.exists(this):
             raise FileNotFoundError(this)
         res = decompress_zip(this, whereTo=cache_folder, fLOG=fLOG)
+        if cache_folder is not None:
+            res = [os.path.join(cache_folder, _) for _ in res]
     else:
         import pyensae
         this = pyensae.download_data(
             filename, whereTo=cache_folder, fLOG=fLOG, **kwargs)
-        res = this
+        if cache_folder is not None:
+            res = [os.path.join(cache_folder, _) for _ in this]
+        else:
+            res = this
     if isinstance(res, list):
         res = res[0]
     return res
