@@ -48,7 +48,8 @@ class TableFormulaStat:
         if not isXdx:
             couples.sort()
 
-        sumx = sum(_[0] for _ in couples) if isXdx else max(_[0] for _ in couples)
+        sumx = sum(_[0] for _ in couples) if isXdx else max(_[0]
+                                                            for _ in couples)
         sumy = sum(_[1] for _ in couples)
         couples = [[_[0] / sumx, _[1] / sumy] for _ in couples]
 
