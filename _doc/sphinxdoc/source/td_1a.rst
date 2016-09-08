@@ -37,6 +37,7 @@ en détail dans cette présentation :
 
 .. |slideslogo| image:: _static/slides_logo.png
              :height: 20
+             :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html
 
 Le cours est évalué au premier semestre par un examen et aussi :ref:`l-examens-1A-algo`.
 Le second semestre et facultatif et est évalué par :ref:`projet informatique <l-projinfo1a>`.

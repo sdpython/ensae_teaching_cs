@@ -39,11 +39,15 @@ si les contenus s'adressent plutôt aux uns ou aux autres.
 La présentation 
 `ENSAE 2A - Données, Machine Learning et Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_ |slideslogo|
 donne un aperçu des thèmes abordés.
-Le cours est évalué avec un :ref:`projet informatique <l-projinfo2a>`.
+Le cours est évalué avec un :ref:`projet informatique <l-projinfo2a>`. 
 
 
 .. contents::
     :local:
+    
+.. |slideslogo| image:: _static/slides_logo.png
+             :height: 20
+             :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html
 
 
 La séance dédiées :ref:`l-puzzlealgo2A` requiert de la part des participants
