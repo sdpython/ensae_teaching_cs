@@ -7,11 +7,15 @@
 import sys
 import os
 import datetime
-from pymyinstall.installcustom import where_in_path, install_chromedriver
+from pyquickhelper.loghelper import noLOG
+from pymyinstall.installcustom import where_in_path, install_chromedriver, install_operadriver
 
 
-def webshot(img, url, navigator="chrome", add_date=False,
-            module="selenium", size=None):
+default_driver = "opera"
+
+
+def webshot(img, url, navigator=default_driver, add_date=False,
+            module="selenium", size=None, fLOG=noLOG):
     """
     Uses the modules `selenium <http://selenium-python.readthedocs.io/>`_ to take a picture of a website
     (or the module `splinter <http://splinter.readthedocs.io/en/latest/>`_ - does not work with IE).
@@ -24,6 +28,7 @@ def webshot(img, url, navigator="chrome", add_date=False,
     @param      add_date        add a date to the image filename
     @param      module          module to use (selenium or splinter or None if you need to keep the first one available)
     @param      size            to resize the webshot (if not None)
+    @param      fLOG            logging function
     @return                     list of [ ( url, image name) ]
 
     Check the list of available webdriver at
@@ -41,10 +46,12 @@ def webshot(img, url, navigator="chrome", add_date=False,
             module = "splinter"
 
     res = []
+    fLOG("module=", module)
     if module == "selenium":
-        browser = _get_selenium_browser(navigator)
+        browser = _get_selenium_browser(navigator, fLOG=fLOG)
 
         if size is not None:
+            fLOG("set size", size)
             browser.set_window_size(size[0], size[1])
 
         if not isinstance(url, list):
@@ -54,6 +61,7 @@ def webshot(img, url, navigator="chrome", add_date=False,
         if len(url) != len(img):
             raise Exception("different number of urls and images")
         for u, i in zip(url, img):
+            fLOG("url", url, " into ", img)
             browser.get(u)
             if add_date:
                 dt = datetime.datetime.now()
@@ -93,7 +101,7 @@ def webshot(img, url, navigator="chrome", add_date=False,
     return res
 
 
-def _get_selenium_browser(navigator):
+def _get_selenium_browser(navigator, fLOG=noLOG):
     """
     Returns the associated driver with some custom settings.
 
@@ -113,6 +121,7 @@ def _get_selenium_browser(navigator):
     from selenium import webdriver
     from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
+    fLOG("navigator=", navigator)
     if navigator == "firefox":
         firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
         firefox_capabilities['marionette'] = True
@@ -123,18 +132,52 @@ def _get_selenium_browser(navigator):
         if sys.platform.startswith("win"):
             chromed = where_in_path("chromedriver.exe")
             if chromed is None:
-                install_chromedriver()
-        browser = webdriver.Chrome()
+                install_chromedriver(fLOG=fLOG)
+                chromed = where_in_path("chromedriver.exe")
+                if chromed is None:
+                    raise FileNotFoundError(
+                        "unable to install chromedriver.exe")
+            else:
+                fLOG("found chromedriver:", chromed)
+        if False:
+            fLOG("start", navigator)
+            browser = webdriver.Chrome(chromed)
+        else:
+            # see
+            # https://sites.google.com/a/chromium.org/chromedriver/getting-started
+            from selenium import webdriver
+            import selenium.webdriver.chrome.service as service
+            fLOG("create service")
+            service = service.Service(chromed)
+            fLOG("start service")
+            service.start()
+            fLOG("declare remote")
+            capabilities = {'chrome.binary': chromed}
+            browser = webdriver.Remote(service.service_url, capabilities)
     elif navigator == "ie":
         browser = webdriver.Ie()
+    elif navigator == "opera":
+        if sys.platform.startswith("win"):
+            chromed = where_in_path("operadriver.exe")
+            if chromed is None:
+                install_operadriver(fLOG=fLOG)
+                chromed = where_in_path("operadriver.exe")
+                if chromed is None:
+                    raise FileNotFoundError(
+                        "unable to install chromedriver.exe")
+            else:
+                fLOG("found chromedriver:", chromed)
+        browser = webdriver.Opera()
     elif navigator == "edge":
-        browser = webdriver.Edge()
+        browser = webdriver.Opera()
     else:
-        raise Exception("unable to interpret the navigator")
+        raise Exception(
+            "unable to interpret the navigator '{0}'".format(navigator))
+    fLOG("navigator is started")
     return browser
 
 
-def webhtml(url, navigator="chrome", module="selenium"):
+def webhtml(url, navigator=default_driver, module="selenium", fLOG=noLOG):
     """
     Uses the modules `selenium <http://selenium-python.readthedocs.io/>`_ to retrieve the html of a website
     (or the module `splinter <http://splinter.readthedocs.io/en/latest/>`_ - does not work with IE).
@@ -143,6 +186,7 @@ def webhtml(url, navigator="chrome", module="selenium"):
     @param      url             url
     @param      navigator       firefox, chrome, (ie: does not work well)
     @param      module          module to use (selenium or splinter or None if you need to keep the first one available)
+    @param      fLOG            logging function
     @return                     list of [ ( url, html) ]
 
     Check the list of available webdriver at
@@ -156,15 +200,18 @@ def webhtml(url, navigator="chrome", module="selenium"):
         except ImportError:
             module = "splinter"
 
+    fLOG("module=", module)
     res = []
     if module == "selenium":
-        browser = _get_selenium_browser(navigator)
+        browser = _get_selenium_browser(navigator, fLOG=fLOG)
         if not isinstance(url, list):
             url = [url]
         for u in url:
+            fLOG("get url", url)
             browser.get(u)
             i = browser.page_source
             res.append((u, i))
+        fLOG("quit", module)
         browser.quit()
 
     elif module == "splinter":

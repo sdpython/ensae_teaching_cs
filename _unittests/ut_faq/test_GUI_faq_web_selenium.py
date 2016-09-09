@@ -5,6 +5,7 @@
 import sys
 import os
 import unittest
+import warnings
 
 
 try:
@@ -86,14 +87,15 @@ class TestLONGFaqWeb(unittest.TestCase):
             return
 
         url = "http://www.xavierdupre.fr"
-        navigator = "chrome"
-        html = webhtml(url, navigator=navigator)
+        navigator = "opera"
+        html = webhtml(url, navigator=navigator, fLOG=fLOG)
         assert len(html) > 0
         self.assertEqual(len(html[0]), 2)
         if "href" not in html[0][1]:
             raise Exception(html)
 
-        html = webhtml(url, navigator=navigator)  # module='splinter')
+        # module='splinter')
+        html = webhtml(url, navigator=navigator, fLOG=fLOG)
         assert len(html) > 0
         self.assertEqual(len(html[0]), 2)
         if "href" not in html[0][1]:
@@ -111,22 +113,27 @@ class TestLONGFaqWeb(unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_selenium_image")
         img = os.path.join(temp, "image_selenium.png")
         url = "http://www.xavierdupre.fr/"
-        navigator = "chrome"
+        navigator = "opera"
         # download_chromedriver(dest=temp)
         # os.environ["PATH"] += ";" + temp
-        res = webshot(img, url, navigator=navigator)
+        res = webshot(img, url, navigator=navigator, fLOG=fLOG)
         assert os.path.exists(img)
         fLOG(res)
         self.assertEqual(len(res), 1)
         self.assertEqual(len(res[0]), 2)
 
-        img = os.path.join(temp, "image_splinter.png")
-        res = webshot(img, url, module='splinter', navigator=navigator)
-        img = res[0][1]
-        assert os.path.exists(img)
-        fLOG(res)
-        self.assertEqual(len(res), 1)
-        self.assertEqual(len(res[0]), 2)
+        if navigator != "opera":
+            # not available on splinter
+            img = os.path.join(temp, "image_splinter.png")
+            res = webshot(img, url, module='splinter',
+                          navigator=navigator, fLOG=fLOG)
+            img = res[0][1]
+            assert os.path.exists(img)
+            fLOG(res)
+            self.assertEqual(len(res), 1)
+            self.assertEqual(len(res[0]), 2)
+        else:
+            warnings.warn("opera not available on splinter")
 
 if __name__ == "__main__":
     unittest.main()
