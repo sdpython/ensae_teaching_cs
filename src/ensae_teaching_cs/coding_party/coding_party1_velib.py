@@ -181,7 +181,8 @@ def distance(positif, negatif, appariement, params):
             val.append(v)
 
     mean = sum(val) / len(val)
-    cor = [v_ for v_ in val if v < 1e8]  # on enlève les appariements négatifs
+    # on enlève les appariements négatifs
+    cor = [v_ for v_ in val if v < 1e8]
     mean_cor = sum(cor) / len(cor)
     dev = sum((x - mean) ** 2 for x in val) / len(val)
     return mean_cor,  \

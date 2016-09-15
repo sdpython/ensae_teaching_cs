@@ -145,7 +145,8 @@ def force_unicode(text):
         except UnicodeDecodeError as e:
             pos = exp.findall(str(e))
             pos = int(pos[0])
-            text = text.replace("Ã´", "o").replace("Ã©", "e").replace("Ã", "a")
+            text = text.replace("Ã´", "o").replace(
+                "Ã©", "e").replace("Ã", "a")
             text = text.replace(
                 "  ",
                 " ").replace(

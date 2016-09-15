@@ -39,7 +39,7 @@ except ImportError:
     import pyquickhelper as skip_
 
 from pyquickhelper.loghelper import fLOG
-from src.ensae_teaching_cs.td_1a.construction_classique import enumerate_permutation_recursive
+from src.ensae_teaching_cs.td_1a.construction_classique import enumerate_permutations_recursive, enumerate_permutations
 
 
 class TestClassiquesPermutation (unittest.TestCase):
@@ -50,12 +50,15 @@ class TestClassiquesPermutation (unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
+        self.maxDiff = None
         ens = list(range(5))
-        l = list(tuple(p) for p in enumerate_permutation_recursive(ens))
+        l = list(tuple(p) for p in enumerate_permutations_recursive(ens))
         self.assertEqual(len(l), 120)
         res = list(tuple(p) for p in itertools.permutations(ens))
         self.assertEqual(len(res), 120)
-        self.maxDiff = None
+        self.assertEqual(set(res), set(l))
+        res = list(tuple(p) for p in enumerate_permutations(ens))
+        self.assertEqual(len(res), 120)
         self.assertEqual(set(res), set(l))
 
 

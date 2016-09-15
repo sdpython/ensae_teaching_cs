@@ -399,7 +399,8 @@ class PuzzleGirafe:
             p.position = 0
 
             # on réactualise le tableau free qui aura été modifié par
-            # l'appel à self.solution et on enlève le choix précédemment testé
+            # l'appel à self.solution et on enlève le choix précédemment
+            # testé
             free2 = free
             free = []
             for f in free2:

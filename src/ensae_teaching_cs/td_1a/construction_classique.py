@@ -496,30 +496,12 @@ def construit_matrice_carree(n):
     return [[0 for i in range(n)] for j in range(n)]
 
 
-def enumerate_permutation_recursive(ensemble):
+def enumerate_permutations_recursive(ensemble):
     """
     énumère les permutations d'un ensemble de façon récursive
 
     @param      ensemble        ensemble à permuter
     @return                     itérateur sur les permutations
-
-    Enumérer les permutations est un exercice classique.
-    Voici une implémentation un peu différente mais toujours récursive :
-
-    ::
-
-        def permutation(L):
-            n=len(L)
-            if n==1:
-                return [L]
-            else :
-                P=[]
-                for i in range(n):
-                    A=L[0:i]+L[i+1:n]
-                    P1=permutation(A)
-                    for k in range(len(P1)):
-                        P.append([L[i]]+P1[k])
-                return P
     """
 
     if len(ensemble) == 1:
@@ -527,7 +509,36 @@ def enumerate_permutation_recursive(ensemble):
     else:
         for i in range(0, len(ensemble)):
             ensemble[0], ensemble[i] = ensemble[i], ensemble[0]
-            per = enumerate_permutation_recursive(ensemble[1:])
+            per = enumerate_permutations_recursive(ensemble[1:])
             for p in per:
                 yield [ensemble[0]] + p
             ensemble[0], ensemble[i] = ensemble[i], ensemble[0]
+
+
+def enumerate_permutations(ensemble):
+    """
+    énumère les permutations d'un ensemble de façon non récursive
+
+    @param      ensemble        ensemble à permuter
+    @return                     itérateur sur les permutations
+    """
+    if len(ensemble) == 1:
+        yield ensemble
+    else:
+        position = list(range(len(ensemble)))
+        while position[0] < len(ensemble):
+
+            memo = []
+            for i, p in enumerate(position):
+                ensemble[i], ensemble[p] = ensemble[p], ensemble[i]
+                memo.append((i, p))
+            yield ensemble.copy()
+            for i, p in reversed(memo):
+                ensemble[i], ensemble[p] = ensemble[p], ensemble[i]
+
+            last = len(position) - 1
+            position[last] += 1
+            while last > 0 and position[last] >= len(position):
+                position[last - 1] += 1
+                position[last] = last
+                last -= 1
