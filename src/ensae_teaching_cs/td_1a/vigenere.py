@@ -15,23 +15,25 @@ def code_vigenere(message, cle, decode=False):
     @param      decode      False: crypte, True: décrypte
     @return                 le message crypté ou décrypté
 
-    @example(TD 1A___code de Vigenère)
-    @code
-    def code_vigenere ( message, cle, decode = False) :
-        message_code = ""
-        for i,c in enumerate(message) :
-            d = cle[ i % len(cle) ]
-            d = ord(d) - 65
-            if decode : d = 26 - d
-            message_code += chr((ord(c)-65+d)%26+65)
-        return message_code
+    .. exref::
+        :title: code de Vigenère
+        :tag: Algorithme
 
-    m = "JENESUISPASCODE"
-    c = code_vigenere (m, "DOP")
-    d = code_vigenere (c, "DOP", True)
-    print(c,d)
-    @endcode
-    @endexample
+        ::
+
+            def code_vigenere ( message, cle, decode = False) :
+                message_code = ""
+                for i,c in enumerate(message) :
+                    d = cle[ i % len(cle) ]
+                    d = ord(d) - 65
+                    if decode : d = 26 - d
+                    message_code += chr((ord(c)-65+d)%26+65)
+                return message_code
+
+            m = "JENESUISPASCODE"
+            c = code_vigenere (m, "DOP")
+            d = code_vigenere (c, "DOP", True)
+            print(c,d)
     """
     message_code = ""
     for i, c in enumerate(message):
@@ -59,18 +61,21 @@ def PGCD(m, n):
     @param      n       second entier
     @return             PGCD
 
-    @example(TD 1A___calcul du PGCD avec la méthode des soustractions)
-    La fonction qui suit est l'implémentation en Python de la méthode décrite
-    ici :
-    `Algorithme de calcul du PGCD par soustractions successives <http://www.kartable.fr/terminale-s/mathematiques/1640/exercice/algorithme-de-calcul-du-pgcd-par-soustractions-successives,TS01505>`_.
-    @code
-    def PGCD (m,n) :
-        if m == 1 or n == 1 : return 1
-        if m == n : return m
-        if m < n : return PGCD (m, n-m)
-        return PGCD (n, m-n)
-    @endcode
-    @endexample
+    .. exref::
+        :title: calcul du PGCD avec la méthode des soustractions
+        :tag: Algorithme
+
+        La fonction qui suit est l'implémentation en Python de la méthode décrite
+        ici :
+        `Algorithme de calcul du PGCD par soustractions successives <http://www.kartable.fr/terminale-s/mathematiques/1640/exercice/algorithme-de-calcul-du-pgcd-par-soustractions-successives,TS01505>`_.
+
+        ::
+
+            def PGCD (m,n) :
+                if m == 1 or n == 1 : return 1
+                if m == n : return m
+                if m < n : return PGCD (m, n-m)
+                return PGCD (n, m-n)
     """
     if m <= 0 or n <= 0:
         raise Exception("impossible de calculer le PGCD")

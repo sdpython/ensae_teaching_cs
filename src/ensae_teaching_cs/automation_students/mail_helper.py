@@ -21,25 +21,25 @@ def grab_addresses(mailbox, subfolder, date, no_domain=False, max_dest=5, names=
     @param      fLOG            logging function
     @return                     list of emails or tuple(list of emails, dictionary(email: name)) if names is True
 
-    @example(AutoTeachings___Collect email addresses from mails in an inbox folder)
+    .. exref::
+        :title: Collect email addresses from mails in an inbox folder)
+        :tag: Automation
 
-    ::
+        ::
 
-        from ensae_teaching_cs.automation_students import grab_addresses
-        from pymmails import MailBoxImap
+            from ensae_teaching_cs.automation_students import grab_addresses
+            from pymmails import MailBoxImap
 
-        user = "xavier.dupre"
-        pwd = "***"
-        server = "imap.gmail.com"
-        mailfolder = ["ensae/ENSAE_2016", "ensae/ensae_interro_2015"]
-        date = "1-Dec-2015"
+            user = "xavier.dupre"
+            pwd = "***"
+            server = "imap.gmail.com"
+            mailfolder = ["ensae/ENSAE_2016", "ensae/ensae_interro_2015"]
+            date = "1-Dec-2015"
 
-        box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
-        box.login()
-        emails = grab_addresses(box, mailfolder, date, fLOG=fLOG)
-        box.logout()
-
-    @endexample
+            box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
+            box.login()
+            emails = grab_addresses(box, mailfolder, date, fLOG=fLOG)
+            box.logout()
     """
     emails = mailbox.enumerate_mails_in_folder(
         subfolder, date=date, body=False)

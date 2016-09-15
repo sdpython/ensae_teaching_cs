@@ -151,6 +151,7 @@ En diagonal
     * :ref:`FAQ <l-FAQs>` (Foire aux Questions ou Frequently Asked Questions)
     * :ref:`Glossaire <l-glossaire>`
     * :ref:`question`
+    * :ref:`l-EX2`
     * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
 * Lectures
     * :ref:`Articles, Références, Blog <l-information>`
@@ -172,7 +173,7 @@ En diagonal
 +----------------------+---------------------+---------------------+--------------------------------+------------------------+------------------------------------------------+
 | :ref:`l-modules`     |  :ref:`l-functions` | :ref:`l-classes`    | :ref:`l-methods`               | :ref:`l-staticmethods` | :ref:`l-properties`                            |
 +----------------------+---------------------+---------------------+--------------------------------+------------------------+------------------------------------------------+
-| :ref:`modindex`      |  :ref:`l-example`   | :ref:`search`       | :ref:`l-license`               | :ref:`l-changes`       | :ref:`l-README`                                |
+| :ref:`modindex`      |  :ref:`l-EX2`       | :ref:`search`       | :ref:`l-license`               | :ref:`l-changes`       | :ref:`l-README`                                |
 +----------------------+---------------------+---------------------+--------------------------------+------------------------+------------------------------------------------+
 | :ref:`genindex`      |  :ref:`l-FAQs`      | :ref:`l-notebooks`  | :ref:`l-getting_started_full`  | :ref:`l-statcode`      | `Unit Test Coverage <coverage/index.html>`_    |
 +----------------------+---------------------+---------------------+--------------------------------+------------------------+------------------------------------------------+

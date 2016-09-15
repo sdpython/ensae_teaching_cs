@@ -70,18 +70,23 @@ def dix_entiers_carre():
         La fonction ``print`` ne modifie pas votre algorithme. La fonction ``return``
         spécifie le résultat de votre fonction : elle modifie l'algorithme.
 
-    @example(TD 1A___calcul de la somme des dix premiers entiers au carré)
-    Ce calcul simple peut s'écrire de diffèrentes manières.
-    @code
-    s = 0
-    for i in range(1,11):
-        s += i**2
-    @endcode
-    D'une façon abrégée :
-    @code
-    s = sum ( [ i**2 for i in range(1,11) ] )
-    @endcode
-    @endexample
+    .. exref::
+        :title: calcul de la somme des dix premiers entiers au carré
+        :tag: Base
+
+        Ce calcul simple peut s'écrire de diffèrentes manières.
+
+        ::
+
+            s = 0
+            for i in range(1,11):
+                s += i**2
+
+        D'une façon abrégée :
+
+        ::
+
+            s = sum ( [ i**2 for i in range(1,11) ] )
     """
     s = 0
     for i in range(1, 11):
@@ -103,47 +108,49 @@ def repetition_a_eviter(serie):
     """
     Une répétition à éviter.
 
-    @example(Négatifs___Eviter d'effectuer le même appel deux fois)
+    .. exref::
+        :title: Eviter d'effectuer le même appel deux fois
+        :tag: Base -
 
-    Dans cette fonction on calcule la variance d'une série d'observations.
+        Dans cette fonction on calcule la variance d'une série d'observations.
 
-    @code
-    def moyenne(serie):
-        return sum(serie) / len(serie)
+        ::
 
-    def variance_a_eviter(serie):
-        s = 0
-        for obs in serie :
-            s += (obs-moyenne(serie))**2
-        return s / len(serie)
-    @endcode
+            def moyenne(serie):
+                return sum(serie) / len(serie)
 
-    La fonction ``variance_a_eviter`` appelle la fonction ``moyenne`` à chaque passage
-    dans la boucle. Or, rien ne change d'un passage à l'autre. Il vaut mieux stocker
-    le résultat dans une variable :
+            def variance_a_eviter(serie):
+                s = 0
+                for obs in serie :
+                    s += (obs-moyenne(serie))**2
+                return s / len(serie)
 
-    @code
-    def moyenne(serie):
-        return sum(serie) / len(serie)
+        La fonction ``variance_a_eviter`` appelle la fonction ``moyenne`` à chaque passage
+        dans la boucle. Or, rien ne change d'un passage à l'autre. Il vaut mieux stocker
+        le résultat dans une variable :
 
-    def variance(serie):
-        s = 0
-        moy = moyenne(serie)
-        for obs in serie :
-            s += (obs-moy)**2
-        return s / len(serie)
-    @endcode
+    ::
+
+        def moyenne(serie):
+            return sum(serie) / len(serie)
+
+        def variance(serie):
+            s = 0
+            moy = moyenne(serie)
+            for obs in serie :
+                s += (obs-moy)**2
+            return s / len(serie)
 
     Le coût de la variance passe alors d'un coût en :math:`O(n^2)` à :math:`O(n)`.
     Ce n'est pas le seul endroit où cette erreur survient. Dans le code suivant,
     on appelle deux fois la fonction ``major`` avec le même argument.
     C'est à éviter.
 
-    @code
-    meilleur = major(data)[0]  # retourne ("quelque chose", True)
-    if major(data)[1]:
-        return {"leaf":guess}
-    @endcode
+    ::
+
+        meilleur = major(data)[0]  # retourne ("quelque chose", True)
+        if major(data)[1]:
+            return {"leaf":guess}
 
     @endexample
     """
@@ -171,46 +178,48 @@ def dictionnaire_modifie_dans_la_boucle():
     """
     Dictionnaires, listes modifiés dans la boucle qui les parcourt.
 
-    @example(Négatifs___Modifier un dictionnaire en le parcourant)
+    .. exref::
+        :title: Modifier un dictionnaire en le parcourant
+        :tag: Base -
 
-    Il faut éviter de modifier un container lorsqu'on le parcourt.
-    Lorsqu'on supprime un élément d'un dictionnaire, la structure de celui-ci
-    s'en trouve modifiée et affecte la boucle qui le parcourt. La boucle parcourt
-    toujours l'ancienne structure du dictionnaire, celle qui existait au début
-    au début de la boucle.
+        Il faut éviter de modifier un container lorsqu'on le parcourt.
+        Lorsqu'on supprime un élément d'un dictionnaire, la structure de celui-ci
+        s'en trouve modifiée et affecte la boucle qui le parcourt. La boucle parcourt
+        toujours l'ancienne structure du dictionnaire, celle qui existait au début
+        au début de la boucle.
 
-    @code
-    d = { k:k for k in range(10) }
-    for k,v in d.items():
-        if k == 4 :
-            del d[k]
-    @endcode
+        ::
 
-    En Python, cela produit l'erreur qui suit mais d'autres langages ne préviennent
-    pas (C++) et cela aboutit à une erreur qui intervient plus tard dans le code
-    (comme une valeur numérique inattendue).
+            d = { k: k for k in range(10) }
+            for k, v in d.items():
+                if k == 4 :
+                    del d[k]
 
-    @code
-    Traceback (most recent call last):
-      File "session1.py", line 176, in <module>
-        l = liste_modifie_dans_la_boucle()
-      File "session1.py", line 169, in liste_modifie_dans_la_boucle
-        for k,v in d.items():
-    RuntimeError: dictionary changed size during iteration
-    @endcode
+        En Python, cela produit l'erreur qui suit mais d'autres langages ne préviennent
+        pas (C++) et cela aboutit à une erreur qui intervient plus tard dans le code
+        (comme une valeur numérique inattendue).
+
+    ::
+
+        Traceback (most recent call last):
+        File "session1.py", line 176, in <module>
+            l = liste_modifie_dans_la_boucle()
+        File "session1.py", line 169, in liste_modifie_dans_la_boucle
+            for k,v in d.items():
+        RuntimeError: dictionary changed size during iteration
 
     Il faut pour éviter cela stocker les éléments qu'on veut modifier pour les supprimer
     ensuite.
 
-    @code
-    d = { k:k for k in l }
-    rem = [ ]
-    for k,v in d.items():
-        if k == 4 :
-            rem.append(k)
-    for r in rem :
-        del d[r]
-    @endcode
+    ::
+
+        d = { k:k for k in l }
+        rem = [ ]
+        for k,v in d.items():
+            if k == 4 :
+                rem.append(k)
+        for r in rem :
+            del d[r]
 
     Même si Python autorise cela pour les listes,
     il est conseillé de s'en abstenir ainsi que pour tout type d'objets qui en contient d'autres.
@@ -242,16 +251,17 @@ def str2date(s, format="%d/%m/%Y"):
     @param      format  format de la conversion
 
 
-    @example(Impossible à retenir___conversion d'une chaîne de caractère en date)
-    C'est le genre de fonction qu'on n'utilise pas souvent mais qu'on peine à retrouver
-    lorsqu'on en a besoin.
-    Il faut utiliser la fonction `strftime <https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior>`_.
+    .. exref::
+        :title: conversion d'une chaîne de caractère en datetime
+        :tag: Base
 
-    @code
-    import datetime
-    dt = datetime.datetime.strptime ("16/01/2014", "%d/%m/%Y")
-    @endcode
-    @endexample
+        C'est le genre de fonction qu'on n'utilise pas souvent mais qu'on peine à retrouver
+        lorsqu'on en a besoin.
+        Il faut utiliser la fonction `strftime <https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior>`_.
 
+        ::
+
+            import datetime
+            dt = datetime.datetime.strptime ("16/01/2014", "%d/%m/%Y")
     """
     return datetime.datetime.strptime(s, format)

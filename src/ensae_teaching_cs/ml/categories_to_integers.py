@@ -22,22 +22,22 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
     a categories which was not seen by method *fit*, it can raise an exception
     or ignore it and replace it by zero.
 
-    @example(DictVectorizer or CategoriesToIntegers)
+    .. exref::
+        :title: DictVectorizer or CategoriesToIntegers
+        :tag: Machine Learning
 
-    Example which transforms text into integers:
+        Example which transforms text into integers:
 
-    .. runpython::
-        :showcode:
+        .. runpython::
+            :showcode:
 
-        import pandas
-        from ensae_teaching_cs.ml import CategoriesToIntegers
-        df = pandas.DataFrame( [{"cat": "a"}, {"cat": "b"}] )
-        trans = CategoriesToIntegers()
-        trans.fit(df)
-        newdf = trans.transform(df)
-        print(newdf)
-
-    @endexample
+            import pandas
+            from ensae_teaching_cs.ml import CategoriesToIntegers
+            df = pandas.DataFrame( [{"cat": "a"}, {"cat": "b"}] )
+            trans = CategoriesToIntegers()
+            trans.fit(df)
+            newdf = trans.transform(df)
+            print(newdf)
     """
 
     def __init__(self, columns=None, remove=None, skip_errors=False):

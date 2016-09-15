@@ -38,10 +38,12 @@ def file_build_rss(folder=".",
     """
     Build a RSS file, the function keeps the blog post (HTML format) from the last month.
     If a post contains one the two following string:
-    @code
-    <!-- SUMMARY BEGINS -->
-    <!-- SUMMARY ENDS -->
-    @endcode
+
+    ::
+
+        <!-- SUMMARY BEGINS -->
+        <!-- SUMMARY ENDS -->
+
     The summary will only contains the part included in those two comments.
 
 
@@ -52,11 +54,13 @@ def file_build_rss(folder=".",
     @param  model_row       see model_row
     @param  model_channel   the part related to a post in the rss stream is composed
                             by the concatenation of the three stream:
-                            @code
-                            model_feed
-                            model_row
-                            model_channel
-                            @endcode
+
+                            ::
+
+                                model_feed
+                                model_row
+                                model_channel
+
                             You should see the default value to see how you can replace them.
     @return                 2-uple: outfile and the list of kept blog post (the last month)
     """

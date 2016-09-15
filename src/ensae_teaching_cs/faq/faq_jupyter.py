@@ -45,13 +45,13 @@ def r_and_notebook():
     Cette fonction test si la variable ``R_HOME`` est définie et pointe sur une
     version de R présente.
 
-    @example(techniques___Utiliser R depuis un notebook)
+    .. exref::
+        :title: Utiliser R depuis un notebook
+        :tag: Technique
 
-    .. index:: R
+        .. index:: R
 
-    C'est l'objet des deux notebooks :ref:`td2acenoncesession2brst` et la :ref:`correction <td2acorrectionsession2brst>`.
-
-    @endexample
+        C'est l'objet des deux notebooks :ref:`td2acenoncesession2brst` et la :ref:`correction <td2acorrectionsession2brst>`.
 
     .. faqref::
         :tag: jupyter
@@ -72,13 +72,13 @@ def r_and_notebook():
 
 def jupyter_convert_notebooks():
     """
-    @example(techniques___Convertir le notebook en cours au format HTML)
+    .. exref::
+        :title: Convertir le notebook en cours au format HTML
+        :tag: Technique
 
-    .. index:: conversion,html,rst
+        .. index:: conversion, html, rst
 
-    C'est l'objet du notebook :ref:`notebookconvertrst`.
-
-    @endexample
+        C'est l'objet du notebook :ref:`notebookconvertrst`.
 
     .. faqref::
         :tag: jupyter

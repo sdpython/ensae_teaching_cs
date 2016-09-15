@@ -28,10 +28,11 @@ def permutation(nb):
     """
     Compute all permutations of set [[ 1, 2, ..., nb ]].
     Example for 3:
-    @code
-    [[0, 1, 2], [0, 2, 1], [1, 0, 2],
-     [1, 2, 0], [2, 0, 1], [2, 1, 0]]
-    @endcode
+
+    ::
+
+        [[0, 1, 2], [0, 2, 1], [1, 0, 2],
+        [1, 2, 0], [2, 0, 1], [2, 1, 0]]
 
     @param      nb      permutation over the set [[1..n]]
     @return             list of all possible permutations

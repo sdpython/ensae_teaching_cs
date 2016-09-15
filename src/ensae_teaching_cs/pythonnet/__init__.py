@@ -82,53 +82,54 @@ def vocal_synthesis(text, lang="fr-FR", voice="", filename=""):
     @param      voice       nom de la voix (vide si voix par défaut)
     @param      filename    nom de fichier pour sauver le résultat au format wav (vide sinon)
 
-    @example(techniques___Utiliser une DLL implémentée en C#)
+    .. exref::
+        :title: Utiliser une DLL implémentée en C#
+        :tag: Technique
 
-    .. index:: C#,DLL
+        .. index:: C#,DLL
 
-    Le code de la DLL est le suivant. Il a été compilé sous forme de DLL.
-    @code
-    namespace ENSAE.Voice
-    {
-        public static class Speech
-        {
-            public static void VocalSynthesis(string text, string culture, string filename, string voice)
+        Le code de la DLL est le suivant. Il a été compilé sous forme de DLL.
+
+        ::
+
+            namespace ENSAE.Voice
             {
-                SpeechSynthesizer synth = new SpeechSynthesizer();
+                public static class Speech
+                {
+                    public static void VocalSynthesis(string text, string culture, string filename, string voice)
+                    {
+                        SpeechSynthesizer synth = new SpeechSynthesizer();
 
-                synth.SelectVoiceByHints(VoiceGender.Neutral, VoiceAge.NotSet, 1, new CultureInfo(culture));
+                        synth.SelectVoiceByHints(VoiceGender.Neutral, VoiceAge.NotSet, 1, new CultureInfo(culture));
 
-                if (!string.IsNullOrEmpty(filename))
-                    synth.SetOutputToWaveFile(filename);
-                if (!string.IsNullOrEmpty(voice))
-                    synth.SelectVoice(voice);
+                        if (!string.IsNullOrEmpty(filename))
+                            synth.SetOutputToWaveFile(filename);
+                        if (!string.IsNullOrEmpty(voice))
+                            synth.SelectVoice(voice);
 
-                synth.Speak(text);
+                        synth.Speak(text);
+                    }
+                }
             }
-        }
-    }
-    @endcode
 
-    Pour l'utiliser, il faut utiliser l'instruction :
+        Pour l'utiliser, il faut utiliser l'instruction :
 
-    @code
-    from ensae_teaching_cs.pythonnet import clr
-    from clr import AddReference
-    AddReference("ENSAE.Voice")
-    @endcode
+        ::
 
-    Si le programme répond qu'il ne trouve pas le fichier, il suffit
-    d'inclure de la répertoire où se trouve la DLL dans la liste ``sys.path``.
-    Ensuite on écrit simplement :
+            from ensae_teaching_cs.pythonnet import clr
+            from clr import AddReference
+            AddReference("ENSAE.Voice")
 
-    @code
-    from ENSAE.Voice import Speech
-    Speech.VocalSynthesis(text, lang, voice, filename)
-    @endcode
+        Si le programme répond qu'il ne trouve pas le fichier, il suffit
+        d'inclure de la répertoire où se trouve la DLL dans la liste ``sys.path``.
+        Ensuite on écrit simplement :
 
-    Il faut voir le notebook :ref:`pythoncsharprst`.
+        ::
 
-    @endexample
+            from ENSAE.Voice import Speech
+            Speech.VocalSynthesis(text, lang, voice, filename)
+
+        Il faut voir le notebook :ref:`pythoncsharprst`.
     """
     if "ENSAE.Voice" not in sys.modules:
         if not sys.platform.startswith("win"):

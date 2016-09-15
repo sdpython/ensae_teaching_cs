@@ -125,10 +125,12 @@ def py_to_html_file(file, writehtml="", addGoogleTracking=True, title=None):
 
     @param      folder              folder
     @param      addGoogleTracking   add some code for the Google tracking (related to www.xavierdupre.fr), it looks like:
-                                    @code
+
+                                    ::
+
                                         <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
                                         <script type="text/javascript">_uacct = "UA-XXXXXXX-X";urchinTracker();</script>
-                                    @endcode
+
     @return                         the processed file (same file but with extension .html)
     """
     googlet = googleTrackerFooter if addGoogleTracking else ""

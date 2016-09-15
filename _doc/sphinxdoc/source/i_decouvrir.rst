@@ -142,10 +142,10 @@ Génie logiciel illustré
 Aspects cachés de ce cours
 ==========================
 
-.. toctree::
-    :maxdepth: 1
-    
-    all_example_AutoTeachings    
+.. exreflist::
+    :tag: Automation
+    :contents:
+ 
 
 
 

@@ -270,14 +270,14 @@ def enumerate_speeches_from_elysees(skip=0, use_json=False):
     @param      use_json    or json format or xml (json format is incomplete)
     @return                 enumerate dictionaries
 
-    @example(Récupérer des discours du président de la république)
+    .. exref::
+        :title: Récupérer des discours du président de la république
+        :tag: Exercice
 
-    @code
-    for i,disc in enumerate(enumerate_speeches_from_elysees()):
-        print(disc)
-    @endcode
+        ::
 
-    @endexample
+            for i,disc in enumerate(enumerate_speeches_from_elysees()):
+                print(disc)
 
     """
     if use_json:

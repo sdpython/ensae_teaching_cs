@@ -399,14 +399,15 @@ class ElectionResults:
         @return                         matrixes (dataframe)
 
         Example:
-        @code
-        def pour(x) :
-            if x < 0.01 : return ""
-            else : return "%2.0f" % (x*100) + "%"
 
-        boot = el.bootstrap(iter=10)
-        comb = el.combine_string( [boot[2],boot[3]], pour, lambda v : "%s-%s" % tuple(v))
-        @endcode
+        ::
+
+            def pour(x) :
+                if x < 0.01 : return ""
+                else : return "%2.0f" % (x*100) + "%"
+
+            boot = el.bootstrap(iter=10)
+            comb = el.combine_string( [boot[2],boot[3]], pour, lambda v : "%s-%s" % tuple(v))
         """
         shape = matrices[0].shape
         res = [["" for i in range(shape[1])] for j in range(shape[0])]

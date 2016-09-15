@@ -235,9 +235,11 @@ def modify_all_posts(folder=".",
                             if None, replace the file
     @param      exclude     if not None, function which avoids some file the function
                             returns a True value, example:
-                            @code
-                            lambda f : "_old" in f
-                            @endcode
+
+                            ::
+
+                                lambda f : "_old" in f
+
     @return                 files, modified where:
                                 * files is the list of files processed
                                 * modified is the list of modified files

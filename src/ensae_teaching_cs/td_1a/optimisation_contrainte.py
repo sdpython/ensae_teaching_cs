@@ -115,37 +115,39 @@ def contrainte(X):
 
 def exercice_particulier1():
     """
-    @example(science___solver.cp de cvxopt)
-    On résoud le problème suivant avec `cvxopt <http://cvxopt.org/userguide/index.html>`_ :
+    .. exref::
+        :title: solver.cp de cvxopt
+        :tag: Computer Science
 
-    .. math::
+        On résoud le problème suivant avec `cvxopt <http://cvxopt.org/userguide/index.html>`_ :
 
-        \\left\\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ sous \\; contrainte \\; x + 2y = 1 \\end{array}\\right.
+        .. math::
 
-    Qui s'implémente à l'aide de la fonction suivante :
+            \\left\\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ sous \\; contrainte \\; x + 2y = 1 \\end{array}\\right.
 
-    @code
-    def f_df_H(x=None,z=None) :
-        if x is None :
-            # cas 1
-            x0 = matrix ( [[ random.random(), random.random() ]])
-            return 0,x0
-        f = x[0]**2 + x[1]**2 - x[0]*x[1] + x[1]
-        d = matrix ( [ x[0]*2 - x[1], x[1]*2 - x[0] + 1 ] ).T
-        h = matrix ( [ [ 2.0, -1.0], [-1.0, 2.0] ])
-        if z is None:
-            # cas 2
-            return  f, d
-        else :
-            # cas 3
-            return f, d, h
+        Qui s'implémente à l'aide de la fonction suivante :
 
-    solvers.options['show_progress'] = False
-    A = matrix([ [ 1.0, 2.0 ] ]).trans()
-    b = matrix ( [[ 1.0] ] )
-    sol = solvers.cp ( f_df_H, A = A, b = b)
-    @endcode
-    @endexample
+        ::
+
+            def f_df_H(x=None,z=None) :
+                if x is None :
+                    # cas 1
+                    x0 = matrix ( [[ random.random(), random.random() ]])
+                    return 0,x0
+                f = x[0]**2 + x[1]**2 - x[0]*x[1] + x[1]
+                d = matrix ( [ x[0]*2 - x[1], x[1]*2 - x[0] + 1 ] ).T
+                h = matrix ( [ [ 2.0, -1.0], [-1.0, 2.0] ])
+                if z is None:
+                    # cas 2
+                    return  f, d
+                else :
+                    # cas 3
+                    return f, d, h
+
+            solvers.options['show_progress'] = False
+            A = matrix([ [ 1.0, 2.0 ] ]).trans()
+            b = matrix ( [[ 1.0] ] )
+            sol = solvers.cp ( f_df_H, A = A, b = b)
 
     """
     t = solvers.options.get('show_progress', True)
@@ -159,33 +161,35 @@ def exercice_particulier1():
 
 def exercice_particulier2():
     """
-    @example(science___algorithme de Arrow-Hurwicz)
-    On résoud le problème suivant avec l'algorithme de `Arrow-Hurwicz <https://hal.archives-ouvertes.fr/hal-00490826/document>`_.
+    .. exref::
+        :title: algorithme de Arrow-Hurwicz
+        :tag: Computer Science
 
-    .. math::
+        On résoud le problème suivant avec l'algorithme de `Arrow-Hurwicz <https://hal.archives-ouvertes.fr/hal-00490826/document>`_.
 
-        \\left\\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ sous \\; contrainte \\; x + 2y = 1 \\end{array}\\right.
+        .. math::
 
-    Qui s'implémente à l'aide de la fonction suivante :
+            \\left\\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ sous \\; contrainte \\; x + 2y = 1 \\end{array}\\right.
 
-    @code
-    def f_df(X) :
-        x,y = X
-        f = x**2 + y**2 - x*y + y
-        d = [ x*2 - y, y*2 - x + 1  ]
-        return f, d
+        Qui s'implémente à l'aide de la fonction suivante :
 
-    def contrainte(X) :
-        x,y = X
-        f = x+2*y-1
-        d = [ 1,2]
-        return f, d
+        ::
 
-    X0  = [ random.random(),random.random() ]
-    p0  = random.random()
-    sol = Arrow_Hurwicz(f_df, contrainte, X0, p0, do_print=False)
-    @endcode
-    @endexample
+            def f_df(X) :
+                x,y = X
+                f = x**2 + y**2 - x*y + y
+                d = [ x*2 - y, y*2 - x + 1  ]
+                return f, d
+
+            def contrainte(X) :
+                x,y = X
+                f = x+2*y-1
+                d = [ 1,2]
+                return f, d
+
+            X0  = [ random.random(),random.random() ]
+            p0  = random.random()
+            sol = Arrow_Hurwicz(f_df, contrainte, X0, p0, do_print=False)
     """
     X0 = [random.random(), random.random()]
     p0 = random.random()

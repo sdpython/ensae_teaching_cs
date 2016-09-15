@@ -48,22 +48,22 @@ def git_clone(
 
     A folder will be created.
 
-    @example(Automation___Clone many folders in one row)
+    .. exref::
+        :tag: Automation
+        :title: Clone many folders in one row
 
-    @code
-    eleves = "project1;project2;..."
-    root = r"destination"
+        ::
 
-    for el in eleves.split(";"):
-        cl = el.lower().replace(".","-")
-        fold = os.path.join(root, el)
-        if not os.path.exists(fold):
-            print("clone", el)
-            url = "https://<gitlab>/<group>/{0}.git".format(cl)
-            git_clone(  fold, url,user=user,password=password, init=False,fLOG=print)
-    @endcode
+            eleves = "project1;project2;..."
+            root = r"destination"
 
-    @endexample
+            for el in eleves.split(";"):
+                cl = el.lower().replace(".","-")
+                fold = os.path.join(root, el)
+                if not os.path.exists(fold):
+                    print("clone", el)
+                    url = "https://<gitlab>/<group>/{0}.git".format(cl)
+                    git_clone(  fold, url,user=user,password=password, init=False,fLOG=print)
 
     """
     url_user = git_url_user_password(url_https, user, password)

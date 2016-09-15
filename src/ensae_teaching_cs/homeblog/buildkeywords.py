@@ -36,24 +36,25 @@ def FixIssuesWithAccent(text):
     """
     voir http://migo.sixbit.org/more/html-entities.html
     http://www.thesauruslex.com/typo/eng/enghtml.htm
-    @code
-    é = Ã© = &eacute;
-    è = Ã¨ = &egrave;
-    à = Ã  = &agrave;
-    ï = Ã¯ = &iuml;
-    ô = Ã´ = &ocirc;
-    ç = Ã§ = &ccedil;
-    ê = Ãª = &ecirc;
-    ù = Ã¹ = &ugrave;
-    æ = Ã¦ = &aelig;
-    œ = Å = &oelig;
-    ë = Ã« = &euml;
-    ü = Ã¼ = &uuml;
-    â = Ã¢ = &acirc;
-    € = â¬ = &euro;
-    © = Â© = &copy;
-    ¤ = Â¤ = &curren;
-    @endcode
+
+    ::
+
+        é = Ã© = &eacute;
+        è = Ã¨ = &egrave;
+        à = Ã  = &agrave;
+        ï = Ã¯ = &iuml;
+        ô = Ã´ = &ocirc;
+        ç = Ã§ = &ccedil;
+        ê = Ãª = &ecirc;
+        ù = Ã¹ = &ugrave;
+        æ = Ã¦ = &aelig;
+        œ = Å = &oelig;
+        ë = Ã« = &euml;
+        ü = Ã¼ = &uuml;
+        â = Ã¢ = &acirc;
+        € = â¬ = &euro;
+        © = Â© = &copy;
+        ¤ = Â¤ = &curren;
     """
     o = text
 

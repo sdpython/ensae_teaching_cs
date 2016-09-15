@@ -99,26 +99,28 @@ class CustomMagics(Magics):
         """
         Defines command ``%%CS``.
 
-        @example(Comment utiliser une fonction C# dans un notebook?)
+        .. exref::
+            :title: Comment utiliser une fonction C# dans un notebook?
+            :tag: Technique
 
-        Deux cellules sont nécessaires, une pour définir la fonction :
+            Deux cellules sont nécessaires, une pour définir la fonction :
 
-        @code
-        %%CS puissance System.dll
-        public static double puissance(double x, double y)
-        {
-            if (y == 0) return 1.0 ;
-            return System.Math.Pow(x,y) ;
-        }
-        @endcode
+            ::
 
-        Et l'autre pour l'appeler :
+                %%CS puissance System.dll
+                public static double puissance(double x, double y)
+                {
+                    if (y == 0) return 1.0 ;
+                    return System.Math.Pow(x,y) ;
+                }
 
-        @code
-        puissance(3.0,3.0)
-        @endcode
-        @endexample
+            Et l'autre pour l'appeler :
 
+            ::
+
+                puissance(3.0, 3.0)
+
+            Voir `clrmagic <https://pypi.python.org/pypi/clrmagic/>`_.
         """
         if not sys.platform.startswith("win"):
             raise Exception("Works only on Windows.")

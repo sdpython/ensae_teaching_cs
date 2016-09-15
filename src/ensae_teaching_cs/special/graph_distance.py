@@ -280,46 +280,57 @@ class GraphDistance:
         """
         returns default matching functions between two vertices and two edges
         @param      function_mach_vertices   if not None, this function is returned, othewise, it returns a new fonction.
-                                                Example if cost is False:
-                                                @code
-                                                lambda v1,v2,g1,g2,w1,w2 : v1.label == v2.label
-                                                @endcode
-                                                Example if cost is True:
-                                                @code
-                                                def tempF1 (v1,v2,g1,g2,w1,w2) :
-                                                    if v1 is not None and not v1.is_vertex() : raise TypeError("should be a vertex")
-                                                    if v2 is not None and not v2.is_vertex() : raise TypeError("should be a vertex")
-                                                    if v1 is None and v2 is None : return 0
-                                                    elif v1 is None or v2 is None :
-                                                        return v2.weight*w2 if v1 is None else v1.weight*w1
-                                                    else :
-                                                        return 0 if v1.label == v2.label else 0.5*(v1.weight*w1 + v2.weight*w2)
-                                                @endcode
-        @param      function_match_edges      if not None, this function is returned, othewise, it returns a new fonction.
-                                                Example if cost is False:
-                                                @code
-                                                lambda e1,e2,g1,g2,w1,w2 : e1.label == e2.label and
-                                                            (e1.from_ != e1.to or e2.from_ != e2.to) and
-                                                            (e1.from_ != self.labelBegin or e1.to != self.labelBegin) and
-                                                            (e1.from_ != self.labelEnd or e1.to != self.labelEnd)
-                                                @endcode
-                                                Example if cost is True:
-                                                @code
-                                                def tempF2 (e1,e2,g1,g2,w1,w2) :
-                                                    if e1 is not None and not e1.is_edge() : raise TypeError("should be an edge")
-                                                    if e2 is not None and not e2.is_edge() : raise TypeError("should be an edge")
-                                                    if e1 is None and e2 is None : return 0
-                                                    elif e1 is None or e2 is None :
-                                                        return e2.weight*w2 if e1 is None else e1.weight*w1
-                                                    elif e1.label != e2.label : return 0.5*(e1.weight*w1 + e2.weight*w2)
-                                                    else :
-                                                        lab1 = g1.vertices [e1.from_].label == g2.vertices [e2.from_].label
-                                                        lab2 = g1.vertices [e1.to].label == g2.vertices [e2.to].label
-                                                        if lab1 and lab2 : return 0
-                                                        else :  return e1.weight*w1 + e2.weight*w2
-                                                @endcode
-        @param      cost                    if True, the returned function should return a float, otherwise a boolean
-        @return                             a pair of functions
+                                             See below.
+        @param      function_match_edges     if not None, this function is returned, othewise, it returns a new fonction.
+                                             See below.
+        @param      cost                     if True, the returned function should return a float, otherwise a boolean
+        @return                              a pair of functions
+
+        Example for * if cost is False:
+
+        ::
+
+            lambda v1,v2,g1,g2,w1,w2 : v1.label == v2.label
+
+        Example for *function_mach_vertices* if cost is True:
+
+        ::
+
+            def tempF1 (v1,v2,g1,g2,w1,w2) :
+                if v1 is not None and not v1.is_vertex() : raise TypeError("should be a vertex")
+                if v2 is not None and not v2.is_vertex() : raise TypeError("should be a vertex")
+                if v1 is None and v2 is None : return 0
+                elif v1 is None or v2 is None :
+                    return v2.weight*w2 if v1 is None else v1.weight*w1
+                else :
+                    return 0 if v1.label == v2.label else 0.5*(v1.weight*w1 + v2.weight*w2)
+
+        Example for *function_match_edges* if cost is False:
+
+        ::
+
+            lambda e1,e2,g1,g2,w1,w2 : e1.label == e2.label and
+                        (e1.from_ != e1.to or e2.from_ != e2.to) and
+                        (e1.from_ != self.labelBegin or e1.to != self.labelBegin) and
+                        (e1.from_ != self.labelEnd or e1.to != self.labelEnd)
+
+        Example if cost is True:
+
+        ::
+
+            def tempF2 (e1,e2,g1,g2,w1,w2) :
+                if e1 is not None and not e1.is_edge() : raise TypeError("should be an edge")
+                if e2 is not None and not e2.is_edge() : raise TypeError("should be an edge")
+                if e1 is None and e2 is None : return 0
+                elif e1 is None or e2 is None :
+                    return e2.weight*w2 if e1 is None else e1.weight*w1
+                elif e1.label != e2.label : return 0.5*(e1.weight*w1 + e2.weight*w2)
+                else :
+                    lab1 = g1.vertices [e1.from_].label == g2.vertices [e2.from_].label
+                    lab2 = g1.vertices [e1.to].label == g2.vertices [e2.to].label
+                    if lab1 and lab2 : return 0
+                    else :  return e1.weight*w1 + e2.weight*w2
+
         """
         if cost:
 
@@ -507,16 +518,18 @@ class GraphDistance:
         @param      p2                      path 2 (from g2)
         @param      g1                      graph 1
         @param      g2                      graph 2
-        @param      function_mach_vertices   function which gives a distance bewteen two vertices,
+        @param      function_mach_vertices  function which gives a distance bewteen two vertices,
                                             if None, it take the output of @see me get_matching_functions
-        @param      function_match_edges      function which gives a distance bewteen two edges,
+        @param      function_match_edges    function which gives a distance bewteen two edges,
                                             if None, it take the output of @see me get_matching_functions
-        @param      use_min                  the returned is based on a edit distance, if this parameter is True, the returned value will be:
-                                            @code
-                                            if use_min :
-                                                n = min (len(p1), len(p2))
-                                                d = d*1.0 / n if n > 0 else 0
-                                            @endcode
+        @param      use_min                 the returned is based on a edit distance, if this parameter is True, the returned value will be:
+
+                                            ::
+
+                                                if use_min :
+                                                    n = min (len(p1), len(p2))
+                                                    d = d*1.0 / n if n > 0 else 0
+
         @param      debug                   unused
         @return                             2-uple: distance, aligned path
         """
