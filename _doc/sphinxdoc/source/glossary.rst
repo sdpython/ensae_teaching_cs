@@ -141,10 +141,19 @@ Glossaire
         `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ :
         `add method plot <https://github.com/sdpython/pyensae/commit/b5c36ba7885d9d4d92c00e67c5a2d238c57d507a>`_.
         
+    glouton
+        Un `algorithme glouton <https://fr.wikipedia.org/wiki/Algorithme_glouton>`_
+        est un algorithme qui suit le principe de faire, étape par étape, un choix optimum local (*wikipedia*).
+        Ce terme est un peu trompeur parfois dans la mesure où il englobe des algorithmes rapides comme
+        lents.
+        
     ggplot
         `ggplot2 <http://ggplot2.org/>`_ est une librairie de graphiques sous R.
         Elle est accessible via `matplotlib <http://matplotlib.org/>`_.
         Voir `A few tricks with matplotlib <http://www.xavierdupre.fr/blog/2014-12-07_nojs.html>`_.
+        
+    greedy
+        Voir glouton.
     
     Hadoop
         Logiciel de distribution de traitement de données. 
