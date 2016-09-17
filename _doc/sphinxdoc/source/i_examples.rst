@@ -8,9 +8,11 @@ Examples
 
 .. contents::
     :local:
+    
+.. _l-ex-automation:
 
-Automation
-==========
+Automatisation
+==============
 
 
 .. exreflist::

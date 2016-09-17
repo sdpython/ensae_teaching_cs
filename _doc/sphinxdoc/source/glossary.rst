@@ -43,6 +43,12 @@ Glossaire
         
     benchmark
         `banc d'essai <http://fr.wikipedia.org/wiki/Test_de_performance>`_
+    
+    cache
+        Mécanisme qui consiste à mémoriser un résultat coûteux à produire.
+        Lorqu'il n'est pas possible de tout stocker en mémoire, il faut 
+        choisir les informations les plus susceptibles d'être demandées.
+        Voir `algorithme de cache <https://fr.wikipedia.org/wiki/Algorithmes_de_remplacement_des_lignes_de_cache>`_.
         
     Cheat Sheet
         Sorte d'anti-sèche. Quelques exemples pour le machine learning :
@@ -151,6 +157,12 @@ Glossaire
         `ggplot2 <http://ggplot2.org/>`_ est une librairie de graphiques sous R.
         Elle est accessible via `matplotlib <http://matplotlib.org/>`_.
         Voir `A few tricks with matplotlib <http://www.xavierdupre.fr/blog/2014-12-07_nojs.html>`_.
+        
+    GPU
+        `GPU <https://en.wikipedia.org/wiki/Graphics_processing_unit>`_ = 
+        Graphics Processing Unit. Ils sont très utilisés pour les réseaux de 
+        neurones et les algorithmes de Monte Carlo.
+        Voir `Building Deep Neural Networks in the Cloud with Azure GPU VMs, MXNet and Microsoft R Server <https://blogs.technet.microsoft.com/machinelearning/2016/09/15/building-deep-neural-networks-in-the-cloud-with-azure-gpu-vms-mxnet-and-microsoft-r-server/>`_.
         
     greedy
         Voir glouton.
