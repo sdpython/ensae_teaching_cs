@@ -19,8 +19,8 @@ Cours animé par :
 * Jérémie Jakubowicz (ENSAE 2002) [#fwrite2]_
 * Nicolas Rousset [#fwrite2]_
 * Antoine Ly (ENSAE 2015)
-* Antoine Guillot (ENSAE 2015)
 * Dominique Poudevigne
+* Benjamin Donnot (ENSAE 2016)
 * Gaël Varoquaux [#fwrite2]_
 
 
@@ -192,8 +192,13 @@ Deep Learning
 * `Places CNN <http://places.csail.mit.edu/downloadCNN.html>`_,
   `Pre-release of Places365-CNNs <https://github.com/metalbubble/places365>`_
   (deep learning)
+  
+**Lectures**
 
-
+* `Deep Residual Learning for Image Recognition <https://arxiv.org/pdf/1512.03385v1.pdf>`_
+* `Deep Learning <http://www-labs.iro.umontreal.ca/~bengioy/dlbook/>`_, Yoshua Bengio, Ian Goodfellow and Aaron Courville
+* `LeNet5 <http://yann.lecun.com/exdb/lenet/>`_
+* `mxnet <https://github.com/dmlc/mxnet>`_
 
 
     
@@ -438,6 +443,7 @@ Bibliographie
 * `Matrix Factorization: A Simple Tutorial and Implementation in Python <http://www.quuxlabs.com/blog/2010/09/matrix-factorization-a-simple-tutorial-and-implementation-in-python/>`_ *(2016/06)*
 * `Complete Guide to Parameter Tuning in XGBoost (with codes in Python) <https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/>`_ *(2016/08)*
 * `colah's blog <http://colah.github.io/>`_ *(2016/08)* blog/cours sur le deep learning 
+* `Factorization Machines with libFM <http://www.csie.ntu.edu.tw/~b97053/paper/Factorization%20Machines%20with%20libFM.pdf>`_ *(2016/09)*
 
 
 **Tutoriels**
