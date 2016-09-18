@@ -203,6 +203,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                                       "ensae_projects",
                                       "jupytalk",
                                       "mlstatpy",
+                                      "teachpyx",
                                       "ensae_teaching_cs"
                                       ],
                              password=None,
