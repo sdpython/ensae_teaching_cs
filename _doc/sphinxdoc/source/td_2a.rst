@@ -50,10 +50,8 @@ Le cours est évalué avec un :ref:`projet informatique <l-projinfo2a>`.
              :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html
 
 
-La séance dédiées :ref:`l-puzzlealgo2A` requiert de la part des participants
-puisque trois exercices seront choisis parmi ceux que vous aurez envoyés par mail.
-Les exercices doivent être choisis sur le site
-`Google Code Jam <https://code.google.com/codejam/contests.html>`_.
+Ce cours propose de découvrir les notions ci-dessus selon
+la :ref:`feuille de route 2016 <l-feuille-de-route-2016-2A>`.
 
 
 .. |pyecopng| image:: _static/pyeco.png
