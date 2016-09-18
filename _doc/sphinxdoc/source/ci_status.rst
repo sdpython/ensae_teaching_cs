@@ -239,6 +239,23 @@ Tableau de bord
             :target: https://waffle.io/sdpython/python3_module_template    
       - .. image:: https://codecov.io/github/sdpython/python3_module_template/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/python3_module_template?branch=master    
+    * - `teachpyx <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/teachpyx.svg?branch=master                        
+            :target: https://travis-ci.org/sdpython/teachpyx                                            
+            :alt: Build status                                                                                  
+      - .. image:: https://ci.appveyor.com/api/projects/status/hsrhrnb5r3tlpb8a?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/teachpyx
+            :alt: Build Status Windows    
+      - .. image:: https://badge.fury.io/py/teachpyx.svg
+            :target: http://badge.fury.io/py/teachpyx
+      - .. image:: http://img.shields.io/pypi/dm/teachpyx.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/teachpyx  
+      - .. image:: https://badge.waffle.io/sdpython/teachpyx.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/teachpyx      
+      - .. image:: https://codecov.io/github/sdpython/teachpyx/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/teachpyx?branch=master    
 
 Automatisation
 ++++++++++++++
@@ -309,3 +326,6 @@ Contenu
       - Contenu des enseignements donnés à l'ENSAE.
         Le module inclut également des fonctions d'automatisation et des morceaux de codes
         illustrant des exercices (voir :ref:`modindex`).
+    * - `teachpyx <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_
+      - Cours de programmation en Python. C'est la version internet et actualisée
+        du livre paru en 2009.
