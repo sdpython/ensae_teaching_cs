@@ -380,7 +380,14 @@ Bibliographie
     la partie dédiées aux algorithmes pour être mieux préparés au second semestre
     lors de la réalisation des projets.
     
-
+.. todoext::
+    :title: ajouter une séance sur le calcul de la note des aliments
+    :tag: plus
+    
+    La formule est explicitée sur 
+    `Open Food Facts <http://fr.openfoodfacts.org/score-nutritionnel-france>`_.
+    L'objectif est de l'implémenter. Les données sont disponibles
+    sur `data.gouv.fr <https://www.data.gouv.fr/fr/datasets/produits-alimentaires-ingredients-nutrition-labels/>`_.
 
 
 
