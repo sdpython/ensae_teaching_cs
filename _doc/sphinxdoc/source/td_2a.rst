@@ -19,8 +19,7 @@ Cours animé par :
 * Jérémie Jakubowicz (ENSAE 2002) [#fwrite2]_
 * Nicolas Rousset [#fwrite2]_
 * Antoine Ly (ENSAE 2015)
-* Dominique Poudevigne
-* Benjamin Donnot (ENSAE 2016)
+* Benjamin Donnot (ENSAE 2015)
 * Gaël Varoquaux [#fwrite2]_
 
 

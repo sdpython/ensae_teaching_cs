@@ -328,4 +328,5 @@ Contenu
         illustrant des exercices (voir :ref:`modindex`).
     * - `teachpyx <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_
       - Cours de programmation en Python. C'est la version internet et actualisée
-        du livre paru en 2009.
+        du livre paru en 2009 et disponible au format
+        `PDF <http://www.xavierdupre.fr/site2013/index_documents.html>`_.

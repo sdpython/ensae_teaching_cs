@@ -53,15 +53,17 @@ Les exercices doivent être choisis sur le site
       - NLTK, statistiques textuelles
     * - 10/10
       - C++, Cython, parallélisation
-      - Machine Learning avec Gaël Varoquaux (scikit-learn)
-      - Visualisation, bokeh, cartographie
-      - Machine Learning avec Gaël Varoquaux (scikit-learn)
+      - Machine Learning avec Gaël Varoquaux (scikit-learn) **cours commun**
+      - Visualisation, bokeh, cartographie, données carroyées
+      - Machine Learning avec Gaël Varoquaux (scikit-learn) **cours commun**
     * - 17/10
       - forestci, mlxtend, xgboost, matrix factorisation
         metrique, machine learning, xgboost
       - deep learning, CTNK, Tensor flow
       - expression régulière, format JSON
-      - récupération de données via une API, twitter, linkedin, velib
+      - récupération de données via une API, twitter, linkedin, velib, 
+        `API de geocoding <https://www.data.gouv.fr/fr/faq/reuser/>`_,
+        `adresse.data.gouv.fr <https://adresse.data.gouv.fr/csv/>`_
     * - 7/11
       - Algorithmes et puzzles avec Jérémie Jakubowicz
       - Algorithmes et puzzles avec Jérémie Jakubowicz
@@ -69,9 +71,9 @@ Les exercices doivent être choisis sur le site
       - construction d'un site web, Flask, Jason, Django
     * - 14/11
       - travail d'équipe, réarranger la carte électorale
-      - retour sur la compétition ML
+      - retour sur la compétition ML **cours commun**
       - SQL, lien avec pandas
-      - retour sur la compétition ML
+      - retour sur la compétition ML **cours commun**
 
 
 
