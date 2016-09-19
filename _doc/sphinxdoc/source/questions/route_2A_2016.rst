@@ -58,7 +58,7 @@ Les exercices doivent être choisis sur le site
       - Machine Learning avec Gaël Varoquaux (scikit-learn) **cours commun**
     * - 17/10
       - forestci, mlxtend, xgboost, matrix factorisation
-        metrique, machine learning, xgboost, interprettree
+        metrique, machine learning, xgboost, treeinterpreter
       - deep learning, CTNK, Tensor flow
       - expression régulière, format JSON
       - récupération de données via une API, twitter, linkedin, velib, 
