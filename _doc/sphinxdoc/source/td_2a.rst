@@ -100,19 +100,6 @@ Plan
 
 
 
-
-.. todoext:: 
-    :title: Retravailler la partie visualisation de Python pour un data scientist
-    :tag: plus
-    
-    Il manque un notebooks sur les visualisations les plus utilisées en machine learning,
-    ROC, régression, visualisation d'arbres de décision avec ete3, les cartes.
-    Insister sur l'interactivité.
-    Voir `TD 4B : Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
-    (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_),
-    ce notebook présente un moyen de faire une carte géographique, des graphes zoomables.
-        
-
 Machine Learning
 ================
 
@@ -150,38 +137,12 @@ Quelques extraits :
 * :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
 * :ref:`question_projet_2014`
 
-.. todoext::
-    :title: aborder d'autres librairies
-    :tag: plus
-    
-    scikit-learn, h2o, xgboost, scikit-learn-contrib, mlxtend, gensim, 
-    py-earth, polylearn, lightning, imbalanced-learn, theano, pytorch
-    forest-confidence-interval, boruta, wendelin.core, zodb,
-    (requires transaction, zc.lockfile, zodbpickle, ZODB, zdaemon, ZEO, ZODB3, wendelin.core),
-    ghost.py (scrapping)
-    h5py, PyTables, lda
-    See `Related Projects <http://scikit-learn.org/stable/related_projects.html>`_,
-    `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
-    
+
 
 Deep Learning
 =============
 
-|pystatpng|
-
-.. todoext::
-    :title: Aborder theano, keras, GPU et les types de deep strucures
-    :tag: plus
-    
-    Et les autres caffee, tensorflow, cntk, torch, h2o
-    (voir `libraries <http://www.teglor.com/b/deep-learning-libraries-language-cm569/>`_,
-    `librairies 1 <http://machinelearningmastery.com/popular-deep-learning-libraries/>`_,
-    `librairies 2 <http://www.datasciencecentral.com/profiles/blogs/here-are-15-libraries-in-various-languages-to-help-implement-your>`_,
-    `comparison <https://en.wikipedia.org/wiki/Comparison_of_deep_learning_software>`_
-    et différents types de structures DNN, CNN
-    `deep learning <https://en.wikipedia.org/wiki/Deep_learning>`_
-    
-    
+|pystatpng|    
 
 
 **Modèles pré-entraînés**
@@ -210,32 +171,11 @@ Traitement du langage
   à saisir leur recherche. N'importe quel site commercial l'utiliser
   pour guider les utilisateurs plus rapidement vers le produit qu'ils recherchent.
 
-.. todoext::
-    :title: rédiger un ou deux notebook sur le traitement du langage
-    :tag: plus
-    
-    Aborder la distance d'édition, n-grams, NLTK, gensim,
-    word2vec, LDA (Latent Dirichlet Application), traduction statistique,
-    td-idf, coocurrence, analyse de sentiment, stemming
-    `SMT <https://en.wikipedia.org/wiki/Statistical_machine_translation>`_,
-    alignement, 
-    `moses <http://www.statmt.org/moses/>`_
-    
-
 
 Webscrapping
 ============
 
 |pyecopng| 
-
-.. todoext::
-    :title: techniques de webscrapping
-    :tag: plus
-    
-    * beautifulsoup, ghost.py, scrappy
-    * structure de données JSON, HTML, XML
-    * créer son site web Flask, `Falcon <https://falconframework.org/>`_, Django
-    * `Python's Web Framework Benchmarks <http://klen.github.io/py-frameworks-bench/>`_
 
     
 
@@ -278,13 +218,6 @@ Big data sans cluster
 - Base de données non relationnelles dont `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_
 - :ref:`l-td25asynthese`
 
-.. todoext::
-    :title: aborder les formats de données sparses (CRS, ...)
-    :tag: plus
-    
-    See `Compressed Sparse Row Format (CSR) <http://www.scipy-lectures.org/advanced/scipy_sparse/csr_matrix.html>`_.
-
-
 
 
 Parallélisation et autres techniques
@@ -299,33 +232,6 @@ Notion abordées :
 * sérialisation : le fait de convertir n'importe quelle structure de données en un
   tableau d'octets, c'est indispensable pour la communication entre deux machines,
   deux processus
-
-.. toctree::
-    :maxdepth: 2
-    
-    notebooks/_gs2a_parallelisation
-    notebooks/_gs2a_langages
-    notebooks/_gs2a_serialisation
-    
-.. todoext::
-    :title: ajouter un notebook sur joblib
-    :tag: plus
-    
-    joblib est utilisé par scikit-learn pour 
-    paralléliser les calculs
-
-.. todoext::
-    :title: ajouter un notebook sur numba, llvmlite
-    :tag: plus
-    
-    Il n'y pas que CPython pour ooptimiser les calculs.
-    Aborder les notions de JIT.
-        
-.. todoext::
-    :title: sérialisation JSON
-    :tag: plus
-    
-    Très utilisée sur internet donc incontournable.
 
 
 .. _l-puzzlealgo2A:
@@ -540,7 +446,99 @@ Librairies Python
 * :ref:`l-visualisation`
 * `basemap <http://matplotlib.org/basemap/>`_, `phshp <https://pypi.python.org/pypi/pyshp>`_, `shapely <https://pypi.python.org/pypi/Shapely>`_ : 
   tout ce qu'il faut pour tracer des cartes
-  
+
+
+.. toctree::
+    :maxdepth: 2
+    
+    notebooks/_gs2a_parallelisation
+    notebooks/_gs2a_langages
+    notebooks/_gs2a_serialisation
+    
+.. todoext:: 
+    :title: Retravailler la partie visualisation de Python pour un data scientist
+    :tag: plus
+    
+    Il manque un notebooks sur les visualisations les plus utilisées en machine learning,
+    ROC, régression, visualisation d'arbres de décision avec ete3, les cartes.
+    Insister sur l'interactivité.
+    Voir `TD 4B : Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
+    (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_),
+    ce notebook présente un moyen de faire une carte géographique, des graphes zoomables.
+        
+.. todoext::
+    :title: aborder d'autres librairies
+    :tag: plus
+    
+    scikit-learn, h2o, xgboost, scikit-learn-contrib, mlxtend, gensim, 
+    py-earth, polylearn, lightning, imbalanced-learn, theano, pytorch
+    forest-confidence-interval, boruta, wendelin.core, zodb,
+    (requires transaction, zc.lockfile, zodbpickle, ZODB, zdaemon, ZEO, ZODB3, wendelin.core),
+    ghost.py (scrapping)
+    h5py, PyTables, lda
+    See `Related Projects <http://scikit-learn.org/stable/related_projects.html>`_,
+    `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
+    
+.. todoext::
+    :title: Aborder theano, keras, GPU et les types de deep strucures
+    :tag: plus
+    
+    Et les autres caffee, tensorflow, cntk, torch, h2o
+    (voir `libraries <http://www.teglor.com/b/deep-learning-libraries-language-cm569/>`_,
+    `librairies 1 <http://machinelearningmastery.com/popular-deep-learning-libraries/>`_,
+    `librairies 2 <http://www.datasciencecentral.com/profiles/blogs/here-are-15-libraries-in-various-languages-to-help-implement-your>`_,
+    `comparison <https://en.wikipedia.org/wiki/Comparison_of_deep_learning_software>`_
+    et différents types de structures DNN, CNN
+    `deep learning <https://en.wikipedia.org/wiki/Deep_learning>`_
+    
+.. todoext::
+    :title: rédiger un ou deux notebook sur le traitement du langage
+    :tag: plus
+    
+    Aborder la distance d'édition, n-grams, NLTK, gensim,
+    word2vec, LDA (Latent Dirichlet Application), traduction statistique,
+    td-idf, coocurrence, analyse de sentiment, stemming
+    `SMT <https://en.wikipedia.org/wiki/Statistical_machine_translation>`_,
+    alignement, 
+    `moses <http://www.statmt.org/moses/>`_
+    
+
+.. todoext::
+    :title: techniques de webscrapping
+    :tag: plus
+    
+    * beautifulsoup, ghost.py, scrappy
+    * structure de données JSON, HTML, XML
+    * créer son site web Flask, `Falcon <https://falconframework.org/>`_, Django
+    * `Python's Web Framework Benchmarks <http://klen.github.io/py-frameworks-bench/>`_
+
+.. todoext::
+    :title: aborder les formats de données sparses (CRS, ...)
+    :tag: plus
+    
+    See `Compressed Sparse Row Format (CSR) <http://www.scipy-lectures.org/advanced/scipy_sparse/csr_matrix.html>`_.
+
+.. todoext::
+    :title: ajouter un notebook sur joblib
+    :tag: plus
+    
+    joblib est utilisé par scikit-learn pour 
+    paralléliser les calculs
+
+.. todoext::
+    :title: ajouter un notebook sur numba, llvmlite
+    :tag: plus
+    
+    Il n'y pas que CPython pour ooptimiser les calculs.
+    Aborder les notions de JIT.
+        
+.. todoext::
+    :title: sérialisation JSON
+    :tag: plus
+    
+    Très utilisée sur internet donc incontournable.
+
+
 
     
 
