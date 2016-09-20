@@ -43,7 +43,7 @@ Les exercices doivent être choisis sur le site
       - Eco 10h30
     * - 26/9
       - pandas, numpy, statsmodels
-      - visulation, javascript
+      - visualisation, javascript
       - numpy
       - pandas, premiers graphes
     * - 3/10
@@ -59,7 +59,7 @@ Les exercices doivent être choisis sur le site
     * - 17/10
       - forestci, mlxtend, xgboost, matrix factorisation
         metrique, machine learning, xgboost, treeinterpreter
-      - deep learning, CTNK, Tensor flow
+      - deep learning, CTNK, Tensor flow, H2O
       - expression régulière, format JSON
       - récupération de données via une API, twitter, linkedin, velib, 
         `API de geocoding <https://www.data.gouv.fr/fr/faq/reuser/>`_,

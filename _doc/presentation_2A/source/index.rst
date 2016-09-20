@@ -18,17 +18,17 @@ ENSAE 2A - Programmation
 
             **site, cours** `Xavier Dupré <http://www.xavierdupre.fr/>`_
 
-        * `Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_  (ENSAE 1999)
-        * Elodie Royant (ENSAE 2008)
-        * Antoine Thabault (ENSAE 2012)
-        * Jérémie Jakubowicz (ENSAE 2002)
-        * Nicolas Pousset
-        * Antoine Ly (ENSAE 2015)
-        * Antoine Guillot (ENSAE 2015)
-        * Dominique Poudevigne
-        * Gaël Varoquaux
+            * `Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_  (ENSAE 1999) [#fwrite1]_
+            * Anne Muller (ENSAE 2012)
+            * Elodie Royant (ENSAE 2008)
+            * Antoine Thabault (ENSAE 2012)
+            * Jérémie Jakubowicz (ENSAE 2002)
+            * Nicolas Rousset
+            * Antoine Ly (ENSAE 2015)
+            * Benjamin Donnot (ENSAE 2015)
+            * Gaël Varoquaux [#fwrite2]_
         
-    .. revealjs:: Bio 1/4
+    .. revealjs:: Bio 1/5
     
         **Elodie Royant** a travaillé 6 ans chez `MAPP <http://www.mapp-economics.com/fr/>`_, 
         un cabinet d'expertise en économie de la concurrence. Elle est actuellement Data Scientist chez `Oscaro.com <http://www.oscaro.com/>`_,
@@ -42,34 +42,31 @@ ENSAE 2A - Programmation
         une start-up française qui aide les éditeurs de contenu en ligne à vendre efficacement leurs espaces 
         publicitaires dans le cadre d'enchères en temps réel.
         
-    .. revealjs:: Bio 2/4
+    .. revealjs:: Bio 2/5
     
         Après 8 ans d'expérience en temps qu'expert informatique dans différents domaine 
-        (informatique scientifique et optimisation pour GdfSuez, 
+        (informatique scientifique et optimisation pour GDF Suez, 
         gestion de système temps réels à fort volumétrie de donnée pour Amadeus), 
-        **Nicolas Rousset** est depuis 1 an enseignant en informatique à l'ISEP et 
+        **Nicolas Rousset** est depuis 2 ans enseignant en informatique à l'ISEP et 
         consultant indépendant. A ce titre, il accompagne des petites structures 
         dans leurs besoins en informatique et statistique, en leur offrant 
         la pédagogie et la réalisation des logiciels répondant à leurs besoins.
         
-        **Dominique Poudevigne**, ingénieur Supaéro de formation, a eu un parcours varié depuis 1992 : 
-        banquier et ingénieur financier dans les marchés de capitaux, 
-        consultant en gestion des risques financiers, CTO et fondateur de startup 
-        internet et enfin informaticien en banque d'investissement. 
-        Il n'a jamais quitté sa passion pour l'IT qui l'a emporté il y a très longtemps, 
-        quand Microsoft venait à peine de fêter son premier million de dollars de chiffre d'affaires.
+        **Benjamin Donnot**, 
         
-    .. revealjs:: Bio 3/4
+    .. revealjs:: Bio 3/5
     
         Actuaire diplômé en 2015, **Antoine Ly** a suivi le Master Données Apprentissage Connaissance de Jussieu 
-        en parallèle de ma troisième année à l'ENSAE ParisTech. 
-        Je travaille actuellement chez Milliman en tant que consultant dans l'équipe 
+        en parallèle de sa troisième année à l'ENSAE ParisTech. 
+        Il travaille actuellement chez Milliman en tant que consultant dans l'équipe 
         Recherche et Développement sur des problématiques de Machine Learning / Big Data appliquées 
-        à l'assurance et suis sur le point de commencer une thèse CIFRE en apprentissage statistique. 
+        à l'assurance et est doctorant CIFRE en apprentissage statistique. 
         
-        **Antoine Guillot** (à venir)
+    .. revealjs:: Bio 4/5
     
-    .. revealjs:: Bio 4/4
+        **Anne Muller**
+    
+    .. revealjs:: Bio 5/5
     
         **Gaël Varoquaux** est chercheur à l'`INRIA <http://www.inria.fr/>`_, 
         au sein de l'entité `Parietal <https://team.inria.fr/parietal/>`_,
@@ -123,6 +120,7 @@ ENSAE 2A - Programmation
     .. revealjs:: Liens
 
         * `Contenu du cours <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_2a.html>`_
+        *  `Feuille de route 2016-2017 <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/questions/route_2A_2016.html#l-feuille-de-route-2016-2a>`_
         * `ENSAE, Python Setup <http://www.xavierdupre.fr/enseignement/>`_
 
     .. revealjs:: Contributions
@@ -131,14 +129,7 @@ ENSAE 2A - Programmation
         
             * `ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs/>`_
             
-        Autres modules :
-        
-            * `pyensae <https://github.com/sdpython/pyensae/>`_
-            * `pyquickhelper <https://github.com/sdpython/pyquickhelper/>`_
-            * `pymyinstall <https://github.com/sdpython/pymyinstall/>`_
-            * `actuariat_python <https://github.com/sdpython/actuariat_python/>`_
-            
-        Vous pouvez participer.
+        Vous pouvez contribuer.
         
     .. revealjs:: Notebook example
     
@@ -228,17 +219,16 @@ ENSAE 2A - Programmation
     
         **Module de référence**
     
-        * `scikit-learn <http://scikit-learn.org/stable/>`_, `statsmodels <http://statsmodels.sourceforge.net/devel/index.html>`_
+        * `scikit-learn <http://scikit-learn.org/stable/>`_, `statsmodels <http://statsmodels.sourceforge.net/devel/index.html>`_,
+          `xgboost <https://github.com/dmlc/xgboost>`_
             
     .. revealjs:: Deep Learning
     
         * Vision, apprentissage, GPU
     
-        ...
-    
         **Module de référence**
     
-        * `theano <http://deeplearning.net/software/theano/>`_
+        * `theano <http://deeplearning.net/software/theano/>`_, `keras <https://keras.io/>`_
         
     .. revealjs:: Workflow
     
