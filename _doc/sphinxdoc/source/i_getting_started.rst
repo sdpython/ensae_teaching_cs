@@ -37,16 +37,12 @@ Sans autre étape supplémentaires, elle permet de faire du calcul matriciel
 de manipuler les données `pandas <http://pandas.pydata.org/>`_
 et de faire du machine du machine learning
 `scikit-learn <http://scikit-learn.org/>`_.
-
 La plupart des exercices proposés sur ce site n'utilisent pas plus que ce qui est proposé
 dans cette distribution standard. Pour les autres, 
 les instructions mentionnées ci-dessous fonctionnent sous Windows, Linux et Mac.
 
 Windows
 +++++++
-
-Pour tous les modules nécessaires une compilation C++,
-allez à `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
 
 * distribution `Anaconda <https://www.continuum.io/downloads>`_ (python 64 bit)
 
@@ -59,6 +55,13 @@ allez à `Unofficial Windows Binaries for Python Extension Packages <http://www.
     Scripts\pip install pymyinstall --upgrade
     Scripts\pymy_install3 --set=ensae_teaching_cs
     Scripts\pymy_update3 --set=ensae_teaching_cs
+    
+Certains modules nécessitent une compilation C++. 
+`Anaconda <https://www.continuum.io/downloads>`_
+fournit la plupart d'entre eux. Pour les autres, il faut allez à 
+`Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
+
+    
     
 Linux / Mac
 +++++++++++
