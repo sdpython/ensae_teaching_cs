@@ -184,6 +184,7 @@ Deep Learning
 * `Deep Learning <http://www-labs.iro.umontreal.ca/~bengioy/dlbook/>`_, Yoshua Bengio, Ian Goodfellow and Aaron Courville
 * `LeNet5 <http://yann.lecun.com/exdb/lenet/>`_
 * `mxnet <https://github.com/dmlc/mxnet>`_
+* `Benchmarking State-of-the-Art Deep Learning Software Tools <http://arxiv.org/pdf/1608.07249v5.pdf>`_
 
 
     
