@@ -78,15 +78,18 @@ Notions abordées :
 .. toctree::
     :maxdepth: 2
     
+    ext2a/sql_doc
     notebooks/_gs2a_dataframe
     notebooks/_gs2a_magic_commands
-    
 
 
 Visualisation
 =============
 
-|pyecopng|
+|pystatpng| |pyecopng|
+
+Graphes
++++++++
 
 Plan
 
@@ -96,7 +99,33 @@ Plan
 * Chaque groupe essaye une librairie différente
 * Insister sur la visualisation de gros jeu de données
 
+Il existe de nombreuses librairies de visualisation réparties en deux grandes familles.
+La première produit des images
+(`matplotlib <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/im_matplotlib.html#immatplotlibrst>`_,
+`seaborn <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/im_seaborn.html#imseabornrst>`_,
+`networkx <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/im_networkx.html#imnetworkxrst>`_),
+la seconde produit des graphes animés à l'aide de Javascript
+(`bokeh <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/js_bokeh.html#jsbokehrst>`_,
+`bqplot <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/im_networkx.html#imnetworkxrst>`_).
+Les librairies les plus récentes implémentent les deux modes en cherchant toujours plus
+de simplicité. A ce sujet, il faut jeter un coup d'oeil à 
+`flexx <https://flexx.readthedocs.io/en/stable/>`_. Elles explorent aussi 
+la visualisation animée de gros jeux de données telle que 
+`datshader <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/big_datashader.html#bigdatashaderrst>`_.
 
+Cartes
+++++++
+
+* format de cartes 
+  `shapefiles <https://en.wikipedia.org/wiki/Shapefile>`_,
+  `topoJSON <https://en.wikipedia.org/wiki/GeoJSON#TopoJSON>`_,
+  `geoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_
+* conversion de coordonnées en longitude / latitude
+* librairies 
+  `basemap <http://matplotlib.org/basemap/>`_, ...
+* sources :
+  `DataMaps <http://datamaps.github.io/>`_,
+  `Find Data <https://bost.ocks.org/mike/map/#finding-data>`_
 
 Machine Learning
 ================

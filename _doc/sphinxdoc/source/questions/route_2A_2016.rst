@@ -42,38 +42,50 @@ Les exercices doivent être choisis sur le site
       - Eco 8h30
       - Eco 10h30
     * - 26/9
-      - pandas, numpy, statsmodels
-      - visualisation, javascript
-      - numpy
-      - pandas, premiers graphes
+      - :ref:`numpy et le calcul matriciel <td2acenoncesession2Arst>`, 
+        :ref:`pandas, dataframe et premiers graphes <td2acenoncesession1rst>`,        
+      - :ref:`visualisation <l-visualisation-2A>` (voir :ref:`l-note-2A-plan`)
+        javascript *(à venir)*
+      - :ref:`numpy et le calcul matriciel <td2acenoncesession2Arst>`
+      - :ref:`pandas, dataframe et premiers graphes <td2acenoncesession1rst>`
     * - 3/10
       - traitement big data, itérateur, SQL, dask
-      - NTLK, gensim, distance d'édition, statistical translation machine (SMT), n-grammes
-      - matplotlib, seaborn, statsmodels
-      - NLTK, statistiques textuelles
+      - NTLK, gensim, distance d'édition, statistical translation machine (SMT), n-grammes *(à venir)*
+      - SQL, lien avec pandas *(à venir)*
+      - :ref:`visualisation <l-visualisation-2A>` (voir :ref:`l-note-2A-plan`)
     * - 10/10
-      - C++, Cython, parallélisation
+      - C++, Cython, parallélisation, pickle *(à venir)*
       - Machine Learning avec Gaël Varoquaux (scikit-learn) **cours commun**
-      - Visualisation, bokeh, cartographie, données carroyées
+      - Visualisation, bokeh, cartographie, données carroyées *(à venir)*
       - Machine Learning avec Gaël Varoquaux (scikit-learn) **cours commun**
     * - 17/10
       - forestci, mlxtend, xgboost, matrix factorisation
-        metrique, machine learning, xgboost, treeinterpreter
-      - deep learning, CTNK, Tensor flow, H2O
-      - expression régulière, format JSON
+        metrique, machine learning, xgboost, treeinterpreter,
+        statsmodels *(à venir)*
+      - deep learning, CTNK, Tensor flow, H2O *(à venir)*
+      - expression régulière, format JSON *(à venir)*
+      - Scrapping *(à venir)*
+    * - 7/11
+      - :ref:`l-puzzlealgo2A` avec Jérémie Jakubowicz
+      - :ref:`l-puzzlealgo2A` avec Jérémie Jakubowicz
       - récupération de données via une API, twitter, linkedin, velib, 
         `API de geocoding <https://www.data.gouv.fr/fr/faq/reuser/>`_,
-        `adresse.data.gouv.fr <https://adresse.data.gouv.fr/csv/>`_
-    * - 7/11
-      - Algorithmes et puzzles avec Jérémie Jakubowicz
-      - Algorithmes et puzzles avec Jérémie Jakubowicz
-      - Scrapping
-      - construction d'un site web, Flask, Jason, Django
+        `adresse.data.gouv.fr <https://adresse.data.gouv.fr/csv/>`_ *(à venir)*
+      - NLTK, statistiques textuelles *(à venir)*
     * - 14/11
-      - travail d'équipe, réarranger la carte électorale
+      - `travail d'équipe, réarranger la carte électorale <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/_gs_gerrymandering.html>`_
       - retour sur la compétition ML **cours commun**
-      - SQL, lien avec pandas
+      - construction d'un site web, Flask, Jason, Django *(à venir)*
       - retour sur la compétition ML **cours commun**
 
 
+.. _l-note-2A-plan:
 
+Notes
++++++
+
+**Visualisation** : l'idée de ces séances est d'explorer chacun une librairie différente
+puis de partager les exemples.
+
+
+      
