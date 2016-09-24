@@ -49,9 +49,12 @@ Les exercices doivent être choisis sur le site
       - :ref:`numpy et le calcul matriciel <td2acenoncesession2Arst>`
       - :ref:`pandas, dataframe et premiers graphes <td2acenoncesession1rst>`
     * - 3/10
-      - traitement big data, itérateur, SQL, dask
+      - :ref:`SQL <l-sql-principe-base-2a>`, 
+        :ref:`SQL <Python-Logique-SQLrst>`, :ref:`td2acenoncesession5rst`, 
+        :ref:`traitement big data, itérateur <l-cluster-non-struct-2a>`, 
+        :ref:`dask <seance5daskrst>`
       - NTLK, gensim, distance d'édition, statistical translation machine (SMT), n-grammes *(à venir)*
-      - SQL, lien avec pandas *(à venir)*
+      - :ref:`SQL <l-sql-principe-base-2a>`, :ref:`SQLlien avec pandas <Python-Logique-SQLrst>` *(à venir)*
       - :ref:`visualisation <l-visualisation-2A>` (voir :ref:`l-note-2A-plan`)
     * - 10/10
       - C++, Cython, parallélisation, pickle *(à venir)*

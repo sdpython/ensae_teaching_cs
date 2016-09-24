@@ -80,6 +80,7 @@ Notions abordées :
     
     ext2a/sql_doc
     notebooks/_gs2a_dataframe
+    notebooks/_gs2a_sql    
     notebooks/_gs2a_magic_commands
 
 
@@ -206,9 +207,10 @@ Webscrapping
 |pyecopng| 
 
     
+.. _l-cluster-non-struct-2a:
 
-Big data sans cluster
-=====================
+Big data sans cluster, données non structurées
+==============================================
 
 |pystatpng|
 
@@ -216,11 +218,6 @@ Big data sans cluster
 
 * `présentation données structurées <http://www.xavierdupre.fr/enseignement/complements/cours_structure_donnee.pdf>`_
 
-.. toctree::
-    :maxdepth: 2
-    
-    notebooks/_gs2a_sql
-    
 **Données non structurées**
 
 * JSON
