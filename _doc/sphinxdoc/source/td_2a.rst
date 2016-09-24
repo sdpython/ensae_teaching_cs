@@ -112,7 +112,11 @@ Les librairies les plus récentes implémentent les deux modes en cherchant touj
 de simplicité. A ce sujet, il faut jeter un coup d'oeil à 
 `flexx <https://flexx.readthedocs.io/en/stable/>`_. Elles explorent aussi 
 la visualisation animée de gros jeux de données telle que 
-`datshader <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/big_datashader.html#bigdatashaderrst>`_.
+`datashader <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/big_datashader.html#bigdatashaderrst>`_.
+
+**Javascript**
+
+* Lire :ref:`Javascript et traitement de données <blog-js-data>`
 
 Cartes
 ++++++
@@ -257,6 +261,15 @@ Notion abordées :
 * sérialisation : le fait de convertir n'importe quelle structure de données en un
   tableau d'octets, c'est indispensable pour la communication entre deux machines,
   deux processus
+  
+
+Timeseries - Séries temporelles
+===============================
+
+.. toctree::
+    :maxdepth: 2
+
+    notebooks/_gs2a_timeseries
 
 
 .. _l-puzzlealgo2A:

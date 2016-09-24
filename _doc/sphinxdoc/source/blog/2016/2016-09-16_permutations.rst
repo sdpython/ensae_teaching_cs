@@ -2,7 +2,7 @@
 
 .. blogpost::
     :title: Permutations et récursivité
-    :keywords: 
+    :keywords: permutation, combinatoire
     :date: 2016-09-16
     :categories: TD
     

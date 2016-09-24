@@ -5,4 +5,5 @@
 
 from .gutenberg import gutenberg_name
 from .data1a import marathon, donnees_enquete_2003_television
+from .dataweb import google_trends
 from .datazips import besancon_df, added

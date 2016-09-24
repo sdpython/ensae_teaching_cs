@@ -2,12 +2,12 @@
 @file
 @brief Data mostly for the first year.
 """
-import os
+from .data_helper import any_local_file
 
 
 def anyfile(name, local=True, cache_folder=".", filename=True):
     """
-    Time about marathons over cities and years
+    Returns any file in sub folder `data_1a <https://github.com/sdpython/ensae_teaching_cs/tree/master/src/ensae_teaching_cs/data/data_1a>`_.
 
     @param          name            file to download
     @param          local           local data or web
@@ -15,19 +15,7 @@ def anyfile(name, local=True, cache_folder=".", filename=True):
     @param          filename        return the filename (True) or the content (False)
     @return                         text content (str)
     """
-    if local:
-        this = os.path.abspath(os.path.dirname(__file__))
-        this = os.path.join(this, "data_1a", name)
-        if not os.path.exists(this):
-            raise FileNotFoundError(this)
-    else:
-        import pyensae
-        this = pyensae.download_data(name, whereTo=cache_folder)
-    if filename:
-        return this
-    else:
-        with open(this, "r") as f:
-            return f.read()
+    return any_local_file(name, "data_1a", cache_folder=cache_folder, filename=filename)
 
 
 def marathon(local=True, cache_folder=".", filename=True):

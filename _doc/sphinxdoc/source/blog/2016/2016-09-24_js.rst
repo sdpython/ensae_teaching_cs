@@ -1,0 +1,37 @@
+
+
+.. blogpost::
+    :title: Javascript et traitement de données
+    :keywords: 
+    :date: 2016-09-24
+    :categories: programmation, javascript
+    :lid: blog-js-data
+    
+    Un des candidats a une forte préférence pour le Javascript
+    et son premier réflexe est d'utiliser ce langage très utilisé
+    pour tout ce qui est graphique. Comme éditeur, il utilise 
+    `Atom <https://atom.io/>`_ que je m'empresse d'essayer à mon tour.
+    Il traite les données en JSON car ce format est le plus adéquat pour ce langage.
+    Le site `learnjsdata <http://learnjsdata.com/>`_ guide les programmeurs
+    vers l'utilisation du javascript pour traiter les données.
+    Il existe des librairies qui implémentent les dataframe
+    comme `jsdataframe <https://github.com/osdat/jsdataframe>`_.
+    Le navigateur execute le javascript excepté si un serveur est requis. 
+    Dans ce cas, la solution est d'utiliser un plugin 
+    `Chrome <https://www.google.com/chrome/>`_ :
+    `Web Server for Chrome <https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en>`_.
+    `Chrome <https://www.google.com/chrome/>`_ reste le navigateur préféré des dévelopeurs.
+    Autre option `http-static <https://www.npmjs.com/package/http-static>`_.
+    
+    Côté graph, `d3.js <https://d3js.org/>`_ reste un standard mais un peu ardu au premier abord.
+    Il faut regarder du côté de `c3.js <http://c3js.org/>`_
+    ou plus simple encore `morris.js <http://morrisjs.github.io/morris.js/>`_.
+    Une dernière astuce, pour des graphes plus élaborés, presque des peintures,
+    il faut se tourner vers `InkScape <https://inkscape.org/en/>`_ et exporter
+    son dessin en `SVG <https://en.wikipedia.org/wiki/Scalable_Vector_Graphics>`_.
+    A partir de là, on peut le retravailler avec `d3.js <https://d3js.org/>`_.
+    `dc.js <https://dc-js.github.io/dc.js/>`_ a l'air assez doué pour lier les graphes
+    entre eux et les faire interagir.
+    
+    
+    
