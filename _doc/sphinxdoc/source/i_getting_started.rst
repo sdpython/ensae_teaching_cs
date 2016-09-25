@@ -207,9 +207,19 @@ Désinstallation
 Il est possible de désinstaller simplement les modules installés pour
 ces enseignements ::
 
-    pip uninstall -y pyquickhelper pyensae pymmails pyrsslocal pysqllike 
-    pip uninstall -y ensae_teachings_cs code_beatrix actuariat_python ensae_projects
-    pip uninstall -y mlstatpy jupytalk
+    pip uninstall -y pyquickhelper
+    pip uninstall -y jyquickhelper
+    pip uninstall -y pyensae 
+    pip uninstall -y pymmails 
+    pip uninstall -y pyrsslocal 
+    pip uninstall -y pysqllike 
+    pip uninstall -y ensae_teachings_cs 
+    pip uninstall -y code_beatrix 
+    pip uninstall -y actuariat_python
+    pip uninstall -y ensae_projects
+    pip uninstall -y mlstatpy 
+    pip uninstall -y jupytalk
+    pip uninstall -y teachpyx
     
 
 Configuration pour ces cours
