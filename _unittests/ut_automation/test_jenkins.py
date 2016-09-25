@@ -38,6 +38,22 @@ except ImportError:
     import pyquickhelper as skip_
 
 try:
+    import jyquickhelper as skip__
+except ImportError:
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..",
+                "..",
+                "jyquickhelper",
+                "src")))
+    if path not in sys.path:
+        sys.path.append(path)
+    import jyquickhelper as skip__
+
+try:
     import pyensae as skip__
 except ImportError:
     path = os.path.normpath(
@@ -150,7 +166,7 @@ class TestJenkins(unittest.TestCase):
             OutputPrint=__name__ == "__main__")
 
         modules = default_jenkins_jobs(".*yml.*", ".*update.*")
-        self.assertEqual(len(modules), 14)
+        self.assertEqual(len(modules), 15)
         modules = default_jenkins_jobs(".*27.*", ".*update.*")
         self.assertEqual(len(modules), 0)
         modules = default_jenkins_jobs(".*27.*")
