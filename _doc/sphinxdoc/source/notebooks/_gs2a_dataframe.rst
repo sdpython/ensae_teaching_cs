@@ -3,6 +3,7 @@
 Données, Graphes, Calcul matriciel
 ==================================
 
+
 .. toctree::
     :maxdepth: 2
 

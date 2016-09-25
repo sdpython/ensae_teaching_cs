@@ -56,6 +56,17 @@ Il est évalué avec un :ref:`projet informatique <l-projinfo2a>`.
             
 .. |pystatpng| image:: _static/pystat.png
             :alt: Statistique
+            
+            
+Rappels de programmation
+========================
+
+|pyecopng| 
+
+.. toctree::
+    :maxdepth: 2
+
+    notebooks/td2_eco_rappels_1a
 
 
 .. index:: sérialisation, index, dataframe
@@ -115,6 +126,11 @@ la visualisation animée de gros jeux de données telle que
 `datashader <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/big_datashader.html#bigdatashaderrst>`_.
 
 **Javascript**
+
+.. toctree::
+    :maxdepth: 2
+    
+    ext2a/javascript_doc
 
 * Lire :ref:`Javascript et traitement de données <blog-js-data>`
 
