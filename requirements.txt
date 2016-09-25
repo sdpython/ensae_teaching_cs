@@ -10,6 +10,7 @@ entrypoints
 ete3
 folium
 graphviz
+jyquickhelper
 lifelines
 lightning-python
 lxml
