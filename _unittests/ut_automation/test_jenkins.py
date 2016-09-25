@@ -38,7 +38,7 @@ except ImportError:
     import pyquickhelper as skip_
 
 try:
-    import jyquickhelper as skip__
+    import jyquickhelper as skip_____
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -51,7 +51,7 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import jyquickhelper as skip__
+    import jyquickhelper as skip_____
 
 try:
     import pyensae as skip__
@@ -86,7 +86,7 @@ except ImportError:
     import pymmails as skip___
 
 try:
-    import pyrsslocal as skip_____
+    import pyrsslocal as skip______
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -99,10 +99,10 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pyrsslocal as skip_____
+    import pyrsslocal as skip______
 
 try:
-    import pymyinstall as skip______
+    import pymyinstall as skip_______
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -115,7 +115,7 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import pymyinstall as skip______
+    import pymyinstall as skip_______
 
 
 from pyquickhelper.loghelper import fLOG

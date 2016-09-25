@@ -72,6 +72,7 @@ class TestFlake8(unittest.TestCase):
                          "skip____' imported but unused",
                          "skip_____' imported but unused",
                          "skip______' imported but unused",
+                         "skip_______' imported but unused",
                          ],
                    extended=[("fLOG", _extended_refactoring)],
                    max_line_length=320)
