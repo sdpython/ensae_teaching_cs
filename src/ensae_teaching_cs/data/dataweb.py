@@ -18,7 +18,7 @@ def anyfile(name, local=True, cache_folder=".", filename=True):
     return any_local_file(name, "data_web", cache_folder=cache_folder, filename=filename)
 
 
-def google_trends(name="macron", local=True, cache_folder="."):
+def google_trends(name="macron", local=True, cache_folder=".", filename=True):
     """
     Returns some google trends example.
 

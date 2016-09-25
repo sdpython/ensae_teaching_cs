@@ -20,9 +20,9 @@ pistes :
   le machine learning, les graphes, le traitement du langage,
   le scrapping.
   
-Deux compétitions seront ouvertes le premier jour et 
-fermées à la dernière session où les résultas et les idées seront
-discutées.
+Une compétition sera ouverte le premier jour et 
+fermée à la dernière session où les résultas et les idées seront
+discutées : `Python 2A ENSAE <https://competitions.codalab.org/competitions/13041>`_.
 
 La séance dédiées aux :ref:`l-puzzlealgo2A` 
 requiert la participation de la part des participants :
@@ -45,7 +45,7 @@ Les exercices doivent être choisis sur le site
       - :ref:`numpy et le calcul matriciel <td2acenoncesession2Arst>`, 
         :ref:`pandas, dataframe et premiers graphes <td2acenoncesession1rst>`,        
       - :ref:`visualisation <l-visualisation-2A>` (voir :ref:`l-note-2A-plan`)
-        javascript *(à venir)*
+        :ref:`l-javascript-principe-base-2a`
       - :ref:`numpy et le calcul matriciel <td2acenoncesession2Arst>`
       - :ref:`pandas, dataframe et premiers graphes <td2acenoncesession1rst>`
     * - 3/10
@@ -54,7 +54,8 @@ Les exercices doivent être choisis sur le site
         :ref:`traitement big data, itérateur <l-cluster-non-struct-2a>`, 
         :ref:`dask <seance5daskrst>`
       - NTLK, gensim, distance d'édition, statistical translation machine (SMT), n-grammes *(à venir)*
-      - :ref:`SQL <l-sql-principe-base-2a>`, :ref:`SQLlien avec pandas <Python-Logique-SQLrst>` *(à venir)*
+      - :ref:`SQL <l-sql-principe-base-2a>`, :ref:`SQLlien avec pandas <Python-Logique-SQLrst>`,
+        :ref:`l-donnees-struct-sql-2a`
       - :ref:`visualisation <l-visualisation-2A>` (voir :ref:`l-note-2A-plan`)
     * - 10/10
       - C++, Cython, parallélisation, pickle *(à venir)*

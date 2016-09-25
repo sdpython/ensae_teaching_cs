@@ -65,7 +65,7 @@ class TestDataWeb(unittest.TestCase):
             OutputPrint=__name__ == "__main__")
 
         name = simple_database(local=True)
-        assert name.endswith(".db")
+        assert name.endswith(".db3")
 
 
 if __name__ == "__main__":

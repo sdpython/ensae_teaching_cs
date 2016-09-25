@@ -53,10 +53,12 @@ def get_additional_paths():
     import pyensae
     import pymmails
     import pymyinstall
+    import jyquickhelper
     addpath = [os.path.dirname(pyquickhelper.__file__),
                os.path.dirname(pyensae.__file__),
                os.path.dirname(pymmails.__file__),
                os.path.dirname(pymyinstall.__file__),
+               os.path.dirname(jyquickhelper.__file__),
                os.path.join(os.path.abspath(os.path.dirname(__file__)), ".."),
                ]
     addpath = [os.path.normpath(os.path.join(_, "..")) for _ in addpath]
