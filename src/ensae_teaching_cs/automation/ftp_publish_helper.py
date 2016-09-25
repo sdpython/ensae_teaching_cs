@@ -192,6 +192,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                              rootw2="/lesenfantscodaient.fr", folder_status=".",
                              layout=[("html", "helpsphinx")],
                              modules=["pyquickhelper",
+                                      "jyquickhelper",
                                       "pyensae",
                                       "pymyinstall",
                                       "pysqllike",

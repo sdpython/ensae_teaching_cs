@@ -38,7 +38,7 @@ Tableau de bord
             :target: https://waffle.io/sdpython/actuariat_python 
       - .. image:: https://codecov.io/github/sdpython/actuariat_python/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/actuariat_python?branch=master    
-    * - `code_beatrix <http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/index.html>`_
+    * - `code_beatrix <http:/lesenfantscodaient.fr>`_
       - .. image:: https://travis-ci.org/sdpython/code_beatrix.svg?branch=master                        
             :target: https://travis-ci.org/sdpython/code_beatrix                                            
             :alt: Build status                                                                                  
@@ -106,6 +106,23 @@ Tableau de bord
             :target: https://waffle.io/sdpython/jupytalk    
       - .. image:: https://codecov.io/github/sdpython/jupytalk/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/jupytalk?branch=master    
+    * - `jyquickhelper <http://www.xavierdupre.fr/app/jyquickhelper/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/jyquickhelper.svg?branch=master                        
+            :target: https://travis-ci.org/sdpython/jyquickhelper                                            
+            :alt: Build status                                                                                  
+      - .. image:: https://ci.appveyor.com/api/projects/status/2mtdbt67b1qkbbyy?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/jyquickhelper
+            :alt: Build Status Windows    
+      - .. image:: https://badge.fury.io/py/jyquickhelper.svg
+            :target: http://badge.fury.io/py/jyquickhelper
+      - .. image:: http://img.shields.io/pypi/dm/jyquickhelper.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/jyquickhelper
+      - .. image:: https://badge.waffle.io/sdpython/jyquickhelper.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/jyquickhelper    
+      - .. image:: https://codecov.io/github/sdpython/jyquickhelper/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/jyquickhelper?branch=master    
     * - `mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/mlstatpy.svg?branch=master                        
             :target: https://travis-ci.org/sdpython/mlstatpy                                            
@@ -266,6 +283,8 @@ Automatisation
 
     * - module
       - description
+    * - `jyquickhelper <http://www.xavierdupre.fr/app/jyquickhelper/helpsphinx/index.html>`_
+      - Fonctions à exécuter depuis un notebook `Jupyter <http://jupyter.org/>`_
     * - `pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/index.html>`_
       - J'ai reçu plus de 120 projets par mail durant l'année 2015-2016 pour plus de 220 élèves.
         Je ne plus plus grand chose manuellement. Ce module s'occupe de télécharger tous les projets
@@ -311,7 +330,7 @@ Contenu
       - description
     * - `actuariat_python <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_
       - Contenu des enseignements donnés à l'Institut des Actuaires.
-    * - `code_beatrix <http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/index.html>`_
+    * - `code_beatrix <http:/lesenfantscodaient.fr>`_
       - Contenu des jeux et exercices pour les enfants disponible
         à `lesenfantscodaient.fr <http://lesenfantscodaient.fr/>`_.
         Ce sont des jeux pour apprendre à programmer avec ou sans ordinateurs
