@@ -57,6 +57,7 @@ class TestNotebookRunner2a_2_correction (unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_notebook2a_2_corection")
         keepnote = ls_notebooks("td2a")
         assert len(keepnote) > 0
+        shutil.copy(simple_database(), temp)
         res = execute_notebooks(temp, keepnote, lambda i, n: "_2" in n and
                                 "correction" in n and "_2B" not in n, fLOG=fLOG)
         unittest_raise_exception_notebook(res, fLOG)
