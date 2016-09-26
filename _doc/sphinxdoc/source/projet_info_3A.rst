@@ -74,6 +74,8 @@ Suggestions d'articles
 * `Asynchronous Methods for Deep Reinforcement Learning <http://arxiv.org/pdf/1602.01783.pdf>`_
 * `Parallelizing Word2Vec in Shared and Distributed Memory <http://arxiv.org/abs/1604.04661>`_
 * `Exploiting Multiple Levels of Parallelism in Sparse Matrix-Matrix Multiplication <http://arxiv.org/abs/1510.00844>`_
+* `Hogwild!: A Lock-Free Approach to Parallelizing Stochastic Gradient Descent <https://arxiv.org/pdf/1106.5730v2.pdf>`_
+* `L1-Regularized Distributed Optimization: A Communication-Efficient Primal-Dual Framework <http://arxiv.org/pdf/1512.04011v2.pdf>`_
 
 
 Nous vous recommandons d'adopter la démarche suivante:

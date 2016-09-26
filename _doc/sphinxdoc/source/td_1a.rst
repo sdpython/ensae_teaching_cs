@@ -13,19 +13,14 @@ Algorithmes et programmation
 `ENSAE - OMI1C4 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100115>`_,
 `ENSAE - OMI1C9 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100332>`_
 
-Cours animé par :
-
-* Xavier Dupré
-
-Intervenants 2015-2016 :
-
-* Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_
-* Pierre Cordier, `Effiscience <http://effiscience.solutions/>`_
-* Yves Gerey, `A2iA <http://www.a2ia.com/en>`_
-* Charles de Ravel d'Esclapon, `Etaonis <http://www.etaonis.fr/>`_
-* Arthur Renaud, `Etaonis <http://www.etaonis.fr/>`_
-* Mehdi Seddar, `Artfact <http://www.artefact.is/>`_
-* Marc-Antoine Weisser, `Supélec <http://www.supelec.fr/>`_
+Cours animé par Xavier Dupré. Intervenants 2015-2016 :
+Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_,
+Pierre Cordier, `Effiscience <http://effiscience.solutions/>`_,
+Yves Gerey, `A2iA <http://www.a2ia.com/en>`_,
+Charles de Ravel d'Esclapon, `Etaonis <http://www.etaonis.fr/>`_,
+Arthur Renaud, `Etaonis <http://www.etaonis.fr/>`_,
+Mehdi Seddar, `Artfact <http://www.artefact.is/>`_,
+Marc-Antoine Weisser, `Supélec <http://www.supelec.fr/>`_
 
 Ce cours s'étale sur 12 séances de travaux dirigés (TD) d'une durée de 2h. Le cours est décrit plus 
 en détail dans cette présentation : 

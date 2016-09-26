@@ -11,16 +11,15 @@ Python pour un Data Scientist
 `ENSAE - OMI2F2 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/2me-anne-formationsdiplome-95.html?id=101352>`_
 
 Cours animé par :
-
-* `Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_  (ENSAE 1999) [#fwrite1]_
-* Anne Muller (ENSAE 2012) [#fwrite1]_
-* Elodie Royant (ENSAE 2008) [#fwrite2]_
-* Antoine Thabault (ENSAE 2012) [#fwrite2]_
-* Jérémie Jakubowicz (ENSAE 2002) [#fwrite2]_
-* Nicolas Rousset [#fwrite2]_
-* Antoine Ly (ENSAE 2015)
-* Benjamin Donnot (ENSAE 2015)
-* Gaël Varoquaux [#fwrite2]_
+`Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_  (ENSAE 1999) [#fwrite1]_, 
+Anne Muller (ENSAE 2012) [#fwrite1]_,
+Elodie Royant (ENSAE 2008) [#fwrite2]_,
+Antoine Thabault (ENSAE 2012) [#fwrite2]_,
+Jérémie Jakubowicz (ENSAE 2002) [#fwrite2]_,
+Nicolas Rousset [#fwrite2]_,
+Antoine Ly (ENSAE 2015),
+Benjamin Donnot (ENSAE 2015),
+Gaël Varoquaux [#fwrite2]_
 
 
 Ce cours s'étale sur 6 séances de cours/TD d'une durée de 4h.
@@ -38,9 +37,9 @@ si les contenus s'adressent plutôt aux uns ou aux autres.
 La présentation 
 `ENSAE 2A - Données, Machine Learning et Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_ |slideslogo|
 donne un aperçu des thèmes abordés.
-Ce cours propose de découvrir les notions ci-dessus selon
-la :ref:`feuille de route 2016 <l-feuille-de-route-2016-2A>`.
-Il est évalué avec un :ref:`projet informatique <l-projinfo2a>`. 
+
+* :ref:`feuille de route 2016 <l-feuille-de-route-2016-2A>`
+* :ref:`projet informatique <l-projinfo2a>`. 
 
 
 .. contents::

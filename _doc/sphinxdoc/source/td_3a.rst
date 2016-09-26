@@ -12,14 +12,10 @@ Eléments logiciels pour le traitement des données massives
 
 `ENSAE - OMI309 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/3me-anne-voies-de-spcialisation-formationsdiplome-96/data-science-cours-3a.html?id=100729>`_
 
-
-En cours de rédaction
-
 Cours animé par :
-
-* Matthieu Durut [#f3write1]_
-* Xavier Dupré [#f3write1]_
-* Antoine Ly [#f3write1]_
+Matthieu Durut [#f3write1]_,
+Xavier Dupré [#f3write1]_,
+Antoine Ly [#f3write1]_
 
 Le cours est évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 
@@ -190,15 +186,17 @@ Bibliographie
 
 **Librairies**
 
-* `Giraph <http://giraph.apache.org/>`_
-* `MLlib <https://spark.apache.org/mllib/>`_ (`Mahout <http://mahout.apache.org/>`_ risque de disparaître)
-* `Spark <https://spark.apache.org/>`_ (`DPark <https://github.com/douban/dpark>`_)
-* `Kafka <http://kafka.apache.org/>`_
-* `Storm <https://storm.apache.org/>`_
-* `Chapel <http://chapel.cray.com/>`_
-* `pyCUDA <https://developer.nvidia.com/pycuda>`_ (`A Monte Carlo Option Pricer <http://nbviewer.jupyter.org/gist/harrism/835a8ca39ced77fe751d>`_ avec `numbapro <http://docs.continuum.io/numbapro/>`_)
-* `Mesos <http://mesos.apache.org/>`_, `Elixi <https://github.com/ceteri/exelixi/wiki>`_
 * `amazon-dsstne <https://github.com/amznlabs/amazon-dsstne>`_, moteur de recommandation d'Amazon
+* `Chapel <http://chapel.cray.com/>`_
+* `Giraph <http://giraph.apache.org/>`_
+* `Kafka <http://kafka.apache.org/>`_
+* `Mesos <http://mesos.apache.org/>`_, `Elixi <https://github.com/ceteri/exelixi/wiki>`_
+* `MLlib <https://spark.apache.org/mllib/>`_ (`Mahout <http://mahout.apache.org/>`_ risque de disparaître)
+* `Presto <https://prestodb.io/>`_
+* `pyCUDA <https://developer.nvidia.com/pycuda>`_ (`A Monte Carlo Option Pricer <http://nbviewer.jupyter.org/gist/harrism/835a8ca39ced77fe751d>`_ avec `numbapro <http://docs.continuum.io/numbapro/>`_)
+* `Spark <https://spark.apache.org/>`_ (`DPark <https://github.com/douban/dpark>`_)
+* `Storm <https://storm.apache.org/>`_
+* `YARN <https://hadoop.apache.org/docs/r2.7.1/hadoop-yarn/hadoop-yarn-site/YARN.html>`_
 
 **Revue de presse**
 
