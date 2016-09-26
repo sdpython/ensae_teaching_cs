@@ -385,6 +385,7 @@ if not r:
             install_requires=[
                 "pyquickhelper", "pyensae", "pymyinstall", "pymmails",
                 "scikit-learn", "pyrsslocal", "pandas", "numpy",
-                "matplotlib", "ipython", "jupyter", "mlstatpy"],
-            extra_requires=["cvxopt"],
+                "matplotlib", "jupyter", "mlstatpy"],
+            # avoids downloading cvxopt (its installation is never easy)
+            # extra_requires=["cvxopt"],
         )
