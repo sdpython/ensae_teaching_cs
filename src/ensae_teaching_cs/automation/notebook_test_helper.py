@@ -92,6 +92,7 @@ def clean_function_1a(code):
             "from ggplot import *",
             "print(tab[i] + tab[i+1])",
             "if n = 1:",
+            "clenche une exception",
             'y = "a" * 3 + 1',
             # ggplot calls method show and it opens window blocking the offline
             # execution

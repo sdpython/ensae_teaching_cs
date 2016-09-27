@@ -47,7 +47,7 @@ class TestNotebookRunner2a_1 (unittest.TestCase):
     def setUp(self):
         fLOG("add missing dependencies", OutputPrint=__name__ == "__main__")
         add_missing_development_version(
-            ["pyensae", "pymyinstall", "pymmails"], __file__)
+            ["pyensae", "pymyinstall", "pymmails", "jyquickhelper"], __file__)
 
     def test_notebook_runner(self):
         fLOG(
