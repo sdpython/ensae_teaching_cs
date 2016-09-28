@@ -56,7 +56,7 @@ class TestNotebookRunner2a_1 (unittest.TestCase):
             OutputPrint=__name__ == "__main__")
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
         from src.ensae_teaching_cs.automation.notebook_test_helper import unittest_raise_exception_notebook, clean_function_1a
-        temp = get_temp_folder(__file__, "temp_notebook2a_1")
+        temp = get_temp_folder(__file__, "temp_notebook2a_1_tiny")
         keepnote = ls_notebooks("td2a")
         assert len(keepnote) > 0
         for k in keepnote:
@@ -66,7 +66,7 @@ class TestNotebookRunner2a_1 (unittest.TestCase):
             temp,
             keepnote,
             lambda i,
-            n: "_1" in n,
+            n: "_1" in n and "td2_eco_rappels_1a" in n,
             clean_function=clean_function_1a,
             fLOG=fLOG)
         unittest_raise_exception_notebook(res, fLOG)
