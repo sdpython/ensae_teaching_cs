@@ -7,8 +7,6 @@
 import sys
 import os
 import unittest
-import random
-import pandas
 
 
 try:
@@ -57,7 +55,7 @@ except ImportError:
     import pyensae as skip__
 
 from pyquickhelper.loghelper import fLOG
-from src.ensae_teaching_cs.homeblog import normalize_folder, music_statistics
+from src.ensae_teaching_cs.homeblog import music_statistics
 
 
 class TestFilenameHelper(unittest.TestCase):
@@ -65,7 +63,7 @@ class TestFilenameHelper(unittest.TestCase):
     def test_TableFormulaCore_Excel(self):
         fLOG(__file__, self._testMethodName,
              OutputPrint=__name__ == "__main__")
-        this = os.path.abspath(os.path.dirname(__file__))        
+        this = os.path.abspath(os.path.dirname(__file__))
         r = music_statistics(this)
         assert isinstance(r, dict)
 

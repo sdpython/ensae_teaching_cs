@@ -35,6 +35,7 @@ def numpy_matrix2list(mat):
             t   = mat.transpose ()    # obtient la transposée
             e   = mat [0,0]           # obtient de première élément
             k   = mat * mat           # produit matriciel
+            k   = mat @ mat           # produit matriciel à partir de Python 3.5
             m   = mat * 4             # multiplie la matrice par 4
             mx  = np.max (mat [0,:])  # obtient le maximum de la première ligne
             s   = np.sum (mat [0,:])  # somme de la première ligne
