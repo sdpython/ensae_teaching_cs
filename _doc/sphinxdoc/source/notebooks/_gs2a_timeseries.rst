@@ -1,4 +1,5 @@
 
+.. _l-timeseries:
 
 Timeseries - Séries temporelles
 ===============================

@@ -178,7 +178,7 @@ Quelques extraits :
     notebooks/_gs2a_ml
 
     
-**Lectures**
+*Lectures*
 
 * :ref:`Travailleur les features ou changer de modèle <mlfeaturesmodelrst>`
 * :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
@@ -198,7 +198,7 @@ Deep Learning
   `Pre-release of Places365-CNNs <https://github.com/metalbubble/places365>`_
   (deep learning)
   
-**Lectures**
+*Lectures*
 
 * `Deep Residual Learning for Image Recognition <https://arxiv.org/pdf/1512.03385v1.pdf>`_
 * `Deep Learning <http://www-labs.iro.umontreal.ca/~bengioy/dlbook/>`_, Yoshua Bengio, Ian Goodfellow and Aaron Courville
@@ -249,7 +249,7 @@ Big data sans cluster, données non structurées
     notebooks/_gs2a_no_sql_twitter
 
 
-**Lectures**
+*Lectures*
 
 - Propriétés des base de données : `ACID <http://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9s_ACID>`_, 
   `relationnelle <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_relationnelle>`_,
@@ -285,6 +285,10 @@ Timeseries - Séries temporelles
     :maxdepth: 2
 
     notebooks/_gs2a_timeseries
+    
+*Lectures*
+
+* `Time series analysis with pandas <http://earthpy.org/pandas-basics.html>`_
 
 
 .. _l-puzzlealgo2A:
@@ -312,7 +316,7 @@ Ces problèmes sont tirés de plusieurs sites dont
     notebooks/_gs2a_puzzle
 
       
-**Lectures**
+*Lectures*
 
 * types de complexité : `force brute <http://fr.wikipedia.org/wiki/Recherche_exhaustive>`_, 
   `glouton <http://fr.wikipedia.org/wiki/Algorithme_glouton>`_, `dynamique <http://fr.wikipedia.org/wiki/Programmation_dynamique>`_
@@ -372,7 +376,6 @@ Bibliographie
 
 * `Python Scientific Lecture Notes <http://scipy-lectures.github.io/>`_
 * `Introduction to Data Processing with Python <http://opentechschool.github.io/python-data-intro/>`_
-* `Time series analysis with pandas <http://earthpy.org/pandas-basics.html>`_
 * Quelques idées de livres : `Python for Data Scientists <https://www.packtpub.com/books/content/python-data-scientists>`_
 * `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
 * `Don't use Hadoop - your data isn't that big <http://www.chrisstucchio.com/blog/2013/hadoop_hatred.html>`_
