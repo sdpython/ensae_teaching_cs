@@ -79,8 +79,7 @@ class TestCryptHelper(unittest.TestCase):
             t2 = f.read()
         self.assertEqual(t1, t2)
         assert len(t1) > 0
-        encrypt_data("xdamerat" * 2, r"C:\xadupre\__home_\_data\GitHub\ensae_teaching_cs\_doc\competitions\2016\answer.txt",
-                     "answers.bin")
+
 
 if __name__ == "__main__":
     unittest.main()

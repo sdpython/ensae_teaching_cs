@@ -33,7 +33,7 @@ def data_cpt_ENSAE_2016_11(folder=".", fLOG=noLOG):
 def data_cpt_ENSAE_2016_11_blind_set(password):
     """
     returns the evaluation set for the competition
-    `Python 2A ENSAE 2016 <https://competitions.codalab.org/competitions/13301>`_
+    `Python 2A ENSAE 2016 <https://competitions.codalab.org/competitions/13431>`_.
 
     @param      fLOG        logging function
     @return                 2 dataframes, one with X, Y, the others one with only X
