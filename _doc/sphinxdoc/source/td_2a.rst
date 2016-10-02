@@ -247,6 +247,7 @@ Big data sans cluster, données non structurées
 
     notebooks/_gs2a_no_sql_exo
     notebooks/_gs2a_no_sql_twitter
+    notebooks/_gs2a_big_in_memory
 
 
 *Lectures*

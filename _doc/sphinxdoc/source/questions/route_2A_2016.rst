@@ -52,7 +52,8 @@ Les exercices doivent être choisis sur le site
       - :ref:`SQL <l-sql-principe-base-2a>`, 
         :ref:`SQL <Python-Logique-SQLrst>`, :ref:`td2acenoncesession5rst`, 
         :ref:`traitement big data, itérateur <l-cluster-non-struct-2a>`, 
-        :ref:`dask <seance5daskrst>`
+        :ref:`dask <seance5daskrst>`,
+        :ref:`td2abigdatamemoryrst`
       - NTLK, gensim, distance d'édition, statistical translation machine (SMT), n-grammes *(à venir)*
       - :ref:`SQL <l-sql-principe-base-2a>`, :ref:`SQLlien avec pandas <Python-Logique-SQLrst>`,
         :ref:`l-donnees-struct-sql-2a`
