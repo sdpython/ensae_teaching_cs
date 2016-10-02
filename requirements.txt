@@ -11,6 +11,7 @@ ete3
 folium
 graphviz
 jyquickhelper
+keyring
 lifelines
 lightning-python
 lxml

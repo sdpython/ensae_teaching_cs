@@ -14,13 +14,13 @@ def data_cpt_ENSAE_2016_11(folder=".", fLOG=noLOG):
     """
     returns the data for the competition
     `Python 2A ENSAE 2016 <https://competitions.codalab.org/competitions/13301>`_,
-    located on github `ensae_competition_2016.zip <https://github.com/sdpython/ensae_teaching_cs/raw/master/_doc/competitions/2016/ensae_competition_2016.zip>`_.
+    located on github `ensae_competition_2016.zip <https://github.com/sdpython/ensae_teaching_cs/raw/master/_doc/competitions/2016_ENSAE_2A/ensae_competition_2016.zip>`_.
 
     @param      folder      where to download and unzip
     @param      fLOG        logging function
     @return                 2 dataframes, one with X, Y, the others one with only X
     """
-    url = "https://github.com/sdpython/ensae_teaching_cs/raw/master/_doc/competitions/2016/"
+    url = "https://github.com/sdpython/ensae_teaching_cs/raw/master/_doc/competitions/2016_ENSAE_2A/"
     file = "ensae_competition_2016.zip"
     files = download_data(file, url=url, whereTo=folder, fLOG=fLOG)
     df1 = pandas.read_csv([f for f in files if f.endswith("ensae_competition_train.txt")][0],

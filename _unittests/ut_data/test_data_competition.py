@@ -55,7 +55,7 @@ except ImportError:
     import pyensae as skip__
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from pyquickhelper.filehelper import zip_files
 from src.ensae_teaching_cs.data.crypt_helper import encrypt_data, decrypt_data
 from src.ensae_teaching_cs.data.datacpt import data_cpt_ENSAE_2016_11, data_cpt_ENSAE_2016_11_blind_set
@@ -105,6 +105,9 @@ class TestCompetition(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
+        if is_travis_or_appveyor():
+            # no stored password
+            return
         password = keyring.get_password(
             "cpt", os.environ["COMPUTERNAME"] + "pwd")
         r = data_cpt_ENSAE_2016_11_blind_set(password)
