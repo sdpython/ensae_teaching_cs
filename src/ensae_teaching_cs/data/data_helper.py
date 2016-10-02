@@ -6,7 +6,7 @@ import os
 from pyquickhelper.filehelper import unzip_files
 
 
-def any_local_file(name, subfolder, local=True, cache_folder=".", filename=True, unzip=False):
+def any_local_file(name, subfolder, local=True, cache_folder=".", filename=True, unzip=False, encoding=None):
     """
     Returns a local data file, reads its content or returns its content.
 
@@ -15,6 +15,7 @@ def any_local_file(name, subfolder, local=True, cache_folder=".", filename=True,
     @param          local           local data or web
     @param          cache_folder    where to cache the data if downloaded a second time
     @param          filename        return the filename (True) or the content (False)
+    @param          encoding        encoding
     @return                         text content (str)
     """
     if local:
@@ -42,5 +43,5 @@ def any_local_file(name, subfolder, local=True, cache_folder=".", filename=True,
                 this = this[0]
         if os.path.splitext(this)[-1] in (".zip", ".gz", ".tar", ".7z"):
             raise ValueError("Cannot read file as text: {0}".format(this))
-        with open(this, "r") as f:
+        with open(this, "r", encoding=encoding) as f:
             return f.read()
