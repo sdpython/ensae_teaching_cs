@@ -22,7 +22,7 @@ pistes :
   
 Une compétition sera ouverte le premier jour et 
 fermée à la dernière session où les résultas et les idées seront
-discutées : `Python 2A ENSAE <https://competitions.codalab.org/competitions/13041>`_.
+discutées : `Python 2A ENSAE <https://competitions.codalab.org/competitions/13421>`_.
 
 La séance dédiées aux :ref:`l-puzzlealgo2A` 
 requiert la participation de la part des participants :
@@ -70,8 +70,8 @@ Les exercices doivent être choisis sur le site
       - expression régulière, format JSON *(à venir)*
       - Scrapping *(à venir)*
     * - 7/11
-      - :ref:`l-puzzlealgo2A` avec Jérémie Jakubowicz
-      - :ref:`l-puzzlealgo2A` avec Jérémie Jakubowicz
+      - :ref:`l-puzzlealgo2A`, voir notes
+      - :ref:`l-puzzlealgo2A`, voir notes ci-dessous
       - récupération de données via une API, twitter, linkedin, velib, 
         `API de geocoding <https://www.data.gouv.fr/fr/faq/reuser/>`_,
         `adresse.data.gouv.fr <https://adresse.data.gouv.fr/csv/>`_ *(à venir)*
@@ -91,5 +91,9 @@ Notes
 **Visualisation** : l'idée de ces séances est d'explorer chacun une librairie différente
 puis de partager les exemples.
 
+**Puzzles algorithmiques** : le programme des 4h se répartit comme suit :
 
-      
+* 8h30-10h00 : 3 puzzles
+* 10h00-10h30 : éléments principaux à retenir (surtout pour les entretiens d'embauche)
+* 11h-12h30 : 3 puzzles
+* 12h30-13h : notions de graphes

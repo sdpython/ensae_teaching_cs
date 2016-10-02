@@ -41,45 +41,38 @@ La plupart des exercices proposés sur ce site n'utilisent pas plus que ce qui e
 dans cette distribution standard. Pour les autres, 
 les instructions mentionnées ci-dessous fonctionnent sous Windows, Linux et Mac.
 
+* Installation `Anaconda <https://www.continuum.io/downloads>`_ (python 64 bit)
+* Mise à jour de la distribution avec ``conda update --all``.
+
+Pour installer le module implémenté pour ce cours :
+
+* ``pip install ensae_teaching_cs``
+
+
 Windows
-+++++++
+=======
 
-* distribution `Anaconda <https://www.continuum.io/downloads>`_ (python 64 bit)
-
-**ou**
-
-* `distribution customisée <http://www.xavierdupre.fr/enseignement/>`_ [#fpm1]_ ou
-  distribution standard de `Python <https://www.python.org/downloads/>`_
-* puis la mise à jour depuis le répertoire ``python`` en ligne de commande ::
-
-    Scripts\pip install pymyinstall --upgrade
-    Scripts\pymy_install3 --set=ensae_teaching_cs
-    Scripts\pymy_update3 --set=ensae_teaching_cs
-    
 Certains modules nécessitent une compilation C++. 
 `Anaconda <https://www.continuum.io/downloads>`_
 fournit la plupart d'entre eux. Pour les autres, il faut allez à 
 `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
+Certains modules n'existent pas sous forme précompilée à moins de le faire soi-même.
+Et c'est ce que j'ai fait pour certains modules
+comme `xgboost <https://github.com/dmlc/xgboost>`_.
 
-    
-    
-Linux / Mac
-+++++++++++
+::
 
-* distribution `Anaconda <https://www.continuum.io/downloads>`_ (python 64 bit)
-* puis la mise à jour depuis le répetoire ``Scripts`` en ligne de commande ::
+    pip install pymyinstall
+    pymy_install xgboost
 
-    ./conda update --all
-    ./pip install pymyinstall --upgrade
-    ./pymy_install3 --set=ensae_teaching_cs
-    ./pymy_update3 --set=ensae_teaching_cs
         
     
 Linux en ligne de commande, connexion SSH
 +++++++++++++++++++++++++++++++++++++++++
 
 Voir `Install Miniconda through SSH connection <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-11-01_anaconda_ssh.html>`_.
-La distribution testée est une distribution `Ubuntu 14.04 <http://releases.ubuntu.com/14.04/>`_.
+Cela fonction avec les distributions `Ubuntu 14.04 <http://releases.ubuntu.com/14.04/>`_
+et `Ubuntu 16.04 <http://releases.ubuntu.com/16.04/>`_.
 
 
 IDE
@@ -109,41 +102,8 @@ il faut revenir à l'essentiel : un `éditeur de texte <https://fr.wikipedia.org
   lire cet article pour le configurer
   `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_.
 
-
-
-Installer un module
-===================
-
-Il faut ouvrir une fenêtre ligne de commande (Windows) 
-ou une fenêtre terminal (Linux, OS/X) et se placer dans le répertoire de la distribution.
-L'installation dépend ensuite dy système d'exploitation et de la 
-distribution choisie. Dans tous les cas, il faut se place
-
-**Anaconda**
-
-* module standard : ``conda install <module>``
-* module rare : ``pip install <module>``
-    
-**WinPython (Python sur Windows)**
-
-* module standard : télécharger le module sur le site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_ 
-  et l'installer avec la commande ``pip install <local_module.whl>``
-* module rare : ``pip install <module>`` (à condition que celui-ci n'inclut pas de code C/C++) qui requiert un compilateur C/C++
-    
-L'instruction ``pip install`` ne fonctionne pas sous Windows lorsque le module
-est implémenté en Python et C++. C'est pourquoi il est préférable d'installer
-une version précompilée. 
-
-**dépendances**
-
-Par défaut, l'installation d'un module implique celle de ses dépendances
-ce qu'il est possible d'éviter : ::
-
-    pip install <module> --no-deps
-
-
 pip, python et ligne de commande
-++++++++++++++++++++++++++++++++
+================================
 
 
 Le language python s'est doté d'un système de distribution de modules (ou *packages*)
@@ -153,11 +113,15 @@ Il suffit alors de se déplacer dans le répertoire d'installation de Python ::
 
     cd c:\Python35_x64\Scripts
     
-Ou encore ::
+Ou encore :
+
+::
 
     cd c:\Anaconda3\Scripts
     
-Puis d'écrire ::
+Puis d'écrire :
+
+::
 
     pip install <module>
     
@@ -182,6 +146,38 @@ c'est vraisemblablement parce que ce module contient une partie en C++.
 Dans ce cas, il faut aller voir sur ce site 
 `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
 s'il est disponible. S'il ne l'est pas, l'installation du module est réservée aux experts.
+
+Installer un module
+===================
+
+conda et pip
+++++++++++++
+
+Il faut ouvrir une fenêtre ligne de commande (Windows) 
+ou une fenêtre terminal (Linux, OS/X) et se placer dans le répertoire de la distribution.
+L'installation dépend ensuite dy système d'exploitation et de la 
+distribution choisie. Dans tous les cas, il faut se place
+
+**Anaconda**
+
+* module standard : ``conda install <module>``
+* module rare ou sans Anaconda : ``pip install <module>``
+    
+L'instruction ``pip install`` ne fonctionne pas sous Windows lorsque le module
+est implémenté en Python et C++. C'est pourquoi il est préférable d'installer
+une version précompilée. 
+
+**dépendances**
+
+Par défaut, l'installation d'un module implique celle de ses dépendances
+ce qu'il est possible d'éviter : 
+
+::
+
+    pip install <module> --no-deps
+
+
+
     
     
 Installer un module avec pymy_install
@@ -226,23 +222,14 @@ ces enseignements ::
 Configuration pour ces cours
 ++++++++++++++++++++++++++++
 
-Les notebooks utilise le module `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ 
+Les notebooks utilisent le module `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ 
 développé pour ces enseignements. Pour installer ses dépendances, il faut utiliser le module
 `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
+Les dépendances s'installent comme suit :
 
-  
-Certains notebooks s'appuient sur des fonctions qui donnent accès
-à des données ou qui facilitent leur récupération. Elles sont disponibles
-via le module  ::
+    pymy_install3 --set=ensae_teaching_cs
+    pip install ensae_teaching_cs
 
-    pip install pyensae
-    
-Ce module requiert des dépendances qu'on peut installer comme
-suit ::
-
-    pymy_install3 --set=pyensae
-
-      
 Certains notebooks requièrent des outils supplémentaires :
 
 * `graphviz <http://www.graphviz.org/>`_
@@ -287,6 +274,12 @@ Distributions
   Voir `Install Anaconda through SSH connection <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-11-01_anaconda_ssh.html>`_.
 
     
+Repérer de nouveaux modules
++++++++++++++++++++++++++++
+
+La liste des packages de `WinPython <https://winpython.github.io/>`_ ou 
+`Anaconda <https://docs.continuum.io/anaconda/pkg-docs>`_
+sont d'excellents moyens de découvrir de nouveaux modules intéressants.
 
 
 
@@ -346,7 +339,7 @@ Voir `10 plotting libraries at PyData 06/14/2016 in Paris <http://www.xavierdupr
 * `liblinear <http://www.csie.ntu.edu.tw/~cjlin/liblinear/>`_ : calcul matriciel en grande dimension
 * `opencv <http://opencv.org/>`_ : traitement d'image, reconnaissance des formes
 * `simplecv <http://simplecv.org/>`_ : Python et Kinect, vision
-* `PyQt4 <https://www.riverbankcomputing.com/software/pyqt/download>`_ : interfaces graphiques
+* `PyQt5 <https://www.riverbankcomputing.com/software/pyqt/download>`_ : interfaces graphiques
 * `sphinx <http://sphinx-doc.org/>`_ : génération de documentation (dont celle-ci)
     
 **Python et autres langages**

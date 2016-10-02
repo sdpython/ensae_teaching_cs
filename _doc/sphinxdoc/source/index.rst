@@ -126,11 +126,12 @@ de librairies qui ont offert un service équivalent à ce que propose `R <https:
 `scikit-learn <http://scikit-learn.org/stable/>`_ 
 et qu'il a su réinventer la façon de travailler avec les 
 notebooks et `Jupyter <http://jupyter.org/>`_.
-Sous Windows, ces modules
-sont accessibles depuis le site 
+Les modules les plus utilisés sont fournis sur toutes les plate-formes avec la distribution
+`Anaconda <https://www.continuum.io/downloads>`_.
+Sous Windows, le site 
 `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
-et ne peuvent pas être installés avec l'instruction ``pip install <module>`` car ils
-nécessitent un compilateur C++.
+proposent de nombreux modules qui nécessitent un compilateur C++. On les repère car 
+l'installation ``pip install <module>`` échoue à moins de savoir bidouiller sa machine.
 
     
 

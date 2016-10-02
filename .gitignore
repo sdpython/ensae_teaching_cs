@@ -371,3 +371,7 @@ _doc/notebooks/1a/pdf.prof
 .eggs/README.txt
 _unittests/ut_data/besancon.df.txt
 _doc/notebooks/expose/besancon.df.txt
+_doc/competitions/2016_ENSAE_2A/competition/competition.zip
+_doc/competitions/2016_ENSAE_2A/competition/reference/truth.txt
+_unittests/ut_data/submission.zip
+_doc/competitions/2016_ENSAE_2A/competition/reference.zip
