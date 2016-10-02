@@ -38,7 +38,7 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder
-from src.ensae_teaching_cs.ml.competitions import AUC, codalab_wrapper
+from src.ensae_teaching_cs.ml.competitions import AUC, private_codalab_wrapper
 
 
 class TestCompetitions(unittest.TestCase):
@@ -75,8 +75,8 @@ class TestCompetitions(unittest.TestCase):
         fLOG(score)
         t1 = get_temp_folder(__file__, "temp_answers")
         t2 = get_temp_folder(__file__, "temp_scores")
-        f1 = "answers.txt"
-        f2 = "answers.txt"
+        f1 = "answer.txt"
+        f2 = "answer.txt"
         fu1 = os.path.join(t1, f1)
         fu2 = os.path.join(t2, f2)
         out = os.path.join(t2, "scores.txt")
@@ -84,12 +84,12 @@ class TestCompetitions(unittest.TestCase):
             f.write("\n".join(str(_) for _ in ans))
         with open(fu2, "w") as f:
             f.write("\n".join(str(_) for _ in score))
-        codalab_wrapper(AUC, "AUC", t1, t2, output=out)
+        private_codalab_wrapper(AUC, "AUC", t1, t2, output=out)
         assert os.path.exists(out)
         with open(out, "r") as f:
             code = f.read()
         fLOG("**", code)
-        self.assertEqual(code, "AUC: 0.95")
+        self.assertEqual(code, "AUC:0.95")
 
 
 if __name__ == "__main__":

@@ -22,7 +22,7 @@ pistes :
   
 Une compétition sera ouverte le premier jour et 
 fermée à la dernière session où les résultas et les idées seront
-discutées : `Python 2A ENSAE <https://competitions.codalab.org/competitions/13421>`_.
+discutées : `Python 2A ENSAE <https://competitions.codalab.org/competitions/13431>`_.
 
 La séance dédiées aux :ref:`l-puzzlealgo2A` 
 requiert la participation de la part des participants :

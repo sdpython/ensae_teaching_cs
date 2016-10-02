@@ -53,7 +53,7 @@ phases:
                 # Uniquely :) named
                 name: apprentissage (X,Y) et test (X)
                 # A url to the data
-                url: https://github.com/sdpython/ensae_teaching_cs/raw/master/_doc/competitions/2016/ensae_competition_2016.zip
+                url: https://github.com/sdpython/ensae_teaching_cs/raw/master/_doc/competitions/2016_ENSAE_2A/ensae_competition_2016.zip
                 # A brief description to indicate the contents of the data for users
                 description: apprentissage (X,Y) et test (X)
 # Leaderboard / Scoreboard configuration
