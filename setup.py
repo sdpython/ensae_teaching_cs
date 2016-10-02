@@ -41,7 +41,7 @@ package_data = {project_var_name + ".pythonnet.py33": ["*.pyd", "*.txt", "*.dll"
                 project_var_name + ".data.data_gutenberg": ["*.txt"],
                 project_var_name + ".special.data": ["*.png", "*.txt"],
                 project_var_name + ".data.data_1a": ["*.txt"],
-                project_var_name + ".data.data_sql": ["*.db"],
+                project_var_name + ".data.data_sql": ["*.db", "*.zip"],
                 project_var_name + ".data.data_web": ["*.csv", "*.zip"],
                 project_var_name + ".data.data_competition": ["*.bin"],
                 project_var_name + ".data.zips": ["*.zip"],
