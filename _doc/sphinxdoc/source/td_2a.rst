@@ -124,7 +124,14 @@ de simplicité. A ce sujet, il faut jeter un coup d'oeil à
 la visualisation animée de gros jeux de données telle que 
 `datashader <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/big_datashader.html#bigdatashaderrst>`_.
 
-**Javascript**
+*matplotlib*
+
+.. toctree::
+    :maxdepth: 2
+    
+    notebooks/_gs2a_visu
+
+*Javascript*
 
 .. toctree::
     :maxdepth: 2
@@ -214,10 +221,20 @@ Traitement du langage
 
 |pyecopng| |pystatpng|
 
+
+.. toctree::
+    :maxdepth: 2
+    
+    notebooks/_gs2a_nlp
+
+*Lectures*
+
 * `Système de complétion <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_nlp/completion.html>`_ :
   la complétion est utilisée par tous les sites Internet pour aider les utilisateurs
   à saisir leur recherche. N'importe quel site commercial l'utiliser
   pour guider les utilisateurs plus rapidement vers le produit qu'ils recherchent.
+  
+
 
 
 Webscrapping

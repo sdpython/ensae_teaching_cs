@@ -54,10 +54,12 @@ Les exercices doivent être choisis sur le site
         :ref:`traitement big data, itérateur <l-cluster-non-struct-2a>`, 
         :ref:`dask <seance5daskrst>`,
         :ref:`td2abigdatamemoryrst`
-      - NTLK, gensim, distance d'édition, statistical translation machine (SMT), n-grammes *(à venir)*
-      - :ref:`SQL <l-sql-principe-base-2a>`, :ref:`SQLlien avec pandas <Python-Logique-SQLrst>`,
-        :ref:`l-donnees-struct-sql-2a`
-      - :ref:`visualisation <l-visualisation-2A>` (voir :ref:`l-note-2A-plan`)
+      - :ref:`td2asomenlprst`,
+        distance d'édition, statistical translation machine (SMT) *(à venir)*
+      - :ref:`SQL <l-sql-principe-base-2a>`, :ref:`SQL lien avec pandas <Python-Logique-SQLrst>`,
+        :ref:`l-donnees-struct-sql-2a`, :ref:`td2aecoexercicedefindeseancerst`
+      - :ref:`visualisation <l-visualisation-2A>` (voir :ref:`l-note-2A-plan`),
+        :ref:`td2avisualisationrst`
     * - 10/10
       - C++, Cython, parallélisation, pickle *(à venir)*
       - Machine Learning avec Gaël Varoquaux (scikit-learn) **cours commun**
