@@ -595,6 +595,16 @@ Librairies Python
     
     Très utilisée sur internet donc incontournable.
 
+.. todoext::
+    :title: ajouter MILP
+    :tag: plus
+    
+    avec des modules tels que `pyomo <http://www.pyomo.org/>`_,
+    lire `Mixed integer programming for machine learning <http://www.litislab.fr/wp-content/uploads/2015/12/Canu-S.pdf>`_,
+    `GLPK/Python <https://en.wikibooks.org/wiki/GLPK/Python#Python-GLPK>`_,
+    `optlang <http://optlang.readthedocs.io/en/latest/>`_
+
+
 
 
     

@@ -6,6 +6,7 @@ import sys
 import os
 import unittest
 import warnings
+import pandas
 
 
 try:
@@ -55,7 +56,7 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder
-from src.ensae_teaching_cs.data import google_trends
+from src.ensae_teaching_cs.data import google_trends, twitter_zip
 
 
 class TestDataWeb(unittest.TestCase):
@@ -84,6 +85,33 @@ class TestDataWeb(unittest.TestCase):
         self.assertEqual(len(text), len(text2))
         self.maxDiff = None
         self.assertEqual(text, text2)
+
+    def test_twitter_zip(self):
+        fLOG(
+            __file__,
+            self._testMethodName,
+            OutputPrint=__name__ == "__main__")
+
+        temp = get_temp_folder(__file__, "temp_twitter_zip")
+        try:
+            twitter_zip(local=True, filename=False,
+                        unzip=False, cache_folder=temp)
+            assert False
+        except ValueError:
+            pass
+
+        name = twitter_zip(local=True, filename=True, as_df=False, unzip=False)
+        assert name.endswith("tweets_macron_sijetaispresident_201609.zip")
+
+        try:
+            text2 = twitter_zip(
+                local=False, cache_folder=temp, filename=False, unzip=True, as_df=True)
+        except ConnectionResetError as e:
+            warnings.warn("Cannot check remote.\n" + str(e))
+            return
+
+        assert isinstance(text2, pandas.DataFrame)
+        fLOG(text2.columns)
 
 
 if __name__ == "__main__":
