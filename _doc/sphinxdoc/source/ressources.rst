@@ -70,6 +70,8 @@ Source de données
 * *texte* `WordNet <https://wordnet.princeton.edu/wordnet/>`_, base de données anglaises sur le vocabulaire, la grammaire, les synonymes...
 * *texte* `dump wikipedia <https://dumps.wikimedia.org/backup-index.html>`_
 * *vidéo* `Jiku <http://www.jiku.org/index.html>`_, vidéo d'événements, de concerts
+* *vidéo* `YouTube 8M <https://research.google.com/youtube8m/people.html>`_, 8 millions de vidéo YouTube par Google
+* *vidéo* `YouTube 1M Sports <https://github.com/gtoderici/sports-1m-dataset>`_, 1 millions de vidéo annotées
 * autres pistes: `Where can I find large datasets open to the public? <https://www.quora.com/Where-can-I-find-large-datasets-open-to-the-public>`_
 
 **Graphiques, cartes**

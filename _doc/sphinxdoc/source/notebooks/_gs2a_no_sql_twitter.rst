@@ -1,7 +1,7 @@
 
 
-Programmation fonctionnelle appliquée aux données Twitter
-=========================================================
+Programmation fonctionnelle : exercice sur les données Twitter
+==============================================================
 
 .. toctree::
     :maxdepth: 2

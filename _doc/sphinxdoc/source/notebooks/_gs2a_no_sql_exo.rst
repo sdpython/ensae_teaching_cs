@@ -1,7 +1,7 @@
 
 
-Programmation fonctionnelle
-===========================
+Programmation fonctionnelle : présentation
+==========================================
 
 .. toctree::
     :maxdepth: 2

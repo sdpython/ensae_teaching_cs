@@ -199,7 +199,7 @@ Deep Learning
 |pystatpng|    
 
 
-**Modèles pré-entraînés**
+*Modèles pré-entraînés*
 
 * `Places CNN <http://places.csail.mit.edu/downloadCNN.html>`_,
   `Pre-release of Places365-CNNs <https://github.com/metalbubble/places365>`_
@@ -250,14 +250,11 @@ Big data sans cluster, données non structurées
 
 |pystatpng|
 
-**Données structurées**
+*Données structurées*
 
 * `présentation données structurées <http://www.xavierdupre.fr/enseignement/complements/cours_structure_donnee.pdf>`_
 
-**Données non structurées**
-
-* JSON
-* programmation fonctionnelle
+*Données non structurées*
 
 .. toctree::
     :maxdepth: 2

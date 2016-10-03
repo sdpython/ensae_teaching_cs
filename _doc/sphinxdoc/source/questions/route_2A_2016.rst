@@ -100,3 +100,7 @@ puis de partager les exemples.
 * 10h00-10h30 : éléments principaux à retenir (surtout pour les entretiens d'embauche)
 * 11h-12h30 : 3 puzzles
 * 12h30-13h : notions de graphes
+
+**Devinettes**
+
+:ref:`l-devinettes-2016`
