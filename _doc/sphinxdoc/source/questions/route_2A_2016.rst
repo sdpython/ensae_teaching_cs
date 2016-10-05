@@ -104,3 +104,13 @@ puis de partager les exemples.
 **Devinettes**
 
 :ref:`l-devinettes-2016`
+
+**Déroulement des séances**
+
+Le 7 novembre à 8h30, le but de la séance est de 
+concevoir un plan pour réarranger les cartes électorales et de commencer sa mise en place.
+Il n'y a pas qu'une seule solution, tout dépend des idées exposées durant la séance.
+
+En ce qui concerne les séances autour des algorithmes, il s'agit d'enrichir sa culture informatique
+car c'est devenu indispensable pour passer les entretiens d'embauche aujourd'hui.
+Ces séances sont composés d'exercices et de cours.
