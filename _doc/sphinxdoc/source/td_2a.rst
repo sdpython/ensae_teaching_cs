@@ -41,9 +41,11 @@ donne un aperçu des thèmes abordés.
 * :ref:`feuille de route 2016 <l-feuille-de-route-2016-2A>`
 * :ref:`projet informatique <l-projinfo2a>`. 
 
+**Thèmes :**
 
 .. contents::
     :local:
+    :maxpdeth: 1
     
 .. |slideslogo| image:: _static/slides_logo.png
              :height: 20
