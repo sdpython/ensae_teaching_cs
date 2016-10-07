@@ -192,6 +192,37 @@ Quelques extraits :
 * :ref:`Travailleur les features ou changer de modèle <mlfeaturesmodelrst>`
 * :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
 * :ref:`question_projet_2014`
+* `Making Tree Ensembles Interpretable <https://arxiv.org/pdf/1606.05390v1.pdf>`_
+* `XGBoost: A Scalable Tree Boosting System <https://arxiv.org/pdf/1603.02754.pdf>`_
+* `Confidence Intervals for Random Forests: The Jackknife and the Infinitesimal Jackknife <http://jmlr.csail.mit.edu/papers/volume15/wager14a/wager14a.pdf>`_
+* `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
+* `Understanding variable importances in forests of randomized trees <http://papers.nips.cc/paper/4928-understanding-variable-importances-in-forests-of-randomized-trees.pdf>`_
+
+*Multilabel*
+
+* `Multiclass-Multilabel Classification with More Classes than Examples <http://www.jmlr.org/proceedings/papers/v9/dekel10a/dekel10a.pdf>`_
+* `A Ranking-based KNN Approach for Multi-Label Classification <http://www.jmlr.org/proceedings/papers/v25/chiang12/chiang12.pdf>`_
+* `Large-scale Multi-label Learning with Missing Labels <http://jmlr.org/proceedings/papers/v32/yu14.pdf>`_
+* `Classification by Selecting Plausible Formal Concepts in a Concept Lattice <http://ceur-ws.org/Vol-977/paper5.pdf>`_
+
+*Autres lectures*
+
+* `Learning Theory for Distribution Regression <http://www.jmlr.org/papers/volume17/14-510/14-510.pdf>`_
+* `Learning Algorithms for Second-Price Auctions with Reserve <http://www.jmlr.org/papers/volume17/14-499/14-499.pdf>`_
+* `A Network That Learns Strassen Multiplication <http://www.jmlr.org/papers/volume17/16-074/16-074.pdf>`_
+
+Reinforcement Learning
+======================
+
+|pystatpng|
+
+*(année prochaine)*
+
+
+*Lectures*
+
+* `A Comprehensive Survey on Safe Reinforcement Learning <http://www.jmlr.org/papers/volume16/garcia15a/garcia15a.pdf>`_
+* `RLPy: A Value-Function-Based Reinforcement Learning Framework for Education and Research <http://www.jmlr.org/papers/volume16/geramifard15a/geramifard15a.pdf>`_
 
 
 
@@ -214,7 +245,12 @@ Deep Learning
 * `LeNet5 <http://yann.lecun.com/exdb/lenet/>`_
 * `mxnet <https://github.com/dmlc/mxnet>`_
 * `Benchmarking State-of-the-Art Deep Learning Software Tools <http://arxiv.org/pdf/1608.07249v5.pdf>`_
-
+* `Wide & Deep Learning: Better Together with TensorFlow <https://research.googleblog.com/2016/06/wide-deep-learning-better-together-with.html>`_,
+  `Wide & Deep Learning for Recommender Systems <https://arxiv.org/pdf/1606.07792v1.pdf>`_
+* `To go deep or wide in learning? <http://www.jmlr.org/proceedings/papers/v33/pandey14.pdf>`_
+* `Three Classes of Deep Learning Architectures and Their Applications: A Tutorial Survey <https://www.microsoft.com/en-us/research/publication/three-classes-of-deep-learning-architectures-and-their-applications-a-tutorial-survey/>`_
+* `Tutorial: Learning Deep Architectures <http://www.cs.toronto.edu/~rsalakhu/deeplearning/yoshua_icml2009.pdf>`_
+* `Deep Learning <https://en.wikipedia.org/wiki/Deep_learning>`_ (wikipédia)
 
     
 
@@ -306,6 +342,7 @@ Timeseries - Séries temporelles
 *Lectures*
 
 * `Time series analysis with pandas <http://earthpy.org/pandas-basics.html>`_
+* `Consistent Algorithms for Clustering Time Series <http://www.jmlr.org/papers/volume17/khaleghi16a/khaleghi16a.pdf>`_
 
 
 .. _l-puzzlealgo2A:
