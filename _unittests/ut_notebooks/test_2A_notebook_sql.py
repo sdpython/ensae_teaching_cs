@@ -58,8 +58,8 @@ class TestNotebookRunner2aSQL (unittest.TestCase):
             OutputPrint=__name__ == "__main__")
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, unittest_raise_exception_notebook
         from src.ensae_teaching_cs.data import simple_database
-        temp = get_temp_folder(__file__, "temp_notebook2a_sql")
-        keepnote = ls_notebooks("td2a")
+        temp = get_temp_folder(__file__, "temp_notebook2a_eco_sql")
+        keepnote = ls_notebooks("td2a_eco")
         shutil.copy(simple_database(), temp)
         assert len(keepnote) > 0
         res = execute_notebooks(
