@@ -2,9 +2,9 @@
 
 .. _l-td2a:
 
-=============================
-Python pour un Data Scientist
-=============================
+==========================================
+Python pour un Data Scientist / Economiste
+==========================================
 
 .. index:: 2A
 
@@ -275,10 +275,21 @@ Traitement du langage
 
 
 
-Webscrapping
-============
+Webscrapping et API
+===================
 
 |pyecopng| 
+
+.. toctree::
+    :maxdepth: 2
+    
+    notebooks/_gs2a_eco_scraping
+    notebooks/_gs2a_eco_api
+
+*Ressources*
+
+* `API de geocoding <https://www.data.gouv.fr/fr/faq/reuser/>`_
+* `adresse.data.gouv.fr <https://adresse.data.gouv.fr/csv/>`_
 
     
 .. _l-cluster-non-struct-2a:

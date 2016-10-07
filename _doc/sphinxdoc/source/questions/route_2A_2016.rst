@@ -71,13 +71,11 @@ Les exercices doivent être choisis sur le site
         statsmodels *(à venir)*
       - deep learning, CTNK, Tensor flow, H2O *(à venir)*
       - expression régulière, format JSON *(à venir)*
-      - Scrapping *(à venir)*
+      - :ref:`TD2AEcoWebScrapingrst`
     * - 7/11
       - :ref:`l-puzzlealgo2A`, voir notes
       - :ref:`l-puzzlealgo2A`, voir notes ci-dessous
-      - récupération de données via une API, twitter, linkedin, velib, 
-        `API de geocoding <https://www.data.gouv.fr/fr/faq/reuser/>`_,
-        `adresse.data.gouv.fr <https://adresse.data.gouv.fr/csv/>`_ *(à venir)*
+      - :ref:`TD2AecoAPISNCFrst`
       - NLTK, statistiques textuelles *(à venir)*
     * - 14/11
       - `travail d'équipe, réarranger la carte électorale <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/_gs_gerrymandering.html>`_
