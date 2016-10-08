@@ -185,6 +185,7 @@ Quelques extraits :
     
     notebooks/_gs2a_statdes
     notebooks/_gs2a_ml
+    questions/some_ml
 
     
 *Lectures*
@@ -192,8 +193,8 @@ Quelques extraits :
 * :ref:`Travailleur les features ou changer de modèle <mlfeaturesmodelrst>`
 * :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
 * :ref:`question_projet_2014`
-* `Making Tree Ensembles Interpretable <https://arxiv.org/pdf/1606.05390v1.pdf>`_
 * `XGBoost: A Scalable Tree Boosting System <https://arxiv.org/pdf/1603.02754.pdf>`_
+* `Making Tree Ensembles Interpretable <https://arxiv.org/pdf/1606.05390v1.pdf>`_
 * `Confidence Intervals for Random Forests: The Jackknife and the Infinitesimal Jackknife <http://jmlr.csail.mit.edu/papers/volume15/wager14a/wager14a.pdf>`_
 * `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
 * `Understanding variable importances in forests of randomized trees <http://papers.nips.cc/paper/4928-understanding-variable-importances-in-forests-of-randomized-trees.pdf>`_
