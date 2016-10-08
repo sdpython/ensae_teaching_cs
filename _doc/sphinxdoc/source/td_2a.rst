@@ -364,13 +364,13 @@ Puzzles algorithmiques
 |pystatpng|
 
 
-**Présentations**
+*Présentations*
 
 * `Eléments d'Algorithmique <http://www.xavierdupre.fr/enseignement/complements/Seance4_algorithme.pdf>`_
 * `Programmation dynamique <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance2.pdf>`_
 * `Graphes et algorithmes <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance3.pdf>`_
     
-**Notebooks**
+*Notebooks*
 
 Ces problèmes sont tirés de plusieurs sites dont
 `Google Code Jam <https://code.google.com/codejam/contests.html>`_.
