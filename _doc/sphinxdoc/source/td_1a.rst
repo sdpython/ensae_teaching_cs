@@ -94,7 +94,7 @@ scientifiques. Il faudra dans tous les cas participer au jeu suivant :
 .. toctree::
     :maxdepth: 1
     
-    i_exams_algo_1a
+    questions/exams_algo_1a
 
 
 TD - Site web et pratiques logiciels

@@ -45,7 +45,7 @@ donne un aperçu des thèmes abordés.
 
 .. contents::
     :local:
-    :maxpdeth: 1
+    :maxpdeth: 2
     
 .. |slideslogo| image:: _static/slides_logo.png
              :height: 20
@@ -159,6 +159,10 @@ Cartes
 Machine Learning
 ================
 
+Bases
++++++
+
+
 |pyecopng| |pystatpng|
 
 *Présentation 1* - cours de `Gaël Varoquaux <http://gael-varoquaux.info/>`_
@@ -220,7 +224,7 @@ Machine Learning
 * `Learning Theory for Distribution Regression <http://www.jmlr.org/papers/volume17/14-510/14-510.pdf>`_
 
 Reinforcement Learning
-======================
+++++++++++++++++++++++
 
 |pystatpng|
 
@@ -235,7 +239,7 @@ Reinforcement Learning
 
 
 Deep Learning
-=============
++++++++++++++
 
 |pystatpng|    
 
@@ -349,6 +353,13 @@ Notion abordées :
   tableau d'octets, c'est indispensable pour la communication entre deux machines,
   deux processus
   
+.. toctree::
+    :maxdepth: 2
+    
+    notebooks/_gs2a_parallelisation
+    notebooks/_gs2a_langages
+    notebooks/_gs2a_serialisation
+  
 
 Timeseries - Séries temporelles
 ===============================
@@ -396,18 +407,7 @@ Ces problèmes sont tirés de plusieurs sites dont
 * :ref:`l-algoculture`
 * :ref:`l-expose-explication` 
 
-    
-.. _l-td2a-start:
-    
-Getting started
-===============
 
-Il faut vous reporter à la section :ref:`l-install` pour installer python.        
-Certaines séances pratiques utilisent des données depuis ce site. 
-Elles sont facilement téléchargeables avec ces deux modules :
-
-* `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
-* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
 
 
 .. _l-td2a-biblio:
@@ -552,8 +552,7 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
     :width: 500
     
 
-Librairies Python
-=================
+**Librairies Python**
 
 * `Simple/limited/incomplete benchmark for scalability, speed and accuracy of machine learning libraries for classification <https://github.com/szilard/benchm-ml>`_
 * `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
@@ -576,13 +575,6 @@ Librairies Python
 * `basemap <http://matplotlib.org/basemap/>`_, `phshp <https://pypi.python.org/pypi/pyshp>`_, `shapely <https://pypi.python.org/pypi/Shapely>`_ : 
   tout ce qu'il faut pour tracer des cartes
 
-
-.. toctree::
-    :maxdepth: 2
-    
-    notebooks/_gs2a_parallelisation
-    notebooks/_gs2a_langages
-    notebooks/_gs2a_serialisation
     
 .. todoext:: 
     :title: Retravailler la partie visualisation de Python pour un data scientist
@@ -675,6 +667,13 @@ Librairies Python
     lire `Mixed integer programming for machine learning <http://www.litislab.fr/wp-content/uploads/2015/12/Canu-S.pdf>`_,
     `GLPK/Python <https://en.wikibooks.org/wiki/GLPK/Python#Python-GLPK>`_,
     `optlang <http://optlang.readthedocs.io/en/latest/>`_
+
+.. todoext::
+    :title: ajouter ctypes
+    :tag: plus
+    
+    utilisation du module ctypes pour les import C++
+
 
 
 

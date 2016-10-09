@@ -112,3 +112,10 @@ Il n'y a pas qu'une seule solution, tout dépend des idées exposées durant la 
 En ce qui concerne les séances autour des algorithmes, il s'agit d'enrichir sa culture informatique
 car c'est devenu indispensable pour passer les entretiens d'embauche aujourd'hui.
 Ces séances sont composés d'exercices et de cours.
+
+Compétition
++++++++++++
+
+* :ref:`td2aecocompetitionmodeleslogistiquesrst`
+
+    
