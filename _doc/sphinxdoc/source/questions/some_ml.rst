@@ -12,6 +12,66 @@ On passe 90% du temps à créer de nouvelles features, 10% restant à améliorer
 les paramètres du modèle : 
 :ref:`Travailleur les features ou changer de modèle <mlfeaturesmodelrst>`.
 
+Boosting
+++++++++
+
+Le `boosting <https://en.wikipedia.org/wiki/Boosting_(machine_learning)>`_ est une technique de machine learning
+qui consiste à sur-pondérer les erreurs. Pour un algorithme d'apprentissage itératif,
+cela consiste à donner plus de poids à l'itération *n* aux erreurs produites par l'itération *n-1*.
+L'algorithme le plus connu est `AdaBoost <https://en.wikipedia.org/wiki/AdaBoost>`_.
+Le `gradient boosting <https://en.wikipedia.org/wiki/Gradient_boosting>`_ est l'application de ce concept 
+à un modèle et une fonction d'erreur dérivable.
+
+* `The Boosting Approach to Machine Learning An Overview <https://www.cs.princeton.edu/picasso/mats/schapire02boosting_schapire.pdf>`_
+* `A Theory of Multiclass Boosting <http://rob.schapire.net/papers/multiboost-journal.pdf>`_
+
+Weak Learners
++++++++++++++
+
+Un `weak learner <http://stats.stackexchange.com/questions/82049/what-is-meant-by-weak-learner>`_ est un modèle 
+de machine learning aux performances faibles. Typiquement, un noeud d'un arbre de décision est un *weak learner*.
+Le *boosting* est une façon de construire un *strong learner* à partir d'un assemblage de *weak learners*.
+
+Forces et faiblesses des modèles de machine learning
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Réseau de neurones
+^^^^^^^^^^^^^^^^^^
+
+Les réseaux de neurones s'apprennent avec des méthodes de d'optimisation basées sur le gradient. Elles n'aiment pas :
+
+* *Les échelles logarithmiques :* les variables de type fréquences (nombre de clics sur une page, nombre d'occurence d'un mot, ...)
+  ont des queues épaisses et quelques valeurs extrêmes, il est conseillé de normaliser et de passer à une échelle logarithmique.
+* *Les gradients élevés :* le gradient peut avoir une valeur très élevée dan un voisinage localisée (un regression proche d'une 
+  fonction en escalier), l'optimisation à base de gradient mettra beaucoup de temps à converger.
+* *Les variables discrètes :* le calcul du gradient fonctionne beaucoup mieux sur des variables continues plutôt que des variables
+  discrètes car cela limite le nombre de valeurs que peut prendre le gradient.
+
+
+Forêt aléatoire, arbre de décision
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+*Ce qui ne les dérange pas :*
+
+* *Normalisation :* assemblages de décisions basées sur des seuils, les forêts aléatoires et arbres de décisions ne sont pas sensibles 
+  aux changements d'échelle.
+  
+*Ce qu'elle n'aime pas :*
+
+* *Decision oblique :* un seuil s'applique sur une variable, il ne peut approcher une droite :math:`x + y = 1`
+  qu'avec une fonction en escalier.
+* *Multi-classe :* pour un assemblage de fonction binaire, il est plus facile d'avoir seulement deux choix.
+  On compense cette lacune avec deeux stratégies 
+  `one versus rest <https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest>`_ ou
+  `one versus one <https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-one>`_.
+  
+*Lectures*
+
+* `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_ : 
+  l'article étudie le gain obtenu en utilisant des rotations aléatoires de l'ensemble des caractéristiques. 
+  Le gain est significatif.
+
+
 XGBoost
 +++++++
 
