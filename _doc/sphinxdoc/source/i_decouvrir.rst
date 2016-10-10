@@ -114,6 +114,7 @@ Génie logiciel illustré
     
     specials/unittest_coverage_git_profling    
     specials/siteflask
+    specials/python_cplusplus
     
 Aspects cachés de ce cours
 ==========================

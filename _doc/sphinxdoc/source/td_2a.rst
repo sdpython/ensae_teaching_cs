@@ -159,6 +159,8 @@ Cartes
 Machine Learning
 ================
 
+.. _l-ml-skgael:
+
 Bases
 +++++
 
@@ -195,15 +197,17 @@ Bases
     
     notebooks/_gs2a_statdes
     notebooks/_gs2a_ml
-    
 
-    
 *Lectures*
 
 * :ref:`Travailleur les features ou changer de modèle <mlfeaturesmodelrst>`
 * :ref:`Bien démarrer un projet de machine learning <l-debutermlprojet>`
 * :ref:`question_projet_2014`
+* `MA 2823 Foundations of Machine Learning (Fall 2016) <http://cazencott.info/index.php/pages/MA-2823-Foundations-of-Machine-Learning-%28Fall-2016%29>`_
 * `A Random Forest Guided Tour <http://www.lsta.upmc.fr/BIAU/bs.pdf>`_, Gérard Biau, Erwan Scornet
+
+*Recherche*
+
 * `Confidence Intervals for Random Forests: The Jackknife and the Infinitesimal Jackknife <http://jmlr.csail.mit.edu/papers/volume15/wager14a/wager14a.pdf>`_
 * `Making Tree Ensembles Interpretable <https://arxiv.org/pdf/1606.05390v1.pdf>`_
 * `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
@@ -217,7 +221,7 @@ Bases
 * `Large-scale Multi-label Learning with Missing Labels <http://jmlr.org/proceedings/papers/v32/yu14.pdf>`_
 * `Multiclass-Multilabel Classification with More Classes than Examples <http://www.jmlr.org/proceedings/papers/v9/dekel10a/dekel10a.pdf>`_
 
-*Autres lectures*
+*Digressions*
 
 * `A Network That Learns Strassen Multiplication <http://www.jmlr.org/papers/volume17/16-074/16-074.pdf>`_
 * `Learning Algorithms for Second-Price Auctions with Reserve <http://www.jmlr.org/papers/volume17/14-499/14-499.pdf>`_
@@ -339,9 +343,10 @@ Big data sans cluster, données non structurées
 - :ref:`l-td25asynthese`
 
 
+.. _l-2a-cplusplus-para-serie:
 
-Parallélisation et autres techniques
-====================================
+Parallélisation, C++, R, sérialisation
+======================================
 
 |pystatpng|
 
@@ -359,6 +364,11 @@ Notion abordées :
     notebooks/_gs2a_parallelisation
     notebooks/_gs2a_langages
     notebooks/_gs2a_serialisation
+    notebooks/_gs1a_D_calcul_dicho_cython
+
+*Lectures*
+
+* :ref:`l-python_cplusplus`
   
 
 Timeseries - Séries temporelles
@@ -428,7 +438,6 @@ Bibliographie
 * `Artificial Intelligence: A Modern Approach <http://aima.cs.berkeley.edu/>`_, Stuart Russell, Peter Norvig *(2016/08)*
 * `Speech and Language Processing <http://www.cs.colorado.edu/~martin/slp.html>`_,  Daniel Jurafsky and James H. Martin *(2016/08)*,
   see also `Draft chapters in progress <https://web.stanford.edu/~jurafsky/slp3/>`_
-
 
 **Livres sur les algorithmes**
 
@@ -510,6 +519,7 @@ Bibliographie
 * machine learning et musique `Audio Content Analysis, teachings <http://www.audiocontentanalysis.org/teaching/>`_
 * `ogrisel's notebook <https://github.com/ogrisel/notebooks>`_ (2016/04)
 * `L'apprentissage profond <https://www.college-de-france.fr/site/yann-lecun/course-2015-2016.htm>`_, Yann LeCun au Collège de France *(2016/06)*
+* `MA 2823 Foundations of Machine Learning (Fall 2016) <http://cazencott.info/index.php/pages/MA-2823-Foundations-of-Machine-Learning-%28Fall-2016%29>`_ *(2016/10)*
 
 **Articles d'auteurs très connus**
 

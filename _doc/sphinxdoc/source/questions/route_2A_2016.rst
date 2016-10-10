@@ -61,27 +61,27 @@ Les exercices doivent être choisis sur le site
       - :ref:`visualisation <l-visualisation-2A>` (voir :ref:`l-note-2A-plan`),
         :ref:`td2avisualisationrst`
     * - 10/10
-      - C++, Cython, parallélisation, pickle *(à venir)*
-      - Machine Learning avec Gaël Varoquaux (scikit-learn) **cours commun**
+      - :ref:`l-2a-cplusplus-para-serie`
+      - :ref:`Machine Learning avec Gaël Varoquaux <l-ml-skgael>` (scikit-learn) **cours commun**
       - Visualisation, bokeh, cartographie, données carroyées *(à venir)*
-      - Machine Learning avec Gaël Varoquaux (scikit-learn) **cours commun**
+      - :ref:`Machine Learning avec Gaël Varoquaux <l-ml-skgael>` (scikit-learn) **cours commun**
     * - 17/10
       - forestci, mlxtend, xgboost, matrix factorisation
         metrique, machine learning, xgboost, treeinterpreter,
         statsmodels *(à venir)*
       - deep learning, CTNK, Tensor flow, H2O *(à venir)*
-      - expression régulière, format JSON *(à venir)*
+      - :ref:`TD2AecoAPISNCFrst`
       - :ref:`TD2AEcoWebScrapingrst`
     * - 7/11
       - :ref:`l-puzzlealgo2A`, voir notes
       - :ref:`l-puzzlealgo2A`, voir notes ci-dessous
-      - :ref:`TD2AecoAPISNCFrst`
+      - expression régulière, format JSON *(à venir)*
       - NLTK, statistiques textuelles *(à venir)*
     * - 14/11
       - `travail d'équipe, réarranger la carte électorale <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/_gs_gerrymandering.html>`_
       - retour sur la compétition ML **cours commun**
       - construction d'un site web, Flask, Jason, Django *(à venir)*
-      - retour sur la compétition ML **cours commun**
+      - retour sur la compétition ML, exemples de compétition Kaggle **cours commun**
 
 
 .. _l-note-2A-plan:
