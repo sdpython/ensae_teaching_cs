@@ -205,6 +205,7 @@ Bases
 * :ref:`question_projet_2014`
 * `MA 2823 Foundations of Machine Learning (Fall 2016) <http://cazencott.info/index.php/pages/MA-2823-Foundations-of-Machine-Learning-%28Fall-2016%29>`_
 * `A Random Forest Guided Tour <http://www.lsta.upmc.fr/BIAU/bs.pdf>`_, Gérard Biau, Erwan Scornet
+* `Courbe ROC <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/roc.html>`_
 
 *Recherche*
 
@@ -289,7 +290,7 @@ Traitement du langage
   pour guider les utilisateurs plus rapidement vers le produit qu'ils recherchent.
   
 
-
+.. _l-2a-scraping:
 
 Webscrapping et API
 ===================

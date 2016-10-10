@@ -67,11 +67,11 @@ Les exercices doivent être choisis sur le site
       - :ref:`Machine Learning avec Gaël Varoquaux <l-ml-skgael>` (scikit-learn) **cours commun**
     * - 17/10
       - forestci, mlxtend, xgboost, matrix factorisation
-        metrique, machine learning, xgboost, treeinterpreter,
-        statsmodels *(à venir)*
+        metrique, machine learning, treeinterpreter, Vowpalwabbit
+        statsmodels, imbalanced-learn *(à venir)*
       - deep learning, CTNK, Tensor flow, H2O *(à venir)*
-      - :ref:`TD2AecoAPISNCFrst`
-      - :ref:`TD2AEcoWebScrapingrst`
+      - :ref:`Web API <l-2a-scraping>`
+      - :ref:`Web Scraping <l-2a-scraping>`
     * - 7/11
       - :ref:`l-puzzlealgo2A`, voir notes
       - :ref:`l-puzzlealgo2A`, voir notes ci-dessous
