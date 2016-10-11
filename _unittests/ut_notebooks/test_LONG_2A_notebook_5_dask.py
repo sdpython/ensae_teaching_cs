@@ -40,11 +40,11 @@ from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder
 
 
-class TestNotebookRunner2a_5 (unittest.TestCase):
+class TestNotebookRunner2a_5_Dask (unittest.TestCase):
 
     def setUp(self):
         from pyquickhelper.pycode import add_missing_development_version
-        add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
+        add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
                                         __file__, hide=__name__ == "__main__")
 
     def test_notebook_runner(self):

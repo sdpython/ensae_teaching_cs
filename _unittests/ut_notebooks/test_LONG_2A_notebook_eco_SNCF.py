@@ -54,9 +54,6 @@ class TestNotebookRunner2aEcoSNCF(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        if is_travis_or_appveyor() == "appveyor":
-            # too long for appveyor
-            return
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
         from src.ensae_teaching_cs.data import simple_database
         temp = get_temp_folder(__file__, "temp_notebook2a_eco_sncf")
