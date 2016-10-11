@@ -62,7 +62,9 @@ donne un aperçu des thèmes abordés.
 Rappels de programmation
 ========================
 
-|pyecopng| 
+|pyecopng|
+
+*Notebooks*
 
 .. toctree::
     :maxdepth: 2
@@ -86,6 +88,8 @@ Notions abordées :
 - lambda function
 - premiers graphiques
 - commandes magiques
+
+*Notebooks*
 
 .. toctree::
     :maxdepth: 2
@@ -126,14 +130,14 @@ de simplicité. A ce sujet, il faut jeter un coup d'oeil à
 la visualisation animée de gros jeux de données telle que 
 `datashader <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/big_datashader.html#bigdatashaderrst>`_.
 
-*matplotlib*
+*Notrebook sur matplotlib*
 
 .. toctree::
     :maxdepth: 2
     
     notebooks/_gs2a_visu
 
-*Javascript*
+*Notebook sur Javascript*
 
 .. toctree::
     :maxdepth: 2
@@ -156,20 +160,20 @@ Cartes
   `DataMaps <http://datamaps.github.io/>`_,
   `Find Data <https://bost.ocks.org/mike/map/#finding-data>`_
 
+
 Machine Learning
 ================
 
 .. _l-ml-skgael:
 
-Bases
-+++++
-
+Cours de Gaël Varoquaux
++++++++++++++++++++++++
 
 |pyecopng| |pystatpng|
 
-*Présentation 1* - cours de `Gaël Varoquaux <http://gael-varoquaux.info/>`_
+Gaël est un des concepteurs de `scikit-learn <http://scikit-learn.org/stable/>`_.
 
-* `notes de lectures <https://github.com/GaelVaroquaux/sklearn_ensae_course>`_
+* `notes de lectures <https://github.com/GaelVaroquaux/sklearn_ensae_course>`_ (`Gaël Varoquaux <http://gael-varoquaux.info/>`_)
 * machine learning et `scikit-learn <http://scikit-learn.org/stable/>`_
   (`tutoriels sur scikit-learn <http://nbviewer.jupyter.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_),  
 * Quelques extraits :
@@ -183,8 +187,19 @@ Bases
       `GridSearch <http://scikit-learn.org/stable/modules/grid_search.html>`_, `LassoCV <http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html>`_
     - `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_
     
-*Prolongements*
+*Notebooks*
+
+.. toctree::
+    :maxdepth: 2
     
+    notebooks/_gs2a_statdes
+    
+.. _l-td2a-ml-extensions:
+    
+    
+Prolongements
++++++++++++++
+
 .. toctree::
     :maxdepth: 2
     
@@ -195,7 +210,6 @@ Bases
 .. toctree::
     :maxdepth: 2
     
-    notebooks/_gs2a_statdes
     notebooks/_gs2a_ml
 
 *Lectures*
@@ -276,6 +290,7 @@ Traitement du langage
 
 |pyecopng| |pystatpng|
 
+*Notebooks*
 
 .. toctree::
     :maxdepth: 2
@@ -297,6 +312,8 @@ Webscrapping et API
 
 |pyecopng| 
 
+*Notebooks*
+
 .. toctree::
     :maxdepth: 2
     
@@ -316,11 +333,10 @@ Big data sans cluster, données non structurées
 
 |pystatpng|
 
-*Données structurées*
 
 * `présentation données structurées <http://www.xavierdupre.fr/enseignement/complements/cours_structure_donnee.pdf>`_
 
-*Données non structurées*
+*Notebooks*
 
 .. toctree::
     :maxdepth: 2
@@ -359,6 +375,8 @@ Notion abordées :
   tableau d'octets, c'est indispensable pour la communication entre deux machines,
   deux processus
   
+*Notebooks*
+  
 .. toctree::
     :maxdepth: 2
     
@@ -374,6 +392,8 @@ Notion abordées :
 
 Timeseries - Séries temporelles
 ===============================
+
+*Notebooks*
 
 .. toctree::
     :maxdepth: 2
@@ -571,6 +591,7 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
 
 **Librairies de machine learning**
 
+* `Awesome Machine Learning <https://github.com/josephmisiti/awesome-machine-learning#python>`_
 * `CNTK <https://github.com/Microsoft/CNTK>`_ (2016/04)
 * `Keras <http://keras.io/>`_
 * `scikit-learn <http://scikit-learn.org/stable/index.html>`_
