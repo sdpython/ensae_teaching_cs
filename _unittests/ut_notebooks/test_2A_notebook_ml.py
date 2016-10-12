@@ -69,6 +69,9 @@ class TestNotebookRunner2aML(unittest.TestCase):
                 return False
             if "Scraping" in n:
                 return False
+            if "h2o" in n:
+                # h2o is not working from a virtual environment
+                return False
             return True
 
         if is_travis_or_appveyor() == "travis":
