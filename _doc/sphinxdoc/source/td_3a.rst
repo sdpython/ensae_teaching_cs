@@ -28,6 +28,17 @@ Le cours est évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 Concepts, théorie
 =================
 
+Bas niveau
+++++++++++
+
+* `Memory Latency over the years <https://people.eecs.berkeley.edu/~rcs/research/interactive_latency.html>`_
+* `What every computer scientist should know about floating point <http://faculty.tarleton.edu/agapie/documents/cs_343_arch/papers/1991_Goldberg_FloatingPoint.pdf>`_
+* `What every programmer should know about memory <https://www.akkadia.org/drepper/cpumemory.pdf>`_
+* `Introduction to High Performance Scientific Computing <http://pages.tacc.utexas.edu/~eijkhout/istc/istc.html>`_
+* `Zoologie des réseaux de neurones <http://www.asimovinstitute.org/neural-network-zoo/>`_
+* `Teaching a machine how to play Mario <http://www.cs.cmu.edu/~tom7/mario/mario.pdf>`_
+* `Introduction au système de recommandation par facteurs latents <https://datajobs.com/data-science-repo/Recommender-Systems-%5bNetflix%5d.pdf>`_
+
 Structures de données
 +++++++++++++++++++++
 
