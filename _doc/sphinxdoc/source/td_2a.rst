@@ -45,7 +45,7 @@ donne un aperçu des thèmes abordés.
 
 .. contents::
     :local:
-    :maxpdeth: 2
+    :depth: 2
     
 .. |slideslogo| image:: _static/slides_logo.png
              :height: 20
@@ -166,6 +166,7 @@ Machine Learning
 
 .. _l-ml-skgael:
 
+
 Cours de Gaël Varoquaux
 +++++++++++++++++++++++
 
@@ -193,6 +194,7 @@ Gaël est un des concepteurs de `scikit-learn <http://scikit-learn.org/stable/>`
     :maxdepth: 2
     
     notebooks/_gs2a_statdes
+    notebooks/_gs2a_ml_base
     
 .. _l-td2a-ml-extensions:
     
@@ -229,6 +231,8 @@ Prolongements
 * `Understanding variable importances in forests of randomized trees <http://papers.nips.cc/paper/4928-understanding-variable-importances-in-forests-of-randomized-trees.pdf>`_
 * `XGBoost: A Scalable Tree Boosting System <https://arxiv.org/pdf/1603.02754.pdf>`_
 
+.. index:: multilabel
+
 *Multilabel*
 
 * `A Ranking-based KNN Approach for Multi-Label Classification <http://www.jmlr.org/proceedings/papers/v25/chiang12/chiang12.pdf>`_
@@ -241,21 +245,6 @@ Prolongements
 * `A Network That Learns Strassen Multiplication <http://www.jmlr.org/papers/volume17/16-074/16-074.pdf>`_
 * `Learning Algorithms for Second-Price Auctions with Reserve <http://www.jmlr.org/papers/volume17/14-499/14-499.pdf>`_
 * `Learning Theory for Distribution Regression <http://www.jmlr.org/papers/volume17/14-510/14-510.pdf>`_
-
-Reinforcement Learning
-++++++++++++++++++++++
-
-|pystatpng|
-
-*(année prochaine)*
-
-
-*Lectures*
-
-* `A Comprehensive Survey on Safe Reinforcement Learning <http://www.jmlr.org/papers/volume16/garcia15a/garcia15a.pdf>`_
-* `RLPy: A Value-Function-Based Reinforcement Learning Framework for Education and Research <http://www.jmlr.org/papers/volume16/geramifard15a/geramifard15a.pdf>`_
-
-
 
 Deep Learning
 +++++++++++++
@@ -283,7 +272,33 @@ Deep Learning
 * `Tutorial: Learning Deep Architectures <http://www.cs.toronto.edu/~rsalakhu/deeplearning/yoshua_icml2009.pdf>`_
 * `Deep Learning <https://en.wikipedia.org/wiki/Deep_learning>`_ (wikipédia)
 
-    
+Reinforcement Learning
+++++++++++++++++++++++
+
+ou *apprentissage par renforcement*
+
+|pystatpng|
+
+*(année prochaine)*
+
+
+*Lectures*
+
+* `A Comprehensive Survey on Safe Reinforcement Learning <http://www.jmlr.org/papers/volume16/garcia15a/garcia15a.pdf>`_
+* `RLPy: A Value-Function-Based Reinforcement Learning Framework for Education and Research <http://www.jmlr.org/papers/volume16/geramifard15a/geramifard15a.pdf>`_
+
+
+
+Modèles bayésiens
++++++++++++++++++
+
+|pystatpng|
+
+*(année prochaine)*
+
+
+
+
 
 Traitement du langage
 =====================

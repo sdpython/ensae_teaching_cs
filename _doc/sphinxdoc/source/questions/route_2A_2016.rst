@@ -66,11 +66,10 @@ Les exercices doivent être choisis sur le site
       - Visualisation, bokeh, cartographie, données carroyées *(à venir)*
       - :ref:`Machine Learning avec Gaël Varoquaux <l-ml-skgael>` (scikit-learn) **cours commun**
     * - 17/10
-      - :ref:`Intervalles de confiance, interprétabilité <l-td2a-ml-extensions>` 
-        forestci, mlxtend, xgboost, matrix factorisation
-        metrique, machine learning, treeinterpreter, Vowpalwabbit
-        statsmodels, imbalanced-learn *(à venir)*
-      - deep learning, CTNK, Tensor flow, H2O *(à venir)*
+      - :ref:`Problèmes classiques de machine learning <l-ml-skgael>`,
+        :ref:`Problèmes pratiques <l-td2a-ml-extensions>`
+      - :ref:`Librairie de machine learning <l-td2a-ml-extensions>`,
+        deep learning, CTNK, Tensor flow, H2O *(à venir)*
       - :ref:`Web API <l-2a-scraping>`
       - :ref:`Web Scraping <l-2a-scraping>`
     * - 7/11
