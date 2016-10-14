@@ -52,24 +52,22 @@ Les exercices doivent être choisis sur le site
       - :ref:`SQL <l-sql-principe-base-2a>`, 
         :ref:`SQL <Python-Logique-SQLrst>`, :ref:`td2acenoncesession5rst`, 
         :ref:`traitement big data, itérateur <l-cluster-non-struct-2a>`, 
-        :ref:`dask <seance5daskrst>`,
-        :ref:`td2abigdatamemoryrst`
-      - :ref:`td2asomenlprst`,
-        distance d'édition, statistical translation machine (SMT) *(à venir)*
+        :ref:`dask <seance5daskrst>`,        
+      - :ref:`td2asomenlprst`, :ref:`td2abigdatamemoryrst`
       - :ref:`SQL <l-sql-principe-base-2a>`, :ref:`SQL lien avec pandas <Python-Logique-SQLrst>`,
         :ref:`l-donnees-struct-sql-2a`, :ref:`td2aecoexercicedefindeseancerst`
-      - :ref:`visualisation <l-visualisation-2A>` (voir :ref:`l-note-2A-plan`),
+      - :ref:`visualisation <l-visualisation-2A>`,
         :ref:`td2avisualisationrst`
     * - 10/10
       - :ref:`l-2a-cplusplus-para-serie`
       - :ref:`Machine Learning avec Gaël Varoquaux <l-ml-skgael>` (scikit-learn) **cours commun**
-      - Visualisation, bokeh, cartographie, données carroyées *(à venir)*
+      - `Visualisation <l-visualisation-td2a>`_ et autres rappels
       - :ref:`Machine Learning avec Gaël Varoquaux <l-ml-skgael>` (scikit-learn) **cours commun**
     * - 17/10
       - :ref:`Problèmes classiques de machine learning <l-ml-skgael>`,
         :ref:`Problèmes pratiques <l-td2a-ml-extensions>`
-      - :ref:`Librairie de machine learning <l-td2a-ml-extensions>`,
-        deep learning, CTNK, Tensor flow, H2O *(à venir)*
+      - :ref:`Librairies de machine learning <l-td2a-ml-extensions>`,
+        :ref:`l-deep-learning`
       - :ref:`Web API <l-2a-scraping>`
       - :ref:`Web Scraping <l-2a-scraping>`
     * - 7/11

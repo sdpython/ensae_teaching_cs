@@ -99,6 +99,7 @@ Notions abordées :
     notebooks/_gs2a_sql    
     notebooks/_gs2a_magic_commands
 
+.. _l-visualisation-td2a:
 
 Visualisation
 =============
@@ -130,7 +131,7 @@ de simplicité. A ce sujet, il faut jeter un coup d'oeil à
 la visualisation animée de gros jeux de données telle que 
 `datashader <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/big_datashader.html#bigdatashaderrst>`_.
 
-*Notrebook sur matplotlib*
+*Notebook sur matplotlib*
 
 .. toctree::
     :maxdepth: 2
@@ -167,8 +168,8 @@ Machine Learning
 .. _l-ml-skgael:
 
 
-Cours de Gaël Varoquaux
-+++++++++++++++++++++++
+Machine learning, cours de Gaël Varoquaux
++++++++++++++++++++++++++++++++++++++++++
 
 |pyecopng| |pystatpng|
 
@@ -197,8 +198,8 @@ Gaël est un des concepteurs de `scikit-learn <http://scikit-learn.org/stable/>`
 .. _l-td2a-ml-extensions:
     
     
-Prolongements
-+++++++++++++
+Pratique du machine learning, problème de données 
++++++++++++++++++++++++++++++++++++++++++++++++++
 
 .. toctree::
     :maxdepth: 2
@@ -244,10 +245,19 @@ Prolongements
 * `Learning Algorithms for Second-Price Auctions with Reserve <http://www.jmlr.org/papers/volume17/14-499/14-499.pdf>`_
 * `Learning Theory for Distribution Regression <http://www.jmlr.org/papers/volume17/14-510/14-510.pdf>`_
 
+.. _l-deep-learning:
+
 Deep Learning
 +++++++++++++
 
 |pystatpng|    
+
+*Notebooks*
+
+.. toctree::
+    :maxdepth: 2
+    
+    _gs2a_deep
 
 
 *Modèles pré-entraînés*

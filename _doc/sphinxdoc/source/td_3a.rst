@@ -22,6 +22,22 @@ Le cours est évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 
 .. contents::
     :local:
+    
+Introduction
+++++++++++++
+
+* Analyse prédictive
+* Econométrie
+* Risque
+* Décision
+
+*Utilisation des données*
+
+* fraude, contredater, générer des suspicions 1M par pays / assureur / an
+
+* CPU, GPU, FGPA, ASICS
+* diviser la taille par deux, production de chaleur divisée par 4
+* 2004 - 32 ns, 24 ns, effet quantique, passage d'électron, 3000 pages instructions 
 
 
 
@@ -38,6 +54,7 @@ Bas niveau
 * `Zoologie des réseaux de neurones <http://www.asimovinstitute.org/neural-network-zoo/>`_
 * `Teaching a machine how to play Mario <http://www.cs.cmu.edu/~tom7/mario/mario.pdf>`_
 * `Introduction au système de recommandation par facteurs latents <https://datajobs.com/data-science-repo/Recommender-Systems-%5bNetflix%5d.pdf>`_
+* `The Unreasonable Effectiveness of Data <http://static.googleusercontent.com/media/research.google.com/fr//pubs/archive/35179.pdf>`_
 
 Structures de données
 +++++++++++++++++++++
