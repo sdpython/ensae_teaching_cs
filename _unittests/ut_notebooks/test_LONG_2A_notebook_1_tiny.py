@@ -57,7 +57,7 @@ class TestNotebookRunner2a_1 (unittest.TestCase):
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
         from src.ensae_teaching_cs.automation.notebook_test_helper import unittest_raise_exception_notebook, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook2a_1_tiny")
-        keepnote = ls_notebooks("td2a")
+        keepnote = ls_notebooks("td2a_eco")
         assert len(keepnote) > 0
         for k in keepnote:
             if "_1" in k:

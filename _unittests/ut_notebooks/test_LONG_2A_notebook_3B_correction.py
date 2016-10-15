@@ -55,7 +55,7 @@ class TestNotebookRunner2a_3B_correction (unittest.TestCase):
             OutputPrint=__name__ == "__main__")
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, unittest_raise_exception_notebook, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook2a_3B_correction")
-        keepnote = ls_notebooks("td2a")
+        keepnote = ls_notebooks("td2a_ml")
         assert len(keepnote) > 0
         res = execute_notebooks(
             temp, keepnote, lambda i, n: "_3B" in n and "correction" in n,
