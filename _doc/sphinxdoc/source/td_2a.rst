@@ -165,6 +165,11 @@ Cartes
 Machine Learning
 ================
 
+.. contents::
+    :local:
+    :depth: 1
+    
+
 .. _l-ml-skgael:
 
 
