@@ -1,0 +1,36 @@
+
+
+.. blogpost::
+    :title: keyring et mots de passe
+    :keywords: password, keyring
+    :date: 2016-10-04
+    :categories: mot de passe
+    
+    Beaucoup de notebooks utilisent le module 
+    `keyring <http://pythonhosted.org/keyring/>`_
+    pour récupérer des mots de passe ou des identifiants.
+    Le notebook :ref:`TD2AecolesAPIrst` utilise les lignes suivantes
+    pour récupérer la clé de l'API de
+    `TasteKid <https://www.tastekid.com/>`_.
+    
+    ::
+    
+        import keyring, os
+        key = keyring.get_password("tastekid", os.environ["COMPUTERNAME"] + "key")
+        
+    Le code précédent récupère une clé stockée grâce au code suivant :
+    
+    ::
+    
+        import keyring, os
+        key = keyring.set_password("tastekid", os.environ["COMPUTERNAME"] + "key", "<la clé en question>")
+    
+    Ce code doit être exécuté une fois seulement et à chaque fois que le mot de passe 
+    est changé. Ce procédé évite de laisser un mot de passe en clair dans un notebook
+    tout en évitant de le saisir à chaque fois. Le mot de passe n'est accessible que si on
+    a accès à la machine.
+    La variable ``key`` est égale à ``None`` si le mot de passe n'a pas été trouvé.
+    
+    
+    
+    

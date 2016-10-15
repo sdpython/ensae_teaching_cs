@@ -1,5 +1,3 @@
-﻿
-.. issues.
 
 .. _l-proj_crypto:
 
