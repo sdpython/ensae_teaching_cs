@@ -65,7 +65,6 @@ class TestNotebookRunner2aML(unittest.TestCase):
         shutil.copy(simple_database(), temp)
 
         def filter(i, n):
-            print(n)
             if "SNCF" in n:
                 return False
             if "Scraping" in n:
