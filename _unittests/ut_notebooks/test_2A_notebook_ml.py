@@ -65,6 +65,7 @@ class TestNotebookRunner2aML(unittest.TestCase):
         shutil.copy(simple_database(), temp)
 
         def filter(i, n):
+            print(n)
             if "SNCF" in n:
                 return False
             if "Scraping" in n:
@@ -74,7 +75,7 @@ class TestNotebookRunner2aML(unittest.TestCase):
             if "h2o" in n:
                 # h2o is not working from a virtual environment
                 return False
-            if "td2a" in n:
+            if "td2a" in os.path.split(n)[-1]:
                 # already tested by others tests
                 return False
             return True
