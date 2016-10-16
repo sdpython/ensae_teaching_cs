@@ -61,7 +61,7 @@ from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from pyensae.datasource import download_data
 
 
-class TestExampleTheanoLogReg(unittest.TestCase):
+class TestSkipExampleTheanoLogReg(unittest.TestCase):
 
     def test_theano_logreg(self):
         fLOG(

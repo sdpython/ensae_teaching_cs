@@ -60,7 +60,7 @@ from pyquickhelper.loghelper.flog import fLOG
 from pyquickhelper.pycode import is_travis_or_appveyor
 
 
-class TestExampleKerasMNIST(unittest.TestCase):
+class TestSkipExampleKerasMNIST(unittest.TestCase):
 
     def test_theano_logreg(self):
         fLOG(
