@@ -1,6 +1,6 @@
 """
 @file
-@breif Taken from `Tutorial on logistic regression <http://deeplearning.net/tutorial/logreg.html>`_
+@brief Taken from `Tutorial on logistic regression <http://deeplearning.net/tutorial/logreg.html>`_
 
 This tutorial introduces logistic regression using Theano and stochastic
 gradient descent. Logistic regression is a probabilistic, linear classifier. It is parametrized
@@ -52,7 +52,7 @@ import theano.tensor as T
 from pyquickhelper.loghelper import noLOG
 
 
-class LogisticRegression(object):
+class TheanoLogisticRegression(object):
     """
     Multi-class Logistic Regression Class
 
@@ -178,7 +178,7 @@ class LogisticRegression(object):
             raise NotImplementedError()
 
 
-def load_data(dataset):
+def theano_load_data(dataset):
     '''
     Loads the dataset
 
@@ -236,7 +236,7 @@ def load_data(dataset):
     return rval
 
 
-def sgd_optimization_mnist(saved_model, dataset, learning_rate=0.13, n_epochs=1000, batch_size=600, fLOG=noLOG):
+def theano_sgd_optimization_mnist(saved_model, dataset, learning_rate=0.13, n_epochs=1000, batch_size=600, fLOG=noLOG):
     """
     Demonstrate stochastic gradient descent optimization of a log-linear
     model. This is demonstrated on MNIST.
@@ -255,7 +255,7 @@ def sgd_optimization_mnist(saved_model, dataset, learning_rate=0.13, n_epochs=10
     :param fLOG: logging function
 
     """
-    datasets = load_data(dataset)
+    datasets = theano_load_data(dataset)
 
     train_set_x, train_set_y = datasets[0]
     valid_set_x, valid_set_y = datasets[1]
@@ -281,7 +281,7 @@ def sgd_optimization_mnist(saved_model, dataset, learning_rate=0.13, n_epochs=10
 
     # construct the logistic regression class
     # Each MNIST image has size 28*28
-    classifier = LogisticRegression(input=x, n_in=28 * 28, n_out=10)
+    classifier = TheanoLogisticRegression(input=x, n_in=28 * 28, n_out=10)
 
     # the cost we minimize during training is the negative log likelihood of
     # the model in symbolic format
@@ -413,7 +413,7 @@ def sgd_optimization_mnist(saved_model, dataset, learning_rate=0.13, n_epochs=10
           ' ran for %.1fs' % ((end_time - start_time))), file=sys.stderr)
 
 
-def predict(model, dataset, nfirst=-1):
+def theano_predict(model, dataset, nfirst=-1):
     """
     An example of how to load a trained model and use it
     to predict labels.
@@ -432,7 +432,7 @@ def predict(model, dataset, nfirst=-1):
         outputs=classifier.y_pred)
 
     # We can test it on some examples from test test
-    datasets = load_data(dataset)
+    datasets = theano_load_data(dataset)
     test_set_x, test_set_y = datasets[2]
     test_set_x = test_set_x.get_value()
 

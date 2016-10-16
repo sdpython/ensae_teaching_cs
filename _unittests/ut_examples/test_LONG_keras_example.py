@@ -57,11 +57,10 @@ except ImportError:
 
 
 from pyquickhelper.loghelper.flog import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
-from pyensae.datasource import download_data
+from pyquickhelper.pycode import is_travis_or_appveyor
 
 
-class TestExampleTheanoLogReg(unittest.TestCase):
+class TestExampleKerasMNIST(unittest.TestCase):
 
     def test_theano_logreg(self):
         fLOG(
@@ -73,20 +72,18 @@ class TestExampleTheanoLogReg(unittest.TestCase):
             # it requires latex
             return
 
-        from src.ensae_teaching_cs.examples.theano_logreg import theano_sgd_optimization_mnist, theano_predict
-        temp = get_temp_folder(__file__, "temp__theano_logreg")
-        dataset = "mnist.pkl.gz"
-        if not os.path.exists(dataset):
-            download_data(
-                dataset, website="http://deeplearning.net/data/mnist/")
-        model = os.path.join(temp, "log_reg_theano.bin")
-        theano_sgd_optimization_mnist(
-            dataset=dataset, saved_model=model, n_epochs=2, fLOG=fLOG)
-        pred = theano_predict(model, dataset, 10)
-        fLOG(pred)
-        fLOG(type(pred))
-        self.assertEqual(len(pred), 10)
-
+        from src.ensae_teaching_cs.examples.keras_mnist import keras_mnist_data, keras_build_mnist_model, keras_fit, keras_predict
+        fLOG("data")
+        (X_train, Y_train), (X_test, Y_test) = keras_mnist_data()
+        fLOG("model", Y_train.shape)
+        model = keras_build_mnist_model(Y_train.shape[1], fLOG=fLOG)
+        fLOG("fit")
+        keras_fit(model, X_train, Y_train, X_test, Y_test, batch_size=128,
+                  nb_classes=None, nb_epoch=1, fLOG=fLOG)
+        fLOG("predict")
+        score = keras_predict(model, X_test, Y_test)
+        fLOG(score.shape)
+        fLOG(score[:5])
 
 if __name__ == "__main__":
     unittest.main()

@@ -43,13 +43,13 @@ from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
 
 
-class TestNotebookRunner2aML(unittest.TestCase):
+class TestLongNotebookRunner2aML(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
                                         __file__, hide=True)
 
-    def test_notebook_runner_2a_ml(self):
+    def test_long_notebook_runner_2a_ml(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -65,19 +65,9 @@ class TestNotebookRunner2aML(unittest.TestCase):
         shutil.copy(simple_database(), temp)
 
         def filter(i, n):
-            if "SNCF" in n:
-                return False
-            if "Scraping" in n:
-                return False
             if "deep_python" in n:
-                return False
-            if "h2o" in n:
-                # h2o is not working from a virtual environment
-                return False
-            if "td2a" in n:
-                # already tested by others tests
-                return False
-            return True
+                return True
+            return False
 
         if is_travis_or_appveyor() == "travis":
             warnings.warn("execution does not stop")
