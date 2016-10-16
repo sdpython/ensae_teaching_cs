@@ -389,3 +389,5 @@ _doc/notebooks/td2a_ml/varlist_salarié.dbf
 _doc/notebooks/td2a_ml/varmod_salarie.dbf
 _doc/notebooks/td2a_ml/arbre.png
 _doc/notebooks/td2a_ml/arbre.dot
+_unittests/ut_examples/mnist.pkl
+_unittests/ut_examples/mnist.pkl.gz
