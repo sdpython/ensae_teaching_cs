@@ -69,6 +69,8 @@ class TestNotebookRunner2aEco(unittest.TestCase):
                 return False
             if "Scraping" in n:
                 return False
+            if "2.ipynb" in n:
+                return False
             return True
 
         if is_travis_or_appveyor() == "travis":
