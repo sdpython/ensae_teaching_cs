@@ -262,7 +262,12 @@ Deep Learning
 .. toctree::
     :maxdepth: 2
     
-    _gs2a_deep
+    notebooks/_gs2a_deep
+
+*Sites*
+
+* `Tinker With a Neural Network Right Here in Your Browser <http://playground.tensorflow.org/>`_
+* `ConvNetJS <http://cs.stanford.edu/people/karpathy/convnetjs/>`_
 
 
 *Modèles pré-entraînés*

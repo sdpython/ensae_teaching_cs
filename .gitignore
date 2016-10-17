@@ -391,3 +391,4 @@ _doc/notebooks/td2a_ml/arbre.png
 _doc/notebooks/td2a_ml/arbre.dot
 _unittests/ut_examples/mnist.pkl
 _unittests/ut_examples/mnist.pkl.gz
+_doc/notebooks/td2a_eco/data_export.json

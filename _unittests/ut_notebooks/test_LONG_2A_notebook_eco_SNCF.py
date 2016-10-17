@@ -60,6 +60,9 @@ class TestNotebookRunner2aEcoSNCF(unittest.TestCase):
         keepnote = ls_notebooks("td2a_eco")
         assert len(keepnote) > 0
         shutil.copy(simple_database(), temp)
+        folder_note = os.path.split(keepnote[0])[0]
+        jsfile = os.path.join(folder_note, "stop_areas.json")
+        shutil.copy(jsfile, temp)
 
         def filter(i, n):
             if "SNCF" not in n:
