@@ -52,7 +52,8 @@ class TestLONGNotebookBug(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         path = os.path.abspath(os.path.split(__file__)[0])
-        fold = os.path.normpath(os.path.join(path, "..", "..", "_doc", "notebooks", "td2a_ml"))
+        fold = os.path.normpath(os.path.join(
+            path, "..", "..", "_doc", "notebooks", "td2a_ml"))
         nbs = [os.path.join(fold, _)
                for _ in os.listdir(fold) if _.endswith(".ipynb") and "problems" in _]
         nbs.sort()
