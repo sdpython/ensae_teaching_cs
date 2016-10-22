@@ -2,11 +2,13 @@
 
 
 
-Interrogation écrite - 21 octobre 2016
-======================================
+2016-2017 - Interrogation écrite - 21 octobre 2016
+==================================================
 
 L'évaluation de mi-parcours consiste à écrire un programme python qui reproduit un motif.
 Ce dernier est accessible via un url calculé avec le code suivant :
+
+::
 
     def get_code(mail):
         import hashlib

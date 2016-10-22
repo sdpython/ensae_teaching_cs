@@ -18,7 +18,7 @@ def engines_default():
         Virtual environment with conda must be created on the same disk
         as the original interpreter. The other scenario is not supported.
     """
-    res = dict(anaconda2="d:\\Anaconda",
+    res = dict(anaconda2="d:\\Anaconda2",
                anaconda3="d:\\Anaconda3",
                py35="c:\\Python35_x64",
                py34="c:\\Python34_x64",
