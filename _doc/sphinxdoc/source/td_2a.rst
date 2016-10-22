@@ -739,6 +739,15 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
     
     utilisation du module ctypes pour les import C++
 
+.. todoext::
+    :title: multi-label, coverage_error
+    :tag: plus
+    
+    fonction `coverage-error <http://scikit-learn.org/stable/modules/model_evaluation.html#coverage-error>`_,
+    lire `Mining Multi-label Data <http://lpis.csd.auth.gr/publications/tsoumakas09-dmkdh.pdf>`_
+
+
+
 
 
 
