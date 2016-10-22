@@ -162,6 +162,16 @@ else:
     # when the module is installed, no commit number is displayed
     subversion = ""
 
+if "upload" in sys.argv and not subversion:
+    # avoid uploading with a wrong subversion number
+    try:
+        import pyquickhelper
+        pyq = True
+    except ImportError:
+        pyq = False
+    raise Exception(
+        "subversion is empty, cannot upload, is_local()={0}, pyquickhelper={1}".format(is_local(), pyq))
+
 ##############
 # common part
 ##############
