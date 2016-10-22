@@ -6,13 +6,14 @@
 """
 
 
-def code_vigenere(message, cle, decode=False):
+def code_vigenere(message, cle, decode=False, binary=False):
     """
     crypte et décrypte le code de Vigenère sachant la clé connue
 
     @param      message     message à crypter ou décrypter
     @param      cle         clé du code
     @param      decode      False: crypte, True: décrypte
+    @param      binary      code et décode en binaire
     @return                 le message crypté ou décrypté
 
     .. exref::
@@ -35,14 +36,28 @@ def code_vigenere(message, cle, decode=False):
             d = code_vigenere (c, "DOP", True)
             print(c,d)
     """
-    message_code = ""
-    for i, c in enumerate(message):
-        d = cle[i % len(cle)]
-        d = ord(d) - 65
-        if decode:
-            d = 26 - d
-        message_code += chr((ord(c) - 65 + d) % 26 + 65)
-    return message_code
+    if binary:
+        if not isinstance(message, bytes):
+            raise TypeError("message must be bytes")
+        if not isinstance(cle, bytes):
+            raise TypeError("cle must be bytes")
+
+        message_code = []
+        for i, c in enumerate(message):
+            d = int(cle[i % len(cle)])
+            if decode:
+                d = 256 - d
+            message_code.append((int(c) + d) % 256)
+        return bytes(message_code)
+    else:
+        message_code = ""
+        for i, c in enumerate(message):
+            d = cle[i % len(cle)]
+            d = ord(d) - 65
+            if decode:
+                d = 26 - d
+            message_code += chr((ord(c) - 65 + d) % 26 + 65)
+        return message_code
 
 
 def DecodeVigenere(message, cle):

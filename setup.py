@@ -38,7 +38,7 @@ package_data = {project_var_name + ".pythonnet.py33": ["*.pyd", "*.txt", "*.dll"
                 project_var_name + ".pythonnet.py27x64": ["*.pyd", "*.txt", "*.dll"],
                 project_var_name + ".pythonnet.py35x64": ["*.pyd", "*.txt", "*.dll"],
                 project_var_name + ".pythonnet.csdll": ["*.dll"],
-                project_var_name + ".encrypted": ["*.crypted"],
+                project_var_name + ".encrypted": ["*.crypted", "*.vigenere"],
                 project_var_name + ".data.data_gutenberg": ["*.txt"],
                 project_var_name + ".special.data": ["*.png", "*.txt"],
                 project_var_name + ".data.data_1a": ["*.txt"],

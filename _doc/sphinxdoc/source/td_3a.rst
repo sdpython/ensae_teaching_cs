@@ -55,9 +55,26 @@ Structures de données
 
     :ref:`Séance 1 :  <td3acenoncesession1rst>`  (:ref:`correction <td3acorrectionsession1rst>`)
 
-* `liste chaînées <http://fr.wikipedia.org/wiki/Liste_cha%C3%AEn%C3%A9e>`_, `stack <http://fr.wikipedia.org/wiki/Pile_(informatique)>`_, `queue <http://en.wikipedia.org/wiki/Queue_(abstract_data_type)>`_, `dictionnaire <http://en.wikipedia.org/wiki/Associative_array>`_
-* graphe `BFS <http://en.wikipedia.org/wiki/Breadth-first_search>`_, `DFS <http://en.wikipedia.org/wiki/Depth-first_search>`_
-* `merge sort <http://en.wikipedia.org/wiki/Merge_sort>`_, `quicksort <http://en.wikipedia.org/wiki/Quicksort>`_, `heapsort <http://en.wikipedia.org/wiki/Heapsort>`_, `max heap <http://en.wikipedia.org/wiki/Min-max_heap>`_
+* `liste chaînées <http://fr.wikipedia.org/wiki/Liste_cha%C3%AEn%C3%A9e>`_, 
+  `stack <http://fr.wikipedia.org/wiki/Pile_(informatique)>`_, 
+  `queue <http://en.wikipedia.org/wiki/Queue_(abstract_data_type)>`_, 
+  `dictionnaire <http://en.wikipedia.org/wiki/Associative_array>`_,
+  `hashtable <https://fr.wikipedia.org/wiki/Table_de_hachage>`_
+* graphe `BFS <http://en.wikipedia.org/wiki/Breadth-first_search>`_, 
+  `DFS <http://en.wikipedia.org/wiki/Depth-first_search>`_,
+  `Red Black Tree <https://fr.wikipedia.org/wiki/Arbre_bicolore>`_
+* `merge sort <http://en.wikipedia.org/wiki/Merge_sort>`_, 
+  `quicksort <http://en.wikipedia.org/wiki/Quicksort>`_, 
+  `heapsort <http://en.wikipedia.org/wiki/Heapsort>`_, 
+  `max heap <http://en.wikipedia.org/wiki/Min-max_heap>`_
+* String matching, Rabin-Karp, automates finis
+* Notions de coût algorithme, `NP Complet <https://fr.wikipedia.org/wiki/Probl%C3%A8me_NP-complet>`_
+
+
+*Lectures*
+
+* `Introduction to Algorithms, 2nd Edition <http://is.ptithcm.edu.vn/~tdhuy/Programming/Introduction.to.Algorithms.pdf>`_, Cormen, Leiserson, Rivest, Stein.
+* `Cracking the Coding Interview <http://www.valleytalk.org/wp-content/uploads/2012/10/CrackCode.pdf>`_
 
 Threads et synchronisation
 ++++++++++++++++++++++++++

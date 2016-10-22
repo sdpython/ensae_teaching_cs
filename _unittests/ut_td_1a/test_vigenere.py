@@ -38,7 +38,7 @@ except ImportError:
     import pyquickhelper.loghelper as skip_
 
 from pyquickhelper.loghelper import fLOG
-from src.ensae_teaching_cs.td_1a.vigenere import DecodeVigenereLongueurCle, DecodeVigenereCle, DecodeVigenere, CodeVigenere, CasseVigenere
+from src.ensae_teaching_cs.td_1a.vigenere import DecodeVigenereLongueurCle, DecodeVigenereCle, DecodeVigenere, CodeVigenere, CasseVigenere, code_vigenere
 
 
 class TestVigenere (unittest.TestCase):
@@ -116,10 +116,24 @@ class TestVigenere (unittest.TestCase):
         if decode == message:
             fLOG("message bien retranscrit")
         else:
+            rows = []
             for i in range(0, len(decode)):
                 if message[i] != decode[i]:
-                    fLOG(i, message[i], decode[i])
-            fLOG("message mal retranscrit")
+                    rows.append(
+                        "{0}: {1} --- {2}".format(i, message[i], decode[i]))
+            raise Exception("\n".join(rows))
+
+    def test_vigenere_binary(self):
+        fLOG(
+            __file__,
+            self._testMethodName,
+            OutputPrint=__name__ == "__main__")
+
+        text = b"abcdefghijklmdkjnlkfbqlbsdklbDKL2#33"
+        cle = b"key"
+        code = code_vigenere(text, cle, binary=True)
+        deco = code_vigenere(code, cle, decode=True, binary=True)
+        self.assertEqual(text, deco)
 
 
 if __name__ == "__main__":
