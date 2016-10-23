@@ -92,7 +92,7 @@ Le chiffrement est effectué par la fonction
 La fonction impose que la longueur de la clé soit un multiple de 16 octets. J'ai choisi une longueur de 16.
 Enfin, j'ai ajouté une seconde version cryptée avec le code de Vigenère et une clé qui contient entre 1 et 16 caractères.
 Ce module contient quelques bout de code capable de décypter le code Vigenère dans le module
-:mod:`ensae_teching_cs.td_1a.vigenere`. Celui-ci ne s'appliquera pas directement sur le fichier
+:mod:`ensae_teaching_cs.td_1a.vigenere`. Celui-ci ne s'appliquera pas directement sur le fichier
 crypté. Il faudra jouer avec les types 
 `str <https://docs.python.org/3/library/stdtypes.html#str>`_ et 
 `bytes <https://docs.python.org/3/library/functions.html#bytes>`_. 
