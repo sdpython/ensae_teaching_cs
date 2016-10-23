@@ -73,7 +73,8 @@ Plus précisèment pour cet exercice, des points seront retranchés si :
 * -1 point si la sortie est différente du motif qui vous est associé.
 
 J'accorde 10 points supplémentaires à quiconque est capable de générer les 256 motifs en 
-moins de 120 lignes. La solution est disponible sur github
+moins de 120 lignes de taille raisonnable (< 80 caractères) et pas plus de 50 chaînes de
+caractères. La solution est disponible sur github
 `ensae_teaching_cs/encrypted <https://github.com/sdpython/ensae_teaching_cs/tree/master/src/ensae_teaching_cs/encrypted>`_.
 Je précise pour tous ceux qui cliquent que la couleur du cheval cryptée d'Henri IV est cryptée.
 J'accorde 6 points supplémentaires à quiconque est capable de casser le code.
