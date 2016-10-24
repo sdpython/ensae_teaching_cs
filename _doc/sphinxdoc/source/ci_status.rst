@@ -38,7 +38,7 @@ Tableau de bord
             :target: https://waffle.io/sdpython/actuariat_python 
       - .. image:: https://codecov.io/github/sdpython/actuariat_python/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/actuariat_python?branch=master    
-    * - `code_beatrix <http:/lesenfantscodaient.fr>`_
+    * - `code_beatrix <http://lesenfantscodaient.fr>`_
       - .. image:: https://travis-ci.org/sdpython/code_beatrix.svg?branch=master                        
             :target: https://travis-ci.org/sdpython/code_beatrix                                            
             :alt: Build status                                                                                  
@@ -330,7 +330,7 @@ Contenu
       - description
     * - `actuariat_python <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_
       - Contenu des enseignements donnés à l'Institut des Actuaires.
-    * - `code_beatrix <http:/lesenfantscodaient.fr>`_
+    * - `code_beatrix <http://lesenfantscodaient.fr>`_
       - Contenu des jeux et exercices pour les enfants disponible
         à `lesenfantscodaient.fr <http://lesenfantscodaient.fr/>`_.
         Ce sont des jeux pour apprendre à programmer avec ou sans ordinateurs
