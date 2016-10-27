@@ -234,6 +234,11 @@ Pratique du machine learning, problème de données
 * `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
 * `Understanding variable importances in forests of randomized trees <http://papers.nips.cc/paper/4928-understanding-variable-importances-in-forests-of-randomized-trees.pdf>`_
 * `XGBoost: A Scalable Tree Boosting System <https://arxiv.org/pdf/1603.02754.pdf>`_
+* `Classification of Imbalanced Data with a Geometric Digraph Family <http://www.jmlr.org/papers/volume17/15-604/15-604.pdf>`_
+* `On the Influence of Momentum Acceleration on OnlineLearning <http://www.jmlr.org/papers/volume17/16-157/16-157.pdf>`_
+* `A New Algorithm and Theory for Penalized Regression-based Clustering <http://www.jmlr.org/papers/volume17/15-553/15-553.pdf>`_ :
+  méthode de sélection de variables pour des méthodes non supervisés de clustering, voir aussi
+  `Penalized Model-Based Clustering with Application to Variable Selection <http://www.jmlr.org/papers/volume8/pan07a/pan07a.pdf>`_
 
 .. index:: multilabel
 
@@ -249,6 +254,13 @@ Pratique du machine learning, problème de données
 * `A Network That Learns Strassen Multiplication <http://www.jmlr.org/papers/volume17/16-074/16-074.pdf>`_
 * `Learning Algorithms for Second-Price Auctions with Reserve <http://www.jmlr.org/papers/volume17/14-499/14-499.pdf>`_
 * `Learning Theory for Distribution Regression <http://www.jmlr.org/papers/volume17/14-510/14-510.pdf>`_
+
+*Librairies*
+
+`JMLR <http://www.jmlr.org/>`_ 
+poste régulièrement des articles sur des librairies de machine learning open source.
+
+* `fastFM: A Library for Factorization Machines <fastFM: A Library for Factorization Machines>`_
 
 .. _l-deep-learning:
 
@@ -336,7 +348,8 @@ Traitement du langage
   la complétion est utilisée par tous les sites Internet pour aider les utilisateurs
   à saisir leur recherche. N'importe quel site commercial l'utiliser
   pour guider les utilisateurs plus rapidement vers le produit qu'ils recherchent.
-  
+* `Text Understanding from Scratch <https://arxiv.org/abs/1502.01710>`_, 
+  Xiang Zhang, Yann LeCun
 
 .. _l-2a-scraping:
 
