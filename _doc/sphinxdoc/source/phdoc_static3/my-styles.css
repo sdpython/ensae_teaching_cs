@@ -28,3 +28,12 @@
 	background-color: #F9F9B9;
 	font-size: 14px;
 }
+
+table {
+    border: 2;
+	border-spacing: 2;
+}
+
+.highlight-default {
+	background-color: #b5b5b5;
+}

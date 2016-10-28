@@ -76,6 +76,21 @@ Structures de données
 * `Introduction to Algorithms, 2nd Edition <http://is.ptithcm.edu.vn/~tdhuy/Programming/Introduction.to.Algorithms.pdf>`_, Cormen, Leiserson, Rivest, Stein.
 * `Cracking the Coding Interview <http://www.valleytalk.org/wp-content/uploads/2012/10/CrackCode.pdf>`_
 
+Crypographie, block chain
++++++++++++++++++++++++++
+
+* commitment et signature (RSA)
+* Tiers de confiance et distributed consensus (PAXOS)
+* Block chain, Bitcoin, Attque (Incentive, long term consensus, la probabilité qu'on soit en désaccord
+  décroît avec le temps, monnaie stable, sûre, anonyme ?)
+* `Ethereum <https://en.wikipedia.org/wiki/Ethereum>`_
+
+*Lectures*
+
+* The art of multiprocessor programming, *Nit Shavit*
+* `CS176: Multiprocessor Synchronization <http://cs.brown.edu/courses/cs176/course_information.shtml>`_
+
+
 Threads et synchronisation
 ++++++++++++++++++++++++++
 
