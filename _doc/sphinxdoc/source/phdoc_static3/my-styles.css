@@ -30,10 +30,15 @@
 }
 
 table {
-    border: 2;
-	border-spacing: 2;
+    border: 2px solid black;
+	border-spacing: 2x;
 }
 
-.highlight-default {
+th, td {
+    border: 1px solid #dddddd;
+	border-spacing: 1px;
+}
+
+pre.highlight-default {
 	background-color: #b5b5b5;
 }
