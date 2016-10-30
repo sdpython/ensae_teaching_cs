@@ -220,7 +220,7 @@ def groupby_topn(df, by_keys, sort_keys, ascending=True, n=1, as_index=True):
             df.groupby(["k1", "k2"]).apply(lambda x: x.sort(["v", "i"], ascending=True).head(1))
             print(df)
     """
-    res = df.groupby(by_keys).apply(lambda x: x.sort(
+    res = df.groupby(by_keys).apply(lambda x: x.sort_values(
         sort_keys, ascending=ascending).head(n))
     if not as_index:
         res = res.reset_index(drop=True)

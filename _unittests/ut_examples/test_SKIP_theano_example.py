@@ -62,7 +62,7 @@ from pyensae.datasource import download_data
 
 
 class TestSkipExampleTheanoLogReg(unittest.TestCase):
-    
+
     def test_cpu_gpu(self):
         fLOG(
             __file__,
@@ -73,7 +73,7 @@ class TestSkipExampleTheanoLogReg(unittest.TestCase):
             # it requires latex
             return
 
-        from theano import function, config, shared, sandbox
+        from theano import function, config, shared
         import theano.tensor as T
         import numpy
         import time
