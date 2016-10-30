@@ -672,9 +672,7 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
     :title: aborder d'autres librairies
     :tag: plus
     
-    scikit-learn, h2o, xgboost, scikit-learn-contrib, mlxtend, gensim, 
-    py-earth, polylearn, lightning, imbalanced-learn, theano, pytorch
-    forest-confidence-interval, boruta, wendelin.core, zodb,
+    py-earth, pytorch, boruta, wendelin.core, zodb,
     (requires transaction, zc.lockfile, zodbpickle, ZODB, zdaemon, ZEO, ZODB3, wendelin.core),
     ghost.py (scrapping)
     h5py, PyTables, lda
@@ -683,7 +681,8 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
     
 .. todoext::
     :title: Aborder theano, keras, GPU et les types de deep strucures
-    :tag: plus
+    :tag: done
+    :hidden:
     
     Et les autres caffee, tensorflow, cntk, torch, h2o
     (voir `libraries <http://www.teglor.com/b/deep-learning-libraries-language-cm569/>`_,
@@ -695,7 +694,8 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
     
 .. todoext::
     :title: rédiger un ou deux notebook sur le traitement du langage
-    :tag: plus
+    :tag: done
+    :hidden:
     
     Aborder la distance d'édition, n-grams, NLTK, gensim,
     word2vec, LDA (Latent Dirichlet Application), traduction statistique,
@@ -736,7 +736,8 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
         
 .. todoext::
     :title: sérialisation JSON
-    :tag: plus
+    :tag: done
+    :hidden:
     
     Très utilisée sur internet donc incontournable.
 

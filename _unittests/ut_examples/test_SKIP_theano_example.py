@@ -96,7 +96,7 @@ class TestSkipExampleTheanoLogReg(unittest.TestCase):
         else:
             fLOG('Used the gpu')
 
-    def _test_theano_logreg(self):
+    def test_theano_logreg(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -108,7 +108,6 @@ class TestSkipExampleTheanoLogReg(unittest.TestCase):
 
         from theano import config
         fLOG(config)
-        stop
         from src.ensae_teaching_cs.examples.theano_logreg import theano_sgd_optimization_mnist, theano_predict
         temp = get_temp_folder(__file__, "temp__theano_logreg")
         dataset = "mnist.pkl.gz"
