@@ -62,8 +62,8 @@ from pyensae.datasource import download_data
 
 
 class TestSkipExampleTheanoLogReg(unittest.TestCase):
-
-    def test_theano_logreg(self):
+    
+    def test_cpu_gpu(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -73,6 +73,42 @@ class TestSkipExampleTheanoLogReg(unittest.TestCase):
             # it requires latex
             return
 
+        from theano import function, config, shared, sandbox
+        import theano.tensor as T
+        import numpy
+        import time
+
+        vlen = 10 * 30 * 768  # 10 x #cores x # threads per core
+        iters = 1000
+
+        rng = numpy.random.RandomState(22)
+        x = shared(numpy.asarray(rng.rand(vlen), config.floatX))
+        f = function([], T.exp(x))
+        fLOG(f.maker.fgraph.toposort())
+        t0 = time.time()
+        for i in range(iters):
+            r = f()
+        t1 = time.time()
+        fLOG("Looping %d times took %f seconds" % (iters, t1 - t0))
+        fLOG("Result is %s" % (r,))
+        if numpy.any([isinstance(x.op, T.Elemwise) for x in f.maker.fgraph.toposort()]):
+            fLOG('Used the cpu')
+        else:
+            fLOG('Used the gpu')
+
+    def _test_theano_logreg(self):
+        fLOG(
+            __file__,
+            self._testMethodName,
+            OutputPrint=__name__ == "__main__")
+
+        if is_travis_or_appveyor():
+            # it requires latex
+            return
+
+        from theano import config
+        fLOG(config)
+        stop
         from src.ensae_teaching_cs.examples.theano_logreg import theano_sgd_optimization_mnist, theano_predict
         temp = get_temp_folder(__file__, "temp__theano_logreg")
         dataset = "mnist.pkl.gz"

@@ -33,6 +33,7 @@ if __name__ == "__main__":
                      download_only=False,
                      no_setup=False,
                      last_function=last_function,
+                     # 3.2.5 to be able to use rpy2
                      selection={"R==3.2.5", "tdm", "jdk"},
                      documentation=False,
                      source="2",
