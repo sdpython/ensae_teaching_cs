@@ -445,7 +445,7 @@ def euler_path(edges, added_edges):
                 break
         sub = _explore_path(edges_from, start[1][0])
         i = start[0]
-        path[i:i + 1] = sub + path[i:i + 1]
+        path[i:i + 1] = path[i:i + 1] + sub
     return path
 
 
