@@ -14,7 +14,7 @@ before_script:
 script:
   - { CMD: "python -u setup.py unittests", NAME: "UT", TIMEOUT: 3600 }  # timeout is 3600 for the documentation
   - { CMD: "python -u setup.py unittests_LONG", NAME: "UT_LONG", TIMEOUT: 3600 }
-  - { CMD: "python -u setup.py unittests_SKIP", NAME: "UT_SKIP" }
+  - { CMD: "python -u setup.py unittests -e .*SKIP.* -g \".*((SKIP)|(theano)|(keras)).*\"", NAME: "UT_SKIP" }
   - { CMD: "python -u setup.py unittests -e .*_1A_.* -g \".*((SKIP)|(theano)|(keras)).*\"", NAME: "UT_1A" }
   - { CMD: "python -u setup.py unittests -e .*_2A_.* -g \".*((SKIP)|(theano)|(keras)).*\"", NAME: "UT_2A", TIMEOUT: 3600 }
   - { CMD: "python -u setup.py unittests -e .*_3A_.* -g \".*((SKIP)|(theano)|(keras)).*\"", NAME: "UT_3A" }
