@@ -12,6 +12,7 @@ from pyquickhelper.texthelper import remove_diacritics
 from pyquickhelper.filehelper import remove_folder, explore_folder_iterfile
 from pyquickhelper.filehelper import unzip_files, zip_files, ungzip_files, un7zip_files
 from pyquickhelper.helpgen import nb2html
+from pyquickhelper.ipythonhelper import upgrade_notebook
 from pymmails import EmailMessageRenderer, EmailMessage
 from .repository_exception import RegexRepositoryException, TooManyProjectsException
 from ..td_1a import edit_distance
@@ -128,6 +129,147 @@ class ProjectsRepository:
             if True:
                 fLOG("encryption")
                 encrypt_stream(b"password" * 2, filename, enc, chunksize=2**30)
+
+        Other examples with no list of predefined groups:
+
+        ::
+
+            import sys
+            import os
+            import keyring
+
+            from pyquickhelper.loghelper import fLOG
+            fLOG(OutputPrint=True)
+
+            from ensae_teaching_cs.automation_students import ProjectsRepository, grab_addresses
+            from pyquickhelper.filehelper import encrypt_stream
+            from pymmails import MailBoxImap, EmailMessageRenderer, EmailMessageListRenderer
+            from pymmails.render.email_message_style import template_email_html_short
+            import pandas
+
+            ###########
+            ## settings
+            ###########
+
+            user = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "user")
+            pwd = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "pwd")
+            server = "imap.gmail.com"
+            mailfolder = ["ensae/ENSAE_201617"]
+            date = "1-Oct-2016"
+            do_mail = True
+
+            skip_address = ["arthur.b.renaud@gmail.com",
+                            "assistant-info@ensae.fr",
+                            "ggereyy@gmail.com",
+                            "marc-antoine.weisser@centralesupelec.fr",
+                            "marc-antoine.weisser@supelec.fr",
+                            "pierre.cordier@effiscience.solutions",
+                            "skanderkarkar@gmail.com",
+                            "xavier.dupre@gmail.com",
+                            "Xavier.Dupre@ensae.fr",
+                            "Marc.Antoine.Weisser@supelec.fr",
+                            "y.gerey@laposte.net",
+                            "Pierre.Cordier@ensae.paristech.fr"]
+
+            ###############
+            ## gather mails
+            ###############
+
+            fLOG("fetch mails")
+            filename = "emails.txt"
+
+            if os.path.exists(filename):
+                with open(filename, "r", encoding="utf8") as f:
+                    lines = f.readlines()
+                emails = [l.strip("\r\t\n ") for l in lines]
+            else:
+                box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
+                box.login()
+                emails = grab_addresses(box, mailfolder, date, fLOG=fLOG)
+                box.logout()
+                emails = [_ for _ in emails if _ not in skip_address]
+
+                with open(filename, "w", encoding="utf8") as f:
+                    f.write("\n".join(emails))
+
+            #####################
+            ## create a dataframe
+            #####################
+
+            import pandas
+            rows = [{"nom_prenom":mail, "sujet":"octobre", "groupe":i+1} for i, mail in enumerate(emails)]
+            df = pandas.DataFrame(rows)
+            fLOG("dataframe", df.shape)
+
+            ##################################
+            ## create folders for each student
+            ##################################
+
+            mappings = {}
+            folder = "."
+
+            proj = ProjectsRepository(folder, fLOG=fLOG)
+            groups = proj.Groups
+            if do_mail or len(groups) < 10:
+                fLOG("creation")
+                proj = ProjectsRepository.create_folders_from_dataframe(df, folder,
+                            col_subject="sujet", fLOG=fLOG, col_group="groupe",
+                            col_student="nom_prenom",
+                            email_function=emails, skip_if_nomail=False,
+                            must_have_email=True)
+            fLOG("nb groups", len(proj.Groups))
+
+            #############
+            ## dump mails
+            #############
+
+            if do_mail:
+                email_render = EmailMessageRenderer(tmpl=template_email_html_short, fLOG=fLOG)
+                render = EmailMessageListRenderer(title="list of mails",
+                                email_renderer=email_render, fLOG=fLOG)
+
+                box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
+                box.login()
+                mails = proj.dump_group_mails(render, group=None,
+                                mailbox=box, subfolder=mailfolder, date=date,
+                                overwrite=False, convert_files=True)
+
+                box.logout()
+
+            ################
+            ## write summary
+            ################
+
+            if True:
+                fLOG("summary")
+                if os.path.exists("index.html"):
+                    os.remove("index.html")
+                proj.write_summary()
+
+
+            #################
+            ## zip everything
+            #################
+
+            filename = "exo_1A_2016.zip"
+
+            if True:
+                if os.path.exists(filename):
+                    os.remove(filename)
+                proj.zip_group(None, filename,
+                               addition=["index.html", "mail_style.css", "exo_1A_2016.xlsx", "emails.txt"])
+
+            #############
+            ## encryption
+            #############
+
+            enc = "projet_2A_2015.enc"
+
+            if True:
+                fLOG("encryption")
+                encrypt_stream(b"ensae016ensae016", filename, enc, chunksize=2**30)
+
+
     """
 
     class MailNotFound(Exception):
@@ -324,7 +466,7 @@ class ProjectsRepository:
 
         return sections
 
-    _regex_split = re.compile("[-;,. ]")
+    _regex_split = re.compile("[-;,. @]")
 
     @staticmethod
     def match_mail(name, emails, threshold=3, exc=True):
@@ -339,6 +481,10 @@ class ProjectsRepository:
 
         The second results is True if no email were found in the list.
         """
+        # we check the easy case
+        if name in emails:
+            return [(0, name)]
+
         pieces = [_.strip() for _ in ProjectsRepository._regex_split.split(
             remove_diacritics(name.lower()))]
         pieces.sort()
@@ -513,11 +659,20 @@ class ProjectsRepository:
                         "; ".join(eleves)))
                     continue
                 if mails:
+                    for m in mails:
+                        if "@" not in m:
+                            raise ValueError(
+                                "mails contains a mail with no @: {0}".format(mails))
                     jmail = "; ".join(mails)
                 else:
                     jmail = None
             else:
                 jmail = None
+
+            if jmail is not None:
+                if "@" not in jmail:
+                    raise ValueError(
+                        "jmail does not contain any @: {0}".format(jmail))
 
             members = ", ".join(eleves)
             content = [members]
@@ -587,7 +742,7 @@ class ProjectsRepository:
 
     def dump_group_mails(self, renderer, group, mailbox, subfolder, date=None,
                          skip_function=None, max_dest=5, filename="index_mails.html",
-                         overwrite=False, skip_if_empty=False):
+                         overwrite=False, skip_if_empty=False, convert_files=False):
         """
         enumerates all mails sent by or sent to a given group
 
@@ -601,6 +756,7 @@ class ProjectsRepository:
         @param      filename        filename which gathers a link to every mail
         @param      overwrite       overwrite
         @param      skip_if_empty   skip if no mail?
+        @param      convert_files   to convert *.py* and *.ipynb* into html
         @return                     list of files (see `EmailMessageListRenderer.write <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/render/email_message_list_renderer.html>`_)
         """
         if group is None:
@@ -608,7 +764,8 @@ class ProjectsRepository:
             for group in self.Groups:
                 r = self.dump_group_mails(renderer, group, mailbox, subfolder=subfolder,
                                           date=date, skip_function=skip_function, max_dest=max_dest,
-                                          overwrite=overwrite, skip_if_empty=skip_if_empty)
+                                          overwrite=overwrite, skip_if_empty=skip_if_empty,
+                                          convert_files=convert_files)
                 res.extend(r)
             return res
         else:
@@ -637,6 +794,8 @@ class ProjectsRepository:
             r = renderer.write(iter=iter, location=location,
                                filename=filename, overwrite=overwrite)
             renderer.flush()
+            if convert_files:
+                self.convert_files(group)
             return r
 
     def remove_group(self, group):
@@ -820,7 +979,7 @@ class ProjectsRepository:
                     continue
                 loc = self.get_group_location(group)
                 nb_files += 1
-                tn = os.path.join(loc, name)
+                tn = name
                 size += os.stat(tn).st_size
                 folder = os.path.split(name)[0]
                 splf = folder.replace("\\", "/").split("/")
@@ -1016,7 +1175,7 @@ class ProjectsRepository:
 
     def convert_files(self, group):
         """
-        convert notebook into html
+        convert all notebooks and python scripts into html for a group
 
         @param          group       group name
         @return                     list of new files
@@ -1031,12 +1190,19 @@ class ProjectsRepository:
                 self.fLOG(
                     "ProjectsRepository.convert_files [convert {0}]".format(name))
                 out = name + ".html"
-                nb2html(name, out)
+                if os.path.exists(out):
+                    warnings.warn(
+                        "[convert_files] overwriting '{0}'".format(out))
+                upgrade_notebook(name)
+                nb2html(name, out, exc=False)
                 files.append(out)
             elif ext == ".py":
                 self.fLOG(
                     "ProjectsRepository.convert_files [convert {0}]".format(name))
                 out = name + ".html"
+                if os.path.exists(out):
+                    warnings.warn(
+                        "[convert_files] overwriting '{0}'".format(out))
                 try:
                     py_to_html_file(name, out, False, title=os.path.relpath(
                         name, self.get_group_location(group)))
