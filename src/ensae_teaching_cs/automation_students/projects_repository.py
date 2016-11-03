@@ -1193,9 +1193,12 @@ class ProjectsRepository:
                 if os.path.exists(out):
                     warnings.warn(
                         "[convert_files] overwriting '{0}'".format(out))
-                upgrade_notebook(name)
-                nb2html(name, out, exc=False)
-                files.append(out)
+                try:
+                    upgrade_notebook(name)
+                    nb2html(name, out, exc=False)
+                    files.append(out)
+                except Exception as e:
+                    warnings.warn("unable to convert a notebook '{0}' because of {1}".format(name, e))
             elif ext == ".py":
                 self.fLOG(
                     "ProjectsRepository.convert_files [convert {0}]".format(name))
