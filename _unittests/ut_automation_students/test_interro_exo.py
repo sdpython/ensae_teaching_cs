@@ -64,7 +64,7 @@ class TestInterroExo(unittest.TestCase):
         url = "http://www.xavierdupre.fr/enseignement/examens/1A_2016/enonce_{0}.txt"
         col_names = dict(folder="nom_prenom", mail="nom_prenom")
         df = execute_python_scripts(
-            root, input, col_names=col_names, url=url, fLOG=fLOG)
+            root, input, col_names=col_names, url=url, fLOG=fLOG, eol="/")
         out = os.path.join(temp, "results.xlsx")
         df.to_excel(out)
         assert os.path.exists(out)
