@@ -9,7 +9,7 @@ Azure, Python, Programmation
 ============================
 
 
-Pour les années scolaires 2014-2016, des ressources Azure sont 
+Pour les années scolaires 2014-2016, des ressources Azure ont été 
 mises à disposition des élèves dans le cadre d'un `partenariat 
 entre Microsoft et l'ENSAE <http://www.microsoft.com/france/Hub-Presse/communiques-de-presse/fiche-communique.aspx?eid=f7e7f695-fb08-4c6d-b4ec-3cde562ba429>`_.
 Il existe différentes façons d'utiliser ces ressources. Les outils les plus avancés

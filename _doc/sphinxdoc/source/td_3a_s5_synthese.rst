@@ -6,23 +6,69 @@
 Distribution des calculs, stratégies de stockage, SQL NoSQL
 ===========================================================
 
+Pour de grands volumns de données,
+les structures de données et les algorithmes sont très interdépendants.
+
+#. Stockage
+#. SQL
+#. SQL réparti
+#. No SQL, clé valeur
+#. Hash
+#. Notion de Map / Reduce
+#. Design logiciel - notion d'interface
+#. Synchronisation - Lamport
+
 Vue d'ensemble
 ++++++++++++++
 
-* Stockage de données, consistence, persistence, impossibilité de faire des rollbacks, corruption, 
-  absence de garanties sur la manière dont sont stockés les champs (exemple formats de date), pas d'index, etc.
-* Introduction du SQL, type de requêtes, 
-  Notion de transaction, d'atomicité, capacité de rollback, garanties ACID, 
-  difficultés dans un SQL réparti (atomicité des transactions, double commit protocol)
-* Systèmes NoSQL, Key-Value Pair Storage, transactionnalité multi-entités dans un Key-Value pair, 
+* Stockage de données, 
+  `consistance <https://en.wikipedia.org/wiki/Data_consistency>`_ (tout le monde voit la même chose),
+  `persistance <https://fr.wikipedia.org/wiki/Persistance_(informatique)>`_ (une modification est définitive)
+  impossibilité de faire des `rollbacks <https://en.wikipedia.org/wiki/Rollback_(data_management)>`_, 
+  `corruption <https://en.wikipedia.org/wiki/Data_corruption>`_, 
+  `index <https://en.wikipedia.org/wiki/Database_index>`_,
+  `type de données <https://en.wikipedia.org/wiki/Data_type>`_,
+  `format de données <https://fr.wikipedia.org/wiki/Format_de_donn%C3%A9es>`_,
+  `sérialisation <https://fr.wikipedia.org/wiki/S%C3%A9rialisation>`_
+* Introduction du `SQL <https://fr.wikipedia.org/wiki/Structured_Query_Language>`_, 
+  type de requêtes, 
+  Notion de `transaction <https://en.wikipedia.org/wiki/Database_transaction>`_ 
+  (et `rollbacks <https://en.wikipedia.org/wiki/Rollback_(data_management)>`_),
+  `ACID <https://en.wikipedia.org/wiki/ACID>`_ 
+  (`atomicity <https://en.wikipedia.org/wiki/Atomicity_(database_systems)>`_,
+  `consistency <https://en.wikipedia.org/wiki/Consistency_(database_systems)>`_,
+  `isolation <https://en.wikipedia.org/wiki/Isolation_(database_systems)>`_,
+  `durability <https://en.wikipedia.org/wiki/Durability_(database_systems)>`_,
+* SQL réparti, `CAP theorem <https://en.wikipedia.org/wiki/Durability_(database_systems)>`_ :
+  impossibilité d'avoir 
+  `consistency <https://en.wikipedia.org/wiki/Consistency_(database_systems)>`_
+  (every read receives the most recent write or an error),
+  `availability <https://en.wikipedia.org/wiki/Availability>`_
+  (every request receives a response, without guarantee that it contains the most recent version of the information),
+  `tolérance au partionnement <https://en.wikipedia.org/wiki/Network_partition>`_
+  (the system continues to operate despite arbitrary partitioning due to network failures),
+  `double commit protocol <https://en.wikipedia.org/wiki/Two-phase_commit_protocol>`_
+* Systèmes `NoSQL <https://fr.wikipedia.org/wiki/NoSQL>`_, 
+  `Key-Value Pair Storage <https://en.wikipedia.org/wiki/Key-value_database>`_
   écriture optimiste avec des timestamps.
-* Base de données orientées Document, Bases de données orientées Graph
-* Map/Reduce. Notions de mappers, de reducers, de calculs embarassingly parallel. 
-  problèmes des machines mortes, des stragglers, tradeof calcul/transfert des données,
+* `Distributed hash tables <https://en.wikipedia.org/wiki/Distributed_hash_table>`_,
+  `hash table <https://en.wikipedia.org/wiki/Hash_table>`_,
+  `Cryptographic hash function <https://en.wikipedia.org/wiki/Cryptographic_hash_function>`_,
+  `collision resistance <https://en.wikipedia.org/wiki/Collision_resistance>`_,
+  (`MD5 <https://en.wikipedia.org/wiki/MD5>`_)
+* `Base de données orientées Document <https://en.wikipedia.org/wiki/Document-oriented_database>`_, 
+  `Bases de données orientées Graph <https://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_orient%C3%A9e_graphe>`_,
+  `Neo4j <https://fr.wikipedia.org/wiki/Neo4j>`_
+* `Map/Reduce <https://fr.wikipedia.org/wiki/MapReduce>`_. 
+  Notions de mappers, de reducers, de calculs 
+  `embarrassingly parallel <https://en.wikipedia.org/wiki/Embarrassingly_parallel>`_. 
+  problèmes des machines mortes, des stragglers (retardataires),
+  `On data skewness, stragglers, and MapReduce progress indicators <https://arxiv.org/abs/1503.09062>`_,
+  tradeof calcul/transfert des données,
   exemples d'applications de MapReduce,
   exemples d'algos difficilement parallélisables,
-* Hadoop, Azure
-* Queues distribuées.
+  `Hadoop <https://en.wikipedia.org/wiki/Apache_Hadoop>`_
+* Queues distribuées, `topologie de réseau <https://en.wikipedia.org/wiki/Network_topology>`_
 
 SQL, NoSQL
 ++++++++++
@@ -31,10 +77,12 @@ SQL, NoSQL
     * Description d'un document (notion de structures, format json, xml)
     * SQL : 
         * notion d'index
-        * Ne scale pas pour la parallélisation d'un grande nombre de recherches sur des données modifiées en permanence (mais à une moindre fréquence)
+        * Ne scale pas pour la parallélisation d'un grande nombre de recherches 
+          sur des données modifiées en permanence (mais à une moindre fréquence)
             * Cohérences des données
             * ACID
-        * Traduction d'une base de documents en un schéma relationnel parfois complexe lorsque les documents ont une structure arborescente (plein de tables)
+        * Traduction d'une base de documents en un schéma relationnel parfois 
+          complexe lorsque les documents ont une structure arborescente (plein de tables)
         * Récupérer un document entier nécessite plein de lookups
     * NoSQL
         * Clé/valeur --> simple et recherche très simple
@@ -57,7 +105,7 @@ SQL, NoSQL
     * Lecture et écriture simultanée
     * Conflit dans les mises à jour
     * Parler Section critiques --> très lent
-    * Timestamp (Lamport) : vision optimiste
+    * Timestamp (`Lamport <https://fr.wikipedia.org/wiki/Horloge_de_Lamport>`_) : vision optimiste
         * Récupération de données (données + timestamp)
         * Écriture si timestamp identique
         * Impossibilité d'une heure commune dans un cluster
@@ -158,3 +206,15 @@ Structurer les données
       plutôt que d'ajouter une nouvelle table (pour des questions de performances)
 
 
+Design logiciel
++++++++++++++++
+
+* enjeu : utiliser le même code pour un algorithme quelque soit
+  la plate-forme où il s'exécute
+* propriété mathématiques distribuées mono-thread,
+  démonstration de convergence
+* `Affinity propagation <https://en.wikipedia.org/wiki/Affinity_propagation>`_
+* Algorithme de graphe
+* Programmation fonctionnelle, concept de transform / predictors
+* Accès séquentiel, aléatoire
+* concept de `mini batch <https://en.wikipedia.org/wiki/Stochastic_gradient_descent#Iterative_method>`_

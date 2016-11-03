@@ -150,16 +150,36 @@ la visualisation animée de gros jeux de données telle que
 Cartes
 ++++++
 
+* :ref:`Système de coordonnées <blog-donnees-carroyees-2016>`_ (et données carroyées)
 * format de cartes 
   `shapefiles <https://en.wikipedia.org/wiki/Shapefile>`_,
   `topoJSON <https://en.wikipedia.org/wiki/GeoJSON#TopoJSON>`_,
-  `geoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_
+  `geoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_,
+* `Projections sphériques et conversion <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/notebooks/chsh_geo.html>`_
 * conversion de coordonnées en longitude / latitude
 * librairies 
   `basemap <http://matplotlib.org/basemap/>`_, ...
 * sources :
   `DataMaps <http://datamaps.github.io/>`_,
   `Find Data <https://bost.ocks.org/mike/map/#finding-data>`_
+
+
+Projections, réduction des dimensions
+=====================================
+
+(à venir)
+
+*Lectures*
+
+* `PCA <http://scikit-learn.org/stable/modules/decomposition.html>`_
+* `Johnson–Lindenstrauss lemma <https://en.wikipedia.org/wiki/Johnson%E2%80%93Lindenstrauss_lemma>`_,
+  `Random projection <http://scikit-learn.org/stable/modules/random_projection.html>`_,
+  `Concentration of measure <https://en.wikipedia.org/wiki/Concentration_of_measure>`_,
+  `Experiments with Random Projection <http://cseweb.ucsd.edu/~dasgupta/papers/randomf.pdf>`_
+* `Compressed Sensing <https://en.wikipedia.org/wiki/Compressed_sensing>`_
+* `Locality-sensitive hashing <https://en.wikipedia.org/wiki/Locality-sensitive_hashing>`_
+* `Manifold learning <http://scikit-learn.org/stable/modules/manifold.html>`_
+
 
 
 Machine Learning
@@ -302,6 +322,14 @@ Deep Learning
 * `Tutorial: Learning Deep Architectures <http://www.cs.toronto.edu/~rsalakhu/deeplearning/yoshua_icml2009.pdf>`_
 * `Deep Learning <https://en.wikipedia.org/wiki/Deep_learning>`_ (wikipédia)
 
+*Lectures deep text*
+
+* `Efficient Estimation of Word Representations in Vector Space <http://arxiv.org/abs/1301.3781>`_, Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean,
+* `Distributed Representations of Words and Phrases and their Compositionality <http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf>`_, Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, Jeff Dean,
+* `word2vec Parameter Learning Explained <http://arxiv.org/abs/1411.2738>`_, Xin Rong,
+* `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
+
+
 Reinforcement Learning
 ++++++++++++++++++++++
 
@@ -437,6 +465,9 @@ Notion abordées :
 *Lectures*
 
 * :ref:`l-python_cplusplus`
+* `sklearn-compiledtrees <https://github.com/ajtulloch/sklearn-compiledtrees/>`_ : 
+  création d'une implémentation C++ de la fonction de décision d'un arbre de décision entraîné avec
+  scikit-learn
   
 
 Timeseries - Séries temporelles
@@ -453,6 +484,16 @@ Timeseries - Séries temporelles
 
 * `Time series analysis with pandas <http://earthpy.org/pandas-basics.html>`_
 * `Consistent Algorithms for Clustering Time Series <http://www.jmlr.org/papers/volume17/khaleghi16a/khaleghi16a.pdf>`_
+
+Images
+======
+
+(à venir)
+
+*Lectures*
+
+* `VIGRA <https://github.com/ukoethe/vigra>`_
+* `opencv <http://opencv.org/>`_
 
 
 .. _l-puzzlealgo2A:
@@ -755,6 +796,7 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
     :tag: plus
     
     utilisation du module ctypes pour les import C++
+    + un exemple de `sklearn-compiledtrees <https://github.com/ajtulloch/sklearn-compiledtrees/>`_
 
 .. todoext::
     :title: multi-label, coverage_error
@@ -763,9 +805,36 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
     fonction `coverage-error <http://scikit-learn.org/stable/modules/model_evaluation.html#coverage-error>`_,
     lire `Mining Multi-label Data <http://lpis.csd.auth.gr/publications/tsoumakas09-dmkdh.pdf>`_
 
+.. todoext::
+    :title: ajouter projections
+    :tag: plus
+    
+    parler plus précisément des projections, de la réduction des dimensions
 
+.. todoext::
+    :title: HMM
+    :tag: plus
+    
+    parler de Modèles de Markov cachés HMM avec des mélanges de gaussiennes
+    pour analyser les séries temporelles
+    `hmmlearn <https://github.com/hmmlearn/hmmlearn/blob/master/>`_,
+    `seqlearn <https://github.com/larsmans/seqlearn>`_,
+    `pomegranate <https://github.com/jmschrei/pomegranate>`_
 
-
+.. todoext::
+    :title: modules, framework à regarder
+    :tag: plus
+    
+    * `REP <https://github.com/yandex/rep>`_
+    * `TPOT <https://github.com/rhiever/tpot>`_
+    * `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
+    
+    * `msmbuilder <http://msmbuilder.org/3.6.0/decomposition.html>`_
+    * `sparkit-learn <https://github.com/lensacom/sparkit-learn>`_
+    * `kmodes <https://github.com/nicodv/kmodes>`_
+    * `hdbscan <https://github.com/scikit-learn-contrib/hdbscan>`_
+    * `sacred <https://github.com/IDSIA/Sacred>`_
+    
 
 
 
