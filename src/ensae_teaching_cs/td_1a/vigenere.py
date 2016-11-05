@@ -209,7 +209,7 @@ def CasseVigenere(message):
     @param      message     message codé
     @return                 message décodé (sans la clé)
     """
-    l = DecodeVigenereLongueurCle(message)
-    cle = DecodeVigenereCle(message, l)
+    ld = DecodeVigenereLongueurCle(message)
+    cle = DecodeVigenereCle(message, ld)
     decode = DecodeVigenere(message, cle)
     return decode

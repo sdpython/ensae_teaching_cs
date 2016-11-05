@@ -56,5 +56,6 @@ class TestModulesImport(unittest.TestCase):
         map_osm.save(outfile=outfile)
         assert os.path.exists(outfile)
 
+
 if __name__ == "__main__":
     unittest.main()

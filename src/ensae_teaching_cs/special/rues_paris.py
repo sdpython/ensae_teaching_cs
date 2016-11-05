@@ -458,29 +458,29 @@ def _delete_edge(edges_from, n, to):
     @param      to              second vertex
     @return                     the edge
     """
-    l = edges_from[to]
+    le = edges_from[to]
     f = None
-    for i, e in enumerate(l):
+    for i, e in enumerate(le):
         if (e[1] == to and e[2] == n) or (e[2] == to and e[1] == n):
             f = i
             break
 
     assert f is not None
-    del l[f]
-    if len(l) == 0:
+    del le[f]
+    if len(le) == 0:
         del edges_from[to]
 
-    l = edges_from[n]
+    le = edges_from[n]
     f = None
-    for i, e in enumerate(l):
+    for i, e in enumerate(le):
         if (e[1] == to and e[2] == n) or (e[2] == to and e[1] == n):
             f = i
             break
 
     assert f is not None
-    keep = l[f]
-    del l[f]
-    if len(l) == 0:
+    keep = le[f]
+    del le[f]
+    if len(le) == 0:
         del edges_from[n]
 
     return keep
@@ -502,18 +502,18 @@ def _explore_path(edges_from, begin):
         if n not in edges_from:
             # fin
             break
-        l = edges_from[n]
+        le = edges_from[n]
 
-        if len(l) == 1:
+        if len(le) == 1:
             h = 0
-            e = l[h]
+            e = le[h]
             to = e[1] if n != e[1] else e[2]
         else:
             to = None
             nb = 100
             while to is None or to == begin:
-                h = random.randint(0, len(l) - 1) if len(l) > 1 else 0
-                e = l[h]
+                h = random.randint(0, len(le) - 1) if len(le) > 1 else 0
+                e = le[h]
                 to = e[1] if n != e[1] else e[2]
                 nb -= 1
                 if nb < 0:

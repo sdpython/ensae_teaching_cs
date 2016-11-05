@@ -196,6 +196,7 @@ def exercice_particulier2():
     sol = Arrow_Hurwicz(f_df, contrainte, X0, p0, do_print=False)
     return sol
 
+
 if __name__ == "__main__":
     sol1 = exercice_particulier1()
     sol2 = exercice_particulier2()

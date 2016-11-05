@@ -241,9 +241,13 @@ prevres = False
 prevtok = "#"  # previous token
 defining = False  # check if previous toke was def or class
 # Are we somewhere between def/class and : (for default assignment formating)
+
+
 definingmode = False
 
 # Operator formating
+
+
 spaced_tokens = ["=", "==", ">", "<", ">=",
                  "<=", "+=", "-=", "<>", "!=", "&&", "||"]
 monospaced_tokens = [":", ";", ","]
@@ -605,6 +609,7 @@ def cmdLine():
         f.close()
     else:
         print(html)
+
 
 if __name__ == "__main__":
     import getopt

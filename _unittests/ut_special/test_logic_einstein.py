@@ -48,5 +48,6 @@ class TestSpecialLogic (unittest.TestCase):
         sol = str(en)
         assert "jaune     , norvegien , eau       , Dunhill   , chats" in sol
 
+
 if __name__ == "__main__":
     unittest.main()

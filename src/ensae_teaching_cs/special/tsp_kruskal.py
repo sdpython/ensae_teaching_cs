@@ -23,14 +23,14 @@ def construit_ville(n, x=1000, y=700):
     # deux villes ne pourront pas être plus proches que mind
     mind = math.sqrt(x * x + y * y) / (n * 0.75)
     # liste vide
-    l = []
+    lv = []
     while n > 0:
         # on tire aléatoirement les coordonnées d'une ville
         xx = x * random.random()
         yy = y * random.random()
         # on vérifie qu'elle n'est pas trop proche d'aucune autre ville
         ajout = True
-        for t in l:
+        for t in lv:
             d1 = t[0] - xx
             d2 = t[1] - yy
             d = math.sqrt(d1 * d1 + d2 * d2)
@@ -38,9 +38,9 @@ def construit_ville(n, x=1000, y=700):
                 ajout = False  # ville trop proche
         # si la ville n'est pas trop proche des autres, on l'ajoute à la liste
         if ajout:
-            l.append((xx, yy))
+            lv.append((xx, yy))
             n -= 1  # une ville en moins à choisir
-    return l
+    return lv
 
 
 def distance_euclidian(p1, p2):
@@ -310,12 +310,12 @@ def circuit_eulerien(villes, arbre, screen, pygame, fLOG):
         opvec = oppose_vecteur(vec)
         bl = None
         for k in range(0, len(arbre[bm])):
-            l = arbre[bm][k]
-            vec2 = vecteur_points(v, villes[l])
+            la = arbre[bm][k]
+            vec2 = vecteur_points(v, villes[la])
             if vec2 == (0.0, 0.0):
                 # same point, we keep the same direction
-                if l not in done:
-                    bl = l
+                if la not in done:
+                    bl = la
                     bvec = vec2
                     # no need to go further if the points are equal
                     break
@@ -330,7 +330,7 @@ def circuit_eulerien(villes, arbre, screen, pygame, fLOG):
                 angle = math.atan2(sin, cos)
             if angle > ma:
                 ma = angle
-                bl = l
+                bl = la
                 bvec = vec2
 
         if bl is not None:
@@ -1092,16 +1092,16 @@ def display_arbre(villes, arbre, mult=1, screen=None, pygame=None):
     """
     if mult == 2:
         color = 0, 255, 0
-        l = 4
+        li = 4
     else:
-        l = 1
+        li = 1
         color = 0, 0, 255
 
     for i in range(0, len(villes)):
         for j in arbre[i]:
             v = (villes[i][0] * mult, villes[i][1] * mult)
             vv = (villes[j][0] * mult, villes[j][1] * mult)
-            pygame.draw.line(screen, color, v, vv, l)
+            pygame.draw.line(screen, color, v, vv, li)
 
 
 def pygame_simulation(size=(800, 500), zone=20, length=10, max_iter=None,

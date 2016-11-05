@@ -69,5 +69,6 @@ class TestSudoku(unittest.TestCase):
         ps = sudoku2str(s)
         fLOG(ps)
 
+
 if __name__ == "__main__":
     unittest.main()

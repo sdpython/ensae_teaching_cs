@@ -147,8 +147,8 @@ class GraphDistance:
                     u, vertex_label.get(u, str(u)), weight_vertex)
             for e in edge_list:
                 i, j = e[:2]
-                l = "" if len(e) < 3 else e[2]
-                self.edges[i, j] = Edge(i, j, str(l), weight_edge)
+                ls = "" if len(e) < 3 else e[2]
+                self.edges[i, j] = Edge(i, j, str(ls), weight_edge)
             self._private__init__(add_loop, weight_vertex, weight_edge)
 
     def __getitem__(self, index):

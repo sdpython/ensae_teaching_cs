@@ -49,18 +49,16 @@ class TestFaqPandas(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        l = [dict(k1="a", k2="b", v=4, i=1),
-             dict(k1="a", k2="b", v=5, i=1),
-             dict(k1="a", k2="b", v=4, i=2),
-             dict(k1="b", k2="b", v=1, i=2),
-             dict(k1="b", k2="b", v=1, i=3),
-             ]
+        ld = [dict(k1="a", k2="b", v=4, i=1),
+              dict(k1="a", k2="b", v=5, i=1),
+              dict(k1="a", k2="b", v=4, i=2),
+              dict(k1="b", k2="b", v=1, i=2),
+              dict(k1="b", k2="b", v=1, i=3)]
 
         exp = [dict(k1="a", k2="b", v=4, i=1),
-               dict(k1="b", k2="b", v=1, i=2),
-               ]
+               dict(k1="b", k2="b", v=1, i=2)]
 
-        df = pandas.DataFrame(l)
+        df = pandas.DataFrame(ld)
         exp = pandas.DataFrame(exp)
 
         res = groupby_topn(df, by_keys=["k1", "k2"],

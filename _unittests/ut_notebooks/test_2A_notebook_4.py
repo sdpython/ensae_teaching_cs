@@ -84,5 +84,6 @@ class TestNotebookRunner2a_4 (unittest.TestCase):
                                 fLOG=fLOG, replacements=self.get_replacements())
         unittest_raise_exception_notebook(res, fLOG)
 
+
 if __name__ == "__main__":
     unittest.main()

@@ -53,7 +53,7 @@ class Corde (object):
     définition d'une corde, une liste de points
     """
 
-    def __init__(self, nb, p1, p2, m, k, g, f, l):
+    def __init__(self, nb, p1, p2, m, k, g, f, lo):
         """
         initialisation d'une corde
 
@@ -66,7 +66,7 @@ class Corde (object):
         @param          g           intensité de l'apesanteur,
                                     valeur positive
         @param          f           vitesse de freinage
-        @param          l           longueur de la corde
+        @param          lo          longueur de la corde
         """
         x1, y1 = p1[0], p1[1]
         x2, y2 = p2[0], p2[1]
@@ -79,7 +79,7 @@ class Corde (object):
             self.vitesse.append(Point(0, 0, 0))
         self.k = k * nb
         self.g = g
-        self.l = float(l) / (nb - 1)
+        self.lo = float(lo) / (nb - 1)
         self.f = f
 
     def force_point(self, i):
@@ -92,17 +92,17 @@ class Corde (object):
         # voisin de gauche
         dxdy = self.list[i].difference(self.list[i - 1])
         d = dxdy.norme()
-        if d > self.l:
-            dxdy.x = (d - self.l) / d * dxdy.x
-            dxdy.y = (d - self.l) / d * dxdy.y
+        if d > self.lo:
+            dxdy.x = (d - self.lo) / d * dxdy.x
+            dxdy.y = (d - self.lo) / d * dxdy.y
             x += self.k * dxdy.x
             y += self.k * dxdy.y
         # voisin de droite
         dxdy = self.list[i].difference(self.list[i + 1])
         d = dxdy.norme()
-        if d > self.l:
-            dxdy.x = (d - self.l) / d * dxdy.x
-            dxdy.y = (d - self.l) / d * dxdy.y
+        if d > self.lo:
+            dxdy.x = (d - self.lo) / d * dxdy.x
+            dxdy.y = (d - self.lo) / d * dxdy.y
             x += self.k * dxdy.x
             y += self.k * dxdy.y
         # freinage
@@ -200,7 +200,7 @@ def pygame_simulation(pygame, first_click=False, folder=None,
     dx = size[0] // 8
     dy = size[1] // 8
     c = Corde(nb, (dx, size[1] - dy), (size[0] - dx, size[1] - dy),
-              m=m, k=k, g=g, f=f, l=size[0])
+              m=m, k=k, g=g, f=f, lo=size[0])
 
     # numéro d'itération
     it = 0

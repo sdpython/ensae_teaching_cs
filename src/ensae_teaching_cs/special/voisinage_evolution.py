@@ -122,21 +122,21 @@ class Ville:
             i = random.randint(0, len(self.mat) - 1)
             j = random.randint(0, len(self.mat) - 1)
             k = i + random.randint(-1, 1)
-            l = j + random.randint(-1, 1)
-            if k == i and l == j:
+            l_ = j + random.randint(-1, 1)
+            if k == i and l_ == j:
                 continue
             x1 = max(0, k)
-            y1 = max(0, l)
+            y1 = max(0, l_)
             x2 = min(len(self.mat) - 1, k)
-            y2 = min(len(self.mat) - 1, l)
+            y2 = min(len(self.mat) - 1, l_)
             if x1 != x2 or y1 != y2:
                 continue
 
             # calcul des deux voisinages
             v1 = self._voisinage(i, j, self.mat)
-            v2 = self._voisinage(k, l, self.mat)
+            v2 = self._voisinage(k, l_, self.mat)
             c = self.mat[i][j]
-            d = self.mat[k][l]
+            d = self.mat[k][l_]
 
             # c,d : leurs catégorie
 
@@ -145,20 +145,20 @@ class Ville:
                 if v1.get(c, 0) < v2.get(c, 0) and v1.get(d, 0) > v2.get(d, 0):
                     # premier cas: si l'un voisin a plus de voisins qui ressemblent à l'autre
                     # et réciproquement, ils échangent
-                    self.mat[k][l] = c
+                    self.mat[k][l_] = c
                     self.mat[i][j] = d
                     nb1 += 1
                 elif v1.get(c, 0) > v2.get(d, 0) * self.th2 and (not self.riche or c > d):
                     # deuxième cas : cas riche, le voisin le plus pauvre peut-être contaminé
                     # si la différence est importante
-                    self.mat[k][l] = c
+                    self.mat[k][l_] = c
                     nb2 += 1
             elif c == -1:
                 # celui qui n'est pas habité prend la couleur de l'autre
                 self.mat[i][j] = d
             elif d == -1:
                 # celui qui n'est pas habité prend la couleur de l'autre
-                self.mat[k][l] = c
+                self.mat[k][l_] = c
 
         return nb1, nb2
 

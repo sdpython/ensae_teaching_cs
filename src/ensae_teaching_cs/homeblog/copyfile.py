@@ -182,17 +182,17 @@ class CopyFileForFtp:
                     str(st.st_size), str(obj.size))
                 res = True
             else:
-                l = obj.mdate
+                l_ = obj.mdate
                 _m = st.st_mtime
                 d = CopyFileForFtp.convert_st_date_to_datetime(_m)
-                if d != l:
+                if d != l_:
                     # les dates sont différentes mais les fichiers peuvent être
                     # différents
                     if obj.checksum is not None:
                         ch = checksum_md5(file)
                         if ch != obj.checksum:
                             reason = "date/md5 %s != old date %s  md5 %s != %s" % (
-                                str(l), str(d), obj.checksum, ch)
+                                str(l_), str(d), obj.checksum, ch)
                             res = True
                         else:
                             res = False

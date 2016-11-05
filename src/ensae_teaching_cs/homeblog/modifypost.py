@@ -66,6 +66,7 @@ def Element_writexml(self, writer, indent="", addindent="", newl=""):
     else:
         writer.write("/>%s" % (newl))
 
+
 xml.dom.minidom._write_data = _write_data
 xml.dom.minidom.Text.writexml = Text_writexml
 xml.dom.minidom.Element.writexml = Element_writexml

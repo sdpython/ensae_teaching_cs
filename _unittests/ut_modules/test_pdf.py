@@ -104,5 +104,6 @@ class TestModulesPdfReader(unittest.TestCase):
         if "their inability" not in text:
             raise Exception(text)
 
+
 if __name__ == "__main__":
     unittest.main()

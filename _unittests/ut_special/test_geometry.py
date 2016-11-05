@@ -91,5 +91,6 @@ class TestGeometry(unittest.TestCase):
         for p, e in zip(convex, r):
             self.assertEqual(p, e)
 
+
 if __name__ == "__main__":
     unittest.main()

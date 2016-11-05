@@ -198,5 +198,6 @@ class TestGGplotGraph (unittest.TestCase):
         plt.close('all')
         fLOG("end")
 
+
 if __name__ == "__main__":
     unittest.main()

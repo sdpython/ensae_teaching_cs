@@ -62,5 +62,6 @@ class TestNotebookRunner2a_2_correction (unittest.TestCase):
                                 "correction" in n and "_2B" not in n, fLOG=fLOG)
         unittest_raise_exception_notebook(res, fLOG)
 
+
 if __name__ == "__main__":
     unittest.main()

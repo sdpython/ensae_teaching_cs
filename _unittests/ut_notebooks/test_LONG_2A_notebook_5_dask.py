@@ -63,5 +63,6 @@ class TestNotebookRunner2a_5_Dask (unittest.TestCase):
                                 fLOG=fLOG)
         unittest_raise_exception_notebook(res, fLOG)
 
+
 if __name__ == "__main__":
     unittest.main()

@@ -145,5 +145,6 @@ class TestDiff(unittest.TestCase):
 
             wait_event(pygame)
 
+
 if __name__ == "__main__":
     unittest.main()

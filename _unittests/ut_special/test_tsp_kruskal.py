@@ -82,5 +82,6 @@ class TestTspKruskal(unittest.TestCase):
         v = make_video(png, out, size=(800, 500), format="XVID", fps=20)
         assert v is not None
 
+
 if __name__ == "__main__":
     unittest.main()

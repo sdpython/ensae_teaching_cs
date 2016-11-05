@@ -963,9 +963,9 @@ class ProjectsRepository:
 
         groups = []
         for group in self.Groups:
-            l = os.path.join(self.get_group_location(group), link)
-            if os.path.exists(l):
-                c = os.path.relpath(l, self._location), group
+            lp = os.path.join(self.get_group_location(group), link)
+            if os.path.exists(lp):
+                c = os.path.relpath(lp, self._location), group
             else:
                 c = "file:///{0}".format(group), group
             nb_files = 0
@@ -1133,9 +1133,9 @@ class ProjectsRepository:
                     self.fLOG(
                         "ProjectsRepository.unzip_files [creating {0}]".format(folder))
                     os.mkdir(folder)
-                    l = unzip_files(
+                    lf = unzip_files(
                         name, folder, fLOG=self.fLOG, fvalid=fvalid)
-                    files.extend(l)
+                    files.extend(lf)
                 else:
                     # already done, we do not do it again
                     pass
@@ -1148,9 +1148,9 @@ class ProjectsRepository:
                     self.fLOG(
                         "ProjectsRepository.un7zip_files [creating {0}]".format(folder))
                     os.mkdir(folder)
-                    l = un7zip_files(
+                    lf = un7zip_files(
                         name, folder, fLOG=self.fLOG, fvalid=fvalid)
-                    files.extend(l)
+                    files.extend(lf)
                 else:
                     # already done, we do not do it again
                     pass
@@ -1163,9 +1163,9 @@ class ProjectsRepository:
                     self.fLOG(
                         "ProjectsRepository.ungzip_files [creating {0}]".format(folder))
                     os.mkdir(folder)
-                    l = ungzip_files(
+                    lf = ungzip_files(
                         name, folder, fLOG=self.fLOG, fvalid=fvalid)
-                    files.extend(l)
+                    files.extend(lf)
                 else:
                     # already done, we do not do it again
                     pass

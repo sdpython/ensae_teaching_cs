@@ -21,14 +21,14 @@ def construit_ville(n, x=1000, y=700):
     # deux villes ne pourront pas être plus proches que mind
     mind = math.sqrt(x * x + y * y) / (n * 0.75)
     # liste vide
-    l = []
+    lt = []
     while n > 0:
         # on tire aléatoirement les coordonnées d'une ville
         xx = x * random.random()
         yy = y * random.random()
         # on vérifie qu'elle n'est pas trop proche d'aucune autre ville
         ajout = True
-        for t in l:
+        for t in lt:
             d1 = t[0] - xx
             d2 = t[1] - yy
             d = math.sqrt(d1 * d1 + d2 * d2)
@@ -36,9 +36,9 @@ def construit_ville(n, x=1000, y=700):
                 ajout = False  # ville trop proche
         # si la ville n'est pas trop proche des autres, on l'ajoute à la liste
         if ajout:
-            l.append((xx, yy))
+            lt.append((xx, yy))
             n -= 1  # une ville en moins à choisir
-    return l
+    return lt
 
 
 def construit_liste_neurones(villes, nb=0):

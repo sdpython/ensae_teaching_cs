@@ -51,5 +51,6 @@ class TestClassiques (unittest.TestCase):
         a = racine_carree(2)
         assert a == 2 ** 0.5
 
+
 if __name__ == "__main__":
     unittest.main()

@@ -41,14 +41,14 @@ class RectangleImage(Rectangle):
         x = ab.scalaire(ap) / abn
         y = ad.scalaire(ap) / adn
         sx, sy = self.image.get_size()
-        k, l = int(x * sx), int(y * sy)
+        k, li = int(x * sx), int(y * sy)
         k = min(k, sx - 1)
-        l = min(l, sy - 1)
-        l = sy - l - 1
+        li = min(li, sy - 1)
+        li = sy - li - 1
         if not self.invertx:
-            c = self.image.get_at((k, l))
+            c = self.image.get_at((k, li))
         else:
-            c = self.image.get_at((sx - k - 1, l))
+            c = self.image.get_at((sx - k - 1, li))
         cl = Couleur(float(c[0]) / 255, float(c[1]) / 255, float(c[2]) / 255)
         return cl
 

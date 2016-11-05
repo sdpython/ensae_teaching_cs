@@ -208,10 +208,10 @@ class RuleEquivalence (Rule):
         """
         overrides method ``genere``
         """
-        l = []
+        lt = []
         for i in range(0, 5):
-            l.append([(i, self.set[0]), (i, self.set[1])])
-        return l
+            lt.append([(i, self.set[0]), (i, self.set[1])])
+        return lt
 
 
 class RuleVoisin (Rule):
@@ -231,11 +231,11 @@ class RuleVoisin (Rule):
         """
         overrides method ``genere``
         """
-        l = []
+        lt = []
         for i in range(0, 4):
-            l.append([(i, self.set[0]), (i + 1, self.set[1])])
-            l.append([(i + 1, self.set[0]), (i, self.set[1])])
-        return l
+            lt.append([(i, self.set[0]), (i + 1, self.set[1])])
+            lt.append([(i + 1, self.set[0]), (i, self.set[1])])
+        return lt
 
 
 class RuleAvant (Rule):
@@ -252,11 +252,11 @@ class RuleAvant (Rule):
         """
         overrides method ``genere``
         """
-        l = []
+        lt = []
         for j in range(1, 5):
             for i in range(0, j):
-                l.append([(i, self.set[0]), (j, self.set[1])])
-        return l
+                lt.append([(i, self.set[0]), (j, self.set[1])])
+        return lt
 
 
 class RuleEnsemble (Rule):
@@ -276,14 +276,14 @@ class RuleEnsemble (Rule):
         """
         overrides method ``genere``
         """
-        l = []
+        lt = []
         per = permutation(5)
         for p in per:
             tl = []
             for i in range(0, len(p)):
                 tl.append((i, self.set[p[i]]))
-            l.append(tl)
-        return l
+            lt.append(tl)
+        return lt
 
 
 class Enigma:
@@ -477,6 +477,7 @@ class Enigma:
 
         rule.utilise = False  # impossible
         return None
+
 
 if __name__ == "__main__":
     en = Enigma()

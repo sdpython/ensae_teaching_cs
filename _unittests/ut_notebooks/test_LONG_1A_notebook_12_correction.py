@@ -85,5 +85,6 @@ class TestNotebookRunner1a_correction_12 (unittest.TestCase):
                                 clean_function=TestNotebookRunner1a_correction_12.clean_function)
         unittest_raise_exception_notebook(res, fLOG)
 
+
 if __name__ == "__main__":
     unittest.main()

@@ -135,5 +135,6 @@ class TestLONGFaqWeb(unittest.TestCase):
         else:
             warnings.warn("opera not available on splinter")
 
+
 if __name__ == "__main__":
     unittest.main()

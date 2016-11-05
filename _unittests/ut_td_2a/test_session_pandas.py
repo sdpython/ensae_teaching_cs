@@ -65,5 +65,6 @@ class TestSessionPandas (unittest.TestCase):
         dfs2excel({"ecole": df1, "boite": df2}, ef)
         assert os.path.exists(ef)
 
+
 if __name__ == "__main__":
     unittest.main()

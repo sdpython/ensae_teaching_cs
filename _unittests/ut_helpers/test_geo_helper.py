@@ -52,5 +52,6 @@ class TestGeoHelper(unittest.TestCase):
         d2 = abs(x2 - 10.699505053975292) + abs(y2 - 50.85243395553585)
         assert d1 + d2 < 1e-8
 
+
 if __name__ == "__main__":
     unittest.main()

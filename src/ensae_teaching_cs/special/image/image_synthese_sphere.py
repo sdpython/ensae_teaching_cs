@@ -29,20 +29,20 @@ class Sphere (Objet):
         l2 = (s + delta) / vn
 
         if 0 < l1 < l2:
-            l = l1
+            lr = l1
         elif l1 < 0 < l2:
-            l = l2
+            lr = l2
         elif 0 < l2 < l1:
-            l = l2
+            lr = l2
         elif l2 < 0 < l1:
-            l = l1
+            lr = l1
         else:
-            l = None
+            lr = None
 
-        if l is None:
+        if lr is None:
             return None
 
-        v = r.origine + r.direction * l
+        v = r.origine + r.direction * lr
         return v
 
     def normale(self, p, rayon):

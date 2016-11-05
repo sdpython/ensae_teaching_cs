@@ -54,5 +54,6 @@ class TestPythonnetMagicCS(unittest.TestCase):
             fLOG(r, type(r))
             assert r == 4
 
+
 if __name__ == "__main__":
     unittest.main()

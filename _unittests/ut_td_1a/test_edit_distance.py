@@ -70,5 +70,6 @@ class TestEditDistance(unittest.TestCase):
         d, p = edit_distance(s1, s2)
         fLOG(d, p)
 
+
 if __name__ == "__main__":
     unittest.main()

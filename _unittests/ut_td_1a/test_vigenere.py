@@ -84,10 +84,10 @@ class TestVigenere (unittest.TestCase):
         cle = None   # on oublie la cle
 
         # on determine la longueur de la cle
-        l = DecodeVigenereLongueurCle(code)
+        lc = DecodeVigenereLongueurCle(code)
         # on determine la cle en suppose que la lettre E est la plus frequente
         # ne marche pas pour les textes anglais
-        cle_code = DecodeVigenereCle(code, l)
+        cle_code = DecodeVigenereCle(code, lc)
         # decode le texte
         decode = DecodeVigenere(code, cle_code)
 
@@ -101,7 +101,7 @@ class TestVigenere (unittest.TestCase):
         fLOG("------------------ vraie")
         fLOG(memoire)
         fLOG("------------------ cle trouve par Babbage")
-        fLOG("longueur ", l, " cle : ", cle_code)
+        fLOG("longueur ", lc, " cle : ", cle_code)
         if memoire == cle_code:
             fLOG("bonne cle")
         else:

@@ -69,5 +69,6 @@ class TestInterroExo(unittest.TestCase):
         df.to_excel(out)
         assert os.path.exists(out)
 
+
 if __name__ == "__main__":
     unittest.main()

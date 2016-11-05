@@ -24,8 +24,8 @@ class Facette (Objet):
         if r.direction.scalaire(self.vnorm) == 0:
             return None
         oa = self.a - r.origine
-        l = self.vnorm.scalaire(oa) / self.vnorm.scalaire(r.direction)
-        p = r.origine + r.direction * l
+        lv = self.vnorm.scalaire(oa) / self.vnorm.scalaire(r.direction)
+        p = r.origine + r.direction * lv
         return p
 
     def point_interieur(self, p):
