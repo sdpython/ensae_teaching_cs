@@ -139,6 +139,7 @@ Distribution des calculs, stratégies de stockage, SQL NoSQL
     :maxdepth: 2
 
     td_3a_s5_synthese
+    notebooks/hash_distribution
     
 *Lectures*
 
