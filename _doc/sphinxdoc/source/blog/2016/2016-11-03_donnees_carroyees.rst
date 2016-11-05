@@ -2,7 +2,7 @@
 
 .. blogpost::
     :title: Coordonnées des données carroyées
-    :keywords: carroyées, carreaux, INSEE, carroyage, Spatial reference system, EPSG, shapefiles
+    :keywords: carroyées, carreaux, INSEE, carroyage, Spatial reference system, EPSG, shapefiles, données carroyées
     :date: 2016-11-03
     :categories: plotting
     :lid: blog-donnees-carroyees-2016

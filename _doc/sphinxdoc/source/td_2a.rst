@@ -150,7 +150,7 @@ la visualisation animée de gros jeux de données telle que
 Cartes
 ++++++
 
-* :ref:`Système de coordonnées <blog-donnees-carroyees-2016>`_ (et données carroyées)
+* :ref:`Système de coordonnées <blog-donnees-carroyees-2016>` (et données carroyées)
 * format de cartes 
   `shapefiles <https://en.wikipedia.org/wiki/Shapefile>`_,
   `topoJSON <https://en.wikipedia.org/wiki/GeoJSON#TopoJSON>`_,
