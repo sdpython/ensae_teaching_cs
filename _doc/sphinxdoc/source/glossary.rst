@@ -405,7 +405,7 @@ Glossaire
         être appliquée à la branche centrale avant de pouvoir être propagée aux autres branches.
         
     Theano
-        Librairie de deep learning pour Python. 
+        Librairie de calcul GPU pour Python. 
         Voir `theano <http://deeplearning.net/software/theano/>`_.
         
     Torch
@@ -413,6 +413,13 @@ Glossaire
         Voir `Torch <http://torch.ch/>`_.
         Voir également `Torch vs Theano <http://fastml.com/torch-vs-theano/>`_.
         
+    transport
+        Théorie du transport, *m* usines, *n* entrepôts, on définit
+        :math:`c(i,j)` le coût de transport d'une usine à un entrepôt,
+        comment optimiser l'acheminement ? 
+        Lire `Transport optimal de mesure : coup de neuf pour un très vieux problème <http://images.math.cnrs.fr/pdf2004/Villani.pdf>`_
+        de Cédric Villani.
+    
     warnings
         Non-blocking error but it should be read and the cause removed.
         See `Python: Use Warnings! <http://www.arruda.blog.br/programacao/python-use-warnings/>`_.
