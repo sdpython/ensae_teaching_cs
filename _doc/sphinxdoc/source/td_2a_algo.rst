@@ -23,7 +23,7 @@ Idées brèves sur les algorithmes
       Javascript / C++ / etc, comprendre l'algorithmique et 
       les structures de données
 
-#. `Séance 2 <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance2.pdf>`_
+#. * `Programmation dynamique <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance2.pdf>`_
 
 #. Grands principes
 
@@ -32,8 +32,9 @@ Idées brèves sur les algorithmes
     * récurrence et programmation dynamique
     * solution optimale par morceaux
     
-#. `City Tour <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_tour.html>`_ 
-   (`solution <http://lesenfantscodaient.fr/notebooks/postier_chinois.html>`_)
+#. `Plus court chemin passant par toutes les rues d'une villes <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_tour.html>`_
+   (solution : `postier chinois <http://lesenfantscodaient.fr/notebooks/postier_chinois.html>`_)
     
 #. `Graphes et algorithmes <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance3.pdf>`_
     
+#. :ref:`l-algoculture-shortlist`

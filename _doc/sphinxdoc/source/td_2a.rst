@@ -504,14 +504,6 @@ Puzzles algorithmiques
 |pystatpng|
 
 
-*Présentations*
-
-* `Eléments d'Algorithmique <http://www.xavierdupre.fr/enseignement/complements/Seance4_algorithme.pdf>`_
-* `Programmation dynamique <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance2.pdf>`_
-
-* :ref:`l-np-complets`
-* :ref:`l-algoculture-shortlist`
-
 .. toctree::
 
     td_2a_algo
@@ -524,18 +516,11 @@ Puzzles algorithmiques
 
 .. toctree::
     :maxdepth: 2
-    
-    
+
     notebooks/_gs2a_puzzle
     
 Certains sont tirés de plusieurs sites dont
 `Google Code Jam <https://code.google.com/codejam/contests.html>`_.
-
-*Problèmes*
-    
-* `Plus court chemin passant par toutes les rues d'une villes <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_tour.html>`_
-  (solution : `postier chinois <http://lesenfantscodaient.fr/notebooks/postier_chinois.html>`_)
-
 
       
 *Lectures*
