@@ -161,9 +161,6 @@ du langage `PIG-latin <http://en.wikipedia.org/wiki/Pig_Latin>`_ dont la logique
 ressemble beaucoup à celle du `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_.
 Les outils Python [#fp1]_ simplifient la communication avec le cluster.
 
-Notebooks avec le langage PIG
-+++++++++++++++++++++++++++++
-
 .. toctree::
     :maxdepth: 2
     
@@ -205,8 +202,8 @@ Trois projets réalisés par les élèves lors de l'année 2014-2015 :
 
 
     
-Spark SQL
-+++++++++
+Map Reduce avec Spark SQL
+=========================
 
 (*à venir*)
 
@@ -223,7 +220,7 @@ Spark SQL
 .. _l-td3a-start:
 
 Getting started
-+++++++++++++++
+===============
 
 **PIG**
 
