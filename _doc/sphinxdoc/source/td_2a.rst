@@ -532,7 +532,11 @@ Certains sont tirés de plusieurs sites dont
 * :ref:`l-expose-explication` 
 * `Logique, modèles, calculs (INF 423) <http://www.enseignement.polytechnique.fr/informatique/INF423/i.php?n=Main.Poly>`_
 * `Notation de Landau <https://fr.wikipedia.org/wiki/Comparaison_asymptotique#La_famille_de_notations_de_Landau_O.2C_o.2C_.CE.A9.2C_.CF.89.2C_.CE.98.2C_.7E>`_
-
+* `Edmonds' Blossom Algorithm <https://stanford.edu/~rezab/dao/projects_reports/shoemaker_vare.pdf>`_
+  (`github <https://github.com/amyshoe/CME323-Project>`_),
+  `Blossom5 <http://pub.ist.ac.at/~vnk/papers/blossom5.pdf>`_,
+  `Fast and Simple Algorithms for Weighted Perfect Matching <http://e-collection.library.ethz.ch/eserv/eth:4711/eth-4711-01.pdf>`_
+* `La recherche mathématique en mots et en images (CNRS) <http://images.math.cnrs.fr/>`_
 
 .. _l-td2a-biblio:
 
