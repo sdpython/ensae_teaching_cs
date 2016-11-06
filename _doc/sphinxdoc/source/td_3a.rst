@@ -140,6 +140,7 @@ Distribution des calculs, stratégies de stockage, SQL NoSQL
 
     td_3a_s5_synthese
     notebooks/hash_distribution
+    notebooks/map_reduce_timeseries
     
 *Lectures*
 
