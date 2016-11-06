@@ -508,18 +508,29 @@ Puzzles algorithmiques
 
 * `Eléments d'Algorithmique <http://www.xavierdupre.fr/enseignement/complements/Seance4_algorithme.pdf>`_
 * `Programmation dynamique <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance2.pdf>`_
-* `Graphes et algorithmes <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance3.pdf>`_
+
+* :ref:`l-np-complets`
+* :ref:`l-algoculture-shortlist`
+
+.. toctree::
+
+    td_2a_algo
+    specials/nb_omplet
+    specials/algorithm_culture
+    specials/problem_solved
+
     
 *Notebooks*
-
-Ces problèmes sont tirés de plusieurs sites dont
-`Google Code Jam <https://code.google.com/codejam/contests.html>`_.
 
 .. toctree::
     :maxdepth: 2
     
+    
     notebooks/_gs2a_puzzle
     
+Certains sont tirés de plusieurs sites dont
+`Google Code Jam <https://code.google.com/codejam/contests.html>`_.
+
 *Problèmes*
     
 * `Plus court chemin passant par toutes les rues d'une villes <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_tour.html>`_
@@ -529,12 +540,13 @@ Ces problèmes sont tirés de plusieurs sites dont
       
 *Lectures*
 
+* `Profiling avec Python <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/completion_profiling.html?highlight=profiling>`_
 * types de complexité : `force brute <http://fr.wikipedia.org/wiki/Recherche_exhaustive>`_, 
   `glouton <http://fr.wikipedia.org/wiki/Algorithme_glouton>`_, `dynamique <http://fr.wikipedia.org/wiki/Programmation_dynamique>`_
 * :ref:`l-algoculture`
 * :ref:`l-expose-explication` 
-
-
+* `Logique, modèles, calculs (INF 423) <http://www.enseignement.polytechnique.fr/informatique/INF423/i.php?n=Main.Poly>`_
+* `Notation de Landau <https://fr.wikipedia.org/wiki/Comparaison_asymptotique#La_famille_de_notations_de_Landau_O.2C_o.2C_.CE.A9.2C_.CF.89.2C_.CE.98.2C_.7E>`_
 
 
 .. _l-td2a-biblio:

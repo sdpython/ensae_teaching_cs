@@ -79,6 +79,8 @@ humain saisisse rapidement la différence ?
 
 Tout ce qui suit vous donnera des idées.
 
+.. _l-algoculture-shortlist:
+
 Catalogue
 +++++++++
 
@@ -148,10 +150,18 @@ Catalogue
     * `programmation fonctionnelle <http://fr.wikipedia.org/wiki/Programmation_fonctionnelle>`_ **déf**
     * `récursivité <http://fr.wikipedia.org/wiki/R%C3%A9cursivit%C3%A9>`_ **déf**
     
+Problèmes NP-complets
++++++++++++++++++++++
+
+* `21 problèmes NP-complet de Karp <https://fr.wikipedia.org/wiki/21_probl%C3%A8mes_NP-complets_de_Karp>`_
+* `Liste de problèmes NP complets <https://fr.wikipedia.org/wiki/Liste_de_probl%C3%A8mes_NP-complets>`_
+  (`en <https://en.wikipedia.org/wiki/List_of_NP-complete_problems>`_)
+* :ref:`l-np-complets`    
     
 Liens
 +++++
 
+* :ref:`l-problem-solved`
 * `Liste d'algorithme sur Wikipédia <http://en.wikipedia.org/wiki/List_of_algorithms>`_ 
   (`version française <http://fr.wikipedia.org/wiki/Liste_d%27algorithmes>`_)
 * `List of machine learning concepts <http://en.wikipedia.org/wiki/List_of_machine_learning_concepts>`_

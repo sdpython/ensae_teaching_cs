@@ -19,6 +19,7 @@ qu'on peut résoudre grâce à un algorithme et un peu d'imagination.
     :maxdepth: 1
     
     specials/algorithm_culture
+    specials/np_complet
     
 Algorithmes illustrés
 =====================
