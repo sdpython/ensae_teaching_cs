@@ -7,11 +7,12 @@
 
 import os
 import sys
+import warnings
 
 from pyquickhelper.loghelper import run_cmd, noLOG
 
 
-class CustomCythonError:
+class CustomCythonError(Exception):
     """
     raised by function @see fn compile_cython_single_script
     when a script cannot be compiled with Cython
@@ -19,12 +20,13 @@ class CustomCythonError:
     pass
 
 
-def compile_cython_single_script(script, fLOG=noLOG):
+def compile_cython_single_script(script, skip_warn=True, fLOG=noLOG):
     """
     This function considers a script ``.pyx``, writes
     a the proper setup file, and compiles it.
 
     @param      script      filename
+    @param      skip_warn   skip warnings
     @param      fLOG        logging function
 
     The function applies the steps described in the basic tutorial
@@ -71,13 +73,16 @@ def compile_cython_single_script(script, fLOG=noLOG):
     if not os.path.exists(script):
         raise FileNotFoundError(script)
 
+    name = os.path.split(script)[-1]
+    namen = os.path.splitext(name)[0]
     setup_script = """
         from distutils.core import setup
         from Cython.Build import cythonize
         setup(
-            ext_modules = cythonize("{0}")
+            name='{1}',
+            ext_modules=cythonize("{0}")
         )
-        """.replace("        ", "").format(os.path.split(script)[-1])
+        """.replace("        ", "").format(name, namen)
 
     current, name = os.path.split(script)
     filename = os.path.join(os.path.dirname(script), name + ".setup.py")
@@ -88,7 +93,20 @@ def compile_cython_single_script(script, fLOG=noLOG):
 
     out, err = run_cmd(cmd, wait=True, fLOG=fLOG, change_path=current)
     if len(err) > 0:
-        raise CustomCythonError(
-            "CMD:\n{0}\nOUT:\n{1}ERR:\n{2}".format(cmd, out, err))
-
+        if skip_warn:
+            do_raise = False
+            lines = err.split("\n")
+            for line in lines:
+                if len(line) > 0 and not line.startswith(" "):
+                    if "UserWarning" not in line:
+                        do_raise = True
+                        break
+        if do_raise:
+            with open(script, "r", encoding="utf-8") as f:
+                content = f.read()
+            raise CustomCythonError(
+                "CMD:\n{0}\nOUT:\n{1}ERR:\n{2}\nSCRIPT:\n{3}".format(cmd, out, err, content))
+        else:
+            warnings.warn(
+                "CMD:\n{0}\nOUT:\n{1}ERR:\n{2}".format(cmd, out, err))
     return out

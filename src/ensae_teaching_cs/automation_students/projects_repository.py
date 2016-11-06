@@ -1198,7 +1198,8 @@ class ProjectsRepository:
                     nb2html(name, out, exc=False)
                     files.append(out)
                 except Exception as e:
-                    warnings.warn("unable to convert a notebook '{0}' because of {1}".format(name, e))
+                    warnings.warn(
+                        "unable to convert a notebook '{0}' because of {1}".format(name, e))
             elif ext == ".py":
                 self.fLOG(
                     "ProjectsRepository.convert_files [convert {0}]".format(name))
