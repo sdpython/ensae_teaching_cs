@@ -23,6 +23,7 @@ mpld3
 nbformat
 nbpresent
 networkx
+nltk
 numba
 numpy
 odo
