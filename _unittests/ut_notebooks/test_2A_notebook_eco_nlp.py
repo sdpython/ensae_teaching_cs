@@ -82,11 +82,9 @@ class TestNotebookRunner2aEcoNLP(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-
         if is_travis_or_appveyor():
             # requires credentials
             return
-
         self.common_notebook_runner_2a_eco_nlp_enonce("enonce")
 
     def test_notebook_runner_2a_eco_nlp_correction(self):
@@ -94,6 +92,8 @@ class TestNotebookRunner2aEcoNLP(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
+        import nltk
+        nltk.download('stopwords')
         self.common_notebook_runner_2a_eco_nlp_enonce("correction")
 
 
