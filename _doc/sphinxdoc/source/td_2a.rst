@@ -359,7 +359,7 @@ Modèles bayésiens
 * `A Bayesian Approximation Method for Online Ranking <http://jmlr.csail.mit.edu/papers/volume12/weng11a/weng11a.pdf>`_
 * `rtan case studies <http://mc-stan.org/documentation/case-studies>`_
 
-
+.. _l-td2a-nlp:
 
 Traitement du langage
 =====================

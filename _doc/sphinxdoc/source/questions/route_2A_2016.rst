@@ -74,7 +74,7 @@ Les exercices doivent être choisis sur le site
       - :ref:`l-puzzlealgo2A`, voir notes
       - :ref:`l-puzzlealgo2A`, voir notes ci-dessous
       - expression régulière, format JSON *(à venir)*
-      - NLTK, statistiques textuelles *(à venir)*
+      - NLTK, :ref:`statistiques textuelles <l-td2a-nlp>`
     * - 14/11
       - `travail d'équipe, réarranger la carte électorale <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/_gs_gerrymandering.html>`_
       - retour sur la compétition ML **cours commun**
