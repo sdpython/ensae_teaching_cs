@@ -213,7 +213,7 @@ if is_local() and "custom_left" not in sys.argv:
         covtoken=("5e030cea-7d27-46e7-bb2e-2fc3db0ae9f6",
                   "'_UT_35_std' in outfile"),
         nbformats=['ipynb', 'html', 'python',
-                   'rst', 'slides', 'docx', 'pdf'],
+                   'rst', 'slides', 'pdf'],
         layout=layout,
         fLOG=logging_function)
 
