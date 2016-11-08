@@ -189,3 +189,16 @@ d'autres méthodes.
 On pourra également regarder :
 `Linear Coupling: An Ultimate Unification of Gradient and Mirror Descent <http://arxiv.org/abs/1407.1537>`_
 et `Revisiting Nesterov’s Acceleration <https://blogs.princeton.edu/imabandit/2015/06/30/revisiting-nesterovs-acceleration/>`_.
+
+
+.. _l-ml-reg-geod:
+
+Régression à base de plus proches voisins (2017)
+------------------------------------------------
+
+.. index:: régression, plus proche voisins
+
+Il faut implémenter la méthode de l'article qui suit :
+
+* `Minimax-optimal semi-supervised regression on unknown manifolds <https://arxiv.org/abs/1611.02221>`_
+

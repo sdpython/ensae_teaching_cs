@@ -113,7 +113,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
 
 def setup_jenkins_server(js, github="sdpython", modules=default_jenkins_jobs(),
                          overwrite=False, location=None, prefix="",
-                         delete_first=False, fLOG=noLOG):
+                         delete_first=False, disable_schedule=False, fLOG=noLOG):
     """
     Set up many jobs on Jenkins
 
@@ -127,6 +127,7 @@ def setup_jenkins_server(js, github="sdpython", modules=default_jenkins_jobs(),
     @param      location                None for default or a local folder
     @param      prefix                  add a prefix to the name
     @param      delete_first            remove all jobs first
+    @param      disable_schedule        disable schedule for all jobs
     @param      fLOG                    logging function
     @return                             list of created jobs
 
@@ -139,5 +140,5 @@ def setup_jenkins_server(js, github="sdpython", modules=default_jenkins_jobs(),
     """
     r = setup_jenkins_server_yml(js, github=github, modules=modules, get_jenkins_script=None,
                                  overwrite=overwrite, location=location, prefix=prefix,
-                                 delete_first=delete_first)
+                                 delete_first=delete_first, disable_schedule=disable_schedule)
     return r

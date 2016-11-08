@@ -164,8 +164,12 @@ Cartes
   `Find Data <https://bost.ocks.org/mike/map/#finding-data>`_
 
 
+Transformations des données
+===========================
+
+
 Projections, réduction des dimensions
-=====================================
++++++++++++++++++++++++++++++++++++++
 
 (à venir)
 
@@ -249,10 +253,6 @@ Pratique du machine learning, problème de données
 
 *Recherche*
 
-* `Confidence Intervals for Random Forests: The Jackknife and the Infinitesimal Jackknife <http://jmlr.csail.mit.edu/papers/volume15/wager14a/wager14a.pdf>`_
-* `Making Tree Ensembles Interpretable <https://arxiv.org/pdf/1606.05390v1.pdf>`_
-* `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
-* `Understanding variable importances in forests of randomized trees <http://papers.nips.cc/paper/4928-understanding-variable-importances-in-forests-of-randomized-trees.pdf>`_
 * `XGBoost: A Scalable Tree Boosting System <https://arxiv.org/pdf/1603.02754.pdf>`_
 * `Classification of Imbalanced Data with a Geometric Digraph Family <http://www.jmlr.org/papers/volume17/15-604/15-604.pdf>`_
 * `On the Influence of Momentum Acceleration on OnlineLearning <http://www.jmlr.org/papers/volume17/16-157/16-157.pdf>`_
@@ -310,6 +310,8 @@ Deep Learning
   
 *Lectures*
 
+* `Deep learning architecture diagrams <http://fastml.com/deep-learning-architecture-diagrams/>`_
+* `Factorized Convolutional Neural Networks <https://arxiv.org/abs/1608.04337>`_
 * `Deep Residual Learning for Image Recognition <https://arxiv.org/pdf/1512.03385v1.pdf>`_
 * `Deep Learning <http://www-labs.iro.umontreal.ca/~bengioy/dlbook/>`_, Yoshua Bengio, Ian Goodfellow and Aaron Courville
 * `LeNet5 <http://yann.lecun.com/exdb/lenet/>`_
@@ -346,6 +348,21 @@ ou *apprentissage par renforcement*
 * `RLPy: A Value-Function-Based Reinforcement Learning Framework for Education and Research <http://www.jmlr.org/papers/volume16/geramifard15a/geramifard15a.pdf>`_
 
 
+Bandits
++++++++
+
+*(année prochaine)*
+
+*Lectures*
+
+* `Bandit theory, part I <http://blogs.princeton.edu/imabandit/2016/05/11/bandit-theory-part-i/>`_
+* `Bandit theory, part II <http://blogs.princeton.edu/imabandit/2016/05/13/bandit-theory-part-ii/>`_
+* `Kernel-based methods for bandit convex optimization, part 1 <http://blogs.princeton.edu/imabandit/2016/08/06/kernel-based-methods-for-bandit-convex-optimization-part-1/>`_
+* `Kernel-based methods for bandit convex optimization, part 2 <http://blogs.princeton.edu/imabandit/2016/08/09/kernel-based-methods-for-convex-bandits-part-2/>`_
+* `Kernel-based methods for bandit convex optimization, part 3 <http://blogs.princeton.edu/imabandit/2016/08/10/kernel-based-methods-for-convex-bandits-part-3/>`_
+* `Learning to Interact <http://hunch.net/~jl/interact.pdf>`_ (John Langford)
+
+
 
 Modèles bayésiens
 +++++++++++++++++
@@ -358,6 +375,22 @@ Modèles bayésiens
 
 * `A Bayesian Approximation Method for Online Ranking <http://jmlr.csail.mit.edu/papers/volume12/weng11a/weng11a.pdf>`_
 * `rtan case studies <http://mc-stan.org/documentation/case-studies>`_
+
+
+Interprétabilité des modèles
+++++++++++++++++++++++++++++
+
+*(à venir)*
+
+*Lectures*
+
+* `Importance Weighting Without Importance Weights: An Effcient Algorithm for Combinatorial Semi-Bandits <http://jmlr.org/papers/volume17/15-091/15-091.pdf>`_
+* `Making Tree Ensembles Interpretable <https://arxiv.org/pdf/1606.05390v1.pdf>`_
+* `Understanding variable importances in forests of randomized trees <http://papers.nips.cc/paper/4928-understanding-variable-importances-in-forests-of-randomized-trees.pdf>`_
+* `Confidence Intervals for Random Forests: The Jackknife and the Infinitesimal Jackknife <http://jmlr.csail.mit.edu/papers/volume15/wager14a/wager14a.pdf>`_
+* `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
+
+
 
 .. _l-td2a-nlp:
 
@@ -381,6 +414,54 @@ Traitement du langage
   pour guider les utilisateurs plus rapidement vers le produit qu'ils recherchent.
 * `Text Understanding from Scratch <https://arxiv.org/abs/1502.01710>`_, 
   Xiang Zhang, Yann LeCun
+  
+
+
+Timeseries - Séries temporelles
+===============================
+
+*Notebooks*
+
+.. toctree::
+    :maxdepth: 2
+
+    notebooks/_gs2a_timeseries
+    
+*Lectures*
+
+* `Time series analysis with pandas <http://earthpy.org/pandas-basics.html>`_
+* `Consistent Algorithms for Clustering Time Series <http://www.jmlr.org/papers/volume17/khaleghi16a/khaleghi16a.pdf>`_
+* `Learning Time Series Detection Models from Temporally Imprecise Labels <https://arxiv.org/abs/1611.02258>`_
+
+Images
+======
+
+(à venir)
+
+*Lectures*
+
+* `VIGRA <https://github.com/ukoethe/vigra>`_
+* `opencv <http://opencv.org/>`_
+
+
+Graphes et réseaux
+==================
+
+*(année prochaine)*
+
+*Lectures*
+
+* `Basic models and questions in statistical network analysis <https://arxiv.org/abs/1609.03511>`_
+
+
+
+Techniques de programmation et algorithmes
+==========================================
+
+.. contents::
+    :local:
+    :depth: 2
+    
 
 .. _l-2a-scraping:
 
@@ -402,11 +483,11 @@ Webscrapping et API
 * `API de geocoding <https://www.data.gouv.fr/fr/faq/reuser/>`_
 * `adresse.data.gouv.fr <https://adresse.data.gouv.fr/csv/>`_
 
-    
+
 .. _l-cluster-non-struct-2a:
 
 Big data sans cluster, données non structurées
-==============================================
+++++++++++++++++++++++++++++++++++++++++++++++
 
 |pystatpng|
 
@@ -435,19 +516,43 @@ Big data sans cluster, données non structurées
   données hétérogènes)
 - Base de données non relationnelles dont `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_
 - :ref:`l-td25asynthese`
+- `Un tools d’itertour, ou l’inverse <http://sametmax.com/un-tools-ditertour-ou-linverse/>`_
 
 
 .. _l-2a-cplusplus-para-serie:
 
-Parallélisation, C++, R, sérialisation
-======================================
+C++, R
+++++++
+
+|pystatpng|
+
+Notion abordées :
+
+* utiliser un autre langage pour accélérer les calculs
+  
+*Notebooks*
+  
+.. toctree::
+    :maxdepth: 2
+    
+    notebooks/_gs2a_langages
+    notebooks/_gs1a_D_calcul_dicho_cython
+
+*Lectures*
+
+* :ref:`l-python_cplusplus`
+* `sklearn-compiledtrees <https://github.com/ajtulloch/sklearn-compiledtrees/>`_ : 
+  création d'une implémentation C++ de la fonction de décision d'un arbre de décision entraîné avec
+  scikit-learn
+  
+Parallélisation, sérialisation
+++++++++++++++++++++++++++++++
 
 |pystatpng|
 
 Notion abordées :
 
 * techniques de parallélisation
-* utiliser un autre langage pour accélérer les calculs
 * sérialisation : le fait de convertir n'importe quelle structure de données en un
   tableau d'octets, c'est indispensable pour la communication entre deux machines,
   deux processus
@@ -458,48 +563,14 @@ Notion abordées :
     :maxdepth: 2
     
     notebooks/_gs2a_parallelisation
-    notebooks/_gs2a_langages
     notebooks/_gs2a_serialisation
-    notebooks/_gs1a_D_calcul_dicho_cython
 
-*Lectures*
-
-* :ref:`l-python_cplusplus`
-* `sklearn-compiledtrees <https://github.com/ajtulloch/sklearn-compiledtrees/>`_ : 
-  création d'une implémentation C++ de la fonction de décision d'un arbre de décision entraîné avec
-  scikit-learn
-  
-
-Timeseries - Séries temporelles
-===============================
-
-*Notebooks*
-
-.. toctree::
-    :maxdepth: 2
-
-    notebooks/_gs2a_timeseries
-    
-*Lectures*
-
-* `Time series analysis with pandas <http://earthpy.org/pandas-basics.html>`_
-* `Consistent Algorithms for Clustering Time Series <http://www.jmlr.org/papers/volume17/khaleghi16a/khaleghi16a.pdf>`_
-
-Images
-======
-
-(à venir)
-
-*Lectures*
-
-* `VIGRA <https://github.com/ukoethe/vigra>`_
-* `opencv <http://opencv.org/>`_
 
 
 .. _l-puzzlealgo2A:
       
 Puzzles algorithmiques
-======================
+++++++++++++++++++++++
 
 |pystatpng|
 
@@ -522,7 +593,7 @@ Puzzles algorithmiques
 Certains sont tirés de plusieurs sites dont
 `Google Code Jam <https://code.google.com/codejam/contests.html>`_.
 
-      
+
 *Lectures*
 
 * `Profiling avec Python <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/completion_profiling.html?highlight=profiling>`_
@@ -537,6 +608,10 @@ Certains sont tirés de plusieurs sites dont
   `Blossom5 <http://pub.ist.ac.at/~vnk/papers/blossom5.pdf>`_,
   `Fast and Simple Algorithms for Weighted Perfect Matching <http://e-collection.library.ethz.ch/eserv/eth:4711/eth-4711-01.pdf>`_
 * `La recherche mathématique en mots et en images (CNRS) <http://images.math.cnrs.fr/>`_
+
+  
+  
+
 
 .. _l-td2a-biblio:
 

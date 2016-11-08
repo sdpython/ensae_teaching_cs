@@ -40,6 +40,11 @@ Les stratégies dépendent de paramètres qu'on optimise en utilisant des donné
 Il faut toujours faire attention à utiliser les données jusqu'à la date *t* pour
 prédire les actions pour la date *t+1*.
 
+Notebook conseillés :
+
+* `An Introduction to Stock Market Data Analysis with Python (Part 1) <http://blog.yhat.com/posts/stock-data-python.html>`_
+* `An Introduction to Stock Market Data Analysis with Python (Part 2) <http://blog.yhat.com/posts/stock-data-python-pt2.html>`_
+
 D'autres idées avec d'autres lectures :
 
 * `Random walks down Wall Street - Stochastic Processes in Python  <http://www.stuartreid.co.za/random-walks-down-wall-street-stochastic-processes-in-python/>`_,

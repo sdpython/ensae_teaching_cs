@@ -71,7 +71,7 @@ Crypographie, block chain
 +++++++++++++++++++++++++
 
 * commitment et signature (RSA)
-* Tiers de confiance et distributed consensus (PAXOS)
+* Tiers de confiance et distributed consensus (PAXOS), `RAFT <https://raft.github.io/>`_
 * Block chain, Bitcoin, Attque (Incentive, long term consensus, la probabilité qu'on soit en désaccord
   décroît avec le temps, monnaie stable, sûre, anonyme ?)
 * `Ethereum <https://en.wikipedia.org/wiki/Ethereum>`_

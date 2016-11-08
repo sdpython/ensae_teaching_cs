@@ -166,3 +166,9 @@ Liens
   (`version française <http://fr.wikipedia.org/wiki/Liste_d%27algorithmes>`_)
 * `List of machine learning concepts <http://en.wikipedia.org/wiki/List_of_machine_learning_concepts>`_
 * `Machine Learning, Statistiques et Programmation <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
+
+Articles sur des algorithmes
+++++++++++++++++++++++++++++
+
+* `Blossom5 <http://pub.ist.ac.at/~vnk/papers/blossom5.pdf>`_ **matching**
+* `Local max-cut in smoothed polynomial time <http://blogs.princeton.edu/imabandit/2016/10/24/local-max-cut-in-smoothed-polynomial-time/>`_ **max-cut**

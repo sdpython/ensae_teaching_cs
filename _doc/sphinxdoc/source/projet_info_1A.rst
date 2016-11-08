@@ -72,6 +72,7 @@ Liste exhaustive :
 #. ML : :ref:`l-data-nuage`
 #. ML : :ref:`l-data-twitter`
 #. ML : :ref:`l-data-whoosh`
+#. ML : :ref:`l-ml-reg-geod`
 #. Finance : :ref:`l-fi-trend`
 #. Finance : :ref:`l-fi-port`
 #. Finance : :ref:`l-fi-pair`
