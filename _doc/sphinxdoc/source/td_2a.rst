@@ -391,6 +391,21 @@ Interprétabilité des modèles
 * `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
 
 
+Auto-Learning
++++++++++++++
+
+*(à venir)*
+
+*Modules*
+
+* `REP <https://github.com/yandex/rep>`_
+* `TPOT <https://github.com/rhiever/tpot>`_
+* `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
+
+*Lectures*
+
+* `Efficient and Robust Automated Machine Learning <http://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning.pdf>`_
+
 
 .. _l-td2a-nlp:
 
