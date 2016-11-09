@@ -98,6 +98,12 @@ Notions abordées :
     notebooks/_gs2a_dataframe
     notebooks/_gs2a_sql    
     notebooks/_gs2a_magic_commands
+    
+*Modules*
+
+* `pandas <http://pandas.pydata.org/>`_
+* `numpy <http://www.numpy.org/>`_, `scipy <https://www.scipy.org/>`_
+
 
 .. _l-visualisation-td2a:
 
@@ -105,6 +111,10 @@ Visualisation
 =============
 
 |pystatpng| |pyecopng|
+
+.. contents::
+    :local:
+    :depth: 1
 
 Graphes
 +++++++
@@ -147,6 +157,13 @@ la visualisation animée de gros jeux de données telle que
 
 * Lire :ref:`Javascript et traitement de données <blog-js-data>`
 
+*Modules*
+
+* `matplotlib <http://matplotlib.org/>`_
+* `seaborn <https://github.com/mwaskom/seaborn>`_
+* `bokeh <http://bokeh.pydata.org/en/latest/>`_
+* `bqplot <https://github.com/bloomberg/bqplot>`_
+
 Cartes
 ++++++
 
@@ -162,10 +179,20 @@ Cartes
 * sources :
   `DataMaps <http://datamaps.github.io/>`_,
   `Find Data <https://bost.ocks.org/mike/map/#finding-data>`_
+  
+* `basemap <http://matplotlib.org/basemap/>`_
+* `cartopy <http://scitools.org.uk/cartopy/>`_
+* `pyshp <https://pypi.python.org/pypi/pyshp>`_
+* `shapely <https://pypi.python.org/pypi/Shapely>`_
+* `pyproj <https://pypi.python.org/pypi/pyproj>`_
 
 
 Transformations des données
 ===========================
+
+.. contents::
+    :local:
+    :depth: 1
 
 
 Projections, réduction des dimensions
@@ -223,6 +250,10 @@ Gaël est un des concepteurs de `scikit-learn <http://scikit-learn.org/stable/>`
     
     notebooks/_gs2a_statdes
     notebooks/_gs2a_ml_base
+    
+*Modules*
+
+* `scikit-learn <http://scikit-learn.org/stable/>`_
     
 .. _l-td2a-ml-extensions:
     
@@ -282,6 +313,12 @@ poste régulièrement des articles sur des librairies de machine learning open s
 
 * `fastFM: A Library for Factorization Machines <fastFM: A Library for Factorization Machines>`_
 
+*Modules*
+
+* `statsmodels <http://statsmodels.sourceforge.net/>`_
+* `xgboost <https://xgboost.readthedocs.io/en/latest/>`_
+* `mlxtend <https://github.com/rasbt/mlxtend>`_
+
 .. _l-deep-learning:
 
 Deep Learning
@@ -331,6 +368,10 @@ Deep Learning
 * `word2vec Parameter Learning Explained <http://arxiv.org/abs/1411.2738>`_, Xin Rong,
 * `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
 
+*Modules*
+
+* `theano <http://deeplearning.net/software/theano/>`_
+* `keras <https://keras.io/>`_
 
 Reinforcement Learning
 ++++++++++++++++++++++
@@ -376,6 +417,12 @@ Modèles bayésiens
 * `A Bayesian Approximation Method for Online Ranking <http://jmlr.csail.mit.edu/papers/volume12/weng11a/weng11a.pdf>`_
 * `rtan case studies <http://mc-stan.org/documentation/case-studies>`_
 
+*Modules* 
+
+* `PyMC3 <https://pymc-devs.github.io/pymc3/notebooks/getting_started.html>`_
+* `bayespy <http://bayespy.org/en/latest/>`_
+* `kabuki <https://pypi.python.org/pypi/kabuki/>`_
+
 
 Interprétabilité des modèles
 ++++++++++++++++++++++++++++
@@ -396,22 +443,24 @@ Auto-Learning
 
 *(à venir)*
 
+*Lectures*
+
+* `Efficient and Robust Automated Machine Learning <http://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning.pdf>`_
+
 *Modules*
 
 * `REP <https://github.com/yandex/rep>`_
 * `TPOT <https://github.com/rhiever/tpot>`_
 * `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
 
-*Lectures*
-
-* `Efficient and Robust Automated Machine Learning <http://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning.pdf>`_
-
-
 
 
 NLP - Image - Réseaux - Timeseries
 ==================================
 
+.. contents::
+    :local:
+    :depth: 1
 
 .. _l-td2a-nlp:
 
@@ -435,6 +484,13 @@ Traitement du langage
   pour guider les utilisateurs plus rapidement vers le produit qu'ils recherchent.
 * `Text Understanding from Scratch <https://arxiv.org/abs/1502.01710>`_, 
   Xiang Zhang, Yann LeCun
+* `Text Generation With LSTM Recurrent Neural Networks in Python with Keras <http://machinelearningmastery.com/text-generation-lstm-recurrent-neural-networks-python-keras/>`_
+  
+*Modules*
+
+* `nltk <http://www.nltk.org/>`_
+* `gensim <https://radimrehurek.com/gensim/>`_
+* `spacy <https://spacy.io/>`_
   
 
 
@@ -453,6 +509,14 @@ Timeseries - Séries temporelles
 * `Time series analysis with pandas <http://earthpy.org/pandas-basics.html>`_
 * `Consistent Algorithms for Clustering Time Series <http://www.jmlr.org/papers/volume17/khaleghi16a/khaleghi16a.pdf>`_
 * `Learning Time Series Detection Models from Temporally Imprecise Labels <https://arxiv.org/abs/1611.02258>`_
+* `Time Series Prediction With Deep Learning in Keras <http://machinelearningmastery.com/time-series-prediction-with-deep-learning-in-python-with-keras/>`_
+* `Sequence Classification with LSTM Recurrent Neural Networks in Python with Keras <http://machinelearningmastery.com/sequence-classification-lstm-recurrent-neural-networks-python-keras/>`_
+* `Time Series Classification and Clustering with Python <http://alexminnaar.com/time-series-classification-and-clustering-with-python.html>`_
+* `Dynamic Time Warping <https://en.wikipedia.org/wiki/Dynamic_time_warping>`_
+
+*Modules*
+
+* `statsmodels <http://statsmodels.sourceforge.net/>`_
 
 Images
 ++++++
