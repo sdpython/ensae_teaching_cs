@@ -185,6 +185,7 @@ Cartes
 * `pyshp <https://pypi.python.org/pypi/pyshp>`_
 * `shapely <https://pypi.python.org/pypi/Shapely>`_
 * `pyproj <https://pypi.python.org/pypi/pyproj>`_
+* `geopy <https://pypi.python.org/pypi/geopy>`_
 
 
 Transformations des données
