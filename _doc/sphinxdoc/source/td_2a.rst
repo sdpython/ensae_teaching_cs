@@ -407,10 +407,16 @@ Auto-Learning
 * `Efficient and Robust Automated Machine Learning <http://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning.pdf>`_
 
 
+
+
+NLP - Image - Réseaux - Timeseries
+==================================
+
+
 .. _l-td2a-nlp:
 
 Traitement du langage
-=====================
++++++++++++++++++++++
 
 |pyecopng| |pystatpng|
 
@@ -433,7 +439,7 @@ Traitement du langage
 
 
 Timeseries - Séries temporelles
-===============================
++++++++++++++++++++++++++++++++
 
 *Notebooks*
 
@@ -449,7 +455,7 @@ Timeseries - Séries temporelles
 * `Learning Time Series Detection Models from Temporally Imprecise Labels <https://arxiv.org/abs/1611.02258>`_
 
 Images
-======
+++++++
 
 (à venir)
 
@@ -460,7 +466,7 @@ Images
 
 
 Graphes et réseaux
-==================
+++++++++++++++++++
 
 *(année prochaine)*
 
@@ -481,7 +487,7 @@ Techniques de programmation et algorithmes
 .. _l-2a-scraping:
 
 Webscrapping et API
-===================
++++++++++++++++++++
 
 |pyecopng| 
 
