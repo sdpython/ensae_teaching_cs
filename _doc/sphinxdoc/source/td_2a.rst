@@ -163,6 +163,7 @@ la visualisation animée de gros jeux de données telle que
 * `seaborn <https://github.com/mwaskom/seaborn>`_
 * `bokeh <http://bokeh.pydata.org/en/latest/>`_
 * `bqplot <https://github.com/bloomberg/bqplot>`_
+* :ref:`l-visualisation`
 
 Cartes
 ++++++
@@ -211,8 +212,28 @@ Projections, réduction des dimensions
 * `Compressed Sensing <https://en.wikipedia.org/wiki/Compressed_sensing>`_
 * `Locality-sensitive hashing <https://en.wikipedia.org/wiki/Locality-sensitive_hashing>`_
 * `Manifold learning <http://scikit-learn.org/stable/modules/manifold.html>`_
+* `Cartes de Kohonen <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_clus/kohonen.html>`_
 
 
+Clustering
+==========
+
+(à venir)
+
+*Lectures*
+
+* `A New Algorithm and Theory for Penalized Regression-based Clustering <http://www.jmlr.org/papers/volume17/15-553/15-553.pdf>`_ :
+  méthode de sélection de variables pour des méthodes non supervisés de clustering, voir aussi
+  `Penalized Model-Based Clustering with Application to Variable Selection <http://www.jmlr.org/papers/volume8/pan07a/pan07a.pdf>`_
+* `K-means <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_clus/kmeans.html>`_
+* `Cartes de Kohonen <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_clus/kohonen.html>`_
+* `Clustering by Passing Messages Between Data Points <http://www.icmla-conference.org/icmla07/FreyDueckScience07.pdf>`_
+* `Map/Reduce Affinity Propagation Clustering Algorithm <http://www.ijeee.net/uploadfile/2014/0807/20140807114023665.pdf>`_
+* `Parallel Hierarchical Affinity Propagation with MapReduce <https://arxiv.org/abs/1403.7394>`_
+
+*Modules*
+
+* `scikit-learn <http://scikit-learn.org/stable/>`_
 
 Machine Learning
 ================
@@ -288,9 +309,6 @@ Pratique du machine learning, problème de données
 * `XGBoost: A Scalable Tree Boosting System <https://arxiv.org/pdf/1603.02754.pdf>`_
 * `Classification of Imbalanced Data with a Geometric Digraph Family <http://www.jmlr.org/papers/volume17/15-604/15-604.pdf>`_
 * `On the Influence of Momentum Acceleration on OnlineLearning <http://www.jmlr.org/papers/volume17/16-157/16-157.pdf>`_
-* `A New Algorithm and Theory for Penalized Regression-based Clustering <http://www.jmlr.org/papers/volume17/15-553/15-553.pdf>`_ :
-  méthode de sélection de variables pour des méthodes non supervisés de clustering, voir aussi
-  `Penalized Model-Based Clustering with Application to Variable Selection <http://www.jmlr.org/papers/volume8/pan07a/pan07a.pdf>`_
 
 .. index:: multilabel
 
@@ -416,7 +434,12 @@ Modèles bayésiens
 *Lectures*
 
 * `A Bayesian Approximation Method for Online Ranking <http://jmlr.csail.mit.edu/papers/volume12/weng11a/weng11a.pdf>`_
-* `rtan case studies <http://mc-stan.org/documentation/case-studies>`_
+* `stan case studies <http://mc-stan.org/documentation/case-studies>`_
+
+*Vidéo*
+
+* `Variational Inference in Python <https://www.youtube.com/watch?v=3KGZDC3-_iY>`_
+* `Bayesian Network Modeling using R and Python <https://www.youtube.com/watch?v=iRvXfx9IWM0>`_
 
 *Modules* 
 
@@ -486,6 +509,10 @@ Traitement du langage
 * `Text Understanding from Scratch <https://arxiv.org/abs/1502.01710>`_, 
   Xiang Zhang, Yann LeCun
 * `Text Generation With LSTM Recurrent Neural Networks in Python with Keras <http://machinelearningmastery.com/text-generation-lstm-recurrent-neural-networks-python-keras/>`_
+
+*Vidéos*
+
+* `Modern NLP in Python <https://www.youtube.com/watch?v=6zm9NC9uRkk>`_
   
 *Modules*
 
@@ -514,6 +541,7 @@ Timeseries - Séries temporelles
 * `Sequence Classification with LSTM Recurrent Neural Networks in Python with Keras <http://machinelearningmastery.com/sequence-classification-lstm-recurrent-neural-networks-python-keras/>`_
 * `Time Series Classification and Clustering with Python <http://alexminnaar.com/time-series-classification-and-clustering-with-python.html>`_
 * `Dynamic Time Warping <https://en.wikipedia.org/wiki/Dynamic_time_warping>`_
+* `Functional responses, functional covariates and the concurrent model <http://www.ece.uvic.ca/~bctill/papers/mocap/Ramsay_Silverman_2005ao.pdf>`_
 
 *Modules*
 
@@ -631,6 +659,10 @@ Notion abordées :
   création d'une implémentation C++ de la fonction de décision d'un arbre de décision entraîné avec
   scikit-learn
   
+*Vidéos*
+
+* `Making your code faster: Cython and parallel processing in the Jupyter Notebook <https://www.youtube.com/watch?v=MiHddLYZ6cQ>`_
+  
 Parallélisation, sérialisation
 ++++++++++++++++++++++++++++++
 
@@ -694,9 +726,11 @@ Certains sont tirés de plusieurs sites dont
   `Blossom5 <http://pub.ist.ac.at/~vnk/papers/blossom5.pdf>`_,
   `Fast and Simple Algorithms for Weighted Perfect Matching <http://e-collection.library.ethz.ch/eserv/eth:4711/eth-4711-01.pdf>`_
 * `La recherche mathématique en mots et en images (CNRS) <http://images.math.cnrs.fr/>`_
-
-  
-  
+* `The Traveling Salesperson Problem <http://nbviewer.jupyter.org/url/norvig.com/ipython/TSP.ipynb>`_
+* `Google Interview University <https://github.com/jwasham/google-interview-university#np-np-complete-and-approximation-algorithms>`_:
+  *This is my multi-month study plan for going from web developer (self-taught, no CS degree) to Google software engineer.*
+* `Cache replacement policies <https://en.wikipedia.org/wiki/Cache_replacement_policies>`_  
+* `Livres techniques en français <https://github.com/vhf/free-programming-books/blob/master/free-programming-books-fr.md>`_
 
 
 .. _l-td2a-biblio:
@@ -763,6 +797,7 @@ Bibliographie
 * `Matrix Factorization: A Simple Tutorial and Implementation in Python <http://www.quuxlabs.com/blog/2010/09/matrix-factorization-a-simple-tutorial-and-implementation-in-python/>`_ *(2016/06)*
 * `Complete Guide to Parameter Tuning in XGBoost (with codes in Python) <https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/>`_ *(2016/08)*
 * `colah's blog <http://colah.github.io/>`_ *(2016/08)* blog/cours sur le deep learning 
+* `Top-down learning path: Machine Learning for Software Engineers <https://github.com/ZuzooVn/machine-learning-for-software-engineers>`_
 * `Factorization Machines with libFM <http://www.csie.ntu.edu.tw/~b97053/paper/Factorization%20Machines%20with%20libFM.pdf>`_ *(2016/09)*
 
 
@@ -858,13 +893,12 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
 * `Vowpal Wabbit <https://github.com/JohnLangford/vowpal_wabbit/wiki>`_
 * `xgboost <https://github.com/dmlc/xgboost>`_
 
-**Librairies de visualisation**
+**Vidéos**
 
-* `10 plotting libraries <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_
-* :ref:`l-visualisation`
-* `basemap <http://matplotlib.org/basemap/>`_, `phshp <https://pypi.python.org/pypi/pyshp>`_, `shapely <https://pypi.python.org/pypi/Shapely>`_ : 
-  tout ce qu'il faut pour tracer des cartes
+* `Beyond Bag of Words A Practitioner’s Guide to Advanced NLP <https://www.youtube.com/watch?v=YWzFxRZPEyU>`_
+* `Building Continuous Learning Systems <https://www.youtube.com/watch?v=VtBvmrmMJaI>`_
 
+**next year**
     
 .. todoext:: 
     :title: Retravailler la partie visualisation de Python pour un data scientist

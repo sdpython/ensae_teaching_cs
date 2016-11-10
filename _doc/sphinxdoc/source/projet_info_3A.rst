@@ -76,7 +76,8 @@ Suggestions d'articles
 * `Exploiting Multiple Levels of Parallelism in Sparse Matrix-Matrix Multiplication <http://arxiv.org/abs/1510.00844>`_
 * `Hogwild!: A Lock-Free Approach to Parallelizing Stochastic Gradient Descent <https://arxiv.org/pdf/1106.5730v2.pdf>`_
 * `L1-Regularized Distributed Optimization: A Communication-Efficient Primal-Dual Framework <http://arxiv.org/pdf/1512.04011v2.pdf>`_
-
+* `Map/Reduce Affinity Propagation Clustering Algorithm <http://www.ijeee.net/uploadfile/2014/0807/20140807114023665.pdf>`_ ou 
+  `Parallel Hierarchical Affinity Propagation with MapReduce <https://arxiv.org/abs/1403.7394>`_
 
 Nous vous recommandons d'adopter la démarche suivante:
 
