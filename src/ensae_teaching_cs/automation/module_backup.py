@@ -6,10 +6,7 @@ import os
 from pyquickhelper.filehelper import TransferFTP
 
 
-def ftp_list_modules(ftp_site="CS_FTPSITE",
-                     login="CS_FTPLOGIN",
-                     password="CS_FTPPASSWORD",
-                     ftp_location="/www/htdocs/enseignement/setup",
+def ftp_list_modules(ftp_location="/www/htdocs/enseignement/setup",
                      http_location="http://www.xavierdupre.fr/enseignement/setup",
                      filename="index_modules_list.html"):
     """
@@ -17,17 +14,34 @@ def ftp_list_modules(ftp_site="CS_FTPSITE",
     It gets the list of wheels in a folder and creates a HTML pages.
     It then uploads the final pages
 
-    @param  ftp_site        site ftp (or environment variable which contains it)
-    @param  login           login (or environment variable which contains it)
-    @param  password        password (or environment variable which contains it)
     @param  ftp_location    location on the website
     @param  http_location   same location but on http protocol
+    @param  filename        name of the file to produce
     @return                 list of modules
+
+    The module uses *keyring* to retrieve the credentials.
+    You can set them up with:
+
+    ::
+
+        keyring.get_password("ftp_list_modules", os.environ["COMPUTERNAME"] + "site", "...")
+        keyring.get_password("ftp_list_modules", os.environ["COMPUTERNAME"] + "login", "...")
+        keyring.get_password("ftp_list_modules", os.environ["COMPUTERNAME"] + "password", "...")
     """
-    ftp_site = os.environ.get(ftp_site, ftp_site)
-    login = os.environ.get(login, login)
-    password = os.environ.get(password, password)
-    ftp_site = os.environ.get(ftp_site, ftp_site)
+    import keyring
+    ftp_site = keyring.get_password("ftp_list_modules", os.environ[
+                                    "COMPUTERNAME"] + "site")
+    login = keyring.get_password("ftp_list_modules", os.environ[
+                                 "COMPUTERNAME"] + "login")
+    password = keyring.get_password("ftp_list_modules", os.environ[
+                                    "COMPUTERNAME"] + "password")
+
+    if not ftp_site:
+        raise ValueError("ftp_site is empty")
+    if not login:
+        raise ValueError("login is empty")
+    if not password:
+        raise ValueError("password is empty")
 
     ftp = TransferFTP(ftp_site, login, password)
     res = ftp.ls(ftp_location)

@@ -6,7 +6,6 @@
 import sys
 import os
 import unittest
-import warnings
 
 try:
     import src
@@ -114,15 +113,9 @@ class TestFtpBackup(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        if "CS_FTPLOGIN" in os.environ:
-            mod = ftp_list_modules()
-            fLOG(mod)
-            assert len(mod) > 0
-        else:
-            for k, v in sorted(os.environ.items()):
-                fLOG(k, v)
-            warnings.warn(
-                "You need to setup CS_FTPSITE, CS_FTPLOGIN, CS_FTPPASSWORD")
+        mod = ftp_list_modules()
+        fLOG(mod)
+        assert len(mod) > 0
 
 
 if __name__ == "__main__":
