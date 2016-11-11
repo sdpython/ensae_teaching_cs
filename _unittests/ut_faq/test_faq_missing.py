@@ -58,7 +58,6 @@ class TestFaqMissing (unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        temp = get_temp_folder(__file__, "temp_fpyhton")
         entier_grande_taille()
         difference_div()
         python_path()
@@ -68,8 +67,21 @@ class TestFaqMissing (unittest.TestCase):
         stringio("e")
         property_example()
         assert list(enumerate_regex_search("r*", "rararr"))
+
+    def test_faq_pythonm2(self):
+        fLOG(
+            __file__,
+            self._testMethodName,
+            OutputPrint=__name__ == "__main__")
+        temp = get_temp_folder(__file__, "temp_faq_pythonm2")
         out = os.path.join(temp, "index.html")
         download_from_url("http://www.xavierdupre.fr", out)
+
+    def test_faq_pythonm3(self):
+        fLOG(
+            __file__,
+            self._testMethodName,
+            OutputPrint=__name__ == "__main__")
         sortable_class([5, 5])
         list_of_installed_packages()
         fLOG(information_about_package("pip"))

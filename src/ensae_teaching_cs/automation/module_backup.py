@@ -37,7 +37,7 @@ def ftp_list_modules(ftp_location="/www/htdocs/enseignement/setup",
                                     "COMPUTERNAME"] + "password")
 
     if not ftp_site:
-        raise ValueError("ftp_site is empty")
+        raise ValueError("ftp_site is empty, some missing keyring?")
     if not login:
         raise ValueError("login is empty")
     if not password:
