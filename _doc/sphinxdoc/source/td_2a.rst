@@ -75,10 +75,8 @@ Rappels de programmation
 .. index:: sérialisation, index, dataframe
 
     
-Matrices et DataFrames - numpy pandas
-=====================================
-
-|pyecopng| |pystatpng|
+Matrices et DataFrames - numpy pandas SQL
+=========================================
 
 Notions abordées :
 
@@ -89,20 +87,54 @@ Notions abordées :
 - premiers graphiques
 - commandes magiques
 
+DataFrame
++++++++++
+
+|pyecopng| |pystatpng|
+
+
+*Notebooks*
+
+.. toctree::
+    :maxdepth: 2
+    
+    notebooks/_gs2a_dataframe
+
+*Modules*
+
+* `pandas <http://pandas.pydata.org/>`_
+
+Array, Matrix
++++++++++++++
+
+|pyecopng| |pystatpng|
+
+
+*Notebooks*
+
+.. toctree::
+    :maxdepth: 2
+    
+    notebooks/_gs2a_dnumpy
+    
+*Modules*
+
+* `numpy <http://www.numpy.org/>`_
+* `scipy <https://www.scipy.org/>`_
+
+SQL
++++
+
+|pyecopng| |pystatpng|
+
+
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
     
     ext2a/sql_doc
-    notebooks/_gs2a_dataframe
     notebooks/_gs2a_sql    
-    notebooks/_gs2a_magic_commands
-    
-*Modules*
-
-* `pandas <http://pandas.pydata.org/>`_
-* `numpy <http://www.numpy.org/>`_, `scipy <https://www.scipy.org/>`_
 
 
 .. _l-visualisation-td2a:
@@ -110,14 +142,14 @@ Notions abordées :
 Visualisation
 =============
 
-|pystatpng| |pyecopng|
-
 .. contents::
     :local:
     :depth: 1
 
 Graphes
 +++++++
+
+|pyecopng| |pystatpng|
 
 Plan
 
@@ -148,6 +180,9 @@ la visualisation animée de gros jeux de données telle que
     
     notebooks/_gs2a_visu
 
+* `Graphes classiques métriques pour des modèles de machine learning <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_enonce.html>`_
+* `Graphes classiques métriques pour des modèles de machine learning - correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_correction.html>`_
+
 *Notebook sur Javascript*
 
 .. toctree::
@@ -168,6 +203,18 @@ la visualisation animée de gros jeux de données telle que
 Cartes
 ++++++
 
+|pyecopng| |pystatpng|
+
+*Notebooks*
+
+* :ref:`td1acenoncesession12rst`
+* :ref:`td1acorrectionsession12rst`
+* `Evolution d'une population <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance4_projection_population_enonce.html>`_
+* `Evolution d'une population - correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html>`_
+
+
+*Formats de données*
+
 * :ref:`Système de coordonnées <blog-donnees-carroyees-2016>` (et données carroyées)
 * format de cartes 
   `shapefiles <https://en.wikipedia.org/wiki/Shapefile>`_,
@@ -180,7 +227,9 @@ Cartes
 * sources :
   `DataMaps <http://datamaps.github.io/>`_,
   `Find Data <https://bost.ocks.org/mike/map/#finding-data>`_
-  
+ 
+*Modules*
+
 * `basemap <http://matplotlib.org/basemap/>`_
 * `cartopy <http://scitools.org.uk/cartopy/>`_
 * `pyshp <https://pypi.python.org/pypi/pyshp>`_
@@ -200,6 +249,8 @@ Transformations des données
 Projections, réduction des dimensions
 +++++++++++++++++++++++++++++++++++++
 
+|pyecopng| |pystatpng|
+
 (à venir)
 
 *Lectures*
@@ -217,6 +268,8 @@ Projections, réduction des dimensions
 
 Clustering
 ==========
+
+|pyecopng| |pystatpng|
 
 (à venir)
 
@@ -282,6 +335,9 @@ Gaël est un des concepteurs de `scikit-learn <http://scikit-learn.org/stable/>`
     
 Pratique du machine learning, problème de données 
 +++++++++++++++++++++++++++++++++++++++++++++++++
+
+|pyecopng| |pystatpng|
+
 
 .. toctree::
     :maxdepth: 2
@@ -411,6 +467,9 @@ ou *apprentissage par renforcement*
 Bandits
 +++++++
 
+|pystatpng|
+
+
 *(année prochaine)*
 
 *Lectures*
@@ -451,6 +510,9 @@ Modèles bayésiens
 Interprétabilité des modèles
 ++++++++++++++++++++++++++++
 
+|pyecopng| |pystatpng|
+
+
 *(à venir)*
 
 *Lectures*
@@ -464,6 +526,9 @@ Interprétabilité des modèles
 
 Auto-Learning
 +++++++++++++
+
+|pyecopng| |pystatpng|
+
 
 *(à venir)*
 
@@ -525,6 +590,9 @@ Traitement du langage
 Timeseries - Séries temporelles
 +++++++++++++++++++++++++++++++
 
+|pyecopng| |pystatpng|
+
+
 *Notebooks*
 
 .. toctree::
@@ -550,6 +618,8 @@ Timeseries - Séries temporelles
 Images
 ++++++
 
+|pyecopng| |pystatpng|
+
 (à venir)
 
 *Lectures*
@@ -560,6 +630,9 @@ Images
 
 Graphes et réseaux
 ++++++++++++++++++
+
+|pyecopng| |pystatpng|
+
 
 *(année prochaine)*
 
@@ -582,7 +655,8 @@ Techniques de programmation et algorithmes
 Webscrapping et API
 +++++++++++++++++++
 
-|pyecopng| 
+|pyecopng| |pystatpng|
+
 
 *Notebooks*
 
@@ -596,6 +670,19 @@ Webscrapping et API
 
 * `API de geocoding <https://www.data.gouv.fr/fr/faq/reuser/>`_
 * `adresse.data.gouv.fr <https://adresse.data.gouv.fr/csv/>`_
+
+Jupyter et les commandes magiques
++++++++++++++++++++++++++++++++++
+
+|pystatpng|
+
+*Notebooks*
+
+.. toctree::
+    :maxdepth: 2
+    
+
+    notebooks/_gs2a_magic_commands
 
 
 .. _l-cluster-non-struct-2a:
@@ -683,7 +770,11 @@ Notion abordées :
     notebooks/_gs2a_parallelisation
     notebooks/_gs2a_serialisation
 
+*Modules*
 
+* `dask <http://dask.pydata.org/en/latest/>`_
+* `cytoolz <https://github.com/pytoolz/cytoolz>`_
+* `joblib <https://pythonhosted.org/joblib/>`_
 
 .. _l-puzzlealgo2A:
       

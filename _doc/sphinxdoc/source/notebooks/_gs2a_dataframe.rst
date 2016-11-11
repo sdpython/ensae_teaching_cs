@@ -1,7 +1,7 @@
 
 
-Données, Graphes, Calcul matriciel
-==================================
+Manipulation de données avec les DataFrame
+==========================================
 
 
 .. toctree::
@@ -11,5 +11,4 @@ Données, Graphes, Calcul matriciel
     td2a_correction_session_1
     td2a_cenonce_session_2A
     td2a_correction_session_2A
-    matplotlib_zoomable
     
