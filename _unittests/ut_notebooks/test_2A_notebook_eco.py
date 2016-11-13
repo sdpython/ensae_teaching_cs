@@ -71,6 +71,9 @@ class TestNotebookRunner2aEco(unittest.TestCase):
                 return False
             if "2.ipynb" in n:
                 return False
+            if "flask" in n.lower():
+                # flask from a notebook does not work
+                return False
             return True
 
         if is_travis_or_appveyor() == "travis":
