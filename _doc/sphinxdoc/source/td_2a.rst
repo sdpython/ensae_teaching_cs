@@ -671,6 +671,27 @@ Webscrapping et API
 * `API de geocoding <https://www.data.gouv.fr/fr/faq/reuser/>`_
 * `adresse.data.gouv.fr <https://adresse.data.gouv.fr/csv/>`_
 
+.. _l-eco-website:
+
+Site web
+++++++++
+
+*Notebooks*
+
+.. toctree::
+    :maxdepth: 2
+    
+    notebooks/_gs2a_eco_website
+
+
+*Modules*
+
+* `bottle <http://bottlepy.org/docs/dev/>`_
+* `django <https://www.djangoproject.com/>`_
+* `falcon <https://falconframework.org/>`_
+* `Flask <http://flask.pocoo.org/>`_
+
+
 Jupyter et les commandes magiques
 +++++++++++++++++++++++++++++++++
 

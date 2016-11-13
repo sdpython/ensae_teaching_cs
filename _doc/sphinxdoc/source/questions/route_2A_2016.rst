@@ -77,9 +77,14 @@ Les exercices doivent être choisis sur le site
       - NLTK, :ref:`statistiques textuelles <l-td2a-nlp>`
     * - 14/11
       - `travail d'équipe, réarranger la carte électorale <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/_gs_gerrymandering.html>`_
-      - retour sur la compétition ML **cours commun**
-      - construction d'un site web, Flask, Jason, Django *(à venir)*
-      - retour sur la compétition ML, exemples de compétition Kaggle **cours commun**
+        (`éléments de réponses <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/election_carte_electorale_correction.html>`_)
+      - retour sur la compétition ML,
+        exemples de compétition Kaggle
+        **cours commun**
+      - :ref:`construction d'un site web, Flask, Jason, Django <l-eco-website>`
+      - retour sur la compétition ML,
+        exemples de compétition Kaggle
+        **cours commun**
 
 
 .. _l-note-2A-plan:
