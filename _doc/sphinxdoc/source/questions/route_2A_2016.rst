@@ -79,11 +79,11 @@ Les exercices doivent être choisis sur le site
       - `travail d'équipe, réarranger la carte électorale <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/_gs_gerrymandering.html>`_
         (`éléments de réponses <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/election_carte_electorale_correction.html>`_)
       - retour sur la compétition ML,
-        exemples de compétition Kaggle
+        `exemples de compétition Kaggle <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/ensae201611.html>`_
         **cours commun**
       - :ref:`construction d'un site web, Flask, Jason, Django <l-eco-website>`
       - retour sur la compétition ML,
-        exemples de compétition Kaggle
+        `exemples de compétition Kaggle <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/ensae201611.html>`_
         **cours commun**
 
 
