@@ -394,6 +394,30 @@ poste régulièrement des articles sur des librairies de machine learning open s
 * `xgboost <https://xgboost.readthedocs.io/en/latest/>`_
 * `mlxtend <https://github.com/rasbt/mlxtend>`_
 
+
+Ranking
++++++++
+
+*(à venir)*
+
+*Modules*
+
+* `xgboost <https://xgboost.readthedocs.io/en/latest/>`_
+
+
+
+Système de recommandation
++++++++++++++++++++++++++
+
+*(à venir)*
+
+*Modules*
+
+* `scikit-learn <http://scikit-learn.org/stable/>`_
+
+
+
+
 .. _l-deep-learning:
 
 Deep Learning
@@ -462,6 +486,7 @@ ou *apprentissage par renforcement*
 
 * `A Comprehensive Survey on Safe Reinforcement Learning <http://www.jmlr.org/papers/volume16/garcia15a/garcia15a.pdf>`_
 * `RLPy: A Value-Function-Based Reinforcement Learning Framework for Education and Research <http://www.jmlr.org/papers/volume16/geramifard15a/geramifard15a.pdf>`_
+* `UCL Course on RL <http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html>`_
 
 
 Bandits

@@ -78,11 +78,11 @@ Les exercices doivent être choisis sur le site
     * - 14/11
       - `travail d'équipe, réarranger la carte électorale <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/_gs_gerrymandering.html>`_
         (`éléments de réponses <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/election_carte_electorale_correction.html>`_)
-      - retour sur la compétition ML,
+      - :ref:`retour sur la compétition ML <l-competition-2016-2a>`,
         `exemples de compétition Kaggle <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/ensae201611.html>`_
         **cours commun**
       - :ref:`construction d'un site web, Flask, Jason, Django <l-eco-website>`
-      - retour sur la compétition ML,
+      - :ref:`retour sur la compétition ML <l-competition-2016-2a>`,
         `exemples de compétition Kaggle <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/ensae201611.html>`_
         **cours commun**
 
@@ -116,9 +116,7 @@ En ce qui concerne les séances autour des algorithmes, il s'agit d'enrichir sa 
 car c'est devenu indispensable pour passer les entretiens d'embauche aujourd'hui.
 Ces séances sont composés d'exercices et de cours.
 
-Compétition
-+++++++++++
+**Compétition**
 
-* :ref:`td2aecocompetitionmodeleslogistiquesrst`
-
+:ref:`Compétition 2016 <l-competition-2016-2a>`
     

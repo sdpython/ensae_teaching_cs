@@ -41,6 +41,15 @@ Glossaire
         discrètes (voire binaires) en données continues, ce que les algorithmes d'optimisation à base de gradient préfèrent.
         Voir aussi `Tutorial on auto-encoders <https://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_.
         
+    bandits
+        Le bandit manchot fait référence aux machines à sou dans les casinos. 
+        Tout l'enjeu de cette méthode consiste à maximiser ces gains en améliorant sa stratégie au fur et 
+        à mesure. Tout au long du jeu, il devient possible d'estimer la probabilité d'apparition 
+        des combinaisons gagnantes avec de plus en plus de précision. 
+        Voir `bandit manchot <http://fr.wikipedia.org/wiki/Bandit_manchot_(math%C3%A9matiques)>`_ ou 
+        `multi-armed bandit <http://fr.wikipedia.org/wiki/Bandit_manchot_(math%C3%A9matiques)>`_ 
+        en anglais. 
+        
     benchmark
         `banc d'essai <http://fr.wikipedia.org/wiki/Test_de_performance>`_
     
@@ -97,8 +106,7 @@ Glossaire
         
         - `Image Scaling using Deep Convolutional Neural Networks <http://engineering.flipboard.com/2015/05/scaling-convnets/>`_
         
-    Deep Q Network (DQN)
-    
+    Deep Q Network (DQN)    
         Deep Learning + Reinforcement Learning.
         Voir `DQN <https://en.wikipedia.org/wiki/Deep_learning#Deep_Q-networks>`_.
         Lire `Human-level control through deep reinforcement learning <https://storage.googleapis.com/deepmind-data/assets/papers/DeepMindNature14236Paper.pdf>`_,

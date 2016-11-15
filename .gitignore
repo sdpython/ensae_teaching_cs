@@ -395,3 +395,7 @@ _doc/notebooks/td2a_eco/data_export.json
 src/ensae_teaching_cs/cryptcode.py
 _doc/notebooks/td2a_eco/ensemble_gares.csv
 _doc/notebooks/td3a/pageviews-20161101-000000
+_doc/notebooks/competitions/2016/*.zip
+_doc/notebooks/competitions/2016/*.txt
+_doc/notebooks/competitions/*.zip
+_doc/notebooks/competitions/answer.csv

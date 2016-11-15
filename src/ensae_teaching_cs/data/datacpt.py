@@ -37,6 +37,8 @@ def data_cpt_ENSAE_2016_11_blind_set(password):
 
     @param      fLOG        logging function
     @return                 2 dataframes, one with X, Y, the others one with only X
+
+    The competition is over. The password is ``xdameratxdamerat``.
     """
     if password == "dummy":
         return [random.random() for i in range(7500)]

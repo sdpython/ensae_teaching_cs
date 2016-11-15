@@ -17,9 +17,8 @@ Apprentissage par renforcement
 
 
 Un problème souvent évoqué lorsqu'on parle d'apprentissage par renforcement est celui du 
-`bandit manchot <http://fr.wikipedia.org/wiki/Bandit_manchot_(math%C3%A9matiques)>`_ ou 
-`multi-armed bandit <http://fr.wikipedia.org/wiki/Bandit_manchot_(math%C3%A9matiques)>`_ 
-en anglais. L'objectif de ce projet est de résoudre 
+`tic tac toe <https://en.wikipedia.org/wiki/Tic-tac-toe>`_.
+L'objectif de ce projet est de résoudre 
 ce problème en utilisant l'apprentissage par renforcement. Quelques liens :
 
 * `Rémi Munos, part 1 <http://www.xavierdupre.fr/enseignement/projet_data/apprentissage_renforcement_part1.pdf>`_
@@ -28,12 +27,7 @@ ce problème en utilisant l'apprentissage par renforcement. Quelques liens :
 * `Reinforcement Learning: An Introduction <http://webdocs.cs.ualberta.ca/~sutton/book/ebook/the-book.html>`_, Richard S. Sutton and Andrew G. Barto
 * `Apprentissage par renforcement <http://www.grappa.univ-lille3.fr/~coulom/Renforcement/>`_
 * `Agents adaptatifs Prise de décision séquentielle <http://www.grappa.univ-lille3.fr/~ppreux/mri/>`_
-
-Le bandit manchot fait référence aux machines à sou dans les casinos. 
-Tout l'enjeu de cette méthode consiste à maximiser ces gains en améliorant sa stratégie au fur et 
-à mesure. Tout au long du jeu, il devient possible d'estimer la probabilité d'apparition 
-des combinaisons gagnantes avec de plus en plus de précision. 
-L'apprentissage par renforcement est une façon d'optimiser ses gains tout en apprenant cette distribution.
+* `UCL Course on RL <http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html>`_
 
 
 **Remarque :**
@@ -55,6 +49,7 @@ Quelques applications envisageables dans le cadre de ce projets :
 * `Tétris <https://interstices.info/jcms/c_32764/la-carotte-et-le-baton-et-tetris>`_ (voir aussi `Tetris, Colin Fahey <http://www.colinfahey.com/tetris/tetris.html>`_)
 * `bandit manchot <http://www.xavierdupre.fr/enseignement/projet_data/apprentissage_renforcement_part3.pdf>`_
 * `jeux de stratégie <http://www.bgu.ac.il/~shanigu/Publications/LearningInCiv.pdf>`_
+* `Reinforcement Learning Assignment: Easy21 <http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching_files/Easy21-Johannes.pdf>`_
 
 On peut envisager des contextes différents tels que le jeu de Pacman
 
