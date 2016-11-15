@@ -36,7 +36,7 @@ standard dans un problème de classification binaire.
     ../notebooks/td2a_eco_competition_comparer_classifieurs
     ../notebooks/solution_2016_credit_clement
     
-
+La solution est proposée par Clément Giron.
 
 *Data Set Information*
 

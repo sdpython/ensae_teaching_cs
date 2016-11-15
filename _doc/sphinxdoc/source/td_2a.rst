@@ -381,6 +381,10 @@ Pratique du machine learning, problème de données
 * `Learning Algorithms for Second-Price Auctions with Reserve <http://www.jmlr.org/papers/volume17/14-499/14-499.pdf>`_
 * `Learning Theory for Distribution Regression <http://www.jmlr.org/papers/volume17/14-510/14-510.pdf>`_
 
+*Métriques*
+
+* `Optimization of AMS using Weighted AUC optimized models <http://jmlr.org/proceedings/papers/v42/diaz14.pdf>`_
+
 *Librairies*
 
 `JMLR <http://www.jmlr.org/>`_ 

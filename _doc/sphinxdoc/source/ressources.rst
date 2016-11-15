@@ -23,6 +23,9 @@ Source de données
 **API**
 
 * `données vélib <https://developer.jcdecaux.com/#/home>`_
+* `API SNCF <https://data.sncf.com/api>`_
+* `Bing Maps API <https://msdn.microsoft.com/en-us/library/dd877180.aspx>`_
+* `API Geocoding <https://www.data.gouv.fr/fr/faq/reuser/>`_ (voir également le module `geopy <https://github.com/geopy/geopy>`_)
 
 **Jeux de données**
 
