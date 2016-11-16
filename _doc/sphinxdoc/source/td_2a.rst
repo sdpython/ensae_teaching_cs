@@ -281,6 +281,7 @@ Clustering
 * `Clustering by Passing Messages Between Data Points <http://www.icmla-conference.org/icmla07/FreyDueckScience07.pdf>`_
 * `Map/Reduce Affinity Propagation Clustering Algorithm <http://www.ijeee.net/uploadfile/2014/0807/20140807114023665.pdf>`_
 * `Parallel Hierarchical Affinity Propagation with MapReduce <https://arxiv.org/abs/1403.7394>`_
+* `Cats & Co: Categorical Time Series Coclustering <https://arxiv.org/abs/1505.01300v1>`_
 
 *Modules*
 
@@ -402,9 +403,18 @@ Ranking
 
 *(à venir)*
 
+*Lectures*
+
+* `Learning to rank (software, datasets) <http://arogozhnikov.github.io/2015/06/26/learning-to-rank-software-datasets.html>`_
+* `Multiple-criteria decision analysis <https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis>`_
+
 *Modules*
 
 * `xgboost <https://xgboost.readthedocs.io/en/latest/>`_
+* `scikit-learn <http://scikit-learn.org/>`_
+* `rankpy <https://github.com/dmitru/rankpy>`_ (standby)
+* `The Lemur Project - ranklib <https://sourceforge.net/p/lemur/wiki/RankLib/>`_
+* `scikit-criteria <https://github.com/leliel12/scikit-criteria>`_ (standby)
 
 
 
