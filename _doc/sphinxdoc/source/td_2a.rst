@@ -78,14 +78,12 @@ Rappels de programmation
 Matrices et DataFrames - numpy pandas SQL
 =========================================
 
-Notions abordées :
-
-- import/export de données dans un DataFrame
-- manipulation selon une logique SQL
-- utilité des index
-- lambda function
-- premiers graphiques
-- commandes magiques
+Import/export de données dans un DataFrame, 
+manipulation selon une logique SQL,
+utilité des index,
+`lambda function <http://www.diveintopython.net/power_of_introspection/lambda_functions.html>`_,
+premiers graphiques,
+commandes magiques.
 
 DataFrame
 +++++++++
@@ -776,10 +774,6 @@ C++, R
 ++++++
 
 |pystatpng|
-
-Notion abordées :
-
-* utiliser un autre langage pour accélérer les calculs
   
 *Notebooks*
   
@@ -805,12 +799,8 @@ Parallélisation, sérialisation
 
 |pystatpng|
 
-Notion abordées :
-
-* techniques de parallélisation
-* sérialisation : le fait de convertir n'importe quelle structure de données en un
-  tableau d'octets, c'est indispensable pour la communication entre deux machines,
-  deux processus
+La sérialisation est le fait de convertir n'importe quelle structure de données en un
+tableau d'octets, c'est indispensable pour la communication entre deux machines, deux processus.
   
 *Notebooks*
   
