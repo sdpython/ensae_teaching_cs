@@ -28,13 +28,11 @@ def ftp_list_modules(ftp_location="/www/htdocs/enseignement/setup",
         keyring.get_password("ftp_list_modules", os.environ["COMPUTERNAME"] + "login", "...")
         keyring.get_password("ftp_list_modules", os.environ["COMPUTERNAME"] + "password", "...")
     """
+    hostname = os.environ.get("COMPUTERNAME", os.environ.get("HOSTNAME", ""))
     import keyring
-    ftp_site = keyring.get_password("ftp_list_modules", os.environ[
-                                    "COMPUTERNAME"] + "site")
-    login = keyring.get_password("ftp_list_modules", os.environ[
-                                 "COMPUTERNAME"] + "login")
-    password = keyring.get_password("ftp_list_modules", os.environ[
-                                    "COMPUTERNAME"] + "password")
+    ftp_site = keyring.get_password("ftp_list_modules", hostname + "site")
+    login = keyring.get_password("ftp_list_modules", hostname + "login")
+    password = keyring.get_password("ftp_list_modules", hostname + "password")
 
     if not ftp_site:
         raise ValueError("ftp_site is empty, some missing keyring?")
