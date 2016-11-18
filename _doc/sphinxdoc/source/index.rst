@@ -153,7 +153,7 @@ En diagonal
     * :ref:`Glossaire <l-glossaire>`
     * :ref:`question`
     * :ref:`l-EX2`
-    * `Résumé de la syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_ (PDF)
+    * `Résumé de la syntaxe Python <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_resume/python_sheet.html>`_
 * Lectures
     * :ref:`Articles, Références, Blog <l-information>`
     * :ref:`l-codingparty`
