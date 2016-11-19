@@ -51,17 +51,37 @@ Anatomie et histoire d'un ordinateur
 GPU
 +++
 
-(*à venir*)
+* `Convolution <https://fr.wikipedia.org/wiki/Produit_de_convolution>`_
+* `Introduction to CUDA C <http://www.nvidia.com/content/gtc-2010/pdfs/2131_gtc2010.pdf>`_
+* Notion de block, threads
+* Echange d'information entre CPU et GPU
+* `index de thread <http://www.martinpeniak.com/index.php?option=com_content&view=article&catid=17:updates&id=288:cuda-thread-indexing-explained>`_
+* `syncthread <http://stackoverflow.com/questions/15240432/does-syncthreads-synchronize-all-threads-in-the-grid>`_
+* `shared array <http://supercomputingblog.com/cuda/cuda-tutorial-3-thread-communication/>`_
 
-*Lectures*
+*Lectures sur le GPU*
+
+* `Comment apprendre aux ordinateurs à comprendre des images <https://www.ted.com/talks/fei_fei_li_how_we_re_teaching_computers_to_understand_pictures?language=fr>`_
+* `Scaling-up Machine Learning Chapitre 16 et 17 <http://www.cambridge.org/catalogue/catalogue.asp?isbn=1139210408>`_
+* `Quelques exemples graphiques de kernel 3x3 de convolution <>`_
+* `Introduction aux réseaux convolutifs <http://matlabtricks.com/post-5/3x3-convolution-kernels-with-online-demo#demo>`_,
+  `Canny edge detector <https://en.wikipedia.org/wiki/Canny_edge_detector>`_
+* `Understanding Convolution in Deep Learning <http://timdettmers.com/2015/03/26/convolution-deep-learning/>`_
+* `Pycuda <https://mathema.tician.de/software/pycuda/>`_,
+  `theano <http://deeplearning.net/software/theano/>`_
+* `Introduction au GPGPU <https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units>`_
+* `Quelques éléments de consommation électrique sur les GPU et CPU <http://blog.octo.com/la-technologie-gpgpu-1ere-partie-le-cote-obscur-de-la-geforce/>`_
+* `Inter-Block GPU Communication via Fast Barrier Synchronization <http://eprints.cs.vt.edu/archive/00001087/01/TR_GPU_synchronization.pdf>`_
+* `CUDA C Programming Guide <https://docs.nvidia.com/cuda/cuda-c-programming-guide/>`_
+* `Demystifying GPU Microarchitecture through Microbenchmarking <http://www.stuffedcow.net/files/gpuarch-ispass2010.pdf>`_
+
+*Lectures sur le C++*
 
 * `Thinking in C++ <http://mindview.net/Books/TICPP/ThinkingInCPP2e.html>`_, Bruce Eckel
 * `Effective C++ <http://www.aristeia.com/books.html>`_, Scott Meyers
 * `What Every Programmer Should Know About Memory <http://www.akkadia.org/drepper/cpumemory.pdf>`_, Ulrich Drepper
 * `The Art of Multiprocessor Programming <http://edc.tversu.ru/elib/inf/0189.pdf>`_, Maurice Herlihy, Nir Shavit
 * `An Introduction to GPGPU Programming - CUDA Architecture <http://www.diva-portal.org/smash/get/diva2:447977/FULLTEXT01.pdf>`_, Rafia Inam
-
-
 
 Eléments théoriques
 ===================
