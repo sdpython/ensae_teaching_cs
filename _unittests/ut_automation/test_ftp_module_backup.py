@@ -102,6 +102,7 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import is_travis_or_appveyor
 from src.ensae_teaching_cs.automation import ftp_list_modules
 
 
@@ -113,6 +114,9 @@ class TestFtpBackup(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
+        if is_travis_or_appveyor():
+            # no credentials
+            return
         mod = ftp_list_modules()
         fLOG(mod)
         assert len(mod) > 0
