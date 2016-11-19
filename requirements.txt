@@ -12,6 +12,7 @@ folium
 graphviz
 jyquickhelper
 keyring
+keyrings.alt
 lifelines
 lightning-python
 lxml

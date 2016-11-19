@@ -1,1 +1,8 @@
+bayespy
+cloudpickle
+dask
 ggplot
+mpld3
+scikit-learn
+seaborn
+statsmodels

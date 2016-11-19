@@ -1,3 +1,0 @@
-bayespy
-cloudpickle
-mpld3
