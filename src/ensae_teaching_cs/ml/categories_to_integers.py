@@ -40,13 +40,14 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
             print(newdf)
     """
 
-    def __init__(self, columns=None, remove=None, skip_errors=False):
+    def __init__(self, columns=None, remove=None, skip_errors=False, single=False):
         """
         constructor
 
         @param      columns         specify a columns selection
         @param      remove          modalities to remove
         @param      skip_errors     skip when a new categories appear (no 1)
+        @param      single          use a single column per category, do not multiply them for each value
         """
         BaseEstimator.__init__(self)
         TransformerMixin.__init__(self)
@@ -54,6 +55,7 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
             columns, list) or columns is None else [columns]
         self._p_skip_errors = skip_errors
         self._p_remove = remove
+        self._p_single = single
 
     def __repr__(self):
         """
@@ -100,10 +102,15 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
                 X.columns, X.dtypes) if d in (object,)]
 
         self._fit_columns = columns
+        max_cat = len(X) // 2 + 1
 
         self._categories = {}
         for c in columns:
             distinct = set(X[c].dropna())
+            nb = len(distinct)
+            if nb >= max_cat:
+                raise ValueError(
+                    "Too many categories ({0}) for one column '{1}'".format(nb, c))
             self._categories[c] = dict((c, i)
                                        for i, c in enumerate(list(sorted(distinct))))
         self._schema = self._build_schema()
@@ -149,37 +156,71 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
 
         Returns
         -------
-        Dataframe, *X* with categories.
+        DataFrame, *X* with categories.
         """
         if not isinstance(X, pandas.DataFrame):
             raise TypeError(
                 "X is not a dataframe: {0}".format(type(X)))
 
-        dfcat = X[self._fit_columns]
-        dfnum = X[[c for c in X.columns if c not in self._fit_columns]]
-        sch, pos, new_vector = self._schema
-        vec = new_vector
+        if self._p_single:
+            b = not self._p_skip_errors
 
-        res = numpy.zeros((X.shape[0], len(sch)))
-        b = not self._p_skip_errors
-
-        for i, row in enumerate(dfcat.to_dict("records")):
-            for k, v in row.items():
-                if v not in vec[k]:
-                    if b:
-                        raise ValueError("unable to find category value {0}:{1}among {2}".format(
-                            k, v, "\n".join(sorted(vec[k]))))
+            def transform(v, vec):
+                if v in vec:
+                    return vec[v]
+                elif v is None:
+                    return numpy.nan
+                elif isinstance(v, float) and numpy.isnan(v):
+                    return numpy.nan
+                elif not self._p_skip_errors:
+                    lv = list(sorted(vec))
+                    if len(lv) > 20:
+                        lv = lv[:20]
+                        lv.append("...")
+                    raise ValueError("unable to find category value '{0}': '{1}' type(v)={3} among\n{2}".format(
+                        k, v, "\n".join(lv), type(v)))
                 else:
-                    p = pos[k] + vec[k][v]
-                res[i, p] = 1.0
+                    return numpy.nan
 
-        if dfnum.shape[1] > 0:
-            newdf = pandas.DataFrame(res, columns=sch, index=dfcat.index)
-            allnum = pandas.concat([dfnum, newdf], axis=1)
+            sch, pos, new_vector = self._schema
+            X = X.copy()
+            for c in self._fit_columns:
+                X[c] = X[c].apply(lambda v: transform(v, new_vector[c]))
+            return X
         else:
-            allnum = pandas.DataFrame(res, columns=sch, index=dfcat.index)
+            dfcat = X[self._fit_columns]
+            dfnum = X[[c for c in X.columns if c not in self._fit_columns]]
+            sch, pos, new_vector = self._schema
+            vec = new_vector
 
-        return allnum
+            res = numpy.zeros((X.shape[0], len(sch)))
+            res.fill(numpy.nan)
+            b = not self._p_skip_errors
+
+            for i, row in enumerate(dfcat.to_dict("records")):
+                for k, v in row.items():
+                    if v is None or (isinstance(v, float) and numpy.isnan(v)):
+                        # missing values
+                        continue
+                    if v not in vec[k]:
+                        if b:
+                            lv = list(sorted(vec[k]))
+                            if len(lv) > 20:
+                                lv = lv[:20]
+                                lv.append("...")
+                            raise ValueError("unable to find category value '{0}': '{1}' type(v)={3} among\n{2}".format(
+                                k, v, "\n".join(lv), type(v)))
+                    else:
+                        p = pos[k] + vec[k][v]
+                    res[i, p] = 1.0
+
+            if dfnum.shape[1] > 0:
+                newdf = pandas.DataFrame(res, columns=sch, index=dfcat.index)
+                allnum = pandas.concat([dfnum, newdf], axis=1)
+            else:
+                allnum = pandas.DataFrame(res, columns=sch, index=dfcat.index)
+
+            return allnum
 
     def fit_transform(self, X, y=None, **fit_params):
         """
