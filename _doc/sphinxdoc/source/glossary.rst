@@ -264,6 +264,9 @@ Glossaire
         linéaire, quadratique, non linéaire, avec ou sans contraintes.
         Lire le blog :ref:`Optimisation avec contraintes, cvxopt, pulp, NLopt, ... <blog-optimisation-contrainte>`.
         
+    pair programming
+        Voir `pair programming <https://www.hackerschool.com/manual#sec-pairing>`_.
+        
     PCFG
         *Probabilistic Context-Free Grammars*.
         Les grammaires permettent de *tagger* les mots d'un texte : en s'appuyant sur des règles de proximité, on

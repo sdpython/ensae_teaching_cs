@@ -18,7 +18,7 @@ Tableau de bord
       - Travis
       - AppVeyor
       - PyPi
-      - Downloads
+      - Versions
       - Issues
       - Coverage
     * - `actuariat_python <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_
@@ -30,7 +30,7 @@ Tableau de bord
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/actuariat_python.svg
             :target: http://badge.fury.io/py/actuariat_python
-      - .. image:: http://img.shields.io/pypi/dm/actuariat_python.png
+      - .. image:: http://img.shields.io/pypi/pyversionsactuariat_python.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/actuariat_python  
       - .. image:: https://badge.waffle.io/sdpython/actuariat_python.png?label=ready&title=Ready
@@ -47,7 +47,7 @@ Tableau de bord
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/code_beatrix.svg
             :target: http://badge.fury.io/py/code_beatrix
-      - .. image:: http://img.shields.io/pypi/dm/code_beatrix.png
+      - .. image:: http://img.shields.io/pypi/pyversionscode_beatrix.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/code_beatrix  
       - .. image:: https://badge.waffle.io/sdpython/code_beatrix.png?label=ready&title=Ready
@@ -64,7 +64,7 @@ Tableau de bord
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/ensae_projects.svg
             :target: http://badge.fury.io/py/ensae_projects
-      - .. image:: http://img.shields.io/pypi/dm/ensae_projects.png
+      - .. image:: http://img.shields.io/pypi/pyversionsensae_projects.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/ensae_projects
       - .. image:: https://badge.waffle.io/sdpython/ensae_projects.png?label=ready&title=Ready
@@ -81,7 +81,7 @@ Tableau de bord
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
             :target: http://badge.fury.io/py/ensae_teaching_cs
-      - .. image:: http://img.shields.io/pypi/dm/ensae_teaching_cs.png
+      - .. image:: http://img.shields.io/pypi/pyversionsensae_teaching_cs.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/ensae_teaching_cs  
       - .. image:: https://badge.waffle.io/sdpython/ensae_teaching_cs.png?label=ready&title=Ready
@@ -98,7 +98,7 @@ Tableau de bord
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/jupytalk.svg
             :target: http://badge.fury.io/py/jupytalk
-      - .. image:: http://img.shields.io/pypi/dm/jupytalk.png
+      - .. image:: http://img.shields.io/pypi/pyversionsjupytalk.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/jupytalk
       - .. image:: https://badge.waffle.io/sdpython/jupytalk.png?label=ready&title=Ready
@@ -115,7 +115,7 @@ Tableau de bord
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/jyquickhelper.svg
             :target: http://badge.fury.io/py/jyquickhelper
-      - .. image:: http://img.shields.io/pypi/dm/jyquickhelper.png
+      - .. image:: http://img.shields.io/pypi/pyversionsjyquickhelper.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/jyquickhelper
       - .. image:: https://badge.waffle.io/sdpython/jyquickhelper.png?label=ready&title=Ready
@@ -132,7 +132,7 @@ Tableau de bord
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/mlstatpy.svg
             :target: http://badge.fury.io/py/mlstatpy
-      - .. image:: http://img.shields.io/pypi/dm/mlstatpy.png
+      - .. image:: http://img.shields.io/pypi/pyversionsmlstatpy.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/mlstatpy  
       - .. image:: https://badge.waffle.io/sdpython/mlstatpy.png?label=ready&title=Ready
@@ -149,7 +149,7 @@ Tableau de bord
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/pyensae.svg
             :target: http://badge.fury.io/py/pyensae
-      - .. image:: http://img.shields.io/pypi/dm/pyensae.png
+      - .. image:: http://img.shields.io/pypi/pyversionspyensae.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pyensae  
       - .. image:: https://badge.waffle.io/sdpython/pyensae.png?label=ready&title=Ready
@@ -166,7 +166,7 @@ Tableau de bord
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/pymmails.svg
             :target: http://badge.fury.io/py/pymmails
-      - .. image:: http://img.shields.io/pypi/dm/pymmails.png
+      - .. image:: http://img.shields.io/pypi/pyversionspymmails.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pymmails  
       - .. image:: https://badge.waffle.io/sdpython/pymmails.png?label=ready&title=Ready
@@ -183,7 +183,7 @@ Tableau de bord
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/pymyinstall.svg
             :target: http://badge.fury.io/py/pymyinstall
-      - .. image:: http://img.shields.io/pypi/dm/pymyinstall.png
+      - .. image:: http://img.shields.io/pypi/pyversionspymyinstall.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pymyinstall  
       - .. image:: https://badge.waffle.io/sdpython/pymyinstall.png?label=ready&title=Ready
@@ -200,7 +200,7 @@ Tableau de bord
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/pyquickhelper.svg
             :target: http://badge.fury.io/py/pyquickhelper
-      - .. image:: http://img.shields.io/pypi/dm/pyquickhelper.png
+      - .. image:: http://img.shields.io/pypi/pyversionspyquickhelper.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pyquickhelper  
       - .. image:: https://badge.waffle.io/sdpython/pyquickhelper.png?label=ready&title=Ready
@@ -217,7 +217,7 @@ Tableau de bord
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/pyrsslocal.svg
             :target: http://badge.fury.io/py/pyrsslocal
-      - .. image:: http://img.shields.io/pypi/dm/pyrsslocal.png
+      - .. image:: http://img.shields.io/pypi/pyversionspyrsslocal.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pyrsslocal  
       - .. image:: https://badge.waffle.io/sdpython/pyrsslocal.png?label=ready&title=Ready
@@ -234,7 +234,7 @@ Tableau de bord
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/pysqllike.svg
             :target: http://badge.fury.io/py/pysqllike
-      - .. image:: http://img.shields.io/pypi/dm/pysqllike.png
+      - .. image:: http://img.shields.io/pypi/pyversionspysqllike.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pysqllike  
       - .. image:: https://badge.waffle.io/sdpython/pysqllike.png?label=ready&title=Ready
@@ -265,7 +265,7 @@ Tableau de bord
             :alt: Build Status Windows    
       - .. image:: https://badge.fury.io/py/teachpyx.svg
             :target: http://badge.fury.io/py/teachpyx
-      - .. image:: http://img.shields.io/pypi/dm/teachpyx.png
+      - .. image:: http://img.shields.io/pypi/pyversionsteachpyx.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/teachpyx  
       - .. image:: https://badge.waffle.io/sdpython/teachpyx.png?label=ready&title=Ready
