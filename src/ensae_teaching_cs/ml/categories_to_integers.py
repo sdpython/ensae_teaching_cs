@@ -40,7 +40,7 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
             print(newdf)
     """
 
-    def __init__(self, columns=None, remove=None, skip_errors=False, single=False):
+    def __init__(self, columns=None, remove=None, skip_errors=False, single=False, fLOG=None):
         """
         constructor
 
@@ -48,6 +48,10 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
         @param      remove          modalities to remove
         @param      skip_errors     skip when a new categories appear (no 1)
         @param      single          use a single column per category, do not multiply them for each value
+        @param      fLOG            logging function
+
+        The logging function displays a message when a new dense and big matrix
+        is created when it should be sparse. A sparse matrix should be allocated instead.
         """
         BaseEstimator.__init__(self)
         TransformerMixin.__init__(self)
@@ -56,6 +60,7 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
         self._p_skip_errors = skip_errors
         self._p_remove = remove
         self._p_single = single
+        self.fLOG = fLOG
 
     def __repr__(self):
         """
@@ -193,6 +198,9 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
             sch, pos, new_vector = self._schema
             vec = new_vector
 
+            new_size = X.shape[0] * len(sch)
+            if new_size >= 2e30 and self.fLOG:
+                self.fLOG("Allocating {0} floats.".format(new_size))
             res = numpy.zeros((X.shape[0], len(sch)))
             res.fill(numpy.nan)
             b = not self._p_skip_errors
