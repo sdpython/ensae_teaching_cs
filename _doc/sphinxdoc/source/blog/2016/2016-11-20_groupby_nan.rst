@@ -2,7 +2,7 @@
 
 .. blogpost::
     :title: pandas, groupby, nan values
-    :keywords: 
+    :keywords: groupby, nan
     :date: 2016-11-20
     :categories: pandas
     
