@@ -399,3 +399,5 @@ _doc/notebooks/competitions/2016/*.zip
 _doc/notebooks/competitions/2016/*.txt
 _doc/notebooks/competitions/*.zip
 _doc/notebooks/competitions/answer.csv
+_unittests/ut_faq/operadriver.exe
+_unittests/ut_faq/operadriver_win64.zip

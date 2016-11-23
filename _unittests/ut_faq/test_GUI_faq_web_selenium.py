@@ -87,7 +87,7 @@ class TestLONGFaqWeb(unittest.TestCase):
             return
 
         url = "http://www.xavierdupre.fr"
-        navigator = "opera"
+        navigator = "chrome"
         html = webhtml(url, navigator=navigator, fLOG=fLOG)
         assert len(html) > 0
         self.assertEqual(len(html[0]), 2)
@@ -113,7 +113,7 @@ class TestLONGFaqWeb(unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_selenium_image")
         img = os.path.join(temp, "image_selenium.png")
         url = "http://www.xavierdupre.fr/"
-        navigator = "opera"
+        navigator = "chrome"
         # download_chromedriver(dest=temp)
         # os.environ["PATH"] += ";" + temp
         res = webshot(img, url, navigator=navigator, fLOG=fLOG)

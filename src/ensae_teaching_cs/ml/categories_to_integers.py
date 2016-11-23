@@ -107,7 +107,7 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
                 X.columns, X.dtypes) if d in (object,)]
 
         self._fit_columns = columns
-        max_cat = len(X) // 2 + 1
+        max_cat = max(len(X) // 2 + 1, 10000)
 
         self._categories = {}
         for c in columns:
@@ -115,7 +115,7 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
             nb = len(distinct)
             if nb >= max_cat:
                 raise ValueError(
-                    "Too many categories ({0}) for one column '{1}'".format(nb, c))
+                    "Too many categories ({0}) for one column '{1}' max_cat={2}".format(nb, c, max_cat))
             self._categories[c] = dict((c, i)
                                        for i, c in enumerate(list(sorted(distinct))))
         self._schema = self._build_schema()

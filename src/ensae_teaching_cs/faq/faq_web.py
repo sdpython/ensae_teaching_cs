@@ -139,7 +139,7 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
                         "unable to install chromedriver.exe")
             else:
                 fLOG("found chromedriver:", chromed)
-        if False:
+        if True:
             fLOG("start", navigator)
             browser = webdriver.Chrome(chromed)
         else:
