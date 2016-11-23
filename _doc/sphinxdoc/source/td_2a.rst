@@ -263,6 +263,10 @@ Projections, réduction des dimensions
 * `Manifold learning <http://scikit-learn.org/stable/modules/manifold.html>`_
 * `Cartes de Kohonen <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_clus/kohonen.html>`_
 
+*Animations*
+
+* `How to Use t-SNE Effectively <http://distill.pub/2016/misread-tsne/>`_
+
 
 Clustering
 ==========
