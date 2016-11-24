@@ -168,6 +168,29 @@ Distribution des calculs, stratégies de stockage, SQL NoSQL
 
 
 
+Map Reduce en pratique
+++++++++++++++++++++++
+
+* Itérateurs, lien avec le SQL (voir :ref:`mapreducetimeseriesrst`)
+* Distribution à base de hash (voir :ref:`hashdistributionrst`)
+* `Mapper, Reducer, Combiner, Partitionner <https://developer.yahoo.com/hadoop/tutorial/module4.html>`_
+* Graphe d'exécution, synchronisation - *Map Reduce Flow Chart*
+* Exemple : moyennes par groupes
+* Pas d'ordre des observations, tri sur l'ensemble des données à éviter
+* Produit matriciel, représentation d'une matrice en trois colonnes, matrice sparse
+* Graphe : pas facile en map/reduce, exemple avec l'algorithme des 
+  :ref:`random walk with restarts <exposerwrrecommandationrst>`
+* Problème des skewed datasets --> clés très mal distribués (voir :ref:`hashdistributionrst`)
+* Descente du gradient : itératif
+* Stratégie de parallélisation, propriétés mathématiques
+  optimisation d'une fonction convexe
+* Exemple de :ref:`k-means distribué <2015kmeansrst>`
+* Le hasard en distribué, :ref:`Réservoir sampling <td3aenoncereservoirsamplingrst>` (:ref:`correction <td3acorrectionreservoirsamplingrst>`)
+* Schéma des langages de map/reduce : 
+  `lazy evaluation <https://en.wikipedia.org/wiki/Lazy_evaluation>`_ (évalusation presseuse, dask, Spark, PIG)
+
+
+
 Map Reduce avec PIG sur Azure et Cloudera
 =========================================
 
@@ -258,7 +281,9 @@ ces outils sur les trois OS principaux
 
 **SPARK**
 
-(à venir)
+.. toctree::
+    
+    td_3a_spark
 
 
 
