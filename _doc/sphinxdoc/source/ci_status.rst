@@ -6,8 +6,15 @@
 Dépendances
 ===========
 
-Tableau de bord
-+++++++++++++++
+Ce module et les suivants servent de support aux enseignements.
+Ils sont régulièrement mis à jour et testés.
+La grande majorité des notebooks sont exécutés toutes les semaines
+afin de détecter facilement les problèmes pouvant survenir lors 
+de la mise à jour de modules tels que *scikit-learn*, *pandas*, ...
+
+Tableau de bord et statut des dépendances
++++++++++++++++++++++++++++++++++++++++++
+
 
 .. list-table::
     :widths: 12 10 10 15 10 10 10
