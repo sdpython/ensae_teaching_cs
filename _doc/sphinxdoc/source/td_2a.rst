@@ -500,6 +500,15 @@ Deep Learning
 
 * `theano <http://deeplearning.net/software/theano/>`_
 * `keras <https://keras.io/>`_
+* `mxnet <https://github.com/dmlc/mxnet>`_
+* `caffe <http://caffe.berkeleyvision.org/>`_ (`installation <http://caffe.berkeleyvision.org/installation.html>`_)
+
+*à suivre*
+
+* `chainer <https://github.com/pfnet/chainer>`_
+* `platoon <https://github.com/mila-udem/platoon/>`_ : 
+  multi-GPU pour theano
+* `scikit-theano <https://github.com/sklearn-theano/sklearn-theano>`_
 
 Reinforcement Learning
 ++++++++++++++++++++++
