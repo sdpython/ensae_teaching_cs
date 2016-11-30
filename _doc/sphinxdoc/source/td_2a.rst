@@ -268,6 +268,18 @@ Projections, réduction des dimensions
 * `How to Use t-SNE Effectively <http://distill.pub/2016/misread-tsne/>`_
 
 
+Variables catégorielles
++++++++++++++++++++++++
+
+|pyecopng| |pystatpng|
+
+(à venir)
+
+*Lectures*
+
+* :ref:`Tranformer les variables catégorielles et contrastes <encoding-categorie-id>`
+
+
 Clustering
 ==========
 

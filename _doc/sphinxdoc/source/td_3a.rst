@@ -63,7 +63,7 @@ GPU
 
 * `Comment apprendre aux ordinateurs à comprendre des images <https://www.ted.com/talks/fei_fei_li_how_we_re_teaching_computers_to_understand_pictures?language=fr>`_
 * `Scaling-up Machine Learning Chapitre 16 et 17 <http://www.cambridge.org/catalogue/catalogue.asp?isbn=1139210408>`_
-* `Quelques exemples graphiques de kernel 3x3 de convolution <>`_
+* `Quelques exemples graphiques de kernel 3x3 de convolution <https://docs.gimp.org/en/plug-in-convmatrix.html>`_
 * `Introduction aux réseaux convolutifs <http://matlabtricks.com/post-5/3x3-convolution-kernels-with-online-demo#demo>`_,
   `Canny edge detector <https://en.wikipedia.org/wiki/Canny_edge_detector>`_
 * `Understanding Convolution in Deep Learning <http://timdettmers.com/2015/03/26/convolution-deep-learning/>`_
