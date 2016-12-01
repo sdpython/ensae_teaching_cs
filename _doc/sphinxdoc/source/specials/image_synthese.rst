@@ -8,6 +8,10 @@
 Image de synthèse, lancer de rayon
 ==================================
 
+.. contents::
+    :local:
+
+
 Simple model
 ++++++++++++
 

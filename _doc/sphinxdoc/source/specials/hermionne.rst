@@ -8,6 +8,13 @@
 L'énigme d'Hermionne, Harry Potter tome 1
 =========================================
 
+.. contents::
+    :local:
+
+
+L'énigme
+++++++++
+
 Lors du premier tome de `Harry Potter <https://fr.wikipedia.org/wiki/Harry_Potter>`_
 les trois héros doivent résoudre une énigme 
 - qui ne nécessite aucune magie - 
@@ -29,6 +36,9 @@ Ils sont aidés de quelques indices :
 #. Ni la fiole la plus grande (fiole 6) ni la plus petite (fiole 3) 
    ne contient du poison.
 #. Les contenus des fioles 2 et 6 sont identiques.
+
+Les solutions
++++++++++++++
 
 
 Les deux solutions proposées sont équivalentes, elles consistent à parcourir toutes les

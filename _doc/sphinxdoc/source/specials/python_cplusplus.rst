@@ -12,6 +12,9 @@ On n'utilise le `C/C++ <https://fr.wikipedia.org/wiki/C%2B%2B>`_ que dans le but
 d'accélérer un programme Python. Il existe plusieurs façons de mélanger les deux
 langages.
 
+.. contents::
+    :local:
+
 CPython
 +++++++
 

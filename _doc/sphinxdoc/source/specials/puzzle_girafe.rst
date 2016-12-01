@@ -8,6 +8,12 @@
 Résolution d'un puzzle
 ======================
 
+.. contents::
+    :local:
+
+Pour la petite histoire
++++++++++++++++++++++++
+
 
 C'est un cadeau que j'ai reçu à Noël il y a longtemps sous forme de puzzle.
 A vrai dire, je n'ai même pas essayé de résoudre le puzzle moi-même.

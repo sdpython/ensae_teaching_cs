@@ -7,6 +7,12 @@ Optimisation sous contraintes appliquée au calcul du report des voix
 
 Recopié depuis `Optimisation sous contraintes appliquée au calcul du report des voix <http://www.xavierdupre.fr/blog/2013-12-07_nojs.html>`_.
 
+.. contents::
+    :local:
+
+Poser le problème
++++++++++++++++++
+
 Entre les deux tours des élections présidentielles, on parle beaucoup
 du report des voix des élections. 
 Dans la plupart des articles que j'ai trouvés 
@@ -230,6 +236,9 @@ Elle vérifie les contraintes suivantes :
     \forall c,d, \; V_{cd} \leqslant 0 \\
     \forall c, \; \sum_{d=1}^{D} V_{cd} = 1 
     \end{array}
+    
+Une résolution
+++++++++++++++
 
 Le problème n'est pas très éloigné d'une régression avec des contraintes
 sur les coefficients excepté que la matrice *Y* a plus d'une colonne.
@@ -407,6 +416,9 @@ aux deux tours.
         </tr>
       </tbody>
     </table>
+    
+Quelques précautions
+++++++++++++++++++++
 
 Il est difficile d'interpréter ces résultats sans prendre quelques précautions.
 La fonction d'erreur donne le même poids à toutes les voix. 
@@ -632,6 +644,9 @@ ayant obtenu peu de voix.
         </tr>
       </tbody>
     </table>
+    
+Petits candidats
+++++++++++++++++
 
 Pour réduire la fourchette de confiance pour les petits
 candidats, on peut s'inspirer d'un test statistique
@@ -856,6 +871,9 @@ derniers candidats.
         </tr>
       </tbody>
     </table>
+    
+2007
+++++
 
 
 Les mêmes résultats en 2007 laisse penser que les reports de voix étaient plus bruités :
@@ -979,6 +997,8 @@ Les mêmes résultats en 2007 laisse penser que les reports de voix étaient plu
       </tbody>
     </table>
 
+2002
+++++
 
 Les élections en 2002 montrent des résultats
 plutôt surprenants pour le candidats Chirac. 

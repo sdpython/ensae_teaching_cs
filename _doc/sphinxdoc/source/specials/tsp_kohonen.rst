@@ -8,6 +8,9 @@
 Circuit hamiltonien et Kohonen
 ==============================
 
+.. contents::
+    :local:
+
 Aperçu
 ++++++
 

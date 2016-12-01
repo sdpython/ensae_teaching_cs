@@ -8,6 +8,12 @@
 Distance between two graphs
 ===========================
 
+.. contents::
+    :local:
+
+Definitions
++++++++++++
+
 The first approach is implemented in module :mod:`graph_distance <ensae_teaching_cs.special.graph_distance>`.
 Example of use:
 
@@ -29,8 +35,8 @@ Example of use:
     
 *graph* is the merged graph mentioned below.
 
-Problem definition
-++++++++++++++++++
+Problem
++++++++
 
 
 This *graph distance* aims at computing a distance between graphs but 

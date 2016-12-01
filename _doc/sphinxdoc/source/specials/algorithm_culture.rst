@@ -8,6 +8,10 @@
 Survol algorithmique
 ====================
 
+.. contents::
+    :local:
+
+
 Il est facile de caler un modèle statistiques lorsque les données sont propres 
 et de taille raisonnable. Ce n'est quasiment jamais le cas.
 On a besoin de nettoyer ou de transformer les données. On a besoin

@@ -12,6 +12,9 @@ En entreprise, on a parfois besoin d'exposer de partager des données d'une mach
 `Flask <http://flask.pocoo.org/>`_ permet de créer 
 facilement un site web.
 
+.. contents::
+    :local:
+
 
 Exemple
 -------
