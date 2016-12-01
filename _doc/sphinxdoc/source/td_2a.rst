@@ -606,6 +606,25 @@ Auto-Learning
 * `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
 
 
+Machine Learning sur des données cryptées
++++++++++++++++++++++++++++++++++++++++++
+
+|pystatpng|
+
+*(à venir)*
+
+*Lectures*
+
+* `Machine Learning Classification over Encrypted Data <https://eprint.iacr.org/2014/331.pdf>`_
+* `CryptoNets: Applying Neural Networks to Encrypted Data with High Throughput and Accuracy <http://jmlr.org/proceedings/papers/v48/gilad-bachrach16.pdf>`_
+* `Compressed Sensing <https://en.wikipedia.org/wiki/Compressed_sensing>`_
+
+*Modules*
+
+* `ciphermed <https://github.com/rbost/ciphermed>`_ : pas maintenu
+
+
+
 
 NLP - Image - Réseaux - Timeseries
 ==================================
