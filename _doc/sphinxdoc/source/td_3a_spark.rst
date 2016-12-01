@@ -123,11 +123,12 @@ en fonction de vos choix lors de l'installation.
 
 
 #. Mise à jour de la machine Ubuntu : ``sudo apt-get update``
-#. Installer de java (`instructions <http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html>`_)
-
-   * Dire à Ubuntu où trouver Java (Oracle) ``sudo add-apt-repository ppa:webupd8team/java``
-   * Mettre à jour Ubuntu : ``sudo apt-get update``
-   * Installer Java 8 : ``sudo apt-get install oracle-java8-installer``
+#. Installer `java <>`_ 
+   (`instructions <http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html>`_),
+   il faut dire à Ubuntu où trouver Java (Oracle) avec `sudo add-apt-repository ...`,
+   dire à Ubuntu de prendre en cmopte cette modification `sudo apt-get update`
+   et installer Java 8 `sudo apt-get install oracle-java8-installer`.
+   En résumé :
     
    ::
     
@@ -135,7 +136,12 @@ en fonction de vos choix lors de l'installation.
         sudo apt-get update
         sudo apt-get install oracle-java8-installer
 
-#. Installer `Scala <https://www.scala-lang.org/>`_ : ``sudo apt install scala``
+#. Installer `Scala <https://www.scala-lang.org/>`_ :
+
+   ::
+   
+        sudo apt install scala
+        
 #. Installer `Anaconda 3 <https://www.continuum.io/anaconda-overview>`_, 
    on récupère le lien depuis cette page 
    `Anaconda/downloads <https://www.continuum.io/downloads>`_ :
@@ -146,10 +152,14 @@ en fonction de vos choix lors de l'installation.
         bash Anaconda3-4.2.0-Linux-x86_64.sh
         anaconda3/bin/conda update --all
     
-#. Aller à la page `Spark/downloads <http://spark.apache.org/downloads.html>`_ e
-   récupérer le lien pour la dernière version puis le télécharger :
-   ``wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.2-bin-hadoop2.7.tgz``
-#. Installer *Spark* : ``tar xvf spark-2.0.2-bin-hadoop2.7.tgz``
+#. Aller à la page `Spark/downloads <http://spark.apache.org/downloads.html>`_,
+   récupérer le lien pour la dernière version, le télécharger, puis l'installer :
+   
+   :: 
+   
+        wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.2-bin-hadoop2.7.tgz
+        tar xvf spark-2.0.2-bin-hadoop2.7.tgz
+        
 #. Définir les chemins d'accès (les deux premières lignes sont à supprimer si vous souhaitez
    utiliser la ligne de commande et non le notebook :
 
@@ -163,8 +173,10 @@ en fonction de vos choix lors de l'installation.
         
 #. Exécuter *pyspark* : ``spark-2.0.2-bin-hadoop2.7/bin/pyspark``
     
-
-Voici les versions utilisées pour ce test :
+    
+Il ne reste plus qu'à tester le :ref:`l-petit-exemple-pyspark`
+pour vérifier que tout marche bien.
+Les versions utilisées pour ce test :
 
 ::
 
@@ -179,9 +191,6 @@ Ce qui donne :
     Java(TM) SE Runtime Environment (build 1.8.0_111-b14)
     Java HotSpot(TM) 64-Bit Server VM (build 25.111-b14, mixed mode)
     Scala code runner version 2.11.6 -- Copyright 2002-2013, LAMP/EPFL
-    
-Il ne reste plus qu'à tester le :ref:`l-petit-exemple-pyspark`
-pour vérifier que tout marche bien.
 
 
 Spark DataFrame
