@@ -15,9 +15,15 @@ facilement un site web.
 .. contents::
     :local:
 
+Tutoriel
+--------
 
-Exemple
--------
+C'est un notebook qui fait partie de l'ensemble 
+:ref:`Python pour un économiste <l-eco-website>`.
+
+
+Outils pour tester un site
+--------------------------
 
 * :ref:`f-simpleflasksite`
 * :ref:`f-flaskhelper`
@@ -94,16 +100,17 @@ Pour un plus petit site, il existe le module
 `bottle <http://bottlepy.org/docs/dev/index.html>`_
 mais celui ne permet d'écrire simplement 
 des tests unitaires.
-Pour des sites plus conséquents, la référnce est
+Pour des sites plus conséquents, la référence est
 `django <https://www.djangoproject.com/>`_.
 
 `autobahn/python <http://autobahn.ws/python/>`_
 permet d'écrire simplement des sites qu'on programme
 par événements. Cela permet de ne pas laisser le serveur bloqué
 pendant qu'il effectue un traitement.
-Enfin, `brython <http://www.brython.info/>`_ permet de remplacer le javascript par python.
-Plus simple à coder lorsqu'on ne connaît pas javascript mais cela
-revient à se priver de tout un tas d'outils écrit dans ce langage :
+Enfin, `brython <http://www.brython.info/>`_ permet de remplacer le 
+`javascript <https://fr.wikipedia.org/wiki/JavaScript>`_ par *python*.
+Plus simple à coder lorsqu'on ne connaît pas `javascript <https://fr.wikipedia.org/wiki/JavaScript>`_ 
+mais cela revient à se priver de tout un tas d'outils écrit dans ce langage :
 `jquery <http://jquery.com/>`_,
 `angularJS <https://angularjs.org/>`_,
 `node.js <http://nodejs.org/>`_,
