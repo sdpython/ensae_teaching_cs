@@ -89,7 +89,7 @@ Pour vérifier que tout fonctionne, on peut exécuter ce script sur n'importe qu
     counts = text_file.flatMap(lambda line: line.split(" ")).map(lambda word: (word, 1)).reduceByKey(lambda a, b: a + b)
     counts.saveAsTextFile("fichier.out.txt")
     
-Si tout ce passe bien, un répertoire *fichier.out.txt* est créé avec les fichiers :
+Si tout se passe bien, un répertoire *fichier.out.txt* est créé avec les fichiers :
 
 ::
 
