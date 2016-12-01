@@ -122,8 +122,13 @@ Il faudra mettre à jour les numéros de version et les chemins
 en fonction de vos choix lors de l'installation.
 
 
-#. Mise à jour de la machine Ubuntu : ``sudo apt-get update``
-#. Installer `java <>`_ 
+#. Mise à jour de la machine Ubuntu : 
+  
+   ::
+   
+        sudo apt-get update
+        
+#. Installer `Java <https://www.java.com/en/>`_ 
    (`instructions <http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html>`_),
    il faut dire à Ubuntu où trouver Java (Oracle) avec `sudo add-apt-repository ...`,
    dire à Ubuntu de prendre en cmopte cette modification `sudo apt-get update`
@@ -176,7 +181,7 @@ en fonction de vos choix lors de l'installation.
     
 Il ne reste plus qu'à tester le :ref:`l-petit-exemple-pyspark`
 pour vérifier que tout marche bien.
-Les versions utilisées pour ce test :
+Les versions utilisées pour ce test sont les suivantes.
 
 ::
 
@@ -191,6 +196,9 @@ Ce qui donne :
     Java(TM) SE Runtime Environment (build 1.8.0_111-b14)
     Java HotSpot(TM) 64-Bit Server VM (build 25.111-b14, mixed mode)
     Scala code runner version 2.11.6 -- Copyright 2002-2013, LAMP/EPFL
+
+C'est souvent la première information qu'on vérifie lorsqu'une erreur se produit.
+Ce tutoriel a utilisé les dernières versions disponibles.
 
 
 Spark DataFrame
