@@ -56,7 +56,7 @@ from pyquickhelper.helpgen.default_conf import set_sphinx_variables
 set_sphinx_variables(__file__, "Python dans tous ses états", "Xavier Dupré",
                      2016, "sphinx_rtd_theme", None,
                      locals(), add_extensions=None,
-                     github_repo="https://github.com/sdpython/ensae_teachings_cs.git",
+                     github_repo="https://github.com/sdpython/ensae_teaching_cs.git",
                      extlinks=dict(
                          issue=('https://github.com/sdpython/ensae_teaching_cs/issues/%s', 'issue')),
                      book=True)
