@@ -298,10 +298,12 @@ Clustering
 * `Map/Reduce Affinity Propagation Clustering Algorithm <http://www.ijeee.net/uploadfile/2014/0807/20140807114023665.pdf>`_
 * `Parallel Hierarchical Affinity Propagation with MapReduce <https://arxiv.org/abs/1403.7394>`_
 * `Cats & Co: Categorical Time Series Coclustering <https://arxiv.org/abs/1505.01300v1>`_
+* `Comparing Python Clustering Algorithms <https://github.com/scikit-learn-contrib/hdbscan/blob/master/docs/comparing_clustering_algorithms.rst>`_
 
 *Modules*
 
 * `scikit-learn <http://scikit-learn.org/stable/>`_
+* `hdbscan <https://github.com/scikit-learn-contrib/hdbscan>`_
 
 Machine Learning
 ================
