@@ -278,6 +278,11 @@ Glossaire
         Langage haut niveau pour implémenter des tâches avec plusieurs Map/Reduce :
         `PIG <http://pig.apache.org/>`_.
         
+    Pokemon
+        C'est un jeu qui est régulièrement choisi par les élèves en tant que projet information.        
+        `TP: Pokemon, attrappez-les tous ! <https://openclassrooms.com/courses/apprenez-la-programmation-avec-scala/tp-pokemon-attrappez-les-tous>`_,
+        voir aussi :ref:`Site Web avec des Pokemons <TD2AEcoWebScrapingenoncerst>`.
+        
     PR
         voir Pull Request
         

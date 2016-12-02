@@ -167,6 +167,24 @@ Distribution des calculs, stratégies de stockage, SQL NoSQL
 * `What Every Data Scientist Needs to Know about SQL <http://joshualande.com/data-science-sql>`_
 
 
+Compression des données
++++++++++++++++++++++++
+
+Lorsque les données sont volumineuses. Une solution consiste à les compresser.
+
+*Lectures*
+
+* `Compressed sparse row (CSR, CRS or Yale format) <https://en.wikipedia.org/wiki/Sparse_matrix#Compressed_sparse_row_.28CSR.2C_CRS_or_Yale_format.29>`_
+* `Moving away from HDF5 <http://cyrille.rossant.net/moving-away-hdf5/>`_
+
+*Modules*
+
+* `ASDF <http://asdf-standard.readthedocs.io/en/latest/>`_
+* `bcolz <http://bcolz.blosc.org/>`_
+* `blosc <http://blosc.org/>`_
+* `h5py <http://www.h5py.org/>`_
+* `Zarr <https://github.com/alimanfoo/zarr>`_
+
 
 Map Reduce en pratique
 ++++++++++++++++++++++
