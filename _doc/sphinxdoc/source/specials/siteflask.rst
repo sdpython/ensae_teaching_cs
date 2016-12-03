@@ -3,8 +3,8 @@
 .. _l-siteflask:
 
 
-Site Web
-========
+Site Web, exemple avec Flask
+============================
 
 En entreprise, on a parfois besoin d'exposer de partager des données d'une machine 
 à une autre, d'exécution des scripts sur une machine distante sans avoir
