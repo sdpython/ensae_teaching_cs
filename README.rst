@@ -15,10 +15,6 @@ README
 .. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
     :target: http://badge.fury.io/py/ensae_teaching_cs
       
-.. image:: http://img.shields.io/pypi/dm/ensae_teaching_cs.png
-    :alt: PYPI Package
-    :target: https://pypi.python.org/pypi/ensae_teaching_cs  
-    
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
     :alt: MIT License
     :target: http://opensource.org/licenses/MIT
