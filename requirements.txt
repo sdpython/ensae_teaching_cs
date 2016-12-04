@@ -24,6 +24,7 @@ plotly
 pygal
 pygal_maps_fr
 pylzma
+pympler
 pyquickhelper
 pyreadline
 python-jenkins
