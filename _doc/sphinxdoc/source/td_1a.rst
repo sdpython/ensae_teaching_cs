@@ -63,6 +63,7 @@ et qu'il est important de comprendre.
     notebooks/code_liste_tuple
     i_examples
     notebooks/structures_donnees_conversion
+    notebooks/tri_nlnd
     
     
 Le premier jeu qu'on demande d'implémenter à tous ceux qui commencent la 
