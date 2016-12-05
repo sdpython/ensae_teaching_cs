@@ -63,9 +63,7 @@ et qu'il est important de comprendre.
     notebooks/code_liste_tuple
     i_examples
     notebooks/structures_donnees_conversion
-    notebooks/tri_nlnd
-    
-    
+
 Le premier jeu qu'on demande d'implémenter à tous ceux qui commencent la 
 programmation :
     
@@ -74,7 +72,6 @@ programmation :
 
     notebooks/pp_exo_deviner_un_nombre
     notebooks/pp_exo_deviner_un_nombre_correction
-    
 
 A la fin des premières séances, on peut réfléchir à l'implémentation
 d'un algorithme :
@@ -83,7 +80,6 @@ d'un algorithme :
     :maxdepth: 2
 
     notebooks/_gs1a_6_jaccard
-    
 
 Au terme de ces six séances, si la programmation est nouvelle pour vous ou
 si le langage vous paraît encore peu naturel, 
@@ -221,9 +217,19 @@ Pour vous exercer :
     notebooks/exercice_lcs
     notebooks/exercice_plus_grande_somme
     
+Et pour apprendre :
+
+.. toctree::
+    :maxdepth: 1
+
+    notebooks/tri_nlnd
+
+    
 **Quelques sources d'exercices**
 
 * `Rosalind <http://rosalind.info/problems/topics/>`_
+* `Google Jam <https://code.google.com/codejam/>`_ 
+  (exemple : `Le problème des milkshakes <https://code.google.com/codejam/contest/32016/dashboard#s=p1​>`_)
 
 
 TD - calcul matriciel, graphes, données

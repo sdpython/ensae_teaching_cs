@@ -340,26 +340,21 @@ Bibliographie
 * `Tutorial: Spark-GPU Cluster Dev in a Notebook <https://iamtrask.github.io/2014/11/22/spark-gpu/>`_
 * `How CPU load averages work (and using them to triage webserver performance!) <http://jvns.ca/blog/2016/02/07/cpu-load-averages/>`_ *(2016/06)*
 
-*Librairies / outils*
+**Librairies / outils**
 
 * `amazon-dsstne <https://github.com/amznlabs/amazon-dsstne>`_ : moteur de recommandation d'Amazon
 * `Elastic Search <https://github.com/elastic/elasticsearch>`_ : moteur de recherche
 * `Giraph <http://giraph.apache.org/>`_ : Large-scale graph processing on Hadoop 
 * `Hadoop <http://hadoop.apache.org/>`_ : système de fichier distribué + Map Reduce simple
-* `Kafka <http://kafka.apache.org/>`_ : distributed streaming platform, conçu pour stocker et récupérer en temps réel
-   des événements de sites web
-* `Mesos <http://mesos.apache.org/>`_ : Apache Mesos abstracts CPU, memory, storage, and other compute resources away from machines (physical or virtual)
-  `Elixi <https://github.com/ceteri/exelixi/wiki>`_
+* `Kafka <http://kafka.apache.org/>`_ : distributed streaming platform, conçu pour stocker et récupérer en temps réel des événements de sites web
+* `Mesos <http://mesos.apache.org/>`_ : Apache Mesos abstracts CPU, memory, storage, and other compute resources away from machines (physical or virtual), `Elixi <https://github.com/ceteri/exelixi/wiki>`_
 * `MLlib <https://spark.apache.org/mllib/>`_ : distributed machine learning for Spark
 * `Parquet <http://parquet.apache.org/>`_ : Apache Parquet is a columnar storage format available to any project in the Hadoop ecosystem.
 * `Presto <https://prestodb.io/>`_ : Distributed SQL Query Engine for Big Data (Facebook)
-* `pyCUDA <https://developer.nvidia.com/pycuda>`_ (`A Monte Carlo Option Pricer <http://nbviewer.jupyter.org/gist/harrism/835a8ca39ced77fe751d>`_ 
-   avec `numbapro <http://docs.continuum.io/numbapro/>`_)
-* `Spark <https://spark.apache.org/>`_ :  Map Reduce, minimise les accès disques,
-  (`DPark <https://github.com/douban/dpark>`_ clone Python de Spark)
+* `pyCUDA <https://developer.nvidia.com/pycuda>`_ (`A Monte Carlo Option Pricer <http://nbviewer.jupyter.org/gist/harrism/835a8ca39ced77fe751d>`_ avec `numbapro <http://docs.continuum.io/numbapro/>`_)
+* `Spark <https://spark.apache.org/>`_ :  Map Reduce, minimise les accès disques, (`DPark <https://github.com/douban/dpark>`_ clone Python de Spark)
 * `Spark SQL <https://spark.apache.org/sql/>`_ : SQL distribué, sur couche de Spark
-* `Storm <https://storm.apache.org/>`_ : Apache Storm is a free and open source distributed realtime computation system,
-  conçu pour distribuer des pipelines de traitements de données
+* `Storm <https://storm.apache.org/>`_ : Apache Storm is a free and open source distributed realtime computation system, conçu pour distribuer des pipelines de traitements de données
 * `YARN <https://hadoop.apache.org/docs/r2.7.1/hadoop-yarn/hadoop-yarn-site/YARN.html>`_ : Ressource negociator
 
     
