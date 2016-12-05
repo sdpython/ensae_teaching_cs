@@ -768,13 +768,16 @@ Site web
     notebooks/_gs2a_eco_website
 
 
+*Lectures*
+
+* `Python's Web Framework Benchmarks <http://klen.github.io/py-frameworks-bench/>`_
+
 *Modules*
 
 * `bottle <http://bottlepy.org/docs/dev/>`_
 * `django <https://www.djangoproject.com/>`_
 * `falcon <https://falconframework.org/>`_
 * `Flask <http://flask.pocoo.org/>`_
-
 
 Jupyter et les commandes magiques
 +++++++++++++++++++++++++++++++++
@@ -823,6 +826,7 @@ Big data sans cluster, données non structurées
 - Base de données non relationnelles dont `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_
 - :ref:`l-td25asynthese`
 - `Un tools d’itertour, ou l’inverse <http://sametmax.com/un-tools-ditertour-ou-linverse/>`_
+- `Benchmark of Python JSON libraries <http://artem.krylysov.com/blog/2015/09/29/benchmark-python-json-libraries/>`_
 
 
 .. _l-2a-cplusplus-para-serie:
@@ -1141,8 +1145,6 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
     :tag: plus
     
     * beautifulsoup, ghost.py, scrappy
-    * structure de données JSON, HTML, XML
-    * créer son site web Flask, `Falcon <https://falconframework.org/>`_, Django
     * `Python's Web Framework Benchmarks <http://klen.github.io/py-frameworks-bench/>`_
 
 .. todoext::
