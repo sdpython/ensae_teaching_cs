@@ -266,7 +266,10 @@ Trois projets réalisés par les élèves lors de l'année 2014-2015 :
 Map Reduce avec Spark SQL
 =========================
 
-(*à venir*)
+.. toctree::
+    :maxdepth: 2
+    
+    notebooks/_gs3a_spark
 
 
 *Lectures*

@@ -401,3 +401,8 @@ _doc/notebooks/competitions/*.zip
 _doc/notebooks/competitions/answer.csv
 _unittests/ut_faq/operadriver.exe
 _unittests/ut_faq/operadriver_win64.zip
+_doc/notebooks/td3a_spark/out/**
+_doc/notebooks/td3a_spark/adult.txt
+_doc/notebooks/td3a_spark/fichier*
+_doc/notebooks/td3a_spark/metastore_db/**
+_doc/notebooks/td3a_spark/Untitled.*

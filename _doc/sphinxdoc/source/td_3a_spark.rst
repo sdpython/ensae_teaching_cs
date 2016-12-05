@@ -97,12 +97,19 @@ Si tout se passe bien, un répertoire *fichier.out.txt* est créé avec les fich
     part-00000
     part-00001
     
-#. Pour utiliser Spark depuis un notebook, il suffit de spécifier une variable d'environnement
-   avant de lancer *pyspark* :
+Spark et notebook
++++++++++++++++++
+    
+Pour utiliser Spark depuis un notebook, il suffit de spécifier une variable d'environnement
+avant de lancer *pyspark* :
    
-   ::
-   
-        set PYSPARK_DRIVER_PYTHON=jupyter-notebook
+::
+
+    set PYSPARK_DRIVER_PYTHON=jupyter-notebook
+    
+Et pour spécifier un répertoire par défaut, il suffit d'exécuter `pyspark`
+depuis ce répertoire.
+
 
 
 Installation de Spark sous Linux
