@@ -73,7 +73,29 @@ Source `Installing Spark on a Windows PC <https://www.ukdataservice.ac.uk/media/
    
         set PATH=%PATH%;C:\username\spark\spark-2.0.2-bin-hadoop2.7\bin
    
+#. Dernier test, on exécute (il faut créer le répertoire ``\tmp\hive``) :
+
+   ::
+   
+        winutils.exe ls \tmp\hive
+        
+   Et cela donne :
+   
+   ::
+   
+        drwxrwxrwx 1 domain\username domain\username Users 0 Dec  6 2016 \tmp\hive
+        
+   Si ce n'est pas le cas, il faut exécuter :
+   
+   ::
+   
+        winutils.exe chmod -R 777 \tmp\hive
+        
 #. Test final : ``pyspark``.
+
+L'ensemble de ces instructions est regroupés dans le script :
+`run_pyspark_notebook.bat <https://github.com/sdpython/ensae_teaching_cs/blob/master/run_pyspark_notebook.bat>`_.
+
 
 .. _l-petit-exemple-pyspark:
 
@@ -183,24 +205,6 @@ en fonction de vos choix lors de l'installation.
         export PYSPARK_PYTHON=anaconda3/bin/python
         export PATH=anaconda3/bin:$PATH
         
-#. Dernier test, on exécute (il faut créer le répertoire ``\tmp\hive``) :
-
-   ::
-   
-        winutils.exe ls \tmp\hive
-        
-   Et cela donne :
-   
-   ::
-   
-        drwxrwxrwx 1 domain\username domain\username Users 0 Dec  6 2016 \tmp\hive
-        
-   Si ce n'est pas le cas, il faut exécuter :
-   
-   ::
-   
-        winutils.exe chmod -R 777 \tmp\hive
-        
 #. Exécuter *pyspark* : ``spark-2.0.2-bin-hadoop2.7/bin/pyspark``
     
     
@@ -223,10 +227,7 @@ Ce qui donne :
     Scala code runner version 2.11.6 -- Copyright 2002-2013, LAMP/EPFL
 
 C'est souvent la première information qu'on vérifie lorsqu'une erreur se produit.
-Ce tutoriel a utilisé les dernières versions disponibles. L'ensemble de
-ces instructions est regroupés dans le script :
-`run_pyspark_notebook.bat <https://github.com/sdpython/ensae_teaching_cs/blob/master/run_pyspark_notebook.bat>`_.
-
+Ce tutoriel a utilisé les dernières versions disponibles.
 
 Spark DataFrame
 +++++++++++++++
