@@ -59,19 +59,19 @@ Source `Installing Spark on a Windows PC <https://www.ukdataservice.ac.uk/media/
         log4j.logger.org.apache.spark.repl.SparkILoop$SparkILoopInterpreter=INFO  
 
 #. Télécharger le fichier *winutils.exe* dans le répertoire *bin* depuis cet emplacement :
-   `winutils.exe <https://github.com/steveloughran/winutils/blob/master/hadoop-2.6.0/bin/winutils.exe>`_.
+   `winutils.exe <https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe>`_.
 #. Ajouter deux variables environnements pointant sur le répertoire *bin* :
 
    :: 
 
-        set HADOOP_HOME=C:\xadupre\spark\spark-2.0.2-bin-hadoop2.7
-        set SPARK_HOME=C:\xadupre\spark\spark-2.0.2-bin-hadoop2.7
+        set HADOOP_HOME=C:\username\spark\spark-2.0.2-bin-hadoop2.7
+        set SPARK_HOME=C:\username\spark\spark-2.0.2-bin-hadoop2.7
         
 #. Ajouter ce même répertoire à la variable d'environnement ``%PATH%`` :
 
    ::
    
-        set PATH=%PATH%;C:\xadupre\spark\spark-2.0.2-bin-hadoop2.7\bin
+        set PATH=%PATH%;C:\username\spark\spark-2.0.2-bin-hadoop2.7\bin
    
 #. Test final : ``pyspark``.
 
@@ -183,6 +183,24 @@ en fonction de vos choix lors de l'installation.
         export PYSPARK_PYTHON=anaconda3/bin/python
         export PATH=anaconda3/bin:$PATH
         
+#. Dernier test, on exécute (il faut créer le répertoire ``\tmp\hive``) :
+
+   ::
+   
+        winutils.exe ls \tmp\hive
+        
+   Et cela donne :
+   
+   ::
+   
+        drwxrwxrwx 1 domain\username domain\username Users 0 Dec  6 2016 \tmp\hive
+        
+   Si ce n'est pas le cas, il faut exécuter :
+   
+   ::
+   
+        winutils.exe chmod -R 777 \tmp\hive
+        
 #. Exécuter *pyspark* : ``spark-2.0.2-bin-hadoop2.7/bin/pyspark``
     
     
@@ -205,7 +223,9 @@ Ce qui donne :
     Scala code runner version 2.11.6 -- Copyright 2002-2013, LAMP/EPFL
 
 C'est souvent la première information qu'on vérifie lorsqu'une erreur se produit.
-Ce tutoriel a utilisé les dernières versions disponibles.
+Ce tutoriel a utilisé les dernières versions disponibles. L'ensemble de
+ces instructions est regroupés dans le script :
+`run_pyspark_notebook.bat <https://github.com/sdpython/ensae_teaching_cs/blob/master/run_pyspark_notebook.bat>`_.
 
 
 Spark DataFrame
@@ -221,3 +241,65 @@ Spark DataFrame
     
     df = spark.read.csv("tbl_type_credit.txt")
     df.show()
+
+
+Erreurs rencontrées avant les premiers scripts
+++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Py4JJavaError: An error occurred while calling o162.csv.
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+:: 
+
+    Py4JJavaError: An error occurred while calling o162.csv.
+    : java.lang.RuntimeException: java.lang.RuntimeException: Unable to instantiate org.apache.hadoop.hive.ql.metadata.SessionHiveMetaStoreClient"
+    
+Il est suggéré dans ce cas de supprimer le répertoire ``metastore_db``.
+
+    
+    
+Erreur : Cannot run program "python"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Il vous manque probablement ``PYSPARK_PYTHON``.
+Voici ce que vous devriez avoir :
+
+::
+
+    LOCAL_PYSPARK            = c:\<username>\spark\spark-2.0.2-bin-hadoop2.7
+    PYSPARK_DRIVER_PYTHON    = jupyter-notebook
+    PYSPARK_PYTHON           = c:\Python35_x64\python
+    PYSPARK_SUBMIT_ARGS      = "--name" "PySparkShell" "pyspark-shell" 
+    SPARK_CMD                = set PYSPARK_SUBMIT_ARGS="--name" "PySparkShell" "pyspark-shell" && jupyter-notebook 
+    SPARK_ENV_LOADED         = 1
+    SPARK_HIVE               = true
+    SPARK_HOME               = c:\<username>\spark\spark-2.0.2-bin-hadoop2.7\bin\..
+    SPARK_JARS_DIR           = "c:\<username>\spark\spark-2.0.2-bin-hadoop2.7\bin\..\jars"
+    SPARK_SCALA_VERSION      = 2.10
+    _SPARK_CMD_USAGE         = Usage: bin\pyspark.cmd [options]
+    
+The trust relationship between this workstation and the primary domain failed (Windows)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Cette survient lorsqu'on exécute :
+
+::
+
+    sdf = spark.read.csv("data_adult.txt") #, sep="\t", encoding="utf-8")
+
+Cette erreur est un peu mystérieuse à vrai dire. J'ai trouvé ce 
+`lien <https://support.microsoft.com/en-us/kb/2771040>`_ qui donne 
+une solution sans vraiment expliquer le problème. Dans mon cas, j'ai créé un nouveau compte
+sur l'ordinateur et je l'ai supprimé. J'ai redémarré l'ordinateur et cela a disparu.
+
+
+Erreurs rencontrées durant l'exécution des premiers scripts
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Erreur : Output directory  file:/... already exists
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Spark n'aime pas écrire des données dans un RDD qui existe déjà. 
+Il faut le supprimer. Tout dépend de l'environnement où on se trouve, 
+sur Hadoop ou en local.

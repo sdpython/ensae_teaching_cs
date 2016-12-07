@@ -262,10 +262,20 @@ Projections, réduction des dimensions
 * `Locality-sensitive hashing <https://en.wikipedia.org/wiki/Locality-sensitive_hashing>`_
 * `Manifold learning <http://scikit-learn.org/stable/modules/manifold.html>`_
 * `Cartes de Kohonen <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_clus/kohonen.html>`_
+* `Fast Randomized SVD <https://research.fb.com/fast-randomized-svd/>`_
+
+*Modules*
+
+* `scikit-learn <http://scikit-learn.org/>`_
+* `statsmodels <http://statsmodels.sourceforge.net/>`_
+* `fbpca <http://fbpca.readthedocs.io/en/latest/>`_ : ACP
+* `prince <https://github.com/MaxHalford/Prince>`_ : ACM
 
 *Animations*
 
 * `How to Use t-SNE Effectively <http://distill.pub/2016/misread-tsne/>`_
+
+
 
 
 Variables catégorielles

@@ -15,18 +15,28 @@ set local_python=c:\Python35_x64
 
 set CURRENT=%~dp0
 
+:hive:
+if NOT EXIST \tmp mkdir \tmp
+if NOT EXIST \tmp\hive mkdir \tmp\hive
+
 :update_path:
 set HADOOP_HOME=%local_pyspark%
 set SPARK_HOME=%local_pyspark%
 set PATH=%local_python%;%local_python%\Scripts;%PATH%
 set PATH=%PATH%;%local_pyspark%\bin
 set PYSPARK_PYTHON=%local_python%\python
-@echo HADOOP_HOME=%HADOOP_HOME%
-@echo SPARK_HOME=%SPARK_HOME%
-@echo PYSPARK_PYTHON=%PYSPARK_PYTHON%
-set PYTHONPATH=%PYTHONPATH%;%current%\src;%current%\..\pyquickhelper\src;%current%\..\jyquickhelper\src;%current%\..\pymmails\src;%current%\..\pyensae\src;%current%\..\pyrsslocal\src;%current%\..\pymyinstall\src;%current%\..\mlstatpy\src
-@echo PYTHONPATH=%PYTHONPATH%
+set SPARK_HIVE=true
 
+@echo HADOOP_HOME=%HADOOP_HOME%
+@echo PYTHONPATH=%PYTHONPATH%
+@echo PYSPARK_PYTHON=%PYSPARK_PYTHON%
+@echo SPARK_HIVE=%SPARK_HIVE%
+@echo SPARK_HOME=%SPARK_HOME%
+set PYTHONPATH=%PYTHONPATH%;%current%\src;%current%\..\pyquickhelper\src;%current%\..\jyquickhelper\src;%current%\..\pymmails\src;%current%\..\pyensae\src;%current%\..\pyrsslocal\src;%current%\..\pymyinstall\src;%current%\..\mlstatpy\src
+
+:wintutils:
+winutils.exe chmod -R 777 \tmp\hive
+winutils.exe ls \tmp\hive
 
 :run_pyspark:
 set PYSPARK_DRIVER_PYTHON=jupyter-notebook
