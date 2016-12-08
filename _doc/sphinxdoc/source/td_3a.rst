@@ -357,6 +357,13 @@ Bibliographie
 * `Storm <https://storm.apache.org/>`_ : Apache Storm is a free and open source distributed realtime computation system, conçu pour distribuer des pipelines de traitements de données
 * `YARN <https://hadoop.apache.org/docs/r2.7.1/hadoop-yarn/hadoop-yarn-site/YARN.html>`_ : Ressource negociator
 
+*Librairies à suivre*
+
+* `multiverso <https://github.com/microsoft/multiverso>`_ : framework de parallélisation
+* `CNTK <>`_ : librairie de deep learning chez Microsoft
+* `lightLDA <https://github.com/Microsoft/lightlda>`_ : Latent Dirichlet Application parallélisée
+* `lightGBM <https://github.com/Microsoft/lightGBM>`_ : 
+  A fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART) framework based on decision tree algorithms.
     
 .. rubric:: Footnotes
 

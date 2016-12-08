@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PivotTable.js</title>
+        
+        <!-- external libs from cdnjs -->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/pivottable/1.6.3/pivot.min.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/1.6.3/pivot.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/1.6.3/d3_renderers.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/1.6.3/c3_renderers.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pivottable/1.6.3/export_renderers.min.js"></script>
+
+        <style>
+            body {font-family: Verdana;}
+            .node {
+              border: solid 1px white;
+              font: 10px sans-serif;
+              line-height: 12px;
+              overflow: hidden;
+              position: absolute;
+              text-indent: 2px;
+            }
+            .c3-line, .c3-focused {stroke-width: 3px !important;}
+            .c3-bar {stroke: white !important; stroke-width: 1;}
+            .c3 text { font-size: 12px; color: grey;}
+            .tick line {stroke: white;}
+            .c3-axis path {stroke: grey;}
+            .c3-circle { opacity: 1 !important; }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            $(function(){
+                if(window.location != window.parent.location)
+                    $("<a>", {target:"_blank", href:""})
+                        .text("[pop out]").prependTo($("body"));
+                    
+                $("#output").pivotUI( 
+                    $.csv.toArrays($("#output").text()), 
+                    { 
+                        renderers: $.extend(
+                            $.pivotUtilities.renderers, 
+                            $.pivotUtilities.c3_renderers, 
+                            $.pivotUtilities.d3_renderers,
+                            $.pivotUtilities.export_renderers
+                            ),
+                        hiddenAttributes: [""]
+                    }
+                ).show();
+             });
+        </script>
+        <div id="output" style="display: none;">académie,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013
+Aix-Marseille,250622,248208,245755,243832,242309,240664,240432,241336,239051,240115
+Amiens,175610,172110,168718,165295,163116,162548,163270,164422,165275,166345
+Besançon,100117,98611,97038,95779,95074,94501,94599,94745,94351,94613
+Bordeaux,244805,244343,242602,242933,243146,244336,246806,250626,252085,255761
+Caen,125552,123889,122550,121002,119857,119426,119184,119764,119010,119238
+Clermont-Ferrand,102094,100498,98821,97962,97245,97066,97704,97883,98371,99183
+Corse,22351,22016,21755,21666,21148,20922,20922,21090,20983,21253
+Créteil,374906,373821,368979,364206,359201,358284,359707,361727,362354,368458
+Dijon,133565,130787,127729,125376,124139,123898,124576,124083,124757,125811
+Grenoble,269099,267348,265300,264031,264105,264297,265556,269904,270339,273693
+Lille,401399,391958,382427,373950,368174,364966,365258,365790,364386,365981
+Limoges,52758,52050,51231,50906,50759,50570,50710,50854,50927,51480
+Lyon,263099,260885,257883,256763,255715,256183,257053,259254,258388,261379
+Montpellier,208867,208521,207668,207845,208449,209191,212160,214895,216146,218750
+Nancy-Metz,211047,207009,201647,198236,194804,192996,191178,189017,187574,188108
+Nantes,290241,287490,284914,284160,284985,287426,290205,295705,298154,303588
+Nice,167680,166345,164848,164500,163779,163664,164318,163376,163850,164971
+Orléans-Tours,207727,204676,201600,199083,197217,197085,197912,198752,199787,202433
+Paris,164660,164229,163595,163376,162804,162417,162972,163752,163923,164867
+Poitiers,132226,130149,128482,128043,127662,128671,130521,132122,132856,134216
+Reims,120611,117674,114624,112314,110322,109241,108684,107949,107424,107891
+Rennes,259563,256843,254647,254255,254780,256126,259318,261961,264594,267952
+Rouen,172215,168817,165430,162502,160197,159072,158995,159558,158783,159126
+Strasbourg,154270,153329,151451,150222,149192,149566,149807,149939,149261,149683
+Toulouse,214634,214368,214085,214480,215935,216879,219211,221704,223041,225969
+Versailles,491240,489408,484342,480725,478761,477029,477399,479241,480308,484835
+La Réunion,102592,102613,102233,101480,101262,100635,100995,101457,100611,101015
+</div>
+    </body>
+</html>
