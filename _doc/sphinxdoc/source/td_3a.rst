@@ -209,8 +209,11 @@ Map Reduce en pratique
 
 
 
-Map Reduce avec PIG sur Azure et Cloudera
-=========================================
+Map Reduce
+==========
+
+avec PIG sur Azure et Cloudera
+++++++++++++++++++++++++++++++
 
 
 Les trois séances suivantes sont plus appliquées et dédiées à la découverte
@@ -263,8 +266,8 @@ Trois projets réalisés par les élèves lors de l'année 2014-2015 :
 
 
     
-Map Reduce avec Spark SQL
-=========================
+avec Spark et Spark SQL
++++++++++++++++++++++++
 
 .. toctree::
     :maxdepth: 2
@@ -283,10 +286,11 @@ Map Reduce avec Spark SQL
 
 .. _l-td3a-start:
 
-Getting started
-===============
+Getting started, installation, setup
+++++++++++++++++++++++++++++++++++++
 
-**PIG**
+PIG
+^^^
 
 Ces enseignements vous sont proposés via des notebooks. 
 Ils requièrent une surcouche apporté par le module 
@@ -300,9 +304,11 @@ ces outils sur les trois OS principaux
 `OS X <http://www.apple.com/osx/>`_, 
 `Linux <https://en.wikipedia.org/wiki/Linux>`_.
 
-**SPARK**
+SPARK
+^^^^^
 
 .. toctree::
+    :maxdepth: 2
     
     td_3a_spark
 

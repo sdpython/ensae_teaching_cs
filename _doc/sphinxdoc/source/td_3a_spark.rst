@@ -1,8 +1,8 @@
 
 
 
-Spark
-=====
+Installation de Spark en local
+==============================
 
 .. contents::
     :local:
@@ -199,7 +199,7 @@ en fonction de vos choix lors de l'installation.
 
    ::
    
-        export PYSPARK_DRIVER_PYTHON=anaconda3/bin/ipython
+        export PYSPARK_DRIVER_PYTHON=anaconda3/bin/jupyter
         export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
 
         export PYSPARK_PYTHON=anaconda3/bin/python
@@ -244,6 +244,89 @@ Spark DataFrame
     df.show()
 
 
+
+Script batch de lancement
++++++++++++++++++++++++++
+
+La liste des instructions pour lancer pyspark est assez longue et fastidieuse mais il est possible
+de l'écrire une bonne fois pour toute dans un script batch, d'extension ``.bat`` ou ``.cmd`` sous Windows
+et ``.sh`` sous Linux et Mac. Il suffit de créer ce fichier et de l'enregistrer sur le bureau
+pouvoir lancer pyspark en un double clic.
+
+
+Windows
+^^^^^^^
+
+Voici ce script pour Windows.
+Il faut remplacer les trois premiers chemins 
+avec ceux de son ordinateur.
+Il faut éviter d'appeler ce fichier ``pypark.bat`` ou ``pyspark.cmd``
+car le système va le confondre avec celui du même nom installé par Spark.
+
+``run_pypspark.bat``
+
+::
+
+    set local_pyspark=c:\%USERNAME%\spark\spark-2.0.2-bin-hadoop2.7
+    set local_python=c:\Python35_x64
+    set notebook_dir=c:\Users\username
+
+    :hive:
+    if NOT EXIST \tmp mkdir \tmp
+    if NOT EXIST \tmp\hive mkdir \tmp\hive
+
+    :update_path:
+    set HADOOP_HOME=%local_pyspark%
+    set SPARK_HOME=%local_pyspark%
+    set PATH=%local_python%;%local_python%\Scripts;%PATH%
+    set PATH=%PATH%;%local_pyspark%\bin
+    set PYSPARK_PYTHON=%local_python%\python
+    set SPARK_HIVE=true
+
+    @echo HADOOP_HOME=%HADOOP_HOME%
+    @echo PYTHONPATH=%PYTHONPATH%
+    @echo PYSPARK_PYTHON=%PYSPARK_PYTHON%
+    @echo SPARK_HIVE=%SPARK_HIVE%
+    @echo SPARK_HOME=%SPARK_HOME%
+
+    :wintutils:
+    winutils.exe chmod -R 777 \tmp\hive
+    winutils.exe ls \tmp\hive
+
+    :run_pyspark:
+    set PYSPARK_DRIVER_PYTHON=jupyter-notebook
+    if NOT EXIST %local_pyspark% @echo Not found: %local_pyspark%
+    
+    pushd %notebook_dir%
+    %local_pyspark%\bin\pyspark.cmd
+    popd
+
+Linux
++++++
+
+Voici ce script pour Linux.
+Il faut remplacer les trois premiers chemins 
+avec ceux de son ordinateur.
+Il faut éviter d'appeler ce fichier ``pypark.sh``
+car le système va le confondre avec celui du même nom installé par Spark.
+Il faut le lancer depuis le répertoire contenant les notebooks.
+
+``run_pypspark.sh``
+
+::
+
+    export local_pyspark=/usr/username/Spark
+    export local_python=/user/username/anaconda3
+
+    export PYSPARK_DRIVER_PYTHON=$local_python/bin/jupyter
+    export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+    export PYSPARK_PYTHON=$local_path/bin/python
+    export PATH=$local_path/bin:$local_pyspark:$PATH
+
+    pyspark
+
+
+
 Erreurs rencontrées avant les premiers scripts
 ++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -259,22 +342,6 @@ Py4JJavaError: An error occurred while calling o162.csv.
 Il est suggéré dans ce cas de supprimer le répertoire ``metastore_db``.
 
     
-Failed to start database 'metastore_db' with class loader    
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-::
-
-    Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@79af752f, see the next exception for details.
-            at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-            at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
-            at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
-            at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
-            at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)    
-
-Il est suggéré dans ce cas de supprimer le répertoire ``metastore_db``.
-Il faut redémarrer le notebook si jamais ce n'est pas possible.
-
-
 Erreur : Cannot run program "python"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -319,3 +386,20 @@ Erreur : Output directory  file:/... already exists
 Spark n'aime pas écrire des données dans un RDD qui existe déjà. 
 Il faut le supprimer. Tout dépend de l'environnement où on se trouve, 
 sur Hadoop ou en local.
+
+Failed to start database 'metastore_db' with class loader    
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+::
+
+    Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@79af752f, see the next exception for details.
+            at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+            at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+            at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
+            at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+            at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)    
+
+Il est suggéré dans ce cas de supprimer le répertoire ``metastore_db``.
+Il faut redémarrer le notebook si jamais ce n'est pas possible.
+
+

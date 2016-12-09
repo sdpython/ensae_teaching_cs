@@ -51,8 +51,18 @@ Etape 3 : séparation train/test
 +++++++++++++++++++++++++++++++
 
 Il faut faire attention à deux ou trois détails. Par exemple, si le problème est un de problème 
-de classification, il faut faire attention que toutes les classes à prédire sont bien représentées
+de classification, il faut faire attention que toutes les classes à prédire sont bien **représentées**
 dans les deux bases. C'est particulièrement important si l'une d'elles comportent peu d'exemples.
+Si les données sont **temporelles**, il faut faire une séparation temporelles pour prédire
+le futur avec le passée. Si les données sont **groupées**, il faut faire attention à ce que 
+les groupes ne soient pas tronqués sinon c'est l'assurance de faire du surapprentissage.
+
+**Exemple :** un base de critiques de films. 
+S'il y a plusieurs critiques par films, il faut qu'un même film
+ne soit pas présent dans les deux bases d'apprentisage et de test.
+Pour ces films, il est fort probable que le modèle appris soit anormalement
+performance sur la base de test.
+
 
 Etape 4 : apprentissage d'un modèle
 +++++++++++++++++++++++++++++++++++
@@ -60,6 +70,8 @@ Etape 4 : apprentissage d'un modèle
 On cale un ou plusieurs modèles sur les données d'apprentissage. 
 C'est de moins en moins sorcier : 
 `Machine learning automatique <http://www.xavierdupre.fr/blog/2015-12-11_nojs.html>`_.
+Il faut foncer : apprendre un modèle tout de suite pour avoir une idée de la 
+difficulté du problème.
 
 Etape 5 : mesure de la performance
 ++++++++++++++++++++++++++++++++++
@@ -91,17 +103,32 @@ Dans le cas contraire, il faut retourner à l'étape 4 :
 
 * La base d'apprentissage contient peut-être des points aberrants.
 * La distribution d'un variable n'est pas homogène dans les bases d'apprentissage et des tests.
-* Le modèle a besoin de plus de variables :
-    * combinaison non linéaires des variables existantes (polynômes, fonctions en escalier, ...),
-    * recoupement de la base de données avec une autre base.
+* Le modèle a besoin de plus de variables, 
+  combinaison non linéaires des variables existantes (polynômes, fonctions en escalier, ...),
+  recoupement de la base de données avec une autre base.
 * Les valeurs manquantes empêchent le modèle d'apprendre.
 * Une variables continues ne l'est pas vraiment : distribution selon deux modes par exemple.
 * ...
 
 Voir également `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_.
 
-Etape 6 : utiliser les données
-++++++++++++++++++++++++++++++
+Etape 6 : ajouter des variables
++++++++++++++++++++++++++++++++
+
+* Passer au logarithme lorsque les variables sont des valeurs extrêmes, 
+  cela réduit leur importance
+* Si les données sont temporelles : ajouter des agrégations sur des fenêtres glissantes
+  (sur la semaine, le mois, l'année qui a précédé).
+* Si les données peuvent être groupées : ajouter des moyennes, sum, nombre par groupes.
+  Exemple : considérer la note moyenne d'un film pour savoir si une critique est positive
+  ou négative.
+* Utiliser la sortie d'autre modèle de machine learning.
+* Ajouter des cmobinaisons de variables difficiles à apprendre pour un modèle
+  comme un ratio (tout ce n'est pas linéaire)
+* Chercher l'information qui pourrait aider un modèle à corriger une erreur en particulier.
+
+Etape 7 : jouer à Hercule Poirot
+++++++++++++++++++++++++++++++++
 
 On atteint vite un plafond lorsqu'on essaye les modèles un par un. 
 Il faut maintenant extraire tout ce qu'on sait des données ou tout ce qu'on imagine savoir
@@ -167,7 +194,7 @@ Dialogue improvisé... Il faut prédire le parti d'un sénaeur en fonction de se
 
 
 
-Etape 7 : validation du modèle
+Etape 8 : validation du modèle
 ++++++++++++++++++++++++++++++
 
 On regarde sur quelques exemples bien choisi que le modèle proposent une réponse acceptables.

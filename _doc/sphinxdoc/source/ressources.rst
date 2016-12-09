@@ -20,6 +20,13 @@ Ressources, Evénements, Source de données
 Source de données
 +++++++++++++++++
 
+**annuaire de données**
+
+* `Data Sources on the Web (MRAN) <https://mran.microsoft.com/documents/data/>`_
+* `Awesome Public Datasets <https://github.com/caesar0301/awesome-public-datasets>`_
+* `Wikidata <https://www.wikidata.org/wiki/Wikidata:Main_Page>`_
+
+
 **API**
 
 * `données vélib <https://developer.jcdecaux.com/#/home>`_
@@ -101,6 +108,7 @@ Source de données
 
 * `Data Sources on the Web (MRAN) <https://mran.microsoft.com/documents/data/>`_
 * `Awesome Public Datasets <https://github.com/caesar0301/awesome-public-datasets>`_
+* `Wikidata <https://www.wikidata.org/wiki/Wikidata:Main_Page>`_
 
 Compétition, Codes
 ++++++++++++++++++

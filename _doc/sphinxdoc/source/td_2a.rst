@@ -934,6 +934,32 @@ Certains sont tirés de plusieurs sites dont
 * `Cache replacement policies <https://en.wikipedia.org/wiki/Cache_replacement_policies>`_  
 * `Livres techniques en français <https://github.com/vhf/free-programming-books/blob/master/free-programming-books-fr.md>`_
 
+Data Scientist en liberté
+=========================
+
+Contrairement à ce qu'on pense, les datascientists sont plus prévisibles que les données.
+
+*machine learning*
+
+* :ref:`debutermlprojet`
+* `Sous le capot de la boîte noire <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html#mlstatpy>`_
+* `Quick samples on machine learning <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/mlexamples.html>`_
+* `Cheat Sheets <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/cheat_sheets.html>`_
+* `Gros volumes et sqllite3 <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/_gs5_sql_big_data.html>`_
+* C'est quoi déjà le `True False Positive <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/roc.html>`_ ?
+* :ref:`Encoder les catégories <encoding-categorie-id>`
+
+*quoi d'autres ?*
+
+* `Gerry Mandering <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/_gs_gerrymandering.html>`_ (bidouillage de cartes électorales)
+* `Apprendre des synonymes <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/_gs7_synonyme.html>`_
+* `Revue de compétition Kaggle <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/ensae201611.html>`_
+
+*installation*
+
+* `Anaconda <https://www.continuum.io/downloads>`_ + ``conda update all`` + ``pip install jyquickhelper``
+* `XGBoost sous Windows <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2016/2016-08-09_xgboost_again.html>`_
+
 
 .. _l-td2a-biblio:
 
