@@ -259,7 +259,22 @@ Py4JJavaError: An error occurred while calling o162.csv.
 Il est suggéré dans ce cas de supprimer le répertoire ``metastore_db``.
 
     
-    
+Failed to start database 'metastore_db' with class loader    
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+::
+
+    Caused by: java.sql.SQLException: Failed to start database 'metastore_db' with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@79af752f, see the next exception for details.
+            at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+            at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+            at org.apache.derby.impl.jdbc.Util.seeNextException(Unknown Source)
+            at org.apache.derby.impl.jdbc.EmbedConnection.bootDatabase(Unknown Source)
+            at org.apache.derby.impl.jdbc.EmbedConnection.<init>(Unknown Source)    
+
+Il est suggéré dans ce cas de supprimer le répertoire ``metastore_db``.
+Il faut redémarrer le notebook si jamais ce n'est pas possible.
+
+
 Erreur : Cannot run program "python"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

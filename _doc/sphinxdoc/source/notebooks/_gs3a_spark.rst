@@ -7,4 +7,5 @@ Notebook sur Spark
     :maxdepth: 2
 
     spark_first_steps
+    spark_mllib
 
