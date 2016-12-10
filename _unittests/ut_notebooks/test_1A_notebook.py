@@ -38,7 +38,7 @@ except ImportError:
     import pyquickhelper as skip_
 
 try:
-    import jyquickhelper as skip_
+    import jyquickhelper as skip__
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -51,7 +51,7 @@ except ImportError:
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
-    import jyquickhelper as skip_
+    import jyquickhelper as skip__
 
 
 from pyquickhelper.loghelper import fLOG
