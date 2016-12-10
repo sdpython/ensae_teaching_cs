@@ -39,7 +39,9 @@ Etape 2 : quelles sont les données ?
 * Nombre de variables (ou features) ?
 * Quelles sont les variables connues, les variables à prédire ?
 * Valeurs manquantes ?
-* Variables catégorielles, discrètes ou continues ?
+* Variables catégorielles, discrètes ou continues,
+  :ref:`Encoder les catégories <encoding-categorie-id>`
+
 
 La plupart des algorithmes d'apprentissages utilisent des données numériques,
 il faut convertir les variables catégorielles au format numérique.

@@ -947,7 +947,6 @@ Contrairement à ce qu'on pense, les datascientists sont plus prévisibles que l
 * `Cheat Sheets <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/cheat_sheets.html>`_
 * `Gros volumes et sqllite3 <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/_gs5_sql_big_data.html>`_
 * C'est quoi déjà le `True False Positive <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/roc.html>`_ ?
-* :ref:`Encoder les catégories <encoding-categorie-id>`
 
 *quoi d'autres ?*
 
