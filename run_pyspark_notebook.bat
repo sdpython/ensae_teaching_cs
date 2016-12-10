@@ -44,4 +44,3 @@ if NOT EXIST %local_pyspark% @echo Not found: %local_pyspark%
 pushd _doc\notebooks
 %local_pyspark%\bin\pyspark.cmd
 popd
-
