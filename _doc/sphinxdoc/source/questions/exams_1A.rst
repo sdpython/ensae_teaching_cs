@@ -26,6 +26,13 @@ Ils requiert peu de connaissances, évitent le plus souvent les classes.
     </b></p>
 
 
+Révisions rapides
++++++++++++++++++
+
+* `Résumé, cheat sheets <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_resume/index.html>`_
+* :ref:`structuresdonneesconversionrst`
+* :ref:`tableaucontingencerst`
+
 
 Séances notées
 ++++++++++++++

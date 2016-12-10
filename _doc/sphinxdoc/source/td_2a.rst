@@ -262,6 +262,7 @@ Projections, réduction des dimensions
 * `Locality-sensitive hashing <https://en.wikipedia.org/wiki/Locality-sensitive_hashing>`_
 * `Manifold learning <http://scikit-learn.org/stable/modules/manifold.html>`_
 * `Cartes de Kohonen <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_clus/kohonen.html>`_
+* `Dynamic Self-Organising Map <http://www.labri.fr/perso/nrougier/coding/article/article.html>`_
 * `Fast Randomized SVD <https://research.fb.com/fast-randomized-svd/>`_
 
 *Modules*
@@ -537,6 +538,8 @@ ou *apprentissage par renforcement*
 * `A Comprehensive Survey on Safe Reinforcement Learning <http://www.jmlr.org/papers/volume16/garcia15a/garcia15a.pdf>`_
 * `RLPy: A Value-Function-Based Reinforcement Learning Framework for Education and Research <http://www.jmlr.org/papers/volume16/geramifard15a/geramifard15a.pdf>`_
 * `UCL Course on RL <http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html>`_
+* `Reinforcement Learning Part I <http://www.labri.fr/perso/nrougier/downloads/Chile-2014-Lecture-1.pdf>`_
+  `Reinforcement Learning Part II <http://www.labri.fr/perso/nrougier/downloads/Chile-2014-Lecture-2.pdf>`_
 
 
 Bandits
