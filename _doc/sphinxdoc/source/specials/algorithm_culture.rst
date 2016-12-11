@@ -114,6 +114,7 @@ Catalogue
     * `suffix tree <http://fr.wikipedia.org/wiki/Arbre_des_suffixes>`_ **déf**
     * `trie <http://fr.wikipedia.org/wiki/Trie_(informatique)>`_ **déf**
     * `b-tree <http://fr.wikipedia.org/wiki/Arbre_B>`_ **déf**
+    * `x-fast-trie <https://en.wikipedia.org/wiki/X-fast_trie>`_ **déf**
 * Graphes
     * composantes connexes ou `parcours de graphe en profondeur <http://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_profondeur>`_, 
       `parcours de graphe en largeur <http://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_largeur>`_ **déf/algo**
