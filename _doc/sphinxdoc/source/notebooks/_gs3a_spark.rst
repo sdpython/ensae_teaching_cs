@@ -8,4 +8,5 @@ Notebook sur Spark
 
     spark_first_steps
     spark_mllib
+    spark_matrix_3_columns
 

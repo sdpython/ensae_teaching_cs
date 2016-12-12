@@ -409,6 +409,6 @@ _doc/notebooks/td3a_spark/Untitled.*
 _doc/notebooks/td3a_spark/data_adult.txt
 _doc/notebooks/td3a_spark/*.parquet
 _doc/notebooks/td3a_spark/target/**
-
-
+_doc/notebooks/td3a_spark/rnd1*
+_doc/notebooks/td3a_spark/rnd2*
 
