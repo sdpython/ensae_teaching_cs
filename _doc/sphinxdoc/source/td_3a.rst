@@ -287,7 +287,7 @@ avec Spark et Spark SQL
 .. _l-td3a-start:
 
 Getting started, installation, setup
-++++++++++++++++++++++++++++++++++++
+====================================
 
 PIG
 ^^^

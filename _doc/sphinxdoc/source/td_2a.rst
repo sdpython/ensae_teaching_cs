@@ -630,6 +630,15 @@ Machine Learning sur des données cryptées
 
 *Lectures*
 
+* `Privacy Preserving Data Mining <http://web.stanford.edu/group/mmds/slides/mcsherry-mmds.pdf>`_, Cynthia Dwork, Frank McSherry,
+  concept de :math:`\epsilon`-differential privacy 
+  (`version longue <https://users.soe.ucsc.edu/~abadi/CS223_F12/mcsherry.pdf>`_,
+  `Privacy Preserving Data Mining <http://www.cs.jhu.edu/~fabian/courses/CS600.624/slides/privacy-preserving.pdf>`_)
+* `Differentially Private Empirical Risk Minimization <http://www.jmlr.org/papers/volume12/chaudhuri11a/chaudhuri11a.pdf>`_
+* `Preserving Privacy of Continuous High-dimensional Data with Minimax Filters <http://www.jmlr.org/proceedings/papers/v38/hamm15.pdf>`_
+* `Differentially Private Online Learning <http://www.jmlr.org/proceedings/papers/v23/jain12/jain12.pdf>`_
+* `A Differentially Private Stochastic Gradient Descent Algorithm for Multiparty Classification <http://www.jmlr.org/proceedings/papers/v22/rajkumar12/rajkumar12.pdf>`_
+* `Privacy for Free: Posterior Sampling and Stochastic Gradient Monte Carlo <http://www.jmlr.org/proceedings/papers/v37/wangg15.pdf>`_
 * `Machine Learning Classification over Encrypted Data <https://eprint.iacr.org/2014/331.pdf>`_
 * `CryptoNets: Applying Neural Networks to Encrypted Data with High Throughput and Accuracy <http://jmlr.org/proceedings/papers/v48/gilad-bachrach16.pdf>`_
 * `Compressed Sensing <https://en.wikipedia.org/wiki/Compressed_sensing>`_
@@ -944,7 +953,7 @@ Contrairement à ce qu'on pense, les datascientists sont plus prévisibles que l
 
 *machine learning*
 
-* :ref:`debutermlprojet`
+* :ref:`l-debutermlprojet`
 * `Sous le capot de la boîte noire <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html#mlstatpy>`_
 * `Quick samples on machine learning <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/mlexamples.html>`_
 * `Cheat Sheets <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/cheat_sheets.html>`_
