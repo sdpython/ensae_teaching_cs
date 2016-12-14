@@ -485,6 +485,8 @@ Deep Learning
 * `Places CNN <http://places.csail.mit.edu/downloadCNN.html>`_,
   `Pre-release of Places365-CNNs <https://github.com/metalbubble/places365>`_
   (deep learning)
+* `CNTK <https://www.microsoft.com/en-us/research/product/cognitive-toolkit/model-gallery/>`_
+  (sur `github <https://github.com/Microsoft/CNTK/tree/master/Examples>`_)
   
 *Lectures*
 
@@ -501,6 +503,7 @@ Deep Learning
 * `Three Classes of Deep Learning Architectures and Their Applications: A Tutorial Survey <https://www.microsoft.com/en-us/research/publication/three-classes-of-deep-learning-architectures-and-their-applications-a-tutorial-survey/>`_
 * `Tutorial: Learning Deep Architectures <http://www.cs.toronto.edu/~rsalakhu/deeplearning/yoshua_icml2009.pdf>`_
 * `Deep Learning <https://en.wikipedia.org/wiki/Deep_learning>`_ (wikipédia)
+* `Fast R-CNN <https://arxiv.org/abs/1504.08083>`_ (voir `Object Detection using Fast R CNN <https://github.com/Microsoft/CNTK/wiki/Object-Detection-using-Fast-R-CNN>`_)
 
 *Lectures deep text*
 
