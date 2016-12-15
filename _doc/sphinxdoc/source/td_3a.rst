@@ -366,7 +366,7 @@ Bibliographie
 *Librairies à suivre*
 
 * `multiverso <https://github.com/microsoft/multiverso>`_ : framework de parallélisation
-* `CNTK <>`_ : librairie de deep learning chez Microsoft
+* `CNTK <https://github.com/Microsoft/CNTK/wiki>`_ : librairie de deep learning chez Microsoft
 * `lightLDA <https://github.com/Microsoft/lightlda>`_ : Latent Dirichlet Application parallélisée
 * `lightGBM <https://github.com/Microsoft/lightGBM>`_ : 
   A fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART) framework based on decision tree algorithms.

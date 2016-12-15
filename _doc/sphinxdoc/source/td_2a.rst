@@ -264,6 +264,7 @@ Projections, réduction des dimensions
 * `Cartes de Kohonen <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_clus/kohonen.html>`_
 * `Dynamic Self-Organising Map <http://www.labri.fr/perso/nrougier/coding/article/article.html>`_
 * `Fast Randomized SVD <https://research.fb.com/fast-randomized-svd/>`_
+* `Neural Autoregressive Distribution Estimation <http://www.jmlr.org/papers/volume17/16-272/16-272.pdf>`_
 
 *Modules*
 
@@ -316,8 +317,8 @@ Clustering
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 * `hdbscan <https://github.com/scikit-learn-contrib/hdbscan>`_
 
-Machine Learning
-================
+Machine Learning - Formalisation
+================================
 
 .. contents::
     :local:
@@ -407,7 +408,6 @@ Pratique du machine learning, problème de données
 *Digressions*
 
 * `A Network That Learns Strassen Multiplication <http://www.jmlr.org/papers/volume17/16-074/16-074.pdf>`_
-* `Learning Algorithms for Second-Price Auctions with Reserve <http://www.jmlr.org/papers/volume17/14-499/14-499.pdf>`_
 * `Learning Theory for Distribution Regression <http://www.jmlr.org/papers/volume17/14-510/14-510.pdf>`_
 
 *Métriques*
@@ -437,6 +437,7 @@ Ranking
 
 * `Learning to rank (software, datasets) <http://arogozhnikov.github.io/2015/06/26/learning-to-rank-software-datasets.html>`_
 * `Multiple-criteria decision analysis <https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis>`_
+* `Data-driven Rank Breaking for Efficient Rank Aggregation <http://www.jmlr.org/papers/volume17/16-209/16-209.pdf>`_
 
 *Modules*
 
@@ -561,6 +562,7 @@ Bandits
 * `Kernel-based methods for bandit convex optimization, part 2 <http://blogs.princeton.edu/imabandit/2016/08/09/kernel-based-methods-for-convex-bandits-part-2/>`_
 * `Kernel-based methods for bandit convex optimization, part 3 <http://blogs.princeton.edu/imabandit/2016/08/10/kernel-based-methods-for-convex-bandits-part-3/>`_
 * `Learning to Interact <http://hunch.net/~jl/interact.pdf>`_ (John Langford)
+* `Batch Learning from Logged Bandit Feedback through Counterfactual Risk Minimization <http://www.jmlr.org/papers/volume16/swaminathan15a/swaminathan15a.pdf>`_
 
 
 
@@ -588,42 +590,6 @@ Modèles bayésiens
 * `kabuki <https://pypi.python.org/pypi/kabuki/>`_
 
 
-Interprétabilité des modèles
-++++++++++++++++++++++++++++
-
-|pyecopng| |pystatpng|
-
-
-*(à venir)*
-
-*Lectures*
-
-* `Importance Weighting Without Importance Weights: An Effcient Algorithm for Combinatorial Semi-Bandits <http://jmlr.org/papers/volume17/15-091/15-091.pdf>`_
-* `Making Tree Ensembles Interpretable <https://arxiv.org/pdf/1606.05390v1.pdf>`_
-* `Understanding variable importances in forests of randomized trees <http://papers.nips.cc/paper/4928-understanding-variable-importances-in-forests-of-randomized-trees.pdf>`_
-* `Confidence Intervals for Random Forests: The Jackknife and the Infinitesimal Jackknife <http://jmlr.csail.mit.edu/papers/volume15/wager14a/wager14a.pdf>`_
-* `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
-
-
-Auto-Learning
-+++++++++++++
-
-|pyecopng| |pystatpng|
-
-
-*(à venir)*
-
-*Lectures*
-
-* `Efficient and Robust Automated Machine Learning <http://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning.pdf>`_
-
-*Modules*
-
-* `REP <https://github.com/yandex/rep>`_
-* `TPOT <https://github.com/rhiever/tpot>`_
-* `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
-
-
 Machine Learning sur des données cryptées
 +++++++++++++++++++++++++++++++++++++++++
 
@@ -649,6 +615,84 @@ Machine Learning sur des données cryptées
 *Modules*
 
 * `ciphermed <https://github.com/rbost/ciphermed>`_ : pas maintenu
+
+
+
+Machine Learning Avancé
+=======================
+
+Interprétabilité des modèles
+++++++++++++++++++++++++++++
+
+|pyecopng| |pystatpng|
+
+
+*(à venir)*
+
+*Lectures*
+
+* `Importance Weighting Without Importance Weights: An Effcient Algorithm for Combinatorial Semi-Bandits <http://jmlr.org/papers/volume17/15-091/15-091.pdf>`_
+* `Making Tree Ensembles Interpretable <https://arxiv.org/pdf/1606.05390v1.pdf>`_
+* `Understanding variable importances in forests of randomized trees <http://papers.nips.cc/paper/4928-understanding-variable-importances-in-forests-of-randomized-trees.pdf>`_
+* `Confidence Intervals for Random Forests: The Jackknife and the Infinitesimal Jackknife <http://jmlr.csail.mit.edu/papers/volume15/wager14a/wager14a.pdf>`_
+* `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
+* `Wavelet decompositions of Random Forests - smoothness analysis, sparse approximation and applications <http://www.jmlr.org/papers/volume17/15-203/15-203.pdf>`_
+
+
+Optimisation des hyperparamètres
+++++++++++++++++++++++++++++++++
+
+(à venir)
+
+*Lectures*
+
+* `Algorithms for Hyper-Parameter Optimization <https://papers.nips.cc/paper/4443-algorithms-for-hyper-parameter-optimization.pdf>`_
+
+*Modules*
+
+* `scikit-learn <http://scikit-learn.org/>`_
+* `hyperopt <https://github.com/hyperopt/hyperopt>`_
+
+
+Online training
++++++++++++++++
+
+
+*(à venir)*
+
+*Lectures*
+
+* `Fast Rates in Statistical and Online Learning <http://www.jmlr.org/papers/volume16/vanerven15a/vanerven15a.pdf>`_
+
+
+Modèles avec dépendances dans le temps
+++++++++++++++++++++++++++++++++++++++
+
+*(à venir)*
+
+*Lectures*
+
+* `Learning Algorithms for Second-Price Auctions with Reserve <http://www.jmlr.org/papers/volume17/14-499/14-499.pdf>`_
+* `Machine Learning in an Auction Environment <http://www.jmlr.org/papers/volume17/15-109/15-109.pdf>`_
+
+
+Auto-Learning
++++++++++++++
+
+|pyecopng| |pystatpng|
+
+
+*(à venir)*
+
+*Lectures*
+
+* `Efficient and Robust Automated Machine Learning <http://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning.pdf>`_
+
+*Modules*
+
+* `REP <https://github.com/yandex/rep>`_
+* `TPOT <https://github.com/rhiever/tpot>`_
+* `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
 
 
 
