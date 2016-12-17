@@ -36,7 +36,6 @@ is hosted on GitHub can be modified by sending me pull requests:
 
 * `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs/>`_
 * `documentation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_
-* `PDF of this site <http://www.xavierdupre.fr/app/ensae_teaching_cs/latex/ensae_teaching_cs_doc.pdf>`_
 * `Blog <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/blog/main_0000.html#ap-main-0>`_
 
 That will be probably one of the few pages in English.
