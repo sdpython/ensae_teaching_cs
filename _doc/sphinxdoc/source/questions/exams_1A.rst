@@ -217,12 +217,12 @@ interrogations écrites
 .. toctree::
     :maxdepth: 1
 
-    notebooks/interro_rapide_20_minutes_2014_09
-    notebooks/interro_rapide_20_minutes_2014_10
-    notebooks/interro_rapide_20_minutes_2014_11
-    notebooks/interro_rapide_20_minutes_2014_12
-    notebooks/interro_rapide_20_minutes_2015_09
-    notebooks/interro_rapide_20_minutes_2015_11
+    ../notebooks/interro_rapide_20_minutes_2014_09
+    ../notebooks/interro_rapide_20_minutes_2014_10
+    ../notebooks/interro_rapide_20_minutes_2014_11
+    ../notebooks/interro_rapide_20_minutes_2014_12
+    ../notebooks/interro_rapide_20_minutes_2015_09
+    ../notebooks/interro_rapide_20_minutes_2015_11
 
 TD notés, éléments de code donnés dans l'énoncé
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -230,7 +230,7 @@ TD notés, éléments de code donnés dans l'énoncé
 .. toctree::
     :maxdepth: 1
 
-    notebooks/td_note_2013_bout_de_code_coloriage
+    ../notebooks/td_note_2013_bout_de_code_coloriage
 
 
 
@@ -240,8 +240,8 @@ TD notés, correction
 .. toctree::
     :maxdepth: 1
 
-    notebooks/td_note_2013_coloriage_correction
-    notebooks/td_note_2015
-    notebooks/td_note_2016
-    notebooks/td_note_2017
+    ../notebooks/td_note_2013_coloriage_correction
+    ../notebooks/td_note_2015
+    ../notebooks/td_note_2016
+    ../notebooks/td_note_2017
 
