@@ -233,6 +233,8 @@ version.txt
 */sphinxdoc/source/ensae_teaching_cs/*
 */sphinxdoc/source/all*.rst
 */sphinxdoc/source/notebooks/*
+_doc/sphinxdoc/source/examples/*
+_doc/sphinxdoc/source/gallery/*
 !*/sphinxdoc/source/notebooks/_gs*
 */notebooks/*.zip
 */notebooks/*.txt
