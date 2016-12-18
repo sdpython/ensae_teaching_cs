@@ -1,6 +1,30 @@
 """
 @file
 @brief Shortcuts for homeblog
+
+Some shortcuts I use for windows.
+
+Launch `Scite <http://www.scintilla.org/SciTE.html>`_:
+
+::
+
+    set CURRENT=%~dp0
+    set PYTHONPATH=%CURRENT%\\__home_\\GitHub\\pyquickhelper\\src
+    set PYTHONPATH=%PYTHONPATH%;%CURRENT%\\__home_\\GitHub\\pyquickhelper\\src
+    set PYTHONPATH=%PYTHONPATH%;%CURRENT%\\__home_\\GitHub\\jyquickhelper\\src
+    set PYTHONPATH=%PYTHONPATH%;%CURRENT%\\__home_\\GitHub\\pyensae\\src
+    set PYTHONPATH=%PYTHONPATH%;%CURRENT%\\__home_\\GitHub\\pyrsslocal\\src
+    set PYTHONPATH=%PYTHONPATH%;%CURRENT%\\__home_\\GitHub\\pymmails\\src
+    set PYTHONPATH=%PYTHONPATH%;%CURRENT%\\__home_\\GitHub\\ensae_teaching_cs\\src
+    set PYTHONPATH=%PYTHONPATH%;%CURRENT%\\__home_\\GitHub\\mlstatpy\\src
+    set PYTHONPATH=%PYTHONPATH%;%CURRENT%\\__home_\\GitHub\\jupytalk\\src
+    set PYTHONPATH=%PYTHONPATH%;%CURRENT%\\__home_\\GitHub\\code_beatrix\\src
+    set PYTHONPATH=%PYTHONPATH%;%CURRENT%\\__home_\\GitHub\\actuariat_python\\src
+    set PYTHONPATH=%PYTHONPATH%;%CURRENT%\\__home_\\GitHub\\ensae_projects\\src
+    set PYTHONPATH=%PYTHONPATH%;%CURRENT%\\__home_\\GitHub\\pysqllike\\src
+    set PYTHONPATH=%PYTHONPATH%;%CURRENT%\\__home_\\GitHub\\teachpyx\\src
+    start wscite\\scite.exe
+
 """
 
 from .buildrss import file_build_rss
