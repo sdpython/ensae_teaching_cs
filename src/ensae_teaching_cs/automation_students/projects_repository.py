@@ -147,9 +147,7 @@ class ProjectsRepository:
             from pymmails.render.email_message_style import template_email_html_short
             import pandas
 
-            ###########
-            ## settings
-            ###########
+            # settings
 
             user = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "user")
             pwd = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "pwd")
@@ -171,9 +169,7 @@ class ProjectsRepository:
                             "y.gerey@laposte.net",
                             "Pierre.Cordier@ensae.paristech.fr"]
 
-            ###############
-            ## gather mails
-            ###############
+            # gather mails
 
             fLOG("fetch mails")
             filename = "emails.txt"
@@ -192,18 +188,14 @@ class ProjectsRepository:
                 with open(filename, "w", encoding="utf8") as f:
                     f.write("\n".join(emails))
 
-            #####################
-            ## create a dataframe
-            #####################
+            # create a dataframe
 
             import pandas
             rows = [{"nom_prenom":mail, "sujet":"octobre", "groupe":i+1} for i, mail in enumerate(emails)]
             df = pandas.DataFrame(rows)
             fLOG("dataframe", df.shape)
 
-            ##################################
-            ## create folders for each student
-            ##################################
+            # create folders for each student
 
             mappings = {}
             folder = "."
@@ -219,9 +211,7 @@ class ProjectsRepository:
                             must_have_email=True)
             fLOG("nb groups", len(proj.Groups))
 
-            #############
-            ## dump mails
-            #############
+            # dump mails
 
             if do_mail:
                 email_render = EmailMessageRenderer(tmpl=template_email_html_short, fLOG=fLOG)
@@ -236,9 +226,7 @@ class ProjectsRepository:
 
                 box.logout()
 
-            ################
-            ## write summary
-            ################
+            # write summary
 
             if True:
                 fLOG("summary")
@@ -247,9 +235,7 @@ class ProjectsRepository:
                 proj.write_summary()
 
 
-            #################
-            ## zip everything
-            #################
+            # zip everything
 
             filename = "exo_1A_2016.zip"
 
@@ -259,17 +245,13 @@ class ProjectsRepository:
                 proj.zip_group(None, filename,
                                addition=["index.html", "mail_style.css", "exo_1A_2016.xlsx", "emails.txt"])
 
-            #############
-            ## encryption
-            #############
+            # encryption
 
             enc = "projet_2A_2015.enc"
 
             if True:
                 fLOG("encryption")
                 encrypt_stream(b"ensae016ensae016", filename, enc, chunksize=2**30)
-
-
     """
 
     class MailNotFound(Exception):

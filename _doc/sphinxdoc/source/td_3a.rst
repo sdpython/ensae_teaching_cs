@@ -290,7 +290,7 @@ Getting started, installation, setup
 ====================================
 
 PIG
-^^^
++++
 
 Ces enseignements vous sont proposés via des notebooks. 
 Ils requièrent une surcouche apporté par le module 
@@ -305,7 +305,7 @@ ces outils sur les trois OS principaux
 `Linux <https://en.wikipedia.org/wiki/Linux>`_.
 
 SPARK
-^^^^^
++++++
 
 .. toctree::
     :maxdepth: 2
