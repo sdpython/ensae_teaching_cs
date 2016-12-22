@@ -21,6 +21,7 @@ def round(r, g, b):
 class Ville:
     """
     définit une ville qui va évoluer par la suite
+
     @param      colors          couleurs vives : simulation sans tenir compte de riches ou pauvres,
                                 seulement regroupement
     @param      colors_grade    simulation en tenant compte des riches, du plus foncé
@@ -41,18 +42,18 @@ class Ville:
                  renouvellement=0.15, delay=1):
         """
         constructeur
+
         @param      cote            côté du carré utilisé pour la simulation
         @param      group           nombre de catégories de gens
-        @param      taille          chaque individu regarde ses voisins à +- taille près
+        @param      taille          chaque individu regarde ses voisins à *+/-* taille près
         @param      riche           simulation avec riche ou non
-        @param      th2             le voisin le plus pauvre peut-être contaminé,
-                                    si la différence de classes est importante (cl1 > cl2 * th2)
+        @param      th2             le voisin le plus pauvre peut être contaminé,
+                                    si la différence de classes est importante (`cl1 > cl2 * th2`)
         @param      renouvellement  à chaque itération, une certaine proportion des pâtés sont mis à jour,
                                     cette proportion correspond au renouvellement
         @param      delay           la simulation prend en compte la ville lors des "delay" dernières itérations
 
         On tire au hasard la classe d'un pâté de maison dans un disque de rayon cote.
-
         """
         if cote is None:
             pass
@@ -75,7 +76,9 @@ class Ville:
                         self.mat[i][j] = -1
 
     def _voisinage(self, i, j, mat):
-        """calcul de la répartition du voisiage
+        """
+        calcul de la répartition du voisiage
+
         @param      i       i,j coordonnées
         @param      j
         @param      mat     matrice
@@ -97,6 +100,7 @@ class Ville:
     def evolution(self):
         """
         évolution d'une itération à l'autre
+
         @return         nb1,nb2
         """
 
@@ -189,7 +193,9 @@ class VilleImage (Ville):
                  th2=1.2,
                  renouvellement=0.15,
                  delay=1):
-        """constructeur
+        """
+        constructeur
+
         @param      image           nom d'une image pour définir l'initialisation
         @param      cote            cote du carré utilisé pour la simulation
         @param      group           nombre de catégories de gens

@@ -20,7 +20,7 @@
                              sep="\t", 
                              encoding="UTF-16LE")
 
-    Plutôt que de devenir, le plus simple est d'utiliser un module
+    Plutôt que de devenir fou, le plus simple est d'utiliser un module
     comme `chardet <http://chardet.readthedocs.io/en/latest/usage.html>`_
     qui retourne cette information avec l'exemple suivant :
     
@@ -32,3 +32,4 @@
             raw = f.read()
         enc = chardet.detect(raw)
         print(enc)
+
