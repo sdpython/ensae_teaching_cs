@@ -6,6 +6,9 @@ Récupérer des mails d'étudiants en pièce jointe (1:1)
 Récupère des fichiers en pièce jointe provenant d'étudiants comme un rendu de projet.
 Le programme suppose qu'il n'y en a qu'un par étudiant, que tous les mails ont été
 archivés dans un répertoire d'une boîte de message, ici gmail.
+Il faut supprimer le contenu du répertoire pour mettre à jour l'ensemble
+des projets. Dans le cas contraire, le code est prévu pour mettre à jour le répertoire
+à partir des derniers mails recensés dans le fichiers *mails.txt*.
 
 .. _script-fetch-students-projets-py:
 """

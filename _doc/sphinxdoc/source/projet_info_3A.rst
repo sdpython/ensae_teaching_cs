@@ -78,6 +78,7 @@ Suggestions d'articles
 * `L1-Regularized Distributed Optimization: A Communication-Efficient Primal-Dual Framework <http://arxiv.org/pdf/1512.04011v2.pdf>`_
 * `Map/Reduce Affinity Propagation Clustering Algorithm <http://www.ijeee.net/uploadfile/2014/0807/20140807114023665.pdf>`_ ou 
   `Parallel Hierarchical Affinity Propagation with MapReduce <https://arxiv.org/abs/1403.7394>`_
+* `Local Approximation of PageRank and Reverse PageRank <https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/34455.pdf>`_
 
 Nous vous recommandons d'adopter la démarche suivante:
 
