@@ -26,7 +26,7 @@ import keyring
 
 server = "imap.gmail.com"
 mailfolder = ["ensae/ENSAE_201617"]
-date = "15-Dec-2016"
+date = "13-Dec-2016"
 do_mail = True
 dest_folder = os.path.normpath(os.path.abspath(os.path.join(
     *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2016-2017", "2A"]))))
@@ -102,7 +102,8 @@ else:
     box.login()
     emails = grab_addresses(box, mailfolder, date, fLOG=fLOG)
     box.logout()
-    emails = [_ for _ in emails if _ not in skip_address]
+    emails = list(sorted(set([_.strip("<>").lower()
+                              for _ in emails if _ not in skip_address])))
 
     with open(filename_mails, "w", encoding="utf8") as f:
         f.write("\n".join(emails))

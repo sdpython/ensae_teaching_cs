@@ -644,7 +644,10 @@ class ProjectsRepository:
                     for m in mails:
                         if "@" not in m:
                             raise ValueError(
-                                "mails contains a mail with no @: {0}".format(mails))
+                                "mails contains a mail with no @: {0}".format(m))
+                        if "<" in m or ">" in m:
+                            raise ValueError(
+                                "one mail contains weird characters: {0}".format(m))
                     jmail = "; ".join(mails)
                 else:
                     jmail = None
