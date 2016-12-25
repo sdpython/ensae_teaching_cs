@@ -50,7 +50,7 @@ sys.path.insert(
             "pyrsslocal",
             "src")))
 
-from pyquickhelper.helpgen.default_conf import set_sphinx_variables
+from pyquickhelper.helpgen.default_conf import set_sphinx_variables, get_default_stylesheet
 
 
 set_sphinx_variables(__file__, "Python dans tous ses états", "Xavier Dupré",
