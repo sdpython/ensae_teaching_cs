@@ -33,10 +33,17 @@ import keyring
 
 this = os.path.abspath(os.path.dirname(__file__))
 if "ensae_teaching_cs" in this:
-    this = spl.split("ensae_teaching_cs")[0].rstrip("\\/")
-for module in ["ensae_teaching_cs", "pyquickhelper", "jyquickhelper",
-               "pyensae", "pyrsslocal", "pymmails"]:
-    sys.path.append(os.path.join(this, module, "src"))
+    this = this.split("ensae_teaching_cs")[0].rstrip("\\/")
+for module in ["jyquickhelper", "pyquickhelper", "pyensae",
+               "pyrsslocal", "pymmails", "pymyinstall",
+               "ensae_teaching_cs"]:
+    try:
+        exec("import %s" % module)
+    except ImportError:
+        p = os.path.join(this, module, "src")
+        print("add path", p)
+        sys.path.append(p)
+        exec("import %s" % module)
 
 
 #########################################
@@ -56,8 +63,16 @@ pwd = keyring.get_password("websitexd", os.environ["COMPUTERNAME"] + "pwd")
 ftpsite = keyring.get_password("websitexd", os.environ["COMPUTERNAME"] + "ftp")
 code_google = keyring.get_password(
     "websitexd", os.environ["COMPUTERNAME"] + "google")
-if pwd is None:
-    raise ValueError("password is empty")
+if pwd is None or user is None or ftpsite is None:
+    print("ERROR: password or user or ftpsite is empty, you should execute:")
+    print(
+        '    keyring.set_password("websitexd", os.environ["COMPUTERNAME"] + "user", "..")')
+    print(
+        '    keyring.set_password("websitexd", os.environ["COMPUTERNAME"] + "pwd", "..")')
+    print(
+        '    keyring.set_password("websitexd", os.environ["COMPUTERNAME"] + "ftp", "..")')
+    print("Exit")
+    sys.exit(0)
 if code_google is None:
     raise ValueError("code_google is empty")
 
@@ -96,5 +111,5 @@ google_id = code_google                         # identifiant google analytics
 ##################
 # La fonction :func:`publish_teachings_to_web cache` cache beaucoup de chose.
 
-publish_teachings_to_web(login=login, ftpsite=ftpsite, ftpsite=ftpsite, google_id=google_id,
-                         location=location, rootw=rootw, rootw2=rootw2, modules, password=password)
+publish_teachings_to_web(login=login, ftpsite=ftpsite, google_id=google_id,
+                         location=location, rootw=rootw, rootw2=rootw2, modules=modules, password=password)

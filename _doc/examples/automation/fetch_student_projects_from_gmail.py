@@ -44,9 +44,16 @@ filename_excel = os.path.join(dest_folder, "Python_2A_2016.xlsx")
 this = os.path.abspath(os.path.dirname(__file__))
 if "ensae_teaching_cs" in this:
     this = this.split("ensae_teaching_cs")[0].rstrip("\\/")
-for module in ["ensae_teaching_cs", "pyquickhelper", "jyquickhelper",
-               "pyensae", "pyrsslocal", "pymmails"]:
-    sys.path.append(os.path.join(this, module, "src"))
+for module in ["jyquickhelper", "pyquickhelper", "pyensae",
+               "pyrsslocal", "pymmails", "pymyinstall",
+               "ensae_teaching_cs"]:
+    try:
+        exec("import %s" % module)
+    except ImportError:
+        p = os.path.join(this, module, "src")
+        print("add path", p)
+        sys.path.append(p)
+        exec("import %s" % module)
 
 
 #########################################
@@ -72,12 +79,17 @@ from pymmails.render.email_message_style import template_email_html_short
 user = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "user")
 pwd = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "pwd")
 password = keyring.get_password("enc", os.environ["COMPUTERNAME"] + "pwd")
-if user is None:
-    raise ValueError("user is empty")
-if pwd is None:
-    raise ValueError("password is empty")
-if password is None:
-    raise ValueError("password to encrypt is None")
+if user is None or pwd is None or password is None:
+    print("ERROR: password or user or crypting password is empty, you should execute:")
+    print(
+        '    keyring.set_password("gmail", os.environ["COMPUTERNAME"] + "user", "..")')
+    print(
+        '    keyring.set_password("gmail", os.environ["COMPUTERNAME"] + "pwd", "..")')
+    print(
+        '    keyring.set_password("enc", os.environ["COMPUTERNAME"] + "pwd", "..")')
+    print("Exit")
+    sys.exit(0)
+
 password = bytes(password, "ascii")
 
 
