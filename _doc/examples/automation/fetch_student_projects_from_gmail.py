@@ -59,7 +59,7 @@ for module in ["jyquickhelper", "pyquickhelper", "pyensae",
 #########################################
 # logging
 
-from pyquickhelper.loghelper import fLOG
+from pyquickhelper.loghelper import fLOG  # fetch_student_projects_from_gmail
 fLOG(OutputPrint=True)
 
 

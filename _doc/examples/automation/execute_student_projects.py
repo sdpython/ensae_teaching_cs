@@ -38,7 +38,7 @@ for module in ["jyquickhelper", "pyquickhelper", "pyensae",
 
 #########################################
 # logging
-from pyquickhelper.loghelper import fLOG
+from pyquickhelper.loghelper import fLOG  # execute_student_projects
 fLOG(OutputPrint=True)
 
 #########################################

@@ -45,6 +45,11 @@ for module in ["jyquickhelper", "pyquickhelper", "pyensae",
         sys.path.append(p)
         exec("import %s" % module)
 
+#########################################
+# logging
+
+from pyquickhelper.loghelper import fLOG  # publish_lectures
+fLOG(OutputPrint=True)
 
 #########################################
 # import des fonctions dont on a besoin
