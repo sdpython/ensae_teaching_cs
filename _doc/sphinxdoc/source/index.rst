@@ -89,6 +89,14 @@ Contenu des enseignements
     9. Getting started <i_getting_started>
     10. Index <i_index>
 
+*Notebooks et exemples*
+
+.. toctree::
+    :maxdepth:
+    
+    i_examples
+    all_notebooks
+    gyexamples/index
 
 
 Getting started
