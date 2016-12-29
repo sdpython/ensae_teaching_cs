@@ -1,6 +1,4 @@
 
-
-
 .. _l-extra:
 .. _l-expose-explication:
 
@@ -12,15 +10,15 @@ Culture algorithmique
 =====================
 
 Programmation récréative, algorithmes, bouts de code, chaque exemple
-est indépendante des autres et propose un problème ou un jeu 
+est indépendante des autres et propose un problème ou un jeu
 qu'on peut résoudre grâce à un algorithme et un peu d'imagination.
 
 .. toctree::
     :maxdepth: 1
-    
+
     specials/algorithm_culture
     specials/np_complet
-    
+
 Algorithmes illustrés
 =====================
 
@@ -28,9 +26,8 @@ Finance
 
 .. toctree::
     :maxdepth: 1
-    
+
     specials/finance_autostrat
-    
 
 Graphes
 
@@ -51,7 +48,7 @@ Images
 
     specials/image_synthese
     specials/corde
-    
+
 Puzzles
 
 .. toctree::
@@ -65,8 +62,6 @@ Puzzles
 
 .. index:: entretien, entretien d'embauche, algorithme
 
-
-    
 **Algorithmes réutilisables**
 
 * :func:`tsp_kruskal_algorithm <ensae_teaching_cs.special.tsp_kruskal.tsp_kruskal_algorithm>`: `TSP <https://en.wikipedia.org/wiki/Travelling_salesman_problem>`_
@@ -78,9 +73,6 @@ Puzzles
 * :func:`graph_degree <ensae_teaching_cs.special.rues_paris.graph_degree>`: computes the degree of each node in a graph `degree <https://en.wikipedia.org/wiki/Degree_(graph_theory)>`_
 * :class:`GraphDistance <ensae_teaching_cs.special.graph_distance.GraphDistance>`: computes a distance between two graphs (acyclic), see :ref:`l-graph_distance`
 * :func:`resolution_sudoku <ensae_teaching_cs.special.sudoku.resolution_sudoku>`: solves a `sudoku <https://fr.wikipedia.org/wiki/Sudoku>`_
-
-
-
 
 Machine learning illustré
 =========================
@@ -96,35 +88,30 @@ Machine learning illustré
     notebooks/ml_features_model
     coding_party
     specials/voisinage
-        
 
 Cloud illustré
 ==============
 
 .. toctree::
     :maxdepth: 1
-    
+
     specials/azure
-        
-    
+
 Génie logiciel illustré
 =======================
 
 .. toctree::
     :maxdepth: 1
-    
-    specials/unittest_coverage_git_profling    
+
+    specials/unittest_coverage_git_profling
     specials/siteflask
     specials/python_cplusplus
-    
+
 Aspects cachés de ce cours
 ==========================
 
 Voir :ref:`l-ex-automation`.
 
-
-
-        
 .. todoext::
     :title: Quelques idées de notebooks pour le futur
     :tag: plus

@@ -1,12 +1,9 @@
 
-
 .. _l-information:
 
 ===================================
 Modules, Bibliographie, Articles...
 ===================================
-
-
 
 .. toctree::
     :maxdepth: 2
@@ -16,4 +13,3 @@ Modules, Bibliographie, Articles...
     i_FAQ
     questions/questions
     debutermlprojet
-

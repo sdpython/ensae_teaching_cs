@@ -1,8 +1,6 @@
 
-
 A propos de ce module
 =====================
-
 
 .. toctree::
     :maxdepth: 2
@@ -15,7 +13,5 @@ A propos de ce module
     doctestunit
     generatedoc
     generatesetup
-    installation    
+    installation
     index_module
-    
-

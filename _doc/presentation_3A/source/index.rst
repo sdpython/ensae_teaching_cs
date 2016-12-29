@@ -12,55 +12,54 @@ ENSAE 3A - Map/Reduce en pratique
     `Antoine Ly <https://www.linkedin.com/pub/antoine-ly/80/867/771>`_ (ENSAE 2015)
 
     **Assistant à l'ENSAE**
-    
+
     `Romain Lesauvage <mailto: romain.lesauvage AT ensae.fr>`_
-        
-        
-.. revealjs:: 
+
+.. revealjs::
     :data-background: #DDDDDD
 
-    .. revealjs:: Déroulement du cours 
-    
+    .. revealjs:: Déroulement du cours
+
             * 8 séances de 2h
             * 1 projet
 
         **Plan complet**
-        
+
         `séances <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_3a.html>`_
-        
+
     .. revealjs:: Objectifs du cours
-    
+
         * Initiation au calcul distribué
         * Exercices pratiques avec Map / Reduce
-        
+
     .. revealjs:: Notebooks
-    
+
         Les exercices utilisent les `notebooks <http://jupyter.org/notebook.html>`_.
         Voir `Setup <http://www.xavierdupre.fr/enseignement/>`_.
-        
-        .. image:: _static/notsnap.png       
+
+        .. image:: _static/notsnap.png
 
         La plupart des exemples sur Internet sont disponibles sous cette forme.
-        
+
     .. revealjs:: Le langage Python
-    
+
         Pourquoi ?
 
         * Le langage est open source et donc gratuit.
         * Il fonctionne sur tous les OS (Windows, Linux, Mac, bientôt `IPad <http://computableapp.com/>`_).
         * Il dispose de nombreuses extensions, il peut tout faire.
-        * Les notebooks se répandent à grande vitesse : 
+        * Les notebooks se répandent à grande vitesse :
           `A gallery of interesting Jupyter Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_.
         * Même si les calculs distribués ne se font pas en Python, le langage sert de télécommande programmable.
-        
+
     .. revealjs:: Notebooks
-    
+
         * Ils mélangent code, texte, formules, tableaux, graphiques.
         * Ils sont convertibles au format HTML, Latex.
         * Ils sont pratiques pour garder la trace d'une série de petites étapes pour une étude scientifique.
         * Ils ne sont pas pratiques pour écrire de longs programmes.
         * Ils sont très utilisés, plein d'exemples sur Internet
-        
+
     .. revealjs:: Liens
 
         * `Contenu du cours <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_3a.html>`_
@@ -75,30 +74,30 @@ ENSAE 3A - Map/Reduce en pratique
     .. revealjs:: Contributions
 
         Le contenu est disponible sur `GitHub <https://github.com/>`_ :
-        
+
             * `ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs/>`_
-            
+
         Autres modules :
-        
+
             * `pyensae <https://github.com/sdpython/pyensae/>`_
             * `pyquickhelper <https://github.com/sdpython/pyquickhelper/>`_
             * `pymyinstall <https://github.com/sdpython/pymyinstall/>`_
             * `azure <https://github.com/Azure/azure-sdk-for-python>`_
-            
+
         Vous pouvez participer.
-        
+
 .. revealjs:: Intermède
-    :data-background: #DDDDFF    
-        
+    :data-background: #DDDDFF
+
     Azure
-    
+
         * Démarrer une machine virtuelle
         * Démarrer un cluster Hadoop
-        
+
 .. revealjs:: Environnement de travail
-    :data-background: #DDDDFF    
-    
-.. revealjs:: 
+    :data-background: #DDDDFF
+
+.. revealjs::
     :data-background: #DDDDDD
 
     .. revealjs:: Python à l'ENSAE
@@ -106,7 +105,7 @@ ENSAE 3A - Map/Reduce en pratique
         * Le système d'exploitation est Windows.
         * L'environnement est installé pour vous (`WinPython <http://winpython.sourceforge.net/>`_)
         * Vous pouvez le recopier tel quel chez vous (avec un clé USB).
-        
+
     .. revealjs:: Python chez vous
 
         * Le système d'exploitation est celui que vous choisissez (Windows, Linux, Mac).
@@ -114,46 +113,45 @@ ENSAE 3A - Map/Reduce en pratique
         * Lire `Prérequis et installation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html#prerequis-et-installation>`_.
         * Vous devriez avoir installé Python dès les premières séances.
         * `Anaconda <http://continuum.io/downloads#py34>`_ est plus complet et plus réactif
-        
+
     .. revealjs:: Version de Python
-    
+
         * Le cours est construit pour la version 3.3+.
         * Les exemples ne marcheront pas sur la version 2.7.
         * Il faut choisir la version *amd64*. C'est la seule capable de tirer parti d'une mémoire de plus de 4 Go.
         * Ce cours est jeune : il pourra exister quelques différences entre chez vous, l'ENSAE et le serveur (temporaire) de notebooks.
-        
+
     .. revealjs:: Git
-    
+
         * L'ENSAE dispose que son propre serveur Git
         * Accessible depuis chez vous
         * Non public
-                
+
 .. revealjs:: Les données comme terrain de jeu
     :data-background: #DDDDFF
 
-.. revealjs:: 
+.. revealjs::
     :data-background: #DDDDDD
-        
+
     .. revealjs:: Se cultiver, être inventif
-    
+
         * Assembler les méthodes, modèles
         * Mélanger les genres (statistiques, recherche opérationnelle)
         * Ne pas être limité par les outils
-        
+
         ...
-        
+
         **Exemple :** Je ne sais jamais où mettre les accents dans un mot.
         Je veux écrire une fonction qui les corrige automatiquement ?
-        
-        
+
     .. revealjs:: Customiser son outil
 
         * Tout faire depuis un notebook, pourquoi pas ?
         * `R et notebooks <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/python_r.html>`_
         * `Custom Magics for Jupyter <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/jupyter_custom_magics.html>`_
-    
+
     .. revealjs:: Ordres de grandeur
-    
+
             +--------------------+-----------------------+--------------------------+
             | Ordre de grandeur  | Outil / Langage       | Algorithme               |
             | (observations)     | principal             | raisonnable              |
@@ -166,15 +164,15 @@ ENSAE 3A - Map/Reduce en pratique
             +--------------------+-----------------------+--------------------------+
             | > 200 millions     | Cluster (Map/Reduce)  | ``O(n ln n)`` distribué  |
             +--------------------+-----------------------+--------------------------+
-            
+
             ...
-            
+
             Astucieux ou très (très) patient. A vous de choisir.
-            
+
 .. revealjs:: Légalement...
     :data-background: #DDDDFF
-    
-.. revealjs::    
+
+.. revealjs::
     :data-background: #DDDDDD
 
     .. revealjs:: Droits et données
@@ -182,13 +180,13 @@ ENSAE 3A - Map/Reduce en pratique
         * Restrictions
             * Les données sont associées à une license.
             * Elle détermine ce qu'on peut en faire.
-            * L'usage est parfois limité dans le temps.        
+            * L'usage est parfois limité dans le temps.
         * Anonymisation
             * Les données sont le plus souvent anonymisées (identifiant illisible)
             * On sait beaucoup de choses sur ces anonymes (ensemble des achats, requêtes, trajets web)
-    
+
     .. revealjs:: Fuites possibles
-    
+
         * Technologies web : savoir quand on fait appel à un service extérieur
             * cartographie
             * formules
@@ -198,15 +196,14 @@ ENSAE 3A - Map/Reduce en pratique
             * Résilience des mails
             * Vol de portable
             * Les mots de passe qu'on laisse dans les notebooks
-        
 
 .. revealjs:: Contenu
     :data-background: #DDDDFF
-    
+
     * Séances 1-5 : éléments théoriques et logiciels
     * Séances 6-8 : Map / Reduce sur un vrai cluster
-    
-.. revealjs::    
+
+.. revealjs::
     :data-background: #DDDDDD
 
     .. revealjs:: Map / Reduce
@@ -214,18 +211,18 @@ ENSAE 3A - Map/Reduce en pratique
         * C'est une sorte de SQL distribué.
         * Pratique pour toutes sortes d'aggrégation.
         * A utiliser avec précaution pour des calculs sur des graphes.
-        
+
     .. revealjs:: Cluster
-    
+
         * Deux solutions
             * Azure HD Insight : `Microsoft, partenaire de la filière Data Science de l'ENSAE ParisTech avec Microsoft Azure Machine <http://www.microsoft.com/france/Hub-Presse/communiques-de-presse/fiche-communique.aspx?eid=f7e7f695-fb08-4c6d-b4ec-3cde562ba429>`_
             * Cloudera : distribution de Hadoop sur Linux
         * Un seul langage PIG et presque les mêmes TDs
             * Les mêmes scripts fonctionneront sur les deux systèmes
             * Différences minimes au niveau des commandes et des chemins des données
-        
+
     .. revealjs:: Accès
-    
+
         * Azure : deux clusters
             * un petit pour tester : disponible en permanence
             * un plus gros : ouvert pendant les projets
@@ -233,7 +230,7 @@ ENSAE 3A - Map/Reduce en pratique
         * Cloudera
             * un cluster disponible en permanence (sauf notification)
             * un identifiant différent pour chaque utilisateur
-        
+
     .. revealjs:: Approche du cours
 
         * Outils existants
@@ -257,26 +254,26 @@ ENSAE 3A - Map/Reduce en pratique
             * `streaming <http://hadoop.apache.org/docs/r1.2.1/streaming.html>`_
 
     .. revealjs:: Objectif
-    
+
         * introduire et pratiquer Map / Reduce
         * réduire le coût d'entrée technique
         * travail en mode `batch <http://fr.wikipedia.org/wiki/Traitement_par_lots>`_
 
     .. revealjs:: Séances 6-8
-    
+
         * S6 : introduction à PIG, parallèle avec SQL
         * S7 : streaming, PIG + python
         * S8 : coût selon la configuration des données et comment y remédier
-    
+
 .. revealjs:: Python et Hadoop
     :data-background: #DDDDFF
-    
+
     Différences entre les outils à l'ENSAE et les outils hors ENSAE
-    
-.. revealjs:: 
-    
+
+.. revealjs::
+
     .. revealjs:: Outils disponibles
-        
+
         * Cloudera (Linux)
             * `Putty <http://www.putty.org/>`_ (ligne de commande)
             * `Hue <http://gethue.com/>`_ (graphique - parfois lent)
@@ -284,16 +281,16 @@ ENSAE 3A - Map/Reduce en pratique
             * `Portail Azure <http://azure.microsoft.com/fr-fr/>`_ (graphique, limité)
             * `Azure SDK <http://azure.microsoft.com/fr-fr/downloads/>`_ (tous les langages)
             * `azure-sdk-for-python <https://github.com/Azure/azure-sdk-for-python>`_ (python)
-        
+
     .. revealjs:: Python
-    
+
         * `pydoop <http://pydoop.sourceforge.net/docs/>`_
         * intéressant pour la partie `HDFS <http://hortonworks.com/hadoop/hdfs/>`_
         * scripts plus longs et plus bas niveau qu'avec PIG
         * `pydoop <http://pydoop.sourceforge.net/docs/>`_ ne fonctionne pas avec Azure
-        
+
     .. revealjs:: Notebooks et pyensae
-        
+
         * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
             * un `wrapper <http://fr.wikipedia.org/wiki/Adaptateur_(patron_de_conception)>`_
             * des `commandes magiques <http://nbviewer.jupyter.org/github/jupyter/jupyter/blob/1.x/examples/notebooks/Cell%20Magics.ipynb>`_ pour gommer un peu l'aspect geek
@@ -301,18 +298,18 @@ ENSAE 3A - Map/Reduce en pratique
             * pour pouvoir s'adapter à des habitudes différentes en entreprise
             * travail en mode `batch <http://fr.wikipedia.org/wiki/Traitement_par_lots>`_
         * contribuer `github/pyensae <https://github.com/sdpython/pyensae/>`_
-        
+
     .. revealjs:: Hadoop ...
-    
+
         * langage haut niveau (plus stable que le bas niveau)
         * sa performance dépend aussi du compilateur
         * autres solutions :
             * `Storm <https://storm.apache.org/>`_
             * `Spark <https://spark.apache.org/>`_
             * `YARN <https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html>`_
-            
+
     .. revealjs:: Paris
-    
+
         * Les technologies bougent vite
             * Map/Reduce est très lent
             * Grande variété de systèmes distribués
@@ -321,20 +318,20 @@ ENSAE 3A - Map/Reduce en pratique
             * Langages fonctionnelles plus simple à distribuer
             * Langages haut niveau
                 * Plus simple à écrire
-                * Plus simple à migrer 
+                * Plus simple à migrer
                 * Bénéficient naturellement des améliorations bas niveau
-        
+
 .. revealjs:: Hadoop
     :data-background: #DDDDFF
-    
+
     `Notebook et PIG <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_3a.html>`_
-    
+
     Dernier détail, sur Hadoop tout fichier texte
     est encodé en `UTF-8 <http://fr.wikipedia.org/wiki/UTF-8>`_.
-    
+
 .. revealjs:: Intermède
-    :data-background: #DDDDFF    
-        
+    :data-background: #DDDDFF
+
     Azure
-    
+
         * `Installer Python sur la machine virtuelle <http://www.xavierdupre.fr/blog/2014-11-09_nojs.html>`_

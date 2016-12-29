@@ -1,8 +1,5 @@
 
-
-
 .. _l-codingparty1:
-
 
 Coding Party 22 mai 2014 : inférer des trajectoires de vélos
 ============================================================
@@ -14,10 +11,8 @@ On connaît toutes les minutes le nombre de places et vélos disponibles pour ch
 d'une même ville de 2h du matin à 15h aujourd'hui. Il faut estimer la vitesse moyenne
 d'une randonnée en vélo.
 
-
 Données réelles
 ^^^^^^^^^^^^^^^
-
 
 * `Amiens - json <http://www.xavierdupre.fr/site2013/enseignements/tddata/amiens.zip>`_ ou `Amiens - dataframe <http://www.xavierdupre.fr/site2013/enseignements/tddata/amiens.df.txt.zip>`_
 * `Besancon - json <http://www.xavierdupre.fr/site2013/enseignements/tddata/besancon.zip>`_ ou `Besancon - dataframe <http://www.xavierdupre.fr/site2013/enseignements/tddata/besancon.df.txt.zip>`_
@@ -26,7 +21,7 @@ Données réelles
 * `Nancy - json <http://www.xavierdupre.fr/site2013/enseignements/tddata/nancy.zip>`_ ou `Nancy - dataframe <http://www.xavierdupre.fr/site2013/enseignements/tddata/nancy.df.txt.zip>`_
 * `Paris - json <http://www.xavierdupre.fr/site2013/enseignements/tddata/paris.zip>`_ ou `Paris - dataframe <http://www.xavierdupre.fr/site2013/enseignements/tddata/paris.df.txt.zip>`_
 
-Elles ont été fabriquées en suivant l'exemple : 
+Elles ont été fabriquées en suivant l'exemple :
 `Récupérer les données Velib et les visualiser <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/pyensae_velib.html>`_.
 
 Données synthétiques
@@ -51,9 +46,8 @@ des vélos à partir des décomptes des places et vélos disponibles
 dans chaque stations.
 
 Les données synthétiques fournissent à la fois les décomptes et les trajectoires
-afin d'évaluer un algorithme. Une fois que celui-ci est bien calé, on peut 
+afin d'évaluer un algorithme. Une fois que celui-ci est bien calé, on peut
 l'évaluer sur les données réelles.
-
 
 Description des données
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -88,13 +82,13 @@ On fournit le code de la `distance de Haversine <http://en.wikipedia.org/wiki/Ha
                 * math.cos(math.radians(lat2)) * math.sin(dlon/2) * math.sin(dlon/2)
         c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
         d = radius * c
-        return d   
+        return d
 
 Pour récupérer les données ::
 
     from pyensae import download_data
-    download_data('velib_synthetique.zip', website = 'xdtd', whereTo = whereto)    
-    download_data('besancon.df.txt.zip', website = 'xdtd', whereTo = whereto)  
+    download_data('velib_synthetique.zip', website = 'xdtd', whereTo = whereto)
+    download_data('besancon.df.txt.zip', website = 'xdtd', whereTo = whereto)
 
 Pour les charger dans un DataFrame ::
 
@@ -112,9 +106,9 @@ ce fut une autre paire de manches. Néanmoins, deux idées se sont dégagées :
 #. une solution basée sur l'appariement des sorties et des entrées de vélos,
 #. une solution d'inspiration bayésienne (Monte Carlo).
 
-Si entre deux minutes consécuties et pour les mêmes stations, 
+Si entre deux minutes consécuties et pour les mêmes stations,
 le comte des places disponibles (ou celui des vélos) évolue, on est certain
-qu'un vélo est arrivé ou est parti. A partir de là, il est possible de construire 
+qu'un vélo est arrivé ou est parti. A partir de là, il est possible de construire
 pour l'ensemble des stations deux séries :
 
 #. la série des vélos retirés d'une station,
@@ -122,32 +116,30 @@ pour l'ensemble des stations deux séries :
 
 Ces séries n'ont pas forcément le même nombre d'élément mais cela devrait être marginal.
 On peut considérer qu'à chaque vélo retiré correspond un vélo reposé. Il ne reste plus
-qu'à apparié chaque élément de ces deux séries. Pour cela, il faut construire 
+qu'à apparié chaque élément de ces deux séries. Pour cela, il faut construire
 un coût d'appariement (une fonction d'erreur) et implémenter un algorithme
-qui minimise cette fonction de coût. 
+qui minimise cette fonction de coût.
 
 C'est l'option que j'ai choisie (voir :func:`appariement <coding_party.coding_party1_velib.appariement>`).
-C'est à mon sens celle qui était le plus facile à coder en quelques heures. 
-Elle présente deux inconvénients : 
+C'est à mon sens celle qui était le plus facile à coder en quelques heures.
+Elle présente deux inconvénients :
 
 #. Je ne suis pas sûr qu'elle passe à l'échelle (la ville de Paris a plus de 1000 stations).
-#. Elle ne fonctionne pas extrêmement bien sur les jeux de données que j'ai simulés : 
-   le jeu avec deux vélos en parallèle est assez cyclique. Si on considère les deux séries 
+#. Elle ne fonctionne pas extrêmement bien sur les jeux de données que j'ai simulés :
+   le jeu avec deux vélos en parallèle est assez cyclique. Si on considère les deux séries
    de vélos (retirés et reposés), elles se comporte comme deux peignes.
    Décaler ces deux peignes pour apparier leur dents n'a pas beaucoup d'impact
    sur la fonction de coût mais il a un grand impact sur la vitesse moyenne.
 
-`Voici <https://github.com/sdpython/ensae_teaching_cs/commit/7da003de4bb8bac7d3a59a5cfd372d8187cbc9aa>`_ 
-ce que j'ai rajouté en vitesse pour essayer d'avoir une solution probable.       
+`Voici <https://github.com/sdpython/ensae_teaching_cs/commit/7da003de4bb8bac7d3a59a5cfd372d8187cbc9aa>`_
+ce que j'ai rajouté en vitesse pour essayer d'avoir une solution probable.
 
-Pour la solution d'inspiration bayésienne, elle revient à prendre des hypothèses 
+Pour la solution d'inspiration bayésienne, elle revient à prendre des hypothèses
 sur la vitesse moyenne. J'en dirai peut-être plus un peu plus tard. En attendant,
 vous pouvez reproduire la solution de l'appariement dans ce notebook :
 :ref:`Déterminer la vitesse moyenne des vélib <exposevelibrst>`.
-
 
 Suite possible
 --------------
 
 Voir :ref:`Prédire l'occupation des vélib <l-blog-velib>`.
-

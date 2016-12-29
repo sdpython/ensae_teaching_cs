@@ -7,14 +7,14 @@ README
 .. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master
     :target: https://travis-ci.org/sdpython/ensae_teaching_cs
     :alt: Build status
-    
+
 .. image:: https://ci.appveyor.com/api/projects/status/4chpamq95rh5h245?svg=true
     :target: https://ci.appveyor.com/project/sdpython/ensae-teaching-cs
-    :alt: Build Status Windows    
-    
+    :alt: Build Status Windows
+
 .. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
     :target: http://badge.fury.io/py/ensae_teaching_cs
-      
+
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
     :alt: MIT License
     :target: http://opensource.org/licenses/MIT
@@ -25,10 +25,10 @@ README
 .. image:: http://img.shields.io/github/issues/sdpython/ensae_teaching_cs.png
     :alt: GitHub Issues
     :target: https://github.com/sdpython/ensae_teaching_cs/issues
-    
+
 .. image:: https://badge.waffle.io/sdpython/ensae_teaching_cs.png?label=ready&title=Ready
     :alt: Waffle
-    :target: https://waffle.io/sdpython/ensae_teaching_cs      
+    :target: https://waffle.io/sdpython/ensae_teaching_cs
 
 This page gives access to the content of practical sessions I give at the
 `ENSAE <http://www.ensae.fr/>`_. They are based on Python. The project

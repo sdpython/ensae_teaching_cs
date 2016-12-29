@@ -1,5 +1,4 @@
 
-
 .. _l-debutermlprojet:
 
 Bien démarrer un projet de machine learning
@@ -16,7 +15,7 @@ Une fois qu'on a cela, les premières étapes débutent avec presque toujours le
 Etape 1 : quel est le type de problème ?
 ++++++++++++++++++++++++++++++++++++++++
 
-* supervisé 
+* supervisé
     * régression : :math:`Y = f(X) + \epsilon`
     * classification : :math:`(c_1,...,c_k) = f(X)` pour un problème à :math:`k` classes
     * ranking
@@ -28,7 +27,6 @@ Etape 1 : quel est le type de problème ?
 Il n'est pas rare qu'un projet requiert un assemblage de modèles de types différents.
 La première étape consiste à imaginer un chemin entre les données initiales
 et la valeur à prédire.
-
 
 Etape 2 : quelles sont les données ?
 ++++++++++++++++++++++++++++++++++++
@@ -42,37 +40,35 @@ Etape 2 : quelles sont les données ?
 * Variables catégorielles, discrètes ou continues,
   :ref:`Encoder les catégories <encoding-categorie-id>`
 
-
 La plupart des algorithmes d'apprentissages utilisent des données numériques,
 il faut convertir les variables catégorielles au format numérique.
-Si une variable catégorielle est à choix unique et qu'elle contient :math:`C` catégories, 
+Si une variable catégorielle est à choix unique et qu'elle contient :math:`C` catégories,
 celle-ci sera multipliée en :math:`n` colonnes, une pour chaque modalité. Comme la somme de
 ces colonnes est le vecteur colonne :math:`J=(1,...,1)`, la matrice :math:`X` modifiée sera corrélée.
 
 Etape 3 : séparation train/test
 +++++++++++++++++++++++++++++++
 
-Il faut faire attention à deux ou trois détails. Par exemple, si le problème est un de problème 
+Il faut faire attention à deux ou trois détails. Par exemple, si le problème est un de problème
 de classification, il faut faire attention que toutes les classes à prédire sont bien **représentées**
 dans les deux bases. C'est particulièrement important si l'une d'elles comportent peu d'exemples.
 Si les données sont **temporelles**, il faut faire une séparation temporelles pour prédire
-le futur avec le passée. Si les données sont **groupées**, il faut faire attention à ce que 
+le futur avec le passée. Si les données sont **groupées**, il faut faire attention à ce que
 les groupes ne soient pas tronqués sinon c'est l'assurance de faire du surapprentissage.
 
-**Exemple :** un base de critiques de films. 
+**Exemple :** un base de critiques de films.
 S'il y a plusieurs critiques par films, il faut qu'un même film
 ne soit pas présent dans les deux bases d'apprentisage et de test.
 Pour ces films, il est fort probable que le modèle appris soit anormalement
 performance sur la base de test.
 
-
 Etape 4 : apprentissage d'un modèle
 +++++++++++++++++++++++++++++++++++
 
-On cale un ou plusieurs modèles sur les données d'apprentissage. 
-C'est de moins en moins sorcier : 
+On cale un ou plusieurs modèles sur les données d'apprentissage.
+C'est de moins en moins sorcier :
 `Machine learning automatique <http://www.xavierdupre.fr/blog/2015-12-11_nojs.html>`_.
-Il faut foncer : apprendre un modèle tout de suite pour avoir une idée de la 
+Il faut foncer : apprendre un modèle tout de suite pour avoir une idée de la
 difficulté du problème.
 
 Etape 5 : mesure de la performance
@@ -105,7 +101,7 @@ Dans le cas contraire, il faut retourner à l'étape 4 :
 
 * La base d'apprentissage contient peut-être des points aberrants.
 * La distribution d'un variable n'est pas homogène dans les bases d'apprentissage et des tests.
-* Le modèle a besoin de plus de variables, 
+* Le modèle a besoin de plus de variables,
   combinaison non linéaires des variables existantes (polynômes, fonctions en escalier, ...),
   recoupement de la base de données avec une autre base.
 * Les valeurs manquantes empêchent le modèle d'apprendre.
@@ -117,7 +113,7 @@ Voir également `Quelques astuces pour faire du machine learning <http://www.xav
 Etape 6 : ajouter des variables
 +++++++++++++++++++++++++++++++
 
-* Passer au logarithme lorsque les variables sont des valeurs extrêmes, 
+* Passer au logarithme lorsque les variables sont des valeurs extrêmes,
   cela réduit leur importance
 * Si les données sont temporelles : ajouter des agrégations sur des fenêtres glissantes
   (sur la semaine, le mois, l'année qui a précédé).
@@ -132,22 +128,22 @@ Etape 6 : ajouter des variables
 Etape 7 : jouer à Hercule Poirot
 ++++++++++++++++++++++++++++++++
 
-On atteint vite un plafond lorsqu'on essaye les modèles un par un. 
+On atteint vite un plafond lorsqu'on essaye les modèles un par un.
 Il faut maintenant extraire tout ce qu'on sait des données ou tout ce qu'on imagine savoir
-pour améliorer la performance. 
+pour améliorer la performance.
 
 Quelques idées...
 
 `Forest Fires Data Set <https://archive.ics.uci.edu/ml/datasets/Forest+Fires>`_
 
-Ce jeu de données recense la surface brûlée par des feux de forêts. 
+Ce jeu de données recense la surface brûlée par des feux de forêts.
 On connaît la vitesse du vent, l'humidité, la témpérature de la zone où a eu lieu
 l'incendie. Il faut prédire  la surface brûlée en fonction de ces paramètres.
 
 Un grand nombre de valeurs sont nulles. Pourquoi ?
 
-Pas évident de savoir, peut-être que les pompiers étaient tout proche, 
-peut-être qu'il n'y a pas eu de feu. Difficile de savoir. Il n'est pas évident de savoir si on peut 
+Pas évident de savoir, peut-être que les pompiers étaient tout proche,
+peut-être qu'il n'y a pas eu de feu. Difficile de savoir. Il n'est pas évident de savoir si on peut
 garder ces données ou en tout cas les traiter séparément avec une classification préalable.
 
 Des incendies par temps de pluie en hiver ?
@@ -159,16 +155,15 @@ forcément utile d'être aussi précis quant à la précision de la prédiction 
 Et ::
 
     surface = a * température + b * vent + ...
-    
-Ou :: 
+
+Ou ::
 
     surface = a * température * vent + ...
-    
+
 Pour résumer, un feu aura des conditions favorables si la température
-est élevée et si le vent est fort. Les effets s'additionnent ou ils 
+est élevée et si le vent est fort. Les effets s'additionnent ou ils
 se combinent ? Dans le second cas, regrésser sur le logarithme des variables
 ou ajouter le produit de tous les couples de variables est une piste à étudier.
-
 
 `Bike Sharing Dataset Data Set <https://archive.ics.uci.edu/ml/datasets/Bike+Sharing+Dataset>`_
 
@@ -176,7 +171,7 @@ On veut prévoir le nombre de vélo utilisés en fonction du temps.
 La date fait partie des variables disponibles. Elle indique la saison.
 On remarque également que le nombre de vélo partagés croît avec le temps,
 signe d'une demande croissante. Les données cachent donc deux effets : la croissance
-de la demande et l'impact de la météo sur la demande. Le plus simple, 
+de la demande et l'impact de la météo sur la demande. Le plus simple,
 pour avoir un modèle robuste dans le temps, est d'enlever la tendance
 avant de passer à un problème de machine learning.
 
@@ -184,7 +179,7 @@ avant de passer à un problème de machine learning.
 
 Dialogue improvisé... Il faut prédire le parti d'un sénaeur en fonction de ses votes passés.
 
-* La prédiction repose presqu'entièrment sur un seul vote, 
+* La prédiction repose presqu'entièrment sur un seul vote,
   on m'a dit qu'il fallait l'enlever dans ce cas mais je ne sais pas pourquoi.
 * Ah... Et si on le faisait, que se passerait-il ?
 * ...
@@ -194,11 +189,8 @@ Dialogue improvisé... Il faut prédire le parti d'un sénaeur en fonction de se
 * Leurs votes ne dépendent pas nécessairement de leur parti d'appartenance.
 * Et maintenant, n'as-tu pas envie de savoir ?
 
-
-
 Etape 8 : validation du modèle
 ++++++++++++++++++++++++++++++
 
 On regarde sur quelques exemples bien choisi que le modèle proposent une réponse acceptables.
 On applique des méthodes du type validation croisée.
-

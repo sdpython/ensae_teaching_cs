@@ -1,10 +1,5 @@
 
-
-
 .. _l-biblio:
-
-
-
 
 Articles, Références, Blogs
 ===========================
@@ -12,8 +7,6 @@ Articles, Références, Blogs
 .. contents::
     :local:
     :depth: 2
-
-
 
 .. index:: bibliographie
 
@@ -24,8 +17,6 @@ Bibliographies associées à chaque cours
 * :ref:`Bibliographie 2A <l-td2a-biblio>` : Python pour faire des statistiques
 * :ref:`Bibliographie 3A <l-td3a-biblio>` : Hadoop, PIG, calcul distribué
 
-
-
 Autres suggestions
 ++++++++++++++++++
 
@@ -34,15 +25,15 @@ Python / Programmation
 
 **Langage Python**
 
-* `Apprenez à programmer en Python <http://www.siteduzero.com/informatique/tutoriels/apprenez-a-programmer-en-python>`_ (*Vincent Le Goff*) Le livre peut être acheté où téléchargé. Le livre est bien conçu, chaque concept est expliqué de façon concise et sans interférence avec d'autres concepts. 
+* `Apprenez à programmer en Python <http://www.siteduzero.com/informatique/tutoriels/apprenez-a-programmer-en-python>`_ (*Vincent Le Goff*) Le livre peut être acheté où téléchargé. Le livre est bien conçu, chaque concept est expliqué de façon concise et sans interférence avec d'autres concepts.
 * `Apprentissage de la programmation <http://inforef.be/swi/python.htm>`_ (*Gérard Swinnen*) Le livre est mise à jour de façon régulière au gré des évolutions du langages, c'est un des rares livres à survivre d'années en années.
-* `Programmation Python <http://www.editions-eyrolles.com/Livre/9782212124835/>`_ (*Tarek Ziadé*) Le livre est aussi constamment mis à jour. Le chapitre techniques avancées définit ce qu'est l'écriture d'un programme destiné à d'autres personnes qu'à soi-même (mise en production, tests unitaires). 
-* `Python for Kids <http://shop.oreilly.com/product/9781593274078.do>`_ (*Jason R. Briggs*) It introduces the language bases, easy to read and colorful. 
-* `Learning Python the Hard Way <http://learnpythonthehardway.org/book/>`_ (*Zed. A. Shaw*) Every chapter follows the sam pattern: concept, example, your turn. 
+* `Programmation Python <http://www.editions-eyrolles.com/Livre/9782212124835/>`_ (*Tarek Ziadé*) Le livre est aussi constamment mis à jour. Le chapitre techniques avancées définit ce qu'est l'écriture d'un programme destiné à d'autres personnes qu'à soi-même (mise en production, tests unitaires).
+* `Python for Kids <http://shop.oreilly.com/product/9781593274078.do>`_ (*Jason R. Briggs*) It introduces the language bases, easy to read and colorful.
+* `Learning Python the Hard Way <http://learnpythonthehardway.org/book/>`_ (*Zed. A. Shaw*) Every chapter follows the sam pattern: concept, example, your turn.
 * `Raspberry Pi - Le guide de l'utilisateur <http://www.pearson.fr/livre/?GCOI=27440100230510>`_ (*Eben Upton*, *Gareth Halfacree*) Pour ceux qui veulent programmer en Python le plus petit ordinateur du monde (pour ceux qui ont l'âme de `Mister Q <https://fr.wikipedia.org/wiki/Q_%28James_Bond%29>`_).
 * `Anti-Patterns in Python Programming <http://lignos.org/py_antipatterns/>`_
 * `The real 10 algorithms that dominate our world <https://medium.com/@_marcos_otero/the-real-10-algorithms-that-dominate-our-world-e95fa9f16c04>`_
-  
+
 **Installation**
 
 * `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
@@ -83,9 +74,6 @@ Python / Programmation
 * `Hadoop: The Definitive Guide, 2nd Edition <http://shop.oreilly.com/product/0636920010388.do>`_, Tom White  (voir aussi `GitHub <https://github.com/tomwhite/hadoop-book/>`_)
 * `Hadoop in Practice <http://it-ebooks.info/book/1028/>`_, Alex Holmes
 
-
-
-
 Machine Learning
 ^^^^^^^^^^^^^^^^
 
@@ -99,7 +87,7 @@ Machine Learning
 * `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
 * `Journal of Machine Learning Research (JMLR) <http://jmlr.org/>`_ (revue)
 * `arXiv Computer Science <http://arxiv.org/archive/cs>`_ (tout venant)
-* `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_ (*Wes McKinney*) Ce livre ne vous apprendra rien sur l'analyse des données mais il présente les outils les plus utilisés aujourd'hui pour faire de l'analyse des données avec Python. 
+* `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_ (*Wes McKinney*) Ce livre ne vous apprendra rien sur l'analyse des données mais il présente les outils les plus utilisés aujourd'hui pour faire de l'analyse des données avec Python.
 * `Implementing a Principal Component Analysis (PCA) in Python step by step <http://sebastianraschka.com/Articles/2014_pca_step_by_step.html>`_
 * `Implementing simple sequential feature selection algorithms in Python <http://sebastianraschka.com/Articles/2014_sequential_sel_algos.html>`_
 * `Python Sparse Random Projections <http://blog.yhathq.com/posts/sparse-random-projections.html>`_
@@ -113,10 +101,9 @@ Machine Learning
 * `Bar des sciences : débat sur le Big Data <http://freakonometrics.hypotheses.org/12135>`_
 * `Sequence to Sequence Learning with Neural Networks <http://arxiv.org/pdf/1409.3215.pdf>`_, Ilya Sutskever, Oriol Vinyals, Quoc V. Le
 
-
 **Livres sur le machine learning**
 
-* `Deep Learning: Methods and Applications <http://research.microsoft.com/apps/pubs/default.aspx?id=219984>`_, 
+* `Deep Learning: Methods and Applications <http://research.microsoft.com/apps/pubs/default.aspx?id=219984>`_,
 * `Data-Intensive Text Processing with MapReduce <http://lintool.github.io/MapReduceAlgorithms/>`_, Jimmy Lin, Chris Dyer
 * `Introducing Microsoft Azure HDInsight <http://blogs.msdn.com/b/microsoft_press/archive/2014/05/27/free-ebook-introducing-microsoft-azure-hdinsight.aspx>`_, Avkash Chauhan, Valentine Fontama, Michele Hart, Wee Hyong Tok, Buck Woody
 * `The Elements of Statistical Learning <http://statweb.stanford.edu/~tibs/ElemStatLearn/>`_, Trevor Hastie, Robert Tibshirani, Jerome Friedman
@@ -140,7 +127,6 @@ Mathématiques
 
 * `Forecasting: principles and practice <https://www.otexts.org/fpp>`_
 
-
 Enseignements
 ^^^^^^^^^^^^^
 
@@ -152,17 +138,15 @@ Enseignements
 * `Apprendre à programmer aux enfants : Le monde de Reeborg <http://www.xavierdupre.fr/blog/2014-07-12_nojs.html>`_
 * `Scratch <http://scratch.mit.edu/>`_
 
-
 **MOOC, cours, Lectures**
 
 * `CS 188: Artificial Intelligence (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/lectures.html>`_
-* `Stanford From Languages to Information <https://web.stanford.edu/class/cs124/>`_  Dan Jurafsky 
+* `Stanford From Languages to Information <https://web.stanford.edu/class/cs124/>`_  Dan Jurafsky
     * `Language Modeling, Introduction to N-Gram <https://web.stanford.edu/class/cs124/lec/languagemodeling.pdf>`_
 * `Introduction to Apache Pig <http://www.cloudera.com/content/cloudera/en/resources/library/training/introduction-to-apache-pig.html>`_
 * `Machine Learning par Andrew Y. Ng <https://www.class-central.com/mooc/835/coursera-machine-learning>`_
-* `Coursera Machine Learning <https://www.coursera.org/course/ml>`_    
+* `Coursera Machine Learning <https://www.coursera.org/course/ml>`_
 * `Python en Prépas <http://prepas.org/ups.php?article=394>`_
-
 
 **Vidéo, tutorial**
 
@@ -171,14 +155,10 @@ Enseignements
 * `PyVideo <http://pyvideo.org/>`_
 * `Formation à Python scientifique - ENS Paris <http://python-prepa.github.io/index.html>`_
 
-
 Question des élèves
 ^^^^^^^^^^^^^^^^^^^
 
 * :ref:`question_2014`
-
-
-
 
 Exercices, Puzzle
 ^^^^^^^^^^^^^^^^^
@@ -202,11 +182,9 @@ Exercices, Puzzle
     * `Three ways to install a module <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/notebooks/install_module.html>`_
 * **ENSAE**
     * `Quelques précisions sur les projets informatiques (finance) <http://www.xavierdupre.fr/blog/2014-04-05_nojs.html>`_
-    
+
 **Exemples de code**
 
 * `fusionner deux tableaux <http://www.xavierdupre.fr/blog/2013-11-21_nojs.html>`_
 * `compter les fréquences de lettres et de couples de lettres <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_
 * `composer un montant à partir d'un ensemble de pièces de monnaie <http://www.xavierdupre.fr/blog/2013-11-09_nojs.html>`_
-       
-
