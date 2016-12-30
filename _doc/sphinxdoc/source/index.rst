@@ -83,7 +83,7 @@ Contenu des enseignements
 *Notebooks et exemples*
 
 .. toctree::
-    :maxdepth:
+    :maxdepth: 1
 
     i_examples
     all_notebooks
