@@ -1,9 +1,7 @@
 
-
 .. index:: culture algorithmique, algorithme, culture
 
 .. _l-algoculture:
-
 
 Survol algorithmique
 ====================
@@ -11,8 +9,7 @@ Survol algorithmique
 .. contents::
     :local:
 
-
-Il est facile de caler un modèle statistiques lorsque les données sont propres 
+Il est facile de caler un modèle statistiques lorsque les données sont propres
 et de taille raisonnable. Ce n'est quasiment jamais le cas.
 On a besoin de nettoyer ou de transformer les données. On a besoin
 de réduire le temps de calcul d'un algorithme car il est inexploitable en l'état.
@@ -36,7 +33,7 @@ La mémoire n'est plus un problème. Le temps de calcul l'est toujours.
 Comprendre le coût d'un algorithme
 ++++++++++++++++++++++++++++++++++
 
-Le coût de nombreux algorithmes non NP-complet se décomposer comme suit : 
+Le coût de nombreux algorithmes non NP-complet se décomposer comme suit :
 :math:`O(n^\alpha) O( \ln^\beta n ) O(1)`. Chaque terme correspond à :
 
 * :math:`O(n^\alpha)` avec :math:`\alpha \in \mathbb{N} > 1` : un probème combinatoire se résume à un algorithme
@@ -44,38 +41,37 @@ Le coût de nombreux algorithmes non NP-complet se décomposer comme suit :
   Dans la plupart des cas, on obtient ce coût après avoir transformé le problème dans une forme
   récurrente : on écrit ce qu'il faut faire pour calculer la solution avec *n+1* éléments
   sachant qu'on connaît la solution avec *n* éléments.
-* :math:`O(n^\beta n)` avec :math:`\beta \in \mathbb{N} > 0`, 
-  coût `dichotomique <https://fr.wikipedia.org/wiki/Recherche_dichotomique>`_, 
+* :math:`O(n^\beta n)` avec :math:`\beta \in \mathbb{N} > 0`,
+  coût `dichotomique <https://fr.wikipedia.org/wiki/Recherche_dichotomique>`_,
   on coupe le problème en deux à chaque itération.
 * :math:`O(1)` : `table de hashage <https://fr.wikipedia.org/wiki/Table_de_hachage>`_
 
 Dès qu'on sort des puissances entières, il faut s'attendre à un algorithme non trivial
 tel que l'`algorithme de Strassen <https://fr.wikipedia.org/wiki/Algorithme_de_Strassen>`_
 pour la multiplication de matrice (:math:`n^{2.807}), ou celui
-de `Marco Bodrato <http://www.bodrato.it/papers/>`_ 
+de `Marco Bodrato <http://www.bodrato.it/papers/>`_
 (`A Strassen-like Matrix Multiplication Suited for Squaring and Higher Power Computation <http://marco.bodrato.it/papers/Bodrato2010-StrassenLikeMatrixMultiplicationForSquares.pdf>`_).
 
-Le coût minimal d'un algorithme de tri est :math:`O(n \ln n)` dans le cas générique 
+Le coût minimal d'un algorithme de tri est :math:`O(n \ln n)` dans le cas générique
 c'est-à-dire sans hypothèse sur les données. En revanche, dans le cas où les données
 sont issues d'un ensemble fini de cardinal *m*, le meilleur tri revient à calculer un histogramme
 et est de coût inférieur à :math:`O( \inf \{ n \ln n, m \} )`.
-
 
 Mot-clé
 +++++++
 
 L'objectif n'est pas de les comprendre tous mais plus de connaître
-les problèmes pour lesquels ils ont été conçus. 
+les problèmes pour lesquels ils ont été conçus.
 
 La distance d'édition sert à calculer la distance entre deux mots.
 On peut l'utiliser pour trouver les mots les plus proches d'un autre
 à condition que ces mots ne soient pas nombreux (:math:`\sim 10^4`).
 Que faire quand ils sont un milliard ? Ce serait plus facile
-si les mots étaient représentés par des vecteurs (voir 
+si les mots étaient représentés par des vecteurs (voir
 `word2vec <https://pypi.python.org/pypi/word2vec>`_,
 `Auto Encoders <https://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_).
 
-On veut comparer deux modèles de ranking. 
+On veut comparer deux modèles de ranking.
 On veut pouvoir comparer visuellement les résultats. Quel ordre
 est mieux qu'un autre ? Comment afficher les résultats
 de deux moteurs de recherche de telle sorte que l'oeil
@@ -88,7 +84,6 @@ Tout ce qui suit vous donnera des idées.
 Catalogue
 +++++++++
 
-    
 * Tri
     * `tri fusion <http://fr.wikipedia.org/wiki/Tri_fusion>`_ **algo**
     * `bucket sort <http://en.wikipedia.org/wiki/Bucket_sort>`_ **algo**
@@ -117,7 +112,7 @@ Catalogue
     * `x-fast-trie <https://en.wikipedia.org/wiki/X-fast_trie>`_ **déf**
     * `Fibonacci Heap <https://en.wikipedia.org/wiki/Fibonacci_heap>`_ **déf**
 * Graphes
-    * composantes connexes ou `parcours de graphe en profondeur <http://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_profondeur>`_, 
+    * composantes connexes ou `parcours de graphe en profondeur <http://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_profondeur>`_,
       `parcours de graphe en largeur <http://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_largeur>`_ **déf/algo**
     * `graphe orienté <http://fr.wikipedia.org/wiki/Graphe_orient%C3%A9>`_, `graphe acyclique <http://fr.wikipedia.org/wiki/Graphe_acyclique>`_ **déf**
     * `degré <http://fr.wikipedia.org/wiki/Degr%C3%A9_(th%C3%A9orie_des_graphes)>`_ **déf**
@@ -126,8 +121,8 @@ Catalogue
     * `maximum cut <http://en.wikipedia.org/wiki/Maximum_cut>`_ **algo**
     * `graphe bi-parti <http://fr.wikipedia.org/wiki/Graphe_biparti>`_ **déf**
     * `PageRank <http://fr.wikipedia.org/wiki/PageRank>`_ **algo**
-    * `Appariement <http://fr.wikipedia.org/wiki/Couplage_(th%C3%A9orie_des_graphes)>`_, 
-      `Edmonds Blossum <http://en.wikipedia.org/wiki/Blossom_algorithm>`_, 
+    * `Appariement <http://fr.wikipedia.org/wiki/Couplage_(th%C3%A9orie_des_graphes)>`_,
+      `Edmonds Blossum <http://en.wikipedia.org/wiki/Blossom_algorithm>`_,
       `Hopcroft–Karp <http://en.wikipedia.org/wiki/Hopcroft%E2%80%93Karp_algorithm>`_,
       `Blossom 5 <http://pub.ist.ac.at/~vnk/papers/blossom5.pdf>`_,
       **déf/algo** (ou couplage)
@@ -156,20 +151,20 @@ Catalogue
     * `mémoïzation <http://fr.wikipedia.org/wiki/M%C3%A9mo%C3%AFsation>`_ **déf** (voir aussi `Mémoïzation d'une fonction Python <http://sametmax.com/memoization-dune-fonction-python/>`_)
     * `programmation fonctionnelle <http://fr.wikipedia.org/wiki/Programmation_fonctionnelle>`_ **déf**
     * `récursivité <http://fr.wikipedia.org/wiki/R%C3%A9cursivit%C3%A9>`_ **déf**
-    
+
 Problèmes NP-complets
 +++++++++++++++++++++
 
 * `21 problèmes NP-complet de Karp <https://fr.wikipedia.org/wiki/21_probl%C3%A8mes_NP-complets_de_Karp>`_
 * `Liste de problèmes NP complets <https://fr.wikipedia.org/wiki/Liste_de_probl%C3%A8mes_NP-complets>`_
   (`en <https://en.wikipedia.org/wiki/List_of_NP-complete_problems>`_)
-* :ref:`l-np-complets`    
-    
+* :ref:`l-np-complets`
+
 Liens
 +++++
 
 * :ref:`l-problem-solved`
-* `Liste d'algorithme sur Wikipédia <http://en.wikipedia.org/wiki/List_of_algorithms>`_ 
+* `Liste d'algorithme sur Wikipédia <http://en.wikipedia.org/wiki/List_of_algorithms>`_
   (`version française <http://fr.wikipedia.org/wiki/Liste_d%27algorithmes>`_)
 * `List of machine learning concepts <http://en.wikipedia.org/wiki/List_of_machine_learning_concepts>`_
 * `Machine Learning, Statistiques et Programmation <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_

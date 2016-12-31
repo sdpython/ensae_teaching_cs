@@ -1,9 +1,7 @@
 
-
 .. index:: examens, note, interrogation
 
 .. _l-examens:
-
 
 Examens
 =======
@@ -13,10 +11,8 @@ Ces examens ont été proposés ces dix dernières années
 Les énoncés sont plus guidés que les séances pratiques.
 Ils requiert peu de connaissances, évitent le plus souvent les classes.
 
-
 .. contents::
     :local:
-
 
 .. raw:: html
 
@@ -25,14 +21,12 @@ Ils requiert peu de connaissances, évitent le plus souvent les classes.
     <a href="http://www.xavierdupre.fr/enseignement/complements/index_documents.html">données complémentaires</a>.
     </b></p>
 
-
 Révisions rapides
 +++++++++++++++++
 
 * `Résumé, cheat sheets <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_resume/index.html>`_
 * :ref:`structuresdonneesconversionrst`
 * :ref:`tableaucontingencerst`
-
 
 Séances notées
 ++++++++++++++
@@ -64,29 +58,29 @@ Séances notées
             </ul>
             </li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2014.pdf">énoncé 2013-2014</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2014.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2014.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
-            (recherche dichotomique, distance d'édition). L'énoncé s'appuie sur les deux 
+            (recherche dichotomique, distance d'édition). L'énoncé s'appuie sur les deux
             programmes suivant :
         <ul>
         <li><a href="http://www.xavierdupre.fr/blog/2013-12-01_nojs.html">Recherche dichotomique, récursive, itérative et le logarithme</a></li>
         <li><a href="http://www.xavierdupre.fr/blog/2013-12-02_nojs.html">Distance d'édition et programmation dynamique</a></li>
         </ul>
         </li>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2015.pdf">énoncé 2014-2015</a>, 
-            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2015.pdf">correction</a> 
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2015.pdf">énoncé 2014-2015</a>,
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2015.pdf">correction</a>
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2015.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
             (parcours de graphe, distance d'édition, plus court chemin)
         </li>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2016.pdf">énoncé 2015-2016</a>, 
-            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2016.pdf">correction</a> 
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2016.pdf">énoncé 2015-2016</a>,
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2016.pdf">correction</a>
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2016.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
             (parcours de graphe, distance d'édition, plus court chemin)
         </li>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2017.pdf">énoncé 2016-2017</a>, 
-            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2017.pdf">correction</a> 
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2017.pdf">énoncé 2016-2017</a>,
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2017.pdf">correction</a>
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2017.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
@@ -94,7 +88,6 @@ Séances notées
         </li>
     </ul>
     </p>
-
 
 Séances de rattrapage
 +++++++++++++++++++++
@@ -111,7 +104,7 @@ Séances de rattrapage
         (récurrence, matrice aléatoire, matrice de transition)</li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2013_rattrape.pdf">énoncé 2012-2013</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2013_rattrape.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (statistiques simples à partir de données publiques relative à la ville de Paris)</li>
-    <li><a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2015_rattrapage_enonce.pdf">énoncé 2014-2015</a> 
+    <li><a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2015_rattrapage_enonce.pdf">énoncé 2014-2015</a>
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2015_rattrapage_enonce.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (2048 - google jam)</li>
@@ -125,58 +118,56 @@ Interrogations rapides
 
     <p>
     <ul>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_30_minutes_2012_10.pdf">énoncé 2012-2013 (1)</a>, 
-        <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/interro_rapide_30_minutes_2012_10.pdf">correction</a> 
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_30_minutes_2012_10.pdf">énoncé 2012-2013 (1)</a>,
+        <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/interro_rapide_30_minutes_2012_10.pdf">correction</a>
         <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/interro_rapide_30_minutes_2012_10.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (récurrence, fréquences, somme)</li>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_45_minutes_2012_12.pdf">énoncé 2012-2013 (2)</a>, 
-        <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/interro_rapide_45_minutes_2012_12.pdf">correction</a> 
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_45_minutes_2012_12.pdf">énoncé 2012-2013 (2)</a>,
+        <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/interro_rapide_45_minutes_2012_12.pdf">correction</a>
         <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/interro_rapide_45_minutes_2012_12.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (triangle de Pascal, tri, statistiques, permutation aléatoire)</li>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_30_minutes_2013_10.pdf">énoncé 2013-2014 (1)</a>, 
-        <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/interro_rapide_30_minutes_2013_10.pdf">correction</a> 
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_30_minutes_2013_10.pdf">énoncé 2013-2014 (1)</a>,
+        <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/interro_rapide_30_minutes_2013_10.pdf">correction</a>
         <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/interro_rapide_30_minutes_2013_10.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (interprétation d'une erreur, compréhension d'une fonction non commentée)</li>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_45_minutes_2013_12.pdf">énoncé 2013-2014 (2)</a>, 
-        <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/interro_rapide_45_minutes_2013_12.pdf">correction</a> 
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_45_minutes_2013_12.pdf">énoncé 2013-2014 (2)</a>,
+        <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/interro_rapide_45_minutes_2013_12.pdf">correction</a>
         <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/interro_rapide_45_minutes_2013_12.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (correction d'un programme, entiers parfaits, entiers divisibles par 11)</li>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_30_minutes_2013_12.pdf">énoncé 2013-2014 (3)</a>, 
-        <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/interro_rapide_30_minutes_2013_12.pdf">correction</a> 
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_30_minutes_2013_12.pdf">énoncé 2013-2014 (3)</a>,
+        <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/interro_rapide_30_minutes_2013_12.pdf">correction</a>
         <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/interro_rapide_30_minutes_2013_12.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (fréquence des lettres dans un mot, anagrammes)</li>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_20_minutes_2014_09.pdf">énoncé 2014-2015 (1)</a>, 
-        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_20_minutes_2014_09.pdf">correction</a> 
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_20_minutes_2014_09.pdf">énoncé 2014-2015 (1)</a>,
+        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_20_minutes_2014_09.pdf">correction</a>
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/interro_rapide_20_minutes_2014_09.html">
                     <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (multiple, minimum, liste triée)</li>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_20_minutes_2014_10.pdf">énoncé 2014-2015 (2)</a>, 
-        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_20_minutes_2014_10.pdf">correction</a> 
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_20_minutes_2014_10.pdf">énoncé 2014-2015 (2)</a>,
+        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_20_minutes_2014_10.pdf">correction</a>
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/interro_rapide_20_minutes_2014_10.html">
                     <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (matrice, somme, anagramme, coût)</li>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_20_minutes_2014_11.pdf">énoncé 2014-2015 (3)</a>, 
-        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_20_minutes_2014_11.pdf">correction</a> 
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_20_minutes_2014_11.pdf">énoncé 2014-2015 (3)</a>,
+        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_20_minutes_2014_11.pdf">correction</a>
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/interro_rapide_20_minutes_2014_11.html">
                     <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (syntaxe, dictionnaire, coût, liste, division)</li>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interrogation_rattrape_2014-12-12-yg.pdf">énoncé 2014-2015 (4) - rattrapage (Yves Gerey)</a>, 
-        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_20_minutes_2014_12.pdf">correction</a> 
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interrogation_rattrape_2014-12-12-yg.pdf">énoncé 2014-2015 (4) - rattrapage (Yves Gerey)</a>,
+        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_20_minutes_2014_12.pdf">correction</a>
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/interro_rapide_20_minutes_2014_12.html">
                     <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (syntaxe, dictionnaire, fonctions)</li>
     </ul>
     </p>
-    
+
 .. toctree::
     :maxdepth: 1
-    
-    interrogation_ecrite_20161021
 
+    interrogation_ecrite_20161021
 
 Examens écrits
 ++++++++++++++
-
 
 .. raw:: html
 
@@ -203,8 +194,6 @@ Examens écrits
         (coloriage, sac-à-dos)</li>
     </ul>
     </p>
-    
-    
 
 Corrections sous forme de notebooks
 +++++++++++++++++++++++++++++++++++
@@ -232,8 +221,6 @@ TD notés, éléments de code donnés dans l'énoncé
 
     ../notebooks/td_note_2013_bout_de_code_coloriage
 
-
-
 TD notés, correction
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -244,4 +231,3 @@ TD notés, correction
     ../notebooks/td_note_2015
     ../notebooks/td_note_2016
     ../notebooks/td_note_2017
-

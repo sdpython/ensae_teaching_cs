@@ -1,5 +1,4 @@
 
-
 .. _l-td2a:
 
 ==========================================
@@ -11,7 +10,7 @@ Python pour un Data Scientist / Economiste
 `ENSAE - OMI2F2 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/2me-anne-formationsdiplome-95.html?id=101352>`_
 
 Cours animé par :
-`Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_  (ENSAE 1999) [#fwrite1]_, 
+`Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_  (ENSAE 1999) [#fwrite1]_,
 Anne Muller (ENSAE 2012) [#fwrite1]_,
 Elodie Royant (ENSAE 2008) [#fwrite2]_,
 Antoine Thabault (ENSAE 2012) [#fwrite2]_,
@@ -21,44 +20,41 @@ Antoine Ly (ENSAE 2015),
 Benjamin Donnot (ENSAE 2015),
 Gaël Varoquaux [#fwrite2]_
 
-
 Ce cours s'étale sur 6 séances de cours/TD d'une durée de 4h.
-Les outils proposés sont en langage `Python <https://www.python.org/>`_. 
+Les outils proposés sont en langage `Python <https://www.python.org/>`_.
 Ils sont tous `open source <http://fr.wikipedia.org/wiki/Open_source>`_,
 pour la plupart disponibles sur `GitHub <https://github.com/>`_ et en développement actif.
-Python est récemment devenu une alternative plus que probante 
-pour les scientifiques et comme c'est un langage générique, il est 
+Python est récemment devenu une alternative plus que probante
+pour les scientifiques et comme c'est un langage générique, il est
 possible de gérer l'ensemble des traitements appliqués aux données, depuis
 le traitements des sources de données jusqu'à leur visualisation sans changer de langage.
 
-Le cours est prévu pour des profils plutôt statistiques |pystatpng| 
-ou plutôt économiques |pyecopng|. Ces images reviendront pour indiquer 
+Le cours est prévu pour des profils plutôt statistiques |pystatpng|
+ou plutôt économiques |pyecopng|. Ces images reviendront pour indiquer
 si les contenus s'adressent plutôt aux uns ou aux autres.
-La présentation 
+La présentation
 `ENSAE 2A - Données, Machine Learning et Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_ |slideslogo|
 donne un aperçu des thèmes abordés.
 
 * :ref:`feuille de route 2016 <l-feuille-de-route-2016-2A>`
-* :ref:`projet informatique <l-projinfo2a>`. 
+* :ref:`projet informatique <l-projinfo2a>`.
 
 **Thèmes :**
 
 .. contents::
     :local:
     :depth: 2
-    
+
 .. |slideslogo| image:: _static/slides_logo.png
              :height: 20
              :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html
 
-
 .. |pyecopng| image:: _static/pyeco.png
             :alt: Economie
-            
+
 .. |pystatpng| image:: _static/pystat.png
             :alt: Statistique
-            
-            
+
 Rappels de programmation
 ========================
 
@@ -71,14 +67,12 @@ Rappels de programmation
 
     notebooks/td2_eco_rappels_1a
 
-
 .. index:: sérialisation, index, dataframe
 
-    
 Matrices et DataFrames - numpy pandas SQL
 =========================================
 
-Import/export de données dans un DataFrame, 
+Import/export de données dans un DataFrame,
 manipulation selon une logique SQL,
 utilité des index,
 `lambda function <http://www.diveintopython.net/power_of_introspection/lambda_functions.html>`_,
@@ -90,12 +84,11 @@ DataFrame
 
 |pyecopng| |pystatpng|
 
-
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
-    
+
     notebooks/_gs2a_dataframe
 
 *Modules*
@@ -107,14 +100,13 @@ Array, Matrix
 
 |pyecopng| |pystatpng|
 
-
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
-    
+
     notebooks/_gs2a_dnumpy
-    
+
 *Modules*
 
 * `numpy <http://www.numpy.org/>`_
@@ -125,15 +117,13 @@ SQL
 
 |pyecopng| |pystatpng|
 
-
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
-    
-    ext2a/sql_doc
-    notebooks/_gs2a_sql    
 
+    ext2a/sql_doc
+    notebooks/_gs2a_sql
 
 .. _l-visualisation-td2a:
 
@@ -166,16 +156,16 @@ la seconde produit des graphes animés à l'aide de Javascript
 (`bokeh <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/js_bokeh.html#jsbokehrst>`_,
 `bqplot <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/im_networkx.html#imnetworkxrst>`_).
 Les librairies les plus récentes implémentent les deux modes en cherchant toujours plus
-de simplicité. A ce sujet, il faut jeter un coup d'oeil à 
-`flexx <https://flexx.readthedocs.io/en/stable/>`_. Elles explorent aussi 
-la visualisation animée de gros jeux de données telle que 
+de simplicité. A ce sujet, il faut jeter un coup d'oeil à
+`flexx <https://flexx.readthedocs.io/en/stable/>`_. Elles explorent aussi
+la visualisation animée de gros jeux de données telle que
 `datashader <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/big_datashader.html#bigdatashaderrst>`_.
 
 *Notebook sur matplotlib*
 
 .. toctree::
     :maxdepth: 2
-    
+
     notebooks/_gs2a_visu
 
 * `Graphes classiques métriques pour des modèles de machine learning <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_enonce.html>`_
@@ -185,7 +175,7 @@ la visualisation animée de gros jeux de données telle que
 
 .. toctree::
     :maxdepth: 2
-    
+
     ext2a/javascript_doc
 
 * Lire :ref:`Javascript et traitement de données <blog-js-data>`
@@ -210,22 +200,21 @@ Cartes
 * `Evolution d'une population <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance4_projection_population_enonce.html>`_
 * `Evolution d'une population - correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html>`_
 
-
 *Formats de données*
 
 * :ref:`Système de coordonnées <blog-donnees-carroyees-2016>` (et données carroyées)
-* format de cartes 
+* format de cartes
   `shapefiles <https://en.wikipedia.org/wiki/Shapefile>`_,
   `topoJSON <https://en.wikipedia.org/wiki/GeoJSON#TopoJSON>`_,
   `geoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_,
 * `Projections sphériques et conversion <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/notebooks/chsh_geo.html>`_
 * conversion de coordonnées en longitude / latitude
-* librairies 
+* librairies
   `basemap <http://matplotlib.org/basemap/>`_, ...
 * sources :
   `DataMaps <http://datamaps.github.io/>`_,
   `Find Data <https://bost.ocks.org/mike/map/#finding-data>`_
- 
+
 *Modules*
 
 * `basemap <http://matplotlib.org/basemap/>`_
@@ -235,14 +224,12 @@ Cartes
 * `pyproj <https://pypi.python.org/pypi/pyproj>`_
 * `geopy <https://pypi.python.org/pypi/geopy>`_
 
-
 Transformations des données
 ===========================
 
 .. contents::
     :local:
     :depth: 1
-
 
 Projections, réduction des dimensions
 +++++++++++++++++++++++++++++++++++++
@@ -277,9 +264,6 @@ Projections, réduction des dimensions
 
 * `How to Use t-SNE Effectively <http://distill.pub/2016/misread-tsne/>`_
 
-
-
-
 Variables catégorielles
 +++++++++++++++++++++++
 
@@ -290,7 +274,6 @@ Variables catégorielles
 *Lectures*
 
 * :ref:`Tranformer les variables catégorielles et contrastes <encoding-categorie-id>`
-
 
 Clustering
 ==========
@@ -323,10 +306,8 @@ Machine Learning - Formalisation
 .. contents::
     :local:
     :depth: 1
-    
 
 .. _l-ml-skgael:
-
 
 Machine learning, cours de Gaël Varoquaux
 +++++++++++++++++++++++++++++++++++++++++
@@ -337,47 +318,45 @@ Gaël est un des concepteurs de `scikit-learn <http://scikit-learn.org/stable/>`
 
 * `notes de lectures <https://github.com/GaelVaroquaux/sklearn_ensae_course>`_ (`Gaël Varoquaux <http://gael-varoquaux.info/>`_)
 * machine learning et `scikit-learn <http://scikit-learn.org/stable/>`_
-  (`tutoriels sur scikit-learn <http://nbviewer.jupyter.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_),  
-* *Quelques extraits.* Par définition les plus proches voisins ne font pas d'erreur sur la base d'apprentissage, 
-  l'apprentissage consiste à forcer le modèle à faire des erreurs. `Overfitting <http://en.wikipedia.org/wiki/Overfitting>`_ et 
-  `régularisation <http://en.wikipedia.org/wiki/Regularization_(mathematics)>`_. 
+  (`tutoriels sur scikit-learn <http://nbviewer.jupyter.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_),
+* *Quelques extraits.* Par définition les plus proches voisins ne font pas d'erreur sur la base d'apprentissage,
+  l'apprentissage consiste à forcer le modèle à faire des erreurs. `Overfitting <http://en.wikipedia.org/wiki/Overfitting>`_ et
+  `régularisation <http://en.wikipedia.org/wiki/Regularization_(mathematics)>`_.
   Erreur `L2 <http://en.wikipedia.org/wiki/Lp_space>`_ et pénalisation `L1 <http://fr.wikipedia.org/wiki/Espace_L1>`_.
-  `RandomizedPCA <http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.RandomizedPCA.html>`_, 
-  `GridSearch <http://scikit-learn.org/stable/modules/grid_search.html>`_, 
+  `RandomizedPCA <http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.RandomizedPCA.html>`_,
+  `GridSearch <http://scikit-learn.org/stable/modules/grid_search.html>`_,
   `LassoCV <http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html>`_.
   `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_.
-    
+
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
-    
+
     notebooks/_gs2a_statdes
     notebooks/_gs2a_ml_base
-    
+
 *Modules*
 
 * `scikit-learn <http://scikit-learn.org/stable/>`_
-    
+
 .. _l-td2a-ml-extensions:
-    
-    
-Pratique du machine learning, problème de données 
+
+Pratique du machine learning, problème de données
 +++++++++++++++++++++++++++++++++++++++++++++++++
 
 |pyecopng| |pystatpng|
 
-
 .. toctree::
     :maxdepth: 2
-    
+
     questions/some_ml
 
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
-    
+
     notebooks/_gs2a_ml
 
 *Lectures*
@@ -416,7 +395,7 @@ Pratique du machine learning, problème de données
 
 *Librairies*
 
-`JMLR <http://www.jmlr.org/>`_ 
+`JMLR <http://www.jmlr.org/>`_
 poste régulièrement des articles sur des librairies de machine learning open source.
 
 * `fastFM: A Library for Factorization Machines <fastFM: A Library for Factorization Machines>`_
@@ -426,7 +405,6 @@ poste régulièrement des articles sur des librairies de machine learning open s
 * `statsmodels <http://statsmodels.sourceforge.net/>`_
 * `xgboost <https://xgboost.readthedocs.io/en/latest/>`_
 * `mlxtend <https://github.com/rasbt/mlxtend>`_
-
 
 Ranking
 +++++++
@@ -447,8 +425,6 @@ Ranking
 * `The Lemur Project - ranklib <https://sourceforge.net/p/lemur/wiki/RankLib/>`_
 * `scikit-criteria <https://github.com/leliel12/scikit-criteria>`_ (standby)
 
-
-
 Système de recommandation
 +++++++++++++++++++++++++
 
@@ -458,28 +434,24 @@ Système de recommandation
 
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 
-
-
-
 .. _l-deep-learning:
 
 Deep Learning
 +++++++++++++
 
-|pystatpng|    
+|pystatpng|
 
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
-    
+
     notebooks/_gs2a_deep
 
 *Sites*
 
 * `Tinker With a Neural Network Right Here in Your Browser <http://playground.tensorflow.org/>`_
 * `ConvNetJS <http://cs.stanford.edu/people/karpathy/convnetjs/>`_
-
 
 *Modèles pré-entraînés*
 
@@ -488,7 +460,7 @@ Deep Learning
   (deep learning)
 * `CNTK <https://www.microsoft.com/en-us/research/product/cognitive-toolkit/model-gallery/>`_
   (sur `github <https://github.com/Microsoft/CNTK/tree/master/Examples>`_)
-  
+
 *Lectures*
 
 * `Deep learning architecture diagrams <http://fastml.com/deep-learning-architecture-diagrams/>`_
@@ -523,7 +495,7 @@ Deep Learning
 *à suivre*
 
 * `chainer <https://github.com/pfnet/chainer>`_
-* `platoon <https://github.com/mila-udem/platoon/>`_ : 
+* `platoon <https://github.com/mila-udem/platoon/>`_ :
   multi-GPU pour theano
 * `scikit-theano <https://github.com/sklearn-theano/sklearn-theano>`_
 
@@ -536,7 +508,6 @@ ou *apprentissage par renforcement*
 
 *(année prochaine)*
 
-
 *Lectures*
 
 * `A Comprehensive Survey on Safe Reinforcement Learning <http://www.jmlr.org/papers/volume16/garcia15a/garcia15a.pdf>`_
@@ -545,12 +516,10 @@ ou *apprentissage par renforcement*
 * `Reinforcement Learning Part I <http://www.labri.fr/perso/nrougier/downloads/Chile-2014-Lecture-1.pdf>`_
   `Reinforcement Learning Part II <http://www.labri.fr/perso/nrougier/downloads/Chile-2014-Lecture-2.pdf>`_
 
-
 Bandits
 +++++++
 
 |pystatpng|
-
 
 *(année prochaine)*
 
@@ -564,14 +533,19 @@ Bandits
 * `Learning to Interact <http://hunch.net/~jl/interact.pdf>`_ (John Langford)
 * `Batch Learning from Logged Bandit Feedback through Counterfactual Risk Minimization <http://www.jmlr.org/papers/volume16/swaminathan15a/swaminathan15a.pdf>`_
 
-
-
 Modèles bayésiens
 +++++++++++++++++
 
 |pystatpng|
 
 *(année prochaine)*
+
+*Notebooks*
+
+.. toctree::
+    :maxdepth: 2
+
+    notebooks/_gs2a_bayes
 
 *Lectures*
 
@@ -583,12 +557,11 @@ Modèles bayésiens
 * `Variational Inference in Python <https://www.youtube.com/watch?v=3KGZDC3-_iY>`_
 * `Bayesian Network Modeling using R and Python <https://www.youtube.com/watch?v=iRvXfx9IWM0>`_
 
-*Modules* 
+*Modules*
 
 * `PyMC3 <https://pymc-devs.github.io/pymc3/notebooks/getting_started.html>`_
 * `bayespy <http://bayespy.org/en/latest/>`_
 * `kabuki <https://pypi.python.org/pypi/kabuki/>`_
-
 
 Machine Learning sur des données cryptées
 +++++++++++++++++++++++++++++++++++++++++
@@ -600,7 +573,7 @@ Machine Learning sur des données cryptées
 *Lectures*
 
 * `Privacy Preserving Data Mining <http://web.stanford.edu/group/mmds/slides/mcsherry-mmds.pdf>`_, Cynthia Dwork, Frank McSherry,
-  concept de :math:`\epsilon`-differential privacy 
+  concept de :math:`\epsilon`-differential privacy
   (`version longue <https://users.soe.ucsc.edu/~abadi/CS223_F12/mcsherry.pdf>`_,
   `Privacy Preserving Data Mining <http://www.cs.jhu.edu/~fabian/courses/CS600.624/slides/privacy-preserving.pdf>`_)
 * `Differentially Private Empirical Risk Minimization <http://www.jmlr.org/papers/volume12/chaudhuri11a/chaudhuri11a.pdf>`_
@@ -616,8 +589,6 @@ Machine Learning sur des données cryptées
 
 * `ciphermed <https://github.com/rbost/ciphermed>`_ : pas maintenu
 
-
-
 Machine Learning Avancé
 =======================
 
@@ -625,7 +596,6 @@ Interprétabilité des modèles
 ++++++++++++++++++++++++++++
 
 |pyecopng| |pystatpng|
-
 
 *(à venir)*
 
@@ -637,7 +607,6 @@ Interprétabilité des modèles
 * `Confidence Intervals for Random Forests: The Jackknife and the Infinitesimal Jackknife <http://jmlr.csail.mit.edu/papers/volume15/wager14a/wager14a.pdf>`_
 * `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
 * `Wavelet decompositions of Random Forests - smoothness analysis, sparse approximation and applications <http://www.jmlr.org/papers/volume17/15-203/15-203.pdf>`_
-
 
 Optimisation des hyperparamètres
 ++++++++++++++++++++++++++++++++
@@ -653,17 +622,14 @@ Optimisation des hyperparamètres
 * `scikit-learn <http://scikit-learn.org/>`_
 * `hyperopt <https://github.com/hyperopt/hyperopt>`_
 
-
 Online training
 +++++++++++++++
-
 
 *(à venir)*
 
 *Lectures*
 
 * `Fast Rates in Statistical and Online Learning <http://www.jmlr.org/papers/volume16/vanerven15a/vanerven15a.pdf>`_
-
 
 Modèles avec dépendances dans le temps
 ++++++++++++++++++++++++++++++++++++++
@@ -675,12 +641,10 @@ Modèles avec dépendances dans le temps
 * `Learning Algorithms for Second-Price Auctions with Reserve <http://www.jmlr.org/papers/volume17/14-499/14-499.pdf>`_
 * `Machine Learning in an Auction Environment <http://www.jmlr.org/papers/volume17/15-109/15-109.pdf>`_
 
-
 Auto-Learning
 +++++++++++++
 
 |pyecopng| |pystatpng|
-
 
 *(à venir)*
 
@@ -693,9 +657,6 @@ Auto-Learning
 * `REP <https://github.com/yandex/rep>`_
 * `TPOT <https://github.com/rhiever/tpot>`_
 * `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
-
-
-
 
 NLP - Image - Réseaux - Timeseries
 ==================================
@@ -715,7 +676,7 @@ Traitement du langage
 
 .. toctree::
     :maxdepth: 2
-    
+
     notebooks/_gs2a_nlp
 
 *Lectures*
@@ -724,27 +685,24 @@ Traitement du langage
   la complétion est utilisée par tous les sites Internet pour aider les utilisateurs
   à saisir leur recherche. N'importe quel site commercial l'utiliser
   pour guider les utilisateurs plus rapidement vers le produit qu'ils recherchent.
-* `Text Understanding from Scratch <https://arxiv.org/abs/1502.01710>`_, 
+* `Text Understanding from Scratch <https://arxiv.org/abs/1502.01710>`_,
   Xiang Zhang, Yann LeCun
 * `Text Generation With LSTM Recurrent Neural Networks in Python with Keras <http://machinelearningmastery.com/text-generation-lstm-recurrent-neural-networks-python-keras/>`_
 
 *Vidéos*
 
 * `Modern NLP in Python <https://www.youtube.com/watch?v=6zm9NC9uRkk>`_
-  
+
 *Modules*
 
 * `nltk <http://www.nltk.org/>`_
 * `gensim <https://radimrehurek.com/gensim/>`_
 * `spacy <https://spacy.io/>`_
-  
-
 
 Timeseries - Séries temporelles
 +++++++++++++++++++++++++++++++
 
 |pyecopng| |pystatpng|
-
 
 *Notebooks*
 
@@ -752,7 +710,7 @@ Timeseries - Séries temporelles
     :maxdepth: 2
 
     notebooks/_gs2a_timeseries
-    
+
 *Lectures*
 
 * `Time series analysis with pandas <http://earthpy.org/pandas-basics.html>`_
@@ -780,12 +738,10 @@ Images
 * `VIGRA <https://github.com/ukoethe/vigra>`_
 * `opencv <http://opencv.org/>`_
 
-
 Graphes et réseaux
 ++++++++++++++++++
 
 |pyecopng| |pystatpng|
-
 
 *(année prochaine)*
 
@@ -793,15 +749,12 @@ Graphes et réseaux
 
 * `Basic models and questions in statistical network analysis <https://arxiv.org/abs/1609.03511>`_
 
-
-
 Techniques de programmation et algorithmes
 ==========================================
 
 .. contents::
     :local:
     :depth: 2
-    
 
 .. _l-2a-scraping:
 
@@ -810,15 +763,14 @@ Webscrapping et API
 
 |pyecopng| |pystatpng|
 
-
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
-    
+
     notebooks/_gs2a_eco_scraping
     notebooks/_gs2a_eco_api
-    
+
 *Ressources*
 
 * `API de geocoding <https://www.data.gouv.fr/fr/faq/reuser/>`_
@@ -833,9 +785,8 @@ Site web
 
 .. toctree::
     :maxdepth: 2
-    
-    notebooks/_gs2a_eco_website
 
+    notebooks/_gs2a_eco_website
 
 *Lectures*
 
@@ -857,10 +808,8 @@ Jupyter et les commandes magiques
 
 .. toctree::
     :maxdepth: 2
-    
 
     notebooks/_gs2a_magic_commands
-
 
 .. _l-cluster-non-struct-2a:
 
@@ -868,7 +817,6 @@ Big data sans cluster, données non structurées
 ++++++++++++++++++++++++++++++++++++++++++++++
 
 |pystatpng|
-
 
 * `présentation données structurées <http://www.xavierdupre.fr/enseignement/complements/cours_structure_donnee.pdf>`_
 
@@ -881,22 +829,20 @@ Big data sans cluster, données non structurées
     notebooks/_gs2a_no_sql_twitter
     notebooks/_gs2a_big_in_memory
 
-
 *Lectures*
 
-- Propriétés des base de données : `ACID <http://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9s_ACID>`_, 
+- Propriétés des base de données : `ACID <http://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9s_ACID>`_,
   `relationnelle <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_relationnelle>`_,
   `transactionnelle <http://fr.wikipedia.org/wiki/Transaction_informatique>`_
-- Best practices, index et `foreign key <http://en.wikipedia.org/wiki/Foreign_key>`_ 
+- Best practices, index et `foreign key <http://en.wikipedia.org/wiki/Foreign_key>`_
   (importance des `random access <http://fr.wikipedia.org/wiki/Random_Access_Memories>`_ et `accès séquentiel <http://en.wikipedia.org/wiki/Sequential_access>`_)
-- Limites des structures relationnelles 
-  (`données arborescentes <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_hi%C3%A9rarchique>`_, 
+- Limites des structures relationnelles
+  (`données arborescentes <http://fr.wikipedia.org/wiki/Base_de_donn%C3%A9es_hi%C3%A9rarchique>`_,
   données hétérogènes)
 - Base de données non relationnelles dont `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_
 - :ref:`l-td25asynthese`
 - `Un tools d’itertour, ou l’inverse <http://sametmax.com/un-tools-ditertour-ou-linverse/>`_
 - `Benchmark of Python JSON libraries <http://artem.krylysov.com/blog/2015/09/29/benchmark-python-json-libraries/>`_
-
 
 .. _l-2a-cplusplus-para-serie:
 
@@ -904,26 +850,26 @@ C++, R
 ++++++
 
 |pystatpng|
-  
+
 *Notebooks*
-  
+
 .. toctree::
     :maxdepth: 2
-    
+
     notebooks/_gs2a_langages
     notebooks/_gs1a_D_calcul_dicho_cython
 
 *Lectures*
 
 * :ref:`l-python_cplusplus`
-* `sklearn-compiledtrees <https://github.com/ajtulloch/sklearn-compiledtrees/>`_ : 
+* `sklearn-compiledtrees <https://github.com/ajtulloch/sklearn-compiledtrees/>`_ :
   création d'une implémentation C++ de la fonction de décision d'un arbre de décision entraîné avec
   scikit-learn
-  
+
 *Vidéos*
 
 * `Making your code faster: Cython and parallel processing in the Jupyter Notebook <https://www.youtube.com/watch?v=MiHddLYZ6cQ>`_
-  
+
 Parallélisation, sérialisation
 ++++++++++++++++++++++++++++++
 
@@ -931,12 +877,12 @@ Parallélisation, sérialisation
 
 La sérialisation est le fait de convertir n'importe quelle structure de données en un
 tableau d'octets, c'est indispensable pour la communication entre deux machines, deux processus.
-  
+
 *Notebooks*
-  
+
 .. toctree::
     :maxdepth: 2
-    
+
     notebooks/_gs2a_parallelisation
     notebooks/_gs2a_serialisation
 
@@ -947,12 +893,11 @@ tableau d'octets, c'est indispensable pour la communication entre deux machines,
 * `joblib <https://pythonhosted.org/joblib/>`_
 
 .. _l-puzzlealgo2A:
-      
+
 Puzzles algorithmiques
 ++++++++++++++++++++++
 
 |pystatpng|
-
 
 .. toctree::
 
@@ -961,25 +906,23 @@ Puzzles algorithmiques
     specials/algorithm_culture
     specials/problem_solved
 
-    
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
 
     notebooks/_gs2a_puzzle
-    
+
 Certains sont tirés de plusieurs sites dont
 `Google Code Jam <https://code.google.com/codejam/contests.html>`_.
-
 
 *Lectures*
 
 * `Profiling avec Python <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/completion_profiling.html?highlight=profiling>`_
-* types de complexité : `force brute <http://fr.wikipedia.org/wiki/Recherche_exhaustive>`_, 
+* types de complexité : `force brute <http://fr.wikipedia.org/wiki/Recherche_exhaustive>`_,
   `glouton <http://fr.wikipedia.org/wiki/Algorithme_glouton>`_, `dynamique <http://fr.wikipedia.org/wiki/Programmation_dynamique>`_
 * :ref:`l-algoculture`
-* :ref:`l-expose-explication` 
+* :ref:`l-expose-explication`
 * `Logique, modèles, calculs (INF 423) <http://www.enseignement.polytechnique.fr/informatique/INF423/i.php?n=Main.Poly>`_
 * `Notation de Landau <https://fr.wikipedia.org/wiki/Comparaison_asymptotique#La_famille_de_notations_de_Landau_O.2C_o.2C_.CE.A9.2C_.CF.89.2C_.CE.98.2C_.7E>`_
 * `Edmonds' Blossom Algorithm <https://stanford.edu/~rezab/dao/projects_reports/shoemaker_vare.pdf>`_
@@ -990,7 +933,7 @@ Certains sont tirés de plusieurs sites dont
 * `The Traveling Salesperson Problem <http://nbviewer.jupyter.org/url/norvig.com/ipython/TSP.ipynb>`_
 * `Google Interview University <https://github.com/jwasham/google-interview-university#np-np-complete-and-approximation-algorithms>`_:
   *This is my multi-month study plan for going from web developer (self-taught, no CS degree) to Google software engineer.*
-* `Cache replacement policies <https://en.wikipedia.org/wiki/Cache_replacement_policies>`_  
+* `Cache replacement policies <https://en.wikipedia.org/wiki/Cache_replacement_policies>`_
 * `Livres techniques en français <https://github.com/vhf/free-programming-books/blob/master/free-programming-books-fr.md>`_
 
 Data Scientist en liberté
@@ -1017,7 +960,6 @@ Contrairement à ce qu'on pense, les datascientists sont plus prévisibles que l
 
 * `Anaconda <https://www.continuum.io/downloads>`_ + ``conda update all`` + ``pip install jyquickhelper``
 * `XGBoost sous Windows <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2016/2016-08-09_xgboost_again.html>`_
-
 
 .. _l-td2a-biblio:
 
@@ -1048,9 +990,9 @@ Bibliographie
 
 * `High Performance Python <http://shop.oreilly.com/product/0636920028963.do>`_, Micha Gorelick, Ian Ozsvald.
    Le livre est très bien conçu et les exemples sont très clairs. Si vous souhaitez accélérer un programme Python
-   en utilisant le multithreading, `OpenMP <http://openmp.org/wp/>`_, 
+   en utilisant le multithreading, `OpenMP <http://openmp.org/wp/>`_,
    `Numba <http://numba.pydata.org/>`_, `Cython <http://cython.org/>`_
-   `PyPy <http://cython.org/>`_, ou `CPython <https://en.wikipedia.org/wiki/CPython>`_, 
+   `PyPy <http://cython.org/>`_, ou `CPython <https://en.wikipedia.org/wiki/CPython>`_,
    je recommande d'y jeter un coup d'oeil d'abord.
 
 **Liens**
@@ -1082,10 +1024,9 @@ Bibliographie
 * `How to trick a neural network into thinking a panda is a vulture <https://codewords.recurse.com/issues/five/why-do-neural-networks-think-a-panda-is-a-vulture>`_ *(2016/06)*
 * `Matrix Factorization: A Simple Tutorial and Implementation in Python <http://www.quuxlabs.com/blog/2010/09/matrix-factorization-a-simple-tutorial-and-implementation-in-python/>`_ *(2016/06)*
 * `Complete Guide to Parameter Tuning in XGBoost (with codes in Python) <https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/>`_ *(2016/08)*
-* `colah's blog <http://colah.github.io/>`_ *(2016/08)* blog/cours sur le deep learning 
+* `colah's blog <http://colah.github.io/>`_ *(2016/08)* blog/cours sur le deep learning
 * `Top-down learning path: Machine Learning for Software Engineers <https://github.com/ZuzooVn/machine-learning-for-software-engineers>`_
 * `Factorization Machines with libFM <http://www.csie.ntu.edu.tw/~b97053/paper/Factorization%20Machines%20with%20libFM.pdf>`_ *(2016/09)*
-
 
 **Tutoriels**
 
@@ -1099,7 +1040,7 @@ Bibliographie
 
 **MOOC**
 
-* `Machine Learning par Andrew Y. Ng <https://www.class-central.com/mooc/835/coursera-machine-learning>`_ 
+* `Machine Learning par Andrew Y. Ng <https://www.class-central.com/mooc/835/coursera-machine-learning>`_
   (les chapitres X et XI de la semaine 6 aborde la construction d'un système de machine learning).
 * `Coursera Machine Learning <https://www.coursera.org/course/ml>`_
 * `Coursera Machine Algorithm <https://www.coursera.org/course/algo>`_
@@ -1108,13 +1049,13 @@ Bibliographie
 
 **Autres cours, notebooks**
 
-* `CS109 Data Science (Harvard) <http://cs109.github.io/2014/>`_ - 
-  `TD <https://github.com/cs109/content>`_ - 
+* `CS109 Data Science (Harvard) <http://cs109.github.io/2014/>`_ -
+  `TD <https://github.com/cs109/content>`_ -
   `Talks <http://cm.dce.harvard.edu/2015/01/14328/publicationListing.shtml>`_
-* `Notes and assignments for Stanford CS class CS231n <https://github.com/cs231n/cs231n.github.io>`_ 
+* `Notes and assignments for Stanford CS class CS231n <https://github.com/cs231n/cs231n.github.io>`_
   `Convolutional Neural Networks for Visual Recognition <http://vision.stanford.edu/teaching/cs231n/>`_
 * `Advanced Statistical Computing, Chris Fonnesbeck (Vanderbilt University) <http://nbviewer.jupyter.org/github/fonnesbeck/Bios366/tree/master/notebooks/>`_
-* `CS 188: Artificial Intelligence (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/lectures.html>`_ 
+* `CS 188: Artificial Intelligence (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/lectures.html>`_
 * `IAPR: Teaching materials for machine learning <http://homepages.inf.ed.ac.uk/rbf/IAPR/researchers/MLPAGES/mlteach.htm>`_
 * machine learning et musique `Audio Content Analysis, teachings <http://www.audiocontentanalysis.org/teaching/>`_
 * `ogrisel's notebook <https://github.com/ogrisel/notebooks>`_ (2016/04)
@@ -1123,14 +1064,14 @@ Bibliographie
 
 **Articles d'auteurs très connus**
 
-* `Latent Dirichlet Allocation <http://ai.stanford.edu/~ang/papers/jair03-lda.pdf>`_, David M. Blei, Andrew Y. Ng, Michael I. Jordan 
+* `Latent Dirichlet Allocation <http://ai.stanford.edu/~ang/papers/jair03-lda.pdf>`_, David M. Blei, Andrew Y. Ng, Michael I. Jordan
 * `Analysis of a Random Forests Model <http://www.jmlr.org/papers/volume13/biau12a/biau12a.pdf>`_, Gerard Biau
 * `Adaptivity of Averaged Stochastic Gradient Descent to Local Strong Convexity for Logistic Regression <http://jmlr.csail.mit.edu/papers/volume15/bach14a/bach14a.pdf>`_, Francis Bach
 * `Counterfactual Reasoning and Learning Systems: The Example of Computational Advertising <http://jmlr.csail.mit.edu/papers/volume14/bottou13a/bottou13a.pdf>`_, Léon Bottou, Jonas Peter et Al.
 * `Tutorial on Practical Prediction Theory for Classification <http://www.jmlr.org/papers/volume6/langford05a/langford05a.pdf>`_, John Langford
 * `Sparse Online Learning via Truncated Gradient <http://jmlr.org/papers/volume10/langford09a/langford09a.pdf>`_, John Langford, Lihong Li, Tong Zhang
 * `Low-dimensional Embeddings for Interpretable Anchor-based Topic Inference <http://mimno.infosci.cornell.edu/papers/EMNLP2014138.pdf>`_, Moontae Lee, David Mimno
-* `ABC model choice via random forests <http://arxiv.org/abs/1406.6288>`_, Pierre Pudlo, Jean-Michel Marin, Arnaud Estoup, Jean-Marie Cornuet, Mathieu Gautier, Christian P. Robert 
+* `ABC model choice via random forests <http://arxiv.org/abs/1406.6288>`_, Pierre Pudlo, Jean-Michel Marin, Arnaud Estoup, Jean-Marie Cornuet, Mathieu Gautier, Christian P. Robert
 * `Mondrian Forests: Efficient Online Random Forests <http://arxiv.org/pdf/1406.2673v1.pdf>`_, Balaji Lakshminarayanan, Daniel M. Roy, Yee Whye Teh
 * `Stochastic Gradient Tricks <http://leon.bottou.org/papers/bottou-tricks-2012>`_
 * `SiGMa: Simple Greedy Matching for Aligning Large Knowledge Bases <http://arxiv.org/abs/1207.4525>`_, Simon Lacoste-Julien, Konstantina Palla, Alex Davies, Gjergji Kasneci, Thore Graepel, Zoubin Ghahramani
@@ -1155,12 +1096,10 @@ Bibliographie
 * `XGBoost: A Scalable Tree Boosting System <http://arxiv.org/pdf/1603.02754v1.pdf>`_,
   Tianqi Chen, Carlos Guestrin
 
-
 Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_ :
 
 .. image:: http://scikit-learn.org/stable/_static/ml_map.png
     :width: 500
-    
 
 **Librairies Python**
 
@@ -1185,34 +1124,34 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
 * `Building Continuous Learning Systems <https://www.youtube.com/watch?v=VtBvmrmMJaI>`_
 
 **next year**
-    
-.. todoext:: 
+
+.. todoext::
     :title: Retravailler la partie visualisation de Python pour un data scientist
     :tag: plus
-    
+
     Il manque un notebooks sur les visualisations les plus utilisées en machine learning,
     ROC, régression, visualisation d'arbres de décision avec ete3, les cartes.
     Insister sur l'interactivité.
     Voir `TD 4B : Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
     (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_),
     ce notebook présente un moyen de faire une carte géographique, des graphes zoomables.
-        
+
 .. todoext::
     :title: aborder d'autres librairies
     :tag: plus
-    
+
     py-earth, pytorch, boruta, wendelin.core, zodb,
     (requires transaction, zc.lockfile, zodbpickle, ZODB, zdaemon, ZEO, ZODB3, wendelin.core),
     ghost.py (scrapping)
     h5py, PyTables, lda
     See `Related Projects <http://scikit-learn.org/stable/related_projects.html>`_,
     `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
-    
+
 .. todoext::
     :title: Aborder theano, keras, GPU et les types de deep strucures
     :tag: done
     :hidden:
-    
+
     Et les autres caffee, tensorflow, cntk, torch, h2o
     (voir `libraries <http://www.teglor.com/b/deep-learning-libraries-language-cm569/>`_,
     `librairies 1 <http://machinelearningmastery.com/popular-deep-learning-libraries/>`_,
@@ -1220,58 +1159,57 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
     `comparison <https://en.wikipedia.org/wiki/Comparison_of_deep_learning_software>`_
     et différents types de structures DNN, CNN
     `deep learning <https://en.wikipedia.org/wiki/Deep_learning>`_
-    
+
 .. todoext::
     :title: rédiger un ou deux notebook sur le traitement du langage
     :tag: done
     :hidden:
-    
+
     Aborder la distance d'édition, n-grams, NLTK, gensim,
     word2vec, LDA (Latent Dirichlet Application), traduction statistique,
     td-idf, coocurrence, analyse de sentiment, stemming
     `SMT <https://en.wikipedia.org/wiki/Statistical_machine_translation>`_,
-    alignement, 
+    alignement,
     `moses <http://www.statmt.org/moses/>`_
-    
 
 .. todoext::
     :title: techniques de webscrapping
     :tag: plus
-    
+
     * beautifulsoup, ghost.py, scrappy
     * `Python's Web Framework Benchmarks <http://klen.github.io/py-frameworks-bench/>`_
 
 .. todoext::
     :title: aborder les formats de données sparses (CRS, ...)
     :tag: plus
-    
+
     See `Compressed Sparse Row Format (CSR) <http://www.scipy-lectures.org/advanced/scipy_sparse/csr_matrix.html>`_.
 
 .. todoext::
     :title: ajouter un notebook sur joblib
     :tag: plus
-    
-    joblib est utilisé par scikit-learn pour 
+
+    joblib est utilisé par scikit-learn pour
     paralléliser les calculs
 
 .. todoext::
     :title: ajouter un notebook sur numba, llvmlite
     :tag: plus
-    
+
     Il n'y pas que CPython pour ooptimiser les calculs.
     Aborder les notions de JIT.
-        
+
 .. todoext::
     :title: sérialisation JSON
     :tag: done
     :hidden:
-    
+
     Très utilisée sur internet donc incontournable.
 
 .. todoext::
     :title: ajouter MILP
     :tag: plus
-    
+
     avec des modules tels que `pyomo <http://www.pyomo.org/>`_,
     lire `Mixed integer programming for machine learning <http://www.litislab.fr/wp-content/uploads/2015/12/Canu-S.pdf>`_,
     `GLPK/Python <https://en.wikibooks.org/wiki/GLPK/Python#Python-GLPK>`_,
@@ -1280,27 +1218,27 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
 .. todoext::
     :title: ajouter ctypes
     :tag: plus
-    
+
     utilisation du module ctypes pour les import C++
     + un exemple de `sklearn-compiledtrees <https://github.com/ajtulloch/sklearn-compiledtrees/>`_
 
 .. todoext::
     :title: multi-label, coverage_error
     :tag: plus
-    
+
     fonction `coverage-error <http://scikit-learn.org/stable/modules/model_evaluation.html#coverage-error>`_,
     lire `Mining Multi-label Data <http://lpis.csd.auth.gr/publications/tsoumakas09-dmkdh.pdf>`_
 
 .. todoext::
     :title: ajouter projections
     :tag: plus
-    
+
     parler plus précisément des projections, de la réduction des dimensions
 
 .. todoext::
     :title: HMM
     :tag: plus
-    
+
     parler de Modèles de Markov cachés HMM avec des mélanges de gaussiennes
     pour analyser les séries temporelles
     `hmmlearn <https://github.com/hmmlearn/hmmlearn/blob/master/>`_,
@@ -1310,23 +1248,16 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
 .. todoext::
     :title: modules, framework à regarder
     :tag: plus
-    
+
     * `REP <https://github.com/yandex/rep>`_
     * `TPOT <https://github.com/rhiever/tpot>`_
     * `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
-    
+
     * `msmbuilder <http://msmbuilder.org/3.6.0/decomposition.html>`_
     * `sparkit-learn <https://github.com/lensacom/sparkit-learn>`_
     * `kmodes <https://github.com/nicodv/kmodes>`_
     * `hdbscan <https://github.com/scikit-learn-contrib/hdbscan>`_
     * `sacred <https://github.com/IDSIA/Sacred>`_
-    
-
-
-
-    
-
-    
 
 .. [#fwrite1] Contributeur, encadrant et coordinateur du cours.
 

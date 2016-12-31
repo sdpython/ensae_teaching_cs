@@ -1,5 +1,4 @@
 
-
 Streaming, combiner plusieurs langages
 ======================================
 
@@ -13,4 +12,3 @@ Streaming, combiner plusieurs langages
     td3a_correction_session7params
     td3a_cenonce_session7paramsaz
     td3a_correction_session7paramsaz
-    

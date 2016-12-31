@@ -4,21 +4,19 @@
 Machine Learning
 ================
 
-Le site `CS 188: Artificial Intelligence (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/lectures.html>`_ 
+Le site `CS 188: Artificial Intelligence (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/lectures.html>`_
 propose des projets informatiques qui ont la particularité de partir d'un squelette existant.
-Ce sont des problèmes de machines learning très guidés où l'essentiel de l'effort 
+Ce sont des problèmes de machines learning très guidés où l'essentiel de l'effort
 est tourné vers les algorithmes.
-
 
 .. _l-ml-renf:
 
 Apprentissage par renforcement
 ------------------------------
 
-
-Un problème souvent évoqué lorsqu'on parle d'apprentissage par renforcement est celui du 
+Un problème souvent évoqué lorsqu'on parle d'apprentissage par renforcement est celui du
 `tic tac toe <https://en.wikipedia.org/wiki/Tic-tac-toe>`_.
-L'objectif de ce projet est de résoudre 
+L'objectif de ce projet est de résoudre
 ce problème en utilisant l'apprentissage par renforcement. Quelques liens :
 
 * `Rémi Munos, part 1 <http://www.xavierdupre.fr/enseignement/projet_data/apprentissage_renforcement_part1.pdf>`_
@@ -29,18 +27,17 @@ ce problème en utilisant l'apprentissage par renforcement. Quelques liens :
 * `Agents adaptatifs Prise de décision séquentielle <http://www.grappa.univ-lille3.fr/~ppreux/mri/>`_
 * `UCL Course on RL <http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html>`_
 
-
 **Remarque :**
 
 .. index:: morpion, tic-tac-toe
 
-L'apprentissage par renforcement repose sur la connaissance de l'ensemble des 
+L'apprentissage par renforcement repose sur la connaissance de l'ensemble des
 états possibles du problèmes et ce nombre est souvent très grand. Trop grand.
 Le jeu du morpion ou `tic-tac-toe <http://fr.wikipedia.org/wiki/Tic-tac-toe>`_
 peut être résolu sans optimisation de l'algorithme initiale.
-C'est le jeu utilisé par le surdoué dans 
-`WarGame <http://fr.wikipedia.org/wiki/Wargames_%28film%29>`_ pour démontrer 
-à une intelligence artificielle que, bien joués, 
+C'est le jeu utilisé par le surdoué dans
+`WarGame <http://fr.wikipedia.org/wiki/Wargames_%28film%29>`_ pour démontrer
+à une intelligence artificielle que, bien joués,
 certains finissent toujours par une partie nulle. Pour d'autres jeux, le plus simple
 est souvent de chercher à réduire l'espace des états et des stratégies.
 Quelques applications envisageables dans le cadre de ce projets :
@@ -55,18 +52,16 @@ On peut envisager des contextes différents tels que le jeu de Pacman
 
 * `Reinforcement Learning (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/projects/reinforcement/reinforcement.html>`_
 
-
 .. _l-ml-chow:
 
 Algorithme de Chow-Liu
 ----------------------
 
-Cet algorithme `Chow Liu <http://en.wikipedia.org/wiki/Chow%E2%80%93Liu_tree>`_. 
+Cet algorithme `Chow Liu <http://en.wikipedia.org/wiki/Chow%E2%80%93Liu_tree>`_.
 Il sert à construire des relations entre des variables aléatoires. On pourra procéder en deux étapes :
 
 * implémentation de l'algorithme et vérification sur un jeux de données synthétiques
 * application sur un jeu de données plus conséquent
-
 
 **Ressources**
 
@@ -77,19 +72,17 @@ Il sert à construire des relations entre des variables aléatoires. On pourra p
 
 .. _l-ml-visage:
 
-
 Reconnaissance des visages de ses amis
 --------------------------------------
 
 .. index:: image processing
 
-La librairie `OpenCV <http://opencv.org/>`_ 
+La librairie `OpenCV <http://opencv.org/>`_
 permet d'effectuer des traitements d'images assez complexes comme localiser le
 visage d'une personne prise en photo. L'image suivante
 est extraite de `Face Detection in Static Images With Python <http://creatingwithcode.com/howto/face-detection-in-static-images-with-python/>`_.
 
 .. image:: http://s3.amazonaws.com/static.creatingwithcode.com/wp-content/uploads/2009/02/output.jpg
-
 
 La tâche qu'on veut pouvoir accomplir à l'aide d'un programme python est la suivante :
 
@@ -98,7 +91,7 @@ La tâche qu'on veut pouvoir accomplir à l'aide d'un programme python est la su
   portable par exemple.
 * On prend une nouvelle photo avec ce même appareil. On veut automatiquement ranger
   cette photo dans un répertoire associé à la personne reconnue.
-  
+
 On pourra lire les articles suivant :
 
 * `Simple Face Detection using OpenCV <http://suksant.com/2013/04/03/simple-face-detection-using-opencv/>`_
@@ -117,7 +110,7 @@ Deep et Extreme Machine Learning
 
 .. index:: deep learning, extreme machine learning
 
-C'est assez ambitieux comme premier projet. 
+C'est assez ambitieux comme premier projet.
 `MNIST <http://yann.lecun.com/exdb/mnist/>`_ est le premier problème mentionnant le
 *Deep Learning*. Ce site recense les différentes performances obtenues jusqu'à présent sur ce modèle.
 
@@ -137,18 +130,16 @@ Librairies, modules :
 * `VowPal Wabbit and MNIST <https://github.com/JohnLangford/vowpal_wabbit/tree/master/demo/mnist>`_
 * `theano <http://deeplearning.net/software/theano/>`_, module Python spécialisé dans le deep learning, `caffe <http://caffe.berkeleyvision.org/>`_
 
-
 .. _l-ml-align:
 
 Alignement de mots dans l'optique de constuire un traducteur automatique
 ------------------------------------------------------------------------
 
 L'algorithme est présentée dans l'article :
-`Word Alignment via Quadratic Assignment <http://www.seas.upenn.edu/~taskar/pubs/naacl06_qap.pdf>`_ 
+`Word Alignment via Quadratic Assignment <http://www.seas.upenn.edu/~taskar/pubs/naacl06_qap.pdf>`_
 de Simon Lacoste-Julien, Ben Taskar, Dan Klein, Michael I. Jordan.
 On pourra commencer sur un jeu de données petit et fabriqué manuellement. On pourra ensuite s'attaquer à
 des sites web qui proposent des traductions anglais/français de leur contenu.
-
 
 .. _l-fast-k-NN:
 
@@ -161,7 +152,6 @@ d'optimiser le calcul dans des espaces de grande dimension.
 
 `Fast k-NN search <http://arxiv.org/abs/1509.06957>`_
 
-
 .. _l-ml-gradient-geom:
 
 Accélération de la descente de gradient dans le cadre d'une optimisation convexe (2016)
@@ -170,21 +160,20 @@ Accélération de la descente de gradient dans le cadre d'une optimisation conve
 .. index:: gradient descente, descente de gradient, convexe
 
 La `descente de gradient <https://en.wikipedia.org/wiki/Gradient_descent>`_ est une technique
-d'optimisation très connue utilisée lorsqu'on ne sait pas exprimer de façon explicite 
+d'optimisation très connue utilisée lorsqu'on ne sait pas exprimer de façon explicite
 la solution d'un problème d'optimisation : on cherche le minimum ou le maximum de la fonction.
 
-Si l'algorithme converge lorsque la fonction à optimiser est convexe, 
+Si l'algorithme converge lorsque la fonction à optimiser est convexe,
 il existe des cas particuliers où on peut accélérer la convergence
 comme dans le cas de cet article qui propose une façon intuitive de le faire :
 `A geometric alternative to Nesterov's accelerated gradient descent <http://arxiv.org/abs/1506.08187>`_.
 
-L'objectif est d'implémenter cet algorithme puis de le comparer avec 
+L'objectif est d'implémenter cet algorithme puis de le comparer avec
 d'autres méthodes.
 
 On pourra également regarder :
 `Linear Coupling: An Ultimate Unification of Gradient and Mirror Descent <http://arxiv.org/abs/1407.1537>`_
 et `Revisiting Nesterov’s Acceleration <https://blogs.princeton.edu/imabandit/2015/06/30/revisiting-nesterovs-acceleration/>`_.
-
 
 .. _l-ml-reg-geod:
 
@@ -196,4 +185,3 @@ Régression à base de plus proches voisins (2017)
 Il faut implémenter la méthode de l'article qui suit :
 
 * `Minimax-optimal semi-supervised regression on unknown manifolds <https://arxiv.org/abs/1611.02221>`_
-

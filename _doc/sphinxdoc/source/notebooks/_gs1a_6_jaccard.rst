@@ -1,5 +1,4 @@
 
-
 Distance de Jaccard
 ===================
 

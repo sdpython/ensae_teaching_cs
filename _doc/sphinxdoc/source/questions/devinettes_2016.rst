@@ -23,7 +23,7 @@ machine learning utilisent des float ?
 (comme `xgboost <https://github.com/dmlc/xgboost>`_,
 ou `scikit-learn <https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/tree/tree.py#L123>`_).
 
-Même si les float sont deux fois plus petits, les processeurs 64 bit sont aussi rapides pour faire 
+Même si les float sont deux fois plus petits, les processeurs 64 bit sont aussi rapides pour faire
 du calcul en double précision (lire aussi `SIMD <https://en.wikipedia.org/wiki/SIMD>`_).
 Le principal avantage est l'emprunte mémoire réduite de moitié avec des floats.
 Côté GPU, les cartes graphiques capables de calcul avec des doubles sont significativement
@@ -39,6 +39,3 @@ Un jeu de données `imabalenced <http://machinelearningmastery.com/tactics-to-co
 
 Q4 : multiclass et imabalanced
 ++++++++++++++++++++++++++++++
-
-
-

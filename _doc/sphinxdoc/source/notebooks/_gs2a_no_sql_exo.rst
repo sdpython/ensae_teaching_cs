@@ -1,5 +1,4 @@
 
-
 Programmation fonctionnelle : présentation
 ==========================================
 

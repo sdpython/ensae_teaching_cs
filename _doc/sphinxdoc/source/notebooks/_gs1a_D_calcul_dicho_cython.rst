@@ -1,5 +1,4 @@
 
-
 Calcul numérique, dichotomie et Cython
 ======================================
 

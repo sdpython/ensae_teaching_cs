@@ -1,5 +1,4 @@
 
-
 .. blogpost::
     :title: Chargement des images avec pygame
     :keywords: pygame, os
@@ -17,7 +16,7 @@
         sept_carreau_verticale = pygame.image.load("sept_carreau_verticale.jpg").convert()
         # ...
 
-    Il y a quand même beaucoup plus simple pour charger des images que 
+    Il y a quand même beaucoup plus simple pour charger des images que
     d'écrire une ligne pour chacun d'entre elles. L'exemple suivant
     charge toutes les images du répertoire ``images``
     tout dans un dictionnaire ::

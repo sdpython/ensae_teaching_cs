@@ -1,5 +1,4 @@
 
-
 Jupyter et les commandes magiques
 =================================
 

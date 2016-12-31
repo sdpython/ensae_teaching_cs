@@ -1,5 +1,4 @@
 
-
 Streaming, combiner plusieurs langages, job paramétrés
 ======================================================
 
@@ -8,7 +7,7 @@ Séances dirigées
 
 .. toctree::
     :maxdepth: 2
-    
+
     notebooks/_gs3a_hadoop_streaming
 
 Lectures conseillées
@@ -20,5 +19,3 @@ Lectures conseillées
   (Java est le langage de Hadoop/PIG).
   Cette solution est aussi accessible sous Cloudera :
   `Writing Jython UDFs <http://archive.cloudera.com/cdh5/cdh/5/pig-0.12.0-cdh5.0.3/udf.html#jython-udfs>`_.
-    
-    

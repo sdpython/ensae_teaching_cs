@@ -16,8 +16,8 @@ Optimisation à partir d'algorithmes génétiques
 La plupart des algorithmes d'optimisation reposent sur le gradient. La plus classique est de se promener le long
 de la courbe à optimisation dans le long de la pente la plus forte : dans le sens du gradient s'il faut maximier,
 dans le sens opposé s'il faut minimiser. Lorsque celui-ci n'est pas nul, la direction de cette pente est indiquée par le gradient.
-Mais cela suppose évidemment que la fonction à optimiser soit dérivable. 
-Il arrive que la fonction ne soit pas dérivable où tout simplement que le problème d'optimisation soit 
+Mais cela suppose évidemment que la fonction à optimiser soit dérivable.
+Il arrive que la fonction ne soit pas dérivable où tout simplement que le problème d'optimisation soit
 `combinatoire <http://fr.wikipedia.org/wiki/Optimisation_combinatoire>`_.
 
 L'objectif de ce projet est de comparer un algorithme d'optimisation linéaire sous contrainte et un algorithme génétique
@@ -34,35 +34,33 @@ Problème du sac-à-dos et algorithmes génétiques
 
 .. index:: sac-à-dis, Knapsack
 
-Le `problème du sac-à-dos <http://fr.wikipedia.org/wiki/Probl%C3%A8me_du_sac_%C3%A0_dos>`_ est un 
-problème d'optimisation discrète linéaire avec contrainte. 
+Le `problème du sac-à-dos <http://fr.wikipedia.org/wiki/Probl%C3%A8me_du_sac_%C3%A0_dos>`_ est un
+problème d'optimisation discrète linéaire avec contrainte.
 Il peut être vu comme un problème d'`optimisation combinatoire <http://fr.wikipedia.org/wiki/Optimisation_combinatoire>`_.
-Comment remplir un sac-à-dos avec des objets de volumes différents en perdant le moins d'espace possible ? 
+Comment remplir un sac-à-dos avec des objets de volumes différents en perdant le moins d'espace possible ?
 L'objectif de ce projet est d'implémentation un algorithme de résolution de tels problèmes
 à partir d'algorithme génétiques.
 
 * `Optimisation par colonies de fourmis pour le problème du sac à dos multidimensionnel <http://liris.cnrs.fr/Documents/Liris-2310.pdf>`_
   (`autre accès <http://www.xavierdupre.fr/enseignement/projet_data/fourmi_sac_a_dos_Liris-2310.pdf>`_)
-  
+
 On étudiera la convergence et le coût des algorithmes en fonction de la dimension du problème.
-  
-.. _l-gen-tsp:  
+
+.. _l-gen-tsp:
 
 Problème du voyageur de commerce et algorithme génétique
 --------------------------------------------------------
 
 .. index:: TSP
 
-Le `problème du voyageur de commerce <http://fr.wikipedia.org/wiki/Probl%C3%A8me_du_voyageur_de_commerce>`_ est un 
+Le `problème du voyageur de commerce <http://fr.wikipedia.org/wiki/Probl%C3%A8me_du_voyageur_de_commerce>`_ est un
 problème d'optimisation discrète très connu. Il consiste à parcourir tous les sommets d'un graphe en minimisant
 la distance pour les parcourir. Ici encore, il s'agit de résoudre ce problème à l'aide d'algorithme génétique.
 
-* `Méthodes pour l'optimisation discrète <http://www.dil.univ-mrs.fr/~vancan/m111/documents/cours1r.pdf>`_ 
+* `Méthodes pour l'optimisation discrète <http://www.dil.univ-mrs.fr/~vancan/m111/documents/cours1r.pdf>`_
     (`autre accès <http://www.xavierdupre.fr/enseignement/projet_data/cours1rag.pdf>`_)
 
-
 On étudiera la convergence et le coût des algorithmes en fonction de la dimension du problème.
-
 
 .. _l-gen-ant:
 
@@ -73,30 +71,28 @@ Colonie de fourmis et plus court chemin
 
 On dispose un trésor dans une pièce contenant de nombreux obstacles, à l'autre bout, une colonie
 de fourmis. Au gré de leurs explorations, ces fourmis vont trouver puis raccourcir le plus court
-chemin de leurs fourmilières au trésor. 
+chemin de leurs fourmilières au trésor.
 
-* `Agents Réactifs <http://perso.limsi.fr/jps/enseignement/tutoriels/sma/doc/A.reactif.pdf>`_ 
+* `Agents Réactifs <http://perso.limsi.fr/jps/enseignement/tutoriels/sma/doc/A.reactif.pdf>`_
   (`autre accès <http://www.xavierdupre.fr/enseignement/projet_data/A.reactif.pdf>`_)
-  
+
 L'aspect visuel est souvent utile lorsqu'on veut vérifier que l'algorithme fonctionne et converge
 convenablement. Toutefois, il est rarement possible d'implémenter cette interface et d'étudier en détail les
 algorithmes. Le ou les élèves devront faire un choix entre ces deux directions.
 
 * Direction 1 : les fourmis, une colonie, un trésor, des phéromones et une interface visuelle.
-* Direction 2 : un problème plus classique d'optimisation du plus court chemin dans un graphe, 
+* Direction 2 : un problème plus classique d'optimisation du plus court chemin dans un graphe,
                 on comparera avec un algortihme de Djisktra, puis on s'intéressera aux propriétés de
                 l'algorithme lorsque le nombre de sommets augmentent (le réseau routier belge, français, américain, européen...)
-             
-.. _l-gen-motif:             
-                
+
+.. _l-gen-motif:
+
 Recherche de motifs
 -------------------
 
 Pas encore bien défini mais inspiré de :
 
 * `Stochastic Local Search for Pattern Set Mining <http://arxiv.org/pdf/1412.5984v1.pdf>`_
-                
-
 
 Lectures complémentaires
 ------------------------

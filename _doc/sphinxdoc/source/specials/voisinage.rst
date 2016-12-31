@@ -1,9 +1,5 @@
 
-
-
-
 .. _l-simulation_voisinage:
-
 
 Evolution d'un voisinage, d'une population
 ==========================================
@@ -15,8 +11,8 @@ La mixité au sein d'une ville n'est pas une chose facile à
 obtenir. Les habitants ont plutôt tendance à se regrouper
 selon un sentiment d'appartenance à un groupe ou une classe.
 Il en résulte une forme de ségrégation que l'économiste
-`Thomas Schelling <https://en.wikipedia.org/wiki/Thomas_Schelling>`_ a 
-tenté de modéliser. Le module 
+`Thomas Schelling <https://en.wikipedia.org/wiki/Thomas_Schelling>`_ a
+tenté de modéliser. Le module
 :mod:`voisinage_evolution <ensae_teaching_cs.special.voisinage_evolution>`
 s'inspire de `Schelling's Model of Segregation <http://nifty.stanford.edu/2014/mccown-schelling-model-segregation/>`_
 pour simuler l'évolution de la ville de Paris
@@ -29,7 +25,6 @@ La simulation en vidéo :
     <video autoplay="" controls="" loop="" height="500">
     <source src="http://www.xavierdupre.fr/enseignement/complements/voisinage.mp4" type="video/mp4" />
     </video>
-
 
 Epidémie
 ++++++++
@@ -47,5 +42,5 @@ de ce que pourrait être une simulation de ce type.
     <video autoplay=" controls="" loop="" height="400">
     <source src="http://www.xavierdupre.fr/enseignement/complements/epidemic.mp4" type="video/mp4" />
     </video>
-    
+
 Voir module :mod:`propagation_epidemic <ensae_teaching_cs.special.propagation_epidemic>`.

@@ -9,4 +9,3 @@ Deep Learning
 
     ml_deep_learning
     ml_deep_python
-

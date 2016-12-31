@@ -1,16 +1,14 @@
 
-
 .. blogpost::
     :title: Tutoriel sur les réseaux de neurones
     :keywords: réseau de neurones, neural network
     :date: 2015-08-27
     :categories: machine learning, tutoriel
-    
+
     Le module `neural-python <https://pypi.python.org/pypi/neural-python/>`_
     implémente les `réseaux de neurones <https://fr.wikipedia.org/wiki/R%C3%A9seau_de_neurones_artificiels>`_.
     Il propose une `interface <http://neuralpy.com/docs/secondary/sklearn-compatibility.html>`_
-    similaire à celle de 
+    similaire à celle de
     `scikit-learn <http://scikit-learn.org/stable/>`_
     mais sa `documentation <http://neuralpy.com/pages/home.html>`_
     est réussie.
-

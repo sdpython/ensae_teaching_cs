@@ -1,5 +1,4 @@
 
-
 Programmation fonctionnelle : exercice sur les données Twitter
 ==============================================================
 

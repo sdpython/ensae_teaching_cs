@@ -1,5 +1,4 @@
 
-
 Optimisation sous contrainte
 ============================
 

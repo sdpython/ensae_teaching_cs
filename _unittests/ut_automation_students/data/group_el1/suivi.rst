@@ -24,26 +24,24 @@ programme
             for k in tw[i]:
                 if k in cat[j]:
                     sc[j] = sc.get(j,0) + 1
-    
+
 * bla 3
 
 rapport
 +++++++
 
 * bla 1
-  
+
 extrait
 +++++++
 
 ::
 
     paragraphe 1
-    
-    paragraphe 2
 
+    paragraphe 2
 
 next
 ++++
 
 * module tweepy
-

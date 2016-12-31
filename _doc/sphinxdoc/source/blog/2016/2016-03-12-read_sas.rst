@@ -1,13 +1,11 @@
 
-
 .. blogpost::
     :title: pandas et SAS
     :keywords: pandas, SAS
     :date: 2016-03-12
     :categories: pandas
-    
+
     La fonction `read_sas <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_sas.html>`_
     est apparue dans le module `pandas <http://pandas.pydata.org/pandas-docs/stable/>`_ version 0.17,
     améliorée dans la version 0.18 :
     `pd.read_sas() changes <http://pandas-docs.github.io/pandas-docs-travis/whatsnew.html#pd-read-sas-changes>`_.
-    

@@ -11,9 +11,8 @@ sur des actions, futures... Voici quelques types de stratégies :
 - Trend Following
 - Pair-trading
 
-
-La première étapes pour les sujets financiers est la récupération des données. 
-Il existe de nombreux sites. Pour les besoins de ce projet, 
+La première étapes pour les sujets financiers est la récupération des données.
+Il existe de nombreux sites. Pour les besoins de ce projet,
 les deux sources suivantes suffiront :
 
 - `Yahoo Finance <https://fr.finance.yahoo.com/>`_
@@ -25,7 +24,7 @@ est possible de récupérer facilement de nombreuses séries financières, des s
 comme le PIB des pays.
 
 Le module `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
-permet de récupérer facilement des données depuis 
+permet de récupérer facilement des données depuis
 `Yahoo Finance <https://fr.finance.yahoo.com/>`_::
 
     from pyensae import StockPrices
@@ -35,7 +34,7 @@ permet de récupérer facilement des données depuis
 Pour ces deux sites, les données récupérées sont *daily* et pas *intraday*.
 Les algorithmes fonctionnent tous à peu près de la même manière : chaque soir,
 l'algorithme donne les décisions à prendre le lendemain.
-Les stratégies dépendent de paramètres qu'on optimise en utilisant des données passées, 
+Les stratégies dépendent de paramètres qu'on optimise en utilisant des données passées,
 2004-2010 par example. On teste ensuite la stratégie sur la période suivante 2010-2014.
 Il faut toujours faire attention à utiliser les données jusqu'à la date *t* pour
 prédire les actions pour la date *t+1*.
@@ -62,7 +61,7 @@ Le `trend following <http://en.wikipedia.org/wiki/Trend_following>`_ est un algo
 qui fonctionne bien sur les `futures <http://fr.wikipedia.org/wiki/Contrat_%C3%A0_terme>`_.
 Il existe de nombreuses variantes. En voici une :
 
-    On compare la moyenne mobile à 10 jours avec la moyenne mobile à 100 jours. 
+    On compare la moyenne mobile à 10 jours avec la moyenne mobile à 100 jours.
     Deux cas sont à considérer :
 
         - si la moyenne à court terme est plus élevée que la moyenne à long terme, nous sommes sur une tendance haussière :math:`\rightarrow` on achète
@@ -76,22 +75,22 @@ Vous trouverez plus à cette page :
 Optimisation de portefeuille
 ----------------------------
 
-Optimiser un portefeuille d'action consiste à construire une moyenne pondéré d'action 
-qui soit optimise le rendement à risque bornée soit minimise le risque à 
-rendement borné également. La page 
+Optimiser un portefeuille d'action consiste à construire une moyenne pondéré d'action
+qui soit optimise le rendement à risque bornée soit minimise le risque à
+rendement borné également. La page
 :ref:`finance_strategie_automatique`
 (`ancienne version pdf <http://www.xavierdupre.fr/enseignement/projet_data/Gestion%20de%20Portefeuille.pdf>`_)
-explique 
-cela de façon sommaire. Le premier à avoir formalisé ce domaine est 
-`Harry Markowitz <http://en.wikipedia.org/wiki/Harry_Markowitz>`_ 
-(voir également `ici <http://fr.wikipedia.org/wiki/Th%C3%A9orie_moderne_du_portefeuille>`_). 
-L'optimisation est `quadratique <http://fr.wikipedia.org/wiki/Optimisation_quadratique>`_ ;  
-lorsque le portefeuille est constitué de deux ou trois actions, il se résout en utilisant 
-la méthode des multiplicateurs de Lagrange. Lorsqu'il inclut plus d'actions, 
-il faut utiliser d'autres méthodes d'optimisation telles que 
-le `Lagrangien augmenté <http://en.wikipedia.org/wiki/Augmented_Lagrangian_method>`_. 
-L'objectif est ici de choisir une façon de construire un portefeuille, 
-de l'optimiser sur la période d'apprentissage et de la tester sur la période de test. 
+explique
+cela de façon sommaire. Le premier à avoir formalisé ce domaine est
+`Harry Markowitz <http://en.wikipedia.org/wiki/Harry_Markowitz>`_
+(voir également `ici <http://fr.wikipedia.org/wiki/Th%C3%A9orie_moderne_du_portefeuille>`_).
+L'optimisation est `quadratique <http://fr.wikipedia.org/wiki/Optimisation_quadratique>`_ ;
+lorsque le portefeuille est constitué de deux ou trois actions, il se résout en utilisant
+la méthode des multiplicateurs de Lagrange. Lorsqu'il inclut plus d'actions,
+il faut utiliser d'autres méthodes d'optimisation telles que
+le `Lagrangien augmenté <http://en.wikipedia.org/wiki/Augmented_Lagrangian_method>`_.
+L'objectif est ici de choisir une façon de construire un portefeuille,
+de l'optimiser sur la période d'apprentissage et de la tester sur la période de test.
 Il est fortement recommandé de relire le TD qui concerne l'optimisation sous contraine.
 Quelques liens :
 
@@ -103,8 +102,8 @@ Quelques liens :
 Pair trading
 ------------
 
-Le `pair trading <http://en.wikipedia.org/wiki/Pairs_trade>`_ n'est pas vraiment une 
-stratégie. La différence vient ici du fait qu'on considère une paire d'action 
+Le `pair trading <http://en.wikipedia.org/wiki/Pairs_trade>`_ n'est pas vraiment une
+stratégie. La différence vient ici du fait qu'on considère une paire d'action
 comme produit financier plutôt qu'une action seule.
 Le trader achète un action pendant qu'il vend l'autre.
 
@@ -113,7 +112,7 @@ Le trader achète un action pendant qu'il vend l'autre.
 Machine learning et trading
 ---------------------------
 
-Ce projet demande un peu de travail. La première étape consiste à choisir des actions puis à déterminer manuellement ou à l'aide d'une règle 
+Ce projet demande un peu de travail. La première étape consiste à choisir des actions puis à déterminer manuellement ou à l'aide d'une règle
 les dates à laquelle il aurait fallu acheter ou vendre cette action pour obtenir un bon rendement. Lors de cett étape,
 on utilise le futur de l'action pour déterminer l'action idéale. On appelle cette série :math:`Y_t`.
 Ensuite, on constitue une base de features :math:`(X_t)` : à chaque temps :math:`t`, on construit
@@ -122,17 +121,13 @@ une autre action, le `RSI <http://fr.wikipedia.org/wiki/Relative_strength_index>
 L'objectif est de construire une fonction qui prédit la bonne décision :math:`Y_t = f(X_t) + \epsilon_t`. On utilise
 des techniques issues du machine learning et des modules tels que `scikit-learn <http://scikit-learn.org/stable/>`_.
 
-
-
 Travail attendu
 ---------------
 
-Le rapport doit résumer ce que votre projet vous a appris, vous devez désigner 
+Le rapport doit résumer ce que votre projet vous a appris, vous devez désigner
 une meilleure stratégie avec les meilleurs paramètres et la façon de les obtenir.
 Et comme c'est un projet de finance, on s'attend sans doute à ce que vous pariez
 sur votre propre stratégie à moins que...
-
-
 
 Erreurs à éviter
 ----------------
@@ -143,13 +138,12 @@ Aucun résultats d'optimisation
 L'optimisation d'un portefeuille mène parfois à un protefeuille où tous les coefficients
 sont nuls sauf un. Il important certains résultats d'optimisation soient insérés dans le rapport.
 
-
 Nombre de paramètres et nombre de contraintes
 +++++++++++++++++++++++++++++++++++++++++++++
 
 Lorsqu'on optimise un portefeuille, le problème qu'on résoud est un problème
 d'optimisation sous contraintes. Chaque contrainte d'égalité enlève un degré de liberté au problème.
-Chaque contrainte d'inégalité également si celle-ci est saturée. 
+Chaque contrainte d'inégalité également si celle-ci est saturée.
 Le nombre d'actions dans le portefeuille doit donc être plus grand que le nombre de contraintes
 afin que cela reste un problème d'optimisation.
 
@@ -159,4 +153,3 @@ Conclusions hâtives
 Une stratégie doit être validée sur plusieurs actions ou produits, plusieurs périodes différentes.
 On ne peut pas conclure parce qu'on a obtenu un résultat positif
 pour une action et une période précises.
-

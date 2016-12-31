@@ -1,5 +1,4 @@
 
-
 Python et autres langages
 =========================
 
@@ -10,4 +9,3 @@ Python et autres langages
     td2a_correction_session_2B
     python_r
     python_csharp
-    

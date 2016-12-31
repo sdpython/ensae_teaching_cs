@@ -1,14 +1,11 @@
 
-
 .. _l-td3a:
-
 
 ==========================================================
 Eléments logiciels pour le traitement des données massives
 ==========================================================
 
 .. index:: 3A
-
 
 `ENSAE - OMI309 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/3me-anne-voies-de-spcialisation-formationsdiplome-96/data-science-cours-3a.html?id=100729>`_
 
@@ -19,14 +16,11 @@ Antoine Ly [#f3write1]_
 
 Le cours est évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 
-
 .. contents::
     :local:
 
-
 Eléments techniques
 ===================
-
 
 Anatomie et histoire d'un ordinateur
 ++++++++++++++++++++++++++++++++++++
@@ -46,7 +40,6 @@ Anatomie et histoire d'un ordinateur
 * `Teaching a machine how to play Mario <http://www.cs.cmu.edu/~tom7/mario/mario.pdf>`_
 * `Introduction au système de recommandation par facteurs latents <https://datajobs.com/data-science-repo/Recommender-Systems-%5bNetflix%5d.pdf>`_
 * `The Unreasonable Effectiveness of Data <http://static.googleusercontent.com/media/research.google.com/fr//pubs/archive/35179.pdf>`_
-
 
 GPU
 +++
@@ -86,7 +79,6 @@ GPU
 Eléments théoriques
 ===================
 
-
 Crypographie, block chain
 +++++++++++++++++++++++++
 
@@ -107,9 +99,6 @@ Crypographie, block chain
 * `Introduction to Smart Contracts <http://solidity.readthedocs.io/en/develop/introduction-to-smart-contracts.html>`_
 * `Monnaie, finance et économie réelle <http://www.editionsladecouverte.fr/catalogue/index-Monnaie__finance_et___conomie_r__elle-9782707185822.html>`_
 
-
-
-
 Eléments logiciels
 ==================
 
@@ -120,21 +109,20 @@ Structures de données
 
     :ref:`Séance 1 :  <td3acenoncesession1rst>`  (:ref:`correction <td3acorrectionsession1rst>`)
 
-* `liste chaînées <http://fr.wikipedia.org/wiki/Liste_cha%C3%AEn%C3%A9e>`_, 
-  `stack <http://fr.wikipedia.org/wiki/Pile_(informatique)>`_, 
-  `queue <http://en.wikipedia.org/wiki/Queue_(abstract_data_type)>`_, 
+* `liste chaînées <http://fr.wikipedia.org/wiki/Liste_cha%C3%AEn%C3%A9e>`_,
+  `stack <http://fr.wikipedia.org/wiki/Pile_(informatique)>`_,
+  `queue <http://en.wikipedia.org/wiki/Queue_(abstract_data_type)>`_,
   `dictionnaire <http://en.wikipedia.org/wiki/Associative_array>`_,
   `hashtable <https://fr.wikipedia.org/wiki/Table_de_hachage>`_
-* graphe `BFS <http://en.wikipedia.org/wiki/Breadth-first_search>`_, 
+* graphe `BFS <http://en.wikipedia.org/wiki/Breadth-first_search>`_,
   `DFS <http://en.wikipedia.org/wiki/Depth-first_search>`_,
   `Red Black Tree <https://fr.wikipedia.org/wiki/Arbre_bicolore>`_
-* `merge sort <http://en.wikipedia.org/wiki/Merge_sort>`_, 
-  `quicksort <http://en.wikipedia.org/wiki/Quicksort>`_, 
-  `heapsort <http://en.wikipedia.org/wiki/Heapsort>`_, 
+* `merge sort <http://en.wikipedia.org/wiki/Merge_sort>`_,
+  `quicksort <http://en.wikipedia.org/wiki/Quicksort>`_,
+  `heapsort <http://en.wikipedia.org/wiki/Heapsort>`_,
   `max heap <http://en.wikipedia.org/wiki/Min-max_heap>`_
 * String matching, Rabin-Karp, automates finis
 * Notions de coût algorithme, `NP Complet <https://fr.wikipedia.org/wiki/Probl%C3%A8me_NP-complet>`_
-
 
 *Lectures*
 
@@ -151,7 +139,6 @@ Threads et synchronisation
 
 * `TIL: clock skew exists (distributed system) <http://jvns.ca/blog/2016/02/10/til-clock-skew-exists/>`_ *(2016/06)*
 
-
 Distribution des calculs, stratégies de stockage, SQL NoSQL
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -161,11 +148,10 @@ Distribution des calculs, stratégies de stockage, SQL NoSQL
     td_3a_s5_synthese
     notebooks/hash_distribution
     notebooks/map_reduce_timeseries
-    
+
 *Lectures*
 
 * `What Every Data Scientist Needs to Know about SQL <http://joshualande.com/data-science-sql>`_
-
 
 Compression des données
 +++++++++++++++++++++++
@@ -185,7 +171,6 @@ Lorsque les données sont volumineuses. Une solution consiste à les compresser.
 * `h5py <http://www.h5py.org/>`_
 * `Zarr <https://github.com/alimanfoo/zarr>`_
 
-
 Map Reduce en pratique
 ++++++++++++++++++++++
 
@@ -196,7 +181,7 @@ Map Reduce en pratique
 * Exemple : moyennes par groupes
 * Pas d'ordre des observations, tri sur l'ensemble des données à éviter
 * Produit matriciel, représentation d'une matrice en trois colonnes, matrice sparse
-* Graphe : pas facile en map/reduce, exemple avec l'algorithme des 
+* Graphe : pas facile en map/reduce, exemple avec l'algorithme des
   :ref:`random walk with restarts <exposerwrrecommandationrst>`
 * Problème des skewed datasets --> clés très mal distribués (voir :ref:`hashdistributionrst`)
 * Descente du gradient : itératif
@@ -204,10 +189,8 @@ Map Reduce en pratique
   optimisation d'une fonction convexe
 * Exemple de :ref:`k-means distribué <2015kmeansrst>`
 * Le hasard en distribué, :ref:`Réservoir sampling <td3aenoncereservoirsamplingrst>` (:ref:`correction <td3acorrectionreservoirsamplingrst>`)
-* Schéma des langages de map/reduce : 
+* Schéma des langages de map/reduce :
   `lazy evaluation <https://en.wikipedia.org/wiki/Lazy_evaluation>`_ (évalusation presseuse, dask, Spark, PIG)
-
-
 
 Map Reduce
 ==========
@@ -215,11 +198,10 @@ Map Reduce
 avec PIG sur Azure et Cloudera
 ++++++++++++++++++++++++++++++
 
-
 Les trois séances suivantes sont plus appliquées et dédiées à la découverte
 de `Hadoop <http://fr.wikipedia.org/wiki/Hadoop>`_, un environnement
-qui permet d'exécuter des tâches 
-`Map/Reduce <http://fr.wikipedia.org/wiki/MapReduce>`_. 
+qui permet d'exécuter des tâches
+`Map/Reduce <http://fr.wikipedia.org/wiki/MapReduce>`_.
 Plusieurs angles d'approche sont possibles. Celle retenue est l'utilisation
 du langage `PIG-latin <http://en.wikipedia.org/wiki/Pig_Latin>`_ dont la logique
 ressemble beaucoup à celle du `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_.
@@ -227,14 +209,14 @@ Les outils Python [#fp1]_ simplifient la communication avec le cluster.
 
 .. toctree::
     :maxdepth: 2
-    
+
     specials/azure
     td_3a_A
     td_3a_B
     td_3a_C
-    
+
 .. index:: PageRank, k-means, factorisation de matrice
-    
+
 Trois projets réalisés par les élèves lors de l'année 2014-2015 :
 
 .. toctree::
@@ -242,7 +224,7 @@ Trois projets réalisés par les élèves lors de l'année 2014-2015 :
 
     notebooks/2015_page_rank
     notebooks/2015_kmeans
-    notebooks/2015_factorisation_matrice    
+    notebooks/2015_factorisation_matrice
 
 *Lectures*
 
@@ -264,25 +246,19 @@ Trois projets réalisés par les élèves lors de l'année 2014-2015 :
 * `Introducing Microsoft Azure HDInsight <http://blogs.msdn.com/b/microsoft_press/archive/2014/05/27/free-ebook-introducing-microsoft-azure-hdinsight.aspx>`_, Avkash Chauhan, Valentine Fontama, Michele Hart, Wee Hyong Tok, Buck Woody
 * `Introduction to Apache Pig <http://www.cloudera.com/content/cloudera/en/resources/library/training/introduction-to-apache-pig.html>`_ (MOOC)
 
-
-    
 avec Spark et Spark SQL
 +++++++++++++++++++++++
 
 .. toctree::
     :maxdepth: 2
-    
-    notebooks/_gs3a_spark
 
+    notebooks/_gs3a_spark
 
 *Lectures*
 
 * `Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing <http://www.cs.berkeley.edu/~matei/papers/2012/nsdi_spark.pdf>`_,
   Matei Zaharia, Mosharaf Chowdhury, Tathagata Das, Ankur Dave, Justin Ma, Murphy McCauley, Michael J. Franklin, Scott Shenker, Ion Stoica
 * `From scikit-learn to Spark ML <http://blog.xebia.fr/2015/10/08/from-scikit-learn-to-spark-ml/>`_ *(2016/06)*
-
-
-
 
 .. _l-td3a-start:
 
@@ -292,16 +268,16 @@ Getting started, installation, setup
 PIG
 +++
 
-Ces enseignements vous sont proposés via des notebooks. 
-Ils requièrent une surcouche apporté par le module 
+Ces enseignements vous sont proposés via des notebooks.
+Ils requièrent une surcouche apporté par le module
 `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_.
 Le python n'est pas l'objet de ce cours, les notebooks sont utilisés
-pour pouvoir regrouper dans un même document toutes les opérations 
+pour pouvoir regrouper dans un même document toutes les opérations
 effectuées dans un langage Map/Reduce.
-La page :ref:`l-installation-courte` décrit comment installer 
-ces outils sur les trois OS principaux 
-`Windows <http://www.microsoft.com/fr-fr/windows>`_, 
-`OS X <http://www.apple.com/osx/>`_, 
+La page :ref:`l-installation-courte` décrit comment installer
+ces outils sur les trois OS principaux
+`Windows <http://www.microsoft.com/fr-fr/windows>`_,
+`OS X <http://www.apple.com/osx/>`_,
 `Linux <https://en.wikipedia.org/wiki/Linux>`_.
 
 SPARK
@@ -309,18 +285,13 @@ SPARK
 
 .. toctree::
     :maxdepth: 2
-    
+
     td_3a_spark
-
-
-
 
 .. _l-td3a-biblio:
 
-
 Bibliographie
 =============
-
 
 **Articles**
 
@@ -331,7 +302,7 @@ Bibliographie
 * `Topic Similarity Networks: Visual Analytics for Large Document Sets <http://arxiv.org/pdf/1409.7591v1.pdf>`_, Arun S. Maiya, Robert M. Rolfe
 * `Low-dimensional Embeddings for Interpretable Anchor-based Topic Inference <http://mimno.infosci.cornell.edu/papers/EMNLP2014138.pdf>`_, Moontae Lee, David Mimno
 * `K-means on Azure <http://apiacoa.org/publications/2010/durutrossi2010k-means-on.pdf>`_, Matthieu Durut, Fabrice Rossi
-* `Confidence intervals for AB-test <http://arxiv.org/abs/1501.07768>`_, Cyrille Dubarry  
+* `Confidence intervals for AB-test <http://arxiv.org/abs/1501.07768>`_, Cyrille Dubarry
 
 **Liens**
 
@@ -350,7 +321,7 @@ Bibliographie
 
 * `amazon-dsstne <https://github.com/amznlabs/amazon-dsstne>`_ : moteur de recommandation d'Amazon
 * `Elastic Search <https://github.com/elastic/elasticsearch>`_ : moteur de recherche
-* `Giraph <http://giraph.apache.org/>`_ : Large-scale graph processing on Hadoop 
+* `Giraph <http://giraph.apache.org/>`_ : Large-scale graph processing on Hadoop
 * `Hadoop <http://hadoop.apache.org/>`_ : système de fichier distribué + Map Reduce simple
 * `Kafka <http://kafka.apache.org/>`_ : distributed streaming platform, conçu pour stocker et récupérer en temps réel des événements de sites web
 * `Mesos <http://mesos.apache.org/>`_ : Apache Mesos abstracts CPU, memory, storage, and other compute resources away from machines (physical or virtual), `Elixi <https://github.com/ceteri/exelixi/wiki>`_
@@ -368,14 +339,13 @@ Bibliographie
 * `multiverso <https://github.com/microsoft/multiverso>`_ : framework de parallélisation
 * `CNTK <https://github.com/Microsoft/CNTK/wiki>`_ : librairie de deep learning chez Microsoft
 * `lightLDA <https://github.com/Microsoft/lightlda>`_ : Latent Dirichlet Application parallélisée
-* `lightGBM <https://github.com/Microsoft/lightGBM>`_ : 
+* `lightGBM <https://github.com/Microsoft/lightGBM>`_ :
   A fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART) framework based on decision tree algorithms.
-    
+
 .. rubric:: Footnotes
 
 .. [#fp1] C'est l'objet du paragraphe :ref:`l-td3a-start`.
-        
+
 .. [#f3write1] Contributeur et coordinateur du cours.
 
 .. [#f3write2] Contributeur, encadrant.
-          

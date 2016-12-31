@@ -1,14 +1,13 @@
 
-
 .. blogpost::
     :title: Données sur la musique
     :keywords: musique
     :date: 2016-01-04
     :categories: datasets
-    
+
     De nouvelles sources de données ont été ajoutés à la page
     :ref:`l-datasources` reproduites ci-dessous :
-    
+
     * projets, librairies Python, données sur la musique `LabROSA (Columbia) <http://labrosa.ee.columbia.edu/projects/>`_,
       `librosa <https://github.com/bmcfee/librosa>`_, `Music Similarity <http://labrosa.ee.columbia.edu/projects/>`_,
       `Million Song Dataset <https://aws.amazon.com/fr/datasets/million-song-dataset/>`_
@@ -25,6 +24,6 @@
 
     * `quandl <http://www.quandl.com/>`_ (et son module python `quandl <https://pypi.python.org/pypi/Quandl/>`_, `quandl/API <http://pythonhosted.org//Quandl/>`_,)
     * `Datahub <https://datahub.io/dataset>`_
-    * `AWS Public Data Sets <https://aws.amazon.com/datasets/>`_ (Amazon) 
+    * `AWS Public Data Sets <https://aws.amazon.com/datasets/>`_ (Amazon)
       (voir `Using Public Data Sets <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-public-data-sets.html>`_ et
-      `boto <https://github.com/boto/boto>`_)    
+      `boto <https://github.com/boto/boto>`_)

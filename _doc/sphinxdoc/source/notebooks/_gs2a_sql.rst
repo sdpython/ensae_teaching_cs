@@ -1,5 +1,4 @@
 
-
 .. _l-donnees-struct-sql-2a:
 
 SQL et Données structurées

@@ -1,5 +1,4 @@
 
-
 Données dégénérées (skewed) et algorithmes Map/Reduce
 =====================================================
 

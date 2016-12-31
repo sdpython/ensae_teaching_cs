@@ -3,8 +3,6 @@
 
 .. _l-ressources:
 
-
-
 Ressources, Evénements, Source de données
 =========================================
 
@@ -13,10 +11,8 @@ Ressources, Evénements, Source de données
 .. contents::
     :local:
 
-
-
 .. _l-datasources:
-    
+
 Source de données
 +++++++++++++++++
 
@@ -25,7 +21,6 @@ Source de données
 * `Data Sources on the Web (MRAN) <https://mran.microsoft.com/documents/data/>`_
 * `Awesome Public Datasets <https://github.com/caesar0301/awesome-public-datasets>`_
 * `Wikidata <https://www.wikidata.org/wiki/Wikidata:Main_Page>`_
-
 
 **API**
 
@@ -47,17 +42,17 @@ Source de données
 * *finance* `Daily News for Stock Market Prediction <https://www.kaggle.com/aaron7sun/stocknews>`_
 * *images* `ImageNet <http://image-net.org/>`_, base de données d'images avec leur contenu
 * *ML* `Kaggle Datasets <https://www.kaggle.com/datasets>`_
-* *ML* `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_ 
-  (collection de jeux de données classés par type de problème - régression, classification, ...) 
+* *ML* `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_
+  (collection de jeux de données classés par type de problème - régression, classification, ...)
   Les jeux **UCI** apparaissent dans de nombreux scientifiques.
 * *ML* `Data Science at Microsoft Research <http://research.microsoft.com/en-us/projects/data-science-initiative/default.aspx#datasets>`_
 * *ML* `Ensembles de données publics AWS (Amazon) <https://aws.amazon.com/public-data-sets/>`_, `AWS Public Data Sets <https://aws.amazon.com/datasets/>`_
 * *ML* `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_
 * *ML* `Data Analysis, Modeling and Machine Learning Group <http://ama.liglab.fr/resourcestools/datasets/>`_
 * *ML* `Microsoft Research Letor <http://research.microsoft.com/en-us/um/beijing/projects/letor/letor4dataset.aspx>`_
-* *ML* `170 millions courses de taxi à New-York <http://chriswhong.com/open-data/foil_nyc_taxi/>`_ 
+* *ML* `170 millions courses de taxi à New-York <http://chriswhong.com/open-data/foil_nyc_taxi/>`_
   (via l'article `Building Azure ML Models on the NYC Taxi Dataset <http://blogs.technet.com/b/machinelearning/archive/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset.aspx>`_)
-* *ML* `urls, spam, ... <http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html>`_, jeux de données utilisés 
+* *ML* `urls, spam, ... <http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html>`_, jeux de données utilisés
   comme benchmark pour la libraire `libsvm <http://www.csie.ntu.edu.tw/~cjlin/libsvm/>`_
 * *ML* `Pascal Large Scale Learning Challenge <http://largescale.ml.tu-berlin.de/instructions/>`_
 * *ML* `Labeled Faces in the Wild <http://vis-www.cs.umass.edu/lfw/>`_ : 1323 images, 5749 personnes, 1680 personnes avec 2 ou plus d'images,
@@ -89,7 +84,6 @@ Source de données
 
 * `Geonames <http://download.geonames.org/export/dump/>`_
 
-
 **moteurs de recherches sur les données**
 
 * `data.gouv.fr <http://www.data.gouv.fr/>`_, `INSEE <http://www.insee.fr/fr/bases-de-donnees/>`_
@@ -98,7 +92,7 @@ Source de données
 * `data.epidemium <http://data.epidemium.cc/fr#>`_
 * `Quandl <http://www.quandl.com/>`_ (et son module python `quandl <https://pypi.python.org/pypi/Quandl/>`_, `quandl/API <http://pythonhosted.org//Quandl/>`_,)
 * `Datahub <https://datahub.io/dataset>`_
-* `AWS Public Data Sets <https://aws.amazon.com/datasets/>`_ (Amazon) 
+* `AWS Public Data Sets <https://aws.amazon.com/datasets/>`_ (Amazon)
   (voir `Using Public Data Sets <http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-public-data-sets.html>`_ et
   `boto <https://github.com/boto/boto>`_)
 * `UN ComTrade <http://comtrade.un.org/db/>`_ : United Nations Commodity Trade Statistics Database
@@ -151,7 +145,6 @@ Compétitions Machine Learning
 * `kaggle <https://www.kaggle.com/>`_
 * `Data Challenges Paris <http://opendata.paris.fr/page/datachallenges/>`_
 
-
 .. index:: meetup, Data Tuesday, Data For Good
 
 Evénements, Médias
@@ -173,7 +166,6 @@ Conférences, Communautés
 
 * `PyCon <http://www.pycon.org/>`_
 * `PyData <http://pydata.org/>`_
-
 
 .. index:: Agoranov, Microsoft, TekTos, numa
 

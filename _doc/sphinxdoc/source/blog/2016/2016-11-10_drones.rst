@@ -1,5 +1,4 @@
 
-
 .. blogpost::
     :title: Piloter un drone depuis un notebook
     :keywords: drone, notebook
@@ -8,6 +7,6 @@
 
     Vidéo :
     `Building a (semi) Autonomous Drone with Python <https://www.youtube.com/watch?v=0YowSSTi92I>`_.
-    
+
     Une autre vidéo à propos du futur des notebooks :
     `JupyterLab: Building Blocks for Interactive Computing <https://www.youtube.com/watch?v=CoGCuliGNos>`_.

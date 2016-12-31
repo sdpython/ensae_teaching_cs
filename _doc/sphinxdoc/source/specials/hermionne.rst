@@ -1,9 +1,5 @@
 
-
-
-
 .. _l-hermionne:
-
 
 L'énigme d'Hermionne, Harry Potter tome 1
 =========================================
@@ -11,35 +7,32 @@ L'énigme d'Hermionne, Harry Potter tome 1
 .. contents::
     :local:
 
-
 L'énigme
 ++++++++
 
 Lors du premier tome de `Harry Potter <https://fr.wikipedia.org/wiki/Harry_Potter>`_
-les trois héros doivent résoudre une énigme 
-- qui ne nécessite aucune magie - 
-afin d'accéder à la salle où est cachée la pierre philosophale. 
-Ce problème, dont l'auteur serait le professeur 
+les trois héros doivent résoudre une énigme
+- qui ne nécessite aucune magie -
+afin d'accéder à la salle où est cachée la pierre philosophale.
+Ce problème, dont l'auteur serait le professeur
 `Rogue <https://fr.wikipedia.org/wiki/Severus_Rogue>`_
-(Professor `Snape <https://en.wikipedia.org/wiki/Severus_Snape>`_ pour les anglophones), 
-consiste à trouver deux potions parmi les sept qui se trouvent devant 
-eux : celles permettent d'avancer et de reculer. 
+(Professor `Snape <https://en.wikipedia.org/wiki/Severus_Snape>`_ pour les anglophones),
+consiste à trouver deux potions parmi les sept qui se trouvent devant
+eux : celles permettent d'avancer et de reculer.
 Ils sont aidés de quelques indices :
 
-
-#. Il y a trois fioles de poison, deux fioles de vin d'ortie, 
+#. Il y a trois fioles de poison, deux fioles de vin d'ortie,
    une fiole permettant d'avancer et une fiole permettant de reculer.
-#. Immédiatement à gauche de chacune des deux fioles de vin se trouve 
+#. Immédiatement à gauche de chacune des deux fioles de vin se trouve
    une fiole de poison.
-#. Les fioles 1 et 7 ont des contenus différents~; 
+#. Les fioles 1 et 7 ont des contenus différents~;
    ni l'une ni l'autre n'est la fiole qui permet d'avancer.
-#. Ni la fiole la plus grande (fiole 6) ni la plus petite (fiole 3) 
+#. Ni la fiole la plus grande (fiole 6) ni la plus petite (fiole 3)
    ne contient du poison.
 #. Les contenus des fioles 2 et 6 sont identiques.
 
 Les solutions
 +++++++++++++
-
 
 Les deux solutions proposées sont équivalentes, elles consistent à parcourir toutes les
 solutions et à accepter la première qui valide toutes les règles.
@@ -56,12 +49,11 @@ Et la solution est :
 
     from ensae_teaching_cs.special.hermionne_classes import solution
     print(solution())
-    
 
 Le parcours des solutions de la fonction :func:`solution <ensae_teaching_cs.special.hermionne.solution>`
 fait intervenir deux boucles qui implémentent un compteur. Chacune des 7 cases
-peut contenir 4 potions différenes (poison, vin, avancer, reculer) codé 0, 1, 2, 3. 
-Il y a :math:`4^7` solutions. Pourquoi ne pas les parcourir de 1 à :math:`4^7` ? 
+peut contenir 4 potions différenes (poison, vin, avancer, reculer) codé 0, 1, 2, 3.
+Il y a :math:`4^7` solutions. Pourquoi ne pas les parcourir de 1 à :math:`4^7` ?
 La *n* ième solution correspond à :
 
 * case 1 : :math:`n \mod 4`
@@ -96,7 +88,7 @@ qui est l'opérateur ``ET``.
 
     for i in range(4**7):
         l = [(i >> (2*k) & 4 for k in range(0,7)]
-        
+
 Pour chaque des solutions, utilise une fonction qui vérifie les cinq règles du programme :
 
 ::
@@ -118,7 +110,7 @@ Pour chaque des solutions, utilise une fonction qui vérifie les cinq règles du
             if case[k] == 1 and case[k-1] != 0:
                 return False
         return True
-        
+
 La boucle qui parcourt les solutions est modifiée ::
 
     solutions = []
@@ -127,12 +119,11 @@ La boucle qui parcourt les solutions est modifiée ::
         if solution_correcte(l):
             solutions.append(l)
     print(solutions)
-    
-Le programme perd beaucoup de temps à parcourir toutes les solutions.
-Une idée simple pour aller plus vite est de réduire l'ensemble des solutions à 
-parcourir en s'appuyant sur une règle. Par exemple celle qui affirme 
-que les potions cases 2 et 6 sont identiques. ::
 
+Le programme perd beaucoup de temps à parcourir toutes les solutions.
+Une idée simple pour aller plus vite est de réduire l'ensemble des solutions à
+parcourir en s'appuyant sur une règle. Par exemple celle qui affirme
+que les potions cases 2 et 6 sont identiques. ::
 
     solutions = []
     for i in range(4**6):
@@ -141,5 +132,5 @@ que les potions cases 2 et 6 sont identiques. ::
         if solution_correcte(l):
             solutions.append(l)
     print(solutions)
-    
+
 On parcourt 4 fois moins de solutions.

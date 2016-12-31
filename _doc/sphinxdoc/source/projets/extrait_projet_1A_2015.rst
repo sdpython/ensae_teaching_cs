@@ -9,14 +9,12 @@ Extraits des projets informatiques de première année à l'ENSAE en 2015
 Les élèves ont exprimé de belle façon ce que les projets informatiques leur ont apporté.
 Je reprends ici avec leur accord quelques passages.
 
-
 **tâtonner**
 
 *L'une des choses essentielles que nous avons apprises de ce projet est qu'il n'existe pas de
 solution ou de justification théorique à tous les problèmes. En effet, dans de nombreux
 cas, les seuls recours possibles sont notre propre imagination et les tests empiriques sur
 des données réelles.*
-
 
 **nom des variables**
 
@@ -51,7 +49,6 @@ l'assignement par valeur et par référence entre autre dans la partie de progra
       j=maxp(self.début[len(self.début)-1])
       matrice[j]=1
       self.début.append(matrice)
-
 
 **choix**
 
@@ -100,7 +97,6 @@ Conseils de deux novices :
 *Etant donné mon projet et son caractère quelque peu expérimental,
 ce que j'ai le plus appris de mes erreurs est l'importance d'écrire du code
 modulaire et sans duplication.*
-
 
 **variables globales**
 

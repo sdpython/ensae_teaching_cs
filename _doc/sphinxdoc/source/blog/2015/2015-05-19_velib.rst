@@ -1,12 +1,11 @@
 
-
 .. blogpost::
     :title: Prédire l'occupation des vélib
     :keywords: velib, prédiction, article
     :date: 2015-05-19
     :categories: article, velib, machine learning
     :lid: l-blog-velib
-    
+
     C'est un article sur une façon d'exploiter les données d'un service de vélos dans une grande ville :
     `Predicting Occupancy Trends in Barcelona's Bicycle Service Stations Using Open Data <http://arxiv.org/abs/1505.03662>`_.
     Modèle ARIMA et Random Forest.

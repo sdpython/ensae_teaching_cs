@@ -4,7 +4,7 @@
 Technique, Domotique
 ====================
 
-Pas tout-à-fait prêt pour cette année. 
+Pas tout-à-fait prêt pour cette année.
 Ce sujet serait pour quelques aventureux.
 
 .. _l-tech-smart:
@@ -14,7 +14,7 @@ Application smartphone
 
 .. index:: kivy, smartphone
 
-Le module `kivy <http://kivy.org/#home>`_ permet d'implémenter des 
+Le module `kivy <http://kivy.org/#home>`_ permet d'implémenter des
 applications pour smartphone ou tablette en python.
 
 .. _l-tech-domo:

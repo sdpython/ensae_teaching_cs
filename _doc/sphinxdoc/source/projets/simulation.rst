@@ -14,7 +14,7 @@ des résultats sur l'ensemble d'une population. Le projet doit comporter les él
 * Réalisation de simulations plus poussées
 * Analyse des résultats obtenus avec le programme, comparaison avec la réalité
 
-Et encore : 
+Et encore :
 
 * `Pourrait-on programmer une fourmilière ? <http://rue89.nouvelobs.com/2014/12/31/pourrait-programmer-fourmiliere-256679>`_
 * `Economics Simulation <http://nbviewer.jupyter.org/url/norvig.com/ipython/Economics.ipynb>`_ *(2016/08)*
@@ -24,8 +24,8 @@ Et encore :
 Simuler la ségégation sociale
 -----------------------------
 
-L'article suivant `La ségrégation, comment ça marche ? <http://www.letemps.ch/interactive/2014/polygones/>`_ 
-(version originale `Parable of the polygons <http://ncase.me/polygons/>`_) montrer comment 
+L'article suivant `La ségrégation, comment ça marche ? <http://www.letemps.ch/interactive/2014/polygones/>`_
+(version originale `Parable of the polygons <http://ncase.me/polygons/>`_) montrer comment
 une forme de ségrégation spatiale s'installe dans une ville à partir d'une règle assez simple : on préfère
 avoir des voisins qui nous ressemblent.
 
@@ -35,7 +35,7 @@ Simulation d'une foule en panique
 ---------------------------------
 
 Les trois articles abordent le comportement d'une foule pour appréhender son mouvement en
-cas de panique par exemple. 
+cas de panique par exemple.
 
 * `Self-Organized Pedestrian Crowd Dynamics <http://itp.uni-frankfurt.de/~gros/JavaApplets/PedestrianCrowdDynamics/PedestrianApplet.html>`_
 * `Simulation of Pedestrian Crowds in Normal and Evacuation Situations <http://www.pmcorp.com/Portals/5/_Downloads/Simulation%20of%20Pedestrian%20Crowds%20in%20normal%20and%20evacuation.pdf>`_, Dirk Helbing, Anders Johansson
@@ -46,7 +46,6 @@ cas de panique par exemple.
 
 On pourra commencer par simuler une foule au repos dans une salle carrée avec une seule issue
 puis à créer un mouvement panique (un incendie par exemple).
-
 
 .. _l-sim-social:
 
@@ -64,24 +63,23 @@ le nombre de personnes atteinte, de se poser des questions comme :
 * Est-ce que cela dépend du point de départ ?
 * Est-ce que cela dépend tu taux de connexion ?
 
-On pourra mélanger différents types de profils tels que les "retweeter", 
+On pourra mélanger différents types de profils tels que les "retweeter",
 les jamais connectés...
 
 .. _l-sim-autoroute:
-
 
 Pourquoi la ligne 13 est-elle surchargée ? (2016)
 -------------------------------------------------
 
 Tous les élèves de l'ENSAE connaissentles déboires que connaît la ligne 13.
-On trouve une explication de ce phénomène dans le 
+On trouve une explication de ce phénomène dans le
 `paradoxe de Braess <https://fr.wikipedia.org/wiki/Paradoxe_de_Braess>`_
-illustrée par l'article suivant : 
+illustrée par l'article suivant :
 `La plus large autoroute du monde est déjà bouchée <http://rue89.nouvelobs.com/2016/01/06/plus-large-autoroute-monde-est-deja-bouchee-262729>`_.
-Pour résumé, si un réseau de transport est surchargé, 
-augmenter sa capacité ne fait que le soulager temporairement. 
+Pour résumé, si un réseau de transport est surchargé,
+augmenter sa capacité ne fait que le soulager temporairement.
 Dans un second temps, les utilisateurs modifient leur comportement pour optimiser
-leur parcours au sein de ce réseau. Ce déplacement des habitudes n'aboutit pas 
+leur parcours au sein de ce réseau. Ce déplacement des habitudes n'aboutit pas
 forcément à une amélioration par rapport à la situation précédente.
 C'est le `paradoxe de Braess <https://fr.wikipedia.org/wiki/Paradoxe_de_Braess>`_.
 

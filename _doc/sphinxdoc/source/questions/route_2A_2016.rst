@@ -7,9 +7,8 @@ Feuille de route
 année 2016
 ++++++++++
 
-
 Les cours et séances se déroulent sur 6 séances de 4h
-lundi matin. Cette année le cours se diversifie avec des 
+lundi matin. Cette année le cours se diversifie avec des
 pistes :
 
 * **Stat** : Les sessions abordent le machine learning, le traitement du langage,
@@ -19,18 +18,16 @@ pistes :
 * **Eco** : Les sessions abordent le calcul matriciel,
   le machine learning, les graphes, le traitement du langage,
   le scrapping.
-  
-Une compétition sera ouverte le premier jour et 
+
+Une compétition sera ouverte le premier jour et
 fermée à la dernière session où les résultas et les idées seront
 discutées : `Compétition Python 2A ENSAE <https://competitions.codalab.org/competitions/13431>`_.
 
-La séance dédiées aux :ref:`l-puzzlealgo2A` 
+La séance dédiées aux :ref:`l-puzzlealgo2A`
 requiert la participation de la part des participants :
 trois exercices seront choisis parmi ceux que vous aurez envoyés par mail.
 Les exercices doivent être choisis sur le site
 `Google Code Jam <https://code.google.com/codejam/contests.html>`_.
-
-
 
 .. list-table::
     :widths: 2 5 5 5 5
@@ -42,17 +39,17 @@ Les exercices doivent être choisis sur le site
       - Eco 8h30
       - Eco 10h30
     * - 26/9
-      - :ref:`numpy et le calcul matriciel <td2acenoncesession2Arst>`, 
-        :ref:`pandas, dataframe et premiers graphes <td2acenoncesession1rst>`,        
+      - :ref:`numpy et le calcul matriciel <td2acenoncesession2Arst>`,
+        :ref:`pandas, dataframe et premiers graphes <td2acenoncesession1rst>`,
       - :ref:`visualisation <l-visualisation-2A>` (voir :ref:`l-note-2A-plan`)
         :ref:`l-javascript-principe-base-2a`
       - :ref:`numpy et le calcul matriciel <td2acenoncesession2Arst>`
       - :ref:`pandas, dataframe et premiers graphes <td2acenoncesession1rst>`
     * - 3/10
-      - :ref:`SQL <l-sql-principe-base-2a>`, 
-        :ref:`SQL <Python-Logique-SQLrst>`, :ref:`td2acenoncesession5rst`, 
-        :ref:`traitement big data, itérateur <l-cluster-non-struct-2a>`, 
-        :ref:`dask <seance5daskrst>`,        
+      - :ref:`SQL <l-sql-principe-base-2a>`,
+        :ref:`SQL <Python-Logique-SQLrst>`, :ref:`td2acenoncesession5rst`,
+        :ref:`traitement big data, itérateur <l-cluster-non-struct-2a>`,
+        :ref:`dask <seance5daskrst>`,
       - :ref:`td2asomenlprst`, :ref:`td2abigdatamemoryrst`
       - :ref:`SQL <l-sql-principe-base-2a>`, :ref:`SQL lien avec pandas <Python-Logique-SQLrst>`,
         :ref:`l-donnees-struct-sql-2a`, :ref:`td2aecoexercicedefindeseancerst`
@@ -86,7 +83,6 @@ Les exercices doivent être choisis sur le site
         `exemples de compétition Kaggle <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/ensae201611.html>`_
         **cours commun**
 
-
 .. _l-note-2A-plan:
 
 Notes
@@ -108,7 +104,7 @@ puis de partager les exemples.
 
 **Déroulement des séances**
 
-Le 7 novembre à 8h30, le but de la séance est de 
+Le 7 novembre à 8h30, le but de la séance est de
 concevoir un plan pour réarranger les cartes électorales et de commencer sa mise en place.
 Il n'y a pas qu'une seule solution, tout dépend des idées exposées durant la séance.
 
@@ -119,4 +115,3 @@ Ces séances sont composés d'exercices et de cours.
 **Compétition**
 
 :ref:`Compétition 2016 <l-competition-2016-2a>`
-    

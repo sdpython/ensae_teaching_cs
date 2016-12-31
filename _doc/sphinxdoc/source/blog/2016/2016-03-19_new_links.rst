@@ -1,15 +1,14 @@
 
-
 .. blogpost::
     :title: Quelques nouveaux liens
     :keywords: livre, liens
     :date: 2016-03-19
     :categories: références
-    
-    Quelques liens intéressants ajoutés à 
-    :ref:`l-td1a`, :ref:`l-td2a`. Automatiser avec Python, 
+
+    Quelques liens intéressants ajoutés à
+    :ref:`l-td1a`, :ref:`l-td2a`. Automatiser avec Python,
     expressions régulières, machine learning :
-    
+
     * `8 Regular Expressions You Should Know <http://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149>`_
     * `Love Python <http://love-python.blogspot.fr/>`_
     * `Related Projects (of machine learning) <http://scikit-learn.org/stable/related_projects.html>`_

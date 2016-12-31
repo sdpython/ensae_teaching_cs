@@ -1,18 +1,17 @@
 
-
 .. blogpost::
     :title: Un livre intéressant
-    :keywords: 
+    :keywords:
     :date: 2016-08-05
     :categories: livres
 
     `High Performance Python <http://shop.oreilly.com/product/0636920028963.do>`_, Micha Gorelick, Ian Ozsvald.
     Le livre est très bien conçu et les exemples sont très clairs. Si vous souhaitez accélérer un programme Python
-    en utilisant le multithreading, `OpenMP <http://openmp.org/wp/>`_, 
+    en utilisant le multithreading, `OpenMP <http://openmp.org/wp/>`_,
     `Numba <http://numba.pydata.org/>`_, `Cython <http://cython.org/>`_
-    `PyPy <http://cython.org/>`_, ou `CPython <https://en.wikipedia.org/wiki/CPython>`_, 
+    `PyPy <http://cython.org/>`_, ou `CPython <https://en.wikipedia.org/wiki/CPython>`_,
     je recommande d'y jeter un coup d'oeil d'abord.
-    L'autre livre est réservé à un usage spécifique mais 
+    L'autre livre est réservé à un usage spécifique mais
     le titre est sympathique :
     `Violent Python <http://store.elsevier.com/Violent-Python/TJ-OConnor/isbn-9781597499576/>`_.
     Pour ceux qui veulent jouer avec le wifi, les antivirus...

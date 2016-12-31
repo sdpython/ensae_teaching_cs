@@ -1,5 +1,4 @@
 
-
 Visualisation
 =============
 
@@ -8,5 +7,3 @@ Visualisation
 
     matplotlib_zoomable
     td2a_visualisation
-    
-

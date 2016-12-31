@@ -1,9 +1,5 @@
 
-
-
-
 .. _l-sudoku-sol:
-
 
 Résolution d'un sudoku
 ======================
@@ -15,7 +11,7 @@ la fonction :func:`resolution_sudoku <ensae_teaching_cs.special.sudoku.resolutio
 .. todoext::
     :title: construire un sudoku
     :tag: special
-    
-    Une grille de sudoku est plus ou moins difficile. Il faut d'abord s'assurer 
-    que la grille n'aboutit qu'à une seule solution. La difficulté provient du nombre 
+
+    Une grille de sudoku est plus ou moins difficile. Il faut d'abord s'assurer
+    que la grille n'aboutit qu'à une seule solution. La difficulté provient du nombre
     de choix qu'on doit lors de la résolution.

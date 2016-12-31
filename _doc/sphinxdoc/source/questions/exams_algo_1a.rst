@@ -1,17 +1,14 @@
 
-
 .. index:: examens, algorithme
 
 .. _l-examens-1A-algo:
-
 
 Etude d'un algorithme en binôme
 ===============================
 
 Les algorithmes sont le plus souvent abordés hors contexte
 bien qu'ils soient présents dans n'importe quelle application
-smartphone. 
-
+smartphone.
 
 .. contents::
     :local:
@@ -19,9 +16,9 @@ smartphone.
 Mise en scène
 +++++++++++++
 
-Le jeu `Pokémon Go <https://fr.wikipedia.org/wiki/Pok%C3%A9mon_Go>`_ 
+Le jeu `Pokémon Go <https://fr.wikipedia.org/wiki/Pok%C3%A9mon_Go>`_
 est sorti début 2016. Les détails de l'implémentation en sont pas connus
-mais cela n'empêche pas d'y réfléchir. 
+mais cela n'empêche pas d'y réfléchir.
 
 Les élèves seront groupés par deux, un élève plutôt débutant,
 un autre plutôt pas, ils tirent un algorithme ou une structure de données
@@ -37,14 +34,12 @@ cela ne devrait pas dépasser 20 lignes.
 #. Impact économique si l'algorithme est deux fois plus rapide.
 #. Une piste d'amélioration pour l'application considérée.
 
-
-
 Scénarios
 +++++++++
 
 Une personne sort son téléphone. Il ouvre l'application
 *Trésor Caché*. L'écran lui montre ce qui l'a devant lui
-comme s'il allait prendre une photo. 
+comme s'il allait prendre une photo.
 Ces histoires sont fictives.
 
 **histoire 0**
@@ -56,7 +51,7 @@ Ces histoires sont fictives.
 #. Il balaye devant lui (il agite son téléphone portable).
 #. L'application cherche si un trésor est virtuellement caché
    devant lui.
-#. La position d'un des trésors correspond. 
+#. La position d'un des trésors correspond.
    L'application affiche ses caractéristiques.
 #. L'utilisateur *swipe* et stocke le trésor dans son
    coffre fort virtuel.
@@ -65,10 +60,10 @@ Ces histoires sont fictives.
    du paysage où le trésor a été attrapé.
 #. Ces ordinateurs déterminent si le joueur a gagné.
    Mais il n'a pas gagné.
-   
+
 **histoire 2**
 
-#. Le trésor a volontairement été placé par les concepteurs 
+#. Le trésor a volontairement été placé par les concepteurs
    de l'application en hauteur au niveau de la pancarte du nom de la rue.
 #. Les ordinateurs distants extraient la zone de l'image correspondant à cette pancarte.
 #. Ils lancent une reconnaissance OCR pour lire le nom écrit sur cette pancarte.
@@ -78,13 +73,13 @@ Ces histoires sont fictives.
    automatiquement. Une seconde recherche est lancée.
    La rue est trouvée, elle n'a a priori pas changé de nom.
 #. Une dernière validation est effectuée. Une distance est calculée
-   entre le nom de rue reconnu et le nom de rue corrigé. 
+   entre le nom de rue reconnu et le nom de rue corrigé.
    La distance n'est pas trop grande. Aucune vérification manuelle
    n'est requise.
-   
+
 **histoire 3**
 
-#. Le joueur est impatient, il demande une suggestion pour 
+#. Le joueur est impatient, il demande une suggestion pour
    le prochain trésor.
 #. L'application récupère l'information stockée pendant que le joueur
    joue. Il envoie cette information au serveur des concepteurs.
@@ -94,11 +89,11 @@ Ces histoires sont fictives.
 #. 5 magasins font une offre. Le meilleur est choisi.
 #. L'utilisateur reçoit le message qu'un indice se trouve dans ce magasin.
 #. L'application lui indique le chemin le plus court jusqu'au magasin.
-   
+
 **histoire 4**
 
 Le jeu marche très bien mais finit par provoquer une certaine lassitude.
-Les concepteurs du jeu ont quelques idées. L'une d'elles 
+Les concepteurs du jeu ont quelques idées. L'une d'elles
 est d'associer une récompense à chaque trésor comme des bons de réductions.
 
 #. Sans le savoir certains utilisateurs bénéficient de cette option,
@@ -106,7 +101,6 @@ est d'associer une récompense à chaque trésor comme des bons de réductions.
 #. On compare ces deux populations sur un mois en mesurant le temps de jeu
    moyen par joueur.
 #. L'idée est finalement validée.
-
 
 Algorithmes implémentables
 ++++++++++++++++++++++++++
@@ -120,7 +114,7 @@ Algorithmes implémentables
 * `Générateur de nombre pseudo-aléatoires <https://fr.wikipedia.org/wiki/G%C3%A9n%C3%A9rateur_de_nombres_pseudo-al%C3%A9atoires>`_
 * `Plus court chemin <https://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra>`_
 * Recherche dans un `index <https://fr.wikipedia.org/wiki/Index_(base_de_donn%C3%A9es)>`_
-* `Test A/B <https://fr.wikipedia.org/wiki/Test_A/B>`_ 
+* `Test A/B <https://fr.wikipedia.org/wiki/Test_A/B>`_
   plus  spécifiquement `P-Value <https://fr.wikipedia.org/wiki/Valeur_p>`_
 * `Tri <https://fr.wikipedia.org/wiki/Algorithme_de_tri>`_
 

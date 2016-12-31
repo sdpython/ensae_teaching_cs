@@ -1,5 +1,4 @@
 
-
 .. _l-election_report_voix:
 
 Optimisation sous contraintes appliquée au calcul du report des voix
@@ -14,23 +13,23 @@ Poser le problème
 +++++++++++++++++
 
 Entre les deux tours des élections présidentielles, on parle beaucoup
-du report des voix des élections. 
-Dans la plupart des articles que j'ai trouvés 
+du report des voix des élections.
+Dans la plupart des articles que j'ai trouvés
 `Les 1.139.316 voix qui ont fait la victoire d'Hollande <http://www.slate.fr/france/54761/presidentielle-hollande-sarkozy-ecart-voix-report>`_
-ces intentions sont estimées par sondage. Un blog parle d'une méthode 
+ces intentions sont estimées par sondage. Un blog parle d'une méthode
 d'estimation après seulement que les élections ont eu lieu :
 `Estimation des reports de voix - explications techniques <http://www.joelgombin.fr/?p=718>`_.
 La méthode proposée est bayésienne. Ici, j'ai utilisé l'optmisation sous contraintes
-car c'est la méthode que je souhaitais illustrer pour mes 
+car c'est la méthode que je souhaitais illustrer pour mes
 enseignements. J'ai pris les élections comme
-exemples d'application. Les données sont accessibles sur le site 
+exemples d'application. Les données sont accessibles sur le site
 (`data.gouv.fr <http://www.data.gouv.fr/>`_,
 `élections 2012 <http://www.data.gouv.fr/DataSet/572077>`_)
-Elles incluent les chiffres aggrégés par départements et cantons dont je 
+Elles incluent les chiffres aggrégés par départements et cantons dont je
 me suis servi et que j'ai regroupés ici : :download:`french_elections.zip`.
 
 On dispose donc des voix ventilées par candidats et disponibles pour chaque
-départements. On cherche à calculer une matrice de report de voix qui soit 
+départements. On cherche à calculer une matrice de report de voix qui soit
 la même pour tous les départements.
 
 .. raw:: html
@@ -40,7 +39,7 @@ la même pour tous les départements.
         <div id="no-paging">*source <a href="http://www.data.gouv.fr/DataSet/572077">open.data.gouv.fr: élections 2012</a>*
         </div></td></tr>
         </tfoot>
-        
+
       <thead>
         <tr style="text-align: right;">
           <th>ARTHAUD</th>
@@ -149,7 +148,6 @@ la même pour tous les départements.
       </tbody>
     </table>
 
-
 .. raw:: html
 
     <table border="1">
@@ -222,21 +220,20 @@ la même pour tous les départements.
 On cherche une matrice *V* qui permet d'obtenir les voix *Y* du second tour
 en fonction des voix du premier tour *X* :
 :math:`Y = VX, \; X \in M_{nc}, \; Y \in M_{nd}, \; V \in M_{cd}`.
-*n* est le nombre de départements, *c* est le nombre 
+*n* est le nombre de départements, *c* est le nombre
 de candidats du premier tour (abstention et bulletin nuls inclus),
 *d* est le nombre de candidats du second tour.
 La matrice *V* définit le report des voix : *V<sub>ij</sub>*
 est la proportion des voix du candidat *c* allant au candidat *d*.
 Elle vérifie les contraintes suivantes :
 
-
 .. math::
 
     \begin{array}{l}
     \forall c,d, \; V_{cd} \leqslant 0 \\
-    \forall c, \; \sum_{d=1}^{D} V_{cd} = 1 
+    \forall c, \; \sum_{d=1}^{D} V_{cd} = 1
     \end{array}
-    
+
 Une résolution
 ++++++++++++++
 
@@ -250,10 +247,10 @@ transformation similaire sur *X*.
 
     \begin{array}{l}
     Y^*_{k} = Y_{k \mod(n),[k/n]} \\
-    X^*_{k,i} = X_{k \mod(n),i} 
+    X^*_{k,i} = X_{k \mod(n),i}
     \end{array}
 
-Par la suite, on désigne sous *X,Y* les matrices 
+Par la suite, on désigne sous *X,Y* les matrices
 :math:`X^*, Y^*`.
 On cherche à résoudre le problème d'optmisation sous contrainte :
 
@@ -263,7 +260,7 @@ On cherche à résoudre le problème d'optmisation sous contrainte :
     \min_V (Y-XV)'(Y-XV) \\
         avec \; \left \{ \begin{array}{l}
         \forall c,d \; V_{cd} \geqslant 0 \\
-        \forall c \; \sum_{d=1}^{D} V_{cd} = 1 
+        \forall c \; \sum_{d=1}^{D} V_{cd} = 1
         \end{array} \right .
     \end{array}
 
@@ -296,16 +293,16 @@ Le vecteur *x* est une représentation de la matrice *V* cherchée.
 .. math::
 
     \left\|(Y-XV)'(Y-XV)\right\|
-              = \sum_{i=1}^D Y_i'Y_i \underbrace{- 2 \sum_{i=1}^D   Y_i' X_i}_{p'} x + 
+              = \sum_{i=1}^D Y_i'Y_i \underbrace{- 2 \sum_{i=1}^D   Y_i' X_i}_{p'} x +
                 x' \underbrace{\sum_{i=1}^D  X_i' X_i}_{\frac{1}{2}Q} x
 
 Je passe les détails d'implémentation que vous pouvez trouver là :
 `class ElectionResults <http://www.xavierdupre.fr/app/pyhome3/helpsphinx/pyhome/pyhome3/srcpyhome/wandering/election/elections.html>`_,
 `def vote_transfer <http://www.xavierdupre.fr/app/pyhome3/helpsphinx/_modules/pyhome3/srcpyhome/wandering/election/elections.html#ElectionResults.vote_transfer>`_
 et `study_french_elections.py <http://www.xavierdupre.fr/app/pyhome3/helpsphinx/pyhome/studies/french_elections/study_french_elections.html>`_.
-Cette classe lit les fichiers Excel venant du site 
+Cette classe lit les fichiers Excel venant du site
 `open.data.gouv.fr <http://www.data.gouv.fr/>`_,
-puis construit les matrices *P,q,G,h,A,b* qui permettent de résoudre le problème 
+puis construit les matrices *P,q,G,h,A,b* qui permettent de résoudre le problème
 d'optimisation. Elle corrige aussi les nombres d'inscrits pour chaque département.
 car le nombre d'inscrits est légèrement
 différents d'une tour à l'autre (voir les deux premiers tableaux).
@@ -416,13 +413,13 @@ aux deux tours.
         </tr>
       </tbody>
     </table>
-    
+
 Quelques précautions
 ++++++++++++++++++++
 
 Il est difficile d'interpréter ces résultats sans prendre quelques précautions.
-La fonction d'erreur donne le même poids à toutes les voix. 
-Cela signifie que la précision de ces chiffres est meilleure pour les 
+La fonction d'erreur donne le même poids à toutes les voix.
+Cela signifie que la précision de ces chiffres est meilleure pour les
 partis les plus représentés. Ci-dessous,
 les mêmes résultats mais en partant des résultats aggrégés par cantons (environ 4000).
 
@@ -531,9 +528,9 @@ les mêmes résultats mais en partant des résultats aggrégés par cantons (env
       </tbody>
     </table>
 
-Ces résultats sont assez fluctuants. Le 
+Ces résultats sont assez fluctuants. Le
 `bootstrap <http://fr.wikipedia.org/wiki/Bootstrap_%28statistiques%29>`_
-est une méthode statistique qui permet d'obtenir des intervalles 
+est une méthode statistique qui permet d'obtenir des intervalles
 de confiance. J'ai appliqué la méthode sur la série des cantons, plus longue,
 car elle réduit la variance
 du nombre d'inscrits après rééchantillonage.
@@ -644,7 +641,7 @@ ayant obtenu peu de voix.
         </tr>
       </tbody>
     </table>
-    
+
 Petits candidats
 ++++++++++++++++
 
@@ -653,7 +650,7 @@ candidats, on peut s'inspirer d'un test statistique
 comme le test du `chi-deux <http://fr.wikipedia.org/wiki/Test_du_%CF%87%C2%B2>`_.
 On donne à chaque voix d'un candidat un poids inversement
 proportionnel à son nombre de votants. Pour ce faire, j'ai
-divisé chaque colonne par le nombre d'inscrits comptabilisés dans 
+divisé chaque colonne par le nombre d'inscrits comptabilisés dans
 cette colonne (voir la matrice des inscrits du premier tour) puis
 j'ai normalisé chaque ligne de la matrice du second tour de façon à ce qu'il
 y ait le même nombre de voix aux premier et second tour dans chaque canton.
@@ -764,8 +761,8 @@ J'ai ensuite calculé la matrice de transfert des votes.
       </tbody>
     </table>
 
-Et on vérifie que les intervalles de confiance sont plus petits pour les 
-derniers candidats. 
+Et on vérifie que les intervalles de confiance sont plus petits pour les
+derniers candidats.
 
 .. raw:: html
 
@@ -871,10 +868,9 @@ derniers candidats.
         </tr>
       </tbody>
     </table>
-    
+
 2007
 ++++
-
 
 Les mêmes résultats en 2007 laisse penser que les reports de voix étaient plus bruités :
 
@@ -1001,8 +997,8 @@ Les mêmes résultats en 2007 laisse penser que les reports de voix étaient plu
 ++++
 
 Les élections en 2002 montrent des résultats
-plutôt surprenants pour le candidats Chirac. 
-L'hypothèse de proabilités de reports uniformes est 
+plutôt surprenants pour le candidats Chirac.
+L'hypothèse de proabilités de reports uniformes est
 probablement fausse dans ce cas même si ces résultats
 paraissent dans l'ensemble sensés. C'est comme ci
 les électeurs de Chirac du premier avaient considérés les élections

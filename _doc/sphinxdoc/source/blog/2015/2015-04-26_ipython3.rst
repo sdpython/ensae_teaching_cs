@@ -1,30 +1,29 @@
 
-
 .. blogpost::
     :title: Migration des notebooks à IPython 3
     :keywords: Scite, IPython 3, migration, ravel
     :date: 2015-04-26
     :categories: ipython, notebook
-        
+
     Il est rare de ne pas avoir quelques bugs lorsqu'on change
-    de version de module. Il est naturel de changer un peu les 
+    de version de module. Il est naturel de changer un peu les
     fonctions, de les rendre un peu plus clairs, de rendre les usages
     un peu moins implicites. Lors du passage de IPython 2 à 3, quelques notebooks
-    ne fonctionnaient plus. Cela était pour la plupart dû à la méthode 
+    ne fonctionnaient plus. Cela était pour la plupart dû à la méthode
     `Series.ravel <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.ravel.html>`_
     de `pandas <http://pandas.pydata.org/>`_ ::
-    
+
         from sklearn.cross_validation import train_test_split
         a_train, a_test, b_train, b_test = train_test_split(Xt, Y, test_size=0.33)
-        
+
         clf = RandomForestRegressor(n_estimators=n_estimators,max_depth=1,min_samples_leaf=10)
-        clf = clf.fit(a_train, b_train.ravel())    
-        
+        clf = clf.fit(a_train, b_train.ravel())
+
     Ce code provoque une erreur car *b_train* est un DataFrame et non une colonne.
     Pour corriger, il faut simplement écrire ::
-    
-        clf = clf.fit(a_train, b_train["montant"].ravel())    
-        
+
+        clf = clf.fit(a_train, b_train["montant"].ravel())
+
     Pourquoi cela ne marche plus ? Sans doute parce qu'une conversion
     implicite a été supprimée, je n'ai pas vraiment regardé.
     C'est typiquemen le genre d'information difficile à trouver sur un internet.
@@ -33,9 +32,6 @@
     car l'écriture est souvent implicite. On peut lire l'article
     `Getting the Best Performance out of NumPy <http://ipython-books.github.io/featured-01/>`_
     à ce sujet.
-    
-    Comme tous les notebooks ont été passés à IPython 3, il est probable que des 
+
+    Comme tous les notebooks ont été passés à IPython 3, il est probable que des
     erreurs se produisent si vous les utilisez sur IPython 2.
-    
-    
-    

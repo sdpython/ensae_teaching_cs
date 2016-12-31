@@ -1,17 +1,14 @@
 
-
 .. _l-graphes:
-
 
 Graphes
 =======
 
 Les `graphes <http://fr.wikipedia.org/wiki/Th%C3%A9orie_des_graphes>`_ représente
-une partie importante de l'informatique. C'est souvent très visuel et 
+une partie importante de l'informatique. C'est souvent très visuel et
 assez intuitif à petite échelle.
 
 .. image:: http://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Breadth-first-tree.png/220px-Breadth-first-tree.png
-
 
 Termes
 ++++++
@@ -31,17 +28,12 @@ Un graphe orienté signifie que la matrice d'adjacence n'est pas symétrique.
 
 On représente la matrice d'adjacence souvent sous forme de dictionnaire car
 cette matrice est souvent creuse : beaucoup de coefficients sont nuls car le nombre d'arcs
-comparé au nombre total d'arcs (:math:`n^2` pour un graphe de :math:`n` noeuds) 
-est très petit. 
-
+comparé au nombre total d'arcs (:math:`n^2` pour un graphe de :math:`n` noeuds)
+est très petit.
 
 .. todoext::
     :title: terminer la page sur les graphes ou la déplacer vers mlstatpy
     :tag: bug
     :date: 2016-06-24
-    
-    A terminer.
 
-    
-    
-    
+    A terminer.

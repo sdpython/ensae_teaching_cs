@@ -1,17 +1,16 @@
 
-
 .. blogpost::
     :title: Résoudre un Rubik's cube: GAP
     :keywords: Rubik, cube, GAP, algèbre, groupe
     :date: 2016-03-03
     :categories: mathématiques
-    
-    `GAP <https://github.com/gap-system/gap>`_ : is a system for computational discrete algebra, 
-    with particular emphasis on Computational Group Theory. 
-    GAP provides a programming language, a library of thousands of functions implementing algebraic 
+
+    `GAP <https://github.com/gap-system/gap>`_ : is a system for computational discrete algebra,
+    with particular emphasis on Computational Group Theory.
+    GAP provides a programming language, a library of thousands of functions implementing algebraic
     algorithms written in the GAP language as well as large data libraries of algebraic objects.
-    
-    GAP est un langage de programmation qui permet de résoudre des problèmes d'algèbres dont 
+
+    GAP est un langage de programmation qui permet de résoudre des problèmes d'algèbres dont
     la résolution s'appuie sur les groupes. Un autre lien intéressant pour le problème
     du Rubik's cube en particulier :
     `3D Interactive Rubik's Cube in Python <https://jakevdp.github.io/blog/2012/11/26/3d-interactive-rubiks-cube-in-python/>`_.
