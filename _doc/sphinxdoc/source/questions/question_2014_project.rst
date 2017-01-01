@@ -1,4 +1,3 @@
-﻿
 
 .. _question_projet_2014:
 

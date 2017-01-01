@@ -1,9 +1,9 @@
 .. blogpost::
     :title: Quelques articles sur les statistiques bayésiennes
-    :keywords: 
+    :keywords:
     :date: 2016-08-16
     :categories: bibliographie
-    
+
     * `Scalable Learning of Bayesian Network Classiﬁers <http://www.jmlr.org/papers/volume17/martinez16a/martinez16a.pdf>`_
     * `Structure Discovery in Bayesian Networks by Sampling Partial Orders∗ <http://www.jmlr.org/papers/volume17/15-140/15-140.pdf>`_
     * `BayesPy: Variational Bayesian Inference in Python <http://www.jmlr.org/papers/volume17/luttinen16a/luttinen16a.pdf>`_
