@@ -1,6 +1,7 @@
 language: python
 python:
   - { PATH: "{{replace(Python35, '\\', '\\\\')}}", VERSION: 3.5, DIST: std }
+  - { PATH: "{{replace(Python36, '\\', '\\\\')}}", VERSION: 3.6, DIST: std }
   - { PATH: "{{replace(Anaconda3, '\\', '\\\\')}}", VERSION: 3.5, DIST: conda }
   - { PATH: "{{replace(WinPython35, '\\', '\\\\')}}", VERSION: 3.5, DIST: winpython }
 virtualenv:
@@ -28,7 +29,7 @@ script:
       fi  
 after_script:
   - python -u setup.py bdist_wheel
-  - if [ ${DIST} != "conda" and ${VERSION} != "3.4" and ${NAME} == "UT" ] then copy dist\*.whl ..\..\local_pypi\local_pypi_server fi
+  - if [ ${DIST} != "conda" and ${VERSION} == "3.5" and ${NAME} == "UT" ] then copy dist\*.whl ..\..\local_pypi\local_pypi_server fi
 documentation:
   - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres fi
   - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres_2A fi

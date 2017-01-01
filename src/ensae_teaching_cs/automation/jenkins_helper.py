@@ -20,6 +20,7 @@ def engines_default():
     """
     res = dict(anaconda2="d:\\Anaconda2",
                anaconda3="d:\\Anaconda3",
+               py36="c:\\Python36_x64",
                py35="c:\\Python35_x64",
                py34="c:\\Python34_x64",
                py27="c:\\Python27",
@@ -29,6 +30,7 @@ def engines_default():
     res["Python27"] = res["py27"]
     res["Python34"] = res["py34"]
     res["Python35"] = res["py35"]
+    res["Python36"] = res["py36"]
     res["Anaconda2"] = res["anaconda2"]
     res["Anaconda3"] = res["anaconda3"]
     res["WinPython35"] = res["winpython"]
@@ -101,8 +103,9 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
                 "standalone [conda_update] [anaconda2] [27]",
                 "standalone [local_pypi]",
                 # update
-                ("pymyinstall [update_modules]", "H H(0-1) * * 5"),
+                ("pymyinstall [update_modules] [py35]", "H H(0-1) * * 5"),
                 "pymyinstall [update_modules] [winpython]",
+                "pymyinstall [update_modules] [py36]",
                 "pymyinstall [update_modules] [py34]",
                 "pymyinstall [update_modules] [py27]",
                 "pymyinstall [update_modules] [anaconda2]",
