@@ -349,6 +349,9 @@ d'outils open source dont on aurait tort de se passer ou des services gratuits s
 qui facilitent l'archivage. Ils sont tellement pratiques qu'on a même du mal
 à s'en passer lorsqu'on travaille tout seul.
 
+En vrac
+-------
+
 **Suivi de sources distant**
 
 * `GitHub <https://github.com/>`_
@@ -461,6 +464,38 @@ Pour être compilée, la documentation requiert également :
 * `Jardin Zen Css <http://www.csszengarden.com/>`_ (la même page avec une multitude de styles différents)
 * `Le blog univers domotique <http://blog.univers-domotique.com/>`_
 * `Tutoriel sur GIT <http://sixrevisions.com/resources/git-tutorials-beginners/>`_
+
+Setup pour déveloper ce cours (Windows)
+---------------------------------------
+
+* `7zip <http://www.7-zip.org/>`_
+* `Anaconda <https://www.continuum.io/downloads>`_
+  2 et 3 (à installer sur le même disque que le répertoire
+  utilisé pour Jenkins)
+* `Chrome <https://www.google.fr/chrome/browser/desktop/>`_
+* `CMake <https://cmake.org/>`_ (pour compiler XGBoost)
+* `Git <https://git-scm.com/>`_
+* `GitHub <https://desktop.github.com/>`_
+* `Java 64 bit <https://www.java.com/fr/download/manual.jsp>`_
+* `Jenkins <https://jenkins.io/>`_
+* `Miktex basic installer 64 bit <https://miktex.org/download>`_
+  (lors de l'installation, il faut cocher l'installation automatique de nouveaux packages)
+* `Python <https://www.python.org/>`_ 3.5, 3.6, 2.7 64 bit
+  (il ne faut pas ajouter les interpréteur au PATH par défaut)
+* `R 3.2 <https://cran.r-project.org/bin/windows/base/old/3.2.0/>`_
+* `Scite <http://www.scintilla.org/SciTE.html>`_
+* `Visual Studio 2015 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_
+  (cocher C++, C#, Python comme langage + CLang comme compilateur)
+
+En plus :
+
+* `Cygwin <https://www.cygwin.com/>`_
+* `FileZilla <https://filezilla-project.org/>`_
+* `InnoSetup <http://www.jrsoftware.org/isdl.php>`_ (version unicode)
+
+Pour chaque version de Python, il faut installer
+`pymyinstall <https://pypi.python.org/pypi/pymyinstall/>`_
+puis écrire ``pymy_install``.
 
 Maintenir sa distribution Python à jour
 =======================================
