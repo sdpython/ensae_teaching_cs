@@ -15,7 +15,12 @@ from ensae_teaching_cs.automation.jenkins_helper import setup_jenkins_server, en
 fLOG(OutputPrint=True)
 fLOG("start")
 
-js = JenkinsExt('http://localhost:8080/', None, None,
+import keyring
+user = keyring.get_password("jenkins", os.environ["COMPUTERNAME"] + "user") 
+pwd = keyring.get_password("jenkins", os.environ["COMPUTERNAME"] + "pwd")
+
+
+js = JenkinsExt('http://localhost:8080/', user, pwd,
                 fLOG=fLOG, engines=engines_default())
 
 setup_jenkins_server(js,
