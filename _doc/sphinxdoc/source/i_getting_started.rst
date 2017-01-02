@@ -474,12 +474,14 @@ Setup pour déveloper ce cours (Windows)
   utilisé pour Jenkins)
 * `Chrome <https://www.google.fr/chrome/browser/desktop/>`_
 * `CMake <https://cmake.org/>`_ (pour compiler XGBoost)
+* `Graphviz <http://www.graphviz.org/>`_
 * `Git <https://git-scm.com/>`_
 * `GitHub <https://desktop.github.com/>`_
 * `Java 64 bit <https://www.java.com/fr/download/manual.jsp>`_
 * `Jenkins <https://jenkins.io/>`_
 * `Miktex basic installer 64 bit <https://miktex.org/download>`_
   (lors de l'installation, il faut cocher l'installation automatique de nouveaux packages)
+* `Pandoc <http://pandoc.org/>`_
 * `Python <https://www.python.org/>`_ 3.5, 3.6, 2.7 64 bit
   (il ne faut pas ajouter les interpréteur au PATH par défaut)
 * `R 3.2 <https://cran.r-project.org/bin/windows/base/old/3.2.0/>`_
@@ -487,15 +489,32 @@ Setup pour déveloper ce cours (Windows)
 * `Visual Studio 2015 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_
   (cocher C++, C#, Python comme langage + CLang comme compilateur)
 
+Pour chaque version de Python, il faut installer
+`pymyinstall <https://pypi.python.org/pypi/pymyinstall/>`_
+puis écrire ``pymy_install``.
+
 En plus :
 
 * `Cygwin <https://www.cygwin.com/>`_
 * `FileZilla <https://filezilla-project.org/>`_
 * `InnoSetup <http://www.jrsoftware.org/isdl.php>`_ (version unicode)
 
-Pour chaque version de Python, il faut installer
-`pymyinstall <https://pypi.python.org/pypi/pymyinstall/>`_
-puis écrire ``pymy_install``.
+Pour Jenkins, quelques extensions :
+
+* Last Console Output
+* Next Jobs
+
+Un serveur en local doit être démarré, la ligne de commande ressemble à ceci :
+
+::
+
+    c:\Python35_x64\Scripts\pypi-server.exe -u -p 8067 --disable-fallback ..\..\local_pypi\local_pypi_server
+
+Si le serveur Jenkins utilise des mots-clés via keyring,
+ce qui est le cas pour plusieurs modules utilisés pour ces enseignements,
+il est nécessaire de créer un serveur un serveur Jenkins authntifié.
+Sous Windows, il faut chercher ``services.msc`` et renseigner
+les identifiants.
 
 Maintenir sa distribution Python à jour
 =======================================

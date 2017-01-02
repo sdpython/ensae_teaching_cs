@@ -12,9 +12,6 @@ cd ..
 cd jyquickhelper
 git pull
 cd ..
-cd lda
-git pull
-cd ..
 cd mlstatpy
 git pull
 cd ..

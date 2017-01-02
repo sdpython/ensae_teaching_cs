@@ -16,7 +16,7 @@ fLOG(OutputPrint=True)
 fLOG("start")
 
 import keyring
-user = keyring.get_password("jenkins", os.environ["COMPUTERNAME"] + "user") 
+user = keyring.get_password("jenkins", os.environ["COMPUTERNAME"] + "user")
 pwd = keyring.get_password("jenkins", os.environ["COMPUTERNAME"] + "pwd")
 
 
