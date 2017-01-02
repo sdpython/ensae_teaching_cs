@@ -23,7 +23,7 @@ def engines_default():
                py36="c:\\Python36_x64",
                py35="c:\\Python35_x64",
                py34="c:\\Python34_x64",
-               py27="c:\\Python27",
+               py27="c:\\Python27_x64",
                default="c:\\Python35_x64",
                winpython="c:\\APythonENSAE\\python",
                Python35pyq="D:\\jenkins\\venv\\py35\\pyq\\Scripts")
