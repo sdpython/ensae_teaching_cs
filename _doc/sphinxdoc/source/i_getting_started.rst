@@ -5,6 +5,10 @@
 Getting started
 ===============
 
+.. contents::
+    :local:
+    :depth: 2
+
 .. index:: R, Julia, WinPython, Anaconda, pyminstall, getting started
 
 Lorsqu'on fait des statistiques, le language Python est loin d'être
@@ -222,6 +226,11 @@ Certains notebooks requièrent des outils supplémentaires :
 
 .. index:: pip, ligne de commande
 
+Compiler un module
+++++++++++++++++++
+
+* `Compiler les librairies Python sous Windows <https://makina-corpus.com/blog/metier/2016/compile_python_wheels_windows/compiler-les-librairies-python-sous-windows>`_
+
 Distributions
 =============
 
@@ -255,9 +264,6 @@ Distributions
   sans tous ces packages. Elle peut être installée depuis une ligne de commande, via
   une connexion SSH.
   Voir `Install Anaconda through SSH connection <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-11-01_anaconda_ssh.html>`_.
-
-Repérer de nouveaux modules
-+++++++++++++++++++++++++++
 
 La liste des packages de `WinPython <https://winpython.github.io/>`_ ou
 `Anaconda <https://docs.continuum.io/anaconda/pkg-docs>`_
@@ -589,7 +595,7 @@ Autres sources d'inspiration :
 .. _l-data2amod:
 
 Liste exhaustive de modules Python
-++++++++++++++++++++++++++++++++++
+==================================
 
 .. index:: wheel
 

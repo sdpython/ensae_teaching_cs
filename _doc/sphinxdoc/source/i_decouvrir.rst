@@ -18,6 +18,7 @@ qu'on peut résoudre grâce à un algorithme et un peu d'imagination.
 
     specials/algorithm_culture
     specials/np_complet
+    specials/deep_learning
 
 Algorithmes illustrés
 =====================

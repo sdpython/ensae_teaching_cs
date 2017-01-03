@@ -448,6 +448,12 @@ Deep Learning
 
     notebooks/_gs2a_deep
 
+*Tutoriel*
+
+* :ref:`l-deep-learning-specials`.
+* `Artificial Intelligence, Revealed (1) <https://code.facebook.com/pages/1902086376686983>`_ : article de blog et vidéos
+  expliquant les différents concepts du deep learning
+
 *Sites*
 
 * `Tinker With a Neural Network Right Here in Your Browser <http://playground.tensorflow.org/>`_
