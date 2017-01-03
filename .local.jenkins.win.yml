@@ -31,16 +31,16 @@ after_script:
   - python -u setup.py bdist_wheel
   - if [ ${DIST} != "conda" and ${VERSION} == "3.5" and ${NAME} == "UT" ] then copy dist\*.whl ..\..\local_pypi\local_pypi_server fi
 documentation:
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres_2A fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres_3A fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres_1Ap fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} == "UT" ] then python -u setup.py build_sphinx fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\sphinxdoc\build\html dist\html fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\sphinxdoc\build2\html dist\html2 fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\sphinxdoc\build3\html dist\html3 fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\presentation_projets\a2015\build\html dist\html_pres_1Ap\2015 fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\presentation_projets\a2016\build\html dist\html_pres_1Ap fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\presentation_2A\build\html dist\html_pres_2A fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\presentation_3A\build\html dist\html_pres_3A fi
-  - if [ ${PYTHON} == "{{Python35}}" and ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\presentation\build\html dist\html_pres fi
+  - if [ ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres fi
+  - if [ ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres_2A fi
+  - if [ ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres_3A fi
+  - if [ ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres_1Ap fi
+  - if [ ${NAME} == "UT" ] then python -u setup.py build_sphinx fi
+  - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\sphinxdoc\build\html dist\html fi
+  - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\sphinxdoc\build2\html dist\html2 fi
+  - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\sphinxdoc\build3\html dist\html3 fi
+  - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\presentation_projets\a2015\build\html dist\html_pres_1Ap\2015 fi
+  - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\presentation_projets\a2016\build\html dist\html_pres_1Ap fi
+  - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\presentation_2A\build\html dist\html_pres_2A fi
+  - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\presentation_3A\build\html dist\html_pres_3A fi
+  - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\presentation\build\html dist\html_pres fi

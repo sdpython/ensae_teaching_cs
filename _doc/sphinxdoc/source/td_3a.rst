@@ -99,6 +99,15 @@ Crypographie, block chain
 * `Introduction to Smart Contracts <http://solidity.readthedocs.io/en/develop/introduction-to-smart-contracts.html>`_
 * `Monnaie, finance et économie réelle <http://www.editionsladecouverte.fr/catalogue/index-Monnaie__finance_et___conomie_r__elle-9782707185822.html>`_
 
+Algorithmes
++++++++++++
+
+(à venir)
+
+*Vidéo*
+
+* `CS231n Winter 2016 Lecture 4 Backpropagation, Neural Networks 1- <https://www.youtube.com/watch?v=GZTvxoSHZIo&feature=youtu.be>`_
+
 Eléments logiciels
 ==================
 

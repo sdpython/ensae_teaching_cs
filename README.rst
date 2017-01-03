@@ -46,3 +46,58 @@ Contributions
 Started in 2014/04.
 
 * Contributor: `Xavier Dupré <http://www.xavierdupre.fr/>`_, ENSAE's students
+
+Setup
+-----
+
+* `7zip <http://www.7-zip.org/>`_
+* `Anaconda <https://www.continuum.io/downloads>`_
+  2 and 3 (to be installed on the same hard drive than the Jenkins build folder)
+* `Chrome <https://www.google.fr/chrome/browser/desktop/>`_
+* `CMake <https://cmake.org/>`_ (pour compiler XGBoost)
+* `Graphviz <http://www.graphviz.org/>`_
+* `Git <https://git-scm.com/>`_
+* `GitHub <https://desktop.github.com/>`_
+* `Java 64 bit <https://www.java.com/fr/download/manual.jsp>`_
+* `Jenkins <https://jenkins.io/>`_
+* `Miktex basic installer 64 bit <https://miktex.org/download>`_
+  (check the option to silently install new packages)
+* `Pandoc <http://pandoc.org/>`_
+* `Python <https://www.python.org/>`_ 3.5, 3.6, 2.7 64 bit
+  (do not add the interpreter on the default PATH)
+* `R 3.2 <https://cran.r-project.org/bin/windows/base/old/3.2.0/>`_
+* `Scite <http://www.scintilla.org/SciTE.html>`_
+* `Visual Studio 2015 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_
+  (check C++, C#, Python, CLang)
+
+For each Python, you need to install
+`pymyinstall <https://pypi.python.org/pypi/pymyinstall/>`_
+and type ``pymy_install`` and then remove the modules
+being tested (such as this one).
+
+Jenkins requires a few extensions:
+
+* Last Console Output
+* Next Jobs
+
+A local PyPi server needs to be installed:
+
+::
+
+    c:\Python35_x64\Scripts\pypi-server.exe -u -p 8067 --disable-fallback ..\..\local_pypi\local_pypi_server
+
+If some Python scripts use *keyring* to retrieve passwords,
+the Jenkins service needs to authentify. On Windows, it goes through ``services.msc``.
+To test Python versions Python 2.7, il faut créer un environnement virtuel et installer
+pyquickhelper :
+
+::
+
+    cd D:\jenkins\venv\py35
+    c:\Python35_x64\scripts\virtualenv.exe pyq --system-site-packages
+    cd pyq\Scripts
+    pip install pyquickhelper
+
+For some projects (such as the compilation of *pywin32*),
+`Windows SDK <https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>`_
+needs to be installed.

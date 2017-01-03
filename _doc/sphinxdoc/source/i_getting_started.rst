@@ -188,8 +188,10 @@ Le module permet d'installer un ensemble de modules ::
 
     pymy_install3 --set=pyensae
 
-Désinstallation
-+++++++++++++++
+.. _l-desinstallation-modules:
+
+Désinstallation des modules implémentés pour ce cours
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Il est possible de désinstaller simplement les modules installés pour
 ces enseignements ::
@@ -497,7 +499,8 @@ Setup pour déveloper ce cours (Windows)
 
 Pour chaque version de Python, il faut installer
 `pymyinstall <https://pypi.python.org/pypi/pymyinstall/>`_
-puis écrire ``pymy_install``.
+puis écrire ``pymy_install`` puis supprimer les modules qu'on
+souhaite compiler et tester (voir :ref:`l-desinstallation-modules`).
 
 En plus :
 
@@ -521,6 +524,19 @@ ce qui est le cas pour plusieurs modules utilisés pour ces enseignements,
 il est nécessaire de créer un serveur un serveur Jenkins authntifié.
 Sous Windows, il faut chercher ``services.msc`` et renseigner
 les identifiants.
+
+Pour les versions Python 2.7, il faut créer un environnement virtuel et installer
+pyquickhelper :
+
+::
+
+    cd D:\jenkins\venv\py35
+    c:\Python35_x64\scripts\virtualenv.exe pyq --system-site-packages
+    cd pyq\Scripts
+    pip install pyquickhelper
+
+Pour certains projets (comme la compilation de *pywin32*), il faut
+installer `Windows SDK <https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>`_.
 
 Maintenir sa distribution Python à jour
 =======================================
