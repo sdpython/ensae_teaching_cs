@@ -162,6 +162,11 @@ Distribution des calculs, stratégies de stockage, SQL NoSQL
 
 * `What Every Data Scientist Needs to Know about SQL <http://joshualande.com/data-science-sql>`_
 
+*Logiciels*
+
+* `MongoDB <https://www.mongodb.com/>`_
+* `rethinkdb <https://rethinkdb.com/>`_ (python : `rethinkdb <https://pypi.python.org/pypi/rethinkdb/>`_)
+
 Compression des données
 +++++++++++++++++++++++
 

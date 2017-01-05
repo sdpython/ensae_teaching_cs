@@ -80,6 +80,13 @@ Jenkins requires a few extensions:
 * Last Console Output
 * Next Jobs
 
+For Jupyter :
+
+::
+
+    pip install widgetsnbextension
+    jupyter nbextension enable --py --sys-prefix widgetsnbextension
+
 A local PyPi server needs to be installed:
 
 ::

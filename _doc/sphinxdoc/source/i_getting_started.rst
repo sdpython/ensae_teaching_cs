@@ -502,6 +502,12 @@ Pour chaque version de Python, il faut installer
 puis écrire ``pymy_install`` puis supprimer les modules qu'on
 souhaite compiler et tester (voir :ref:`l-desinstallation-modules`).
 
+Quelques modules particuliers : plus trop maintenus mais parfois utiles et parfois modifiés
+
+::
+
+    pip install https://github.com/sdpython/pyPdf/archive/trunk.zip
+
 En plus :
 
 * `Cygwin <https://www.cygwin.com/>`_
@@ -512,6 +518,13 @@ Pour Jenkins, quelques extensions :
 
 * Last Console Output
 * Next Jobs
+
+Pour Jupyter :
+
+::
+
+    pip install widgetsnbextension
+    jupyter nbextension enable --py --sys-prefix widgetsnbextension
 
 Un serveur en local doit être démarré, la ligne de commande ressemble à ceci :
 

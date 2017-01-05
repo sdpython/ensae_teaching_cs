@@ -1,0 +1,22 @@
+
+.. blogpost::
+    :title: Annoter des images
+    :keywords: images, annotations, labels
+    :date: 2017-01-05
+    :categories: machine learning
+
+    Construire une application qui reconnaît des images implique
+    qu'on sache localiser un visage et le reconnaître. Pour appendre,
+    il faut disposer d'une base images *annotées* ou *labellisées*
+    dans lesquelles on connaît l'information à trouver.
+    Voici l'image tirée de wikipédia :
+    `Détection de visage <https://fr.wikipedia.org/wiki/D%C3%A9tection_de_visage>`_.
+
+    .. image:: https://upload.wikimedia.org/wikipedia/commons/e/ef/Face_detection.jpg
+
+    Quand on n'a pas d'image avec des labels, il faut les construire
+    et c'est plutôt fastidieux sans outils adéquats.
+    En voici deux écrits en Python :
+
+    * `sloth <https://github.com/cvhciKIT/sloth>`_
+    * `labelImg <https://github.com/tzutalin/labelImg>`_

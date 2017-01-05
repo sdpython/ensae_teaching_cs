@@ -52,6 +52,8 @@ On peut envisager des contextes différents tels que le jeu de Pacman
 
 * `Reinforcement Learning (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/projects/reinforcement/reinforcement.html>`_
 
+Autres pistes :ref:`l-td2a-reinforcement-learning`.
+
 .. _l-ml-chow:
 
 Algorithme de Chow-Liu
@@ -102,6 +104,11 @@ On pourra lire les articles suivant :
 
 La version `OpenCV pour Python 3 <http://opencv.org/opencv-3-0-alpha.html>`_ est très récente
 et la version finale devrait être prête pour fin 2014 / début 2015.
+
+Deux outils pour annoter des images si vous n'en avez pas :
+
+* `sloth <https://github.com/cvhciKIT/sloth>`_
+* `labelImg <https://github.com/tzutalin/labelImg>`_
 
 .. _l-ml-deepext:
 

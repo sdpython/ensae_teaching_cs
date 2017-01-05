@@ -275,6 +275,18 @@ Variables catégorielles
 
 * :ref:`Tranformer les variables catégorielles et contrastes <encoding-categorie-id>`
 
+Distances
++++++++++
+
+(à venir)
+
+|pystatpng|
+
+*Lectures*
+
+* `Learning Hierarchical Similarity Metrics <http://www.cs.toronto.edu/~vnair/cvpr12.pdf>`_
+* `From Word Embeddings To Document Distances <http://jmlr.org/proceedings/papers/v37/kusnerb15.pdf>`_
+
 Clustering
 ==========
 
@@ -294,6 +306,8 @@ Clustering
 * `Parallel Hierarchical Affinity Propagation with MapReduce <https://arxiv.org/abs/1403.7394>`_
 * `Cats & Co: Categorical Time Series Coclustering <https://arxiv.org/abs/1505.01300v1>`_
 * `Comparing Python Clustering Algorithms <https://github.com/scikit-learn-contrib/hdbscan/blob/master/docs/comparing_clustering_algorithms.rst>`_
+* `Fast and Provably Good Seedings for k-Means <https://papers.nips.cc/paper/6478-fast-and-provably-good-seedings-for-k-means.pdf>`_
+* `Clustering with Same-Cluster Queries <https://papers.nips.cc/paper/6449-clustering-with-same-cluster-queries.pdf>`_
 
 *Modules*
 
@@ -336,6 +350,16 @@ Gaël est un des concepteurs de `scikit-learn <http://scikit-learn.org/stable/>`
     notebooks/_gs2a_statdes
     notebooks/_gs2a_ml_base
 
+*Lectures*
+
+* `A Visual Introduction to Machine Learning <http://www.r2d3.us/visual-intro-to-machine-learning-part-1/>`_
+* `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
+* `A Tour of Machine Learning Algorithms <http://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/>`_
+* `12 Algorithms Every Data Scientist Should Know <https://datafloq.com/read/12-algorithms-every-data-scientist-should-know/2024>`_ *(2016/06)*
+* `10+2 Data Science Methods that Every Data Scientist Should Know in 2016 <http://tjo-en.hatenablog.com/entry/2016/04/18/190000>`_ *(2016/06)*
+* `Complete Guide to Parameter Tuning in XGBoost (with codes in Python) <https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/>`_ *(2016/08)*
+* `XGBoost: A Scalable Tree Boosting System <http://arxiv.org/pdf/1603.02754v1.pdf>`_, Tianqi Chen, Carlos Guestrin
+
 *Modules*
 
 * `scikit-learn <http://scikit-learn.org/stable/>`_
@@ -368,6 +392,7 @@ Pratique du machine learning, problème de données
 * `A Random Forest Guided Tour <http://www.lsta.upmc.fr/BIAU/bs.pdf>`_, Gérard Biau, Erwan Scornet
 * `Courbe ROC <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/roc.html>`_
 * `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
+* `A Unified Approach to Learning Task-Specific Bit Vector Representations for Fast Nearest Neighbor Search <http://www.cs.toronto.edu/~vnair/www12.pdf>`_
 
 *Recherche*
 
@@ -453,6 +478,7 @@ Deep Learning
 * :ref:`l-deep-learning-specials`.
 * `Artificial Intelligence, Revealed (1) <https://code.facebook.com/pages/1902086376686983>`_ : article de blog et vidéos
   expliquant les différents concepts du deep learning
+* `colah's blog <http://colah.github.io/>`_ *(2016/08)* blog/cours sur le deep learning
 
 *Sites*
 
@@ -483,6 +509,7 @@ Deep Learning
 * `Tutorial: Learning Deep Architectures <http://www.cs.toronto.edu/~rsalakhu/deeplearning/yoshua_icml2009.pdf>`_
 * `Deep Learning <https://en.wikipedia.org/wiki/Deep_learning>`_ (wikipédia)
 * `Fast R-CNN <https://arxiv.org/abs/1504.08083>`_ (voir `Object Detection using Fast R CNN <https://github.com/Microsoft/CNTK/wiki/Object-Detection-using-Fast-R-CNN>`_)
+* `Evaluation of Deep Learning Toolkits <https://github.com/zer0n/deepframeworks/blob/master/README.md>`_ *(2015/12)*
 
 *Lectures deep text*
 
@@ -497,6 +524,7 @@ Deep Learning
 * `keras <https://keras.io/>`_
 * `mxnet <https://github.com/dmlc/mxnet>`_
 * `caffe <http://caffe.berkeleyvision.org/>`_ (`installation <http://caffe.berkeleyvision.org/installation.html>`_)
+* `climin <http://climin.readthedocs.io/en/latest/rmsprop.html>`_ (algorithme de back propagation)
 
 *à suivre*
 
@@ -504,6 +532,8 @@ Deep Learning
 * `platoon <https://github.com/mila-udem/platoon/>`_ :
   multi-GPU pour theano
 * `scikit-theano <https://github.com/sklearn-theano/sklearn-theano>`_
+
+.. _l-td2a-reinforcement-learning:
 
 Reinforcement Learning
 ++++++++++++++++++++++
@@ -516,6 +546,9 @@ ou *apprentissage par renforcement*
 
 *Lectures*
 
+* `Deep	Reinforcement Learning through Policy Optmization <http://people.eecs.berkeley.edu/~pabbeel/nips-tutorial-policy-optimization-Schulman-Abbeel.pdf>`_
+  (vu dans `Highlights of NIPS 2016: Adversarial learning, Meta-learning, and more <http://sebastianruder.com/highlights-nips-2016/index.html>`_)
+* `The Nuts and Bolts of Deep RL Research <http://rll.berkeley.edu/deeprlcourse/docs/nuts-and-bolts.pdf>`_
 * `A Comprehensive Survey on Safe Reinforcement Learning <http://www.jmlr.org/papers/volume16/garcia15a/garcia15a.pdf>`_
 * `RLPy: A Value-Function-Based Reinforcement Learning Framework for Education and Research <http://www.jmlr.org/papers/volume16/geramifard15a/geramifard15a.pdf>`_
 * `UCL Course on RL <http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html>`_
@@ -538,6 +571,7 @@ Bandits
 * `Kernel-based methods for bandit convex optimization, part 3 <http://blogs.princeton.edu/imabandit/2016/08/10/kernel-based-methods-for-convex-bandits-part-3/>`_
 * `Learning to Interact <http://hunch.net/~jl/interact.pdf>`_ (John Langford)
 * `Batch Learning from Logged Bandit Feedback through Counterfactual Risk Minimization <http://www.jmlr.org/papers/volume16/swaminathan15a/swaminathan15a.pdf>`_
+* `Stochastic Structured Prediction under Bandit Feedback <https://papers.nips.cc/paper/6134-stochastic-structured-prediction-under-bandit-feedback.pdf>`_
 
 Modèles bayésiens
 +++++++++++++++++
@@ -569,31 +603,14 @@ Modèles bayésiens
 * `bayespy <http://bayespy.org/en/latest/>`_
 * `kabuki <https://pypi.python.org/pypi/kabuki/>`_
 
-Machine Learning sur des données cryptées
-+++++++++++++++++++++++++++++++++++++++++
-
-|pystatpng|
+Factorizaion Machines
++++++++++++++++++++++
 
 *(à venir)*
 
 *Lectures*
 
-* `Privacy Preserving Data Mining <http://web.stanford.edu/group/mmds/slides/mcsherry-mmds.pdf>`_, Cynthia Dwork, Frank McSherry,
-  concept de :math:`\epsilon`-differential privacy
-  (`version longue <https://users.soe.ucsc.edu/~abadi/CS223_F12/mcsherry.pdf>`_,
-  `Privacy Preserving Data Mining <http://www.cs.jhu.edu/~fabian/courses/CS600.624/slides/privacy-preserving.pdf>`_)
-* `Differentially Private Empirical Risk Minimization <http://www.jmlr.org/papers/volume12/chaudhuri11a/chaudhuri11a.pdf>`_
-* `Preserving Privacy of Continuous High-dimensional Data with Minimax Filters <http://www.jmlr.org/proceedings/papers/v38/hamm15.pdf>`_
-* `Differentially Private Online Learning <http://www.jmlr.org/proceedings/papers/v23/jain12/jain12.pdf>`_
-* `A Differentially Private Stochastic Gradient Descent Algorithm for Multiparty Classification <http://www.jmlr.org/proceedings/papers/v22/rajkumar12/rajkumar12.pdf>`_
-* `Privacy for Free: Posterior Sampling and Stochastic Gradient Monte Carlo <http://www.jmlr.org/proceedings/papers/v37/wangg15.pdf>`_
-* `Machine Learning Classification over Encrypted Data <https://eprint.iacr.org/2014/331.pdf>`_
-* `CryptoNets: Applying Neural Networks to Encrypted Data with High Throughput and Accuracy <http://jmlr.org/proceedings/papers/v48/gilad-bachrach16.pdf>`_
-* `Compressed Sensing <https://en.wikipedia.org/wiki/Compressed_sensing>`_
-
-*Modules*
-
-* `ciphermed <https://github.com/rbost/ciphermed>`_ : pas maintenu
+* `Factorization Machines with libFM <http://www.csie.ntu.edu.tw/~b97053/paper/Factorization%20Machines%20with%20libFM.pdf>`_ *(2016/09)*
 
 Machine Learning Avancé
 =======================
@@ -613,6 +630,7 @@ Interprétabilité des modèles
 * `Confidence Intervals for Random Forests: The Jackknife and the Infinitesimal Jackknife <http://jmlr.csail.mit.edu/papers/volume15/wager14a/wager14a.pdf>`_
 * `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
 * `Wavelet decompositions of Random Forests - smoothness analysis, sparse approximation and applications <http://www.jmlr.org/papers/volume17/15-203/15-203.pdf>`_
+* `"Why Should I Trust You?" Explaining the Predictions of Any Classifier <http://arxiv.org/pdf/1602.04938v1.pdf>`_ *(2016/06)*
 
 Optimisation des hyperparamètres
 ++++++++++++++++++++++++++++++++
@@ -656,6 +674,8 @@ Auto-Learning
 
 *Lectures*
 
+* `Learning to learn by gradient descent by gradient descent <https://papers.nips.cc/paper/6461-learning-to-learn-by-gradient-descent-by-gradient-descent.pdf>`_
+* `Matching Networks for One Shot Learning <https://papers.nips.cc/paper/6385-matching-networks-for-one-shot-learning.pdf>`_
 * `Efficient and Robust Automated Machine Learning <http://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning.pdf>`_
 
 *Modules*
@@ -663,6 +683,32 @@ Auto-Learning
 * `REP <https://github.com/yandex/rep>`_
 * `TPOT <https://github.com/rhiever/tpot>`_
 * `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
+
+Machine Learning sur des données cryptées
++++++++++++++++++++++++++++++++++++++++++
+
+|pystatpng|
+
+*(à venir)*
+
+*Lectures*
+
+* `Privacy Preserving Data Mining <http://web.stanford.edu/group/mmds/slides/mcsherry-mmds.pdf>`_, Cynthia Dwork, Frank McSherry,
+  concept de :math:`\epsilon`-differential privacy
+  (`version longue <https://users.soe.ucsc.edu/~abadi/CS223_F12/mcsherry.pdf>`_,
+  `Privacy Preserving Data Mining <http://www.cs.jhu.edu/~fabian/courses/CS600.624/slides/privacy-preserving.pdf>`_)
+* `Differentially Private Empirical Risk Minimization <http://www.jmlr.org/papers/volume12/chaudhuri11a/chaudhuri11a.pdf>`_
+* `Preserving Privacy of Continuous High-dimensional Data with Minimax Filters <http://www.jmlr.org/proceedings/papers/v38/hamm15.pdf>`_
+* `Differentially Private Online Learning <http://www.jmlr.org/proceedings/papers/v23/jain12/jain12.pdf>`_
+* `A Differentially Private Stochastic Gradient Descent Algorithm for Multiparty Classification <http://www.jmlr.org/proceedings/papers/v22/rajkumar12/rajkumar12.pdf>`_
+* `Privacy for Free: Posterior Sampling and Stochastic Gradient Monte Carlo <http://www.jmlr.org/proceedings/papers/v37/wangg15.pdf>`_
+* `Machine Learning Classification over Encrypted Data <https://eprint.iacr.org/2014/331.pdf>`_
+* `CryptoNets: Applying Neural Networks to Encrypted Data with High Throughput and Accuracy <http://jmlr.org/proceedings/papers/v48/gilad-bachrach16.pdf>`_
+* `Compressed Sensing <https://en.wikipedia.org/wiki/Compressed_sensing>`_
+
+*Modules*
+
+* `ciphermed <https://github.com/rbost/ciphermed>`_ : pas maintenu
 
 NLP - Image - Réseaux - Timeseries
 ==================================
@@ -691,9 +737,27 @@ Traitement du langage
   la complétion est utilisée par tous les sites Internet pour aider les utilisateurs
   à saisir leur recherche. N'importe quel site commercial l'utiliser
   pour guider les utilisateurs plus rapidement vers le produit qu'ils recherchent.
-* `Text Understanding from Scratch <https://arxiv.org/abs/1502.01710>`_,
-  Xiang Zhang, Yann LeCun
+* `Text Understanding from Scratch <https://arxiv.org/abs/1502.01710>`_, Xiang Zhang, Yann LeCun
 * `Text Generation With LSTM Recurrent Neural Networks in Python with Keras <http://machinelearningmastery.com/text-generation-lstm-recurrent-neural-networks-python-keras/>`_
+* `Dual Learning for Machine Translation <https://papers.nips.cc/paper/6469-dual-learning-for-machine-translation.pdf>`_
+* `Supervised Word Mover's Distance <https://papers.nips.cc/paper/6139-supervised-word-movers-distance.pdf>`_
+* `Probabilistic Context-Free Grammars (PCFGs) <http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf>`_
+* `A Roundup of Recent Text Analytics and Vis Work <http://blogger.ghostweather.com/2014/10/a-roundup-of-recent-text-analytics-and.html>`_
+
+*word2vec*
+
+* `Towards a continuous modeling of natural language domains <http://www.aclweb.org/anthology/W/W16/W16-6012.pdf>`_
+* `Efficient Estimation of Word Representations in Vector Space <http://arxiv.org/abs/1301.3781>`_, Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean,
+  `Distributed Representations of Words and Phrases and their Compositionality <http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf>`_, Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, Jeff Dean,
+  `word2vec Parameter Learning Explained <http://arxiv.org/abs/1411.2738>`_, Xin Rong,
+  `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
+
+*Word embedding*
+
+* `On word embeddings - Part 1 <http://sebastianruder.com/word-embeddings-1/index.html>`_
+* `On word embeddings - Part 2: Approximating the Softmax <http://sebastianruder.com/word-embeddings-softmax/index.html>`_
+* `On word embeddings - Part 3: The secret ingredients of word2vec <http://sebastianruder.com/secret-word2vec/index.html>`_
+* `From Word Embeddings To Document Distances <http://jmlr.org/proceedings/papers/v37/kusnerb15.pdf>`_
 
 *Vidéos*
 
@@ -782,6 +846,14 @@ Webscrapping et API
 * `API de geocoding <https://www.data.gouv.fr/fr/faq/reuser/>`_
 * `adresse.data.gouv.fr <https://adresse.data.gouv.fr/csv/>`_
 
+*Modules*
+
+* `beautifulsoup <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_
+* `ghost.py <http://jeanphix.me/Ghost.py/>`_
+* `selenium <http://selenium-python.readthedocs.io/>`_
+* `scrapy <https://scrapy.org/>`_
+* `scrapoxy <http://scrapoxy.io/>`_, `python api <https://github.com/fabienvauchelles/scrapoxy-python-api>`_
+
 .. _l-eco-website:
 
 Site web
@@ -847,8 +919,13 @@ Big data sans cluster, données non structurées
   données hétérogènes)
 - Base de données non relationnelles dont `NoSQL <http://fr.wikipedia.org/wiki/NoSQL>`_
 - :ref:`l-td25asynthese`
-- `Un tools d’itertour, ou l’inverse <http://sametmax.com/un-tools-ditertour-ou-linverse/>`_
+- `Un tools d'itertour, ou l'inverse <http://sametmax.com/un-tools-ditertour-ou-linverse/>`_
 - `Benchmark of Python JSON libraries <http://artem.krylysov.com/blog/2015/09/29/benchmark-python-json-libraries/>`_
+
+*Bases de données no SQL*
+
+* `MongoDB <https://www.mongodb.com/>`_
+* `rethinkdb <https://rethinkdb.com/>`_ (python : `rethinkdb <https://pypi.python.org/pypi/rethinkdb/>`_)
 
 .. _l-2a-cplusplus-para-serie:
 
@@ -897,6 +974,10 @@ tableau d'octets, c'est indispensable pour la communication entre deux machines,
 * `dask <http://dask.pydata.org/en/latest/>`_
 * `cytoolz <https://github.com/pytoolz/cytoolz>`_
 * `joblib <https://pythonhosted.org/joblib/>`_
+
+*Lectures*
+
+* `Out-of-Core Dataframes in Python: Dask and OpenStreetMap <https://jakevdp.github.io/blog/2015/08/14/out-of-core-dataframes-in-python/>`_ *(2015/12)*
 
 .. _l-puzzlealgo2A:
 
@@ -1001,38 +1082,21 @@ Bibliographie
    `PyPy <http://cython.org/>`_, ou `CPython <https://en.wikipedia.org/wiki/CPython>`_,
    je recommande d'y jeter un coup d'oeil d'abord.
 
-**Liens**
+**Liens sur la programmation**
 
 * `Python Scientific Lecture Notes <http://scipy-lectures.github.io/>`_
+* `Introduction to matplotlib <https://scipy-lectures.github.io/intro/matplotlib/matplotlib.html>`_
 * `Introduction to Data Processing with Python <http://opentechschool.github.io/python-data-intro/>`_
 * Quelques idées de livres : `Python for Data Scientists <https://www.packtpub.com/books/content/python-data-scientists>`_
-* `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
+* `Ultimate guide for Data Exploration in Python using NumPy, Matplotlib and Pandas <http://www.analyticsvidhya.com/blog/2015/04/comprehensive-guide-data-exploration-sas-using-python-numpy-scipy-matplotlib-pandas/#One>`_
 * `Don't use Hadoop - your data isn't that big <http://www.chrisstucchio.com/blog/2013/hadoop_hatred.html>`_
-* `A Roundup of Recent Text Analytics and Vis Work <http://blogger.ghostweather.com/2014/10/a-roundup-of-recent-text-analytics-and.html>`_
-* `A Tour of Machine Learning Algorithms <http://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/>`_
-* `Efficient Estimation of Word Representations in Vector Space <http://arxiv.org/abs/1301.3781>`_, Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean,
-  `Distributed Representations of Words and Phrases and their Compositionality <http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf>`_, Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, Jeff Dean,
-  `word2vec Parameter Learning Explained <http://arxiv.org/abs/1411.2738>`_, Xin Rong,
-  `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
 * `Prédire les épidémies avec Wikipedia <http://www.lemonde.fr/sante/article/2014/11/13/predire-les-epidemies-avec-wikipedia_4523461_1651302.html>`_, Le Monde
 * `FastML <http://fastml.com/>`_  (blog sur le machine learning)
-* `Introduction to matplotlib <https://scipy-lectures.github.io/intro/matplotlib/matplotlib.html>`_
-* `Probabilistic Context-Free Grammars (PCFGs) <http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf>`_
-* `Ultimate guide for Data Exploration in Python using NumPy, Matplotlib and Pandas <http://www.analyticsvidhya.com/blog/2015/04/comprehensive-guide-data-exploration-sas-using-python-numpy-scipy-matplotlib-pandas/#One>`_
-* `A Visual Introduction to Machine Learning <http://www.r2d3.us/visual-intro-to-machine-learning-part-1/>`_
 * `Mathematical optimization: finding minima of functions <http://scipy-lectures.github.io/advanced/mathematical_optimization/index.html>`_
-* `Out-of-Core Dataframes in Python: Dask and OpenStreetMap <https://jakevdp.github.io/blog/2015/08/14/out-of-core-dataframes-in-python/>`_ *(2015/12)*
-* `Evaluation of Deep Learning Toolkits <https://github.com/zer0n/deepframeworks/blob/master/README.md>`_ *(2015/12)*
-* `12 Algorithms Every Data Scientist Should Know <https://datafloq.com/read/12-algorithms-every-data-scientist-should-know/2024>`_ *(2016/06)*
-* `10+2 Data Science Methods that Every Data Scientist Should Know in 2016 <http://tjo-en.hatenablog.com/entry/2016/04/18/190000>`_ *(2016/06)*
 * `you can take the derivative of a regular expression?! <http://jvns.ca/blog/2016/04/25/how-regular-expressions-go-fast/>`_ *(2016/06)*
-* `"Why Should I Trust You?" Explaining the Predictions of Any Classifier <http://arxiv.org/pdf/1602.04938v1.pdf>`_ *(2016/06)*
 * `How to trick a neural network into thinking a panda is a vulture <https://codewords.recurse.com/issues/five/why-do-neural-networks-think-a-panda-is-a-vulture>`_ *(2016/06)*
 * `Matrix Factorization: A Simple Tutorial and Implementation in Python <http://www.quuxlabs.com/blog/2010/09/matrix-factorization-a-simple-tutorial-and-implementation-in-python/>`_ *(2016/06)*
-* `Complete Guide to Parameter Tuning in XGBoost (with codes in Python) <https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/>`_ *(2016/08)*
-* `colah's blog <http://colah.github.io/>`_ *(2016/08)* blog/cours sur le deep learning
 * `Top-down learning path: Machine Learning for Software Engineers <https://github.com/ZuzooVn/machine-learning-for-software-engineers>`_
-* `Factorization Machines with libFM <http://www.csie.ntu.edu.tw/~b97053/paper/Factorization%20Machines%20with%20libFM.pdf>`_ *(2016/09)*
 
 **Tutoriels**
 
@@ -1096,11 +1160,6 @@ Bibliographie
 * `UVa Online Judge <http://uva.onlinejudge.org/>`_
 * `Le problème des huit reines <http://zanotti.univ-tln.fr/algo/REINES.html>`_
 * `Projet Euler <https://projecteuler.net/>`_
-
-**Articles sur des librairies de machine learning**
-
-* `XGBoost: A Scalable Tree Boosting System <http://arxiv.org/pdf/1603.02754v1.pdf>`_,
-  Tianqi Chen, Carlos Guestrin
 
 Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_ :
 
