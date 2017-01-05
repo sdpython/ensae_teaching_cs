@@ -74,6 +74,8 @@ class TestPythonnet(unittest.TestCase):
                     # Audia device)
                     if os.environ["USERNAME"] == "ensaestudent" or \
                        os.environ["USERNAME"] == "vsxavierdupre" or \
+                       os.environ["USERNAME"] == "vsxavierdupre" or \
+                       "DOUZE2016" in os.environ["USERDOMAIN"] or \
                        os.environ["USERNAME"] == "appveyor" or \
                        "paris" in os.environ["COMPUTERNAME"].lower() or \
                        os.environ["USERNAME"].endswith("$"):  # anonymous Jenkins configuration
