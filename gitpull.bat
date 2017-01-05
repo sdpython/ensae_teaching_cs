@@ -33,4 +33,7 @@ cd ..
 cd python3_module_template
 git pull
 cd ..
+cd jupytalk
+git pull
+cd ..
 cd %current%
