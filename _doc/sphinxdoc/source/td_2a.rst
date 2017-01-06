@@ -308,6 +308,7 @@ Clustering
 * `Comparing Python Clustering Algorithms <https://github.com/scikit-learn-contrib/hdbscan/blob/master/docs/comparing_clustering_algorithms.rst>`_
 * `Fast and Provably Good Seedings for k-Means <https://papers.nips.cc/paper/6478-fast-and-provably-good-seedings-for-k-means.pdf>`_
 * `Clustering with Same-Cluster Queries <https://papers.nips.cc/paper/6449-clustering-with-same-cluster-queries.pdf>`_
+* `The K-Modes Algorithm for Clustering <https://arxiv.org/pdf/1304.6478v1.pdf>`_
 
 *Modules*
 
@@ -554,6 +555,7 @@ ou *apprentissage par renforcement*
 * `UCL Course on RL <http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html>`_
 * `Reinforcement Learning Part I <http://www.labri.fr/perso/nrougier/downloads/Chile-2014-Lecture-1.pdf>`_
   `Reinforcement Learning Part II <http://www.labri.fr/perso/nrougier/downloads/Chile-2014-Lecture-2.pdf>`_
+* `Strategic Attentive Writer for Learning Macro-Actions <https://arxiv.org/pdf/1606.04695.pdf>`_
 
 Bandits
 +++++++

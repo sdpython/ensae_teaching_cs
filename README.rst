@@ -54,21 +54,21 @@ Setup
 * `Anaconda <https://www.continuum.io/downloads>`_
   2 and 3 (to be installed on the same hard drive than the Jenkins build folder)
 * `Chrome <https://www.google.fr/chrome/browser/desktop/>`_
-* `CMake <https://cmake.org/>`_ (pour compiler XGBoost)
+* `CMake <https://cmake.org/>`_ (to build XGBoost)
 * `Graphviz <http://www.graphviz.org/>`_
 * `Git <https://git-scm.com/>`_
 * `GitHub <https://desktop.github.com/>`_
-* `Java 64 bit <https://www.java.com/fr/download/manual.jsp>`_
-* `Jenkins <https://jenkins.io/>`_
-* `Miktex basic installer 64 bit <https://miktex.org/download>`_
+* `Java 64 bit <https://www.java.com/fr/download/manual.jsp>`_ (for Spark)
+* `Jenkins <https://jenkins.io/>`_ (CI)
+* `Miktex Basic Installer 64 bit <https://miktex.org/download>`_ (formula in the documentation)
   (check the option to silently install new packages)
-* `Pandoc <http://pandoc.org/>`_
+* `Pandoc <http://pandoc.org/>`_ (documentation)
 * `Python <https://www.python.org/>`_ 3.5, 3.6, 2.7 64 bit
   (do not add the interpreter on the default PATH)
 * `R 3.2 <https://cran.r-project.org/bin/windows/base/old/3.2.0/>`_
 * `Scite <http://www.scintilla.org/SciTE.html>`_
 * `Visual Studio 2015 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_
-  (check C++, C#, Python, CLang)
+  (check C++, C#, Python, CLang) (Cython)
 
 For each Python, you need to install
 `pymyinstall <https://pypi.python.org/pypi/pymyinstall/>`_
