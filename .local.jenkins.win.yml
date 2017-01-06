@@ -10,8 +10,10 @@ install:
   - pip install --no-cache-dir --no-deps --index http://localhost:8067/simple/ pyquickhelper pyensae pymmails pymyinstall pyrsslocal mlstatpy
   - pip install -r requirements.txt
   - pip freeze
+  - pip freeze > pip_freeze.txt
 before_script:
   - python -u setup.py try_import
+  - set KERAS_BACKEND=theano
 script:
   - { CMD: "python -u setup.py unittests", NAME: "UT", TIMEOUT: 3600 }  # timeout is 3600 for the documentation
   - { CMD: "python -u setup.py unittests_LONG", NAME: "UT_LONG", TIMEOUT: 3600 }
