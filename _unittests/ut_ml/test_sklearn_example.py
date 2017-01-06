@@ -40,7 +40,7 @@ from pyquickhelper.loghelper import fLOG
 from src.ensae_teaching_cs.ml.sklearn_example_classifier import SkCustomKnn
 
 from sklearn import datasets
-from sklearn.cross_validation import train_test_split, cross_val_score
+from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.neighbors import KNeighborsClassifier
 
 
