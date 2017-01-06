@@ -39,10 +39,6 @@ except ImportError:
 from pyquickhelper.loghelper import fLOG
 from src.ensae_teaching_cs.ml.sklearn_example_classifier import SkCustomKnn
 
-from sklearn import datasets
-from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.neighbors import KNeighborsClassifier
-
 
 class TestSkCustomKnn (unittest.TestCase):
 
@@ -51,6 +47,10 @@ class TestSkCustomKnn (unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
+
+        from sklearn import datasets
+        from sklearn.model_selection import train_test_split, cross_val_score
+        from sklearn.neighbors import KNeighborsClassifier
 
         iris = datasets.load_iris()
         X = iris.data
