@@ -492,7 +492,7 @@ Setup pour déveloper ce cours (Windows)
 * `Pandoc <http://pandoc.org/>`_
 * `Python <https://www.python.org/>`_ 3.5, 3.6, 2.7 64 bit
   (il ne faut pas ajouter les interpréteur au PATH par défaut)
-* `R 3.2 <https://cran.r-project.org/bin/windows/base/old/3.2.0/>`_
+* `R 3.2.2 <https://cran.r-project.org/bin/windows/base/old/3.2.2/>`_
 * `Scite <http://www.scintilla.org/SciTE.html>`_
 * `TDM-GCC 64bit <http://tdm-gcc.tdragon.net/>`_ (theano)
 * `Visual Studio 2015 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_
