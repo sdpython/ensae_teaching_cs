@@ -10,7 +10,7 @@ from pyquickhelper.funcwin import open_window_params
 from pyquickhelper.filehelper.ftp_transfer_files import content_as_binary as pqh_content_as_binary
 
 
-def trigger_on_specific_strings(content, filename=None):
+def trigger_on_specific_strings(content, filename=None, force_allow=None):
     """
     look for specific string such as
     *USERNAME*, *USERDNSDOMAIN*, *HOMEPATH*, *USERNAME*, *COMPUTERNAME*, *LOGONSERVER*,
@@ -18,6 +18,7 @@ def trigger_on_specific_strings(content, filename=None):
 
     @param      content     content of a file
     @param      filename    only used when an exception is raised
+    @param      force_allow allow these expressions even if they seem to be credentials
     @return                 modified content
     """
     strep = [(r"C:\\%s\\__home_\\_data\\" % os.environ["USERNAME"], "somewhere"),
@@ -32,12 +33,16 @@ def trigger_on_specific_strings(content, filename=None):
         if s in content:
             content = content.replace(s, b)
 
+    if force_allow is None:
+        force_allow = set()
+    else:
+        force_allow = set(force_allow)
     lower_content = content.lower()
     for st in ["USERNAME", "USERDNSDOMAIN", "HOMEPATH", "USERNAME",
                "COMPUTERNAME", "LOGONSERVER"]:
         if st in os.environ:
             s = os.environ[st].lower()
-            if s in lower_content:
+            if s not in force_allow and s in lower_content:
                 raise Exception(
                     'string {0}:{1} was found in\n  File "{2}", line 1'.format(st, s, filename))
                 return None
@@ -83,7 +88,7 @@ def text_transform(ftpp, filename, content):
 
 def publish_documentation(docs, ftpsite=None, login=None, password=None,
                           key_save="my_password", footer_html=None, content_filter=trigger_on_specific_strings,
-                          is_binary=content_as_binary, fLOG=print):
+                          is_binary=content_as_binary, force_allow=None, fLOG=print):
     """
     publish the documentation and the setups of a python module on a webiste,
     it assumes the modules is organized the same way as
@@ -98,6 +103,8 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
     @param      content_filter  filter the content of a file (it raises an exception if the result is None),
                                 appies only on text files
     @param      is_binary       a function to tell if a content of a file is binary or not
+    @param      force_allow     a file is not published if it contains something which looks like credentials
+                                except if this string is part of *force_allow*
     @param      fLOG            logging function
 
     *docs* is a list of dictionaries which must contain for each folder
@@ -167,7 +174,8 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
                                  content_filter=content_filter,
                                  is_binary=is_binary,
                                  text_transform=text_transform,
-                                 filter_out=filter_out)
+                                 filter_out=filter_out,
+                                 force_allow=force_allow)
 
         fftp.start_transfering()
 
@@ -208,6 +216,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                                       "ensae_teaching_cs"
                                       ],
                              password=None,
+                             force_allow=None,
                              suffix=("_UT_35_std", "_DOC_35_std", ""),
                              fLOG=print):
     """
@@ -224,6 +233,8 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
     @param      password        if None, if will asked
     @param      layout          last part of the folders
     @param      suffix          suffixes to append to the project name
+    @param      force_allow     allow to publish files even if they contain these strings
+                                whereas they seem to be credentials
     @param      fLOG            logging function
 
     Example of use::
@@ -348,4 +359,5 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
     # publish
 
     publish_documentation(projects, ftpsite=ftpsite, login=login, password=password,
-                          key_save="my_module_password", footer_html=footer, fLOG=fLOG)
+                          key_save="my_module_password", footer_html=footer,
+                          force_allow=force_allow, fLOG=fLOG)

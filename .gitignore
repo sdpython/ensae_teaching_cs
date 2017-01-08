@@ -224,6 +224,8 @@ pip-log.txt
 temp_*
 out_*
 */sphinxdoc/source/index_*
+*/sphinxdoc/source/automation/*
+*/sphinxdoc/source/gyexamples/*
 */sphinxdoc/source/readme.*
 */sphinxdoc/source/LICENSE.txt
 */sphinxdoc/source/filechanges.*
@@ -234,6 +236,10 @@ version.txt
 */sphinxdoc/source/all*.rst
 */sphinxdoc/source/notebooks/*
 _doc/sphinxdoc/source/examples/*
+_doc/sphinxdoc/source/phdoc_static/*.css
+_doc/sphinxdoc/source/phdoc_static/*.html
+_doc/sphinxdoc/source/phdoc_static2/*.css
+_doc/sphinxdoc/source/phdoc_static3/*.css
 _doc/sphinxdoc/source/gallery/*
 !*/sphinxdoc/source/notebooks/_gs*
 */notebooks/*.zip
@@ -414,3 +420,5 @@ _doc/notebooks/td3a_spark/target/**
 _doc/notebooks/td3a_spark/rnd1*
 _doc/notebooks/td3a_spark/rnd2*
 
+_doc/sphinxdoc/source/phdoc_static/searchbox.html
+_doc/sphinxdoc/source/phdoc_static/searchbox.html

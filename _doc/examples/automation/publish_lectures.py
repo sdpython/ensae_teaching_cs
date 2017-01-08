@@ -5,8 +5,8 @@ Publish documentation
 
 The script shows how the documentation of this module and others is published.
 """
-login = "LOGIN"
-website = "ftp.SOMETHING"
+user = "LOGIN"
+ftpsite = "ftp.SOMETHING"
 rootw = "/www/htdocs/app/%s/helpsphinx"
 rootw2 = "/lesenfantscodaient.fr"
 
@@ -88,20 +88,21 @@ if code_google is None:
 # liste des modules à mettre à jouer
 # commenter ou décommenter les modules
 modules = [
-    "pyquickhelper",
-    "jyquickhelper",
-    "pyensae",
-    "pymyinstall",
-    "pysqllike",
-    "pyrsslocal",
-    "pymmails",
-    "python3_module_template",
     "actuariat_python",
     "code_beatrix",
     "ensae_projects",
     "jupytalk",
+    "jyquickhelper",
     "mlstatpy",
+    "pyensae",
+    "pymmails",
+    "pymyinstall",
+    "pyquickhelper",
+    "pyrsslocal",
+    "pysqllike",
+    "python3_module_template",
     "teachpyx",
+    #
     "ensae_teaching_cs"
 ]
 
@@ -117,6 +118,7 @@ google_id = code_google                         # identifiant google analytics
 
 ##################
 # La fonction :func:`publish_teachings_to_web cache` cache beaucoup de chose.
-
-publish_teachings_to_web(login=login, ftpsite=ftpsite, google_id=google_id,
-                         location=location, rootw=rootw, rootw2=rootw2, modules=modules, password=password)
+publish_teachings_to_web(login=user, ftpsite=ftpsite, google_id=google_id,
+                         location=location, rootw=rootw, rootw2=rootw2,
+                         modules=modules, password=pwd,
+                         force_allow=["xavierdupre"])
