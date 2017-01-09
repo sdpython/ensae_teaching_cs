@@ -33,6 +33,8 @@ en détail dans cette présentation :
 Le cours est évalué au premier semestre par un examen et aussi :ref:`l-examens-1A-algo`.
 Le second semestre et facultatif et est évalué par :ref:`projet informatique <l-projinfo1a>`.
 
+------------
+
 TD - les bases
 ==============
 
@@ -90,6 +92,8 @@ scientifiques. Il faudra dans tous les cas participer au jeu suivant :
 
     questions/exams_algo_1a
 
+------------
+
 TD - Site web et pratiques logiciels
 ====================================
 
@@ -131,6 +135,8 @@ Deux exercices sont suggérés pour une séance de deux heures à choisir parmi 
     Le templating fonction comme la fonction ``format`` et permet
     en plus de faire des répétitions. C'est très utiliser
     dans le domaine du web, notamment par `django <https://www.djangoproject.com/>`_.
+
+------------
 
 TD - algorithmes
 ================
@@ -220,6 +226,8 @@ Et pour apprendre :
 * `Google Jam <https://code.google.com/codejam/>`_
   (exemple : `Le problème des milkshakes <https://code.google.com/codejam/contest/32016/dashboard#s=p1​>`_)
 
+------------
+
 TD - calcul matriciel, graphes, données
 =======================================
 
@@ -271,6 +279,8 @@ si tel était le cas, ce serait très proche d'une solution proposée lors des T
 
 .. _l-td1a-start:
 
+------------
+
 Getting started
 ===============
 
@@ -282,6 +292,8 @@ Elles sont facilement téléchargeables avec ces deux modules :
 * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
 
 .. _l-td1a-biblio:
+
+------------
 
 Bibliographie
 =============

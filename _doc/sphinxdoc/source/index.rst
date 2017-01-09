@@ -78,16 +78,9 @@ Contenu des enseignements
     7. Visualisation <i_visualisation>
     8. Modules, Bibliographie, Articles, FAQ... <i_informations>
     9. Getting started <i_getting_started>
-    10. Index <i_index>
+    10. Galleries d'exemples <i_galleries>
+    11. Index <i_index>
 
-*Notebooks et exemples*
-
-.. toctree::
-    :maxdepth: 1
-
-    i_examples
-    all_notebooks
-    gyexamples/index
 
 Getting started
 ---------------

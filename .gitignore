@@ -243,7 +243,6 @@ _doc/sphinxdoc/source/phdoc_static3/*.css
 _doc/sphinxdoc/source/gallery/*
 !*/sphinxdoc/source/notebooks/_gs*
 */notebooks/*.zip
-*/notebooks/*.txt
 */notebooks/td1a/*.zip
 */notebooks/td1a/*.dbf
 */notebooks/td1a/python*.png
@@ -258,7 +257,6 @@ _doc/sphinxdoc/source/gallery/*
 */notebooks/td1a/example_bokeh.*
 */notebooks/td1a/osm.*
 */notebooks/td1a/shapefiles/*
-*/notebooks/donnees/*.txt
 */notebooks/donnees/*.gz
 */notebooks/donnees/*.db3
 */notebooks/donnees/*.hdf5
@@ -266,7 +264,6 @@ _doc/sphinxdoc/source/gallery/*
 */notebooks/2a/*.rst
 */notebooks/2a/*.html
 */notebooks/td2a/*.zip
-*/notebooks/td2a/*.txt
 */notebooks/td2a/*.dbf
 */notebooks/td2a/*.xlsx
 */notebooks/td2a/*.db3
@@ -285,7 +282,6 @@ _doc/presentations/*/cours*.pdf
 */notebooks/td3a/sel*.pig
 */notebooks/td3a/solution*.pig
 */notebooks/td3a/*redirection*
-README
 */notebooks/td3a/stderr.txt
 */notebooks/td3a/results.txt
 */notebooks/td3a/result*.txt
@@ -316,7 +312,6 @@ README
 */notebooks/expose/mortalite_5*.txt
 */notebooks/notebook_eleves/2014_2015/*.zip
 */notebooks/notebook_eleves/2014_2015/*.gz
-*/notebooks/notebook_eleves/2014_2015/*.txt
 */notebooks/notebook_eleves/2014_2015/*.pig
 */notebooks/notebook_eleves/2014_2015/*.csv
 */notebooks/notebook_eleves/2014_2015/stdout
@@ -354,7 +349,6 @@ _doc/notebooks/td2a/*.db
 _doc/notebooks/td2a/data*
 _doc/notebooks/td2a/log
 _doc/notebooks/td2a_eco/*.jpg
-_doc/notebooks/td3a/*.txt
 _doc/notebooks/td3a/*.jar
 _doc/notebooks/td3a/reservoir_sample.py
 _doc/notebooks/td3a/reservoir_sample.temp.py
@@ -377,7 +371,6 @@ enumerate_send_email_debug.html
 _unittests/run_unittests.py.out
 _doc/notebooks/td1a/lisezmoi_MAR2012.txt
 _doc/notebooks/1a/pdf.prof
-.eggs/README.txt
 _unittests/ut_data/besancon.df.txt
 _doc/notebooks/expose/besancon.df.txt
 _doc/competitions/2016_ENSAE_2A/competition/competition.zip
@@ -404,7 +397,6 @@ src/ensae_teaching_cs/cryptcode.py
 _doc/notebooks/td2a_eco/ensemble_gares.csv
 _doc/notebooks/td3a/pageviews-20161101-000000
 _doc/notebooks/competitions/2016/*.zip
-_doc/notebooks/competitions/2016/*.txt
 _doc/notebooks/competitions/*.zip
 _doc/notebooks/competitions/answer.csv
 _unittests/ut_faq/operadriver.exe
@@ -419,6 +411,13 @@ _doc/notebooks/td3a_spark/*.parquet
 _doc/notebooks/td3a_spark/target/**
 _doc/notebooks/td3a_spark/rnd1*
 _doc/notebooks/td3a_spark/rnd2*
+_doc/sphinxdoc/source/phdoc_static/searchbox.html
+_doc/sphinxdoc/source/phdoc_static2/searchbox.html
+_doc/sphinxdoc/source/phdoc_static3/searchbox.html
+_doc/notebooks/td2a/ensae_*.txt
+_doc/notebooks/competitions/2016/ensae_*.txt
+_doc/notebooks/competitions/2016/ensae_*.zip
+_doc/notebooks/td3a/GLE*.txt
 
-_doc/sphinxdoc/source/phdoc_static/searchbox.html
-_doc/sphinxdoc/source/phdoc_static/searchbox.html
+
+

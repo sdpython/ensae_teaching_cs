@@ -1,4 +1,6 @@
 
+.. _td2A-competition-ml:
+
 Compétitions de machine learning
 --------------------------------
 

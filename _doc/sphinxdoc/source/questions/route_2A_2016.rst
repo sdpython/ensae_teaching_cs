@@ -21,7 +21,8 @@ pistes :
 
 Une compétition sera ouverte le premier jour et
 fermée à la dernière session où les résultas et les idées seront
-discutées : `Compétition Python 2A ENSAE <https://competitions.codalab.org/competitions/13431>`_.
+discutées : `Compétition Python 2A ENSAE <https://competitions.codalab.org/competitions/13431>`_
+(voir aussi :ref:`notebook compétition 2016 <td2a-competitions-ml-2016>`).
 
 La séance dédiées aux :ref:`l-puzzlealgo2A`
 requiert la participation de la part des participants :

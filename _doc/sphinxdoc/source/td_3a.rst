@@ -18,6 +18,8 @@ Le cours est évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 
 .. contents::
     :local:
+    
+------------
 
 Eléments techniques
 ===================
@@ -76,6 +78,8 @@ GPU
 * `The Art of Multiprocessor Programming <http://edc.tversu.ru/elib/inf/0189.pdf>`_, Maurice Herlihy, Nir Shavit
 * `An Introduction to GPGPU Programming - CUDA Architecture <http://www.diva-portal.org/smash/get/diva2:447977/FULLTEXT01.pdf>`_, Rafia Inam
 
+------------
+
 Eléments théoriques
 ===================
 
@@ -107,6 +111,8 @@ Algorithmes
 *Vidéo*
 
 * `CS231n Winter 2016 Lecture 4 Backpropagation, Neural Networks 1- <https://www.youtube.com/watch?v=GZTvxoSHZIo&feature=youtu.be>`_
+
+------------
 
 Eléments logiciels
 ==================
@@ -206,6 +212,8 @@ Map Reduce en pratique
 * Schéma des langages de map/reduce :
   `lazy evaluation <https://en.wikipedia.org/wiki/Lazy_evaluation>`_ (évalusation presseuse, dask, Spark, PIG)
 
+------------
+
 Map Reduce
 ==========
 
@@ -274,6 +282,11 @@ avec Spark et Spark SQL
   Matei Zaharia, Mosharaf Chowdhury, Tathagata Das, Ankur Dave, Justin Ma, Murphy McCauley, Michael J. Franklin, Scott Shenker, Ion Stoica
 * `From scikit-learn to Spark ML <http://blog.xebia.fr/2015/10/08/from-scikit-learn-to-spark-ml/>`_ *(2016/06)*
 
+*Modules*
+
+* `spark-sklearn <https://databricks.com/blog/2016/02/08/auto-scaling-scikit-learn-with-apache-spark.html>`_ :
+  implémentation d'un grid search distribué pour `scikit-learn <http://scikit-learn.org/>`_.
+
 .. _l-td3a-start:
 
 Getting started, installation, setup
@@ -303,6 +316,8 @@ SPARK
     td_3a_spark
 
 .. _l-td3a-biblio:
+
+------------
 
 Bibliographie
 =============
