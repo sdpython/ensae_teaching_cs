@@ -5,10 +5,10 @@
     :date: 2017-01-08
     :categories: modules
 
-    Je ne l'ai pas essayé mais il a l'air intéressant pour
+    Je ne l'ai pas essayÃ© mais il a l'air intÃ©ressant pour
     quiconque souhaite coder des algorithmes de
     trading automatiques :
     `TA-LIB <http://ta-lib.org/>`_
     et son interface
     `Python <https://github.com/mrjbq7/ta-lib>`_.
-    La plupart des indicateurs financiers y sont implémentés.
+    La plupart des indicateurs financiers y sont implÃ©mentÃ©s.
