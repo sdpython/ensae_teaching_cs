@@ -519,6 +519,7 @@ Pour Jenkins, quelques extensions :
 
 * Last Console Output
 * Next Jobs
+* `Text File <https://wiki.jenkins-ci.org/display/JENKINS/Text+File+Operations+Plugin>`_
 
 Pour Jupyter :
 
@@ -551,6 +552,10 @@ pyquickhelper :
 
 Pour certains projets (comme la compilation de *pywin32*), il faut
 installer `Windows SDK <https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>`_.
+Pour Python 2.7, le module
+`backports.shutil_get_terminal_size <https://pypi.python.org/pypi/backports.shutil_get_terminal_size/>`_
+doit être désinstallé car il ne marche pas depuis un environnment virtuel.
+Les scripts automatisés doivent l'installer dans cet environnement.
 
 Maintenir sa distribution Python à jour
 =======================================

@@ -80,6 +80,7 @@ Jenkins requires a few extensions:
 
 * Last Console Output
 * Next Jobs
+* `Text File <https://wiki.jenkins-ci.org/display/JENKINS/Text+File+Operations+Plugin>`_
 
 For Jupyter :
 
@@ -109,3 +110,9 @@ pyquickhelper :
 For some projects (such as the compilation of *pywin32*),
 `Windows SDK <https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>`_
 needs to be installed.
+
+For Python 2.7, the module 
+`backports.shutil_get_terminal_size <https://pypi.python.org/pypi/backports.shutil_get_terminal_size/>`_
+needs to be removed. It does not work from a virtual environment unless it is installed
+from there.
+
