@@ -861,7 +861,6 @@ Détection d'anomalies
 * `pyculiarity <https://github.com/nicolasmiller/pyculiarity>`_
 * `lsanomaly <https://github.com/lsanomaly/lsanomaly>`_
 
-
 ------------
 
 Techniques de programmation et algorithmes

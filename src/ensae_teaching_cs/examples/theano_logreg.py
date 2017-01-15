@@ -11,15 +11,17 @@ Mathematically, this can be written as:
 
 .. math::
 
-      P(Y=i|x, W,b) &= softmax_i(W x + b) \\\\
+      P(Y=i|x, W,b) &= f_i(W x + b) \\\\
                     &= \\frac {e^{W_i x + b_i}} {\\sum_j e^{W_j x + b_j}}
 
+:math:`f_i`` is the activation function attached to the neuron *i*
+(see `rectifier <https://en.wikipedia.org/wiki/Rectifier_(neural_networks)>`_).
 The output of the model or prediction is then done by taking the argmax of
 the vector whose i'th element is :math:`P(Y=i|x)`.
 
 .. math::
 
-    y_{pred} = \\argmax_i P(Y=i|x,W,b)
+    y_{pred} = \\arg \\max_i P(Y=i|x,W,b)
 
 
 This tutorial presents a stochastic gradient descent optimization method

@@ -18,7 +18,7 @@ Le cours est évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 
 .. contents::
     :local:
-    
+
 ------------
 
 Eléments techniques

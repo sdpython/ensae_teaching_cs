@@ -81,7 +81,7 @@ On peut montrer que les problème SAT et
 Beaucoup de problèmes se présentent sous la forme d'une optimisation.
 Or *SAT* est un problème de décision : existe-t-il un point de
 :math:`\acc{0,1}^N` qui vérifie une clause logique :
-:math:`\wee_k  ( y_{1k} \wedge ... \wedge y_{n_k k} )`
+:math:`\vee_k  ( y_{1k} \wedge ... \wedge y_{n_k k} )`
 avec :math:`y_{ik}` est soit :math:`x_i` soit :math:`\neg x_i` ?
 Pour passer de l'un à l'autre, on transforme le problème d'optimisation
 en un problème de décision : existe-t-il une solution dont l'évaluation

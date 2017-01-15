@@ -22,6 +22,7 @@ Les technologies proposées sont donc :
 
 * GPU : `CUDA <http://fr.wikipedia.org/wiki/Compute_Unified_Device_Architecture>`_ et C, ou CUDA et python via
   `pyCUDA <http://mathema.tician.de/software/pycuda/>`_
+* `theano <http://deeplearning.net/software/theano/>`_ : GPU + python
 * Map/Reduce : `PIG <http://en.wikipedia.org/wiki/Pig_Latin>`_,
   `Hive <http://fr.wikipedia.org/wiki/Hive>`_ ou Java sur un cluster Cloudera ou Azure
 * implémentation d'un calcul réparti : `QueueStorage <http://azure.microsoft.com/fr-fr/documentation/articles/storage-dotnet-how-to-use-queues/>`_ +
@@ -76,6 +77,8 @@ Suggestions d'articles
 * `Map/Reduce Affinity Propagation Clustering Algorithm <http://www.ijeee.net/uploadfile/2014/0807/20140807114023665.pdf>`_ ou
   `Parallel Hierarchical Affinity Propagation with MapReduce <https://arxiv.org/abs/1403.7394>`_
 * `Local Approximation of PageRank and Reverse PageRank <https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/34455.pdf>`_
+* `A Fast Parallel SGD for Matrix Factorization in Shared Memory Systems <https://www.csie.ntu.edu.tw/~cjlin/papers/libmf/libmf.pdf>`_
+* `CuMF_SGD: Fast and Scalable Matrix Factorization <https://arxiv.org/pdf/1610.05838.pdf>`_
 
 Nous vous recommandons d'adopter la démarche suivante:
 

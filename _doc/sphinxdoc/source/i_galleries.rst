@@ -11,4 +11,3 @@ Galleries d'exemples
     i_examples
     all_notebooks
     gyexamples/index
-
