@@ -8,6 +8,7 @@ addons:
       - ffmpeg
       - build-dep
       - graphviz
+      - libgfortran3
       # - python-pygame
       # - mercurial
       # - libsdl2-dev
