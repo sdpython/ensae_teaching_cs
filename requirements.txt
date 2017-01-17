@@ -29,6 +29,7 @@ pyquickhelper
 pyreadline
 python-jenkins
 requests-oauthlib
+toolz
 version_information
 xlsxwriter
 xmltodict
