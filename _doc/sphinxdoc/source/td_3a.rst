@@ -62,8 +62,6 @@ GPU
 * `Introduction aux réseaux convolutifs <http://matlabtricks.com/post-5/3x3-convolution-kernels-with-online-demo#demo>`_,
   `Canny edge detector <https://en.wikipedia.org/wiki/Canny_edge_detector>`_
 * `Understanding Convolution in Deep Learning <http://timdettmers.com/2015/03/26/convolution-deep-learning/>`_
-* `Pycuda <https://mathema.tician.de/software/pycuda/>`_,
-  `theano <http://deeplearning.net/software/theano/>`_
 * `Introduction au GPGPU <https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units>`_
 * `Quelques éléments de consommation électrique sur les GPU et CPU <http://blog.octo.com/la-technologie-gpgpu-1ere-partie-le-cote-obscur-de-la-geforce/>`_
 * `Inter-Block GPU Communication via Fast Barrier Synchronization <http://eprints.cs.vt.edu/archive/00001087/01/TR_GPU_synchronization.pdf>`_
@@ -78,6 +76,15 @@ GPU
 * `The Art of Multiprocessor Programming <http://edc.tversu.ru/elib/inf/0189.pdf>`_, Maurice Herlihy, Nir Shavit
 * `An Introduction to GPGPU Programming - CUDA Architecture <http://www.diva-portal.org/smash/get/diva2:447977/FULLTEXT01.pdf>`_, Rafia Inam
 
+*Python*
+
+* `GPU and pycuda or pyopencl on Windows <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx//blog/2017/2017-01-14_cuda.html>`_
+* `Pycuda <https://mathema.tician.de/software/pycuda/>`_ ou 
+  `pyopencl <https://documen.tician.de/pyopencl/>`_ 
+  pour ceux qui n'ont pas de carte
+  `NVidia <http://www.nvidia.com/content/global/global.php>`_
+* `theano <http://deeplearning.net/software/theano/>`_,
+  
 ------------
 
 Eléments théoriques

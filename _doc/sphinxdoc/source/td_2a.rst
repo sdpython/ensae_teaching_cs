@@ -539,6 +539,8 @@ Deep Learning
 * `mxnet <https://github.com/dmlc/mxnet>`_
 * `caffe <http://caffe.berkeleyvision.org/>`_ (`installation <http://caffe.berkeleyvision.org/installation.html>`_)
 * `climin <http://climin.readthedocs.io/en/latest/rmsprop.html>`_ (algorithme de back propagation)
+* `pytorch <http://pytorch.org/>`_ (Facebook)
+* `tensorflow <https://www.tensorflow.org/>`_ (Google)
 
 *à suivre*
 
