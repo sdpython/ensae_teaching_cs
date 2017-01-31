@@ -525,6 +525,12 @@ Deep Learning
 * `Fast R-CNN <https://arxiv.org/abs/1504.08083>`_ (voir `Object Detection using Fast R CNN <https://github.com/Microsoft/CNTK/wiki/Object-Detection-using-Fast-R-CNN>`_)
 * `Evaluation of Deep Learning Toolkits <https://github.com/zer0n/deepframeworks/blob/master/README.md>`_ *(2015/12)*
 
+*Plus théoriques*
+
+* `Why Does Unsupervized Deep Learning Work? - A perspective from group theory <https://arxiv.org/pdf/1412.6621v3.pdf>`_
+* `Deep Learning of Representations: Looking Forward <https://arxiv.org/pdf/1305.0445v2.pdf>`_
+* `Why Does Unsupervised Pre-training Help Deep Learning? <http://jmlr.org/papers/volume11/erhan10a/erhan10a.pdf>`_
+
 *Lectures deep text*
 
 * `Efficient Estimation of Word Representations in Vector Space <http://arxiv.org/abs/1301.3781>`_, Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean,
@@ -1068,6 +1074,29 @@ Certains sont tirés de plusieurs sites dont
   *This is my multi-month study plan for going from web developer (self-taught, no CS degree) to Google software engineer.*
 * `Cache replacement policies <https://en.wikipedia.org/wiki/Cache_replacement_policies>`_
 * `Livres techniques en français <https://github.com/vhf/free-programming-books/blob/master/free-programming-books-fr.md>`_
+
+Streaming algorithms
+++++++++++++++++++++
+
+(*à venir*)
+
+Plan
+
+* Calcul d'une médiane
+* Algorithme `BJKST <http://info.prelert.com/blog/hashing-and-approximate-distinct-value-counts>`_
+
+*Lectures*
+
+* `Streaming Algorithms <http://resources.mpi-inf.mpg.de/departments/d1/teaching/ss14/gitcs/notes3.pdf>`_
+* `Data Stream Algorithms <http://www.cs.dartmouth.edu/~ac/Teach/CS85-Fall09/Notes/lecnotes.pdf>`_
+* `Optimal streaming histograms <https://amplitude.com/blog/2014/08/06/optimal-streaming-histograms/>`_
+* `Density Estimation Over Data Stream <http://alumni.cs.ucr.edu/~wli/publications/deosd.pdf>`_
+* `Data Streaming Algorithms <http://www.cs.dartmouth.edu/~ac/Teach/CS49-Fall11/Notes/lecnotes.pdf>`_
+* `Confidence Decision Trees via Online and Active Learning for Streaming (BIG) Data <https://arxiv.org/pdf/1604.03278.pdf>`_
+
+*Modules*
+
+* `StreamLib <https://github.com/jiecchen/StreamLib>`_
 
 ------------
 

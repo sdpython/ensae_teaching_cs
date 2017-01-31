@@ -79,12 +79,12 @@ GPU
 *Python*
 
 * `GPU and pycuda or pyopencl on Windows <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx//blog/2017/2017-01-14_cuda.html>`_
-* `Pycuda <https://mathema.tician.de/software/pycuda/>`_ ou 
-  `pyopencl <https://documen.tician.de/pyopencl/>`_ 
+* `Pycuda <https://mathema.tician.de/software/pycuda/>`_ ou
+  `pyopencl <https://documen.tician.de/pyopencl/>`_
   pour ceux qui n'ont pas de carte
   `NVidia <http://www.nvidia.com/content/global/global.php>`_
 * `theano <http://deeplearning.net/software/theano/>`_,
-  
+
 ------------
 
 Eléments théoriques

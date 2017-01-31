@@ -143,7 +143,7 @@ Alignement de mots dans l'optique de constuire un traducteur automatique
 ------------------------------------------------------------------------
 
 L'algorithme est présentée dans l'article :
-`Word Alignment via Quadratic Assignment <http://www.seas.upenn.edu/~taskar/pubs/naacl06_qap.pdf>`_
+`Word Alignment via Quadratic Assignment <http://homes.cs.washington.edu/~taskar/pubs/naacl06_qap.pdf>`_
 de Simon Lacoste-Julien, Ben Taskar, Dan Klein, Michael I. Jordan.
 On pourra commencer sur un jeu de données petit et fabriqué manuellement. On pourra ensuite s'attaquer à
 des sites web qui proposent des traductions anglais/français de leur contenu.
