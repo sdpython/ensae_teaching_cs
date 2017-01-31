@@ -414,7 +414,7 @@ def readStyleFile(filename):
                         print("Error in style file:\n", line)
                         sys.exit(1)
             return appliedstyle
-        except:
+        except Exception:
             appliedstyle = py_style
             return py_style
 

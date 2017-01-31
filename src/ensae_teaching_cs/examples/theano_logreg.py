@@ -194,7 +194,7 @@ def theano_load_data(dataset):
     with gzip.open(dataset, 'rb') as f:
         try:
             train_set, valid_set, test_set = pickle.load(f, encoding='latin1')
-        except:
+        except Exception:
             train_set, valid_set, test_set = pickle.load(f)
 
     # train_set, valid_set, test_set format: tuple(input, target)

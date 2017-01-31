@@ -268,7 +268,7 @@ def appariement(events, iter=1000, params=ParemetreCoutTrajet(), fLOG=print):
     def dd(a, b):
         try:
             return b - a
-        except:
+        except Exception:
             return None
 
     # for a in appariement :
