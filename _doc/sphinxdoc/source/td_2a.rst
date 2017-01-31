@@ -1093,6 +1093,10 @@ Plan
 * `Density Estimation Over Data Stream <http://alumni.cs.ucr.edu/~wli/publications/deosd.pdf>`_
 * `Data Streaming Algorithms <http://www.cs.dartmouth.edu/~ac/Teach/CS49-Fall11/Notes/lecnotes.pdf>`_
 * `Confidence Decision Trees via Online and Active Learning for Streaming (BIG) Data <https://arxiv.org/pdf/1604.03278.pdf>`_
+* `Approximation and Streaming Algorithms for Histogram Construction Problems <http://www.mathcs.emory.edu/~cheung/papers/StreamDB/Histogram/2005-Guha-Histogram.pdf>`_
+* `State-of-the-art on clustering data streams <https://bdataanalytics.biomedcentral.com/articles/10.1186/s41044-016-0011-3>`_
+* `Parallel Computing of Kernel Density Estimates with MPI <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.102.5195&rep=rep1&type=pdf>`_
+* `Density Estimation with Adaptive Sparse Grids for Large Data Sets <http://web.mit.edu/pehersto/www/preprints/sgde_siam.pdf>`_
 
 *Modules*
 
