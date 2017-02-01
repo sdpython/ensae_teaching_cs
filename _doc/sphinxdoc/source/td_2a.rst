@@ -84,6 +84,10 @@ utilité des index,
 premiers graphiques,
 commandes magiques.
 
+.. contents::
+    :local:
+    :depth: 1
+
 DataFrame
 +++++++++
 
@@ -296,10 +300,9 @@ Distances
 * `Learning Hierarchical Similarity Metrics <http://www.cs.toronto.edu/~vnair/cvpr12.pdf>`_
 * `From Word Embeddings To Document Distances <http://jmlr.org/proceedings/papers/v37/kusnerb15.pdf>`_
 
-------------
 
 Clustering
-==========
+++++++++++
 
 |pyecopng| |pystatpng|
 
@@ -325,6 +328,32 @@ Clustering
 
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 * `hdbscan <https://github.com/scikit-learn-contrib/hdbscan>`_
+
+
+Détection d'anomalies
++++++++++++++++++++++
+
+*(à venir)*
+
+*Lectures*
+
+* `A Classification Framework for Anomaly Detection <http://www.jmlr.org/papers/volume6/steinwart05a/steinwart05a.pdf>`_
+* `Security Analysis of Online Centroid Anomaly Detection <http://www.jmlr.org/papers/volume13/kloft12b/kloft12b.pdf>`_
+* `Robust Random Cut Forest Based Anomaly Detection On Streams <http://jmlr.org/proceedings/papers/v48/guha16.pdf>`_
+* `Network Traffic Decomposition for Anomaly Detection <https://arxiv.org/abs/1403.0157v1>`_
+* `Network Volume Anomaly Detection and Identification in Large-scale Networks based on Online Time-structured Traffic Tensor Tracking <https://arxiv.org/abs/1608.05493v1>`_
+
+*Vidéos*
+
+* `Anomaly Detection vs. Supervised Learning <https://www.coursera.org/learn/machine-learning/lecture/Rkc5x/anomaly-detection-vs-supervised-learning>`_
+
+*Modules*
+
+* `scikit-learn <http://scikit-learn.org/stable/modules/outlier_detection.html>`_
+* `pyculiarity <https://github.com/nicolasmiller/pyculiarity>`_
+* `lsanomaly <https://github.com/lsanomaly/lsanomaly>`_
+
+
 
 ------------
 
@@ -525,6 +554,17 @@ Deep Learning
 * `Fast R-CNN <https://arxiv.org/abs/1504.08083>`_ (voir `Object Detection using Fast R CNN <https://github.com/Microsoft/CNTK/wiki/Object-Detection-using-Fast-R-CNN>`_)
 * `Evaluation of Deep Learning Toolkits <https://github.com/zer0n/deepframeworks/blob/master/README.md>`_ *(2015/12)*
 
+*Chiffres, Textes*
+
+* `One weird trick for parallelizing convolutional neural networks <https://arxiv.org/pdf/1404.5997v2.pdf>`_
+* `ImageNet Classification with Deep Convolutional Neural Networks <https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf>`_
+* `Very Deep Convolutional Networks for Large-Scale Image Recognition <https://arxiv.org/pdf/1409.1556v6.pdf>`_
+* `Multi-Digit Recognition Using A Space Displacement Neural Network  <https://papers.nips.cc/paper/557-multi-digit-recognition-using-a-space-displacement-neural-network.pdf>`_
+* `Space Displacement Localization Neural Networks to locate origin points of handwritten text lines in historical documents <http://liris.cnrs.fr/christian.wolf/papers/icdar-hip2015.pdf>`_
+* `Neural Network Architectures <https://culurciello.github.io/tech/2016/06/04/nets.html>`_,
+  `Convolutional Neural Networks (CNNs / ConvNets) <http://cs231n.github.io/convolutional-networks/#conv>`_
+* `Transfer Learning <http://cs231n.github.io/transfer-learning/>`_
+
 *Plus théoriques*
 
 * `Why Does Unsupervized Deep Learning Work? - A perspective from group theory <https://arxiv.org/pdf/1412.6621v3.pdf>`_
@@ -640,6 +680,10 @@ Factorizaion Machines
 Machine Learning Avancé
 =======================
 
+.. contents::
+    :local:
+    :depth: 1
+
 Interprétabilité des modèles
 ++++++++++++++++++++++++++++
 
@@ -690,6 +734,35 @@ Modèles avec dépendances dans le temps
 * `Learning Algorithms for Second-Price Auctions with Reserve <http://www.jmlr.org/papers/volume17/14-499/14-499.pdf>`_
 * `Machine Learning in an Auction Environment <http://www.jmlr.org/papers/volume17/15-109/15-109.pdf>`_
 
+Timeseries - Séries temporelles
++++++++++++++++++++++++++++++++
+
+|pyecopng| |pystatpng|
+
+*Notebooks*
+
+.. toctree::
+    :maxdepth: 2
+
+    notebooks/_gs2a_timeseries
+
+*Lectures*
+
+* `Time series analysis with pandas <http://earthpy.org/pandas-basics.html>`_
+* `Consistent Algorithms for Clustering Time Series <http://www.jmlr.org/papers/volume17/khaleghi16a/khaleghi16a.pdf>`_
+* `Learning Time Series Detection Models from Temporally Imprecise Labels <https://arxiv.org/abs/1611.02258>`_
+* `Time Series Prediction With Deep Learning in Keras <http://machinelearningmastery.com/time-series-prediction-with-deep-learning-in-python-with-keras/>`_
+* `Sequence Classification with LSTM Recurrent Neural Networks in Python with Keras <http://machinelearningmastery.com/sequence-classification-lstm-recurrent-neural-networks-python-keras/>`_
+* `Time Series Classification and Clustering with Python <http://alexminnaar.com/time-series-classification-and-clustering-with-python.html>`_
+* `Dynamic Time Warping <https://en.wikipedia.org/wiki/Dynamic_time_warping>`_
+* `Functional responses, functional covariates and the concurrent model <http://www.ece.uvic.ca/~bctill/papers/mocap/Ramsay_Silverman_2005ao.pdf>`_
+
+*Modules*
+
+* `statsmodels <http://statsmodels.sourceforge.net/>`_
+
+
+
 Auto-Learning
 +++++++++++++
 
@@ -737,8 +810,8 @@ Machine Learning sur des données cryptées
 
 ------------
 
-NLP - Image - Réseaux - Timeseries - Anomalies
-==============================================
+NLP - Image - Réseaux
+=====================
 
 .. contents::
     :local:
@@ -796,33 +869,6 @@ Traitement du langage
 * `gensim <https://radimrehurek.com/gensim/>`_
 * `spacy <https://spacy.io/>`_
 
-Timeseries - Séries temporelles
-+++++++++++++++++++++++++++++++
-
-|pyecopng| |pystatpng|
-
-*Notebooks*
-
-.. toctree::
-    :maxdepth: 2
-
-    notebooks/_gs2a_timeseries
-
-*Lectures*
-
-* `Time series analysis with pandas <http://earthpy.org/pandas-basics.html>`_
-* `Consistent Algorithms for Clustering Time Series <http://www.jmlr.org/papers/volume17/khaleghi16a/khaleghi16a.pdf>`_
-* `Learning Time Series Detection Models from Temporally Imprecise Labels <https://arxiv.org/abs/1611.02258>`_
-* `Time Series Prediction With Deep Learning in Keras <http://machinelearningmastery.com/time-series-prediction-with-deep-learning-in-python-with-keras/>`_
-* `Sequence Classification with LSTM Recurrent Neural Networks in Python with Keras <http://machinelearningmastery.com/sequence-classification-lstm-recurrent-neural-networks-python-keras/>`_
-* `Time Series Classification and Clustering with Python <http://alexminnaar.com/time-series-classification-and-clustering-with-python.html>`_
-* `Dynamic Time Warping <https://en.wikipedia.org/wiki/Dynamic_time_warping>`_
-* `Functional responses, functional covariates and the concurrent model <http://www.ece.uvic.ca/~bctill/papers/mocap/Ramsay_Silverman_2005ao.pdf>`_
-
-*Modules*
-
-* `statsmodels <http://statsmodels.sourceforge.net/>`_
-
 Images
 ++++++
 
@@ -845,29 +891,6 @@ Graphes et réseaux
 *Lectures*
 
 * `Basic models and questions in statistical network analysis <https://arxiv.org/abs/1609.03511>`_
-
-Détection d'anomalies
----------------------
-
-*(à venir)*
-
-*Lectures*
-
-* `A Classification Framework for Anomaly Detection <http://www.jmlr.org/papers/volume6/steinwart05a/steinwart05a.pdf>`_
-* `Security Analysis of Online Centroid Anomaly Detection <http://www.jmlr.org/papers/volume13/kloft12b/kloft12b.pdf>`_
-* `Robust Random Cut Forest Based Anomaly Detection On Streams <http://jmlr.org/proceedings/papers/v48/guha16.pdf>`_
-* `Network Traffic Decomposition for Anomaly Detection <https://arxiv.org/abs/1403.0157v1>`_
-* `Network Volume Anomaly Detection and Identification in Large-scale Networks based on Online Time-structured Traffic Tensor Tracking <https://arxiv.org/abs/1608.05493v1>`_
-
-*Vidéos*
-
-* `Anomaly Detection vs. Supervised Learning <https://www.coursera.org/learn/machine-learning/lecture/Rkc5x/anomaly-detection-vs-supervised-learning>`_
-
-*Modules*
-
-* `scikit-learn <http://scikit-learn.org/stable/modules/outlier_detection.html>`_
-* `pyculiarity <https://github.com/nicolasmiller/pyculiarity>`_
-* `lsanomaly <https://github.com/lsanomaly/lsanomaly>`_
 
 ------------
 
