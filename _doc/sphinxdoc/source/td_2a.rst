@@ -300,7 +300,6 @@ Distances
 * `Learning Hierarchical Similarity Metrics <http://www.cs.toronto.edu/~vnair/cvpr12.pdf>`_
 * `From Word Embeddings To Document Distances <http://jmlr.org/proceedings/papers/v37/kusnerb15.pdf>`_
 
-
 Clustering
 ++++++++++
 
@@ -329,7 +328,6 @@ Clustering
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 * `hdbscan <https://github.com/scikit-learn-contrib/hdbscan>`_
 
-
 Détection d'anomalies
 +++++++++++++++++++++
 
@@ -352,8 +350,6 @@ Détection d'anomalies
 * `scikit-learn <http://scikit-learn.org/stable/modules/outlier_detection.html>`_
 * `pyculiarity <https://github.com/nicolasmiller/pyculiarity>`_
 * `lsanomaly <https://github.com/lsanomaly/lsanomaly>`_
-
-
 
 ------------
 
@@ -760,8 +756,6 @@ Timeseries - Séries temporelles
 *Modules*
 
 * `statsmodels <http://statsmodels.sourceforge.net/>`_
-
-
 
 Auto-Learning
 +++++++++++++
