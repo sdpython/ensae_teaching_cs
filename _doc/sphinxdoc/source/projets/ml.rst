@@ -192,3 +192,21 @@ Régression à base de plus proches voisins (2017)
 Il faut implémenter la méthode de l'article qui suit :
 
 * `Minimax-optimal semi-supervised regression on unknown manifolds <https://arxiv.org/abs/1611.02221>`_
+
+.. _l-ml-ethique:
+
+Construction d'un estimateur du caractère éthique d'un moteur de recherche (2017)
+---------------------------------------------------------------------------------
+
+On se pose de plus en plus la question du caractère éthique des algorithmes :
+`Tous algorithmés, tous concernés <http://www.modernisation.gouv.fr/la-semaine-de-linnovation-publique/revivez-la-semaine-de-linnovation-publique-2016/tous-algorithmes-tous-concernes>`_,
+`Google, democracy and the truth about internet search <https://www.theguardian.com/technology/2016/dec/04/google-democracy-truth-internet-search-facebook>`_.
+On se place dans le cas ici d'un site qui proposent des contenus à partir d'une requête
+(moteur de recherche, vente en ligne, publicité). Comment exprimer le fait
+que les résultats produits par le site ne sont pas biaisés éthiquement,
+comment mesurer le caractère éthique des résultats ?
+Le sujet est assez libre mais implique certainement la manipulation de texte.
+
+
+
+

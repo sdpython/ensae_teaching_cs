@@ -662,8 +662,8 @@ Modèles bayésiens
 * `bayespy <http://bayespy.org/en/latest/>`_
 * `kabuki <https://pypi.python.org/pypi/kabuki/>`_
 
-Factorizaion Machines
-+++++++++++++++++++++
+Factorization Machines
+++++++++++++++++++++++
 
 *(à venir)*
 
@@ -679,6 +679,22 @@ Machine Learning Avancé
 .. contents::
     :local:
     :depth: 1
+    
+Régression quantile
++++++++++++++++++++
+
+(*à venir*)
+
+*Lectures*
+
+* `La régression quantile en pratique <https://www.insee.fr/fr/statistiques/fichier/1381107/doc_regression_quantile.pdf>`_
+* `Extensions of the Markov chain marginal bootstrap <https://www.researchgate.net/publication/23635751_Extensions_of_the_Markov_chain_marginal_bootstrap>`_
+* `Iteratively reweighted least squares <https://en.wikipedia.org/wiki/Iteratively_reweighted_least_squares>`_
+
+*Modules*
+
+* `statsmodels <http://statsmodels.sourceforge.net/devel/generated/statsmodels.regression.quantile_regression.QuantReg.html>`_
+
 
 Interprétabilité des modèles
 ++++++++++++++++++++++++++++
