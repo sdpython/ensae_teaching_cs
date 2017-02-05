@@ -198,6 +198,11 @@ Lorsque les données sont volumineuses. Une solution consiste à les compresser.
 * `h5py <http://www.h5py.org/>`_
 * `Zarr <https://github.com/alimanfoo/zarr>`_
 
+------------
+
+Map Reduce
+==========
+
 Map Reduce en pratique
 ++++++++++++++++++++++
 
@@ -218,11 +223,6 @@ Map Reduce en pratique
 * Le hasard en distribué, :ref:`Réservoir sampling <td3aenoncereservoirsamplingrst>` (:ref:`correction <td3acorrectionreservoirsamplingrst>`)
 * Schéma des langages de map/reduce :
   `lazy evaluation <https://en.wikipedia.org/wiki/Lazy_evaluation>`_ (évalusation presseuse, dask, Spark, PIG)
-
-------------
-
-Map Reduce
-==========
 
 avec PIG sur Azure et Cloudera
 ++++++++++++++++++++++++++++++
