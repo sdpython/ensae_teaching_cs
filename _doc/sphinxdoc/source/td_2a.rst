@@ -1113,6 +1113,8 @@ Streaming algorithms
 
 (*à venir*)
 
+* `Répartir train / test en streaming <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/split_train_test.html#streaming-splitting>`_
+
 Plan
 
 * Calcul d'une médiane
