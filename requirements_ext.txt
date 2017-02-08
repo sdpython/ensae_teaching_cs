@@ -1,4 +1,4 @@
-pyquickhelper
+mlstatpy
 pyensae
 pymmails
 pymyinstall
