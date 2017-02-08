@@ -679,7 +679,7 @@ Machine Learning Avancé
 .. contents::
     :local:
     :depth: 1
-    
+
 Régression quantile
 +++++++++++++++++++
 
@@ -694,7 +694,6 @@ Régression quantile
 *Modules*
 
 * `statsmodels <http://statsmodels.sourceforge.net/devel/generated/statsmodels.regression.quantile_regression.QuantReg.html>`_
-
 
 Interprétabilité des modèles
 ++++++++++++++++++++++++++++

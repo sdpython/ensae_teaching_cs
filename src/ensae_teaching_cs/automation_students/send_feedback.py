@@ -136,11 +136,20 @@ def enumerate_feedback(df1, col_group="Groupe",
         else:
             aggs[c] = lambda s: sums3(s, " ")
 
-    group = df1.groupby(col_group).agg(aggs)
-    common = dict(col_group=col_group, col_name=col_name, col_mail=col_mail)
-    common_rev = {v: k for k, v in common.items()}
-    lc = list(group.columns)
-    colsi = [lc.index(c[0] if isinstance(c, tuple) else c) for c in cols]
+    if col_group is not None:
+        group = df1.groupby(col_group).agg(aggs)
+        common = dict(col_group=col_group,
+                      col_name=col_name, col_mail=col_mail)
+        common_rev = {v: k for k, v in common.items()}
+        lc = list(group.columns)
+        colsi = [lc.index(c[0] if isinstance(c, tuple) else c) for c in cols]
+    else:
+        # already aggregated by group
+        group = df1.groupby(col_mail).agg(aggs)
+        common = dict(col_name=col_name, col_mail=col_mail)
+        common_rev = {v: k for k, v in common.items()}
+        lc = list(group.columns)
+        colsi = [lc.index(c[0] if isinstance(c, tuple) else c) for c in cols]
 
     for row in group.itertuples(index=False):
         # key, value pairs
@@ -248,6 +257,8 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=[1000, 1500],
             continue
         if not delay_sending and "fLOG" in params:
             params["fLOG"](loop, "send mail to ", mails)
+        if isinstance(mails, str) and ";" in mails:
+            mails = ";".join(_.strip() for _ in mails.split(";"))
         if mailbox is None:
             if "fLOG" not in params:
                 raise KeyError(

@@ -206,7 +206,3 @@ On se place dans le cas ici d'un site qui proposent des contenus à partir d'une
 que les résultats produits par le site ne sont pas biaisés éthiquement,
 comment mesurer le caractère éthique des résultats ?
 Le sujet est assez libre mais implique certainement la manipulation de texte.
-
-
-
-

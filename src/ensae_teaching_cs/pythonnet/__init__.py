@@ -42,7 +42,14 @@ import os
 if sys.platform.startswith("win"):
     ver = sys.version_info
     arch = platform.architecture()[0]
-    if ver[:2] == (3, 5):
+    if ver[:2] == (3, 6):
+        if "64" in arch:
+            from .py36x64 import clr
+        else:
+            raise ImportError(
+                "unable to import pythonnet for this architecture " +
+                str(arch))
+    elif ver[:2] == (3, 5):
         if "64" in arch:
             from .py35x64 import clr
         else:
