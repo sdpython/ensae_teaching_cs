@@ -284,6 +284,8 @@ Variables catégorielles
 
 (à venir)
 
+* Corrélation entre des variables catégorielles
+
 *Lectures*
 
 * :ref:`Tranformer les variables catégorielles et contrastes <encoding-categorie-id>`
@@ -294,6 +296,7 @@ Distances
 (à venir)
 
 |pystatpng|
+
 
 *Lectures*
 
@@ -306,6 +309,10 @@ Clustering
 |pyecopng| |pystatpng|
 
 (à venir)
+
+* scopre silhouette
+* clustering de variables catégorielles
+
 
 *Lectures*
 
@@ -322,6 +329,8 @@ Clustering
 * `Fast and Provably Good Seedings for k-Means <https://papers.nips.cc/paper/6478-fast-and-provably-good-seedings-for-k-means.pdf>`_
 * `Clustering with Same-Cluster Queries <https://papers.nips.cc/paper/6449-clustering-with-same-cluster-queries.pdf>`_
 * `The K-Modes Algorithm for Clustering <https://arxiv.org/pdf/1304.6478v1.pdf>`_
+* `Clustering of Categorical variables <http://eric.univ-lyon2.fr/~ricco/cours/slides/en/classif_variables_quali.pdf>`_
+* `Classification d'un ensemble de variables qualitatives <http://archive.numdam.org/ARCHIVE/RSA/RSA_1998__46_4/RSA_1998__46_4_5_0/RSA_1998__46_4_5_0.pdf>`_
 
 *Modules*
 
