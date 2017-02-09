@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 """
+Send many mails
+===============
+
 Send mail to students. The script consider two columns from
 one spreadsheets. The first one is about the receivers,
 the second one about the customized message for each of them.

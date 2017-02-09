@@ -289,6 +289,7 @@ Variables catégorielles
 *Lectures*
 
 * :ref:`Tranformer les variables catégorielles et contrastes <encoding-categorie-id>`
+* :ref:`Corrélations entre des variables catégorielles <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/correlation_non_lineaire.html>`_
 
 Distances
 +++++++++
