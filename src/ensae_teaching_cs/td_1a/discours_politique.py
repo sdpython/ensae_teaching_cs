@@ -126,7 +126,7 @@ def html_unescape(text):
             except KeyError:
                 pass
         return text  # leave as is
-    return re.sub("&#?\w+;", fixup, text)
+    return re.sub("&#?\\w+;", fixup, text)
 
 
 def force_unicode(text):

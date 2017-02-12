@@ -114,7 +114,7 @@ This example does not use css:
 Revisions:
 0.51 First release.
 0.6 7 Mar '04
-    Fixed   -   now supports \ character properly
+    Fixed   -   now supports \\ character properly
     Changes -   The styles now use a py_ prefix
     Added   -   Extended and added to formatting options
             -   External style-file support

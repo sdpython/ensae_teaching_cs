@@ -39,7 +39,7 @@ def chiffre_barre_carre(s, r, i, j):
 
     @param      s       current state of the sudoku
     @param      r       array ``r[n] == 0`` means number *n+1* is already taken on this sub square
-    @param      i       sub square are indexed by :math:`(i, j) \in \{0, 1, 2\}^2` (0 based)
+    @param      i       sub square are indexed by :math:`(i, j) \\in \\{0, 1, 2\\}^2` (0 based)
     @param      j       see parameter *i*
     """
     a = i // 3 * 3

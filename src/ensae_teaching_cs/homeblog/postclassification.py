@@ -9,7 +9,7 @@ privateKeyClassification = {
     "~recreative": ["\xE9conomie farfelue", "xaveir", "xavier", "xavier dupr\xE9", "litt\xE9rature",
                     "green website", "restaurant", "alimentation", "cuisine", "emploi", "discussion",
                     "wifi", "smart cities", "t\xE9l\xE9vision", "jeu", "jeux", "cin\xE9ma",
-                    "d\xE9couverte", "cheminement", "\xE9conomie", "d\xE9mocratie", "\dxE9mographie",
+                    "d\xE9couverte", "cheminement", "\xE9conomie", "d\xE9mocratie", "d\xE9mographie",
                     "m\xE9decine", "th\xE9\xE2tre", "\xE9cole", "papa", "recreative", "video", "photo", "joke",
                     "tennis"],
     "~technical": ["python", "programming", "c", "p-value", "edit distance",

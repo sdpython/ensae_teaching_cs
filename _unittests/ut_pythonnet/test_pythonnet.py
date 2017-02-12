@@ -91,31 +91,21 @@ class TestPythonnet(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         if sys.platform.startswith("win"):
-            from src.ensae_teaching_cs.pythonnet import clr as skip__
+            from src.ensae_teaching_cs.pythonnet import clr
+            clr.AddReference("System.Collections")
             from System import IntPtr, Array, Double
             from System.Runtime.InteropServices import Marshal
             assert Double is not None
             assert Array is not None
             assert IntPtr is not None
 
-            if sys.version_info[:2] <= (3, 4):
-                array = numpy.ones((2, 2))
-                ar = IntPtr.__overloads__[int](
-                    array.__array_interface__['data'][0])
-                ar2 = Array[int]([0, 0, 0, 0] * 2)
-                fLOG(type(ar))
-                fLOG(type(ar2), list(ar2))
-                Marshal.Copy(ar, ar2, 0, len(ar2))
-                fLOG(list(ar2))
-            else:
-                array = numpy.ones((2, 2))
-                from clr import IntPtr_long
-                ar = IntPtr_long(array.__array_interface__['data'][0])
-                ar2 = Array[int]([0, 0, 0, 0] * 2)
-                fLOG(type(ar))
-                fLOG(type(ar2), list(ar2))
-                Marshal.Copy(ar, ar2, 0, len(ar2))
-                fLOG(list(ar2))
+            array = numpy.ones((2, 2))
+            ar = clr.IntPtr_long(array.__array_interface__['data'][0])
+            ar2 = Array[int]([0, 0, 0, 0] * 2)
+            fLOG(type(ar))
+            fLOG(type(ar2), list(ar2))
+            Marshal.Copy(ar, ar2, 0, len(ar2))
+            fLOG(list(ar2))
 
 
 if __name__ == "__main__":

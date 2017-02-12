@@ -298,7 +298,6 @@ Distances
 
 |pystatpng|
 
-
 *Lectures*
 
 * `Learning Hierarchical Similarity Metrics <http://www.cs.toronto.edu/~vnair/cvpr12.pdf>`_
@@ -313,7 +312,6 @@ Clustering
 
 * scopre silhouette
 * clustering de variables catégorielles
-
 
 *Lectures*
 
