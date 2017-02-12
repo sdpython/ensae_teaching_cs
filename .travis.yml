@@ -10,6 +10,10 @@ addons:
       - graphviz
       - libgfortran3
       - python-scipy
+      # computation
+      - libblas-dev
+      - liblapack-dev
+      - gfortran      
       # opencl
       - ocl-icd-opencl-dev
       - libopencl
@@ -23,6 +27,7 @@ addons:
       # - libsdl-ttf2.0-dev
       # - libsdl-mixer1.2-dev
       # - python-dev
+      # for CUDA see, https://github.com/BVLC/caffe/blob/master/scripts/travis/install-deps.sh
 env:
   - SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=disk KERAS_BACKEND=theano
 install:

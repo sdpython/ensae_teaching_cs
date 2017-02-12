@@ -20,12 +20,12 @@ mechanize
 metakernel
 pkgtools
 plotly
-pycuda
+# pycuda
 pygal
 pygal_maps_fr
 pylzma
 pympler
-pyopencl
+# pyopencl
 pyquickhelper
 pyreadline
 python-jenkins

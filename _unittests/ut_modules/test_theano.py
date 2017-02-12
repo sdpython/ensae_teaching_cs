@@ -39,6 +39,7 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import is_travis_or_appveyor
 
 
 class TestModulesTheano(unittest.TestCase):
@@ -46,11 +47,13 @@ class TestModulesTheano(unittest.TestCase):
     def test_theano(self):
         fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
 
-        import theano
-        # if you see the following warning
-        # WARNING (theano.configdefaults): g++ not detected ! Theano will be unable to execute optimized C-implementations (for both CPU and GPU) and will default to Python implementations. Performance will be severely degraded. To remove this warning, set Theano flags cxx to an empty string.
-        # you should install TDM-GCC
-        assert theano
+        if not is_travis_or_appveyor():
+            fLOG("import theano")
+            import theano
+            # if you see the following warning
+            # WARNING (theano.configdefaults): g++ not detected ! Theano will be unable to execute optimized C-implementations (for both CPU and GPU) and will default to Python implementations. Performance will be severely degraded. To remove this warning, set Theano flags cxx to an empty string.
+            # you should install TDM-GCC
+            assert theano
 
 
 if __name__ == "__main__":
