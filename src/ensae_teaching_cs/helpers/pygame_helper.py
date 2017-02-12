@@ -59,6 +59,7 @@ def get_pygame_screen_font(h, size):
 
     The dictionary of fonts contains three fonts of size *h*,
     *3h/4*, *5h/6*.
+
     This function leaves file still opened and generates warnings.
     """
     import pygame
