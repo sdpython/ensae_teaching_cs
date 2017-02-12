@@ -20,6 +20,7 @@ mechanize
 metakernel
 pkgtools
 plotly
+pycuda
 pygal
 pygal_maps_fr
 pylzma

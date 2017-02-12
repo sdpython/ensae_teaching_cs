@@ -33,7 +33,6 @@ path.py
 patsy
 pep8
 pillow
-pycuda
 pyopencl
 pyzmq
 qtconsole
