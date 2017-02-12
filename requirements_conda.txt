@@ -33,6 +33,8 @@ path.py
 patsy
 pep8
 pillow
+pycuda
+pyopencl
 pyzmq
 qtconsole
 rasterio
@@ -45,6 +47,7 @@ six
 Sphinx
 statsmodels
 sympy
+theano
 toolz
 traitlets
 xarray

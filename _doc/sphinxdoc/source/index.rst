@@ -165,7 +165,7 @@ En diagonal
     :target: https://travis-ci.org/sdpython/ensae_teaching_cs
     :alt: Build status
 
-.. image:: https://ci.appveyor.com/api/projects/status/4chpamq95rh5h245?svg=true
+.. image:: https://ci.appveyor.com/api/projects/status/ko5g064idp5srm74?svg=true
     :target: https://ci.appveyor.com/project/sdpython/ensae-teaching-cs
     :alt: Build Status Windows
 

@@ -27,6 +27,7 @@ pympler
 pyquickhelper
 pyreadline
 python-jenkins
+qgrid
 requests-oauthlib
 toolz
 version_information

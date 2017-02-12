@@ -332,6 +332,9 @@ Clustering
 * `The K-Modes Algorithm for Clustering <https://arxiv.org/pdf/1304.6478v1.pdf>`_
 * `Clustering of Categorical variables <http://eric.univ-lyon2.fr/~ricco/cours/slides/en/classif_variables_quali.pdf>`_
 * `Classification d'un ensemble de variables qualitatives <http://archive.numdam.org/ARCHIVE/RSA/RSA_1998__46_4/RSA_1998__46_4_5_0/RSA_1998__46_4_5_0.pdf>`_
+* `Yinyang K-Means: A Drop-In Replacement of the Classic K-Means with Consistent Speedup <https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ding15.pdf>`_
+* `Online Clustering with Experts <http://www.jmlr.org/proceedings/papers/v26/choromanska12a/choromanska12a.pdf>`_
+* `Kernel K-means and Spectral Clustering <https://pdfs.semanticscholar.org/6be9/e527f94e88fef82e2270e94162d31a2dbfbc.pdf>`_
 
 *Modules*
 
@@ -913,6 +916,18 @@ Graphes et réseaux
 *Lectures*
 
 * `Basic models and questions in statistical network analysis <https://arxiv.org/abs/1609.03511>`_
+* `Trinity: A Distributed Graph Engine on a Memory Cloud <https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/Trinity-1.pdf>`_
+* `Dimensionality Reduction for Spectral Clustering <http://www.jmlr.org/proceedings/papers/v15/niu11a/niu11a.pdf>`_
+* `Compressive Spectral Clustering <http://jmlr.org/proceedings/papers/v48/tremblay16.pdf>`_
+* `Spectral Clustering on a Budget <http://www.jmlr.org/proceedings/papers/v15/shamir11a/shamir11a.pdf>`_
+* `Partitioning Well-Clustered Graphs: Spectral Clustering Works! <http://www.jmlr.org/proceedings/papers/v40/Peng15.pdf>`_
+* `Bipartite Correlation Clustering: Maximizing Agreements <http://www.jmlr.org/proceedings/papers/v51/asteris16.pdf>`_
+* `Correlation Clustering and Biclustering with Locally Bounded Errors <http://jmlr.org/proceedings/papers/v48/puleo16.pdf>`_
+* `A Unified Framework for Model-based Clustering <http://www.jmlr.org/papers/volume4/zhong03a/zhong03a.pdf>`_
+* `A Tensor Approach to Learning Mixed Membership Community Models <http://jmlr.org/papers/volume15/anandkumar14a/anandkumar14a.pdf>`_
+* `Local Network Community Detection with Continuous Optimization of Conductance and Weighted Kernel K-Means <http://jmlr.org/papers/volume17/16-043/16-043.pdf>`_
+* `Learning Communities in the Presence of Errors <http://www.jmlr.org/proceedings/papers/v49/makarychev16.pdf>`_
+* `Fast unfolding of communities in large networks <https://arxiv.org/abs/0803.0476>`_
 
 ------------
 

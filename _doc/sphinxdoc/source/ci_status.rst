@@ -28,7 +28,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/actuariat_python.svg?branch=master
             :target: https://travis-ci.org/sdpython/actuariat_python
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/plhkoh1rkw70avwq?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/nelemxw6md6bt95a?svg=true
             :target: https://ci.appveyor.com/project/sdpython/actuariat-python
             :alt: Build Status Windows
       - .. image:: https://badge.fury.io/py/actuariat_python.svg
@@ -45,7 +45,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/code_beatrix.svg?branch=master
             :target: https://travis-ci.org/sdpython/code_beatrix
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/jf1l4choe2ty22jr?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/g7065ubabg7xxpm6?svg=true
             :target: https://ci.appveyor.com/project/sdpython/code-beatrix
             :alt: Build Status Windows
       - .. image:: https://badge.fury.io/py/code_beatrix.svg
@@ -62,7 +62,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/ensae_projects.svg?branch=master
             :target: https://travis-ci.org/sdpython/ensae_projects
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/66db8wa3a566u6b7?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/5qbwt4kaxpc8w415?svg=true
             :target: https://ci.appveyor.com/project/sdpython/ensae-projects
             :alt: Build Status Windows
       - .. image:: https://badge.fury.io/py/ensae_projects.svg
@@ -79,7 +79,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master
             :target: https://travis-ci.org/sdpython/ensae_teaching_cs
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/4chpamq95rh5h245?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/ko5g064idp5srm74?svg=true
             :target: https://ci.appveyor.com/project/sdpython/ensae-teaching-cs
             :alt: Build Status Windows
       - .. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
@@ -96,7 +96,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/jupytalk.svg?branch=master
             :target: https://travis-ci.org/sdpython/jupytalk
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/by2p84twqmfcdd21?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/cq8d56y2o4ldi7rn?svg=true
             :target: https://ci.appveyor.com/project/sdpython/jupytalk
             :alt: Build Status Windows
       - .. image:: https://badge.fury.io/py/jupytalk.svg
@@ -113,7 +113,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/jyquickhelper.svg?branch=master
             :target: https://travis-ci.org/sdpython/jyquickhelper
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/2mtdbt67b1qkbbyy?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/2tyc3or7snm6w4xl?svg=true
             :target: https://ci.appveyor.com/project/sdpython/jyquickhelper
             :alt: Build Status Windows
       - .. image:: https://badge.fury.io/py/jyquickhelper.svg
@@ -130,7 +130,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/mlstatpy.svg?branch=master
             :target: https://travis-ci.org/sdpython/mlstatpy
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/j5poldtnij0a3ac0?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/5env33qptorgshaq?svg=true
             :target: https://ci.appveyor.com/project/sdpython/mlstatpy
             :alt: Build Status Windows
       - .. image:: https://badge.fury.io/py/mlstatpy.svg
@@ -147,7 +147,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/pyensae.svg?branch=master
             :target: https://travis-ci.org/sdpython/pyensae
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/hw3ixda4622h34qb?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/jioxwx1igwbqwa28?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pyensae
             :alt: Build Status Windows
       - .. image:: https://badge.fury.io/py/pyensae.svg
@@ -164,7 +164,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/pymmails.svg?branch=master
             :target: https://travis-ci.org/sdpython/pymmails
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/isbawgkh38kmw0lw?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/hqhhdndvayrx0r9k?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pymmails
             :alt: Build Status Windows
       - .. image:: https://badge.fury.io/py/pymmails.svg
@@ -181,7 +181,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/pymyinstall.svg?branch=master
             :target: https://travis-ci.org/sdpython/pymyinstall
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/yy4aripbhp38wo17?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/ccsvoi29n3a71i6j?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pymyinstall
             :alt: Build Status Windows
       - .. image:: https://badge.fury.io/py/pymyinstall.svg
@@ -198,7 +198,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/pyquickhelper.svg?branch=master
             :target: https://travis-ci.org/sdpython/pyquickhelper
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/54vl69ssd8ud4l64?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/t2g9olcgqgdvqq3l?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pyquickhelper
             :alt: Build Status Windows
       - .. image:: https://badge.fury.io/py/pyquickhelper.svg
@@ -215,7 +215,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/pyrsslocal.svg?branch=master
             :target: https://travis-ci.org/sdpython/pyrsslocal
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/3v5swlh83cp2wdpt?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/0cc1qtlccq8k7hdx?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pyrsslocal
             :alt: Build Status Windows
       - .. image:: https://badge.fury.io/py/pyrsslocal.svg
@@ -232,7 +232,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/pysqllike.svg?branch=master
             :target: https://travis-ci.org/sdpython/pysqllike
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/67ljkgh36klak07a?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/rrpks1pgivea23js?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pysqllike
             :alt: Build Status Windows
       - .. image:: https://badge.fury.io/py/pysqllike.svg
@@ -249,7 +249,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/python3_module_template.svg?branch=master
             :target: https://travis-ci.org/sdpython/python3_module_template
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/6qp50sxl22aqwtb5?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/8yv4brsckay4374a?svg=true
             :target: https://ci.appveyor.com/project/sdpython/python3-module-template
             :alt: Build Status Windows
       -
@@ -263,7 +263,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/teachpyx.svg?branch=master
             :target: https://travis-ci.org/sdpython/teachpyx
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/hsrhrnb5r3tlpb8a?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/5jl303wl14dtesl0?svg=true
             :target: https://ci.appveyor.com/project/sdpython/teachpyx
             :alt: Build Status Windows
       - .. image:: https://badge.fury.io/py/teachpyx.svg
