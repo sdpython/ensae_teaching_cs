@@ -52,8 +52,11 @@ class TestSkCustomKnn (unittest.TestCase):
         try:
             from sklearn.model_selection import train_test_split, cross_val_score
         except ImportError as e:
-            import sklearn
-            raise ImportError("Issue with sklearn %s" % sklearn.__version__) from e
+            try:
+                from sklearn.cross_validation import train_test_split, cross_val_score
+            except ImportError as ee:
+                import sklearn
+                raise ImportError("Issue with sklearn %s\n%s" % (sklearn.__version__, ee)) from e
         from sklearn.neighbors import KNeighborsClassifier
 
         iris = datasets.load_iris()
