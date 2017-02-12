@@ -40,6 +40,7 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import is_travis_or_appveyor
 
 
 class TestModulesCuda(unittest.TestCase):
@@ -52,6 +53,10 @@ class TestModulesCuda(unittest.TestCase):
             if not os.path.exists(dll):
                 warnings.warn("Missing DLL: " + dll)
                 return
+
+        if is_travis_or_appveyor():
+            # skipping on automated build
+            return
 
         import pycuda.driver as drv
         import numpy

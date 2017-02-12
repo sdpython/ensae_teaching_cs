@@ -49,7 +49,11 @@ class TestSkCustomKnn (unittest.TestCase):
             OutputPrint=__name__ == "__main__")
 
         from sklearn import datasets
-        from sklearn.model_selection import train_test_split, cross_val_score
+        try:
+            from sklearn.model_selection import train_test_split, cross_val_score
+        except ImportError as e:
+            import sklearn
+            raise ImportError("Issue with sklearn %s" % sklearn.__version__) from e
         from sklearn.neighbors import KNeighborsClassifier
 
         iris = datasets.load_iris()
