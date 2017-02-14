@@ -669,6 +669,7 @@ Modèles bayésiens
 
 *Modules*
 
+* `edward <http://edwardlib.org/>`_
 * `PyMC3 <https://pymc-devs.github.io/pymc3/notebooks/getting_started.html>`_
 * `bayespy <http://bayespy.org/en/latest/>`_
 * `kabuki <https://pypi.python.org/pypi/kabuki/>`_

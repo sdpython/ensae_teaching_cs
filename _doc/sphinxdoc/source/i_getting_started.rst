@@ -358,7 +358,7 @@ qui facilitent l'archivage. Ils sont tellement pratiques qu'on a même du mal
 à s'en passer lorsqu'on travaille tout seul.
 
 En vrac
--------
++++++++
 
 **Suivi de sources distant**
 
@@ -474,7 +474,7 @@ Pour être compilée, la documentation requiert également :
 * `Tutoriel sur GIT <http://sixrevisions.com/resources/git-tutorials-beginners/>`_
 
 Setup pour déveloper ce cours (Windows)
----------------------------------------
++++++++++++++++++++++++++++++++++++++++
 
 * `7zip <http://www.7-zip.org/>`_
 * `Anaconda <https://www.continuum.io/downloads>`_
@@ -517,8 +517,8 @@ En plus :
 
 Pour Jenkins, quelques extensions :
 
-* Last Console Output
-* Next Jobs
+* `Last Console Output <https://wiki.jenkins-ci.org/display/JENKINS/Extra+Columns+Plugin>`_
+* `Next Execution <https://wiki.jenkins-ci.org/display/JENKINS/Next+Executions>`_
 * `Text File <https://wiki.jenkins-ci.org/display/JENKINS/Text+File+Operations+Plugin>`_
 
 Pour Jupyter :
