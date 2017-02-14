@@ -987,6 +987,7 @@ Site web
 * `django <https://www.djangoproject.com/>`_
 * `falcon <https://falconframework.org/>`_
 * `Flask <http://flask.pocoo.org/>`_
+* `sanic <https://github.com/channelcat/sanic>`_ + `uvloop <https://github.com/MagicStack/uvloop>`_
 
 Jupyter et les commandes magiques
 +++++++++++++++++++++++++++++++++
