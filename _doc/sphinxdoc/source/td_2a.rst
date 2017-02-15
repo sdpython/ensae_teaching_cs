@@ -661,6 +661,7 @@ Modèles bayésiens
 
 * `A Bayesian Approximation Method for Online Ranking <http://jmlr.csail.mit.edu/papers/volume12/weng11a/weng11a.pdf>`_
 * `stan case studies <http://mc-stan.org/documentation/case-studies>`_
+* `Edward: A library for probabilistic modeling, inference, and criticism <https://arxiv.org/pdf/1610.09787.pdf>`_
 
 *Vidéo*
 
@@ -682,6 +683,7 @@ Factorization Machines
 *Lectures*
 
 * `Factorization Machines with libFM <http://www.csie.ntu.edu.tw/~b97053/paper/Factorization%20Machines%20with%20libFM.pdf>`_ *(2016/09)*
+* `Stochastic Subsampling for Factorizing Huge Matrices <https://hal.archives-ouvertes.fr/hal-01431618>`_
 
 ------------
 
@@ -723,6 +725,12 @@ Interprétabilité des modèles
 * `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
 * `Wavelet decompositions of Random Forests - smoothness analysis, sparse approximation and applications <http://www.jmlr.org/papers/volume17/15-203/15-203.pdf>`_
 * `"Why Should I Trust You?" Explaining the Predictions of Any Classifier <http://arxiv.org/pdf/1602.04938v1.pdf>`_ *(2016/06)*
+* `Edward: A library for probabilistic modeling, inference, and criticism <https://arxiv.org/pdf/1610.09787.pdf>`_
+* `Strictly Proper Scoring Rules, Prediction, and Estimation <https://www.cs.duke.edu/courses/spring17/compsci590.2/Gneiting2007jasa.pdf>`_
+
+*Modules*
+
+* `edward <http://edwardlib.org/>`_
 
 Optimisation des hyperparamètres
 ++++++++++++++++++++++++++++++++
@@ -1090,6 +1098,8 @@ tableau d'octets, c'est indispensable pour la communication entre deux machines,
 *Lectures*
 
 * `Out-of-Core Dataframes in Python: Dask and OpenStreetMap <https://jakevdp.github.io/blog/2015/08/14/out-of-core-dataframes-in-python/>`_ *(2015/12)*
+* `Combining random forest models in scikit learn <http://stackoverflow.com/questions/28489667/combining-random-forest-models-in-scikit-learn>`_
+* `Better Python compressed persistence in joblib <http://gael-varoquaux.info/programming/new_low-overhead_persistence_in_joblib_for_big_data.html>`_
 
 .. _l-puzzlealgo2A:
 
