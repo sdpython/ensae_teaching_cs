@@ -545,6 +545,7 @@ Deep Learning
 
 *Lectures*
 
+* `LightRNN: Memory and Computation-Efficient Recurrent Neural Networks <https://arxiv.org/abs/1610.09893>`_
 * `Deep learning architecture diagrams <http://fastml.com/deep-learning-architecture-diagrams/>`_
 * `Factorized Convolutional Neural Networks <https://arxiv.org/abs/1608.04337>`_
 * `Deep Residual Learning for Image Recognition <https://arxiv.org/pdf/1512.03385v1.pdf>`_
