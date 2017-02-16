@@ -3,7 +3,7 @@ python:
   - { PATH: "{{replace(Python35, '\\', '\\\\')}}", VERSION: 3.5, DIST: std }
   - { PATH: "{{replace(Python36, '\\', '\\\\')}}", VERSION: 3.6, DIST: std }
   - { PATH: "{{replace(Anaconda3, '\\', '\\\\')}}", VERSION: 3.5, DIST: conda }
-  - { PATH: "{{replace(WinPython35, '\\', '\\\\')}}", VERSION: 3.5, DIST: winpython }
+  - { PATH: "{{replace(WinPython36, '\\', '\\\\')}}", VERSION: 3.6, DIST: winpython }
 virtualenv:
   - path: {{ospathjoin(root_path, pickname("%NAME_JENKINS%", project_name + "_%VERSION%_%DIST%_%NAME%"), "_venv")}}
 install:
