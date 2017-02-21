@@ -44,6 +44,12 @@ Séances notées
             (statistiques simples sur un fichier plat de données - logs)</li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2009.pdf">énoncé 2008-2009</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2009.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2009.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
             (composition optimale d'une somme avec un système de pièces de monnaie)</li>
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2009_rattrape.pdf">énoncé 2008-2009</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2009_rattrape.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2009_rattrape.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
+        (manipulation de fichier texte, fusion de données)</li>
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2010_rattrape.pdf">énoncé 2009-2010</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2010_rattrape.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2010_rattrape.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
+        (problème du voyageur de commerce)</li>
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2013_preparation.pdf">énoncé 2009-2010</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2013_preparation.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2013_preparation.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
+        (récurrence, matrice aléatoire, matrice de transition)</li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2010.pdf">énoncé 2009-2010</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2010.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2010.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
             (clustering en 2D)</li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2011.pdf">énoncé 2010-2011</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2011.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2011.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
@@ -57,6 +63,8 @@ Séances notées
             <li><a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2013_coloriage_correction.html">correction pour le coloriage</a></li></li>
             </ul>
             </li>
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2013_rattrape.pdf">énoncé 2012-2013</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2013_rattrape.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
+        (statistiques simples à partir de données publiques relative à la ville de Paris)</li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2014.pdf">énoncé 2013-2014</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2014.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2014.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
             (recherche dichotomique, distance d'édition). L'énoncé s'appuie sur les deux
             programmes suivant :
@@ -72,42 +80,31 @@ Séances notées
                 </a>
             (parcours de graphe, distance d'édition, plus court chemin)
         </li>
+    <li><a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2015_rattrapage_enonce.pdf">énoncé 2014-2015</a>
+        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2015_rattrapage_enonce.html">
+                <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
+        (2048 - google jam)</li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2016.pdf">énoncé 2015-2016</a>,
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2016.pdf">correction</a>
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2016.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
-            (parcours de graphe, distance d'édition, plus court chemin)
+            (simulation de prêts immobilier, meilleure stratégie pour acheter)
         </li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2017.pdf">énoncé 2016-2017</a>,
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2017.pdf">correction</a>
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2017.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
-            (parcours de graphe, distance d'édition, plus court chemin)
+            (régression linéaire, étude de variables catégorielles)
         </li>
-    </ul>
-    </p>
-
-Séances de rattrapage
-+++++++++++++++++++++
-
-.. raw:: html
-
-    <p>
-    <ul>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2009_rattrape.pdf">énoncé 2008-2009</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2009_rattrape.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2009_rattrape.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
-        (manipulation de fichier texte, fusion de données)</li>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2010_rattrape.pdf">énoncé 2009-2010</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2010_rattrape.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2010_rattrape.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
-        (problème du voyageur de commerce)</li>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2013_preparation.pdf">énoncé 2009-2010</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2013_preparation.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2013_preparation.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
-        (récurrence, matrice aléatoire, matrice de transition)</li>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2013_rattrape.pdf">énoncé 2012-2013</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2013_rattrape.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
-        (statistiques simples à partir de données publiques relative à la ville de Paris)</li>
-    <li><a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2015_rattrapage_enonce.pdf">énoncé 2014-2015</a>
-        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2015_rattrapage_enonce.html">
-                <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
-        (2048 - google jam)</li>
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2017_rattrapage.pdf">énoncé 2016-2017</a>,
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2017_2.pdf">correction</a>
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2017_2.html">
+                <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
+                </a>
+            (médiane, moyenne, régression quantile)
+        </li>
     </ul>
     </p>
 
@@ -231,3 +228,4 @@ TD notés, correction
     ../notebooks/td_note_2015
     ../notebooks/td_note_2016
     ../notebooks/td_note_2017
+    ../notebooks/td_note_2017_2

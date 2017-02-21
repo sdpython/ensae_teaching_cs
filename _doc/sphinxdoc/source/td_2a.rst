@@ -290,6 +290,8 @@ Variables catégorielles
 
 * :ref:`Tranformer les variables catégorielles et contrastes <encoding-categorie-id>`
 * :ref:`Corrélations entre des variables catégorielles <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/correlation_non_lineaire.html>`_
+* `Enoncé d'examan autour des variables catégorielles <http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2017.pdf>`_
+  et sa :ref:`corection <tdnote2017rs>`
 
 Distances
 +++++++++
@@ -561,6 +563,8 @@ Deep Learning
 * `Deep Learning <https://en.wikipedia.org/wiki/Deep_learning>`_ (wikipédia)
 * `Fast R-CNN <https://arxiv.org/abs/1504.08083>`_ (voir `Object Detection using Fast R CNN <https://github.com/Microsoft/CNTK/wiki/Object-Detection-using-Fast-R-CNN>`_)
 * `Evaluation of Deep Learning Toolkits <https://github.com/zer0n/deepframeworks/blob/master/README.md>`_ *(2015/12)*
+* `Understanding Deep Learning Requires Rethinking Generalization <https://arxiv.org/pdf/1611.03530.pdf>`_
+* `Training Deep Nets with Sublinear Memory Cost <https://arxiv.org/pdf/1604.06174.pdf>`_
 
 *Chiffres, Textes*
 
@@ -840,6 +844,17 @@ Machine Learning sur des données cryptées
 *Modules*
 
 * `ciphermed <https://github.com/rbost/ciphermed>`_ : pas maintenu
+
+Prédire une distribution
+++++++++++++++++++++++++
+
+|pystatpng|
+
+*(à venir)*
+
+*Lectures*
+
+* `Learning with a Wasserstein Loss <https://arxiv.org/pdf/1506.05439.pdf>`_
 
 ------------
 

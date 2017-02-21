@@ -35,6 +35,13 @@ Nous vous en proposons certains dans les articles ci-dessous.
 Suggestions d'articles
 ++++++++++++++++++++++
 
+*Articles ou sujet que vous ne pouvez plus choisir*
+
+* `Dimension Independent Matrix Square using MapReduce (DIMSUM) <http://stanford.edu/~rezab/papers/dimsum.pdf>`_
+* `Map/Reduce Affinity Propagation Clustering Algorithm <http://www.ijeee.net/uploadfile/2014/0807/20140807114023665.pdf>`_ ou
+  `Parallel Hierarchical Affinity Propagation with MapReduce <https://arxiv.org/abs/1403.7394>`_
+* Algorithme `k-means clustering <https://en.wikipedia.org/wiki/K-means_clustering>`_
+
 *2014-2015*
 
 * `Parallel MCMC <http://arxiv.org/pdf/1010.1595v3.pdf>`_
@@ -65,20 +72,21 @@ Suggestions d'articles
   ce papier introduit l'algorithme `Paxos <https://en.wikipedia.org/wiki/Paxos_(computer_science)>`_ qui gère les problèmes
   de consensus entre machines. Une machine souhaite déléguer un travail à une autre mais elle a le choix.
   Comment s'assurer qu'une seule et une seule machine ne fait ce travail ?
-  On pourra traiter n'importe qu'elle autre variance de l'algorithme plus récene.
+  On pourra traiter n'importe qu'elle autre variance de l'algorithme plus récente.
 * `Schönhage-Strassen Algorithm with MapReduce for Multiplying Terabit Integers <http://people.apache.org/~szetszwo/ssmr20110429.pdf>`_
-* `Dimension Independent Matrix Square using MapReduce (DIMSUM) <http://stanford.edu/~rezab/papers/dimsum.pdf>`_
 * `A Fast Parallel Stochastic Gradient Method for Matrix Factorization in Shared Memory Systems <http://jmlr.org/papers/v17/15-471.html>`_
 * `Asynchronous Methods for Deep Reinforcement Learning <http://arxiv.org/pdf/1602.01783.pdf>`_
 * `Parallelizing Word2Vec in Shared and Distributed Memory <http://arxiv.org/abs/1604.04661>`_
 * `Exploiting Multiple Levels of Parallelism in Sparse Matrix-Matrix Multiplication <http://arxiv.org/abs/1510.00844>`_
 * `Hogwild!: A Lock-Free Approach to Parallelizing Stochastic Gradient Descent <https://arxiv.org/pdf/1106.5730v2.pdf>`_
 * `L1-Regularized Distributed Optimization: A Communication-Efficient Primal-Dual Framework <http://arxiv.org/pdf/1512.04011v2.pdf>`_
-* `Map/Reduce Affinity Propagation Clustering Algorithm <http://www.ijeee.net/uploadfile/2014/0807/20140807114023665.pdf>`_ ou
-  `Parallel Hierarchical Affinity Propagation with MapReduce <https://arxiv.org/abs/1403.7394>`_
 * `Local Approximation of PageRank and Reverse PageRank <https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/34455.pdf>`_
 * `A Fast Parallel SGD for Matrix Factorization in Shared Memory Systems <https://www.csie.ntu.edu.tw/~cjlin/papers/libmf/libmf.pdf>`_
 * `CuMF_SGD: Fast and Scalable Matrix Factorization <https://arxiv.org/pdf/1610.05838.pdf>`_
+
+*2017-2018*
+
+* `A Parallel Matrix Scaling Algorithm <http://amestoy.perso.enseeiht.fr/doc/adru.pdf>`_
 
 Nous vous recommandons d'adopter la démarche suivante:
 
