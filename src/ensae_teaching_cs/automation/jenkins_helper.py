@@ -25,7 +25,7 @@ def engines_default():
                py34="c:\\Python34_x64",
                py27="c:\\Python27_x64",
                default="c:\\Python35_x64",
-               winpython="c:\\WinPython36_x64",
+               winpython="c:\\WinPython36_x64\\python-3.6.0.amd64",
                Python35pyq="D:\\jenkins\\venv\\py35\\pyq\\Scripts")
     res["Python27"] = res["py27"]
     res["Python34"] = res["py34"]
@@ -33,7 +33,7 @@ def engines_default():
     res["Python36"] = res["py36"]
     res["Anaconda2"] = res["anaconda2"]
     res["Anaconda3"] = res["anaconda3"]
-    res["WinPython35"] = res["winpython"]
+    res["WinPython36"] = res["winpython"]
     return res
 
 
@@ -124,8 +124,6 @@ def setup_jenkins_server(js, github="sdpython", modules=default_jenkins_jobs(),
     @param      github                  github account if it does not start with *http://*,
                                         the link to git repository of the project otherwise
     @param      modules                 modules for which to generate the Jenkins job (see @see fn default_jenkins_jobs)
-    @param      get_jenkins_script      see `get_jenkins_script <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/jenkinshelper/jenkins_server.html?highlight=get_jenkins_script#pyquickhelper.jenkinshelper.jenkins_server.JenkinsExt.get_jenkins_script>`_
-                                        (default value if this parameter is None)
     @param      overwrite               do not create the job if it already exists
     @param      location                None for default or a local folder
     @param      prefix                  add a prefix to the name

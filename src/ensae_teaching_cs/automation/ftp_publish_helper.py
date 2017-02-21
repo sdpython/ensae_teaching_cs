@@ -217,7 +217,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                                       ],
                              password=None,
                              force_allow=None,
-                             suffix=("_UT_35_std", "_DOC_35_std", ""),
+                             suffix=("_UT_35_std",),
                              fLOG=print):
     """
     copy the documentation to the website
