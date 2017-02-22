@@ -1,5 +1,5 @@
 set current=%~dp0
-cd ..   
+cd ..
 cd ..
 cd actuariat_python
 git pull

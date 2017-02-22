@@ -188,7 +188,7 @@ class TestGGplotGraph (unittest.TestCase):
             warnings.warn(
                 "Issue with Python 3.4, bug probably related to wrong pointers")
             return
-        fix_tkinter_issues_virtualenv()
+        fix_tkinter_issues_virtualenv(fLOG=fLOG)
         import matplotlib.pyplot as plt
         fig, ax = plt.subplots(figsize=(8, 3))
         graph_ggplot_with_label(x, y, xl, ax=ax)

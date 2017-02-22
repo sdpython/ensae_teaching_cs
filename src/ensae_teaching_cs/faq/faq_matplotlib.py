@@ -3,9 +3,7 @@
 @file
 @brief Quelques problèmes récurrents avec `matplotlib <http://matplotlib.org/>`_.
 """
-from mpl_toolkits.basemap import Basemap
 import numpy
-import matplotlib.pyplot as plt
 
 
 def graph_style(style='ggplot'):
@@ -311,6 +309,7 @@ def graph_cities(df, names=["Longitude", "Latitude", "City"], ax=None, linked=Fa
     miny -= dy
     maxy += dy
 
+    from mpl_toolkits.basemap import Basemap
     m = Basemap(llcrnrlon=params.get('llcrnrlon', minx),
                 llcrnrlat=params.get('llcrnrlat', miny),
                 urcrnrlon=params.get('urcrnrlon', maxx),
