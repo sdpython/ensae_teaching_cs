@@ -292,6 +292,7 @@ def graph_cities(df, names=["Longitude", "Latitude", "City"], ax=None, linked=Fa
     nn = list(df[names[2]]) if len(names) > 2 else [""] * len(xx)
 
     if ax is None:
+        import matplotlib.pyplot as plt
         fig, ax = plt.subplots(**params)
     else:
         fig = None

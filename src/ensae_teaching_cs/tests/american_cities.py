@@ -52,7 +52,6 @@ def american_cities(df_or_filename, nb_cities=-1, img=None, fLOG=fLOG):
             dftrip.ix[i, "City"] = ""
 
     if img is not None:
-        fix_tkinter_issues_virtualenv()
         import matplotlib.pyplot as plt
         fig, ax = plt.subplots(figsize=(32, 32))
         ax = graph_cities(dftrip, ax=ax, markersize=3, linked=True, fLOG=fLOG,

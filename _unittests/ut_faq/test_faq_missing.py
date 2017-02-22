@@ -7,7 +7,6 @@ import os
 import unittest
 from datetime import datetime
 import pandas
-import matplotlib.pyplot as plt
 
 
 try:
@@ -40,7 +39,7 @@ except ImportError:
     import pyquickhelper as skip_
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, fix_tkinter_issues_virtualenv
 from src.ensae_teaching_cs.faq.faq_python import entier_grande_taille, difference_div, python_path, test_unitaire, same_variable, stringio
 from src.ensae_teaching_cs.faq.faq_python import property_example, enumerate_regex_search, download_from_url, sortable_class, list_of_installed_packages
 from src.ensae_teaching_cs.faq.faq_python import information_about_package, get_month_name, get_day_name
@@ -107,10 +106,13 @@ class TestFaqMissing (unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
+        fix_tkinter_issues_virtualenv()
+        import matplotlib.pyplot as plt
         fig, ax = plt.subplots()
         ax.plot([1, 1], [1, 1])
         change_legend_location(ax)
         avoid_overlapping_dates(fig)
+        plt.close('all')
 
     def test_faq_jupyter(self):
         fLOG(

@@ -46,6 +46,7 @@ except ImportError:
     import pyensae as skip__
 
 from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import fix_tkinter_issues_virtualenv
 from pyensae.datasource import download_data
 from src.ensae_teaching_cs.special.rues_paris import get_data, bellman, kruskal, possible_edges, eulerien_extension, distance_paris, euler_path, connected_components, distance_haversine, graph_degree
 
@@ -213,34 +214,33 @@ class TestRueParis (unittest.TestCase):
             v = [v for k, v in connex.items()]
             mi, ma = min(v), max(v)
 
-        if __name__ == "__main__":
-            import matplotlib.pyplot as plt
-            import networkx as nx
-            plt.figure()
-            G = nx.Graph()
-            for e in edges:
-                a, b = e[:2]
-                G.add_edge(a, b)
-            pos = nx.spring_layout(G)
-            nx.draw(G, pos, node_color='#A0CBE2')
-            plt.savefig(os.path.join(folder, "graph1.png"))
-            plt.close('all')
+        fix_tkinter_issues_virtualenv()
+        import matplotlib.pyplot as plt
+        import networkx as nx
+        plt.figure()
+        G = nx.Graph()
+        for e in edges:
+            a, b = e[:2]
+            G.add_edge(a, b)
+        pos = nx.spring_layout(G)
+        nx.draw(G, pos, node_color='#A0CBE2')
+        plt.savefig(os.path.join(folder, "graph1.png"))
+        plt.close('all')
 
         added = eulerien_extension(edges, fLOG=lambda *l: None,
                                    distance=distance_paris)
 
-        if __name__ == "__main__":
-            for e in added:
-                a, b = e[:2]
-                G.add_edge(a, b)
-            plt.figure()
-            pos = nx.spring_layout(G)
-            graph_degree(edges + added)
-            #labels={ v:"{0}".format(deg[v]) for v in G.nodes() }
-            nx.draw(G, pos, node_color='#A0CBE2'  # ,labels=labels
-                    )
-            plt.savefig(os.path.join(folder, "graph2.png"))
-            plt.close('all')
+        for e in added:
+            a, b = e[:2]
+            G.add_edge(a, b)
+        plt.figure()
+        pos = nx.spring_layout(G)
+        graph_degree(edges + added)
+        #labels={ v:"{0}".format(deg[v]) for v in G.nodes() }
+        nx.draw(G, pos, node_color='#A0CBE2'  # ,labels=labels
+                )
+        plt.savefig(os.path.join(folder, "graph2.png"))
+        plt.close('all')
 
         path = euler_path(edges, added)
         all = edges + added

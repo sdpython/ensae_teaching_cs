@@ -2,13 +2,9 @@
 @file
 @brief      scatter plots
 """
-
-import matplotlib.pyplot as plt
-from matplotlib.mlab import griddata
 import numpy
 from scipy import ndimage
 from .colorsdef import colors_definition
-from mpl_toolkits.mplot3d import Axes3D as skip_  # do remove this line
 
 
 def scatter_xy_id(xy_id, legend=None, ax=None, **options):
@@ -47,6 +43,7 @@ def scatter_xy_id(xy_id, legend=None, ax=None, **options):
     The error ``ValueError: Unknown projection '3d'`` is raised when the line
     ``from mpl_toolkits.mplot3d import Axes3D`` is missing.
     """
+    from mpl_toolkits.mplot3d import Axes3D as skip_  # do remove this line
     curves = {}
     for x, y, zid in xy_id:
         if zid not in curves:
@@ -55,6 +52,7 @@ def scatter_xy_id(xy_id, legend=None, ax=None, **options):
 
     marker = options.get('marker', 'o')
     if ax is None:
+        import matplotlib.pyplot as plt
         fig, ax = plt.subplots(figsize=options.get('figsize', None))
     else:
         fig = None
@@ -118,7 +116,9 @@ def scatter_xyc(points, smooth=0, div=10, ax=None, **options):
     The error ``ValueError: Unknown projection '3d'`` is raised when the line
     ``from mpl_toolkits.mplot3d import Axes3D`` is missing.
     """
+    from mpl_toolkits.mplot3d import Axes3D as skip_  # do remove this line
     if ax is None:
+        import matplotlib.pyplot as plt
         fig, ax = plt.subplots(figsize=options.get('figsize', None))
     else:
         fig = None
@@ -131,6 +131,7 @@ def scatter_xyc(points, smooth=0, div=10, ax=None, **options):
     xi = numpy.linspace(bound[0], bound[2], div)
     yi = numpy.linspace(bound[1], bound[3], div)
 
+    from matplotlib.mlab import griddata
     zi = griddata(x, y, z, xi, yi, interp='nn')
 
     if smooth > 0:
@@ -201,6 +202,7 @@ def scatter_xyz(points, smooth=0, div=100, ax=None, **options):
     The error ``ValueError: Unknown projection '3d'`` is raised when the line
     ``from mpl_toolkits.mplot3d import Axes3D`` is missing.
     """
+    from mpl_toolkits.mplot3d import Axes3D as skip_  # do remove this line
     x = [_[0] for _ in points]
     y = [_[1] for _ in points]
     z = [_[2] for _ in points]
@@ -209,6 +211,7 @@ def scatter_xyz(points, smooth=0, div=100, ax=None, **options):
     xi = numpy.linspace(bound[0], bound[2], div)
     yi = numpy.linspace(bound[1], bound[3], div)
 
+    from matplotlib.mlab import griddata
     zi = griddata(x, y, z, xi, yi, interp='nn')
     if smooth > 0:
         w = 1. / 9
@@ -217,6 +220,7 @@ def scatter_xyz(points, smooth=0, div=100, ax=None, **options):
             zi = ndimage.convolve(zi, iii)
 
     if ax is None:
+        import matplotlib.pyplot as plt
         fig = plt.figure(figsize=options.get('figsize', None))
         ax = fig.gca(projection='3d')
     else:

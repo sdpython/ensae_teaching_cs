@@ -38,14 +38,13 @@ except ImportError:
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import fix_tkinter_issues_virtualenv
 from src.ensae_teaching_cs.helpers.matplotlib_helper_xyz import scatter_xy_id, scatter_xyc, scatter_xyz
-import matplotlib
-import matplotlib.pyplot as plt
-from matplotlib import rcParams
 
 
 class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
 
-    backend = rcParams["backend"]
+    def setUp(self):
+        from matplotlib import rcParams
+        self.backend = rcParams["backend"]
 
     def generate_gauss(self, x, y, sigma, N=1000):
         res = []
@@ -63,6 +62,7 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
             return
         fix_tkinter_issues_virtualenv()
         if __name__ == "__main__":
+            from matplotlib import rcParams
             rcParams["backend"] = "TkAgg"
         fold = os.path.abspath(os.path.split(__file__)[0])
         fold = os.path.join(fold, "temp_graph_xyz")
@@ -77,14 +77,18 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
         nuage2 = self.generate_gauss(3, 4, 2)
         nuage = [(a, b, 0) for a, b in nuage1] + [(a, b, 1) for a, b in nuage2]
 
-        matplotlib.use(matplotlib.get_backend(), warn=False, force=True)
+        fix_tkinter_issues_virtualenv()
+        import matplotlib.pyplot as plt
 
         fig, ax = scatter_xy_id(
             nuage, title=self._testMethodName, legend={0: "c0", 1: "c1"})
         fig.savefig(im)
         assert os.path.exists(im)
         if __name__ == "__main__":
-            rcParams["backend"] = TestMatplotlibHelperVizScatterPlots.backend
+            import matplotlib
+            matplotlib.use(matplotlib.get_backend(), warn=False, force=True)
+            from matplotlib import rcParams
+            rcParams["backend"] = self.backend
         plt.close('all')
         fLOG(plt.style.available)
         # ['seaborn-bright', 'ggplot', 'seaborn-paper', 'seaborn-dark-palette', 'seaborn-dark',
@@ -99,6 +103,7 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
             return
         fix_tkinter_issues_virtualenv()
         if __name__ == "__main__":
+            from matplotlib import rcParams
             rcParams["backend"] = "TkAgg"
         fold = os.path.abspath(os.path.split(__file__)[0])
         fold = os.path.join(fold, "temp_graph_xyz")
@@ -117,7 +122,7 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
         nuage = [(a, b, f(a, b)) for a, b in nuage1] + \
             [(a, b, f(a, b)) for a, b in nuage2]
 
-        matplotlib.use(matplotlib.get_backend(), warn=False, force=True)
+        import matplotlib.pyplot as plt
 
         fig, ax = scatter_xyc(nuage, title=self._testMethodName)
         fig.savefig(im)
@@ -128,7 +133,10 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
         fig.savefig(im.replace(".png", ".s10.png"))
         assert os.path.exists(im)
         if __name__ == "__main__":
-            rcParams["backend"] = TestMatplotlibHelperVizScatterPlots.backend
+            import matplotlib
+            matplotlib.use(matplotlib.get_backend(), warn=False, force=True)
+            from matplotlib import rcParams
+            rcParams["backend"] = self.backend
         plt.close('all')
 
     def test_viz_scatter_scatter_xyz(self):
@@ -138,6 +146,7 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
             return
         fix_tkinter_issues_virtualenv()
         if __name__ == "__main__":
+            from matplotlib import rcParams
             rcParams["backend"] = "TkAgg"
         fold = os.path.abspath(os.path.split(__file__)[0])
         fold = os.path.join(fold, "temp_graph_xyz")
@@ -156,8 +165,6 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
         nuage = [(a, b, f(a, b)) for a, b in nuage1] + \
             [(a, b, f(a, b)) for a, b in nuage2]
 
-        matplotlib.use(matplotlib.get_backend(), warn=False, force=True)
-
         fig, ax = scatter_xyz(nuage, title=self._testMethodName)
         fig.savefig(im)
         assert os.path.exists(im)
@@ -167,7 +174,12 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
         fig.savefig(im.replace(".png", ".s10.png"))
         assert os.path.exists(im)
         if __name__ == "__main__":
-            rcParams["backend"] = TestMatplotlibHelperVizScatterPlots.backend
+            import matplotlib
+            matplotlib.use(matplotlib.get_backend(), warn=False, force=True)
+            from matplotlib import rcParams
+            rcParams["backend"] = self.backend
+
+        import matplotlib.pyplot as plt
         plt.close('all')
 
 
