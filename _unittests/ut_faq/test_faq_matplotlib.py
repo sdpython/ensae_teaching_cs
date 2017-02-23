@@ -68,7 +68,7 @@ class TestFaqMatplotlib(unittest.TestCase):
         df = df[df.Latitude < 52]
         df = df[df.Longitude > -130].copy()
         ax = graph_cities(df, ax=ax, markersize=3, fontcolor=(0, 1.0, 0), fontsize='40',
-                          fontname="Courrier", fontweight="bold")
+                          fontweight="bold")
         assert ax is not None
         img = os.path.join(temp, "img.png")
         fig.savefig(img)
