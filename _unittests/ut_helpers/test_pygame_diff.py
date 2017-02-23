@@ -98,6 +98,10 @@ class TestDiff(unittest.TestCase):
 
             wait_event(pygame)
 
+        for k, font in fonts.items():
+            del font
+        pygame.quit()
+
     def test_diff_full(self):
         fLOG(
             __file__,
@@ -144,6 +148,10 @@ class TestDiff(unittest.TestCase):
             make_video(png, out, size=(350, 250), format="XVID", fps=5)
 
             wait_event(pygame)
+
+        for k, font in fonts.items():
+            del font
+        pygame.quit()
 
 
 if __name__ == "__main__":
