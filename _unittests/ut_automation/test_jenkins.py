@@ -144,6 +144,7 @@ class TestJenkins(unittest.TestCase):
                        Anaconda2="apy27",
                        Python27="py27",
                        WinPython35="wpy35",
+                       WinPython36="wpy36",
                        Python35pyq="DDD")
 
         js = JenkinsExt('http://machine:8080/', "user",
