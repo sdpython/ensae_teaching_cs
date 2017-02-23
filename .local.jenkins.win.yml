@@ -15,15 +15,15 @@ before_script:
   - python -u setup.py try_import
   - set KERAS_BACKEND=theano
 script:
-  - { CMD: "python -u setup.py unittests", NAME: "UT", TIMEOUT: 3600 }  # timeout is 3600 for the documentation
-  - { CMD: "python -u setup.py unittests_LONG", NAME: "UT_LONG", TIMEOUT: 3600 }
-  - { CMD: "python -u setup.py unittests -e .*SKIP.* -g \".*((SKIP)|(theano)|(keras)|(deep)).*\"", NAME: "UT_SKIP" }
-  - { CMD: "python -u setup.py unittests -e .*_1A_.* -g \".*((SKIP)|(theano)|(keras)).*\"", NAME: "UT_1A" }
-  - { CMD: "python -u setup.py unittests -e .*_2A_.* -g \".*((SKIP)|(theano)|(keras)).*\"", NAME: "UT_2A", TIMEOUT: 3600 }
-  - { CMD: "python -u setup.py unittests -e .*_3A_.* -g \".*((SKIP)|(theano)|(keras)).*\"", NAME: "UT_3A" }
-  - { CMD: "python -u setup.py unittests -e .*_EX_.* -g \".*((SKIP)|(theano)|(keras)).*\"", NAME: "UT_EX", TIMEOUT: 3600 }
-  - { CMD: "python -u setup.py unittests -e .*_GUI_.* -g \".*((SKIP)|(theano)|(keras)).*\"", NAME: "UT_GUI", TIMEOUT: 2400 }
-  - { CMD: "python -u setup.py unittests -e \".*((theano)|(keras)).*\"", NAME: "UT_DEEP", TIMEOUT: 2400 }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests", NAME: "UT", TIMEOUT: 3600 }  # timeout is 3600 for the documentation
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests_LONG", NAME: "UT_LONG", TIMEOUT: 3600 }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*SKIP.* -g \".*((SKIP)|(theano)|(keras)|(deep)).*\"", NAME: "UT_SKIP" }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_1A_.* -g \".*((SKIP)|(theano)|(keras)).*\"", NAME: "UT_1A" }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_2A_.* -g \".*((SKIP)|(theano)|(keras)).*\"", NAME: "UT_2A", TIMEOUT: 3600 }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_3A_.* -g \".*((SKIP)|(theano)|(keras)).*\"", NAME: "UT_3A" }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_EX_.* -g \".*((SKIP)|(theano)|(keras)).*\"", NAME: "UT_EX", TIMEOUT: 3600 }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_GUI_.* -g \".*((SKIP)|(theano)|(keras)).*\"", NAME: "UT_GUI", TIMEOUT: 2400 }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((theano)|(keras)).*\"", NAME: "UT_DEEP", TIMEOUT: 2400 }
   - if [ ${VERSION} == "3.5" and ${DIST} == "std" ]
       then 
         --CMD=python -u setup.py build_sphinx;
