@@ -127,15 +127,6 @@ Deux exercices sont suggérés pour une séance de deux heures à choisir parmi 
 #. Concevoir une campagne publicataire avec `Mako <http://www.makotemplates.org/>`_
    ou `Jinja2 <http://jinja.pocoo.org/docs/dev/>`_
 
-.. todoext::
-    :title: Ajouter un exercice sur le templating (jinja2, mako)
-    :issue:
-    :tag: plus
-
-    Le templating fonction comme la fonction ``format`` et permet
-    en plus de faire des répétitions. C'est très utiliser
-    dans le domaine du web, notamment par `django <https://www.djangoproject.com/>`_.
-
 ------------
 
 TD - algorithmes
@@ -269,14 +260,6 @@ La dernière séance est une séance notée. Tous les documents sont autorisés.
 peuvent requérir l'utilisation des outils présentées durant les séances 9 à 12. Toutefois,
 si tel était le cas, ce serait très proche d'une solution proposée lors des TD.
 
-.. todoext::
-    :title: ajouter un notebook sur flexx
-    :issue: 13
-    :tag: plus
-    :date: 2016-08-04
-
-    Voir blog post sur :ref:`Flexx <blog-post-flexx>`.
-
 .. _l-td1a-start:
 
 ------------
@@ -362,22 +345,3 @@ Bibliographie
 **Outils**
 
 * `PythonTutor <http://pythontutor.com/>`_ : pour suivre pas à pas l'exécution d'un programme (petit)
-
-.. todoext::
-    :title: insister plus sur les algorithmes numériques pour les 1A écos
-    :issue: 8
-    :tag: plus
-    :date: 2016-06-24
-
-    Les étudiants souhaiteraient passer plus de temps au premier semestre sur
-    la partie dédiées aux algorithmes pour être mieux préparés au second semestre
-    lors de la réalisation des projets.
-
-.. todoext::
-    :title: ajouter une séance sur le calcul de la note des aliments
-    :tag: plus
-
-    La formule est explicitée sur
-    `Open Food Facts <http://fr.openfoodfacts.org/score-nutritionnel-france>`_.
-    L'objectif est de l'implémenter. Les données sont disponibles
-    sur `data.gouv.fr <https://www.data.gouv.fr/fr/datasets/produits-alimentaires-ingredients-nutrition-labels/>`_.

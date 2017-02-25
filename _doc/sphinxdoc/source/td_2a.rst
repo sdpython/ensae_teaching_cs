@@ -893,6 +893,13 @@ Traitement du langage
 * `Probabilistic Context-Free Grammars (PCFGs) <http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf>`_
 * `A Roundup of Recent Text Analytics and Vis Work <http://blogger.ghostweather.com/2014/10/a-roundup-of-recent-text-analytics-and.html>`_
 
+* `A Joint Model for Entity Analysis: Coreference, Typing, and Linking <http://www.cs.utexas.edu/~gdurrett/papers/durrett-klein-tacl2014.pdf>`_
+* `Disfluency Detection with a Semi-Markov Model and Prosodic Features <http://www.cs.utexas.edu/~gdurrett/papers/ferguson-durrett-klein-naacl2015.pdf>`_
+* `Capturing Semantic Similarity for Entity Linking with Convolutional Neural Networks <http://www.cs.utexas.edu/~gdurrett/papers/mfl-durrett-klein-naacl2016.pdf>`_
+* `Neural CRF Parsing <http://www.cs.utexas.edu/~gdurrett/papers/durrett-klein-acl2015.pdf>`_
+* `Less Grammar More Features <http://www.cs.utexas.edu/~gdurrett/papers/hall-durrett-klein-acl2014.pdf>`_
+* `Learning-Based Single-Document Summarization with Compression and Anaphoricity Constraints <https://arxiv.org/pdf/1603.08887v1.pdf>`_
+
 *word2vec*
 
 * `Towards a continuous modeling of natural language domains <http://www.aclweb.org/anthology/W/W16/W16-6012.pdf>`_
@@ -1359,142 +1366,6 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
 
 * `Beyond Bag of Words A Practitioner’s Guide to Advanced NLP <https://www.youtube.com/watch?v=YWzFxRZPEyU>`_
 * `Building Continuous Learning Systems <https://www.youtube.com/watch?v=VtBvmrmMJaI>`_
-
-**next year**
-
-.. todoext::
-    :title: Retravailler la partie visualisation de Python pour un data scientist
-    :tag: plus
-
-    Il manque un notebooks sur les visualisations les plus utilisées en machine learning,
-    ROC, régression, visualisation d'arbres de décision avec ete3, les cartes.
-    Insister sur l'interactivité.
-    Voir `TD 4B : Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
-    (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_),
-    ce notebook présente un moyen de faire une carte géographique, des graphes zoomables.
-
-.. todoext::
-    :title: aborder d'autres librairies
-    :tag: plus
-
-    py-earth, pytorch, boruta, wendelin.core, zodb,
-    (requires transaction, zc.lockfile, zodbpickle, ZODB, zdaemon, ZEO, ZODB3, wendelin.core),
-    ghost.py (scrapping)
-    h5py, PyTables, lda
-    See `Related Projects <http://scikit-learn.org/stable/related_projects.html>`_,
-    `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
-
-.. todoext::
-    :title: Aborder theano, keras, GPU et les types de deep strucures
-    :tag: done
-    :hidden:
-
-    Et les autres caffee, tensorflow, cntk, torch, h2o
-    (voir `libraries <http://www.teglor.com/b/deep-learning-libraries-language-cm569/>`_,
-    `librairies 1 <http://machinelearningmastery.com/popular-deep-learning-libraries/>`_,
-    `librairies 2 <http://www.datasciencecentral.com/profiles/blogs/here-are-15-libraries-in-various-languages-to-help-implement-your>`_,
-    `comparison <https://en.wikipedia.org/wiki/Comparison_of_deep_learning_software>`_
-    et différents types de structures DNN, CNN
-    `deep learning <https://en.wikipedia.org/wiki/Deep_learning>`_
-
-.. todoext::
-    :title: rédiger un ou deux notebook sur le traitement du langage
-    :tag: done
-    :hidden:
-
-    Aborder la distance d'édition, n-grams, NLTK, gensim,
-    word2vec, LDA (Latent Dirichlet Application), traduction statistique,
-    td-idf, coocurrence, analyse de sentiment, stemming
-    `SMT <https://en.wikipedia.org/wiki/Statistical_machine_translation>`_,
-    alignement,
-    `moses <http://www.statmt.org/moses/>`_
-
-.. todoext::
-    :title: techniques de webscrapping
-    :tag: plus
-
-    * beautifulsoup, ghost.py, scrappy
-    * `Python's Web Framework Benchmarks <http://klen.github.io/py-frameworks-bench/>`_
-
-.. todoext::
-    :title: aborder les formats de données sparses (CRS, ...)
-    :tag: plus
-
-    See `Compressed Sparse Row Format (CSR) <http://www.scipy-lectures.org/advanced/scipy_sparse/csr_matrix.html>`_.
-
-.. todoext::
-    :title: ajouter un notebook sur joblib
-    :tag: plus
-
-    joblib est utilisé par scikit-learn pour
-    paralléliser les calculs
-
-.. todoext::
-    :title: ajouter un notebook sur numba, llvmlite
-    :tag: plus
-
-    Il n'y pas que CPython pour ooptimiser les calculs.
-    Aborder les notions de JIT.
-
-.. todoext::
-    :title: sérialisation JSON
-    :tag: done
-    :hidden:
-
-    Très utilisée sur internet donc incontournable.
-
-.. todoext::
-    :title: ajouter MILP
-    :tag: plus
-
-    avec des modules tels que `pyomo <http://www.pyomo.org/>`_,
-    lire `Mixed integer programming for machine learning <http://www.litislab.fr/wp-content/uploads/2015/12/Canu-S.pdf>`_,
-    `GLPK/Python <https://en.wikibooks.org/wiki/GLPK/Python#Python-GLPK>`_,
-    `optlang <http://optlang.readthedocs.io/en/latest/>`_
-
-.. todoext::
-    :title: ajouter ctypes
-    :tag: plus
-
-    utilisation du module ctypes pour les import C++
-    + un exemple de `sklearn-compiledtrees <https://github.com/ajtulloch/sklearn-compiledtrees/>`_
-
-.. todoext::
-    :title: multi-label, coverage_error
-    :tag: plus
-
-    fonction `coverage-error <http://scikit-learn.org/stable/modules/model_evaluation.html#coverage-error>`_,
-    lire `Mining Multi-label Data <http://lpis.csd.auth.gr/publications/tsoumakas09-dmkdh.pdf>`_
-
-.. todoext::
-    :title: ajouter projections
-    :tag: plus
-
-    parler plus précisément des projections, de la réduction des dimensions
-
-.. todoext::
-    :title: HMM
-    :tag: plus
-
-    parler de Modèles de Markov cachés HMM avec des mélanges de gaussiennes
-    pour analyser les séries temporelles
-    `hmmlearn <https://github.com/hmmlearn/hmmlearn/blob/master/>`_,
-    `seqlearn <https://github.com/larsmans/seqlearn>`_,
-    `pomegranate <https://github.com/jmschrei/pomegranate>`_
-
-.. todoext::
-    :title: modules, framework à regarder
-    :tag: plus
-
-    * `REP <https://github.com/yandex/rep>`_
-    * `TPOT <https://github.com/rhiever/tpot>`_
-    * `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
-
-    * `msmbuilder <http://msmbuilder.org/3.6.0/decomposition.html>`_
-    * `sparkit-learn <https://github.com/lensacom/sparkit-learn>`_
-    * `kmodes <https://github.com/nicodv/kmodes>`_
-    * `hdbscan <https://github.com/scikit-learn-contrib/hdbscan>`_
-    * `sacred <https://github.com/IDSIA/Sacred>`_
 
 .. [#fwrite1] Contributeur, encadrant et coordinateur du cours.
 
