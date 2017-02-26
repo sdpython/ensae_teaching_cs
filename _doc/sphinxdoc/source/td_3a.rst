@@ -160,6 +160,7 @@ Threads et synchronisation
 *Lectures*
 
 * `TIL: clock skew exists (distributed system) <http://jvns.ca/blog/2016/02/10/til-clock-skew-exists/>`_ *(2016/06)*
+* `Le dîner des philosophes <https://fr.wikipedia.org/wiki/D%C3%AEner_des_philosophes>`_
 
 Distribution des calculs, stratégies de stockage, SQL NoSQL
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -180,6 +181,7 @@ Distribution des calculs, stratégies de stockage, SQL NoSQL
 * `MongoDB <https://www.mongodb.com/>`_
 * `rethinkdb <https://rethinkdb.com/>`_ (python : `rethinkdb <https://pypi.python.org/pypi/rethinkdb/>`_)
 
+
 Compression des données
 +++++++++++++++++++++++
 
@@ -197,6 +199,21 @@ Lorsque les données sont volumineuses. Une solution consiste à les compresser.
 * `blosc <http://blosc.org/>`_
 * `h5py <http://www.h5py.org/>`_
 * `Zarr <https://github.com/alimanfoo/zarr>`_
+
+
+Workflow de données
++++++++++++++++++++
+
+*Lectures*
+
+* `Composable Multi-Threading for Python Libraries <http://conference.scipy.org/proceedings/scipy2016/pdfs/anton_malakhov.pdf>`_
+
+*Modules*
+
+* `Luigi <https://github.com/spotify/luigi>`_ (Python)
+* `Threading Building Blocks <https://www.threadingbuildingblocks.org/>`_ (C++, Python)
+* `Oozie <http://oozie.apache.org/>`_ (Hadoop, Spark)
+* `Azkaban <https://azkaban.github.io/>`_ (Hadoop, Spark)
 
 ------------
 
