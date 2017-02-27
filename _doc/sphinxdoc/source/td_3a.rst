@@ -181,7 +181,6 @@ Distribution des calculs, stratégies de stockage, SQL NoSQL
 * `MongoDB <https://www.mongodb.com/>`_
 * `rethinkdb <https://rethinkdb.com/>`_ (python : `rethinkdb <https://pypi.python.org/pypi/rethinkdb/>`_)
 
-
 Compression des données
 +++++++++++++++++++++++
 
@@ -199,7 +198,6 @@ Lorsque les données sont volumineuses. Une solution consiste à les compresser.
 * `blosc <http://blosc.org/>`_
 * `h5py <http://www.h5py.org/>`_
 * `Zarr <https://github.com/alimanfoo/zarr>`_
-
 
 Workflow de données
 +++++++++++++++++++

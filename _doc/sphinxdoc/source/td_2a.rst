@@ -793,10 +793,34 @@ Timeseries - Séries temporelles
 * `Time Series Classification and Clustering with Python <http://alexminnaar.com/time-series-classification-and-clustering-with-python.html>`_
 * `Dynamic Time Warping <https://en.wikipedia.org/wiki/Dynamic_time_warping>`_
 * `Functional responses, functional covariates and the concurrent model <http://www.ece.uvic.ca/~bctill/papers/mocap/Ramsay_Silverman_2005ao.pdf>`_
+* `Fast and Accurate Time Series Classification with WEASEL <https://arxiv.org/pdf/1701.07681.pdf>`_ (text and timeseries)
+* `Forecasting at Scale <https://facebookincubator.github.io/prophet/static/prophet_paper_20170113.pdf>`_
 
 *Modules*
 
 * `statsmodels <http://statsmodels.sourceforge.net/>`_
+* `fbprophet <https://github.com/facebookincubator/prophet/tree/master/python>`_
+  (requires `pystan <http://pystan.readthedocs.io/en/latest/index.html>`_)
+* `Rob J Hyndman software <http://robjhyndman.com/publications/software/>`_
+  (disponible uniquement en R)
+* `influxdb <https://github.com/influxdata/influxdb>`_ (An Open-Source Time Series Database)
+
+Finance
++++++++
+
+|pystatpng|
+
+*Modules*
+
+* `pyalgotrade <http://gbeced.github.io/pyalgotrade/>`_
+* `zipline <https://pypi.python.org/pypi/zipline>`_
+* `alphalens <https://github.com/quantopian/alphalens>`_
+* `pyfolio <https://github.com/quantopian/pyfolio>`_
+* `empyrical <https://github.com/quantopian/empyrical>`_
+* `quantlib <https://github.com/lballabio/quantlib>`_
+* `prophet <http://prophet.michaelsu.io/en/latest/>`_ (not updated anymore)
+* `bloomberg API <https://www.bloomberglabs.com/api/libraries/>`_
+* `ta-lib <https://github.com/mrjbq7/ta-lib>`_
 
 Auto-Learning
 +++++++++++++
@@ -934,8 +958,15 @@ Images
 
 *Lectures*
 
+* `Image-to-Image Translation with Conditional Adversarial Networks <https://arxiv.org/pdf/1611.07004.pdf>`_,
+  `Image to Image demo <http://affinelayer.com/pixsrv/index.html>`_
+
+*Modules*
+
 * `VIGRA <https://github.com/ukoethe/vigra>`_
 * `opencv <http://opencv.org/>`_
+* `hed <https://github.com/s9xie/hed>`_ (Holistically-Nested Edge Detection)
+* tous les modules de :ref:`l-deep-learning`
 
 Graphes et réseaux
 ++++++++++++++++++
@@ -1071,6 +1102,24 @@ Big data sans cluster, données non structurées
 * `MongoDB <https://www.mongodb.com/>`_
 * `rethinkdb <https://rethinkdb.com/>`_ (python : `rethinkdb <https://pypi.python.org/pypi/rethinkdb/>`_)
 
+*Modules*
+
+* `dask <http://dask.pydata.org/en/latest/>`_
+* `cytoolz <https://github.com/pytoolz/cytoolz>`_
+
+Tensor, tableaux multidimensionnel
+++++++++++++++++++++++++++++++++++
+
+|pystatpng|
+
+(à venir)
+
+*Modules*
+
+* `xarray <http://xarray.pydata.org/en/stable/>`_
+* `xtensor-array <https://github.com/QuantStack/xtensor-python>`_
+* `cubes <http://cubes.databrewery.org/>`_
+
 .. _l-2a-cplusplus-para-serie:
 
 C++, R
@@ -1096,6 +1145,13 @@ C++, R
 *Vidéos*
 
 * `Making your code faster: Cython and parallel processing in the Jupyter Notebook <https://www.youtube.com/watch?v=MiHddLYZ6cQ>`_
+
+* Modules*
+
+* `cython <http://cython.org/>`_
+* `ctypes <https://docs.python.org/3/library/ctypes.html>`_
+* `boost_python <http://www.boost.org/doc/libs/1_63_0/libs/python/doc/html/index.html>`_
+* `pybind11 <https://github.com/pybind/pybind11/>`_
 
 Parallélisation, sérialisation
 ++++++++++++++++++++++++++++++
