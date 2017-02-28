@@ -25,15 +25,21 @@ import keyring
 # tous les mails doivent être dans le même répertoire
 
 server = "imap.gmail.com"
-mailfolder = ["ensae/ENSAE_3A"]
-date = "30-Jan-2017"
+mailfolder = ["ensae/ENSAE_1A"]
+date = "05-Feb-2017"
 do_mail = True
 dest_folder = os.path.normpath(os.path.abspath(os.path.join(
-    *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2016-2017", "3A"]))))
+    *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2016-2017", "1A_rattrapage"]))))
 print("dest", dest_folder)
-filename_zip = os.path.join(dest_folder, "Python_3A_2016.zip")
+filename_zip = os.path.join(dest_folder, "Python_1A_rattrapage_2016.zip")
 filename_mails = os.path.join(dest_folder, "emails.txt")
-filename_excel = os.path.join(dest_folder, "Python_3A_2016.xlsx")
+filename_excel = os.path.join(dest_folder, "Python_1A_rattrapage_2016.xlsx")
+
+#########################################
+# create the folder if it does not exist
+
+if not os.path.exists(dest_folder):
+    os.makedirs(dest_folder)
 
 #########################################
 # Cette section ajoute des chemins pour des modules que je développe
