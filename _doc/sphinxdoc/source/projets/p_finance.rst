@@ -96,6 +96,8 @@ Quelques liens :
 
 * `Currency Portfolio Optimization Using ScienceOps <http://blog.yhathq.com/posts/currency-portfolio-optimization-using-scienceops.html>`_
 * :ref:`finance_strategie_automatique`
+* `Bayes à la rescousse de Markowitz <http://www.finaltis.com/downloads/finaltisefficientbetaeuro/lettrerecherche/201602LettreDeRecherche.pdf>`_
+  (plutôt, à lire en cas de performances décevantes)
 
 .. _l-fi-pair:
 
