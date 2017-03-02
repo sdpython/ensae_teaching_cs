@@ -566,6 +566,10 @@ Deep Learning
 * `Understanding Deep Learning Requires Rethinking Generalization <https://arxiv.org/pdf/1611.03530.pdf>`_
 * `Training Deep Nets with Sublinear Memory Cost <https://arxiv.org/pdf/1604.06174.pdf>`_
 
+*Deep Forest*
+
+* `Deep Forest: Towards An Alternative to Deep Neural Networks <https://arxiv.org/pdf/1702.08835.pdf>`_
+
 *Chiffres, Textes*
 
 * `One weird trick for parallelizing convolutional neural networks <https://arxiv.org/pdf/1404.5997v2.pdf>`_
@@ -782,6 +786,8 @@ Timeseries - Séries temporelles
     :maxdepth: 2
 
     notebooks/_gs2a_timeseries
+    
+(à venir : modèles SETAR pour les séries non périodiques, modèles proies prédateurs)
 
 *Lectures*
 
@@ -795,6 +801,11 @@ Timeseries - Séries temporelles
 * `Functional responses, functional covariates and the concurrent model <http://www.ece.uvic.ca/~bctill/papers/mocap/Ramsay_Silverman_2005ao.pdf>`_
 * `Fast and Accurate Time Series Classification with WEASEL <https://arxiv.org/pdf/1701.07681.pdf>`_ (text and timeseries)
 * `Forecasting at Scale <https://facebookincubator.github.io/prophet/static/prophet_paper_20170113.pdf>`_
+* `SETAR <https://en.wikipedia.org/wiki/SETAR_(model)>`_ : prédiction sur des modèles 
+  en apparence cycliques mais non périodiques (type proies-prédateurs, chaotiques),
+  SETAR = Self-Exciting Threshold AutoRegressive
+* `Using predator-prey models on the Canadian lynx series <http://andrewgelman.com/2012/01/28/the-last-word-on-the-canadian-lynx-series/>`_,
+  `Inference for nonlinear dynamical systems <http://www.pnas.org/content/103/49/18438.full.pdf>`_
 
 *Modules*
 
