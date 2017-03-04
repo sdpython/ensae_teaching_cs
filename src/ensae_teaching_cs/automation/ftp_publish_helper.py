@@ -146,7 +146,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
     login = params["login"]
     ftpsite = params["ftpsite"]
 
-    filter_out = "[/\\\\]((moduletoc.html)|(blogtoc.html)|(searchbox.html))"
+    filter_out = "([/\\\\]((moduletoc.html)|(blogtoc.html)|(searchbox.html)))|([.]buildinfo)"
 
     ftp = TransferFTP(ftpsite, login, password, fLOG=fLOG)
 
