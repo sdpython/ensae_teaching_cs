@@ -482,6 +482,7 @@ poste régulièrement des articles sur des librairies de machine learning open s
 * `statsmodels <http://statsmodels.sourceforge.net/>`_
 * `xgboost <https://xgboost.readthedocs.io/en/latest/>`_
 * `mlxtend <https://github.com/rasbt/mlxtend>`_
+* `imbalanced-learn <https://github.com/scikit-learn-contrib/imbalanced-learn>`_ (la documentation est intéressante)
 
 Ranking
 +++++++
@@ -786,7 +787,7 @@ Timeseries - Séries temporelles
     :maxdepth: 2
 
     notebooks/_gs2a_timeseries
-    
+
 (à venir : modèles SETAR pour les séries non périodiques, modèles proies prédateurs)
 
 *Lectures*
@@ -801,7 +802,7 @@ Timeseries - Séries temporelles
 * `Functional responses, functional covariates and the concurrent model <http://www.ece.uvic.ca/~bctill/papers/mocap/Ramsay_Silverman_2005ao.pdf>`_
 * `Fast and Accurate Time Series Classification with WEASEL <https://arxiv.org/pdf/1701.07681.pdf>`_ (text and timeseries)
 * `Forecasting at Scale <https://facebookincubator.github.io/prophet/static/prophet_paper_20170113.pdf>`_
-* `SETAR <https://en.wikipedia.org/wiki/SETAR_(model)>`_ : prédiction sur des modèles 
+* `SETAR <https://en.wikipedia.org/wiki/SETAR_(model)>`_ : prédiction sur des modèles
   en apparence cycliques mais non périodiques (type proies-prédateurs, chaotiques),
   SETAR = Self-Exciting Threshold AutoRegressive
 * `Using predator-prey models on the Canadian lynx series <http://andrewgelman.com/2012/01/28/the-last-word-on-the-canadian-lynx-series/>`_,
@@ -1239,7 +1240,10 @@ Certains sont tirés de plusieurs sites dont
 Streaming algorithms
 ++++++++++++++++++++
 
-(*à venir*)
+.. toctree::
+    :maxdepth: 2
+
+    notebooks/_gs2a_streaming
 
 * `Répartir train / test en streaming <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/split_train_test.html#streaming-splitting>`_
 
