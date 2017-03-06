@@ -310,9 +310,14 @@ Clustering
 
 |pyecopng| |pystatpng|
 
+.. toctree::
+    :maxdepth: 2
+
+    notebooks/_gs2a_clustering
+
 (à venir)
 
-* scopre silhouette
+* score silhouette
 * clustering de variables catégorielles
 
 *Lectures*

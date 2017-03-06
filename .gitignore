@@ -417,6 +417,12 @@ _doc/notebooks/td2a/ensae_*.txt
 _doc/notebooks/competitions/2016/ensae_*.txt
 _doc/notebooks/competitions/2016/ensae_*.zip
 _doc/notebooks/td3a/GLE*.txt
+_doc/notebooks/td2a_ml/*divvy*
+_doc/notebooks/td2a_ml/*.zip
+_doc/notebooks/td2a_ml/2016*.*
+_doc/notebooks/td2a_ml/features_bike_chicago.txt
+
+
 
 
 
