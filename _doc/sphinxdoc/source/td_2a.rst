@@ -115,6 +115,10 @@ Array, Matrix
     :maxdepth: 2
 
     notebooks/_gs2a_dnumpy
+    
+*Lectures*
+
+* `From Python to Numpy <http://www.labri.fr/perso/nrougier/from-python-to-numpy/>`_
 
 *Modules*
 
@@ -345,6 +349,8 @@ Clustering
 
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 * `hdbscan <https://github.com/scikit-learn-contrib/hdbscan>`_
+* `pyclustering <https://pypi.python.org/pypi/pyclustering>`_
+* `pycluster <https://pypi.python.org/pypi/pycluster>`_
 
 Détection d'anomalies
 +++++++++++++++++++++
