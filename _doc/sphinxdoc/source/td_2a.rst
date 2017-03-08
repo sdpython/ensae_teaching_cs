@@ -115,7 +115,7 @@ Array, Matrix
     :maxdepth: 2
 
     notebooks/_gs2a_dnumpy
-    
+
 *Lectures*
 
 * `From Python to Numpy <http://www.labri.fr/perso/nrougier/from-python-to-numpy/>`_
@@ -812,7 +812,7 @@ Timeseries - Séries temporelles
 * `Dynamic Time Warping <https://en.wikipedia.org/wiki/Dynamic_time_warping>`_
 * `Functional responses, functional covariates and the concurrent model <http://www.ece.uvic.ca/~bctill/papers/mocap/Ramsay_Silverman_2005ao.pdf>`_
 * `Fast and Accurate Time Series Classification with WEASEL <https://arxiv.org/pdf/1701.07681.pdf>`_ (text and timeseries)
-* `Forecasting at Scale <https://facebookincubator.github.io/prophet/static/prophet_paper_20170113.pdf>`_
+* `Forecasting at Scale <https://facebookincubator.github.io/prophet/static/prophet_paper_20170113.pdf>`_ (Facebook)
 * `SETAR <https://en.wikipedia.org/wiki/SETAR_(model)>`_ : prédiction sur des modèles
   en apparence cycliques mais non périodiques (type proies-prédateurs, chaotiques),
   SETAR = Self-Exciting Threshold AutoRegressive
