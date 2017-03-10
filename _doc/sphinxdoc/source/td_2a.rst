@@ -577,6 +577,7 @@ Deep Learning
 * `Evaluation of Deep Learning Toolkits <https://github.com/zer0n/deepframeworks/blob/master/README.md>`_ *(2015/12)*
 * `Understanding Deep Learning Requires Rethinking Generalization <https://arxiv.org/pdf/1611.03530.pdf>`_
 * `Training Deep Nets with Sublinear Memory Cost <https://arxiv.org/pdf/1604.06174.pdf>`_
+* `On the importance of initialization and momentum in deep learning <http://www.cs.toronto.edu/~fritz/absps/momentum.pdf>`_
 
 *Deep Forest*
 
