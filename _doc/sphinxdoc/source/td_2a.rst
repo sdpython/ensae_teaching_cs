@@ -9,16 +9,17 @@ Python pour un Data Scientist / Economiste
 
 `ENSAE - OMI2F2 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/2me-anne-formationsdiplome-95.html?id=101352>`_
 
-Cours animé par :
+*Cours animé par :*
 `Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_  (ENSAE 1999) [#fwrite1]_,
 Anne Muller (ENSAE 2012) [#fwrite1]_,
 Elodie Royant (ENSAE 2008) [#fwrite2]_,
 Antoine Thabault (ENSAE 2012) [#fwrite2]_,
-Jérémie Jakubowicz (ENSAE 2002) [#fwrite2]_,
 Nicolas Rousset [#fwrite2]_,
 Antoine Ly (ENSAE 2015),
 Benjamin Donnot (ENSAE 2015),
-Gaël Varoquaux [#fwrite2]_
+Gaël Varoquaux [#fwrite2]_.
+
+*Contributeurs :* Jérémie Jakubowicz (ENSAE 2002) [#fwrite3]_, Gilles Drigout (ENSAE 2013) [#fwrite4]_
 
 Ce cours s'étale sur 6 séances de cours/TD d'une durée de 4h.
 Les outils proposés sont en langage `Python <https://www.python.org/>`_.
@@ -293,7 +294,7 @@ Variables catégorielles
 *Lectures*
 
 * :ref:`Tranformer les variables catégorielles et contrastes <encoding-categorie-id>`
-* :ref:`Corrélations entre des variables catégorielles <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/correlation_non_lineaire.html>`_
+* `Corrélations entre des variables catégorielles <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/correlation_non_lineaire.html>`_
 * `Enoncé d'examan autour des variables catégorielles <http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2017.pdf>`_
   et sa :ref:`corection <tdnote2017rs>`
 
@@ -1252,20 +1253,16 @@ Certains sont tirés de plusieurs sites dont
 Streaming algorithms
 ++++++++++++++++++++
 
+* `Répartir train / test en streaming <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/split_train_test.html#streaming-splitting>`_
+
 .. toctree::
     :maxdepth: 2
 
     notebooks/_gs2a_streaming
 
-* `Répartir train / test en streaming <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/split_train_test.html#streaming-splitting>`_
-
-Plan
-
-* Calcul d'une médiane
-* Algorithme `BJKST <http://info.prelert.com/blog/hashing-and-approximate-distinct-value-counts>`_
-
 *Lectures*
 
+* Algorithme `BJKST <http://info.prelert.com/blog/hashing-and-approximate-distinct-value-counts>`_
 * `Streaming Algorithms <http://resources.mpi-inf.mpg.de/departments/d1/teaching/ss14/gitcs/notes3.pdf>`_
 * `Data Stream Algorithms <http://www.cs.dartmouth.edu/~ac/Teach/CS85-Fall09/Notes/lecnotes.pdf>`_
 * `Optimal streaming histograms <https://amplitude.com/blog/2014/08/06/optimal-streaming-histograms/>`_
@@ -1453,3 +1450,7 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
 .. [#fwrite1] Contributeur, encadrant et coordinateur du cours.
 
 .. [#fwrite2] Contributeur, encadrant.
+
+.. [#fwrite3] Contributeur, encadrant des premiers jours (2014-2016).
+
+.. [#fwrite4] Contributeur.
