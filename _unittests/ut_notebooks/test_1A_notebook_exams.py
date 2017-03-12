@@ -44,7 +44,7 @@ from pyquickhelper.pycode import get_temp_folder, add_missing_development_versio
 class TestNotebookRunnerExams (unittest.TestCase):
 
     def setUp(self):
-        add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
+        add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
                                         __file__, hide=True)
 
     def test_notebook_runner_exams(self):
