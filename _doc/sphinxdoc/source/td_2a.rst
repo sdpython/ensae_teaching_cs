@@ -295,6 +295,7 @@ Variables catégorielles
 
 * :ref:`Tranformer les variables catégorielles et contrastes <encoding-categorie-id>`
 * `Corrélations entre des variables catégorielles <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/correlation_non_lineaire.html>`_
+* `Exemple de traitement d'une variable catégorielle <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/solution_2017.html#solution2017rst>`_
 * `Enoncé d'examan autour des variables catégorielles <http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2017.pdf>`_
   et sa :ref:`corection <tdnote2017rs>`
 
