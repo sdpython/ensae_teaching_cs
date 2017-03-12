@@ -591,6 +591,9 @@ class ProjectsRepository:
 
         folds = []
 
+        if df.shape[1] == 0:
+            raise Exception("No column in the dataframe.")
+
         if col_group:
             gr = df.groupby(col_group)
         else:
