@@ -302,7 +302,12 @@ avec Spark et Spark SQL
 
 * `Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing <http://www.cs.berkeley.edu/~matei/papers/2012/nsdi_spark.pdf>`_,
   Matei Zaharia, Mosharaf Chowdhury, Tathagata Das, Ankur Dave, Justin Ma, Murphy McCauley, Michael J. Franklin, Scott Shenker, Ion Stoica
-* `From scikit-learn to Spark ML <http://blog.xebia.fr/2015/10/08/from-scikit-learn-to-spark-ml/>`_ *(2016/06)*
+* `From scikit-learn to Spark ML <http://blog.xebia.fr/2015/10/08/from-scikit-learn-to-spark-ml/>`_
+* `Deep Dive into Catalyst <https://spark-summit.org/2016/events/deep-dive-into-catalyst-apache-spark-20s-optimizer/>`_,
+  `Catalyst — Tree Manipulation Framework <https://jaceklaskowski.gitbooks.io/mastering-apache-spark/content/spark-sql-catalyst.html>`_
+* `What is Tungsten for Apache Spark? <https://community.hortonworks.com/articles/72502/what-is-tungsten-for-apache-spark.html>`_,
+  `Project Tungsten: Bringing Apache Spark Closer to Bare Metal <https://databricks.com/blog/2015/04/28/project-tungsten-bringing-spark-closer-to-bare-metal.html>`_
+* `Spark SQL: Another 16x times faster after Tungsten <https://spark-summit.org/east-2017/events/spark-sql-another-16x-faster-after-tungsten/>`_
 
 *Modules*
 

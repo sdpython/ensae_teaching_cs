@@ -974,6 +974,8 @@ Traitement du langage
 * `nltk <http://www.nltk.org/>`_
 * `gensim <https://radimrehurek.com/gensim/>`_
 * `spacy <https://spacy.io/>`_
+* `Stanford CoreNLP <http://stanfordnlp.github.io/CoreNLP/other-languages.html#python>`_,
+  `corenlpy <https://github.com/enewe101/corenlpy>`_
 
 Images
 ++++++
@@ -993,6 +995,22 @@ Images
 * `opencv <http://opencv.org/>`_
 * `hed <https://github.com/s9xie/hed>`_ (Holistically-Nested Edge Detection)
 * tous les modules de :ref:`l-deep-learning`
+
+Visage, paroles
++++++++++++++++
+
+(à venir)
+
+*Modules*
+
+* `bob.bio <http://pythonhosted.org/bob.bio.base/index.html>`_
+
+*Lectures*
+
+* `Probabilistic Linear Discriminant Analysis for Inferences About Identity <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.97.6491&rep=rep1&type=pdf>`_,
+  `shrinkage <http://scikit-learn.org/stable/modules/lda_qda.html#shrinkage>`_
+* `Probabilistic Linear Discriminant Analysis for Acoustic Modelling <http://www.cstr.ed.ac.uk/downloads/publications/2014/plda-spl2014.pdf>`_
+
 
 Graphes et réseaux
 ++++++++++++++++++
