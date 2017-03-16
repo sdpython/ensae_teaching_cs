@@ -240,6 +240,21 @@ Cartes
 * `pyproj <https://pypi.python.org/pypi/pyproj>`_
 * `geopy <https://pypi.python.org/pypi/geopy>`_
 
+Visualiser pour comprendre
+++++++++++++++++++++++++++
+
+(*à venir*)
+
+*Modules*
+
+* `TensorBoard <https://www.tensorflow.org/versions/r0.12/tutorials/>`_ : c'est un projet qui risque de prendre pas mal d'ampleur.
+  Il sert à visualiser les résultats intermédiaires, à comparer, à voir les résultats d'un processus
+  de machine learning, en particulier les réseaux de neurones profond. Même `Keras <https://keras.io/callbacks/#tensorboard>`_ s'y met.
+  `How to use tensorboard Embedding Projector ? <http://stackoverflow.com/questions/40849116/how-to-use-tensorboard-embedding-projector/42775951>`_
+  Exemples `TensorBoard: Embedding Visualization <http://ahogrammer.com/2016/12/01/tensorboard-embedding-visualization/>`_,
+  `An Encounter with Google’s TensorFlow <https://esciencegroup.com/2016/01/05/an-encounter-with-googles-tensorflow/>`_,
+  `How to plot a ROC curve with Tensorflow and scikit-learn? <http://stackoverflow.com/questions/36939328/how-to-plot-a-roc-curve-with-tensorflow-and-scikit-learn>`_
+
 ------------
 
 Transformations des données
@@ -270,6 +285,7 @@ Projections, réduction des dimensions
 * `Dynamic Self-Organising Map <http://www.labri.fr/perso/nrougier/coding/article/article.html>`_
 * `Fast Randomized SVD <https://research.fb.com/fast-randomized-svd/>`_
 * `Neural Autoregressive Distribution Estimation <http://www.jmlr.org/papers/volume17/16-272/16-272.pdf>`_
+* `How to Use t-SNE Effectively <http://distill.pub/2016/misread-tsne/>`_
 
 *Modules*
 
@@ -277,6 +293,7 @@ Projections, réduction des dimensions
 * `statsmodels <http://statsmodels.sourceforge.net/>`_
 * `fbpca <http://fbpca.readthedocs.io/en/latest/>`_ : ACP
 * `prince <https://github.com/MaxHalford/Prince>`_ : ACM
+* `Parametric-t-SNE <https://github.com/kylemcdonald/Parametric-t-SNE/blob/master/Parametric%20t-SNE%20(Keras).ipynb>`_
 
 *Animations*
 
@@ -545,6 +562,7 @@ Deep Learning
 * `Artificial Intelligence, Revealed (1) <https://code.facebook.com/pages/1902086376686983>`_ : article de blog et vidéos
   expliquant les différents concepts du deep learning
 * `colah's blog <http://colah.github.io/>`_ *(2016/08)* blog/cours sur le deep learning
+* `Building Autoencoders in Keras <https://blog.keras.io/building-autoencoders-in-keras.html>`_
 
 *Sites*
 
@@ -580,6 +598,7 @@ Deep Learning
 * `Understanding Deep Learning Requires Rethinking Generalization <https://arxiv.org/pdf/1611.03530.pdf>`_
 * `Training Deep Nets with Sublinear Memory Cost <https://arxiv.org/pdf/1604.06174.pdf>`_
 * `On the importance of initialization and momentum in deep learning <http://www.cs.toronto.edu/~fritz/absps/momentum.pdf>`_
+* `TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems <http://download.tensorflow.org/paper/whitepaper2015.pdf>`_
 
 *Deep Forest*
 
@@ -986,6 +1005,7 @@ Images
 
 *Lectures*
 
+* `VGG Convolutional Neural Networks Practical <http://www.robots.ox.ac.uk/~vgg/practicals/cnn/>`_
 * `Image-to-Image Translation with Conditional Adversarial Networks <https://arxiv.org/pdf/1611.07004.pdf>`_,
   `Image to Image demo <http://affinelayer.com/pixsrv/index.html>`_
 
@@ -994,7 +1014,14 @@ Images
 * `VIGRA <https://github.com/ukoethe/vigra>`_
 * `opencv <http://opencv.org/>`_
 * `hed <https://github.com/s9xie/hed>`_ (Holistically-Nested Edge Detection)
+* `bob.bio <http://pythonhosted.org/bob.bio.base/index.html>`_
 * tous les modules de :ref:`l-deep-learning`
+
+*Modèles pré-entraînés*
+
+* `VGG16 model for Keras <https://gist.github.com/baraldilorenzo/07d7802847aaad0a35d3>`_,
+  `VGG in TensorFlow <https://www.cs.toronto.edu/~frossard/post/vgg16/>`_,
+  `Very Deep Convolutional Networks for Large-Scale Visual Recognition <http://www.robots.ox.ac.uk/~vgg/research/very_deep/>`_
 
 Visage, paroles
 +++++++++++++++
@@ -1010,7 +1037,6 @@ Visage, paroles
 * `Probabilistic Linear Discriminant Analysis for Inferences About Identity <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.97.6491&rep=rep1&type=pdf>`_,
   `shrinkage <http://scikit-learn.org/stable/modules/lda_qda.html#shrinkage>`_
 * `Probabilistic Linear Discriminant Analysis for Acoustic Modelling <http://www.cstr.ed.ac.uk/downloads/publications/2014/plda-spl2014.pdf>`_
-
 
 Graphes et réseaux
 ++++++++++++++++++
