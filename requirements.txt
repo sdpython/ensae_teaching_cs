@@ -1,3 +1,5 @@
+# pycuda
+# pyopencl
 ansiconv
 autopep8
 azure
@@ -5,27 +7,24 @@ beautifulsoup4
 bqplot
 brewer2mpl
 chardet
-dbfread
 codecov
+dbfread
 entrypoints
-geopy
 folium
+geopy
 graphviz
 jyquickhelper
 keyring
 lifelines
 lightning-python
 lxml
-mechanize
 metakernel
 pkgtools
 plotly
-# pycuda
 pygal
 pygal_maps_fr
 pylzma
 pympler
-# pyopencl
 pyquickhelper
 pyreadline
 python-jenkins
@@ -33,8 +32,7 @@ qgrid
 requests-oauthlib
 toolz
 version_information
-xlsxwriter
 xlrd
+xlsxwriter
 xlwt
 xmltodict
-
