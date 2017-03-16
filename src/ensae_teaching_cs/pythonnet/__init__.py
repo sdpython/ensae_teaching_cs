@@ -9,7 +9,7 @@
 
     When running for the first time on Python 3.5, the following error came up::
 
-        Unhandled Exception: System.IO.FileLoadException: Could not load file or assembly 'file:///<apath>\Python.Runtime.dll' or one of its dependencies.
+        Unhandled Exception: System.IO.FileLoadException: Could not load file or assembly 'file:///<apath>\\Python.Runtime.dll' or one of its dependencies.
         Operation is not supported. (Exception from HRESULT: 0x80131515) ---> System.NotSupportedException: An attempt was made to load an assembly
         from a network location which would have caused the assembly to be sandboxed in previous versions of the .NET Framework.
         This release of the .NET Framework does not enable CAS policy by default, so this load may be dangerous.
@@ -174,6 +174,7 @@ def import_magic_cs():
         path = os.path.join(path, "csdll")
 
         from clr import AddReference
+        AddReference("System.Collections")
 
         try:
             AddReference("MagicJupyter")

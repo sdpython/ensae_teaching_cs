@@ -48,7 +48,9 @@ class TestPythonnet(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         if sys.platform.startswith("win"):
-            from src.ensae_teaching_cs.pythonnet import clr as skip__
+            from src.ensae_teaching_cs.pythonnet import clr
+            clr.AddReference("System")
+            clr.AddReference("System.Collections")
             from System import String
             s = String("example")
             x = s.Replace("e", "j")
@@ -75,7 +77,7 @@ class TestPythonnet(unittest.TestCase):
                     if os.environ["USERNAME"] == "ensaestudent" or \
                        os.environ["USERNAME"] == "vsxavierdupre" or \
                        os.environ["USERNAME"] == "vsxavierdupre" or \
-                       "DOUZE2016" in os.environ["USERDOMAIN"] or \
+                       "DOUZE2016" in os.environ["COMPUTERNAME"] or \
                        os.environ["USERNAME"] == "appveyor" or \
                        "paris" in os.environ["COMPUTERNAME"].lower() or \
                        os.environ["USERNAME"].endswith("$"):  # anonymous Jenkins configuration
