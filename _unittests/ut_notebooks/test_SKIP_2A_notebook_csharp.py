@@ -37,11 +37,14 @@ except ImportError:
     import pyquickhelper as skip_
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
-from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
 
 
 class TestNotebookRunner2a_csharp (unittest.TestCase):
+
+    def setUp(self):
+        add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
+                                        __file__, hide=True)
 
     def test_notebook_runner_2a(self):
         fLOG(
@@ -57,6 +60,7 @@ class TestNotebookRunner2a_csharp (unittest.TestCase):
         if not sys.platform.startswith("win"):
             return
 
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook2a_sharp")
         keepnote = ls_notebooks("2a")
         assert len(keepnote) > 0
@@ -78,6 +82,7 @@ class TestNotebookRunner2a_csharp (unittest.TestCase):
                 if os.environ["USERNAME"] == "ensaestudent" or \
                    os.environ["USERNAME"] == "vsxavierdupre" or \
                    "paris" in os.environ["COMPUTERNAME"].lower() or \
+                   "2016" in os.environ["COMPUTERNAME"].lower() or \
                    os.environ["USERNAME"].endswith("$"):  # anonymous Jenkins configuration
                     # I would prefer to catch a proper exception
                     # it just exclude one user only used on remotre machines
