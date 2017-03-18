@@ -3,15 +3,19 @@
 ansiconv
 autopep8
 azure
+bayespy
 beautifulsoup4
 bqplot
 brewer2mpl
 chardet
 codecov
+cloudpickle
+dask
 dbfread
 entrypoints
 folium
 geopy
+ggplot
 graphviz
 jyquickhelper
 keyring
@@ -19,6 +23,7 @@ lifelines
 lightning-python
 lxml
 metakernel
+mpld3
 pkgtools
 plotly
 pygal
