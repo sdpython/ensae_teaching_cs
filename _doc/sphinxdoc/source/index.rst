@@ -186,3 +186,7 @@ En diagonal
 .. image:: https://badge.waffle.io/sdpython/ensae_teaching_cs.png?label=ready&title=Ready
     :alt: Waffle
     :target: https://waffle.io/sdpython/ensae_teaching_cs
+
+.. image:: https://api.codacy.com/project/badge/Grade/80a874c0eafd4ea68f3493d73b43f0c5
+    :target: https://www.codacy.com/app/sdpython/ensae_teaching_cs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sdpython/ensae_teaching_cs&amp;utm_campaign=Badge_Grade
+    :alt: Codacy Badge

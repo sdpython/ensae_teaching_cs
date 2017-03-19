@@ -271,6 +271,10 @@ Projections, réduction des dimensions
 
 (à venir)
 
+* PCA, Sparse PCA, Kernel PCA
+* SOM
+* LSH
+
 *Lectures*
 
 * `PCA <http://scikit-learn.org/stable/modules/decomposition.html>`_
@@ -279,7 +283,8 @@ Projections, réduction des dimensions
   `Concentration of measure <https://en.wikipedia.org/wiki/Concentration_of_measure>`_,
   `Experiments with Random Projection <http://cseweb.ucsd.edu/~dasgupta/papers/randomf.pdf>`_
 * `Compressed Sensing <https://en.wikipedia.org/wiki/Compressed_sensing>`_
-* `Locality-sensitive hashing <https://en.wikipedia.org/wiki/Locality-sensitive_hashing>`_
+* `Locality-sensitive hashing <https://en.wikipedia.org/wiki/Locality-sensitive_hashing>`_,
+  `LSH Forest: Self-Tuning Indexes for Similarity Search <http://infolab.stanford.edu/~bawa/Pub/similarity.pdf>`_
 * `Manifold learning <http://scikit-learn.org/stable/modules/manifold.html>`_
 * `Cartes de Kohonen <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_clus/kohonen.html>`_
 * `Dynamic Self-Organising Map <http://www.labri.fr/perso/nrougier/coding/article/article.html>`_
@@ -294,6 +299,8 @@ Projections, réduction des dimensions
 * `fbpca <http://fbpca.readthedocs.io/en/latest/>`_ : ACP
 * `prince <https://github.com/MaxHalford/Prince>`_ : ACM
 * `Parametric-t-SNE <https://github.com/kylemcdonald/Parametric-t-SNE/blob/master/Parametric%20t-SNE%20(Keras).ipynb>`_
+* `datasketch <https://github.com/ekzhu/datasketch>`_ (LSH)
+* `NearPy <https://github.com/pixelogik/NearPy>`_ (LSH)
 
 *Animations*
 
@@ -327,6 +334,7 @@ Distances
 
 * `Learning Hierarchical Similarity Metrics <http://www.cs.toronto.edu/~vnair/cvpr12.pdf>`_
 * `From Word Embeddings To Document Distances <http://jmlr.org/proceedings/papers/v37/kusnerb15.pdf>`_
+* `Detecting Near-Duplicates for Web Crawling <http://www.wwwconference.org/www2007/papers/paper215.pdf>`_
 
 Clustering
 ++++++++++

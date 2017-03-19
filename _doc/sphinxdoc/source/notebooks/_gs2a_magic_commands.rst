@@ -8,3 +8,4 @@ Jupyter et les commandes magiques
     td2a_cenonce_session_2C
     td2a_correction_session_2C
     jupyter_custom_magics
+    td2a_progressbar

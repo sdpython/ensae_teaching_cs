@@ -93,7 +93,8 @@ class TestNotebookRunner2a_csharp (unittest.TestCase):
                 return
 
             fLOG(str(e).replace("\n", " EOL "))
-            raise fails[0][1][-1]
+            raise Exception(
+                "*** {0} *** {1} ***".format(os.environ["COMPUTERNAME"], e)) from fails[0][1][-1]
         else:
             fLOG("success")
 
