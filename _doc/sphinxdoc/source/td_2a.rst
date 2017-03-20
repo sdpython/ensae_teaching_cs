@@ -1016,6 +1016,11 @@ Images
 * `VGG Convolutional Neural Networks Practical <http://www.robots.ox.ac.uk/~vgg/practicals/cnn/>`_
 * `Image-to-Image Translation with Conditional Adversarial Networks <https://arxiv.org/pdf/1611.07004.pdf>`_,
   `Image to Image demo <http://affinelayer.com/pixsrv/index.html>`_
+* `Image-to-Image Translation with Conditional Adversarial Networks <https://arxiv.org/pdf/1611.07004v1.pdf>`_
+* `How to Train a GAN? Tips and tricks to make GANs work <https://github.com/soumith/ganhacks?imm_mid=0ec69d&cmp=em-data-na-na-newsltr_ai_20170123>`_
+* `Towards Principled Methods for Training Generative Adversarial Networks <https://arxiv.org/abs/1701.04862>`_
+* `Instance Noise: A trick for stabilising GAN training <http://www.inference.vc/instance-noise-a-trick-for-stabilising-gan-training/>`_
+* `Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network <https://arxiv.org/abs/1609.05158>`_
 
 *Modules*
 
@@ -1024,6 +1029,9 @@ Images
 * `hed <https://github.com/s9xie/hed>`_ (Holistically-Nested Edge Detection)
 * `bob.bio <http://pythonhosted.org/bob.bio.base/index.html>`_
 * tous les modules de :ref:`l-deep-learning`
+* `plat <https://github.com/dribnet/plat>`_
+  (Utilities for exploring generative latent spaces as described in the
+  `Sampling Generative Networks <https://arxiv.org/abs/1609.04468>`_ paper.)
 
 *Modèles pré-entraînés*
 
