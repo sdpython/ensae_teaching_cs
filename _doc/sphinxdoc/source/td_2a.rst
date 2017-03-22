@@ -934,6 +934,68 @@ Prédire une distribution
 
 * `Learning with a Wasserstein Loss <https://arxiv.org/pdf/1506.05439.pdf>`_
 
+Apprentissage sans labels
++++++++++++++++++++++++++
+
+|pystatpng|
+
+*(à venir)*
+
+*Lectures*
+
+*Autoencoders - réduction de dimensionnalité*
+
+* `Why Does Unsupervised Pre-training Help Deep Learning? <http://www.jmlr.org/papers/volume11/erhan10a/erhan10a.pdf>`_
+* `Autoencoders <http://ufldl.stanford.edu/tutorial/unsupervised/Autoencoders/>`_
+* `Autoencoders, Unsupervised Learning, and Deep Architectures <http://www.jmlr.org/proceedings/papers/v27/baldi12a/baldi12a.pdf>`_
+* `Generative Models <https://openai.com/blog/generative-models/>`_,
+  `Adversarial Autoencoders <http://hjweide.github.io/adversarial-autoencoders>`_
+* `Tutorial on Variational Autoencoders <https://arxiv.org/abs/1606.05908>`_,
+  `Denoising Autoencoders (dA) <http://deeplearning.net/tutorial/dA.html>`_
+* `Generative Adversarial Networks <https://arxiv.org/abs/1406.2661>`_,
+  `NIPS 2016 Tutorial: Generative Adversarial Networks <https://arxiv.org/abs/1701.00160>`_
+* `Adversarial Autoencoders <https://arxiv.org/abs/1511.05644>`_
+* `Adversarial Autoencoders (with Pytorch) <https://blog.paperspace.com/adversarial-autoencoders-with-pytorch/>`_
+* `Marginalizing Stacked Linear Denoising Autoencoders <http://www.jmlr.org/papers/volume16/chen15c/chen15c.pdf>`_
+* `What Regularized Auto-Encoders Learn from the Data-Generating Distribution <http://jmlr.csail.mit.edu/papers/volume15/alain14a/alain14a.pdf>`_
+
+*No label, weak labels*
+
+* `Unsupervised Supervised Learning I: Estimating Classification and Regression Errors without Labels <http://www.jmlr.org/papers/volume11/donmez10a/donmez10a.pdf>`_
+* `Unsupervised Supervised Learning II: Margin-Based Classification without Labels <http://www.jmlr.org/proceedings/papers/v15/balasubramanian11a/balasubramanian11a.pdf>`_,
+  `Unsupervised Supervised Learning II: Margin-Based Classification Without Labels <http://www.jmlr.org/papers/volume12/balasubramanian11a/balasubramanian11a.pdf>`_ (longer version)
+* `Large-scale Multi-label Learning with Missing Labels <http://jmlr.org/proceedings/papers/v32/yu14.pdf>`_
+* `Reducing Label Complexity by Learning From Bags <http://www.jmlr.org/proceedings/papers/v9/sabato10a/sabato10a.pdf>`_
+* `Learning from Corrupted Binary Labels via Class-Probability Estimation <http://jmlr.org/proceedings/papers/v37/menon15.pdf>`_
+* `Generalized Expectation Criteria for Semi-Supervised Learning with Weakly Labeled Data <http://www.jmlr.org/papers/volume11/mann10a/mann10a.pdf>`_
+* `Multitask Learning without Label Correspondences <http://users.sussex.ac.uk/~nq28/pubs/Quaetal11.pdf>`_
+* `Training Highly Multiclass Classifiers <http://jmlr.org/papers/volume15/gupta14a/gupta14a.pdf>`_
+
+*Online training*
+
+* `Online Incremental Feature Learning with Denoising Autoencoders <http://jmlr.csail.mit.edu/proceedings/papers/v22/zhou12b/zhou12b.pdf>`_
+* `Fast Kernel Classifiers with Online and Active Learning <http://www.jmlr.org/papers/volume6/bordes05a/bordes05a.pdf>`_,
+  `A Framework for Learning Predictive Structures from Multiple Tasks and Unlabeled Data> <http://www.jmlr.org/papers/volume6/ando05a/ando05a.pdf>`_
+* `Multi Kernel Learning with Online-Batch Optimization <http://www.jmlr.org/papers/volume13/orabona12a/orabona12a.pdf>`_
+
+*Transfert learning*
+
+* `Unsupervised and Transfer Learning Challenges in Machine Learning, Volume 7 <http://www.mtome.com/Publications/CiML/CiML-v7-book.pdf>`_
+* `ICML2011 Unsupervised and Transfer Learning Workshop <http://www.jmlr.org/proceedings/papers/v27/silver12a/silver12a.pdf>`_
+* `Transfer Learning <ftp://ftp.cs.wisc.edu/machine-learning/shavlik-group/torrey.handbook09.pdf>`_
+* `Deep Learning of Representations for Unsupervised and Transfer Learning <http://www.jmlr.org/proceedings/papers/v27/bengio12a/bengio12a.pdf>`_
+* `Unsupervised and Transfer Learning Challenge: a Deep Learning Approach <http://www.jmlr.org/proceedings/papers/v27/mesnil12a/mesnil12a.pdf>`_
+* `Transfer Learning by Kernel Meta-Learning <http://www.jmlr.org/proceedings/papers/v27/aiolli12a/aiolli12a.pdf>`_
+* `A Survey on Transfer Learning <https://www.cse.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf>`_
+* `Domain-Adversarial Training of Neural Networks <http://jmlr.org/papers/volume17/15-239/15-239.pdf>`_
+* `Stability and Hypothesis Transfer Learning <http://jmlr.org/proceedings/papers/v28/kuzborskij13.pdf>`_
+* `Transfer Learning Decision Forests for Gesture Recognition <http://jmlr.org/papers/volume15/goussies14a/goussies14a.pdf>`_
+* `Learning Transferable Features with Deep Adaptation Networks <http://www.jmlr.org/proceedings/papers/v37/long15.pdf>`_
+* `Asymmetric Transfer Learning with Deep Gaussian Processes <http://www.jmlr.org/proceedings/papers/v37/kandemir15.pdf>`_
+* `Transfer Learning in Sequential Decision Problems: A Hierarchical Bayesian Approach <http://www.jmlr.org/proceedings/papers/v27/wilson12a/wilson12a.pdf>`_
+* `Transfer Learning for Reinforcement Learning Domains: A Survey <http://www.jmlr.org/papers/volume10/taylor09a/taylor09a.pdf>`_
+* `Unsupervised dimensionality reduction via gradient-based matrix factorization with two adaptive learning rates <http://www.jmlr.org/proceedings/papers/v27/nikulin12a/nikulin12a.pdf>`_
+
 ------------
 
 NLP - Image - Réseaux
@@ -1497,6 +1559,7 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
 * `Awesome Machine Learning <https://github.com/josephmisiti/awesome-machine-learning#python>`_
 * `CNTK <https://github.com/Microsoft/CNTK>`_ (2016/04)
 * `Keras <http://keras.io/>`_
+* `pytorch <http://pytorch.org/>`_
 * `scikit-learn <http://scikit-learn.org/stable/index.html>`_
 * `TensorFlow <https://github.com/tensorflow/tensorflow>`_
 * `theano <http://deeplearning.net/software/theano/>`_
