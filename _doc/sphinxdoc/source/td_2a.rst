@@ -371,6 +371,7 @@ Clustering
 * `Yinyang K-Means: A Drop-In Replacement of the Classic K-Means with Consistent Speedup <https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ding15.pdf>`_
 * `Online Clustering with Experts <http://www.jmlr.org/proceedings/papers/v26/choromanska12a/choromanska12a.pdf>`_
 * `Kernel K-means and Spectral Clustering <https://pdfs.semanticscholar.org/6be9/e527f94e88fef82e2270e94162d31a2dbfbc.pdf>`_
+* `Scalable Density-Based Clustering with Quality Guarantees using Random Projections <http://alumni.cs.ucr.edu/~mvlachos/erc/projects/density-based/paper.pdf>`_
 
 *Modules*
 
@@ -576,6 +577,7 @@ Deep Learning
 
 * `Tinker With a Neural Network Right Here in Your Browser <http://playground.tensorflow.org/>`_
 * `ConvNetJS <http://cs.stanford.edu/people/karpathy/convnetjs/>`_
+* `Databricks / Deep Learning <https://docs.databricks.com/applications/deep-learning/index.html>`_
 
 *Modèles pré-entraînés*
 
@@ -1054,6 +1056,11 @@ Traitement du langage
 * `On word embeddings - Part 3: The secret ingredients of word2vec <http://sebastianruder.com/secret-word2vec/index.html>`_
 * `From Word Embeddings To Document Distances <http://jmlr.org/proceedings/papers/v37/kusnerb15.pdf>`_
 
+*Résumé*
+
+* `Beyond SumBasic: Task-Focused Summarization with Sentence Simplification and Lexical Expansion <http://www.cis.upenn.edu/~nenkova/papers/ipm.pdf>`_
+* `ROUGE: A Package for Automatic Evaluation of Summaries <http://www.aclweb.org/anthology/W04-1013>`_
+
 *Vidéos*
 
 * `Modern NLP in Python <https://www.youtube.com/watch?v=6zm9NC9uRkk>`_
@@ -1065,6 +1072,9 @@ Traitement du langage
 * `spacy <https://spacy.io/>`_
 * `Stanford CoreNLP <http://stanfordnlp.github.io/CoreNLP/other-languages.html#python>`_,
   `corenlpy <https://github.com/enewe101/corenlpy>`_
+* `python-rake <https://pypi.python.org/pypi/python-rake/>`_ : petit module pour extraire des mot-clés
+* `sumy <https://pypi.python.org/pypi/sumy>`_ : construction automatique d'un résumé d'un texte
+* `pyrouge <https://github.com/pltrdy/rouge/>`_ : calcule de la métrique `ROUGE <>`_
 
 Images
 ++++++

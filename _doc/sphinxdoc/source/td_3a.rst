@@ -308,6 +308,7 @@ avec Spark et Spark SQL
 * `What is Tungsten for Apache Spark? <https://community.hortonworks.com/articles/72502/what-is-tungsten-for-apache-spark.html>`_,
   `Project Tungsten: Bringing Apache Spark Closer to Bare Metal <https://databricks.com/blog/2015/04/28/project-tungsten-bringing-spark-closer-to-bare-metal.html>`_
 * `Spark SQL: Another 16x times faster after Tungsten <https://spark-summit.org/east-2017/events/spark-sql-another-16x-faster-after-tungsten/>`_
+* `Databricks <https://docs.databricks.com/index.html#>`_
 
 *Modules*
 
