@@ -38,6 +38,8 @@
 import sys
 import platform
 import os
+import json
+
 
 if sys.platform.startswith("win"):
     ver = sys.version_info
@@ -80,7 +82,7 @@ if sys.platform.startswith("win"):
             str(ver))
 
 
-def vocal_synthesis(text, lang="fr-FR", voice="", filename=""):
+def vocal_synthesis(text, lang="fr-FR", voice="", filename=None):
     """
     Utilise la synthèse vocale de Windows
 
@@ -187,3 +189,57 @@ def import_magic_cs():
 
     from MagicJupyter import MagicCS
     return MagicCS
+
+
+def str2python(answer):
+    """
+    Converts JSON bytes into a dictionary.
+
+    @param      answer      bytes
+    @return                 any type
+    """
+    json_obj = json.loads(answer)
+    return json_obj
+
+
+def vocal_recognition(subkey, lang="fr-FR", filename=None, memwav=None,
+                      url="https://speech.platform.bing.com/recognize"):
+    """
+    Use Cognitive Services to recognize the voice.
+
+    @param      subkey      subscription key
+    @param      lang        language
+    @param      filename    wav file
+    @param      memwav      wav memory stream
+    @param      url         url of the service
+    @return                 dictionary wih the results
+
+    Either filename or memwav must be specified.
+    """
+    if filename is None and memwav is None:
+        raise ValueError("Either filename or memwav must be filled.")
+    if "ENSAE.Voice" not in sys.modules:
+        if not sys.platform.startswith("win"):
+            raise NotImplementedError("only available on Windows")
+
+        path = os.path.abspath(os.path.split(__file__)[0])
+        path = os.path.join(path, "csdll")
+
+        from clr import AddReference
+
+        try:
+            AddReference("ENSAE.Voice")
+        except Exception:
+            path = os.path.abspath(os.path.split(__file__)[0])
+            path = os.path.join(path, "csdll")
+            if path not in sys.path:
+                sys.path.append(path)
+            AddReference("ENSAE.Voice")
+
+    from ENSAE.Voice import SpeechReco
+    if filename is not None:
+        res = SpeechReco.RunReco(subkey, filename, lang, url)
+    else:
+        res = SpeechReco.RunReco(subkey, memwav, lang, url)
+
+    return str2python(res)
