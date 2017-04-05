@@ -572,6 +572,7 @@ Deep Learning
   expliquant les différents concepts du deep learning
 * `colah's blog <http://colah.github.io/>`_ *(2016/08)* blog/cours sur le deep learning
 * `Building Autoencoders in Keras <https://blog.keras.io/building-autoencoders-in-keras.html>`_
+* `Tutoriels avec CNTK <https://cntk.ai/pythondocs/tutorials.html>`_
 
 *Sites*
 
