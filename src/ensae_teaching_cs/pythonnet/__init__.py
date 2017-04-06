@@ -243,3 +243,67 @@ def vocal_recognition(subkey, lang="fr-FR", filename=None, memwav=None,
         res = SpeechReco.RunReco(subkey, memwav, lang, url)
 
     return str2python(res)
+
+
+def vocal_recognition_listening(lang="fr-FR"):
+    """
+    Use the recognition system and return sentances.
+
+    @param      lang        language
+    @return                 enumerate on tuples (score, text)
+    """
+    if "ENSAE.Voice" not in sys.modules:
+        if not sys.platform.startswith("win"):
+            raise NotImplementedError("only available on Windows")
+
+        path = os.path.abspath(os.path.split(__file__)[0])
+        path = os.path.join(path, "csdll")
+
+        from clr import AddReference
+
+        try:
+            AddReference("ENSAE.Voice")
+        except Exception:
+            path = os.path.abspath(os.path.split(__file__)[0])
+            path = os.path.join(path, "csdll")
+            if path not in sys.path:
+                sys.path.append(path)
+            AddReference("ENSAE.Voice")
+
+    from ENSAE.Voice import SpeechRecoSystem
+    for item in SpeechRecoSystem.EnumerateRecognize(lang):
+        yield item.Item1, item.Item2
+
+
+def vocal_recognition_system(wav, lang="fr-FR"):
+    """
+    Use the recognition system and return sentances.
+
+    @param      wav         bytes
+    @param      lang        language
+    @return                 tuples (score, text)
+    """
+    if not isinstance(wav, bytes):
+        raise TypeError("wav should be bytes.")
+    if "ENSAE.Voice" not in sys.modules:
+        if not sys.platform.startswith("win"):
+            raise NotImplementedError("only available on Windows")
+
+        path = os.path.abspath(os.path.split(__file__)[0])
+        path = os.path.join(path, "csdll")
+
+        from clr import AddReference
+
+        try:
+            AddReference("ENSAE.Voice")
+        except Exception:
+            path = os.path.abspath(os.path.split(__file__)[0])
+            path = os.path.join(path, "csdll")
+            if path not in sys.path:
+                sys.path.append(path)
+            AddReference("ENSAE.Voice")
+
+    from ENSAE.Voice import SpeechRecoSystem
+    print(len(wav), lang)
+    item = SpeechRecoSystem.Recognize(wav, lang)
+    return item.Item1, item.Item2

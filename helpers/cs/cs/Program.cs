@@ -10,10 +10,15 @@ namespace cs
         static void Main(string[] args)
         {
             var voices = Speech.GetVoiceForVocalSynthesis();
-            string filename = @"jupytalk\_unittests\ut_mokadi\data\output.wav";
-            var resR = SpeechRecoSystem.Recognize(File.ReadAllBytes(filename));
-            for(int i = 0; i < resR.Length;++i)
-                Console.WriteLine("{0} - {1}", resR[i].Item1, resR[i].Item2);
+            string filename = @"C:\xadupre\__home_\GitHub\jupytalk\_unittests\ut_mokadi\data\output.wav";
+            Console.WriteLine("reco file");
+            var resR = SpeechRecoSystem.Recognize(filename);
+            Console.WriteLine("{0}", resR);
+            Console.WriteLine("reco wav");
+            resR = SpeechRecoSystem.Recognize(File.ReadAllBytes(filename));
+            Console.WriteLine("{0}", resR);
+            foreach(var item in SpeechRecoSystem.EnumerateRecognize())
+                Console.WriteLine("{0} - {1}", item.Item1, item.Item2);
 
             string subkey = null;
             if (!string.IsNullOrEmpty(subkey))

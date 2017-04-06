@@ -12,14 +12,7 @@ namespace ENSAE.Voice
             using (var engine = new SpeechRecoSystem())
             {
                 var results = new List<Tuple<float, string>>();
-                engine.Feed(wav);
-                var res = engine.WaitForText(1);
-                int loop = 2;
-                while (res == null && loop > 0)
-                {
-                    --loop;
-                    res = engine.WaitForText(1);
-                }
+                var res = engine.Feed(wav);
                 results.Add(new Tuple<float, string>(res.Confidence, res.Text));
                 return results.ToArray();
             }
@@ -36,6 +29,20 @@ namespace ENSAE.Voice
             }
         }
 
+        public static IEnumerable<Tuple<float, string>> EnumerateRecognize(string culture = "fr-FR")
+        {
+            using (var engine = new SpeechRecoSystem())
+            {
+                engine.Feed();
+                while (true)
+                {
+                    var item = engine.WaitForText();
+                    if (item != null)
+                        yield return new Tuple<float, string>(item.Confidence, item.Text);
+                }
+            }
+        }
+
         Queue<RecognitionResult> queue;
         SpeechRecognitionEngine _recognizer;
 
@@ -45,8 +52,7 @@ namespace ENSAE.Voice
 
             _recognizer = new SpeechRecognitionEngine(new System.Globalization.CultureInfo("fr-FR"));
             _recognizer.LoadGrammar(new DictationGrammar());
-            _recognizer.SpeechRecognized +=
-              new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
+            //_recognizer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
         }
 
         void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
@@ -62,8 +68,11 @@ namespace ENSAE.Voice
 
         public RecognitionResult Feed(byte[] wav)
         {
-            using (var fs = new MemoryStream(wav, false))
+            using (var fs = new MemoryStream(wav))
+            {
                 _recognizer.SetInputToWaveStream(fs);
+            }
+            _recognizer.InitialSilenceTimeout = TimeSpan.FromSeconds(5);
             return _recognizer.Recognize();
         }
 
@@ -78,7 +87,7 @@ namespace ENSAE.Voice
             _recognizer.Dispose();
         }
 
-        public RecognitionResult WaitForText(int maxloop = 5, int delay=1000)
+        public RecognitionResult WaitForText(int maxloop = 5, int delay = 1000)
         {
             while (queue.Count == 0 && maxloop > 0)
             {
