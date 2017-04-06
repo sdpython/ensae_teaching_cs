@@ -13,7 +13,8 @@ namespace ENSAE.Voice
             {
                 var results = new List<Tuple<float, string>>();
                 var res = engine.Feed(wav);
-                results.Add(new Tuple<float, string>(res.Confidence, res.Text));
+                if (res != null)
+                    results.Add(new Tuple<float, string>(res.Confidence, res.Text));
                 return results.ToArray();
             }
         }
@@ -24,7 +25,8 @@ namespace ENSAE.Voice
             {
                 var results = new List<Tuple<float, string>>();
                 var res = engine.Feed(wav);
-                results.Add(new Tuple<float, string>(res.Confidence, res.Text));
+                if (res != null)
+                    results.Add(new Tuple<float, string>(res.Confidence, res.Text));
                 return results.ToArray();
             }
         }

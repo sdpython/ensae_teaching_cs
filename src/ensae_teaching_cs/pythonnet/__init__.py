@@ -279,12 +279,12 @@ def vocal_recognition_system(wav, lang="fr-FR"):
     """
     Use the recognition system and return sentances.
 
-    @param      wav         bytes
+    @param      wav         bytes or string for a filename
     @param      lang        language
     @return                 tuples (score, text)
     """
-    if not isinstance(wav, bytes):
-        raise TypeError("wav should be bytes.")
+    if not isinstance(wav, (bytes, str)):
+        raise TypeError("wav should be bytes or str.")
     if "ENSAE.Voice" not in sys.modules:
         if not sys.platform.startswith("win"):
             raise NotImplementedError("only available on Windows")
@@ -304,6 +304,8 @@ def vocal_recognition_system(wav, lang="fr-FR"):
             AddReference("ENSAE.Voice")
 
     from ENSAE.Voice import SpeechRecoSystem
-    print(len(wav), lang)
     item = SpeechRecoSystem.Recognize(wav, lang)
-    return item.Item1, item.Item2
+    if item is None or len(item) == 0:
+        return None
+    else:
+        return [(it.Item1, it.Item2) for it in item]
