@@ -7,6 +7,8 @@ Bien démarrer un projet de machine learning
 .. index:: projet, machine learning, démarrage
 
 Un projet de machine learning commence généralement avec un jeu de données et un problème à résoudre.
+Celui-ce se décrit par trois éléments, des données (*X*), une cible (*Y*) et une fonction d'erreur
+qui permette d'évaluer la distance entre la prédiction et la cible.
 Une fois qu'on a cela, les premières étapes débutent avec presque toujours les mêmes questions :
 
 .. contents::
@@ -26,7 +28,14 @@ Etape 1 : quel est le type de problème ?
 
 Il n'est pas rare qu'un projet requiert un assemblage de modèles de types différents.
 La première étape consiste à imaginer un chemin entre les données initiales
-et la valeur à prédire.
+et la valeur à prédire. Le problème est rarement non supervisé car on cherche le plus
+souvent à reproduire un processus humain. L'aspect non supervisé intervient
+sous la forme d'une étape intermédiaire.
+
+Parmi les traitements non supervisé, on distingue ceux qu'on peut appliquer
+sur de nouvelles données (ACP, k-means) et ceux où on ne peut pas
+(t-SNE). Dans le second cas, c'est souvent une façon d'explorer les données mais
+l'algorithme ne fera pas partie de la solution retenue.
 
 Etape 2 : quelles sont les données ?
 ++++++++++++++++++++++++++++++++++++
@@ -38,29 +47,31 @@ Etape 2 : quelles sont les données ?
 * Quelles sont les variables connues, les variables à prédire ?
 * Valeurs manquantes ?
 * Variables catégorielles, discrètes ou continues,
-  :ref:`Encoder les catégories <encoding-categorie-id>`
+  :ref:`Encoder les catégories <encoding-categorie-id>` ?
+* Corrélations avec la cible à prédire ?
 
 La plupart des algorithmes d'apprentissages utilisent des données numériques,
 il faut convertir les variables catégorielles au format numérique.
 Si une variable catégorielle est à choix unique et qu'elle contient :math:`C` catégories,
 celle-ci sera multipliée en :math:`n` colonnes, une pour chaque modalité. Comme la somme de
 ces colonnes est le vecteur colonne :math:`J=(1,...,1)`, la matrice :math:`X` modifiée sera corrélée.
+Ceci peut poser problème à certains algorithmes d'apprentissage.
 
 Etape 3 : séparation train/test
 +++++++++++++++++++++++++++++++
 
 Il faut faire attention à deux ou trois détails. Par exemple, si le problème est un de problème
 de classification, il faut faire attention que toutes les classes à prédire sont bien **représentées**
-dans les deux bases. C'est particulièrement important si l'une d'elles comportent peu d'exemples.
-Si les données sont **temporelles**, il faut faire une séparation temporelles pour prédire
-le futur avec le passée. Si les données sont **groupées**, il faut faire attention à ce que
+dans les deux bases. C'est particulièrement important si l'une d'elles comporte peu d'exemples.
+Si les données sont **temporelles**, il faut faire une séparation temporelle pour prédire
+le futur avec le passé. Si les données sont **groupées**, il faut faire attention à ce que
 les groupes ne soient pas tronqués sinon c'est l'assurance de faire du surapprentissage.
 
 **Exemple :** un base de critiques de films.
 S'il y a plusieurs critiques par films, il faut qu'un même film
 ne soit pas présent dans les deux bases d'apprentisage et de test.
 Pour ces films, il est fort probable que le modèle appris soit anormalement
-performance sur la base de test.
+performant sur la base de test.
 
 Etape 4 : apprentissage d'un modèle
 +++++++++++++++++++++++++++++++++++
@@ -69,7 +80,10 @@ On cale un ou plusieurs modèles sur les données d'apprentissage.
 C'est de moins en moins sorcier :
 `Machine learning automatique <http://www.xavierdupre.fr/blog/2015-12-11_nojs.html>`_.
 Il faut foncer : apprendre un modèle tout de suite pour avoir une idée de la
-difficulté du problème.
+difficulté du problème. On privilégiera les modèles linéaires et les arbres et décisions
+si on souhaite obtenir un modèle interprétable. On optera pour les forêts aléaoires dans les autres cas.
+Ces modèles présentent l'avantage de s'apprendre rapidement et de marcher sur tout type de données,
+discrètes continues... Les forêts aléaoires sont également robustes au surapprentissage.
 
 Etape 5 : mesure de la performance
 ++++++++++++++++++++++++++++++++++
@@ -105,7 +119,7 @@ Dans le cas contraire, il faut retourner à l'étape 4 :
   combinaison non linéaires des variables existantes (polynômes, fonctions en escalier, ...),
   recoupement de la base de données avec une autre base.
 * Les valeurs manquantes empêchent le modèle d'apprendre.
-* Une variables continues ne l'est pas vraiment : distribution selon deux modes par exemple.
+* Une variable continue ne l'est pas vraiment : distribution selon deux modes par exemple.
 * ...
 
 Voir également `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_.
@@ -113,15 +127,15 @@ Voir également `Quelques astuces pour faire du machine learning <http://www.xav
 Etape 6 : ajouter des variables
 +++++++++++++++++++++++++++++++
 
-* Passer au logarithme lorsque les variables sont des valeurs extrêmes,
-  cela réduit leur importance
+* Passer au logarithme lorsque les variables ont des valeurs extrêmes,
+  cela réduit leur importance.
 * Si les données sont temporelles : ajouter des agrégations sur des fenêtres glissantes
   (sur la semaine, le mois, l'année qui a précédé).
-* Si les données peuvent être groupées : ajouter des moyennes, sum, nombre par groupes.
+* Si les données peuvent être groupées : ajouter des moyennes, somme, nombre par groupes.
   Exemple : considérer la note moyenne d'un film pour savoir si une critique est positive
   ou négative.
 * Utiliser la sortie d'autre modèle de machine learning.
-* Ajouter des cmobinaisons de variables difficiles à apprendre pour un modèle
+* Ajouter des combinaisons de variables difficiles à apprendre pour un modèle
   comme un ratio (tout ce n'est pas linéaire)
 * Chercher l'information qui pourrait aider un modèle à corriger une erreur en particulier.
 
@@ -192,5 +206,5 @@ Dialogue improvisé... Il faut prédire le parti d'un sénaeur en fonction de se
 Etape 8 : validation du modèle
 ++++++++++++++++++++++++++++++
 
-On regarde sur quelques exemples bien choisi que le modèle proposent une réponse acceptables.
+On regarde sur quelques exemples bien choisis que le modèle proposent une réponse acceptable.
 On applique des méthodes du type validation croisée.
