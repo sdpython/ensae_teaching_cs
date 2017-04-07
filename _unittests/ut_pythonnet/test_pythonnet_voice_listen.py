@@ -52,7 +52,7 @@ class TestPythonnetVoiceListen(unittest.TestCase):
             # no keys
             return
 
-        if sys.platform.startswith("win"):
+        if sys.platform.startswith("win") and __name__ == "__main__":
             from src.ensae_teaching_cs.pythonnet import vocal_recognition_listening
 
             try:

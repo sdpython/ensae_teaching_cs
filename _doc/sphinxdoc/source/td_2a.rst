@@ -1120,6 +1120,7 @@ Visage, paroles
 *Modules*
 
 * `bob.bio <http://pythonhosted.org/bob.bio.base/index.html>`_
+* `kaldi <https://github.com/kaldi-asr/kaldi>`_ (reconnaissance de la parole)
 
 *Lectures*
 
