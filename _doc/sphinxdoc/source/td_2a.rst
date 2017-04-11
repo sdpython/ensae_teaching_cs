@@ -372,6 +372,8 @@ Clustering
 * `Online Clustering with Experts <http://www.jmlr.org/proceedings/papers/v26/choromanska12a/choromanska12a.pdf>`_
 * `Kernel K-means and Spectral Clustering <https://pdfs.semanticscholar.org/6be9/e527f94e88fef82e2270e94162d31a2dbfbc.pdf>`_
 * `Scalable Density-Based Clustering with Quality Guarantees using Random Projections <http://alumni.cs.ucr.edu/~mvlachos/erc/projects/density-based/paper.pdf>`_
+* `Clustering Via Decision Tree Construction <http://web.cs.ucla.edu/~wwc/course/cs245a/CLTrees.pdf>`_
+  (implémentation en python `dimitrs/CLTree <https://github.com/dimitrs/CLTree>`_)
 
 *Modules*
 
