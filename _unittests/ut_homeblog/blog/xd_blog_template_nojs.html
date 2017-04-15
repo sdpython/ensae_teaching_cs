@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+<head>
+<link rel="shortcut icon" href="http://www.xavierdupre.fr/pyhome3.ico" />
+<link href="pMenu.css" rel="stylesheet" type="text/css"/>
+<link REL="stylesheet" TYPE="text/css" HREF='javascript/run_prettify.css' />
+<title>XD blog</title>
+<meta content="Xavier Dupré" name="author"/>
+<meta content="### KEYWORDS ###" name="keywords"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<script src="javascript/pMenu.js" type="text/javascript"></script>
+<script src="javascript/latexit.js" type="text/javascript"></script>
+<script type="text/javascript" src="javascript/run_prettify.js"></script>
+<link href="javascript/shCore.css" rel="stylesheet" type="text/css" />
+<link href="javascript/shThemeDefault.css" rel="stylesheet" type="text/css" />
+<script src="javascript/shCore.js" type="text/javascript"></script>
+<script src="javascript/shAutoloader.js" type="text/javascript"></script>
+<!-- javascript here -->
+<meta content="xd_blog_te" name="date"/>
+</head>
+
+<body>
+
+<div class="otherlayer">
+<!-- other layer --> 
+</div>
+
+<div class="sidebar">
+<p>
+<iframe frameborder="0" height="600" scrolling="no" src="frame_keywords.html" width="100%">sis</iframe>
+<iframe frameborder="0" height="900" scrolling="no" src="frame_months.html" width="100%">sis</iframe>
+</p>
+</div>
+
+<div class="maintitle">
+<h1>XD blog
+<a href="http://www.xavierdupre.fr/index.html">
+    <img src="http://www.xavierdupre.fr/back.png" width="30"/></a>
+</h1>
+</div>
+
+<div class="mainbody">
+
+<table border="0" width="100%">
+<tr>
+<td>
+<p class="linkmain"><a href="xd_blog_nojs.html">blog page</a></p>
+<!-- 
+<p class="linkmain"><a href="http://www.xavierdupre.fr/">main page</a></p>
+--> 
+</td>
+<td>
+<p class="pkeywords" id="idkeywords">
+<!-- article keywords -->
+
+
+
+<script>
+function share_url(share) { 
+    var url = share + encodeURIComponent(window.location.href); 
+    window.location.href = url;
+}
+
+function share_icon(divid, text) { 
+    var canvas = document.getElementById(divid);
+    var context = canvas.getContext('2d');
+    var centerX = canvas.width / 2;
+    var centerY = canvas.height / 2;
+    var radius = centerX;
+
+    context.beginPath();
+    context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+    context.fillStyle = '#444444';
+    context.fill();
+    context.font = '' + (centerX*4/3) + 'pt Calibri';
+    context.textAlign = 'center';
+    context.fillStyle = '#FFFFFF';
+    context.fillText(text, centerX, centerY+centerY*16/30);      
+}
+</script>
+
+<a href="#" onclick="share_url('https://www.facebook.com/sharer/sharer.php?u=');return false;"><canvas id="canvas-fb" width="20" height="20"></canvas></a>
+<a href="#" onclick="share_url('https://www.linkedin.com/shareArticle?mini=true&amp;title=&amp;summary=&amp;source=&amp;url=');return false;"><canvas id="canvas-in" width="20" height="20"></canvas></a>
+<a href="#" onclick="share_url('https://twitter.com/home?status=');return false;"><canvas id="canvas-t" width="20" height="20"></canvas></a>
+
+<script>
+share_icon('canvas-fb', 'f');
+share_icon('canvas-in', 'in');
+share_icon('canvas-t', 't');
+</script>
+
+<a href="xdbrss.xml"><img src="documents/feed-icon-16x16.png"/></a>
+</p>
+</td>
+</tr>
+</table>
+<hr/>
+
+<!-- article here -->
+
+
+<hr/>
+
+<table border="0" width="100%">
+<tr><td>
+<a href="xd_blog_nojs_DDD.html"><i>suite</i></a>
+</td>
+<td>
+<p class="footnotename">Xavier Dupré
+<a href="http://fr.linkedin.com/pub/xavier-dupre/0/924/780/">
+<img src="documents/linkedin.png" width="15"/></a>
+</p>
+</td>
+</tr>
+</table>
+
+
+
+</div>
+<script type="text/javascript">
+SyntaxHighlighter.autoloader(
+  'js jscript javascript javascript/shBrushJScript.js',
+  'py python javascript/shBrushPython.js',
+  'cpp javascript/shBrushCpp.js',
+  'sql javascript/shBrushSql.js',
+  'flat plain javascript/shBrushPlain.js',
+  'vba vb javascript/shBrushVb.js',
+  'bash javascript/shBrushBash.js',
+  'cs javascript/shBrushCSharp.js',
+  'php javascript/shBrushPhp.js',
+  'css javascript/shBrushCss.js',
+  'xml html javascript/shBrushXml.js'
+);
+SyntaxHighlighter.all();
+</script>
+<div id="playscript"/>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-2815364-1";
+urchinTracker();
+</script>
+</body>
+</html>

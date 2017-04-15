@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HTML>
+<HEAD>
+<link rel="shortcut icon" href="http://www.xavierdupre.fr/pyhome3.ico" />
+<link REL="stylesheet" TYPE="text/css" HREF='pMenu.css' />
+<link REL="stylesheet" TYPE="text/css" HREF='javascript/run_prettify.css' />
+<title>XD blog</title>
+<meta name="author" content="Xavier Dupré" />
+<meta name="keywords" content="XD,blog,Xavier Dupré" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script TYPE="text/javascript" SRC="javascript/pMenu.js"></SCRIPT>
+<script type="text/javascript" src="javascript/latexit.js"></script>
+<script type="text/javascript" src="javascript/run_prettify.js"></script>
+<link href="javascript/shCore.css" rel="stylesheet" type="text/css" />
+<link href="javascript/shThemeDefault.css" rel="stylesheet" type="text/css" />
+<script src="javascript/shCore.js" type="text/javascript"></script>
+<script src="javascript/shAutoloader.js" type="text/javascript"></script>
+<HEAD>
+<!--
+<BODY STYLE='background-color: #FFFFFF'>
+-->
+<!-- ACCENT(à|é|è|ê|î|ô|â|ç|û|ë|ï) -->
+
+
+ 
+
+<script language="JavaScript" charset="UTF-8">
+
+if(typeof String.prototype.trim !== 'function') {
+  String.prototype.trim = function() {
+    return this.replace(/^\s+|\s+$/g, ''); 
+  }
+}
+
+function encodeAccent (text) 
+{
+    return escape(encodeURI(text)) ;
+}
+
+function decodeAccent (text) 
+{
+    return decodeURI(unescape(text)) ;
+}
+
+var listDates = [
+//////////////////////////////////////////
+"2017-01-08",
+"2017-01-01"
+//////////////////////////////////////////
+            ];
+var listkeywords = [
+////////////###########
+["~ENSAE (2)","~ENSAE"],
+["ensae (2)","ensae"]
+////////////###########
+    ] ;
+
+var revkeywords = {
+////////////+++++++++++++++++
+"~ENSAE":"~ENSAE",
+"ensae":"ensae"
+////////////+++++++++++++++++
+    } ;
+
+
+
+var dictkeywords = {
+////////////---------------------
+"~ENSAE":[ "2017-01-08", "2017-01-01" ] ,
+"ensae":[ "2017-01-08", "2017-01-01" ] 
+////////////---------------------
+    } ;
+
+var temp = extractUrlParams() ;
+var start = 0 ;
+var date = "" ;
+var maxdisp = 15 ;
+var tagchosen = "" ;
+
+if ("start" in temp) { start = parseInt( temp["start"]) ; }
+if ("date" in temp) { date = temp["date"] ; }
+if ("tag" in temp) { tagchosen = decodeAccent(temp["tag"]) ; }
+
+if (date.length>0) 
+{
+    listDates = [date] ;
+}
+if (tagchosen.length > 0)
+{
+    listDates= dictkeywords[tagchosen];
+}
+
+var page = window.location.href  ;
+var patt = "" ;
+var webpath = "" ;
+webpath =page.substring(0, page.lastIndexOf('/'));
+var rsslink = webpath + '/xdbrss.xml' ;
+var rssimglink = '<a href="' + rsslink + '"><img src="documents/feed-icon-16x16.png" /></a>' ;
+
+///////////////// side bar
+
+document.write('<div class="sidebar">') ;
+document.write ('<p class="keywordtitle"><b>Tags</b></p>') ;
+for (i = 0 ; i < listkeywords.length ; i++)
+{
+    var alltag = listkeywords[i][0] ;
+    var tag = alltag.split('(');
+    document.write('<p class="keywordtitle"><a href="' + webpath + '/xd_blog.html?tag='+encodeAccent(listkeywords[i][1]).trim()+'">' + tag[0].trim() + '</a> (' +tag[1] +'</p>') ;
+}
+document.write('</div>') ;
+
+///////////////// main filters
+
+document.write('<div class="mainfilter">');
+document.write('<p class="linkmainright">');
+document.write('Main Filters');
+document.write('</p>');
+document.write('<p class="linkmainright">');
+document.write('<a href="' + webpath + '/xd_blog.html?tag=~technical">~technical</a> - ');
+document.write('<a href="' + webpath + '/xd_blog.html?tag=~ENSAE">~ENSAE</a> -');
+document.write('<a href="' + webpath + '/xd_blog.html?tag=~recreative">~recreative</a>');
+document.write('</p>');
+document.write('</div>');
+
+///////////////// other layer
+
+document.write('<div class="otherlayer">') ;
+if (date.length > 0) document.write('<p class="keywordtitle"><a href="' + date + '_nojs.html">Other Layer</a></p>') ;
+else if (tagchosen.length > 0) document.write('<p class="keywordtitle"><a href="xd_blog_key_' + tagchosen + '.html">Other Layer</a></p>') ;
+else document.write('<p class="keywordtitle"><a href="xd_blog_nojs.html">Other Layer</a></p>') ;
+
+document.write('</div>') ;
+
+///////////////// main body
+
+document.write('<div class="maintitle">') ;
+document.write('<h1>XD blog<a href="http://www.xavierdupre.fr/index.html"><img src="http://www.xavierdupre.fr/back.png" width="30"/></a></h1>');
+document.write('</div>');
+
+document.write('<div class="mainbody">') ;
+
+document.write('<table border="0" width="100%"><tr><td>') ;
+if ((date.length >0) || (start != 0) || (tagchosen.length > 0))
+{
+    document.write('<p class="linkmain"><a href="' + webpath + '/xd_blog.html">blog page</a></p>') ;
+}
+else 
+{
+    document.write('<p class="linkmain"><a href="' + webpath.substring(0, webpath.lastIndexOf('/')) + '/">main page</a>') ;
+    document.write('</p>') ;
+}
+document.write('</td><td><p class="pkeywords" id="idkeywords">') ;
+document.write(rssimglink) ;
+document.write ('</p></td></tr></table>') ;
+document.write('<hr />') ;
+
+if (tagchosen.length > 0)
+{
+    document.getElementById("idkeywords").innerHTML = revkeywords[tagchosen] ;
+}
+
+if (page.indexOf ("file:") == 0)
+{ 
+    var pat  = page.substring(0, page.lastIndexOf('/'));
+    //patt     = "." + patt ;
+    //patt     = pat.replace (pat, "http://www.xavierdupre.fr/GillesDupre") ;
+    patt = pat.replace (pat, ".") ;
+}
+else 
+{
+    patt = "." ;
+}
+
+var nb = 0 ;
+var objkeywords = listDates.length <= 1 ? document.getElementById("idkeywords"): null;
+
+for (i = start ; i < listDates.length ; i++) 
+{
+    annee = listDates[i].substring(0,4)
+    pattf = patt + "/" + annee + "/" ;
+    ++nb ;
+    if (nb > maxdisp) break ;
+    var txt = pattf + listDates[i] + ".html" ;
+    var filepath = webpath+txt.substring(1,txt.length);
+    var ids = txt.replace('-','_').replace("/","_").replace(".","_") ;
+
+    var linkurl = 'xd_blog.html?date='+listDates[i];
+    var linkurldisp = '<a href="' + linkurl + '">'+listDates[i]+'</a>';
+    document.write('<p class="blogtitle" id="url_' + ids + '">') ;
+    document.write(linkurldisp) ;
+    document.write ('</p>') ;
+        
+    try 
+    {
+        document.write('<DIV id="'+ids+'">') ;
+        document.write('</DIV>') ;
+        var obj = document.getElementById(ids);
+        var objtitle = document.getElementById("url_"+ids);
+        obj.innerHTML = "<p>waiting...</p>" ;
+        loadDoc(filepath, linkurl, obj, objtitle, objkeywords);
+    }
+    catch (err) 
+    {
+        document.write ("<p>error with ") ;
+        document.write (txt + '(' + filepath +')  ' ) ;
+        document.write (err.message) ;
+        document.write ("</p>") ;
+    }
+}
+
+document.write("<hr />") ;
+var footer = '<p class="footnotename">Xavier Dupré <a href="http://fr.linkedin.com/pub/xavier-dupre/0/924/780/"><img src="documents/linkedin.png" width=15 /></a></p>' ;
+
+if (listDates.length > start + maxdisp) 
+{
+    document.write('<table border="0" width="100%"><tr><td>') ;
+    if (start > 0)
+    {
+        var disp = start-maxdisp ;
+        if (disp < 0) disp = 0 ;
+        document.write("<DIV ID=back CLASS=pMenu onClick='window.location=\"xd_blog.html?start=");
+        document.write(disp) ;
+        document.write("\";'><i>retour</i></DIV>") ;
+    }
+    document.write("<DIV ID=back CLASS=pMenu onClick='window.location=\"xd_blog.html?start=");
+    document.write(start+maxdisp) ;
+    document.write("\";'><i>--&gt;</i></DIV></td><td>") ;
+    document.write(footer) ;
+    document.write("</td></tr></table>") ;
+}
+else if (start > 0)
+{
+    var disp = start-maxdisp ;
+    if (disp < 0) disp = 0 ;
+    document.write('<table border="0" width="100%"><tr><td>') ;
+    document.write("<DIV ID=back CLASS=pMenu onClick='window.location=\"xd_blog.html?start=");
+    document.write(disp) ;
+    document.write("\";'><i>&lt;--</i></DIV></td><td>") ;
+    document.write(footer) ;
+    document.write("</td></tr></table>") ;
+}
+else 
+{
+    document.write(footer) ;
+}
+document.write('<br />') ;
+document.write('</div>') ;
+</script>
+
+
+<div id="playscript"></div>
+
+<script type="text/javascript">
+SyntaxHighlighter.autoloader(
+  'js jscript javascript javascript/shBrushJScript.js',
+  'py python javascript/shBrushPython.js',
+  'cpp javascript/shBrushCpp.js',
+  'sql javascript/shBrushSql.js',
+  'flat plain javascript/shBrushPlain.js',
+  'vba vb javascript/shBrushVb.js',
+  'bash javascript/shBrushBash.js',
+  'cs javascript/shBrushCSharp.js',
+  'php javascript/shBrushPhp.js',
+  'css javascript/shBrushCss.js',
+  'xml html javascript/shBrushXml.js'
+);
+SyntaxHighlighter.all();
+</script>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
+<script type="text/javascript">
+_uacct = "UA-2815364-1";
+urchinTracker();
+</script>
+</BODY>
+</HTML>

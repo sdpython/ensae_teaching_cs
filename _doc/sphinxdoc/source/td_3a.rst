@@ -216,14 +216,14 @@ Workflow de données
 Framework de distribution des calculs
 +++++++++++++++++++++++++++++++++++++
 
-* `Spark <http://spark.apache.org/>`_ 
+* `Spark <http://spark.apache.org/>`_
 * `TensorFlow <https://www.tensorflow.org/>`_ : GPU (Deep Learning Google)
 * `CNTK <https://github.com/Microsoft/CNTK>`_ : GPU (Deep Learning Microsoft)
 * `Ray <https://github.com/ray-project/ray>`_ : (MPI, Berkeley),
   `Meet Ray, the Real-Time Machine-Learning Replacement for Spark <https://www.datanami.com/2017/03/28/meet-ray-real-time-machine-learning-replacement-spark/>`_
 * `CUDA <https://developer.nvidia.com/how-to-cuda-c-cpp>`_ : GPU for NVidia
-* `OpenCL <https://fr.wikipedia.org/wiki/OpenCL>`_ 
-  (`Intel <https://software.intel.com/en-us/articles/opencl-drivers>`_, 
+* `OpenCL <https://fr.wikipedia.org/wiki/OpenCL>`_
+  (`Intel <https://software.intel.com/en-us/articles/opencl-drivers>`_,
   `NVidia Open CL <https://developer.nvidia.com/opencl>`_, ...)
 
 ------------

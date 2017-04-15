@@ -1,0 +1,375 @@
+div.pMenu {
+   font-family: Calibri;
+   font-size: 100%;
+   cursor: pointer;
+}
+html, body {
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	padding: 0;
+}      
+div.maintitle {
+	position:absolute; 
+	margin-left:25%; 
+	margin-right:5%;
+	text-align: justify;
+	width:30%;
+	height:5%;
+} 
+div.mainbody {
+	position:absolute; 
+	margin-top:7%; 
+	margin-left:25%; 
+	margin-right:5%;
+	text-align: justify;
+	width:45%;            // main
+}
+div.mainbodylarge {
+	position:absolute; 
+	margin-top:7%; 
+	margin-left:10%; 
+	margin-right:5%;
+	text-align: justify;
+	width:80%;
+}
+div.mainbodyreduced {
+	position:absolute; 
+	margin-top:7%; 
+	margin-left:25%; 
+	margin-right:5%;
+	text-align: justify;
+	width:40%;
+}
+div.rightbody {
+	position:absolute; 
+	margin-top:25%; 
+	margin-left:80%; 
+	margin-right:5%;
+	text-align: justify;
+	width:15%;
+}
+div.mainfilter {
+	position:absolute;
+	margin-left:45%;     // main
+	text-align:right;
+	margin-top:2%;
+	margin-right:0%;
+	width:25%;
+}   
+div.sidebar {
+	position:absolute;
+	margin-left:2%;
+	text-align:right;
+	margin-top:10%;
+	width:20%;
+}   
+div.sidebarfull {
+	position:absolute;
+	margin-left:2%;
+	text-align:right;
+	margin-top:10%;
+	width:98%;
+}   
+div.sidebarfullleft {
+	position:absolute;
+	margin-left:50%;
+	text-align:left;
+	margin-top:10%;
+	width:50%;
+}   
+div.otherlayer {
+	position:absolute;
+	margin-left:2%;
+	text-align:right;
+	margin-top:6.5%;
+	width:20%;
+}   
+h1 {
+	margin-top:0px;
+	margin-bottom:20px;
+	font-size: 46px;
+}
+p.smallspace {
+	font-size:20%;
+}
+p.blogtitle {
+	margin-left: 0px;
+	padding: 0;
+	font-size:150%;
+}
+p.footnotename {
+	padding: 0;
+	text-align: right;
+	font-size: 80%;
+	font-style: italic;
+}
+p.pkeywords {
+	padding: 0;
+	text-align: right;
+	font-size: 80%;
+	font-style: italic;
+}
+p.keywordtitle {
+	padding: 0;
+	text-align: right;
+	font-size: 80%;
+	font-style: italic;
+	line-height:100% 
+}
+p.monthtitle {
+	padding: 0;
+	text-align: left;
+	font-size: 80%;
+	font-style: italic;
+	line-height:100% 
+}
+p.latexcenter {
+	text-align: center;
+}
+p {
+	margin-left: 0px;
+	padding: 0;
+	text-align: justify;
+	line-height:130% 
+}
+pre {
+	font-size: 80%;
+	background-color: WhiteSmoke ; 
+}
+p.linkmain {
+	margin: 0px;
+	padding: 0;
+}
+p.linkmainright {
+	margin: 0px;
+	padding: 0;
+	text-align: right;	
+}
+body {
+	background-color: white; 
+	font-family: Calibri; 
+}
+
+table.tablepictures { 
+	border-spacing: 5px;
+	border-width: 0px;
+}
+
+td.td326 { 
+	width: 326px;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.dot {
+  stroke: #000;
+}
+
+.dataframe100 table { 
+	border-collapse: collapse; 
+	text-align: left; 
+	font-size: 11px;
+} 
+
+.dataframe100 table td, .dataframe100 table th { 
+	padding: 3px 6px; 
+}
+
+.dataframe100 table thead th {
+	background-color:#006699; 
+	color:#ffffff; 
+	font-size: 11px; 
+	font-weight: bold; 
+	border-left: 1px solid #0070A8; 
+} 
+
+.dataframe100 table tbody td { 
+	color: #00496B; 
+	border-left: 1px solid #E1EEF4;
+	font-size: 11px;
+	font-weight: normal; 
+}
+
+.dataframe100 table tbody .alt td { 
+	background: #E1EEF4; 
+	color: #00496B; 
+	}
+	
+.dataframe100 table tbody td:first-child { 
+	border-left: none; 
+}
+
+.dataframe100 table tbody tr:last-child td { 
+	border-bottom: none; 
+}
+
+.dataframe100 table tfoot td div { 
+	border-top: 1px solid #006699;
+	background: #E1EEF4;
+} 
+
+.dataframe100 table tfoot td { 
+	padding: 0; 
+	font-size: 11px 
+} 
+
+.dataframe100 table tfoot td div{ padding: 2px; }
+.dataframe100 table tfoot td ul { 
+	margin: 0; 
+	padding:0; 
+	list-style: none; 
+	text-align: right; 
+}
+
+.dataframe100 table tfoot  li { display: inline; }
+.dataframe100 table tfoot li a { 
+	text-decoration: none; 
+	display: inline-block;  
+	padding: 2px 8px; 
+	margin: 1px;
+	color: #FFFFFF;
+	border: 1px solid #006699;
+	border-radius: 3px; 
+	background-color:#006699; 
+}
+
+.dataframe100 table tfoot ul.active, .dataframe100 table tfoot ul a:hover { 
+	text-decoration: none;
+	border-color: #006699; 
+	color: #FFFFFF; 
+	background: none; 
+	background-color:#00557F;
+}
+
+
+
+.dataframe table { 
+	color: #333;
+	/*font-family: Helvetica, Arial, sans-serif;*/
+	/*width: 600px;*/
+	border-collapse: collapse; 
+	font-size: 12px;
+	font-family: Calibri;
+	border-spacing: 0; 
+}
+
+.dataframe td, th { 
+	border: 1px solid transparent; /* No more visible border */
+	/*height: 30px; */
+	transition: all 0.3s;  /* Simple transition for hover effect */
+}
+
+.dataframe th {
+	background: #DFDFDF;  /* Darken header a bit */
+	font-weight: bold;
+}
+
+.dataframe td {
+	background: #FAFAFA;
+	text-align: center;
+}
+
+/* Cells in even rows (2,4,6...) are one color */ 
+.dataframe tr:nth-child(even) td { background: #F1F1F1; }   
+
+/* Cells in odd rows (1,3,5...) are another (excludes header cells)  */ 
+.dataframe tr:nth-child(odd) td { background: #FEFEFE; }  
+
+.dataframe tr td:hover { background: #AAA; color: #FFF; } /* Hover cell effect! */
+
+
+
+
+.dataframe100l table { 
+	border-collapse: collapse; 
+	text-align: left; 
+	font-size: 11px;
+} 
+
+.dataframe100l table td, .dataframe100l table th { 
+	padding: 3px 6px; 
+}
+
+.dataframe100l table thead th {
+	background-color:#AAAAAA; 
+	color:#ffffff; 
+	font-size: 11px; 
+	font-weight: bold; 
+	border-left: 1px solid #0070A8; 
+} 
+
+.dataframe100l table tbody td { 
+	color: #00496B; 
+	border-left: 1px solid #E1EEF4;
+	font-size: 11px;
+	font-weight: normal; 
+}
+
+.dataframe100l table tbody .alt td { 
+	background: #E1EEF4; 
+	color: #00496B; 
+	}
+	
+.dataframe100l table tbody td:first-child { 
+	border-left: none; 
+}
+
+.dataframe100l table tbody tr:last-child td { 
+	border-bottom: none; 
+}
+
+.dataframe100l table tfoot td div { 
+	border-top: 1px solid #006699;
+	background: #E1EEF4;
+} 
+
+.dataframe100l table tfoot td { 
+	padding: 0; 
+	font-size: 11px 
+} 
+
+.dataframe100l table tfoot td div{ padding: 2px; }
+.dataframe100l table tfoot td ul { 
+	margin: 0; 
+	padding:0; 
+	list-style: none; 
+	text-align: right; 
+}
+
+.dataframe100l table tfoot  li { display: inline; }
+.dataframe100l table tfoot li a { 
+	text-decoration: none; 
+	display: inline-block;  
+	padding: 2px 8px; 
+	margin: 1px;
+	color: #FFFFFF;
+	border: 1px solid #006699;
+	border-radius: 3px; 
+	background-color:#006699; 
+}
+
+.dataframe100l table tfoot ul.active, .dataframe100l table tfoot ul a:hover { 
+	text-decoration: none;
+	border-color: #006699; 
+	color: #FFFFFF; 
+	background: none; 
+	background-color:#00557F;
+}
+

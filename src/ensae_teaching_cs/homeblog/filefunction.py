@@ -47,14 +47,14 @@ def isTemporaryFolder(path):
     return False
 
 
-def find_all_blogs_function(folder=".", exclude=None):
+def find_all_blogs_function(folder=".", exclude=None, allow_temp=False):
     if len(folder) == 0:
         raise ValueError("folder is empty, it should be at least '.'")
     file, fold = liste_fichier_repertoire(folder, "*.html")
     exp = re.compile("[0-9-]{10}[.]html")
     file = [_ for _ in file if exp.search(os.path.split(_)[-1])]
     file = [
-        _ for _ in file if "dprivate" not in _ and not isTemporaryFolder(_)]
+        _ for _ in file if "dprivate" not in _ and (allow_temp or not isTemporaryFolder(_))]
     if exclude is not None:
         file = [_ for _ in file if not exclude(_)]
     return file

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+<head> 
+<link TYPE="text/css" href="pMenu.css" rel="stylesheet"/>
+<link type="text/css" rel="stylesheet" href="documents/graph_blog_20131130.css" />
+<link type="text/css" rel="stylesheet" href="javascript/d3.js" />
+<title>La chevauchée informatique de 100 notebooks</title>
+<meta content="notebook, python, ENSAE" name="keywords" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+</head>
+<body>
+
+<!-- SUMMARY BEGINS -->
+
+<p>
+Articule publié dans <a href="http://variances.eu/?p=1872">Variances 18/01/2017</a>.
+</p>
+
+<p>
+Je coordonne et j'anime environ 60 heures de cours et travaux 
+pratiques à l'ENSAE chaque année depuis trois ans et la création
+de la voix datascience. Si vous allez sur mon 
+<a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html">site</a>, vous
+découvrirez que la plupart de ces heures s'appuient sur des 
+exercices écrits sous formes de 
+<a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/_downloads/td1a_cenonce_session1.html">notebooks</a>
+et qu'une bonne partie
+fonctionne par paire, un énoncé, une correction, d'autres contiennent
+la correction des examens, d'autres répondent à des questions d'étudiants,
+d'autres... Le notebook est apparu il y a une dizaine d'années
+et est récemment devenu populaire sous le nom Jupyter. Un notebook
+Jupyter est un endroit où on écrit du texte, des formules,
+du code et où on garde la trace des graphiques et des sorties
+que ces petits bouts de code ont produits. C'est même un lieu où 
+on peut insérer une carte interactive pour zoomer ou dézoomer à volonté. 
+C'est un outil qui a rapidement trouvé son public. Rares sont les professeurs
+de mathématiques ou d'informatiques qui n'ont pas de notebooks d'autant plus 
+que les étudiants peuvent les télécharger, les exécuter, que tout le monde peut 
+aisément les convertir en PDF, html ou présentations. Essayez, allez
+sur un moteur de recherche, écrivez le nom d'un professeur, d'une 
+université suivi de notebook et 
+<a href="https://github.com/sdpython">github</a>... 
+(<a href="https://www.bing.com/search?q=berkeley+github+notebook&amp;qs=n&amp;form=QBLH&amp;sp=-1&amp;pq=berkeley+github+notebook&amp;sc=0-24&amp;sk=&amp;cvid=7527A906F4D04924BAA903CD8A46BCD9">berkely notebook github</a>)
+C'est un sacré chemin parcouru depuis les polycopiés qui sentaient 
+l'alcool. Ce sont les premières reproduction de support pédagogique 
+qu'il m'ait été donné de découvrir. Cela vous donne d'ailleurs une 
+idée de mon âge. J'ai découvert l'école, j'ai vécu la transition 
+du polycopié vers la photocopie. Un pas fou ! Et depuis je mets
+en ligne tout ce que je produis pour mes cours, plus d'une
+centaine de notebooks. Tout est accessible depuis GitHub, le 
+lieu des projets open source, tout est compilé en plusieurs 
+sites web.
+</p>
+
+<!-- SUMMARY ENDS -->
+<!-- CUT PAGE HERE -->
+
+<p>
+Lorsque je crée un notebook, je ne l'ajoute pas simplement 
+à la liste déjà existante, je lui ajoute un menu s'il est 
+long pour aider à la navigation. Je dois m'assurer que ce 
+notebook fonctionne depuis plusieurs environnements Windows, 
+Linux, je dois aussi m'assurer que je n'aurai pas trop de 
+travail l'année prochaine pour le faire fonctionner à nouveau, 
+qu'il ne sera pas trop perturbé par un changement de 
+version des librairies qu'il utilise. Je dois aussi le convertir
+au format html ou PDF ou présentation. Alors quand je crée un
+notebook ou que je reçois celui d'un contributeur, je lui 
+ajoute un menu, je remplace les chemins absolus vers des fichiers 
+locaux en fichiers téléchargeables, je remplace les mots de passes
+s'il est besoin, je lui enlève les numéros d'exécution afin de 
+pouvoir facilement tracer les modifications sur GitHub 
+(<a href="https://github.com/sdpython/ensae_teaching_cs/commit/834ed6575a2dd23ca85dd9c9a32c835ae57d5a37">diff</a>), 
+je l'inclus dans la suite des tests unitaires que je fais tourner 
+une fois par semaine sur une machine virtuelle louée chez 
+Azure - un reliquat du partenariat 
+<a href="http://news.microsoft.com/fr-fr/2014/09/23/microsoft-partenaire-de-la-filiere-data-science-de-lensae-paristech-avec-microsoft-azure-machine-learning/#sm.00001t60ys5gcvdrrthqu0l9aqtsb#RhKEo7O3LOiQiFhT.97">ENSAE - Microsoft</a>
+qui a 
+cessé cette année. Enfin, je mets à jour le site. Et voilà, 
+après tout cela, le notebook est disponible en ligne et prêt 
+à l'emploi.
+</p>
+<p>
+Régulièrement, je m'assure que les tests unitaires passent 
+et je corrige les erreurs en prévisions de l'année prochaine.
+C'est comme cela que je peux vous convier sans trop d'inquiétude
+à aller télécharger un notebook et à l'utiliser. C'est comme
+cela que je peux aller en cours sans avoir pris le temps de regarder
+si un notebook fonctionne encore. Mais je triche un peu avec 
+cette peinture idyllique. Je sais que certaines parties ne sont
+pas encore testées car je n'ai pas encore écrit le code qui le 
+ferait (Spark), que d'autres ne le sont plus car elles nécessitent
+un cluster que je n'ai plus pour cause de partenariat interrompu.
+L'important est que je sache ce qui ne marche plus pour la
+plupart de ce que j'ai produit.
+<p>
+</p>
+J'ai échafaudé toute cette machinerie en trois ans, écrit 
+quelques 15.000 lignes de codes pour automatiser le test des
+notebooks et les incorporer au sein d'une documentation que
+je compile sous la forme d'un site web. Et je coupe et je
+redécoupe pour l'ineffable expansion de ce cours qui monopolise
+une machine pendant plus de deux heures avant sa mise en 
+ligne et cinq heures pour tout tester. Alors je découpe et
+crée une myriade de petits points d'entrée. Mon livre sur le 
+langage python écrit il y a huit ans que je transforme sous 
+forme de site, ma thèse que je transforme négligemment au même
+format, les deux à trois milles lignes de codes écrites pour 
+siphonner ma boîte mail et récupérer tous les projets qu'on 
+m'envoie et que je dois évaluer - pas tout seul je vous rassure-. 
+J'ai reçu depuis le 15 décembre près de 1Go compressé de mails et
+pièces jointes, PDF ou notebooks car les étudiants m'envoient 
+eux aussi des notebooks en guise de rendu. Trois ans, plus de 150
+notebooks, 7000 commits sur GitHub, près de 200 étudiants, 
+certains que je revois plusieurs fois, 15 lettres de recommandation
+par an, deux hackathons et deux sponsors Microsoft et EY et 
+deux associations La Croix-Rouge et Crésus et deux nuits blanches 
+passées avec soixante-dix étudiants passionnés et passionnants, 
+une soutenance de projets d'étudiants dans les locaux de la 
+Croix-Rouge, d'autres à venir cette année j'espère, des étudiants 
+qui se sont amusés sur des projets proposés par l'association
+<a href="http://www.dataforgood.fr/">DataForGood</a>, il y avait quasiment un étudiant dans chacun des 
+dix projets lors de la 
+<a href="https://www.meetup.com/Data-for-Good-FR/events/236236094/">dernière session</a>. 
+DataForGood a contribué 
+à la création des sujets pour le premier hackathon et le bouche à 
+oreille à fait le reste. Sans oublier les à coté, participation au 
+premier jury des 
+<a href="http://www.gouvernement.fr/entrepreneur-interet-general">Entrepreneurs d'intérêt général</a>
+ou des 
+<a href="http://blog.codeweekfrance.org/best-of-jour-2-4-bordeaux-troyes-le-touquet-vannes-paris-2/">coding goûters</a>,
+au Touquet.
+</p>
+<p>
+Et vous savez quoi, j'ai encore faim ! J'ai envie, j'ai envie de 
+louer un théâtre et de faire parler les données façon Shakespeare, 
+de rénover les Chiffres les Lettres en remplaçant la partie chiffre
+par un puzzle algorithmique, et d'autres choses un peu moins farfelues 
+dont vous entendrez peut-être parler bientôt.
+</p>
+<p>
+Bonne année !
+</p>
+
+
+</body>
+</html>

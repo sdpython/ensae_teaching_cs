@@ -100,8 +100,10 @@ def FixIssuesWithAccent(text):
 def modify_all_blogs_list_in_place(folder=".",
                                    mainpage=os.path.join(
                                        "blog", "xd_blog.html"),
-                                   outmainpage=os.path.join("blog", "xd_blog.html")):
-    file = find_all_blogs_function(folder)
+                                   outmainpage=os.path.join(
+                                       "blog", "xd_blog.html"),
+                                   allow_temp=False):
+    file = find_all_blogs_function(folder, allow_temp=allow_temp)
     file = [os.path.split(_)[-1].replace(".html", "") for _ in file]
     f = open(mainpage, "r", encoding="utf8")
     cont = f.read()
@@ -119,8 +121,10 @@ def modify_all_blogs_list_in_place(folder=".",
 def file_all_keywords(folder=".",
                       mainpage=os.path.join("blog", "xd_blog.html"),
                       outmainpage=os.path.join("blog", "xd_blog.html"),
-                      exclude=None):
-    keepfile = find_all_blogs_function(folder, exclude)
+                      exclude=None, allow_temp=False):
+    keepfile = find_all_blogs_function(folder, exclude, allow_temp=allow_temp)
+    if len(keepfile) == 0:
+        raise Exception("no found file")
     hist = {}
     store_keywords = {}
     files = []
@@ -181,7 +185,8 @@ def file_all_keywords(folder=".",
     f.write(cont)
     f.close()
 
-    modify_all_blogs_list_in_place(folder, outmainpage, outmainpage)
+    modify_all_blogs_list_in_place(
+        folder, outmainpage, outmainpage, allow_temp=allow_temp)
     return store_keywords
 
 
