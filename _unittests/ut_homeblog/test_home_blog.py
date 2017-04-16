@@ -68,7 +68,7 @@ class TestHomeBlog(unittest.TestCase):
              OutputPrint=__name__ == "__main__")
 
         temp = get_temp_folder(__file__, "temp_home_blog")
-        blog = os.path.join(temp, "..", "blog")
+        blog = os.path.abspath(os.path.normpath(os.path.join(temp, "..", "blog")))
 
         filessite = explore_folder(blog)[1]
         filessite = [_.replace("\\", "/") for _ in filessite]
