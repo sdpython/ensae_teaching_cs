@@ -63,7 +63,7 @@ from src.ensae_teaching_cs.homeblog import file_all_keywords, build_process_all_
 
 class TestHomeBlog(unittest.TestCase):
 
-    def test_TableFormulaCore_Excel(self):
+    def test_homeblog(self):
         fLOG(__file__, self._testMethodName,
              OutputPrint=__name__ == "__main__")
 
