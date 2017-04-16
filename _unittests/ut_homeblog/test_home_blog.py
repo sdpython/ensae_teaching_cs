@@ -77,9 +77,9 @@ class TestHomeBlog(unittest.TestCase):
 
         cpf = CopyFileForFtp("copyDates.txt", specificTrigger=True)
         cpf.copy_file_ext(os.path.join(temp, ".."), "py", temp, doFTP=False)
-        cpf.copy_file_ext(os.path.join("blog", "javascript"),
+        cpf.copy_file_ext(os.path.join(blog, "javascript"),
                           "js", os.path.join(temp, "javascript"))
-        cpf.copy_file_ext(os.path.join("blog", "javascript"),
+        cpf.copy_file_ext(os.path.join(blog, "javascript"),
                           "css", os.path.join(temp, "javascript"))
 
         files, modified = modify_all_posts(blog, blog, exclude=lambda f: False)

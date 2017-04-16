@@ -321,6 +321,8 @@ class CopyFileForFtp:
         """
         @see me copy_file
         """
+        if not os.path.exists(file):
+            raise FileNotFoundError(file)
         fi = os.listdir(file)
         for f in fi:
             if not os.path.isfile(file + "/" + f):
