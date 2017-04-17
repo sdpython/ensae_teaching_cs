@@ -83,7 +83,11 @@ GPU
   `pyopencl <https://documen.tician.de/pyopencl/>`_
   pour ceux qui n'ont pas de carte
   `NVidia <http://www.nvidia.com/content/global/global.php>`_
-* `theano <http://deeplearning.net/software/theano/>`_,
+* `theano <http://deeplearning.net/software/theano/>`_
+
+*Bas niveau*
+
+* `Low-Level Programming University <https://github.com/gurugio/lowlevelprogramming-university>`_
 
 ------------
 
@@ -161,6 +165,7 @@ Threads et synchronisation
 
 * `TIL: clock skew exists (distributed system) <http://jvns.ca/blog/2016/02/10/til-clock-skew-exists/>`_ *(2016/06)*
 * `Le dîner des philosophes <https://fr.wikipedia.org/wiki/D%C3%AEner_des_philosophes>`_
+* `Is Parallel Programming Hard, And, If So, What Can You Do About It? <https://www.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.html>`_
 
 Distribution des calculs, stratégies de stockage, SQL NoSQL
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -225,6 +230,19 @@ Framework de distribution des calculs
 * `OpenCL <https://fr.wikipedia.org/wiki/OpenCL>`_
   (`Intel <https://software.intel.com/en-us/articles/opencl-drivers>`_,
   `NVidia Open CL <https://developer.nvidia.com/opencl>`_, ...)
+  
+Les ingénieurs cherchent sans arrêt à créer le bon outil, celui qui leur fait gagner
+du temps lors de la conception de programmes complexes. Voici quelques outils 
+qui vont dans ce sens. Il faut toujours regarder la date de création de l'outil,
+s'il est toujours maintenu, s'il est utilisé...
+  
+* `Zephyr <https://www.zephyrproject.org/>`_: real-time operating system 
+  (`RTOS <https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27exploitation_temps_r%C3%A9el>`_)
+* `Rust <https://www.rust-lang.org/en-US/>`_ : langage de programmation dont la syntaxe est proche du C.
+  C'est un langage plus sûr que C lorsque des threads sont utilisées car sa syntaxe
+  interdit des constructions qui ne sont pas 
+  `thread safe <https://fr.wikipedia.org/wiki/Thread_safety>`_.
+
 
 ------------
 
