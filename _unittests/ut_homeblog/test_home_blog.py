@@ -68,7 +68,8 @@ class TestHomeBlog(unittest.TestCase):
              OutputPrint=__name__ == "__main__")
 
         temp = get_temp_folder(__file__, "temp_home_blog")
-        blog = os.path.abspath(os.path.normpath(os.path.join(temp, "..", "blog")))
+        blog = os.path.abspath(os.path.normpath(
+            os.path.join(temp, "..", "blog")))
 
         filessite = explore_folder(blog)[1]
         filessite = [_.replace("\\", "/") for _ in filessite]
@@ -102,7 +103,8 @@ class TestHomeBlog(unittest.TestCase):
             # checking that username is not in the file
             modif = 0
             nbch = 0
-            usernames = [os.environ["USERNAME"].lower()]
+            usernames = [os.environ.get(
+                "USERNAME", os.environ.get("HOSTNAME", "")).lower()]
             for file, reason in sorted(cpf.modifiedFile):
                 ext = os.path.splitext(file)[-1]
 

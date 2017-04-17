@@ -230,19 +230,18 @@ Framework de distribution des calculs
 * `OpenCL <https://fr.wikipedia.org/wiki/OpenCL>`_
   (`Intel <https://software.intel.com/en-us/articles/opencl-drivers>`_,
   `NVidia Open CL <https://developer.nvidia.com/opencl>`_, ...)
-  
+
 Les ingénieurs cherchent sans arrêt à créer le bon outil, celui qui leur fait gagner
-du temps lors de la conception de programmes complexes. Voici quelques outils 
+du temps lors de la conception de programmes complexes. Voici quelques outils
 qui vont dans ce sens. Il faut toujours regarder la date de création de l'outil,
 s'il est toujours maintenu, s'il est utilisé...
-  
-* `Zephyr <https://www.zephyrproject.org/>`_: real-time operating system 
+
+* `Zephyr <https://www.zephyrproject.org/>`_: real-time operating system
   (`RTOS <https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27exploitation_temps_r%C3%A9el>`_)
 * `Rust <https://www.rust-lang.org/en-US/>`_ : langage de programmation dont la syntaxe est proche du C.
   C'est un langage plus sûr que C lorsque des threads sont utilisées car sa syntaxe
-  interdit des constructions qui ne sont pas 
+  interdit des constructions qui ne sont pas
   `thread safe <https://fr.wikipedia.org/wiki/Thread_safety>`_.
-
 
 ------------
 
