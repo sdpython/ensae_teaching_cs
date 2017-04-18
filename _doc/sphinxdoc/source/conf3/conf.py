@@ -47,7 +47,7 @@ if html_theme == "bootstrap":
         'globaltoc_includehidden': "true",
         'navbar_class': "navbar navbar-inverse",
         'navbar_fixed_top': "true",
-        'source_link_position': "nav",
+        'source_link_position': "footer",
         'bootswatch_theme': "yeti",
         # united = weird colors, sandstone=green, simplex=red, paper=trop bleu
         # lumen: OK
