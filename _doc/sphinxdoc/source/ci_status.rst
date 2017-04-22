@@ -374,4 +374,6 @@ Git Clone
     if not exist pythonnet3                 git clone https://github.com/sdpython/pythonnet3.git
     if not exist python3_module_template    git clone https://github.com/sdpython/python3_module_template.git
     if not exist teachpyx                   git clone https://github.com/sdpython/teachpyx.git
+
+    if not exist myblog                     git clone https://github.com/sdpython/myblog.git
     if not exist thesis_handwriting         git clone https://github.com/sdpython/thesis_handwriting.git
