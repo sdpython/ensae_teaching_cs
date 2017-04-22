@@ -29,12 +29,9 @@ modelForARSSRow = """
 modelForARSSChannel = """\n</channel>\n</rss>\n"""
 
 
-def file_build_rss(folder=".",
-                   outfile="blog/xdbrss.xml",
-                   now=datetime.datetime.now(),
-                   model_feed=modelForARSSFeed,
-                   model_row=modelForARSSRow,
-                   model_channel=modelForARSSChannel):
+def file_build_rss(folder=".", outfile="blog/xdbrss.xml", now=datetime.datetime.now(),
+                   model_feed=modelForARSSFeed, model_row=modelForARSSRow,
+                   model_channel=modelForARSSChannel, months_delay=6):
     """
     Build a RSS file, the function keeps the blog post (HTML format) from the last month.
     If a post contains one the two following string:
@@ -62,12 +59,14 @@ def file_build_rss(folder=".",
                                 model_channel
 
                             You should see the default value to see how you can replace them.
+    @param  months_delay    keep mails written a couple of months ago: *month_delay* months
     @return                 2-uple: outfile and the list of kept blog post (the last month)
     """
 
-    now -= datetime.datetime(2000, 2, 1) - datetime.datetime(2000, 1, 1)
+    now -= datetime.timedelta(days=months_delay * 30)
     fLOG("now - month ", now)
     file = find_all_blogs_function(folder)
+    nbfile = len(file)
     exp = re.compile('<meta +name=\\"description\\" +content=\\"(.*?)\\" */>')
     expt = re.compile('<title>(.*?)</title>')
 
@@ -120,6 +119,9 @@ def file_build_rss(folder=".",
 
     rows = ["<?xml version=\"1.0\" encoding=\"utf-8\"?>"]
     rows.append(modelForARSSFeed)
+    if len(rss) == 0:
+        raise Exception(
+            "No found file in '{0}' (raw count {1}).".format(folder, nbfile))
 
     rss.sort(reverse=True)
     for day, f, summary, short, title in rss:

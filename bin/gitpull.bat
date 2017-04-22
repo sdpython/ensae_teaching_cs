@@ -4,7 +4,7 @@ cd ..
 cd actuariat_python
 git pull
 cd ..
-cd teachpyx"
+cd teachpyx
 git pull
 cd ..
 cd ensae_projects
