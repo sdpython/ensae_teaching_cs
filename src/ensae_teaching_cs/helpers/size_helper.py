@@ -40,7 +40,8 @@ def total_size(o, handlers=None):
     """
     if handlers is None:
         handlers = {}
-    dict_handler = lambda d: chain.from_iterable(d.items())
+
+    def dict_handler(d): return chain.from_iterable(d.items())
     all_handlers = {tuple: iter, list: iter, deque: iter, dict: dict_handler,
                     set: iter, frozenset: iter}
     all_handlers.update(handlers)     # user handlers take precedence
