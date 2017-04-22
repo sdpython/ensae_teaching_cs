@@ -373,13 +373,14 @@ class GraphDistance:
                 function_match_edges = tempF2
         else:
             if function_mach_vertices is None:
-                def function_mach_vertices(
-                    v1, v2, g1, g2, w1, w2): return v1.label == v2.label
+                def function_mach_vertices(v1, v2, g1, g2, w1, w2):
+                    return v1.label == v2.label
             if function_match_edges is None:
-                def function_match_edges(e1, e2, g1, g2, w1, w2): return e1.label == e2.label and \
-                    (e1.from_ != e1.to or e2.from_ != e2.to) and \
-                    (e1.from_ != self.labelBegin or e1.to != self.labelBegin) and \
-                    (e1.from_ != self.labelEnd or e1.to != self.labelEnd)
+                def function_match_edges(e1, e2, g1, g2, w1, w2):
+                    return e1.label == e2.label and \
+                        (e1.from_ != e1.to or e2.from_ != e2.to) and \
+                        (e1.from_ != self.labelBegin or e1.to != self.labelBegin) and \
+                        (e1.from_ != self.labelEnd or e1.to != self.labelEnd)
         return function_mach_vertices, function_match_edges
 
     def common_paths(self, graph2,
@@ -554,9 +555,9 @@ class GraphDistance:
                 elif eorv1.is_vertex() and eorv2.is_vertex():
                     func = function_mach_vertices
                 else:
-                    def func(x, y, g1, g2, w1, w2): return \
-                        0.5 * (x.weight * w1 + y.weight * w2) if x is not None and y is not None \
-                        else (x.weight * w1 if y is None else y.weight * w2)
+                    def func(x, y, g1, g2, w1, w2):
+                        return 0.5 * (x.weight * w1 + y.weight * w2) if x is not None and y is not None \
+                            else (x.weight * w1 if y is None else y.weight * w2)
 
                 for p, co in posit:
                     if p in dist:
