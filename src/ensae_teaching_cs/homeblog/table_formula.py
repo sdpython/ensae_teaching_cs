@@ -1287,7 +1287,7 @@ class TableFormula(TableFormulaStat):
 
             total = table.aggregate_column("d_c", sum)
         """
-        function = lambda v: v[colname]
+        def function(v): return v[colname]
         return self.aggregate(function, aggregated_function)
 
     def aggregate(self, function, aggregated_function=sum):

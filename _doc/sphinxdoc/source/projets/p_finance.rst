@@ -23,11 +23,10 @@ les deux sources suivantes suffiront :
 est possible de récupérer facilement de nombreuses séries financières, des séries économiques
 comme le PIB des pays.
 Vous trouvez plein de références sur de sources de données
-ou de modules sur 
+ou de modules sur
 `awesome-quant <https://github.com/wilsonfreitas/awesome-quant>`_.
 Un exemple de graphique avec matplotlib :
 `candlestick_ohlc <https://matplotlib.org/examples/pylab_examples/finance_demo.html>`_.
-
 
 Le module `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
 permet de récupérer facilement des données depuis
