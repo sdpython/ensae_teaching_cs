@@ -301,40 +301,40 @@ class TestTableFormula(unittest.TestCase):
         values = [[random.gauss(-1, 3)] for x in values]
         tbl = TableFormula(["x"], values)
         mu, si = tbl.mu_sigma(lambda v: v["x"])
-        assert abs(mu + 1) < 0.3
-        assert abs(si - 3) < 0.3
+        self.assertTrue(abs(mu + 1) < 0.5)
+        self.assertTrue(abs(si - 3) < 0.5)
         mu, si = tbl.mu_sigma(lambda v: v["x"], removeExtreme=0.01)
-        assert abs(mu + 1) < 0.3
-        assert abs(si - 3) < 0.3
+        self.assertTrue(abs(mu + 1) < 0.5)
+        self.assertTrue(abs(si - 3) < 0.5)
         all = tbl.mu_sigma_each_column(removeExtreme=0.01)
-        assert all.size == (2, 1)
+        self.assertEqual(all.size, (2, 1))
 
     def test_matrix_array(self):
         fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
         values = [[random.random(), random.random()] for i in range(0, 10)]
         tbl = TableFormula(["x", "y"], values)
         mat = tbl.np_matrix
-        assert isinstance(mat, numpy.matrix)
+        self.assertTrue(isinstance(mat, numpy.matrix))
         tblm = TableFormula(tbl.header, mat)
-        assert isinstance(tblm[0, 0], float)
-        assert "[[" not in str(tblm)
+        self.assertTrue(isinstance(tblm[0, 0], float))
+        self.assertTrue("[[" not in str(tblm))
         if tblm != tbl:
             delta = tbl.delta(tblm)
             for d in delta:
                 fLOG(d)
-            assert False
+            self.assertTrue(False)
         arr = tbl.np_array
-        assert isinstance(arr, numpy.ndarray)
+        self.assertTrue(isinstance(arr, numpy.ndarray))
         tbla = TableFormula(tbl.header, arr)
-        assert tbla == tbl
+        self.assertEqual(tbla, tbl)
 
     def test_matrix_array2(self):
         fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
         values = [[random.random(), random.random()] for i in range(0, 10)]
         tbl = TableFormula(["x", "y"], values)
         cen = tbl.center_reduce()
-        assert cen.size == tbl.size
-        assert cen[0, 0] != tbl[0, 0]
+        self.assertEqual(cen.size, tbl.size)
+        self.assertNotEqual(cen[0, 0], tbl[0, 0])
 
     def test_iter(self):
         fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
@@ -342,9 +342,9 @@ class TestTableFormula(unittest.TestCase):
         tbl = TableFormula(["x", "y"], values)
         nb = 0
         for row in tbl:
-            assert isinstance(row, dict)
-            assert "x" in row
-            assert "y" in row
+            self.assertTrue(isinstance(row, dict))
+            self.assertTrue("x" in row)
+            self.assertTrue("y" in row)
             nb += 1
         assert nb > 0
 
@@ -355,14 +355,14 @@ class TestTableFormula(unittest.TestCase):
         d2 = tbl + tbl
         dm = tbl * -1
         tt = d2 + dm
-        assert tbl == tt
+        self.assertEqual(tbl, tt)
         rep = tbl.replicate(2)
-        assert len(rep) == len(tbl) * 2
+        self.assertEqual(len(rep), len(tbl) * 2)
 
     def test_empty_table(self):
         fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
         tbl = TableFormula([["x", "y"]])
-        assert tbl.size == (0, 2)
+        self.assertEqual(tbl.size, (0, 2))
 
     def test_json(self):
         fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
@@ -370,8 +370,8 @@ class TestTableFormula(unittest.TestCase):
         values = [[x, x + random.random() / 2] for x in values]
         tbl = TableFormula(["x", "y"], values)
         jso = tbl.json
-        assert len(jso) > 0
-        assert isinstance(jso, str)
+        self.assertTrue(len(jso) > 0)
+        self.assertTrue(isinstance(jso, str))
 
 
 if __name__ == "__main__":
