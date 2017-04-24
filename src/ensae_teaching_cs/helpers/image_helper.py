@@ -2,6 +2,7 @@
 @file
 @brief image helpers
 """
+import os
 from PIL import Image
 
 
@@ -27,3 +28,37 @@ def collate_images(imgs, final=None):
     if final is not None:
         blank.save(final)
     return blank
+
+
+def convert_image(imgs, ext, dest=None, fLOG=None):
+    """
+    Convert an image or a list of images into a different format.
+
+    @param      imgs        list of images (filenames)
+    @param      dest        destination folder, if None, the image is saved beside the orginal one
+    @param      ext         new format
+    @param      fLOG        logging function
+    @return                 list of written images
+    """
+    if isinstance(imgs, str):
+        imgs = [imgs]
+    if not isinstance(ext, str):
+        raise TypeError("ext must a string")
+    if len(ext) == 0:
+        raise ValueError("ext must not be empty")
+    if ext.startswith("."):
+        raise ValueError("ext must not start with a point '{0}'".format(ext))
+    saved = []
+    for img in imgs:
+        if fLOG is not None:
+            fLOG("[convert_image]", img)
+        obj = Image.open(img)
+        if dest is None:
+            folder = os.path.dirname(img)
+        else:
+            folder = dest
+        name = os.path.splitext(os.path.split(img)[-1])[0]
+        new_name = os.path.join(folder, name + "." + ext)
+        obj.save(new_name)
+        saved.append(new_name)
+    return saved
