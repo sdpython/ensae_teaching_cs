@@ -257,14 +257,20 @@ Visualiser pour comprendre
 
 ------------
 
-Transformations des données
-===========================
+Transformations des données, Embedding
+======================================
 
 .. contents::
     :local:
     :depth: 1
 
-Projections, réduction des dimensions
+Construire un `embedding <https://en.wikipedia.org/wiki/Embedding>`_ consiste le plus
+souvent à construire une fonction qui convertit un entier, un graphe, un texte en
+un vecteur réel de dimension fixe exploitable par un modèle de machine learning.
+Cette partie s'intéresse à construire de meilleures variables que celles issues
+du problème initiale.
+
+Projections, Réduction des dimensions
 +++++++++++++++++++++++++++++++++++++
 
 |pyecopng| |pystatpng|
@@ -335,6 +341,7 @@ Distances
 * `Learning Hierarchical Similarity Metrics <http://www.cs.toronto.edu/~vnair/cvpr12.pdf>`_
 * `From Word Embeddings To Document Distances <http://jmlr.org/proceedings/papers/v37/kusnerb15.pdf>`_
 * `Detecting Near-Duplicates for Web Crawling <http://www.wwwconference.org/www2007/papers/paper215.pdf>`_
+* `Deep metric learning using Triplet network <https://arxiv.org/abs/1412.6622>`_
 
 Clustering
 ++++++++++
@@ -404,6 +411,17 @@ Détection d'anomalies
 * `scikit-learn <http://scikit-learn.org/stable/modules/outlier_detection.html>`_
 * `pyculiarity <https://github.com/nicolasmiller/pyculiarity>`_
 * `lsanomaly <https://github.com/lsanomaly/lsanomaly>`_
+
+Graphe et embedding
++++++++++++++++++++
+
+*(à venir)*
+
+*Lectures*
+
+* `Graph Convolutional Networks <https://tkipf.github.io/graph-convolutional-networks/>`_
+* `Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering <https://arxiv.org/abs/1606.09375>`_
+* `Deep Convolutional Networks on Graph-Structured Data <https://arxiv.org/abs/1506.05163>`_
 
 ------------
 
@@ -535,11 +553,14 @@ Ranking
 * `Learning to rank (software, datasets) <http://arogozhnikov.github.io/2015/06/26/learning-to-rank-software-datasets.html>`_
 * `Multiple-criteria decision analysis <https://en.wikipedia.org/wiki/Multiple-criteria_decision_analysis>`_
 * `Data-driven Rank Breaking for Efficient Rank Aggregation <http://www.jmlr.org/papers/volume17/16-209/16-209.pdf>`_
+* `BPR: Bayesian Personalized Ranking from Implicit Feedback <https://arxiv.org/abs/1205.2618>`_
+  (applicable également aux systèmes de recommandation)
 
 *Modules*
 
 * `xgboost <https://xgboost.readthedocs.io/en/latest/>`_
 * `scikit-learn <http://scikit-learn.org/>`_
+* `lightfm <https://github.com/lyst/lightfm>`_
 * `rankpy <https://github.com/dmitru/rankpy>`_ (standby)
 * `The Lemur Project - ranklib <https://sourceforge.net/p/lemur/wiki/RankLib/>`_
 * `scikit-criteria <https://github.com/leliel12/scikit-criteria>`_ (standby)
@@ -548,6 +569,10 @@ Système de recommandation
 +++++++++++++++++++++++++
 
 *(à venir)*
+
+*Lectures*
+
+* `Recommendations in Keras using triplet loss <https://github.com/maciejkula/triplet_recommendations_keras>`_
 
 *Modules*
 
@@ -569,6 +594,7 @@ Deep Learning
 
 *Tutoriel*
 
+* `Deep Learning course: lecture slides and lab notebooks <https://m2dsupsdlclass.github.io/lectures-labs/>`_
 * :ref:`l-deep-learning-specials`.
 * `Artificial Intelligence, Revealed (1) <https://code.facebook.com/pages/1902086376686983>`_ : article de blog et vidéos
   expliquant les différents concepts du deep learning
@@ -641,6 +667,14 @@ Deep Learning
 * `word2vec Parameter Learning Explained <http://arxiv.org/abs/1411.2738>`_, Xin Rong,
 * `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
 
+*Vus dans des conférences*
+
+* `Fast R-CNN <Fast R-CNN>`_ *(dotAI)*
+* `Mask R-CNN <https://arxiv.org/abs/1703.06870>`_ *(dotAI)*
+* `Modèle Tenserflow <https://github.com/tensorflow/models>`_ 
+  (modèle adaptés pour du transfert learning : ResNet, `Inception <http://nicolovaligi.com/history-inception-deep-learning-architecture.html>`_) *(dotAI)*
+* `Domain-Adversarial Training of Neural Networks <http://jmlr.org/papers/volume17/15-239/15-239.pdf>`_ *(dotAI)*
+
 *Modules*
 
 * `theano <http://deeplearning.net/software/theano/>`_
@@ -657,6 +691,12 @@ Deep Learning
 * `platoon <https://github.com/mila-udem/platoon/>`_ :
   multi-GPU pour theano
 * `scikit-theano <https://github.com/sklearn-theano/sklearn-theano>`_
+* `Federated Learning: Collaborative Machine Learning without Centralized Training Data <https://research.googleblog.com/2017/04/federated-learning-collaborative.html>`_
+
+*Deep learning embarqué*
+
+* `TensorFlow sur Android <https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android>`_
+* `TensorFlow sur RasberryPI <https://github.com/samjabrahams/tensorflow-on-raspberry-pi/blob/master/GUIDE.md>`_
 
 .. _l-td2a-reinforcement-learning:
 
@@ -680,6 +720,7 @@ ou *apprentissage par renforcement*
 * `Reinforcement Learning Part I <http://www.labri.fr/perso/nrougier/downloads/Chile-2014-Lecture-1.pdf>`_
   `Reinforcement Learning Part II <http://www.labri.fr/perso/nrougier/downloads/Chile-2014-Lecture-2.pdf>`_
 * `Strategic Attentive Writer for Learning Macro-Actions <https://arxiv.org/pdf/1606.04695.pdf>`_
+* `Temporal difference learning <https://en.wikipedia.org/wiki/Temporal_difference_learning>`_  
 
 Bandits
 +++++++
