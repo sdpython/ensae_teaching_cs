@@ -99,15 +99,18 @@ il faut revenir à l'essentiel : un `éditeur de texte <https://fr.wikipedia.org
   lire cet article pour le configurer
   `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_.
 
+Installer un module
+===================
+
 pip, python et ligne de commande
-================================
+++++++++++++++++++++++++++++++++
 
 Le language python s'est doté d'un système de distribution de modules (ou *packages*)
 qui est aisément accessible depuis la `ligne de commande <http://fr.wikipedia.org/wiki/Interface_en_ligne_de_commande>`_.
 Sous Windows, on peut lancer la ligne de commande par la commande ``cmd``. On obtient une fenêtre noire.
 Il suffit alors de se déplacer dans le répertoire d'installation de Python ::
 
-    cd c:\Python35_x64\Scripts
+    cd c:\Python36_x64\Scripts
 
 Ou encore :
 
@@ -123,7 +126,7 @@ Puis d'écrire :
 
 Sous Linux ou OS X (Apple), la ligne de commande s'appelle le `terminal <http://doc.ubuntu-fr.org/terminal>`_.
 Comme Python est déjà installé en version 2.7, je recommande l'installation de la distribution
-Anaconda en version 3.5 qui facilite la coexistence de plusieurs versions de Python. On procède de la même manière ::
+Anaconda en version 3.6 qui facilite la coexistence de plusieurs versions de Python. On procède de la même manière ::
 
     cd /home/<alias>/anaconda3/bin
 
@@ -142,9 +145,6 @@ c'est vraisemblablement parce que ce module contient une partie en C++.
 Dans ce cas, il faut aller voir sur ce site
 `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
 s'il est disponible. S'il ne l'est pas, l'installation du module est réservée aux experts.
-
-Installer un module
-===================
 
 conda et pip
 ++++++++++++
@@ -473,6 +473,11 @@ Pour être compilée, la documentation requiert également :
 * `Le blog univers domotique <http://blog.univers-domotique.com/>`_
 * `Tutoriel sur GIT <http://sixrevisions.com/resources/git-tutorials-beginners/>`_
 
+Générer une documentation comme ce cours
+++++++++++++++++++++++++++++++++++++++++
+
+Lire `List of tools needed to build the documentation <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/blog/2017/2017-04-27_setup.html>`_.
+
 Setup pour déveloper ce cours (Windows)
 +++++++++++++++++++++++++++++++++++++++
 
@@ -517,7 +522,7 @@ En plus :
 
 Pour Jenkins, quelques extensions :
 
-* `Last Console Output <https://wiki.jenkins-ci.org/display/JENKINS/Extra+Columns+Plugin>`_
+* `Extra Columns Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Extra+Columns+Plugin>`_
 * `Next Execution <https://wiki.jenkins-ci.org/display/JENKINS/Next+Executions>`_
 * `Text File <https://wiki.jenkins-ci.org/display/JENKINS/Text+File+Operations+Plugin>`_
 
@@ -532,7 +537,7 @@ Un serveur en local doit être démarré, la ligne de commande ressemble à ceci
 
 ::
 
-    c:\Python35_x64\Scripts\pypi-server.exe -u -p 8067 --disable-fallback ..\..\local_pypi\local_pypi_server
+    c:\Python36_x64\Scripts\pypi-server.exe -u -p 8067 --disable-fallback ..\..\local_pypi\local_pypi_server
 
 Si le serveur Jenkins utilise des mots-clés via keyring,
 ce qui est le cas pour plusieurs modules utilisés pour ces enseignements,
@@ -545,8 +550,8 @@ pyquickhelper :
 
 ::
 
-    cd D:\jenkins\venv\py35
-    c:\Python35_x64\scripts\virtualenv.exe pyq --system-site-packages
+    cd D:\jenkins\venv\py36
+    c:\Python36_x64\scripts\virtualenv.exe pyq --system-site-packages
     cd pyq\Scripts
     pip install pyquickhelper
 
@@ -626,6 +631,7 @@ Autres sources d'inspiration :
 - `Scikit-Learn: Machine Learning en Python <http://www.microsoft.com/france/mstechdays/programmes/2014/fiche-session.aspx?ID=295be946-2c69-458a-8545-bcebe7970fd8>`_
 - `PyVideo <http://www.pyvideo.org/>`_
 - `PyData TV <https://www.youtube.com/user/PyDataTV>`_
+- `dotconference.com <https://www.dotconferences.com/>`_
 
 .. _l-data2amod:
 

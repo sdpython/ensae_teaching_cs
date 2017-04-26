@@ -115,8 +115,8 @@ class TestModulesDocumentation(unittest.TestCase):
 
         st = rst_table_modules()
         fLOG("\n" + st)
-        assert st is not None
-        assert len(st) > 0
+        self.assertTrue(st is not None)
+        self.assertTrue(len(st) > 0)
 
 
 if __name__ == "__main__":

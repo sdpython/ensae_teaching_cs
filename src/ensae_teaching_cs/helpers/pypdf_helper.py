@@ -3,7 +3,11 @@
 @brief globals functions to manipulate PDF files
 """
 
-from pyPdf import PdfFileReader
+try:
+    from pyPdf import PdfFileReader
+except ImportError as e:
+    raise ImportError("If this import fails, you should use the version from github/sdpython:\n" +
+                      "pip install https://github.com/sdpython/pyPdf/archive/trunk.zip") from e
 
 
 def pdf_read_content(filename):

@@ -671,7 +671,7 @@ Deep Learning
 
 * `Fast R-CNN <Fast R-CNN>`_ *(dotAI)*
 * `Mask R-CNN <https://arxiv.org/abs/1703.06870>`_ *(dotAI)*
-* `Modèle Tenserflow <https://github.com/tensorflow/models>`_ 
+* `Modèle Tenserflow <https://github.com/tensorflow/models>`_
   (modèle adaptés pour du transfert learning : ResNet, `Inception <http://nicolovaligi.com/history-inception-deep-learning-architecture.html>`_) *(dotAI)*
 * `Domain-Adversarial Training of Neural Networks <http://jmlr.org/papers/volume17/15-239/15-239.pdf>`_ *(dotAI)*
 
@@ -720,7 +720,7 @@ ou *apprentissage par renforcement*
 * `Reinforcement Learning Part I <http://www.labri.fr/perso/nrougier/downloads/Chile-2014-Lecture-1.pdf>`_
   `Reinforcement Learning Part II <http://www.labri.fr/perso/nrougier/downloads/Chile-2014-Lecture-2.pdf>`_
 * `Strategic Attentive Writer for Learning Macro-Actions <https://arxiv.org/pdf/1606.04695.pdf>`_
-* `Temporal difference learning <https://en.wikipedia.org/wiki/Temporal_difference_learning>`_  
+* `Temporal difference learning <https://en.wikipedia.org/wiki/Temporal_difference_learning>`_
 
 Bandits
 +++++++

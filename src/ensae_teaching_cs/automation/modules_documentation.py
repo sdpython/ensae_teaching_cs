@@ -26,4 +26,5 @@ def rst_table_modules():
                   "license", "purpose", "classifier"]
     df["lname"] = df["name"].apply(lambda s: s.lower())
     df = df.sort_values("lname").drop("lname", axis=1)
+    df = df.reset_index(drop=True).reset_index(drop=False)
     return df2rst(df)
