@@ -288,7 +288,8 @@ Projections, Réduction des dimensions
   `Random projection <http://scikit-learn.org/stable/modules/random_projection.html>`_,
   `Concentration of measure <https://en.wikipedia.org/wiki/Concentration_of_measure>`_,
   `Experiments with Random Projection <http://cseweb.ucsd.edu/~dasgupta/papers/randomf.pdf>`_
-* `Compressed Sensing <https://en.wikipedia.org/wiki/Compressed_sensing>`_
+* `Compressed sensing and single-pixel cameras <https://terrytao.wordpress.com/2007/04/13/compressed-sensing-and-single-pixel-cameras/>`_
+  (wikipedia : `Compressed Sensing <https://en.wikipedia.org/wiki/Compressed_sensing>`_)
 * `Locality-sensitive hashing <https://en.wikipedia.org/wiki/Locality-sensitive_hashing>`_,
   `LSH Forest: Self-Tuning Indexes for Similarity Search <http://infolab.stanford.edu/~bawa/Pub/similarity.pdf>`_
 * `Manifold learning <http://scikit-learn.org/stable/modules/manifold.html>`_
@@ -672,7 +673,7 @@ Deep Learning
 * `Fast R-CNN <Fast R-CNN>`_ *(dotAI)*
 * `Mask R-CNN <https://arxiv.org/abs/1703.06870>`_ *(dotAI)*
 * `Modèle Tenserflow <https://github.com/tensorflow/models>`_
-  (modèle adaptés pour du transfert learning : ResNet, `Inception <http://nicolovaligi.com/history-inception-deep-learning-architecture.html>`_) *(dotAI)*
+  (modèle adaptés pour du transfer learning : ResNet, `Inception <http://nicolovaligi.com/history-inception-deep-learning-architecture.html>`_) *(dotAI)*
 * `Domain-Adversarial Training of Neural Networks <http://jmlr.org/papers/volume17/15-239/15-239.pdf>`_ *(dotAI)*
 
 *Modules*
@@ -884,6 +885,7 @@ Timeseries - Séries temporelles
 * `Learning Time Series Detection Models from Temporally Imprecise Labels <https://arxiv.org/abs/1611.02258>`_
 * `Time Series Prediction With Deep Learning in Keras <http://machinelearningmastery.com/time-series-prediction-with-deep-learning-in-python-with-keras/>`_
 * `Sequence Classification with LSTM Recurrent Neural Networks in Python with Keras <http://machinelearningmastery.com/sequence-classification-lstm-recurrent-neural-networks-python-keras/>`_
+  (voir `LSTM <http://colah.github.io/posts/2015-08-Understanding-LSTMs/>`_)
 * `Time Series Classification and Clustering with Python <http://alexminnaar.com/time-series-classification-and-clustering-with-python.html>`_
 * `Dynamic Time Warping <https://en.wikipedia.org/wiki/Dynamic_time_warping>`_
 * `Functional responses, functional covariates and the concurrent model <http://www.ece.uvic.ca/~bctill/papers/mocap/Ramsay_Silverman_2005ao.pdf>`_
@@ -985,6 +987,13 @@ Apprentissage sans labels
 
 |pystatpng|
 
+.. toctree::
+    :max_depth: 2
+    
+    specials/nolabel
+
+*Notebooks*
+
 *(à venir)*
 
 *Lectures*
@@ -1004,6 +1013,8 @@ Apprentissage sans labels
 * `Adversarial Autoencoders (with Pytorch) <https://blog.paperspace.com/adversarial-autoencoders-with-pytorch/>`_
 * `Marginalizing Stacked Linear Denoising Autoencoders <http://www.jmlr.org/papers/volume16/chen15c/chen15c.pdf>`_
 * `What Regularized Auto-Encoders Learn from the Data-Generating Distribution <http://jmlr.csail.mit.edu/papers/volume15/alain14a/alain14a.pdf>`_
+* `Compressed sensing and single-pixel cameras <https://terrytao.wordpress.com/2007/04/13/compressed-sensing-and-single-pixel-cameras/>`_
+* `Multi-Label Prediction via Compressed Sensing <Multi-Label Prediction via Compressed Sensing>`_
 
 *No label, weak labels*
 
@@ -1024,7 +1035,7 @@ Apprentissage sans labels
   `A Framework for Learning Predictive Structures from Multiple Tasks and Unlabeled Data> <http://www.jmlr.org/papers/volume6/ando05a/ando05a.pdf>`_
 * `Multi Kernel Learning with Online-Batch Optimization <http://www.jmlr.org/papers/volume13/orabona12a/orabona12a.pdf>`_
 
-*Transfert learning*
+*Transfer learning*
 
 * `Unsupervised and Transfer Learning Challenges in Machine Learning, Volume 7 <http://www.mtome.com/Publications/CiML/CiML-v7-book.pdf>`_
 * `ICML2011 Unsupervised and Transfer Learning Workshop <http://www.jmlr.org/proceedings/papers/v27/silver12a/silver12a.pdf>`_
