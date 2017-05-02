@@ -164,8 +164,11 @@ comment cette technique est utilisée (voir
 pour un exemple de code).
 
 .. figure:: nolabelimg/aagan.png
-    :alt: image extraite de Adversarial Autoencoders
+    :alt: image extraite de *Adversarial Autoencoders*
     :scale: 80%
+    
+    Image extraite de 
+    `Adversarial Autoencoders (with Pytorch) <https://blog.paperspace.com/adversarial-autoencoders-with-pytorch/>`_.
 
 Le réseau de neurones inclut une couche cachée dont la dimension est réduite.
 Il apprend à compresser et restituer un grand nombre d'image. Les labels ne sont
@@ -184,6 +187,9 @@ mais aussi à reconstuire *x* à partir d'une image bruitée de *x*.
 .. figure:: nolabelimg/sdae.png
     :width: 400
     :alt: Image extraite de *Stacked Denoising Autoencoders: Learning Useful Representations in a Deep Network with a Local Denoising Criterion*.
+    
+    Image extraite de 
+    `Stacked Denoising Autoencoders: Learning Useful Representations in a Deep Network with a Local Denoising Criterion <http://www.jmlr.org/papers/volume11/vincent10a/vincent10a.pdf>`_.
 
 L'idée de bruiter les données pour mieux apprendre est aussi présente
 dans l'article
@@ -285,8 +291,10 @@ principale à un cas semi-supervisé. Comme les labels ne sont pas présent sur 
 le modèle est transformé pour faire apparaître une variable cachée qui la représente.
 
 .. figure:: nolabelimg/aagans.png
-    :alt: image extraite de Adversarial Autoencoders
+    :alt: Image extraite de *Adversarial Autoencoders*.
     :scale: 80%
+    
+    Image extraite de `Adversarial Autoencoders <https://arxiv.org/abs/1511.05644>`_.
 
 L'apprentissage est modifié de telle sorte que la distribution de cette variable cachée
 suive celle de la variable *label*. Une dernière partie basé sur les
@@ -308,6 +316,12 @@ nouvelles variables.
 
 .. figure:: nolabelimg/tl.png
     :width: 300
+    :alt: Illustration du *transfer learning*.
+    
+    On garde les premières couches spécialisées dans le traitement de l'image.
+    Elles extraient des informations pertinentes pour la dernière couche
+    qui effectuent la classification. C'est cette dernière qu'on change
+    sans réapprendre les premières.
 
 L'article
 `Domain Adaptation for Large-Scale Sentiment Classification: A Deep Learning Approach <http://svn.ucc.asn.au:8080/oxinabox/Uni%20Notes/honours/refTesting/glorot2011domain.pdf>`_
