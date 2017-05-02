@@ -166,8 +166,8 @@ pour un exemple de code).
 .. figure:: nolabelimg/aagan.png
     :alt: image extraite de *Adversarial Autoencoders*
     :scale: 80%
-    
-    Image extraite de 
+
+    Image extraite de
     `Adversarial Autoencoders (with Pytorch) <https://blog.paperspace.com/adversarial-autoencoders-with-pytorch/>`_.
 
 Le réseau de neurones inclut une couche cachée dont la dimension est réduite.
@@ -187,8 +187,8 @@ mais aussi à reconstuire *x* à partir d'une image bruitée de *x*.
 .. figure:: nolabelimg/sdae.png
     :width: 400
     :alt: Image extraite de *Stacked Denoising Autoencoders: Learning Useful Representations in a Deep Network with a Local Denoising Criterion*.
-    
-    Image extraite de 
+
+    Image extraite de
     `Stacked Denoising Autoencoders: Learning Useful Representations in a Deep Network with a Local Denoising Criterion <http://www.jmlr.org/papers/volume11/vincent10a/vincent10a.pdf>`_.
 
 L'idée de bruiter les données pour mieux apprendre est aussi présente
@@ -293,7 +293,7 @@ le modèle est transformé pour faire apparaître une variable cachée qui la re
 .. figure:: nolabelimg/aagans.png
     :alt: Image extraite de *Adversarial Autoencoders*.
     :scale: 80%
-    
+
     Image extraite de `Adversarial Autoencoders <https://arxiv.org/abs/1511.05644>`_.
 
 L'apprentissage est modifié de telle sorte que la distribution de cette variable cachée
@@ -317,7 +317,7 @@ nouvelles variables.
 .. figure:: nolabelimg/tl.png
     :width: 300
     :alt: Illustration du *transfer learning*.
-    
+
     On garde les premières couches spécialisées dans le traitement de l'image.
     Elles extraient des informations pertinentes pour la dernière couche
     qui effectuent la classification. C'est cette dernière qu'on change
@@ -330,11 +330,98 @@ est un exemple sur les systèmes de recommandation. Le chapite du livre
 l'article
 `A Survey on Transfer Learning <https://www.cse.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf>`_
 ou encore
-`ansfer Learning for Reinforcement Learning Domains: A Survey <http://www.jmlr.org/papers/volume10/taylor09a/taylor09a.pdf>`_
+`Transfer Learning for Reinforcement Learning Domains: A Survey <http://www.jmlr.org/papers/volume10/taylor09a/taylor09a.pdf>`_
 recensent plusieurs scénarios.
+
+L'article
+`Learning Transferable Features with Deep Adaptation Networks <http://proceedings.mlr.press/v37/long15.pdf>`_
+propose quant à lui d'adapter un réseaux de neurones existant et publié
+`AlexNet <http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks>`_
+en figeant les premières couches, en ajustant les couches intermédiaires et en remplaçant les dernières.
+L'algorithme proposé s'appuie sur des méthodes à noyau et l'article
+`A Kernel Two-Sample Test <http://www.jmlr.org/papers/volume13/gretton12a/gretton12a.pdf>`_.
 
 Online training
 +++++++++++++++
 
+On peut comprendre *Online Training* de deux façons différentes.
+
+.. index:: continuous training
+
+**Continuous Training**
+
+La première consiste
+à la conception d'un modèle qui est mise à jour régulièrement sur de nouvelles données.
+Il doit également être capable d'oublier les plus vieilles données d'apprentissage.
+Le modèle `Averaged Perceptron <https://svn.spraakdata.gu.se/repos/richard/pub/ml2014_web/m7.pdf>`_
+met continuellement ses poids à jour, il les corrige avec les erreurs d'observées.
+Pour peu qu'on parcourt les observations dans un sens chronologiquement,
+les observations les plus récentes auront plus d'influence.
+La méthode la plus courante est d'utiliser une fenêtre glissante sur les données.
+Chaque semaine, chaque mois, la base d'apprentissage est composées des données
+enregistrées sur la dernières années. De cette façon le modèle apprend avec 80%
+des données déjà vu et 20% de nouvelles. Cela garantit une forme de continuité
+dans les résultats. Tout l'enjeu est de réduire le coût d'apprentissage en mettant à jour
+le modèle plutôt que de le réapprendre complètement.
+
+.. index:: bootstrapping
+
+**Bootstrapping**
+
+La seconde direction consiste à commencer à constuire un modèle avec peu de données.
+Le modèle croît en complexité au fur et à mesure qu'on lui ajoute des caractèristiques comme dans l'article
+`Online Incremental Feature Learning with Denoising Autoencoders <http://proceedings.mlr.press/v22/zhou12b/zhou12b.pdf>`_.
+Encore une fois, l'enjeu est de pouvoir réutiliser les apprentissages précédents pour arriver au plus vite
+à un modèles ayant de bonnes performances. On appelle cela faire
+du bootstrapping ou self training
+`Training Deep Neural Networks On Noisy Labels With Bootstrapping <http://www-personal.umich.edu/~reedscot/bootstrap.pdf>`_.
+
+Ce processus est intéressant lorsqu'on a des données mais peu de données avec des labels.
+On se sert alors de la prédiction du premier modèle sur les données sans labels.
+Les scores extrêmes (le modèle est confiant ou pas du tout confiance) permettent en règle générale
+de construire automatiquement des labels pour une partie de ces données sans labels.
+Une fois la base d'apprentissage agrandie, un second modèle est entraîné.
+Il suffit de recommencer jusqu'à ce que le modèle ait de bonnes performances.
+
 Label corrompus ou peu fiables
 ++++++++++++++++++++++++++++++
+
+Le cas auquel on pense en premier est celui de label imprécis. Est-ce que la qualité
+des labels nuit à la qualité de l'apprentissage et comment y remédier ?
+
+**Données bruitées**
+
+L'approche est souvent bayésienne :
+`The Dawid-Skene model with priors <https://pymc-devs.github.io/pymc3/notebooks/dawid-skene.html>`_
+ou une version améliorée qui s'appuie sur l'algorithme EM :
+`Spectral Methods meet EM: A Provably Optimal Algorithm for Crowdsourcing <https://arxiv.org/abs/1406.3824>`_.
+On peut lire pour aller vite :
+`Bayesian Bias Mitigation for Crowdsourcing <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.363.6090&rep=rep1&type=pdf>`_
+(one minute summary).
+Un article
+`Learning with Noisy Labels <https://www.cs.cmu.edu/~pradeepr/paperz/learning_nl_nips.pdf>`_ dans la même veine,
+le suivant `Learning from Corrupted Binary Labels via Class-Probability Estimation <http://proceedings.mlr.press/v37/menon15.pdf>`_
+s'intéresse à la métrique `AUC <https://en.wikipedia.org/wiki/AUC>`_. Pour finir,
+apprentissage semi-supervisé ou labels corrompus ne sont pas très loin :
+`Generalized Expectation Criteria for Semi-Supervised Learning with Weakly Labeled Data <http://www.jmlr.org/papers/volume11/mann10a/mann10a.pdf>`_.
+
+**Données cachées**
+
+L'article `Unsupervised Supervised Learning I: Estimating Classification and Regression Errors without Labels <http://www.jmlr.org/papers/volume11/donmez10a/donmez10a.pdf>`_
+(`suite <http://www.jmlr.org/papers/volume12/balasubramanian11a/balasubramanian11a.pdf>`_) aborde le cas
+de plusieurs hôpitaux qui apprennent chacun un modèle sur le même problème mais
+avec chacun leurs données qu'ils ne peuvent partager. Comment savoir si un modèle appris par un hôpital
+va marcher sur les données d'un autre ? C'est à ce type de question que cet article répond.
+
+**Grand nombre de labels**
+
+Une classification en un nombre très grand de classes est nécessairement moins précise
+que la même classification avec les mêmes classes regroupées. Plus il y a de classes,
+plus la précision est faible. Certains labels sont aussi très peu représentés.
+L'article `Training Highly Multiclass Classifiers <http://jmlr.org/papers/volume15/gupta14a/gupta14a.pdf>`_
+discute de ce point. Il aborde différentes métriques et fonctions d'erreur plus adaptées
+à ce type de configuration.
+
+L'article `Multitask Learning without Label Correspondences <http://users.sussex.ac.uk/~nq28/pubs/Quaetal11.pdf>`_
+aborde le cas où on apprend plusieurs classifieurs sur des jeux de données qui se ressemblent
+avec des ensembles de classes différents.

@@ -1032,7 +1032,7 @@ Apprentissage sans labels
 
 * `Online Incremental Feature Learning with Denoising Autoencoders <http://jmlr.csail.mit.edu/proceedings/papers/v22/zhou12b/zhou12b.pdf>`_
 * `Fast Kernel Classifiers with Online and Active Learning <http://www.jmlr.org/papers/volume6/bordes05a/bordes05a.pdf>`_,
-  `A Framework for Learning Predictive Structures from Multiple Tasks and Unlabeled Data> <http://www.jmlr.org/papers/volume6/ando05a/ando05a.pdf>`_
+  `A Framework for Learning Predictive Structures from Multiple Tasks and Unlabeled Data <http://www.jmlr.org/papers/volume6/ando05a/ando05a.pdf>`_
 * `Multi Kernel Learning with Online-Batch Optimization <http://www.jmlr.org/papers/volume13/orabona12a/orabona12a.pdf>`_
 
 *Transfer learning*
