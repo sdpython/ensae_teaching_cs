@@ -989,7 +989,7 @@ Apprentissage sans labels
 
 .. toctree::
     :max_depth: 2
-    
+
     specials/nolabel
 
 *Notebooks*

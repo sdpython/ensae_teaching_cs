@@ -50,8 +50,8 @@ sujet = "Python pour un data scientist / économiste, feedback sur le projet"
 only = None
 skip = 0
 folder = os.path.normpath(os.path.abspath(os.path.join(
-    *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2016-2017", "2A"]))))
-student = os.path.join(folder, "Projets ENSAE 2016.xlsx")
+    *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2016-2017", "1A_pitch"]))))
+student = os.path.join(folder, "Python_1A_pitch_2017_reviews.xlsx")
 if not os.path.exists(student):
     raise FileNotFoundError(student)
 
@@ -62,9 +62,8 @@ Bonjour,
 
 """ + \
     """
-Vous trouverez ci-dessous quelques indications
-sur la note qui vous a été transmise.
-Nous avons noté sur 16 le projet et sur 4 la vidéo.
+Voici mes remarques suite à la lecture de votre pitch.
+
 """.replace("\n", " ")
 
 #####################
@@ -74,7 +73,8 @@ end = """
 """.replace("\n", " ") + \
     """
 
-Bonnes vacances,
+Je te laisse transférer ce mail aux autres membres du groupes s'il y a en a.
+Je m'excuse pour ce retard.
 
 Xavier
 """
@@ -83,7 +83,7 @@ Xavier
 # Lecture des de la feuille Excel
 
 import pandas
-df = pandas.read_excel(student, sheetname=1, skiprows=6)
+df = pandas.read_excel(student, sheetname=0, skiprows=0)
 
 if len(df.columns) < 4:
     raise ValueError("Probably an issue while reading the spreadsheet:\n{0}\n{1}".format(
@@ -107,19 +107,22 @@ pwd = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "pwd")
 # pour envoyer le mail.
 # Si mailbox est None, la fonction affiche les résultats mais ne fait rien.
 
+col_name = "Noms"
+col_mail = "nom_prenom"
+columns = ["sujet", "observation"]
+delay_sending = False
+
 fLOG("connect", user)
 mailbox = pymmails.sender.create_smtp_server("gmail", user, pwd)
 fLOG("send")
+# remplacer mailbox par None pour voir le premier mail sans l'envoyer
 mails = enumerate_send_email(mailbox,
                              sujet, user + "@gmail.com",
-                             df, exc=True, fLOG=fLOG, delay_sending=False,
+                             df, exc=True, fLOG=fLOG, delay_sending=delay_sending,
                              begin=begin, end=end, skip=skip,
                              cc=cc, only=only, col_group=None,
-                             col_name="Etudiants", col_mail="emails",
-                             cols=["Sujet",
-                                   "Eco / Maths", "Note globale (avant vidéo)",
-                                   "Bonus video", "Note",
-                                   "Commentaires"])
+                             col_name=col_name, col_mail=col_mail,
+                             cols=columns)
 
 for i, m in enumerate(mails):
     fLOG("------------", m)

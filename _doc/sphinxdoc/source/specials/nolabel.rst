@@ -6,30 +6,28 @@ Apprentissage sans labels
 
 .. contents::
     :local:
-    
+
 Rappels
 -------
-    
-    
+
 L'apprentissage supervisé nécessite des données
 *annotées*. Chaque exemple est un couple
 :math:`(X, Y)` où *X* est ce qu'on mesure ou
 ce qui est connu, *Y* est la réponse qu'on veut prédire.
 La prédiction passe le plus souvent par la construction
-d'une fonction paramétrique :math:`f(X,\Theta)`. 
+d'une fonction paramétrique :math:`f(X,\Theta)`.
 
 Pour apprendre une telle fonction, on dispose d'une base d'apprentissage
 :math:`(X_1, Y_1), ..., (X_n, Y_n)`. C'est-à-dire qu'on connaît la prédiction
 pour un ensemble de points. On souhaite
 déterminer les coefficients :math:`\Theta` qui minimise
 une certaine fonction d'erreur :math:`\sum_i E(f(X_i,\Theta), Y_i)`
-qui est nulle lorsque la prédiction et parfaite 
+qui est nulle lorsque la prédiction et parfaite
 (:math:`f(X_i,\Theta)=Y_i`) en chaque point.
 
 Plus on a de points ou d'observations, plus on a d'informations pour déterminer les coefficients
 :math:`\Theta`. Pour un réseau de neurones, on considère souvent qu'il faut dix fois d'observations
 que de coefficients pour bien apprendre ou plutôt pour ne pas apprendre par coeur.
-
 
 Pas de labels ?
 ---------------
@@ -41,10 +39,10 @@ qui reconnaît ce qu'il y a sur une image. On peut commencer
 par distinguer entre `chien et chats <https://www.kaggle.com/c/dogs-vs-cats/data>`_
 ou reconnaître un `décor <http://lsun.cs.princeton.edu/2016/>`_ ou encore des visages :
 
-.. image:: https://upload.wikimedia.org/wikipedia/commons/e/ef/Face_detection.jpg
-    :width: 500
+.. figure:: https://upload.wikimedia.org/wikipedia/commons/e/ef/Face_detection.jpg
+    :width: 400
     :alt: source wikipédia
-    
+
 On ne sait pas encore construire la machine capable de reconnaître n'importe quoi.
 Que fait-on s'il y a un chat et un chien sur la même image ? Doit-on construire un modèle
 plus complexe ou décider que le modèle n'est pas prévu pour donner une réponse fiable dans
@@ -74,16 +72,16 @@ On sait que la complexité du modèle nécessite plus d'exemples que ceux
 dont on dispose. On a quelques couples :math:`(X_i, Y_i)` pour lesquels
 on connaît la réponse et beaucoup de :math:`X_j` pour lesquels on ne sait pas.
 On commence par construire un petit modèle et on regarde sa réponse sur les exemples
-sans labels. Que se passe-t-il quand il est très sûr de lui (score de confiance élevé) 
-ou pas du tout (score de confiance nul) ? On s'aperçoit parfois que les labels produits 
-sont assez faibles et on les incorpore à la base d'apprentissage pour construire 
+sans labels. Que se passe-t-il quand il est très sûr de lui (score de confiance élevé)
+ou pas du tout (score de confiance nul) ? On s'aperçoit parfois que les labels produits
+sont assez faibles et on les incorpore à la base d'apprentissage pour construire
 un modèle plus imposant.
 
 Un autre idée consiste à réutiliser un modèle déjà appris pour autre chose et
-celui-ci disposait d'une grande base d'apprentissage. Cela marche beaucoup dans la 
+celui-ci disposait d'une grande base d'apprentissage. Cela marche beaucoup dans la
 classification d'images. Il existe des modèles disponibles sur internet
 comme `VGG <http://www.robots.ox.ac.uk/~vgg/research/very_deep/>`_. Il ne font pas exactement
-ce qu'on veut mais on peut essayer d'utiliser ce qu'ils ont appris. 
+ce qu'on veut mais on peut essayer d'utiliser ce qu'ils ont appris.
 C'est l'`apprentissage par transfert <https://fr.wikipedia.org/wiki/Apprentissage_par_transfert>`_
 ou *transfert learning*.
 
@@ -91,12 +89,12 @@ On a des labels bruités.
 ++++++++++++++++++++++++
 
 Pas mal de gens mettent leurs photos sur internet en y apposant une légende.
-Pour ceux qui les stockent, c'est une manne très intéressante pour faire de la 
+Pour ceux qui les stockent, c'est une manne très intéressante pour faire de la
 classification d'images. La légende n'est pas nécessairement reliée au problème en question
-mais existe un moyen de transformer automatiquement tout ou partie de ces labels 
+mais existe un moyen de transformer automatiquement tout ou partie de ces labels
 en quelque chose qui soit utile ?
 
-Un clic sur internet n'est pas nécessairement signe que le lien est intéressant. Il 
+Un clic sur internet n'est pas nécessairement signe que le lien est intéressant. Il
 peut être suivi d'un *quick back* auquel l'internaute a jugé rapidement que cela
 ne l'était pas. On a dès lors la tentation de filtrer entre les bons et les mauvais clics
 ou de construire des modèles où ce qui est observé dépend du vrai label mais qui est caché.
@@ -108,7 +106,7 @@ Revue non exhaustive d'outils et modèles
 ----------------------------------------
 
 Il n'existe pas de réponse systèmatique au manque de labels. Il est important
-de bien comprendre les données pour choisir les bons outils et modèles qui seront 
+de bien comprendre les données pour choisir les bons outils et modèles qui seront
 le plus pertinent. Voici quelques pistes de réflexions.
 
 Réduction de dimension
@@ -120,17 +118,17 @@ de features plus petits dans lequel deux observations similaires sont plus proch
 dans l'ensemble de départ. On peut classer les chiffres à partir des pixels,
 des images 8x8 dans l'exemple ci-dessous.
 
-.. image:: http://scikit-learn.org/stable/_images/sphx_glr_plot_lle_digits_001.png
+.. figure:: http://scikit-learn.org/stable/_images/sphx_glr_plot_lle_digits_001.png
     :alt: source : scikit-learn
-    :width: 500
-    
+    :width: 400
+
 Ou on peut essayer de trouver un espace à deux dimensions dans lequel c'est plus simple
 comme avec une projection `t-SNE <https://lvdmaaten.github.io/tsne/>`_.
 
-.. image:: http://scikit-learn.org/stable/_images/sphx_glr_plot_lle_digits_013.png
+.. figure:: http://scikit-learn.org/stable/_images/sphx_glr_plot_lle_digits_013.png
     :alt: source : scikit-learn
-    :width: 500
-    
+    :width: 400
+
 Cette représentation en plus petite dimensions sont en quelque sorte
 une compression de l'information avec perte. On espère que cette perte est
 essentiellement du bruit et qu'il reste l'information pertinente.
@@ -142,7 +140,7 @@ La méthode la plus connue est l'ACP ou
 `Sparse PCA <http://scikit-learn.org/stable/modules/decomposition.html#sparse-principal-components-analysis-sparsepca-and-minibatchsparsepca>`_,
 `Kernal PCA <http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html#sklearn.decomposition.KernelPCA>`_.
 On peut évoquer aussi `Sparce Coding <http://scikit-learn.org/stable/modules/decomposition.html#sparsecoder>`_
-(lire `Online Dictionary Learning for Sparse Coding <http://www.di.ens.fr/sierra/pdfs/icml09.pdf>`_). Il s'agit 
+(lire `Online Dictionary Learning for Sparse Coding <http://www.di.ens.fr/sierra/pdfs/icml09.pdf>`_). Il s'agit
 de représenter chaque élément de la base d'apprentissage comme une combinaison linéaire
 `sparse <https://fr.wikipedia.org/wiki/Matrice_creuse>`_ d'un petit d'éléments représentatifs.
 
@@ -150,7 +148,7 @@ de représenter chaque élément de la base d'apprentissage comme une combinaiso
 
 La première idée s'addresse à un problème de classification. On souhaite
 construire un espace dans lequel les classes du problèmes de classification
-sont les plus éloignées possibles. C'est l'objectif de la transformation 
+sont les plus éloignées possibles. C'est l'objectif de la transformation
 `t-SNE <https://lvdmaaten.github.io/tsne/>`_ mais ce n'est pas la seule
 `Manifold learning <http://scikit-learn.org/stable/modules/manifold.html>`_.
 La seconde idée reprend l'idée de compression avec perte et l'applique
@@ -160,36 +158,37 @@ sous la forme d'un réseau avec les `auto-encoders <https://en.wikipedia.org/wik
 
 **auto-encoders**
 
-L'article `Adversarial Autoencoders <https://arxiv.org/abs/1511.05644>`_ illustre 
-comment cette technique est utilisée (voir 
-`Adversarial Autoencoders (with Pytorch) <https://blog.paperspace.com/adversarial-autoencoders-with-pytorch/>`_ 
+L'article `Adversarial Autoencoders <https://arxiv.org/abs/1511.05644>`_ illustre
+comment cette technique est utilisée (voir
+`Adversarial Autoencoders (with Pytorch) <https://blog.paperspace.com/adversarial-autoencoders-with-pytorch/>`_
 pour un exemple de code).
 
-.. image:: nolabelimg/aagan.png
+.. figure:: nolabelimg/aagan.png
     :alt: image extraite de Adversarial Autoencoders
+    :scale: 80%
 
 Le réseau de neurones inclut une couche cachée dont la dimension est réduite.
-Il apprend à compresser et restituer un grand nombre d'image. Les labels ne sont 
+Il apprend à compresser et restituer un grand nombre d'image. Les labels ne sont
 pas utilisées. La sortie de la couche cachée est utilisée comme entrée d'un modèle
 supervisé utilisant les labels mais plus facile à entraîner puisque l'espace
 d'entrée a été réduit.
 
 L'article `Why Does Unsupervised Pre-training Help Deep Learning? <http://www.jmlr.org/papers/volume11/erhan10a/erhan10a.pdf>`_
 montre cette étape de compression ou *pre-training* aide même dans le cas où les labels
-ne manquent pas. 
+ne manquent pas.
 L'article `Stacked Denoising Autoencoders: Learning Useful Representations in a Deep Network with a Local Denoising Criterion <http://www.jmlr.org/papers/volume11/vincent10a/vincent10a.pdf>`_
 étudie la possibilité de préentraîner chaque couche d'un réseau de neurones avec un auto-encoder (SDA). Celui-ci
-n'apprend pas seulement à reconstruire une image *x* à partir d'elle-même 
+n'apprend pas seulement à reconstruire une image *x* à partir d'elle-même
 mais aussi à reconstuire *x* à partir d'une image bruitée de *x*.
 
-.. image:: nolabelimg/sdae.png
-    :width: 500
-    :alt: image extraite de Stacked Denoising Autoencoders: Learning Useful Representations in a Deep Network with a Local Denoising Criterion
-    
+.. figure:: nolabelimg/sdae.png
+    :width: 400
+    :alt: Image extraite de *Stacked Denoising Autoencoders: Learning Useful Representations in a Deep Network with a Local Denoising Criterion*.
+
 L'idée de bruiter les données pour mieux apprendre est aussi présente
-dans l'article 
+dans l'article
 `Learning with Marginalized Corrupted Features <http://proceedings.mlr.press/v28/vandermaaten13.pdf>`_
-qui a inspiré 
+qui a inspiré
 `Marginalizing Stacked Linear Denoising Autoencoders <http://www.jmlr.org/papers/volume16/chen15c/chen15c.pdf>`_
 qui se présente comme une version plus rapide des SDA car en partie linéaire.
 Les `Variational Autoencoders <http://kvfrans.com/variational-autoencoders-explained/>`_ introduisent une
@@ -202,15 +201,14 @@ du clustering dans l'article
 `Autoencoders, Unsupervised Learning, and Deep Architectures <http://proceedings.mlr.press/v27/baldi12a/baldi12a.pdf>`_.
 La couche intermédiaire booléene indique dans quel cluster classer une observation.
 
-
 .. index:: compress sensing
 
 **Compress Sensing**
 
 L'article `Compressed sensing and single-pixel cameras <https://terrytao.wordpress.com/2007/04/13/compressed-sensing-and-single-pixel-cameras/>`_
-explique assez clairement ce qu'est le *compress sensing* ou 
+explique assez clairement ce qu'est le *compress sensing* ou
 `acquisition comprimée <https://fr.wikipedia.org/wiki/Acquisition_comprim%C3%A9e>`_.
-Il prend le cas de la compression d'images qui réussit parfois à compresser une image 
+Il prend le cas de la compression d'images qui réussit parfois à compresser une image
 à 90% avec des ondelettes. L'image est représentée avec seulement 10% de l'information
 initiale. Seulement, calculer ces 10% restant est parfois coûteux.
 Le *compress sensing* se pose la question de savoir si toute l'information initiale
@@ -224,30 +222,30 @@ A partir de là, rien n'empêche d'utiliser ce type de technique à des problèm
 C'est le cas de l'article
 `Multi-Label Prediction via Compressed Sensing <https://arxiv.org/pdf/1508.04924.pdf>`_
 qui étudie le cas où le nombre de classes possibles pour une observation est excessivement grand.
-Le *compress sensing* est utilisé pour prédire un nombre réduit de labels et retrouver 
+Le *compress sensing* est utilisé pour prédire un nombre réduit de labels et retrouver
 les labels originaux ensuite. L'estimation du processus de reconstruction des labels
-originaux repose sur des algorithmes tels que 
-*Orthogonal Matching Pursuit (OMP)* 
-(`Signal Recovery From Random Measurements Via Orthogonal Matching Pursuit <http://users.cms.caltech.edu/~jtropp/papers/TG07-Signal-Recovery.pdf>`_), 
+originaux repose sur des algorithmes tels que
+*Orthogonal Matching Pursuit (OMP)*
+(`Signal Recovery From Random Measurements Via Orthogonal Matching Pursuit <http://users.cms.caltech.edu/~jtropp/papers/TG07-Signal-Recovery.pdf>`_),
 *FoBa* (`Forward-Backward Greedy Algorithms for General Convex Smooth Functions over A Cardinality Constraint <https://arxiv.org/pdf/1401.0086.pdf>`_ (`slides <http://web.stanford.edu/group/mmds/slides2008/zhang.pdf>`_),
 *CoSaMP* (`COSAMP: Iterative Signal Recovery From Incomplete And Inaccurate Sample <http://users.cms.caltech.edu/~jtropp/papers/NT08-CoSaMP-Iterative-preprint.pdf>`_ ),
-toutes variantes du *Matching Pursuit* 
+toutes variantes du *Matching Pursuit*
 (`Matching Pursuits With Time-Frequency Dictionaries <http://www.cmap.polytechnique.fr/~mallat/papiers/MallatPursuit93.pdf>`_).
 
 .. index:: poursuite de base
 
-On suppose que :math:`x \in \mathbb{R}^N` et qu'il existe une matrice 
+On suppose que :math:`x \in \mathbb{R}^N` et qu'il existe une matrice
 :math:`\Phi \in \mathbb{R}^{M\times N}` où :math:`M << n`.
 :math:`y=\Phi x` est le signal compressé et :math:`x` le signal original.
 Il est possible de reconstruire :math:`x` sachant :math:`y` et :math:`\Phi`
 s'il existe une base :math:`\Psi \in \mathbb{R}^{N\times N_1}` dans laquelle
-:math:`x = \Psi s` avec :math:`s` est *K*-sparse 
+:math:`x = \Psi s` avec :math:`s` est *K*-sparse
 (pas plus de *K* valeurs non nulles). :math:`N > N_1`. Trouver :math:`\Phi`
 et :math:`\Psi` est le sujet du problème
-*Single Measurement Vector (SMV)* 
+*Single Measurement Vector (SMV)*
 ou sa version distribuée
-*Multiple Measurement Vectors (MMV)* 
-(`Sparse Representations For Multiple Measrument Vectors (MMV) in an Over-Complete Dictionary <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.63.4893&rep=rep1&type=pdf>`_). 
+*Multiple Measurement Vectors (MMV)*
+(`Sparse Representations For Multiple Measrument Vectors (MMV) in an Over-Complete Dictionary <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.63.4893&rep=rep1&type=pdf>`_).
 Voir aussi `Poursuite de base <https://fr.wikipedia.org/wiki/Poursuite_de_base>`_
 
 L'article `Distributed Compressive Sensing: A Deep Learning Approach <https://arxiv.org/pdf/1508.04924.pdf>`_
@@ -255,7 +253,6 @@ associe deep learning avec les modèles `LSTM <http://colah.github.io/posts/2015
 et *compress sensing*. C'est un article où on construit une architecture pour extraire
 l'information qu'on souhaite comme capturer la dépendance entre les observations successives
 d'une séquence.
-
 
 Apprentissage semi-supervisé
 ++++++++++++++++++++++++++++
@@ -276,11 +273,10 @@ des données :math:`x` et :math:`G` est une fonction qui les imitent.
     \min_G \max_D V(D,G) = \mathbb{E}_{x \sim  p_{data}(x)} [\ln D(x)] + \mathbb{E}_{z \sim p(z)} [ \ln (1-D(G(z)))]
 
 Pour en savoir un peu plus :
-`NIPS 2016 Tutorial: Generative Adversarial Networks <https://arxiv.org/abs/1701.00160>`_ 
-et une présentation 
+`NIPS 2016 Tutorial: Generative Adversarial Networks <https://arxiv.org/abs/1701.00160>`_
+et une présentation
 `Generative Adversarial Networks (GANs) <http://www.iangoodfellow.com/slides/2016-12-04-NIPS.pdf>`_.
 On peut se servir de cette idée pour multiplier les exemples.
-
 
 **Apprentissage semi-supervisé**
 
@@ -288,45 +284,43 @@ Le même article `Adversarial Autoencoders <https://arxiv.org/abs/1511.05644>`_ 
 principale à un cas semi-supervisé. Comme les labels ne sont pas présent sur toute la base,
 le modèle est transformé pour faire apparaître une variable cachée qui la représente.
 
-.. image:: nolabelimg/aagans.png
+.. figure:: nolabelimg/aagans.png
     :alt: image extraite de Adversarial Autoencoders
+    :scale: 80%
 
 L'apprentissage est modifié de telle sorte que la distribution de cette variable cachée
-suive celle de la variable *label*. Une dernière partie basé sur les 
-`Generative Adversarial Networks <https://arxiv.org/pdf/1406.2661.pdf>`_ 
+suive celle de la variable *label*. Une dernière partie basé sur les
+`Generative Adversarial Networks <https://arxiv.org/pdf/1406.2661.pdf>`_
 s'assure que cette variable cachée et la couche cachée de compression représente deux
 informations différente, que toute l'information liée au label est porté par la variable cachée
 introduite.
 
-
 Transfer learning ou apprentissage par transfert
 ++++++++++++++++++++++++++++++++++++++++++++++++
 
-Le *transfer learning* revient à apprendre un modèle avec des données 
-et à l'appliquer sur un problème différent. La version paresseuse consiste à 
+Le *transfer learning* revient à apprendre un modèle avec des données
+et à l'appliquer sur un problème différent. La version paresseuse consiste à
 réutiliser un modèle appris pour autre chose que le problème auxquel on songe
-à l'appliquer. L'application la plus fréquente consiste à prendre 
-un réseaux de neurones profond appris pour une tâche autre, 
-à enlever la dernière couche pour utiliser les sorties comme 
+à l'appliquer. L'application la plus fréquente consiste à prendre
+un réseaux de neurones profond appris pour une tâche autre,
+à enlever la dernière couche pour utiliser les sorties comme
 nouvelles variables.
 
-.. image:: nolabelimg/tl.png
+.. figure:: nolabelimg/tl.png
+    :width: 300
 
 L'article
 `Domain Adaptation for Large-Scale Sentiment Classification: A Deep Learning Approach <http://svn.ucc.asn.au:8080/oxinabox/Uni%20Notes/honours/refTesting/glorot2011domain.pdf>`_
 est un exemple sur les systèmes de recommandation. Le chapite du livre
-`Transfer Learning <ftp://ftp.cs.wisc.edu/machine-learning/shavlik-group/torrey.handbook09.pdf>`_, 
+`Transfer Learning <ftp://ftp.cs.wisc.edu/machine-learning/shavlik-group/torrey.handbook09.pdf>`_,
 l'article
 `A Survey on Transfer Learning <https://www.cse.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf>`_
-ou encore 
+ou encore
 `ansfer Learning for Reinforcement Learning Domains: A Survey <http://www.jmlr.org/papers/volume10/taylor09a/taylor09a.pdf>`_
 recensent plusieurs scénarios.
 
 Online training
 +++++++++++++++
 
-
 Label corrompus ou peu fiables
 ++++++++++++++++++++++++++++++
-
-
