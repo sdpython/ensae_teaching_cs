@@ -1362,7 +1362,7 @@ C++, R
 
 * `Making your code faster: Cython and parallel processing in the Jupyter Notebook <https://www.youtube.com/watch?v=MiHddLYZ6cQ>`_
 
-* Modules*
+*Modules*
 
 * `cython <http://cython.org/>`_
 * `ctypes <https://docs.python.org/3/library/ctypes.html>`_
