@@ -303,6 +303,31 @@ s'assure que cette variable cachée et la couche cachée de compression représe
 informations différente, que toute l'information liée au label est porté par la variable cachée
 introduite.
 
+Génération d'images ou de modèles
++++++++++++++++++++++++++++++++++
+
+`Particle filtering <https://en.wikipedia.org/wiki/Particle_filter>`_ est une technique
+qu'on utilise beaucoup en reconstruction d'images 3D à partir d'image 2D observées :
+quel modèle 3D serait à la source des projections observées (deux dans le cas
+de la vision stéréophonique) ? Il est tentant d'étendre cette technique
+à plusieurs modèles `Coupling of Particle Filters <https://arxiv.org/abs/1606.01156>`_
+ou des modèles plus complexes
+`Inference in generative models using the Wasserstein distance <https://arxiv.org/abs/1701.05146>`_
+(voir aussi distance `Wasserstein <https://en.wikipedia.org/wiki/Wasserstein_metric>`_).
+
+Le deep learning est de plus en plus utilisé pour inférer voire inventer des images
+comme avec `Deep Dream <https://deepdreamgenerator.com/>`_. D'autres modèles plus utiles sont
+développés pour `squelettiser <https://fr.wikipedia.org/wiki/Squelettisation_(informatique)>`_
+des images. `sketch-rnn <https://github.com/hardmaru/sketch-rnn>`_ squelettise les
+caractères `Kanji <https://en.wikipedia.org/wiki/Kanji>`_,
+`pix2pix <https://affinelayer.com/pixsrv/>`_ effectue la transformation inverse en ajoutant
+la texture à un objet squelettisé.
+
+Le deep learning sert aussi à calculer des distances entre images
+`Visual Analogy TensorFlow <https://github.com/carpedm20/visual-analogy-tensorflow>`_.
+On peut également segmenter très finement une image
+`SharpMask <https://code.facebook.com/posts/561187904071636/segmenting-and-refining-images-with-sharpmask/>`_.
+
 Transfer learning ou apprentissage par transfert
 ++++++++++++++++++++++++++++++++++++++++++++++++
 

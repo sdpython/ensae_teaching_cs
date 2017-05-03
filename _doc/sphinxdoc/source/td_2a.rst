@@ -1015,6 +1015,8 @@ Apprentissage sans labels
 * `What Regularized Auto-Encoders Learn from the Data-Generating Distribution <http://jmlr.csail.mit.edu/papers/volume15/alain14a/alain14a.pdf>`_
 * `Compressed sensing and single-pixel cameras <https://terrytao.wordpress.com/2007/04/13/compressed-sensing-and-single-pixel-cameras/>`_
 * `Multi-Label Prediction via Compressed Sensing <Multi-Label Prediction via Compressed Sensing>`_
+* `Inference in generative models using the Wasserstein distance <https://arxiv.org/abs/1701.05146>`_,
+  `Coupling of Particle Filters <https://arxiv.org/abs/1606.01156>`_
 
 *No label, weak labels*
 
