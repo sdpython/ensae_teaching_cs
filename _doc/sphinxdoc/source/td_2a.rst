@@ -971,6 +971,25 @@ Machine Learning sur des données cryptées
 
 * `ciphermed <https://github.com/rbost/ciphermed>`_ : pas maintenu
 
+Machine Learning éthique
+++++++++++++++++++++++++
+
+|pyecopng| |pystatpng|
+
+*(à venir)*
+
+*Lectures*
+
+* `FairTest: Discovering Unwarranted Associations in Data-Driven Applications <https://arxiv.org/pdf/1510.02377.pdf>`_
+* `O21 : « La transparence des algorithmes relève des droits civiques <http://www.lemonde.fr/campus/article/2017/05/02/o21-la-transparence-des-algorithmes-releve-des-droits-civiques_5121201_4401467.html>`_
+* `TransAlgo : évaluer la responsabilité et la transparence des systèmes algorithmiques <https://www.inria.fr/actualite/actualites-inria/transalgo>`_
+* `Réguler les algorithmes : remise d'un rapport à Axelle Lemaire <https://www.economie.gouv.fr/reguler-algorithmes-rapport-axelle-lemaire-cge>`_
+
+*Sites*
+
+* `Data Transparency Lab <http://datatransparencylab.org/>`_
+* `OPAL <http://www.data4sdgs.org/dc-opal/>`_
+
 Prédire une distribution
 ++++++++++++++++++++++++
 
