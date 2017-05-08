@@ -338,6 +338,9 @@ Outils
         depuis un notebook, quelques graphes.
     * - `python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
       - Modèle de module Python utilisé pour ce cours. C'est un module vide facile à adapter.
+    * - `tkinterquickhelper <http://www.xavierdupre.fr/app/tkinterquickhelper/helpsphinx/index.html>`_
+      - Fonctions utilisées pour saisir rapidement des informations avec tkinter.
+        Rarement utilisées depuis l'arrivée des notebooks.
 
 Contenu
 +++++++
