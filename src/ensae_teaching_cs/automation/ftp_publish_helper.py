@@ -199,7 +199,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                              location="d:\\jenkins\\pymy\\%s%s\\dist\\%s", rootw="/www/htdocs/app/%s/%s",
                              rootw2="/lesenfantscodaient.fr", folder_status=".",
                              layout=[("html", "helpsphinx")],
-                             modules=["pyquickhelper",                             
+                             modules=["pyquickhelper",
                                       "jyquickhelper",
                                       "tkinterquickhelper",
                                       "pyensae",
