@@ -1124,6 +1124,7 @@ Traitement du langage
   `Distributed Representations of Words and Phrases and their Compositionality <http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf>`_, Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, Jeff Dean,
   `word2vec Parameter Learning Explained <http://arxiv.org/abs/1411.2738>`_, Xin Rong,
   `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
+* `Mixing Dirichlet Topic Models and Word Embeddings to Make lda2vec <https://arxiv.org/abs/1605.02019>`_
 
 *Word embedding*
 
@@ -1150,7 +1151,8 @@ Traitement du langage
   `corenlpy <https://github.com/enewe101/corenlpy>`_
 * `python-rake <https://pypi.python.org/pypi/python-rake/>`_ : petit module pour extraire des mot-clés
 * `sumy <https://pypi.python.org/pypi/sumy>`_ : construction automatique d'un résumé d'un texte
-* `pyrouge <https://github.com/pltrdy/rouge/>`_ : calcule de la métrique `ROUGE <>`_
+* `pyrouge <https://github.com/pltrdy/rouge/>`_ : calcule de la métrique `ROUGE <https://en.wikipedia.org/wiki/ROUGE_(metric)>`_
+* `lda2vec <https://github.com/cemoody/lda2vec>`_
 
 Images
 ++++++
