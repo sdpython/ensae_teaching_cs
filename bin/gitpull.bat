@@ -40,12 +40,7 @@ cd ..
 cd jupytalk
 git pull
 cd ..
-
-cd myblog
+cd tkinterquickhelper
 git pull
 cd ..
-cd thesis_handwriting
-git pull
-cd ..
-
 cd %current%

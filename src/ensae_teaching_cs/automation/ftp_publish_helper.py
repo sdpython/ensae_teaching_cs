@@ -6,7 +6,6 @@
 
 import os
 from pyquickhelper.filehelper import TransferFTP, FileTreeNode, FolderTransferFTP
-from pyquickhelper.funcwin import open_window_params
 from pyquickhelper.filehelper.ftp_transfer_files import content_as_binary as pqh_content_as_binary
 
 
@@ -98,7 +97,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
     @param      ftpsite         something like ``ftp.something.``
     @param      login           login
     @param      password        password
-    @param      key_save        see function `open_window_params <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/funcwin/frame_params.html#pyquickhelper.funcwin.frame_params.open_window_params>`_
+    @param      key_save        see function `open_window_params <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/tkinterquickhelper/funcwin/frame_params.html#tkinterquickhelper.funcwin.frame_params.open_window_params>`_
     @param      footer_html     append this HTML code to any uploaded page (such a javascript code to count the audience)
     @param      content_filter  filter the content of a file (it raises an exception if the result is None),
                                 appies only on text files
@@ -120,7 +119,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
 
     If one of the three first parameters is None, the function
     will open a popup windows to ask the missing information.
-    See `open_window_params <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/funcwin/frame_params.html#pyquickhelper.funcwin.frame_params.open_window_params>`_.
+    See `open_window_params <http://www.xavierdupre.fr/app/tkinterquickhelper/helpsphinx/tkinterquickhelper/funcwin/frame_params.html#tkinterquickhelper.funcwin.frame_params.open_window_params>`_.
     """
 
     params = {"ftpsite": ftpsite,
@@ -129,6 +128,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
 
     nbnone = len([v for k, v in params.items() if v is None or len(v) == 0])
     if nbnone > 0:
+        from tkinterquickhelper.funcwin import open_window_params
         fLOG("retrying to get parameters from users")
         for k, v in sorted(params.items()):
             fLOG("  {0}={1}".format(k, v))
@@ -199,8 +199,9 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                              location="d:\\jenkins\\pymy\\%s%s\\dist\\%s", rootw="/www/htdocs/app/%s/%s",
                              rootw2="/lesenfantscodaient.fr", folder_status=".",
                              layout=[("html", "helpsphinx")],
-                             modules=["pyquickhelper",
+                             modules=["pyquickhelper",                             
                                       "jyquickhelper",
+                                      "tkinterquickhelper",
                                       "pyensae",
                                       "pymyinstall",
                                       "pysqllike",
@@ -242,7 +243,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
         import sys
         import os
         from pyquickhelper.filehelper import TransferFTP, FileTreeNode, FolderTransferFTP
-        from pyquickhelper.funcwin import open_window_params
+        from tkinterquickhelper.funcwin import open_window_params
         from ensae_teaching_cs.automation.ftp_publish_helper import publish_teachings_to_web
 
         login = "..."
@@ -262,7 +263,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
 
     """
     import os
-    from pyquickhelper.funcwin import open_window_params
+    from tkinterquickhelper.funcwin import open_window_params
     from ensae_teaching_cs.automation.ftp_publish_helper import publish_documentation
 
     if google_id is None:
