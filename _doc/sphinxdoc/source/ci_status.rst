@@ -276,6 +276,23 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/teachpyx
       - .. image:: https://codecov.io/github/sdpython/teachpyx/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/teachpyx?branch=master
+    * - `tkinterquickhelper <http://www.xavierdupre.fr/app/tkinterquickhelper/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/tkinterquickhelper.svg?branch=master
+            :target: https://travis-ci.org/sdpython/tkinterquickhelper
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/pa7r09m6ihvif3x6?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/tkinterquickhelper
+            :alt: Build Status Windows
+      - .. image:: https://badge.fury.io/py/tkinterquickhelper.svg
+            :target: http://badge.fury.io/py/tkinterquickhelper
+      - .. image:: http://img.shields.io/pypi/pyversions/tkinterquickhelper.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/tkinterquickhelper
+      - .. image:: https://badge.waffle.io/sdpython/tkinterquickhelper.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/tkinterquickhelper
+      - .. image:: https://codecov.io/github/sdpython/tkinterquickhelper/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/tkinterquickhelper?branch=master
 
 Automatisation
 ++++++++++++++
@@ -374,6 +391,7 @@ Git Clone
     if not exist pythonnet3                 git clone https://github.com/sdpython/pythonnet3.git
     if not exist python3_module_template    git clone https://github.com/sdpython/python3_module_template.git
     if not exist teachpyx                   git clone https://github.com/sdpython/teachpyx.git
+    if not exist tkintterquickhelper        git clone https://github.com/sdpython/tkintterquickhelper.git
 
     if not exist myblog                     git clone https://github.com/sdpython/myblog.git
     if not exist thesis_handwriting         git clone https://github.com/sdpython/thesis_handwriting.git

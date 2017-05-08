@@ -98,6 +98,7 @@ modules = [
     "pymmails",
     "pymyinstall",
     "pyquickhelper",
+    "tkinterquickhelper",
     "pyrsslocal",
     "pysqllike",
     "python3_module_template",

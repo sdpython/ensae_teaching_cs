@@ -209,6 +209,7 @@ ces enseignements ::
     pip uninstall -y pyquickhelper
     pip uninstall -y pyrsslocal
     pip uninstall -y pysqllike
+    pip uninstall -y tkinterquickhelper
     pip uninstall -y teachpyx
 
 Configuration pour ces cours
