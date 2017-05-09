@@ -219,7 +219,8 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                              password=None,
                              force_allow=None,
                              suffix=("_UT_35_std",),
-                             fLOG=print):
+                             fLOG=print,
+                             exc=True):
     """
     copy the documentation to the website
 
@@ -236,6 +237,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
     @param      suffix          suffixes to append to the project name
     @param      force_allow     allow to publish files even if they contain these strings
                                 whereas they seem to be credentials
+    @param      exc             raise exception if not found (True) or skip (False)
     @param      fLOG            logging function
 
     Example of use::
@@ -304,8 +306,12 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                 if os.path.exists(root):
                     break
             if not os.path.exists(root):
-                raise FileNotFoundError(os.path.abspath(
-                    location % (module, suffix[0], lay[0])))
+                if exc:
+                    raise FileNotFoundError(os.path.abspath(
+                        location % (module, suffix[0], lay[0])))
+                else:
+                    fLOG("[publish_teachings_to_web] skip", root)
+                    continue
             if module != "code_beatrix":
                 rw = rootw % (module, lay[1])
             else:
@@ -318,7 +324,11 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
         if module == "ensae_teaching_cs":
             lay = [_ for _ in layout if _[0] == "html"][0]
             if not os.path.exists(root):
-                raise FileNotFoundError(root)
+                if exc:
+                    raise FileNotFoundError(root)
+                else:
+                    fLOG("[publish_teachings_to_web] skip", root)
+                    continue
 
             project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
                            local=root.replace("\\html", "\\html2"),
@@ -337,7 +347,11 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
             for suffix in ["", "_2A", "_3A", "_1Ap"]:
                 root = os.path.abspath(location % (module, keepsuf, "html"))
                 if not os.path.exists(root):
-                    raise FileNotFoundError(root)
+                    if exc:
+                        raise FileNotFoundError(root)
+                    else:
+                        fLOG("[publish_teachings_to_web] skip", root)
+                        continue
                 project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
                                local=root.replace(
                                    "\\html", "\\html_pres" + suffix),
@@ -349,7 +363,11 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
         elif module == "python3_module_template":
             lay = [_ for _ in layout if _[0] == "html"][0]
             if not os.path.exists(root):
-                raise FileNotFoundError(root)
+                if exc:                    
+                    raise FileNotFoundError(root)
+                else:
+                    fLOG("[publish_teachings_to_web] skip", root)
+                    continue
 
             project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
                            local=root.replace("\\html", "\\html2"),
