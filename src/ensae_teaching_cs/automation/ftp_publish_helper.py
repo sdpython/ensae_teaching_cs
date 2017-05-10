@@ -363,7 +363,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
         elif module == "python3_module_template":
             lay = [_ for _ in layout if _[0] == "html"][0]
             if not os.path.exists(root):
-                if exc:                    
+                if exc:
                     raise FileNotFoundError(root)
                 else:
                     fLOG("[publish_teachings_to_web] skip", root)

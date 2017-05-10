@@ -421,10 +421,6 @@ _doc/notebooks/td2a_ml/*divvy*
 _doc/notebooks/td2a_ml/*.zip
 _doc/notebooks/td2a_ml/2016*.*
 _doc/notebooks/td2a_ml/features_bike_chicago.txt
-
-
-
-
-
+_doc/notebooks/_sandbox/*
 _unittests/ut_homeblog/copyDates.txt
 _unittests/ut_homeblog/copyDates.txt
