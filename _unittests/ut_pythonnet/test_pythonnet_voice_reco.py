@@ -79,7 +79,7 @@ class TestPythonnetVoiceReco(unittest.TestCase):
                     if os.environ["USERNAME"] == "ensaestudent" or \
                        os.environ["USERNAME"] == "vsxavierdupre" or \
                        os.environ["USERNAME"] == "vsxavierdupre" or \
-                       "DOUZE2016" in os.environ["COMPUTERNAME"] or \
+                       ("DOUZE2016" in os.environ["COMPUTERNAME"]) or \
                        os.environ["USERNAME"] == "appveyor" or \
                        "paris" in os.environ["COMPUTERNAME"].lower() or \
                        os.environ["USERNAME"].endswith("$"):  # anonymous Jenkins configuration
@@ -87,7 +87,7 @@ class TestPythonnetVoiceReco(unittest.TestCase):
                         # it just exclude one user only used on remotre
                         # machines
                         return
-                raise Exception("USERNAME: " + os.environ.get("USERNAME", "-"))
+                raise Exception("USERNAME: " + os.environ.get("USERNAME", "-")) from e
 
             fLOG(res)
             self.assertTrue(isinstance(res, dict))
