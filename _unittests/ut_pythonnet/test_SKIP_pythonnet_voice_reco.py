@@ -41,7 +41,11 @@ from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import is_travis_or_appveyor
 
 
-class TestPythonnetVoiceReco(unittest.TestCase):
+class TestSKIPPythonnetVoiceReco(unittest.TestCase):
+    """
+    This API is not reliable.
+    The free account has probably stopped.
+    """
 
     def test_voice_reco(self):
         fLOG(
