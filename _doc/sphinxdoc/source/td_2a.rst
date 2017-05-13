@@ -938,6 +938,7 @@ Auto-Learning
 * `Matching Networks for One Shot Learning <https://papers.nips.cc/paper/6385-matching-networks-for-one-shot-learning.pdf>`_
 * `Efficient and Robust Automated Machine Learning <http://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning.pdf>`_
 * `Learning Regular Sets from Queries and Counterexamples <https://web.archive.org/web/20131202232143/http://www.cse.iitk.ac.in/users/chitti/thesis/references/learningRegSetsFromQueriesAndCounterExamples.pdf>`_
+* `Neural Architecture Search With Reinforcement Learning <https://openreview.net/forum?id=r1Ue8Hcxg&noteId=r1Ue8Hcxg>`_ (`pdf <https://openreview.net/pdf?id=r1Ue8Hcxg>`_
 
 *Modules*
 
