@@ -33,7 +33,6 @@ README
 .. image:: https://api.codacy.com/project/badge/Grade/80a874c0eafd4ea68f3493d73b43f0c5
     :target: https://www.codacy.com/app/sdpython/ensae_teaching_cs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sdpython/ensae_teaching_cs&amp;utm_campaign=Badge_Grade
     :alt: Codacy Badge
-    :target: https://www.codacy.com/app/sdpython/ensae_teaching_cs?
 
 This page gives access to the content of practical sessions I give at the
 `ENSAE <http://www.ensae.fr/>`_. They are based on Python. The project
