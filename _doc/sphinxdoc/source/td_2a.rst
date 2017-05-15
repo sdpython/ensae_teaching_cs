@@ -240,6 +240,20 @@ Cartes
 * `pyproj <https://pypi.python.org/pypi/pyproj>`_
 * `geopy <https://pypi.python.org/pypi/geopy>`_
 
+Graphes classiques
+++++++++++++++++++
+
+(*à venir*)
+
+*Lectures*
+
+* `Maximum & Fast readability of multivariate data vs Label <https://medium.com/data-design/maximum-fast-readability-of-multivariate-data-vs-label-c500572c46d1>`_
+
+*Modules*
+
+* `seaborn <https://seaborn.pydata.org/>`_
+* `statsmodels <http://www.statsmodels.org/stable/index.html>`_
+
 Visualiser pour comprendre
 ++++++++++++++++++++++++++
 
