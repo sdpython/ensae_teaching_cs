@@ -954,12 +954,18 @@ Auto-Learning
 * `Efficient and Robust Automated Machine Learning <http://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning.pdf>`_
 * `Learning Regular Sets from Queries and Counterexamples <https://web.archive.org/web/20131202232143/http://www.cse.iitk.ac.in/users/chitti/thesis/references/learningRegSetsFromQueriesAndCounterExamples.pdf>`_
 * `Neural Architecture Search With Reinforcement Learning <https://openreview.net/forum?id=r1Ue8Hcxg&noteId=r1Ue8Hcxg>`_ (`pdf <https://openreview.net/pdf?id=r1Ue8Hcxg>`_
+* `ASlib: A Benchmark Library for Algorithm Selection <https://arxiv.org/abs/1506.02465>`_
+
+*Sites*
+
+* `Machine Learning for Automated Algorithm Design <http://www.ml4aad.org/>`_
 
 *Modules*
 
 * `REP <https://github.com/yandex/rep>`_
 * `TPOT <https://github.com/rhiever/tpot>`_
 * `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
+* `RoBO <https://github.com/automl/RoBO>`_ (bayésien)
 
 Machine Learning sur des données cryptées
 +++++++++++++++++++++++++++++++++++++++++
