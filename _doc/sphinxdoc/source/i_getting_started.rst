@@ -455,10 +455,15 @@ Pour être compilée, la documentation requiert également :
 
 * `Buildbot <http://buildbot.net/>`_
 * `Java <http://www.java.com/fr/download/>`_ : nécessaire pour Jenkins et `Antlr <http://www.antlr.org/>`_
-* `Jenkins <https://jenkins-ci.org/>`_ (plus les plugins pour `GitHub <https://wiki.jenkins-ci.org/display/JENKINS/GitHub+Plugin>`_,
+* `Jenkins <https://jenkins-ci.org/>`_ (plus les plugins pour 
+  `GitHub <https://wiki.jenkins-ci.org/display/JENKINS/GitHub+Plugin>`_,
   `git <https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin>`_,
   `python <https://wiki.jenkins-ci.org/display/JENKINS/Python+Plugin>`_,
-  `pipeline <https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin>`_) : automatisation de build
+  `pipeline <https://wiki.jenkins-ci.org/display/JENKINS/Build+Pipeline+Plugin>`_,
+  `Build timeout plugin <https://wiki.jenkins-ci.org/display/JENKINS/Build-timeout+Plugin>`_,
+  `Console column plugin <https://wiki.jenkins-ci.org/display/JENKINS/Console+Column+Plugin>`_,
+  `Next executions <https://wiki.jenkins-ci.org/display/JENKINS/Next+Executions>`_,
+  `Collapsing Console Sections Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Collapsing+Console+Sections+Plugin>`_) : automatisation de build
 * `Visual Studio Community <https://www.visualstudio.com/>`_ : C++, C#, F#, Python avec `PTVS <https://microsoft.github.io/PTVS/>`_
 * `MinGW <http://www.mingw.org/>`_ : compilateur C++
 
