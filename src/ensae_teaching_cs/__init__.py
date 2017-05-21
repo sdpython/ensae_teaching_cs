@@ -13,7 +13,6 @@ __version__ = "0.8"
 __author__ = "Xavier Dupré"
 __github__ = "https://github.com/sdpython/ensae_teaching_cs"
 __url__ = "http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html"
-__downloadUrl__ = "http://www.xavierdupre.fr/site2013/index_code.html#ensae_teaching_cs"
 __license__ = "MIT License"
 __blog__ = os.path.abspath(
     os.path.join(os.path.dirname(__file__), "rss_teachings.xml"))
