@@ -32,7 +32,7 @@ script:
       fi  
 after_script:
   - python -u setup.py bdist_wheel
-  - if [ ${DIST} != "conda" and ${VERSION} == "3.5" and ${NAME} == "UT" ] then copy dist\*.whl ..\..\local_pypi\local_pypi_server fi
+  - if [ ${DIST} != "conda" and ${VERSION} == "3.5" and ${NAME} == "UT" ] then copy dist\*.whl {{root_path}}\..\..\..\local_pypi\local_pypi_server fi
 documentation:
   - if [ ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres fi
   - if [ ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres_2A fi
