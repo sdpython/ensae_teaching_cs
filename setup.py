@@ -152,14 +152,15 @@ if is_local() and "--help" not in sys.argv and "--help-commands" not in sys.argv
     if sys.version_info[0] != 2:
         write_version()
 
-    if os.path.exists("version.txt"):
-        with open("version.txt", "r") as f:
+    versiontxt = os.path.join(os.path.dirname(__file__), "version.txt")
+    if os.path.exists(versiontxt):
+        with open(versiontxt, "r") as f:
             lines = f.readlines()
         subversion = "." + lines[0].strip("\r\n ")
         if subversion == ".0":
-            raise Exception("subversion is wrong: " + subversion)
+            raise Exception("Subversion is wrong: '{0}'.".format(subversion))
     else:
-        raise FileNotFoundError("version.txt")
+        raise FileNotFoundError(versiontxt)
 else:
     # when the module is installed, no commit number is displayed
     subversion = ""

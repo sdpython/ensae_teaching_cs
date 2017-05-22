@@ -608,15 +608,19 @@ Deep Learning
 
     notebooks/_gs2a_deep
 
-*Tutoriel*
+*Cours*
 
 * `Deep Learning course: lecture slides and lab notebooks <https://m2dsupsdlclass.github.io/lectures-labs/>`_
 * :ref:`l-deep-learning-specials`.
-* `Artificial Intelligence, Revealed (1) <https://code.facebook.com/pages/1902086376686983>`_ : article de blog et vidéos
-  expliquant les différents concepts du deep learning
+* `Artificial Intelligence, Revealed (1) <https://code.facebook.com/pages/1902086376686983>`_ :
+  article de blog et vidéos expliquant les différents concepts du deep learning
 * `colah's blog <http://colah.github.io/>`_ *(2016/08)* blog/cours sur le deep learning
-* `Building Autoencoders in Keras <https://blog.keras.io/building-autoencoders-in-keras.html>`_
 * `Tutoriels avec CNTK <https://cntk.ai/pythondocs/tutorials.html>`_
+
+*Tutoriels*
+
+* `Building Autoencoders in Keras <https://blog.keras.io/building-autoencoders-in-keras.html>`_
+* `Image Similarity Ranking using Microsoft Cognitive Toolkit (CNTK) <https://github.com/azure/ImageSimilarityUsingCntk>`_
 
 *Sites*
 
@@ -1653,6 +1657,11 @@ Bibliographie
 * `UVa Online Judge <http://uva.onlinejudge.org/>`_
 * `Le problème des huit reines <http://zanotti.univ-tln.fr/algo/REINES.html>`_
 * `Projet Euler <https://projecteuler.net/>`_
+
+**Sources d'articles scientifiques**
+
+* `ShortScience.org  <http://www.shortscience.org/>`_
+* `Journal of Machine Learning Research <http://www.jmlr.org/>`_
 
 Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_ :
 
