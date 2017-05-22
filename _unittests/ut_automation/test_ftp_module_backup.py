@@ -101,9 +101,9 @@ except ImportError:
     import pymyinstall as skip_
 
 
+from src.ensae_teaching_cs.automation import ftp_list_modules
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import is_travis_or_appveyor
-from src.ensae_teaching_cs.automation import ftp_list_modules
 
 
 class TestFtpBackup(unittest.TestCase):
