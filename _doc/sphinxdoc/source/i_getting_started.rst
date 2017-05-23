@@ -455,7 +455,7 @@ Pour être compilée, la documentation requiert également :
 
 * `Buildbot <http://buildbot.net/>`_
 * `Java <http://www.java.com/fr/download/>`_ : nécessaire pour Jenkins et `Antlr <http://www.antlr.org/>`_
-* `Jenkins <https://jenkins-ci.org/>`_ (plus les plugins pour 
+* `Jenkins <https://jenkins-ci.org/>`_ (plus les plugins pour
   `GitHub <https://wiki.jenkins-ci.org/display/JENKINS/GitHub+Plugin>`_,
   `git <https://wiki.jenkins-ci.org/display/JENKINS/Git+Plugin>`_,
   `python <https://wiki.jenkins-ci.org/display/JENKINS/Python+Plugin>`_,

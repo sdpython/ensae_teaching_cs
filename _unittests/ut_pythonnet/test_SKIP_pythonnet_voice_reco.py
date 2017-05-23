@@ -91,7 +91,8 @@ class TestSKIPPythonnetVoiceReco(unittest.TestCase):
                         # it just exclude one user only used on remotre
                         # machines
                         return
-                raise Exception("USERNAME: " + os.environ.get("USERNAME", "-")) from e
+                raise Exception(
+                    "USERNAME: " + os.environ.get("USERNAME", "-")) from e
 
             fLOG(res)
             self.assertTrue(isinstance(res, dict))

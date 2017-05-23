@@ -621,6 +621,12 @@ Deep Learning
 
 * `Building Autoencoders in Keras <https://blog.keras.io/building-autoencoders-in-keras.html>`_
 * `Image Similarity Ranking using Microsoft Cognitive Toolkit (CNTK) <https://github.com/azure/ImageSimilarityUsingCntk>`_
+* `Tutoriels avec CNTK <https://github.com/Microsoft/CNTK/tree/v2.0.beta12.0/Tutorials>`_ :
+  ces notebooks sont bien illlustrés
+  (`GAN - Generative Models <https://github.com/Microsoft/CNTK/blob/v2.0.beta12.0/Tutorials/CNTK_206_Basic_GAN.ipynb>`_).
+* `Tutoriels avec TensorFlow <https://github.com/Hvass-Labs/TensorFlow-Tutorials>`_ :
+  ce ne sont pas les seuls mais ils ont l'avantage d'être bien illustrés
+  (`Adversarial Training <https://github.com/Hvass-Labs/TensorFlow-Tutorials/blob/master/11_Adversarial_Examples.ipynb>`_).
 
 *Sites*
 
@@ -919,6 +925,7 @@ Timeseries - Séries temporelles
 *Modules*
 
 * `statsmodels <http://statsmodels.sourceforge.net/>`_
+* `pyflux <http://pyflux.readthedocs.io/en/latest/>`_ (la documentation est plutôt bien faite)
 * `fbprophet <https://github.com/facebookincubator/prophet/tree/master/python>`_
   (requires `pystan <http://pystan.readthedocs.io/en/latest/index.html>`_)
 * `Rob J Hyndman software <http://robjhyndman.com/publications/software/>`_
@@ -1135,13 +1142,16 @@ Traitement du langage
 * `Supervised Word Mover's Distance <https://papers.nips.cc/paper/6139-supervised-word-movers-distance.pdf>`_
 * `Probabilistic Context-Free Grammars (PCFGs) <http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf>`_
 * `A Roundup of Recent Text Analytics and Vis Work <http://blogger.ghostweather.com/2014/10/a-roundup-of-recent-text-analytics-and.html>`_
-
 * `A Joint Model for Entity Analysis: Coreference, Typing, and Linking <http://www.cs.utexas.edu/~gdurrett/papers/durrett-klein-tacl2014.pdf>`_
 * `Disfluency Detection with a Semi-Markov Model and Prosodic Features <http://www.cs.utexas.edu/~gdurrett/papers/ferguson-durrett-klein-naacl2015.pdf>`_
 * `Capturing Semantic Similarity for Entity Linking with Convolutional Neural Networks <http://www.cs.utexas.edu/~gdurrett/papers/mfl-durrett-klein-naacl2016.pdf>`_
 * `Neural CRF Parsing <http://www.cs.utexas.edu/~gdurrett/papers/durrett-klein-acl2015.pdf>`_
 * `Less Grammar More Features <http://www.cs.utexas.edu/~gdurrett/papers/hall-durrett-klein-acl2014.pdf>`_
 * `Learning-Based Single-Document Summarization with Compression and Anaphoricity Constraints <https://arxiv.org/pdf/1603.08887v1.pdf>`_
+
+*Classification*
+
+* `Bag of Tricks for Efficient Text Classification <https://arxiv.org/pdf/1607.01759.pdf>`_
 
 *word2vec*
 
@@ -1168,17 +1178,21 @@ Traitement du langage
 
 * `Modern NLP in Python <https://www.youtube.com/watch?v=6zm9NC9uRkk>`_
 
-*Modules*
+*Modules ML*
 
 * `nltk <http://www.nltk.org/>`_
 * `gensim <https://radimrehurek.com/gensim/>`_
+* `fasttext <https://github.com/facebookresearch/fastText>`_ (Facebook)
 * `spacy <https://spacy.io/>`_
 * `Stanford CoreNLP <http://stanfordnlp.github.io/CoreNLP/other-languages.html#python>`_,
   `corenlpy <https://github.com/enewe101/corenlpy>`_
+* `lda2vec <https://github.com/cemoody/lda2vec>`_
+
+*Modules moins ML*
+
 * `python-rake <https://pypi.python.org/pypi/python-rake/>`_ : petit module pour extraire des mot-clés
 * `sumy <https://pypi.python.org/pypi/sumy>`_ : construction automatique d'un résumé d'un texte
 * `pyrouge <https://github.com/pltrdy/rouge/>`_ : calcule de la métrique `ROUGE <https://en.wikipedia.org/wiki/ROUGE_(metric)>`_
-* `lda2vec <https://github.com/cemoody/lda2vec>`_
 
 Images
 ++++++
@@ -1253,6 +1267,12 @@ Graphes et réseaux
 * `Local Network Community Detection with Continuous Optimization of Conductance and Weighted Kernel K-Means <http://jmlr.org/papers/volume17/16-043/16-043.pdf>`_
 * `Learning Communities in the Presence of Errors <http://www.jmlr.org/proceedings/papers/v49/makarychev16.pdf>`_
 * `Fast unfolding of communities in large networks <https://arxiv.org/abs/0803.0476>`_
+
+*Lectures Ranking*
+
+* `CoSimRank <http://anthology.aclweb.org/P/P14/P14-1131.pdf>`_
+* `PageRank <https://en.wikipedia.org/wiki/PageRank>`_
+* `A Local Spectral Method for Graphs: With Applications to Improving Graph Partitions and Exploring Data Graphs Locally <http://www.jmlr.org/papers/v13/mahoney12a.html>`_
 
 ------------
 

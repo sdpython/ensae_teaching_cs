@@ -69,6 +69,7 @@ Liste exhaustive :
 #. ML : :ref:`l-data-whoosh`
 #. ML : :ref:`l-ml-reg-geod`
 #. ML : :ref:`l-ml-ethique`
+#. ML : :ref:`l-ml-fire-detection`
 #. Finance : :ref:`l-fi-trend`
 #. Finance : :ref:`l-fi-port`
 #. Finance : :ref:`l-fi-pair`

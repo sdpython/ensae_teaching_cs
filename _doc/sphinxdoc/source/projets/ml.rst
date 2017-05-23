@@ -206,3 +206,16 @@ On se place dans le cas ici d'un site qui proposent des contenus à partir d'une
 que les résultats produits par le site ne sont pas biaisés éthiquement,
 comment mesurer le caractère éthique des résultats ?
 Le sujet est assez libre mais implique certainement la manipulation de texte.
+Côté scientidique, on pourra s'inspirer de l'article
+`FairTest: Discovering Unwarranted Associations in Data-Driven Applications <https://arxiv.org/pdf/1510.02377.pdf>`_.
+
+.. _l-ml-fire-detection:
+
+Détection de fumée dans les images (2017)
+-----------------------------------------
+
+C'est une idée extraite de l'article :
+`Early Fire Detection Using HEP and Space-time Analysis <https://arxiv.org/pdf/1310.1855v1.pdf>`_.
+Elle ne requiert pas nécessaire de machine learning mais s'appuie plus simplement
+sur des indicateurs construits à partir des images. Le projet devra commencer par récupérer
+des images sur Internet (via un moteur de recherche par exemple).
