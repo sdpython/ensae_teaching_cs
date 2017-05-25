@@ -589,6 +589,8 @@ Système de recommandation
 *Lectures*
 
 * `Recommendations in Keras using triplet loss <https://github.com/maciejkula/triplet_recommendations_keras>`_
+* `AutoRec: Autoencoders Meet Collaborative Filtering <http://users.cecs.anu.edu.au/~akmenon/papers/autorec/autorec-paper.pdf>`_,
+  `Hybrid Recommender System based on Autoencoders <https://hal.inria.fr/hal-01336912/file/AutoEnc.pdf>`_
 
 *Modules*
 
@@ -839,7 +841,7 @@ Interprétabilité des modèles
 
 *(à venir)*
 
-*Lectures*
+*Lectures: explain*
 
 * `Learning to learn by gradient descent by gradient descent <https://arxiv.org/pdf/1606.04474.pdf>`_
 * `Importance Weighting Without Importance Weights: An Effcient Algorithm for Combinatorial Semi-Bandits <http://jmlr.org/papers/volume17/15-091/15-091.pdf>`_
@@ -852,9 +854,18 @@ Interprétabilité des modèles
 * `Edward: A library for probabilistic modeling, inference, and criticism <https://arxiv.org/pdf/1610.09787.pdf>`_
 * `Strictly Proper Scoring Rules, Prediction, and Estimation <https://www.cs.duke.edu/courses/spring17/compsci590.2/Gneiting2007jasa.pdf>`_
 
+*Lectures: graphical models*
+
+* `Factor Graph <http://deepdive.stanford.edu/assets/factor_graph.pdf>`_
+* `An Introduction to Conditional Random Fields for Relational Learning <http://people.cs.umass.edu/~mccallum/papers/crf-tutorial.pdf>`_
+* `Factor Graphs and the Sum-Product Algorithm <http://www.comm.utoronto.ca/~frank/papers/KFL01.pdf>`_
+
 *Modules*
 
 * `edward <http://edwardlib.org/>`_
+* `deepdive <http://deepdive.stanford.edu/>`_: ce n'est pas un module python,
+  cet outil a été développé pour étudier les relations dans les données et plus
+  particulièrement les `dark data <https://en.wikipedia.org/wiki/Dark_data>`_
 
 Optimisation des hyperparamètres
 ++++++++++++++++++++++++++++++++
@@ -966,6 +977,7 @@ Auto-Learning
 * `Learning Regular Sets from Queries and Counterexamples <https://web.archive.org/web/20131202232143/http://www.cse.iitk.ac.in/users/chitti/thesis/references/learningRegSetsFromQueriesAndCounterExamples.pdf>`_
 * `Neural Architecture Search With Reinforcement Learning <https://openreview.net/forum?id=r1Ue8Hcxg&noteId=r1Ue8Hcxg>`_ (`pdf <https://openreview.net/pdf?id=r1Ue8Hcxg>`_
 * `ASlib: A Benchmark Library for Algorithm Selection <https://arxiv.org/abs/1506.02465>`_
+* `MacroBase: Prioritizing Attention in Fast Data <https://arxiv.org/pdf/1603.00567.pdf>`_
 
 *Sites*
 

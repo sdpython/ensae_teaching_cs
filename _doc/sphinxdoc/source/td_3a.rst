@@ -43,6 +43,19 @@ Anatomie et histoire d'un ordinateur
 * `Introduction au système de recommandation par facteurs latents <https://datajobs.com/data-science-repo/Recommender-Systems-%5bNetflix%5d.pdf>`_
 * `The Unreasonable Effectiveness of Data <http://static.googleusercontent.com/media/research.google.com/fr//pubs/archive/35179.pdf>`_
 
+*Machine Learning*
+
+* `Infrastructure for Usable Machine Learning: The Stanford DAWN Project <https://arxiv.org/pdf/1705.07538.pdf>`_
+
+CPU
++++
+
+*Lectures*
+
+* `Weld: A Multithreading Technique Towards Latencytolerant VLIW Processors  <http://tinker.cc.gatech.edu/symposia/hipc01.pdf>`_
+* `Stackless Python <https://bitbucket.org/stackless-dev/stackless>`_ : implémentation de l'interpréteur de Python
+  spécialisée dans le micro threading.
+
 GPU
 +++
 
@@ -88,6 +101,15 @@ GPU
 *Bas niveau*
 
 * `Low-Level Programming University <https://github.com/gurugio/lowlevelprogramming-university>`_
+
+Autres que CPU, GPU
++++++++++++++++++++
+
+*Lectures*
+
+* `Plasticine: A Reconfigurable Architecture For Parallel Patterns <http://csl.stanford.edu/~christos/publications/2017.plasticine.isca.pdf>`_
+* `Introduction to CGRA <http://aces.snu.ac.kr/~bernhard/teaching/4541.775/lecture/4541.775.9.CGRA.Introduction.pdf>`_
+  (`Coarse-Grained Reconfigurable Architecture <http://cccp.eecs.umich.edu/research/cgra.php>`_)
 
 ------------
 
