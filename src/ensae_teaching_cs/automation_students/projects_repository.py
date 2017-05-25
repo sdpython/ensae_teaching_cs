@@ -10,7 +10,7 @@ from urllib.parse import urlparse
 from pyquickhelper.loghelper import noLOG
 from pyquickhelper.texthelper import remove_diacritics
 from pyquickhelper.filehelper import remove_folder, explore_folder_iterfile
-from pyquickhelper.filehelper import unzip_files, zip_files, ungzip_files, un7zip_files
+from pyquickhelper.filehelper import unzip_files, zip_files, ungzip_files, un7zip_files, unrar_files
 from pyquickhelper.helpgen import nb2html
 from pyquickhelper.ipythonhelper import upgrade_notebook
 from pymmails import EmailMessageRenderer, EmailMessage
@@ -21,237 +21,8 @@ from ..homeblog.python_exemple_py_to_html import py_to_html_file
 
 class ProjectsRepository:
     """
-    handle a repository of students projects
-
-    .. exref::
-        :title: Collect students work
-        :tag: Automation
-
-        The following example dumps mails from students
-        and their attachments as well in a folder.
-
-        ::
-
-            from pyquickhelper.loghelper import fLOG
-            fLOG(OutputPrint=True)
-
-            from ensae_teaching_cs.automation_students import ProjectsRepository, grab_addresses
-            from pymmails import MailBoxImap, EmailMessageRenderer, EmailMessageListRenderer
-            from pymmails.render.email_message_style import template_email_html_short
-            import pandas
-
-            # gather mails
-
-            fLOG("fetch mails")
-            filename = "emails.txt"
-
-            user = "xavier.dupre"
-            pwd = "***"
-            server = "imap.gmail.com"
-            mailfolder = ["ensae/ENSAE_2016", "ensae/ensae_interro_2015"]
-            date = "1-Dec-2015"
-
-            if os.path.exists(filename):
-                with open(filename, "r", encoding="utf8") as f:
-                    lines = f.readlines()
-                emails = [l.strip("\r\t\n ") for l in lines]
-            else:
-                box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
-                box.login()
-                emails = grab_addresses(box, mailfolder, date, fLOG=fLOG)
-                box.logout()
-
-                with open(filename, "w", encoding="utf8") as f:
-                    f.write("\n".join(emails))
-
-            fLOG(emails)
-
-            # gathers groups for students
-
-            def replace_parts(s):
-                # in case there is something to do
-                return s.replace("to replace", "")
-
-            folder = os.path.abspath(".")
-            df = pandas.read_excel("notes_eleves_2015_2016.xlsx", skiprows=5)
-            df = df[(df["Groupe"] != "moyenne") & (~df["Eleves"].isnull())].copy()
-            df["Eleves"] = df["Eleves"].apply(lambda f: replace_parts(f))
-
-            proj = ProjectsRepository(folder, fLOG=fLOG)
-            groups = proj.Groups
-            if len(groups) < 10:
-                fLOG("creation")
-                proj = ProjectsRepository.create_folders_from_dataframe(df, folder,
-                            col_subject=None, fLOG=fLOG, col_group=None,
-                            email_function=emails, skip_if_nomail=True,
-                            must_have_email=False)
-
-            # gathers mails
-
-            if True:
-                email_render = EmailMessageRenderer(tmpl=template_email_html_short, fLOG=fLOG)
-                render = EmailMessageListRenderer(title="list of mails",
-                                email_renderer=email_render, fLOG=fLOG)
-
-                box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
-                box.login()
-                mails = proj.dump_group_mails(render, group=None,
-                                mailbox=box, subfolder=mailfolder, date=date)
-
-                box.logout()
-
-            # cleaning files
-
-            if True:
-                for group in proj.Groups:
-                    files = list(proj.enumerate_group_files(group))
-                    att = [_ for _ in files if ".html" in _]
-                    if len(att) <= 1:
-                        fLOG("remove ", group)
-                        proj.remove_group(group)
-
-            # summary
-
-            if True:
-                proj.write_summary()
-
-            # zip everything
-            filename = "td_note_2015.zip"
-
-            if True:
-                if os.path.exists(filename):
-                    os.remove(filename)
-                proj.zip_group(None, filename)
-
-            # encryption
-            enc = filename + ".enc"
-
-            if True:
-                fLOG("encryption")
-                encrypt_stream(b"password" * 2, filename, enc, chunksize=2**30)
-
-        Other examples with no list of predefined groups:
-
-        ::
-
-            import sys
-            import os
-            import keyring
-
-            from pyquickhelper.loghelper import fLOG
-            fLOG(OutputPrint=True)
-
-            from ensae_teaching_cs.automation_students import ProjectsRepository, grab_addresses
-            from pyquickhelper.filehelper import encrypt_stream
-            from pymmails import MailBoxImap, EmailMessageRenderer, EmailMessageListRenderer
-            from pymmails.render.email_message_style import template_email_html_short
-            import pandas
-
-            # settings
-
-            user = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "user")
-            pwd = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "pwd")
-            server = "imap.gmail.com"
-            mailfolder = ["ensae/ENSAE_201617"]
-            date = "1-Oct-2016"
-            do_mail = True
-
-            skip_address = ["arthur.b.renaud@gmail.com",
-                            "assistant-info@ensae.fr",
-                            "ggereyy@gmail.com",
-                            "marc-antoine.weisser@centralesupelec.fr",
-                            "marc-antoine.weisser@supelec.fr",
-                            "pierre.cordier@effiscience.solutions",
-                            "skanderkarkar@gmail.com",
-                            "xavier.dupre@gmail.com",
-                            "Xavier.Dupre@ensae.fr",
-                            "Marc.Antoine.Weisser@supelec.fr",
-                            "y.gerey@laposte.net",
-                            "Pierre.Cordier@ensae.paristech.fr"]
-
-            # gather mails
-
-            fLOG("fetch mails")
-            filename = "emails.txt"
-
-            if os.path.exists(filename):
-                with open(filename, "r", encoding="utf8") as f:
-                    lines = f.readlines()
-                emails = [l.strip("\r\t\n ") for l in lines]
-            else:
-                box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
-                box.login()
-                emails = grab_addresses(box, mailfolder, date, fLOG=fLOG)
-                box.logout()
-                emails = [_ for _ in emails if _ not in skip_address]
-
-                with open(filename, "w", encoding="utf8") as f:
-                    f.write("\n".join(emails))
-
-            # create a dataframe
-
-            import pandas
-            rows = [{"nom_prenom":mail, "sujet":"octobre", "groupe":i+1} for i, mail in enumerate(emails)]
-            df = pandas.DataFrame(rows)
-            fLOG("dataframe", df.shape)
-
-            # create folders for each student
-
-            mappings = {}
-            folder = "."
-
-            proj = ProjectsRepository(folder, fLOG=fLOG)
-            groups = proj.Groups
-            if do_mail or len(groups) < 10:
-                fLOG("creation")
-                proj = ProjectsRepository.create_folders_from_dataframe(df, folder,
-                            col_subject="sujet", fLOG=fLOG, col_group="groupe",
-                            col_student="nom_prenom",
-                            email_function=emails, skip_if_nomail=False,
-                            must_have_email=True)
-            fLOG("nb groups", len(proj.Groups))
-
-            # dump mails
-
-            if do_mail:
-                email_render = EmailMessageRenderer(tmpl=template_email_html_short, fLOG=fLOG)
-                render = EmailMessageListRenderer(title="list of mails",
-                                email_renderer=email_render, fLOG=fLOG)
-
-                box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
-                box.login()
-                mails = proj.dump_group_mails(render, group=None,
-                                mailbox=box, subfolder=mailfolder, date=date,
-                                overwrite=False, convert_files=True)
-
-                box.logout()
-
-            # write summary
-
-            if True:
-                fLOG("summary")
-                if os.path.exists("index.html"):
-                    os.remove("index.html")
-                proj.write_summary()
-
-
-            # zip everything
-
-            filename = "exo_1A_2016.zip"
-
-            if True:
-                if os.path.exists(filename):
-                    os.remove(filename)
-                proj.zip_group(None, filename,
-                               addition=["index.html", "mail_style.css", "exo_1A_2016.xlsx", "emails.txt"])
-
-            # encryption
-
-            enc = "projet_2A_2015.enc"
-
-            if True:
-                fLOG("encryption")
-                encrypt_stream(b"ensae016ensae016", filename, enc, chunksize=2**30)
+    Handle a repository of students projects.
+    See example :ref:`sphx_glr_gyexamples_automation_fetch_student_projects_from_gmail.py`.
     """
 
     class MailNotFound(Exception):
@@ -744,8 +515,11 @@ class ProjectsRepository:
         @param      filename        filename which gathers a link to every mail
         @param      overwrite       overwrite
         @param      skip_if_empty   skip if no mail?
-        @param      convert_files   to convert *.py* and *.ipynb* into html
+        @param      convert_files   unzip and convert
         @return                     list of files (see `EmailMessageListRenderer.write <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/render/email_message_list_renderer.html>`_)
+
+        zip, gz, rar, 7z can be uncompressed.
+        It then convert *.py* and *.ipynb* into html.
         """
         if group is None:
             res = []
@@ -783,7 +557,7 @@ class ProjectsRepository:
                                filename=filename, overwrite=overwrite)
             renderer.flush()
             if convert_files:
-                self.convert_files(group)
+                self.unzip_convert(group)
             return r
 
     def remove_group(self, group):
@@ -1142,6 +916,21 @@ class ProjectsRepository:
                 else:
                     # already done, we do not do it again
                     pass
+            elif ext == ".rar":
+                folder = os.path.splitext(name)[0] + "_rar"
+                folder = folder.replace(" ", "_").replace(",", "_")
+                if not os.path.exists(folder):
+                    self.fLOG(
+                        "ProjectsRepository.unrar_files [unrar {0}]".format(name))
+                    self.fLOG(
+                        "ProjectsRepository.unrar_files [creating {0}]".format(folder))
+                    os.mkdir(folder)
+                    lf = unrar_files(
+                        name, folder, fLOG=self.fLOG, fvalid=fvalid)
+                    files.extend(lf)
+                else:
+                    # already done, we do not do it again
+                    pass
             elif ext == ".gz":
                 folder = os.path.splitext(name)[0] + "_gz"
                 folder = folder.replace(" ", "_").replace(",", "_")
@@ -1151,8 +940,9 @@ class ProjectsRepository:
                     self.fLOG(
                         "ProjectsRepository.ungzip_files [creating {0}]".format(folder))
                     os.mkdir(folder)
+                    unzip = "pkl.gz" not in name
                     lf = ungzip_files(
-                        name, folder, fLOG=self.fLOG, fvalid=fvalid)
+                        name, folder, fLOG=self.fLOG, fvalid=fvalid, unzip=unzip)
                     files.extend(lf)
                 else:
                     # already done, we do not do it again

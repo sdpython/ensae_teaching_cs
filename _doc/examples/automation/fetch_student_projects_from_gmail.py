@@ -26,14 +26,17 @@ import keyring
 
 server = "imap.gmail.com"
 mailfolder = ["ensae/ENSAE_1A"]
-date = "19-Apr-2017"
+date = "19-May-2017"
 do_mail = True
 dest_folder = os.path.normpath(os.path.abspath(os.path.join(
-    *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2016-2017", "1A_pitch"]))))
+    *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2016-2017", "1A_projet"]))))
 print("dest", dest_folder)
-filename_zip = os.path.join(dest_folder, "Python_1A_pitch_2017.zip")
+basename = "Python_1A_projet_2017"
+filename_zip = os.path.join(dest_folder, basename + ".zip")
+convert_files = True
+
 filename_mails = os.path.join(dest_folder, "emails.txt")
-filename_excel = os.path.join(dest_folder, "Python_1A_pitch_2017.xlsx")
+filename_excel = os.path.join(dest_folder, basename + ".xlsx")
 
 #########################################
 # create the folder if it does not exist
@@ -166,7 +169,7 @@ if do_mail:
     box.login()
     mails = proj.dump_group_mails(render, group=None,
                                   mailbox=box, subfolder=mailfolder, date=date,
-                                  overwrite=False, convert_files=True)
+                                  overwrite=False, convert_files=convert_files)
     box.logout()
 
 ################

@@ -302,7 +302,8 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
         for lay in layout:
             for suf in suffix:
                 print(location)
-                root = os.path.abspath(location % (module, module, suf, lay[0]))
+                root = os.path.abspath(location %
+                                       (module, module, suf, lay[0]))
                 keepsuf = suf
                 if os.path.exists(root):
                     break
@@ -346,7 +347,8 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
             # pres
 
             for suffix in ["", "_2A", "_3A", "_1Ap"]:
-                root = os.path.abspath(location % (module, module, keepsuf, "html"))
+                root = os.path.abspath(location % (
+                    module, module, keepsuf, "html"))
                 if not os.path.exists(root):
                     if exc:
                         raise FileNotFoundError(root)

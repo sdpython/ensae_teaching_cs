@@ -8,14 +8,8 @@ from pyquickhelper.loghelper import noLOG, run_cmd
 from pyquickhelper.texthelper import remove_diacritics
 
 
-def git_clone(
-        local_folder,
-        url_https,
-        user=None,
-        password=None,
-        timeout=60,
-        init=True,
-        fLOG=noLOG):
+def git_clone(local_folder, url_https, user=None, password=None, timeout=60,
+              init=True, fLOG=noLOG):
     """
     clone a project from a git repository in a non empty local folder,
     it requires `GIT <http://git-scm.com/>`_ to be installed
@@ -120,14 +114,8 @@ def git_clone(
         return locf
 
 
-def git_change_remote_origin(
-        local_folder,
-        url_https,
-        user=None,
-        password=None,
-        add_fetch=False,
-        timeout=10,
-        fLOG=noLOG):
+def git_change_remote_origin(local_folder, url_https, user=None, password=None,
+                             add_fetch=False, timeout=10, fLOG=noLOG):
     """
     Change the origin of the repository. The url and the password
     refer to the new repository.
@@ -161,14 +149,8 @@ def git_change_remote_origin(
     git_check_error(out, err, fLOG)
 
 
-def git_commit_all(
-        local_folder,
-        url_https,
-        message,
-        user=None,
-        password=None,
-        timeout=300,
-        fLOG=noLOG):
+def git_commit_all(local_folder, url_https, message, user=None,
+                   password=None, timeout=300, fLOG=noLOG):
     """
     from a git repository,
     it requires `GIT <http://git-scm.com/>`_ to be installed
@@ -206,13 +188,8 @@ def git_commit_all(
     git_check_error(out, err, fLOG)
 
 
-def git_first_commit_all_projects(
-        local_folder,
-        user=None,
-        password=None,
-        timeout=300,
-        suivi="suivi.rst",
-        fLOG=noLOG):
+def git_first_commit_all_projects(local_folder, user=None, password=None,
+                                  timeout=300, suivi="suivi.rst", fLOG=noLOG):
     """
     @param      local_folder    folder
     @param      user            part 1 of the credentials
@@ -264,14 +241,9 @@ def git_first_commit_all_projects(
     return commit
 
 
-def create_folders_from_dataframe(df,
-                                  root,
-                                  report="suivi.rst",
-                                  col_student="Eleves",
-                                  col_group="Groupe",
-                                  col_subject="Sujet",
-                                  overwrite=False,
-                                  email_function=None):
+def create_folders_from_dataframe(df, root, report="suivi.rst", col_student="Eleves",
+                                  col_group="Groupe", col_subject="Sujet",
+                                  overwrite=False, email_function=None):
     """
     creates a series of folders for groups of students
 
