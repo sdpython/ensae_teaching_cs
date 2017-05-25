@@ -111,7 +111,7 @@ modules = [
 # valeurs par défaut
 
 # emplacement local de la documentation
-location = "d:\\jenkins\\pymy\\%s%s\\dist\\%s"
+location = "d:\\jenkins\\pymy\\%s\\%s%s\\dist\\%s"
 rootw = "/www/htdocs/app/%s/%s"                   # destination sur le site FTP
 # seconde destination pour le site lesenfantscodaient.fr
 rootw2 = "/lesenfantscodaient.fr"

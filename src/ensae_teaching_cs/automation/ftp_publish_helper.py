@@ -196,7 +196,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
 
 
 def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None,
-                             location="d:\\jenkins\\pymy\\%s%s\\dist\\%s", rootw="/www/htdocs/app/%s/%s",
+                             location="d:\\jenkins\\pymy\\%s\\%s%s\\dist\\%s", rootw="/www/htdocs/app/%s/%s",
                              rootw2="/lesenfantscodaient.fr", folder_status=".",
                              layout=[("html", "helpsphinx")],
                              modules=["pyquickhelper",
@@ -257,7 +257,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
 
         publish_teachings_to_web(login, ftpsite=website,
             google_id="google_id",
-            location="<something>\\\\%s%s\\\\dist\\\\%s",
+            location="<something>\\\\%s\\\\%s%s\\\\dist\\\\%s",
             rootw=rootw,
             rootw2=rootw2,
             folder_status=os.path.abspath("."),
@@ -301,14 +301,15 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
 
         for lay in layout:
             for suf in suffix:
-                root = os.path.abspath(location % (module, suf, lay[0]))
+                print(location)
+                root = os.path.abspath(location % (module, module, suf, lay[0]))
                 keepsuf = suf
                 if os.path.exists(root):
                     break
             if not os.path.exists(root):
                 if exc:
                     raise FileNotFoundError(os.path.abspath(
-                        location % (module, suffix[0], lay[0])))
+                        location % (module, module, suffix[0], lay[0])))
                 else:
                     fLOG("[publish_teachings_to_web] skip", root)
                     continue
@@ -345,7 +346,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
             # pres
 
             for suffix in ["", "_2A", "_3A", "_1Ap"]:
-                root = os.path.abspath(location % (module, keepsuf, "html"))
+                root = os.path.abspath(location % (module, module, keepsuf, "html"))
                 if not os.path.exists(root):
                     if exc:
                         raise FileNotFoundError(root)
