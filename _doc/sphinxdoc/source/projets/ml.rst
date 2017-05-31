@@ -147,6 +147,11 @@ L'algorithme est présentée dans l'article :
 de Simon Lacoste-Julien, Ben Taskar, Dan Klein, Michael I. Jordan.
 On pourra commencer sur un jeu de données petit et fabriqué manuellement. On pourra ensuite s'attaquer à
 des sites web qui proposent des traductions anglais/français de leur contenu.
+Autres liens intéressants proposés par les élèves qui ont travaillé sur ce sujet :
+
+* `Traduction automatique statistique et adaptation à un domaine sp ecialis e <https://tel.archives-ouvertes.fr/tel-00879945/document>`_
+* `Identification des cognats et alignement bi-textuel : une étude empirique <http://www.atala.org/taln_archives/TALN/TALN-1999/taln-1999-long-019.pdf>`_
+* `Improved Word Alignments for Statistical Machine Translation <http://www.cis.uni-muenchen.de/~fraser/pubs/fraser_diss.pdf>`_
 
 .. _l-fast-k-NN:
 
