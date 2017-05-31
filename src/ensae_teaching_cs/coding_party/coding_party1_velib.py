@@ -31,7 +31,7 @@ def enumerate_events(df):
     """
     df = df[["file", "collect_date", "name", "lat", "lng",
              "available_bike_stands", "available_bikes"]]
-    df = df.sort(["name", "file", "collect_date"])
+    df = df.sort_values(["name", "file", "collect_date"])
     lastrow = None
     for row in df.values:
         if lastrow is not None and lastrow[2] == row[2]:

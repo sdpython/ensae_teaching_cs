@@ -6,6 +6,7 @@ import re
 import os
 import numpy
 import warnings
+import zipfile
 from urllib.parse import urlparse
 from pyquickhelper.loghelper import noLOG
 from pyquickhelper.texthelper import remove_diacritics

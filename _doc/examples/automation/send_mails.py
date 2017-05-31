@@ -64,9 +64,9 @@ Bonjour,
 """ + \
     """
 Voici mes remarques suite à la lecture de votre projet et de votre code.
-Vous devrez consacrer une à deux minutes lors de la soutenance pour 
+Vous devrez consacrer une à deux minutes lors de la soutenance pour
 répondre aux questions de code. Ce temps est en plus de la présentation.
-N'oubliez pas de préparer une démonstration de votre programme, 
+N'oubliez pas de préparer une démonstration de votre programme,
 c'une à deux minutes également en plus de votre présentation.
 
 """.replace("\n", " ")
@@ -115,7 +115,8 @@ pwd = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "pwd")
 
 col_name = "Noms"
 col_mail = "Contact"
-columns = ["sujet", "Passage 2 juin", "Rapport", "Code", "Question de code", "pitch"]
+columns = ["sujet", "Passage 2 juin", "Rapport",
+           "Code", "Question de code", "pitch"]
 
 delay_sending = False
 
