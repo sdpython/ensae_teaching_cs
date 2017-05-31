@@ -46,12 +46,13 @@ import pymmails
 # On définit le contenu du mail.
 
 cc = []
-sujet = "Python pour un data scientist / économiste, feedback sur le projet"
+sujet = "Projet informatique 1A - notes de lectures"
 only = None
 skip = 0
+skiprows = 1
 folder = os.path.normpath(os.path.abspath(os.path.join(
-    *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2016-2017", "1A_pitch"]))))
-student = os.path.join(folder, "Python_1A_pitch_2017_reviews.xlsx")
+    *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2016-2017", "1A_projet"]))))
+student = os.path.join(folder, "Python_1A_pitch_projet_2017_reviews.xlsx")
 if not os.path.exists(student):
     raise FileNotFoundError(student)
 
@@ -62,7 +63,11 @@ Bonjour,
 
 """ + \
     """
-Voici mes remarques suite à la lecture de votre pitch.
+Voici mes remarques suite à la lecture de votre projet et de votre code.
+Vous devrez consacrer une à deux minutes lors de la soutenance pour 
+répondre aux questions de code. Ce temps est en plus de la présentation.
+N'oubliez pas de préparer une démonstration de votre programme, 
+c'une à deux minutes également en plus de votre présentation.
 
 """.replace("\n", " ")
 
@@ -73,8 +78,9 @@ end = """
 """.replace("\n", " ") + \
     """
 
-Je te laisse transférer ce mail aux autres membres du groupes s'il y a en a.
-Je m'excuse pour ce retard.
+Vous pouvez si vous le souhaitez assister à d'autres soutenances.
+
+A vendredi,
 
 Xavier
 """
@@ -83,7 +89,7 @@ Xavier
 # Lecture des de la feuille Excel
 
 import pandas
-df = pandas.read_excel(student, sheetname=0, skiprows=0)
+df = pandas.read_excel(student, sheetname=0, skiprows=skiprows)
 
 if len(df.columns) < 4:
     raise ValueError("Probably an issue while reading the spreadsheet:\n{0}\n{1}".format(
@@ -108,8 +114,9 @@ pwd = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "pwd")
 # Si mailbox est None, la fonction affiche les résultats mais ne fait rien.
 
 col_name = "Noms"
-col_mail = "nom_prenom"
-columns = ["sujet", "observation"]
+col_mail = "Contact"
+columns = ["sujet", "Passage 2 juin", "Rapport", "Code", "Question de code", "pitch"]
+
 delay_sending = False
 
 fLOG("connect", user)

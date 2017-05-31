@@ -895,8 +895,13 @@ class ProjectsRepository:
                     self.fLOG(
                         "ProjectsRepository.unzip_files [creating {0}]".format(folder))
                     os.mkdir(folder)
-                    lf = unzip_files(
-                        name, folder, fLOG=self.fLOG, fvalid=fvalid)
+                    try:
+                        lf = unzip_files(
+                            name, folder, fLOG=self.fLOG, fvalid=fvalid)
+                    except zipfile.BadZipFile as e:
+                        self.fLOG(
+                            "    ERROR: ProjectsRepository.unzip_files [unable to unzip {0} because of {1}]".format(name, e))
+                        lf = []
                     files.extend(lf)
                 else:
                     # already done, we do not do it again
