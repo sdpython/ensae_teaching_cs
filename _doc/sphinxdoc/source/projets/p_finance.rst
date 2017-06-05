@@ -29,12 +29,11 @@ Un exemple de graphique avec matplotlib :
 `candlestick_ohlc <https://matplotlib.org/examples/pylab_examples/finance_demo.html>`_.
 
 Le module `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
-permet de récupérer facilement des données depuis
-`Yahoo Finance <https://fr.finance.yahoo.com/>`_::
+permet de récupérer facilement des données depuis différentes sources ::
 
     from pyensae import StockPrices
-    prices = StockPrices(tick="BNP.PA")
-    print (prices.dataframe.head())
+    prices = StockPrices(tick="NASDAQ:MSFT")
+    print(prices.dataframe.head())
 
 Pour ces deux sites, les données récupérées sont *daily* et pas *intraday*.
 Les algorithmes fonctionnent tous à peu près de la même manière : chaque soir,
@@ -54,8 +53,9 @@ D'autres idées avec d'autres lectures :
 * `Random walks down Wall Street - Stochastic Processes in Python  <http://www.stuartreid.co.za/random-walks-down-wall-street-stochastic-processes-in-python/>`_,
 * `10 Common Misconceptions about Neural Networks <http://www.stuartreid.co.za/misconceptions-about-neural-networks/>`_
 * `Algorithmic trading system requirements <http://www.stuartreid.co.za/algorithmic-trading-system-requirements-post/>`_
-* `et d'autres articles de Stuart Reid <http://www.stuartreid.co.za/one-year-later-metapost-computational-finance-blog/>`_
+* et `d'autres articles de Stuart Reid <http://www.stuartreid.co.za/one-year-later-metapost-computational-finance-blog/>`_
 * `OLPS:AToolboxforOn-LinePortfolioSelection <http://www.jmlr.org/papers/volume17/15-317/15-317.pdf>`_ *(2016/08)*
+* `Dynamic Correlations, Estimation Risk, and Portfolio Management during the Financial Crisis <https://www.cemfi.es/ftp/wp/1103.pdf>`_
 
 .. _l-fi-trend:
 
