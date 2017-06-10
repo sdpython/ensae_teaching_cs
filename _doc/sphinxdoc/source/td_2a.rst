@@ -873,6 +873,7 @@ Interprétabilité des modèles
 * `deepdive <http://deepdive.stanford.edu/>`_: ce n'est pas un module python,
   cet outil a été développé pour étudier les relations dans les données et plus
   particulièrement les `dark data <https://en.wikipedia.org/wiki/Dark_data>`_
+* `treeinterpreter <https://pypi.python.org/pypi/treeinterpreter>`_
 
 Optimisation des hyperparamètres
 ++++++++++++++++++++++++++++++++
