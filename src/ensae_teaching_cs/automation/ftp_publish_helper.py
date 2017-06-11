@@ -86,8 +86,10 @@ def text_transform(ftpp, filename, content):
 
 
 def publish_documentation(docs, ftpsite=None, login=None, password=None,
-                          key_save="my_password", footer_html=None, content_filter=trigger_on_specific_strings,
-                          is_binary=content_as_binary, force_allow=None, fLOG=print):
+                          key_save="my_password", footer_html=None,
+                          content_filter=trigger_on_specific_strings,
+                          is_binary=content_as_binary, force_allow=None,
+                          fLOG=print):
     """
     publish the documentation and the setups of a python module on a webiste,
     it assumes the modules is organized the same way as
@@ -218,7 +220,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                                       ],
                              password=None,
                              force_allow=None,
-                             suffix=("_UT_35_std",),
+                             suffix=("_UT_36_std",),
                              fLOG=print,
                              exc=True):
     """
