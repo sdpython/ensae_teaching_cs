@@ -156,3 +156,4 @@ de données à ce sujet :
 
 * `Pokémon GO <https://www.kaggle.com/abcsds/pokemongo>`_
 * `Pokémon Stat <https://www.kaggle.com/abcsds/pokemon>`_
+* `Interactive 3D Clusters of all 721 Pokémon Using Spark and Plotly <http://minimaxir.com/2016/08/pokemon-3d/>`_

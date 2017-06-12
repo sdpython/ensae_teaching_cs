@@ -682,6 +682,11 @@ Deep Learning
   `Convolutional Neural Networks (CNNs / ConvNets) <http://cs231n.github.io/convolutional-networks/#conv>`_
 * `Transfer Learning <http://cs231n.github.io/transfer-learning/>`_
 
+*Benchmarks*
+
+* `Benchmarking CNTK on Keras: is it Better at Deep Learning than TensorFlow? <http://minimaxir.com/2017/06/keras-cntk/>`_
+  (`code <https://github.com/minimaxir/keras-cntk-benchmark>`_)
+
 *Plus théoriques*
 
 * `Why Does Unsupervized Deep Learning Work? - A perspective from group theory <https://arxiv.org/pdf/1412.6621v3.pdf>`_
@@ -694,6 +699,7 @@ Deep Learning
 * `Distributed Representations of Words and Phrases and their Compositionality <http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf>`_, Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, Jeff Dean,
 * `word2vec Parameter Learning Explained <http://arxiv.org/abs/1411.2738>`_, Xin Rong,
 * `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
+* `Pretrained Character Embeddings for Deep Learning and Automatic Text Generation <http://minimaxir.com/2017/04/char-embeddings/>`_
 
 *Vus dans des conférences*
 

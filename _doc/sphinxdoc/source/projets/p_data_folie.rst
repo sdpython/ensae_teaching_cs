@@ -60,6 +60,9 @@ Si besoin, voici d'autres données sur un autre blog :
 - `Veronis/Discours 2007 <http://sites.univ-provence.fr/veronis/Discours2007/>`_
 - `Veronis Premiers Ministres <http://sites.univ-provence.fr/veronis/Premiers/>`_
 
+Et quelques exemples de nuages :
+`Creating Stylish, High-Quality Word Clouds Using Python and Font Awesome Icons <http://minimaxir.com/2016/05/wordclouds/>`_.
+
 .. _l-data-twitter:
 
 Twitter
