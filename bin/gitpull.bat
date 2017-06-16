@@ -43,4 +43,7 @@ cd ..
 cd tkinterquickhelper
 git pull
 cd ..
+cd code_beatrix
+git pull
+cd ..
 cd %current%
