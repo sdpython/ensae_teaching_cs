@@ -10,6 +10,12 @@ Agilité, rapidité, inventivité.
 .. contents::
     :local:
 
+.. |pyecopng| image:: _static/pyeco.png
+            :alt: Economie
+
+.. |pystatpng| image:: _static/pystat.png
+            :alt: Statistique
+
 ---------------
 
 Techniques de programmation et algorithmes

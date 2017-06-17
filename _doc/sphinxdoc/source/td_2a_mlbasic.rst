@@ -16,6 +16,12 @@ qui correspondent aux besoins.
 .. contents::
     :local:
 
+.. |pyecopng| image:: _static/pyeco.png
+            :alt: Economie
+
+.. |pystatpng| image:: _static/pystat.png
+            :alt: Statistique
+
 ----------------------
 
 Transformations des données, Embedding

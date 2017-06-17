@@ -12,6 +12,12 @@ et les représenter à l'aide de graphiques.
 .. contents::
     :local:
 
+.. |pyecopng| image:: _static/pyeco.png
+            :alt: Economie
+
+.. |pystatpng| image:: _static/pystat.png
+            :alt: Statistique
+
 ------------
 
 Rappels de programmation

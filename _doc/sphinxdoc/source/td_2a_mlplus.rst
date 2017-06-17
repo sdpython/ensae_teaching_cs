@@ -8,6 +8,12 @@ Hors piste en machine learning
 .. contents::
     :local:
 
+.. |pyecopng| image:: _static/pyeco.png
+            :alt: Economie
+
+.. |pystatpng| image:: _static/pystat.png
+            :alt: Statistique
+
 ------------
 
 Machine Learning Avancé
@@ -69,6 +75,8 @@ Interprétabilité des modèles
 Optimisation des hyperparamètres
 ++++++++++++++++++++++++++++++++
 
+|pyecopng| |pystatpng|
+
 (à venir)
 
 *Lectures*
@@ -83,6 +91,8 @@ Optimisation des hyperparamètres
 Online training
 +++++++++++++++
 
+|pystatpng|
+
 *(à venir)*
 
 *Lectures*
@@ -91,6 +101,8 @@ Online training
 
 Modèles avec dépendances dans le temps
 ++++++++++++++++++++++++++++++++++++++
+
+|pystatpng|
 
 *(à venir)*
 
@@ -185,8 +197,8 @@ Prédire une distribution
 
 ---------------
 
-Données et intimité
-===================
+Données, Anonymisation, Cryptage
+================================
 
 On sait beaucoup de choses avec les données et comme elles concernent
 des personnes la plupart du temps, les chercheurs réfléchissent
@@ -215,6 +227,35 @@ Machine Learning éthique
 * `Data Transparency Lab <http://datatransparencylab.org/>`_
 * `OPAL <http://www.data4sdgs.org/dc-opal/>`_
 
+Anonymisation des données
++++++++++++++++++++++++++
+
+|pyecopng| |pystatpng|
+
+*(à venir)*
+
+*Lectures*
+
+* `A General Survey Of Privacy-Preserving Data Mining Models And Algorithms <http://charuaggarwal.net/generalsurvey.pdf>`_
+* `Privacy Preserving Data Mining <http://web.stanford.edu/group/mmds/slides/mcsherry-mmds.pdf>`_, Cynthia Dwork, Frank McSherry,
+  concept de :math:`\epsilon`-differential privacy
+  (`version longue <https://users.soe.ucsc.edu/~abadi/CS223_F12/mcsherry.pdf>`_,
+  `Privacy Preserving Data Mining <http://www.cs.jhu.edu/~fabian/courses/CS600.624/slides/privacy-preserving.pdf>`_)
+* `Differentially Private Empirical Risk Minimization <http://www.jmlr.org/papers/volume12/chaudhuri11a/chaudhuri11a.pdf>`_
+* `Preserving Privacy of Continuous High-dimensional Data with Minimax Filters <http://www.jmlr.org/proceedings/papers/v38/hamm15.pdf>`_
+* `Privacy for Free: Posterior Sampling and Stochastic Gradient Monte Carlo <http://www.jmlr.org/proceedings/papers/v37/wangg15.pdf>`_
+
+*Algorithmes*
+
+* `k-anonymité <https://en.wikipedia.org/wiki/K-anonymity>`_
+* `L-diversité <https://en.wikipedia.org/wiki/L-diversity>`_
+
+*Modules*
+
+* `AGD Tools <https://github.com/SGMAP-AGD/Tools>`_ : ce module ne semble pas maintenu,
+  la partie intéressante est dans les fichier
+  `anomimy*.py <https://github.com/SGMAP-AGD/Tools/tree/master/agd_tools>`_.
+
 Machine Learning sur des données cryptées
 +++++++++++++++++++++++++++++++++++++++++
 
@@ -224,15 +265,8 @@ Machine Learning sur des données cryptées
 
 *Lectures*
 
-* `Privacy Preserving Data Mining <http://web.stanford.edu/group/mmds/slides/mcsherry-mmds.pdf>`_, Cynthia Dwork, Frank McSherry,
-  concept de :math:`\epsilon`-differential privacy
-  (`version longue <https://users.soe.ucsc.edu/~abadi/CS223_F12/mcsherry.pdf>`_,
-  `Privacy Preserving Data Mining <http://www.cs.jhu.edu/~fabian/courses/CS600.624/slides/privacy-preserving.pdf>`_)
-* `Differentially Private Empirical Risk Minimization <http://www.jmlr.org/papers/volume12/chaudhuri11a/chaudhuri11a.pdf>`_
-* `Preserving Privacy of Continuous High-dimensional Data with Minimax Filters <http://www.jmlr.org/proceedings/papers/v38/hamm15.pdf>`_
 * `Differentially Private Online Learning <http://www.jmlr.org/proceedings/papers/v23/jain12/jain12.pdf>`_
 * `A Differentially Private Stochastic Gradient Descent Algorithm for Multiparty Classification <http://www.jmlr.org/proceedings/papers/v22/rajkumar12/rajkumar12.pdf>`_
-* `Privacy for Free: Posterior Sampling and Stochastic Gradient Monte Carlo <http://www.jmlr.org/proceedings/papers/v37/wangg15.pdf>`_
 * `Machine Learning Classification over Encrypted Data <https://eprint.iacr.org/2014/331.pdf>`_
 * `CryptoNets: Applying Neural Networks to Encrypted Data with High Throughput and Accuracy <http://jmlr.org/proceedings/papers/v48/gilad-bachrach16.pdf>`_
 * `Compressed Sensing <https://en.wikipedia.org/wiki/Compressed_sensing>`_
