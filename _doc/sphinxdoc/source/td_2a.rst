@@ -41,7 +41,7 @@ donne un aperçu des thèmes abordés.
 * :ref:`compétitions <td2A-competition-ml>`
 * :ref:`projet informatique <l-projinfo2a>`.
 
-**Thèmes :*
+**Thèmes :**
 
 .. |slideslogo| image:: _static/slides_logo.png
              :height: 20
@@ -54,6 +54,7 @@ donne un aperçu des thèmes abordés.
             :alt: Statistique
 
 .. toctree::
+    :maxdepth: 3
 
     td_2a_manip
     td_2a_mlbasic

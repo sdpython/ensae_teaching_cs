@@ -163,6 +163,10 @@ Auto-Learning
 
 * `Angluin Algorithm <https://web.archive.org/web/20131202232143/http://www.cse.iitk.ac.in/users/chitti/thesis/references/learningRegSetsFromQueriesAndCounterExamples.pdf>`_
 
+*Article de blog*
+
+* `Automating Development and Optimization of Machine Learning Models <https://www.datanami.com/2017/06/12/automating-development-optimization-machine-learning-models/>`_
+
 *Lectures*
 
 * `Learning to learn by gradient descent by gradient descent <https://papers.nips.cc/paper/6461-learning-to-learn-by-gradient-descent-by-gradient-descent.pdf>`_
