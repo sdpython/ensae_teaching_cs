@@ -61,7 +61,7 @@ class TestRst2HtmlLatex(unittest.TestCase):
             # unpexpected failure
             return
 
-        assert src is not None
+        self.assertTrue(src is not None)
 
         preamble = """
                     \\newcommand{\\acc}[1]{\\left\\{#1\\right\\}}
