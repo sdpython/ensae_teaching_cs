@@ -145,11 +145,3 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
 
 * `Beyond Bag of Words A Practitioner’s Guide to Advanced NLP <https://www.youtube.com/watch?v=YWzFxRZPEyU>`_
 * `Building Continuous Learning Systems <https://www.youtube.com/watch?v=VtBvmrmMJaI>`_
-
-.. [#fwrite1] Contributeur, encadrant et coordinateur du cours.
-
-.. [#fwrite2] Contributeur, encadrant.
-
-.. [#fwrite3] Contributeur, encadrant des premiers jours (2014-2016).
-
-.. [#fwrite4] Contributeur.

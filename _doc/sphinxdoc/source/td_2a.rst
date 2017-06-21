@@ -61,3 +61,11 @@ donne un aperçu des thèmes abordés.
     td_2a_mlplus
     td_2a_talgo
     td_2a_biblio
+
+.. [#fwrite1] Contributeur, encadrant et coordinateur du cours.
+
+.. [#fwrite2] Contributeur, encadrant.
+
+.. [#fwrite3] Contributeur, encadrant des premiers jours (2014-2016).
+
+.. [#fwrite4] Contributeur.
