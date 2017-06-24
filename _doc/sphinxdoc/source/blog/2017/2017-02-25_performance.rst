@@ -1,6 +1,6 @@
 
 .. blogpost::
-    :title: Performance du langage Pyhon
+    :title: Performance du langage Python
     :keywords: python, performance
     :date: 2017-02-25
     :categories: performance

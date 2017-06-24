@@ -37,9 +37,14 @@ La présentation
 `ENSAE 2A - Données, Machine Learning et Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_ |slideslogo|
 donne un aperçu des thèmes abordés.
 
-* :ref:`feuille de route 2016 <l-feuille-de-route-2016-2A>`
-* :ref:`compétitions <td2A-competition-ml>`
+* :ref:`feuille de route 2016 <l-feuille-de-route-2016-2A>`,
+* :ref:`compétitions <td2A-competition-ml>`,
 * :ref:`projet informatique <l-projinfo2a>`.
+
+Le terme *cheat sheet* est un mot-clé plutôt efficace sur Internet pour
+retrouver les bout de codes les plus fréquents. Cette page regroupe des
+*cheat sheets* sur beaucoup de sujet évoqué ci-dessous :
+`Essential Cheat Sheets for Machine Learning and Deep Learning Engineers <https://startupsventurecapital.com/essential-cheat-sheets-for-machine-learning-and-deep-learning-researchers-efb6a8ebd2e5>`_.
 
 **Thèmes :**
 

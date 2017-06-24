@@ -176,6 +176,9 @@ Auto-Learning
 * `Neural Architecture Search With Reinforcement Learning <https://openreview.net/forum?id=r1Ue8Hcxg&noteId=r1Ue8Hcxg>`_ (`pdf <https://openreview.net/pdf?id=r1Ue8Hcxg>`_
 * `ASlib: A Benchmark Library for Algorithm Selection <https://arxiv.org/abs/1506.02465>`_
 * `MacroBase: Prioritizing Attention in Fast Data <https://arxiv.org/pdf/1603.00567.pdf>`_
+* `A Bayesian criterion for evaluating the robustness of classification rules in binary data sets <http://www.marc-boulle.fr/publications/GayEtAlAKDM12.pdf>`_
+* `Bayesian instance selection for the nearest neighbor rule <http://www.marc-boulle.fr/publications/FerrandizEtAlML10.pdf>`_
+* `One Model To Learn Them All <https://arxiv.org/abs/1706.05137>`_
 
 *Sites*
 
@@ -198,6 +201,33 @@ Prédire une distribution
 *Lectures*
 
 * `Learning with a Wasserstein Loss <https://arxiv.org/pdf/1506.05439.pdf>`_
+
+Sequence Learning
++++++++++++++++++
+
+|pystatpng|
+
+*(à venir)*
+
+*Lectures*
+
+* `A Credit Assignment Compiler for Joint Prediction <https://arxiv.org/pdf/1406.1837.pdf>`_
+
+Clustering pas classique
+++++++++++++++++++++++++
+
+|pystatpng|
+
+(à venir)
+
+*Clustering de trajectoires*
+
+Le problème est qu'on cherche plutôt à clusteriser de bouts de trajectoires sinon il suffirait
+de clusteriser le point de départ d'arrivée. Que ferait-on alors de deux trajectoires
+qui passent par le même chemin ?
+
+* `Discovering Patterns in Time-Varying Graphs: A Triclustering Approach <http://www.marc-boulle.fr/publications/GuigouresEtAlADAC15.pdf>`_
+* `Co-Clustering Network-Constrained Trajectory Data <http://www.marc-boulle.fr/publications/ElMahrsiEtAlAKDM15.pdf>`_
 
 ---------------
 
