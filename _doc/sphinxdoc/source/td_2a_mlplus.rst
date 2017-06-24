@@ -720,3 +720,17 @@ Apprentissage sans labels
 * `Transfer Learning in Sequential Decision Problems: A Hierarchical Bayesian Approach <http://www.jmlr.org/proceedings/papers/v27/wilson12a/wilson12a.pdf>`_
 * `Transfer Learning for Reinforcement Learning Domains: A Survey <http://www.jmlr.org/papers/volume10/taylor09a/taylor09a.pdf>`_
 * `Unsupervised dimensionality reduction via gradient-based matrix factorization with two adaptive learning rates <http://www.jmlr.org/proceedings/papers/v27/nikulin12a/nikulin12a.pdf>`_
+
+Galleries de problèmes résolus
+++++++++++++++++++++++++++++++
+
+|pystatpng|
+
+.. toctree::
+    :maxdepth: 2
+
+    specials/deepproblems
+
+*Notebooks*
+
+*(à venir)*
