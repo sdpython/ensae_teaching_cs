@@ -510,6 +510,7 @@ Graphes et réseaux
 * `neo4j <https://neo4j.com/developer/python/>`_,
   `py2neo <http://py2neo.org/v3/>`_,
   `neo4j-python-driver <https://github.com/neo4j/neo4j-python-driver>`_
+* `snap.py <https://snap.stanford.edu/snappy/index.html#docs>`_
 
 --------------------
 
