@@ -98,6 +98,11 @@ Variables catégorielles
   et sa :ref:`corection <tdnote2017rs>`
 * `Visiting: Categorical Features and Encoding in Decision Trees <https://medium.com/data-design/visiting-categorical-features-and-encoding-in-decision-trees-53400fa65931>`_
 
+*Modules*
+
+* `scikit-learn <http://scikit-learn.org/stable/>`_
+* `category_encoders <http://contrib.scikit-learn.org/categorical-encoding/>`_
+
 Distances
 +++++++++
 

@@ -445,6 +445,7 @@ Images
 
 * `VIGRA <https://github.com/ukoethe/vigra>`_
 * `opencv <http://opencv.org/>`_
+* `dlib <https://github.com/davisking/dlib>`_
 * `hed <https://github.com/s9xie/hed>`_ (Holistically-Nested Edge Detection)
 * `bob.bio <http://pythonhosted.org/bob.bio.base/index.html>`_
 * tous les modules de :ref:`l-deep-learning`
@@ -502,6 +503,13 @@ Graphes et réseaux
 * `CoSimRank <http://anthology.aclweb.org/P/P14/P14-1131.pdf>`_
 * `PageRank <https://en.wikipedia.org/wiki/PageRank>`_
 * `A Local Spectral Method for Graphs: With Applications to Improving Graph Partitions and Exploring Data Graphs Locally <http://www.jmlr.org/papers/v13/mahoney12a.html>`_
+
+*Modules*
+
+* `networkx <https://networkx.github.io/>`_
+* `neo4j <https://neo4j.com/developer/python/>`_,
+  `py2neo <http://py2neo.org/v3/>`_,
+  `neo4j-python-driver <https://github.com/neo4j/neo4j-python-driver>`_
 
 --------------------
 
