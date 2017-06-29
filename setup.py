@@ -214,7 +214,7 @@ if is_local() and "custom_left" not in sys.argv:
         blog_list=os.path.abspath(os.path.join(
             "src", project_var_name, package_data[project_var_name][0])),
         covtoken=("5e030cea-7d27-46e7-bb2e-2fc3db0ae9f6",
-                  "'_UT_35_std' in outfile"),
+                  "'_UT_36_std' in outfile"),
         nbformats=['ipynb', 'html', 'python',
                    'rst', 'slides', 'pdf', 'github'],
         layout=layout,
