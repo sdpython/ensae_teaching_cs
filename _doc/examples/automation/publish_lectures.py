@@ -36,7 +36,8 @@ if "ensae_teaching_cs" in this:
     this = this.split("ensae_teaching_cs")[0].rstrip("\\/")
 for module in ["jyquickhelper", "pyquickhelper", "pyensae",
                "pyrsslocal", "pymmails", "pymyinstall",
-               "ensae_teaching_cs", "tkinterquickhelper"]:
+               "ensae_teaching_cs", "tkinterquickhelper",
+               "cpyquickhelper"]:
     try:
         exec("import %s" % module)
     except ImportError:
@@ -90,6 +91,7 @@ if code_google is None:
 modules = [
     "actuariat_python",
     "code_beatrix",
+    "cpyquickhelper",
     "ensae_projects",
     "jupytalk",
     "jyquickhelper",
