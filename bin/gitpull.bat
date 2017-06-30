@@ -46,4 +46,7 @@ cd ..
 cd code_beatrix
 git pull
 cd ..
+cd cpyquickhelper
+git pull
+cd ..
 cd %current%
