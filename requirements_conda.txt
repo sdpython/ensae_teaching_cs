@@ -19,7 +19,6 @@ jupyter_client
 jupyter_console
 jupyter_core
 matplotlib
-mpld3
 nbformat
 nbpresent
 networkx
@@ -40,7 +39,6 @@ reportlab
 requests
 scikit-image
 seaborn
-shapely
 six
 Sphinx
 statsmodels

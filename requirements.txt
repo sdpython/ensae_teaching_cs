@@ -35,6 +35,7 @@ pyreadline
 python-jenkins
 qgrid
 requests-oauthlib
+shapely
 toolz
 version_information
 xlrd
