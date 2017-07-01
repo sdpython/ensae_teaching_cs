@@ -58,6 +58,23 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/code_beatrix
       - .. image:: https://codecov.io/github/sdpython/code_beatrix/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/code_beatrix?branch=master
+    * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/cpyquickhelper.svg?branch=master
+            :target: https://travis-ci.org/sdpython/cpyquickhelper
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/sia7wxgjv8e1fi5a?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/cpyquickhelper
+            :alt: Build Status Windows
+      - .. image:: https://badge.fury.io/py/cpyquickhelper.svg
+            :target: http://badge.fury.io/py/cpyquickhelper
+      - .. image:: http://img.shields.io/pypi/pyversions/cpyquickhelper.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/cpyquickhelper
+      - .. image:: https://badge.waffle.io/sdpython/cpyquickhelper.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/cpyquickhelper
+      - .. image:: https://codecov.io/github/sdpython/cpyquickhelper/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/cpyquickhelper?branch=master
     * - `ensae_projects <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/ensae_projects.svg?branch=master
             :target: https://travis-ci.org/sdpython/ensae_projects
@@ -332,6 +349,9 @@ Outils
 
     * - module
       - description
+    * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
+      - Fonctions, outils implémentées en C, C++ et habillées en Python. C'est aussi
+        un template pour ceux qui souhaite réaliser un module en C/C++/Cython.
     * - `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
       - Fonctionnalités uilisées par un ENSAE ou plus généralement pour un datascientist,
         récupération de données, commandes magiques, échanges avec un cluster HADOOP
@@ -380,6 +400,7 @@ Git Clone
 
     if not exist actuariat_python           git clone https://github.com/sdpython/actuariat_python.git
     if not exist code_beatrix               git clone https://github.com/sdpython/code_beatrix.git
+    if not exist cpyquickhelper             git clone https://github.com/sdpython/code_beatrix.git
     if not exist ensae_projects             git clone https://github.com/sdpython/ensae_projects.git
     if not exist ensae_teaching_cs          git clone https://github.com/sdpython/ensae_teaching_cs.git
     if not exist jupytalk                   git clone https://github.com/sdpython/jupytalk.git
@@ -394,7 +415,7 @@ Git Clone
     if not exist pythonnet3                 git clone https://github.com/sdpython/pythonnet3.git
     if not exist python3_module_template    git clone https://github.com/sdpython/python3_module_template.git
     if not exist teachpyx                   git clone https://github.com/sdpython/teachpyx.git
-    if not exist tkinterquickhelper        git clone https://github.com/sdpython/tkinterquickhelper.git
+    if not exist tkinterquickhelper         git clone https://github.com/sdpython/tkinterquickhelper.git
 
     if not exist myblog                     git clone https://github.com/sdpython/myblog.git
     if not exist thesis_handwriting         git clone https://github.com/sdpython/thesis_handwriting.git
