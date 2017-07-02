@@ -313,7 +313,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
             if not os.path.exists(root):
                 if exc:
                     raise FileNotFoundError("first tried '{0}'\n last tried '{1}'".format(root,
-                        os.path.abspath(location % (module, module, suffix[0], lay[0]))))
+                                                                                          os.path.abspath(location % (module, module, suffix[0], lay[0]))))
                 else:
                     fLOG("[publish_teachings_to_web] skip", root)
                     continue

@@ -124,7 +124,8 @@ google_id = code_google                         # identifiant google analytics
 suffix = ("_UT_36_std",)
 
 modules0 = modules
-modules = [_ for _ in modules if os.path.exists(location % (_, _, suffix[0], "html"))]
+modules = [_ for _ in modules if os.path.exists(
+    location % (_, _, suffix[0], "html"))]
 if len(modules) == 0:
     _ = modules0[0]
     one = location % (_, _, suffix[0], "html")
