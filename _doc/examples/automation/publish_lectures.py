@@ -24,6 +24,7 @@ urchinTracker();
 import sys
 import os
 import keyring
+import random
 
 #########################################
 # Cette section ajoute des chemins pour des modules que je développe
@@ -42,7 +43,7 @@ for module in ["jyquickhelper", "pyquickhelper", "pyensae",
         exec("import %s" % module)
     except ImportError:
         p = os.path.join(this, module, "src")
-        print("add path", p)
+        print("  add path", p, "for module", module)
         sys.path.append(p)
         exec("import %s" % module)
 
@@ -109,6 +110,8 @@ modules = [
     "ensae_teaching_cs"
 ]
 
+random.shuffle(modules)
+
 ##################
 # valeurs par défaut
 
@@ -118,10 +121,21 @@ rootw = "/www/htdocs/app/%s/%s"                   # destination sur le site FTP
 # seconde destination pour le site lesenfantscodaient.fr
 rootw2 = "/lesenfantscodaient.fr"
 google_id = code_google                         # identifiant google analytics
+suffix = ("_UT_36_std",)
+
+modules0 = modules
+modules = [_ for _ in modules if os.path.exists(location % (_, _, suffix[0], "html"))]
+if len(modules) == 0:
+    _ = modules0[0]
+    one = location % (_, _, suffix[0], "html")
+    raise ValueError("No module can be updated, for example '{0}'".format(one))
+print("List of modules to publish:")
+for i, mod in enumerate(sorted(modules)):
+    print("  {0}/{1}: {2}".format(i + 1, len(modules), mod))
 
 ##################
 # La fonction :func:`publish_teachings_to_web cache` cache beaucoup de chose.
 publish_teachings_to_web(login=user, ftpsite=ftpsite, google_id=google_id,
                          location=location, rootw=rootw, rootw2=rootw2,
-                         modules=modules, password=pwd,
+                         modules=modules, password=pwd, suffix=suffix,
                          force_allow=["xavierdupre"])

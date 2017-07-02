@@ -198,7 +198,8 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
 
 
 def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None,
-                             location="d:\\jenkins\\pymy\\%s\\%s%s\\dist\\%s", rootw="/www/htdocs/app/%s/%s",
+                             location="d:\\jenkins\\pymy\\%s\\%s%s\\dist\\%s",
+                             rootw="/www/htdocs/app/%s/%s",
                              rootw2="/lesenfantscodaient.fr", folder_status=".",
                              layout=[("html", "helpsphinx")],
                              modules=["pyquickhelper",
@@ -300,11 +301,10 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
     projects = []
     for module in modules:
 
-        fLOG("+", module, " -- ", layout)
+        fLOG("  +", module, " -- ", layout)
 
         for lay in layout:
             for suf in suffix:
-                print(location)
                 root = os.path.abspath(location %
                                        (module, module, suf, lay[0]))
                 keepsuf = suf
@@ -312,11 +312,12 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                     break
             if not os.path.exists(root):
                 if exc:
-                    raise FileNotFoundError(os.path.abspath(
-                        location % (module, module, suffix[0], lay[0])))
+                    raise FileNotFoundError("first tried '{0}'\n last tried '{1}'".format(root,
+                        os.path.abspath(location % (module, module, suffix[0], lay[0]))))
                 else:
                     fLOG("[publish_teachings_to_web] skip", root)
                     continue
+                fLOG("   ", root)
             if module != "code_beatrix":
                 rw = rootw % (module, lay[1])
             else:
@@ -349,7 +350,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
 
             # pres
 
-            for suffix in ["", "_2A", "_3A", "_1Ap"]:
+            for sufpress in ["", "_2A", "_3A", "_1Ap"]:
                 root = os.path.abspath(location % (
                     module, module, keepsuf, "html"))
                 if not os.path.exists(root):
@@ -360,10 +361,10 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                         continue
                 project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
                                local=root.replace(
-                                   "\\html", "\\html_pres" + suffix),
+                                   "\\html", "\\html_pres" + sufpress),
                                root_local=root.replace(
-                                   "\\html", "\\html_pres" + suffix),
-                               root_web=(rootw % (module, lay[1])).replace("/helpsphinx", "/pressphinx" + suffix).replace("_no_clean", ""))
+                                   "\\html", "\\html_pres" + sufpress),
+                               root_web=(rootw % (module, lay[1])).replace("/helpsphinx", "/pressphinx" + sufpress).replace("_no_clean", ""))
                 projects.append(project)
 
         elif module == "python3_module_template":
