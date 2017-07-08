@@ -85,7 +85,8 @@ class TestHomeBlog(unittest.TestCase):
 
         files, modified = modify_all_posts(blog, blog, exclude=lambda f: False)
         self.assertTrue(len(files) > 0)
-        res = file_build_rss(blog, os.path.join(temp, "xdbrss.xml"))
+        res = file_build_rss(blog, os.path.join(temp, "xdbrss.xml"),
+                             months_delay=100)
         rss = res[0]
         self.assertTrue(os.path.exists(rss))
         res = file_all_keywords(blog,
