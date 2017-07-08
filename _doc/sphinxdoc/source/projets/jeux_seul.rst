@@ -4,6 +4,9 @@
 Jeux de réflexion qui se jouent seul
 ====================================
 
+.. contents::
+    :local:
+
 Pour chacun de ces projets, il faut imaginer un joueur artificiel. La qualité de
 l'affichage est secondaire et l'accent doit être mis avant tout sur les stratégies utilisées par
 ce joueur. Le projet ne peut être validé que si :

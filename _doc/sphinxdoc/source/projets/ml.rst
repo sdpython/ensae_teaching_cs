@@ -4,6 +4,9 @@
 Machine Learning
 ================
 
+.. contents::
+    :local:
+
 Le site `CS 188: Artificial Intelligence (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/lectures.html>`_
 propose des projets informatiques qui ont la particularité de partir d'un squelette existant.
 Ce sont des problèmes de machines learning très guidés où l'essentiel de l'effort

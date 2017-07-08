@@ -4,6 +4,9 @@
 Algorithmes de trading
 ======================
 
+.. contents::
+    :local:
+
 Le projet consiste à construire un algorithme qui proposent des décisions d'achats et de vente
 sur des actions, futures... Voici quelques types de stratégies :
 

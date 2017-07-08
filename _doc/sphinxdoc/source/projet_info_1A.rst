@@ -78,8 +78,10 @@ Liste exhaustive :
 #. Simulation : :ref:`l-sim-panique`
 #. Simulation : :ref:`l-sim-social`
 #. Simulation : :ref:`l-sim-autoroute`
-#. Technique : :ref:`l-tech-smart`
-#. Technique : :ref:`l-tech-domo`
+#. Objets connectés : :ref:`l-tech-smart`
+#. Objets connectés : :ref:`l-tech-domo`
+#. Objets connectés : :re:f`l-visage-reel`
+#. Objets connectés : :re:f`l-parole-reel`
 #. Algo génétique : :ref:`l-gen-optim`
 #. Algo génétique : :ref:`l-gen-bag`
 #. Algo génétique : :ref:`l-gen-tsp`

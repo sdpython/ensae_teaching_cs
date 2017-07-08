@@ -4,6 +4,9 @@
 Jeux mathématiques
 ==================
 
+.. contents::
+    :local:
+
 Ces sujets reposent sur un exposé mathématique.
 
 .. _l-math-wifi:

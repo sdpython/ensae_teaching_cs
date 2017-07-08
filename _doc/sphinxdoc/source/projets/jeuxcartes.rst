@@ -4,6 +4,9 @@
 Jeux de cartes
 ==============
 
+.. contents::
+    :local:
+
 Contrairement aux jeux précédents, les cartes viennent ajouter du hasard qui rend difficile
 l'utilisation des mêmes types de stratégie pour avoir l'ordinateur comme joueur.
 Pour ces projets, l'accent sera mis sur le calcul des probabilités de gain de chaque coup possible.

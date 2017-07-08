@@ -143,6 +143,7 @@ Timeseries - Séries temporelles
   SETAR = Self-Exciting Threshold AutoRegressive
 * `Using predator-prey models on the Canadian lynx series <http://andrewgelman.com/2012/01/28/the-last-word-on-the-canadian-lynx-series/>`_,
   `Inference for nonlinear dynamical systems <http://www.pnas.org/content/103/49/18438.full.pdf>`_
+* `Milestones of Deep Learning <http://www.codesofinterest.com/2017/07/milestones-of-deep-learning.html#more>`_
 
 *Modules*
 

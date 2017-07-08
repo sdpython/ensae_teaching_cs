@@ -4,6 +4,9 @@
 Sécurité, Cryptographie
 =======================
 
+.. contents::
+    :local:
+
 Pas encore de sujets précis mais on peut s'inspirer de ce qui suit.
 
 Liens, Bibliographie

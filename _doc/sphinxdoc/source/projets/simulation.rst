@@ -4,6 +4,9 @@
 Simulations économiques, sociales
 =================================
 
+.. contents::
+    :local:
+
 Assez proches des algorithmes génétiques dans l'implémentation, les simulations
 permettent à partir de règles simples sur le comportement des individus d'obtenir
 des résultats sur l'ensemble d'une population. Le projet doit comporter les élémens suivants :

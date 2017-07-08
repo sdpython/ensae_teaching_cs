@@ -4,6 +4,9 @@
 Jeux de réflexion
 =================
 
+.. contents::
+    :local:
+
 Pour chacun de ces projets, il faut permettre à un joueur de jouer contre l'ordinateur. La qualité de
 l'affichage est secondaire et l'accent doit être mis avant tout sur les stratégies utilisées par
 l'ordinateur. Le projet ne peut être validé que si :

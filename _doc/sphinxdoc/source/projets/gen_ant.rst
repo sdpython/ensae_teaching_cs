@@ -4,6 +4,9 @@
 Algorithmes génétiques, Fourmis
 ===============================
 
+.. contents::
+    :local:
+
 Les algorithmes génétiques ne sont pas ou peu enseignés à l'ENSAE. Chaque sujet
 est l'occasion de découvrir des algorithmes. Chaque sujet considère un problème
 simple et un algorithme d'optimisation génétique décrit par un document.

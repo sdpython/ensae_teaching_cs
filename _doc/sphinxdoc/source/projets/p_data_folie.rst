@@ -4,6 +4,9 @@
 Data en folie
 =============
 
+.. contents::
+    :local:
+
 Il est difficile de résumer les sujets de cette rubrique.
 Il s'agit toujours de triturer des données de différentes façons,
 machine learning, datamining, recherche opérationnelle, texte mining...
@@ -103,7 +106,7 @@ Le projet se déroulera en plusieurs étapes :
 * premiers exemples avec Whoosh
 * définition de l'objectif de recherche
 * évaluation
-* possible extensions
+* prolongements possibles
     * `query rewriting <http://hughewilliams.com/2012/03/19/query-rewriting-in-search-engines/>`_
     * `Rewriting Queries <https://developers.google.com/custom-search/docs/queries>`_
     * `Online Expansion of Rare Queries for Sponsored Search <https://classes.soe.ucsc.edu/ism293/Spring09/material/papers/lec6/quartz.pdf>`_
@@ -113,3 +116,4 @@ Source de textes
 
 * `wikipedia dumps <http://dumps.wikimedia.org/>`_
 * :ref:`f-discourspolitique` (pour récupérer les discours politiques de l'Elysées)
+* :ref:`l-datasources`
