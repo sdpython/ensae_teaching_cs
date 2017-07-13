@@ -59,8 +59,8 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
     """
     yml = []
     pattern = "https://raw.githubusercontent.com/sdpython/%s/master/.local.jenkins.win.yml"
-    modules = ["pyquickhelper", "jyquickhelper", "python3_module_template", "pymmails", "pymyinstall",
-               "pyensae", "pyrsslocal", "pysqllike", "ensae_projects",
+    modules = ["_automation", "pyquickhelper", "jyquickhelper", "python3_module_template",
+               "pymmails", "pymyinstall", "pyensae", "pyrsslocal", "pysqllike", "ensae_projects",
                "ensae_teaching_cs", "code_beatrix", "actuariat_python", "mlstatpy", "jupytalk",
                "teachpyx", "tkinterquickhelper", "cpyquickhelper"]
     for c in modules:
