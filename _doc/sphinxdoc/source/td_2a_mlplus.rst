@@ -279,6 +279,7 @@ Anonymisation des données
 * `Differentially Private Empirical Risk Minimization <http://www.jmlr.org/papers/volume12/chaudhuri11a/chaudhuri11a.pdf>`_
 * `Preserving Privacy of Continuous High-dimensional Data with Minimax Filters <http://www.jmlr.org/proceedings/papers/v38/hamm15.pdf>`_
 * `Privacy for Free: Posterior Sampling and Stochastic Gradient Monte Carlo <http://www.jmlr.org/proceedings/papers/v37/wangg15.pdf>`_
+* `Privatics (INRIA) <https://team.inria.fr/privatics/>`_
 
 *Algorithmes*
 
@@ -731,8 +732,8 @@ Apprentissage sans labels
 * `Transfer Learning for Reinforcement Learning Domains: A Survey <http://www.jmlr.org/papers/volume10/taylor09a/taylor09a.pdf>`_
 * `Unsupervised dimensionality reduction via gradient-based matrix factorization with two adaptive learning rates <http://www.jmlr.org/proceedings/papers/v27/nikulin12a/nikulin12a.pdf>`_
 
-Galleries de problèmes résolus
-++++++++++++++++++++++++++++++
+Galleries de problèmes résolus ou presque
++++++++++++++++++++++++++++++++++++++++++
 
 |pystatpng|
 
@@ -744,3 +745,24 @@ Galleries de problèmes résolus
 *Notebooks*
 
 *(à venir)*
+
+*Images*
+
+* `Time-Contrastive Networks: Self-Supervised Learning from Multi-View Observation <https://arxiv.org/abs/1704.06888>`_ :
+  un robot apprend à imiter les mouvements d'une personne
+  (`vidéo <https://sermanet.github.io/tcn/>`_)
+* `Device Placement Optimization with Reinforcement Learning <https://arxiv.org/pdf/1706.04972.pdf>`_
+
+*Text*
+
+* `Representing Sentences as Low-Rank Subspaces <https://arxiv.org/abs/1704.05358v1>`_
+
+*Histoire*
+
+* `Revisiting Unreasonable Effectiveness of Data in Deep Learning Era <https://arxiv.org/pdf/1707.02968.pdf>`_
+
+*Tutorials*
+
+* `Neural Network Zooo Prequel: Cells and Layers <http://www.asimovinstitute.org/neural-network-zoo-prequel-cells-layers/>`_ :
+  revue d'architectures de réseaux de neurones
+* `Neural Machine Translation (seq2seq) Tutorial <https://github.com/tensorflow/nmt>`_

@@ -320,23 +320,23 @@ Automatisation
 
     * - module
       - description
-    * - `jyquickhelper <http://www.xavierdupre.fr/app/jyquickhelper/helpsphinx/index.html>`_
+    * - :epkg:`jyquickhelper`
       - Fonctions à exécuter depuis un notebook `Jupyter <http://jupyter.org/>`_
     * - `pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/index.html>`_
       - J'ai reçu plus de 120 projets par mail durant l'année 2015-2016 pour plus de 220 élèves.
         Je ne plus plus grand chose manuellement. Ce module s'occupe de télécharger tous les projets
         depuis une boîte mail ou d'envoyer des séries de mails de façon automatiser.
-    * - `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
+    * - :epkg:`pymyinstall`
       - Le module sert avant tout à installer plusieurs centaines de modules avec peu d'instructions,
         quelques outils comme `Scite <http://www.scintilla.org/SciTE.html>`_ ou
         `Graphviz <http://www.graphviz.org/>`_.
         Il sert aussi à fabriquer un setup.
-    * - `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
+    * - :epkg:`pyquickhelper`
       - Génère la documentation associé à ce site, surcouche sur `sphinx <http://www.sphinx-doc.org/en/stable/>`_.
         Le module propose également différentes fonctions pour synchroniser des répertoires,
         exécuter les tests unitaires ou
         uploader des fichiers en FTP (publication de ce site), quelques outils
-        pour `Jupyter <http://jupyter.org/>`_ ou `Jenkins <https://jenkins.io/>`_.
+        pour `Jupyter <http://jupyter.org/>`_ ou :epkg:`Jenkins`.
     * - `pyrsslocal <http://www.xavierdupre.fr/app/pyrsslocal/helpsphinx/index.html>`_
       - Récupération de flux RSS.
 

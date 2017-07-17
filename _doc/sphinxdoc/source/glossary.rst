@@ -202,7 +202,7 @@ Glossaire
         Voir Internet Of Things
 
     Jenkins
-        `Jenkins <http://jenkins-ci.org/>`_ est un logicial d'automatisation de build (et de tâches).
+        :epkg:`Jenkins` est un logicial d'automatisation de build (et de tâches).
         Voir `Build automation with Jenkins <http://www.xavierdupre.fr/blog/2014-12-06_nojs.html>`_.
 
     JIT
