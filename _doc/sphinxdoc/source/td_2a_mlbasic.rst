@@ -103,6 +103,21 @@ Variables catégorielles
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 * `category_encoders <http://contrib.scikit-learn.org/categorical-encoding/>`_
 
+Traitement des valeurs manquantes
++++++++++++++++++++++++++++++++++
+
+(à venir)
+
+|pystatpng| |pystateco|
+
+*Lectures*
+
+* `Missing Data <https://en.wikipedia.org/wiki/Missing_data>`_
+* `Imputation de données manquantes <https://www.math.univ-toulouse.fr/~besse/Wikistat/pdf/st-m-app-idm.pdf>`_
+* `Missing Data & How to Deal: An overview of missing data <https://liberalarts.utexas.edu/prc/_files/cs/Missing-Data.pdf>`_
+* `Additive Non-negative Matrix Factorization for Missing Data <https://arxiv.org/abs/1007.0380>`
+* `Scalable Tensor Factorizations for Incomplete Data <https://arxiv.org/pdf/1005.2197.pdf>`_
+
 Distances
 +++++++++
 
