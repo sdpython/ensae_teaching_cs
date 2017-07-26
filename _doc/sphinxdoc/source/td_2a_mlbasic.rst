@@ -369,6 +369,9 @@ Système de recommandation
 * `Recommendations in Keras using triplet loss <https://github.com/maciejkula/triplet_recommendations_keras>`_
 * `AutoRec: Autoencoders Meet Collaborative Filtering <http://users.cecs.anu.edu.au/~akmenon/papers/autorec/autorec-paper.pdf>`_,
   `Hybrid Recommender System based on Autoencoders <https://hal.inria.fr/hal-01336912/file/AutoEnc.pdf>`_
+* `ACP et factorisation de matrices <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/missing_values_mf.html>`_
+* `The Why and How of Nonnegative Matrix Factorization <https://arxiv.org/abs/1401.5226>`_
+* `A tutorial on Non-Negative Matrix Factorisation with Applications to Audiovisual Content Analysis <http://perso.telecom-paristech.fr/~essid/teach/NMF_tutorial_ICME-2014.pdf>`_
 
 *Modules*
 
