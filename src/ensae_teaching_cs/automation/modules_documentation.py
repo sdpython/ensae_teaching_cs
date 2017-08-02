@@ -21,16 +21,16 @@ def rst_table_modules(classifier=False):
     df = pandas.DataFrame(_.as_dict(rst_link=True) for _ in mod)
     if classifier:
         df = df[["usage", "rst_link", "kind", "version",
-                "license", "purpose", "classifier"]]
+                 "license", "purpose", "classifier"]]
         df["classifier"] = df.apply(
             lambda row: classifiers2string(row["classifier"]), axis=1)
         df.columns = ["usage", "name", "kind", "version",
-                    "license", "purpose", "classifier"]
+                      "license", "purpose", "classifier"]
     else:
         df = df[["usage", "rst_link", "kind", "version",
-                "license", "purpose"]]
+                 "license", "purpose"]]
         df.columns = ["usage", "name", "kind", "version",
-                    "license", "purpose"]
+                      "license", "purpose"]
     df["lname"] = df["name"].apply(lambda s: s.lower())
     df = df.sort_values("lname").drop("lname", axis=1)
     df = df.reset_index(drop=True).reset_index(drop=False)
