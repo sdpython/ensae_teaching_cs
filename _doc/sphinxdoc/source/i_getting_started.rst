@@ -34,10 +34,10 @@ En résumé, le conseil le plus fréquent qu'on donne à ceux qui souhaitent
 installer Python est d'utiliser la distribution `Anaconda <https://www.continuum.io/downloads>`_.
 C'est l'équivalent de `R <https://www.r-project.org/>`_.
 Sans autre étape supplémentaires, elle permet de faire du calcul matriciel
-`numpy <http://www.numpy.org/>`_, de tracer des graphiques avec `matplotlib <http://matplotlib.org/>`_,
+:epkg:`numpy`, de tracer des graphiques avec :epkg:`matplotlib`,
 de manipuler les données `pandas <http://pandas.pydata.org/>`_
 et de faire du machine du machine learning
-`scikit-learn <http://scikit-learn.org/>`_.
+:epkg:`scikit-learn`.
 La plupart des exercices proposés sur ce site n'utilisent pas plus que ce qui est proposé
 dans cette distribution standard. Pour les autres,
 les instructions mentionnées ci-dessous fonctionnent sous Windows, Linux et Mac.
@@ -58,7 +58,7 @@ fournit la plupart d'entre eux. Pour les autres, il faut allez à
 `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
 Certains modules n'existent pas sous forme précompilée à moins de le faire soi-même.
 Et c'est ce que j'ai fait pour certains modules
-comme `xgboost <https://github.com/dmlc/xgboost>`_.
+comme `dlib <http://dlib.net/>`_.
 
 ::
 
@@ -225,7 +225,7 @@ Les dépendances s'installent comme suit :
 
 Certains notebooks requièrent des outils supplémentaires :
 
-* `graphviz <http://www.graphviz.org/>`_
+* :epkg:`GraphViz`
 
 .. index:: pip, ligne de commande
 
@@ -371,8 +371,6 @@ En vrac
 
 * `Git <http://git-scm.com/>`_ + `GitHub <https://github.com/>`_ : pour suivre ses projets avec Git
 * `TortoiseGit <https://code.google.com/p/tortoisegit/>`_ (Windows)
-* `SourceTree <http://www.sourcetreeapp.com/>`_ (Windows, Mac)
-* `Giggle <https://wiki.gnome.org/Apps/giggle>`_ (Linux)
 
 **Archivage distant**
 
@@ -446,9 +444,9 @@ Elles sont facilement téléchargeables avec ces deux modules :
 
 Pour être compilée, la documentation requiert également :
 
-* `GraphViz <http://www.graphviz.org/>`_ : représenter des graphes
+* :epkg:`GraphViz` : représenter des graphes
 * :epkg:`InkScape`
-* :epkg:`MiKTex` (Windows seulement)
+* :epkg:`MiKTeX` (Windows seulement)
 * :epkg:`pandoc`
 
 **Continuous build**
@@ -465,8 +463,9 @@ Pour être compilée, la documentation requiert également :
   `Next executions <https://wiki.jenkins-ci.org/display/JENKINS/Next+Executions>`_,
   `Collapsing Console Sections Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Collapsing+Console+Sections+Plugin>`_),
   `Startup Trigger <https://wiki.jenkins.io/display/JENKINS/Startup+Trigger>`_ : automatisation de build
-* `Visual Studio Community <https://www.visualstudio.com/>`_ : C++, C#, F#, Python avec `PTVS <https://microsoft.github.io/PTVS/>`_
-* `MinGW <http://www.mingw.org/>`_ : compilateur C++
+* :epkg:`Visual Studio Community Edition 2015` : C++, C#, F#, Python 
+  avec `PTVS <https://microsoft.github.io/PTVS/>`_
+* :epkg:`MinGW` : compilateur C++
 
 **Compression**
 
