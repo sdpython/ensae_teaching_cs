@@ -1,0 +1,26 @@
+
+.. blogpost::
+    :title: PyData Seattle - des idées à prendre
+    :keywords: python, pydata, modules, catboost, fasttext, pomegranate, Scattertext, PyData, z3
+    :date: 2017-08-03
+    :categories: conférences
+
+    Les vidéos de la conférence
+    sont en ligne et il y a toujours de bonnes
+    idées à prendre :
+    `PyData Seattle 2017 <https://www.youtube.com/playlist?list=PLGVZCDnMOq0rxoq9Nx0B4tqtr891vaCn7>`_.
+    Quelques modules à suivre :
+    `Scattertext <https://github.com/JasonKessler/scattertext>`_,
+    `pomegranate <https://github.com/jmschrei/pomegranate>`_.
+    Un dernier module qui montre que toutes les grandes boîtes
+    ont leur outil de machine learning.
+    `catboost <https://github.com/catboost/catboost>`_
+    est optimisé pour la construction de forêt d'arbres sur
+    des variables catégorielles
+    tout comme Facebook avait sorti le sien
+    sur le texte
+    `fasttext <https://fasttext.cc/>`_.
+    Enfin, un champ que je connais moins,
+    `z3 <https://github.com/Z3Prover/z3>`_, un outil
+    de preuve systématique, qui pourrait servir un jour à traiter
+    des données.

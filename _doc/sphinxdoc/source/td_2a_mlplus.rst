@@ -756,6 +756,8 @@ Galleries de problèmes résolus ou presque
 *Text*
 
 * `Representing Sentences as Low-Rank Subspaces <https://arxiv.org/abs/1704.05358v1>`_
+* `SQuAD: 100,000+ Questions for Machine Comprehension of Text <https://arxiv.org/abs/1606.05250>`_,
+  cette compétition fera sans doute émerger la nouvelle version des moteurs de recherche.
 
 *Histoire*
 
@@ -766,3 +768,16 @@ Galleries de problèmes résolus ou presque
 * `Neural Network Zooo Prequel: Cells and Layers <http://www.asimovinstitute.org/neural-network-zoo-prequel-cells-layers/>`_ :
   revue d'architectures de réseaux de neurones
 * `Neural Machine Translation (seq2seq) Tutorial <https://github.com/tensorflow/nmt>`_
+
+*Deep Learning Artistique*
+
+* `Pramit Choudhary - Learn to be a painter using Neural Style Painting <https://www.youtube.com/watch?v=WXDr5H1hVOU&list=PLGVZCDnMOq0rxoq9Nx0B4tqtr891vaCn7&index=60>`_ (vidéo)
+* `Visual Attribute Transfer through Deep Image Analogy <https://arxiv.org/abs/1705.01088>`_
+* `Coherent Online Video Style Transfer <https://arxiv.org/abs/1703.09211>`_
+* `StyleBank: An Explicit Representation for Neural Image Style Transfer <https://arxiv.org/abs/1703.09210>`_
+* `msracver/Deep-Image-Analogy <https://github.com/msracver/Deep-Image-Analogy>`_
+
+*Compétitions et datasets*
+
+* `ImageNet <http://www.image-net.org/>`_
+* `SQuAD The Stanford Question Answering Dataset <https://rajpurkar.github.io/SQuAD-explorer/>`_

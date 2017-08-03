@@ -75,6 +75,7 @@ Source de données
 * *texte* `soTweet: Studying Twitter at Scale <http://www-sop.inria.fr/members/Arnaud.Legout/Projects/sotweet.html>`_: base de 500 millions de tweets et 23 milliards de liens
 * *texte* `WordNet <https://wordnet.princeton.edu/wordnet/>`_, base de données anglaises sur le vocabulaire, la grammaire, les synonymes...
 * *texte* `dump wikipedia <https://dumps.wikimedia.org/backup-index.html>`_
+* *texte* `SQuAD The Stanford Question Answering Dataset <https://rajpurkar.github.io/SQuAD-explorer/>`_
 * *vidéo* `Jiku <http://www.jiku.org/index.html>`_, vidéo d'événements, de concerts
 * *vidéo* `YouTube 8M <https://research.google.com/youtube8m/people.html>`_, 8 millions de vidéo YouTube par Google
 * *vidéo* `YouTube 1M Sports <https://github.com/gtoderici/sports-1m-dataset>`_, 1 millions de vidéo annotées
