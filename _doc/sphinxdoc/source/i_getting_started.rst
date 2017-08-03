@@ -463,7 +463,7 @@ Pour être compilée, la documentation requiert également :
   `Next executions <https://wiki.jenkins-ci.org/display/JENKINS/Next+Executions>`_,
   `Collapsing Console Sections Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Collapsing+Console+Sections+Plugin>`_),
   `Startup Trigger <https://wiki.jenkins.io/display/JENKINS/Startup+Trigger>`_ : automatisation de build
-* :epkg:`Visual Studio Community Edition 2015` : C++, C#, F#, Python 
+* :epkg:`Visual Studio Community Edition 2015` : C++, C#, F#, Python
   avec `PTVS <https://microsoft.github.io/PTVS/>`_
 * :epkg:`MinGW` : compilateur C++
 
