@@ -288,9 +288,7 @@ Anonymisation des données
 
 *Modules*
 
-* `AGD Tools <https://github.com/SGMAP-AGD/Tools>`_ : ce module ne semble pas maintenu,
-  la partie intéressante est dans les fichier
-  `anomimy*.py <https://github.com/SGMAP-AGD/Tools/tree/master/agd_tools>`_.
+* `AGD Tools <https://github.com/SGMAP-AGD/anonymisation>`_ : ce module s'accompagne d'un wiki et de notebooks.
 
 Machine Learning sur des données cryptées
 +++++++++++++++++++++++++++++++++++++++++
