@@ -10,17 +10,11 @@ Algorithmes et programmation
 `ENSAE - OMI1C4 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100115>`_,
 `ENSAE - OMI1C9 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100332>`_
 
-Cours animé par Xavier Dupré. Intervenants 2015-2016 :
-Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_,
-Pierre Cordier, `Effiscience <http://effiscience.solutions/>`_,
-Yves Gerey, `A2iA <http://www.a2ia.com/en>`_,
-Charles de Ravel d'Esclapon, `Etaonis <http://www.etaonis.fr/>`_,
-Arthur Renaud, `Etaonis <http://www.etaonis.fr/>`_,
-Mehdi Seddar, `Artfact <http://www.artefact.is/>`_,
-Marc-Antoine Weisser, `Supélec <http://www.supelec.fr/>`_
-
-Ce cours s'étale sur 12 séances de travaux dirigés (TD) d'une durée de 2h. Le cours est décrit plus
-en détail dans cette présentation :
+Cours animé par
+`Xavier Dupré <http://www.xavierdupre.fr/>`_
+depuis 2001.
+Ce cours est principalement composé de séances de travaux dirigés (TD).
+Le cours est décrit plus en détail dans cette présentation :
 `ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_. |slideslogo|
 
 .. contents::
@@ -35,11 +29,12 @@ Le second semestre et facultatif et est évalué par :ref:`projet informatique <
 
 ------------
 
-TD - les bases
+TD - Les bases
 ==============
 
-Les six premières séances font les éléments de syntaxe propres à
-la `programmation impérative <https://fr.wikipedia.org/wiki/Programmation_imp%C3%A9rative>`_.
+Les premières séances exposent les éléments de syntaxe propres à
+la `programmation impérative <https://fr.wikipedia.org/wiki/Programmation_imp%C3%A9rative>`_
+et au langage :epkg:`Python`.
 
 .. toctree::
     :maxdepth: 2
@@ -51,7 +46,9 @@ la `programmation impérative <https://fr.wikipedia.org/wiki/Programmation_imp%C
     notebooks/_gs1a_5_classes
 
 Les programmes sont des assemblages de petites fonctions qui font souvent
-les mêmes choses. Voici une idée de ces *mêmes choses* qu'on fait tout le temps
+les mêmes choses. Les programmeurs expérimentés sont plus rapides
+en partie parce qu'ils accumulent des bouts de codes qu'ils réutilisent.
+Voici une idée de ces *mêmes choses* qu'on fait tout le temps
 et qu'il est important de comprendre.
 
 .. toctree::
@@ -117,8 +114,9 @@ tests unitaires, le templating, les sites Web, le scraping, encoding, les notebo
 Deux exercices sont suggérés pour une séance de deux heures à choisir parmi :
 
 #. Constuire un site web avec `Flask <http://flask.pocoo.org/>`_,
-   `Django <https://www.djangoproject.com/>`_ ou
-   `Falcon <https://falconframework.org/>`_
+   `Django <https://www.djangoproject.com/>`_,
+   `Falcon <https://falconframework.org/>`_,
+   `Tornado <https://github.com/tornadoweb/tornado>`_
 #. Ecrire un test unitaire pour un exercice d'une séance précédente
 #. Appliquer une des méthodes décrites dans `Profiling <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/completion_profiling.html#completionprofilingrst>`_
    à un exercice d'une séance précédente
@@ -129,7 +127,7 @@ Deux exercices sont suggérés pour une séance de deux heures à choisir parmi 
 
 ------------
 
-TD - algorithmes
+TD - Algorithmes
 ================
 
 Ces séances sont centrées autour de l'utilisation de la programmation
@@ -158,7 +156,7 @@ Ces deux façons de faire sont présentées durant trois séances à choisir par
     notebooks/_gs1a_A_edit_distance
     notebooks/_gs1a_A_parcours_graphe
 
-**Notes**
+*Notes*
 
 La relecture du TD sur l'optimisation sous contrainte est conseillée
 à ceux qui souhaitent optimiser des portefeuilles d'actions.
@@ -175,9 +173,9 @@ en est l'illustration.
 
 .. _l-entretiens:
 
-**Entretiens d'embauche**
+*Entretiens d'embauche*
 
-Les recruteurs testent de plus en plus votre capacité à programmer avec des exercices
+Les recruteurs testent votre capacité à programmer avec des exercices
 où ils vérifient que vous savez écrire du code et comparer la vitesse de deux
 algorithmes. Le plus souvent,
 il existe une façon naïve d'arriver au résultat et il existe un algorithme plus rapide.
@@ -192,7 +190,7 @@ les plus complexes.
 La programmation dynamique apparaît souvent quand on considère la solution sous forme récurrente.
 La dichotomie consiste à résoudre à couper l'ensemble de départ en deux,
 à résoudre le problème pour les deux sous-ensembles,
-puis à fusionner les deux solutions. Ce cela ne dépend pas du langage Python.
+puis à fusionner les deux solutions. Cela ne dépend pas du langage Python.
 Pour vous exercer :
 
 .. toctree::
@@ -211,7 +209,7 @@ Et pour apprendre :
 
     notebooks/tri_nlnd
 
-**Quelques sources d'exercices**
+*Quelques sources d'exercices*
 
 * `Rosalind <http://rosalind.info/problems/topics/>`_
 * `Google Jam <https://code.google.com/codejam/>`_
@@ -219,10 +217,10 @@ Et pour apprendre :
 
 ------------
 
-TD - calcul matriciel, graphes, données
-=======================================
+TD - calcul matriciel, graphes, données - data science
+======================================================
 
-Les quatre sujets importants des six dernières séances sont la programmation dynamique,
+Les quatre sujets importants des dernières séances sont la programmation dynamique,
 la dichotomie, les dataframe, les graphiques. La séance 9, la fin de la séance
 10 et la séance 11 ne sont pas indispensables et seront vus plus en détail l'année prochaine.
 Toutefois, **la séance sur les dataframes propose des outils de manipulation et visualisation
@@ -256,9 +254,7 @@ les mêmes résultats. Voici quelques exemples :
 
     notebooks/code_multinomial
 
-La dernière séance est une séance notée. Tous les documents sont autorisés. Quelques questions
-peuvent requérir l'utilisation des outils présentées durant les séances 9 à 12. Toutefois,
-si tel était le cas, ce serait très proche d'une solution proposée lors des TD.
+La dernière séance est une séance notée. Tous les documents sont autorisés.
 
 .. _l-td1a-start:
 
@@ -281,12 +277,12 @@ Elles sont facilement téléchargeables avec ces deux modules :
 Bibliographie
 =============
 
-**Cheat Sheet**
+*Cheat Sheet*
 
 * `Aide Mémoire Python <http://www.le-memento.fr/python.html>`_
 * `Syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_
 
-**Liens**
+*Liens*
 
 * `Message de service aux débutants en Python <http://sametmax.com/message-de-service-aux-debutants-en-python/>`_
 * `Cours et tutos <http://sametmax.com/cours-et-tutos/>`_
@@ -306,7 +302,7 @@ Bibliographie
 * `Love Python <http://love-python.blogspot.fr/>`_ *(2016/03)*
 * `The Hitchhiker's Guide to Python! <http://docs.python-guide.org/en/latest/>`_ *(2016/06)*
 
-**Livres**
+*Livres*
 
 * `Apprentissage de la programmation <http://inforef.be/swi/python.htm>`_, Gérald Swinnen
 * `Une introduction à Python 3 <https://perso.limsi.fr/pointal/python:courspython3>`_
@@ -318,7 +314,7 @@ Bibliographie
 * `Automate Boring Stuff with Python <https://automatetheboringstuff.com/>`_ (2016/03)
 * `Intermediate Python Release <http://pythontips.com/2015/08/17/intermediate-python-released/#more-665>`_ (2016/03)
 
-**Cours**
+*Cours*
 
 * `Apprenez à programmer en Python <http://openclassrooms.com/courses/apprenez-a-programmer-en-python>`_ (openclassrooms)
 * `A gallery of interesting Jupyter Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
@@ -328,7 +324,7 @@ Bibliographie
 * `Le Python en prépas <http://web.isen-bretagne.fr/livres/python/>`_ (2016/04)
 * `Algorithmique et programmation en CPGE <http://python-liesse.enseeiht.fr/cours/index.html>`_ *(2016/04)*
 
-**Exercices et jeux**
+*Exercices et jeux*
 
 * `codingame <http://www.codingame.com/>`_
 * `Quelques exercices du Project Euler <http://mathprepa.fr/python-project-euler-mpsi/>`_ *(2016/04)*
@@ -336,12 +332,24 @@ Bibliographie
 * `The Convex Hull Problem <http://nbviewer.jupyter.org/url/norvig.com/ipython/Convex%20Hull.ipynb>`_ *(2016/08)*
 * `Rosalind <http://rosalind.info/problems/topics/>`_ *(2016/09)*
 
-**MOOC**
+*MOOC*
 
 * `Code Academy Python <http://www.codecademy.com/tracks/python>`_ (utilise Python 2.7)
 * `Un premier Mooc Inria sur Python <https://www.france-universite-numerique-mooc.fr/courses/inria/41001/Trimestre_4_2014/about>`_
 * `pyvideo.org <http://pyvideo.org/>`_
 
-**Outils**
+*Outils*
 
 * `PythonTutor <http://pythontutor.com/>`_ : pour suivre pas à pas l'exécution d'un programme (petit)
+
+Intervenants
+============
+
+* *2015-2016* :
+  Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_,
+  Pierre Cordier, `Effiscience <http://effiscience.solutions/>`_,
+  Yves Gerey, `A2iA <http://www.a2ia.com/en>`_,
+  Charles de Ravel d'Esclapon, `Etaonis <http://www.etaonis.fr/>`_,
+  Arthur Renaud, `Etaonis <http://www.etaonis.fr/>`_,
+  Mehdi Seddar, `Artfact <http://www.artefact.is/>`_,
+  Marc-Antoine Weisser, `Supélec <http://www.supelec.fr/>`_.

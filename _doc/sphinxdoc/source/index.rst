@@ -3,9 +3,9 @@ Python dans tous ses états
 ==========================
 
 Contenu des séances de travaux pratiques en programmation
-que je dispense à l'`ENSAE <http://www.ensae.fr/>`_.
+que je dispense à l':epkg:`ENSAE`.
 Ces cours s'appuient principalement sur
-le langage `Python <https://www.python.org/>`_.
+le langage :epkg:`Python`.
 Le contenu est librement disponible sur `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs>`_ |gitlogo|
 et permet à quiconque de contribuer à ce cours.
 Il existe trois formats disponibles :
@@ -13,8 +13,8 @@ Il existe trois formats disponibles :
 `blanc <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_,
 `bleu <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
 Les changements importants sont notés sur le :ref:`blog <ap-main-0>`
-associé à ce cours, les autres :ref:`l-completed-todolist`, les améliorations envisagées
-:ref:`l-issues-todolis`.
+associé à ce cours, certains modifications prévues
+sont notés sur `Waffle/ensae_teaching_cs <https://waffle.io/sdpython/ensae_teaching_cs>`_.
 
 .. |gitlogo| image:: _static/git_logo.png
              :height: 20
@@ -28,7 +28,9 @@ Avant-propos
 Les langages `R <https://www.r-project.org/>`_ et
 `Python <https://www.python.org/>`_ sont devenus
 incontournables dans le domaine des statistiques.
-Ils sont simples, open source, s'apprennent rapidement, sont utilisés
+Ils sont simples,
+`open source <https://fr.wikipedia.org/wiki/Open_source>`_,
+s'apprennent rapidement, sont utilisés
 par beaucoup et dispose de nombreuses pages, blogs, listes
 de diffusions qui leur sont dédiées.
 `R <https://www.r-project.org/>`_ est le terrain de jeu préféré des chercheurs
@@ -44,7 +46,7 @@ s'amuser.
 
 **3 niveaux**
 
-Les cours proposés sont de difficultés croissantes et orientés pour un statisticien ou data scientist.
+Les cours proposés sont de difficultés croissantes et orientés pour un statisticien ou un data scientist.
 La pratique est un élément essentiel de l'apprentissage de la programmation.
 Quoi qu'on en dise, il faut aussi être créatif.
 
@@ -56,7 +58,6 @@ Quoi qu'on en dise, il faut aussi être créatif.
 Le :ref:`blog <ap-main-0>` associé à ce site publie des liens vers des vidéos,
 des données, met en valeur certaines mises à jour, aborde des sujets connexes
 aux enseignements proposés.
-
 Chaque cours est validé par un projet et c'est principalement durant cet exercice
 qu'on apprend et qu'on exprime ses idées. Dire qu'on sait programmer simplement
 parce qu'on a réussi les exercices du cours serait un peu comme prétendre
@@ -81,19 +82,24 @@ Contenu des enseignements
     10. Galleries d'exemples <i_galleries>
     11. Index <i_index>
 
-Getting started
----------------
+Getting Started - Démarrer
+--------------------------
 
 .. index: notebook, installation, prérequis
+
+L'immense majorité des langages de programmation est de langue anglaise.
+La documentation de tous les logiciels partagés est en anglais.
+Certains paragraphes y sont souvent présents comme
+`Getting Started <https://www.python.org/about/gettingstarted/>`_.
 
 Notebooks
 ^^^^^^^^^
 
 Les séances utilisent les `notebooks Jupyter <http://jupyter.org/>`_.
-Ils sont de plus en plus fréquent lors des conférences scientifiques et offre
-un espace de travail réactif, agréable et très pratique quant il s'agit de
+C'est le support privilégiés des chercheurs lors des conférences scientifiques.
+Il offre un espace de travail réactif, agréable et très pratique quand il s'agit de
 partager son travail.
-Chaque séance mélanage notions et exerices qu'on peut faire directement dans le notebook
+Chaque séance mélange notions et exerices qu'on peut faire directement dans le notebook
 une fois téléchargé. La correction est également rédigée sous forme de notebook afin de
 pouvoir aisément *jouer* avec la solution.
 
@@ -106,13 +112,14 @@ Démarrage
 Voir :ref:`l-installation-courte`.
 
 Le langage est devenu populaire aussi parmi les data scientists grâce à un ensemble
-de librairies qui ont offert un service équivalent à ce que propose `R <https://www.r-project.org/>`_,
+de librairies qui ont offert un service équivalent à ce que propose `R <https://www.r-project.org/>`_.
 `pandas <http://fr.wikipedia.org/wiki/Panda>`_,
 `numpy <http://www.numpy.org/>`_,
 `matplotlib <http://matplotlib.org/>`_,
 `scikit-learn <http://scikit-learn.org/stable/>`_
-et qu'il a su réinventer la façon de travailler avec les
-notebooks et `Jupyter <http://jupyter.org/>`_.
+ont élevé le niveau de fonctionnalités, les
+`notebooks Jupyter <http://jupyter.org/>`_
+ont changé la façon de travailler.
 Les modules les plus utilisés sont fournis sur toutes les plate-formes avec la distribution
 `Anaconda <https://www.continuum.io/downloads>`_.
 Sous Windows, le site
@@ -126,7 +133,7 @@ Dépendences et automatisation
 Ces cours représentent plus de 60 heures de cours et travaux pratiques suivis
 par plus de 200 élèves de l'ENSAE répartis sur trois années, la réception d'une centaine
 de projets. Cela nécessite un peu d'automatisation implémentée en Python
-mise à disposition sous forme de modules :ref:`listes des dépendances <ci-status>`.
+mise à disposition sous forme de modules (voir :ref:`listes des dépendances <ci-status>`).
 
 En diagonal
 -----------

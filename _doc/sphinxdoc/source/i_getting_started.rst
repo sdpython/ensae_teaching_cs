@@ -13,7 +13,7 @@ Getting started
 
 Lorsqu'on fait des statistiques, le language Python est loin d'être
 aussi complet que `R <https://www.r-project.org/>`_
-qui a été pensé dans ce but. Il faut lui ajouter plusieurs dizaine
+qui a été pensé dans ce but. Il faut lui ajouter plusieurs dizaines
 de modules. C'est à ce moment qu'on découvrir les subtilités dans les différents
 systèmes d'exploitations, les compilateurs, les dépendances, la ligne de commande.
 Ce paragraphe décrit un moyen d'installation Python sur les trois
@@ -33,7 +33,7 @@ En résumé : Anaconda
 En résumé, le conseil le plus fréquent qu'on donne à ceux qui souhaitent
 installer Python est d'utiliser la distribution `Anaconda <https://www.continuum.io/downloads>`_.
 C'est l'équivalent de `R <https://www.r-project.org/>`_.
-Sans autre étape supplémentaires, elle permet de faire du calcul matriciel
+Sans autre étape supplémentaire, elle permet de faire du calcul matriciel
 :epkg:`numpy`, de tracer des graphiques avec :epkg:`matplotlib`,
 de manipuler les données `pandas <http://pandas.pydata.org/>`_
 et de faire du machine du machine learning
@@ -43,7 +43,7 @@ dans cette distribution standard. Pour les autres,
 les instructions mentionnées ci-dessous fonctionnent sous Windows, Linux et Mac.
 
 * Installation `Anaconda <https://www.continuum.io/downloads>`_ (python 64 bit)
-* Mise à jour de la distribution avec ``conda update --all``.
+* Mise à jour de la distribution avec ``conda update --all`` (en ligne de commande).
 
 Pour installer le module implémenté pour ce cours :
 
@@ -69,13 +69,13 @@ Linux en ligne de commande, connexion SSH
 +++++++++++++++++++++++++++++++++++++++++
 
 Voir `Install Miniconda through SSH connection <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-11-01_anaconda_ssh.html>`_.
-Cela fonction avec les distributions `Ubuntu 14.04 <http://releases.ubuntu.com/14.04/>`_
+Cela fonctionne avec les distributions `Ubuntu 14.04 <http://releases.ubuntu.com/14.04/>`_
 et `Ubuntu 16.04 <http://releases.ubuntu.com/16.04/>`_.
 
 IDE
 +++
 
-Un IDE est un `environnement de développemen <Environnement de développement>`_.
+Un IDE est un `environnement de développement <https://fr.wikipedia.org/wiki/Environnement_de_d%C3%A9veloppement>`_.
 Et comme on ne fait pas tout depuis un notebook, il faut en choisir un un.
 
 * `Atom <https://atom.io/>`_
@@ -107,7 +107,8 @@ pip, python et ligne de commande
 
 Le language python s'est doté d'un système de distribution de modules (ou *packages*)
 qui est aisément accessible depuis la `ligne de commande <http://fr.wikipedia.org/wiki/Interface_en_ligne_de_commande>`_.
-Sous Windows, on peut lancer la ligne de commande par la commande ``cmd``. On obtient une fenêtre noire.
+Sous Windows, on peut lancer la ligne de commande par la commande ``cmd``.
+Sous Linux ou OS/X, c'est une fenêtre terminal (Linux, OS/X).
 Il suffit alors de se déplacer dans le répertoire d'installation de Python ::
 
     cd c:\Python36_x64\Scripts
@@ -146,24 +147,24 @@ Dans ce cas, il faut aller voir sur ce site
 `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
 s'il est disponible. S'il ne l'est pas, l'installation du module est réservée aux experts.
 
-conda et pip
+conda ou pip
 ++++++++++++
 
-Il faut ouvrir une fenêtre ligne de commande (Windows)
-ou une fenêtre terminal (Linux, OS/X) et se placer dans le répertoire de la distribution.
-L'installation dépend ensuite dy système d'exploitation et de la
-distribution choisie. Dans tous les cas, il faut se place
-
-**Anaconda**
-
-* module standard : ``conda install <module>``
-* module rare ou sans Anaconda : ``pip install <module>``
+:epkg:`Anaconda` maintient des versions de librairies Python.
+Pour tous les modules de cette liste,
+`Anaconda Package List <https://docs.continuum.io/anaconda/packages/pkg-docs>`_,
+il faut utiliser ``conda install <module>``.
+Pour les autres, ``pip install <module>``.
+Cela ne fonctionne qu'avec la distribution
+:epkg:`Anaconda`.
 
 L'instruction ``pip install`` ne fonctionne pas sous Windows lorsque le module
-est implémenté en Python et C++. C'est pourquoi il est préférable d'installer
+est implémenté en :epkg:`Python` et :epkg:`C++`.
+C'est pourquoi il est préférable d'installer
 une version précompilée.
 
-**dépendances**
+Dépendances
++++++++++++
 
 Par défaut, l'installation d'un module implique celle de ses dépendances
 ce qu'il est possible d'éviter :
@@ -175,16 +176,22 @@ ce qu'il est possible d'éviter :
 Installer un module avec pymy_install
 +++++++++++++++++++++++++++++++++++++
 
-Le module `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
+Le module :epkg:`pymyinstall`
 recherche la meilleure façon d'installer un module quelque soit votre installation.
-Pour l'installer ou le mettre à jour : ::
+Pour l'installer ou le mettre à jour :
+
+::
 
     pip install pymyinstall --upgrade
 
 L'installation du module crée deux scripts,
 ``pymy_install3`` pour installer un module,
 ``pymy_update3`` pour mettre à jour.
-Le module permet d'installer un ensemble de modules ::
+Le module permet aussi d'installer un ensemble de modules.
+La ligne suivante installe un module développé pour ce cours
+et ses dépendances :
+
+::
 
     pymy_install3 --set=pyensae
 
@@ -198,6 +205,7 @@ ces enseignements ::
 
     pip uninstall -y actuariat_python
     pip uninstall -y code_beatrix
+    pip uninstall -y cpyquickhelper
     pip uninstall -y ensae_projects
     pip uninstall -y ensae_teachings_cs
     pip uninstall -y jupytalk
@@ -215,10 +223,9 @@ ces enseignements ::
 Configuration pour ces cours
 ++++++++++++++++++++++++++++
 
-Les notebooks utilisent le module `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
+Les notebooks utilisent le module :epkg:`pyensae`
 développé pour ces enseignements. Pour installer ses dépendances, il faut utiliser le module
-`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
-Les dépendances s'installent comme suit :
+:epkg:`pymyinstall`. Les dépendances s'installent comme suit :
 
     pymy_install3 --set=ensae_teaching_cs
     pip install ensae_teaching_cs
@@ -239,7 +246,7 @@ Distributions
 
 .. index:: anaconda, winpython
 
-* `Anaconda <http://continuum.io/downloads#py34>`_ (Windows, Linux, Mac).
+* :epkg:`Anaconda` (Windows, Linux, Mac).
   Sous Linux ou Mac, la distribution n'interfère pas avec la distribution existante
   souvent différente. C'est un point très appréciable. Les modules de la distribution ne sont
   pas tous à jour. Il faut penser à mettre à jour avec la commande ``conda install <module>``
@@ -259,11 +266,11 @@ Distributions
   pour la recopier sur un autre ordinateur. On peut également préparer sa propre version
   `How To Make WinPython <https://github.com/winpython/winpython/wiki/How-To-Make-WinPython>`_.
 
-* Distribution officielle de `python <https://www.python.org/>`_, il faut ensuite
+* Distribution officielle de :epkg:`Python`, il faut ensuite
   installer de nombreux modules (voir :ref:`l-data2amod`) pour obtenir
   une distribution équivalente aux deux précédentes.
 
-* `Miniconda <http://conda.pydata.org/miniconda.html>`_ est une version light de Anaconda
+* :epkg:`miniconda` est une version light de :epkg:`Anaconda`
   sans tous ces packages. Elle peut être installée depuis une ligne de commande, via
   une connexion SSH.
   Voir `Install Anaconda through SSH connection <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-11-01_anaconda_ssh.html>`_.
@@ -276,75 +283,37 @@ Modules incournables pour un data scientist
 ===========================================
 
 Les modules indispensables sont intégrés à la distribution
-`Anaconda <https://www.continuum.io/downloads>`_, `WinPython <https://winpython.github.io/>`_
-ou le setup préparée pour l'école `Windows Setup <http://www.xavierdupre.fr/enseignement/>`_
-construit avec le module
-`pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_.
+`Anaconda <https://www.continuum.io/downloads>`_, `WinPython <https://winpython.github.io/>`_.
 
-**Les indispensables**
+*Les indispensables*
 
-* `dask <http://dask.pydata.org/en/latest/>`_ : dataframe distribué et capables de gérer des gros volumes de données (> 5Go)
-* `Jupyter <http://jupyter.org/>`_ : gestion des notebooks (des pages blanches mélangeant code, équations, graphiques)
+* `dask <http://dask.pydata.org/en/latest/>`_ :
+  dataframe distribué et capables de gérer des gros volumes de données (> 5Go)
+* `Jupyter <http://jupyter.org/>`_ :
+  gestion des notebooks (des pages blanches mélangeant code, équations, graphiques)
 * `matplotlib <http://matplotlib.org/>`_ : graphes scientifiques
 * `numpy <http://www.numpy.org/>`_ : calcul matriciel
-* `pandas <http://pandas.pydata.org/>`_ : gestion de `DataFrame <http://en.wikipedia.org/wiki/Data_frame>`_
+* `pandas <http://pandas.pydata.org/>`_ :
+  gestion de `DataFrame <http://en.wikipedia.org/wiki/Data_frame>`_
 * `Scipy <http://www.scipy.org/>`_ : calcul scientifiques
 * `scikit-learn <http://scikit-learn.org/stable/>`_ : machine learning, statistique descriptive
 * `statsmodels <http://statsmodels.sourceforge.net/>`_ : séries temporelles
 
-**Dépendances**
-
-* `jinja2 <http://jinja.pocoo.org/>`_ : moteur de rendu HTML
-* `pyzmq <http://zeromq.github.io/pyzmq/>`_ : connecteur pour `ØMQ <http://zeromq.org/>`_ (librairie de sockets, communication entre plusieurs machines)
-* `six <https://pythonhosted.org/six/>`_ : librairie de conversion entre Python 2 et 3
-* `tornado <http://www.tornadoweb.org/en/stable/>`_ : server web
-
-**Visualisation**
+*Visualisation*
 
 Voir `10 plotting libraries at PyData 06/14/2016 in Paris <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_.
 
-**Jeux**
+*Jeux*
 
 * `pygame <http://www.pygame.org/>`_
 * `kivy <http://kivy.org/#home>`_ : pour faire des jeux ou des applications pour tablettes, téléphones
 
-**Pour les TD et projets à l'ENSAE**
+*Pour les TD et projets à l'ENSAE*
 
 * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ : outils pour les élèves de l'ENSAE
 * `pyquickhelper <http://www.xavierdupre.fr/app/`pyquickhelper/helpsphinx/index.html>`_ : outils d'automatisation
 
-**Spécialistes**
-
-* `cvxopt <http://cvxopt.org/>`_ : optimisation quadratique sous contraintes
-  (lire `Install cvxopt on Ubuntu <http://www.xavierdupre.fr/blog/2014-11-23_nojs.html>`_, sous Windows,
-  il faut aller à `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_)
-* `Flask <http://flask.pocoo.org/>`_ : outils pour produire un server web en Python (plus simple que `django <http://www.django-fr.org/>`_)
-* `openpyxl <http://pythonhosted.org/openpyxl/>`_ : conversion de DataFrame en feuille Excel,
-* `Pillow <https://github.com/python-imaging/Pillow>`_ : traitement d'image
-* `liblinear <http://www.csie.ntu.edu.tw/~cjlin/liblinear/>`_ : calcul matriciel en grande dimension
-* `opencv <http://opencv.org/>`_ : traitement d'image, reconnaissance des formes
-* `simplecv <http://simplecv.org/>`_ : Python et Kinect, vision
-* `PyQt5 <https://www.riverbankcomputing.com/software/pyqt/download>`_ : interfaces graphiques
-* `sphinx <http://sphinx-doc.org/>`_ : génération de documentation (dont celle-ci)
-
-**Python et autres langages**
-
-* `Cython <http://www.cython.org/>`_ : Python et C++
-* `pythonnet <https://github.com/pythonnet/pythonnet>`_ : Python et C#
-* `rpy2 <https://bitbucket.org/lgautier/rpy2>`_ : Python et R
-* `sas7bdat <https://pypi.python.org/pypi/sas7bdat>`_ : Python et SAS
-
-**Internet / SSH**
-
-* `ansiconv <http://pythonhosted.org/ansiconv/>`_ : conversion de texte ANSI en unicode (sortie linux)
-* `ansi2html <https://github.com/ralphbean/ansi2html/>`_ : conversion de texte ANSI en HTML (sortie linux)
-* `BeautifulSoup <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>`_ : parser du HTML
-* `ecdsa <https://pypi.python.org/pypi/pycrypto/>`_ : dépendance de paramiko
-* `paramiko <http://www.paramiko.org/>`_ : utile pour créer une connexion SSH
-* `pycryptodomex <https://pypi.python.org/pypi/pycryptodomex/>`_ : crypographie
-* `requests <http://docs.python-requests.org/>`_ : pratique pour se débrouiller avec internet (`exemples <http://docs.python-requests.org/en/latest/user/quickstart/#redirection-and-history>`_)
-
-**Pour faire du machine learning sans programmer**
+*Pour faire du machine learning sans programmer*
 
 * `Orange3 <http://orange.biolab.si/orange3/>`_
 
@@ -355,19 +324,25 @@ Développer un programme informatique prend du temps et il est important d'être
 Une grande difficulté lorsqu'on programme c'est de travailler à plusieurs sur le même projet.
 Il faut se sychroniser. Fort heureusement, le problème est connu depuis longtemps et il existe beaucoup
 d'outils open source dont on aurait tort de se passer ou des services gratuits sous certains conditions
-qui facilitent l'archivage. Ils sont tellement pratiques qu'on a même du mal
-à s'en passer lorsqu'on travaille tout seul.
+qui facilitent l'archivage.
 
 En vrac
 +++++++
 
-**Suivi de sources distant**
+*Suivi de sources distant*
 
-* `GitHub <https://github.com/>`_
+* `GitHub <https://github.com/>`_ : c'est le site par référence pour tous les projets
+  open source.
 * `GitLab <https://about.gitlab.com/>`_
 * `BitBucket <https://bitbucket.org/>`_
 
-**Visual pour Git**
+*Git*
+
+*git* est un logiciel de suivi de source. Il a supplanté tous les autres
+et il est indispensable aujourd'hui de le connaître. On ne retient pas toujours
+les commandes mais un moteur de recherche fournit rapidement la réponse.
+Voir aussi
+`Cheat Sheet <http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf>`_.
 
 * `Git <http://git-scm.com/>`_ + `GitHub <https://github.com/>`_ : pour suivre ses projets avec Git
 * `TortoiseGit <https://code.google.com/p/tortoisegit/>`_ (Windows)
@@ -379,30 +354,31 @@ En vrac
 
 Ce ne sont pas les seuls, vous trouverez d'autres options ici :
 `cloud-gratuit <http://www.cloud-gratuit.com/>`_. Toutefois, **il est recommandé de faire attention
-avec les données personnelles sensibles**. Ils n'est pas toujours possible de choisir
-le lieu de stockage et chaque pays a une législation différente. Il faut vérifier
-ce que cette loi autorise et interdit.
+avec les données personnelles sensibles**. Il n'est pas toujours possible de choisir
+le lieu de stockage et chaque pays a une législation différente.
 Même si vos données sont protégées par un mot de passe et ne sont pas publiques,
 il arrive que certains mots de passe soient interceptés.
 
-**Comparaison de fichiers**
+*Comparaison de fichiers*
 
 * `kdiff3 <http://kdiff3.sourceforge.net/>`_
-* `Beyond and Compare <http://www.scootersoftware.com/>`_ : il est gratuit pendant un mois, c'est le plus convivial.
+* `Beyond and Compare <http://www.scootersoftware.com/>`_ :
+  il est gratuit pendant un mois, c'est le plus convivial.
 
-**Partager des notes, des idées**
+*Partager des notes, des idées*
 
 * `OneNote <http://office.microsoft.com/fr-fr/onenote/>`_
 * `Evernote <https://evernote.com/intl/fr/>`_
+* `Google Docs <https://docs.google.com/>`_
 
-**Editeur de texte**
+*Editeur de texte*
 
 * `SciTE <http://www.scintilla.org/SciTE.html>`_ : le plus simple, pas d'explorateur de fichier, pas d'installeur, autocomplétion perturbante
 * `TextWrangler <http://www.barebones.com/products/textwrangler/>`_ (seulement sur iOS - Apple)
 * `SublimeText <http://www.sublimetext.com/>`_ : configuration nécessaire avant d'exécuter un script python
 * `NotePad++ <http://notepad-plus-plus.org/fr/>`_ : configuration nécessaire avant d'exécuter un script python
 
-**IDE**
+*IDE*
 
 * `Atom <https://atom.io/>`_
 * `Ninja IDE <http://ninja-ide.org/home/>`_
@@ -412,26 +388,26 @@ il arrive que certains mots de passe soient interceptés.
 * `Pyzo <http://www.pyzo.org/>`_ : ressemble à Matlab  (anciennement `IEP <http://www.iep-project.org/index.html>`_)
 * `WingIDE <https://wingware.com/>`_
 
-**Python et Domotique**
+*Python et Domotique*
 
 * `Micro Python Project <https://github.com/micropython/micropython>`_
 * `Python et Arduino <http://playground.arduino.cc/Interfacing/Python>`_
 * `Python et RaspberryPI <http://www.raspberrypi.org/documentation/usage/python/README.md>`_
 
-**Navigateur**
+*Navigateur*
 
 .. index:: navigateur, notebook
 
 Les navigateur sont importants pour l'utilisation des notebooks. Je recommande soit
 `Firefox <https://www.mozilla.org/fr/firefox/new/>`_,
-soit `Chrome <http://www.google.com/chrome/>`_. Internet Explorer pose quelques problèmes
-avec l'utilisateur du Javascript. Ces deux navigateurs sont indispensables si vous insérez du javascript
+soit `Chrome <http://www.google.com/chrome/>`_.
+Ces deux navigateurs sont indispensables si vous insérez du javascript
 dans nos notebooks. Le débuggeur de Chrome est le plus pratique à utiliser quand il s'agit d'aller
 fouiller dans les feuilles de styles ou de voir l'exécution du javascript.
 
 .. index:: développeur
 
-**Documentation**
+*Documentation*
 
 La documentation et les tests unitaires les modules
 classés dans les catégories *SPHINX*, *TEACH* (voir table ci-dessous).
@@ -449,7 +425,7 @@ Pour être compilée, la documentation requiert également :
 * :epkg:`MiKTeX` (Windows seulement)
 * :epkg:`pandoc`
 
-**Continuous build**
+*Continuous build*
 
 * `Buildbot <http://buildbot.net/>`_
 * `Java <http://www.java.com/fr/download/>`_ : nécessaire pour Jenkins et `Antlr <http://www.antlr.org/>`_
@@ -461,17 +437,16 @@ Pour être compilée, la documentation requiert également :
   `Build timeout plugin <https://wiki.jenkins-ci.org/display/JENKINS/Build-timeout+Plugin>`_,
   `Console column plugin <https://wiki.jenkins-ci.org/display/JENKINS/Console+Column+Plugin>`_,
   `Next executions <https://wiki.jenkins-ci.org/display/JENKINS/Next+Executions>`_,
-  `Collapsing Console Sections Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Collapsing+Console+Sections+Plugin>`_),
-  `Startup Trigger <https://wiki.jenkins.io/display/JENKINS/Startup+Trigger>`_ : automatisation de build
+  `Collapsing Console Sections Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Collapsing+Console+Sections+Plugin>`_)
 * :epkg:`Visual Studio Community Edition 2015` : C++, C#, F#, Python
   avec `PTVS <https://microsoft.github.io/PTVS/>`_
 * :epkg:`MinGW` : compilateur C++
 
-**Compression**
+*Compression*
 
 * `7zip <http://www.7-zip.org/>`_ : pour compresser, décompresser tous les formats
 
-**Ressources**
+*Ressources*
 
 * `Developpez.com <http://www.developpez.com/>`_ : beaucoup de choses autour de la programmation et en français
 * `stackoverflow <http://stackoverflow.com/>`_ : énorme forum de discussion sur tout ce qui touche à la programmation
@@ -531,6 +506,7 @@ Pour Jenkins, quelques extensions :
 * `Extra Columns Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Extra+Columns+Plugin>`_
 * `Next Execution <https://wiki.jenkins-ci.org/display/JENKINS/Next+Executions>`_
 * `Text File <https://wiki.jenkins-ci.org/display/JENKINS/Text+File+Operations+Plugin>`_
+* `Startup Trigger <https://wiki.jenkins.io/display/JENKINS/Startup+Trigger>`_ : automatisation de build
 
 Pour Jupyter :
 
@@ -550,23 +526,8 @@ ce qui est le cas pour plusieurs modules utilisés pour ces enseignements,
 il est nécessaire de créer un serveur un serveur Jenkins authntifié.
 Sous Windows, il faut chercher ``services.msc`` et renseigner
 les identifiants.
-
-Pour les versions Python 2.7, il faut créer un environnement virtuel et installer
-pyquickhelper :
-
-::
-
-    cd D:\jenkins\venv\py36
-    c:\Python36_x64\scripts\virtualenv.exe pyq --system-site-packages
-    cd pyq\Scripts
-    pip install pyquickhelper
-
 Pour certains projets (comme la compilation de *pywin32*), il faut
 installer `Windows SDK <https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>`_.
-Pour Python 2.7, le module
-`backports.shutil_get_terminal_size <https://pypi.python.org/pypi/backports.shutil_get_terminal_size/>`_
-doit être désinstallé car il ne marche pas depuis un environnment virtuel.
-Les scripts automatisés doivent l'installer dans cet environnement.
 
 Maintenir sa distribution Python à jour
 =======================================
@@ -593,7 +554,7 @@ L'essentiel n'est pas de tout faire en Python, l'essentiel est d'être agile,
 de passer le moins de temps sur l'implémentation et le plus de temps possible
 sur les données.
 
-Autres sources d'inspiration :
+*Listes de modules*
 
 * `data-science-ipython-notebooks <https://github.com/donnemartin/data-science-ipython-notebooks>`_
 * `Awesome Python <https://github.com/vinta/awesome-python#environment-management>`_, répertoire de librairiees Python populaires (donc à regarder en premier)
@@ -602,7 +563,7 @@ Autres sources d'inspiration :
 * `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
 * conférence `pydata <http://pydata.org/>`_
 
-**Quelques articles**
+*Quelques articles*
 
 * `scikit lectures <http://scipy-lectures.github.io/>`_
 * `Formation à Python scientifique - ENS Paris <http://python-prepa.github.io/index.html>`_
@@ -614,7 +575,7 @@ Autres sources d'inspiration :
 * `A Reliable Effective Terascale Linear Learning System <http://arxiv.org/pdf/1110.4198v3.pdf>`_
 * `Understanding Random Forest <http://orbi.ulg.ac.be/handle/2268/170309>`_
 
-**Liens, blogs à suivre**
+*Liens, blogs à suivre*
 
 - `FastML <http://fastml.com/>`_
 - `no free hunch (Kaggle Blog) <http://blog.kaggle.com/>`_
@@ -623,7 +584,7 @@ Autres sources d'inspiration :
 - `NumFOCUS Foundation <http://numfocus.org/projects/index.html>`_
 - `pythonworks.org <http://www.pythonworks.org/home>`_ (références de livres)
 
-**Articles Livres, Vidéos**
+*Articles Livres, Vidéos*
 
 - `Scikit-learn: Machine Learning in Python <http://jmlr.org/papers/volume12/pedregosa11a/pedregosa11a.pdf>`_ (avec les auteurs de scikit-learn)
 - `Deep Learning <http://www-labs.iro.umontreal.ca/~bengioy/dlbook/>`_
@@ -670,10 +631,3 @@ Les modules suivant font partie du setup proposé aux étudiants (voir plus bas)
 .. rubric:: Footnotes
 
 .. index:: pymyinstall, distribution
-
-.. [#fpm1] Cette distribution est construite grâce à la fonction
-           `win_python_setup <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/win_installer/win_setup_main.html#pymyinstall.win_installer.win_setup_main.win_python_setup>`_
-           du module
-           `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/>`_.
-           La construction du setup prend quelques heures et inclut les modules
-           listés répertoriés par :ref:`l-data2amod`.

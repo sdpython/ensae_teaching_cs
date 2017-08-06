@@ -112,3 +112,8 @@ texinfo_documents = [
 ]
 
 language = "fr"
+
+epkg_dictionary["C++"] = 'https://fr.wikipedia.org/wiki/C%2B%2B'
+epkg_dictionary["ENSAE"] = 'http://www.ensae.fr/'
+epkg_dictionary["miniconda"] = 'https://conda.io/miniconda.html'
+epkg_dictionary["pyensae"] = 'http://www.xavierdupre.fr/app/pyensae/helpsphinx/'
