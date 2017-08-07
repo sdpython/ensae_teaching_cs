@@ -160,6 +160,15 @@ En diagonal
     * `Machine Learning, Statistiques et Programmation <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_ (théorique)
     * `Apprendre la programmation avec Python <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html#teachpyx>`_
 
+Contributions
+-------------
+
+Le cours est open source et disponible sur GitHub.
+N'hésitez pas à contribuer en m'envoyant des
+`pull requests <https://github.com/sdpython/ensae_teaching_cs/pulls>`_
+sans même avoir à récupérer tous les fichiers sur votre ordinateur :
+`Editing files in your repository <https://help.github.com/articles/editing-files-in-your-repository/>`_.
+
 +----------------------+---------------------+---------------------+--------------------------------+------------------------+------------------------------------------------+
 | :ref:`l-modules`     |  :ref:`l-functions` | :ref:`l-classes`    | :ref:`l-methods`               | :ref:`l-staticmethods` | :ref:`l-properties`                            |
 +----------------------+---------------------+---------------------+--------------------------------+------------------------+------------------------------------------------+

@@ -1,5 +1,5 @@
 
-.. _l-streaming-td2a:
+.. _l-streaming-td1a:
 
 Algorithmes en streaming
 ========================

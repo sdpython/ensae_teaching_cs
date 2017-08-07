@@ -262,7 +262,7 @@ Streaming algorithms
 
 *Lectures*
 
-* Algorithme `BJKST <http://info.prelert.com/blog/hashing-and-approximate-distinct-value-counts>`_
+* Algorithme BJKST `Counting distinct elements in a data stream <https://pdfs.semanticscholar.org/e349/7952347101a3535434bc35d378224cf87bcc.pdf>`_
 * `Streaming Algorithms <http://resources.mpi-inf.mpg.de/departments/d1/teaching/ss14/gitcs/notes3.pdf>`_
 * `Data Stream Algorithms <http://www.cs.dartmouth.edu/~ac/Teach/CS85-Fall09/Notes/lecnotes.pdf>`_
 * `Optimal streaming histograms <https://amplitude.com/blog/2014/08/06/optimal-streaming-histograms/>`_

@@ -72,6 +72,8 @@ Voir `Install Miniconda through SSH connection <http://www.xavierdupre.fr/app/py
 Cela fonctionne avec les distributions `Ubuntu 14.04 <http://releases.ubuntu.com/14.04/>`_
 et `Ubuntu 16.04 <http://releases.ubuntu.com/16.04/>`_.
 
+.. _l-gs-ide:
+
 IDE
 +++
 

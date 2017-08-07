@@ -145,7 +145,7 @@ Il y a deux questions qu'on doit se poser en premier pour entrevoir une solution
    chaque moitié puis recoller les solutions ? On procède de cette façon par dichotomie.
    Le coût est **logarithmique**.
 
-Ces deux façons de faire sont présentées durant trois séances à choisir parmi :
+Ces deux façons de faire sont présentées durant dans les séances qui suivent :
 
 .. toctree::
     :maxdepth: 2
@@ -155,6 +155,25 @@ Ces deux façons de faire sont présentées durant trois séances à choisir par
     notebooks/_gs1a_A_optimisation_contrainte
     notebooks/_gs1a_A_edit_distance
     notebooks/_gs1a_A_parcours_graphe
+
+La plupart de ces algorithms font partie des premiers qu'on apprend.
+D'autres sont moins courants mais tout aussi intéressants :
+
+.. toctree::
+    :maxdepth: 2
+
+    notebooks/_gs1a_A_algo
+
+Un peu plus ludique et présentés sous la forme de défis :
+
+* :ref:`l-hermionne`
+* `Optimisation de la tourné d'un camion poubelle <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_tour.html>`_ :
+  le camion poubelle doit parcourir toutes les rues d'une ville, comment trouve-t-il le chemin le
+  plus court ?
+
+Plus on en connaît, plus il devient facile de les assembler pour résoudre
+des problèmes complexes. Il faut se construire une
+sorte de culture algorithmique (:ref:`l-algoculture`).
 
 *Notes*
 
@@ -254,7 +273,21 @@ les mêmes résultats. Voici quelques exemples :
 
     notebooks/code_multinomial
 
+Une fois qu'on est agile avec les données, on peut facilement explorer,
+émettre des hypothèses ou résoudre quelques énigmes :
+
+* `Que font les habitants de Chicago après le travail ? <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_bike.html>`_
+  (ceux qui font du vélo tout du moins)
+
+------------
+
+Séance notée
+============
+
 La dernière séance est une séance notée. Tous les documents sont autorisés.
+Les examens passés sont disponibles : :ref:`l-examens`. Les examens sont plutôt
+destinés à ceux qui viennent de commencer la programmation. Si votre pratique
+est régulière, vous devriez aller trois fois plus vite à la fin de la scolarité.
 
 .. _l-td1a-start:
 
@@ -265,10 +298,15 @@ Getting started
 
 Il faut vous reporter à la section :ref:`l-installation-courte` pour installer python.
 Certaines séances pratiques utilisent des données depuis ce site.
-Elles sont facilement téléchargeables avec ces deux modules :
+Elles sont facilement téléchargeables avec ces deux modules
+:epkg:`pyquickhelper` et :epkg:`pyensae`.
 
-* `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
-* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/>`_
+Il faut ensuite un outil pour écrire des programmes.
+Si la majorité des exemples sont fournis sous forme de
+:epkg:`notebook` mais ce n'est pas le seul environnement de
+travail ce qu'on surnomme un :ref:`l-gs-ide`.
+:epkg:`Spyder` ou :epkg:`PyCharm`. Sous Windows,
+:epkg:`PTVS` dispose d'un bon débuggeur.
 
 .. _l-td1a-biblio:
 
@@ -279,8 +317,9 @@ Bibliographie
 
 *Cheat Sheet*
 
+* `Résumé de la syntaxe <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_resume/python_sheet.html>`_
+* :epkg:`teachpyx` : notes de cours sur le langage :epkg:`Python`
 * `Aide Mémoire Python <http://www.le-memento.fr/python.html>`_
-* `Syntaxe Python en 27 pages <http://www.xavierdupre.fr/site2013/documents/python/resume_utile.pdf>`_
 
 *Liens*
 
@@ -306,7 +345,8 @@ Bibliographie
 
 * `Apprentissage de la programmation <http://inforef.be/swi/python.htm>`_, Gérald Swinnen
 * `Une introduction à Python 3 <https://perso.limsi.fr/pointal/python:courspython3>`_
-* `Programmation avec le langage Python <http://www.xavierdupre.fr/site2013/documents/python/initiation_via_python_ellipse_mai_2010.pdf>`_ (PDF, ou version `Ellipse <http://www.editions-ellipses.fr/product_info.php?products_id=6891>`_)
+* `Programmation avec le langage Python <http://www.xavierdupre.fr/site2013/documents/python/initiation_via_python_ellipse_mai_2010.pdf>`_ (PDF, ou version `Ellipse <http://www.editions-ellipses.fr/product_info.php?products_id=6891>`_),
+  version web et plus récentes : :epkg:`teachpyx`.
 * `Teach Yourself Python in 24 Hours <http://www.pauahtun.org/TYPython/>`_, Ivan Van Laningham
   (le site est visuellement difficile, `version PDF <http://ptgmedia.pearsoncmg.com/images/9780672336874/samplepages/0672336871.pdf>`_)
 * `Précis de recherche opérationnelle <http://www.eyrolles.com/Informatique/Livre/precis-de-recherche-operationnelle-9782100706129>`_, Robert Faure, Bernard Lemaire, Christophe Picouleau
