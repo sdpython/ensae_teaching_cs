@@ -26,8 +26,22 @@ Le cours est décrit plus en détail dans cette présentation :
 
 Le cours est évalué au premier semestre par un examen et aussi :ref:`l-examens-1A-algo`.
 Le second semestre et facultatif et est évalué par :ref:`projet informatique <l-projinfo1a>`.
+La première partie (:ref:`l-td1a-lesbases`) est a priori inutile si vous avez déjà programmé
+ou si vous répondez positivement à au moins trois questions parmi les suivantes.
+
+1. Avez-vous déjà codé ?
+2. Avez-vous déjà codé en python ?
+3. Avez-vous déjà codé en dehors de l'école ?
+4. Connaissez-vous l'algorithme du plus court chemin ?
+5. Avez-vous déjà écrit un test unitaire ?
+6. Connaissez-vous des blagues de geek ?
+
+Vous pouvez également vous tester en faisant l'un des énoncés
+des :ref:`examens précédents <l-examens>` en moins de deux heures.
 
 ------------
+
+.. _l-td1a-lesbases:
 
 TD - Les bases
 ==============

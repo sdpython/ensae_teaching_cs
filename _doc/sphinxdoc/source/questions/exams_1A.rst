@@ -14,12 +14,9 @@ Ils requiert peu de connaissances, évitent le plus souvent les classes.
 .. contents::
     :local:
 
-.. raw:: html
-
-    <p><b>Certains énoncés nécessitent des données ou des bouts de programmes. Les liens sont parfois
-    cassés. Dans ce cas, il faut essayer
-    <a href="http://www.xavierdupre.fr/enseignement/complements/index_documents.html">données complémentaires</a>.
-    </b></p>
+Certains énoncés nécessitent des données ou des bouts de programmes. Les liens sont parfois
+cassés. Dans ce cas, il faut essayer celui-ci :
+`données complémentaires <http://www.xavierdupre.fr/enseignement/complements/index_documents.html>`_.
 
 Révisions rapides
 +++++++++++++++++
@@ -30,6 +27,15 @@ Révisions rapides
 
 Séances notées
 ++++++++++++++
+
+Celles-ci sont prévues pour une durée de deux heures.
+Un bon programmeur les fera en moins de trente minutes.
+Les énoncés contiennent une dizaine de questions réparties sur une à deux pages,
+chaque réponse tient le plus souvent en quelques lignes.
+Aucune connaissance particulière en algorithmie n'est requise,
+elle est introduite le cas échéant. Les énoncés utilise
+les modules standard du langage :epkg:`Python` et parfois
+:epkg:`numpy`, :epkg:`pandas` ou :epkg:`matplotlib`.
 
 .. raw:: html
 
