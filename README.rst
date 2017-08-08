@@ -97,7 +97,7 @@ A local PyPi server needs to be installed:
 
 ::
 
-    c:\Python35_x64\Scripts\pypi-server.exe -u -p 8067 --disable-fallback ..\..\local_pypi\local_pypi_server
+    pypi-server.exe -u -p 8067 --disable-fallback ..\..\local_pypi\local_pypi_server
 
 If some Python scripts use *keyring* to retrieve passwords,
 the Jenkins service needs to authentify. On Windows, it goes through ``services.msc``.
@@ -106,8 +106,8 @@ pyquickhelper :
 
 ::
 
-    cd D:\jenkins\venv\py35
-    c:\Python35_x64\scripts\virtualenv.exe pyq --system-site-packages
+    cd D:\jenkins\venv\py36
+    virtualenv.exe pyq --system-site-packages
     cd pyq\Scripts
     pip install pyquickhelper
 
