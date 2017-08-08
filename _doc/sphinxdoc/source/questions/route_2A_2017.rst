@@ -1,13 +1,13 @@
 
-.. _l-feuille-de-route-2016-2A:
+.. _l-feuille-de-route-2017-2A:
 
-Feuille de route 2016
+Feuille de route 2017
 =====================
 
 Plan
 ++++
 
-Les cours et séances se déroulent sur 6 séances de 4h
+Les cours et séances se déroulent sur 8 séances de 3h
 lundi matin. Cette année le cours se diversifie avec des
 pistes :
 
@@ -21,25 +21,50 @@ pistes :
 
 Une compétition sera ouverte le premier jour et
 fermée à la dernière session où les résultas et les idées seront
-discutées : `Compétition Python 2A ENSAE <https://competitions.codalab.org/competitions/13431>`_
-(voir aussi :ref:`notebook compétition 2016 <td2a-competitions-ml-2016>`).
-
-La séance dédiées aux :ref:`l-puzzlealgo2A`
-requiert la participation de la part des participants :
-trois exercices seront choisis parmi ceux que vous aurez envoyés par mail.
-Les exercices doivent être choisis sur le site
-`Google Code Jam <https://code.google.com/codejam/contests.html>`_.
+discutées.
 
 .. list-table::
-    :widths: 2 5 5 5 5
+    :widths: 2 5 5
     :header-rows: 1
 
     * - Séance
-      - Stat 8h30
-      - Stat 10h30
-      - Eco 8h30
-      - Eco 10h30
-    * - 26/9
+      - Stat
+      - Eco
+    * - 19/9 (1)
+      - Introduction au Machine Learning,
+        présentation de la compétition,
+        exercices de machine learning
+      - Introduction au Machine Learning,
+        présentation de la compétition,
+        pandas, numpy, matplotlib, manipulation de données
+    * - 26/9 (2)
+      - Itérateurs, dask, parallélisation, algorithme streaming
+      - SQL, Cartes, problèmes simples de machine learning
+    * - 3/10 (3)
+      - Revue de problèmes de machine learning formalisés,
+        exercices sur une problème de ranking
+      - Revue de problèmes de machine learning formalisés,
+        clustering, application aux vélos de Chicago
+    * - 10/10 (4)
+      - Données textuelles, word embedding, clustering, ACP
+      - Données textuelles, variables catégorielles
+    * - 17/10 (5)
+      - Deep learning, Keras
+      - Interprétabilité des modèles, problèmes de classification binaire
+    * - 24/10 (6)
+      - Algorithmes, Python et C++, code de scikit-learn,
+        machine learning données cryptées
+      - Etique dans les données, anonimisation des données,
+        séries temporelles
+    * - 7/11 (7)
+      - Revue de compétition Kaggle, deep learning
+      - Web scrapping, API
+    * - 14/11 (8)
+      - Transfer Learning, Présentation des projets
+      - Construction d'un site web, retour sur la compétition,
+        présentation des projets
+
+* - 26/9
       - :ref:`numpy et le calcul matriciel <td2acenoncesession2Arst>`,
         :ref:`pandas, dataframe et premiers graphes <td2acenoncesession1rst>`,
       - :ref:`visualisation <l-visualisation-2A>` (voir :ref:`l-note-2A-plan`)
@@ -83,39 +108,6 @@ Les exercices doivent être choisis sur le site
       - :ref:`retour sur la compétition ML <l-competition-2016-2a>`,
         `exemples de compétition Kaggle <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/ensae201611.html>`_
         **cours commun**
-
-.. _l-note-2A-plan:
-
-Notes
-+++++
-
-**Visualisation** : l'idée de ces séances est d'explorer chacun une librairie différente
-puis de partager les exemples.
-
-**Puzzles algorithmiques** : le programme des 4h se répartit comme suit :
-
-* 8h30-10h00 : 3 puzzles
-* 10h00-10h30 : éléments principaux à retenir (surtout pour les entretiens d'embauche)
-* 11h-12h30 : 3 puzzles
-* 12h30-13h : notions de graphes
-
-**Devinettes**
-
-:ref:`l-devinettes-2016`
-
-**Déroulement des séances**
-
-Le 7 novembre à 8h30, le but de la séance est de
-concevoir un plan pour réarranger les cartes électorales et de commencer sa mise en place.
-Il n'y a pas qu'une seule solution, tout dépend des idées exposées durant la séance.
-
-En ce qui concerne les séances autour des algorithmes, il s'agit d'enrichir sa culture informatique
-car c'est devenu indispensable pour passer les entretiens d'embauche aujourd'hui.
-Ces séances sont composés d'exercices et de cours.
-
-**Compétition**
-
-:ref:`Compétition 2016 <l-competition-2016-2a>`
 
 Intervenants
 ++++++++++++

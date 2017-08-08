@@ -113,6 +113,13 @@ Bibliographie
 * `Le problème des huit reines <http://zanotti.univ-tln.fr/algo/REINES.html>`_
 * `Projet Euler <https://projecteuler.net/>`_
 
+**Compétition de machine learning**
+
+* `datascience.net <https://www.datascience.net/fr/challenge>`_
+* `Kaggle <https://www.kaggle.com/competitions>`_
+* `ImageNet <http://www.image-net.org/>`_
+* `SQuAD <https://rajpurkar.github.io/SQuAD-explorer/>`_
+
 **Sources d'articles scientifiques**
 
 * `ShortScience.org  <http://www.shortscience.org/>`_
@@ -143,5 +150,5 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
 
 **Vidéos**
 
-* `Beyond Bag of Words A Practitioner’s Guide to Advanced NLP <https://www.youtube.com/watch?v=YWzFxRZPEyU>`_
+* `Beyond Bag of Words A Practitioner's Guide to Advanced NLP <https://www.youtube.com/watch?v=YWzFxRZPEyU>`_
 * `Building Continuous Learning Systems <https://www.youtube.com/watch?v=VtBvmrmMJaI>`_

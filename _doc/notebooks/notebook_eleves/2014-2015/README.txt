@@ -7,3 +7,7 @@ de réaliser un projet de programmation distribué. Voici quelques
 examples écrits en PIG (Hadoop, MapReduce).
 Il reste quelques imperfections que je vous laisse le soin
 de découvrir.
+
+.. contents::
+    :local:
+

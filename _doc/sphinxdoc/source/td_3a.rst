@@ -7,7 +7,7 @@ Eléments logiciels pour le traitement des données massives
 
 .. index:: 3A
 
-`ENSAE - OMI309 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/3me-anne-voies-de-spcialisation-formationsdiplome-96/data-science-cours-3a.html?id=100729>`_
+`ENSAE - OMI309 <http://www.ensae.fr/ensae/fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/3me-anne-voies-de-spcialisation-formationsdiplome-96/data-science-cours-3a.html?id=100729>`_
 
 Cours animé par :
 Matthieu Durut [#f3write1]_,
