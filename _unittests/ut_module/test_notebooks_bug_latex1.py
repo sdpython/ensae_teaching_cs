@@ -53,7 +53,7 @@ class TestNoteBooksBugLatex_ecs(unittest.TestCase):
         path = os.path.abspath(os.path.split(__file__)[0])
         nbfold = os.path.normpath(
             os.path.join(path, "..", "..", "_doc", "notebooks"))
-        nbs = [os.path.join(nbfold, "notebook_eleves", "2014_2015", "2015_kmeans.ipynb"),
+        nbs = [os.path.join(nbfold, "notebook_eleves", "2014-2015", "2015_kmeans.ipynb"),
                # os.path.join(nbfold, "notebook_eleves", "2014_2015", "2015_page_rank.ipynb"),
                # os.path.join(nbfold, "notebook_eleves", "2014_2015", "2015_factorisation_matrice.ipynb"),
                ]
