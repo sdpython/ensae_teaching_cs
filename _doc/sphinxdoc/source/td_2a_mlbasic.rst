@@ -335,7 +335,8 @@ poste régulièrement des articles sur des librairies de machine learning open s
 * `statsmodels <http://statsmodels.sourceforge.net/>`_
 * `xgboost <https://xgboost.readthedocs.io/en/latest/>`_
 * `mlxtend <https://github.com/rasbt/mlxtend>`_
-* `imbalanced-learn <https://github.com/scikit-learn-contrib/imbalanced-learn>`_ (la documentation est intéressante)
+* `imbalanced-learn <https://github.com/scikit-learn-contrib/imbalanced-learn>`_
+  (la documentation est intéressante)
 
 Ranking
 +++++++

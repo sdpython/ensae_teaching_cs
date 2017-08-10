@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Publish documentation
-=====================
+Set up or update Jenkins Jobs
+=============================
 
 Update Jenkins jobs for GitHub repositories.
 """
