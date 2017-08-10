@@ -113,6 +113,7 @@ texinfo_documents = [
 
 language = "fr"
 
+epkg_dictionary["AUC"] = 'http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/roc.html#aire-sous-la-courbe'
 epkg_dictionary["C++"] = 'https://fr.wikipedia.org/wiki/C%2B%2B'
 epkg_dictionary["ENSAE"] = 'http://www.ensae.fr/'
 epkg_dictionary["matrice de confusion"] = "https://fr.wikipedia.org/wiki/Matrice_de_confusion"
@@ -122,6 +123,6 @@ epkg_dictionary["open source"] = 'http://fr.wikipedia.org/wiki/Open_source'
 epkg_dictionary["PTVS"] = 'https://microsoft.github.io/PTVS/'
 epkg_dictionary["PyCharm"] = 'https://www.jetbrains.com/pycharm/'
 epkg_dictionary["pyensae"] = 'http://www.xavierdupre.fr/app/pyensae/helpsphinx/'
-epkg_dictionary["ROC"] = 'https://fr.wikipedia.org/wiki/Courbe_ROC'
+epkg_dictionary["ROC"] = 'http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/roc.html'
 epkg_dictionary["Spyder"] = 'https://github.com/spyder-ide/spyder'
 epkg_dictionary["teachpyx"] = 'http://www.xavierdupre.fr/app/teachpyx/helpsphinx/'
