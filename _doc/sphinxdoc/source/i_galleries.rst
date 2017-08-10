@@ -11,4 +11,4 @@ Galleries d'exemples
     all_notebooks
     antiseches/index
     i_examples
-    gyexamples/index
+    automation/index
