@@ -55,18 +55,12 @@ class TestNotebookRunner2a_4 (unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, unittest_raise_exception_notebook
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
         temp = get_temp_folder(__file__, "temp_notebook2a_4_enonce")
         keepnote = ls_notebooks("td2a_ml")
-        assert len(keepnote) > 0
-        res = execute_notebooks(
-            temp,
-            keepnote,
-            lambda i,
-            n: "_4" in n and "enonce" in n,
-            fLOG=fLOG,
-            replacements=self.get_replacements())
-        unittest_raise_exception_notebook(res, fLOG)
+        execute_notebooks(temp, keepnote, lambda i, n: "_4" in n and "enonce" in n,
+                          fLOG=fLOG, replacements=self.get_replacements(),
+                          dump=src.ensae_teaching_cs)
 
     def test_notebook_runner_correction(self):
         fLOG(
