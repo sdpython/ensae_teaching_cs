@@ -45,7 +45,7 @@ from pyquickhelper.pycode import get_temp_folder, add_missing_development_versio
 class TestNotebookRunner1a_enonce (unittest.TestCase):
 
     def setUp(self):
-        add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
+        add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
                                         __file__, hide=True)
 
     def test_notebook_runner_enonce_8(self):
@@ -56,10 +56,8 @@ class TestNotebookRunner1a_enonce (unittest.TestCase):
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook1a_enonce_8")
         keepnote = ls_notebooks("td1a")
-        execute_notebooks(temp, keepnote,
-                          lambda i, n: "cenonce_session8." in n,
-                          fLOG=fLOG,
-                          clean_function=clean_function_1a,
+        execute_notebooks(temp, keepnote, lambda i, n: "cenonce_session8." in n,
+                          fLOG=fLOG, clean_function=clean_function_1a,
                           dump=src.ensae_teaching_cs)
 
 

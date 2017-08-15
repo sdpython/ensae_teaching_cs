@@ -94,6 +94,7 @@ def clean_function_1a(code):
             "if n = 1:",
             "clenche une exception",
             'y = "a" * 3 + 1',
+            "i = list_exercice_1.index(k)",
             # ggplot calls method show and it opens window blocking the offline
             # execution
             ]
@@ -164,7 +165,7 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
         notebooks = [_ for i, _ in enumerate(notebooks) if filter(i, _)]
     if len(notebooks) == 0:
         raise ValueError("Empty list of notebooks.")
-    res = execute_notebook_list(folder, notebooks, fLOG=fLOG,
+    res = execute_notebook_list(folder, notebooks, fLOG=fLOG, clean_function=clean_function,
                                 valid=valid_cell, additional_path=addpaths, kernel_name=kernel_name)
     execute_notebook_list_finalize_ut(
         res, fLOG=fLOG, dump=dump)
