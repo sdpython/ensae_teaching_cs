@@ -57,7 +57,6 @@ class TestLONGNotebookBug(unittest.TestCase):
         nbs = [os.path.join(fold, _)
                for _ in os.listdir(fold) if _.endswith(".ipynb") and "problems" in _]
         nbs.sort()
-        print(nbs)
         formats = ["pdf", "ipynb", "html", "python", "rst", "docx"]
 
         if is_travis_or_appveyor() is not None:
@@ -71,7 +70,7 @@ class TestLONGNotebookBug(unittest.TestCase):
         fLOG("*****", len(res))
         for _ in res:
             fLOG(_)
-            assert os.path.exists(_[0])
+            self.assertTrue(os.path.exists(_[0]))
 
 
 if __name__ == "__main__":

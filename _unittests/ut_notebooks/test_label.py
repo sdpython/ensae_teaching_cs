@@ -61,7 +61,7 @@ class TestLabel(unittest.TestCase):
         if os.path.exists(fhel):
             with open(fhel, "r", encoding="utf8") as f:
                 content = f.read()
-            assert ".. _l-algoculture:</p>" not in content
+            self.assertTrue(".. _l-algoculture:</p>" not in content)
         else:
             fLOG("unable to test", fhel)
 

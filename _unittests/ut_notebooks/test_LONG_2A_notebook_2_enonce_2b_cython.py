@@ -55,18 +55,16 @@ class TestNotebookRunner2a_2_enonce_2b (unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook2a_2_enonce_2B")
         # The folder must remain, I did not find a way to install
         # a package without a message box.
         os.environ["R_USER"] = "\\"
         keepnote = ls_notebooks("td2a")
-        assert len(keepnote) > 0
-        res = execute_notebooks(temp, keepnote, lambda i, n: "_2" in n and
-                                "enonce" in n and
-                                "_2B" in n,
-                                fLOG=fLOG, clean_function=clean_function_1a)
-        unittest_raise_exception_notebook(res, fLOG)
+        execute_notebooks(temp, keepnote, (lambda i, n: "_2" in n and
+                                           "enonce" in n and "_2B" in n),
+                          fLOG=fLOG, clean_function=clean_function_1a,
+                          dump=src.ensae_teaching_cs)
 
 
 if __name__ == "__main__":

@@ -74,15 +74,11 @@ class TestNotebookRunner2a_long (unittest.TestCase):
             return
 
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
-        from src.ensae_teaching_cs.automation.notebook_test_helper import clean_function_1a, unittest_raise_exception_notebook
+        from src.ensae_teaching_cs.automation.notebook_test_helper import clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook2a_long_")
         keepnote = ls_notebooks("2a")
-        assert len(keepnote) > 0
-        res = execute_notebooks(temp, keepnote,
-                                lambda i, n: "python_r" in n,
-                                fLOG=fLOG,
-                                clean_function=clean_function_1a)
-        unittest_raise_exception_notebook(res, fLOG)
+        execute_notebooks(temp, keepnote, (lambda i, n: "python_r" in n), fLOG=fLOG,
+                          clean_function=clean_function_1a, dump=src.ensae_teaching_cs)
 
 
 if __name__ == "__main__":

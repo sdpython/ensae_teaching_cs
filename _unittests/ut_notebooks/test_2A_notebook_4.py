@@ -76,13 +76,12 @@ class TestNotebookRunner2a_4 (unittest.TestCase):
         if is_travis_or_appveyor() == "travis":
             # requires MKL
             return
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, unittest_raise_exception_notebook
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
         temp = get_temp_folder(__file__, "temp_notebook2a_4_correction")
         keepnote = ls_notebooks("td2a_ml")
-        assert len(keepnote) > 0
-        res = execute_notebooks(temp, keepnote, lambda i, n: "_4" in n and "correction" in n,
-                                fLOG=fLOG, replacements=self.get_replacements())
-        unittest_raise_exception_notebook(res, fLOG)
+        execute_notebooks(temp, keepnote, lambda i, n: "_4" in n and "correction" in n,
+                          fLOG=fLOG, replacements=self.get_replacements(),
+                          dump=src.ensae_teaching_cs)
 
 
 if __name__ == "__main__":

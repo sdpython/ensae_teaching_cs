@@ -56,10 +56,9 @@ class TestNotebookRunner2a_ (unittest.TestCase):
         if is_travis_or_appveyor() == "appveyor":
             # too long for appveyor
             return
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook2a_")
         keepnote = ls_notebooks("2a")
-        assert len(keepnote) > 0
 
         def filter(i, n):
             if not sys.platform.startswith("win") and "_convert" in n:
@@ -75,11 +74,11 @@ class TestNotebookRunner2a_ (unittest.TestCase):
             warnings.warn("execution does not stop")
             return
 
-        res = execute_notebooks(temp, keepnote,
-                                filter,
-                                fLOG=fLOG,
-                                clean_function=clean_function_1a)
-        unittest_raise_exception_notebook(res, fLOG)
+        execute_notebooks(temp, keepnote,
+                          filter,
+                          fLOG=fLOG,
+                          clean_function=clean_function_1a,
+                          dump=src.ensae_teaching_cs)
 
 
 if __name__ == "__main__":

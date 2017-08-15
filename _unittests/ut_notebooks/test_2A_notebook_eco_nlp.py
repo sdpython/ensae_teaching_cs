@@ -49,10 +49,9 @@ class TestNotebookRunner2aEcoNLP(unittest.TestCase):
                                         __file__, hide=True)
 
     def common_notebook_runner_2a_eco_nlp_enonce(self, sub):
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook2a_eco_nlp_" + sub)
         keepnote = ls_notebooks("td2a_eco")
-        assert len(keepnote) > 0
         if sub == "correction":
             folder = os.path.join(temp, "ressources_googleplus")
             os.mkdir(folder)
@@ -74,8 +73,9 @@ class TestNotebookRunner2aEcoNLP(unittest.TestCase):
         res = execute_notebooks(temp, keepnote,
                                 filter,
                                 fLOG=fLOG,
-                                clean_function=clean_function_1a)
-        unittest_raise_exception_notebook(res, fLOG)
+                                clean_function=clean_function_1a,
+                                dump=src.ensae_teaching_cs)
+        return res
 
     def test_notebook_runner_2a_eco_nlp_enonce(self):
         fLOG(

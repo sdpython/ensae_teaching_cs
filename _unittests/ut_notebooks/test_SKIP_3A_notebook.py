@@ -60,23 +60,11 @@ class TestNotebookRunner3a (unittest.TestCase):
 
         temp = get_temp_folder(__file__, "temp_notebook3a")
         keepnote = ls_notebooks("td3a")
-        assert len(keepnote) > 0
-        res = execute_notebooks(temp, keepnote,
-                                lambda i, n: True,
-                                fLOG=fLOG,
-                                clean_function=clean_function_1a)
-
-        assert len(res) > 0
-        fails = [(os.path.split(k)[-1], v)
-                 for k, v in sorted(res.items()) if not v[0]]
-        for f in fails:
-            fLOG(f)
-        if len(fails) > 0:
-            e = str(fails[0][1][-1])
-            fLOG(str(e).replace("\n", " EOL "))
-            raise fails[0][1][-1]
-        else:
-            fLOG("success")
+        execute_notebooks(temp, keepnote,
+                          lambda i, n: True,
+                          fLOG=fLOG,
+                          clean_function=clean_function_1a,
+                          dump=src.ensae_teaching_cs)
 
 
 if __name__ == "__main__":

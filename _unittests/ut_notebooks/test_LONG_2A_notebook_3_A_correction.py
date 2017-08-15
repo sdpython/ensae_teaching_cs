@@ -53,14 +53,11 @@ class TestNotebookRunner2a_3A_correction (unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, unittest_raise_exception_notebook, clean_function_1a
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook2a_3A_correction")
         keepnote = ls_notebooks("td2a_ml")
-        assert len(keepnote) > 0
-        res = execute_notebooks(
-            temp, keepnote, lambda i, n: "_3A" in n and "correction" in n,
-            clean_function=clean_function_1a)
-        unittest_raise_exception_notebook(res, fLOG)
+        execute_notebooks(temp, keepnote, (lambda i, n: "_3A" in n and "correction" in n),
+                          clean_function=clean_function_1a, dump=src.ensae_teaching_cs)
 
 
 if __name__ == "__main__":

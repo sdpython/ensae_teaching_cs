@@ -8,7 +8,7 @@ import sys
 import shutil
 from pyquickhelper.loghelper import noLOG
 from pyquickhelper.ipythonhelper.notebook_helper import install_python_kernel_for_unittest
-from pyquickhelper.ipythonhelper import run_notebook
+from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut
 
 
 def ls_notebooks(subfolder):
@@ -119,9 +119,9 @@ def clean_function_1a(code):
 
 
 def execute_notebooks(folder, notebooks, filter, clean_function=None,
-                      fLOG=noLOG, deepfLOG=noLOG, replacements=None):
+                      fLOG=noLOG, deepfLOG=noLOG, replacements=None, dump=None):
     """
-    execute a list of notebooks
+    Execute a list of notebooks.
 
     @param      folder          folder
     @param      notebooks       list of notebooks
@@ -130,11 +130,13 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
     @param      fLOG            logging function
     @param      deepfLOG        logging function used to run the notebook
     @param      replacements    replacements
+    @param      dump            see function `execute_notebook_list_finalize_ut <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/ipythonhelper/run_notebook.html#pyquickhelper.ipythonhelper.run_notebook.execute_notebook_list_finalize_ut>`_
     @return                     dictionary { notebook_file: (isSuccess, outout) }
 
     The signature of function ``filter`` is::
 
-        def filter( i, filename) : return True or False
+        def filter(i, filename):
+            return True or False
 
     """
 
@@ -143,54 +145,30 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
             return False
         if "df.plot(...)" in cell:
             return False
+        if "Entrez un nombre" in cell:
+            return False
         if 'df["difference"] = ...' in cell:
             return False
         if 'remote_open' in cell:
             return None
         if 'blobpassword' in cell:
             return None
+        if 'String.Join(",", a.Select(c=>c.ToString()).ToArray())' in cell:
+            return False
         return True
 
-    addpath = get_additional_paths()
+    addpaths = get_additional_paths()
     kernel_name = None if "travis" in sys.executable else install_python_kernel_for_unittest(
         "ensae_teaching_cs")
-    results = {}
-    tested = []
-    for i, note in enumerate(notebooks):
-        if filter(i, note):
-            fLOG("******", i, os.path.split(note)[-1])
-            tested.append(note)
-            outfile = os.path.join(folder, "out_" + os.path.split(note)[-1])
-            try:
-                stat, out = run_notebook(note, working_dir=folder, outfilename=outfile,
-                                         additional_path=addpath, valid=valid_cell,
-                                         clean_function=clean_function, fLOG=deepfLOG,
-                                         kernel_name=kernel_name, replacements=replacements)
-                if not os.path.exists(outfile):
-                    raise FileNotFoundError(outfile)
-                results[note] = (True, stat, out)
-            except Exception as e:
-                results[note] = (False, None, e)
-    if len(tested) == 0:
-        raise Exception("no notebook were tested with '{0}'".format(filter))
-    return results
-
-
-def unittest_raise_exception_notebook(res, fLOG):
-    """
-    same code for all unit tests
-
-    @param      res     output of @see fn execute_notebooks
-    """
-    assert len(res) > 0
-    fails = [(os.path.split(k)[-1], ) + v
-             for k, v in sorted(res.items()) if not v[0]]
-    for f in fails:
-        fLOG(f)
-    if len(fails) > 0:
-        raise fails[0][-1]
-    for k, v in sorted(res.items()):
-        fLOG("final", os.path.split(k)[-1], v[0], v[1])
+    if filter:
+        notebooks = [_ for i, _ in enumerate(notebooks) if filter(i, _)]
+    if len(notebooks) == 0:
+        raise ValueError("Empty list of notebooks.")
+    res = execute_notebook_list(folder, notebooks, fLOG=fLOG,
+                                valid=valid_cell, additional_path=addpaths, kernel_name=kernel_name)
+    execute_notebook_list_finalize_ut(
+        res, fLOG=fLOG, dump=dump)
+    return res
 
 
 def copy_data_file(notebook_folder, filename, dest, fLOG=noLOG):

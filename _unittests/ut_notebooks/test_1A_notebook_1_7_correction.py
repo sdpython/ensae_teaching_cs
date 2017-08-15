@@ -54,27 +54,26 @@ class TestNotebookRunner1a_correction (unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook1a_correction_1_7")
         keepnote = ls_notebooks("td1a")
-        assert len(keepnote) > 0
 
         cp = os.path.join(temp, "..", "data", "seance4_excel.txt")
         shutil.copy(cp, temp)
         cp = os.path.join(temp, "..", "data", "seance4_excel.xlsx")
         shutil.copy(cp, temp)
 
-        res = execute_notebooks(temp, keepnote,
-                                lambda i, n: "_12" not in n and
-                                "session6." not in n and
-                                "session8." not in n and
-                                "session9." not in n and
-                                "session_10." not in n and
-                                "session_11." not in n and
-                                "correction" in n,
-                                fLOG=fLOG,
-                                clean_function=clean_function_1a)
-        unittest_raise_exception_notebook(res, fLOG)
+        execute_notebooks(temp, keepnote,
+                          lambda i, n: "_12" not in n and
+                          "session6." not in n and
+                          "session8." not in n and
+                          "session9." not in n and
+                          "session_10." not in n and
+                          "session_11." not in n and
+                          "correction" in n,
+                          fLOG=fLOG,
+                          clean_function=clean_function_1a,
+                          dump=src.ensae_teaching_cs)
 
 
 if __name__ == "__main__":

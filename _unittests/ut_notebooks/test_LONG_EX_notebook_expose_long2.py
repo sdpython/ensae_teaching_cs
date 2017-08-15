@@ -55,16 +55,12 @@ class TestNotebookRunnerExposeLong2(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebookexposelong2_")
         keepnote = ls_notebooks("expose")
-        assert len(keepnote) > 0
-        res = execute_notebooks(temp, keepnote,
-                                lambda i, n: "paris_parcours" in n,
-                                fLOG=fLOG,
-                                deepfLOG=fLOG if __name__ == "__main__" else noLOG,
-                                clean_function=clean_function_1a)
-        unittest_raise_exception_notebook(res, fLOG)
+        execute_notebooks(temp, keepnote, (lambda i, n: "paris_parcours" in n),
+                          fLOG=fLOG, deepfLOG=fLOG if __name__ == "__main__" else noLOG,
+                          clean_function=clean_function_1a, dump=src.ensae_teaching_cs)
 
 
 if __name__ == "__main__":

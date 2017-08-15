@@ -52,12 +52,8 @@ except ImportError:
         sys.path.append(path)
     import pyensae as skip__
 
-from pyquickhelper.ipythonhelper import run_notebook
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
-from pyquickhelper import __file__ as location
-from pyensae import __file__ as location2
-from src import __file__ as init_file
 
 
 class TestNotebookRunner1 (unittest.TestCase):
@@ -71,33 +67,11 @@ class TestNotebookRunner1 (unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks
-        assert ls_notebooks
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
         temp = get_temp_folder(__file__, "temp_notebook1")
-        nbfile = os.path.join(
-            temp,
-            "..",
-            "..",
-            "..",
-            "_doc",
-            "notebooks",
-            "td2a",
-            "td2a_correction_session_1.ipynb")
-        nbfile = os.path.normpath(nbfile)
-        assert os.path.exists(nbfile)
-        addpath = [
-            os.path.dirname(location), os.path.dirname(location2)]
-        addpath = [os.path.normpath(os.path.join(_, "..")) for _ in addpath]
-        addpath.append(os.path.abspath(os.path.dirname(init_file)))
-
-        outfile = os.path.join(temp, "out_" + os.path.split(nbfile)[-1])
-        assert not os.path.exists(outfile)
-        stat, out = run_notebook(nbfile, working_dir=temp, outfilename=outfile,
-                                 additional_path=addpath,
-                                 valid=lambda code: '%system' not in code,
-                                 fLOG=fLOG)
-        fLOG(out)
-        assert os.path.exists(outfile)
+        keepnote = ls_notebooks("td2a")
+        execute_notebooks(temp, keepnote, (lambda i, n: "td2a_correction_session_1" in n),
+                          fLOG=fLOG, dump=src.ensae_teaching_cs)
 
 
 if __name__ == "__main__":

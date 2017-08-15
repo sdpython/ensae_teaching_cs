@@ -69,22 +69,21 @@ class TestNotebookRunner2a_2_enonce(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook2a_2_enonce")
         keepnote = ls_notebooks("td2a")
-        assert len(keepnote) > 0
 
         if is_travis_or_appveyor():
             warnings.warn(
                 "travis or appveyor, unable to test TestNotebookRunner2a_2_enonce.test_notebook_runner")
             return
 
-        res = execute_notebooks(temp, keepnote, lambda i, n: "_2" in n and
-                                "enonce" in n and
-                                "_2D" not in n and
-                                "_2B" not in n,
-                                fLOG=fLOG, clean_function=clean_function_1a)
-        unittest_raise_exception_notebook(res, fLOG)
+        execute_notebooks(temp, keepnote, lambda i, n: "_2" in n and
+                          "enonce" in n and
+                          "_2D" not in n and
+                          "_2B" not in n,
+                          fLOG=fLOG, clean_function=clean_function_1a,
+                          dump=src.ensae_teaching_cs)
 
 
 if __name__ == "__main__":

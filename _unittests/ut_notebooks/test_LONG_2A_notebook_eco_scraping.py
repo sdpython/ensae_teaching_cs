@@ -57,11 +57,10 @@ class TestNotebookRunner2aEcoScraping(unittest.TestCase):
         if is_travis_or_appveyor() == "appveyor":
             # too long for appveyor
             return
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, unittest_raise_exception_notebook
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         from src.ensae_teaching_cs.data import simple_database
         temp = get_temp_folder(__file__, "temp_notebook2a_eco_scraping")
         keepnote = ls_notebooks("td2a_eco")
-        assert len(keepnote) > 0
         shutil.copy(simple_database(), temp)
 
         def filter(i, n):
@@ -73,11 +72,9 @@ class TestNotebookRunner2aEcoScraping(unittest.TestCase):
             warnings.warn("execution does not stop")
             return
 
-        res = execute_notebooks(temp, keepnote,
-                                filter,
-                                fLOG=fLOG,
-                                clean_function=clean_function_1a)
-        unittest_raise_exception_notebook(res, fLOG)
+        execute_notebooks(temp, keepnote, filter, fLOG=fLOG,
+                          clean_function=clean_function_1a,
+                          dump=src.ensae_teaching_cs)
 
 
 if __name__ == "__main__":

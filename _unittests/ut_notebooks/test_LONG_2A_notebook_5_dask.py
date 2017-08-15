@@ -52,16 +52,11 @@ class TestNotebookRunner2a_5_Dask (unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, unittest_raise_exception_notebook
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
         temp = get_temp_folder(__file__, "temp_notebook2a_5")
         keepnote = ls_notebooks("td2a")
-        assert len(keepnote) > 0
-        res = execute_notebooks(temp,
-                                keepnote,
-                                lambda i,
-                                n: "_5" in n,
-                                fLOG=fLOG)
-        unittest_raise_exception_notebook(res, fLOG)
+        execute_notebooks(temp, keepnote, (lambda i, n: "_5" in n),
+                          fLOG=fLOG, dump=src.ensae_teaching_cs)
 
 
 if __name__ == "__main__":
