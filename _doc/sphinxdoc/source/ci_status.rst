@@ -42,7 +42,9 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/actuariat_python
       - .. image:: https://codecov.io/github/sdpython/actuariat_python/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/actuariat_python?branch=master
-      -
+      - .. image:: http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `code_beatrix <http://lesenfantscodaient.fr>`_
       - .. image:: https://travis-ci.org/sdpython/code_beatrix.svg?branch=master
             :target: https://travis-ci.org/sdpython/code_beatrix
@@ -60,7 +62,9 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/code_beatrix
       - .. image:: https://codecov.io/github/sdpython/code_beatrix/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/code_beatrix?branch=master
-      -
+      - .. image:: http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/cpyquickhelper.svg?branch=master
             :target: https://travis-ci.org/sdpython/cpyquickhelper
@@ -78,7 +82,9 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/cpyquickhelper
       - .. image:: https://codecov.io/github/sdpython/cpyquickhelper/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/cpyquickhelper?branch=master
-      -
+      - .. image:: http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `ensae_projects <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/ensae_projects.svg?branch=master
             :target: https://travis-ci.org/sdpython/ensae_projects
@@ -96,7 +102,9 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/ensae_projects
       - .. image:: https://codecov.io/github/sdpython/ensae_projects/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/ensae_projects?branch=master
-      -
+      - .. image:: http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master
             :target: https://travis-ci.org/sdpython/ensae_teaching_cs
@@ -114,7 +122,9 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/ensae_teaching_cs
       - .. image:: https://codecov.io/github/sdpython/ensae_teaching_cs/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/ensae_teaching_cs?branch=master
-      -
+      - .. image:: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/jupytalk.svg?branch=master
             :target: https://travis-ci.org/sdpython/jupytalk
@@ -132,7 +142,9 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/jupytalk
       - .. image:: https://codecov.io/github/sdpython/jupytalk/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/jupytalk?branch=master
-      -
+      - .. image:: http://www.xavierdupre.fr/app/jupytalk/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/jupytalk/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `jyquickhelper <http://www.xavierdupre.fr/app/jyquickhelper/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/jyquickhelper.svg?branch=master
             :target: https://travis-ci.org/sdpython/jyquickhelper
@@ -150,7 +162,9 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/jyquickhelper
       - .. image:: https://codecov.io/github/sdpython/jyquickhelper/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/jyquickhelper?branch=master
-      -
+      - .. image:: http://www.xavierdupre.fr/app/jyquickhelper/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/jyquickhelper/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/mlstatpy.svg?branch=master
             :target: https://travis-ci.org/sdpython/mlstatpy
@@ -168,7 +182,9 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/mlstatpy
       - .. image:: https://codecov.io/github/sdpython/mlstatpy/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/mlstatpy?branch=master
-      -
+      - .. image:: http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/pyensae.svg?branch=master
             :target: https://travis-ci.org/sdpython/pyensae
@@ -186,7 +202,9 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/pyensae
       - .. image:: https://codecov.io/github/sdpython/pyensae/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/pyensae?branch=master
-      -
+      - .. image:: http://www.xavierdupre.fr/app/pyensae/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/pyensae/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/pymmails.svg?branch=master
             :target: https://travis-ci.org/sdpython/pymmails
@@ -222,7 +240,9 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/pymyinstall
       - .. image:: https://codecov.io/github/sdpython/pymyinstall/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/pymyinstall?branch=master
-      -
+      - .. image:: http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/pyquickhelper.svg?branch=master
             :target: https://travis-ci.org/sdpython/pyquickhelper
@@ -240,7 +260,7 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/pyquickhelper
       - .. image:: https://codecov.io/github/sdpython/pyquickhelper/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/pyquickhelper?branch=master
-      - .. image:: http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/nbcov.png
+      - .. image:: http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `pyrsslocal <http://www.xavierdupre.fr/app/pyrsslocal/helpsphinx/index.html>`_
@@ -293,7 +313,9 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/python3_module_template
       - .. image:: https://codecov.io/github/sdpython/python3_module_template/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/python3_module_template?branch=master
-      -
+      - .. image:: http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `teachpyx <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/teachpyx.svg?branch=master
             :target: https://travis-ci.org/sdpython/teachpyx
@@ -311,7 +333,9 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/teachpyx
       - .. image:: https://codecov.io/github/sdpython/teachpyx/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/teachpyx?branch=master
-      -
+      - .. image:: http://www.xavierdupre.fr/app/teachpyx/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/teachpyx/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `tkinterquickhelper <http://www.xavierdupre.fr/app/tkinterquickhelper/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/tkinterquickhelper.svg?branch=master
             :target: https://travis-ci.org/sdpython/tkinterquickhelper
