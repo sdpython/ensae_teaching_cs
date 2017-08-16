@@ -180,7 +180,7 @@ D'autres sont moins courants mais tout aussi intéressants :
 Un peu plus ludique et présentés sous la forme de défis :
 
 * :ref:`l-hermionne`
-* `Optimisation de la tourné d'un camion poubelle <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_tour.html>`_ :
+* `Optimisation de la tournée d'un camion poubelle <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_tour.html>`_ :
   le camion poubelle doit parcourir toutes les rues d'une ville, comment trouve-t-il le chemin le
   plus court ?
 
@@ -291,6 +291,57 @@ Une fois qu'on est agile avec les données, on peut facilement explorer,
 
 * `Que font les habitants de Chicago après le travail ? <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_bike.html>`_
   (ceux qui font du vélo tout du moins)
+
+------------
+
+Les notions qu'il faut avoir comprises ou vues
+==============================================
+
+La programmation est incontournable dès qu'on manipule des données.
+Les logiciels *clic-bouton* sont utiles pour explorer mais ils
+permettent difficilement de gérer de grands volumes,
+d'automatiser un processus de traitement de données
+et de le mettre en production. Voici les notions qu'il
+faut avoir comprises.
+
+Pour un profil plutôt économiste
+++++++++++++++++++++++++++++++++
+
+*Ce qu'il faut maîtriser*
+
+* Les bases du langage :epkg:`Python` : boucles, tests, fonctions,
+  listes, dictionnaires,
+  modules, expressions régulières.
+* Le tri et la recherche dichotomique.
+* La notion de coût algorithmique.
+* Le calcul matriciel, les dataframes, les graphes.
+
+*Ce qu'il faut connaître*
+
+* Les classes.
+* La programmation dynamique.
+
+Pour un profil plutôt data scientist
+++++++++++++++++++++++++++++++++++++
+
+*Ce qu'il faut maîtriser*
+
+* Les bases du langage :epkg:`Python` : boucles, tests, fonctions,
+  listes, dictionnaires,
+  modules, expressions régulières.
+* Les classes,
+* Le tri, la recherche dichotomique, la programmation dynamique.
+* La notion de coût algorithmique.
+* Notion de graphes et de parcours dans un graphe.
+* Le calcul matriciel, les dataframes, les graphes.
+
+*Ce qu'il faut connaître*
+
+* Les tests unitaires.
+* `Git <https://fr.wikipedia.org/wiki/Git>`_.
+* Des exercices de type `Google Jam <https://code.google.com/codejam/>`_.
+* Des accélérations du langage comme Cython.
+* Créer un site web avec Flask, Javacript.
 
 ------------
 

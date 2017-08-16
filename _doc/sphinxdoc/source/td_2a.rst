@@ -64,4 +64,10 @@ Nicolas Rousset, Jérémie Jakubowicz, Gilles Drigout,
 Gaël Varoquaux.
 La :ref:`feuille de route 2016 <l-feuille-de-route-2016-2A>`
 précise le plan suivi pour cette année et les intervenants
-ayant animé le cours.
+ayant animé le cours qui a pour objectif de vous présenter les
+notions suivantes.
+
+.. toctree::
+    :maxdepth: 2
+
+    td_2a_notions
