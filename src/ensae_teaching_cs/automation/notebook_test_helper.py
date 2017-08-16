@@ -156,6 +156,8 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
             return None
         if 'String.Join(",", a.Select(c=>c.ToString()).ToArray())' in cell:
             return False
+        if 'Speech.VocalSynthesis("ENSAE", "fr-FR","","")' in cell:
+            return False
         return True
 
     addpaths = get_additional_paths()
