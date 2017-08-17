@@ -55,8 +55,6 @@ class TestModulesTheano(unittest.TestCase):
                 # Should not be needed unless the location is different.
                 # os.environ["PATH"] += ";" + this
                 pass
-            else:
-                fLOG("[warning] '{0}' does not exist".format(loc))
 
             import theano
             # if you see the following warning
