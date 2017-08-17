@@ -158,6 +158,10 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
             return False
         if 'Speech.VocalSynthesis("ENSAE", "fr-FR","","")' in cell:
             return False
+        if 'Speech.VocalSynthesis(text, lang, voice, filename)' in cell:
+            return False
+        if "%%SPEAK fr-FR" in cell:
+            return False
         return True
 
     addpaths = get_additional_paths()

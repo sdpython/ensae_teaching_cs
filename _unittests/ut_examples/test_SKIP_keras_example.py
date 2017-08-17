@@ -82,7 +82,7 @@ class TestSkipExampleKerasMNIST(unittest.TestCase):
                   nb_classes=None, nb_epoch=1, fLOG=fLOG)
         fLOG("predict")
         score = keras_predict(model, X_test, Y_test)
-        fLOG(score.shape)
+        fLOG(len(score))
         fLOG(score[:5])
 
 

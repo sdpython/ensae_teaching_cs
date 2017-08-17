@@ -49,7 +49,7 @@ def american_cities(df_or_filename, nb_cities=-1, img=None, fLOG=fLOG):
     # graph
     for i in range(0, dftrip.shape[0]):
         if i % 10 != 0:
-            dftrip.ix[i, "City"] = ""
+            dftrip.loc[i, "City"] = ""
 
     if img is not None:
         import matplotlib.pyplot as plt

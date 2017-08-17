@@ -67,30 +67,6 @@ class TestNotebookRunner2a_csharp (unittest.TestCase):
                           clean_function=clean_function_1a,
                           fLOG=fLOG, dump=src.ensae_teaching_cs)
 
-        #~ if len(fails) > 0:
-        #~ e = str(fails[0][1][-1])
-        #~ if "Audio device error encountered" in str(e):
-        #~ # maybe the script is running on a virtual machine (no Audia
-        #~ # device)
-        #~ if os.environ["USERNAME"] == "ensaestudent" or \
-        #~ os.environ["USERNAME"] == "vsxavierdupre" or \
-        #~ "paris" in os.environ["COMPUTERNAME"].lower() or \
-        #~ "2016" in os.environ["COMPUTERNAME"].lower() or \
-        #~ os.environ["USERNAME"].endswith("$"):  # anonymous Jenkins configuration
-        #~ # I would prefer to catch a proper exception
-        #~ # it just exclude one user only used on remotre machines
-        #~ fLOG("no audio")
-        #~ return
-        #~ elif "<class 'int'>-" in str(e):
-        #~ # issue with conversion from 3 to double
-        #~ return
-
-        #~ fLOG(str(e).replace("\n", " EOL "))
-        #~ raise Exception(
-        #~ "*** {0} *** {1} ***".format(os.environ["COMPUTERNAME"], e)) from fails[0][1][-1]
-        #~ else:
-        #~ fLOG("success")
-
 
 if __name__ == "__main__":
     unittest.main()

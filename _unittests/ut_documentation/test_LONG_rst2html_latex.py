@@ -65,6 +65,7 @@ class TestRst2HtmlLatex(unittest.TestCase):
 
         preamble = """
                     \\newcommand{\\acc}[1]{\\left\\{#1\\right\\}}
+                    \\newcommand{\\abs}[1]{\\left\\{#1\\right\\}}
                     \\newcommand{\\cro}[1]{\\left[#1\\right]}
                     \\newcommand{\\pa}[1]{\\left(#1\\right)}
                     \\newcommand{\\girafedec}[3]{ \\begin{array}{ccccc} #1 &=& #2 &+& #3 \\\\ a' &=& a &-& o  \\end{array}}
@@ -85,6 +86,9 @@ class TestRst2HtmlLatex(unittest.TestCase):
                            "sphinxdoc", "source", "specials")
         files = os.listdir(doc)
         fulls = [os.path.join(doc, _) for _ in files]
+        fLOG("number of files", len(fulls))
+        if len(fulls) > 10:
+            fulls = fulls[:10]
 
         for full in fulls:
             if os.path.splitext(full)[-1] != ".rst":

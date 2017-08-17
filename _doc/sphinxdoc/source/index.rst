@@ -209,4 +209,4 @@ sans même avoir à récupérer tous les fichiers sur votre ordinateur :
 
 .. image:: nbcov.png
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/all_notebooks_coverage.html
-    :alt: Notebook Coverage   
+    :alt: Notebook Coverage

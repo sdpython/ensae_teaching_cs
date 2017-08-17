@@ -81,11 +81,11 @@ class ElectionResults:
             cols1 = [_ for _ in self.tours[
                 1].columns if _ not in self.LevelCol]
             for i in range(len(self.T0)):
-                s1 = self.T0.ix[i, cols0].sum()
-                s2 = self.T1.ix[i, cols1].sum()
+                s1 = self.T0.loc[i, cols0].sum()
+                s2 = self.T1.loc[i, cols1].sum()
                 coef = 1.0 * s1 / s2
                 for c in cols1:
-                    self.T1.ix[i, c] *= coef
+                    self.T1.loc[i, c] *= coef
         elif method == "cand":
             cols0 = [_ for _ in self.tours[
                 0].columns if _ not in self.LevelCol]
@@ -155,7 +155,7 @@ class ElectionResults:
         """
         keep = [isinstance(_, (float, int, numpy.int64, numpy.float64)) and ~numpy.isnan(_)
                 for _ in tour["Abstentions"]]
-        tour = tour.ix[keep, :]
+        tour = tour.loc[keep, :]
         names = [_ for _ in tour.columns if _.startswith("Nom")]
         res = []
         for n in names:
@@ -295,7 +295,7 @@ class ElectionResults:
                 "unable to proceeed, we need to draw the same regions, assuming both matrices are sorted in the same order")
 
         def resample_matrix(mat, h):
-            return mat.ix[h, :]
+            return mat.loc[h, :]
         if method == "uniform":
             n = len(self.T0)
             h = [random.randint(0, n - 1) for i in range(0, n)]
@@ -379,13 +379,13 @@ class ElectionResults:
         fLOG("level for each coefficient", shape)
         for i in range(0, shape[0]):
             for j in range(0, shape[1]):
-                series = [m.ix[i, j] for m in matrices]
+                series = [m.iloc[i, j] for m in matrices]
                 xmean, xstd, xlow, xhigh = ElectionResults.min_max_mean_std(
                     series, alpha=alpha)
-                mean.ix[i, j] = xmean
-                std.ix[i, j] = xstd
-                low.ix[i, j] = xlow
-                high.ix[i, j] = xhigh
+                mean.iloc[i, j] = xmean
+                std.iloc[i, j] = xstd
+                low.iloc[i, j] = xlow
+                high.iloc[i, j] = xhigh
         return mean, std, low, high
 
     @staticmethod
@@ -413,6 +413,6 @@ class ElectionResults:
         res = [["" for i in range(shape[1])] for j in range(shape[0])]
         for i in range(0, shape[0]):
             for j in range(0, shape[1]):
-                series = [float_format(m.ix[i, j]) for m in matrices]
+                series = [float_format(m.iloc[i, j]) for m in matrices]
                 res[i][j] = agg_format(series)
         return pandas.DataFrame(data=res, columns=list(matrices[0].columns), index=list(matrices[0].index))
