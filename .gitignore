@@ -233,7 +233,7 @@ out_*
 version.txt
 */sphinxdoc/source/ensae_teaching_cs/*
 */sphinxdoc/source/all*.rst
-*/sphinxdoc/source/notebooks/*
+*/sphinxdoc/source/notebooks/reveal.js/*
 _doc/sphinxdoc/source/examples/*
 _doc/sphinxdoc/source/phdoc_static/*.css
 _doc/sphinxdoc/source/phdoc_static/*.html
