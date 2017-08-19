@@ -121,6 +121,7 @@ tests unitaires, le templating, les sites Web, le scraping, encoding, les notebo
     specials/graphes
     specials/siteflask
     specials/unittest_coverage_git_profling
+    notebooks/_gs1a_B_ci
     notebooks/notebook_convert
     notebooks/jupyter_custom_magics
 
