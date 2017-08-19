@@ -118,7 +118,6 @@ tests unitaires, le templating, les sites Web, le scraping, encoding, les notebo
 .. toctree::
     :maxdepth: 1
 
-    specials/graphes
     specials/siteflask
     specials/unittest_coverage_git_profling
     notebooks/_gs1a_B_ci
@@ -164,6 +163,7 @@ Ces deux façons de faire sont présentées durant dans les séances qui suivent
 .. toctree::
     :maxdepth: 2
 
+    specials/graphes
     notebooks/_gs1a_A_programmation_dynamique
     notebooks/_gs1a_A_arbre_trie
     notebooks/_gs1a_A_optimisation_contrainte

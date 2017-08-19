@@ -530,6 +530,8 @@ Deep Learning en détail
 
 *Notebooks*
 
+(à venir foolbox)
+
 .. toctree::
     :maxdepth: 2
 
@@ -583,6 +585,7 @@ Deep Learning en détail
 * `Training Deep Nets with Sublinear Memory Cost <https://arxiv.org/pdf/1604.06174.pdf>`_
 * `On the importance of initialization and momentum in deep learning <http://www.cs.toronto.edu/~fritz/absps/momentum.pdf>`_
 * `TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems <http://download.tensorflow.org/paper/whitepaper2015.pdf>`_
+* `Foolbox v0.8.0: A Python toolbox to benchmark the robustness of machine learning models <https://arxiv.org/abs/1707.04131>`_
 
 *Deep Forest*
 
@@ -635,6 +638,8 @@ Deep Learning en détail
 * `climin <http://climin.readthedocs.io/en/latest/rmsprop.html>`_ (algorithme de back propagation)
 * `pytorch <http://pytorch.org/>`_ (Facebook)
 * `tensorflow <https://www.tensorflow.org/>`_ (Google)
+* `foolbox <https://github.com/bethgelab/foolbox>`_ :
+  trouver des petites perturbations des données qui trompent les réseaux de neurones
 
 *à suivre*
 
