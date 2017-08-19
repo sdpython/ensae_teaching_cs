@@ -354,6 +354,68 @@ Le dernier commit divise l'unique commande en plusieurs afin que cela soit plus
 visible sur le site de *circleci*.
 Voir `commit split circleci commands <https://github.com/sdpython/td1a_unit_test_ci/commit/4a2ccd9727d2082050420f6453724e52d8bbd9a7>`_.
 
+Coding Style
+------------
+
+Le style est le genre de querelles sans fin où les développeurs
+s'écharpent à propos de la façon d'écrire le code le plus lisible
+qui soit. Je ne vais pas ici décider du meilleur style pour deux raisons.
+La première est que bien souvent chacun a son propre style.
+La seconde est que le langage :epkg:`Python` a décidé de décrire un style
+standard sous la forme de règles : `PEP8 <https://www.python.org/dev/peps/pep-0008/>`_
+et que la grande majorité des développeurs les suit.
+Le troisième est que je serais bien incapable de vous décrire ces règles
+car je ne les connais pas. J'utilise un outil
+qui modifie mon code afin qu'il suive ces règles :
+`autopep8 <https://pypi.python.org/pypi/autopep8>`_.
+Je l'applique à l'ensemble du répertoire :
+
+::
+
+    autopep8 --in-place --aggressive --aggressive --recursive .
+
+Cela donne `commit applies autopep8 <https://github.com/sdpython/td1a_unit_test_ci/commit/c7ae602b997462aad201d2ca5e6c5723088509d5>`_.
+Pour tester si le style est correct, on peut utiliser le module
+`flake8 <https://pypi.python.org/pypi/flake8>`_.
+
+::
+
+    flake8
+
+::
+
+    .\doc\conf.py:12:1: E402 module level import not at top of file
+    .\doc\conf.py:36:1: E402 module level import not at top of file
+    .\td1a_unit_test_ci\__init__.py:1:1: E265 block comment should start with '# '
+
+Il existe aussi des règles pour la documentation
+`PEP 257 <https://www.python.org/dev/peps/pep-0257/>`_.
+`docformatter <https://pypi.python.org/pypi/docformatter/0.8>`_
+permet de formatter la documentation.
+
+::
+
+    docformatter -r -i td1a_unit_test_ci
+
+Le module `pydocstyle <https://pypi.python.org/pypi/pydocstyle/>`_
+vérifie que les règles sont respectées.
+
+::
+
+    pydocstring td1a_unit_test_ci
+
+Un dernier module `unify <https://github.com/myint/unify>`_
+unifie la façon dont les chaînes de caractères sont écrites,
+plus souvent des ``'`` que des ``"``.
+
+*Est-ce vraiment utile ?*
+
+Oui pour deux raisons. La première est de rendre un programme plus lisible.
+Peu à peu on s'habitue à un style. Un code est plus facile à lire si les mêmes
+conventions sont appliquées. La seconde raison est liée à :epkg:`git`. Si tout le
+monde suit les mêmes règles, cela minimise les différences entre un code
+écrit par un développeur et le même code modifié par un autre.
+
 Dernière étape : PyPi
 ---------------------
 
