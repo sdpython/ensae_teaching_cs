@@ -22,7 +22,8 @@ script:
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_EX_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)).*\"", NAME: "UT_EX", TIMEOUT: 3600 }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_GUI_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)).*\"", NAME: "UT_GUI", TIMEOUT: 2400 }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*scraping.* -g \".*((SKIP)|(theano)|(keras)).*\"", NAME: "UT_SCRAPING", TIMEOUT: 3600 }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((theano)|(keras)).*\"", NAME: "UT_DEEP", TIMEOUT: 2400 }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((theano)|(keras)).*\"", NAME: "UT_DEEP1", TIMEOUT: 3600 }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((deep)).*\"", NAME: "UT_DEEP2", TIMEOUT: 3600 }
   - if [ ${VERSION} == "3.5" and ${DIST} == "std" ]
       then 
         --CMD=python -u setup.py build_sphinx;

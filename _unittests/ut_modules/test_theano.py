@@ -79,10 +79,6 @@ class TestModulesTheano(unittest.TestCase):
             # https://stackoverflow.com/questions/38536788/g-error-on-import-of-theano-on-windows-7
             self.assertTrue(theano is not None)
 
-            dirgcc = os.path.dirname(theano.configdefaults.mingw_w64_gcc)
-            if not os.path.exists(dirgcc):
-                fLOG("[warning] '{0}' does not exist".format(dirgcc))
-
             if False:
                 rows = []
                 for k in sorted(dir(theano.configdefaults)):

@@ -55,19 +55,6 @@ Programmation
 -------------
 
 .. todoext::
-    :title: techniques de webscrapping
-    :tag: plus
-
-    * beautifulsoup, ghost.py, scrappy
-    * `Python's Web Framework Benchmarks <http://klen.github.io/py-frameworks-bench/>`_
-
-.. todoext::
-    :title: aborder les formats de données sparses (CRS, ...)
-    :tag: plus
-
-    See `Compressed Sparse Row Format (CSR) <http://www.scipy-lectures.org/advanced/scipy_sparse/csr_matrix.html>`_.
-
-.. todoext::
     :title: ajouter un notebook sur joblib
     :tag: plus
 

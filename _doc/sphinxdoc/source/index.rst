@@ -22,6 +22,16 @@ sont notés sur `Waffle/ensae_teaching_cs <https://waffle.io/sdpython/ensae_teac
 .. |slideslogo| image:: _static/slides_logo.png
              :height: 20
 
+.. contents::
+    :depth: 1
+
+Ce site est principalement un site d'exercices. D'autres contenus sont disponibles
+sur des `éléments de machine learning <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html#mlstatpy>`_,
+`la programmation avec Python <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_,
+des `jeux autour d'algorithmes <http://lesenfantscodaient.fr/>`_,
+des `présentations, conférences <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_,
+ou encore des `sujets de compétitions, hackathons <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_.
+
 Avant-propos
 ------------
 
@@ -31,18 +41,17 @@ incontournables dans le domaine des statistiques.
 Ils sont simples,
 `open source <https://fr.wikipedia.org/wiki/Open_source>`_,
 s'apprennent rapidement, sont utilisés
-par beaucoup et dispose de nombreuses pages, blogs, listes
+par beaucoup et disposent de nombreuses pages, blogs, listes
 de diffusions qui leur sont dédiées.
 `R <https://www.r-project.org/>`_ est le terrain de jeu préféré des chercheurs
 mais il est peu pratique pour développer un site web ou un jeu.
 `Python <https://www.python.org/>`_ est beaucoup plus polyvalent
-et de plus en plus populaire. Il est enseigné à l'ENSAE depuis 2004.
+et de plus en plus populaire. Il est enseigné à l':epkg:`ENSAE` depuis 2004.
 Les premiers pas sont parfois rebutants mais on arrive vite à
 quelque chose à condition d'y passer un peu de temps au démarrage.
-Passer les premiers jeux (voir `lesenfantscodaient.fr <http://lesenfantscodaient.fr/>`_),
-la programmation se révèle assez pratique pour traiter les données,
+La programmation est indispensable pour traiter les données,
 les visualiser, automatiser les tâches les plus répétitives, et
-s'amuser.
+s'amuser (voir `lesenfantscodaient.fr <http://lesenfantscodaient.fr/>`_).
 
 **3 niveaux**
 
@@ -91,6 +100,8 @@ L'immense majorité des langages de programmation est de langue anglaise.
 La documentation de tous les logiciels partagés est en anglais.
 Certains paragraphes y sont souvent présents comme
 `Getting Started <https://www.python.org/about/gettingstarted/>`_.
+Les résultats des recherches sur internet sont très souvent
+plus intéressants lorsqu'elles sont libellées en anglais.
 
 Notebooks
 ^^^^^^^^^
@@ -101,7 +112,8 @@ Il offre un espace de travail réactif, agréable et très pratique quand il s'a
 partager son travail.
 Chaque séance mélange notions et exerices qu'on peut faire directement dans le notebook
 une fois téléchargé. La correction est également rédigée sous forme de notebook afin de
-pouvoir aisément *jouer* avec la solution.
+pouvoir aisément *jouer* avec la solution mais elle fonctionnera dans n'importe quel
+autre environnement.
 
 .. _l-getting-started-main:
 .. _l-install:
@@ -120,8 +132,8 @@ de librairies qui ont offert un service équivalent à ce que propose `R <https:
 ont élevé le niveau de fonctionnalités, les
 `notebooks Jupyter <http://jupyter.org/>`_
 ont changé la façon de travailler.
-Les modules les plus utilisés sont fournis sur toutes les plate-formes avec la distribution
-`Anaconda <https://www.continuum.io/downloads>`_.
+Les modules les plus utilisés sont maintenant fournis sur toutes les plate-formes
+avec la distribution `Anaconda <https://www.continuum.io/downloads>`_.
 Sous Windows, le site
 `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
 proposent de nombreux modules qui nécessitent un compilateur C++. On les repère car
@@ -131,8 +143,8 @@ Dépendences et automatisation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ces cours représentent plus de 60 heures de cours et travaux pratiques suivis
-par plus de 200 élèves de l'ENSAE répartis sur trois années, la réception d'une centaine
-de projets. Cela nécessite un peu d'automatisation implémentée en Python
+par plus de 200 élèves de l':epkg:`ENSAE` répartis sur trois années, la réception d'une centaine
+de projets. Cela nécessite un peu d'automatisation implémentée en :epkg:`Python`
 mise à disposition sous forme de modules (voir :ref:`listes des dépendances <ci-status>`).
 
 En diagonal
@@ -163,7 +175,7 @@ En diagonal
 Contributions
 -------------
 
-Le cours est open source et disponible sur GitHub.
+Le cours est open source et disponible sur :epkg:`GitHub`.
 N'hésitez pas à contribuer en m'envoyant des
 `pull requests <https://github.com/sdpython/ensae_teaching_cs/pulls>`_
 sans même avoir à récupérer tous les fichiers sur votre ordinateur :

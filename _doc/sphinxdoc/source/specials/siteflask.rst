@@ -7,8 +7,7 @@ Site Web, exemple avec Flask
 En entreprise, on a parfois besoin d'exposer de partager des données d'une machine
 à une autre, d'exécution des scripts sur une machine distante sans avoir
 à installer le langage Python. Dans le cas, le module
-`Flask <http://flask.pocoo.org/>`_ permet de créer
-facilement un site web.
+:epkg:`Flask` permet de créer facilement un site web.
 
 .. contents::
     :local:
@@ -56,21 +55,19 @@ Cela donne ::
 
             # main page
             c = get_url_content(site)
-            assert "Simple Flask Site"
+            self.assertIn("Simple Flask Site", c)
 
             # exception
             c = get_url_content(site + "help/exception")
-            assert "STACK:" in c
+            self.assertIn("STACK:", c)
 
             # help for
             c = get_url_content(site + "help/ask/for/help")
-            fLOG(c)
-            assert "help for command: ask/for/help" in c
+            self.assertIn("help for command: ask/for/help", c)
 
             # shutdown
             c = requests.post(site + "shutdown/")
-            fLOG(c.text)
-            assert "Server shutting down..." in c.text
+            self.assertIn("Server shutting down...", c.text)
 
 La fonction `get_url_content <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/loghelper/url_helper.html?highlight=get_url_content#pyquickhelper.loghelper.url_helper.get_url_content>`_
 récupère le contenu d'une page HTML. Pour faire bien, elle devrait
@@ -82,18 +79,14 @@ débugge facilement le code du serveur. Dans le cas contraire,
 il faut ajouter des lignes logs dans le serveur pour savoir
 ce qu'il fait. C'est de toutes façons une bonne habitude à prendre.
 
-A noter : le module `requests <http://docs.python-requests.org/en/latest/>`_
+A noter : le module :epkg:`requests`
 simplifie beaucoup de choses dès qu'on commence à se pencher
 sur des problèmes d'authentification.
 
 Autres alternatives
 -------------------
 
-Pour un plus petit site, il existe le module
-`bottle <http://bottlepy.org/docs/dev/index.html>`_
-mais celui ne permet d'écrire simplement
-des tests unitaires.
-Pour des sites plus conséquents, la référence est
+Le module :epkg:`Flask` Pour des sites plus conséquents, la référence est
 `django <https://www.djangoproject.com/>`_.
 
 `autobahn/python <http://autobahn.ws/python/>`_
@@ -118,7 +111,8 @@ pour un site web professionnel écrit en Python.
 ou `micro-frameworks <https://wiki.python.org/moin/WebFrameworks>`_ mais
 il ne gère pas très bien la désynchronisation et une seule requête peut être
 géré en même temps.
-Le projet `falcon <https://falconframework.org/>`_ est plus rapide.
+Le projet `falcon <https://falconframework.org/>`_ est plus rapide ou
+encore `tornado <http://www.tornadoweb.org/en/stable/>`_.
 
 * `Django vs Flask vs Pyramid: Choosing a Python Web Framework <https://www.airpair.com/python/posts/django-flask-pyramid>`_
 * `What are the best Python microframeworks? <https://www.slant.co/topics/532/~python-microframeworks>`_

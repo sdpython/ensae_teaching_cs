@@ -37,6 +37,9 @@ ou si vous répondez positivement à une question parmi les suivantes.
 
 Vous pouvez également vous tester en faisant l'un des énoncés
 des :ref:`examens précédents <l-examens>` en moins de deux heures.
+L'informatique est plus souvent un outil qu'une matière à part entière.
+Le paragraphe :ref:`td1a-notions` propose deux profils d'utilisation
+et ce qu'il est suggéré de connaître pour chacun d'entre eux.
 
 ------------
 
@@ -71,23 +74,8 @@ et qu'il est important de comprendre.
     i_examples
     notebooks/structures_donnees_conversion
     notebooks/tableau_contingence
-
-Le premier jeu qu'on demande d'implémenter à tous ceux qui commencent la
-programmation :
-
-.. toctree::
-    :maxdepth: 1
-
-    notebooks/pp_exo_deviner_un_nombre
-    notebooks/pp_exo_deviner_un_nombre_correction
-
-A la fin des premières séances, on peut réfléchir à l'implémentation
-d'un algorithme :
-
-.. toctree::
-    :maxdepth: 2
-
-    notebooks/_gs1a_6_jaccard
+    notebooks/histogramme_rapide
+    notebooks/code_multinomial
 
 Au terme de ces six séances, si la programmation est nouvelle pour vous ou
 si le langage vous paraît encore peu naturel,
@@ -95,48 +83,7 @@ je vous encourage à faire d'autres exercices comme
 piocher dans les anciens :ref:`l-examens`, à regarder la liste des exercices
 proposées à `Quelques exercices du Project Euler <http://mathprepa.fr/python-project-euler-mpsi/>`_.
 La plupart de ces notions font déjà partie du programme des classes préparatoires
-scientifiques. Il faudra dans tous les cas participer au jeu suivant :
-
-.. toctree::
-    :maxdepth: 1
-
-    questions/exams_algo_1a
-
-------------
-
-TD - Site web et pratiques logiciels
-====================================
-
-Le langage Python est au programme des classes préparatoires scientifique
-(`Prise en main du logiciel Python <https://www.ac-paris.fr/portail/jcms/p1_742307/prise-en-main-du-logiciel-python>`_)
-et les étudiants ont déjà vu ou parcouru des exercices algorithmiques
-(voir `MathPrepas, Programmation en Python <http://mathprepa.fr/python-project-euler-mpsi/>`_).
-**Cette partie s'adesse essentiellement à ceux qui ont déjà programmé.**
-On peut se pencher sur d'autres aspects logiciels tels que les
-tests unitaires, le templating, les sites Web, le scraping, encoding, les notebooks...
-
-.. toctree::
-    :maxdepth: 1
-
-    specials/siteflask
-    specials/unittest_coverage_git_profling
-    notebooks/_gs1a_B_ci
-    notebooks/notebook_convert
-    notebooks/jupyter_custom_magics
-
-Deux exercices sont suggérés pour une séance de deux heures à choisir parmi :
-
-#. Constuire un site web avec `Flask <http://flask.pocoo.org/>`_,
-   `Django <https://www.djangoproject.com/>`_,
-   `Falcon <https://falconframework.org/>`_,
-   `Tornado <https://github.com/tornadoweb/tornado>`_
-#. Ecrire un test unitaire pour un exercice d'une séance précédente
-#. Appliquer une des méthodes décrites dans `Profiling <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/completion_profiling.html#completionprofilingrst>`_
-   à un exercice d'une séance précédente
-#. Constuire la documentation d'un module avec `Sphinx <http://www.sphinx-doc.org/en/stable/>`_
-#. Implémenter une nouvelle commande magique sur Jupyter
-#. Concevoir une campagne publicataire avec `Mako <http://www.makotemplates.org/>`_
-   ou `Jinja2 <http://jinja.pocoo.org/docs/dev/>`_
+scientifiques.
 
 ------------
 
@@ -164,33 +111,17 @@ Ces deux façons de faire sont présentées durant dans les séances qui suivent
     :maxdepth: 2
 
     specials/graphes
+    notebooks/_gs1a_6_jaccard
     notebooks/_gs1a_A_programmation_dynamique
     notebooks/_gs1a_A_arbre_trie
     notebooks/_gs1a_A_optimisation_contrainte
     notebooks/_gs1a_A_edit_distance
     notebooks/_gs1a_A_parcours_graphe
-
-La plupart de ces algorithms font partie des premiers qu'on apprend.
-D'autres sont moins courants mais tout aussi intéressants :
-
-.. toctree::
-    :maxdepth: 2
-
     notebooks/_gs1a_A_algo
-
-Un peu plus ludique et présentés sous la forme de défis :
-
-* :ref:`l-hermionne`
-* `Optimisation de la tournée d'un camion poubelle <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_tour.html>`_ :
-  le camion poubelle doit parcourir toutes les rues d'une ville, comment trouve-t-il le chemin le
-  plus court ?
 
 Plus on en connaît, plus il devient facile de les assembler pour résoudre
 des problèmes complexes. Il faut se construire une
 sorte de culture algorithmique (:ref:`l-algoculture`).
-
-*Notes*
-
 La relecture du TD sur l'optimisation sous contrainte est conseillée
 à ceux qui souhaitent optimiser des portefeuilles d'actions.
 Il est préférable d'avoir fait la séance sur la distance de Jaccard
@@ -198,16 +129,6 @@ avant de faire celle sur la distance d'édition.
 L'efficacité d'un algorithme est étroitement liée à la représentation des
 données choisies. Le `trie <https://fr.wikipedia.org/wiki/Trie_(informatique)>`_
 en est l'illustration.
-
-.. toctree::
-    :maxdepth: 2
-
-    questions/question_2014
-
-.. _l-entretiens:
-
-*Entretiens d'embauche*
-
 Les recruteurs testent votre capacité à programmer avec des exercices
 où ils vérifient que vous savez écrire du code et comparer la vitesse de deux
 algorithmes. Le plus souvent,
@@ -229,18 +150,28 @@ Pour vous exercer :
 .. toctree::
     :maxdepth: 1
 
+    questions/question_2014
     notebooks/exercice_xn
     notebooks/exercice_echelle
     notebooks/exercice_morse
     notebooks/exercice_lcs
     notebooks/exercice_plus_grande_somme
+    notebooks/tri_nlnd
 
-Et pour apprendre :
+Algorithmes pour s'amuser
+=========================
+
+Un peu plus ludique et présentés sous la forme de défis :
+
+* :ref:`l-hermionne`
+* `Optimisation de la tournée d'un camion poubelle <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_tour.html>`_ :
+  le camion poubelle doit parcourir toutes les rues d'une ville, comment trouve-t-il le chemin le
+  plus court ?
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
-    notebooks/tri_nlnd
+    questions/exams_algo_1a
 
 *Quelques sources d'exercices*
 
@@ -253,21 +184,19 @@ Et pour apprendre :
 TD - calcul matriciel, graphes, données - data science
 ======================================================
 
-Les quatre sujets importants des dernières séances sont la programmation dynamique,
-la dichotomie, les dataframe, les graphiques. La séance 9, la fin de la séance
-10 et la séance 11 ne sont pas indispensables et seront vus plus en détail l'année prochaine.
-Toutefois, **la séance sur les dataframes propose des outils de manipulation et visualisation
-des données utiles pour tous les projets réalisés à l'école**.
-
+La séance sur les dataframes propose des outils de manipulation et visualisation
+des données utiles pour tous les projets réalisés à l'école.
 Ces séances sont centrées sur les outils indispensables pour manipuler
 facilement les données et faire des calculs rapides.
 Ces outils sont similaires à ceux qu'on trouve dans de nombreux languages à usage scientifique
 (`R <http://www.r-project.org/>`_, `SciLab <http://www.scilab.org/fr>`_,
 `Julia <http://julialang.org/>`_, `Octave <http://www.gnu.org/software/octave/>`_, ...).
-Ces trois séances peuvent paraître plus longues car elles s'appuient sur des modules qu'il faut découvrir
+Ces séances peuvent paraître plus longues car elles
+s'appuient sur des modules qu'il faut découvrir
 puis utiliser pour résoudre des exercices. Toutefois, les modules
-`numpy <http://www.numpy.org/>`_, `pandas <http://pandas.pydata.org/>`_, `matplotlib <http://matplotlib.org/>`_
-sont incontournables pour manipuler les données en Python.
+`numpy <http://www.numpy.org/>`_, `pandas <http://pandas.pydata.org/>`_,
+`matplotlib <http://matplotlib.org/>`_
+sont incontournables pour manipuler les données en :epkg:`Python`.
 
 .. toctree::
     :maxdepth: 2
@@ -279,13 +208,9 @@ sont incontournables pour manipuler les données en Python.
 Il existe de nombreuses libraires de visualisation des données en Python et
 elles se sont multipliées depuis l'avènement des notebooks :
 `10 plotting libraries at PyData 2016 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_.
-La simulation du hasard est revient fréquemment pour éviter qu'un programme retourne toujours
-les mêmes résultats. Voici quelques exemples :
 
-.. toctree::
-    :maxdepth: 1
-
-    notebooks/code_multinomial
+S'amuser avec des données
+=========================
 
 Une fois qu'on est agile avec les données, on peut facilement explorer,
 émettre des hypothèses ou résoudre quelques énigmes :
@@ -294,6 +219,45 @@ Une fois qu'on est agile avec les données, on peut facilement explorer,
   (ceux qui font du vélo tout du moins)
 
 ------------
+
+TD - Site web et pratiques logicielles
+======================================
+
+Le langage Python est au programme des classes préparatoires scientifique
+(`Prise en main du logiciel Python <https://www.ac-paris.fr/portail/jcms/p1_742307/prise-en-main-du-logiciel-python>`_)
+et les étudiants ont déjà vu ou parcouru des exercices algorithmiques
+(voir `MathPrepas, Programmation en Python <http://mathprepa.fr/python-project-euler-mpsi/>`_).
+**Cette partie s'adesse essentiellement à ceux qui ont déjà programmé.**
+On peut se pencher sur d'autres aspects logiciels tels que les
+tests unitaires, le templating, les sites Web, le scraping, encoding, les notebooks...
+
+*Lectures*
+
+.. toctree::
+    :maxdepth: 1
+
+    specials/siteflask
+    specials/unittest_coverage_git_profling
+    notebooks/profiling_example
+
+*Exercices*
+
+.. toctree::
+    :maxdepth: 1
+
+    notebooks/_gs1a_B_ci
+    notebooks/jupyter_custom_magics
+
+Deux exercices sont suggérés pour une séance de deux heures à choisir parmi :
+
+#. Appliquer une des méthodes décrites dans
+   `Profiling <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/completion_profiling.html#completionprofilingrst>`_
+   à un exercice d'une séance précédente
+#. Concevoir une campagne publicataire avec
+
+------------
+
+.. _td1a-notions:
 
 Les notions qu'il faut avoir comprises ou vues
 ==============================================
@@ -344,10 +308,8 @@ Pour un profil plutôt data scientist
 * Des accélérations du langage comme Cython.
 * Créer un site web avec Flask, Javacript.
 
-------------
-
 Séance notée
-============
+++++++++++++
 
 La dernière séance est une séance notée. Tous les documents sont autorisés.
 Les examens passés sont disponibles : :ref:`l-examens`. Les examens sont plutôt
@@ -450,8 +412,11 @@ Bibliographie
 Intervenants
 ============
 
+* *2016-2017* :
+  Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_ *(professeur)*
+
 * *2015-2016* :
-  Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_,
+  Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_ *(professeur)*,
   Pierre Cordier, `Effiscience <http://effiscience.solutions/>`_,
   Yves Gerey, `A2iA <http://www.a2ia.com/en>`_,
   Charles de Ravel d'Esclapon, `Etaonis <http://www.etaonis.fr/>`_,

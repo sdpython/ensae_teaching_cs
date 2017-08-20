@@ -82,6 +82,7 @@ Pour vérifier certains aspects du site web tels qu'ils seront par un internaute
 
 * `Selenium with Python <http://selenium-python.readthedocs.io/>`_ (voir aussi :ref:`Issue with Selenium and Firefox <faq-web-selenium>`)
 * `Splinter <http://splinter.readthedocs.io/en/latest/>`_
+* `ghost.py <http://jeanphix.me/Ghost.py/>`_
 
 **GUI**
 
@@ -90,7 +91,8 @@ il est préférable de les tester.
 
 * `pyautogui <https://github.com/asweigart/pyautogui>`_
 * `pywinauto <https://github.com/pywinauto/pywinauto>`_
-* `autopy3 <https://pypi.python.org/pypi/autopy3/>`_ (buggé la dernière fois que je l'ai essayé - 2016/08)
+* `autopy3 <https://pypi.python.org/pypi/autopy3/>`_
+  (buggé la dernière fois que je l'ai essayé - 2016/08)
 
 A ce sujet, lire `Automate the boring stuff with Python <https://automatetheboringstuff.com/#toc>`_.
 
@@ -113,7 +115,7 @@ Le test échoue mais pas pour la bonne raison. On construit alors
 un objet qui retourne toujours le même contenu qu'on aura enregistré.
 On peut alors tester séparément le fait de télécharger une page
 et celui d'extraire une adresse et de la comparer avec une autre.
-En Python, on fait cela avec le module :
+En :epkg:`Python`, on fait cela avec le module :
 
 * `unittest.mock <https://docs.python.org/3/library/unittest.mock.html>`_
 
@@ -236,7 +238,7 @@ Documentation
 
 .. index:: documentation
 
-L'outil standard en Python est `Sphinx <http://www.sphinx-doc.org/en/stable/>`_.
+L'outil standard en :epkg:`Python` est :epkg:`Sphinx`.
 Il aboutit à une documentation statique comme ce site web. Il faut
 suivre un unique format comme `RST <http://docutils.sourceforge.net/rst.html>`_ ou
 MD (`markdown <https://daringfireball.net/projects/markdown/>`_) pour écrire
@@ -323,7 +325,7 @@ Logiciel de suivi de source
 C'est devenu un outil incontournable pour garder la trace des modifications apporter
 à un programme. La première tâche est la possiblité de revenir en arrière.
 C'est un outil qui permet d'accéder rapidement à la partie de code modifiée.
-Aujourd'hui, la plupart des nouveaux projets commencent sur `git <https://git-scm.com/>`_.
+Aujourd'hui, la plupart des nouveaux projets commencent sur :epkg:`git`.
 Et vous devriez connaître les trois sites suivants qui hébergent gratuitement
 les projets open source :
 
@@ -388,22 +390,9 @@ fait partie des systèmes d'intégration continue :
 Ce circuit est effectué à chaque modification ou chaque nuit.
 C'est ce type de service que propose gratuitement pour les projets open source
 `travis <https://travis-ci.org/>`_ sur Linux,
+`Circle CI <https://circleci.com/>`_,
 `appveyor <https://www.appveyor.com/>`_ sur Windows.
-Il existe d'autres alternatives comme
-`Circle CI <https://circleci.com/>`_ (payant).
-Ces trois solutions s'exécutent à distance. Localement,
+Ces solutions s'exécutent à distance. Localement,
 on peut utiliser `Jenkins <https://jenkins.io/>`_ qui est
 très simple d'utilisation ou `BuildBot <http://buildbot.net/>`_
 Ce site est construit avec `Jenkins <https://jenkins.io/>`_.
-
-.. todoext::
-    :title: terminer la page dédiée aux outils et pratiques dans l'industrie logicielle
-    :issue: 7
-    :hidden:
-    :tag: plus
-    :date: 2016-08-03
-
-    Chaque année, les étudiants poussent de plus en plus loin leur réflexion
-    sur les différents moyens de travailler à plusieurs sur un projet.
-    Il s'agit d'exposer les pratiques actuelles liées à la gestion
-    d'un projet informatique.
