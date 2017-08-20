@@ -75,7 +75,7 @@ Setup
   (do not add the interpreter on the default PATH)
 * `R 3.2.2 <https://cran.r-project.org/bin/windows/base/old/3.2.2/>`_
 * `Scite <http://www.scintilla.org/SciTE.html>`_
-* `TDM-GCC 64bit <http://tdm-gcc.tdragon.net/>`_ (theano)
+* `mingw-w64 <https://mingw-w64.org/doku.php>`_ (theano)
 * `Visual Studio 2015 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_
   (check C++, C#, Python, CLang) (Cython)
 

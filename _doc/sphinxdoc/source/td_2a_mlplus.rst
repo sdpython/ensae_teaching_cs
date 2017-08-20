@@ -523,6 +523,13 @@ Deep Learning
     :local:
     :depth: 1
 
+Le deep learning signifie aussi des calculs intensifs et des modules qui
+utilisent un compilateur C++ pour optimiser les calculs
+et le GPU si vous en avez. Il faut lire l'article de blog
+:ref:`Installer theano et un compilateur C++ <blog-install-theno-keras>`.
+Vous pouvez tester votre installation avec le notebook
+:ref:`mldeeppythonrst`.
+
 Deep Learning en détail
 +++++++++++++++++++++++
 
