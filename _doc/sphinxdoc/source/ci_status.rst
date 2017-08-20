@@ -20,6 +20,7 @@ Tableau de bord et statut des dépendances
     * - Module
       - Travis
       - AppVeyor
+      - CircleCI
       - PyPi
       - Versions
       - Issues
@@ -32,6 +33,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/nelemxw6md6bt95a?svg=true
             :target: https://ci.appveyor.com/project/sdpython/actuariat-python
             :alt: Build Status Windows
+      -
       - .. image:: https://badge.fury.io/py/actuariat_python.svg
             :target: http://badge.fury.io/py/actuariat_python
       - .. image:: http://img.shields.io/pypi/pyversions/actuariat_python.png
@@ -52,6 +54,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/g7065ubabg7xxpm6?svg=true
             :target: https://ci.appveyor.com/project/sdpython/code-beatrix
             :alt: Build Status Windows
+      -
       - .. image:: https://badge.fury.io/py/code_beatrix.svg
             :target: http://badge.fury.io/py/code_beatrix
       - .. image:: http://img.shields.io/pypi/pyversions/code_beatrix.png
@@ -72,6 +75,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/sia7wxgjv8e1fi5a?svg=true
             :target: https://ci.appveyor.com/project/sdpython/cpyquickhelper
             :alt: Build Status Windows
+      -
       - .. image:: https://badge.fury.io/py/cpyquickhelper.svg
             :target: http://badge.fury.io/py/cpyquickhelper
       - .. image:: http://img.shields.io/pypi/pyversions/cpyquickhelper.png
@@ -92,6 +96,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/5qbwt4kaxpc8w415?svg=true
             :target: https://ci.appveyor.com/project/sdpython/ensae-projects
             :alt: Build Status Windows
+      -
       - .. image:: https://badge.fury.io/py/ensae_projects.svg
             :target: http://badge.fury.io/py/ensae_projects
       - .. image:: http://img.shields.io/pypi/pyversions/ensae_projects.png
@@ -112,6 +117,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/ko5g064idp5srm74?svg=true
             :target: https://ci.appveyor.com/project/sdpython/ensae-teaching-cs
             :alt: Build Status Windows
+      -
       - .. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
             :target: http://badge.fury.io/py/ensae_teaching_cs
       - .. image:: http://img.shields.io/pypi/pyversions/ensae_teaching_cs.png
@@ -132,6 +138,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/cq8d56y2o4ldi7rn?svg=true
             :target: https://ci.appveyor.com/project/sdpython/jupytalk
             :alt: Build Status Windows
+      -
       - .. image:: https://badge.fury.io/py/jupytalk.svg
             :target: http://badge.fury.io/py/jupytalk
       - .. image:: http://img.shields.io/pypi/pyversions/jupytalk.png
@@ -152,6 +159,8 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/2tyc3or7snm6w4xl?svg=true
             :target: https://ci.appveyor.com/project/sdpython/jyquickhelper
             :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/jyquickhelper/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/jyquickhelper/tree/master
       - .. image:: https://badge.fury.io/py/jyquickhelper.svg
             :target: http://badge.fury.io/py/jyquickhelper
       - .. image:: http://img.shields.io/pypi/pyversions/jyquickhelper.png
@@ -172,6 +181,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/5env33qptorgshaq?svg=true
             :target: https://ci.appveyor.com/project/sdpython/mlstatpy
             :alt: Build Status Windows
+      -
       - .. image:: https://badge.fury.io/py/mlstatpy.svg
             :target: http://badge.fury.io/py/mlstatpy
       - .. image:: http://img.shields.io/pypi/pyversions/mlstatpy.png
@@ -192,6 +202,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/jioxwx1igwbqwa28?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pyensae
             :alt: Build Status Windows
+      -
       - .. image:: https://badge.fury.io/py/pyensae.svg
             :target: http://badge.fury.io/py/pyensae
       - .. image:: http://img.shields.io/pypi/pyversions/pyensae.png
@@ -212,6 +223,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/hqhhdndvayrx0r9k?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pymmails
             :alt: Build Status Windows
+      -
       - .. image:: https://badge.fury.io/py/pymmails.svg
             :target: http://badge.fury.io/py/pymmails
       - .. image:: http://img.shields.io/pypi/pyversions/pymmails.png
@@ -230,6 +242,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/ccsvoi29n3a71i6j?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pymyinstall
             :alt: Build Status Windows
+      -
       - .. image:: https://badge.fury.io/py/pymyinstall.svg
             :target: http://badge.fury.io/py/pymyinstall
       - .. image:: http://img.shields.io/pypi/pyversions/pymyinstall.png
@@ -250,6 +263,8 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/t2g9olcgqgdvqq3l?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pyquickhelper
             :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/pyquickhelper/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/pyquickhelper/tree/master
       - .. image:: https://badge.fury.io/py/pyquickhelper.svg
             :target: http://badge.fury.io/py/pyquickhelper
       - .. image:: http://img.shields.io/pypi/pyversions/pyquickhelper.png
@@ -270,6 +285,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/0cc1qtlccq8k7hdx?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pyrsslocal
             :alt: Build Status Windows
+      -
       - .. image:: https://badge.fury.io/py/pyrsslocal.svg
             :target: http://badge.fury.io/py/pyrsslocal
       - .. image:: http://img.shields.io/pypi/pyversions/pyrsslocal.png
@@ -288,6 +304,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/rrpks1pgivea23js?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pysqllike
             :alt: Build Status Windows
+      -
       - .. image:: https://badge.fury.io/py/pysqllike.svg
             :target: http://badge.fury.io/py/pysqllike
       - .. image:: http://img.shields.io/pypi/pyversions/pysqllike.png
@@ -306,6 +323,8 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/8yv4brsckay4374a?svg=true
             :target: https://ci.appveyor.com/project/sdpython/python3-module-template
             :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/python3_module_template/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/python3_module_template/tree/master
       -
       -
       - .. image:: https://badge.waffle.io/sdpython/python3_module_template.png?label=ready&title=Ready
@@ -323,6 +342,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/5jl303wl14dtesl0?svg=true
             :target: https://ci.appveyor.com/project/sdpython/teachpyx
             :alt: Build Status Windows
+      -
       - .. image:: https://badge.fury.io/py/teachpyx.svg
             :target: http://badge.fury.io/py/teachpyx
       - .. image:: http://img.shields.io/pypi/pyversions/teachpyx.png
@@ -343,6 +363,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/oqqayew2qan2bh6h?svg=true
             :target: https://ci.appveyor.com/project/sdpython/tkinterquickhelper
             :alt: Build Status Windows
+      -
       - .. image:: https://badge.fury.io/py/tkinterquickhelper.svg
             :target: http://badge.fury.io/py/tkinterquickhelper
       - .. image:: http://img.shields.io/pypi/pyversions/tkinterquickhelper.png
