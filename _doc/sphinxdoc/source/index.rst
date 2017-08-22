@@ -1,4 +1,5 @@
 
+==========================
 Python dans tous ses états
 ==========================
 
@@ -8,10 +9,9 @@ Ces cours s'appuient principalement sur
 le langage :epkg:`Python`.
 Le contenu est librement disponible sur `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs>`_ |gitlogo|
 et permet à quiconque de contribuer à ce cours.
-Il existe trois formats disponibles :
-`mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_,
-`blanc <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_,
-`bleu <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
+Il existe deux formats disponibles :
+`mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_ ou
+`plus large <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
 Les changements importants sont notés sur le :ref:`blog <ap-main-0>`
 associé à ce cours, certains modifications prévues
 sont notés sur `Waffle/ensae_teaching_cs <https://waffle.io/sdpython/ensae_teaching_cs>`_.
@@ -24,6 +24,7 @@ sont notés sur `Waffle/ensae_teaching_cs <https://waffle.io/sdpython/ensae_teac
 
 .. contents::
     :depth: 1
+    :local:
 
 Ce site est principalement un site d'exercices. D'autres contenus sont disponibles
 sur des `éléments de machine learning <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html#mlstatpy>`_,
@@ -33,7 +34,7 @@ des `présentations, conférences <http://www.xavierdupre.fr/app/jupytalk/helpsp
 ou encore des `sujets de compétitions, hackathons <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_.
 
 Avant-propos
-------------
+============
 
 Les langages `R <https://www.r-project.org/>`_ et
 `Python <https://www.python.org/>`_ sont devenus
@@ -74,7 +75,7 @@ savoir jouer aux échecs après avoir pris connaissance des règles et sans avoi
 joué une partie.
 
 Contenu des enseignements
--------------------------
+=========================
 
 .. toctree::
     :maxdepth: 1
@@ -92,7 +93,7 @@ Contenu des enseignements
     11. Index <i_index>
 
 Getting Started - Démarrer
---------------------------
+==========================
 
 .. index: notebook, installation, prérequis
 
@@ -104,7 +105,7 @@ Les résultats des recherches sur internet sont très souvent
 plus intéressants lorsqu'elles sont libellées en anglais.
 
 Notebooks
-^^^^^^^^^
++++++++++
 
 Les séances utilisent les `notebooks Jupyter <http://jupyter.org/>`_.
 C'est le support privilégiés des chercheurs lors des conférences scientifiques.
@@ -119,7 +120,7 @@ autre environnement.
 .. _l-install:
 
 Démarrage
-^^^^^^^^^
++++++++++
 
 Voir :ref:`l-installation-courte`.
 
@@ -140,7 +141,7 @@ proposent de nombreux modules qui nécessitent un compilateur C++. On les repèr
 l'installation ``pip install <module>`` échoue à moins de savoir bidouiller sa machine.
 
 Dépendences et automatisation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++
 
 Ces cours représentent plus de 60 heures de cours et travaux pratiques suivis
 par plus de 200 élèves de l':epkg:`ENSAE` répartis sur trois années, la réception d'une centaine
@@ -148,7 +149,7 @@ de projets. Cela nécessite un peu d'automatisation implémentée en :epkg:`Pyth
 mise à disposition sous forme de modules (voir :ref:`listes des dépendances <ci-status>`).
 
 En diagonal
------------
+===========
 
 * Questions, termes, FAQ
     * :ref:`FAQ <l-FAQs>` (Foire aux Questions ou Frequently Asked Questions)
@@ -173,7 +174,7 @@ En diagonal
     * `Apprendre la programmation avec Python <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html#teachpyx>`_
 
 Contributions
--------------
+=============
 
 Le cours est open source et disponible sur :epkg:`GitHub`.
 N'hésitez pas à contribuer en m'envoyant des

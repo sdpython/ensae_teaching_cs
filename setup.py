@@ -198,8 +198,8 @@ if is_local() and "custom_left" not in sys.argv:
     logging_function(OutputPrint=True)
     deps = ["pyquickhelper", "jyquickhelper", "pymmails", "pyensae",
             "pyrsslocal", "pymyinstall", "mlstatpy", "tkinterquickhelper"]
-    layout = ["html", ("html", "build2", {"html_theme": "sphinx_py3doc_enhanced_theme"}, "source/conf2"),
-              ("html", "build3", {"html_theme": "bootstrap"}, "source/conf3")]
+    layout = ["html", ("html", "build3", {
+                       "html_theme": "bootstrap"}, "source/conf3")]
 
     def skip_function(name, code, duration):
         if "notebook test" in code:
@@ -344,7 +344,7 @@ if not r:
                 res += [os.path.join(res[-1], "Scripts")]
             return res
 
-        for year in [2015, 2016]:
+        for year in [2015, 2016, 2017]:
             #  run the documentation generation
             if sys.platform.startswith("win"):
                 temp = os.environ["PATH"]

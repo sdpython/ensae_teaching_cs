@@ -111,7 +111,7 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
-    * - `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/index.html>`_
+    * - `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master
             :target: https://travis-ci.org/sdpython/ensae_teaching_cs
             :alt: Build status

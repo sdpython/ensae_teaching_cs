@@ -74,8 +74,8 @@ Ou tout simplement pour exécuter tous les fichiers de tests :
 
     python -m unittest
 
-Coverage
---------
+Couverture ou coverage
+----------------------
 
 On utilise le module `coverage <https://coverage.readthedocs.io/>`_ qui
 se résume à une ligne de commande.
@@ -116,15 +116,15 @@ Créer un compte GitHub
 A suivre par image. Tout d'abord sur le site de
 :epkg:`GitHub`, on crée un nouveau *repository* :
 
-.. image:: cigh1.png
+.. image:: images/cigh1.png
 
-.. image:: cigh2.png
+.. image:: images/cigh2.png
 
 Puis depuis l'application
 `Github Desktop <https://desktop.github.com/>`_ où on clone
 le *repository*.
 
-.. image:: cighd1.png
+.. image:: images/cighd1.png
 
 Cela correspond au *repository* :
 `td1a_unit_test_ci <https://github.com/sdpython/td1a_unit_test_ci>`_.
@@ -159,7 +159,7 @@ La page `commit <https://github.com/sdpython/td1a_unit_test_ci/commits/master>`_
 trace des modifications. Pour contribuer à ce projet, il faut d'abord le rapatrier sur son
 propre compte :epkg:`GitHub` en le `forkant <https://fr.wikipedia.org/wiki/Fork_(d%C3%A9veloppement_logiciel)>`_.
 
-.. image:: cifork.png
+.. image:: images/cifork.png
 
 Intégration continue
 --------------------
@@ -171,63 +171,63 @@ Il faut d'abord créer un compte.
 On ajoute le projet à la liste de ceux qu'il faut exécuter
 de façon régulière.
 
-.. image:: cicircle.png
+.. image:: images/cicircle.png
 
-.. image:: cicircle1.png
+.. image:: images/cicircle1.png
 
 On suit les instructions et on crée un fichier de configuration ``.circleci/config.yml``
 qui précise la commande à lancer pour exécuter les tests unitaires.
 Le fichier ``config.yml`` précise la version de
-:epkg:`python` à utiliser. Il peut y en avoir plusieurs.
+:epkg:`Python` à utiliser. Il peut y en avoir plusieurs.
 On spécifie les modules à installer dans le fichier ``requirements.txt``
 (qui ne contient que la ligne ``coverage``) puis
 la commande à exécuter :
 
 ::
 
-version: 2
-jobs:
-  build:
-    docker:
-      - image: circleci/python:3.6.1
+    version: 2
+    jobs:
+      build:
+        docker:
+          - image: circleci/python:3.6.1
 
-    working_directory: ~/repo
+        working_directory: ~/repo
 
-    steps:
-      - checkout
+        steps:
+          - checkout
 
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "requirements.txt" }}
-          - v1-dependencies-
+          - restore_cache:
+              keys:
+              - v1-dependencies-{{ checksum "requirements.txt" }}
+              - v1-dependencies-
 
-      - run:
-          name: install dependencies
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install -r requirements.txt
+          - run:
+              name: install dependencies
+              command: |
+                python3 -m venv venv
+                . venv/bin/activate
+                pip install -r requirements.txt
 
-      - save_cache:
-          paths:
-            - ./venv
-          key: v1-dependencies-{{ checksum "requirements.txt" }}
+          - save_cache:
+              paths:
+                - ./venv
+              key: v1-dependencies-{{ checksum "requirements.txt" }}
 
-      - run:
-          name: run tests
-          command: |
-            . venv/bin/activate
-            python -m unittest
+          - run:
+              name: run tests
+              command: |
+                . venv/bin/activate
+                python -m unittest
 
-      - store_artifacts:
-          path: test-reports
-          destination: test-reports
+          - store_artifacts:
+              path: test-reports
+              destination: test-reports
 
 Le résultat est disponible à
 `circleci/td1a_unit_test_ci <https://circleci.com/gh/sdpython/td1a_unit_test_ci>`_.
 Le site génère une image pour indiquer le statut de la dernière exécution.
 
-.. image:: cicircle3.png
+.. image:: images/cicircle3.png
 
 Et on l'insère dans le fichier `README.rst`:
 
@@ -245,7 +245,7 @@ Ce changement crée le rapport de couverture dans un endroit spécifique appell�
 et *circleci* conserve tout ce qui copié dans ce répertoire. On peut alors
 les consulter.
 
-.. image:: cicircle4.png
+.. image:: images/cicircle4.png
 
 Ecrire un setup
 ---------------
@@ -339,7 +339,7 @@ Et on obtient :
     dumping object inventory... done
     build succeeded.
 
-Le thème le plus courant pour la documentation d'un module :epkg:`python` est
+Le thème le plus courant pour la documentation d'un module :epkg:`Python` est
 `readthedocs <http://docs.readthedocs.io/en/latest/getting_started.html>`_.
 On le change avec les `instructions de configuration <https://github.com/rtfd/sphinx_rtd_theme>`_.
 Voir `commit change sphinx theme <https://github.com/sdpython/td1a_unit_test_ci/commit/6d8eca2a691549ea8f2ddb443abe16a784b2f2b4>`_.
@@ -423,7 +423,7 @@ Pour soumettre sur `PyPi <https://pypi.python.org/pypi>`_, il faut d'abord s'enr
 sur le site, choisir un login et un mot de passe. Il faut ensuite créer le fichier
 ``.pypirc`` dans le répertoire utilisateur
 (`variable d'environnement <https://fr.wikipedia.org/wiki/Variable_d%27environnement>`_
-``USERPROFILE``sous Windows, ``$HOME`` sous Linux). Vous pouvez aussi suivre les instructions
+``USERPROFILE`` sous Windows, ``$HOME`` sous Linux). Vous pouvez aussi suivre les instructions
 décrites sur `The .pypirc file <https://docs.python.org/3/distutils/packageindex.html#the-pypirc-file>`_.
 
 ::
@@ -480,4 +480,5 @@ approuvent.
 Il est d'usage de garder la trace des nouvelles fonctionnalités ajoutées
 ou bugs fixés à chaque modification. Il est aisé alors>`_.
 de communiquer sur les changements intervenus d'une version à la suivante.
-`Historique de scikit-learn <http://scikit-learn.org/stable/whats_new.html>`_.
+C'est grâce à un historique comme `celui scikit-learn <http://scikit-learn.org/stable/whats_new.html>`_
+que vous pouvez décider si cela résoud le problème qui vous occupe actuellement.
