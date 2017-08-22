@@ -231,4 +231,6 @@ ENSAE 1A - Programmation
 
     De plus en plus nombreux chaque année.
 
+    Toujours un site web, souvent des traitements de données.
+
     Une histoire de startup : livraison *MetroPass*.
