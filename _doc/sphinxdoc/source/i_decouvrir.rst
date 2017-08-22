@@ -37,7 +37,6 @@ Graphes
 
     specials/tsp_kohonen
     specials/tsp_kruskal
-    specials/graph_distance
     notebooks/expose_graphe_et_map_reduce
     notebooks/expose_rwr_recommandation
     notebooks/expose_TSP
@@ -72,7 +71,6 @@ Puzzles
 * :func:`bellman <ensae_teaching_cs.special.rues_paris.bellman>`: shortest paths in a graph with `Bellman-Ford <http://fr.wikipedia.org/wiki/Algorithme_de_Bellman-Ford>`_
 * :func:`connected_components <ensae_teaching_cs.special.rues_paris.connected_components>`: computes the `connected components <https://en.wikipedia.org/wiki/Connected_component_(graph_theory)>`_
 * :func:`graph_degree <ensae_teaching_cs.special.rues_paris.graph_degree>`: computes the degree of each node in a graph `degree <https://en.wikipedia.org/wiki/Degree_(graph_theory)>`_
-* :class:`GraphDistance <ensae_teaching_cs.special.graph_distance.GraphDistance>`: computes a distance between two graphs (acyclic), see :ref:`l-graph_distance`
 * :func:`resolution_sudoku <ensae_teaching_cs.special.sudoku.resolution_sudoku>`: solves a `sudoku <https://fr.wikipedia.org/wiki/Sudoku>`_
 
 Machine learning illustré

@@ -105,18 +105,21 @@ Il y a deux questions qu'on doit se poser en premier pour entrevoir une solution
    chaque moitié puis recoller les solutions ? On procède de cette façon par dichotomie.
    Le coût est **logarithmique**.
 
+.. toctree::
+    :maxdepth: 2
+
+    specials/algo_cost
+    specials/graphes
+
 Ces deux façons de faire sont présentées durant dans les séances qui suivent :
 
 .. toctree::
     :maxdepth: 2
 
-    specials/graphes
-    notebooks/_gs1a_6_jaccard
     notebooks/_gs1a_A_programmation_dynamique
-    notebooks/_gs1a_A_arbre_trie
-    notebooks/_gs1a_A_optimisation_contrainte
     notebooks/_gs1a_A_edit_distance
-    notebooks/_gs1a_A_parcours_graphe
+    notebooks/_gs1a_A_arbre_graph
+    notebooks/_gs1a_A_optimisation_contrainte
     notebooks/_gs1a_A_algo
 
 Plus on en connaît, plus il devient facile de les assembler pour résoudre

@@ -753,6 +753,11 @@ Apprentissage sans labels
   `A Framework for Learning Predictive Structures from Multiple Tasks and Unlabeled Data <http://www.jmlr.org/papers/volume6/ando05a/ando05a.pdf>`_
 * `Multi Kernel Learning with Online-Batch Optimization <http://www.jmlr.org/papers/volume13/orabona12a/orabona12a.pdf>`_
 
+*Improving training set*
+
+* `Data Programming: Creating Large Training Sets, Quickly <https://papers.nips.cc/paper/6523-data-programming-creating-large-training-sets-quickly.pdf>`_
+* `Foolbox is a Python toolbox to create adversarial examples that fool neural networks. <https://foolbox.readthedocs.io/en/latest/>`_
+
 Galleries de problèmes résolus ou presque
 +++++++++++++++++++++++++++++++++++++++++
 

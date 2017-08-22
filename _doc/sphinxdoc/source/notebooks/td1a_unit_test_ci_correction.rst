@@ -31,7 +31,7 @@ Ecrire une fonction
         x2 = (b + det) / (2 * a)
         return x1, x2
 
-    print(solve_polynom(1, 1, -1)):
+    print(solve_polynom(1, 1, -1))
 
 Ecrire un test unitaire
 -----------------------
