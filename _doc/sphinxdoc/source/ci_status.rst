@@ -14,7 +14,7 @@ Tableau de bord et statut des dépendances
 +++++++++++++++++++++++++++++++++++++++++
 
 .. list-table::
-    :widths: 12 10 10 15 10 10 10 10
+    :widths: 12 10 10 8 15 10 10 10 10
     :header-rows: 1
 
     * - Module
@@ -153,7 +153,7 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/jupytalk/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/jupytalk/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
-    * - `jyquickhelper <http://www.xavierdupre.fr/app/jyquickhelper/helpsphinx/index.html>`_
+    * - :epkg:`jyquickhelper`
       - .. image:: https://travis-ci.org/sdpython/jyquickhelper.svg?branch=master
             :target: https://travis-ci.org/sdpython/jyquickhelper
             :alt: Build status
@@ -238,7 +238,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://codecov.io/github/sdpython/pymmails/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/pymmails?branch=master
       -
-    * - `pymyinstall <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/index.html>`_
+    * - :epkg:`pymyinstall`
       - .. image:: https://travis-ci.org/sdpython/pymyinstall.svg?branch=master
             :target: https://travis-ci.org/sdpython/pymyinstall
             :alt: Build status
@@ -260,7 +260,7 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
-    * - `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_
+    * - :epkg:`pyquickhelper`
       - .. image:: https://travis-ci.org/sdpython/pyquickhelper.svg?branch=master
             :target: https://travis-ci.org/sdpython/pyquickhelper
             :alt: Build status
@@ -409,7 +409,7 @@ Automatisation
         Le module propose également différentes fonctions pour synchroniser des répertoires,
         exécuter les tests unitaires ou
         uploader des fichiers en FTP (publication de ce site), quelques outils
-        pour `Jupyter <http://jupyter.org/>`_ ou :epkg:`Jenkins`.
+        pour :epkg:`Jupyter` ou :epkg:`Jenkins`.
     * - `pyrsslocal <http://www.xavierdupre.fr/app/pyrsslocal/helpsphinx/index.html>`_
       - Récupération de flux RSS.
 

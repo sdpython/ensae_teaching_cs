@@ -326,62 +326,6 @@ if not r:
         if sys.platform.startswith("win"):
             os.chdir(pa)
 
-    elif "build_pres_1Ap" in sys.argv:
-        # we generate the documentation for the presentation
-
-        def get_executables_path():
-            """
-            returns the paths to Python, Python Scripts
-
-            @return     a list of paths
-            """
-            res = [os.path.split(sys.executable)[0]]
-            res += [os.path.join(res[-1], "Scripts")]
-            if sys.platform.startswith("win"):
-                ver = "c:\\Python%d%d" % (
-                    sys.version_info.major, sys.version_info.minor)
-                res += [ver]
-                res += [os.path.join(res[-1], "Scripts")]
-            return res
-
-        for year in [2015, 2016, 2017]:
-            #  run the documentation generation
-            if sys.platform.startswith("win"):
-                temp = os.environ["PATH"]
-                pyts = get_executables_path()
-                script = ";".join(pyts)
-                temp = script + ";" + temp
-                os.environ["PATH"] = temp
-                pa = os.getcwd()
-                thispath = os.path.normpath(os.path.split(__file__)[0])
-                docpath = os.path.normpath(
-                    os.path.join(
-                        thispath,
-                        "_doc",
-                        "presentation_projets",
-                        "a%d" % year))
-                os.chdir(docpath)
-            else:
-                raise NotImplementedError()
-
-            lay = "html"
-            build = "build"
-            over = ""
-            sconf = ""
-
-            import_pyquickhelper()
-            from pyquickhelper.helpgen import process_sphinx_cmd
-            cmd_file = os.path.abspath(process_sphinx_cmd.__file__)
-            cmd = '"{4}" "{5}" -b {1} -d {0}/doctrees{2}{3} source {0}/{1}'.format(
-                build, lay, over, sconf, sys.executable, cmd_file)
-            from pyquickhelper.loghelper import run_cmd
-            out, err = run_cmd(cmd, wait=True, fLOG=print)
-            print(out)
-            print(err)
-
-            if sys.platform.startswith("win"):
-                os.chdir(pa)
-
     else:
 
         setup(

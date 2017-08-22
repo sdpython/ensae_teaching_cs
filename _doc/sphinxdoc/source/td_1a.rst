@@ -27,16 +27,7 @@ Le cours est décrit plus en détail dans cette présentation :
 
 Le cours est évalué au premier semestre par un examen et aussi :ref:`l-examens-1A-algo`.
 Le second semestre et facultatif et est évalué par :ref:`projet informatique <l-projinfo1a>`.
-La première partie (:ref:`l-td1a-lesbases`) est a priori inutile si vous avez déjà programmé
-ou si vous répondez positivement à une question parmi les suivantes.
-
-1. Avez-vous déjà codé en dehors de l'école ?
-2. Connaissez-vous l'algorithme du plus court chemin ?
-3. Avez-vous déjà écrit un test unitaire ?
-4. Connaissez-vous des blagues de geek ?
-5. Vous avez recodé un facebook familial pour éviter la fuite de vos données ?
-
-Vous pouvez également vous tester en faisant l'un des énoncés
+Si vous savez déjà programmer, vous devriez aller jusqu'au bout d'un des énoncés
 des :ref:`examens précédents <l-examens>` en moins de deux heures.
 L'informatique est plus souvent un outil qu'une matière à part entière.
 Le paragraphe :ref:`td1a-notions` propose deux profils d'utilisation
@@ -109,6 +100,7 @@ Il y a deux questions qu'on doit se poser en premier pour entrevoir une solution
 .. toctree::
     :maxdepth: 2
 
+    notebooks/recherche_dichotomique
     specials/algo_cost
     specials/graphes
 
