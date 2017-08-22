@@ -19,6 +19,7 @@ Le cours est décrit plus en détail dans cette présentation :
 
 .. contents::
     :local:
+    :depth: 1
 
 .. |slideslogo| image:: _static/slides_logo.png
              :height: 20
@@ -161,8 +162,8 @@ Pour vous exercer :
     notebooks/exercice_plus_grande_somme
     notebooks/tri_nlnd
 
-Algorithmes pour s'amuser
-=========================
+S'amuser avec les algorithmes
+=============================
 
 Un peu plus ludique et présentés sous la forme de défis :
 
@@ -246,7 +247,7 @@ tests unitaires, le templating, les sites Web, le scraping, encoding, les notebo
 *Exercices*
 
 .. toctree::
-    :maxdepth: 1
+    :maxdepth: 2
 
     notebooks/_gs1a_B_ci
     notebooks/jupyter_custom_magics
@@ -272,8 +273,12 @@ d'automatiser un processus de traitement de données
 et de le mettre en production. Voici les notions qu'il
 faut avoir comprises.
 
-Pour un profil plutôt économiste
-++++++++++++++++++++++++++++++++
+Pour un profil plutôt analyste
+++++++++++++++++++++++++++++++
+
+Les données servent à comprendre. Les calculs sont moins
+importants qu'une bonne représentation d'un phénomène
+qu'on cherche à expliquer.
 
 *Ce qu'il faut maîtriser*
 
@@ -289,8 +294,12 @@ Pour un profil plutôt économiste
 * Les classes.
 * La programmation dynamique.
 
-Pour un profil plutôt data scientist
-++++++++++++++++++++++++++++++++++++
+Pour un profil plutôt ingénieur
++++++++++++++++++++++++++++++++
+
+Les données servent à améliorer un processus de décision
+quitte à ne plus comprendre comment les variables sont assemblées
+pour prendre cette décision.
 
 *Ce qu'il faut maîtriser*
 
