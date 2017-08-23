@@ -60,3 +60,22 @@ Ils concernent les graphiques cycliques et acycliques.
   logarithmes de probabilités.
 * Le `voyageur de commerce <https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_voyageur_de_commerce>`_
   pour lequel il faut trouver le plus court chemin passant par tous les noeuds d'un graphe.
+
+Ces trois problèmes concernent les graphes orientés et non orientés,
+acyclique ou non (excepté pour le dernier).
+Pour les graphes orientés et acyclique,
+on en revient le plus souvent à les parcourir.
+
+Parcours de graphes
++++++++++++++++++++
+
+* `Algorithme de parcours en largeur <https://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_largeur>`_ :
+  on parcourt d'abord les fils d'un noeud, puis les fils des fils...
+* `Algorithme de parcours en profondeur <https://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_profondeur>`_ :
+  on parcourt le premier fils, puis son premier et ainsi de suite jusqu'à tomber sur un
+  noeud sans fils.
+
+Ces deux algorithmes peuvent être utilisé pour colorier un graphe.
+Un graphe symbolise un ensemble de relations entre des objets ou des personnes
+comme dans la plupart des séries policières qui vous rappellent l'intrigue
+en l'écrivant sur un tableau transparent.
