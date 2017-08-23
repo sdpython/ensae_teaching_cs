@@ -56,7 +56,7 @@ class TestNotebookRunner1a_correction_9 (unittest.TestCase):
             OutputPrint=__name__ == "__main__")
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a, copy_data_file
         temp = get_temp_folder(__file__, "temp_notebook1a_correction_9")
-        keepnote = ls_notebooks("td1a")
+        keepnote = ls_notebooks("td1a_algo")
         copy_data_file("td1a", "seance4_excel.txt", temp, fLOG=fLOG)
         copy_data_file("td1a", "seance4_excel.xlsx", temp, fLOG=fLOG)
         if is_travis_or_appveyor() == "travis":

@@ -4,11 +4,11 @@
 @brief Some automation helpers to test notebooks and check they are still working fine.
 """
 import os
-import sys
 import shutil
 from pyquickhelper.loghelper import noLOG
 from pyquickhelper.ipythonhelper.notebook_helper import install_python_kernel_for_unittest
 from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut
+from pyquickhelper.pycode import is_travis_or_appveyor
 
 
 def ls_notebooks(subfolder):
@@ -61,6 +61,11 @@ def get_additional_paths():
                os.path.dirname(jyquickhelper.__file__),
                os.path.join(os.path.abspath(os.path.dirname(__file__)), ".."),
                ]
+    try:
+        import mlstatpy
+        addpath.append(os.path.dirname(mlstatpy.__file__))
+    except ImportError:
+        pass
     addpath = [os.path.normpath(os.path.join(_, "..")) for _ in addpath]
     return addpath
 
@@ -95,6 +100,7 @@ def clean_function_1a(code):
             "clenche une exception",
             'y = "a" * 3 + 1',
             "i = list_exercice_1.index(k)",
+            "raise KeyError('Arrêtons-nous...')",
             # ggplot calls method show and it opens window blocking the offline
             # execution
             ]
@@ -165,7 +171,7 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
         return True
 
     addpaths = get_additional_paths()
-    kernel_name = None if "travis" in sys.executable else install_python_kernel_for_unittest(
+    kernel_name = None if is_travis_or_appveyor() else install_python_kernel_for_unittest(
         "ensae_teaching_cs")
     if filter:
         notebooks = [_ for i, _ in enumerate(notebooks) if filter(i, _)]

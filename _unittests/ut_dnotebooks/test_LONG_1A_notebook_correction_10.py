@@ -55,7 +55,7 @@ class TestNotebookRunner1a_correction_10 (unittest.TestCase):
             OutputPrint=__name__ == "__main__")
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook1a_correction_10")
-        keepnote = ls_notebooks("td1a")
+        keepnote = ls_notebooks("td1a_dfnp")
         if is_travis_or_appveyor() == "travis":
             warnings.warn("too long")
             return

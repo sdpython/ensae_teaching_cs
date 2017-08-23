@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=20s)
+@brief      test log(time=17s)
 
 notebook test
 """
@@ -43,34 +43,24 @@ from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
 
 
-class TestNotebookRunner1a_enonce_11 (unittest.TestCase):
-
-    @staticmethod
-    def clean_function(code):
-        code = code.replace(
-            'run_cmd("exemple.xlsx"',
-            'skip_run_cmd("exemple.xlsx"')
-
-        skip = []
-        for s in skip:
-            if s in code:
-                return ""
-        return code
+class TestNotebookRunner1a_soft(unittest.TestCase):
 
     def setUp(self):
-        add_missing_development_version(["pymyinstall", "jyquickhelper", "pyensae", "pymmails"],
+        add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper", "mlstatpy"],
                                         __file__, hide=True)
 
-    def test_notebook_runner_enonce_11(self):
+    def test_notebook_runner_enonce_soft(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
-        temp = get_temp_folder(__file__, "temp_notebook1a_enonce_11")
-        keepnote = ls_notebooks("td1a_dfnp")
-        execute_notebooks(temp, keepnote, (lambda i, n: "cenonce_session_11" in n),
-                          fLOG=fLOG, clean_function=TestNotebookRunner1a_enonce_11.clean_function,
+        temp = get_temp_folder(__file__, "temp_notebook1a_soft")
+        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
+        keepnote = ls_notebooks("td1a_soft")
+        execute_notebooks(temp, keepnote,
+                          lambda i, n: True,
+                          fLOG=fLOG,
+                          clean_function=clean_function_1a,
                           dump=src.ensae_teaching_cs)
 
 

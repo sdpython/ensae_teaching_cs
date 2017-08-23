@@ -59,7 +59,7 @@ class TestNotebookRunner1a_enonce (unittest.TestCase):
             return
         temp = get_temp_folder(__file__, "temp_notebook1a_enonce_9")
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
-        keepnote = ls_notebooks("td1a")
+        keepnote = ls_notebooks("td1a_algo")
         execute_notebooks(temp, keepnote,
                           lambda i, n: "cenonce_session9." in n,
                           fLOG=fLOG,

@@ -76,7 +76,7 @@ class TestNotebookRunner1a_correction_12 (unittest.TestCase):
             # issue with MKL on travis
             return
         temp = get_temp_folder(__file__, "temp_notebook1a_correction_12")
-        keepnote = ls_notebooks("td1a")
+        keepnote = ls_notebooks("td1a_dfnp")
         execute_notebooks(temp, keepnote, (lambda i, n: "correction_session_12" in n),
                           fLOG=fLOG, deepfLOG=fLOG if __name__ == "__main__" else noLOG,
                           clean_function=TestNotebookRunner1a_correction_12.clean_function,
