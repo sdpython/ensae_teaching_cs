@@ -337,12 +337,6 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                     continue
 
             project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
-                           local=root.replace("\\html", "\\html2"),
-                           root_local=root.replace("\\html", "\\html2"),
-                           root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx2"))
-            projects.append(project)
-
-            project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
                            local=root.replace("\\html", "\\html3"),
                            root_local=root.replace("\\html", "\\html3"),
                            root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
@@ -350,7 +344,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
 
             # pres
 
-            for sufpress in ["", "_2A", "_3A", "_1Ap"]:
+            for sufpress in ["", "_2A", "_3A"]:
                 root = os.path.abspath(location % (
                     module, module, keepsuf, "html"))
                 if not os.path.exists(root):
