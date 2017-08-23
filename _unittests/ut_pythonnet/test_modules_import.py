@@ -54,7 +54,7 @@ class TestModulesImport(unittest.TestCase):
 
         map_osm = folium.Map(location=[48.85, 2.34])
         map_osm.save(outfile=outfile)
-        assert os.path.exists(outfile)
+        self.assertTrue(os.path.exists(outfile))
 
 
 if __name__ == "__main__":

@@ -15,7 +15,7 @@ before_script:
 script:
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests", NAME: "UT", TIMEOUT: 3600 }  # timeout is 3600 for the documentation
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests_LONG", NAME: "UT_LONG", TIMEOUT: 3600 }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*SKIP.* -g \".*((theano)|(keras)|(deep)|(scraping)).*\"", NAME: "UT_SKIP" }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*SKIP.* -g \".*((theano)|(keras)|(deep)|(scraping)|(pythonnet)).*\"", NAME: "UT_SKIP" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_1A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)).*\"", NAME: "UT_1A" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_2A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)).*\"", NAME: "UT_2A", TIMEOUT: 3600 }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_3A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)).*\"", NAME: "UT_3A" }
@@ -24,6 +24,7 @@ script:
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*scraping.* -g \".*((SKIP)|(theano)|(keras)).*\"", NAME: "UT_SCRAPING", TIMEOUT: 3600 }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((theano)|(keras)).*\"", NAME: "UT_DEEP1", TIMEOUT: 3600 }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((deep)).*\"", NAME: "UT_DEEP2", TIMEOUT: 3600 }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((pythonnet)).*\"", NAME: "UT_PYTHONNET" }
   - if [ ${VERSION} == "3.5" and ${DIST} == "std" ]
       then 
         --CMD=python -u setup.py build_sphinx;
@@ -36,12 +37,9 @@ documentation:
   - if [ ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres fi
   - if [ ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres_2A fi
   - if [ ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres_3A fi
-  - if [ ${NAME} in {"UT", "DOC"} ] then python -u setup.py build_pres_1Ap fi
   - if [ ${NAME} == "UT" ] then python -u setup.py build_sphinx fi
   - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\sphinxdoc\build\html dist\html fi
   - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\sphinxdoc\build3\html dist\html3 fi
-  - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\presentation_projets\a2015\build\html dist\html_pres_1Ap\2015 fi
-  - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\presentation_projets\a2016\build\html dist\html_pres_1Ap fi
+  - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\presentation\build\html dist\html_pres fi
   - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\presentation_2A\build\html dist\html_pres_2A fi
   - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\presentation_3A\build\html dist\html_pres_3A fi
-  - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\presentation\build\html dist\html_pres fi
