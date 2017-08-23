@@ -50,8 +50,6 @@ install:
   #- conda build build_tools/conda-recipe --quiet
   - conda install -q --file=requirements_conda.txt
   - pip install -r requirements.txt
-  - pip install -r requirements_scikit.txt
-  - pip install -r requirements_ext.txt
   - pip install -U git+https://github.com/sdpython/pyPdf --no-deps
   - pip install -U git+https://github.com/matplotlib/natgrid --no-deps
   # - pip install hg+http://bitbucket.org/pygame/pygame

@@ -1,5 +1,0 @@
-bayespy
-cloudpickle
-dask
-ggplot
-mpld3

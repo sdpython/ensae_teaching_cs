@@ -1,0 +1,114 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.1
+    
+    working_directory: ~/repo
+    
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "requirements.txt" }}
+          - v1-dependencies-
+
+      - run:
+          name: install pandoc
+          command: |
+                    sudo apt-get update 
+                    wget https://github.com/jgm/pandoc/releases/download/1.19.2.1/pandoc-1.19.2.1-1-amd64.deb
+                    sudo dpkg -i pandoc-1.19.2.1-1-amd64.deb
+          
+      - run:
+          name: install tex
+          command: |
+                    sudo apt-get install -y texlive
+                    sudo apt-get install -y texlive-latex-extra
+                    sudo apt-get install -y texlive-lang-french
+          
+      - run:
+          name: install 7z
+          command: |
+                    sudo apt-get install -y p7zip-full
+          
+      - run:
+          name: install InkScape
+          command: |
+                    sudo apt-get install -y inkscape
+          
+      - run:
+          name: install graphviz
+          command: |
+                    sudo apt-get install -y graphviz
+
+      - run:
+          name: install avconv (ffmpeg)
+          command: |
+                    sudo apt-get install libav-tools
+
+      - run:
+          name: install dependencies 1
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements_conda.txt
+            
+      - run:
+          name: install dependencies 2
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
+            
+      - run:
+          name: install dependencies 3
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install git+https://github.com/sdpython/sphinxcontrib-images.git --upgrade --no-deps
+            pip install git+https://github.com/bokeh/datashader.git --upgrade --no-deps
+            
+      - run:
+          name: install basemap
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            sudo apt-get install libgeos-dev
+            pip install git+https://github.com/matplotlib/basemap.git
+
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
+        
+      - run:
+          name: run tests
+          command: |
+            . venv/bin/activate
+            python setup.py unittests
+
+      - run:
+          name: wheel
+          command: |
+            . venv/bin/activate
+            python setup.py bdist_wheel
+            mkdir -p test-reports/dist
+            cp dist/*.whl test-reports/dist
+
+      - run:
+          name: documentation
+          command: |
+            . venv/bin/activate
+            python setup.py build_sphinx
+            
+      - run:
+          name: copy documentation
+          command: |
+            mkdir -p test-reports/doc
+            cp -r  _doc/sphinxdoc/build/html test-reports/doc
+            
+      - store_artifacts:
+          path: test-reports
+          destination: test-reports

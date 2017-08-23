@@ -198,6 +198,9 @@ sans même avoir à récupérer tous les fichiers sur votre ordinateur :
     :target: https://ci.appveyor.com/project/sdpython/ensae-teaching-cs
     :alt: Build Status Windows
 
+.. image:: https://circleci.com/gh/sdpython/ensae_teaching_cs/tree/master.svg?style=svg
+    :target: https://circleci.com/gh/sdpython/ensae_teaching_cs/tree/master
+
 .. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
     :target: http://badge.fury.io/py/ensae_teaching_cs
 
