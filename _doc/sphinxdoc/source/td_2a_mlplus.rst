@@ -552,6 +552,7 @@ Deep Learning en détail
   article de blog et vidéos expliquant les différents concepts du deep learning
 * `colah's blog <http://colah.github.io/>`_ *(2016/08)* blog/cours sur le deep learning
 * `Tutoriels avec CNTK <https://cntk.ai/pythondocs/tutorials.html>`_
+* `Course notes for CS224N Winter17 <https://github.com/stanfordnlp/cs224n-winter17-notes>`_ (Stanford)
 
 *Tutoriels*
 
@@ -593,10 +594,6 @@ Deep Learning en détail
 * `On the importance of initialization and momentum in deep learning <http://www.cs.toronto.edu/~fritz/absps/momentum.pdf>`_
 * `TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems <http://download.tensorflow.org/paper/whitepaper2015.pdf>`_
 * `Foolbox v0.8.0: A Python toolbox to benchmark the robustness of machine learning models <https://arxiv.org/abs/1707.04131>`_
-
-*Deep Forest*
-
-* `Deep Forest: Towards An Alternative to Deep Neural Networks <https://arxiv.org/pdf/1702.08835.pdf>`_
 
 *Chiffres, Textes*
 
@@ -757,6 +754,32 @@ Apprentissage sans labels
 
 * `Data Programming: Creating Large Training Sets, Quickly <https://papers.nips.cc/paper/6523-data-programming-creating-large-training-sets-quickly.pdf>`_
 * `Foolbox is a Python toolbox to create adversarial examples that fool neural networks. <https://foolbox.readthedocs.io/en/latest/>`_
+
+Deep Trees
+++++++++++
+
+L'apprentissage des réseaux de neurones reposent sur des méthodes
+de gradient, différent, celui des arbres permet de prendre en compte des
+features non continues et ne sont pas soumis aux problèmes d'échelle.
+L'association *deep learning* - *deep neural network* était jusque là implicite,
+il faut maintenant compter avec les forêts d'arbres.
+
+*Notebooks*
+
+(à venir)
+
+*Lectures*
+
+* `Unsupervised Learning of Task-Specific Tree Structures with Tree-LSTMs <https://arxiv.org/abs/1707.02786>`_
+* `Improved Semantic Representations From Tree-Structured Long Short-Term Memory Networks <https://arxiv.org/abs/1503.00075>`_
+  (ci-dessous : lien vers une implémentation)
+* `Deep Forest: Towards An Alternative to Deep Neural Networks <https://arxiv.org/pdf/1702.08835.pdf>`_
+
+*Modules*
+
+* `tree_rnn (python) <https://github.com/ofirnachum/tree_rnn>`_ : pas de modules encore,
+  des implémentatations partagées sur GitHub
+* `treelstm <https://github.com/stanfordnlp/treelstm>`_ (java + `Torch <https://github.com/torch/torch7>`_)
 
 Galleries de problèmes résolus ou presque
 +++++++++++++++++++++++++++++++++++++++++
