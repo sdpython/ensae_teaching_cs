@@ -78,7 +78,7 @@ class TestSkipExampleKerasMNIST(unittest.TestCase):
         fLOG("model", Y_train.shape)
         model = keras_build_mnist_model(Y_train.shape[1], fLOG=fLOG)
         fLOG("fit")
-        keras_fit(model, X_train, Y_train, X_test, Y_test, batch_size=128,
+        keras_fit(model, X_train, Y_train, X_test, Y_test, batch_size=1,  # 128 for a better accuracy
                   nb_classes=None, nb_epoch=1, fLOG=fLOG)
         fLOG("predict")
         score = keras_predict(model, X_test, Y_test)

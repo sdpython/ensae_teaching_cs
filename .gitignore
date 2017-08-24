@@ -428,3 +428,5 @@ _doc/notebooks/td3a/NASDAQ_MSFT.*.txt
 _doc/notebooks/notebook_eleves/2016-2017/answer*.txt
 _doc/notebooks/notebook_eleves/2016-2017/ensae_competition_*.txt
 _doc/notebooks/notebook_eleves/2016-2017/ensae_competition_*.zip
+_unittests/ut_examples_from_modules/mnist.pkl
+_unittests/ut_examples_from_modules/mnist.pkl.gz
