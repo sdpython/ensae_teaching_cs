@@ -13,3 +13,4 @@ Arbre, Trie, Graphes
     graph1exo_parcours_correction
     graph4exos
     graph_spectral_clustering
+    graph_spectral_clustering_correction

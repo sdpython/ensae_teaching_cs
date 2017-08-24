@@ -10,46 +10,46 @@ points = [(0.95267535699124162, 0.82560629131856578), (0.29648364156865914, 0.18
 ###################################### Question 3 ################
 #je définis une fonction qui va me servir pour NombreTotalNoeud
 def action(a,liste):
-		for e in a.arcs:
-			if e not in liste:
-				liste+=[e]
-				action(e,liste)
-	
-	
+        for e in a.arcs:
+            if e not in liste:
+                liste+=[e]
+                action(e,liste)
+    
+    
 class MonGraphe :
-	def __init__ (self, num, valeur) :
-		self.valeur = valeur
-		self.num = num
-		self.arcs = []
-	def NombreTotalNoeud (self) :
-		connus=[self]       #je définis ma liste de sommets connus
-		for a in self.arcs: action(a,connus)   #j'applique l'action qui consiste à ajouter des sommets non connus
-		return len(connus)
-	def Degre (self):
-		return len(self.arcs)
+    def __init__ (self, num, valeur) :
+        self.valeur = valeur
+        self.num = num
+        self.arcs = []
+    def NombreTotalNoeud (self) :
+        connus=[self]       #je définis ma liste de sommets connus
+        for a in self.arcs: action(a,connus)   #j'applique l'action qui consiste à ajouter des sommets non connus
+        return len(connus)
+    def Degre (self):
+        return len(self.arcs)
 
-	
+    
 ###################################### Question 4 ################
 
 
 
 
 def ConstruireMonGraphe (noeuds, arcs):
-	l = []
-	for i in noeuds:
-		l += [ MonGraphe(i,noeuds[i]) ]
-	for (a,b) in arcs :
-		l [a].arcs += [ l [b] ]
-		l [b].arcs += [ l [a] ]
-	return l
-	
+    l = []
+    for i in noeuds:
+        l += [ MonGraphe(i,noeuds[i]) ]
+    for (a,b) in arcs :
+        l [a].arcs += [ l [b] ]
+        l [b].arcs += [ l [a] ]
+    return l
+    
 graphe = ConstruireMonGraphe(noeuds,arcs)
 
 #definition d'une fonction pour afficher le graphe
 def afficher(graphe):
-	for e in graphe:
-		print e.num, e.valeur, [a.num for a in e.arcs]
-			
+    for e in graphe:
+        print e.num, e.valeur, [a.num for a in e.arcs]
+            
 afficher(graphe)
 #print '**********************'
 
@@ -63,7 +63,7 @@ afficher(graphe)
 
  
 #for i in xrange(0,len(graphe)):
-#	print graphe[i].NombreTotalNoeud()
+#    print graphe[i].NombreTotalNoeud()
 
 #cette fonction retourne une erreur car elle boucle sur elle-même
 #si b est dans a.arcs alors elle se rappelle car a est dans b.arcs
@@ -91,8 +91,8 @@ afficher(graphe)
 #voir dans la définition de class MonGraphe
 #ou sinon
 def Deg(numero):
-	return len( graphe[numero].arcs )
-	
+    return len( graphe[numero].arcs )
+    
 print graphe[0].Degre()
 print '*****************'
 
@@ -107,15 +107,15 @@ M = np.matrix(  [[0 for i in xrange(0,n)] for j in xrange(0,n)]   )   #construct
 
 #je définis une fonction qui me donne le coefficient i,j
 def laplacien(i,j):
-	if i==j : return graphe[i].Degre()
-	elif graphe[j] in graphe[i].arcs: return -1
-	else: return 0
+    if i==j : return graphe[i].Degre()
+    elif graphe[j] in graphe[i].arcs: return -1
+    else: return 0
 
 #je modifie ma matrice en appliquant cette fonction
 for i in xrange(0,n):
-	for j in xrange(0,n):
-		M[i,j] = laplacien(i,j)
-		
+    for j in xrange(0,n):
+        M[i,j] = laplacien(i,j)
+        
 #quelques vérifications
 print M[2,2]
 print Deg(2) 
@@ -128,8 +128,8 @@ print M[41,0]
 b=True
 i=0
 while b==True and i<n:
-	if sum ( M[:,j] ) <>0: b=False
-	i+=1
+    if sum ( M[:,j] ) <>0: b=False
+    i+=1
 print b
 
 V=np.matrix ( [1 for i in xrange(0,n) ])
@@ -154,39 +154,39 @@ vecteursp= [ P[i] for (a,i) in pos ]
 
 V = vecteursp[1]
 print V
-	
+    
 #une fois qu'on a le vecteur propre en question
 #on peut construire une liste pour chaque composante
 compneg = []
 comppos = []
 for i in xrange(0,50):
-	if V[0,i]<0 : compneg += [graphe [i]]
-	else : comppos += [graphe [i]]
+    if V[0,i]<0 : compneg += [graphe [i]]
+    else : comppos += [graphe [i]]
 
 def nombre_arcs(sommet):
-	def nombre_arcs_liste(comp):
-		r=0
-		for n in comp:
-			if n in sommet.arcs : r += 1
-		return r
-	if sommet in compneg : return nombre_arcs_liste(comppos)
-	else : return nombre_arcs_liste(compneg)
-	
+    def nombre_arcs_liste(comp):
+        r=0
+        for n in comp:
+            if n in sommet.arcs : r += 1
+        return r
+    if sommet in compneg : return nombre_arcs_liste(comppos)
+    else : return nombre_arcs_liste(compneg)
+    
 print [a.num for a in comppos], [a.num for a in compneg]
 
 r=0
 for sommet in graphe:
-	if sommet in comppos:
-		r+= nombre_arcs(sommet)
+    if sommet in comppos:
+        r+= nombre_arcs(sommet)
 print r
-	
+    
 r=0
 for sommet in graphe:
-	if sommet in compneg:
-		r+= nombre_arcs(sommet)
+    if sommet in compneg:
+        r+= nombre_arcs(sommet)
 print r
 
 #pour savoir quelle est l'arête à couper
 for a in comppos:
-	for b in compneg:
-		if a in b.arcs : print (a.num,b.num)
+    for b in compneg:
+        if a in b.arcs : print (a.num,b.num)
