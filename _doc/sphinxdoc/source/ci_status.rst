@@ -33,7 +33,8 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/nelemxw6md6bt95a?svg=true
             :target: https://ci.appveyor.com/project/sdpython/actuariat-python
             :alt: Build Status Windows
-      -
+      - .. image:: https://circleci.com/gh/sdpython/actuariat_python/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/actuariat_python/tree/master
       - .. image:: https://badge.fury.io/py/actuariat_python.svg
             :target: http://badge.fury.io/py/actuariat_python
       - .. image:: http://img.shields.io/pypi/pyversions/actuariat_python.png
@@ -54,7 +55,8 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/g7065ubabg7xxpm6?svg=true
             :target: https://ci.appveyor.com/project/sdpython/code-beatrix
             :alt: Build Status Windows
-      -
+      - .. image:: https://circleci.com/gh/sdpython/code_beatrix/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/code_beatrix/tree/master
       - .. image:: https://badge.fury.io/py/code_beatrix.svg
             :target: http://badge.fury.io/py/code_beatrix
       - .. image:: http://img.shields.io/pypi/pyversions/code_beatrix.png
@@ -97,7 +99,8 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/5qbwt4kaxpc8w415?svg=true
             :target: https://ci.appveyor.com/project/sdpython/ensae-projects
             :alt: Build Status Windows
-      -
+      - .. image:: https://circleci.com/gh/sdpython/ensae_projects/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/ensae_projects/tree/master
       - .. image:: https://badge.fury.io/py/ensae_projects.svg
             :target: http://badge.fury.io/py/ensae_projects
       - .. image:: http://img.shields.io/pypi/pyversions/ensae_projects.png
@@ -139,7 +142,8 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/cq8d56y2o4ldi7rn?svg=true
             :target: https://ci.appveyor.com/project/sdpython/jupytalk
             :alt: Build Status Windows
-      -
+      - .. image:: https://circleci.com/gh/sdpython/jupytalk/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/jupytalk/tree/master
       - .. image:: https://badge.fury.io/py/jupytalk.svg
             :target: http://badge.fury.io/py/jupytalk
       - .. image:: http://img.shields.io/pypi/pyversions/jupytalk.png
@@ -182,7 +186,8 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/5env33qptorgshaq?svg=true
             :target: https://ci.appveyor.com/project/sdpython/mlstatpy
             :alt: Build Status Windows
-      -
+      - .. image:: https://circleci.com/gh/sdpython/mlstatpy/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/mlstatpy/tree/master
       - .. image:: https://badge.fury.io/py/mlstatpy.svg
             :target: http://badge.fury.io/py/mlstatpy
       - .. image:: http://img.shields.io/pypi/pyversions/mlstatpy.png
@@ -349,7 +354,8 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/5jl303wl14dtesl0?svg=true
             :target: https://ci.appveyor.com/project/sdpython/teachpyx
             :alt: Build Status Windows
-      -
+      - .. image:: https://circleci.com/gh/sdpython/teachpyx/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/teachpyx/tree/master
       - .. image:: https://badge.fury.io/py/teachpyx.svg
             :target: http://badge.fury.io/py/teachpyx
       - .. image:: http://img.shields.io/pypi/pyversions/teachpyx.png
