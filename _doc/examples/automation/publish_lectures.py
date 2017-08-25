@@ -120,7 +120,7 @@ rootw = "/www/htdocs/app/%s/%s"                   # destination sur le site FTP
 # seconde destination pour le site lesenfantscodaient.fr
 rootw2 = "/lesenfantscodaient.fr"
 google_id = code_google                         # identifiant google analytics
-suffix = ("_UT_36_std",)
+suffix = ("_UT_%d%d_std" % sys.version_info[:2],)
 
 modules0 = modules
 modules = [_ for _ in modules if os.path.exists(

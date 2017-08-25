@@ -336,8 +336,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/python3_module_template/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/python3_module_template/tree/master
-      - .. image:: https://circleci.com/gh/sdpython/python3_module_template/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/python3_module_template/tree/master
+      -
       -
       - .. image:: https://badge.waffle.io/sdpython/python3_module_template.png?label=ready&title=Ready
             :alt: Waffle

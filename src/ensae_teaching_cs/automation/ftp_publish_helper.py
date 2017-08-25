@@ -3,7 +3,7 @@
 @file
 @brief Helpers to publish the documentation of python to a website
 """
-
+import sys
 import os
 from pyquickhelper.filehelper import TransferFTP, FileTreeNode, FolderTransferFTP
 from pyquickhelper.filehelper.ftp_transfer_files import content_as_binary as pqh_content_as_binary
@@ -222,7 +222,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                                       ],
                              password=None,
                              force_allow=None,
-                             suffix=("_UT_36_std",),
+                             suffix=("_UT_%d%d_std" % sys.version_info[:2],),
                              fLOG=print,
                              exc=True):
     """
