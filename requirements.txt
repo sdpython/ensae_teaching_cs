@@ -4,6 +4,7 @@ azure
 babel!=2.0
 bayespy
 beautifulsoup4
+blockdiag
 bqplot
 coverage
 blockdiag
@@ -16,13 +17,15 @@ jyquickhelper
 lifelines
 lightning-python
 mpld3
+mutagen
 plotly
 pycodestyle>=2.0.0
+pydocstyle
 pygal
 pygal_maps_fr
 pylzma
 pympler
-pyquickhelper
+pyquickhelper>1.5.2126
 python-jenkins
 qgrid
 semantic_version
@@ -38,3 +41,4 @@ sphinxjp.themes.sphinxjp
 tqdm
 tutormagic
 version_information
+wheel

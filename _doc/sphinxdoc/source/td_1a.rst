@@ -33,9 +33,9 @@ L'informatique est plus souvent un outil qu'une matière à part entière.
 Le paragraphe :ref:`td1a-notions` propose deux profils d'utilisation
 et ce qu'il est suggéré de connaître pour chacun d'entre eux.
 Le premier réflexe quand on ne sait pas doit être internet et un moteur
-de recherche. `stackoverflow <https://stackoverflow.com/questions/tagged/python>`, 
-`quora <https://www.quora.com/topic/Python-programming-language-1>`_ 
-sont des forums d'échanges. 
+de recherche. `stackoverflow <https://stackoverflow.com/questions/tagged/python>`,
+`quora <https://www.quora.com/topic/Python-programming-language-1>`_
+sont des forums d'échanges.
 `Cheat Sheets <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/cheat_sheets.html>`_
 est un mot qui vous mène très souvent vers un résumé des syntaxes les
 plus utilisés.

@@ -43,7 +43,6 @@ install:
   - conda install conda-build
   # Useful for debugging any issues with conda
   - conda info -a
-
   - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION numpy mkl scipy nose cython scikit-learn
   - source activate test-environment
   # - make all
@@ -56,4 +55,4 @@ install:
   # we change that, cvxopt does not seem to work anymore without mkl
   # we add it at the end since it seems to modify existing packages
 script:
-    - python setup.py unittests
+  - python setup.py unittests
