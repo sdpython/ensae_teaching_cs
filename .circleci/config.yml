@@ -69,6 +69,8 @@ jobs:
             . venv/bin/activate
             pip install git+https://github.com/sdpython/sphinxcontrib-images.git --upgrade --no-deps
             pip install git+https://github.com/bokeh/datashader.git --upgrade --no-deps
+            pip install git+https://github.com/sdpython/pyPdf --upgrade --no-deps
+            pip install git+https://github.com/matplotlib/natgrid --upgrade --no-deps
             
       - run:
           name: install basemap
