@@ -17,6 +17,7 @@ ggplot
 jyquickhelper
 lifelines
 lightning-python
+mlstatpy
 mpld3
 mutagen
 plotly

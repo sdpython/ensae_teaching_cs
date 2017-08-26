@@ -101,7 +101,7 @@ jobs:
           name: documentation
           command: |
             . venv/bin/activate
-            python setup.py build_sphinx
+            python setup.py build_sphinx html1
             
       - run:
           name: copy documentation
