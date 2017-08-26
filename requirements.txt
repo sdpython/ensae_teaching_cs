@@ -27,6 +27,7 @@ pylzma
 pympler
 pyensae
 pyquickhelper>1.5.2126
+pyrsslocal
 python-jenkins
 qgrid
 semantic_version
