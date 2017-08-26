@@ -17,6 +17,7 @@ forestci
 geopy
 ggplot
 jyquickhelper
+keras
 lifelines
 lightgbm
 lightning-python
