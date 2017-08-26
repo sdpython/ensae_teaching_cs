@@ -101,6 +101,8 @@ def compile_cython_single_script(script, skip_warn=True, fLOG=noLOG):
                     if "UserWarning" not in line:
                         do_raise = True
                         break
+        else:
+            do_raise = True
         if do_raise:
             with open(script, "r", encoding="utf-8") as f:
                 content = f.read()
@@ -108,5 +110,5 @@ def compile_cython_single_script(script, skip_warn=True, fLOG=noLOG):
                 "CMD:\n{0}\nOUT:\n{1}ERR:\n{2}\nSCRIPT:\n{3}".format(cmd, out, err, content))
         else:
             warnings.warn(
-                "CMD:\n{0}\nOUT:\n{1}ERR:\n{2}".format(cmd, out, err))
+                "[compile_cython_single_script] CMD:\n{0}\nOUT:\n{1}ERR:\n{2}".format(cmd, out, err))
     return out

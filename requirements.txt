@@ -12,6 +12,7 @@ blockdiag
 cloudpickle
 dbfread
 folium
+forestci
 geopy
 ggplot
 jyquickhelper
@@ -23,9 +24,11 @@ mutagen
 plotly
 pycodestyle>=2.0.0
 pydocstyle
+pydub
 pyensae
 pygal
 pygal_maps_fr
+pygame
 pylzma
 pymmails
 pympler

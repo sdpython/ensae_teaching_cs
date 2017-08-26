@@ -107,8 +107,8 @@ class TestSuivi(unittest.TestCase):
         gr = repo.Groups[0]
         emails = repo.get_emails(gr)
         fLOG(emails)
-        self.assertEqual(emails, ['name.lastname@something.fr',
-                                  'name.lastname@something', 'name.lastname@something.fr', 'name.lastname@something'])
+        self.assertEqual(emails, ['name.lastname@something.fr', 'name.lastname@something',
+                                  'name.lastname@something.fr', 'name.lastname@something'])
 
     def test_sections(self):
         fLOG(
@@ -124,11 +124,12 @@ class TestSuivi(unittest.TestCase):
                 fLOG(f)
             self.assertEqual(len(repo.Groups), 2)
         gr = repo.Groups[0]
+        if gr is not None and len(gr) < 2:
+            raise Exception("Empty group '{0}'".format(gr))
         sections = repo.get_sections(gr)
         names = [k for k in sorted(sections)]
-        assert names == [
-            '', 'extrait', 'next', 'pitch', 'programme', 'rapport', 'title']
-        #for k,v in sections.items(): fLOG(k,v)
+        self.assertEqual(names, ['', 'extrait', 'next',
+                                 'pitch', 'programme', 'rapport', 'title'])
         if sections["next"] != ['', '* module tweepy', '']:
             raise Exception(sections["next"])
         if sections["extrait"] != ['', '::', '', '    paragraphe 1', '', '    paragraphe 2', '']:

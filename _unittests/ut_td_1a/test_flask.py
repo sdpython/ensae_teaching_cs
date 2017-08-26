@@ -40,6 +40,7 @@ except ImportError:
     import pyquickhelper as skip_
 
 from pyquickhelper.loghelper import fLOG, get_url_content
+from pyquickhelper.pycode import is_travis_or_appveyor
 from src.ensae_teaching_cs.td_1a.simple_flask_site import app
 from src.ensae_teaching_cs.td_1a.flask_helper import FlaskInThread
 
@@ -52,8 +53,8 @@ class TestSimpleFlask (unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        if "travis" in sys.executable:
-            # skip travis and Flask
+        if is_travis_or_appveyor() in ('travis', 'circleci'):
+            # Get an error: urllib.error.URLError: <urlopen error [Errno 99] Cannot assign requested address>.
             return
 
         th = FlaskInThread(app, host="localhost", port=8025)
@@ -63,21 +64,21 @@ class TestSimpleFlask (unittest.TestCase):
 
         # main page
         c = get_url_content(site)
-        assert "Simple Flask Site"
+        self.assertIn("Simple Flask Site" in c)
 
         # exception
         c = get_url_content(site + "help/exception")
-        assert "STACK:" in c
+        self.assertIn("STACK:", c)
 
         # help for
         c = get_url_content(site + "help/ask/for/help")
         fLOG(c)
-        assert "help for command: ask/for/help" in c
+        self.assertIn("help for command: ask/for/help", c)
 
         # shutdown
         c = requests.post(site + "shutdown/")
         fLOG(c.text)
-        assert "Server shutting down..." in c.text
+        self.assertIn("Server shutting down...", c.text)
 
         nb = 0
         while th.is_alive() and nb < 5:
