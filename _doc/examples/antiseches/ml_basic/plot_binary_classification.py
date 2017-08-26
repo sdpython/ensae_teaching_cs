@@ -240,4 +240,4 @@ plt.ylabel("Proportion bien classée")
 plt.title('ROC(s)')
 plt.legend(loc="lower right")
 
-plt.show()
+# plt.show()

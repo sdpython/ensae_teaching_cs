@@ -1,5 +1,5 @@
 """
-@brief      test log(time=1430s)
+@brief      test log(time=50s)
 @author     Xavier Dupre
 """
 
@@ -78,12 +78,22 @@ class TestSkipExampleKerasMNIST(unittest.TestCase):
         fLOG("model", Y_train.shape)
         model = keras_build_mnist_model(Y_train.shape[1], fLOG=fLOG)
         fLOG("fit")
-        keras_fit(model, X_train, Y_train, X_test, Y_test, batch_size=1,  # 128 for a better accuracy
-                  nb_classes=None, nb_epoch=1, fLOG=fLOG)
-        fLOG("predict")
+        if False and __name__ == "__main__":
+            keras_fit(model, X_train, Y_train, X_test, Y_test, batch_size=1,  # 128 for a better accuracy
+                      nb_classes=None, nb_epoch=1, fLOG=fLOG)
+        else:
+            # We make it shortest when run in unit test
+            fLOG("quicker")
+            N = 500
+            X_train = X_train[:N, :]
+            Y_train = Y_train[:N, :]
+            X_test = X_test[:N, :]
+            Y_test = Y_test[:N, :]
+            keras_fit(model, X_train, Y_train, X_test, Y_test, batch_size=1,  # 128 for a better accuracy
+                      nb_classes=None, nb_epoch=1, fLOG=fLOG)
         score = keras_predict(model, X_test, Y_test)
-        fLOG(len(score))
-        fLOG(score[:5])
+        r = score[:5]
+        fLOG(r)
 
 
 if __name__ == "__main__":

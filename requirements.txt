@@ -6,6 +6,7 @@ bayespy
 beautifulsoup4
 blockdiag
 bqplot
+chardet
 coverage
 blockdiag
 cloudpickle
