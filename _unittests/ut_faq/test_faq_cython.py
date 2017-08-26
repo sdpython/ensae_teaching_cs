@@ -72,7 +72,8 @@ class TestFaqCython(unittest.TestCase):
         fname = os.path.join(temp, name)
         fLOG(fname)
         if not os.path.exists(fname):
-            raise FileNotFoundError(fname)
+            raise FileNotFoundError("Not found: '{0}'. Found:\n{1}".format(
+                fname, "\n".join(os.listdir(temp))))
 
         sys.path.append(temp)
         import primes

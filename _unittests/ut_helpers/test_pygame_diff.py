@@ -10,7 +10,6 @@ import sys
 import os
 import unittest
 import random
-import warnings
 from difflib import SequenceMatcher
 
 
@@ -66,9 +65,12 @@ class TestDiff(unittest.TestCase):
         size = 500, 500
         white = 255, 255, 255
 
-        if is_travis_or_appveyor() == "travis":
-            warnings.warn("pygame is not available")
+        if is_travis_or_appveyor() in ("travis",):
+            # pygame.error: No available video device
             return
+        if is_travis_or_appveyor() == "circleci":
+            os.environ["SDL_VIDEODRIVER"] = "x11"
+
         pygame, screen, fonts = get_pygame_screen_font(h, size)
 
         from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
@@ -116,9 +118,11 @@ class TestDiff(unittest.TestCase):
         size = 500, 500
         white = 255, 255, 255
 
-        if is_travis_or_appveyor() == "travis":
-            warnings.warn("pygame is not available")
+        if is_travis_or_appveyor() in ("travis",):
+            # pygame.error: No available video device
             return
+        if is_travis_or_appveyor() == "circleci":
+            os.environ["SDL_VIDEODRIVER"] = "x11"
 
         pygame, screen, fonts = get_pygame_screen_font(h, size)
 

@@ -5,7 +5,6 @@
 import os
 import sys
 import unittest
-import warnings
 
 
 try:
@@ -49,9 +48,12 @@ class TestTspKohonen(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         temp = get_temp_folder(__file__, "temp_image_video_tsp_kohonen")
-        if is_travis_or_appveyor() == "travis":
-            warnings.warn("pygame is not available")
+
+        if is_travis_or_appveyor() in ("travis",):
+            # pygame.error: No available video device
             return
+        if is_travis_or_appveyor() == "circleci":
+            os.environ["SDL_VIDEODRIVER"] = "x11"
 
         import pygame
         pygame_simulation(pygame, fLOG=fLOG, folder=temp,

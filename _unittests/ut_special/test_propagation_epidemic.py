@@ -5,7 +5,6 @@
 import os
 import sys
 import unittest
-import warnings
 
 
 try:
@@ -59,21 +58,23 @@ class TestEpidemicPropagation(unittest.TestCase):
             OutputPrint=__name__ == "__main__")
         temp = get_temp_folder(__file__, "temp_image_video_epidemic")
 
-        if is_travis_or_appveyor() == "travis":
-            warnings.warn("pygame is not available")
+        if is_travis_or_appveyor() in ("travis",):
+            # pygame.error: No available video device
             return
+        if is_travis_or_appveyor() == "circleci":
+            os.environ["SDL_VIDEODRIVER"] = "x11"
 
         import pygame
         pygame_simulation(pygame, fLOG=fLOG, iter=10, folder=temp)
         files = os.listdir(temp)
-        assert len(files) > 9
+        self.assertTrue(len(files) > 9)
         png = [os.path.join(temp, _)
                for _ in files if os.path.splitext(_)[-1] == ".png"]
-        assert len(png) > 0
+        self.assertTrue(len(png) > 0)
         out = os.path.join(temp, "epidemic.avi")
 
         v = make_video(png, out, size=(300, 300), format="XVID")
-        assert v is not None
+        self.assertTrue(v is not None)
 
 
 if __name__ == "__main__":

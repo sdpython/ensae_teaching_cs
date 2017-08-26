@@ -49,6 +49,11 @@ jobs:
                     sudo apt-get install libav-tools
 
       - run:
+          name: Install pygame
+          command: |
+                    sudo apt-get install -y python-pygame
+
+      - run:
           name: install dependencies 1
           command: |
             python3 -m venv venv

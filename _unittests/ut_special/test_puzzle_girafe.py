@@ -5,8 +5,6 @@
 import os
 import sys
 import unittest
-import warnings
-
 
 try:
     import src
@@ -52,7 +50,8 @@ class TestPuzzleGirafe(unittest.TestCase):
         p = PuzzleGirafe()
         p.solution()
         res = str(p)
-        assert "1 : haut orange - bas bleu clair - bas bleu fonce - haut violet -  orientation 0 numero 1" in res
+        self.assertIn(
+            "1 : haut orange - bas bleu clair - bas bleu fonce - haut violet -  orientation 0 numero 1", res)
 
     def test_image_video_puzzle_girafe(self):
         fLOG(
@@ -61,9 +60,11 @@ class TestPuzzleGirafe(unittest.TestCase):
             OutputPrint=__name__ == "__main__")
         temp = get_temp_folder(__file__, "temp_image_video_girafe")
 
-        if is_travis_or_appveyor() == "travis":
-            warnings.warn("pygame is not available")
+        if is_travis_or_appveyor() in ("travis",):
+            # pygame.error: No available video device
             return
+        if is_travis_or_appveyor() == "circleci":
+            os.environ["SDL_VIDEODRIVER"] = "x11"
 
         import pygame
         pygame_simulation(pygame, fLOG=fLOG, folder=temp,
