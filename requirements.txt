@@ -21,11 +21,12 @@ mutagen
 plotly
 pycodestyle>=2.0.0
 pydocstyle
+pyensae
 pygal
 pygal_maps_fr
 pylzma
 pympler
-pyensae
+pymyinstall
 pyquickhelper>1.5.2126
 pyrsslocal
 python-jenkins
