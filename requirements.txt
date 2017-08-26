@@ -25,6 +25,7 @@ pygal
 pygal_maps_fr
 pylzma
 pympler
+pyensae
 pyquickhelper>1.5.2126
 python-jenkins
 qgrid
