@@ -389,7 +389,8 @@ def display_population(self, screen, pygame, font, back_ground):
 
 
 def pygame_simulation(pygame, first_click=False, folder=None,
-                      iter=1000, cote=600, nb=(200, 20), **params):
+                      iter=1000, cote=600, nb=(200, 20), flags=0,
+                      **params):
     """
     Run a graphic simulation. The user can a pygame screen showing
     the evolution of population. A healthy person is white, green is sick,
@@ -404,6 +405,8 @@ def pygame_simulation(pygame, first_click=False, folder=None,
     @param      cote            @see cl EpidemicPopulation
     @param      nb              @see cl EpidemicPopulation
     @param      params          @see cl EpidemicPopulation
+    @param      flags           see `pygame.display.set_mode <https://www.pygame.org/docs/ref/display.html#pygame.display.set_mode>`_
+    @param      fLOG            logging function
 
     The simulation looks like this:
 
@@ -422,7 +425,7 @@ def pygame_simulation(pygame, first_click=False, folder=None,
     """
     pygame.init()
     size = cote + 200, cote
-    screen = pygame.display.set_mode(size)
+    screen = pygame.display.set_mode(size, flags)
     font = pygame.font.Font("freesansbold.ttf", 30)
     back_ground = (128, 128, 128)
 

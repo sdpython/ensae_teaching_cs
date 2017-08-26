@@ -65,14 +65,17 @@ class TestTspKruskal(unittest.TestCase):
         if is_travis_or_appveyor() in ("travis",):
             # pygame.error: No available video device
             return
+        import pygame
         if is_travis_or_appveyor() == "circleci":
             os.environ["SDL_VIDEODRIVER"] = "x11"
+            flags = pygame.NOFRAME
+        else:
+            flags = 0
 
-        import pygame
         pygame.init()
 
         pygame_simulation(fLOG=fLOG, max_iter=10 if __name__ != "__main__" else 10000,
-                          pygame=pygame, folder=temp)
+                          pygame=pygame, folder=temp, flags=flags)
 
         files = os.listdir(temp)
         assert len(files) > 9

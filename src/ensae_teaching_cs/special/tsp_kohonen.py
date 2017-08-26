@@ -290,14 +290,16 @@ def display_ville(villes, screen, bv, pygame):
 
 def pygame_simulation(pygame, folder=None, size=(800, 500), nb=200,
                       tour=2, dist_ratio=4, fs=(1.5, 1, 0.75, 0.5, 0.25),
-                      max_iter=12000,
-                      alpha=0.99, beta=0.90, first_click=False, fLOG=fLOG):
+                      max_iter=12000, alpha=0.99, beta=0.90,
+                      first_click=False, flags=0, fLOG=fLOG):
     """
     @param      pygame          module pygame
     @param      first_click     attend la pression d'un clic de souris avant de commencer
     @param      folder          répertoire où stocker les images de la simulation
     @param      size            taille de l'écran
     @param      delay           delay between two tries
+    @param      flags           see `pygame.display.set_mode <https://www.pygame.org/docs/ref/display.html#pygame.display.set_mode>`_
+    @param      fLOG            logging function
 
 
     La simulation ressemble à ceci :
@@ -319,7 +321,7 @@ def pygame_simulation(pygame, folder=None, size=(800, 500), nb=200,
     pygame.init()
     size = width, height = x, y = size[0], size[1]
     white = 255, 255, 255
-    screen = pygame.display.set_mode(size)
+    screen = pygame.display.set_mode(size, flags)
     villes = construit_ville(nb, x, y)
     neurones = construit_liste_neurones(villes, 3)
     compte_n = [0 for i in neurones]

@@ -154,7 +154,7 @@ def display_corde(corde, screen, pygame):
 def pygame_simulation(pygame, first_click=False, folder=None,
                       iter=1000, size=(800, 500), nb=10,
                       m=40, k=0.1, g=0.1, f=0.02, dt=0.1, step=10,
-                      fLOG=fLOG):
+                      flags=0, fLOG=fLOG):
     """
     Simulation graphique.
     Simule la chute d'une corde suspendue à ces deux extrémités.
@@ -175,6 +175,8 @@ def pygame_simulation(pygame, first_click=False, folder=None,
                                 valeur positive
     @param          f           vitesse de freinage
     @param          l           longueur de la corde
+    @param          flags       see `pygame.display.set_mode <https://www.pygame.org/docs/ref/display.html#pygame.display.set_mode>`_
+    @param          fLOG        logging function
 
     The simulation looks like this:
 
@@ -193,7 +195,7 @@ def pygame_simulation(pygame, first_click=False, folder=None,
     """
     pygame.init()
     white = 255, 255, 255
-    screen = pygame.display.set_mode(size)
+    screen = pygame.display.set_mode(size, flags)
 
     # création de la corde
     nb = 10

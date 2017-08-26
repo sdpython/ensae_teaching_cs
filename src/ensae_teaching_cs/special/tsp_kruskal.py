@@ -1106,7 +1106,7 @@ def display_arbre(villes, arbre, mult=1, screen=None, pygame=None):
 
 def pygame_simulation(size=(800, 500), zone=20, length=10, max_iter=None,
                       nb=700, fLOG=noLOG, pygame=None, folder=None,
-                      first_click=False, distance=None):
+                      first_click=False, distance=None, flags=0):
     """
     @param      pygame          module pygame
     @param      nb              number of cities
@@ -1118,6 +1118,7 @@ def pygame_simulation(size=(800, 500), zone=20, length=10, max_iter=None,
     @param      first_click     pause
     @param      fLOG            logging function
     @param      distance        distance function
+    @param      flags           see `pygame.display.set_mode <https://www.pygame.org/docs/ref/display.html#pygame.display.set_mode>`_
     @return                     @see fn tsp_kruskal_algorithm
 
     La simulation ressemble à ceci :
@@ -1139,7 +1140,7 @@ def pygame_simulation(size=(800, 500), zone=20, length=10, max_iter=None,
     pygame.init()
     size = width, height = x, y = size[0], size[1]
     white = 255, 255, 255
-    screen = pygame.display.set_mode(size)
+    screen = pygame.display.set_mode(size, flags)
     screen.fill(white)
     points = construit_ville(nb, x, y)
 

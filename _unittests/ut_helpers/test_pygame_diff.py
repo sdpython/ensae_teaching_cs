@@ -68,10 +68,14 @@ class TestDiff(unittest.TestCase):
         if is_travis_or_appveyor() in ("travis",):
             # pygame.error: No available video device
             return
+        import pygame
         if is_travis_or_appveyor() == "circleci":
             os.environ["SDL_VIDEODRIVER"] = "x11"
+            flags = pygame.NOFRAME
+        else:
+            flags = 0
 
-        pygame, screen, fonts = get_pygame_screen_font(h, size)
+        pygame, screen, fonts = get_pygame_screen_font(h, size, flags=flags)
 
         from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
 
@@ -121,10 +125,14 @@ class TestDiff(unittest.TestCase):
         if is_travis_or_appveyor() in ("travis",):
             # pygame.error: No available video device
             return
+        import pygame
         if is_travis_or_appveyor() == "circleci":
             os.environ["SDL_VIDEODRIVER"] = "x11"
+            flags = pygame.NOFRAME
+        else:
+            flags = 0
 
-        pygame, screen, fonts = get_pygame_screen_font(h, size)
+        pygame, screen, fonts = get_pygame_screen_font(h, size, flags=flags)
 
         from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
 

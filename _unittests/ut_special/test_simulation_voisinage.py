@@ -5,7 +5,6 @@
 import os
 import sys
 import unittest
-import warnings
 
 
 try:
@@ -50,13 +49,19 @@ class TestSimulationVoisinage(unittest.TestCase):
             OutputPrint=__name__ == "__main__")
         temp = get_temp_folder(__file__, "temp_image_video_voisinage")
 
-        if is_travis_or_appveyor() == "travis":
-            warnings.warn("pygame is not available")
+        if is_travis_or_appveyor() in ("travis",):
+            # pygame.error: No available video device
             return
-
         import pygame
+        if is_travis_or_appveyor() == "circleci":
+            os.environ["SDL_VIDEODRIVER"] = "x11"
+            flags = pygame.NOFRAME
+        else:
+            flags = 0
+
         pygame_simulation(pygame, fLOG=fLOG, folder=temp,
-                          max_iter=150 if __name__ == "__main__" else 10)
+                          max_iter=150 if __name__ == "__main__" else 10,
+                          flags=flags)
         files = os.listdir(temp)
         assert len(files) > 9
         png = [os.path.join(temp, _)

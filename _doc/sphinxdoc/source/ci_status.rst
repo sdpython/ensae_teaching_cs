@@ -121,7 +121,8 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/ko5g064idp5srm74?svg=true
             :target: https://ci.appveyor.com/project/sdpython/ensae-teaching-cs
             :alt: Build Status Windows
-      -
+      - .. image:: https://circleci.com/gh/sdpython/ensae_teaching_cs/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/ensae_teaching_cs/tree/master
       - .. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
             :target: http://badge.fury.io/py/ensae_teaching_cs
       - .. image:: http://img.shields.io/pypi/pyversions/ensae_teaching_cs.png

@@ -250,7 +250,7 @@ def display(self, screen, x, pygame):
 
 def pygame_simulation(pygame, first_click=False, folder=None,
                       x=6, nb=100, group=6, max_iter=150, th2=1.75,
-                      image=None, fLOG=noLOG):
+                      image=None, flags=0, fLOG=noLOG):
     """
     Simulation graphique.
     Illuste la résolution du puzzle
@@ -266,6 +266,8 @@ def pygame_simulation(pygame, first_click=False, folder=None,
     @param      th2             ...
     @param      max_iter        nombre d'itérations
     @param      image           définition de la ville
+    @param      flags           see `pygame.display.set_mode <https://www.pygame.org/docs/ref/display.html#pygame.display.set_mode>`_
+    @param      fLOG            logging function
     @return                     @see cl Ville
 
     La simulation ressemble à ceci :
@@ -294,7 +296,7 @@ def pygame_simulation(pygame, first_click=False, folder=None,
 
     pygame.init()
     size = nb * x, nb * x
-    screen = pygame.display.set_mode(size)
+    screen = pygame.display.set_mode(size, flags)
 
     ville = VilleImage(image, nb, group, th2=th2, riche=True)
 

@@ -66,9 +66,14 @@ class TestFaqCython(unittest.TestCase):
 
         # we checked it worked
         res = platform.architecture()
-        ext = "win_amd64" if res[0] == "64bit" else "win32"
-        name = "primes.cp%d%d-%s.pyd" % (
-            sys.version_info[0], sys.version_info[1], ext)
+        if sys.platform.startswith("win"):
+            ext = "win_amd64" if res[0] == "64bit" else "win32"
+            name = "primes.cp%d%d-%s.pyd" % (
+                sys.version_info[0], sys.version_info[1], ext)
+        else:
+            ext = "x86_64-linux-gnu" if res[0] == "64bit" else "x86-linux-gnu"
+            name = "primes.cpython-%d%dm-%s.so" % (
+                sys.version_info[0], sys.version_info[1], ext)
         fname = os.path.join(temp, name)
         fLOG(fname)
         if not os.path.exists(fname):

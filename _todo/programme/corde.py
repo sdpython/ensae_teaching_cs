@@ -1,30 +1,30 @@
 # coding: cp1252
 import pygame                 # pour les affichages
-import math                   # pour les racines carrées
+import math                   # pour les racines carrï¿½es
 
 
 class point (object) :
-    """définition d'un point : deux coordonnées et une masse"""
+    """dï¿½finition d'un point : deux coordonnï¿½es et une masse"""
     __slots__ = "x","y","m"
     
     def __init__ (self, x,y,m) :
-        """définit un point de la corde, de coordonnées (x,y)
+        """dï¿½finit un point de la corde, de coordonnï¿½es (x,y)
         et de masse m"""
         self.x, self.y, self.m = float (x), float (y), float (m)
         
     def deplace (self, dep, dt) :
-        """déplace un point"""
+        """dï¿½place un point"""
         self.x += dep [0] * dt
         self.y += dep [1] * dt
         
     def deplace_point (self, dep, dt) :
-        """déplace un point"""
+        """dï¿½place un point"""
         self.x += dep.x * dt
         self.y += dep.y * dt
         
     def difference (self, p) :
         """retourne le vecteur qui relie deux points,
-        retourne le couple de ses coordonnées"""
+        retourne le couple de ses coordonnï¿½es"""
         return p.x - self.x, p.y - self.y
         
     def __str__ (self) :
@@ -32,17 +32,17 @@ class point (object) :
         return "(x,y) = (%4.1f,%4.1f) masse %f" % (self.x,self.y,self.m)
         
 class corde (object) :
-    """définition d'une corde, une liste de points"""
+    """dï¿½finition d'une corde, une liste de points"""
     
     def __init__(self, nb, p1, p2, m, k, g, f, l) :
         """initialisation d'une corde
         @param          nb          nombre de points
-        @param          p1 = x1,y1  coordoonnées du premier point (fixe)
-        @param          p2 = x2,y2  coordoonnées du dernier point (fixe)
+        @param          p1 = x1,y1  coordoonnï¿½es du premier point (fixe)
+        @param          p2 = x2,y2  coordoonnï¿½es du dernier point (fixe)
         @param          m           masse de la corde, 
-                                    répartie entre tous les pointstous les points
-        @param          k           raideur de l'élastique
-        @param          g           intensité de l'apesanteur, 
+                                    rï¿½partie entre tous les pointstous les points
+        @param          k           raideur de l'ï¿½lastique
+        @param          g           intensitï¿½ de l'apesanteur, 
                                     valeur positive
         @param          f           vitesse de freinage
         @param          l           longueur de la corde"""
@@ -61,7 +61,7 @@ class corde (object) :
         self.f = f
             
     def display (self, screen) :
-        """affichage de la corde à l'aide du module pyagame"""
+        """affichage de la corde ï¿½ l'aide du module pyagame"""
         self.display_courbe_theorique (screen)
         x,y     = screen.get_size ()
         color   = (0,0,0)
@@ -83,17 +83,17 @@ class corde (object) :
             return math.sinh (x)
             
         def asinh (x) :
-            """retourne la réciproque du sinus hyperbolique de x"""
+            """retourne la rï¿½ciproque du sinus hyperbolique de x"""
             t = x + math.sqrt (x*x + 1)
             return math.log (t)
         
         def acosh (x) :
-            """retourne la réciproque du cosinus hyperbolique de x"""
+            """retourne la rï¿½ciproque du cosinus hyperbolique de x"""
             t = abs (x) + math.sqrt (x*x - 1)
             return math.log (t)
             
         def trouve_alpha (x2, L) :
-            """détermine la valeur de alpha une seule fois"""
+            """dï¿½termine la valeur de alpha une seule fois"""
             if self.__dict__.has_key ("alpha") : return self.alpha
                 
             def fonction (a,x2,L) :
@@ -105,7 +105,7 @@ class corde (object) :
             m       = 1.0 / x2
             diff    = fonction (m, x2, L)
             while abs (diff) > 1e-3 :
-                if diff > 0 : # faire décroître alpha
+                if diff > 0 : # faire dï¿½croï¿½tre alpha
                     if fonction (a1, x2, L) > 0 : a1 /= 2.0
                     else : a2 = m
                 else :
@@ -118,7 +118,7 @@ class corde (object) :
         
         p1 = self.list [0]
         p2 = self.list [ len (self.list) - 1 ]
-        if p1.y != p2.y : return None # cas non prévu
+        if p1.y != p2.y : return None # cas non prï¿½vu
         # on trace la courbe y = cosh (alpha x)
         L       = self.l * (len (self.list) - 1)
         mx      = (p1.x + p2.x) / 2
@@ -170,16 +170,16 @@ class corde (object) :
         return x,y    
         
     def iteration (self, dt) :
-        """calcule les déplacements de chaque point et les met à jour,
-        on ne déplace pas les points situés aux extrémités,
-        retourne la somme des vitesses et des accélérations au carré"""
+        """calcule les dï¿½placements de chaque point et les met ï¿½ jour,
+        on ne dï¿½place pas les points situï¿½s aux extrï¿½mitï¿½s,
+        retourne la somme des vitesses et des accï¿½lï¿½rations au carrï¿½"""
         force = [ (0,0) ]
         for i in xrange (1, len (self.list)-1) :
             x,y = self.force_point (i)
             force.append ((x,y))
         force.append ((0,0))
         
-        # déplacement
+        # dï¿½placement
         for i in xrange (1, len (self.list)-1) :
             self.vitesse [i].deplace ( force [i], dt )
             self.list [i].deplace_point ( self.vitesse [i], dt ) 
@@ -214,7 +214,7 @@ class corde (object) :
         return s
 
 def attendre_clic (screen,x,y):
-    """dessine un rectangle rouge sur l'écran et 
+    """dessine un rectangle rouge sur l'ï¿½cran et 
     attend la pression d'un clic de souris"""
     color   = 255,0,0
     pygame.draw.line (screen, color, (10,10), (x-10,10), 2)
@@ -235,7 +235,7 @@ if __name__ == "__main__" :
     size      = width, height = x,y = 800, 500
     black     = 0, 0, 0
     white     = 255,255,255
-    screen    = pygame.display.set_mode(size)
+    screen    = pygame.display.set_mode(size, flags)
     nb        = 10
     c         = corde (nb, (100,450), (700,450), 100, 1, 0.1, 0.05, 800)
     dt        = 0.1

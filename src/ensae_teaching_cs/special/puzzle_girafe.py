@@ -456,7 +456,8 @@ def display_puzzle_girafe_piece(self, screen, position, pygame):
 
 
 def pygame_simulation(pygame, first_click=False, folder=None,
-                      size=(750, 750), fLOG=fLOG, delay=200):
+                      size=(750, 750), fLOG=fLOG, delay=200,
+                      flags=0):
     """
     Simulation graphique.
     Illuste la résolution du puzzle
@@ -466,6 +467,8 @@ def pygame_simulation(pygame, first_click=False, folder=None,
     @param      folder          répertoire où stocker les images de la simulation
     @param      size            taille de l'écran
     @param      delay           delay between two tries
+    @param      flags           see `pygame.display.set_mode <https://www.pygame.org/docs/ref/display.html#pygame.display.set_mode>`_
+    @param      fLOG            logging function
     @return                     @see cl PuzzleGirafe
 
     La simulation ressemble à ceci :
@@ -486,7 +489,7 @@ def pygame_simulation(pygame, first_click=False, folder=None,
     """
     # initialisation du module pygame
     pygame.init()
-    screen = pygame.display.set_mode(size)
+    screen = pygame.display.set_mode(size, flags)
 
     # on définit le puzzle
     p = PuzzleGirafe()

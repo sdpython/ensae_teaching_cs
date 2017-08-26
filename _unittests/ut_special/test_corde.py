@@ -52,13 +52,16 @@ class TestCorde(unittest.TestCase):
         if is_travis_or_appveyor() in ("travis",):
             # pygame.error: No available video device
             return
+        import pygame
         if is_travis_or_appveyor() == "circleci":
             os.environ["SDL_VIDEODRIVER"] = "x11"
+            flags = pygame.NOFRAME
+        else:
+            flags = 0
 
-        import pygame
         pygame_simulation(pygame, fLOG=fLOG,
                           iter=2000 if __name__ == "__main__" else 100,
-                          folder=temp)
+                          folder=temp, flags=flags)
         files = os.listdir(temp)
         self.assertTrue(len(files) > 9)
         png = [os.path.join(temp, _)

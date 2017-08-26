@@ -49,24 +49,32 @@ def empty_main_loop(pygame):
     return True
 
 
-def get_pygame_screen_font(h, size):
+def get_pygame_screen_font(h, size, flags=0):
     """
-    creates a surface with pygame, initialize the module, creates font
+    Creates a surface with :epkg:`pygame`, initialize the module,
+    creates font.
 
     @param      h       size of the main font
     @param      size    screen size
+    @param      flags   see `pygame.display.set_mode <https://www.pygame.org/docs/ref/display.html#pygame.display.set_mode>`_
     @return             pygame, screen, dictionary of fonts
 
     The dictionary of fonts contains three fonts of size *h*,
     *3h/4*, *5h/6*.
 
     This function leaves file still opened and generates warnings.
+    Parameter *flag* can be useful if you run the function just
+    to test that it is working and the result does not need to be seen.
     """
     import pygame
     pygame.init()
     font = pygame.font.Font("freesansbold.ttf", h)
     font_small = pygame.font.Font("freesansbold.ttf", 3 * h // 4)
-    screen = pygame.display.set_mode(size)
+    try:
+        screen = pygame.display.set_mode(size, flags)
+    except pygame.error as e:
+        raise Exception("Unable to create a screen: {0}".format(
+            pygame.display.list_modes())) from e
     font = pygame.font.Font("freesansbold.ttf", h)
     font_small = pygame.font.Font("freesansbold.ttf", 3 * h // 4)
     font_half = pygame.font.Font("freesansbold.ttf", 5 * h // 6)

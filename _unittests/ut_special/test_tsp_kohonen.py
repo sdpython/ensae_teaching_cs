@@ -52,13 +52,16 @@ class TestTspKohonen(unittest.TestCase):
         if is_travis_or_appveyor() in ("travis",):
             # pygame.error: No available video device
             return
+        import pygame
         if is_travis_or_appveyor() == "circleci":
             os.environ["SDL_VIDEODRIVER"] = "x11"
+            flags = pygame.NOFRAME
+        else:
+            flags = 0
 
-        import pygame
         pygame_simulation(pygame, fLOG=fLOG, folder=temp,
                           nb=200 if __name__ == "__main__" else 20,
-                          size=(400, 250))
+                          size=(400, 250), flags=flags)
         files = os.listdir(temp)
         assert len(files) > 9
         png = [os.path.join(temp, _)

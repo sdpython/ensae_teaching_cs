@@ -1,5 +1,5 @@
 # coding: cp1252
-"""définition d'une sphère"""
+"""dï¿½finition d'une sphï¿½re"""
 import image_synthese_base as base
 import image_synthese_sphere as obj
 import image_synthese_phong as scene
@@ -8,7 +8,7 @@ import pygame
 import math
 
 class facette (base.objet):
-    """définit un triangle dans l'espace"""
+    """dï¿½finit un triangle dans l'espace"""
     
     def __init__ (self, a,b,c, couleur):
         """initialisation"""
@@ -29,7 +29,7 @@ class facette (base.objet):
         return p
         
     def point_interieur (self, p) :
-        """dit si un point appartient à l'intérieur du triangle"""
+        """dit si un point appartient ï¿½ l'intï¿½rieur du triangle"""
         pa      = self.a - p        
         pb      = self.b - p        
         pc      = self.c - p   
@@ -49,14 +49,14 @@ class facette (base.objet):
         else : return None
         
     def normale (self, p, rayon) :
-        """retourne la normale au point de coordonnée p et connaissant le rayon"""
+        """retourne la normale au point de coordonnï¿½e p et connaissant le rayon"""
         if rayon.direction.scalaire (self.vnorm) < 0 :
             return self.vnorm
         else :
             return - self.vnorm 
         
     def couleur_point (self, p) :
-        """retourne la couleur au point de coordonnée p"""
+        """retourne la couleur au point de coordonnï¿½e p"""
         return self.couleur
         
     def __str__ (self):
@@ -69,11 +69,11 @@ class facette (base.objet):
         
         
 class rectangle (facette):
-    """définit un rectangle dans l'espace"""
+    """dï¿½finit un rectangle dans l'espace"""
     
     def __init__ (self, a,b,c,d, couleur):
-        """initialisation, si d == None, d est calculé comme étant 
-        le symétrique de b par rapport au milieu du segment [ac]"""
+        """initialisation, si d == None, d est calculï¿½ comme ï¿½tant 
+        le symï¿½trique de b par rapport au milieu du segment [ac]"""
         facette.__init__(self, a,b,c, couleur)
         if d != None : self.d = d
         else :
@@ -81,7 +81,7 @@ class rectangle (facette):
             self.d  = b + (i-b) * 2
         
     def point_interieur (self, p) :
-        """dit si un point appartient à l'intérieur du triangle"""
+        """dit si un point appartient ï¿½ l'intï¿½rieur du triangle"""
         pa      = self.a - p        
         pb      = self.b - p        
         pc      = self.c - p   
@@ -132,11 +132,11 @@ if __name__ == "__main__" :
                                base.couleur (0,0,1)))
     print s
     
-    screen  = pygame.display.set_mode (s.dim)
+    screen  = pygame.display.set_mode (s.dim, flags)
     screen.fill ((255,255,255))
     s.construit_image (screen)
 
-    print "image terminée"
+    print "image terminï¿½e"
     scene_p.attendre_clic ()
     
     

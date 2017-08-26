@@ -1,5 +1,5 @@
 # coding: cp1252
-"""définition d'une sphère"""
+"""dï¿½finition d'une sphï¿½re"""
 import image_synthese_base as base
 import image_synthese_sphere as obj
 import image_synthese_phong as scene
@@ -12,11 +12,11 @@ import psyco
        
         
 class rectangle_image (facette.rectangle):
-    """définit un rectangle contenant un portrait"""
+    """dï¿½finit un rectangle contenant un portrait"""
     
     def __init__(self, a,b,c,d, nom_image, invertx = False):
-        """initialisation, si d == None, d est calculé comme étant 
-        le symétrique de b par rapport au milieu du segment [ac],
+        """initialisation, si d == None, d est calculï¿½ comme ï¿½tant 
+        le symï¿½trique de b par rapport au milieu du segment [ac],
         la texture est une image, 
         si invertx == True, inverse l'image selon l'axe des x"""
         facette.rectangle.__init__(self, a,b,c,d, base.couleur (0,0,0))
@@ -34,7 +34,7 @@ class rectangle_image (facette.rectangle):
         return s
         
     def couleur_point (self, p) :
-        """retourne la couleur au point de coordonnée p"""
+        """retourne la couleur au point de coordonnï¿½e p"""
         ap  = p - self.a
         ab  = self.b - self.a
         ad  = self.d - self.a
@@ -55,22 +55,22 @@ class rectangle_image (facette.rectangle):
         return cl
 
 class sphere_reflet (obj.sphere) :
-    """implémente une sphère avec un reflet"""
+    """implï¿½mente une sphï¿½re avec un reflet"""
     
     def __init__ (self, centre, rayon, couleur, reflet):
-        """initialisation, reflet est un coefficient de réflexion"""
+        """initialisation, reflet est un coefficient de rï¿½flexion"""
         obj.sphere.__init__ (self, centre, rayon, couleur)
         self.reflet = reflet
         
     def __str__ (self):
         """affichage"""
-        s  = "sphère reflet --- centre : " + str (self.centre)
+        s  = "sphï¿½re reflet --- centre : " + str (self.centre)
         s += " rayon : " + str (self.rayon)
         s += " couleur : " + str (self.couleur)
         return s
 
     def rayon_reflechi (self, rayon, p) :
-        """retourne le rayon réfléchi au point p de la surface,
+        """retourne le rayon rï¿½flï¿½chi au point p de la surface,
         si aucune, retourne None"""
         if p == rayon.origine : return None
         n = self.normale (p, rayon)
@@ -121,7 +121,7 @@ if __name__ == "__main__" :
                                
     print s
     
-    screen  = pygame.display.set_mode (s.dim)
+    screen  = pygame.display.set_mode (s.dim, flags)
     screen.fill ((255,255,255))
     s.construit_image (screen)
 
@@ -132,7 +132,7 @@ if __name__ == "__main__" :
     pygame.image.save (im, "c:\\temp\\image.tif")
     pygame.image.save (im, "c:\\temp\\image.bmp")
 
-    print "image terminée"
+    print "image terminï¿½e"
     scene_p.attendre_clic ()
        
     
