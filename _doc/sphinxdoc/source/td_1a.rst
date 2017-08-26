@@ -33,7 +33,7 @@ L'informatique est plus souvent un outil qu'une matière à part entière.
 Le paragraphe :ref:`td1a-notions` propose deux profils d'utilisation
 et ce qu'il est suggéré de connaître pour chacun d'entre eux.
 Le premier réflexe quand on ne sait pas doit être internet et un moteur
-de recherche. `stackoverflow <https://stackoverflow.com/questions/tagged/python>`,
+de recherche. `stackoverflow <https://stackoverflow.com/questions/tagged/python>`_,
 `quora <https://www.quora.com/topic/Python-programming-language-1>`_
 sont des forums d'échanges.
 `Cheat Sheets <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/cheat_sheets.html>`_
@@ -162,7 +162,7 @@ Pour vous exercer :
     notebooks/tri_nlnd
 
 S'amuser avec les algorithmes
-=============================
++++++++++++++++++++++++++++++
 
 Un peu plus ludique et présentés sous la forme de défis :
 
@@ -213,7 +213,7 @@ elles se sont multipliées depuis l'avènement des notebooks :
 `10 plotting libraries at PyData 2016 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_.
 
 S'amuser avec des données
-=========================
++++++++++++++++++++++++++
 
 Une fois qu'on est agile avec les données, on peut facilement explorer,
 émettre des hypothèses ou résoudre quelques énigmes :

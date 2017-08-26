@@ -11,6 +11,7 @@ coverage
 blockdiag
 cloudpickle
 dbfread
+duecredit
 folium
 forestci
 geopy
@@ -21,6 +22,7 @@ lightning-python
 mlstatpy
 mpld3
 mutagen
+opencv-python
 plotly
 pycodestyle>=2.0.0
 pydocstyle

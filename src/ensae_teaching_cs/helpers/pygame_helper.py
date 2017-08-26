@@ -73,7 +73,8 @@ def get_pygame_screen_font(h, size, flags=0):
     try:
         screen = pygame.display.set_mode(size, flags)
     except pygame.error as e:
-        raise Exception("Unable to create a screen, flags={0}".format(flags)) from e
+        raise Exception(
+            "Unable to create a screen, flags={0}".format(flags)) from e
     font = pygame.font.Font("freesansbold.ttf", h)
     font_small = pygame.font.Font("freesansbold.ttf", 3 * h // 4)
     font_half = pygame.font.Font("freesansbold.ttf", 5 * h // 6)
