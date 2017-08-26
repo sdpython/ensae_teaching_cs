@@ -51,6 +51,7 @@ sphinxjp.themes.basicstrap
 sphinxjp.themes.revealjs
 sphinxjp.themes.sphinxjp
 tqdm
+treeinterpreter
 tutormagic
 version_information
 xgboost
