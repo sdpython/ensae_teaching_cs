@@ -482,3 +482,28 @@ ou bugs fixés à chaque modification. Il est aisé alors>`_.
 de communiquer sur les changements intervenus d'une version à la suivante.
 C'est grâce à un historique comme `celui scikit-learn <http://scikit-learn.org/stable/whats_new.html>`_
 que vous pouvez décider si cela résoud le problème qui vous occupe actuellement.
+
+Prolongements
+-------------
+
+*dépendances internes*
+
+Travailler à plusieurs, créer, fusionner des branches sur git
+devient vite une tâche quotidienne. Les tests unitaires augmentent
+la durée des tests et on se pose vite la question de continuer à développement
+la librairie en un seul tenant ou à la diviser en deux ou trois parties
+plus faciles à traiter indépendemment les unes des autres.
+On un vient vite à créer un système de dépendances.
+Cela veut dire entre autre maintenant un système de dépendance
+interne, ce qu'on peut faire en :epkg:`Python` avec
+`pypiserver <https://pypi.python.org/pypi/pypiserver>`_.
+
+*tests de vitesse*
+
+La version 3 du langage Python était beaucoup plus lente que la version 2.
+C'est une des raisons qui fait que celle-ci perdure plus longtemps
+qu'espéré. C'est pourquoi maintenant un site a été mis sur pied pour
+évaluer la vitesse du langage sur une série de test
+`Python Speed Center <https://speed.python.org/>`_. C'est sans doute
+une chose à laquelle il faudra songer pour mesurer des améliorations
+sur une grande variété de situations.

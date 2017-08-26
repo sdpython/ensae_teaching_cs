@@ -47,4 +47,5 @@ tutormagic
 version_information
 wheel
 xlrd
+xlsxwriter
 xlwt
