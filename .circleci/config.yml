@@ -51,6 +51,9 @@ jobs:
       - run:
           name: Install pygame
           command: |
+                    sudo apt-get install libasound2-dev
+                    sudo apt-get install libX11-dev
+                    sudo apt-get -y install xvfb pulseaudio
                     sudo apt-get install -y python-pygame
 
       - run:
@@ -94,6 +97,8 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
+            export HTTP_PROXY=''
+            export AUDIODEV=null
             python setup.py unittests
 
       - run:

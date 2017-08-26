@@ -54,7 +54,7 @@ class TestTspKohonen(unittest.TestCase):
             return
         import pygame
         if is_travis_or_appveyor() == "circleci":
-            os.environ["SDL_VIDEODRIVER"] = "x11"
+            # os.environ["SDL_VIDEODRIVER"] = "x11"
             flags = pygame.NOFRAME
         else:
             flags = 0
