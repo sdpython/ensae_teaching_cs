@@ -25,6 +25,7 @@ pyensae
 pygal
 pygal_maps_fr
 pylzma
+pymmails
 pympler
 pymyinstall
 pyquickhelper>1.5.2126
