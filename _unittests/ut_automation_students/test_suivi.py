@@ -104,9 +104,11 @@ class TestSuivi(unittest.TestCase):
         data = os.path.join(data, "data")
         repo = ProjectsRepository(data)
         self.assertEqual(len(repo.Groups), 2)
-        gr = repo.Groups[0]
+        groups = list(sorted(repo.Groups))
+        gr = groups[0]
         if gr is None or len(gr) < 2:
             raise Exception("Empty group '{0}'".format(gr))
+        self.assertEqual(gr, 'group_el1')
         emails = repo.get_emails(gr)
         self.assertEqual(emails, ['name.lastname@something.fr', 'name.lastname@something',
                                   'name.lastname@something.fr', 'name.lastname@something'])

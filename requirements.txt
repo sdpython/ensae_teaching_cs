@@ -53,7 +53,8 @@ sphinxjp.themes.sphinxjp
 tqdm
 tutormagic
 version_information
-wheel
+xgboost
 xlrd
 xlsxwriter
 xlwt
+wheel
