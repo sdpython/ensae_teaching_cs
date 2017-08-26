@@ -35,6 +35,7 @@ pyrsslocal
 python-jenkins
 qgrid
 semantic_version
+setuptools>=34.0.0
 shapely
 toolz
 sphinx-gallery
