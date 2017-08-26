@@ -18,6 +18,7 @@ geopy
 ggplot
 jyquickhelper
 lifelines
+lightgbm
 lightning-python
 mlstatpy
 mpld3
