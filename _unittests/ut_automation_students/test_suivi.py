@@ -125,7 +125,7 @@ class TestSuivi(unittest.TestCase):
                 fLOG(f)
             self.assertEqual(len(repo.Groups), 2)
         gr = repo.Groups[0]
-        if gr is None or len(gr) < 2:
+        if True or gr is None or len(gr) < 2:
             raise Exception("Empty group '{0}'".format(gr))
         sections = repo.get_sections(gr)
         names = [k for k in sorted(sections)]

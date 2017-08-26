@@ -97,8 +97,10 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            export HTTP_PROXY=''
             export AUDIODEV=null
+            export SDL_VIDEODRIVER=dummy
+            export SDL_AUDIODRIVER=disk
+            export DISPLAY=localhost:0.0
             python setup.py unittests
 
       - run:
