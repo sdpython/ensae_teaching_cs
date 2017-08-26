@@ -105,8 +105,9 @@ class TestSuivi(unittest.TestCase):
         repo = ProjectsRepository(data)
         self.assertEqual(len(repo.Groups), 2)
         gr = repo.Groups[0]
+        if gr is None or len(gr) < 2:
+            raise Exception("Empty group '{0}'".format(gr))
         emails = repo.get_emails(gr)
-        fLOG(emails)
         self.assertEqual(emails, ['name.lastname@something.fr', 'name.lastname@something',
                                   'name.lastname@something.fr', 'name.lastname@something'])
 
@@ -124,7 +125,7 @@ class TestSuivi(unittest.TestCase):
                 fLOG(f)
             self.assertEqual(len(repo.Groups), 2)
         gr = repo.Groups[0]
-        if gr is not None and len(gr) < 2:
+        if gr is None or len(gr) < 2:
             raise Exception("Empty group '{0}'".format(gr))
         sections = repo.get_sections(gr)
         names = [k for k in sorted(sections)]
