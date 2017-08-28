@@ -174,9 +174,11 @@ C++, R
 *Modules*
 
 * `cython <http://cython.org/>`_
+* `cffi <https://cffi.readthedocs.io/en/latest/>`_
 * `ctypes <https://docs.python.org/3/library/ctypes.html>`_
 * `boost_python <http://www.boost.org/doc/libs/1_63_0/libs/python/doc/html/index.html>`_
 * `pybind11 <https://github.com/pybind/pybind11/>`_
+* `swig <http://www.swig.org/>`_
 
 .. _l-acc-code-llvm:
 
@@ -191,15 +193,23 @@ Accélération du code
 
 *Modules*
 
-* `cython <http://cython.org/>`_
-* `nuitka <http://nuitka.net/>`_
-* `numba <https://numba.pydata.org/>`_
-* `pypy <https://pypy.org/>`_
+* `cython <http://cython.org/>`_ :
+  pseudo C (un mix entre C et Python), solution adoptée par scikit-learn
+* `numba <https://numba.pydata.org/>`_ :
+  JIT, compilation à la volée de certaines parties d'un code
+* `nuitka <http://nuitka.net/>`_ :
+  compilation d'un programme python ou d'un module
+  (essaye de convertir un programe python en C)
+* `pypy <https://pypy.org/>`_ :
+  compilation d'un programme python ou d'un module
+  (essaye de convertir un programe python en C)
 
 *Plus expérimental*
 
-* `pythran <https://pythonhosted.org/pythran/>`_
-* `pyston <https://github.com/dropbox/pyston>`_ (Python 2.7 seulement)
+* `pythran <https://pythonhosted.org/pythran/>`_ : conversion de code python
+  en C++ et compilation
+* `pyston <https://github.com/dropbox/pyston>`_ (Python 2.7 seulement) :
+  réécriture de l'interpréteur Python pour être plus rapide.
 
 Parallélisation, sérialisation
 ++++++++++++++++++++++++++++++

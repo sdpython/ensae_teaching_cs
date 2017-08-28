@@ -277,6 +277,10 @@ ce sujet et plutôt récents. Il est probable qu'il y en ait un peu plus
 * `Réguler les algorithmes : remise d'un rapport à Axelle Lemaire <https://www.economie.gouv.fr/reguler-algorithmes-rapport-axelle-lemaire-cge>`_
 * `Enquête : comment les apps Figaro, L'Equipe ou Closer participent au pistage de 10 millions de Français <https://www-numerama-com.cdn.ampproject.org/c/www.numerama.com/politique/282934-enquete-comment-les-apps-figaro-lequipe-ou-closer-participent-au-pistage-de-10-millions-de-francais.html/amp>`_
 
+*Conférences*
+
+* `Katharine Jarmul | Keynote: Ethical Machine Learning: Creating Fair Models in an Unjust World <https://www.youtube.com/watch?v=hDgXIUM3Rmw>`_
+
 *Sites*
 
 * `Data Transparency Lab <http://datatransparencylab.org/>`_
