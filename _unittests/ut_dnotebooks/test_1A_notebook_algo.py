@@ -60,7 +60,7 @@ class TestNotebookRunner1a_algo(unittest.TestCase):
 
         def filter(i, n):
             if is_travis_or_appveyor() == "travis":
-                if "graph1exo_parcours" in n:
+                if "graph1exo_parcours" in n or "graph4exos" in n:
                     # Graphviz is installed but cannot be found.
                     return False
             return "BJKST" in n or ("enonce" not in n and "correction" not in n)
