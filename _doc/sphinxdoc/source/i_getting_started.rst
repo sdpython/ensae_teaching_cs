@@ -65,12 +65,21 @@ comme `dlib <http://dlib.net/>`_.
     pip install pymyinstall
     pymy_install xgboost
 
-Linux en ligne de commande, connexion SSH
-+++++++++++++++++++++++++++++++++++++++++
+Linux en ligne de commande / MacOS
+++++++++++++++++++++++++++++++++++
 
 Voir `Install Miniconda through SSH connection <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2015/2015-11-01_anaconda_ssh.html>`_.
 Cela fonctionne avec les distributions `Ubuntu 14.04 <http://releases.ubuntu.com/14.04/>`_
-et `Ubuntu 16.04 <http://releases.ubuntu.com/16.04/>`_.
+et `Ubuntu 16.04 <http://releases.ubuntu.com/16.04/>`_. Vous pouvez par exemple
+suivre les instructions utilisées pour tester et compiler ce site disponibles dans le fichier
+`config.yml <https://github.com/sdpython/ensae_teaching_cs/blob/master/.circleci/config.yml>`_.
+Les sorties disponibles sur le site
+`CircleCI <https://circleci.com/gh/sdpython/ensae_teaching_cs/>`_
+peuvent vous aider à comprendre les erreurs si vous en avez.
+
+Les mêmes instructions devraient fonctionner sous MacOS depuis
+une fenêtre `terminal <https://en.wikipedia.org/wiki/Terminal_(macOS)>`_
+car ce système s'appuie sur une distribution Linux.
 
 .. _l-gs-ide:
 

@@ -59,6 +59,7 @@ et au langage :epkg:`Python`.
     notebooks/_gs1a_3_dictionnaires_fonctions
     notebooks/_gs1a_4_fichier_module
     notebooks/_gs1a_5_classes
+    notebooks/_gs1a_6_algo_simple
 
 Les programmes sont des assemblages de petites fonctions qui font souvent
 les mêmes choses. Les programmeurs expérimentés sont plus rapides
@@ -70,6 +71,7 @@ et qu'il est important de comprendre.
     :maxdepth: 1
 
     notebooks/code_liste_tuple
+    notebooks/exercice_echelle
     i_examples
     notebooks/structures_donnees_conversion
     notebooks/tableau_contingence

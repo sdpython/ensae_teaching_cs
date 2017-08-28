@@ -430,3 +430,13 @@ _doc/notebooks/notebook_eleves/2016-2017/ensae_competition_*.txt
 _doc/notebooks/notebook_eleves/2016-2017/ensae_competition_*.zip
 _unittests/ut_examples_from_modules/mnist.pkl
 _unittests/ut_examples_from_modules/mnist.pkl.gz
+_doc/notebooks/td1a/arthur_charpentier*.txt
+_doc/notebooks/td1a/blog*.txt
+_doc/notebooks/td1a/elpais*.txt
+_doc/notebooks/td1a/inconnu*.txt
+_doc/notebooks/td1a/lemonde*.txt
+_doc/notebooks/td1a/nytimes*.txt
+_doc/notebooks/td1a/texte.txt
+_doc/notebooks/td1a/afp*.txt
+_doc/notebooks/td1a/lequipe*.txt
+

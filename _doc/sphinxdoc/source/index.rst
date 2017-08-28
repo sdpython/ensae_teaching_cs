@@ -119,10 +119,11 @@ autre environnement.
 .. _l-getting-started-main:
 .. _l-install:
 
-Démarrage
-+++++++++
+Démarrage / Installation
+++++++++++++++++++++++++
 
-Voir :ref:`l-installation-courte`.
+Voir :ref:`l-installation-courte` pour des instuructions détaillées
+sous Windows, Linux et MacOS.
 
 Le langage est devenu populaire aussi parmi les data scientists grâce à un ensemble
 de librairies qui ont offert un service équivalent à ce que propose `R <https://www.r-project.org/>`_.
