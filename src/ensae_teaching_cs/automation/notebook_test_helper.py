@@ -152,8 +152,6 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
             return False
         if "df.plot(...)" in cell:
             return False
-        if "Entrez un nombre" in cell:
-            return False
         if 'df["difference"] = ...' in cell:
             return False
         if 'remote_open' in cell:
@@ -178,7 +176,8 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
     if len(notebooks) == 0:
         raise ValueError("Empty list of notebooks.")
     res = execute_notebook_list(folder, notebooks, fLOG=fLOG, clean_function=clean_function,
-                                valid=valid_cell, additional_path=addpaths, kernel_name=kernel_name)
+                                valid=valid_cell, additional_path=addpaths, kernel_name=kernel_name,
+                                replacements=replacements)
     execute_notebook_list_finalize_ut(
         res, fLOG=fLOG, dump=dump)
     return res
