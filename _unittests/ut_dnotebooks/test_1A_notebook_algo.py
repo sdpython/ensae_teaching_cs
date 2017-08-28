@@ -57,10 +57,15 @@ class TestNotebookRunner1a_algo(unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_notebook1a_algo")
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         keepnote = ls_notebooks("td1a_algo")
-        execute_notebooks(temp, keepnote,
-                          lambda i, n: "BJKST" in n or (
-                              "enonce" not in n and "correction" not in n),
-                          fLOG=fLOG,
+
+        def filter(i, n):
+            if is_travis_or_appveyor() == "travis":
+                if "graph1exo_parcours" in n:
+                    # Graphviz is installed but cannot be found.
+                    return False
+            return "BJKST" in n or ("enonce" not in n and "correction" not in n)
+
+        execute_notebooks(temp, keepnote, filter, fLOG=fLOG,
                           clean_function=clean_function_1a,
                           dump=src.ensae_teaching_cs)
 

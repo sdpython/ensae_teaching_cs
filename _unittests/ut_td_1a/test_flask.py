@@ -64,7 +64,7 @@ class TestSimpleFlask (unittest.TestCase):
 
         # main page
         c = get_url_content(site)
-        self.assertIn("Simple Flask Site" in c)
+        self.assertIn("Simple Flask Site", c)
 
         # exception
         c = get_url_content(site + "help/exception")

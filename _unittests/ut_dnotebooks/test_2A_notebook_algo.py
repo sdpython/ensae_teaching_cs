@@ -69,12 +69,10 @@ class TestNotebookRunner2aAlgo(unittest.TestCase):
             return True
 
         if is_travis_or_appveyor() == "travis":
-            warnings.warn("execution does not stop")
+            # execution does not stop
             return
 
-        execute_notebooks(temp, keepnote,
-                          filter,
-                          fLOG=fLOG,
+        execute_notebooks(temp, keepnote, filter, fLOG=fLOG,
                           clean_function=clean_function_1a,
                           dump=src.ensae_teaching_cs)
 
