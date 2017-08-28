@@ -30,7 +30,7 @@ scikit-image
 scikit-learn
 scipy
 seaborn
-setuptools>=34.0.0
+setuptools
 Sphinx
 statsmodels
 sympy

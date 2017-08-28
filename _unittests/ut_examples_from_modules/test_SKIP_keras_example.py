@@ -84,7 +84,7 @@ class TestSkipExampleKerasMNIST(unittest.TestCase):
         else:
             # We make it shortest when run in unit test
             fLOG("quicker")
-            N = 500
+            N = 50
             X_train = X_train[:N, :]
             Y_train = Y_train[:N, :]
             X_test = X_test[:N, :]

@@ -38,6 +38,7 @@ Pour un profil plutôt économiste
 * Machine learning éthique.
 * Transfer Learning.
 * Optimisation des hyperparamètres.
+* Accélération de code type numba, cython.
 
 Pour un profil plutôt data scientist
 ++++++++++++++++++++++++++++++++++++
@@ -71,5 +72,5 @@ Pour un profil plutôt data scientist
 * Les tests unitaires.
 * `Git <https://fr.wikipedia.org/wiki/Git>`_.
 * Des exercices de type `Google Jam <https://code.google.com/codejam/>`_.
-* Des accélérations du langage comme Cython, C++.
+* Des accélérations du langage comme Cython, C++, numba.
 * Créer un site web avec Flask, Javacript.

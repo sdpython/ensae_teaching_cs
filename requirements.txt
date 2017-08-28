@@ -37,12 +37,11 @@ pylzma
 pymmails
 pympler
 pymyinstall
-pyquickhelper>1.5.2126
+pyquickhelper>=1.5.2156
 pyrsslocal
 python-jenkins
 qgrid
 semantic_version
-setuptools>=34.0.0
 shapely
 toolz
 sphinx-gallery

@@ -100,6 +100,13 @@ SQL
     ext2a/sql_doc
     notebooks/_gs2a_sql
 
+*Lectures*
+
+.. toctree::
+    :maxdepth: 1
+
+    questions/sql_reperes
+
 .. _l-visualisation-td2a:
 
 ------------

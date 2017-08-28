@@ -248,14 +248,34 @@ Machine Learning éthique
 
 |pyecopng| |pystatpng|
 
+Toutes les entreprises ont des données. Ce qui a changé récemment est
+ce ne sont plus seulement des données à caractère personnel, l'ensemble
+de vos commandes, le montant, mais aussi des
+données de déplacements. Le téléphone portable et les applications
+permet à beaucoup plus d'acteurs de collecter ces mêmes données.
+La législation n'est pas toujours très claire quant à ce qu'on le droit
+d'en faire et les pays ne partagent pas tous les mêmes règles.
+De plus, c'est une chose que de fixer une limite, c'est autre chose
+que de vérifier qu'elle n'a pas été franchie.
+Des modèles construits avec des données si précises peuvent
+de retrouver des informations que vous n'avez pourtant pas divulgué.
+Comment déterminer si un modèle ne produit pas des résultats biaisés
+envers une partie de la population même avec des données anonymes ?
+Les articles sont encore peu nombreux à
+ce sujet et plutôt récents. Il est probable qu'il y en ait un peu plus
+à l'avenir.
+
+*Notebooks*
+
 *(à venir)*
 
 *Lectures*
 
 * `FairTest: Discovering Unwarranted Associations in Data-Driven Applications <https://arxiv.org/pdf/1510.02377.pdf>`_
-* `O21 : « La transparence des algorithmes relève des droits civiques <http://www.lemonde.fr/campus/article/2017/05/02/o21-la-transparence-des-algorithmes-releve-des-droits-civiques_5121201_4401467.html>`_
+* `O21 : La transparence des algorithmes relève des droits civiques <http://www.lemonde.fr/campus/article/2017/05/02/o21-la-transparence-des-algorithmes-releve-des-droits-civiques_5121201_4401467.html>`_
 * `TransAlgo : évaluer la responsabilité et la transparence des systèmes algorithmiques <https://www.inria.fr/actualite/actualites-inria/transalgo>`_
 * `Réguler les algorithmes : remise d'un rapport à Axelle Lemaire <https://www.economie.gouv.fr/reguler-algorithmes-rapport-axelle-lemaire-cge>`_
+* `Enquête : comment les apps Figaro, L'Equipe ou Closer participent au pistage de 10 millions de Français <https://www-numerama-com.cdn.ampproject.org/c/www.numerama.com/politique/282934-enquete-comment-les-apps-figaro-lequipe-ou-closer-participent-au-pistage-de-10-millions-de-francais.html/amp>`_
 
 *Sites*
 

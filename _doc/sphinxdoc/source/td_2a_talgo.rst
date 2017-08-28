@@ -178,6 +178,29 @@ C++, R
 * `boost_python <http://www.boost.org/doc/libs/1_63_0/libs/python/doc/html/index.html>`_
 * `pybind11 <https://github.com/pybind/pybind11/>`_
 
+.. _l-acc-code-llvm:
+
+Accélération du code
+++++++++++++++++++++
+
+(*à venir*)
+
+*Lectures*
+
+* `Just-in-time compilation <https://en.wikipedia.org/wiki/Just-in-time_compilation>`_
+
+*Modules*
+
+* `cython <http://cython.org/>`_
+* `nuitka <http://nuitka.net/>`_
+* `numba <https://numba.pydata.org/>`_
+* `pypy <https://pypy.org/>`_
+
+*Plus expérimental*
+
+* `pythran <https://pythonhosted.org/pythran/>`_
+* `pyston <https://github.com/dropbox/pyston>`_ (Python 2.7 seulement)
+
 Parallélisation, sérialisation
 ++++++++++++++++++++++++++++++
 
