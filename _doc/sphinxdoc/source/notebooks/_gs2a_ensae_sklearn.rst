@@ -10,6 +10,7 @@ Voir également :ref:`illustration machine learning <l-sklearn_ensae_course-ex>`
 .. toctree::
     :maxdepth: 1
 
+    license_sklearn_ensae
     00_introduction_machine_learning_and_data
     01_data_manipulation
     02_basic_of_machine_learning_with_scikit-learn
