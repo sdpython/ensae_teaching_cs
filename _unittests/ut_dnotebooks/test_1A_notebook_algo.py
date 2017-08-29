@@ -63,6 +63,9 @@ class TestNotebookRunner1a_algo(unittest.TestCase):
                 if "graph1exo_parcours" in n or "graph4exos" in n:
                     # Graphviz is installed but cannot be found.
                     return False
+                if "graph_spectral_clustering" in n:
+                    # Graphviz is installed but cannot be found.
+                    return False
             return "BJKST" in n or ("enonce" not in n and "correction" not in n)
 
         execute_notebooks(temp, keepnote, filter, fLOG=fLOG,
