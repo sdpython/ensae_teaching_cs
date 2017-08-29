@@ -126,7 +126,8 @@ def clean_function_1a(code):
 
 
 def execute_notebooks(folder, notebooks, filter, clean_function=None,
-                      fLOG=noLOG, deepfLOG=noLOG, replacements=None, dump=None):
+                      fLOG=noLOG, deepfLOG=noLOG, replacements=None, dump=None,
+                      additional_path=None):
     """
     Execute a list of notebooks.
 
@@ -138,6 +139,7 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
     @param      deepfLOG        logging function used to run the notebook
     @param      replacements    replacements
     @param      dump            see function `execute_notebook_list_finalize_ut <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/ipythonhelper/run_notebook.html#pyquickhelper.ipythonhelper.run_notebook.execute_notebook_list_finalize_ut>`_
+    @param      additional_path additional path to add
     @return                     dictionary { notebook_file: (isSuccess, outout) }
 
     The signature of function ``filter`` is::
@@ -169,6 +171,8 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
         return True
 
     addpaths = get_additional_paths()
+    if additional_path is not None:
+        addpaths += additional_path
     kernel_name = None if is_travis_or_appveyor() else install_python_kernel_for_unittest(
         "ensae_teaching_cs")
     if filter:

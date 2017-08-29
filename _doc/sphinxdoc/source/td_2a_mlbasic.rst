@@ -235,7 +235,6 @@ Machine learning, cours de Gaël Varoquaux
 
 Gaël est un des concepteurs de `scikit-learn <http://scikit-learn.org/stable/>`_.
 
-* `notes de lectures <https://github.com/GaelVaroquaux/sklearn_ensae_course>`_ (`Gaël Varoquaux <http://gael-varoquaux.info/>`_)
 * machine learning et `scikit-learn <http://scikit-learn.org/stable/>`_
   (`tutoriels sur scikit-learn <http://nbviewer.jupyter.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_),
 * *Quelques extraits.* Par définition les plus proches voisins ne font pas d'erreur sur la base d'apprentissage,
@@ -246,6 +245,15 @@ Gaël est un des concepteurs de `scikit-learn <http://scikit-learn.org/stable/>`
   `GridSearch <http://scikit-learn.org/stable/modules/grid_search.html>`_,
   `LassoCV <http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LassoCV.html>`_.
   `Choosing the right estimator <http://scikit-learn.org/stable/tutorial/machine_learning_map/>`_.
+
+Les `notes de lectures <https://github.com/GaelVaroquaux/sklearn_ensae_course>`_
+(`Gaël Varoquaux <http://gael-varoquaux.info/>`_) sont disponibles sur GitHub et reprise
+ici :
+
+.. toctree::
+    :maxdepth: 2
+
+    notebooks/_gs2a_ensae_sklearn
 
 *Notebooks*
 
