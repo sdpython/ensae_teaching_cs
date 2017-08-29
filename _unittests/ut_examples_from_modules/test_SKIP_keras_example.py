@@ -1,5 +1,5 @@
 """
-@brief      test log(time=50s)
+@brief      test log(time=25s)
 @author     Xavier Dupre
 """
 
@@ -84,7 +84,7 @@ class TestSkipExampleKerasMNIST(unittest.TestCase):
         else:
             # We make it shortest when run in unit test
             fLOG("quicker")
-            N = 50
+            N = 10
             X_train = X_train[:N, :]
             Y_train = Y_train[:N, :]
             X_test = X_test[:N, :]
