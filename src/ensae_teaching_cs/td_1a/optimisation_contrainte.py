@@ -175,6 +175,9 @@ def exercice_particulier2():
 
         ::
 
+            import random
+            from ensae_teaching_cs.td_1a.optimisation_contrainte import Arrow_Hurwicz
+
             def f_df(X) :
                 x,y = X
                 f = x**2 + y**2 - x*y + y

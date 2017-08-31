@@ -328,6 +328,8 @@ Machine Learning sur des données cryptées
 * `Machine Learning Classification over Encrypted Data <https://eprint.iacr.org/2014/331.pdf>`_
 * `CryptoNets: Applying Neural Networks to Encrypted Data with High Throughput and Accuracy <http://jmlr.org/proceedings/papers/v48/gilad-bachrach16.pdf>`_
 * `Compressed Sensing <https://en.wikipedia.org/wiki/Compressed_sensing>`_
+* `ML Confidential: Machine Learning on Encrypted Data <https://www.microsoft.com/en-us/research/publication/ml-confidential-machine-learning-on-encrypted-data-2/>`_
+* `Encrypted statistical machine learning: new privacy preserving methods <https://arxiv.org/abs/1508.06845>`_
 
 *Modules*
 
@@ -552,7 +554,8 @@ utilisent un compilateur C++ pour optimiser les calculs
 et le GPU si vous en avez. Il faut lire l'article de blog
 :ref:`Installer theano et un compilateur C++ <blog-install-theno-keras>`.
 Vous pouvez tester votre installation avec le notebook
-:ref:`mldeeppythonrst`.
+:ref:`mldeeppythonrst` ou encore
+`Keras-TensorFlow-GPU-Windows-Installation <https://github.com/antoniosehk/keras-tensorflow-windows-installation>`_.
 
 Deep Learning en détail
 +++++++++++++++++++++++

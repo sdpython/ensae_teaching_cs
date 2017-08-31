@@ -41,12 +41,12 @@ def numpy_matrix2list(mat):
             s   = np.sum (mat [0,:])  # somme de la première ligne
 
 
-            mat = np.diagflat ( np.ones ( (1,4) ) )
-            print (mat)  # matrice diagonale
+            mat = np.diagflat(np.ones((1,4)))
+            print(mat)  # matrice diagonale
             t   =  mat == 0
-            print (t)    # matrice de booléens
+            print(t)    # matrice de booléens
             mat [ mat == 0 ] = 4
-            print (mat)  # ...
-            print (iv)  # ...
+            print(mat)  # ...
+            print(iv)   # ...
     """
     return mat.tolist()

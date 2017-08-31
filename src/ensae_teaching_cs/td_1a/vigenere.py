@@ -20,7 +20,8 @@ def code_vigenere(message, cle, decode=False, binary=False):
         :title: code de Vigenère
         :tag: Algorithme
 
-        ::
+        .. runpython::
+            :showcode:
 
             def code_vigenere ( message, cle, decode = False) :
                 message_code = ""
@@ -34,7 +35,7 @@ def code_vigenere(message, cle, decode=False, binary=False):
             m = "JENESUISPASCODE"
             c = code_vigenere (m, "DOP")
             d = code_vigenere (c, "DOP", True)
-            print(c,d)
+            print(c, d)
     """
     if binary:
         if not isinstance(message, bytes):
@@ -84,13 +85,16 @@ def PGCD(m, n):
         ici :
         `Algorithme de calcul du PGCD par soustractions successives <http://www.kartable.fr/terminale-s/mathematiques/1640/exercice/algorithme-de-calcul-du-pgcd-par-soustractions-successives,TS01505>`_.
 
-        ::
+        .. runpython::
+            :showcode:
 
             def PGCD (m,n) :
                 if m == 1 or n == 1 : return 1
                 if m == n : return m
                 if m < n : return PGCD (m, n-m)
                 return PGCD (n, m-n)
+
+            print(PGCD(50, 40))
     """
     if m <= 0 or n <= 0:
         raise Exception("impossible de calculer le PGCD")

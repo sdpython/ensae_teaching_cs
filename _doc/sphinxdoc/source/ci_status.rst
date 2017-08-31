@@ -295,8 +295,8 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/0cc1qtlccq8k7hdx?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pyrsslocal
             :alt: Build Status Windows
-      - .. image:: https://circleci.com/gh/sdpython/pymyinstall/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/pymyinstall/tree/master
+      - .. image:: https://circleci.com/gh/sdpython/pyrsslocal/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/pyrsslocal/tree/master
       - .. image:: https://badge.fury.io/py/pyrsslocal.svg
             :target: http://badge.fury.io/py/pyrsslocal
       - .. image:: http://img.shields.io/pypi/pyversions/pyrsslocal.png

@@ -23,27 +23,29 @@ def recherche(li, c):
         Lorsqu'on cherche un élément dans un tableau, on cherche plus souvent
         sa position que le fait que le tableau contient cet élément.
 
-        ::
+        .. runpython::
+            :showcode:
 
             def recherche (li, c) :
                 for i,v in enumerate (li) :
-                    if v == c : return i
+                    if v == c:
+                        return i
                 return -1
-            li = [ 45, 32, 43, 56 ]
-            print (recherche (li, 43))  # affiche 2
+            li = [45, 32, 43, 56]
+            print (recherche(li, 43))  # affiche 2
 
         En python, il existe un fonction simple qui permet de faire ça :
 
         ::
 
-            print (li.index (43))  # affiche 2
+            print(li.index (43))  # affiche 2
 
         Lorsque l'élément n'y est pas, on retourne souvent la position ``-1``
         qui ne peut être prise par aucun élément :
 
         ::
 
-            if c in li : return li.index(c)
+            if c in li: return li.index(c)
             else: return -1
 
         Même si ce bout de code parcourt deux fois le tableau (une fois déterminer
@@ -77,14 +79,14 @@ def minindex(li):
 
             li = [ 0, 434, 43, 6436, 5 ]
             m  = 0
-            for i in range (0, len (li)) :
+            for i in range (0, len (li)):
                 if li [m] < li [i] : m = i
 
         Mais il existe une astuce pour obtenir la position sans avoir à le reprogrammer.
 
         ::
 
-            k = [ (v,i) for i,v in enumerate (li) ]
+            k = [(v,i) for i,v in enumerate (li)]
             m = min(k)
 
         La fonction ``min`` choisit l'élément minimum d'un tableau dont les éléments sont des
@@ -464,23 +466,27 @@ def integrale(fonction, a, b, n):
         ``fonction_carre`` ou ``fonction_cube`` sont passées en paramètres à la fonction
         ``calcul_n_valeur`` qui les exécute.
 
-        ::
+        .. runpython::
+            :showcode:
 
-        def fonction_carre(x) :  return x*x
-        def fonction_cube (x) :  return x*x*x
+            def fonction_carre(x):
+                return x*x
 
-        def calcul_n_valeur (l,f):
-            res = [ f(i) for i in l ]
-            return res
+            def fonction_cube(x):
+                return x*x*x
 
-        l = [0,1,2,3]
-        print l   # affiche [0, 1, 2, 3]
+            def calcul_n_valeur(l,f):
+                res = [f(i) for i in l]
+                return res
 
-        l1 = calcul_n_valeur (l, fonction_carre)
-        print l1  # affiche [0, 1, 4, 9]
+            l = [0,1,2,3]
+            print(l)   # affiche [0, 1, 2, 3]
 
-        l2 = calcul_n_valeur (l, fonction_cube)
-        print l2  # affiche [0, 1, 8, 27]
+            l1 = calcul_n_valeur(l, fonction_carre)
+            print(l1)  # affiche [0, 1, 4, 9]
+
+            l2 = calcul_n_valeur(l, fonction_cube)
+            print(l2)  # affiche [0, 1, 8, 27]
     """
     h = (b - a) / n
     return sum(fonction(a + h / 2 + h * i) for i in range(0, n)) * h

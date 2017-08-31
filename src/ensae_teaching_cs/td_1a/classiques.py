@@ -76,17 +76,23 @@ def dix_entiers_carre():
 
         Ce calcul simple peut s'écrire de diffèrentes manières.
 
-        ::
+        .. runpython::
+            :showcode:
 
             s = 0
             for i in range(1,11):
                 s += i**2
 
+            print(s)
+
         D'une façon abrégée :
 
-        ::
+        .. runpython::
+            :showcode:
 
             s = sum ( [ i**2 for i in range(1,11) ] )
+
+            print(s)
     """
     s = 0
     for i in range(1, 11):
@@ -219,7 +225,7 @@ def dictionnaire_modifie_dans_la_boucle():
             for r in rem :
                 del d[r]
 
-        Même si Python autorise cela pour les listes,
+        Même si :epkg:`Python` autorise cela pour les listes,
         il est conseillé de s'en abstenir ainsi que pour tout type d'objets qui en contient d'autres.
         C'est une habitude qui vous servira pour la plupart des autres langages.
     """
@@ -255,9 +261,11 @@ def str2date(s, format="%d/%m/%Y"):
         lorsqu'on en a besoin.
         Il faut utiliser la fonction `strftime <https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior>`_.
 
-        ::
+        .. runpython::
+            :showcode:
 
             import datetime
-            dt = datetime.datetime.strptime ("16/01/2014", "%d/%m/%Y")
+            dt = datetime.datetime.strptime("16/01/2014", "%d/%m/%Y")
+            print(dt)
     """
     return datetime.datetime.strptime(s, format)
