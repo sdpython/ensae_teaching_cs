@@ -88,7 +88,6 @@ def clean_function_1a(code):
             "return ....",
             "return [ .... ]",
             "def __init__(self, ...) :",
-            "if random.random() <= 0.7 :",
             "dictionnaire_depart.items() [0]",
             "iterateur(0,10) [0]",
             "# ...... à remplir",
@@ -129,7 +128,7 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
                       fLOG=noLOG, deepfLOG=noLOG, replacements=None, dump=None,
                       additional_path=None):
     """
-    Execute a list of notebooks.
+    Executes a list of notebooks.
 
     @param      folder          folder
     @param      notebooks       list of notebooks

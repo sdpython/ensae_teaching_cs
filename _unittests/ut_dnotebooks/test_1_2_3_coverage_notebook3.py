@@ -96,7 +96,7 @@ class TestNotebook123Coverage3(unittest.TestCase):
             return True
 
         self.a_test_notebook_runner(
-            "interro_rapide_20_minutes_2014_11", "exams")
+            "interro_rapide_20_minutes_2014_11", "exams", valid=valid)
 
     def test_notebook_td1a_cenonce_session1(self):
         fLOG(
