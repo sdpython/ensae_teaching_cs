@@ -84,7 +84,6 @@ Machine learning illustré
     notebooks/ml_table_mortalite
     notebooks/ml_huge_datasets
     notebooks/ml_rue_paris_parcours
-    notebooks/ml_features_model
     coding_party
     specials/voisinage
 

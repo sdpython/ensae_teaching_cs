@@ -47,8 +47,8 @@ ENSAE 1A - Programmation
         importants qu'une bonne représentation d'un phénomène
         qu'on cherche à expliquer.
 
-        * Les bases du langage :epkg:`Python` : boucles, tests, fonctions, listes, dictionnaires,
-          modules, expressions régulières
+        * Les bases du langage *Python*
+        * Expressions régulières
         * Quelques algorithmes classiques
         * Les dataframes, les graphes.
 
@@ -59,12 +59,12 @@ ENSAE 1A - Programmation
         pour prendre cette décision.
 
         * Culture algorithmique, pratique régulière
-        * Notion de graphes et de parcours dans un graphe.
+        * Notion de graphes.
         * Le calcul matriciel, les dataframes, les graphes.
 
     .. revealjs:: Semestre 1
 
-        Cours / TD : `mobile <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_1a.html>`_
+        Cours / TD : `apprendre <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_1a.html>`_
 
         Organisés par groupes de TD, contenu en fonction de votre objectif
         et de vos connaissances.
@@ -73,7 +73,7 @@ ENSAE 1A - Programmation
 
         Projet informatique : devenir autonome
 
-        * `base de sujets <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx2/projet_info_1A.html>`_
+        * `base de sujets <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/projet_info_1A.html>`_
           à adapter selon vos envies
         * votre sujet est le bienvenu
         * ingéniérie logicielle
@@ -84,13 +84,17 @@ ENSAE 1A - Programmation
 
         Pourquoi ?
 
-        * Le langage est open source et donc gratuit.
-        * Il fonctionne sur toutes les OS (Windows, Linux, Mac).
-        * Il dispose de nombreuses extensions.
-        * Il permet de nombreux usages (calcul scientifique, programmation, web, jeux).
-        * Sa syntaxe est l'une des plus simples.
-        * Langage recommandé pour un data scientist
-        * Il est mentionné sur les offres d'emploi.
+        * Open source
+        * Windows, Linux, Mac...
+        * Tout terrain (calcul scientifique, programmation, web, jeux).
+        * Simple, utilisé partout
+        * Obligatoire pour un data scientist
+
+    .. revealjs:: Startup et programmation
+
+        De plus en plus nombreux chaque année.
+
+        Toujours un site web, souvent des traitements de données...
 
     .. revealjs:: Les difficultés de l'apprentissage
 
@@ -143,8 +147,6 @@ ENSAE 1A - Programmation
 
         .. image:: https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/01/29/92/metablogapi/7840.Startertemplatestobuildwebsitesusingpopularframeworks_44FA9070.png
 
-.. revealjs::
-
     .. revealjs:: Autres langages
 
         Le langage informatique majoritaire est différent selon  la filière.
@@ -172,6 +174,15 @@ ENSAE 1A - Programmation
         * `SAS <http://www.sas.com/offices/europe/france/>`_ : actuariat, grosses entreprises (1A)
         * `VBA <http://fr.wikipedia.org/wiki/Visual_Basic_for_Applications>`_ : Excel (et quand on n'a pas le choix) (2A)
 
+.. revealjs::
+
+    .. revealjs:: Support / Matériel
+
+        * `Python dans tous ses états <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_
+        * `Apprendre la programmation avec Python <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_
+        * `Les maths d'abord, la programmation ensuite <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
+        * `Jeux algorithmiques pour petits et grands <http://lesenfantscodaient.fr/>`_
+
     .. revealjs:: Contributions
 
         Le contenu est disponible sur `GitHub <https://github.com/sdpython>`_ :
@@ -182,23 +193,6 @@ ENSAE 1A - Programmation
         .. image:: _static/fork.png
 
         .. image:: _static/edit.png
-
-.. revealjs::
-
-    .. revealjs:: Une histoire de données
-
-        `Le dessert de la cantine <http://lesenfantscodaient.fr/donnees/dessert_cantine.html?highlight=cantine>`_
-
-        On ne peut pas faire n'importe quoi avec les données.
-
-    .. revealjs:: GitHub
-
-        * `GitHub <https://github.com/>`_ : immense bibliothèque de projets open source
-        * Lire la licence avant de utiliser / copier / coller.
-
-    .. revealjs:: Du motif aux mots
-
-        * `Le jeu de l'échiquier <http://lesenfantscodaient.fr/programmation/parcours_echiquier.html#l-prog-parcours-echiquier>`_
 
     .. revealjs:: Jeux algorithmes
 
@@ -212,25 +206,32 @@ ENSAE 1A - Programmation
         .. image:: http://static.fnac-static.com/multimedia/FR/Images_Produits/FR/fnac.com/Visual_Principal_340/2/0/0/9782864970002.jpg
             :width: 200
 
-.. revealjs:: Trois questions
+    .. revealjs:: Hackathon
 
-    * Quel est votre objectif ?  (analyste / ingénieur)
-    * Avez-vous déjà programmé ? (Non, Oui)
-    * Choisissez un groupe : A1, A2, I1, I2.
+        `Hackathon EY/ENSAE 2016 <https://www.youtube.com/watch?v=vSchPGmtikI>`_
 
-.. revealjs:: Hackathon
+        avec `La Croix-Rouge <http://www.croix-rouge.fr/>`_
+        et `Crésus <https://www.cresus-iledefrance.org/>`_.
 
-    `Hackathon EY/ENSAE 2016 <https://www.youtube.com/watch?v=vSchPGmtikI>`_
+        C'est un hackathon pour **apprendre**.
 
-    avec `La Croix-Rouge <http://www.croix-rouge.fr/>`_
-    et `Crésus <https://www.cresus-iledefrance.org/>`_.
+    .. revealjs:: Trois questions
 
-    C'est un hackathon pour **apprendre**.
+        * Quel est votre objectif ?  (analyste / ingénieur)
+        * Avez-vous déjà programmé ? (Non, Oui)
+        * Choisissez un groupe : A1, A2, I1, I2.
 
-.. revealjs:: Startup
+    .. revealjs:: Exercices
 
-    De plus en plus nombreux chaque année.
+        Récupérer les données vélib et prédire l'affluence des vélos à une station ?
 
-    Toujours un site web, souvent des traitements de données.
+        Comment feriez-vous ?
 
-    Une histoire de startup : livraison *MetroPass*.
+.. revealjs:: Plan fin de séance
+
+    * `Installation de Python sur vos machines <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/i_getting_started.html#l-installation-courte>`_
+    * `Outils spécifiques à ce cours <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/ci_status.html>`_
+    * Organisation des séances et contenus proposés
+    * Algorithme et créativité
+    * Pas de par coeur
+    * Rappel de syntaxe : décoder un programme simple

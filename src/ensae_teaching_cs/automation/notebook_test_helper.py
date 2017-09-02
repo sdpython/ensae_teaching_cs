@@ -146,7 +146,6 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
 
         def filter(i, filename):
             return True or False
-
     """
 
     def valid_cell(cell):

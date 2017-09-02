@@ -254,6 +254,7 @@ ici :
     :maxdepth: 2
 
     notebooks/_gs2a_ensae_sklearn
+    notebooks/ml_features_model
 
 *Notebooks*
 
