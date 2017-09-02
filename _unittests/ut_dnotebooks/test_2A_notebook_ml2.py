@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=18s)
+@brief      test log(time=77s)
 """
 
 import sys
@@ -43,7 +43,7 @@ from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
 
 
-class TestNotebookRunner2aML(unittest.TestCase):
+class TestNotebookRunner2aML2(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
@@ -61,7 +61,7 @@ class TestNotebookRunner2aML(unittest.TestCase):
         from src.ensae_teaching_cs.data import simple_database
         temp = get_temp_folder(__file__, "temp_notebook2a_eco")
         keepnote = ls_notebooks("td2a_ml")
-        keepnote = [_ for _ in keepnote if "machine_learning" in _]
+        keepnote = [_ for _ in keepnote if "machine_learning" not in _]
         shutil.copy(simple_database(), temp)
 
         def filter(i, n):
