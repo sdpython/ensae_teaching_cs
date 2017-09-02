@@ -50,6 +50,9 @@ commandes magiques.
     :local:
     :depth: 1
 
+De nombreux livres ont été écrits sur la manipulation des données en :epkg:`Python`. En voici un :
+`Python Data Science Handbook <https://github.com/jakevdp/PythonDataScienceHandbook>`_.
+
 DataFrame
 +++++++++
 

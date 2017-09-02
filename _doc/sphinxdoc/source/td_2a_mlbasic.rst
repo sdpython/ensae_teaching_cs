@@ -274,6 +274,10 @@ ici :
 * `Complete Guide to Parameter Tuning in XGBoost (with codes in Python) <https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/>`_ *(2016/08)*
 * `XGBoost: A Scalable Tree Boosting System <http://arxiv.org/pdf/1603.02754v1.pdf>`_, Tianqi Chen, Carlos Guestrin
 
+*Livres*
+
+* `Python Data Science Handbook <https://github.com/jakevdp/PythonDataScienceHandbook>`_
+
 *Modules*
 
 * `scikit-learn <http://scikit-learn.org/stable/>`_
