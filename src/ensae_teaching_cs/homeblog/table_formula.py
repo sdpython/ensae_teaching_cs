@@ -28,7 +28,7 @@ class TableFormula(_TableFormulaStat):
     """
     This class aims at representating a table, it provides
     some "SQL like" functionalities such groupby or innerjoin, select, where...
-    This was a custom implementation of a DataFrame before I discovers
+    This was a custom implementation of a DataFrame before I discover
     `pandas <http://pandas.pydata.org/>`_.
 
     The class provides an easy to go through the row table by converting each row
@@ -145,7 +145,7 @@ class TableFormula(_TableFormulaStat):
         print(value)
 
         print("------------- multiply_column_by_row_instance ")
-        table = TableFormula("name d_a d_b d_c#A 1 2 3#A 1.1 2.1 3.1#B 3 4 5".replace(" ", "\t").replace("#","\n"))
+        table = TableFormula("name d_a d_b d_c#A 1 2 3#A 1.1 2.1 3.1#B 3 4 5".replace(" ", "\\t").replace("#","\\n"))
         table.add_column("key_add", lambda v:"unique")
         print(table)
         mul = table.multiply_column_by_row_instance(
