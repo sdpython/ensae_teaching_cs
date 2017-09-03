@@ -33,7 +33,7 @@ install:
   - "%PYTHON%\\Scripts\\pip install pyensae"
   - "%PYTHON%\\Scripts\\pip install pyrsslocal"
   - "%PYTHON%\\Scripts\\pip install pygame"
-  - "%PYTHON%\\Scripts\\pip install pydub"
+  - "%PYTHON%\\Scripts\\pip install pydub smart_open"
   - "%PYTHON%\\Scripts\\pymy_install3 opencv_python"
   - "%PYTHON%\\Scripts\\pymy_install3 yaml gensim"
   - "%PYTHON%\\Scripts\\pymy_install3 psycopg2 nltk pympler theano pyproj"
