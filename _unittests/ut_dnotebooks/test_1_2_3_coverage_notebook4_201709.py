@@ -82,19 +82,6 @@ class TestNotebook123Coverage201709(unittest.TestCase):
 
         self.a_test_notebook_runner("td1a_sql", "td1a_soft")
 
-    def test_notebook_quicksort(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        def valid(cell):
-            if " noeud tri n'est pas encore défini" in cell:
-                return False
-            return True
-
-        self.a_test_notebook_runner("td1a_quicksort", "td1a_algo", valid=valid)
-
     def test_notebook_td1a_enonce_session6(self):
         fLOG(
             __file__,

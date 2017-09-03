@@ -166,6 +166,8 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
             return False
         if "%%SPEAK fr-FR" in cell:
             return False
+        if " noeud tri n'est pas encore défini" in cell:
+            return False
         return True
 
     addpaths = get_additional_paths()
