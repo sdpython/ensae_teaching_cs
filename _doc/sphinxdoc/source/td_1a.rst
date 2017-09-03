@@ -251,6 +251,7 @@ tests unitaires, le templating, les sites Web, le scraping, encoding, les notebo
     :maxdepth: 2
 
     notebooks/_gs1a_B_ci
+    notebooks/_gs1a_B_sql
     notebooks/jupyter_custom_magics
 
 Deux exercices sont suggérés pour une séance de deux heures à choisir parmi :

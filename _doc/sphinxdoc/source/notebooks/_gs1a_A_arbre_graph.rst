@@ -14,3 +14,5 @@ Arbre, Trie, Graphes
     graph4exos
     graph_spectral_clustering
     graph_spectral_clustering_correction
+    quicksort
+    quicksort_correction

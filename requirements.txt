@@ -17,6 +17,7 @@ forestci
 gensim
 geopy
 ggplot
+h2o
 jyquickhelper
 keras
 lifelines

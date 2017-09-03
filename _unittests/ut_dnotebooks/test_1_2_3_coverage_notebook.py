@@ -136,14 +136,6 @@ class TestNotebook123Coverage(unittest.TestCase):
 
         self.a_test_notebook_runner_1a("td1a_correction_session6", "td1a")
 
-    def test_notebook_td1a_enonce_session6(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        self.a_test_notebook_runner_1a("td1a_cenonce_session6", "td1a")
-
     def test_notebook_integrale_rectangle(self):
         fLOG(
             __file__,
