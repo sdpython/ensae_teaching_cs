@@ -21,10 +21,10 @@ from xlrd import open_workbook
 from pyquickhelper.loghelper import fLOG, noLOG
 from pyquickhelper.loghelper.convert_helper import str2datetime
 from pyensae.sql import Database
-from .table_formula_stat import TableFormulaStat
+from .table_formula_stat import _TableFormulaStat
 
 
-class TableFormula(TableFormulaStat):
+class TableFormula(_TableFormulaStat):
     """
     This class aims at representating a table, it provides
     some "SQL like" functionalities such groupby or innerjoin, select, where...
@@ -39,7 +39,7 @@ class TableFormula(TableFormulaStat):
         tbl = TableFormula(...)
         newtbl = tbl.filter(lambda v: v["criteria"] == 5)
 
-    see op __init__ for others ways to create a table.
+    See @see op __init__ for others ways to create a table.
 
     @var    header      list of column names
     @var    values      list of rows(each row contains as many value as the number of columns)
