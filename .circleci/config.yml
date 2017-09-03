@@ -115,7 +115,7 @@ jobs:
           name: documentation
           command: |
             . venv/bin/activate
-            python setup.py build_sphinx html1
+            python setup.py build_sphinx html1 nblight
             
       - run:
           name: copy documentation

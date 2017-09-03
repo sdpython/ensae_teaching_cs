@@ -207,6 +207,12 @@ if is_local() and "custom_left" not in sys.argv:
         layout = ["html", ("html", "build3", {
                            "html_theme": "bootstrap"}, "source/conf3")]
 
+    if "nblight" in sys.argv:
+        nbformats = ['ipynb', 'html', 'rst', 'github']
+    else:
+        nbformats = ['ipynb', 'html', 'python',
+                     'rst', 'slides', 'pdf', 'github']
+
     def skip_function(name, code, duration):
         if "notebook test" in code:
             return True
@@ -222,9 +228,7 @@ if is_local() and "custom_left" not in sys.argv:
             "src", project_var_name, package_data[project_var_name][0])),
         covtoken=("5e030cea-7d27-46e7-bb2e-2fc3db0ae9f6",
                   "'_UT_36_std' in outfile"),
-        nbformats=['ipynb', 'html', 'python',
-                   'rst', 'slides', 'pdf', 'github'],
-        layout=layout,
+        nbformats=nbformats, layout=layout,
         fLOG=logging_function)
 
     if "build_script" in sys.argv and sys.platform.startswith("win"):
