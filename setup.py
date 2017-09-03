@@ -200,15 +200,18 @@ if is_local() and "custom_left" not in sys.argv:
             "pyrsslocal", "pymyinstall", "mlstatpy", "tkinterquickhelper"]
     if "html1" in sys.argv:
         layout = ["html"]
+        sys.argv = [_ for _ in sys.argv if _ != "html1"]
     elif "html3" in sys.argv:
         layout = [("html", "build3", {
                            "html_theme": "bootstrap"}, "source/conf3")]
+        sys.argv = [_ for _ in sys.argv if _ != "html3"]
     else:
         layout = ["html", ("html", "build3", {
                            "html_theme": "bootstrap"}, "source/conf3")]
 
     if "nblight" in sys.argv:
         nbformats = ['ipynb', 'html', 'rst', 'github']
+        sys.argv = [_ for _ in sys.argv if _ != "nblight"]
     else:
         nbformats = ['ipynb', 'html', 'python',
                      'rst', 'slides', 'pdf', 'github']

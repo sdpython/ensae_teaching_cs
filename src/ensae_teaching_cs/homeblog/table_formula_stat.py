@@ -5,7 +5,7 @@
 """
 
 
-class TableFormulaStat:
+class _TableFormulaStat:
     """
     Contains various statistical functions.
 
