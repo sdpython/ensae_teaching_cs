@@ -212,9 +212,13 @@ if is_local() and "custom_left" not in sys.argv:
     if "nblight" in sys.argv:
         nbformats = ['ipynb', 'html', 'rst', 'github']
         sys.argv = [_ for _ in sys.argv if _ != "nblight"]
-    else:
+    elif "nbpdf":
         nbformats = ['ipynb', 'html', 'python',
                      'rst', 'slides', 'pdf', 'github']
+        sys.argv = [_ for _ in sys.argv if _ != "nbpdf"]
+    else:
+        nbformats = ['ipynb', 'html', 'python',
+                     'rst', 'slides', 'github']
 
     def skip_function(name, code, duration):
         if "notebook test" in code:

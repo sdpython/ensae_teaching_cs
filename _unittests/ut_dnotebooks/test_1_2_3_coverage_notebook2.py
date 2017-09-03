@@ -39,7 +39,7 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.filehelper import synchronize_folder
-from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, is_travis_or_appveyor
 from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut, get_additional_paths
 
 
@@ -136,6 +136,10 @@ class TestNotebook123Coverage2(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
+        if is_travis_or_appveyor() == "travis":
+            # no graphviz
+            return
+
         self.a_test_notebook_runner("graph_spectral_clustering", "td1a_algo")
 
     def test_notebook_graph1exo_parcours(self):
@@ -143,6 +147,10 @@ class TestNotebook123Coverage2(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
+
+        if is_travis_or_appveyor() == "travis":
+            # no graphviz
+            return
 
         self.a_test_notebook_runner("graph1exo_parcours", "td1a_algo")
 
