@@ -39,7 +39,7 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.filehelper import synchronize_folder
-from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, is_travis_or_appveyor
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
 from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut, get_additional_paths
 
 
