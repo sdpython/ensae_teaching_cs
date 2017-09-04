@@ -43,7 +43,7 @@ from pyquickhelper.pycode import get_temp_folder, add_missing_development_versio
 from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut, get_additional_paths
 
 
-class TestNotebook123Coverage2(unittest.TestCase):
+class TestNotebook123Coverage2b(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper", "mlstatpy"],
@@ -75,60 +75,29 @@ class TestNotebook123Coverage2(unittest.TestCase):
             temp, keepnote, additional_path=add_path, valid=valid)
         execute_notebook_list_finalize_ut(res, fLOG=fLOG, dump=thismodule)
 
-    def test_notebook_ml_d_library_h2o(self):
+    def test_notebook_graph_spectral_clustering(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        if False:
-            # h2o is difficult to make work as it launches a server.
-            self.a_test_notebook_runner("ml_d_library_h2o", "td2a_ml")
+        if is_travis_or_appveyor() == "travis":
+            # no graphviz
+            return
 
-    def test_notebook_visualisation(self):
+        self.a_test_notebook_runner("graph_spectral_clustering", "td1a_algo")
+
+    def test_notebook_graph1exo_parcours(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        def valid(cell):
-            if "plotly" in cell:
-                return False
-            return True
+        if is_travis_or_appveyor() == "travis":
+            # no graphviz
+            return
 
-        self.a_test_notebook_runner("td2a_visualisation", "td2a", valid=valid)
-
-    def test_notebook_some_nlp(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        self.a_test_notebook_runner("td2a_some_nlp", "td2a")
-
-    def test_notebook_progressbar(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        self.a_test_notebook_runner("td2a_progressbar", "td2a")
-
-    def test_notebook_bigdata(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        self.a_test_notebook_runner("td2a_bigdata_memory", "td2a")
-
-    def test_notebook_timeseries(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        self.a_test_notebook_runner("ml_timeseries_base", "td2a")
+        self.a_test_notebook_runner("graph1exo_parcours", "td1a_algo")
 
 
 if __name__ == "__main__":
