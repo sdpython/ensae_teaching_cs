@@ -57,6 +57,7 @@ Interprétabilité des modèles
 * `"Why Should I Trust You?" Explaining the Predictions of Any Classifier <http://arxiv.org/pdf/1602.04938v1.pdf>`_ *(2016/06)*
 * `Edward: A library for probabilistic modeling, inference, and criticism <https://arxiv.org/pdf/1610.09787.pdf>`_
 * `Strictly Proper Scoring Rules, Prediction, and Estimation <https://www.cs.duke.edu/courses/spring17/compsci590.2/Gneiting2007jasa.pdf>`_
+* `Visualizing and Understanding Neural Machine Translation <http://www.aclweb.org/anthology/P/P17/P17-1106.pdf>`_
 
 *Lectures: graphical models*
 
@@ -368,6 +369,11 @@ Traitement du langage
 
 |pyecopng| |pystatpng|
 
+Cette partie regroupe principalement des techniques
+relevant du `word embedding <https://en.wikipedia.org/wiki/Word_embedding>`_ qui
+consiste à convertir des données textuelles en données numériques directement
+exploitable par les algorithmes d'apprentissage.
+
 *Notebooks*
 
 .. toctree::
@@ -383,7 +389,6 @@ Traitement du langage
   pour guider les utilisateurs plus rapidement vers le produit qu'ils recherchent.
 * `Text Understanding from Scratch <https://arxiv.org/abs/1502.01710>`_, Xiang Zhang, Yann LeCun
 * `Text Generation With LSTM Recurrent Neural Networks in Python with Keras <http://machinelearningmastery.com/text-generation-lstm-recurrent-neural-networks-python-keras/>`_
-* `Dual Learning for Machine Translation <https://papers.nips.cc/paper/6469-dual-learning-for-machine-translation.pdf>`_
 * `Supervised Word Mover's Distance <https://papers.nips.cc/paper/6139-supervised-word-movers-distance.pdf>`_
 * `Probabilistic Context-Free Grammars (PCFGs) <http://www.cs.columbia.edu/~mcollins/courses/nlp2011/notes/pcfgs.pdf>`_
 * `A Roundup of Recent Text Analytics and Vis Work <http://blogger.ghostweather.com/2014/10/a-roundup-of-recent-text-analytics-and.html>`_
@@ -393,6 +398,7 @@ Traitement du langage
 * `Neural CRF Parsing <http://www.cs.utexas.edu/~gdurrett/papers/durrett-klein-acl2015.pdf>`_
 * `Less Grammar More Features <http://www.cs.utexas.edu/~gdurrett/papers/hall-durrett-klein-acl2014.pdf>`_
 * `Learning-Based Single-Document Summarization with Compression and Anaphoricity Constraints <https://arxiv.org/pdf/1603.08887v1.pdf>`_
+* `Multimodal Word Distributions <http://www.aclweb.org/anthology/P/P17/P17-1151.pdf>`_
 
 *Classification*
 
@@ -423,6 +429,11 @@ Traitement du langage
 * `On word embeddings - Part 3: The secret ingredients of word2vec <http://sebastianruder.com/secret-word2vec/index.html>`_
 * `From Word Embeddings To Document Distances <http://jmlr.org/proceedings/papers/v37/kusnerb15.pdf>`_
 
+*Interprétation*
+
+* `Learning to Parse and Translate Improves Neural Machine Translation <http://www.aclweb.org/anthology/P/P17/P17-2012.pdf>`_
+* `Skip-Gram – Zipf + Uniform = Vector Additivity <http://www.aclweb.org/anthology/P/P17/P17-1007.pdf>`_
+
 *Résumé*
 
 * `Beyond SumBasic: Task-Focused Summarization with Sentence Simplification and Lexical Expansion <http://www.cis.upenn.edu/~nenkova/papers/ipm.pdf>`_
@@ -448,6 +459,23 @@ Traitement du langage
 * `python-rake <https://pypi.python.org/pypi/python-rake/>`_ : petit module pour extraire des mot-clés
 * `sumy <https://pypi.python.org/pypi/sumy>`_ : construction automatique d'un résumé d'un texte
 * `pyrouge <https://github.com/pltrdy/rouge/>`_ : calcule de la métrique `ROUGE <https://en.wikipedia.org/wiki/ROUGE_(metric)>`_
+
+Traduction automatique
+++++++++++++++++++++++
+
+(à venir)
+
+Cette partie concerne les SMT ou
+`Statistical machines translation <https://en.wikipedia.org/wiki/Statistical_machine_translation>`_
+qui évoque l'apprentissage supervisé d'un modèle de traduction automatique de texte principalement.
+
+*Lectures*
+
+* `Dual Learning for Machine Translation <https://papers.nips.cc/paper/6469-dual-learning-for-machine-translation.pdf>`_
+* `Neural Machine Translation by Jointly Learning to Align and Translate <https://arxiv.org/abs/1409.0473>`_
+* `Sequence-to-Dependency Neural Machine Translation <http://www.aclweb.org/anthology/P/P17/P17-1065.pdf>`_
+
+*Modules*
 
 Images
 ++++++
@@ -598,7 +626,12 @@ Deep Learning en détail
 * `ConvNetJS <http://cs.stanford.edu/people/karpathy/convnetjs/>`_
 * `Databricks / Deep Learning <https://docs.databricks.com/applications/deep-learning/index.html>`_
 
-*Lectures*
+*Liens*
+
+* `Four deep learning trends from ACL 2017 (1) <http://www.abigailsee.com/2017/08/30/four-deep-learning-trends-from-acl-2017-part-1.html>`_
+* `Four deep learning trends from ACL 2017 (2) <http://www.abigailsee.com/2017/08/30/four-deep-learning-trends-from-acl-2017-part-2.html>`_
+
+*Articles scientifiques*
 
 * `LightRNN: Memory and Computation-Efficient Recurrent Neural Networks <https://arxiv.org/abs/1610.09893>`_
 * `Deep learning architecture diagrams <http://fastml.com/deep-learning-architecture-diagrams/>`_

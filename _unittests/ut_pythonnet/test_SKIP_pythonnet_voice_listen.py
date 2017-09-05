@@ -52,12 +52,15 @@ class TestPythonnetVoiceListen(unittest.TestCase):
             # no keys
             return
 
+        # retur nay way
+        return
+
         if sys.platform.startswith("win") and __name__ == "__main__":
             from src.ensae_teaching_cs.pythonnet import vocal_recognition_listening
 
             try:
                 for i, text in enumerate(vocal_recognition_listening()):
-                    fLOG("listented", text)
+                    fLOG("listened", text)
                     if i >= 2:
                         break
             except Exception as e:

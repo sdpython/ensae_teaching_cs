@@ -130,23 +130,13 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
 .. image:: http://scikit-learn.org/stable/_static/ml_map.png
     :width: 500
 
-**Librairies Python**
+**Librairies**
 
 * `Simple/limited/incomplete benchmark for scalability, speed and accuracy of machine learning libraries for classification <https://github.com/szilard/benchm-ml>`_
 * `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
 * `Related Projects (of machine learning) <http://scikit-learn.org/stable/related_projects.html>`_ (2016/03)
-
-**Librairies de machine learning**
-
 * `Awesome Machine Learning <https://github.com/josephmisiti/awesome-machine-learning#python>`_
-* `CNTK <https://github.com/Microsoft/CNTK>`_ (2016/04)
-* `Keras <http://keras.io/>`_
-* `pytorch <http://pytorch.org/>`_
-* `scikit-learn <http://scikit-learn.org/stable/index.html>`_
-* `TensorFlow <https://github.com/tensorflow/tensorflow>`_
-* `theano <http://deeplearning.net/software/theano/>`_
-* `Vowpal Wabbit <https://github.com/JohnLangford/vowpal_wabbit/wiki>`_
-* `xgboost <https://github.com/dmlc/xgboost>`_
+* Chaque paragraphe recense des librairies connues sur le sujet.
 
 **Vidéos**
 
