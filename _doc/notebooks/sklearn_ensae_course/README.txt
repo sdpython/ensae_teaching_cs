@@ -1,6 +1,6 @@
 
-sklearn_ensae_course 
---------------------
+2A - sklearn_ensae_course 
+-------------------------
 
 Ces exemples viennent des lectures proposées par Gaël Varoquaux 
 A l':epkg:`ENSAE` :

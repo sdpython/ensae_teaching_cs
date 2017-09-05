@@ -1,6 +1,6 @@
 
-Travaux dirigés - Algorithmes
------------------------------
+2A - Travaux dirigés - Algorithmes
+----------------------------------
 
 Enoncés algorithmiques pour le cours :ref:`l-td2a`.
 

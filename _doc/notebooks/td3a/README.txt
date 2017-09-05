@@ -1,6 +1,6 @@
 
-Travaux dirigés - Hadoop
-------------------------
+3A - Travaux dirigés - Hadoop
+-----------------------------
 
 Séances d'introduction aux clusters.
 Comment manipuler les données depuis ou vers un cluster, 
