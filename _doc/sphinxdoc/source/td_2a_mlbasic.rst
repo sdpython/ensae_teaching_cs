@@ -433,6 +433,7 @@ Bandits
 * `Batch Learning from Logged Bandit Feedback through Counterfactual Risk Minimization <http://www.jmlr.org/papers/volume16/swaminathan15a/swaminathan15a.pdf>`_
 * `Stochastic Structured Prediction under Bandit Feedback <https://papers.nips.cc/paper/6134-stochastic-structured-prediction-under-bandit-feedback.pdf>`_
 * `Thompson sampling with the online bootstrap <https://arxiv.org/abs/1410.4009>`_ (à lire)
+* `Trial without Error: Towards Safe Reinforcement Learning via Human Intervention <https://arxiv.org/abs/1707.05173>`_
 
 Modèles bayésiens
 +++++++++++++++++
