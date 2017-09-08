@@ -159,7 +159,6 @@ Pour vous exercer :
     notebooks/exercice_xn
     notebooks/exercice_echelle
     notebooks/exercice_morse
-    notebooks/exercice_lcs
     notebooks/exercice_plus_grande_somme
     notebooks/tri_nlnd
 
@@ -243,6 +242,7 @@ tests unitaires, le templating, les sites Web, le scraping, encoding, les notebo
 
     specials/siteflask
     specials/unittest_coverage_git_profling
+    notebooks/git_notebook
     notebooks/profiling_example
 
 *Exercices*

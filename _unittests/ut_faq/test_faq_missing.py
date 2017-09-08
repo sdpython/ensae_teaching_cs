@@ -122,7 +122,7 @@ class TestFaqMissing (unittest.TestCase):
             OutputPrint=__name__ == "__main__")
 
         data = os.path.abspath(os.path.dirname(__file__))
-        nb = os.path.join(data, "exercice_lcs.ipynb")
+        nb = os.path.join(data, "exercice_xn.ipynb")
         find_best_server(nb)
         if False:
             # does not work
