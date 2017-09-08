@@ -47,6 +47,7 @@ from src.ensae_teaching_cs.faq.faq_pandas import df_to_clipboard, df_equal, spee
 from src.ensae_teaching_cs.faq.faq_matplotlib import change_legend_location, avoid_overlapping_dates
 from src.ensae_teaching_cs.faq.faq_jupyter_helper import find_best_server, nb_open
 from src.ensae_teaching_cs.faq.faq_jupyter import jupyter_open_notebook
+from src.ensae_teaching_cs.faq.faq_cvxopt import optimisation
 
 
 class TestFaqMissing (unittest.TestCase):
@@ -129,6 +130,14 @@ class TestFaqMissing (unittest.TestCase):
             fLOG(r)
             r = jupyter_open_notebook(nb)
             fLOG(r)
+
+    def test_faq_cvxopt(self):
+        fLOG(
+            __file__,
+            self._testMethodName,
+            OutputPrint=__name__ == "__main__")
+
+        optimisation()
 
 
 if __name__ == "__main__":

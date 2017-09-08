@@ -87,29 +87,6 @@ Machine learning illustré
     coding_party
     specials/voisinage
 
-Cloud illustré
-==============
-
-.. toctree::
-    :maxdepth: 1
-
-    specials/azure
-
-Génie logiciel illustré
-=======================
-
-.. toctree::
-    :maxdepth: 1
-
-    specials/unittest_coverage_git_profling
-    specials/siteflask
-    specials/python_cplusplus
-
-Aspects cachés de ce cours
-==========================
-
-Voir :ref:`l-ex-automation`.
-
 .. todoext::
     :title: Quelques idées de notebooks pour le futur
     :tag: plus

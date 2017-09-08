@@ -49,29 +49,29 @@ class TestConstructionClassique(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        assert recherche([2, 3, 45], 3) == 1
-        assert recherche([2, 3, 45], 4) == -1
-        assert minindex([2, 3, 45, -1, 5]) == (-1, 3)
+        self.assertEqual(recherche([2, 3, 45], 3), 1)
+        self.assertEqual(recherche([2, 3, 45], 4), -1)
+        self.assertEqual(minindex([2, 3, 45, -1, 5]), (-1, 3))
         li = range(0, 100, 2)
-        assert recherche_dichotomique(li, 48) == 24
-        assert recherche_dichotomique(li, 49) == -1
+        self.assertEqual(recherche_dichotomique(li, 48), 24)
+        self.assertEqual(recherche_dichotomique(li, 49), -1)
         s = "case11;case12;case13|case21;case22;case23"
         mat = text2mat(s, "|", ";")
         t = mat2text(mat, "|", ";")
-        assert t == s
+        self.assertEqual(t, s)
         tab = ["zero", "un", "deux"]
         r = triindex(tab)
-        assert r == [('deux', 2), ('un', 1), ('zero', 0)]
+        self.assertEqual(r, [('deux', 2), ('un', 1), ('zero', 0)])
         li = ["un", "deux", "un", "trois"]
         r = compte(li)
-        assert r == {'trois': 1, 'deux': 1, 'un': 2}
+        self.assertEqual(r, {'trois': 1, 'deux': 1, 'un': 2})
         mat = [[0, 1, 2], [3, 4, 5]]
         r = mat2vect(mat)
-        assert r == [0, 1, 2, 3, 4, 5]
+        self.assertEqual(r, [0, 1, 2, 3, 4, 5])
         m = vect2mat(r, 3)
-        assert m == mat
+        self.assertEqual(m, mat)
         x2 = integrale(lambda x: x, 0, 2, 1000)
-        assert x2 == 2
+        self.assertEqual(x2, 2)
 
     def test_matrice_carre(self):
         fLOG(
@@ -79,8 +79,8 @@ class TestConstructionClassique(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         mat = construit_matrice_carree(10)
-        assert len(mat) == 10
-        assert len(mat[0]) == 10
+        self.assertEqual(len(mat), 10)
+        self.assertEqual(len(mat[0]), 10)
 
 
 if __name__ == "__main__":
