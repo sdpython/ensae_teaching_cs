@@ -45,7 +45,7 @@ Interprétabilité des modèles
 
 *(à venir)*
 
-*Lectures: explain*
+*Lectures: expliquer*
 
 * `Learning to learn by gradient descent by gradient descent <https://arxiv.org/pdf/1606.04474.pdf>`_
 * `Importance Weighting Without Importance Weights: An Effcient Algorithm for Combinatorial Semi-Bandits <http://jmlr.org/papers/volume17/15-091/15-091.pdf>`_
@@ -59,7 +59,11 @@ Interprétabilité des modèles
 * `Strictly Proper Scoring Rules, Prediction, and Estimation <https://www.cs.duke.edu/courses/spring17/compsci590.2/Gneiting2007jasa.pdf>`_
 * `Visualizing and Understanding Neural Machine Translation <http://www.aclweb.org/anthology/P/P17/P17-1106.pdf>`_
 
-*Lectures: graphical models*
+*Lectures: local*
+
+* `Learning Deep Nearest Neighbor Representations Using Differentiable Boundary Trees <https://arxiv.org/abs/1702.08833>`_
+
+*Lectures: modèle graphique*
 
 * `Factor Graph <http://deepdive.stanford.edu/assets/factor_graph.pdf>`_
 * `An Introduction to Conditional Random Fields for Relational Learning <http://people.cs.umass.edu/~mccallum/papers/crf-tutorial.pdf>`_
@@ -840,6 +844,15 @@ il faut maintenant compter avec les forêts d'arbres.
 * `tree_rnn (python) <https://github.com/ofirnachum/tree_rnn>`_ : pas de modules encore,
   des implémentatations partagées sur GitHub
 * `treelstm <https://github.com/stanfordnlp/treelstm>`_ (java + `Torch <https://github.com/torch/torch7>`_)
+
+Deep Nearest Neighbours
++++++++++++++++++++++++
+
+(*à venir*)
+
+*Lectures*
+
+* `Learning Deep Nearest Neighbor Representations Using Differentiable Boundary Trees <https://arxiv.org/abs/1702.08833>`_
 
 Galleries de problèmes résolus ou presque
 +++++++++++++++++++++++++++++++++++++++++

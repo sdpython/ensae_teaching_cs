@@ -21,6 +21,7 @@ Source de données
 * `Data Sources on the Web (MRAN) <https://mran.microsoft.com/documents/data/>`_
 * `Awesome Public Datasets <https://github.com/caesar0301/awesome-public-datasets>`_
 * `Wikidata <https://www.wikidata.org/wiki/Wikidata:Main_Page>`_
+* `Where can I find large datasets open to the public? (Quora) <https://www.quora.com/Where-can-I-find-large-datasets-open-to-the-public>`_
 
 **API**
 
@@ -28,6 +29,7 @@ Source de données
 * `API SNCF <https://data.sncf.com/api>`_
 * `Bing Maps API <https://msdn.microsoft.com/en-us/library/dd877180.aspx>`_
 * `API Geocoding <https://www.data.gouv.fr/fr/faq/reuser/>`_ (voir également le module `geopy <https://github.com/geopy/geopy>`_)
+* `Dark Sky API <https://darksky.net/dev>`_ (météo, temps passé et futur, payant)
 
 **Jeux de données**
 

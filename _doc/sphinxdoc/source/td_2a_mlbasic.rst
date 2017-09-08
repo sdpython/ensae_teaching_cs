@@ -311,6 +311,7 @@ Pratique du machine learning, problème de données
 * `Courbe ROC <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/roc.html>`_
 * `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
 * `A Unified Approach to Learning Task-Specific Bit Vector Representations for Fast Nearest Neighbor Search <http://www.cs.toronto.edu/~vnair/www12.pdf>`_
+* `On the Mutual Nearest Neighbors Estimate in Regression <http://www.jmlr.org/papers/volume14/guyader13a/guyader13a.pdf>`_
 
 *Recherche*
 
