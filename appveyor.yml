@@ -38,7 +38,7 @@ install:
   - "%PYTHON%\\Scripts\\pymy_install3 yaml gensim"
   - "%PYTHON%\\Scripts\\pymy_install3 psycopg2 nltk pympler theano pyproj"
   - "%PYTHON%\\Scripts\\pip install https://github.com/sdpython/pyPdf/archive/trunk.zip"
-  - "%PYTHON%\\Scripts\\pip install python-jenkins"
+  - "%PYTHON%\\Scripts\\pip install python-jenkins tutormagic"
   - "%PYTHON%\\Scripts\\pymy_install3 --task=tool --source=zip graphviz"
   - "set PATH=%PATH%;C:\\projects\\ensae-teaching-cs\\build\\update_modules\\Graphviz\\bin"
   # deprecated package but needed by python-graphivz
