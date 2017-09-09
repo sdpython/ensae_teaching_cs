@@ -445,3 +445,7 @@ _doc/notebooks/td1a_soft/stations.txt
 _doc/notebooks/expose/particule2.h5
 _doc/notebooks/expose/particule.h5
 _doc/notebooks/expose/example.hdf5
+_doc/notebooks/td1a_soft/setup.py
+_doc/notebooks/td1a_soft/*.pyx
+_doc/notebooks/td1a_soft/*.pyd
+_doc/notebooks/td1a_soft/*.c

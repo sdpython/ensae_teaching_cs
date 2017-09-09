@@ -119,10 +119,11 @@ Ces deux façons de faire sont présentées durant dans les séances qui suivent
     :maxdepth: 2
 
     notebooks/_gs1a_A_programmation_dynamique
-    notebooks/_gs1a_A_edit_distance
+    notebooks/_gs1a_A_prog_dyn
     notebooks/_gs1a_A_arbre_graph
     notebooks/_gs1a_A_optimisation_contrainte
     notebooks/_gs1a_A_algo
+    notebooks/_gs1a_A_image
 
 Plus on en connaît, plus il devient facile de les assembler pour résoudre
 des problèmes complexes. Il faut se construire une
@@ -244,6 +245,7 @@ tests unitaires, le templating, les sites Web, le scraping, encoding, les notebo
     specials/unittest_coverage_git_profling
     notebooks/git_notebook
     notebooks/profiling_example
+    notebooks/_gs1a_S_cython
 
 *Exercices*
 
