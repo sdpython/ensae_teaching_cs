@@ -169,10 +169,16 @@ Tensor, tableaux multidimensionnel
 
 .. _l-2a-cplusplus-para-serie:
 
-C++, R
-++++++
+C++, R, C#
+++++++++++
 
 |pystatpng|
+
+.. toctree::
+    :maxdepth: 1
+
+    notebooks/python_r
+    notebooks/python_csharp
 
 *Notebooks*
 
