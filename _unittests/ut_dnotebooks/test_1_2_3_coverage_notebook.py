@@ -70,7 +70,7 @@ class TestNotebook123Coverage(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        self.a_test_notebook_runner_1a("pp_exo_deviner_un_nombre", "1a")
+        self.a_test_notebook_runner_1a("pp_exo_deviner_un_nombre", "td_1a")
 
     def test_notebook_runner_clustering_correction(self):
         fLOG(
