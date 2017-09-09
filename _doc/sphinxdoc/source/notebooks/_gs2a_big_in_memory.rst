@@ -7,4 +7,3 @@ Big data en mémoire
 
     td2a_bigdata_memory
     td2a_bigdata_memory_correction
-    dataframe_matrix_speed
