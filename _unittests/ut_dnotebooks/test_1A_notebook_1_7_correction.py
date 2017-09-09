@@ -70,7 +70,7 @@ class TestNotebookRunner1a_correction (unittest.TestCase):
                           "session9." not in n and
                           "session_10." not in n and
                           "session_11." not in n and
-                          "deviner." not in n and
+                          "deviner" not in n and
                           "correction" in n,
                           fLOG=fLOG,
                           clean_function=clean_function_1a,
