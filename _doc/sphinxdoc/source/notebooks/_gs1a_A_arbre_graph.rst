@@ -12,6 +12,8 @@ Arbre, Trie, Graphes
     graph1exo_parcours
     graph1exo_parcours_correction
     graph4exos
+    td1a_quicksort
+    td1a_quicksort_correction
     graph_spectral_clustering
     graph_spectral_clustering_correction
     quicksort

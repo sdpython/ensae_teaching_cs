@@ -89,6 +89,7 @@ Jupyter et les commandes magiques
     :maxdepth: 1
 
     notebooks/jupyter_custom_magics
+    notebooks/notebook_convert
 
 |pystatpng|
 

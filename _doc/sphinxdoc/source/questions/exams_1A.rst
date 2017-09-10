@@ -232,6 +232,7 @@ TD notés, correction
 
     ../notebooks/td_note_2013_coloriage_correction
     ../notebooks/td_note_2015
+    ../notebooks/td_note_2015_rattrapage_enonce
     ../notebooks/td_note_2016
     ../notebooks/td_note_2017
     ../notebooks/td_note_2017_2

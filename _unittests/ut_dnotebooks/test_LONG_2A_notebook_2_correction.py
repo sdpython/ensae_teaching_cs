@@ -57,7 +57,7 @@ class TestNotebookRunner2a_2_correction (unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_notebook2a_2_corection")
         keepnote = ls_notebooks("td2a")
         shutil.copy(simple_database(), temp)
-        execute_notebooks(temp, keepnote, (lambda i, n: "_2" in n and
+        execute_notebooks(temp, keepnote, (lambda i, n: "n_2" in n and
                                            "correction" in n and "_2B" not in n), fLOG=fLOG,
                           dump=src.ensae_teaching_cs)
 
