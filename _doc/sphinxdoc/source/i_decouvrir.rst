@@ -60,6 +60,13 @@ Algorithmes illustrés
     specials/hermionne
     specials/sudoku
 
+*Statistiques*
+
+.. toctree::
+    :maxdepth: 1
+
+    notebooks/hash_distribution
+
 *Streaming*
 
 .. toctree::

@@ -246,6 +246,7 @@ tests unitaires, le templating, les sites Web, le scraping, encoding, les notebo
     notebooks/git_notebook
     notebooks/profiling_example
     notebooks/_gs1a_S_cython
+    notebooks/td1a_python_csharp
 
 *Exercices*
 
