@@ -170,6 +170,11 @@ Tensor, tableaux multidimensionnel
 
 |pystatpng|
 
+.. toctree::
+    :maxdepth: 1
+
+    notebooks/ml_table_mortalite
+
 (à venir)
 
 *Modules*
@@ -298,6 +303,7 @@ Puzzles algorithmiques
     :maxdepth: 2
 
     notebooks/_gs2a_puzzle
+    notebooks/_gs2a_puzzle_ml
 
 Certains sont tirés de plusieurs sites dont
 `Google Code Jam <https://code.google.com/codejam/contests.html>`_.
