@@ -70,7 +70,7 @@ class TestHelpGenStatHelper(unittest.TestCase):
             nbfound.add(rl[1])
             rows.append(rl[:2] + rl[-2:] + [r[1].split("_doc")[-1]])
         self.assertTrue(counts.get("ref", 0) > 0)
-        self.assertTrue(counts.get(None, 0) > 0)
+        # self.assertTrue(counts.get(None, 0) > 0)
         self.assertTrue(counts["title"] > 0)
         self.assertTrue(len(nbfound) > 8)
         self.assertIn("td_note_2015.ipynb", nbfound)
