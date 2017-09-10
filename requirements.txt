@@ -55,6 +55,7 @@ sphinxjp.themes.revealjs
 sphinxjp.themes.sphinxjp
 sphinx_rtd_theme
 tensorflow
+tkinterquickhelper
 tqdm
 treeinterpreter
 tutormagic
