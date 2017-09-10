@@ -27,6 +27,7 @@ mpld3
 mutagen
 opencv-python
 plotly
+psutil
 pycodestyle>=2.0.0
 pydocstyle
 pydub

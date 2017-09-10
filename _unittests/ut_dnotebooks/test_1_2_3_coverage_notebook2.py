@@ -128,7 +128,7 @@ class TestNotebook123Coverage2(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        self.a_test_notebook_runner("ml_timeseries_base", "td2a")
+        self.a_test_notebook_runner("ml_timeseries_base", "2a")
 
 
 if __name__ == "__main__":
