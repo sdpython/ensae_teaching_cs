@@ -32,6 +32,11 @@ Webscrapping et API
 
 |pyecopng| |pystatpng|
 
+.. toctree::
+    :maxdepth: 1
+
+    notebooks/TD2A_eco_les_API
+
 *Notebooks*
 
 .. toctree::

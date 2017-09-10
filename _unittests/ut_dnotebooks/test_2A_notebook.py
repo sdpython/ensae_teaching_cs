@@ -45,7 +45,7 @@ from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_mis
 class TestNotebookRunner2a_ (unittest.TestCase):
 
     def setUp(self):
-        add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
+        add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
                                         __file__, hide=True)
 
     def test_notebook_runner_2a(self):
@@ -61,16 +61,17 @@ class TestNotebookRunner2a_ (unittest.TestCase):
         keepnote = ls_notebooks("2a")
 
         def filter(i, n):
+            if "seance_5" in n:
+                return False
             if not sys.platform.startswith("win") and "_convert" in n:
                 return False
-            if "git_" not in n and "python_r" not in n and "csharp" not in n:
-                return True
             if is_travis_or_appveyor() and "notebook_convert.ipynb" in n:
                 # this one requires pandoc
                 return False
-            if "seance_5_intro_et_json" in n:
+            if "git_" not in n and "python_r" not in n and "csharp" not in n:
+                return True
+            else:
                 return False
-            return False
 
         if is_travis_or_appveyor() == "travis":
             warnings.warn("execution does not stop")

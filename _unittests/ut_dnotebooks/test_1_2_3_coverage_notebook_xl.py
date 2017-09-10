@@ -60,14 +60,6 @@ class TestNotebook123CoverageXL(unittest.TestCase):
                           fLOG=fLOG, clean_function=clean_function_1a,
                           dump=src.ensae_teaching_cs)
 
-    def test_notebook_runner_clustering_enonce(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        self.a_test_notebook_runner_1a("td2a_clustering_enonce", "td2a_ml")
-
 
 if __name__ == "__main__":
     unittest.main()

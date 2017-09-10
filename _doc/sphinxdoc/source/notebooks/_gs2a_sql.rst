@@ -7,7 +7,7 @@ SQL et Données structurées
 .. toctree::
     :maxdepth: 2
 
-    td2a_eco_sql_enonce
+    td2a_eco_sql
     td2a_eco_sql_correction
     td2a_eco_exercice_de_fin_de_seance
     td2a_cenonce_session_5

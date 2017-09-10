@@ -54,7 +54,7 @@ class TestNotebookRunner2a_5_Dask (unittest.TestCase):
             OutputPrint=__name__ == "__main__")
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
         temp = get_temp_folder(__file__, "temp_notebook2a_5")
-        keepnote = ls_notebooks("td2a")
+        keepnote = ls_notebooks("2a")
         execute_notebooks(temp, keepnote, (lambda i, n: "_5" in n),
                           fLOG=fLOG, dump=src.ensae_teaching_cs)
 

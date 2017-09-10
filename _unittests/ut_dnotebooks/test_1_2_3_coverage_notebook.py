@@ -72,13 +72,13 @@ class TestNotebook123Coverage(unittest.TestCase):
 
         self.a_test_notebook_runner_1a("pp_exo_deviner_un_nombre", "td1a")
 
-    def test_notebook_runner_clustering_correction(self):
+    def test_notebook_runner_clustering(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        self.a_test_notebook_runner_1a("td2a_clustering_correction", "td2a_ml")
+        self.a_test_notebook_runner_1a("td2a_clustering", "td2a_ml")
 
     def test_notebook_session8_wikiroot(self):
         fLOG(
