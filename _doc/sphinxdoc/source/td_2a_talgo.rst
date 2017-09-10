@@ -80,6 +80,11 @@ Site web
 Jupyter et les commandes magiques
 +++++++++++++++++++++++++++++++++
 
+.. toctree::
+    :maxdepth: 1
+
+    notebooks/jupyter_custom_magics
+
 |pystatpng|
 
 *Notebooks*
