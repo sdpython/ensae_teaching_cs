@@ -23,14 +23,14 @@ qu'on peut résoudre grâce à un algorithme et un peu d'imagination.
 Algorithmes illustrés
 =====================
 
-Finance
+*Finance*
 
 .. toctree::
     :maxdepth: 1
 
     specials/finance_autostrat
 
-Graphes
+*Graphes*
 
 .. toctree::
     :maxdepth: 1
@@ -41,7 +41,7 @@ Graphes
     notebooks/expose_rwr_recommandation
     notebooks/expose_TSP
 
-Images
+*Images*
 
 .. toctree::
     :maxdepth: 1
@@ -49,7 +49,7 @@ Images
     specials/image_synthese
     specials/corde
 
-Puzzles
+*Puzzles*
 
 .. toctree::
     :maxdepth: 1
@@ -59,6 +59,13 @@ Puzzles
     specials/puzzle_girafe
     specials/hermionne
     specials/sudoku
+
+*Streaming*
+
+.. toctree::
+    :maxdepth: 1
+
+    notebooks/BJKST
 
 .. index:: entretien, entretien d'embauche, algorithme
 

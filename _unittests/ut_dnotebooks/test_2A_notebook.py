@@ -68,6 +68,8 @@ class TestNotebookRunner2a_ (unittest.TestCase):
             if is_travis_or_appveyor() and "notebook_convert.ipynb" in n:
                 # this one requires pandoc
                 return False
+            if "seance_5_intro_et_json" in n:
+                return False
             return False
 
         if is_travis_or_appveyor() == "travis":

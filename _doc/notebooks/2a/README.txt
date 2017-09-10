@@ -1,8 +1,8 @@
 
-2A - Techniques de data scientiste
-----------------------------------
+2A - Exposés, Techniques de data scientiste
+-------------------------------------------
 
-Ces notebooks abordent peu de théories, surtout des astuces
+Ces notebooks abordent peu de théorie, en majorité des astuces
 pour améliorer son quotidien de data scientiste.
 
 
