@@ -9,16 +9,10 @@ Plan
 
 Les cours et séances se déroulent sur 8 séances de 3h
 lundi matin. Cette année le cours se diversifie avec des
-pistes :
-
-* **Stat** : Les sessions abordent le machine learning, le traitement du langage,
-  le traitement de gros volumes de données, les puzzles algorithmiques.
-  Il est préférable d'avoir déjà programmé, d'avoir déjà utilisé
-  le calcul matriciel.
-* **Eco** : Les sessions abordent le calcul matriciel,
-  le machine learning, les graphes, le traitement du langage,
-  le webscrapping.
-
+piste *Stat* et *Eco* qui correspondent aux profils décrits
+dans :ref:`l-td2a-notions`. Un compte **smlack**
+`python-ensae-2a.slack.com <https://python-ensae-2a.slack.com/>`_
+a été créé pour faciliter les échanges, annonces et questions.
 Une compétition sera ouverte le premier jour et
 fermée à la dernière session où les résultas et les idées seront
 discutées.
@@ -58,7 +52,7 @@ discutées.
         Données textuelles, variables catégorielles
     * - 17/10 (5)
       - Deep learning, Keras
-      - Interprétabilité des modèles, problèmes de classification binaire
+      - Web scrapping, API
     * - 24/10 (6)
       - Exercice sur un problèm de ranking, moteur de recherche,
         machine learning données cryptées
@@ -66,7 +60,7 @@ discutées.
         séries temporelles
     * - 7/11 (7)
       - Revue de compétition Kaggle, deep learning
-      - Web scrapping, API
+      - Interprétabilité des modèles, problèmes de classification binaire
     * - 14/11 (8)
       - Transfer Learning, Présentation des projets
       - Construction d'un site web, retour sur la compétition,
@@ -77,5 +71,5 @@ Intervenants
 
 `Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_,
 Anne Muller, Elodie Royant, Antoine Thabault,
-Antoine Ly, Benjamin Donnot,
+Antoine Ly, Benjamin Donnot, Eliot Barril,
 Gaël Varoquaux.
