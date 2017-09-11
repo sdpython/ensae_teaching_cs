@@ -67,12 +67,22 @@ class TestNotebookRunner2aAlgo(unittest.TestCase):
                 return False
             return True
 
+        def clean_function_1a_upgraded(code):
+            code = clean_function_1a(code)
+            rep = "[1000, 2000, 5000, 10000, 12000, 15000, 17000, 20000]"
+            by = "[1000, 2000]"
+            code = code.replace(rep, by)
+            rep = "[10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000]"
+            by = "[10, 20, 50, 100, 200]"
+            code = code.replace(rep, by)
+            return code
+
         if is_travis_or_appveyor() == "travis":
             # execution does not stop
             return
 
         execute_notebooks(temp, keepnote, filter, fLOG=fLOG,
-                          clean_function=clean_function_1a,
+                          clean_function=clean_function_1a_upgraded,
                           dump=src.ensae_teaching_cs)
 
 
