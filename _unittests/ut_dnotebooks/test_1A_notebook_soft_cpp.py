@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=17s)
+@brief      test log(time=5s)
 
 notebook test
 """
@@ -43,7 +43,7 @@ from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
 
 
-class TestNotebookRunner1a_soft(unittest.TestCase):
+class TestNotebookRunner1a_soft_cpp(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper", "mlstatpy"],
@@ -58,7 +58,7 @@ class TestNotebookRunner1a_soft(unittest.TestCase):
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         keepnote = ls_notebooks("td1a_soft")
         execute_notebooks(temp, keepnote,
-                          lambda i, n: "csharp" not in n and "edit_correction" not in n,
+                          lambda i, n: "edit_correction" in n,
                           fLOG=fLOG,
                           clean_function=clean_function_1a,
                           dump=src.ensae_teaching_cs)
