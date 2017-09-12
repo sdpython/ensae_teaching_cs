@@ -2,7 +2,7 @@
 .. _td2a-competitions-ml-2016:
 
 Année 2016
-----------
+++++++++++
 
 L'objectif est de prédire la probabilité de défaut de paiement d'utilisateurs. 
 On dispose de 23 variables et la variable à prédire est binaire. Chaque participant 
