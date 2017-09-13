@@ -170,6 +170,7 @@ Clustering
 * `Scalable Density-Based Clustering with Quality Guarantees using Random Projections <http://alumni.cs.ucr.edu/~mvlachos/erc/projects/density-based/paper.pdf>`_
 * `Clustering Via Decision Tree Construction <http://web.cs.ucla.edu/~wwc/course/cs245a/CLTrees.pdf>`_
   (implémentation en python `dimitrs/CLTree <https://github.com/dimitrs/CLTree>`_)
+* `Spectral Clustering Based on Local PCA <http://www.jmlr.org/papers/volume18/14-318/14-318.pdf>`_
 
 *Modules*
 
@@ -467,6 +468,7 @@ Modèles bayésiens
 * `PyMC3 <https://pymc-devs.github.io/pymc3/notebooks/getting_started.html>`_
 * `bayespy <http://bayespy.org/en/latest/>`_
 * `kabuki <https://pypi.python.org/pypi/kabuki/>`_
+* `bnpy <https://github.com/bnpy/bnpy>`_
 
 Factorization Machines
 ++++++++++++++++++++++

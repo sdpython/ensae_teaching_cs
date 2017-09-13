@@ -1,0 +1,24 @@
+
+.. blogpost::
+    :title: Quelques papiers que j'aimerais avoir le temps de lire
+    :keywords: articles
+    :date: 2017-09-13
+    :categories: biblio
+
+    * `Two New Approaches to Compressed Sensing Exhibiting Both Robust Sparse Recovery and the Grouping Effect <http://www.jmlr.org/papers/volume18/14-453/14-453.pdf>`_
+    * `On the Consistency of Ordinal Regression Methods <http://www.jmlr.org/papers/volume18/15-495/15-495.pdf>`_
+    * `Lens Depth Function and k-Relative Neighborhood Graph: Versatile Tools for Ordinal Data Analysis <http://www.jmlr.org/papers/volume18/16-061/16-061.pdf>`_
+    * `Joint Label Inference in Networks <http://www.jmlr.org/papers/volume18/16-214/16-214.pdf>`_
+    * `Dense Distributions from Sparse Samples: Improved Gibbs Sampling Parameter Estimators for LDA <http://www.jmlr.org/papers/volume18/16-526/16-526.pdf>`_
+    * `Fundamental Conditions for Low-CP-Rank Tensor Completion <http://www.jmlr.org/papers/volume18/17-189/17-189.pdf>`_
+    * `Averaged Collapsed Variational Bayes Inference <http://www.jmlr.org/papers/volume18/14-249/14-249.pdf>`_
+    * `Communication-efficient Sparse Regression <http://www.jmlr.org/papers/volume18/16-002/16-002.pdf>`_
+    * `Distributed Sequence Memory of Multidimensional Inputs in Recurrent Networks <http://www.jmlr.org/papers/volume18/16-270/16-270.pdf>`_
+    * `Automatic Differentiation Variational Inference <http://www.jmlr.org/papers/volume18/16-107/16-107.pdf>`_
+    * `A Unified Formulation and Fast Accelerated Proximal Gradient Method for Classification <http://www.jmlr.org/papers/volume18/16-274/16-274.pdf>`_
+    * `Breaking the Curse of Dimensionality with Convex Neural Networks <http://www.jmlr.org/papers/volume18/14-546/14-546.pdf>`_
+    * `Preference-based Teaching <http://www.jmlr.org/papers/volume18/16-460/16-460.pdf>`_
+    * `Online Bayesian Passive-Aggressive Learning∗ <http://www.jmlr.org/papers/volume18/14-188/14-188.pdf>`_
+    * `Learning Local Dependence In Ordered Data <http://www.jmlr.org/papers/volume18/16-198/16-198.pdf>`_
+    * `Explaining the Success of AdaBoost and Random Forests as Interpolating Classifiers <http://www.jmlr.org/papers/volume18/15-240/15-240.pdf>`_
+    * `Clustering from General Pairwise Observations with Applications to Time-varying Graphs∗ <http://www.jmlr.org/papers/volume18/15-659/15-659.pdf>`_

@@ -309,6 +309,7 @@ Anonymisation des données
 * `Preserving Privacy of Continuous High-dimensional Data with Minimax Filters <http://www.jmlr.org/proceedings/papers/v38/hamm15.pdf>`_
 * `Privacy for Free: Posterior Sampling and Stochastic Gradient Monte Carlo <http://www.jmlr.org/proceedings/papers/v37/wangg15.pdf>`_
 * `Privatics (INRIA) <https://team.inria.fr/privatics/>`_
+* `Differential Privacy for Bayesian Inference through Posterior Sampling∗ <http://www.jmlr.org/papers/volume18/15-257/15-257.pdf>`_
 
 *Algorithmes*
 
@@ -457,6 +458,7 @@ exploitable par les algorithmes d'apprentissage.
   `corenlpy <https://github.com/enewe101/corenlpy>`_
 * `lda2vec <https://github.com/cemoody/lda2vec>`_
 * `glove-python <https://github.com/maciejkula/glove-python>`_
+* `tethne <http://diging.github.io/tethne/>`_
 
 *Modules moins ML*
 
