@@ -35,7 +35,7 @@ install:
   - "%PYTHON%\\Scripts\\pip install pygame"
   - "%PYTHON%\\Scripts\\pip install pydub smart_open"
   - "%PYTHON%\\Scripts\\pymy_install3 opencv_python"
-  - "%PYTHON%\\Scripts\\pymy_install3 yaml gensim tables"
+  - "%PYTHON%\\Scripts\\pymy_install3 yaml gensim tables blosc"
   - "%PYTHON%\\Scripts\\pymy_install3 psycopg2 nltk pympler theano pyproj"
   - "%PYTHON%\\Scripts\\pip install https://github.com/sdpython/pyPdf/archive/trunk.zip"
   - "%PYTHON%\\Scripts\\pip install python-jenkins tutormagic"

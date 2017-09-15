@@ -5,6 +5,7 @@ babel!=2.0
 bayespy
 beautifulsoup4
 blockdiag
+blosc
 bqplot
 chardet
 coverage
