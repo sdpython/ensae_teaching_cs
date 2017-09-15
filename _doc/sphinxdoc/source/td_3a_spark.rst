@@ -8,7 +8,7 @@ Installation de Spark en local
 Installation de Spark sous Windows
 ++++++++++++++++++++++++++++++++++
 
-Ces instructions ont été testées le **2016/11/28**.
+Ces instructions ont été testées le **2017/09/14**.
 Il est possible que cela change un peu dans un futur proche.
 
 Source `Installing Spark on a Windows PC <https://www.ukdataservice.ac.uk/media/604421/installing-spark-on-a-windows-pc.pdf>`_.
@@ -26,7 +26,7 @@ Source `Installing Spark on a Windows PC <https://www.ukdataservice.ac.uk/media/
 
    ::
 
-        set PATH=%PATH%;c:\Python35_x64;c:\Python35_x64\Scripts
+        set PATH=%PATH%;c:\Python36_x64;c:\Python36_x64\Scripts
         cd <spark>\bin
         pyspark
 
@@ -38,10 +38,10 @@ Source `Installing Spark on a Windows PC <https://www.ukdataservice.ac.uk/media/
               ____              __
              / __/__  ___ _____/ /__
             _\ \/ _ \/ _ `/ __/  '_/
-           /__ / .__/\_,_/_/ /_/\_\   version 2.0.2
+           /__ / .__/\_,_/_/ /_/\_\   version 2.2.0
               /_/
 
-        Using Python version 3.5.2 (v3.5.2:4def2a2901a5, Jun 25 2016 22:18:55)
+        Using Python version Python 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 18:41:36)
         SparkSession available as 'spark'.
         >>>
 
@@ -61,14 +61,14 @@ Source `Installing Spark on a Windows PC <https://www.ukdataservice.ac.uk/media/
 
    ::
 
-        set HADOOP_HOME=C:\username\spark\spark-2.0.2-bin-hadoop2.7
-        set SPARK_HOME=C:\username\spark\spark-2.0.2-bin-hadoop2.7
+        set HADOOP_HOME=C:\username\spark\spark-2.2.0-bin-hadoop2.7
+        set SPARK_HOME=C:\username\spark\spark-2.2.0-bin-hadoop2.7
 
 #. Ajouter ce même répertoire à la variable d'environnement ``%PATH%`` :
 
    ::
 
-        set PATH=%PATH%;C:\username\spark\spark-2.0.2-bin-hadoop2.7\bin
+        set PATH=%PATH%;C:\username\spark\spark-2.2.0-bin-hadoop2.7\bin
 
 #. Dernier test, on exécute (il faut créer le répertoire ``\tmp\hive``) :
 
@@ -91,7 +91,7 @@ Source `Installing Spark on a Windows PC <https://www.ukdataservice.ac.uk/media/
 #. Test final : ``pyspark``.
 
 L'ensemble de ces instructions est regroupés dans le script :
-`run_pyspark_notebook.bat <https://github.com/sdpython/ensae_teaching_cs/blob/master/run_pyspark_notebook.bat>`_.
+:ref:`run_pyspark.bat <l-spark-script-windows>`.
 
 .. _l-petit-exemple-pyspark:
 
@@ -184,8 +184,8 @@ en fonction de vos choix lors de l'installation.
 
    ::
 
-        wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.2-bin-hadoop2.7.tgz
-        tar xvf spark-2.0.2-bin-hadoop2.7.tgz
+        wget http://d3kbcqa49mib13.cloudfront.net/spark-2.2.0-bin-hadoop2.7.tgz
+        tar xvf spark-2.2.0-bin-hadoop2.7.tgz
 
 #. Définir les chemins d'accès (les deux premières lignes sont à supprimer si vous souhaitez
    utiliser la ligne de commande et non le notebook :
@@ -198,7 +198,7 @@ en fonction de vos choix lors de l'installation.
         export PYSPARK_PYTHON=anaconda3/bin/python
         export PATH=anaconda3/bin:$PATH
 
-#. Exécuter *pyspark* : ``spark-2.0.2-bin-hadoop2.7/bin/pyspark``
+#. Exécuter *pyspark* : ``spark-2.2.0-bin-hadoop2.7/bin/pyspark``
 
 Il ne reste plus qu'à tester le :ref:`l-petit-exemple-pyspark`
 pour vérifier que tout marche bien.
@@ -243,6 +243,8 @@ de l'écrire une bonne fois pour toute dans un script batch, d'extension ``.bat`
 et ``.sh`` sous Linux et Mac. Il suffit de créer ce fichier et de l'enregistrer sur le bureau
 pouvoir lancer pyspark en un double clic.
 
+.. _l-spark-script-windows:
+
 Windows
 ^^^^^^^
 
@@ -256,9 +258,9 @@ car le système va le confondre avec celui du même nom installé par Spark.
 
 ::
 
-    set local_pyspark=c:\%USERNAME%\spark\spark-2.0.2-bin-hadoop2.7
+    set local_pyspark=c:\%USERNAME%\spark\spark-2.2.0-bin-hadoop2.7
     set local_python=c:\Python35_x64
-    set notebook_dir=c:\Users\username
+    set notebook_dir=c:\Users\%USERNAME%
 
     :hive:
     if NOT EXIST \tmp mkdir \tmp
@@ -335,15 +337,15 @@ Voici ce que vous devriez avoir :
 
 ::
 
-    LOCAL_PYSPARK            = c:\<username>\spark\spark-2.0.2-bin-hadoop2.7
+    LOCAL_PYSPARK            = c:\<username>\spark\spark-2.2.0-bin-hadoop2.7
     PYSPARK_DRIVER_PYTHON    = jupyter-notebook
     PYSPARK_PYTHON           = c:\Python35_x64\python
     PYSPARK_SUBMIT_ARGS      = "--name" "PySparkShell" "pyspark-shell"
     SPARK_CMD                = set PYSPARK_SUBMIT_ARGS="--name" "PySparkShell" "pyspark-shell" && jupyter-notebook
     SPARK_ENV_LOADED         = 1
     SPARK_HIVE               = true
-    SPARK_HOME               = c:\<username>\spark\spark-2.0.2-bin-hadoop2.7\bin\..
-    SPARK_JARS_DIR           = "c:\<username>\spark\spark-2.0.2-bin-hadoop2.7\bin\..\jars"
+    SPARK_HOME               = c:\<username>\spark\spark-2.2.0-bin-hadoop2.7\bin\..
+    SPARK_JARS_DIR           = "c:\<username>\spark\spark-2.2.0-bin-hadoop2.7\bin\..\jars"
     SPARK_SCALA_VERSION      = 2.10
     _SPARK_CMD_USAGE         = Usage: bin\pyspark.cmd [options]
 
