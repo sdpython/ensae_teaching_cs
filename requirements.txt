@@ -41,6 +41,7 @@ pympler
 pymyinstall
 pyquickhelper>=1.5.2197
 pyrsslocal
+pytables
 python-jenkins
 qgrid
 semantic_version
