@@ -2,15 +2,19 @@
 @file
 @brief Set up a jenkins server with all the necessary job
 """
+import os
 import re
 from pyquickhelper.loghelper import noLOG
 from pyquickhelper.jenkinshelper import setup_jenkins_server_yml
 
 
-def engines_default():
+def engines_default(prefix="c:\\", prefix_python="c:\\", prefix_conda="c:\\"):
     """
-    returns a dictionary with default values for Jenkins server
-
+    Returns a dictionary with default values for a Jenkins server.
+    
+    @param      prefix          prefix for Jenkins location
+    @param      prefix_python   prefix for Python distribution
+    @param      prefix_conda    prefix for Anaconda or Miniconda distribution
     @return     dictionary
 
     .. warning::
@@ -18,17 +22,16 @@ def engines_default():
         Virtual environment with conda must be created on the same disk
         as the original interpreter. The other scenario is not supported.
     """
-    res = dict(anaconda2="d:\\Anaconda2",
-               anaconda3="d:\\Anaconda3",
-               py36="c:\\Python36_x64",
-               py35="c:\\Python35_x64",
-               py34="c:\\Python34_x64",
-               py27="c:\\Python27_x64",
-               default="c:\\Python35_x64",
-               winpython="c:\\WinPython36_x64\\python-3.6.0.amd64",
-               Python35pyq="D:\\jenkins\\venv\\py35\\pyq\\Scripts")
+    res = dict(anaconda2=os.path.join(prefix_conda, "Anaconda2"),
+               anaconda3=os.path.join(prefix_conda, "Anaconda3"),
+               py36=os.path.join(prefix_python, "Python36_x64"),
+               py35=os.path.join(prefix_python, "Python35_x64"),
+               py27=os.path.join(prefix_python, "Python27_x64"),
+               default=os.path.join(prefix_python, "Python36_x64"),
+               winpython=os.path.join(prefix_python, "WinPython36_x64", "python-3.6.2.amd64"),
+               Python35pyq=os.path.join(prefix, "jenkins", "venv", "py35", "pyq", "Scripts"),
+               Python36pyq=os.path.join(prefix, "jenkins", "venv", "py36", "pyq", "Scripts"))
     res["Python27"] = res["py27"]
-    res["Python34"] = res["py34"]
     res["Python35"] = res["py35"]
     res["Python36"] = res["py36"]
     res["Anaconda2"] = res["anaconda2"]
