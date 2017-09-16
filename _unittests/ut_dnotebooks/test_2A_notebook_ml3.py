@@ -1,11 +1,12 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=73s)
+@brief      test log(time=77s)
 """
 
 import sys
 import os
 import unittest
+import warnings
 import shutil
 
 try:
@@ -42,13 +43,13 @@ from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
 
 
-class TestNotebookRunner2aAlgo(unittest.TestCase):
+class TestNotebookRunner2aML3(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
                                         __file__, hide=True)
 
-    def test_notebook_runner_2a_algo(self):
+    def test_notebook_runner_2a_ml3(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -58,38 +59,34 @@ class TestNotebookRunner2aAlgo(unittest.TestCase):
             return
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         from src.ensae_teaching_cs.data import simple_database
-        temp = get_temp_folder(__file__, "temp_notebook2a_algo")
-        keepnote = ls_notebooks("td2a_algo")
+        temp = get_temp_folder(__file__, "temp_notebook2a_eco")
+        keepnote = ls_notebooks("td2a_ml")
+        keepnote = [_ for _ in keepnote if "machine_learning" not in _]
         shutil.copy(simple_database(), temp)
 
         def filter(i, n):
             if "SNCF" in n:
                 return False
+            if "Scraping" in n:
+                return False
+            if "deep_python" in n:
+                return False
+            if "h2o" in n:
+                # h2o is not working from a virtual environment
+                return False
+            if "td2a" in os.path.split(n)[-1]:
+                # already tested by others tests
+                return False
+            if "libraries" not in n:
+                return False
             return True
 
-        def clean_function_1a_upgraded(code):
-            code = clean_function_1a(code)
-            rep = "[1000, 2000, 5000, 10000, 12000, 15000, 17000, 20000]"
-            by = "[1000, 2000]"
-            code = code.replace(rep, by)
-            rep = "[10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000]"
-            by = "[10, 20, 50, 100, 200]"
-            code = code.replace(rep, by)
-            return code
-
         if is_travis_or_appveyor() == "travis":
-            # execution does not stop
+            warnings.warn("execution does not stop")
             return
 
-        fold = os.path.dirname(keepnote[0])
-        for png in os.listdir(fold):
-            if ".png" not in png:
-                continue
-            fLOG("copy", png)
-            shutil.copy(os.path.join(fold, png), temp)
-
         execute_notebooks(temp, keepnote, filter, fLOG=fLOG,
-                          clean_function=clean_function_1a_upgraded,
+                          clean_function=clean_function_1a,
                           dump=src.ensae_teaching_cs)
 
 

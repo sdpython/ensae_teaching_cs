@@ -77,6 +77,8 @@ class TestNotebookRunner2aML2(unittest.TestCase):
             if "td2a" in os.path.split(n)[-1]:
                 # already tested by others tests
                 return False
+            if "libraries" in n:
+                return False
             return True
 
         if is_travis_or_appveyor() == "travis":
