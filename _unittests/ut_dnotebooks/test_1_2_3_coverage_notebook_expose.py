@@ -38,7 +38,7 @@ except ImportError:
     import pyquickhelper as skip_
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, is_travis_or_appveyor
 
 
 class TestNotebook123CoverageExpose(unittest.TestCase):
@@ -118,6 +118,9 @@ class TestNotebook123CoverageExpose(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
+        if is_travis_or_appveyor() == "appveyor":
+            # pytables has an issue
+            return
         self.a_test_notebook_runner("ml_huge", "expose")
 
 
