@@ -32,7 +32,8 @@ discutées.
         itérateurs, dask, parallélisation, algorithme streaming
       - Introduction du cours,
         présentation de la compétition,
-        pandas, numpy, matplotlib, manipulation de données
+        pandas, numpy, matplotlib, manipulation de données,
+        :ref:`notes <l-route2017-eco1>`
     * - 26/9 (2)
       - Algorithmes, Python et C++, code de scikit-learn,
         Notion de pipelines, mise en production de modèles, test unitaires,
@@ -73,3 +74,35 @@ Intervenants
 Anne Muller, Elodie Royant, Antoine Thabault,
 Antoine Ly, Benjamin Donnot, Eliot Barril,
 Gaël Varoquaux.
+
+Notes
++++++
+
+Liens, notebooks prévus pour les séances pratiques.
+
+.. contents::
+    :local:
+
+.. _l-route2017-eco1:
+
+Séance 1 Eco
+^^^^^^^^^^^^
+
+* Rappels sur des bases du langage :epkg:`Python` : :ref:`td2ecorappels1arst`
+* Manipulation de fichiers : :ref:`td1acenoncesession4rst`
+* Manipulation des données : :ref:`td2acenoncesession2arst`,
+  :ref:`td2acorrectionsession2arst`, :ref:`td2acenoncesession1rst`,
+  :ref:`td2acorrectionsession1rst`
+
+*Notebooks*
+
+* `try.jupyter.org <https://try.jupyter.org/>`_
+* `Notebook <http://nbviewer.jupyter.org/github/ipython/ipython/blob/3.x/examples/Notebook/Index.ipynb>`_
+
+*Compléments*
+
+* Rappels sur des bases du langage :epkg:`Python` : :ref:`td1acenoncesession1rst`,
+  :ref:`td1acenoncesession2rst`, :ref:`td1acenoncesession3rst`, :ref:`codelistetuplerst`,
+  :ref:`structuresdonneesconversionrst`
+* Notebook : :ref:`td2acenoncesession2crst`
+* Compétation : :ref:`solution2016creditclementrst`
