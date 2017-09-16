@@ -6,6 +6,7 @@
 import sys
 import os
 import unittest
+import shutil
 
 
 try:
@@ -57,6 +58,12 @@ class TestNotebookRunner1a_ (unittest.TestCase):
         self.assertTrue(total_size)
         temp = get_temp_folder(__file__, "temp_notebook1a_part1")
         keepnote = ls_notebooks("1a")
+        fold = os.path.dirname(keepnote[0])
+        for png in os.listdir(fold):
+            if ".png" not in png:
+                continue
+            fLOG("copy", png)
+            shutil.copy(os.path.join(fold, png), temp)
         self.assertTrue(len(keepnote) > 0)
         execute_notebooks(temp, keepnote,
                           lambda i, n: "deviner" not in n and "exercice" in n,
