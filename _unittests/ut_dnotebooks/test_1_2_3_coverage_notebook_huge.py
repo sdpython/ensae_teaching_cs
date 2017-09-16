@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=80s)
+@brief      test log(time=12s)
 """
 
 import sys
@@ -38,10 +38,10 @@ except ImportError:
     import pyquickhelper as skip_
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, is_travis_or_appveyor
 
 
-class TestNotebook123CoverageExpose(unittest.TestCase):
+class TestNotebook123CoverageHuge(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper", "mlstatpy"],
@@ -64,53 +64,32 @@ class TestNotebook123CoverageExpose(unittest.TestCase):
                           clean_function=clean_function_1a,
                           dump=src.ensae_teaching_cs)
 
-    def test_notebook_runner_expose_bjkst(self):
+    def test_notebook_runner_ml_huge(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        self.a_test_notebook_runner("BJKST", "expose")
+        if is_travis_or_appveyor() == "appveyor":
+            # pytables has an issue
+            # return
+            pass
 
-    def test_notebook_runner_expose_einstein(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
+        if sys.platform.startswith("win"):
+            try:
+                from tables import IsDescription
+            except ImportError:
+                import numpy
+                fold = os.path.abspath(os.path.dirname(numpy.__file__))
+                fold = os.path.normpath(os.path.join(fold, "..", "tables"))
+                if not os.path.exists(fold):
+                    raise ImportError(
+                        "tables is not installed in '{0}'".format(fold))
+                os.environ["PATH"] = os.environ.get("PATH", "") + ";" + fold
+                from tables import IsDescription
+                self.assertTrue(IsDescription is not None)
 
-        self.a_test_notebook_runner("einstein", "expose")
-
-    def test_notebook_runner_expose_rwr(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        self.a_test_notebook_runner("rwr", "expose")
-
-    def test_notebook_runner_graphe(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        self.a_test_notebook_runner("graphe", "expose")
-
-    def test_notebook_runner_hash(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        self.a_test_notebook_runner("hash", "expose")
-
-    def test_notebook_runner_ml_feature(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        self.a_test_notebook_runner("ml_feature", "expose")
+        self.a_test_notebook_runner("ml_huge", "expose")
 
 
 if __name__ == "__main__":

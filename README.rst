@@ -108,8 +108,8 @@ A local PyPi server needs to be installed:
 
 If some Python scripts use *keyring* to retrieve passwords,
 the Jenkins service needs to authentify. On Windows, it goes through ``services.msc``.
-To test Python versions Python 2.7, il faut créer un environnement virtuel et installer
-pyquickhelper :
+Version for Python 2.7 can be tested with with a virtual environment
+and pyquickhelper:
 
 ::
 
