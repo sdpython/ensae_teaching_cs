@@ -49,15 +49,15 @@ Source de données
   Les jeux **UCI** apparaissent dans de nombreux scientifiques.
 * *ML* `Data Science at Microsoft Research <http://research.microsoft.com/en-us/projects/data-science-initiative/default.aspx#datasets>`_
 * *ML* `Ensembles de données publics AWS (Amazon) <https://aws.amazon.com/public-data-sets/>`_, `AWS Public Data Sets <https://aws.amazon.com/datasets/>`_
-* *ML* `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_
+* *ML-graphes* `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_
 * *ML* `Data Analysis, Modeling and Machine Learning Group <http://ama.liglab.fr/resourcestools/datasets/>`_
 * *ML* `Microsoft Research Letor <http://research.microsoft.com/en-us/um/beijing/projects/letor/letor4dataset.aspx>`_
-* *ML* `170 millions courses de taxi à New-York <http://chriswhong.com/open-data/foil_nyc_taxi/>`_
+* *ML-big* `170 millions courses de taxi à New-York <http://chriswhong.com/open-data/foil_nyc_taxi/>`_
   (via l'article `Building Azure ML Models on the NYC Taxi Dataset <http://blogs.technet.com/b/machinelearning/archive/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset.aspx>`_)
-* *ML* `urls, spam, ... <http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html>`_, jeux de données utilisés
+* *ML-text* `urls, spam, ... <http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html>`_, jeux de données utilisés
   comme benchmark pour la libraire `libsvm <http://www.csie.ntu.edu.tw/~cjlin/libsvm/>`_
-* *ML* `Pascal Large Scale Learning Challenge <http://largescale.ml.tu-berlin.de/instructions/>`_
-* *ML* `Labeled Faces in the Wild <http://vis-www.cs.umass.edu/lfw/>`_ : 1323 images, 5749 personnes, 1680 personnes avec 2 ou plus d'images,
+* *ML-big* `Pascal Large Scale Learning Challenge <http://largescale.ml.tu-berlin.de/instructions/>`_
+* *ML-image* `Labeled Faces in the Wild <http://vis-www.cs.umass.edu/lfw/>`_ : 1323 images, 5749 personnes, 1680 personnes avec 2 ou plus d'images,
   lire `How well do facial recognition algorithms cope with a million strangers? <http://www.washington.edu/news/2016/06/23/how-well-do-facial-recognition-algorithms-cope-with-a-million-strangers/>`_
 * *ML* `List of datasets for machine learning research <https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research>`_
 * *musique* `Semantic Artist Similarity Dataset <http://mtg.upf.edu/download/datasets/semantic-similarity>`_
@@ -78,6 +78,7 @@ Source de données
 * *texte* `WordNet <https://wordnet.princeton.edu/wordnet/>`_, base de données anglaises sur le vocabulaire, la grammaire, les synonymes...
 * *texte* `dump wikipedia <https://dumps.wikimedia.org/backup-index.html>`_
 * *texte* `SQuAD The Stanford Question Answering Dataset <https://rajpurkar.github.io/SQuAD-explorer/>`_
+* *texte* `Multi-Domain Sentiment Dataset (version 2.0) <http://www.cs.jhu.edu/~mdredze/datasets/sentiment/>`_
 * *vidéo* `Jiku <http://www.jiku.org/index.html>`_, vidéo d'événements, de concerts
 * *vidéo* `YouTube 8M <https://research.google.com/youtube8m/people.html>`_, 8 millions de vidéo YouTube par Google
 * *vidéo* `YouTube 1M Sports <https://github.com/gtoderici/sports-1m-dataset>`_, 1 millions de vidéo annotées

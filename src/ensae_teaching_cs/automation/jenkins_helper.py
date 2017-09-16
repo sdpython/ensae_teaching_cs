@@ -11,7 +11,7 @@ from pyquickhelper.jenkinshelper import setup_jenkins_server_yml
 def engines_default(prefix="c:\\", prefix_python="c:\\", prefix_conda="c:\\"):
     """
     Returns a dictionary with default values for a Jenkins server.
-    
+
     @param      prefix          prefix for Jenkins location
     @param      prefix_python   prefix for Python distribution
     @param      prefix_conda    prefix for Anaconda or Miniconda distribution
@@ -28,8 +28,10 @@ def engines_default(prefix="c:\\", prefix_python="c:\\", prefix_conda="c:\\"):
                py35=os.path.join(prefix_python, "Python35_x64"),
                py27=os.path.join(prefix_python, "Python27_x64"),
                default=os.path.join(prefix_python, "Python36_x64"),
-               winpython=os.path.join(prefix_python, "WinPython36_x64", "python-3.6.2.amd64"),
-               Python35pyq=os.path.join(prefix, "jenkins", "venv", "py35", "pyq", "Scripts"),
+               winpython=os.path.join(
+                   prefix_python, "WinPython36_x64", "python-3.6.2.amd64"),
+               Python35pyq=os.path.join(
+                   prefix, "jenkins", "venv", "py35", "pyq", "Scripts"),
                Python36pyq=os.path.join(prefix, "jenkins", "venv", "py36", "pyq", "Scripts"))
     res["Python27"] = res["py27"]
     res["Python35"] = res["py35"]

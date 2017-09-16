@@ -6,6 +6,14 @@
 Compétitions
 ============
 
+.. contents::
+    :local:
+
+.. _l-competition-2017-2a:
+
+2017
+++++
+
 .. _l-competition-2016-2a:
 
 2016

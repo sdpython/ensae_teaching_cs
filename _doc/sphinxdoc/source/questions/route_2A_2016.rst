@@ -1,6 +1,10 @@
 
 .. _l-feuille-de-route-2016-2A:
 
+.. |slideslogo| image:: _static/slides_logo.png
+            :height: 20
+            :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html
+
 Feuille de route 2016
 =====================
 
@@ -112,6 +116,9 @@ Il n'y a pas qu'une seule solution, tout dépend des idées exposées durant la 
 En ce qui concerne les séances autour des algorithmes, il s'agit d'enrichir sa culture informatique
 car c'est devenu indispensable pour passer les entretiens d'embauche aujourd'hui.
 Ces séances sont composés d'exercices et de cours.
+La présentation
+`ENSAE 2A - Données, Machine Learning et Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html>`_
+donne un aperçu des thèmes abordés. |slideslogo|
 
 **Compétition**
 

@@ -175,8 +175,8 @@ en fonction de vos choix lors de l'installation.
 
    ::
 
-        wget https://repo.continuum.io/archive/Anaconda3-4.2.0-Linux-x86_64.sh
-        bash Anaconda3-4.2.0-Linux-x86_64.sh
+        wget https://repo.continuum.io/archive/Anaconda3-4.4.0-Linux-x86_64.sh
+        bash Anaconda3-4.4.0-Linux-x86_64.sh
         anaconda3/bin/conda update --all
 
 #. Aller à la page `Spark/downloads <http://spark.apache.org/downloads.html>`_,

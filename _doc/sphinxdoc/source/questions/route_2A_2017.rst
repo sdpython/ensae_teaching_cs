@@ -10,7 +10,7 @@ Plan
 Les cours et séances se déroulent sur 8 séances de 3h
 lundi matin. Cette année le cours se diversifie avec des
 piste *Stat* et *Eco* qui correspondent aux profils décrits
-dans :ref:`l-td2a-notions`. Un compte **smlack**
+dans :ref:`l-td2a-notions`. Un compte **slack**
 `python-ensae-2a.slack.com <https://python-ensae-2a.slack.com/>`_
 a été créé pour faciliter les échanges, annonces et questions.
 Une compétition sera ouverte le premier jour et

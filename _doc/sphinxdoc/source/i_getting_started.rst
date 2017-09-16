@@ -11,18 +11,18 @@ Getting started
 
 .. index:: R, Julia, WinPython, Anaconda, pyminstall, getting started
 
-Lorsqu'on fait des statistiques, le language Python est loin d'être
+Lorsqu'on fait des statistiques, le language :epkg:`Python` est loin d'être
 aussi complet que `R <https://www.r-project.org/>`_
 qui a été pensé dans ce but. Il faut lui ajouter plusieurs dizaines
 de modules. C'est à ce moment qu'on découvrir les subtilités dans les différents
 systèmes d'exploitations, les compilateurs, les dépendances, la ligne de commande.
-Ce paragraphe décrit un moyen d'installation Python sur les trois
+Ce paragraphe décrit un moyen d'installation :epkg:`Python` sur les trois
 systèmes principaux
 `Windows <http://www.microsoft.com/fr-fr/windows>`_,
 `OS X <http://www.apple.com/osx/>`_,
 `Linux <https://en.wikipedia.org/wiki/Linux>`_
 avec les modules nécessaires présentés dans ce cours.
-Le premier paragraphe explique comment installer rapidement Python,
+Le premier paragraphe explique comment installer rapidement :epkg:`Python`,
 il faudra lire les suivants si vos besoins vont au delà.
 
 .. _l-installation-courte:
@@ -31,8 +31,8 @@ En résumé : Anaconda
 ====================
 
 En résumé, le conseil le plus fréquent qu'on donne à ceux qui souhaitent
-installer Python est d'utiliser la distribution `Anaconda <https://www.continuum.io/downloads>`_.
-C'est l'équivalent de `R <https://www.r-project.org/>`_.
+installer :epkg:`Python` est d'utiliser la distribution :epkg:`Anaconda`.
+C'est l'équivalent de :epkg:`R`.
 Sans autre étape supplémentaire, elle permet de faire du calcul matriciel
 :epkg:`numpy`, de tracer des graphiques avec :epkg:`matplotlib`,
 de manipuler les données `pandas <http://pandas.pydata.org/>`_
@@ -42,7 +42,7 @@ La plupart des exercices proposés sur ce site n'utilisent pas plus que ce qui e
 dans cette distribution standard. Pour les autres,
 les instructions mentionnées ci-dessous fonctionnent sous Windows, Linux et Mac.
 
-* Installation `Anaconda <https://www.continuum.io/downloads>`_ (python 64 bit)
+* Installation :epkg:`Anaconda` (python 64 bit)
 * Mise à jour de la distribution avec ``conda update --all`` (en ligne de commande).
 
 Pour installer le module implémenté pour ce cours :
@@ -53,12 +53,11 @@ Windows
 =======
 
 Certains modules nécessitent une compilation C++.
-`Anaconda <https://www.continuum.io/downloads>`_
-fournit la plupart d'entre eux. Pour les autres, il faut allez à
+:epkg:`Anaconda` fournit la plupart d'entre eux. Pour les autres, il faut allez à
 `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
 Certains modules n'existent pas sous forme précompilée à moins de le faire soi-même.
 Et c'est ce que j'ai fait pour certains modules
-comme `dlib <http://dlib.net/>`_.
+comme :epkg:`dlib`.
 
 ::
 
@@ -118,9 +117,9 @@ pip, python et ligne de commande
 
 Le language python s'est doté d'un système de distribution de modules (ou *packages*)
 qui est aisément accessible depuis la `ligne de commande <http://fr.wikipedia.org/wiki/Interface_en_ligne_de_commande>`_.
-Sous Windows, on peut lancer la ligne de commande par la commande ``cmd``.
-Sous Linux ou OS/X, c'est une fenêtre terminal (Linux, OS/X).
-Il suffit alors de se déplacer dans le répertoire d'installation de Python ::
+Sous :epkg:`Windows`, on peut lancer la ligne de commande par la commande ``cmd``.
+Sous :epkg:`Linux` ou :epkg:`OS/X`, c'est une fenêtre terminal (:epkg:`Linux`, :epkg:`OS/X`).
+Il suffit alors de se déplacer dans le répertoire d'installation de :epkg:`Python` ::
 
     cd c:\Python36_x64\Scripts
 
@@ -136,9 +135,12 @@ Puis d'écrire :
 
     pip install <module>
 
-Sous Linux ou OS X (Apple), la ligne de commande s'appelle le `terminal <http://doc.ubuntu-fr.org/terminal>`_.
-Comme Python est déjà installé en version 2.7, je recommande l'installation de la distribution
-Anaconda en version 3.6 qui facilite la coexistence de plusieurs versions de Python. On procède de la même manière ::
+Sous :epkg:`Linux` ou :epkg:`OS/X` (Apple), la ligne de commande
+s'appelle le `terminal <http://doc.ubuntu-fr.org/terminal>`_.
+Comme :epkg:`Python` est déjà installé en version 2.7, je recommande
+l'installation de la distribution :epkg:`Anaconda` en version 3.6
+qui facilite la coexistence de plusieurs versions de :epkg:`Python`.
+On procède de la même manière ::
 
     cd /home/<alias>/anaconda3/bin
 
@@ -146,22 +148,23 @@ Puis ::
 
     pip install <module>
 
-Pour vous assurer que cela correspond bien à la version de Python souhaitée,
-il suffit de demander la version installée ::
+Pour vous assurer que cela correspond bien à la version de :epkg:`Python`
+souhaitée, il suffit de demander la version installée ::
 
     pip --version
 
-Sous Windows, pour l'ajout d'un module ponctuel,
+Sous :epkg:`Windows`, pour l'ajout d'un module ponctuel,
 si l'instruction ``pip install <module>`` ne fonctionne pas,
 c'est vraisemblablement parce que ce module contient une partie en C++.
 Dans ce cas, il faut aller voir sur ce site
 `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
-s'il est disponible. S'il ne l'est pas, l'installation du module est réservée aux experts.
+s'il est disponible. S'il ne l'est pas, l'installation du module est
+réservée aux experts.
 
 conda ou pip
 ++++++++++++
 
-:epkg:`Anaconda` maintient des versions de librairies Python.
+:epkg:`Anaconda` maintient des versions de librairies :epkg:`Python`.
 Pour tous les modules de cette liste,
 `Anaconda Package List <https://docs.continuum.io/anaconda/packages/pkg-docs>`_,
 il faut utiliser ``conda install <module>``.
@@ -169,8 +172,8 @@ Pour les autres, ``pip install <module>``.
 Cela ne fonctionne qu'avec la distribution
 :epkg:`Anaconda`.
 
-L'instruction ``pip install`` ne fonctionne pas sous Windows lorsque le module
-est implémenté en :epkg:`Python` et :epkg:`C++`.
+L'instruction ``pip install`` ne fonctionne pas sous :epkg:`Windows`
+lorsque le module est implémenté en :epkg:`Python` et :epkg:`C++`.
 C'est pourquoi il est préférable d'installer
 une version précompilée.
 
@@ -235,8 +238,9 @@ Configuration pour ces cours
 ++++++++++++++++++++++++++++
 
 Les notebooks utilisent le module :epkg:`pyensae`
-développé pour ces enseignements. Pour installer ses dépendances, il faut utiliser le module
-:epkg:`pymyinstall`. Les dépendances s'installent comme suit :
+développé pour ces enseignements. Pour installer ses dépendances,
+il faut utiliser le module :epkg:`pymyinstall`. Les dépendances
+s'installent comme suit :
 
     pymy_install3 --set=ensae_teaching_cs
     pip install ensae_teaching_cs
@@ -258,20 +262,22 @@ Distributions
 .. index:: anaconda, winpython
 
 * :epkg:`Anaconda` (Windows, Linux, Mac).
-  Sous Linux ou Mac, la distribution n'interfère pas avec la distribution existante
-  souvent différente. C'est un point très appréciable. Les modules de la distribution ne sont
-  pas tous à jour. Il faut penser à mettre à jour avec la commande ``conda install <module>``
-  depuis le répertoire ``Anaconda3/Scripts`` (``conda install cvxopt`` par exemple).
-  Il existe une version différente : `miniconda <http://conda.pydata.org/miniconda.html>`_.
-  La liste des packages manquant sera probablement différente.
+  Sous :epkg:`Linux` ou :epkg:`OS/X`, la distribution n'interfère pas
+  avec la distribution existante souvent différente. C'est un point très
+  appréciable. Les modules de la distribution ne sont
+  pas tous à jour. Il faut penser à mettre à jour avec la commande
+  ``conda install <module>`` depuis le répertoire ``Anaconda3/Scripts``
+  (``conda install cvxopt`` par exemple). Il existe une version différente :
+  :epkg:`miniconda`. La liste des packages manquant sera probablement différente.
   Il suffit d'écrire sur la ligne de commande ``conda update --all``
   pour mettre à jour tous les modules.
 
-* `WinPython <https://winpython.github.io/>`_ (Windows). Sous Windows, elle inclut
-  parfois `R <http://www.r-project.org/>`_ ou `Julia <http://julialang.org/>`_ (ces version ne sont
-  pas aussi à jour que la version principale). On passe alors
-  facilement de python à R ou Julia depuis le même notebooks.
-  Uniquement disponible sous Windows, cette installation a l'avantage de ne pas
+* `WinPython <https://winpython.github.io/>`_ (:epkg:`Windows`).
+  Sous :epkg:`Windows`, elle inclut parfois :epkg:`R` ou
+  :epkg:`Julia` (ces version ne sont pas aussi à jour que la
+  version principale). On passe alors facilement de python à :epkg:`R`
+  ou :epkg:`Julia` depuis le même notebooks. Uniquement disponible
+  sous :epkg:`Windows`, cette installation a l'avantage de ne pas
   nécessiter les droits administrateur pour être installée. Elle
   ne modifie pas les registres et on peut la recopier telle quelle sur une clé USB
   pour la recopier sur un autre ordinateur. On peut également préparer sa propre version
@@ -298,17 +304,15 @@ Les modules indispensables sont intégrés à la distribution
 
 *Les indispensables*
 
-* `dask <http://dask.pydata.org/en/latest/>`_ :
-  dataframe distribué et capables de gérer des gros volumes de données (> 5Go)
-* `Jupyter <http://jupyter.org/>`_ :
+* :epkg:`dask` : dataframe distribué et capables de gérer des gros volumes de données (> 5Go)
+* :epkg:`Jupyter` :
   gestion des notebooks (des pages blanches mélangeant code, équations, graphiques)
-* `matplotlib <http://matplotlib.org/>`_ : graphes scientifiques
-* `numpy <http://www.numpy.org/>`_ : calcul matriciel
-* `pandas <http://pandas.pydata.org/>`_ :
-  gestion de `DataFrame <http://en.wikipedia.org/wiki/Data_frame>`_
-* `Scipy <http://www.scipy.org/>`_ : calcul scientifiques
-* `scikit-learn <http://scikit-learn.org/stable/>`_ : machine learning, statistique descriptive
-* `statsmodels <http://statsmodels.sourceforge.net/>`_ : séries temporelles
+* :epkg:`matplotlib` : graphes scientifiques
+* :epkg:`numpy` : calcul matriciel
+* :epkg:`pandas` : gestion de `DataFrame <http://en.wikipedia.org/wiki/Data_frame>`_
+* :epkg:`Scipy` : calcul scientifique
+* :epkg:`scikit-learn` : machine learning, statistique descriptive
+* :epkg:`statsmodels` : séries temporelles
 
 *Visualisation*
 
@@ -321,8 +325,8 @@ Voir `10 plotting libraries at PyData 06/14/2016 in Paris <http://www.xavierdupr
 
 *Pour les TD et projets à l'ENSAE*
 
-* `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_ : outils pour les élèves de l'ENSAE
-* `pyquickhelper <http://www.xavierdupre.fr/app/`pyquickhelper/helpsphinx/index.html>`_ : outils d'automatisation
+* :epkg:`pyensae` : outils pour les élèves de l'ENSAE
+* :epkg:`pyquickhelper` : outils d'automatisation
 
 *Pour faire du machine learning sans programmer*
 
@@ -496,7 +500,7 @@ Setup pour déveloper ce cours (Windows)
 * `Visual Studio 2015 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_
   (cocher C++, C#, Python comme langage + CLang comme compilateur)
 
-Pour chaque version de Python, il faut installer
+Pour chaque version de :epkg:`Python`, il faut installer
 `pymyinstall <https://pypi.python.org/pypi/pymyinstall/>`_
 puis écrire ``pymy_install`` puis supprimer les modules qu'on
 souhaite compiler et tester (voir :ref:`l-desinstallation-modules`).
@@ -513,14 +517,17 @@ En plus :
 * `FileZilla <https://filezilla-project.org/>`_
 * `InnoSetup <http://www.jrsoftware.org/isdl.php>`_ (version unicode)
 
-Pour Jenkins, quelques extensions :
+Pour :epkg:`Jenkins`, quelques extensions :
 
+* `Build timeout plugin <https://wiki.jenkins-ci.org/display/JENKINS/Build-timeout+Plugin>`_
+* `Collapsing Console Sections Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Collapsing+Console+Sections+Plugin>`_
+* `Console column plugin <https://wiki.jenkins-ci.org/display/JENKINS/Console+Column+Plugin>`_
 * `Extra Columns Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Extra+Columns+Plugin>`_
-* `Next Execution <https://wiki.jenkins-ci.org/display/JENKINS/Next+Executions>`_
+* `Next Executions <https://wiki.jenkins-ci.org/display/JENKINS/Next+Executions>`_
 * `Text File <https://wiki.jenkins-ci.org/display/JENKINS/Text+File+Operations+Plugin>`_
 * `Startup Trigger <https://wiki.jenkins.io/display/JENKINS/Startup+Trigger>`_ : automatisation de build
 
-Pour Jupyter :
+Pour :epkg:`Jupyter` :
 
 ::
 
@@ -533,12 +540,12 @@ Un serveur en local doit être démarré, la ligne de commande ressemble à ceci
 
     c:\Python36_x64\Scripts\pypi-server.exe -u -p 8067 --disable-fallback ..\..\local_pypi\local_pypi_server
 
-Si le serveur Jenkins utilise des mots-clés via keyring,
+Si le serveur :epkg:`Jenkins` utilise des mots-clés via :epkg:`keyring`,
 ce qui est le cas pour plusieurs modules utilisés pour ces enseignements,
-il est nécessaire de créer un serveur un serveur Jenkins authntifié.
-Sous Windows, il faut chercher ``services.msc`` et renseigner
+il est nécessaire de créer un serveur un serveur :epkg:`Jenkins` authentifié.
+Sous :epkg:`Windows` , il faut chercher ``services.msc`` et renseigner
 les identifiants.
-Pour certains projets (comme la compilation de *pywin32*), il faut
+Pour certains projets (comme la compilation de :epkg:`pywin32`), il faut
 installer `Windows SDK <https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>`_.
 
 Maintenir sa distribution Python à jour
@@ -562,14 +569,15 @@ En tant que data scientist, je pioche très régulièrement des éléments
 des sept premiers chapitres. Les sept suivants ne sont utiles que de temps en temps,
 surtout si les données sont de taille supérieure à 250 Mo.
 
-L'essentiel n'est pas de tout faire en Python, l'essentiel est d'être agile,
+L'essentiel n'est pas de tout faire en :epkg:`Python`, l'essentiel est d'être agile,
 de passer le moins de temps sur l'implémentation et le plus de temps possible
 sur les données.
 
 *Listes de modules*
 
 * `data-science-ipython-notebooks <https://github.com/donnemartin/data-science-ipython-notebooks>`_
-* `Awesome Python <https://github.com/vinta/awesome-python#environment-management>`_, répertoire de librairiees Python populaires (donc à regarder en premier)
+* `Awesome Python <https://github.com/vinta/awesome-python#environment-management>`_,
+  répertoire de librairies :epkg:`Python` populaires (donc à regarder en premier)
 * `Trending Python <https://github.com/trending?l=python>`_
 * `Trending Python <https://github.com/trending?l=python&since=monthly>`_ (mensuel)
 * `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
