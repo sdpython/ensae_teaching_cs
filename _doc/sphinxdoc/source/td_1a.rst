@@ -243,9 +243,9 @@ tests unitaires, le templating, les sites Web, le scraping, encoding, les notebo
     specials/unittest_coverage_git_profling
     notebooks/git_notebook
     notebooks/profiling_example
-    notebooks/_gs1a_S_cython
     notebooks/td1a_python_csharp
     notebooks/notebook_convert
+    notebooks/jupyter_custom_magics
 
 *Exercices*
 
@@ -254,7 +254,7 @@ tests unitaires, le templating, les sites Web, le scraping, encoding, les notebo
 
     notebooks/_gs1a_B_ci
     notebooks/_gs1a_B_sql
-    notebooks/jupyter_custom_magics
+    notebooks/_gs1a_S_cython
 
 Deux exercices sont suggérés pour une séance de deux heures à choisir parmi :
 

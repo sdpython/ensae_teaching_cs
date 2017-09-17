@@ -65,9 +65,10 @@ DataFrame
 *Notebooks*
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
-    notebooks/_gs2a_dataframe
+    td2a_cenonce_session_1
+    td2a_correction_session_1
 
 *Modules*
 
@@ -81,9 +82,10 @@ Array, Matrix
 *Notebooks*
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
-    notebooks/_gs2a_dnumpy
+    td2a_cenonce_session_2A
+    td2a_correction_session_2A
 
 *Lectures*
 
@@ -99,20 +101,18 @@ SQL
 
 |pyecopng| |pystatpng|
 
+.. toctree::
+    :maxdepth: 1
+
+    ext2a/sql_doc
+    questions/sql_reperes
+
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
 
-    ext2a/sql_doc
     notebooks/_gs2a_sql
-
-*Lectures*
-
-.. toctree::
-    :maxdepth: 1
-
-    questions/sql_reperes
 
 .. _l-visualisation-td2a:
 
