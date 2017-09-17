@@ -6,6 +6,7 @@ import sys
 import os
 import unittest
 import warnings
+import shutil
 
 
 try:
@@ -73,10 +74,18 @@ class TestNotebookRunner2a_2_enonce(unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_notebook2a_2_enonce")
         keepnote = ls_notebooks("td2a")
 
-        if is_travis_or_appveyor():
+        if is_travis_or_appveyor() in ('travis', 'appveyor'):
             warnings.warn(
                 "travis or appveyor, unable to test TestNotebookRunner2a_2_enonce.test_notebook_runner")
             return
+
+        fold = os.path.dirname(keepnote[0])
+        for png in os.listdir(fold):
+            if ".png" not in png:
+                continue
+            fLOG("copy", png)
+            shutil.copy(os.path.join(fold, png), temp)
+        self.assertTrue(len(keepnote) > 0)
 
         execute_notebooks(temp, keepnote, lambda i, n: "_2" in n and
                           "enonce" in n and
