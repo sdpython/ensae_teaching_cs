@@ -133,8 +133,38 @@ Séance 1 Stat
 Séance 2 Eco
 ^^^^^^^^^^^^
 
-* Cartes : :ref:`td1acenoncesession12rst`, :ref:`td1acorrectionsession12rst`
-* SQL : :ref:`sqldocrst`, :ref:`td2aecosqlrst`, :ref:`td2aecosqlcorrectionrst`
+Beaucoup de choses pour ce TD, voici ce que vous devez absolument
+avoir lu pendant les 3 heures.
+
+* Regardez différentes options disponibles pour faire les graphiques et
+  passez un peu de temps sur l'exemple :ref:`td2avisualisationrst`
+* Réaliser des modèles économétriques avec les outils :epkg:`Python` :
+    * :ref:`ACP <td2acenoncesession3arst>`_ (s'arrêter à l'exercice 1)
+    * :ref:`Régression linéaire <mlcccmachinelearninginterpretabiliterst>`, paragraphe *interprétation et corrélation*
+    * :ref:`Logit <td2aecocompetitionmodeleslogistiquesrst>`
+	
+* SQL : lire attentivement le notebook :ref:`td2aecosqlrst`
+
+*Exercice à réaliser*
+
+* Exercice 2 de cette page :ref:`td2acenoncesession3arst`
+
+*Objectifs*
+
+* avoir compris comment réaliser les différentes classes de modèles
+  présentées (régression linéaire, ACP , logit)
+* avoir bien compris les notions de SQL utilisées
+  dans le début de l'exercice
+* réaliser la regression demandée avec les deux
+  packages proposés (:epkg:`sklearn` et :epkg:`statsmodel`)
+
+Pour aller plus loin :
+
+* Panoplie de graphes et cartes : :ref:`td1acenoncesession12rst`
+* ROC pour un modèle logit :ref:`sphx_glr_antiseches_ml_basic_plot_binary_classification.py`
+* Les exercices du notebook SQL : :ref:`td2aecosqlrst`(question 1)
+* Manipuler les données et modéliser les incidents dans le transport aérien
+  :ref:`td2acenoncesession5rst`
 
 .. _l-route2017-stat2:
 
@@ -143,5 +173,5 @@ Séance 2 Stat
 
 * Itérateur, parallélisation : :ref:`td2acenoncesession5donneesnonstructureesetprogrammationfonctionnellerst`,
   :ref:`seance5daskrst`, :ref:`td2acorrectionsession5donneesnonstructureesetprogrammationfonctionnellecorrigerst`
-* Algorithme : :ref:`knnhighdimensionrst`, :ref:`knnhighdimensionrst`
+* Algorithme, ACP : :ref:`knnhighdimensionrst`, :ref:`knnhighdimensionrst`
 * Pratique logicielle : :ref:`td1aunittestcirst`, :ref:`td1aunittestcicorrectionrst`
