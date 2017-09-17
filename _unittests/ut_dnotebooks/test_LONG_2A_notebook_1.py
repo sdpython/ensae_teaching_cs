@@ -7,6 +7,7 @@ notebook test
 import sys
 import os
 import unittest
+import shutil
 
 
 try:
@@ -58,6 +59,13 @@ class TestNotebookRunner2a_1 (unittest.TestCase):
         from src.ensae_teaching_cs.automation.notebook_test_helper import clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook2a_1")
         keepnote = ls_notebooks("td2a")
+        fold = os.path.dirname(keepnote[0])
+        for png in os.listdir(fold):
+            if ".png" not in png:
+                continue
+            fLOG("copy", png)
+            shutil.copy(os.path.join(fold, png), temp)
+        self.assertTrue(len(keepnote) > 0)
         execute_notebooks(temp, keepnote, (lambda i, n: "_1" in n),
                           clean_function=clean_function_1a, fLOG=fLOG, dump=src.ensae_teaching_cs)
 
