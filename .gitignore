@@ -451,6 +451,14 @@ _doc/notebooks/td1a_soft/*.pyd
 _doc/notebooks/td1a_soft/*.c
 _doc/notebooks/competitions/2017/a*.csv
 _doc/notebooks/competitions/2017/*.xlsx
-
-
 _doc/notebooks/competitions/2017/Untitled.ipynb
+_doc/notebooks/td1a_dfnp/shapefiles/GEOFLA**
+_doc/notebooks/td1a_dfnp/*.dbf
+_doc/notebooks/td1a_dfnp/*.gv
+_doc/notebooks/td1a_dfnp/GEOFLA_2-1_DEPARTEMENT_SHP_LAMB93_FXX_2015-12-01.7z
+_doc/notebooks/td1a_dfnp/lisezmoi_MAR2012.txt
+_doc/notebooks/td2a/lisezmoi_*.txt
+_doc/notebooks/td2a/exemple.txt
+_doc/notebooks/td1a_dfnp/t_random_graph.gv.png
+_doc/notebooks/td1a_dfnp/etatcivil2012_mar2012_dbase.zip
+_doc/notebooks/td1a_dfnp/example_bokeh.html
