@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=77s)
+@brief      test log(time=10s)
 """
 
 import sys
@@ -59,7 +59,7 @@ class TestNotebookRunner2aML3(unittest.TestCase):
             return
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         from src.ensae_teaching_cs.data import simple_database
-        temp = get_temp_folder(__file__, "temp_notebook2a_eco")
+        temp = get_temp_folder(__file__, "temp_notebook2a_ml3")
         keepnote = ls_notebooks("td2a_ml")
         keepnote = [_ for _ in keepnote if "machine_learning" not in _]
         shutil.copy(simple_database(), temp)
