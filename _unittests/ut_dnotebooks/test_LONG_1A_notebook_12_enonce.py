@@ -87,6 +87,21 @@ except ImportError:
         sys.path.append(path)
     import pymyinstall as skip_
 
+try:
+    import jyquickhelper as skip______
+except ImportError:
+    path = os.path.normpath(
+        os.path.abspath(
+            os.path.join(
+                os.path.split(__file__)[0],
+                "..",
+                "..",
+                "..",
+                "jyquickhelper",
+                "src")))
+    if path not in sys.path:
+        sys.path.append(path)
+    import jyquickhelper as skip______
 
 from pyquickhelper.loghelper import fLOG, noLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor

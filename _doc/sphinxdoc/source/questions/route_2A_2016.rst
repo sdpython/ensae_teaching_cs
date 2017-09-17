@@ -1,12 +1,15 @@
 
-.. _l-feuille-de-route-2016-2A:
-
 .. |slideslogo| image:: _static/slides_logo.png
             :height: 20
             :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_2A/index.html
 
+.. _l-feuille-de-route-2016-2A:
+
 Feuille de route 2016
 =====================
+
+.. contents::
+    :local:
 
 Plan
 ++++

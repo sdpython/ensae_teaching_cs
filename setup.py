@@ -13,6 +13,7 @@ sversion = "0.8"
 versionPython = "%s.%s" % (sys.version_info.major, sys.version_info.minor)
 path = "Lib/site-packages/" + project_var_name
 readme = 'README.rst'
+history = "HISTORY.rst"
 
 KEYWORDS = project_var_name + ', ENSAE, sqllite, database, teachings'
 DESCRIPTION = """Module which contains materials for teaching puroposes, also includes pythonnet."""
@@ -187,6 +188,11 @@ if os.path.exists(readme):
         long_description = f.read()
 else:
     long_description = ""
+if os.path.exists(history):
+    if sys.version_info[0] == 2:
+        from codecs import open
+    with open(history, "r", encoding='utf-8-sig') as f:
+        long_description += f.read()
 
 if "--verbose" in sys.argv:
     verbose()

@@ -10,7 +10,7 @@ from pyquickhelper.jenkinshelper import setup_jenkins_server_yml
 
 def engines_default(prefix="c:\\", prefix_python="c:\\", prefix_conda="c:\\"):
     """
-    Returns a dictionary with default values for a Jenkins server.
+    Returns a dictionary with default values for a :epkg:`Jenkins` server.
 
     @param      prefix          prefix for Jenkins location
     @param      prefix_python   prefix for Python distribution
@@ -123,7 +123,7 @@ def setup_jenkins_server(js, github="sdpython", modules=default_jenkins_jobs(),
                          overwrite=False, location=None, prefix="",
                          delete_first=False, disable_schedule=False, fLOG=noLOG):
     """
-    Set up many jobs on Jenkins
+    Set up many jobs on :epkg:`Jenkins`.
 
     @param      js                      (JenkinsExt) jenkins server (specially if you need credentials)
     @param      github                  github account if it does not start with *http://*,

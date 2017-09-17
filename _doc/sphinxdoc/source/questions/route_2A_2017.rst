@@ -4,6 +4,9 @@
 Feuille de route 2017
 =====================
 
+.. contents::
+    :local:
+
 Plan
 ++++
 
@@ -33,7 +36,7 @@ discutées.
       - Introduction du cours,
         présentation de la compétition,
         pandas, numpy, matplotlib, manipulation de données,
-        :ref:`notes <l-route2017-eco1>`
+        :ref:`l-route2017-eco1`
     * - 26/9 (2)
       - Algorithmes, Python et C++, code de scikit-learn,
         Notion de pipelines, mise en production de modèles, test unitaires,

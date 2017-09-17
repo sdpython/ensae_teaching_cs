@@ -1,6 +1,4 @@
 
-.. _l-td2a-notions:
-
 .. |pyecopng| image:: _static/pyeco.png
             :height: 20
             :alt: Economie
@@ -10,6 +8,8 @@
             :height: 20
             :alt: Statistique
             :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
+
+.. _l-td2a-notions:
 
 ==============================================
 Les notions qu'il faut avoir comprises ou vues

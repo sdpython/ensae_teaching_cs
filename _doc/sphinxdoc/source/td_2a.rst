@@ -5,8 +5,6 @@
 Python pour un Data Scientist / Economiste
 ==========================================
 
-.. index:: 2A
-
 `ENSAE - OMI2F2 <http://www.ensae.fr/ensae/fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/2me-anne-formationsdiplome-95.html?id=101352>`_
 
 Ce cours s'étale sur 24 heures de cours/TD.

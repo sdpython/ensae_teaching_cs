@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 @brief      test log(time=1s)
 """
@@ -80,13 +81,15 @@ class TestSKIPPythonnetVoiceReco(unittest.TestCase):
             try:
                 res = vocal_recognition(subkey, memwav=content)
             except Exception as e:
-                if "Audio device error encountered" in str(e):
+                if "Audio device error encountered" in str(e) or \
+                        "Erreur de périphérique audio rencontrée" in str(e):
                     # maybe the script is running on a virtual machine (no
                     # Audia device)
                     if os.environ["USERNAME"] == "ensaestudent" or \
                        os.environ["USERNAME"] == "vsxavierdupre" or \
                        os.environ["USERNAME"] == "vsxavierdupre" or \
                        ("DOUZE2016" in os.environ["COMPUTERNAME"]) or \
+                       ("ENSAE" in os.environ["COMPUTERNAME"]) or \
                        os.environ["USERNAME"] == "appveyor" or \
                        "paris" in os.environ["COMPUTERNAME"].lower() or \
                        os.environ["USERNAME"].endswith("$"):  # anonymous Jenkins configuration

@@ -91,7 +91,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
                           is_binary=content_as_binary, force_allow=None,
                           fLOG=print):
     """
-    publish the documentation and the setups of a python module on a webiste,
+    Publishes the documentation and the setups of a python module on a webiste,
     it assumes the modules is organized the same way as
     `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_.
 
@@ -198,7 +198,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
 
 
 def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None,
-                             location="d:\\jenkins\\pymy\\%s\\%s%s\\dist\\%s",
+                             location="c:\\jenkins\\pymy\\%s\\%s%s\\dist\\%s",
                              rootw="/www/htdocs/app/%s/%s",
                              rootw2="/lesenfantscodaient.fr", folder_status=".",
                              layout=[("html", "helpsphinx")],
@@ -226,7 +226,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                              fLOG=print,
                              exc=True):
     """
-    copy the documentation to the website
+    Copy the documentation to the website.
 
     @param      login           login
     @param      ftpsite         ftp site
