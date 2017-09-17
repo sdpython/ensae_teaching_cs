@@ -39,75 +39,16 @@ except ImportError:
         sys.path.append(path)
     import pyquickhelper as skip_____
 
-try:
-    import pyensae as skip___
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyensae",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyensae as skip___
-
-try:
-    import pymmails as skip__
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pymmails",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pymmails as skip__
-
-try:
-    import pymyinstall as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pymyinstall",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pymyinstall as skip_
-
-try:
-    import jyquickhelper as skip______
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "jyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import jyquickhelper as skip______
 
 from pyquickhelper.loghelper import fLOG, noLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
 
 
 class TestNotebookRunner1a_enonce_12 (unittest.TestCase):
+
+    def setUp(self):
+        add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
+                                        __file__, hide=True)
 
     @staticmethod
     def clean_function(code):

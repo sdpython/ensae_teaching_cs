@@ -45,7 +45,7 @@ from pyquickhelper.pycode import get_temp_folder, add_missing_development_versio
 class TestNotebookRunner1a_correction_12 (unittest.TestCase):
 
     def setUp(self):
-        add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
+        add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
                                         __file__, hide=True)
 
     @staticmethod
@@ -65,7 +65,7 @@ class TestNotebookRunner1a_correction_12 (unittest.TestCase):
                 return ""
         return code
 
-    def test_notebook_runner_enonce_12(self):
+    def test_notebook_runner_correction_12(self):
         fLOG(
             __file__,
             self._testMethodName,

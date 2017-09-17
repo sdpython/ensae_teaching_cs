@@ -106,6 +106,7 @@ def clean_function_1a(code):
     rep = [("# ...", "pass # "),
            ("%timeit", "#%timeit"),
            ('%system "exemple.xlsx"', '#%system "exemple.xlsx"'),
+           ('%system "data.xlsx"', '#%system "data.xlsx"'),
            ]
     spl = ["# ......",
            "# elle n'existe pas encore",
