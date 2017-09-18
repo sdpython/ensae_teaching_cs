@@ -14,6 +14,37 @@ Compétitions
 2017
 ++++
 
+Le site `OpenFoodFacts <https://world.openfoodfacts.org/>`_
+recense la composition de milliers de produits. La base de données
+peut être téléchargée (`data <https://world.openfoodfacts.org/data>`_).
+On veut savoir si les additifs ajoutés apparaissent plus fréquemment
+avec certains produits ou certaines compositions. Une façon est
+de prédire la présence d'additifs en fonction de toutes les autres variables.
+Si un modèle de prédiction fait mieux que le hasard, cela signifie que certaines
+corrélations existent. Le notebook :ref:`preparedata2017rst`
+explique comment les données ont été préparées et montre un premier résultat.
+C'est un problème de classification binaire.
+
+* La colonne ``hasE`` précise si le produit contient des additifs.
+* Toutes les autres colonnes peuvent être utilisées pour prédire.
+
+Les données divisées en trois :
+
+* `off_train_all.zip <http://www.xavierdupre.fr/enseignement/complements/off_train_all_.zip>`_ :
+  pour apprendre un modèle ou tout autre chose.
+* `off_test_all.zip <http://www.xavierdupre.fr/enseignement/complements/off_test_all_.zip>`_ :
+  pour évaluer votre modèle.
+* `off_eval_all_X.zip <http://www.xavierdupre.fr/enseignement/complements/off_eval_all_.zip>`_ :
+  ce fichier ne contient pas la cible à prédire, chacun devra calculer ses prédictions,
+  et une tierce partie calculera le score.
+* ``off_eval_all_Y.zip`` : les réponses attendues sur la base d'évaluation,
+  elles seront disponibles à la fin de la compétition.
+
+De manière évidente, il est possible de tricher puisque la construction de ces trois
+jeux est mise à disposition et qu'il serait très facile de retrouver les réponses
+de la base d'évalution. J'ai quelques idées pour freiner vos ardeurs
+si jamais la tentation se trouvait être trop forte.
+
 .. _l-competition-2016-2a:
 
 2016

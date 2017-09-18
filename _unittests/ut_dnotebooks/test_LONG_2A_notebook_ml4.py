@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=33s)
+@brief      test log(time=40s)
 """
 
 import sys
@@ -43,7 +43,7 @@ from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
 
 
-class TestNotebookRunner2aML4(unittest.TestCase):
+class TestLONGNotebookRunner2aML4(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],

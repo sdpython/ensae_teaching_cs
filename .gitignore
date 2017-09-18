@@ -465,3 +465,7 @@ _doc/notebooks/td1a_dfnp/example_bokeh.html
 _doc/notebooks/td2a_ml/arbrec.dot
 _doc/notebooks/td2a/mar2012.txt
 _doc/notebooks/td2a_ml/arbrec.png
+_doc/notebooks/competitions/2017/*.csv
+_doc/notebooks/competitions/2017/*.txt
+_doc/notebooks/competitions/2017/*.zip
+_doc/notebooks/competitions/2017/ddfe10002.csv
