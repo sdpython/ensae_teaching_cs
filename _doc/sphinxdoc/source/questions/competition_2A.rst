@@ -45,6 +45,13 @@ jeux est mise à disposition et qu'il serait très facile de retrouver les répo
 de la base d'évalution. J'ai quelques idées pour freiner vos ardeurs
 si jamais la tentation se trouvait être trop forte.
 
+Une fois que le modèle de prédiction est construit, il fera nécessairement
+des erreurs, peut-être même avec une confiance assez forte. Peut-on affirmer
+avec certitude que ces erreurs en sont vraiment ou serait-ce une erreur de saisie
+des données voire un oubli volontaire sur l'étiquette du produit ? Cela nécessiterait
+sans doute de récupérer quelques produits similaire à celui qui mène à une
+prédiction erronnée.
+
 .. _l-competition-2016-2a:
 
 2016

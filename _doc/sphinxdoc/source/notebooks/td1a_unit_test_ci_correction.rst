@@ -1,7 +1,9 @@
 
-**********************************************************
-Tests unitaires, setup et ingéniérie logiciel (correction)
-**********************************************************
+.. _td1aunittestcicorrectionrst:
+
+******************************************************************
+1A.soft Tests unitaires, setup et ingéniérie logiciel (correction)
+******************************************************************
 
 Ce notebook donne des éléments de réponses pour
 :ref:`td1aunittestcirst`. Le code source peut-être

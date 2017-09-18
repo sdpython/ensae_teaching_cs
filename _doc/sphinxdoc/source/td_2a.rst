@@ -20,7 +20,7 @@ ou plutôt économiques |pyecopng|. Ces images reviendront pour indiquer
 si les contenus s'adressent plutôt aux uns ou aux autres.
 
 * :ref:`l-feuille-de-route-2017-2A`
-* :ref:`td2A-competition-ml`
+* :ref:`l-competition-2017-2a`
 * :ref:`l-projinfo2a`
 
 Le terme *cheat sheet* est un mot-clé plutôt efficace sur Internet pour
@@ -73,3 +73,7 @@ Ce cours a bénéficié de nombreuses contributions dont les auteurs sont :
 Xavier Dupré, Anne Muller, Elodie Royant
 Nicolas Rousset, Jérémie Jakubowicz, Gilles Drigout,
 Gaël Varoquaux et bien sûr les étudiants de l':epkg:`ENSAE`.
+
+Années passées :
+
+* 2016 : :ref:`l-feuille-de-route-2016-2A`, :ref:`l-competition-2016-2a`.

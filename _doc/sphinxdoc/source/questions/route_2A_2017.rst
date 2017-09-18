@@ -7,7 +7,7 @@ Feuille de route 2017
 .. contents::
     :local:
 
-:ref:`Page principale du cours <l-td2a>`_
+:ref:`Page principale du cours <l-td2a>`
 
 Plan
 ++++
@@ -97,9 +97,11 @@ Séance 1 Eco
 
 * Rappels sur des bases du langage :epkg:`Python` : :ref:`td2ecorappels1arst`
 * Manipulation de fichiers : :ref:`td1acenoncesession4rst`
-* Manipulation des données : :ref:`td2acenoncesession2arst`,
-  :ref:`td2acorrectionsession2arst`, :ref:`td2acenoncesession1rst`,
-  :ref:`td2acorrectionsession1rst`
+* Manipulation des données :
+    * :ref:`td2acenoncesession2arst`
+    * :ref:`td2acorrectionsession2arst`
+    * :ref:`td2acenoncesession1rst`
+    * :ref:`td2acorrectionsession1rst`
 
 *Notebooks*
 
@@ -108,9 +110,12 @@ Séance 1 Eco
 
 *Compléments*
 
-* Rappels sur des bases du langage :epkg:`Python` : :ref:`td1acenoncesession1rst`,
-  :ref:`td1acenoncesession2rst`, :ref:`td1acenoncesession3rst`, :ref:`codelistetuplerst`,
-  :ref:`structuresdonneesconversionrst`
+* Rappels sur des bases du langage :epkg:`Python` :
+    * :ref:`td1acenoncesession1rst`
+    * :ref:`td1acenoncesession2rst`
+    * :ref:`td1acenoncesession3rst`
+    * :ref:`codelistetuplerst`
+    * :ref:`structuresdonneesconversionrst`
 * Notebook : :ref:`td2acenoncesession2crst`
 * Compétation : :ref:`solution2016creditclementrst`
 
@@ -119,13 +124,21 @@ Séance 1 Eco
 Séance 1 Stat
 ^^^^^^^^^^^^^
 
-* Manipulation des données : :ref:`td2acenoncesession1rst`,
-  :ref:`td2acorrectionsession1rst`, :ref:`td2acenoncesession2arst`,
-  :ref:`td2acorrectionsession2arst`
-* Graphes : :ref:`td2avisualisationrst`,
-  `10 plotting libraries <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_
-* Cartes : :ref:`td1acenoncesession12rst`, :ref:`td1acorrectionsession12rst`
-* SQL : :ref:`sqldocrst`, :ref:`td2aecosqlrst`, :ref:`td2aecosqlcorrectionrst`
+* Manipulation des données :
+    * :ref:`td2acenoncesession1rst`
+    * :ref:`td2acorrectionsession1rst`
+    * :ref:`td2acenoncesession2arst`
+    * :ref:`td2acorrectionsession2arst`
+* Graphes :
+    * :ref:`td2avisualisationrst`
+    * `10 plotting libraries <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_
+* Cartes :
+    * :ref:`td1acenoncesession12rst`
+    * :ref:`td1acorrectionsession12rst`
+* SQL :
+    * :ref:`sqldocrst`
+    * :ref:`td2aecosqlrst`
+    * :ref:`td2aecosqlcorrectionrst`
 * Sérialisation : :ref:`td2acenoncesession2erst`
 
 .. _l-route2017-eco2:
@@ -139,7 +152,7 @@ avoir lu pendant les 3 heures.
 * Regardez différentes options disponibles pour faire les graphiques et
   passez un peu de temps sur l'exemple :ref:`td2avisualisationrst`
 * Réaliser des modèles économétriques avec les outils :epkg:`Python` :
-    * :ref:`ACP <td2acenoncesession3arst>`_ (s'arrêter à l'exercice 1)
+    * :ref:`ACP <td2acenoncesession3arst>` (s'arrêter à l'exercice 1)
     * :ref:`Régression linéaire <mlcccmachinelearninginterpretabiliterst>`, paragraphe *interprétation et corrélation*
     * :ref:`Logit <td2aecocompetitionmodeleslogistiquesrst>`
 	
@@ -156,13 +169,13 @@ avoir lu pendant les 3 heures.
 * avoir bien compris les notions de SQL utilisées
   dans le début de l'exercice
 * réaliser la regression demandée avec les deux
-  packages proposés (:epkg:`sklearn` et :epkg:`statsmodel`)
+  packages proposés (:epkg:`scikit-learn` et :epkg:`statsmodels`)
 
 Pour aller plus loin :
 
 * Panoplie de graphes et cartes : :ref:`td1acenoncesession12rst`
 * ROC pour un modèle logit :ref:`sphx_glr_antiseches_ml_basic_plot_binary_classification.py`
-* Les exercices du notebook SQL : :ref:`td2aecosqlrst`(question 1)
+* Les exercices du notebook SQL : :ref:`td2aecosqlrst` (question 1)
 * Manipuler les données et modéliser les incidents dans le transport aérien
   :ref:`td2acenoncesession5rst`
 
@@ -171,7 +184,13 @@ Pour aller plus loin :
 Séance 2 Stat
 ^^^^^^^^^^^^^
 
-* Itérateur, parallélisation : :ref:`td2acenoncesession5donneesnonstructureesetprogrammationfonctionnellerst`,
-  :ref:`seance5daskrst`, :ref:`td2acorrectionsession5donneesnonstructureesetprogrammationfonctionnellecorrigerst`
-* Algorithme, ACP : :ref:`knnhighdimensionrst`, :ref:`knnhighdimensionrst`
-* Pratique logicielle : :ref:`td1aunittestcirst`, :ref:`td1aunittestcicorrectionrst`
+* Itérateur, parallélisation :
+    * :ref:`td2acenoncesession5donneesnonstructureesetprogrammationfonctionnellerst`
+    * :ref:`seance5daskrst`
+    * :ref:`td2acorrectionsession5donneesnonstructureesetprogrammationfonctionnellecorrigerst`
+* Algorithme, ACP :
+    * :ref:`knnhighdimensionrst`
+    * :ref:`knnhighdimensionrst`
+* Pratique logicielle :
+    * :ref:`td1aunittestcirst`
+    * :ref:`td1aunittestcicorrectionrst`
