@@ -46,7 +46,7 @@ class TestNotebookRunnerExpose1(unittest.TestCase):
     def setUp(self):
         fLOG("add missing dependencies", OutputPrint=__name__ == "__main__")
         add_missing_development_version(
-            ["pyensae", "pymyinstall", "pymmails"], __file__)
+            ["pyensae", "pymyinstall", "pymmails", "jyquickhelper"], __file__)
 
     def test_notebook_runner_expose1(self):
         fLOG(
@@ -58,7 +58,7 @@ class TestNotebookRunnerExpose1(unittest.TestCase):
         keepnote = ls_notebooks("expose")
         execute_notebooks(temp, keepnote,
                           lambda i, n: "velib" not in n and "paris_parcours" not in n and
-                          "ml_table_mortalite" not in n,
+                          "ml_table_mortalite" not in n and "huge" not in n,
                           fLOG=fLOG,
                           clean_function=clean_function_1a,
                           dump=src.ensae_teaching_cs)
