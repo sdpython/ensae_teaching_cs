@@ -44,7 +44,7 @@ class TestNotebookRunner2a_6 (unittest.TestCase):
 
     def setUp(self):
         fLOG("add missing dependencing")
-        add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
+        add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
                                         __file__, hide=True)
 
     def test_notebook_runner(self):
@@ -54,7 +54,7 @@ class TestNotebookRunner2a_6 (unittest.TestCase):
             OutputPrint=__name__ == "__main__")
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
         temp = get_temp_folder(__file__, "temp_notebook2a_6")
-        keepnote = ls_notebooks("td2a")
+        keepnote = ls_notebooks("td2a_algo")
         execute_notebooks(temp, keepnote, lambda i, n: "_6" in n,
                           fLOG=fLOG, dump=src.ensae_teaching_cs)
 
