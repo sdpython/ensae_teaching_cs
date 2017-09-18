@@ -11,8 +11,8 @@ Compétitions
 
 .. _l-competition-2017-2a:
 
-2017
-++++
+Compétition 2017 - additifs alimentaires
+++++++++++++++++++++++++++++++++++++++++
 
 Le site `OpenFoodFacts <https://world.openfoodfacts.org/>`_
 recense la composition de milliers de produits. La base de données
@@ -54,8 +54,8 @@ prédiction erronnée.
 
 .. _l-competition-2016-2a:
 
-2016
-++++
+Compétition 2016 - défaut de paiement
++++++++++++++++++++++++++++++++++++++
 
 * Liens vers la compétation sur codalab : `Python 2A ENSAE - 2016 <https://competitions.codalab.org/competitions/13431>`_.
 * Source : `default of credit card clients Data Set  <https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients>`_
