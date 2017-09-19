@@ -190,7 +190,7 @@ Séance 2 Stat
     * :ref:`td2acorrectionsession5donneesnonstructureesetprogrammationfonctionnellecorrigerst`
 * Algorithme, ACP :
     * :ref:`knnhighdimensionrst`
-    * :ref:`knnhighdimensionrst`
+    * :ref:`knnhighdimensioncorrectionrst`
 * Pratique logicielle :
     * :ref:`td1aunittestcirst`
     * :ref:`td1aunittestcicorrectionrst`

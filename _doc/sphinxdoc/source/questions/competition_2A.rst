@@ -30,11 +30,11 @@ C'est un problème de classification binaire.
 
 Les données divisées en trois :
 
-* `off_train_all.zip <http://www.xavierdupre.fr/enseignement/complements/off_train_all_.zip>`_ :
+* `off_train_all.zip <http://www.xavierdupre.fr/enseignement/complements/off_train_all.zip>`_ :
   pour apprendre un modèle ou tout autre chose.
-* `off_test_all.zip <http://www.xavierdupre.fr/enseignement/complements/off_test_all_.zip>`_ :
+* `off_test_all.zip <http://www.xavierdupre.fr/enseignement/complements/off_test_all.zip>`_ :
   pour évaluer votre modèle.
-* `off_eval_all_X.zip <http://www.xavierdupre.fr/enseignement/complements/off_eval_all_.zip>`_ :
+* `off_eval_all_X.zip <http://www.xavierdupre.fr/enseignement/complements/off_eval_all.zip>`_ :
   ce fichier ne contient pas la cible à prédire, chacun devra calculer ses prédictions,
   et une tierce partie calculera le score.
 * ``off_eval_all_Y.zip`` : les réponses attendues sur la base d'évaluation,
