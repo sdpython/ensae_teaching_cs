@@ -49,7 +49,7 @@
     `pandas <http://pandas.pydata.org/>`_ fait déjà tout. La réponse tient
     dans l'image qui suit :
 
-    .. image:: images/ml_simple
+    .. image:: images/ml_simple.jpg
         :width: 500
 
     `pandas <http://pandas.pydata.org/>`_ sert à préparer les données, à transformer
