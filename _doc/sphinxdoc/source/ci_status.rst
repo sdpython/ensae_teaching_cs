@@ -202,6 +202,28 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
+    * - `pandas_streaming <http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/pandas_streaming.svg?branch=master
+            :target: https://travis-ci.org/sdpython/pyensae
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/4te066r8ne1ymmhy?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/pandas_streaming
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/pandas_streaming/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/pandas_streaming/tree/master
+      - .. image:: https://badge.fury.io/py/pandas_streaming.svg
+            :target: http://badge.fury.io/py/pandas_streaming
+      - .. image:: http://img.shields.io/pypi/pyversions/pandas_streaming.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/pandas_streaming
+      - .. image:: https://badge.waffle.io/sdpython/pandas_streaming.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/pandas_streaming
+      - .. image:: https://codecov.io/github/sdpython/pandas_streaming/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/pandas_streaming?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/pyensae.svg?branch=master
             :target: https://travis-ci.org/sdpython/pyensae

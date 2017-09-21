@@ -67,7 +67,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
     modules = ["_automation", "pyquickhelper", "jyquickhelper", "python3_module_template",
                "pymmails", "pymyinstall", "pyensae", "pyrsslocal", "pysqllike", "ensae_projects",
                "ensae_teaching_cs", "code_beatrix", "actuariat_python", "mlstatpy", "jupytalk",
-               "teachpyx", "tkinterquickhelper", "cpyquickhelper"]
+               "teachpyx", "tkinterquickhelper", "cpyquickhelper", "pandas_streaming"]
     for c in modules:
         yml.append(pattern % c)
 

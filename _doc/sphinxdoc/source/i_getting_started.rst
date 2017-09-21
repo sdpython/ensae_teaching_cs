@@ -225,6 +225,7 @@ ces enseignements ::
     pip uninstall -y jupytalk
     pip uninstall -y jyquickhelper
     pip uninstall -y mlstatpy
+    pip uninstall -y pandas_streaming
     pip uninstall -y pyensae
     pip uninstall -y pymmails
     pip uninstall -y pymyinstall
