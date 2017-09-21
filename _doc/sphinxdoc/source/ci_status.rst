@@ -453,6 +453,9 @@ Outils
     * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
       - Fonctions, outils implémentées en C, C++ et habillées en Python. C'est aussi
         un template pour ceux qui souhaite réaliser un module en C/C++/Cython.
+    * - `pandas_streaming <http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/index.html>`_
+      - Utilisation de :epkg:`pandas` pour opérer sur des fichiers qui ne tiennent pas
+        en mémoire en implémentant des algorithmes de streaming.
     * - `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
       - Fonctionnalités uilisées par un ENSAE ou plus généralement pour un datascientist,
         récupération de données, commandes magiques, échanges avec un cluster HADOOP
@@ -507,6 +510,7 @@ Git Clone
     if not exist jupytalk                   git clone https://github.com/sdpython/jupytalk.git
     if not exist jyquickhelper              git clone https://github.com/sdpython/jyquickhelper.git
     if not exist mlstatpy                   git clone https://github.com/sdpython/mlstatpy.git
+    if not exist pandas_streaming           git clone https://github.com/sdpython/pandas_streaming.git
     if not exist pyensae                    git clone https://github.com/sdpython/pyensae.git
     if not exist pymmails                   git clone https://github.com/sdpython/pymmails.git
     if not exist pymyinstall                git clone https://github.com/sdpython/pymyinstall.git
