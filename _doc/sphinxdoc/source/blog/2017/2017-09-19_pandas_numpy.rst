@@ -49,7 +49,7 @@
     `pandas <http://pandas.pydata.org/>`_ fait déjà tout. La réponse tient
     dans l'image qui suit :
 
-    .. image:: ml_simple.png
+    .. image:: /blog/2017/images/ml_simple.png
 
     `pandas <http://pandas.pydata.org/>`_ sert à préparer les données, à transformer
     tout ce qui n'est pas numérique en nombres réelles, à enrichir les données

@@ -2769,32 +2769,6 @@ class TableFormula(_TableFormulaStat):
                     row[i] /= mus.values[1][i]
         return tbl
 
-    def halpython(self, features, label_class):
-        """
-        builds table in a file which can be used to trained
-        a machine learned model using `hal_python <http://www.xavierdupre.fr/app/hal_python3/hal_python_help_html/index.html>`_.
-
-        @param      features        list of columns considered as features
-        @param      label_class     integer which contains the class to learn
-        """
-        mi = min(self.select(lambda row: row[label_class]))
-        ma = max(self.select(lambda row: row[label_class]))
-        de = int(ma - mi + 1)
-        columns = ["keys"] + \
-                  ["x%d" % d for d in range(len(features))] + \
-                  ["p%d" % d for d in range(de)]
-        values = []
-
-        def bin(e):
-            return 1.0 if e else 0.0
-
-        for i, row in enumerate(self.values):
-            row = self._interpret_row(row)
-            r = ["k%d" % i] + [row[c] for c in features]
-            r += [bin(row[label_class] - mi == c) for c in range(de)]
-            values.append(r)
-        return self._private_getclass()(columns, values)
-
     @staticmethod
     def save_multiple_as_excel(filename, list_table, font="Calibri", close=True, encoding=None):
         """
