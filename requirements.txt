@@ -58,7 +58,7 @@ sphinxjp.themes.sphinxjp
 sphinx_rtd_theme
 tensorflow
 tkinterquickhelper
-tqdm
+tqdm<4.15.0
 treeinterpreter
 tutormagic
 version_information

@@ -112,6 +112,7 @@ class TestNotebook123Coverage2(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
+        # see issue https://github.com/tqdm/tqdm/issues/441
         self.a_test_notebook_runner("td2a_progressbar", "td2a")
 
     def test_notebook_bigdata(self):
