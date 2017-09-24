@@ -153,7 +153,7 @@ avoir lu pendant les 3 heures.
   passez un peu de temps sur l'exemple :ref:`td2avisualisationrst`
 * Réaliser des modèles économétriques avec les outils :epkg:`Python` :
     * :ref:`ACP <td2acenoncesession3arst>` (s'arrêter à l'exercice 1)
-    * :ref:`Régression linéaire <mlcccmachinelearninginterpretabiliterst>`, paragraphe *interprétation et corrélation*
+    * :ref:`Régression linéaire <td2aecoregressionslineairesrst>`, paragraphe *interprétation et corrélation*
     * :ref:`Logit <td2aecocompetitionmodeleslogistiquesrst>`
 	
 * SQL : lire attentivement le notebook :ref:`td2aecosqlrst`

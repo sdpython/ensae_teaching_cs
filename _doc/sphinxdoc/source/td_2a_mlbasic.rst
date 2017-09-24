@@ -260,6 +260,7 @@ ici :
 
     notebooks/_gs2a_ensae_sklearn
     notebooks/ml_features_model
+    notebooks/td2a_eco_regressions_lineaires
 
 *Notebooks*
 
