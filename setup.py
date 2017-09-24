@@ -203,7 +203,8 @@ if is_local() and "custom_left" not in sys.argv:
     from pyquickhelper.pycode import process_standard_options_for_setup
     logging_function(OutputPrint=True)
     deps = ["pyquickhelper", "jyquickhelper", "pymmails", "pyensae",
-            "pyrsslocal", "pymyinstall", "mlstatpy", "tkinterquickhelper"]
+            "pyrsslocal", "pymyinstall", "mlstatpy", "tkinterquickhelper",
+            "pandas_streaming"]
     if "html1" in sys.argv:
         layout = ["html"]
         sys.argv = [_ for _ in sys.argv if _ != "html1"]

@@ -188,6 +188,8 @@ Séance 2 Stat
     * :ref:`td2acenoncesession5donneesnonstructureesetprogrammationfonctionnellerst`
     * :ref:`seance5daskrst`
     * :ref:`td2acorrectionsession5donneesnonstructureesetprogrammationfonctionnellecorrigerst`
+    * :ref:`pandasiteratorrst`
+    * :ref:`pandasiteratorcorrectionrst`
 * Algorithme, ACP :
     * :ref:`knnhighdimensionrst`
     * :ref:`knnhighdimensioncorrectionrst`

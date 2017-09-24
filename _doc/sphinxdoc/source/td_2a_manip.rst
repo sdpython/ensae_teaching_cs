@@ -69,6 +69,8 @@ DataFrame
 
     td2a_cenonce_session_1
     td2a_correction_session_1
+    pandas_iterator
+    pandas_iterator_correction
 
 *Modules*
 

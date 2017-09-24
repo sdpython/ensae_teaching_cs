@@ -469,3 +469,6 @@ _doc/notebooks/competitions/2017/*.csv
 _doc/notebooks/competitions/2017/*.txt
 _doc/notebooks/competitions/2017/*.zip
 _doc/notebooks/competitions/2017/ddfe10002.csv
+_doc/notebooks/td2a/iris_test.txt
+_doc/notebooks/td2a/iris.txt
+_doc/notebooks/td2a/iris_train.txt

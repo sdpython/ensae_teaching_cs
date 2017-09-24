@@ -27,6 +27,7 @@ mlstatpy
 mpld3
 mutagen
 opencv-python
+pandas_streaming
 plotly
 psutil
 pycodestyle>=2.0.0
