@@ -134,7 +134,7 @@ class TestNotebook123Coverage4(unittest.TestCase):
         self.a_test_notebook_runner(
             "prepare_data_2017", "competitions/2017", valid=valid)
 
-    def _test_plus_grande_somme(self):
+    def test_plus_grande_somme(self):
         fLOG(
             __file__,
             self._testMethodName,
