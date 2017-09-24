@@ -539,12 +539,15 @@ Visage, paroles
   `shrinkage <http://scikit-learn.org/stable/modules/lda_qda.html#shrinkage>`_
 * `Probabilistic Linear Discriminant Analysis for Acoustic Modelling <http://www.cstr.ed.ac.uk/downloads/publications/2014/plda-spl2014.pdf>`_
 
-Graphes et réseaux
-++++++++++++++++++
+Graphes - Réseaux
+=================
+
+Clustering de Graphes
++++++++++++++++++++++
 
 |pyecopng| |pystatpng|
 
-*(année prochaine)*
+*(à venir)*
 
 *Lectures*
 
@@ -558,9 +561,6 @@ Graphes et réseaux
 * `Correlation Clustering and Biclustering with Locally Bounded Errors <http://jmlr.org/proceedings/papers/v48/puleo16.pdf>`_
 * `A Unified Framework for Model-based Clustering <http://www.jmlr.org/papers/volume4/zhong03a/zhong03a.pdf>`_
 * `A Tensor Approach to Learning Mixed Membership Community Models <http://jmlr.org/papers/volume15/anandkumar14a/anandkumar14a.pdf>`_
-* `Local Network Community Detection with Continuous Optimization of Conductance and Weighted Kernel K-Means <http://jmlr.org/papers/volume17/16-043/16-043.pdf>`_
-* `Learning Communities in the Presence of Errors <http://www.jmlr.org/proceedings/papers/v49/makarychev16.pdf>`_
-* `Fast unfolding of communities in large networks <https://arxiv.org/abs/0803.0476>`_
 
 *Lectures Ranking*
 
@@ -575,6 +575,27 @@ Graphes et réseaux
   `py2neo <http://py2neo.org/v3/>`_,
   `neo4j-python-driver <https://github.com/neo4j/neo4j-python-driver>`_
 * `snap.py <https://snap.stanford.edu/snappy/index.html#docs>`_
+
+Communautés
+===========
+
+Déterminer les communautés est un problème assez semblable au problème
+de clustering mais on cherche aussi à en déterminer le centre ou encore
+à catégoriser chaque individu autrement que par son appartenance à un cluster.
+
+*(à venir)*
+
+*Lectures*
+
+* `Katz centrality <https://en.wikipedia.org/wiki/Katz_centrality>`_
+* `Fast unfolding of communities in large networks <https://arxiv.org/pdf/0803.0476v2.pdf>`_ (Louvain)
+* `Modularity and community structure in networks <https://arxiv.org/abs/physics/0602124>`_
+* `Computing communities in large networks using random walks (long version) <https://arxiv.org/abs/physics/0512106>`_
+* `Finding and evaluating community structure in networks <https://arxiv.org/abs/cond-mat/0308217>`_
+* `Mixing patterns in networks <http://www.leonidzhukov.net/hse/2015/sna/papers/mixing_patterns.pdf>`_
+* `Networks in Their Surrounding Contexts <https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch04.pdf>`_
+* `Local Network Community Detection with Continuous Optimization of Conductance and Weighted Kernel K-Means <http://jmlr.org/papers/volume17/16-043/16-043.pdf>`_
+* `Learning Communities in the Presence of Errors <http://www.jmlr.org/proceedings/papers/v49/makarychev16.pdf>`_
 
 --------------------
 
