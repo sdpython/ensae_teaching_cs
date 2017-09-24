@@ -11,6 +11,7 @@ chardet
 coverage
 blockdiag
 cloudpickle
+cytoolz
 dbfread
 duecredit
 folium
@@ -28,6 +29,7 @@ mpld3
 mutagen
 opencv-python
 pandas_streaming
+partd
 plotly
 psutil
 pycodestyle>=2.0.0

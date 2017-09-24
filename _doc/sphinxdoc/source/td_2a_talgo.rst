@@ -199,6 +199,7 @@ C++, R, C#
 
     notebooks/python_r
     notebooks/python_csharp
+    notebooks/cffi_linear_regression
 
 *Notebooks*
 
