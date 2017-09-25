@@ -153,7 +153,7 @@ avoir lu pendant les 3 heures.
   passez un peu de temps sur l'exemple :ref:`td2avisualisationrst`
 * Réaliser des modèles économétriques avec les outils :epkg:`Python` :
     * :ref:`ACP <td2acenoncesession3arst>` (s'arrêter à l'exercice 1)
-    * :ref:`Régression linéaire <td2aecoregressionslineairesrst>`, paragraphe *interprétation et corrélation*
+    * :ref:`Régression linéaire <td2aecoregressionslineairesrst>`
     * :ref:`Logit <td2aecocompetitionmodeleslogistiquesrst>`
 	
 * SQL : lire attentivement le notebook :ref:`td2aecosqlrst`
@@ -197,7 +197,15 @@ Séance 2 Stat
     * :ref:`td1aunittestcirst`
     * :ref:`td1aunittestcicorrectionrst`
 
-Séance 2 Stat
+Séance 3 Stat
 ^^^^^^^^^^^^^
 
-* C/C++ avec Python : :ref:`cffilinearregressionrst`
+* C/C++ avec Python :
+    * :ref:`cffilinearregressionrst`
+    * :ref:`td1acythoneditrst`
+    * :ref:`td1acythoneditcorrectionrst`
+* Sérialisation
+    * :ref:`td2acenoncesession2erst`
+    * :ref:`td2acorrectionsession2erst`
+* Profiling
+    * `profiling <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/completion_profiling.html>`_

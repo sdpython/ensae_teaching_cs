@@ -1,9 +1,9 @@
 
 .. _l-td2a-mlplus:
 
-==============================
-Hors piste en machine learning
-==============================
+=============================
+Machine learning - extensions
+=============================
 
 .. contents::
     :local:

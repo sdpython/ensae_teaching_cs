@@ -47,14 +47,48 @@ et sont abordés invariablement par :
             :alt: Statistique
             :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
 
+Agilité avec les données
+========================
+
 .. toctree::
     :maxdepth: 3
 
     td_2a_manip
+
+Machine Learning - les briques de bases
+=======================================
+
+.. toctree::
+    :maxdepth: 3
+
     td_2a_mlbasic
+
+Machine learning - extensions
+=============================
+
+.. toctree::
+    :maxdepth: 3
+
     td_2a_mlplus
+
+Algorithmes, Optimisation, Programmation
+========================================
+
+.. toctree::
+    :maxdepth: 3
+
     td_2a_talgo
+
+Bibliographie
+=============
+
+.. toctree::
+    :maxdepth: 3
+
     td_2a_biblio
+
+A propos du cours
+=================
 
 Ce cours a commencé en 2014 et n'a cessé de s'enrichir.
 Il est animé par `Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_ (ENSAE 1999)

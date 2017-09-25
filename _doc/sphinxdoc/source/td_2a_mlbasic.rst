@@ -1,9 +1,9 @@
 
 .. _l-td2a-mlbasic:
 
-============================
-Machine Learning - les bases
-============================
+=======================================
+Machine Learning - les briques de bases
+=======================================
 
 Le machine learning avant les années 2000 se résumait à un problème
 d'optimisation. On définit une fonction d'erreur et on détermine le modèle
