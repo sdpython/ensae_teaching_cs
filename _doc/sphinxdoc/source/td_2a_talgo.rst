@@ -207,7 +207,6 @@ C++, R, C#
     :maxdepth: 2
 
     notebooks/_gs2a_langages
-    notebooks/_gs1a_D_calcul_dicho_cython
 
 *Lectures*
 

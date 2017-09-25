@@ -62,7 +62,7 @@ discutées.
       - Deep learning, Keras
       - Web scrapping, API
     * - 24/10 (6)
-      - Exercice sur un problèm de ranking, moteur de recherche,
+      - Exercice sur un problème de ranking, moteur de recherche,
         machine learning données cryptées
       - Etique dans les données, anonimisation des données,
         séries temporelles
@@ -196,3 +196,8 @@ Séance 2 Stat
 * Pratique logicielle :
     * :ref:`td1aunittestcirst`
     * :ref:`td1aunittestcicorrectionrst`
+
+Séance 2 Stat
+^^^^^^^^^^^^^
+
+* C/C++ avec Python : :ref:`cffilinearregressionrst`
