@@ -1,4 +1,6 @@
 
+.. _l-sklearn-ensae-course-2a:
+
 2A - sklearn_ensae_course 
 -------------------------
 

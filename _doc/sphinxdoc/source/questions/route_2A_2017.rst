@@ -136,7 +136,7 @@ Séance 1 Stat
     * :ref:`td1acenoncesession12rst`
     * :ref:`td1acorrectionsession12rst`
 * SQL :
-    * :ref:`sqldocrst`
+    * :ref:`l-sql-principe-base-2a`
     * :ref:`td2aecosqlrst`
     * :ref:`td2aecosqlcorrectionrst`
 * Sérialisation : :ref:`td2acenoncesession2erst`
@@ -197,6 +197,12 @@ Séance 2 Stat
     * :ref:`td1aunittestcirst`
     * :ref:`td1aunittestcicorrectionrst`
 
+Séance 3 Eco
+^^^^^^^^^^^^
+
+* Machine Learning (Gaël Varoquaux)
+    * :ref:`l-sklearn-ensae-course-2a`
+
 Séance 3 Stat
 ^^^^^^^^^^^^^
 
@@ -209,3 +215,5 @@ Séance 3 Stat
     * :ref:`td2acorrectionsession2erst`
 * Profiling
     * `profiling <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/completion_profiling.html>`_
+* Machine Learning (Gaël Varoquaux)
+    * :ref:`l-sklearn-ensae-course-2a`

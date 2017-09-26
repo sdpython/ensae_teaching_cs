@@ -175,6 +175,7 @@ Clustering
 * `Clustering Via Decision Tree Construction <http://web.cs.ucla.edu/~wwc/course/cs245a/CLTrees.pdf>`_
   (implémentation en python `dimitrs/CLTree <https://github.com/dimitrs/CLTree>`_)
 * `Spectral Clustering Based on Local PCA <http://www.jmlr.org/papers/volume18/14-318/14-318.pdf>`_
+* `Brown clustering <https://en.wikipedia.org/wiki/Brown_clustering>`_
 
 *Modules*
 
