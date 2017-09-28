@@ -43,7 +43,7 @@ pylzma
 pymmails
 pympler
 pymyinstall
-pyquickhelper>=1.5.2197
+pyquickhelper>=1.5.2215
 pyrsslocal
 python-jenkins
 qgrid
