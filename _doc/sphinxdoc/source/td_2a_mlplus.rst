@@ -610,8 +610,7 @@ Deep Learning
 
 Le deep learning signifie aussi des calculs intensifs et des modules qui
 utilisent un compilateur C++ pour optimiser les calculs
-et le GPU si vous en avez. Il faut lire l'article de blog
-:ref:`Installer theano et un compilateur C++ <blog-install-theno-keras>`.
+et le GPU si vous en avez. 
 Vous pouvez tester votre installation avec le notebook
 :ref:`mldeeppythonrst` ou encore
 `Keras-TensorFlow-GPU-Windows-Installation <https://github.com/antoniosehk/keras-tensorflow-windows-installation>`_.
@@ -726,22 +725,24 @@ Deep Learning en détail
 
 *Modules*
 
-* `theano <http://deeplearning.net/software/theano/>`_
+* `pytorch <http://pytorch.org/>`_ : design plus simple que tous les autres
+* `theano <http://deeplearning.net/software/theano/>`_ (n'est plus maintenu)
+  Il faut lire l'article de blog
+  :ref:`Installer theano et un compilateur C++ <blog-install-theno-keras>`.
 * `keras <https://keras.io/>`_
 * `mxnet <https://github.com/dmlc/mxnet>`_
 * `caffe <http://caffe.berkeleyvision.org/>`_ (`installation <http://caffe.berkeleyvision.org/installation.html>`_)
 * `climin <http://climin.readthedocs.io/en/latest/rmsprop.html>`_ (algorithme de back propagation)
-* `pytorch <http://pytorch.org/>`_ (Facebook)
 * `tensorflow <https://www.tensorflow.org/>`_ (Google)
 * `foolbox <https://github.com/bethgelab/foolbox>`_ :
   trouver des petites perturbations des données qui trompent les réseaux de neurones
+* `cntk <https://github.com/Microsoft/CNTK>`_
 
 *à suivre*
 
 * `chainer <https://github.com/pfnet/chainer>`_
 * `platoon <https://github.com/mila-udem/platoon/>`_ :
-  multi-GPU pour theano
-* `scikit-theano <https://github.com/sklearn-theano/sklearn-theano>`_
+  multi-GPU pour theano (à voir car *theano* n'est plus maintenu)
 * `Federated Learning: Collaborative Machine Learning without Centralized Training Data <https://research.googleblog.com/2017/04/federated-learning-collaborative.html>`_
 
 *Deep learning embarqué*

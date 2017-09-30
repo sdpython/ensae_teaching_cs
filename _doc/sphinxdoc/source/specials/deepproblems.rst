@@ -18,8 +18,9 @@ Deep learning
 GPU
 +++
 
-* `theano <http://deeplearning.net/software/theano/>`_
+* `theano <http://deeplearning.net/software/theano/>`_ (n'est plus maintenu)
 * `cupy <https://github.com/cupy/cupy>`_
+* Tous les modules de deep learning.
 
 Tutoriels
 +++++++++

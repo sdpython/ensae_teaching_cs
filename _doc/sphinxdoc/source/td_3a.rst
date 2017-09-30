@@ -94,7 +94,8 @@ GPU
   `pyopencl <https://documen.tician.de/pyopencl/>`_
   pour ceux qui n'ont pas de carte
   `NVidia <http://www.nvidia.com/content/global/global.php>`_
-* `theano <http://deeplearning.net/software/theano/>`_
+* `theano <http://deeplearning.net/software/theano/>`_ (n'est plus maintenu)
+* Tous les modules de deep learning.
 
 *Bas niveau*
 

@@ -32,14 +32,16 @@ Algorithmes
 Librairies
 ----------
 
+* `Torch <http://torch.ch/>`_ et surtout `pytorch <http://pytorch.org/>`_
+  dont le design est plus simple que celui des autres.
 * `Caffee <http://caffe.berkeleyvision.org/>`_ (Berkeley)
 * `CNTK <https://www.microsoft.com/en-us/research/product/cognitive-toolkit/>`_ (Microsoft)
 * `deeplearning4j <https://deeplearning4j.org/>`_
 * `mxnet <https://github.com/dmlc/mxnet>`_
 * `PaddlePaddle <https://github.com/PaddlePaddle/Paddle>`_ (Baidu)
 * `TensorFlow <https://www.tensorflow.org/>`_ (Google)
-* `Theano <http://deeplearning.net/software/theano/>`_,
-* `Torch <http://torch.ch/>`_
+* `Theano <http://deeplearning.net/software/theano/>`_ (n'est plus maintenu)
+
 
 `Keras <https://keras.io/>`_ ou `chainer <http://chainer.org/>`_ implémentent des interfaces
 communes pour plusieurs librairies de machine learning.
