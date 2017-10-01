@@ -474,3 +474,5 @@ _doc/notebooks/td2a/iris.txt
 _doc/notebooks/td2a/iris_train.txt
 _doc/notebooks/2a/_linear_regression*.pyd
 _doc/notebooks/2a/_linear_regression*.c
+_doc/sphinxdoc/.vscode/settings.json
+_doc/sphinxdoc/.vscode/ai_job_properties.json

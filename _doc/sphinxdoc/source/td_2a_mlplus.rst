@@ -610,7 +610,7 @@ Deep Learning
 
 Le deep learning signifie aussi des calculs intensifs et des modules qui
 utilisent un compilateur C++ pour optimiser les calculs
-et le GPU si vous en avez. 
+et le GPU si vous en avez.
 Vous pouvez tester votre installation avec le notebook
 :ref:`mldeeppythonrst` ou encore
 `Keras-TensorFlow-GPU-Windows-Installation <https://github.com/antoniosehk/keras-tensorflow-windows-installation>`_.

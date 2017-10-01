@@ -60,7 +60,7 @@ class TestDicesStraight(ExtTestCase):
                         2 10 18 36 54 86
                         """.replace("                        ", "")
 
-    def test_parsed_and_solve(self):
+    def test_parsed_and_solve_triplet(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -70,13 +70,24 @@ class TestDicesStraight(ExtTestCase):
         exps = [[(0, 1), (1, 2)],
                 [],
                 [(3, 2), (2, 3), (0, 4)]]
+        intervals = [[(1, 6)], [(1, 6)], [(1, 10), (15, 16), (54, 55)]]
         self.assertEqual(len(probs), 3)
-        for prob, exp in zip(probs, exps):
+        for prob, exp, einter in zip(probs, exps, intervals):
             fLOG(prob)
-            mul = prob.longest_path_length(fLOG=fLOG)
+            # intervals
+            inter = prob.find_intervals()
+            fLOG("[intervales]", inter)
+            self.assertEqual(inter, einter)
+            # solution 1
+            mul = prob.longest_path_length_graph(fLOG=fLOG)
             self.assertEqual(mul, exp)
+            self.assertLesser(len(mul), len(prob))
+            # solution 2
+            mx = prob.longest_path_length_flow(fLOG=fLOG)
+            fLOG("[max_flow]", mx)
+            self.assertEqual(mx, len(exp) if len(exp) > 1 else 0)
 
-    def a_test_parsed_and_solve_small(self):
+    def test_parsed_and_solve_small(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -87,11 +98,15 @@ class TestDicesStraight(ExtTestCase):
         probs = DiceStraight.parse(name)
         self.assertEqual(len(probs), 100)
         for i, prob in enumerate(probs):
-            fLOG("prob {0}: nb={1}".format(i, len(prob)))
-            fLOG(prob)
-            mul = prob.longest_path_length(fLOG=fLOG)
-            fLOG("   path: {0}".format(mul))
-            self.assertTrue(mul is not None)
+            intervals = prob.find_intervals()
+            fLOG("prob {0}: nb={1} I={2}".format(i, len(prob), intervals))
+            # solution 2
+            mx = prob.longest_path_length_flow(fLOG=fLOG)
+            fLOG("[max_flow]", mx)
+            self.assertLesser(mx, len(prob))
+            if i >= 5:
+                # Too long.
+                break
 
 
 if __name__ == "__main__":

@@ -42,7 +42,6 @@ Librairies
 * `TensorFlow <https://www.tensorflow.org/>`_ (Google)
 * `Theano <http://deeplearning.net/software/theano/>`_ (n'est plus maintenu)
 
-
 `Keras <https://keras.io/>`_ ou `chainer <http://chainer.org/>`_ implémentent des interfaces
 communes pour plusieurs librairies de machine learning.
 
