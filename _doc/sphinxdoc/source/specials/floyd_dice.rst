@@ -55,7 +55,7 @@ dans l'intervalle apparaissent sur les faces de deux dés distincts.
 
     from ensae_teaching_cs.td_2a import DiceStraight
     probs = DiceStraight.parse(text)
-    print(prob[0].find_intervals())
+    print(probs[0].find_intervals())
 
 Une piste gourmande
 +++++++++++++++++++
@@ -104,7 +104,7 @@ a peut de chance d'aboutir.
 
     from ensae_teaching_cs.td_2a import DiceStraight
     probs = DiceStraight.parse(text)
-    seq = prob[0].longest_path_length_graph(fLOG=print)
+    seq = probs[0].longest_path_length_graph(fLOG=print)
     print("Séquence la plus grande :", seq)
 
 Problème de flots
