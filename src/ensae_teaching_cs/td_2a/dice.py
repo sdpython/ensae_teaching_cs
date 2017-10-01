@@ -154,7 +154,7 @@ class DiceStraight:
         """
         Usual.
         """
-        return "\n".join(str(_) for _ in self.dices)
+        return "\n".join(str(list(sorted(_))) for _ in self.dices)
 
     def find_intervals(self):
         """
@@ -210,17 +210,17 @@ class DiceStraight:
         for path in sorted(new_paths):
             if best is None or len(path) > len(best):
                 best = path
-        del best[-1]
+        # del best[-1]
         fLOG("[longest_path_length_triplet] path {0}".format(best))
         return best
 
-    def longest_path_length_flow(self, fLOG=noLOG):
+    def longest_path_length_flow(self, fLOG=noLOG, verbose=False):
         """
         We use an algorithm of maximum flow to solve the graph.
         We use the graph where each node is a triplet *(position, dice, face value)*.
         Each node is connected to *(-1, -1, -1)*.
         We add another node *(-2, -2, -2)* which begins every path.
-        We write N as the number of dices + 1.
+        We write *N* as the number of dices + 1.
         We add edges to nodes *(position, N, N)* from every node.
         We finally add final edges from nodes *(position, N, N)* to
         *(N, N, N)* whose weight is ``1/N``.
@@ -228,23 +228,47 @@ class DiceStraight:
         the longest length.
         """
         edges = self.compute_edges(add_position=True)
-        nodes = set(_[0] for _ in edges).union(set(_[1] for _ in edges))
+        edges = list(filter(lambda e: e[0][0] >= 0, edges))
+        edges_dices_pos = set(
+            (('p%d' % e1[0], "D%d" % e1[1]), ('p%d' % e2[0], "d%d" % e2[1])) for e1, e2 in edges)
+        edges_dices_pos_A = set(
+            (('p%d' % e2[0], "d%d" % e2[1]), ('p%d' % e2[0], "D%d" % e2[1])) for e1, e2 in edges)
+        edges_dices_pos_B = set(
+            (('p%d' % e1[0], "d%d" % e1[1]), ('p%d' % e1[0], "D%d" % e1[1])) for e1, e2 in edges)
+        edges_pos = set(
+            (('p%d' % e2[0], "D%d" % e2[1]), ('p%d' % e2[0], 'END')) for e1, e2 in edges)
+        edges_pos_ = set(
+            (('p%d' % e1[0], "D%d" % e2[1]), ('p%d' % e1[0], 'END')) for e1, e2 in edges)
+        edges_start = set((('START', ''), ('p0', "d%d" % i))
+                          for i in range(0, len(self)))
+        edges = []
+        for ens in [edges_dices_pos, edges_dices_pos_A, edges_dices_pos_B,
+                    edges_pos, edges_pos_, edges_start]:
+            edges.extend(ens)
         capacity = [(e[0], e[1], 1) for e in edges]
-        N = len(self) + 1
-        for node in nodes:
-            if node[0] >= 0:
-                capacity.append((node, (N, node[0], node[0]), 1))
-        capacity.append(((-2, -2, -2), (-1, -1, -1), 1))
-        # We skip the first position as we are not
-        # interted in path of length 1.
-        for p in range(1, len(self)):
-            capacity.append(((N, p, p), (N, N, p), 1))
-            capacity.append(((N, N, p), (N, N, N), 1. / len(self)))
 
+        capacity.extend((('p%d' % i, 'END'), ('END', ''), 1.0 / len(self))
+                        for i in range(0, len(self)))
+
+        def update(graph, u, v, path_flow):
+            if u[0][0] == 'p' == v[0][0] and u[1].upper() == v[1]:
+                # Example: ('p0', 'd0') -> ('p0', 'D0')
+                for i in range(0, len(self)):
+                    u_ = ('p%d' % i, u[1])
+                    v_ = ('p%d' % i, v[1])
+                    graph[u_][v_] -= path_flow
+                    graph[v_][u_] += path_flow
+            else:
+                graph[u][v] -= path_flow
+                graph[v][u] += path_flow
+
+        # Il ne faut pas EdmondsKarp ou il faut pouvoir
+        # revenir un arrière --> Floyd Flukerson modifié.
         edmond = EdmondsKarpGraph(capacity)
         try:
-            max_flow = edmond.edmonds_karp((-2, -2, -2), (N, N, N), fLOG=fLOG)
+            max_flow = edmond.edmonds_karp(("START", ''), ("END", ''), fLOG=fLOG,
+                                           verbose=verbose, update=update)
         except ValueError:
             # No available path.
             return 0
-        return int(max_flow * len(self) - 1e-5) + 1
+        return int(max_flow * len(self) + 1e-5)

@@ -40,6 +40,7 @@ Algorithmes illustrés
     notebooks/expose_graphe_et_map_reduce
     notebooks/expose_rwr_recommandation
     notebooks/expose_TSP
+    specials/floyd_dice
 
 *Images*
 

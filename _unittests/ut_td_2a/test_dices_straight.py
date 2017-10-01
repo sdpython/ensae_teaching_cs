@@ -45,7 +45,11 @@ from src.ensae_teaching_cs.td_2a import DiceStraight
 class TestDicesStraight(ExtTestCase):
 
     text = """
+                        4
                         3
+                        5287 5288 5289 5290 5291 5292
+                        5287 5288 5289 5290 5291 5292
+                        5294 5295 5296 5297 5298 5299
                         3
                         1 2 3 4 5 6
                         1 2 3 4 5 6
@@ -60,18 +64,21 @@ class TestDicesStraight(ExtTestCase):
                         2 10 18 36 54 86
                         """.replace("                        ", "")
 
-    def test_parsed_and_solve_triplet(self):
+    def a_test_parsed_and_solve_triplet(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
         probs = DiceStraight.parse(TestDicesStraight.text)
-        exps = [[(0, 1), (1, 2)],
+        exps = [[(0, 5287), (1, 5288)],
+                [(0, 1), (1, 2), (2, 3)],
                 [],
                 [(3, 2), (2, 3), (0, 4)]]
-        intervals = [[(1, 6)], [(1, 6)], [(1, 10), (15, 16), (54, 55)]]
-        self.assertEqual(len(probs), 3)
+        intervals = [[(5287, 5292), (5294, 5299)],
+                     [(1, 6)], [(1, 6)],
+                     [(1, 10), (15, 16), (54, 55)]]
+        self.assertEqual(len(probs), 4)
         for prob, exp, einter in zip(probs, exps, intervals):
             fLOG(prob)
             # intervals
@@ -83,11 +90,11 @@ class TestDicesStraight(ExtTestCase):
             self.assertEqual(mul, exp)
             self.assertLesser(len(mul), len(prob))
             # solution 2
-            mx = prob.longest_path_length_flow(fLOG=fLOG)
+            mx = prob.longest_path_length_flow(fLOG=fLOG, verbose=True)
             fLOG("[max_flow]", mx)
             self.assertEqual(mx, len(exp) if len(exp) > 1 else 0)
 
-    def test_parsed_and_solve_small(self):
+    def b_test_parsed_and_solve_small(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -99,14 +106,21 @@ class TestDicesStraight(ExtTestCase):
         self.assertEqual(len(probs), 100)
         for i, prob in enumerate(probs):
             intervals = prob.find_intervals()
-            fLOG("prob {0}: nb={1} I={2}".format(i, len(prob), intervals))
-            # solution 2
-            mx = prob.longest_path_length_flow(fLOG=fLOG)
-            fLOG("[max_flow]", mx)
-            self.assertLesser(mx, len(prob))
-            if i >= 5:
-                # Too long.
-                break
+            mx = None
+            if i < 5:
+                # solution 2
+                fLOG("prob {0}: nb={1} I={2}".format(i, len(prob), intervals))
+                mx = prob.longest_path_length_flow(fLOG=fLOG)
+                fLOG("[max_flow]", mx)
+                self.assertLesser(mx, len(prob))
+            if len(prob) < 8:
+                if mx is None:
+                    fLOG("prob {0}: nb={1} I={2}".format(
+                        i, len(prob), intervals))
+                    mx = prob.longest_path_length_flow()
+                s2 = prob.longest_path_length_graph()
+                if mx != len(s2):
+                    raise Exception("{0} != {1}\n{2}".format(mx, s2, prob))
 
 
 if __name__ == "__main__":
