@@ -44,7 +44,7 @@ qui contiennent des entiers consécutifs de telle sorte que deux entiers
 dans l'intervalle apparaissent sur les faces de deux dés distincts.
 
 .. runpython::
-    :showcode::
+    :showcode:
 
     text = """1
     4
