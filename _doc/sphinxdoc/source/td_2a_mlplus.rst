@@ -902,6 +902,8 @@ Galleries de problèmes résolus ou presque
   un robot apprend à imiter les mouvements d'une personne
   (`vidéo <https://sermanet.github.io/tcn/>`_)
 * `Device Placement Optimization with Reinforcement Learning <https://arxiv.org/pdf/1706.04972.pdf>`_
+* `Automatic Colorization <http://tinyclouds.org/colorize/>`_
+* `Image Completion <http://bamos.github.io/2016/08/09/deep-completion/>`_
 
 *Text*
 
