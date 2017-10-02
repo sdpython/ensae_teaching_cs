@@ -485,6 +485,10 @@ qui évoque l'apprentissage supervisé d'un modèle de traduction automatique de
 * `Neural Machine Translation by Jointly Learning to Align and Translate <https://arxiv.org/abs/1409.0473>`_
 * `Sequence-to-Dependency Neural Machine Translation <http://www.aclweb.org/anthology/P/P17/P17-1065.pdf>`_
 
+*Startup*
+
+* `DeepL <https://www.deepl.com/>`_
+
 *Modules*
 
 Images
@@ -904,8 +908,13 @@ Galleries de problèmes résolus ou presque
 * `Device Placement Optimization with Reinforcement Learning <https://arxiv.org/pdf/1706.04972.pdf>`_
 * `Automatic Colorization <http://tinyclouds.org/colorize/>`_
 * `Image Completion <http://bamos.github.io/2016/08/09/deep-completion/>`_
+* `Perceptual Losses for Real-Time Style Transfer and Super-Resolution <https://arxiv.org/pdf/1603.08155.pdf>`_,
+  article : `neural-style <https://jayanthkoushik.github.io/neural_style.html>`_,
+  code : `neural-style <https://github.com/jayanthkoushik/neural-style>`_.
+* `Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network <https://arxiv.org/pdf/1609.04802.pdf>`_ :
+  entraîner un réseau de neurones pour améliorer la netteté des images
 
-*Text*
+*Texte*
 
 * `Representing Sentences as Low-Rank Subspaces <https://arxiv.org/abs/1704.05358v1>`_
 * `SQuAD: 100,000+ Questions for Machine Comprehension of Text <https://arxiv.org/abs/1606.05250>`_,

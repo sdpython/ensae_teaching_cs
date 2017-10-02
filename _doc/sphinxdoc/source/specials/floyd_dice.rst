@@ -7,7 +7,7 @@ Problème de dès et problème de flots
 .. index:: flot, dé, Floyd-Fulkerson, graphe
 
 Cet exposé commence par un problème issue de Google Jam:
-`Dire Straight <https://code.google.com/codejam/contest/6314486/dashboard#s=p0>`_.
+`Dice Straight <https://code.google.com/codejam/contest/6314486/dashboard#s=p0>`_.
 On dispose de dés à six faces, sur chaque face, un nombre entier quelconque.
 Il faut trouver la plus grande séquence de dés qu'on peut poser
 sur une ligne en formant une suite de nombres entiers consécutifs.
@@ -134,6 +134,8 @@ est positif ou nul.
 
 L'idée est de créer un réseau qui passe par des tuyaux dont on peut
 partager les capacités de sorte que s'il est emprunté
-à un moment, il ne le soit pas à un autre.
+à un moment, il ne le soit pas à un autre. On peut essayer de bidouiller
+l'algorithme original afin de tenir compte de ces coefficients
+partagés sans garantie toutefois que l'algorithme converge.
 
 *à suivre*
