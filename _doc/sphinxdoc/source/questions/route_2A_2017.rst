@@ -202,6 +202,9 @@ Séance 3 Eco
 
 * Manipulation de données
     * :ref:`td2aecoexercicesdemanipulationdedonneesrst`
+    * :ref:`td2aecoexercicesdemanipulationdedonneescorrectionarst`
+    * :ref:`td2aecoexercicesdemanipulationdedonneescorrectionbrst`
+    * :ref:`td2aecoexercicesdemanipulationdedonneescorrectioncrst`
 * Machine Learning (Gaël Varoquaux)
     * :ref:`l-sklearn-ensae-course-2a`
 

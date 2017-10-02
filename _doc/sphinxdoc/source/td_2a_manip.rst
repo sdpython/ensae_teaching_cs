@@ -72,6 +72,9 @@ DataFrame
     pandas_iterator
     pandas_iterator_correction
     td2a_eco_exercices_de_manipulation_de_donnees
+    td2a_eco_exercices_de_manipulation_de_donnees_correction_a
+    td2a_eco_exercices_de_manipulation_de_donnees_correction_b
+    td2a_eco_exercices_de_manipulation_de_donnees_correction_c
 
 *Modules*
 
