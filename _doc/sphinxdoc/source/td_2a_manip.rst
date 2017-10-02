@@ -71,6 +71,7 @@ DataFrame
     td2a_correction_session_1
     pandas_iterator
     pandas_iterator_correction
+    td2a_eco_exercices_de_manipulation_de_donnees
 
 *Modules*
 

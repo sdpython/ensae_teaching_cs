@@ -200,6 +200,8 @@ Séance 2 Stat
 Séance 3 Eco
 ^^^^^^^^^^^^
 
+* Manipulation de données
+    * :ref:`td2aecoexercicesdemanipulationdedonneesrst`
 * Machine Learning (Gaël Varoquaux)
     * :ref:`l-sklearn-ensae-course-2a`
 
