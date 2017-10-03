@@ -47,19 +47,22 @@ discutées.
         Rappel des méthodes linéaires (régression linéaire, logistique, ACP, ...),
         :ref:`l-route2017-eco2`
     * - 3/10 (3)
-      - clustering, ACP, t-SNE, projection, Python et C++,
-        revue de code de scikit-learn
-        cours de Gaël Varoquaux
-      - Clustering, application aux vélos de Chicago,
-        revue des différentes types de variables (numérique, entier, texte, date...)
-        cours de Gaël Varoquaux
+      - Python et C++, sérialisation, profiling
+        cours de Gaël Varoquaux, :ref:`l-route2017-stat3`
+      - pandas, vélib
+        cours de Gaël Varoquaux, :ref:`l-route2017-eco3`
+    * - **Après 3 séances, vous devriez connaître et savoir utiliser**
+        :epkg:`numpy`, :epkg:`pandas`, :epkg:`matplotlib`.
+      - **Après 3 séances, vous devriez connaître et savoir utiliser**
+        :epkg:`numpy`, :epkg:`pandas`, :epkg:`matplotlib`.
     * - 10/10 (4)
       - Revue de problèmes de machine learning formalisés,
         Données textuelles, variables catégorielles, word embedding
-      - Revue de problèmes de machine learning formalisés,
+      - Texte et expression régulière
+        Revue de problèmes de machine learning formalisés,
         Données textuelles, variables catégorielles
     * - 17/10 (5)
-      - Deep learning, Keras
+      -
       - Web scrapping, API
     * - 24/10 (6)
       - Exercice sur un problème de ranking, moteur de recherche,
@@ -70,7 +73,7 @@ discutées.
       - Revue de compétition Kaggle, deep learning, itérateurs, algorithme streaming
       - Interprétabilité des modèles, problèmes de classification binaire
     * - 14/11 (8)
-      - Transfer Learning, Présentation des projets
+      - Deep learning, Keras, Transfer Learning, Présentation des projets
       - Construction d'un site web, retour sur la compétition,
         présentation des projets
 
@@ -197,6 +200,8 @@ Séance 2 Stat
     * :ref:`td1aunittestcirst`
     * :ref:`td1aunittestcicorrectionrst`
 
+.. _l-route2017-exo3:
+
 Séance 3 Eco
 ^^^^^^^^^^^^
 
@@ -206,7 +211,10 @@ Séance 3 Eco
     * :ref:`td2aecoexercicesdemanipulationdedonneescorrectionbrst`
     * :ref:`td2aecoexercicesdemanipulationdedonneescorrectioncrst`
 * Machine Learning (Gaël Varoquaux)
-    * :ref:`l-sklearn-ensae-course-2a`
+    * `scikit-learn: machine learning in Python <http://gael-varoquaux.info/scipy-lecture-notes/packages/scikit-learn/index.html>`_
+      (:ref:`copie sur ce site <l-sklearn-ensae-course-2a>`)
+
+.. _l-route2017-stat3:
 
 Séance 3 Stat
 ^^^^^^^^^^^^^
@@ -221,4 +229,18 @@ Séance 3 Stat
 * Profiling
     * `profiling <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/completion_profiling.html>`_
 * Machine Learning (Gaël Varoquaux)
-    * :ref:`l-sklearn-ensae-course-2a`
+    * `scikit-learn: machine learning in Python <http://gael-varoquaux.info/scipy-lecture-notes/packages/scikit-learn/index.html>`_,
+      (:ref:`copie sur ce site <l-sklearn-ensae-course-2a>`)
+
+.. _l-route2017-eco4:
+
+Séance 4 Eco
+^^^^^^^^^^^^
+
+* texte et expression régulière
+    * :ref:`td2aTD5TraitementautomatiquedeslanguesenPythonrst`
+
+.. _l-route2017-stat4:
+
+Séance 4 Maths
+^^^^^^^^^^^^^^
