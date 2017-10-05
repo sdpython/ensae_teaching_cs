@@ -276,6 +276,8 @@ if not r:
         pyquickhelper = import_pyquickhelper()
         from pyquickhelper.pycode import process_standard_options_for_setup_help
         process_standard_options_for_setup_help(sys.argv)
+    else:
+        pyquickhelper = import_pyquickhelper()
 
     if "try_import" in sys.argv:
         pyq = import_pyquickhelper()
@@ -350,7 +352,8 @@ if not r:
         if sys.platform.startswith("win"):
             os.chdir(pa)
 
-    else:
+        from pyquickhelper.pycode import clean_readme
+        long_description = clean_readme(long_description)
 
         setup(
             name=project_var_name,

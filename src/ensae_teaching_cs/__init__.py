@@ -1,7 +1,9 @@
 #-*- coding: utf-8 -*-
 """
 @file
-@brief Main file
+@brief Module *ensae_teaching_cs*.
+Functions, examples, for the lectures at the
+:epkg:`ENSAE`. See :epkg:`ensae_teaching_cs`.
 """
 
 import sys
