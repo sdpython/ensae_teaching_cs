@@ -39,7 +39,7 @@ except ImportError:
     import pyquickhelper as skip_
 
 
-from pyquickhelper.loghelper import fLOG
+from pyquickhelper.loghelper import fLOG, CustomLog
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
 
 
@@ -59,7 +59,7 @@ class TestLongNotebookRunner2aML(unittest.TestCase):
             return
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         from src.ensae_teaching_cs.data import simple_database
-        temp = get_temp_folder(__file__, "temp_notebook2a_eco")
+        temp = get_temp_folder(__file__, "temp_notebook2a_ml_deep")
         keepnote = ls_notebooks("td2a_ml")
         shutil.copy(simple_database(), temp)
 
@@ -72,9 +72,10 @@ class TestLongNotebookRunner2aML(unittest.TestCase):
             warnings.warn("execution does not stop")
             return
 
+        clog = CustomLog(temp)
         execute_notebooks(temp, keepnote,
                           filter,
-                          fLOG=fLOG,
+                          fLOG=clog,
                           clean_function=clean_function_1a,
                           dump=src.ensae_teaching_cs)
 
