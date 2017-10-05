@@ -12,6 +12,7 @@ install:
 before_script:
   - python -u setup.py try_import
   - set KERAS_BACKEND=theano
+  - if [ ${DIST} != "conda" ] then pip install --upgrade --force-reinstall tables fi
 script:
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests", NAME: "UT", TIMEOUT: 3600 }  # timeout is 3600 for the documentation
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests_LONG", NAME: "UT_LONG", TIMEOUT: 3600 }
