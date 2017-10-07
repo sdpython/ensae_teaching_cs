@@ -240,4 +240,27 @@ plt.ylabel("Proportion bien classée")
 plt.title('ROC(s)')
 plt.legend(loc="lower right")
 
-# plt.show()
+###################################
+#
+# Fonctions de coût
+# -----------------
+#
+# La performance d'un modèle est parfois évaluée avec une fonction de coût
+# qui n'est pas celle utilisée pour optimiser le modèle. C'est le cas
+# souvent de l'aire sous la courbe d'une courbe ROC (AUC). Dans la plupart
+# des cas, le modèle n'est pas optimisée pour cette métrique.
+# La métrique AUC est coûteuse à calculer, c'est pourquoi on lui
+# préfère souvent d'autres métriques comme :
+# la `logloss <http://scikit-learn.org/stable/modules/generated/sklearn.metrics.log_loss.html>`_.
+# Si on note :math:`y_i` la classe attendue et :math:`p_i` la probabilité
+# que l'observation *i* appartiennent à cette classe selon le modèle, alors :
+#
+# .. math::
+#
+#       logloss = \sum_i y_i \log p_i + (1-y_i)\log(1-p_i)
+#
+# On utilise la fonction :epkg:`scikit-learn:metrics:log_loss`.
+
+from sklearn.metrics import log_loss
+err = log_loss(y_test, y_proba)
+print(err)

@@ -37,6 +37,9 @@ et sont abordés invariablement par :
 
 **Thèmes :**
 
+.. contents::
+    :local:
+
 .. |pyecopng| image:: _static/pyeco.png
             :height: 20
             :alt: Economie

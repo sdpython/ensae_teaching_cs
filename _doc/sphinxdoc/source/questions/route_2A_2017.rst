@@ -51,29 +51,34 @@ discutées.
         cours de Gaël Varoquaux, :ref:`l-route2017-stat3`
       - pandas, vélib
         cours de Gaël Varoquaux, :ref:`l-route2017-eco3`
-    * - **Après 3 séances, vous devriez connaître et savoir utiliser**
+    * -
+      - **Après 3 séances, vous devriez connaître et savoir utiliser**
         :epkg:`numpy`, :epkg:`pandas`, :epkg:`matplotlib`.
       - **Après 3 séances, vous devriez connaître et savoir utiliser**
         :epkg:`numpy`, :epkg:`pandas`, :epkg:`matplotlib`.
     * - 10/10 (4)
-      - Revue de problèmes de machine learning formalisés,
+      - Revue de problèmes de machine learning formalisés, cross-validation
         Données textuelles, variables catégorielles, word embedding
-      - Texte et expression régulière
+        :ref:`l-route2017-stat4`
+      - Texte et expression régulière,
         Revue de problèmes de machine learning formalisés,
-        Données textuelles, variables catégorielles
+        Données textuelles, variables catégorielles,
+        :ref:`l-route2017-eco4`
     * - 17/10 (5)
-      -
+      - Exercice sur un problème de ranking, moteur de recherche,
+        machine learning données cryptées, clustering, hyperparamètres
       - Web scrapping, API
     * - 24/10 (6)
-      - Exercice sur un problème de ranking, moteur de recherche,
-        machine learning données cryptées
+      - Deep learning, Keras, Torch, Transfer Learning
       - Etique dans les données, anonimisation des données,
         séries temporelles
     * - 7/11 (7)
-      - Revue de compétition Kaggle, deep learning, itérateurs, algorithme streaming
+      - Revue de compétition Kaggle, Interprétabilité des modèles,
+        Featurisation
       - Interprétabilité des modèles, problèmes de classification binaire
     * - 14/11 (8)
-      - Deep learning, Keras, Transfer Learning, Présentation des projets
+      - Algorithme de streaming, série temporelles,
+        sequence learning, présentation des projets
       - Construction d'un site web, retour sur la compétition,
         présentation des projets
 
@@ -244,3 +249,6 @@ Séance 4 Eco
 
 Séance 4 Maths
 ^^^^^^^^^^^^^^
+
+* machine learning classique
+    * :ref:`l-machine-learning-tips`
