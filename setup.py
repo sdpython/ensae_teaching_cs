@@ -272,12 +272,10 @@ else:
     r = False
 
 if not r:
+    pyquickhelper = import_pyquickhelper()
     if len(sys.argv) in (1, 2) and sys.argv[-1] in ("--help-commands",):
-        pyquickhelper = import_pyquickhelper()
         from pyquickhelper.pycode import process_standard_options_for_setup_help
         process_standard_options_for_setup_help(sys.argv)
-    else:
-        pyquickhelper = import_pyquickhelper()
 
     if "try_import" in sys.argv:
         pyq = import_pyquickhelper()

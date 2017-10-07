@@ -70,12 +70,19 @@ Les fonctions *f* et *e* sont dérivables par rapport à :math:`\Theta`.
 Les paramètres sont optimisés grâce à une méthode de descente de gradient.
 La plue connue est la
 `Algorithme du gradient stochastique <https://fr.wikipedia.org/wiki/Algorithme_du_gradient_stochastique>`_.
+Un tel algorithme n'aime les variables discrètes car l'ensemble des valeurs que le
+gradient peut prendre est limité. Il n'aime pas non plus les entrées hétérogènes
+(non normalisées) car le gradient prendra des valeurs élevés sur certains
+dimensions et faibles sur d'autres.
 
 `ensemble <https://en.wikipedia.org/wiki/Ensemble_learning>`_
 
 La fonction *f* n'est pas dérivable. Il n'y a pas de gradient possible.
 Le plus souvent, on en revient à trier les observations selon une dimension
 puis à déterminer un seuil de coupure approprié par rapport à la cible.
+Ce type d'algorithme produit souvent des assemblages de fonctions
+en escalier. En contre partie, les variables discrètes ou non normalisées
+ne le gênent pas.
 
 Fonction de coût - loss function
 ++++++++++++++++++++++++++++++++
