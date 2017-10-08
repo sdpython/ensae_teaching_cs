@@ -254,6 +254,6 @@ Séance 4 Maths
     * :ref:`td2asomenlprst`
 * machine learning classique
     * :ref:`l-machine-learning-tips`
-    * :ref:`notebook de préparation à la compétition`
+    * :ref:`td2amltextfeaturesrst`
 * clustering
     * `Découvrir les habitudes des cyclistes à Chicago <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_bike.html>`_

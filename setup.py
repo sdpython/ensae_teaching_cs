@@ -350,30 +350,31 @@ if not r:
         if sys.platform.startswith("win"):
             os.chdir(pa)
 
-    # builds the setup
+    else:
+        # builds the setup
 
-    from pyquickhelper.pycode import clean_readme
-    long_description = clean_readme(long_description)
+        from pyquickhelper.pycode import clean_readme
+        long_description = clean_readme(long_description)
 
-    setup(
-        name=project_var_name,
-        version='%s%s' % (sversion, subversion),
-        author='Xavier Dupré',
-        author_email='xavier.dupre@gmail.com',
-        license="MIT",
-        url="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html",
-        download_url="https://github.com/sdpython/ensae_teaching_cs/",
-        description=DESCRIPTION,
-        long_description=long_description,
-        keywords=KEYWORDS,
-        classifiers=CLASSIFIERS,
-        packages=packages,
-        package_dir=package_dir,
-        package_data=package_data,
-        install_requires=[
-            "pyquickhelper", "pyensae", "pymyinstall", "pymmails",
-            "scikit-learn", "pyrsslocal", "pandas", "numpy",
-            "matplotlib", "jupyter", "mlstatpy"],
-        # avoids downloading cvxopt (its installation is never easy)
-        # extra_requires=["cvxopt"],
-    )
+        setup(
+            name=project_var_name,
+            version='%s%s' % (sversion, subversion),
+            author='Xavier Dupré',
+            author_email='xavier.dupre@gmail.com',
+            license="MIT",
+            url="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html",
+            download_url="https://github.com/sdpython/ensae_teaching_cs/",
+            description=DESCRIPTION,
+            long_description=long_description,
+            keywords=KEYWORDS,
+            classifiers=CLASSIFIERS,
+            packages=packages,
+            package_dir=package_dir,
+            package_data=package_data,
+            install_requires=[
+                "pyquickhelper", "pyensae", "pymyinstall", "pymmails",
+                "scikit-learn", "pyrsslocal", "pandas", "numpy",
+                "matplotlib", "jupyter", "mlstatpy"],
+            # avoids downloading cvxopt (its installation is never easy)
+            # extra_requires=["cvxopt"],
+        )
