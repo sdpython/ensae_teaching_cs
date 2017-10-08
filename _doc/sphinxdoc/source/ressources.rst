@@ -52,15 +52,16 @@ Source de données
 * *ML* `Data Analysis, Modeling and Machine Learning Group <http://ama.liglab.fr/resourcestools/datasets/>`_
 * *ML* `Microsoft Research Letor <http://research.microsoft.com/en-us/um/beijing/projects/letor/letor4dataset.aspx>`_
 * *ML* `List of datasets for machine learning research <https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research>`_
-* *ML-deep*: `Open Data for Deep Learning <https://deeplearning4j.org/opendata>`_
-* *ML-graphes* `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_
 * *ML-big* `Pascal Large Scale Learning Challenge <http://largescale.ml.tu-berlin.de/instructions/>`_
 * *ML-big* `170 millions courses de taxi à New-York <http://chriswhong.com/open-data/foil_nyc_taxi/>`_
   (via l'article `Building Azure ML Models on the NYC Taxi Dataset <http://blogs.technet.com/b/machinelearning/archive/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset.aspx>`_)
-* *ML-text* `urls, spam, ... <http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html>`_, jeux de données utilisés
-  comme benchmark pour la libraire `libsvm <http://www.csie.ntu.edu.tw/~cjlin/libsvm/>`_
+* *ML-deep*: `Open Data for Deep Learning <https://deeplearning4j.org/opendata>`_
+* *ML-graphes* `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_
 * *ML-image* `Labeled Faces in the Wild <http://vis-www.cs.umass.edu/lfw/>`_ : 1323 images, 5749 personnes, 1680 personnes avec 2 ou plus d'images,
   lire `How well do facial recognition algorithms cope with a million strangers? <http://www.washington.edu/news/2016/06/23/how-well-do-facial-recognition-algorithms-cope-with-a-million-strangers/>`_
+* *ML-recommandations*: `GroupLens Datasets <https://grouplens.org/datasets/>`_
+* *ML-text* `urls, spam, ... <http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html>`_, jeux de données utilisés
+  comme benchmark pour la libraire `libsvm <http://www.csie.ntu.edu.tw/~cjlin/libsvm/>`_
 * *musique* `Semantic Artist Similarity Dataset <http://mtg.upf.edu/download/datasets/semantic-similarity>`_
 * *musique* `The Music Matrix – Exploring tags in the Million Song Dataset <http://musicmachinery.com/2011/11/27/the-music-matrix-exploring-tags-in-the-million-song-dataset/>`_
 * *musique* `Audio Content Analysis Datasets <http://www.audiocontentanalysis.org/data-sets/>`_

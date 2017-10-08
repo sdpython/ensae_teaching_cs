@@ -46,7 +46,7 @@ La fonction *f* est un prédicteur (ou une fonction de scoring en anglais).
 * ranking (supervisé)
 * recommandation (supervisé)
 * ACP (non supervisé)
-* clustering (non supervisé)
+* :ref:`sphx_glr_ml_basic_plot_clustering.py` (non supervisé)
 
 Frontière, Optimisation
 +++++++++++++++++++++++
