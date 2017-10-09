@@ -73,9 +73,10 @@ class TestFaqMatplotlib(unittest.TestCase):
         img = os.path.join(temp, "img.png")
         fig.savefig(img)
         assert os.path.exists(img)
-        name2 = os.path.join(temp, "picture.html")
-        mpld3.save_html(fig, name2)
-        assert os.path.exists(name2)
+        # mpld3 is deprecated.
+        # name2 = os.path.join(temp, "picture.html")
+        # mpld3.save_html(fig, name2)
+        # assert os.path.exists(name2)
         if __name__ == "__main__":
             fig.show()
         plt.close('all')
