@@ -1,9 +1,9 @@
 
 .. _l-EX2:
 
-========
-Examples
-========
+=====================
+Collection d'examples
+=====================
 
 .. contents::
     :local:
@@ -37,23 +37,4 @@ Geek
 
 .. exreflist::
     :tag: Technique
-    :contents:
-
-Python, constructions classiques
-================================
-
-.. exreflist::
-    :tag: Base
-    :contents:
-
-.. exreflist::
-    :tag: Base -
-    :contents:
-
-.. exreflist::
-    :tag: Algorithme
-    :contents:
-
-.. exreflist::
-    :tag: Exercice
     :contents:

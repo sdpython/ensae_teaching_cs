@@ -12,4 +12,5 @@ Galleries d'exemples
     antiseches/index
     automation/index
     i_examples
+    i_examples_classiques
     blog/blogindex

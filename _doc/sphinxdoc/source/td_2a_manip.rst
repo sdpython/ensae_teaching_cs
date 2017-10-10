@@ -67,14 +67,14 @@ DataFrame
 .. toctree::
     :maxdepth: 1
 
-    td2a_cenonce_session_1
-    td2a_correction_session_1
-    pandas_iterator
-    pandas_iterator_correction
-    td2a_eco_exercices_de_manipulation_de_donnees
-    td2a_eco_exercices_de_manipulation_de_donnees_correction_a
-    td2a_eco_exercices_de_manipulation_de_donnees_correction_b
-    td2a_eco_exercices_de_manipulation_de_donnees_correction_c
+    notebooks/td2a_cenonce_session_1
+    notebooks/td2a_correction_session_1
+    notebooks/pandas_iterator
+    notebooks/pandas_iterator_correction
+    notebooks/td2a_eco_exercices_de_manipulation_de_donnees
+    notebooks/td2a_eco_exercices_de_manipulation_de_donnees_correction_a
+    notebooks/td2a_eco_exercices_de_manipulation_de_donnees_correction_b
+    notebooks/td2a_eco_exercices_de_manipulation_de_donnees_correction_c
 
 *Modules*
 
@@ -90,8 +90,8 @@ Array, Matrix
 .. toctree::
     :maxdepth: 1
 
-    td2a_cenonce_session_2A
-    td2a_correction_session_2A
+    notebooks/td2a_cenonce_session_2A
+    notebooks/td2a_correction_session_2A
 
 *Lectures*
 

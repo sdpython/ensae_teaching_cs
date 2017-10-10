@@ -70,7 +70,7 @@ et qu'il est important de comprendre.
 
     notebooks/code_liste_tuple
     notebooks/exercice_echelle
-    i_examples
+    i_examples_classiques
     notebooks/structures_donnees_conversion
     notebooks/tableau_contingence
     notebooks/histogramme_rapide

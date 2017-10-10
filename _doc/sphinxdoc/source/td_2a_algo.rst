@@ -21,7 +21,7 @@ Idées brèves sur les algorithmes
       Javascript / C++ / etc, comprendre l'algorithmique et
       les structures de données
 
-#. * `Programmation dynamique <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance2.pdf>`_
+#. `Programmation dynamique <http://www.xavierdupre.fr/enseignement/complements/ENSAE_2A_jj_Seance2.pdf>`_
 
 #. Grands principes
 
