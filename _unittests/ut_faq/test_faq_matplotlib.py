@@ -56,7 +56,6 @@ class TestFaqMatplotlib(unittest.TestCase):
             return
         fix_tkinter_issues_virtualenv()
         import matplotlib.pyplot as plt
-        import mpld3
         filter = {"NewYork": "NY", "Chicago": "CH",
                   "SanFrancisco": "SF", "Seattle": "Sea"}
         temp = get_temp_folder(__file__, "temp_american_cities")

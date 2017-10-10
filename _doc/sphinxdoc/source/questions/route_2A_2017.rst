@@ -244,10 +244,10 @@ Séance 4 Eco
 
 * webscrapping
     * :ref:`TD2AEcoWebScrapingrst`
-* texte et expression régulière
-    * :ref:`td2aTD5TraitementautomatiquedeslanguesenPythonrst`
 * version alternatives des notebooks
     * `GitHub/ensae <https://github.com/Atheane/ensae>`_
+* texte et expression régulière
+    * :ref:`td2aTD5TraitementautomatiquedeslanguesenPythonrst`
 
 .. _l-route2017-stat4:
 
