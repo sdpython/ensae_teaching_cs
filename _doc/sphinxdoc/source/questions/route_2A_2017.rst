@@ -246,6 +246,8 @@ Séance 4 Eco
     * :ref:`TD2AEcoWebScrapingrst`
 * version alternatives des notebooks
     * `GitHub/ensae <https://github.com/Atheane/ensae>`_
+    * :ref:`td2aecoAPIpocketetWebscrapingrst`
+    * :ref:`td2AecoAPIpocketetWebscrapingcorrectionrst`
 * texte et expression régulière
     * :ref:`td2aTD5TraitementautomatiquedeslanguesenPythonrst`
 

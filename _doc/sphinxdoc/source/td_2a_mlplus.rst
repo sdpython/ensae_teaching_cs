@@ -508,6 +508,13 @@ Images
 * `Towards Principled Methods for Training Generative Adversarial Networks <https://arxiv.org/abs/1701.04862>`_
 * `Instance Noise: A trick for stabilising GAN training <http://www.inference.vc/instance-noise-a-trick-for-stabilising-gan-training/>`_
 * `Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network <https://arxiv.org/abs/1609.05158>`_
+* `YOLO9000: Better, Faster, Stronger <https://arxiv.org/abs/1612.08242>`_ : détection en temps
+  d'objets sur des images ou dans une vidéo, le code est sur github
+  `darknet <https://github.com/pjreddie/darknet>`_, wrapper Python :
+  `darknetpy <https://github.com/danielgatis/darknetpy>`_,
+  `demo <https://pjreddie.com/darknet/yolo/>`_
+* `SSD: Single Shot MultiBox Detector <https://arxiv.org/abs/1512.02325>`_
+  (voir aussi `caffe/ssd <https://github.com/weiliu89/caffe/tree/ssd>`_)
 
 *Modules*
 
@@ -520,6 +527,7 @@ Images
 * `plat <https://github.com/dribnet/plat>`_
   (Utilities for exploring generative latent spaces as described in the
   `Sampling Generative Networks <https://arxiv.org/abs/1609.04468>`_ paper.)
+* `darknetpy <https://github.com/danielgatis/darknetpy>`_
 
 *Modèles pré-entraînés*
 
@@ -913,6 +921,11 @@ Galleries de problèmes résolus ou presque
   code : `neural-style <https://github.com/jayanthkoushik/neural-style>`_.
 * `Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network <https://arxiv.org/pdf/1609.04802.pdf>`_ :
   entraîner un réseau de neurones pour améliorer la netteté des images
+* `YOLO9000: Better, Faster, Stronger <https://arxiv.org/abs/1612.08242>`_ : détection en temps
+  d'objets sur des images ou dans une vidéo, le code est sur github
+  `darknet <https://github.com/pjreddie/darknet>`_, wrapper Python :
+  `darknetpy <https://github.com/danielgatis/darknetpy>`_,
+  `demo <https://pjreddie.com/darknet/yolo/>`_
 
 *Texte*
 
