@@ -47,7 +47,7 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper", "mlstatpy"],
                                         __file__, hide=True)
 
-    def a_test_notebook_runner(self, name, folder):
+    def a_test_notebook_runner(self, name, folder, additional_path=None):
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         from src.ensae_teaching_cs.helpers.size_helper import total_size
         self.assertTrue(total_size)
@@ -62,7 +62,8 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
                           lambda i, n: name in n,
                           fLOG=fLOG, replacements=replacements,
                           clean_function=clean_function_1a,
-                          dump=src.ensae_teaching_cs)
+                          dump=src.ensae_teaching_cs,
+                          additional_path=additional_path)
 
     def test_notebook_runner_ml_huge(self):
         fLOG(
@@ -91,7 +92,9 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
 
         import tables
         assert tables is not None
-        self.a_test_notebook_runner("ml_huge", "expose")
+        this = os.path.abspath(os.path.dirname(tables.__file__))
+        self.a_test_notebook_runner(
+            "ml_huge", "expose", additional_path=[this])
 
 
 if __name__ == "__main__":
