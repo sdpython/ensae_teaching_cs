@@ -89,6 +89,7 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
                 from tables import IsDescription
                 self.assertTrue(IsDescription is not None)
 
+        import tables
         self.a_test_notebook_runner("ml_huge", "expose")
 
 
