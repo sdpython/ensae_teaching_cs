@@ -340,10 +340,19 @@ Machine Learning sur des données cryptées
 * `Compressed Sensing <https://en.wikipedia.org/wiki/Compressed_sensing>`_
 * `ML Confidential: Machine Learning on Encrypted Data <https://www.microsoft.com/en-us/research/publication/ml-confidential-machine-learning-on-encrypted-data-2/>`_
 * `Encrypted statistical machine learning: new privacy preserving methods <https://arxiv.org/abs/1508.06845>`_
+* `Fast and Secure Linear Regression and Biometric Authentication with Security Update <https://pdfs.semanticscholar.org/73f0/aa4e1b47b55f0f3d8464f61750e559067c56.pdf>`_
+* `NuCypher KMS: Decentralized key management system <https://arxiv.org/abs/1707.06140>`_
+* `Hawk: The Blockchain Model of Cryptography and Privacy-Preserving Smart Contracts <https://eprint.iacr.org/2015/675.pdf>`_
+* `Privacy-Preserving Classification on Deep Neural Network <https://eprint.iacr.org/2017/035.pdf>`_
 
 *Modules*
 
-* `ciphermed <https://github.com/rbost/ciphermed>`_ : pas maintenu
+* `ciphermed <https://github.com/rbost/ciphermed>`_, pas maintenu par l'auteur mais un peu
+  plus par d'autres `ciphermed-forests <https://github.com/paberr/ciphermed-forests>`_
+* `PySyft <https://github.com/OpenMined/PySyft>`_ : encrypted deep learning library
+* `python-paillier (phe) <https://github.com/n1analytics/python-paillier>`_ : a library for partially homomorphic encryption in python,
+  cette librairie fait du machine learning en clair une fois les données et le modèle décryptées,
+  elle promet de faire `mieux <https://github.com/OpenMined/PySyft/blob/master/syft/nn/linear.py#L92>`_
 
 ------------------
 
@@ -515,6 +524,13 @@ Images
   `demo <https://pjreddie.com/darknet/yolo/>`_
 * `SSD: Single Shot MultiBox Detector <https://arxiv.org/abs/1512.02325>`_
   (voir aussi `caffe/ssd <https://github.com/weiliu89/caffe/tree/ssd>`_)
+* `HPatches: A benchmark and evaluation of handcrafted and learned local descriptors <http://www.robots.ox.ac.uk/~vgg/publications/2017/Balntas17/balntas17.pdf>`_
+
+*Outils*
+
+* `Image Descriptors <https://en.wikipedia.org/wiki/Visual_descriptor>`_,
+  `Speeded up robust features (SURF) <https://en.wikipedia.org/wiki/Speeded_up_robust_features>`_,
+  `Scale-invariant feature transform (SIFT) <https://en.wikipedia.org/wiki/Scale-invariant_feature_transform>`_,
 
 *Modules*
 
