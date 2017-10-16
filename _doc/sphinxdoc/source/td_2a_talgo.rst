@@ -22,8 +22,8 @@ Agilité, rapidité, inventivité.
 
 ---------------
 
-Techniques de programmation et algorithmes
-==========================================
+Scrapping, API, Site Web, Notebooks
+===================================
 
 .. contents::
     :local:
@@ -103,6 +103,15 @@ Jupyter et les commandes magiques
     :maxdepth: 2
 
     notebooks/_gs2a_magic_commands
+
+---------------
+
+Traiter les données rapidement pour de plus grands volumes
+==========================================================
+
+.. contents::
+    :local:
+    :depth: 2
 
 .. _l-cluster-non-struct-2a:
 
@@ -245,6 +254,15 @@ C++, Accélération de code
   en C++ et compilation
 * `pyston <https://github.com/dropbox/pyston>`_ (Python 2.7 seulement) :
   réécriture de l'interpréteur Python pour être plus rapide.
+
+---------------
+
+Meilleure efficacité avec des algorithmes
+=========================================
+
+.. contents::
+    :local:
+    :depth: 2
 
 Parallélisation, sérialisation
 ++++++++++++++++++++++++++++++

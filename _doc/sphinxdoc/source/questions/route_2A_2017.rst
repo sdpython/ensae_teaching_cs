@@ -65,9 +65,10 @@ discutées.
         Données textuelles, variables catégorielles,
         :ref:`l-route2017-eco4`
     * - 17/10 (5)
-      - Exercice sur un problème de ranking, moteur de recherche,
-        machine learning données cryptées, clustering, hyperparamètres
-      - Web scrapping, API
+      - Machine learning données cryptées, hyperparamètres,
+        données textuelles
+        :ref:`l-route2017-stat5`
+      - Web scrapping, API, :ref:`l-route2017-eco5`
     * - 24/10 (6)
       - Deep learning, Keras, Torch, Transfer Learning
       - Etique dans les données, anonimisation des données,
@@ -271,14 +272,12 @@ Séance 5 Eco
 
 * webscrapping
     * :ref:`TD2AEcoWebScrapingrst`
-* version alternatives des notebooks
-    * `GitHub/ensae <https://github.com/Atheane/ensae>`_
-    * :ref:`td2aecoAPIpocketetWebscrapingrst`
-    * :ref:`td2AecoAPIpocketetWebscrapingcorrectionrst`
 * texte et expression régulière
     * :ref:`td2aTD5TraitementautomatiquedeslanguesenPythonrst`
+    * :ref:`td2aeco5dTravaillerdutextelesexpressionsregulieresrst`
+    * :ref:`td2aeco5dTravaillerdutextelesexpressionsregulierescorrectionrst`
 
-.. _l-route2017-stat4:
+.. _l-route2017-stat5:
 
 Séance 5 Maths
 ^^^^^^^^^^^^^^
@@ -288,3 +287,5 @@ Séance 5 Maths
 * machine learning crypté
     * :ref:`mlcrypteddatarst`
     * :ref:`mlcrypteddatacorrectionrst`
+* Grid Search
+    * :ref:`sphx_glr_ml_basic_plot_grid_search.py`

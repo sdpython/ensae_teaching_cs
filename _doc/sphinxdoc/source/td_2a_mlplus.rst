@@ -42,45 +42,6 @@ Régression quantile
 
 * `statsmodels <http://statsmodels.sourceforge.net/devel/generated/statsmodels.regression.quantile_regression.QuantReg.html>`_
 
-Interprétabilité des modèles
-++++++++++++++++++++++++++++
-
-|pyecopng| |pystatpng|
-
-*(à venir)*
-
-*Lectures: expliquer*
-
-* `Learning to learn by gradient descent by gradient descent <https://arxiv.org/pdf/1606.04474.pdf>`_
-* `Importance Weighting Without Importance Weights: An Effcient Algorithm for Combinatorial Semi-Bandits <http://jmlr.org/papers/volume17/15-091/15-091.pdf>`_
-* `Making Tree Ensembles Interpretable <https://arxiv.org/pdf/1606.05390v1.pdf>`_
-* `Understanding variable importances in forests of randomized trees <http://papers.nips.cc/paper/4928-understanding-variable-importances-in-forests-of-randomized-trees.pdf>`_
-* `Confidence Intervals for Random Forests: The Jackknife and the Infinitesimal Jackknife <http://jmlr.csail.mit.edu/papers/volume15/wager14a/wager14a.pdf>`_
-* `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
-* `Wavelet decompositions of Random Forests - smoothness analysis, sparse approximation and applications <http://www.jmlr.org/papers/volume17/15-203/15-203.pdf>`_
-* `"Why Should I Trust You?" Explaining the Predictions of Any Classifier <http://arxiv.org/pdf/1602.04938v1.pdf>`_ *(2016/06)*
-* `Edward: A library for probabilistic modeling, inference, and criticism <https://arxiv.org/pdf/1610.09787.pdf>`_
-* `Strictly Proper Scoring Rules, Prediction, and Estimation <https://www.cs.duke.edu/courses/spring17/compsci590.2/Gneiting2007jasa.pdf>`_
-* `Visualizing and Understanding Neural Machine Translation <http://www.aclweb.org/anthology/P/P17/P17-1106.pdf>`_
-
-*Lectures: local*
-
-* `Learning Deep Nearest Neighbor Representations Using Differentiable Boundary Trees <https://arxiv.org/abs/1702.08833>`_
-
-*Lectures: modèle graphique*
-
-* `Factor Graph <http://deepdive.stanford.edu/assets/factor_graph.pdf>`_
-* `An Introduction to Conditional Random Fields for Relational Learning <http://people.cs.umass.edu/~mccallum/papers/crf-tutorial.pdf>`_
-* `Factor Graphs and the Sum-Product Algorithm <http://www.comm.utoronto.ca/~frank/papers/KFL01.pdf>`_
-
-*Modules*
-
-* `edward <http://edwardlib.org/>`_
-* `deepdive <http://deepdive.stanford.edu/>`_: ce n'est pas un module python,
-  cet outil a été développé pour étudier les relations dans les données et plus
-  particulièrement les `dark data <https://en.wikipedia.org/wiki/Dark_data>`_
-* `treeinterpreter <https://pypi.python.org/pypi/treeinterpreter>`_
-
 Optimisation des hyperparamètres
 ++++++++++++++++++++++++++++++++
 
@@ -241,8 +202,8 @@ qui passent par le même chemin ?
 
 ---------------
 
-Données, Anonymisation, Cryptage
-================================
+Interprétation, Anonymisation, Cryptage
+=======================================
 
 On sait beaucoup de choses avec les données et comme elles concernent
 des personnes la plupart du temps, les chercheurs réfléchissent
@@ -295,6 +256,109 @@ ce sujet et plutôt récents. Il est probable qu'il y en ait un peu plus
 * `Data Transparency Lab <http://datatransparencylab.org/>`_
 * `OPAL <http://www.data4sdgs.org/dc-opal/>`_
 
+Interprétabilité des modèles
+++++++++++++++++++++++++++++
+
+|pyecopng| |pystatpng|
+
+.. index:: transparence, protection des données, loi européenne
+
+Le machine learning tend à déléguer une partie de la modélisation pour
+fabriquer des modèles opaques, avec beaucoup de coefficients
+là où les statistiques privilégient la simplicité.
+On gagne en rapidité lors de la mise en oeuvre et on perd
+en interprétabilité. Il est de plus en plus important de comprendre pourquoi un
+modèle se trompe, pourquoi il donne telle ou telle réponse pour une plus grande
+transparence. La loi sur le
+`Règlement général sur la protection des données <https://fr.wikipedia.org/wiki/R%C3%A8glement_g%C3%A9n%C3%A9ral_sur_la_protection_des_donn%C3%A9es>`_
+(voir aussi
+`Règlement européen sur la protection des données : ce qui change pour les professionnels <https://www.cnil.fr/fr/reglement-europeen-sur-la-protection-des-donnees-ce-qui-change-pour-les-professionnels>`_),
+va dans le sens d'une plus grande transparence.
+Elle doit rentrer en application à partir du 25 mai 2018.
+La compréhension des décisions d'un modèle est parfois
+une nécessité. Quelques idées de recherche :
+
+* Déléguer la complexité sur les variables : on utilise un modèle simple
+  (linéaire, arbre de décision), et on construit de nouvelles variables ou features
+  parfois complexes qui font du sens pour le problèmes et qu'un modèle de machine
+  learning ne pourrait pas reproduire aisément
+  (voir aussi `feature learning <https://en.wikipedia.org/wiki/Feature_learning>`_).
+* Sélectionner les variables et en garder le moins possibles,
+  voir `feature selection <https://en.wikipedia.org/wiki/Feature_selection>`_,
+  voir aussi `Feature importances with forests of trees <http://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html>`_.
+* Extraire des informations sur les variables elle-même,
+  une forêt d'arbre produit une décision pour une observation qui n'utilise
+  qu'une petite partie du modèle, il est possible d'extraire la liste
+  des variables impliquées dans cette décision et de les trier
+  par ordre d'importance, voir `treeinterpreter <https://pypi.python.org/pypi/treeinterpreter>`_.
+* Poser des contraintes sur le modèle comme la monotonie de la décision
+  par rapport aux variables, voir `Isotonic Regression <https://en.wikipedia.org/wiki/Isotonic_regression>`_.
+* Apprendre un second modèle dédié à l'interprétation,
+  voir `Making Tree Ensembles Interpretable <https://arxiv.org/pdf/1606.05390v1.pdf>`_.
+* Visualiser la décision.
+
+*Notebooks*
+
+(*à venir*)
+
+*Lectures : expliquer*
+
+* `Learning to learn by gradient descent by gradient descent <https://arxiv.org/pdf/1606.04474.pdf>`_
+* `Importance Weighting Without Importance Weights: An Efficient Algorithm for Combinatorial Semi-Bandits <http://jmlr.org/papers/volume17/15-091/15-091.pdf>`_
+* `Making Tree Ensembles Interpretable <https://arxiv.org/pdf/1606.05390v1.pdf>`_
+* `Understanding variable importances in forests of randomized trees <http://papers.nips.cc/paper/4928-understanding-variable-importances-in-forests-of-randomized-trees.pdf>`_
+* `Confidence Intervals for Random Forests: The Jackknife and the Infinitesimal Jackknife <http://jmlr.csail.mit.edu/papers/volume15/wager14a/wager14a.pdf>`_
+* `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
+* `Wavelet decompositions of Random Forests - smoothness analysis, sparse approximation and applications <http://www.jmlr.org/papers/volume17/15-203/15-203.pdf>`_
+* `"Why Should I Trust You?" Explaining the Predictions of Any Classifier <http://arxiv.org/pdf/1602.04938v1.pdf>`_ *(2016/06)*
+* `Edward: A library for probabilistic modeling, inference, and criticism <https://arxiv.org/pdf/1610.09787.pdf>`_
+* `Strictly Proper Scoring Rules, Prediction, and Estimation <https://www.cs.duke.edu/courses/spring17/compsci590.2/Gneiting2007jasa.pdf>`_
+* `Visualizing and Understanding Neural Machine Translation <http://www.aclweb.org/anthology/P/P17/P17-1106.pdf>`_
+* `Multiplicative Multitask Feature Learning <http://jmlr.org/papers/v17/15-234.html>`_
+
+*Lectures : monotonie*
+
+* `Isotonic Regression <https://en.wikipedia.org/wiki/Isotonic_regression>`_
+* `Monotonic Calibrated Interpolated Look-Up Tables <http://jmlr.org/papers/v17/15-243.html>`_
+* `Lattice Regression <https://papers.nips.cc/paper/3694-lattice-regression.pdf>`_
+* `Optimized Regression for Efficient Function Evaluation <http://ieeexplore.ieee.org/document/6203580/?reload=true>`_
+* `Fast and Flexible Monotonic Functions with Ensembles of Lattices <https://papers.nips.cc/paper/6377-fast-and-flexible-monotonic-functions-with-ensembles-of-lattices.pdf>`_
+
+*Lectures: local*
+
+* `Learning Deep Nearest Neighbor Representations Using Differentiable Boundary Trees <https://arxiv.org/abs/1702.08833>`_
+
+*Lectures: modèle graphique*
+
+* `Factor Graph <http://deepdive.stanford.edu/assets/factor_graph.pdf>`_
+* `An Introduction to Conditional Random Fields for Relational Learning <http://people.cs.umass.edu/~mccallum/papers/crf-tutorial.pdf>`_
+* `Factor Graphs and the Sum-Product Algorithm <http://www.comm.utoronto.ca/~frank/papers/KFL01.pdf>`_
+
+*Modules*
+
+* `edward <http://edwardlib.org/>`_
+* `deepdive <http://deepdive.stanford.edu/>`_: ce n'est pas un module python,
+  cet outil a été développé pour étudier les relations dans les données et plus
+  particulièrement les `dark data <https://en.wikipedia.org/wiki/Dark_data>`_
+* `treeinterpreter <https://pypi.python.org/pypi/treeinterpreter>`_
+
+Sélection de variables
+++++++++++++++++++++++
+
+La sélection de features peut paraître de moindre importance
+dans un contexte où la puissance de calcul ne cesse d'augmenter mais
+cette puissance est de plus en plus accessible via la parallélisation
+qui nécessite quelques ajustements algorithmiques. L'ajout de features
+complique également l'interprétation des résultats.
+
+*à vénir*
+
+*Lectures*
+
+* `An Introduction to Variable and Feature Selection <http://www.jmlr.org/papers/volume3/guyon03a/guyon03a.pdf>`_
+* `Feature Selection (wikipédia) <https://en.wikipedia.org/wiki/Feature_selection>`_
+* `Feature Selection (scikit-learn) <http://scikit-learn.org/stable/modules/feature_selection.html>`_
+
 Anonymisation des données
 +++++++++++++++++++++++++
 
@@ -339,6 +403,7 @@ Machine Learning sur des données cryptées
 *Lectures*
 
 * `Fully Homomorphic Encryption over the Integers <https://eprint.iacr.org/2009/616.pdf>`_
+* `Homomorphic Encryption from Learning with Errors: Conceptually-Simpler, Asymptotically-Faster, Attribute-Based <https://eprint.iacr.org/2013/340.pdf>`_
 * `Differentially Private Online Learning <http://www.jmlr.org/proceedings/papers/v23/jain12/jain12.pdf>`_
 * `A Differentially Private Stochastic Gradient Descent Algorithm for Multiparty Classification <http://www.jmlr.org/proceedings/papers/v22/rajkumar12/rajkumar12.pdf>`_
 * `Machine Learning Classification over Encrypted Data <https://eprint.iacr.org/2014/331.pdf>`_
@@ -611,7 +676,7 @@ Clustering de Graphes
 * `snap.py <https://snap.stanford.edu/snappy/index.html#docs>`_
 
 Communautés
-===========
++++++++++++
 
 Déterminer les communautés est un problème assez semblable au problème
 de clustering mais on cherche aussi à en déterminer le centre ou encore
