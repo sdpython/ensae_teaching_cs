@@ -329,10 +329,16 @@ Machine Learning sur des données cryptées
 
 |pystatpng|
 
-*(à venir)*
+*Notebooks*
+
+.. toctree::
+    :maxdepth: 2
+
+    notebooks/_gs2a_crypt
 
 *Lectures*
 
+* `Fully Homomorphic Encryption over the Integers <https://eprint.iacr.org/2009/616.pdf>`_
 * `Differentially Private Online Learning <http://www.jmlr.org/proceedings/papers/v23/jain12/jain12.pdf>`_
 * `A Differentially Private Stochastic Gradient Descent Algorithm for Multiparty Classification <http://www.jmlr.org/proceedings/papers/v22/rajkumar12/rajkumar12.pdf>`_
 * `Machine Learning Classification over Encrypted Data <https://eprint.iacr.org/2014/331.pdf>`_

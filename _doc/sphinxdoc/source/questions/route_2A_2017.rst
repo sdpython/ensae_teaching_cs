@@ -263,3 +263,28 @@ Séance 4 Maths
     * :ref:`td2amltextfeaturesrst`
 * clustering
     * `Découvrir les habitudes des cyclistes à Chicago <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_bike.html>`_
+
+.. _l-route2017-eco5:
+
+Séance 5 Eco
+^^^^^^^^^^^^
+
+* webscrapping
+    * :ref:`TD2AEcoWebScrapingrst`
+* version alternatives des notebooks
+    * `GitHub/ensae <https://github.com/Atheane/ensae>`_
+    * :ref:`td2aecoAPIpocketetWebscrapingrst`
+    * :ref:`td2AecoAPIpocketetWebscrapingcorrectionrst`
+* texte et expression régulière
+    * :ref:`td2aTD5TraitementautomatiquedeslanguesenPythonrst`
+
+.. _l-route2017-stat4:
+
+Séance 5 Maths
+^^^^^^^^^^^^^^
+
+* machine learning classique
+    * :ref:`td2amltextfeaturesrst`
+* machine learning crypté
+    * :ref:`mlcrypteddatarst`
+    * :ref:`mlcrypteddatacorrectionrst`

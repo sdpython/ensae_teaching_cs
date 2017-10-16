@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @file
-@brief  Quelques fonctions à propos de la première séance (2A)
-
+@brief Quelques fonctions à propos de la première séance (2A)
 """
 
 import pandas
