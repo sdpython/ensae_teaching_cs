@@ -6,6 +6,7 @@ Feuille de route 2017
 
 .. contents::
     :local:
+    :depth: 1
 
 :ref:`Page principale du cours <l-td2a>`
 
@@ -284,6 +285,7 @@ Séance 5 Maths
 
 * machine learning classique
     * :ref:`td2amltextfeaturesrst`
+    * :ref:`td2amltextfeaturescorrectionrst`
 * machine learning crypté
     * :ref:`mlcrypteddatarst`
     * :ref:`mlcrypteddatacorrectionrst`

@@ -123,7 +123,8 @@ class TestRepository(unittest.TestCase):
         except ProjectsRepository.MailNotFound:
             pass
 
-        emails = ["firstname.ABOUT@machin.fr".lower(), "firstname.SECOND@hhh.fr",
+        emails = ["firstname.ABOUT@machin.fr".lower(),
+                  "firstname.SECOND@hhh.fr",
                   "one_name.another_name.third.fourth@machin.fr"]
 
         proj = ProjectsRepository.create_folders_from_dataframe(df, temp, col_subject="sujet",
@@ -155,7 +156,8 @@ class TestRepository(unittest.TestCase):
 
         self.assertEqual(len(proj.Groups), 3)
         mails = proj.get_emails(proj.Groups[0])
-        self.assertEqual(mails, ['firstname.about@machin.fr'])
+        self.assertEqual(len(mails), 1)
+        self.assertIn(mails[0], emails)
         fLOG("------", os.path.exists(os.path.join(temp, "mail_style.css")))
         proj.write_summary()
         fLOG("------")
