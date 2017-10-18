@@ -5,6 +5,7 @@
 import sys
 import os
 import unittest
+import warnings
 
 
 try:
@@ -91,7 +92,9 @@ class TestExam20161A(unittest.TestCase):
             # no password
             return
 
-        import keyring
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', DeprecationWarning)
+            import keyring
         this = os.path.abspath(os.path.dirname(module_file))
         dst = os.path.join(this, "encrypted", "cryptcode_exam_2016.crypted")
         if not os.path.exists(dst) or os.stat(dst).st_size < 10:
@@ -116,7 +119,9 @@ class TestExam20161A(unittest.TestCase):
             # no password
             return
 
-        import keyring
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', DeprecationWarning)
+            import keyring
         temp = get_temp_folder(__file__, "temp_import_exam")
         pwd = keyring.get_password("exam", os.environ["COMPUTERNAME"] + "key")
         pwd += "*" * (16 - len(pwd))
@@ -158,7 +163,9 @@ class TestExam20161A(unittest.TestCase):
 
         from src.ensae_teaching_cs.td_1a.vigenere import code_vigenere
 
-        import keyring
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', DeprecationWarning)
+            import keyring
         this = os.path.abspath(os.path.dirname(module_file))
         dst = os.path.join(this, "encrypted", "cryptcode_exam_2016.vigenere")
         if not os.path.exists(dst) or os.stat(dst).st_size < 10:
@@ -186,7 +193,9 @@ class TestExam20161A(unittest.TestCase):
 
         from src.ensae_teaching_cs.td_1a.vigenere import code_vigenere
 
-        import keyring
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', DeprecationWarning)
+            import keyring
         temp = get_temp_folder(__file__, "temp_import_exam_vigenere")
         pwd = keyring.get_password("exam", os.environ["COMPUTERNAME"] + "key")
         pwd = pwd.encode("ascii")

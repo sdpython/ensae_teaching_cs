@@ -64,7 +64,9 @@ class TestSKIPPythonnetVoiceReco(unittest.TestCase):
         # skip anyway, authentification is needed
         return
 
-        import keyring
+        with warnings.catch_warnings():
+            warnings.simplefilter('ignore', DeprecationWarning)
+            import keyring
         subkey = keyring.get_password(
             "cogser", os.environ["COMPUTERNAME"] + "voicereco")
 

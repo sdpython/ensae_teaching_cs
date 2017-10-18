@@ -18,7 +18,10 @@ des projets. Dans le cas contraire, le code est prévu pour mettre à jour le r�
 import sys
 import os
 import pandas
-import keyring
+import warnings
+with warnings.catch_warnings():
+    warnings.simplefilter('ignore', DeprecationWarning)
+    import keyring
 
 #################################
 # paramètres de la récupération

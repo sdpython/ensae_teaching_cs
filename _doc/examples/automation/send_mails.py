@@ -16,6 +16,7 @@ the second one about the customized message for each of them.
 
 import os
 import sys
+import warnings
 
 this = os.path.abspath(os.path.dirname(__file__))
 if "ensae_teaching_cs" in this:
@@ -103,7 +104,10 @@ fLOG("columns", df.columns)
 ###################################
 # mot de passe
 
-import keyring
+with warnings.catch_warnings():
+    warnings.simplefilter('ignore', DeprecationWarning)
+    import keyring
+
 user = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "user")
 pwd = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "pwd")
 

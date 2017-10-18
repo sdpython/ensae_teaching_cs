@@ -3,6 +3,7 @@
 @brief backup the list of modules
 """
 import os
+import warnings
 from pyquickhelper.filehelper import TransferFTP
 
 
@@ -29,7 +30,10 @@ def ftp_list_modules(ftp_location="/www/htdocs/enseignement/setup",
         keyring.get_password("ftp_list_modules", os.environ["COMPUTERNAME"] + "password", "...")
     """
     hostname = os.environ.get("COMPUTERNAME", os.environ.get("HOSTNAME", ""))
-    import keyring
+    with warnings.catch_warnings():
+        warnings.simplefilter('ignore', DeprecationWarning)
+        import keyring
+
     ftp_site = keyring.get_password("ftp_list_modules", hostname + "site")
     login = keyring.get_password("ftp_list_modules", hostname + "login")
     password = keyring.get_password("ftp_list_modules", hostname + "password")

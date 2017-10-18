@@ -5,8 +5,8 @@
 import sys
 import os
 import unittest
-import keyring
 import pandas
+import warnings
 
 
 try:
@@ -60,6 +60,10 @@ from pyquickhelper.filehelper import zip_files
 from src.ensae_teaching_cs.data.crypt_helper import encrypt_data, decrypt_data
 from src.ensae_teaching_cs.data.datacpt import data_cpt_ENSAE_2016_11, data_cpt_ENSAE_2016_11_blind_set
 from src.ensae_teaching_cs.ml.competitions import AUC
+
+with warnings.catch_warnings():
+    warnings.simplefilter('ignore', DeprecationWarning)
+    import keyring
 
 
 class TestCompetition(unittest.TestCase):
