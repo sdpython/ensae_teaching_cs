@@ -286,6 +286,8 @@ Séance 5 Maths
 * machine learning classique
     * :ref:`td2amltextfeaturesrst`
     * :ref:`td2amltextfeaturescorrectionrst`
+* Courbe ROC
+    * :ref:`sphx_glr_ml_basic_plot_roc.py`
 * machine learning crypté
     * :ref:`mlcrypteddatarst`
     * :ref:`mlcrypteddatacorrectionrst`

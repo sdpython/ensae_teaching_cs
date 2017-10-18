@@ -211,9 +211,14 @@ print(auc(fpr, tpr))
 # La courbe :epkg:`ROC` s'applique toujours à un problème
 # de classification binaire qu'on peut scinder en trois questions :
 #
-# * Le modèle a bien classé un exemple, que ce soit dans la classe 0 ou la classe 1.
 # * Le modèle a bien classé un exemple dans la classe 0.
 # * Le modèle a bien classé un exemple dans la classe 1.
+# * Le modèle a bien classé un exemple, que ce soit dans la classe 0 ou la classe 1.
+#   Ce problème suppose implicitement que le même seuil est utilisé sur chacun des classes.
+#   C'est-à-dire qu'on prédit la classe 1 si le score pour la classe 1 est supérieur à
+#   à celui obtenu pour la classe 0 mais aussi qu'on valide la réponse
+#   si le score de la classe 1 ou celui de la classe 0 est supérieur au même seuil *s*,
+#   ce qui n'est pas nécessairement le meilleur choix.
 #
 # Si les réponses sont liées, le modèle peut répondre de manière
 # plus ou moins efficace à ces trois questions.
@@ -224,7 +229,7 @@ fpr_cl["classe 0"], tpr_cl["classe 0"], _ = roc_curve(
     y_test == 0, y_proba[:, 0].ravel())
 fpr_cl["classe 1"], tpr_cl["classe 1"], _ = roc_curve(
     y_test, y_proba[:, 1].ravel())  # y_test == 1
-fpr_cl["tout"], tpr_cl["tout"] = fpr, tpr  # On reprend ceux déjà calculé.
+fpr_cl["tout"], tpr_cl["tout"] = fpr, tpr  # On reprend ceux déjà calculés.
 
 ##############################
 # Et on les représente.
