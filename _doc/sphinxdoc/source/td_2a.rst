@@ -107,9 +107,14 @@ notions suivantes.
 **Auteurs et Contributeurs**
 
 Ce cours a bénéficié de nombreuses contributions dont les auteurs sont :
-Xavier Dupré, Anne Muller, Elodie Royant
-Nicolas Rousset, Jérémie Jakubowicz, Gilles Drigout,
-Gaël Varoquaux et bien sûr les étudiants de l':epkg:`ENSAE`.
+Xavier Dupré, Anne Muller (API, scrapping, tutoriels, ...),
+Elodie Royant (API, scrapping, tutoriels, ...),
+Matthieu Bizien (deep learning),
+Nicolas Rousset (itérateurs),
+Jérémie Jakubowicz (puzzle algorithmique),
+Gilles Drigout (streaming),
+Gaël Varoquaux (machine learning avec scikit-learn)
+et bien sûr les étudiants de l':epkg:`ENSAE`.
 
 Années passées :
 

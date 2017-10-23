@@ -545,6 +545,7 @@ qui évoque l'apprentissage supervisé d'un modèle de traduction automatique de
 
 *Lectures*
 
+* `Machine Learning is Fun Part 5: Language Translation with Deep Learning and the Magic of Sequences <https://medium.com/@ageitgey/machine-learning-is-fun-part-5-language-translation-with-deep-learning-and-the-magic-of-sequences-2ace0acca0aa>`_
 * `Dual Learning for Machine Translation <https://papers.nips.cc/paper/6469-dual-learning-for-machine-translation.pdf>`_
 * `Neural Machine Translation by Jointly Learning to Align and Translate <https://arxiv.org/abs/1409.0473>`_
 * `Sequence-to-Dependency Neural Machine Translation <http://www.aclweb.org/anthology/P/P17/P17-1065.pdf>`_
@@ -597,8 +598,11 @@ Les meilleurs modèles sont des modèles de deep learning
 
 ------------------
 
-Image
-=====
+Images
+======
+
+Il est difficile d'aborder cette partie sans savoir ce qu'est
+le :ref:`l-deep-learning`.
 
 Classification
 ++++++++++++++
@@ -625,6 +629,14 @@ Classification
 * `SSD: Single Shot MultiBox Detector <https://arxiv.org/abs/1512.02325>`_
   (voir aussi `caffe/ssd <https://github.com/weiliu89/caffe/tree/ssd>`_)
 * `HPatches: A benchmark and evaluation of handcrafted and learned local descriptors <http://www.robots.ox.ac.uk/~vgg/publications/2017/Balntas17/balntas17.pdf>`_
+
+*Algorithmes*
+
+* `Viola–Jones object detection framework <https://en.wikipedia.org/wiki/Viola%E2%80%93Jones_object_detection_framework>`_
+* `Histograms of Oriented Gradients for Human Detection (HOG) <http://lear.inrialpes.fr/people/triggs/pubs/Dalal-cvpr05.pdf>`_
+* `One Millisecond Face Alignment with an Ensemble of Regression Trees <http://www.csc.kth.se/~vahidk/papers/KazemiCVPR14.pdf>`_,
+  `Github/AndrejMaris/facefit <https://github.com/AndrejMaris/facefit>`_
+* `ageitgey/step-2a_finding-face-landmarks.py <https://gist.github.com/ageitgey/ae340db3e493530d5e1f9c15292e5c74>`_
 
 *Outils*
 
@@ -682,6 +694,29 @@ d'intérêt au pixel près.
 * `opencv - watershed <http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_watershed/py_watershed.html>`_
 * `torch-vision <https://github.com/warmspringwinds/vision/tree/5e0a760fc847d55a4c1699410a14003452fa4581>`_
 * `pytorch-semseg <https://github.com/meetshah1995/pytorch-semseg>`_
+
+Génération d'images
++++++++++++++++++++
+
+(*à venir*)
+
+*Lectures*
+
+* `Machine Learning is Fun Part 7: Abusing Generative Adversarial Networks to Make 8-bit Pixel Art <https://medium.com/@ageitgey/abusing-generative-adversarial-networks-to-make-8-bit-pixel-art-e45d9b96cee7>`_
+
+------------------
+
+Sons
+====
+
+Reconnaissance de la parole
++++++++++++++++++++++++++++
+
+(à venir)
+
+*Lectures*
+
+* `Machine Learning is Fun Part 6: How to do Speech Recognition with Deep Learning <https://medium.com/@ageitgey/machine-learning-is-fun-part-6-how-to-do-speech-recognition-with-deep-learning-28293c162f7a>`_
 
 ------------------
 
@@ -801,6 +836,101 @@ Vous pouvez tester votre installation avec le notebook
 :ref:`mldeeppythonrst` ou encore
 `Keras-TensorFlow-GPU-Windows-Installation <https://github.com/antoniosehk/keras-tensorflow-windows-installation>`_.
 
+Réseaux de neurones et Deep Learning
+++++++++++++++++++++++++++++++++++++
+
+Les premiers modèles de *deep learning* sont des réseaux de neurones.
+Il n'est pas inutile de coder le sien au moins une fois
+même s'il n'utilise pas de GPU, même s'il sera probablement
+beaucoup plus lent.
+
+*à venir*
+
+.. contents::
+    :local:
+
+*Code*
+
+* `Implementing a Neural Network from Scratch in Python - An Introduction <http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/>`_,
+  `notebook <https://github.com/dennybritz/nn-from-scratch>`_
+* `A Neural Network in 11 lines of Python (Part 1) <http://iamtrask.github.io/2015/07/12/basic-python-network/>`_,
+  `A Neural Network in 13 lines of Python (Part 2 - Gradient Descent) <http://iamtrask.github.io/2015/07/27/python-network-part2/>`_
+* `nimblenet <https://github.com/jorgenkg/python-neural-network>`_ : implémentation de différents algorithmes de back propagation
+  avec `numpy <http://www.numpy.org/>`_)
+
+*Lectures*
+
+* `Réseau de neurones en maths <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/rn/rn.html>`_
+* `Artificial Intelligence, Revealed (1) <https://code.facebook.com/pages/1902086376686983>`_ : article de blog et vidéos
+  expliquant les différents concepts du deep learning
+* `Artificial Intelligence, Revealed (2) <https://code.facebook.com/posts/384869298519962/artificial-intelligence,-revealed/>`_ :
+  quelques reprises de l'article précédent et une idée du future (en 2016)
+* `DeepMind Publications <https://deepmind.com/research/publications/>`_
+* `Sequential Neural Models with Stochastic Layers <https://arxiv.org/abs/1605.07571>`_
+* `Interaction Networks for Learning about Objects, Relations and Physics <https://arxiv.org/abs/1612.00222>`_
+* `Scaling Memory-Augmented Neural Networks with Sparse Reads and Writes <https://arxiv.org/abs/1610.09027>`_
+* `Tutoriel pour CNTK <https://www.cntk.ai/pythondocs/>`_
+
+*Vocabulaire*
+
+* `deep learning
+  glossary <http://www.wildml.com/deep-learning-glossary/>`_ : termes
+  employés pour le deep learning
+* `Core Layers <https://keras.io/layers/core/>`__ : différents
+  traitement pour compenser les défauts des réseaux de neurones lors de
+  l'apprentissage.
+
+*MNIST*
+
+La base `MNIST <https://en.wikipedia.org/wiki/MNIST_database>`_ est le premier
+sujet pour lequel un réseau de neurones profond a été appris. C'est le premier
+exemple sur lequel on s'entraîner le plus souvent.
+
+* `MNIST benchmark <http://yann.lecun.com/exdb/mnist/>`_
+* `Handwriten Digits Recognition Using Deep
+  Learning <https://faisalorakzai.wordpress.com/2016/06/01/handwritten-digits-recognition-using-deep-learning/>`_
+
+.. image:: mnist_illustration.png
+    :width: 600
+
+*Architectures*
+
+* `Tutorial: Learning Deep Architectures <http://www.cs.toronto.edu/~rsalakhu/deeplearning/yoshua_icml2009.pdf>`_
+* `Convolution (CNN) <https://en.wikipedia.org/wiki/Convolutional_neural_network>`_
+* `Recurrent (RNN) <https://en.wikipedia.org/wiki/Recurrent_neural_network>`_ :
+  séquence labelling, fenêtre glissante dans les
+  images, la sortie du réseau pour l'observations *n-1* est
+  utilisé par le réseau pour l'observation *n* si ces deux
+  observations font partie de la même séquence.
+* `Auto-Encoder <https://en.wikipedia.org/wiki/Autoencoder>`_ :
+  débruiter, ACP non linéaire
+* `Long short-term memory (LSTM) <https://en.wikipedia.org/wiki/Long_short-term_memory>`_,
+  voir aussi `Understanding LSTM Networks <http://colah.github.io/posts/2015-08-Understanding-LSTMs/>`_,
+  le modèle est construit afin qu'il puisse prendre en compte un passé de longueur variable.
+  Voir aussi `LSTM <http://deeplearning.net/tutorial/lstm.html>`_.
+
+*Modules*
+
+* `Torch <http://torch.ch/>`_ et surtout `pytorch <http://pytorch.org/>`_
+  dont le design est plus simple que celui des autres.
+* `Caffee <http://caffe.berkeleyvision.org/>`_ (Berkeley)
+* `CNTK <https://www.microsoft.com/en-us/research/product/cognitive-toolkit/>`_ (Microsoft)
+* `deeplearning4j <https://deeplearning4j.org/>`_
+* `fastText <https://github.com/facebookresearch/fastText>`_
+* `mxnet <https://github.com/dmlc/mxnet>`_
+* `PaddlePaddle <https://github.com/PaddlePaddle/Paddle>`_ (Baidu)
+* `TensorFlow <https://www.tensorflow.org/>`_ (Google)
+
+*GPU*
+
+* `Theano <http://deeplearning.net/software/theano/>`_ (n'est plus maintenu)
+* `cupy <https://github.com/cupy/cupy>`_
+
+*Wrappers*
+
+`Keras <https://keras.io/>`_ ou `chainer <http://chainer.org/>`_ implémentent des interfaces
+communes pour plusieurs librairies de machine learning.
+
 Deep Learning en détail
 +++++++++++++++++++++++
 
@@ -818,7 +948,6 @@ Deep Learning en détail
 *Cours*
 
 * `Deep Learning course: lecture slides and lab notebooks <https://m2dsupsdlclass.github.io/lectures-labs/>`_
-* :ref:`l-deep-learning-specials`.
 * `Artificial Intelligence, Revealed (1) <https://code.facebook.com/pages/1902086376686983>`_ :
   article de blog et vidéos expliquant les différents concepts du deep learning
 * `colah's blog <http://colah.github.io/>`_ *(2016/08)* blog/cours sur le deep learning
@@ -835,6 +964,9 @@ Deep Learning en détail
 * `Tutoriels avec TensorFlow <https://github.com/Hvass-Labs/TensorFlow-Tutorials>`_ :
   ce ne sont pas les seuls mais ils ont l'avantage d'être bien illustrés
   (`Adversarial Training <https://github.com/Hvass-Labs/TensorFlow-Tutorials/blob/master/11_Adversarial_Examples.ipynb>`_).
+* `Machine Learning is Fun! Part 3: Deep Learning and Convolutional Neural Networks <https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721>`_
+* `Machine Learning is Fun! Part 4: Modern Face Recognition with Deep Learning <https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78>`_
+* `Object detection using Fast R-CNN <https://docs.microsoft.com/en-us/cognitive-toolkit/Object-Detection-using-Fast-R-CNN>`_
 
 *Sites*
 
@@ -972,6 +1104,9 @@ Transfer Learning
   (deep learning)
 * `CNTK <https://www.microsoft.com/en-us/research/product/cognitive-toolkit/model-gallery/>`_
   (sur `github <https://github.com/Microsoft/CNTK/tree/master/Examples>`_)
+* `Model Zoo <https://github.com/BVLC/caffe/wiki/Model-Zoo>`_
+* `Model Gallery CNTK <https://www.microsoft.com/en-us/cognitive-toolkit/features/model-gallery/>`_
+* `tensorflow/models <https://github.com/tensorflow/models>`_
 
 Apprentissage sans labels
 +++++++++++++++++++++++++
