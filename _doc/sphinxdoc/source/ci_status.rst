@@ -136,6 +136,28 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
+    * - `lightmlboard <http://www.xavierdupre.fr/app/lightmlboard/helpsphinx3/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/lightmlboard.svg?branch=master
+            :target: https://travis-ci.org/sdpython/lightmlboard
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/6g0xro11tmc6t05d?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/lightmlboard
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/lightmlboard/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/lightmlboard/tree/master
+      - .. image:: https://badge.fury.io/py/lightmlboard.svg
+            :target: http://badge.fury.io/py/lightmlboard
+      - .. image:: http://img.shields.io/pypi/pyversions/lightmlboard.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/lightmlboard
+      - .. image:: https://badge.waffle.io/sdpython/lightmlboard.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/lightmlboard
+      - .. image:: https://codecov.io/github/sdpython/lightmlboard/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/lightmlboard?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/lightmlboard/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/lightmlboard/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/jupytalk.svg?branch=master
             :target: https://travis-ci.org/sdpython/jupytalk
@@ -484,6 +506,9 @@ Contenu
         et que j'utilise parfois durant les cours avec les plus grands.
     * - `jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
       - Présentations sous formes de notebooks données lors de conférences ou de cours.
+    * - `lightmlboard <http://www.xavierdupre.fr/app/lightmlboard/helpsphinx/index.html>`_
+      - Essai d'implémenter d'un tableau de résultats pour une compétition de machine learning,
+        avec :epkg:`tornado`.
     * - `mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
       - Contenu plus théorique associé à la datascience, au machine learning,
         au traitement naturel du langage. Avec un peu plus de démonstrations
@@ -509,6 +534,7 @@ Git Clone
     if not exist ensae_teaching_cs          git clone https://github.com/sdpython/ensae_teaching_cs.git
     if not exist jupytalk                   git clone https://github.com/sdpython/jupytalk.git
     if not exist jyquickhelper              git clone https://github.com/sdpython/jyquickhelper.git
+    if not exist lightmlboard               git clone https://github.com/sdpython/lightmlboard.git
     if not exist mlstatpy                   git clone https://github.com/sdpython/mlstatpy.git
     if not exist pandas_streaming           git clone https://github.com/sdpython/pandas_streaming.git
     if not exist pyensae                    git clone https://github.com/sdpython/pyensae.git
