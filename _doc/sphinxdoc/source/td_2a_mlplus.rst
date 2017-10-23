@@ -1073,6 +1073,11 @@ Transfer Learning
 
 |pystatpng|
 
+* `Building powerful image classification models using very little data <https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html>`_
+* `Transfer Learning and Fine Tuning a pre-trained Deep CNN on a GPU <https://github.com/sdpython/2017_deeplearning_demo/blob/master/Fine_Tuning_Deep_CNNs_with_GPU_rendered.ipynb>`_
+  (Olivier Grisel) - présenté lors de la conférence devoxx :
+  `Deep Learning : choisir son framework et entrainer ses modèles dans Azure <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2017/experience_2017.html>`_.
+
 *Notebooks*
 
 *(à venir)*
