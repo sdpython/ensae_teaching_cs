@@ -967,6 +967,8 @@ Deep Learning en détail
 * `Machine Learning is Fun! Part 3: Deep Learning and Convolutional Neural Networks <https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721>`_
 * `Machine Learning is Fun! Part 4: Modern Face Recognition with Deep Learning <https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78>`_
 * `Object detection using Fast R-CNN <https://docs.microsoft.com/en-us/cognitive-toolkit/Object-Detection-using-Fast-R-CNN>`_
+* `Deep Learning - The Straight Dope <http://gluon.mxnet.io/>`_ :
+  séries de notebooks de difficulté graduelle
 
 *Sites*
 
