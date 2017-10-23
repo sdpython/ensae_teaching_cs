@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=102s)
+@brief      test log(time=104s)
 """
 
 import sys
@@ -75,35 +75,13 @@ class TestNotebook123Coverage2(unittest.TestCase):
             temp, keepnote, additional_path=add_path, valid=valid)
         execute_notebook_list_finalize_ut(res, fLOG=fLOG, dump=thismodule)
 
-    def test_notebook_visualisation(self):
+    def test_notebook_some_nlp(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        def valid(cell):
-            if "plotly" in cell:
-                return False
-            return True
-
-        self.a_test_notebook_runner("td2a_visualisation", "td2a", valid=valid)
-
-    def test_notebook_progressbar(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        # see issue https://github.com/tqdm/tqdm/issues/441
-        self.a_test_notebook_runner("td2a_progressbar", "td2a")
-
-    def test_notebook_timeseries(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        self.a_test_notebook_runner("ml_timeseries_base", "2a")
+        self.a_test_notebook_runner("td2a_some_nlp", "td2a")
 
 
 if __name__ == "__main__":

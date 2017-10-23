@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=180s)
+@brief      test log(time=100s)
 """
 
 import sys
@@ -84,14 +84,6 @@ class TestNotebook123Coverage2(unittest.TestCase):
         if False:
             # h2o is difficult to make work as it launches a server.
             self.a_test_notebook_runner("ml_d_library_h2o", "td2a_ml")
-
-    def test_notebook_some_nlp(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        self.a_test_notebook_runner("td2a_some_nlp", "td2a")
 
     def test_notebook_timeseries(self):
         fLOG(

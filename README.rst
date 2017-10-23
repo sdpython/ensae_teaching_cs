@@ -54,46 +54,44 @@ That will be probably one of the few pages in English.
 Contributions
 -------------
 
-Started in 2014/04.
-
-* Contributor: `Xavier Dupré <http://www.xavierdupre.fr/>`_, ENSAE's students
+Started in 2014/04. **Contributors:** `Xavier Dupré <http://www.xavierdupre.fr/>`_,
+Anne Muller, Elodie Royant, Matthieu Bizien,
+Nicolas Rousset, Jérémie Jakubowicz, Gilles Drigout (streaming),
+Gaël Varoquaux, ENSAE's students.
 
 Setup
 -----
 
-* `7zip <http://www.7-zip.org/>`_
-* `Anaconda <https://www.continuum.io/downloads>`_
-  2 and 3 (to be installed on the same hard drive than the Jenkins build folder)
-* `Chrome <https://www.google.fr/chrome/browser/desktop/>`_
-* `CMake <https://cmake.org/>`_ (to build XGBoost)
-* `Graphviz <http://www.graphviz.org/>`_
-* `Git <https://git-scm.com/>`_
-* `GitHub <https://desktop.github.com/>`_
-* `Java 64 bit <https://www.java.com/fr/download/manual.jsp>`_ (for Spark)
-* `Jenkins <https://jenkins.io/>`_ (CI)
-* `Miktex Basic Installer 64 bit <https://miktex.org/download>`_ (formula in the documentation)
-  (check the option to silently install new packages)
-* `Pandoc <http://pandoc.org/>`_ (documentation)
-* `Python <https://www.python.org/>`_ 3.5, 3.6, 2.7 64 bit
-  (do not add the interpreter on the default PATH)
-* `R 3.2.2 <https://cran.r-project.org/bin/windows/base/old/3.2.2/>`_
-* `Scite <http://www.scintilla.org/SciTE.html>`_
-* `mingw-w64 <https://mingw-w64.org/doku.php>`_ (theano)
-* `Visual Studio 2015 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_
-  (check C++, C#, Python, CLang) (Cython)
+`7zip <http://www.7-zip.org/>`_,
+`Anaconda <https://www.continuum.io/downloads>`_,
+2 and 3 (to be installed on the same hard drive than the Jenkins build folder),
+`Chrome <https://www.google.fr/chrome/browser/desktop/>`_,
+`CMake <https://cmake.org/>`_ (to build XGBoost),
+`Graphviz <http://www.graphviz.org/>`_,
+`Git <https://git-scm.com/>`_,
+`GitHub <https://desktop.github.com/>`_,
+`Java 64 bit <https://www.java.com/fr/download/manual.jsp>`_ (for Spark),
+`Jenkins <https://jenkins.io/>`_ (CI),
+`Miktex Basic Installer 64 bit <https://miktex.org/download>`_ (formula in the documentation)
+(check the option to silently install new packages),
+`Pandoc <http://pandoc.org/>`_ (documentation),
+`Python <https://www.python.org/>`_ 3.6, 64 bit
+(do not add the interpreter on the default PATH),
+`R 3.2.2 <https://cran.r-project.org/bin/windows/base/old/3.2.2/>`_,
+`Scite <http://www.scintilla.org/SciTE.html>`_,
+`mingw-w64 <https://mingw-w64.org/doku.php>`_,
+`Visual Studio 2015 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_
+(check C++, C#, Python, CLang) (Cython).
 
-For each Python, you need to install
+You can install the necessary modules with
 `pymyinstall <https://pypi.python.org/pypi/pymyinstall/>`_
 and type ``pymy_install`` and then remove the modules
 being tested (such as this one).
-
-Jenkins requires a few extensions:
-
-* Last Console Output
-* Next Jobs
-* `Text File <https://wiki.jenkins-ci.org/display/JENKINS/Text+File+Operations+Plugin>`_
-
-For Jupyter :
+*Jenkins* requires a few extensions:
+`Last Console Output <https://wiki.jenkins.io/display/JENKINS/Display+Console+Output+Plugin>`_,
+`Next Executions <https://wiki.jenkins.io/display/JENKINS/Next+Executions>`_,
+`Text File <https://wiki.jenkins-ci.org/display/JENKINS/Text+File+Operations+Plugin>`_.
+For `Jupyter <http://jupyter.org/>`_:
 
 ::
 
@@ -106,23 +104,8 @@ A local PyPi server needs to be installed:
 
     pypi-server.exe -u -p 8067 --disable-fallback ..\..\local_pypi\local_pypi_server
 
-If some Python scripts use *keyring* to retrieve passwords,
-the Jenkins service needs to authentify. On Windows, it goes through ``services.msc``.
-Version for Python 2.7 can be tested with with a virtual environment
-and pyquickhelper:
-
-::
-
-    cd D:\jenkins\venv\py36
-    virtualenv.exe pyq --system-site-packages
-    cd pyq\Scripts
-    pip install pyquickhelper
-
-For some projects (such as the compilation of *pywin32*),
-`Windows SDK <https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk>`_
-needs to be installed.
-
-For Python 2.7, the module
-`backports.shutil_get_terminal_size <https://pypi.python.org/pypi/backports.shutil_get_terminal_size/>`_
-needs to be removed. It does not work from a virtual environment unless it is installed
-from there.
+If some Python scripts use
+`keyring <https://pypi.python.org/pypi/keyring>`_
+to retrieve passwords,
+the Jenkins service needs to authentify.
+On *Windows*, it goes through ``services.msc``.
