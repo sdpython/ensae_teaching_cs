@@ -319,4 +319,3 @@ Séance 6 Maths
 * deep learning : présentations
     * :ref:`l-nolabel`
     * `Deep Learning 2017 <http://www.xavierdupre.fr/exposes/deeplearning/>`_ (avec Olivier Grisel)
-    

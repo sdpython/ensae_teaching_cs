@@ -75,23 +75,27 @@ class TestNotebook123Coverage2(unittest.TestCase):
             temp, keepnote, additional_path=add_path, valid=valid)
         execute_notebook_list_finalize_ut(res, fLOG=fLOG, dump=thismodule)
 
-    def test_notebook_ml_d_library_h2o(self):
+    def test_notebook_visualisation(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        if False:
-            # h2o is difficult to make work as it launches a server.
-            self.a_test_notebook_runner("ml_d_library_h2o", "td2a_ml")
+        def valid(cell):
+            if "plotly" in cell:
+                return False
+            return True
 
-    def test_notebook_some_nlp(self):
+        self.a_test_notebook_runner("td2a_visualisation", "td2a", valid=valid)
+
+    def test_notebook_progressbar(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        self.a_test_notebook_runner("td2a_some_nlp", "td2a")
+        # see issue https://github.com/tqdm/tqdm/issues/441
+        self.a_test_notebook_runner("td2a_progressbar", "td2a")
 
     def test_notebook_timeseries(self):
         fLOG(
