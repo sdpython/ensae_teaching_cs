@@ -71,13 +71,13 @@ discutées.
         :ref:`l-route2017-stat5`
       - Web scrapping, API, :ref:`l-route2017-eco5`
     * - 24/10 (6)
-      - Deep learning, Keras, Torch, Transfer Learning
-      - Etique dans les données, anonimisation des données,
-        séries temporelles
+      - Deep learning, Keras, Torch, Transfer Learning, :ref:`l-route2017-stat6`
+      - NLP, :ref:`l-route2017-eco6`
     * - 7/11 (7)
       - Revue de compétition Kaggle, Interprétabilité des modèles,
-        Featurisation
-      - Interprétabilité des modèles, problèmes de classification binaire
+        Featurisation, Etique dans les modèles
+      - Interprétabilité des modèles, problèmes de classification binaire,
+        Etique dans les modèles
     * - 14/11 (8)
       - Algorithme de streaming, série temporelles,
         sequence learning, présentation des projets
@@ -293,3 +293,30 @@ Séance 5 Maths
     * :ref:`mlcrypteddatacorrectionrst`
 * Grid Search
     * :ref:`sphx_glr_ml_basic_plot_grid_search.py`
+
+.. _l-route2017-eco6:
+
+Séance 6 Eco
+^^^^^^^^^^^^
+
+* NLP, scrapping
+    * :ref:`td2aNLPpocketrst`
+    * :ref:`td2aNLPpocketcorrectionrst`
+
+.. _l-route2017-stat6:
+
+Séance 6 Maths
+^^^^^^^^^^^^^^
+
+* deep learning : notebooks
+    * :ref:`100LogisticIRISrst`
+    * :ref:`110PerceptronIrisrst`
+    * :ref:`200PerceptronMNISTrst`
+    * :ref:`210ConvolutionMNISTrst`
+    * :ref:`300ConvolutionCIFAR10rst`
+    * :ref:`mldeeppythonrst`
+    * `Transfer Learning <https://github.com/sdpython/2017_deeplearning_demo/blob/master/Fine_Tuning_Deep_CNNs_with_GPU_rendered.ipynb>`_ (Olivier Grisel)
+* deep learning : présentations
+    * :ref:`l-nolabel`
+    * `Deep Learning 2017 <http://www.xavierdupre.fr/exposes/deeplearning/>`_ (avec Olivier Grisel)
+    
