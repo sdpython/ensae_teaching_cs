@@ -44,31 +44,30 @@ np.random.seed = 2017  # pour des résultats reproductibles
 # Il consiste à :
 #
 # 0. *Optionnel : Normaliser les données (important si les données n'ont
-#    par exemple pas été mesurées aux mêmes échelles)*
+#    par exemple pas été mesurées aux mêmes échelles)*.
 # 1. Construire la matrice de covariance entre les variables :
-#    :math:`\Sigma = \frac{1}{n-1}\sum_{i=1}^{n}{((X - \bar{x})'(X - \bar{x}))}`
+#    :math:`\Sigma = \frac{1}{n-1}\sum_{i=1}^{n}{((X - \bar{x})'(X - \bar{x}))}`.
 # 2. Trouver les valeurs propres :math:`\lambda_i` et vecteurs propres
 #    :math:`v_i` : :math:`\Sigma v_i = \lambda_iv_i`, ces vecteurs propres
 #    forment un repère orthogonal de l'espace des données (en tant que
-#    vecteurs propres d'une matrice symmétrique qu'on supposera de rang n)
+#    vecteurs propres d'une matrice symmétrique qu'on supposera de rang n).
 # 3. Classer les valeurs propres (et les vecteurs associés) de façon
 #    décroissante :
 #    :math:`\{\lambda_{(n)}, \lambda_{(n-1)}...\lambda_{(1)} \}` où
-#    :math:`\lambda_{(i)}` est la i-ème variance dans l'ordre croissant
+#    :math:`\lambda_{(i)}` est la i-ème variance dans l'ordre croissant.
 # 4. Ne conserver que les k (:math:`k \leqslant n`) premiers vecteurs :
-#    :math:`\{v_{(n)}, v_{(n-1)}...v_{(n-k+1)} \}`
+#    :math:`\{v_{(n)}, v_{(n-1)}...v_{(n-k+1)} \}`.
 # 5. Construire la matrice de projection dans l'espace de ces vecteurs
-#    (changement de base si n=k)
-# 6. Projeter les données initiales dans cet espace de dimension k
-#    |Illustration PCA|
+#    (changement de base si *n=k*).
+# 6. Projeter les données initiales dans cet espace de dimension *k*.
+#
+# .. image:: dr_pca.png
 #
 # Tout cela peut bien sur être implémenté from scratch avec Numpy mais
 # nous utiliserons ici scikit-learn pour raccourcir l'implémentation et
 # nous concentrer sur la visualisation des résultats. Cf.
 # `Analyse en composantes principales (ACP) <https://fr.wikipedia.org/wiki/Analyse_en_composantes_principales>`_ et
 # `PCA <http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html>`_.
-#
-# .. |Illustration PCA| image:: https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/GaussianScatterPCA.svg/220px-GaussianScatterPCA.svg.png
 #
 # Implémentation avec scikit-learn
 # ++++++++++++++++++++++++++++++++
