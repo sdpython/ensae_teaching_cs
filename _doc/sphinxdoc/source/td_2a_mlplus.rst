@@ -427,31 +427,14 @@ Machine Learning sur des données cryptées
 
 ------------------
 
-NLP - Image - Réseaux - Finance
-===============================
+.. _l-td2a-nlp:
+
+Texte - Natural Language Processing - NLP
+=========================================
 
 .. contents::
     :local:
     :depth: 1
-
-Finance
-+++++++
-
-|pystatpng|
-
-*Modules*
-
-* `pyalgotrade <http://gbeced.github.io/pyalgotrade/>`_
-* `zipline <https://pypi.python.org/pypi/zipline>`_
-* `alphalens <https://github.com/quantopian/alphalens>`_
-* `pyfolio <https://github.com/quantopian/pyfolio>`_
-* `empyrical <https://github.com/quantopian/empyrical>`_
-* `quantlib <https://github.com/lballabio/quantlib>`_
-* `prophet <http://prophet.michaelsu.io/en/latest/>`_ (not updated anymore)
-* `bloomberg API <https://www.bloomberglabs.com/api/libraries/>`_
-* `ta-lib <https://github.com/mrjbq7/ta-lib>`_
-
-.. _l-td2a-nlp:
 
 Traitement du langage
 +++++++++++++++++++++
@@ -543,6 +526,7 @@ exploitable par les algorithmes d'apprentissage.
 * `lda2vec <https://github.com/cemoody/lda2vec>`_
 * `glove-python <https://github.com/maciejkula/glove-python>`_
 * `tethne <http://diging.github.io/tethne/>`_
+* `torchtext <https://github.com/pytorch/text>`_
 
 *Modules moins ML*
 
@@ -555,7 +539,7 @@ Traduction automatique
 
 (à venir)
 
-Cette partie concerne les SMT ou
+Cette partie concerne les *SMT* ou
 `Statistical machines translation <https://en.wikipedia.org/wiki/Statistical_machine_translation>`_
 qui évoque l'apprentissage supervisé d'un modèle de traduction automatique de texte principalement.
 
@@ -571,8 +555,53 @@ qui évoque l'apprentissage supervisé d'un modèle de traduction automatique de
 
 *Modules*
 
-Images
-++++++
+Tagging
++++++++
+
+Le tagging consiste à prédire un label pour chacun des mots d'une phrase.
+C'est ce qu'on veut faire lorsqu'on considère un problème de
+`Named Entity Recognition (NER) <https://en.wikipedia.org/wiki/Named-entity_recognition>`_.
+On souhaite reconnaître dans une phrase s'il y a une ville, un lieu, un téléphone,
+une adresse. La difficulté consiste à intégrer un contexte dans la décision,
+c'est-à-dire de considérer la séquence des mots et non les mots pris séparément.
+*Paris* peut aussi bien être une ville que le mot *pari* au pluriel.
+Ce problème a longtemps été traité avec des outils de statistiques
+classiques tels que `Hidden Marko Models (HMM) <https://en.wikipedia.org/wiki/Hidden_Markov_model>`_ ou les
+`Conditional Random Fields (CRF) <https://en.wikipedia.org/wiki/Conditional_random_field>`_.
+Les meilleurs modèles sont des modèles de deep learning
+`LSTM <https://en.wikipedia.org/wiki/Long_short-term_memory>`_.
+
+(à venir)
+
+*Lectures*
+
+* `Understanding LSTM Networks <http://colah.github.io/posts/2015-08-Understanding-LSTMs/>`_
+
+*Modules*
+
+* `NLTK.tag <http://www.nltk.org/api/nltk.tag.html>`_
+* `hmmlearn <https://github.com/hmmlearn/hmmlearn>`_
+* `sklearn-crfsuite <https://sklearn-crfsuite.readthedocs.io/en/latest/>`_
+* `spacy - entity recognition <https://spacy.io/docs/usage/entity-recognition>`_
+* `tagger <https://github.com/glample/tagger>`_
+* `MITIE <https://github.com/mit-nlp/MITIE>`_ (le module n'a pas l'air d'être vraiment maintenu)
+
+*Modules deep learning*
+
+* `LightRNN <https://github.com/Microsoft/CNTK/tree/master/Examples/Text/LightRNN>`_
+* `pytorch - bi-LSTM CRF <http://pytorch.org/tutorials/beginner/nlp/advanced_tutorial.html>`_
+
+*Expérimental*
+
+* `NeuroNER <https://github.com/Franck-Dernoncourt/NeuroNER>`_
+
+------------------
+
+Image
+=====
+
+Classification
+++++++++++++++
 
 |pyecopng| |pystatpng|
 
@@ -621,6 +650,64 @@ Images
 * `VGG16 model for Keras <https://gist.github.com/baraldilorenzo/07d7802847aaad0a35d3>`_,
   `VGG in TensorFlow <https://www.cs.toronto.edu/~frossard/post/vgg16/>`_,
   `Very Deep Convolutional Networks for Large-Scale Visual Recognition <http://www.robots.ox.ac.uk/~vgg/research/very_deep/>`_
+
+Détection d'objets
+++++++++++++++++++
+
+(*à venir*)
+
+*Lectures*
+
+* `YOLO: Real-Time Object Detection <https://pjreddie.com/darknet/yolo/>`_
+* `Fast R-CNN: Fast Region-based Convolutional Networks for object detection <https://github.com/rbgirshick/fast-rcnn>`_
+
+Segmentation
+++++++++++++
+
+La segmentation d'images consiste à isoler des zones d'intérêt dans une image.
+Cela peut être un visage, des silhouettes, des objets. C'est encore un domaine
+où le deep learning a permis de faire des grandes avancées. L'objectif est assez similaire
+à la segmentation d'images si ce n'est qu'on cherche à déterminer les zones
+d'intérêt au pixel près.
+
+(*à venir*)
+
+*Lectures*
+
+* `Watershed <https://en.wikipedia.org/wiki/Watershed_(image_processing)>`_
+* `Semantic Segmentation using Fully Convolutional Networks over the years <https://meetshah1995.github.io/semantic-segmentation/deep-learning/pytorch/visdom/2017/06/01/semantic-segmentation-over-the-years.html>`_
+
+*Modules*
+
+* `opencv - watershed <http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_watershed/py_watershed.html>`_
+* `torch-vision <https://github.com/warmspringwinds/vision/tree/5e0a760fc847d55a4c1699410a14003452fa4581>`_
+* `pytorch-semseg <https://github.com/meetshah1995/pytorch-semseg>`_
+
+------------------
+
+Réseaux - Finance
+=================
+
+.. contents::
+    :local:
+    :depth: 1
+
+Finance
++++++++
+
+|pystatpng|
+
+*Modules*
+
+* `pyalgotrade <http://gbeced.github.io/pyalgotrade/>`_
+* `zipline <https://pypi.python.org/pypi/zipline>`_
+* `alphalens <https://github.com/quantopian/alphalens>`_
+* `pyfolio <https://github.com/quantopian/pyfolio>`_
+* `empyrical <https://github.com/quantopian/empyrical>`_
+* `quantlib <https://github.com/lballabio/quantlib>`_
+* `prophet <http://prophet.michaelsu.io/en/latest/>`_ (not updated anymore)
+* `bloomberg API <https://www.bloomberglabs.com/api/libraries/>`_
+* `ta-lib <https://github.com/mrjbq7/ta-lib>`_
 
 Visage, paroles
 +++++++++++++++
