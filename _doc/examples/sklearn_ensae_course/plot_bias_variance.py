@@ -19,7 +19,6 @@ def compute_error(x, y, p):
 
 
 def plot_bias_variance(N=8, random_seed=42, err=0.5):
-    # np.random.seed(random_seed)
     x = 10 ** np.linspace(-2, 0, N)
     y = test_func(x)
 

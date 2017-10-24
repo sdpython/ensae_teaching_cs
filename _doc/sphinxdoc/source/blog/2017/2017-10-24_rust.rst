@@ -1,0 +1,16 @@
+
+.. blogpost::
+    :title: RUST
+    :keywords: RUST, parallélisme
+    :date: 2017-10-24
+    :categories: langage de programmation
+
+    Le langage `RUST <https://www.rust-lang.org/fr-FR/>`_
+    est utilisé pour réécrire certaines parties
+    de `Firefox <https://www.infoworld.com/article/3165424/web-browsers/mozilla-binds-firefoxs-fate-to-the-rust-language.html>`_.
+    Il est optimisé pour la gestion des threads.
+
+    * `Tutoriel sur RUST <https://blog.guillaume-gomez.fr/Rust/1/1>`_
+    * `Writing a Python module with Rust <https://mycognosist.github.io/tutorial-rust-python-lib.html>`_
+    * `Fixing Python Performance with Rust <https://blog.sentry.io/2016/10/19/fixing-python-performance-with-rust.html>`_
+    * `How Rust Can Replace C In Python Libraries <https://developers.slashdot.org/story/17/07/29/046258/how-rust-can-replace-c-in-python-libraries>`_

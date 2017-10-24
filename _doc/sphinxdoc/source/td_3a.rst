@@ -109,6 +109,9 @@ Autres que CPU, GPU
 * `Plasticine: A Reconfigurable Architecture For Parallel Patterns <http://csl.stanford.edu/~christos/publications/2017.plasticine.isca.pdf>`_
 * `Introduction to CGRA <http://aces.snu.ac.kr/~bernhard/teaching/4541.775/lecture/4541.775.9.CGRA.Introduction.pdf>`_
   (`Coarse-Grained Reconfigurable Architecture <http://cccp.eecs.umich.edu/research/cgra.php>`_)
+* `Tensor Processor Unit (TPU) <https://en.wikipedia.org/wiki/Tensor_processing_unit>`_
+* `Application-specific integrated circuit (ASIC) <https://en.wikipedia.org/wiki/Application-specific_integrated_circuit>`_
+* `Field-programmable gate array (FGPA) <https://en.wikipedia.org/wiki/Field-programmable_gate_array>`_
 
 ------------
 
@@ -239,10 +242,25 @@ Workflow de données
 * `Oozie <http://oozie.apache.org/>`_ (Hadoop, Spark)
 * `Azkaban <https://azkaban.github.io/>`_ (Hadoop, Spark)
 
-Framework de distribution des calculs
-+++++++++++++++++++++++++++++++++++++
+Deep Learning
++++++++++++++
 
-* `Spark <http://spark.apache.org/>`_
+* deep learning : notebooks (Matthieu Bizien)
+    * :ref:`100LogisticIRISrst`
+    * :ref:`110PerceptronIrisrst`
+    * :ref:`200PerceptronMNISTrst`
+    * :ref:`210ConvolutionMNISTrst`
+    * :ref:`300ConvolutionCIFAR10rst`
+    * :ref:`mldeeppythonrst`
+    * `Transfer Learning <https://github.com/sdpython/2017_deeplearning_demo/blob/master/Fine_Tuning_Deep_CNNs_with_GPU_rendered.ipynb>`_ (Olivier Grisel)
+* deep learning : présentations
+    * `Introduction au Deep Learning <https://github.com/sdpython/ensae_teaching_cs/blob/master/_doc/sphinxdoc/source/specials/DEEP%20LEARNING%20FOR%20ENSAE.pdf>`_
+    * :ref:`l-nolabel`
+    * `Deep Learning 2017 <http://www.xavierdupre.fr/exposes/deeplearning/>`_ (avec Olivier Grisel)
+
+Framework de deep learning
+++++++++++++++++++++++++++
+
 * `TensorFlow <https://www.tensorflow.org/>`_ : GPU (Deep Learning Google)
 * `CNTK <https://github.com/Microsoft/CNTK>`_ : GPU (Deep Learning Microsoft)
 * `Ray <https://github.com/ray-project/ray>`_ : (MPI, Berkeley),
@@ -251,6 +269,12 @@ Framework de distribution des calculs
 * `OpenCL <https://fr.wikipedia.org/wiki/OpenCL>`_
   (`Intel <https://software.intel.com/en-us/articles/opencl-drivers>`_,
   `NVidia Open CL <https://developer.nvidia.com/opencl>`_, ...)
+* `pytorch <http://pytorch.org/>`_
+* `caffe <http://caffe.berkeleyvision.org/>`_
+* `mxnet <http://mxnet.incubator.apache.org/>`_
+* `paddlepaddle <https://github.com/PaddlePaddle/Paddle>`_
+* `chainer <https://chainer.org/>`_
+* `gluon <https://mxnet.incubator.apache.org/api/python/gluon.html>`_
 
 Les ingénieurs cherchent sans arrêt à créer le bon outil, celui qui leur fait gagner
 du temps lors de la conception de programmes complexes. Voici quelques outils
@@ -263,6 +287,8 @@ s'il est toujours maintenu, s'il est utilisé...
   C'est un langage plus sûr que C lorsque des threads sont utilisées car sa syntaxe
   interdit des constructions qui ne sont pas
   `thread safe <https://fr.wikipedia.org/wiki/Thread_safety>`_.
+  Firefox est réécrit avec le langage RUST :
+  `Firefox 48 : le navigateur va embarquer ses premiers composants en Rust <https://www.developpez.com/actu/101222/Firefox-48-le-navigateur-va-embarquer-ses-premiers-composants-en-Rust-le-langage-de-programmation-de-Mozilla-maintenant-disponible-en-version-1-10/>`_.
 
 ------------
 
@@ -445,7 +471,6 @@ Bibliographie
 *Librairies à suivre*
 
 * `multiverso <https://github.com/microsoft/multiverso>`_ : framework de parallélisation
-* `CNTK <https://github.com/Microsoft/CNTK/wiki>`_ : librairie de deep learning chez Microsoft
 * `lightLDA <https://github.com/Microsoft/lightlda>`_ : Latent Dirichlet Application parallélisée
 * `lightGBM <https://github.com/Microsoft/lightGBM>`_ :
   A fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART) framework based on decision tree algorithms.

@@ -1,7 +1,7 @@
 
 
-Anti-sèches
------------
+Anti-sèches de machine learning
+-------------------------------
 
 Anti-sèche est sans doute la traduction française de 
 `cheat sheet <https://en.wikipedia.org/wiki/Cheat_sheet>`_,

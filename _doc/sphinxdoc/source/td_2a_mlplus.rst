@@ -844,10 +844,16 @@ Il n'est pas inutile de coder le sien au moins une fois
 même s'il n'utilise pas de GPU, même s'il sera probablement
 beaucoup plus lent.
 
-*à venir*
+* `Introduction au Deep Learning <https://github.com/sdpython/ensae_teaching_cs/blob/master/_doc/sphinxdoc/source/specials/DEEP%20LEARNING%20FOR%20ENSAE.pdf>`_
 
-.. contents::
-    :local:
+*Notebooks*
+
+* :ref:`100LogisticIRISrst`
+* :ref:`110PerceptronIrisrst`
+* :ref:`200PerceptronMNISTrst`
+* :ref:`210ConvolutionMNISTrst`
+* :ref:`300ConvolutionCIFAR10rst`
+* :ref:`mldeeppythonrst`
 
 *Code*
 
@@ -1082,7 +1088,7 @@ Transfer Learning
 
 *Notebooks*
 
-*(à venir)*
+* `Transfer Learning <https://github.com/sdpython/2017_deeplearning_demo/blob/master/Fine_Tuning_Deep_CNNs_with_GPU_rendered.ipynb>`_ (Olivier Grisel)
 
 *Lectures*
 

@@ -8,7 +8,7 @@ Galleries d'exemples
 .. toctree::
     :maxdepth: 2
 
-    antiseches/index
+    ii_antiseches
     i_examples
     i_examples_classiques
     blog/blogindex
