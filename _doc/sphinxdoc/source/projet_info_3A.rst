@@ -90,6 +90,7 @@ Suggestions d'articles
 *2017-2018*
 
 * `A Parallel Matrix Scaling Algorithm <http://amestoy.perso.enseeiht.fr/doc/adru.pdf>`_
+* `Auto-Differentiating Linear Algebra <https://arxiv.org/pdf/1710.08717.pdf>`_
 
 Nous vous recommandons d'adopter la démarche suivante:
 
