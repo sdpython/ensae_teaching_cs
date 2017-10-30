@@ -331,7 +331,8 @@ une nécessité. Quelques idées de recherche :
 * `Confidence Intervals for Random Forests: The Jackknife and the Infinitesimal Jackknife <http://jmlr.csail.mit.edu/papers/volume15/wager14a/wager14a.pdf>`_
 * `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
 * `Wavelet decompositions of Random Forests - smoothness analysis, sparse approximation and applications <http://www.jmlr.org/papers/volume17/15-203/15-203.pdf>`_
-* `"Why Should I Trust You?" Explaining the Predictions of Any Classifier <http://arxiv.org/pdf/1602.04938v1.pdf>`_ *(2016/06)*
+* `"Why Should I Trust You?" Explaining the Predictions of Any Classifier <http://arxiv.org/pdf/1602.04938v1.pdf>`_
+  (sans doute un des articles à lire en premier - `lime <https://github.com/marcotcr/lime>`_)
 * `Edward: A library for probabilistic modeling, inference, and criticism <https://arxiv.org/pdf/1610.09787.pdf>`_
 * `Strictly Proper Scoring Rules, Prediction, and Estimation <https://www.cs.duke.edu/courses/spring17/compsci590.2/Gneiting2007jasa.pdf>`_
 * `Visualizing and Understanding Neural Machine Translation <http://www.aclweb.org/anthology/P/P17/P17-1106.pdf>`_
@@ -344,8 +345,11 @@ une nécessité. Quelques idées de recherche :
 * `Lattice Regression <https://papers.nips.cc/paper/3694-lattice-regression.pdf>`_
 * `Optimized Regression for Efficient Function Evaluation <http://ieeexplore.ieee.org/document/6203580/?reload=true>`_
 * `Fast and Flexible Monotonic Functions with Ensembles of Lattices <https://papers.nips.cc/paper/6377-fast-and-flexible-monotonic-functions-with-ensembles-of-lattices.pdf>`_
+* `Reluplex: An Efficient SMT Solver for Verifying Deep Neural Networks <https://arxiv.org/abs/1702.01135>`_
+  (pas tout à fait sur la monotonie mais plutôt sur une façon de s'assurer que le modèle
+  ne produit pas de valeur aberrante)
 
-*Lectures: local*
+*Lectures : local*
 
 * `Learning Deep Nearest Neighbor Representations Using Differentiable Boundary Trees <https://arxiv.org/abs/1702.08833>`_
 
@@ -362,6 +366,7 @@ une nécessité. Quelques idées de recherche :
   cet outil a été développé pour étudier les relations dans les données et plus
   particulièrement les `dark data <https://en.wikipedia.org/wiki/Dark_data>`_
 * `treeinterpreter <https://pypi.python.org/pypi/treeinterpreter>`_
+* `lime <https://github.com/marcotcr/lime>`_ (`notebooks <https://github.com/marcotcr/lime/tree/master/doc/notebooks>`_)
 
 Sélection de variables
 ++++++++++++++++++++++

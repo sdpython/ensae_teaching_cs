@@ -1,0 +1,25 @@
+
+.. blogpost::
+    :title: Après l'architecture Von Neumann
+    :keywords: Von Neumann, processor
+    :date: 2017-10-26
+    :categories: architecture
+    :lid: l-archi-vonneum-memory
+
+    Les ordinateurs d'aujourd'hui ne sont pas très éloignés
+    de l'`architecture Von Neumann <https://en.wikipedia.org/wiki/Von_Neumann_architecture>`_
+    qui place le processor CPU au centre de la machine.
+    C'est l'architecture dans le cours proposé
+    en dernière de l'école :ref:`l-anatomie-ordi`.
+
+    .. image:: images/vn.png
+        :alt: source: wikipédia
+
+    L'article suivant suggère que cela pourrait changer :
+    `IBM scientists say radical new 'in-memory' computing architecture will speed up computers by 200 times <http://www.kurzweilai.net/ibm-scientists-say-radical-new-in-memory-computing-architecture-will-speed-up-computers-by-200-times>`_.
+    L'article suivant est plus détaillé quant à l'innovation proposée :
+    `Temporal correlation detection using computational phase-change memory <https://www.nature.com/articles/s41467-017-01481-9>`_.
+    L'idée principale consiste à déléguer certains calculs jusqu'alors réalisés par le processeur
+    à une mémoire capable d'en prendre une partie en charge de façon parallèle.
+    Cela signifie également qu'il est nécessaire de réécrire les algorithmes
+    pour cette nouvelle architecture si on souhaite en tirer parti.

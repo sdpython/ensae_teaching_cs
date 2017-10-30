@@ -22,6 +22,8 @@ Le cours est évalué avec un :ref:`projet informatique <l-projinfo3a>`.
 Eléments techniques
 ===================
 
+.. _l-anatomie-ordi:
+
 Anatomie et histoire d'un ordinateur
 ++++++++++++++++++++++++++++++++++++
 
@@ -40,6 +42,7 @@ Anatomie et histoire d'un ordinateur
 * `Teaching a machine how to play Mario <http://www.cs.cmu.edu/~tom7/mario/mario.pdf>`_
 * `Introduction au système de recommandation par facteurs latents <https://datajobs.com/data-science-repo/Recommender-Systems-%5bNetflix%5d.pdf>`_
 * `The Unreasonable Effectiveness of Data <http://static.googleusercontent.com/media/research.google.com/fr//pubs/archive/35179.pdf>`_
+* :ref:`Après l'architecture Von Neumann <l-archi-vonneum-memory>`
 
 *Machine Learning*
 
