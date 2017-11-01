@@ -4,6 +4,11 @@
 Questions 2016
 ==============
 
+.. contents::
+    :local:
+
+.. _question_2016_projet_2A_json:
+
 .. index:: json
 
 Comment convertir un fichier *.txt* en *.json* ?

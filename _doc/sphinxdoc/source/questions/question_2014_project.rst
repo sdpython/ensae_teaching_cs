@@ -4,6 +4,9 @@
 Questions Projets 2014
 ======================
 
+.. contents::
+    :local:
+
 .. _question_2014_projet_1_2A:
 
 Quel type de problème pour quelles données ?

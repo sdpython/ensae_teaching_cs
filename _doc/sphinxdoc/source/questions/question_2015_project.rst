@@ -4,6 +4,9 @@
 Questions Projets 2015
 ======================
 
+.. contents::
+    :local:
+
 .. _question_2015_projet_1A:
 
 .. index:: design, génie logiciel
@@ -34,8 +37,8 @@ insufissamment testée.
 
 .. _question_2015_projet_2_2A:
 
-:math:`R^2` est proche de 1 et le modèle est mauvais ?
-++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Le R2 est proche de 1 et le modèle est mauvais (séries temporelles) ?
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Le coefficient :math:`R^2` qui juge de la pertinence d'une régression
 est souvent proche de 1 dans le cas de la prédiction de le valeur d'une action pour demain
