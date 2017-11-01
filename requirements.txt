@@ -43,7 +43,7 @@ pygame
 pylzma
 pymmails
 pympler
-pymyinstall
+pymyinstall>=1.1.1415
 pyquickhelper>1.5.2215
 pyrsslocal
 python-jenkins
