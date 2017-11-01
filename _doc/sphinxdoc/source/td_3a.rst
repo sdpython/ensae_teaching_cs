@@ -81,6 +81,7 @@ GPU
 * `Inter-Block GPU Communication via Fast Barrier Synchronization <http://eprints.cs.vt.edu/archive/00001087/01/TR_GPU_synchronization.pdf>`_
 * `CUDA C Programming Guide <https://docs.nvidia.com/cuda/cuda-c-programming-guide/>`_
 * `Demystifying GPU Microarchitecture through Microbenchmarking <http://www.stuffedcow.net/files/gpuarch-ispass2010.pdf>`_
+* `Mixed-Precision Training of Deep Neural Networks <https://devblogs.nvidia.com/parallelforall/mixed-precision-training-deep-neural-networks/>`_
 
 *Lectures sur le C++*
 

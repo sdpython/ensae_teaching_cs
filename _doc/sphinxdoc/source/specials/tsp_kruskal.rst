@@ -5,7 +5,8 @@ Circuit hamiltonien et Kruskal
 ==============================
 
 Le module :mod:`tsp_kruskal <ensae_teaching_cs.special.tsp_kruskal>` implémente l'algorithme
-ci-dessus.
+ci-dessus. On peut lire également
+`Solution of a Large-Scale Traveling-Salesman Problem <http://www.cs.uleth.ca/~benkoczi/OR/read/tsp-dantzig-fulkerson-johnson-54.pdf>`_.
 
 .. contents::
     :local:

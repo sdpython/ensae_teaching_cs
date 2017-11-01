@@ -59,6 +59,7 @@ D'autres idées avec d'autres lectures :
 * et `d'autres articles de Stuart Reid <http://www.stuartreid.co.za/one-year-later-metapost-computational-finance-blog/>`_
 * `OLPS:AToolboxforOn-LinePortfolioSelection <http://www.jmlr.org/papers/volume17/15-317/15-317.pdf>`_ *(2016/08)*
 * `Dynamic Correlations, Estimation Risk, and Portfolio Management during the Financial Crisis <https://www.cemfi.es/ftp/wp/1103.pdf>`_
+* `Les marchés prédictifs comme technique de prévision <http://freakonometrics.hypotheses.org/50870>`_ *(2017/10)*
 
 .. _l-fi-trend:
 
