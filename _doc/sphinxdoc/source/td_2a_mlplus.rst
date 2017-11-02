@@ -348,6 +348,9 @@ une nécessité. Quelques idées de recherche :
 * `Reluplex: An Efficient SMT Solver for Verifying Deep Neural Networks <https://arxiv.org/abs/1702.01135>`_
   (pas tout à fait sur la monotonie mais plutôt sur une façon de s'assurer que le modèle
   ne produit pas de valeur aberrante)
+* `Multivariate Convex Regression with Adaptive Partitioning <http://www.jmlr.org/papers/volume14/hannah13a/hannah13a.pdf>`_
+* `Isotone Optimization in R: Pool-Adjacent-Violators Algorithm (PAVA) and Active Set Methods <http://gifi.stat.ucla.edu/janspubs/2009/reports/deleeuw_hornik_mair_R_09.pdf>`_
+* `Online Isotonic Regression <http://proceedings.mlr.press/v49/kotlowski16.pdf>`_
 
 *Lectures : local*
 
