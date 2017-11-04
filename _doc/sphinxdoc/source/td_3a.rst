@@ -150,6 +150,7 @@ Algorithmes
 *Vidéo*
 
 * `CS231n Winter 2016 Lecture 4 Backpropagation, Neural Networks 1- <https://www.youtube.com/watch?v=GZTvxoSHZIo&feature=youtu.be>`_
+* :ref:`Algorithmes classiques implémentés <l-blog-algo-impl>`
 
 ------------
 

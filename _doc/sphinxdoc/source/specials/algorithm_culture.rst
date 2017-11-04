@@ -174,6 +174,7 @@ Liens
 * `Introduction to graphs and networks <http://freakonometrics.hypotheses.org/51106>`_
   (échantillon dans un graphe, chaîne de Markov, centralité, ...)
 * `Networks and Flows #2 <http://freakonometrics.hypotheses.org/51457>`_
+* :ref:`Algorithmes classiques implémentés <l-blog-algo-impl>`
 
 Articles sur des algorithmes
 ++++++++++++++++++++++++++++

@@ -181,6 +181,7 @@ Un peu plus ludique et présentés sous la forme de défis :
 * `Rosalind <http://rosalind.info/problems/topics/>`_
 * `Google Jam <https://code.google.com/codejam/>`_
   (exemple : `Le problème des milkshakes <https://code.google.com/codejam/contest/32016/dashboard#s=p1​>`_)
+* :ref:`Algorithmes classiques implémentés <l-blog-algo-impl>`
 
 ------------
 

@@ -556,6 +556,14 @@ exploitable par les algorithmes d'apprentissage.
 * `glove-python <https://github.com/maciejkula/glove-python>`_
 * `tethne <http://diging.github.io/tethne/>`_
 * `torchtext <https://github.com/pytorch/text>`_
+* `pycantonese <http://pycantonese.org/>`_ (texte cantonnais),
+   `snownlp <https://github.com/isnowfy/snownlp>`_ (texte Chinois),
+   `jieba <https://github.com/fxsjy/jieba>`_ (tokenizer pour le chinois)
+* `polyglot <https://github.com/aboSamoor/polyglot>`_ : fonctionne
+  pour beaucoup de langues
+* `pattern <https://github.com/clips/pattern>`_ : possède une bonne base
+  d'exemples, notemmant pour récupérer des données depuis internet
+  `01-web <https://github.com/clips/pattern/tree/master/examples/01-web>`_
 
 *Modules moins ML*
 
@@ -627,8 +635,8 @@ Les meilleurs modèles sont des modèles de deep learning
 
 ------------------
 
-Images
-======
+Images / Vidéos
+===============
 
 Il est difficile d'aborder cette partie sans savoir ce qu'est
 le :ref:`l-deep-learning`.
@@ -733,6 +741,15 @@ Génération d'images
 
 * `Machine Learning is Fun Part 7: Abusing Generative Adversarial Networks to Make 8-bit Pixel Art <https://medium.com/@ageitgey/abusing-generative-adversarial-networks-to-make-8-bit-pixel-art-e45d9b96cee7>`_
 
+Vidéos
+======
+
+(*à venir*)
+
+*Modules*
+
+* `scikit-video <https://github.com/aizvorski/scikit-video>`_
+
 ------------------
 
 Sons
@@ -772,6 +789,11 @@ Finance
 * `prophet <http://prophet.michaelsu.io/en/latest/>`_ (not updated anymore)
 * `bloomberg API <https://www.bloomberglabs.com/api/libraries/>`_
 * `ta-lib <https://github.com/mrjbq7/ta-lib>`_
+
+*Modules data*
+
+* `forex-python <https://github.com/MicroPyramid/forex-python>`_
+* `python-currencies <https://github.com/Alir3z4/python-currencies>`_
 
 Visage, paroles
 +++++++++++++++

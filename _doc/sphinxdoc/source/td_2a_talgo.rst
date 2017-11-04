@@ -337,6 +337,10 @@ Certains sont tirés de plusieurs sites dont
 * `Cache replacement policies <https://en.wikipedia.org/wiki/Cache_replacement_policies>`_
 * `Livres techniques en français <https://github.com/vhf/free-programming-books/blob/master/free-programming-books-fr.md>`_
 
+*Modules*
+
+* :ref:`Algorithmes classiques implémentés <l-blog-algo-impl>`
+
 Streaming algorithms
 ++++++++++++++++++++
 
@@ -364,6 +368,17 @@ Streaming algorithms
 *Modules*
 
 * `StreamLib <https://github.com/jiecchen/StreamLib>`_
+* `pandas_streaming <https://github.com/sdpython/pandas_streaming/>`_
+* `streamparse <https://github.com/Parsely/streamparse>`_
+
+Algorithmes génétiques
+++++++++++++++++++++++
+
+(*à venir*)
+
+*Modules*
+
+* `pyevolve <http://pyevolve.sourceforge.net/>`_
 
 ------------
 
