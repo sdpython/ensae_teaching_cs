@@ -41,8 +41,6 @@ except ImportError:
 
 
 from pyquickhelper.loghelper.flog import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
-from pyquickhelper.helpgen import rst2html
 
 
 class TestIssueDf(unittest.TestCase):
@@ -58,6 +56,7 @@ class TestIssueDf(unittest.TestCase):
         dff = os.path.join(fold, name)
         if os.path.exists(dff):
             df = pandas.read_csv(dff, sep="\t", encoding="utf-8")
+            self.assertTrue(df.shape[0] > 0)
 
 
 if __name__ == "__main__":

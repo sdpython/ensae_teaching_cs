@@ -146,6 +146,28 @@ Timeseries - Filtre de Kalman
 * `filterpy <https://github.com/rlabbe/filterpy>`_
 * `scipy <http://scipy-cookbook.readthedocs.io/items/KalmanFiltering.html>`_
 
+Finance
++++++++
+
+|pystatpng|
+
+*Modules*
+
+* `pyalgotrade <http://gbeced.github.io/pyalgotrade/>`_
+* `zipline <https://pypi.python.org/pypi/zipline>`_
+* `alphalens <https://github.com/quantopian/alphalens>`_
+* `pyfolio <https://github.com/quantopian/pyfolio>`_
+* `empyrical <https://github.com/quantopian/empyrical>`_
+* `quantlib <https://github.com/lballabio/quantlib>`_
+* `prophet <http://prophet.michaelsu.io/en/latest/>`_ (not updated anymore)
+* `bloomberg API <https://www.bloomberglabs.com/api/libraries/>`_
+* `ta-lib <https://github.com/mrjbq7/ta-lib>`_
+
+*Modules data*
+
+* `forex-python <https://github.com/MicroPyramid/forex-python>`_
+* `python-currencies <https://github.com/Alir3z4/python-currencies>`_
+
 Auto-Learning
 +++++++++++++
 
@@ -635,8 +657,8 @@ Les meilleurs modèles sont des modèles de deep learning
 
 ------------------
 
-Images / Vidéos
-===============
+Images / Vidéos / Sons
+======================
 
 Il est difficile d'aborder cette partie sans savoir ce qu'est
 le :ref:`l-deep-learning`.
@@ -750,8 +772,6 @@ Vidéos
 
 * `scikit-video <https://github.com/aizvorski/scikit-video>`_
 
-------------------
-
 Sons
 ====
 
@@ -763,53 +783,16 @@ Reconnaissance de la parole
 *Lectures*
 
 * `Machine Learning is Fun Part 6: How to do Speech Recognition with Deep Learning <https://medium.com/@ageitgey/machine-learning-is-fun-part-6-how-to-do-speech-recognition-with-deep-learning-28293c162f7a>`_
-
-------------------
-
-Réseaux - Finance
-=================
-
-.. contents::
-    :local:
-    :depth: 1
-
-Finance
-+++++++
-
-|pystatpng|
-
-*Modules*
-
-* `pyalgotrade <http://gbeced.github.io/pyalgotrade/>`_
-* `zipline <https://pypi.python.org/pypi/zipline>`_
-* `alphalens <https://github.com/quantopian/alphalens>`_
-* `pyfolio <https://github.com/quantopian/pyfolio>`_
-* `empyrical <https://github.com/quantopian/empyrical>`_
-* `quantlib <https://github.com/lballabio/quantlib>`_
-* `prophet <http://prophet.michaelsu.io/en/latest/>`_ (not updated anymore)
-* `bloomberg API <https://www.bloomberglabs.com/api/libraries/>`_
-* `ta-lib <https://github.com/mrjbq7/ta-lib>`_
-
-*Modules data*
-
-* `forex-python <https://github.com/MicroPyramid/forex-python>`_
-* `python-currencies <https://github.com/Alir3z4/python-currencies>`_
-
-Visage, paroles
-+++++++++++++++
-
-(à venir)
+* `Probabilistic Linear Discriminant Analysis for Inferences About Identity <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.97.6491&rep=rep1&type=pdf>`_,
+  `shrinkage <http://scikit-learn.org/stable/modules/lda_qda.html#shrinkage>`_
+* `Probabilistic Linear Discriminant Analysis for Acoustic Modelling <http://www.cstr.ed.ac.uk/downloads/publications/2014/plda-spl2014.pdf>`_
 
 *Modules*
 
 * `bob.bio <http://pythonhosted.org/bob.bio.base/index.html>`_
 * `kaldi <https://github.com/kaldi-asr/kaldi>`_ (reconnaissance de la parole)
 
-*Lectures*
-
-* `Probabilistic Linear Discriminant Analysis for Inferences About Identity <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.97.6491&rep=rep1&type=pdf>`_,
-  `shrinkage <http://scikit-learn.org/stable/modules/lda_qda.html#shrinkage>`_
-* `Probabilistic Linear Discriminant Analysis for Acoustic Modelling <http://www.cstr.ed.ac.uk/downloads/publications/2014/plda-spl2014.pdf>`_
+------------------
 
 Graphes - Réseaux
 =================

@@ -74,13 +74,16 @@ discutées.
       - Deep learning, Keras, Torch, Transfer Learning, :ref:`l-route2017-stat6`
       - NLP, :ref:`l-route2017-eco6`
     * - 7/11 (7)
-      - Revue de compétition Kaggle, Interprétabilité des modèles,
-        Featurisation, Etique dans les modèles
+      - Série temporelles,
+        Featurisation, Etique dans les modèles,
+        :ref:`l-route2017-eco7`
       - Interprétabilité des modèles, problèmes de classification binaire,
-        Etique dans les modèles
+        Etique dans les modèles,
+        :ref:`l-route2017-stat7`
     * - 14/11 (8)
-      - Algorithme de streaming, série temporelles,
-        sequence learning, présentation des projets
+      - Algorithme de streaming, Interprétabilité des modèles,
+        sequence learning, présentation des projets,
+        Revue de compétition Kaggle
       - Construction d'un site web, retour sur la compétition,
         présentation des projets
 
@@ -320,3 +323,17 @@ Séance 6 Maths
     * `Introduction au Deep Learning <https://github.com/sdpython/ensae_teaching_cs/blob/master/_doc/sphinxdoc/source/specials/DEEP%20LEARNING%20FOR%20ENSAE.pdf>`_
     * :ref:`l-nolabel`
     * `Deep Learning 2017 <http://www.xavierdupre.fr/exposes/deeplearning/>`_ (avec Olivier Grisel)
+
+.. _l-route2017-eco7:
+
+Séance 7 Eco
+^^^^^^^^^^^^
+
+.. _l-route2017-stat7:
+
+Séance 7 Maths
+^^^^^^^^^^^^^^
+
+* séries temporelles
+    * :ref:`mltimeseriesbaserst`
+    * :ref:`mapreducetimeseriesrst`
