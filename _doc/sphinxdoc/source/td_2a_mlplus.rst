@@ -114,6 +114,9 @@ Timeseries - Séries temporelles
 * `Using predator-prey models on the Canadian lynx series <http://andrewgelman.com/2012/01/28/the-last-word-on-the-canadian-lynx-series/>`_,
   `Inference for nonlinear dynamical systems <http://www.pnas.org/content/103/49/18438.full.pdf>`_
 * `Milestones of Deep Learning <http://www.codesofinterest.com/2017/07/milestones-of-deep-learning.html#more>`_
+* `Engineering Extreme Event Forecasting at Uber with Recurrent Neural Networks <https://eng.uber.com/neural-networks/>`_
+* `Holt-Winters seasonal method <https://www.otexts.org/fpp/7/5>`_,
+  `Initializing the Holt-Winters method <https://robjhyndman.com/hyndsight/hw-initialization/>`_
 
 *Modules*
 
@@ -124,6 +127,7 @@ Timeseries - Séries temporelles
 * `Rob J Hyndman software <http://robjhyndman.com/publications/software/>`_
   (disponible uniquement en R)
 * `influxdb <https://github.com/influxdata/influxdb>`_ (An Open-Source Time Series Database)
+* `seasonal <https://github.com/welch/seasonal>`_
 
 Timeseries - Filtre de Kalman
 +++++++++++++++++++++++++++++
@@ -572,6 +576,7 @@ exploitable par les algorithmes d'apprentissage.
 * `gensim <https://radimrehurek.com/gensim/>`_
 * `fasttext <https://github.com/facebookresearch/fastText>`_ (Facebook)
 * `spacy <https://spacy.io/>`_
+* `thinc <https://github.com/explosion/thinc>`_
 * `Stanford CoreNLP <http://stanfordnlp.github.io/CoreNLP/other-languages.html#python>`_,
   `corenlpy <https://github.com/enewe101/corenlpy>`_
 * `lda2vec <https://github.com/cemoody/lda2vec>`_

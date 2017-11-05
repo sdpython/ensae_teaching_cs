@@ -49,6 +49,7 @@ pyrsslocal
 python-jenkins
 qgrid
 semantic_version
+seasonal
 shapely
 tables
 toolz

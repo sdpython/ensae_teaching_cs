@@ -196,6 +196,13 @@ Threads et synchronisation
 * `Le dîner des philosophes <https://fr.wikipedia.org/wiki/D%C3%AEner_des_philosophes>`_
 * `Is Parallel Programming Hard, And, If So, What Can You Do About It? <https://www.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.html>`_
 
+Plus proches voisins en grandes dimensions
+++++++++++++++++++++++++++++++++++++++++++
+
+* `Efficient Distributed Locality Sensitive Hashing <https://arxiv.org/abs/1210.7057>`_
+* `Scalable Locality-Sensitive Hashing for Similarity Search in High-Dimensional, Large-Scale Multimedia Datasets <https://arxiv.org/abs/1310.4136>`_
+* `Streaming Similarity Search over one Billion Tweets using Parallel Locality-Sensitive Hashing <http://istc-bigdata.org/plsh/docs/plsh_paper.pdf>`_
+
 Distribution des calculs, stratégies de stockage, SQL NoSQL
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 

@@ -69,6 +69,8 @@ Projections, Réduction des dimensions
 * `Fast Randomized SVD <https://research.fb.com/fast-randomized-svd/>`_
 * `Neural Autoregressive Distribution Estimation <http://www.jmlr.org/papers/volume17/16-272/16-272.pdf>`_
 * `How to Use t-SNE Effectively <http://distill.pub/2016/misread-tsne/>`_
+* `Practical and Optimal LSH for Angular Distance <https://arxiv.org/abs/1509.02897>`_
+* `Optimal Data-Dependent Hashing for Approximate Near Neighbors <https://arxiv.org/abs/1501.01062>`_
 
 *Modules*
 
@@ -505,6 +507,7 @@ Modèles bayésiens
 * `bayespy <http://bayespy.org/en/latest/>`_
 * `kabuki <https://pypi.python.org/pypi/kabuki/>`_
 * `bnpy <https://github.com/bnpy/bnpy>`_
+* `pyro <http://pyro.ai/>`_ : modèle bayèsiens et deep learning
 
 Factorization Machines
 ++++++++++++++++++++++

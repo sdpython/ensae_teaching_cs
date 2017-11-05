@@ -337,3 +337,5 @@ Séance 7 Maths
 * séries temporelles
     * :ref:`mltimeseriesbaserst`
     * :ref:`mapreducetimeseriesrst`
+    * :ref:`td2atimeseriesrst`
+    * :ref:`td2atimeseriescorrectionrst`
