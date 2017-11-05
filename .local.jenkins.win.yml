@@ -13,9 +13,10 @@ before_script:
   - python -u setup.py try_import
   - set KERAS_BACKEND=tensorflow
 script:
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests", NAME: "UT", TIMEOUT: 3600 }  # timeout is 3600 for the documentation
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -g \".*(http).*\"", NAME: "UT", TIMEOUT: 3600 }  # timeout is 3600 for the documentation
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*(http).*\"", NAME: "UT_HTTP" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests_LONG", NAME: "UT_LONG", TIMEOUT: 3600 }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*SKIP.* -g \".*((theano)|(keras)|(deep)|(scraping)|(pythonnet)|(huge)).*\"", NAME: "UT_SKIP" }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*SKIP.* -g \".*((theano)|(keras)|(deep)|(scraping)|(pythonnet)|(huge)|(web)).*\"", NAME: "UT_SKIP" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_1A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)).*\"", NAME: "UT_1A" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_2A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)).*\"", NAME: "UT_2A", TIMEOUT: 3600 }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_3A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)).*\"", NAME: "UT_3A" }
