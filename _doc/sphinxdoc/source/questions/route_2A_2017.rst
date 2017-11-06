@@ -329,6 +329,8 @@ Séance 6 Maths
 Séance 7 Eco
 ^^^^^^^^^^^^
 
+* :ref:`td2aSeance7Analysedetextesrst`
+
 .. _l-route2017-stat7:
 
 Séance 7 Maths
@@ -339,3 +341,6 @@ Séance 7 Maths
     * :ref:`mapreducetimeseriesrst`
     * :ref:`td2atimeseriesrst`
     * :ref:`td2atimeseriescorrectionrst`
+* Machine Learning éthique
+    * :ref:`td2aethicsrst`
+    * :ref:`td2aethicscorrectionrst`

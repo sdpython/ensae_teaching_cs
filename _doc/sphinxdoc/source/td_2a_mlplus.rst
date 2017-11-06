@@ -284,7 +284,9 @@ ce sujet et plutôt récents. Il est probable qu'il y en ait un peu plus
 
 *Notebooks*
 
-*(à venir)*
+.. toctree::
+
+    notebooks/_gs2a_ethics
 
 *Lectures*
 
@@ -693,6 +695,7 @@ Classification
 * `SSD: Single Shot MultiBox Detector <https://arxiv.org/abs/1512.02325>`_
   (voir aussi `caffe/ssd <https://github.com/weiliu89/caffe/tree/ssd>`_)
 * `HPatches: A benchmark and evaluation of handcrafted and learned local descriptors <http://www.robots.ox.ac.uk/~vgg/publications/2017/Balntas17/balntas17.pdf>`_
+* `Learning Transferable Architectures for Scalable Image Recognition <https://arxiv.org/abs/1707.07012>`_
 
 *Algorithmes*
 
