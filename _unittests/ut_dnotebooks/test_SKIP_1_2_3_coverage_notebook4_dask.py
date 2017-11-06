@@ -43,7 +43,7 @@ from pyquickhelper.pycode import get_temp_folder, add_missing_development_versio
 from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut, get_additional_paths
 
 
-class TestNotebook123Coverage4(unittest.TestCase):
+class TestNotebook123Coverage4Dask(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
@@ -84,7 +84,7 @@ class TestNotebook123Coverage4(unittest.TestCase):
             clean_function=clean_function)
         execute_notebook_list_finalize_ut(res, fLOG=fLOG, dump=thismodule)
 
-    def test_flask(self):
+    def test_compet2017(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -94,19 +94,7 @@ class TestNotebook123Coverage4(unittest.TestCase):
             return True
 
         self.a_test_notebook_runner(
-            "TD2A_eco_debuter_flask", "td2a_eco", valid=valid)
-
-    def test_plus_grande_somme(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        def valid(cell):
-            return True
-
-        self.a_test_notebook_runner(
-            "td1a_plus_grande_somme_correction", "td1a_algo", valid=valid)
+            "prepare_data_2017", "competitions/2017", valid=valid)
 
 
 if __name__ == "__main__":
