@@ -283,6 +283,10 @@ ce sujet et plutôt récents. Il est probable qu'il y en ait un peu plus
 à l'avenir. Il n'existe pas de certitude quant au caractère éthique
 d'un modèle. Quelques idées ont néanmoins émergé :
 
+* La collecte des données est parfois biaisée, les échantillons aléatoires
+  sont rares sur Internet, la collecte est incitative (échange service contre
+  données). Certaines sous-population sont sur-représentées, d'autres sous-représentées.
+  Il faut en tenir compte.
 * Construire un modèle interprétable et de cette façon vérifier son côté éthique :
   `Ideas on interpreting machine learning <https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning>`_.
 * Fabriquer de fausses observations pour vérifier que le modèle ne change
