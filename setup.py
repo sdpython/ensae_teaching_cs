@@ -204,7 +204,7 @@ if is_local() and "custom_left" not in sys.argv:
     logging_function(OutputPrint=True)
     deps = ["pyquickhelper", "jyquickhelper", "pymmails", "pyensae",
             "pyrsslocal", "pymyinstall", "mlstatpy", "tkinterquickhelper",
-            "pandas_streaming"]
+            "pandas_streaming", "fairtest"]
     if "html1" in sys.argv:
         layout = ["html"]
         sys.argv = [_ for _ in sys.argv if _ != "html1"]

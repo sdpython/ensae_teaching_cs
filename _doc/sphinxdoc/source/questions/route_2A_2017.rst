@@ -1,8 +1,8 @@
 
 .. _l-feuille-de-route-2017-2A:
 
-Feuille de route 2017
-=====================
+Feuille de route 2017 (2A)
+==========================
 
 .. contents::
     :local:
@@ -14,7 +14,7 @@ Plan
 ++++
 
 Les cours et séances se déroulent sur 8 séances de 3h
-lundi matin. Le cours est divisé en deux pistes
+mardi matin. Le cours est divisé en deux pistes
 *Stat* et *Eco* qui correspondent aux profils décrits
 dans :ref:`l-td2a-notions`. Un compte **slack**
 `python-ensae-2a.slack.com <https://python-ensae-2a.slack.com/>`_
@@ -75,11 +75,10 @@ discutées.
       - NLP, :ref:`l-route2017-eco6`
     * - 7/11 (7)
       - Série temporelles,
-        Featurisation, Etique dans les modèles,
-        :ref:`l-route2017-eco7`
-      - Interprétabilité des modèles, problèmes de classification binaire,
-        Etique dans les modèles,
+        éthique dans les modèles,
         :ref:`l-route2017-stat7`
+      - Traitement du langage, LDA, tf-idf,
+        expression régulière, :ref:`l-route2017-eco7`
     * - 14/11 (8)
       - Algorithme de streaming, Interprétabilité des modèles,
         sequence learning, présentation des projets,
@@ -329,7 +328,9 @@ Séance 6 Maths
 Séance 7 Eco
 ^^^^^^^^^^^^
 
-* :ref:`td2aSeance7Analysedetextesrst`
+* TF-IDF, LDA, expressions régulières
+    * :ref:`td2aSeance7Analysedetextesrst`
+    * :ref:`td2aSeance7Analysedetextescorrectionrst`
 
 .. _l-route2017-stat7:
 

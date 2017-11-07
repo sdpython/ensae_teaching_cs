@@ -280,7 +280,22 @@ Comment déterminer si un modèle ne produit pas des résultats biaisés
 envers une partie de la population même avec des données anonymes ?
 Les articles sont encore peu nombreux à
 ce sujet et plutôt récents. Il est probable qu'il y en ait un peu plus
-à l'avenir.
+à l'avenir. Il n'existe pas de certitude quant au caractère éthique
+d'un modèle. Quelques idées ont néanmoins émergé :
+
+* Construire un modèle interprétable et de cette façon vérifier son côté éthique :
+  `Ideas on interpreting machine learning <https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning>`_.
+* Fabriquer de fausses observations pour vérifier que le modèle ne change
+  pas de prédictions quand il ne le devrait pas :
+  `Equality of Opportunity in Supervised Learning <http://ttic.uchicago.edu/~nati/Publications/HardtPriceSrebro2016.pdf>`_.
+* Construire deux modèles pour éviter les interactions entre :math:`X_1` et :math:`X_2`,
+  le premier modèle ne voit que :math:`X_1`, le second ne voit que :math:`X_2`,
+  puis on combine les prédictions :
+  `When Recommendations Systems Go Bad <https://www.youtube.com/watch?v=MqoRzNhrTnQ>`_.
+* Construire une partition de la population à étudier pour vérifier
+  que l'appartenance à un sous-groupe n'est pas corrélée à la prédiction
+  ou à l'erreur de prédiction :
+  `FairTest: Discovering Unwarranted Associations in Data-Driven Applications <https://arxiv.org/pdf/1510.02377.pdf>`_.
 
 *Notebooks*
 
@@ -291,19 +306,26 @@ ce sujet et plutôt récents. Il est probable qu'il y en ait un peu plus
 *Lectures*
 
 * `FairTest: Discovering Unwarranted Associations in Data-Driven Applications <https://arxiv.org/pdf/1510.02377.pdf>`_
+* `Equality of Opportunity in Supervised Learning <http://ttic.uchicago.edu/~nati/Publications/HardtPriceSrebro2016.pdf>`_
 * `O21 : La transparence des algorithmes relève des droits civiques <http://www.lemonde.fr/campus/article/2017/05/02/o21-la-transparence-des-algorithmes-releve-des-droits-civiques_5121201_4401467.html>`_
 * `TransAlgo : évaluer la responsabilité et la transparence des systèmes algorithmiques <https://www.inria.fr/actualite/actualites-inria/transalgo>`_
 * `Réguler les algorithmes : remise d'un rapport à Axelle Lemaire <https://www.economie.gouv.fr/reguler-algorithmes-rapport-axelle-lemaire-cge>`_
 * `Enquête : comment les apps Figaro, L'Equipe ou Closer participent au pistage de 10 millions de Français <https://www-numerama-com.cdn.ampproject.org/c/www.numerama.com/politique/282934-enquete-comment-les-apps-figaro-lequipe-ou-closer-participent-au-pistage-de-10-millions-de-francais.html/amp>`_
+* `Accountable Algorithms <https://www.jkroll.com/papers/dissertation.pdf>`_ (PhD thesis)
 
 *Conférences*
 
 * `Katharine Jarmul | Keynote: Ethical Machine Learning: Creating Fair Models in an Unjust World <https://www.youtube.com/watch?v=hDgXIUM3Rmw>`_
+* `When Recommendations Systems Go Bad <https://www.youtube.com/watch?v=MqoRzNhrTnQ>`_
 
 *Sites*
 
 * `Data Transparency Lab <http://datatransparencylab.org/>`_
 * `OPAL <http://www.data4sdgs.org/dc-opal/>`_
+
+*Modules*
+
+* `fairtest <https://github.com/columbia/fairtest>`_
 
 Interprétabilité des modèles
 ++++++++++++++++++++++++++++
@@ -352,6 +374,7 @@ une nécessité. Quelques idées de recherche :
 
 *Lectures : expliquer*
 
+* `Ideas on interpreting machine learning <https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning>`_
 * `Learning to learn by gradient descent by gradient descent <https://arxiv.org/pdf/1606.04474.pdf>`_
 * `Importance Weighting Without Importance Weights: An Efficient Algorithm for Combinatorial Semi-Bandits <http://jmlr.org/papers/volume17/15-091/15-091.pdf>`_
 * `Making Tree Ensembles Interpretable <https://arxiv.org/pdf/1606.05390v1.pdf>`_
@@ -918,6 +941,11 @@ beaucoup plus lent.
 * `Interaction Networks for Learning about Objects, Relations and Physics <https://arxiv.org/abs/1612.00222>`_
 * `Scaling Memory-Augmented Neural Networks with Sparse Reads and Writes <https://arxiv.org/abs/1610.09027>`_
 * `Tutoriel pour CNTK <https://www.cntk.ai/pythondocs/>`_
+
+*Vidéos*
+
+* `PyTorch in 5 Minutes <https://www.youtube.com/watch?v=nbJ-2G2GXL0>`_
+* `PyTorch Demystified, Why Did I Switch <https://www.youtube.com/watch?v=VMcRWYEKmhw>`_
 
 *Vocabulaire*
 

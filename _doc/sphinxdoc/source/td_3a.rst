@@ -9,10 +9,10 @@ Eléments logiciels pour le traitement des données massives
 
 Cours animé par :
 Matthieu Durut [#f3write1]_,
-Xavier Dupré [#f3write1]_,
-Antoine Ly [#f3write1]_
+Xavier Dupré [#f3write1]_
 
 Le cours est évalué avec un :ref:`projet informatique <l-projinfo3a>`.
+Programme de l'année 2017 : :ref:`l-feuille-de-route-2017-3A`.
 
 .. contents::
     :local:
@@ -254,6 +254,8 @@ Workflow de données
 * `Oozie <http://oozie.apache.org/>`_ (Hadoop, Spark)
 * `Azkaban <https://azkaban.github.io/>`_ (Hadoop, Spark)
 
+.. _l-deep-learning-3A:
+
 Deep Learning
 +++++++++++++
 
@@ -269,6 +271,9 @@ Deep Learning
     * `Introduction au Deep Learning <https://github.com/sdpython/ensae_teaching_cs/blob/master/_doc/sphinxdoc/source/specials/DEEP%20LEARNING%20FOR%20ENSAE.pdf>`_
     * :ref:`l-nolabel`
     * `Deep Learning 2017 <http://www.xavierdupre.fr/exposes/deeplearning/>`_ (avec Olivier Grisel)
+*Vidéos*
+    * `PyTorch in 5 Minutes <https://www.youtube.com/watch?v=nbJ-2G2GXL0>`_
+    * `PyTorch Demystified, Why Did I Switch <https://www.youtube.com/watch?v=VMcRWYEKmhw>`_
 
 Framework de deep learning
 ++++++++++++++++++++++++++
@@ -378,6 +383,8 @@ Trois projets réalisés par les élèves lors de l'année 2014-2015 :
 * `Data-Intensive Text Processing with MapReduce <http://lintool.github.io/MapReduceAlgorithms/>`_, Jimmy Lin, Chris Dyer
 * `Introducing Microsoft Azure HDInsight <http://blogs.msdn.com/b/microsoft_press/archive/2014/05/27/free-ebook-introducing-microsoft-azure-hdinsight.aspx>`_, Avkash Chauhan, Valentine Fontama, Michele Hart, Wee Hyong Tok, Buck Woody
 * `Introduction to Apache Pig <http://www.cloudera.com/content/cloudera/en/resources/library/training/introduction-to-apache-pig.html>`_ (MOOC)
+
+.. _l-spark-3a:
 
 avec Spark et Spark SQL
 +++++++++++++++++++++++
