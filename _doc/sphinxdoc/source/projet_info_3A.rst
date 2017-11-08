@@ -24,7 +24,7 @@ Les technologies proposées sont donc :
 * Map/Reduce : `PIG <http://en.wikipedia.org/wiki/Pig_Latin>`_,
   `Hive <http://fr.wikipedia.org/wiki/Hive>`_, Java sur un cluster Cloudera ou Azure,
   `Spark <https://spark.apache.org/>`_
-* implémentation d'un calcul réparti : `QueueStorage <http://azure.microsoft.com/fr-fr/documentation/articles/storage-dotnet-how-to-use-queues/>`_ +
+* implémentation d'un calcul réparti ou distribué : `QueueStorage <http://azure.microsoft.com/fr-fr/documentation/articles/storage-dotnet-how-to-use-queues/>`_ +
   `Blobstorage <http://azure.microsoft.com/fr-fr/documentation/articles/storage-dotnet-how-to-use-blobs/>`_
   comme primitives de communication (C#, .Net) sur Azure.
 
@@ -34,6 +34,17 @@ par votre implémentation et non par la librairie que vous utilisez.
 **Dans ce cadre, un projet sur un réseau de neurones profond seul
 n'est pas valide.**
 Nous vous en proposons certains dans les articles ci-dessous.
+
+**A souligner dans le rapport et le code**
+
+* **GPU** : indiquer les parties parallélisées, les frontières entre CPU et GPU,
+  une estimation du coût de l'algorithme CPU / GPU / nombre de verrous.
+* **Calcul distribué** : indiquer les parties parallélisées,
+  les variables partagées, si cela est fait via un thread ou un processus,
+  une estimation du coût de l'algorithme communication / CPU / nombre de verrous.
+* **Map/Reduce** (Spark ou autre) : préfixer le noms des colonnes par *m_* ou *d_* selon la colonne
+  contient des données ou un coefficient du modèle optimisé, donner une estimation du nombre de
+  lignes de chaque flux manipulé.
 
 Suggestions d'articles
 ++++++++++++++++++++++

@@ -149,6 +149,7 @@ Catalogue
     * `Blockwise inversion <http://en.wikipedia.org/wiki/Invertible_matrix#Blockwise_inversion>`_ **algo**
     * `Toom-Cook <https://en.wikipedia.org/wiki/Toom%E2%80%93Cook_multiplication>`_ **algo**
     * `Optimisation Combinatoire : Programmation Linéaire et Algorithmes <http://www-desir.lip6.fr/~fouilhoux/documents/OptComb.pdf>`_ **thèse**
+    * `Canopy Clustering <https://en.wikipedia.org/wiki/Canopy_clustering_algorithm>`_ **algo**
 * Programmation
     * `itérateur <http://fr.wikipedia.org/wiki/It%C3%A9rateur>`_ (mot-clé `yield <http://sametmax.com/comment-utiliser-yield-et-les-generateurs-en-python/>`_) **déf**
     * `mémoïzation <http://fr.wikipedia.org/wiki/M%C3%A9mo%C3%AFsation>`_ **déf** (voir aussi `Mémoïzation d'une fonction Python <http://sametmax.com/memoization-dune-fonction-python/>`_)

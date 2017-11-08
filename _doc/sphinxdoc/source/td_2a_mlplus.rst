@@ -511,10 +511,553 @@ Machine Learning sur des données cryptées
 
 ------------------
 
+Graphes - Réseaux
+=================
+
+Clustering de Graphes
++++++++++++++++++++++
+
+|pyecopng| |pystatpng|
+
+*(à venir)*
+
+*Lectures*
+
+* `Basic models and questions in statistical network analysis <https://arxiv.org/abs/1609.03511>`_
+* `Trinity: A Distributed Graph Engine on a Memory Cloud <https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/Trinity-1.pdf>`_
+* `Dimensionality Reduction for Spectral Clustering <http://www.jmlr.org/proceedings/papers/v15/niu11a/niu11a.pdf>`_
+* `Compressive Spectral Clustering <http://jmlr.org/proceedings/papers/v48/tremblay16.pdf>`_
+* `Spectral Clustering on a Budget <http://www.jmlr.org/proceedings/papers/v15/shamir11a/shamir11a.pdf>`_
+* `Partitioning Well-Clustered Graphs: Spectral Clustering Works! <http://www.jmlr.org/proceedings/papers/v40/Peng15.pdf>`_
+* `Bipartite Correlation Clustering: Maximizing Agreements <http://www.jmlr.org/proceedings/papers/v51/asteris16.pdf>`_
+* `Correlation Clustering and Biclustering with Locally Bounded Errors <http://jmlr.org/proceedings/papers/v48/puleo16.pdf>`_
+* `A Unified Framework for Model-based Clustering <http://www.jmlr.org/papers/volume4/zhong03a/zhong03a.pdf>`_
+* `A Tensor Approach to Learning Mixed Membership Community Models <http://jmlr.org/papers/volume15/anandkumar14a/anandkumar14a.pdf>`_
+
+*Lectures Ranking*
+
+* `CoSimRank <http://anthology.aclweb.org/P/P14/P14-1131.pdf>`_
+* `PageRank <https://en.wikipedia.org/wiki/PageRank>`_
+* `A Local Spectral Method for Graphs: With Applications to Improving Graph Partitions and Exploring Data Graphs Locally <http://www.jmlr.org/papers/v13/mahoney12a.html>`_
+
+*Modules*
+
+* `networkx <https://networkx.github.io/>`_
+* `neo4j <https://neo4j.com/developer/python/>`_,
+  `py2neo <http://py2neo.org/v3/>`_,
+  `neo4j-python-driver <https://github.com/neo4j/neo4j-python-driver>`_
+* `snap.py <https://snap.stanford.edu/snappy/index.html#docs>`_
+
+Communautés
++++++++++++
+
+Déterminer les communautés est un problème assez semblable au problème
+de clustering mais on cherche aussi à en déterminer le centre ou encore
+à catégoriser chaque individu autrement que par son appartenance à un cluster.
+
+*(à venir)*
+
+*Lectures*
+
+* `Katz centrality <https://en.wikipedia.org/wiki/Katz_centrality>`_
+* `Fast unfolding of communities in large networks <https://arxiv.org/pdf/0803.0476v2.pdf>`_ (Louvain)
+* `Modularity and community structure in networks <https://arxiv.org/abs/physics/0602124>`_
+* `Computing communities in large networks using random walks (long version) <https://arxiv.org/abs/physics/0512106>`_
+* `Finding and evaluating community structure in networks <https://arxiv.org/abs/cond-mat/0308217>`_
+* `Mixing patterns in networks <http://www.leonidzhukov.net/hse/2015/sna/papers/mixing_patterns.pdf>`_
+* `Networks in Their Surrounding Contexts <https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch04.pdf>`_
+* `Local Network Community Detection with Continuous Optimization of Conductance and Weighted Kernel K-Means <http://jmlr.org/papers/volume17/16-043/16-043.pdf>`_
+* `Learning Communities in the Presence of Errors <http://www.jmlr.org/proceedings/papers/v49/makarychev16.pdf>`_
+
+--------------------
+
+.. _l-deep-learning:
+
+Deep Learning
+=============
+
+.. contents::
+    :local:
+    :depth: 1
+
+Le deep learning signifie aussi des calculs intensifs et des modules qui
+utilisent un compilateur C++ pour optimiser les calculs
+et le GPU si vous en avez.
+Vous pouvez tester votre installation avec le notebook
+:ref:`mldeeppythonrst` ou encore
+`Keras-TensorFlow-GPU-Windows-Installation <https://github.com/antoniosehk/keras-tensorflow-windows-installation>`_.
+
+Réseaux de neurones et Deep Learning
+++++++++++++++++++++++++++++++++++++
+
+Les premiers modèles de *deep learning* sont des réseaux de neurones.
+Il n'est pas inutile de coder le sien au moins une fois
+même s'il n'utilise pas de GPU, même s'il sera probablement
+beaucoup plus lent. :epkg:`TensorFlow` est sans doute
+le framework le plus utilisé, :epkg:`pytorch` est le plus
+didactique. Il n'est pas facile de passer de l'un à l'autre
+ou de convertir ses modèles d'un à l'autre même s'il
+y a quelques avancées sur le sujet :
+`Deep Learning Model Convertors <https://github.com/ysh329/deep-learning-model-convertor>`_.
+
+* `Introduction au Deep Learning <https://github.com/sdpython/ensae_teaching_cs/blob/master/_doc/sphinxdoc/source/specials/DEEP%20LEARNING%20FOR%20ENSAE.pdf>`_
+
+*Notebooks*
+
+* :ref:`100LogisticIRISrst`
+* :ref:`110PerceptronIrisrst`
+* :ref:`200PerceptronMNISTrst`
+* :ref:`210ConvolutionMNISTrst`
+* :ref:`300ConvolutionCIFAR10rst`
+
+*Code*
+
+* `Implementing a Neural Network from Scratch in Python - An Introduction <http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/>`_,
+  `notebook <https://github.com/dennybritz/nn-from-scratch>`_
+* `A Neural Network in 11 lines of Python (Part 1) <http://iamtrask.github.io/2015/07/12/basic-python-network/>`_,
+  `A Neural Network in 13 lines of Python (Part 2 - Gradient Descent) <http://iamtrask.github.io/2015/07/27/python-network-part2/>`_
+* `nimblenet <https://github.com/jorgenkg/python-neural-network>`_ : implémentation de différents algorithmes de back propagation
+  avec `numpy <http://www.numpy.org/>`_)
+
+*Lectures*
+
+* `Réseau de neurones en maths <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/rn/rn.html>`_
+* `Artificial Intelligence, Revealed (1) <https://code.facebook.com/pages/1902086376686983>`_ : article de blog et vidéos
+  expliquant les différents concepts du deep learning
+* `Artificial Intelligence, Revealed (2) <https://code.facebook.com/posts/384869298519962/artificial-intelligence,-revealed/>`_ :
+  quelques reprises de l'article précédent et une idée du future (en 2016)
+* `DeepMind Publications <https://deepmind.com/research/publications/>`_
+* `Sequential Neural Models with Stochastic Layers <https://arxiv.org/abs/1605.07571>`_
+* `Interaction Networks for Learning about Objects, Relations and Physics <https://arxiv.org/abs/1612.00222>`_
+* `Scaling Memory-Augmented Neural Networks with Sparse Reads and Writes <https://arxiv.org/abs/1610.09027>`_
+* `Tutoriel pour CNTK <https://www.cntk.ai/pythondocs/>`_
+* `Adversarially Learned Inference <https://arxiv.org/abs/1606.00704>`_
+  et l'implémentation de la méthode présentée dans l'article avec :epkg:`pytorch` :
+  `ali-pytorch <https://github.com/edgarriba/ali-pytorch>`_.
+
+*Vidéos*
+
+* `PyTorch in 5 Minutes <https://www.youtube.com/watch?v=nbJ-2G2GXL0>`_
+* `PyTorch Demystified, Why Did I Switch <https://www.youtube.com/watch?v=VMcRWYEKmhw>`_
+
+*Vocabulaire*
+
+* `deep learning
+  glossary <http://www.wildml.com/deep-learning-glossary/>`_ : termes
+  employés pour le deep learning
+* `Core Layers <https://keras.io/layers/core/>`__ : différents
+  traitement pour compenser les défauts des réseaux de neurones lors de
+  l'apprentissage.
+
+*MNIST*
+
+* La base `MNIST <https://en.wikipedia.org/wiki/MNIST_database>`_ est le premier
+  sujet pour lequel un réseau de neurones profond a été appris. C'est souvent le premier
+  exemple utilisé lors des tutoriels.
+* `MNIST benchmark <http://yann.lecun.com/exdb/mnist/>`_
+* `Handwriten Digits Recognition Using Deep
+  Learning <https://faisalorakzai.wordpress.com/2016/06/01/handwritten-digits-recognition-using-deep-learning/>`_
+
+.. image:: mnist_illustration.png
+    :width: 600
+
+*Architectures*
+
+* `Tutorial: Learning Deep Architectures <http://www.cs.toronto.edu/~rsalakhu/deeplearning/yoshua_icml2009.pdf>`_
+* `Convolution (CNN) <https://en.wikipedia.org/wiki/Convolutional_neural_network>`_
+* `Recurrent (RNN) <https://en.wikipedia.org/wiki/Recurrent_neural_network>`_ :
+  séquence labelling, fenêtre glissante dans les
+  images, la sortie du réseau pour l'observations *n-1* est
+  utilisé par le réseau pour l'observation *n* si ces deux
+  observations font partie de la même séquence.
+* `Auto-Encoder <https://en.wikipedia.org/wiki/Autoencoder>`_ :
+  débruiter, ACP non linéaire
+* `Long short-term memory (LSTM) <https://en.wikipedia.org/wiki/Long_short-term_memory>`_,
+  voir aussi `Understanding LSTM Networks <http://colah.github.io/posts/2015-08-Understanding-LSTMs/>`_,
+  le modèle est construit afin qu'il puisse prendre en compte un passé de longueur variable.
+  Voir aussi `LSTM <http://deeplearning.net/tutorial/lstm.html>`_.
+
+*Modules - deep learning*
+
+* `Torch <http://torch.ch/>`_ et surtout :epkg:`pytorch`
+  dont le design est plus simple que celui des autres.
+* `Caffee <http://caffe.berkeleyvision.org/>`_ (Berkeley)
+* :epkg:`CNTK` (Microsoft)
+* `deeplearning4j <https://deeplearning4j.org/>`_
+* `fastText <https://github.com/facebookresearch/fastText>`_
+* `mxnet <https://github.com/dmlc/mxnet>`_
+* `PaddlePaddle <https://github.com/PaddlePaddle/Paddle>`_ (Baidu)
+* :epkg:`TensorFlow` (Google)
+
+*Modules - GPU*
+
+* `cupy <https://github.com/cupy/cupy>`_
+* `pycuda <https://documen.tician.de/pycuda/>`_
+
+A noter que `Theano <http://deeplearning.net/software/theano/>`_ n'est plus maintenu.
+
+*Modules - Wrappers*
+
+* `Keras <https://keras.io/>`_ ou `chainer <http://chainer.org/>`_ implémentent des interfaces
+  communes pour plusieurs librairies de machine learning.
+* `DeepRosetta <https://github.com/edgarriba/DeepRosetta>`_ : convertisseur (pas vraiment maintenu)
+
+Transfer Learning
++++++++++++++++++
+
+|pystatpng|
+
+Le `tranfer learning <https://en.wikipedia.org/wiki/Transfer_learning>`_
+consiste à réutiliser un modèle de deep learning déjà appris sur une grande
+base de données pour un problème aux dimensions plus modestes.
+C'est la première chose à faire quand on commence le deep learning :
+c'est souvent très rapide pour des résultats déjà acceptables.
+Cela a aussi l'avantage d'être peu coûteux comparé à l'apprentissage
+d'un réseau de neurones profond complet sur une grande bases de données.
+
+*Notebooks*
+
+* `Transfer Learning <https://github.com/sdpython/2017_deeplearning_demo/blob/master/Fine_Tuning_Deep_CNNs_with_GPU_rendered.ipynb>`_ (Olivier Grisel)
+
+*Lectures - introduction*
+
+* `Building powerful image classification models using very little data <https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html>`_
+* `Deep Learning : choisir son framework et entrainer ses modèles dans Azure <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2017/experience_2017.html>`_,
+  présenté avec `Olivier Grisel <http://ogrisel.com/>`_
+
+*Lectures - articles*
+
+* `Unsupervised and Transfer Learning Challenges in Machine Learning, Volume 7 <http://www.mtome.com/Publications/CiML/CiML-v7-book.pdf>`_
+* `ICML2011 Unsupervised and Transfer Learning Workshop <http://www.jmlr.org/proceedings/papers/v27/silver12a/silver12a.pdf>`_
+* `Transfer Learning <ftp://ftp.cs.wisc.edu/machine-learning/shavlik-group/torrey.handbook09.pdf>`_
+* `Deep Learning of Representations for Unsupervised and Transfer Learning <http://www.jmlr.org/proceedings/papers/v27/bengio12a/bengio12a.pdf>`_
+* `Unsupervised and Transfer Learning Challenge: a Deep Learning Approach <http://www.jmlr.org/proceedings/papers/v27/mesnil12a/mesnil12a.pdf>`_
+* `Transfer Learning by Kernel Meta-Learning <http://www.jmlr.org/proceedings/papers/v27/aiolli12a/aiolli12a.pdf>`_
+* `A Survey on Transfer Learning <https://www.cse.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf>`_
+* `Domain-Adversarial Training of Neural Networks <http://jmlr.org/papers/volume17/15-239/15-239.pdf>`_
+* `Stability and Hypothesis Transfer Learning <http://jmlr.org/proceedings/papers/v28/kuzborskij13.pdf>`_
+* `Transfer Learning Decision Forests for Gesture Recognition <http://jmlr.org/papers/volume15/goussies14a/goussies14a.pdf>`_
+* `Learning Transferable Features with Deep Adaptation Networks <http://www.jmlr.org/proceedings/papers/v37/long15.pdf>`_
+* `Asymmetric Transfer Learning with Deep Gaussian Processes <http://www.jmlr.org/proceedings/papers/v37/kandemir15.pdf>`_
+* `Transfer Learning in Sequential Decision Problems: A Hierarchical Bayesian Approach <http://www.jmlr.org/proceedings/papers/v27/wilson12a/wilson12a.pdf>`_
+* `Transfer Learning for Reinforcement Learning Domains: A Survey <http://www.jmlr.org/papers/volume10/taylor09a/taylor09a.pdf>`_
+* `Unsupervised dimensionality reduction via gradient-based matrix factorization with two adaptive learning rates <http://www.jmlr.org/proceedings/papers/v27/nikulin12a/nikulin12a.pdf>`_
+
+*Modèles pré-entraînés*
+
+* `Places CNN <http://places.csail.mit.edu/downloadCNN.html>`_,
+  `Pre-release of Places365-CNNs <https://github.com/metalbubble/places365>`_
+  (deep learning)
+* `CNTK <https://www.microsoft.com/en-us/research/product/cognitive-toolkit/model-gallery/>`_
+  (sur `github <https://github.com/Microsoft/CNTK/tree/master/Examples>`_)
+* `Model Zoo <https://github.com/BVLC/caffe/wiki/Model-Zoo>`_
+* `Model Gallery CNTK <https://www.microsoft.com/en-us/cognitive-toolkit/features/model-gallery/>`_
+* `tensorflow/models <https://github.com/tensorflow/models>`_
+
+Deep Learning en détail
++++++++++++++++++++++++
+
+|pystatpng|
+
+*Notebooks*
+
+.. toctree::
+    :maxdepth: 2
+
+    notebooks/_gs2a_deep
+
+(à venir foolbox)
+
+*Cours*
+
+* `Deep Learning course: lecture slides and lab notebooks <https://m2dsupsdlclass.github.io/lectures-labs/>`_
+* `Artificial Intelligence, Revealed (1) <https://code.facebook.com/pages/1902086376686983>`_ :
+  article de blog et vidéos expliquant les différents concepts du deep learning
+* `colah's blog <http://colah.github.io/>`_ *(2016/08)* blog/cours sur le deep learning
+* `Tutoriels avec CNTK <https://cntk.ai/pythondocs/tutorials.html>`_
+* `Course notes for CS224N Winter17 <https://github.com/stanfordnlp/cs224n-winter17-notes>`_ (Stanford)
+
+*Tutoriels*
+
+* `Building Autoencoders in Keras <https://blog.keras.io/building-autoencoders-in-keras.html>`_
+* `Image Similarity Ranking using Microsoft Cognitive Toolkit (CNTK) <https://github.com/azure/ImageSimilarityUsingCntk>`_
+* `Tutoriels avec CNTK <https://github.com/Microsoft/CNTK/tree/v2.0.beta12.0/Tutorials>`_ :
+  ces notebooks sont bien illlustrés
+  (`GAN - Generative Models <https://github.com/Microsoft/CNTK/blob/v2.0.beta12.0/Tutorials/CNTK_206_Basic_GAN.ipynb>`_).
+* `Tutoriels avec TensorFlow <https://github.com/Hvass-Labs/TensorFlow-Tutorials>`_ :
+  ce ne sont pas les seuls mais ils ont l'avantage d'être bien illustrés
+  (`Adversarial Training <https://github.com/Hvass-Labs/TensorFlow-Tutorials/blob/master/11_Adversarial_Examples.ipynb>`_).
+* `Machine Learning is Fun! Part 3: Deep Learning and Convolutional Neural Networks <https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721>`_
+* `Machine Learning is Fun! Part 4: Modern Face Recognition with Deep Learning <https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78>`_
+* `Object detection using Fast R-CNN <https://docs.microsoft.com/en-us/cognitive-toolkit/Object-Detection-using-Fast-R-CNN>`_
+* `Deep Learning - The Straight Dope <http://gluon.mxnet.io/>`_ :
+  séries de notebooks de difficulté graduelle
+
+*Sites*
+
+* `Tinker With a Neural Network Right Here in Your Browser <http://playground.tensorflow.org/>`_
+* `ConvNetJS <http://cs.stanford.edu/people/karpathy/convnetjs/>`_
+* `Databricks / Deep Learning <https://docs.databricks.com/applications/deep-learning/index.html>`_
+
+*Liens*
+
+* `Four deep learning trends from ACL 2017 (1) <http://www.abigailsee.com/2017/08/30/four-deep-learning-trends-from-acl-2017-part-1.html>`_
+* `Four deep learning trends from ACL 2017 (2) <http://www.abigailsee.com/2017/08/30/four-deep-learning-trends-from-acl-2017-part-2.html>`_
+
+*Articles scientifiques*
+
+* `LightRNN: Memory and Computation-Efficient Recurrent Neural Networks <https://arxiv.org/abs/1610.09893>`_
+* `Deep learning architecture diagrams <http://fastml.com/deep-learning-architecture-diagrams/>`_
+* `Factorized Convolutional Neural Networks <https://arxiv.org/abs/1608.04337>`_
+* `Deep Residual Learning for Image Recognition <https://arxiv.org/pdf/1512.03385v1.pdf>`_
+* `Deep Learning <http://www-labs.iro.umontreal.ca/~bengioy/dlbook/>`_, Yoshua Bengio, Ian Goodfellow and Aaron Courville
+* `LeNet5 <http://yann.lecun.com/exdb/lenet/>`_
+* `mxnet <https://github.com/dmlc/mxnet>`_
+* `Benchmarking State-of-the-Art Deep Learning Software Tools <http://arxiv.org/pdf/1608.07249v5.pdf>`_
+* `Wide & Deep Learning: Better Together with TensorFlow <https://research.googleblog.com/2016/06/wide-deep-learning-better-together-with.html>`_,
+  `Wide & Deep Learning for Recommender Systems <https://arxiv.org/pdf/1606.07792v1.pdf>`_
+* `To go deep or wide in learning? <http://www.jmlr.org/proceedings/papers/v33/pandey14.pdf>`_
+* `Three Classes of Deep Learning Architectures and Their Applications: A Tutorial Survey <https://www.microsoft.com/en-us/research/publication/three-classes-of-deep-learning-architectures-and-their-applications-a-tutorial-survey/>`_
+* `Tutorial: Learning Deep Architectures <http://www.cs.toronto.edu/~rsalakhu/deeplearning/yoshua_icml2009.pdf>`_
+* `Deep Learning <https://en.wikipedia.org/wiki/Deep_learning>`_ (wikipédia)
+* `Fast R-CNN <https://arxiv.org/abs/1504.08083>`_ (voir `Object Detection using Fast R CNN <https://github.com/Microsoft/CNTK/wiki/Object-Detection-using-Fast-R-CNN>`_)
+* `Evaluation of Deep Learning Toolkits <https://github.com/zer0n/deepframeworks/blob/master/README.md>`_ *(2015/12)*
+* `Understanding Deep Learning Requires Rethinking Generalization <https://arxiv.org/pdf/1611.03530.pdf>`_
+* `Training Deep Nets with Sublinear Memory Cost <https://arxiv.org/pdf/1604.06174.pdf>`_
+* `On the importance of initialization and momentum in deep learning <http://www.cs.toronto.edu/~fritz/absps/momentum.pdf>`_
+* `TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems <http://download.tensorflow.org/paper/whitepaper2015.pdf>`_
+* `Foolbox v0.8.0: A Python toolbox to benchmark the robustness of machine learning models <https://arxiv.org/abs/1707.04131>`_
+
+*Chiffres, Textes*
+
+* `One weird trick for parallelizing convolutional neural networks <https://arxiv.org/pdf/1404.5997v2.pdf>`_
+* `ImageNet Classification with Deep Convolutional Neural Networks <https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf>`_
+* `Very Deep Convolutional Networks for Large-Scale Image Recognition <https://arxiv.org/pdf/1409.1556v6.pdf>`_
+* `Multi-Digit Recognition Using A Space Displacement Neural Network  <https://papers.nips.cc/paper/557-multi-digit-recognition-using-a-space-displacement-neural-network.pdf>`_
+* `Space Displacement Localization Neural Networks to locate origin points of handwritten text lines in historical documents <http://liris.cnrs.fr/christian.wolf/papers/icdar-hip2015.pdf>`_
+* `Neural Network Architectures <https://culurciello.github.io/tech/2016/06/04/nets.html>`_,
+  `Convolutional Neural Networks (CNNs / ConvNets) <http://cs231n.github.io/convolutional-networks/#conv>`_
+* `Transfer Learning <http://cs231n.github.io/transfer-learning/>`_
+
+*Benchmarks*
+
+* `Benchmarking CNTK on Keras: is it Better at Deep Learning than TensorFlow? <http://minimaxir.com/2017/06/keras-cntk/>`_
+  (`code <https://github.com/minimaxir/keras-cntk-benchmark>`_)
+
+*Plus théoriques*
+
+* `Why Does Unsupervized Deep Learning Work? - A perspective from group theory <https://arxiv.org/pdf/1412.6621v3.pdf>`_
+* `Deep Learning of Representations: Looking Forward <https://arxiv.org/pdf/1305.0445v2.pdf>`_
+* `Why Does Unsupervised Pre-training Help Deep Learning? <http://jmlr.org/papers/volume11/erhan10a/erhan10a.pdf>`_
+
+*Lectures deep text*
+
+* `Efficient Estimation of Word Representations in Vector Space <http://arxiv.org/abs/1301.3781>`_, Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean,
+* `Distributed Representations of Words and Phrases and their Compositionality <http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf>`_, Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, Jeff Dean,
+* `word2vec Parameter Learning Explained <http://arxiv.org/abs/1411.2738>`_, Xin Rong,
+* `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
+* `Pretrained Character Embeddings for Deep Learning and Automatic Text Generation <http://minimaxir.com/2017/04/char-embeddings/>`_
+
+*Vus dans des conférences*
+
+* `Fast R-CNN <Fast R-CNN>`_ *(dotAI)*
+* `Mask R-CNN <https://arxiv.org/abs/1703.06870>`_ *(dotAI)*
+* `Modèle Tenserflow <https://github.com/tensorflow/models>`_
+  (modèle adaptés pour du transfer learning : ResNet, `Inception <http://nicolovaligi.com/history-inception-deep-learning-architecture.html>`_) *(dotAI)*
+* `Domain-Adversarial Training of Neural Networks <http://jmlr.org/papers/volume17/15-239/15-239.pdf>`_ *(dotAI)*
+
+*Deep learning embarqué*
+
+* `TensorFlow sur Android <https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android>`_
+* `TensorFlow sur RasberryPI <https://github.com/samjabrahams/tensorflow-on-raspberry-pi/blob/master/GUIDE.md>`_
+
+*Modules - deep learning*
+
+* `pytorch <http://pytorch.org/>`_ : design plus simple que tous les autres
+* `keras <https://keras.io/>`_
+* `mxnet <https://github.com/dmlc/mxnet>`_
+* `caffe <http://caffe.berkeleyvision.org/>`_ (`installation <http://caffe.berkeleyvision.org/installation.html>`_)
+* `climin <http://climin.readthedocs.io/en/latest/rmsprop.html>`_ (algorithme de back propagation)
+* `tensorflow <https://www.tensorflow.org/>`_ (Google)
+* `cntk <https://github.com/Microsoft/CNTK>`_
+
+*Modules - à suivre*
+
+* `chainer <https://github.com/pfnet/chainer>`_
+* `platoon <https://github.com/mila-udem/platoon/>`_ :
+  multi-GPU pour `theano <http://deeplearning.net/software/theano/>`_
+  (à voir car *theano* n'est plus maintenu)
+* `Federated Learning: Collaborative Machine Learning without Centralized Training Data <https://research.googleblog.com/2017/04/federated-learning-collaborative.html>`_
+* `foolbox <https://github.com/bethgelab/foolbox>`_ :
+  trouver des petites perturbations des données qui trompent les réseaux de neurones
+
+Apprentissage sans labels
++++++++++++++++++++++++++
+
+|pystatpng|
+
+.. toctree::
+    :maxdepth: 2
+
+    specials/nolabel
+
+*Notebooks*
+
+*(à venir)*
+
+*Lectures*
+
+*Autoencoders - réduction de dimensionnalité*
+
+* `Why Does Unsupervised Pre-training Help Deep Learning? <http://www.jmlr.org/papers/volume11/erhan10a/erhan10a.pdf>`_
+* `Autoencoders <http://ufldl.stanford.edu/tutorial/unsupervised/Autoencoders/>`_
+* `Autoencoders, Unsupervised Learning, and Deep Architectures <http://www.jmlr.org/proceedings/papers/v27/baldi12a/baldi12a.pdf>`_
+* `Generative Models <https://openai.com/blog/generative-models/>`_,
+  `Adversarial Autoencoders <http://hjweide.github.io/adversarial-autoencoders>`_
+* `Tutorial on Variational Autoencoders <https://arxiv.org/abs/1606.05908>`_,
+  `Denoising Autoencoders (dA) <http://deeplearning.net/tutorial/dA.html>`_
+* `Generative Adversarial Networks <https://arxiv.org/abs/1406.2661>`_,
+  `NIPS 2016 Tutorial: Generative Adversarial Networks <https://arxiv.org/abs/1701.00160>`_
+* `Adversarial Autoencoders <https://arxiv.org/abs/1511.05644>`_
+* `Adversarial Autoencoders (with Pytorch) <https://blog.paperspace.com/adversarial-autoencoders-with-pytorch/>`_
+* `Marginalizing Stacked Linear Denoising Autoencoders <http://www.jmlr.org/papers/volume16/chen15c/chen15c.pdf>`_
+* `What Regularized Auto-Encoders Learn from the Data-Generating Distribution <http://jmlr.csail.mit.edu/papers/volume15/alain14a/alain14a.pdf>`_
+* `Compressed sensing and single-pixel cameras <https://terrytao.wordpress.com/2007/04/13/compressed-sensing-and-single-pixel-cameras/>`_
+* `Multi-Label Prediction via Compressed Sensing <Multi-Label Prediction via Compressed Sensing>`_
+* `Inference in generative models using the Wasserstein distance <https://arxiv.org/abs/1701.05146>`_,
+  `Coupling of Particle Filters <https://arxiv.org/abs/1606.01156>`_
+
+*No label, weak labels*
+
+* `Unsupervised Supervised Learning I: Estimating Classification and Regression Errors without Labels <http://www.jmlr.org/papers/volume11/donmez10a/donmez10a.pdf>`_
+* `Unsupervised Supervised Learning II: Margin-Based Classification without Labels <http://www.jmlr.org/proceedings/papers/v15/balasubramanian11a/balasubramanian11a.pdf>`_,
+  `Unsupervised Supervised Learning II: Margin-Based Classification Without Labels <http://www.jmlr.org/papers/volume12/balasubramanian11a/balasubramanian11a.pdf>`_ (longer version)
+* `Large-scale Multi-label Learning with Missing Labels <http://jmlr.org/proceedings/papers/v32/yu14.pdf>`_
+* `Reducing Label Complexity by Learning From Bags <http://www.jmlr.org/proceedings/papers/v9/sabato10a/sabato10a.pdf>`_
+* `Learning from Corrupted Binary Labels via Class-Probability Estimation <http://jmlr.org/proceedings/papers/v37/menon15.pdf>`_
+* `Generalized Expectation Criteria for Semi-Supervised Learning with Weakly Labeled Data <http://www.jmlr.org/papers/volume11/mann10a/mann10a.pdf>`_
+* `Multitask Learning without Label Correspondences <http://users.sussex.ac.uk/~nq28/pubs/Quaetal11.pdf>`_
+* `Training Highly Multiclass Classifiers <http://jmlr.org/papers/volume15/gupta14a/gupta14a.pdf>`_
+
+*Online training*
+
+* `Online Incremental Feature Learning with Denoising Autoencoders <http://jmlr.csail.mit.edu/proceedings/papers/v22/zhou12b/zhou12b.pdf>`_
+* `Fast Kernel Classifiers with Online and Active Learning <http://www.jmlr.org/papers/volume6/bordes05a/bordes05a.pdf>`_,
+  `A Framework for Learning Predictive Structures from Multiple Tasks and Unlabeled Data <http://www.jmlr.org/papers/volume6/ando05a/ando05a.pdf>`_
+* `Multi Kernel Learning with Online-Batch Optimization <http://www.jmlr.org/papers/volume13/orabona12a/orabona12a.pdf>`_
+
+*Improving training set*
+
+* `Data Programming: Creating Large Training Sets, Quickly <https://papers.nips.cc/paper/6523-data-programming-creating-large-training-sets-quickly.pdf>`_
+* `Foolbox is a Python toolbox to create adversarial examples that fool neural networks. <https://foolbox.readthedocs.io/en/latest/>`_
+
+Deep Trees
+++++++++++
+
+L'apprentissage des réseaux de neurones reposent sur des méthodes
+de gradient, différent, celui des arbres permet de prendre en compte des
+features non continues et ne sont pas soumis aux problèmes d'échelle.
+L'association *deep learning* - *deep neural network* était jusque là implicite,
+il faut maintenant compter avec les forêts d'arbres.
+
+*Notebooks*
+
+(à venir)
+
+*Lectures*
+
+* `Unsupervised Learning of Task-Specific Tree Structures with Tree-LSTMs <https://arxiv.org/abs/1707.02786>`_
+* `Improved Semantic Representations From Tree-Structured Long Short-Term Memory Networks <https://arxiv.org/abs/1503.00075>`_
+  (ci-dessous : lien vers une implémentation)
+* `Deep Forest: Towards An Alternative to Deep Neural Networks <https://arxiv.org/pdf/1702.08835.pdf>`_
+
+*Modules*
+
+* `tree_rnn (python) <https://github.com/ofirnachum/tree_rnn>`_ : pas de modules encore,
+  des implémentatations partagées sur GitHub
+* `treelstm <https://github.com/stanfordnlp/treelstm>`_ (java + `Torch <https://github.com/torch/torch7>`_)
+
+Deep Nearest Neighbours
++++++++++++++++++++++++
+
+(*à venir*)
+
+*Lectures*
+
+* `Learning Deep Nearest Neighbor Representations Using Differentiable Boundary Trees <https://arxiv.org/abs/1702.08833>`_
+
+Galleries de problèmes résolus ou presque
++++++++++++++++++++++++++++++++++++++++++
+
+|pystatpng|
+
+.. toctree::
+    :maxdepth: 2
+
+    specials/deepproblems
+
+*Notebooks*
+
+*(à venir)*
+
+*Images*
+
+* `Time-Contrastive Networks: Self-Supervised Learning from Multi-View Observation <https://arxiv.org/abs/1704.06888>`_ :
+  un robot apprend à imiter les mouvements d'une personne
+  (`vidéo <https://sermanet.github.io/tcn/>`_)
+* `Device Placement Optimization with Reinforcement Learning <https://arxiv.org/pdf/1706.04972.pdf>`_
+* `Automatic Colorization <http://tinyclouds.org/colorize/>`_
+* `Image Completion <http://bamos.github.io/2016/08/09/deep-completion/>`_
+* `Perceptual Losses for Real-Time Style Transfer and Super-Resolution <https://arxiv.org/pdf/1603.08155.pdf>`_,
+  article : `neural-style <https://jayanthkoushik.github.io/neural_style.html>`_,
+  code : `neural-style <https://github.com/jayanthkoushik/neural-style>`_.
+* `Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network <https://arxiv.org/pdf/1609.04802.pdf>`_ :
+  entraîner un réseau de neurones pour améliorer la netteté des images
+* `YOLO9000: Better, Faster, Stronger <https://arxiv.org/abs/1612.08242>`_ : détection en temps
+  d'objets sur des images ou dans une vidéo, le code est sur github
+  `darknet <https://github.com/pjreddie/darknet>`_, wrapper Python :
+  `darknetpy <https://github.com/danielgatis/darknetpy>`_,
+  `demo <https://pjreddie.com/darknet/yolo/>`_
+
+*Texte*
+
+* `Representing Sentences as Low-Rank Subspaces <https://arxiv.org/abs/1704.05358v1>`_
+* `SQuAD: 100,000+ Questions for Machine Comprehension of Text <https://arxiv.org/abs/1606.05250>`_,
+  cette compétition fera sans doute émerger la nouvelle version des moteurs de recherche.
+
+*Histoire*
+
+* `Revisiting Unreasonable Effectiveness of Data in Deep Learning Era <https://arxiv.org/pdf/1707.02968.pdf>`_
+
+*Tutorials*
+
+* `Neural Network Zooo Prequel: Cells and Layers <http://www.asimovinstitute.org/neural-network-zoo-prequel-cells-layers/>`_ :
+  revue d'architectures de réseaux de neurones
+* `Neural Machine Translation (seq2seq) Tutorial <https://github.com/tensorflow/nmt>`_
+
+*Deep Learning Artistique*
+
+* `Pramit Choudhary - Learn to be a painter using Neural Style Painting <https://www.youtube.com/watch?v=WXDr5H1hVOU&list=PLGVZCDnMOq0rxoq9Nx0B4tqtr891vaCn7&index=60>`_ (vidéo)
+* `Visual Attribute Transfer through Deep Image Analogy <https://arxiv.org/abs/1705.01088>`_
+* `Coherent Online Video Style Transfer <https://arxiv.org/abs/1703.09211>`_
+* `StyleBank: An Explicit Representation for Neural Image Style Transfer <https://arxiv.org/abs/1703.09210>`_
+* `msracver/Deep-Image-Analogy <https://github.com/msracver/Deep-Image-Analogy>`_
+
+*Compétitions et datasets*
+
+* `ImageNet <http://www.image-net.org/>`_
+* `SQuAD The Stanford Question Answering Dataset <https://rajpurkar.github.io/SQuAD-explorer/>`_
+
+------------------
+
 .. _l-td2a-nlp:
 
 Texte - Natural Language Processing - NLP
 =========================================
+
+Beaucoup des méthodes performantes reposent sur le
+deep learning aujourd'hui, que ce soit pour le texte,
+les images ou le son.
 
 .. contents::
     :local:
@@ -799,16 +1342,13 @@ Génération d'images
 * `Machine Learning is Fun Part 7: Abusing Generative Adversarial Networks to Make 8-bit Pixel Art <https://medium.com/@ageitgey/abusing-generative-adversarial-networks-to-make-8-bit-pixel-art-e45d9b96cee7>`_
 
 Vidéos
-======
+++++++
 
 (*à venir*)
 
 *Modules*
 
 * `scikit-video <https://github.com/aizvorski/scikit-video>`_
-
-Sons
-====
 
 Reconnaissance de la parole
 +++++++++++++++++++++++++++
@@ -826,528 +1366,3 @@ Reconnaissance de la parole
 
 * `bob.bio <http://pythonhosted.org/bob.bio.base/index.html>`_
 * `kaldi <https://github.com/kaldi-asr/kaldi>`_ (reconnaissance de la parole)
-
-------------------
-
-Graphes - Réseaux
-=================
-
-Clustering de Graphes
-+++++++++++++++++++++
-
-|pyecopng| |pystatpng|
-
-*(à venir)*
-
-*Lectures*
-
-* `Basic models and questions in statistical network analysis <https://arxiv.org/abs/1609.03511>`_
-* `Trinity: A Distributed Graph Engine on a Memory Cloud <https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/Trinity-1.pdf>`_
-* `Dimensionality Reduction for Spectral Clustering <http://www.jmlr.org/proceedings/papers/v15/niu11a/niu11a.pdf>`_
-* `Compressive Spectral Clustering <http://jmlr.org/proceedings/papers/v48/tremblay16.pdf>`_
-* `Spectral Clustering on a Budget <http://www.jmlr.org/proceedings/papers/v15/shamir11a/shamir11a.pdf>`_
-* `Partitioning Well-Clustered Graphs: Spectral Clustering Works! <http://www.jmlr.org/proceedings/papers/v40/Peng15.pdf>`_
-* `Bipartite Correlation Clustering: Maximizing Agreements <http://www.jmlr.org/proceedings/papers/v51/asteris16.pdf>`_
-* `Correlation Clustering and Biclustering with Locally Bounded Errors <http://jmlr.org/proceedings/papers/v48/puleo16.pdf>`_
-* `A Unified Framework for Model-based Clustering <http://www.jmlr.org/papers/volume4/zhong03a/zhong03a.pdf>`_
-* `A Tensor Approach to Learning Mixed Membership Community Models <http://jmlr.org/papers/volume15/anandkumar14a/anandkumar14a.pdf>`_
-
-*Lectures Ranking*
-
-* `CoSimRank <http://anthology.aclweb.org/P/P14/P14-1131.pdf>`_
-* `PageRank <https://en.wikipedia.org/wiki/PageRank>`_
-* `A Local Spectral Method for Graphs: With Applications to Improving Graph Partitions and Exploring Data Graphs Locally <http://www.jmlr.org/papers/v13/mahoney12a.html>`_
-
-*Modules*
-
-* `networkx <https://networkx.github.io/>`_
-* `neo4j <https://neo4j.com/developer/python/>`_,
-  `py2neo <http://py2neo.org/v3/>`_,
-  `neo4j-python-driver <https://github.com/neo4j/neo4j-python-driver>`_
-* `snap.py <https://snap.stanford.edu/snappy/index.html#docs>`_
-
-Communautés
-+++++++++++
-
-Déterminer les communautés est un problème assez semblable au problème
-de clustering mais on cherche aussi à en déterminer le centre ou encore
-à catégoriser chaque individu autrement que par son appartenance à un cluster.
-
-*(à venir)*
-
-*Lectures*
-
-* `Katz centrality <https://en.wikipedia.org/wiki/Katz_centrality>`_
-* `Fast unfolding of communities in large networks <https://arxiv.org/pdf/0803.0476v2.pdf>`_ (Louvain)
-* `Modularity and community structure in networks <https://arxiv.org/abs/physics/0602124>`_
-* `Computing communities in large networks using random walks (long version) <https://arxiv.org/abs/physics/0512106>`_
-* `Finding and evaluating community structure in networks <https://arxiv.org/abs/cond-mat/0308217>`_
-* `Mixing patterns in networks <http://www.leonidzhukov.net/hse/2015/sna/papers/mixing_patterns.pdf>`_
-* `Networks in Their Surrounding Contexts <https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch04.pdf>`_
-* `Local Network Community Detection with Continuous Optimization of Conductance and Weighted Kernel K-Means <http://jmlr.org/papers/volume17/16-043/16-043.pdf>`_
-* `Learning Communities in the Presence of Errors <http://www.jmlr.org/proceedings/papers/v49/makarychev16.pdf>`_
-
---------------------
-
-.. _l-deep-learning:
-
-Deep Learning
-=============
-
-.. contents::
-    :local:
-    :depth: 1
-
-Le deep learning signifie aussi des calculs intensifs et des modules qui
-utilisent un compilateur C++ pour optimiser les calculs
-et le GPU si vous en avez.
-Vous pouvez tester votre installation avec le notebook
-:ref:`mldeeppythonrst` ou encore
-`Keras-TensorFlow-GPU-Windows-Installation <https://github.com/antoniosehk/keras-tensorflow-windows-installation>`_.
-
-Réseaux de neurones et Deep Learning
-++++++++++++++++++++++++++++++++++++
-
-Les premiers modèles de *deep learning* sont des réseaux de neurones.
-Il n'est pas inutile de coder le sien au moins une fois
-même s'il n'utilise pas de GPU, même s'il sera probablement
-beaucoup plus lent.
-
-* `Introduction au Deep Learning <https://github.com/sdpython/ensae_teaching_cs/blob/master/_doc/sphinxdoc/source/specials/DEEP%20LEARNING%20FOR%20ENSAE.pdf>`_
-
-*Notebooks*
-
-* :ref:`100LogisticIRISrst`
-* :ref:`110PerceptronIrisrst`
-* :ref:`200PerceptronMNISTrst`
-* :ref:`210ConvolutionMNISTrst`
-* :ref:`300ConvolutionCIFAR10rst`
-* :ref:`mldeeppythonrst`
-
-*Code*
-
-* `Implementing a Neural Network from Scratch in Python - An Introduction <http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/>`_,
-  `notebook <https://github.com/dennybritz/nn-from-scratch>`_
-* `A Neural Network in 11 lines of Python (Part 1) <http://iamtrask.github.io/2015/07/12/basic-python-network/>`_,
-  `A Neural Network in 13 lines of Python (Part 2 - Gradient Descent) <http://iamtrask.github.io/2015/07/27/python-network-part2/>`_
-* `nimblenet <https://github.com/jorgenkg/python-neural-network>`_ : implémentation de différents algorithmes de back propagation
-  avec `numpy <http://www.numpy.org/>`_)
-
-*Lectures*
-
-* `Réseau de neurones en maths <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/rn/rn.html>`_
-* `Artificial Intelligence, Revealed (1) <https://code.facebook.com/pages/1902086376686983>`_ : article de blog et vidéos
-  expliquant les différents concepts du deep learning
-* `Artificial Intelligence, Revealed (2) <https://code.facebook.com/posts/384869298519962/artificial-intelligence,-revealed/>`_ :
-  quelques reprises de l'article précédent et une idée du future (en 2016)
-* `DeepMind Publications <https://deepmind.com/research/publications/>`_
-* `Sequential Neural Models with Stochastic Layers <https://arxiv.org/abs/1605.07571>`_
-* `Interaction Networks for Learning about Objects, Relations and Physics <https://arxiv.org/abs/1612.00222>`_
-* `Scaling Memory-Augmented Neural Networks with Sparse Reads and Writes <https://arxiv.org/abs/1610.09027>`_
-* `Tutoriel pour CNTK <https://www.cntk.ai/pythondocs/>`_
-
-*Vidéos*
-
-* `PyTorch in 5 Minutes <https://www.youtube.com/watch?v=nbJ-2G2GXL0>`_
-* `PyTorch Demystified, Why Did I Switch <https://www.youtube.com/watch?v=VMcRWYEKmhw>`_
-
-*Vocabulaire*
-
-* `deep learning
-  glossary <http://www.wildml.com/deep-learning-glossary/>`_ : termes
-  employés pour le deep learning
-* `Core Layers <https://keras.io/layers/core/>`__ : différents
-  traitement pour compenser les défauts des réseaux de neurones lors de
-  l'apprentissage.
-
-*MNIST*
-
-La base `MNIST <https://en.wikipedia.org/wiki/MNIST_database>`_ est le premier
-sujet pour lequel un réseau de neurones profond a été appris. C'est le premier
-exemple sur lequel on s'entraîner le plus souvent.
-
-* `MNIST benchmark <http://yann.lecun.com/exdb/mnist/>`_
-* `Handwriten Digits Recognition Using Deep
-  Learning <https://faisalorakzai.wordpress.com/2016/06/01/handwritten-digits-recognition-using-deep-learning/>`_
-
-.. image:: mnist_illustration.png
-    :width: 600
-
-*Architectures*
-
-* `Tutorial: Learning Deep Architectures <http://www.cs.toronto.edu/~rsalakhu/deeplearning/yoshua_icml2009.pdf>`_
-* `Convolution (CNN) <https://en.wikipedia.org/wiki/Convolutional_neural_network>`_
-* `Recurrent (RNN) <https://en.wikipedia.org/wiki/Recurrent_neural_network>`_ :
-  séquence labelling, fenêtre glissante dans les
-  images, la sortie du réseau pour l'observations *n-1* est
-  utilisé par le réseau pour l'observation *n* si ces deux
-  observations font partie de la même séquence.
-* `Auto-Encoder <https://en.wikipedia.org/wiki/Autoencoder>`_ :
-  débruiter, ACP non linéaire
-* `Long short-term memory (LSTM) <https://en.wikipedia.org/wiki/Long_short-term_memory>`_,
-  voir aussi `Understanding LSTM Networks <http://colah.github.io/posts/2015-08-Understanding-LSTMs/>`_,
-  le modèle est construit afin qu'il puisse prendre en compte un passé de longueur variable.
-  Voir aussi `LSTM <http://deeplearning.net/tutorial/lstm.html>`_.
-
-*Modules*
-
-* `Torch <http://torch.ch/>`_ et surtout `pytorch <http://pytorch.org/>`_
-  dont le design est plus simple que celui des autres.
-* `Caffee <http://caffe.berkeleyvision.org/>`_ (Berkeley)
-* `CNTK <https://www.microsoft.com/en-us/research/product/cognitive-toolkit/>`_ (Microsoft)
-* `deeplearning4j <https://deeplearning4j.org/>`_
-* `fastText <https://github.com/facebookresearch/fastText>`_
-* `mxnet <https://github.com/dmlc/mxnet>`_
-* `PaddlePaddle <https://github.com/PaddlePaddle/Paddle>`_ (Baidu)
-* `TensorFlow <https://www.tensorflow.org/>`_ (Google)
-
-*GPU*
-
-* `Theano <http://deeplearning.net/software/theano/>`_ (n'est plus maintenu)
-* `cupy <https://github.com/cupy/cupy>`_
-
-*Wrappers*
-
-`Keras <https://keras.io/>`_ ou `chainer <http://chainer.org/>`_ implémentent des interfaces
-communes pour plusieurs librairies de machine learning.
-
-Deep Learning en détail
-+++++++++++++++++++++++
-
-|pystatpng|
-
-*Notebooks*
-
-(à venir foolbox)
-
-.. toctree::
-    :maxdepth: 2
-
-    notebooks/_gs2a_deep
-
-*Cours*
-
-* `Deep Learning course: lecture slides and lab notebooks <https://m2dsupsdlclass.github.io/lectures-labs/>`_
-* `Artificial Intelligence, Revealed (1) <https://code.facebook.com/pages/1902086376686983>`_ :
-  article de blog et vidéos expliquant les différents concepts du deep learning
-* `colah's blog <http://colah.github.io/>`_ *(2016/08)* blog/cours sur le deep learning
-* `Tutoriels avec CNTK <https://cntk.ai/pythondocs/tutorials.html>`_
-* `Course notes for CS224N Winter17 <https://github.com/stanfordnlp/cs224n-winter17-notes>`_ (Stanford)
-
-*Tutoriels*
-
-* `Building Autoencoders in Keras <https://blog.keras.io/building-autoencoders-in-keras.html>`_
-* `Image Similarity Ranking using Microsoft Cognitive Toolkit (CNTK) <https://github.com/azure/ImageSimilarityUsingCntk>`_
-* `Tutoriels avec CNTK <https://github.com/Microsoft/CNTK/tree/v2.0.beta12.0/Tutorials>`_ :
-  ces notebooks sont bien illlustrés
-  (`GAN - Generative Models <https://github.com/Microsoft/CNTK/blob/v2.0.beta12.0/Tutorials/CNTK_206_Basic_GAN.ipynb>`_).
-* `Tutoriels avec TensorFlow <https://github.com/Hvass-Labs/TensorFlow-Tutorials>`_ :
-  ce ne sont pas les seuls mais ils ont l'avantage d'être bien illustrés
-  (`Adversarial Training <https://github.com/Hvass-Labs/TensorFlow-Tutorials/blob/master/11_Adversarial_Examples.ipynb>`_).
-* `Machine Learning is Fun! Part 3: Deep Learning and Convolutional Neural Networks <https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721>`_
-* `Machine Learning is Fun! Part 4: Modern Face Recognition with Deep Learning <https://medium.com/@ageitgey/machine-learning-is-fun-part-4-modern-face-recognition-with-deep-learning-c3cffc121d78>`_
-* `Object detection using Fast R-CNN <https://docs.microsoft.com/en-us/cognitive-toolkit/Object-Detection-using-Fast-R-CNN>`_
-* `Deep Learning - The Straight Dope <http://gluon.mxnet.io/>`_ :
-  séries de notebooks de difficulté graduelle
-
-*Sites*
-
-* `Tinker With a Neural Network Right Here in Your Browser <http://playground.tensorflow.org/>`_
-* `ConvNetJS <http://cs.stanford.edu/people/karpathy/convnetjs/>`_
-* `Databricks / Deep Learning <https://docs.databricks.com/applications/deep-learning/index.html>`_
-
-*Liens*
-
-* `Four deep learning trends from ACL 2017 (1) <http://www.abigailsee.com/2017/08/30/four-deep-learning-trends-from-acl-2017-part-1.html>`_
-* `Four deep learning trends from ACL 2017 (2) <http://www.abigailsee.com/2017/08/30/four-deep-learning-trends-from-acl-2017-part-2.html>`_
-
-*Articles scientifiques*
-
-* `LightRNN: Memory and Computation-Efficient Recurrent Neural Networks <https://arxiv.org/abs/1610.09893>`_
-* `Deep learning architecture diagrams <http://fastml.com/deep-learning-architecture-diagrams/>`_
-* `Factorized Convolutional Neural Networks <https://arxiv.org/abs/1608.04337>`_
-* `Deep Residual Learning for Image Recognition <https://arxiv.org/pdf/1512.03385v1.pdf>`_
-* `Deep Learning <http://www-labs.iro.umontreal.ca/~bengioy/dlbook/>`_, Yoshua Bengio, Ian Goodfellow and Aaron Courville
-* `LeNet5 <http://yann.lecun.com/exdb/lenet/>`_
-* `mxnet <https://github.com/dmlc/mxnet>`_
-* `Benchmarking State-of-the-Art Deep Learning Software Tools <http://arxiv.org/pdf/1608.07249v5.pdf>`_
-* `Wide & Deep Learning: Better Together with TensorFlow <https://research.googleblog.com/2016/06/wide-deep-learning-better-together-with.html>`_,
-  `Wide & Deep Learning for Recommender Systems <https://arxiv.org/pdf/1606.07792v1.pdf>`_
-* `To go deep or wide in learning? <http://www.jmlr.org/proceedings/papers/v33/pandey14.pdf>`_
-* `Three Classes of Deep Learning Architectures and Their Applications: A Tutorial Survey <https://www.microsoft.com/en-us/research/publication/three-classes-of-deep-learning-architectures-and-their-applications-a-tutorial-survey/>`_
-* `Tutorial: Learning Deep Architectures <http://www.cs.toronto.edu/~rsalakhu/deeplearning/yoshua_icml2009.pdf>`_
-* `Deep Learning <https://en.wikipedia.org/wiki/Deep_learning>`_ (wikipédia)
-* `Fast R-CNN <https://arxiv.org/abs/1504.08083>`_ (voir `Object Detection using Fast R CNN <https://github.com/Microsoft/CNTK/wiki/Object-Detection-using-Fast-R-CNN>`_)
-* `Evaluation of Deep Learning Toolkits <https://github.com/zer0n/deepframeworks/blob/master/README.md>`_ *(2015/12)*
-* `Understanding Deep Learning Requires Rethinking Generalization <https://arxiv.org/pdf/1611.03530.pdf>`_
-* `Training Deep Nets with Sublinear Memory Cost <https://arxiv.org/pdf/1604.06174.pdf>`_
-* `On the importance of initialization and momentum in deep learning <http://www.cs.toronto.edu/~fritz/absps/momentum.pdf>`_
-* `TensorFlow: Large-Scale Machine Learning on Heterogeneous Distributed Systems <http://download.tensorflow.org/paper/whitepaper2015.pdf>`_
-* `Foolbox v0.8.0: A Python toolbox to benchmark the robustness of machine learning models <https://arxiv.org/abs/1707.04131>`_
-
-*Chiffres, Textes*
-
-* `One weird trick for parallelizing convolutional neural networks <https://arxiv.org/pdf/1404.5997v2.pdf>`_
-* `ImageNet Classification with Deep Convolutional Neural Networks <https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf>`_
-* `Very Deep Convolutional Networks for Large-Scale Image Recognition <https://arxiv.org/pdf/1409.1556v6.pdf>`_
-* `Multi-Digit Recognition Using A Space Displacement Neural Network  <https://papers.nips.cc/paper/557-multi-digit-recognition-using-a-space-displacement-neural-network.pdf>`_
-* `Space Displacement Localization Neural Networks to locate origin points of handwritten text lines in historical documents <http://liris.cnrs.fr/christian.wolf/papers/icdar-hip2015.pdf>`_
-* `Neural Network Architectures <https://culurciello.github.io/tech/2016/06/04/nets.html>`_,
-  `Convolutional Neural Networks (CNNs / ConvNets) <http://cs231n.github.io/convolutional-networks/#conv>`_
-* `Transfer Learning <http://cs231n.github.io/transfer-learning/>`_
-
-*Benchmarks*
-
-* `Benchmarking CNTK on Keras: is it Better at Deep Learning than TensorFlow? <http://minimaxir.com/2017/06/keras-cntk/>`_
-  (`code <https://github.com/minimaxir/keras-cntk-benchmark>`_)
-
-*Plus théoriques*
-
-* `Why Does Unsupervized Deep Learning Work? - A perspective from group theory <https://arxiv.org/pdf/1412.6621v3.pdf>`_
-* `Deep Learning of Representations: Looking Forward <https://arxiv.org/pdf/1305.0445v2.pdf>`_
-* `Why Does Unsupervised Pre-training Help Deep Learning? <http://jmlr.org/papers/volume11/erhan10a/erhan10a.pdf>`_
-
-*Lectures deep text*
-
-* `Efficient Estimation of Word Representations in Vector Space <http://arxiv.org/abs/1301.3781>`_, Tomas Mikolov, Kai Chen, Greg Corrado, Jeffrey Dean,
-* `Distributed Representations of Words and Phrases and their Compositionality <http://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf>`_, Tomas Mikolov, Ilya Sutskever, Kai Chen, Greg S Corrado, Jeff Dean,
-* `word2vec Parameter Learning Explained <http://arxiv.org/abs/1411.2738>`_, Xin Rong,
-* `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
-* `Pretrained Character Embeddings for Deep Learning and Automatic Text Generation <http://minimaxir.com/2017/04/char-embeddings/>`_
-
-*Vus dans des conférences*
-
-* `Fast R-CNN <Fast R-CNN>`_ *(dotAI)*
-* `Mask R-CNN <https://arxiv.org/abs/1703.06870>`_ *(dotAI)*
-* `Modèle Tenserflow <https://github.com/tensorflow/models>`_
-  (modèle adaptés pour du transfer learning : ResNet, `Inception <http://nicolovaligi.com/history-inception-deep-learning-architecture.html>`_) *(dotAI)*
-* `Domain-Adversarial Training of Neural Networks <http://jmlr.org/papers/volume17/15-239/15-239.pdf>`_ *(dotAI)*
-
-*Modules*
-
-* `pytorch <http://pytorch.org/>`_ : design plus simple que tous les autres
-* `theano <http://deeplearning.net/software/theano/>`_ (n'est plus maintenu)
-  Il faut lire l'article de blog
-  :ref:`Installer theano et un compilateur C++ <blog-install-theno-keras>`.
-* `keras <https://keras.io/>`_
-* `mxnet <https://github.com/dmlc/mxnet>`_
-* `caffe <http://caffe.berkeleyvision.org/>`_ (`installation <http://caffe.berkeleyvision.org/installation.html>`_)
-* `climin <http://climin.readthedocs.io/en/latest/rmsprop.html>`_ (algorithme de back propagation)
-* `tensorflow <https://www.tensorflow.org/>`_ (Google)
-* `foolbox <https://github.com/bethgelab/foolbox>`_ :
-  trouver des petites perturbations des données qui trompent les réseaux de neurones
-* `cntk <https://github.com/Microsoft/CNTK>`_
-
-*à suivre*
-
-* `chainer <https://github.com/pfnet/chainer>`_
-* `platoon <https://github.com/mila-udem/platoon/>`_ :
-  multi-GPU pour theano (à voir car *theano* n'est plus maintenu)
-* `Federated Learning: Collaborative Machine Learning without Centralized Training Data <https://research.googleblog.com/2017/04/federated-learning-collaborative.html>`_
-
-*Deep learning embarqué*
-
-* `TensorFlow sur Android <https://github.com/tensorflow/tensorflow/tree/master/tensorflow/examples/android>`_
-* `TensorFlow sur RasberryPI <https://github.com/samjabrahams/tensorflow-on-raspberry-pi/blob/master/GUIDE.md>`_
-
-Transfer Learning
-+++++++++++++++++
-
-|pystatpng|
-
-* `Building powerful image classification models using very little data <https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html>`_
-* `Transfer Learning and Fine Tuning a pre-trained Deep CNN on a GPU <https://github.com/sdpython/2017_deeplearning_demo/blob/master/Fine_Tuning_Deep_CNNs_with_GPU_rendered.ipynb>`_
-  (Olivier Grisel) - présenté lors de la conférence devoxx :
-  `Deep Learning : choisir son framework et entrainer ses modèles dans Azure <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2017/experience_2017.html>`_.
-
-*Notebooks*
-
-* `Transfer Learning <https://github.com/sdpython/2017_deeplearning_demo/blob/master/Fine_Tuning_Deep_CNNs_with_GPU_rendered.ipynb>`_ (Olivier Grisel)
-
-*Lectures*
-
-*Transfer learning*
-
-* `Unsupervised and Transfer Learning Challenges in Machine Learning, Volume 7 <http://www.mtome.com/Publications/CiML/CiML-v7-book.pdf>`_
-* `ICML2011 Unsupervised and Transfer Learning Workshop <http://www.jmlr.org/proceedings/papers/v27/silver12a/silver12a.pdf>`_
-* `Transfer Learning <ftp://ftp.cs.wisc.edu/machine-learning/shavlik-group/torrey.handbook09.pdf>`_
-* `Deep Learning of Representations for Unsupervised and Transfer Learning <http://www.jmlr.org/proceedings/papers/v27/bengio12a/bengio12a.pdf>`_
-* `Unsupervised and Transfer Learning Challenge: a Deep Learning Approach <http://www.jmlr.org/proceedings/papers/v27/mesnil12a/mesnil12a.pdf>`_
-* `Transfer Learning by Kernel Meta-Learning <http://www.jmlr.org/proceedings/papers/v27/aiolli12a/aiolli12a.pdf>`_
-* `A Survey on Transfer Learning <https://www.cse.ust.hk/~qyang/Docs/2009/tkde_transfer_learning.pdf>`_
-* `Domain-Adversarial Training of Neural Networks <http://jmlr.org/papers/volume17/15-239/15-239.pdf>`_
-* `Stability and Hypothesis Transfer Learning <http://jmlr.org/proceedings/papers/v28/kuzborskij13.pdf>`_
-* `Transfer Learning Decision Forests for Gesture Recognition <http://jmlr.org/papers/volume15/goussies14a/goussies14a.pdf>`_
-* `Learning Transferable Features with Deep Adaptation Networks <http://www.jmlr.org/proceedings/papers/v37/long15.pdf>`_
-* `Asymmetric Transfer Learning with Deep Gaussian Processes <http://www.jmlr.org/proceedings/papers/v37/kandemir15.pdf>`_
-* `Transfer Learning in Sequential Decision Problems: A Hierarchical Bayesian Approach <http://www.jmlr.org/proceedings/papers/v27/wilson12a/wilson12a.pdf>`_
-* `Transfer Learning for Reinforcement Learning Domains: A Survey <http://www.jmlr.org/papers/volume10/taylor09a/taylor09a.pdf>`_
-* `Unsupervised dimensionality reduction via gradient-based matrix factorization with two adaptive learning rates <http://www.jmlr.org/proceedings/papers/v27/nikulin12a/nikulin12a.pdf>`_
-
-*Modèles pré-entraînés*
-
-* `Places CNN <http://places.csail.mit.edu/downloadCNN.html>`_,
-  `Pre-release of Places365-CNNs <https://github.com/metalbubble/places365>`_
-  (deep learning)
-* `CNTK <https://www.microsoft.com/en-us/research/product/cognitive-toolkit/model-gallery/>`_
-  (sur `github <https://github.com/Microsoft/CNTK/tree/master/Examples>`_)
-* `Model Zoo <https://github.com/BVLC/caffe/wiki/Model-Zoo>`_
-* `Model Gallery CNTK <https://www.microsoft.com/en-us/cognitive-toolkit/features/model-gallery/>`_
-* `tensorflow/models <https://github.com/tensorflow/models>`_
-
-Apprentissage sans labels
-+++++++++++++++++++++++++
-
-|pystatpng|
-
-.. toctree::
-    :maxdepth: 2
-
-    specials/nolabel
-
-*Notebooks*
-
-*(à venir)*
-
-*Lectures*
-
-*Autoencoders - réduction de dimensionnalité*
-
-* `Why Does Unsupervised Pre-training Help Deep Learning? <http://www.jmlr.org/papers/volume11/erhan10a/erhan10a.pdf>`_
-* `Autoencoders <http://ufldl.stanford.edu/tutorial/unsupervised/Autoencoders/>`_
-* `Autoencoders, Unsupervised Learning, and Deep Architectures <http://www.jmlr.org/proceedings/papers/v27/baldi12a/baldi12a.pdf>`_
-* `Generative Models <https://openai.com/blog/generative-models/>`_,
-  `Adversarial Autoencoders <http://hjweide.github.io/adversarial-autoencoders>`_
-* `Tutorial on Variational Autoencoders <https://arxiv.org/abs/1606.05908>`_,
-  `Denoising Autoencoders (dA) <http://deeplearning.net/tutorial/dA.html>`_
-* `Generative Adversarial Networks <https://arxiv.org/abs/1406.2661>`_,
-  `NIPS 2016 Tutorial: Generative Adversarial Networks <https://arxiv.org/abs/1701.00160>`_
-* `Adversarial Autoencoders <https://arxiv.org/abs/1511.05644>`_
-* `Adversarial Autoencoders (with Pytorch) <https://blog.paperspace.com/adversarial-autoencoders-with-pytorch/>`_
-* `Marginalizing Stacked Linear Denoising Autoencoders <http://www.jmlr.org/papers/volume16/chen15c/chen15c.pdf>`_
-* `What Regularized Auto-Encoders Learn from the Data-Generating Distribution <http://jmlr.csail.mit.edu/papers/volume15/alain14a/alain14a.pdf>`_
-* `Compressed sensing and single-pixel cameras <https://terrytao.wordpress.com/2007/04/13/compressed-sensing-and-single-pixel-cameras/>`_
-* `Multi-Label Prediction via Compressed Sensing <Multi-Label Prediction via Compressed Sensing>`_
-* `Inference in generative models using the Wasserstein distance <https://arxiv.org/abs/1701.05146>`_,
-  `Coupling of Particle Filters <https://arxiv.org/abs/1606.01156>`_
-
-*No label, weak labels*
-
-* `Unsupervised Supervised Learning I: Estimating Classification and Regression Errors without Labels <http://www.jmlr.org/papers/volume11/donmez10a/donmez10a.pdf>`_
-* `Unsupervised Supervised Learning II: Margin-Based Classification without Labels <http://www.jmlr.org/proceedings/papers/v15/balasubramanian11a/balasubramanian11a.pdf>`_,
-  `Unsupervised Supervised Learning II: Margin-Based Classification Without Labels <http://www.jmlr.org/papers/volume12/balasubramanian11a/balasubramanian11a.pdf>`_ (longer version)
-* `Large-scale Multi-label Learning with Missing Labels <http://jmlr.org/proceedings/papers/v32/yu14.pdf>`_
-* `Reducing Label Complexity by Learning From Bags <http://www.jmlr.org/proceedings/papers/v9/sabato10a/sabato10a.pdf>`_
-* `Learning from Corrupted Binary Labels via Class-Probability Estimation <http://jmlr.org/proceedings/papers/v37/menon15.pdf>`_
-* `Generalized Expectation Criteria for Semi-Supervised Learning with Weakly Labeled Data <http://www.jmlr.org/papers/volume11/mann10a/mann10a.pdf>`_
-* `Multitask Learning without Label Correspondences <http://users.sussex.ac.uk/~nq28/pubs/Quaetal11.pdf>`_
-* `Training Highly Multiclass Classifiers <http://jmlr.org/papers/volume15/gupta14a/gupta14a.pdf>`_
-
-*Online training*
-
-* `Online Incremental Feature Learning with Denoising Autoencoders <http://jmlr.csail.mit.edu/proceedings/papers/v22/zhou12b/zhou12b.pdf>`_
-* `Fast Kernel Classifiers with Online and Active Learning <http://www.jmlr.org/papers/volume6/bordes05a/bordes05a.pdf>`_,
-  `A Framework for Learning Predictive Structures from Multiple Tasks and Unlabeled Data <http://www.jmlr.org/papers/volume6/ando05a/ando05a.pdf>`_
-* `Multi Kernel Learning with Online-Batch Optimization <http://www.jmlr.org/papers/volume13/orabona12a/orabona12a.pdf>`_
-
-*Improving training set*
-
-* `Data Programming: Creating Large Training Sets, Quickly <https://papers.nips.cc/paper/6523-data-programming-creating-large-training-sets-quickly.pdf>`_
-* `Foolbox is a Python toolbox to create adversarial examples that fool neural networks. <https://foolbox.readthedocs.io/en/latest/>`_
-
-Deep Trees
-++++++++++
-
-L'apprentissage des réseaux de neurones reposent sur des méthodes
-de gradient, différent, celui des arbres permet de prendre en compte des
-features non continues et ne sont pas soumis aux problèmes d'échelle.
-L'association *deep learning* - *deep neural network* était jusque là implicite,
-il faut maintenant compter avec les forêts d'arbres.
-
-*Notebooks*
-
-(à venir)
-
-*Lectures*
-
-* `Unsupervised Learning of Task-Specific Tree Structures with Tree-LSTMs <https://arxiv.org/abs/1707.02786>`_
-* `Improved Semantic Representations From Tree-Structured Long Short-Term Memory Networks <https://arxiv.org/abs/1503.00075>`_
-  (ci-dessous : lien vers une implémentation)
-* `Deep Forest: Towards An Alternative to Deep Neural Networks <https://arxiv.org/pdf/1702.08835.pdf>`_
-
-*Modules*
-
-* `tree_rnn (python) <https://github.com/ofirnachum/tree_rnn>`_ : pas de modules encore,
-  des implémentatations partagées sur GitHub
-* `treelstm <https://github.com/stanfordnlp/treelstm>`_ (java + `Torch <https://github.com/torch/torch7>`_)
-
-Deep Nearest Neighbours
-+++++++++++++++++++++++
-
-(*à venir*)
-
-*Lectures*
-
-* `Learning Deep Nearest Neighbor Representations Using Differentiable Boundary Trees <https://arxiv.org/abs/1702.08833>`_
-
-Galleries de problèmes résolus ou presque
-+++++++++++++++++++++++++++++++++++++++++
-
-|pystatpng|
-
-.. toctree::
-    :maxdepth: 2
-
-    specials/deepproblems
-
-*Notebooks*
-
-*(à venir)*
-
-*Images*
-
-* `Time-Contrastive Networks: Self-Supervised Learning from Multi-View Observation <https://arxiv.org/abs/1704.06888>`_ :
-  un robot apprend à imiter les mouvements d'une personne
-  (`vidéo <https://sermanet.github.io/tcn/>`_)
-* `Device Placement Optimization with Reinforcement Learning <https://arxiv.org/pdf/1706.04972.pdf>`_
-* `Automatic Colorization <http://tinyclouds.org/colorize/>`_
-* `Image Completion <http://bamos.github.io/2016/08/09/deep-completion/>`_
-* `Perceptual Losses for Real-Time Style Transfer and Super-Resolution <https://arxiv.org/pdf/1603.08155.pdf>`_,
-  article : `neural-style <https://jayanthkoushik.github.io/neural_style.html>`_,
-  code : `neural-style <https://github.com/jayanthkoushik/neural-style>`_.
-* `Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network <https://arxiv.org/pdf/1609.04802.pdf>`_ :
-  entraîner un réseau de neurones pour améliorer la netteté des images
-* `YOLO9000: Better, Faster, Stronger <https://arxiv.org/abs/1612.08242>`_ : détection en temps
-  d'objets sur des images ou dans une vidéo, le code est sur github
-  `darknet <https://github.com/pjreddie/darknet>`_, wrapper Python :
-  `darknetpy <https://github.com/danielgatis/darknetpy>`_,
-  `demo <https://pjreddie.com/darknet/yolo/>`_
-
-*Texte*
-
-* `Representing Sentences as Low-Rank Subspaces <https://arxiv.org/abs/1704.05358v1>`_
-* `SQuAD: 100,000+ Questions for Machine Comprehension of Text <https://arxiv.org/abs/1606.05250>`_,
-  cette compétition fera sans doute émerger la nouvelle version des moteurs de recherche.
-
-*Histoire*
-
-* `Revisiting Unreasonable Effectiveness of Data in Deep Learning Era <https://arxiv.org/pdf/1707.02968.pdf>`_
-
-*Tutorials*
-
-* `Neural Network Zooo Prequel: Cells and Layers <http://www.asimovinstitute.org/neural-network-zoo-prequel-cells-layers/>`_ :
-  revue d'architectures de réseaux de neurones
-* `Neural Machine Translation (seq2seq) Tutorial <https://github.com/tensorflow/nmt>`_
-
-*Deep Learning Artistique*
-
-* `Pramit Choudhary - Learn to be a painter using Neural Style Painting <https://www.youtube.com/watch?v=WXDr5H1hVOU&list=PLGVZCDnMOq0rxoq9Nx0B4tqtr891vaCn7&index=60>`_ (vidéo)
-* `Visual Attribute Transfer through Deep Image Analogy <https://arxiv.org/abs/1705.01088>`_
-* `Coherent Online Video Style Transfer <https://arxiv.org/abs/1703.09211>`_
-* `StyleBank: An Explicit Representation for Neural Image Style Transfer <https://arxiv.org/abs/1703.09210>`_
-* `msracver/Deep-Image-Analogy <https://github.com/msracver/Deep-Image-Analogy>`_
-
-*Compétitions et datasets*
-
-* `ImageNet <http://www.image-net.org/>`_
-* `SQuAD The Stanford Question Answering Dataset <https://rajpurkar.github.io/SQuAD-explorer/>`_
