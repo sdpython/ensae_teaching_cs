@@ -69,7 +69,7 @@ class TestSkipExampleKerasMNIST(unittest.TestCase):
             OutputPrint=__name__ == "__main__")
 
         if is_travis_or_appveyor():
-            # it requires latex
+            # it requires keras
             return
 
         from src.ensae_teaching_cs.examples.keras_mnist import keras_mnist_data, keras_build_mnist_model, keras_fit, keras_predict

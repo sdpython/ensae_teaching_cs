@@ -29,12 +29,12 @@ Scrapping, API, Site Web, Notebooks
     :local:
     :depth: 2
 
+|pyecopng| |pystatpng|
+
 .. _l-2a-scraping:
 
 Webscrapping et API
 +++++++++++++++++++
-
-|pyecopng| |pystatpng|
 
 .. toctree::
     :maxdepth: 1
@@ -62,6 +62,8 @@ Webscrapping et API
 * `scrapy <https://scrapy.org/>`_
 * `scrapoxy <http://scrapoxy.io/>`_, `python api <https://github.com/fabienvauchelles/scrapoxy-python-api>`_
 
+|pyecopng| |pystatpng|
+
 .. _l-eco-website:
 
 Site web
@@ -86,6 +88,8 @@ Site web
 * `Flask <http://flask.pocoo.org/>`_
 * `sanic <https://github.com/channelcat/sanic>`_ + `uvloop <https://github.com/MagicStack/uvloop>`_
 
+|pystatpng|
+
 Jupyter et les commandes magiques
 +++++++++++++++++++++++++++++++++
 
@@ -94,8 +98,6 @@ Jupyter et les commandes magiques
 
     notebooks/jupyter_custom_magics
     notebooks/notebook_convert
-
-|pystatpng|
 
 *Notebooks*
 
@@ -113,12 +115,12 @@ Traiter les données rapidement pour de plus grands volumes
     :local:
     :depth: 2
 
+|pystatpng|
+
 .. _l-cluster-non-struct-2a:
 
 Big data sans cluster, structures de données
 ++++++++++++++++++++++++++++++++++++++++++++
-
-|pystatpng|
 
 .. index:: itérateur
 
@@ -178,10 +180,10 @@ de façon intelligente la contrainte de volume. Et s'il n'y avait qu'une idée
 * `dask <http://dask.pydata.org/en/latest/>`_
 * `cytoolz <https://github.com/pytoolz/cytoolz>`_
 
+|pystatpng|
+
 Tensor, tableaux multidimensionnel
 ++++++++++++++++++++++++++++++++++
-
-|pystatpng|
 
 .. toctree::
     :maxdepth: 1
@@ -196,13 +198,13 @@ Tensor, tableaux multidimensionnel
 * `xtensor-array <https://github.com/QuantStack/xtensor-python>`_
 * `cubes <http://cubes.databrewery.org/>`_
 
+|pystatpng|
+
 .. _l-2a-cplusplus-para-serie:
 .. _l-acc-code-llvm:
 
 C++, Accélération de code
 +++++++++++++++++++++++++
-
-|pystatpng|
 
 .. toctree::
     :maxdepth: 1
@@ -264,10 +266,10 @@ Meilleure efficacité avec des algorithmes
     :local:
     :depth: 2
 
+|pystatpng|
+
 Parallélisation, sérialisation
 ++++++++++++++++++++++++++++++
-
-|pystatpng|
 
 La sérialisation est le fait de convertir n'importe quelle structure de données en un
 tableau d'octets, c'est indispensable pour la communication entre deux machines, deux processus.
@@ -292,12 +294,12 @@ tableau d'octets, c'est indispensable pour la communication entre deux machines,
 * `Combining random forest models in scikit learn <http://stackoverflow.com/questions/28489667/combining-random-forest-models-in-scikit-learn>`_
 * `Better Python compressed persistence in joblib <http://gael-varoquaux.info/programming/new_low-overhead_persistence_in_joblib_for_big_data.html>`_
 
+|pystatpng|
+
 .. _l-puzzlealgo2A:
 
 Puzzles algorithmiques
 ++++++++++++++++++++++
-
-|pystatpng|
 
 .. toctree::
 
@@ -341,6 +343,8 @@ Certains sont tirés de plusieurs sites dont
 
 * :ref:`Algorithmes classiques implémentés <l-blog-algo-impl>`
 
+|pystatpng|
+
 Streaming algorithms
 ++++++++++++++++++++
 
@@ -371,6 +375,8 @@ Streaming algorithms
 * `pandas_streaming <https://github.com/sdpython/pandas_streaming/>`_
 * `streamparse <https://github.com/Parsely/streamparse>`_
 
+|pystatpng|
+
 Algorithmes génétiques
 ++++++++++++++++++++++
 
@@ -393,6 +399,8 @@ connexion extérieure. Dans le meilleur des cas, cela signifie aussi apprendre
 dans l'objet connecté avec des contraintes assez fortes sur la mémoire et
 la puissance de calculs.
 
+|pystatpng|
+
 Prédire en environnement contraint
 ++++++++++++++++++++++++++++++++++
 
@@ -411,6 +419,8 @@ du modèle plutôt que de chercher à installer :epkg:`Python`.
   deep learning sur :epkg:`RasberryPI`, :epkg:`Arduino`
 * `onnx <https://github.com/onnx/onnx>`_
 * `coremltools <https://pypi.python.org/pypi/coremltools>`_
+
+|pystatpng|
 
 Apprendre en environnement contraint
 ++++++++++++++++++++++++++++++++++++

@@ -70,7 +70,7 @@ class TestSkipExampleTheanoLogReg(unittest.TestCase):
             OutputPrint=__name__ == "__main__")
 
         if is_travis_or_appveyor():
-            # it requires latex
+            # it requires theano
             return
 
         from theano import function, config, shared
@@ -103,7 +103,7 @@ class TestSkipExampleTheanoLogReg(unittest.TestCase):
             OutputPrint=__name__ == "__main__")
 
         if is_travis_or_appveyor():
-            # it requires latex
+            # it requires theano
             return
 
         from theano import config

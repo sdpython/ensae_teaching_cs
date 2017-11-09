@@ -41,10 +41,10 @@ un vecteur réel de dimension fixe exploitable par un modèle de machine learnin
 Cette partie s'intéresse à construire de meilleures variables que celles issues
 du problème initiale.
 
+|pyecopng| |pystatpng|
+
 Projections, Réduction des dimensions
 +++++++++++++++++++++++++++++++++++++
-
-|pyecopng| |pystatpng|
 
 (à venir)
 
@@ -86,10 +86,10 @@ Projections, Réduction des dimensions
 
 * `How to Use t-SNE Effectively <http://distill.pub/2016/misread-tsne/>`_
 
+|pyecopng| |pystatpng|
+
 Variables catégorielles
 +++++++++++++++++++++++
-
-|pyecopng| |pystatpng|
 
 (à venir)
 
@@ -109,12 +109,12 @@ Variables catégorielles
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 * `category_encoders <http://contrib.scikit-learn.org/categorical-encoding/>`_
 
+|pyecopng| |pystatpng|
+
 Traitement des valeurs manquantes
 +++++++++++++++++++++++++++++++++
 
 (à venir)
-
-|pystatpng| |pystateco|
 
 *Lectures*
 
@@ -138,10 +138,10 @@ Distances
 * `Detecting Near-Duplicates for Web Crawling <http://www.wwwconference.org/www2007/papers/paper215.pdf>`_
 * `Deep metric learning using Triplet network <https://arxiv.org/abs/1412.6622>`_
 
+|pyecopng| |pystatpng|
+
 Clustering
 ++++++++++
-
-|pyecopng| |pystatpng|
 
 .. toctree::
     :maxdepth: 2
@@ -186,6 +186,8 @@ Clustering
 * `pyclustering <https://pypi.python.org/pypi/pyclustering>`_
 * `pycluster <https://pypi.python.org/pypi/pycluster>`_
 
+|pyecopng| |pystatpng|
+
 Détection d'anomalies
 +++++++++++++++++++++
 
@@ -209,6 +211,8 @@ Détection d'anomalies
 * `pyculiarity <https://github.com/nicolasmiller/pyculiarity>`_
 * `lsanomaly <https://github.com/lsanomaly/lsanomaly>`_
 
+|pyecopng| |pystatpng|
+
 Graphe et embedding
 +++++++++++++++++++
 
@@ -220,10 +224,14 @@ Graphe et embedding
 * `Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering <https://arxiv.org/abs/1606.09375>`_
 * `Deep Convolutional Networks on Graph-Structured Data <https://arxiv.org/abs/1506.05163>`_
 
+|pyecopng| |pystatpng|
+
 Text embedding
 ++++++++++++++
 
 Voir :ref:`l-td2a-nlp`.
+
+|pyecopng| |pystatpng|
 
 Valeurs manquantes
 ++++++++++++++++++
@@ -262,14 +270,16 @@ Machine Learning - Formalisation
     :local:
     :depth: 1
 
+|pyecopng| |pystatpng|
+
 .. _l-ml-skgael:
 
 Machine learning, cours de Gaël Varoquaux
 +++++++++++++++++++++++++++++++++++++++++
 
-|pyecopng| |pystatpng|
-
-Gaël est un des concepteurs de `scikit-learn <http://scikit-learn.org/stable/>`_.
+`Gaël Varoquaux <http://gael-varoquaux.info/>`_
+est un des concepteurs de
+`scikit-learn <http://scikit-learn.org/stable/>`_.
 
 * machine learning et `scikit-learn <http://scikit-learn.org/stable/>`_
   (`tutoriels sur scikit-learn <http://nbviewer.jupyter.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_),
@@ -321,12 +331,12 @@ ici :
 
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 
+|pyecopng| |pystatpng|
+
 .. _l-td2a-ml-extensions:
 
 Pratique du machine learning, problème de données
 +++++++++++++++++++++++++++++++++++++++++++++++++
-
-|pyecopng| |pystatpng|
 
 .. toctree::
     :maxdepth: 2
@@ -391,6 +401,8 @@ poste régulièrement des articles sur des librairies de machine learning open s
 * `imbalanced-learn <https://github.com/scikit-learn-contrib/imbalanced-learn>`_
   (la documentation est intéressante)
 
+|pyecopng| |pystatpng|
+
 Ranking
 +++++++
 
@@ -413,6 +425,8 @@ Ranking
 * `The Lemur Project - ranklib <https://sourceforge.net/p/lemur/wiki/RankLib/>`_
 * `scikit-criteria <https://github.com/leliel12/scikit-criteria>`_ (standby)
 
+|pystatpng|
+
 Système de recommandation
 +++++++++++++++++++++++++
 
@@ -431,14 +445,14 @@ Système de recommandation
 
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 
+|pystatpng|
+
 .. _l-td2a-reinforcement-learning:
 
 Reinforcement Learning
 ++++++++++++++++++++++
 
 ou *apprentissage par renforcement*
-
-|pystatpng|
 
 *(année prochaine)*
 
@@ -455,12 +469,12 @@ ou *apprentissage par renforcement*
 * `Strategic Attentive Writer for Learning Macro-Actions <https://arxiv.org/pdf/1606.04695.pdf>`_
 * `Temporal difference learning <https://en.wikipedia.org/wiki/Temporal_difference_learning>`_
 
+|pystatpng|
+
 Bandits
 +++++++
 
-|pystatpng|
-
-*(année prochaine)*
+*(à venir)*
 
 *Lectures*
 
@@ -475,12 +489,12 @@ Bandits
 * `Thompson sampling with the online bootstrap <https://arxiv.org/abs/1410.4009>`_ (à lire)
 * `Trial without Error: Towards Safe Reinforcement Learning via Human Intervention <https://arxiv.org/abs/1707.05173>`_
 
+|pystatpng|
+
 Modèles bayésiens
 +++++++++++++++++
 
-|pystatpng|
-
-*(année prochaine)*
+*(à venir)*
 
 *Notebooks*
 
@@ -508,6 +522,8 @@ Modèles bayésiens
 * `kabuki <https://pypi.python.org/pypi/kabuki/>`_
 * `bnpy <https://github.com/bnpy/bnpy>`_
 * `pyro <http://pyro.ai/>`_ : modèle bayèsiens et deep learning
+
+|pystatpng|
 
 Factorization Machines
 ++++++++++++++++++++++

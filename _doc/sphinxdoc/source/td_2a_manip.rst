@@ -24,10 +24,10 @@ et les représenter à l'aide de graphiques.
 
 ------------
 
+|pyecopng|
+
 Rappels de programmation
 ========================
-
-|pyecopng|
 
 *Notebooks*
 
@@ -57,10 +57,10 @@ commandes magiques.
 De nombreux livres ont été écrits sur la manipulation des données en :epkg:`Python`. En voici un :
 `Python Data Science Handbook <https://github.com/jakevdp/PythonDataScienceHandbook>`_.
 
+|pyecopng| |pystatpng|
+
 DataFrame
 +++++++++
-
-|pyecopng| |pystatpng|
 
 *Notebooks*
 
@@ -80,10 +80,10 @@ DataFrame
 
 * `pandas <http://pandas.pydata.org/>`_
 
+|pyecopng| |pystatpng|
+
 Array, Matrix
 +++++++++++++
-
-|pyecopng| |pystatpng|
 
 *Notebooks*
 
@@ -102,10 +102,10 @@ Array, Matrix
 * `numpy <http://www.numpy.org/>`_
 * `scipy <https://www.scipy.org/>`_
 
+|pyecopng| |pystatpng|
+
 SQL
 +++
-
-|pyecopng| |pystatpng|
 
 .. toctree::
     :maxdepth: 1
@@ -131,18 +131,10 @@ Visualisation
     :local:
     :depth: 1
 
-Graphes
-+++++++
-
 |pyecopng| |pystatpng|
 
-Plan
-
-* Présenter `10 plotting libraries at PyData 2016 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_.
-* Grouper les étudiants par deux
-* Considérer un jeu de données
-* Chaque groupe essaye une librairie différente
-* Insister sur la visualisation de gros jeu de données
+Graphes
++++++++
 
 Il existe de nombreuses librairies de visualisation réparties en deux grandes familles.
 La première produit des images
@@ -177,6 +169,10 @@ la visualisation animée de gros jeux de données telle que
 
 * Lire :ref:`Javascript et traitement de données <blog-js-data>`
 
+*Lectures*
+
+* `10 plotting libraries at PyData 2016 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_
+
 *Modules*
 
 * `matplotlib <http://matplotlib.org/>`_
@@ -185,10 +181,10 @@ la visualisation animée de gros jeux de données telle que
 * `bqplot <https://github.com/bloomberg/bqplot>`_
 * :ref:`l-visualisation`
 
+|pyecopng| |pystatpng|
+
 Cartes
 ++++++
-
-|pyecopng| |pystatpng|
 
 *Notebooks*
 
@@ -214,15 +210,18 @@ Cartes
 
 *Modules*
 
-* `basemap <http://matplotlib.org/basemap/>`_
 * `cartopy <http://scitools.org.uk/cartopy/>`_
 * `pyshp <https://pypi.python.org/pypi/pyshp>`_
 * `shapely <https://pypi.python.org/pypi/Shapely>`_
 * `pyproj <https://pypi.python.org/pypi/pyproj>`_
 * `geopy <https://pypi.python.org/pypi/geopy>`_
+* `basemap <http://matplotlib.org/basemap/>`_
+  (plus maintenu, il faut préférer `cartopy <http://scitools.org.uk/cartopy/>`_)
 
-Graphes classiques
-++++++++++++++++++
+|pyecopng| |pystatpng|
+
+Graphes pour des statisticiens
+++++++++++++++++++++++++++++++
 
 (*à venir*)
 
@@ -234,6 +233,8 @@ Graphes classiques
 
 * `seaborn <https://seaborn.pydata.org/>`_
 * `statsmodels <http://www.statsmodels.org/stable/index.html>`_
+
+|pystatpng|
 
 Visualiser pour comprendre
 ++++++++++++++++++++++++++

@@ -27,6 +27,8 @@ Machine Learning Avancé
     :local:
     :depth: 1
 
+|pyecopng| |pystatpng|
+
 Régression quantile
 +++++++++++++++++++
 
@@ -42,12 +44,12 @@ Régression quantile
 
 * `statsmodels <http://statsmodels.sourceforge.net/devel/generated/statsmodels.regression.quantile_regression.QuantReg.html>`_
 
+|pyecopng| |pystatpng|
+
 Optimisation des hyperparamètres
 ++++++++++++++++++++++++++++++++
 
-|pyecopng| |pystatpng|
-
-(à venir)
+(*à venir*)
 
 *Lectures*
 
@@ -58,10 +60,10 @@ Optimisation des hyperparamètres
 * `scikit-learn <http://scikit-learn.org/>`_
 * `hyperopt <https://github.com/hyperopt/hyperopt>`_
 
+|pystatpng|
+
 Online training
 +++++++++++++++
-
-|pystatpng|
 
 *(à venir)*
 
@@ -69,10 +71,10 @@ Online training
 
 * `Fast Rates in Statistical and Online Learning <http://www.jmlr.org/papers/volume16/vanerven15a/vanerven15a.pdf>`_
 
+|pystatpng|
+
 Modèles avec dépendances dans le temps
 ++++++++++++++++++++++++++++++++++++++
-
-|pystatpng|
 
 *(à venir)*
 
@@ -81,10 +83,10 @@ Modèles avec dépendances dans le temps
 * `Learning Algorithms for Second-Price Auctions with Reserve <http://www.jmlr.org/papers/volume17/14-499/14-499.pdf>`_
 * `Machine Learning in an Auction Environment <http://www.jmlr.org/papers/volume17/15-109/15-109.pdf>`_
 
+|pyecopng| |pystatpng|
+
 Timeseries - Séries temporelles
 +++++++++++++++++++++++++++++++
-
-|pyecopng| |pystatpng|
 
 *Notebooks*
 
@@ -129,6 +131,8 @@ Timeseries - Séries temporelles
 * `influxdb <https://github.com/influxdata/influxdb>`_ (An Open-Source Time Series Database)
 * `seasonal <https://github.com/welch/seasonal>`_
 
+|pystatpng|
+
 Timeseries - Filtre de Kalman
 +++++++++++++++++++++++++++++
 
@@ -150,10 +154,12 @@ Timeseries - Filtre de Kalman
 * `filterpy <https://github.com/rlabbe/filterpy>`_
 * `scipy <http://scipy-cookbook.readthedocs.io/items/KalmanFiltering.html>`_
 
+|pystatpng|
+
 Finance
 +++++++
 
-|pystatpng|
+ (*à venir*)
 
 *Modules*
 
@@ -172,10 +178,10 @@ Finance
 * `forex-python <https://github.com/MicroPyramid/forex-python>`_
 * `python-currencies <https://github.com/Alir3z4/python-currencies>`_
 
+|pystatpng|
+
 Auto-Learning
 +++++++++++++
-
-|pyecopng| |pystatpng|
 
 *(à venir)*
 
@@ -209,10 +215,10 @@ Auto-Learning
 * `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
 * `RoBO <https://github.com/automl/RoBO>`_ (bayésien)
 
+|pystatpng|
+
 Prédire une distribution
 ++++++++++++++++++++++++
-
-|pystatpng|
 
 *(à venir)*
 
@@ -220,10 +226,10 @@ Prédire une distribution
 
 * `Learning with a Wasserstein Loss <https://arxiv.org/pdf/1506.05439.pdf>`_
 
+|pystatpng|
+
 Sequence Learning
 +++++++++++++++++
-
-|pystatpng|
 
 *(à venir)*
 
@@ -231,10 +237,10 @@ Sequence Learning
 
 * `A Credit Assignment Compiler for Joint Prediction <https://arxiv.org/pdf/1406.1837.pdf>`_
 
-Clustering pas classique
-++++++++++++++++++++++++
-
 |pystatpng|
+
+Clustering hors espace vectoriel de dimension finie
++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 (à venir)
 
@@ -260,10 +266,10 @@ des personnes la plupart du temps, les chercheurs réfléchissent
     :local:
     :depth: 1
 
+|pyecopng| |pystatpng|
+
 Machine Learning éthique
 ++++++++++++++++++++++++
-
-|pyecopng| |pystatpng|
 
 Toutes les entreprises ont des données. Ce qui a changé récemment est
 ce ne sont plus seulement des données à caractère personnel, l'ensemble
@@ -331,10 +337,10 @@ d'un modèle. Quelques idées ont néanmoins émergé :
 
 * `fairtest <https://github.com/columbia/fairtest>`_
 
+|pyecopng| |pystatpng|
+
 Interprétabilité des modèles
 ++++++++++++++++++++++++++++
-
-|pyecopng| |pystatpng|
 
 .. index:: transparence, protection des données, loi européenne
 
@@ -426,6 +432,8 @@ une nécessité. Quelques idées de recherche :
 * `treeinterpreter <https://pypi.python.org/pypi/treeinterpreter>`_
 * `lime <https://github.com/marcotcr/lime>`_ (`notebooks <https://github.com/marcotcr/lime/tree/master/doc/notebooks>`_)
 
+|pyecopng| |pystatpng|
+
 Sélection de variables
 ++++++++++++++++++++++
 
@@ -443,10 +451,10 @@ complique également l'interprétation des résultats.
 * `Feature Selection (wikipédia) <https://en.wikipedia.org/wiki/Feature_selection>`_
 * `Feature Selection (scikit-learn) <http://scikit-learn.org/stable/modules/feature_selection.html>`_
 
+|pyecopng| |pystatpng|
+
 Anonymisation des données
 +++++++++++++++++++++++++
-
-|pyecopng| |pystatpng|
 
 *(à venir)*
 
@@ -472,10 +480,10 @@ Anonymisation des données
 
 * `AGD Tools <https://github.com/SGMAP-AGD/anonymisation>`_ : ce module s'accompagne d'un wiki et de notebooks.
 
+|pystatpng|
+
 Machine Learning sur des données cryptées
 +++++++++++++++++++++++++++++++++++++++++
-
-|pystatpng|
 
 *Notebooks*
 
@@ -514,10 +522,10 @@ Machine Learning sur des données cryptées
 Graphes - Réseaux
 =================
 
+|pyecopng| |pystatpng|
+
 Clustering de Graphes
 +++++++++++++++++++++
-
-|pyecopng| |pystatpng|
 
 *(à venir)*
 
@@ -547,6 +555,8 @@ Clustering de Graphes
   `py2neo <http://py2neo.org/v3/>`_,
   `neo4j-python-driver <https://github.com/neo4j/neo4j-python-driver>`_
 * `snap.py <https://snap.stanford.edu/snappy/index.html#docs>`_
+
+|pyecopng| |pystatpng|
 
 Communautés
 +++++++++++
@@ -586,6 +596,8 @@ et le GPU si vous en avez.
 Vous pouvez tester votre installation avec le notebook
 :ref:`mldeeppythonrst` ou encore
 `Keras-TensorFlow-GPU-Windows-Installation <https://github.com/antoniosehk/keras-tensorflow-windows-installation>`_.
+
+|pystatpng|
 
 Réseaux de neurones et Deep Learning
 ++++++++++++++++++++++++++++++++++++
@@ -702,10 +714,10 @@ A noter que `Theano <http://deeplearning.net/software/theano/>`_ n'est plus main
   communes pour plusieurs librairies de machine learning.
 * `DeepRosetta <https://github.com/edgarriba/DeepRosetta>`_ : convertisseur (pas vraiment maintenu)
 
+|pyecopng| |pystatpng|
+
 Transfer Learning
 +++++++++++++++++
-
-|pystatpng|
 
 Le `tranfer learning <https://en.wikipedia.org/wiki/Transfer_learning>`_
 consiste à réutiliser un modèle de deep learning déjà appris sur une grande
@@ -754,10 +766,10 @@ d'un réseau de neurones profond complet sur une grande bases de données.
 * `Model Gallery CNTK <https://www.microsoft.com/en-us/cognitive-toolkit/features/model-gallery/>`_
 * `tensorflow/models <https://github.com/tensorflow/models>`_
 
+|pystatpng|
+
 Deep Learning en détail
 +++++++++++++++++++++++
-
-|pystatpng|
 
 *Notebooks*
 
@@ -891,10 +903,10 @@ Deep Learning en détail
 * `foolbox <https://github.com/bethgelab/foolbox>`_ :
   trouver des petites perturbations des données qui trompent les réseaux de neurones
 
+|pystatpng|
+
 Apprentissage sans labels
 +++++++++++++++++++++++++
-
-|pystatpng|
 
 .. toctree::
     :maxdepth: 2
@@ -951,6 +963,8 @@ Apprentissage sans labels
 * `Data Programming: Creating Large Training Sets, Quickly <https://papers.nips.cc/paper/6523-data-programming-creating-large-training-sets-quickly.pdf>`_
 * `Foolbox is a Python toolbox to create adversarial examples that fool neural networks. <https://foolbox.readthedocs.io/en/latest/>`_
 
+|pystatpng|
+
 Deep Trees
 ++++++++++
 
@@ -977,6 +991,8 @@ il faut maintenant compter avec les forêts d'arbres.
   des implémentatations partagées sur GitHub
 * `treelstm <https://github.com/stanfordnlp/treelstm>`_ (java + `Torch <https://github.com/torch/torch7>`_)
 
+|pystatpng|
+
 Deep Nearest Neighbours
 +++++++++++++++++++++++
 
@@ -986,10 +1002,10 @@ Deep Nearest Neighbours
 
 * `Learning Deep Nearest Neighbor Representations Using Differentiable Boundary Trees <https://arxiv.org/abs/1702.08833>`_
 
+|pyecopng| |pystatpng|
+
 Galleries de problèmes résolus ou presque
 +++++++++++++++++++++++++++++++++++++++++
-
-|pystatpng|
 
 .. toctree::
     :maxdepth: 2
@@ -1018,6 +1034,8 @@ Galleries de problèmes résolus ou presque
   `darknet <https://github.com/pjreddie/darknet>`_, wrapper Python :
   `darknetpy <https://github.com/danielgatis/darknetpy>`_,
   `demo <https://pjreddie.com/darknet/yolo/>`_
+* `openalpr <https://github.com/openalpr/openalpr>`_ :
+  reconnaissance de plaques d'immatriculation, pas vraiement du deep learning
 
 *Texte*
 
@@ -1063,10 +1081,10 @@ les images ou le son.
     :local:
     :depth: 1
 
+|pyecopng| |pystatpng|
+
 Traitement du langage
 +++++++++++++++++++++
-
-|pyecopng| |pystatpng|
 
 Cette partie regroupe principalement des techniques
 relevant du `word embedding <https://en.wikipedia.org/wiki/Word_embedding>`_ qui
@@ -1170,10 +1188,12 @@ exploitable par les algorithmes d'apprentissage.
 * `sumy <https://pypi.python.org/pypi/sumy>`_ : construction automatique d'un résumé d'un texte
 * `pyrouge <https://github.com/pltrdy/rouge/>`_ : calcule de la métrique `ROUGE <https://en.wikipedia.org/wiki/ROUGE_(metric)>`_
 
+|pystatpng|
+
 Traduction automatique
 ++++++++++++++++++++++
 
-(à venir)
+(*à venir*)
 
 Cette partie concerne les *SMT* ou
 `Statistical machines translation <https://en.wikipedia.org/wiki/Statistical_machine_translation>`_
@@ -1192,6 +1212,8 @@ qui évoque l'apprentissage supervisé d'un modèle de traduction automatique de
 
 *Modules*
 
+|pystatpng|
+
 Tagging
 +++++++
 
@@ -1208,7 +1230,7 @@ classiques tels que `Hidden Marko Models (HMM) <https://en.wikipedia.org/wiki/Hi
 Les meilleurs modèles sont des modèles de deep learning
 `LSTM <https://en.wikipedia.org/wiki/Long_short-term_memory>`_.
 
-(à venir)
+(*à venir*)
 
 *Lectures*
 
@@ -1240,12 +1262,12 @@ Images / Vidéos / Sons
 Il est difficile d'aborder cette partie sans savoir ce qu'est
 le :ref:`l-deep-learning`.
 
+|pystatpng|
+
 Classification
 ++++++++++++++
 
-|pyecopng| |pystatpng|
-
-(à venir)
+(*à venir*)
 
 *Lectures*
 
@@ -1300,6 +1322,8 @@ Classification
   `VGG in TensorFlow <https://www.cs.toronto.edu/~frossard/post/vgg16/>`_,
   `Very Deep Convolutional Networks for Large-Scale Visual Recognition <http://www.robots.ox.ac.uk/~vgg/research/very_deep/>`_
 
+|pystatpng|
+
 Détection d'objets
 ++++++++++++++++++
 
@@ -1309,6 +1333,8 @@ Détection d'objets
 
 * `YOLO: Real-Time Object Detection <https://pjreddie.com/darknet/yolo/>`_
 * `Fast R-CNN: Fast Region-based Convolutional Networks for object detection <https://github.com/rbgirshick/fast-rcnn>`_
+
+|pystatpng|
 
 Segmentation
 ++++++++++++
@@ -1332,6 +1358,8 @@ d'intérêt au pixel près.
 * `torch-vision <https://github.com/warmspringwinds/vision/tree/5e0a760fc847d55a4c1699410a14003452fa4581>`_
 * `pytorch-semseg <https://github.com/meetshah1995/pytorch-semseg>`_
 
+|pystatpng|
+
 Génération d'images
 +++++++++++++++++++
 
@@ -1350,10 +1378,12 @@ Vidéos
 
 * `scikit-video <https://github.com/aizvorski/scikit-video>`_
 
+|pystatpng|
+
 Reconnaissance de la parole
 +++++++++++++++++++++++++++
 
-(à venir)
+(*à venir*)
 
 *Lectures*
 
