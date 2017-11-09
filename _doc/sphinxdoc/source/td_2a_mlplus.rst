@@ -307,6 +307,24 @@ d'un modèle. Quelques idées ont néanmoins émergé :
   ou à l'erreur de prédiction :
   `FairTest: Discovering Unwarranted Associations in Data-Driven Applications <https://arxiv.org/pdf/1510.02377.pdf>`_.
 
+L'article `Equality of Opportunity in Supervised Learning <http://ttic.uchicago.edu/~nati/Publications/HardtPriceSrebro2016.pdf>`_
+définit l'aspect éthique comme l'invariance d'une loi marginale. On suppose que *S*
+est un attribut protégé binaire (exemple : le genre). *I* sont les entrées du modèle
+de machine learning, *O* les sorties. Le modèle est éthique si :
+
+.. math::
+
+    \pr{ O | I, S=0} = \pr{ O | I, S=1}
+
+La connaissance de *S* ne change pas la prédiction. Cela pose deux problèmes.
+Le premier est que parfois cette distribution change car cet attribut est corrélé avec
+un autre qui lui n'est pas protégé. Que décide-t-on dans ce cas ? Le second est
+l'égalité n'est jamais vérifié sur de vraies données, les deux distributions
+doivent être proches. Elles peuvent l'être sur l'ensemble de la population
+tout en ne l'étant pas du tout sur une petite partie de la population.
+L'article `FairTest: Discovering Unwarranted Associations in Data-Driven Applications <https://arxiv.org/pdf/1510.02377.pdf>`_
+propose une réponse à ces deux problèmes.
+
 *Notebooks*
 
 .. toctree::
