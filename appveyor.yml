@@ -39,11 +39,12 @@ install:
   - "%PYTHON%\\Scripts\\pymy_install3 psycopg2 nltk pympler theano pyproj"
   - "%PYTHON%\\Scripts\\pip install https://github.com/sdpython/pyPdf/archive/trunk.zip"
   - "%PYTHON%\\Scripts\\pip install python-jenkins tutormagic"
+  - "%PYTHON%\\Scripts\\pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl"
   - "%PYTHON%\\Scripts\\pymy_install3 --task=tool --source=zip graphviz"
   - "set PATH=%PATH%;C:\\projects\\ensae-teaching-cs\\build\\update_modules\\Graphviz\\bin"
   # deprecated package but needed by python-graphivz
   - "%PYTHON%\\Scripts\\pip install tools"
-  - "dir C:\\projects\\ensae-teaching-cs\\build\\update_modules\\Graphviz\\bin"
+  - "dir C:\\projects\\ensae-teaching-cs\\build\\update_modules\\Graphviz\\bin"  
 
 build: off
 

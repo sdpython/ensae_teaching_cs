@@ -475,6 +475,9 @@ Outils
     * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
       - Fonctions, outils implémentées en C, C++ et habillées en Python. C'est aussi
         un template pour ceux qui souhaite réaliser un module en C/C++/Cython.
+    * - `lightmlboard <http://www.xavierdupre.fr/app/lightmlboard/helpsphinx3/index.html>`_
+      - Implémentation d'un site web dédié aux compétitions de machine learning
+        basé sur :epkg:`tornado`.
     * - `pandas_streaming <http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/index.html>`_
       - Utilisation de :epkg:`pandas` pour opérer sur des fichiers qui ne tiennent pas
         en mémoire en implémentant des algorithmes de streaming.

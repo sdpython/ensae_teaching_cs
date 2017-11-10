@@ -250,13 +250,13 @@ Le problème est qu'on cherche plutôt à clusteriser de bouts de trajectoires s
 de clusteriser le point de départ d'arrivée. Que ferait-on alors de deux trajectoires
 qui passent par le même chemin ?
 
-* `Discovering Patterns in Time-Varying Graphs: A Triclustering Approach <http://www.marc-boulle.fr/publications/GuigouresEtAlADAC15.pdf>`_
+* `Discovering Patterns in Time-Varying Graphs: A Tri`_clustering Approach <http://www.marc-boulle.fr/publications/GuigouresEtAlADAC15.pdf>`_
 * `Co-Clustering Network-Constrained Trajectory Data <http://www.marc-boulle.fr/publications/ElMahrsiEtAlAKDM15.pdf>`_
 
 ---------------
 
-Interprétation, Anonymisation, Cryptage
-=======================================
+Interprétation, Anonymisation, Cryptage, Privacy
+================================================
 
 On sait beaucoup de choses avec les données et comme elles concernent
 des personnes la plupart du temps, les chercheurs réfléchissent
@@ -340,6 +340,8 @@ propose une réponse à ces deux problèmes.
 * `Réguler les algorithmes : remise d'un rapport à Axelle Lemaire <https://www.economie.gouv.fr/reguler-algorithmes-rapport-axelle-lemaire-cge>`_
 * `Enquête : comment les apps Figaro, L'Equipe ou Closer participent au pistage de 10 millions de Français <https://www-numerama-com.cdn.ampproject.org/c/www.numerama.com/politique/282934-enquete-comment-les-apps-figaro-lequipe-ou-closer-participent-au-pistage-de-10-millions-de-francais.html/amp>`_
 * `Accountable Algorithms <https://www.jkroll.com/papers/dissertation.pdf>`_ (PhD thesis)
+* `Improving the Transparency of the Sharing Economy <http://mathias.lecuyer.me/assets/assets/www2017airbnb.pdf>`_
+* `Sunlight: Fine-grained Targeting Detection at Scale with Statistical Confidence <http://www.cs.columbia.edu/~djhsu/papers/sunlight.pdf>`_
 
 *Conférences*
 
@@ -416,6 +418,7 @@ une nécessité. Quelques idées de recherche :
 * `Strictly Proper Scoring Rules, Prediction, and Estimation <https://www.cs.duke.edu/courses/spring17/compsci590.2/Gneiting2007jasa.pdf>`_
 * `Visualizing and Understanding Neural Machine Translation <http://www.aclweb.org/anthology/P/P17/P17-1106.pdf>`_
 * `Multiplicative Multitask Feature Learning <http://jmlr.org/papers/v17/15-234.html>`_
+* `Multi-Target Regression with Rule Ensembles <http://www.jmlr.org/papers/volume13/aho12a/aho12a.pdf>`_
 
 *Lectures : monotonie*
 
@@ -440,6 +443,13 @@ une nécessité. Quelques idées de recherche :
 * `Factor Graph <http://deepdive.stanford.edu/assets/factor_graph.pdf>`_
 * `An Introduction to Conditional Random Fields for Relational Learning <http://people.cs.umass.edu/~mccallum/papers/crf-tutorial.pdf>`_
 * `Factor Graphs and the Sum-Product Algorithm <http://www.comm.utoronto.ca/~frank/papers/KFL01.pdf>`_
+
+*Lectures : erreurs, outliers*
+
+* `BoostClean: Automated Error Detection and Repair for Machine Learning <https://arxiv.org/abs/1711.01299>`_
+* `Scorpion: Explaining Away Outliers in Aggregate Queries <http://sirrice.github.io/files/papers/scorpion-vldb13.pdf>`_
+* `Outlier Detection Techniques <https://www.siam.org/meetings/sdm10/tutorial3.pdf>`_,
+  `abod.py <https://github.com/MarinYoung4596/OutlierDetection/tree/master/OutlierDetection/Python%20Implementation>`_
 
 *Modules*
 
@@ -471,8 +481,8 @@ complique également l'interprétation des résultats.
 
 |pyecopng| |pystatpng|
 
-Anonymisation des données
-+++++++++++++++++++++++++
+Anonymisation des données / Privacy
++++++++++++++++++++++++++++++++++++
 
 *(à venir)*
 
@@ -488,6 +498,13 @@ Anonymisation des données
 * `Privacy for Free: Posterior Sampling and Stochastic Gradient Monte Carlo <http://www.jmlr.org/proceedings/papers/v37/wangg15.pdf>`_
 * `Privatics (INRIA) <https://team.inria.fr/privatics/>`_
 * `Differential Privacy for Bayesian Inference through Posterior Sampling∗ <http://www.jmlr.org/papers/volume18/15-257/15-257.pdf>`_
+
+*Lectures - autodestruction*
+
+* `New Directions for Self-Destructing Data Systems <https://vanish.cs.washington.edu/pubs/vanish-extensions-techreport11.pdf>`_
+* `Keypad: An Auditing File System for Theft-Prone Devices <http://eurosys2011.cs.uni-salzburg.at/pdf/eurosys2011-geambasu.pdf>`_
+* `Self Destructing Data System Based On Session Keys <http://www.ijstr.org/final-print/feb2014/Self-Destructing-Data-System-Based-On-Session-Keys.pdf>`_
+* `Vanish: Increasing Data Privacy with Self-Destructing Data <http://www.usenix.net/legacy/events/sec09/tech/full_papers/geambasu.pdf>`_
 
 *Algorithmes*
 
@@ -526,6 +543,11 @@ Machine Learning sur des données cryptées
 * `Hawk: The Blockchain Model of Cryptography and Privacy-Preserving Smart Contracts <https://eprint.iacr.org/2015/675.pdf>`_
 * `Privacy-Preserving Classification on Deep Neural Network <https://eprint.iacr.org/2017/035.pdf>`_
 
+*Lectures - alternatives*
+
+* `Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data <https://arxiv.org/abs/1610.05755>`_
+* `Practical Black-Box Attacks against Machine Learning <https://arxiv.org/abs/1602.02697>`_
+
 *Modules*
 
 * `ciphermed <https://github.com/rbost/ciphermed>`_, pas maintenu par l'auteur mais un peu
@@ -559,6 +581,10 @@ Clustering de Graphes
 * `Correlation Clustering and Biclustering with Locally Bounded Errors <http://jmlr.org/proceedings/papers/v48/puleo16.pdf>`_
 * `A Unified Framework for Model-based Clustering <http://www.jmlr.org/papers/volume4/zhong03a/zhong03a.pdf>`_
 * `A Tensor Approach to Learning Mixed Membership Community Models <http://jmlr.org/papers/volume15/anandkumar14a/anandkumar14a.pdf>`_
+
+*Lectures - métriques*
+
+* `Social Clicks: What and Who Gets Read on Twitter? <https://hal.inria.fr/hal-01281190/document>`_
 
 *Lectures Ranking*
 
@@ -772,6 +798,12 @@ d'un réseau de neurones profond complet sur une grande bases de données.
 * `Transfer Learning in Sequential Decision Problems: A Hierarchical Bayesian Approach <http://www.jmlr.org/proceedings/papers/v27/wilson12a/wilson12a.pdf>`_
 * `Transfer Learning for Reinforcement Learning Domains: A Survey <http://www.jmlr.org/papers/volume10/taylor09a/taylor09a.pdf>`_
 * `Unsupervised dimensionality reduction via gradient-based matrix factorization with two adaptive learning rates <http://www.jmlr.org/proceedings/papers/v27/nikulin12a/nikulin12a.pdf>`_
+* `Transferability in Machine Learning: from Phenomena to Black-Box Attacks using Adversarial Samples <https://arxiv.org/abs/1605.07277>`_
+* `Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data <https://arxiv.org/abs/1610.05755>`_
+
+*Lectures - hors nn*
+
+* `Transfer Learning Decision Forests for Gesture Recognition <http://jmlr.org/papers/volume15/goussies14a/goussies14a.pdf>`_
 
 *Modèles pré-entraînés*
 
@@ -981,6 +1013,12 @@ Apprentissage sans labels
 * `Data Programming: Creating Large Training Sets, Quickly <https://papers.nips.cc/paper/6523-data-programming-creating-large-training-sets-quickly.pdf>`_
 * `Foolbox is a Python toolbox to create adversarial examples that fool neural networks. <https://foolbox.readthedocs.io/en/latest/>`_
 
+*Adversarial Examples*
+
+* `The Limitations of Deep Learning in Adversarial Settings <https://arxiv.org/pdf/1511.07528v1.pdf>`_ :
+  l'article montre des limites de l'approche deep learning en construisant des exemples
+  proches des exemples initiaux mais qui font dérailler le modèle.
+
 |pystatpng|
 
 Deep Trees
@@ -1019,70 +1057,6 @@ Deep Nearest Neighbours
 *Lectures*
 
 * `Learning Deep Nearest Neighbor Representations Using Differentiable Boundary Trees <https://arxiv.org/abs/1702.08833>`_
-
-|pyecopng| |pystatpng|
-
-Galleries de problèmes résolus ou presque
-+++++++++++++++++++++++++++++++++++++++++
-
-.. toctree::
-    :maxdepth: 2
-
-    specials/deepproblems
-
-*Notebooks*
-
-*(à venir)*
-
-*Images*
-
-* `Time-Contrastive Networks: Self-Supervised Learning from Multi-View Observation <https://arxiv.org/abs/1704.06888>`_ :
-  un robot apprend à imiter les mouvements d'une personne
-  (`vidéo <https://sermanet.github.io/tcn/>`_)
-* `Device Placement Optimization with Reinforcement Learning <https://arxiv.org/pdf/1706.04972.pdf>`_
-* `Automatic Colorization <http://tinyclouds.org/colorize/>`_
-* `Image Completion <http://bamos.github.io/2016/08/09/deep-completion/>`_
-* `Perceptual Losses for Real-Time Style Transfer and Super-Resolution <https://arxiv.org/pdf/1603.08155.pdf>`_,
-  article : `neural-style <https://jayanthkoushik.github.io/neural_style.html>`_,
-  code : `neural-style <https://github.com/jayanthkoushik/neural-style>`_.
-* `Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network <https://arxiv.org/pdf/1609.04802.pdf>`_ :
-  entraîner un réseau de neurones pour améliorer la netteté des images
-* `YOLO9000: Better, Faster, Stronger <https://arxiv.org/abs/1612.08242>`_ : détection en temps
-  d'objets sur des images ou dans une vidéo, le code est sur github
-  `darknet <https://github.com/pjreddie/darknet>`_, wrapper Python :
-  `darknetpy <https://github.com/danielgatis/darknetpy>`_,
-  `demo <https://pjreddie.com/darknet/yolo/>`_
-* `openalpr <https://github.com/openalpr/openalpr>`_ :
-  reconnaissance de plaques d'immatriculation, pas vraiement du deep learning
-
-*Texte*
-
-* `Representing Sentences as Low-Rank Subspaces <https://arxiv.org/abs/1704.05358v1>`_
-* `SQuAD: 100,000+ Questions for Machine Comprehension of Text <https://arxiv.org/abs/1606.05250>`_,
-  cette compétition fera sans doute émerger la nouvelle version des moteurs de recherche.
-
-*Histoire*
-
-* `Revisiting Unreasonable Effectiveness of Data in Deep Learning Era <https://arxiv.org/pdf/1707.02968.pdf>`_
-
-*Tutorials*
-
-* `Neural Network Zooo Prequel: Cells and Layers <http://www.asimovinstitute.org/neural-network-zoo-prequel-cells-layers/>`_ :
-  revue d'architectures de réseaux de neurones
-* `Neural Machine Translation (seq2seq) Tutorial <https://github.com/tensorflow/nmt>`_
-
-*Deep Learning Artistique*
-
-* `Pramit Choudhary - Learn to be a painter using Neural Style Painting <https://www.youtube.com/watch?v=WXDr5H1hVOU&list=PLGVZCDnMOq0rxoq9Nx0B4tqtr891vaCn7&index=60>`_ (vidéo)
-* `Visual Attribute Transfer through Deep Image Analogy <https://arxiv.org/abs/1705.01088>`_
-* `Coherent Online Video Style Transfer <https://arxiv.org/abs/1703.09211>`_
-* `StyleBank: An Explicit Representation for Neural Image Style Transfer <https://arxiv.org/abs/1703.09210>`_
-* `msracver/Deep-Image-Analogy <https://github.com/msracver/Deep-Image-Analogy>`_
-
-*Compétitions et datasets*
-
-* `ImageNet <http://www.image-net.org/>`_
-* `SQuAD The Stanford Question Answering Dataset <https://rajpurkar.github.io/SQuAD-explorer/>`_
 
 ------------------
 
@@ -1414,3 +1388,90 @@ Reconnaissance de la parole
 
 * `bob.bio <http://pythonhosted.org/bob.bio.base/index.html>`_
 * `kaldi <https://github.com/kaldi-asr/kaldi>`_ (reconnaissance de la parole)
+
+-------------------------
+
+Galleries de problèmes résolus ou presque
+=========================================
+
+Cette rubrique étend la liste des références avec des articles
+exposant des méthodes de machine learning appliquées à des problèmes
+précis.
+
+.. contents::
+    :local:
+
+Adversarial Examples
+++++++++++++++++++++
+
+* `The Limitations of Deep Learning in Adversarial Settings <https://arxiv.org/pdf/1511.07528v1.pdf>`_
+
+Architecture de Deep Learning
++++++++++++++++++++++++++++++
+
+* `Neural Network Zooo Prequel: Cells and Layers <http://www.asimovinstitute.org/neural-network-zoo-prequel-cells-layers/>`_ :
+  revue d'architectures de réseaux de neurones
+
+Compétitions et datasets
+++++++++++++++++++++++++
+
+* `ImageNet <http://www.image-net.org/>`_
+* `SQuAD The Stanford Question Answering Dataset <https://rajpurkar.github.io/SQuAD-explorer/>`_
+
+Deep Learning Artistique
+++++++++++++++++++++++++
+
+* `Pramit Choudhary - Learn to be a painter using Neural Style Painting <https://www.youtube.com/watch?v=WXDr5H1hVOU&list=PLGVZCDnMOq0rxoq9Nx0B4tqtr891vaCn7&index=60>`_ (vidéo)
+* `Visual Attribute Transfer through Deep Image Analogy <https://arxiv.org/abs/1705.01088>`_
+* `Coherent Online Video Style Transfer <https://arxiv.org/abs/1703.09211>`_
+* `StyleBank: An Explicit Representation for Neural Image Style Transfer <https://arxiv.org/abs/1703.09210>`_
+* `msracver/Deep-Image-Analogy <https://github.com/msracver/Deep-Image-Analogy>`_
+
+Images
+++++++
+
+* `Time-Contrastive Networks: Self-Supervised Learning from Multi-View Observation <https://arxiv.org/abs/1704.06888>`_ :
+  un robot apprend à imiter les mouvements d'une personne
+  (`vidéo <https://sermanet.github.io/tcn/>`_)
+* `Device Placement Optimization with Reinforcement Learning <https://arxiv.org/pdf/1706.04972.pdf>`_
+* `Automatic Colorization <http://tinyclouds.org/colorize/>`_
+* `Image Completion <http://bamos.github.io/2016/08/09/deep-completion/>`_
+* `Perceptual Losses for Real-Time Style Transfer and Super-Resolution <https://arxiv.org/pdf/1603.08155.pdf>`_,
+  article : `neural-style <https://jayanthkoushik.github.io/neural_style.html>`_,
+  code : `neural-style <https://github.com/jayanthkoushik/neural-style>`_.
+* `Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network <https://arxiv.org/pdf/1609.04802.pdf>`_ :
+  entraîner un réseau de neurones pour améliorer la netteté des images
+* `YOLO9000: Better, Faster, Stronger <https://arxiv.org/abs/1612.08242>`_ : détection en temps
+  d'objets sur des images ou dans une vidéo, le code est sur github
+  `darknet <https://github.com/pjreddie/darknet>`_, wrapper Python :
+  `darknetpy <https://github.com/danielgatis/darknetpy>`_,
+  `demo <https://pjreddie.com/darknet/yolo/>`_
+* `openalpr <https://github.com/openalpr/openalpr>`_ :
+  reconnaissance de plaques d'immatriculation, pas vraiement du deep learning
+
+Histoire
+++++++++
+
+* `Revisiting Unreasonable Effectiveness of Data in Deep Learning Era <https://arxiv.org/pdf/1707.02968.pdf>`_
+
+Réseaux Sociaux
++++++++++++++++
+
+* `Social Clicks: What and Who Gets Read on Twitter? <https://hal.inria.fr/hal-01281190/document>`_
+
+Retail
+++++++
+
+* `Data Mining Problems in Retail <https://highlyscalable.wordpress.com/2015/03/10/data-mining-problems-in-retail/>`_
+
+Traduction
+++++++++++
+
+* `Neural Machine Translation (seq2seq) Tutorial <https://github.com/tensorflow/nmt>`_
+
+Texte
++++++
+
+* `Representing Sentences as Low-Rank Subspaces <https://arxiv.org/abs/1704.05358v1>`_
+* `SQuAD: 100,000+ Questions for Machine Comprehension of Text <https://arxiv.org/abs/1606.05250>`_,
+  cette compétition fera sans doute émerger la nouvelle version des moteurs de recherche.

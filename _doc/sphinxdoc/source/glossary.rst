@@ -357,6 +357,9 @@ Glossaire
         de transcrire une structure de données parfois cyclique (comme un graphe) en une seule séquence
         d'octets. On s'en sert surtout pour transmettre ces données (via internet) ou les stocker.
 
+    SIMD
+        Voir SSE.
+
     skewed join
         Voir :ref:`Map Reduce et Skew Join <blog-skew-join>`, :ref:`td3acenoncesession8arst`.
 
@@ -380,12 +383,30 @@ Glossaire
         `Introducing Blaze - HMDA Practice <http://continuum.io/blog/blaze-hmda>`_
 
     Sphinx
+        `Sphinx <http://sphinx-doc.org/>`_ est un moteur qui génère de la
+        documentation à partir de fichier au format `reStructuredText <http://docutils.sourceforge.net/rst.html>`_.
+        Voir également `Restructured Text (reST) and Sphinx CheatSheet <http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#images-and-figures>`_.
         Dans le cadre de ce cours, `Sphinx <http://sphinx-doc.org/>`_ est un module Python qui
         permet de générer la documentation de la grande majorité des modules Python incluant ce cours.
         Le langage de la documentation est `RST <https://en.wikipedia.org/wiki/ReStructuredText>`_ (reStructuredText).
         Quelques exemples :
         `Cheat Sheet <http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html>`_,
         `Sphinx and RST syntax guide <http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html>`_.
+
+    SQL
+        Le `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_ où *Structured Query Language*
+        est un language dédié aux `base de données relationnelles <http://fr.wikipedia.org/wiki/Bases_de_donn%C3%A9es_relationnelles>`_.
+        Sa logique est plus proche de la `programmation fonctionnelle <http://fr.wikipedia.org/wiki/Programmation_fonctionnelle>`_.
+
+    SSE
+        SSE ou `Streaming SIMD Extensions <https://fr.wikipedia.org/wiki/Streaming_SIMD_Extensions>`_
+        est un jeu d'instructions processeur qui permet de faire des calculs sur des
+        vecteurs avec un coût équivalent à celui d'opérations entre nombres flottants.
+        L'article
+        `Fast Interesection of Sorted Lists Using SSE Instructions <https://highlyscalable.wordpress.com/2012/06/05/fast-intersection-sorted-lists-sse/>`_
+        montre un contexte dans lequel elles sont utiles.
+        Elles sont aussi utilisées dans le notebook :
+        :ref:`cffilinearregressionrst`.
 
     Stemmer
         Un *stemmer* permet de réduire les différentes formes d'un mot. Les mots apparaissent au singulier, au pluriel,
@@ -400,16 +421,6 @@ Glossaire
     Stroustrup
         `Bjarne Stroustrup <http://www.stroustrup.com/>`_ est l'inventeur du
         langage `C++ <http://fr.wikipedia.org/wiki/C%2B%2B>`_.
-
-    Sphinx
-        `Sphinx <http://sphinx-doc.org/>`_ est un moteur qui génère de la
-        documentation à partir de fichier au format `reStructuredText <http://docutils.sourceforge.net/rst.html>`_.
-        Voir également `Restructured Text (reST) and Sphinx CheatSheet <http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html#images-and-figures>`_.
-
-    SQL
-        Le `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_ où *Structured Query Language*
-        est un language dédié aux `base de données relationnelles <http://fr.wikipedia.org/wiki/Bases_de_donn%C3%A9es_relationnelles>`_.
-        Sa logique est plus proche de la `programmation fonctionnelle <http://fr.wikipedia.org/wiki/Programmation_fonctionnelle>`_.
 
     SVN
         `SVN <http://fr.wikipedia.org/wiki/Apache_Subversion>`_ est un logiciel de suivi

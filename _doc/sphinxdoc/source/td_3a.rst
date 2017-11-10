@@ -105,6 +105,11 @@ GPU
 
 * `Low-Level Programming University <https://github.com/gurugio/lowlevelprogramming-university>`_
 
+*Optimisation*
+
+* `No Bits Left Behind <http://sirrice.github.io/files/papers/bits-cidr11.pdf>`_ :
+  l'article quelques stratégies bas-niveau pour optimiser les programmes
+
 Autres que CPU, GPU
 +++++++++++++++++++
 
@@ -151,6 +156,7 @@ Algorithmes
 
 * `CS231n Winter 2016 Lecture 4 Backpropagation, Neural Networks 1- <https://www.youtube.com/watch?v=GZTvxoSHZIo&feature=youtu.be>`_
 * :ref:`Algorithmes classiques implémentés <l-blog-algo-impl>`
+* `Fast Interesection of Sorted Lists Using SSE Instructions <https://highlyscalable.wordpress.com/2012/06/05/fast-intersection-sorted-lists-sse/>`_
 
 ------------
 
@@ -189,12 +195,17 @@ Threads et synchronisation
 
 * threads, application multi-threadées
 * variables globales, synchronisation
+* threads et processus
 
 *Lectures*
 
-* `TIL: clock skew exists (distributed system) <http://jvns.ca/blog/2016/02/10/til-clock-skew-exists/>`_ *(2016/06)*
-* `Le dîner des philosophes <https://fr.wikipedia.org/wiki/D%C3%AEner_des_philosophes>`_
+* `TIL: clock skew exists (distributed system) <http://jvns.ca/blog/2016/02/10/til-clock-skew-exists/>`_
+* `Le dîner des philosophes <https://fr.wikipedia.org/wiki/D%C3%AEner_des_philosophes>`_,
+  `The Part-Time Parliament <http://lamport.azurewebsites.net/pubs/lamport-paxos.pdf>`_
 * `Is Parallel Programming Hard, And, If So, What Can You Do About It? <https://www.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.html>`_
+* `Time, Clocks, and the Ordering of Events in a Distributed System <http://lamport.azurewebsites.net/pubs/time-clocks.pdf>`_
+* `Paxos Made Simple <http://lamport.azurewebsites.net/pubs/paxos-simple.pdf>`_
+* `Linearizability: A Correctness Condition for Concurrent Objects <https://cs.brown.edu/~mph/HerlihyW90/p463-herlihy.pdf>`_
 
 Plus proches voisins en grandes dimensions
 ++++++++++++++++++++++++++++++++++++++++++
@@ -216,6 +227,9 @@ Distribution des calculs, stratégies de stockage, SQL NoSQL
 *Lectures*
 
 * `What Every Data Scientist Needs to Know about SQL <http://joshualande.com/data-science-sql>`_
+* `Brewer's Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services <https://users.ece.cmu.edu/~adrian/731-sp04/readings/GL-cap.pdf>`_
+* `Distributed Algorithms in NoSQL Databases <https://highlyscalable.wordpress.com/2012/09/18/distributed-algorithms-in-nosql-databases/>`_
+* `No SQL Data Modeling Techniques <https://highlyscalable.wordpress.com/2012/03/01/nosql-data-modeling-techniques/>`_
 
 *Logiciels*
 
@@ -333,6 +347,13 @@ Map Reduce en pratique
 * Schéma des langages de map/reduce :
   `lazy evaluation <https://en.wikipedia.org/wiki/Lazy_evaluation>`_ (évalusation presseuse, dask, Spark, PIG)
 
+*Lectures*
+
+* `Computer Systems for Big Data <https://columbia.github.io/systems-bigdata-class/2-lectures/>`_ (cours à Columbia)
+* `Map-Reduce Patterns, Algorithms, and Use Cases <https://highlyscalable.wordpress.com/2012/02/01/mapreduce-patterns/>`_
+* `MapReduce: Simplified Data Processing on Large Clusters <https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf>`_
+* `Speeding up Hadoop Builds using Distributed Unit tests <https://highlyscalable.wordpress.com/2012/08/14/speeding-up-hadoop-builds-distributed-parallel-unit-tests-on-jenkins/>`_
+
 avec PIG sur Azure et Cloudera
 ++++++++++++++++++++++++++++++
 
@@ -445,6 +466,11 @@ SPARK
 
 Bibliographie
 =============
+
+**Cours**
+
+* `Distributed Systems Fundamentals <https://columbia.github.io/ds1-class/>`_
+* `Advanced Distributed Systems <https://columbia.github.io/ds2-class/>`_
 
 **Articles**
 

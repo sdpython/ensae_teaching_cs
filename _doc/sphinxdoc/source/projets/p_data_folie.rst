@@ -86,6 +86,9 @@ Quelques références :
 - `Competing Opinions and Stubborness: Connecting Models to Data <http://arxiv.org/pdf/1411.7415v1.pdf>`_
 - `Home Location Identification of Twitter Users <http://arxiv.org/ftp/arxiv/papers/1403/1403.2345.pdf>`_
 - `Opinion control in complex networks <http://arxiv.org/pdf/1412.2170v1.pdf>`_
+- `Social Clicks: What and Who Gets Read on Twitter? <https://hal.inria.fr/hal-01281190/document>`_
+
+Il est préférable de lire le dernier article avant de commencer le projet.
 
 .. _l-data-whoosh:
 

@@ -1,0 +1,9 @@
+================================================================================Report Creation time: 2017-11-10 18:57:50Dataset: adultTrain Size: 500Test Size: 500S: ['race', 'sex']X: ['age', 'Workclass', 'fnlwgt', 'education', 'education-num',
+	'marital-status', 'occupation', 'relationship', 'capital-
+	gain', 'capital-loss', 'hours-per-week', 'native-country']E: NoneO: ['income']Train Params: 	{'max_depth': 5, 'min_leaf_size': 100, 'agg_type': 'avg', 'max_bins': 10}Test Params: 	{'prune_insignificant': True, 'exact': True, 'family_conf': 0.95}Report Params: 	{'node_filter': 'better_than_ancestors'}================================================================================Report of associations of O=['income'] on Si = race:Association metric: NMIGlobal Population 0 of size 500+------+------------------+------------------+-------+------+--------+---------+
+|income|Amer-Indian-Eskimo|Asian-Pac-Islander|  Black| Other|   White|    Total|
++------+------------------+------------------+-------+------+--------+---------+
+|<=50K |           5(100%)|            5(45%)|57(89%)|2(67%)|320(77%)|389 (78%)|
+|>50K  |             0(0%)|            6(55%)| 7(11%)|1(33%)| 97(23%)|111 (22%)|
+|Total |             5(1%)|            11(2%)|64(13%)| 3(1%)|417(83%)|500(100%)|
++------+------------------+------------------+-------+------+--------+---------+p-value = 7.00e-05 ; NMI = [0.0039, 0.0677]================================================================================

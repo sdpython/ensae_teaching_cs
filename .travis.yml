@@ -55,5 +55,6 @@ install:
   # - pip install hg+http://bitbucket.org/pygame/pygame
   # we change that, cvxopt does not seem to work anymore without mkl
   # we add it at the end since it seems to modify existing packages
+  - pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
 script:
   - python setup.py unittests

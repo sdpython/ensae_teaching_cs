@@ -57,6 +57,12 @@ c'est-à-dire sans hypothèse sur les données. En revanche, dans le cas où les
 sont issues d'un ensemble fini de cardinal *m*, le meilleur tri revient à calculer un histogramme
 et est de coût inférieur à :math:`O( \inf \{ n \ln n, m \} )`.
 
+L'article de blog
+`Fast Interesection of Sorted Lists Using SSE Instructions <https://highlyscalable.wordpress.com/2012/06/05/fast-intersection-sorted-lists-sse/>`_
+part d'un problème simple qui est l'intersection de deux listes triées et montre
+comment optimiser son implémentation en introduisant la notion de partitions et un peu
+de parallélisation.
+
 Mot-clé
 +++++++
 
@@ -155,6 +161,8 @@ Catalogue
     * `mémoïzation <http://fr.wikipedia.org/wiki/M%C3%A9mo%C3%AFsation>`_ **déf** (voir aussi `Mémoïzation d'une fonction Python <http://sametmax.com/memoization-dune-fonction-python/>`_)
     * `programmation fonctionnelle <http://fr.wikipedia.org/wiki/Programmation_fonctionnelle>`_ **déf**
     * `récursivité <http://fr.wikipedia.org/wiki/R%C3%A9cursivit%C3%A9>`_ **déf**
+* Algorithmes probabilistes
+    * `Probabilistic Data Structures for Web Analytics and Data Mining <https://highlyscalable.wordpress.com/2012/05/01/probabilistic-structures-web-analytics-data-mining/>`_
 
 Problèmes NP-complets
 +++++++++++++++++++++

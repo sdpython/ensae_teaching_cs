@@ -345,8 +345,42 @@ Certains sont tirés de plusieurs sites dont
 
 |pystatpng|
 
+Algorithmes génétiques
+++++++++++++++++++++++
+
+(*à venir*)
+
+*Modules*
+
+* `pyevolve <http://pyevolve.sourceforge.net/>`_
+
+|pystatpng|
+
+Algorithmes probabilites
+++++++++++++++++++++++++
+
+(*à venir*)
+
+*Lectures*
+
+* `Probabilistic Data Structures for Web Analytics and Data Mining <https://highlyscalable.wordpress.com/2012/05/01/probabilistic-structures-web-analytics-data-mining/>`_
+* `HyperLogLog: the analysis of a near-optimal cardinality estimation algorithm <http://algo.inria.fr/flajolet/Publications/FlFuGaMe07.pdf>`_
+
+*Modules*
+
+* `hyperloglog <https://github.com/svpcom/hyperloglog>`_
+
+|pystatpng|
+
 Streaming algorithms
 ++++++++++++++++++++
+
+Les algorithmes *streaming* que Wikipédia traduit par
+`Algorithme de fouille de flots de données <https://fr.wikipedia.org/wiki/Algorithme_de_fouille_de_flots_de_donn%C3%A9es>`_
+sont des algorithmes qui s'exécutent sans avoir connaissance de l'ensemble des données
+ni même combien il y en a. Cela signifie que l'algorithme peut s'arrêter à tout moment
+et qu'il est capable de retourner un résultat valide sur l'ensemble des données qu'il
+a traités jusqu'à présent.
 
 * `Répartir train / test en streaming <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/split_train_test.html#streaming-splitting>`_
 
@@ -368,23 +402,13 @@ Streaming algorithms
 * `State-of-the-art on clustering data streams <https://bdataanalytics.biomedcentral.com/articles/10.1186/s41044-016-0011-3>`_
 * `Parallel Computing of Kernel Density Estimates with MPI <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.102.5195&rep=rep1&type=pdf>`_
 * `Density Estimation with Adaptive Sparse Grids for Large Data Sets <http://web.mit.edu/pehersto/www/preprints/sgde_siam.pdf>`_
+* `Sliding HyperLogLog: Estimating cardinality in a data stream <https://hal.archives-ouvertes.fr/file/index/docid/465313/filename/sliding_HyperLogLog.pdf>`_
 
 *Modules*
 
 * `StreamLib <https://github.com/jiecchen/StreamLib>`_
 * `pandas_streaming <https://github.com/sdpython/pandas_streaming/>`_
 * `streamparse <https://github.com/Parsely/streamparse>`_
-
-|pystatpng|
-
-Algorithmes génétiques
-++++++++++++++++++++++
-
-(*à venir*)
-
-*Modules*
-
-* `pyevolve <http://pyevolve.sourceforge.net/>`_
 
 ------------
 
@@ -416,7 +440,7 @@ du modèle plutôt que de chercher à installer :epkg:`Python`.
 *Modules*
 
 * `Embedded Learning Library (ELL) <https://github.com/Microsoft/ELL>`_ :
-  deep learning sur :epkg:`RasberryPI`, :epkg:`Arduino`
+  deep learning sur :epkg:`RaspberryPI`, :epkg:`Arduino`
 * `onnx <https://github.com/onnx/onnx>`_
 * `coremltools <https://pypi.python.org/pypi/coremltools>`_
 
@@ -426,6 +450,16 @@ Apprendre en environnement contraint
 ++++++++++++++++++++++++++++++++++++
 
 *(à venir)*
+
+*Lectures*
+
+* `ProtoNN: Compressed and Accurate kNN for Resource-scarce Devices <http://manikvarma.org/pubs/gupta17.pdf>`_
+* `Near-optimal sample compression for nearest neighbors <https://papers.nips.cc/paper/5528-near-optimal-sample-compression-for-nearest-neighbors.pdf>`_
+* `Joint learning and pruning of decision forests <https://www.kuleuven-kulak.be/benelearn/papers/Benelearn_2016_paper_53.pdf>`_
+* `Optimally Pruning Decision Tree Ensembles With Feature Cost <https://arxiv.org/abs/1601.00955>`_
+* `Cost-complexity pruning of random forests <https://arxiv.org/pdf/1703.05430.pdf>`_
+* `A Compression Approach to Support Vector Model Selection <http://www.jmlr.org/papers/volume5/luxburg04a/luxburg04a.pdf>`_
+* `Resource-efficient Machine Learning in 2 KB RAM for the Internet of Things <http://proceedings.mlr.press/v70/kumar17a/kumar17a.pdf>`_
 
 *Modules*
 

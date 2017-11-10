@@ -241,6 +241,11 @@ Visualiser pour comprendre
 
 (*à venir*)
 
+*Lectures*
+
+* `Towards Reliable Interactive Data Cleaning: A User Survey and Recommendations <http://sirrice.github.io/files/papers/cleaning-hilda16.pdf>`_
+* `Combining Design and Performance in aData Visualization Management System <https://www.dropbox.com/s/0rdjsv7m7wbhmlk/cidr17-camera.pdf?dl=0>`_
+
 *Modules*
 
 * `TensorBoard <https://www.tensorflow.org/versions/r0.12/tutorials/>`_ : c'est un projet qui risque de prendre pas mal d'ampleur.
