@@ -44,8 +44,15 @@ from pyquickhelper.pycode import add_missing_development_version
 class TestNotebook1236Coverage201711fair(unittest.TestCase):
 
     def setUp(self):
-        add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper", "fairtest"],
-                                        __file__, hide=True)
+        base = ["pymyinstall", "pyensae",
+                "pymmails", "jyquickhelper", "fairtest"]
+        try:
+            import fairtest
+            self.fairtest_installed = True
+        except ImportError:
+            self.fairtest_installed = False
+            base.append('fairtest')
+        add_missing_development_version(base, __file__, hide=True)
 
     def a_test_notebook_runner(self, name, folder, valid=None, copy_files=None, modules=None):
         from src.ensae_teaching_cs.automation.notebook_test_helper import a_test_notebook_runner

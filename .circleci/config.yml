@@ -88,7 +88,7 @@ jobs:
             pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
             
       - run:
-          name: install install dependencies 4 - torch
+          name: install dependencies 5 - torch
           command: |
             python3 -m venv venv
             . venv/bin/activate
