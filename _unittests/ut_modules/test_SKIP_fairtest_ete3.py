@@ -64,6 +64,11 @@ class TestModulesFairTest(unittest.TestCase):
     def test_fairtest(self):
         fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
 
+        # ete3 is needed by fairtest.
+        import ete3
+        assert ete3 is not None
+        # We check it is working. Otherwise, you should remove PyQt5.
+
         try:
             import fairtest as skip___
         except ImportError:

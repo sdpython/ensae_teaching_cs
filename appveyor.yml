@@ -33,6 +33,8 @@ install:
   - "%PYTHON%\\Scripts\\pip install pyensae"
   - "%PYTHON%\\Scripts\\pip install pyrsslocal"
   - "%PYTHON%\\Scripts\\pip install pygame"
+  - "%PYTHON%\\Scripts\\pip install PyQt5"
+  - "%PYTHON%\\Scripts\\pip install ete3"
   - "%PYTHON%\\Scripts\\pip install pydub smart_open pandas_streaming pocket"
   - "%PYTHON%\\Scripts\\pymy_install3 opencv_python"
   - "%PYTHON%\\Scripts\\pymy_install3 yaml gensim tables blosc"

@@ -14,6 +14,7 @@ cloudpickle
 cytoolz
 dbfread
 duecredit
+ete3
 folium
 forestci
 gensim
@@ -44,6 +45,7 @@ pylzma
 pymmails
 pympler
 pymyinstall>=1.1.1415
+pyqt5
 pyquickhelper>1.5.2215
 pyrsslocal
 python-jenkins
