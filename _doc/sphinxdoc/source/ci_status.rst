@@ -510,7 +510,7 @@ Contenu
     * - `jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
       - Présentations sous formes de notebooks données lors de conférences ou de cours.
     * - `lightmlboard <http://www.xavierdupre.fr/app/lightmlboard/helpsphinx/index.html>`_
-      - Essai d'implémenter d'un tableau de résultats pour une compétition de machine learning,
+      - Implémentation d'un tableau de résultats pour une compétition de machine learning,
         avec :epkg:`tornado`.
     * - `mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
       - Contenu plus théorique associé à la datascience, au machine learning,
