@@ -41,10 +41,10 @@ from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import add_missing_development_version
 
 
-class TestNotebook1236Coverage201711torch(unittest.TestCase):
+class TestNotebook1236Coverage201711fair(unittest.TestCase):
 
     def setUp(self):
-        add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
+        add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper", "fairtest"],
                                         __file__, hide=True)
 
     def a_test_notebook_runner(self, name, folder, valid=None, copy_files=None, modules=None):
@@ -52,29 +52,18 @@ class TestNotebook1236Coverage201711torch(unittest.TestCase):
         return a_test_notebook_runner(__file__, name, folder, valid=valid,
                                       copy_files=copy_files, modules=modules, fLOG=fLOG)
 
-    def test_notebook_torch_IRIS(self):
+    def test_notebook_ethics(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        self.a_test_notebook_runner("IRIS", "td2a_deep")
+        def valid(cell):
+            return '[inv]' not in cell
 
-    def test_notebook_torch_iris(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        self.a_test_notebook_runner("Iris", "td2a_deep")
-
-    def test_notebook_torch_mnist(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        self.a_test_notebook_runner("MNIST", "td2a_deep")
+        import fairtest
+        self.a_test_notebook_runner("ethics", "td2a_ml", valid=valid, copy_files=[
+                                    "fairtesttree.png"], modules=[fairtest])
 
 
 if __name__ == "__main__":

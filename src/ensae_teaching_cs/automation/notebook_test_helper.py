@@ -5,15 +5,17 @@
 """
 import os
 import shutil
+import sys
 from pyquickhelper.loghelper import noLOG
 from pyquickhelper.ipythonhelper.notebook_helper import install_python_kernel_for_unittest
 from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut
-from pyquickhelper.pycode import is_travis_or_appveyor
+from pyquickhelper.ipythonhelper import get_additional_paths as pyq_get_additional_paths
+from pyquickhelper.pycode import is_travis_or_appveyor, get_temp_folder
 
 
 def ls_notebooks(subfolder):
     """
-    list the notebooks in a particular subfolder
+    Lists the notebooks in a particular subfolder.
 
     @param      subfolder   subfolder (related to this module)
     @return                 list of files
@@ -44,8 +46,8 @@ def ls_notebooks(subfolder):
 
 def get_additional_paths():
     """
-    returns a list of paths to add before running the notebooks,
-    paths to pyquickhelper, pyensae, pymmails
+    Returns a list of paths to add before running the notebooks,
+    paths to :epkg:`pyquickhelper`, :epkg:`pyensae`, :epkg:`pymmails`.
 
     @return             list of paths
     """
@@ -72,7 +74,7 @@ def get_additional_paths():
 
 def clean_function_1a(code):
     """
-    function which clean cells when unittesting notebooks 1A
+    Function which cleans cells when unittesting notebooks 1A.
 
     @param      code        cell content
     @return                 modified code
@@ -191,7 +193,7 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
 
 def copy_data_file(notebook_folder, filename, dest, fLOG=noLOG):
     """
-    copy a data file from a notebook folder to the current folder
+    Copy a data file from a notebook folder to the current folder.
 
     @param      notebook_folder     notebook_folder
     @param      filename            filename or list of file names
@@ -212,3 +214,55 @@ def copy_data_file(notebook_folder, filename, dest, fLOG=noLOG):
         res = os.path.join(dest, os.path.split(src)[-1])
         fLOG("copy", res)
         return res
+
+
+def a_test_notebook_runner(filename, name, folder, valid=None, copy_files=None, modules=None, fLOG=noLOG):
+    """
+    Runs and tests a specific list of notebooks.
+    The function raises an exception if the execution fails.
+
+    @param      filename        test filename
+    @param      name            substring to look into notebook filenames
+    @param      folder          where to look for notebooks
+    @param      valid           skip cells if valid is False, None for all valid
+    @param      copy_files      files to copy before running the notebooks.
+    @param      modules         list of extra dependencies
+    @param      fLOG            logging function
+    """
+    filename = os.path.abspath(filename)
+    temp = get_temp_folder(filename, "temp_notebook_123_{0}".format(name))
+    doc = os.path.normpath(os.path.join(
+        temp, "..", "..", "..", "_doc", "notebooks", folder))
+    if not os.path.exists(doc):
+        raise FileNotFoundError(doc)
+    keepnote = [os.path.join(doc, _) for _ in os.listdir(
+        doc) if name in _ and ".ipynb" in _]
+    if len(keepnote) == 0:
+        raise AssertionError("No found notebook in '{0}'\n{1}".format(
+            doc, "\n".join(os.listdir(doc))))
+
+    if copy_files is not None:
+        for name in copy_files:
+            dest = os.path.join(temp, name)
+            dest_dir = os.path.dirname(dest)
+            if not os.path.exists(dest_dir):
+                os.mkdir(dest_dir)
+            src_file = os.path.join(doc, name)
+            fLOG("[a_test_notebook_runner] copy '{0}' to '{1}'.".format(
+                src_file, dest_dir))
+            shutil.copy(src_file, dest_dir)
+
+    import pyquickhelper
+    import jyquickhelper
+    import pyensae
+    if "src.ensae_teaching_cs" in sys.modules:
+        thismodule = sys.modules["src.ensae_teaching_cs"]
+    else:
+        thismodule = sys.modules["ensae_teaching_cs"]
+    base = [jyquickhelper, pyquickhelper, pyensae, thismodule]
+    if modules:
+        base.extend(modules)
+    add_path = pyq_get_additional_paths(base)
+    res = execute_notebook_list(
+        temp, keepnote, additional_path=add_path, valid=valid, fLOG=fLOG)
+    execute_notebook_list_finalize_ut(res, fLOG=fLOG, dump=thismodule)
