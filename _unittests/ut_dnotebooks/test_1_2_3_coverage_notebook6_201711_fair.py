@@ -44,13 +44,12 @@ from pyquickhelper.pycode import add_missing_development_version
 class TestNotebook1236Coverage201711fair(unittest.TestCase):
 
     def setUp(self):
-        base = ["pymyinstall", "pyensae",
-                "pymmails", "jyquickhelper", "fairtest"]
+        base = ["pymyinstall", "pyensae", "pymmails", "jyquickhelper"]
         try:
             import fairtest
-            self.fairtest_installed = True
+            self.fairtest_installed = fairtest
         except ImportError:
-            self.fairtest_installed = False
+            self.fairtest_installed = None
             base.append('fairtest')
         add_missing_development_version(base, __file__, hide=True)
 

@@ -35,7 +35,7 @@ install:
   - "%PYTHON%\\Scripts\\pip install pygame"
   - "%PYTHON%\\Scripts\\pip install PyQt5"
   - "%PYTHON%\\Scripts\\pip install ete3"
-  - "%PYTHON%\\Scripts\\pip install pydub smart_open pandas_streaming pocket"
+  - "%PYTHON%\\Scripts\\pip install pydub smart_open pandas_streaming pocket seasonal"
   - "%PYTHON%\\Scripts\\pymy_install3 opencv_python"
   - "%PYTHON%\\Scripts\\pymy_install3 yaml gensim tables blosc"
   - "%PYTHON%\\Scripts\\pymy_install3 psycopg2 nltk pympler theano pyproj"
@@ -43,6 +43,8 @@ install:
   - "%PYTHON%\\Scripts\\pip install python-jenkins tutormagic"
   - "%PYTHON%\\Scripts\\pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl"
   - "%PYTHON%\\Scripts\\pymy_install3 --task=tool --source=zip graphviz"
+  - "%PYTHON%\\Scripts\\pymy_install3 torch"
+  - "%PYTHON%\\Scripts\\pip install torchvision"
   - "set PATH=%PATH%;C:\\projects\\ensae-teaching-cs\\build\\update_modules\\Graphviz\\bin"
   # deprecated package but needed by python-graphivz
   - "%PYTHON%\\Scripts\\pip install tools"
