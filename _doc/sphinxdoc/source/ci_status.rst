@@ -136,7 +136,7 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
-    * - `lightmlboard <http://www.xavierdupre.fr/app/lightmlboard/helpsphinx3/index.html>`_
+    * - :epkg:`lightmlboard`
       - .. image:: https://travis-ci.org/sdpython/lightmlboard.svg?branch=master
             :target: https://travis-ci.org/sdpython/lightmlboard
             :alt: Build status
@@ -475,7 +475,7 @@ Outils
     * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
       - Fonctions, outils implémentées en C, C++ et habillées en Python. C'est aussi
         un template pour ceux qui souhaite réaliser un module en C/C++/Cython.
-    * - `lightmlboard <http://www.xavierdupre.fr/app/lightmlboard/helpsphinx3/index.html>`_
+    * - :epkg:`lightmlboard`
       - Implémentation d'un site web dédié aux compétitions de machine learning
         basé sur :epkg:`tornado`.
     * - `pandas_streaming <http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/index.html>`_
@@ -509,9 +509,6 @@ Contenu
         et que j'utilise parfois durant les cours avec les plus grands.
     * - `jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
       - Présentations sous formes de notebooks données lors de conférences ou de cours.
-    * - `lightmlboard <http://www.xavierdupre.fr/app/lightmlboard/helpsphinx/index.html>`_
-      - Implémentation d'un tableau de résultats pour une compétition de machine learning,
-        avec :epkg:`tornado`.
     * - `mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
       - Contenu plus théorique associé à la datascience, au machine learning,
         au traitement naturel du langage. Avec un peu plus de démonstrations

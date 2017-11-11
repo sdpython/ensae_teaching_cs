@@ -125,6 +125,7 @@ epkg_dictionary["ENSAE"] = 'http://www.ensae.fr/'
 epkg_dictionary["Flask"] = 'http://flask.pocoo.org/'
 epkg_dictionary["keyring"] = 'https://github.com/jaraco/keyring'
 epkg_dictionary["Linux"] = 'https://fr.wikipedia.org/wiki/Linux'
+epkg_dictionary["lightmlboard"] = 'http://www.xavierdupre.fr/app/lightmlboard/helpsphinx/index.html'
 epkg_dictionary["linux"] = 'https://fr.wikipedia.org/wiki/Linux'
 epkg_dictionary["matrice de confusion"] = "https://fr.wikipedia.org/wiki/Matrice_de_confusion"
 epkg_dictionary["miniconda"] = 'https://conda.io/miniconda.html'
