@@ -57,36 +57,21 @@ jobs:
                     sudo apt-get install -y python-pygame
 
       - run:
-          name: install dependencies 1
+          name: install dependencies 1 - requirements_conda
           command: |
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements_conda.txt
             
       - run:
-          name: install dependencies 2
+          name: install dependencies 2 - requirements
           command: |
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
             
       - run:
-          name: install fairtest
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
-            
-      - run:
-          name: install torch
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            conda install pytorch torchvision -c soumith
-            pip install torchvision            
-            
-      - run:
-          name: install dependencies 3
+          name: install dependencies 3 - sphinxcontrib, datashader, pyPDF, natgrid
           command: |
             python3 -m venv venv
             . venv/bin/activate
@@ -94,6 +79,21 @@ jobs:
             pip install git+https://github.com/bokeh/datashader.git --upgrade --no-deps
             pip install git+https://github.com/sdpython/pyPdf --upgrade --no-deps
             pip install git+https://github.com/matplotlib/natgrid --upgrade --no-deps
+            
+      - run:
+          name: install dependencies 4 - fairtest
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
+            
+      - run:
+          name: install install dependencies 4 - torch
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip3 install http://download.pytorch.org/whl/cu75/torch-0.2.0.post3-cp36-cp36m-manylinux1_x86_64.whl 
+            pip3 install torchvision
             
       - run:
           name: install basemap
