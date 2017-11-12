@@ -362,11 +362,20 @@ Pratique du machine learning, problème de données
 * `A Unified Approach to Learning Task-Specific Bit Vector Representations for Fast Nearest Neighbor Search <http://www.cs.toronto.edu/~vnair/www12.pdf>`_
 * `On the Mutual Nearest Neighbors Estimate in Regression <http://www.jmlr.org/papers/volume14/guyader13a/guyader13a.pdf>`_
 
+`JMLR <http://www.jmlr.org/>`_
+poste régulièrement des articles sur des librairies de machine learning open source telles que
+`fastFM: A Library for Factorization Machines <fastFM: A Library for Factorization Machines>`_.
+
 *Recherche*
 
 * `XGBoost: A Scalable Tree Boosting System <https://arxiv.org/pdf/1603.02754.pdf>`_
-* `Classification of Imbalanced Data with a Geometric Digraph Family <http://www.jmlr.org/papers/volume17/15-604/15-604.pdf>`_
 * `On the Influence of Momentum Acceleration on OnlineLearning <http://www.jmlr.org/papers/volume17/16-157/16-157.pdf>`_
+
+*Imbalanced*
+
+* `Classification of Imbalanced Data with a Geometric Digraph Family <http://www.jmlr.org/papers/volume17/15-604/15-604.pdf>`_
+* `RUSBoost: A Hybrid Approach to Alleviating Class Imbalance <http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=9260A5C92AC5F8FA3B8590A53A06248D?doi=10.1.1.309.2305&rep=rep1&type=pdf>`_
+* `RAMOBoost: Ranked Minority Oversampling in Boosting <https://ai2-s2-pdfs.s3.amazonaws.com/9640/1540d5d8c4d5d956ae5fa487590dd8682507.pdf>`_
 
 .. index:: multilabel
 
@@ -386,13 +395,6 @@ Pratique du machine learning, problème de données
 
 * `Optimization of AMS using Weighted AUC optimized models <http://jmlr.org/proceedings/papers/v42/diaz14.pdf>`_
 
-*Librairies*
-
-`JMLR <http://www.jmlr.org/>`_
-poste régulièrement des articles sur des librairies de machine learning open source.
-
-* `fastFM: A Library for Factorization Machines <fastFM: A Library for Factorization Machines>`_
-
 *Modules*
 
 * `statsmodels <http://statsmodels.sourceforge.net/>`_
@@ -400,6 +402,8 @@ poste régulièrement des articles sur des librairies de machine learning open s
 * `mlxtend <https://github.com/rasbt/mlxtend>`_
 * `imbalanced-learn <https://github.com/scikit-learn-contrib/imbalanced-learn>`_
   (la documentation est intéressante)
+* `ND DIAL: Imbalanced Algorithms <https://github.com/dialnd/imbalanced-algorithms>`_
+* `rusboost.py <https://github.com/harusametime/RUSBoost>`_ (plutôt un bout de code)
 
 |pyecopng| |pystatpng|
 

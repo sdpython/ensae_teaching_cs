@@ -80,10 +80,10 @@ discutées.
       - Traitement du langage, LDA, tf-idf,
         expression régulière, :ref:`l-route2017-eco7`
     * - 14/11 (8)
-      - Algorithme de streaming, Interprétabilité des modèles,
-        sequence learning, présentation des projets,
-        Revue de compétition Kaggle
-      - Construction d'un site web, retour sur la compétition,
+      - Algorithme de streaming, Imbalanced datasets
+        Revue de compétition Kaggle, présentation des projets
+      - Construction d'un site web,
+        Revue de compétition Kaggle,
         présentation des projets
 
 Intervenants
@@ -345,3 +345,22 @@ Séance 7 Maths
 * Machine Learning éthique
     * :ref:`td2aethicsrst`
     * :ref:`td2aethicscorrectionrst`
+
+.. _l-route2017-eco8:
+
+Séance 8 Eco
+^^^^^^^^^^^^
+
+.. _l-route2017-stat8:
+
+Séance 8 Maths
+^^^^^^^^^^^^^^
+
+* données mal balancées
+    * :ref:`mlbimbalancedrst`
+* algorithmes de streaming
+    * :ref:`BJKSTenoncerst`
+    * :ref:`BJKSTrst`
+* revue de compétitions Kaggle
+    * `revue 2016 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/ensae201611.html>`_
+    * `revue 2017 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2017/ensae_2a_201711.html>`_
