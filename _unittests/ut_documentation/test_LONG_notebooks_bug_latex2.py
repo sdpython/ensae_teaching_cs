@@ -44,7 +44,7 @@ from pyquickhelper.helpgen import process_notebooks
 from pyquickhelper.pycode import is_travis_or_appveyor, get_temp_folder
 
 
-class TestLONGNotebookBug(unittest.TestCase):
+class TestLONGNotebookBug2(unittest.TestCase):
 
     def test_notebook_latex_problems(self):
         fLOG(
@@ -53,9 +53,9 @@ class TestLONGNotebookBug(unittest.TestCase):
             OutputPrint=__name__ == "__main__")
         path = os.path.abspath(os.path.split(__file__)[0])
         fold = os.path.normpath(os.path.join(
-            path, "..", "..", "_doc", "notebooks", "td2a_ml"))
+            path, "..", "..", "_doc", "notebooks", "td2a_eco"))
         nbs = [os.path.join(fold, _)
-               for _ in os.listdir(fold) if _.endswith(".ipynb") and "problems" in _]
+               for _ in os.listdir(fold) if _.endswith(".ipynb") and "TD2A_eco_API_SNCF_corrige" in _]
         nbs.sort()
         formats = ["pdf", "ipynb", "html", "python", "rst", "docx"]
 
@@ -64,7 +64,7 @@ class TestLONGNotebookBug(unittest.TestCase):
                 "travis, appveyor, unable to test %s" % self._testMethodName)
             return
 
-        temp = get_temp_folder(__file__, "temp_nb_td2A_ml_bug_latex")
+        temp = get_temp_folder(__file__, "temp_nb_td2A_eco_bug_latex2")
 
         res = process_notebooks(nbs, temp, temp, formats=formats)
         fLOG("*****", len(res))

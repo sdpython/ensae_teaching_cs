@@ -81,8 +81,9 @@ discutées.
         expression régulière, :ref:`l-route2017-eco7`
     * - 14/11 (8)
       - Algorithme de streaming, Imbalanced datasets
-        Revue de compétition Kaggle, présentation des projets
-      - Construction d'un site web,
+        Revue de compétition Kaggle, présentation des projets,
+        premiers suivis de projets
+      - Premiers suivis de projets,
         Revue de compétition Kaggle,
         présentation des projets
 
@@ -348,14 +349,12 @@ Séance 7 Maths
 
 .. _l-route2017-eco8:
 
-Séance 8 Eco
-^^^^^^^^^^^^
-
 .. _l-route2017-stat8:
 
 Séance 8 Maths
 ^^^^^^^^^^^^^^
 
+* premiers suivis de projects
 * données mal balancées
     * :ref:`mlbimbalancedrst`
 * algorithmes de streaming
