@@ -1,0 +1,58 @@
+
+.. blogpost::
+    :title: Cours de deep learning appliqués au NLP
+    :keywords: deep learning, NLP
+    :date: 2017-11-13
+    :categories: cours
+    :lid: blog-stanford-nlp-deep
+
+    `Stanford University School of Engineering <https://www.youtube.com/channel/UCdKG2JnvPu6mY1NDXYFfN0g>`_
+    met en ligne beaucoup de cours dont les suivants
+    `Natural Language Processing with Deep Learning <https://www.youtube.com/watch?v=OQQ-W_63UgQ&list=PL3FW7Lu3i5Jsnh1rnUwq_TcylNr7EkRe6>`_.
+    C'est l'état de l'art cette année.
+
+    * `Lecture 1: Natural Language Processing with Deep Learning <https://www.youtube.com/watch?v=OQQ-W_63UgQ>`_
+    * `Lecture 2: Word Vector Representations: word2vec <https://www.youtube.com/watch?v=ERibwqs9p38>`_
+    * `Lecture 3: GloVe: Global Vectors for Word Representation <https://www.youtube.com/watch?v=ASn7ExxLZws&feature=youtu.be&t=57m10s>`_
+    * `Lecture 4: Word Window Classification and Neural Networks <https://www.youtube.com/watch?v=uc2_iwVqrRI>`_
+    * `Lecture 5: Backpropagation and Project Advice <https://www.youtube.com/watch?v=isPiE-DBagM>`_
+    * `Lecture 6: Dependency Parsing <https://www.youtube.com/watch?v=PVShkZgXznc>`_
+    * `Lecture 7: Introduction to TensorFlow <https://www.youtube.com/watch?v=PicxU81owCs>`_
+    * `Lecture 8: Recurrent Neural Networks and Language Models <https://www.youtube.com/watch?v=Keqep_PKrY8>`_
+    * `Lecture 9: Machine Translation and Advanced Recurrent LSTMs and GRUs <https://www.youtube.com/watch?v=QuELiw8tbx8>`_
+    * `Lecture 10: Neural Machine Translation and Models with Attention <https://www.youtube.com/watch?v=IxQtK2SjWWM>`_
+    * `Lecture 11: Gated Recurrent Units and Further Topics in NMT <https://www.youtube.com/watch?v=6_MO12fPC-0>`_
+    * `Lecture 12: End-to-End Models for Speech Processing <https://www.youtube.com/watch?v=3MjIkWxXigM>`_
+    * `Lecture 13: Convolutional Neural Networks <https://www.youtube.com/watch?v=Lg6MZw_OOLI>`_
+    * `Lecture 14: Tree Recursive Neural Networks and Constituency Parsing <https://www.youtube.com/watch?v=RfwgqPkWZ1w>`_
+    * `Lecture 15: Coreference Resolution <https://www.youtube.com/watch?v=rpwEWLaueRk>`_
+    * `Lecture 16: Dynamic Neural Networks for Question Answering <https://www.youtube.com/watch?v=T3octNTE7Is>`_
+    * `Lecture 17: Issues in NLP and Possible Architectures for NLP <https://www.youtube.com/watch?v=B4v545V3Dq0>`_
+    * `Lecture 18: Tackling the Limits of Deep Learning for NLP <https://www.youtube.com/watch?v=JYwNmSe4HqE>`_
+
+    Une série d'articles sur le deep learning :
+
+    * `Applied Deep Learning - Part 1: Artificial Neural Networks <https://towardsdatascience.com/applied-deep-learning-part-1-artificial-neural-networks-d7834f67a4f6>`_
+    * `Applied Deep Learning - Part 2: Real World Case Studies <https://towardsdatascience.com/applied-deep-learning-part-2-real-world-case-studies-1bb4b142a585>`_
+    * `Applied Deep Learning - Part 3: Autoencoders <https://towardsdatascience.com/applied-deep-learning-part-3-autoencoders-1c083af4d798>`_
+    * `Applied Deep Learning - Part 4: Convolutional Neural Networks <https://towardsdatascience.com/applied-deep-learning-part-4-convolutional-neural-networks-584bc134c1e2>`_
+
+    A propos des *Generative Adversarial Networks* :
+
+    * `Overview of GANs (Generative Adversarial Networks) - Part I <https://towardsdatascience.com/overview-of-gans-generative-adversarial-networks-part-i-ac78ec775e31>`_
+    * `Generative Adversarial Networks — Part II <https://towardsdatascience.com/generative-adversarial-networks-part-ii-6212f7755c1f>`_
+
+    Un résultat d'expérience qui est amené à prendre plus d'importance.
+    Une couche d'un réseau de neurones profond est consistitué de plusieurs ensembles
+    de neurones non connecté (des filtres). Ces filtres reçoivent tous les mêmes
+    entrées. L'article proposent une façon de spécialiser chaque filtre plus rapidement
+    en routant (en pondérant) les exemples entre chauqe couche.
+
+    * `What is a CapsNet or Capsule Network? <https://hackernoon.com/what-is-a-capsnet-or-capsule-network-2bfbe48769cc>`_
+    * `Dynamic Routing Between Capsules <https://arxiv.org/abs/1710.09829v2>`_
+    * `capsLayer.py <https://gist.github.com/debarko/7c87c10921f0ed0c4f7641b4e14f2071>`_
+
+    Enfin :
+
+    * `Deep learning architecture diagrams <http://fastml.com/deep-learning-architecture-diagrams/>`_
+    * `10 Advanced Deep Learning Architectures Data Scientists Should Know! <https://www.analyticsvidhya.com/blog/2017/08/10-advanced-deep-learning-architectures-data-scientists/>`_

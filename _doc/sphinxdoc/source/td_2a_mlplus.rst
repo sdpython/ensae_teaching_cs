@@ -1109,11 +1109,15 @@ exploitable par les algorithmes d'apprentissage.
 * `Learning-Based Single-Document Summarization with Compression and Anaphoricity Constraints <https://arxiv.org/pdf/1603.08887v1.pdf>`_
 * `Multimodal Word Distributions <http://www.aclweb.org/anthology/P/P17/P17-1151.pdf>`_
 
-*Classification*
+*Lectures - revue*
+
+* `October Edition: Text Understanding - 9 Must-Read Articles <https://towardsdatascience.com/october-edition-text-understanding-c3594faf2964>`_
+
+*Lectures - Classification*
 
 * `Bag of Tricks for Efficient Text Classification <https://arxiv.org/pdf/1607.01759.pdf>`_
 
-*word2vec*
+*Lectures - word2vec*
 
 * `The amazing power of word vectors <https://blog.acolyer.org/2016/04/21/the-amazing-power-of-word-vectors/>`_
 * `Towards a continuous modeling of natural language domains <http://www.aclweb.org/anthology/W/W16/W16-6012.pdf>`_
@@ -1123,13 +1127,17 @@ exploitable par les algorithmes d'apprentissage.
   `Tutorial on Auto-Encoders <http://piotrmirowski.wordpress.com/2014/03/27/tutorial-on-auto-encoders/>`_, Piotr Mirowski
 * `Mixing Dirichlet Topic Models and Word Embeddings to Make lda2vec <https://arxiv.org/abs/1605.02019>`_
 
-*glove*
+*Lectures - glove*
 
 * `GloVe: Global Vectors for Word Representation <https://nlp.stanford.edu/pubs/glove.pdf>`_ (pdf),
   `GloVe: Global Vectors for Word Representation <https://blog.acolyer.org/2016/04/22/glove-global-vectors-for-word-representation/>`_ (article de blog)
 * `glove <https://nlp.stanford.edu/projects/glove/>`_
   (`Glove avec R <https://cran.r-project.org/web/packages/text2vec/vignettes/glove.html>`_,
   `Glove avec python <https://github.com/maciejkula/glove-python>`_)
+
+*Lectures - vidéo*
+
+* :ref:`Cours de deep learning appliqués au NLP <blog-stanford-nlp-deep>`
 
 *Word embedding*
 
@@ -1343,6 +1351,7 @@ d'intérêt au pixel près.
 
 * `Watershed <https://en.wikipedia.org/wiki/Watershed_(image_processing)>`_
 * `Semantic Segmentation using Fully Convolutional Networks over the years <https://meetshah1995.github.io/semantic-segmentation/deep-learning/pytorch/visdom/2017/06/01/semantic-segmentation-over-the-years.html>`_
+* `Fully Convolutional Networks for Semantic Segmentation <https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf>`_
 
 *Modules*
 
@@ -1430,6 +1439,20 @@ Deep Learning Artistique
 Images
 ++++++
 
+Les réseaux de neurones profonds fonctionnent très bien sur les images
+car ce sont des entrées homogènes. Le traitement des images
+cachent plusieurs types de problématiques :
+
+* **classification** : reconnaître un object dans l'image sans savoir extactement où il est
+* **segmentation** : reconnaître des objects dans une images, sous la forme de boîtes
+  englobantes ou au pixel près
+* **transformation** : déflouter, extraire le squelette, mettre en couleur,
+  fusionner image et style
+
+Ce ne sont pas les seules mais ces problématiques commencent à être
+assez bien résolus. Il faut noter qu'on n'utilisent pas mêmes modèles
+s'il s'agit d'images prises par un appareil photos ou d'images médicales.
+
 * `Time-Contrastive Networks: Self-Supervised Learning from Multi-View Observation <https://arxiv.org/abs/1704.06888>`_ :
   un robot apprend à imiter les mouvements d'une personne
   (`vidéo <https://sermanet.github.io/tcn/>`_)
@@ -1447,7 +1470,8 @@ Images
   `darknetpy <https://github.com/danielgatis/darknetpy>`_,
   `demo <https://pjreddie.com/darknet/yolo/>`_
 * `openalpr <https://github.com/openalpr/openalpr>`_ :
-  reconnaissance de plaques d'immatriculation, pas vraiement du deep learning
+  reconnaissance de plaques d'immatriculation, pas vraiment du deep learning
+* `Fully Convolutional Networks for Semantic Segmentation <https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf>`_
 
 Histoire
 ++++++++

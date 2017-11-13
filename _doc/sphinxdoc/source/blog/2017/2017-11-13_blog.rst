@@ -1,0 +1,29 @@
+
+.. blogpost::
+    :title: Resté informer sur le Deep Learning
+    :keywords: blog, deep learning
+    :date: 2017-11-13
+    :categories: blog
+
+    * `Towards Data Science <https://towardsdatascience.com/>`_
+    * `colah's blog <http://colah.github.io/>`_
+    * `Andrej Karpathy blog <http://karpathy.github.io/>`_
+    * `Sebastien Ruder <http://ruder.io/#open>`_
+    * `DeepMing <https://deepmind.com/blog/>`_
+    * `Distill <https://distill.pub/>`_
+    * `OpenAI <https://blog.openai.com/>`_
+    * `HackerNoon <https://hackernoon.com/>`_
+    * `FastML <http://fastml.com/>`_
+
+    Un article qui suggèrent des blogs à lire :
+
+    * `Must-read Blogs for AI and Deep Learning Enthusiasts <http://blog.paralleldots.com/technology/artificial-intelligence/must-read-blogs-ai-deep-learning-enthusiasts/>`_
+
+    Des cours filmés à Sanford :
+
+    * `Stanford University School of Engineering <https://www.youtube.com/channel/UCdKG2JnvPu6mY1NDXYFfN0g>`_
+
+    Le deep learning est assimilé à une intelligence artificielle mais
+    il n'est ni aussi performant qu'un cerveau humain, loin de là,
+    ni aussi peu économoe en terme d'énergie :
+    `Les conséquences pratiques d’AlphaGo Zero <http://www.oezratty.net/wordpress/2017/consequences-pratiques-alphago-zero/>`_.

@@ -61,6 +61,12 @@ D'autres idées avec d'autres lectures :
 * `Dynamic Correlations, Estimation Risk, and Portfolio Management during the Financial Crisis <https://www.cemfi.es/ftp/wp/1103.pdf>`_
 * `Les marchés prédictifs comme technique de prévision <http://freakonometrics.hypotheses.org/50870>`_ *(2017/10)*
 
+Les compétitions sont aussi une bonne source d'inspiration comme
+`Two Sigma Financial Modeling Challenge <https://www.kaggle.com/c/two-sigma-financial-modeling>`_.
+Des participants décrivent leurs idées dans les articles suivants :
+`Two Sigma Financial Modeling Code Competition, 5th Place Winners' Interview: Team Best Fitting | Bestfitting, Zero, & CircleCircle <http://blog.kaggle.com/2017/05/11/two-sigma-financial-modeling-code-competition-5th-place-winners-interview-team-best-fitting-bestfitting-zero-circlecircle/>`_,
+`Two Sigma Financial Modeling Challenge, Winner's Interview: 2nd Place, Nima Shahbazi, Chahhou Mohamed <http://blog.kaggle.com/2017/05/25/two-sigma-financial-modeling-challenge-winners-interview-2nd-place-nima-shahbazi-chahhou-mohamed/>`_.
+
 .. _l-fi-trend:
 
 Trend following

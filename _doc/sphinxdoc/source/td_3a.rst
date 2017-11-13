@@ -288,6 +288,8 @@ Deep Learning
 *Vidéos*
     * `PyTorch in 5 Minutes <https://www.youtube.com/watch?v=nbJ-2G2GXL0>`_
     * `PyTorch Demystified, Why Did I Switch <https://www.youtube.com/watch?v=VMcRWYEKmhw>`_
+*Cours*
+    * :ref:`Cours de deep learning appliqués au NLP <blog-stanford-nlp-deep>`
 
 Framework de deep learning
 ++++++++++++++++++++++++++

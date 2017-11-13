@@ -48,6 +48,10 @@ Séance 3
 * :ref:`l-deep-learning-3A`
 * :ref:`l-spark-3a`
 
+*Lectures*
+
+* :ref:`Cours de deep learning appliqués au NLP <blog-stanford-nlp-deep>`
+
 Séance 4
 ^^^^^^^^
 

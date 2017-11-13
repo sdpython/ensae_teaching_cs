@@ -135,6 +135,11 @@ Glossaire
         *Frequently Asked Questions*, titre de sections très souvent utilisés pour regroupés les
         questions envoyées par les utilisateurs d'un produit.
 
+    Gated recurrent unit
+        `Gated recurrent unit <https://en.wikipedia.org/wiki/Gated_recurrent_unit>`_ (GRU),
+        mécanisme utilisé dans les réseaux de neurones récurrents pour propager
+        ou non le signal venant des observations précédentes.
+
     Git
         Logiciel de suivi de source utilisé par exemple par GitHub.
         Il est décentralisé. Chaque contributeur est libre de proposer ou d'importer
@@ -170,6 +175,9 @@ Glossaire
 
     greedy
         Voir glouton.
+
+    GRU
+        Voir Gated recurrent unit.
 
     Hadoop
         Logiciel de distribution de traitement de données.

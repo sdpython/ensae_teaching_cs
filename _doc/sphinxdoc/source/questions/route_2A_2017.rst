@@ -324,6 +324,10 @@ Séance 6 Maths
     * :ref:`l-nolabel`
     * `Deep Learning 2017 <http://www.xavierdupre.fr/exposes/deeplearning/>`_ (avec Olivier Grisel)
 
+*Lectures*
+
+* :ref:`Cours de deep learning appliqués au NLP <blog-stanford-nlp-deep>`
+
 .. _l-route2017-eco7:
 
 Séance 7 Eco
