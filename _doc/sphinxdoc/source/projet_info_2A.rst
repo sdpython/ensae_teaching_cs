@@ -168,6 +168,8 @@ Liens
 - `Machine learning isn't Kaggle competitions <http://jvns.ca/blog/2014/06/19/machine-learning-isnt-kaggle-competitions/>`_.
 - :ref:`gitnotebookrst`
 
+.. _l-question-projet-2A-ml:
+
 Questions
 +++++++++
 
@@ -178,4 +180,4 @@ Questions
 * :ref:`question_2014_projet_5_2A`
 * :ref:`question_2014_projet_6_2A`
 * :ref:`question_2015_projet_2_2A`
-* :ref:`question_2016_projet_2A_json`
+* :ref:`question_projet_2016`

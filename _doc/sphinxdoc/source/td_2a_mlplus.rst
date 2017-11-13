@@ -359,6 +359,8 @@ propose une réponse à ces deux problèmes.
 
 |pyecopng| |pystatpng|
 
+.. _l-interpretabilite-ml:
+
 Interprétabilité des modèles
 ++++++++++++++++++++++++++++
 
@@ -379,24 +381,26 @@ Elle doit rentrer en application à partir du 25 mai 2018.
 La compréhension des décisions d'un modèle est parfois
 une nécessité. Quelques idées de recherche :
 
-* Déléguer la complexité sur les variables : on utilise un modèle simple
+* **Déléguer la complexité sur les variables** : on utilise un modèle simple
   (linéaire, arbre de décision), et on construit de nouvelles variables ou features
   parfois complexes qui font du sens pour le problèmes et qu'un modèle de machine
   learning ne pourrait pas reproduire aisément
   (voir aussi `feature learning <https://en.wikipedia.org/wiki/Feature_learning>`_).
-* Sélectionner les variables et en garder le moins possibles,
+* **Sélectionner les variables** et en garder le moins possibles,
   voir `feature selection <https://en.wikipedia.org/wiki/Feature_selection>`_,
   voir aussi `Feature importances with forests of trees <http://scikit-learn.org/stable/auto_examples/ensemble/plot_forest_importances.html>`_.
 * Extraire des informations sur les variables elle-même,
   une forêt d'arbre produit une décision pour une observation qui n'utilise
   qu'une petite partie du modèle, il est possible d'extraire la liste
   des variables impliquées dans cette décision et de les trier
-  par ordre d'importance, voir `treeinterpreter <https://pypi.python.org/pypi/treeinterpreter>`_.
-* Poser des contraintes sur le modèle comme la monotonie de la décision
+  par ordre d'importance, on regarde les 
+  **parties du modèle activées lors de la prédiction**,
+  voir `treeinterpreter <https://pypi.python.org/pypi/treeinterpreter>`_.
+* Poser des contraintes sur le modèle comme la **monotonie de la décision**
   par rapport aux variables, voir `Isotonic Regression <https://en.wikipedia.org/wiki/Isotonic_regression>`_.
-* Apprendre un second modèle dédié à l'interprétation,
+* Apprendre un **second modèle dédié à l'interprétation**,
   voir `Making Tree Ensembles Interpretable <https://arxiv.org/pdf/1606.05390v1.pdf>`_.
-* Visualiser la décision.
+* **Visualiser** la décision.
 
 *Notebooks*
 
@@ -1472,6 +1476,7 @@ s'il s'agit d'images prises par un appareil photos ou d'images médicales.
 * `openalpr <https://github.com/openalpr/openalpr>`_ :
   reconnaissance de plaques d'immatriculation, pas vraiment du deep learning
 * `Fully Convolutional Networks for Semantic Segmentation <https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf>`_
+* `Deep Supervision with Shape Concepts for Occlusion-Aware 3D Object Parsing <https://arxiv.org/pdf/1612.02699.pdf>`_
 
 Histoire
 ++++++++
@@ -1499,3 +1504,16 @@ Texte
 * `Representing Sentences as Low-Rank Subspaces <https://arxiv.org/abs/1704.05358v1>`_
 * `SQuAD: 100,000+ Questions for Machine Comprehension of Text <https://arxiv.org/abs/1606.05250>`_,
   cette compétition fera sans doute émerger la nouvelle version des moteurs de recherche.
+
+
+Notebooks
++++++++++
+
+*CNTK*
+
+* `Complex Neural Network Data Modelling with CNTK <http://dacrook.com/complex-neural-network-data-modelling-with-cntk/>`_
+
+*Keras*
+
+* `Using a pre-trained convnet <https://github.com/fchollet/deep-learning-with-python-notebooks/blob/master/5.3-using-a-pretrained-convnet.ipynb>`_
+* ` <https://github.com/sdpython/2017_deeplearning_demo/blob/master/Fine_Tuning_Deep_CNNs_with_GPU_rendered.ipynb>`_

@@ -82,10 +82,12 @@ discutées.
     * - 14/11 (8)
       - Algorithme de streaming, Imbalanced datasets
         Revue de compétition Kaggle, présentation des projets,
-        premiers suivis de projets
+        premiers suivis de projets,
+        :ref:`l-route2017-stat8`
       - Premiers suivis de projets,
         Revue de compétition Kaggle,
-        présentation des projets
+        présentation des projets,
+        :ref:`l-route2017-eco8`
 
 Intervenants
 ++++++++++++
@@ -355,8 +357,8 @@ Séance 7 Maths
 
 .. _l-route2017-stat8:
 
-Séance 8 Maths
-^^^^^^^^^^^^^^
+Séance 8
+^^^^^^^^
 
 * premiers suivis de projects
 * données mal balancées
@@ -367,3 +369,15 @@ Séance 8 Maths
 * revue de compétitions Kaggle
     * `revue 2016 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/ensae201611.html>`_
     * `revue 2017 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2017/ensae_2a_201711.html>`_
+* visualisation
+    * :ref:`l-py2a-cartes`
+    * `10 plotting libraries <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_
+* interprétabilité
+    * :ref:`l-interpretabilite-ml`
+* conclusion
+    * :ref:`l-td2a-notions`
+* projets
+    * :ref:`l-projinfo2a`
+    * `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
+    * :ref:`l-debutermlprojet`
+    * :ref:`l-question-projet-2A-ml`

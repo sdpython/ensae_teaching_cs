@@ -183,6 +183,8 @@ la visualisation animée de gros jeux de données telle que
 
 |pyecopng| |pystatpng|
 
+.. _l-py2a-cartes:
+
 Cartes
 ++++++
 
@@ -255,3 +257,8 @@ Visualiser pour comprendre
   Exemples `TensorBoard: Embedding Visualization <http://ahogrammer.com/2016/12/01/tensorboard-embedding-visualization/>`_,
   `An Encounter with Google’s TensorFlow <https://esciencegroup.com/2016/01/05/an-encounter-with-googles-tensorflow/>`_,
   `How to plot a ROC curve with Tensorflow and scikit-learn? <http://stackoverflow.com/questions/36939328/how-to-plot-a-roc-curve-with-tensorflow-and-scikit-learn>`_
+* `Prodigy <https://prodi.gy/>`_ : les problèmes d'apprentissage supervisés requiert des
+  annotations ou labels. Il est plus facile de les produire avec de bons outils.
+  `Prodigy <https://prodi.gy/>`_ pourrait être l'un d'eux, l'outil est prévu
+  pour annoter le texte et les images.
+* `labelImg <https://github.com/tzutalin/labelImg>`_ : annotation d'images
