@@ -393,7 +393,7 @@ une nécessité. Quelques idées de recherche :
   une forêt d'arbre produit une décision pour une observation qui n'utilise
   qu'une petite partie du modèle, il est possible d'extraire la liste
   des variables impliquées dans cette décision et de les trier
-  par ordre d'importance, on regarde les 
+  par ordre d'importance, on regarde les
   **parties du modèle activées lors de la prédiction**,
   voir `treeinterpreter <https://pypi.python.org/pypi/treeinterpreter>`_.
 * Poser des contraintes sur le modèle comme la **monotonie de la décision**
@@ -1025,6 +1025,26 @@ Apprentissage sans labels
 
 |pystatpng|
 
+Generative Adversarial Network (GAN)
+++++++++++++++++++++++++++++++++++++
+
+*(à venir)*
+
+*Lectures*
+
+* `Generative Adversarial Networks <https://arxiv.org/abs/1406.2661>`_ :
+  c'est le premier article paru sur le sujet
+* `Least Squares Generative Adversarial Networks <https://arxiv.org/abs/1611.04076v2>`_
+* `f-GAN: Training Generative Neural Samplers using Variational Divergence Minimization <https://arxiv.org/abs/1606.00709>`_
+
+*Exemples de code*
+
+* `generative-models <https://github.com/wiseodd/generative-models>`_ :
+  programme sur une grande variété de GAN (Vanilla, Conditional, f-GAN, ...)
+  avec :epkg:`tensorflow` et :epkg:`pytorch`
+
+|pystatpng|
+
 Deep Trees
 ++++++++++
 
@@ -1505,6 +1525,10 @@ Texte
 * `SQuAD: 100,000+ Questions for Machine Comprehension of Text <https://arxiv.org/abs/1606.05250>`_,
   cette compétition fera sans doute émerger la nouvelle version des moteurs de recherche.
 
+Voiture autonome
+++++++++++++++++
+
+* `Computer Vision for Autonomous Vehicles: Problems, Datasets and State-of-the-Art <https://arxiv.org/abs/1704.05519>`_
 
 Notebooks
 +++++++++

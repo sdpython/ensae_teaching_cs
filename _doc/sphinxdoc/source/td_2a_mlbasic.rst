@@ -527,6 +527,12 @@ Modèles bayésiens
 * `bnpy <https://github.com/bnpy/bnpy>`_
 * `pyro <http://pyro.ai/>`_ : modèle bayèsiens et deep learning
 
+*Exemples de code*
+
+* `Probabilistic Models <https://github.com/wiseodd/probabilistic-models>`_ :
+  sont implémentés entre autres, LDA, Chinese Restaurant Process, Indian Restaurant Process,
+  GMM...
+
 |pystatpng|
 
 Factorization Machines

@@ -14,6 +14,7 @@
     * `OpenAI <https://blog.openai.com/>`_
     * `HackerNoon <https://hackernoon.com/>`_
     * `FastML <http://fastml.com/>`_
+    * `Agustinus Kristiadi's Blog <https://wiseodd.github.io/>`_
 
     Un article qui suggèrent des blogs à lire :
 
