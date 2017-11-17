@@ -203,6 +203,7 @@ Auto-Learning
 * `A Bayesian criterion for evaluating the robustness of classification rules in binary data sets <http://www.marc-boulle.fr/publications/GayEtAlAKDM12.pdf>`_
 * `Bayesian instance selection for the nearest neighbor rule <http://www.marc-boulle.fr/publications/FerrandizEtAlML10.pdf>`_
 * `One Model To Learn Them All <https://arxiv.org/abs/1706.05137>`_
+* `DLPaper2Code: Auto-generation of Code from Deep Learning Research Papers <https://arxiv.org/pdf/1711.03543.pdf>`_
 
 *Sites*
 
