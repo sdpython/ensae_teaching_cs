@@ -71,6 +71,20 @@ indicateurs intéressants à surveiller en temps de crise.
 Ce qui a changé : la part croissante de l'informatique et
 des algorithmes de trading, la vitesse des communication.
 
+Le site `Kaggle <https://www.kaggle.com/>`_ propose quelques
+compétitions de trading comme :
+`Two Sigma Financial Modeling Challenge <https://www.kaggle.com/c/two-sigma-financial-modeling>`_ ou
+`The Winton Stock Market Challenge <https://www.kaggle.com/c/the-winton-stock-market-challenge>`_
+mais surtout certains participants explicitent les idées qu'ils ont développés pour
+obtenir leurs résultats.
+C'est le cas de cet article
+`Two Sigma Financial Modeling Challenge, Winner's Interview: 2nd Place, Nima Shahbazi, Chahhou Mohamed <http://blog.kaggle.com/2017/05/25/two-sigma-financial-modeling-challenge-winners-interview-2nd-place-nima-shahbazi-chahhou-mohamed/>`_
+qui permet de découvrir les indicateurs utilisés par ce participant arrivé
+en seconde position. Certains sont moins diserts
+`Winton Stock Market Challenge, Winner's Interview: 3rd place, Mendrika Ramarlina <http://blog.kaggle.com/2016/02/12/winton-stock-market-challenge-winners-interview-3rd-place-mendrika-ramarlina/>`_,
+d'autres publient sur leurs propres blog
+`Kaggle Winton Stock Market Challenge - Post-Mortem <http://intelligenttradingtech.blogspot.fr/2016/01/kaggle-winton-stock-market-challenge.html>`_.
+
 Vocabulaire financier
 +++++++++++++++++++++
 

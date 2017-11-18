@@ -314,6 +314,7 @@ ici :
 
 *Lectures*
 
+* `API design for machine learning software: experiences from the scikit-learn project <https://arxiv.org/pdf/1309.0238.pdf>`_
 * `Économétrie & Machine Learning <https://arxiv.org/pdf/1708.06992.pdf>`_
 * `A Visual Introduction to Machine Learning <http://www.r2d3.us/visual-intro-to-machine-learning-part-1/>`_
 * `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
