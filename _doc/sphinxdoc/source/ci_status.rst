@@ -136,28 +136,6 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
-    * - :epkg:`lightmlboard`
-      - .. image:: https://travis-ci.org/sdpython/lightmlboard.svg?branch=master
-            :target: https://travis-ci.org/sdpython/lightmlboard
-            :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/6g0xro11tmc6t05d?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/lightmlboard
-            :alt: Build Status Windows
-      - .. image:: https://circleci.com/gh/sdpython/lightmlboard/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/lightmlboard/tree/master
-      - .. image:: https://badge.fury.io/py/lightmlboard.svg
-            :target: http://badge.fury.io/py/lightmlboard
-      - .. image:: http://img.shields.io/pypi/pyversions/lightmlboard.png
-            :alt: PYPI Package
-            :target: https://pypi.python.org/pypi/lightmlboard
-      - .. image:: https://badge.waffle.io/sdpython/lightmlboard.png?label=ready&title=Ready
-            :alt: Waffle
-            :target: https://waffle.io/sdpython/lightmlboard
-      - .. image:: https://codecov.io/github/sdpython/lightmlboard/coverage.svg?branch=master
-            :target: https://codecov.io/github/sdpython/lightmlboard?branch=master
-      - .. image:: http://www.xavierdupre.fr/app/lightmlboard/helpsphinx/_images/nbcov.png
-            :target: http://www.xavierdupre.fr/app/lightmlboard/helpsphinx/all_notebooks_coverage.html
-            :alt: Notebook Coverage
     * - `jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/jupytalk.svg?branch=master
             :target: https://travis-ci.org/sdpython/jupytalk
@@ -201,6 +179,72 @@ Tableau de bord et statut des dépendances
             :target: https://codecov.io/github/sdpython/jyquickhelper?branch=master
       - .. image:: http://www.xavierdupre.fr/app/jyquickhelper/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/jyquickhelper/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
+    * - :epkg:`lightmlboard`
+      - .. image:: https://travis-ci.org/sdpython/lightmlboard.svg?branch=master
+            :target: https://travis-ci.org/sdpython/lightmlboard
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/6g0xro11tmc6t05d?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/lightmlboard
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/lightmlboard/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/lightmlboard/tree/master
+      - .. image:: https://badge.fury.io/py/lightmlboard.svg
+            :target: http://badge.fury.io/py/lightmlboard
+      - .. image:: http://img.shields.io/pypi/pyversions/lightmlboard.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/lightmlboard
+      - .. image:: https://badge.waffle.io/sdpython/lightmlboard.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/lightmlboard
+      - .. image:: https://codecov.io/github/sdpython/lightmlboard/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/lightmlboard?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/lightmlboard/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/lightmlboard/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
+    * - :epkg:`lightmlrestapi`
+      - .. image:: https://travis-ci.org/sdpython/lightmlrestapi.svg?branch=master
+            :target: https://travis-ci.org/sdpython/lightmlrestapi
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/uj6tq445k3na7hs9?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/lightmlrestapi
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/lightmlrestapi/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/lightmlrestapi/tree/master
+      - .. image:: https://badge.fury.io/py/lightmlrestapi.svg
+            :target: http://badge.fury.io/py/lightmlrestapi
+      - .. image:: http://img.shields.io/pypi/pyversions/lightmlrestapi.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/lightmlrestapi
+      - .. image:: https://badge.waffle.io/sdpython/lightmlrestapi.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/lightmlrestapi
+      - .. image:: https://codecov.io/github/sdpython/lightmlrestapi/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/lightmlrestapi?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/lightmlrestapi/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/lightmlrestapi/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
+    * - `mlinsigths <http://www.xavierdupre.fr/app/mlinsigths/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/mlinsigths.svg?branch=master
+            :target: https://travis-ci.org/sdpython/mlinsigths
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/uj6tq445k3na7hs9?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/mlinsigths
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/mlinsigths/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/mlinsigths/tree/master
+      - .. image:: https://badge.fury.io/py/mlinsigths.svg
+            :target: http://badge.fury.io/py/mlinsigths
+      - .. image:: http://img.shields.io/pypi/pyversions/mlinsigths.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/mlinsigths
+      - .. image:: https://badge.waffle.io/sdpython/mlinsigths.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/mlinsigths
+      - .. image:: https://codecov.io/github/sdpython/mlinsigths/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/mlinsigths?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/mlinsigths/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/mlinsigths/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/mlstatpy.svg?branch=master
@@ -478,6 +522,10 @@ Outils
     * - :epkg:`lightmlboard`
       - Implémentation d'un site web dédié aux compétitions de machine learning
         basé sur :epkg:`tornado`.
+    * - :epkg:`lightmlrestapi`
+      - Implémentation d'une :epkg:`REST API` avec :epkg:`falcon`.
+    * - :epkg:`mlinsights`
+      - Quelques fonctions pour jouer avec des modèles de machine learning.
     * - `pandas_streaming <http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/index.html>`_
       - Utilisation de :epkg:`pandas` pour opérer sur des fichiers qui ne tiennent pas
         en mémoire en implémentant des algorithmes de streaming.
