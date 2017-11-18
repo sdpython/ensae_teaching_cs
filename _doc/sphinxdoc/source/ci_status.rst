@@ -224,27 +224,27 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/lightmlrestapi/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/lightmlrestapi/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
-    * - `mlinsigths <http://www.xavierdupre.fr/app/mlinsigths/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/mlinsigths.svg?branch=master
-            :target: https://travis-ci.org/sdpython/mlinsigths
+    * - :epkg:`mlinsights`
+      - .. image:: https://travis-ci.org/sdpython/mlinsights.svg?branch=master
+            :target: https://travis-ci.org/sdpython/mlinsights
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/uj6tq445k3na7hs9?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/mlinsigths
+            :target: https://ci.appveyor.com/project/sdpython/mlinsights
             :alt: Build Status Windows
-      - .. image:: https://circleci.com/gh/sdpython/mlinsigths/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/mlinsigths/tree/master
-      - .. image:: https://badge.fury.io/py/mlinsigths.svg
-            :target: http://badge.fury.io/py/mlinsigths
-      - .. image:: http://img.shields.io/pypi/pyversions/mlinsigths.png
+      - .. image:: https://circleci.com/gh/sdpython/mlinsights/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/mlinsights/tree/master
+      - .. image:: https://badge.fury.io/py/mlinsights.svg
+            :target: http://badge.fury.io/py/mlinsights
+      - .. image:: http://img.shields.io/pypi/pyversions/mlinsights.png
             :alt: PYPI Package
-            :target: https://pypi.python.org/pypi/mlinsigths
-      - .. image:: https://badge.waffle.io/sdpython/mlinsigths.png?label=ready&title=Ready
+            :target: https://pypi.python.org/pypi/mlinsights
+      - .. image:: https://badge.waffle.io/sdpython/mlinsights.png?label=ready&title=Ready
             :alt: Waffle
-            :target: https://waffle.io/sdpython/mlinsigths
-      - .. image:: https://codecov.io/github/sdpython/mlinsigths/coverage.svg?branch=master
-            :target: https://codecov.io/github/sdpython/mlinsigths?branch=master
-      - .. image:: http://www.xavierdupre.fr/app/mlinsigths/helpsphinx/_images/nbcov.png
-            :target: http://www.xavierdupre.fr/app/mlinsigths/helpsphinx/all_notebooks_coverage.html
+            :target: https://waffle.io/sdpython/mlinsights
+      - .. image:: https://codecov.io/github/sdpython/mlinsights/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/mlinsights?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/mlinsights/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/mlinsights/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/mlstatpy.svg?branch=master

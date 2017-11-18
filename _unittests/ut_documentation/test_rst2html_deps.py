@@ -81,7 +81,8 @@ class TestRst2HtmlDeps(unittest.TestCase):
 
         links = dict(jyquickhelper="http", pyquickhelper="http",
                      pymyinstall="http", Jenkins="http", docutils="http",
-                     Jupyter="http", lightmlboard="zoo")
+                     Jupyter="http", lightmlboard="zoo", lightmlrestapi="mll",
+                     mlinsights="mli")
 
         for full in fulls:
             last = os.path.split(full)[-1]

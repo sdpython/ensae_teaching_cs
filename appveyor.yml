@@ -60,4 +60,4 @@ after_test:
 
 artifacts:
   - path: dist
-    name: cpyquickhelper
+    name: ensae_teaching_cs
