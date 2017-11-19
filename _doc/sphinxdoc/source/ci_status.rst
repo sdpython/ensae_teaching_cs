@@ -583,6 +583,8 @@ Git Clone
     if not exist jupytalk                   git clone https://github.com/sdpython/jupytalk.git
     if not exist jyquickhelper              git clone https://github.com/sdpython/jyquickhelper.git
     if not exist lightmlboard               git clone https://github.com/sdpython/lightmlboard.git
+    if not exist lightmlrestapi             git clone https://github.com/sdpython/lightmlrestapi.git
+    if not exist mlinsights                 git clone https://github.com/sdpython/mlinsights.git
     if not exist mlstatpy                   git clone https://github.com/sdpython/mlstatpy.git
     if not exist pandas_streaming           git clone https://github.com/sdpython/pandas_streaming.git
     if not exist pyensae                    git clone https://github.com/sdpython/pyensae.git
