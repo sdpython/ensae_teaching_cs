@@ -671,6 +671,11 @@ y a quelques avancées sur le sujet :
 * :ref:`210ConvolutionMNISTrst`
 * :ref:`300ConvolutionCIFAR10rst`
 
+*Tutorials*
+
+* `Companion Jupyter notebooks for the book "Deep Learning with Python" <https://github.com/fchollet/deep-learning-with-python-notebooks>`_
+  (avec :epkg:`keras`)
+
 *Code*
 
 * `Implementing a Neural Network from Scratch in Python - An Introduction <http://www.wildml.com/2015/09/implementing-a-neural-network-from-scratch/>`_,
@@ -695,6 +700,7 @@ y a quelques avancées sur le sujet :
 * `Adversarially Learned Inference <https://arxiv.org/abs/1606.00704>`_
   et l'implémentation de la méthode présentée dans l'article avec :epkg:`pytorch` :
   `ali-pytorch <https://github.com/edgarriba/ali-pytorch>`_.
+* `The Keras Blog <https://blog.keras.io/index.html>`_
 
 *Vidéos*
 
