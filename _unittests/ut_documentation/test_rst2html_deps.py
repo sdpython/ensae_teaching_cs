@@ -40,11 +40,15 @@ except ImportError:
 
 
 from pyquickhelper.loghelper.flog import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
 from pyquickhelper.helpgen import rst2html
 
 
 class TestRst2HtmlDeps(unittest.TestCase):
+
+    def setUp(self):
+        add_missing_development_version(["pymyinstall", "pyensae", "jyquickhelper"],
+                                        __file__, hide=True)
 
     def test_rst2html_deps(self):
         fLOG(
@@ -90,6 +94,8 @@ class TestRst2HtmlDeps(unittest.TestCase):
             with open(full, "r", encoding="utf-8") as f:
                 content = f.read()
             writer = "rst"
+            content = content.replace(
+                "from ensae_teaching", "from src.ensae_teaching")
             text = rst2html(content, outdir=temp, writer=writer,
                             imgmath_latex_preamble=preamble, layout="sphinx",
                             extlinks=dict(issue=('https://link/%s',
