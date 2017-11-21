@@ -573,30 +573,10 @@ Contenu
 Git Clone
 +++++++++
 
-::
+.. runpython::
+    :showcode:
 
-    if not exist actuariat_python           git clone https://github.com/sdpython/actuariat_python.git
-    if not exist code_beatrix               git clone https://github.com/sdpython/code_beatrix.git
-    if not exist cpyquickhelper             git clone https://github.com/sdpython/code_beatrix.git
-    if not exist ensae_projects             git clone https://github.com/sdpython/ensae_projects.git
-    if not exist ensae_teaching_cs          git clone https://github.com/sdpython/ensae_teaching_cs.git
-    if not exist jupytalk                   git clone https://github.com/sdpython/jupytalk.git
-    if not exist jyquickhelper              git clone https://github.com/sdpython/jyquickhelper.git
-    if not exist lightmlboard               git clone https://github.com/sdpython/lightmlboard.git
-    if not exist lightmlrestapi             git clone https://github.com/sdpython/lightmlrestapi.git
-    if not exist mlinsights                 git clone https://github.com/sdpython/mlinsights.git
-    if not exist mlstatpy                   git clone https://github.com/sdpython/mlstatpy.git
-    if not exist pandas_streaming           git clone https://github.com/sdpython/pandas_streaming.git
-    if not exist pyensae                    git clone https://github.com/sdpython/pyensae.git
-    if not exist pymmails                   git clone https://github.com/sdpython/pymmails.git
-    if not exist pymyinstall                git clone https://github.com/sdpython/pymyinstall.git
-    if not exist pyquickhelper              git clone https://github.com/sdpython/pyquickhelper.git
-    if not exist pyrsslocal                 git clone https://github.com/sdpython/pyrsslocal.git
-    if not exist pysqllike                  git clone https://github.com/sdpython/pysqllike.git
-    if not exist pythonnet3                 git clone https://github.com/sdpython/pythonnet3.git
-    if not exist python3_module_template    git clone https://github.com/sdpython/python3_module_template.git
-    if not exist teachpyx                   git clone https://github.com/sdpython/teachpyx.git
-    if not exist tkinterquickhelper         git clone https://github.com/sdpython/tkinterquickhelper.git
-
-    if not exist myblog                     git clone https://github.com/sdpython/myblog.git
-    if not exist thesis_handwriting         git clone https://github.com/sdpython/thesis_handwriting.git
+    from ensae_teaching_cs.automation import get_teaching_modules
+    pattern = 'if not exist {0} it clone https://github.com/sdpython/{0}.git'
+    modules = get_teaching_modules() + ['myblog', 'thesis_handwriting', '_automation']
+    print('\n'.join(pattern.format(_) for _ in sorted(modules)))

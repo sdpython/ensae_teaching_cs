@@ -7,6 +7,7 @@ import sys
 import os
 from pyquickhelper.filehelper import TransferFTP, FileTreeNode, FolderTransferFTP
 from pyquickhelper.filehelper.ftp_transfer_files import content_as_binary as pqh_content_as_binary
+from .teaching_modules import get_teaching_modules
 
 
 def trigger_on_specific_strings(content, filename=None, force_allow=None):
@@ -202,28 +203,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                              rootw="/www/htdocs/app/%s/%s",
                              rootw2="/lesenfantscodaient.fr", folder_status=".",
                              layout=[("html", "helpsphinx")],
-                             modules=["pyquickhelper",
-                                      "cpyquickhelper",
-                                      "jyquickhelper",
-                                      "tkinterquickhelper",
-                                      "pyensae",
-                                      "pymyinstall",
-                                      "pysqllike",
-                                      "pyrsslocal",
-                                      "pymmails",
-                                      "python3_module_template",
-                                      "actuariat_python",
-                                      "code_beatrix",
-                                      "ensae_projects",
-                                      "jupytalk",
-                                      "mlstatpy",
-                                      "teachpyx",
-                                      "pandas_streaming",
-                                      "ensae_teaching_cs",
-                                      "lightmlboard",
-                                      "lightmlrestapi",
-                                      "mlinsights",
-                                      ],
+                             modules=None,
                              password=None,
                              force_allow=None,
                              suffix=("_UT_%d%d_std" % sys.version_info[:2],),
@@ -239,7 +219,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
     @param      rootw           root on ftp site
     @param      rootw2          root for ``lesenfantscodaient.fr``
     @param      folder_status   folder status
-    @param      modules         list of modules to publish
+    @param      modules         list of modules to publish, if None, use @see fn get_teaching_modules
     @param      password        if None, if will asked
     @param      layout          last part of the folders
     @param      suffix          suffixes to append to the project name
@@ -275,6 +255,9 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
     import os
     from tkinterquickhelper.funcwin import open_window_params
     from ensae_teaching_cs.automation.ftp_publish_helper import publish_documentation
+
+    if modules is None:
+        modules = get_teaching_modules()
 
     if google_id is None:
         google_id = ""
