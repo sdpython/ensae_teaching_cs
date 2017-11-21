@@ -13,7 +13,7 @@ def get_teaching_modules():
         :showcode:
 
         from ensae_teaching_cs.automation import get_teaching_modules
-        print('\n'.join(sorted(get_teaching_modules())))
+        print('\\n'.join(sorted(get_teaching_modules())))
     """
     return ["pyquickhelper", "jyquickhelper", "python3_module_template",
             "pymmails", "pymyinstall", "pyensae", "pyrsslocal", "pysqllike", "ensae_projects",
