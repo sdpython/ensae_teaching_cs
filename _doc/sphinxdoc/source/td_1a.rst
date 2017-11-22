@@ -430,7 +430,9 @@ Intervenants
 ============
 
 * *2016-2017* :
-  Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_ *(professeur)*
+  Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_ *(professeur)*,
+  Benjamin Donnot, `Lucie Neirac <http://www.laneas.com/lucie-neirac>`_,
+  Marc-Antoine Weisser, `Supélec <http://www.supelec.fr/>`_
 
 * *2015-2016* :
   Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_ *(professeur)*,
