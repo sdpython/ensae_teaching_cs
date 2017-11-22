@@ -671,10 +671,16 @@ y a quelques avancées sur le sujet :
 * :ref:`210ConvolutionMNISTrst`
 * :ref:`300ConvolutionCIFAR10rst`
 
-*Tutorials*
+*Tutorials et anti-sèches*
 
 * `Companion Jupyter notebooks for the book "Deep Learning with Python" <https://github.com/fchollet/deep-learning-with-python-notebooks>`_
   (avec :epkg:`keras`)
+* `Keras Tutorial <https://github.com/tgjeon/Keras-Tutorials>`_
+* `Keras Cheat Sheet <https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Keras_Cheat_Sheet_Python.pdf>`_
+* `pytorch tutorials <http://pytorch.org/tutorials/>`_ (officiel)
+* `pytorch tutorials <https://github.com/yunjey/pytorch-tutorial>`_ (tout en moins de 30 lignes),
+  l'exemple `pytorch basics <https://github.com/yunjey/pytorch-tutorial/blob/master/tutorials/01-basics/pytorch_basics/main.py>`_
+* `PyTorch Cheat Sheet <https://github.com/bfortuner/pytorch-cheatsheet/blob/master/pytorch-cheatsheet.ipynb>`_
 
 *Code*
 
@@ -785,6 +791,7 @@ d'un réseau de neurones profond complet sur une grande bases de données.
 *Notebooks*
 
 * `Transfer Learning <https://github.com/sdpython/2017_deeplearning_demo/blob/master/Fine_Tuning_Deep_CNNs_with_GPU_rendered.ipynb>`_ (Olivier Grisel)
+* `Search images with deep learning <http://www.xavierdupre.fr/app/mlinsights/helpsphinx/notebooks/search_images.html#searchimagesrst>`_
 
 *Lectures - introduction*
 
@@ -1547,4 +1554,3 @@ Notebooks
 *Keras*
 
 * `Using a pre-trained convnet <https://github.com/fchollet/deep-learning-with-python-notebooks/blob/master/5.3-using-a-pretrained-convnet.ipynb>`_
-* ` <https://github.com/sdpython/2017_deeplearning_demo/blob/master/Fine_Tuning_Deep_CNNs_with_GPU_rendered.ipynb>`_

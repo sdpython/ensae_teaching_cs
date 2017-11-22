@@ -88,7 +88,7 @@ class TestVideoHelper(unittest.TestCase):
             os.environ["PYTHONPATH"] = ""
             if "success" not in out:
                 raise Exception(
-                    "CMD:\n{0}\nOUT:\n{1}".format(os.path.split(__file__)[-1], out))
+                    "CMD:\n{0}\nOUT:\n{1}\nPYTHONPATH={2}".format(os.path.split(__file__)[-1], out, fold))
 
 
 if __name__ == "__main__":
