@@ -201,6 +201,11 @@ Glossaire
         :ref:`Qu'est-ce qu'un type immuable ou immutable ? <faq-py-immutable>`,
         :ref:`question_1A_2014_1`.
 
+    Information bottleneck method
+        `Information bottleneck method <https://en.wikipedia.org/wiki/Information_bottleneck_method>`_,
+        outils mathématiques pour réduire la complexité d'un modèle de machine learning
+        tout en conservant de bonnes performances. Voir :ref:`l-interpretabilite-ml`.
+
     Internet Of Things
         Voir `Internet des Objets <https://fr.wikipedia.org/wiki/Internet_des_objets>`_.
         Les objets qui nous entourent enregistrent des données et en retour nous permettent

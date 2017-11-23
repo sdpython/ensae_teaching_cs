@@ -301,7 +301,6 @@ ici :
 
     notebooks/_gs2a_ensae_sklearn
     specials/machine_learning
-    notebooks/ml_features_model
     notebooks/td2a_eco_regressions_lineaires
 
 *Notebooks*
@@ -327,6 +326,7 @@ ici :
 *Livres*
 
 * `Python Data Science Handbook <https://github.com/jakevdp/PythonDataScienceHandbook>`_
+* `The Elements of Statistical Learning <https://web.stanford.edu/~hastie/ElemStatLearn/>`_ : la bible que tout le monde recommande :
 
 *Modules*
 
@@ -336,13 +336,69 @@ ici :
 
 .. _l-td2a-ml-extensions:
 
-Pratique du machine learning, problème de données
-+++++++++++++++++++++++++++++++++++++++++++++++++
+De la théorie à la pratique
++++++++++++++++++++++++++++
 
-.. toctree::
-    :maxdepth: 2
+Tous les modèles proposées répondent à un problème d'optimisation
+et convergent avec un algorithme donnée et avec des hypothèses
+précises sur les données. Dans la plupart des cas, ces hypothèses
+ne sont jamais vérifiées. Malgré tout, on continue à utiliser
+le machine learning parce qu'il marche plutôt bien même si les
+hypothèses initiales ne sont pas vérifiées mais connaître la
+façon dont sont construits ces modèles aide à construire
+une liste de recettes qui améliorent leur performances et qui
+accélèrent le moment où le problème devient vraiment intéressant.
+Deux ou trois petits à garder à l'esprit.
 
-    questions/some_ml
+Les réseaux de neurones s’apprennent avec des méthodes de d’optimisation
+basées sur le **gradient**. Elles n’aiment pas les **échelles logarithmiques**.
+Les variables de type fréquences (nombre de clics sur une page, nombre d’occurence
+d’un mot, ...) ont des queues épaisses et quelques valeurs extrêmes,
+il est conseillé de normaliser et de passer à une échelle logarithmique.
+Elles n'aiment pas les **gradients élevés** : le gradient peut avoir une valeur très élevée
+dan un voisinage localisée (un regression proche d’une fonction en escalier),
+l’optimisation à base de gradient mettra beaucoup de temps à converger.
+Elles n'aiment pas les **variables discrètes** : le calcul du gradient fonctionne beaucoup
+mieux sur des variables continues plutôt que des variables discrètes
+car cela limite le nombre de valeurs que peut prendre le gradient.
+
+Les forêts aléatoires  et les arbres de décision sont des méthodes ensemblistes.
+Elles n'utilisent pas de gradient. Elles ne sont pas sensibles à la
+**normalisation**, comme ces modèles sont des assemblages de décisions basées sur
+des seuils, ils ne sont pas sensibles aux changements d’échelle. En revanche, elles
+n'aiment pas trop pas **décisions obliques**, comme un seuil s’applique sur une variable,
+il ne peut approcher une droite *x + y = 1* qu’avec une fonction en escalier
+(lire `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_).
+Ces algorithms n'aiment pas non plus les problèmes **multi-classe**.
+Pour un assemblage de fonction binaire (au dessus ou en dessous du seuil),
+il est plus facile d’avoir seulement deux choix.
+On compense cette lacune avec deux stratégies
+`one versus rest <https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest>`_
+ou `one versus one <https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-one>`_
+(stratégie dite aussi `pair-wise <https://en.wikipedia.org/wiki/Learning_to_rank#Pairwise_approach>`_).
+
+Le boosting <https://en.wikipedia.org/wiki/Boosting_(machine_learning)>`_ est une technique de machine learning qui consiste à sur-pondérer
+les erreurs. Pour un algorithme d'apprentissage itératif, cela consiste à donner
+plus de poids à l'itération *n* aux erreurs produites par l'itération *n-1*.
+L'algorithme le plus connu est `AdaBoost <https://en.wikipedia.org/wiki/AdaBoost>`_.
+Le `gradient boosting <https://en.wikipedia.org/wiki/Gradient_boosting>`_ est
+l'application de ce concept à un modèle et une fonction d'erreur dérivable.
+A ce sujet : `The Boosting Approach to Machine Learning An Overview <https://www.cs.princeton.edu/picasso/mats/schapire02boosting_schapire.pdf>`_,
+`A Theory of Multiclass Boosting <http://rob.schapire.net/papers/multiboost-journal.pdf>`_,
+`weak learner <https://stats.stackexchange.com/questions/82049/what-is-meant-by-weak-learner>`_.
+
+`XGBoost <http://xgboost.readthedocs.io/>`_
+est un librairie qui a bénéficié de nombreux apports au fur et à
+mesure des compétitions `Kaggle <https://www.kaggle.com/>`_
+qu'elle a permis de gagner. Certains paramètres qui pilotent l'apprentissage
+du modèle ne sont pas issus de la théorie mais de la pratique
+et permettent de contourner un problème de données qui ferait
+échouer l'apprentissage :
+`paramètres de XGBoost <https://github.com/dmlc/xgboost/blob/master/doc/parameter.md>`_.
+C'est le cas du paramètre *scale_pos_weight* qui permet de forcer une distribution
+des labels de sortie dans le cas d'un problème de classification binaire.
+C'est utile dans le cas d'un problème
+de :ref:`l-imbalanced-classification`.
 
 *Notebooks*
 
@@ -362,6 +418,8 @@ Pratique du machine learning, problème de données
 * `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
 * `A Unified Approach to Learning Task-Specific Bit Vector Representations for Fast Nearest Neighbor Search <http://www.cs.toronto.edu/~vnair/www12.pdf>`_
 * `On the Mutual Nearest Neighbors Estimate in Regression <http://www.jmlr.org/papers/volume14/guyader13a/guyader13a.pdf>`_
+* `The Boosting Approach to Machine Learning An Overview <https://www.cs.princeton.edu/picasso/mats/schapire02boosting_schapire.pdf>`_,
+* `A Theory of Multiclass Boosting <http://rob.schapire.net/papers/multiboost-journal.pdf>`_
 
 `JMLR <http://www.jmlr.org/>`_
 poste régulièrement des articles sur des librairies de machine learning open source telles que
@@ -371,21 +429,6 @@ poste régulièrement des articles sur des librairies de machine learning open s
 
 * `XGBoost: A Scalable Tree Boosting System <https://arxiv.org/pdf/1603.02754.pdf>`_
 * `On the Influence of Momentum Acceleration on OnlineLearning <http://www.jmlr.org/papers/volume17/16-157/16-157.pdf>`_
-
-*Imbalanced*
-
-* `Classification of Imbalanced Data with a Geometric Digraph Family <http://www.jmlr.org/papers/volume17/15-604/15-604.pdf>`_
-* `RUSBoost: A Hybrid Approach to Alleviating Class Imbalance <http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=9260A5C92AC5F8FA3B8590A53A06248D?doi=10.1.1.309.2305&rep=rep1&type=pdf>`_
-* `RAMOBoost: Ranked Minority Oversampling in Boosting <https://ai2-s2-pdfs.s3.amazonaws.com/9640/1540d5d8c4d5d956ae5fa487590dd8682507.pdf>`_
-
-.. index:: multilabel
-
-*Multilabel*
-
-* `A Ranking-based KNN Approach for Multi-Label Classification <http://www.jmlr.org/proceedings/papers/v25/chiang12/chiang12.pdf>`_
-* `Classification by Selecting Plausible Formal Concepts in a Concept Lattice <http://ceur-ws.org/Vol-977/paper5.pdf>`_
-* `Large-scale Multi-label Learning with Missing Labels <http://jmlr.org/proceedings/papers/v32/yu14.pdf>`_
-* `Multiclass-Multilabel Classification with More Classes than Examples <http://www.jmlr.org/proceedings/papers/v9/dekel10a/dekel10a.pdf>`_
 
 *Digressions*
 
@@ -401,10 +444,74 @@ poste régulièrement des articles sur des librairies de machine learning open s
 * `statsmodels <http://statsmodels.sourceforge.net/>`_
 * `xgboost <https://xgboost.readthedocs.io/en/latest/>`_
 * `mlxtend <https://github.com/rasbt/mlxtend>`_
-* `imbalanced-learn <https://github.com/scikit-learn-contrib/imbalanced-learn>`_
-  (la documentation est intéressante)
+
+|pyecopng| |pystatpng|
+
+.. _l-imbalanced-classification:
+
+Imbalanced classification
++++++++++++++++++++++++++
+
+.. index:: imbalanced, mal-balancé
+
+Imbalanced, mal balancé, skewed, ce type de problème de données
+est très fréquent. Il signifie qu'une classe dans un problème de classification
+est sous-représentée par rapport aux autres et que le modèle de machine
+learning n'est pas suffisamment pénalisé s'il n'en tient pas compte.
+Le cas classique est un problème à deux classes, une majoritaire à 99%,
+une minoritaire à 1%. Un modèle qui répond toujours la majorité est correct
+99% du temps mais il n'a rien appris puisque sa réponse est constante.
+Comment le forcer à apprendre quelque chose ? Il existe trois types approches
+et la réponse est souvent un mélange des trois :
+
+* *boosting* : le modèle pondère davantage les exemples sur lesquels il fait
+  des erreurs, a fortiori, les exemples de la classe minoritaire
+* *over sampling* : on multiplie les exemples de la classe minoritaire
+  de façon à lui donner plus de poids
+* *under sampling* : on réduit le nombre d'exemples de la classe majoritaire
+  sans altérer la capacité du modèle à trouver une bonne solution, cela consiste
+  à enlever des exemples loin de la frontière de classification.
+
+*Notebooks*
+
+.. toctree::
+    :max_depth: 2
+
+    notebooks/_gs2a_ml_imbalanced
+
+*Lectures*
+
+* `Classification of Imbalanced Data with a Geometric Digraph Family <http://www.jmlr.org/papers/volume17/15-604/15-604.pdf>`_
+* `RUSBoost: A Hybrid Approach to Alleviating Class Imbalance <http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=9260A5C92AC5F8FA3B8590A53A06248D?doi=10.1.1.309.2305&rep=rep1&type=pdf>`_
+* `RAMOBoost: Ranked Minority Oversampling in Boosting <https://ai2-s2-pdfs.s3.amazonaws.com/9640/1540d5d8c4d5d956ae5fa487590dd8682507.pdf>`_
 * `ND DIAL: Imbalanced Algorithms <https://github.com/dialnd/imbalanced-algorithms>`_
 * `rusboost.py <https://github.com/harusametime/RUSBoost>`_ (plutôt un bout de code)
+* `xgboost <https://xgboost.readthedocs.io/en/latest/>`_
+* `Boosting and AdaBoost for Machine Learning <https://machinelearningmastery.com/boosting-and-adaboost-for-machine-learning/>`_,
+  `A Gentle Introduction to the Gradient Boosting Algorithm for Machine Learning <https://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/>`_,
+  `Thoughts on Hypothesis Boosting <https://www.cis.upenn.edu/~mkearns/papers/boostnote.pdf>`_,
+  `Predictions Games and Arcing Algorithms <https://www.stat.berkeley.edu/~breiman/games.pdf>`_
+
+*Modules*
+
+* `imbalanced-learn <https://github.com/scikit-learn-contrib/imbalanced-learn>`_
+  (la documentation est intéressante)
+
+|pyecopng| |pystatpng|
+
+.. index:: multilabel
+
+Classification Multi-label
+++++++++++++++++++++++++++
+
+*à venir*
+
+*Lectures*
+
+* `A Ranking-based KNN Approach for Multi-Label Classification <http://www.jmlr.org/proceedings/papers/v25/chiang12/chiang12.pdf>`_
+* `Classification by Selecting Plausible Formal Concepts in a Concept Lattice <http://ceur-ws.org/Vol-977/paper5.pdf>`_
+* `Large-scale Multi-label Learning with Missing Labels <http://jmlr.org/proceedings/papers/v32/yu14.pdf>`_
+* `Multiclass-Multilabel Classification with More Classes than Examples <http://www.jmlr.org/proceedings/papers/v9/dekel10a/dekel10a.pdf>`_
 
 |pyecopng| |pystatpng|
 

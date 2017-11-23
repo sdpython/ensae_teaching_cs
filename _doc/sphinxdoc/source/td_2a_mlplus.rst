@@ -401,6 +401,8 @@ une nécessité. Quelques idées de recherche :
   par rapport aux variables, voir `Isotonic Regression <https://en.wikipedia.org/wiki/Isotonic_regression>`_.
 * Apprendre un **second modèle dédié à l'interprétation**,
   voir `Making Tree Ensembles Interpretable <https://arxiv.org/pdf/1606.05390v1.pdf>`_.
+* **Contenir la complexité des modèles**,
+  voir `The information bottleneck method <https://arxiv.org/pdf/physics/0004057.pdf>`_
 * **Visualiser** la décision.
 
 *Notebooks*
@@ -455,6 +457,13 @@ une nécessité. Quelques idées de recherche :
 * `Scorpion: Explaining Away Outliers in Aggregate Queries <http://sirrice.github.io/files/papers/scorpion-vldb13.pdf>`_
 * `Outlier Detection Techniques <https://www.siam.org/meetings/sdm10/tutorial3.pdf>`_,
   `abod.py <https://github.com/MarinYoung4596/OutlierDetection/tree/master/OutlierDetection/Python%20Implementation>`_
+
+*Lectures : information bottleneck
+
+* `Information bottleneck method <https://en.wikipedia.org/wiki/Information_bottleneck_method>`_ (wikipédia)
+* `The information bottleneck method <https://arxiv.org/pdf/physics/0004057.pdf>`_
+* `Deep Learning and the Information Bottleneck Principle <https://arxiv.org/pdf/1503.02406.pdf>`_
+* `Opening the black box of Deep Neural Networks via Information <https://arxiv.org/pdf/1703.00810.pdf>`_
 
 *Modules*
 
@@ -818,6 +827,7 @@ d'un réseau de neurones profond complet sur une grande bases de données.
 * `Unsupervised dimensionality reduction via gradient-based matrix factorization with two adaptive learning rates <http://www.jmlr.org/proceedings/papers/v27/nikulin12a/nikulin12a.pdf>`_
 * `Transferability in Machine Learning: from Phenomena to Black-Box Attacks using Adversarial Samples <https://arxiv.org/abs/1605.07277>`_
 * `Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data <https://arxiv.org/abs/1610.05755>`_
+* `Knowledge Concentration: Learning 100K Object Classifiers in a Single CNN <https://arxiv.org/pdf/1711.07607.pdf>`_
 
 *Lectures - hors nn*
 
