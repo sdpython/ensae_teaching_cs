@@ -6,6 +6,7 @@ import os
 import re
 from pyquickhelper.loghelper import noLOG
 from pyquickhelper.jenkinshelper import setup_jenkins_server_yml
+from .teaching_modules import get_teaching_modules
 
 
 def engines_default(prefix="c:\\", prefix_python="c:\\", prefix_conda="c:\\"):
@@ -64,11 +65,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
     """
     yml = []
     pattern = "https://raw.githubusercontent.com/sdpython/%s/master/.local.jenkins.win.yml"
-    modules = ["_automation", "pyquickhelper", "jyquickhelper", "python3_module_template",
-               "pymmails", "pymyinstall", "pyensae", "pyrsslocal", "pysqllike", "ensae_projects",
-               "ensae_teaching_cs", "code_beatrix", "actuariat_python", "mlstatpy", "jupytalk",
-               "teachpyx", "tkinterquickhelper", "cpyquickhelper", "pandas_streaming",
-               "lightmlboard", "lightmlrestapi", "mlinsights"]
+    modules = ["_automation"] + get_teaching_modules()
     for c in modules:
         yml.append(pattern % c)
 

@@ -290,6 +290,28 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
+    * - `pyenbc <http://www.xavierdupre.fr/app/pyenbc/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/pyenbc.svg?branch=master
+            :target: https://travis-ci.org/sdpython/pyenbc
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/scv9gmggw7qc462i?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/pyenbc
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/pyenbc/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/pyenbc/tree/master
+      - .. image:: https://badge.fury.io/py/pyenbc.svg
+            :target: http://badge.fury.io/py/pyenbc
+      - .. image:: http://img.shields.io/pypi/pyversions/pyenbc.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/pyenbc
+      - .. image:: https://badge.waffle.io/sdpython/pyenbc.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/pyenbc
+      - .. image:: https://codecov.io/github/sdpython/pyenbc/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/pyenbc?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/pyenbc/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/pyenbc/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/pyensae.svg?branch=master
             :target: https://travis-ci.org/sdpython/pyensae
@@ -529,10 +551,11 @@ Outils
     * - `pandas_streaming <http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/index.html>`_
       - Utilisation de :epkg:`pandas` pour opérer sur des fichiers qui ne tiennent pas
         en mémoire en implémentant des algorithmes de streaming.
+    * - `pyenbc <http://www.xavierdupre.fr/app/pyenbc/helpsphinx/index.html>`_
+      - Automatisation des échanges avec un cluster HADOOP depuis un notebook.
     * - `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
       - Fonctionnalités uilisées par un ENSAE ou plus généralement pour un datascientist,
-        récupération de données, commandes magiques, échanges avec un cluster HADOOP
-        depuis un notebook, quelques graphes.
+        récupération de données, commandes magiques, quelques graphes.
     * - `python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
       - Modèle de module Python utilisé pour ce cours. C'est un module vide facile à adapter.
     * - `tkinterquickhelper <http://www.xavierdupre.fr/app/tkinterquickhelper/helpsphinx/index.html>`_

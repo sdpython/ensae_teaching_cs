@@ -38,6 +38,7 @@ psutil
 pycodestyle>=2.0.0
 pydocstyle
 pydub
+pyenbc
 pyensae
 pygal
 pygal_maps_fr

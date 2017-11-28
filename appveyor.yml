@@ -30,7 +30,7 @@ install:
   - "%PYTHON%\\Scripts\\pip install pycryptodome keyring"
   - "%PYTHON%\\Scripts\\pip install pymmails"
   - "%PYTHON%\\Scripts\\pip install pymyinstall jyquickhelper"
-  - "%PYTHON%\\Scripts\\pip install pyensae"
+  - "%PYTHON%\\Scripts\\pip install pyensae pyenbc"
   - "%PYTHON%\\Scripts\\pip install pyrsslocal"
   - "%PYTHON%\\Scripts\\pip install pygame"
   - "%PYTHON%\\Scripts\\pip install PyQt5"

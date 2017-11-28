@@ -202,7 +202,7 @@ if is_local() and "custom_left" not in sys.argv:
     logging_function = pyquickhelper.get_fLOG()
     from pyquickhelper.pycode import process_standard_options_for_setup
     logging_function(OutputPrint=True)
-    deps = ["pyquickhelper", "jyquickhelper", "pymmails", "pyensae",
+    deps = ["pyquickhelper", "jyquickhelper", "pymmails", "pyensae", "pyenbc",
             "pyrsslocal", "pymyinstall", "mlstatpy", "tkinterquickhelper",
             "pandas_streaming", "fairtest"]
     if "html1" in sys.argv:
@@ -373,7 +373,7 @@ if not r:
             package_data=package_data,
             install_requires=[
                 "pyquickhelper>=1.5.2259", "pyensae", "pymyinstall", "pymmails",
-                "scikit-learn", "pyrsslocal", "pandas", "numpy",
+                "scikit-learn", "pyrsslocal", "pandas", "numpy", "pyenbc",
                 "matplotlib", "jupyter", "mlstatpy"],
             # avoids downloading cvxopt (its installation is never easy)
             # extra_requires=["cvxopt"],
