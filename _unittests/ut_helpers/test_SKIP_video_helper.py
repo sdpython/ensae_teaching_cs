@@ -2,7 +2,12 @@
 @brief      test log(time=10s)
 
 """
-import re
+try:
+    import re
+except ImportError as e:
+    import enum
+    raise ImportError("Unable to import\nre:{0}-{1}\nenum:{2}-{3}".format(re.__version__, re.__file__,
+                                                                          enum.__version__, enum.__file__)) from e
 import os
 import sys
 import warnings
