@@ -6,7 +6,8 @@ try:
     import re
 except (ImportError, AttributeError) as e:
     import enum
-    raise ImportError("Unable to import re\nenum:{0}".format(enum.__file__)) from e
+    raise ImportError(
+        "Unable to import re\nenum:{0}".format(enum.__file__)) from e
 import os
 import sys
 import warnings

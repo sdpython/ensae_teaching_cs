@@ -1553,17 +1553,16 @@ Retail
 
 * `Data Mining Problems in Retail <https://highlyscalable.wordpress.com/2015/03/10/data-mining-problems-in-retail/>`_
 
-Traduction
-++++++++++
+Texte / Traduction
+++++++++++++++++++
 
 * `Neural Machine Translation (seq2seq) Tutorial <https://github.com/tensorflow/nmt>`_
-
-Texte
-+++++
-
 * `Representing Sentences as Low-Rank Subspaces <https://arxiv.org/abs/1704.05358v1>`_
 * `SQuAD: 100,000+ Questions for Machine Comprehension of Text <https://arxiv.org/abs/1606.05250>`_,
   cette compétition fera sans doute émerger la nouvelle version des moteurs de recherche.
+* `whatthelang <https://github.com/indix/whatthelang>`_ :
+  module Python pour reconnaître la langue d'un texte,
+  s'appuie sur :epkg:`FastText`
 
 Voiture autonome
 ++++++++++++++++
