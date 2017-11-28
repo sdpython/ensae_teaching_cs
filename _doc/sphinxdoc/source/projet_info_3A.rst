@@ -103,6 +103,7 @@ Suggestions d'articles
 * `A Parallel Matrix Scaling Algorithm <http://amestoy.perso.enseeiht.fr/doc/adru.pdf>`_
 * `Auto-Differentiating Linear Algebra <https://arxiv.org/pdf/1710.08717.pdf>`_
 * `Efficient Distributed Locality Sensitive Hashing <https://arxiv.org/abs/1210.7057>`_
+* `Parallel GPU Implementation of Iterative PCA Algorithms <https://arxiv.org/abs/0811.1081v1>`_
 
 Nous vous recommandons d'adopter la démarche suivante:
 

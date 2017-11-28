@@ -110,6 +110,13 @@ GPU
 * `No Bits Left Behind <http://sirrice.github.io/files/papers/bits-cidr11.pdf>`_ :
   l'article quelques stratégies bas-niveau pour optimiser les programmes
 
+*Modules*
+
+* `scikit-cuda <http://scikit-cuda.readthedocs.io/en/latest/index.html>`_
+* `pycuda <https://developer.nvidia.com/pycuda>`_
+* `numbapro <http://docs.continuum.io/numbapro/>`_
+  (voir `A Monte Carlo Option Pricer <http://nbviewer.jupyter.org/gist/harrism/835a8ca39ced77fe751d>`_)
+
 Autres que CPU, GPU
 +++++++++++++++++++
 
@@ -512,7 +519,6 @@ Bibliographie
 * `MLlib <https://spark.apache.org/mllib/>`_ : distributed machine learning for Spark
 * `Parquet <http://parquet.apache.org/>`_ : Apache Parquet is a columnar storage format available to any project in the Hadoop ecosystem.
 * `Presto <https://prestodb.io/>`_ : Distributed SQL Query Engine for Big Data (Facebook)
-* `pyCUDA <https://developer.nvidia.com/pycuda>`_ (`A Monte Carlo Option Pricer <http://nbviewer.jupyter.org/gist/harrism/835a8ca39ced77fe751d>`_ avec `numbapro <http://docs.continuum.io/numbapro/>`_)
 * `Spark <https://spark.apache.org/>`_ :  Map Reduce, minimise les accès disques, (`DPark <https://github.com/douban/dpark>`_ clone Python de Spark)
 * `Spark SQL <https://spark.apache.org/sql/>`_ : SQL distribué, sur couche de Spark
 * `Storm <https://storm.apache.org/>`_ : Apache Storm is a free and open source distributed realtime computation system, conçu pour distribuer des pipelines de traitements de données
