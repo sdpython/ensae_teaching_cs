@@ -4,7 +4,7 @@
 """
 try:
     import re
-except ImportError as e:
+except (ImportError, AttributeError) as e:
     import enum
     raise ImportError("Unable to import\nenum:{2}-{3}".format(enum.__version__, enum.__file__)) from e
 import os
