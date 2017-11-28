@@ -4,7 +4,6 @@
 """
 import os
 import sys
-import unittest
 import warnings
 
 
@@ -39,14 +38,14 @@ except ImportError:
 
 
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, is_virtual_environment, run_base_script
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, is_virtual_environment, run_base_script, ExtTestCase
 from src.ensae_teaching_cs.helpers.video_helper import make_video
 
 
 context = {}
 
 
-class TestVideoHelper(unittest.TestCase):
+class TestVideoHelper(ExtTestCase):
 
     def test_make_video(self):
         """
@@ -89,12 +88,3 @@ class TestVideoHelper(unittest.TestCase):
             if "success" not in out:
                 raise Exception(
                     "CMD:\n{0}\nOUT:\n{1}\nPYTHONPATH={2}".format(os.path.split(__file__)[-1], out, fold))
-
-
-if __name__ == "__main__":
-
-    if "--force" in sys.argv:
-        context["--force"] = True
-        del sys.argv[sys.argv.index('--force')]
-
-    unittest.main()
