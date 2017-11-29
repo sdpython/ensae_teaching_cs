@@ -217,23 +217,11 @@ Désinstallation des modules implémentés pour ce cours
 Il est possible de désinstaller simplement les modules installés pour
 ces enseignements ::
 
-    pip uninstall -y actuariat_python
-    pip uninstall -y code_beatrix
-    pip uninstall -y cpyquickhelper
-    pip uninstall -y ensae_projects
-    pip uninstall -y ensae_teachings_cs
-    pip uninstall -y jupytalk
-    pip uninstall -y jyquickhelper
-    pip uninstall -y mlstatpy
-    pip uninstall -y pandas_streaming
-    pip uninstall -y pyensae
-    pip uninstall -y pymmails
-    pip uninstall -y pymyinstall
-    pip uninstall -y pyquickhelper
-    pip uninstall -y pyrsslocal
-    pip uninstall -y pysqllike
-    pip uninstall -y tkinterquickhelper
-    pip uninstall -y teachpyx
+.. runpython::
+
+    from ensae_teaching_cs.automation.teaching_modules import get_teaching_modules
+    for mod in sorted(get_teaching_modules()):
+        print('pip uninstall -y {}'.format(mod))
 
 Configuration pour ces cours
 ++++++++++++++++++++++++++++

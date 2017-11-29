@@ -4,6 +4,7 @@
 """
 import os
 import re
+import sys
 from pyquickhelper.loghelper import noLOG
 from pyquickhelper.jenkinshelper import setup_jenkins_server_yml
 from .teaching_modules import get_teaching_modules
@@ -18,7 +19,7 @@ def find_python(pattern="Python[0-9]{3}_x64", root="/"):
     @param      root        folder when to look for Python
     @return                 path found
     """
-    if os.platform.startswith("win"):
+    if sys.platform.startswith("win"):
         root = root.replace("/", "\\")
     reg = re.compile(pattern)
     possible = os.listdir(root)
@@ -49,7 +50,7 @@ def engines_default(prefix="c:\\", prefix_python="c:\\", prefix_conda="c:\\"):
                py36=os.path.join(prefix_python, find_python()),
                py35=os.path.join(prefix_python, "Python35_x64"),
                py27=os.path.join(prefix_python, "Python27_x64"),
-               default=os.path.join(prefix_python, "Python36_x64"),
+               default=os.path.join(prefix_python, find_python()),
                winpython=os.path.join(
                    prefix_python, "WinPython36_x64", "python-3.6.3.amd64"),
                Python35pyq=os.path.join(
