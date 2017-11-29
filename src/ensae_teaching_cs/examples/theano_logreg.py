@@ -240,7 +240,7 @@ def theano_load_data(dataset):
 
 def theano_sgd_optimization_mnist(saved_model, dataset, learning_rate=0.13, n_epochs=1000, batch_size=600, fLOG=noLOG):
     """
-    Demonstrate stochastic gradient descent optimization of a log-linear
+    Demonstrates stochastic gradient descent optimization of a log-linear
     model. This is demonstrated on MNIST.
 
     :type learning_rate: float
@@ -256,6 +256,8 @@ def theano_sgd_optimization_mnist(saved_model, dataset, learning_rate=0.13, n_ep
     :param saved_model: filename used to saved the model
     :param fLOG: logging function
 
+    :type batch_size: int
+    :param batch_size: batch size
     """
     datasets = theano_load_data(dataset)
 

@@ -9,6 +9,27 @@ from pyquickhelper.jenkinshelper import setup_jenkins_server_yml
 from .teaching_modules import get_teaching_modules
 
 
+def find_python(pattern="Python[0-9]{3}_x64", root="/"):
+    """
+    Finds a path containing :epkg:`Python` from the root.
+    Takes the highest one.
+
+    @param      pattern     pattern to find
+    @param      root        folder when to look for Python
+    @return                 path found
+    """
+    if os.platform.startswith("win"):
+        root = root.replace("/", "\\")
+    reg = re.compile(pattern)
+    possible = os.listdir(root)
+    possible.sort(reverse=True)
+    for pos in possible:
+        if reg.search(pos):
+            return os.path.join(root, pos)
+    raise FileNotFoundError(
+        "Unable to find a path with the regular expression '{0}'".format(pattern))
+
+
 def engines_default(prefix="c:\\", prefix_python="c:\\", prefix_conda="c:\\"):
     """
     Returns a dictionary with default values for a :epkg:`Jenkins` server.
@@ -25,12 +46,12 @@ def engines_default(prefix="c:\\", prefix_python="c:\\", prefix_conda="c:\\"):
     """
     res = dict(anaconda2=os.path.join(prefix_conda, "Anaconda2"),
                anaconda3=os.path.join(prefix_conda, "Anaconda3"),
-               py36=os.path.join(prefix_python, "Python36_x64"),
+               py36=os.path.join(prefix_python, find_python()),
                py35=os.path.join(prefix_python, "Python35_x64"),
                py27=os.path.join(prefix_python, "Python27_x64"),
                default=os.path.join(prefix_python, "Python36_x64"),
                winpython=os.path.join(
-                   prefix_python, "WinPython36_x64", "python-3.6.2.amd64"),
+                   prefix_python, "WinPython36_x64", "python-3.6.3.amd64"),
                Python35pyq=os.path.join(
                    prefix, "jenkins", "venv", "py35", "pyq", "Scripts"),
                Python36pyq=os.path.join(prefix, "jenkins", "venv", "py36", "pyq", "Scripts"))

@@ -104,8 +104,8 @@ il faut revenir à l'essentiel : un `éditeur de texte <https://fr.wikipedia.org
 
 * `Emacs <https://www.gnu.org/software/emacs/>`_
 * `nano <https://www.nano-editor.org/>`_ (linux)
-* `Notepad++ <https://notepad-plus-plus.org/>`_
-* `SciTe <http://www.scintilla.org/SciTE.html>`_, le plus simple et le plus léger,
+* :epkg:`Notepad++`
+* :epkg:`SciTE`, le plus simple et le plus léger,
   lire cet article pour le configurer
   `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_.
 
@@ -389,10 +389,10 @@ il arrive que certains mots de passe soient interceptés.
 
 *Editeur de texte*
 
-* `SciTE <http://www.scintilla.org/SciTE.html>`_ : le plus simple, pas d'explorateur de fichier, pas d'installeur, autocomplétion perturbante
+* :epkg:`SciTE` : le plus simple, pas d'explorateur de fichier, pas d'installeur, autocomplétion perturbante
 * `TextWrangler <http://www.barebones.com/products/textwrangler/>`_ (seulement sur iOS - Apple)
 * `SublimeText <http://www.sublimetext.com/>`_ : configuration nécessaire avant d'exécuter un script python
-* `NotePad++ <http://notepad-plus-plus.org/fr/>`_ : configuration nécessaire avant d'exécuter un script python
+* :epkg:`Notepad++` : configuration nécessaire avant d'exécuter un script python
 
 *IDE*
 
@@ -495,7 +495,7 @@ Setup pour déveloper ce cours (Windows)
 * `Python <https://www.python.org/>`_ 3.5, 3.6, 2.7 64 bit
   (il ne faut pas ajouter les interpréteur au PATH par défaut)
 * `R 3.2.2 <https://cran.r-project.org/bin/windows/base/old/3.2.2/>`_
-* `Scite <http://www.scintilla.org/SciTE.html>`_
+* :epkg:`SciTE`
 * `mingw-w64 <https://mingw-w64.org/doku.php>`_ (:epkg:`theano`)
   (voir :ref:`Installer theano et un compilateur C++ <blog-install-theno-keras>`)
 * `Visual Studio 2015 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_

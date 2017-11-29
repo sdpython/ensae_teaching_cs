@@ -19,7 +19,7 @@
     Il y a trois niveaux, 1A, 2A, 3A pour chaque année du cursus
     à l'ENSAE. Le contenu et indiqué par un code.
 
-    .. list-tables::
+    .. list-table::
         :row-headers: 1
         :widths: auto
 

@@ -94,8 +94,9 @@ def keras_build_mnist_model(nb_classes, fLOG=noLOG):
 def keras_fit(model, X_train, Y_train, X_test, Y_test, batch_size=128,
               nb_classes=None, nb_epoch=12, fLOG=noLOG):
     """
-    fits a keras model
+    Fits a :epkg:`keras` model.
 
+    @param      model       :epkg:`keras` model
     @param      X_train     training features
     @param      Y_train     training target
     @param      X_test      test features
@@ -114,8 +115,9 @@ def keras_fit(model, X_train, Y_train, X_test, Y_test, batch_size=128,
 
 def keras_predict(model, X_test, Y_test):
     """
-    prediction with a keras model
+    Prediction with a :epkg:`keras` model.
 
+    @param      model       :epkg:`keras` model
     @param      X_test      test features
     @param      Y_test      test target
     @return                 score

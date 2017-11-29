@@ -199,7 +199,7 @@ plt.legend(loc="lower right")
 # La courbe *Précision / Rappel* ne montre pas les scores même s'il intervient dans
 # chaque point de la courbe. Pour le faire apparaître, on utilise un graphe
 # où il est en abscisse.
-# La métrique `F1 <>`_
+# La métrique `F1 <http://scikit-learn.org/stable/modules/generated/sklearn.metrics.f1_score.html>`_
 # propose une pondération entre les deux :
 # :math:`F1 = 2 \frac{precision * rappel}{precision + rappel}`.
 
