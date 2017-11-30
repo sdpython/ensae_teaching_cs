@@ -60,7 +60,7 @@ class TestLongNotebookRunner2aML(unittest.TestCase):
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         from src.ensae_teaching_cs.data import simple_database
         temp = get_temp_folder(__file__, "temp_notebook2a_ml_deep")
-        keepnote = ls_notebooks("td2a_ml")
+        keepnote = ls_notebooks("td2a_deep")
         shutil.copy(simple_database(), temp)
 
         def filter(i, n):
