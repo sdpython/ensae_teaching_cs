@@ -7,6 +7,7 @@ virtualenv:
 install:
   - pip install --no-cache-dir --no-deps --index http://localhost:8067/simple/ pyquickhelper tkinterquickhelper pyensae pymmails pymyinstall pyrsslocal mlstatpy
   - pip install -r requirements.txt
+  - if exist _venv\lib\site-packages\enum\__init__.py pip uninstall -y enum34
   - pip freeze
   - pip freeze > pip_freeze.txt
 before_script:
