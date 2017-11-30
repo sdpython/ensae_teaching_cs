@@ -150,6 +150,9 @@ Compétitions Machine Learning
 * `datascience.net <http://www.datascience.net/fr/home/>`_
 * `kaggle <https://www.kaggle.com/>`_
 * `Data Challenges Paris <http://opendata.paris.fr/page/datachallenges/>`_
+* `Challenge Data (MVA) <https://challengedata.ens.fr/en/home>`_ :
+  compétitions supervisées par les professeurs du master
+  `MVA <http://math.ens-paris-saclay.fr/version-francaise/formations/master-mva/>`_.
 
 .. index:: meetup, Data Tuesday, Data For Good
 

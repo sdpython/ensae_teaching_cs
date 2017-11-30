@@ -131,6 +131,7 @@ epkg_dictionary["lightmlrestapi"] = 'http://www.xavierdupre.fr/app/lightmlrestpi
 epkg_dictionary["Linux"] = 'https://fr.wikipedia.org/wiki/Linux'
 epkg_dictionary["linux"] = 'https://fr.wikipedia.org/wiki/Linux'
 epkg_dictionary["mlinsights"] = 'http://www.xavierdupre.fr/app/mlinsights/helpsphinx/index.html'
+epkg_dictionary["mlprodict"] = 'http://www.xavierdupre.fr/app/mlprodict/helpsphinx/index.html'
 epkg_dictionary["matrice de confusion"] = "https://fr.wikipedia.org/wiki/Matrice_de_confusion"
 epkg_dictionary["miniconda"] = 'https://conda.io/miniconda.html'
 epkg_dictionary["notebook"] = 'http://jupyter.org/'

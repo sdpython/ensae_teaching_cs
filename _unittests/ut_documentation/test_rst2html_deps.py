@@ -86,7 +86,7 @@ class TestRst2HtmlDeps(unittest.TestCase):
         links = dict(jyquickhelper="http", pyquickhelper="http",
                      pymyinstall="http", Jenkins="http", docutils="http",
                      Jupyter="http", lightmlboard="zoo", lightmlrestapi="mll",
-                     mlinsights="mli")
+                     mlinsights="mli", mlprodict="mlp")
 
         for full in fulls:
             last = os.path.split(full)[-1]
@@ -105,6 +105,8 @@ class TestRst2HtmlDeps(unittest.TestCase):
             with open(ji, "w", encoding="utf-8") as f:
                 f.write(text)
             if "ERROR/" in text:
+                raise Exception(text)
+            if "git clone" not in text:
                 raise Exception(text)
 
 
