@@ -246,6 +246,28 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/mlinsights/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/mlinsights/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
+    * - :epkg:`mlprodict`
+      - .. image:: https://travis-ci.org/sdpython/mlprodict.svg?branch=master
+            :target: https://travis-ci.org/sdpython/mlprodict
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/g8chk1ufyk1m8uep?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/mlprodict
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/mlprodict/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/mlprodict/tree/master
+      - .. image:: https://badge.fury.io/py/mlprodict.svg
+            :target: http://badge.fury.io/py/mlprodict
+      - .. image:: http://img.shields.io/pypi/pyversions/mlprodict.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/mlprodict
+      - .. image:: https://badge.waffle.io/sdpython/mlprodict.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/mlprodict
+      - .. image:: https://codecov.io/github/sdpython/mlprodict/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/mlprodict?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/mlprodict/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/mlprodict/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/mlstatpy.svg?branch=master
             :target: https://travis-ci.org/sdpython/mlstatpy
@@ -548,6 +570,9 @@ Outils
       - Implémentation d'une :epkg:`REST API` avec :epkg:`falcon`.
     * - :epkg:`mlinsights`
       - Quelques fonctions pour jouer avec des modèles de machine learning.
+    * - :epkg:`mlprodict`
+      - Conversion de modèle de machine learning en code C pour prédire
+        plus rapidement.
     * - `pandas_streaming <http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/index.html>`_
       - Utilisation de :epkg:`pandas` pour opérer sur des fichiers qui ne tiennent pas
         en mémoire en implémentant des algorithmes de streaming.
