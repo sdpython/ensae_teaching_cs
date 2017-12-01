@@ -206,7 +206,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/lightmlrestapi.svg?branch=master
             :target: https://travis-ci.org/sdpython/lightmlrestapi
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/uj6tq445k3na7hs9?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/itkrtmperlhjm4xw?svg=true
             :target: https://ci.appveyor.com/project/sdpython/lightmlrestapi
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/lightmlrestapi/tree/master.svg?style=svg
