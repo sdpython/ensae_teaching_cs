@@ -442,6 +442,7 @@ une nécessité. Quelques idées de recherche :
 * `Visualizing and Understanding Neural Machine Translation <http://www.aclweb.org/anthology/P/P17/P17-1106.pdf>`_
 * `Multiplicative Multitask Feature Learning <http://jmlr.org/papers/v17/15-234.html>`_
 * `Multi-Target Regression with Rule Ensembles <http://www.jmlr.org/papers/volume13/aho12a/aho12a.pdf>`_
+* `SVCCA: Singular Vector Canonical Correlation Analysis for Deep Learning Dynamics and Interpretability <https://arxiv.org/pdf/1706.05806.pdf>`_
 
 *Lectures : monotonie*
 

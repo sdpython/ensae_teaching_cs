@@ -42,6 +42,8 @@ def trigger_on_specific_strings(content, filename=None, force_allow=None):
                "COMPUTERNAME", "LOGONSERVER"]:
         if st in os.environ:
             s = os.environ[st].lower()
+            if s in ('administrateur', 'administrator'):
+                continue
             if s not in force_allow and s in lower_content:
                 raise Exception(
                     'string {0}:{1} was found in\n  File "{2}", line 1'.format(st, s, filename))

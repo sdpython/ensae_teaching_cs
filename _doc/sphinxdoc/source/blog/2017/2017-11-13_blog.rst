@@ -1,6 +1,6 @@
 
 .. blogpost::
-    :title: Resté informer sur le Deep Learning
+    :title: Resté informé sur le Deep Learning
     :keywords: blog, deep learning
     :date: 2017-11-13
     :categories: blog
