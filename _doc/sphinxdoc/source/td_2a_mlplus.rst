@@ -490,6 +490,9 @@ une nécessité. Quelques idées de recherche :
   particulièrement les `dark data <https://en.wikipedia.org/wiki/Dark_data>`_
 * `treeinterpreter <https://pypi.python.org/pypi/treeinterpreter>`_
 * `lime <https://github.com/marcotcr/lime>`_ (`notebooks <https://github.com/marcotcr/lime/tree/master/doc/notebooks>`_)
+* `ml-insights <https://ml-insights.readthedocs.io/en/latest/>`_ :
+  méthode empiriques pour observer les prédictions en fonctions
+  de variations des features
 
 |pyecopng| |pystatpng|
 
