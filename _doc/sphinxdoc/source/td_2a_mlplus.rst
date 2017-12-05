@@ -1080,6 +1080,7 @@ Generative Adversarial Network (GAN)
   c'est le premier article paru sur le sujet
 * `Least Squares Generative Adversarial Networks <https://arxiv.org/abs/1611.04076v2>`_
 * `f-GAN: Training Generative Neural Samplers using Variational Divergence Minimization <https://arxiv.org/abs/1606.00709>`_
+* `Fader Networks: Manipulating Images by Sliding Attributes <https://arxiv.org/pdf/1706.00409.pdf>`_
 
 *Exemples de code*
 
