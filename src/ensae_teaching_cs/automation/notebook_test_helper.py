@@ -109,6 +109,8 @@ def clean_function_1a(code):
            ("%timeit", "#%timeit"),
            ('%system "exemple.xlsx"', '#%system "exemple.xlsx"'),
            ('%system "data.xlsx"', '#%system "data.xlsx"'),
+           ('http://telechargement.insee.fr/fichiersdetail/etatcivil2012/dbase/',
+            'http://www.xavierdupre/enseignement/complements/'),
            ]
     spl = ["# ......",
            "# elle n'existe pas encore",
