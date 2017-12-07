@@ -43,7 +43,7 @@ from pyquickhelper.pycode import get_temp_folder, add_missing_development_versio
 from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut, get_additional_paths
 
 
-class TestNotebook1236Coverage201710(unittest.TestCase):
+class TestNotebook1236Coverage201710b(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
@@ -75,21 +75,13 @@ class TestNotebook1236Coverage201710(unittest.TestCase):
             temp, keepnote, additional_path=add_path, valid=valid)
         execute_notebook_list_finalize_ut(res, fLOG=fLOG, dump=thismodule)
 
-    def test_notebook_2048(self):
+    def test_notebook_ml_text_features(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        self.a_test_notebook_runner("2048", "td1a")
-
-    def test_notebook_ml_crypted_data(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
-        self.a_test_notebook_runner("crypted_data", "td2a")
+        self.a_test_notebook_runner("ml_text_features", "td2a")
 
 
 if __name__ == "__main__":
