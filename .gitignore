@@ -380,13 +380,13 @@ _unittests/ut_data/tweets_macron_sijetaispresident_201609.txt
 _doc/notebooks/td2a_eco/chromedriver.exe
 _doc/notebooks/td2a_eco/chromedriver_win32.zip
 _doc/notebooks/td2a_ml/iris.csv
-_doc/notebooks/td2a_ml/dads2010_gf_salaries10_dbase.zip
+_doc/notebooks/td2a_ml/dads*.zip
 _doc/notebooks/td2a_ml/eleve_region.txt
 _doc/notebooks/td2a_ml/lisezmoi_salaries10.txt
 _doc/notebooks/td2a_ml/salaries10.DBF
-_doc/notebooks/td2a_ml/salaries2010.db3
-_doc/notebooks/td2a_ml/varlist_salarié.dbf
-_doc/notebooks/td2a_ml/varmod_salarie.dbf
+_doc/notebooks/td2a_ml/salaries201*.db3
+_doc/notebooks/td2a_ml/varlist_salari*.dbf
+_doc/notebooks/td2a_ml/varmod_salarie*.dbf
 _doc/notebooks/td2a_ml/arbre.png
 _doc/notebooks/td2a_ml/arbre.dot
 _unittests/ut_examples/mnist.pkl
@@ -487,3 +487,7 @@ _doc/notebooks/competitions/2016/answer.csv
 _doc/notebooks/td2a_ml/adult.data
 _doc/notebooks/td2a_ml/adult.names
 _doc/notebooks/td2a_deep/data/*
+_doc/notebooks/td2a_ml/MediaMonkey.dll
+_doc/notebooks/td2a_ml/SQLiteSpy.db3
+_doc/notebooks/td2a_ml/SQLiteSpy.exe
+_doc/notebooks/td2a_ml/salaries11.dbf

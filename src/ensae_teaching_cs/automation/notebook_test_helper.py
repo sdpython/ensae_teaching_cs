@@ -111,6 +111,8 @@ def clean_function_1a(code):
            ('%system "data.xlsx"', '#%system "data.xlsx"'),
            ('http://telechargement.insee.fr/fichiersdetail/etatcivil2012/dbase/',
             'http://www.xavierdupre.fr/enseignement/complements/'),
+           ('https://www.insee.fr/fr/statistiques/fichier/2011542/',
+            'http://www.xavierdupre.fr/enseignement/complements/'),
            ]
     spl = ["# ......",
            "# elle n'existe pas encore",
@@ -195,7 +197,7 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
 
 def copy_data_file(notebook_folder, filename, dest, fLOG=noLOG):
     """
-    Copy a data file from a notebook folder to the current folder.
+    Copies a data file from a notebook folder to the current folder.
 
     @param      notebook_folder     notebook_folder
     @param      filename            filename or list of file names

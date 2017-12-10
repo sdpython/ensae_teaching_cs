@@ -11,6 +11,7 @@ except (ImportError, AttributeError) as e:
 import os
 import sys
 import warnings
+import unittest
 
 
 try:
@@ -81,17 +82,27 @@ class TestVideoHelper(ExtTestCase):
             if "--force" in context:
                 fLOG("success")
         else:
-            # we run it with the original interpreter
+            # We run it with the original interpreter.
             import pyquickhelper
             fLOG("switch from virtual environment", sys.base_prefix)
             fold = os.path.abspath(os.path.join(
                 os.path.dirname(pyquickhelper.__file__), ".."))
+            old_val = os.environ.get("PYTHONPATH", "")
             os.environ["PYTHONPATH"] = fold
             this = os.path.abspath(__file__)
             if sys.version_info[0] == 2:
                 this = this.replace(".pyc", ".py")
             out = run_base_script(this, file=True, fLOG=fLOG, argv=["--force"])
-            os.environ["PYTHONPATH"] = ""
+            os.environ["PYTHONPATH"] = old_val
             if "success" not in out:
                 raise Exception(
                     "CMD:\n{0}\nOUT:\n{1}\nPYTHONPATH={2}".format(os.path.split(__file__)[-1], out, fold))
+
+
+if __name__ == "__main__":
+
+    if "--force" in sys.argv:
+        context["--force"] = True
+        del sys.argv[sys.argv.index('--force')]
+
+    unittest.main()
