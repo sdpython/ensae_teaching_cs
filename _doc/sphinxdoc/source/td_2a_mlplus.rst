@@ -147,6 +147,7 @@ Timeseries - Filtre de Kalman
 * `Kalman Filtering in Python for Reading Sensor Input <http://scottlobdell.me/2014/08/kalman-filtering-python-reading-sensor-input/>`_
 * `kalman 2d filter in python <https://stackoverflow.com/questions/13901997/kalman-2d-filter-in-python>`_
 * `Multidimensional Kalman-Filter <https://github.com/balzer82/Kalman>`_
+* `Deep Kalman Filters <https://arxiv.org/abs/1511.05121>`_
 
 *Modules*
 
@@ -1036,6 +1037,7 @@ Apprentissage sans labels
 * `Multi-Label Prediction via Compressed Sensing <Multi-Label Prediction via Compressed Sensing>`_
 * `Inference in generative models using the Wasserstein distance <https://arxiv.org/abs/1701.05146>`_,
   `Coupling of Particle Filters <https://arxiv.org/abs/1606.01156>`_
+* `Auto-Encoding Variational Bayes <https://arxiv.org/pdf/1312.6114.pdf>`_
 
 *No label, weak labels*
 
@@ -1495,6 +1497,11 @@ Compétitions et datasets
 
 * `ImageNet <http://www.image-net.org/>`_
 * `SQuAD The Stanford Question Answering Dataset <https://rajpurkar.github.io/SQuAD-explorer/>`_
+
+Fraudes
++++++++
+
+*  `Detecting Fraudulent Personalities in Networks of Online Auctioneers <http://www.cs.cmu.edu/~dchau/papers/auction_fraud_pkdd06.pdf>`_
 
 Deep Learning Artistique
 ++++++++++++++++++++++++

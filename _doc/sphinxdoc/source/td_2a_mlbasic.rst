@@ -662,6 +662,7 @@ Modèles bayésiens
 * `A Bayesian Approximation Method for Online Ranking <http://jmlr.csail.mit.edu/papers/volume12/weng11a/weng11a.pdf>`_
 * `stan case studies <http://mc-stan.org/documentation/case-studies>`_
 * `Edward: A library for probabilistic modeling, inference, and criticism <https://arxiv.org/pdf/1610.09787.pdf>`_
+* `Auto-Encoding Variational Bayes <https://arxiv.org/pdf/1312.6114.pdf>`_
 
 *Vidéo*
 

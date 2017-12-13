@@ -43,6 +43,7 @@ Anatomie et histoire d'un ordinateur
 * `Introduction au système de recommandation par facteurs latents <https://datajobs.com/data-science-repo/Recommender-Systems-%5bNetflix%5d.pdf>`_
 * `The Unreasonable Effectiveness of Data <http://static.googleusercontent.com/media/research.google.com/fr//pubs/archive/35179.pdf>`_
 * :ref:`Après l'architecture Von Neumann <l-archi-vonneum-memory>`
+* `Learning Efficient Algorithms with Hierarchical Attentive Memory <https://arxiv.org/pdf/1602.03218.pdf>`_
 
 *Machine Learning*
 

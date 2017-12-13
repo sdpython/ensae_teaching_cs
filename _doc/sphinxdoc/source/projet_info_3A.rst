@@ -105,6 +105,7 @@ Suggestions d'articles
 * `Efficient Distributed Locality Sensitive Hashing <https://arxiv.org/abs/1210.7057>`_
 * `Parallel GPU Implementation of Iterative PCA Algorithms <https://arxiv.org/abs/0811.1081v1>`_
 * `Large-Scale Matrix Factorization with Distributed Stochastic Gradient Descent <https://researcher.watson.ibm.com/researcher/files/us-phaas/rj10482Updated.pdf>`_
+* `weighted minhash on gpu helps to find duplicate github repositories <https://blog.sourced.tech//post/minhashcuda/>`_ (article de blog)
 
 Nous vous recommandons d'adopter la démarche suivante:
 

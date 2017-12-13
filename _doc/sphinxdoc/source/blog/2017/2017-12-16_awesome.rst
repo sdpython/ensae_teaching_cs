@@ -1,0 +1,14 @@
+
+.. blogpost::
+    :title: Awesome quelque chose
+    :keywords:
+    :date: 2017-12-16
+    :categories: références
+
+    On voit de plus en plus d'exemples de repository
+    GitHub qui références des listes d'articles ou de librairies
+    qui sont *awesome*.
+
+    * `Awesome Machine Learning for Robotics <https://github.com/Phylliade/awesome-machine-learning-robotics>`_
+    * `Machine and Deep Learning with Python <https://github.com/szwed/awesome-machine-learning-python>`_
+    * `Awesome Machine Learning On Source Code <https://github.com/src-d/awesome-machine-learning-on-source-code>`_
