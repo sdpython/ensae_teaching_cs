@@ -111,6 +111,17 @@ les modules standard du langage :epkg:`Python` et parfois
                 </a>
             (médiane, moyenne, régression quantile)
         </li>
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2018.pdf">énoncé 2017-2018</a>,
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2018_1.pdf">correction 1</a>
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2018_2.pdf">2</a>
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2018_1.html">
+                <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
+                </a>
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2018_2.html">
+                <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
+                </a>
+            (arbre de décision)
+        </li>
     </ul>
     </p>
 
@@ -236,3 +247,5 @@ TD notés, correction
     ../notebooks/td_note_2016
     ../notebooks/td_note_2017
     ../notebooks/td_note_2017_2
+    ../notebooks/td_note_2018_1
+    ../notebooks/td_note_2018_2

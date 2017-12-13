@@ -590,10 +590,14 @@ Système de recommandation
 * `ACP et factorisation de matrices <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/missing_values_mf.html>`_
 * `The Why and How of Nonnegative Matrix Factorization <https://arxiv.org/abs/1401.5226>`_
 * `A tutorial on Non-Negative Matrix Factorisation with Applications to Audiovisual Content Analysis <http://perso.telecom-paristech.fr/~essid/teach/NMF_tutorial_ICME-2014.pdf>`_
+* `Large-Scale Matrix Factorization with Missing Data under Additional Constraints <http://www.cfar.umd.edu/~rama/Publications/mitra_nips_2010.pdf>`_
 
 *Modules*
 
 * `scikit-learn <http://scikit-learn.org/stable/>`_
+* `NonnegMFPy <https://github.com/guangtunbenzhu/NonnegMFPy>`_ : implémentation de
+  l'algorithme décrit dans l'article
+  `Large-Scale Matrix Factorization with Missing Data under Additional Constraints <http://www.cfar.umd.edu/~rama/Publications/mitra_nips_2010.pdf>`_
 
 |pystatpng|
 
