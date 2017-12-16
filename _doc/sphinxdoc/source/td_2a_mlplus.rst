@@ -351,6 +351,10 @@ propose une réponse à ces deux problèmes.
 
 *Lectures*
 
+* `Comment permettre à l'homme de garder la main ? <https://www.cnil.fr/sites/default/files/atoms/files/cnil_rapport_garder_la_main_web.pdf#page=58>`_,
+  Les enjeux éthiques des algorithmes et de l’intelligence artificielle,
+  Synthèse du débat public animé par la :epkg:`CNIL` dans le cadre de la mission
+  de réflexion éthique confiée par la loi pour une république numérique.
 * `FairTest: Discovering Unwarranted Associations in Data-Driven Applications <https://arxiv.org/pdf/1510.02377.pdf>`_
 * `Equality of Opportunity in Supervised Learning <http://ttic.uchicago.edu/~nati/Publications/HardtPriceSrebro2016.pdf>`_
 * `O21 : La transparence des algorithmes relève des droits civiques <http://www.lemonde.fr/campus/article/2017/05/02/o21-la-transparence-des-algorithmes-releve-des-droits-civiques_5121201_4401467.html>`_
