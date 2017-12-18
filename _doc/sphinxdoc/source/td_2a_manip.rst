@@ -218,7 +218,8 @@ Cartes
 * `pyproj <https://pypi.python.org/pypi/pyproj>`_
 * `geopy <https://pypi.python.org/pypi/geopy>`_
 * `basemap <http://matplotlib.org/basemap/>`_
-  (plus maintenu, il faut préférer `cartopy <http://scitools.org.uk/cartopy/>`_)
+  (maintenu jusqu'en 2020, il faut préférer `cartopy <http://scitools.org.uk/cartopy/>`_)
+* `geoviews <http://geo.holoviews.org/Geometries.html>`_
 
 |pyecopng| |pystatpng|
 

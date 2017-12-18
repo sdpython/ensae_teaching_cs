@@ -37,7 +37,7 @@ except ImportError:
         sys.path.append(path)
     import pyquickhelper as skip_
 
-from pyquickhelper.loghelper import fLOG
+from pyquickhelper.loghelper import fLOG, run_cmd
 from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, is_travis_or_appveyor
 
 
@@ -77,18 +77,43 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
             pass
 
         if sys.platform.startswith("win"):
-            try:
-                from tables import IsDescription
-            except ImportError:
-                import numpy
-                fold = os.path.abspath(os.path.dirname(numpy.__file__))
-                fold = os.path.normpath(os.path.join(fold, "..", "tables"))
-                if not os.path.exists(fold):
-                    raise ImportError(
-                        "tables is not installed in '{0}'".format(fold))
-                os.environ["PATH"] = os.environ.get("PATH", "") + ";" + fold
-                from tables import IsDescription
-                self.assertTrue(IsDescription is not None)
+            import numpy
+            import tables
+            foldn = os.path.abspath(os.path.dirname(numpy.__file__))
+            foldt = os.path.normpath(os.path.dirname(tables.__file__))
+            rootn = os.path.dirname(foldn)
+            roott = os.path.dirname(foldt)
+            if rootn != roott:
+                pp = os.environ.get('PYTHONPATH', '')
+                if "SECONDTRY" in pp:
+                    raise Exception(
+                        "Infinite loog\n{0}\n{1}\n**EXE\n{2}\n**PP\n{3}\n****".format(rootn, roott, sys.executable, pp))
+                # We need to run this file with the main python.
+                # Otherwise it fails for tables: DLL load failed.
+                exe = os.path.normpath(os.path.join(
+                    rootn, "..", "..", "python.exe"))
+                cmd = '"{0}" -u "{1}"'.format(exe, os.path.abspath(__file__))
+                import pyquickhelper
+                import pyensae
+                import jyquickhelper
+                import src.ensae_teaching_cs
+                import mlstatpy
+                import pymyinstall
+                add = ["SECONDTRY"]
+                for mod in [pyquickhelper, pyensae, jyquickhelper, src.ensae_teaching_cs, mlstatpy, pymyinstall]:
+                    add.append(os.path.normpath(os.path.join(
+                        os.path.dirname(mod.__file__), "..")))
+                fLOG("set PYTHONPATH={0}".format(";".join(add)))
+                os.environ['PYTHONPATH'] = ";".join(add)
+                out, err = run_cmd(cmd, wait=True, fLOG=fLOG)
+                if len(err) > 0:
+                    lines = err.split("\n")
+                    lines = [_ for _ in lines if _[0] != " "]
+                    lines = [_ for _ in lines if "warning" not in _.lower()]
+                    if len(lines) > 0:
+                        raise Exception("--CMD:\n{0}\n--OUT:\n{1}\n--ERR\n{2}\n--ERR2\n{3}\n--PP\n{4}".format(
+                            cmd, out, err, "\n".join(lines), pp))
+            return
 
         import tables
         assert tables is not None

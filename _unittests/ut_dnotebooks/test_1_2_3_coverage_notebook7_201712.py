@@ -58,7 +58,8 @@ class TestNotebook1237Coverage201712(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        self.a_test_notebook_runner("dimensions_reduction", "notebook_eleves/2017-2018")
+        self.a_test_notebook_runner(
+            "dimensions_reduction", "notebook_eleves/2017-2018")
 
     def test_notebook_git_notebook(self):
         fLOG(

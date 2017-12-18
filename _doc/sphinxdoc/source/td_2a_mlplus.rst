@@ -1559,6 +1559,14 @@ Histoire
 
 * `Revisiting Unreasonable Effectiveness of Data in Deep Learning Era <https://arxiv.org/pdf/1707.02968.pdf>`_
 
+Portraits
++++++++++
+
+* `FaderNetworks <https://github.com/facebookresearch/FaderNetworks>`_ :
+  vieillir un visage, rajeunir, ajouter des lunettes, ce réseaux de neurones a été
+  appris pour transformer un portrait
+  (données : `Large-scale CelebFaces Attributes (CelebA) Dataset <http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html>`_)
+
 Réseaux Sociaux
 +++++++++++++++
 
