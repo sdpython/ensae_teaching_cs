@@ -120,6 +120,11 @@ Timeseries - Séries temporelles
 * `Holt-Winters seasonal method <https://www.otexts.org/fpp/7/5>`_,
   `Initializing the Holt-Winters method <https://robjhyndman.com/hyndsight/hw-initialization/>`_
 
+*Compétitions*
+
+* Kaggle Web Traffic Time Series Forecasting `code <https://github.com/Arturus/kaggle-web-traffic>`_,
+  `modèle <https://github.com/Arturus/kaggle-web-traffic/blob/master/how_it_works.md>`_
+
 *Modules*
 
 * `statsmodels <http://statsmodels.sourceforge.net/>`_
@@ -275,6 +280,17 @@ qui passent par le même chemin ?
 
 * `Discovering Patterns in Time-Varying Graphs: A Tri`_clustering Approach <http://www.marc-boulle.fr/publications/GuigouresEtAlADAC15.pdf>`_
 * `Co-Clustering Network-Constrained Trajectory Data <http://www.marc-boulle.fr/publications/ElMahrsiEtAlAKDM15.pdf>`_
+
+|pystatpng|
+
+Algorithmes génétiques et autres variantes
+++++++++++++++++++++++++++++++++++++++++++
+
+*(à venir)*
+
+*Lectures*
+
+* `Natural Evolution Strategies <http://people.idsia.ch/~tom/publications/nes.pdf>`_
 
 ---------------
 
@@ -1095,6 +1111,8 @@ Generative Adversarial Network (GAN)
 * `Least Squares Generative Adversarial Networks <https://arxiv.org/abs/1611.04076v2>`_
 * `f-GAN: Training Generative Neural Samplers using Variational Divergence Minimization <https://arxiv.org/abs/1606.00709>`_
 * `Fader Networks: Manipulating Images by Sliding Attributes <https://arxiv.org/pdf/1706.00409.pdf>`_
+* `Partial Information Attacks on Real-world AI <http://www.labsix.org/partial-information-adversarial-examples/>`_
+* `Synthesizing Robust Avdersarial Examples <https://arxiv.org/pdf/1707.07397.pdf>`_
 
 *Exemples de code*
 
