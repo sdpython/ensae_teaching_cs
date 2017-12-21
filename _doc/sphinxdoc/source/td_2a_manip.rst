@@ -181,6 +181,17 @@ la visualisation animée de gros jeux de données telle que
 * `bqplot <https://github.com/bloomberg/bqplot>`_
 * :ref:`l-visualisation`
 
+*Modules Notebooks*
+
+* `clustergrammer-widget <https://github.com/MaayanLab/clustergrammer-widget>`_ :
+  widget pour les notebooks
+* `Jupyter Dashboards Layout Extension <http://jupyter-dashboards-layout.readthedocs.io/en/latest/>`_
+* `visJS2jupyter <https://ucsd-ccbb.github.io/visJS2jupyter/>`_ : représentation
+  de réseaux avec `vis.js <http://visjs.org/>`_
+* `neo4jupyter <https://github.com/merqurio/neo4jupyter>`_ :
+  `Neo4j <https://neo4j.com/>`_ dans un notebook
+* `ipyvolume <https://github.com/maartenbreddels/ipyvolume>`_
+
 |pyecopng| |pystatpng|
 
 .. _l-py2a-cartes:
@@ -220,6 +231,11 @@ Cartes
 * `basemap <http://matplotlib.org/basemap/>`_
   (maintenu jusqu'en 2020, il faut préférer `cartopy <http://scitools.org.uk/cartopy/>`_)
 * `geoviews <http://geo.holoviews.org/Geometries.html>`_
+
+*Modules avec Open Street Map*
+
+* `ipyleaflet <https://github.com/ellisonbg/ipyleaflet>`_
+* `folium <https://github.com/python-visualization/folium>`_
 
 |pyecopng| |pystatpng|
 

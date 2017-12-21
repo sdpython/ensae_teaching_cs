@@ -16,7 +16,7 @@ readme = 'README.rst'
 history = "HISTORY.rst"
 
 KEYWORDS = project_var_name + ', ENSAE, sqllite, database, teachings'
-DESCRIPTION = """Module which contains materials for teaching puroposes, also includes pythonnet."""
+DESCRIPTION = """Materials for teachings, notebooks, helpers..."""
 CLASSIFIERS = [
     'Programming Language :: Python :: %d' % sys.version_info[0],
     'Intended Audience :: Developers',

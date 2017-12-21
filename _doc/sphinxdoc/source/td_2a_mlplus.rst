@@ -210,6 +210,9 @@ Auto-Learning
 
 *Lectures*
 
+* `ATM: A distributed, collaborative, scalable system for automated machine learning <https://cyphe.rs/static/atm.pdf>`_
+  (site web: `ATM <https://hdi-dai.lids.mit.edu/projects/atm/>`_)
+* `FeatureHub: Towards collaborative data science <https://www.micahsmith.com/files/featurehub-smith.pdf>`_
 * `Learning to learn by gradient descent by gradient descent <https://papers.nips.cc/paper/6461-learning-to-learn-by-gradient-descent-by-gradient-descent.pdf>`_
 * `Matching Networks for One Shot Learning <https://papers.nips.cc/paper/6385-matching-networks-for-one-shot-learning.pdf>`_
 * `Efficient and Robust Automated Machine Learning <http://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning.pdf>`_
@@ -228,6 +231,8 @@ Auto-Learning
 
 *Modules*
 
+* `ATM <https://github.com/HDI-Project/ATM>`_
+* `FeatureHub <https://github.com/HDI-Project/FeatureHub>`_
 * `REP <https://github.com/yandex/rep>`_
 * `TPOT <https://github.com/rhiever/tpot>`_
 * `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
@@ -364,6 +369,8 @@ propose une réponse à ces deux problèmes.
 * `Accountable Algorithms <https://www.jkroll.com/papers/dissertation.pdf>`_ (PhD thesis)
 * `Improving the Transparency of the Sharing Economy <http://mathias.lecuyer.me/assets/assets/www2017airbnb.pdf>`_
 * `Sunlight: Fine-grained Targeting Detection at Scale with Statistical Confidence <http://www.cs.columbia.edu/~djhsu/papers/sunlight.pdf>`_
+* `Justice actuarielle, algorithmes... et données <http://freakonometrics.hypotheses.org/51783>`_
+* `Surveiller et prévenir, l'ère de la pénalité prédictive <https://bourgoinblog.wordpress.com/2017/11/10/surveiller-et-prevenir-lere-de-la-penalite-predictive/>`_
 
 *Conférences*
 
@@ -448,6 +455,7 @@ une nécessité. Quelques idées de recherche :
 * `Multiplicative Multitask Feature Learning <http://jmlr.org/papers/v17/15-234.html>`_
 * `Multi-Target Regression with Rule Ensembles <http://www.jmlr.org/papers/volume13/aho12a/aho12a.pdf>`_
 * `SVCCA: Singular Vector Canonical Correlation Analysis for Deep Learning Dynamics and Interpretability <https://arxiv.org/pdf/1706.05806.pdf>`_
+* `The Myth Of Interpretability of Econometric Models <http://freakonometrics.hypotheses.org/51752>`_
 
 *Lectures : monotonie*
 
@@ -1558,6 +1566,13 @@ Histoire
 ++++++++
 
 * `Revisiting Unreasonable Effectiveness of Data in Deep Learning Era <https://arxiv.org/pdf/1707.02968.pdf>`_
+
+Jeux
+++++
+
+* `Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm <https://arxiv.org/pdf/1712.01815.pdf>`_,
+  voir quelques parties `The future is here - AlphaZero learns chess <https://en.chessbase.com/post/the-future-is-here-alphazero-learns-chess>`_.
+  Avec ce type d'algorithme adapté à la finance, le trader humain a du soucis à se faire.
 
 Portraits
 +++++++++
