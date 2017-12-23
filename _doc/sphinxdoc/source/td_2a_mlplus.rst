@@ -1599,6 +1599,9 @@ Jeux
 Portraits
 +++++++++
 
+* `Face Segmentation <https://github.com/YuvalNirkin/face_segmentation>`_ :
+  il est plus facile de déterminer une boîte englobante autour d'un visage,
+  le modèle référencé extrait un visage au pixel près
 * `FaderNetworks <https://github.com/facebookresearch/FaderNetworks>`_ :
   vieillir un visage, rajeunir, ajouter des lunettes, ce réseaux de neurones a été
   appris pour transformer un portrait
