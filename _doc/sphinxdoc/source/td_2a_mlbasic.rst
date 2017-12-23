@@ -2,7 +2,7 @@
 .. _l-td2a-mlbasic:
 
 =======================================
-Machine Learning - les briques de bases
+Machine learning - les briques de bases
 =======================================
 
 Le machine learning avant les années 2000 se résumait à un problème

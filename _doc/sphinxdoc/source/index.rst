@@ -84,7 +84,7 @@ Contenu des enseignements
     2. Python pour un Data Scientist / Economiste <td_2a>
     3. Eléments logiciels pour le traitement des données massives <td_3a>
     4. Projets informatiques <projet_info>
-    5. Examens / Compétitions <i_exams>
+    5. Examens <questions/exams_1A>
     6. Découvrir <i_decouvrir>
     7. Visualisation <i_visualisation>
     8. Modules, Bibliographie, Articles, FAQ... <i_informations>

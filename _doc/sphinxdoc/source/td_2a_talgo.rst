@@ -345,17 +345,6 @@ Certains sont tirés de plusieurs sites dont
 
 |pystatpng|
 
-Algorithmes génétiques
-++++++++++++++++++++++
-
-(*à venir*)
-
-*Modules*
-
-* `pyevolve <http://pyevolve.sourceforge.net/>`_
-
-|pystatpng|
-
 Algorithmes probabilistes
 +++++++++++++++++++++++++
 

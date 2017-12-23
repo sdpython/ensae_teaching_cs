@@ -292,6 +292,10 @@ Algorithmes génétiques et autres variantes
 
 * `Natural Evolution Strategies <http://people.idsia.ch/~tom/publications/nes.pdf>`_
 
+*Modules*
+
+* `pyevolve <http://pyevolve.sourceforge.net/>`_
+
 ---------------
 
 Interprétation, Anonymisation, Cryptage, Privacy

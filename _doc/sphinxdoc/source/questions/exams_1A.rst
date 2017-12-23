@@ -9,7 +9,10 @@ Examens
 Ces examens ont été proposés ces dix dernières années
 à la fin du cours d'initiation à l'algorithmie et à la programmation.
 Les énoncés sont plus guidés que les séances pratiques.
-Ils requiert peu de connaissances, évitent le plus souvent les classes.
+Ils requièrent peu de connaissances, évitent le plus souvent les classes.
+La data science y est peu représentée si ce n'est pour en faire découvrir
+certains aspects comme cet énoncé :ref:`tdnote20181rst` qui aborde
+les arbres de régression.
 
 .. contents::
     :local:
@@ -249,3 +252,9 @@ TD notés, correction
     ../notebooks/td_note_2017_2
     ../notebooks/td_note_2018_1
     ../notebooks/td_note_2018_2
+
+Autres sources d'énoncés d'examens
+++++++++++++++++++++++++++++++++++
+
+* Formation à l'`Institut des Actuaires <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/i_examens.html>`_ :
+  ces énoncés sont plus orientés data science que les précédents.

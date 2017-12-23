@@ -20,22 +20,24 @@ ou plutôt économiques |pyecopng|. Ces images reviendront pour indiquer
 si les contenus s'adressent plutôt aux uns ou aux autres.
 
 * :ref:`l-feuille-de-route-2017-2A`
-* :ref:`l-competition-2017-2a`
 * :ref:`l-projinfo2a`
 
 Le terme *cheat sheet* est un mot-clé plutôt efficace sur Internet pour
 retrouver les bout de codes les plus fréquents. Cette page regroupe des
 *cheat sheets* sur beaucoup de sujet évoqués ci-dessous :
 `Essential Cheat Sheets for Machine Learning and Deep Learning Engineers <https://startupsventurecapital.com/essential-cheat-sheets-for-machine-learning-and-deep-learning-researchers-efb6a8ebd2e5>`_.
-Le cours est composés de thèmes associés à un problème ciblé de données
+Le site :epkg:`Kaggle` recense de nombreuses compétitions de machine learning
+qui permettent de s'exercer ou de se mesurer à d'autres data scientists.
+Quelques compétitions ont aussi été créées pour ce cours :
+:ref:`l-competition`.
+Le cours est organisé sous forme de thèmes,
+tous associés à un problème de données et
 ou de machine learning. Les thèmes sont de difficultés croissantes
-et sont abordés invariablement par :
+et sont abordés invariablement par,
+des exercices sous la forme de notebooks (énoncé / correction),
+des articles, des modules connus.
 
-* des exercices sous la forme de notebooks (énoncé / correction),
-* des articles,
-* des modules connus.
-
-**Thèmes :**
+**Thèmes**
 
 .. contents::
     :local:
@@ -53,6 +55,11 @@ et sont abordés invariablement par :
 Agilité avec les données
 ========================
 
+Il est indispensable de savoir manipuler les données
+avant de pouvoir faire du machine learning. Filtrer,
+fusionner, concaténer, il faut savoir faire cela vite
+pour passer plus de temps sur les problèmes intéressants.
+
 .. toctree::
     :maxdepth: 3
 
@@ -60,6 +67,13 @@ Agilité avec les données
 
 Machine Learning - les briques de bases
 =======================================
+
+Un problème de données est rarement résolu avec un seul modèle,
+un seul algorithme et plus souvent un assemblage.
+La première étape consiste à analyser un problème
+concret à l'aide d'une grille de problèmes formalisés.
+C'est cette grille qui est parcourue dans les paragraphes
+svuiants.
 
 .. toctree::
     :maxdepth: 3
@@ -69,6 +83,13 @@ Machine Learning - les briques de bases
 Machine learning - extensions
 =============================
 
+Les données ne sont pas toujours organisés sous la forme
+d'une table de données où il s'agit de prédire *Y*
+en fonction de *X*. Il faut parfois prendre en compte
+une dépendance temporelle ou spatiale. Cette section
+étend la grille précédente et proposent des modèles
+parfois récents.
+
 .. toctree::
     :maxdepth: 3
 
@@ -76,6 +97,13 @@ Machine learning - extensions
 
 Algorithmes, Optimisation, Programmation
 ========================================
+
+Plus les données sont volumineuses, plus les contraintes sont
+nombreuses, plus il faut se montrer inventif. Ecrire un code efficace
+est souvent utile et parfois impératif simplement
+pour obtenir un résultat. Néanmoins, il arrive régulièrement
+que le premier besoin soit celui de collecter des données
+qui ne sont pas encore disponibles.
 
 .. toctree::
     :maxdepth: 3
@@ -85,8 +113,12 @@ Algorithmes, Optimisation, Programmation
 Bibliographie
 =============
 
+La plupart des articles sont référencés dans la section du thème
+auquel ils sont reliés. Les suivants sont en quelque sorte
+des inclassables.
+
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 2
 
     td_2a_biblio
 
@@ -115,7 +147,10 @@ Jérémie Jakubowicz (puzzle algorithmique),
 Gilles Drigout (streaming),
 Gaël Varoquaux (machine learning avec scikit-learn)
 et bien sûr les étudiants de l':epkg:`ENSAE`.
+Feuilles de route et compétitions passées :
 
-Années passées :
+.. toctree::
 
-* 2016 : :ref:`l-feuille-de-route-2016-2A`, :ref:`l-competition-2016-2a`.
+    questions/route_2A_2016
+    questions/route_2A_2017
+    questions/competition_2A

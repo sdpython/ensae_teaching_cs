@@ -5,7 +5,11 @@
 Bibliographie
 =============
 
-**Livres sur le machine learning**
+.. contents::
+    :local:
+
+Livres sur le machine learning
+==============================
 
 * `The Elements of Statistical Learning <http://statweb.stanford.edu/~tibs/ElemStatLearn/>`_, Trevor Hastie, Robert Tibshirani, Jerome Friedman
 * `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_, Wes McKinney
@@ -19,13 +23,15 @@ Bibliographie
 * `Speech and Language Processing <http://www.cs.colorado.edu/~martin/slp.html>`_,  Daniel Jurafsky and James H. Martin *(2016/08)*,
   see also `Draft chapters in progress <https://web.stanford.edu/~jurafsky/slp3/>`_
 
-**Livres sur les algorithmes**
+Livres sur les algorithmes
+==========================
 
 * `Introduction to Algorithms <http://mitpress.mit.edu/books/introduction-algorithms>`_, Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest and Clifford Stein
 * `The Algorithm Design Manual <http://www.algorist.com/>`_, Steven S. Skiena
 * `Competitive Programming <http://www.comp.nus.edu.sg/~stevenha/myteaching/competitive_programming/cp1.pdf>`_, Steven Halim
 
-**Livres sur la programmation**
+Livres sur la programmation
+===========================
 
 * `High Performance Python <http://shop.oreilly.com/product/0636920028963.do>`_, Micha Gorelick, Ian Ozsvald.
    Le livre est très bien conçu et les exemples sont très clairs. Si vous souhaitez accélérer un programme Python
@@ -34,7 +40,8 @@ Bibliographie
    `PyPy <http://cython.org/>`_, ou `CPython <https://en.wikipedia.org/wiki/CPython>`_,
    je recommande d'y jeter un coup d'oeil d'abord.
 
-**Liens sur la programmation**
+Liens sur la programmation
+==========================
 
 * `Python Scientific Lecture Notes <http://scipy-lectures.github.io/>`_
 * `Introduction to matplotlib <https://scipy-lectures.github.io/intro/matplotlib/matplotlib.html>`_
@@ -50,7 +57,8 @@ Bibliographie
 * `Matrix Factorization: A Simple Tutorial and Implementation in Python <http://www.quuxlabs.com/blog/2010/09/matrix-factorization-a-simple-tutorial-and-implementation-in-python/>`_ *(2016/06)*
 * `Top-down learning path: Machine Learning for Software Engineers <https://github.com/ZuzooVn/machine-learning-for-software-engineers>`_
 
-**Tutoriels**
+Tutoriels
+=========
 
 * `PyData Seattle 2015 Scikit-learn Tutorial <https://github.com/jakevdp/sklearn_pydata2015>`_ *(2015/12)*
 * `Pythonic Perambulations <https://jakevdp.github.io/>`_ *(2015/12)*
@@ -60,7 +68,8 @@ Bibliographie
   lien vers une liste assez longue de tutoriels, on y trouve aussi des *cheat sheets* comme
   `Probability Cheatsheet <http://static1.squarespace.com/static/54bf3241e4b0f0d81bf7ff36/t/55e9494fe4b011aed10e48e5/1441352015658/probability_cheatsheet.pdf>`_
 
-**MOOC**
+MOOC
+====
 
 * `Machine Learning par Andrew Y. Ng <https://www.class-central.com/mooc/835/coursera-machine-learning>`_
   (les chapitres X et XI de la semaine 6 aborde la construction d'un système de machine learning).
@@ -69,7 +78,8 @@ Bibliographie
 * `CSE373 - Analysis of Algorithms - 2007 SBU <https://www.youtube.com/playlist?list=PL5F43156F3F22C349>`_
 * `CS109 Data Science (Harvard) <http://cs109.github.io/2014/>`_ (la liste des vidéos disponibles est en bas)
 
-**Autres cours, notebooks**
+Autres cours, notebooks
+=======================
 
 * `CS109 Data Science (Harvard) <http://cs109.github.io/2014/>`_ -
   `TD <https://github.com/cs109/content>`_ -
@@ -84,7 +94,8 @@ Bibliographie
 * `L'apprentissage profond <https://www.college-de-france.fr/site/yann-lecun/course-2015-2016.htm>`_, Yann LeCun au Collège de France *(2016/06)*
 * `MA 2823 Foundations of Machine Learning (Fall 2016) <http://cazencott.info/index.php/pages/MA-2823-Foundations-of-Machine-Learning-%28Fall-2016%29>`_ *(2016/10)*
 
-**Articles d'auteurs très connus**
+Articles d'auteurs très connus
+==============================
 
 * `Latent Dirichlet Allocation <http://ai.stanford.edu/~ang/papers/jair03-lda.pdf>`_, David M. Blei, Andrew Y. Ng, Michael I. Jordan
 * `Analysis of a Random Forests Model <http://www.jmlr.org/papers/volume13/biau12a/biau12a.pdf>`_, Gerard Biau
@@ -104,7 +115,8 @@ Bibliographie
 * `The Metropolis-Hastings algorithm <http://arxiv.org/abs/1504.01896>`_, Christian P. Robert
 * `From RankNet to LambdaRank to LambdaMART: An Overview <http://research.microsoft.com/pubs/132652/MSR-TR-2010-82.pdf>`_, Christopher J.C. Burges
 
-**Compétition de code**
+Compétition de code
+===================
 
 * `Google Hash Code <https://hashcode.withgoogle.com/>`_, a lieu chaque année en deux tours, le second tour a lieu chez Google à Paris.
 * `Google Code Jam <https://code.google.com/codejam>`_
@@ -113,14 +125,16 @@ Bibliographie
 * `Le problème des huit reines <http://zanotti.univ-tln.fr/algo/REINES.html>`_
 * `Projet Euler <https://projecteuler.net/>`_
 
-**Compétition de machine learning**
+Compétition de machine learning
+===============================
 
 * `datascience.net <https://www.datascience.net/fr/challenge>`_
 * `Kaggle <https://www.kaggle.com/competitions>`_
 * `ImageNet <http://www.image-net.org/>`_
 * `SQuAD <https://rajpurkar.github.io/SQuAD-explorer/>`_
 
-**Sources d'articles scientifiques**
+Sources d'articles scientifiques
+================================
 
 * `ShortScience.org  <http://www.shortscience.org/>`_
 * `Journal of Machine Learning Research <http://www.jmlr.org/>`_
@@ -130,7 +144,8 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
 .. image:: http://scikit-learn.org/stable/_static/ml_map.png
     :width: 500
 
-**Librairies**
+Librairies
+==========
 
 * `Simple/limited/incomplete benchmark for scalability, speed and accuracy of machine learning libraries for classification <https://github.com/szilard/benchm-ml>`_
 * `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
@@ -138,7 +153,8 @@ Pour finir, `Choosing the right estimator <http://scikit-learn.org/stable/tutori
 * `Awesome Machine Learning <https://github.com/josephmisiti/awesome-machine-learning#python>`_
 * Chaque paragraphe recense des librairies connues sur le sujet.
 
-**Vidéos**
+Vidéos
+======
 
 * `Beyond Bag of Words A Practitioner's Guide to Advanced NLP <https://www.youtube.com/watch?v=YWzFxRZPEyU>`_
 * `Building Continuous Learning Systems <https://www.youtube.com/watch?v=VtBvmrmMJaI>`_
