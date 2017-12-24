@@ -37,4 +37,3 @@ sympy
 theano
 toolz
 xarray
-xgboost

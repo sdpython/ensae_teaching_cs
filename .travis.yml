@@ -48,6 +48,7 @@ install:
   # - make all
   #- conda build build_tools/conda-recipe --quiet
   - conda install -q --file=requirements_conda.txt
+  - conda install -c conda-forge xgboost
   - conda install -y basemap
   - pip install -r requirements.txt
   - pip install -U git+https://github.com/sdpython/pyPdf --no-deps
