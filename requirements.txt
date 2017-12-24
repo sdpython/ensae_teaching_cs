@@ -71,7 +71,6 @@ tqdm<4.15.0
 treeinterpreter
 tutormagic
 version_information
-xgboost
 xlrd
 xlsxwriter
 xlwt
