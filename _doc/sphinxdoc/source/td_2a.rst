@@ -150,6 +150,7 @@ et bien sûr les étudiants de l':epkg:`ENSAE`.
 Feuilles de route et compétitions passées :
 
 .. toctree::
+    :maxdepth: 2
 
     questions/route_2A_2016
     questions/route_2A_2017

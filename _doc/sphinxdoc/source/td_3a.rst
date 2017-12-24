@@ -440,6 +440,11 @@ avec Spark et Spark SQL
 * `Spark SQL: Another 16x times faster after Tungsten <https://spark-summit.org/east-2017/events/spark-sql-another-16x-faster-after-tungsten/>`_
 * `Databricks <https://docs.databricks.com/index.html#>`_
 
+*FAQ*
+
+* `Avoid GroupByKey <https://databricks.gitbooks.io/databricks-spark-knowledge-base/content/best_practices/prefer_reducebykey_over_groupbykey.html>`_
+* `What is the difference between cache and persist? <https://stackoverflow.com/questions/26870537/what-is-the-difference-between-cache-and-persist>`_
+
 *Modules*
 
 * `spark-sklearn <https://databricks.com/blog/2016/02/08/auto-scaling-scikit-learn-with-apache-spark.html>`_ :
