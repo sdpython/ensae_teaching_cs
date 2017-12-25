@@ -77,6 +77,14 @@ class TestNotebook1237Coverage201712(unittest.TestCase):
 
         self.a_test_notebook_runner("td2a_bigdata_memory", "td2a")
 
+    def test_notebook_td1a_pyramide_bigarre(self):
+        fLOG(
+            __file__,
+            self._testMethodName,
+            OutputPrint=__name__ == "__main__")
+
+        self.a_test_notebook_runner("bigarree", "td1a")
+
 
 if __name__ == "__main__":
     unittest.main()
