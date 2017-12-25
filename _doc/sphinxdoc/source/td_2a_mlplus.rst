@@ -1515,6 +1515,22 @@ précis.
 .. contents::
     :local:
 
+Awesome, Playground...
+++++++++++++++++++++++
+
+* `Awesome-Pytorch-list <https://github.com/bharathgs/Awesome-pytorch-list>`_
+* `pytorch-playground <https://github.com/aaron-xichen/pytorch-playground>`_ :
+  modèle préentraînés
+* `pytorch-yolo2 <https://github.com/marvis/pytorch-yolo2>`_
+
+Pretrained-models
++++++++++++++++++
+
+* `pretrained-models.pytorch <https://github.com/Cadene/pretrained-models.pytorch>`_
+* `PyTorch for Semantic Segmentation <https://github.com/ZijunDeng/pytorch-semantic-segmentation>`_
+* `fcn - Fully Convolutional Networks <https://github.com/wkentaro/fcn>`_
+* `pytorch-fcn/torchfcn/models <https://github.com/wkentaro/pytorch-fcn/tree/master/torchfcn/models>`_
+
 Adversarial Examples
 ++++++++++++++++++++
 
@@ -1601,7 +1617,9 @@ Portraits
 
 * `Face Segmentation <https://github.com/YuvalNirkin/face_segmentation>`_ :
   il est plus facile de déterminer une boîte englobante autour d'un visage,
-  le modèle référencé extrait un visage au pixel près
+  le modèle référencé extrait un visage au pixel près,
+  `Simple Classification Segmentation <https://github.com/arahusky/Tensorflow-Segmentation/blob/master/notebooks/simple_classification_segmentation.ipynb>`_,
+  `Upsampling segmentation <https://github.com/arahusky/Tensorflow-Segmentation/blob/master/notebooks/upsampling_segmentation.ipynb>`_
 * `FaderNetworks <https://github.com/facebookresearch/FaderNetworks>`_ :
   vieillir un visage, rajeunir, ajouter des lunettes, ce réseaux de neurones a été
   appris pour transformer un portrait
@@ -1616,6 +1634,17 @@ Retail
 ++++++
 
 * `Data Mining Problems in Retail <https://highlyscalable.wordpress.com/2015/03/10/data-mining-problems-in-retail/>`_
+
+Segmentation d'images
++++++++++++++++++++++
+
+* `Fully Convolutional Networks for Semantic Segmentation <https://arxiv.org/abs/1605.06211>`_
+* `SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation <https://arxiv.org/abs/1511.00561>`_
+* `Pyramid Scene Parsing Network <https://arxiv.org/abs/1612.01105>`_
+* `U-Net: Convolutional Networks for Biomedical Image Segmentation <https://arxiv.org/abs/1505.04597>`_
+* `RefineNet: Multi-Path Refinement Networks for High-Resolution Semantic Segmentation <https://arxiv.org/abs/1611.06612>`_
+* `pytorch-semseg <https://github.com/meetshah1995/pytorch-semseg>`_
+* `Pixel-wise segmentation on the VOC2012 dataset using pytorch <https://github.com/bodokaiser/piwise>`_
 
 Texte / Traduction
 ++++++++++++++++++
