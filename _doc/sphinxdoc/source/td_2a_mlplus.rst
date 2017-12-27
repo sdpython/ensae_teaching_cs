@@ -1195,7 +1195,7 @@ exploitable par les algorithmes d'apprentissage.
 
     notebooks/_gs2a_nlp
 
-*Lectures*
+*Lectures - articles*
 
 * `Système de complétion <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_nlp/completion.html>`_ :
   la complétion est utilisée par tous les sites Internet pour aider les utilisateurs
@@ -1213,6 +1213,10 @@ exploitable par les algorithmes d'apprentissage.
 * `Less Grammar More Features <http://www.cs.utexas.edu/~gdurrett/papers/hall-durrett-klein-acl2014.pdf>`_
 * `Learning-Based Single-Document Summarization with Compression and Anaphoricity Constraints <https://arxiv.org/pdf/1603.08887v1.pdf>`_
 * `Multimodal Word Distributions <http://www.aclweb.org/anthology/P/P17/P17-1151.pdf>`_
+
+*Lectures - cours*
+
+* `Deep Learning for Natural Language Processing <https://github.com/oxford-cs-deepnlp-2017/lectures>`_
 
 *Lectures - revue*
 
