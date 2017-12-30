@@ -160,6 +160,8 @@ Timeseries - Filtre de Kalman
 * `filterpy <https://github.com/rlabbe/filterpy>`_
 * `scipy <http://scipy-cookbook.readthedocs.io/items/KalmanFiltering.html>`_
 
+|pystatpng|
+
 Timeseries - Similarités
 ++++++++++++++++++++++++
 
@@ -175,6 +177,17 @@ Timeseries - Similarités
 * `LBImproved C++ Library <https://github.com/lemire/lbimproved>`_,
   `LBImproved C++ Library and Python <https://github.com/felixr/dtw_lbimproved>`_
 * `soft-dtw <https://github.com/mblondel/soft-dtw/>`_
+
+|pystatpng|
+
+Timeseries - Temps réel
++++++++++++++++++++++++
+
+*(à venir)*
+
+*Lectures*
+
+* `State-space multitaper time-frequency analysis <http://www.pnas.org/content/early/2017/12/15/1702877115.full>`_
 
 |pystatpng|
 

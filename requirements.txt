@@ -8,9 +8,8 @@ blockdiag
 blosc
 bqplot
 chardet
-coverage
-blockdiag
 cloudpickle
+coverage
 cytoolz
 dbfread
 duecredit
