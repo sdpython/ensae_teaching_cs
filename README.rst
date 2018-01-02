@@ -49,8 +49,6 @@ is hosted on GitHub can be modified by sending me pull requests:
 * `documentation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_
 * `Blog <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/blog/main_0000.html#ap-main-0>`_
 
-That will be probably one of the few pages in English.
-
 Contributions
 -------------
 

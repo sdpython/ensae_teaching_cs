@@ -367,6 +367,11 @@ Map Reduce en pratique
 * `MapReduce: Simplified Data Processing on Large Clusters <https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf>`_
 * `Speeding up Hadoop Builds using Distributed Unit tests <https://highlyscalable.wordpress.com/2012/08/14/speeding-up-hadoop-builds-distributed-parallel-unit-tests-on-jenkins/>`_
 
+*Vidéos*
+
+* `Calculer sur des données massives <https://interstices.info/jcms/p_83082/calculer-sur-des-donnees-massives>`_
+* `Le hachage <https://interstices.info/jcms/c_45523/le-hachage>`_
+
 avec PIG sur Azure et Cloudera
 ++++++++++++++++++++++++++++++
 
