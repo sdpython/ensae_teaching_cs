@@ -450,3 +450,8 @@ discute de ce point. Il aborde différentes métriques et fonctions d'erreur plu
 L'article `Multitask Learning without Label Correspondences <http://users.sussex.ac.uk/~nq28/pubs/Quaetal11.pdf>`_
 aborde le cas où on apprend plusieurs classifieurs sur des jeux de données qui se ressemblent
 avec des ensembles de classes différents.
+
+Autres articles
++++++++++++++++
+
+* `SLAC: A Sparsely Labeled Dataset for Action Classification and Localization <https://arxiv.org/abs/1712.09374>`_

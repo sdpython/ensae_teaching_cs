@@ -404,6 +404,7 @@ propose une réponse à ces deux problèmes.
 * `Sunlight: Fine-grained Targeting Detection at Scale with Statistical Confidence <http://www.cs.columbia.edu/~djhsu/papers/sunlight.pdf>`_
 * `Justice actuarielle, algorithmes... et données <http://freakonometrics.hypotheses.org/51783>`_
 * `Surveiller et prévenir, l'ère de la pénalité prédictive <https://bourgoinblog.wordpress.com/2017/11/10/surveiller-et-prevenir-lere-de-la-penalite-predictive/>`_
+* `Nozha Boujemaa : "Les algorithmes doivent apporter une aide à la décision mais pas en être les prescripteurs" <https://www.acteurspublics.com/2017/12/08/les-algorithmes-doivent-apporter-une-aide-a-la-decision-mais-pas-en-etre-les-prescripteurs>`_
 
 *Conférences*
 
