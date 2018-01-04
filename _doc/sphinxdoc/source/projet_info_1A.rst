@@ -87,14 +87,15 @@ Liste exhaustive :
 #. Algo génétique : :ref:`l-gen-tsp`
 #. Algo génétique : :ref:`l-gen-ant`
 #. Algo génétique : :ref:`l-gen-motif`
-#. Jeu 2 : :ref:`l-jeu-p4`
-#. Jeu 2 : :ref:`l-jeu-oth`
 #. Jeu 2 : :ref:`l-jeu-awa`
-#. Jeu 2 : :ref:`l-jeu-gomo`
+#. Jeu 2 : :ref:`l-jeu-echec`
 #. Jeu 2 : :ref:`l-jeu-go`
+#. Jeu 2 : :ref:`l-jeu-gomo`
+#. Jeu 2 : :ref:`l-jeu-oth`
 #. Jeu 2 : :ref:`l-jeu-pai-sho`
-#. Jeu 2 : :ref:`l-jeu-tic-tac-toe-99`
+#. Jeu 2 : :ref:`l-jeu-p4`
 #. Jeu 2 : :ref:`l-jeu-pokemon`
+#. Jeu 2 : :ref:`l-jeu-tic-tac-toe-99`
 #. Algo : :ref:`l-math-wifi`
 #. Algo : :ref:`l-math-pento`
 #. Algo : :ref:`l-math-motif`
@@ -109,6 +110,7 @@ Liste exhaustive :
 #. Algo : :ref:`l-distance_tree_robinson_foulds`
 #. Algo : :ref:`l-maths-inequation`
 #. Algo : :ref:`l-maths-meilleur-clavier`
+#. Algo : :ref:`l-impression-3D`
 #. Jeu hasard : :ref:`l-carte-poker`
 #. Jeu hasard : :ref:`l-carte-belotte`
 

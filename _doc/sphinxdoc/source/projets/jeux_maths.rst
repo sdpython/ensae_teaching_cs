@@ -242,3 +242,13 @@ la vie dure. L'article suivant
 aborde quelques façons de concevoir un clavier.
 L'idée de ce projet est de concevoir un clavier qui minimise une fonction d'utilité,
 de voir si cette utilité est différente pour un programmeur et un romancier.
+
+.. _l-impression-3D:
+
+Impression 3D (2018)
+--------------------
+
+L'article suivant introduit un algorithme mathématique
+pour dessiner une structure complexe avec une imprimante 3D.
+
+* `Freeform Assembly Planning <https://arxiv.org/pdf/1801.00527.pdf>`_

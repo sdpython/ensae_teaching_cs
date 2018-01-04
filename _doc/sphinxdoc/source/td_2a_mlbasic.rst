@@ -366,6 +366,10 @@ ici :
 * `Python Data Science Handbook <https://github.com/jakevdp/PythonDataScienceHandbook>`_
 * `The Elements of Statistical Learning <https://web.stanford.edu/~hastie/ElemStatLearn/>`_ : la bible que tout le monde recommande :
 
+*Comprendre*
+
+* `Explaining the Success of AdaBoost and Random Forests as Interpolating Classifiers <http://jmlr.org/papers/volume18/15-240/15-240.pdf>`_
+
 *Modules*
 
 * `scikit-learn <http://scikit-learn.org/stable/>`_
@@ -388,14 +392,14 @@ une liste de recettes qui améliorent leur performances et qui
 accélèrent le moment où le problème devient vraiment intéressant.
 Deux ou trois petits à garder à l'esprit.
 
-Les réseaux de neurones s’apprennent avec des méthodes de d’optimisation
-basées sur le **gradient**. Elles n’aiment pas les **échelles logarithmiques**.
-Les variables de type fréquences (nombre de clics sur une page, nombre d’occurence
-d’un mot, ...) ont des queues épaisses et quelques valeurs extrêmes,
+Les réseaux de neurones s'apprennent avec des méthodes de d'optimisation
+basées sur le **gradient**. Elles n'aiment pas les **échelles logarithmiques**.
+Les variables de type fréquences (nombre de clics sur une page, nombre d'occurence
+d'un mot, ...) ont des queues épaisses et quelques valeurs extrêmes,
 il est conseillé de normaliser et de passer à une échelle logarithmique.
 Elles n'aiment pas les **gradients élevés** : le gradient peut avoir une valeur très élevée
-dan un voisinage localisée (un regression proche d’une fonction en escalier),
-l’optimisation à base de gradient mettra beaucoup de temps à converger.
+dan un voisinage localisée (un regression proche d'une fonction en escalier),
+l'optimisation à base de gradient mettra beaucoup de temps à converger.
 Elles n'aiment pas les **variables discrètes** : le calcul du gradient fonctionne beaucoup
 mieux sur des variables continues plutôt que des variables discrètes
 car cela limite le nombre de valeurs que peut prendre le gradient.
@@ -403,13 +407,13 @@ car cela limite le nombre de valeurs que peut prendre le gradient.
 Les forêts aléatoires  et les arbres de décision sont des méthodes ensemblistes.
 Elles n'utilisent pas de gradient. Elles ne sont pas sensibles à la
 **normalisation**, comme ces modèles sont des assemblages de décisions basées sur
-des seuils, ils ne sont pas sensibles aux changements d’échelle. En revanche, elles
-n'aiment pas trop pas **décisions obliques**, comme un seuil s’applique sur une variable,
-il ne peut approcher une droite *x + y = 1* qu’avec une fonction en escalier
+des seuils, ils ne sont pas sensibles aux changements d'échelle. En revanche, elles
+n'aiment pas trop pas **décisions obliques**, comme un seuil s'applique sur une variable,
+il ne peut approcher une droite *x + y = 1* qu'avec une fonction en escalier
 (lire `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_).
 Ces algorithms n'aiment pas non plus les problèmes **multi-classe**.
 Pour un assemblage de fonction binaire (au dessus ou en dessous du seuil),
-il est plus facile d’avoir seulement deux choix.
+il est plus facile d'avoir seulement deux choix.
 On compense cette lacune avec deux stratégies
 `one versus rest <https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-rest>`_
 ou `one versus one <https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-one>`_

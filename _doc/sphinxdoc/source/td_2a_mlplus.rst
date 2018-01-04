@@ -153,6 +153,7 @@ Timeseries - Filtre de Kalman
 * `kalman 2d filter in python <https://stackoverflow.com/questions/13901997/kalman-2d-filter-in-python>`_
 * `Multidimensional Kalman-Filter <https://github.com/balzer82/Kalman>`_
 * `Deep Kalman Filters <https://arxiv.org/abs/1511.05121>`_
+* `Nonparametric Risk Bounds for Time-Series Forecasting <http://jmlr.org/papers/volume18/13-336/13-336.pdf>`_
 
 *Modules*
 
@@ -242,6 +243,10 @@ Auto-Learning
 * `Bayesian instance selection for the nearest neighbor rule <http://www.marc-boulle.fr/publications/FerrandizEtAlML10.pdf>`_
 * `One Model To Learn Them All <https://arxiv.org/abs/1706.05137>`_
 * `DLPaper2Code: Auto-generation of Code from Deep Learning Research Papers <https://arxiv.org/pdf/1711.03543.pdf>`_
+* `A Global Optimization Algorithm Worth Using <http://blog.dlib.net/2017/12/a-global-optimization-algorithm-worth.html>`_
+  (for optimizing hyperparameters - MaxLIPO+TR) - implements
+  `Global optimization of Lipschitz functions <https://arxiv.org/abs/1703.02628>`_
+* `Random Search for Hyper-Parameter Optimization <http://www.jmlr.org/papers/v13/bergstra12a.html>`_
 
 *Sites*
 
@@ -308,6 +313,17 @@ Algorithmes génétiques et autres variantes
 *Modules*
 
 * `pyevolve <http://pyevolve.sourceforge.net/>`_
+
+|pystatpng|
+
+Très grande dimension
++++++++++++++++++++++
+
+*(à venir)*
+
+*Lectures*
+
+* `Making Decision Trees Feasible in Ultrahigh Feature and Label Dimensions <http://jmlr.org/papers/volume18/16-466/16-466.pdf>`_
 
 ---------------
 
@@ -703,6 +719,7 @@ de clustering mais on cherche aussi à en déterminer le centre ou encore
 * `Networks in Their Surrounding Contexts <https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch04.pdf>`_
 * `Local Network Community Detection with Continuous Optimization of Conductance and Weighted Kernel K-Means <http://jmlr.org/papers/volume17/16-043/16-043.pdf>`_
 * `Learning Communities in the Presence of Errors <http://www.jmlr.org/proceedings/papers/v49/makarychev16.pdf>`_
+* `Fast Detection of Community Structures using Graph Traversal in Social Networks <https://arxiv.org/pdf/1707.04459.pdf>`_
 
 --------------------
 
@@ -1131,6 +1148,10 @@ Generative Adversarial Network (GAN)
 * `Fader Networks: Manipulating Images by Sliding Attributes <https://arxiv.org/pdf/1706.00409.pdf>`_
 * `Partial Information Attacks on Real-world AI <http://www.labsix.org/partial-information-adversarial-examples/>`_
 * `Synthesizing Robust Avdersarial Examples <https://arxiv.org/pdf/1707.07397.pdf>`_
+* `PixelDefend: Leveraging Generative Models to Understand and Defend against Adversarial Examples <https://arxiv.org/pdf/1710.10766.pdf>`_
+* `Threat of Adversarial Attacks on Deep Learning in Computer Vision: A Survey <https://arxiv.org/pdf/1801.00553.pdf>`_
+* `StackGAN++: Realistic Image Synthesis with Stacked Generative Adversarial Networks <https://arxiv.org/pdf/1710.10916.pdf>`_
+* `How Generative Adversarial Networks and its variants Work: An Overview of GAN <https://arxiv.org/pdf/1711.05914.pdf>`_
 
 *Exemples de code*
 

@@ -106,6 +106,11 @@ GPU
 
 * `Low-Level Programming University <https://github.com/gurugio/lowlevelprogramming-university>`_
 
+*Sécurité et bas niveau*
+
+* `'Kernel memory leaking' Intel processor design flaw forces Linux, Windows redesign <http://www.theregister.co.uk/2018/01/02/intel_cpu_design_flaw/>`_
+* `KASLR is Dead: Long Live KASLR <https://gruss.cc/files/kaiser.pdf>`_
+
 *Optimisation*
 
 * `No Bits Left Behind <http://sirrice.github.io/files/papers/bits-cidr11.pdf>`_ :
