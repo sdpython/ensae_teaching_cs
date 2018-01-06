@@ -110,6 +110,10 @@ GPU
 
 * `'Kernel memory leaking' Intel processor design flaw forces Linux, Windows redesign <http://www.theregister.co.uk/2018/01/02/intel_cpu_design_flaw/>`_
 * `KASLR is Dead: Long Live KASLR <https://gruss.cc/files/kaiser.pdf>`_
+* `Meltdown and Spectre <https://meltdownattack.com/>`_ :
+  Bugs in modern computers leak passwords and sensitive data.
+* `Meltdown <https://meltdownattack.com/meltdown.pdf>`_
+* `Spectre Attacks: Exploiting Speculative Execution∗ <https://spectreattack.com/spectre.pdf>`_
 
 *Optimisation*
 
