@@ -1,0 +1,31 @@
+
+.. blogpost::
+    :title: Saves and reload a pytorch model
+    :keywords: torch, serialize
+    :date: 2018-01-07
+    :categories: deep learning
+
+    Saving and loading a :epkg:`pytorch` model is something
+    which took me a couple of searches on internet so
+    let's write it out. So to save a model:
+
+    ::
+
+        import torch
+        model = create_model()  # create model
+        train_model(model)      # something which trains a models
+        torch.save(model.state_dict(), filename)
+
+    To load it:
+
+    ::
+
+        import torch
+        model = create_model()  # create model
+        model.load_state_dict(torch.load(filename))
+
+    These two snippets of code assume that there exists
+    a function which creates the model structure.
+    This comes from the fact :epkg:`pytorch` allows
+    custom functions and they cannot be serialized
+    with :epkg:`pickle`.

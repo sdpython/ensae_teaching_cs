@@ -138,6 +138,7 @@ epkg_dictionary["notebook"] = 'http://jupyter.org/'
 epkg_dictionary["Notepad++"] = "https://notepad-plus-plus.org/"
 epkg_dictionary["open source"] = 'http://fr.wikipedia.org/wiki/Open_source'
 epkg_dictionary["OS/X"] = 'https://fr.wikipedia.org/wiki/MacOS'
+epkg_dictionary["pickle"] = 'https://docs.python.org/3/library/pickle.html'
 epkg_dictionary["PTVS"] = 'https://microsoft.github.io/PTVS/'
 epkg_dictionary["PyCharm"] = 'https://www.jetbrains.com/pycharm/'
 epkg_dictionary["pyenbc"] = 'http://www.xavierdupre.fr/app/pyenbc/helpsphinx/'
