@@ -23,7 +23,7 @@ def _get_code(mail):
 
 def execute_python_scripts(root, df, col_names=None, url=None, eol="/", fLOG=noLOG, gen_mail=None):
     """
-    retrieve all python scripts and run them
+    Retrieves all :epkg:`python` scripts and run them.
 
     @param      root            main folder
     @param      df              dataframe

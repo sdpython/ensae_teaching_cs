@@ -11,7 +11,7 @@ from pyquickhelper.texthelper import remove_diacritics
 def git_clone(local_folder, url_https, user=None, password=None, timeout=60,
               init=True, fLOG=noLOG):
     """
-    clone a project from a git repository in a non empty local folder,
+    Clones a project from a git repository in a non empty local folder,
     it requires `GIT <http://git-scm.com/>`_ to be installed
     and uses the command line.
 
@@ -117,7 +117,7 @@ def git_clone(local_folder, url_https, user=None, password=None, timeout=60,
 def git_change_remote_origin(local_folder, url_https, user=None, password=None,
                              add_fetch=False, timeout=10, fLOG=noLOG):
     """
-    Change the origin of the repository. The url and the password
+    Changes the origin of the repository. The url and the password
     refer to the new repository.
 
     @param      local_folder   local folder
@@ -152,7 +152,7 @@ def git_change_remote_origin(local_folder, url_https, user=None, password=None,
 def git_commit_all(local_folder, url_https, message, user=None,
                    password=None, timeout=300, fLOG=noLOG):
     """
-    from a git repository,
+    From a git repository,
     it requires `GIT <http://git-scm.com/>`_ to be installed
     and uses the command line.
 
@@ -245,7 +245,7 @@ def create_folders_from_dataframe(df, root, report="suivi.rst", col_student="Ele
                                   col_group="Groupe", col_subject="Sujet",
                                   overwrite=False, email_function=None):
     """
-    creates a series of folders for groups of students
+    Creates a series of folders for groups of students.
 
     @param      root            where to create the folders
     @param      col_student     column which contains the student name (firt name + last name)
@@ -330,7 +330,7 @@ def create_folders_from_dataframe(df, root, report="suivi.rst", col_student="Ele
 
 def get_sections(path, suivi="suivi.rst"):
     """
-    extract sections from a filename used to follow a group of students
+    Extracts sections from a filename used to follow a group of students.
 
     @param      path        where to find filename
     @param      suivi       file, RST format, section are followed by ``+++++``
@@ -409,8 +409,8 @@ def get_sections(path, suivi="suivi.rst"):
 
 def git_url_user_password(url_https, user, password):
     """
-    builds a url (starting with https) and add the user and the password
-    to skip the authentification
+    Builds a url (starting with https) and add the user and the password
+    to skip the authentification.
 
     :param      url_https:       example ``https://gitlab.server/folder/project_name``
     :param      user:            part 1 of the credentials
@@ -424,7 +424,7 @@ def git_url_user_password(url_https, user, password):
 
 def git_check_error(out, err, fLOG):
     """
-    private function, analyse the output
+    Private function, analyse the output.
     """
     if len(out) > 0:
         fLOG("OUT:\n" + out)

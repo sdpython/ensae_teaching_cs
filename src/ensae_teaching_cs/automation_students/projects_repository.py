@@ -28,7 +28,7 @@ class ProjectsRepository:
 
     class MailNotFound(Exception):
         """
-        raises an exception if mail not found
+        Raises an exception if mail not found.
         """
         pass
 
@@ -38,7 +38,7 @@ class ProjectsRepository:
 
     def __init__(self, location, suivi="suivi.rst", fLOG=noLOG):
         """
-        location of the repository
+        Location of the repository.
 
         @param      location        location of the repository
         @param      suivi           name of the file gathering information about each project
@@ -57,14 +57,14 @@ class ProjectsRepository:
     @property
     def Groups(self):
         """
-        returns all available groups in the repository
+        Returns all available groups in the repository.
         """
         return [_ for _ in os.listdir(self._location)
                 if os.path.isdir(os.path.join(self._location, _))]
 
     def get_group_location(self, group):
         """
-        return the local folder associated to a group
+        Returns the local folder associated to a group.
 
         @param      group       group name
         @return                 local folder
@@ -74,7 +74,7 @@ class ProjectsRepository:
     @staticmethod
     def get_regex(path, regex, suivi="suivi.rst", skip_if_empty=False):
         """
-        retrieve data from file ``suivi.rst`` using a regular expression
+        Retrieves data from file ``suivi.rst`` using a regular expression.
 
         @param      path            sub folder to look into
         @param      suivi           name of the file ``suivi.rst``
@@ -110,7 +110,7 @@ class ProjectsRepository:
 
     def get_emails(self, group, skip_if_empty=False):
         """
-        retrieve student emails from file ``suivi.rst``
+        Retrieves student emails from file ``suivi.rst``.
 
         @param      group           group
         @param      skip_if_empty   skip if no mail?
@@ -135,7 +135,7 @@ class ProjectsRepository:
 
     def get_videos(self, group):
         """
-        retrieve student emails from file ``suivi.rst``
+        Retrieves student emails from file ``suivi.rst``.
 
         @param      group           group
         @return                     list of videos
@@ -144,7 +144,7 @@ class ProjectsRepository:
 
     def get_sections(self, group):
         """
-        extract sections from a filename used to follow a group of students
+        Extracts sections from a filename used to follow a group of students.
 
         @param      group           group
         @return                     dictionary { section : content }
@@ -225,7 +225,7 @@ class ProjectsRepository:
     @staticmethod
     def match_mail(name, emails, threshold=3, exc=True):
         """
-        tries to match a name among a list of mails
+        Tries to match a name among a list of mails.
 
         @param      name        a name (first name last name separated by a space)
         @param      emails      list of emails
@@ -261,7 +261,7 @@ class ProjectsRepository:
     @staticmethod
     def match_mails(names, emails, threshold=3, exc=True, skip_names=None):
         """
-        tries to match a series of names among a list of mails
+        Tries to match a series of names among a list of mails.
 
         @param      names       list of names (first name last name separated by a space)
         @param      emails      list of emails
@@ -288,7 +288,7 @@ class ProjectsRepository:
                                       must_have_email=True, skip_if_nomail=False, skip_names=None,
                                       fLOG=noLOG):
         """
-        creates a series of folders for groups of students
+        Creates a series of folders for groups of students.
 
         @param      root                where to create the folders
         @param      col_student         column which contains the student name (firt name + last name)
@@ -469,7 +469,7 @@ class ProjectsRepository:
     def enumerate_group_mails(self, group, mailbox, subfolder, date=None,
                               skip_function=None, max_dest=5):
         """
-        enumerates all mails sent by or sent to a given group
+        Enumerates all mails sent by or sent to a given group.
 
         @param      group           group (if None, goes through all mails)
         @param      mailbox         mailbox (see `pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/>`_)
@@ -504,7 +504,7 @@ class ProjectsRepository:
                          skip_function=None, max_dest=5, filename="index_mails.html",
                          overwrite=False, skip_if_empty=False, convert_files=False):
         """
-        enumerates all mails sent by or sent to a given group
+        Enumerates all mails sent by or sent to a given group.
 
         @param      renderer        instance of class `EmailMessageListRenderer <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/render/email_message_list_renderer.html>`_
         @param      group           group
@@ -563,7 +563,7 @@ class ProjectsRepository:
 
     def remove_group(self, group):
         """
-        remove a group
+        Removes a group.
 
         @param      group       group
         @return                 list of removed files
@@ -575,7 +575,7 @@ class ProjectsRepository:
 
     def enumerate_group_files(self, group):
         """
-        enumerate all files in a group
+        Enumerates all files in a group.
 
         @param      group       group
         @return                 iterator on files
@@ -591,7 +591,7 @@ class ProjectsRepository:
 
     def list_mails(self, group):
         """
-        return the number of mails of a group
+        Returns the number of mails of a group.
 
         @param          group       group name
         @return                     list of mails
@@ -608,7 +608,7 @@ class ProjectsRepository:
 
     def zip_group(self, group, outfile, addition=None):
         """
-        zip a group
+        Zips a group.
 
         @param      group       group
         @param      outfile     output file
@@ -628,12 +628,54 @@ class ProjectsRepository:
     _known_strings = ["xavierdupre.fr", "doodle", "ensaenotebook", "teralab",
                       "outlook.com", "gohlke", "support.google", "help.github",
                       "api.jcdecaux"]
+                      
+    _default_template_summary = """<?xml version="1.0" encoding="utf-8"?>
+                    <head>
+                    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+                    </head>
+                    <body>
+                    <html>
+                    <head>
+                    <title>{{ title }}</title>
+                    <link rel="stylesheet" type="text/css" href="{{ css }}">
+                    </head>
+                    <body>
+                    <h1>{{ title }}</h1>
+                    <ol type="1">
+                    {% for ps in groups %}
+                        <li><a href="{{ ps["link"] }}">{{ ps["group"] }}</a><small><i>
+                            {{ ps["nb"] }} files - {{ format_size(ps["size"]) }} -
+                            last mail {{ ps["emails"][-1]["date"] }} ---
+                            {{ len(ps["attachments"]) }} attachments</i></small>
+                        {% if len(ps["attachments"]) + len(ps["links"]) > 0 %}
+                            <ul>
+                            {% for day, att, data in ps["attachments"] %}
+                                <li>att: {{ day }} - <a href="{{ att }}">{{ os.path.split(att)[-1] }}</a></li>
+                            {% endfor %}
+                            {% for date, from_, url, domain, last in ps["links"] %}
+                                <li>link: {{ date }} <a href="{{ url }}">{{ domain }} // {{ last }}</a> from {{ from_ }}</li>
+                            {% endfor %}
+                            </ul>
+                        {% endif %}
+                        {% if len(ps["created_files"]) > 0 %}
+                            <ul>
+                            {% for name, relpath, size in ps["created_files"] %}
+                                <li>added: <a href="{{ relpath }}">{{ name }}</a> {{ size }}</li>
+                            {% endfor %}
+                            </ul>
+                        {% endif %}
+                        </li>
+                    {% endfor %}
+                    </ol>
+                    </body>
+                    </html>
+                    """.replace("                    ", "")
 
     def write_summary(self, render=None, link="index_mails.html",
                       outfile="index.html", title="summary",
                       nolink_if=None):
         """
-        produces a summary and uses a Jinja2 template
+        Produces a summary and uses a Jinja2 template.
 
         @param      render      instance of `EmailMessageRenderer <http://www.xavierdupre.fr/app/pymmails/helpsphinx//pymmails/render/email_message_renderer.html>`_),
                                 can be None
@@ -642,49 +684,12 @@ class ProjectsRepository:
         @param      nolink_if   link containing those strings will be removed (if None, a default set will be assigned)
         @return                 summary
 
-        the current default template is::
-
-            <?xml version="1.0" encoding="utf-8"?>
-            <head>
-            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-            </head>
-            <body>
-            <html>
-            <head>
-            <title>{{ title }}</title>
-            <link rel="stylesheet" type="text/css" href="{{ css }}">
-            </head>
-            <body>
-            <h1>{{ title }}</h1>
-            <ol type="1">
-            {% for ps in groups %}
-                <li><a href="{{ ps["link"] }}">{{ ps["group"] }}</a><small><i>
-                    {{ ps["nb"] }} files - {{ format_size(ps["size"]) }} -
-                    last mail {{ ps["emails"][-1]["date"] }} ---
-                    {{ len(ps["attachments"]) }} attachments</i></small>
-                {% if len(ps["attachments"]) > 0 %}
-                    <ul>
-                    {% for day, att, data in ps["attachments"] %}
-                        <li>att: {{ day }} - <a href="{{ att }}">{{ os.path.split(att)[-1] }}</a></li>
-                    {% endfor %}
-                    {% for date, from_, url, domain, last in ps["links"] %}
-                        <li>link: {{ date }} <a href="{{ url }}">{{ domain }} // {{ last }}</a> from {{ from_ }}</li>
-                    {% endfor %}
-                    </ul>
-                {% endif %}
-                {% if len(ps["created_files"]) > 0 %}
-                    <ul>
-                    {% for name, relpath, size in ps["created_files"] %}
-                        <li>added: <a href="{{ relpath }}">{{ name }}</a> {{ size }}</li>
-                    {% endfor %}
-                    </ul>
-                {% endif %}
-                </li>
-            {% endfor %}
-            </ol>
-            </body>
-            </html>
-
+        The current default template is::
+        
+        .. runpython::
+            
+            from ensae_teaching_cs.automation_students.projects_repository import _default_template_summary_template
+            print(_default_template_summary)
         """
         if nolink_if is None:
             nolink_if = ProjectsRepository._known_strings
@@ -794,7 +799,7 @@ class ProjectsRepository:
                     continue
                 links.append((date, from_, url, domain, last))
                 done[url] = True
-
+                
             # we create the variable for the template
             emails = [_[-1] for _ in sorted(emails)]
             c = dict(link=c[0].replace("\\", "/"), group=c[1], nb=nb_files,
@@ -804,47 +809,7 @@ class ProjectsRepository:
             groups.append(c)
 
         if render is None:
-            tmpl = """<?xml version="1.0" encoding="utf-8"?>
-                    <head>
-                    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-                    </head>
-                    <body>
-                    <html>
-                    <head>
-                    <title>{{ title }}</title>
-                    <link rel="stylesheet" type="text/css" href="{{ css }}">
-                    </head>
-                    <body>
-                    <h1>{{ title }}</h1>
-                    <ol type="1">
-                    {% for ps in groups %}
-                        <li><a href="{{ ps["link"] }}">{{ ps["group"] }}</a><small><i>
-                            {{ ps["nb"] }} files - {{ format_size(ps["size"]) }} -
-                            last mail {{ ps["emails"][-1]["date"] }} ---
-                            {{ len(ps["attachments"]) }} attachments</i></small>
-                        {% if len(ps["attachments"]) > 0 %}
-                            <ul>
-                            {% for day, att, data in ps["attachments"] %}
-                                <li>att: {{ day }} - <a href="{{ att }}">{{ os.path.split(att)[-1] }}</a></li>
-                            {% endfor %}
-                            {% for date, from_, url, domain, last in ps["links"] %}
-                                <li>link: {{ date }} <a href="{{ url }}">{{ domain }} // {{ last }}</a> from {{ from_ }}</li>
-                            {% endfor %}
-                            </ul>
-                        {% endif %}
-                        {% if len(ps["created_files"]) > 0 %}
-                            <ul>
-                            {% for name, relpath, size in ps["created_files"] %}
-                                <li>added: <a href="{{ relpath }}">{{ name }}</a> {{ size }}</li>
-                            {% endfor %}
-                            </ul>
-                        {% endif %}
-                        </li>
-                    {% endfor %}
-                    </ol>
-                    </body>
-                    </html>
-                    """.replace("                    ", "")
+            tmpl = ProjectsRepository._default_template_summary
             render = EmailMessageRenderer(tmpl=tmpl, fLOG=self.fLOG)
             dof = True
         else:

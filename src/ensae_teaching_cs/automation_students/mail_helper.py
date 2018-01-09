@@ -9,8 +9,8 @@ from pymmails import MailBoxImap
 
 def grab_addresses(mailbox, subfolder, date, no_domain=False, max_dest=5, names=False, fLOG=noLOG):
     """
-    look for some emails in a mail box
-    from specific emails or sent to specific emails
+    Looks for some emails in a mail box
+    from specific emails or sent to specific emails.
 
     @param      mailbox         MailBoxImap object (we assume you are logged in)
     @param      date            date (grab emails since ..., example ``1-Oct-2014``)
@@ -79,7 +79,7 @@ def grab_addresses(mailbox, subfolder, date, no_domain=False, max_dest=5, names=
 def extract_students_mail_and_name_from_gmail(user=None, pwd=None, server="imap.gmail.com", mailfolder=["ensae/actuariat"],
                                               date="1-Jan-2016", fLOG=noLOG):
     """
-    Extract mails and names from a mail box
+    Extracts mails and names from a mail box.
 
     @param      user                user of the gmail inbox
     @param      pwd                 password of the gmail inbox
