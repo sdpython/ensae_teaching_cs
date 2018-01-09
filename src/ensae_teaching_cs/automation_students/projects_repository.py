@@ -628,7 +628,7 @@ class ProjectsRepository:
     _known_strings = ["xavierdupre.fr", "doodle", "ensaenotebook", "teralab",
                       "outlook.com", "gohlke", "support.google", "help.github",
                       "api.jcdecaux"]
-                      
+
     _default_template_summary = """<?xml version="1.0" encoding="utf-8"?>
                     <head>
                     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -685,9 +685,9 @@ class ProjectsRepository:
         @return                 summary
 
         The current default template is::
-        
+
         .. runpython::
-            
+
             from ensae_teaching_cs.automation_students.projects_repository import _default_template_summary_template
             print(_default_template_summary)
         """
@@ -799,7 +799,7 @@ class ProjectsRepository:
                     continue
                 links.append((date, from_, url, domain, last))
                 done[url] = True
-                
+
             # we create the variable for the template
             emails = [_[-1] for _ in sorted(emails)]
             c = dict(link=c[0].replace("\\", "/"), group=c[1], nb=nb_files,
