@@ -119,6 +119,7 @@ Timeseries - Séries temporelles
 * `Engineering Extreme Event Forecasting at Uber with Recurrent Neural Networks <https://eng.uber.com/neural-networks/>`_
 * `Holt-Winters seasonal method <https://www.otexts.org/fpp/7/5>`_,
   `Initializing the Holt-Winters method <https://robjhyndman.com/hyndsight/hw-initialization/>`_
+* `A Comparison of Estimation Methods for Vector Autoregressive Moving-Average Models <http://www.christiankascha.com/wp-content/uploads/2013/03/ERVARMAmain_final.pdf>`_
 
 *Compétitions*
 

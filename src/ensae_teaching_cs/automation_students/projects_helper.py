@@ -78,7 +78,7 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
     if isinstance(dataframe, pandas.DataFrame):
         df = dataframe
     elif dataframe.endswith("xlsx"):
-        fLOG("### read dataframe", dataframe)
+        fLOG("[extract_students_mails_from_gmail_and_stores_in_folders] read dataframe", dataframe)
         df = pandas.read_excel(dataframe)
     else:
         df = pandas.read_csv(dataframe, sep="\t", encoding="utf8")
@@ -86,12 +86,14 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
     # check mails
     if "mail" not in columns:
         if os.path.exists(filemails):
-            fLOG("### read addresses from ", filemails)
+            fLOG(
+                "[extract_students_mails_from_gmail_and_stores_in_folders] read addresses from ", filemails)
             with open(filemails, "r", encoding="utf8") as f:
                 lines = f.readlines()
             emails = [l.strip("\r\t\n ") for l in lines]
         else:
-            fLOG("### mine address ")
+            fLOG(
+                "[extract_students_mails_from_gmail_and_stores_in_folders] mine address ")
             box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
             box.login()
             emails = grab_addresses(box, mailfolder, date, fLOG=fLOG)
@@ -110,7 +112,7 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
         df[columns["name"]] = df[columns["name"]].apply(
             lambda f: process_name(f))
 
-    fLOG("### create groups folders in", folder)
+    fLOG("[extract_students_mails_from_gmail_and_stores_in_folders] create groups folders in", folder)
     proj = ProjectsRepository(folder, fLOG=fLOG)
 
     proj = ProjectsRepository.create_folders_from_dataframe(df, folder,
@@ -119,7 +121,8 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
                                                             col_student=columns[
                                                                 "name"], email_function=emails, skip_if_nomail=False,
                                                             col_mail=columns["mail"], must_have_email=True, skip_names=skip_names)
-    fLOG("### nb groups", len(proj.Groups))
+    fLOG("[extract_students_mails_from_gmail_and_stores_in_folders] nb groups", len(
+        proj.Groups))
 
     # gathers mails
     email_render = EmailMessageRenderer(
@@ -139,26 +142,27 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
         files = list(proj.enumerate_group_files(group))
         att = [_ for _ in files if ".html" in _]
         if len(att) <= 1:
-            fLOG("### remove ", group)
+            fLOG(
+                "[extract_students_mails_from_gmail_and_stores_in_folders] remove ", group)
             proj.remove_group(group)
 
     # unzip files and convert notebooks
     for group in proj.Groups:
         proj.unzip_convert(group)
 
-    fLOG("### summary ")
+    fLOG("[extract_students_mails_from_gmail_and_stores_in_folders] summary ")
     summary = os.path.join(folder, "index.html")
     if os.path.exists(summary):
         os.remove(summary)
     proj.write_summary(nolink_if=nolink_if)
 
-    fLOG("### zip everything in", zipfilename)
+    fLOG("[extract_students_mails_from_gmail_and_stores_in_folders] zip everything in", zipfilename)
     if os.path.exists(zipfilename):
         os.remove(zipfilename)
     proj.zip_group(None, zipfilename,
                    addition=["index.html", "mail_style.css", "emails.txt"])
 
-    fLOG("### encrypt the zip file in", zipfilenameenc)
+    fLOG("[extract_students_mails_from_gmail_and_stores_in_folders] encrypt the zip file in", zipfilenameenc)
     if os.path.exists(zipfilenameenc):
         os.remove(zipfilenameenc)
     encrypt_stream(zipencpwd, zipfilename, zipfilenameenc, chunksize=2 ** 30)

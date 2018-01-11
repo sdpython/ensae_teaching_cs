@@ -374,7 +374,7 @@ class ProjectsRepository:
             df2["gid2"] = df2.gid.apply(lambda x: "G%d" % x)
             gr = df2.groupby("gid2")
 
-        fLOG("ProjectsRepository.create_folders_from_dataframe [number of groups {0}]".format(
+        fLOG("[ProjectsRepository.create_folders_from_dataframe] number of groups {0}".format(
             len(gr)))
 
         for name, group in gr:
@@ -412,7 +412,7 @@ class ProjectsRepository:
                             "unable to find a mail for {0}\nname={1}\n with function\n{3}\nGROUP\n{2}\nTYPE:\n{4}".format(
                                 " ;".join(eleves), name, group, email_function, type(email_function)))
                 if skip_if_nomail and (not skip and len(mails) == 0):
-                    fLOG("ProjectsRepository.create_folders_from_dataframe [skipping {0}]".format(
+                    fLOG("[ProjectsRepository.create_folders_from_dataframe] skipping {0}".format(
                         "; ".join(eleves)))
                     continue
                 if mails:
@@ -482,14 +482,14 @@ class ProjectsRepository:
         if group is None:
             for group in self.Groups:
                 self.fLOG(
-                    "ProjectsRepository.enumerate_group_mails [group={0}]".format(group))
+                    "[ProjectsRepository.enumerate_group_mails] group='{0}'".format(group))
                 iter = self.enumerate_group_mails(group, mailbox, subfolder=subfolder,
                                                   date=date, skip_function=skip_function, max_dest=max_dest)
                 for mail in iter:
                     yield mail
         else:
             mails = self.get_emails(group)
-            self.fLOG("ProjectsRepository.enumerate_group_mails [mails={0} folder={1} date={2}]".format(
+            self.fLOG("[ProjectsRepository.enumerate_group_mails] mails='{0}' folder='{1}' date={2}".format(
                 str(mails), subfolder, date))
             iter = mailbox.enumerate_search_person(
                 person=mails,
@@ -534,11 +534,11 @@ class ProjectsRepository:
         else:
             mails = self.get_emails(group, skip_if_empty=skip_if_empty)
             if skip_if_empty and len(mails) == 0:
-                self.fLOG("ProjectsRepository.dump_group_mails [SKIP group={0} folder={1} date={2} mails={3}]".format(
+                self.fLOG("[ProjectsRepository.dump_group_mails] SKIP group='{0}' folder='{1}' date={2} mails={3}".format(
                     group, subfolder, date, str(mails)))
                 return []
             else:
-                self.fLOG("ProjectsRepository.dump_group_mails [group={0} folder={1} date={2} mails={3}]".format(
+                self.fLOG("[ProjectsRepository.dump_group_mails] group='{0}' folder='{1}' date={2} mails={3}".format(
                     group, subfolder, date, str(mails)))
 
             def iter_mail(body=True):
@@ -549,7 +549,7 @@ class ProjectsRepository:
             nbcur = len(list(iter_mail(body=False)))
             if nbmails != nbcur:
                 overwrite = True
-                self.fLOG("[group={0}] new mails".format(
+                self.fLOG("[dump_group_mails] group='{0}' - new mails".format(
                     group), nbcur, "<", "nbmails")
 
             iter = iter_mail(body=True)
@@ -767,7 +767,8 @@ class ProjectsRepository:
                     if rel == dest:
                         raise Exception("weird\n{0}\n{1}".format(rel, dest))
                     ssize = format_size(os.stat(name).st_size)
-                    created_files.append((rel, dest, ssize))
+                    if "__MACOSX" not in rel and "__MACOSX" not in dest:
+                        created_files.append((rel, dest, ssize))
                 else:
                     mail = os.path.split(name)[-1]
                     res = EmailMessage.interpret_default_filename(mail)
@@ -796,6 +797,8 @@ class ProjectsRepository:
             done = {}
             for date, from_, url, domain, last in mlinks:
                 if url in done:
+                    continue
+                if "__MACOSX" in url or "__MACOSX" in last:
                     continue
                 links.append((date, from_, url, domain, last))
                 done[url] = True
@@ -857,16 +860,16 @@ class ProjectsRepository:
                 folder = folder.replace(" ", "_").replace(",", "_")
                 if not os.path.exists(folder):
                     self.fLOG(
-                        "ProjectsRepository.unzip_files [unzip {0}]".format(name))
+                        "[ProjectsRepository.unzip_files] unzip '{0}'".format(name))
                     self.fLOG(
-                        "ProjectsRepository.unzip_files [creating {0}]".format(folder))
+                        "[ProjectsRepository.unzip_files] creating '{0}'".format(folder))
                     os.mkdir(folder)
                     try:
                         lf = unzip_files(
-                            name, folder, fLOG=self.fLOG, fvalid=fvalid)
+                            name, folder, fLOG=self.fLOG, fvalid=fvalid, fail_if_error=False)
                     except zipfile.BadZipFile as e:
                         self.fLOG(
-                            "    ERROR: ProjectsRepository.unzip_files [unable to unzip {0} because of {1}]".format(name, e))
+                            "[ProjectsRepository.unzip_files]    ERROR: unable to unzip '{0}' because of '{1}']".format(name, e))
                         lf = []
                     files.extend(lf)
                 else:
@@ -877,9 +880,9 @@ class ProjectsRepository:
                 folder = folder.replace(" ", "_").replace(",", "_")
                 if not os.path.exists(folder):
                     self.fLOG(
-                        "ProjectsRepository.un7zip_files [un7zip {0}]".format(name))
+                        "[ProjectsRepository.un7zip_files] un7zip '{0}'".format(name))
                     self.fLOG(
-                        "ProjectsRepository.un7zip_files [creating {0}]".format(folder))
+                        "[ProjectsRepository.un7zip_files] creating '{0}'".format(folder))
                     os.mkdir(folder)
                     lf = un7zip_files(
                         name, folder, fLOG=self.fLOG, fvalid=fvalid)
@@ -892,9 +895,9 @@ class ProjectsRepository:
                 folder = folder.replace(" ", "_").replace(",", "_")
                 if not os.path.exists(folder):
                     self.fLOG(
-                        "ProjectsRepository.unrar_files [unrar {0}]".format(name))
+                        "[ProjectsRepository.unrar_files] unrar '{0}'".format(name))
                     self.fLOG(
-                        "ProjectsRepository.unrar_files [creating {0}]".format(folder))
+                        "[ProjectsRepository.unrar_files] creating '{0}'".format(folder))
                     os.mkdir(folder)
                     lf = unrar_files(
                         name, folder, fLOG=self.fLOG, fvalid=fvalid)
@@ -907,9 +910,9 @@ class ProjectsRepository:
                 folder = folder.replace(" ", "_").replace(",", "_")
                 if not os.path.exists(folder):
                     self.fLOG(
-                        "ProjectsRepository.ungzip_files [ungzip {0}]".format(name))
+                        "[ProjectsRepository.ungzip_files] ungzip '{0}'".format(name))
                     self.fLOG(
-                        "ProjectsRepository.ungzip_files [creating {0}]".format(folder))
+                        "[ProjectsRepository.ungzip_files] creating '{0}'".format(folder))
                     os.mkdir(folder)
                     unzip = "pkl.gz" not in name
                     lf = ungzip_files(
@@ -937,7 +940,7 @@ class ProjectsRepository:
             ext = os.path.splitext(name)[-1]
             if ext == ".ipynb":
                 self.fLOG(
-                    "ProjectsRepository.convert_files [convert {0}]".format(name))
+                    "[ProjectsRepository.convert_files] convert '{0}'".format(name))
                 out = name + ".html"
                 if os.path.exists(out):
                     warnings.warn(
@@ -951,7 +954,7 @@ class ProjectsRepository:
                         "unable to convert a notebook '{0}' because of {1}".format(name, e))
             elif ext == ".py":
                 self.fLOG(
-                    "ProjectsRepository.convert_files [convert {0}]".format(name))
+                    "[ProjectsRepository.convert_files] convert '{0}'".format(name))
                 out = name + ".html"
                 if os.path.exists(out):
                     warnings.warn(
