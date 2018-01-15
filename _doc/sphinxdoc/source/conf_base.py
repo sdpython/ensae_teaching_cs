@@ -100,6 +100,7 @@ project_var_name_t = "ENSAE<br />Xavier Dupré"
 project_var_name = "ensae_teaching_cs"
 project_var_name_1l = project_var_name_t.replace("<br />", " - ")
 html_search_language = "fr"
+html_split_index = True
 
 texinfo_documents = [
     ('index',
