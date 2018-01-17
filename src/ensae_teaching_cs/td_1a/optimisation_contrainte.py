@@ -5,7 +5,6 @@
 """
 
 import random
-from cvxopt import solvers, matrix
 
 
 def f_df_H(x=None, z=None):
@@ -19,7 +18,7 @@ def f_df_H(x=None, z=None):
         * ``F(x)`` : la fonction retourne l'évaluation de :math:`f_0` et de son gradient au point ``x``
         * ``F(x,z)`` : la fonction retourne l'évaluation de :math:`f_0`, son gradient et de la dérivée seconde au point ``x``
 
-    Voir @see fn exercice_particulier1
+    Voir @see fn exercice_particulier1.
 
     Le problème d'optimisation est le suivant :
 
@@ -29,9 +28,12 @@ def f_df_H(x=None, z=None):
 
     """
     if x is None:
+        from cvxopt import matrix
         # cas 1
         x0 = matrix([[random.random(), random.random()]])
         return 0, x0
+    else:
+        matrix = x.__class__
     f = x[0] ** 2 + x[1] ** 2 - x[0] * x[1] + x[1]
     d = matrix([x[0] * 2 - x[1], x[1] * 2 - x[0] + 1]).T
     h = matrix([[2.0, -1.0], [-1.0, 2.0]])
@@ -150,6 +152,7 @@ def exercice_particulier1():
             sol = solvers.cp ( f_df_H, A = A, b = b)
 
     """
+    from cvxopt import solvers, matrix
     t = solvers.options.get('show_progress', True)
     solvers.options['show_progress'] = False
     A = matrix([[1.0, 2.0]]).trans()

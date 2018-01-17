@@ -172,14 +172,9 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
         fLOG("-------------------------", location)
 
         ftn = FileTreeNode(root_local)
-        fftp = FolderTransferFTP(ftn, ftp, sfile,
-                                 root_web=rootw,
-                                 fLOG=fLOG,
-                                 footer_html=footer_html,
-                                 content_filter=content_filter,
-                                 is_binary=is_binary,
-                                 text_transform=text_transform,
-                                 filter_out=filter_out,
+        fftp = FolderTransferFTP(ftn, ftp, sfile, root_web=rootw, fLOG=fLOG, footer_html=footer_html,
+                                 content_filter=content_filter, is_binary=is_binary,
+                                 text_transform=text_transform, filter_out=filter_out,
                                  force_allow=force_allow)
 
         fftp.start_transfering()
@@ -187,13 +182,9 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
         ftn = FileTreeNode(os.path.join(root_local, ".."),
                            filter=lambda root, path, f, dir: not dir)
         fftp = FolderTransferFTP(ftn, ftp, sfile,
-                                 root_web=root_web.replace(
-                                     "helpsphinx", ""),
-                                 fLOG=fLOG,
-                                 footer_html=footer_html,
-                                 content_filter=content_filter,
-                                 is_binary=is_binary,
-                                 text_transform=text_transform)
+                                 root_web=root_web.replace("helpsphinx", ""), fLOG=fLOG,
+                                 footer_html=footer_html, content_filter=content_filter,
+                                 is_binary=is_binary, text_transform=text_transform)
 
         fftp.start_transfering()
 
@@ -205,12 +196,10 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                              rootw="/www/htdocs/app/%s/%s",
                              rootw2="/lesenfantscodaient.fr", folder_status=".",
                              layout=[("html", "helpsphinx")],
-                             modules=None,
-                             password=None,
+                             modules=None, password=None,
                              force_allow=None,
                              suffix=("_UT_%d%d_std" % sys.version_info[:2],),
-                             fLOG=print,
-                             exc=True):
+                             fLOG=print, exc=True):
     """
     Copy the documentation to the website.
 
@@ -248,8 +237,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
         publish_teachings_to_web(login, ftpsite=website,
             google_id="google_id",
             location="<something>\\\\%s\\\\%s%s\\\\dist\\\\%s",
-            rootw=rootw,
-            rootw2=rootw2,
+            rootw=rootw, rootw2=rootw2,
             folder_status=os.path.abspath("."),
             password=password)
 
@@ -301,8 +289,10 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                     break
             if not os.path.exists(root):
                 if exc:
-                    raise FileNotFoundError("first tried '{0}'\n last tried '{1}'".format(root,
-                                                                                          os.path.abspath(location % (module, module, suffix[0], lay[0]))))
+                    p = os.path.abspath(location %
+                                        (module, module, suffix[0], lay[0]))
+                    raise FileNotFoundError(
+                        "first tried '{0}'\n last tried '{1}'".format(root, p))
                 else:
                     fLOG("[publish_teachings_to_web] skip", root)
                     continue
