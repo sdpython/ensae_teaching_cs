@@ -14,21 +14,22 @@ before_script:
   - python -u setup.py try_import
   - set KERAS_BACKEND=tensorflow
 script:
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -g \".*((http)|(SKIP)|(LONG)).*\"", NAME: "UT", TIMEOUT: 3600 }  # timeout is 3600 for the documentation
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -g \".*((http)|(SKIP)|(LONG)|(cvxopt)).*\"", NAME: "UT", TIMEOUT: 3600 }  # timeout is 3600 for the documentation
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*(http).*\"", NAME: "UT_HTTP" }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests_LONG", NAME: "UT_LONG", TIMEOUT: 3600 }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*SKIP.* -g \".*((theano)|(keras)|(deep)|(scraping)|(pythonnet)|(huge)|(web)|(ete3)).*\"", NAME: "UT_SKIP" }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_1A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)).*\"", NAME: "UT_1A" }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_2A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)).*\"", NAME: "UT_2A", TIMEOUT: 3600 }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_3A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)).*\"", NAME: "UT_3A" }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_EX_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)).*\"", NAME: "UT_EX", TIMEOUT: 3600 }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_GUI_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)).*\"", NAME: "UT_GUI", TIMEOUT: 2400 }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*scraping.* -g \".*((SKIP)|(theano)|(keras)|(ete3)).*\"", NAME: "UT_SCRAPING", TIMEOUT: 3600 }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((theano)|(keras)).*\"", NAME: "UT_DEEP1", TIMEOUT: 7200 }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*LONG.* -g .*cvxopt.*", NAME: "UT_LONG", TIMEOUT: 3600 }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*SKIP.* -g \".*((theano)|(keras)|(deep)|(scraping)|(pythonnet)|(huge)|(web)|(ete3)|(cvxopt)).*\"", NAME: "UT_SKIP" }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_1A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)).*\"", NAME: "UT_1A" }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_2A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)).*\"", NAME: "UT_2A", TIMEOUT: 3600 }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_3A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)).*\"", NAME: "UT_3A" }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_EX_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)).*\"", NAME: "UT_EX", TIMEOUT: 3600 }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_GUI_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)).*\"", NAME: "UT_GUI", TIMEOUT: 2400 }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*scraping.* -g \".*((SKIP)|(theano)|(keras)|(ete3)|(cvxopt)).*\"", NAME: "UT_SCRAPING", TIMEOUT: 3600 }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((keras)).*\"", NAME: "UT_KERAS", TIMEOUT: 7200 }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((deep)).*\"", NAME: "UT_DEEP2", TIMEOUT: 7200 }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((pythonnet)).*\"", NAME: "UT_PYTHONNET" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((huge)).*\"", NAME: "UT_HUGE" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((ete3)).*\"", NAME: "UT_ETE3" }
+  - { CMD: "pip install numpy==1.13 & python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((cvxopt)).*\"", NAME: "UT_CVXOPT" }
 after_script:
   - python -u setup.py bdist_wheel
   - if [ ${DIST} != "conda" and ${VERSION} == "3.6" and ${NAME} == "UT" ] then copy dist\*.whl {{root_path}}\..\..\local_pypi\local_pypi_server fi
