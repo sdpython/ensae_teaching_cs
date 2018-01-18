@@ -28,13 +28,13 @@ with warnings.catch_warnings():
 # tous les mails doivent être dans le même répertoire
 
 server = "imap.gmail.com"
-mailfolder = ["ensae/ENSAE_1A"]
-date = "19-May-2017"
+mailfolder = ["ensae/ENSAE_2A"]
+date = "12-Dec-2017"
 do_mail = True
 dest_folder = os.path.normpath(os.path.abspath(os.path.join(
-    *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2016-2017", "1A_projet"]))))
+    *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2017-2018", "2A_projet"]))))
 print("dest", dest_folder)
-basename = "Python_1A_projet_2017"
+basename = "Python_2A_projet_2018"
 filename_zip = os.path.join(dest_folder, basename + ".zip")
 convert_files = True
 
@@ -109,8 +109,13 @@ password = bytes(password, "ascii")
 # les adresses à éviter car
 skip_address = [
     "xavier.dupre@gmail.com",
+    'xavier.dupre@gmail',
+    'xavier.dupre@ensae.fr',
     "Xavier.Dupre@ensae.fr",
+    'eroyant@gmail.com',
+    'amuller.perso@gmail.com',
 ]
+
 
 ###############
 # gather mails
@@ -128,7 +133,6 @@ else:
     box.logout()
     emails = list(sorted(set([_.strip("<>").lower()
                               for _ in emails if _ not in skip_address])))
-
     with open(filename_mails, "w", encoding="utf8") as f:
         f.write("\n".join(emails))
 
