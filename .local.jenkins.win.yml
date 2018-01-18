@@ -14,7 +14,7 @@ before_script:
   - python -u setup.py try_import
   - set KERAS_BACKEND=tensorflow
 script:
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -g \".*((http)|(SKIP)|(LONG)|(cvxopt)).*\"", NAME: "UT", TIMEOUT: 3600 }  # timeout is 3600 for the documentation
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -g \".*((http)|(SKIP)|(LONG)|(cvxopt)|(theano)).*\"", NAME: "UT", TIMEOUT: 3600 }  # timeout is 3600 for the documentation
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*(http).*\"", NAME: "UT_HTTP" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*LONG.* -g .*cvxopt.*", NAME: "UT_LONG", TIMEOUT: 3600 }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*SKIP.* -g \".*((theano)|(keras)|(deep)|(scraping)|(pythonnet)|(huge)|(web)|(ete3)|(cvxopt)).*\"", NAME: "UT_SKIP" }
@@ -29,7 +29,7 @@ script:
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((pythonnet)).*\"", NAME: "UT_PYTHONNET" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((huge)).*\"", NAME: "UT_HUGE" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((ete3)).*\"", NAME: "UT_ETE3" }
-  - { CMD: "pymyinstall install theano & python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((theano)).*\"", NAME: "UT_THEANO" }
+  - { CMD: "pymy_install install theano & python -X faulthandler -X showrefcount -u setup.py unittests -e \".*theano.*\"", NAME: "UT_THEANO" }
   - { CMD: "pip install numpy==1.13 & python -X faulthandler -X showrefcount -u setup.py unittests -e \".*cvxopt.*\"", NAME: "UT_CVXOPT" }
 after_script:
   - python -u setup.py bdist_wheel
