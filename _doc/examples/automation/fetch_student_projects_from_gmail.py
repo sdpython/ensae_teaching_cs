@@ -108,12 +108,6 @@ password = bytes(password, "ascii")
 ###########
 # les adresses à éviter car
 skip_address = [
-    "xavier.dupre@gmail.com",
-    'xavier.dupre@gmail',
-    'xavier.dupre@ensae.fr',
-    "Xavier.Dupre@ensae.fr",
-    'eroyant@gmail.com',
-    'amuller.perso@gmail.com',
 ]
 
 
