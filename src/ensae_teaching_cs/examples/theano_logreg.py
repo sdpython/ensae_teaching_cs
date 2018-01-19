@@ -49,8 +49,6 @@ import pickle
 
 import numpy
 
-import theano
-import theano.tensor as T
 from pyquickhelper.loghelper import noLOG
 
 
@@ -80,6 +78,13 @@ class TheanoLogisticRegression(object):
                       which the labels lie
 
         """
+        # Delayed import as theano is not maintained anymore.
+        import theano
+        import theano.tensor as T
+
+        self._theano = theano
+        self._T = T
+
         # start-snippet-1
         # initialize with 0 the weights W as a matrix of shape (n_in, n_out)
         self.W = theano.shared(
@@ -108,11 +113,12 @@ class TheanoLogisticRegression(object):
         # x is a matrix where row-j  represents input training sample-j
         # b is a vector where element-k represent the free parameter of
         # hyperplane-k
-        self.p_y_given_x = T.nnet.softmax(T.dot(input, self.W) + self.b)
+        self.p_y_given_x = self._T.nnet.softmax(
+            self._T.dot(input, self.W) + self.b)
 
         # symbolic description of how to compute prediction as class whose
         # probability is maximal
-        self.y_pred = T.argmax(self.p_y_given_x, axis=1)
+        self.y_pred = self._T.argmax(self.p_y_given_x, axis=1)
         # end-snippet-1
 
         # parameters of the model
@@ -151,7 +157,7 @@ class TheanoLogisticRegression(object):
         # LP[n-1,y[n-1]]] and T.mean(LP[T.arange(y.shape[0]),y]) is
         # the mean (across minibatch examples) of the elements in v,
         # i.e., the mean log-likelihood across the minibatch.
-        return -T.mean(T.log(self.p_y_given_x)[T.arange(y.shape[0]), y])
+        return -self._T.mean(self._T.log(self.p_y_given_x)[self._T.arange(y.shape[0]), y])
         # end-snippet-2
 
     def errors(self, y):
@@ -175,7 +181,7 @@ class TheanoLogisticRegression(object):
         if y.dtype.startswith('int'):
             # the T.neq operator returns a vector of 0s and 1s, where 1
             # represents a mistake in prediction
-            return T.mean(T.neq(self.y_pred, y))
+            return self._T.mean(self._T.neq(self.y_pred, y))
         else:
             raise NotImplementedError()
 
@@ -187,6 +193,10 @@ def theano_load_data(dataset):
     :type dataset: string
     :param dataset: the path to the dataset (here MNIST)
     '''
+    # delayed import as theano is not maintained anymore
+    import theano
+    import theano.tensor as T
+
     if not os.path.exists(dataset):
         raise FileNotFoundError(dataset)
 
@@ -276,6 +286,7 @@ def theano_sgd_optimization_mnist(saved_model, dataset, learning_rate=0.13, n_ep
     fLOG('... building the model')
 
     # allocate symbolic variables for the data
+    import theano.tensor as T
     index = T.lscalar()  # index to a [mini]batch
 
     # generate symbolic variables for input (x and y represent a
@@ -293,7 +304,8 @@ def theano_sgd_optimization_mnist(saved_model, dataset, learning_rate=0.13, n_ep
 
     # compiling a Theano function that computes the mistakes that are made by
     # the model on a minibatch
-    test_model = theano.function(
+    import theano
+    test_model = theano.funcion(
         inputs=[index],
         outputs=classifier.errors(y),
         givens={
@@ -427,6 +439,9 @@ def theano_predict(model, dataset, nfirst=-1):
     @param      nfirst      predict for the nfirst or -1 for all
     @return                 prediction
     """
+    # delayed import as theano is not maintained anymore
+    import theano
+
     with open(model, "rb") as f:
         classifier = pickle.load(f)
 
