@@ -1399,6 +1399,19 @@ Les meilleurs modèles sont des modèles de deep learning
 
 * `NeuroNER <https://github.com/Franck-Dernoncourt/NeuroNER>`_
 
+Chat Bot
+++++++++
+
+*à venir*
+
+*Lectures*
+
+* `A Decomposable Attention Model for Natural Language Inference <https://arxiv.org/abs/1606.01933>`_
+
+*Modules*
+
+* `Jack the Reader <https://github.com/uclmr/jack>`_
+
 ------------------
 
 Images / Vidéos / Sons
