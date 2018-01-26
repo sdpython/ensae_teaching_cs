@@ -107,6 +107,10 @@ Suggestions d'articles
 * `Large-Scale Matrix Factorization with Distributed Stochastic Gradient Descent <https://researcher.watson.ibm.com/researcher/files/us-phaas/rj10482Updated.pdf>`_
 * `weighted minhash on gpu helps to find duplicate github repositories <https://blog.sourced.tech//post/minhashcuda/>`_ (article de blog)
 
+*2018-2019*
+
+* `Estimating Mutual Information on Data Streams <https://dbis.ipd.kit.edu/download/camera_ready_17_with_copyright.pdf>`_
+
 Nous vous recommandons d'adopter la démarche suivante:
 
 #. implémentation et débugging sur un petit jeu de données synthétiques

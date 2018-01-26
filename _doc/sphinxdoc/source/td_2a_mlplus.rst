@@ -576,6 +576,12 @@ complique également l'interprétation des résultats.
 * `An Introduction to Variable and Feature Selection <http://www.jmlr.org/papers/volume3/guyon03a/guyon03a.pdf>`_
 * `Feature Selection (wikipédia) <https://en.wikipedia.org/wiki/Feature_selection>`_
 * `Feature Selection (scikit-learn) <http://scikit-learn.org/stable/modules/feature_selection.html>`_
+* `Consistent Feature Selection for Pattern Recognition in Polynomial Time <http://jmlr.csail.mit.edu/papers/volume8/nilsson07a/nilsson07a.pdf>`_ (boruta)
+
+* *Modules*
+
+* :epkg:`scikit-learn`
+* `borutapy <https://github.com/scikit-learn-contrib/boruta_py>`_
 
 |pyecopng| |pystatpng|
 

@@ -460,25 +460,6 @@ Tableau de bord et statut des dépendances
       - .. image:: https://codecov.io/github/sdpython/pysqllike/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/pysqllike?branch=master
       -
-    * - `python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/python3_module_template.svg?branch=master
-            :target: https://travis-ci.org/sdpython/python3_module_template
-            :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/8yv4brsckay4374a?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/python3-module-template
-            :alt: Build Status Windows
-      - .. image:: https://circleci.com/gh/sdpython/python3_module_template/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/python3_module_template/tree/master
-      -
-      -
-      - .. image:: https://badge.waffle.io/sdpython/python3_module_template.png?label=ready&title=Ready
-            :alt: Waffle
-            :target: https://waffle.io/sdpython/python3_module_template
-      - .. image:: https://codecov.io/github/sdpython/python3_module_template/coverage.svg?branch=master
-            :target: https://codecov.io/github/sdpython/python3_module_template?branch=master
-      - .. image:: http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/_images/nbcov.png
-            :target: http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/all_notebooks_coverage.html
-            :alt: Notebook Coverage
     * - `teachpyx <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/teachpyx.svg?branch=master
             :target: https://travis-ci.org/sdpython/teachpyx
@@ -520,6 +501,43 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/tkinterquickhelper
       - .. image:: https://codecov.io/github/sdpython/tkinterquickhelper/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/tkinterquickhelper?branch=master
+      -
+    * - exemples
+      -
+      -
+      -
+      -
+      -
+      -
+      -
+    * - `python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/python3_module_template.svg?branch=master
+            :target: https://travis-ci.org/sdpython/python3_module_template
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/8yv4brsckay4374a?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/python3-module-template
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/python3_module_template/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/python3_module_template/tree/master
+      -
+      -
+      - .. image:: https://badge.waffle.io/sdpython/python3_module_template.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/python3_module_template
+      - .. image:: https://codecov.io/github/sdpython/python3_module_template/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/python3_module_template?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
+    * - `td1a_unit_test_ci <http://www.xavierdupre.fr/app/td1a_unit_test_ci/helpsphinx/index.html>`_
+      -
+      -
+      - .. image:: https://circleci.com/gh/sdpython/td1a_unit_test_ci/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/td1a_unit_test_ci/tree/master
+      -
+      -
+      -
+      -
       -
 
 Automatisation
