@@ -502,10 +502,11 @@ Tableau de bord et statut des dépendances
       - .. image:: https://codecov.io/github/sdpython/tkinterquickhelper/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/tkinterquickhelper?branch=master
       -
-    * - exemples
-      -
-      -
-      -
+    * - Les suivants
+      - sont des exemples
+      - pour créer
+      - de nouveaux
+      - modules.
       -
       -
       -

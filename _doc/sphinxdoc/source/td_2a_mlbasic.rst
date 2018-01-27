@@ -706,3 +706,23 @@ Factorization Machines
 
 * `libffm <http://www.csie.ntu.edu.tw/~r01922136/libffm/>`_ (C++)
 * `fastFM <https://github.com/ibayer/fastFM>`_
+
+------------
+
+Méthodes Statistiques
+=====================
+
+.. contents::
+    :local:
+    :depth: 1
+
+|pyecopng| |pystatpng|
+
+Données de panels
++++++++++++++++++
+
+*(à venir)*
+
+*Modules*
+
+* `linearmodels <https://bashtage.github.io/linearmodels/doc/>`_

@@ -505,6 +505,7 @@ En plus :
 * `Cygwin <https://www.cygwin.com/>`_
 * `FileZilla <https://filezilla-project.org/>`_
 * `InnoSetup <http://www.jrsoftware.org/isdl.php>`_ (version unicode)
+* `Aria2 <https://github.com/aria2/aria2>`_
 
 Pour :epkg:`Jenkins`, quelques extensions :
 

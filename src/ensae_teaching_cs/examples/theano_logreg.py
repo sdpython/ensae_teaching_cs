@@ -305,7 +305,7 @@ def theano_sgd_optimization_mnist(saved_model, dataset, learning_rate=0.13, n_ep
     # compiling a Theano function that computes the mistakes that are made by
     # the model on a minibatch
     import theano
-    test_model = theano.funcion(
+    test_model = theano.function(
         inputs=[index],
         outputs=classifier.errors(y),
         givens={
