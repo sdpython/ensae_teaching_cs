@@ -114,10 +114,10 @@ Il est recommandé d'aller loin sur au moins une des dimensions.
    votre problématique. Le modèle importe peu (régression linéaire, random forest ou autre) :
    il doit être approprié et justifié.
 #. **La représentation / application :** Là encore, plusieurs niveaux sont envisageables.
-   Vous pouvez simplement représenter vos données en utilisant matplotlib, aller plus loin
-   avec `seaborn <http://seaborn.pydata.org/>`_
+   Vous pouvez simplement représenter vos données en utilisant
+   :epkg:`matplotlib`, aller plus loin avec :epkg:`seaborn`,
    (voire `D3.js <https://en.wikipedia.org/wiki/D3.js>`_ pour les plus motivés)
-   ou encore réaliser une application en `Flask <http://flask.pocoo.org/>`_.
+   ou encore réaliser une application en :epkg:`Flask`.
    La base d'une bonne visualisation est de trouver le type de graphique adéquat
    pour ce que vous voulez montrer (faut-il un scatter ou un line pour
    représenter une évolution ?) et de le rendre visible : une légende
@@ -133,30 +133,44 @@ Barème
 * vidéo : 2 points
 
 Le projet doit être réalisé seul ou par groupe de deux, voire trois.
-Le jeu de données doit être conséquent (plus de 5000 observations).
 Un des modèles utilisés n'est pas linéaire et n'est pas un arbre de décision.
 Chaque membre d'un groupe doit mentionner une contribution personnelle au projet.
+La note globale peut être interprétée comme suit :
+
+* *8* : le projet est mauvais,
+* *12* : le projet s'est arrête à la comparaison de modèles de
+  machine learning,
+* *16* : le projet contient une idée originale,
+  une analyse intéressantes des résultats,
+* *20* : les auteurs ont construit un raisonnement
+  qui a abouti à un fait intéressant sur le jeu de données
+  de départ.
 
 Vidéo
 +++++
 
-* `The best stats you've ever seen <http://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen>`_, Hans Rosling
-* `Let my dataset change your mindset <http://www.ted.com/talks/hans_rosling_at_state?language=en>`_, Hans Rosling
-* `Hans Rosling's 200 Countries, 200 Years, 4 Minutes - The Joy of Stats - BBC Four <https://www.youtube.com/watch?v=jbkSRLYSojo>`_, Hans Rosling (4 minutes)
+La vidéo est souvent le premier élément que le jury voit.
+Il faut la voir comme un support lors d'une réunion de travail
+qui doit à la fois mettre en scène le projet et donner
+confiance dans vos résultats. Le rapport vient appuyer ce premier
+discours par de façon plus détaillée. Elle peut être un petit
+film, des slides commentés oralement, avec ou sans l'incrustation
+des orateurs, un film réalisé avec un téléphone où quelques
+graphiques défilent préalablement imprimées, un professeur qui
+fait la leçon au tableau, une animation utilisant un des nombreux
+sites proposant de le faire.
+
 * `Convertir votre présentation en vidéo <http://office.microsoft.com/fr-fr/powerpoint-help/convertir-votre-presentation-en-video-HA010336763.aspx>`_
 * `Ma thèse en 180 secondes <http://mt180.fr/>`_
-* `Quelques outils pour faire des captures vidéo d'écrans <http://www.xavierdupre.fr/blog/2014-10-24_nojs.html>`_
 
-Un exemple réalisé avec `iMovie <https://www.apple.com/fr/mac/imovie/>`_ :
-`Le traitement des données <http://www.xavierdupre.fr/blog/2014-10-27_nojs.html>`_.
-On peut aussi réaliser des vidéos à partir de séquences d'images
-(voir la fonction :func:`make_video <ensae_teaching_cs.helpers.video_helper.make_video>`).
-
-.. raw:: html
-
-    <video autoplay=" controls="" loop="" height="400">
-    <source src="http://www.xavierdupre.fr/enseignement/complements/epidemic.mp4" type="video/mp4" />
-    </video>
+La vidéo nécessite souvent de faire du montage vidéo. Il peut
+être fait soit en programmant avec des modules comme
+`moviepy <https://zulko.github.io/moviepy/>`_ ou
+`code_beatrix <http://lesenfantscodaient.fr//api/video.html>`_.
+Les outils de montage sont plus accessibles sur certains ordinateurs
+(Mac principalement) mais il existe des outils gratuits
+comme `ShotCut <https://www.shotcut.org/>`_
+ou `OpenShot <https://www.openshot.org/>`_.
 
 Liens
 +++++
@@ -181,3 +195,8 @@ Questions
 * :ref:`question_2014_projet_6_2A`
 * :ref:`question_2015_projet_2_2A`
 * :ref:`question_projet_2016`
+
+Retours des projets des années précédentes
+++++++++++++++++++++++++++++++++++++++++++
+
+* :ref:`l-remarque-2A-2017-2018`

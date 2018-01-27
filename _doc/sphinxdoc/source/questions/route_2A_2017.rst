@@ -97,6 +97,36 @@ Anne Muller, Elodie Royant, Antoine Thabault,
 Antoine Ly, Benjamin Donnot, Eliot Barril,
 Gaël Varoquaux.
 
+.. _l-remarque-2A-2017-2018:
+
+Retour sur les projets
+++++++++++++++++++++++
+
+Le cours est évalué par un projet informatique
+:ref:`l-projinfo2a`. Voici quelques retours sur les projets
+de cette année. Le barême choisi se résume ainsi :
+
+* *8* : le projet est mauvais,
+* *12* : le projet s'est arrête à la comparaison de modèles de
+  machine learning,
+* *16* : le projet contient une idée originale,
+  une analyse intéressantes des résultats,
+* *20* : les auteurs ont construit un raisonnement
+  qui a abouti à un fait intéressant sur le jeu de données
+  de départ.
+
+Beaucoup de projets se sont conclus par un graphique comparant
+les performances de plusieurs modèles de machine learning sur une
+problématique précise, extraite
+d'`UCI <https://archive.ics.uci.edu/ml/datasets.html>`_,
+:epkg:`Kaggle` ou d'un autre site. Les enseignements
+qu'on peut en tirer sont assez pauvres si le projet s'arrête là.
+Il n'y a rien de répliquable à d'autres projets (méthodologie),
+ni rien qu'on puisse vraiment apprendre des données (domaine).
+Les premiers résultats intéressants viennent souvent
+d'une analyse d'erreurs qui consiste à comprendre pourquoi le modèle
+s'est trompé sur tel ou tel exemple avec un haut score de confiance.
+
 Notes
 +++++
 

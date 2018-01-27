@@ -21,6 +21,7 @@ si les contenus s'adressent plutôt aux uns ou aux autres.
 
 * :ref:`l-feuille-de-route-2017-2A`
 * :ref:`l-projinfo2a`
+* :ref:`l-feuille-de-route-2018-2A` (en préparation)
 
 Le terme *cheat sheet* est un mot-clé plutôt efficace sur Internet pour
 retrouver les bout de codes les plus fréquents. Cette page regroupe des
@@ -154,4 +155,5 @@ Feuilles de route et compétitions passées :
 
     questions/route_2A_2016
     questions/route_2A_2017
+    questions/route_2A_2018
     questions/competition_2A
