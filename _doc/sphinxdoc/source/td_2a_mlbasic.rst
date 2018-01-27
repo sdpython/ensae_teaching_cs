@@ -364,7 +364,8 @@ ici :
 *Livres*
 
 * `Python Data Science Handbook <https://github.com/jakevdp/PythonDataScienceHandbook>`_
-* `The Elements of Statistical Learning <https://web.stanford.edu/~hastie/ElemStatLearn/>`_ : la bible que tout le monde recommande :
+* `The Elements of Statistical Learning <https://web.stanford.edu/~hastie/ElemStatLearn/>`_ :
+  la bible que tout le monde recommande :
 
 *Comprendre*
 
@@ -602,6 +603,7 @@ Système de recommandation
 * `NonnegMFPy <https://github.com/guangtunbenzhu/NonnegMFPy>`_ : implémentation de
   l'algorithme décrit dans l'article
   `Large-Scale Matrix Factorization with Missing Data under Additional Constraints <http://www.cfar.umd.edu/~rama/Publications/mitra_nips_2010.pdf>`_
+* `scikit-surprise <http://surpriselib.com/>`_ (`documentation <http://surprise.readthedocs.io/en/stable/>`_)
 
 |pystatpng|
 

@@ -127,6 +127,22 @@ class TheanoLogisticRegression(object):
         # keep track of model input
         self.input = input
 
+    def __getstate__(self):
+        """
+        Avoids pickling modules (_T, _theano).
+        """
+        return {k: v for k, v in self.__dict__ if k in {'W', 'b', 'p_y_given_x', 'params', 'input', 'y_pred'}}
+
+    def __setstate__(self, d):
+        """
+        Unpickles information, restore members pointing to modules.
+        """
+        self.__dict__ = d
+        import theano
+        import theano.tensor as T
+        self._theano = theano
+        self._T = T
+
     def negative_log_likelihood(self, y):
         """
         Return the mean of the negative log-likelihood of the prediction
