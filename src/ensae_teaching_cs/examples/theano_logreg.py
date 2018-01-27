@@ -131,7 +131,7 @@ class TheanoLogisticRegression(object):
         """
         Avoids pickling modules (_T, _theano).
         """
-        return {k: v for k, v in self.__dict__ if k in {'W', 'b', 'p_y_given_x', 'params', 'input', 'y_pred'}}
+        return {k: v for k, v in self.__dict__.items() if k in {'W', 'b', 'p_y_given_x', 'params', 'input', 'y_pred'}}
 
     def __setstate__(self, d):
         """
