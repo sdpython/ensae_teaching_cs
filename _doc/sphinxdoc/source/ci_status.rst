@@ -292,7 +292,7 @@ Tableau de bord et statut des dépendances
             :alt: Notebook Coverage
     * - `pandas_streaming <http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/pandas_streaming.svg?branch=master
-            :target: https://travis-ci.org/sdpython/pyensae
+            :target: https://travis-ci.org/sdpython/pandas_streaming
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/4te066r8ne1ymmhy?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pandas_streaming
@@ -311,6 +311,28 @@ Tableau de bord et statut des dépendances
             :target: https://codecov.io/github/sdpython/pandas_streaming?branch=master
       - .. image:: http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
+    * - `papierstat <http://www.xavierdupre.fr/app/papierstat/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/papierstat.svg?branch=master
+            :target: https://travis-ci.org/sdpython/papierstat
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/gqeh9w6hj7s27e88?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/papierstat
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/papierstat/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/papierstat/tree/master
+      - .. image:: https://badge.fury.io/py/papierstat.svg
+            :target: http://badge.fury.io/py/papierstat
+      - .. image:: http://img.shields.io/pypi/pyversions/papierstat.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/papierstat
+      - .. image:: https://badge.waffle.io/sdpython/papierstat.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/papierstat
+      - .. image:: https://codecov.io/github/sdpython/papierstat/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/papierstat?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/papierstat/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/papierstat/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `pyenbc <http://www.xavierdupre.fr/app/pyenbc/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/pyenbc.svg?branch=master
@@ -622,16 +644,18 @@ Contenu
         à `lesenfantscodaient.fr <http://lesenfantscodaient.fr/>`_.
         Ce sont des jeux pour apprendre à programmer avec ou sans ordinateurs
         et que j'utilise parfois durant les cours avec les plus grands.
+    * - `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_
+      - Contenu des enseignements donnés à l'ENSAE.
+        Le module inclut également des fonctions d'automatisation et des morceaux de codes
+        illustrant des exercices (voir :ref:`modindex`).
     * - `jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
       - Présentations sous formes de notebooks données lors de conférences ou de cours.
     * - `mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
       - Contenu plus théorique associé à la datascience, au machine learning,
         au traitement naturel du langage. Avec un peu plus de démonstrations
         mathématiques que dans les autres modules.
-    * - `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_
-      - Contenu des enseignements donnés à l'ENSAE.
-        Le module inclut également des fonctions d'automatisation et des morceaux de codes
-        illustrant des exercices (voir :ref:`modindex`).
+    * - `papierstat <http://www.xavierdupre.fr/app/papierstat/helpsphinx/index.html>`_
+      - Découverte du :epkg:`machine learning`, mélange de pratique et de théorie.
     * - `teachpyx <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_
       - Cours de programmation en Python. C'est la version internet et actualisée
         du livre paru en 2009 et disponible au format

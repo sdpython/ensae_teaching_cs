@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 """
 @file
-@brief Helpers to publish the documentation of python to a website
+@brief Helpers to publish the documentation of python to a website.
 """
 import sys
 import os
@@ -12,9 +12,9 @@ from .teaching_modules import get_teaching_modules
 
 def trigger_on_specific_strings(content, filename=None, force_allow=None):
     """
-    look for specific string such as
+    Looks for specific string such as
     *USERNAME*, *USERDNSDOMAIN*, *HOMEPATH*, *USERNAME*, *COMPUTERNAME*, *LOGONSERVER*,
-    and returns None if it was found or modifies the content to remove it
+    and returns None if it was found or modifies the content to remove it.
 
     @param      content     content of a file
     @param      filename    only used when an exception is raised
@@ -53,10 +53,9 @@ def trigger_on_specific_strings(content, filename=None, force_allow=None):
 
 def content_as_binary(filename):
     """
-    overloads function `content_as_finary <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/filehelper/ftp_transfer_files.html?highlight=content_as_binary#pyquickhelper.filehelper.ftp_transfer_files.content_as_binary>`_ from
-    `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/">`_
-
-    determines if filename is binary or None before transfering it
+    Overloads function `content_as_finary <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/filehelper/ftp_transfer_files.html?highlight=content_as_binary#pyquickhelper.filehelper.ftp_transfer_files.content_as_binary>`_ from
+    `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/>`_.
+    Determines if filename is binary or None before transfering it.
 
     @param      filename        filename
     @return                     boolean
@@ -201,7 +200,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                              suffix=("_UT_%d%d_std" % sys.version_info[:2],),
                              fLOG=print, exc=True):
     """
-    Copy the documentation to the website.
+    Copies the documentation to the website.
 
     @param      login           login
     @param      ftpsite         ftp site
