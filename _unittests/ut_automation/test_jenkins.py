@@ -161,7 +161,7 @@ class TestJenkins(unittest.TestCase):
             OutputPrint=__name__ == "__main__")
 
         modules = default_jenkins_jobs(".*yml.*", ".*update.*")
-        self.assertEqual(len(modules), 24)
+        self.assertEqual(len(modules), 25)
         modules = default_jenkins_jobs(".*27.*", ".*update.*")
         self.assertEqual(len(modules), 0)
         modules = default_jenkins_jobs(".*27.*")
