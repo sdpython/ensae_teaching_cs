@@ -2,7 +2,7 @@
 .. _l-EX2-classiques:
 
 ===================
-Examples classiques
+Exemples classiques
 ===================
 
 .. contents::

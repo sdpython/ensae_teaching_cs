@@ -10,22 +10,11 @@
 * `Présentation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_1Ap/index.html>`_
   (courte introduction en amphithéâtre)
 
-Cours animé par :
-
-* Xavier Dupré
-
-Intervenants 2016 :
-
-* Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_
-* Emmanuel Guérin, `TalendSoft <http://www.talentsoft.com/>`_
-* Arthur Renaud, `Etaonis <http://www.etaonis.fr/>`_
-* Pierre Cordier, `Effiscience <http://effiscience.solutions/>`_
-
 .. contents::
     :local:
 
-Sujets proposés année 2015-2016
--------------------------------
+Sujets proposés
+---------------
 
 Les sujets proposés abordent différents domaines connexes aux enseignements proposés à l'ENSAE
 (finance, statistique, économie) et quelques jeux.
