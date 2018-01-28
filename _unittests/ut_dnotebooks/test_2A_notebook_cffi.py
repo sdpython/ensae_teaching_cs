@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=23s)
+@brief      test log(time=180s)
 """
 
 import sys
@@ -42,13 +42,13 @@ from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
 
 
-class TestNotebookRunner2a_ (unittest.TestCase):
+class TestNotebookRunner2a_cffi (unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
                                         __file__, hide=True)
 
-    def test_notebook_runner_2a(self):
+    def test_notebook_runner_2a_cffi(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -61,21 +61,9 @@ class TestNotebookRunner2a_ (unittest.TestCase):
         keepnote = ls_notebooks("2a")
 
         def filter(i, n):
-            if "seance_5" in n:
+            if "cffi" not in n:
                 return False
-            if not sys.platform.startswith("win") and "_convert" in n:
-                return False
-            if is_travis_or_appveyor() in ('circleci', 'appveyor') and "notebook_convert.ipynb" in n:
-                # this one requires pandoc
-                return False
-            if "bayesian_with_python" in n:
-                return False
-            if "cffi" in n:
-                return False
-            if "git_" not in n and "python_r" not in n and "csharp" not in n:
-                return True
-            else:
-                return False
+            return True
 
         if is_travis_or_appveyor() == "travis":
             warnings.warn("execution does not stop")
