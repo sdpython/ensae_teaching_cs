@@ -133,18 +133,10 @@ class TestJenkins(unittest.TestCase):
 
         engines = dict(anaconda2="C:\\Anaconda2", anaconda3="C:\\Anaconda3",
                        winpython="C:\\WinPython-64bit-3.4.2.3\\python-3.4.2.amd64",
-                       default="c:\\PythonXX_x64",
-                       py27="c:\\Python27",
-                       py35="c:\\Python35_x64",
-                       py36="c:\\Python36_x64",
-                       Python34="py34",
-                       Python35="py35",
-                       Python36="py36",
-                       Anaconda3="apy35",
-                       Anaconda2="apy27",
-                       Python27="py27",
-                       WinPython35="wpy35",
-                       WinPython36="wpy36",
+                       default="c:\\PythonXX_x64", py27="c:\\Python27", py35="c:\\Python35_x64",
+                       py36="c:\\Python36_x64", Python34="py34", Python35="py35",
+                       Python36="py36", Anaconda3="apy35", Anaconda2="apy27",
+                       Python27="py27", WinPython35="wpy35", WinPython36="wpy36",
                        Python35pyq="DDD")
 
         js = JenkinsExt('http://machine:8080/', "user",
@@ -155,7 +147,7 @@ class TestJenkins(unittest.TestCase):
                                        overwrite=True,
                                        location=r"c:\\jenkins\\pymy",
                                        prefix="_node_")
-            assert len(res) > 0
+            self.assertGreater(len(res), 0)
 
             job = "pyrsslocal [py35] <-- pyquickhelper, pyensae"
             cmd = "\n".join(js.get_jenkins_script(job))

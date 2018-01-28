@@ -94,8 +94,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
                           fLOG=print):
     """
     Publishes the documentation and the setups of a python module on a webiste,
-    it assumes the modules is organized the same way as
-    `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/index.html>`_.
+    it assumes the modules is organized the same way as :epkg:`pyquickhelper`.
 
     @param      docs            list of dictionaries (see below)
     @param      ftpsite         something like ``ftp.something.``

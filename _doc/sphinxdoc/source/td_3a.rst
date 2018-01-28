@@ -223,6 +223,7 @@ Threads et synchronisation
 * `Time, Clocks, and the Ordering of Events in a Distributed System <http://lamport.azurewebsites.net/pubs/time-clocks.pdf>`_
 * `Paxos Made Simple <http://lamport.azurewebsites.net/pubs/paxos-simple.pdf>`_
 * `Linearizability: A Correctness Condition for Concurrent Objects <https://cs.brown.edu/~mph/HerlihyW90/p463-herlihy.pdf>`_
+* :ref:`Calcul distribué en Python (CPU) <blog-parallel-computing-2018>`
 
 Plus proches voisins en grandes dimensions
 ++++++++++++++++++++++++++++++++++++++++++
