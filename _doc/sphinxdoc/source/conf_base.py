@@ -134,6 +134,7 @@ epkg_dictionary["Linux"] = 'https://fr.wikipedia.org/wiki/Linux'
 epkg_dictionary["linux"] = 'https://fr.wikipedia.org/wiki/Linux'
 epkg_dictionary["mlinsights"] = 'http://www.xavierdupre.fr/app/mlinsights/helpsphinx/index.html'
 epkg_dictionary["mlprodict"] = 'http://www.xavierdupre.fr/app/mlprodict/helpsphinx/index.html'
+epkg_dictionary["machine learning"] = 'https://fr.wikipedia.org/wiki/Apprentissage_automatique'
 epkg_dictionary["matrice de confusion"] = "https://fr.wikipedia.org/wiki/Matrice_de_confusion"
 epkg_dictionary["miniconda"] = 'https://conda.io/miniconda.html'
 epkg_dictionary["MPI"] = 'https://en.wikipedia.org/wiki/Message_Passing_Interface'

@@ -369,7 +369,10 @@ Les algorithmes *streaming* que Wikipédia traduit par
 sont des algorithmes qui s'exécutent sans avoir connaissance de l'ensemble des données
 ni même combien il y en a. Cela signifie que l'algorithme peut s'arrêter à tout moment
 et qu'il est capable de retourner un résultat valide sur l'ensemble des données qu'il
-a traités jusqu'à présent.
+a traités jusqu'à présent. L'algorithme le plus connu est sans aucun doute
+`Reservoir Sampling <https://en.wikipedia.org/wiki/Reservoir_sampling>`_
+qui permet de tirer un échantillon aléatoire dans un jeu de données dont la taille
+est inconnue à l'avance.
 
 * `Répartir train / test en streaming <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/split_train_test.html#streaming-splitting>`_
 
