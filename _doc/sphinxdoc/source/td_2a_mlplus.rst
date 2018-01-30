@@ -326,6 +326,23 @@ Très grande dimension
 
 * `Making Decision Trees Feasible in Ultrahigh Feature and Label Dimensions <http://jmlr.org/papers/volume18/16-466/16-466.pdf>`_
 
+Optimal transfert
++++++++++++++++++
+
+*(à venir)*
+
+*Lectures*
+
+* `Sinkhorn Distances: Lightspeed Computation of Optimal Transportation Distances <https://arxiv.org/pdf/1306.0895.pdf>`_
+* `Computational Optimal Transport <https://github.com/optimaltransport/optimaltransport.github.io>`_
+* `Multitemporal classification without new labels: A solution with optimal transport <https://hal.archives-ouvertes.fr/hal-01254329/document>`_
+* `Monge’s Optimal Transport Distance with Applications for Nearest Neighbour Image Classification <https://arxiv.org/pdf/1612.00181.pdf>`_
+* `Wasserstein Discriminant Analysis <http://pot.readthedocs.io/en/stable/auto_examples/plot_WDA.html#compute-wasserstein-discriminant-analysis>`_
+
+*Modules*
+
+* `Python Optimal Transfer <https://github.com/rflamary/POT>`_
+
 ---------------
 
 Interprétation, Anonymisation, Cryptage, Privacy

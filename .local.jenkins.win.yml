@@ -30,7 +30,7 @@ script:
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((huge)).*\"", NAME: "UT_HUGE" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((ete3)).*\"", NAME: "UT_ETE3" }
   - { CMD: "pymy_install install theano & python -X faulthandler -X showrefcount -u setup.py unittests -e \".*theano.*\"", NAME: "UT_THEANO" }
-  - { CMD: "pip install numpy==1.13 & python -X faulthandler -X showrefcount -u setup.py unittests -e \".*cvxopt.*\"", NAME: "UT_CVXOPT" }
+  - { CMD: "pip install numpy==1.13 cvxopt & python -X faulthandler -X showrefcount -u setup.py unittests -e \".*cvxopt.*\"", NAME: "UT_CVXOPT" }
 after_script:
   - python -u setup.py bdist_wheel
   - if [ ${DIST} != "conda" and ${VERSION} == "3.6" and ${NAME} == "UT" ] then copy dist\*.whl {{root_path}}\..\..\local_pypi\local_pypi_server fi
