@@ -53,7 +53,7 @@ install:
 build: off
 
 test_script:
-  - "%PYTHON%\\python -u setup.py unittests"
+  - "%PYTHON%\\python -u setup.py unittests -g \".*((http)|(SKIP)|(LONG)|(cvxopt)|(theano)).*\""
 
 after_test:
   - "%PYTHON%\\python -u setup.py bdist_wheel"
