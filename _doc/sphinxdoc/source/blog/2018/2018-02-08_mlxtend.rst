@@ -1,0 +1,16 @@
+
+.. blogpost::
+    :title: mlxtend - tutorial sympathique - bootstrap
+    :keywords: mlxtend, bootstrap, API
+    :date: 2018-02-08
+    :categories: modules
+
+    Je viens de faire un petit tour sur la documentation
+    de `mlxtend <https://rasbt.github.io/mlxtend/>`_ et
+    en particuler la liste des exemples :
+    `User Guide <https://rasbt.github.io/mlxtend/USER_GUIDE_INDEX/>`_.
+    Il y a le fameux graphe avec la base de données Iris
+    qui représente les régions de décisions, le tout en une ligne :
+    `plot_decision_regions <https://rasbt.github.io/mlxtend/user_guide/plotting/plot_decision_regions/>`_.
+    La méthode `bootstrap <http://rasbt.github.io/mlxtend/user_guide/evaluate/bootstrap/>`_
+    vaut aussi le détour.
