@@ -48,9 +48,12 @@ Source de données
   (collection de jeux de données classés par type de problème - régression, classification, ...)
   Les jeux **UCI** apparaissent dans de nombreux scientifiques.
 * *ML* `Data Science at Microsoft Research <http://research.microsoft.com/en-us/projects/data-science-initiative/default.aspx#datasets>`_
+* *ML* `Microsoft Research Letor <http://research.microsoft.com/en-us/um/beijing/projects/letor/letor4dataset.aspx>`_
+* *ML* `Public data sets for testing and prototyping <https://docs.microsoft.com/en-us/azure/sql-database/sql-database-public-data-sets>`_,
+  `Use the sample datasets in Azure Machine Learning Studio <https://docs.microsoft.com/en-us/azure/machine-learning/studio/use-sample-datasets>`_
+* *ML* `Data Science for Research <https://www.microsoft.com/en-us/research/academic-program/data-science-microsoft-research/>`_
 * *ML* `Ensembles de données publics AWS (Amazon) <https://aws.amazon.com/public-data-sets/>`_, `AWS Public Data Sets <https://aws.amazon.com/datasets/>`_
 * *ML* `Data Analysis, Modeling and Machine Learning Group <http://ama.liglab.fr/resourcestools/datasets/>`_
-* *ML* `Microsoft Research Letor <http://research.microsoft.com/en-us/um/beijing/projects/letor/letor4dataset.aspx>`_
 * *ML* `List of datasets for machine learning research <https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research>`_
 * *ML-big* `Pascal Large Scale Learning Challenge <http://largescale.ml.tu-berlin.de/instructions/>`_
 * *ML-big* `170 millions courses de taxi à New-York <http://chriswhong.com/open-data/foil_nyc_taxi/>`_
