@@ -420,7 +420,8 @@ On compense cette lacune avec deux stratégies
 ou `one versus one <https://en.wikipedia.org/wiki/Multiclass_classification#One-vs.-one>`_
 (stratégie dite aussi `pair-wise <https://en.wikipedia.org/wiki/Learning_to_rank#Pairwise_approach>`_).
 
-Le boosting <https://en.wikipedia.org/wiki/Boosting_(machine_learning)>`_ est une technique de machine learning qui consiste à sur-pondérer
+Le `boosting <https://en.wikipedia.org/wiki/Boosting_(machine_learning)>`_
+est une technique de machine learning qui consiste à sur-pondérer
 les erreurs. Pour un algorithme d'apprentissage itératif, cela consiste à donner
 plus de poids à l'itération *n* aux erreurs produites par l'itération *n-1*.
 L'algorithme le plus connu est `AdaBoost <https://en.wikipedia.org/wiki/AdaBoost>`_.
@@ -575,6 +576,7 @@ Ranking
 
 * `xgboost <https://xgboost.readthedocs.io/en/latest/>`_
 * `scikit-learn <http://scikit-learn.org/>`_
+* `pyltr <https://github.com/jma127/pyltr>`_
 * `lightfm <https://github.com/lyst/lightfm>`_
 * `rankpy <https://github.com/dmitru/rankpy>`_ (standby)
 * `The Lemur Project - ranklib <https://sourceforge.net/p/lemur/wiki/RankLib/>`_
