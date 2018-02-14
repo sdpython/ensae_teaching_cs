@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 """
 @file
-@brief helpers about longitude, latitude
+@brief Helpers about longitude, latitude.
 """
 import math
 
 
 def lambert93_to_WGPS(lambertE, lambertN):
     """
-    convert coordinates given in Lmabert 93 system,
+    Converts coordinates given in Lmabert 93 system,
     this system is used by `IGN <http://http://professionnels.ign.fr/>`_
     and their `GEOFLA <http://professionnels.ign.fr/geofla>`_ file format.
 
@@ -17,7 +17,7 @@ def lambert93_to_WGPS(lambertE, lambertN):
     @return                     longitude, latitude
 
     The function is inspired from
-    ` lam93toLatLon.py <https://gist.github.com/flire/0a305eeec77bc84a73af8ddc8f9ec043>`_.
+    `lam93toLatLon.py <https://gist.github.com/flire/0a305eeec77bc84a73af8ddc8f9ec043>`_.
 
     .. faqref::
         :tag: geo
