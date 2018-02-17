@@ -23,7 +23,7 @@
         import os
         print(os.getcwd())
 
-    Il est possivble de vérifier le contenu d'un répertoire, en particulier
+    Il est possible de vérifier le contenu d'un répertoire, en particulier
     du répertoire courent avec :
 
     .. runpython::
@@ -45,8 +45,8 @@
         import pandas
         df = pandas.read_csv("...", encoding="...")
 
-    Autre question, pourquoi `numpy <http://www.numpy.org/>`_ alors que
-    `pandas <http://pandas.pydata.org/>`_ fait déjà tout. La réponse tient
+    Autre question, pourquoi :epkg:`numpy` alors que
+    :epkg:`pandas` fait déjà tout. La réponse tient
     dans l'image qui suit :
 
     .. image:: /blog/2017/images/ml_simple.png
@@ -54,7 +54,7 @@
     `pandas <http://pandas.pydata.org/>`_ sert à préparer les données, à transformer
     tout ce qui n'est pas numérique en nombres réelles, à enrichir les données
     en fusionnant avec d'autres bases. Une fois que cela est fait, on peut convertir
-    toutes les données au format numérique, en matrice pour simplfiier car les algorihmes
+    toutes les données au format numérique, en matrice pour simplifier car les algorihmes
     numériques utilisant principalement cela. Des nombres réels sous forme de matrices,
     c'est ce que manipulent tous les algorithmes de machine learning.
     `matplotlib <https://matplotlib.org/>`_ conclue le processus en donnant les

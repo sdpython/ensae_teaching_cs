@@ -238,9 +238,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
             rootw=rootw, rootw2=rootw2,
             folder_status=os.path.abspath("."),
             password=password)
-
     """
-    import os
     from tkinterquickhelper.funcwin import open_window_params
     from ensae_teaching_cs.automation.ftp_publish_helper import publish_documentation
 
