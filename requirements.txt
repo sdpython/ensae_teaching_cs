@@ -61,7 +61,6 @@ sphinxcontrib-images
 sphinxcontrib-imagesvg
 sphinxcontrib-jsdemo
 sphinxjp.themes.basicstrap
-sphinxjp.themes.revealjs
 sphinxjp.themes.sphinxjp
 sphinx_rtd_theme
 tensorflow
