@@ -147,21 +147,6 @@ Variables catégorielles
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 * `category_encoders <http://contrib.scikit-learn.org/categorical-encoding/>`_
 
-|pyecopng| |pystatpng|
-
-Traitement des valeurs manquantes
-+++++++++++++++++++++++++++++++++
-
-(à venir)
-
-*Lectures*
-
-* `Missing Data <https://en.wikipedia.org/wiki/Missing_data>`_
-* `Imputation de données manquantes <https://www.math.univ-toulouse.fr/~besse/Wikistat/pdf/st-m-app-idm.pdf>`_
-* `Missing Data & How to Deal: An overview of missing data <https://liberalarts.utexas.edu/prc/_files/cs/Missing-Data.pdf>`_
-* `Additive Non-negative Matrix Factorization for Missing Data <https://arxiv.org/abs/1007.0380>`
-* `Scalable Tensor Factorizations for Incomplete Data <https://arxiv.org/pdf/1005.2197.pdf>`_
-
 Distances
 +++++++++
 
@@ -288,6 +273,11 @@ place de quelque chose qu'on ne connaît ? Les mots-clés importants :
 
 *Lectures*
 
+* `Missing Data <https://en.wikipedia.org/wiki/Missing_data>`_
+* `Imputation de données manquantes <https://www.math.univ-toulouse.fr/~besse/Wikistat/pdf/st-m-app-idm.pdf>`_
+* `Missing Data & How to Deal: An overview of missing data <https://liberalarts.utexas.edu/prc/_files/cs/Missing-Data.pdf>`_
+* `Additive Non-negative Matrix Factorization for Missing Data <https://arxiv.org/abs/1007.0380>`
+* `Scalable Tensor Factorizations for Incomplete Data <https://arxiv.org/pdf/1005.2197.pdf>`_
 * `Missing-data imputation <http://www.stat.columbia.edu/~gelman/arm/missing.pdf>`_
 * `Check your missing-data imputations using cross-validation <http://andrewgelman.com/2012/03/18/check-your-missing-data-imputations-using-cross-validation/>`_
 * `Multiple Imputation for Continuous and Categorical Data: Comparing Joint and Conditional Approaches <http://www.stat.columbia.edu/~gelman/research/published/MI_manuscript_RR.pdf>`_
@@ -360,6 +350,8 @@ ici :
 * `10+2 Data Science Methods that Every Data Scientist Should Know in 2016 <http://tjo-en.hatenablog.com/entry/2016/04/18/190000>`_ *(2016/06)*
 * `Complete Guide to Parameter Tuning in XGBoost (with codes in Python) <https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/>`_ *(2016/08)*
 * `XGBoost: A Scalable Tree Boosting System <http://arxiv.org/pdf/1603.02754v1.pdf>`_, Tianqi Chen, Carlos Guestrin
+* `Round Robin Classification <http://www.jmlr.org/papers/volume2/fuernkranz02a/fuernkranz02a.pdf>`_
+* `ANN-Benchmarks: A Benchmarking Tool for Approximate Nearest Neighbor Algorithms? <http://www.itu.dk/people/maau/additional/sisap2017-preprint.pdf>`_
 
 *Livres*
 
@@ -373,7 +365,13 @@ ici :
 
 *Modules*
 
-* `scikit-learn <http://scikit-learn.org/stable/>`_
+* :epkg:`scikit-learn`
+* :epkg:`statsmodels`
+* :epkg:`XGboost`
+
+Et quelques autres comme :
+
+* `annoy <https://github.com/spotify/annoy>`_
 
 |pyecopng| |pystatpng|
 
