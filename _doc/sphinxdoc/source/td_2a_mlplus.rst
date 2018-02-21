@@ -1662,6 +1662,11 @@ Compétitions et datasets
 * `ImageNet <http://www.image-net.org/>`_
 * `SQuAD The Stanford Question Answering Dataset <https://rajpurkar.github.io/SQuAD-explorer/>`_
 
+Compter les objets dans une image
++++++++++++++++++++++++++++++++++
+
+* `Fully Convolutional Crowd Counting On Highly Congested Scenes <https://arxiv.org/pdf/1612.00220.pdf>`_
+
 Fraudes
 +++++++
 

@@ -63,7 +63,7 @@ sphinxcontrib-jsdemo
 sphinxjp.themes.basicstrap
 sphinxjp.themes.sphinxjp
 sphinx_rtd_theme
-tensorflow
+tensorflow>=1.5
 tkinterquickhelper
 tqdm<4.15.0
 treeinterpreter
