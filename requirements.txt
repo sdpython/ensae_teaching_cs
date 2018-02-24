@@ -21,7 +21,7 @@ keras
 lifelines
 lightgbm
 lightning-python
-mlstatpy
+mlstatpy>=0.1.335
 mpld3
 mutagen
 opencv-python
@@ -30,8 +30,6 @@ partd
 plotly
 pocket
 psutil
-pycodestyle>=2.0.0
-pydocstyle
 pydub
 pyenbc
 pyensae
