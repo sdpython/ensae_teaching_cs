@@ -18,6 +18,7 @@ ggplot
 jsonpickle
 jyquickhelper
 keras
+keyring
 lifelines
 lightgbm
 lightning-python
