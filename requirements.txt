@@ -57,3 +57,4 @@ tkinterquickhelper
 treeinterpreter
 tutormagic
 wheel
+xlwt
