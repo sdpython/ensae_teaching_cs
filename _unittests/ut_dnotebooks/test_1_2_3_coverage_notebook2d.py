@@ -1,6 +1,6 @@
 #-*- coding: utf-8 -*-
 """
-@brief      test log(time=104s)
+@brief      test log(time=38s)
 """
 
 import sys
@@ -39,7 +39,7 @@ except ImportError:
 
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.filehelper import synchronize_folder
-from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, skipif_circleci
 from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut, get_additional_paths
 
 
@@ -75,6 +75,7 @@ class TestNotebook123Coverage2d(unittest.TestCase):
             temp, keepnote, additional_path=add_path, valid=valid)
         execute_notebook_list_finalize_ut(res, fLOG=fLOG, dump=thismodule)
 
+    @skipif_circleci('Check failed: PyBfloat16_Type.tp_base != nullptr')
     def test_notebook_some_nlp(self):
         fLOG(
             __file__,

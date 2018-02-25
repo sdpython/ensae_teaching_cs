@@ -47,13 +47,22 @@ import pymmails
 # On définit le contenu du mail.
 
 cc = []
-sujet = "Projet informatique 1A - notes de lectures"
+sujet = "Commentaires Python pour un data scientist / économiste"
+col_name = "Etudiant"
+col_mail = "mail"
+columns = ["Sujet", "Commentaires"]
+col_group = "groupe"
+delay_sending = False
+check = None
+
+skip = 0   # to start again after a failure
+
 only = None
-skip = 0
-skiprows = 1
+skiprows = 0
+
 folder = os.path.normpath(os.path.abspath(os.path.join(
-    *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2016-2017", "1A_projet"]))))
-student = os.path.join(folder, "Python_1A_pitch_projet_2017_reviews.xlsx")
+    *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2017-2018", "2A_projet"]))))
+student = os.path.join(folder, "Python2A-2018-01.xlsx")
 if not os.path.exists(student):
     raise FileNotFoundError(student)
 
@@ -64,11 +73,14 @@ Bonjour,
 
 """ + \
     """
-Voici mes remarques suite à la lecture de votre projet et de votre code.
-Vous devrez consacrer une à deux minutes lors de la soutenance pour
-répondre aux questions de code. Ce temps est en plus de la présentation.
-N'oubliez pas de préparer une démonstration de votre programme,
-c'une à deux minutes également en plus de votre présentation.
+Bonjour,
+
+Je m'excuse d'avoir tant tardé à vous transmettre ces commentaires
+pris par ceux qui vous ont lus vos travaux. Nous avons noté
+le rapport sur 16 points et la vidéo sur 4. Je vous prie de m'excuser
+pour les fautes d'orthographes qui sont sans doute encore présentes.
+Vous êtes plus de 120 à avoir choisi ce cours pour plus de 75 projets
+lus par quatre personnes.
 
 """.replace("\n", " ")
 
@@ -78,10 +90,6 @@ end = """
 
 """.replace("\n", " ") + \
     """
-
-Vous pouvez si vous le souhaitez assister à d'autres soutenances.
-
-A vendredi,
 
 Xavier
 """
@@ -117,22 +125,16 @@ pwd = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "pwd")
 # pour envoyer le mail.
 # Si mailbox est None, la fonction affiche les résultats mais ne fait rien.
 
-col_name = "Noms"
-col_mail = "Contact"
-columns = ["sujet", "Passage 2 juin", "Rapport",
-           "Code", "Question de code", "pitch"]
-
-delay_sending = False
 
 fLOG("connect", user)
 mailbox = pymmails.sender.create_smtp_server("gmail", user, pwd)
 fLOG("send")
 # remplacer mailbox par None pour voir le premier mail sans l'envoyer
-mails = enumerate_send_email(mailbox,
+mails = enumerate_send_email(mailbox if not check else None,  # put None here to see the first mail
                              sujet, user + "@gmail.com",
                              df, exc=True, fLOG=fLOG, delay_sending=delay_sending,
                              begin=begin, end=end, skip=skip,
-                             cc=cc, only=only, col_group=None,
+                             cc=cc, only=only, col_group=col_group,
                              col_name=col_name, col_mail=col_mail,
                              cols=columns)
 

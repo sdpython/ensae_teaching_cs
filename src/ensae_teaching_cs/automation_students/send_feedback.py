@@ -31,7 +31,7 @@ def enumerate_feedback(df1, col_group="Groupe",
                        template_col=template_mail_columns,
                        engine="jinja2", exc=True, fLOG=noLOG):
     """
-    sends feedback to students
+    Sends feedback to students.
 
     @param      df1             dataframe
     @param      col_group       name of the column which contains the group definition
@@ -197,7 +197,9 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=[1000, 1500],
                          delay_sending=False, exc=True, skip=0, only=None,
                          **params):
     """
-    Send feedback to students
+    Sends feedback to students.
+    Set mailbox to None to see what the first
+    mail looks like before going through the whole list.
 
     @param      mailbox         mailbox, see `create_smtp_server <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/sender/email_sender.html?pymmails.sender.email_sender.create_smtp_server>`_,
                                 if mailbox is None, the function displays the message and fails
@@ -207,7 +209,7 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=[1000, 1500],
     @param      delay           random delay between two mails
     @param      delay_sending   returns functions
     @param      exc             raise exception when mail is empty
-    @param      skip            skip the first mail
+    @param      skip            skip the first mails
     @param      only            send only to these groups (group id)
     @param      params          see @see fn enumerate_feedback
     @return                     enumerate mails
