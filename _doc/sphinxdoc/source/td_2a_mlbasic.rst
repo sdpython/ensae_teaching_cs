@@ -517,7 +517,7 @@ et la réponse est souvent un mélange des trois :
 *Notebooks*
 
 .. toctree::
-    :max_depth: 2
+    :maxdepth: 2
 
     notebooks/_gs2a_ml_imbalanced
 
