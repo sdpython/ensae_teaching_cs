@@ -808,6 +808,11 @@ y a quelques avancées sur le sujet :
 * `nimblenet <https://github.com/jorgenkg/python-neural-network>`_ : implémentation de différents algorithmes de back propagation
   avec `numpy <http://www.numpy.org/>`_)
 
+*Descente de gradient*
+
+* `Optimization Methods for Large-Scale Machine Learning <https://arxiv.org/abs/1606.04838>`_
+* `Diagonal Rescaling For Neural Networks <https://arxiv.org/abs/1705.09319>`_
+
 *Lectures*
 
 * `Réseau de neurones en maths <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/rn/rn.html>`_

@@ -169,6 +169,11 @@ Algorithmes
 
 (à venir)
 
+*Lectures*
+
+* `Optimization Methods for Large-Scale Machine Learning <https://arxiv.org/abs/1606.04838>`_
+* `Diagonal Rescaling For Neural Networks <https://arxiv.org/abs/1705.09319>`_
+
 *Vidéo*
 
 * `CS231n Winter 2016 Lecture 4 Backpropagation, Neural Networks 1- <https://www.youtube.com/watch?v=GZTvxoSHZIo&feature=youtu.be>`_
