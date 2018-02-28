@@ -75,19 +75,24 @@ def minindex(li):
         Le premier réflexe est alors de recoder le parcours de la liste
         tout en conservant la position du minimum.
 
-        ::
+        .. runpython::
+            :showcode:
 
             li = [ 0, 434, 43, 6436, 5 ]
             m  = 0
             for i in range (0, len (li)):
-                if li [m] < li [i] : m = i
+                if li [m] < li [i]:
+                    m = i
+            print(m)
 
         Mais il existe une astuce pour obtenir la position sans avoir à le reprogrammer.
 
-        ::
+        .. runpython::
+            :showcode:
 
             k = [(v,i) for i,v in enumerate (li)]
             m = min(k)
+            print(m)
 
         La fonction ``min`` choisit l'élément minimum d'un tableau dont les éléments sont des
         couples (élément du premier tableau, sa position).
@@ -116,9 +121,10 @@ def recherche_dichotomique(li, c):
         Comme l'ensemble est trié, en comparant l'élément cherché à l'élément central,
         on peut éliminer une partie de l'ensemble : la moitié inférieure ou supérieure.
 
-        ::
+        .. runpython::
+            :showcode:
 
-            def recherche_dichotomique (li, c) :
+            def recherche_dichotomique(li, c) :
                 a,b = 0, len (li)-1
                 while a <= b :
                     m = (a+b)/2
@@ -126,6 +132,8 @@ def recherche_dichotomique(li, c):
                     elif c <  li [m] : b = m-1   # partie supérieure éliminée
                     else             : a = m+1   # partie inférieure éliminée
                 return -1  # élément non trouvé
+
+            print(recherche_dichotomique([0, 2, 5, 7, 8], 7)
     """
     a, b = 0, len(li) - 1
     while a <= b:
@@ -158,12 +166,15 @@ def text2mat(s, sep_row="\n", sep_col="\t"):
         séparateurs différents. Ce procédé intervient souvent lorsqu'on récupère des
         informations depuis un fichier texte lui-même provenant d'un tableur.
 
-        ::
+        .. runpython::
+            :showcode:
 
             s       = "case11;case12;case13|case21;case22;case23"
             # décomposition en matrice
             ligne   = s.split ("|")                     # lignes
             mat     = [ l.split (";") for l in ligne ]  # colonnes
+
+            print(mat)
 
         Comme cette opération est très fréquente lorsqu'on travaille avec les données,
         on ne l'implémente plus soi-même. On préfère utiliser un module comme
@@ -194,11 +205,14 @@ def mat2text(mat, sep_row="\n", sep_col="\t"):
         :tag: Base
         :title: conversion d'une matrice en chaîne de caractères
 
-        ::
+        .. runpython::
+            :showcode:
 
             mat     = [['case11', 'case12', 'case13'], ['case21', 'case22', 'case23']]
             ligne   = [ ";".join (l) for l in mat ]     # colonnes
             s       = "|".join (ligne)                  # lignes
+
+            print(s)
     """
     ligne = [";".join(l) for l in mat]     # colonnes
     s = "|".join(ligne)                  # lignes
@@ -207,7 +221,7 @@ def mat2text(mat, sep_row="\n", sep_col="\t"):
 
 def somme(li):
     """
-    calcule la somme des éléments d'un tableau
+    Calcule la somme des éléments d'un tableau.
 
     @param      li      tableau
     @return             somme
@@ -217,34 +231,42 @@ def somme(li):
         :title: calcul d'une somme
 
         Le calcul d'une somme fait toujours intervenir une boucle car le langage
-        Python ne peut faire des additions qu'avec deux nombres.
+        :epkg:`Python` ne peut faire des additions qu'avec deux nombres.
         Le schéma est toujours le même : initialisation et boucle.
 
-        ::
+        .. runpython::
+            :showcode:
 
             li = [ 0, 434, 43, 6456 ]
             s  = 0                       # initialisation
             for l in li :                # boucle
                 s += l                   # addition
+            print(s)
 
         Ce code est équivalent à la fonction `sum <https://docs.python.org/3/library/functions.html#sum>`_.
-        Dans ce cas où la somme intègre le résultat d'une fonction et non les éléments d'une liste,
-        il faudrait écrire :
+        Dans ce cas où la somme intègre le résultat d'une fonction (au sens mathématique)
+        et non les éléments d'une liste, il faudrait écrire :
 
-        ::
+        .. runpython::
+            :showcode:
 
-            def fonction (x) : return x*x
+            def fonction(x):
+                return x
             s  = 0
-            for l in li : s += fonction (l)
+            for l in li:
+                s += fonction (l)
+            print(s)
 
         Et ces deux lignes pourraient être résumées en une seule grâce
         à l'une de ces instructions :
 
-        ::
+        .. runpython::
+            :showcode:
 
-            s = sum ( [fonction (l) for l in li] )
-            s = sum ( fonction (l) for l in li )
-            s = sum ( map (fonction, li) )
+            s1 = sum ( [fonction (l) for l in li] )
+            s2 = sum ( fonction (l) for l in li )
+            s3 = sum ( map (fonction, li) )
+            print(s1, s2, s3)
 
         L'avantage des deux dernières instructions est qu'elles évitent
         la création d'une liste intermédiaire,
@@ -273,9 +295,12 @@ def triindex(li):
         On recommence la même procédure à partir de la seconde position,
         puis la troisième et ainsi de suite jusqu'à la fin du tableau.
 
-        ::
+        .. runpython::
+            :showcode:
 
-            for i in xrange (0, len (li)) :
+            li = [5, 6, 4, 3, 8, 2]
+
+            for i in range (0, len (li)) :
                 # recherche du minimum entre i et len (li) exclu
                 pos = i
                 for j in range (i+1, len (li)) :
@@ -284,6 +309,8 @@ def triindex(li):
                 ech      = li [pos]
                 li [pos] = li [i]
                 li [i]   = ech
+
+            print(li)
 
         La fonction `sorted <https://docs.python.org/3/library/functions.html#sorted>`_
         trie également une liste mais selon un algorithme plus efficace
@@ -295,7 +322,8 @@ def triindex(li):
         Il est toujours préférable de ne pas reprogrammer un tri (moins d'erreur).
         Il suffit d'applicer la même idée que pour la fonction @see fn minindex.
 
-        ::
+        .. runpython::
+            :showcode:
 
             tab = ["zero", "un", "deux"]                       # tableau à trier
             pos = sorted(  (t,i) for i,t in enumerate(tab)  )  # tableau de couples
@@ -303,7 +331,8 @@ def triindex(li):
 
         Si cette écriture est trop succincte, on peut la décomposer en :
 
-        ::
+        .. runpython::
+            :showcode:
 
             tab = ["zero", "un", "deux"]
             tab_position = [ (t,i) for i,t in enumerate(tab) ]
@@ -329,14 +358,17 @@ def compte(li):
         politique ou l'étendue du vocabulaire utilisé.
         L'exemple suivant compte les mots d'une liste de mots.
 
-        ::
+        .. runpython::
+            :showcode:
 
             li = ["un", "deux", "un", "trois"]
             d  = { }
-            for l in li :
-                if l not in d : d [l] = 1
-                else : d [l] += 1
-            print (d)   # affiche {'un': 2, 'trois': 1, 'deux': 1}
+            for l in li:
+                if l not in d:
+                    d [l] = 1
+                else:
+                    d [l] += 1
+            print(d)   # affiche {'un': 2, 'trois': 1, 'deux': 1}
 
         La structure la plus appropriée ici est un dictionnaire puisqu'on cherche
         à associer une valeur à un élément d'une liste qui peut être de tout type.
@@ -344,15 +376,18 @@ def compte(li):
         il faudrait convertir ceux-ci en un type immuable comme une chaîne de caractères.
         L'exemple suivant illustre ce cas en comptant les occurrences des lignes d'une matrice.
 
-        ::
+        .. runpython::
+            :showcode:
 
             mat = [ [1,1,1], [2,2,2], [1,1,1]]
             d  = { }
-            for l in mat :
+            for l in mat:
                 k = str (l)    # k = tuple (l) lorsque cela est possible
-                if k not in d : d [k] = 1
-                else : d [k] += 1
-            print (d)   # affiche {'[1, 1, 1]': 2, '[2, 2, 2]': 1}
+                if k not in d:
+                    d [k] = 1
+                else:
+                    d [k] += 1
+            print(d)   # affiche {'[1, 1, 1]': 2, '[2, 2, 2]': 1}
 
         Les listes ne peuvent pas être les clés du dictionnaire :
         `Why Lists Can't Be Dictionary Keys <https://wiki.python.org/moin/DictionaryKeys>`_.
@@ -360,20 +395,27 @@ def compte(li):
         On peut également vouloir non pas compter le nombre d'occurrence mais mémoriser les
         positions des éléments tous identiques. On doit utiliser un dictionnaire de listes :
 
-        ::
+        .. runpython::
+            :showcode:
 
             li = ["un", "deux", "un", "trois"]
             d  = { }
-            for i,v in enumerate (li) :
-                if v not in d : d [v] = [ i ]
-                else : d [v].append (i)
-            print (d)   # affiche {'un': [0, 2], 'trois': [3], 'deux': [1]}
+            for i,v in enumerate(li):
+                if v not in d:
+                    d [v] = [ i ]
+                else:
+                    d [v].append (i)
+            print(d)   # affiche {'un': [0, 2], 'trois': [3], 'deux': [1]}
 
         S'il suffit juste compter, l'écriture la plus simple est :
 
-        ::
+        .. runpython::
+            :showcode:
 
-            for x in li : r[x] = r.get(x,0)+1
+            li = ["un", "deux", "un", "trois"]
+            for x in li:
+                r[x] = r.get(x,0)+1
+            print(r)
     """
     r = {}
     for x in li:
@@ -399,26 +441,31 @@ def mat2vect(mat):
         Il faut bien sûr que le nombre de colonnes sur chaque ligne soit constant.
         Le premier programme convertit une liste de listes en une seule liste.
 
-        ::
+        .. runpython::
+            :showcode:
 
             mat = [[0,1,2],[3,4,5]]
             lin = [ i * len (mat [i]) + j \\
                         for i in range (0, len (mat)) \\
                         for j in range (0, len (mat [i])) ]
+            print(lin)
 
         Vous pouvez aussi utiliser des fonctions telles `reduce <https://docs.python.org/3/library/functools.html?highlight=reduce#module-functools>`_.
 
-        ::
+        .. runpython::
+            :showcode:
 
+            mat = [[0,1,2],[3,4,5]]
             lin = reduce ( lambda x,y: x+y, mat )
+            print(lin)
     """
     return reduce(lambda x, y: x + y, mat)
 
 
 def vect2mat(vect, ncol):
     """
-    convertit un tableau à une dimension en une matrice,
-    réciproque de la fonction @see fn mat2vect
+    Convertit un tableau à une dimension en une matrice,
+    réciproque de la fonction @see fn mat2vect.
 
     @param  vect    vecteur
     @param  ncol    nombre de colonnes
@@ -434,10 +481,12 @@ def vect2mat(vect, ncol):
         Il faut bien sûr que le nombre de colonnes sur chaque ligne soit constant.
         Le premier programme convertit une liste de listes en une seule liste.
 
-        ::
+        .. runpython::
+            :showcode:
 
             vect = [0, 1, 2, 3, 4, 5]
             mat = [ vect[i*ncol: (i+1)*ncol] for i in range(0,len(vect)//ncol) ]
+            print(mat)
 
     """
     return [vect[i * ncol: (i + 1) * ncol]
