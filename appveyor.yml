@@ -38,7 +38,7 @@ install:
   - "%PYTHON%\\Scripts\\pip install pydub smart_open pandas_streaming pocket seasonal"
   - "%PYTHON%\\Scripts\\pymy_install3 opencv_python"
   - "%PYTHON%\\Scripts\\pymy_install3 yaml gensim tables blosc"
-  - "%PYTHON%\\Scripts\\pymy_install3 psycopg2 nltk pympler theano pyproj"
+  - "%PYTHON%\\Scripts\\pymy_install3 psycopg2 nltk pympler theano pyproj opencv_python"
   - "%PYTHON%\\Scripts\\pip install https://github.com/sdpython/pyPdf/archive/trunk.zip"
   - "%PYTHON%\\Scripts\\pip install python-jenkins tutormagic"
   - "%PYTHON%\\Scripts\\pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl"
