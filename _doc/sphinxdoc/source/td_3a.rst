@@ -469,6 +469,8 @@ avec Spark et Spark SQL
 
 * `spark-sklearn <https://databricks.com/blog/2016/02/08/auto-scaling-scikit-learn-with-apache-spark.html>`_ :
   implémentation d'un grid search distribué pour `scikit-learn <http://scikit-learn.org/>`_.
+* `turicreate <https://github.com/apple/turicreate>`_ : mélange de deep learning
+  et de *spark*
 
 .. _l-td3a-start:
 
