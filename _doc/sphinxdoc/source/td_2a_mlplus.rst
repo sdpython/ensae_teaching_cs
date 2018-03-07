@@ -539,6 +539,10 @@ une nécessité. Quelques idées de recherche :
 * `Isotone Optimization in R: Pool-Adjacent-Violators Algorithm (PAVA) and Active Set Methods <http://gifi.stat.ucla.edu/janspubs/2009/reports/deleeuw_hornik_mair_R_09.pdf>`_
 * `Online Isotonic Regression <http://proceedings.mlr.press/v49/kotlowski16.pdf>`_
 
+*Lectures : assemblage de modèles simples*
+
+* `Intelligible Models for Classification and Regression <http://www.cs.cornell.edu/~yinlou/papers/lou-kdd12.pdf>`_
+
 *Lectures : local*
 
 * `Learning Deep Nearest Neighbor Representations Using Differentiable Boundary Trees <https://arxiv.org/abs/1702.08833>`_
