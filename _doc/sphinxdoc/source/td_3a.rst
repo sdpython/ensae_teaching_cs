@@ -253,6 +253,7 @@ Distribution des calculs, stratégies de stockage, SQL NoSQL
 * `Brewer's Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services <https://users.ece.cmu.edu/~adrian/731-sp04/readings/GL-cap.pdf>`_
 * `Distributed Algorithms in NoSQL Databases <https://highlyscalable.wordpress.com/2012/09/18/distributed-algorithms-in-nosql-databases/>`_
 * `No SQL Data Modeling Techniques <https://highlyscalable.wordpress.com/2012/03/01/nosql-data-modeling-techniques/>`_
+* `Distributed Systems and Parallel Computing <http://research.google.com/pubs/DistributedSystemsandParallelComputing.html>`_
 
 *Logiciels*
 
