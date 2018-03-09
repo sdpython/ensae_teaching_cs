@@ -114,6 +114,16 @@ texinfo_documents = [
 
 language = "fr"
 
+# cross references
+
+epkg_dictionary['antiseches_ml_basic_plot_binary_classification'] = "http://www.xavierdupre.fr/app/papierstat/helpsphinx/gyexamples/plots/plot_roc.html#sphx-glr-gyexamples-plots-plot-roc-py"
+epkg_dictionary['antiseches_ml_basic_plot_clustering'] = "http://www.xavierdupre.fr/app/papierstat/helpsphinx/gyexamples/ml_basic/plot_clustering.html#sphx-glr-gyexamples-ml-basic-plot-clustering-py"
+epkg_dictionary['ml_basic_plot_binary_classification'] = "http://www.xavierdupre.fr/app/papierstat/helpsphinx/gyexamples/ml_basic/plot_binary_classification.html#sphx-glr-gyexamples-ml-basic-plot-binary-classification-py"
+epkg_dictionary['ml_basic_plot_grid_search'] = "http://www.xavierdupre.fr/app/papierstat/helpsphinx/gyexamples/ml_basic/plot_grid_search.html#sphx-glr-gyexamples-ml-basic-plot-grid-search-py"
+epkg_dictionary['ml_basic_plot_roc'] = "http://www.xavierdupre.fr/app/papierstat/helpsphinx/gyexamples/plots/plot_roc.html#sphx-glr-gyexamples-plots-plot-roc-py"
+
+# packages
+
 epkg_dictionary["Anaconda"] = 'https://www.continuum.io/downloads'
 epkg_dictionary["anaconda"] = 'https://www.continuum.io/downloads'
 epkg_dictionary["Arduino"] = 'https://www.arduino.cc/'

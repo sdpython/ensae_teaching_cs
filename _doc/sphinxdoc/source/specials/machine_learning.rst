@@ -41,12 +41,12 @@ On minimise une fonction d'erreur :
 
 La fonction *f* est un prédicteur (ou une fonction de scoring en anglais).
 
-* :ref:`sphx_glr_ml_basic_plot_binary_classification.py` (supervisé)
-* :ref:`sphx_glr_antiseches_ml_basic_plot_binary_classification.py` (supervisé)
+* :epkg:`ml_basic_plot_binary_classification` (supervisé)
+* :epkg:`antiseches_ml_basic_plot_binary_classification` (supervisé)
 * ranking (supervisé)
 * recommandation (supervisé)
 * ACP (non supervisé)
-* :ref:`sphx_glr_antiseches_ml_basic_plot_clustering.py` (non supervisé)
+* :epkg:`antiseches_ml_basic_plot_clustering` (non supervisé)
 
 Frontière, Optimisation
 +++++++++++++++++++++++

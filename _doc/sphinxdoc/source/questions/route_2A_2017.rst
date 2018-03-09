@@ -219,7 +219,7 @@ avoir lu pendant les 3 heures.
 Pour aller plus loin :
 
 * Panoplie de graphes et cartes : :ref:`td1acenoncesession12rst`
-* ROC pour un modèle logit :ref:`sphx_glr_antiseches_ml_basic_plot_binary_classification.py`
+* ROC pour un modèle logit :epkg:`antiseches_ml_basic_plot_binary_classification`
 * Les exercices du notebook SQL : :ref:`td2aecosqlrst` (question 1)
 * Manipuler les données et modéliser les incidents dans le transport aérien
   :ref:`td2acenoncesession5rst`
@@ -322,12 +322,12 @@ Séance 5 Maths
     * :ref:`td2amltextfeaturesrst`
     * :ref:`td2amltextfeaturescorrectionrst`
 * Courbe ROC
-    * :ref:`sphx_glr_ml_basic_plot_roc.py`
+    * :epkg:`ml_basic_plot_roc`
 * machine learning crypté
     * :ref:`mlcrypteddatarst`
     * :ref:`mlcrypteddatacorrectionrst`
 * Grid Search
-    * :ref:`sphx_glr_ml_basic_plot_grid_search.py`
+    * :epkg:`ml_basic_plot_grid_search`
 
 .. _l-route2017-eco6:
 
