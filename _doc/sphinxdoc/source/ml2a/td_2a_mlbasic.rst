@@ -169,7 +169,7 @@ Clustering
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_clustering
+    ../notebooks/_gs2a_clustering
 
 (à venir)
 
@@ -327,17 +327,17 @@ ici :
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_ensae_sklearn
-    specials/machine_learning
-    notebooks/td2a_eco_regressions_lineaires
+    ../notebooks/_gs2a_ensae_sklearn
+    ../specials/machine_learning
+    ../notebooks/td2a_eco_regressions_lineaires
 
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_statdes
-    notebooks/_gs2a_ml_base
+    ../notebooks/_gs2a_statdes
+    ../notebooks/_gs2a_ml_base
 
 *Lectures*
 
@@ -447,7 +447,7 @@ de :ref:`l-imbalanced-classification`.
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_ml
+    ../notebooks/_gs2a_ml
 
 *Lectures*
 
@@ -519,7 +519,7 @@ et la réponse est souvent un mélange des trois :
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_ml_imbalanced
+    ../notebooks/_gs2a_ml_imbalanced
 
 *Lectures*
 
@@ -674,7 +674,7 @@ Modèles bayésiens
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_bayes
+    ../notebooks/_gs2a_bayes
 
 *Lectures*
 

@@ -64,7 +64,7 @@ pour passer plus de temps sur les problèmes intéressants.
 .. toctree::
     :maxdepth: 3
 
-    td_2a_manip
+    ml2a/td_2a_manip
 
 Machine Learning - les briques de bases
 =======================================
@@ -79,7 +79,7 @@ svuiants.
 .. toctree::
     :maxdepth: 3
 
-    td_2a_mlbasic
+    ml2a/td_2a_mlbasic
 
 Machine learning - extensions
 =============================
@@ -94,7 +94,7 @@ parfois récents.
 .. toctree::
     :maxdepth: 3
 
-    td_2a_mlplus
+    ml2a/td_2a_mlplus
 
 Algorithmes, Optimisation, Programmation
 ========================================
@@ -109,7 +109,7 @@ qui ne sont pas encore disponibles.
 .. toctree::
     :maxdepth: 3
 
-    td_2a_talgo
+    ml2a/td_2a_talgo
 
 Bibliographie
 =============
@@ -121,7 +121,7 @@ des inclassables.
 .. toctree::
     :maxdepth: 2
 
-    td_2a_biblio
+    ml2a/td_2a_biblio
 
 A propos du cours
 =================
@@ -135,7 +135,7 @@ notions suivantes.
 .. toctree::
     :maxdepth: 2
 
-    td_2a_notions
+    ml2a/td_2a_notions
 
 **Auteurs et Contributeurs**
 

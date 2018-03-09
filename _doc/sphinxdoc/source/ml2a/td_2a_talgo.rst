@@ -39,15 +39,15 @@ Webscrapping et API
 .. toctree::
     :maxdepth: 1
 
-    notebooks/TD2A_eco_les_API
+    ../notebooks/TD2A_eco_les_API
 
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_eco_scraping
-    notebooks/_gs2a_eco_api
+    ../notebooks/_gs2a_eco_scraping
+    ../notebooks/_gs2a_eco_api
 
 *Ressources*
 
@@ -74,7 +74,7 @@ Site web
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_eco_website
+    ../notebooks/_gs2a_eco_website
 
 *Lectures*
 
@@ -96,15 +96,15 @@ Jupyter et les commandes magiques
 .. toctree::
     :maxdepth: 1
 
-    notebooks/jupyter_custom_magics
-    notebooks/notebook_convert
+    ../notebooks/jupyter_custom_magics
+    ../notebooks/notebook_convert
 
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_magic_commands
+    ../notebooks/_gs2a_magic_commands
 
 ---------------
 
@@ -142,18 +142,18 @@ de façon intelligente la contrainte de volume. Et s'il n'y avait qu'une idée
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_no_sql_exo
-    notebooks/dataframe_matrix_speed
-    notebooks/ml_huge_datasets
-    notebooks/ml_table_mortalite
+    ../notebooks/_gs2a_no_sql_exo
+    ../notebooks/dataframe_matrix_speed
+    ../notebooks/ml_huge_datasets
+    ../notebooks/ml_table_mortalite
 
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_no_sql_twitter
-    notebooks/_gs2a_big_in_memory
+    ../notebooks/_gs2a_no_sql_twitter
+    ../notebooks/_gs2a_big_in_memory
 
 *Lectures*
 
@@ -188,7 +188,7 @@ Tensor, tableaux multidimensionnel
 .. toctree::
     :maxdepth: 1
 
-    notebooks/ml_table_mortalite
+    ../notebooks/ml_table_mortalite
 
 (à venir)
 
@@ -209,16 +209,16 @@ C++, Accélération de code
 .. toctree::
     :maxdepth: 1
 
-    notebooks/python_r
-    notebooks/python_csharp
-    notebooks/cffi_linear_regression
+    ../notebooks/python_r
+    ../notebooks/python_csharp
+    ../notebooks/cffi_linear_regression
 
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_langages
+    ../notebooks/_gs2a_langages
 
 *Lectures*
 
@@ -279,8 +279,8 @@ tableau d'octets, c'est indispensable pour la communication entre deux machines,
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_parallelisation
-    notebooks/_gs2a_serialisation
+    ../notebooks/_gs2a_parallelisation
+    ../notebooks/_gs2a_serialisation
 
 *Modules*
 
@@ -304,17 +304,17 @@ Puzzles algorithmiques
 .. toctree::
 
     td_2a_algo
-    specials/nb_complet
-    specials/algorithm_culture
-    specials/problem_solved
+    ../specials/nb_complet
+    ../specials/algorithm_culture
+    ../specials/problem_solved
 
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_puzzle
-    notebooks/_gs2a_puzzle_ml
+    ../notebooks/_gs2a_puzzle
+    ../notebooks/_gs2a_puzzle_ml
 
 Certains sont tirés de plusieurs sites dont
 `Google Code Jam <https://code.google.com/codejam/contests.html>`_.
@@ -379,7 +379,7 @@ est inconnue à l'avance.
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_streaming
+    ../notebooks/_gs2a_streaming
 
 *Lectures*
 

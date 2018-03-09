@@ -94,7 +94,7 @@ Timeseries - Séries temporelles
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_timeseries
+    ../notebooks/_gs2a_timeseries
 
 (à venir : modèles SETAR pour les séries non périodiques, modèles proies prédateurs)
 
@@ -441,7 +441,7 @@ propose une réponse à ces deux problèmes.
 
 .. toctree::
 
-    notebooks/_gs2a_ethics
+    ../notebooks/_gs2a_ethics
 
 *Lectures*
 
@@ -672,7 +672,7 @@ Machine Learning sur des données cryptées
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_crypt
+    ../notebooks/_gs2a_crypt
 
 *Lectures*
 
@@ -993,7 +993,7 @@ Deep Learning en détail
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_deep
+    ../notebooks/_gs2a_deep
 
 (à venir foolbox)
 
@@ -1128,7 +1128,7 @@ Apprentissage sans labels
 .. toctree::
     :maxdepth: 2
 
-    specials/nolabel
+    ../specials/nolabel
 
 *Notebooks*
 
@@ -1321,7 +1321,7 @@ exploitable par les algorithmes d'apprentissage.
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_nlp
+    ../notebooks/_gs2a_nlp
 
 *Lectures - articles*
 

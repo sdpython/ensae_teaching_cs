@@ -34,7 +34,7 @@ Rappels de programmation
 .. toctree::
     :maxdepth: 2
 
-    notebooks/td2_eco_rappels_1a
+    ../notebooks/td2_eco_rappels_1a
 
 .. index:: sérialisation, index, dataframe
 
@@ -67,14 +67,14 @@ DataFrame
 .. toctree::
     :maxdepth: 1
 
-    notebooks/td2a_cenonce_session_1
-    notebooks/td2a_correction_session_1
-    notebooks/pandas_iterator
-    notebooks/pandas_iterator_correction
-    notebooks/td2a_eco_exercices_de_manipulation_de_donnees
-    notebooks/td2a_eco_exercices_de_manipulation_de_donnees_correction_a
-    notebooks/td2a_eco_exercices_de_manipulation_de_donnees_correction_b
-    notebooks/td2a_eco_exercices_de_manipulation_de_donnees_correction_c
+    ../notebooks/td2a_cenonce_session_1
+    ../notebooks/td2a_correction_session_1
+    ../notebooks/pandas_iterator
+    ../notebooks/pandas_iterator_correction
+    ../notebooks/td2a_eco_exercices_de_manipulation_de_donnees
+    ../notebooks/td2a_eco_exercices_de_manipulation_de_donnees_correction_a
+    ../notebooks/td2a_eco_exercices_de_manipulation_de_donnees_correction_b
+    ../notebooks/td2a_eco_exercices_de_manipulation_de_donnees_correction_c
 
 *Modules*
 
@@ -90,8 +90,8 @@ Array, Matrix
 .. toctree::
     :maxdepth: 1
 
-    notebooks/td2a_cenonce_session_2A
-    notebooks/td2a_correction_session_2A
+    ../notebooks/td2a_cenonce_session_2A
+    ../notebooks/td2a_correction_session_2A
 
 *Lectures*
 
@@ -110,15 +110,15 @@ SQL
 .. toctree::
     :maxdepth: 1
 
-    ext2a/sql_doc
-    questions/sql_reperes
+    ../ext2a/sql_doc
+    ../questions/sql_reperes
 
 *Notebooks*
 
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_sql
+    ../notebooks/_gs2a_sql
 
 .. _l-visualisation-td2a:
 
@@ -155,7 +155,7 @@ la visualisation animée de gros jeux de données telle que
 .. toctree::
     :maxdepth: 2
 
-    notebooks/_gs2a_visu
+    ../notebooks/_gs2a_visu
 
 * `Graphes classiques métriques pour des modèles de machine learning <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_enonce.html>`_
 * `Graphes classiques métriques pour des modèles de machine learning - correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_ml_correction.html>`_
@@ -165,7 +165,7 @@ la visualisation animée de gros jeux de données telle que
 .. toctree::
     :maxdepth: 2
 
-    ext2a/javascript_doc
+    ../ext2a/javascript_doc
 
 * Lire :ref:`Javascript et traitement de données <blog-js-data>`
 
