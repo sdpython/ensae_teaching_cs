@@ -580,10 +580,10 @@ Ranking
 * `The Lemur Project - ranklib <https://sourceforge.net/p/lemur/wiki/RankLib/>`_
 * `scikit-criteria <https://github.com/leliel12/scikit-criteria>`_ (standby)
 
-|pystatpng|
+|pyecopng|  |pystatpng|
 
-Système de recommandation
-+++++++++++++++++++++++++
+Système de recommandations
+++++++++++++++++++++++++++
 
 *(à venir)*
 
@@ -596,6 +596,11 @@ Système de recommandation
 * `The Why and How of Nonnegative Matrix Factorization <https://arxiv.org/abs/1401.5226>`_
 * `A tutorial on Non-Negative Matrix Factorisation with Applications to Audiovisual Content Analysis <http://perso.telecom-paristech.fr/~essid/teach/NMF_tutorial_ICME-2014.pdf>`_
 * `Large-Scale Matrix Factorization with Missing Data under Additional Constraints <http://www.cfar.umd.edu/~rama/Publications/mitra_nips_2010.pdf>`_
+* `Quick Guide to Build a Recommendation Engine in Python <https://www.analyticsvidhya.com/blog/2016/06/quick-guide-build-recommendation-engine-python/>`_
+* `Recommender Systems in Python: Beginner Tutorial <https://www.datacamp.com/community/tutorials/recommender-systems-python>`_
+* `Recommender Systems Using Linear Classifiers <http://www.jmlr.org/papers/volume2/zhang02a/zhang02a.pdf>`_ (approche intéressante)
+* `A Survey of Accuracy Evaluation Metrics of Recommendation Tasks <http://jmlr.csail.mit.edu/papers/volume10/gunawardana09a/gunawardana09a.pdf>`_
+* `Offline A/B Testing for Recommender Systems <https://dl.acm.org/citation.cfm?id=3159687>`_
 
 *Modules*
 
@@ -628,6 +633,14 @@ ou *apprentissage par renforcement*
   `Reinforcement Learning Part II <http://www.labri.fr/perso/nrougier/downloads/Chile-2014-Lecture-2.pdf>`_
 * `Strategic Attentive Writer for Learning Macro-Actions <https://arxiv.org/pdf/1606.04695.pdf>`_
 * `Temporal difference learning <https://en.wikipedia.org/wiki/Temporal_difference_learning>`_
+
+*Exemples*
+
+* `pg-pong.py <https://gist.github.com/karpathy/a4166c7fe253700972fcbc77e4ea32c5>`_
+
+*Modules*
+
+* `Ray RLlib <http://ray.readthedocs.io/en/latest/rllib.html>`_ (ray - rllib)
 
 |pystatpng|
 

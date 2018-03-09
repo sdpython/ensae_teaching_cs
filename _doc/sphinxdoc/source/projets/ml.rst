@@ -51,9 +51,10 @@ Quelques applications envisageables dans le cadre de ce projets :
 * `jeux de stratégie <http://www.bgu.ac.il/~shanigu/Publications/LearningInCiv.pdf>`_
 * `Reinforcement Learning Assignment: Easy21 <http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching_files/Easy21-Johannes.pdf>`_
 
-On peut envisager des contextes différents tels que le jeu de Pacman
+On peut envisager des contextes différents tels que le jeu de Pacman ou de Pong :
 
 * `Reinforcement Learning (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/projects/reinforcement/reinforcement.html>`_
+* `pg-pong.py <https://gist.github.com/karpathy/a4166c7fe253700972fcbc77e4ea32c5>`_
 
 Autres pistes :ref:`l-td2a-reinforcement-learning`.
 

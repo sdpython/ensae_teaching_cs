@@ -161,6 +161,11 @@ Pour vous exercer :
     notebooks/exercice_plus_grande_somme
     notebooks/tri_nlnd
 
+Pour finir, un module :epkg:`python` qui s'intéresse à la résolution
+de problème d'optimisation sous contraintes de type
+`simplexe <https://fr.wikipedia.org/wiki/Simplexe>`_ :
+`python-constraint <https://github.com/python-constraint/python-constraint>`_.
+
 S'amuser avec les algorithmes
 +++++++++++++++++++++++++++++
 

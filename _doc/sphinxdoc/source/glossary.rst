@@ -61,6 +61,10 @@ Glossaire
         `Cheat Sheets Python <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/cheat_sheets.html>`_
         Ce mot-clé fonctionne très bien quand on cherche des informations sur un language, un module...
         Essayez avec *python cheatsheet* sur n'importe quel moteur de recherche.
+        Un des meilleurs sites que j'aie trouvés est celui-ci :
+        `Data Science Cheat Sheets <https://www.datacamp.com/community/data-science-cheatsheets>`_,
+        on y trouve également :
+        `Experts' Favorite Data Science Techniques <https://www.datacamp.com/community/tutorials/data-science-techniques-dataframed>`_.
 
     coût
         Le coût d'un algorithme est le nombre d'opérations qu'il effectue lorsqu'il
