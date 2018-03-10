@@ -231,7 +231,7 @@ Cartes
 * `basemap <http://matplotlib.org/basemap/>`_
   (maintenu jusqu'en 2020, il faut préférer `cartopy <http://scitools.org.uk/cartopy/>`_)
 * `geoviews <http://geo.holoviews.org/Geometries.html>`_
-* `kartograph <http://www.kartograph.org/>`_
+* `geopandas <http://geopandas.org/>`_
 
 *Modules avec Open Street Map*
 
