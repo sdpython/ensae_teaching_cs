@@ -682,6 +682,8 @@ Modèles bayésiens
 * `stan case studies <http://mc-stan.org/documentation/case-studies>`_
 * `Edward: A library for probabilistic modeling, inference, and criticism <https://arxiv.org/pdf/1610.09787.pdf>`_
 * `Auto-Encoding Variational Bayes <https://arxiv.org/pdf/1312.6114.pdf>`_
+* `Particle Gibbs with Ancestor Sampling <http://jmlr.org/papers/volume15/lindsten14a/lindsten14a.pdf>`_
+* `Controlled Sequential Monte Carlo <https://arxiv.org/abs/1708.08396>`_
 
 *Vidéo*
 
