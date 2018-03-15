@@ -466,6 +466,15 @@ propose une réponse à ces deux problèmes.
 
 * `Katharine Jarmul | Keynote: Ethical Machine Learning: Creating Fair Models in an Unjust World <https://www.youtube.com/watch?v=hDgXIUM3Rmw>`_
 * `When Recommendations Systems Go Bad <https://www.youtube.com/watch?v=MqoRzNhrTnQ>`_
+* `How AI Designers will Dictate Our Civic Future <https://vimeo.com/238221677>`_ de
+  `Latanya Sweeney <https://dataprivacylab.org/people/sweeney/>`_,
+  je recommande vivement cette conférence qui montre comment des biais
+  peuvent apparaître dans un système intégrant le machine learning,
+  il n'existe pas de façon d'éviter les biais si ce n'est en gardant
+  constamment à l'esprit qu'ils apparaîtront quoiqu'il arrive
+  si un système est prévu pour s'adapter au fur et à mesure.
+  Le système apprend les biais et limite de plus en plus
+  tout ce qui pourrait l'en faire sortir.
 
 *Sites*
 
@@ -1694,6 +1703,11 @@ précis.
 .. contents::
     :local:
 
+Apprentissage par renforcement
+++++++++++++++++++++++++++++++
+
+* `Towards Reinforcement Learning in the Real World <https://vimeo.com/238221551>`_
+
 Awesome, Playground...
 ++++++++++++++++++++++
 
@@ -1795,6 +1809,12 @@ Jeux
 * `Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm <https://arxiv.org/pdf/1712.01815.pdf>`_,
   voir quelques parties `The future is here - AlphaZero learns chess <https://en.chessbase.com/post/the-future-is-here-alphazero-learns-chess>`_.
   Avec ce type d'algorithme adapté à la finance, le trader humain a du soucis à se faire.
+
+Parole
+++++++
+
+* `Achieving Human Parity in Conversational Speech Recognition <https://arxiv.org/abs/1610.05256>`_ (2016)
+* `Achieving Human Parity on Automatic Chinese to English News Translation <https://www.microsoft.com/en-us/research/publication/achieving-human-parity-on-automatic-chinese-to-english-news-translation/>`_ (2018)
 
 Portraits
 +++++++++
