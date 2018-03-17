@@ -236,6 +236,25 @@ Détection d'anomalies
 
 |pyecopng| |pystatpng|
 
+Text embedding
+++++++++++++++
+
+Voir :ref:`l-td2a-nlp`.
+
+|pyecopng| |pystatpng|
+
+Embedding de données complexes
+++++++++++++++++++++++++++++++
+
+*(à venir)*
+
+*Lectures*
+
+* `Listing Embeddings for Similar Listing Recommendations and Real-time Personalization in Search <https://medium.com/airbnb-engineering/listing-embeddings-for-similar-listing-recommendations-and-real-time-personalization-in-search-601172f7603e>`_
+* `Distributed Representations of Words and Phrases and their Compositionality <https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf>`_
+
+|pyecopng| |pystatpng|
+
 Graphe et embedding
 +++++++++++++++++++
 
@@ -246,13 +265,6 @@ Graphe et embedding
 * `Graph Convolutional Networks <https://tkipf.github.io/graph-convolutional-networks/>`_
 * `Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering <https://arxiv.org/abs/1606.09375>`_
 * `Deep Convolutional Networks on Graph-Structured Data <https://arxiv.org/abs/1506.05163>`_
-
-|pyecopng| |pystatpng|
-
-Text embedding
-++++++++++++++
-
-Voir :ref:`l-td2a-nlp`.
 
 |pyecopng| |pystatpng|
 
