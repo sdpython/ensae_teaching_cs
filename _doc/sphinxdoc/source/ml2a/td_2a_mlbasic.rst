@@ -20,6 +20,7 @@ Statistiques Descriptives
 =========================
 
 .. toctree::
+    :maxdepth: 1
 
     td2a_mlbasic_acp_acm_anova
     td2a_mlbasic_intervalles_de_confiance
@@ -35,6 +36,7 @@ Cette partie s'intéresse à construire de meilleures variables que celles issue
 du problème initiale.
 
 .. toctree::
+    :maxdepth: 1
 
     td2a_mlbasic_projections_reduction_des_dimensions
     td2a_mlbasic_variables_categorielles
@@ -50,6 +52,7 @@ Machine Learning - Formalisation
 ================================
 
 .. toctree::
+    :maxdepth: 1
 
     td2a_mlbasic_machine_learning_cours_de_gael_varoquaux
     td2a_mlbasic_de_la_theorie_a_la_pratique

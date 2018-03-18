@@ -14,6 +14,7 @@ Scrapping, API, Site Web, Notebooks
 ===================================
 
 .. toctree::
+    :maxdepth: 1
 
     td2a_talgo_webscrapping_et_api
     td2a_talgo_site_web
@@ -23,6 +24,7 @@ Traiter les données rapidement pour de plus grands volumes
 ==========================================================
 
 .. toctree::
+    :maxdepth: 1
 
     td2a_talgo_big_data_sans_cluster_structures_de_donnees
     td2a_talgo_tensor_tableaux_multidimensionnel
@@ -32,6 +34,7 @@ Meilleure efficacité avec des algorithmes
 =========================================
 
 .. toctree::
+    :maxdepth: 1
 
     td2a_talgo_parallelisation_serialisation
     td2a_talgo_puzzles_algorithmiques
@@ -50,6 +53,7 @@ dans l'objet connecté avec des contraintes assez fortes sur la mémoire et
 la puissance de calculs.
 
 .. toctree::
+    :maxdepth: 1
 
     td2a_talgo_predire_en_environnement_contraint
     td2a_talgo_apprendre_en_environnement_contraint

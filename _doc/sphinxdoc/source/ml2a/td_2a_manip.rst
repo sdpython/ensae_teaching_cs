@@ -42,6 +42,7 @@ De nombreux livres ont été écrits sur la manipulation des données en :epkg:`
 `Python Data Science Handbook <https://github.com/jakevdp/PythonDataScienceHandbook>`_.
 
 .. toctree::
+    :maxdepth: 1
 
     td2a_manip_dataframe
     td2a_manip_array_matrix
@@ -52,6 +53,7 @@ Visualisation
 =============
 
 .. toctree::
+    :maxdepth: 1
 
     td2a_manip_graphes
     td2a_manip_cartes
@@ -62,6 +64,7 @@ Pipelines
 =========
 
 .. toctree::
+    :maxdepth: 1
 
     td2a_manip_sequence_de_traitemements_de_donnees
     td2a_manip_workflows_data_pipelines

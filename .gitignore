@@ -494,3 +494,10 @@ _doc/notebooks/td2a_ml/salaries11.dbf
 _doc/notebooks/2a/premier_projet3
 _doc/notebooks/expose/pageviews-20180201-000000
 _doc/notebooks/expose/pageviews-20180201-000000.fr.txt
+_doc/sphinxdoc/source/notebooks/*
+_doc/sphinxdoc/source/nbcov-2018-03-18.png
+_doc/sphinxdoc/source/nbcov.png
+_doc/sphinxdoc/source/sklearn_ensae_course/images/sphx_glr*.png
+_doc/sphinxdoc/source/sklearn_ensae_course/images/thumb/*.png
+_doc/sphinxdoc/source/sklearn_ensae_course/*
+
