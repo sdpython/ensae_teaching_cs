@@ -1,0 +1,69 @@
+
+.. blogpost::
+    :title: Biblio : articles ajoutés récemment
+    :keywords: benchmark, pytorck, tensorflow, cntk
+    :date: 2018-03-19
+    :categories: biblio
+
+    Dans :ref:`l-suggestio-articles-projet-3A` :
+
+    * `Affinity Clustering: Hierarchical Clustering at Scale <https://papers.nips.cc/paper/7262-affinity-clustering-hierarchical-clustering-at-scale.pdf>`_
+    * `Spinner: Scalable Graph Partitioning in the Cloud <https://arxiv.org/abs/1404.3861>`_
+    * `Fennel: Streaming Graph Partitioning for Massive Scale Graphs <https://www.microsoft.com/en-us/research/publication/fennel-streaming-graph-partitioning-for-massive-scale-graphs/>`_
+    * `Balanced Label Propagation for Partitioning Massive Graphs <https://stanford.edu/~jugander/papers/wsdm13-blp.pdf>`_
+    * `DSCOVR: Randomized Primal-Dual Block Coordinate Algorithms for Asynchronous Distributed Optimization <https://www.microsoft.com/en-us/research/wp-content/uploads/2017/10/dscovr.pdf>`_
+
+    Dans :ref:`l-data-twitter` :
+
+    * `What is Twitter, a Social Network or a News Media? <http://www.ambuehler.ethz.ch/CDstore/www2010/www/p591.pdf>`_
+
+    Dans :ref: `l-algoculture-shortlist` :
+
+    * `Expander Flows, Geometric Embeddings and Graph Partitioning <http://snap.stanford.edu/class/cs224w-readings/arora04expansion.pdf>`_
+    * `Borůvka's algorithm <https://en.wikipedia.org/wiki/Bor%C5%AFvka%27s_algorithm>`_
+    * `Distributed hash table <https://en.wikipedia.org/wiki/Distributed_hash_table>`_
+
+    Dans :ref:`l-imbalanced-classification` :
+
+    * `Data Subsampling (Edward) <http://edwardlib.org/api/inference-data-subsampling>`_
+    * `5601 Notes: The Subsampling Bootstrap <http://www.stat.umn.edu/geyer/5601/notes/sub.pdf>`_
+    * `Bootstrapping and Subsampling: Part I <https://normaldeviate.wordpress.com/2013/01/19/bootstrapping-and-subsampling-part-i/>`_
+    * `Subsampling versus bootstrapping in resampling-based model selection for multivariable regression <https://epub.ub.uni-muenchen.de/21724/1/technRep_171.pdf>`_
+    * `Subsampling vs Bootstrap <https://web.stanford.edu/~doubleh/lecturenotes/lecture13.pdf>`_
+
+    Dans :ref:`l-ml2a-overfitting` :
+
+    * `Generalization in Adaptive Data Analysis and Holdout Reuse <http://papers.nips.cc/paper/5993-generalization-in-adaptive-data-analysis-and-holdout-reuse.pdf>`_
+    * `Numeraire: A Cryptographic Token for Coordinating Machine Intelligence and Preventing Overfitting <https://numer.ai/whitepaper.pdf>`_
+
+    Dans :ref:`l-mlanomprivacy`:
+
+    * `La protection des données personnelles en assurance dialogue du juriste avec l'actuaire <https://f-origin.hypotheses.org/wp-content/blogs.dir/253/files/2018/02/DAR.pdf>`_
+    * `The Secret Sharer: Measuring Unintended Neural Network Memorization & Extracting Secrets <https://arxiv.org/pdf/1802.08232.pdf>`_
+
+    Dans :ref:`l-ml2a-mlethical` :
+
+    * `How AI Designers will Dictate Our Civic Future <https://vimeo.com/238221677>`_ de
+      `Latanya Sweeney <https://dataprivacylab.org/people/sweeney/>`_
+
+    Dans :ref:`l-prob-solved-speech` :
+
+    * `Achieving Human Parity in Conversational Speech Recognition <https://arxiv.org/abs/1610.05256>`_ (2016)
+    * `Achieving Human Parity on Automatic Chinese to English News Translation <https://www.microsoft.com/en-us/research/publication/achieving-human-parity-on-automatic-chinese-to-english-news-translation/>`_ (2018)
+
+    Dans :ref:`l-prob-solved-segmentation` :
+
+    * `Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation <https://arxiv.org/pdf/1802.02611.pdf>`_
+    * `Xception: Deep Learning with Depthwise Separable Convolutions <https://arxiv.org/pdf/1610.02357.pdf>`_
+    * `DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs <https://arxiv.org/abs/1606.00915>`_
+    * `Rethinking Atrous Convolution for Semantic Image Segmentation <https://arxiv.org/pdf/1706.05587.pdf>`_
+
+    Dans :ref:`l-prob-solved-archi` :
+
+    * `Deformable Convolutional Networks <https://arxiv.org/abs/1703.06211>`_
+
+    Dans :ref:`l-algo3A-distri` :
+
+    * `Communication Complexity of Distributed Convex Learning and Optimization <https://arxiv.org/pdf/1506.01900.pdf>`_
+    * `Fast Distributed Gradient Methods <https://arxiv.org/pdf/1112.2972.pdf>`_
+    * `A Generalized Accelerated Composite Gradient Method: Uniting Nesterov's Fast Gradient Method and FISTA <https://arxiv.org/abs/1705.10266>`_

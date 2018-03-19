@@ -11,6 +11,8 @@
 
 |pyecopng| |pystatpng|
 
+.. _l-mlanomprivacy:
+
 Anonymisation des données / Privacy
 +++++++++++++++++++++++++++++++++++
 
@@ -29,12 +31,20 @@ Anonymisation des données / Privacy
 * `Privatics (INRIA) <https://team.inria.fr/privatics/>`_
 * `Differential Privacy for Bayesian Inference through Posterior Sampling∗ <http://www.jmlr.org/papers/volume18/15-257/15-257.pdf>`_
 
+*Tables rondes*
+
+* `La protection des données personnelles en assurance dialogue du juriste avec l'actuaire <https://f-origin.hypotheses.org/wp-content/blogs.dir/253/files/2018/02/DAR.pdf>`_
+
 *Lectures - autodestruction*
 
 * `New Directions for Self-Destructing Data Systems <https://vanish.cs.washington.edu/pubs/vanish-extensions-techreport11.pdf>`_
 * `Keypad: An Auditing File System for Theft-Prone Devices <http://eurosys2011.cs.uni-salzburg.at/pdf/eurosys2011-geambasu.pdf>`_
 * `Self Destructing Data System Based On Session Keys <http://www.ijstr.org/final-print/feb2014/Self-Destructing-Data-System-Based-On-Session-Keys.pdf>`_
 * `Vanish: Increasing Data Privacy with Self-Destructing Data <http://www.usenix.net/legacy/events/sec09/tech/full_papers/geambasu.pdf>`_
+
+*Données résiduelles dans les modèles*
+
+* `The Secret Sharer: Measuring Unintended Neural Network Memorization & Extracting Secrets <https://arxiv.org/pdf/1802.08232.pdf>`_
 
 *Algorithmes*
 

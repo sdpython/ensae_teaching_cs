@@ -18,7 +18,6 @@ Les notions qu'il faut avoir comprises ou vues
 .. contents::
     :local:
 
-
 Pour un profil plutôt économiste
 ++++++++++++++++++++++++++++++++
 

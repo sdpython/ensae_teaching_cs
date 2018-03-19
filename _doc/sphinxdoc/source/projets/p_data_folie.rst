@@ -87,6 +87,7 @@ Quelques références :
 - `Home Location Identification of Twitter Users <http://arxiv.org/ftp/arxiv/papers/1403/1403.2345.pdf>`_
 - `Opinion control in complex networks <http://arxiv.org/pdf/1412.2170v1.pdf>`_
 - `Social Clicks: What and Who Gets Read on Twitter? <https://hal.inria.fr/hal-01281190/document>`_
+- `What is Twitter, a Social Network or a News Media? <http://www.ambuehler.ethz.ch/CDstore/www2010/www/p591.pdf>`_
 
 Il est préférable de lire le dernier article avant de commencer le projet.
 

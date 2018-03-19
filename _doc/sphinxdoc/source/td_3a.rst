@@ -138,6 +138,7 @@ Autres que CPU, GPU
 * `Tensor Processor Unit (TPU) <https://en.wikipedia.org/wiki/Tensor_processing_unit>`_
 * `Application-specific integrated circuit (ASIC) <https://en.wikipedia.org/wiki/Application-specific_integrated_circuit>`_
 * `Field-programmable gate array (FGPA) <https://en.wikipedia.org/wiki/Field-programmable_gate_array>`_
+* `Ethereum: a Secure Decentralised Generalized Transaction Ledger EIP-150 Revision <http://gavwood.com/paper.pdf>`_
 
 ------------
 
@@ -152,6 +153,7 @@ Crypographie, block chain
 * Block chain, Bitcoin, Attque (Incentive, long term consensus, la probabilité qu'on soit en désaccord
   décroît avec le temps, monnaie stable, sûre, anonyme ?)
 * `Ethereum <https://en.wikipedia.org/wiki/Ethereum>`_
+* `Trustless Machine Learning Contracts; Evaluating and Exchanging Machine Learning Models on the Ethereum Blockchain <https://algorithmia.com/research/ml-models-on-blockchain>`_
 
 *Lectures*
 
@@ -164,8 +166,10 @@ Crypographie, block chain
 * `Introduction to Smart Contracts <http://solidity.readthedocs.io/en/develop/introduction-to-smart-contracts.html>`_
 * `Monnaie, finance et économie réelle <http://www.editionsladecouverte.fr/catalogue/index-Monnaie__finance_et___conomie_r__elle-9782707185822.html>`_
 
-Algorithmes
-+++++++++++
+.. _l-algo3A-distri:
+
+Algorithmes Distribués
+++++++++++++++++++++++
 
 (à venir)
 
@@ -173,6 +177,9 @@ Algorithmes
 
 * `Optimization Methods for Large-Scale Machine Learning <https://arxiv.org/abs/1606.04838>`_
 * `Diagonal Rescaling For Neural Networks <https://arxiv.org/abs/1705.09319>`_
+* `Communication Complexity of Distributed Convex Learning and Optimization <https://arxiv.org/pdf/1506.01900.pdf>`_
+* `Fast Distributed Gradient Methods <https://arxiv.org/pdf/1112.2972.pdf>`_
+* `A Generalized Accelerated Composite Gradient Method: Uniting Nesterov's Fast Gradient Method and FISTA <https://arxiv.org/abs/1705.10266>`_
 
 *Vidéo*
 

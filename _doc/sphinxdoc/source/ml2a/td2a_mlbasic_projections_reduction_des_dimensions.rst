@@ -47,7 +47,9 @@ Projections, Réduction des dimensions
 * `fbpca <http://fbpca.readthedocs.io/en/latest/>`_ : ACP
 * `prince <https://github.com/MaxHalford/Prince>`_ : ACM
 * `Parametric-t-SNE <https://github.com/kylemcdonald/Parametric-t-SNE/blob/master/Parametric%20t-SNE%20(Keras).ipynb>`_
-* `datasketch <https://github.com/ekzhu/datasketch>`_ (LSH)
+* `datasketch <https://github.com/ekzhu/datasketch>`_ (LSH),
+  le module `minhashcuda <https://github.com/src-d/minhashcuda>`_
+  implémente l'algorithme `MinHash <https://en.wikipedia.org/wiki/MinHash>`_ sur GPU
 * `NearPy <https://github.com/pixelogik/NearPy>`_ (LSH)
 
 *Animations*

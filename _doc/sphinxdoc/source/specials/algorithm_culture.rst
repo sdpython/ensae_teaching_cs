@@ -87,8 +87,8 @@ Tout ce qui suit vous donnera des idées.
 
 .. _l-algoculture-shortlist:
 
-Catalogue
-+++++++++
+Catalogue d'algorithmes
++++++++++++++++++++++++
 
 * Tri
     * `tri fusion <http://fr.wikipedia.org/wiki/Tri_fusion>`_ **algo**
@@ -109,10 +109,12 @@ Catalogue
       extension du problème du voyageur de commerce
     * `problème d'affectation, méthode hongroise <http://fr.wikipedia.org/wiki/Algorithme_hongrois>`_ **algo**
     * `arbre de poids miminum (Kruskal) <http://fr.wikipedia.org/wiki/Algorithme_de_Kruskal>`_ **algo**
+    * `arbre de poids miminum (Borůvka) <https://en.wikipedia.org/wiki/Bor%C5%AFvka%27s_algorithm>`_ **algo**
     * `problème du sac-à-dos <http://fr.wikipedia.org/wiki/Probl%C3%A8me_du_sac_%C3%A0_dos>`_ **algo**
 * Structure de données
     * `liste chaînée <http://fr.wikipedia.org/wiki/Liste_cha%C3%AEn%C3%A9e>`_ **déf**
     * `table de hachage <http://fr.wikipedia.org/wiki/Table_de_hachage>`_ **déf**
+    * `table de hashage distribuée <https://en.wikipedia.org/wiki/Distributed_hash_table>`_
     * `suffix tree <http://fr.wikipedia.org/wiki/Arbre_des_suffixes>`_ **déf**
     * `trie <http://fr.wikipedia.org/wiki/Trie_(informatique)>`_ **déf**
     * `b-tree <http://fr.wikipedia.org/wiki/Arbre_B>`_ **déf**
@@ -190,6 +192,7 @@ Articles sur des algorithmes
 
 * `Blossom5 <http://pub.ist.ac.at/~vnk/papers/blossom5.pdf>`_ **matching**
 * `Local max-cut in smoothed polynomial time <http://blogs.princeton.edu/imabandit/2016/10/24/local-max-cut-in-smoothed-polynomial-time/>`_ **max-cut**
+* `Expander Flows, Geometric Embeddings and Graph Partitioning <http://snap.stanford.edu/class/cs224w-readings/arora04expansion.pdf>`_ **graph partitionning**
 
 Livres
 ++++++

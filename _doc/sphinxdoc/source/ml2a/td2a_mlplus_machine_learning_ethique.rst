@@ -11,6 +11,8 @@
 
 |pyecopng| |pystatpng|
 
+.. _l-ml2a-mlethical:
+
 Machine Learning éthique
 ++++++++++++++++++++++++
 

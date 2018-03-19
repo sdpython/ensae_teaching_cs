@@ -38,11 +38,14 @@ Adversarial Examples
 
 * `The Limitations of Deep Learning in Adversarial Settings <https://arxiv.org/pdf/1511.07528v1.pdf>`_
 
+.. _l-prob-solved-archi:
+
 Architecture de Deep Learning
 +++++++++++++++++++++++++++++
 
 * `Neural Network Zooo Prequel: Cells and Layers <http://www.asimovinstitute.org/neural-network-zoo-prequel-cells-layers/>`_ :
   revue d'architectures de réseaux de neurones
+* `Deformable Convolutional Networks <https://arxiv.org/abs/1703.06211>`_
 
 Compétitions et datasets
 ++++++++++++++++++++++++
@@ -119,6 +122,8 @@ Jeux
   voir quelques parties `The future is here - AlphaZero learns chess <https://en.chessbase.com/post/the-future-is-here-alphazero-learns-chess>`_.
   Avec ce type d'algorithme adapté à la finance, le trader humain a du soucis à se faire.
 
+.. _l-prob-solved-speech:
+
 Parole
 ++++++
 
@@ -148,6 +153,8 @@ Retail
 
 * `Data Mining Problems in Retail <https://highlyscalable.wordpress.com/2015/03/10/data-mining-problems-in-retail/>`_
 
+.. _l-prob-solved-segmentation:
+
 Segmentation d'images
 +++++++++++++++++++++
 
@@ -158,6 +165,10 @@ Segmentation d'images
 * `RefineNet: Multi-Path Refinement Networks for High-Resolution Semantic Segmentation <https://arxiv.org/abs/1611.06612>`_
 * `pytorch-semseg <https://github.com/meetshah1995/pytorch-semseg>`_
 * `Pixel-wise segmentation on the VOC2012 dataset using pytorch <https://github.com/bodokaiser/piwise>`_
+* `Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation <https://arxiv.org/pdf/1802.02611.pdf>`_
+* `Xception: Deep Learning with Depthwise Separable Convolutions <https://arxiv.org/pdf/1610.02357.pdf>`_
+* `DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs <https://arxiv.org/abs/1606.00915>`_
+* `Rethinking Atrous Convolution for Semantic Image Segmentation <https://arxiv.org/pdf/1706.05587.pdf>`_
 
 Texte / Traduction
 ++++++++++++++++++

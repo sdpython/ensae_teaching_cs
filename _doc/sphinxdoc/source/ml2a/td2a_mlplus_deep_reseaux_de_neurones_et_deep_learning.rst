@@ -53,6 +53,7 @@ y a quelques avancées sur le sujet :
   `A Neural Network in 13 lines of Python (Part 2 - Gradient Descent) <http://iamtrask.github.io/2015/07/27/python-network-part2/>`_
 * `nimblenet <https://github.com/jorgenkg/python-neural-network>`_ : implémentation de différents algorithmes de back propagation
   avec `numpy <http://www.numpy.org/>`_)
+* :ref:`Comparaison de librairies de deep learning <b-deep-learning-2018-cmp>`
 
 *Descente de gradient*
 

@@ -17,6 +17,7 @@ Machine Learning Avancé
     td2a_mlplus_regression_quantile
     td2a_mlplus_optimisation_des_hyperparametres
     td2a_mlplus_online_training
+    td2a_mlplus_overfitting
     td2a_mlplus_modeles_avec_dependances_dans_le_temps
     td2a_mlplus_autolearning
     td2a_mlplus_predire_une_distribution
@@ -82,12 +83,12 @@ Vous pouvez tester votre installation avec le notebook
 .. toctree::
     :maxdepth: 1
 
-    td2a_mlplus_reseaux_de_neurones_et_deep_learning
-    td2a_mlplus_transfer_learning
+    td2a_mlplus_deep_reseaux_de_neurones_et_deep_learning
+    td2a_mlplus_deep_transfer_learning
     td2a_mlplus_deep_learning_en_detail
-    td2a_mlplus_apprentissage_sans_labels
-    td2a_mlplus_generative_adversarial_network_gan
-    td2a_mlplus_compression_de_modeles_de_deep_learning
+    td2a_mlplus_deep_apprentissage_sans_labels
+    td2a_mlplus_deep_generative_adversarial_network_gan
+    td2a_mlplus_deep_compression_de_modeles_de_deep_learning
     td2a_mlplus_deep_trees
     td2a_mlplus_deep_nearest_neighbours
 
@@ -118,9 +119,9 @@ le :ref:`l-deep-learning`.
 .. toctree::
     :maxdepth: 1
 
-    td2a_mlplus_image_classification
+    td2a_mlplus_deep_image_classification
     td2a_mlbasic_detection_objets
-    td2a_mlplus_segmentation
-    td2a_mlplus_generation_images
+    td2a_mlplus_deep_segmentation
+    td2a_mlplus_deep_generation_images
     td2a_mlplus_videos
     td2a_mlplus_reconnaissance_paroles

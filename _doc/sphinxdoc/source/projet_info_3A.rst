@@ -46,6 +46,8 @@ Nous vous en proposons certains dans les articles ci-dessous.
   contient des données ou un coefficient du modèle optimisé, donner une estimation du nombre de
   lignes de chaque flux manipulé.
 
+.. _l-suggestio-articles-projet-3A:
+
 Suggestions d'articles
 ++++++++++++++++++++++
 
@@ -110,6 +112,13 @@ Suggestions d'articles
 *2018-2019*
 
 * `Estimating Mutual Information on Data Streams <https://dbis.ipd.kit.edu/download/camera_ready_17_with_copyright.pdf>`_
+* `Affinity Clustering: Hierarchical Clustering at Scale <https://papers.nips.cc/paper/7262-affinity-clustering-hierarchical-clustering-at-scale.pdf>`_
+  (voir également
+  `Spinner: Scalable Graph Partitioning in the Cloud <https://arxiv.org/abs/1404.3861>`_,
+  `Fennel: Streaming Graph Partitioning for Massive Scale Graphs <https://www.microsoft.com/en-us/research/publication/fennel-streaming-graph-partitioning-for-massive-scale-graphs/>`_,
+  `METIS - Serial Graph Partitioning and Fill-reducing Matrix Ordering <https://github.com/EmanueleCannizzaro/metis>`_,
+  `Balanced Label Propagation for Partitioning Massive Graphs <https://stanford.edu/~jugander/papers/wsdm13-blp.pdf>`_)
+* `DSCOVR: Randomized Primal-Dual Block Coordinate Algorithms for Asynchronous Distributed Optimization <https://www.microsoft.com/en-us/research/wp-content/uploads/2017/10/dscovr.pdf>`_
 
 Nous vous recommandons d'adopter la démarche suivante:
 

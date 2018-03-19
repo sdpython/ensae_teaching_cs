@@ -41,7 +41,7 @@ et la réponse est souvent un mélange des trois :
 .. toctree::
     :maxdepth: 2
 
-    ../notebooks/_gs2a_ml_imbalanced
+    ../notebooks/ml_b_imbalanced
 
 *Lectures*
 
@@ -55,6 +55,14 @@ et la réponse est souvent un mélange des trois :
   `A Gentle Introduction to the Gradient Boosting Algorithm for Machine Learning <https://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/>`_,
   `Thoughts on Hypothesis Boosting <https://www.cis.upenn.edu/~mkearns/papers/boostnote.pdf>`_,
   `Predictions Games and Arcing Algorithms <https://www.stat.berkeley.edu/~breiman/games.pdf>`_
+
+*Lectures - subsampling*
+
+* `Data Subsampling (Edward) <http://edwardlib.org/api/inference-data-subsampling>`_
+* `5601 Notes: The Subsampling Bootstrap <http://www.stat.umn.edu/geyer/5601/notes/sub.pdf>`_
+* `Bootstrapping and Subsampling: Part I <https://normaldeviate.wordpress.com/2013/01/19/bootstrapping-and-subsampling-part-i/>`_
+* `Subsampling versus bootstrapping in resampling-based model selection for multivariable regression <https://epub.ub.uni-muenchen.de/21724/1/technRep_171.pdf>`_
+* `Subsampling vs Bootstrap <https://web.stanford.edu/~doubleh/lecturenotes/lecture13.pdf>`_
 
 *Modules*
 
