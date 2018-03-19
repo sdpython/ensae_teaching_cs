@@ -18,6 +18,7 @@ def rst_table_modules(classifier=False):
         from pymyinstall.packaged import ensae_fullset, classifiers2string
     except KeyError:
         from pyquickhelper.pycode.pip_helper import fix_pip_902
+        fix_pip_902()
         from pymyinstall.packaged import ensae_fullset, classifiers2string
     mod = ensae_fullset()
     mod.sort()
