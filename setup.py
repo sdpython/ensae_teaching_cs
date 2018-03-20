@@ -179,7 +179,7 @@ if is_local():
     logging_function(OutputPrint=True)
     deps = ["pyquickhelper", "jyquickhelper", "pymmails", "pyensae", "pyenbc",
             "pyrsslocal", "pymyinstall", "mlstatpy", "tkinterquickhelper",
-            "pandas_streaming", "fairtest"]
+            "pandas_streaming", "fairtest", 'BLIBmpld3']
     if "html1" in sys.argv:
         layout = ["html"]
         sys.argv = [_ for _ in sys.argv if _ != "html1"]
