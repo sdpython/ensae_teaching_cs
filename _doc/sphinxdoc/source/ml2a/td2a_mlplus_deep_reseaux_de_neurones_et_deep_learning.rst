@@ -11,6 +11,8 @@
 
 |pystatpng|
 
+.. _l-deep-learning01:
+
 Réseaux de neurones et Deep Learning
 ++++++++++++++++++++++++++++++++++++
 
@@ -76,6 +78,10 @@ y a quelques avancées sur le sujet :
   et l'implémentation de la méthode présentée dans l'article avec :epkg:`pytorch` :
   `ali-pytorch <https://github.com/edgarriba/ali-pytorch>`_.
 * `The Keras Blog <https://blog.keras.io/index.html>`_
+
+*Livres*
+
+* `Deep Learning <http://www.deeplearningbook.org/>`_ de entre autres Yoshua Bengio
 
 *Vidéos*
 

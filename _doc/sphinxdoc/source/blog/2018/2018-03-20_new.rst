@@ -1,0 +1,39 @@
+
+.. blogpost::
+    :title: Biblio : articles ajoutés récemment, tests de pénétrations
+    :keywords: benchmark, pytorck, tensorflow, cntk
+    :date: 2018-03-20
+    :categories: biblio
+
+    Dans :ref: `l-algoculture-shortlist` :
+
+    * `Programmation efficace - 128 algorithmes qu'il faut avoir compris et codés en Python au cours de sa vie <http://www.editions-ellipses.fr/product_info.php?products_id=10829>`_,
+      ce livre est accompagné d'un répertoire sur GitHub :
+      `tryalgo <https://github.com/jilljenn/tryalgo>`_
+      (`documentation <http://jilljenn.github.io/tryalgo/>`_)
+      et d'un site web `Résolution de problèmes algorithmiques <http://tryalgo.org/>`_
+
+    * `Compétitions de programmation <http://tryalgo.org/contests/>`_,
+      ce site recensent plusieurs compétitions comme celle-ci
+      `Southwestern Europe Regional Contest (SWERC) <https://swerc.eu/2018/about/>`_
+      dont les précédents exercices sont disponibles :
+      `ACM-ICPC Live Archive <https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=750>`_,
+      mais aussi les problèmes du
+      `Castor Informatique <http://castor-informatique.fr/>`_
+      pour les plus jeunes.
+
+    .. index:: penetration tests
+
+    Quelques découvertes au gré de mes lectures :
+
+    * `pymetasploit <https://github.com/allfro/pymetasploit>`_,
+      `metasploit <https://www.metasploit.com/>`_
+      module dédiés aux tests de pénétrations qui consiste
+      à tester la sécurité d'un système, la facilité de casser des mots de passe.
+    * `Python tools for penetration testers <https://github.com/dloss/python-pentest-tools>`_
+    * `Learning Penetration Testing with Python <http://zempirians.com/ebooks/Learning%20Penetration%20Testing%20with%20Python.pdf>`_,
+      `Learning Penetration Testing 01 (vidéo) <https://www.youtube.com/watch?v=ITuJIfBw6z0>`_
+
+    Un dernier livre que je n'ai pas lu (dans :ref:`l-deep-learning01`) :
+
+    * `Deep Learning <http://www.deeplearningbook.org/>`_ de entre autres Yoshua Bengio

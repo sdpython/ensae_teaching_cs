@@ -203,12 +203,25 @@ Livres
   Jon Bentley
 * `Introduction to Algorithms <https://mitpress.mit.edu/books/introduction-algorithms>`_,
   Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein
+* `Programmation efficace - 128 algorithmes qu'il faut avoir compris et codés en Python au cours de sa vie <http://www.editions-ellipses.fr/product_info.php?products_id=10829>`_,
+  ce livre est accompagné d'un répertoire sur GitHub :
+  `tryalgo <https://github.com/jilljenn/tryalgo>`_
+  (`documentation <http://jilljenn.github.io/tryalgo/>`_)
+  et d'un site web `Résolution de problèmes algorithmiques <http://tryalgo.org/>`_
 
 Pour s'entraîner
 ++++++++++++++++
 
 * `Project Euler <https://projecteuler.net/about>`_
 * `Google Jam <https://code.google.com/codejam/>`_
+* `Compétitions de programmation <http://tryalgo.org/contests/>`_,
+  ce site recensent plusieurs compétitions comme celle-ci
+  `Southwestern Europe Regional Contest (SWERC) <https://swerc.eu/2018/about/>`_
+  dont les précédents exercices sont disponibles :
+  `ACM-ICPC Live Archive <https://icpcarchive.ecs.baylor.edu/index.php?option=com_onlinejudge&Itemid=8&category=750>`_,
+  mais aussi les problèmes du
+  `Castor Informatique <http://castor-informatique.fr/>`_
+  pour les plus jeunes.
 
 Google's recommandations
 ++++++++++++++++++++++++
