@@ -16,7 +16,6 @@ try:
     import pyquickhelper as skip_
     import pyensae as skip__
     import pyrsslocal as skip___
-    import pymyinstall as skip____
     import pymmails as skip_____
 except ImportError:
     path = os.path.normpath(
@@ -35,17 +34,6 @@ except ImportError:
                 "..",
                 "..",
                 "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pymyinstall",
                 "src")))
     if path not in sys.path:
         sys.path.append(path)
