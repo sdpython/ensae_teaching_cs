@@ -129,6 +129,7 @@ Parole
 
 * `Achieving Human Parity in Conversational Speech Recognition <https://arxiv.org/abs/1610.05256>`_ (2016)
 * `Achieving Human Parity on Automatic Chinese to English News Translation <https://www.microsoft.com/en-us/research/publication/achieving-human-parity-on-automatic-chinese-to-english-news-translation/>`_ (2018)
+* `Honk: CNNs for Keyword Spotting <https://github.com/castorini/honk>`_
 
 Portraits
 +++++++++
