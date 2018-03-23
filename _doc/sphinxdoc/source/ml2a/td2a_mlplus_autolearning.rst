@@ -1,18 +1,10 @@
-
-.. |pyecopng| image:: ../_static/pyeco.png
-    :height: 20
-    :alt: Economie
-    :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-economiste
-
-.. |pystatpng| image:: ../_static/pystat.png
+.. image:: pystat.png
     :height: 20
     :alt: Statistique
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
 
-|pystatpng|
-
-Auto-Learning
-+++++++++++++
+Auto-Learning (metalearning)
+++++++++++++++++++++++++++++
 
 *(à venir)*
 
@@ -42,6 +34,7 @@ Auto-Learning
   (for optimizing hyperparameters - MaxLIPO+TR) - implements
   `Global optimization of Lipschitz functions <https://arxiv.org/abs/1703.02628>`_
 * `Random Search for Hyper-Parameter Optimization <http://www.jmlr.org/papers/v13/bergstra12a.html>`_
+* `Reptile: a Scalable Metalearning Algorithm <https://arxiv.org/abs/1803.02999>`_
 
 *Sites*
 
