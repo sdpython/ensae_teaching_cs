@@ -1,7 +1,7 @@
 
 .. blogpost::
     :title: Biblio : articles ajoutés récemment, tests de pénétrations
-    :keywords: benchmark, pytorck, tensorflow, cntk
+    :keywords: benchmark, pytorch, tensorflow, cntk
     :date: 2018-03-20
     :categories: biblio
 

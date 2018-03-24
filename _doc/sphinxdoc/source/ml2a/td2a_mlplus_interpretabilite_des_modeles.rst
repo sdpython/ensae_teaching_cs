@@ -120,8 +120,13 @@ une nécessité. Quelques idées de recherche :
 * `Deep Learning and the Information Bottleneck Principle <https://arxiv.org/pdf/1503.02406.pdf>`_
 * `Opening the black box of Deep Neural Networks via Information <https://arxiv.org/pdf/1703.00810.pdf>`_
 
+*Vidéos*
+
+* `Explaining behavior of Machine Learning models with eli5 library <http://pyvideo.org/europython-2017/explaining-behavior-of-machine-learning-models-with-eli5-library.html>`_
+
 *Modules*
 
+* `eli5 <https://github.com/TeamHG-Memex/eli5>`_
 * `edward <http://edwardlib.org/>`_
 * `deepdive <http://deepdive.stanford.edu/>`_: ce n'est pas un module python,
   cet outil a été développé pour étudier les relations dans les données et plus

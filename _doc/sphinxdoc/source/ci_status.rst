@@ -36,7 +36,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/actuariat_python/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/actuariat_python/tree/master
       - .. image:: https://badge.fury.io/py/actuariat_python.svg
-            :target: http://badge.fury.io/py/actuariat_python
+            :target: https://pypi.org/project/actuariat_python
       - .. image:: http://img.shields.io/pypi/pyversions/actuariat_python.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/actuariat_python
@@ -58,7 +58,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/code_beatrix/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/code_beatrix/tree/master
       - .. image:: https://badge.fury.io/py/code_beatrix.svg
-            :target: http://badge.fury.io/py/code_beatrix
+            :target: https://pypi.org/project/code_beatrix
       - .. image:: http://img.shields.io/pypi/pyversions/code_beatrix.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/code_beatrix
@@ -80,7 +80,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/cpyquickhelper/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/cpyquickhelper/tree/master
       - .. image:: https://badge.fury.io/py/cpyquickhelper.svg
-            :target: http://badge.fury.io/py/cpyquickhelper
+            :target: https://pypi.org/project/cpyquickhelper
       - .. image:: http://img.shields.io/pypi/pyversions/cpyquickhelper.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/cpyquickhelper
@@ -102,7 +102,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/ensae_projects/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/ensae_projects/tree/master
       - .. image:: https://badge.fury.io/py/ensae_projects.svg
-            :target: http://badge.fury.io/py/ensae_projects
+            :target: https://pypi.org/project/ensae_projects
       - .. image:: http://img.shields.io/pypi/pyversions/ensae_projects.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/ensae_projects
@@ -124,7 +124,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/ensae_teaching_cs/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/ensae_teaching_cs/tree/master
       - .. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
-            :target: http://badge.fury.io/py/ensae_teaching_cs
+            :target: https://pypi.org/project/ensae_teaching_cs
       - .. image:: http://img.shields.io/pypi/pyversions/ensae_teaching_cs.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/ensae_teaching_cs
@@ -146,7 +146,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/jupytalk/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/jupytalk/tree/master
       - .. image:: https://badge.fury.io/py/jupytalk.svg
-            :target: http://badge.fury.io/py/jupytalk
+            :target: https://pypi.org/project/jupytalk
       - .. image:: http://img.shields.io/pypi/pyversions/jupytalk.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/jupytalk
@@ -168,7 +168,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/jyquickhelper/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/jyquickhelper/tree/master
       - .. image:: https://badge.fury.io/py/jyquickhelper.svg
-            :target: http://badge.fury.io/py/jyquickhelper
+            :target: https://pypi.org/project/jyquickhelper
       - .. image:: http://img.shields.io/pypi/pyversions/jyquickhelper.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/jyquickhelper
@@ -190,7 +190,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/lightmlboard/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/lightmlboard/tree/master
       - .. image:: https://badge.fury.io/py/lightmlboard.svg
-            :target: http://badge.fury.io/py/lightmlboard
+            :target: https://pypi.org/project/lightmlboard
       - .. image:: http://img.shields.io/pypi/pyversions/lightmlboard.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/lightmlboard
@@ -212,7 +212,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/lightmlrestapi/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/lightmlrestapi/tree/master
       - .. image:: https://badge.fury.io/py/lightmlrestapi.svg
-            :target: http://badge.fury.io/py/lightmlrestapi
+            :target: https://pypi.org/project/lightmlrestapi
       - .. image:: http://img.shields.io/pypi/pyversions/lightmlrestapi.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/lightmlrestapi
@@ -234,7 +234,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/mlinsights/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/mlinsights/tree/master
       - .. image:: https://badge.fury.io/py/mlinsights.svg
-            :target: http://badge.fury.io/py/mlinsights
+            :target: https://pypi.org/project/mlinsights
       - .. image:: http://img.shields.io/pypi/pyversions/mlinsights.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/mlinsights
@@ -256,7 +256,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/mlprodict/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/mlprodict/tree/master
       - .. image:: https://badge.fury.io/py/mlprodict.svg
-            :target: http://badge.fury.io/py/mlprodict
+            :target: https://pypi.org/project/mlprodict
       - .. image:: http://img.shields.io/pypi/pyversions/mlprodict.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/mlprodict
@@ -278,7 +278,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/mlstatpy/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/mlstatpy/tree/master
       - .. image:: https://badge.fury.io/py/mlstatpy.svg
-            :target: http://badge.fury.io/py/mlstatpy
+            :target: https://pypi.org/project/mlstatpy
       - .. image:: http://img.shields.io/pypi/pyversions/mlstatpy.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/mlstatpy
@@ -300,7 +300,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/pandas_streaming/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pandas_streaming/tree/master
       - .. image:: https://badge.fury.io/py/pandas_streaming.svg
-            :target: http://badge.fury.io/py/pandas_streaming
+            :target: https://pypi.org/project/pandas_streaming
       - .. image:: http://img.shields.io/pypi/pyversions/pandas_streaming.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pandas_streaming
@@ -322,7 +322,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/papierstat/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/papierstat/tree/master
       - .. image:: https://badge.fury.io/py/papierstat.svg
-            :target: http://badge.fury.io/py/papierstat
+            :target: https://pypi.org/project/papierstat
       - .. image:: http://img.shields.io/pypi/pyversions/papierstat.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/papierstat
@@ -344,7 +344,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/pyenbc/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pyenbc/tree/master
       - .. image:: https://badge.fury.io/py/pyenbc.svg
-            :target: http://badge.fury.io/py/pyenbc
+            :target: https://pypi.org/project/pyenbc
       - .. image:: http://img.shields.io/pypi/pyversions/pyenbc.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pyenbc
@@ -366,7 +366,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/pyensae/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pyensae/tree/master
       - .. image:: https://badge.fury.io/py/pyensae.svg
-            :target: http://badge.fury.io/py/pyensae
+            :target: https://pypi.org/project/pyensae
       - .. image:: http://img.shields.io/pypi/pyversions/pyensae.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pyensae
@@ -388,7 +388,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/pymmails/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pymmails/tree/master
       - .. image:: https://badge.fury.io/py/pymmails.svg
-            :target: http://badge.fury.io/py/pymmails
+            :target: https://pypi.org/project/pymmails
       - .. image:: http://img.shields.io/pypi/pyversions/pymmails.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pymmails
@@ -408,7 +408,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/pymyinstall/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pymyinstall/tree/master
       - .. image:: https://badge.fury.io/py/pymyinstall.svg
-            :target: http://badge.fury.io/py/pymyinstall
+            :target: https://pypi.org/project/pymyinstall
       - .. image:: http://img.shields.io/pypi/pyversions/pymyinstall.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pymyinstall
@@ -430,7 +430,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/pyquickhelper/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pyquickhelper/tree/master
       - .. image:: https://badge.fury.io/py/pyquickhelper.svg
-            :target: http://badge.fury.io/py/pyquickhelper
+            :target: https://pypi.org/project/pyquickhelper
       - .. image:: http://img.shields.io/pypi/pyversions/pyquickhelper.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pyquickhelper
@@ -452,7 +452,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/pyrsslocal/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pyrsslocal/tree/master
       - .. image:: https://badge.fury.io/py/pyrsslocal.svg
-            :target: http://badge.fury.io/py/pyrsslocal
+            :target: https://pypi.org/project/pyrsslocal
       - .. image:: http://img.shields.io/pypi/pyversions/pyrsslocal.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pyrsslocal
@@ -472,7 +472,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/pysqllike/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pysqllike/tree/master
       - .. image:: https://badge.fury.io/py/pysqllike.svg
-            :target: http://badge.fury.io/py/pysqllike
+            :target: https://pypi.org/project/pysqllike
       - .. image:: http://img.shields.io/pypi/pyversions/pysqllike.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pysqllike
@@ -492,7 +492,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/teachpyx/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/teachpyx/tree/master
       - .. image:: https://badge.fury.io/py/teachpyx.svg
-            :target: http://badge.fury.io/py/teachpyx
+            :target: https://pypi.org/project/teachpyx
       - .. image:: http://img.shields.io/pypi/pyversions/teachpyx.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/teachpyx
@@ -514,7 +514,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://circleci.com/gh/sdpython/tkinterquickhelper/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/tkinterquickhelper/tree/master
       - .. image:: https://badge.fury.io/py/tkinterquickhelper.svg
-            :target: http://badge.fury.io/py/tkinterquickhelper
+            :target: https://pypi.org/project/tkinterquickhelper
       - .. image:: http://img.shields.io/pypi/pyversions/tkinterquickhelper.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/tkinterquickhelper
