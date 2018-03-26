@@ -148,7 +148,7 @@ les plus complexes.
 La programmation dynamique apparaît souvent quand on considère la solution sous forme récurrente.
 La dichotomie consiste à résoudre à couper l'ensemble de départ en deux,
 à résoudre le problème pour les deux sous-ensembles,
-puis à fusionner les deux solutions. Cela ne dépend pas du langage Python.
+puis à fusionner les deux solutions. Cela ne dépend pas du langage :epkg:`Python`.
 Pour vous exercer :
 
 .. toctree::
@@ -187,6 +187,7 @@ Un peu plus ludique et présentés sous la forme de défis :
 * `Google Jam <https://code.google.com/codejam/>`_
   (exemple : `Le problème des milkshakes <https://code.google.com/codejam/contest/32016/dashboard#s=p1​>`_)
 * :ref:`Algorithmes classiques implémentés <l-blog-algo-impl>`
+* `tryalgo <https://github.com/jilljenn/tryalgo>`_
 
 ------------
 
@@ -214,7 +215,7 @@ sont incontournables pour manipuler les données en :epkg:`Python`.
     notebooks/_gs1a_D_calcul_dicho_cython
     notebooks/_gs1a_D_visualisation
 
-Il existe de nombreuses libraires de visualisation des données en Python et
+Il existe de nombreuses libraires de visualisation des données en :epkg:`Python` et
 elles se sont multipliées depuis l'avènement des notebooks :
 `10 plotting libraries at PyData 2016 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_.
 
@@ -232,7 +233,7 @@ Une fois qu'on est agile avec les données, on peut facilement explorer,
 TD - Site web et pratiques logicielles
 ======================================
 
-Le langage Python est au programme des classes préparatoires scientifique
+Le langage :epkg:`Python` est au programme des classes préparatoires scientifique
 (`Prise en main du logiciel Python <https://www.ac-paris.fr/portail/jcms/p1_742307/prise-en-main-du-logiciel-python>`_)
 et les étudiants ont déjà vu ou parcouru des exercices algorithmiques
 (voir `MathPrepas, Programmation en Python <http://mathprepa.fr/python-project-euler-mpsi/>`_).
@@ -345,7 +346,7 @@ est régulière, vous devriez aller trois fois plus vite à la fin de la scolari
 Getting started
 ===============
 
-Il faut vous reporter à la section :ref:`l-installation-courte` pour installer python.
+Il faut vous reporter à la section :ref:`l-installation-courte` pour installer :epkg:`Python`.
 Certaines séances pratiques utilisent des données depuis ce site.
 Elles sont facilement téléchargeables avec ces deux modules
 :epkg:`pyquickhelper` et :epkg:`pyensae`.

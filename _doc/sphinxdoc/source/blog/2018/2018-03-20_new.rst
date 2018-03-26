@@ -5,7 +5,7 @@
     :date: 2018-03-20
     :categories: biblio
 
-    Dans :ref: `l-algoculture-shortlist` :
+    Dans :ref:`l-algoculture-shortlist` :
 
     * `Programmation efficace - 128 algorithmes qu'il faut avoir compris et codés en Python au cours de sa vie <http://www.editions-ellipses.fr/product_info.php?products_id=10829>`_,
       ce livre est accompagné d'un répertoire sur GitHub :
