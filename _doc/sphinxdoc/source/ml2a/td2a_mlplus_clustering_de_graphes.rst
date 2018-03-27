@@ -4,6 +4,8 @@
     :alt: Statistique
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
 
+.. _l-cluster-graph:
+
 Clustering de Graphes
 +++++++++++++++++++++
 
@@ -21,6 +23,7 @@ Clustering de Graphes
 * `Correlation Clustering and Biclustering with Locally Bounded Errors <http://jmlr.org/proceedings/papers/v48/puleo16.pdf>`_
 * `A Unified Framework for Model-based Clustering <http://www.jmlr.org/papers/volume4/zhong03a/zhong03a.pdf>`_
 * `A Tensor Approach to Learning Mixed Membership Community Models <http://jmlr.org/papers/volume15/anandkumar14a/anandkumar14a.pdf>`_
+* `Clustering from General Pairwise Observations with Applications to Time-varying Graphs <http://www.jmlr.org/papers/volume18/15-659/15-659.pdf>`_
 
 *Lectures - métriques*
 

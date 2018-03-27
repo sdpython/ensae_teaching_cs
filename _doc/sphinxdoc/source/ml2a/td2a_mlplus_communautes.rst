@@ -30,3 +30,4 @@ de clustering mais on cherche aussi à en déterminer le centre ou encore
 * `Local Network Community Detection with Continuous Optimization of Conductance and Weighted Kernel K-Means <http://jmlr.org/papers/volume17/16-043/16-043.pdf>`_
 * `Learning Communities in the Presence of Errors <http://www.jmlr.org/proceedings/papers/v49/makarychev16.pdf>`_
 * `Fast Detection of Community Structures using Graph Traversal in Social Networks <https://arxiv.org/pdf/1707.04459.pdf>`_
+* `Community Extraction in Multilayer Networks with Heterogeneous Community Structure <http://www.jmlr.org/papers/volume18/16-645/16-645.pdf>`_

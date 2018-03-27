@@ -1,0 +1,30 @@
+
+.. blogpost::
+    :title: Biblio : articles ajoutés récemment, machine learning
+    :keywords: online training, stochastique gradient descent
+    :date: 2018-03-27
+    :categories: biblio
+
+    Dans :ref:`l-ml2a-ranking` :
+
+    * `Online Learning to Rank with Top-k Feedback <http://www.jmlr.org/papers/volume18/16-285/16-285.pdf>`_
+
+    Les paragraphes :ref:`l-ml2a-sgd`, :ref:`l-basic-gp`,
+    :ref:`l-mlplus-structures` et :ref:`l-ml2a-online-training`
+    ont été révisitées.
+
+    Quelques liens ont été ajoutés dans la section
+    :ref:`l-basic-clustering` notamment
+    l'`Indice de Rand <https://fr.wikipedia.org/wiki/Indice_de_Rand>`_
+    qui sert à comparer la proximité de deux partitions.
+
+    Dans :ref:`l-cluster-graph` :
+
+    L'article
+    `Clustering from General Pairwise Observations with Applications to Time-varying Graphs <http://www.jmlr.org/papers/volume18/15-659/15-659.pdf>`_
+    propose une formulation intéressante du clustering
+    de graphe et explore pour voir où cela mène.
+
+    Un dernier article sur quelques digressions sur la comparaisons
+    de modèles de classification :
+    `Time for a Change: a Tutorial for Comparing Multiple Classifiers Through Bayesian Analysis <http://www.jmlr.org/papers/volume18/16-305/16-305.pdf>`_.

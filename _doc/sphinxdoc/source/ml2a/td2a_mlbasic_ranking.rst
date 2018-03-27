@@ -9,6 +9,8 @@
     :alt: Statistique
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
 
+.. _l-ml2a-ranking:
+
 Ranking
 +++++++
 
@@ -21,6 +23,7 @@ Ranking
 * `Data-driven Rank Breaking for Efficient Rank Aggregation <http://www.jmlr.org/papers/volume17/16-209/16-209.pdf>`_
 * `BPR: Bayesian Personalized Ranking from Implicit Feedback <https://arxiv.org/abs/1205.2618>`_
   (applicable également aux systèmes de recommandation)
+* `Online Learning to Rank with Top-k Feedback <http://www.jmlr.org/papers/volume18/16-285/16-285.pdf>`_
 
 *Modules*
 

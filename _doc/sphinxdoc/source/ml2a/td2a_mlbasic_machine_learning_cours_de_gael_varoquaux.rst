@@ -61,6 +61,7 @@ ici :
 * `XGBoost: A Scalable Tree Boosting System <http://arxiv.org/pdf/1603.02754v1.pdf>`_, Tianqi Chen, Carlos Guestrin
 * `Round Robin Classification <http://www.jmlr.org/papers/volume2/fuernkranz02a/fuernkranz02a.pdf>`_
 * `ANN-Benchmarks: A Benchmarking Tool for Approximate Nearest Neighbor Algorithms? <http://www.itu.dk/people/maau/additional/sisap2017-preprint.pdf>`_
+* `Time for a Change: a Tutorial for Comparing Multiple Classifiers Through Bayesian Analysis <http://www.jmlr.org/papers/volume18/16-305/16-305.pdf>`_
 
 *Livres*
 

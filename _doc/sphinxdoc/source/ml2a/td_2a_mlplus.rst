@@ -25,6 +25,8 @@ Machine Learning Avancé
     td2a_mlplus_algorithmes_genetiques_et_autres_variantes
     td2a_mlplus_optimal_transfert
     td2a_mlplus_systeme_de_recommandation_avec_contraintes
+    td2a_mlplus_sgd
+    td2a_mlplus_gaussian_processes
 
 Séries temporelles
 ==================
@@ -105,6 +107,7 @@ les images ou le son.
     :maxdepth: 1
 
     td2a_mlplus_traitement_du_langage
+    td2a_mlplus_topic
     td2a_mlplus_traduction_automatique
     td2a_mlplus_tagging
     td2a_mlplus_ontologie

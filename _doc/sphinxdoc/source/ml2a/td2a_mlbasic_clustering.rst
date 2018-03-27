@@ -9,6 +9,8 @@
     :alt: Statistique
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
 
+.. _l-basic-clustering:
+
 Clustering
 ++++++++++
 
@@ -21,6 +23,12 @@ Clustering
 
 * score silhouette
 * clustering de variables catégorielles
+
+*Métriques*
+
+* `Indice de Rand <https://fr.wikipedia.org/wiki/Indice_de_Rand>`_
+* `Silhouette (clustering) <https://en.wikipedia.org/wiki/Silhouette_(clustering)>`_
+* `The Impact of Random Models on Clustering Similarity <http://www.jmlr.org/papers/volume18/17-039/17-039.pdf>`_
 
 *Lectures*
 
@@ -47,6 +55,7 @@ Clustering
   (implémentation en python `dimitrs/CLTree <https://github.com/dimitrs/CLTree>`_)
 * `Spectral Clustering Based on Local PCA <http://www.jmlr.org/papers/volume18/14-318/14-318.pdf>`_
 * `Brown clustering <https://en.wikipedia.org/wiki/Brown_clustering>`_
+* `Hierarchical Clustering via Spreading Metrics <http://www.jmlr.org/papers/volume18/17-081/17-081.pdf>`_
 
 *Modules*
 

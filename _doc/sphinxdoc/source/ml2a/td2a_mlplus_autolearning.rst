@@ -36,6 +36,10 @@ Auto-Learning (metalearning)
 * `Random Search for Hyper-Parameter Optimization <http://www.jmlr.org/papers/v13/bergstra12a.html>`_
 * `Reptile: a Scalable Metalearning Algorithm <https://arxiv.org/abs/1803.02999>`_
 
+*POMPD*
+
+* `POMDPs for Dummies <http://www.pomdp.org/tutorial/index.html>`_
+
 *Sites*
 
 * `Machine Learning for Automated Algorithm Design <http://www.ml4aad.org/>`_
@@ -48,3 +52,4 @@ Auto-Learning (metalearning)
 * `TPOT <https://github.com/rhiever/tpot>`_
 * `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
 * `RoBO <https://github.com/automl/RoBO>`_ (bayésien)
+* `POMDPy <https://github.com/pemami4911/POMDPy>`_
