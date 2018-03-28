@@ -3,6 +3,8 @@ beautifulsoup4
 blockdiag
 blosc
 bqplot
+cairocffi
+cairosvg
 chardet
 cloudpickle
 coverage
