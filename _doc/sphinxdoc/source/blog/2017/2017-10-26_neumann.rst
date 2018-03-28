@@ -12,7 +12,7 @@
     C'est l'architecture dans le cours proposé
     en dernière de l'école :ref:`l-anatomie-ordi`.
 
-    .. image:: images/vn.png
+    .. image:: /blog/2017/images/vn.png
         :alt: source: wikipédia
 
     L'article suivant suggère que cela pourrait changer :

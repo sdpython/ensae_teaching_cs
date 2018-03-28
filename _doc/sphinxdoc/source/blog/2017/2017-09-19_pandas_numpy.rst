@@ -4,6 +4,7 @@
     :keywords: machine learning, pandas, numpy, matplotlib
     :date: 2017-09-19
     :categories: machine learning
+    :lid: blog-pandas-numpy
 
     Voici quelques questions abordées durant la première séance.
     L'instruction :epkg:`pandas:read_csv` n'a pas toujours fonctionné.
