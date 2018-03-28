@@ -33,7 +33,7 @@ pocket
 psutil
 pydub
 pyenbc
-pyensae
+pyensae>=1.2.731
 pygal
 pygal_maps_fr
 pygame

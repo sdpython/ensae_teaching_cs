@@ -27,6 +27,7 @@ Machine Learning Avancé
     td2a_mlplus_systeme_de_recommandation_avec_contraintes
     td2a_mlplus_sgd
     td2a_mlplus_gaussian_processes
+    td2a_mlplus_reinforcement_learning_marl
 
 Séries temporelles
 ==================

@@ -29,6 +29,7 @@ ce problème en utilisant l'apprentissage par renforcement. Quelques liens :
 * `Apprentissage par renforcement <http://www.grappa.univ-lille3.fr/~coulom/Renforcement/>`_
 * `Agents adaptatifs Prise de décision séquentielle <http://www.grappa.univ-lille3.fr/~ppreux/mri/>`_
 * `UCL Course on RL <http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html>`_
+* `Machine Learning for Humans, Part 5: Reinforcement Learning <https://medium.com/machine-learning-for-humans/reinforcement-learning-6eacf258b265>`_
 
 **Remarque :**
 
@@ -50,6 +51,8 @@ Quelques applications envisageables dans le cadre de ce projets :
 * `bandit manchot <http://www.xavierdupre.fr/enseignement/projet_data/apprentissage_renforcement_part3.pdf>`_
 * `jeux de stratégie <http://www.bgu.ac.il/~shanigu/Publications/LearningInCiv.pdf>`_
 * `Reinforcement Learning Assignment: Easy21 <http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching_files/Easy21-Johannes.pdf>`_
+* `Un chariot qui maintient un poteau en équilibre <https://medium.com/@tuzzer/cart-pole-balancing-with-q-learning-b54c6068d947>`_,
+  avec `tensorflow <http://kvfrans.com/simple-algoritms-for-solving-cartpole/>`_
 
 On peut envisager des contextes différents tels que le jeu de Pacman ou de Pong :
 

@@ -71,6 +71,7 @@ y a quelques avancées sur le sujet :
   et l'implémentation de la méthode présentée dans l'article avec :epkg:`pytorch` :
   `ali-pytorch <https://github.com/edgarriba/ali-pytorch>`_.
 * `The Keras Blog <https://blog.keras.io/index.html>`_
+* `Deep Learning Scaling is Predictable, empirically <https://arxiv.org/pdf/1712.00409.pdf>`_
 
 *Livres*
 

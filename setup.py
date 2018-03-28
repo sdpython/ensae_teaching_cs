@@ -86,6 +86,12 @@ def import_pyquickhelper():
 
 
 def is_local():
+    if "build_pres" in sys.argv:
+        return True
+    if "build_pres_2A" in sys.argv:
+        return True
+    if "build_pres_3A" in sys.argv:
+        return True
     file = os.path.abspath(__file__).replace("\\", "/").lower()
     if "/temp/" in file and "pip-" in file:
         return False
@@ -205,7 +211,7 @@ if is_local():
         covtoken=("5e030cea-7d27-46e7-bb2e-2fc3db0ae9f6",
                   "'_UT_36_std' in outfile"),
         nbformats=nbformats, layout=layout,
-        fLOG=logging_function)
+        fLOG=logging_function, github_owner="sdpython")
 
     if "build_script" in sys.argv and sys.platform.startswith("win"):
         pres = """
