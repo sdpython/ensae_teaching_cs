@@ -72,6 +72,7 @@ y a quelques avancées sur le sujet :
   `ali-pytorch <https://github.com/edgarriba/ali-pytorch>`_.
 * `The Keras Blog <https://blog.keras.io/index.html>`_
 * `Deep Learning Scaling is Predictable, empirically <https://arxiv.org/pdf/1712.00409.pdf>`_
+* `Teaching Compositionality to CNNs∗ <https://arxiv.org/pdf/1706.04313.pdf>`_
 
 *Livres*
 
