@@ -501,3 +501,4 @@ _doc/sphinxdoc/source/sklearn_ensae_course/images/sphx_glr*.png
 _doc/sphinxdoc/source/sklearn_ensae_course/images/thumb/*.png
 _doc/sphinxdoc/source/sklearn_ensae_course/*
 _doc/notebooks/td3a/MSFT*.txt
+_doc/notebooks/td2a_ml/tree.dot
