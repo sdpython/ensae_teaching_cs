@@ -3,9 +3,12 @@
 History
 =======
 
-current - 2018-03-28 - 0.00Mb
+current - 2018-04-01 - 0.00Mb
 =============================
 
+* `45`: fix version of chromedriver in TD2A_Eco_Web_Scraping (2018-04-01)
+* `22`: add direct link wherever pyensae download data is used (2018-04-01)
+* `35`: ajouter quelques notes sur la notion de cout (2018-04-01)
 * `41`: remove skbase..., moved in papierstat, same for cheat sheets (2018-03-09)
 * `36`: iterator correction proposal (RM) (2017-10-03)
 * `28`: aborder d'autres librairies (2017-08-29)
