@@ -84,7 +84,7 @@ Tableau de bord et statut des dépendances
       - .. image:: http://img.shields.io/pypi/pyversions/cpyquickhelper.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/cpyquickhelper
-      - .. image:: https://badge.waffle.io/sdpython/cpyquickhelper.png?label=ready&title=Ready
+      - .. image:: https://badge.waffle.io/sdpython/cpyquickhelper.png?label=to%20do&title=to%20do
             :alt: Waffle
             :target: https://waffle.io/sdpython/cpyquickhelper
       - .. image:: https://codecov.io/github/sdpython/cpyquickhelper/coverage.svg?branch=master
@@ -194,7 +194,7 @@ Tableau de bord et statut des dépendances
       - .. image:: http://img.shields.io/pypi/pyversions/lightmlboard.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/lightmlboard
-      - .. image:: https://badge.waffle.io/sdpython/lightmlboard.png?label=ready&title=Ready
+      - .. image:: https://badge.waffle.io/sdpython/lightmlboard.png?label=to%20do&title=to%20do
             :alt: Waffle
             :target: https://waffle.io/sdpython/lightmlboard
       - .. image:: https://codecov.io/github/sdpython/lightmlboard/coverage.svg?branch=master
@@ -216,7 +216,7 @@ Tableau de bord et statut des dépendances
       - .. image:: http://img.shields.io/pypi/pyversions/lightmlrestapi.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/lightmlrestapi
-      - .. image:: https://badge.waffle.io/sdpython/lightmlrestapi.png?label=ready&title=Ready
+      - .. image:: https://badge.waffle.io/sdpython/lightmlrestapi.png?label=to%20do&title=to%20do
             :alt: Waffle
             :target: https://waffle.io/sdpython/lightmlrestapi
       - .. image:: https://codecov.io/github/sdpython/lightmlrestapi/coverage.svg?branch=master
@@ -238,7 +238,7 @@ Tableau de bord et statut des dépendances
       - .. image:: http://img.shields.io/pypi/pyversions/mlinsights.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/mlinsights
-      - .. image:: https://badge.waffle.io/sdpython/mlinsights.png?label=ready&title=Ready
+      - .. image:: https://badge.waffle.io/sdpython/mlinsights.png?label=to%20do&title=to%20do
             :alt: Waffle
             :target: https://waffle.io/sdpython/mlinsights
       - .. image:: https://codecov.io/github/sdpython/mlinsights/coverage.svg?branch=master
@@ -260,7 +260,7 @@ Tableau de bord et statut des dépendances
       - .. image:: http://img.shields.io/pypi/pyversions/mlprodict.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/mlprodict
-      - .. image:: https://badge.waffle.io/sdpython/mlprodict.png?label=ready&title=Ready
+      - .. image:: https://badge.waffle.io/sdpython/mlprodict.png?label=to%20do&title=to%20do
             :alt: Waffle
             :target: https://waffle.io/sdpython/mlprodict
       - .. image:: https://codecov.io/github/sdpython/mlprodict/coverage.svg?branch=master
@@ -304,7 +304,7 @@ Tableau de bord et statut des dépendances
       - .. image:: http://img.shields.io/pypi/pyversions/pandas_streaming.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pandas_streaming
-      - .. image:: https://badge.waffle.io/sdpython/pandas_streaming.png?label=ready&title=Ready
+      - .. image:: https://badge.waffle.io/sdpython/pandas_streaming.png?label=to%20do&title=to%20do
             :alt: Waffle
             :target: https://waffle.io/sdpython/pandas_streaming
       - .. image:: https://codecov.io/github/sdpython/pandas_streaming/coverage.svg?branch=master
@@ -326,7 +326,7 @@ Tableau de bord et statut des dépendances
       - .. image:: http://img.shields.io/pypi/pyversions/papierstat.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/papierstat
-      - .. image:: https://badge.waffle.io/sdpython/papierstat.png?label=ready&title=Ready
+      - .. image:: https://badge.waffle.io/sdpython/papierstat.png?label=to%20do&title=to%20do
             :alt: Waffle
             :target: https://waffle.io/sdpython/papierstat
       - .. image:: https://codecov.io/github/sdpython/papierstat/coverage.svg?branch=master
@@ -348,7 +348,7 @@ Tableau de bord et statut des dépendances
       - .. image:: http://img.shields.io/pypi/pyversions/pyenbc.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/pyenbc
-      - .. image:: https://badge.waffle.io/sdpython/pyenbc.png?label=ready&title=Ready
+      - .. image:: https://badge.waffle.io/sdpython/pyenbc.png?label=to%20do&title=to%20do
             :alt: Waffle
             :target: https://waffle.io/sdpython/pyenbc
       - .. image:: https://codecov.io/github/sdpython/pyenbc/coverage.svg?branch=master
@@ -518,7 +518,7 @@ Tableau de bord et statut des dépendances
       - .. image:: http://img.shields.io/pypi/pyversions/tkinterquickhelper.png
             :alt: PYPI Package
             :target: https://pypi.python.org/pypi/tkinterquickhelper
-      - .. image:: https://badge.waffle.io/sdpython/tkinterquickhelper.png?label=ready&title=Ready
+      - .. image:: https://badge.waffle.io/sdpython/tkinterquickhelper.png?label=to%20do&title=to%20do
             :alt: Waffle
             :target: https://waffle.io/sdpython/tkinterquickhelper
       - .. image:: https://codecov.io/github/sdpython/tkinterquickhelper/coverage.svg?branch=master
