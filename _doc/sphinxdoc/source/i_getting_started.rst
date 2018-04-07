@@ -309,7 +309,7 @@ Voir `10 plotting libraries at PyData 06/14/2016 in Paris <http://www.xavierdupr
 
 *Jeux*
 
-* `pygame <http://www.pygame.org/>`_
+* :epkg:`pygame` + :epkg:`thorpy`
 * `kivy <http://kivy.org/#home>`_ : pour faire des jeux ou des applications pour tablettes, téléphones
 
 *Pour les TD et projets à l'ENSAE*

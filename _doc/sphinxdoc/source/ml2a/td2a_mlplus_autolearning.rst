@@ -3,6 +3,8 @@
     :alt: Statistique
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
 
+.. _l-ml2a-autolearning:
+
 Auto-Learning (metalearning)
 ++++++++++++++++++++++++++++
 
@@ -35,6 +37,7 @@ Auto-Learning (metalearning)
   `Global optimization of Lipschitz functions <https://arxiv.org/abs/1703.02628>`_
 * `Random Search for Hyper-Parameter Optimization <http://www.jmlr.org/papers/v13/bergstra12a.html>`_
 * `Reptile: a Scalable Metalearning Algorithm <https://arxiv.org/abs/1803.02999>`_
+* `Generating Neural Networks with Neural Networks <https://arxiv.org/abs/1801.01952>`_
 
 *POMPD*
 

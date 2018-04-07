@@ -25,6 +25,13 @@ ou *apprentissage par renforcement*
   `Reinforcement Learning Part II <http://www.labri.fr/perso/nrougier/downloads/Chile-2014-Lecture-2.pdf>`_
 * `Strategic Attentive Writer for Learning Macro-Actions <https://arxiv.org/pdf/1606.04695.pdf>`_
 * `Temporal difference learning <https://en.wikipedia.org/wiki/Temporal_difference_learning>`_
+* `Renewal Monte Carlo: Renewal theory based reinforcement learning <https://arxiv.org/abs/1804.01116>`_
+
+*Lectures sur des applications*
+
+* `Universal Planning Networks <https://arxiv.org/abs/1804.00645>`_ :
+  utilisation de l'apprentissage par renforcement pour caler la progression
+  du bras d'un robot vers la saisie d'une pièce lorsque le chemin est obstrué.
 
 *Exemples*
 

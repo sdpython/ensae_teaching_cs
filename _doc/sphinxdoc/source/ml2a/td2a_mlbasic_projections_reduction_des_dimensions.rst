@@ -9,6 +9,8 @@
     :alt: Statistique
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
 
+.. _l-ml2a-reddim:
+
 Projections, Réduction des dimensions
 +++++++++++++++++++++++++++++++++++++
 
@@ -37,6 +39,7 @@ Projections, Réduction des dimensions
 * `How to Use t-SNE Effectively <http://distill.pub/2016/misread-tsne/>`_
 * `Practical and Optimal LSH for Angular Distance <https://arxiv.org/abs/1509.02897>`_
 * `Optimal Data-Dependent Hashing for Approximate Near Neighbors <https://arxiv.org/abs/1501.01062>`_
+* `mQAPViz: A divide-and-conquer multi-objective optimization algorithm to compute large data visualizations <https://arxiv.org/abs/1804.00656>`_
 
 *Modules*
 

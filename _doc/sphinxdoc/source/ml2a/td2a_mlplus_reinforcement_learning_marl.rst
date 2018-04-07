@@ -17,6 +17,7 @@ Multi Agent Reinforcement Learning (MARL)
 * `Reinforcement Learning and Nonparametric Detection of Game-Theoretic Equilibrium Play in Social Networks <https://arxiv.org/pdf/1501.01209.pdf>`_
 * `Efficient Learning Equilibrium <https://ie.technion.ac.il/~moshet/ele-journal-revised3.pdf>`_
 * `Paper Collection of Multi-Agent Reinforcement Learning (MARL) <https://github.com/LantaoYu/MARL-Papers>`_
+* `A reinforcement learning algorithm for building collaboration in multi-agent systems <https://arxiv.org/pdf/1711.10574.pdf>`_
 
 *Modules*
 

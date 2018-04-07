@@ -9,6 +9,8 @@
     :alt: Statistique
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
 
+.. _l-ml2a-selvar:
+
 Sélection de variables
 ++++++++++++++++++++++
 
@@ -26,6 +28,9 @@ complique également l'interprétation des résultats.
 * `Feature Selection (wikipédia) <https://en.wikipedia.org/wiki/Feature_selection>`_
 * `Feature Selection (scikit-learn) <http://scikit-learn.org/stable/modules/feature_selection.html>`_
 * `Consistent Feature Selection for Pattern Recognition in Polynomial Time <http://jmlr.csail.mit.edu/papers/volume8/nilsson07a/nilsson07a.pdf>`_ (boruta)
+* `Variable selection using pseudo-variables <https://arxiv.org/abs/1804.01201>`_ :
+  l'article utilise la pénalisation pour classer les variables par importance,
+  plus le modèle est pénalisé (type :epkg:`Lasso`), plus il réduit le nombre de variables.
 
 * *Modules*
 

@@ -96,6 +96,7 @@ de :ref:`l-imbalanced-classification`.
 * `On the Mutual Nearest Neighbors Estimate in Regression <http://www.jmlr.org/papers/volume14/guyader13a/guyader13a.pdf>`_
 * `The Boosting Approach to Machine Learning An Overview <https://www.cs.princeton.edu/picasso/mats/schapire02boosting_schapire.pdf>`_,
 * `A Theory of Multiclass Boosting <http://rob.schapire.net/papers/multiboost-journal.pdf>`_
+* `Generalized Random Forests <https://arxiv.org/abs/1610.01271>`_
 
 `JMLR <http://www.jmlr.org/>`_
 poste régulièrement des articles sur des librairies de machine learning open source telles que
@@ -105,6 +106,8 @@ poste régulièrement des articles sur des librairies de machine learning open s
 
 * `XGBoost: A Scalable Tree Boosting System <https://arxiv.org/pdf/1603.02754.pdf>`_
 * `On the Influence of Momentum Acceleration on OnlineLearning <http://www.jmlr.org/papers/volume17/16-157/16-157.pdf>`_
+* `Gradient Boosting With Piece-Wise Linear Regression Trees <https://arxiv.org/abs/1802.05640>`_,
+  ils affirment être meilleur que :epkg:`xgboost` et :epkg:`lightbgm`.
 
 *Digressions*
 
@@ -118,5 +121,8 @@ poste régulièrement des articles sur des librairies de machine learning open s
 *Modules*
 
 * `statsmodels <http://statsmodels.sourceforge.net/>`_
-* `xgboost <https://xgboost.readthedocs.io/en/latest/>`_
+* :epkg:`xgboost`
+* :epkg:`lightgbm`
 * `mlxtend <https://github.com/rasbt/mlxtend>`_
+* :epkg:`catboost`
+* `GBDT-PL <https://github.com/GBDT-PL/GBDT-PL>`_ (en train d'être implémenté)

@@ -4,6 +4,8 @@
     :alt: Statistique
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
 
+.. _l-nmt-traduction-auto:
+
 Traduction automatique
 ++++++++++++++++++++++
 
@@ -15,6 +17,7 @@ qui évoque l'apprentissage supervisé d'un modèle de traduction automatique de
 
 *Lectures*
 
+* `Neural Machine Translation <https://github.com/lvapeab/nmt-keras/blob/master/examples/documentation/neural_machine_translation.pdf>`_
 * `Machine Learning is Fun Part 5: Language Translation with Deep Learning and the Magic of Sequences <https://medium.com/@ageitgey/machine-learning-is-fun-part-5-language-translation-with-deep-learning-and-the-magic-of-sequences-2ace0acca0aa>`_
 * `Dual Learning for Machine Translation <https://papers.nips.cc/paper/6469-dual-learning-for-machine-translation.pdf>`_
 * `Neural Machine Translation by Jointly Learning to Align and Translate <https://arxiv.org/abs/1409.0473>`_
@@ -25,3 +28,6 @@ qui évoque l'apprentissage supervisé d'un modèle de traduction automatique de
 * `DeepL <https://www.deepl.com/>`_
 
 *Modules*
+
+* `marian-nmt <https://marian-nmt.github.io/>`_
+* `NMT-Keras <http://nmt-keras.readthedocs.io/en/latest/resources.html>`_

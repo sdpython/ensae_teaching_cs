@@ -77,6 +77,7 @@ une nécessité. Quelques idées de recherche :
 * `Multi-Target Regression with Rule Ensembles <http://www.jmlr.org/papers/volume13/aho12a/aho12a.pdf>`_
 * `SVCCA: Singular Vector Canonical Correlation Analysis for Deep Learning Dynamics and Interpretability <https://arxiv.org/pdf/1706.05806.pdf>`_
 * `The Myth Of Interpretability of Econometric Models <http://freakonometrics.hypotheses.org/51752>`_
+* `Interpretable Policies for Reinforcement Learning by Genetic Programming <https://arxiv.org/abs/1712.04170>`_
 
 *Lectures : monotonie*
 

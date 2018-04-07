@@ -16,6 +16,7 @@ Machine Learning Avancé
 
     td2a_mlplus_regression_quantile
     td2a_mlplus_optimisation_des_hyperparametres
+    td2a_mlplus_testab
     td2a_mlplus_online_training
     td2a_mlplus_overfitting
     td2a_mlplus_modeles_avec_dependances_dans_le_temps
@@ -124,7 +125,7 @@ le :ref:`l-deep-learning`.
     :maxdepth: 1
 
     td2a_mlplus_deep_image_classification
-    td2a_mlbasic_detection_objets
+    td2a_mlplus_detection_objets
     td2a_mlplus_deep_segmentation
     td2a_mlplus_deep_generation_images
     td2a_mlplus_videos

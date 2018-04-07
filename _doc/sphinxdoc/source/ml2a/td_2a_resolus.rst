@@ -58,6 +58,44 @@ Compter les objets dans une image
 
 * `Fully Convolutional Crowd Counting On Highly Congested Scenes <https://arxiv.org/pdf/1612.00220.pdf>`_
 
+.. _l-ml2a-resolu-detexpr:
+
+Détection d'expressions
++++++++++++++++++++++++
+
+* `Prediction and Localization of Student Engagement in the Wild <https://arxiv.org/abs/1804.00858>`_
+
+.. _l-ml2a-resolu-detobj:
+
+Détection d'objets
+++++++++++++++++++
+
+* `Pascal VOC Dataset <https://github.com/Microsoft/CNTK/tree/master/Examples/Image/DataSets/Pascal>`_
+* `YOLO9000: Better, Faster, Stronger <https://arxiv.org/abs/1612.08242>`_ : détection en temps
+  d'objets sur des images ou dans une vidéo, le code est sur github
+  `darknet <https://github.com/pjreddie/darknet>`_, wrapper Python :
+  `darknetpy <https://github.com/danielgatis/darknetpy>`_,
+  `demo <https://pjreddie.com/darknet/yolo/>`_
+* `Automatic Salient Object Detection for Panoramic Images Using Region Growing and Fixation Prediction Model <https://arxiv.org/abs/1710.04071>`_
+
+.. _l-ml2a-resolu-detobj3d:
+
+Détection d'objets en 3D
+++++++++++++++++++++++++
+
+* `PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space <https://arxiv.org/abs/1706.02413>`_,
+  `Frustum PointNets for 3D Object Detection from RGB-D Data <https://arxiv.org/abs/1711.08488>`_,
+  (`pointnet <https://github.com/charlesq34/pointnet>`_,
+   `pointnet2 <https://github.com/charlesq34/pointnet2>`_)
+* `3DContextNet: K-d Tree Guided Hierarchical Learning of Point Clouds Using Local and Global Contextual Cues <https://arxiv.org/abs/1711.11379>`_
+
+.. _l-ml2a-resolu-detpartobj:
+
+Détection de parties d'objets
++++++++++++++++++++++++++++++
+
+* `Structured Set Matching Networks for One-Shot Part Labeling <https://arxiv.org/abs/1712.01867>`_
+
 Fraudes
 +++++++
 
@@ -72,8 +110,8 @@ Deep Learning Artistique
 * `StyleBank: An Explicit Representation for Neural Image Style Transfer <https://arxiv.org/abs/1703.09210>`_
 * `msracver/Deep-Image-Analogy <https://github.com/msracver/Deep-Image-Analogy>`_
 
-Images
-++++++
+Images en vrac
+++++++++++++++
 
 Les réseaux de neurones profonds fonctionnent très bien sur les images
 car ce sont des entrées homogènes. Le traitement des images
@@ -144,10 +182,34 @@ Portraits
   appris pour transformer un portrait
   (données : `Large-scale CelebFaces Attributes (CelebA) Dataset <http://mmlab.ie.cuhk.edu.hk/projects/CelebA.html>`_)
 
+.. _l-ml2a-reconstruction-image:
+
+Reconstruction d'images
++++++++++++++++++++++++
+
+* `Deep Image Prior <https://arxiv.org/pdf/1711.10925.pdf>`_
+
+.. _l-ml2a-resolu-sketch:
+
+Reconstruction de sketchs
++++++++++++++++++++++++++
+
+.. index:: sketch
+
+On entend par *sketch* des dessins filiformes représentant un objet,
+une silhouette. Cela ressemble beaucoup aux dessins présents
+sur les panneaux signalétiques dans la plupart des transports
+en commun tout autour du monde.
+
+* `SketchMate: Deep Hashing for Million-Scale Human Sketch Retrieval <https://arxiv.org/abs/1804.01401>`_
+
+.. _l-ml2aresolu-socnet:
+
 Réseaux Sociaux
 +++++++++++++++
 
 * `Social Clicks: What and Who Gets Read on Twitter? <https://hal.inria.fr/hal-01281190/document>`_
+* `Real-time Detection of Content Polluters in Partially Observable Twitter Networks <https://arxiv.org/abs/1804.01235>`_
 
 Retail
 ++++++

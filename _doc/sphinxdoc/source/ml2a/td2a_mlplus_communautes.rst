@@ -9,6 +9,8 @@
     :alt: Statistique
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
 
+.. _l-ml2a-communities:
+
 Communautés
 +++++++++++
 
@@ -31,3 +33,5 @@ de clustering mais on cherche aussi à en déterminer le centre ou encore
 * `Learning Communities in the Presence of Errors <http://www.jmlr.org/proceedings/papers/v49/makarychev16.pdf>`_
 * `Fast Detection of Community Structures using Graph Traversal in Social Networks <https://arxiv.org/pdf/1707.04459.pdf>`_
 * `Community Extraction in Multilayer Networks with Heterogeneous Community Structure <http://www.jmlr.org/papers/volume18/16-645/16-645.pdf>`_
+* `Discovering the hidden community structure of public transportation networks <https://arxiv.org/pdf/1801.03857.pdf>`_
+  (article plutôt didactique)

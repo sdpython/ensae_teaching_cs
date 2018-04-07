@@ -19,3 +19,7 @@
 
     * `Building a Simple Blockchain in Python <http://www.pyscoop.com/building-a-simple-blockchain-in-python/>`_,
       `part 2 <http://www.pyscoop.com/building-a-simple-blockchain-in-python-part-2/>`_
+
+    Un article :
+
+    * `Developing a K-ary malware using Blockchain <https://arxiv.org/abs/1804.01488>`_

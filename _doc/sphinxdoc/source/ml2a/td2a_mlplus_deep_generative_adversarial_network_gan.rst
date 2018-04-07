@@ -4,6 +4,8 @@
     :alt: Statistique
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
 
+.. _l-ml2a-deep-gan:
+
 Generative Adversarial Network (GAN)
 ++++++++++++++++++++++++++++++++++++
 
@@ -22,6 +24,8 @@ Generative Adversarial Network (GAN)
 * `Threat of Adversarial Attacks on Deep Learning in Computer Vision: A Survey <https://arxiv.org/pdf/1801.00553.pdf>`_
 * `StackGAN++: Realistic Image Synthesis with Stacked Generative Adversarial Networks <https://arxiv.org/pdf/1710.10916.pdf>`_
 * `How Generative Adversarial Networks and its variants Work: An Overview of GAN <https://arxiv.org/pdf/1711.05914.pdf>`_
+* `Synthesizing Programs for Images using Reinforced Adversarial Learning <https://arxiv.org/abs/1804.01118>`_
+* `Flipped-Adversarial AutoEncoders <https://arxiv.org/abs/1802.04504>`_
 
 *Exemples de code*
 

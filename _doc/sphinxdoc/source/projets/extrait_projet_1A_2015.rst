@@ -189,8 +189,8 @@ La solution était donc de créer une classe qui définit toutes les variables g
 une instance de cette classe. Ceci dit, il m'a fallu deux semaines de pause et un suivi pour me relancer !*
 
 *Leçon : Toujours toujours éviter les variables globales ! Pour ce genre de projet où il faut impérativement
-les utiliser (taille de la fenêtre pygame, constantes tels que la taille des objets etc ...), créer une classe pour
-les définir : l'objet, ça peut vous sauver !*
+les utiliser (taille de la fenêtre :epkg:`pygame`, constantes tels que la taille des objets etc ...),
+créer une classe pour  définir : l'objet, ça peut vous sauver !*
 
 **tabulations**
 
