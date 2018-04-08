@@ -57,6 +57,12 @@ Clustering
 * `Brown clustering <https://en.wikipedia.org/wiki/Brown_clustering>`_
 * `Hierarchical Clustering via Spreading Metrics <http://www.jmlr.org/papers/volume18/17-081/17-081.pdf>`_
 
+*Lectures - Constraint KMeans*
+
+* `Same-size k-Means Variation <https://elki-project.github.io/tutorial/same-size_k_means>`_
+* `Constrained K-means Clustering with Background Knowledge <http://cse.msu.edu/~cse802/notes/WagstaffCOPKmeans.pdf>`_
+ (voir aussi `cop_kmeans.py <https://github.com/Behrouz-Babaki/COP-Kmeans/blob/master/copkmeans/cop_kmeans.py>`_)
+
 *Modules*
 
 * `scikit-learn <http://scikit-learn.org/stable/>`_
