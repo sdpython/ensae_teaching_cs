@@ -482,6 +482,28 @@ Tableau de bord et statut des dépendances
       - .. image:: https://codecov.io/github/sdpython/pysqllike/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/pysqllike?branch=master
       -
+    * - :epkg:`sparkouille`
+      - .. image:: https://travis-ci.org/sdpython/sparkouille.svg?branch=master
+            :target: https://travis-ci.org/sdpython/sparkouille
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/chiwkjr9li91qd02?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/sparkouille
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/sparkouille/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/sparkouille/tree/master
+      - .. image:: https://badge.fury.io/py/sparkouille.svg
+            :target: https://pypi.org/project/sparkouille
+      - .. image:: http://img.shields.io/pypi/pyversions/sparkouille.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/sparkouille
+      - .. image:: https://badge.waffle.io/sdpython/sparkouille.png?label=to%20do&title=to%20do
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/sparkouille
+      - .. image:: https://codecov.io/github/sdpython/sparkouille/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/sparkouille?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/sparkouille/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/sparkouille/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `teachpyx <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/teachpyx.svg?branch=master
             :target: https://travis-ci.org/sdpython/teachpyx

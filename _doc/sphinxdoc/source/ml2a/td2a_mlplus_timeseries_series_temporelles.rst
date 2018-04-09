@@ -44,6 +44,7 @@ Timeseries - Séries temporelles
 * `Holt-Winters seasonal method <https://www.otexts.org/fpp/7/5>`_,
   `Initializing the Holt-Winters method <https://robjhyndman.com/hyndsight/hw-initialization/>`_
 * `A Comparison of Estimation Methods for Vector Autoregressive Moving-Average Models <http://www.christiankascha.com/wp-content/uploads/2013/03/ERVARMAmain_final.pdf>`_
+* `A state space framework for automatic forecasting using exponential smoothing methods <https://robjhyndman.com/papers/hksg.pdf>`_
 
 *Compétitions*
 
@@ -56,7 +57,14 @@ Timeseries - Séries temporelles
 * `pyflux <http://pyflux.readthedocs.io/en/latest/>`_ (la documentation est plutôt bien faite)
 * `fbprophet <https://github.com/facebookincubator/prophet/tree/master/python>`_
   (requires `pystan <http://pystan.readthedocs.io/en/latest/index.html>`_)
-* `Rob J Hyndman software <http://robjhyndman.com/publications/software/>`_
+* `Rob J Hyndman software <https://robjhyndman.com/software/>`_
   (disponible uniquement en R)
 * `influxdb <https://github.com/influxdata/influxdb>`_ (An Open-Source Time Series Database)
 * `seasonal <https://github.com/welch/seasonal>`_
+
+Un peu plus expérimental :
+
+* `sulekha_holtwinters <https://github.com/sulekhaaloorravi-python/sulekha_holtwinters>`_, Holt-Winters sur
+  :epkg:`Spark`
+* `holtwinters.py <https://gist.github.com/andrequeiroz/5888967>`_,
+  Holt-Winters dans un fichier.
