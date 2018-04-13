@@ -22,3 +22,4 @@ Multi Agent Reinforcement Learning (MARL)
 *Modules*
 
 * `pyrl <https://github.com/goramos/pyrl>`_ (pas vraiment finie)
+* `streamingbandit <https://github.com/Nth-iteration-labs/streamingbandit>`_

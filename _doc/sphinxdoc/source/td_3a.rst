@@ -253,7 +253,6 @@ Distribution des calculs, stratégies de stockage, SQL NoSQL
 
     td_3a_s5_synthese
     notebooks/hash_distribution
-    notebooks/map_reduce_timeseries
 
 *Lectures*
 
@@ -452,10 +451,8 @@ Trois projets réalisés par les élèves lors de l'année 2014-2015 :
 avec Spark et Spark SQL
 +++++++++++++++++++++++
 
-.. toctree::
-    :maxdepth: 2
-
-    notebooks/_gs3a_spark
+Les notebooks ont été déplacés sur
+`Introduction à Spark <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/lectures/index_spark.html>`_.
 
 *Lectures*
 

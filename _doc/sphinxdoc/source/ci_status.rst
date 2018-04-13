@@ -678,6 +678,8 @@ Contenu
         mathématiques que dans les autres modules.
     * - `papierstat <http://www.xavierdupre.fr/app/papierstat/helpsphinx/index.html>`_
       - Découverte du :epkg:`machine learning`, mélange de pratique et de théorie.
+    * - `sparkouille <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/index.html>`_
+      - Bafouille sur :epkg:`spark`.
     * - `teachpyx <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_
       - Cours de programmation en Python. C'est la version internet et actualisée
         du livre paru en 2009 et disponible au format
