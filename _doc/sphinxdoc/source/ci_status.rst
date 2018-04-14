@@ -693,5 +693,6 @@ Git Clone
 
     from ensae_teaching_cs.automation import get_teaching_modules
     pattern = 'if not exist {0} git clone https://github.com/sdpython/{0}.git'
-    modules = get_teaching_modules() + ['myblog', 'thesis_handwriting', '_automation']
+    add = ['myblog', 'thesis_handwriting', '_automation']
+    modules = get_teaching_modules() + add
     print('\n'.join(pattern.format(_) for _ in sorted(modules)))

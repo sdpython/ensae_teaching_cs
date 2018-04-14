@@ -180,6 +180,7 @@ epkg_dictionary["requests"] = 'http://docs.python-requests.org/en/latest/'
 epkg_dictionary['REST API'] = "https://en.wikipedia.org/wiki/Representational_state_transfer"
 epkg_dictionary["ROC"] = 'http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/roc.html'
 epkg_dictionary["SciTE"] = 'http://www.scintilla.org/SciTE.html'
+epkg_dictionary["spark"] = 'https://spark.apache.org/'
 epkg_dictionary["sparkouille"] = 'http://www.xavierdupre.fr/app/sparkouille/helpsphinx/index.html'
 epkg_dictionary["Spyder"] = 'https://github.com/spyder-ide/spyder'
 epkg_dictionary["teachpyx"] = 'http://www.xavierdupre.fr/app/teachpyx/helpsphinx/'
