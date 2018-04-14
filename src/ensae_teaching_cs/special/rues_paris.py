@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 @file
 @brief Code implémentant la première solution proposée à :ref:`Parcourir les rues de Paris <mlrueparisparcoursrst>`.
@@ -151,21 +151,11 @@ def possible_edges(edges, threshold, fLOG=None, distance=distance_haversine):
         total_possible_edges = (len(vertices) ** 2 - len(vertices)) / 2
         possible_edges = len(possibles) // 2
         leninit = len(edges)
-        fLOG(
-            "original",
-            leninit,
-            "/",
-            total_possible_edges,
-            "=",
-            leninit /
-            total_possible_edges)
-        fLOG(
-            "addition",
-            possible_edges - leninit,
-            "/",
-            total_possible_edges,
-            "=",
-            (possible_edges - leninit) / total_possible_edges)
+        fLOG("original", leninit, "/", total_possible_edges, "=",
+             leninit / total_possible_edges)
+        fLOG("addition", possible_edges - leninit, "/",
+             total_possible_edges, "=",
+             (possible_edges - leninit) / total_possible_edges)
 
     return possibles
 
@@ -315,11 +305,7 @@ def eulerien_extension(
     max_segment = max(e[-1] for e in edges)
     fLOG("possible_edges")
     possibles = possible_edges(
-        edges,
-        max_segment *
-        alpha,
-        fLOG=fLOG,
-        distance=distance)
+        edges, max_segment * alpha, fLOG=fLOG, distance=distance)
     fLOG("next")
     init = bellman(edges, fLOG=fLOG, allow=lambda e: e in possibles)
     added = kruskal(edges, init, fLOG=fLOG)

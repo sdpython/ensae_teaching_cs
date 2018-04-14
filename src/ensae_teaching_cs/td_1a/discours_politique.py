@@ -86,8 +86,7 @@ def xmlParsingLongestDiv(text):
         endLine)
     exp = re.compile("[|]((.|\n){5,50}) ")
     nb = exp.findall(res)
-    if (len(nb) == 0 or len(res) >
-            10000) and "if (window.xtparam!=null)" not in res:
+    if (len(nb) == 0 or len(res) > 10000) and "if (window.xtparam!=null)" not in res:
         return res
     else:
         return ""
@@ -256,10 +255,7 @@ def get_elysee_speech_from_elysees(
     except Exception as e:
         return None
         raise Exception(
-            "unable to fetch content from: " +
-            title +
-            "\n" +
-            full) from e
+            "unable to fetch content from: " + title + "\n" + full) from e
     return xmlParsingLongestDiv(text)
 
 

@@ -134,8 +134,7 @@ class HomomorphicInt:
     def inv(self):
         """
         Inversion. This only works in all cases if *n* is a prime number.
-        We use :math:`a^{-1} \\equiv a^{n-2} \mod n`.
-
+        We use :math:`a^{-1} \\equiv a^{n-2} \\mod n`.
         The implementation can be improved (use binary decomposition) and cached.
         """
         s = self.V

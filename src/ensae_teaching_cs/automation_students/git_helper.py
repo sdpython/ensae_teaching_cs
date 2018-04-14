@@ -287,10 +287,7 @@ def create_folders_from_dataframe(df, root, report="suivi.rst", col_student="Ele
         s = list(set(group[col_subject].copy()))
         if len(s) > 1:
             raise Exception(
-                "more than one subject for group: " +
-                str(name) +
-                "\n" +
-                str(s))
+                "more than one subject for group: " + str(name) + "\n" + str(s))
         # subject = s[0]
         eleves = list(group[col_student])
         names = [(_,) + split_name(_) for _ in eleves]

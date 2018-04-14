@@ -73,9 +73,9 @@ def guess_language_code(code):
                 c[2], c[3] = len(co1), len(co2)
         counts[k] = c
 
-    #~ for k in sorted(counts) :
+    # ~ for k in sorted(counts) :
         #~ print (k,counts[k])
-        #~ if sum(counts[k][:4]) == 0 :
+        # ~ if sum(counts[k][:4]) == 0 :
         #~ print (k, mat[k])
         #~ print (token)
 

@@ -1,4 +1,4 @@
-#*-* coding: utf-8 -*-
+# *-* coding: utf-8 -*-
 """
 @file
 @brief Uses `pythonnet <https://github.com/sdpython/pythonnet>`_.
@@ -49,15 +49,13 @@ if sys.platform.startswith("win"):
             from .py36x64 import clr
         else:
             raise ImportError(
-                "unable to import pythonnet for this architecture " +
-                str(arch))
+                "unable to import pythonnet for this architecture " + str(arch))
     elif ver[:2] == (3, 5):
         if "64" in arch:
             from .py35x64 import clr
         else:
             raise ImportError(
-                "unable to import pythonnet for this architecture " +
-                str(arch))
+                "unable to import pythonnet for this architecture " + str(arch))
     elif ver[:2] == (3, 4):
         if "64" in arch:
             from .py34x64 import clr
@@ -65,8 +63,7 @@ if sys.platform.startswith("win"):
             from .py34 import clr
         else:
             raise ImportError(
-                "unable to import pythonnet for this architecture " +
-                str(arch))
+                "unable to import pythonnet for this architecture " + str(arch))
     elif ver[:2] == (3, 3):
         if "64" in arch:
             from .py33x64 import clr
@@ -74,12 +71,10 @@ if sys.platform.startswith("win"):
             from .py33 import clr
         else:
             raise ImportError(
-                "unable to import pythonnet for this architecture " +
-                str(arch))
+                "unable to import pythonnet for this architecture " + str(arch))
     else:
         raise ImportError(
-            "unable to import pythonnet for this version of python " +
-            str(ver))
+            "unable to import pythonnet for this version of python " + str(ver))
 
 
 def vocal_synthesis(text, lang="fr-FR", voice="", filename=None):

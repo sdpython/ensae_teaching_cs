@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 @file
 @brief Simulates a string which is falling but tied by its extremities. See :ref:`l-corde`.

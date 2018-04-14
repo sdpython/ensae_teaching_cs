@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 @file
 @brief `Réseaux de Kohonen <https://fr.wikipedia.org/wiki/Carte_auto_adaptative>`_

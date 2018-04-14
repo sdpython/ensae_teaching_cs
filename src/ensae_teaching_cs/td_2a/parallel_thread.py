@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 Ce fichier contient un exemple qui permet d'exécuter plusieurs threads.
 """

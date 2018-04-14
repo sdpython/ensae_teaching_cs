@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 ce module contient la fonction trace_ligne qui retourne l'ensemble des pixels
 concernés par le tracé d'une ligne en 8-connexité entre deux pixels

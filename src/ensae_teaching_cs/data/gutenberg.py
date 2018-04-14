@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 @file
 @brief Link to data from `Gutenberg <http://www.gutenberg.org/>`_,

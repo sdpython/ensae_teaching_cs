@@ -257,7 +257,7 @@ spaced_fmt2 = spaced_tokens + binops
 
 # reserved words
 reserved = kwlist = [
-    #--start keywords--
+    # --start keywords--
     'and', 'assert', 'break',
     'class', 'continue', 'def',
     'del', 'elif', 'else',
@@ -271,7 +271,7 @@ reserved = kwlist = [
     # others languages
     "void", "double", "int", "throw", "template", "catch",
     "public", "protected", "float", "unsigned", "__int32", "short",
-    #--end keywords--
+    # --end keywords--
 ]
 
 

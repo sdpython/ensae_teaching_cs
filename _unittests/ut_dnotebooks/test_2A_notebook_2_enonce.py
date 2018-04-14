@@ -88,9 +88,7 @@ class TestNotebookRunner2a_2_enonce(unittest.TestCase):
         self.assertTrue(len(keepnote) > 0)
 
         execute_notebooks(temp, keepnote, lambda i, n: "_2" in n and
-                          "enonce" in n and
-                          "_2D" not in n and
-                          "_2B" not in n,
+                          "enonce" in n and "_2D" not in n and "_2B" not in n,
                           fLOG=fLOG, clean_function=clean_function_1a,
                           dump=src.ensae_teaching_cs)
 

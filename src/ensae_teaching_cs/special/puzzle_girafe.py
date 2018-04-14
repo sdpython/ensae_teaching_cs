@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 @file
 @brief Fonctions, classes pour résoudre un puzzle à 9 pièces disposé en carré 3x3. Voir :ref:`l-puzzle_girafe`.

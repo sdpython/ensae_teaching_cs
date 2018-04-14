@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 @brief      test log(time=9s)
 """
@@ -60,8 +60,7 @@ class TestNotebookRunner1a_correction_10 (unittest.TestCase):
             warnings.warn("too long")
             return
         execute_notebooks(temp, keepnote, (lambda i, n: "_12" not in n and
-                                           "session_10." in n and
-                                           "correction" in n),
+                                           "session_10." in n and "correction" in n),
                           fLOG=fLOG,
                           clean_function=clean_function_1a,
                           dump=src.ensae_teaching_cs)

@@ -1,4 +1,4 @@
-#-*-  coding: utf-8 -*-
+# -*-  coding: utf-8 -*-
 """
 @file
 @brief implémentation du modèle d'illumination de Phong

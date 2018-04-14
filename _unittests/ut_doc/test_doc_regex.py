@@ -36,7 +36,6 @@ except ImportError:
         sys.path.append(path)
     import pyquickhelper as skip_
 
-from pyquickhelper.pycode import get_temp_folder
 from src.ensae_teaching_cs.doc import regex_cases
 
 

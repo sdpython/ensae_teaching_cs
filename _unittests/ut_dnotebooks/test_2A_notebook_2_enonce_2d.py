@@ -63,8 +63,7 @@ class TestNotebookRunner2a_2_enonce_2D (unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_notebook2a_2_enonce_2D")
         keepnote = ls_notebooks("td2a")
         execute_notebooks(temp, keepnote, lambda i, n: "_2" in n and
-                          "enonce" in n and
-                          "_2D" in n,
+                          "enonce" in n and "_2D" in n,
                           fLOG=fLOG, clean_function=clean_function_1a,
                           dump=src.ensae_teaching_cs)
 

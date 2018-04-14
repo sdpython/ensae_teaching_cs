@@ -384,10 +384,7 @@ class ProjectsRepository:
                     _, float) or ~numpy.isnan(_)]
                 if len(s) > 1:
                     raise TooManyProjectsException(
-                        "more than one subject for group: " +
-                        str(name) +
-                        "\n" +
-                        str(s))
+                        "more than one subject for group: " + str(name) + "\n" + str(s))
                 elif len(s) == 0:
                     s = ["unknown"]
                 subject = s[0]

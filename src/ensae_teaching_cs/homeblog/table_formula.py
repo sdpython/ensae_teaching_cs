@@ -1,4 +1,4 @@
-#-*- coding: utf8 -*-
+# -*- coding: utf8 -*-
 """
 @file
 @brief  Implements TableFormula.
@@ -578,8 +578,8 @@ class TableFormula(_TableFormulaStat):
                     c = "%s_%d" % (c, i)
                     self.header[i] = c
                 else:
-                    raise KeyError("column " + c +
-                                   " already exists in %s" % str(self.header))
+                    raise KeyError(
+                        "column '{0}' already exists in '{1}'".format(c, self.header))
             unique[c] = True
 
     def __add__(self, other):

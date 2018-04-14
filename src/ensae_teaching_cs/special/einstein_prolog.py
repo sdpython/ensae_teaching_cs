@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 @file
 @brief This programs solves `Einstein's riddle <http://en.wikipedia.org/wiki/Zebra_Puzzle>`_ ou en

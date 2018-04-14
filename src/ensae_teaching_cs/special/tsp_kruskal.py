@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 @file
 @brief Implémente un algorithme qui cherche le plus court chemin passant
@@ -745,10 +745,10 @@ def echange_position(chemin, taille, taille_zone, X, Y, grande=0.5, fLOG=None, d
             break    # arête trop petite
 
         # zone traversée par la ligne
-        x1, x2 = int((a[0] - tmx) //
-                     taille_zone), int((b[0] - tmx) // taille_zone)
-        y1, y2 = int((a[1] - tmy) //
-                     taille_zone), int((b[1] - tmy) // taille_zone)
+        x1, x2 = (int((a[0] - tmx) // taille_zone),
+                  int((b[0] - tmx) // taille_zone))
+        y1, y2 = (int((a[1] - tmy) // taille_zone),
+                  int((b[1] - tmy) // taille_zone))
         ens = draw_line(x1, y1, x2, y2)
         ville = []
         for k, l in ens:
@@ -853,10 +853,10 @@ def supprime_croisement(chemin, taille_zone, X, Y, fLOG, distance=None):
         b = chemin[im]
 
         # zone traversée par la ligne
-        x1, x2 = int((a[0] - tmx) //
-                     taille_zone), int((b[0] - tmx) // taille_zone)
-        y1, y2 = int((a[1] - tmy) //
-                     taille_zone), int((b[1] - tmy) // taille_zone)
+        x1, x2 = (int((a[0] - tmx) // taille_zone),
+                  int((b[0] - tmx) // taille_zone))
+        y1, y2 = (int((a[1] - tmy) // taille_zone),
+                  int((b[1] - tmy) // taille_zone))
         ens = draw_line(x1, y1, x2, y2)
         ville = []
         for k, l in ens:
