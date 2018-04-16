@@ -1,4 +1,3 @@
-bayespy
 beautifulsoup4
 blockdiag
 blosc
