@@ -231,3 +231,12 @@ C'est une idée extraite de l'article :
 Elle ne requiert pas nécessaire de machine learning mais s'appuie plus simplement
 sur des indicateurs construits à partir des images. Le projet devra commencer par récupérer
 des images sur Internet (via un moteur de recherche par exemple).
+
+.. _l-ml-snn:
+
+Implémenter un SNN : Spiking Neural Network (2018)
+--------------------------------------------------
+
+* `Python Tutorial: How to Write a Spiking Neural Network Simulation From Scratch <http://www.mjrlab.org/2014/05/08/tutorial-how-to-write-a-spiking-neural-network-simulation-from-scratch-in-python/>`_
+
+Voir aussi :ref:`l-ml2a-snn`.

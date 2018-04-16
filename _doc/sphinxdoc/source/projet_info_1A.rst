@@ -59,6 +59,7 @@ Liste exhaustive :
 #. ML : :ref:`l-ml-reg-geod`
 #. ML : :ref:`l-ml-ethique`
 #. ML : :ref:`l-ml-fire-detection`
+#. ML : :ref:`l-ml-snn`
 #. Finance : :ref:`l-fi-trend`
 #. Finance : :ref:`l-fi-port`
 #. Finance : :ref:`l-fi-pair`

@@ -169,6 +169,11 @@ Parole
 * `Achieving Human Parity on Automatic Chinese to English News Translation <https://www.microsoft.com/en-us/research/publication/achieving-human-parity-on-automatic-chinese-to-english-news-translation/>`_ (2018)
 * `Honk: CNNs for Keyword Spotting <https://github.com/castorini/honk>`_
 
+Parole + Audio
+++++++++++++++
+
+* `Looking to Listen at the Cocktail Party: A Speaker-Independent Audio-Visual Model for Speech Separation <https://arxiv.org/pdf/1804.03619.pdf>`_
+
 Portraits
 +++++++++
 
