@@ -12,6 +12,13 @@ précis.
 .. contents::
     :local:
 
+3D
+++
+
+Pas d'articles précis, juste une liste de problèmes résolus.
+
+* `3D-Machine-Learning <https://github.com/timzhang642/3D-Machine-Learning>`_
+
 Apprentissage par renforcement
 ++++++++++++++++++++++++++++++
 

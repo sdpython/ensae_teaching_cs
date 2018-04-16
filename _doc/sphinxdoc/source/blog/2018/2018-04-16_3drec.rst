@@ -1,0 +1,22 @@
+
+.. blogpost::
+    :title: Reconstruction 3D
+    :keywords: nmt
+    :date: 2018-04-16
+    :categories: biblio
+
+    C'est un sujet compliqué pour lequel il existe
+    des solutions simples comme :epkg:`opencv` :
+    `Depth Map from Stereo Images <http://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_calib3d/py_depthmap/py_depthmap.html>`_.
+    `meshalb <http://www.meshlab.net/>`_ permet de visualiser
+    les objets à facette. Un site qui recense plein de problématique
+    en 3D : `3D-Machine-Learning <https://github.com/timzhang642/3D-Machine-Learning>`_.
+    `Pascal VOC <http://host.robots.ox.ac.uk/pascal/VOC/>`_
+    est un format très utilisé pour annoter les objets à
+    reconnaître dans une image.
+    Il existe un module :epkg:`python` capable de les écrire,
+    `pascal-voc-writer <https://pypi.python.org/pypi/pascal-voc-writer>`_,
+    pour les lire
+    `pascal-voc-python <https://github.com/mprat/pascal-voc-python>`_,
+    un outil pour labelliser
+    `Label-Annotation-VOC-Pascal <https://github.com/manhcuogntin4/Label-Annotation-VOC-Pascal>`_.
