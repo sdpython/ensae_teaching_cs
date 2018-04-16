@@ -66,7 +66,8 @@ class TestFaqMissing (unittest.TestCase):
         same_variable(a, b)
         stringio("e")
         property_example()
-        assert list(enumerate_regex_search("r*", "rararr"))
+        res = list(enumerate_regex_search("r*", "rararr"))
+        self.assertEqual(len(res), 6)
 
     def test_faq_pythonm2(self):
         fLOG(
@@ -98,7 +99,7 @@ class TestFaqMissing (unittest.TestCase):
         if False:
             # does not work
             df_to_clipboard(df)
-        assert df_equal(df, df)
+        self.assertTrue(df_equal(df, df))
         speed_dataframe()
 
     def test_faq_matplotlib(self):
