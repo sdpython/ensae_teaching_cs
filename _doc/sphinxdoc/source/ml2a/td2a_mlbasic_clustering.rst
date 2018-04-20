@@ -69,3 +69,4 @@ Clustering
 * `hdbscan <https://github.com/scikit-learn-contrib/hdbscan>`_
 * `pyclustering <https://pypi.python.org/pypi/pyclustering>`_
 * `pycluster <https://pypi.python.org/pypi/pycluster>`_
+* `PQk-means <https://github.com/DwangoMediaVillage/pqkmeans>`_
