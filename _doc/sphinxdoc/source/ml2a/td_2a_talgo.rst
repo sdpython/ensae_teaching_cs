@@ -40,6 +40,7 @@ Meilleure efficacité avec des algorithmes
     td2a_talgo_puzzles_algorithmiques
     td2a_talgo_algorithmes_probabilistes
     td2a_talgo_streaming_algorithms
+    td2a_talgo_automatic_differenciation
 
 Machine Learning en environnement contraint
 ===========================================

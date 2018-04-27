@@ -1,0 +1,10 @@
+
+.. blogpost::
+    :title: Ajout de références
+    :keywords: nmt
+    :date: 2018-04-27
+    :categories: biblio
+
+    Je découvre plus de sujets qui suscite ma curiosité
+    que je pourrais jamais un jour en traiter.
+    Voici le dernier : :ref:`l-mld2a-ad`.
