@@ -9,17 +9,19 @@ import random
 
 def f_df_H(x=None, z=None):
     """
-    fonction demandée par la fonction
+    Fonction demandée par la fonction
     `solvers.cp <http://cvxopt.org/userguide/solvers.html#problems-with-nonlinear-objectives>`_.
 
     Elle répond aux trois cas :
 
-        * ``F()`` : la fonction doit retourne le nombre de contraintes non linéaires (:math:`f_k`) et un premier point :math:`X_0`
-        * ``F(x)`` : la fonction retourne l'évaluation de :math:`f_0` et de son gradient au point ``x``
-        * ``F(x,z)`` : la fonction retourne l'évaluation de :math:`f_0`, son gradient et de la dérivée seconde au point ``x``
+    * ``F()`` : la fonction doit retourne le nombre de contraintes
+      non linéaires (:math:`f_k`) et un premier point :math:`X_0`,
+    * ``F(x)`` : la fonction retourne l'évaluation de :math:`f_0`
+      et de son gradient au point ``x``,
+    * ``F(x,z)`` : la fonction retourne l'évaluation de :math:`f_0`,
+      son gradient et de la dérivée seconde au point ``x``.
 
     Voir @see fn exercice_particulier1.
-
     Le problème d'optimisation est le suivant :
 
     .. math::
@@ -168,7 +170,8 @@ def exercice_particulier2():
         :title: algorithme de Arrow-Hurwicz
         :tag: Computer Science
 
-        On résoud le problème suivant avec l'algorithme de `Arrow-Hurwicz <https://hal.archives-ouvertes.fr/hal-00490826/document>`_.
+        On résoud le problème suivant avec l'algorithme de
+        `Arrow-Hurwicz <https://hal.archives-ouvertes.fr/hal-00490826/document>`_.
 
         .. math::
 

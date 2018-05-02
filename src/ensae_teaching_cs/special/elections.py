@@ -10,19 +10,18 @@ import pandas
 
 class ElectionResults:
     """
-    processes data coming from
+    Processes data coming from
     `data.gouv.fr <http://www.data.gouv.fr/content/search?SortBy=Pertinence&SortOrder=0&SearchText=%C3%A9lections+2012>`_.
 
-    The class uses `pandas <http://pandas.pydata.org/>`_ to process the data
-
+    The class uses `pandas <http://pandas.pydata.org/>`_ to process the data.
     See `Elections françaises <http://www.xavierdupre.fr/blog/2013-12-06_nojs.html>`_.
-
     See `Optimisation sous contraintes appliquée au calcul du report des voix <http://www.xavierdupre.fr/blog/2013-12-07_nojs.html>`_.
     """
 
     def __init__(self, file, year=None, level="Départements"):
         """
-        loads the data downloaded from `data.gouv.fr <http://www.data.gouv.fr/content/search?SortBy=Pertinence&SortOrder=0&SearchText=%C3%A9lections+2012>`_.
+        Loads the data downloaded from
+        `data.gouv.fr <http://www.data.gouv.fr/content/search?SortBy=Pertinence&SortOrder=0&SearchText=%C3%A9lections+2012>`_.
 
         @param      file        xls file
         @param      year        year (optional)
@@ -52,7 +51,7 @@ class ElectionResults:
 
     def get_candidates_votes(self, round):
         """
-        return the numbers of voters for each candidates
+        Returns the numbers of voters for each candidate.
 
         @param      round       0 or 1
         @return                 dictionary
@@ -64,13 +63,14 @@ class ElectionResults:
 
     def correct(self, method=None):
         """
-        corrects the second round in a way there is the same number of voters
+        Corrects the second round in a way there is the same number of voters.
 
         @param      method      some preprocess before going on (see below)
 
         About ``method``:
-            - 'N' --> correct the number of voters for each regions
-            - 'cand' --> gives the same weights to every candidates
+
+        - *'N'* --> correct the number of voters for each regions
+        - *'cand'* --> gives the same weights to every candidates
         """
         if method == "N":
             if len(self.T0) != len(self.T1):
@@ -105,7 +105,7 @@ class ElectionResults:
 
     def GetNbCandidates(self, round):
         """
-        returns the number of candidates
+        Returns the number of candidates.
         @param      round       round (0 or 1)
         @return                 number of candidates
         """
@@ -114,41 +114,41 @@ class ElectionResults:
     @property
     def Year(self):
         """
-        returns the year
+        Returns the year.
         """
         return self.year
 
     @property
     def Level(self):
         """
-        returns the level (``département`` or ``canton``)
+        Returns the level (``département`` or ``canton``).
         """
         return self.level
 
     @property
     def LevelCol(self):
         """
-        returns the column associated to the level (their name depends on the level)
+        Returns the column associated to the level (their name depends on the level).
         """
         return ["Code du %s" % self.level, "Libellé du %s" % self.level]
 
     @property
     def T0(self):
         """
-        returns the dataframe for the first round
+        Returns the dataframe for the first round.
         """
         return self.tours[0]
 
     @property
     def T1(self):
         """
-        returns the dataframe for the second round
+        Returns the dataframe for the second round.
         """
         return self.tours[1]
 
     def process_tour(self, tour):
         """
-        keeps the interesting columns, move candidates name as column name
+        Keeps the interesting columns, move candidates name as column name.
 
         @param      tour    dataframe
         @return             dataframe
@@ -193,11 +193,11 @@ class ElectionResults:
 
     def vote_transfer(self):
         """
-        compute the votes between the two rounds using
+        Computes the votes between the two rounds using
         contrainsts optimization, the optimization
-        requires `cvxopt <http://cvxopt.org/>`_
+        requires :epkg:`cvxopt`.
 
-        see `Optimisation sous contraintes appliquée au calcul du report des voix <http://www.xavierdupre.fr/blog/2013-12-07_nojs.html>`_.
+        See `Optimisation sous contraintes appliquée au calcul du report des voix <http://www.xavierdupre.fr/blog/2013-12-07_nojs.html>`_.
 
         @return                     results (as a DataFrame)
         """
@@ -316,7 +316,7 @@ class ElectionResults:
 
     def get_people(self, round=0):
         """
-        returns the number of people per regions
+        Returns the number of people per regions.
         @param          round       first (0) or second (1) round
         @return                     series
         """
@@ -325,7 +325,7 @@ class ElectionResults:
     @property
     def WeightsNorm(self):
         """
-        return the proportion of voters for each regions
+        Returns the proportion of voters for each regions.
         """
         if "weightsnorm" not in self.__dict__:
             self.weightsnorm = list(self.get_people())
@@ -351,8 +351,8 @@ class ElectionResults:
 
     def bootstrap(self, iter=1000, method="vote_transfer", alpha=0.05, fLOG=None, **params):
         """
-        uses the bootstrap method to compute confidence intervals
-        see `bootstrap <http://fr.wikipedia.org/wiki/Bootstrap_%28statistiques%29>`_
+        Uses the bootstrap method to compute confidence intervals
+        see `bootstrap <http://fr.wikipedia.org/wiki/Bootstrap_%28statistiques%29>`_.
 
         @param      iter        number of iteration
         @param      method      method to bootstrap
@@ -391,7 +391,7 @@ class ElectionResults:
     @staticmethod
     def combine_into_string(matrices, float_format=str, agg_format=str):
         """
-        combine two matrices into one before displaying it
+        Combines two matrices into one before displaying it.
 
         @param      matrices            list of matrices (same dimension)
         @param      float_format        to format each float of all matrices

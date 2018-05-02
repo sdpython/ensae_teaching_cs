@@ -13,9 +13,8 @@ def solution_correcte(sol):
     la fonction détermine si l'agencement proposé dans *sol*
     vérifie les cinq règles de l'énoncé,
     retourne *True* si toutes les règles sont vérifiées
-    ou *False* si l'une des règles n'est pas vérifiée,
-
-    rappel : les indices vont de 0 a 6 inclus car il y a 7 cases
+    ou *False* si l'une des règles n'est pas vérifiée.
+    Rappel : les indices vont de 0 a 6 inclus car il y a 7 cases.
     """
 
     # règle 1
@@ -60,7 +59,7 @@ def solution_correcte(sol):
 
 def affiche_solution(sol):
     """
-    retourne une chaîne de caractères qui représente la solution
+    Retourne une chaîne de caractères qui représente la solution.
     """
     a = ["poison", "vin", "reculer", "avancer"]
     res = ""
@@ -71,15 +70,14 @@ def affiche_solution(sol):
 
 def solution():
     """
-    parcourt toutes les configurations possibles
-    et s'arrête à la première qui satsifait toutes les règles
+    Parcourt toutes les configurations possibles
+    et s'arrête à la première qui satsifait toutes les règles.
 
     ::
 
         from ensae_teaching_cs.special.hermionne import solution, affiche_solution
         res = solution()
         print(affiche_solution(res))
-
     """
     sol = [0, 0, 0, 0, 0, 0, 0]
     while sol[0] < 4:

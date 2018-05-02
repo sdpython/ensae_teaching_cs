@@ -7,7 +7,7 @@ from pyquickhelper.filehelper.encryption import encrypt_stream, decrypt_stream
 
 def encrypt_data(password, input, output):
     """
-    encrypt a file
+    Encrypts a file.
 
     @param      input       input filename
     @param      output      output filename
@@ -22,7 +22,7 @@ def encrypt_data(password, input, output):
 
 def decrypt_data(password, input, output):
     """
-    decrypt a file
+    Decrypts a file.
 
     @param      input       input filename
     @param      output      output filename

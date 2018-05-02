@@ -34,9 +34,9 @@ def wait_event(pygame):
 
 def empty_main_loop(pygame):
     """
-    remove all events in the main loop,
+    Removes all events in the main loop,
     a mouse click make the program halt,
-    another click makes it start again
+    another click makes it start again.
 
     @param      pygame      module pygame
     @return                 event ``pygame.QUIT``?
@@ -84,8 +84,8 @@ def get_pygame_screen_font(h, size, flags=0):
 def build_diff_image(pygame, screen, h, maxw, seq1=None, seq2=None, diff=None, fonts=None,
                      bars=None, colors=None, progress=None, prev_bars=None):
     """
-    build an image to show a difference between two lists,
-    we assume these list contain distinct items
+    Builds an image to show a difference between two lists,
+    we assume these list contain distinct items.
 
     @param      pygame      module pygame
     @param      screen      screen (pygame surface)

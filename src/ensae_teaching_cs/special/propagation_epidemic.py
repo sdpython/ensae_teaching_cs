@@ -14,7 +14,7 @@ from ..helpers.pygame_helper import wait_event, empty_main_loop
 
 class Point:
     """
-    defines a point
+    Defines a point.
     """
 
     def __init__(self, x, y):
@@ -91,7 +91,7 @@ class Point:
 
 class Rect:
     """
-    defines a rectangle
+    Defines a rectangle.
     """
 
     def __init__(self, a, b):

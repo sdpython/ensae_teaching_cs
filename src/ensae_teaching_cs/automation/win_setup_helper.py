@@ -1,6 +1,6 @@
 """
 @file
-@brief Customize a Windows Setup for these teachings
+@brief Customizes a Windows Setup for these teachings.
 """
 
 import os
@@ -11,7 +11,7 @@ from pyquickhelper.filehelper import remove_folder
 
 def last_function(innosetup, folders, verbose=False, fLOG=print):
     """
-    applies last modifications to the setup
+    Applies last modifications to the setup.
 
     @param          innosetup   innosetup script which defines the setup
     @param          folders     dictionary with keys *workspace*, *python*, *tools*, *build*, *docs*

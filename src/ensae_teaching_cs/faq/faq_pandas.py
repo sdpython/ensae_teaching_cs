@@ -79,7 +79,7 @@ def read_csv(filepath_or_buffer, encoding="utf8", sep="\t", **args):
 
 def df_to_clipboard(df, **args):
     """
-    Copy a dataframe as csv text into the clipboard
+    Copies a dataframe as *csv* text into the clipboard.
 
     @param      df      dataframe
     @param      sep     by default the separator is ``\\t`` for this function until it is defined otherwise
@@ -108,7 +108,7 @@ def df_to_clipboard(df, **args):
 
 def df_equal(df1, df2):
     """
-    compares two dataframe and tells if they are equal
+    Compares two dataframe and tells if they are equal.
 
     @param          df1     first dataframe
     @param          df2     second dataframe
@@ -175,7 +175,7 @@ def df_equal(df1, df2):
 
 def groupby_topn(df, by_keys, sort_keys, ascending=True, n=1, as_index=True):
     """
-    takes the top n rows per group
+    Takes the top *n* rows per group.
 
     @param      df          dataframe
     @param      by_keys     rows will be grouped by these columns

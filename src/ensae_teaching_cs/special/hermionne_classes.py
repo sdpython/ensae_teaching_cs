@@ -79,7 +79,7 @@ class Regle2(Regle):
         return True
 
 
-class Regle3:
+class Regle3(Regle):
     """
     implémente la troisième règle
     """
@@ -97,7 +97,7 @@ class Regle3:
         return True
 
 
-class Regle4:
+class Regle4(Regle):
     """
     implémente la quatrième règle
     """
@@ -113,7 +113,7 @@ class Regle4:
         return True
 
 
-class Regle5:
+class Regle5(Regle):
     """
     implémente la cinquième règle
     """

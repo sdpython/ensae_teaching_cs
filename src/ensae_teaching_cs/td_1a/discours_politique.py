@@ -19,7 +19,7 @@ endLine = "\r\n"
 
 def xmlParsingLongestDiv(text):
     """
-    extract the longest div section
+    Extracts the longest div section.
 
     @param      text        text of HTML page
     @return                 text
@@ -94,7 +94,8 @@ def xmlParsingLongestDiv(text):
 
 def html_unescape(text):
     """
-    Removes HTML or XML character references and entities from a text string.
+    Removes :epkg:`HTML` or :epkg:`XML`
+    character references and entities from a text string.
     keep ``&amp;``, ``&gt;``, ``&lt;`` in the source code.
     from `Fredrik Lundh <http://effbot.org/zone/re-sub.htm#unescape-html>`_
 
@@ -130,7 +131,7 @@ def html_unescape(text):
 
 def force_unicode(text):
     """
-    deal with unicodes
+    Deals with unicodes.
 
     @param      text        text
     @return                 text
@@ -205,7 +206,7 @@ def force_unicode(text):
 def retrieve_speeches_json(
         url="http://www.elysee.fr/chronologie/download/json"):
     """
-    retrieve the speeches from the Elysées
+    Retrieves the speeches from the :epkg:`Elysees`.
 
     @param      url     url
     @return             list of documents
@@ -218,7 +219,7 @@ def retrieve_speeches_json(
 
 def remove_accent(text):
     """
-    replaces French accents by regular letters
+    Replaces French accents by regular letters.
 
     @param  text        text
     @return             cleaned text
@@ -232,7 +233,7 @@ def remove_accent(text):
 def get_elysee_speech_from_elysees(
         title, url="http://www.elysee.fr/chronologie/article/"):
     """
-    retrieve the text from Elysées
+    Retrieves the text from the :epkg:`Elysees`.
 
     @param      title       title of the document
     @param      url         weebiste
@@ -261,7 +262,7 @@ def get_elysee_speech_from_elysees(
 
 def enumerate_speeches_from_elysees(skip=0, use_json=False):
     """
-    enumerates speeches Elysees Speeches
+    Enumerates speeches from the :epkg:`Elysees`.
 
     @param      skip        skip the first one in the list
     @param      use_json    or json format or xml (json format is incomplete)

@@ -12,7 +12,7 @@ except ImportError as e:
 
 def pdf_read_content(filename):
     """
-    extracts the text from a PDF file
+    Extracts the text from a :epkg:`PDF` file.
 
     @param      filename            (str) filename
     @return                         content (string)

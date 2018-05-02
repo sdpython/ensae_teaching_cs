@@ -18,8 +18,8 @@ from ..helpers.pygame_helper import wait_event, empty_main_loop
 
 def construit_ville(n, x=1000, y=700):
     """
-    tire aléatoirement n villes dans un carrée x * y, on choisit
-    ces villes de sortent qu'elles ne soient pas trop proches"""
+    Tire aléatoirement *n* villes dans un carrée ``x * y``, on choisit
+    ces villes de sortent qu'elles ne soient pas trop proches."""
     # deux villes ne pourront pas être plus proches que mind
     mind = math.sqrt(x * x + y * y) / (n * 0.75)
     # liste vide
@@ -45,7 +45,7 @@ def construit_ville(n, x=1000, y=700):
 
 def distance_euclidian(p1, p2):
     """
-    calcule la distance entre deux villes
+    Calcule la distance entre deux villes.
     """
     x = p1[0] - p2[0]
     y = p1[1] - p2[1]
@@ -54,21 +54,22 @@ def distance_euclidian(p1, p2):
 
 def vecteur_points(p1, p2):
     """
-    retourne le vecteur entre les points p1 et p2
+    Retourne le vecteur entre les points *p1* et *p2*.
     """
     return (p2[0] - p1[0], p2[1] - p1[1])
 
 
 def vecteur_norme(vec):
     """
-    retourne la norme d'un vecteur
+    Retourne la norme d'un vecteur.
     """
     return math.sqrt(vec[0] * vec[0] + vec[1] * vec[1])
 
 
 def vecteur_cosinus(vec1, vec2):
     """
-    retourne le cosinus entre deux vecteurs, utilise le produit scalaire
+    Retourne le cosinus entre deux vecteurs,
+    utilise le produit scalaire.
     """
     norm1 = vecteur_norme(vec1)
     norm2 = vecteur_norme(vec2)
@@ -82,7 +83,8 @@ def vecteur_cosinus(vec1, vec2):
 
 def vecteur_sinus(vec1, vec2):
     """
-    retourne le sinus entre deux vecteurs, utilise le produit vectoriel
+    Retourne le sinus entre deux vecteurs,
+    utilise le produit vectoriel.
     """
     norm1 = vecteur_norme(vec1)
     norm2 = vecteur_norme(vec2)
@@ -96,24 +98,24 @@ def vecteur_sinus(vec1, vec2):
 
 def oppose_vecteur(vec):
     """
-    retourne le vecteur opposé
+    retourne le vecteur opposé.
     """
     return (-vec[0], -vec[1])
 
 
 def repartition_zone(villes, zone_taille, ask_zone=False):
     """
-    répartit les villes en zones, retourne les villes rangées par zones,
+    Répartit les villes en zones, retourne les villes rangées par zones,
     chaque éléments zones [z][k] contient :
 
     - les coordonnées de la ville
     - ses coordonnées en zone, (zx, zy)
     - son indice dans la liste villes
 
-    la fonction retourne également le nombre de zones
+    La fonction retourne également le nombre de zones
     selon l'axe des abscisses et l'axe des ordonnées,
-    retourne aussi le nombre de zones, si ask_zone est True,
-    retourne un paramètre supplémentaire : zone
+    retourne aussi le nombre de zones, si *ask_zone* est True,
+    retourne un paramètre supplémentaire : *zone*.
     """
     mx = min(v[0] for v in villes)
     my = min(v[1] for v in villes)
@@ -147,10 +149,11 @@ def repartition_zone(villes, zone_taille, ask_zone=False):
 
 def voisinage_zone(z, Zmax, X, Y):
     """
-    retourne la liste des voisins d'une zone z
-    sachant qu'il y a X zones sur l'axe des abscisses et Y zones sur l'axe des ordonnées,
-    Zmax est le nombre de zones,
-    inclus z dans cette liste
+    Retourne la liste des voisins d'une zone *z*
+    sachant qu'il y a *X* zones sur l'axe des abscisses
+    et *Y* zones sur l'axe des ordonnées,
+    *Zmax* est le nombre de zones,
+    inclus *z* dans cette liste.
     """
     x = z % X
     y = z // X
@@ -177,11 +180,11 @@ def voisinage_zone(z, Zmax, X, Y):
 
 def arbre_poids_minimal(villes, zone_taille, distance):
     """
-    construit l'arbre de poids minimal, retourne une liste de
+    Construit l'arbre de poids minimal, retourne une liste de
     listes, chaque sous-liste associée à une ville contient la liste des ses voisins,
-    zone_taille permet de découper l'image en zones,
+    *zone_taille* permet de découper l'image en zones,
     les distances ne seront calculées que si
-    deux éléments sont dans la même zone ou dans une zone voisine
+    deux éléments sont dans la même zone ou dans une zone voisine.
 
     @param      villes          list of tuples (tuple = coordinates)
     @param      zone_taille     @see fn repartition_zone
@@ -269,12 +272,12 @@ def arbre_poids_minimal(villes, zone_taille, distance):
 
 def circuit_eulerien(villes, arbre, screen, pygame, fLOG):
     """
-    définit un circuit eulérien, villes contient la liste des villes,
-    tandis que arbre est une liste de listes, arbre [i] est la liste des villes
-    connectées à la ville i,
+    Définit un circuit eulérien, villes contient la liste des villes,
+    tandis que arbre est une liste de listes, ``arbre[i]`` est la liste des villes
+    connectées à la ville *i*,
     on suppose que arbre est un graphe de poids minimal non orienté,
     l'algorithme ne marche pas s'il existe des villes confondues,
-    un circuit eulérien passe par tous les arêtes une et une seule fois
+    un circuit eulérien passe par tous les arêtes une et une seule fois.
     """
 
     # on choisit une ville qui est une extrémité et parmi celle-là on la
@@ -374,8 +377,8 @@ def circuit_eulerien(villes, arbre, screen, pygame, fLOG):
 
 def circuit_hamiltonien(chemin):
     """
-    extrait un circuit hamiltonien depuis un circuit eulérien,
-    passe par tous les sommets une et une seule fois
+    Extrait un circuit hamiltonien depuis un circuit eulérien,
+    passe par tous les sommets une et une seule fois.
     """
     nb = max(chemin) + 1
     res = []
@@ -402,16 +405,16 @@ def equation_droite(p1, p2):
 
 def evaluation_droite(a, b, c, p):
     """
-    l'équation d'une droite est : ax + by + c, retourne la valeur
-    de cette expression au point p
+    L'équation d'une droite est : ``ax + by + c``, retourne la valeur
+    de cette expression au point *p*.
     """
     return a * p[0] + b * p[1] + c
 
 
 def intersection_segment(p1, p2, p3, p4):
     """
-    dit si les segments [p1 p2] et [p3 p4] ont une intersection,
-    ne retourne pas l'intersection
+    Dit si les segments *[p1 p2]* et *[p3 p4]* ont une intersection,
+    ne retourne pas l'intersection.
     """
     # équation de la droite (p1 p2)
     a1, b1, c1 = equation_droite(p1, p2)
@@ -428,7 +431,7 @@ def intersection_segment(p1, p2, p3, p4):
 
 def longueur_chemin(chemin, distance):
     """
-    retourne la longueur d'un chemin
+    Retourne la longueur d'un chemin.
     """
     s = 0
     nb = len(chemin)
@@ -439,11 +442,12 @@ def longueur_chemin(chemin, distance):
 
 def retournement_essai(chemin, i, j, negligeable=1e-5, distance=None):
     """
-    dit s'il est judicieux de parcourir le chemin entre les sommets i et j
+    Dit s'il est judicieux de parcourir le chemin entre les sommets *i* et *j*
     en sens inverse, si c'est judicieux, change le chemin et retourne True,
     sinon, retourne False,
-    si j < i, alors la partie à inverser est
-    i, i+1, i+2, ..., len(chemin) -1, 0, 1, ..., j
+    si *j < i*, alors la partie à inverser est
+    *i*, *i+1*, *i+2*, ..., *len(chemin)*,
+    *-1*, *0*, *1*, ..., *j*.
     """
 
     nb = len(chemin)
@@ -487,9 +491,9 @@ def retournement_essai(chemin, i, j, negligeable=1e-5, distance=None):
 
 def retournement(chemin, taille, fLOG, distance):
     """
-    amélioration du chemin par un algorithme simple,
+    Amélioration du chemin par un algorithme simple,
     utilise des retournements de taille au plus <taille>,
-    retourne le nombre de modifications
+    retourne le nombre de modifications.
     """
 
     # traitement des petits retournements
@@ -515,10 +519,10 @@ def retournement(chemin, taille, fLOG, distance):
 
 def echange_position_essai(chemin, a, b, x, inversion, negligeable=1e-5, distance=None):
     """
-    échange la place des villes ka et kb pour les placer entre les villes i et i+1,
+    Echange la place des villes ka et kb pour les placer entre les villes *i* et *i+1*,
     si inversion est True, on inverse également le chemin inséré, si inversion est False,
     on ne l'inverse pas,
-    si cela améliore, déplace les villes et retourne True, sinon, retourne False
+    si cela améliore, déplace les villes et retourne True, sinon, retourne False.
     """
 
     nb = len(chemin)
@@ -640,11 +644,11 @@ def echange_position_essai(chemin, a, b, x, inversion, negligeable=1e-5, distanc
 
 def dessin_arete_zone(chemin, taille_zone, X, Y):
     """
-    retourne une liste de listes de listes,
-    res [i][j] est une liste des arêtes passant près de la zone (x,y) = [i][j],
-    si k in res [i][j], alors l'arête k,k+1 est dans la zone (i,j),
-    X est le nombre de zones horizontalement, Y est le nombre de zones verticalement,
-    taille_zone est la longueur du côté du carré d'une zone
+    Retourne une liste de listes de listes,
+    ``res[i][j]`` est une liste des arêtes passant près de la zone ``(x,y) = [i][j]``,
+    si *k* in ``res[i][j]``, alors l'arête *k*, *k+1* est dans la zone *(i,j)*,
+    *X* est le nombre de zones horizontalement, *Y* est le nombre de zones verticalement,
+    *taille_zone* est la longueur du côté du carré d'une zone.
     """
     res = [[[] for j in range(0, Y + 1)] for i in range(0, X + 1)]
     nb = len(chemin)
@@ -665,9 +669,10 @@ def dessin_arete_zone(chemin, taille_zone, X, Y):
 
 def voisinage_zone_xy(x, y, X, Y):
     """
-    retourne la liste des voisins d'une zone (x,y)
-    sachant qu'il y a X zones sur l'axe des abscisses et Y zones sur l'axe des ordonnées,
-    inclus z dans cette liste
+    Retourne la liste des voisins d'une zone *(x,y)*
+    sachant qu'il y a *X* zones sur l'axe des abscisses
+    et *Y* zones sur l'axe des ordonnées,
+    inclus *z* dans cette liste
     """
     voisin = [(x, y)]
     if x > 0:
@@ -691,13 +696,13 @@ def voisinage_zone_xy(x, y, X, Y):
 
 def echange_position(chemin, taille, taille_zone, X, Y, grande=0.5, fLOG=None, distance=None):
     """
-    regarde si on ne peut pas déplacer un segment de longueur taille
+    Regarde si on ne peut pas déplacer un segment de longueur taille
     pour supprimer les arêtes les plus longues,
     au maximum <grande> longues arêtes,
     retourne le nombre de changement effectués,
-    X est le nombre de zones horizontalement,
-    Y est le nombre de zones verticalement,
-    taille_zone est la longueur d'un côté du carré d'une zone
+    *X* est le nombre de zones horizontalement,
+    *Y* est le nombre de zones verticalement,
+    *taille_zone* est la longueur d'un côté du carré d'une zone.
     """
 
     nb = len(chemin)
@@ -832,11 +837,11 @@ def echange_position(chemin, taille, taille_zone, X, Y, grande=0.5, fLOG=None, d
 
 def supprime_croisement(chemin, taille_zone, X, Y, fLOG, distance=None):
     """
-    supprime les croisements d'arêtes,
+    Supprime les croisements d'arêtes,
     retourne le nombre de changement effectués,
-    X est le nombre de zones horizontalement,
-    Y est le nombre de zones verticalement,
-    taille_zone est la longueur d'un côté du carré d'une zone
+    *X* est le nombre de zones horizontalement,
+    *Y* est le nombre de zones verticalement,
+    *taille_zone* est la longueur d'un côté du carré d'une zone
     """
 
     nb = len(chemin)
@@ -899,13 +904,13 @@ def amelioration_chemin(chemin, taille_zone, X, Y, taille=10, screen=None,
                         fLOG=None, pygame=None, max_iter=None, images=None,
                         distance=None):
     """
-    amélioration du chemin par un algorithme simple,
+    Amélioration du chemin par un algorithme simple,
     utilise des retournements de taille au plus *taille*,
     traite les arcs qui se croisent,
-    traite les grands arcs, utilise un quadrillage de taille window,
-    X est le nombre de zones horizontalement,
-    Y est le nombre de zones verticalement,
-    taille_zone est la longueur d'un côté du carré d'une zone
+    traite les grands arcs, utilise un quadrillage de taille *window*,
+    *X* est le nombre de zones horizontalement,
+    *Y* est le nombre de zones verticalement,
+    *taille_zone* est la longueur d'un côté du carré d'une zone.
     """
 
     white = 255, 255, 255
@@ -964,8 +969,8 @@ def tsp_kruskal_algorithm(points, size=20, length=10, max_iter=None,
                           fLOG=noLOG, pygame=None, screen=None, images=None,
                           distance=None):
     """
-    find the shortest path going through all points, points require to
-    be a 2 dimensional space
+    Finds the shortest path going through all points,
+    points require to be a 2 dimensional space.
 
     @param      points      list 2-tuple (X,Y)
     @param      size        the 2D plan is split into square zones
@@ -984,7 +989,7 @@ def tsp_kruskal_algorithm(points, size=20, length=10, max_iter=None,
             # ...
             return d
 
-    Les points identiques sont enlevés puis ajouté à la fin.
+    Les points identiques sont enlevés puis ajoutés à la fin.
     """
     # verification
     if distance is None:

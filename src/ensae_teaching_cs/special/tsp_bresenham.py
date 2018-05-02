@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 """
-ce module contient la fonction trace_ligne qui retourne l'ensemble des pixels
-concernés par le tracé d'une ligne en 8-connexité entre deux pixels
+@file
+@brief Ce module contient la fonction trace_ligne qui retourne l'ensemble des pixels
+concernés par le tracé d'une ligne en 8-connexité entre deux pixels.
 """
 
 
 def trace_ligne_simple(x1, y1, x2, y2):
     """
-    trace une ligne entre les points de coordonnées *(x1,y1)* et *(x2,y2)*,
+    Trace une ligne entre les points de coordonnées *(x1,y1)* et *(x2,y2)*,
     on suppose que *x2 > x1*, *y2 >= y1*,
-    retourne la ligne sous la forme d'un ensemble de pixels *(x,y)*"""
+    retourne la ligne sous la forme d'un ensemble de pixels *(x,y)*."""
 
     if y2 - y1 <= x2 - x1:  # droite en dessous de la première bissectrice
         vx = x2 - x1
@@ -46,9 +47,12 @@ def trace_ligne_simple(x1, y1, x2, y2):
 
 
 def draw_line(x1, y1, x2, y2):
-    """trace une ligne entre les points de coordonnées (x1,y1) et (x2,y2),
+    """
+    Trace une ligne entre les points de coordonnées *(x1,y1)* et *(x2,y2)*,
     aucune contrainte sur les coordonnées,
-    retourne la ligne sous la forme d'un ensemble de pixels (x,y)"""
+    retourne la ligne sous la forme d'un ensemble de pixels *(x,y)*.
+    Utilise l'algorithme de :epkg:`Bresenham`.
+    """
 
     if x1 == x2:
         if y1 <= y2:
@@ -80,11 +84,14 @@ def draw_line(x1, y1, x2, y2):
 
 def draw_ellipse(xc, yc, a, b):
     """
-    dessine une ellipse de centre xc,yc, de demi axe horizontal a,
+    Dessine une ellipse de centre *xc, yc*, de demi axe horizontal *a*,
     de demi-axe vertical b, l'ellipse a pour équation x²/a² + y²/b² = 1
-    si l'origine est placée en xc,yc,
-    l'équation de la tangente au point x0, y0 est :  x x0 / a² + y y0 / b² = 0,
-    ou x x0 b² + y y0 a² = 0"""
+    si l'origine est placée en *xc, yc*,
+    l'équation de la tangente au point *x0, y0* est :
+    :math:`\frac{x x_0}{a^2} + \frac{y y_0}{b^2}=0`,
+    ou :math:`x x_0 b^2 + y y_0 a^2 = 0`.
+    Utilise l'algorithme de :epkg:`Bresenham`.
+    """
 
     # on évite les cas litigieux
     if a == 0:
@@ -141,7 +148,7 @@ def draw_ellipse(xc, yc, a, b):
 
 def display_line(ligne, screen, pygame):
     """
-    affiche une ligne à l'écran
+    Affiche une ligne à l'écran.
     """
     color = 0, 0, 0
     for p in ligne:

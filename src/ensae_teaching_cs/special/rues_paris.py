@@ -10,7 +10,8 @@ from pyquickhelper.loghelper import noLOG
 
 def distance_paris(lat1, lng1, lat2, lng2):
     """
-    distance euclidienne approchant la distance de Haversine (uniquement pour Paris)
+    Distance euclidienne approchant la distance de Haversine
+    (uniquement pour Paris).
 
     @param      lat1    lattitude
     @param      lng1    longitude
@@ -23,7 +24,8 @@ def distance_paris(lat1, lng1, lat2, lng2):
 
 def distance_haversine(lat1, lng1, lat2, lng2):
     """
-    calcule la distance de Haversine `Haversine formula <http://en.wikipedia.org/wiki/Haversine_formula>`_
+    Calcule la distance de Haversine
+    `Haversine formula <http://en.wikipedia.org/wiki/Haversine_formula>`_
 
     @param      lat1    lattitude
     @param      lng1    longitude
@@ -332,7 +334,7 @@ def eulerien_extension(
 
 def connected_components(edges):
     """
-    computes the connected components
+    Computes the connected components.
 
     @param      edges       edges
     @return                 dictionary { vertex : id of connected components }
@@ -358,7 +360,7 @@ def connected_components(edges):
 
 def euler_path(edges, added_edges):
     """
-    Compute an eulerian path. We assume every vertex has an even degree.
+    Computes an eulerian path. We assume every vertex has an even degree.
 
     @param      edges           initial edges
     @param      added_edges     added edges
@@ -437,7 +439,7 @@ def euler_path(edges, added_edges):
 
 def _delete_edge(edges_from, n, to):
     """
-    removes an edge from the graph
+    Removes an edge from the graph.
 
     @param      edges_from      structure which contains the edges (will be modified)
     @param      n               first vertex
@@ -474,7 +476,7 @@ def _delete_edge(edges_from, n, to):
 
 def _explore_path(edges_from, begin):
     """
-    explore an eulerian path, remove used edges from edges_from
+    Explores an eulerian path, remove used edges from edges_from.
 
     @param      edges_from      structure which contains the edges (will be modified)
     @param      begin           first vertex to use

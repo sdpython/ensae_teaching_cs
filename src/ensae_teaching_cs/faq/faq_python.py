@@ -571,7 +571,7 @@ def list_of_installed_packages():
 
 def information_about_package(name):
     """
-    calls ``pip show`` to retrieve information about packages
+    Calls ``pip show`` to retrieve information about packages.
 
     .. faqref::
         :tag: python

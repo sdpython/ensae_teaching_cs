@@ -8,8 +8,7 @@ import numpy
 
 def graph_style(style='ggplot'):
     """
-
-    change matplotlib style
+    Changes :epkg:`matplotlib` style.
 
     @param      style       style
 
@@ -32,7 +31,7 @@ def graph_style(style='ggplot'):
 
 def close_all():
     """
-    Close every graph with matploblib.
+    Closes every graph with :epkg:`matploblib`.
 
     .. faqref::
         :tag: matplotlib
@@ -65,7 +64,7 @@ def zoomable():
 def graph_ggplot_with_label(x, y, labels, bar=True, title=None, figsize=(6, 4), style=None,
                             ax=None, **kwargs):
     """
-    creates a graph with matplotlib
+    Creates a graph with :epkg:`matplotlib`.
 
     @param      x       x
     @param      y       y
@@ -202,7 +201,7 @@ def graph_ggplot_with_label(x, y, labels, bar=True, title=None, figsize=(6, 4), 
 
 def change_legend_location(ax, new_location="lower center"):
     """
-    Changes the location of the legend
+    Changes the location of the legend.
 
     @param      ax              `Axes <http://matplotlib.org/api/axes_api.html#axes>`_
     @param      new_location    new_location, see method `legend <http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes.legend>`_
@@ -261,7 +260,7 @@ def graph_cities(df, names=["Longitude", "Latitude", "City"], ax=None, linked=Fa
                  drawmeridians=True, drawmapboundary=True,
                  **params):
     """
-    plots the cities on a map
+    Plots the cities on a map with :epkg:`basemap`.
 
     @param      df      dataframe
     @param      names   names of the column Latitude, Longitude, City

@@ -1,0 +1,22 @@
+
+.. blogpost::
+    :title: Programmation quantique
+    :keywords: quantique, qubit, quantique
+    :date: 2018-05-03
+    :categories: biblio
+
+    J'ai toujours comprendre comment la programmation
+    quantique fonctionnait, avec les
+    `qubit <https://fr.wikipedia.org/wiki/Qubit>`_.
+    Quand j'aurais le temps, je lirai sans doute ceci :
+    `Quantum Algorithm Implementations for Beginners <https://arxiv.org/pdf/1804.03719.pdf>`_.
+    Un autre article intéressant :
+    `Geometrical Insights for Implicit Generative Modeling <https://arxiv.org/pdf/1712.07822.pdf>`_.
+    Et quelques autres :
+    `Robust Sum MSE Optimization for Downlink Multiuser MIMO Systems with Arbitrary Power Constraint: Generalized Duality Approach <https://arxiv.org/pdf/1311.6433.pdf>`_,
+    `Why We (Usually) Don’t Have to Worry About Multiple Comparisons <http://www.stat.columbia.edu/~gelman/research/published/multiple2f.pdf>`_.
+
+    Pour finir, un module pour exécuter du code :epkg:`python` de façon sécurisée :
+    `RestrictedPython <https://github.com/zopefoundation/RestrictedPython>`_.
+    Et un dernier pour monitorer l'exécution d'un programme :
+    `TiMemory <https://pypi.org/project/TiMemory/>`_.

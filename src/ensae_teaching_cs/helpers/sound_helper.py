@@ -8,9 +8,8 @@ import sys
 
 def convert_music_file(infile, outfile, format="wav", ffmpeg="ffmpeg.exe"):
     """
-    converts a music file using `pydub <https://pypi.python.org/pypi/pydub>`_
+    Converts a music file using `pydub <https://pypi.python.org/pypi/pydub>`_
     and `ffmeg <http://www.ffmpeg.org/>`_.
-
     It converts a music file into another format.
 
     @param      infile      file to convert

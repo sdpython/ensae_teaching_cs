@@ -11,9 +11,9 @@ def ftp_list_modules(ftp_location="/www/htdocs/enseignement/setup",
                      http_location="http://www.xavierdupre.fr/enseignement/setup",
                      filename="index_modules_list.html"):
     """
-    Update the list of backuped modules assuming they are stored on a FTP website.
+    Updates the list of backuped modules assuming they are stored on a FTP website.
     It gets the list of wheels in a folder and creates a HTML pages.
-    It then uploads the final pages
+    It then uploads the final pages.
 
     @param  ftp_location    location on the website
     @param  http_location   same location but on http protocol

@@ -91,6 +91,7 @@ Contenu des enseignements
     9. Getting started <i_getting_started>
     10. Galleries d'exemples <i_galleries>
     11. Index <i_index>
+    12. API <api/index>
 
 Getting Started - Démarrer
 ==========================

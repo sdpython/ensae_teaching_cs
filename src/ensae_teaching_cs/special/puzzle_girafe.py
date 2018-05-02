@@ -12,7 +12,7 @@ from ..helpers.pygame_helper import wait_event, empty_main_loop
 
 class PuzzleGirafeBord:
     """
-    définition d'un bord ou côté d'une pièce, il posside :
+    Définition d'un bord ou côté d'une pièce, il possède :
 
     - partie : une partie de la girafe (haut ou bas)
     - une couleur : la couleur de cette partie, (orange, violet, bleu clair, bleu foncé)
@@ -20,10 +20,7 @@ class PuzzleGirafeBord:
 
     def __init__(self, definition):
         """
-        constructeur
-
         @param      definition      chaîne de caractères
-
 
         *definition* est une chaîne de 2 caractères qui définit un bord, exemple :
 
@@ -53,8 +50,8 @@ class PuzzleGirafeBord:
 
     def __str__(self):
         """
-        cette méthode est appelée lorsqu'on exécute l'instruction print
-        avec un objet de type Bord
+        Cette méthode est appelée lorsqu'on exécute l'instruction print
+        avec un objet de type @see cl Bord.
         """
         return self.partie + " " + self.couleur
 
@@ -68,7 +65,7 @@ class PuzzleGirafeBord:
 
 class PuzzleGirafePiece:
     """
-    définition d'une pièce du puzzle, celle-ci inclut :
+    Définition d'une pièce du puzzle, celle-ci inclut :
 
     - **bord** : cette liste contient quatre objets de type Bord, cette liste ne changera plus
     - **position** : c'est la position de la pièce dans le puzzle, ce qui nous intéresse,

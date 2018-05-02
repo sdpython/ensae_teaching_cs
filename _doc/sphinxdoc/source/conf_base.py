@@ -122,12 +122,13 @@ epkg_dictionary['ml_basic_plot_binary_classification'] = "http://www.xavierdupre
 epkg_dictionary['ml_basic_plot_grid_search'] = "http://www.xavierdupre.fr/app/papierstat/helpsphinx/gyexamples/ml_basic/plot_grid_search.html#sphx-glr-gyexamples-ml-basic-plot-grid-search-py"
 epkg_dictionary['ml_basic_plot_roc'] = "http://www.xavierdupre.fr/app/papierstat/helpsphinx/gyexamples/plots/plot_roc.html#sphx-glr-gyexamples-plots-plot-roc-py"
 
-# packages
+# packages and links
 
 epkg_dictionary["ACP"] = 'https://fr.wikipedia.org/wiki/Analyse_en_composantes_principales'
 epkg_dictionary["Anaconda"] = 'https://www.continuum.io/downloads'
 epkg_dictionary["anaconda"] = 'https://www.continuum.io/downloads'
 epkg_dictionary["Arduino"] = 'https://www.arduino.cc/'
+epkg_dictionary["Bresenham"] = 'https://fr.wikipedia.org/wiki/Algorithme_de_trac%C3%A9_de_segment_de_Bresenham'
 epkg_dictionary["array"] = 'https://docs.scipy.org/doc/numpy/reference/generated/numpy.array.html'
 epkg_dictionary["AUC"] = 'http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/roc.html#aire-sous-la-courbe'
 epkg_dictionary["basemap"] = 'https://matplotlib.org/basemap/'
@@ -137,6 +138,7 @@ epkg_dictionary["catboost"] = "https://github.com/catboost/catboost"
 epkg_dictionary["CNTK"] = 'https://www.microsoft.com/en-us/research/product/cognitive-toolkit/'
 epkg_dictionary["dask"] = 'http://dask.pydata.org/en/latest/'
 epkg_dictionary["dlib"] = 'http://dlib.net/'
+epkg_dictionary['Elysees'] = 'http://www.elysee.fr/'
 epkg_dictionary["ENSAE"] = 'http://www.ensae.fr/'
 epkg_dictionary["falcon"] = 'https://falconframework.org/'
 epkg_dictionary["FastText"] = 'https://fasttext.cc/'
@@ -188,5 +190,6 @@ epkg_dictionary["TensorFlow"] = 'https://www.tensorflow.org/'
 epkg_dictionary["tkinter"] = 'https://docs.python.org/3/library/tkinter.html'
 epkg_dictionary["theano"] = 'http://deeplearning.net/software/theano/'
 epkg_dictionary["thorpy"] = 'http://www.thorpy.org/'
+epkg_dictionary["TSP"] = 'https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_voyageur_de_commerce'
 epkg_dictionary["Windows"] = 'https://fr.wikipedia.org/wiki/Microsoft_Windows'
 epkg_dictionary["xgboost"] = "https://xgboost.readthedocs.io/en/latest/"

@@ -13,10 +13,6 @@ from .faq_jupyter_helper import nb_open
 
 def notebook_path():
     """
-    change matplotlib style
-
-    @param      style       style
-
     .. faqref::
         :tag: jupyter
         :title: Récupérer le fichier du notebook depuis le notebook
@@ -42,7 +38,7 @@ def notebook_path():
 
 def r_and_notebook():
     """
-    Cette fonction test si la variable ``R_HOME`` est définie et pointe sur une
+    Cette fonction teste si la variable ``R_HOME`` est définie et pointe sur une
     version de R présente.
 
     .. exref::

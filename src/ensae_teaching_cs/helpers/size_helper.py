@@ -10,7 +10,7 @@ from collections import deque
 
 def object_size(o):
     """
-    Call `getsizeof <https://docs.python.org/3/library/sys.html#sys.getsizeof>`_.
+    Calls `getsizeof <https://docs.python.org/3/library/sys.html#sys.getsizeof>`_.
 
     @param      o       object
     @return             size of the object, that excludes references objects.

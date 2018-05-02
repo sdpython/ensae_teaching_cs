@@ -80,9 +80,8 @@ def scatter_xy_id(xy_id, legend=None, ax=None, **options):
 
 def scatter_xyc(points, smooth=0, div=10, ax=None, **options):
     """
-    Draw a 2D graph (X,Y, color), the color is chosen based on a value f(x,y)
-    The function requires `matploblib <http://matplotlib.org/>`_
-    and `SciPy <http://www.scipy.org/>`_
+    Draws a 2D graph (X,Y, color), the color is chosen based on a value *f(x,y)*
+    The function requires :epkg:`matploblib` and :epkg:`scipy`.
 
     @param      points      (x,y, z=f(x,y) )
     @param      smooth      applies n times a smoothing I * M (convolutional)
@@ -159,9 +158,9 @@ def scatter_xyc(points, smooth=0, div=10, ax=None, **options):
 
 def scatter_xyz(points, smooth=0, div=100, ax=None, **options):
     """
-    Draw a 3D graph (X,Y, Z)
-    The function requires `matploblib <http://matplotlib.org/>`_
-    and `SciPy <http://www.scipy.org/>`_
+    Draws a 3D graph (X, Y, Z).
+    The function requires :epkg:`matploblib`
+    and :epkg:`scipy`.
 
     @param      points      (x,y, z=f(x,y) )
     @param      div         number of divisions for axis

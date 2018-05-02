@@ -15,8 +15,8 @@ from ..helpers.pygame_helper import wait_event, empty_main_loop
 
 def construit_ville(n, x=1000, y=700):
     """
-    tire aléatoirement n villes dans un carré ``x * y``,
-    on choisit ces villes de sorte qu'elles ne soient pas trop proches
+    Tire aléatoirement *n* villes dans un carré ``x * y``,
+    on choisit ces villes de sorte qu'elles ne soient pas trop proches.
     """
     # deux villes ne pourront pas être plus proches que mind
     mind = math.sqrt(x * x + y * y) / (n * 0.75)
@@ -43,9 +43,9 @@ def construit_ville(n, x=1000, y=700):
 
 def construit_liste_neurones(villes, nb=0):
     """
-    place les neurones sur l'écran,
+    Place les neurones sur l'écran,
     il y a autant de neurones que de villes,
-    le paramètre villes est la liste des villes
+    le paramètre villes est la liste des villes.
     """
     if nb == 0:
         nb = len(villes)
@@ -76,7 +76,7 @@ def construit_liste_neurones(villes, nb=0):
 
 def distance_euclidienne_carree(p1, p2):
     """
-    calcule la distance euclidienne entre deux points
+    Calcule la distance euclidienne entre deux points.
     """
     x = p1[0] - p2[0]
     y = p1[1] - p2[1]
@@ -85,28 +85,28 @@ def distance_euclidienne_carree(p1, p2):
 
 def ajoute_vecteur(v, n):
     """
-    ajoute deux vecteurs entre eux
+    Ajoute deux vecteurs entre eux.
     """
     return (v[0] + n[0], v[1] + n[1])
 
 
 def soustrait_vecteur(v, n):
     """
-    soustrait deux vecteurs
+    Soustrait deux vecteurs.
     """
     return (v[0] - n[0], v[1] - n[1])
 
 
 def multiplie_vecteur(v, f):
     """
-    multiplie un vecteur par un scalaire
+    Multiplie un vecteur par un scalaire.
     """
     return (v[0] * f, v[1] * f)
 
 
 def poids_attirance(p, dist):
     """
-    calcul le poids d'attraction d'une neurone vers une ville
+    Calcule le poids d'attraction d'une neurone vers une ville.
     """
     d = p[0] * p[0] + p[1] * p[1]
     d = math.sqrt(d)
@@ -116,14 +116,15 @@ def poids_attirance(p, dist):
 
 def vecteur_norme(p):
     """
-    calcul la norme d'un vecteur
+    Calcul la norme d'un vecteur.
     """
     return math.sqrt(p[0] * p[0] + p[1] * p[1])
 
 
 def deplace_neurone(n, villes, neurones, dist_w, forces, compte):
     """
-    déplace le neurone de plus proche de la ville n, déplace ses voisins
+    Déplace le neurone de plus proche de la ville *n*,
+    déplace ses voisins.
 
     @param    villes        liste des villes
     @param    neurones      liste des neurones
@@ -179,8 +180,8 @@ def deplace_neurone(n, villes, neurones, dist_w, forces, compte):
 
 def iteration(villes, neurones, dist, forces, compte_v, compte_n):
     """
-    choisit une ville aléatoirement et attire le neurones le plus proche,
-    choisit cette ville parmi les villes les moins fréquemment choisies
+    Choisit une ville aléatoirement et attire le neurones le plus proche,
+    choisit cette ville parmi les villes les moins fréquemment choisies.
 
     @param    villes     liste des villes
     @param    neurones   liste des neurones
@@ -200,8 +201,8 @@ def iteration(villes, neurones, dist, forces, compte_v, compte_n):
 
 def modifie_structure(neurones, compte, nb_sel):
     """
-    modifie la structure des neurones, supprime les neurones jamais
-    déplacés, et ajoute des neurones lorsque certains sont trop sollicités
+    Modifie la structure des neurones, supprime les neurones jamais
+    déplacés, et ajoute des neurones lorsque certains sont trop sollicités.
     """
     def cmp_add(i, j):
         return -1 if i[0] < j[0] else (1 if i[0] > j[0] else 0)
@@ -244,7 +245,7 @@ def modifie_structure(neurones, compte, nb_sel):
 
 def moyenne_proximite(villes):
     """
-    retourne la distance moyenne entre deux villes les plus proches
+    Retourne la distance moyenne entre deux villes les plus proches.
     """
     c = 0
     m = 0
@@ -264,7 +265,7 @@ def moyenne_proximite(villes):
 
 def display_neurone(neurones, screen, bn, pygame):
     """
-    dessine les neurones à l'écran
+    Dessine les neurones à l'écran.
     """
     color = 0, 0, 255
     color2 = 0, 255, 0
@@ -278,7 +279,7 @@ def display_neurone(neurones, screen, bn, pygame):
 
 def display_ville(villes, screen, bv, pygame):
     """
-    dessine les villes à l'écran
+    Dessine les villes à l'écran.
     """
     color = 255, 0, 0
     color2 = 0, 255, 0

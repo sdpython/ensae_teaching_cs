@@ -24,7 +24,7 @@ def get_data(whereto):
 
 def enumerate_events(df):
     """
-    construit la liste des événements (vélo réposé ou retiré)
+    Construit la liste des événements (vélo réposé ou retiré).
 
     @param      df      DataFrame
     @return             énumère événéments (ierator) ("file", "collect_date", "name", "lat", "lng", +1 ou -1)
@@ -62,8 +62,6 @@ class ParemetreCoutTrajet:
                  high_time=0.75,
                  low_time=0.1):
         """
-        constructor
-
         @param      max_speed       au-delà, c'est une vitesse impossible
         @param      high_speed      au-delà, c'est la vitesse d'un cycliste
         @param      low_speed       en-deça, il vaut mieux marcher
@@ -85,14 +83,15 @@ class ParemetreCoutTrajet:
     @property
     def values(self):
         """
-        retourne les valeurs dans un dictionnaire
+        Retourne les valeurs dans un dictionnaire.
         """
         return {k: self.__dict__[
             k] for k in self.__dict__.keys() if "time" in k or "speed" in k}
 
     def cost(self, dh, dt, v):
         """
-        retourne un coût, plus il est bas, plus de déplacement est probable
+        Retourne un coût, plus il est bas,
+        plus de déplacement est probable.
 
         @param      dh      distance
         @param      dt      durée
@@ -153,7 +152,7 @@ def vitesse(c, d, params):
 
 def distance(positif, negatif, appariement, params):
     """
-    calcul une distance pour un appariement conçu ici comme
+    Calculs une distance pour un appariement conçu ici comme
     la variance de la vitesse de chaque déplacement + la somme
     des coûts de chaque appariement retourné par la fonction @see fn vitesse.
 
@@ -193,11 +192,9 @@ def distance(positif, negatif, appariement, params):
 
 def appariement(events, iter=1000, params=ParemetreCoutTrajet(), fLOG=print):
     """
-    on veut apparier les événemens -1 aux événemens +1
-
-    on s'attend aux colonnes suivantes:
-        - "file", "collect_date", "name", "lat", "lng", +1 ou -1
-
+    On veut apparier les événemens -1 aux événemens +1.
+    On s'attend aux colonnes suivantes:
+    *"file"*, *"collect_date"*, *"name"*, *"lat"*, *"lng"*, *+1* ou *-1*.
     La fonction part des deux séries d'évéments rangés par ordre croissant,
     puis il permute deux appariements tant que cela diminue l'erreur d'appariement.
 
@@ -279,7 +276,7 @@ def appariement(events, iter=1000, params=ParemetreCoutTrajet(), fLOG=print):
 
 def distance_path(dfp):
     """
-    calcule la vitesse moyenne lorsque le chemin est connu
+    Calcule la vitesse moyenne lorsque le chemin est connu.
 
     @param  dfp     liste des chemins
     @return         moyenne, stddev

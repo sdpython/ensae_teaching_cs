@@ -10,7 +10,7 @@ import pickle
 
 def df2list(df):
     """
-    converts a dataframe into a list of lists
+    Converts a dataframe into a list of lists.
 
     @param      df      DataFrame
     @return             list of lists
@@ -43,7 +43,7 @@ def df2list(df):
 
 def dump_object(obj, filename_or_stream):
     """
-    Sérialize un objet dans un stream ou un fichier
+    Sérialize un objet dans un stream ou un fichier.
 
     @param      obj                     objet à sérialiser
     @param      filename_or_stream      nom de fichier ou stream
@@ -97,7 +97,7 @@ def dump_object(obj, filename_or_stream):
 
 def load_object(filename_or_stream):
     """
-    Charge un objet en mémoire après qu'il a été sérialisé
+    Charge un objet en mémoire après qu'il a été sérialisé.
 
     @param      filename_or_stream      nom de fichier ou stream
     @return                             objet

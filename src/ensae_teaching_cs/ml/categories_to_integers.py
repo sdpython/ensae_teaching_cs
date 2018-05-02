@@ -12,7 +12,6 @@ from sklearn.base import BaseEstimator, TransformerMixin
 
 
 class CategoriesToIntegers(BaseEstimator, TransformerMixin):
-
     """
     Does something similar to what
     `DictVectorizer <http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.DictVectorizer.html>`_
@@ -42,8 +41,6 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
 
     def __init__(self, columns=None, remove=None, skip_errors=False, single=False, fLOG=None):
         """
-        constructor
-
         @param      columns         specify a columns selection
         @param      remove          modalities to remove
         @param      skip_errors     skip when a new categories appear (no 1)
@@ -82,7 +79,7 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
 
     def fit(self, X, y=None, **fit_params):
         """
-        Make the list of all categories in input *X*.
+        Makes the list of all categories in input *X*.
         *X* must be a dataframe.
 
         Parameters
@@ -123,8 +120,8 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
 
     def _build_schema(self):
         """
-        concatenates all the categories
-        given the information stored in *_categories*
+        Concatenates all the categories
+        given the information stored in *_categories*.
 
         @return             list of columns, beginning of each
         """
@@ -146,7 +143,7 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
 
     def transform(self, X, y=None, **fit_params):
         """
-        Transform categories in numerical features based on the list
+        Transforms categories in numerical features based on the list
         of categories found by method *fit*.
         *X* must be a dataframe. The function does not preserve
         the order of the columns.
@@ -232,7 +229,7 @@ class CategoriesToIntegers(BaseEstimator, TransformerMixin):
 
     def fit_transform(self, X, y=None, **fit_params):
         """
-        Fit and transform categories in numerical features based on the list
+        Fits and transforms categories in numerical features based on the list
         of categories found by method *fit*.
         *X* must be a dataframe. The function does not preserve
         the order of the columns.

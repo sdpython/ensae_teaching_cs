@@ -152,7 +152,7 @@ def resolution_sudoku(s):
 
 def sudoku2str(su):
     """
-    convert a sudoku into a string
+    Converts a sudoku into a string.
 
     @param      su      sudoku
     @return              string

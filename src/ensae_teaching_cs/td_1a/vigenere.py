@@ -8,7 +8,7 @@
 
 def code_vigenere(message, cle, decode=False, binary=False):
     """
-    crypte et décrypte le code de Vigenère sachant la clé connue
+    Crypte et décrypte le code de Vigenère sachant la clé connue.
 
     @param      message     message à crypter ou décrypter
     @param      cle         clé du code
@@ -71,7 +71,7 @@ def CodeVigenere(message, cle):
 
 def PGCD(m, n):
     """
-    determine le PGCD de deux entiers
+    Détermine le PGCD de deux entiers.
 
     @param      m       premier entier
     @param      n       second entier
@@ -109,18 +109,20 @@ def PGCD(m, n):
 
 def DecodeVigenereLongueurCle(message, mot=3):
     """
-    cette fonction determine la longueur de la clé, elle
+    Cette fonction determine la longueur de la clé, elle
     repère les groupes de trois lettres qui se répète dans le message codé
     et suppose qu'il y a une très forte probabilité qu'un même groupe de trois
     lettres soit codé avec les mêmes trois lettres du message et les mêmes trois
-    lettres de la clé
+    lettres de la clé.
 
-    message  : .....DES...........DES...........DES.........DES....DES
-    cle      : ABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCD
-    code     : .....EGV.........................EGV.........EGV..........
-    distance :      <----------24--------------><----8----->
+    ::
 
-    la longueur de la clé divise le PGCD de 24 et 8
+        message  : .....DES...........DES...........DES.........DES....DES
+        cle      : ABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCD
+        code     : .....EGV.........................EGV.........EGV..........
+        distance :      <----------24--------------><----8----->
+
+    La longueur de la clé divise le *PGCD* de 24 et 8.
 
     @param      message     message codé
     @param      mot         longueur des séquences de lettres consécutifs dont on étudie la féquence
@@ -207,8 +209,8 @@ def DecodeVigenereCle(code, l):
 
 def CasseVigenere(message):
     """
-    appelle les deux fonctions @see fn DecodeVigenereLongueurCle et
-    @see fn DecodeVigenereCle pour casser le code de Vigenère
+    Appelle les deux fonctions @see fn DecodeVigenereLongueurCle et
+    @see fn DecodeVigenereCle pour casser le code de Vigenère.
 
     @param      message     message codé
     @return                 message décodé (sans la clé)

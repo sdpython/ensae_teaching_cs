@@ -23,7 +23,7 @@ class CustomCythonError(Exception):
 def compile_cython_single_script(script, skip_warn=True, fLOG=noLOG):
     """
     This function considers a script ``.pyx``, writes
-    a the proper setup file, and compiles it.
+    the proper setup file, and compiles it.
 
     @param      script      filename
     @param      skip_warn   skip warnings

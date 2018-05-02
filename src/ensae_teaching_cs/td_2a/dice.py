@@ -13,7 +13,6 @@ from .edmonds_karp import EdmondsKarpGraph
 class DiceStraight:
     """
     Inspired by `Problem A. Dice Straight <https://code.google.com/codejam/contest/6314486/dashboard>`_.
-
     On dispose de *n* dés à six faces, chaque face contient un nombre entier.
     On dispose les dès en ligne en choisissant chaque face
     de telle sorte que le nombre entier d'un dé

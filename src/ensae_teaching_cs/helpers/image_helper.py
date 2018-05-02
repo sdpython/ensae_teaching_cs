@@ -8,7 +8,7 @@ from PIL import Image
 
 def collate_images(imgs, final=None):
     """
-    collate all images horizontally in one image (if not None --> image name)
+    Collates all images horizontally in one image (if not None --> image name).
 
     @param      imgs        list of image files
     @param      final       final image (or None not to save)
@@ -32,7 +32,7 @@ def collate_images(imgs, final=None):
 
 def convert_image(imgs, ext, dest=None, fLOG=None):
     """
-    Convert an image or a list of images into a different format.
+    Converts an image or a list of images into a different format.
 
     @param      imgs        list of images (filenames)
     @param      dest        destination folder, if None, the image is saved beside the orginal one

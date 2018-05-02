@@ -11,7 +11,7 @@ from ..special import tsp_kruskal_algorithm, distance_haversine
 
 def american_cities(df_or_filename, nb_cities=-1, img=None, fLOG=fLOG):
     """
-    compute the TSP for american cities
+    Computes the :epkg:`TSP` for american cities.
 
     @param      df_or_filename  dataframe
     @param      nb_cities       number of cities to keep

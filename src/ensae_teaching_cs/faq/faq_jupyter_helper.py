@@ -14,7 +14,7 @@ from pyquickhelper.loghelper import fLOG
 
 def find_best_server(filename, profile='default'):
     """
-    find existing running server
+    Finds existing running server.
 
     @param      filename        notebook
     @param      profile         profile to use
@@ -35,9 +35,9 @@ def find_best_server(filename, profile='default'):
 
 def nb_open(filename, profile='default', open_browser=True, fLOG=fLOG):
     """
-    open a notebook with an existing server,
+    Opens a notebook with an existing server,
     if no server can be found, it starts a new one
-    (and the function runs until the server is closed)
+    (and the function runs until the server is closed).
 
     @param      filename        notebook
     @param      profile         profile to use

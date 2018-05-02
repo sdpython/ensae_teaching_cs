@@ -8,7 +8,7 @@ import os
 def make_video(images, outvid=None, fps=5, size=None,
                is_color=True, format="XVID"):
     """
-    Create a video from a list of images.
+    Creates a video from a list of images.
 
     @param      outvid      output video
     @param      images      list of images to use in the video
@@ -21,6 +21,8 @@ def make_video(images, outvid=None, fps=5, size=None,
     The function relies on `opencv <http://opencv-python-tutroals.readthedocs.org/en/latest/>`_.
     By default, the video will have the size of the first image.
     It will resize every image to this size before adding them to the video.
+    The function does not use :epkg:`moviepy` but it is a
+    a recommended module to do that.
     """
     if len(images) == 0:
         raise ValueError("no image to convert into a video")

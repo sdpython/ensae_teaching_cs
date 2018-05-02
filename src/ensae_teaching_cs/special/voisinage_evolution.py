@@ -20,7 +20,7 @@ def round(r, g, b):
 
 class Ville:
     """
-    définit une ville qui va évoluer par la suite
+    Définit une ville qui va évoluer par la suite.
 
     @param      colors          couleurs vives : simulation sans tenir compte de riches ou pauvres,
                                 seulement regroupement

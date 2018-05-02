@@ -69,7 +69,7 @@ class EdmondsKarpGraph:
     def edmonds_karp(self, source, sink, fLOG=noLOG, verbose=False,
                      update=None):
         """
-        Returns the maximum flow from s to t in the given graph.
+        Returns the maximum flow from *s* to *t* in the given graph.
 
         @param      source      source of the flow
         @param      sink        destination of the flow

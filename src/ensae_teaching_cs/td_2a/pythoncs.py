@@ -7,7 +7,7 @@
 
 def create_cs_function(name, code, dependencies=None, usings=None):
     """
-    creates a C# function from a string
+    Creates a :epkg:`C#` function from a string.
 
     @param      name            function name
     @param      code            function code
@@ -42,7 +42,7 @@ def create_cs_function(name, code, dependencies=None, usings=None):
 
 def run_cs_function(func, params):
     """
-    runs a C# function with the given parameters
+    Runs a :epkg:`C#` function with the given parameters.
 
     @param      func        object created by function @see fn create_cs_function
     @param      params      list of parameters

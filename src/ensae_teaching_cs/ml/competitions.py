@@ -12,7 +12,7 @@ if sys.version_info[0] == 2:
 
 def main_codalab_wrapper(fct, metric_name, argv, truth_file="truth.txt", submission_file="answer.txt", output_file="scores.txt"):
     """
-    adapt the tempate available at
+    Adapts the template available at
     `evaluate.py <https://github.com/Tivix/competition-examples/blob/master/hello_world/competition/scoring_program/evaluate.py>`_
     """
     input_dir = argv[1]
@@ -92,7 +92,7 @@ def private_codalab_wrapper(fct, metric_name, fold1, fold2, f1="answer.txt", f2=
 
 def AUC(answers, scores):
     """
-    Compute the `AUC <https://en.wikipedia.org/wiki/Area_under_the_curve_(pharmacokinetics)>`_.
+    Computes the `AUC <https://en.wikipedia.org/wiki/Area_under_the_curve_(pharmacokinetics)>`_.
 
     @param     answers      expected answers 0 (false), 1 (true)
     @param     scores       score obtained for class 1
