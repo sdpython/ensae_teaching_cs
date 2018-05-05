@@ -23,6 +23,7 @@ keyring
 lifelines
 lightgbm
 lightning-python
+manydataapi
 mlstatpy>=0.1.335
 mpld3
 mutagen
