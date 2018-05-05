@@ -224,6 +224,28 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/lightmlrestapi/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/lightmlrestapi/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
+    * - :epkg:`manydataapi`
+      - .. image:: https://travis-ci.org/sdpython/manydataapi.svg?branch=master
+            :target: https://travis-ci.org/sdpython/manydataapi
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/hbi3d7kl4gde07o0?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/manydataapi
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/manydataapi/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/manydataapi/tree/master
+      - .. image:: https://badge.fury.io/py/manydataapi.svg
+            :target: https://pypi.org/project/manydataapi
+      - .. image:: http://img.shields.io/pypi/pyversions/manydataapi.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/manydataapi
+      - .. image:: https://badge.waffle.io/sdpython/manydataapi.png?label=to%20do&title=to%20do
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/manydataapi
+      - .. image:: https://codecov.io/github/sdpython/manydataapi/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/manydataapi?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/manydataapi/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/manydataapi/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - :epkg:`mlinsights`
       - .. image:: https://travis-ci.org/sdpython/mlinsights.svg?branch=master
             :target: https://travis-ci.org/sdpython/mlinsights
@@ -631,6 +653,8 @@ Outils
         basé sur :epkg:`tornado`.
     * - :epkg:`lightmlrestapi`
       - Implémentation d'une :epkg:`REST API` avec :epkg:`falcon`.
+    * - :epkg:`manydataapi`
+      - Outils et bouts de codes pour accéder à différentes API de données.
     * - :epkg:`mlinsights`
       - Quelques fonctions pour jouer avec des modèles de machine learning.
     * - :epkg:`mlprodict`
