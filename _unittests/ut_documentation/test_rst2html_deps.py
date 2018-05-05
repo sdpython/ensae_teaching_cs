@@ -87,7 +87,7 @@ class TestRst2HtmlDeps(unittest.TestCase):
                      pymyinstall="http", Jenkins="http", docutils="http",
                      Jupyter="http", lightmlboard="zoo", lightmlrestapi="mll",
                      mlinsights="mli", mlprodict="mlp", sparkouille="spko",
-                     spark='spk')
+                     spark='spk', manydataapi="mda")
 
         for full in fulls:
             last = os.path.split(full)[-1]
