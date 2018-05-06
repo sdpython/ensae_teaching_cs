@@ -50,7 +50,6 @@ install:
   #- conda build build_tools/conda-recipe --quiet
   - conda install -q --file=requirements_conda.txt
   - conda install -c conda-forge xgboost
-  - pip install cairocffi cairosvg
   - pip install -r requirements.txt
   - pip install -U git+https://github.com/sdpython/pyPdf --no-deps
   - pip install -U git+https://github.com/matplotlib/natgrid --no-deps
@@ -60,6 +59,7 @@ install:
   - pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
   - conda install pytorch torchvision -c soumith
   - pip install torchvision
+  - pip install cairocffi cairosvg
   - pip install git+https://github.com/matplotlib/basemap.git
 script:
   - python setup.py unittests
