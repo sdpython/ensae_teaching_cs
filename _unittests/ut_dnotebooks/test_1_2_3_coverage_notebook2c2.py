@@ -43,7 +43,7 @@ from pyquickhelper.pycode import get_temp_folder, add_missing_development_versio
 from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut, get_additional_paths
 
 
-class TestNotebook123Coverage2c(unittest.TestCase):
+class TestNotebook123Coverage2c2(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper", "mlstatpy"],
@@ -76,18 +76,14 @@ class TestNotebook123Coverage2c(unittest.TestCase):
         execute_notebook_list_finalize_ut(res, fLOG=fLOG, dump=thismodule)
 
     @skipif_travis('endless execution')
-    def test_notebook_visualisation(self):
+    def test_notebook_progressbar(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        def valid(cell):
-            if "plotly" in cell:
-                return False
-            return True
-
-        self.a_test_notebook_runner("td2a_visualisation", "td2a", valid=valid)
+        # see issue https://github.com/tqdm/tqdm/issues/441
+        self.a_test_notebook_runner("td2a_progressbar", "td2a")
 
 
 if __name__ == "__main__":
