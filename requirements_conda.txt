@@ -1,4 +1,4 @@
-biopython 
+biopython
 bokeh
 cffi
 cvxopt
@@ -14,7 +14,7 @@ notebook>=5.0.0
 networkx
 nltk
 numba
-numpy>=1.13.3
+numpy>=1.14.0
 odo
 openpyxl
 pandas>=0.22.0
