@@ -54,6 +54,14 @@ une nécessité. Quelques idées de recherche :
   voir `The information bottleneck method <https://arxiv.org/pdf/physics/0004057.pdf>`_
 * **Visualiser** la décision.
 
+.. index:: LIME
+
+Ces approches sont principalement macro et permettent de construire
+une vue d'ensemble. Pour étudier un cas particulier, une observation,
+on choisira plutôt d'explorer autour d'une observation en changeant
+quelques-unes des variables par d'autres valeurs plausibles.
+C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
+
 *Notebooks*
 
 (*à venir*)
@@ -78,6 +86,7 @@ une nécessité. Quelques idées de recherche :
 * `SVCCA: Singular Vector Canonical Correlation Analysis for Deep Learning Dynamics and Interpretability <https://arxiv.org/pdf/1706.05806.pdf>`_
 * `The Myth Of Interpretability of Econometric Models <http://freakonometrics.hypotheses.org/51752>`_
 * `Interpretable Policies for Reinforcement Learning by Genetic Programming <https://arxiv.org/abs/1712.04170>`_
+* `An Efficient Explanation of Individual Classifications using Game Theory <http://lkm.fri.uni-lj.si/xaigor/slo/pedagosko/dr-ui/jmlr-strumbelj-kononenko.pdf>`_ **
 
 *Lectures : monotonie*
 
@@ -137,3 +146,4 @@ une nécessité. Quelques idées de recherche :
 * `ml-insights <https://ml-insights.readthedocs.io/en/latest/>`_ :
   méthode empiriques pour observer les prédictions en fonctions
   de variations des features
+* `savvy <https://github.com/lmc2179/savvy>`_
