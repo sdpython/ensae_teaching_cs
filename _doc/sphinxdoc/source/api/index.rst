@@ -9,5 +9,4 @@ API
     data
     exos
     faq
-    ml
     tools

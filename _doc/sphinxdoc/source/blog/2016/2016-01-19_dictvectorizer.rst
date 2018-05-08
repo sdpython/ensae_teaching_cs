@@ -26,11 +26,11 @@
         :showcode:
 
         import pandas
-        from ensae_teaching_cs.ml import CategoriesToIntegers
+        from mlinsights.mlmodel import CategoriesToIntegers
         df = pandas.DataFrame( [{"cat": "a"}, {"cat": "b"}] )
         trans = CategoriesToIntegers()
         trans.fit(df)
         newdf = trans.transform(df)
         print(newdf)
 
-    Voir :ref:`CategoriesToIntegers <ensae_teaching_cs.ml.categories_to_integers.CategoriesToIntegers>`.
+    Voir `CategoriesToIntegers <http://www.xavierdupre.fr/app/mlinsights/helpsphinx/mlinsights/mlmodel/categories_to_integers.html>`.
