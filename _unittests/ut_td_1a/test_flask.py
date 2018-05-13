@@ -1,21 +1,19 @@
 """
 @brief      test log(time=4s)
-
-You should indicate a time in seconds. The program ``run_unittests.py``
-will sort all test files by increasing time and run them.
 """
 
 
 import sys
 import os
 import unittest
-import requests
 import time
+import requests
+from pyquickhelper.loghelper import fLOG, get_url_content
+from pyquickhelper.pycode import is_travis_or_appveyor
 
 
 try:
     import src
-    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -25,22 +23,8 @@ except ImportError:
                 "..")))
     if path not in sys.path:
         sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
     import src
-    import pyquickhelper as skip_
 
-from pyquickhelper.loghelper import fLOG, get_url_content
-from pyquickhelper.pycode import is_travis_or_appveyor
 from src.ensae_teaching_cs.td_1a.simple_flask_site import app
 from src.ensae_teaching_cs.td_1a.flask_helper import FlaskInThread
 

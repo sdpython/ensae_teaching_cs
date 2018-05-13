@@ -148,6 +148,8 @@ def resolution_sudoku(s):
                 else:
                     return 1
         return 0
+    else:
+        raise RuntimeError("Should not happend.")
 
 
 def sudoku2str(su):

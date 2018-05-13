@@ -7,6 +7,8 @@ import sys
 import os
 import unittest
 import warnings
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import is_travis_or_appveyor
 
 
 try:
@@ -21,25 +23,6 @@ except ImportError:
     if path not in sys.path:
         sys.path.append(path)
     import src
-
-try:
-    import pyquickhelper as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_
-
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import is_travis_or_appveyor
 
 
 class TestSKIPPythonnetVoiceReco(unittest.TestCase):
@@ -61,14 +44,11 @@ class TestSKIPPythonnetVoiceReco(unittest.TestCase):
             # no keys
             return
 
-        # skip anyway, authentification is needed
-        return
-
         with warnings.catch_warnings():
             warnings.simplefilter('ignore', DeprecationWarning)
             import keyring
         subkey = keyring.get_password(
-            "cogser", os.environ["COMPUTERNAME"] + "voicereco")
+            "cogser", os.environ["COMPUTERNAME"] + "voicereco2")
 
         if subkey is None:
             warnings.warn("No available key for access Voice Recognition.")

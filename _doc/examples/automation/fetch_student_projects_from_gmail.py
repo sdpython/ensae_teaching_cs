@@ -28,13 +28,22 @@ with warnings.catch_warnings():
 # tous les mails doivent être dans le même répertoire
 
 server = "imap.gmail.com"
-mailfolder = ["ensae/ENSAE_2A"]
-date = "12-Dec-2017"
-do_mail = True
-dest_folder = os.path.normpath(os.path.abspath(os.path.join(
-    *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2017-2018", "2A_projet"]))))
-print("dest", dest_folder)
-basename = "Python_2A_projet_2018"
+ENSAE = False
+date = "30-Apr-2018"
+if ENSAE:
+    do_mail = True
+    mailfolder = ["ensae/ENSAE_1A"]
+    dest_folder = os.path.normpath(os.path.abspath(os.path.join(
+        *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2017-2018", "1A_pitch"]))))
+    print("dest", dest_folder)
+else:
+    do_mail = True
+    mailfolder = ["ensae/assas"]
+    dest_folder = os.path.normpath(os.path.abspath(os.path.join(
+        *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "assas", "2017-2018", "projet"]))))
+    print("dest", dest_folder)
+
+basename = "Python_{0}_Pitch_2018".format(mailfolder[0].split("/")[-1])
 filename_zip = os.path.join(dest_folder, basename + ".zip")
 convert_files = True
 
@@ -107,8 +116,10 @@ password = bytes(password, "ascii")
 
 ###########
 # les adresses à éviter car
-skip_address = [
-]
+skip_address = {
+    'xavier.dupre@gmail.com',
+    'xavier.dupre@ensae.fr',
+}
 
 
 ###############
@@ -120,6 +131,7 @@ if os.path.exists(filename_mails):
     with open(filename_mails, "r", encoding="utf8") as f:
         lines = f.readlines()
     emails = [l.strip("\r\t\n ") for l in lines]
+    emails = [_ for _ in emails if _ not in skip_address]
 else:
     box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
     box.login()

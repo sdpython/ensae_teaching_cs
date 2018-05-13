@@ -16,7 +16,8 @@ def make_video(images, outvid=None, fps=5, size=None,
     @param      size        size of each frame
     @param      is_color    color
     @param      format      see `fourcc <http://www.fourcc.org/codecs.php>`_
-    @return                 `VideoWriter <http://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/py_gui/py_video_display/py_video_display.html>`_
+    @return                 `VideoWriter <http://opencv-python-tutroals.readthedocs.org/en/latest/py_tutorials/
+                            py_gui/py_video_display/py_video_display.html>`_
 
     The function relies on `opencv <http://opencv-python-tutroals.readthedocs.org/en/latest/>`_.
     By default, the video will have the size of the first image.

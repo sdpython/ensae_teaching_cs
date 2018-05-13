@@ -6,10 +6,6 @@ import os
 import sys
 
 
-if sys.version_info[0] == 2:
-    FileNotFoundError = Exception
-
-
 def main_codalab_wrapper(fct, metric_name, argv, truth_file="truth.txt", submission_file="answer.txt", output_file="scores.txt"):
     """
     Adapts the template available at
@@ -41,7 +37,8 @@ def private_codalab_wrapper(fct, metric_name, fold1, fold2, f1="answer.txt", f2=
                             output="scores.txt", use_print=False):
     """
     Wraps the function following the guidelines
-    `User_Building a Scoring Program for a Competition <https://github.com/codalab/codalab-competitions/wiki/User_Building-a-Scoring-Program-for-a-Competition>`_.
+    `User_Building a Scoring Program for a Competition
+    <https://github.com/codalab/codalab-competitions/wiki/User_Building-a-Scoring-Program-for-a-Competition>`_.
     It replicates the example available at
     `competition-examples/hello_world <https://github.com/Tivix/competition-examples/tree/master/hello_world/competition>`_.
 

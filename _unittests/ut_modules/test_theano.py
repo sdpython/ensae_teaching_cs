@@ -6,6 +6,8 @@
 import sys
 import os
 import unittest
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import is_travis_or_appveyor
 
 
 try:
@@ -20,26 +22,6 @@ except ImportError:
     if path not in sys.path:
         sys.path.append(path)
     import src
-
-try:
-    import pyquickhelper as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_
-
-
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import is_travis_or_appveyor
 
 
 class TestModulesTheano(unittest.TestCase):
@@ -79,7 +61,8 @@ class TestModulesTheano(unittest.TestCase):
             # https://stackoverflow.com/questions/38536788/g-error-on-import-of-theano-on-windows-7
             self.assertTrue(theano is not None)
 
-            if False:
+            enabled = False
+            if enabled:
                 rows = []
                 for k in sorted(dir(theano.configdefaults)):
                     if hasattr(theano.configdefaults, k):

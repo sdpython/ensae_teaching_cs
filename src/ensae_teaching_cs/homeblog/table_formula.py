@@ -9,15 +9,14 @@ import sys
 import datetime
 import random
 import math
-import numpy
 import json
+import numpy
 import pandas
 from xlwt import Formatting as EXf
 from xlwt import Style as EXs
 import xlwt as EXw
 from xlsxwriter import workbook as EXxw
 from xlrd import open_workbook
-
 from pyquickhelper.loghelper import fLOG, noLOG
 from pyquickhelper.loghelper.convert_helper import str2datetime
 from pyensae.sql import Database
@@ -201,8 +200,8 @@ class TableFormula(_TableFormulaStat):
                 firstline = f.readline().strip("\n\r ")
             su = sum(map(lambda _: 1 if _ in header else 0, firstline.split("\t")))
             if su < len(header) / 2.0:
-                logFunction("add_header_if_not_present: adding header(%f<%f)" % (su,
-                                                                                 len(header) / 2) + str(header) + " to " + filename + " firstline " + firstline)
+                logFunction("add_header_if_not_present: adding header({0}<{1}){2} to '{3}'\nfirstline:\n{4}".format(
+                    su, len(header) / 2, header, filename, firstline))
                 with open(filename, "r") as f:
                     text = f.read()
                 text = "\t".join(header) + "\n" + text
@@ -215,8 +214,8 @@ class TableFormula(_TableFormulaStat):
                 firstline = f.readline().strip("\n\r ")
             su = sum(map(lambda _: 1 if _ in header else 0, firstline.split("\t")))
             if su < len(header) / 2.0:
-                logFunction("add_header_if_not_present: adding header(%f<%f)" % (su,
-                                                                                 len(header) / 2) + str(header) + " to " + filename + " firstline " + firstline)
+                logFunction("add_header_if_not_present: adding header({0}<{1}){2} to '{3}'\nfirstline:\n{4}".format(
+                    su, len(header) / 2, header, filename, firstline))
                 with open(filename, "r", encoding=encoding) as f:
                     text = f.read()
                 text = "\t".join(header) + "\n" + text
@@ -382,14 +381,15 @@ class TableFormula(_TableFormulaStat):
         """
         return self.__class__
 
-    def __init__(self, file, numeric_column=[], sep="\t", encoding=None,
+    def __init__(self, file, numeric_column=None, sep="\t", encoding=None,
                  read_n_lines=-1, sheet=0, **options):
         """
         constructor, it can either take a filename, an object TableFormula,
         a list of columns and values.
 
         @param      file                filename or a list of column names or a dictionary,
-                                        file can also be a `pandas DataFrame <http://pandas.pydata.org/pandas-docs/dev/dsintro.html#dataframe>`_.
+                                        file can also be a `pandas DataFrame
+                                        <http://pandas.pydata.org/pandas-docs/dev/dsintro.html#dataframe>`_.
         @param      numeric_column      depends on file types(see below examples)
         @param      sep                 column separator if file is a filename
         @param      read_n_lines        read the first n lines(or all if it is -1)
@@ -443,6 +443,8 @@ class TableFormula(_TableFormulaStat):
 
         @warning In this second case, rows and header are not copied.
         """
+        if numeric_column is None:
+            numeric_column = []
         if isinstance(file, str):
             if os.path.exists(file):
                 self._read_file(file, numeric_column, sep,
@@ -544,12 +546,6 @@ class TableFormula(_TableFormulaStat):
                 file.shape[1])] for i in range(file.shape[0])]
 
         else:
-            try:
-                import pandas
-            except ImportError:
-                raise TypeError(
-                    "file has an unexpected type: " + str(type(file)))
-
             if isinstance(file, pandas.DataFrame):
                 def convert(x):
                     return None if isinstance(x, float) and numpy.isnan(x) else x
@@ -921,7 +917,7 @@ class TableFormula(_TableFormulaStat):
             # removing empty column(assuming first row is the header)
             ind = [i for i, n in enumerate(lines[0]) if len(n) > 0]
             if len(ind) < len(lines[0]):
-                lines = [[_[i] for i in ind] for _ in lines]
+                lines = [[line[i] for i in ind] for line in lines]
         else:
             if sys.version_info.major >= 3 or encoding is None:
                 if encoding is None:
@@ -1094,7 +1090,7 @@ class TableFormula(_TableFormulaStat):
 
     def add_column(self, colname, function, position=-1):
         """
-        add a column
+        Adds a column.
         @param      colname     column name or columns name if it is a list or a tuple
         @param      function    function which will gives the values(or a list of functions, or a function which return a tuple)
         @param      position    where to insert the column, -1 for the end
@@ -1118,7 +1114,6 @@ class TableFormula(_TableFormulaStat):
                     x = function(v)
                     row.append(x)
                 self.header.append(colname)
-                return self
             else:
                 for row in self.values:
                     v = self._interpret_row(row)
@@ -1126,7 +1121,6 @@ class TableFormula(_TableFormulaStat):
                     row.insert(position, x)
                 self.header.insert(position, colname)
                 self.index = {v: i for i, v in enumerate(self.header)}
-                return self
 
         elif isinstance(function, list):
             if len(colname) != len(function):
@@ -1166,6 +1160,7 @@ class TableFormula(_TableFormulaStat):
                 for i, c in enumerate(colname):
                     self.header.insert(position + i, c)
             self.index = {v: i for i, v in enumerate(self.header)}
+        return self
 
     def add_column_index(self, colname="index", start=0):
         """
@@ -1350,7 +1345,8 @@ class TableFormula(_TableFormulaStat):
         functionsAgg = []
         for col in self.header:
             if col.startswith("key"):
-                values = self.select(lambda v: (v[col], functionKey(v)))
+                values = self.select(
+                    lambda v, col=col: (v[col], functionKey(v)))
                 dd = {}
                 for v in values:
                     if v[1] not in dd:
@@ -1460,7 +1456,7 @@ class TableFormula(_TableFormulaStat):
                 for i in range(0, len(h)):
                     h[i] = functionsAgg[i](h[i], w)
 
-            f = hist.items if sys.version_info.major >= 3 else hist.iteritems
+            f = hist.items if sys.version_info.major >= 3 else hist.items
             histValues = [[k, sum(histWeight[k])] + v for k, v in f()]
 
             if columns is None:
@@ -1484,7 +1480,7 @@ class TableFormula(_TableFormulaStat):
                 for i in range(0, len(h)):
                     h[i] = functionsAgg[i](h[i])
 
-            f = hist.items if sys.version_info.major >= 3 else hist.iteritems
+            f = hist.items if sys.version_info.major >= 3 else hist.items
             histValues = [[k] + v for k, v in f()]
 
             if columns is None:
@@ -1566,13 +1562,17 @@ class TableFormula(_TableFormulaStat):
         @param      table           other table to join with
         @param      functionKey1    key for the first table(a function)
         @param      functionKey2    key for the second table(a function) innerjoin .... ON ...
-        @param      addSuffixAnyWay add a suffix to every column from the second table even if names are different(suffix is "+")
+        @param      addSuffixAnyWay add a suffix to every column from the second table even
+                                    if names are different(suffix is "+")
         @param      prefixToAdd     prefix to add the the columns of the second table
-        @param      full            add all items even if there is no common keys(FULL OUTER JOIN), otherwise keep only common keys
+        @param      full            add all items even if there is no common keys(``FULL OUTER JOIN``),
+                                    otherwise keep only common keys
         @param      keepKey         keep the key as a column in the result(column is key), otherwise not
-        @param      putKeyInColumn  private parameter: keepKey has to be true and in this case, put the key in this column(integer)
+        @param      putKeyInColumn  private parameter: keepKey has to be true and in this case,
+                                    put the key in this column(integer)
         @param      missingValue    when there is not key on one side, this default value will be put in place
-        @param      uniqueKey       if True, the function assumes there is a bijection between rows and keys(one row <--> one key) on both tables,
+        @param      uniqueKey       if True, the function assumes there is a bijection between rows
+                                    and keys(one row <--> one key) on both tables,
                                     otherwise, it will not.
         @return                     a table
 
@@ -1632,7 +1632,7 @@ class TableFormula(_TableFormulaStat):
                         x += "+"
                     columns.append(x)
 
-                f = keys.items if sys.version_info.major >= 3 else keys.iteritems
+                f = keys.items if sys.version_info.major >= 3 else keys.items
                 values = [[k] + v[0] + v[1] for k, v in f() if len(v) == 2]
                 return self._private_getclass()(columns, values)
             else:
@@ -1651,7 +1651,7 @@ class TableFormula(_TableFormulaStat):
                         x += "+"
                     columns.append(x)
 
-                f = keys.items if sys.version_info.major >= 3 else keys.iteritems
+                f = keys.items if sys.version_info.major >= 3 else keys.items
 
                 if putKeyInColumn is None:
                     values = [v[0] + v[1] for k, v in f() if len(v) == 2]
@@ -1716,7 +1716,7 @@ class TableFormula(_TableFormulaStat):
                         x += "+"
                     columns.append(x)
 
-                f = keys.items if sys.version_info.major >= 3 else keys.iteritems
+                f = keys.items if sys.version_info.major >= 3 else keys.items
 
                 values = []
                 for k, v in f():
@@ -1741,7 +1741,7 @@ class TableFormula(_TableFormulaStat):
                         x += "+"
                     columns.append(x)
 
-                f = keys.items if sys.version_info.major >= 3 else keys.iteritems
+                f = keys.items if sys.version_info.major >= 3 else keys.items
 
                 if putKeyInColumn is None:
                     values = [v[0] + v[1] for k, v in f() if len(v) == 2]
@@ -2012,14 +2012,15 @@ class TableFormula(_TableFormulaStat):
         nbJoin = 0
 
         for val in distinct:
-            table2 = table1.filter(lambda v: functionInstance(v) == val)
+            table2 = table1.filter(
+                lambda v, val=val: functionInstance(v) == val)
             if table is None:
                 table = table2.copy()
             else:
                 colkey = table.header[0]
-                table = table.innerjoin(table2, functionKey if nbJoin == 0 else lambda v: v[colkey],
-                                        functionKey, nameKey=nameKey, prefixToAdd=str(
-                                            val) + "|",
+                table = table.innerjoin(table2, functionKey if nbJoin == 0 else (lambda v, c=colkey: v[c]),
+                                        functionKey, nameKey=nameKey,
+                                        prefixToAdd=str(val) + "|",
                                         full=full, keepKey=nbJoin == 0,
                                         putKeyInColumn=None if nbJoin == 0 else 0,
                                         uniqueKey=True)
@@ -2382,11 +2383,12 @@ class TableFormula(_TableFormulaStat):
     def correlation(self, useBootstrap=False, collapseFormat=True, nbdraws=-1, alpha=0.05,
                     functionKeepValue=lambda val, low, high: "%f|%f,%f" % (val, low, high)):
         """
-        computes the correlation matrix, the first column
-        will contains the column names
+        Computes the correlation matrix, the first column
+        will contains the column names.
 
         @param      useBootstrap            if True, use a bootstrap method to estimate the correlation
-        @param      collapseFormat          if True and useBootstrap is True, produces a format average|lower bound|higher bound(at a definite confidence level)
+        @param      collapseFormat          if True and useBootstrap is True, produces a format
+                                            ``average|lower bound|higher bound(at a definite confidence level)``
         @param      nbdraws                 number of draws(if -1, then it will be equal to the number of observations)
         @param      alpha                   confidence level
         @param      functionKeepValue       if collapseFormat is True, this function is used to collapse val,low,high in a single string
@@ -2549,7 +2551,7 @@ class TableFormula(_TableFormulaStat):
         mi = min(values)
         ma = max(values)
 
-        if isinstance(values[0], tuple) or isinstance(values[0], list):
+        if isinstance(values[0], (tuple, list)):
             W = 0.
             div = (ma[0] - mi[0]) / nbDiv
             hist = [[mi[0] + n * div, 0.] for n in range(0, nbDiv + 1)]
@@ -2628,7 +2630,7 @@ class TableFormula(_TableFormulaStat):
                 su[_] = su.get(_, 0.) + 1.
 
         if normalize and W > 0:
-            for k, v in value.items():
+            for v in value.values():
                 for _ in v:
                     if _ != histxName:
                         v[_] /= su[_]
@@ -2698,7 +2700,8 @@ class TableFormula(_TableFormulaStat):
         if columnsSet is None:
             columnsSet = self.header
         for col in columnsSet:
-            mu, sigma = self.mu_sigma(lambda v: v[col], removeExtreme)
+            mu, sigma = self.mu_sigma(
+                (lambda v, col=col: v[col]), removeExtreme)
             values[0].append(mu)
             values[1].append(sigma)
         tbl = self._private_getclass()(columnsSet, values)
@@ -2805,7 +2808,7 @@ class TableFormula(_TableFormulaStat):
 
                 for irow, row in enumerate(self.values):
                     for icol, val in enumerate(row):
-                        if isinstance(val, int) or isinstance(val, float):
+                        if isinstance(val, (int, float)):
                             st = val
                         elif isinstance(val, str):
                             if encoding is not None:
@@ -2838,7 +2841,7 @@ class TableFormula(_TableFormulaStat):
 
                 for irow, row in enumerate(self.values):
                     for icol, val in enumerate(row):
-                        if isinstance(val, int) or isinstance(val, float):
+                        if isinstance(val, (int, float)):
                             st = val
                         elif isinstance(val, str):
                             if encoding is not None:

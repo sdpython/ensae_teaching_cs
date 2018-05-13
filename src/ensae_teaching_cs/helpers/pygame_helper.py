@@ -226,7 +226,7 @@ def build_diff_image(pygame, screen, h, maxw, seq1=None, seq2=None, diff=None, f
                         row = (seq2[i], seq1.index(seq2[i]) if seq2[i] in seq1 else None, i,
                                bars[i] if bars is not None else None)
                         positions.append(row)
-            for text, p1, p2, bar in positions:
+            for text, p1, p2, bar_ in positions:
                 if p1 is None:
                     # new
                     x = maxw * (1 - progress)
@@ -251,10 +251,10 @@ def build_diff_image(pygame, screen, h, maxw, seq1=None, seq2=None, diff=None, f
 
                 x = int(x)
                 y = int(y)
-                if bar is not None:
+                if bar_ is not None:
                     y2 = y + (h - width) // 2 + width
                     pygame.draw.line(screen, color_bar, (x, y2),
-                                     (x + int(bar * maxw), y2), width)
+                                     (x + int(bar_ * maxw), y2), width)
                 text = font.render(text, True, color)
                 screen.blit(text, (x, y))
 

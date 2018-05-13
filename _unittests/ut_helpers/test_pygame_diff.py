@@ -1,8 +1,5 @@
 """
 @brief      test log(time=1s)
-
-You should indicate a time in seconds. The program ``run_unittests.py``
-will sort all test files by increasing time and run them.
 """
 
 
@@ -11,11 +8,12 @@ import os
 import unittest
 import random
 from difflib import SequenceMatcher
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 
 
 try:
     import src
-    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -25,22 +23,8 @@ except ImportError:
                 "..")))
     if path not in sys.path:
         sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
     import src
-    import pyquickhelper.loghelper as skip_
 
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from src.ensae_teaching_cs.helpers.pygame_helper import build_diff_image, get_pygame_screen_font
 
 
@@ -104,7 +88,7 @@ class TestDiff(unittest.TestCase):
 
             wait_event(pygame)
 
-        for k, font in fonts.items():
+        for font in fonts.values():
             del font
         pygame.quit()
 
@@ -161,7 +145,7 @@ class TestDiff(unittest.TestCase):
 
             wait_event(pygame)
 
-        for k, font in fonts.items():
+        for font in fonts.values():
             del font
         pygame.quit()
 

@@ -39,11 +39,10 @@ def webshot(img, url, navigator=default_driver, add_date=False,
     See function @see fn download_chromedriver.
     """
     if navigator is None:
-        try:
-            import selenium as skip_
-            module = "selenium"
-        except ImportError:
-            module = "splinter"
+        import selenium
+        module = selenium.__name__
+    else:
+        module = None
 
     res = []
     fLOG("module=", module)
@@ -116,7 +115,8 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
         See `Selenium WebDriver and Firefox 47 <http://www.theautomatedtester.co.uk/blog/2016/selenium-webdriver-and-firefox-47.html>`_.
 
         Voir `ChromeDriver download <http://chromedriver.storage.googleapis.com/index.html>`_,
-        `Error message: 'chromedriver' executable needs to be available in the path <http://stackoverflow.com/questions/29858752/error-message-chromedriver-executable-needs-to-be-available-in-the-path>`_.
+        `Error message: 'chromedriver' executable needs to be available in the path
+        <http://stackoverflow.com/questions/29858752/error-message-chromedriver-executable-needs-to-be-available-in-the-path>`_.
     """
     from selenium import webdriver
     from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
@@ -139,13 +139,13 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
                         "unable to install chromedriver.exe")
             else:
                 fLOG("found chromedriver:", chromed)
-        if True:
+        start_navi = True
+        if start_navi:
             fLOG("start", navigator)
             browser = webdriver.Chrome(chromed)
         else:
             # see
             # https://sites.google.com/a/chromium.org/chromedriver/getting-started
-            from selenium import webdriver
             import selenium.webdriver.chrome.service as service
             fLOG("create service")
             service = service.Service(chromed)
@@ -194,11 +194,10 @@ def webhtml(url, navigator=default_driver, module="selenium", fLOG=noLOG):
     and add one to the code if needed.
     """
     if navigator is None:
-        try:
-            import selenium as skip_
-            module = "selenium"
-        except ImportError:
-            module = "splinter"
+        import selenium
+        module = selenium.__name__
+    else:
+        module = None
 
     fLOG("module=", module)
     res = []

@@ -6,11 +6,12 @@ import os
 import sys
 import unittest
 import random
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import fix_tkinter_issues_virtualenv
 
 
 try:
     import src
-    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -20,23 +21,9 @@ except ImportError:
                 "..")))
     if path not in sys.path:
         sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
     import src
-    import pyquickhelper as skip_
 
 
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import fix_tkinter_issues_virtualenv
 from src.ensae_teaching_cs.helpers.matplotlib_helper_xyz import scatter_xy_id, scatter_xyc, scatter_xyz
 
 
@@ -80,7 +67,7 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
         fix_tkinter_issues_virtualenv()
         import matplotlib.pyplot as plt
 
-        fig, ax = scatter_xy_id(
+        fig, _ = scatter_xy_id(
             nuage, title=self._testMethodName, legend={0: "c0", 1: "c1"})
         fig.savefig(im)
         assert os.path.exists(im)
@@ -124,11 +111,11 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
 
         import matplotlib.pyplot as plt
 
-        fig, ax = scatter_xyc(nuage, title=self._testMethodName)
+        fig, _ = scatter_xyc(nuage, title=self._testMethodName)
         fig.savefig(im)
         assert os.path.exists(im)
 
-        fig, ax = scatter_xyc(
+        fig, _ = scatter_xyc(
             nuage, smooth=1, title=self._testMethodName + " - smooth 10")
         fig.savefig(im.replace(".png", ".s10.png"))
         assert os.path.exists(im)
@@ -165,11 +152,11 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
         nuage = [(a, b, f(a, b)) for a, b in nuage1] + \
             [(a, b, f(a, b)) for a, b in nuage2]
 
-        fig, ax = scatter_xyz(nuage, title=self._testMethodName)
+        fig, _ = scatter_xyz(nuage, title=self._testMethodName)
         fig.savefig(im)
         assert os.path.exists(im)
 
-        fig, ax = scatter_xyz(
+        fig, _ = scatter_xyz(
             nuage, smooth=2, title=self._testMethodName + " - smooth 10")
         fig.savefig(im.replace(".png", ".s10.png"))
         assert os.path.exists(im)

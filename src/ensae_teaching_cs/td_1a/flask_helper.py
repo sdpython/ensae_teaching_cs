@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 @file
-@brief Helpers for Flask
+@brief Helpers for :epkg:`Flask`.
 """
-
-from flask import Response
-
 import traceback
 import threading
+from flask import Response
 
 
 def Text2Response(text):

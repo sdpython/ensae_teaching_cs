@@ -6,6 +6,10 @@
 import sys
 import os
 import unittest
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.filehelper import synchronize_folder
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
+from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut, get_additional_paths
 
 
 try:
@@ -20,27 +24,6 @@ except ImportError:
     if path not in sys.path:
         sys.path.append(path)
     import src.ensae_teaching_cs as thismodule
-
-try:
-    import pyquickhelper as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_
-
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.filehelper import synchronize_folder
-from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
-from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut, get_additional_paths
 
 
 class TestNotebook123Coverage4Dask(unittest.TestCase):

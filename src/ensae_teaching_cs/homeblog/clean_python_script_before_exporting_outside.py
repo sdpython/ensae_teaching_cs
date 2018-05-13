@@ -8,7 +8,7 @@ import re
 
 def cleanFileFromtohtmlreplace(content):
 
-    if ("#" + "## tohtmlreplace BEGIN ###") in content:
+    if "#" + "## tohtmlreplace BEGIN ###" in content:
         exps = "(#" + "## tohtmlreplace BEGIN ###((.|\n)*?)"
         exps += "#" + "## tohtmlreplace ELSE ###((.|\n)*?)"
         exps += "#" + "## tohtmlreplace END ###"

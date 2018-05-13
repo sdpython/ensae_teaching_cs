@@ -94,5 +94,5 @@ def solution():
 
 
 if __name__ == "__main__":
-    res = solution()
-    print(affiche_solution(res))
+    ressol = solution()
+    print(affiche_solution(ressol))

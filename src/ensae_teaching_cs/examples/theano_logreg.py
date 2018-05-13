@@ -468,7 +468,7 @@ def theano_predict(model, dataset, nfirst=-1):
 
     # We can test it on some examples from test test
     datasets = theano_load_data(dataset)
-    test_set_x, test_set_y = datasets[2]
+    test_set_x, _ = datasets[2]
     test_set_x = test_set_x.get_value()
 
     if nfirst > 0:

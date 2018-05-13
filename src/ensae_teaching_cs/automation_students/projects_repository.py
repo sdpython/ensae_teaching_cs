@@ -4,10 +4,10 @@
 """
 import re
 import os
-import numpy
 import warnings
 import zipfile
 from urllib.parse import urlparse
+import numpy
 from pyquickhelper.loghelper import noLOG
 from pyquickhelper.texthelper import remove_diacritics
 from pyquickhelper.filehelper import remove_folder, explore_folder_iterfile
@@ -249,7 +249,7 @@ class ProjectsRepository:
                 remove_diacritics(email.split("@")[0].lower()))]
             spl.sort()
             mail = " ".join(spl)
-            d, p = edit_distance(mail, pieces)
+            d = edit_distance(mail, pieces)[0]
             res.append((d, email))
         res = [_ for _ in res if _[0] <= threshold]
         res.sort()
@@ -339,16 +339,11 @@ class ProjectsRepository:
                 mapping = {}
                 for row in df.itertuples():
                     mapping[row[ind_student]] = row[ind_mail]
-                local_function = lambda names, skip, mapping=mapping: local_email_function_column(
-                    names, skip_names, mapping)
+                local_function = \
+                    lambda names, skip, mp=mapping: \
+                    local_email_function_column(names, skip_names, mp)
         else:
             local_function = email_function
-
-        def split_name(name):
-            name = remove_diacritics(name).split(" ")
-            first = name[-1]
-            last = " ".join(name[:-1])
-            return first, last
 
         def ul(last):
             res = ""
@@ -477,10 +472,10 @@ class ProjectsRepository:
         @return                     iterator on mails
         """
         if group is None:
-            for group in self.Groups:
+            for group_ in self.Groups:
                 self.fLOG(
-                    "[ProjectsRepository.enumerate_group_mails] group='{0}'".format(group))
-                iter = self.enumerate_group_mails(group, mailbox, subfolder=subfolder,
+                    "[ProjectsRepository.enumerate_group_mails] group='{0}'".format(group_))
+                iter = self.enumerate_group_mails(group_, mailbox, subfolder=subfolder,
                                                   date=date, skip_function=skip_function, max_dest=max_dest)
                 for mail in iter:
                     yield mail
@@ -503,26 +498,31 @@ class ProjectsRepository:
         """
         Enumerates all mails sent by or sent to a given group.
 
-        @param      renderer        instance of class `EmailMessageListRenderer <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/render/email_message_list_renderer.html>`_
+        @param      renderer        instance of class `EmailMessageListRenderer
+                                    <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/render/
+                                    email_message_list_renderer.html>`_
         @param      group           group
         @param      mailbox         mailbox (see `pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/>`_)
         @param      subfolder       which subfolder of the mailbox to look into
         @param      date            date
-        @param      skip_function   if not None, use this function on the header/body to avoid loading the entire message (and skip it)
+        @param      skip_function   if not None, use this function on the header/body to avoid loading
+                                    the entire message (and skip it)
         @param      max_dest        maximum number of receivers
         @param      filename        filename which gathers a link to every mail
         @param      overwrite       overwrite
         @param      skip_if_empty   skip if no mail?
         @param      convert_files   unzip and convert
-        @return                     list of files (see `EmailMessageListRenderer.write <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/render/email_message_list_renderer.html>`_)
+        @return                     list of files (see `EmailMessageListRenderer.write
+                                    <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/render/
+                                    email_message_list_renderer.html>`_)
 
         zip, gz, rar, 7z can be uncompressed.
         It then convert *.py* and *.ipynb* into html.
         """
         if group is None:
             res = []
-            for group in self.Groups:
-                r = self.dump_group_mails(renderer, group, mailbox, subfolder=subfolder,
+            for group_ in self.Groups:
+                r = self.dump_group_mails(renderer, group_, mailbox, subfolder=subfolder,
                                           date=date, skip_function=skip_function, max_dest=max_dest,
                                           overwrite=overwrite, skip_if_empty=skip_if_empty,
                                           convert_files=convert_files)
@@ -565,7 +565,8 @@ class ProjectsRepository:
         @param      group       group
         @return                 list of removed files
 
-        see `remove_folder <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx//pyquickhelper/filehelper/synchelper.html#module-pyquickhelper.filehelper.synchelper>`_
+        See `remove_folder <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/
+        pyquickhelper/filehelper/synchelper.html#module-pyquickhelper.filehelper.synchelper>`_.
         """
         loc = self.get_group_location(group)
         return remove_folder(loc)
@@ -674,7 +675,8 @@ class ProjectsRepository:
         """
         Produces a summary and uses a Jinja2 template.
 
-        @param      render      instance of `EmailMessageRenderer <http://www.xavierdupre.fr/app/pymmails/helpsphinx//pymmails/render/email_message_renderer.html>`_),
+        @param      render      instance of `EmailMessageRenderer <http://www.xavierdupre.fr/app/pymmails/
+                                helpsphinx//pymmails/render/email_message_renderer.html>`_),
                                 can be None
         @param      link        look for this file in each folder
         @param      outfile     output file
@@ -692,7 +694,7 @@ class ProjectsRepository:
             nolink_if = ProjectsRepository._known_strings
 
         def filter_in(url):
-            if "\n" in url or "\r" in u or "\t" in u:
+            if "\n" in url or "\r" in url or "\t" in url:
                 return False
             if url.endswith("&quot;"):
                 return False

@@ -1,20 +1,14 @@
 """
 @brief      test log(time=2s)
-
 """
-
-
 import sys
 import os
 import unittest
+from pyquickhelper.loghelper import fLOG
 
 
 try:
     import src
-    import pyquickhelper as skip_____
-    import pyensae as skip___
-    import pyrsslocal as skip__
-    import pymyinstall as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -24,70 +18,8 @@ except ImportError:
                 "..")))
     if path not in sys.path:
         sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pymyinstall",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyensae",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    if path not in sys.path:
-        sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyrsslocal",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pymmails",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
     import src
-    import pyquickhelper as skip_____
-    import pyensae as skip___
-    import pyrsslocal as skip__
-    import pymmails as skip_
 
-from pyquickhelper.loghelper import fLOG
 from src.ensae_teaching_cs.automation_students import ProjectsRepository
 
 

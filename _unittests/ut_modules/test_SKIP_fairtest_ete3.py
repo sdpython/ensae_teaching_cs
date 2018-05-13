@@ -7,6 +7,8 @@ import sys
 import os
 import unittest
 import pandas
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import is_travis_or_appveyor, get_temp_folder
 
 
 try:
@@ -22,40 +24,7 @@ except ImportError:
         sys.path.append(path)
     import src
 
-try:
-    import pyquickhelper as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_
 
-try:
-    import pyensae as skip__
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyensae",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyensae as skip__
-
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import is_travis_or_appveyor, get_temp_folder
 import pyensae.datasource as ds
 
 
@@ -94,8 +63,8 @@ class TestModulesFairTest(unittest.TestCase):
         data = ds.download_data("adult.data",
                                 url="https://archive.ics.uci.edu/ml/machine-learning-databases/adult/",
                                 whereTo=os.path.join(temp, ".."))
-        names = "age,Workclass,fnlwgt,education,education-num,marital-status,occupation,relationship,race,sex,capital-gain,capital-loss,hours-per-week,native-country,income".split(
-            ",")
+        names = ("age,Workclass,fnlwgt,education,education-num,marital-status,occupation,relationship," +
+                 "race,sex,capital-gain,capital-loss,hours-per-week,native-country,income").split(",")
         df = pandas.read_csv(data, names=names)
         if df.shape[0] > 100:
             fLOG(df.shape)

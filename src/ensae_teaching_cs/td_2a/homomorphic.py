@@ -12,9 +12,10 @@ class HomomorphicInt:
     """
     __slots__ = ['V', 'N', 'P', 'Q', 'E']
 
+    @staticmethod
     def pgcd(a, b):
         """
-        Computes the PGCD
+        Computes the :epkg:`PGCD`.
         """
         while a != b:
             d = abs(a - b)
@@ -22,16 +23,19 @@ class HomomorphicInt:
             a, b = d, c
         return a
 
+    @staticmethod
     def lcm(a, b):
         """
-        Computes the least common multiple.
+        Computes the least common multiple
+        (:epkg:`PPCM`).
         """
         p = HomomorphicInt.pgcd(a, b)
         return a * b // p
 
+    @staticmethod
     def find_e(p, q):
         """
-        Find one exposant for the RSA encryption.
+        Finds one exposant for the :epkg:`RSA` encryption.
         """
         c = HomomorphicInt.pgcd(p - 1, q - 1)
         qn = (p - 1) * (q - 1) // c

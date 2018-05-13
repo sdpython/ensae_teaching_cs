@@ -113,9 +113,9 @@ class Corde (object):
 
     def iteration(self, dt):
         """
-        calcule les déplacements de chaque point et les met à jour,
+        Calcule les déplacements de chaque point et les met à jour,
         on ne déplace pas les points situés aux extrémités,
-        retourne la somme des vitesses et des accélérations au carré
+        retourne la somme des vitesses et des accélérations au carré.
         """
         force = [Point(0, 0, 0)]
         for i in range(1, len(self.list) - 1):
@@ -130,8 +130,8 @@ class Corde (object):
 
         d = 0
         for f in force:
-            d += self.vitesse[0].x ** 2 + force[i].x ** 2
-            d += self.vitesse[1].y ** 2 + force[i].y ** 2
+            d += self.vitesse[0].x ** 2 + f.x ** 2
+            d += self.vitesse[1].y ** 2 + f.y ** 2
 
         return d
 
@@ -140,7 +140,7 @@ def display_corde(corde, screen, pygame):
     """
     affichage de la corde à l'aide du module pyagame
     """
-    x, y = screen.get_size()
+    y = screen.get_size()[1]
     color = (0, 0, 0)
     for p in corde.list:
         pygame.draw.circle(
@@ -224,7 +224,7 @@ def pygame_simulation(pygame, first_click=False, folder=None,
         # on fait une pause dès la première itérations pour voir la corde
         # dans sa position initiale
         if it == 0 and first_click:
-            wait_event()
+            wait_event(pygame)
 
         # "
         # unique instruction ajoutées par rapport à l'énoncé
@@ -251,4 +251,4 @@ def pygame_simulation(pygame, first_click=False, folder=None,
 
     # le programme est terminé, on fait une pause pour voir le résultat final
     if first_click:
-        wait_event()
+        wait_event(pygame)

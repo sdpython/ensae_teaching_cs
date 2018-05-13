@@ -423,10 +423,7 @@ def intersection_segment(p1, p2, p3, p4):
     s2 = evaluation_droite(a2, b2, c2, p2)
     s3 = evaluation_droite(a1, b1, c1, p3)
     s4 = evaluation_droite(a1, b1, c1, p4)
-    if s1 * s2 <= 0 and s3 * s4 <= 0:
-        return True
-    else:
-        return False
+    return s1 * s2 <= 0 and s3 * s4 <= 0
 
 
 def longueur_chemin(chemin, distance):
@@ -1143,7 +1140,7 @@ def pygame_simulation(size=(800, 500), zone=20, length=10, max_iter=None,
     Voir :ref:`l-tsp_kruskal`.
     """
     pygame.init()
-    size = width, height = x, y = size[0], size[1]
+    size = x, y = size[0], size[1]
     white = 255, 255, 255
     screen = pygame.display.set_mode(size, flags)
     screen.fill(white)

@@ -16,7 +16,7 @@ def get_file_per_folder(folder, deep=1):
     @param      deep        number of folders to considers before the filename
     @return                 dictionary
     """
-    fold, files = explore_folder(folder)
+    files = explore_folder(folder)[1]
     res = {}
     for f in files:
         spl = f.replace("\\", "/").split("/")

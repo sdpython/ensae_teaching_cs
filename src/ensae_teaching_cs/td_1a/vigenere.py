@@ -83,7 +83,8 @@ def PGCD(m, n):
 
         La fonction qui suit est l'implémentation en Python de la méthode décrite
         ici :
-        `Algorithme de calcul du PGCD par soustractions successives <http://www.kartable.fr/terminale-s/mathematiques/1640/exercice/algorithme-de-calcul-du-pgcd-par-soustractions-successives,TS01505>`_.
+        `Algorithme de calcul du PGCD par soustractions successives
+        <http://www.kartable.fr/terminale-s/mathematiques/1640/exercice/algorithme-de-calcul-du-pgcd-par-soustractions-successives,TS01505>`_.
 
         .. runpython::
             :showcode:

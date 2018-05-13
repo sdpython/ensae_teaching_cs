@@ -7,6 +7,9 @@ import sys
 import os
 import unittest
 import shutil
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
+from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut, get_additional_paths
 
 
 try:
@@ -21,26 +24,6 @@ except ImportError:
     if path not in sys.path:
         sys.path.append(path)
     import src.ensae_teaching_cs as thismodule
-
-try:
-    import pyquickhelper as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_
-
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
-from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut, get_additional_paths
 
 
 class TestNotebook1236Coverage201711torchCIFAR(unittest.TestCase):
@@ -58,12 +41,12 @@ class TestNotebook1236Coverage201711torchCIFAR(unittest.TestCase):
         self.assertTrue(len(keepnote) > 0)
 
         if copy_files is not None:
-            for name in copy_files:
-                dest = os.path.join(temp, name)
+            for name_ in copy_files:
+                dest = os.path.join(temp, name_)
                 dest_dir = os.path.dirname(dest)
                 if not os.path.exists(dest_dir):
                     os.mkdir(dest_dir)
-                src_file = os.path.join(doc, name)
+                src_file = os.path.join(doc, name_)
                 shutil.copy(src_file, dest_dir)
 
         import pyquickhelper

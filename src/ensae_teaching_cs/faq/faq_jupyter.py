@@ -17,8 +17,8 @@ def notebook_path():
         :tag: jupyter
         :title: Récupérer le fichier du notebook depuis le notebook
 
-        Voir `How to I get the current Jupyter Notebook name <http://stackoverflow.com/questions/12544056/how-to-i-get-the-current-ipython-notebook-name>`_
-
+        Voir `How to I get the current Jupyter Notebook name
+        <http://stackoverflow.com/questions/12544056/how-to-i-get-the-current-ipython-notebook-name>`_
         Il suffit d'insérer la cellule suivante dans le notebook ::
 
             %%javascript
@@ -93,11 +93,13 @@ def jupyter_convert_notebooks():
 
 def jupyter_get_variable(name, magic_command_instance):
     """
-    Retrieve the value of a local variable in a notebook.
+    Retrieves the value of a local variable in a notebook.
 
     @param      name                        variable name
-    @param      magic_command_instance      instance of `Magics <http://ipython.readthedocs.io/en/stable/api/generated/IPython.core.magic.html#IPython.core.magic.Magics>`_,
-                                            see `Defining your own magics <http://ipython.readthedocs.io/en/stable/config/custommagics.html?defining-custom-magics>`_
+    @param      magic_command_instance      instance of `Magics <http://ipython.readthedocs.io/en/stable/api/
+                                            generated/IPython.core.magic.html#IPython.core.magic.Magics>`_,
+                                            see `Defining your own magics
+                                            <http://ipython.readthedocs.io/en/stable/config/custommagics.html?defining-custom-magics>`_
     @return                                 value
 
     The function raises an exception if the context does not exists

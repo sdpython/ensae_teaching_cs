@@ -6,8 +6,8 @@
 import os
 import sys
 import hashlib
-import pandas
 import time
+import pandas
 from pyquickhelper.loghelper import noLOG, run_cmd
 from pyquickhelper.filehelper import explore_folder_iterfile
 from pyquickhelper.filehelper.download_helper import get_url_content_timeout
@@ -116,7 +116,7 @@ def execute_python_scripts(root, df, col_names=None, url=None, eol="/", fLOG=noL
                 col_content = col_names.get("content", "content")
 
                 if out is None:
-                    for ii, mm in gen_mail(mail.strip()):
+                    for _, mm in gen_mail(mail.strip()):
                         mailid = _get_code(mm.encode("utf-8"))
                         ind = {col_ind: mailid}
                         for o in outs:

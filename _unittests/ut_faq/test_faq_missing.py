@@ -7,6 +7,8 @@ import os
 import unittest
 from datetime import datetime
 import pandas
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import get_temp_folder, fix_tkinter_issues_virtualenv
 
 
 try:
@@ -22,26 +24,10 @@ except ImportError:
         sys.path.append(path)
     import src
 
-try:
-    import pyquickhelper as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_
 
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, fix_tkinter_issues_virtualenv
 from src.ensae_teaching_cs.faq.faq_python import entier_grande_taille, difference_div, python_path, test_unitaire, same_variable, stringio
-from src.ensae_teaching_cs.faq.faq_python import property_example, enumerate_regex_search, download_from_url, sortable_class, list_of_installed_packages
+from src.ensae_teaching_cs.faq.faq_python import property_example, enumerate_regex_search, download_from_url
+from src.ensae_teaching_cs.faq.faq_python import sortable_class, list_of_installed_packages
 from src.ensae_teaching_cs.faq.faq_python import information_about_package, get_month_name, get_day_name
 from src.ensae_teaching_cs.faq.faq_pandas import df_to_clipboard, df_equal, speed_dataframe
 from src.ensae_teaching_cs.faq.faq_matplotlib import change_legend_location, avoid_overlapping_dates
@@ -96,7 +82,8 @@ class TestFaqMissing (unittest.TestCase):
             OutputPrint=__name__ == "__main__")
 
         df = pandas.DataFrame([{"a": 1}])
-        if False:
+        more_testing = False
+        if more_testing:
             # does not work
             df_to_clipboard(df)
         self.assertTrue(df_equal(df, df))
@@ -125,7 +112,8 @@ class TestFaqMissing (unittest.TestCase):
         data = os.path.abspath(os.path.dirname(__file__))
         nb = os.path.join(data, "exercice_xn.ipynb")
         find_best_server(nb)
-        if False:
+        more_testing = False
+        if more_testing:
             # does not work
             r = nb_open(nb, open_browser=False)
             fLOG(r)

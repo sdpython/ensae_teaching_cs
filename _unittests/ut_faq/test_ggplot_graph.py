@@ -6,6 +6,8 @@ import sys
 import os
 import unittest
 import warnings
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import fix_tkinter_issues_virtualenv
 
 
 try:
@@ -21,24 +23,7 @@ except ImportError:
         sys.path.append(path)
     import src
 
-try:
-    import pyquickhelper as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_
 
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import fix_tkinter_issues_virtualenv
 from src.ensae_teaching_cs.faq import graph_ggplot_with_label
 
 
@@ -190,10 +175,9 @@ class TestGGplotGraph (unittest.TestCase):
             return
         fix_tkinter_issues_virtualenv(fLOG=fLOG)
         import matplotlib.pyplot as plt
-        fig, ax = plt.subplots(figsize=(8, 3))
+        _, ax = plt.subplots(figsize=(8, 3))
         graph_ggplot_with_label(x, y, xl, ax=ax)
         if __name__ == "__main__":
-            import matplotlib.pyplot as plt
             plt.show()
         plt.close('all')
         fLOG("end")

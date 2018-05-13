@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 """
 @brief      test log(time=180s)
-
 """
 import os
 import sys
 import unittest
 import warnings
+from pyquickhelper.loghelper import fLOG, unzip
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 
 
 try:
     import src
-    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -21,23 +21,9 @@ except ImportError:
                 "..")))
     if path not in sys.path:
         sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
     import src
-    import pyquickhelper as skip_
 
 
-from pyquickhelper.loghelper import fLOG, unzip
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from src.ensae_teaching_cs.special.elections import ElectionResults
 
 
@@ -49,8 +35,8 @@ class TestElections (unittest.TestCase):
         file = os.path.join(path, "data", "election_2012.xls")
         if not os.path.exists(file):
             temp = get_temp_folder(__file__, "temp_loading_elections_2012")
-            zip = os.path.join(path, "data", "elections.zip")
-            unzip(zip, temp)
+            zip_ = os.path.join(path, "data", "elections.zip")
+            unzip(zip_, temp)
             file = os.path.join(temp, "election_2012.xlsx")
         assert os.path.exists(file)
 
@@ -64,7 +50,9 @@ class TestElections (unittest.TestCase):
         el.correct("cand")
         fLOG(el.get_candidates_votes(0))
         fLOG(sum(el.get_people(0)), sum(el.get_people(1)))
-        if False:
+
+        more_debug = False
+        if more_debug:
             fLOG("----")
             tbl = el.T0.head().copy()
             tbl["total"] = tbl.apply(lambda row: sum(
@@ -122,8 +110,8 @@ class TestElections (unittest.TestCase):
         file = os.path.join(path, "data", "election_2007.xls")
         if not os.path.exists(file):
             temp = get_temp_folder(__file__, "temp_loading_elections_2007")
-            zip = os.path.join(path, "data", "elections.zip")
-            unzip(zip, temp)
+            zip_ = os.path.join(path, "data", "elections.zip")
+            unzip(zip_, temp)
             file = os.path.join(temp, "election_2007.xlsx")
         assert os.path.exists(file)
 
@@ -149,8 +137,8 @@ class TestElections (unittest.TestCase):
                 if not os.path.exists(file):
                     file = os.path.join(temp, "election_%d.xlsx" % year)
                 if not os.path.exists(file):
-                    zip = os.path.join(path, "data", "elections.zip")
-                    unzip(zip, temp)
+                    zip_ = os.path.join(path, "data", "elections.zip")
+                    unzip(zip_, temp)
                     file = os.path.join(temp, "election_%d.xlsx" % year)
                 assert os.path.exists(file)
 

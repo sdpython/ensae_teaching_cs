@@ -145,6 +145,7 @@ class CustomMagics(Magics):
             if self.shell is not None:
                 self.shell.user_ns[name] = f
             return f
+        return None
 
 
 def register_magics():

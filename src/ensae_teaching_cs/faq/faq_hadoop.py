@@ -23,7 +23,8 @@ def putty_different_python():
         qui montre comment se server de putty pour envoyer des commandes vers le cluster.
         Il est aussi possible de créer sa propre fenêtre putty à l'intérieur
         d'un notebook
-        (voir `Communication with a remote Linux machine through SSH <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/example_of_ssh_client_communication.html>`_).
+        (voir `Communication with a remote Linux machine through SSH
+        <http://www.xavierdupre.fr/app/pyensae/helpsphinx/notebooks/example_of_ssh_client_communication.html>`_).
 
         *Mais comment fait-on pour exécuter un script python sur la machine distance ?*
 

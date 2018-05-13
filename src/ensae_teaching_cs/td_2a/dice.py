@@ -201,7 +201,7 @@ class DiceStraight:
         paths = self.compute_paths(edges)
         fLOG("[longest_path_length_triplet] nb paths {0}".format(len(paths)))
         new_paths = []
-        for start, ps in paths.items():
+        for ps in paths.values():
             for path in ps:
                 del path[-1]
                 new_paths.append([(k, v) for k, v in path.items()])

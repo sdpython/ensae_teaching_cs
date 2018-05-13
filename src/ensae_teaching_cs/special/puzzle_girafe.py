@@ -212,10 +212,10 @@ class PuzzleGirafe:
             HVHMBBBO
             BMHOHVBB
         """
-        dir = os.path.abspath(os.path.dirname(__file__))
-        dir = os.path.join(dir, "data")
+        dir_ = os.path.abspath(os.path.dirname(__file__))
+        dir_ = os.path.join(dir, "data")
 
-        with open(os.path.join(dir, "definition_puzzle_girafe.txt"), "r") as f:
+        with open(os.path.join(dir_, "definition_puzzle_girafe.txt"), "r") as f:
             bo = f.readlines()
 
         # on définit chaque pièce
@@ -333,8 +333,8 @@ class PuzzleGirafe:
 
     def solution(self, pos=1, screen=None, pygame=None, images=None, delay=200):
         """
-        résoud le puzzle de façon récursive : on pose une pièce puis on résoud
-        le puzzle restant (une pièce en moins, une case en moins)
+        Résoud le puzzle de façon récursive : on pose une pièce puis on résoud
+        le puzzle restant (une pièce en moins, une case en moins).
 
         @param      pos         niveau de récursivité
         @param      screen      image pygame
@@ -354,7 +354,7 @@ class PuzzleGirafe:
 
         if self.nb_position == len(self.piece):
             time.sleep(0.2)
-            return
+            return None
 
         # le tableau free mémorise l'ensemble des pièces non encore placées
         free = []
@@ -407,6 +407,7 @@ class PuzzleGirafe:
             # on passe au choix suivant avec free contenant les pièces
             # placées et les pièces essayées
             p = self.meilleure_piece(free, pos)
+        return None
 
 
 def display_puzzle_girafe(self, screen, petite=False, pygame=None):

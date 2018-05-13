@@ -9,6 +9,7 @@ import os
 import unittest
 import random
 import pandas
+from pyquickhelper.loghelper import fLOG
 
 
 try:
@@ -24,39 +25,7 @@ except ImportError:
         sys.path.append(path)
     import src
 
-try:
-    import pyquickhelper as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_
 
-try:
-    import pyensae as skip__
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyensae",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyensae as skip__
-
-from pyquickhelper.loghelper import fLOG
 from src.ensae_teaching_cs.homeblog.table_formula import TableFormula
 
 
@@ -161,7 +130,6 @@ class TestTableFormula2 (unittest.TestCase):
     def test_pandas_matrix_index(self):
         fLOG(__file__, self._testMethodName,
              OutputPrint=__name__ == "__main__")
-        import pandas
         fold = os.path.split(__file__)[0]
         file = os.path.join(fold, "data", "BNP.PA.txt")
         df = pandas.read_csv(file, sep=",", index_col=["Date"])

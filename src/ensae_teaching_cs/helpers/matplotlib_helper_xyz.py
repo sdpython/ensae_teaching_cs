@@ -43,7 +43,6 @@ def scatter_xy_id(xy_id, legend=None, ax=None, **options):
     The error ``ValueError: Unknown projection '3d'`` is raised when the line
     ``from mpl_toolkits.mplot3d import Axes3D`` is missing.
     """
-    from mpl_toolkits.mplot3d import Axes3D as skip_  # do remove this line
     curves = {}
     for x, y, zid in xy_id:
         if zid not in curves:
@@ -115,7 +114,6 @@ def scatter_xyc(points, smooth=0, div=10, ax=None, **options):
     The error ``ValueError: Unknown projection '3d'`` is raised when the line
     ``from mpl_toolkits.mplot3d import Axes3D`` is missing.
     """
-    from mpl_toolkits.mplot3d import Axes3D as skip_  # do remove this line
     if ax is None:
         import matplotlib.pyplot as plt
         fig, ax = plt.subplots(figsize=options.get('figsize', None))
@@ -201,7 +199,6 @@ def scatter_xyz(points, smooth=0, div=100, ax=None, **options):
     The error ``ValueError: Unknown projection '3d'`` is raised when the line
     ``from mpl_toolkits.mplot3d import Axes3D`` is missing.
     """
-    from mpl_toolkits.mplot3d import Axes3D as skip_  # do remove this line
     x = [_[0] for _ in points]
     y = [_[1] for _ in points]
     z = [_[2] for _ in points]

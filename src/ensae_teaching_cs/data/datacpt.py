@@ -2,9 +2,9 @@
 @file
 @brief Data for competitions
 """
-import pandas
 import os
 import random
+import pandas
 from pyensae.datasource import download_data
 from pyquickhelper.loghelper import noLOG
 from pyquickhelper.filehelper.encryption import decrypt_stream
@@ -14,7 +14,9 @@ def data_cpt_ENSAE_2016_11(folder=".", fLOG=noLOG):
     """
     returns the data for the competition
     `Python 2A ENSAE 2016 <https://competitions.codalab.org/competitions/13301>`_,
-    located on github `ensae_competition_2016.zip <https://github.com/sdpython/ensae_teaching_cs/raw/master/_doc/competitions/2016_ENSAE_2A/ensae_competition_2016.zip>`_.
+    located on github `ensae_competition_2016.zip
+    <https://github.com/sdpython/ensae_teaching_cs/raw/master/_doc/competitions/
+    2016_ENSAE_2A/ensae_competition_2016.zip>`_.
 
     @param      folder      where to download and unzip
     @param      fLOG        logging function

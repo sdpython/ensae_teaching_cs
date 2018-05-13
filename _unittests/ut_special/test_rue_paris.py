@@ -1,15 +1,15 @@
 """
 @brief      test log(time=25s)
-
 """
 import os
 import sys
 import unittest
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import fix_tkinter_issues_virtualenv, get_temp_folder
+from pyensae.datasource import download_data
 
 try:
     import src
-    import pyquickhelper as skip_
-    import pyensae as skip__
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -19,36 +19,10 @@ except ImportError:
                 "..")))
     if path not in sys.path:
         sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyensae",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
     import src
-    import pyquickhelper as skip_
-    import pyensae as skip__
 
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import fix_tkinter_issues_virtualenv
-from pyensae.datasource import download_data
-from src.ensae_teaching_cs.special.rues_paris import get_data, bellman, kruskal, possible_edges, eulerien_extension, distance_paris, euler_path, connected_components, distance_haversine, graph_degree
+from src.ensae_teaching_cs.special.rues_paris import get_data, bellman, kruskal, possible_edges, distance_haversine, graph_degree
+from src.ensae_teaching_cs.special.rues_paris import eulerien_extension, distance_paris, euler_path, connected_components
 
 
 class TestRueParis (unittest.TestCase):
@@ -142,13 +116,7 @@ class TestRueParis (unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        return
-        folder = os.path.join(
-            os.path.abspath(
-                os.path.dirname(__file__)),
-            "temp_algo3")
-        if not os.path.exists(folder):
-            os.mkdir(folder)
+        folder = get_temp_folder(__file__, "temp_algo3")
         edges = get_data(whereTo=folder, fLOG=fLOG)
         fLOG("start")
         added = eulerien_extension(edges, fLOG=fLOG, distance=distance_paris)
@@ -243,9 +211,9 @@ class TestRueParis (unittest.TestCase):
         plt.close('all')
 
         path = euler_path(edges, added)
-        all = edges + added
-        fLOG(len(all), len(path))
-        #assert len(all) == len(path)
+        alls = edges + added
+        fLOG(len(alls), len(path))
+        #assert len(alls) == len(path)
 
 
 if __name__ == "__main__":

@@ -78,7 +78,7 @@ class Scene (object):
         res = []
         for s in self.sources:
             r = Rayon(s.origine, p - s.origine, Pixel(0, 0), s.couleur)
-            o, i = self.intersection(r)
+            _, i = self.intersection(r)
             if i is None:
                 continue
             if (i - p).norme2() < 1e-10:   # possible problème d'arrondi

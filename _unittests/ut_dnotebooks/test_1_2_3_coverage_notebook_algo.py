@@ -6,6 +6,8 @@
 import sys
 import os
 import unittest
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
 
 
 try:
@@ -20,25 +22,6 @@ except ImportError:
     if path not in sys.path:
         sys.path.append(path)
     import src
-
-try:
-    import pyquickhelper as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_
-
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
 
 
 class TestNotebook123CoverageAlgo(unittest.TestCase):
@@ -58,7 +41,7 @@ class TestNotebook123CoverageAlgo(unittest.TestCase):
         def custom_clean_function_1a(cell):
             if "..." in cell:
                 return ""
-            if "b[0,0] = 44444444":
+            if "b[0,0] = 44444444" in cell:
                 return ""
             return clean_function_1a(cell)
 

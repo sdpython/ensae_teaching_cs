@@ -3,8 +3,8 @@
 @file
 @brief définition d'une facette
 """
-from .image_synthese_base import Objet
 import math
+from .image_synthese_base import Objet
 
 
 class Facette (Objet):
@@ -37,10 +37,7 @@ class Facette (Objet):
         theta += pb.angle(pc, self.vnorm)
         theta += pc.angle(pa, self.vnorm)
         theta = abs(theta)
-        if theta >= math.pi * 0.9:
-            return True
-        else:
-            return False
+        return theta >= math.pi * 0.9
 
     def intersection(self, r):
         """retourne le point d'intersection avec le rayon r,
@@ -97,10 +94,7 @@ class Rectangle (Facette):
         theta += pc.angle(pd, self.vnorm)
         theta += pd.angle(pa, self.vnorm)
         theta = abs(theta)
-        if theta >= math.pi * 0.9:
-            return True
-        else:
-            return False
+        return theta >= math.pi * 0.9
 
     def __str__(self):
         """affichage"""

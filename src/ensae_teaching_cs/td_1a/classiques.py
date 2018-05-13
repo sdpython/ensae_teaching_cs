@@ -236,7 +236,7 @@ def dictionnaire_modifie_dans_la_boucle():
 
     d = {k: k for k in li}
     rem = []
-    for k, v in d.items():
+    for k in d:
         if k == 4:
             rem.append(k)
     for r in rem:

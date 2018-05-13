@@ -6,6 +6,8 @@
 import sys
 import os
 import unittest
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
 
 
 try:
@@ -20,26 +22,6 @@ except ImportError:
     if path not in sys.path:
         sys.path.append(path)
     import src
-
-try:
-    import pyquickhelper as skip_____
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_____
-
-
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
 
 
 class TestNotebookRunner1a_enonce (unittest.TestCase):

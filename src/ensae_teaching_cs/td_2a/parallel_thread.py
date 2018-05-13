@@ -36,12 +36,8 @@ class ParallelThread (threading.Thread):
             self.results.append(self.f2run(*l, **p))
 
     @staticmethod
-    def parallel(f,
-                 list_of_params,
-                 nbthread=2,
-                 wait=True,
-                 daemon=True,
-                 delay_sec=1):
+    def parallel(f, list_of_params, nbthread=2, wait=True,
+                 daemon=True, delay_sec=1):
         """
         Parallélise l'appel à la fonction ``f``
         sur une liste de paramètres.

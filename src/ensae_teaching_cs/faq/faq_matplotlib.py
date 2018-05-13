@@ -61,7 +61,7 @@ def zoomable():
     pass
 
 
-def graph_ggplot_with_label(x, y, labels, bar=True, title=None, figsize=(6, 4), style=None,
+def graph_ggplot_with_label(x, y, labels, barplot=True, title=None, figsize=(6, 4), style=None,
                             ax=None, **kwargs):
     """
     Creates a graph with :epkg:`matplotlib`.
@@ -69,7 +69,7 @@ def graph_ggplot_with_label(x, y, labels, bar=True, title=None, figsize=(6, 4), 
     @param      x       x
     @param      y       y
     @param      labels  x labels
-    @param      bar     boolean, True, uses bar, plot otherwise
+    @param      barplot boolean, True, uses bar, plot otherwise
     @param      title   if not None, sets the title
     @param      figsize only if ax is not None
     @param      style   style
@@ -96,11 +96,15 @@ def graph_ggplot_with_label(x, y, labels, bar=True, title=None, figsize=(6, 4), 
                  28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43]
             y = [1, 3, 10, 6, 3, 5, 3, 6, 4, 2, 3, 2, 11, 10, 4, 5, 2, 5, 4, 1, 1, 1, 3, 15, 5, 2, 1, 5, 3, 1, 3,
                  2, 4, 5, 2, 12, 12, 5, 11, 2, 19, 21, 5, 2]
-            xl = ['2014-w04', '2014-w05', '2014-w06', '2014-w07', '2014-w08', '2014-w09', '2014-w10', '2014-w11',
+            xl = ['2014-w04', '2014-w05', '2014-w06', '2014-w07', '2014-w08', '2014-w09',
+                  '2014-w10', '2014-w11',
                   '2014-w12', '2014-w13', '2014-w14', '2014-w15', '2014-w16',
-                  '2014-w17', '2014-w18', '2014-w19', '2014-w20', '2014-w21', '2014-w22', '2014-w23', '2014-w24', '2014-w25', '2014-w27',
-                  '2014-w29', '2014-w30', '2014-w31', '2014-w32', '2014-w34', '2014-w35', '2014-w36', '2014-w38', '2014-w39', '2014-w41',
-                  '2014-w42', '2014-w43', '2014-w44', '2014-w45', '2014-w46', '2014-w47', '2014-w48', '2014-w49', '2014-w50', '2014-w51', '2014-w52']
+                  '2014-w17', '2014-w18', '2014-w19', '2014-w20', '2014-w21', '2014-w22', '2014-w23',
+                  '2014-w24', '2014-w25', '2014-w27',
+                  '2014-w29', '2014-w30', '2014-w31', '2014-w32', '2014-w34', '2014-w35', '2014-w36',
+                  '2014-w38', '2014-w39', '2014-w41',
+                  '2014-w42', '2014-w43', '2014-w44', '2014-w45', '2014-w46', '2014-w47', '2014-w48',
+                  '2014-w49', '2014-w50', '2014-w51', '2014-w52']
             plt.close('all')
             plt.style.use('ggplot')
             fig,ax = plt.subplots(nrows=1,ncols=1,figsize=(10,4))
@@ -119,10 +123,14 @@ def graph_ggplot_with_label(x, y, labels, bar=True, title=None, figsize=(6, 4), 
                  32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43]
             y = [1, 3, 10, 6, 3, 5, 3, 6, 4, 2, 3, 2, 11, 10, 4, 5, 2, 5, 4, 1, 1, 1, 3, 15, 5, 2, 1, 5,
                  3, 1, 3, 2, 4, 5, 2, 12, 12, 5, 11, 2, 19, 21, 5, 2]
-            xl = ['2014-w04', '2014-w05', '2014-w06', '2014-w07', '2014-w08', '2014-w09', '2014-w10', '2014-w11', '2014-w12', '2014-w13', '2014-w14',
-                  '2014-w15', '2014-w16', '2014-w17', '2014-w18', '2014-w19', '2014-w20', '2014-w21', '2014-w22', '2014-w23', '2014-w24', '2014-w25',
-                  '2014-w27', '2014-w29', '2014-w30', '2014-w31', '2014-w32', '2014-w34', '2014-w35', '2014-w36', '2014-w38', '2014-w39', '2014-w41',
-                  '2014-w42', '2014-w43', '2014-w44', '2014-w45', '2014-w46', '2014-w47', '2014-w48', '2014-w49', '2014-w50', '2014-w51', '2014-w52']
+            xl = ['2014-w04', '2014-w05', '2014-w06', '2014-w07', '2014-w08', '2014-w09',
+                  '2014-w10', '2014-w11', '2014-w12', '2014-w13', '2014-w14',
+                  '2014-w15', '2014-w16', '2014-w17', '2014-w18', '2014-w19',
+                  '2014-w20', '2014-w21', '2014-w22', '2014-w23', '2014-w24', '2014-w25',
+                  '2014-w27', '2014-w29', '2014-w30', '2014-w31', '2014-w32', '2014-w34',
+                  '2014-w35', '2014-w36', '2014-w38', '2014-w39', '2014-w41',
+                  '2014-w42', '2014-w43', '2014-w44', '2014-w45', '2014-w46', '2014-w47',
+                  '2014-w48', '2014-w49', '2014-w50', '2014-w51', '2014-w52']
             plt.close('all')
             plt.style.use('ggplot')
             fig,ax = plt.subplots(nrows=1,ncols=1,figsize=(10,4))
@@ -141,7 +149,8 @@ def graph_ggplot_with_label(x, y, labels, bar=True, title=None, figsize=(6, 4), 
         `get_xticks <http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes.get_xticks>`_
         pour récupérer d'abord les graduations et n'afficher les labels que
         pour celles-ci
-        (voir aussi `Custom ticks autoscaled when using imshow? <http://stackoverflow.com/questions/13409006/custom-ticks-autoscaled-when-using-imshow>`_).
+        (voir aussi `Custom ticks autoscaled when using imshow?
+        <http://stackoverflow.com/questions/13409006/custom-ticks-autoscaled-when-using-imshow>`_).
         Voici un exemple de code ::
 
             import matplotlib.pyplot as plt
@@ -150,9 +159,12 @@ def graph_ggplot_with_label(x, y, labels, bar=True, title=None, figsize=(6, 4), 
             y = [1, 3, 10, 6, 3, 5, 3, 6, 4, 2, 3, 2, 11, 10, 4, 5, 2, 5, 4, 1, 1, 1, 3, 15, 5, 2, 1, 5, 3, 1, 3, 2,
                  4, 5, 2, 12, 12, 5, 11, 2, 19, 21, 5, 2]
             xl = ['2014-w04', '2014-w05', '2014-w06', '2014-w07', '2014-w08', '2014-w09', '2014-w10', '2014-w11', '2014-w12', '2014-w13',
-                  '2014-w14', '2014-w15', '2014-w16', '2014-w17', '2014-w18', '2014-w19', '2014-w20', '2014-w21', '2014-w22', '2014-w23', '2014-w24', '2014-w25',
-                  '2014-w27', '2014-w29', '2014-w30', '2014-w31', '2014-w32', '2014-w34', '2014-w35', '2014-w36', '2014-w38', '2014-w39', '2014-w41', '2014-w42',
-                  '2014-w43', '2014-w44', '2014-w45', '2014-w46', '2014-w47', '2014-w48', '2014-w49', '2014-w50', '2014-w51', '2014-w52']
+                  '2014-w14', '2014-w15', '2014-w16', '2014-w17', '2014-w18', '2014-w19', '2014-w20', '2014-w21',
+                  '2014-w22', '2014-w23', '2014-w24', '2014-w25',
+                  '2014-w27', '2014-w29', '2014-w30', '2014-w31', '2014-w32', '2014-w34', '2014-w35', '2014-w36',
+                  '2014-w38', '2014-w39', '2014-w41', '2014-w42',
+                  '2014-w43', '2014-w44', '2014-w45', '2014-w46', '2014-w47', '2014-w48', '2014-w49',
+                  '2014-w50', '2014-w51', '2014-w52']
             plt.close('all')
             plt.style.use('ggplot')
             fig,ax = plt.subplots(nrows=1,ncols=1,figsize=(10,4))
@@ -172,9 +184,9 @@ def graph_ggplot_with_label(x, y, labels, bar=True, title=None, figsize=(6, 4), 
     """
     import matplotlib.pyplot as plt
     if ax is None:
-        fig, ax = plt.subplots(nrows=1, ncols=1, figsize=(10, 4))
+        _, ax = plt.subplots(nrows=1, ncols=1, figsize=(10, 4))
 
-    if bar:
+    if barplot:
         if style is None:
             ax.bar(x, y, **kwargs)
         else:
@@ -253,7 +265,7 @@ def avoid_overlapping_dates(fig, **options):
     fig.autofmt_xdate(**options)
 
 
-def graph_cities(df, names=["Longitude", "Latitude", "City"], ax=None, linked=False,
+def graph_cities(df, names=("Longitude", "Latitude", "City"), ax=None, linked=False,
                  fLOG=None, loop=False, many=False,
                  drawcoastlines=True, drawcountries=True,
                  fillcontinents=True, drawparallels=True,

@@ -102,17 +102,18 @@ def get_first_col(file):
 
 def py_to_html_folder(folder, addGoogleTracking=True):
     """
-    convert all python files from a folder into html files
+    Converts all :epkg:`python` files from a folder into html files.
 
     @param      folder              folder
-    @param      addGoogleTracking   add some code for the Google tracking (related to www.xavierdupre.fr), @see fn py_to_html_file
+    @param      addGoogleTracking   add some code for the Google tracking (related to www.xavierdupre.fr),
+                                    @see fn py_to_html_file
     @return                         list of processed files
     """
     res = []
-    l = os.listdir(folder)
-    for f in l:
+    li = os.listdir(folder)
+    for f in li:
         fullf = folder + "/" + f
-        racine, ext = os.path.splitext(fullf)
+        ext = os.path.splitext(fullf)[1]
         if ext == ".py":
             r = py_to_html_file(fullf, addGoogleTracking=addGoogleTracking)
             res.append(r)
@@ -137,7 +138,7 @@ def py_to_html_file(file, writehtml="", addGoogleTracking=True, title=None):
 
     fLOG("converting pyfile in html ", file)
     f = file
-    racine, ext = os.path.splitext(file)
+    racine, _ = os.path.splitext(file)[0]
 
     try:
         with open(file, "r", encoding="utf-8") as tf:

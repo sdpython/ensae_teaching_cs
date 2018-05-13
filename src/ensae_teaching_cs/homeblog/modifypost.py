@@ -255,7 +255,7 @@ def modify_all_posts(folder=".",
     for file in files:
         outfile = file.replace(folder, outfolder)
         fLOG("  loading file ", file, ' to ', outfile)
-        dom, outfile = load_and_modify_xml_dom(file, outfile)
+        _, outfile = load_and_modify_xml_dom(file, outfile)
         if outfile is not None:
             modified.append(outfile)
 

@@ -22,7 +22,7 @@ def create_cs_function(name, code, dependencies=None, usings=None):
 
     if dependencies is not None and len(dependencies) > 0:
         myarray = List[String]()
-        for i, d in enumerate(dependencies):
+        for d in dependencies:
             myarray.Add(d)
         myarray = myarray.ToArray()
     else:
@@ -30,7 +30,7 @@ def create_cs_function(name, code, dependencies=None, usings=None):
 
     if usings is not None and len(usings) > 0:
         myusings = List[String]()
-        for i, d in enumerate(usings):
+        for d in usings:
             myusings.Add(d)
         myusings = myusings.ToArray()
     else:

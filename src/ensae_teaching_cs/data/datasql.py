@@ -7,7 +7,8 @@ from .data_helper import any_local_file
 
 def anyfile(name, local=True, cache_folder="."):
     """
-    Returns any file in sub folder `data_web <https://github.com/sdpython/ensae_teaching_cs/tree/master/src/ensae_teaching_cs/data/data_sql>`_.
+    Returns any file in sub folder
+    `data_web <https://github.com/sdpython/ensae_teaching_cs/tree/master/src/ensae_teaching_cs/data/data_sql>`_.
 
     @param          name            file to download
     @param          local           local data or web

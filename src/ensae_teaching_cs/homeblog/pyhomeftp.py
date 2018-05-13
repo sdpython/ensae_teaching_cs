@@ -48,7 +48,7 @@ class pyhomeFTP (FTP):
 
     def close(self):
         fLOG("disconnecting")
-        FTP.disconnect(self)
+        FTP.quit(self)
 
     def mkd(self, path):
         return self.RunCommand(FTP.mkd, path)

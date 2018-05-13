@@ -383,7 +383,8 @@ def generate_html_article(res,
         post = post.replace("### KEYWORDS ###", keystext)
         post = post.replace("### keywords ###", keystext)
 
-        if False:
+        enabled = False
+        if enabled:
             olayer = '<p class="keywordtitle"><a href="xd_blog.html?date=%s">Other Layer</a></p>' % date \
                 if otherLayer is None else \
                 '<p class="keywordtitle"><a href="%s">Other Layer</a></p>' % otherLayer

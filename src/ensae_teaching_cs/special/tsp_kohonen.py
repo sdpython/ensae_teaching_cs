@@ -320,7 +320,7 @@ def pygame_simulation(pygame, folder=None, size=(800, 500), nb=200,
     Voir :ref:`l-puzzle_girafe`.
     """
     pygame.init()
-    size = width, height = x, y = size[0], size[1]
+    size = x, y = size[0], size[1]
     white = 255, 255, 255
     screen = pygame.display.set_mode(size, flags)
     villes = construit_ville(nb, x, y)

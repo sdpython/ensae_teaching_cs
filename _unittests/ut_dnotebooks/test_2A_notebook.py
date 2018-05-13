@@ -7,6 +7,8 @@ import sys
 import os
 import unittest
 import warnings
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
 
 try:
     import src
@@ -20,26 +22,6 @@ except ImportError:
     if path not in sys.path:
         sys.path.append(path)
     import src
-
-try:
-    import pyquickhelper as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_
-
-
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
 
 
 class TestNotebookRunner2a_ (unittest.TestCase):
@@ -72,10 +54,7 @@ class TestNotebookRunner2a_ (unittest.TestCase):
                 return False
             if "cffi" in n:
                 return False
-            if "git_" not in n and "python_r" not in n and "csharp" not in n:
-                return True
-            else:
-                return False
+            return "git_" not in n and "python_r" not in n and "csharp" not in n
 
         if is_travis_or_appveyor() == "travis":
             warnings.warn("execution does not stop")

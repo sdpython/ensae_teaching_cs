@@ -71,29 +71,19 @@ def extract_div(prefix, prefiximage, text, logfunction, temp_folder):
     exp = re.compile("(<div +lang=\\\"latex(_inline)?\\\">((.|\\n)+?)</div>)")
     res = exp.findall(text)
     images = []
-    for a, inline, b, c in res:
+    for a, inline, b, _ in res:
         logfunction("    ------------ converting (div), prefix ", prefix)
         logfunction("    latex: " + b.strip("\n ").replace("\n", " "))
         cont = get_latex_contraction(b)
         image = prefix + cont + ".gif"
         if not os.path.exists(image):
-            if False:
-                # using an external service to get the latex image
-                url = get_url_latex(b, gif=True)
-                svg = get_svg_or_gif(url)
-                logfunction("    writing: " + image)
-                f = open(image, "wb")
-                f.write(svg)
-                f.close()
-            else:
-                # using a local installation of miktex
-                image, size = convert_short_latex_into_png(
-                    b, temp_folder=temp_folder, fLOG=logfunction, final_name=image)
-
+            # using a local installation of miktex
+            image, size = convert_short_latex_into_png(
+                b, temp_folder=temp_folder, fLOG=logfunction, final_name=image)
             images.append(image)
         else:
             from PIL import Image
-            im = Image(image)
+            im = Image.open(image)
             size = im.size
         logfunction("    replacing: " + image)
         text = text_replace_div_gif(
@@ -115,7 +105,7 @@ def text_replace_span_gif(text, htmltext, alt, gif, prefix):
 def extract_span(prefix, prefiximage, text, logfunction):
     exp = re.compile("(<span +lang=\\\"latex\\\">((.|\\n)+?)</span>)")
     res = exp.findall(text)
-    for a, b, c in res:
+    for a, b, _ in res:
         logfunction("    ------------ converting (span) ")
         logfunction("    latex: " + b.strip("\n ").replace("\n", " "))
         cont = get_latex_contraction(b)
@@ -134,7 +124,7 @@ def replace_file(file, outfile, prefix, giflatex, logfunction, temp_folder):
     keep_text = text
     prefix += file.replace("/", "_").replace("\\",
                                              "_").replace(":", "_") + "__"
-    nb, text, images = extract_div(
+    _, text, images = extract_div(
         prefix, giflatex, text, logfunction, temp_folder)
     text = extract_span(prefix, giflatex, text, logfunction)
     if text != keep_text:

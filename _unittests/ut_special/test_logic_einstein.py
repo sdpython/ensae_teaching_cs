@@ -1,14 +1,13 @@
 """
 @brief      test log(time=3s)
-
 """
 import os
 import sys
 import unittest
+from pyquickhelper.loghelper import fLOG
 
 try:
     import src
-    import pyquickhelper as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -18,21 +17,8 @@ except ImportError:
                 "..")))
     if path not in sys.path:
         sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
     import src
-    import pyquickhelper as skip_
 
-from pyquickhelper.loghelper import fLOG
 from src.ensae_teaching_cs.special.einstein_prolog import Enigma
 
 

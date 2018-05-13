@@ -3,21 +3,26 @@
 @brief A couple of functons which automates everything.
 """
 
+import os
+import pandas
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.filehelper import encrypt_stream
 from pymmails import MailBoxImap, EmailMessageRenderer, EmailMessageListRenderer
 from pymmails.render.email_message_style import template_email_html_short
 from .projects_repository import ProjectsRepository
 from .mail_helper import grab_addresses
-import pandas
-import os
 
 
 def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemails="emails.txt",
-                                                            user=None, pwd=None, server="imap.gmail.com", mailfolder=["ensae/ENSAE_2016_3A"],
-                                                            date="1-Jan-2016", zipfilename="projet_3A_2016.zip", zipencpwd=b"sixteenbyteskeys",
-                                                            dataframe=None, columns={"name": "nom_prenom", "group": "groupe", "subject": "sujet"},
-                                                            skip_names=None, process_name=None, title="List of emails", nolink_if=None, fLOG=fLOG):
+                                                            user=None, pwd=None, server="imap.gmail.com",
+                                                            mailfolder=[
+                                                                "ensae/ENSAE_2016_3A"],
+                                                            date="1-Jan-2016", zipfilename="projet_3A_2016.zip",
+                                                            zipencpwd=b"sixteenbyteskeys", dataframe=None,
+                                                            columns={
+                                                                "name": "nom_prenom", "group": "groupe", "subject": "sujet"},
+                                                            skip_names=None, process_name=None,
+                                                            title="List of emails", nolink_if=None, fLOG=fLOG):
     """
     The scenario is the following:
 

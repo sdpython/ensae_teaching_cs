@@ -14,9 +14,6 @@ import html.entities as htmlentitydefs
 from pyquickhelper.loghelper import get_url_content
 
 
-endLine = "\r\n"
-
-
 def xmlParsingLongestDiv(text):
     """
     Extracts the longest div section.
@@ -25,9 +22,8 @@ def xmlParsingLongestDiv(text):
     @return                 text
     """
     class MyHTMLParser(html.parser.HTMLParser):
-
         """
-        to get rid of paragraphs, and bolded text
+        To get rid of paragraphs, and bolded text.
         """
 
         def __init__(self):
@@ -53,9 +49,8 @@ def xmlParsingLongestDiv(text):
                 self.mtag.pop()
                 self.mvalue.pop()
             elif len(self.mtag) > 0:
-                global endLine
                 if tag == "p" or tag == "br":
-                    self.mvalue[-1].append(endLine)
+                    self.mvalue[-1].append("\n")
                 else:
                     self.mvalue[-1].append(" ")
 
@@ -72,7 +67,7 @@ def xmlParsingLongestDiv(text):
         if tag == "div" and len(value) > len(best):
             best = value
 
-    global endLine
+    endLine = "\n"
     res = best.replace(
         "<p>",
         "").replace(
@@ -253,10 +248,8 @@ def get_elysee_speech_from_elysees(
         full = url + "/" + link + "/"
     try:
         text = get_url_content(full)
-    except Exception as e:
+    except Exception:
         return None
-        raise Exception(
-            "unable to fetch content from: " + title + "\n" + full) from e
     return xmlParsingLongestDiv(text)
 
 

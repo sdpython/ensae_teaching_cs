@@ -9,6 +9,7 @@ import os
 import unittest
 import random
 import numpy
+from pyquickhelper.loghelper import fLOG
 
 
 try:
@@ -24,39 +25,6 @@ except ImportError:
         sys.path.append(path)
     import src
 
-try:
-    import pyquickhelper as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_
-
-try:
-    import pyensae as skip__
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyensae",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyensae as skip__
-
-from pyquickhelper.loghelper import fLOG
 from src.ensae_teaching_cs.homeblog.table_formula import TableFormula
 
 
@@ -306,8 +274,8 @@ class TestTableFormula(unittest.TestCase):
         mu, si = tbl.mu_sigma(lambda v: v["x"], removeExtreme=0.01)
         self.assertTrue(abs(mu + 1) < 0.5)
         self.assertTrue(abs(si - 3) < 0.5)
-        all = tbl.mu_sigma_each_column(removeExtreme=0.01)
-        self.assertEqual(all.size, (2, 1))
+        alls = tbl.mu_sigma_each_column(removeExtreme=0.01)
+        self.assertEqual(alls.size, (2, 1))
 
     def test_matrix_array(self):
         fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
@@ -322,7 +290,7 @@ class TestTableFormula(unittest.TestCase):
             delta = tbl.delta(tblm)
             for d in delta:
                 fLOG(d)
-            self.assertTrue(False)
+            raise AssertionError("should not be")
         arr = tbl.np_array
         self.assertTrue(isinstance(arr, numpy.ndarray))
         tbla = TableFormula(tbl.header, arr)

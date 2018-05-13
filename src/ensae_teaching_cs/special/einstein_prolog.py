@@ -39,7 +39,8 @@ def permutation(nb):
 
     @warning  This method can be very long if nb is high (>10).
 
-    This function does something very similar to `itertools.permutations <https://docs.python.org/3/library/itertools.html#itertools.permutations>`_.
+    This function does something very similar to
+    `itertools.permutations <https://docs.python.org/3/library/itertools.html#itertools.permutations>`_.
     """
     per = []
     p = [i for i in range(0, nb)]
@@ -75,9 +76,6 @@ class Rule:
     """
 
     def __init__(self):
-        """
-        constructor
-        """
         #: name of the rule
         self.name = None
         #: set of clauses
@@ -85,19 +83,19 @@ class Rule:
 
     def genere(self):
         """
-        generates all possible clauses (list of lists)
+        Generates all possible clauses (list of lists)
         (l [0][0] et l [0][1]) ou (l [1][0] et l [1][1]),
         a clause is a triplet of
         (person, (property, category) )
         """
-        return None
+        raise NotImplementedError()
 
     def __str__(self):
         """
         display
         """
         if self.name is not None:
-            if "clauses" not in self.__dict__:
+            if not hasattr(self, "clauses"):
                 s = self.name + " \t: "
                 a = self.genere()
                 for al in a:
@@ -170,16 +168,13 @@ class Rule:
         return res
 
 
-class RulePosition (Rule):
-
+class RulePosition(Rule):
     """
     p1 at position
     """
 
     def __init__(self, p1, pos):
-        """
-        constructor
-        """
+        Rule.__init__(self)
         self.set = [p1]
         self.name = "position"
         self.position = pos
@@ -191,16 +186,13 @@ class RulePosition (Rule):
         return [[(self.position, self.set[0])]]
 
 
-class RuleEquivalence (Rule):
-
+class RuleEquivalence(Rule):
     """
     p1 equivalent to p2
     """
 
     def __init__(self, p1, p2):
-        """
-        constructor
-        """
+        Rule.__init__(self)
         self.set = [p1, p2]
         self.name = "equivalence"
 
@@ -214,16 +206,13 @@ class RuleEquivalence (Rule):
         return lt
 
 
-class RuleVoisin (Rule):
-
+class RuleVoisin(Rule):
     """
     p1 and p2 are neighbors
     """
 
     def __init__(self, p1, p2):
-        """
-        constructor
-        """
+        Rule.__init__(self)
         self.set = [p1, p2]
         self.name = "voisin"
 
@@ -238,13 +227,13 @@ class RuleVoisin (Rule):
         return lt
 
 
-class RuleAvant (Rule):
-
+class RuleAvant(Rule):
     """
     p1 before p2
     """
 
     def __init__(self, p1, p2):
+        Rule.__init__(self)
         self.set = [p1, p2]
         self.name = "avant"
 
@@ -259,17 +248,15 @@ class RuleAvant (Rule):
         return lt
 
 
-class RuleEnsemble (Rule):
+class RuleEnsemble(Rule):
 
     """
     permutation of the elements of a category
     """
 
-    def __init__(self, set, categorie):
-        """
-        constructor
-        """
-        self.set = [(s, categorie) for s in set]
+    def __init__(self, sets, categorie):
+        Rule.__init__(self)
+        self.set = [(s, categorie) for s in sets]
         self.name = "ensemble"
 
     def genere(self):
@@ -406,7 +393,7 @@ class Enigma:
                 "<tr><td>" + html + "</td></tr>",
                 "</table>"])
 
-    def solve(self, solution=[], logf=print):  # solution = [ ]) :
+    def solve(self, solution=None, logf=print):  # solution = [ ]) :
         """
         Solves the enigma by eploring in deepness,
         the method is recursive
@@ -414,7 +401,8 @@ class Enigma:
         @param      solution    [] empty at the beginning, recursively used then
         @return                 solution
         """
-
+        if solution is None:
+            solution = []
         self.count += 1
         if self.count % 10 == 0:
             logf(

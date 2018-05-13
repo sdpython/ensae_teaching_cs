@@ -4,6 +4,7 @@
 """
 
 import os
+import re
 from pyquickhelper.loghelper import noLOG, run_cmd
 from pyquickhelper.texthelper import remove_diacritics
 
@@ -208,7 +209,7 @@ def git_first_commit_all_projects(local_folder, user=None, password=None,
     with open(filename, "r", encoding="utf8") as f:
         content = f.read()
 
-    global _gitlab_regex
+    _gitlab_regex = re.compile(".+1.*")
     gitlab = _gitlab_regex.findall(content)
     if len(gitlab) == 0:
         raise Exception(

@@ -13,9 +13,6 @@ def checksum_md5(filename):
     fname = filename
     block_size = 0x10000
 
-    def upd(m, data):
-        m.update(data)
-        return m
     fd = open(fname, "rb")
     try:
         block = [fd.read(block_size)]

@@ -130,7 +130,7 @@ class _TableFormulaStat:
                        "02.5%": vals[len(vals) * 25 // 1000],
                        "97.5%": vals[len(vals) * 975 // 1000],
                        }
-            except Exception:
+            except TypeError:
                 count = {}
                 for v in vals:
                     count[v] = count.get(v, 0) + 1

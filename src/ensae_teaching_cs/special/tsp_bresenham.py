@@ -81,6 +81,8 @@ def draw_line(x1, y1, x2, y2):
             ligne = trace_ligne_simple(x2, y2, x1, y1)
             return [(x1 + x2 - x, y1 + y2 - y) for (x, y) in ligne]
 
+    raise RuntimeError("All cases have already been processed.")
+
 
 def draw_ellipse(xc, yc, a, b):
     """

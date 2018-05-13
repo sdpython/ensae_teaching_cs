@@ -76,7 +76,8 @@ def grab_addresses(mailbox, subfolder, date, no_domain=False, max_dest=5, names=
     return (res, suggestions) if names else res
 
 
-def extract_students_mail_and_name_from_gmail(user=None, pwd=None, server="imap.gmail.com", mailfolder=["ensae/actuariat"],
+def extract_students_mail_and_name_from_gmail(user=None, pwd=None, server="imap.gmail.com",
+                                              mailfolder=["ensae/actuariat"],
                                               date="1-Jan-2016", fLOG=noLOG):
     """
     Extracts mails and names from a mail box.

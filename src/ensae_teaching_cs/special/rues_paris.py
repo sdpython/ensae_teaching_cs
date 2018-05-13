@@ -151,13 +151,13 @@ def possible_edges(edges, threshold, fLOG=None, distance=distance_haversine):
 
     if fLOG is not None:
         total_possible_edges = (len(vertices) ** 2 - len(vertices)) / 2
-        possible_edges = len(possibles) // 2
+        possible_edges_ = len(possibles) // 2
         leninit = len(edges)
         fLOG("original", leninit, "/", total_possible_edges, "=",
              leninit / total_possible_edges)
-        fLOG("addition", possible_edges - leninit, "/",
+        fLOG("addition", possible_edges_ - leninit, "/",
              total_possible_edges, "=",
-             (possible_edges - leninit) / total_possible_edges)
+             (possible_edges_ - leninit) / total_possible_edges)
 
     return possibles
 
@@ -199,7 +199,7 @@ def bellman(edges, iter=20, fLOG=noLOG, allow=None, init=None):
             edges_from[e[1]].append((e[1], e[0], e[2], e[4], e[3], e[5]))
         else:
             raise ValueError(
-                "an edge should be a tuple of 2, 3, or 6 elements, last item is the weight, not:\n{0".format(e))
+                "an edge should be a tuple of 2, 3, or 6 elements, last item is the weight, not:\n{0}".format(e))
 
     modif = 1
     total_possible_edges = (len(edges_from) ** 2 - len(edges_from)) // 2

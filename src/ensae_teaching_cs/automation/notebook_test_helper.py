@@ -145,7 +145,9 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
     @param      fLOG            logging function
     @param      deepfLOG        logging function used to run the notebook
     @param      replacements    replacements
-    @param      dump            see function `execute_notebook_list_finalize_ut <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/ipythonhelper/run_notebook.html#pyquickhelper.ipythonhelper.run_notebook.execute_notebook_list_finalize_ut>`_
+    @param      dump            see function `execute_notebook_list_finalize_ut
+                                <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/ipythonhelper/run_notebook.html#
+                                pyquickhelper.ipythonhelper.run_notebook.execute_notebook_list_finalize_ut>`_
     @param      additional_path additional path to add
     @return                     dictionary { notebook_file: (isSuccess, outout) }
 
@@ -246,12 +248,12 @@ def a_test_notebook_runner(filename, name, folder, valid=None, copy_files=None, 
             doc, "\n".join(os.listdir(doc))))
 
     if copy_files is not None:
-        for name in copy_files:
-            dest = os.path.join(temp, name)
+        for name_ in copy_files:
+            dest = os.path.join(temp, name_)
             dest_dir = os.path.dirname(dest)
             if not os.path.exists(dest_dir):
                 os.mkdir(dest_dir)
-            src_file = os.path.join(doc, name)
+            src_file = os.path.join(doc, name_)
             fLOG("[a_test_notebook_runner] copy '{0}' to '{1}'.".format(
                 src_file, dest_dir))
             shutil.copy(src_file, dest_dir)

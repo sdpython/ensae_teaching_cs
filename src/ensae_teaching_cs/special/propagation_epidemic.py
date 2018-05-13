@@ -229,15 +229,15 @@ class Person:
                     self.state = 3
                     self._since = 0
         elif self.state == 0:
-            all = []
+            alls = []
             for p in population:
                 if p.state != 1:
                     continue
                 d = self.distance(p)
                 if d <= self.rayon:
-                    all.append(p)
+                    alls.append(p)
 
-            for k in all:
+            for k in alls:
                 p = random.random()
                 if p <= self.prob_cont:
                     self.state = 1
@@ -450,7 +450,7 @@ def pygame_simulation(pygame, first_click=False, folder=None,
             break
 
     if first_click:
-        wait_event()
+        wait_event(pygame)
 
 
 def numerical_simulation(nb=(200, 20), cote=600, iter=1000, fLOG=noLOG, **params):
@@ -466,12 +466,14 @@ def numerical_simulation(nb=(200, 20), cote=600, iter=1000, fLOG=noLOG, **params
     """
     pop = EpidemicPopulation(cote, nb, **params)
 
+    lasti = None
     for i in range(0, iter):
         nb = pop.evolution()
+        lasti = i
         if 1 not in nb or nb[1] == 0:
             break
         if i % 10 == 0:
             fLOG("iteration", i, ":", nb)
 
     r = pop.count()
-    return r, i
+    return r, lasti

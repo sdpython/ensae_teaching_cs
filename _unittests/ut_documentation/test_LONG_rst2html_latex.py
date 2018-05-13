@@ -1,12 +1,14 @@
 """
 @brief      test log(time=93s)
-@author     Xavier Dupre
 """
 
 import sys
 import os
 import warnings
 import unittest
+from pyquickhelper.loghelper.flog import fLOG
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
+from pyquickhelper.helpgen import rst2html
 
 
 try:
@@ -21,28 +23,6 @@ except ImportError:
     if path not in sys.path:
         sys.path.append(path)
     import src
-
-
-try:
-    import pyquickhelper as skip____
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip____
-
-
-from pyquickhelper.loghelper.flog import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
-from pyquickhelper.helpgen import rst2html
 
 
 class TestRst2HtmlLatex(unittest.TestCase):

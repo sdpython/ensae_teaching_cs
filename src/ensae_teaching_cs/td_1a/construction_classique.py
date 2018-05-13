@@ -458,7 +458,8 @@ def mat2vect(mat):
                         for j in range (0, len (mat [i])) ]
             print(lin)
 
-        Vous pouvez aussi utiliser des fonctions telles `reduce <https://docs.python.org/3/library/functools.html?highlight=reduce#module-functools>`_.
+        Vous pouvez aussi utiliser des fonctions telles que
+        `reduce <https://docs.python.org/3/library/functools.html?highlight=reduce#module-functools>`_.
 
         .. runpython::
             :showcode:

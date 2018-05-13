@@ -1,11 +1,12 @@
 """
 @brief      test log(time=11s)
-@author     Xavier Dupre
 """
 
 import sys
 import os
 import unittest
+from pyquickhelper.loghelper.flog import fLOG
+from pyquickhelper.pycode import is_travis_or_appveyor
 
 
 try:
@@ -20,44 +21,6 @@ except ImportError:
     if path not in sys.path:
         sys.path.append(path)
     import src
-
-
-try:
-    import pyquickhelper as skip____
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip____
-
-
-try:
-    import pyensae as skip_____
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyensae",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyensae as skip_____
-
-
-from pyquickhelper.loghelper.flog import fLOG
-from pyquickhelper.pycode import is_travis_or_appveyor
 
 
 class TestSkipExampleTorch(unittest.TestCase):
@@ -82,12 +45,10 @@ class TestSkipExampleTorch(unittest.TestCase):
 
         X, Y = load_iris(return_X_y=True)
         X = X.astype("float32")
-        X.shape, Y.shape
 
         ftrain = np.arange(X.shape[0]) % 4 != 0
         Xtrain, Ytrain = X[ftrain, :], Y[ftrain]
         Xtest, Ytest = X[~ftrain, :], Y[~ftrain]
-        Xtrain.shape, Ytrain.shape, Xtest.shape, Ytest.shape
 
         N_EPOCHS = 1
 

@@ -1,11 +1,13 @@
 """
 @brief      test log(time=22s)
-@author     Xavier Dupre
 """
 
 import sys
 import os
 import unittest
+from pyquickhelper.loghelper.flog import fLOG
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
+from pyensae.datasource import download_data
 
 
 try:
@@ -20,45 +22,6 @@ except ImportError:
     if path not in sys.path:
         sys.path.append(path)
     import src
-
-
-try:
-    import pyquickhelper as skip____
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip____
-
-
-try:
-    import pyensae as skip_____
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyensae",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyensae as skip_____
-
-
-from pyquickhelper.loghelper.flog import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
-from pyensae.datasource import download_data
 
 
 class TestSkipExampleTheanoLogReg(unittest.TestCase):

@@ -9,8 +9,10 @@
 
     When running for the first time on Python 3.5, the following error came up::
 
-        Unhandled Exception: System.IO.FileLoadException: Could not load file or assembly 'file:///<apath>\\Python.Runtime.dll' or one of its dependencies.
-        Operation is not supported. (Exception from HRESULT: 0x80131515) ---> System.NotSupportedException: An attempt was made to load an assembly
+        Unhandled Exception: System.IO.FileLoadException: Could not load file or assembly
+            'file:///<apath>\\Python.Runtime.dll' or one of its dependencies.
+        Operation is not supported. (Exception from HRESULT: 0x80131515) --->
+            System.NotSupportedException: An attempt was made to load an assembly
         from a network location which would have caused the assembly to be sandboxed in previous versions of the .NET Framework.
         This release of the .NET Framework does not enable CAS policy by default, so this load may be dangerous.
         If this load is not intended to sandbox the assembly,
@@ -24,7 +26,8 @@
             Evidence assemblySecurity, RuntimeAssembly reqAssembly, StackCrawlMark& stackMark,
             IntPtr pPrivHostBinder, Boolean throwOnFileNotFound, Boolean forIntrospection, Boolean suppressSecurityChecks)
         at System.Reflection.RuntimeAssembly.InternalLoadFrom(String assemblyFile, Evidence securityEvidence, Byte[] hashValue,
-            AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection, Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
+            AssemblyHashAlgorithm hashAlgorithm, Boolean forIntrospection,
+                Boolean suppressSecurityChecks, StackCrawlMark& stackMark)
         at System.Reflection.Assembly.LoadFrom(String assemblyFile)
         at clrModule.PyInit_clr()
 

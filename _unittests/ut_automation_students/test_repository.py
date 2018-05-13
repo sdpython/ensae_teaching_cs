@@ -1,22 +1,19 @@
 """
 @brief      test log(time=2s)
-
 """
-
-
 import sys
 import os
 import unittest
-import pandas
 import datetime
+import pandas
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import get_temp_folder
+from pymmails import MailBoxMock, EmailMessageRenderer, EmailMessageListRenderer
+from pymmails.render.email_message_style import template_email_html_short
 
 
 try:
     import src
-    import pyquickhelper as skip_____
-    import pyensae as skip___
-    import pyrsslocal as skip__
-    import pymyinstall as skip_
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -26,73 +23,8 @@ except ImportError:
                 "..")))
     if path not in sys.path:
         sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pymyinstall",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyensae",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    if path not in sys.path:
-        sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyrsslocal",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pymmails",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
     import src
-    import pyquickhelper as skip____
-    import pyensae as skip___
-    import pyrsslocal as skip__
-    import pymmails as skip_
 
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
-from pymmails import MailBoxMock, EmailMessageRenderer, EmailMessageListRenderer
-from pymmails.render.email_message_style import template_email_html_short
 from src.ensae_teaching_cs.automation_students import ProjectsRepository
 
 
@@ -132,7 +64,8 @@ class TestRepository(unittest.TestCase):
                                                                 email_function=emails,
                                                                 must_have_email=False)
 
-        if True:
+        do_test = True
+        if do_test:
             data = os.path.abspath(os.path.join(
                 os.path.dirname(__file__), "data"))
             box = MailBoxMock(data, b"unittestunittest", fLOG)

@@ -47,13 +47,14 @@ def trigger_on_specific_strings(content, filename=None, force_allow=None):
             if s not in force_allow and s in lower_content:
                 raise Exception(
                     'string {0}:{1} was found in\n  File "{2}", line 1'.format(st, s, filename))
-                return None
     return content
 
 
 def content_as_binary(filename):
     """
-    Overloads function `content_as_finary <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/filehelper/ftp_transfer_files.html?highlight=content_as_binary#pyquickhelper.filehelper.ftp_transfer_files.content_as_binary>`_ from
+    Overloads function `content_as_finary
+    <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/filehelper/ftp_transfer_files.html?
+    highlight=content_as_binary#pyquickhelper.filehelper.ftp_transfer_files.content_as_binary>`_ from
     `pyquickhelper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/>`_.
     Determines if filename is binary or None before transfering it.
 
@@ -100,7 +101,9 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
     @param      ftpsite         something like ``ftp.something.``
     @param      login           login
     @param      password        password
-    @param      key_save        see function `open_window_params <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/tkinterquickhelper/funcwin/frame_params.html#tkinterquickhelper.funcwin.frame_params.open_window_params>`_
+    @param      key_save        see function `open_window_params
+                                <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/tkinterquickhelper/funcwin/frame_params.html#
+                                tkinterquickhelper.funcwin.frame_params.open_window_params>`_
     @param      footer_html     append this HTML code to any uploaded page (such a javascript code to count the audience)
     @param      content_filter  filter the content of a file (it raises an exception if the result is None),
                                 appies only on text files
@@ -122,7 +125,8 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
 
     If one of the three first parameters is None, the function
     will open a popup windows to ask the missing information.
-    See `open_window_params <http://www.xavierdupre.fr/app/tkinterquickhelper/helpsphinx/tkinterquickhelper/funcwin/frame_params.html#tkinterquickhelper.funcwin.frame_params.open_window_params>`_.
+    See `open_window_params <http://www.xavierdupre.fr/app/tkinterquickhelper/helpsphinx/tkinterquickhelper/
+    funcwin/frame_params.html#tkinterquickhelper.funcwin.frame_params.open_window_params>`_.
     """
 
     params = {"ftpsite": ftpsite,
@@ -240,7 +244,6 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
             password=password)
     """
     from tkinterquickhelper.funcwin import open_window_params
-    from ensae_teaching_cs.automation.ftp_publish_helper import publish_documentation
 
     if modules is None:
         modules = get_teaching_modules()

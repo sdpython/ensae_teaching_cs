@@ -6,6 +6,8 @@
 import sys
 import os
 import unittest
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import is_travis_or_appveyor
 
 
 try:
@@ -21,25 +23,6 @@ except ImportError:
         sys.path.append(path)
     import src
 
-try:
-    import pyquickhelper as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_
-
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import is_travis_or_appveyor
-
 
 class TestPythonnetVoiceListen(unittest.TestCase):
 
@@ -52,9 +35,6 @@ class TestPythonnetVoiceListen(unittest.TestCase):
         if is_travis_or_appveyor():
             # no keys
             return
-
-        # retur nay way
-        return
 
         if sys.platform.startswith("win") and __name__ == "__main__":
             from src.ensae_teaching_cs.pythonnet import vocal_recognition_listening

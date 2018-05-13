@@ -5,6 +5,8 @@
 import sys
 import os
 import unittest
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import is_travis_or_appveyor
 
 
 try:
@@ -20,23 +22,6 @@ except ImportError:
         sys.path.append(path)
     import src
 
-try:
-    import pyquickhelper as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_
-
-from pyquickhelper.loghelper import fLOG
 from src.ensae_teaching_cs.mypython.custom_magics import CustomMagics
 
 
@@ -47,7 +32,10 @@ class TestCustomMagic (unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        return
+
+        if is_travis_or_appveyor():
+            # Does not work remotely.
+            return
         if sys.platform.startswith("win"):
             cm = CustomMagics()
             cm.SPEAK("fr-FR", "hello")

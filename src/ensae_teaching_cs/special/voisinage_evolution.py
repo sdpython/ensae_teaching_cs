@@ -89,9 +89,9 @@ class Ville:
         y1 = max(0, j - self.taille)
         x2 = min(len(self.mat), i + self.taille + 1)
         y2 = min(len(self.mat), j + self.taille + 1)
-        for i in range(x1, x2):
-            for j in range(y1, y2):
-                c = mat[i][j]
+        for ii in range(x1, x2):
+            for jj in range(y1, y2):
+                c = mat[ii][jj]
                 if c not in d:
                     d[c] = 0
                 d[c] += 1
@@ -109,13 +109,13 @@ class Ville:
         if len(self.past) > self.delay:
             del self.past[:len(self.past) - self.delay]
 
-        def fff(x, c):
-            if c not in x:
-                return 0
-            elif x[c] >= sum(x.values()) * self.th:
-                return 1
-            else:
-                return 0
+        # def fff(x, c):
+        #     if c not in x:
+        #         return 0
+        #     elif x[c] >= sum(x.values()) * self.th:
+        #         return 1
+        #     else:
+        #         return 0
 
         # on renouvelle une certaine proportion de pâtés (renouvellement)
         # tiré au hasard

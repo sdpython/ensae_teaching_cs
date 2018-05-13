@@ -1,8 +1,5 @@
 """
 @brief      test log(time=1s)
-
-You should indicate a time in seconds. The program ``run_unittests.py``
-will sort all test files by increasing time and run them.
 """
 
 
@@ -10,6 +7,7 @@ import sys
 import os
 import unittest
 import numpy
+from pyquickhelper.loghelper import fLOG
 
 
 try:
@@ -25,23 +23,6 @@ except ImportError:
         sys.path.append(path)
     import src
 
-try:
-    import pyquickhelper as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_
-
-from pyquickhelper.loghelper import fLOG
 from src.ensae_teaching_cs.td_2a import ParallelThread
 
 

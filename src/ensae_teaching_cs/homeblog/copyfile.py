@@ -71,7 +71,7 @@ class CopyFileForFtp:
     and does some verifications in order to check if a file
     was modified or not (if yes, then it will be updated to the website)
     """
-
+    @staticmethod
     def convert_st_date_to_datetime(t):
         if isinstance(t, str):
             if "." in t:
@@ -80,7 +80,6 @@ class CopyFileForFtp:
                 return datetime.datetime.strptime(t, "%Y-%m-%d %H:%M:%S")
         else:
             return datetime.datetime.fromtimestamp(t)
-    convert_st_date_to_datetime = staticmethod(convert_st_date_to_datetime)
 
     def __init__(self, file,
                  logfunction=fLOG,
@@ -127,11 +126,13 @@ class CopyFileForFtp:
         # contains all file to update
         self.modifiedFile = []
 
-    def save_dates(self, checkfile=[]):
+    def save_dates(self, checkfile=None):
         """
         save the status of the copy
         @param      checkfile       check the status for file checkfile
         """
+        if checkfile is None:
+            checkfile = []
         rows = []
         for k in sorted(self.copyFiles):
             obj = self.copyFiles[k]
@@ -238,7 +239,7 @@ class CopyFileForFtp:
 
     def copy_file(self, file, to, doFTP=True, doClean=False, to_is_a_file=False):
         """
-        process a file copy
+        Processes a file copy.
         @param      file            file to copy
         @param      to              destination (folder)
         @param      doFTP           if True, does some latex modifications (creates an image)
@@ -292,6 +293,7 @@ class CopyFileForFtp:
                 except Exception as e:
                     self.LOG("issue with ", file, " copy to ", to)
                     self.LOG("message d'erreur ", e)
+            return to
         else:
             try:
                 shutil.copy(file, to)
@@ -327,7 +329,7 @@ class CopyFileForFtp:
         for f in fi:
             if not os.path.isfile(file + "/" + f):
                 continue
-            ro, ext = os.path.splitext(f)
+            ext = os.path.splitext(f)[1]
             if exte is None or ext[1:] == exte:
                 self.copy_file(file + "/" + f, to, doFTP, doClean)
 

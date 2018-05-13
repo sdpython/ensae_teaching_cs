@@ -3,8 +3,8 @@
 @file
 @brief Contains a class to process elections results (France)
 """
-import numpy
 import random
+import numpy
 import pandas
 
 
@@ -271,7 +271,7 @@ class ElectionResults:
         solvers.options["show_progress"] = False
         sol = solvers.qp(Q, p, G, h, C, b)
         solvers.options["show_progress"] = old
-        coef = +sol['x']
+        coef = sol['x']
 
         res = numpy.matrix(_zeros(col, nbC))
         for i in range(0, nbC):
@@ -329,7 +329,7 @@ class ElectionResults:
         """
         if "weightsnorm" not in self.__dict__:
             self.weightsnorm = list(self.get_people())
-            s = sum(self.weights)
+            s = sum(self.weightsnorm)
             self.weightsnorm = [_ * 1.0 / s for _ in self.weightsnorm]
         return self.weightsnorm
 

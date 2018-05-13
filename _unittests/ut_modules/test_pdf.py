@@ -6,6 +6,8 @@
 import sys
 import os
 import unittest
+from pyPdf import PdfFileReader
+from pyquickhelper.loghelper import fLOG
 
 
 try:
@@ -21,39 +23,7 @@ except ImportError:
         sys.path.append(path)
     import src
 
-try:
-    import pyquickhelper as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_
 
-try:
-    from pyPdf import PdfFileReader
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyPdf")))
-    if path not in sys.path:
-        sys.path.append(path)
-    from pyPdf import PdfFileReader
-
-
-from pyquickhelper.loghelper import fLOG
 from src.ensae_teaching_cs.helpers.pypdf_helper import pdf_read_content
 
 

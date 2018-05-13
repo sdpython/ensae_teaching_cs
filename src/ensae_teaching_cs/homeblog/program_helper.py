@@ -24,13 +24,16 @@ def guess_language_code(code):
         return ('xml', 1.0)
     exp1 = re.compile("[^a-z]([a-z]{2,8})[^a-z0-9]")
     exp2 = re.compile("(</?[a-z]{2,8}( |>))")
-    keywords = {"py": set(("format with len from numpy enumerate as and or ord range try except raise for while if else elif with self assert " +
-                           "for in if not import del from map random sys append except in range elif float str def raise except none").split()),
+    keywords = {"py": set(("format with len from numpy enumerate as and or ord range try except " +
+                           "raise for while if else elif with self assert " +
+                           "for in if not import del from map random sys append except in range elif " +
+                           "float str def raise except none").split()),
                 "sql": set("on outer full as count and or desc asc from select group by order where join inner".split()),
                 "xml": set("<body> <xml> </body> <script> <script </script> <head> </head> <meta> <meta </meta>".split()),
                 "css": set("border font background size".split()),
                 "vb": set("error for sub function while wend then to end next dim set".split()),
-                "cpp": set("ord try catch throw try for while if else push for foreach delete vector map if catch void double string new throw null".split()),
+                "cpp": set(("ord try catch throw try for while if else push for foreach delete vector map if " +
+                            "catch void double string new throw null").split()),
                 "js": set("try catch throw for while if else push for in if catch var throw new function null".split()),
                 }
     comments = {"py": re.compile("#[^#]"),

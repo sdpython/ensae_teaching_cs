@@ -3,8 +3,8 @@
 @file
 @brief définition d'une sphère
 """
-from .image_synthese_base import Objet
 import math
+from .image_synthese_base import Objet
 
 
 class Sphere (Objet):

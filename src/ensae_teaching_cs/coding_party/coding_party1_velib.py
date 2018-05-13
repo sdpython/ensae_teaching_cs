@@ -5,10 +5,10 @@
 :ref:`Reconstruction de trajectoire velib <l-codingparty1>`
 """
 import os
-import pandas
 import random
+import pandas
 from pyensae import download_data
-from pyensae.datasource import DataVelibCollect
+from manydataapi.velib import DataCollectJCDecaux as DataVelibCollect
 from pyquickhelper.loghelper import str2datetime
 
 
@@ -85,8 +85,7 @@ class ParemetreCoutTrajet:
         """
         Retourne les valeurs dans un dictionnaire.
         """
-        return {k: self.__dict__[
-            k] for k in self.__dict__.keys() if "time" in k or "speed" in k}
+        return {k: getattr(self, k) for k in self.__dict__ if "time" in k or "speed" in k}
 
     def cost(self, dh, dt, v):
         """
@@ -150,7 +149,7 @@ def vitesse(c, d, params):
         return v, cost
 
 
-def distance(positif, negatif, appariement, params):
+def distance(positif, negatif, app, params):
     """
     Calculs une distance pour un appariement conçu ici comme
     la variance de la vitesse de chaque déplacement + la somme
@@ -158,7 +157,7 @@ def distance(positif, negatif, appariement, params):
 
     @param      positif     vélos pris (ou l'inverse)
     @param      negatif     vélos remis (ou l'inverse)
-    @param      appariement appariement (list de tuple (i,j))
+    @param      app         appariement (list de tuple (i,j))
     @param      params      ParemetreCoutTrajet
     @return                 tuple:
                                 - vitesse moyenne (sans appariements négatifs)
@@ -169,7 +168,7 @@ def distance(positif, negatif, appariement, params):
     val = []
     nb_max = []
     cost = 0
-    for i, j in appariement:
+    for i, j in app:
         p = positif[i]
         n = negatif[j]
         v, d = vitesse(p, n, params)
@@ -209,9 +208,12 @@ def appariement(events, iter=1000, params=ParemetreCoutTrajet(), fLOG=print):
 
     # on élimine tous les -1 du début (forcément des vélos pris avant la
     # période d'étude)
+    lasti = 0
     for i, ev in enumerate(events):
+        lasti = i
         if ev[-1] == 1:
             break
+    i = lasti
     if i > 0:
         del events[:i]
 
@@ -233,45 +235,44 @@ def appariement(events, iter=1000, params=ParemetreCoutTrajet(), fLOG=print):
     while len(positif) < len(negatif):
         positif.append(default)
 
-    appariement = [(i, i) for i in range(0, len(positif))]
+    appariement_ = [(i, i) for i in range(0, len(positif))]
     vit, mindist, vitav, nbneg = distance(
-        positif, negatif, appariement, params)
+        positif, negatif, appariement_, params)
     nbchange = 0
 
     for it in range(0, iter):
         if it % 10 == 0:
-            fLOG("iteration ", it, ": app-", nbneg, "/", len(appariement),
+            fLOG("iteration ", it, ": app-", nbneg, "/", len(appariement_),
                  "min", mindist, "vitesse ", vit, " nbchange", nbchange)
             nbchange = 0
-        for ij in range(0, len(appariement)):
-            i = random.randint(0, len(appariement) - 1)
-            j = random.randint(0, len(appariement) - 1)
+        for _ in range(0, len(appariement_)):
+            i = random.randint(0, len(appariement_) - 1)
+            j = random.randint(0, len(appariement_) - 1)
             if i == j:
                 continue
-            ki, kj = appariement[i], appariement[j]
-            appariement[i] = (ki[0], kj[1])
-            appariement[j] = (kj[0], ki[1])
+            ki, kj = appariement_[i], appariement_[j]
+            appariement_[i] = (ki[0], kj[1])
+            appariement_[j] = (kj[0], ki[1])
             v, dist, vt, nbneg = distance(
-                positif, negatif, appariement, params)
+                positif, negatif, appariement_, params)
             if dist < mindist:
                 mindist = dist
                 vit = v
                 nbchange += 1
             else:
-                appariement[i], appariement[j] = ki, kj
+                appariement_[i], appariement_[j] = ki, kj
 
-    moyenne = distance(positif, negatif, appariement, params)[0]
+    moyenne = distance(positif, negatif, appariement_, params)[0]
 
-    def dd(a, b):
-        try:
-            return b - a
-        except Exception:
-            return None
-
-    # for a in appariement :
+    # def dd(a, b):
+    #     try:
+    #         return b - a
+    #     except Exception:
+    #         return None
+    # for a in appariement_:
     #    fLOG(a,dd(positif [a[0]][1],negatif[a[1]][1]), vitesse(positif [a[0]], negatif[a[1]], params), positif [a[0]],"-->",negatif[a[1]])
 
-    return mindist, moyenne, appariement, positif, negatif
+    return mindist, moyenne, appariement_, positif, negatif
 
 
 def distance_path(dfp):
@@ -290,41 +291,45 @@ def distance_path(dfp):
             r["lat1"],
             r["lng1"]),
         axis=1)
-    mean = sum(dfp["speed"]) / len(dfp)
-    std = sum((x - mean) ** 2 for x in dfp["speed"]) / len(dfp)
-    return mean, std ** 0.5
+    mean_ = sum(dfp["speed"]) / len(dfp)
+    std_ = sum((x - mean_) ** 2 for x in dfp["speed"]) / len(dfp)
+    return mean_, std_ ** 0.5
 
 
 if __name__ == "__main__":
-    dest = r"c:\temp\codpart1"
-    if not os.path.exists(dest):
-        os.makedirs(dest)
-    get_data(dest)
 
-    # récupère les données
-    jeu = os.path.join(dest, "besancon.df.txt")
-    jeu = os.path.join(dest, "out_simul_bike_nb1_sp10_data.txt")
-    df = pandas.read_csv(jeu, sep="\t", encoding="utf8")
-    # conversion des dates
-    df["collect_date"] = df.apply(
-        lambda r: str2datetime(
-            r["collect_date"]),
-        axis=1)
-    # print(df.head())
+    def main_velib():
+        dest = r"c:\temp\codpart1"
+        if not os.path.exists(dest):
+            os.makedirs(dest)
+        get_data(dest)
 
-    # on regarde s'il existe le fichier des trajectoires
-    path = jeu.replace("_data.", "_path.")
-    if path != jeu and os.path.exists(path):
-        dfp = pandas.read_csv(path, sep="\t")
-        dfp = dfp[dfp["beginend"] == "end"]
-        mean, std = distance_path(dfp)
-        print("expected: vitesse moyenne ", mean, " stddev ", std)
+        # récupère les données
+        jeu = os.path.join(dest, "besancon.df.txt")
+        jeu = os.path.join(dest, "out_simul_bike_nb1_sp10_data.txt")
+        df = pandas.read_csv(jeu, sep="\t", encoding="utf8")
+        # conversion des dates
+        df["collect_date"] = df.apply(
+            lambda r: str2datetime(
+                r["collect_date"]),
+            axis=1)
+        # print(df.head())
 
-    # on calcule les événements (1 vélo apparu, 1 vélo disparu)
-    events = list(sorted(enumerate_events(df)))
+        # on regarde s'il existe le fichier des trajectoires
+        path = jeu.replace("_data.", "_path.")
+        if path != jeu and os.path.exists(path):
+            dfp = pandas.read_csv(path, sep="\t")
+            dfp = dfp[dfp["beginend"] == "end"]
+            mean, std = distance_path(dfp)
+            print("expected: vitesse moyenne ", mean, " stddev ", std)
 
-    params = ParemetreCoutTrajet()
-    print(params)
-    mindist, moyenne, appariement, positif, negatif = appariement(
-        events, iter=200, params=params)
-    print("vitesse moyenne", moyenne)
+        # on calcule les événements (1 vélo apparu, 1 vélo disparu)
+        events = list(sorted(enumerate_events(df)))
+
+        params = ParemetreCoutTrajet()
+        print(params)
+        mindist, moyenne, appariement_, positif, negatif = appariement(
+            events, iter=200, params=params)
+        print("vitesse moyenne", moyenne)
+
+    main_velib()

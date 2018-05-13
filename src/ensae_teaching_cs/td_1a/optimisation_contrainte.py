@@ -26,7 +26,8 @@ def f_df_H(x=None, z=None):
 
     .. math::
 
-        \\left\\{ \\begin{array}{l} \\min_{x,y} \\left\\{ x^2 + y^2 - xy + y \\right\\}  \\\\ sous \\; contrainte \\; x + 2y = 1 \\end{array}\\right.
+        \\left\\{ \\begin{array}{l} \\min_{x,y} \\left\\{ x^2 + y^2 - xy + y \\right\\}
+        \\\\ sous \\; contrainte \\; x + 2y = 1 \\end{array}\\right.
 
     """
     if x is None:
@@ -70,7 +71,7 @@ def Arrow_Hurwicz(F, C, X0, p0, epsilon=0.1, rho=0.1,
     @return                 un dictionnaire ``{'x': solution, 'iteration': nombre d'itérations }``
     """
     diff = 1
-    iter = 0
+    itern = 0
     while diff > 1e-10:
         f, d = F(X0)
         th, dt = C(X0)
@@ -79,22 +80,15 @@ def Arrow_Hurwicz(F, C, X0, p0, epsilon=0.1, rho=0.1,
         th, dt = C(Xt)
         pt = p0 + rho * th
 
-        iter += 1
+        itern += 1
         diff = sum([abs(Xt[i] - X0[i]) for i in range(len(X0))])
         X0 = Xt
         p0 = pt
         if do_print and iter % 100 == 0:
-            print(
-                "i {0} diff {1:0.000}".format(
-                    iter,
-                    diff),
-                ":",
-                f,
-                X0,
-                p0,
-                th)
+            print("i {0} diff {1:0.000}".format(itern, diff),
+                  ":", f, X0, p0, th)
 
-    return {'x': X0, 'iteration': iter}
+    return {'x': X0, 'iteration': itern}
 
 
 def f_df(X):
@@ -127,7 +121,8 @@ def exercice_particulier1():
 
         .. math::
 
-            \\left\\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ sous \\; contrainte \\; x + 2y = 1 \\end{array}\\right.
+            \\left\\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}
+            \\\\ sous \\; contrainte \\; x + 2y = 1 \\end{array}\\right.
 
         Qui s'implémente à l'aide de la fonction suivante :
 
@@ -175,7 +170,8 @@ def exercice_particulier2():
 
         .. math::
 
-            \\left\\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\ sous \\; contrainte \\; x + 2y = 1 \\end{array}\\right.
+            \\left\\{ \\begin{array}{l} \\min_{x,y} \\left \\{ x^2 + y^2 - xy + y \\right \\}  \\\\
+            sous \\; contrainte \\; x + 2y = 1 \\end{array}\\right.
 
         Qui s'implémente à l'aide de la fonction suivante :
 

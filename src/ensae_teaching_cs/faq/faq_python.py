@@ -24,15 +24,12 @@ def entier_grande_taille():
         De ce fait la fonction `getrandbit <https://docs.python.org/3/library/random.html#random.getrandbits>`_
         retourne un entier aussi grand que l'on veut.
 
-        ::
+        .. runpython::
+            :showcode:
 
             import random,sys
             x = random.getrandbits(2048)
-            print(type(x),x)
-
-        Qui affiche ::
-
-            <class 'int'> 28821592245571075131654830983838148370214474845580101472119213042190172126736565496812698627920295650674001797895985629679099064974713574340970814696233578272198061719231359573083186306654342306192322853809386167953610349383945699523678043826057910352338185386934425139215277777285416123100069406811011284910239819101658048202284988811705076819806294753255877254609472467038968542731954915621043682174519015068283521575989003211477579416601653132293861235314484703125172048342096920580957771246615770710590596119341983358658507235612104581804871612316272382587635599344895821316316356994838247665194550292758379858074
+            print(type(x), x)
 
         Les calculs en nombre réels se font toujours avec huit octets de précision.
         Au delà, il faut utiliser la librairie `gmpy2 <http://gmpy2.readthedocs.org/en/latest/>`_.
@@ -247,10 +244,14 @@ def same_variable(a, b):
 
         * **mutable**
             * `bool <https://docs.python.org/3/library/functions.html#bool>`_
-            * `int <https://docs.python.org/3/library/functions.html#int>`_, `float <https://docs.python.org/3/library/functions.html#float>`_, `complex <https://docs.python.org/3/library/functions.html#complex>`_
-            * `str <https://docs.python.org/3/library/functions.html#func-str>`_, `bytes <https://docs.python.org/3/library/functions.html#bytes>`_
+            * `int <https://docs.python.org/3/library/functions.html#int>`_,
+              `float <https://docs.python.org/3/library/functions.html#float>`_,
+              `complex <https://docs.python.org/3/library/functions.html#complex>`_
+            * `str <https://docs.python.org/3/library/functions.html#func-str>`_,
+              `bytes <https://docs.python.org/3/library/functions.html#bytes>`_
             * `None <https://docs.python.org/3/library/constants.html?highlight=none#None>`_
-            * `tuple <https://docs.python.org/3/library/functions.html#func-tuple>`_, `frozenset <https://docs.python.org/3/library/functions.html#func-frozenset>`_
+            * `tuple <https://docs.python.org/3/library/functions.html#func-tuple>`_,
+              `frozenset <https://docs.python.org/3/library/functions.html#func-frozenset>`_
         * **immutable**, par défaut tous les autres types dont :
             * `list <https://docs.python.org/3/library/functions.html#func-list>`_
             * `dict <https://docs.python.org/3/library/functions.html#func-dict>`_
@@ -261,8 +262,10 @@ def same_variable(a, b):
         immutable par quelques astuces :
 
         * `__slots__ <https://docs.python.org/3/reference/datamodel.html?highlight=_slots__#object.__slots__>`_
-        * `How to Create Immutable Classes in Python <http://www.blog.pythonlibrary.org/2014/01/17/how-to-create-immutable-classes-in-python/>`_
-        * `Ways to make a class immutable in Python <http://stackoverflow.com/questions/4996815/ways-to-make-a-class-immutable-in-python>`_
+        * `How to Create Immutable Classes in Python <http://www.blog.pythonlibrary.org/2014/01/17/
+          how-to-create-immutable-classes-in-python/>`_
+        * `Ways to make a class immutable in Python <http://stackoverflow.com/questions/4996815/
+          ways-to-make-a-class-immutable-in-python>`_
         * `freeze <https://freeze.readthedocs.org/en/latest/>`_
 
         Enfin, pour les objects qui s'imbriquent les uns dans les autres, une liste de listes, une classe
@@ -429,7 +432,8 @@ def enumerate_regex_search(exp, text):
             for m in exp.finditer(text):
                 # ...
 
-        Voir également `Petites subtilités avec les expressions régulières en Python <http://www.xavierdupre.fr/blog/2014-12-02_nojs.html>`_.
+        Voir également `Petites subtilités avec les expressions régulières en Python
+        <http://www.xavierdupre.fr/blog/2014-12-02_nojs.html>`_.
     """
     # found = exp.search(text)
     if isinstance(exp, str):

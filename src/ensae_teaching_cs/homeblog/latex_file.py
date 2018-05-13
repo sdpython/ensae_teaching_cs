@@ -234,7 +234,7 @@ class LatexFile:
 
         linebeginning = []
         s = 0
-        for i, line in enumerate(lines):
+        for line in lines:
             linebeginning.append(s)
             s += len(line) + 1
 
@@ -246,7 +246,7 @@ class LatexFile:
         recom = re.compile("([%]{3}(.*?)[%]{3})")
 
         for m in p.finditer(content):
-            a, b = m.span()
+            a = m.span()[0]
             li = LatexFile.dichotomy_find(linebeginning, a)
             gs = tuple(m.groups())
 
@@ -256,7 +256,8 @@ class LatexFile:
             if gs[0] is not None:
                 # verbatim
                 #  0                                                           1   2       3        4
-                # ('\\begin{verbatimx} ... \\end{verbatimx}', 'x', None, None, '\n  x = 5\n  y = 10\n  z = x + y\n  print (z)    # affiche z\n  ', ' ', 'x',
+                # ('\\begin{verbatimx} ... \\end{verbatimx}', 'x', None, None,
+                # '\n  x = 5\n  y = 10\n  z = x + y\n  print (z)    # affiche z\n  ', ' ', 'x',
                 # None, None, None, None, None, None)
                 #
                 comment = gs[3].strip() if gs[3] is not None else gs[3]
@@ -272,7 +273,9 @@ class LatexFile:
 
             elif gs[7] is not None:
                 # input code
-                # (None, None, None, None, None, "\\inputcodes{../data/td_note_2006.py}{exercice pour ...valuer}{, correction 2006}", '../data/td_note_2006.py', "exercice pour ...", ', correction 2006')
+                # (None, None, None, None, None,
+                # "\\inputcodes{../data/td_note_2006.py}{exercice pour ...valuer}{, correction 2006}",
+                # '../data/td_note_2006.py', "exercice pour ...", ', correction 2006')
                 if li not in self.filelines:
                     fil = os.path.join(self.root, gs[8])
                     self.filelines[li] = LatexIncludedFile(
@@ -291,9 +294,11 @@ class LatexFile:
                     yield co
 
             elif gs[13] is not None:
-                #print (len(gs),gs)
+                # print (len(gs),gs)
                 # input code
-                # (None, None, None, None, None, "\\inputcodes{../data/td_note_2006.py}{exercice pour ...valuer}{, correction 2006}", '../data/td_note_2006.py', "exercice pour ...", ', correction 2006')
+                # (None, None, None, None, None,
+                # "\\inputcodes{../data/td_note_2006.py}{exercice pour ...valuer}{, correction 2006}",
+                # '../data/td_note_2006.py', "exercice pour ...", ', correction 2006')
                 if li not in self.filelines:
                     fil = os.path.join(self.root, gs[14])
                     self.filelines[li] = LatexIncludedFile(

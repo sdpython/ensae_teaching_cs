@@ -193,7 +193,7 @@ def enumerate_feedback(df1, col_group="Groupe",
         yield (mail, html, text)
 
 
-def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=[1000, 1500],
+def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=(1000, 1500),
                          delay_sending=False, exc=True, skip=0, only=None,
                          **params):
     """
@@ -201,7 +201,9 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=[1000, 1500],
     Set mailbox to None to see what the first
     mail looks like before going through the whole list.
 
-    @param      mailbox         mailbox, see `create_smtp_server <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/sender/email_sender.html?pymmails.sender.email_sender.create_smtp_server>`_,
+    @param      mailbox         mailbox, see `create_smtp_server
+                                <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/sender/
+                                email_sender.html?pymmails.sender.email_sender.create_smtp_server>`_,
                                 if mailbox is None, the function displays the message and fails
     @param      fr              from
     @param      df1             first dataframe
@@ -279,13 +281,13 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=[1000, 1500],
         res = send_email(mailbox, fr=fr, to=mails.split(";"), cc=cc, delay_sending=delay_sending,
                          body_html=html, body_text=text, subject=subject)
         if delay_sending:
-            def delay():
+            def delay_send():
                 if "fLOG" in params:
                     params["fLOG"](loop, "send mail to ", mails)
                 res()
                 rnd = random.randint(*delay)
                 time.sleep(rnd / 1000.0)
-            yield delay
+            yield delay_send
         else:
             yield res
             rnd = random.randint(*delay)

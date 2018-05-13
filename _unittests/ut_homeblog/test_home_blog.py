@@ -1,12 +1,12 @@
 """
 @brief      test log(time=2s)
-
 """
-
-
 import sys
 import os
 import unittest
+from pyquickhelper.loghelper import fLOG
+from pyquickhelper.filehelper import explore_folder
+from pyquickhelper.pycode import get_temp_folder
 
 
 try:
@@ -22,41 +22,7 @@ except ImportError:
         sys.path.append(path)
     import src
 
-try:
-    import pyquickhelper as skip_
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyquickhelper",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyquickhelper as skip_
 
-try:
-    import pyensae as skip__
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..",
-                "..",
-                "pyensae",
-                "src")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import pyensae as skip__
-
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.filehelper import explore_folder
-from pyquickhelper.pycode import get_temp_folder
 from src.ensae_teaching_cs.homeblog import file_build_rss, CopyFileForFtp, modify_all_posts
 from src.ensae_teaching_cs.homeblog import file_all_keywords, build_process_all_pages
 
@@ -83,7 +49,7 @@ class TestHomeBlog(unittest.TestCase):
         cpf.copy_file_ext(os.path.join(blog, "javascript"),
                           "css", os.path.join(temp, "javascript"))
 
-        files, modified = modify_all_posts(blog, blog, exclude=lambda f: False)
+        files, _ = modify_all_posts(blog, blog, exclude=lambda f: False)
         self.assertTrue(len(files) > 0)
         res = file_build_rss(blog, os.path.join(temp, "xdbrss.xml"),
                              months_delay=100)
@@ -106,7 +72,7 @@ class TestHomeBlog(unittest.TestCase):
             nbch = 0
             usernames = [os.environ.get(
                 "USERNAME", os.environ.get("HOSTNAME", "")).lower()]
-            for file, reason in sorted(cpf.modifiedFile):
+            for file, _ in sorted(cpf.modifiedFile):
                 ext = os.path.splitext(file)[-1]
 
                 if os.stat(file).st_size < 2**25 and ext.lower() not in \
@@ -172,7 +138,7 @@ class TestHomeBlog(unittest.TestCase):
             allfiles.sort()
             nbproc = 0
 
-            for siz, file, reason in allfiles:
+            for siz, file, _ in allfiles:
 
                 processed.append(file)
                 cpf.update_copied_file(file)

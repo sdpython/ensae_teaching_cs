@@ -44,6 +44,7 @@ For those that want a GUI you can try py2htmTk.pyw -
 import tokenize
 import os
 
+appliedstyle = None
 
 help_styles = """
 The default styles applied are as follows:
@@ -313,7 +314,7 @@ def apply_style(index, token, start, src, format, style, entity="1"):
     'start' and 'src' are (not used yet) for appliance of
     intelligent line breaks for long lines
     entity is the replace entities flag"""
-    global indent, prev, prevres, defining, definingmode, prevtok
+    global prev, prevres, defining, definingmode, prevtok
     # keyword handling
     isres = False
     if index == WORD:
@@ -339,7 +340,7 @@ def apply_style(index, token, start, src, format, style, entity="1"):
     token = substituteEntities(token, entity, char_set=None)
     if format != "0":
         if format == "1":
-            if (token in spaced_tokens) and not definingmode:
+            if token in spaced_tokens and not definingmode:
                 token = " %s " % (token,)
             elif token in monospaced_tokens:
                 token = "%s " % (token,)
@@ -350,7 +351,7 @@ def apply_style(index, token, start, src, format, style, entity="1"):
             elif token in ["[", "("] and prevres:
                 token = " " + token
         elif format == "2":
-            if (token in spaced_fmt2):
+            if token in spaced_fmt2:
                 if (prev == OPERATOR and token in "+-~"):
                     token = " %s" % (token,)
                 else:
@@ -442,7 +443,8 @@ def file2HTML(file_name, format, style, Replace, entity="1", encoding="utf-8"):
     - If format == '0' then the code will display as the author expected it to.
     - If format == '1' then spaces are added and removed around expressions to standardise the format.
     - If format == '2' as '1' but different rules
-    -  If style == style dictionary. Replace (boolean) - If True then replace ``\n`` with ``<br>``, multiple spaces with ``&nbsp<space>combinations;``
+    - If style == style dictionary. Replace (boolean)
+    - If True then replace ``\n`` with ``<br>``, multiple spaces with ``&nbsp<space>combinations;``
     """
     removeFile = None
     if file_name == "<stdin>":
@@ -533,16 +535,16 @@ def cmdLine():
     '''This is the function that handles
     command line mode'''
     global appliedstyle
-    help = ' PY2HTML - convert python code to HTML (version %s)\n\n%s' % (
+    help_ = ' PY2HTML - convert python code to HTML (version %s)\n\n%s' % (
         __version__, __doc__)
 
     try:
-        opts, args = getopt.getopt(sys.argv[1:], "ho:i:p:s:r:RBOIE:",
-                                   ["help", "output", "page", "input", "style", "reformat",
+        opts, _ = getopt.getopt(sys.argv[1:], "ho:i:p:s:r:RBOIE:",
+                                ["help", "output", "page", "input", "style", "reformat",
                                     "Replace", "Block", "STDOUT", "STDIN", "entities"])
     except getopt.GetoptError:
         # print help information and exit:
-        print(help)
+        print(help_)
         sys.exit(2)
     outfile = "py2html.html"
     page = None
@@ -556,7 +558,7 @@ def cmdLine():
     entity = "1"
     for o, a in opts:
         if o == "-h":
-            print(help)
+            print(help_)
             sys.exit()
         elif o == "--help":
             print(help_styles)
@@ -582,11 +584,11 @@ def cmdLine():
         elif o in ("-E", "--entities") and a in "01234":
             entity = str(a)
         else:
-            print(help)
+            print(help_)
             sys.exit(1)
 
     if infile == "" and not stdin:
-        print(help)
+        print(help_)
         sys.exit()
     elif stdin:
         infile = "<stdin>"
