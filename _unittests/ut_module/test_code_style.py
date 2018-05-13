@@ -137,6 +137,8 @@ class TestCodeStyle(ExtTestCase):
                          "test_data_competition.py:3",
                          "test_data_competition.py:1",
                          "Redefining name 'src' from outer scope",
+                         "Unable to import 'pycuda.",
+                         "Unable to import 'pyopencl'",
                          ])
 
 
