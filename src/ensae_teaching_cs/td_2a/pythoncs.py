@@ -3,6 +3,7 @@
 @file
 @brief Helpers autour de C#
 """
+from ..cspython import import_magic_cs
 
 
 def create_cs_function(name, code, dependencies=None, usings=None):
@@ -15,7 +16,6 @@ def create_cs_function(name, code, dependencies=None, usings=None):
     @param      usings          usings to add
     @return                     function object
     """
-    from ..pythonnet import import_magic_cs
     MagicCS = import_magic_cs()
     from System import String
     from System.Collections.Generic import List
@@ -48,7 +48,6 @@ def run_cs_function(func, params):
     @param      params      list of parameters
     @return                 result of the function ``func``
     """
-    from ..pythonnet import import_magic_cs
     MagicCS = import_magic_cs()
     from System.Collections.Generic import List
     from System import Object
@@ -66,7 +65,6 @@ def list2arrayint(li):
     """
     converts a list into a C# array of int
     """
-    from ..pythonnet import import_magic_cs
     MagicCS = import_magic_cs()
     par = MagicCS.NewListIntLong()
     for i in li:

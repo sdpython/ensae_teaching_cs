@@ -42,42 +42,7 @@ import sys
 import platform
 import os
 import json
-
-
-if sys.platform.startswith("win"):
-    ver = sys.version_info
-    arch = platform.architecture()[0]
-    if ver[:2] == (3, 6):
-        if "64" in arch:
-            from .py36x64 import clr
-        else:
-            raise ImportError(
-                "unable to import pythonnet for this architecture " + str(arch))
-    elif ver[:2] == (3, 5):
-        if "64" in arch:
-            from .py35x64 import clr
-        else:
-            raise ImportError(
-                "unable to import pythonnet for this architecture " + str(arch))
-    elif ver[:2] == (3, 4):
-        if "64" in arch:
-            from .py34x64 import clr
-        elif arch == "32bit":
-            from .py34 import clr
-        else:
-            raise ImportError(
-                "unable to import pythonnet for this architecture " + str(arch))
-    elif ver[:2] == (3, 3):
-        if "64" in arch:
-            from .py33x64 import clr
-        elif arch == "32bit":
-            from .py33 import clr
-        else:
-            raise ImportError(
-                "unable to import pythonnet for this architecture " + str(arch))
-    else:
-        raise ImportError(
-            "unable to import pythonnet for this version of python " + str(ver))
+import clr
 
 
 def vocal_synthesis(text, lang="fr-FR", voice="", filename=None):
@@ -203,7 +168,7 @@ def str2python(answer):
 def vocal_recognition(subkey, lang="fr-FR", filename=None, memwav=None,
                       url="https://speech.platform.bing.com/recognize"):
     """
-    Use Cognitive Services to recognize the voice.
+    Uses Cognitive Services to recognize the voice.
 
     @param      subkey      subscription key
     @param      lang        language
@@ -245,7 +210,7 @@ def vocal_recognition(subkey, lang="fr-FR", filename=None, memwav=None,
 
 def vocal_recognition_listening(lang="fr-FR"):
     """
-    Use the recognition system and return sentances.
+    Uses the recognition system and return sentances.
 
     @param      lang        language
     @return                 enumerate on tuples (score, text)
@@ -275,7 +240,7 @@ def vocal_recognition_listening(lang="fr-FR"):
 
 def vocal_recognition_system(wav, lang="fr-FR"):
     """
-    Use the recognition system and return sentances.
+    Uses the recognition system and return sentances.
 
     @param      wav         bytes or string for a filename
     @param      lang        language

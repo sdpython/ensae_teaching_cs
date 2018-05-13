@@ -81,7 +81,7 @@ class CustomMagics(Magics):
         if not sys.platform.startswith("win"):
             raise Exception("Works only on Windows.")
 
-        from ..pythonnet import vocal_synthesis
+        from ..cspython import vocal_synthesis
         if line is not None:
             spl = line.strip().split(" ")
             lang = spl[0]

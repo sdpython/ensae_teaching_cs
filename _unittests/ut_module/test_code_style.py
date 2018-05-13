@@ -99,6 +99,12 @@ class TestCodeStyle(ExtTestCase):
                          "ftp_publish_helper.py:138: E0401",
                          "Unable to import 'pycuda",
                          "Unable to import 'pyopencl'",
+                         "Unable to import 'selenium",
+                         "Unable to import 'splinter'",
+                         "theano_logreg.py:176: E1130",
+                         "Unable to import 'ensae_teaching_cs.td_1a.flask_helper'",
+                         "Unused import clr",
+                         "Module 'clr' has no 'AddReference' member",
                          ])
 
     def test_style_test(self):
@@ -139,6 +145,8 @@ class TestCodeStyle(ExtTestCase):
                          "Redefining name 'src' from outer scope",
                          "Unable to import 'pycuda.",
                          "Unable to import 'pyopencl'",
+                         "Unused import clr",
+                         "Module 'clr' has no 'AddReference' member",
                          ])
 
 

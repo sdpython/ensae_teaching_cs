@@ -10,7 +10,7 @@ addons:
       - build-dep
       - graphviz
       - libgfortran3
-      - python-scipy
+      - python3-scipy
       # computation
       - libblas-dev
       - liblapack-dev

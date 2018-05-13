@@ -5,7 +5,7 @@
 import sys
 import os
 import unittest
-from pyquickhelper.loghelper import fLOG
+import clr
 
 
 try:
@@ -28,16 +28,10 @@ from src.ensae_teaching_cs.td_2a.pythoncs import create_cs_function
 class TestPythonnetMagicCS(unittest.TestCase):
 
     def test_magic_cs(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-        if sys.platform.startswith("win"):
-            code = "public static double SquareX(double x) {return x*x ; }"
-            f = create_cs_function("SquareX", code)
-            r = f(2.0)
-            fLOG(r, type(r))
-            assert r == 4
+        code = "public static double SquareX(double x) {return x*x ; }"
+        f = create_cs_function("SquareX", code)
+        r = f(2.0)
+        self.assertEqual(r, 4)
 
 
 if __name__ == "__main__":
