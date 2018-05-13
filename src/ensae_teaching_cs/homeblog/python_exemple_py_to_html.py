@@ -138,7 +138,7 @@ def py_to_html_file(file, writehtml="", addGoogleTracking=True, title=None):
 
     fLOG("converting pyfile in html ", file)
     f = file
-    racine, _ = os.path.splitext(file)[0]
+    racine = os.path.splitext(file)[0]
 
     try:
         with open(file, "r", encoding="utf-8") as tf:

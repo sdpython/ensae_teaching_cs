@@ -97,6 +97,8 @@ class TestCodeStyle(ExtTestCase):
                          "table_formula.py:2702: W0612",
                          "ftp_publish_helper.py:246: E0401",
                          "ftp_publish_helper.py:138: E0401",
+                         "Unable to import 'pycuda",
+                         "Unable to import 'pyopencl'",
                          ])
 
     def test_style_test(self):

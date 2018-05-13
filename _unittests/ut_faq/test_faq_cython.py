@@ -5,7 +5,6 @@
 import sys
 import os
 import unittest
-import shutil
 import warnings
 import platform
 from pyquickhelper.loghelper import fLOG
@@ -27,6 +26,27 @@ except ImportError:
 
 class TestFaqCython(unittest.TestCase):
 
+    primes_pyx = """
+                    def primes(int kmax):
+                        cdef int n, k, i
+                        cdef int p[1000]
+                        result = []
+                        if kmax > 1000:
+                            kmax = 1000
+                        k = 0
+                        n = 2
+                        while k < kmax:
+                            i = 0
+                            while i < k and n % p[i] != 0:
+                                i = i + 1
+                            if i == k:
+                                p[k] = n
+                                k = k + 1
+                                result.append(n)
+                            n = n + 1
+                        return result
+    """.replace('                    ', '')
+
     def test_faq_cython_compile(self):
         fLOG(
             __file__,
@@ -35,9 +55,9 @@ class TestFaqCython(unittest.TestCase):
 
         from src.ensae_teaching_cs.faq.faq_cython import compile_cython_single_script
         temp = get_temp_folder(__file__, "temp_cython_primes")
-        primes = os.path.join(temp, "..", "primes.pyx")
-        shutil.copy(primes, temp)
         newfile = os.path.join(temp, "primes.pyx")
+        with open(newfile, "w") as f:
+            f.write(TestFaqCython.primes_pyx)
         cwd = os.getcwd()
 
         if is_travis_or_appveyor() == "travis":

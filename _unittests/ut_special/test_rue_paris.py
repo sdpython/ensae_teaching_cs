@@ -5,7 +5,7 @@ import os
 import sys
 import unittest
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import fix_tkinter_issues_virtualenv, get_temp_folder
+from pyquickhelper.pycode import fix_tkinter_issues_virtualenv
 from pyensae.datasource import download_data
 
 try:
@@ -110,20 +110,6 @@ class TestRueParis (unittest.TestCase):
         added = eulerien_extension(edges, fLOG=fLOG, alpha=1 / 8)
         assert len(added) > 0
         fLOG("nb added", len(added))
-
-    def test_algo3(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-        folder = get_temp_folder(__file__, "temp_algo3")
-        edges = get_data(whereTo=folder, fLOG=fLOG)
-        fLOG("start")
-        added = eulerien_extension(edges, fLOG=fLOG, distance=distance_paris)
-        assert len(added) > 0
-        fLOG("nb added", len(added))
-        with open(os.path.join(folder, "added.txt"), "w") as f:
-            f.write(str(added))
 
     def test_euler(self):
         fLOG(

@@ -213,7 +213,7 @@ class PuzzleGirafe:
             BMHOHVBB
         """
         dir_ = os.path.abspath(os.path.dirname(__file__))
-        dir_ = os.path.join(dir, "data")
+        dir_ = os.path.join(dir_, "data")
 
         with open(os.path.join(dir_, "definition_puzzle_girafe.txt"), "r") as f:
             bo = f.readlines()
@@ -221,7 +221,7 @@ class PuzzleGirafe:
         # on définit chaque pièce
         self.piece = []
         for i in range(1, 10):
-            name = os.path.join(dir, "piece%d.png" % i)
+            name = os.path.join(dir_, "piece%d.png" % i)
             d = bo[i - 1]
             p = PuzzleGirafePiece(name, d, 0, i)
             self.piece.append(p)
