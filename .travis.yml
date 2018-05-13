@@ -5,7 +5,12 @@ python:
   - "3.6"
 addons:
 -  apt:
--    packages:
+   - sources:
+      - sourceline: deb http://download.mono-project.com/repo/ubuntu trusty main
+        key_url: http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xA6A19B38D3D831EF
+   - packages:
+      - mono-devel
+      - ca-certificates-mono
       - ffmpeg
       - build-dep
       - graphviz
@@ -31,7 +36,12 @@ addons:
       # - python-dev
       # for CUDA see, https://github.com/BVLC/caffe/blob/master/scripts/travis/install-deps.sh
 env:
-  - SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=disk KERAS_BACKEND=theano
+  global:
+    - LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so
+    - SEGFAULT_SIGNALS=all
+    - PYTHONUNBUFFERED=True
+    - SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=disk KERAS_BACKEND=theano
+
 install:
   # We do this conditionally because it saves us some downloading if the
   # version is the same.
@@ -50,6 +60,7 @@ install:
   #- conda build build_tools/conda-recipe --quiet
   - conda install -q --file=requirements_conda.txt
   - conda install -c conda-forge xgboost
+  - pip install pyquickhelper
   - pip install -r requirements.txt
   - pip install -U git+https://github.com/sdpython/pyPdf --no-deps
   - pip install -U git+https://github.com/matplotlib/natgrid --no-deps
