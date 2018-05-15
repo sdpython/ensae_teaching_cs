@@ -39,7 +39,7 @@
 
     * `Generalized Random Forests <https://arxiv.org/abs/1610.01271>`_
     * `Gradient Boosting With Piece-Wise Linear Regression Trees <https://arxiv.org/abs/1802.05640>`_,
-      ils affirment être meilleur que :epkg:`xgboost` et :epkg:`lightbgm`
+      ils affirment être meilleur que :epkg:`xgboost` et :epkg:`lightgbm`
       (implémentation `GBDT-PL <https://github.com/GBDT-PL/GBDT-PL>`_)
 
     Dans :ref:`l-ml2a-graph-embedding` :

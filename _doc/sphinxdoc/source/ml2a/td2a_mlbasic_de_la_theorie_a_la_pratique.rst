@@ -107,7 +107,7 @@ poste régulièrement des articles sur des librairies de machine learning open s
 * `XGBoost: A Scalable Tree Boosting System <https://arxiv.org/pdf/1603.02754.pdf>`_
 * `On the Influence of Momentum Acceleration on OnlineLearning <http://www.jmlr.org/papers/volume17/16-157/16-157.pdf>`_
 * `Gradient Boosting With Piece-Wise Linear Regression Trees <https://arxiv.org/abs/1802.05640>`_,
-  ils affirment être meilleur que :epkg:`xgboost` et :epkg:`lightbgm`.
+  ils affirment être meilleur que :epkg:`xgboost` et :epkg:`lightgbm`.
 
 *Digressions*
 

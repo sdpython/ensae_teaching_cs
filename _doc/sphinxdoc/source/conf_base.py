@@ -1,55 +1,6 @@
 # -*- coding: utf-8 -*-
 import sys
 import os
-import datetime
-import re
-
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0])))
-sys.path.insert(
-    0,
-    os.path.abspath(
-        os.path.join(
-            os.path.split(__file__)[0],
-            "..",
-            "..",
-            "..",
-            "..",
-            "pyquickhelper",
-            "src")))
-sys.path.insert(
-    0,
-    os.path.abspath(
-        os.path.join(
-            os.path.split(__file__)[0],
-            "..",
-            "..",
-            "..",
-            "..",
-            "pyensae",
-            "src")))
-sys.path.insert(
-    0,
-    os.path.abspath(
-        os.path.join(
-            os.path.split(__file__)[0],
-            "..",
-            "..",
-            "..",
-            "..",
-            "pymmails",
-            "src")))
-sys.path.insert(
-    0,
-    os.path.abspath(
-        os.path.join(
-            os.path.split(__file__)[0],
-            "..",
-            "..",
-            "..",
-            "..",
-            "pyrsslocal",
-            "src")))
-
 from pyquickhelper.helpgen.default_conf import set_sphinx_variables, get_default_stylesheet
 
 

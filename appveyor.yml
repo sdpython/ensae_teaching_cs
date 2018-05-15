@@ -32,7 +32,7 @@ install:
   - "%PYTHON%\\Scripts\\pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl"
   - "%PYTHON%\\Scripts\\pymy_install3 --task=tool --source=zip graphviz"
   - "%PYTHON%\\Scripts\\pymy_install3 torch"
-  - "%PYTHON%\\Scripts\\pip install -r requirements"
+  - "%PYTHON%\\Scripts\\pip install -r requirements.txt"
   - "set PATH=%PATH%;C:\\projects\\ensae-teaching-cs\\build\\update_modules\\Graphviz\\bin"
   # deprecated package but needed by python-graphivz
   - "%PYTHON%\\Scripts\\pip install tools"

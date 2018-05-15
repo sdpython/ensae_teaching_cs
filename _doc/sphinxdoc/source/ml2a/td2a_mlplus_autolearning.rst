@@ -38,6 +38,7 @@ Auto-Learning (metalearning)
 * `Random Search for Hyper-Parameter Optimization <http://www.jmlr.org/papers/v13/bergstra12a.html>`_
 * `Reptile: a Scalable Metalearning Algorithm <https://arxiv.org/abs/1803.02999>`_
 * `Generating Neural Networks with Neural Networks <https://arxiv.org/abs/1801.01952>`_
+* `Rapid Adaptation with Conditionally Shifted Neurons <https://arxiv.org/abs/1712.09926>`_
 
 *POMPD*
 
