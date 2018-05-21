@@ -3,8 +3,6 @@
 @file
 @brief An example of a custom magic for IPython.
 """
-import sys
-
 from IPython.core.magic import Magics, magics_class, line_magic, cell_magic
 from IPython.core.magic import line_cell_magic
 from IPython.core.display import HTML
@@ -19,7 +17,6 @@ class CustomMagics(Magics):
         This command can be activated by typing::
 
             %ENSAEl
-
         """
         if "site" in line:
             return HTML(
@@ -30,18 +27,14 @@ class CustomMagics(Magics):
         else:
             raise Exception("unknown command: " + line)
 
-        #print("Full access to the main IPython object:", self.shell)
-        #print("Variables in the user namespace:", list(self.shell.user_ns.keys()))
-
     @cell_magic
     def ENSAEb(self, line, cell):
         """
         This command can be activated by typing::
 
             %%ENSAEb
-
         """
-        return line, cell
+        return [line, cell]
 
     @line_cell_magic
     def ENSAE(self, line, cell=None):
@@ -53,7 +46,6 @@ class CustomMagics(Magics):
         Or::
 
             %%ENSAE
-
         """
         if cell is None:
             line = line.strip()
@@ -70,35 +62,9 @@ class CustomMagics(Magics):
         else:
             raise Exception("unable to interpret:\n" + cell)
 
-    @cell_magic
-    def SPEAK(self, line, cell):
-        """
-        If the OS is Windows, the magic command will tell the text.
 
-        The function defines ``%%SPEAK``.
-
-        """
-        if not sys.platform.startswith("win"):
-            raise Exception("Works only on Windows.")
-
-        from ..cspython import vocal_synthesis
-        if line is not None:
-            spl = line.strip().split(" ")
-            lang = spl[0]
-            filename = " ".join(spl[1:]) if len(spl) > 1 else ""
-
-        if lang == "-h":
-            print("Usage: "
-                  "   %%SPEAK fr-FR [filename]"
-                  "   speech")
-        else:
-            vocal_synthesis(cell, lang, filename)
-
-
-def register_magics():
+def load_ipython_extension(ip):
     """
-    register magics function, can be called from a notebook
+    Registers magics function, can be called from a notebook.
     """
-    from IPython import get_ipython
-    ip = get_ipython()
     ip.register_magics(CustomMagics)

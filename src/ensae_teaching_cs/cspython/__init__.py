@@ -47,7 +47,7 @@ import clr
 
 def vocal_synthesis(text, lang="fr-FR", voice="", filename=None):
     """
-    Utilise la synthèse vocale de Windows
+    Utilise la synthèse vocale de Windows.
 
     @param      text        text à lire
     @param      lang        langue
@@ -127,7 +127,7 @@ def vocal_synthesis(text, lang="fr-FR", voice="", filename=None):
 
 def import_magic_cs():
     """
-    import the C# DLL which helps doing C# in a notebooks
+    Imports the C# DLL which helps doing C# in a notebooks.
 
     @return     pointer on C# static class
     """
@@ -156,7 +156,7 @@ def import_magic_cs():
 
 def str2python(answer):
     """
-    Converts JSON bytes into a dictionary.
+    Converts :epkg:`JSON` bytes into a dictionary.
 
     @param      answer      bytes
     @return                 any type
@@ -168,7 +168,8 @@ def str2python(answer):
 def vocal_recognition(subkey, lang="fr-FR", filename=None, memwav=None,
                       url="https://speech.platform.bing.com/recognize"):
     """
-    Uses Cognitive Services to recognize the voice.
+    Uses `Cognitive Services <https://azure.microsoft.com/en-us/services/cognitive-services/>`_
+    to recognize the voice.
 
     @param      subkey      subscription key
     @param      lang        language

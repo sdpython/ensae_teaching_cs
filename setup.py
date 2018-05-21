@@ -220,10 +220,7 @@ if not r:
         from ensae_teaching_cs.helpers import *
         from ensae_teaching_cs.homeblog import *
         from ensae_teaching_cs.ml import *
-        from ensae_teaching_cs.mypython import *
-        from ensae_teaching_cs.pythonnet import *
         from ensae_teaching_cs.special import *
-        from ensae_teaching_cs.mypython import *
         from ensae_teaching_cs.td_1a import *
         from ensae_teaching_cs.td_2a import *
         from ensae_teaching_cs.tests import *
