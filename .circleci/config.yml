@@ -15,13 +15,6 @@ jobs:
           - v1-dependencies-
 
       - run:
-          name: Install mono
-          command: |
-                    sudo apt-get update
-                    sudo apt-get install mono-complete ca-certificates-mono
-                    sudo mono tools/nuget/nuget.exe update -self
-
-      - run:
           name: Install pandoc
           command: |
                     sudo apt-get update 
