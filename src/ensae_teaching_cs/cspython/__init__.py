@@ -101,7 +101,7 @@ def vocal_synthesis(text, lang="fr-FR", voice="", filename=None):
             from ENSAE.Voice import Speech
             Speech.VocalSynthesis(text, lang, voice, filename)
 
-        Il faut voir le notebook :ref:`pythoncsharprst`.
+        Il faut voir le module :ref:`csharpy`.
     """
     if "ENSAE.Voice" not in sys.modules:
         if not sys.platform.startswith("win"):

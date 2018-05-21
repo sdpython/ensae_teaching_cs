@@ -84,6 +84,7 @@ epkg_dictionary["array"] = 'https://docs.scipy.org/doc/numpy/reference/generated
 epkg_dictionary["AUC"] = 'http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/roc.html#aire-sous-la-courbe'
 epkg_dictionary["basemap"] = 'https://matplotlib.org/basemap/'
 epkg_dictionary["blockchain"] = 'https://fr.wikipedia.org/wiki/Blockchain'
+epkg_dictionary["csharpy"] = 'http://www.xavierdupre.fr/app/csharpy/helpsphinx/index.html'
 epkg_dictionary["C++"] = 'https://fr.wikipedia.org/wiki/C%2B%2B'
 epkg_dictionary["catboost"] = "https://github.com/catboost/catboost"
 epkg_dictionary["CNTK"] = 'https://www.microsoft.com/en-us/research/product/cognitive-toolkit/'

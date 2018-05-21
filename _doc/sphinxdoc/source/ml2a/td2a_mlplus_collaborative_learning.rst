@@ -15,4 +15,3 @@ Apprentissage collaboratif
 * `Communication-Efficient Learning of Deep Networks from Decentralized Data <https://arxiv.org/abs/1602.05629>`_
 
 *Modules*
-

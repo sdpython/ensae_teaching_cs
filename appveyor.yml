@@ -1,9 +1,6 @@
 environment:
 
   global:
-    # SDK v7.0 MSVC Express 2008's SetEnv.cmd script will fail if the
-    # /E:ON and /V:ON options are not enabled in the batch script intepreter
-    # See: http://stackoverflow.com/a/13751649/163740
     WITH_COMPILER: "cmd /E:ON /V:ON /C .\\appveyor\\run_with_compiler.cmd"
 
   matrix:
@@ -19,29 +16,17 @@ install:
   - "%PYTHON%\\python -m pip install --upgrade pip"
   - "%PYTHON%\\Scripts\\pip install pymyinstall"
   - "%PYTHON%\\Scripts\\pip install pycodestyle"  
-  - "%PYTHON%\\Scripts\\pymy_install3 --set=ensae_teaching_cs"
-  - "%PYTHON%\\Scripts\\pip install xlrd xlwt xlsxwriter jsonpickle"
-  - "%PYTHON%\\Scripts\\pymy_install3 cairocffi cairosvg"
-  - "%PYTHON%\\Scripts\\pip install PyQt5"
-  - "%PYTHON%\\Scripts\\pip install ete3"
-  - "%PYTHON%\\Scripts\\pymy_install3 opencv_python"
-  - "%PYTHON%\\Scripts\\pymy_install3 yaml gensim tables blosc"
-  - "%PYTHON%\\Scripts\\pymy_install3 psycopg2 nltk pympler theano pyproj opencv_python"
-  - "%PYTHON%\\Scripts\\pip install https://github.com/sdpython/pyPdf/archive/trunk.zip"
-  - "%PYTHON%\\Scripts\\pip install python-jenkins tutormagic"
-  - "%PYTHON%\\Scripts\\pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl"
-  - "%PYTHON%\\Scripts\\pymy_install3 --task=tool --source=zip graphviz"
-  - "%PYTHON%\\Scripts\\pymy_install3 torch"
+  - "%PYTHON%\\Scripts\\pymy_install3 --set=pyquickhelper"
   - "%PYTHON%\\Scripts\\pip install -r requirements.txt"
   - "set PATH=%PATH%;C:\\projects\\ensae-teaching-cs\\build\\update_modules\\Graphviz\\bin"
-  # deprecated package but needed by python-graphivz
   - "%PYTHON%\\Scripts\\pip install tools"
-  - "dir C:\\projects\\ensae-teaching-cs\\build\\update_modules\\Graphviz\\bin"  
+  - "%PYTHON%\\Scripts\\pip install csharpy pythonnet"
+  - "dir C:\\projects\\ensae_teaching_cs\\build\\update_modules\\Graphviz\\bin"  
 
 build: off
 
 test_script:
-  - "%PYTHON%\\python -u setup.py unittests -g \".*((http)|(SKIP)|(LONG)|(cvxopt)|(theano)).*\""
+  - "%PYTHON%\\python -u setup.py unittests"
 
 after_test:
   - "%PYTHON%\\python -u setup.py bdist_wheel"

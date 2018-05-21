@@ -6,7 +6,6 @@
 import sys
 import os
 import unittest
-import clr
 
 
 try:
@@ -27,6 +26,7 @@ class TestSKIPPythonnet(unittest.TestCase):
 
     def test_voice(self):
         if sys.platform.startswith("win"):
+            import clr
             from src.ensae_teaching_cs.cspython import vocal_synthesis
             try:
                 vocal_synthesis("test unitaire")

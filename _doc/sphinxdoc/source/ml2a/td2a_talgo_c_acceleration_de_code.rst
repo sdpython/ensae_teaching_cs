@@ -14,8 +14,10 @@ C++, Accélération de code
     :maxdepth: 1
 
     ../notebooks/python_r
-    ../notebooks/python_csharp
     ../notebooks/cffi_linear_regression
+
+  Un notebook avec :epkg:`C#` est disponible
+  avec le module :epkg:`csharpy`.
 
 *Notebooks*
 

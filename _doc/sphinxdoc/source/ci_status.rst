@@ -73,6 +73,29 @@ Tableau de bord et statut des dépendances
             :target: http://lesenfantscodaient.fr/all_notebooks_coverage.html
             :alt: Notebook Coverage
       -
+    * - `csharpy <http://www.xavierdupre.fr/app/csharpy/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/csharpy.svg?branch=master
+            :target: https://travis-ci.org/sdpython/csharpy
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/ldrgt6sxeyfwtoo2?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/csharpy
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/csharpy/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/csharpy/tree/master
+      - .. image:: https://badge.fury.io/py/csharpy.svg
+            :target: https://pypi.org/project/csharpy
+      - .. image:: http://img.shields.io/pypi/pyversions/csharpy.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/csharpy
+      - .. image:: https://badge.waffle.io/sdpython/csharpy.png?label=to%20do&title=to%20do
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/csharpy
+      - .. image:: https://codecov.io/github/sdpython/csharpy/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/csharpy?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/csharpy/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/csharpy/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
+      -
     * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/cpyquickhelper.svg?branch=master
             :target: https://travis-ci.org/sdpython/cpyquickhelper
@@ -679,6 +702,9 @@ Outils
 
     * - module
       - description
+    * - `csharpy <http://www.xavierdupre.fr/app/csharpy/helpsphinx/index.html>`_
+      - Outils, exemplesp pour utiliser du :epkg:`C#` depuis :epkg:`Python`
+        sous Windows ou Linux.
     * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
       - Fonctions, outils implémentées en C, C++ et habillées en Python. C'est aussi
         un template pour ceux qui souhaite réaliser un module en C/C++/Cython.

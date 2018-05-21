@@ -250,7 +250,6 @@ tests unitaires, le templating, les sites Web, le scraping, encoding, les notebo
     specials/unittest_coverage_git_profling
     notebooks/git_notebook
     notebooks/profiling_example
-    notebooks/td1a_python_csharp
     notebooks/notebook_convert
     notebooks/jupyter_custom_magics
 

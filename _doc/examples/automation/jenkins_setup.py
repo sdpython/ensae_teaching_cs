@@ -14,27 +14,6 @@ import os
 import keyring
 
 #########################################
-# Cette section ajoute des chemins pour des modules que je développe
-# et que je n'installe jamais. Je pourrais me servir d'un environnement
-# virtuel mais en pratique, c'est toujours un peu compliqué
-# de mettre le mettre à jour en permanence.
-
-this = os.path.abspath(os.path.dirname(__file__))
-if "ensae_teaching_cs" in this:
-    this = this.split("ensae_teaching_cs")[0].rstrip("\\/")
-for module in ["jyquickhelper", "pyquickhelper", "pyensae",
-               "pyrsslocal", "pymmails", "pymyinstall",
-               "ensae_teaching_cs", "tkinterquickhelper",
-               "cpyquickhelper"]:
-    try:
-        exec("import %s" % module)
-    except ImportError:
-        p = os.path.join(this, module, "src")
-        print("add path", p)
-        sys.path.append(p)
-        exec("import %s" % module)
-
-#########################################
 # logging
 
 from pyquickhelper.loghelper import fLOG  # publish_lectures

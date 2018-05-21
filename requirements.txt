@@ -44,7 +44,6 @@ pymyinstall>=1.1.1415
 pyqt5
 pyquickhelper>=1.8
 pyrsslocal
-pythonnet
 python-jenkins
 qgrid
 semantic_version
