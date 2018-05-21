@@ -14,7 +14,7 @@ Tableau de bord et statut des dépendances
 +++++++++++++++++++++++++++++++++++++++++
 
 .. list-table::
-    :widths: 12 10 10 8 15 10 10 10 10
+    :widths: 12 10 10 8 15 10 10 10 10 10
     :header-rows: 1
 
     * - Module
@@ -94,6 +94,29 @@ Tableau de bord et statut des dépendances
             :target: https://codecov.io/github/sdpython/csharpy?branch=master
       - .. image:: http://www.xavierdupre.fr/app/csharpy/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/csharpy/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
+      -
+    * - `csharpyml <http://www.xavierdupre.fr/app/csharpyml/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/csharpyml.svg?branch=master
+            :target: https://travis-ci.org/sdpython/csharpyml
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/ldrgt6sxeyfwtoo2?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/csharpyml
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/csharpyml/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/csharpyml/tree/master
+      - .. image:: https://badge.fury.io/py/csharpyml.svg
+            :target: https://pypi.org/project/csharpyml
+      - .. image:: http://img.shields.io/pypi/pyversions/csharpyml.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/csharpyml
+      - .. image:: https://badge.waffle.io/sdpython/csharpyml.png?label=to%20do&title=to%20do
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/csharpyml
+      - .. image:: https://codecov.io/github/sdpython/csharpyml/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/csharpyml?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/csharpyml/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/csharpyml/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
       -
     * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
@@ -630,6 +653,7 @@ Tableau de bord et statut des dépendances
       -
       -
       -
+      -
     * - `python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/python3_module_template.svg?branch=master
             :target: https://travis-ci.org/sdpython/python3_module_template
@@ -702,9 +726,11 @@ Outils
 
     * - module
       - description
-    * - `csharpy <http://www.xavierdupre.fr/app/csharpy/helpsphinx/index.html>`_
-      - Outils, exemplesp pour utiliser du :epkg:`C#` depuis :epkg:`Python`
+    * - :epkg:`csharpy`
+      - Outils, exemples pour utiliser du :epkg:`C#` depuis :epkg:`Python`
         sous Windows ou Linux.
+    * - :epkg:`csharpyml`
+      - :epkg:`csharpy` + :epkg:`ML.net`
     * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
       - Fonctions, outils implémentées en C, C++ et habillées en Python. C'est aussi
         un template pour ceux qui souhaite réaliser un module en C/C++/Cython.
@@ -762,7 +788,7 @@ Contenu
         mathématiques que dans les autres modules.
     * - `papierstat <http://www.xavierdupre.fr/app/papierstat/helpsphinx/index.html>`_
       - Découverte du :epkg:`machine learning`, mélange de pratique et de théorie.
-    * - `sparkouille <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/index.html>`_
+    * - :epkg:`sparkouille`
       - Bafouille sur :epkg:`spark`.
     * - `teachpyx <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_
       - Cours de programmation en Python. C'est la version internet et actualisée

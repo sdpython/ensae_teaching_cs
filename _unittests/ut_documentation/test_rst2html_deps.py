@@ -67,7 +67,9 @@ class TestRst2HtmlDeps(unittest.TestCase):
                      pymyinstall="http", Jenkins="http", docutils="http",
                      Jupyter="http", lightmlboard="zoo", lightmlrestapi="mll",
                      mlinsights="mli", mlprodict="mlp", sparkouille="spko",
-                     spark='spk', manydataapi="mda")
+                     spark='spk', manydataapi="mda", csharpy='cspy',
+                     csharpyml='cspyml', Python='Python')
+        links.update({'ML.net':'mlnet', 'C#': 'C#'})
 
         for full in fulls:
             last = os.path.split(full)[-1]

@@ -147,6 +147,7 @@ class TestCodeStyle(ExtTestCase):
                          "Unable to import 'pyopencl'",
                          "Unused import clr",
                          "Unused variable 'clr'",
+                         "Unable to import 'clr'",
                          "Module 'clr' has no 'AddReference' member",
                          ])
 
