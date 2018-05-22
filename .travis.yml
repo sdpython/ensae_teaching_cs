@@ -66,8 +66,7 @@ install:
   # we change that, cvxopt does not seem to work anymore without mkl
   # we add it at the end since it seems to modify existing packages
   - pip3 install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
-  - conda install pytorch torchvision -c soumith
-  - pip3 install torchvision
+  - conda install -q pytorch torchvision -c soumith
   - pip3 install cairocffi cairosvg
   - pip3 install git+https://github.com/matplotlib/basemap.git
   - conda install -q -c conda-forge xgboost
