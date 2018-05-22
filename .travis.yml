@@ -69,6 +69,6 @@ install:
   - conda install -q pytorch torchvision -c soumith
   - pip3 install cairocffi cairosvg
   - pip3 install git+https://github.com/matplotlib/basemap.git
-  - conda install -q -c conda-forge xgboost
+  #- conda install -q -c conda-forge xgboost
 script:
-  - python setup.py unittests
+  - python3 setup.py unittests
