@@ -5,36 +5,19 @@ python:
   - "3.6"
 addons:
 -  apt:
-   - sources:
-      - sourceline: deb http://download.mono-project.com/repo/ubuntu trusty main
-        key_url: http://keyserver.ubuntu.com/pks/lookup?op=get&search=0xA6A19B38D3D831EF
-   - packages:
-      - mono-complete
-      - ca-certificates-mono
+-    packages:
       - ffmpeg
       - build-dep
       - graphviz
       - libgfortran3
-      - python-scipy
-      # computation
       - libblas-dev
       - liblapack-dev
       - gfortran      
-      # opencl
       - ocl-icd-opencl-dev
       - libopencl
-      # cuda
       - cuda-gdb-src
       - cuda 
       - libgeos-dev
-      # - python-pygame
-      # - mercurial
-      # - libsdl2-dev
-      # - libsdl-image1.2-dev
-      # - libsdl-ttf2.0-dev
-      # - libsdl-mixer1.2-dev
-      # - python-dev
-      # for CUDA see, https://github.com/BVLC/caffe/blob/master/scripts/travis/install-deps.sh
 env:
   global:
     - LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so
@@ -43,8 +26,6 @@ env:
     - SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=disk
 
 install:
-  # We do this conditionally because it saves us some downloading if the
-  # version is the same.
   - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
   - bash miniconda.sh -b -p $HOME/miniconda
   - export PATH="$HOME/miniconda/bin:$PATH"
@@ -56,20 +37,14 @@ install:
   - conda info -a
   - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION numpy mkl scipy nose cython scikit-learn
   - source activate test-environment
-  # - make all
-  #- conda build build_tools/conda-recipe --quiet
   - conda install -q --file=requirements_conda.txt
   - pip install pyquickhelper
   - pip install -q -r requirements.txt
   - pip install -U git+https://github.com/sdpython/pyPdf --no-deps
   - pip install -U git+https://github.com/matplotlib/natgrid --no-deps
-  # - pip install hg+http://bitbucket.org/pygame/pygame
-  # we change that, cvxopt does not seem to work anymore without mkl
-  # we add it at the end since it seems to modify existing packages
   - pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
   - conda install -q pytorch torchvision -c soumith
   - pip install cairocffi cairosvg
-  - pip install git+https://github.com/matplotlib/basemap.git
-  #- conda install -q -c conda-forge xgboost
+  - pip3 install git+https://github.com/matplotlib/basemap.git
 script:
   - python setup.py unittests
