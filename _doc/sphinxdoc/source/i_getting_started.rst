@@ -484,8 +484,6 @@ Setup pour déveloper ce cours (Windows)
   (il ne faut pas ajouter les interpréteur au PATH par défaut)
 * `R 3.2.2 <https://cran.r-project.org/bin/windows/base/old/3.2.2/>`_
 * :epkg:`SciTE`
-* `mingw-w64 <https://mingw-w64.org/doku.php>`_ (:epkg:`theano`)
-  (voir :ref:`Installer theano et un compilateur C++ <blog-install-theno-keras>`)
 * `Visual Studio 2015 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_
   (cocher C++, C#, Python comme langage + CLang comme compilateur)
 

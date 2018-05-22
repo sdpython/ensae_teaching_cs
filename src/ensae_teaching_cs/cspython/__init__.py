@@ -42,7 +42,6 @@ import sys
 import platform
 import os
 import json
-import clr
 
 
 def vocal_synthesis(text, lang="fr-FR", voice="", filename=None):

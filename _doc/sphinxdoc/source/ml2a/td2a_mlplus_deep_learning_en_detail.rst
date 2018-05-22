@@ -132,9 +132,6 @@ Deep Learning en détail
 *Modules - à suivre*
 
 * `chainer <https://github.com/pfnet/chainer>`_
-* `platoon <https://github.com/mila-udem/platoon/>`_ :
-  multi-GPU pour `theano <http://deeplearning.net/software/theano/>`_
-  (à voir car *theano* n'est plus maintenu)
 * `Federated Learning: Collaborative Machine Learning without Centralized Training Data <https://research.googleblog.com/2017/04/federated-learning-collaborative.html>`_
 * `foolbox <https://github.com/bethgelab/foolbox>`_ :
   trouver des petites perturbations des données qui trompent les réseaux de neurones

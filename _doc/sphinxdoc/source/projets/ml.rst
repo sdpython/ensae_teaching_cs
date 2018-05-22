@@ -142,7 +142,7 @@ Librairies, modules :
 
 * `The Infinite MNIST <http://leon.bottou.org/projects/infimnist>`_
 * `VowPal Wabbit and MNIST <https://github.com/JohnLangford/vowpal_wabbit/tree/master/demo/mnist>`_
-* `theano <http://deeplearning.net/software/theano/>`_, module Python spécialisé dans le deep learning, `caffe <http://caffe.berkeleyvision.org/>`_
+* `pytorch <https://pytorch.org/>`_
 
 .. _l-ml-align:
 

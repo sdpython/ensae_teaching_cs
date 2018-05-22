@@ -223,7 +223,7 @@ ENSAE 2A - Programmation
 
         **Module de référence**
 
-        * `theano <http://deeplearning.net/software/theano/>`_, `keras <https://keras.io/>`_
+        * `pytorch <https://pytorch.org/>`_, `keras <https://keras.io/>`_
 
     .. revealjs:: Workflow
 

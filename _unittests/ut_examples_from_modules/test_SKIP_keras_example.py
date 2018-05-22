@@ -25,7 +25,7 @@ except ImportError:
 
 class TestSkipExampleKerasMNIST(unittest.TestCase):
 
-    def test_theano_logreg(self):
+    def test_keras_logreg(self):
         fLOG(
             __file__,
             self._testMethodName,

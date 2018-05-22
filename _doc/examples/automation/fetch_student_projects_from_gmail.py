@@ -28,22 +28,26 @@ with warnings.catch_warnings():
 # tous les mails doivent être dans le même répertoire
 
 server = "imap.gmail.com"
-ENSAE = False
-date = "30-Apr-2018"
-if ENSAE:
+school = "ENSAE"
+date = "15-May-2018"
+pattern = "Python_{0}_Projet_2018"
+
+if school == 'ENSAE':
     do_mail = True
     mailfolder = ["ensae/ENSAE_1A"]
     dest_folder = os.path.normpath(os.path.abspath(os.path.join(
-        *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2017-2018", "1A_pitch"]))))
+        *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2017-2018", "1A_projet"]))))
     print("dest", dest_folder)
-else:
+elif school == 'ASSAS':
     do_mail = True
     mailfolder = ["ensae/assas"]
     dest_folder = os.path.normpath(os.path.abspath(os.path.join(
         *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "assas", "2017-2018", "projet"]))))
     print("dest", dest_folder)
+else:
+    raise NotImplementedError()
 
-basename = "Python_{0}_Pitch_2018".format(mailfolder[0].split("/")[-1])
+basename = pattern.format(mailfolder[0].split("/")[-1])
 filename_zip = os.path.join(dest_folder, basename + ".zip")
 convert_files = True
 

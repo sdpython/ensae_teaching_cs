@@ -24,3 +24,9 @@
     Sous Windows, c'est un peu plus compliqué mais à peine plus long.
     Il faut lire l'article de blog :
     `Theano and Mingw <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2017/2017-08-17_theano.html>`_.
+    
+    **2018**
+
+    :epkg:`theano` n'est plus maintenu. Cet article ne devrait
+    plus vous servir.
+

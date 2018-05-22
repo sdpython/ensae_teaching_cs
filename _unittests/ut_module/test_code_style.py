@@ -70,7 +70,6 @@ class TestCodeStyle(ExtTestCase):
                          "'pygame' has no 'error' member",
                          "'pygame' has no 'init' member",
                          "Module 'matplotlib.cm' has no 'rainbow' member",
-                         "Unable to import 'theano",
                          "Redefining built-in 'input'",
                          "Unused variable 'vt'",
                          "Value 'lastrow' is unsubscriptable",
@@ -101,10 +100,10 @@ class TestCodeStyle(ExtTestCase):
                          "Unable to import 'pyopencl'",
                          "Unable to import 'selenium",
                          "Unable to import 'splinter'",
-                         "theano_logreg.py:176: E1130",
                          "Unable to import 'ensae_teaching_cs.td_1a.flask_helper'",
                          "Unused import clr",
                          "Module 'clr' has no 'AddReference' member",
+                         "Unable to import 'clr'",
                          ])
 
     def test_style_test(self):
@@ -139,7 +138,6 @@ class TestCodeStyle(ExtTestCase):
                          "Module 'pygame' has no 'quit'",
                          "Unable to import 'primes'",
                          "Parameters differ from overridden 'forward' method",
-                         "Unable to import 'theano",
                          "test_data_competition.py:3",
                          "test_data_competition.py:1",
                          "Redefining name 'src' from outer scope",

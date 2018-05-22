@@ -15,7 +15,7 @@ addons:
       - build-dep
       - graphviz
       - libgfortran3
-      - python3-scipy
+      - python-scipy
       # computation
       - libblas-dev
       - liblapack-dev
@@ -40,7 +40,7 @@ env:
     - LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so
     - SEGFAULT_SIGNALS=all
     - PYTHONUNBUFFERED=True
-    - SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=disk KERAS_BACKEND=theano
+    - SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=disk
 
 install:
   # We do this conditionally because it saves us some downloading if the
@@ -59,16 +59,17 @@ install:
   # - make all
   #- conda build build_tools/conda-recipe --quiet
   - conda install -q --file=requirements_conda.txt
-  - pip3 install -q -r requirements.txt
-  - pip3 install -U git+https://github.com/sdpython/pyPdf --no-deps
-  - pip3 install -U git+https://github.com/matplotlib/natgrid --no-deps
-  # - pip3 install hg+http://bitbucket.org/pygame/pygame
+  - pip install pyquickhelper
+  - pip install -q -r requirements.txt
+  - pip install -U git+https://github.com/sdpython/pyPdf --no-deps
+  - pip install -U git+https://github.com/matplotlib/natgrid --no-deps
+  # - pip install hg+http://bitbucket.org/pygame/pygame
   # we change that, cvxopt does not seem to work anymore without mkl
   # we add it at the end since it seems to modify existing packages
-  - pip3 install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
+  - pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
   - conda install -q pytorch torchvision -c soumith
-  - pip3 install cairocffi cairosvg
-  - pip3 install git+https://github.com/matplotlib/basemap.git
+  - pip install cairocffi cairosvg
+  - pip install git+https://github.com/matplotlib/basemap.git
   #- conda install -q -c conda-forge xgboost
 script:
-  - python3 setup.py unittests
+  - python setup.py unittests
