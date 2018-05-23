@@ -283,16 +283,17 @@ class ProjectsRepository:
         return res, skip
 
     @staticmethod
-    def create_folders_from_dataframe(df, root, report="suivi.rst", col_student="Eleves", col_group="Groupe",
-                                      col_subject="Sujet", col_mail=None, overwrite=False, email_function=None,
+    def create_folders_from_dataframe(df, root, report="suivi.rst", col_student=None, col_group="Groupe",
+                                      col_subject="Sujet", col_mail="mail", overwrite=False, email_function=None,
                                       must_have_email=True, skip_if_nomail=False, skip_names=None,
                                       fLOG=noLOG):
         """
         Creates a series of folders for groups of students.
 
         @param      root                where to create the folders
-        @param      col_student         column which contains the student name (firt name + last name)
-        @param      col_group           index of the group (it can be None if each student is a group)
+        @param      col_student         column which contains the student name (firt name + last name),
+                                        equal to *col_mail* if *None*
+        @param      col_group           index of the group (it can be *None* if each student is a group)
         @param      col_subject         column which contains the subject
         @param      col_mail            if there is a column which contains the mail in the input dataframe
         @param      df                  DataFrame
@@ -315,6 +316,11 @@ class ProjectsRepository:
         *email_function* can be a list of mails. In that case,
         this function is replaced by @see me match_mails.
         """
+        if col_mail is None:
+            raise ValueError("col_mail cannot be None")
+        if col_student is None:
+            col_student = col_mail
+
         def local_email_function(names, skip_names):
             return ProjectsRepository.match_mails(names, email_function,
                                                   exc=False, skip_names=skip_names)
@@ -352,6 +358,8 @@ class ProjectsRepository:
                     res += "."
                 elif c == "-":
                     res += "."
+                elif c == '@':
+                    break
                 else:
                     res += c
             return res
@@ -448,6 +456,9 @@ class ProjectsRepository:
             filename = os.path.join(folder, report)
 
             if not os.path.exists(folder):
+                if '@' in folder:
+                    raise ValueError(
+                        "Folder '{0}' must not contain '@'.".format(folder))
                 os.mkdir(folder)
 
             if overwrite or not os.path.exists(filename):
@@ -456,7 +467,14 @@ class ProjectsRepository:
 
                 folds.append(folder)
 
-        return ProjectsRepository(root, suivi=report, fLOG=fLOG)
+        proj = ProjectsRepository(root, suivi=report, fLOG=fLOG)
+
+        if must_have_email:
+            for gr in proj.Groups:
+                mails = proj.get_emails(gr)
+                if len(mails) == 0:
+                    raise ValueError("No mail for group '{0}'.".format(gr))
+        return proj
 
     def enumerate_group_mails(self, group, mailbox, subfolder, date=None,
                               skip_function=None, max_dest=5):
@@ -673,7 +691,7 @@ class ProjectsRepository:
                       outfile="index.html", title="summary",
                       nolink_if=None):
         """
-        Produces a summary and uses a Jinja2 template.
+        Produces a summary and uses a :epkg:`Jinja2` template.
 
         @param      render      instance of `EmailMessageRenderer <http://www.xavierdupre.fr/app/pymmails/
                                 helpsphinx//pymmails/render/email_message_renderer.html>`_),
@@ -826,7 +844,7 @@ class ProjectsRepository:
 
     def unzip_convert(self, group):
         """
-        unzip files and convert notebooks into html
+        Unzips files and convert notebooks into :epkg:`HTML`.
 
         @param          group       group name
         @return                     list of new files
@@ -836,7 +854,7 @@ class ProjectsRepository:
 
     def unzip_files(self, group):
         """
-        unzip files and convert notebooks into html
+        Unzips files and convert notebooks into :epkg:`HTML`.
 
         @param          group       group name
         @return                     list of new filess
@@ -926,7 +944,7 @@ class ProjectsRepository:
 
     def convert_files(self, group):
         """
-        convert all notebooks and python scripts into html for a group
+        Converts all notebooks and python scripts into :epkg:`HTML` for a group.
 
         @param          group       group name
         @return                     list of new files

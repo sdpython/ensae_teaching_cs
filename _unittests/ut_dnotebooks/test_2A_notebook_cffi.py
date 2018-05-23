@@ -8,7 +8,8 @@ import os
 import unittest
 import warnings
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
+from pyquickhelper.pycode import get_temp_folder, skipif_circleci
+from pyquickhelper.pycode import add_missing_development_version
 
 try:
     import src
@@ -30,6 +31,7 @@ class TestNotebookRunner2a_cffi (unittest.TestCase):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
                                         __file__, hide=True)
 
+    @skipif_circleci('Too long with no output (exceeded 10m0s)')
     def test_notebook_runner_2a_cffi(self):
         fLOG(
             __file__,

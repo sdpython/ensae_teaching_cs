@@ -21,6 +21,7 @@ install:
   - "%PYTHON%\\Scripts\\pymy_install3 gensim partd pygame shapely tables torch"
   - "%PYTHON%\\Scripts\\pip install -r requirements_conda.txt"
   - "%PYTHON%\\Scripts\\pip install -r requirements.txt"
+  - "%PYTHON%\\Scripts\\pip install -U git+https://github.com/sdpython/pyPdf --no-deps"
   - "%PYTHON%\\Scripts\\pip install tools"
   - "%PYTHON%\\Scripts\\pymy_install3 --task=tool --source=zip graphviz"
   - "%PYTHON%\\Scripts\\pip install csharpy pythonnet"

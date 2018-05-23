@@ -5,10 +5,24 @@ Récupérer des mails d'étudiants en pièce jointe (1:1)
 
 Récupère des fichiers en pièce jointe provenant d'étudiants comme un rendu de projet.
 Le programme suppose qu'il n'y en a qu'un par étudiant, que tous les mails ont été
-archivés dans un répertoire d'une boîte de message, ici gmail.
+archivés dans un répertoire d'une boîte de message, ici :epkg:`gmail`.
 Il faut supprimer le contenu du répertoire pour mettre à jour l'ensemble
 des projets. Dans le cas contraire, le code est prévu pour mettre à jour le répertoire
 à partir des derniers mails recensés dans le fichiers *mails.txt*.
+La récupération se passe souvent en deux étapes.
+La prmeière récupère tous les mails et crée un premier archivage
+sans tenir compte des groupes. On créé alors un fichier :epkg:`Excel`
+qui ressemble à peu près à ceci :
+
+.. runpython::
+
+    from pandas import DataFrame
+    df = DataFrame(dict(groupe=[1, 1, 2], mail=['a.a@m', 'b.b@m', 'c.c@m'],
+                        sujet=['sub1', 'sub1', 'sub2']))
+    print(df)
+
+On efface tout excepté ce fichier puis on récupère une seconde fois
+tous les projets afin de ne créer qu'un répertoire par groupe.
 
 .. _script-fetch-students-projets-py:
 """
@@ -24,13 +38,17 @@ with warnings.catch_warnings():
     import keyring
 
 #################################
-# paramètres de la récupération
+# Paramètres de la récupération,
 # tous les mails doivent être dans le même répertoire
+# de la boîte de message.
 
 server = "imap.gmail.com"
 school = "ENSAE"
 date = "15-May-2018"
 pattern = "Python_{0}_Projet_2018"
+group_def = "groupes.xlsx"
+col_subject, col_group, col_mail = "sujet", "groupe", "mail"
+
 
 if school == 'ENSAE':
     do_mail = True
@@ -47,6 +65,24 @@ elif school == 'ASSAS':
 else:
     raise NotImplementedError()
 
+###########################
+# End of customization.
+
+path_df = os.path.join(dest_folder, group_def)
+if os.path.exists(path_df):
+    df_group = pandas.read_excel(path_df)
+    if col_subject not in df_group.columns:
+        raise Exception('{0} not in {1}'.format(
+            col_subject, list(df_group.columns)))
+    if col_mail not in df_group.columns:
+        raise Exception('{0} not in {1}'.format(
+            col_mail, list(df_group.columns)))
+    if col_group not in df_group.columns:
+        raise Exception('{0} not in {1}'.format(
+            col_group, list(df_group.columns)))
+else:
+    df_group = None
+
 basename = pattern.format(mailfolder[0].split("/")[-1])
 filename_zip = os.path.join(dest_folder, basename + ".zip")
 convert_files = True
@@ -55,30 +91,24 @@ filename_mails = os.path.join(dest_folder, "emails.txt")
 filename_excel = os.path.join(dest_folder, basename + ".xlsx")
 
 #########################################
-# create the folder if it does not exist
+# Creates the folder if it does not exist.
 
 if not os.path.exists(dest_folder):
     os.makedirs(dest_folder)
 
 #########################################
-# logging
+# Logging et import des fonctions dont on a besoin.
 
 from pyquickhelper.loghelper import fLOG  # fetch_student_projects_from_gmail
 fLOG(OutputPrint=True)
-
-
-#########################################
-# import des fonctions dont on a besoin
 
 from ensae_teaching_cs.automation_students import ProjectsRepository, grab_addresses
 from pyquickhelper.filehelper import encrypt_stream
 from pymmails import MailBoxImap, EmailMessageRenderer, EmailMessageListRenderer
 from pymmails.render.email_message_style import template_email_html_short
 
-
 ###########
-# Settings
-# On utilise keyring pour récupérer des mots de passe.
+# Identifiants. On utilise :epkg:`keyring` pour récupérer des mots de passe.
 
 user = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "user")
 pwd = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "pwd")
@@ -86,11 +116,11 @@ password = keyring.get_password("enc", os.environ["COMPUTERNAME"] + "pwd")
 if user is None or pwd is None or password is None:
     print("ERROR: password or user or crypting password is empty, you should execute:")
     print(
-        '    keyring.set_password("gmail", os.environ["COMPUTERNAME"] + "user", "..")')
+        'keyring.set_password("gmail", os.environ["COMPUTERNAME"] + "user", "..")')
     print(
-        '    keyring.set_password("gmail", os.environ["COMPUTERNAME"] + "pwd", "..")')
+        'keyring.set_password("gmail", os.environ["COMPUTERNAME"] + "pwd", "..")')
     print(
-        '    keyring.set_password("enc", os.environ["COMPUTERNAME"] + "pwd", "..")')
+        'keyring.set_password("enc", os.environ["COMPUTERNAME"] + "pwd", "..")')
     print("Exit")
     sys.exit(0)
 
@@ -98,7 +128,7 @@ password = bytes(password, "ascii")
 
 
 ###########
-# les adresses à éviter car
+# Les adresses à éviter...
 skip_address = {
     'xavier.dupre@gmail.com',
     'xavier.dupre@ensae.fr',
@@ -106,37 +136,44 @@ skip_address = {
 
 
 ###############
-# gather mails
+# Gathers mails and creates a dataframe if it does not exist.
 
-fLOG("fetch mails")
+fLOG("[fetch_student_projects_from_gmail] start")
 
-if os.path.exists(filename_mails):
-    with open(filename_mails, "r", encoding="utf8") as f:
-        lines = f.readlines()
-    emails = [l.strip("\r\t\n ") for l in lines]
-    emails = [_ for _ in emails if _ not in skip_address]
+if df_group is not None:
+    if os.path.exists(filename_mails):
+        with open(filename_mails, "r", encoding="utf8") as f:
+            lines = f.readlines()
+        emails = [l.strip("\r\t\n ") for l in lines]
+        emails = [_ for _ in emails if _ not in skip_address]
+    else:
+        box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
+        box.login()
+        emails = grab_addresses(box, mailfolder, date, fLOG=fLOG)
+        box.logout()
+        emails = list(sorted(set([_.strip("<>").lower()
+                                  for _ in emails if _ not in skip_address])))
+        with open(filename_mails, "w", encoding="utf8") as f:
+            f.write("\n".join(emails))
 else:
-    box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
-    box.login()
-    emails = grab_addresses(box, mailfolder, date, fLOG=fLOG)
-    box.logout()
-    emails = list(sorted(set([_.strip("<>").lower()
-                              for _ in emails if _ not in skip_address])))
-    with open(filename_mails, "w", encoding="utf8") as f:
-        f.write("\n".join(emails))
+    emails = [_ for _ in df_group[col_mail] if _ not in skip_address]
+
 
 #####################
-# create a dataframe
+# Creates a dataframe.
 
-import pandas
-rows = [{"nom_prenom": mail, "sujet": "octobre", "groupe": i + 1}
-        for i, mail in enumerate(emails)]
-df = pandas.DataFrame(rows)
-fLOG("dataframe", df.shape)
-df.to_excel(filename_excel)
+if df_group is None:
+    import pandas
+    rows = [{col_mail: mail, col_sujet: "?", col_group: i + 1}
+            for i, mail in enumerate(emails)]
+    df = pandas.DataFrame(rows)
+    fLOG("[fetch_student_projects_from_gmail] dataframe", df.shape)
+    df.to_excel(filename_excel)
+else:
+    df = df_group
 
 ##################################
-# create folders for each student
+# Creates folders for each student or group.
 
 mappings = {}
 folder = dest_folder
@@ -144,13 +181,15 @@ folder = dest_folder
 proj = ProjectsRepository(folder, fLOG=fLOG)
 groups = proj.Groups
 if do_mail or len(groups) < 10:
-    fLOG("creation")
-    proj = ProjectsRepository.create_folders_from_dataframe(df, folder,
-                                                            col_subject="sujet", fLOG=fLOG, col_group="groupe",
-                                                            col_student="nom_prenom",
+    fLOG("[fetch_student_projects_from_gmail] create list of groups")
+    proj = ProjectsRepository.create_folders_from_dataframe(df, folder, col_subject=col_subject,
+                                                            col_group=col_group, col_mail=col_mail,
                                                             email_function=emails, skip_if_nomail=False,
-                                                            must_have_email=True)
-fLOG("nb groups", len(proj.Groups))
+                                                            must_have_email=True, fLOG=fLOG)
+elif len(groups) < 10:
+    fLOG("[fetch_student_projects_from_gmail] skip fetching mails: {0} groups already".format(
+        len(groups)))
+fLOG("[fetch_student_projects_from_gmail] nb groups", len(proj.Groups))
 
 #############
 # dump mails
@@ -172,7 +211,7 @@ if do_mail:
 # write summary
 
 if True:
-    fLOG("summary")
+    fLOG("[fetch_student_projects_from_gmail] summary")
     index = os.path.join(dest_folder, "index.html")
     if os.path.exists(index):
         os.remove(index)
@@ -193,6 +232,6 @@ if True:
 # encryption
 
 if True:
-    fLOG("encryption")
+    fLOG("[fetch_student_projects_from_gmail] encryption")
     enc = filename_zip.replace(".zip", ".enc")
     encrypt_stream(password, filename_zip, enc, chunksize=2**30)
