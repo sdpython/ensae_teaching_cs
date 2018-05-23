@@ -6,7 +6,6 @@
 import sys
 import os
 import unittest
-import warnings
 import shutil
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
