@@ -50,6 +50,8 @@ class TestRepository(unittest.TestCase):
         try:
             proj = ProjectsRepository.create_folders_from_dataframe(df, temp, col_subject="sujet",
                                                                     fLOG=fLOG, col_group=None,
+                                                                    col_student="Eleves",
+                                                                    col_mail=None,
                                                                     email_function=emails,
                                                                     skip_if_nomail=True)
         except ProjectsRepository.MailNotFound:
@@ -61,6 +63,8 @@ class TestRepository(unittest.TestCase):
 
         proj = ProjectsRepository.create_folders_from_dataframe(df, temp, col_subject="sujet",
                                                                 fLOG=fLOG, col_group=None,
+                                                                col_student="Eleves",
+                                                                col_mail=None,
                                                                 email_function=emails,
                                                                 must_have_email=False)
 

@@ -8,7 +8,7 @@ import os
 import unittest
 import warnings
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, skipif_circleci
+from pyquickhelper.pycode import get_temp_folder
 from pyquickhelper.pycode import add_missing_development_version
 
 try:
@@ -25,21 +25,17 @@ except ImportError:
     import src
 
 
-class TestNotebookRunner2a_cffi (unittest.TestCase):
+class TestSKIPNotebookRunner2a_cffi (unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
                                         __file__, hide=True)
 
-    @skipif_circleci('Too long with no output (exceeded 10m0s)')
     def test_notebook_runner_2a_cffi(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        if is_travis_or_appveyor() == "appveyor":
-            # too long for appveyor
-            return
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook2a_")
         keepnote = ls_notebooks("2a")
@@ -48,10 +44,6 @@ class TestNotebookRunner2a_cffi (unittest.TestCase):
             if "cffi" not in n:
                 return False
             return True
-
-        if is_travis_or_appveyor() == "travis":
-            warnings.warn("execution does not stop")
-            return
 
         execute_notebooks(temp, keepnote, filter, fLOG=fLOG,
                           clean_function=clean_function_1a,
