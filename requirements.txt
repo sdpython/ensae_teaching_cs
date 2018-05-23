@@ -22,7 +22,7 @@ lifelines
 lightgbm
 lightning-python
 manydataapi
-mlstatpy>=0.1.335
+mlstatpy
 mpld3
 mutagen
 opencv-python
@@ -33,14 +33,14 @@ pocket
 psutil
 pydub
 pyenbc
-pyensae>=1.2.731
+pyensae
 pygal
 pygal_maps_fr
 pygame
 pylzma
 pymmails
 pympler
-pymyinstall>=1.1.1415
+pymyinstall
 pyqt5
 pyquickhelper>=1.8
 pyrsslocal
@@ -53,7 +53,7 @@ tables
 toolz
 sphinxjp.themes.basicstrap
 sphinxjp.themes.sphinxjp
-tensorflow>=1.5
+tensorflow
 tkinterquickhelper
 treeinterpreter
 tutormagic

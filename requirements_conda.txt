@@ -1,6 +1,7 @@
 biopython
 bokeh
 cffi
+cvxopt
 Cython
 cytoolz
 dask
