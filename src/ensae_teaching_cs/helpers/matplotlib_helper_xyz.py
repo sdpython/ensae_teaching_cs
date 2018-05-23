@@ -3,7 +3,6 @@
 @brief      scatter plots
 """
 import numpy
-from scipy import ndimage
 from matplotlib.tri import Triangulation
 from matplotlib.pyplot import Normalize
 from .colorsdef import colors_definition
