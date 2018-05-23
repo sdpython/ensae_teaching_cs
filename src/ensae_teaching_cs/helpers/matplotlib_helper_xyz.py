@@ -128,8 +128,8 @@ def scatter_xyc(points, smooth=0, div=10, ax=None, **options):
 
     tri = Triangulation(x, y)
 
-    plt.tricontour(x, y, z, 15, linewidths=0.5, colors='k')
-    plt.tricontourf(x, y, z, 15, cmap=plt.cm.rainbow,
+    plt.tricontour(tri, z, 15, linewidths=0.5, colors='k')
+    plt.tricontourf(tri, z, 15, cmap=plt.cm.rainbow,
                     norm=Normalize(vmax=numpy.abs(z).max(), vmin=-numpy.abs(z).max()))
     plt.colorbar(ax=ax)
     ax.scatter(x, y, c='b', s=5, zorder=10)
