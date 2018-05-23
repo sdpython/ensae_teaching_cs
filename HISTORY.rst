@@ -5,9 +5,15 @@
 History
 =======
 
-current - 2018-05-08 - 0.00Mb
+current - 2018-05-23 - 0.00Mb
 =============================
 
+* `53`: remove natgrid (2018-05-23)
+* `54`: replaces griddata by matplotlib.tri.Triangulation (2018-05-23)
+* `51`: drops theano (2018-05-22)
+* `50`: split magics commands into two files, one with C#, the other one without (2018-05-22)
+* `49`: extracts the csharp part in a separate module: csharpy (2018-05-22)
+* `48`: remove the custom version of pythonnet and use the official one (2018-05-13)
 * `47`: move CategorytoIntegers into mlinsights (2018-05-08)
 * `44`: replace open_html_form with ipywidgets (2018-04-19)
 * `26`: add content about distributed algorithms (2018-04-17)

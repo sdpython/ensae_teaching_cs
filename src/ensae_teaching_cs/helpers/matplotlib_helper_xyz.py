@@ -4,6 +4,8 @@
 """
 import numpy
 from scipy import ndimage
+from matplotlib.tri import Triangulation
+from matplotlib.pyplot import Normalize
 from .colorsdef import colors_definition
 
 
@@ -33,8 +35,8 @@ def scatter_xy_id(xy_id, legend=None, ax=None, **options):
         nuage1 = generate_gauss(0, 0, 3)
         nuage2 = generate_gauss(3, 4, 2)
         nuage = [(a, b, 0) for a, b in nuage1] + [(a, b, 1) for a, b in nuage2]
+
         import matplotlib.pyplot as plt
-        plt.style.use('ggplot')
         from ensae_teaching_cs.helpers.matplotlib_helper_xyz import scatter_xy_id
         fig, ax = scatter_xy_id(nuage, title="example with random observations",
                                 legend={0: "c0", 1: "c1"})
@@ -124,26 +126,15 @@ def scatter_xyc(points, smooth=0, div=10, ax=None, **options):
     y = [_[1] for _ in points]
     z = [_[2] for _ in points]
 
-    bound = [min(x), min(y), max(x), max(y)]
-    xi = numpy.linspace(bound[0], bound[2], div)
-    yi = numpy.linspace(bound[1], bound[3], div)
+    tri = Triangulation(x, y)
 
-    from matplotlib.mlab import griddata
-    zi = griddata(x, y, z, xi, yi, interp='nn')
-
-    if smooth > 0:
-        w = 1. / 9
-        iii = numpy.array([[w, w, w], [w, w, w], [w, w, w]])
-        for i in range(smooth):
-            zi = ndimage.convolve(zi, iii)
-
-    plt.contour(xi, yi, zi, 15, linewidths=0.5, colors='k')
-    plt.contourf(xi, yi, zi, 15, cmap=plt.cm.rainbow,
-                 vmax=abs(zi).max(), vmin=abs(zi).min())
+    plt.tricontour(x, y, z, 15, linewidths=0.5, colors='k')
+    plt.tricontourf(x, y, z, 15, cmap=plt.cm.rainbow,
+                    norm=Normalize(vmax=numpy.abs(z).max(), vmin=-numpy.abs(z).max()))
     plt.colorbar(ax=ax)
     ax.scatter(x, y, c='b', s=5, zorder=10)
-    ax.set_xlim(bound[0], bound[2])
-    ax.set_ylim(bound[1], bound[3])
+    ax.set_xlim(min(x), max(x))
+    ax.set_ylim(min(y), max(y))
 
     if "xlabel" in options:
         ax.set_xlabel(options["xlabel"])
@@ -190,8 +181,8 @@ def scatter_xyz(points, smooth=0, div=100, ax=None, **options):
         nuage1 = generate_gauss(0, 0, 3)
         nuage2 = generate_gauss(3, 4, 2)
         nuage = [(a, b, f(a, b)) for a, b in nuage1] + [(a, b, f(a, b)) for a, b in nuage2]
+
         import matplotlib.pyplot as plt
-        plt.style.use('ggplot')
         from ensae_teaching_cs.helpers.matplotlib_helper_xyz import scatter_xyz
         fig, ax = scatter_xyz(nuage, title="example with random observations")
         plt.show()
@@ -202,18 +193,6 @@ def scatter_xyz(points, smooth=0, div=100, ax=None, **options):
     x = [_[0] for _ in points]
     y = [_[1] for _ in points]
     z = [_[2] for _ in points]
-
-    bound = [min(x), min(y), max(x), max(y)]
-    xi = numpy.linspace(bound[0], bound[2], div)
-    yi = numpy.linspace(bound[1], bound[3], div)
-
-    from matplotlib.mlab import griddata
-    zi = griddata(x, y, z, xi, yi, interp='nn')
-    if smooth > 0:
-        w = 1. / 9
-        iii = numpy.array([[w, w, w], [w, w, w], [w, w, w]])
-        for i in range(smooth):
-            zi = ndimage.convolve(zi, iii)
 
     if ax is None:
         import matplotlib.pyplot as plt
@@ -229,10 +208,8 @@ def scatter_xyz(points, smooth=0, div=100, ax=None, **options):
     angle = options.get("angle", 45)
     ax.view_init(elev, angle)
 
-    X = numpy.row_stack(tuple([xi] * len(yi)))
-    Y = numpy.column_stack(tuple([yi] * len(xi)))
-
-    ax.plot_surface(X, Y, zi, cmap='autumn', cstride=5, rstride=5)
+    tri = Triangulation(x, y)
+    ax.plot_trisurf(x, y, z, triangles=tri.triangles, cmap='autumn')
 
     if "xlabel" in options:
         ax.set_xlabel(options["xlabel"])

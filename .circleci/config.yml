@@ -79,14 +79,13 @@ jobs:
             pip install cairocffi cairosvg
             
       - run:
-          name: install dependencies 3 - sphinxcontrib, datashader, pyPDF, natgrid
+          name: install dependencies 3 - sphinxcontrib, datashader, pyPDF
           command: |
             python3 -m venv venv
             . venv/bin/activate
             pip install git+https://github.com/sdpython/sphinxcontrib-images.git --upgrade --no-deps
             pip install git+https://github.com/bokeh/datashader.git --upgrade --no-deps
             pip install git+https://github.com/sdpython/pyPdf --upgrade --no-deps
-            pip install git+https://github.com/matplotlib/natgrid --upgrade --no-deps
             
       - run:
           name: install dependencies 4 - fairtest

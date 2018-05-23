@@ -5,6 +5,7 @@
 import sys
 import os
 import unittest
+import pandas
 from pyquickhelper.loghelper.flog import fLOG
 from pyquickhelper.helpgen.stat_helper import enumerate_notebooks_link
 
@@ -61,7 +62,6 @@ class TestHelpGenStatHelper(unittest.TestCase):
         # self.assertTrue(counts.get("refn", 0) > 0)
         # self.assertTrue(counts.get("toctree", 0) > 0)
 
-        import pandas
         df = pandas.DataFrame(data=rows, columns=[
                               "rst", "ipynb", "link", "title", "path"])
         name = os.path.join(os.path.dirname(__file__), "temp_notebook_rst.txt")

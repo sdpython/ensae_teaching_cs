@@ -317,7 +317,8 @@ class ProjectsRepository:
         this function is replaced by @see me match_mails.
         """
         if col_mail is None and email_function is None:
-            raise ValueError("col_mail cannot be None if email_function is None")
+            raise ValueError(
+                "col_mail cannot be None if email_function is None")
         if col_student is None:
             col_student = col_mail
 
@@ -344,7 +345,8 @@ class ProjectsRepository:
                     ind_student = list(df.columns).index(col_student) + 1
                     ind_mail = list(df.columns).index(col_mail) + 1
                 except ValueError:
-                    raise ValueError("Unable to find '{0}' or '{1}' in {2}".format(col_student, col_mail, df.columns))
+                    raise ValueError("Unable to find '{0}' or '{1}' in {2}".format(
+                        col_student, col_mail, df.columns))
                 mapping = {}
                 for row in df.itertuples():
                     mapping[row[ind_student]] = row[ind_mail]

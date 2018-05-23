@@ -166,9 +166,6 @@ En diagonal
     * :ref:`code associé à ce cours <modindex>`
     * :ref:`l-ressources`
     * :ref:`l-biblio`
-* A propos de ce cours
-    * :ref:`l-issues-todolist`
-    * :ref:`l-completed-todolist`
 * Autres supports
     * `Python et actuariat <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_
     * `Présentations en notebooks <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
