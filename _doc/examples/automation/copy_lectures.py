@@ -8,15 +8,12 @@ in order to serve it through a server.
 """
 
 #########################################
-# import
-
-import sys
-import os
-
-############################
 # paramètres
 # root est là où sont compilés les packages
 # dest est le répertoire destination
+
+import os
+
 root = os.path.normpath(os.path.abspath(os.path.join(
     os.path.dirname(__file__), "..", "..", "..", "..")))
 dest = os.path.normpath(os.path.abspath(os.path.join(

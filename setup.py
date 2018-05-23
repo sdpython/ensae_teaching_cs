@@ -32,14 +32,7 @@ CLASSIFIERS = [
 
 packages = find_packages('src', exclude='src')
 package_dir = {k: "src/" + k.replace(".", "/") for k in packages}
-package_data = {project_var_name + ".pythonnet.py33": ["*.pyd", "*.txt", "*.dll"],
-                project_var_name + ".pythonnet.py33x64": ["*.pyd", "*.txt", "*.dll"],
-                project_var_name + ".pythonnet.py34": ["*.pyd", "*.txt", "*.dll"],
-                project_var_name + ".pythonnet.py34x64": ["*.pyd", "*.txt", "*.dll"],
-                project_var_name + ".pythonnet.py27x64": ["*.pyd", "*.txt", "*.dll"],
-                project_var_name + ".pythonnet.py35x64": ["*.pyd", "*.txt", "*.dll"],
-                project_var_name + ".pythonnet.py36x64": ["*.pyd", "*.txt", "*.dll", "*."],
-                project_var_name + ".pythonnet.csdll": ["*.dll"],
+package_data = {project_var_name + ".cspython.csdll": ["*.dll"],
                 project_var_name + ".encrypted": ["*.crypted", "*.vigenere"],
                 project_var_name + ".data.data_gutenberg": ["*.txt"],
                 project_var_name + ".special.data": ["*.png", "*.txt"],
@@ -63,12 +56,6 @@ def ask_help():
 
 
 def is_local():
-    if "build_pres" in sys.argv:
-        return True
-    if "build_pres_2A" in sys.argv:
-        return True
-    if "build_pres_3A" in sys.argv:
-        return True
     file = os.path.abspath(__file__).replace("\\", "/").lower()
     if "/temp/" in file and "pip-" in file:
         return False
@@ -177,30 +164,6 @@ if is_local():
                   "'_UT_36_std' in outfile"),
         nbformats=nbformats, layout=layout,
         fLOG=logging_function, github_owner="sdpython")
-
-    if "build_script" in sys.argv and sys.platform.startswith("win"):
-        pres = """
-            :presentation:
-            %pythonexe% -u setup.py build_pres
-            if %errorlevel% neq 0 exit /b %errorlevel%
-            %pythonexe% -u setup.py build_pres_2A
-            if %errorlevel% neq 0 exit /b %errorlevel%
-            %pythonexe% -u setup.py build_pres_3A
-            if %errorlevel% neq 0 exit /b %errorlevel%
-            %pythonexe% -u setup.py build_pres_1Ap
-            if %errorlevel% neq 0 exit /b %errorlevel%
-            echo #######################################################
-            """.replace("            ", "")
-
-        # auto_setup_build_pres.bat
-
-        path_exe = os.path.dirname(sys.executable)
-        from pyquickhelper.pycode.windows_scripts import windows_prefix
-        with open("auto_setup_build_pres.bat", "w") as f:
-            f.write(windows_prefix.replace("__PY35_X64__", path_exe))
-            f.write("\n")
-            f.write(pres)
-
 else:
     r = False
 
@@ -225,59 +188,6 @@ if not r:
         from ensae_teaching_cs.td_2a import *
         from ensae_teaching_cs.tests import *
 
-    elif "build_pres" in sys.argv or "build_pres_2A" in sys.argv or \
-            "build_pres_3A" in sys.argv:
-        # we generate the documentation for the presentation
-
-        def get_executables_path():
-            """
-            returns the paths to Python, Python Scripts
-
-            @return     a list of paths
-            """
-            res = [os.path.split(sys.executable)[0]]
-            res += [os.path.join(res[-1], "Scripts")]
-            if sys.platform.startswith("win"):
-                ver = "c:\\Python%d%d" % (
-                    sys.version_info.major, sys.version_info.minor)
-                res += [ver]
-                res += [os.path.join(res[-1], "Scripts")]
-            return res
-
-        suffix = ""
-        suffix = "_2A" if "build_pres_2A" in sys.argv else suffix
-        suffix = "_3A" if "build_pres_3A" in sys.argv else suffix
-
-        #  run the documentation generation
-        if sys.platform.startswith("win"):
-            temp = os.environ["PATH"]
-            pyts = get_executables_path()
-            script = ";".join(pyts)
-            temp = script + ";" + temp
-            os.environ["PATH"] = temp
-            pa = os.getcwd()
-            thispath = os.path.normpath(os.path.split(__file__)[0])
-            docpath = os.path.normpath(
-                os.path.join(thispath, "_doc", "presentation" + suffix))
-            os.chdir(docpath)
-
-        lay = "html"
-        build = "build"
-        over = ""
-        sconf = ""
-
-        from pyquickhelper.helpgen import process_sphinx_cmd
-        cmd_file = os.path.abspath(process_sphinx_cmd.__file__)
-        cmd = '"{4}" "{5}" -b {1} -d {0}/doctrees{2}{3} source {0}/{1}'.format(
-            build, lay, over, sconf, sys.executable, cmd_file)
-        from pyquickhelper.loghelper import run_cmd
-        out, err = run_cmd(cmd, wait=True, fLOG=print)
-        print(out)
-        print(err)
-
-        if sys.platform.startswith("win"):
-            os.chdir(pa)
-
     else:
         # builds the setup
 
@@ -300,7 +210,7 @@ if not r:
             package_dir=package_dir,
             package_data=package_data,
             install_requires=[
-                "pyquickhelper>=1.5.2259", "pyensae", "pymyinstall", "pymmails",
+                "pyquickhelper>=1.8", "pyensae", "pymyinstall", "pymmails",
                 "scikit-learn", "pyrsslocal", "pandas", "numpy", "pyenbc",
                 "matplotlib", "jupyter", "mlstatpy", "manydataapi"],
         )

@@ -6,7 +6,6 @@ This script plots the flow-charts used in the scikit-learn tutorials.
 
 """
 
-import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, Rectangle, Polygon, Arrow, FancyArrow
 

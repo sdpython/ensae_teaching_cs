@@ -11,9 +11,6 @@ Algorithmes et programmation
 Cours animé par
 `Xavier Dupré <http://www.xavierdupre.fr/>`_
 depuis 2001.
-Ce cours est principalement composé de séances de travaux dirigés (TD).
-Le cours est décrit plus en détail dans cette présentation :
-`ENSAE 1A - Programmation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html>`_. |slideslogo|
 
 .. contents::
     :local:

@@ -11,7 +11,7 @@ from pyquickhelper.pycode import add_missing_development_version
 
 
 try:
-    import src.ensae_teaching_cs as skip__
+    import src
 except ImportError:
     path = os.path.normpath(
         os.path.abspath(
@@ -21,7 +21,7 @@ except ImportError:
                 "..")))
     if path not in sys.path:
         sys.path.append(path)
-    import src.ensae_teaching_cs as skip__
+    import src
 
 
 class TestNotebook1236Coverage201711(unittest.TestCase):

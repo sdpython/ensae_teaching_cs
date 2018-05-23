@@ -1,4 +1,3 @@
-import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, Rectangle, Polygon, Arrow, FancyArrow
 
@@ -7,7 +6,7 @@ def create_base(box_bg='#CCCCCC',
                 arrow1='#88CCFF',
                 arrow2='#88FF88',
                 supervised=True):
-    fig = plt.figure(figsize=(9, 6), facecolor='w')
+    _ = plt.figure(figsize=(9, 6), facecolor='w')
     ax = plt.axes((0, 0, 1, 1),
                   xticks=[], yticks=[], frameon=False)
     ax.set_xlim(0, 9)

@@ -154,7 +154,7 @@ Matthieu Bizien (deep learning),
 Nicolas Rousset (itérateurs),
 Jérémie Jakubowicz (puzzle algorithmique),
 Gilles Drigout (streaming),
-Gaël Varoquaux (machine learning avec scikit-learn)
+Gaël Varoquaux (machine learning avec :epkg:`scikit-learn`)
 et bien sûr les étudiants de l':epkg:`ENSAE`.
 Feuilles de route et compétitions passées :
 
