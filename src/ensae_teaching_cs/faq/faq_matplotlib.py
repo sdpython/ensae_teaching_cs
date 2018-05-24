@@ -61,8 +61,8 @@ def zoomable():
     pass
 
 
-def graph_ggplot_with_label(x, y, labels, barplot=True, title=None, figsize=(6, 4), style=None,
-                            ax=None, **kwargs):
+def graph_with_label(x, y, labels, barplot=True, title=None, figsize=(6, 4), style=None,
+                     ax=None, **kwargs):
     """
     Creates a graph with :epkg:`matplotlib`.
 
@@ -106,7 +106,6 @@ def graph_ggplot_with_label(x, y, labels, barplot=True, title=None, figsize=(6, 
                   '2014-w42', '2014-w43', '2014-w44', '2014-w45', '2014-w46', '2014-w47', '2014-w48',
                   '2014-w49', '2014-w50', '2014-w51', '2014-w52']
             plt.close('all')
-            plt.style.use('ggplot')
             fig,ax = plt.subplots(nrows=1,ncols=1,figsize=(10,4))
             ax.bar( x,y )
             ax.set_xticklabels( xl )
@@ -132,7 +131,6 @@ def graph_ggplot_with_label(x, y, labels, barplot=True, title=None, figsize=(6, 
                   '2014-w42', '2014-w43', '2014-w44', '2014-w45', '2014-w46', '2014-w47',
                   '2014-w48', '2014-w49', '2014-w50', '2014-w51', '2014-w52']
             plt.close('all')
-            plt.style.use('ggplot')
             fig,ax = plt.subplots(nrows=1,ncols=1,figsize=(10,4))
             ax.bar( x,y )
             tig = ax.get_xticks()
@@ -166,7 +164,6 @@ def graph_ggplot_with_label(x, y, labels, barplot=True, title=None, figsize=(6, 
                   '2014-w43', '2014-w44', '2014-w45', '2014-w46', '2014-w47', '2014-w48', '2014-w49',
                   '2014-w50', '2014-w51', '2014-w52']
             plt.close('all')
-            plt.style.use('ggplot')
             fig,ax = plt.subplots(nrows=1,ncols=1,figsize=(10,4))
             ax.bar( x,y )
             tig = ax.get_xticks()

@@ -24,12 +24,12 @@ except ImportError:
     import src
 
 
-from src.ensae_teaching_cs.faq import graph_ggplot_with_label
+from src.ensae_teaching_cs.faq import graph_with_label
 
 
-class TestGGplotGraph (unittest.TestCase):
+class TestGraphWithLabel(unittest.TestCase):
 
-    def test_graph_ggplots(self):
+    def test_graph_with_label(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -176,7 +176,7 @@ class TestGGplotGraph (unittest.TestCase):
         fix_tkinter_issues_virtualenv(fLOG=fLOG)
         import matplotlib.pyplot as plt
         _, ax = plt.subplots(figsize=(8, 3))
-        graph_ggplot_with_label(x, y, xl, ax=ax)
+        graph_with_label(x, y, xl, ax=ax)
         if __name__ == "__main__":
             plt.show()
         plt.close('all')

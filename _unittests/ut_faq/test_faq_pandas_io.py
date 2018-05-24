@@ -27,7 +27,7 @@ from src.ensae_teaching_cs.pandas_helper import read_csv
 
 class TestFaqPandasIo(unittest.TestCase):
 
-    def test_graph_ggplots(self):
+    def test_read_csv_etcs(self):
         fLOG(
             __file__,
             self._testMethodName,

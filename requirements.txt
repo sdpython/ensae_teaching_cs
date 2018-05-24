@@ -13,7 +13,6 @@ folium
 forestci
 gensim
 geopy
-ggplot
 jsonpickle
 jyquickhelper
 keras

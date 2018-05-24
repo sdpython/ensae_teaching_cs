@@ -35,7 +35,7 @@ Galleries
 
 * :func:`graph_cities <ensae_teaching_cs.faq.faq_matplotlib.graph_cities>` :
   représenter des points sur une **carte**
-* :func:`graph_ggplot_with_label <ensae_teaching_cs.faq.faq_matplotlib.graph_ggplot_with_label>` :
+* :func:`graph_with_label <ensae_teaching_cs.faq.faq_matplotlib.graph_with_label>` :
   n'afficher qu'un nombre réduit de labels sur l'axe des abscisses en fonction de la taille du graphe demandée
 * :mod:`matplotlib_helper_xyz <ensae_teaching_cs.helpers.matplotlib_helper_xyz>` :
   trois fonctions pour afficher des **scatter plots** (graphes XY) avec plusieurs couleurs, des **lignes de niveau**,

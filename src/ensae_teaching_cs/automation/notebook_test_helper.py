@@ -95,15 +95,12 @@ def clean_function_1a(code):
             "# ...... à remplir",
             'String.Join(",", a.Select(c=>c.ToString()).ToArray())',
             "# elle n'existe pas encore",
-            "from ggplot import *",
             "print(tab[i] + tab[i+1])",
             "if n = 1:",
             "clenche une exception",
             'y = "a" * 3 + 1',
             "i = list_exercice_1.index(k)",
             "raise KeyError('Arrêtons-nous...')",
-            # ggplot calls method show and it opens window blocking the offline
-            # execution
             ]
     rep = [("# ...", "pass # "),
            ("%timeit", "#%timeit"),

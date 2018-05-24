@@ -107,7 +107,6 @@ def scatter_xyc(points, smooth=0, div=10, ax=None, **options):
         nuage2 = generate_gauss(3, 4, 2)
         nuage = [(a, b, f(a, b)) for a, b in nuage1] + [(a, b, f(a, b)) for a, b in nuage2]
         import matplotlib.pyplot as plt
-        plt.style.use('ggplot')
         from ensae_teaching_cs.helpers.matplotlib_helper_xyz import scatter_xyc
         fig, ax = scatter_xyc(nuage, title="example with random observations")
         plt.show()

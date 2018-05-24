@@ -78,7 +78,7 @@ class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
             rcParams["backend"] = self.backend
         plt.close('all')
         fLOG(plt.style.available)
-        # ['seaborn-bright', 'ggplot', 'seaborn-paper', 'seaborn-dark-palette', 'seaborn-dark',
+        # ['seaborn-bright', 'seaborn-paper', 'seaborn-dark-palette', 'seaborn-dark',
         # 'seaborn-ticks', 'seaborn-notebook', 'seaborn-white', 'seaborn-poster', 'classic',
         # 'bmh', 'seaborn-talk', 'seaborn-pastel', 'seaborn-whitegrid', 'dark_background',
         # 'seaborn-deep', 'grayscale', 'seaborn-muted', 'fivethirtyeight', 'seaborn-darkgrid', 'seaborn-colorblind']

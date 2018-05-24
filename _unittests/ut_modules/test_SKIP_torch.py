@@ -7,7 +7,6 @@ import os
 import unittest
 import warnings
 import numpy as np
-from sklearn.datasets import load_iris
 from pyquickhelper.loghelper.flog import fLOG
 from pyquickhelper.pycode import is_travis_or_appveyor
 
@@ -40,6 +39,9 @@ class TestSkipExampleTorch(unittest.TestCase):
 
         with warnings.catch_warnings():
             warnings.simplefilter("ignore", ImportWarning)
+            # Same line at the beginning of the file produces:
+            # ImportError: numpy.core.multiarray failed to import
+            from sklearn.datasets import load_iris
             import torch
             import torch.nn as nn
             import torch.nn.functional as F

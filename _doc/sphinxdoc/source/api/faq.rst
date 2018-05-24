@@ -45,7 +45,7 @@ Graphes
 
 .. autosignature:: ensae_teaching_cs.faq.faq_matplotlib.close_all
 
-.. autosignature:: ensae_teaching_cs.faq.faq_matplotlib.graph_ggplot_with_label
+.. autosignature:: ensae_teaching_cs.faq.faq_matplotlib.graph_with_label
 
 .. autosignature:: ensae_teaching_cs.faq.faq_matplotlib.graph_style
 

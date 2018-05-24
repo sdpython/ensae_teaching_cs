@@ -320,25 +320,6 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                            root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
             projects.append(project)
 
-            # pres
-
-            for sufpress in ["", "_2A", "_3A"]:
-                root = os.path.abspath(location % (
-                    module, module, keepsuf, "html"))
-                if not os.path.exists(root):
-                    if exc:
-                        raise FileNotFoundError(root)
-                    else:
-                        fLOG("[publish_teachings_to_web] skip", root)
-                        continue
-                project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
-                               local=root.replace(
-                                   "\\html", "\\html_pres" + sufpress),
-                               root_local=root.replace(
-                                   "\\html", "\\html_pres" + sufpress),
-                               root_web=(rootw % (module, lay[1])).replace("/helpsphinx", "/pressphinx" + sufpress).replace("_no_clean", ""))
-                projects.append(project)
-
         elif module == "python3_module_template":
             lay = [_ for _ in layout if _[0] == "html"][0]
             if not os.path.exists(root):

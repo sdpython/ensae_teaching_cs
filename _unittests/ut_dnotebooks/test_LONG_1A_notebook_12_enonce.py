@@ -38,11 +38,8 @@ class TestNotebookRunner1a_enonce_12 (unittest.TestCase):
 
         skip = ['df["difference"] = ...',
                 "df.plot (...)",
-                "from ggplot import *",
                 "folium.initialize_notebook()",
                 "map_osm.display()",
-                # ggplot calls method show and it opens window blocking the
-                # offline execution
                 ]
         for s in skip:
             if s in code:
