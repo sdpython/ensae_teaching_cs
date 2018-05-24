@@ -147,7 +147,7 @@ class TestCodeStyle(ExtTestCase):
                 "Unused variable 'clr'",
                 "Unable to import 'clr'",
                 "Module 'clr' has no 'AddReference' member",
-                "test_SKIP_torch.py:65: E1123",
+                "test_SKIP_torch.py:67: E1123",
                 "test_SKIP_torch.py:102: E1101",
                 ]
 
