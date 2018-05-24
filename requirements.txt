@@ -22,6 +22,7 @@ lifelines
 lightgbm
 lightning-python
 manydataapi
+mlinsights
 mlstatpy
 mpld3
 mutagen

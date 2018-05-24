@@ -9,7 +9,7 @@ virtualenv:
   - path: {{ospathjoin(root_path, pickname("%NAME_JENKINS%", project_name + "_%VERSION%_%DIST%_%NAME%"), "_venv")}}
   
 install:
-  - pip install --no-cache-dir --no-deps --index http://localhost:8067/simple/ pyquickhelper tkinterquickhelper pyensae pymmails pymyinstall pyrsslocal mlstatpy
+  - pip install --no-cache-dir --no-deps --index http://localhost:8067/simple/ pyquickhelper tkinterquickhelper pyensae pymmails pymyinstall pyrsslocal mlstatpy mlinsights
   - pip install -r requirements.txt
   - if exist _venv\lib\site-packages\enum\__init__.py pip uninstall -y enum34
   - pip freeze
