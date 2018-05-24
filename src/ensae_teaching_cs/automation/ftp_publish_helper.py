@@ -283,7 +283,6 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
             for suf in suffix:
                 root = os.path.abspath(location %
                                        (module, module, suf, lay[0]))
-                keepsuf = suf
                 if os.path.exists(root):
                     break
             if not os.path.exists(root):
