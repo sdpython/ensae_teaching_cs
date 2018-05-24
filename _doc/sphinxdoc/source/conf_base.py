@@ -3,6 +3,15 @@ import sys
 import os
 from pyquickhelper.helpgen.default_conf import set_sphinx_variables, get_default_stylesheet
 
+source_path = os.path.normpath(os.path.join(
+    os.path.abspath(os.path.split(__file__)[0])))
+
+try:
+    from conf_base import *
+except ImportError:
+    sys.path.append(source_path)
+    from conf_base import *
+
 
 set_sphinx_variables(__file__, "Python dans tous ses états", "Xavier Dupré",
                      2018, "sphinx_rtd_theme", None,
@@ -113,7 +122,7 @@ epkg_dictionary["matrice de confusion"] = "https://fr.wikipedia.org/wiki/Matrice
 epkg_dictionary["miniconda"] = 'https://conda.io/miniconda.html'
 epkg_dictionary["mlinsights"] = 'http://www.xavierdupre.fr/app/mlinsights/helpsphinx/index.html'
 epkg_dictionary["mlprodict"] = 'http://www.xavierdupre.fr/app/mlprodict/helpsphinx/index.html'
-epkg_dictionary['ML.net' = 'https://github.com/dotnet/machinelearning'
+epkg_dictionary['ML.net'] = 'https://github.com/dotnet/machinelearning'
 epkg_dictionary["MPI"] = 'https://en.wikipedia.org/wiki/Message_Passing_Interface'
 epkg_dictionary["notebook"] = 'http://jupyter.org/'
 epkg_dictionary["Notepad++"] = "https://notepad-plus-plus.org/"
