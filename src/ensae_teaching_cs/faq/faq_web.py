@@ -7,6 +7,7 @@
 import sys
 import os
 import datetime
+import warnings
 from pyquickhelper.loghelper import noLOG
 from pymyinstall.installcustom import where_in_path, install_chromedriver, install_operadriver
 
@@ -39,13 +40,13 @@ def webshot(img, url, navigator=default_driver, add_date=False,
     See function @see fn download_chromedriver.
     """
     if navigator is None:
-        import selenium
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", ImportWarning)
+            import selenium
         module = selenium.__name__
-    else:
-        module = None
 
     res = []
-    fLOG("module=", module)
+    fLOG("[webshot] module=", module)
     if module == "selenium":
         browser = _get_selenium_browser(navigator, fLOG=fLOG)
 
@@ -73,7 +74,9 @@ def webshot(img, url, navigator=default_driver, add_date=False,
 
     elif module == "splinter":
 
-        from splinter import Browser
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", ImportWarning)
+            from splinter import Browser
 
         with Browser(navigator) as browser:
             if size is not None:
@@ -118,10 +121,12 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
         `Error message: 'chromedriver' executable needs to be available in the path
         <http://stackoverflow.com/questions/29858752/error-message-chromedriver-executable-needs-to-be-available-in-the-path>`_.
     """
-    from selenium import webdriver
-    from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", ImportWarning)
+        from selenium import webdriver
+        from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
-    fLOG("navigator=", navigator)
+    fLOG("[webshot] navigator=", navigator)
     if navigator == "firefox":
         firefox_capabilities = DesiredCapabilities.FIREFOX.copy()
         firefox_capabilities['marionette'] = True
@@ -146,7 +151,9 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
         else:
             # see
             # https://sites.google.com/a/chromium.org/chromedriver/getting-started
-            import selenium.webdriver.chrome.service as service
+            with warnings.catch_warnings():
+                warnings.simplefilter("ignore", ImportWarning)
+                import selenium.webdriver.chrome.service as service
             fLOG("create service")
             service = service.Service(chromed)
             fLOG("start service")
@@ -194,12 +201,12 @@ def webhtml(url, navigator=default_driver, module="selenium", fLOG=noLOG):
     and add one to the code if needed.
     """
     if navigator is None:
-        import selenium
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", ImportWarning)
+            import selenium
         module = selenium.__name__
-    else:
-        module = None
 
-    fLOG("module=", module)
+    fLOG("[webshot] module=", module)
     res = []
     if module == "selenium":
         browser = _get_selenium_browser(navigator, fLOG=fLOG)
@@ -215,7 +222,9 @@ def webhtml(url, navigator=default_driver, module="selenium", fLOG=noLOG):
 
     elif module == "splinter":
 
-        from splinter import Browser
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", ImportWarning)
+            from splinter import Browser
 
         with Browser(navigator) as browser:
             if not isinstance(url, list):

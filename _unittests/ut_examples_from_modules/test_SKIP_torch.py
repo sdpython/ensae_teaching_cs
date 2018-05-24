@@ -5,6 +5,9 @@
 import sys
 import os
 import unittest
+import warnings
+import numpy as np
+from sklearn.datasets import load_iris
 from pyquickhelper.loghelper.flog import fLOG
 from pyquickhelper.pycode import is_travis_or_appveyor
 
@@ -35,13 +38,13 @@ class TestSkipExampleTorch(unittest.TestCase):
             # it requires latex
             return
 
-        import numpy as np
-        import torch
-        import torch.nn as nn
-        import torch.nn.functional as F
-        import torch.optim as optim
-        from torch.autograd import Variable
-        from sklearn.datasets import load_iris
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", ImportWarning)
+            import torch
+            import torch.nn as nn
+            import torch.nn.functional as F
+            import torch.optim as optim
+            from torch.autograd import Variable
 
         X, Y = load_iris(return_X_y=True)
         X = X.astype("float32")
@@ -59,7 +62,7 @@ class TestSkipExampleTorch(unittest.TestCase):
 
             def forward(self, x):
                 x = self.fc1(x)
-                return F.log_softmax(x)
+                return F.log_softmax(x, dim=1)
 
         model = Net()
         optimizer = optim.Adam(model.parameters())
@@ -96,9 +99,10 @@ class TestSkipExampleTorch(unittest.TestCase):
             loss_test = loss_fn(Ypred_test, Ytest_)
             # get the index of the max log-probability
             pred = Ypred_test.data.max(1, keepdim=True)[1]
-            accuracy = pred.eq(Ytest_.data.view_as(pred)
-                               ).cpu().sum() / Ytest.size
-            perfs.append([t, loss.data[0], loss_test.data[0], accuracy])
+            pred2 = Ytest_.data.view_as(pred)
+            eqp = pred.eq(pred2)
+            accuracy = eqp.cpu().sum() / Ytest.size
+            perfs.append([t, loss.item(), loss_test.item(), accuracy])
 
 
 if __name__ == "__main__":
