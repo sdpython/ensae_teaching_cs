@@ -100,7 +100,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/csharpyml.svg?branch=master
             :target: https://travis-ci.org/sdpython/csharpyml
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/ldrgt6sxeyfwtoo2?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/0achvn5m9ga8bx2o?svg=true
             :target: https://ci.appveyor.com/project/sdpython/csharpyml
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/csharpyml/tree/master.svg?style=svg

@@ -41,7 +41,7 @@ class TestNotebook1236Coverage201711torch(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        self.a_test_notebook_runner("IRIS", "td2a_deep")
+        self.a_test_notebook_runner("Logistic_IRIS", "td2a_deep")
 
     def test_notebook_torch_iris(self):
         fLOG(
@@ -49,7 +49,7 @@ class TestNotebook1236Coverage201711torch(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        self.a_test_notebook_runner("Iris", "td2a_deep")
+        self.a_test_notebook_runner("Perceptron_Iris", "td2a_deep")
 
     def test_notebook_torch_mnist(self):
         fLOG(
