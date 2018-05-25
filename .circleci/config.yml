@@ -53,7 +53,7 @@ jobs:
           name: Install pygame
           command: |
                     sudo apt-get install libasound2-dev
-                    sudo apt-get install libX11-dev
+                    sudo apt-get install libx11-dev
                     sudo apt-get -y install xvfb pulseaudio
                     sudo apt-get install -y python-pygame
 
