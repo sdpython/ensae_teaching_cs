@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@brief      test log(time=17s)
+@brief      test log(time=28s)
 """
 
 import sys
@@ -30,7 +30,7 @@ class TestNotebookRunner1a_soft(unittest.TestCase):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper", "mlstatpy"],
                                         __file__, hide=True)
 
-    def test_notebook_runner_soft_cpp(self):
+    def test_notebook_runner_soft(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -41,7 +41,7 @@ class TestNotebookRunner1a_soft(unittest.TestCase):
         for n in keepnote:
             fLOG(n)
         execute_notebooks(temp, keepnote,
-                          lambda i, n: "csharp" not in n and "edit_correction" not in n,
+                          lambda i, n: "csharp" not in n and "edit_correction" not in n and "sql" not in n,
                           fLOG=fLOG,
                           clean_function=clean_function_1a,
                           dump=src.ensae_teaching_cs)
