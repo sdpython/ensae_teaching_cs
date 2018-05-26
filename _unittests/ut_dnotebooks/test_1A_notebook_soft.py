@@ -38,6 +38,8 @@ class TestNotebookRunner1a_soft(unittest.TestCase):
         temp = get_temp_folder(__file__, "temp_notebook1a_soft")
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         keepnote = ls_notebooks("td1a_soft")
+        for n in keepnote:
+            fLOG(n)
         execute_notebooks(temp, keepnote,
                           lambda i, n: "csharp" not in n and "edit_correction" not in n,
                           fLOG=fLOG,
