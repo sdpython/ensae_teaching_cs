@@ -26,7 +26,7 @@ except ImportError:
     import src.ensae_teaching_cs as thismodule
 
 
-class TestNotebook1236Coverage201710b(unittest.TestCase):
+class TestLONGNotebook1236Coverage201710b(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
