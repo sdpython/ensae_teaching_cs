@@ -64,7 +64,7 @@ class TestSkipExampleTorch(unittest.TestCase):
 
             def forward(self, x):
                 x = self.fc1(x)
-                return F.log_softmax(x, dim=1)
+                return F.log_softmax(x, dim=-1)
 
         model = Net()
         optimizer = optim.Adam(model.parameters())
@@ -103,7 +103,7 @@ class TestSkipExampleTorch(unittest.TestCase):
             pred = Ypred_test.data.max(1, keepdim=True)[1]
             pred2 = Ytest_.data.view_as(pred)
             eqp = pred.eq(pred2)
-            accuracy = eqp.cpu().sum() / Ytest.size
+            accuracy = eqp.cpu().sum().item() / Ytest.size
             perfs.append([t, loss.item(), loss_test.item(), accuracy])
 
 
