@@ -9,12 +9,11 @@ the second one about the customized message for each of them.
 """
 
 #########################################
-# logging
-from pyquickhelper.loghelper import fLOG  # publish_lectures
+# logging et import
+import os
+import warnings
+from pyquickhelper.loghelper import fLOG
 fLOG(OutputPrint=True)
-
-#########################################
-# import des fonctions dont on a besoin
 from ensae_teaching_cs.automation_students import enumerate_feedback, enumerate_send_email
 import pymmails
 
@@ -22,22 +21,20 @@ import pymmails
 # On définit le contenu du mail.
 
 cc = []
-sujet = "Commentaires Python pour un data scientist / économiste"
-col_name = "Etudiant"
+sujet = "Question de code - ENSAE 1A - projet de programmation"
+col_name = None  # "mail"
 col_mail = "mail"
-columns = ["Sujet", "Commentaires"]
+columns = ["sujet", "Question de code"]
 col_group = "groupe"
 delay_sending = False
-check = None
-
+test_first_mail = False  # regarder le premier mail avant de les envoyer
 skip = 0   # to start again after a failure
-
 only = None
-skiprows = 0
+skiprows = 1
 
 folder = os.path.normpath(os.path.abspath(os.path.join(
-    *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2017-2018", "2A_projet"]))))
-student = os.path.join(folder, "Python2A-2018-01.xlsx")
+    *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2017-2018", "1A_projet"]))))
+student = os.path.join(folder, "ENSAE 1A - projet python.xlsx")
 if not os.path.exists(student):
     raise FileNotFoundError(student)
 
@@ -50,12 +47,11 @@ Bonjour,
     """
 Bonjour,
 
-Je m'excuse d'avoir tant tardé à vous transmettre ces commentaires
-pris par ceux qui vous ont lus vos travaux. Nous avons noté
-le rapport sur 16 points et la vidéo sur 4. Je vous prie de m'excuser
-pour les fautes d'orthographes qui sont sans doute encore présentes.
-Vous êtes plus de 120 à avoir choisi ce cours pour plus de 75 projets
-lus par quatre personnes.
+Voici les questions de code. Celles-ci sont
+extraites des programmes que vous m'avez transmis.
+Les noms de fonctions que j'utilise y font référence
+quand je ne recopie pas le code. La réponse est souvent
+liée à la performance.
 
 """.replace("\n", " ")
 
@@ -105,7 +101,7 @@ fLOG("connect", user)
 mailbox = pymmails.sender.create_smtp_server("gmail", user, pwd)
 fLOG("send")
 # remplacer mailbox par None pour voir le premier mail sans l'envoyer
-mails = enumerate_send_email(mailbox if not check else None,  # put None here to see the first mail
+mails = enumerate_send_email(mailbox if not test_first_mail else None,
                              sujet, user + "@gmail.com",
                              df, exc=True, fLOG=fLOG, delay_sending=delay_sending,
                              begin=begin, end=end, skip=skip,

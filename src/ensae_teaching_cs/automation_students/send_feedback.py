@@ -129,7 +129,9 @@ def enumerate_feedback(df1, col_group="Groupe",
     begin = begin.replace("\n", "<br />\n")
     end = end.replace("\n", "<br />\n")
 
-    aggs = {col_mail: sums, col_name: sums2}
+    aggs = {col_mail: sums}
+    if col_name is not None:
+        aggs[col_name] = sums2
     for c in cols:
         if isinstance(c, tuple):
             aggs[c[0]] = lambda s, sep=c[1]: sums3(s, sep)
@@ -198,7 +200,7 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=(1000, 1500),
                          **params):
     """
     Sends feedback to students.
-    Set mailbox to None to see what the first
+    Sets mailbox to None to see what the first
     mail looks like before going through the whole list.
 
     @param      mailbox         mailbox, see `create_smtp_server
@@ -216,7 +218,7 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=(1000, 1500),
     @param      params          see @see fn enumerate_feedback
     @return                     enumerate mails
 
-    Code example::
+    Short example (see algo :ref:`sphx_glr_automation_send_mails.py`)::
 
         import pandas
         import sys
@@ -281,13 +283,13 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=(1000, 1500),
         res = send_email(mailbox, fr=fr, to=mails.split(";"), cc=cc, delay_sending=delay_sending,
                          body_html=html, body_text=text, subject=subject)
         if delay_sending:
-            def delay_send():
+            def delay_send(params, loop, mails, res):
                 if "fLOG" in params:
                     params["fLOG"](loop, "send mail to ", mails)
                 res()
                 rnd = random.randint(*delay)
                 time.sleep(rnd / 1000.0)
-            yield delay_send
+            yield lambda params=params, loop=loop, mails=mails, res=res: delay_send(params, loop, mails, res)
         else:
             yield res
             rnd = random.randint(*delay)

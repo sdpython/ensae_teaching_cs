@@ -100,6 +100,9 @@ class TestCodeStyle(ExtTestCase):
                 "Unused import clr",
                 "Module 'clr' has no 'AddReference' member",
                 "Unable to import 'clr'",
+                "send_feedback.py:292: E0602",
+                "send_feedback.py:137: W0631",
+                "send_feedback.py:137: W0640",
                 ]
 
         if is_travis_or_appveyor() == "appveyor":
