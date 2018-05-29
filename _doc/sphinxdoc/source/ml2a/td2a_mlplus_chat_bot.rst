@@ -15,3 +15,4 @@ Chat Bot
 *Modules*
 
 * `Jack the Reader <https://github.com/uclmr/jack>`_
+* `snips-nlu <https://github.com/snipsco/snips-nlu>`_
