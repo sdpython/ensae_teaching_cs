@@ -1,0 +1,45 @@
+
+.. blogpost::
+    :title: FATE: Fairness, Accountability, Transparency, and Ethics
+    :keywords: FATE, éthique, fairness
+    :date: 2018-05-25
+    :categories: FATE
+
+    Le :ref:`l-ml2a-mlethical` est un sujet qui
+    revient sur le devant de la scène en témoigne cet article
+    `Microsoft is developing a tool to help engineers catch bias in algorithms <https://venturebeat.com/2018/05/25/microsoft-is-developing-a-tool-to-help-engineers-catch-bias-in-algorithms/>`_
+    ou celui-ci
+    `Fairness Flow: Facebook builds new system for AI neutrality <https://www.hindustantimes.com/tech/fairness-flow-facebook-builds-new-system-for-ai-neutrality/story-BDkWKOrDDnaywuDVJokB9N.html>`_.
+    Voici quelques sites à suivre pour voir ce qu'il se
+    passe dans le domaine :
+
+    * `FATML <https://www.fatml.org/>`_ ou Fairness, Accountability, and Transparency in Machine Learning,
+      ce site est une excellente source d'article scientifiques sur le sujet.
+    * `Data&Society <https://datasociety.net/>`_, publications d'articles ou rapports comme celui-ci
+      `Fairness in Precision Medicine <https://datasociety.net/output/fairness-in-precision-medicine/>`_
+      qui traite des biais qui peuvent survenir lorsqu'on adapte les décisions
+      médicales en fonction des données récoltées pour une personne
+      en particulier (*precision medecine*).
+    * `FATE <https://www.microsoft.com/en-us/research/group/fate/>`_, groupe de recherche sur
+      Fairness, Accountability, Transparency, and Ethics in AI chez :epkg:`Microsoft`
+
+    Je vous recommande toujours cette excellente conférence sur le sujet
+    qui montre qu'il est difficile d'anticiper tous les biais.
+
+    * `How AI Designers will Dictate Our Civic Future <https://vimeo.com/238221677>`_ de
+      `Latanya Sweeney <https://dataprivacylab.org/people/sweeney/>`_,
+      je recommande vivement cette conférence qui montre comment des biais
+      peuvent apparaître dans un système intégrant le machine learning,
+      il n'existe pas de façon d'éviter les biais si ce n'est en gardant
+      constamment à l'esprit qu'ils apparaîtront quoiqu'il arrive
+      si un système est prévu pour s'adapter au fur et à mesure.
+      Le système apprend les biais et limite de plus en plus
+      tout ce qui pourrait l'en faire sortir.
+
+    Enfin quelques articles :
+
+    * `On Fairness, Diversity and Randomness in Algorithmic Decision Making <https://arxiv.org/pdf/1706.10208.pdf>`_
+    * `Ten simple rules for responsible big data research <https://www.microsoft.com/en-us/research/publication/ten-simple-rules-for-responsible-big-data-research/>`_
+    * `Concrete Problems in AI Safety <https://arxiv.org/abs/1606.06565>`_
+    * `Predict Responsibly: Increasing Fairness by Learning to Defer <https://arxiv.org/pdf/1711.06664.pdf>`_
+    * `Ethics by Design: necessity or curse? <http://www.aies-conference.com/wp-content/papers/main/AIES_2018_paper_68.pdf>`_

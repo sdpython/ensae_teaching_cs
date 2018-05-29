@@ -92,6 +92,11 @@ propose une réponse à ces deux problèmes.
 * `Justice actuarielle, algorithmes... et données <http://freakonometrics.hypotheses.org/51783>`_
 * `Surveiller et prévenir, l'ère de la pénalité prédictive <https://bourgoinblog.wordpress.com/2017/11/10/surveiller-et-prevenir-lere-de-la-penalite-predictive/>`_
 * `Nozha Boujemaa : "Les algorithmes doivent apporter une aide à la décision mais pas en être les prescripteurs" <https://www.acteurspublics.com/2017/12/08/les-algorithmes-doivent-apporter-une-aide-a-la-decision-mais-pas-en-etre-les-prescripteurs>`_
+* `On Fairness, Diversity and Randomness in Algorithmic Decision Making <https://arxiv.org/pdf/1706.10208.pdf>`_
+* `Ten simple rules for responsible big data research <https://www.microsoft.com/en-us/research/publication/ten-simple-rules-for-responsible-big-data-research/>`_
+* `Concrete Problems in AI Safety <https://arxiv.org/abs/1606.06565>`_
+* `Predict Responsibly: Increasing Fairness by Learning to Defer <https://arxiv.org/pdf/1711.06664.pdf>`_
+* `Ethics by Design: necessity or curse? <http://www.aies-conference.com/wp-content/papers/main/AIES_2018_paper_68.pdf>`_
 
 *Conférences*
 
@@ -111,6 +116,19 @@ propose une réponse à ces deux problèmes.
 
 * `Data Transparency Lab <http://datatransparencylab.org/>`_
 * `OPAL <http://www.data4sdgs.org/dc-opal/>`_
+* `FATML <https://www.fatml.org/>`_ ou Fairness, Accountability, and Transparency in Machine Learning,
+  ce site est une excellente source d'article scientifiques sur le sujet.
+* `FATE <https://www.microsoft.com/en-us/research/group/fate/>`_, groupe de recherche sur
+  Fairness, Accountability, Transparency, and Ethics in AI chez :epkg:`Microsoft`
+* `Data&Society <https://datasociety.net/>`_, publications d'articles ou rapports comme celui-ci
+  `Fairness in Precision Medicine <https://datasociety.net/output/fairness-in-precision-medicine/>`_
+  qui traite des biais qui peuvent survenir lorsqu'on adapte les décisions
+  médicales en fonction des données récoltées pour une personne
+  en particulier (*precision medecine*).
+
+*Articles*
+
+* `Microsoft is developing a tool to help engineers catch bias in algorithms <https://venturebeat.com/2018/05/25/microsoft-is-developing-a-tool-to-help-engineers-catch-bias-in-algorithms/>`_ (2018/05/25)
 
 *Modules*
 
