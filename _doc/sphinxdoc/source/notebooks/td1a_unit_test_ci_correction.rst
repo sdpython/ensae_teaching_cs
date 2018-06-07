@@ -300,7 +300,7 @@ Il faut lire la documentation du site pour apprendre la syntaxe
 `ReST <https://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html>`_.
 Dans l'immédiat, on commence avec une documentation quasi vide
 dans le répertoire ``doc`` et
-``sphinx-quickstart <http://www.sphinx-doc.org/en/stable/tutorial.html>`_.
+`sphinx-quickstart <http://www.sphinx-doc.org/en/stable/tutorial.html>`_.
 
 ::
 
@@ -480,7 +480,7 @@ approuvent.
 *historique*
 
 Il est d'usage de garder la trace des nouvelles fonctionnalités ajoutées
-ou bugs fixés à chaque modification. Il est aisé alors>`_.
+ou bugs fixés à chaque modification. Il est aisé alors
 de communiquer sur les changements intervenus d'une version à la suivante.
 C'est grâce à un historique comme `celui scikit-learn <http://scikit-learn.org/stable/whats_new.html>`_
 que vous pouvez décider si cela résoud le problème qui vous occupe actuellement.
