@@ -687,6 +687,31 @@ Tableau de bord et statut des dépendances
       -
       - .. image:: https://api.codacy.com/project/badge/Grade/8837c17514064623a54e36d75ceb9d17
             :target: https://www.codacy.com/app/sdpython/td1a_unit_test_ci?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sdpython/td1a_unit_test_ci&amp;utm_campaign=Badge_Grade
+    * - Les derniers
+      - sont des projets
+      - exploratoires.
+      -
+      -
+      -
+      -
+      -
+      -
+      -
+    * - `machinelearningext <https://github.com/sdpython/machinelearningext>`_
+      - .. image:: https://travis-ci.org/sdpython/machinelearningext.svg?branch=master
+            :target: https://travis-ci.org/sdpython/machinelearningext
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/t2g9olcgqgdvqq3l?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/python3-module-template
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/machinelearningext/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/machinelearningext/tree/master
+      -
+      -
+      -
+      -
+      -
+      -
 
 Automatisation
 ++++++++++++++

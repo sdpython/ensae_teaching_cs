@@ -118,15 +118,15 @@ Créer un compte GitHub
 A suivre par image. Tout d'abord sur le site de
 :epkg:`GitHub`, on crée un nouveau *repository* :
 
-.. image:: images/cigh1.png
+.. image:: screens/cigh1.png
 
-.. image:: images/cigh2.png
+.. image:: screens/cigh2.png
 
 Puis depuis l'application
 `Github Desktop <https://desktop.github.com/>`_ où on clone
 le *repository*.
 
-.. image:: images/cighd1.png
+.. image:: screens/cighd1.png
 
 Cela correspond au *repository* :
 `td1a_unit_test_ci <https://github.com/sdpython/td1a_unit_test_ci>`_.
@@ -161,7 +161,7 @@ La page `commit <https://github.com/sdpython/td1a_unit_test_ci/commits/master>`_
 trace des modifications. Pour contribuer à ce projet, il faut d'abord le rapatrier sur son
 propre compte :epkg:`GitHub` en le `forkant <https://fr.wikipedia.org/wiki/Fork_(d%C3%A9veloppement_logiciel)>`_.
 
-.. image:: images/cifork.png
+.. image:: screens/cifork.png
 
 Intégration continue
 --------------------
@@ -173,9 +173,9 @@ Il faut d'abord créer un compte.
 On ajoute le projet à la liste de ceux qu'il faut exécuter
 de façon régulière.
 
-.. image:: images/cicircle.png
+.. image:: screens/cicircle.png
 
-.. image:: images/cicircle1.png
+.. image:: screens/cicircle1.png
 
 On suit les instructions et on crée un fichier de configuration ``.circleci/config.yml``
 qui précise la commande à lancer pour exécuter les tests unitaires.
@@ -229,7 +229,7 @@ Le résultat est disponible à
 `circleci/td1a_unit_test_ci <https://circleci.com/gh/sdpython/td1a_unit_test_ci>`_.
 Le site génère une image pour indiquer le statut de la dernière exécution.
 
-.. image:: images/cicircle3.png
+.. image:: screens/cicircle3.png
 
 Et on l'insère dans le fichier `README.rst`:
 
@@ -247,7 +247,7 @@ Ce changement crée le rapport de couverture dans un endroit spécifique appell�
 et *circleci* conserve tout ce qui copié dans ce répertoire. On peut alors
 les consulter.
 
-.. image:: images/cicircle4.png
+.. image:: screens/cicircle4.png
 
 Ecrire un setup
 ---------------
