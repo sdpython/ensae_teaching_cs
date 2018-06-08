@@ -644,10 +644,10 @@ Tableau de bord et statut des dépendances
             :target: https://codecov.io/github/sdpython/tkinterquickhelper?branch=master
       -
       -
-    * - Les suivants
-      - sont des exemples
-      - pour créer
-      - de nouveaux
+    * - Les suivants sont des
+      - exemples
+      - pour créer de
+      - nouveaux
       - modules.
       -
       -
@@ -687,8 +687,8 @@ Tableau de bord et statut des dépendances
       -
       - .. image:: https://api.codacy.com/project/badge/Grade/8837c17514064623a54e36d75ceb9d17
             :target: https://www.codacy.com/app/sdpython/td1a_unit_test_ci?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sdpython/td1a_unit_test_ci&amp;utm_campaign=Badge_Grade
-    * - Les derniers
-      - sont des projets
+    * - Les derniers sont des
+      - projets
       - exploratoires.
       -
       -
@@ -819,6 +819,21 @@ Contenu
       - Cours de programmation en Python. C'est la version internet et actualisée
         du livre paru en 2009 et disponible au format
         `PDF <http://www.xavierdupre.fr/site2013/index_documents.html>`_.
+
+Exploration
++++++++++++
+
+.. list-table::
+    :widths: 5 15
+    :header-rows: 1
+
+    * - module
+      - description
+    * - `machinelearningext <https://github.com/sdpython/machinelearningext>`_
+      - *Microsoft* a mis en ligne sa librairie de machine learning écrite
+        principalement en C#,
+        `ML.net <https://github.com/dotnet/machinelearning>`_,
+        c'est un projet qui l'étend.
 
 Git Clone
 +++++++++
