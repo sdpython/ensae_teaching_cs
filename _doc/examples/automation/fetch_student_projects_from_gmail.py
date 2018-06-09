@@ -43,11 +43,11 @@ with warnings.catch_warnings():
 # de la boîte de message.
 
 server = "imap.gmail.com"
-school = "ENSAE"
-date = "15-May-2018"
+school = "ASSAS"
+date = "1-May-2018"
 pattern = "Python_{0}_Projet_2018"
 group_def = "groupes.xlsx"
-col_subject, col_group, col_mail = "sujet", "groupe", "mail"
+col_subject, col_group, col_mail, col_student = "sujet", "groupe", "mail", "Nom"
 
 
 if school == 'ENSAE':
@@ -185,7 +185,8 @@ if do_mail or len(groups) < 10:
     proj = ProjectsRepository.create_folders_from_dataframe(df, folder, col_subject=col_subject,
                                                             col_group=col_group, col_mail=col_mail,
                                                             email_function=emails, skip_if_nomail=False,
-                                                            must_have_email=True, fLOG=fLOG)
+                                                            must_have_email=True, fLOG=fLOG,
+                                                            col_student=col_student)
 elif len(groups) < 10:
     fLOG("[fetch_student_projects_from_gmail] skip fetching mails: {0} groups already".format(
         len(groups)))
