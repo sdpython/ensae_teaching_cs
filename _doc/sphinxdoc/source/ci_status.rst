@@ -697,12 +697,22 @@ Tableau de bord et statut des dépendances
       -
       -
       -
+    * - `machinelearning <https://github.com/sdpython/machinelearning>`_
+      -
+      -
+      -
+      -
+      -
+      -
+      -
+      -
+      -
     * - `machinelearningext <https://github.com/sdpython/machinelearningext>`_
       - .. image:: https://travis-ci.org/sdpython/machinelearningext.svg?branch=master
             :target: https://travis-ci.org/sdpython/machinelearningext
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/t2g9olcgqgdvqq3l?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/python3-module-template
+            :target: https://ci.appveyor.com/project/sdpython/machinelearningext
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/machinelearningext/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/machinelearningext/tree/master
@@ -829,6 +839,11 @@ Exploration
 
     * - module
       - description
+    * - `machinelearning <https://github.com/sdpython/machinelearning>`_
+      - *Microsoft* a mis en ligne sa librairie de machine learning écrite
+        principalement en C#,
+        `ML.net <https://github.com/dotnet/machinelearning>`_,
+        c'est just un fork.
     * - `machinelearningext <https://github.com/sdpython/machinelearningext>`_
       - *Microsoft* a mis en ligne sa librairie de machine learning écrite
         principalement en C#,
@@ -846,3 +861,35 @@ Git Clone
     add = ['myblog', 'thesis_handwriting', '_automation']
     modules = get_teaching_modules() + add
     print('\n'.join(pattern.format(_) for _ in sorted(modules)))
+
+Pypi download
++++++++++++++
+
+Le numbre de téléchargements peut être
+obtenu en exécutant la requête suivante sur
+`Google BigQuery <https://bigquery.cloud.google.com/results/>`_.
+
+.. runpython::
+
+    query = """
+    #standardSQL
+    SELECT
+      file.project as Project,
+      COUNT(*) AS num_downloads,
+      SUBSTR(_TABLE_SUFFIX, 1, 6) AS `month`
+    FROM `the-psf.pypi.downloads*`
+    WHERE
+      __CONDITION__
+      -- Only query the last 6 months of history
+      AND _TABLE_SUFFIX
+        BETWEEN FORMAT_DATE(
+          '%Y%m01', DATE_SUB(CURRENT_DATE(), INTERVAL 12 MONTH))
+        AND FORMAT_DATE('%Y%m%d', CURRENT_DATE())
+    GROUP BY `month`, `Project`
+    """
+
+    from ensae_teaching_cs.automation import get_teaching_modules
+    modules = get_teaching_modules()
+    conds = ["file.project = '{0}'".format(m) for m in modules]
+    cond = " OR ".join(conds)
+    print(query.replace('__CONDITION__', cond))

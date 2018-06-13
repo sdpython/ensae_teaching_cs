@@ -26,6 +26,7 @@ ou *apprentissage par renforcement*
 * `Strategic Attentive Writer for Learning Macro-Actions <https://arxiv.org/pdf/1606.04695.pdf>`_
 * `Temporal difference learning <https://en.wikipedia.org/wiki/Temporal_difference_learning>`_
 * `Renewal Monte Carlo: Renewal theory based reinforcement learning <https://arxiv.org/abs/1804.01116>`_
+* `AlphaGo Zero - How and Why it Works <http://tim.hibal.org/blog/alpha-zero-how-and-why-it-works/>`_
 
 *Lectures sur des applications*
 

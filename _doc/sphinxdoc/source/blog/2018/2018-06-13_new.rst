@@ -1,0 +1,10 @@
+
+.. blogpost::
+    :title: Ajout de références
+    :keywords: références
+    :date: 2018-06-13
+    :categories: biblio
+
+    Dans :ref:`l-td2a-reinforcement-learning` :
+
+    * `AlphaGo Zero - How and Why it Works <http://tim.hibal.org/blog/alpha-zero-how-and-why-it-works/>`_
