@@ -722,6 +722,21 @@ Tableau de bord et statut des dépendances
       -
       -
       -
+    * - `xgboost <https://github.com/sdpython/xgboost>`_
+      - .. image:: https://travis-ci.org/sdpython/xgboost.svg?branch=master
+            :target: https://travis-ci.org/sdpython/xgboost
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/f5d33lt1t3xiiu5i?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/xgboost
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/xgboost/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/xgboost/tree/master
+      -
+      -
+      -
+      -
+      -
+      -
 
 Automatisation
 ++++++++++++++
@@ -849,6 +864,8 @@ Exploration
         principalement en C#,
         `ML.net <https://github.com/dotnet/machinelearning>`_,
         c'est un projet qui l'étend.
+    * - `xgboost <https://github.com/sdpython/xgboost>`_
+      - Version modifiée de :epkg:`xgboost`.
 
 Git Clone
 +++++++++
