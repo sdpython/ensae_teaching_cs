@@ -139,6 +139,13 @@ Catalogue d'algorithmes
     * `distance de Robinson–Foulds <https://en.wikipedia.org/wiki/Robinson%E2%80%93Foulds_metric>`_, **algo**, distance entre deux arbres
     * robustesse d'un réseau
       `Quantifying the robustness of metro networks <https://arxiv.org/abs/1505.06664>`_
+    * détection de motif fréquents
+      `fp-growth <https://en.wikibooks.org/wiki/Data_Mining_Algorithms_In_R/Frequent_Pattern_Mining/The_FP-Growth_Algorithm>`_,
+      voir aussi
+      `fp-growth 1/3 <http://blog.khaledtannir.net/2012/07/lalgorithme-fp-growth-les-bases-13/#.WyS1xqczbSE>`_,
+      `fp-growth 2/3 <http://blog.khaledtannir.net/2012/07/lalgorithme-fp-growth-construction-du-fp-tree-23/#.WyS1x6czbSE>`_,
+      `fp-growth 3/3 <http://blog.khaledtannir.net/2012/07/lalgorithme-fp-growth-identification-des-itemsets-frequents-33/#.WyS1yaczbSE>`_
+
 * Texte
     * `Algorithme de Knuth-Morris-Pratt <http://fr.wikipedia.org/wiki/Algorithme_de_Knuth-Morris-Pratt>`_ **algo**
     * `Algorithme de Rabin-Karp <http://fr.wikipedia.org/wiki/Algorithme_de_Rabin-Karp>`_ **algo**

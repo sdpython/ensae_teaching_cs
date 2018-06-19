@@ -1,0 +1,11 @@
+
+.. blogpost::
+    :title: QuBit
+    :keywords: QuBit
+    :date: 2018-06-18
+    :categories: biblio
+
+    Un jour il faudra sans doute coder en
+    `QuBit <https://fr.wikipedia.org/wiki/Qubit>`_ ou
+    bit quantique. Voici un lien vers une petite introduction :
+    `Quantum Computing for Everyone - Part I: Classical vs. Quantum Computing <https://www.codeproject.com/Articles/1182179/Quantum-Computing-for-Everyone-Part-I-Classical-vs>`_.
