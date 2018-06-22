@@ -31,6 +31,7 @@ Machine Learning Avancé
     td2a_mlplus_gaussian_processes
     td2a_mlplus_reinforcement_learning_marl
     td2a_mlplus_collaborative_learning
+    td2a_mlplus_surprise_modelling
 
 Séries temporelles
 ==================

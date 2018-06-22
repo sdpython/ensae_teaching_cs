@@ -66,6 +66,12 @@ C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
 
 (*à venir*)
 
+*Lectures - LIME*
+
+* `"Why Should I Trust You?" Explaining the Predictions of Any Classifier <http://arxiv.org/pdf/1602.04938v1.pdf>`_
+  (sans doute un des articles à lire en premier - `lime <https://github.com/marcotcr/lime>`_)
+* `Defining Locality for Surrogates in Post-hoc Interpretablity <https://128.84.21.199/abs/1806.07498v1>`_
+
 *Lectures : expliquer*
 
 * `Ideas on interpreting machine learning <https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning>`_
@@ -76,8 +82,6 @@ C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
 * `Confidence Intervals for Random Forests: The Jackknife and the Infinitesimal Jackknife <http://jmlr.csail.mit.edu/papers/volume15/wager14a/wager14a.pdf>`_
 * `Random Rotation Ensembles <http://www.jmlr.org/papers/volume17/blaser16a/blaser16a.pdf>`_
 * `Wavelet decompositions of Random Forests - smoothness analysis, sparse approximation and applications <http://www.jmlr.org/papers/volume17/15-203/15-203.pdf>`_
-* `"Why Should I Trust You?" Explaining the Predictions of Any Classifier <http://arxiv.org/pdf/1602.04938v1.pdf>`_
-  (sans doute un des articles à lire en premier - `lime <https://github.com/marcotcr/lime>`_)
 * `Edward: A library for probabilistic modeling, inference, and criticism <https://arxiv.org/pdf/1610.09787.pdf>`_
 * `Strictly Proper Scoring Rules, Prediction, and Estimation <https://www.cs.duke.edu/courses/spring17/compsci590.2/Gneiting2007jasa.pdf>`_
 * `Visualizing and Understanding Neural Machine Translation <http://www.aclweb.org/anthology/P/P17/P17-1106.pdf>`_
@@ -110,7 +114,7 @@ C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
 
 * `Learning Deep Nearest Neighbor Representations Using Differentiable Boundary Trees <https://arxiv.org/abs/1702.08833>`_
 
-*Lectures: modèle graphique*
+*Lectures : modèle graphique*
 
 * `Factor Graph <http://deepdive.stanford.edu/assets/factor_graph.pdf>`_
 * `An Introduction to Conditional Random Fields for Relational Learning <http://people.cs.umass.edu/~mccallum/papers/crf-tutorial.pdf>`_
@@ -123,7 +127,7 @@ C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
 * `Outlier Detection Techniques <https://www.siam.org/meetings/sdm10/tutorial3.pdf>`_,
   `abod.py <https://github.com/MarinYoung4596/OutlierDetection/tree/master/OutlierDetection/Python%20Implementation>`_
 
-*Lectures : information bottleneck
+*Lectures : information bottleneck*
 
 * `Information bottleneck method <https://en.wikipedia.org/wiki/Information_bottleneck_method>`_ (wikipédia)
 * `The information bottleneck method <https://arxiv.org/pdf/physics/0004057.pdf>`_
