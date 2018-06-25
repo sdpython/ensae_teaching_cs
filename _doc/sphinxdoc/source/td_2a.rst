@@ -102,7 +102,7 @@ Galleries de problèmes résolus ou presque
 .. toctree::
     :maxdepth: 3
 
-    td_2a_resolus
+    ml2a/td_2a_resolus
 
 Algorithmes, Optimisation, Programmation
 ========================================

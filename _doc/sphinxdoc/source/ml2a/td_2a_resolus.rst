@@ -117,6 +117,12 @@ Deep Learning Artistique
 * `StyleBank: An Explicit Representation for Neural Image Style Transfer <https://arxiv.org/abs/1703.09210>`_
 * `msracver/Deep-Image-Analogy <https://github.com/msracver/Deep-Image-Analogy>`_
 
+Génération d'images à partir de texte
++++++++++++++++++++++++++++++++++++++
+
+* `AttnGAN <https://github.com/taoxugit/AttnGAN>`_,
+  `AttnGAN: Fine-Grained Text to Image Generation with Attentional Generative Adversarial Networks <https://arxiv.org/pdf/1711.10485.pdf>`_
+
 Images en vrac
 ++++++++++++++
 

@@ -41,6 +41,7 @@ Source de données
   voir aussi `Daily Global Weather Measurements (http://spatial-analyst.net/) <http://spatial-analyst.net/book/getGSOD.R>`_
 * *code* `Evénements GitHub <https://www.githubarchive.org/>`_ : tous les commit sur GitHub chaque jour (~15.000 commit par jour)
 * *consommation* `World Food Facts <https://www.kaggle.com/openfoodfacts/world-food-facts>`_
+* *deep*: `Microsoft Research Open Data <https://msropendata.com/>`_
 * *finance* `Daily News for Stock Market Prediction <https://www.kaggle.com/aaron7sun/stocknews>`_
 * *images* `ImageNet <http://image-net.org/>`_, base de données d'images avec leur contenu
 * *ML* `Kaggle Datasets <https://www.kaggle.com/datasets>`_
