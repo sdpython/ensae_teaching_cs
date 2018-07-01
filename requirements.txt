@@ -15,7 +15,6 @@ gensim
 geopy
 jsonpickle
 jyquickhelper
-keras
 keyring
 lifelines
 lightgbm
@@ -53,7 +52,7 @@ tables
 toolz
 sphinxjp.themes.basicstrap
 sphinxjp.themes.sphinxjp
-tensorflow
+
 tkinterquickhelper
 treeinterpreter
 tutormagic

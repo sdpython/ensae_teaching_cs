@@ -13,10 +13,6 @@ addons:
       - libblas-dev
       - liblapack-dev
       - gfortran      
-      - ocl-icd-opencl-dev
-      - libopencl
-      - cuda-gdb-src
-      - cuda 
       - libgeos-dev
 env:
   global:

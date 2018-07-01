@@ -27,8 +27,6 @@ script:
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_EX_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)).*\"", NAME: "UT_EX", TIMEOUT: 3600 }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_GUI_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)).*\"", NAME: "UT_GUI", TIMEOUT: 2400 }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*scraping.* -g \".*((SKIP)|(theano)|(keras)|(ete3)|(cvxopt)).*\"", NAME: "UT_SCRAPING", TIMEOUT: 3600 }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((keras)).*\"", NAME: "UT_KERAS", TIMEOUT: 7200 }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((deep)).*\"", NAME: "UT_DEEP2", TIMEOUT: 7200 }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((pythonnet)).*\"", NAME: "UT_PYTHONNET" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((huge)).*\"", NAME: "UT_HUGE" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((ete3)).*\"", NAME: "UT_ETE3" }
