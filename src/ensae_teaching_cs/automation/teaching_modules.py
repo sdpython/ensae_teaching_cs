@@ -20,4 +20,5 @@ def get_teaching_modules():
             "ensae_teaching_cs", "code_beatrix", "actuariat_python", "mlstatpy", "jupytalk",
             "teachpyx", "tkinterquickhelper", "cpyquickhelper", "pandas_streaming",
             "lightmlboard", "lightmlrestapi", "mlinsights", "pyenbc", "mlprodict",
-            "papierstat", "sparkouille", "manydataapi", "csharpy", "csharpyml"]
+            "papierstat", "sparkouille", "manydataapi", "csharpy", "csharpyml",
+            "ensae_teaching_dl"]

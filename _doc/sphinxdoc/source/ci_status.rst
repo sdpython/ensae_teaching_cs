@@ -188,6 +188,29 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
       -
+    * - `ensae_teaching_dl <http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/ensae_teaching_dl.svg?branch=master
+            :target: https://travis-ci.org/sdpython/ensae_teaching_dl
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/b7c2o4fqlaxl0r0a?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/ensae-teaching-cs
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/ensae_teaching_dl/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/ensae_teaching_dl/tree/master
+      - .. image:: https://badge.fury.io/py/ensae_teaching_dl.svg
+            :target: https://pypi.org/project/ensae_teaching_dl
+      - .. image:: http://img.shields.io/pypi/pyversions/ensae_teaching_dl.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/ensae_teaching_dl
+      - .. image:: https://badge.waffle.io/sdpython/ensae_teaching_dl.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/ensae_teaching_dl
+      - .. image:: https://codecov.io/github/sdpython/ensae_teaching_dl/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/ensae_teaching_dl?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
+      -
     * - `jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/jupytalk.svg?branch=master
             :target: https://travis-ci.org/sdpython/jupytalk
@@ -830,6 +853,8 @@ Contenu
       - Contenu des enseignements donnés à l'ENSAE.
         Le module inclut également des fonctions d'automatisation et des morceaux de codes
         illustrant des exercices (voir :ref:`modindex`).
+    * - `ensae_teaching_dl <http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/index.html>`_
+      - Notebooks, contenu plus spécifiques au :epkg:`deep learning`.
     * - `jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
       - Présentations sous formes de notebooks données lors de conférences ou de cours.
     * - `mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_

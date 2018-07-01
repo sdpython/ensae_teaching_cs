@@ -68,7 +68,7 @@ class TestRst2HtmlDeps(unittest.TestCase):
                      Jupyter="http", lightmlboard="zoo", lightmlrestapi="mll",
                      mlinsights="mli", mlprodict="mlp", sparkouille="spko",
                      spark='spk', manydataapi="mda", csharpy='cspy',
-                     csharpyml='cspyml', Python='Python')
+                     csharpyml='cspyml', Python='Python', ensae_teaching_dl='endl')
         links.update({'ML.net': 'mlnet', 'C#': 'C#'})
 
         for full in fulls:
