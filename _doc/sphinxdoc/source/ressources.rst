@@ -79,6 +79,9 @@ Source de données
 * *santé* `Epidemium <http://www.epidemium.cc/>`_ : challenge big data sur le cancer (voir `Les challenges <http://www.epidemium.cc/theme/search>`_),
   le site référence également un nombre important de jeux de données autour des thèmes liés à la santé `data.epidemium <http://data.epidemium.cc/fr#>`_
 * *santé* `Global Disease Monitoring and Forecasting with Wikipedia  <http://www.ploscompbiol.org/article/info:doi/10.1371/journal.pcbi.1003892>`_
+* *santé* `MIMIC <https://mimic.physionet.org/>`_ : base de données de 40.000 patients passés par un service de réanimations,
+  contient les résultats de plusieurs dizaines de tests par patient, des traitements qui leur ont
+  été données.
 * *sports* `European Soccer Database <https://www.kaggle.com/hugomathien/soccer>`_
 * *texte* `soTweet: Studying Twitter at Scale <http://www-sop.inria.fr/members/Arnaud.Legout/Projects/sotweet.html>`_: base de 500 millions de tweets et 23 milliards de liens
 * *texte* `WordNet <https://wordnet.princeton.edu/wordnet/>`_, base de données anglaises sur le vocabulaire, la grammaire, les synonymes...
