@@ -76,28 +76,9 @@ Graphes - Réseaux
 Deep Learning
 =============
 
-Le deep learning signifie aussi des calculs intensifs et des modules qui
-utilisent un compilateur C++ pour optimiser les calculs
-et le GPU si vous en avez.
-Vous pouvez tester votre installation avec le notebook
-:ref:`mldeeppythonrst` ou encore
-`Keras-TensorFlow-GPU-Windows-Installation <https://github.com/antoniosehk/keras-tensorflow-windows-installation>`_.
-
-.. contents::
-    :local:
-    :depth: 1
-
-.. toctree::
-    :maxdepth: 1
-
-    td2a_mlplus_deep_reseaux_de_neurones_et_deep_learning
-    td2a_mlplus_deep_transfer_learning
-    td2a_mlplus_deep_learning_en_detail
-    td2a_mlplus_deep_apprentissage_sans_labels
-    td2a_mlplus_deep_generative_adversarial_network_gan
-    td2a_mlplus_deep_compression_de_modeles_de_deep_learning
-    td2a_mlplus_deep_trees
-    td2a_mlplus_deep_nearest_neighbours
+Cette partie a été déplacée dans un répertoire séparé :
+:epkg:`ensae_teaching_dl`. Le deep learning est depuis 2012
+l'outil le plus efficace pour traiter les images et le son.
 
 .. _l-td2a-nlp:
 
@@ -117,19 +98,3 @@ les images ou le son.
     td2a_mlplus_tagging
     td2a_mlplus_ontologie
     td2a_mlplus_chat_bot
-
-Images / Vidéos / Sons
-======================
-
-Il est difficile d'aborder cette partie sans savoir ce qu'est
-le :ref:`l-deep-learning`.
-
-.. toctree::
-    :maxdepth: 1
-
-    td2a_mlplus_deep_image_classification
-    td2a_mlplus_detection_objets
-    td2a_mlplus_deep_segmentation
-    td2a_mlplus_deep_generation_images
-    td2a_mlplus_videos
-    td2a_mlplus_reconnaissance_paroles

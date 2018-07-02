@@ -99,6 +99,7 @@ epkg_dictionary["C++"] = 'https://fr.wikipedia.org/wiki/C%2B%2B'
 epkg_dictionary["catboost"] = "https://github.com/catboost/catboost"
 epkg_dictionary["CNTK"] = 'https://www.microsoft.com/en-us/research/product/cognitive-toolkit/'
 epkg_dictionary["dask"] = 'http://dask.pydata.org/en/latest/'
+epkg_dictionary['deep learning'] = 'https://en.wikipedia.org/wiki/Deep_learning'
 epkg_dictionary["dlib"] = 'http://dlib.net/'
 epkg_dictionary['Elysees'] = 'http://www.elysee.fr/'
 epkg_dictionary["ensae_teaching_cs"] = 'http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html'

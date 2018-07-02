@@ -1,0 +1,13 @@
+
+.. blogpost::
+    :title: Deep learning dans un autre projet
+    :keywords: ensae_teaching_dl
+    :date: 2018-07-02
+    :categories: deep learning
+
+    Les notebooks de deep learning devenaient difficiles
+    à maintenir dans le même projet, les librairies
+    dépassent souvent la centaine de mégaoctets
+    et allongeaient considérablement le temps d'exécution
+    des tests unitaires. Ils ont désormais leur
+    propre projet :epkg:`ensae_teaching_dl`.

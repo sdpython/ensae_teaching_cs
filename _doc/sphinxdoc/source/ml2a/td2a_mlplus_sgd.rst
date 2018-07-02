@@ -18,3 +18,5 @@ Stochastique Gradient Descent
 * `Sparse Online Learning via Truncated Gradient <http://www.jmlr.org/papers/volume10/langford09a/langford09a.pdf>`_
 * `Stabilized Sparse Online Learning for Sparse Data <http://www.jmlr.org/papers/volume18/16-190/16-190.pdf>`_
 * `On Perturbed Proximal Gradient Algorithms <http://www.jmlr.org/papers/volume18/15-038/15-038.pdf>`_
+* `Large Margin Classification Using the Perceptron Algorithm <https://cseweb.ucsd.edu/~yfreund/papers/LargeMarginsUsingPerceptron.pdf>`_
+* `Scaling Up Stochastic Dual Coordinate Ascent <https://www.microsoft.com/en-us/research/wp-content/uploads/2016/06/main-3.pdf>`_
