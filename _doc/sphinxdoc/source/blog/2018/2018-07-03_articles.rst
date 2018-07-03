@@ -1,0 +1,15 @@
+
+.. blogpost::
+    :title: Quelques articles à lire
+    :keywords: matrix factorization, category encoder
+    :date: 2018-07-03
+    :categories: articles
+
+    * `Similarity encoding for learning with dirty categorical variables <https://hal.inria.fr/hal-01806175>`_
+    * `Stochastic Subsampling for Factorizing Huge Matrices <https://hal.archives-ouvertes.fr/hal-01431618v3>`_
+    * `Stochastic Majorization-Minimization Algorithms for Large-Scale Optimization <https://arxiv.org/abs/1306.4650?context=cs>`_
+    * `Efficient and Robust Automated Machine Learning <http://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning.pdf>`_
+    * `Non Smooth Optimization via BFGS <https://cs.nyu.edu/~overton/papers/pdffiles/bfgs_inexactLS.pdf>`_
+    * `Adam: A Method for Stochastic Optimization <https://arxiv.org/abs/1412.6980>`_
+    * `HOGWILD!: A Lock-Free Approach to Parallelizing Stochastic Gradient Descent <https://arxiv.org/abs/1106.5730>`_
+    

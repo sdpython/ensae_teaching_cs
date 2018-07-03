@@ -23,3 +23,4 @@ Optimisation des hyperparamètres
 * `scikit-learn <http://scikit-learn.org/>`_
 * `hyperopt <https://github.com/hyperopt/hyperopt>`_
 * `RayTune <http://ray.readthedocs.io/en/latest/tune.html>`_
+* `auto-sklearn <https://github.com/automl/auto-sklearn/>`_

@@ -24,6 +24,7 @@ Auto-Learning (metalearning)
 * `Learning to learn by gradient descent by gradient descent <https://papers.nips.cc/paper/6461-learning-to-learn-by-gradient-descent-by-gradient-descent.pdf>`_
 * `Matching Networks for One Shot Learning <https://papers.nips.cc/paper/6385-matching-networks-for-one-shot-learning.pdf>`_
 * `Efficient and Robust Automated Machine Learning <http://papers.nips.cc/paper/5872-efficient-and-robust-automated-machine-learning.pdf>`_
+  (papier derrière `auto-sklearn <https://github.com/automl/auto-sklearn/>`_)
 * `Learning Regular Sets from Queries and Counterexamples <https://web.archive.org/web/20131202232143/http://www.cse.iitk.ac.in/users/chitti/thesis/references/learningRegSetsFromQueriesAndCounterExamples.pdf>`_
 * `Neural Architecture Search With Reinforcement Learning <https://openreview.net/forum?id=r1Ue8Hcxg&noteId=r1Ue8Hcxg>`_ (`pdf <https://openreview.net/pdf?id=r1Ue8Hcxg>`_
 * `ASlib: A Benchmark Library for Algorithm Selection <https://arxiv.org/abs/1506.02465>`_
@@ -39,6 +40,10 @@ Auto-Learning (metalearning)
 * `Reptile: a Scalable Metalearning Algorithm <https://arxiv.org/abs/1803.02999>`_
 * `Generating Neural Networks with Neural Networks <https://arxiv.org/abs/1801.01952>`_
 * `Rapid Adaptation with Conditionally Shifted Neurons <https://arxiv.org/abs/1712.09926>`_
+
+*Tutoriel*
+
+* `Understanding and diagnosing your machine-learning models <https://github.com/GaelVaroquaux/interpreting_ml_tuto>`_
 
 *POMPD*
 
