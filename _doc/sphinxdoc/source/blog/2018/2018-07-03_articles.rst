@@ -5,6 +5,8 @@
     :date: 2018-07-03
     :categories: articles
 
+    Lectures d'été.
+
     * `Similarity encoding for learning with dirty categorical variables <https://hal.inria.fr/hal-01806175>`_
     * `Stochastic Subsampling for Factorizing Huge Matrices <https://hal.archives-ouvertes.fr/hal-01431618v3>`_
     * `Stochastic Majorization-Minimization Algorithms for Large-Scale Optimization <https://arxiv.org/abs/1306.4650?context=cs>`_
