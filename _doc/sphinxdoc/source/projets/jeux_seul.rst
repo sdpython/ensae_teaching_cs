@@ -76,3 +76,19 @@ Ecrire un programme qui résoud le puzzle suivant :
 
 Les règles du jeu sont décrites ici :
 `Can you solve GCHQ's infuriatingly complex Christmas puzzle? <http://www.theguardian.com/uk-news/2015/dec/09/can-you-solve-the-gchqs-infuriatingly-complex-christmas-puzzle?CMP=Share_AndroidApp_Email>`_.
+
+.. _l-tetrisia:
+
+Tetris (2018)
+-------------
+
+L'idée de ce projet n'est pas de programmer un jeu jouable
+mais d'imaginer une stratégie gagnante pour un joueur artificielle
+et ce n'est pas un problème évident qui touche à la fois les probabilités
+et la recherche opérationnel, voire le machine learning avec des 
+pistes dans le reinforcement learning.
+
+* `Coding a Tetris AI using a Genetic Algorithm <https://luckytoilet.wordpress.com/2011/05/27/coding-a-tetris-ai-using-a-genetic-algorithm/>`_
+* `How to design good Tetris players <https://hal.inria.fr/hal-00926213/document>`_
+* `Tetris Artificial Intelligence <https://web.engr.illinois.edu/~cyen4/pdf/Tetris_AI.pdf>`_
+* `The Theory of Tetris <http://liacs.leidenuniv.nl/~kosterswa/tetris/tot.pdf>`_
