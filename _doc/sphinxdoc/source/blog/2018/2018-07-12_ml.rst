@@ -1,0 +1,12 @@
+
+.. blogpost::
+    :title: Visualisation de mmodèles
+    :keywords: netron
+    :date: 2018-07-12
+    :categories: articles
+
+    `Netron <https://github.com/lutzroeder/Netron>`_ : cet outil n'explique pas vraiment
+    mais permet de visualiser des modèles de machine learning.
+    C'est un pas dans la bonne direction, il semble assez populaire
+    sur GitHub. Il est sans doute amené à évoluer
+    (référencé dans :ref:`l-interpretabilite-ml`).

@@ -151,3 +151,8 @@ C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
   méthode empiriques pour observer les prédictions en fonctions
   de variations des features
 * `savvy <https://github.com/lmc2179/savvy>`_
+
+*Modules de visualisation*
+
+* `Netron <https://github.com/lutzroeder/Netron>`_ : cet outil n'explique pas vraiment
+  mais permet de visualiser des modèles de machine learning.

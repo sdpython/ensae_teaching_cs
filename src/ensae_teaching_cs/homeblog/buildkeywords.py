@@ -17,7 +17,7 @@ def removeAccent(s):
 
 
 def removeAccent_debug(s):
-    return re.sub("([^~+'.çôéàèâû0-9,ea-zA-Z&; -])", "", s)
+    return re.sub("([^~+'.#çôéàèâû0-9,ea-zA-Z&; -])", "", s)
 
 
 def removeHtmlAccent(s):
