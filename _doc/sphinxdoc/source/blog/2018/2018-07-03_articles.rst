@@ -14,4 +14,3 @@
     * `Non Smooth Optimization via BFGS <https://cs.nyu.edu/~overton/papers/pdffiles/bfgs_inexactLS.pdf>`_
     * `Adam: A Method for Stochastic Optimization <https://arxiv.org/abs/1412.6980>`_
     * `HOGWILD!: A Lock-Free Approach to Parallelizing Stochastic Gradient Descent <https://arxiv.org/abs/1106.5730>`_
-    

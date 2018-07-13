@@ -26,33 +26,43 @@ sont notés sur `Waffle/ensae_teaching_cs <https://waffle.io/sdpython/ensae_teac
     :depth: 1
     :local:
 
-Ce site est principalement un site d'exercices. D'autres contenus sont disponibles
-sur des `éléments de machine learning <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html#mlstatpy>`_,
-`la programmation avec Python <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_,
-des `jeux autour d'algorithmes <http://lesenfantscodaient.fr/>`_,
-des `présentations, conférences <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_,
-ou encore des `sujets de compétitions, hackathons <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_.
+Ce site est principalement un site d'exercices. D'autres contenus sont disponibles :
+
+* `Cours de machine learning <http://www.xavierdupre.fr/app/papierstat/helpsphinx/index.html>`_,
+* `Eléments théoriques de machine learning <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html#mlstatpy>`_
+* `Programmation avec Python <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_,
+* `Jeux autour d'algorithmes pour les enfatns <http://lesenfantscodaient.fr/>`_,
+* `Présentations, conférences <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_,
+* `Hackathons organisés pour les étudiants <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_.
 
 Avant-propos
 ============
 
-Les langages `R <https://www.r-project.org/>`_ et
-`Python <https://www.python.org/>`_ sont devenus
+Les langages :epkg:`R` et
+:epkg:`Python` sont devenus
 incontournables dans le domaine des statistiques.
 Ils sont simples,
 `open source <https://fr.wikipedia.org/wiki/Open_source>`_,
 s'apprennent rapidement, sont utilisés
 par beaucoup et disposent de nombreuses pages, blogs, listes
 de diffusions qui leur sont dédiées.
-`R <https://www.r-project.org/>`_ est le terrain de jeu préféré des chercheurs
+:epkg:`R` est le terrain de jeu préféré des chercheurs
 mais il est peu pratique pour développer un site web ou un jeu.
-`Python <https://www.python.org/>`_ est beaucoup plus polyvalent
+:epkg:`Python` est beaucoup plus polyvalent
 et de plus en plus populaire. Il est enseigné à l':epkg:`ENSAE` depuis 2004.
 Les premiers pas sont parfois rebutants mais on arrive vite à
 quelque chose à condition d'y passer un peu de temps au démarrage.
 La programmation est indispensable pour traiter les données,
 les visualiser, automatiser les tâches les plus répétitives, et
 s'amuser (voir `lesenfantscodaient.fr <http://lesenfantscodaient.fr/>`_).
+:epkg:`Python`_ est maintenant un prérequis pour devenir datascientist.
+La programmation est devenue indispensable dans tout travail
+datascience ou plus généalement tous les métiers manipulant des données.
+Certaines pratiques logicielles telles que les :epkg:`tests unitaites`
+et des langages bas niveau tels que le :epkg:`C++` sont incontournables
+pour commencer une thèse. La thèse ou *PhD* est encore aujourd'hui
+le seul diplôme reconnu dans le monde entier et ouvre
+plus facilement les portes de nombreuses entreprises.
 
 **3 niveaux**
 
@@ -127,7 +137,7 @@ Voir :ref:`l-installation-courte` pour des instuructions détaillées
 sous Windows, Linux et MacOS.
 
 Le langage est devenu populaire aussi parmi les data scientists grâce à un ensemble
-de librairies qui ont offert un service équivalent à ce que propose `R <https://www.r-project.org/>`_.
+de librairies qui ont offert un service équivalent à ce que propose :epkg:`R`.
 `pandas <http://fr.wikipedia.org/wiki/Panda>`_,
 `numpy <http://www.numpy.org/>`_,
 `matplotlib <http://matplotlib.org/>`_,

@@ -85,7 +85,7 @@ Tetris (2018)
 L'idée de ce projet n'est pas de programmer un jeu jouable
 mais d'imaginer une stratégie gagnante pour un joueur artificielle
 et ce n'est pas un problème évident qui touche à la fois les probabilités
-et la recherche opérationnel, voire le machine learning avec des 
+et la recherche opérationnel, voire le machine learning avec des
 pistes dans le reinforcement learning.
 
 * `Coding a Tetris AI using a Genetic Algorithm <https://luckytoilet.wordpress.com/2011/05/27/coding-a-tetris-ai-using-a-genetic-algorithm/>`_

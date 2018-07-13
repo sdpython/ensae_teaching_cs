@@ -18,9 +18,11 @@ sans changer de langage.
 Le cours est prévu pour des profils plutôt statistiques |pystatpng|
 ou plutôt économiques |pyecopng|. Ces images reviendront pour indiquer
 si les contenus s'adressent plutôt aux uns ou aux autres.
+Il est évalué par un projet de datascience et d'un exposé
+fait à plusieurs sur un sujet tiré d'articles de recherche récents.
 
-* :ref:`l-feuille-de-route-2017-2A`
 * :ref:`l-projinfo2a`
+* :ref:`l-expoinfo2a`
 * :ref:`l-feuille-de-route-2018-2A` (en préparation)
 
 Le terme *cheat sheet* est un mot-clé plutôt efficace sur Internet pour
@@ -159,9 +161,10 @@ et bien sûr les étudiants de l':epkg:`ENSAE`.
 Feuilles de route et compétitions passées :
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     questions/route_2A_2016
     questions/route_2A_2017
     questions/route_2A_2018
+    questions/expose_2A_2018
     questions/competition_2A

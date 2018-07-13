@@ -33,7 +33,22 @@ de recherche. `stackoverflow <https://stackoverflow.com/questions/tagged/python>
 sont des forums d'échanges.
 `Cheat Sheets <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/cheat_sheets.html>`_
 est un mot qui vous mène très souvent vers un résumé des syntaxes les
-plus utilisés.
+plus utilisées. Les séances seront un sous-ensemble
+des contenus proposés ci-dessous. Le cours propose un tour
+d'horizon des algorithmes et pratiques logicielles à connaître
+pour un ingénieur *full stack*.
+
+* :ref:`l-feuille-de-route-2018-1A` (en préparation)
+
+Une bonne culture informatique est de plus en plus appréciée
+dans le monde de l'entreprise, l'ingénieur *full stack*
+est celui qui maîtrise à la fois un domaine métier,
+celui pour lequel il a été formé, et les techniques informatiques
+qu'il sera amené à manipuler au quotidien. Tous les thèmes ne seront
+pas abordés, les thèmes suivant intéresseront sans doute les plus curieux.
+
+.. contents::
+    :local:
 
 ------------
 
@@ -431,12 +446,12 @@ Bibliographie
 Intervenants
 ============
 
-* *2016-2017* :
+* *2017-2018* :
   Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_ *(professeur)*,
   Benjamin Donnot, `Lucie Neirac <http://www.laneas.com/lucie-neirac>`_,
   Marc-Antoine Weisser, `Supélec <http://www.supelec.fr/>`_
 
-* *2015-2016* :
+* *2016-2017* :
   Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_ *(professeur)*,
   Pierre Cordier, `Effiscience <http://effiscience.solutions/>`_,
   Yves Gerey, `A2iA <http://www.a2ia.com/en>`_,
@@ -444,3 +459,19 @@ Intervenants
   Arthur Renaud, `Etaonis <http://www.etaonis.fr/>`_,
   Mehdi Seddar, `Artfact <http://www.artefact.is/>`_,
   Marc-Antoine Weisser, `Supélec <http://www.supelec.fr/>`_.
+
+A propos du cours
+=================
+
+Ce cours a commencé en 2004 et n'a cessé de s'enrichir.
+Il est animé par `Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_ (ENSAE 1999).
+Il a pour objectif d'introduire la programmation avec
+:epkg:`Python`, des algorithmes, et de présenter quelques pratiques
+tirées de l'industrie logicielle. Les deux derniers points sont
+assez rarement évoqués dans le cursus scolaire français mais
+revêt de plus en plus d'importance en datascience.
+
+.. toctree::
+    :maxdepth: 1
+
+    questions/route_1A_2018
