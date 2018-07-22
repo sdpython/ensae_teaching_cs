@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.7.0
+      - image: circleci/python:3.6.5
     
     working_directory: ~/repo
     
@@ -64,6 +64,14 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install numpy
+
+      # skimage setup.py requires it
+      - run:
+          name: install cython
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install cython
 
       - run:
           name: install dependencies 1 - requirements_conda
