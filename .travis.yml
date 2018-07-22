@@ -1,8 +1,8 @@
-dist: trusty
-sudo: false
+dist: xenial
+sudo: true
 language: python
 python:
-  - "3.6"
+  - "3.7"
 addons:
 -  apt:
 -    packages:
