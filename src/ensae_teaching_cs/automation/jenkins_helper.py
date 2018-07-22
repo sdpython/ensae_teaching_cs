@@ -47,21 +47,21 @@ def engines_default(prefix="c:\\", prefix_python="c:\\", prefix_conda="c:\\"):
     """
     res = dict(anaconda2=os.path.join(prefix_conda, "Anaconda2"),
                anaconda3=os.path.join(prefix_conda, "Anaconda3"),
-               py36=os.path.join(prefix_python, find_python()),
-               py35=os.path.join(prefix_python, "Python35_x64"),
+               py37=os.path.join(prefix_python, find_python()),
+               py36=os.path.join(prefix_python, "Python36_x64"),
                py27=os.path.join(prefix_python, "Python27_x64"),
                default=os.path.join(prefix_python, find_python()),
-               winpython=os.path.join(
+               winpython36=os.path.join(
                    prefix_python, "WinPython36_x64", "python-3.6.3.amd64"),
-               Python35pyq=os.path.join(
-                   prefix, "jenkins", "venv", "py35", "pyq", "Scripts"),
+               Python37pyq=os.path.join(
+                   prefix, "jenkins", "venv", "py37", "pyq", "Scripts"),
                Python36pyq=os.path.join(prefix, "jenkins", "venv", "py36", "pyq", "Scripts"))
     res["Python27"] = res["py27"]
-    res["Python35"] = res["py35"]
     res["Python36"] = res["py36"]
+    res["Python37"] = res["py37"]
     res["Anaconda2"] = res["anaconda2"]
     res["Anaconda3"] = res["anaconda3"]
-    res["WinPython36"] = res["winpython"]
+    res["WinPython36"] = res["winpython36"]
     return res
 
 
@@ -128,10 +128,9 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
                 "standalone [conda_update] [anaconda2] [27]",
                 "standalone [local_pypi]",
                 # update
-                ("pymyinstall [update_modules] [py35]", "H H(0-1) * * 5"),
+                ("pymyinstall [update_modules] [py37]", "H H(0-1) * * 5"),
                 "pymyinstall [update_modules] [winpython]",
                 "pymyinstall [update_modules] [py36]",
-                "pymyinstall [update_modules] [py34]",
                 "pymyinstall [update_modules] [py27]",
                 "pymyinstall [update_modules] [anaconda2]",
                 "pymyinstall [update_modules] [anaconda3]",
@@ -139,7 +138,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
         return res
 
 
-def setup_jenkins_server(js, github="sdpython", modules=default_jenkins_jobs(),
+def setup_jenkins_server(js, github="sdpython", modules=None,
                          overwrite=False, location=None, prefix="",
                          delete_first=False, disable_schedule=False, fLOG=noLOG):
     """
@@ -148,7 +147,9 @@ def setup_jenkins_server(js, github="sdpython", modules=default_jenkins_jobs(),
     @param      js                      (JenkinsExt) jenkins server (specially if you need credentials)
     @param      github                  github account if it does not start with *http://*,
                                         the link to git repository of the project otherwise
-    @param      modules                 modules for which to generate the Jenkins job (see @see fn default_jenkins_jobs)
+    @param      modules                 modules for which to generate the :epkg:`Jenkins` job
+                                        (see @see fn default_jenkins_jobs which provides the default value
+                                        if *modules* is None)
     @param      overwrite               do not create the job if it already exists
     @param      location                None for default or a local folder
     @param      prefix                  add a prefix to the name
@@ -164,6 +165,8 @@ def setup_jenkins_server(js, github="sdpython", modules=default_jenkins_jobs(),
     * the job at position i is not scheduled, it will start after the last
       job at position i-1 whether or not it fails
     """
+    if modules is None:
+        modules = default_jenkins_jobs()
     r = setup_jenkins_server_yml(js, github=github, modules=modules, get_jenkins_script=None,
                                  overwrite=overwrite, location=location, prefix=prefix,
                                  delete_first=delete_first, disable_schedule=disable_schedule)
