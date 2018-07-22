@@ -9,7 +9,7 @@ from pyquickhelper.loghelper import fLOG
 from ..helpers.pygame_helper import wait_event, empty_main_loop
 
 
-class Point (object):
+class Point:
     """
     définition d'un point : deux coordonnées et une masse
     """
@@ -48,7 +48,7 @@ class Point (object):
         return "(x,y) = (%4.2f,%4.2f) masse %f" % (self.x, self.y, self.m)
 
 
-class Corde (object):
+class Corde:
     """
     définition d'une corde, une liste de points
     """

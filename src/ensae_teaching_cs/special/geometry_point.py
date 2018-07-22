@@ -13,7 +13,7 @@ class GeometryException(Exception):
     pass
 
 
-class GeometryPoint(object):
+class GeometryPoint:
     """
     one point
     """

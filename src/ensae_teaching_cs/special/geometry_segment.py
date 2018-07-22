@@ -6,7 +6,7 @@
 from .geometry_point import GeometryPoint, GeometryException
 
 
-class GeometrySegment (object):
+class GeometrySegment:
     """
     two points
     """

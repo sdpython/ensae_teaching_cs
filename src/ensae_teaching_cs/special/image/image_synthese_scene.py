@@ -7,7 +7,7 @@ import math
 from .image_synthese_base import Pixel, Vecteur, Rayon, Couleur
 
 
-class Scene (object):
+class Scene:
     """
     définit une scène, les axes x,y sont ceux de l'écran,
     z-1 est la distance à l'écran du point (x,y,z)

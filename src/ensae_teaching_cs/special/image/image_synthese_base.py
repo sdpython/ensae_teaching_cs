@@ -7,7 +7,7 @@ import math
 import copy
 
 
-class Vecteur (object):
+class Vecteur:
     """définit ce qu'est un point"""
     __slots__ = "x", "y", "z"
 
@@ -185,7 +185,7 @@ class Couleur (Vecteur):
         return Couleur(self.x * x, self.y * x, self.z * x)
 
 
-class Repere (object):
+class Repere:
     """définition d'un repère orthonormé"""
 
     def __init__(self, origine=Vecteur(0, 0, 0),
@@ -216,7 +216,7 @@ class Repere (object):
         return s
 
 
-class Pixel (object):
+class Pixel:
     """définit ce qu'est un pixel"""
     __slots__ = "x", "y"
 
@@ -229,7 +229,7 @@ class Pixel (object):
         return "(%d, %d)" % (self.x, self.y)
 
 
-class Rayon (object):
+class Rayon:
     """définit ce qu'est un rayon"""
     __slots__ = "origine", "direction", "pixel", "couleur"
 
@@ -246,7 +246,7 @@ class Rayon (object):
         return s
 
 
-class Objet (object):
+class Objet:
     """définit l'interface pour un objet à dessiner dans une image de synthese"""
 
     def intersection(self, r):
@@ -278,7 +278,7 @@ class Objet (object):
         return float(0)
 
 
-class Source (object):
+class Source:
     """définition d'une source ponctuelle"""
     __slots__ = "origine", "couleur"
 

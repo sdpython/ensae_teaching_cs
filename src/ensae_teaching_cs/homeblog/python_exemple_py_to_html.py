@@ -69,9 +69,7 @@ def get_first_col(file):
     f = open(file, "r")  # , encoding="utf8")
     sall = f.readlines()
     f.close()
-    s = ""
-    for l in sall:
-        s += l
+    s = "".join(sall)
     if "thread" in s:
         return "Chapitre 10 : thread"
     elif "Tkinter" in s:
