@@ -57,6 +57,14 @@ jobs:
                     sudo apt-get -y install xvfb pulseaudio
                     sudo apt-get install -y python-pygame
 
+      # statsmodels setup.py requires it
+      - run:
+          name: install numpy
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install numpy
+
       - run:
           name: install dependencies 1 - requirements_conda
           command: |
