@@ -153,9 +153,9 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
             # https://sites.google.com/a/chromium.org/chromedriver/getting-started
             with warnings.catch_warnings():
                 warnings.simplefilter("ignore", ImportWarning)
-                import selenium.webdriver.chrome.service as service
+                import selenium.webdriver.chrome.service as wservice
             fLOG("create service")
-            service = service.Service(chromed)
+            service = wservice.Service(chromed)
             fLOG("start service")
             service.start()
             fLOG("declare remote")

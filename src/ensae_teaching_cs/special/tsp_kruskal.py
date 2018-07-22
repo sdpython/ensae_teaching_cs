@@ -174,7 +174,7 @@ def voisinage_zone(z, Zmax, X, Y):
         voisin_.append(z + 1 - X)
     if x < X and y < Y:
         voisin_.append(z + 1 + X)
-    voisin = [int(i) for i in voisin_ if i >= 0 and i < Zmax]
+    voisin = [int(i) for i in voisin_ if Zmax > i >= 0]
     return voisin
 
 
