@@ -52,11 +52,11 @@ tables
 toolz
 sphinxjp.themes.basicstrap
 sphinxjp.themes.sphinxjp
-
 tkinterquickhelper
 treeinterpreter
 tutormagic
 wheel
+xgboost
 xlrd
 xlsxwriter
 xlwt
