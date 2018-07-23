@@ -50,10 +50,11 @@ qgrid
 semantic_version
 seasonal
 shapely
-tables
-toolz
 sphinxjp.themes.basicstrap
 sphinxjp.themes.sphinxjp
+sphinx_rtd_theme
+tables
+toolz
 tkinterquickhelper
 treeinterpreter
 tutormagic
