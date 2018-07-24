@@ -30,47 +30,88 @@ discutées.
 
     * - Séance
       - Notes
-      - Stat
-      - Eco
-    * - (1) - amphi court - TD
-      -
+      - Stat 8h30
+      - Stat 10h15
+      - Eco 8h30
+      - Eco 10h15
+      - Exposés 11h45
+    * - 11/9 (1) *TD*
+      - Le cours débutera par une courte introduction de 30 minutes en amphi
+        puis travaux pratiques jusqu'à la fin afin d'être rapidement opérationnel.
+        en :epkg:`Python`.
       - :ref:`l-route2018-stat1`
       - :ref:`l-route2018-eco1`
-    * - (2) - TD - amphi
+      - :ref:`l-route2018-stat1`
+      - :ref:`l-route2018-eco1`
+      -
+    * - 18/9 (2) *amphi*
+      - Introduction au machine learning.
       -
       -
       -
-    * - (3) - TD - TD
+      -
+      -
+    * - 25/9 (3) *TD*
+      - Suite des travaux pratiques
+        afin de s'assurer que tout le monde maîtrise
+        :epkg:`pandas`, :epkg:`numpy`, premiers pas avec
+        :epkg:`scikit-learn`.
+      - Variables catégorielles.
+      - Variables textuelles.
+      -
+      -
+      - Deux exposés de 10 minutes + 5 minutes de questions
+        (:ref:`l-expoinfo2a`).
+    * - 2/10 (4) *TD*
+      - à définir
       -
       -
       -
-    * - (4) - amphi - TD
+      -
+      - Deux exposés de 10 minutes + 5 minutes de questions
+        (:ref:`l-expoinfo2a`).
+    * - 9/10 (5) *amphi*
+      - Comprendre les modèles.
+      - Propriétés des modèles mathématiques,
+        modèles linéaires, modèles ensemblistes,
+        modèles dérivables (Xavier Dupré).
+      - *Machine Learning* avec **Gaël Varoquaux**,
+        discussion autour de l'interprétation des
+        modèles de machine learning.
+      - ?
+      - *Machine Learning* avec **Gaël Varoquaux**,
+        discussion autour de l'interprétation des
+        modèles de machine learning.
+      - Deux exposés de 10 minutes + 5 minutes de questions
+        (:ref:`l-expoinfo2a`).
+    * - 16/10 (6) *TD*
+      -
+      - Machine learning crypté.
       -
       -
       -
-    * - (5) - TD - TD
+      - Deux exposés de 10 minutes + 5 minutes de questions
+        (:ref:`l-expoinfo2a`).
+    * - 23/10 (7) *amphi*
+      - Effets secondaires du machine learning.
+      - revue de projet :epkg:`Kaggle`,
+        notion de biais dans les modèles
+        (Xavier Dupré)
+      - *Ethique et algorithmes* avec **Frédéric Bardolle**
+      - revue de projet :epkg:`Kaggle`
+        notion de biais dans les modèles
+        (Xavier Dupré)
+      - *Ethique et algorithmes* avec **Frédéric Bardolle**
+      - Deux exposés de 10 minutes + 5 minutes de questions
+        (:ref:`l-expoinfo2a`).
+    * - 6/11 (8) *TD*
+      -
+      - Transfer Learning.
+      - 
       -
       -
-      -
-    * - (6) - TD - TD
-      -
-      -
-      -
-    * - (7) - amphi - TD
-      - Un data scientist n'est pas là pour juste caler
-        des modèles, il s'agit de tirer parti des données,
-        comprendre les problèmes auxquels un jeu de données
-        peut répondre, imaginer ce qu'il faudrait pour qu'un autre
-        trouve une solution, comprendre comment la connaissance
-        des mathématiques accélère ce cheminement.
-      - revue de projet Kaggle,
-        revue de vidéos de projets des années précédentes
-      - revue de projet Kaggle,
-        revue de vidéos de projets des années précédentes
-    * - (8) - TD - TD
-      -
-      -
-      -
+      - Deux exposés de 10 minutes + 5 minutes de questions
+        (:ref:`l-expoinfo2a`).
 
 Intervenants
 ++++++++++++
@@ -78,7 +119,8 @@ Intervenants
 `Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_,
 Anne Muller, Elodie Royant, Antoine Thabault,
 Antoine Ly, Benjamin Donnot, Eliot Barril,
-Gaël Varoquaux.
+Frédéric Bardolle, 
+`Gaël Varoquaux <http://gael-varoquaux.info/>`_.
 
 Notes
 +++++

@@ -761,6 +761,11 @@ Tableau de bord et statut des dépendances
       -
       -
 
+D'autres modules forkés sont disponibles sur
+`travis <https://travis-ci.org/sdpython/>`_,
+`appveyor <https://ci.appveyor.com/sdpython>`_,
+`circleci <https://circleci.com/gh/sdpython>`_.
+
 Automatisation
 ++++++++++++++
 
