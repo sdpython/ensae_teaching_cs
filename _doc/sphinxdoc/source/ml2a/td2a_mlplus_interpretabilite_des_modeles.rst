@@ -156,3 +156,5 @@ C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
 
 * `Netron <https://github.com/lutzroeder/Netron>`_ : cet outil n'explique pas vraiment
   mais permet de visualiser des modèles de machine learning.
+* `VisualDL <https://github.com/PaddlePaddle/VisualDLn>`_ : cet outil n'explique pas vraiment
+  mais permet de visualiser des modèles de deep learning.

@@ -10,3 +10,11 @@
     C'est un pas dans la bonne direction, il semble assez populaire
     sur GitHub. Il est sans doute amené à évoluer
     (référencé dans :ref:`l-interpretabilite-ml`).
+    `VisualDL <https://github.com/PaddlePaddle/VisualDL>`_
+    est un outil similaire dédié au deep learning.
+
+    Le second outil est développé par
+    `PaddlePaddle <http://www.paddlepaddle.org/>`_
+    qui a quelque tutoriels sans fioritures sur le
+    sujet du deep learning.
+
