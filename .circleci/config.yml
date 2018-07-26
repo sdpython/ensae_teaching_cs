@@ -50,6 +50,20 @@ jobs:
                     sudo apt-get install libav-tools
 
       - run:
+          name: Install geos, proj for cartopy
+          command: |
+            sudo apt-get -qq update
+            sudo apt-get install -y libproj-dev proj-bin proj-data
+            sudo apt-get install -y python-pyproj
+            sudo apt-get install -y libc6
+            sudo apt-get install libgeos-dev
+            sudo apt-get install python-gdal gdal-bin
+            wget http://es.archive.ubuntu.com/ubuntu/pool/universe/p/proj/libproj9_4.9.2-2_amd64.deb 
+            sudo dpkg -i libproj9_4.9.2-2_amd64.deb 
+            wget http://es.archive.ubuntu.com/ubuntu/pool/universe/p/proj/libproj-dev_4.9.2-2_amd64.deb
+            sudo dpkg -i libproj-dev_4.9.2-2_amd64.deb
+
+      - run:
           name: Install pygame
           command: |
                     sudo apt-get install libasound2-dev
@@ -74,28 +88,28 @@ jobs:
             pip install cython
 
       - run:
-          name: install dependencies 1 - requirements_conda
+          name: install dependencies (1) - requirements_conda
           command: |
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements_conda.txt
             
       - run:
-          name: install dependencies 2 - requirements
+          name: install dependencies (2) - requirements
           command: |
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
             
       - run:
-          name: install dependencies 2 - cairo
+          name: install dependencies (2) - cairo
           command: |
             python3 -m venv venv
             . venv/bin/activate
             pip install cairocffi cairosvg
             
       - run:
-          name: install dependencies 3 - sphinxcontrib, datashader, pyPDF
+          name: install dependencies (3) - sphinxcontrib, datashader, pyPDF
           command: |
             python3 -m venv venv
             . venv/bin/activate
@@ -109,14 +123,6 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
-            
-      - run:
-          name: install dependencies 5 - torch
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip3 install http://download.pytorch.org/whl/cu91/torch-0.3.1-cp36-cp36m-linux_x86_64.whl
-            pip3 install torchvision
             
       - run:
           name: install basemap
