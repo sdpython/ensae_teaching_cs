@@ -40,7 +40,9 @@ class TestJenkins(unittest.TestCase):
                        py36="c:\\Python36_x64", Python34="py34", Python35="py35",
                        Python36="py36", Anaconda3="apy35", Anaconda2="apy27",
                        Python27="py27", WinPython35="wpy35", WinPython36="wpy36",
-                       Python35pyq="DDD")
+                       Python35pyq="DDD", Python37="py37")
+        vers = "%d%d" % sys.version_info[:2]
+        engines["Python" + vers] = "py" + vers
 
         js = JenkinsExt('http://machine:8080/', "user",
                         "password", mock=True, engines=engines, fLOG=fLOG)

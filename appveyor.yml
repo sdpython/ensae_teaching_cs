@@ -25,7 +25,7 @@ install:
   - "%PYTHON%\\Scripts\\pip install -U git+https://github.com/sdpython/pyPdf --no-deps"
   - "%PYTHON%\\Scripts\\pip install tools"
   - "%PYTHON%\\Scripts\\pymy_install3 --task=tool --source=zip graphviz"
-  - "%PYTHON%\\Scripts\\pip install csharpy pythonnet"
+  # - "%PYTHON%\\Scripts\\pip install csharpy pythonnet"
   - "dir C:\\projects\\ensae-teaching-cs\\build\\update_modules\\Graphviz\\bin"
   - "set PATH=%PATH%;C:\\projects\\ensae-teaching-cs\\build\\update_modules\\Graphviz\\bin"
 
