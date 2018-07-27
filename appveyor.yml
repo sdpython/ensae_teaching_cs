@@ -16,7 +16,7 @@ install:
   - "%PYTHON%\\python -m pip install --upgrade pip"
   - "%PYTHON%\\Scripts\\pip install pymyinstall"
   - "%PYTHON%\\Scripts\\pymy_install3 --set=pyensae"
-  - "%PYTHON%\\Scripts\\pymy_install3 cytoolz xarray dask pylzma shapely"
+  - "%PYTHON%\\Scripts\\pymy_install3 cytoolz xarray dask pylzma shapely llvmlite numexpr"
   - "%PYTHON%\\Scripts\\pymy_install3 numba scikit-image scikit-learn statsmodels pillow pyproj"
   - "%PYTHON%\\Scripts\\pymy_install3 cvxopt xgboost cartopy"
   - "%PYTHON%\\Scripts\\pymy_install3 gensim partd pygame tables"

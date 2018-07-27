@@ -46,7 +46,7 @@ class TestFaqMatplotlib(ExtTestCase):
         df = df[df.Latitude < 52]
         df = df[df.Longitude > -130].copy()
         fig, ax = graph_cities(df, markersize=3, fontcolor=(0, 1.0, 0), fontsize='40',
-                                  fontweight="bold", figsize=(32, 32))
+                               fontweight="bold", figsize=(32, 32))
         self.assertNotEmpty(ax)
         img = os.path.join(temp, "img.png")
         if __name__ == "__main__":
