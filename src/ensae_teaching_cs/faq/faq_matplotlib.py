@@ -262,14 +262,29 @@ def avoid_overlapping_dates(fig, **options):
     fig.autofmt_xdate(**options)
 
 
+def graph_cities_default_lands():
+    """
+    Returns the default list of elements which can be added to a map.
+    See `Features <https://scitools.org.uk/cartopy/docs/v0.15/matplotlib/feature_interface.html#cartopy.feature.GSHHSFeature>`_.
+
+    .. runpython::
+        :showcode:
+
+        from ensae_teaching_cs.faq.faq_matplotlib import graph_cities_default_lands
+        print(graph_cities_default_lands())
+    """
+    return ["BORDERS", "COASTLINE", "LAKES", "LAND", "OCEAN", "RIVERS"]
+
+
 def graph_cities(df, names=("Longitude", "Latitude", "City"), ax=None, linked=False,
                  fLOG=None, loop=False, many=False,
-                 drawcoastlines=True, drawcountries=True,
-                 fillcontinents=True, drawparallels=True,
-                 drawmeridians=True, drawmapboundary=True,
+                 draw_coastlines=True, draw_countries=True,
+                 fill_continents=True, draw_parallels=True,
+                 draw_meridians=True, draw_map_boundary=True,
                  **params):
     """
-    Plots the cities on a map with :epkg:`basemap`.
+    Plots the cities on a map with :epkg:`cartopy`.
+    Only not empty names are displayed on the graph.
 
     @param      df      dataframe
     @param      names   names of the column Latitude, Longitude, City
@@ -281,118 +296,85 @@ def graph_cities(df, names=("Longitude", "Latitude", "City"), ax=None, linked=Fa
     @param      many    change the return
     @return             *ax* or *fig, ax, m* if *many* is True
 
-    Other parameters (see `basemap_api <http://matplotlib.org/basemap/api/basemap_api.html>`_):
+    Additional parameters:
 
-    * llcrnrlon, llcrnrlat, urcrnrlon, urcrnrlat
-    * resolution
-    * projection
-    * color, lake_color
-    * style
-    * markersize
-    * fontname, fontcolor, fontsize, fontweight, fontvalign
-    * slon, slat: space between meridians and parellels
-    * linestyle, linewidth, line_color, antialiased: lines
-    * alpha: fill
+    * projection: see `projections <https://scitools.org.uk/cartopy/docs/v0.15/crs/projections.html>`_,
+      only used is *ax* is None
+    * bounds: something like ``[lon1, lon2, lat1, lat2]``
+    * landscape: a list of strings about what needs to be on the map,
+      see @see fn graph_cities_default_lands.
+    * style, markersize, fontname, fontcolor, fontsize, fontweight, fontvalign
 
+    If the function returns the following error
+    ``'AxesSubplot' object has no attribute 'add_feature'``,
+    it means no projection was added to the axis.
+    The function currently creates the following way:
+
+    ::
+
+        import cartopy.crs as ccrs
+        import matplotlib.pyplot as plt
+        projection = params.pop('projection', ccrs.PlateCarree())
+        fig = plt.figure(**params)
+        ax = fig.add_subplot(1, 1, 1, projection)
     """
+    bounds = params.pop("bounds", None)
+    landscape = params.pop("landscape", graph_cities_default_lands())
+
+    style = params.pop('style', 'ro')
+    markersize = params.pop('markersize', 6)
+    fontname = params.pop('fontname', 'Arial')
+    fontsize = str(params.pop('fontsize', '16'))
+    fontcolor = params.pop('fontcolor', 'black')
+    fontweight = params.pop('fontweight', 'normal')
+    fontvalign = params.pop('fontvalign', 'bottom')
+
     xx = list(df[names[0]])
     yy = list(df[names[1]])
-    nn = list(df[names[2]]) if len(names) > 2 else [""] * len(xx)
 
     if ax is None:
+        import cartopy.crs as ccrs
         import matplotlib.pyplot as plt
-        fig, ax = plt.subplots(**params)
+        projection = params.pop('projection', ccrs.PlateCarree())
+        fig = plt.figure(**params)
+        ax = fig.add_subplot(1, 1, 1, projection=projection)
     else:
         fig = None
+
+    import cartopy.feature as cfeature
+    for land in landscape:
+        attr = getattr(cfeature, land)
+        ax.add_feature(attr)
+
+    if linked and "-" not in style:
+        style += "-"
+    ax.plot(df[names[0]], df[names[1]], style, markersize=markersize)
+    ax.set_title('France')
 
     minx, maxx = min(xx), max(xx)
     miny, maxy = min(yy), max(yy)
     avex, avey = numpy.mean(xx), numpy.mean(yy)
-    dx = (maxx - minx) / 10
-    dy = (maxy - miny) / 10
     if fLOG:
         mes = "[graph_cities] Lon:[{0}, {1}] x Lat:[{2}, {3}] - mean={4}, {5} - linked={6}"
         fLOG(mes.format(minx, maxx, miny, maxy, avex, avey, linked))
-    minx -= dx
-    maxx += dx
-    miny -= dy
-    maxy += dy
-
-    from mpl_toolkits.basemap import Basemap
-    m = Basemap(llcrnrlon=params.get('llcrnrlon', minx),
-                llcrnrlat=params.get('llcrnrlat', miny),
-                urcrnrlon=params.get('urcrnrlon', maxx),
-                urcrnrlat=params.get('urcrnrlat', maxy),
-                resolution=params.get('resolution', 'i'),
-                projection=params.get('projection', 'merc'),
-                lon_0=avex, lat_0=avey, ax=ax)
-
-    if drawcoastlines:
-        m.drawcoastlines(linestyle=params.get('linestyle', 'solid'),
-                         linewidth=params.get('linewidth', 0.5),
-                         color=params.get('line_color', 'k'),
-                         antialiased=params.get('antialiased', 1))
-    if drawcountries:
-        m.drawcountries(linestyle=params.get('linestyle', 'solid'),
-                        linewidth=params.get('linewidth', 0.5),
-                        color=params.get('line_color', 'k'),
-                        antialiased=params.get('antialiased', 1))
-    if fillcontinents:
-        m.fillcontinents(color=params.get('color', 'lightblue'),
-                         lake_color=params.get('lake_color', 'blue'),
-                         alpha=params.get('alpha', None))
-    if drawparallels:
-        m.drawparallels(numpy.arange(miny, maxy, params.get('slat', 10.)),
-                        linestyle=params.get('linestyle', 'solid'),
-                        linewidth=params.get('linewidth', 0.5),
-                        color=params.get('line_color', 'k'),
-                        antialiased=params.get('antialiased', 1))
-    if drawmeridians:
-        m.drawmeridians(numpy.arange(minx, maxx, params.get('slon', 10.)),
-                        linestyle=params.get('linestyle', 'solid'),
-                        linewidth=params.get('linewidth', 0.5),
-                        color=params.get('line_color', 'k'),
-                        antialiased=params.get('antialiased', 1))
-    if drawmapboundary:
-        m.drawmapboundary(fill_color=params.get('fill_color', 'aqua'),
-                          linewidth=params.get('linewidth', 0.5),
-                          color=params.get('line_color', 'k'))
-
-    style = params.get('style', 'ro')
-    markersize = params.get('markersize', 6)
-    fontname = params.get('fontname', 'Arial')
-    fontsize = str(params.get('fontsize', '16'))
-    fontcolor = params.get('fontcolor', 'black')
-    fontweight = params.get('fontweight', 'normal')
-    fontvalign = params.get('fontvalign', 'bottom')
-
-    if linked:
-        if "-" not in style:
-            style += "-"
-        xs, ys = [], []
-        i = 0
-        for lon, lat in zip(xx, yy):
-            x, y = m(lon, lat)
-            xs.append(x)
-            ys.append(y)
-            if nn[i] is not None and len(nn[i]) > 0:
-                ax.text(x, y, nn[i], fontname=fontname, size=fontsize,
-                        color=fontcolor, weight=fontweight,
-                        verticalalignment=fontvalign)
-            i += 1
-        if loop:
-            xs.append(xs[0])
-            ys.append(ys[0])
-
-        m.plot(xs, ys, style, markersize=markersize)
+    if bounds:
+        dx = (maxx - minx) / 10
+        dy = (maxy - miny) / 10
+        minx -= dx
+        maxx += dx
+        miny -= dy
+        maxy += dy
+        ax.set_extent(bounds)
     else:
-        i = 0
-        for lon, lat in zip(xx, yy):
-            x, y = m(lon, lat)
-            m.plot(x, y, style, markersize=markersize)
-            if nn[i] is not None and len(nn[i]) > 0:
-                ax.text(x, y, nn[i], fontname=fontname, size=fontsize,
-                        color=fontcolor, weight=fontweight,
-                        verticalalignment=fontvalign)
-            i += 1
-    return fig, ax, m if many else ax
+        ax.set_extent([minx, maxx, miny, maxy])
+        print([minx, maxx, miny, maxy])
+
+    view = df[list(names)]
+    for x, y, t in view.itertuples(index=False):
+        if t is None or len(t) == 0:
+            continue
+        ax.text(x, y, t,
+                fontname=fontname, size=fontsize,
+                color=fontcolor, weight=fontweight,
+                verticalalignment=fontvalign)
+    return fig, ax

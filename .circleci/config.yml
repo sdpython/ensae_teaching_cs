@@ -124,14 +124,6 @@ jobs:
             . venv/bin/activate
             pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
             
-      - run:
-          name: install basemap
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            sudo apt-get install libgeos-dev
-            pip install git+https://github.com/matplotlib/basemap.git
-
       - save_cache:
           paths:
             - ./venv

@@ -96,6 +96,7 @@ epkg_dictionary["blockchain"] = 'https://fr.wikipedia.org/wiki/Blockchain'
 epkg_dictionary["csharpy"] = 'http://www.xavierdupre.fr/app/csharpy/helpsphinx/index.html'
 epkg_dictionary["csharpyml"] = 'http://www.xavierdupre.fr/app/csharpyml/helpsphinx/index.html'
 epkg_dictionary["C++"] = 'https://fr.wikipedia.org/wiki/C%2B%2B'
+epkg_dictionary["cartopy"] = "http://scitools.org.uk/cartopy/"
 epkg_dictionary["catboost"] = "https://github.com/catboost/catboost"
 epkg_dictionary["CNTK"] = 'https://www.microsoft.com/en-us/research/product/cognitive-toolkit/'
 epkg_dictionary["dask"] = 'http://dask.pydata.org/en/latest/'

@@ -31,7 +31,7 @@ convertir les coordonnées dans un même système,
 le plus souvent. Le module :epkg:`pyproj` vient aider à cela.
 Une fois qu'on a tous les éléments, on peut commencer à tracer la carte
 ce qui revient à convertir les coordonnées *latitude, longitude*
-dans un repère *x, y*, ce que fait un module comme :epkg:`basemap`.
+dans un repère *x, y*, ce que fait un module comme :epkg:`cartopy`.
 
 .. image:: cfr.png
     :width: 300
@@ -64,21 +64,19 @@ unique, c'est ce vers quoi tend le module :epkg:`geopandas`.
   `geoJSON <https://en.wikipedia.org/wiki/GeoJSON>`_,
 * `Projections sphériques et conversion <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/notebooks/chsh_geo.html>`_
 * conversion de coordonnées en longitude / latitude
-* librairies
-  `basemap <http://matplotlib.org/basemap/>`_, ...
+* librairies :epkg:`cartopy`, ...
 * sources :
   `DataMaps <http://datamaps.github.io/>`_,
   `Find Data <https://bost.ocks.org/mike/map/#finding-data>`_
 
 *Modules*
 
-* `cartopy <http://scitools.org.uk/cartopy/>`_
+* :epkg:`cartopy`
 * `pyshp <https://pypi.python.org/pypi/pyshp>`_
 * `shapely <https://pypi.python.org/pypi/Shapely>`_
 * `pyproj <https://pypi.python.org/pypi/pyproj>`_
 * `geopy <https://pypi.python.org/pypi/geopy>`_
-* `basemap <http://matplotlib.org/basemap/>`_
-  (maintenu jusqu'en 2020, il faut préférer `cartopy <http://scitools.org.uk/cartopy/>`_)
+* :epkg:`basemap` (maintenu jusqu'en 2020, il faut préférer :epkg:`cartopy`)
 * `geoviews <http://geo.holoviews.org/Geometries.html>`_
 * `geopandas <http://geopandas.org/>`_
 

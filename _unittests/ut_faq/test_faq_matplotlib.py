@@ -5,10 +5,9 @@
 import sys
 import os
 import unittest
-import warnings
 import pandas
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, fix_tkinter_issues_virtualenv
+from pyquickhelper.pycode import get_temp_folder, fix_tkinter_issues_virtualenv, ExtTestCase
 
 
 try:
@@ -28,17 +27,13 @@ except ImportError:
 from src.ensae_teaching_cs.faq.faq_matplotlib import graph_cities
 
 
-class TestFaqMatplotlib(unittest.TestCase):
+class TestFaqMatplotlib(ExtTestCase):
 
     def test_american_cities(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        if sys.version_info[:2] <= (3, 4):
-            warnings.warn(
-                "Issue with Python 3.4, bug probably related to wrong pointers")
-            return
         fix_tkinter_issues_virtualenv()
         import matplotlib.pyplot as plt
         filter = {"NewYork": "NY", "Chicago": "CH",
@@ -48,21 +43,16 @@ class TestFaqMatplotlib(unittest.TestCase):
         df = pandas.read_csv(data)
         df["Longitude"] = -df["Longitude"]
         df["City"] = df["City"].apply(lambda v: filter.get(v, ""))
-        fig, ax = plt.subplots(figsize=(32, 32))
         df = df[df.Latitude < 52]
         df = df[df.Longitude > -130].copy()
-        ax = graph_cities(df, ax=ax, markersize=3, fontcolor=(0, 1.0, 0), fontsize='40',
-                          fontweight="bold")
-        assert ax is not None
+        fig, ax = graph_cities(df, markersize=3, fontcolor=(0, 1.0, 0), fontsize='40',
+                                  fontweight="bold", figsize=(32, 32))
+        self.assertNotEmpty(ax)
         img = os.path.join(temp, "img.png")
-        fig.savefig(img)
-        assert os.path.exists(img)
-        # mpld3 is deprecated.
-        # name2 = os.path.join(temp, "picture.html")
-        # mpld3.save_html(fig, name2)
-        # assert os.path.exists(name2)
         if __name__ == "__main__":
             fig.show()
+        fig.savefig(img)
+        self.assertExists(img)
         plt.close('all')
         fLOG("end")
 

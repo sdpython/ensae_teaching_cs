@@ -17,4 +17,3 @@
     `PaddlePaddle <http://www.paddlepaddle.org/>`_
     qui a quelque tutoriels sans fioritures sur le
     sujet du deep learning.
-

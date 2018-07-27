@@ -107,7 +107,7 @@ discutées.
     * - 6/11 (8) *TD*
       -
       - Transfer Learning.
-      - 
+      -
       -
       -
       - Deux exposés de 10 minutes + 5 minutes de questions
@@ -119,7 +119,7 @@ Intervenants
 `Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_,
 Anne Muller, Elodie Royant, Antoine Thabault,
 Antoine Ly, Benjamin Donnot, Eliot Barril,
-Frédéric Bardolle, 
+Frédéric Bardolle,
 `Gaël Varoquaux <http://gael-varoquaux.info/>`_.
 
 Notes

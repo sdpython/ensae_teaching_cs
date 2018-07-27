@@ -43,6 +43,5 @@ install:
   - pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
   - conda install -q pytorch torchvision -c soumith
   - pip install cairocffi cairosvg
-  - pip install git+https://github.com/matplotlib/basemap.git
 script:
   - python setup.py unittests

@@ -28,7 +28,8 @@ def lambert93_to_WGPS(lambertE, lambertN):
         ne sont pas toujours des longitudes, latitudes mais des coordonnées exprimées dans un système
         de projection conique `Lambert 93 <https://fr.wikipedia.org/wiki/Projection_conique_conforme_de_Lambert>`_.
         Il faut convertir les coordonnées avant de pouvoir tracer la carte ou changer la projection
-        utilisée par basemap : `Lambert Conformal Projection <http://matplotlib.org/basemap/users/lcc.html>`_.
+        utilisée par :epkg:`cartopy` :
+        `Lambert Conformal Projection <https://scitools.org.uk/cartopy/docs/v0.15/crs/projections.html#lambertconformal>`_.
     """
     class constantes:
         GRS80E = 0.081819191042816
