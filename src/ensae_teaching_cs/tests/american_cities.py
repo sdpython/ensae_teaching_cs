@@ -53,9 +53,8 @@ def american_cities(df_or_filename, nb_cities=-1, img=None, fLOG=fLOG):
 
     if img is not None:
         import matplotlib.pyplot as plt
-        fig, ax = plt.subplots(figsize=(32, 32))
-        ax = graph_cities(dftrip, ax=ax, markersize=3, linked=True, fLOG=fLOG,
-                          fontcolor="red", fontsize='16', loop=True)
+        fig, ax = graph_cities(dftrip, markersize=3, linked=True, fLOG=fLOG,
+                               fontcolor="red", fontsize='16', loop=True, figsize=(32, 32))
         assert ax is not None
         fig.savefig(img)
         assert os.path.exists(img)

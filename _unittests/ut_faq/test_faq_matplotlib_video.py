@@ -7,7 +7,7 @@ import os
 import unittest
 import warnings
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, fix_tkinter_issues_virtualenv
+from pyquickhelper.pycode import get_temp_folder, fix_tkinter_issues_virtualenv, ExtTestCase
 
 
 try:
@@ -27,7 +27,7 @@ except ImportError:
 from src.ensae_teaching_cs.tests.american_cities import american_cities
 
 
-class TestFaqMatplotlibVideo(unittest.TestCase):
+class TestFaqMatplotlibVideo(ExtTestCase):
 
     def test_american_cities(self):
         fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
@@ -41,7 +41,7 @@ class TestFaqMatplotlibVideo(unittest.TestCase):
         name = os.path.join(temp, "..", "data", "american_cities.txt")
         img = os.path.join(temp, "img.png")
         res = american_cities(name, 40, img, fLOG)
-        assert res is not None
+        self.assertNotEmpty(res)
 
 
 if __name__ == "__main__":
