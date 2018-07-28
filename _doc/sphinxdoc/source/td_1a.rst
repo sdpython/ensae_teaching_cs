@@ -381,6 +381,8 @@ Bibliographie
 * `Résumé de la syntaxe <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_resume/python_sheet.html>`_
 * :epkg:`teachpyx` : notes de cours sur le langage :epkg:`Python`
 * `Aide Mémoire Python <http://www.le-memento.fr/python.html>`_
+* `Python Cheat Sheets <https://github.com/Naereen/pysheeet>`_, aborde des sujets
+  rares comme les sockets, l'API C, ...
 
 *Liens*
 

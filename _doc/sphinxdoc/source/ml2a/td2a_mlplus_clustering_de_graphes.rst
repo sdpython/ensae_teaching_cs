@@ -24,6 +24,7 @@ Clustering de Graphes
 * `A Unified Framework for Model-based Clustering <http://www.jmlr.org/papers/volume4/zhong03a/zhong03a.pdf>`_
 * `A Tensor Approach to Learning Mixed Membership Community Models <http://jmlr.org/papers/volume15/anandkumar14a/anandkumar14a.pdf>`_
 * `Clustering from General Pairwise Observations with Applications to Time-varying Graphs <http://www.jmlr.org/papers/volume18/15-659/15-659.pdf>`_
+* `A Spectral Algorithm with Additive Clustering for the Recovery of Overlapping Communities in Networks <https://arxiv.org/abs/1506.04158>`_
 
 *Lectures - métriques*
 

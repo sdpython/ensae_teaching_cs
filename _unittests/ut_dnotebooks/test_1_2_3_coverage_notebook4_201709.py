@@ -26,14 +26,14 @@ except ImportError:
     import src.ensae_teaching_cs as thismodule
 
 
-class TestNotebook123Coverage201709(unittest.TestCase):
+class TestNotebook123Coverage4_201709(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
                                         __file__, hide=True)
 
     def a_test_notebook_runner(self, name, folder, valid=None, copy_folder=None):
-        temp = get_temp_folder(__file__, "temp_notebook_123_{0}".format(name))
+        temp = get_temp_folder(__file__, "temp_notebook_123_4_{0}".format(name))
         doc = os.path.join(temp, "..", "..", "..", "_doc", "notebooks", folder)
         self.assertTrue(os.path.exists(doc))
         keepnote = [os.path.join(doc, _) for _ in os.listdir(doc) if name in _]

@@ -41,3 +41,12 @@ ou *apprentissage par renforcement*
 *Modules*
 
 * `Ray RLlib <http://ray.readthedocs.io/en/latest/rllib.html>`_ (ray - rllib)
+
+*Environnements*
+
+* `OpenAI Gym <https://gym.openai.com/>`_, l'outil propose une
+  formalisation qui permet de tester
+  les algorithmes d'apprentissage par renforcements pour ses propres
+  expériences ou pour des contextes ou jeu prédéfinies.
+  Cela peut aboutir à ce type d'expérience :
+  `OpenAI Gym for NES games + DQN with Keras to learn Mario Bros. from raw pixels <https://naereen.github.io/gym-nes-mario-bros/>`_.

@@ -13,3 +13,4 @@ Tests A/B
 *Lectures*
 
 * `Should We Condition on the Test for Pre-trends in Difference-in-Difference Designs? <https://arxiv.org/abs/1804.01208>`_
+* `On the Complexity of A/B Testing <http://chercheurs.lille.inria.fr/ekaufman/kaufmann14.pdf>`_

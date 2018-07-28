@@ -59,7 +59,8 @@ On peut envisager des contextes différents tels que le jeu de Pacman ou de Pong
 * `Reinforcement Learning (Berkeley) <http://inst.eecs.berkeley.edu/~cs188/fa10/projects/reinforcement/reinforcement.html>`_
 * `pg-pong.py <https://gist.github.com/karpathy/a4166c7fe253700972fcbc77e4ea32c5>`_
 
-Autres pistes :ref:`l-td2a-reinforcement-learning`.
+Autres pistes :ref:`l-td2a-reinforcement-learning`,
+:ref:`l-td2a-reinforcement-learning-marl`.
 
 .. _l-ml-chow:
 

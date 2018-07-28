@@ -19,7 +19,7 @@
 
     * `Deep Image Prior <https://arxiv.org/pdf/1711.10925.pdf>`_
 
-    Dans :ref:`l-td2a-reinforcement-learning` :
+    Dans :ref:`l-td2a-reinforcement-learning-marl` :
 
     * `A reinforcement learning algorithm for building collaboration in multi-agent systems <https://arxiv.org/pdf/1711.10574.pdf>`_
 

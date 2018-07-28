@@ -94,6 +94,10 @@ Catalogue d'algorithmes
     * `tri fusion <http://fr.wikipedia.org/wiki/Tri_fusion>`_ **algo**
     * `bucket sort <http://en.wikipedia.org/wiki/Bucket_sort>`_ **algo**
     * `tri à bulles <http://fr.wikipedia.org/wiki/Tri_%C3%A0_bulles>`_ **algo**
+* Complexité
+    * `Complexité de Lempel-Ziv <https://github.com/Naereen/Lempel-Ziv_Complexity>`_ **algo**
+* Distance
+    * `Python implementation of Kullback-Leibler divergences and kl-UCB indexes <https://github.com/Naereen/Kullback-Leibler-divergences-and-kl-UCB-indexes>`_ **algo**
 * Diviser pour reigner
     * `dichotomie <http://fr.wikipedia.org/wiki/Dichotomie>`_ **algo**
     * `branch and bound <http://en.wikipedia.org/wiki/Branch_and_bound>`_ **algo**

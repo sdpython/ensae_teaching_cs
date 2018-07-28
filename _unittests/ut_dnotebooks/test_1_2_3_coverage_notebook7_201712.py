@@ -24,7 +24,7 @@ except ImportError:
     import src
 
 
-class TestNotebook1237Coverage201712(unittest.TestCase):
+class TestNotebook1237Coverage7_201712(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],

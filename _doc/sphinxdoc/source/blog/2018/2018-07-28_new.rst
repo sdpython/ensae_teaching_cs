@@ -1,0 +1,45 @@
+
+.. blogpost::
+    :title: Ajout de référence
+    :keywords: netron
+    :date: 2018-07-28
+    :categories: biblio
+
+    :ref:`l-ml2a-bandits`, :ref:`l-mlanomprivacy` :
+
+    * `Corrupt Bandits for Preserving Local Privacy <https://arxiv.org/abs/1708.05033>`_
+
+    :ref:`l-ml2a-bandits` :
+
+    * `Multi-Player Bandits Revisited <https://arxiv.org/abs/1711.02317>`_
+    * `Learning the distribution with largest mean: two bandit frameworks <https://arxiv.org/abs/1702.00001>`_
+    * `Modeles de bandit : une histoire bayésienne et fréquentiste <http://chercheurs.lille.inria.fr/ekaufman/Matapli_Kaufmann.pdf>`_
+    * `Analyse de stratégies bayésiennes et fréquentistes pour l’allocation séquentielle de ressources <http://chercheurs.lille.inria.fr/ekaufman/TheseEmilie.pdf>`_ (thèse)
+    * `SMPyBandits <https://github.com/SMPyBandits/SMPyBandits>`_,
+      `SMPyBandits, a Research Framework for Single and Multi-Players Multi-Arms Bandits Algorithms in Python <https://perso.crans.org/besson/articles/SMPyBandits__Long_Version__02-2018.pdf>`_
+
+    :ref:`l-cluster-graph` :
+
+    * `A Spectral Algorithm with Additive Clustering for the Recovery of Overlapping Communities in Networks <https://arxiv.org/abs/1506.04158>`_
+
+    :ref:`l-ml2a-testab` :
+
+    * `On the Complexity of A/B Testing <http://chercheurs.lille.inria.fr/ekaufman/kaufmann14.pdf>`_
+    * `Python implementation of Kullback-Leibler divergences and kl-UCB indexes <https://github.com/Naereen/Kullback-Leibler-divergences-and-kl-UCB-indexes>`_
+
+    :ref:`l-td1a-biblio` :
+
+    * `Python Cheat Sheets <https://github.com/Naereen/pysheeet>`_, aborde des sujets
+      rares comme les sockets, l'API C, ...
+
+    Et pour le fun :
+
+    * `Un clone en Python 3 de Parcoursup, écrit à but didactique <https://github.com/Naereen/ParcourSup.py>`_
+
+    :ref:`l-td2a-reinforcement-learning`, :ref:`l-td2a-reinforcement-learning-marl` :
+
+    * `OpenAI Gym for NES games + DQN with Keras to learn Mario Bros. from raw pixels <https://naereen.github.io/gym-nes-mario-bros/>`_
+
+    :ref:`l-algoculture-shortlist` :
+
+    * `Complexité de Lempel-Ziv <https://github.com/Naereen/Lempel-Ziv_Complexity>`_

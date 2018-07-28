@@ -28,6 +28,7 @@ Anonymisation des données / Privacy
 * `Privacy for Free: Posterior Sampling and Stochastic Gradient Monte Carlo <http://www.jmlr.org/proceedings/papers/v37/wangg15.pdf>`_
 * `Privatics (INRIA) <https://team.inria.fr/privatics/>`_
 * `Differential Privacy for Bayesian Inference through Posterior Sampling∗ <http://www.jmlr.org/papers/volume18/15-257/15-257.pdf>`_
+* `Corrupt Bandits for Preserving Local Privacy <https://arxiv.org/abs/1708.05033>`_
 
 *Tables rondes*
 

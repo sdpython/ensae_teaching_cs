@@ -6,8 +6,7 @@
 import sys
 import os
 import unittest
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, ExtTestCase
 from pyquickhelper.pycode.setup_helper import write_module_scripts
 
 try:
@@ -27,20 +26,15 @@ except ImportError:
 from src.ensae_teaching_cs import __blog__
 
 
-class TestWriteScript(unittest.TestCase):
+class TestWriteScript(ExtTestCase):
 
     def test_write_script(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
         temp = get_temp_folder(__file__, "temp_write_script")
 
         res = write_module_scripts(temp, "win32", __blog__)
-        assert len(res) > 1
+        self.assertGreater(len(res), 2)
         for c in res:
-            assert os.path.exists(c)
+            self.assertExists(c)
             with open(c, "r") as f:
                 content = f.read()
             if "__" in content:
