@@ -33,7 +33,8 @@ class TestNotebook123Coverage5_201710(unittest.TestCase):
                                         __file__, hide=True)
 
     def a_test_notebook_runner(self, name, folder, valid=None, copy_folder=None):
-        temp = get_temp_folder(__file__, "temp_notebook_123_5_{0}".format(name))
+        temp = get_temp_folder(
+            __file__, "temp_notebook_123_5_{0}".format(name))
         doc = os.path.join(temp, "..", "..", "..", "_doc", "notebooks", folder)
         if not os.path.exists(doc):
             raise FileNotFoundError(doc)

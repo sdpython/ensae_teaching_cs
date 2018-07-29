@@ -33,7 +33,6 @@ plotly
 pocket
 psutil
 pydub
-pyenbc
 pyensae
 pygal
 pygal_maps_fr

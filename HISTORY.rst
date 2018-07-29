@@ -5,20 +5,21 @@
 History
 =======
 
-current - 2018-07-27 - 0.00Mb
+current - 2018-07-29 - 0.00Mb
 =============================
 
+* `60`: remove dependency on fastcluster (2018-07-29)
 * `40`: ajouter geopandas (2018-07-27)
 * `38`: replace basemap by cartopy (2018-07-27)
 * `42`: split deep learning, make it a separate package (2018-07-02)
 * `59`: fix images on page Tests unitaires, setup et ingéniérie logiciel (correction) (2018-06-08)
 * `58`: remove function based on ffmpeg.zip (2018-05-27)
 * `57`: fix notebook with pytorch (2018-05-27)
-* `56`: remove ggplot (2018-05-24)
 
 0.8.2426 - 2018-05-24 - 6.30Mb
 ==============================
 
+* `56`: remove ggplot (2018-05-24)
 * `55`: remove old presentations (2018-05-23)
 * `54`: replaces griddata by matplotlib.tri.Triangulation (2018-05-23)
 * `53`: remove natgrid (2018-05-23)
