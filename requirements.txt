@@ -33,7 +33,7 @@ plotly
 pocket
 psutil
 pydub
-pyensae
+pyensae>=1.2.788
 pygal
 pygal_maps_fr
 pygame

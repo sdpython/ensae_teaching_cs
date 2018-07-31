@@ -25,7 +25,7 @@ fermée à la dernière session où les résultas et les idées seront
 discutées.
 
 .. list-table::
-    :widths: 2 5 5 5
+    :widths: 2 5 5 5 5 5 5
     :header-rows: 1
 
     * - Séance

@@ -4,7 +4,7 @@
 """
 import os
 from pyquickhelper.loghelper import noLOG
-from pyensae.file_helper.decompress_helper import decompress_zip
+from pyensae.filehelper.decompress_helper import decompress_zip
 
 
 def anyzip(filename, local=True, cache_folder=".", fLOG=noLOG, **kwargs):
