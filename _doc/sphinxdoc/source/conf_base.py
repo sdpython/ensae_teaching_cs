@@ -111,6 +111,7 @@ epkg_dictionary["FastText"] = 'https://fasttext.cc/'
 epkg_dictionary["Flask"] = 'http://flask.pocoo.org/'
 epkg_dictionary["folium"] = 'https://folium.readthedocs.io/en/latest/'
 epkg_dictionary["fortran"] = 'https://fr.wikipedia.org/wiki/Fortran'
+epkg_dictionary["Freakeconometrics"] = "https://freakonometrics.hypotheses.org/"
 epkg_dictionary["geopandas"] = 'http://geopandas.org/'
 epkg_dictionary["GIL"] = 'https://wiki.python.org/moin/GlobalInterpreterLock'
 epkg_dictionary["Kaggle"] = 'https://www.kaggle.com/'

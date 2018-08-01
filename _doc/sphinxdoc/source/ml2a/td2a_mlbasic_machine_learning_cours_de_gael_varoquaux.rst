@@ -40,6 +40,13 @@ ici :
     ../specials/machine_learning
     ../notebooks/td2a_eco_regressions_lineaires
 
+La série d'articles suivante est tirée de
+:epkg:`Freakeconometrics` revient sur les propriétés
+des modèles de classification et régression illustrées
+avec le langage :epkg:`R ` :
+
+* :ref:`Séries d'articles sur les modèles linéaires <post-freak-linear-models>`
+
 *Notebooks*
 
 .. toctree::
@@ -47,6 +54,7 @@ ici :
 
     ../notebooks/_gs2a_statdes
     ../notebooks/_gs2a_ml_base
+
 
 *Lectures*
 

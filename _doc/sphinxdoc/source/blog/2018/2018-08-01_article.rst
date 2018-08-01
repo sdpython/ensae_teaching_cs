@@ -1,0 +1,31 @@
+
+.. blogpost::
+    :title: Quelques articles intéressants
+    :keywords: freakeconometrics
+    :date: 2018-08-01
+    :categories: biblio
+    :lid: post-freak-linear-models
+
+    Presque un cours.
+
+    * `Stupid Economics <https://freakonometrics.hypotheses.org/53219>`_
+    * `Standardization in Lasso <https://freakonometrics.hypotheses.org/53470>`_
+    * `On the Robustness of Lasso <https://freakonometrics.hypotheses.org/53602>`_
+    
+    * `Quantile Regression Home Made <https://freakonometrics.hypotheses.org/53223>`_
+    * `Linear Regression with Map/Reduce <https://freakonometrics.hypotheses.org/53269>`_
+    * `Parallelizing Linear Regression or Using Multiple Sources <https://freakonometrics.hypotheses.org/53283>`_
+    * `Convex Regression Model <https://freakonometrics.hypotheses.org/53384>`_
+
+    * `Classification from Scratch <https://freakonometrics.hypotheses.org/52731>`_
+    * `Classification from Scratch, Logistic Regresssion 1/8 <https://freakonometrics.hypotheses.org/52747>`_
+    * `Classification from Scratch, Logistic With Splines 2/8 <https://freakonometrics.hypotheses.org/52771>`_
+    * `Classification from Scratch, Logistic With Kernels 3/8 <https://freakonometrics.hypotheses.org/52815>`_
+    * `Classification from Scratch, Penalized Ridge Logistic 4/8 <https://freakonometrics.hypotheses.org/52773>`_
+    * `Classification from Scratch, Penalized Lasso Logistic 5/8 <https://freakonometrics.hypotheses.org/52894>`_
+    * `Classification from Scratch, Neural Nets 6/8 <https://freakonometrics.hypotheses.org/52774>`_
+    * `Classification from Scratch, SVM 7/8 <https://freakonometrics.hypotheses.org/52775>`_
+    * `Classification from Scratch, Linear Discrimination 8/8 <https://freakonometrics.hypotheses.org/53021>`_
+    * `Classification from Scratch, Trees 9/8 <https://freakonometrics.hypotheses.org/52776>`_
+    * `Classification from Scratch 10/8, Bagging and Forests <https://freakonometrics.hypotheses.org/52777>`_
+    * `Classification from Scratch, Boosting 11/8 <https://freakonometrics.hypotheses.org/52782>`_
