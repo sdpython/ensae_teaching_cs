@@ -7,7 +7,7 @@ import os
 import shutil
 import sys
 from pyquickhelper.loghelper import noLOG
-from pyquickhelper.ipythonhelper.notebookhelper import install_python_kernel_for_unittest
+from pyquickhelper.ipythonhelper.notebook_helper import install_python_kernel_for_unittest
 from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut
 from pyquickhelper.ipythonhelper import get_additional_paths as pyq_get_additional_paths
 from pyquickhelper.pycode import is_travis_or_appveyor, get_temp_folder
