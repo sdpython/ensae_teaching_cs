@@ -78,15 +78,15 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
 
     .. runpython::
 
-        import textwrap
         from ensae_teaching_cs.automation.jenkins_helper import default_jenkins_jobs
         modules = default_jenkins_jobs()
-        text = str(modules)
-        print(textwrap.wrap(text))
+        text = [str(m) for m in modules]
+        print("\\n".join(text))
 
     """
+    plat = "win" if sys.platform.startswith("win") else "lin"
     yml = []
-    pattern = "https://raw.githubusercontent.com/sdpython/%s/master/.local.jenkins.win.yml"
+    pattern = "https://raw.githubusercontent.com/sdpython/%s/master/.local.jenkins.{0}.yml".format(plat)
     modules = ["_automation"] + get_teaching_modules()
     for c in modules:
         yml.append(pattern % c)
@@ -129,10 +129,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None):
                 "standalone [local_pypi]",
                 # update
                 ("pymyinstall [update_modules] [py37]", "H H(0-1) * * 5"),
-                "pymyinstall [update_modules] [winpython]",
                 "pymyinstall [update_modules] [py36]",
-                "pymyinstall [update_modules] [py27]",
-                "pymyinstall [update_modules] [anaconda2]",
                 "pymyinstall [update_modules] [anaconda3]",
                 ]
         return res
