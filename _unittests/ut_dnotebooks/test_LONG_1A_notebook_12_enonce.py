@@ -7,7 +7,7 @@ import sys
 import os
 import unittest
 from pyquickhelper.loghelper import fLOG, noLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
+from pyquickhelper.pycode import get_temp_folder, skipif_travis, add_missing_development_version
 
 
 try:
@@ -46,15 +46,13 @@ class TestNotebookRunner1a_enonce_12 (unittest.TestCase):
                 return ""
         return code
 
+    @skipif_travis("issue with MKL on travis")
     def test_notebook_runner_enonce_12(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
-        if is_travis_or_appveyor() == "travis":
-            # issue with MKL on travis
-            return
         temp = get_temp_folder(__file__, "temp_notebook1a_enonce_12")
         keepnote = ls_notebooks("td1a_dfnp")
         execute_notebooks(temp, keepnote, (lambda i, n: "cenonce_session_12" in n),

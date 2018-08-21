@@ -1,0 +1,15 @@
+
+.. blogpost::
+    :title: Quelques articles intéressants
+    :keywords: key value store
+    :date: 2018-08-20
+    :categories: news
+
+    Dans :ref:`l-algo-distribues-3a` :
+
+    * `Faster: A Concurrent Key-Value Store with In-Place Updates <https://www.microsoft.com/en-us/research/uploads/prod/2018/03/faster-sigmod18.pdf>`_
+    * `FASTER <https://github.com/Microsoft/FASTER>`_
+
+    Un dernier article intéressant sur quelques principes
+    à suivre pour implémenter des logiciels sûrs :
+    `Software Security is a Programming Languages Issue <http://www.pl-enthusiast.net/2018/08/13/security-programming-languages-issue/>`_.

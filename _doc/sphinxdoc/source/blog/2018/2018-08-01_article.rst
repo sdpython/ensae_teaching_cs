@@ -11,7 +11,7 @@
     * `Stupid Economics <https://freakonometrics.hypotheses.org/53219>`_
     * `Standardization in Lasso <https://freakonometrics.hypotheses.org/53470>`_
     * `On the Robustness of Lasso <https://freakonometrics.hypotheses.org/53602>`_
-    
+
     * `Quantile Regression Home Made <https://freakonometrics.hypotheses.org/53223>`_
     * `Linear Regression with Map/Reduce <https://freakonometrics.hypotheses.org/53269>`_
     * `Parallelizing Linear Regression or Using Multiple Sources <https://freakonometrics.hypotheses.org/53283>`_

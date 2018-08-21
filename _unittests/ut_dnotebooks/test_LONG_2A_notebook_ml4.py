@@ -6,10 +6,9 @@
 import sys
 import os
 import unittest
-import warnings
 import shutil
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
+from pyquickhelper.pycode import get_temp_folder, skipif_appveyor, skipif_travis, add_missing_development_version
 
 try:
     import src
@@ -31,14 +30,13 @@ class TestLONGNotebookRunner2aML4(unittest.TestCase):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
                                         __file__, hide=True)
 
+    @skipif_appveyor("too long for appveyor")
+    @skipif_travis("execution does not stop")
     def test_notebook_runner_2a_ml(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        if is_travis_or_appveyor() == "appveyor":
-            # too long for appveyor
-            return
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         from src.ensae_teaching_cs.data import simple_database
         temp = get_temp_folder(__file__, "temp_notebook2a_ml4")
@@ -62,10 +60,6 @@ class TestLONGNotebookRunner2aML4(unittest.TestCase):
             if "libraries" in n:
                 return False
             return True
-
-        if is_travis_or_appveyor() == "travis":
-            warnings.warn("execution does not stop")
-            return
 
         execute_notebooks(temp, keepnote, filter, fLOG=fLOG,
                           clean_function=clean_function_1a,

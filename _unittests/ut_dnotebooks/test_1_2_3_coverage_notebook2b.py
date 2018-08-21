@@ -8,7 +8,7 @@ import os
 import unittest
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.filehelper import synchronize_folder
-from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, is_travis_or_appveyor
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, skipif_travis
 from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut, get_additional_paths
 
 
@@ -58,27 +58,21 @@ class TestNotebook123Coverage2b(unittest.TestCase):
             temp, keepnote, additional_path=add_path, valid=valid)
         execute_notebook_list_finalize_ut(res, fLOG=fLOG, dump=thismodule)
 
+    @skipif_travis("no graphviz installed")
     def test_notebook_graph_spectral_clustering(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        if is_travis_or_appveyor() == "travis":
-            # no graphviz
-            return
-
         self.a_test_notebook_runner("graph_spectral_clustering", "td1a_algo")
 
+    @skipif_travis("no graphviz installed")
     def test_notebook_graph1exo_parcours(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-
-        if is_travis_or_appveyor() == "travis":
-            # no graphviz
-            return
 
         self.a_test_notebook_runner("graph1exo_parcours", "td1a_algo")
 

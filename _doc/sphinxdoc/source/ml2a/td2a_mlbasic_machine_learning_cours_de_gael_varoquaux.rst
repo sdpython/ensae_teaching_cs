@@ -55,7 +55,6 @@ avec le langage :epkg:`R ` :
     ../notebooks/_gs2a_statdes
     ../notebooks/_gs2a_ml_base
 
-
 *Lectures*
 
 * `API design for machine learning software: experiences from the scikit-learn project <https://arxiv.org/pdf/1309.0238.pdf>`_

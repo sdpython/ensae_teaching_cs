@@ -6,10 +6,9 @@
 import sys
 import os
 import unittest
-import warnings
 import shutil
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
+from pyquickhelper.pycode import get_temp_folder, skipif_travis, add_missing_development_version
 
 try:
     import src
@@ -31,6 +30,7 @@ class TestNotebookRunner2aEcoSNCF(unittest.TestCase):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
                                         __file__, hide=True)
 
+    @skipif_travis("execution does not stop")
     def test_notebook_runner_2a_eco_sncf(self):
         fLOG(
             __file__,
@@ -49,10 +49,6 @@ class TestNotebookRunner2aEcoSNCF(unittest.TestCase):
             if "SNCF" not in n:
                 return False
             return True
-
-        if is_travis_or_appveyor() == "travis":
-            warnings.warn("execution does not stop")
-            return
 
         execute_notebooks(temp, keepnote,
                           filter,

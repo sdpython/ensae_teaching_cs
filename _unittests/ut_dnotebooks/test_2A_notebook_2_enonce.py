@@ -5,10 +5,9 @@
 import sys
 import os
 import unittest
-import warnings
 import shutil
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
+from pyquickhelper.pycode import get_temp_folder, skipif_travis, skipif_appveyor, add_missing_development_version
 
 
 try:
@@ -32,6 +31,8 @@ class TestNotebookRunner2a_2_enonce(unittest.TestCase):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
                                         __file__, hide=True)
 
+    @skipif_travis("forgotten issue")
+    @skipif_appveyor("forgotten issue")
     def test_notebook_runner(self):
         fLOG(
             __file__,
@@ -40,11 +41,6 @@ class TestNotebookRunner2a_2_enonce(unittest.TestCase):
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook2a_2_enonce")
         keepnote = ls_notebooks("td2a")
-
-        if is_travis_or_appveyor() in ('travis', 'appveyor'):
-            warnings.warn(
-                "travis or appveyor, unable to test TestNotebookRunner2a_2_enonce.test_notebook_runner")
-            return
 
         fold = os.path.dirname(keepnote[0])
         for png in os.listdir(fold):

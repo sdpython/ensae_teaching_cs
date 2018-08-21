@@ -221,6 +221,7 @@ Structures de données
 
 * `Introduction to Algorithms, 2nd Edition <http://is.ptithcm.edu.vn/~tdhuy/Programming/Introduction.to.Algorithms.pdf>`_, Cormen, Leiserson, Rivest, Stein.
 * `Cracking the Coding Interview <http://www.valleytalk.org/wp-content/uploads/2012/10/CrackCode.pdf>`_
+* :ref:`Ecrire du code rapide <blog-post-optim-code-2018-08>` (article de blog)
 
 Threads et synchronisation
 ++++++++++++++++++++++++++
@@ -247,6 +248,8 @@ Plus proches voisins en grandes dimensions
 * `Scalable Locality-Sensitive Hashing for Similarity Search in High-Dimensional, Large-Scale Multimedia Datasets <https://arxiv.org/abs/1310.4136>`_
 * `Streaming Similarity Search over one Billion Tweets using Parallel Locality-Sensitive Hashing <http://istc-bigdata.org/plsh/docs/plsh_paper.pdf>`_
 
+.. _l-algo-distribues-3a:
+
 Distribution des calculs, stratégies de stockage, SQL NoSQL
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -263,11 +266,13 @@ Distribution des calculs, stratégies de stockage, SQL NoSQL
 * `Distributed Algorithms in NoSQL Databases <https://highlyscalable.wordpress.com/2012/09/18/distributed-algorithms-in-nosql-databases/>`_
 * `No SQL Data Modeling Techniques <https://highlyscalable.wordpress.com/2012/03/01/nosql-data-modeling-techniques/>`_
 * `Distributed Systems and Parallel Computing <http://research.google.com/pubs/DistributedSystemsandParallelComputing.html>`_
+* `Faster: A Concurrent Key-Value Store with In-Place Updates <https://www.microsoft.com/en-us/research/uploads/prod/2018/03/faster-sigmod18.pdf>`_
 
 *Logiciels*
 
 * `MongoDB <https://www.mongodb.com/>`_
 * `rethinkdb <https://rethinkdb.com/>`_ (python : `rethinkdb <https://pypi.python.org/pypi/rethinkdb/>`_)
+* `FASTER <https://github.com/Microsoft/FASTER>`_
 
 Compression des données
 +++++++++++++++++++++++

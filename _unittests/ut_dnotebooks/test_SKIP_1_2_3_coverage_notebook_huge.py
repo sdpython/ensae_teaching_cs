@@ -7,7 +7,7 @@ import sys
 import os
 import unittest
 from pyquickhelper.loghelper import fLOG, run_cmd
-from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, is_travis_or_appveyor
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, skipif_appveyor
 
 
 try:
@@ -48,16 +48,12 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
                           dump=src.ensae_teaching_cs,
                           additional_path=additional_path)
 
+    @skipif_appveyor("pytables has an issue")
     def test_notebook_runner_ml_huge(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-
-        if is_travis_or_appveyor() == "appveyor":
-            # pytables has an issue
-            # return
-            pass
 
         if sys.platform.startswith("win"):
             import numpy

@@ -7,10 +7,9 @@ import os
 import shutil
 import sys
 from pyquickhelper.loghelper import noLOG
-from pyquickhelper.ipythonhelper.notebook_helper import install_python_kernel_for_unittest
 from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut
 from pyquickhelper.ipythonhelper import get_additional_paths as pyq_get_additional_paths
-from pyquickhelper.pycode import is_travis_or_appveyor, get_temp_folder
+from pyquickhelper.pycode import get_temp_folder
 
 
 def ls_notebooks(subfolder):
@@ -180,14 +179,12 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
     addpaths = get_additional_paths()
     if additional_path is not None:
         addpaths += additional_path
-    kernel_name = None if is_travis_or_appveyor() else install_python_kernel_for_unittest(
-        "ensae_teaching_cs")
     if filter:
         notebooks = [_ for i, _ in enumerate(notebooks) if filter(i, _)]
     if len(notebooks) == 0:
         raise ValueError("Empty list of notebooks.")
     res = execute_notebook_list(folder, notebooks, fLOG=fLOG, clean_function=clean_function,
-                                valid=valid_cell, additional_path=addpaths, kernel_name=kernel_name,
+                                valid=valid_cell, additional_path=addpaths,
                                 replacements=replacements)
     execute_notebook_list_finalize_ut(
         res, fLOG=fLOG, dump=dump)

@@ -6,9 +6,8 @@
 import sys
 import os
 import unittest
-import warnings
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
+from pyquickhelper.pycode import get_temp_folder, skipif_travis, add_missing_development_version
 
 try:
     import src
@@ -30,6 +29,7 @@ class TestNotebookRunner1a_correction_10 (unittest.TestCase):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
                                         __file__, hide=True)
 
+    @skipif_travis("too long for travis")
     def test_notebook_runner_correction_10(self):
         fLOG(
             __file__,
@@ -38,9 +38,6 @@ class TestNotebookRunner1a_correction_10 (unittest.TestCase):
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook1a_correction_10")
         keepnote = ls_notebooks("td1a_dfnp")
-        if is_travis_or_appveyor() == "travis":
-            warnings.warn("too long")
-            return
         execute_notebooks(temp, keepnote, (lambda i, n: "_12" not in n and
                                            "session_10." in n and "correction" in n),
                           fLOG=fLOG,
