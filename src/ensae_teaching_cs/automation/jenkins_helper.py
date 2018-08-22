@@ -10,16 +10,18 @@ from pyquickhelper.jenkinshelper import setup_jenkins_server_yml
 from .teaching_modules import get_teaching_modules
 
 
-def find_python(pattern="Python[0-9]{3}_x64", root="/"):
+def get_interpreter(platform=None):
     """
-    Finds a path containing :epkg:`Python` from the root.
-    Takes the highest one.
+    Returns the default interpreter.
 
-    @param      pattern     pattern to find
-    @param      root        folder when to look for Python
-    @return                 path found
+    @param      plaftorm        platform
     """
-    return
+    if platform == sys.platform:
+        return os.path.dirname(sys.executable)
+    elif platform.startswith("win"):
+        return "c:\\Python%d%d%d_x64" % sys.version_info[:3]
+    else:
+        return "/usr/local/bin"
 
 
 def engines_default(prefix="c:\\", prefix_python="c:\\", prefix_conda="c:\\", platform=None):
@@ -42,11 +44,10 @@ def engines_default(prefix="c:\\", prefix_python="c:\\", prefix_conda="c:\\", pl
     if platform.startswith("win"):
         res = dict(anaconda2=os.path.join(prefix_conda, "Anaconda2"),
                    anaconda3=os.path.join(prefix_conda, "Anaconda3"),
-                   py37=os.path.join(prefix_python, os.path.abspath(
-                       os.path.dirname(sys.executable))),
+                   default=get_interpreter(platform=platform),
+                   py37=get_interpreter(platform=platform),
                    py36=os.path.join(prefix_python, "Python36_x64"),
                    py27=os.path.join(prefix_python, "Python27_x64"),
-                   default=os.path.join(prefix_python, find_python()),
                    winpython36=os.path.join(
                        prefix_python, "WinPython36_x64", "python-3.6.3.amd64"),
                    Python37pyq=os.path.join(
@@ -61,7 +62,8 @@ def engines_default(prefix="c:\\", prefix_python="c:\\", prefix_conda="c:\\", pl
         return res
     else:
         key = "Python%d%d" % sys.version_info[:2]
-        res = {key: os.path.abspath(os.path.dirname(sys.executable))}
+        res = {key: get_interpreter(platform=platform)}
+        res["py%d%d" % sys.version_info[:2]] = res[key]
         return res
 
 
@@ -98,7 +100,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None, platform=None)
     if filter is not None or neg_filter is not None:
         reg = re.compile(filter if filter else ".*")
         neg_reg = re.compile(neg_filter if neg_filter else "^$")
-        res = default_jenkins_jobs()
+        res = default_jenkins_jobs(platform=platform)
         new_res = []
         for row in res:
             if isinstance(row, str):
@@ -128,21 +130,16 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None, platform=None)
         res = []
         res.extend(('yml', c, 'H H(0-1) * * %d' % (i % 7))
                    for i, c in enumerate(yml))
-        res += [("standalone [conda_update] [anaconda3]", "H H(0-1) * * 0"),
-                "standalone [conda_update] [anaconda2] [27]",
-                "standalone [local_pypi]",
-                # update
-                ("pymyinstall [update_modules] [py37]", "H H(0-1) * * 5"),
-                "pymyinstall [update_modules] [py36]",
-                "pymyinstall [update_modules] [anaconda3]",
-                ]
+        res += ["standalone [local_pypi] [py%d%d]" % sys.version_info[:2],
+                ("pymyinstall [update_modules] [py%d%d]" % sys.version_info[:2],
+                 "H H(0-1) * * 5")]
         return res
 
 
 def setup_jenkins_server(js, github="sdpython", modules=None,
                          overwrite=False, location=None, prefix="",
                          delete_first=False, disable_schedule=False,
-                         platform=None, fLOG=noLOG):
+                         fLOG=noLOG):
     """
     Sets up many jobs on :epkg:`Jenkins`.
 
@@ -168,10 +165,9 @@ def setup_jenkins_server(js, github="sdpython", modules=None,
     * the job at position i is not scheduled, it will start after the last
       job at position i-1 whether or not it fails
     """
-    if platform is None:
-        platform = sys.platform
+    platform = js.platform
     if modules is None:
-        modules = default_jenkins_jobs(platform)
+        modules = default_jenkins_jobs(platform=platform)
     r = setup_jenkins_server_yml(js, github=github, modules=modules, get_jenkins_script=None,
                                  overwrite=overwrite, location=location, prefix=prefix,
                                  delete_first=delete_first, disable_schedule=disable_schedule)
