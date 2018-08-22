@@ -25,6 +25,38 @@ avec les modules nécessaires présentés dans ce cours.
 Le premier paragraphe explique comment installer rapidement :epkg:`Python`,
 il faudra lire les suivants si vos besoins vont au delà.
 
+Notes
+=====
+
+La grande majorité des exemples et des notebooks
+proposés sur ce site sont testés une fois par semaine.
+La distribution utilisée varie mais s'appuie sur les dernières
+versions des modules. Une part moins importante est également testée
+à chaque modification sur :epkg:`github/sdpython` sur Windows,
+Linux (Ubuntu) et Linux (Debian).
+
+.. _l-auto-2018-2019:
+
+2018-2019
++++++++++
+
+Pour l'année 2017, les tests sont dorénavant effectués sur
+*Linux Debian 9* et la distribution standard *Python 3.7.0*.
+L'installation de cette machine est assez fastidieuse. Les traces
+de l'installation sont conservées sur cet article de blog :
+`Install Python 3.7 and many packages on Linux Debian 9 <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx//blog/2018/2018-08-19_python37.html>`_.
+Il reste quelques problèmes comme :epkg:`TensorFlow` qui n'est pas
+encore compatible avec *Python 3.7* (août 2018) mais
+cette `pull request <https://github.com/tensorflow/tensorflow/pull/21202>`_
+devrait résoudre le problème.
+
+2017-2018
++++++++++
+
+Toutes les modules étaient testées sur
+*Windows 10* et une distribtion standard
+*Python 3.6.4* puis *Python 3.6.5* 64 bits.
+
 .. _l-installation-courte:
 
 En résumé : Anaconda
@@ -62,7 +94,6 @@ comme :epkg:`dlib`.
 ::
 
     pip install pymyinstall
-    pymy_install xgboost
 
 Linux en ligne de commande / MacOS
 ++++++++++++++++++++++++++++++++++
@@ -76,7 +107,7 @@ Les sorties disponibles sur le site
 `CircleCI <https://circleci.com/gh/sdpython/ensae_teaching_cs/>`_
 peuvent vous aider à comprendre les erreurs si vous en avez.
 
-Les mêmes instructions devraient fonctionner sous MacOS depuis
+Les mêmes instructions devraient fonctionner sous :epkg:`MacOS` depuis
 une fenêtre `terminal <https://en.wikipedia.org/wiki/Terminal_(macOS)>`_
 car ce système s'appuie sur une distribution Linux.
 
@@ -115,13 +146,13 @@ Installer un module
 pip, python et ligne de commande
 ++++++++++++++++++++++++++++++++
 
-Le language python s'est doté d'un système de distribution de modules (ou *packages*)
+Le language :epkg:`python` s'est doté d'un système de distribution de modules (ou *packages*)
 qui est aisément accessible depuis la `ligne de commande <http://fr.wikipedia.org/wiki/Interface_en_ligne_de_commande>`_.
 Sous :epkg:`Windows`, on peut lancer la ligne de commande par la commande ``cmd``.
 Sous :epkg:`Linux` ou :epkg:`OS/X`, c'est une fenêtre terminal (:epkg:`Linux`, :epkg:`OS/X`).
 Il suffit alors de se déplacer dans le répertoire d'installation de :epkg:`Python` ::
 
-    cd c:\Python36_x64\Scripts
+    cd c:\Python370_x64\Scripts
 
 Ou encore :
 
@@ -526,7 +557,7 @@ Un serveur en local doit être démarré, la ligne de commande ressemble à ceci
 
 ::
 
-    c:\Python36_x64\Scripts\pypi-server.exe -u -p 8067 --disable-fallback ..\..\local_pypi\local_pypi_server
+    c:\Python370_x64\Scripts\pypi-server.exe -u -p 8067 --disable-fallback ..\..\local_pypi\local_pypi_server
 
 Si le serveur :epkg:`Jenkins` utilise des mots-clés via :epkg:`keyring`,
 ce qui est le cas pour plusieurs modules utilisés pour ces enseignements,

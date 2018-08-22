@@ -1,0 +1,32 @@
+
+.. blogpost::
+    :title: Notebook testés sur Debian 9
+    :keywords: Debian
+    :date: 2018-08-22
+    :categories: automatisation
+
+    Tous les notebooks et modules proposés
+    lors des enseignements sont dorénavants testés
+    sur une distribution :epkg:`Debian 9`
+    (voir :ref:`l-auto-2018-2019`) et non
+    plus sur Windows comme l'année dernière.
+    La principale raison à cela est le coût...
+
+    Il faut louer une machine qui tourne en permanence
+    pour exécuter tous les tests unitaires de la trentaine
+    de modules implémentées sur :epkg:`github/sdpython`,
+    soit une vingtaine d'euros par mois. La license Windows
+    coûte selon les versions entre trente et quarante euros
+    par mois. La seconde raison est qu'il est souvent un peu plus
+    facile de compiler les modules écrit en C++ sous
+    Linux que sous Windows. La dernière raison que la machine
+    que je louais avant utiliser une distribution Windows 2012
+    sur laquelle je n'arrivais par à installer les dernières
+    versions d':epkg:`OpenCV` probablement compilée sur le
+    site :epkg:`Unofficial Windows Binaries for Python Extension Packages`
+    avec des dépendances trop récentes.
+    Bref, cela me semblait plus simple de tout passer sur Linux
+    même si j'ai choisi de tout passer aussi à Python 3.7
+    dans le même temps bien que certains modules posent
+    encore problème comme :epkg:`TensorFlow` mais
+    cela ne devrait pas durer très longtemps.
