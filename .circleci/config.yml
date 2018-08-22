@@ -100,6 +100,11 @@ jobs:
                     sudo apt-get -y install xvfb pulseaudio
                     sudo apt-get install -y python-pygame
 
+      - run:
+          name: Install hdf5 (1)
+          command: |
+            sudo apt-get install libhdf5-dev libblosc-dev liblzo2-dev
+
       # statsmodels setup.py requires it
       - run:
           name: install numpy
