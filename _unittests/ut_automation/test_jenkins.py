@@ -69,8 +69,6 @@ class TestJenkins(unittest.TestCase):
         self.assertEqual(len(modules), 30)
         modules = default_jenkins_jobs(".*27.*", ".*update.*")
         self.assertEqual(len(modules), 0)
-        modules = default_jenkins_jobs(".*27.*")
-        self.assertEqual(len(modules), 1)
 
 
 if __name__ == "__main__":
