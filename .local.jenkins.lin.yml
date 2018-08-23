@@ -13,12 +13,16 @@ install:
   - $PYINT -c "from pip._internal import main;main(\"install -r requirements.txt\".split())"
   - $PYINT --version
   - $PYINT -c "from pip._internal import main;main([\"freeze\"])"
+  - export AUDIODEV=null
+  - export SDL_VIDEODRIVER=dummy
+  - export SDL_AUDIODRIVER=disk
+  - export DISPLAY=localhost:0.0
 
 script:
   - { CMD: "$PYINT -u setup.py unittests -g \".*((http)|(SKIP)|(LONG)|(cvxopt)|(theano)).*\"", NAME: "UT", TIMEOUT: 3600 }  # timeout is 3600 for the documentation
   - { CMD: "$PYINT -u setup.py unittests -e \".*(http).*\"", NAME: "UT_HTTP" }
   - { CMD: "$PYINT -u setup.py unittests -e .*LONG.* -g .*cvxopt.*", NAME: "UT_LONG", TIMEOUT: 3600 }
-  - { CMD: "$PYINT -u setup.py unittests -e .*SKIP.* -g \".*((theano)|(keras)|(deep)|(scraping)|(pythonnet)|(huge)|(web)|(ete3)|(cvxopt)).*\"", NAME: "UT_SKIP" }
+  - { CMD: "$PYINT -u setup.py unittests -e .*SKIP.* -g \".*((theano)|(keras)|(deep)|(scraping)|(pythonnet)|(huge)|(web)|(ete3)|(cvxopt)|(students)).*\"", NAME: "UT_SKIP" }
   - { CMD: "$PYINT -u setup.py unittests -e .*_1A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)).*\"", NAME: "UT_1A" }
   - { CMD: "$PYINT -u setup.py unittests -e .*_2A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)).*\"", NAME: "UT_2A", TIMEOUT: 3600 }
   - { CMD: "$PYINT -u setup.py unittests -e .*_3A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)).*\"", NAME: "UT_3A" }
@@ -29,6 +33,7 @@ script:
   - { CMD: "$PYINT -u setup.py unittests -e \".*((huge)).*\"", NAME: "UT_HUGE" }
   - { CMD: "$PYINT -u setup.py unittests -e \".*((ete3)).*\"", NAME: "UT_ETE3" }
   - { CMD: "$PYINT -u setup.py unittests -e \".*cvxopt.*\"", NAME: "UT_CVXOPT" }
+  - { CMD: "$PYINT -u setup.py unittests -e \".*students.*\"", NAME: "UT_STUDENTS" }
 
 after_script:
   - $PYINT -u setup.py bdist_wheel
