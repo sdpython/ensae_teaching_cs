@@ -32,8 +32,7 @@ CLASSIFIERS = [
 
 packages = find_packages('src', exclude='src')
 package_dir = {k: "src/" + k.replace(".", "/") for k in packages}
-package_data = {project_var_name + ".cspython.csdll": ["*.dll"],
-                project_var_name + ".encrypted": ["*.crypted", "*.vigenere"],
+package_data = {project_var_name + ".encrypted": ["*.crypted", "*.vigenere"],
                 project_var_name + ".data.data_gutenberg": ["*.txt"],
                 project_var_name + ".special.data": ["*.png", "*.txt"],
                 project_var_name + ".data.data_1a": ["*.txt"],
