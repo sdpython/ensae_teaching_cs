@@ -92,7 +92,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
                           key_save="my_password", footer_html=None,
                           content_filter=trigger_on_specific_strings,
                           is_binary=content_as_binary, force_allow=None,
-                          fLOG=print):
+                          delay=0.5, fLOG=print):
     """
     Publishes the documentation and the setups of a python module on a webiste,
     it assumes the modules is organized the same way as :epkg:`pyquickhelper`.
@@ -110,6 +110,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
     @param      is_binary       a function to tell if a content of a file is binary or not
     @param      force_allow     a file is not published if it contains something which looks like credentials
                                 except if this string is part of *force_allow*
+    @param      delay           delay between file transferring (in average)
     @param      fLOG            logging function
 
     *docs* is a list of dictionaries which must contain for each folder
@@ -179,7 +180,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
                                  text_transform=text_transform, filter_out=filter_out,
                                  force_allow=force_allow)
 
-        fftp.start_transfering()
+        fftp.start_transfering(delay=delay)
 
         ftn = FileTreeNode(os.path.join(root_local, ".."),
                            filter=lambda root, path, f, dir: not dir)
@@ -201,6 +202,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                              modules=None, password=None,
                              force_allow=None,
                              suffix=("_UT_%d%d_std" % sys.version_info[:2],),
+                             delay=0.5,
                              fLOG=print, exc=True):
     """
     Copies the documentation to the website.
@@ -218,6 +220,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
     @param      suffix          suffixes to append to the project name
     @param      force_allow     allow to publish files even if they contain these strings
                                 whereas they seem to be credentials
+    @param      delay           delay between two files being transferred
     @param      exc             raise exception if not found (True) or skip (False)
     @param      fLOG            logging function
 
@@ -338,4 +341,4 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
 
     publish_documentation(projects, ftpsite=ftpsite, login=login, password=password,
                           key_save="my_module_password", footer_html=footer,
-                          force_allow=force_allow, fLOG=fLOG)
+                          force_allow=force_allow, delay=delay, fLOG=fLOG)
