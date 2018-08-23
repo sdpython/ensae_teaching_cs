@@ -26,10 +26,10 @@ def trigger_on_specific_strings(content, filename=None, force_allow=None):
     for env in ['USERNAME', 'USER']:
         if env in os.environ and os.environ[env] != "jenkins":
             for sub in ["_data", "GitHub"]:
-                steps.extend([(r"C:\\%s\\__home_\\%s\\" % (os.environ[env], sub), "somewhere"),
+                strep.extend([(r"C:\\%s\\__home_\\%s\\" % (os.environ[env], sub), "somewhere"),
                               ("C:\\%s\\__home_\\%s\\" % (os.environ[env], sub), "somewhere"),
                               ("C:\\%s\\__home_\\%s\\" % (os.environ[env], sub), "somewhere"),
-                              ("C:%s__home_%s" % (os.environ[env], sub), "somewhere"), 
+                              ("C:%s__home_%s" % (os.environ[env], sub), "somewhere"),
                               ("%s__home_%s" % (os.environ[env], sub), "somewhere")
                               ])
     for s, b in strep:
@@ -94,7 +94,7 @@ def text_transform(ftpp, filename, content):
 
 
 def publish_documentation(docs, ftpsite=None, login=None, password=None,
-                          key_save="my_password", footer_html=None,
+                          footer_html=None,
                           content_filter=trigger_on_specific_strings,
                           is_binary=content_as_binary, force_allow=None,
                           delay=0.5, exc=False, fLOG=print):
@@ -106,9 +106,6 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
     @param      ftpsite         something like ``ftp.something.``
     @param      login           login
     @param      password        password
-    @param      key_save        see function `open_window_params
-                                <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/tkinterquickhelper/funcwin/frame_params.html#
-                                tkinterquickhelper.funcwin.frame_params.open_window_params>`_
     @param      footer_html     append this HTML code to any uploaded page (such a javascript code to count the audience)
     @param      content_filter  filter the content of a file (it raises an exception if the result is None),
                                 appies only on text files
@@ -129,11 +126,6 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
 
     A local file is composed by ``<local_root>/<relative_path>``, it
     will be uploaded to ``<web_root>/<relative_path>``.
-
-    If one of the three first parameters is None, the function
-    will open a popup windows to ask the missing information.
-    See `open_window_params <http://www.xavierdupre.fr/app/tkinterquickhelper/helpsphinx/tkinterquickhelper/
-    funcwin/frame_params.html#tkinterquickhelper.funcwin.frame_params.open_window_params>`_.
     """
 
     params = {"ftpsite": ftpsite,
@@ -142,15 +134,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
 
     nbnone = len([v for k, v in params.items() if v is None or len(v) == 0])
     if nbnone > 0:
-        from tkinterquickhelper.funcwin import open_window_params
-        fLOG("retrying to get parameters from users")
-        for k, v in sorted(params.items()):
-            fLOG("  {0}={1}".format(k, v))
-        params = open_window_params(
-            params,
-            title="Website and Credentials",
-            help_string="ftp site + login + password",
-            key_save=key_save)
+        raise ValueError("One of the following parameters is not specified:\n{0}".format(params))
 
     nbnone = [v for k, v in params.items() if v is None or len(v) == 0]
     if len(nbnone) > 0:
@@ -251,8 +235,6 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
             folder_status=os.path.abspath("."),
             password=password)
     """
-    from tkinterquickhelper.funcwin import open_window_params
-
     if modules is None:
         modules = get_teaching_modules()
 
@@ -268,10 +250,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
         """.format(google_id)
 
     if password is None:
-        params = {"password": ""}
-        params = open_window_params(
-            params, title="password", help_string="password", key_save="my_password")
-        password = params["password"]
+        raise ValueError("password is empty")
 
     location = os.path.abspath(location)
     if folder_status is None:
@@ -345,6 +324,5 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
     # publish
 
     publish_documentation(projects, ftpsite=ftpsite, login=login, password=password,
-                          key_save="my_module_password", footer_html=footer,
-                          force_allow=force_allow, delay=delay,
+                          footer_html=footer, force_allow=force_allow, delay=delay,
                           exc=exc_transfer, fLOG=fLOG)

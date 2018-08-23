@@ -7,7 +7,7 @@ import os
 import unittest
 import pandas
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder
+from pyquickhelper.pycode import get_temp_folder, ExtTestCase
 
 
 try:
@@ -26,7 +26,7 @@ except ImportError:
 from src.ensae_teaching_cs.automation_students import enumerate_feedback, enumerate_send_email
 
 
-class TestFeedback(unittest.TestCase):
+class TestFeedback(ExtTestCase):
 
     def test_enumerate_feedback(self):
         fLOG(
@@ -71,7 +71,7 @@ class TestFeedback(unittest.TestCase):
             mails = list(enumerate_send_email(mailbox, fr="me", col_name="Nom", cols=["Pitch", "Code"],
                                               df1=df, exc=False, fLOG=fLOG, delay_sending=True,
                                               begin="BEGIN", end="END", subject="SUBJECT"))
-            assert mails is not None
+            self.assertNotEmpty(mails)
         except ValueError as e:
             if "mailbox is None" in str(e):
                 pass

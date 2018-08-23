@@ -88,6 +88,7 @@ class TestCodeStyle(ExtTestCase):
                 "pandas_helper.py:8: W0611",
                 "coding_party1_velib.py:239: W0612",
                 "ftp_publish_helper.py:196: W0102",
+                "ftp_publish_helper.py:187: W0102",
                 "pandas_helper.py:7: W0611",
                 "table_formula.py:2702: W0612",
                 "ftp_publish_helper.py:246: E0401",

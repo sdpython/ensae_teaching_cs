@@ -6,7 +6,7 @@ import sys
 import unittest
 import pandas
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, ExtTestCase, skipif_circleci
 
 try:
     import src
@@ -22,12 +22,13 @@ except ImportError:
     import src
 
 
-class TestInterroExo(unittest.TestCase):
+class TestInterroExo(ExtTestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails"],
                                         __file__, hide=True)
 
+    @skipif_circleci("produces a segmentation fault")
     def test_interro_motif(self):
         fLOG(
             __file__,
@@ -48,7 +49,7 @@ class TestInterroExo(unittest.TestCase):
             root, input, col_names=col_names, url=url, fLOG=fLOG, eol="/")
         out = os.path.join(temp, "results.xlsx")
         df.to_excel(out)
-        assert os.path.exists(out)
+        self.assertExists(out)
 
 
 if __name__ == "__main__":
