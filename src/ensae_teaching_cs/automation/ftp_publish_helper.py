@@ -13,7 +13,8 @@ from .teaching_modules import get_teaching_modules
 def trigger_on_specific_strings(content, filename=None, force_allow=None):
     """
     Looks for specific string such as
-    *USERNAME*, *USERDNSDOMAIN*, *HOMEPATH*, *USERNAME*, *COMPUTERNAME*, *LOGONSERVER*,
+    *USERNAME*, *USERDNSDOMAIN*, *HOMEPATH*, *USERNAME*, *COMPUTERNAME*,
+    *LOGONSERVER*, *USER*, *HOME*, *LOGNAME*
     and returns None if it was found or modifies the content to remove it.
 
     @param      content     content of a file
@@ -21,14 +22,16 @@ def trigger_on_specific_strings(content, filename=None, force_allow=None):
     @param      force_allow allow these expressions even if they seem to be credentials
     @return                 modified content
     """
-    strep = [(r"C:\\%s\\__home_\\_data\\" % os.environ["USERNAME"], "somewhere"),
-             ("C:\\%s\\__home_\\_data\\" %
-              os.environ["USERNAME"], "somewhere"),
-             ("C:\\%s\\__home_\\_data\\" %
-              os.environ["USERNAME"], "somewhere"),
-             ("C:%s__home__data" % os.environ["USERNAME"], "somewhere"),
-             ("%s__home__data" % os.environ["USERNAME"], "somewhere"),
-             ]
+    strep = []
+    for env in ['USERNAME', 'USER']:
+        if env in os.environ and os.environ[env] != "jenkins":
+            for sub in ["_data", "GitHub"]:
+                steps.extend([(r"C:\\%s\\__home_\\%s\\" % (os.environ[env], sub), "somewhere"),
+                              ("C:\\%s\\__home_\\%s\\" % (os.environ[env], sub), "somewhere"),
+                              ("C:\\%s\\__home_\\%s\\" % (os.environ[env], sub), "somewhere"),
+                              ("C:%s__home_%s" % (os.environ[env], sub), "somewhere"), 
+                              ("%s__home_%s" % (os.environ[env], sub), "somewhere")
+                              ])
     for s, b in strep:
         if s in content:
             content = content.replace(s, b)
@@ -39,9 +42,11 @@ def trigger_on_specific_strings(content, filename=None, force_allow=None):
         force_allow = set(force_allow)
     lower_content = content.lower()
     for st in ["USERNAME", "USERDNSDOMAIN", "HOMEPATH", "USERNAME",
-               "COMPUTERNAME", "LOGONSERVER"]:
+               "COMPUTERNAME", "LOGONSERVER", "USER", 'HOME', 'LOGNAME']:
         if st in os.environ:
             s = os.environ[st].lower()
+            if s == 'jenkins':
+                continue
             if s in ('administrateur', 'administrator'):
                 continue
             if s not in force_allow and s in lower_content:
