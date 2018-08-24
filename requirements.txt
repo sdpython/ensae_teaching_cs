@@ -42,7 +42,7 @@ pymmails
 pympler
 pymyinstall
 pyqt5
-pyquickhelper>=1.8
+pyquickhelper>=1.8.2742
 pyrsslocal
 python-jenkins
 qgrid
