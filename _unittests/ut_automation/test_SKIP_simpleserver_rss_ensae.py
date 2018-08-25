@@ -23,7 +23,7 @@ except ImportError:
     import src
 
 
-class TestSKIPSimpleServerRSSTeaching (unittest.TestCase):
+class TestSKIPSimpleServerRSSTeaching(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(

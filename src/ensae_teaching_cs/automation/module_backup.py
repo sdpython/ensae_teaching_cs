@@ -2,7 +2,6 @@
 @file
 @brief backup the list of modules
 """
-import os
 import warnings
 from pyquickhelper.filehelper import TransferFTP
 
@@ -25,18 +24,19 @@ def ftp_list_modules(ftp_location="/www/htdocs/enseignement/setup",
 
     ::
 
-        keyring.get_password("ftp_list_modules", os.environ["COMPUTERNAME"] + "site", "...")
-        keyring.get_password("ftp_list_modules", os.environ["COMPUTERNAME"] + "login", "...")
-        keyring.get_password("ftp_list_modules", os.environ["COMPUTERNAME"] + "password", "...")
+        keyring.get_password("ftp_list_modules", "ensae_teaching_cs,site", "...")
+        keyring.get_password("ftp_list_modules", "ensae_teaching_cs,login", "...")
+        keyring.get_password("ftp_list_modules", "ensae_teaching_cs,password", "...")
     """
-    hostname = os.environ.get("COMPUTERNAME", os.environ.get("HOSTNAME", ""))
     with warnings.catch_warnings():
         warnings.simplefilter('ignore', DeprecationWarning)
         import keyring
 
-    ftp_site = keyring.get_password("ftp_list_modules", hostname + "site")
-    login = keyring.get_password("ftp_list_modules", hostname + "login")
-    password = keyring.get_password("ftp_list_modules", hostname + "password")
+    ftp_site = keyring.get_password(
+        "ftp_list_modules", "ensae_teaching_cs,site")
+    login = keyring.get_password("ftp_list_modules", "ensae_teaching_cs,login")
+    password = keyring.get_password(
+        "ftp_list_modules", "ensae_teaching_cs,password")
 
     if not ftp_site:
         raise ValueError("ftp_site is empty, some missing keyring?")

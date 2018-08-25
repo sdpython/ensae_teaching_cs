@@ -24,7 +24,7 @@ except ImportError:
     import src
 
 
-class TestNotebookRunner2a_long (unittest.TestCase):
+class TestNotebookRunner2a_long(unittest.TestCase):
 
     def setUp(self):
         from pyquickhelper.pycode import add_missing_development_version

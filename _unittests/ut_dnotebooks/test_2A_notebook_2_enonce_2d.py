@@ -26,7 +26,7 @@ except ImportError:
 from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
 
 
-class TestNotebookRunner2a_2_enonce_2D (unittest.TestCase):
+class TestNotebookRunner2a_2_enonce_2D(unittest.TestCase):
 
     def test_notebook_runner(self):
         fLOG(

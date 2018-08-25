@@ -29,7 +29,7 @@ except ImportError:
 from src.ensae_teaching_cs.homeblog.table_formula import TableFormula
 
 
-class TestTableFormula2 (unittest.TestCase):
+class TestTableFormula2(unittest.TestCase):
 
     def test_TableFormulaCore_Excel(self):
         fLOG(__file__, self._testMethodName,

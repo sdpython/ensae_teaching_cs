@@ -25,7 +25,7 @@ from src.ensae_teaching_cs.special.rues_paris import get_data, bellman, kruskal,
 from src.ensae_teaching_cs.special.rues_paris import eulerien_extension, distance_paris, euler_path, connected_components
 
 
-class TestRueParis (unittest.TestCase):
+class TestRueParis(unittest.TestCase):
 
     def test_get_data(self):
         fLOG(

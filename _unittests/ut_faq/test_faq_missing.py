@@ -36,7 +36,7 @@ from src.ensae_teaching_cs.faq.faq_jupyter import jupyter_open_notebook
 from src.ensae_teaching_cs.faq.faq_cvxopt import optimisation
 
 
-class TestFaqMissing (unittest.TestCase):
+class TestFaqMissing(unittest.TestCase):
 
     def test_faq_pythonm(self):
         fLOG(

@@ -28,7 +28,7 @@ except ImportError:
 from src.ensae_teaching_cs.td_2a import load_object, dump_object
 
 
-class TestSerialization (unittest.TestCase):
+class TestSerialization(unittest.TestCase):
 
     def test_serialize(self):
         fLOG(

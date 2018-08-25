@@ -26,7 +26,7 @@ from src.ensae_teaching_cs.td_1a.vigenere import DecodeVigenereLongueurCle, Deco
 from src.ensae_teaching_cs.td_1a.vigenere import DecodeVigenere, CodeVigenere, CasseVigenere, code_vigenere
 
 
-class TestVigenere (unittest.TestCase):
+class TestVigenere(unittest.TestCase):
 
     def test_vigenere(self):
         fLOG(

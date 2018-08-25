@@ -47,7 +47,7 @@ class TestExam20161A(unittest.TestCase):
         if not os.path.exists(dst) or os.stat(dst).st_size < 10:
             fLOG("crypt")
             pwd = keyring.get_password(
-                "exam", os.environ["COMPUTERNAME"] + "key")
+                "exam", "ensae_teaching_cs,key")
             pwd += "*" * (16 - len(pwd))
             pwd = pwd.encode("ascii")
             fLOG(type(pwd))
@@ -70,7 +70,7 @@ class TestExam20161A(unittest.TestCase):
             warnings.simplefilter('ignore', DeprecationWarning)
             import keyring
         temp = get_temp_folder(__file__, "temp_import_exam")
-        pwd = keyring.get_password("exam", os.environ["COMPUTERNAME"] + "key")
+        pwd = keyring.get_password("exam", "ensae_teaching_cs,key")
         pwd += "*" * (16 - len(pwd))
         pwd = pwd.encode("ascii")
         this = os.path.abspath(os.path.dirname(module_file))
@@ -118,7 +118,7 @@ class TestExam20161A(unittest.TestCase):
         if not os.path.exists(dst) or os.stat(dst).st_size < 10:
             fLOG("crypt")
             pwd = keyring.get_password(
-                "exam", os.environ["COMPUTERNAME"] + "key")
+                "exam", "ensae_teaching_cs,key")
             pwd = pwd.encode("ascii")
             this = os.path.join(this, "cryptcode.py")
             assert os.path.exists(this)
@@ -144,7 +144,7 @@ class TestExam20161A(unittest.TestCase):
             warnings.simplefilter('ignore', DeprecationWarning)
             import keyring
         temp = get_temp_folder(__file__, "temp_import_exam_vigenere")
-        pwd = keyring.get_password("exam", os.environ["COMPUTERNAME"] + "key")
+        pwd = keyring.get_password("exam", "ensae_teaching_cs,key")
         pwd = pwd.encode("ascii")
         this = os.path.abspath(os.path.dirname(module_file))
         dst = os.path.join(this, "encrypted", "cryptcode_exam_2016.vigenere")

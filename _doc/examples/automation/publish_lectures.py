@@ -44,21 +44,21 @@ from ensae_teaching_cs.automation.ftp_publish_helper import publish_teachings_to
 
 # on utilise keyring pour stocker les identifiants
 # à commenter ou décommenter au besoin
-user = keyring.get_password("web", os.environ["COMPUTERNAME"] + "user")
-pwd = keyring.get_password("web", os.environ["COMPUTERNAME"] + "pwd")
-ftpsite = keyring.get_password("web", os.environ["COMPUTERNAME"] + "ftp")
+user = keyring.get_password("web", "ensae_teaching_cs,user")
+pwd = keyring.get_password("web", "ensae_teaching_cs,pwd")
+ftpsite = keyring.get_password("web", "ensae_teaching_cs,ftp")
 code_google = keyring.get_password(
-    "web", os.environ["COMPUTERNAME"] + "google")
+    "web", "ensae_teaching_cs,google")
 if pwd is None or user is None or ftpsite is None or code_google is None:
     print("ERROR: password or user or ftpsite is empty, you should execute:")
     print(
-        '    keyring.set_password("web", os.environ["COMPUTERNAME"] + "user", "..")')
+        '    keyring.set_password("web", "ensae_teaching_cs,user", "..")')
     print(
-        '    keyring.set_password("web", os.environ["COMPUTERNAME"] + "pwd", "..")')
+        '    keyring.set_password("web", "ensae_teaching_cs,pwd", "..")')
     print(
-        '    keyring.set_password("web", os.environ["COMPUTERNAME"] + "ftp", "..")')
+        '    keyring.set_password("web", "ensae_teaching_cs,ftp", "..")')
     print(
-        '    keyring.set_password("web", os.environ["COMPUTERNAME"] + "google", "..")')
+        '    keyring.set_password("web", "ensae_teaching_cs,google", "..")')
     print("Exit")
     sys.exit(0)
 if code_google is None:

@@ -27,7 +27,7 @@ from src.ensae_teaching_cs.td_1a.classiques import racine_carree, commentaire_ac
 from src.ensae_teaching_cs.td_1a.classiques import repetition_a_eviter, str2date
 
 
-class TestClassiques (unittest.TestCase):
+class TestClassiques(unittest.TestCase):
 
     def test_fonction1(self):
         fLOG(

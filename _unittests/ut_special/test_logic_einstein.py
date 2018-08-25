@@ -22,7 +22,7 @@ except ImportError:
 from src.ensae_teaching_cs.special.einstein_prolog import Enigma
 
 
-class TestSpecialLogic (unittest.TestCase):
+class TestSpecialLogic(unittest.TestCase):
 
     def test_einstein_prolog(self):
         fLOG(

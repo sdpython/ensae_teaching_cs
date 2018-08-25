@@ -110,17 +110,17 @@ from pymmails.render.email_message_style import template_email_html_short
 ###########
 # Identifiants. On utilise :epkg:`keyring` pour récupérer des mots de passe.
 
-user = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "user")
-pwd = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "pwd")
-password = keyring.get_password("enc", os.environ["COMPUTERNAME"] + "pwd")
+user = keyring.get_password("gmail", "ensae_teaching_cs,user")
+pwd = keyring.get_password("gmail", "ensae_teaching_cs,pwd")
+password = keyring.get_password("enc", "ensae_teaching_cs,pwd")
 if user is None or pwd is None or password is None:
     print("ERROR: password or user or crypting password is empty, you should execute:")
     print(
-        'keyring.set_password("gmail", os.environ["COMPUTERNAME"] + "user", "..")')
+        'keyring.set_password("gmail", "ensae_teaching_cs,user", "..")')
     print(
-        'keyring.set_password("gmail", os.environ["COMPUTERNAME"] + "pwd", "..")')
+        'keyring.set_password("gmail", "ensae_teaching_cs,pwd", "..")')
     print(
-        'keyring.set_password("enc", os.environ["COMPUTERNAME"] + "pwd", "..")')
+        'keyring.set_password("enc", "ensae_teaching_cs,pwd", "..")')
     print("Exit")
     sys.exit(0)
 

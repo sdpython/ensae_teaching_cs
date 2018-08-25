@@ -24,7 +24,7 @@ except ImportError:
     import src
 
 
-class TestSKIPNotebookRunner2a_cffi (unittest.TestCase):
+class TestSKIPNotebookRunner2a_cffi(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],

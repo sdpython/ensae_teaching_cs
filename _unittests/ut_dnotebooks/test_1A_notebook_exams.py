@@ -24,7 +24,7 @@ except ImportError:
     import src
 
 
-class TestNotebookRunnerExams (unittest.TestCase):
+class TestNotebookRunnerExams(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],

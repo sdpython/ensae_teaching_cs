@@ -23,7 +23,7 @@ except ImportError:
     import src
 
 
-class TestNotebookRunner2a_5_Dask (unittest.TestCase):
+class TestNotebookRunner2a_5_Dask(unittest.TestCase):
 
     def setUp(self):
         from pyquickhelper.pycode import add_missing_development_version

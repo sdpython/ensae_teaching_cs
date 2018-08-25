@@ -27,7 +27,7 @@ except ImportError:
 from src.ensae_teaching_cs.helpers.matplotlib_helper_xyz import scatter_xy_id, scatter_xyc, scatter_xyz
 
 
-class TestMatplotlibHelperVizScatterPlots (unittest.TestCase):
+class TestMatplotlibHelperVizScatterPlots(unittest.TestCase):
 
     def setUp(self):
         from matplotlib import rcParams

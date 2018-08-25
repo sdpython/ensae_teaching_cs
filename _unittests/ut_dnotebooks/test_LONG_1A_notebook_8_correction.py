@@ -26,7 +26,7 @@ except ImportError:
     import src
 
 
-class TestNotebookRunner1a_correction (unittest.TestCase):
+class TestNotebookRunner1a_correction(unittest.TestCase):
 
     def setUp(self):
         fLOG("add missing dependencies", OutputPrint=__name__ == "__main__")

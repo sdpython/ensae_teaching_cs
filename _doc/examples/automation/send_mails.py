@@ -87,8 +87,8 @@ with warnings.catch_warnings():
     warnings.simplefilter('ignore', DeprecationWarning)
     import keyring
 
-user = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "user")
-pwd = keyring.get_password("gmail", os.environ["COMPUTERNAME"] + "pwd")
+user = keyring.get_password("gmail", "ensae_teaching_cs,user")
+pwd = keyring.get_password("gmail", "ensae_teaching_cs,pwd")
 
 ###################################
 # On envoie les mails.

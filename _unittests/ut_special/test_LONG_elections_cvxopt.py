@@ -27,7 +27,7 @@ except ImportError:
 from src.ensae_teaching_cs.special.elections import ElectionResults
 
 
-class TestElections (unittest.TestCase):
+class TestElections(unittest.TestCase):
 
     def test_loading_elections_2012(self):
         fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")

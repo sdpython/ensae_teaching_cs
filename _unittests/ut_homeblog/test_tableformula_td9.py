@@ -29,7 +29,7 @@ except ImportError:
 from src.ensae_teaching_cs.homeblog.table_formula import TableFormula
 
 
-class TestTableFormula_td9 (unittest.TestCase):
+class TestTableFormula_td9(unittest.TestCase):
 
     def test_td9_json(self):
         fLOG(__file__, self._testMethodName,

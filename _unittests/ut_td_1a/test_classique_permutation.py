@@ -26,7 +26,7 @@ except ImportError:
 from src.ensae_teaching_cs.td_1a.construction_classique import enumerate_permutations_recursive, enumerate_permutations
 
 
-class TestClassiquesPermutation (unittest.TestCase):
+class TestClassiquesPermutation(unittest.TestCase):
 
     def test_permutation(self):
         fLOG(

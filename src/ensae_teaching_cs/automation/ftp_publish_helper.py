@@ -27,10 +27,14 @@ def trigger_on_specific_strings(content, filename=None, force_allow=None):
         if env in os.environ and os.environ[env] != "jenkins":
             for sub in ["_data", "GitHub"]:
                 strep.extend([(r"C:\\%s\\__home_\\%s\\" % (os.environ[env], sub), "somewhere"),
-                              ("C:\\%s\\__home_\\%s\\" % (os.environ[env], sub), "somewhere"),
-                              ("C:\\%s\\__home_\\%s\\" % (os.environ[env], sub), "somewhere"),
-                              ("C:%s__home_%s" % (os.environ[env], sub), "somewhere"),
-                              ("%s__home_%s" % (os.environ[env], sub), "somewhere")
+                              ("C:\\%s\\__home_\\%s\\" %
+                               (os.environ[env], sub), "somewhere"),
+                              ("C:\\%s\\__home_\\%s\\" %
+                               (os.environ[env], sub), "somewhere"),
+                              ("C:%s__home_%s" %
+                               (os.environ[env], sub), "somewhere"),
+                              ("%s__home_%s" %
+                               (os.environ[env], sub), "somewhere")
                               ])
     for s, b in strep:
         if s in content:
@@ -134,7 +138,8 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
 
     nbnone = len([v for k, v in params.items() if v is None or len(v) == 0])
     if nbnone > 0:
-        raise ValueError("One of the following parameters is not specified:\n{0}".format(params))
+        raise ValueError(
+            "One of the following parameters is not specified:\n{0}".format(params))
 
     nbnone = [v for k, v in params.items() if v is None or len(v) == 0]
     if len(nbnone) > 0:
@@ -184,7 +189,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
     ftp.close()
 
 
-def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None,
+def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None,  # pylint: disable=W0102
                              location="c:\\jenkins\\pymy\\%s\\%s%s\\dist\\%s",
                              rootw="/www/htdocs/app/%s/%s",
                              rootw2="/lesenfantscodaient.fr", folder_status=".",

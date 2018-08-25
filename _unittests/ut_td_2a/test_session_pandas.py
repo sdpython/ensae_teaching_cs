@@ -26,7 +26,7 @@ except ImportError:
 from src.ensae_teaching_cs.pandas_helper import dfs2excel
 
 
-class TestSessionPandas (unittest.TestCase):
+class TestSessionPandas(unittest.TestCase):
 
     def test_excel(self):
         fLOG(

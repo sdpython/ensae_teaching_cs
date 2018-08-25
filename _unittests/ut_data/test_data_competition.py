@@ -80,7 +80,7 @@ class TestCompetition(unittest.TestCase):
             # no stored password
             return
         password = keyring.get_password(
-            "cpt", os.environ["COMPUTERNAME"] + "pwd")
+            "cpt", "ensae_teaching_cs,pwd")
         r = data_cpt_ENSAE_2016_11_blind_set(password)
         self.assertEqual(len(r), 7500)
         truth = r
