@@ -20,7 +20,7 @@
     à l'ENSAE. Le contenu et indiqué par un code.
 
     .. list-table::
-        :headers-row: 1
+        :header-row: 1
         :widths: auto
 
         * - code contenu

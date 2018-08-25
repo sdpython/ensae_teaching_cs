@@ -33,14 +33,16 @@ Exercices
 Promenades
 ++++++++++
 
-.. autosignature:: ensae_teaching_cs.td_2a.rues_paris.bellman
+.. autosignature:: ensae_teaching_cs.special.rues_paris.bellman
 
-.. autosignature:: ensae_teaching_cs.td_2a.rues_paris.connected_components
+.. autosignature:: ensae_teaching_cs.special.rues_paris.connected_components
 
-.. autosignature:: ensae_teaching_cs.td_2a.rues_paris.distance_haversine
+.. autosignature:: ensae_teaching_cs.special.rues_paris.distance_haversine
 
-.. autosignature:: ensae_teaching_cs.td_2a.rues_paris.kruskal
+.. autosignature:: ensae_teaching_cs.special.tsp_bresenham.draw_ellipse
 
-.. autosignature:: ensae_teaching_cs.td_2a.sudoku.resolution_sudoku
+.. autosignature:: ensae_teaching_cs.special.rues_paris.kruskal
 
-.. autosignature:: ensae_teaching_cs.td_2a.tsp_bresenham.
+.. autosignature:: ensae_teaching_cs.special.sudoku.resolution_sudoku
+
+.. autosignature:: ensae_teaching_cs.special.tsp_bresenham.trace_ligne_simple

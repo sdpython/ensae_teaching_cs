@@ -84,7 +84,7 @@ avec le langage :epkg:`R ` :
 
 * :epkg:`scikit-learn`
 * :epkg:`statsmodels`
-* :epkg:`XGboost`
+* :epkg:`XGBoost`
 
 Et quelques autres comme :
 

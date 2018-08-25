@@ -11,15 +11,8 @@ Cython
 
 .. autosignature:: ensae_teaching_cs.faq.faq_cython.compile_cython_single_script
 
-C#
-++
-
-.. autosignature:: ensae_teaching_cs.td_2a.pythoncs.create_cs_function
-
 Conversion
 ++++++++++
-
-.. autosignature:: ensae_teaching_cs.helpers.sound_helper.convert_music_file
 
 .. autosignature:: ensae_teaching_cs.helpers.geo_helper.lambert93_to_WGPS
 

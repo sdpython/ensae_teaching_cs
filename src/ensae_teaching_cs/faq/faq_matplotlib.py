@@ -31,7 +31,7 @@ def graph_style(style='ggplot'):
 
 def close_all():
     """
-    Closes every graph with :epkg:`matploblib`.
+    Closes every graph with :epkg:`matplotlib`.
 
     .. faqref::
         :tag: matplotlib
