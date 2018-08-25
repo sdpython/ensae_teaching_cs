@@ -24,7 +24,7 @@ except ImportError:
     import src
 
 
-class TestNotebookEnsaeSklean(unittest.TestCase):
+class TestNotebookEnsaeSklearn(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
