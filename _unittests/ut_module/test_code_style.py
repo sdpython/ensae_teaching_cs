@@ -123,7 +123,7 @@ class TestCodeStyle(ExtTestCase):
             skip.extend(["Unable to import 'fairtest'"])
 
         check_pep8(src_, fLOG=fLOG, skip=skip,
-                   run_cmd_filter=self.run_cmd_filter,
+                   # run_cmd_filter=self.run_cmd_filter,
                    pylint_ignore=('C0103', 'C1801', 'R0201', 'R1705', 'W0108', 'W0613',
                                   'C0111', 'R1702', 'C0200', 'W0703', 'W0223',
                                   'W020', 'W0212', 'C0123', 'C0302', 'W0221',
@@ -175,7 +175,7 @@ class TestCodeStyle(ExtTestCase):
             skip.extend(["Unable to import 'fairtest'"])
 
         check_pep8(test, fLOG=fLOG, neg_pattern="temp_.*", skip=skip,
-                   run_cmd_filter=self.run_cmd_filter,
+                   # run_cmd_filter=self.run_cmd_filter,
                    pylint_ignore=('C0103', 'C1801', 'R0201', 'R1705', 'W0108', 'W0613',
                                   'C0111', 'C0200', 'C0122', "W0123", 'W0703',
                                   'W0212', 'W0201', 'R1711', 'R1714'))
