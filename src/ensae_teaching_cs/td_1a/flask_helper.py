@@ -35,11 +35,9 @@ class FlaskInThread(threading.Thread):
     Defines a thread for the server.
     """
 
-    def __init__(self, app, host="localhost", port=8080):
+    def __init__(self, app, host="localhost", port=8081):
         """
-        constructor
-
-        @param      app     Flask application
+        @param      app     :epkg:`Flask` application
         """
         threading.Thread.__init__(self)
         self._app = app
@@ -49,7 +47,7 @@ class FlaskInThread(threading.Thread):
 
     def run(self):
         """
-        start the server
+        Starts the server.
         """
         self._app.run(host=self._host, port=self._port)
 

@@ -9,7 +9,7 @@ import unittest
 import time
 import requests
 from pyquickhelper.loghelper import fLOG, get_url_content
-from pyquickhelper.pycode import is_travis_or_appveyor
+from pyquickhelper.pycode import skipif_travis, skipif_circleci
 
 
 try:
@@ -25,22 +25,44 @@ except ImportError:
         sys.path.append(path)
     import src
 
-from src.ensae_teaching_cs.td_1a.simple_flask_site import app
+from src.ensae_teaching_cs.td_1a.simple_flask_site import create_application
 from src.ensae_teaching_cs.td_1a.flask_helper import FlaskInThread
 
 
 class TestSimpleFlask(unittest.TestCase):
 
-    def test_flask(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
+    def test_flask_recommended(self):
+        app = create_application()
+        with app.test_client() as cl:
+            # main page
+            c = cl.get("/")
+            c = c.data.decode("utf-8")
+            self.assertIn("Simple Flask Site", c)
 
-        if is_travis_or_appveyor() in ('travis', 'circleci'):
-            # Get an error: urllib.error.URLError: <urlopen error [Errno 99] Cannot assign requested address>.
-            return
+            # exception
+            c = cl.get("/help/exception")
+            c = c.data.decode("utf-8")
+            self.assertIn("STACK:", c)
 
+            # help for
+            c = cl.get("/help/ask/for/help")
+            c = c.data.decode("utf-8")
+            self.assertIn("help for command: ask/for/help", c)
+
+    @skipif_travis("urllib.error.URLError: <urlopen error [Errno 99] Cannot assign requested address")
+    @skipif_circleci("urllib.error.URLError: <urlopen error [Errno 99] Cannot assign requested address")
+    @unittest.skipIf(not sys.platform.startswith("win"), reason="did not find the right settings to make it work.")
+    def test_flask_thread(self):
+        """
+        On Linux, this test fails unless the firewall
+        is told to allow port 8025:
+
+        ::
+
+            sudo ufw allow 5000
+            sudo ufw enable
+        """
+        app = create_application()
         th = FlaskInThread(app, host="localhost", port=8025)
         th.start()
 

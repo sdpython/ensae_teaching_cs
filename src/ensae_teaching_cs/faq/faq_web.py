@@ -107,7 +107,9 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
     """
     Returns the associated driver with some custom settings.
 
-    The function automatically gets chromedriver if not present (Windows only).
+    The function automatically gets chromedriver if not present (:epkg:`Windows` only).
+    On :epkg:`Linux`, package *chromium-driver* should be installed:
+    ``apt-get install chromium-driver``.
 
     ..faqref::
         :tag: web
@@ -141,9 +143,12 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
                 chromed = where_in_path("chromedriver.exe")
                 if chromed is None:
                     raise FileNotFoundError(
-                        "unable to install chromedriver.exe")
+                        "unable to install 'chromedriver.exe'")
             else:
                 fLOG("found chromedriver:", chromed)
+        else:
+            chromed = 'chromedriver'
+
         start_navi = True
         if start_navi:
             fLOG("start", navigator)
@@ -171,12 +176,14 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
                 chromed = where_in_path("operadriver.exe")
                 if chromed is None:
                     raise FileNotFoundError(
-                        "unable to install chromedriver.exe")
+                        "unable to install operadriver.exe")
             else:
                 fLOG("found chromedriver:", chromed)
-        browser = webdriver.Opera()
+        else:
+            chromed = 'operadriver'
+        browser = webdriver.Opera(chromed)
     elif navigator == "edge":
-        browser = webdriver.Opera()
+        browser = webdriver.Edge()
     else:
         raise Exception(
             "unable to interpret the navigator '{0}'".format(navigator))

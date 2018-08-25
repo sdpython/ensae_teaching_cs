@@ -21,4 +21,4 @@ def get_teaching_modules():
             "teachpyx", "tkinterquickhelper", "cpyquickhelper", "pandas_streaming",
             "lightmlboard", "lightmlrestapi", "mlinsights", "pyenbc", "mlprodict",
             "papierstat", "sparkouille", "manydataapi", "csharpy", "csharpyml",
-            "ensae_teaching_dl"]
+            "ensae_teaching_dl", "machinelearningext"]
