@@ -57,11 +57,6 @@
 
     * `Should We Condition on the Test for Pre-trends in Difference-in-Difference Designs? <https://arxiv.org/abs/1804.01208>`_
 
-    Dans :ref:`l-ml2a-deep-gan` :
-
-    * `Synthesizing Programs for Images using Reinforced Adversarial Learning <https://arxiv.org/abs/1804.01118>`_
-    * `Flipped-Adversarial AutoEncoders <https://arxiv.org/abs/1802.04504>`_
-
     Dans :ref:`l-td2a-reinforcement-learning` :
 
     * `Renewal Monte Carlo: Renewal theory based reinforcement learning <https://arxiv.org/abs/1804.01116>`_
@@ -69,35 +64,15 @@
       utilisation de l'apprentissage par renforcement pour caler la progression
       du bras d'un robot vers la saisie d'une pièce lorsque le chemin est obstrué.
 
-    Dans :ref:`l-ml2a-resolu-sketch` :
-
-    * `SketchMate: Deep Hashing for Million-Scale Human Sketch Retrieval <https://arxiv.org/abs/1804.01401>`_
-
     Dans :ref:`l-ml2a-selvar` :
 
     * `Variable selection using pseudo-variables <https://arxiv.org/abs/1804.01201>`_ :
       l'article utilise la pénalisation pour classer les variables par importance,
       plus le modèle est pénalisé (type :epkg:`Lasso`), plus il réduit le nombre de variables.
 
-    Dans :ref:`l-ml2aresolu-socnet` :
-
-    * `Real-time Detection of Content Polluters in Partially Observable Twitter Networks <https://arxiv.org/abs/1804.01235>`_
-
     Dans :ref:`l-interpretabilite-ml` :
 
     * `Interpretable Policies for Reinforcement Learning by Genetic Programming <https://arxiv.org/abs/1712.04170>`_
-
-    Dans :ref:`l-ml2a-resolu-detpartobj` :
-
-    * `Structured Set Matching Networks for One-Shot Part Labeling <https://arxiv.org/abs/1712.01867>`_
-
-    Dans :ref:`l-ml2a-resolu-detexpr` :
-
-    * `Prediction and Localization of Student Engagement in the Wild <https://arxiv.org/abs/1804.00858>`_
-
-    Dans :ref:`l-ml2a-resolu-detobj` :
-
-    * `Automatic Salient Object Detection for Panoramic Images Using Region Growing and Fixation Prediction Model <https://arxiv.org/abs/1710.04071>`_
 
     Dans :ref:`l-ml2a-resolu-detobj3d` :
 
@@ -108,11 +83,7 @@
 
     * `Robust Fusion Methods for Structured Big Data <https://arxiv.org/pdf/1804.01858.pdf>`_
     * `A Method for Finding Trends in Software Research <https://arxiv.org/abs/1608.08100>`_
-    * `Feedback GAN (FBGAN) for DNA: a Novel Feedback-Loop Architecture for Optimizing Protein Functions <https://arxiv.org/abs/1804.01694>`_
     * `Near-Optimality Recovery of Linear and N-Convex Functions on Unions of Convex Sets <https://arxiv.org/abs/1804.00355>`_
-    * `Hidden Talents of the Variational Autoencoder <https://arxiv.org/abs/1706.05148>`_ :
-      les auto-encoders sont en quelque sorte des :epkg:`ACP` non linéaire,
-      l'article le décrit de façon plus formelle.
     * `Minimax Filter: Learning to Preserve Privacy from Inference Attacks <http://jmlr.org/papers/v18/16-501.html>`_ :
       l'article se pose la question de savoir comment empêcher qu'un modèle complexe
       soit utilisée pour une autre tâche. L'exemple choisi est celui d'un modèle de
@@ -121,16 +92,14 @@
     * `Knowledge Graph Completion via Complex Tensor Factorization <http://jmlr.org/papers/v18/16-563.html>`_ :
       l'article s'intéresse aux graphes, sociaux, savoir. Comment classer une relation en
       relation hiérarchique ?
-    * `ScreenerNet: Learning Self-Paced Curriculum for Deep Neural Networks <https://arxiv.org/abs/1801.00904>`_ :
-      l'article essaye d'améliorer l'apprentissage d'un réseau de neurones
-      en pondérant les observations de la base d'apprentissage.
 
     Un module :
 
     * :epkg:`thorpy` qui implémente des fenêtres façon
       :epkg:`tkinter` pour :epkg:`pygame`
 
-    https://arxiv.org/abs/1711.11379
-    https://arxiv.org/abs/1711.00804
-    https://arxiv.org/abs/1710.04071
-    https://arxiv.org/abs/1804.00858
+    Et d'autres que je n'ai pas encore triés :
+
+    * `3DContextNet: K-d Tree Guided Hierarchical Learning of Point Clouds Using Local and Global Contextual Cues <https://arxiv.org/abs/1711.11379>`_
+    * `Automatic Salient Object Detection for Panoramic Images Using Region Growing and Fixation Prediction Model <https://arxiv.org/abs/1710.04071>`_
+    * `Prediction and Localization of Student Engagement in the Wild <https://arxiv.org/abs/1804.00858>`_

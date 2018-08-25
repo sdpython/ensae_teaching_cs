@@ -5,9 +5,13 @@
 History
 =======
 
-current - 2018-07-29 - 0.00Mb
+current - 2018-08-25 - 0.00Mb
 =============================
 
+0.8.2511 - 2018-08-25 - 6.29Mb
+==============================
+
+* `62`: remove any link to cspython (2018-08-24)
 * `60`: remove dependency on fastcluster (2018-07-29)
 * `40`: ajouter geopandas (2018-07-27)
 * `38`: replace basemap by cartopy (2018-07-27)
