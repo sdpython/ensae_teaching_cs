@@ -37,7 +37,7 @@ script:
   - { CMD: "$PYINT -u setup.py unittests -e \".*students.*\"", NAME: "UT_STUDENTS" }
   - if [ ${VERSION} == "3.7" and ${DIST} == "std" ]
       then 
-        --CMD=$PYINT -u setup.py version;
+        --CMD=echo skip unit test;
         --NAME=DOC;
       fi
 
@@ -47,7 +47,6 @@ after_script:
 
 documentation:
   # The first run of the documentation may fail, the second goes one.
-  - if [ ${NAME} == "UT" or ${NAME} == "DOC" ] then $PYINT -u setup.py build_sphinx || true fi
-  - if [ ${NAME} == "UT" or ${NAME} == "DOC" ] then $PYINT -u setup.py build_sphinx fi
+  - if [ ${NAME} == "UT" or ${NAME} == "DOC" ] then $PYINT -u setup.py build_sphinx > doc.log fi
   - if [ ${NAME} == "UT" or ${NAME} == "DOC" ] then cp -R -f _doc/sphinxdoc/build/html dist/html fi
   - if [ ${NAME} == "UT" or ${NAME} == "DOC" ] then cp -R -f _doc/sphinxdoc/build3/html dist/html3 fi

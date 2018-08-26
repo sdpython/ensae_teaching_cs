@@ -8,6 +8,8 @@ Algorithmes et programmation
 `ENSAE - OMI1C4 <http://www.ensae.fr/ensae/fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100115>`_,
 `ENSAE - OMI1C9 <http://www.ensae.fr/ensae/fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100332>`_
 
+Plan approximatif du cours : :ref:`l-feuille-de-route-2018-1A`.
+
 Cours animé par
 `Xavier Dupré <http://www.xavierdupre.fr/>`_
 depuis 2001.
@@ -37,8 +39,6 @@ plus utilisées. Les séances seront un sous-ensemble
 des contenus proposés ci-dessous. Le cours propose un tour
 d'horizon des algorithmes et pratiques logicielles à connaître
 pour un ingénieur *full stack*.
-
-* :ref:`l-feuille-de-route-2018-1A`
 
 Une bonne culture informatique est de plus en plus appréciée
 dans le monde de l'entreprise, l'ingénieur *full stack*
@@ -97,6 +97,8 @@ La plupart de ces notions font déjà partie du programme des classes préparato
 scientifiques.
 
 ------------
+
+.. _l-td1a-algo-dicho-graphe:
 
 TD - Algorithmes
 ================
@@ -179,6 +181,8 @@ de problème d'optimisation sous contraintes de type
 `simplexe <https://fr.wikipedia.org/wiki/Simplexe>`_ :
 `python-constraint <https://github.com/python-constraint/python-constraint>`_.
 
+.. _td1a-algo-amusement:
+
 S'amuser avec les algorithmes
 +++++++++++++++++++++++++++++
 
@@ -203,6 +207,8 @@ Un peu plus ludique et présentés sous la forme de défis :
 * `tryalgo <https://github.com/jilljenn/tryalgo>`_
 
 ------------
+
+.. _l-td1a-numpy-pandas-plt:
 
 TD - calcul matriciel, graphes, données - data science
 ======================================================
@@ -242,6 +248,8 @@ Une fois qu'on est agile avec les données, on peut facilement explorer,
   (ceux qui font du vélo tout du moins)
 
 ------------
+
+.. _l-td1a-ut-flask-profiling:
 
 TD - Site web et pratiques logicielles
 ======================================
