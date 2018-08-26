@@ -35,6 +35,11 @@ script:
   - { CMD: "$PYINT -u setup.py unittests -e \".*((ete3)).*\"", NAME: "UT_ETE3" }
   - { CMD: "$PYINT -u setup.py unittests -e \".*cvxopt.*\"", NAME: "UT_CVXOPT" }
   - { CMD: "$PYINT -u setup.py unittests -e \".*students.*\"", NAME: "UT_STUDENTS" }
+  - if [ ${VERSION} == "3.7" and ${DIST} == "std" ]
+      then 
+        --CMD=$PYINT -u setup.py build_sphinx;
+        --NAME=DOC;
+      fi
 
 after_script:
   - $PYINT -u setup.py bdist_wheel
