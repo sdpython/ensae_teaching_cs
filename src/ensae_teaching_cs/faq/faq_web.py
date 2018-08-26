@@ -37,7 +37,9 @@ def webshot(img, url, navigator=default_driver, add_date=False,
     and add one to the code if needed.
 
     Chrome requires the `chromedriver <http://chromedriver.storage.googleapis.com/index.html>`_.
-    See function @see fn download_chromedriver.
+    See function `install_chromedriver <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/pymyinstall/
+    installcustom/install_custom_chromedriver.html?highlight=chromedriver
+    #pymyinstall.installcustom.install_custom_chromedriver.install_chromedriver>`_.
     """
     if navigator is None:
         with warnings.catch_warnings():

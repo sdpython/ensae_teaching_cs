@@ -13,7 +13,6 @@ Puzzles algorithmiques
 
     td_2a_algo
     ../specials/nb_complet
-    ../specials/algorithm_culture
     ../specials/problem_solved
 
 *Notebooks*

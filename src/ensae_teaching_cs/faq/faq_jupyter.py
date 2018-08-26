@@ -36,36 +36,6 @@ def notebook_path():
     pass
 
 
-def r_and_notebook():
-    """
-    Cette fonction teste si la variable ``R_HOME`` est définie et pointe sur une
-    version de R présente.
-
-    .. exref::
-        :title: Utiliser R depuis un notebook
-        :tag: Technique
-
-        .. index:: R
-
-        C'est l'objet des deux notebooks :ref:`td2acenoncesession2brst` et la :ref:`correction <td2acorrectionsession2brst>`.
-
-    .. faqref::
-        :tag: jupyter
-        :title: Comment utiliser R depuis un notebook ?
-
-        Voir notebooks :ref:`td2acenoncesession2brst`,
-        :ref:`correction <td2acorrectionsession2brst>`.
-    """
-    if "R_HOME" not in os.environ:
-        raise KeyError("R_HOME not present")
-
-    path = os.environ["R_HOME"]
-    if path is None or not os.path.exists(path):
-        raise FileNotFoundError("unable to find R at {0}".format(path))
-
-    return True
-
-
 def jupyter_convert_notebooks():
     """
     .. exref::
@@ -158,8 +128,7 @@ def jupyter_open_notebook(filename, profile='default', fLOG=fLOG):
         #. Utiliser la ligne de commande usuelle : ``jupyter-notebook``.
            Ce script (ou programme *jupyter-notebook.exe* sous Windows
            est inclus dans le répertoire *Scripts* du répertoire d'installation.
-           Voir :ref:`l-jupyter_notebook_commandline`.
-           Voir égalemnt `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_,
+           Voir également `Travailler avec IPython notebook <http://www.xavierdupre.fr/blog/2014-02-24_nojs.html>`_,
            `Open the notebook with a different browser <http://www.xavierdupre.fr/blog/2015-08-24_nojs.html>`_
            Il est possible de créer un fichier `.bat <https://fr.wikipedia.org/wiki/.bat>`_ pour
            automatiser la ligne de commande et l'ajouter en tant qu'icône sur le bureau.

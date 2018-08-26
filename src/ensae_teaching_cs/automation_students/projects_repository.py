@@ -23,7 +23,7 @@ from ..homeblog.python_exemple_py_to_html import py_to_html_file
 class ProjectsRepository:
     """
     Handle a repository of students projects.
-    See example :ref:`sphx_glr_gyexamples_automation_fetch_student_projects_from_gmail.py`.
+    See example :ref:`sphx_glr_automation_fetch_student_projects_from_gmail.py`.
     """
 
     class MailNotFound(Exception):

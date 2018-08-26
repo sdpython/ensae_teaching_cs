@@ -51,7 +51,7 @@ class PuzzleGirafeBord:
     def __str__(self):
         """
         Cette méthode est appelée lorsqu'on exécute l'instruction print
-        avec un objet de type @see cl Bord.
+        avec un objet de type @see cl PuzzleGirafeBord.
         """
         return self.partie + " " + self.couleur
 

@@ -294,9 +294,9 @@ En Python, on les appelles `PEP8 <https://pypi.python.org/pypi/pep8>`_.
 Ce ne sont pas des règles à suivre à la lettre mais la plupart
 des développeurs python les suivent.
 
-* `pep8 <https://pypi.python.org/pypi/pep8>`_
-* `flake8 <https://pypi.python.org/pypi/flake8>`_, `flake8 <https://pypi.python.org/pypi/flake8/>`_
-* `pylint <https://www.pylint.org/>`_
+* :epkg:`pep8`
+* :epkg:`flake8`
+* :epkg:`pylint`
 
 A vous de voir.
 A l'école, cela n'a pas d'incidence. Dans une compagnie, c'est très variable.

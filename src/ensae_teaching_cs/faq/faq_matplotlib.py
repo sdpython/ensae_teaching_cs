@@ -50,17 +50,6 @@ def close_all():
     plt.close('all')
 
 
-def zoomable():
-    """
-    .. faqref::
-        :tag: matplotlib
-        :title: Des graphiques zoomables dans un notebook ?
-
-        Voir le notebook :ref:`matplotlibzoomablerst`.
-    """
-    pass
-
-
 def graph_with_label(x, y, labels, barplot=True, title=None, figsize=(6, 4), style=None,
                      ax=None, **kwargs):
     """

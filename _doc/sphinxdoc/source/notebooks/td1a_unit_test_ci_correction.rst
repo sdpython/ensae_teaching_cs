@@ -378,7 +378,7 @@ Je l'applique à l'ensemble du répertoire :
 
 Cela donne `commit applies autopep8 <https://github.com/sdpython/td1a_unit_test_ci/commit/c7ae602b997462aad201d2ca5e6c5723088509d5>`_.
 Pour tester si le style est correct, on peut utiliser le module
-`flake8 <https://pypi.python.org/pypi/flake8>`_.
+:epkg:`flake8`.
 
 ::
 

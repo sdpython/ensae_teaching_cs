@@ -101,10 +101,14 @@ parfois récents.
 Galleries de problèmes résolus ou presque
 =========================================
 
-.. toctree::
-    :maxdepth: 3
-
-    ml2a/td_2a_resolus
+Il faut voir la page
+`Galleries de problèmes résolus ou presque <http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/chapters/dl_resolus.html>`_.
+Ces problèmes sont principalement résolus à l'aide
+de :epkg:`deep learning`. Chaque problème n'est pas
+nécessairement compliqué en soi mais chaque modèle
+nécessite des outils de machine learning puissant
+et beaucoup de ressources de calculs pour apprendre
+des réseaux de neurones parfois pendant des mois.
 
 Algorithmes, Optimisation, Programmation
 ========================================

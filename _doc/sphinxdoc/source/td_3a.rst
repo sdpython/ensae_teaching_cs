@@ -198,10 +198,7 @@ Eléments logiciels
 Structures de données
 +++++++++++++++++++++
 
-.. toctree::
-
-    :ref:`Séance 1 :  <td3acenoncesession1rst>`  (:ref:`correction <td3acorrectionsession1rst>`)
-
+* :ref:`codelistetuplerst`
 * `liste chaînées <http://fr.wikipedia.org/wiki/Liste_cha%C3%AEn%C3%A9e>`_,
   `stack <http://fr.wikipedia.org/wiki/Pile_(informatique)>`_,
   `queue <http://en.wikipedia.org/wiki/Queue_(abstract_data_type)>`_,
@@ -311,22 +308,20 @@ Workflow de données
 Deep Learning
 +++++++++++++
 
-* deep learning : notebooks (Matthieu Bizien)
-    * :ref:`100LogisticIRISrst`
-    * :ref:`110PerceptronIrisrst`
-    * :ref:`200PerceptronMNISTrst`
-    * :ref:`210ConvolutionMNISTrst`
-    * :ref:`300ConvolutionCIFAR10rst`
-    * :ref:`mldeeppythonrst`
+* deep learning : notebooks (Matthieu Bizien):
+    * `Réseaux de neurones et Deep Learning <http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/chapters/deep_reseaux_de_neurones_et_deep_learning.html>`_.
     * `Transfer Learning <https://github.com/sdpython/2017_deeplearning_demo/blob/master/Fine_Tuning_Deep_CNNs_with_GPU_rendered.ipynb>`_ (Olivier Grisel)
     * `Search images with deep learning <http://www.xavierdupre.fr/app/mlinsights/helpsphinx/notebooks/search_images.html#searchimagesrst>`_
+
 * deep learning : présentations
     * `Introduction au Deep Learning <https://github.com/sdpython/ensae_teaching_cs/blob/master/_doc/sphinxdoc/source/specials/DEEP%20LEARNING%20FOR%20ENSAE.pdf>`_
     * :ref:`l-nolabel`
     * `Deep Learning 2017 <http://www.xavierdupre.fr/exposes/deeplearning/>`_ (avec Olivier Grisel)
+
 *Vidéos*
     * `PyTorch in 5 Minutes <https://www.youtube.com/watch?v=nbJ-2G2GXL0>`_
     * `PyTorch Demystified, Why Did I Switch <https://www.youtube.com/watch?v=VMcRWYEKmhw>`_
+
 *Cours*
     * :ref:`Cours de deep learning appliqués au NLP <blog-stanford-nlp-deep>`
     * `Companion Jupyter notebooks for the book "Deep Learning with Python" <https://github.com/fchollet/deep-learning-with-python-notebooks>`_
@@ -386,7 +381,8 @@ Map Reduce en pratique
 * Stratégie de parallélisation, propriétés mathématiques
   optimisation d'une fonction convexe
 * Exemple de :ref:`k-means distribué <2015kmeansrst>`
-* Le hasard en distribué, :ref:`Réservoir sampling <td3aenoncereservoirsamplingrst>` (:ref:`correction <td3acorrectionreservoirsamplingrst>`)
+* Le hasard en distribué, :ref:`Réservoir sampling <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/reservoir_sampling.html>`
+  (:ref:`correction <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/pig_reservoir_sampling_azure_correction.html>`)
 * Schéma des langages de map/reduce :
   `lazy evaluation <https://en.wikipedia.org/wiki/Lazy_evaluation>`_ (évalusation presseuse, dask, Spark, PIG)
 
@@ -508,10 +504,7 @@ ces outils sur les trois OS principaux
 SPARK
 +++++
 
-.. toctree::
-    :maxdepth: 2
-
-    td_3a_spark
+Voir `Spark approximatif <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/index.html>`_.
 
 .. _l-td3a-biblio:
 

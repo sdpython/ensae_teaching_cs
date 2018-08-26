@@ -19,7 +19,8 @@ def putty_different_python():
         Ce qu'on voit à l'intérieur de la fenêtre est la ligne de commande de cette machine.
         Ce n'est pas vraiment la ligne de commande mais plutôt une représentation.
         Les commandes sont envoyés à la machine distance via le protocole SSH.
-        Je renvoie au :ref:`TD Map/Reduce avec PIG <td3acenoncesession6rst>`
+        Je renvoie au `TD Map/Reduce avec PIG
+        <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/pig_cloudera.html>`_
         qui montre comment se server de putty pour envoyer des commandes vers le cluster.
         Il est aussi possible de créer sa propre fenêtre putty à l'intérieur
         d'un notebook

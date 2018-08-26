@@ -43,7 +43,7 @@ nécessairement orienté.
 Le plus long chemin n'a pas de sens dans un graphe cyclique.
 
 .. image:: acy.png
-    :with: 500
+    :width: 500
 
 Trois problèmes classiques de graphes
 +++++++++++++++++++++++++++++++++++++

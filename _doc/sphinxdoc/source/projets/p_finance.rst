@@ -83,7 +83,7 @@ Il existe de nombreuses variantes. En voici une :
         - si la moyenne à court terme est inférieure à la moyenne à long terme, la tendance est baissière :math:`\rightarrow` on vend
 
 Vous trouverez plus à cette page :
-:ref:`_finance_strategie_automatique`.
+:ref:`finance_strategie_automatique`.
 
 .. _l-fi-port:
 

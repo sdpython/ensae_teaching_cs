@@ -38,7 +38,7 @@ des contenus proposés ci-dessous. Le cours propose un tour
 d'horizon des algorithmes et pratiques logicielles à connaître
 pour un ingénieur *full stack*.
 
-* :ref:`l-feuille-de-route-2018-1A` (en préparation)
+* :ref:`l-feuille-de-route-2018-1A`
 
 Une bonne culture informatique est de plus en plus appréciée
 dans le monde de l'entreprise, l'ingénieur *full stack*
@@ -120,7 +120,8 @@ Il y a deux questions qu'on doit se poser en premier pour entrevoir une solution
     :maxdepth: 2
 
     notebooks/recherche_dichotomique
-    specials/algo_cost
+    specials/algorithm_culture
+    specials/np_complet
     specials/graphes
 
 Ces deux façons de faire sont présentées durant dans les séances qui suivent :

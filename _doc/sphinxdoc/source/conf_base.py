@@ -126,6 +126,7 @@ epkg_dictionary["javascript"] = 'https://fr.wikipedia.org/wiki/JavaScript'
 epkg_dictionary["Jinja2"] = 'http://jinja.pocoo.org/docs/'
 epkg_dictionary["Julia"] = 'https://julialang.org/'
 epkg_dictionary["Kaggle"] = 'https://www.kaggle.com/'
+epkg_dictionary["keras"] = 'https://keras.io/'
 epkg_dictionary["keyring"] = 'https://github.com/jaraco/keyring'
 epkg_dictionary["Lasso"] = 'https://fr.wikipedia.org/wiki/Lasso_(statistiques)'
 epkg_dictionary["lightgbm"] = "https://github.com/Microsoft/LightGBM/"

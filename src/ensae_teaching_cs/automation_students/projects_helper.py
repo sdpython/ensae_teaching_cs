@@ -57,7 +57,8 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
                                     look at the default value)
     @param      zipfilename         name of the zip file to create
     @param      zipencpwd           the zip file is also encrypted for a safer share with this key
-                                    and function `encrypt_stream <http://>`_.
+                                    and function `encrypt_stream <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/
+                                    pyquickhelper/filehelper/encryption.html#pyquickhelper.filehelper.encryption.encrypt_stream>`_.
     @param      dataframe           dataframe which contains the definition of students groups
     @param      columns             columns the function will look into, students names, group definition
                                     (a unique number for all students in the same group), subject
@@ -69,7 +70,7 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
     @param      nolink_if           The summary extracts links from url, it skips the urls which
                                     contains on the substrings included in that list (None to use a default set)
     @param      fLOG                logging function
-    @return                         :ref:`ProjectsRepository <ensae_teaching_cs.automation_students.projects_repository.ProjectsRepository>`
+    @return                         @see cl ProjectsRepository
 
     By default, Gmail does not let you programmatically access you own inbox,
     you need to modify your gmail parameters to let this function do so.

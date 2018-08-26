@@ -13,11 +13,8 @@ Programmation récréative, algorithmes, bouts de code, chaque exemple
 est indépendante des autres et propose un problème ou un jeu
 qu'on peut résoudre grâce à un algorithme et un peu d'imagination.
 
-.. toctree::
-    :maxdepth: 1
-
-    specials/algorithm_culture
-    specials/np_complet
+* :ref:`l-algoculture`
+* :ref:`l-np-complets`
 
 Algorithmes illustrés
 =====================

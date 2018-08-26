@@ -126,7 +126,8 @@ Glossaire
         Ecole Nationale de la Statistique et de l'Administration Economique (`ENSAE <http://www.ensae.fr/>`_)
 
     entretien
-        Quelques révisions à faire afin de préparer un :ref:`l-entretiens`.
+        Quelques révisions à faire afin de préparer un entretien :
+        :ref:`l-puzzlealgo2A`.
 
     expression régulière
         Chercher un mot dans un texte est facile, chercher un nombres réelles ou un date est plus complexe
@@ -378,7 +379,8 @@ Glossaire
         Voir SSE.
 
     skewed join
-        Voir :ref:`Map Reduce et Skew Join <blog-skew-join>`, :ref:`td3acenoncesession8arst`.
+        Voir :ref:`Map Reduce et Skew Join <blog-skew-join>`,
+        `Données antipathiques <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/skewed_dataset.html>`_.
 
     Spark
         Couche logicielle au-dessus de Hadoop permettent de distribuer des calculs.

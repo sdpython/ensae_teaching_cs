@@ -77,8 +77,7 @@ SQL, NoSQL
         * notion d'index
         * Ne scale pas pour la parallélisation d'un grande nombre de recherches
           sur des données modifiées en permanence (mais à une moindre fréquence)
-            * Cohérences des données
-            * ACID
+          (Cohérences des données, ACID)
         * Traduction d'une base de documents en un schéma relationnel parfois
           complexe lorsque les documents ont une structure arborescente (plein de tables)
         * Récupérer un document entier nécessite plein de lookups
