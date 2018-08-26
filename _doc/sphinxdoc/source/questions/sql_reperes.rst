@@ -1,6 +1,6 @@
 
 Quelques repères de SQL
-======================
+=======================
 
 Source : `Cours ensae - structure de donnée <http://www.xavierdupre.fr/enseignement/complements/cours_structure_donnee.pdf>`_,
 Nicolas Rousset

@@ -572,6 +572,13 @@ Bibliographie
 * `lightGBM <https://github.com/Microsoft/lightGBM>`_ :
   A fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART) framework based on decision tree algorithms.
 
+Feuilles de routes des années passées
+=====================================
+
+.. toctree::
+
+    questions/route_3A_2017
+
 .. rubric:: Footnotes
 
 .. [#fp1] C'est l'objet du paragraphe :ref:`l-td3a-start`.

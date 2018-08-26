@@ -20,6 +20,8 @@ CPython est aussi une machine virtuelle comme l'est Java. Les programmes Python 
 forme `bytecode <https://docs.python.org/3/library/dis.html#dis.Bytecode>`_ (qu'il est possible d'analyser avec le module
 `dis <https://docs.python.org/3/library/dis.html>`_) puis exécutés.
 
+.. index:: ctypes
+
 C++ et Python séparés avec ctypes
 +++++++++++++++++++++++++++++++++
 
@@ -44,6 +46,8 @@ Exemple avec la fonction `XGDMatrixCreateFromFile <https://github.com/dmlc/xgboo
 
 Il est préférable de connaître le C/C++ pour comprendre pourquoi les types Python et C sont
 différentes ou encore ce que veut `ctypes.byref <https://docs.python.org/3.5/library/ctypes.html#ctypes.byref>`_.
+
+.. inde:: cython
 
 C++ avec Cython
 +++++++++++++++
@@ -80,6 +84,8 @@ Le plus simple pour commencer à se familiariser est d'utiliser la commande
 magique `%%cython <http://cython.readthedocs.io/en/latest/src/quickstart/build.html#using-the-ipython-notebook>`_
 qui effectue les opérations de compilation pour le programmeur.
 
+.. index:: pybind11, boost_python, SWIG
+
 Modules Python écrits en C
 ++++++++++++++++++++++++++
 
@@ -96,6 +102,7 @@ Il faut citer deux outils qui permettent de faciliter l'habillage d'une librairi
 
 * `SWIG <http://www.swig.org/>`_
 * `Boost Python <http://www.boost.org/doc/libs/1_62_0/libs/python/doc/html/index.html>`_
+* `pybind11 <https://github.com/pybind/pybind11>`_
 
 Compiler le langage Python
 ++++++++++++++++++++++++++
@@ -109,9 +116,19 @@ Quelques outils :
 * `llvmlite <https://llvmlite.readthedocs.io/en/latest/>`_
 * `Nuitka <http://nuitka.net/>`_
 * `Numba <http://numba.pydata.org/>`_
-* `Pyjion <https://github.com/Microsoft/Pyjion>`_
 * `PyPy <http://pypy.org/>`_
 * `Pyston <https://github.com/dropbox/pyston>`_
 
 Tous repose sur un mécanisme appelé `JIT <https://fr.wikipedia.org/wiki/Compilation_%C3%A0_la_vol%C3%A9e>`_
 ou *compilation à la volée*.
+
+.. index:: cpyquickhelper
+
+Un exemple
+++++++++++
+
+Le module `cpyquickhelper <https://github.com/sdpython/cpyquickhelper/>`_
+implémente quelques façons de mettre du C
+dans un module :epkg:`Python` et contient
+toutes les instructions pour en faire un module
+compilé et prêt à l'emploi.

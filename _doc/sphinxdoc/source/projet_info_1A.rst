@@ -7,8 +7,18 @@
 ==========================
 
 * `Projet de programmation - OMI1C9 <http://www.ensae.fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100332>`_ (ENSAE)
-* `Présentation <http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx_1Ap/index.html>`_
-  (courte introduction en amphithéâtre)
+
+Les exercices présentent la logique de la programmation
+mais la pratique est la seule véritable façon de progresser.
+La plupart des élèves qui n'avaient pas ou peu programmé
+avec ce projet ont noté une réelle différence avant et après.
+Ci-dessous, quelques phrases extraites de rapports d'étudiants
+et qui traduiront mieux que je ne pourrais le faire les étapes
+par lesquelles on passe dans ce type d'aventure.
+
+.. toctree::
+
+    projets/extrait_projet_1A_2015
 
 .. contents::
     :local:

@@ -15,7 +15,7 @@ Plan
 ++++
 
 .. list-table::
-    :widths: 2 5 5 5
+    :widths: 2 5 5
     :header-rows: 1
 
     * - Séance

@@ -264,6 +264,7 @@ tests unitaires, le templating, les sites Web, le scraping, encoding, les notebo
     notebooks/profiling_example
     notebooks/notebook_convert
     notebooks/jupyter_custom_magics
+    specials/python_cplusplus
 
 *Exercices*
 

@@ -100,6 +100,7 @@ Machine learning illustré
     notebooks/ml_rue_paris_parcours
     coding_party
     specials/voisinage
+    specials/elections
 
 .. todoext::
     :title: Quelques idées de notebooks pour le futur

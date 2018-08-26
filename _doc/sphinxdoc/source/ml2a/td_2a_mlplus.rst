@@ -32,6 +32,8 @@ Machine Learning Avancé
     td2a_mlplus_reinforcement_learning_marl
     td2a_mlplus_collaborative_learning
     td2a_mlplus_surprise_modelling
+    td2a_mlplus_tres_grande_dimension
+    ../specials/nolabel
 
 Séries temporelles
 ==================
@@ -62,14 +64,15 @@ des personnes la plupart du temps, les chercheurs réfléchissent
     td2a_mlplus_anonymisation_des_donnees_privacy
     td2a_mlplus_machine_learning_sur_des_donnees_cryptees
 
-Graphes - Réseaux
-=================
+Graphes - Réseaux - Structures
+==============================
 
 .. toctree::
     :maxdepth: 1
 
     td2a_mlplus_clustering_de_graphes
     td2a_mlplus_communautes
+    td2a_mlplus_structures
 
 .. _l-deep-learning:
 

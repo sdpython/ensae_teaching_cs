@@ -56,6 +56,7 @@ Machine Learning - Formalisation
 
     td2a_mlbasic_machine_learning_cours_de_gael_varoquaux
     td2a_mlbasic_de_la_theorie_a_la_pratique
+    td2a_mlbasic_ranking
     td2a_mlbasic_imbalanced_classification
     td2a_mlbasic_classification_multilabel
     td2a_mlbasic_systeme_de_recommandations

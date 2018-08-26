@@ -177,7 +177,7 @@ d'exploitation, ce n'est pas toujours un processus évident.
 .. _l-parole-reel:
 
 Reconnaissance de la parole en temps réel et BOT (2017)
-------------------------------------------------------
+-------------------------------------------------------
 
 Deux exemples et deux articles pour commencer :
 
