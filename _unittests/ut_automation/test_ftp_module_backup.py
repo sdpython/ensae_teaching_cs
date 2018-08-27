@@ -6,7 +6,7 @@ import sys
 import os
 import unittest
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import is_travis_or_appveyor
+from pyquickhelper.pycode import is_travis_or_appveyor, ExtTestCase
 
 try:
     import src
@@ -25,20 +25,18 @@ except ImportError:
 from src.ensae_teaching_cs.automation import ftp_list_modules
 
 
-class TestFtpBackup(unittest.TestCase):
+class TestFtpBackup(ExtTestCase):
 
+    @unittest.skipIf(is_travis_or_appveyor() is not None, reason="no credentials")
     def test_ftp_backup(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        if is_travis_or_appveyor():
-            # no credentials
-            return
         mod = ftp_list_modules()
         fLOG(mod)
-        assert len(mod) > 0
+        self.assertNotEmpty(mod)
 
 
 if __name__ == "__main__":

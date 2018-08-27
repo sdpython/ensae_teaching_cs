@@ -39,11 +39,13 @@ script:
       then 
         --CMD=echo skip unit test;
         --NAME=DOC1;
+        --CLEAN=0;
       fi
   - if [ ${VERSION} == "3.7" and ${DIST} == "std" ]
       then 
         --CMD=echo skip unit test;
         --NAME=DOC3;
+        --CLEAN=0;
       fi
 
 after_script:
@@ -52,7 +54,7 @@ after_script:
 
 documentation:
   # The first run of the documentation may fail, the second goes one.
-  - if [ ${NAME} == "UT" or ${NAME} == "DOC1" ] then $PYINT -u setup.py build_sphinx html1 > doc1.log fi
-  - if [ ${NAME} == "UT" or ${NAME} == "DOC3" ] then $PYINT -u setup.py build_sphinx html3 > doc3.log fi
-  - if [ ${NAME} == "UT" or ${NAME} == "DOC" ] then cp -R -f _doc/sphinxdoc/build/html dist/html fi
-  - if [ ${NAME} == "UT" or ${NAME} == "DOC" ] then cp -R -f _doc/sphinxdoc/build3/html dist/html3 fi
+  - if [ ${NAME} == "DOC1" ] then $PYINT -u setup.py build_sphinx html1 > doc1.log fi
+  - if [ ${NAME} == "DOC3" ] then $PYINT -u setup.py build_sphinx html3 > doc3.log fi
+  - if [ ${NAME} == "DOC1" ] then cp -R -f _doc/sphinxdoc/build/html dist/html fi
+  - if [ ${NAME} == "DOC3" ] then cp -R -f _doc/sphinxdoc/build3/html dist/html3 fi

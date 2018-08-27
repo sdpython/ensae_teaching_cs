@@ -25,15 +25,13 @@ fermée à la dernière session où les résultas et les idées seront
 discutées.
 
 .. list-table::
-    :widths: 2 5 5 5 5 5 5
+    :widths: 2 5 5 5 5
     :header-rows: 1
 
     * - Séance
       - Notes
-      - Stat 8h30
-      - Stat 10h15
-      - Eco 8h30
-      - Eco 10h15
+      - Stat
+      - Eco
       - Exposés 11h45
     * - 11/9 (1) *TD*
       - Le cours débutera par une courte introduction de 30 minutes en amphi
@@ -41,15 +39,11 @@ discutées.
         en :epkg:`Python`.
       - :ref:`l-route2018-stat1`
       - :ref:`l-route2018-eco1`
-      - :ref:`l-route2018-stat1`
-      - :ref:`l-route2018-eco1`
       -
     * - 18/9 (2) *amphi*
       - Introduction au machine learning.
-      -
-      -
-      -
-      -
+      - Classification binaire, régression, régression logistique
+      - Classification binaire, régression, régression logistique
       -
     * - 25/9 (3) *TD*
       - Suite des travaux pratiques
@@ -58,16 +52,13 @@ discutées.
         :epkg:`scikit-learn`.
       - Variables catégorielles.
       - Variables textuelles.
-      -
-      -
       - Deux exposés de 10 minutes + 5 minutes de questions
         (:ref:`l-expoinfo2a`).
     * - 2/10 (4) *TD*
-      - à définir
       -
-      -
-      -
-      -
+      - Ranking, Détection d'anomalies, valeurs manquantes,
+        Imbalanced classification
+      - Expressions régulière, web scrapping
       - Deux exposés de 10 minutes + 5 minutes de questions
         (:ref:`l-expoinfo2a`).
     * - 9/10 (5) *amphi*
@@ -75,40 +66,35 @@ discutées.
       - Propriétés des modèles mathématiques,
         modèles linéaires, modèles ensemblistes,
         modèles dérivables (Xavier Dupré).
+        *Machine Learning* avec **Gaël Varoquaux**,
+        discussion autour de l'interprétation des
+        modèles de machine learning (10h15)
       - *Machine Learning* avec **Gaël Varoquaux**,
         discussion autour de l'interprétation des
-        modèles de machine learning.
-      - ?
-      - *Machine Learning* avec **Gaël Varoquaux**,
-        discussion autour de l'interprétation des
-        modèles de machine learning.
+        modèles de machine learning (10h15)
       - Deux exposés de 10 minutes + 5 minutes de questions
         (:ref:`l-expoinfo2a`).
     * - 16/10 (6) *TD*
       -
-      - Machine learning crypté.
-      -
-      -
-      -
+      - Machine learning crypté, hyperparamètre, recommandation
+      - Séries temporelles, régression linéaire et logistique
       - Deux exposés de 10 minutes + 5 minutes de questions
         (:ref:`l-expoinfo2a`).
     * - 23/10 (7) *amphi*
       - Effets secondaires du machine learning.
       - revue de projet :epkg:`Kaggle`,
-        notion de biais dans les modèles
+        notion de biais dans les modèles,
+        *Ethique et algorithmes* avec **Frédéric Bardolle** (10h15)
         (Xavier Dupré)
-      - *Ethique et algorithmes* avec **Frédéric Bardolle**
       - revue de projet :epkg:`Kaggle`
         notion de biais dans les modèles
-        (Xavier Dupré)
-      - *Ethique et algorithmes* avec **Frédéric Bardolle**
+        (Xavier Dupré) -
+        *Ethique et algorithmes* avec **Frédéric Bardolle** (10h15)
       - Deux exposés de 10 minutes + 5 minutes de questions
         (:ref:`l-expoinfo2a`).
     * - 6/11 (8) *TD*
       -
       - Transfer Learning.
-      -
-      -
       -
       - Deux exposés de 10 minutes + 5 minutes de questions
         (:ref:`l-expoinfo2a`).
@@ -117,7 +103,7 @@ Intervenants
 ++++++++++++
 
 `Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_,
-Anne Muller, Elodie Royant, Antoine Thabault,
+Anne Muller, Elodie Royant,
 Antoine Ly, Benjamin Donnot, Eliot Barril,
 Frédéric Bardolle,
 `Gaël Varoquaux <http://gael-varoquaux.info/>`_.

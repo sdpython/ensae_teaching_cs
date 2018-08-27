@@ -3,7 +3,6 @@
 
 Feuille de route 2018 (21)
 ==========================
-*en préparation*
 
 .. contents::
     :local:
@@ -20,7 +19,6 @@ Plan
 
     * - Séance
       - Notes
-      - Contenu
     * - (1) - 4/9 - amphi court - TD
       - Présentation/rappel du langage :epkg:`Python` sur les élements du langage,
         (type de variables, tests, fonctions),
@@ -63,6 +61,18 @@ Plan
         :epkg:`pybind11`, optimisation quadratique
         pour ceux que le C++ rebute, algorithme de streaming,
         :ref:`l-route2018-algo8`
+
+Version de Python
++++++++++++++++++
+
+Les exercices et notebooks sont testées sur la version :epkg:`Python` 3.7.
+Ils fonctionneront également sur les versions 3.5 et 3.6. Le plus simple
+pour installer :epkg:`Python` est d'utiliser la distribution :epkg:`Anaconda`.
+La distribution standard fonctionne également en s'aidant ce cette page
+`Unofficial Windows Binaries for Python Extension Packages <https://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
+pour *Windows* et de celle-ci pour la distribution
+*Debian 9* (*Ubuntu est très similaire) :
+`Install Python 3.7 and many packages on Linux Debian 9 <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2018/2018-08-19_python37.html>`_.
 
 Intervenants
 ++++++++++++
