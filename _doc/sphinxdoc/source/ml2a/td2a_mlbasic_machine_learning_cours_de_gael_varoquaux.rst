@@ -43,7 +43,7 @@ ici :
 La série d'articles suivante est tirée de
 :epkg:`Freakeconometrics` revient sur les propriétés
 des modèles de classification et régression illustrées
-avec le langage :epkg:`R ` :
+avec le langage :epkg:`R` :
 
 * :ref:`Séries d'articles sur les modèles linéaires <post-freak-linear-models>`
 

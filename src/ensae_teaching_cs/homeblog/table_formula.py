@@ -825,12 +825,12 @@ class TableFormula(_TableFormulaStat):
 
     def __html__(self, class_table=None, class_td=None, class_tr=None, class_th=None):
         """
-        convert the table into a html string
+        Converts the table into a :epkg:`html` string.
 
-        @param  class_table     adds a class to the tag ``table``(None for none)
-        @param  class_td        adds a class to the tag ``td``(None for none)
-        @param  class_tr        adds a class to the tag ``tr``(None for none)
-        @param  class_th        adds a class to the tag ``th``(None for none)
+        @param  class_table     adds a class to the tag ``table`` (None for none)
+        @param  class_td        adds a class to the tag ``td`` (None for none)
+        @param  class_tr        adds a class to the tag ``tr`` (None for none)
+        @param  class_th        adds a class to the tag ``th`` (None for none)
         """
         clta = ' class="%s"' % class_table if class_table is not None else ""
         cltr = ' class="%s"' % class_tr if class_tr is not None else ""

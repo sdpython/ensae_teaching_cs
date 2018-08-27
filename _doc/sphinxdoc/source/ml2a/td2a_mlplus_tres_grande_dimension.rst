@@ -11,7 +11,7 @@ Très grande dimension
 *Lectures*
 
 * `Making Decision Trees Feasible in Ultrahigh Feature and Label Dimensions <http://jmlr.org/papers/volume18/16-466/16-466.pdf>`_
-* `Stabilized Sparse Online Learning for Sparse Data <http://www.jmlr.org/papers/volume18/16-190/16-190.pdf>`_*
+* `Stabilized Sparse Online Learning for Sparse Data <http://www.jmlr.org/papers/volume18/16-190/16-190.pdf>`_
 * `Identifying a Minimal Class of Models for High–dimensional Data <http://www.jmlr.org/papers/volume18/16-172/16-172.pdf>`_
 * `Improving Variational Methods via Pairwise Linear Response Identities <http://www.jmlr.org/papers/volume18/16-070/16-070.pdf>`_
 

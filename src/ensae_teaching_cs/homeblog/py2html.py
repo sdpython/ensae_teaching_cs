@@ -422,8 +422,8 @@ def readStyleFile(filename):
 
 def replaceCodes(text=""):
     """
-    Helper function that does the ``\n`` and space substition
-    returning the changed text
+    Helper function that does the ``\\n`` and space substition
+    returning the changed text.
     """
     text = text.replace('\n', '<br>')
     text = text.replace('\t', ' ' * 4)
@@ -435,16 +435,17 @@ def replaceCodes(text=""):
 
 
 def file2HTML(file_name, format, style, Replace, entity="1", encoding="utf-8"):
-    """Reads a file and returns the contents as a string,
-    highlighted with HTML styles. This function uses the
+    """
+    Reads a file and returns the contents as a string,
+    highlighted with :epkg:`HTML` styles. This function uses the
     output of the tokenize module to decide what to colour.
-    It calls apply_style with the token index.
+    It calls @see fn apply_style with the token index.
 
     - If format == '0' then the code will display as the author expected it to.
     - If format == '1' then spaces are added and removed around expressions to standardise the format.
     - If format == '2' as '1' but different rules
     - If style == style dictionary. Replace (boolean)
-    - If True then replace ``\n`` with ``<br>``, multiple spaces with ``&nbsp<space>combinations;``
+    - If True then replace ``\\n`` with ``<br>``, multiple spaces with ``&nbsp<space>combinations;``
     """
     removeFile = None
     if file_name == "<stdin>":

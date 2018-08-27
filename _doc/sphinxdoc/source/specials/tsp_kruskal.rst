@@ -122,7 +122,7 @@ Cet algorithme ne retourne pas la solution optimale mais une solution
 approchée. Son coût est proportionnel au cardinal de l'ensemble *E*.
 A priori, pour le problème du voyageur de commerce, si le graphe
 contient *n* villes, le nombre d'arcs possibles est :math:`\frac{n(n-1)}{2}`.
-`Dans cet ensemble, la majeure partie des arcs ne sera pas utilisée pour
+Dans cet ensemble, la majeure partie des arcs ne sera pas utilisée pour
 le meilleur chemin puisque les arcs entre plus proches voisins leur seront
 préférés. Afin de réduire cet ensemble, il est possible de quadriller
 le plan en zones et d'associer à chaque ville la zone à laquelle
