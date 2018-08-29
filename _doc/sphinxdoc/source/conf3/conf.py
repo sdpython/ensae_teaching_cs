@@ -1,7 +1,7 @@
 import sys
 import os
-import sphinx_bootstrap_theme
-
+# import sphinx_bootstrap_theme
+import sphinx_materialdesign_theme
 
 source_path = os.path.normpath(
     os.path.join(
@@ -15,8 +15,10 @@ except ImportError:
     sys.path.append(source_path)
     from conf_base import *
 
-html_theme = 'bootstrap'
-html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+# html_theme = 'bootstrap'
+# html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
+html_thme = "sphinx_materialdesign_theme"
+html_theme_path = sphinx_materialdesign_theme.get_path()
 
 templates_path = [os.path.join(source_path, 'phdoc_static3')]
 html_static_path = templates_path
