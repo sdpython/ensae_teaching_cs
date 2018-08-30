@@ -281,13 +281,12 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                 if transfer and os.path.exists(root):
                     break
             if transfer and not os.path.exists(root):
-                if exc:
+                if exc and module != "ensae_teaching_cs":
                     p = os.path.abspath(location %
                                         (module, module, suffix[0], lay[0]))
                     raise FileNotFoundError(
                         "first tried '{0}'\n last tried '{1}'".format(root, p))
                 else:
-                    fLOG("[publish_teachings_to_web] skip", root)
                     continue
                 fLOG("   ", root)
             if module != "code_beatrix":
@@ -302,31 +301,29 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
         if module == "ensae_teaching_cs":
             lay = [_ for _ in layout if _[0] == "html"][0]
             root1 = root.replace("_UT_", "_DOC1_")
-            if transfer and not os.path.exists(root1):
-                if exc:
-                    raise FileNotFoundError(root1)
+            if transfer:
+                if not os.path.exists(root1):
+                    if exc:
+                        raise FileNotFoundError(root1)
+                    else:
+                        pass
                 else:
-                    fLOG("[publish_teachings_to_web] skip", root1)
-                    continue
+                    project = dict(status_file=os.path.join(folder_status, "status_doc1_%s.txt" % module),
+                                   local=root1, root_local=root1,
+                                   root_web=(rootw % (module, lay[1])).replace("_no_clean", ""))
+                    projects.append(project)
 
-            project = dict(status_file=os.path.join(folder_status, "status_doc1_%s.txt" % module),
-                           local=root1, root_local=root1,
-                           root_web=(rootw % (module, lay[1])).replace("_no_clean", ""))
-            projects.append(project)
-
-            root3 = root.replace("_UT_", "_DOC3_")
-            if transfer and not os.path.exists(root3):
-                if exc:
-                    raise FileNotFoundError(root3)
+            root3 = root.replace("_UT_", "_DOC3_").replace("html", "html3")
+            if transfer:
+                if not os.path.exists(root3):
+                    if exc:
+                        raise FileNotFoundError(root3)
                 else:
-                    fLOG("[publish_teachings_to_web] skip", root3)
-                    continue
-
-            project = dict(status_file=os.path.join(folder_status, "status_doc3_%s.txt" % module),
-                           local=root3.replace("\\html", "\\html3"),
-                           root_local=root3.replace("\\html", "\\html3"),
-                           root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
-            projects.append(project)
+                    project = dict(status_file=os.path.join(folder_status, "status_doc3_%s.txt" % module),
+                                   local=root3.replace("\\html", "\\html3"),
+                                   root_local=root3.replace("\\html", "\\html3"),
+                                   root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
+                    projects.append(project)
 
         elif module == "python3_module_template":
             lay = [_ for _ in layout if _[0] == "html"][0]
@@ -334,7 +331,6 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                 if exc:
                     raise FileNotFoundError(root)
                 else:
-                    fLOG("[publish_teachings_to_web] skip", root)
                     continue
 
             project = dict(status_file=os.path.join(folder_status, "status_2_%s.txt" % module),
