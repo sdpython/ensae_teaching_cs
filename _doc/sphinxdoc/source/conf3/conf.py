@@ -1,7 +1,8 @@
 import sys
 import os
 # import sphinx_bootstrap_theme
-import sphinx_materialdesign_theme
+# import sphinx_materialdesign_theme
+import hbp_sphinx_theme
 
 source_path = os.path.normpath(
     os.path.join(
@@ -17,8 +18,10 @@ except ImportError:
 
 # html_theme = 'bootstrap'
 # html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
-html_thme = "sphinx_materialdesign_theme"
-html_theme_path = sphinx_materialdesign_theme.get_path()
+# html_thme = "sphinx_materialdesign_theme"
+# html_theme_path = sphinx_materialdesign_theme.get_path()
+html_theme = "hbp_sphinx_theme"
+html_theme_path = [hbp_sphinx_theme.get_html_theme_path()]
 
 templates_path = [os.path.join(source_path, 'phdoc_static3')]
 html_static_path = templates_path
