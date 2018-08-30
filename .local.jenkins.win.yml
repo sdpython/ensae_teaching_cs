@@ -32,10 +32,25 @@ script:
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((ete3)).*\"", NAME: "UT_ETE3" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*cvxopt.*\"", NAME: "UT_CVXOPT" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*students.*\"", NAME: "UT_STUDENTS" }
+  - if [ ${VERSION} == "3.7" and ${DIST} == "std" ]
+      then 
+        --CMD=echo skip unit test;
+        --NAME=DOC1;
+        --CLEAN=0;
+        --TIMEOUT=5400
+      fi
+  - if [ ${VERSION} == "3.7" and ${DIST} == "std" ]
+      then 
+        --CMD=echo skip unit test;
+        --NAME=DOC3;
+        --CLEAN=0;
+        --TIMEOUT=5400
+      fi
 after_script:
   - python -u setup.py bdist_wheel
   - if [ ${DIST} != "conda" and ${NAME} == "UT" ] then copy dist\*.whl {{root_path}}\..\..\local_pypi\local_pypi_server fi
 documentation:
-  - if [ ${NAME} == "UT" ] then python -u setup.py build_sphinx fi
-  - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\sphinxdoc\build\html dist\html fi
-  - if [ ${NAME} in {"UT", "DOC"} ] then xcopy /E /C /I /Y _doc\sphinxdoc\build3\html dist\html3 fi
+  - if [ ${NAME} == "DOC1" ] then $PYINT -u setup.py build_sphinx html1 fi
+  - if [ ${NAME} == "DOC3" ] then $PYINT -u setup.py build_sphinx html3 fi
+  - if [ ${NAME} == "DOC1" ] then cp -R -f _doc/sphinxdoc/build/html dist/html fi
+  - if [ ${NAME} == "DOC3" ] then cp -R -f _doc/sphinxdoc/build3/html dist/html3 fi
