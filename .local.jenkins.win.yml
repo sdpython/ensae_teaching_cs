@@ -52,5 +52,5 @@ after_script:
 documentation:
   - if [ ${NAME} == "DOC1" ] then python -u setup.py build_sphinx html1 fi
   - if [ ${NAME} == "DOC3" ] then python -u setup.py build_sphinx html3 fi
-  - if [ ${NAME} == "DOC1" ] then copy -R -f xcopy /E /C /I /Y _doc\sphinxdoc\build\html dist\html fi
-  - if [ ${NAME} == "DOC3" ] then copy -R -f xcopy /E /C /I /Y _doc\sphinxdoc\build3\html dist\html3 fi
+  - if [ ${NAME} == "DOC1" ] then xcopy /E /C /I /Y _doc\sphinxdoc\build\html dist\html fi
+  - if [ ${NAME} == "DOC3" ] then xcopy /E /C /I /Y _doc\sphinxdoc\build3\html dist\html3 fi
