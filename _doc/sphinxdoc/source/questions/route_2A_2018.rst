@@ -37,26 +37,36 @@ discutées.
       - Le cours débutera par une courte introduction de 30 minutes en amphi
         puis travaux pratiques jusqu'à la fin afin d'être rapidement opérationnel.
         en :epkg:`Python`.
-      - :ref:`l-route2018-stat1`
-      - :ref:`l-route2018-eco1`
+      - Rappels et exercices sur la manipulation des données
+        avec :epkg:`pandas`, :epkg:`numpy`, :epkg:`matplotlib`,
+        :ref:`l-route2018-stat1`
+      - Rappels et exercices sur le langage :epkg:`Python`,
+        manipulation des données avec :epkg:`pandas`
+        :ref:`l-route2018-eco1`
       -
     * - 18/9 (2) *amphi*
       - Introduction au machine learning.
-      - Classification binaire, régression, régression logistique
-      - Classification binaire, régression, régression logistique
+      - Classification binaire, régression, régression logistique,
+        apprentissage test, validation croisée,
+        examples avec :epkg:`Python`
+      - Classification binaire, régression, régression logistique,
+        apprentissage test, validation croisée,
+        examples avec :epkg:`Python`
       -
     * - 25/9 (3) *TD*
-      - Suite des travaux pratiques
-        afin de s'assurer que tout le monde maîtrise
-        :epkg:`pandas`, :epkg:`numpy`, premiers pas avec
-        :epkg:`scikit-learn`.
-      - Variables catégorielles.
-      - Variables textuelles.
+      - :epkg:`scikit-learn` et autres librairies de
+        machine learning,
+      - Premiers pas avec :epkg:`scikit-learn`, prédicteur,
+        transformeurs, pipelines, application aux variables catégorielles,
+        introduction de :epkg:`statsmodels`, :epkg:`xgboost`
+      - Fin des exercices sur :epkg:`pandas`, :epkg:`numpy`,
+        premiers pas avec :epkg:`scikit-learn`.
       - Deux exposés de 10 minutes + 5 minutes de questions
         (:ref:`l-expoinfo2a`).
     * - 2/10 (4) *TD*
-      -
-      - Ranking, Détection d'anomalies, valeurs manquantes,
+      - 
+      - Ranking, Détection d'anomalies, clustering, 
+        valeurs manquantes,
         Imbalanced classification
       - Expressions régulière, web scrapping
       - Deux exposés de 10 minutes + 5 minutes de questions
@@ -65,36 +75,41 @@ discutées.
       - Comprendre les modèles.
       - Propriétés des modèles mathématiques,
         modèles linéaires, modèles ensemblistes,
-        modèles dérivables (Xavier Dupré).
-        *Machine Learning* avec **Gaël Varoquaux**,
-        discussion autour de l'interprétation des
-        modèles de machine learning (10h15)
-      - *Machine Learning* avec **Gaël Varoquaux**,
-        discussion autour de l'interprétation des
-        modèles de machine learning (10h15)
+        modèles dérivables (Xavier Dupré) suivi d'une
+        exposé autour de l'interprétation des
+        modèles de machine learning  **Gaël Varoquaux**
+        (10h15)
+      - Propriétés des modèles mathématiques,
+        modèles linéaires, modèles ensemblistes,
+        modèles dérivables (Xavier Dupré) suivi d'une
+        exposé autour de l'interprétation des
+        modèles de machine learning  **Gaël Varoquaux**
+        (10h15)
       - Deux exposés de 10 minutes + 5 minutes de questions
         (:ref:`l-expoinfo2a`).
     * - 16/10 (6) *TD*
       -
-      - Machine learning crypté, hyperparamètre, recommandation
+      - Machine learning crypté, hyperparamètres, recommandation
       - Séries temporelles, régression linéaire et logistique
       - Deux exposés de 10 minutes + 5 minutes de questions
         (:ref:`l-expoinfo2a`).
     * - 23/10 (7) *amphi*
-      - Effets secondaires du machine learning.
+      - 
       - revue de projet :epkg:`Kaggle`,
         notion de biais dans les modèles,
+        apprendre avec du texte, suivi de
         *Ethique et algorithmes* avec **Frédéric Bardolle** (10h15)
         (Xavier Dupré)
       - revue de projet :epkg:`Kaggle`
         notion de biais dans les modèles
-        (Xavier Dupré) -
+        apprendre avec du texte,
+        (Xavier Dupré) suivi de
         *Ethique et algorithmes* avec **Frédéric Bardolle** (10h15)
       - Deux exposés de 10 minutes + 5 minutes de questions
         (:ref:`l-expoinfo2a`).
     * - 6/11 (8) *TD*
       -
-      - Transfer Learning.
+      - Transfer Learning avec des arbres et du deep learning
       -
       - Deux exposés de 10 minutes + 5 minutes de questions
         (:ref:`l-expoinfo2a`).
