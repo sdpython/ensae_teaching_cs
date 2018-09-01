@@ -11,29 +11,51 @@ Machine learning - extensions
 Machine Learning Avancé
 =======================
 
+Des sujets qu'il faut avoir vu car ils se manifestent
+dès qu'on commence à passer le cap du modèle qu'on entraîne
+une fois pour s'intéresser à la maintenance des modèles
+et à leur entraînement sur le long terme.
+
 .. toctree::
     :maxdepth: 1
 
-    td2a_mlplus_regression_quantile
+    td2a_mlplus_apprendre_aberrant
+    td2a_mlplus_autolearning
     td2a_mlplus_optimisation_des_hyperparametres
-    td2a_mlplus_testab
     td2a_mlplus_online_training
     td2a_mlplus_overfitting
-    td2a_mlplus_modeles_avec_dependances_dans_le_temps
-    td2a_mlplus_autolearning
-    td2a_mlplus_predire_une_distribution
-    td2a_mlplus_clustering_hors_espace_vectoriel_de_dimension_finie
+    td2a_mlplus_regression_quantile
+    td2a_mlplus_testab
+
+D'autres sujets parfois exotiques mais non moins intéressants.
+
+.. toctree::
+    :maxdepth: 1
+
     td2a_mlplus_algorithmes_genetiques_et_autres_variantes
+    ../specials/nolabel
+    td2a_mlplus_clustering_hors_espace_vectoriel_de_dimension_finie
+    td2a_mlplus_clustering_notclassic
+    td2a_mlplus_collaborative_learning
+    td2a_mlplus_gaussian_processes
+    td2a_mlplus_modeles_avec_dependances_dans_le_temps
+    td2a_mlplus_predire_une_distribution
     td2a_mlplus_optimal_transfert
     td2a_mlplus_systeme_de_recommandation_avec_contraintes
-    td2a_mlplus_sgd
-    td2a_mlplus_snn
-    td2a_mlplus_gaussian_processes
     td2a_mlplus_reinforcement_learning_marl
-    td2a_mlplus_collaborative_learning
+    td2a_mlplus_snn
     td2a_mlplus_surprise_modelling
     td2a_mlplus_tres_grande_dimension
-    ../specials/nolabel
+
+Les algorithmes d'optmisation sont la base du
+machine learning. Les connaître et les comprendre
+ne peut assurément pas faire de mal.
+    
+.. toctree::
+    :maxdepth: 1
+
+    td2a_mlplus_sgd
+    
 
 Séries temporelles
 ==================
@@ -47,6 +69,7 @@ Séries temporelles
     td2a_mlplus_timeseries_temps_reel
     td2a_mlplus_finance
     td2a_mlplus_sequence_learning
+    td2a_mlplus_timeseries_anomalie
 
 Interprétation, Anonymisation, Cryptage, Privacy
 ================================================
