@@ -9,7 +9,7 @@
 Stochastique Gradient Descent
 +++++++++++++++++++++++++++++
 
-Ou *descente de gradient stochastique* en fran�ais.
+Ou *descente de gradient stochastique* en français.
 
 (*à venir*)
 
