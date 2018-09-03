@@ -39,6 +39,7 @@ du problème initiale.
     :maxdepth: 1
 
     td2a_mlbasic_projections_reduction_des_dimensions
+    td2a_mlbasic_hasard_robustesse
     td2a_mlbasic_variables_categorielles
     td2a_mlbasic_distances
     td2a_mlbasic_clustering

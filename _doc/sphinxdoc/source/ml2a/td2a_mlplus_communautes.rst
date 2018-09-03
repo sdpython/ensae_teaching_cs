@@ -35,3 +35,4 @@ de clustering mais on cherche aussi à en déterminer le centre ou encore
 * `Community Extraction in Multilayer Networks with Heterogeneous Community Structure <http://www.jmlr.org/papers/volume18/16-645/16-645.pdf>`_
 * `Discovering the hidden community structure of public transportation networks <https://arxiv.org/pdf/1801.03857.pdf>`_
   (article plutôt didactique)
+* `Python implementation of Newman's spectral methods to maximize modularity <https://github.com/zhiyzuo/python-modularity-maximization>`_

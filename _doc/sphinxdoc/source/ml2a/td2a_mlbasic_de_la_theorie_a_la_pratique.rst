@@ -97,6 +97,8 @@ de :ref:`l-imbalanced-classification`.
 * `The Boosting Approach to Machine Learning An Overview <https://www.cs.princeton.edu/picasso/mats/schapire02boosting_schapire.pdf>`_,
 * `A Theory of Multiclass Boosting <http://rob.schapire.net/papers/multiboost-journal.pdf>`_
 * `Generalized Random Forests <https://arxiv.org/abs/1610.01271>`_
+* `Learning Certifiably Optimal Rule Lists for Categorical Data <http://www.jmlr.org/papers/volume18/17-716/17-716.pdf>`_
+* `tick: a Python Library for Statistical Learning, with an emphasis on Hawkes Processes and Time-Dependent Models <http://www.jmlr.org/papers/volume18/17-381/17-381.pdf>`_
 
 `JMLR <http://www.jmlr.org/>`_
 poste régulièrement des articles sur des librairies de machine learning open source telles que
@@ -126,3 +128,4 @@ poste régulièrement des articles sur des librairies de machine learning open s
 * `mlxtend <https://github.com/rasbt/mlxtend>`_
 * :epkg:`catboost`
 * `GBDT-PL <https://github.com/GBDT-PL/GBDT-PL>`_ (en train d'être implémenté)
+* `thundersvm <https://github.com/Xtra-Computing/thundersvm>`_

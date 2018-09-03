@@ -18,6 +18,10 @@ Variables catégorielles
 
 * Corrélation entre des variables catégorielles
 
+*Notebooks*
+
+* `Hashing et catégories <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_category_hash.html>`_
+
 *Lectures*
 
 * :ref:`Tranformer les variables catégorielles et contrastes <encoding-categorie-id>`

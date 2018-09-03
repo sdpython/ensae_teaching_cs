@@ -64,8 +64,8 @@ discutées.
       - Deux exposés de 10 minutes + 5 minutes de questions
         (:ref:`l-expoinfo2a`).
     * - 2/10 (4) *TD*
-      - 
-      - Ranking, Détection d'anomalies, clustering, 
+      -
+      - Ranking, Détection d'anomalies, clustering,
         valeurs manquantes,
         Imbalanced classification
       - Expressions régulière, web scrapping
@@ -94,7 +94,7 @@ discutées.
       - Deux exposés de 10 minutes + 5 minutes de questions
         (:ref:`l-expoinfo2a`).
     * - 23/10 (7) *amphi*
-      - 
+      -
       - revue de projet :epkg:`Kaggle`,
         notion de biais dans les modèles,
         apprendre avec du texte, suivi de

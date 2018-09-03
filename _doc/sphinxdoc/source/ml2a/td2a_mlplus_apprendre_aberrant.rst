@@ -9,7 +9,6 @@
 Apprendre avec des observations aberrantes ou bruitées
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
 *Lectures*
 
 * `RANSAC: RANdom SAmple Consensus <http://scikit-learn.org/stable/modules/linear_model.html#ransac-regression>`_

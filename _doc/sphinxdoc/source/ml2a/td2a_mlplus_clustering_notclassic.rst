@@ -24,5 +24,3 @@ Clustering sans k-Means ni Classification Ascendante Hiérarchique
 * *Modules*
 
 * `OpenEnsembles <https://github.com/NaegleLab/OpenEnsembles>`_
-
-

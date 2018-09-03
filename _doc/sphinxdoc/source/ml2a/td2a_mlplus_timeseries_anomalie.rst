@@ -7,7 +7,6 @@
 Timeseries - Séries temporelles
 +++++++++++++++++++++++++++++++
 
-
 *Lectures*
 
 * `Time Series Anomaly Detection in Network Traffic: A Use Case for Deep Neural Networks <https://jask.com/time-series-anomaly-detection-in-network-traffic-a-use-case-for-deep-neural-networks/>`_
@@ -19,4 +18,3 @@ Timeseries - Séries temporelles
 * `Classification of Time Sequences using Graphs of Temporal Constraints <http://www.jmlr.org/papers/v18/15-403.html>`_
 * `A Hidden Absorbing Semi-Markov Model for Informatively Censored Temporal Data: Learning and Inference <http://www.jmlr.org/papers/v19/16-656.html>`_
 * `Concentration inequalities for empirical processes of linear time series <http://www.jmlr.org/papers/v18/17-012.html>`_
-

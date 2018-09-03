@@ -50,12 +50,11 @@ D'autres sujets parfois exotiques mais non moins intéressants.
 Les algorithmes d'optmisation sont la base du
 machine learning. Les connaître et les comprendre
 ne peut assurément pas faire de mal.
-    
+
 .. toctree::
     :maxdepth: 1
 
     td2a_mlplus_sgd
-    
 
 Séries temporelles
 ==================
