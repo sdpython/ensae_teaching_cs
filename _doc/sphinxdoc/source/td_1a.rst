@@ -87,6 +87,7 @@ et qu'il est important de comprendre.
     notebooks/tableau_contingence
     notebooks/histogramme_rapide
     notebooks/code_multinomial
+    notebooks/matrix_dictionary
 
 Au terme de ces six séances, si la programmation est nouvelle pour vous ou
 si le langage vous paraît encore peu naturel,
