@@ -285,7 +285,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                     p = os.path.abspath(location %
                                         (module, module, suffix[0], lay[0]))
                     raise FileNotFoundError(
-                        "first tried '{0}'\n last tried '{1}'".format(root, p))
+                        "First tried '{0}'\n last tried '{1}'".format(root, p))
                 else:
                     continue
                 fLOG("   ", root)
