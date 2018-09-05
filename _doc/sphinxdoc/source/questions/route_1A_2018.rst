@@ -62,6 +62,18 @@ Plan
         pour ceux que le C++ rebute, algorithme de streaming,
         :ref:`l-route2018-algo8`
 
+Prérequis
++++++++++
+
+La programmation fait maintenant partie
+du programme des `classes préparatoires <https://info-llg.fr/>`_.
+Ce cours suppose que les
+`types du langage <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_lang/types.html>`_,
+sa `syntaxe <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_lang/syntaxe.html>`_
+sont connus tout comme quelques algorithmes de :ref:`tri <trinlndrst>` comme
+le `tri bulle <https://fr.wikipedia.org/wiki/Tri_%C3%A0_bulles>`_
+et le `tri fusion <https://fr.wikipedia.org/wiki/Tri_fusion>`_.
+
 Version de Python
 +++++++++++++++++
 
@@ -77,7 +89,8 @@ pour *Windows* et de celle-ci pour la distribution
 Intervenants
 ++++++++++++
 
-`Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_, ...
+`Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_,
+Lucie Neirac, Benoît Choffin.
 
 Notes
 +++++
@@ -95,6 +108,7 @@ Séance 1
 Les premiers notebooks de cette section.
 
 * :ref:`l-td1a-lesbases`
+* :ref:`matrixdictionaryrst`
 
 .. _l-route2018-algo2:
 
