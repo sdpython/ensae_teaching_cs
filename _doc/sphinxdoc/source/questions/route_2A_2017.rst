@@ -162,7 +162,7 @@ Séance 1 Eco
     * :ref:`codelistetuplerst`
     * :ref:`structuresdonneesconversionrst`
 * Notebook : :ref:`td2acenoncesession2crst`
-* Compétation : :ref:`solution2016creditclementrst`
+* Compétition : :ref:`solution2016creditclementrst`
 
 .. _l-route2017-stat1:
 

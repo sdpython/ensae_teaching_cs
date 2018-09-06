@@ -4,6 +4,8 @@
     :alt: Statistique
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
 
+.. _l-td2a-ml-crypted:
+
 Machine Learning sur des données cryptées
 +++++++++++++++++++++++++++++++++++++++++
 

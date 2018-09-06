@@ -24,102 +24,70 @@ Une compétition sera ouverte le premier jour et
 fermée à la dernière session où les résultas et les idées seront
 discutées.
 
-.. list-table::
-    :widths: 2 5 5 5 5
-    :header-rows: 1
++===========================+===================================================+===============================================+
+| Séance                    | Voie stat                                         | Voie éco                                      |
++===========================+===================================================+===============================================+
+| 11/9 (1) *amphi*          | * Présentation du cours, évaluation                                                               |
+|                           | * Rappels sur le langage :epkg:`Python`, les modules les plus utilisés                            |
+| :ref:`l-route2018-stat1`  | * Classification binaire, régression logistique, régression linéaire                              |
+|                           | * Apprentissage test, validation croisée                                                          |
+|                           | * **A faire** : exécuter deux notebooks                                                           |
+|                           |   :ref:`structuresdonneesconversionrst`, :ref:`mlfeaturesmodelrst`                                |
++---------------------------+---------------------------------------------------+-----------------------------------------------+
+| 18/9 (2) *TD*             | Rappels et exercices sur la manipulation des      | Rappels et exercices sur le langage           |
+|                           | données avec :epkg:`pandas`, :epkg:`numpy`,       | :epkg:`Python`, manipulation des données avec |
+| :ref:`l-route2018-stat2`, | :epkg:`matplotlib`, :epkg:`scikit-learn`          | :epkg:`pandas`                                |
+| :ref:`l-route2018-eco2`   |                                                   |                                               |
++---------------------------+---------------------------------------------------+-----------------------------------------------+
+| 25/9 (3) *TD*             | Notion, de prédicteur, transformeurs, pipelines,  | Suite et fin des exercices pandas et          |
+|                           | application aux variables catégorielles,          | représentations graphiques variées, fin des   |
+| :ref:`l-route2018-stat3`, | introduction de :epkg:`statsmodels`,              | exercices sur :epkg:`pandas`, :epkg:`numpy`,  |
+| :ref:`l-route2018-eco3`,  | :epkg:`xgboost`, stacking                         | visualisation avec :epkg:`matplotlib`,        |
+| **deux exposés**          |                                                   | cartographie                                  |
++---------------------------+---------------------------------------------------+-----------------------------------------------+
+| 2/10 (4) *TD*             | Ranking, Détection d'anomalies, clustering,       | Econométrie, analyse de données et premiers   |
+|                           | valeurs manquantes, imbalanced classification     | pas avec :epkg:`scikit-learn`, (ACP,          |
+| :ref:`l-route2018-stat4`, |                                                   | Regréssion linéaire, Logit, séries            |
+| :ref:`l-route2018-eco4`   |                                                   | temporelles)                                  |
+| **deux exposés**          |                                                   |                                               |
++---------------------------+---------------------------------------------------+-----------------------------------------------+
+| 9/10 (5) *amphi*          | * Propriétés des modèles mathématiques, modèles linéaires, modèles ensemblistes, modèles          |
+|                           |   dérivables, feature importance (*Xavier Dupré*)                                                 |
+| :ref:`l-route2018-stat5`, | * Interprétation des modèles de machine learning (*Gaël Varoquaux*)                               |
+| **deux exposés**          |                                                                                                   |
++---------------------------+---------------------------------------------------+-----------------------------------------------+
+| 16/10 (6) *TD*            | Machine learning crypté, hyperparamètres,         | Travailler le texte, de la récupération à     |
+|                           | recommandation, séries temporelles                | l'exploitation (1/2), Expressions régulière,  |
+| :ref:`l-route2018-stat6`, |                                                   | web scrapping                                 |
+| :ref:`l-route2018-eco6`,  |                                                   |                                               |
+| **deux exposés**          |                                                   |                                               |
++---------------------------+---------------------------------------------------+-----------------------------------------------+
+| 23/10 (7) *amphi*         | * notion de deep learning sans en faire, application au texte, et aux images,                     |
+|                           |   transfer learning, exemples avec un moteur de recherche d'images (*Xavier Dupré*)               |
+| :ref:`l-route2018-stat7`, | * *Ethique et algorithmes* avec (*Frédéric Bardolle*)                                             |
+| **deux exposés**          |                                                                                                   |
++---------------------------+---------------------------------------------------+-----------------------------------------------+
+| 6/11 (8) *TD*             | Notion d'algorithmes, écrire du code efficace en  | Travailler le texte, de la récupération à     |
+|                           | :epkg:`Python`, avec :epkg:`pandas`,              | l'exploitation (2/2), Exercice de             |
+| :ref:`l-route2018-stat8`, | :epkg:`numpy`, discussion sur les projets         | webscraping, API, NLP                         |
+| :ref:`l-route2018-eco8`,  |                                                   |                                               |
+| **deux exposés**          |                                                   |                                               |
++---------------------------+---------------------------------------------------+-----------------------------------------------+
 
-    * - Séance
-      - Notes
-      - Stat
-      - Eco
-      - Exposés 11h45
-    * - 11/9 (1) *TD*
-      - Le cours débutera par une courte introduction de 30 minutes en amphi
-        puis travaux pratiques jusqu'à la fin afin d'être rapidement opérationnel.
-        en :epkg:`Python`.
-      - Rappels et exercices sur la manipulation des données
-        avec :epkg:`pandas`, :epkg:`numpy`, :epkg:`matplotlib`,
-        :ref:`l-route2018-stat1`
-      - Rappels et exercices sur le langage :epkg:`Python`,
-        manipulation des données avec :epkg:`pandas`
-        :ref:`l-route2018-eco1`
-      -
-    * - 18/9 (2) *amphi*
-      - Introduction au machine learning.
-      - Classification binaire, régression, régression logistique,
-        apprentissage test, validation croisée,
-        examples avec :epkg:`Python`
-      - Classification binaire, régression, régression logistique,
-        apprentissage test, validation croisée,
-        examples avec :epkg:`Python`
-      -
-    * - 25/9 (3) *TD*
-      - :epkg:`scikit-learn` et autres librairies de
-        machine learning,
-      - Premiers pas avec :epkg:`scikit-learn`, prédicteur,
-        transformeurs, pipelines, application aux variables catégorielles,
-        introduction de :epkg:`statsmodels`, :epkg:`xgboost`
-      - Fin des exercices sur :epkg:`pandas`, :epkg:`numpy`,
-        premiers pas avec :epkg:`scikit-learn`.
-      - Deux exposés de 10 minutes + 5 minutes de questions
-        (:ref:`l-expoinfo2a`).
-    * - 2/10 (4) *TD*
-      -
-      - Ranking, Détection d'anomalies, clustering,
-        valeurs manquantes,
-        Imbalanced classification
-      - Expressions régulière, web scrapping
-      - Deux exposés de 10 minutes + 5 minutes de questions
-        (:ref:`l-expoinfo2a`).
-    * - 9/10 (5) *amphi*
-      - Comprendre les modèles.
-      - Propriétés des modèles mathématiques,
-        modèles linéaires, modèles ensemblistes,
-        modèles dérivables (Xavier Dupré) suivi d'une
-        exposé autour de l'interprétation des
-        modèles de machine learning  **Gaël Varoquaux**
-        (10h15)
-      - Propriétés des modèles mathématiques,
-        modèles linéaires, modèles ensemblistes,
-        modèles dérivables (Xavier Dupré) suivi d'une
-        exposé autour de l'interprétation des
-        modèles de machine learning  **Gaël Varoquaux**
-        (10h15)
-      - Deux exposés de 10 minutes + 5 minutes de questions
-        (:ref:`l-expoinfo2a`).
-    * - 16/10 (6) *TD*
-      -
-      - Machine learning crypté, hyperparamètres, recommandation
-      - Séries temporelles, régression linéaire et logistique
-      - Deux exposés de 10 minutes + 5 minutes de questions
-        (:ref:`l-expoinfo2a`).
-    * - 23/10 (7) *amphi*
-      -
-      - revue de projet :epkg:`Kaggle`,
-        notion de biais dans les modèles,
-        apprendre avec du texte, suivi de
-        *Ethique et algorithmes* avec **Frédéric Bardolle** (10h15)
-        (Xavier Dupré)
-      - revue de projet :epkg:`Kaggle`
-        notion de biais dans les modèles
-        apprendre avec du texte,
-        (Xavier Dupré) suivi de
-        *Ethique et algorithmes* avec **Frédéric Bardolle** (10h15)
-      - Deux exposés de 10 minutes + 5 minutes de questions
-        (:ref:`l-expoinfo2a`).
-    * - 6/11 (8) *TD*
-      -
-      - Transfer Learning avec des arbres et du deep learning
-      -
-      - Deux exposés de 10 minutes + 5 minutes de questions
-        (:ref:`l-expoinfo2a`).
+Prérequis
++++++++++
+
+* *Voix stat* : maîtrise du langage :epkg:`Python`, connaissance des modules :epkg:`pandas`,
+  :epkg:`numpy`, voir
+  `quelques rappels <http://www.xavierdupre.fr/app/papierstat/helpsphinx/rappel.html>`_
+* *Voix éco* : maîtrise du langage :epkg:`Python`, :ref:`td2ecorappels1arst`
 
 Intervenants
 ++++++++++++
 
 `Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_,
 Anne Muller, Elodie Royant,
-Antoine Ly, Benjamin Donnot, Eliot Barril,
+Antoine Ly, Eliot Barril,
 Frédéric Bardolle,
 `Gaël Varoquaux <http://gael-varoquaux.info/>`_.
 
@@ -131,53 +99,157 @@ Liens, notebooks prévus pour les séances pratiques.
 .. contents::
     :local:
 
-.. _l-route2018-eco1:
-
-Séance 1 Eco
-^^^^^^^^^^^^
-
-* Rappels sur des bases du langage :epkg:`Python` : :ref:`td2ecorappels1arst`
-* Manipulation de fichiers : :ref:`td1acenoncesession4rst`
-* Manipulation des données :
-    * :ref:`td2acenoncesession2arst`
-    * :ref:`td2acorrectionsession2arst`
-    * :ref:`td2acenoncesession1rst`
-    * :ref:`td2acorrectionsession1rst`
-
-*Notebooks*
-
-* `try.jupyter.org <https://try.jupyter.org/>`_
-* `Notebook <http://nbviewer.jupyter.org/github/ipython/ipython/blob/3.x/examples/Notebook/Index.ipynb>`_
-
-*Compléments*
-
-* Rappels sur des bases du langage :epkg:`Python` :
-    * :ref:`td1acenoncesession1rst`
-    * :ref:`td1acenoncesession2rst`
-    * :ref:`td1acenoncesession3rst`
-    * :ref:`codelistetuplerst`
-    * :ref:`structuresdonneesconversionrst`
-* Notebook : :ref:`td2acenoncesession2crst`
-* Compétation : :ref:`solution2016creditclementrst`
-
 .. _l-route2018-stat1:
 
-Séance 1 Stat
-^^^^^^^^^^^^^
+Séance 1
+^^^^^^^^
 
-* Manipulation des données :
-    * :ref:`td2acenoncesession1rst`
-    * :ref:`td2acorrectionsession1rst`
-    * :ref:`td2acenoncesession2arst`
-    * :ref:`td2acorrectionsession2arst`
-* Graphes :
-    * :ref:`td2avisualisationrst`
-    * `10 plotting libraries <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_
-* Cartes :
-    * :ref:`td1acenoncesession12rst`
-    * :ref:`td1acorrectionsession12rst`
-* SQL :
-    * :ref:`l-sql-principe-base-2a`
-    * :ref:`td2aecosqlrst`
-    * :ref:`td2aecosqlcorrectionrst`
-* Sérialisation : :ref:`td2acenoncesession2erst`
+* `Rappels de mathématiques <http://www.xavierdupre.fr/app/papierstat/helpsphinx/rappel.html>`_
+* :ref:`td2ecorappels1arst`
+
+.. _l-route2018-stat2:
+
+Séance 2 - stat
+^^^^^^^^^^^^^^^
+
+* :ref:`td2acenoncesession2arst`
+* :ref:`td2acorrectionsession2arst`
+* :ref:`td2acenoncesession1rst`
+* :ref:`td2acorrectionsession1rst`
+
+**A faire** : exécuter deux notebooks,
+:ref:`structuresdonneesconversionrst`, :ref:`mlfeaturesmodelrst`.
+
+.. _l-route2018-stat2:
+
+Séance 2 - éco
+^^^^^^^^^^^^^^
+
+* :ref:`td2ecorappels1arst`
+* :ref:`td2acenoncesession2arst`
+* :ref:`td2acorrectionsession2arst`
+
+.. _l-route2018-stat3:
+
+Séance 3 - stat
+^^^^^^^^^^^^^^^
+
+* `Comparison de prédicteurs <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_reg.html>`_
+* :epkg:`XGBoost`
+* `transformer les catégories <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_color_linear.html>`_
+* `stacking <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_multi_stacking.html>`_
+* `Régression polynômiale et pileline <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_reg_poly.html>`_
+
+.. _l-route2018-eco3:
+
+Séance 3 - éco
+^^^^^^^^^^^^^^
+
+* `Tracer une carte en Python <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/enedis_cartes.html>`_
+
+.. _l-route2018-stat4:
+
+Séance 4 - stat
+^^^^^^^^^^^^^^^
+
+* :ref:`l-mlbasic-anomaly`
+* :ref:`l-ml2a-ranking`
+* :ref:`l-imbalanced-classification`
+* :ref:`l-td2a-missing-values`
+* :ref:`td2aclusteringrst`, :ref:`td2aclusteringcorrectionrst`
+
+.. _l-route2018-eco4:
+
+Séance 4 - éco
+^^^^^^^^^^^^^^
+
+Beaucoup de choses pour ce TD, voici ce que vous devez absolument
+avoir lu pendant les 3 heures.
+
+* Regardez différentes options disponibles pour faire les graphiques et
+  passez un peu de temps sur l'exemple :ref:`td2avisualisationrst`
+* Réaliser des modèles économétriques avec les outils :epkg:`Python` :
+    * :ref:`ACP <td2acenoncesession3arst>` (s'arrêter à l'exercice 1)
+    * :ref:`Régression linéaire <td2aecoregressionslineairesrst>`
+    * :ref:`Logit <td2aecocompetitionmodeleslogistiquesrst>`
+* :ref:`td2atimeseriesrst`
+	
+* SQL : lire attentivement le notebook :ref:`td2aecosqlrst`
+
+*Exercice à réaliser*
+
+* Exercice 2 de cette page :ref:`td2acenoncesession3arst`
+
+*Objectifs*
+
+* avoir compris comment réaliser les différentes classes de modèles
+  présentées (régression linéaire, ACP , logit)
+* avoir bien compris les notions de SQL utilisées
+  dans le début de l'exercice
+* réaliser la regression demandée avec les deux
+  packages proposés (:epkg:`scikit-learn` et :epkg:`statsmodels`)
+
+Pour aller plus loin :
+
+* Panoplie de graphes et cartes : :ref:`td1acenoncesession12rst`
+* ROC pour un modèle logit :epkg:`antiseches_ml_basic_plot_binary_classification`
+* Les exercices du notebook SQL : :ref:`td2aecosqlrst` (question 1)
+* Manipuler les données et modéliser les incidents dans le transport aérien
+  :ref:`td2acenoncesession5rst`
+
+.. _l-route2018-stat5:
+
+Séance 5
+^^^^^^^^
+
+* `Gradient et méthodes ensemblistes <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/gradienttree.html>`_
+* :ref:`mlcccmachinelearninginterpretabiliterst`
+* :ref:`l-ml2a-selvar`
+* :ref:`mlccmachinelearningproblems2rst`
+* `Régression logistique, diagramme de Voronoï, k-Means <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/lr_voronoi.html>`_
+* :ref:`mlcccmachinelearninginterpretabiliterst`
+
+.. _l-route2018-stat6:
+
+Séance 6 - stat
+^^^^^^^^^^^^^^^
+
+* :ref:`l-td2a-ml-crypted`
+* :ref:`l-td2a-hyperparametre`
+* :ref:`mltimeseriesbaserst`
+* `Liens entre factorisation de matrices, ACP, k-means <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/missing_values_mf.html>`_
+* :ref:`l-td2a-sys-recommandation`
+
+.. _l-route2018-eco6:
+
+Séance 6 - éco
+^^^^^^^^^^^^^^
+
+.. _l-route2018-stat7:
+
+Séance 7
+^^^^^^^^
+
+* `Réseaux de neurones <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/rn/rn.html>`_
+* :ref:`l-nolabel`
+* `Galleries de problèmes résolus ou presque <http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/chapters/dl_resolus.html>`_
+* `Transfer Learning <http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/chapters/deep_transfer_learning.html>`_
+* `Search images with deep learning <http://www.xavierdupre.fr/app/mlinsights/helpsphinx/notebooks/search_images.html>`_
+
+.. _l-route2018-stat8:
+
+Séance 8 - stat
+^^^^^^^^^^^^^^^
+
+* :ref:`knnhighdimensionrst`, :ref:`knnhighdimensioncorrectionrst`
+* :ref:`BJKSTrst`
+* :ref:`td2acenoncesession6Arst`, :ref:`td2acenoncesession6Acorrectionrst`
+* :ref:`td2acenoncesession6Brst`, :ref:`td2acenoncesession6Bcorrectionrst`
+
+.. _l-route2018-eco8:
+
+Séance 8 - éco
+^^^^^^^^^^^^^^
+
+* :ref:`td2amltextfeaturesrst`
+* :ref:`td2asomenlprst`
