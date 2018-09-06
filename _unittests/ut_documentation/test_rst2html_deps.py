@@ -7,6 +7,7 @@ import os
 import unittest
 from pyquickhelper.loghelper.flog import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
+from pyquickhelper.pycode import ExtTestCase
 from pyquickhelper.helpgen import rst2html
 
 
@@ -24,7 +25,7 @@ except ImportError:
     import src
 
 
-class TestRst2HtmlDeps(unittest.TestCase):
+class TestRst2HtmlDeps(ExtTestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "jyquickhelper"],
@@ -59,10 +60,9 @@ class TestRst2HtmlDeps(unittest.TestCase):
                     """
 
         temp = get_temp_folder(__file__, "temp_rst2html_deps")
+        clone = 0
 
-        for name in (  # 'questions/route_2A_2018.rst',
-            'ci_status.rst',
-        ):
+        for name in ('questions/route_2A_2018.rst', 'ci_status.rst', )[1:]:
             doc = os.path.join(temp, "..", "..", "..", "_doc",
                                "sphinxdoc", "source", name)
             fulls = [doc]
@@ -72,14 +72,18 @@ class TestRst2HtmlDeps(unittest.TestCase):
                          Jupyter="http", lightmlboard="zoo", lightmlrestapi="mll",
                          mlinsights="mli", mlprodict="mlp", sparkouille="spko",
                          spark='spk', manydataapi="mda", csharpy='cspy',
-                         csharpyml='cspyml', Python='Python', ensae_teaching_dl='endl')
+                         csharpyml='cspyml', Python='Python', ensae_teaching_dl='endl',
+                         matplotlib="mpl", pandas="pds", statsmodels="stm",
+                         numpy="np", xgboost="xgb", XGBoost="xgb",
+                         antiseches_ml_basic_plot_binary_classification="chsh")
+            links["scikit-learn"] = "skl"
             links.update({'ML.net': 'mlnet', 'C#': 'C#'})
-
             for full in fulls:
                 last = os.path.split(full)[-1]
                 fLOG("process", last)
                 with open(full, "r", encoding="utf-8") as f:
                     content = f.read()
+                content = content.replace(":ref:", "     ")
                 writer = "rst"
                 content = content.replace(
                     "from ensae_teaching", "from src.ensae_teaching")
@@ -93,8 +97,11 @@ class TestRst2HtmlDeps(unittest.TestCase):
                     f.write(text)
                 if "ERROR/" in text:
                     raise Exception(text)
-                if "git clone" not in text:
-                    raise Exception(text)
+                if "git clone" in text:
+                    clone += 1
+
+        # finds some expression over multiple documents
+        self.assertGreater(clone, 1)
 
 
 if __name__ == "__main__":

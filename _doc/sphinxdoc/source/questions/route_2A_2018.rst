@@ -24,7 +24,7 @@ Une compétition sera ouverte le premier jour et
 fermée à la dernière session où les résultas et les idées seront
 discutées.
 
-+===========================+===================================================+===============================================+
++---------------------------+---------------------------------------------------+-----------------------------------------------+
 | Séance                    | Voie stat                                         | Voie éco                                      |
 +===========================+===================================================+===============================================+
 | 11/9 (1) *amphi*          | * Présentation du cours, évaluation                                                               |
@@ -120,7 +120,7 @@ Séance 2 - stat
 **A faire** : exécuter deux notebooks,
 :ref:`structuresdonneesconversionrst`, :ref:`mlfeaturesmodelrst`.
 
-.. _l-route2018-stat2:
+.. _l-route2018-eco2:
 
 Séance 2 - éco
 ^^^^^^^^^^^^^^
@@ -243,8 +243,8 @@ Séance 8 - stat
 
 * :ref:`knnhighdimensionrst`, :ref:`knnhighdimensioncorrectionrst`
 * :ref:`BJKSTrst`
-* :ref:`td2acenoncesession6Arst`, :ref:`td2acenoncesession6Acorrectionrst`
-* :ref:`td2acenoncesession6Brst`, :ref:`td2acenoncesession6Bcorrectionrst`
+* :ref:`td2acenoncesession6Arst`, :ref:`td2acorrectionsession6Arst`
+* :ref:`td2acenoncesession6Brst`, :ref:`td2acorrectionsession6Brst`
 
 .. _l-route2018-eco8:
 
