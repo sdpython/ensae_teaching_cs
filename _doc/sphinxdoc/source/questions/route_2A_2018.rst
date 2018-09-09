@@ -31,8 +31,8 @@ discutées.
 |                           | * Rappels sur le langage :epkg:`Python`, les modules les plus utilisés                            |
 | :ref:`l-route2018-stat1`  | * Classification binaire, régression logistique, régression linéaire                              |
 |                           | * Apprentissage test, validation croisée                                                          |
-|                           | * **A faire** : exécuter deux notebooks                                                           |
-|                           |   :ref:`structuresdonneesconversionrst`, :ref:`mlfeaturesmodelrst`                                |
+|                           | * **A faire** : exécuter trois notebooks                                                          |
+|                           |   :ref:`structuresdonneesconversionrst`, :ref:`histogrammerapiderst`, :ref:`mlfeaturesmodelrst`   |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
 | 18/9 (2) *TD*             | Rappels et exercices sur la manipulation des      | Rappels et exercices sur le langage           |
 |                           | données avec :epkg:`pandas`, :epkg:`numpy`,       | :epkg:`Python`, manipulation des données avec |
@@ -104,8 +104,21 @@ Liens, notebooks prévus pour les séances pratiques.
 Séance 1
 ^^^^^^^^
 
+* Précision sur le cours, évaluation, exposés, ressources, TD, amphi,
+* notebook, :epkg:`python`, prérequis
 * `Rappels de mathématiques <http://www.xavierdupre.fr/app/papierstat/helpsphinx/rappel.html>`_
 * :ref:`td2ecorappels1arst`
+* :ref:`mlcmachinelearningproblemsrst`
+* Lectures `Lectures sur le machine learning <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/index.html>`_
+* principe de la prédiction
+* plus proches voisins
+* base d'apprentissage et de tests, découpage stratifié
+* hyperparamètres
+* définition de la régression et de la classification
+* score et ROC
+* **A faire pour la prochaine fois** : exécuter trois notebooks,
+  :ref:`structuresdonneesconversionrst`, :ref:`histogrammerapiderst`,
+  :ref:`mlfeaturesmodelrst`
 
 .. _l-route2018-stat2:
 
