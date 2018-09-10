@@ -45,22 +45,22 @@ discutées.
 | :ref:`l-route2018-eco3`,  | :epkg:`xgboost`, stacking                         | visualisation avec :epkg:`matplotlib`,        |
 | **deux exposés**          |                                                   | cartographie                                  |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
-| 2/10 (4) *TD*             | Ranking, Détection d'anomalies, clustering,       | Econométrie, analyse de données et premiers   |
+| 2/10 (5) *TD*             | Ranking, Détection d'anomalies, clustering,       | Econométrie, analyse de données et premiers   |
 |                           | valeurs manquantes, imbalanced classification     | pas avec :epkg:`scikit-learn`, (ACP,          |
 | :ref:`l-route2018-stat4`, |                                                   | Regréssion linéaire, Logit, séries            |
 | :ref:`l-route2018-eco4`   |                                                   | temporelles)                                  |
 | **deux exposés**          |                                                   |                                               |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
-| 9/10 (5) *amphi*          | * Propriétés des modèles mathématiques, modèles linéaires, modèles ensemblistes, modèles          |
-|                           |   dérivables, feature importance (*Xavier Dupré*)                                                 |
-| :ref:`l-route2018-stat5`, | * Interprétation des modèles de machine learning (*Gaël Varoquaux*)                               |
-| **deux exposés**          |                                                                                                   |
-+---------------------------+---------------------------------------------------+-----------------------------------------------+
-| 16/10 (6) *TD*            | Machine learning crypté, hyperparamètres,         | Travailler le texte, de la récupération à     |
+| 9/10 (5) *TD*             | Machine learning crypté, hyperparamètres,         | Travailler le texte, de la récupération à     |
 |                           | recommandation, séries temporelles                | l'exploitation (1/2), Expressions régulière,  |
-| :ref:`l-route2018-stat6`, |                                                   | web scrapping                                 |
-| :ref:`l-route2018-eco6`,  |                                                   |                                               |
+| :ref:`l-route2018-stat5`, |                                                   | web scrapping                                 |
+| :ref:`l-route2018-eco5`,  |                                                   |                                               |
 | **deux exposés**          |                                                   |                                               |
++---------------------------+---------------------------------------------------+-----------------------------------------------+
+| 16/10 (6) *amphi*         | * Propriétés des modèles mathématiques, modèles linéaires, modèles ensemblistes, modèles          |
+|                           |   dérivables, feature importance (*Xavier Dupré*)                                                 |
+| :ref:`l-route2018-stat6`, | * Interprétation des modèles de machine learning (*Gaël Varoquaux*)                               |
+| **deux exposés**          |                                                                                                   |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
 | 23/10 (7) *amphi*         | * notion de deep learning sans en faire, application au texte, et aux images,                     |
 |                           |   transfer learning, exemples avec un moteur de recherche d'images (*Xavier Dupré*)               |
@@ -212,19 +212,7 @@ Pour aller plus loin :
 
 .. _l-route2018-stat5:
 
-Séance 5
-^^^^^^^^
-
-* `Gradient et méthodes ensemblistes <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/gradienttree.html>`_
-* :ref:`mlcccmachinelearninginterpretabiliterst`
-* :ref:`l-ml2a-selvar`
-* :ref:`mlccmachinelearningproblems2rst`
-* `Régression logistique, diagramme de Voronoï, k-Means <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/lr_voronoi.html>`_
-* :ref:`mlcccmachinelearninginterpretabiliterst`
-
-.. _l-route2018-stat6:
-
-Séance 6 - stat
+Séance 5 - stat
 ^^^^^^^^^^^^^^^
 
 * :ref:`l-td2a-ml-crypted`
@@ -233,10 +221,22 @@ Séance 6 - stat
 * `Liens entre factorisation de matrices, ACP, k-means <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/missing_values_mf.html>`_
 * :ref:`l-td2a-sys-recommandation`
 
-.. _l-route2018-eco6:
+.. _l-route2018-eco5:
 
-Séance 6 - éco
+Séance 5 - éco
 ^^^^^^^^^^^^^^
+
+.. _l-route2018-stat6:
+
+Séance 6
+^^^^^^^^
+
+* `Gradient et méthodes ensemblistes <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/gradienttree.html>`_
+* :ref:`mlcccmachinelearninginterpretabiliterst`
+* :ref:`l-ml2a-selvar`
+* :ref:`mlccmachinelearningproblems2rst`
+* `Régression logistique, diagramme de Voronoï, k-Means <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/lr_voronoi.html>`_
+* :ref:`mlcccmachinelearninginterpretabiliterst`
 
 .. _l-route2018-stat7:
 

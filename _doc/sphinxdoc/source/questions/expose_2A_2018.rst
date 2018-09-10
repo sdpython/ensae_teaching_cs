@@ -135,3 +135,31 @@ Thèmes
 * Détection d'anomalies
 
     * `Robust Random Cut Forest Based Anomaly Detection On Streams <http://proceedings.mlr.press/v48/guha16.pdf>`_
+
+* yield management
+
+    * `Le yield managment pour les nuls <http://veilletourisme.ca/2004/05/27/le-yield-management-pour-les-nuls/>`_
+    * `Machine-learning pour la prédiction des prix dans le secteur du tourisme en ligne <https://pastel.archives-ouvertes.fr/tel-01310537/document>`_
+    * `Yield Management at American Airlines <https://classes.engineering.wustl.edu/2010/fall/ese403/software/Informs%20Articles/CH18%20Yield%20Management%20at%20American%20Airlines.pdf>`_
+    * `Perishability of Data: Dynamic Pricing under Varying-Coefficient Models <http://www.jmlr.org/papers/volume18/17-061/17-061.pdf>`_
+
+* enchères
+
+    * `Learning Algorithms for Second-Price Auctions with Reserve <http://jmlr.org/papers/volume17/14-499/14-499.pdf>`_
+    * `Learning Simple Auctions <http://proceedings.mlr.press/v49/morgenstern16.pdf>`_
+
+* éducation
+
+    * `Multi-Armed Bandits for Intelligent Tutoring Systems <http://www.pyoudeyer.com/JEDMClementetal15.pdf>`_
+    * `Object learning through active exploration <https://flowers.inria.fr/ActiveExplorationICubTAMD2013.pdf>`_
+
+* détection de biais
+
+    * `On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation <http://www.jmlr.org/papers/volume11/cawley10a/cawley10a.pdf>`_
+    * `Learning Theory of Distributed Regression with Bias Corrected Regularization Kernel Network <http://www.jmlr.org/papers/volume18/17-423/17-423.pdf>`_
+    * `Identifying Significant Predictive Bias in Classifiers <https://arxiv.org/pdf/1611.08292.pdf>`_
+    * `On the reduction of biases in Big Data sets ofr the detection of irregular power usage <https://arxiv.org/pdf/1801.05627.pdf>`_
+
+* robustesse
+
+    * `Preserving Statistical Validity in Adaptive Data Analysis∗ <https://arxiv.org/pdf/1411.2664.pdf>`_

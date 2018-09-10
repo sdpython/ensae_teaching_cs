@@ -196,7 +196,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                              layout=[("html", "helpsphinx")],
                              modules=None, password=None, force_allow=None,
                              suffix=("_UT_%d%d_std" % sys.version_info[:2],),
-                             delay=0.5, exc=True, exc_transfer=False,
+                             delay=0.5, exc=False, exc_transfer=False,
                              transfer=True, fLOG=print):
     """
     Copies the documentation to the website.
