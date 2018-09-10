@@ -5,7 +5,7 @@
     :date: 2018-03-24
     :categories: machine learning
 
-    Dans :ref: `l-interpretabilite-ml` :
+    Dans :ref:`l-interpretabilite-ml` :
 
     * `Explaining behavior of Machine Learning models with eli5 library <http://pyvideo.org/europython-2017/explaining-behavior-of-machine-learning-models-with-eli5-library.html>`_ (vidéo)
     * `eli5 <https://github.com/TeamHG-Memex/eli5>`_

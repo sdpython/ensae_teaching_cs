@@ -14,7 +14,7 @@
 Interprétabilité des modèles
 ++++++++++++++++++++++++++++
 
-.. index:: transparence, protection des données, loi européenne
+.. index:: transparence, protection des données, loi européenne, LIME
 
 Le machine learning tend à déléguer une partie de la modélisation pour
 fabriquer des modèles opaques, avec beaucoup de coefficients
@@ -91,6 +91,7 @@ C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
 * `The Myth Of Interpretability of Econometric Models <http://freakonometrics.hypotheses.org/51752>`_
 * `Interpretable Policies for Reinforcement Learning by Genetic Programming <https://arxiv.org/abs/1712.04170>`_
 * `An Efficient Explanation of Individual Classifications using Game Theory <http://lkm.fri.uni-lj.si/xaigor/slo/pedagosko/dr-ui/jmlr-strumbelj-kononenko.pdf>`_ **
+* `How to Explain Individual Classification Decisions <http://www.jmlr.org/papers/volume11/baehrens10a/baehrens10a.pdf>`_
 
 *Lectures : monotonie*
 
