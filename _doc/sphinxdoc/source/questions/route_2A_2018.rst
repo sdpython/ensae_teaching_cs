@@ -34,7 +34,7 @@ discutées.
 |                           | * **A faire** : exécuter trois notebooks                                                          |
 |                           |   :ref:`structuresdonneesconversionrst`, :ref:`histogrammerapiderst`, :ref:`mlfeaturesmodelrst`   |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
-| 18/9 (2) *TD*             | Rappels et exercices sur la manipulation des      | Rappels et exercices sur le langage           |
+| 18/9 (2) *TD/amphi*       | Rappels et exercices sur la manipulation des      | Rappels et exercices sur le langage           |
 |                           | données avec :epkg:`pandas`, :epkg:`numpy`,       | :epkg:`Python`, manipulation des données avec |
 | :ref:`l-route2018-stat2`, | :epkg:`matplotlib`, :epkg:`scikit-learn`          | :epkg:`pandas`                                |
 | :ref:`l-route2018-eco2`   |                                                   |                                               |
@@ -125,18 +125,57 @@ Séance 1
 Séance 2 - stat
 ^^^^^^^^^^^^^^^
 
+*8h30 - TD*
+
+* Vérifier que les trois notebooks ont été exécutés,
+  **A faire pour la prochaine fois** : exécuter trois notebooks,
+  :ref:`structuresdonneesconversionrst`, :ref:`histogrammerapiderst`,
+  :ref:`mlfeaturesmodelrst`
+* :ref:`mlscikitlearnsimplerst`
+
+*Pour réviser*
+
 * :ref:`td2acenoncesession2arst`
 * :ref:`td2acorrectionsession2arst`
 * :ref:`td2acenoncesession1rst`
 * :ref:`td2acorrectionsession1rst`
 
-**A faire** : exécuter deux notebooks,
-:ref:`structuresdonneesconversionrst`, :ref:`mlfeaturesmodelrst`.
+*10h15 - modèle complexe avec scikit-learn*
+
+* présentation de l'API de scikit-learn
+* notion de pipeline
+* implémentation d'un modèle avec l'API de *scikit-learn*
+  `Contributing <http://scikit-learn.org/stable/developers/contributing.html#contributing-code>`_,
+  `sklearn.base <http://scikit-learn.org/stable/modules/classes.html#module-sklearn.base>`_
+* :epkg:`*py:pickle`
+* mesure du temps de calcul pour différentes tailles de jeu de données,
+  étude pour une régression logistique
+  :ref:`cffilinearregressionrst`
+* `stacking <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_multi_stacking.html?highlight=stacking>`_
 
 .. _l-route2018-eco2:
 
 Séance 2 - éco
 ^^^^^^^^^^^^^^
+
+*8h30 - amphi*
+
+* Rappels sur le langage :epkg:`python`,
+  `Cheat sheet: Python <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_resume/python_sheet.html>`_,
+  variable, listes, dictionnaires, boucles, fonctions
+* Introduction à :epkg:`pandas`, notion de table,
+  lecture, écriture de fichiers texte, :epkg:`Excel`,
+  ajout de colonne, opérations entre colonne, *apply*,
+  opérations standard (sort, filter, group by, join),
+* Introduction à :epkg:`numpy`, opérations standard,
+  calcul matriciel, différences avec un dataframe
+
+*10h15 - TD*
+
+Vérifier que les trois notebooks ont été exécutés,
+exécuter trois notebooks,
+:ref:`structuresdonneesconversionrst`, :ref:`histogrammerapiderst`,
+:ref:`mlfeaturesmodelrst`
 
 * :ref:`td2ecorappels1arst`
 * :ref:`td2acenoncesession2arst`
