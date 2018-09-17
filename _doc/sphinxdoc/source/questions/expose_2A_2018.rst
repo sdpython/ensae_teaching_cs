@@ -136,7 +136,7 @@ Thèmes
 
     * `Robust Random Cut Forest Based Anomaly Detection On Streams <http://proceedings.mlr.press/v48/guha16.pdf>`_
 
-* yield management
+* Yield management
 
     * `Le yield managment pour les nuls <http://veilletourisme.ca/2004/05/27/le-yield-management-pour-les-nuls/>`_
     * `Machine-learning pour la prédiction des prix dans le secteur du tourisme en ligne <https://pastel.archives-ouvertes.fr/tel-01310537/document>`_
@@ -147,6 +147,8 @@ Thèmes
 
     * `Learning Algorithms for Second-Price Auctions with Reserve <http://jmlr.org/papers/volume17/14-499/14-499.pdf>`_
     * `Learning Simple Auctions <http://proceedings.mlr.press/v49/morgenstern16.pdf>`_
+    * `A Structural Model of Sponsored Search Advertising Auctions <http://economics.mit.edu/files/6975>`_
+    * `Bayesian Methods for Media Mix Modeling with Carryover and Shape Effects <https://static.googleusercontent.com/media/research.google.com/fr//pubs/archive/46001.pdf>`_
 
 * Education
 
@@ -163,3 +165,16 @@ Thèmes
 * Robustesse
 
     * `Preserving Statistical Validity in Adaptive Data Analysis∗ <https://arxiv.org/pdf/1411.2664.pdf>`_
+
+* Evaluation de politique, relations causales
+
+    * `Machine Learning and Causal Inference for Policy Evaluation  <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.726.5229&rep=rep1&type=pdf>`_
+    * `Recursive Partitioning for Heterogeneous Causal Effects <https://arxiv.org/pdf/1504.01132.pdf>`_
+    * `Machine Learning Meets Instrumental Variables <https://medium.com/teconomics-blog/machine-learning-meets-instrumental-variables-c8eecf5cec95>`_
+    * `Synthetic Control Methods and Big Data <https://arxiv.org/pdf/1803.00096.pdf>`_
+    * `To Explain or to Predict? <https://www.stat.berkeley.edu/~aldous/157/Papers/shmueli.pdf>`_
+
+* Théorie des jeux, économie, deep reinforcement lerning
+
+    * `Artificial Intelligence as Structural Estimation: Economic Interpretations of Deep Blue, Bonanza, and AlphaGo <https://arxiv.org/pdf/1710.10967.pdf>`_
+    * `When Machine Learning Meets AI and Game Theory <http://cs229.stanford.edu/proj2012/AgrawalJaiswal-WhenMachineLearningMeetsAIandGameTheory.pdf>`_
