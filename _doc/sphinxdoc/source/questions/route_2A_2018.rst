@@ -131,14 +131,12 @@ Séance 2 - stat
   **A faire pour la prochaine fois** : exécuter trois notebooks,
   :ref:`structuresdonneesconversionrst`, :ref:`histogrammerapiderst`,
   :ref:`mlfeaturesmodelrst`
-* :ref:`mlscikitlearnsimplerst`
+* :ref:`mlscikitlearnsimplerst` (:ref:`mlscikitlearnsimplecorrectionrst`)
 
-*Pour réviser*
+*Lectures conseillées*
 
-* :ref:`td2acenoncesession2arst`
-* :ref:`td2acorrectionsession2arst`
-* :ref:`td2acenoncesession1rst`
-* :ref:`td2acorrectionsession1rst`
+Les cours de Gaël Varoquaux :ref:`l-ml-skgael`,
+les notebooks d'exercices associées à ces lectures.
 
 *10h15 - modèle complexe avec scikit-learn*
 
