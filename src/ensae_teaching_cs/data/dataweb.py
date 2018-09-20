@@ -26,6 +26,8 @@ def anyfile(name, local=True, cache_folder=".", filename=True, unzip=False, enco
 def google_trends(name="macron", local=True, cache_folder=".", filename=True):
     """
     Returns some google trends example.
+    See :func:`ensae_teaching_cs.data.dataweb.anyfile` to
+    directly download it.
 
     @param          name            expression
     @param          local           local data or web
@@ -39,7 +41,9 @@ def google_trends(name="macron", local=True, cache_folder=".", filename=True):
 def twitter_zip(name="tweets_macron_sijetaispresident_201609", local=True, cache_folder=".",
                 filename=False, unzip=True, as_df=True, encoding="utf-8"):
     """
-    Returns zipped twitter
+    Returns zipped twitter.
+    See :func:`ensae_teaching_cs.data.dataweb.anyfile` to
+    directly download it.
 
     @param          name            filename
     @param          local           local data or web

@@ -174,6 +174,12 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
             return False
         if " noeud tri n'est pas encore défini" in cell:
             return False
+        if "nuplet[1] = 5" in cell:
+            return False
+        if cell == "dico[0]":
+            return False
+        if cell == "dico[ [4,6] ] = 6":
+            return False
         return True
 
     addpaths = get_additional_paths()
@@ -236,7 +242,7 @@ def a_test_notebook_runner(filename, name, folder, valid=None, copy_files=None, 
     if not os.path.exists(doc):
         raise FileNotFoundError(doc)
     keepnote = [os.path.join(doc, _) for _ in os.listdir(
-        doc) if name in _ and ".ipynb" in _]
+        doc) if name in _ and ".ipynb" in _ and ".ipynb_checkpoints" not in _]
     if len(keepnote) == 0:
         raise AssertionError("No found notebook in '{0}'\n{1}".format(
             doc, "\n".join(os.listdir(doc))))

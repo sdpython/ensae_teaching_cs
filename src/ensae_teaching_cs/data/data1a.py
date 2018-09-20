@@ -21,6 +21,8 @@ def anyfile(name, local=True, cache_folder=".", filename=True):
 def marathon(local=True, cache_folder=".", filename=True):
     """
     Time about marathons over cities and years
+    See :func:`ensae_teaching_cs.data.data1a.anyfile` to
+    directly download it.
 
     @param          local           local data or web
     @param          cache_folder    where to cache the data if downloaded a second time
@@ -33,6 +35,8 @@ def marathon(local=True, cache_folder=".", filename=True):
 def donnees_enquete_2003_television(local=True, cache_folder=".", filename=True):
     """
     Time about marathons over cities and years
+    See :func:`ensae_teaching_cs.data.data1a.anyfile` to
+    directly download it.
 
     @param          local           local data or web
     @param          cache_folder    where to cache the data if downloaded a second time

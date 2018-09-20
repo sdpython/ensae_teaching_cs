@@ -8,7 +8,7 @@ from .data_helper import any_local_file
 def anyfile(name, local=True, cache_folder="."):
     """
     Returns any file in sub folder
-    `data_web <https://github.com/sdpython/ensae_teaching_cs/tree/master/src/ensae_teaching_cs/data/data_sql>`_.
+    `data_sql <https://github.com/sdpython/ensae_teaching_cs/tree/master/src/ensae_teaching_cs/data/data_sql>`_.
 
     @param          name            file to download
     @param          local           local data or web
@@ -21,6 +21,8 @@ def anyfile(name, local=True, cache_folder="."):
 def simple_database(name="World.db3", local=True, cache_folder="."):
     """
     Returns a simple database.
+    See :func:`ensae_teaching_cs.data.datasql.anyfile` to
+    directly download it.
 
     @param          name            filename
     @param          local           local data or web

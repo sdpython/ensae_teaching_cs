@@ -41,7 +41,7 @@ def anyzip(filename, local=True, cache_folder=".", fLOG=noLOG, **kwargs):
 
 def besancon_df(local=True, cache_folder=".", fLOG=noLOG):
     """
-    ``Besancon.df.zip``
+    Retrieves ``Besancon.df.zip``.
 
     @param          local           local data or web
     @param          cache_folder    where to cache the data if downloaded a second time
@@ -54,7 +54,7 @@ def besancon_df(local=True, cache_folder=".", fLOG=noLOG):
 
 def added(local=True, cache_folder=".", fLOG=noLOG):
     """
-    ``added.zip``
+    Retrieves ``added.zip``.
 
     @param          local           local data or web
     @param          cache_folder    where to cache the data if downloaded a second time

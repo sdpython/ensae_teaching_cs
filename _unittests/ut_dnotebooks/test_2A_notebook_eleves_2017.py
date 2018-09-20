@@ -1,5 +1,5 @@
 """
-@brief      test log(time=40s)
+@brief      test log(time=12s)
 """
 
 import sys
@@ -23,7 +23,7 @@ except ImportError:
     import src
 
 
-class TestNotebookEleves(unittest.TestCase):
+class TestNotebookEleves2017(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
@@ -39,8 +39,8 @@ class TestNotebookEleves(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks
-        temp = get_temp_folder(__file__, "temp_notebook_eleves")
-        keepnote = ls_notebooks("notebook_eleves/2016-2017")
+        temp = get_temp_folder(__file__, "temp_notebook_eleves_2017")
+        keepnote = ls_notebooks("notebook_eleves/2017-2018")
         self.assertTrue(len(keepnote) > 0)
         execute_notebooks(temp, keepnote, (lambda i, n: True), fLOG=fLOG,
                           replacements=self.get_replacements(), dump=src.ensae_teaching_cs)
