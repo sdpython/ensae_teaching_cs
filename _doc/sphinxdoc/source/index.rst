@@ -139,9 +139,7 @@ sous *Windows*, *Linux* et *MacOS*.
 Le langage est devenu populaire aussi parmi les data scientists grâce à un ensemble
 de librairies qui ont offert un service équivalent à ce que propose :epkg:`R`.
 `pandas <http://fr.wikipedia.org/wiki/Panda>`_,
-`numpy <http://www.numpy.org/>`_,
-`matplotlib <http://matplotlib.org/>`_,
-`scikit-learn <http://scikit-learn.org/stable/>`_
+:epkg:`numpy`, :epkg:`matplotlib`, :epkg:`scikit-learn`
 ont élevé le niveau de fonctionnalités, les
 `notebooks Jupyter <http://jupyter.org/>`_
 ont changé la façon de travailler.

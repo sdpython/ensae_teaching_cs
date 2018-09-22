@@ -83,7 +83,10 @@ def df_to_clipboard(df, **args):
     Copies a dataframe as *csv* text into the clipboard.
 
     @param      df      dataframe
-    @param      sep     by default the separator is ``\\t`` for this function until it is defined otherwise
+    @param      args    additional parameters, such as *sep*,
+                        by default the separator *sep*
+                        is ``\\t`` for this function until
+                        it is defined otherwise
 
     It relies on method
     `to_clipboard <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_clipboard.html>`_.

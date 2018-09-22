@@ -9,12 +9,9 @@ Graphes
 
 Il existe de nombreuses librairies de visualisation réparties en deux grandes familles.
 La première produit des images
-(`matplotlib <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/im_matplotlib.html#immatplotlibrst>`_,
-`seaborn <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/im_seaborn.html#imseabornrst>`_,
-`networkx <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/im_networkx.html#imnetworkxrst>`_),
+(:epkg:`matplotlib`, :epkg:`seaborn`, :epkg:`networkx`),
 la seconde produit des graphes animés à l'aide de Javascript
-(`bokeh <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/js_bokeh.html#jsbokehrst>`_,
-`bqplot <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/notebooks/im_networkx.html#imnetworkxrst>`_).
+(:epkg:`bokeh`, :epkg:`bqplot`).
 Les librairies les plus récentes implémentent les deux modes en cherchant toujours plus
 de simplicité. A ce sujet, il faut jeter un coup d'oeil à
 `flexx <https://flexx.readthedocs.io/en/stable/>`_. Elles explorent aussi

@@ -14,7 +14,7 @@ def get_interpreter(platform=None):
     """
     Returns the default interpreter.
 
-    @param      plaftorm        platform
+    @param      platform        platform
     """
     if platform == sys.platform:
         return os.path.dirname(sys.executable)
@@ -154,7 +154,6 @@ def setup_jenkins_server(js, github="sdpython", modules=None,
     @param      prefix                  add a prefix to the name
     @param      delete_first            remove all jobs first
     @param      disable_schedule        disable schedule for all jobs
-    @param      platform                platform or None for the current one
     @param      fLOG                    logging function
     @return                             list of created jobs
 

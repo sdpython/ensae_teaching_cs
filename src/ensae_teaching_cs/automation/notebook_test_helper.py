@@ -203,7 +203,7 @@ def copy_data_file(notebook_folder, filename, dest, fLOG=noLOG):
 
     @param      notebook_folder     notebook_folder
     @param      filename            filename or list of file names
-    @param      destination         destination folder
+    @param      dest                destination folder
     @parm       fLOG                logging function
     @return                         copied files
     """

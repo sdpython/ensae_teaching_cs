@@ -224,8 +224,7 @@ Ces outils sont similaires à ceux qu'on trouve dans de nombreux languages à us
 Ces séances peuvent paraître plus longues car elles
 s'appuient sur des modules qu'il faut découvrir
 puis utiliser pour résoudre des exercices. Toutefois, les modules
-`numpy <http://www.numpy.org/>`_, `pandas <http://pandas.pydata.org/>`_,
-`matplotlib <http://matplotlib.org/>`_
+:epkg:`numpy`, :epkg:`pandas`, :epkg:`matplotlib`
 sont incontournables pour manipuler les données en :epkg:`Python`.
 
 .. toctree::

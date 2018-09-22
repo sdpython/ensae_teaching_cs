@@ -11,7 +11,7 @@ from .colorsdef import colors_definition
 def scatter_xy_id(xy_id, legend=None, ax=None, **options):
     """
     Creates a scatter plot with a different color for each zone id.
-    The function requires `matplotlib <http://matplotlib.org/>`_.
+    The function requires :epkg:`matplotlib`.
 
     @param      xy_id       list of 3-uple *(x, y, zone_id)*
     @param      legend      dictionary {id: legend } or None if there is not any
@@ -87,6 +87,7 @@ def scatter_xyc(points, smooth=0, div=10, ax=None, **options):
     @param      smooth      applies n times a smoothing I * M (convolutional)
     @param      div         number of divisions for axis
     @param      options     others options: xlabel, ylabel, title, figsize (if ax is None)
+    @param      ax          :epkg:`matplotlib` axis
     @return                 fig, ax (fig is None if ax was sent to the function)
 
     .. plot::

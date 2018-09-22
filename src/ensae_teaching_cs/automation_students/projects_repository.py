@@ -303,6 +303,7 @@ class ProjectsRepository:
         @param      must_have_email     if True, raises an exception if no mail is found
         @param      skip_if_nomail      skip a name if no mail is found
         @param      skip_names          less checking for a given set of names
+        @param      fLOG                logging function
         @return                         list of creates folders
 
         The function *email_function* has the following signature::
@@ -704,6 +705,7 @@ class ProjectsRepository:
         @param      link        look for this file in each folder
         @param      outfile     output file
         @param      nolink_if   link containing those strings will be removed (if None, a default set will be assigned)
+        @param      title       title
         @return                 summary
 
         The current default template is::

@@ -94,7 +94,7 @@ def build_diff_image(pygame, screen, h, maxw, seq1=None, seq2=None, diff=None, f
     @param      seq1        list 1 (can be None)
     @param      seq2        list 2 (cannot be None)
     @param      diff        difference (object `SequenceMatcher <https://docs.python.org/3.5/library/difflib.html#sequencematcher-objects>`_)
-    @param      font        dictionary of fonts with keys ``'font'``, ``'font_small'``, ``'font_half'``
+    @param      fonts       dictionary of fonts with keys ``'font'``, ``'font_small'``, ``'font_half'``
     @param      bars        each item of sequence 2 can be associated to a width (in [0, 1])
     @param      colors      dictionary of colors (see below)
     @param      progress    draws the progress between two list

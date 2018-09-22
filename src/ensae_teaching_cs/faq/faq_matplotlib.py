@@ -275,15 +275,21 @@ def graph_cities(df, names=("Longitude", "Latitude", "City"), ax=None, linked=Fa
     Plots the cities on a map with :epkg:`cartopy`.
     Only not empty names are displayed on the graph.
 
-    @param      df      dataframe
-    @param      names   names of the column Latitude, Longitude, City
-    @param      ax      existing ax
-    @param      linked  draw lines between points
-    @param      loop    add a final line to link the first point to the final one
-    @param      fLOG    logging function
-    @param      params  see below
-    @param      many    change the return
-    @return             *ax* or *fig, ax, m* if *many* is True
+    @param      df                  dataframe
+    @param      names               names of the column Latitude, Longitude, City
+    @param      ax                  existing ax
+    @param      linked              draw lines between points
+    @param      loop                add a final line to link the first point to the final one
+    @param      fLOG                logging function
+    @param      params              see below
+    @param      many                change the return
+    @param      draw_coastlines     draw coast lines
+    @param      draw_countries      draw borders
+    @param      draw_map_boundary   draw boundaries
+    @param      draw_meridians      draw meridians
+    @param      draw_parallels      draw parallels
+    @param      fill_continents     fill continents
+    @return                         *ax* or *fig, ax, m* if *many* is True
 
     Additional parameters:
 

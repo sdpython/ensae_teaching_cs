@@ -392,8 +392,9 @@ def pygame_simulation(pygame, first_click=False, folder=None,
                       iter=1000, cote=600, nb=(200, 20), flags=0,
                       **params):
     """
-    Run a graphic simulation. The user can a pygame screen showing
-    the evolution of population. A healthy person is white, green is sick,
+    Runs a graphic simulation. The user can see a :epkg:`pygame`
+    screen showing the evolution of population.
+    A healthy person is white, green is sick,
     blue is healed, black is dead. The function can save an image for
     every iteration. They can be merged into a video with
     function @see fn make_video.
