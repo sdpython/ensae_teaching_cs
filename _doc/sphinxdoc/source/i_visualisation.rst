@@ -46,7 +46,7 @@ Galleries
 * :ref:`2A : TD 4A, Machine Learning et Marketting (correction)  <td2acorrectionsession4arst>` :
   courbe `ROC <https://fr.wikipedia.org/wiki/Receiver_operating_characteristic>`_ et
   `ACP <https://fr.wikipedia.org/wiki/Analyse_en_composantes_principales>`_ avec labels
-* :ref:`1A : TD 12, Visualisation des données <td1acenoncesession12rst>`  (:ref:`correction <td1acorrectionsession12rst>`) :
+* :ref:`1A : TD 12, Visualisation des données <td1acenoncesession12plotrst>`  (:ref:`correction <td1acorrectionsession12rst>`) :
   représentation de **graphes** (`networkx <https://networkx.github.io/>`_,
   `graphviz <http://www.graphviz.org/>`_), `Open Street Map <http://www.openstreetmap.org/>`_
   avec `folium <https://github.com/python-visualization/folium>`_

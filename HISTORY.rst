@@ -5,8 +5,10 @@
 History
 =======
 
-current - 2018-08-25 - 0.00Mb
+current - 2018-09-23 - 0.00Mb
 =============================
+
+* `63`: parler de plotly offline, réduire la taille des notebooks sur la visualisation (2018-09-23)
 
 0.8.2511 - 2018-08-25 - 6.29Mb
 ==============================

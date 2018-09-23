@@ -241,7 +241,7 @@ avoir lu pendant les 3 heures.
 
 Pour aller plus loin :
 
-* Panoplie de graphes et cartes : :ref:`td1acenoncesession12rst`
+* Panoplie de graphes et cartes : :ref:`td1acenoncesession12carterst`
 * ROC pour un modèle logit :epkg:`antiseches_ml_basic_plot_binary_classification`
 * Les exercices du notebook SQL : :ref:`td2aecosqlrst` (question 1)
 * Manipuler les données et modéliser les incidents dans le transport aérien

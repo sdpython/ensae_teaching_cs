@@ -228,11 +228,18 @@ puis utiliser pour résoudre des exercices. Toutefois, les modules
 sont incontournables pour manipuler les données en :epkg:`Python`.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
-    notebooks/_gs1a_D_dataframe_matrice
-    notebooks/_gs1a_D_calcul_dicho_cython
-    notebooks/_gs1a_D_visualisation
+    notebooks/td1a_cenonce_session_10
+    notebooks/td1a_correction_session_10
+    notebooks/decorrelation
+    notebooks/decorrelation_correction
+    notebooks/td1a_cython_edit
+    notebooks/td1a_cython_edit_correction
+    notebooks/td1a_cenonce_session_12_plot
+    notebooks/td1a_cenonce_session_12_carte
+    notebooks/td1a_cenonce_session_12_js
+    notebooks/td1a_correction_session_12
 
 Il existe de nombreuses libraires de visualisation des données en :epkg:`Python` et
 elles se sont multipliées depuis l'avènement des notebooks :

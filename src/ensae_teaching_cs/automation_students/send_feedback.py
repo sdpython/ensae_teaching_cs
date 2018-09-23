@@ -135,7 +135,8 @@ def enumerate_feedback(df1, col_group="Groupe",
         aggs[col_name] = sums2
     for c in cols:
         if isinstance(c, tuple):
-            aggs[c[0]] = lambda s, sep=c[1]: sums3(s, sep)
+            aggs[c[0]] = lambda s, sep=c[1]: sums3(  # pylint: disable=W0631,W0640
+                s, sep)  # pylint: disable=W0631,W0640
         else:
             aggs[c] = lambda s: sums3(s, " ")
 
