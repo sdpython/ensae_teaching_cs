@@ -36,10 +36,11 @@ discutées.
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
 | 18/9 (2) *TD/amphi*       | Rappels et exercices sur la manipulation des      | Rappels et exercices sur le langage           |
 |                           | données avec :epkg:`pandas`, :epkg:`numpy`,       | :epkg:`Python`, manipulation des données avec |
-| :ref:`l-route2018-stat2`, | :epkg:`matplotlib`, :epkg:`scikit-learn`          | :epkg:`pandas`                                |
-| :ref:`l-route2018-eco2`   |                                                   |                                               |
+| :ref:`l-route2018-stat2`, | :epkg:`matplotlib`, :epkg:`scikit-learn`,         | :epkg:`pandas`                                |
+| :ref:`l-route2018-eco2`   | notion de prédicteur, transformeurs, pipelines,   |                                               |
+|                           | stacking                                          |                                               |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
-| 25/9 (3) *TD*             | Notion, de prédicteur, transformeurs, pipelines,  | Suite et fin des exercices pandas et          |
+| 25/9 (3) *TD/amphi*       | ACP | Suite et fin des exercices pandas et          |
 |                           | application aux variables catégorielles,          | représentations graphiques variées, fin des   |
 | :ref:`l-route2018-stat3`, | introduction de :epkg:`statsmodels`,              | exercices sur :epkg:`pandas`, :epkg:`numpy`,  |
 | :ref:`l-route2018-eco3`,  | :epkg:`xgboost`, stacking                         | visualisation avec :epkg:`matplotlib`,        |
@@ -131,7 +132,7 @@ Séance 2 - stat
   **A faire pour la prochaine fois** : exécuter trois notebooks,
   :ref:`structuresdonneesconversionrst`, :ref:`histogrammerapiderst`,
   :ref:`mlfeaturesmodelrst`
-* :ref:`mlscikitlearnsimplerst` (:ref:`mlscikitlearnsimplecorrectionrst`)
+* Début du TD : :ref:`mlscikitlearnsimplerst` (:ref:`mlscikitlearnsimplecorrectionrst`)
 
 *Lectures conseillées*
 
@@ -140,16 +141,16 @@ les notebooks d'exercices associées à ces lectures.
 
 *10h15 - modèle complexe avec scikit-learn*
 
-* présentation de l'API de scikit-learn
-* notion de pipeline
-* implémentation d'un modèle avec l'API de *scikit-learn*
+* :ref:`20180918sklearnapirst`
+* Présentation de l'API de scikit-learn
+* Notion de pipeline
+* Implémentation d'un modèle avec l'API de *scikit-learn*
   `Contributing <http://scikit-learn.org/stable/developers/contributing.html#contributing-code>`_,
   `sklearn.base <http://scikit-learn.org/stable/modules/classes.html#module-sklearn.base>`_
 * :epkg:`*py:pickle`
-* mesure du temps de calcul pour différentes tailles de jeu de données,
-  étude pour une régression logistique
-  :ref:`cffilinearregressionrst`
-* `stacking <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_multi_stacking.html?highlight=stacking>`_
+* `Stacking <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_multi_stacking.html>`_
+* `Régression polynômiale et pileline <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_reg_poly.html>`_
+* `Prédicteur pour chaque catégorie <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_color_linear.html>`_
 
 .. _l-route2018-eco2:
 
@@ -167,6 +168,8 @@ Séance 2 - éco
   opérations standard (sort, filter, group by, join),
 * Introduction à :epkg:`numpy`, opérations standard,
   calcul matriciel, différences avec un dataframe
+* :ref:`20180918rappelspythonrst`
+* :ref:`20180918rappelspythonpandasmatplotlibrst`
 
 *10h15 - TD*
 
@@ -184,17 +187,38 @@ exécuter trois notebooks,
 Séance 3 - stat
 ^^^^^^^^^^^^^^^
 
-* `Comparison de prédicteurs <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_reg.html>`_
-* :epkg:`XGBoost`
-* `transformer les catégories <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_color_linear.html>`_
-* `stacking <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_multi_stacking.html>`_
-* `Régression polynômiale et pileline <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_reg_poly.html>`_
+* 8h30 - TD*
+
+* Début du TD : :ref:`mlscikitlearnsimplerst` (:ref:`mlscikitlearnsimplecorrectionrst`)
+
+*10h30 - amphi*
+
+* `Régression logistique et convexité <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/logreg_kmeans.html>`_,
+  `Régression logistique, diagramme de Voronoï, k-Means <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/lr_voronoi.html>`_
+  (maths)
+* `Variables textuelles <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/preprocessing.html>`_
+  (machine learning)
+* Mesure du temps de calcul pour différentes tailles de jeu de données,
+  étude pour une régression logistique
+  :ref:`cffilinearregressionrst`
+  (info)
+* :ref:`td1acenoncesession12carterst`
 
 .. _l-route2018-eco3:
 
 Séance 3 - éco
 ^^^^^^^^^^^^^^
 
+*8h30 - amphi*
+
+* :ref:`td1acenoncesession12plotrst`, :ref:`td1acenoncesession12carterst`,
+  :ref:`td1acenoncesession12jsrst`
+* `Etude statistique <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/enonce_2017.html#enonce2017rst>`_,
+  `correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/solution_2017.html>`_
+
+*10h30 - TD*
+
+* :ref:`td2acenoncesession1rst`
 * `Tracer une carte en Python <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/enedis_cartes.html>`_
 
 .. _l-route2018-stat4:
