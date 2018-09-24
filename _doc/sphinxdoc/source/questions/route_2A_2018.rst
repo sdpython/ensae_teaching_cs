@@ -40,10 +40,10 @@ discutées.
 | :ref:`l-route2018-eco2`   | notion de prédicteur, transformeurs, pipelines,   |                                               |
 |                           | stacking                                          |                                               |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
-| 25/9 (3) *TD/amphi*       | ACP | Suite et fin des exercices pandas et          |
-|                           | application aux variables catégorielles,          | représentations graphiques variées, fin des   |
-| :ref:`l-route2018-stat3`, | introduction de :epkg:`statsmodels`,              | exercices sur :epkg:`pandas`, :epkg:`numpy`,  |
-| :ref:`l-route2018-eco3`,  | :epkg:`xgboost`, stacking                         | visualisation avec :epkg:`matplotlib`,        |
+| 25/9 (3) *TD/amphi*       | ACP, réduction de dimension                       | Suite et fin des exercices pandas et          |
+|                           | variables catégorielles, textuelles,              | représentations graphiques variées, fin des   |
+| :ref:`l-route2018-stat3`, | mention de :epkg:`catboost`                       | exercices sur :epkg:`pandas`, :epkg:`numpy`,  |
+| :ref:`l-route2018-eco3`,  |                                                   | visualisation avec :epkg:`matplotlib`,        |
 | **deux exposés**          |                                                   | cartographie                                  |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
 | 2/10 (5) *TD*             | Ranking, Détection d'anomalies, clustering,       | Econométrie, analyse de données et premiers   |
@@ -141,7 +141,7 @@ les notebooks d'exercices associées à ces lectures.
 
 *10h15 - modèle complexe avec scikit-learn*
 
-* :ref:`20180918sklearnapirst`
+* :ref:`2018-09-18sklearnapirst`
 * Présentation de l'API de scikit-learn
 * Notion de pipeline
 * Implémentation d'un modèle avec l'API de *scikit-learn*
@@ -168,8 +168,8 @@ Séance 2 - éco
   opérations standard (sort, filter, group by, join),
 * Introduction à :epkg:`numpy`, opérations standard,
   calcul matriciel, différences avec un dataframe
-* :ref:`20180918rappelspythonrst`
-* :ref:`20180918rappelspythonpandasmatplotlibrst`
+* :ref:`2018-09-18rappelspythonrst`
+* :ref:`2018-09-18rappelspythonpandasmatplotlibrst`
 
 *10h15 - TD*
 
@@ -187,7 +187,7 @@ exécuter trois notebooks,
 Séance 3 - stat
 ^^^^^^^^^^^^^^^
 
-* 8h30 - TD*
+*8h30 - TD*
 
 * Début du TD : :ref:`mlscikitlearnsimplerst` (:ref:`mlscikitlearnsimplecorrectionrst`)
 
