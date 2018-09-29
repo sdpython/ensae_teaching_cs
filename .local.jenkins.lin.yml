@@ -30,9 +30,7 @@ script:
   - { CMD: "$PYINT -u setup.py unittests -e .*_EX_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)).*\"", NAME: "UT_EX", TIMEOUT: 3600 }
   - { CMD: "$PYINT -u setup.py unittests -e .*_GUI_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)).*\"", NAME: "UT_GUI", TIMEOUT: 2400 }
   - { CMD: "$PYINT -u setup.py unittests -e .*scraping.* -g \".*((SKIP)|(theano)|(keras)|(ete3)|(cvxopt)).*\"", NAME: "UT_SCRAPING", TIMEOUT: 3600 }
-  - { CMD: "$PYINT -u setup.py unittests -e \".*((pythonnet)).*\"", NAME: "UT_PYTHONNET" }
   - { CMD: "$PYINT -u setup.py unittests -e \".*((huge)).*\"", NAME: "UT_HUGE" }
-  - { CMD: "$PYINT -u setup.py unittests -e \".*((ete3)).*\"", NAME: "UT_ETE3" }
   - { CMD: "$PYINT -u setup.py unittests -e \".*cvxopt.*\"", NAME: "UT_CVXOPT" }
   - { CMD: "$PYINT -u setup.py unittests -e \".*students.*\"", NAME: "UT_STUDENTS" }
   - if [ ${VERSION} == "3.7" and ${DIST} == "std" ]

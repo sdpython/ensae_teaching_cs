@@ -734,7 +734,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://travis-ci.org/sdpython/machinelearningext.svg?branch=master
             :target: https://travis-ci.org/sdpython/machinelearningext
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/t2g9olcgqgdvqq3l?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/uwanivg3b5qibncs?svg=true
             :target: https://ci.appveyor.com/project/sdpython/machinelearningext
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/machinelearningext/tree/master.svg?style=svg

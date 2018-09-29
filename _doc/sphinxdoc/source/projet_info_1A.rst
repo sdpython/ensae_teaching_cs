@@ -59,6 +59,7 @@ Liste exhaustive :
 #. ML algo : :ref:`l-ml-align`
 #. ML algo : :ref:`l-fast-k-NN`
 #. ML algo : :ref:`l-ml-gradient-geom`
+#. ML algo : :ref:`l-ml-tree-graph`
 #. Jeu 1 : :ref:`l-jeu-deuxmille`
 #. Jeu 1 : :ref:`l-jeuvoronoi`
 #. Jeu 1 : :ref:`l-puzzle-GCHQ`
