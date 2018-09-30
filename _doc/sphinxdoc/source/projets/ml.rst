@@ -248,9 +248,7 @@ Ecrire une librairie pour représenter des modèles de machine learning (2018)
 ----------------------------------------------------------------------------
 
 Supposons qu'une forêt aléatoire a été appris pour classifier un jeu de
-données, est-il possible de la représenter de façon à faciliter 
-son interprétation. On pourra s'inspirer du module 
+données, est-il possible de la représenter de façon à faciliter
+son interprétation. On pourra s'inspirer du module
 `animl <https://github.com/parrt/animl>`_.
 On choisira de limiter le nombre de dépendance au minimum.
-
-

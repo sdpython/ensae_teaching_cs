@@ -117,6 +117,7 @@ les images ou le son.
 .. toctree::
     :maxdepth: 1
 
+    td2a_mlplus_text_features
     td2a_mlplus_traitement_du_langage
     td2a_mlplus_topic
     td2a_mlplus_traduction_automatique

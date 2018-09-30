@@ -46,13 +46,13 @@ discutées.
 | :ref:`l-route2018-eco3`,  |                                                   | visualisation avec :epkg:`matplotlib`,        |
 | **deux exposés**          |                                                   | cartographie                                  |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
-| 2/10 (5) *TD*             | Ranking, Détection d'anomalies, clustering,       | Econométrie, analyse de données et premiers   |
-|                           | valeurs manquantes, imbalanced classification     | pas avec :epkg:`scikit-learn`, (ACP,          |
-| :ref:`l-route2018-stat4`, |                                                   | Regréssion linéaire, Logit, séries            |
-| :ref:`l-route2018-eco4`   |                                                   | temporelles)                                  |
+| 2/10 (4) *TD/amphi*       | Ranking, détection d'anomalies, clustering,       | Premiers pas avec :epkg:`scikit-learn`,       |
+|                           | valeurs manquantes, imbalanced classification     | ACP, Regréssion linéaire, Logit.              |
+| :ref:`l-route2018-stat4`, |                                                   |                                               |
+| :ref:`l-route2018-eco4`   |                                                   |                                               |
 | **deux exposés**          |                                                   |                                               |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
-| 9/10 (5) *TD*             | Machine learning crypté, hyperparamètres,         | Travailler le texte, de la récupération à     |
+| 9/10 (5) *TD/amphi*       | Machine learning crypté, hyperparamètres,         | Travailler le texte, de la récupération à     |
 |                           | recommandation, séries temporelles                | l'exploitation (1/2), Expressions régulière,  |
 | :ref:`l-route2018-stat5`, |                                                   | web scrapping                                 |
 | :ref:`l-route2018-eco5`,  |                                                   |                                               |
@@ -203,6 +203,10 @@ Séance 3 - stat
   :ref:`cffilinearregressionrst`
   (info)
 * :ref:`td1acenoncesession12carterst`
+* `tokenisation <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_tokenize.html>`_
+* `de la tokenisation aux features <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_tokenize_features.html>`_
+* `word2vec <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/text_sentiment_wordvec.html>`_
+* :ref:`l-ml2a-text-features`
 
 .. _l-route2018-eco3:
 
@@ -226,50 +230,43 @@ Séance 3 - éco
 Séance 4 - stat
 ^^^^^^^^^^^^^^^
 
+*8h30 - TD*
+
+* Traitement des variables catégorielles et textuelles.
+* :ref:`td2asentimentanalysisrst`, :ref:`td2asentimentanalysiscorrectionrst`
+
+Lectures pour ce TD :
+
+* `tokenisation <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_tokenize.html>`_
+* `de la tokenisation aux features <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_tokenize_features.html>`_
+* `word2vec <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/text_sentiment_wordvec.html>`_
+* :ref:`l-ml2a-text-features`
+
+*10h15 - cours*
+
 * :ref:`l-mlbasic-anomaly`
 * :ref:`l-ml2a-ranking`
 * :ref:`l-imbalanced-classification`
 * :ref:`l-td2a-missing-values`
 * :ref:`td2aclusteringrst`, :ref:`td2aclusteringcorrectionrst`
+* `Ranking et système de recommandations <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/otherml.html>`_
 
 .. _l-route2018-eco4:
 
 Séance 4 - éco
 ^^^^^^^^^^^^^^
 
-Beaucoup de choses pour ce TD, voici ce que vous devez absolument
-avoir lu pendant les 3 heures.
+*8h30 - cours*
+
+*10h15 - TD*
+
+Notebooks pour s'exercer :
 
 * Regardez différentes options disponibles pour faire les graphiques et
   passez un peu de temps sur l'exemple :ref:`td2avisualisationrst`
-* Réaliser des modèles économétriques avec les outils :epkg:`Python` :
-    * :ref:`ACP <td2acenoncesession3arst>` (s'arrêter à l'exercice 1)
-    * :ref:`Régression linéaire <td2aecoregressionslineairesrst>`
-    * :ref:`Logit <td2aecocompetitionmodeleslogistiquesrst>`
-* :ref:`td2atimeseriesrst`
-	
-* SQL : lire attentivement le notebook :ref:`td2aecosqlrst`
-
-*Exercice à réaliser*
-
-* Exercice 2 de cette page :ref:`td2acenoncesession3arst`
-
-*Objectifs*
-
-* avoir compris comment réaliser les différentes classes de modèles
-  présentées (régression linéaire, ACP , logit)
-* avoir bien compris les notions de SQL utilisées
-  dans le début de l'exercice
-* réaliser la regression demandée avec les deux
-  packages proposés (:epkg:`scikit-learn` et :epkg:`statsmodels`)
-
-Pour aller plus loin :
-
-* Panoplie de graphes et cartes : :ref:`td1acenoncesession12carterst`
-* ROC pour un modèle logit :epkg:`antiseches_ml_basic_plot_binary_classification`
-* Les exercices du notebook SQL : :ref:`td2aecosqlrst` (question 1)
-* Manipuler les données et modéliser les incidents dans le transport aérien
-  :ref:`td2acenoncesession5rst`
+* :ref:`ACP <td2acenoncesession3arst>` (s'arrêter à l'exercice 1)
+* :ref:`Régression linéaire <td2aecoregressionslineairesrst>`
+* :ref:`Logit <td2aecocompetitionmodeleslogistiquesrst>`
 
 .. _l-route2018-stat5:
 

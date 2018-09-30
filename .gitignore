@@ -515,5 +515,16 @@ _doc/notebooks/td1a/monmodule3.py
 _doc/notebooks/td1a/seance4_excel_mat.xlsx
 _doc/notebooks/td1a/seance4_excel_mat.txt
 _doc/notebooks/td1a/VOEUX*.txt
-
 .vscode/settings.json
+_unittests/ut_data/__MACOSX
+_unittests/ut_data/sentiment_labelled_sentences.zip
+_unittests/ut_data/sentiment labelled sentences/amazon_cells_labelled.txt
+_unittests/ut_data/sentiment labelled sentences/imdb_labelled.txt
+_unittests/ut_data/sentiment labelled sentences/readme.txt
+_unittests/ut_data/sentiment labelled sentences/yelp_labelled.txt
+_doc/notebooks/td2a_ml/tft/report_adult.txt
+_doc/notebooks/td2a_ml/__MACOSX
+_doc/notebooks/td2a_ml/sentiment labelled sentences/imdb_labelled.txt
+_doc/notebooks/td2a_ml/sentiment labelled sentences/readme.txt
+_doc/notebooks/td2a_ml/sentiment labelled sentences/yelp_labelled.txt
+_doc/notebooks/td2a_ml/sentiment labelled sentences/amazon_cells_labelled.txt

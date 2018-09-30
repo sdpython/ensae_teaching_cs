@@ -21,6 +21,7 @@ Variables catégorielles
 *Notebooks*
 
 * `Hashing et catégories <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_category_hash.html>`_
+* :ref:`td2asentimentanalysisrst` (:ref:`correction <td2asentimentanalysiscorrectionrst>`)
 
 *Lectures*
 
