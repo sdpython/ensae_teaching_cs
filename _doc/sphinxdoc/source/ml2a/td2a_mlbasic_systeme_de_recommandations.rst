@@ -30,6 +30,7 @@ Système de recommandations
 * `Recommender Systems Using Linear Classifiers <http://www.jmlr.org/papers/volume2/zhang02a/zhang02a.pdf>`_ (approche intéressante)
 * `A Survey of Accuracy Evaluation Metrics of Recommendation Tasks <http://jmlr.csail.mit.edu/papers/volume10/gunawardana09a/gunawardana09a.pdf>`_
 * `Offline A/B Testing for Recommender Systems <https://dl.acm.org/citation.cfm?id=3159687>`_
+* `Probabilistic Matrix Factorization <http://papers.nips.cc/paper/3208-probabilistic-matrix-factorization.pdf>`_
 
 *Modules*
 

@@ -178,3 +178,11 @@ Thèmes
 
     * `Artificial Intelligence as Structural Estimation: Economic Interpretations of Deep Blue, Bonanza, and AlphaGo <https://arxiv.org/pdf/1710.10967.pdf>`_
     * `When Machine Learning Meets AI and Game Theory <http://cs229.stanford.edu/proj2012/AgrawalJaiswal-WhenMachineLearningMeetsAIandGameTheory.pdf>`_
+
+* Automated machine learning
+
+    * `Probabilistic Matrix Factorization for Automated Machine Learning <https://arxiv.org/abs/1705.05355>`_
+    * `Probabilistic Matrix Factorization <http://papers.nips.cc/paper/3208-probabilistic-matrix-factorization.pdf>`_
+    * `auto-sklearn <https://automl.github.io/auto-sklearn/stable/>`_
+    * `Python Implementation of Probabilistic Matrix Factorization Algorithm <https://github.com/fuhailin/Probabilistic-Matrix-Factorization>`_
+    * `Matrix Factorization-based algorithms <https://surprise.readthedocs.io/en/stable/matrix_factorization.html>`_
