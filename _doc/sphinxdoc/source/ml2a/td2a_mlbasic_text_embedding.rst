@@ -12,12 +12,12 @@
 Text embedding
 ++++++++++++++
 
-Les modèles de machine learning n'acceptent que des
-entrées numériques. Il faut nécessairement convertir
-le texte d'une manière ou d'une autre en vecteurs
+Les modÃ¨les de machine learning n'acceptent que des
+entrÃ©es numÃ©riques. Il faut nÃ©cessairement convertir
+le texte d'une maniÃ¨re ou d'une autre en vecteurs
 et si possible dans un espace vectoriel de dimension fixe.
 Il faut donc passer d'un texte de longueur variable
-à un vecteur de dimension fixe.
-La section :ref:`l-ml2a-text-features` détaille les
-méthodes les plus courantes. La section
+Ã  un vecteur de dimension fixe.
+La section :ref:`l-ml2a-text-features` dÃ©taille les
+mÃ©thodes les plus courantes. La section
 :ref:`l-td2a-nlp` explore d'autres directions.

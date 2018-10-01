@@ -14,9 +14,9 @@
 Du texte aux features
 +++++++++++++++++++++
 
-Ces méthodes sont non-supervisées et apparaissent
-le plus souvent comme prétraitements pour convertir
-le texte sous forme de features numériques ou
+Ces mÃ©thodes sont non-supervisÃ©es et apparaissent
+le plus souvent comme prÃ©traitements pour convertir
+le texte sous forme de features numÃ©riques ou
 tout simplement des vecteurs.
 
 *Notebooks*
@@ -27,8 +27,8 @@ tout simplement des vecteurs.
 
 *Lectures*
 
-* `Texte et catégories <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/preprocessing.html#texte-categorie>`_
-* `Texte comme une séquence de mots <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/preprocessing.html#texte-sequence>`_
+* `Texte et catÃ©gories <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/preprocessing.html#texte-categorie>`_
+* `Texte comme une sÃ©quence de mots <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/preprocessing.html#texte-sequence>`_
 * `tf-idf <https://en.wikipedia.org/wiki/Tf%E2%80%93idf>`_
 * `Efficient Estimation of Word Representations in Vector Space <https://arxiv.org/abs/1301.3781>`_
 * `GloVe: Global Vectors for Word Representation <https://nlp.stanford.edu/pubs/glove.pdf>`_
