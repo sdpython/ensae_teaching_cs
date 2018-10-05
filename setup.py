@@ -123,7 +123,8 @@ if is_local():
     logging_function(OutputPrint=True)
     deps = ["pyquickhelper", "jyquickhelper", "pymmails", "pyensae", "pyenbc",
             "pyrsslocal", "pymyinstall", "mlstatpy", "tkinterquickhelper",
-            "pandas_streaming", "fairtest", 'BLIBmpld3', 'manydataapi']
+            "pandas_streaming", "fairtest", 'BLIBmpld3', 'manydataapi',
+            'mlinsights']
     if "html1" in sys.argv:
         layout = ["html"]
         sys.argv = [_ for _ in sys.argv if _ != "html1"]
@@ -212,5 +213,5 @@ if not r:
             install_requires=[
                 "pyquickhelper>=1.8", "pyensae", "pymyinstall", "pymmails",
                 "scikit-learn", "pyrsslocal", "pandas", "numpy", "pyenbc",
-                "matplotlib", "jupyter", "mlstatpy", "manydataapi"],
+                "matplotlib", "jupyter", "mlstatpy", "manydataapi", "mlinsights"],
         )

@@ -47,10 +47,10 @@ discutées.
 | **deux exposés**          |                                                   | cartographie                                  |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
 | 2/10 (4) *TD/amphi*       | Ranking, détection d'anomalies, clustering,       | Premiers pas avec :epkg:`scikit-learn`,       |
-|                           | valeurs manquantes, imbalanced classification     | ACP, Regréssion linéaire, Logit.              |
-| :ref:`l-route2018-stat4`, |                                                   |                                               |
-| :ref:`l-route2018-eco4`   |                                                   |                                               |
-| **deux exposés**          |                                                   |                                               |
+|                           | valeurs manquantes, imbalanced classification,    | ACP, Regréssion linéaire, Logit,              |
+| :ref:`l-route2018-stat4`, | recommandation                                    | classification binaire, scraping avec un      |
+| :ref:`l-route2018-eco4`   |                                                   | exemple sur la récupération d'image           |
+| **deux exposés**          |                                                   | :ref:`2018-10-02_scraping_recuperer_images`   |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
 | 9/10 (5) *TD/amphi*       | Machine learning crypté, hyperparamètres,         | Travailler le texte, de la récupération à     |
 |                           | recommandation, séries temporelles                | l'exploitation (1/2), Expressions régulière,  |
@@ -58,7 +58,7 @@ discutées.
 | :ref:`l-route2018-eco5`,  |                                                   |                                               |
 | **deux exposés**          |                                                   |                                               |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
-| 16/10 (6) *amphi*         | * Propriétés des modèles mathématiques, modèles linéaires, modèles ensemblistes, modèles          |
+| 16/10 (6) *TD/amphi*      | * Propriétés des modèles mathématiques, modèles linéaires, modèles ensemblistes, modèles          |
 |                           |   dérivables, feature importance (*Xavier Dupré*)                                                 |
 | :ref:`l-route2018-stat6`, | * Interprétation des modèles de machine learning (*Gaël Varoquaux*)                               |
 | **deux exposés**          |                                                                                                   |
@@ -257,6 +257,8 @@ Séance 4 - éco
 ^^^^^^^^^^^^^^
 
 *8h30 - cours*
+
+Expression régulière et scrapping, :ref:`2018-10-02scrapingrecupererimagesrst`.
 
 *10h15 - TD*
 

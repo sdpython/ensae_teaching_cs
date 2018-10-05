@@ -36,7 +36,8 @@ Plan
     * - (4) 25/9 TD
       - Graphes et distance d'édition,
         notions de coût algorithmique,
-        :ref:`l-route2018-algo4`
+        :ref:`l-route2018-algo4`,
+        :ref:`2018-09-25distanceentremotsrst`
     * - (5) 2/10 TD
       - Création d'un module :epkg:`Python` avec
         des tests unitaires, un setup, une documentation,
@@ -155,6 +156,7 @@ un algorithme sur les graphes,
 un autre sur la distance d'édition,
 
 * :ref:`l-td1a-algo-dicho-graphe`
+* :ref:`2018-09-25distanceentremotsrst`
 
 Jeter un oeil sur la liste
 :ref:`l-algoculture-shortlist`.
