@@ -48,13 +48,13 @@ discutées.
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
 | 2/10 (4) *TD/amphi*       | Ranking, détection d'anomalies, clustering,       | Premiers pas avec :epkg:`scikit-learn`,       |
 |                           | valeurs manquantes, imbalanced classification,    | ACP, Regréssion linéaire, Logit,              |
-| :ref:`l-route2018-stat4`, | recommandation                                    | classification binaire, scraping avec un      |
+| :ref:`l-route2018-stat4`, | recommandation, test A/B                          | classification binaire, scraping avec un      |
 | :ref:`l-route2018-eco4`   |                                                   | exemple sur la récupération d'image           |
 | **deux exposés**          |                                                   | :ref:`2018-10-02_scraping_recuperer_images`   |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
-| 9/10 (5) *TD/amphi*       | Machine learning crypté, hyperparamètres,         | Travailler le texte, de la récupération à     |
-|                           | recommandation, séries temporelles                | l'exploitation (1/2), Expressions régulière,  |
-| :ref:`l-route2018-stat5`, |                                                   | web scrapping                                 |
+| 9/10 (5) *TD/amphi*       | Machine learning crypté, séries temporelles,      | Variables textuelles, clustering,             |
+|                           | apprentissage par renforcement,                   | détection d'anomalies, graphes et             |
+| :ref:`l-route2018-stat5`, | algorithme du bandit                              | recommandations                               |
 | :ref:`l-route2018-eco5`,  |                                                   |                                               |
 | **deux exposés**          |                                                   |                                               |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
@@ -230,7 +230,17 @@ Séance 3 - éco
 Séance 4 - stat
 ^^^^^^^^^^^^^^^
 
-*8h30 - TD*
+*8h30 - cours*
+
+* :ref:`l-mlbasic-anomaly`
+* :ref:`l-ml2a-ranking`
+* :ref:`l-imbalanced-classification`
+* :ref:`l-td2a-missing-values`
+* :ref:`td2aclusteringrst`, :ref:`td2aclusteringcorrectionrst`
+* `Ranking et système de recommandations <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/otherml.html>`_
+* :ref:`l-ml2a-testab` (ou `Test A/B sur wikipedia <https://en.wikipedia.org/wiki/A/B_testing>`_)
+
+*10h15 - TD*
 
 * Traitement des variables catégorielles et textuelles.
 * :ref:`td2asentimentanalysisrst`, :ref:`td2asentimentanalysiscorrectionrst`
@@ -242,25 +252,12 @@ Lectures pour ce TD :
 * `word2vec <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/text_sentiment_wordvec.html>`_
 * :ref:`l-ml2a-text-features`
 
-*10h15 - cours*
-
-* :ref:`l-mlbasic-anomaly`
-* :ref:`l-ml2a-ranking`
-* :ref:`l-imbalanced-classification`
-* :ref:`l-td2a-missing-values`
-* :ref:`td2aclusteringrst`, :ref:`td2aclusteringcorrectionrst`
-* `Ranking et système de recommandations <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/otherml.html>`_
-
 .. _l-route2018-eco4:
 
 Séance 4 - éco
 ^^^^^^^^^^^^^^
 
-*8h30 - cours*
-
-Expression régulière et scrapping, :ref:`2018-10-02scrapingrecupererimagesrst`.
-
-*10h15 - TD*
+*8h30 - TD*
 
 Notebooks pour s'exercer :
 
@@ -270,10 +267,16 @@ Notebooks pour s'exercer :
 * :ref:`Régression linéaire <td2aecoregressionslineairesrst>`
 * :ref:`Logit <td2aecocompetitionmodeleslogistiquesrst>`
 
+*10h15 - cours*
+
+Expression régulière et scrapping, :ref:`2018-10-02scrapingrecupererimagesrst`.
+
 .. _l-route2018-stat5:
 
 Séance 5 - stat
 ^^^^^^^^^^^^^^^
+
+*8h30 - cours*
 
 * :ref:`l-td2a-ml-crypted`
 * :ref:`l-td2a-hyperparametre`
@@ -281,10 +284,24 @@ Séance 5 - stat
 * `Liens entre factorisation de matrices, ACP, k-means <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/missing_values_mf.html>`_
 * :ref:`l-td2a-sys-recommandation`
 
+*10h15 - TD*
+
 .. _l-route2018-eco5:
 
 Séance 5 - éco
 ^^^^^^^^^^^^^^
+
+*8h30 - TD*
+
+* :ref:`TD2AEcoWebScrapingrst` (:ref:`correction <TD2AEcoWebScrapingcorrigerst>`)
+* :ref:`td2aeco5dTravaillerdutextelesexpressionsregulieresrst`
+  (:ref:`correction <td2aeco5dTravaillerdutextelesexpressionsregulierescorrectionrst>`)
+
+*10h15 - cours*
+
+* ACP
+* Traitement des variables catégorielles
+* Graphes et recommandations
 
 .. _l-route2018-stat6:
 
