@@ -123,7 +123,8 @@ Catalogue d'algorithmes
     * `trie <http://fr.wikipedia.org/wiki/Trie_(informatique)>`_ **déf**
     * `b-tree <http://fr.wikipedia.org/wiki/Arbre_B>`_ **déf**
     * `x-fast-trie <https://en.wikipedia.org/wiki/X-fast_trie>`_ **déf**
-    * `Fibonacci Heap <https://en.wikipedia.org/wiki/Fibonacci_heap>`_ **déf**
+    * `tas ou heap <https://fr.wikipedia.org/wiki/Tas_(informatique)>`_ ,
+      `Fibonacci Heap <https://en.wikipedia.org/wiki/Fibonacci_heap>`_ **déf**
 * Graphes
     * composantes connexes ou `parcours de graphe en profondeur <http://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_profondeur>`_,
       `parcours de graphe en largeur <http://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_largeur>`_ **déf/algo**
@@ -213,7 +214,7 @@ Livres
   Robert Faure, Bernard Lemaire, Christophe Picouleau
 * `Programming Pearls <https://www.amazon.com/Programming-Pearls-2nd-Jon-Bentley/dp/0201657880>`_,
   Jon Bentley
-* `Introduction to Algorithms <https://mitpress.mit.edu/books/introduction-algorithms>`_,
+* `Introduction to Algorithms 3rd Edition <https://mcdtu.files.wordpress.com/2017/03/introduction-to-algorithms-3rd-edition-sep-2010.pdf>`_,
   Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein
 * `Programmation efficace - 128 algorithmes qu'il faut avoir compris et codés en Python au cours de sa vie <http://www.editions-ellipses.fr/product_info.php?products_id=10829>`_,
   ce livre est accompagné d'un répertoire sur GitHub :

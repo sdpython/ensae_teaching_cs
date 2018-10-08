@@ -24,6 +24,19 @@ les prédire puisqu'il s'agit d'utiliser une valeur appropriée à la
 place de quelque chose qu'on ne connaît ? Les mots-clés importants :
 *imputation*, *MICE*, *Amelia*.
 
+Il vaut mieux garder les valeurs manquantes si cela réduit la
+base de données de façon trop conséquente. Il y a deux approches,
+la première consiste à les remplacer.
+La manière naïve qui consiste à remplacer une valeur manquante par sa moyenne
+suppose que les variables sont indépendantes ce qui est rarement le cas.
+D'autres méthodes tiennent compte des corrélations.
+
+La seconde approche consiste à tenir compte des valeurs
+manquantes lors de l'apprentissage et donc à ne pas les remplacer.
+La librairie :epkg:`XGBoost` apprend des forêts aléatoires qui définissent
+pour chaque noeud des arbres la branche à suivre si
+la variable est manquante.
+
 *(à venir)*
 
 *Lectures*
