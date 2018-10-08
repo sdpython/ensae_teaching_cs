@@ -286,6 +286,9 @@ Séance 5 - stat
 
 *10h15 - TD*
 
+* :ref:`td2asentimentanalysisrst`, :ref:`td2asentimentanalysiscorrectionrst`
+* :ref:`td2aenoncesession4Arst`, :ref:`correction <td2acorrectionsession4Arst>`
+
 .. _l-route2018-eco5:
 
 Séance 5 - éco
