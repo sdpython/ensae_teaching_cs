@@ -18,3 +18,4 @@ Timeseries - Détection d'anomalies
 * `Classification of Time Sequences using Graphs of Temporal Constraints <http://www.jmlr.org/papers/v18/15-403.html>`_
 * `A Hidden Absorbing Semi-Markov Model for Informatively Censored Temporal Data: Learning and Inference <http://www.jmlr.org/papers/v19/16-656.html>`_
 * `Concentration inequalities for empirical processes of linear time series <http://www.jmlr.org/papers/v18/17-012.html>`_
+* `Singular Spectrum Analysis: Methodology and Comparison <http://www.jds-online.com/files/JDS-396.pdf>`_

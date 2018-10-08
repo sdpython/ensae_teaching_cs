@@ -54,7 +54,7 @@ discutées.
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
 | 9/10 (5) *TD/amphi*       | Machine learning crypté, séries temporelles,      | Variables textuelles, clustering,             |
 |                           | apprentissage par renforcement,                   | détection d'anomalies, graphes et             |
-| :ref:`l-route2018-stat5`, | algorithme du bandit                              | recommandations                               |
+| :ref:`l-route2018-stat5`, | algorithme du bandit, auto-learning               | recommandations                               |
 | :ref:`l-route2018-eco5`,  |                                                   |                                               |
 | **deux exposés**          |                                                   |                                               |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
@@ -239,6 +239,8 @@ Séance 4 - stat
 * :ref:`td2aclusteringrst`, :ref:`td2aclusteringcorrectionrst`
 * `Ranking et système de recommandations <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/otherml.html>`_
 * :ref:`l-ml2a-testab` (ou `Test A/B sur wikipedia <https://en.wikipedia.org/wiki/A/B_testing>`_)
+* `Liens entre factorisation de matrices, ACP, k-means <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/missing_values_mf.html>`_
+* :ref:`l-td2a-sys-recommandation`
 
 *10h15 - TD*
 
@@ -279,10 +281,17 @@ Séance 5 - stat
 *8h30 - cours*
 
 * :ref:`l-td2a-ml-crypted`
-* :ref:`l-td2a-hyperparametre`
-* :ref:`mltimeseriesbaserst`
-* `Liens entre factorisation de matrices, ACP, k-means <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/missing_values_mf.html>`_
-* :ref:`l-td2a-sys-recommandation`
+* :ref:`mltimeseriesbaserst`, SSA
+* :ref:`timeseriesssarst`
+* :ref:`l-td2a-hyperparametre` et :ref:`l-ml2a-autolearning`
+* `Counterfactual Reasoning and Learning Systems: The Example of Computational Advertising <http://jmlr.org/papers/v14/bottou13a.html>`_
+* `Making Contextual Decisions with Low Technical Debt <https://arxiv.org/pdf/1606.03966.pdf>`_
+* `Apprentissage par renforcement <https://fr.wikipedia.org/wiki/Apprentissage_par_renforcement>`_ :
+  :math:`V(s) \leftarrow V(s) + \alpha \pa{r + \gamma V(s') - V(s)}`
+* `SARSA <https://en.wikipedia.org/wiki/State%E2%80%93action%E2%80%93reward%E2%80%93state%E2%80%93action>`_ :
+  :math:`Q(s_t, a_t) \leftarrow \alpha\pa{r_t + \gamma Q(s_{t+1}, a_{t+1} - Q(s_t, a_t)}`
+* `Markov Decision Process <https://en.wikipedia.org/wiki/Markov_decision_process>`_
+* deep reinforcement learning, `Alpha Go Zero <https://deepmind.com/blog/alphago-zero-learning-scratch/>`_
 
 *10h15 - TD*
 
