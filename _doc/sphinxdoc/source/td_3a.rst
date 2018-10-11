@@ -182,6 +182,7 @@ Algorithmes Distribués
 * `Communication Complexity of Distributed Convex Learning and Optimization <https://arxiv.org/pdf/1506.01900.pdf>`_
 * `Fast Distributed Gradient Methods <https://arxiv.org/pdf/1112.2972.pdf>`_
 * `A Generalized Accelerated Composite Gradient Method: Uniting Nesterov's Fast Gradient Method and FISTA <https://arxiv.org/abs/1705.10266>`_
+* `Demystifying Parallel and Distributed Deep Learning: An In-Depth Concurrency Analysis <https://arxiv.org/pdf/1802.09941.pdf>`_
 
 *Vidéo*
 

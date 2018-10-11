@@ -7,6 +7,10 @@
 Timeseries - Détection d'anomalies
 ++++++++++++++++++++++++++++++++++
 
+*Notebooks*
+
+* :ref:`timeseriesssarst`
+
 *Lectures*
 
 * `Time Series Anomaly Detection in Network Traffic: A Use Case for Deep Neural Networks <https://jask.com/time-series-anomaly-detection-in-network-traffic-a-use-case-for-deep-neural-networks/>`_
@@ -19,3 +23,4 @@ Timeseries - Détection d'anomalies
 * `A Hidden Absorbing Semi-Markov Model for Informatively Censored Temporal Data: Learning and Inference <http://www.jmlr.org/papers/v19/16-656.html>`_
 * `Concentration inequalities for empirical processes of linear time series <http://www.jmlr.org/papers/v18/17-012.html>`_
 * `Singular Spectrum Analysis: Methodology and Comparison <http://www.jds-online.com/files/JDS-396.pdf>`_
+* `Application of the singular-spectrum analysis to change-point detection in time series <http://ssa.cf.ac.uk/zhigljavsky/changepoint/CH_P_T_S.pdf>`_

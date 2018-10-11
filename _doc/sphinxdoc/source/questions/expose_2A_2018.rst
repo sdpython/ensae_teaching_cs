@@ -186,3 +186,11 @@ Thèmes
     * `auto-sklearn <https://automl.github.io/auto-sklearn/stable/>`_
     * `Python Implementation of Probabilistic Matrix Factorization Algorithm <https://github.com/fuhailin/Probabilistic-Matrix-Factorization>`_
     * `Matrix Factorization-based algorithms <https://surprise.readthedocs.io/en/stable/matrix_factorization.html>`_
+
+* Robust PCA
+
+    * `ROBPCA: A New Approach to Robust Principal Component Analysis <https://pdfs.semanticscholar.org/250b/4f05982b491ad80ba8b986d958eedb69a6be.pdf>`_
+    * `A Unified Framework for Outlier-Robust PCA-like Algorithm <http://proceedings.mlr.press/v37/yangc15.pdf>`_
+    * `Robust Stochastic Principal Component Analysis <http://proceedings.mlr.press/v33/goes14.pdf>`_
+    * `Online Robust PCA via Stochastic Optimization <https://papers.nips.cc/paper/5131-online-robust-pca-via-stochastic-optimization.pdf>`_
+    * `Online PCA for Contaminated Data <https://papers.nips.cc/paper/5135-online-pca-for-contaminated-data.pdf>`_

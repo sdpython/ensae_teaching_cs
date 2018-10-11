@@ -59,9 +59,10 @@ discutées.
 | **deux exposés**          |                                                   |                                               |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
 | 16/10 (6) *TD/amphi*      | * Propriétés des modèles mathématiques, modèles linéaires, modèles ensemblistes, modèles          |
-|                           |   dérivables, feature importance (*Xavier Dupré*)                                                 |
-| :ref:`l-route2018-stat6`, | * Interprétation des modèles de machine learning (*Gaël Varoquaux*)                               |
-| **deux exposés**          |                                                                                                   |
+|                           |   dérivables, gradient, feature importance, parallélisme, boosting (*Xavier Dupré*)               |
+| :ref:`l-route2018-stat6`, | * Interprétation des modèles de machine learning (*Gaël Varoquaux*), notes :                      |
+| **deux exposés**          |   `Understanding and diagnosing your machine-learning models                                      |
+|                           |   <http://gael-varoquaux.info/interpreting_ml_tuto/>`_                                            |
 +---------------------------+---------------------------------------------------+-----------------------------------------------+
 | 23/10 (7) *amphi*         | * notion de deep learning sans en faire, application au texte, et aux images,                     |
 |                           |   transfer learning, exemples avec un moteur de recherche d'images (*Xavier Dupré*)               |
@@ -281,8 +282,7 @@ Séance 5 - stat
 *8h30 - cours*
 
 * :ref:`l-td2a-ml-crypted`
-* :ref:`mltimeseriesbaserst`, SSA
-* :ref:`timeseriesssarst`
+* :ref:`mltimeseriesbaserst`, :ref:`timeseriesssarst`
 * :ref:`l-td2a-hyperparametre` et :ref:`l-ml2a-autolearning`
 * `Counterfactual Reasoning and Learning Systems: The Example of Computational Advertising <http://jmlr.org/papers/v14/bottou13a.html>`_
 * `Making Contextual Decisions with Low Technical Debt <https://arxiv.org/pdf/1606.03966.pdf>`_
@@ -320,12 +320,22 @@ Séance 5 - éco
 Séance 6
 ^^^^^^^^
 
+Propriétés des modèles mathématiques
+
+* Thèmes : modèles linéaires, modèles ensemblistes, modèles dérivables,
+  gradient, feature importance, parallélisme, boosting
 * `Gradient et méthodes ensemblistes <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/gradienttree.html>`_
 * :ref:`mlcccmachinelearninginterpretabiliterst`
 * :ref:`l-ml2a-selvar`
 * :ref:`mlccmachinelearningproblems2rst`
 * `Régression logistique, diagramme de Voronoï, k-Means <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/lr_voronoi.html>`_
 * :ref:`mlcccmachinelearninginterpretabiliterst`
+
+*10h15 - Gaël Varoquaux*
+
+Interprétation des modèles de machine learning
+
+Notes : `Understanding and diagnosing your machine-learning models <http://gael-varoquaux.info/interpreting_ml_tuto/>`_.
 
 .. _l-route2018-stat7:
 
