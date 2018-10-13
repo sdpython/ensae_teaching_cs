@@ -195,6 +195,7 @@ epkg_dictionary["tkinter"] = 'https://docs.python.org/3/library/tkinter.html'
 epkg_dictionary["theano"] = 'http://deeplearning.net/software/theano/'
 epkg_dictionary["thorpy"] = 'http://www.thorpy.org/'
 epkg_dictionary["TSP"] = 'https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_voyageur_de_commerce'
+epkg_dictionary["UCI"] = 'https://archive.ics.uci.edu/ml/datasets.html'
 epkg_dictionary["Unofficial Windows Binaries for Python Extension Packages"] = 'https://www.lfd.uci.edu/~gohlke/pythonlibs/'
 epkg_dictionary["Windows"] = 'https://fr.wikipedia.org/wiki/Microsoft_Windows'
 epkg_dictionary["xgboost"] = "https://xgboost.readthedocs.io/en/latest/"
