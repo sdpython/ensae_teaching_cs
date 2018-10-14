@@ -1,5 +1,5 @@
 """
-@brief      test log(time=20s)
+@brief      test log(time=31s)
 """
 
 import sys
@@ -23,7 +23,7 @@ except ImportError:
     import src
 
 
-class TestNotebookEleves201809(unittest.TestCase):
+class TestNotebookEleves201810(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
@@ -33,7 +33,7 @@ class TestNotebookEleves201809(unittest.TestCase):
         return {"https://archive.ics.uci.edu/ml/machine-learning-databases/00222/":
                 "http://www.xavierdupre.fr/enseignement/complements/"}
 
-    def test_notebook_runner_eleves_201809(self):
+    def test_notebook_runner_eleves_201810(self):
         fLOG(
             __file__,
             self._testMethodName,
@@ -51,7 +51,7 @@ class TestNotebookEleves201809(unittest.TestCase):
                 return False
             return True
 
-        a_test_notebook_runner(__file__, "2018-09", exe, fLOG=fLOG, valid=valid_cell,
+        a_test_notebook_runner(__file__, "2018-10", exe, fLOG=fLOG, valid=valid_cell,
                                copy_files=copy_files, modules=[src.ensae_teaching_cs])
 
 
