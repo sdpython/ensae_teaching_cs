@@ -115,7 +115,7 @@ Il est recommandé d'aller loin sur au moins une des dimensions.
    il doit être approprié et justifié.
 #. **La représentation / application :** Là encore, plusieurs niveaux sont envisageables.
    Vous pouvez simplement représenter vos données en utilisant
-   :epkg:`matplotlib`, aller plus loin avec :epkg:`seaborn`,
+   :epkg:`matplotlib`, aller plus loin avec :epkg:`seaborn` ou :epkg:`scikit-plot`,
    (voire `D3.js <https://en.wikipedia.org/wiki/D3.js>`_ pour les plus motivés)
    ou encore réaliser une application en :epkg:`Flask`.
    La base d'une bonne visualisation est de trouver le type de graphique adéquat

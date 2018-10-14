@@ -16,7 +16,7 @@
     I wrote some challenges in English one about algorithmic,
     the other one about unsupervized machine learning :
     `Computer Science Challenges <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/i_challenges.html>`_.
-    The main goal of this course is to introduce many 
+    The main goal of this course is to introduce many
     standard machine learning problems and play with them.
     I suggest doing one competition or study with a known
     datasets (:epkg:`Kaggle`, :epkg:`UCI`).

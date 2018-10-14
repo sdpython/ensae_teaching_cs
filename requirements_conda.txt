@@ -24,7 +24,7 @@ scikit-image
 scikit-learn
 scipy
 seaborn
-Sphinx
+Sphinx>=1.7
 statsmodels
 sympy
 toolz

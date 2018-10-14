@@ -43,9 +43,10 @@ la visualisation animée de gros jeux de données telle que
 
 *Modules*
 
-* `matplotlib <http://matplotlib.org/>`_
-* `seaborn <https://github.com/mwaskom/seaborn>`_
-* `bokeh <http://bokeh.pydata.org/en/latest/>`_
+* :epkg:`matplotlib`
+* :epkg:`seaborn`
+* :epkg:`scikit-plot`
+* :epkg:`bokeh`
 * `bqplot <https://github.com/bloomberg/bqplot>`_
 * :ref:`l-visualisation`
 

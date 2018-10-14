@@ -2,7 +2,7 @@ dist: xenial
 sudo: true
 language: python
 python:
-  - "3.6"
+  - "3.7"
 addons:
 -  apt:
 -    packages:
@@ -20,7 +20,6 @@ env:
     - SEGFAULT_SIGNALS=all
     - PYTHONUNBUFFERED=True
     - SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=disk
-
 install:
   - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
   - bash miniconda.sh -b -p $HOME/miniconda
@@ -30,8 +29,6 @@ install:
   - conda update -q conda
   - conda install conda-build
   - conda install -q --file=requirements_conda.txt
-  - python -V
-  - pip -V
   - pip install pyquickhelper
   - pip install -q -r requirements.txt
   - pip install -U git+https://github.com/sdpython/pyPdf --no-deps

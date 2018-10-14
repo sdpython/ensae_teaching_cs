@@ -95,7 +95,6 @@ Machine learning illustré
     notebooks/ml_table_mortalite
     notebooks/ml_huge_datasets
     notebooks/ml_rue_paris_parcours
-    coding_party
     specials/voisinage
     specials/elections
 

@@ -20,5 +20,6 @@ Graphes pour des statisticiens
 
 *Modules*
 
-* `seaborn <https://seaborn.pydata.org/>`_
-* `statsmodels <http://www.statsmodels.org/stable/index.html>`_
+* :epkg:`seaborn`
+* :epkg:`statsmodels`
+* :epkg:`scikit-plot`

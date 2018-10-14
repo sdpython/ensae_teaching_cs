@@ -5,9 +5,20 @@
 History
 =======
 
-current - 2018-09-23 - 0.00Mb
+current - 2018-10-14 - 0.00Mb
 =============================
 
+0.8.2571 - 2018-10-14 - 6.29Mb
+==============================
+
+* `67`: move velib to ensae_projects (2018-10-14)
+* `66`: ajouter un notebook sur SSA (2018-10-14)
+* `65`: replaces RandomizedPCA with PCA(svd_solver="randomized") (2018-10-01)
+
+0.8.2561 - 2018-10-01 - 6.29Mb
+==============================
+
+* `64`: terminer la correction sur le clustering (2018-09-30)
 * `63`: parler de plotly offline, réduire la taille des notebooks sur la visualisation (2018-09-23)
 
 0.8.2511 - 2018-08-25 - 6.29Mb
