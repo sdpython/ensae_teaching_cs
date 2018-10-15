@@ -323,7 +323,12 @@ Séance 6
 Propriétés des modèles mathématiques
 
 * Thèmes : modèles linéaires, modèles ensemblistes, modèles dérivables,
-  gradient, feature importance, parallélisme, boosting
+  gradient, feature importance, parallélisme, boosting,
+  binning, minibatch
+* :ref:`mlatreeoverfittingrst`
+* En cas de sparsité, idée de LightGBM (feature non conflictuelle),
+  :ref:`correction <knnhighdimensioncorrectionrst>`,
+  `Nearest Neighbours and Sparse Features <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/notebooks/nearest_neighbours_sparse_features.html>`_
 
 *Autour du linéaire*
 
@@ -339,9 +344,17 @@ Propriétés des modèles mathématiques
 
 *Lectures annexes*
 
-* :ref:`mlatreeoverfittingrst`
 * :ref:`mlccmachinelearningproblems2rst`
 * :ref:`l-ml2a-selvar`
+
+*Librairies random forest*
+
+* `XGBoost: A Scalable Tree Boosting System <https://arxiv.org/pdf/1603.02754.pdf>`_,
+  sparsité et valeurs manquantes
+* `LightGBM: A Highly Efficient Gradient Boosting Decision Tree <https://papers.nips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree.pdf>`_,
+  sélection des splits, combinaison de features sparses
+* `CatBoost: gradient boosting with categorical features support <http://learningsys.org/nips17/assets/papers/paper_11.pdf>`_,
+  ajout de combinaisons de variables
 
 *10h15 - Gaël Varoquaux*
 
