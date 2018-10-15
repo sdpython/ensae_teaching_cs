@@ -118,6 +118,7 @@ epkg_dictionary['Excel'] = 'https://fr.wikipedia.org/wiki/Microsoft_Excel'
 epkg_dictionary["falcon"] = 'https://falconframework.org/'
 epkg_dictionary["FastText"] = 'https://fasttext.cc/'
 epkg_dictionary["Flask"] = 'http://flask.pocoo.org/'
+epkg_dictionary["flask"] = 'http://flask.pocoo.org/'
 epkg_dictionary["folium"] = 'https://folium.readthedocs.io/en/latest/'
 epkg_dictionary["fortran"] = 'https://fr.wikipedia.org/wiki/Fortran'
 epkg_dictionary["Freakeconometrics"] = "https://freakonometrics.hypotheses.org/"

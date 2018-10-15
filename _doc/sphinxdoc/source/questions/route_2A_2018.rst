@@ -324,12 +324,24 @@ Propriétés des modèles mathématiques
 
 * Thèmes : modèles linéaires, modèles ensemblistes, modèles dérivables,
   gradient, feature importance, parallélisme, boosting
-* `Gradient et méthodes ensemblistes <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/gradienttree.html>`_
-* :ref:`mlcccmachinelearninginterpretabiliterst`
-* :ref:`l-ml2a-selvar`
-* :ref:`mlccmachinelearningproblems2rst`
+
+*Autour du linéaire*
+
+* `Régression linéaire par morceaux <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/regression_lineaire.html>`_
+* `Corrélations non linéaires <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/correlation_non_lineaire.html>`_
 * `Régression logistique, diagramme de Voronoï, k-Means <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/lr_voronoi.html>`_
-* :ref:`mlcccmachinelearninginterpretabiliterst`
+
+*Illustrations des propriétés mathématiques*
+
+* `AdaBoost <https://fr.wikipedia.org/wiki/AdaBoost>`_,
+  :ref:`2018-10-09ensemblegradientboostingrst`
+* :ref:`mlcccmachinelearninginterpretabiliterst` (feature importance)
+
+*Lectures annexes*
+
+* :ref:`mlatreeoverfittingrst`
+* :ref:`mlccmachinelearningproblems2rst`
+* :ref:`l-ml2a-selvar`
 
 *10h15 - Gaël Varoquaux*
 
