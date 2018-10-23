@@ -113,6 +113,7 @@ Liste exhaustive :
 #. Algo : :ref:`l-maths-inequation`
 #. Algo : :ref:`l-maths-meilleur-clavier`
 #. Algo : :ref:`l-impression-3D`
+#. Algo : :ref:`l-string-period`
 #. Jeu hasard : :ref:`l-carte-poker`
 #. Jeu hasard : :ref:`l-carte-belotte`
 

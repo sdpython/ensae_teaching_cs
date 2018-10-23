@@ -206,6 +206,8 @@ Articles sur des algorithmes
 * `Blossom5 <http://pub.ist.ac.at/~vnk/papers/blossom5.pdf>`_ **matching**
 * `Local max-cut in smoothed polynomial time <http://blogs.princeton.edu/imabandit/2016/10/24/local-max-cut-in-smoothed-polynomial-time/>`_ **max-cut**
 * `Expander Flows, Geometric Embeddings and Graph Partitioning <http://snap.stanford.edu/class/cs224w-readings/arora04expansion.pdf>`_ **graph partitionning**
+* `The Read-Optimized Burrows-Wheeler Transform <https://arxiv.org/pdf/1809.07320.pdf>`_
+* `String Periods in the Order-Preserving Model <https://arxiv.org/pdf/1801.01404.pdf>`_
 
 Livres
 ++++++

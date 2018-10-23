@@ -10,7 +10,7 @@ Il faut supprimer le contenu du répertoire pour mettre à jour l'ensemble
 des projets. Dans le cas contraire, le code est prévu pour mettre à jour le répertoire
 à partir des derniers mails recensés dans le fichiers *mails.txt*.
 La récupération se passe souvent en deux étapes.
-La prmeière récupère tous les mails et crée un premier archivage
+La première récupère tous les mails et crée un premier archivage
 sans tenir compte des groupes. On créé alors un fichier :epkg:`Excel`
 qui ressemble à peu près à ceci :
 
@@ -43,9 +43,9 @@ with warnings.catch_warnings():
 # de la boîte de message.
 
 server = "imap.gmail.com"
-school = "ASSAS"
-date = "1-May-2018"
-pattern = "Python_{0}_Projet_2018"
+school = "ENSAE"
+date = "20-Oct-2018"
+pattern = "Python_{0}_TD_1A_2019"
 group_def = "groupes.xlsx"
 col_subject, col_group, col_mail, col_student = "sujet", "groupe", "mail", "Nom"
 
@@ -54,13 +54,13 @@ if school == 'ENSAE':
     do_mail = True
     mailfolder = ["ensae/ENSAE_1A"]
     dest_folder = os.path.normpath(os.path.abspath(os.path.join(
-        *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2017-2018", "1A_projet"]))))
+        *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2018-2019", "1A_projet"]))))
     print("dest", dest_folder)
-elif school == 'ASSAS':
+elif school == 'PANTHEON':
     do_mail = True
     mailfolder = ["ensae/assas"]
     dest_folder = os.path.normpath(os.path.abspath(os.path.join(
-        *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "assas", "2017-2018", "projet"]))))
+        *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "PANTHEON", "2018-2019", "projet"]))))
     print("dest", dest_folder)
 else:
     raise NotImplementedError()
@@ -71,15 +71,10 @@ else:
 path_df = os.path.join(dest_folder, group_def)
 if os.path.exists(path_df):
     df_group = pandas.read_excel(path_df)
-    if col_subject not in df_group.columns:
-        raise Exception('{0} not in {1}'.format(
-            col_subject, list(df_group.columns)))
-    if col_mail not in df_group.columns:
-        raise Exception('{0} not in {1}'.format(
-            col_mail, list(df_group.columns)))
-    if col_group not in df_group.columns:
-        raise Exception('{0} not in {1}'.format(
-            col_group, list(df_group.columns)))
+    for col in [col_subject, col_mail, col_group, col_student]:
+        if col not in df_group.columns:
+            raise Exception('{0} not in {1}'.format(
+                col, list(df_group.columns)))
 else:
     df_group = None
 
@@ -132,6 +127,7 @@ password = bytes(password, "ascii")
 skip_address = {
     'xavier.dupre@gmail.com',
     'xavier.dupre@ensae.fr',
+    'xavierdupre@gmail.com',
 }
 
 
@@ -140,7 +136,7 @@ skip_address = {
 
 fLOG("[fetch_student_projects_from_gmail] start")
 
-if df_group is not None:
+if df_group is None:
     if os.path.exists(filename_mails):
         with open(filename_mails, "r", encoding="utf8") as f:
             lines = f.readlines()
@@ -153,8 +149,10 @@ if df_group is not None:
         box.logout()
         emails = list(sorted(set([_.strip("<>").lower()
                                   for _ in emails if _ not in skip_address])))
+        emails = [_ for _ in emails if _ not in skip_address]
+        allmails = "\n".join(emails)
         with open(filename_mails, "w", encoding="utf8") as f:
-            f.write("\n".join(emails))
+            f.write(allmails)
 else:
     emails = [_ for _ in df_group[col_mail] if _ not in skip_address]
 
@@ -164,8 +162,8 @@ else:
 
 if df_group is None:
     import pandas
-    rows = [{col_mail: mail, col_sujet: "?", col_group: i + 1}
-            for i, mail in enumerate(emails)]
+    rows = [{col_mail: mail, col_subject: "?", col_group: i + 1,
+             col_student: mail.split('@')[0]} for i, mail in enumerate(emails)]
     df = pandas.DataFrame(rows)
     fLOG("[fetch_student_projects_from_gmail] dataframe", df.shape)
     df.to_excel(filename_excel)

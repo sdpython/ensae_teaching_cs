@@ -372,6 +372,41 @@ Séance 7
 * `Galleries de problèmes résolus ou presque <http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/chapters/dl_resolus.html>`_
 * `Transfer Learning <http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/chapters/deep_transfer_learning.html>`_
 * `Search images with deep learning <http://www.xavierdupre.fr/app/mlinsights/helpsphinx/notebooks/search_images.html>`_
+* `GAN <http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/chapters/deep_generative_adversarial_network_gan.html>`_
+
+*Ethide dans les données par Frédéric Bardolle*
+
+* `Les fossoyeurs de l’innovation <https://salon.thefamily.co/les-fossoyeurs-de-l-innovation-6a754d1e8e35>`_ par Nicolas Colin
+* `Tristan Harris : «Beaucoup de ficelles invisibles dans la tech nous agitent comme des marionnettes» <http://www.lefigaro.fr/secteur/high-tech/2018/05/31/32001-20180531ARTFIG00004-tristan-harris-beaucoup-de-ficelles-invisibles-dans-la-tech-nous-agitent-comme-des-marionnettes.php>`_
+* Netflix 98% du contenu visionné est recommandé par un algorithme,
+  fonction objectif pour Netflix : le temps passé sur le site,
+  Netflix préfère une personne qui reste 10h plutôt que 10 personne qui reste 1h,
+  polarisation des contenus
+* `How AI Designers will Dictate Our Civic Future  <https://vimeo.com/238221677>`_
+* `AlgoTranspency <https://algotransparency.org/>`_
+* `L'efficacité d'un logiciel censé prédire la récidive à nouveau critiquée <https://www.lemonde.fr/pixels/article/2018/01/17/l-efficacite-d-un-logiciel-cense-predire-la-recidive-a-nouveau-critiquee_5243218_4408996.html>`_
+* Google Translate biais sexiste : *A doctor, a nurse* traduit en *un docteur, une infirmière* et non *une docteure, un infirmier*
+* `Serment d'Hippocrate pour Data Scientist <https://www.hippocrate.tech/>`_
+* `Un monde d'automatisation ? <https://www.editions-eres.com/ouvrage/4222/un-monde-d-automatisation>`_,
+  avec entre autres Alexeï Grinbaum
+* `Ethique de la vertu <https://fr.wikipedia.org/wiki/%C3%89thique_de_la_vertu>`_ (`Aristote <https://fr.wikipedia.org/wiki/Aristote>`_,
+  ne fais pas à autrui ce que tu ne voudrais pas qu'on te fasse),
+  `éthique utilitariste <https://fr.wikipedia.org/wiki/Utilitarisme>`_
+  (`Bentham <https://fr.wikipedia.org/wiki/Jeremy_Bentham>`_,
+  maximiser le plaisir, diminuer les peines en apposant une échelle de valeur,
+  l'action est jugée sur la conséquence),
+  `éthique déontologique <https://fr.wikipedia.org/wiki/%C3%89thique_d%C3%A9ontologique>`_
+  (`Kant <https://fr.wikipedia.org/wiki/Emmanuel_Kant>`_,
+  `impératif catégorique <https://fr.wikipedia.org/wiki/Imp%C3%A9ratif_cat%C3%A9gorique>`_,
+  je peux faire quelque chose si
+  tout le monde peut le faire sans mettre le monde en danger, action en fonction de l'intention
+  quelque soit le résultat),
+
+*Dilemmes*
+
+* `Dilemme du tramway <https://fr.wikipedia.org/wiki/Dilemme_du_tramway>`_
+* `L'utilitarisme et les problèmes de tramways <https://minarchiste.wordpress.com/2013/12/06/lutilitarisme-et-les-problemes-de-tramways/>`_
+* `Théorie du développement moral de Kohlberg <https://fr.wikipedia.org/wiki/Th%C3%A9orie_du_d%C3%A9veloppement_moral_de_Kohlberg>`_
 
 .. _l-route2018-stat8:
 
