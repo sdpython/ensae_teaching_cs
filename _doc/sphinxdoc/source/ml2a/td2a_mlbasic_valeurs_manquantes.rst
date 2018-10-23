@@ -37,7 +37,10 @@ La librairie :epkg:`XGBoost` apprend des forêts aléatoires qui définissent
 pour chaque noeud des arbres la branche à suivre si
 la variable est manquante.
 
-*(à venir)*
+*Notebook*
+
+* :ref:`tdnote20191rst`
+* :ref:`tdnote20192rst`
 
 *Lectures*
 
