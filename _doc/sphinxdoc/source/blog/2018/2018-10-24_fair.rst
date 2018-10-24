@@ -1,0 +1,26 @@
+
+.. blogpost::
+    :title: Fairness - fairlearn - classification
+    :keywords: classification, éthique
+    :date: 2018-10-24
+    :categories: éthique
+    :lid: blog-ethique-fairlearn
+
+    Je suis tombé sur ce module 
+    `fairlearn <https://github.com/Microsoft/fairlearn>`_
+    qui s'appuie sur l'article
+    `A Reductions Approach to Fair Classification <https://arxiv.org/pdf/1803.02453.pdf>`_.
+    L'article définit mathématiquement l'aspect
+    éthique qu'il souhaite vérifier dans des modèles
+    de machine learning dédiés à la classification.
+    L'article commence par définir le triplet
+    *(X,A,Y)* où *A* est l'ensemble des attributs protégés,
+    *X* l'ensemble des variables, *Y* la chose à prédire.
+    On note *h(X)* la prédiction du classifieur binaire.
+    L'article définit ensuite la *parité* 
+    :math:`\pr{h(X) = \hat{y} | A = a} = \pr{h(X) = \hat{y}} \; \forall a, \hat{y} \in \{0, 1\}`,
+    puis l'égalité des chances :
+    :math:`\pr{h(X) = \hat{y} | A = a, Y = y} = \pr{h(X) = \hat{y} | Y = y}`.
+    L'article propose une façon d'apprendre un modèle respectant
+    ces contraintes qui s'expriment sous la forme d'un ensemble
+    de contraintes linéaires.

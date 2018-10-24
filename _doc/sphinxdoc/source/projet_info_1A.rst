@@ -72,6 +72,7 @@ Liste exhaustive :
 #. ML : :ref:`l-ml-ethique`
 #. ML : :ref:`l-ml-fire-detection`
 #. ML : :ref:`l-ml-snn`
+#. ML : :ref:`l-ml-knn-pca`
 #. Finance : :ref:`l-fi-trend`
 #. Finance : :ref:`l-fi-port`
 #. Finance : :ref:`l-fi-pair`
