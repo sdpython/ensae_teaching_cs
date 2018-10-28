@@ -32,7 +32,8 @@ install:
 build: off
 
 test_script:
-  - "%PYTHON%\\python -u setup.py unittests"
+  # The job is cut after an hour. Only a subset of unit test is run.
+  - "%PYTHON%\\python -u setup.py unittests -d 20"
 
 after_test:
   - "%PYTHON%\\python -u setup.py bdist_wheel"
