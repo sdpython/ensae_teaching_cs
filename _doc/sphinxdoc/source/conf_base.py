@@ -182,6 +182,7 @@ epkg_dictionary['REST API'] = "https://en.wikipedia.org/wiki/Representational_st
 epkg_dictionary["ROC"] = 'http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/roc.html'
 epkg_dictionary["RSA"] = 'https://fr.wikipedia.org/wiki/Chiffrement_RSA'
 epkg_dictionary["scikit-plot"] = 'https://scikit-plot.readthedocs.io/en/stable/'
+epkg_dictionary["Scikit.ML"] = 'https://github.com/xadupre/machinelearningext'
 epkg_dictionary["SciTE"] = 'http://www.scintilla.org/SciTE.html'
 epkg_dictionary["Scipy"] = 'https://www.scipy.org/'
 epkg_dictionary["spark"] = 'https://spark.apache.org/'

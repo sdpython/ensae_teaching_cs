@@ -808,7 +808,7 @@ Outils
       - Outils, exemples pour utiliser du :epkg:`C#` depuis :epkg:`Python`
         sous Windows ou Linux.
     * - :epkg:`csharpyml`
-      - :epkg:`csharpy` + :epkg:`ML.net`
+      - :epkg:`csharpy` + :epkg:`ML.net` + :epkg:`Scikit.ML`
     * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
       - Fonctions, outils implémentées en C, C++ et habillées en Python. C'est aussi
         un template pour ceux qui souhaite réaliser un module en C/C++/Cython.
