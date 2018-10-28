@@ -26,3 +26,6 @@ Ou *descente de gradient stochastique* en français.
 * `Dual Principal Component Pursuit <http://www.jmlr.org/papers/v19/17-436.html>`_
 * `Parallelizing Stochastic Gradient Descent for Least Squares Regression: Mini-batching, Averaging, and Model Misspecification <http://www.jmlr.org/papers/volume18/16-595/16-595.pdf>`_
 * `Compact Convex Projections <http://www.jmlr.org/papers/volume18/16-147/16-147.pdf>`_
+* `Optimization Methods for Large-Scale Machine Learning <https://arxiv.org/abs/1606.04838>`_
+* `k-SVRG: Variance Reduction for Large Scale Optimization <https://arxiv.org/abs/1805.00982>`_
+* `Accelerating Stochastic Gradient Descent using Predictive Variance Reduction <https://papers.nips.cc/paper/4937-accelerating-stochastic-gradient-descent-using-predictive-variance-reduction.pdf>`_
