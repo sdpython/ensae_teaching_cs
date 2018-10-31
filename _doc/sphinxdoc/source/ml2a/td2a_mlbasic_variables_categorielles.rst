@@ -32,8 +32,10 @@ Variables catégorielles
   et sa :ref:`corection <tdnote2017rst>`
 * `Visiting: Categorical Features and Encoding in Decision Trees <https://medium.com/data-design/visiting-categorical-features-and-encoding-in-decision-trees-53400fa65931>`_
 * `Similarity encoding for learning with dirty categorical variables <https://hal.inria.fr/hal-01806175>`_
+* `CatBoost vs. Light GBM vs. XGBoost <https://towardsdatascience.com/catboost-vs-light-gbm-vs-xgboost-5f93620723db>`_
 
 *Modules*
 
 * `scikit-learn <http://scikit-learn.org/stable/>`_
 * `category_encoders <http://contrib.scikit-learn.org/categorical-encoding/>`_
+* `catboost <https://github.com/catboost/catboost>`_

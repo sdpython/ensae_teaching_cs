@@ -65,3 +65,4 @@ Machine Learning - Formalisation
     td2a_mlbasic_bandits
     td2a_mlbasic_modeles_bayesiens
     td2a_mlbasic_factorization_machines
+    td2a_mlbasic_boosting
