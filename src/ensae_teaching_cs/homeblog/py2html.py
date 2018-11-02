@@ -491,8 +491,9 @@ def file2HTML(file_name, format, style, Replace, entity="1", encoding="utf-8"):
                         page.append(txt)
             else:
                 # collect remains of old line
-                page.append(lines[old_line][old_column:-
-                                            1].replace(BSLASH, BSLASH + '\n'))
+                subpage = lines[old_line][old_column:-1]
+                subpage = subpage.replace(BSLASH, BSLASH + '\n')
+                page.append(subpage)
                 old_line += 1
                 # now collect all the lines between last and current
                 while old_line != tupe[2][0]:

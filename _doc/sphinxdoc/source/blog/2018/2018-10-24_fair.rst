@@ -6,7 +6,7 @@
     :categories: éthique
     :lid: blog-ethique-fairlearn
 
-    Je suis tombé sur ce module 
+    Je suis tombé sur ce module
     `fairlearn <https://github.com/Microsoft/fairlearn>`_
     qui s'appuie sur l'article
     `A Reductions Approach to Fair Classification <https://arxiv.org/pdf/1803.02453.pdf>`_.
@@ -17,7 +17,7 @@
     *(X,A,Y)* où *A* est l'ensemble des attributs protégés,
     *X* l'ensemble des variables, *Y* la chose à prédire.
     On note *h(X)* la prédiction du classifieur binaire.
-    L'article définit ensuite la *parité* 
+    L'article définit ensuite la *parité*
     :math:`\pr{h(X) = \hat{y} | A = a} = \pr{h(X) = \hat{y}} \; \forall a, \hat{y} \in \{0, 1\}`,
     puis l'égalité des chances :
     :math:`\pr{h(X) = \hat{y} | A = a, Y = y} = \pr{h(X) = \hat{y} | Y = y}`.

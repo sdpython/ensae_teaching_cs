@@ -255,7 +255,6 @@ On choisira de limiter le nombre de dépendance au minimum.
 
 .. _l-ml-knn-pca:
 
-
 Implémenter un algorithme des plus proches voisins amélioré (2018)
 ------------------------------------------------------------------
 

@@ -78,7 +78,6 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
 
     ../notebooks/td2a_ethics
     ../notebooks/td2a_ethics_correction
-    
 
 *Lectures mathémtiques*
 
