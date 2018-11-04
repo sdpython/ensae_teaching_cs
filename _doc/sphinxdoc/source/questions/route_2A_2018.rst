@@ -423,5 +423,14 @@ Séance 8 - stat
 Séance 8 - éco
 ^^^^^^^^^^^^^^
 
+*Notebook*
+
+* :ref:`td2asentimentanalysisrst`
+  (:ref:`correction <td2asentimentanalysiscorrectionrst>`),
+  lien vers le jeu de données :
+  `Project 1: Spooky Data Analysis <https://github.com/GU4243-ADS/spring2018-project1-ginnyqg/tree/master/data>`_
+
+*Lectures*
+
 * :ref:`td2amltextfeaturesrst`
 * :ref:`td2asomenlprst`
