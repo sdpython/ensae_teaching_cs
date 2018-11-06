@@ -119,7 +119,7 @@ exploitable par les algorithmes d'apprentissage.
 * `pattern <https://github.com/clips/pattern>`_ : possède une bonne base
   d'exemples, notemmant pour récupérer des données depuis internet
   `01-web <https://github.com/clips/pattern/tree/master/examples/01-web>`_
-  
+
 *Modules de recherche*
 
 * `BERT <https://github.com/google-research/bert>`_
