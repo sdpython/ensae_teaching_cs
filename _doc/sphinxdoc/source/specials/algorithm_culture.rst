@@ -150,7 +150,6 @@ Catalogue d'algorithmes
       `fp-growth 1/3 <http://blog.khaledtannir.net/2012/07/lalgorithme-fp-growth-les-bases-13/#.WyS1xqczbSE>`_,
       `fp-growth 2/3 <http://blog.khaledtannir.net/2012/07/lalgorithme-fp-growth-construction-du-fp-tree-23/#.WyS1x6czbSE>`_,
       `fp-growth 3/3 <http://blog.khaledtannir.net/2012/07/lalgorithme-fp-growth-identification-des-itemsets-frequents-33/#.WyS1yaczbSE>`_
-
 * Texte
     * `Algorithme de Knuth-Morris-Pratt <http://fr.wikipedia.org/wiki/Algorithme_de_Knuth-Morris-Pratt>`_ **algo**
     * `Algorithme de Rabin-Karp <http://fr.wikipedia.org/wiki/Algorithme_de_Rabin-Karp>`_ **algo**
@@ -159,16 +158,19 @@ Catalogue d'algorithmes
     * `Algorithme d'Aho-Corasick <http://fr.wikipedia.org/wiki/Algorithme_d%27Aho-Corasick>`_ **algo**
     * `Transformée de Burrows-Wheeler <http://fr.wikipedia.org/wiki/Transform%C3%A9e_de_Burrows-Wheeler>`_ **algo**
     * `algorithme Apriori <https://en.wikipedia.org/wiki/Apriori_algorithm>`_ : apprentissage de règles d'associations **algo**
+* Optimisation
+    * `Simplexe <http://fr.wikipedia.org/wiki/Simplexe>`_ **algo**
+    * `Optimisation Combinatoire : Programmation Linéaire et Algorithmes <http://www-desir.lip6.fr/~fouilhoux/documents/OptComb.pdf>`_ **thèse**
+    * `Méthode de Nelder-Mead <https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Nelder-Mead>`_ **algo**,
+      `implémentation en Python <https://github.com/fchollet/nelder-mead>`_
 * Autre
     * `codage Huffman <http://fr.wikipedia.org/wiki/Codage_de_Huffman>`_ (voir aussi `LZ77, LZ78 <http://fr.wikipedia.org/wiki/LZ77_et_LZ78>`_) **algo**
     * `bootstrap, intervalles de confiance <http://fr.wikipedia.org/wiki/Bootstrap_(statistiques)#Intervalle_de_confiance>`_ **algo**
     * `filtre de Bloom <http://fr.wikipedia.org/wiki/Filtre_de_Bloom>`_ **algo**
     * `Algorithme de Strassen <http://fr.wikipedia.org/wiki/Algorithme_de_Strassen>`_ **algo**
-    * `Simplexe <http://fr.wikipedia.org/wiki/Simplexe>`_ **algo**
     * `Woodbury matrix identity <http://en.wikipedia.org/wiki/Woodbury_matrix_identity>`_ **algo**
     * `Blockwise inversion <http://en.wikipedia.org/wiki/Invertible_matrix#Blockwise_inversion>`_ **algo**
     * `Toom-Cook <https://en.wikipedia.org/wiki/Toom%E2%80%93Cook_multiplication>`_ **algo**
-    * `Optimisation Combinatoire : Programmation Linéaire et Algorithmes <http://www-desir.lip6.fr/~fouilhoux/documents/OptComb.pdf>`_ **thèse**
     * `Canopy Clustering <https://en.wikipedia.org/wiki/Canopy_clustering_algorithm>`_ **algo**
     * `LRU - Last Recent Used <https://fr.wikipedia.org/wiki/Algorithmes_de_remplacement_des_lignes_de_cache>`_ **algo**
 * Programmation
