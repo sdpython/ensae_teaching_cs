@@ -1,0 +1,31 @@
+
+.. blogpost::
+    :title: dirty-cat(égories)
+    :keywords: dirty-cat, variable catégorielle
+    :date: 2018-11-15
+    :categories: machine learning
+    :lid: blog-dirty-cat
+
+    Je suis assis à côté de Gaël Varoquaux qui me raconte
+    son dernier papier sur :epkg:`dirty-cat` pour traiter
+    des colonnes catégorielles avec beaucoup de catégories
+    et qui se ressemblent :
+
+    * Charleville
+    * Charleville-Mérières
+    * ...
+    * Paris
+    * Pari
+    * Paris 18
+    * ...
+
+    En pratique, beaucoup de data-scientist diraient
+    qu'ils faut d'abord nettoyer les données avec de les
+    transformer en variables numériques. Une autre option
+    consiste à utiliser un
+    `SimilarityEncoder <https://dirty-cat.github.io/stable/generated/dirty_cat.SimilarityEncoder.html#dirty_cat.SimilarityEncoder>`_
+    qui encode les catégories de telle façon que deux catégories
+    proches au niveau caractères seront proches une fois
+    encodées.
+
+    https://nostarch.com/malwaredatascience

@@ -1,0 +1,15 @@
+
+.. blogpost::
+    :title: KBinsDiscretizer
+    :keywords: KBinsDiscretizer, modèle interprétable
+    :date: 2018-11-15
+    :categories: machine learning
+
+    Le modèle linéaire est facilement interprétable
+    mais ne marche pas aussi bien qu'une random forest.
+    Pourquoi le pas utiliser des modèles linéaires par
+    morceaux. Il suffit juste de découper l'espace
+    des features en morceaux ce que fait le
+    `KBinsDiscretizer <https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.KBinsDiscretizer.html>`_.
+    Et ça marche plutôt bien, particulièrement lorsque les
+    données sont peu nombreuses.

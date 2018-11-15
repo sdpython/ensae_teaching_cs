@@ -70,8 +70,8 @@ Séries temporelles
     td2a_mlplus_sequence_learning
     td2a_mlplus_timeseries_anomalie
 
-Interprétation, Anonymisation, Cryptage, Privacy
-================================================
+Interprétation, Anonymisation
+=============================
 
 On sait beaucoup de choses avec les données et comme elles concernent
 des personnes la plupart du temps, les chercheurs réfléchissent
@@ -80,9 +80,17 @@ des personnes la plupart du temps, les chercheurs réfléchissent
 .. toctree::
     :maxdepth: 1
 
-    td2a_mlplus_machine_learning_ethique
+    td2a_mlplus_linear_models
     td2a_mlplus_interpretabilite_des_modeles
     td2a_mlplus_selection_de_variables
+    td2a_mlplus_machine_learning_ethique
+
+Cryptage, Privacy
+=================
+
+.. toctree::
+    :maxdepth: 1
+
     td2a_mlplus_anonymisation_des_donnees_privacy
     td2a_mlplus_machine_learning_sur_des_donnees_cryptees
 
