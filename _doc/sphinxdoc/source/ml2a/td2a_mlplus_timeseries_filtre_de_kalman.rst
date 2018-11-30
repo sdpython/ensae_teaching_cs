@@ -26,3 +26,4 @@ Timeseries - Filtre de Kalman
 * `pykalman <https://pykalman.github.io/>`_
 * `filterpy <https://github.com/rlabbe/filterpy>`_
 * `scipy <http://scipy-cookbook.readthedocs.io/items/KalmanFiltering.html>`_
+* `kalman-filter <https://github.com/hbcbh1999/kalman-filter>`_

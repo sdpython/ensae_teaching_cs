@@ -64,6 +64,7 @@ Séries temporelles
 
     td2a_mlplus_timeseries_series_temporelles
     td2a_mlplus_timeseries_filtre_de_kalman
+    td2a_mlplus_timeseries_dtw
     td2a_mlplus_timeseries_similarites
     td2a_mlplus_timeseries_temps_reel
     td2a_mlplus_finance
