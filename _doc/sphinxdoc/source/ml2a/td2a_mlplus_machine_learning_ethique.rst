@@ -107,6 +107,8 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
 * `Predict Responsibly: Increasing Fairness by Learning to Defer <https://arxiv.org/pdf/1711.06664.pdf>`_
 * `Ethics by Design: necessity or curse? <http://www.aies-conference.com/wp-content/papers/main/AIES_2018_paper_68.pdf>`_
 * `Equality of Opportunity in Supervised Learning <https://arxiv.org/abs/1610.02413>`_
+* `Algorithm Assessment Report <https://www.data.govt.nz/assets/Uploads/Algorithm-Assessment-Report-Oct-2018.pdf>`_
+  (issu de l'INSEE néozélandaise)
 
 *Conférences*
 
