@@ -10,6 +10,8 @@ La grande majorité des notebooks sont exécutés toutes les semaines
 afin de détecter facilement les problèmes pouvant survenir lors
 de la mise à jour de modules tels que *scikit-learn*, *pandas*, ...
 
+.. index:: ci, status
+
 Tableau de bord et statut des dépendances
 +++++++++++++++++++++++++++++++++++++++++
 
@@ -339,6 +341,30 @@ Tableau de bord et statut des dépendances
             :target: https://codecov.io/github/sdpython/manydataapi?branch=master
       - .. image:: http://www.xavierdupre.fr/app/manydataapi/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/manydataapi/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
+      -
+    * - :epkg:`mathenjeu`
+      - .. image:: https://travis-ci.org/sdpython/mathenjeu.svg?branch=master
+            :target: https://travis-ci.org/sdpython/mathenjeu
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/kewttt58ejfwduao?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/mathenjeu
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/mathenjeu/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/mathenjeu/tree/master
+      -
+      - .. image:: https://badge.fury.io/py/mathenjeu.svg
+            :target: https://pypi.org/project/mathenjeu
+      - .. image:: http://img.shields.io/pypi/pyversions/mathenjeu.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/mathenjeu
+      - .. image:: https://badge.waffle.io/sdpython/mathenjeu.png?label=to%20do&title=to%20do
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/mathenjeu
+      - .. image:: https://codecov.io/github/sdpython/mathenjeu/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/mathenjeu?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/mathenjeu/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/mathenjeu/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
       -
     * - :epkg:`mlinsights`
