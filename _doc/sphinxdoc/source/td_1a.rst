@@ -420,6 +420,7 @@ Bibliographie
 * `8 Regular Expressions You Should Know <http://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149>`_ *(2016/03)*
 * `Love Python <http://love-python.blogspot.fr/>`_ *(2016/03)*
 * `The Hitchhiker's Guide to Python! <http://docs.python-guide.org/en/latest/>`_ *(2016/06)*
+* `Evolution of a salesman: A complete genetic algorithm tutorial for Python <https://towardsdatascience.com/evolution-of-a-salesman-a-complete-genetic-algorithm-tutorial-for-python-6fe5d2b3ca35>`_
 
 *Livres*
 
@@ -464,6 +465,11 @@ Bibliographie
 
 Intervenants
 ============
+
+* *2018-2019* :
+  Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_ *(professeur)*,
+  `Lucie Neirac <http://www.laneas.com/lucie-neirac>`_,
+  Benoît Choffin, `Laboratoire de Recherche en Informatique <https://www.lri.fr/>`_
 
 * *2017-2018* :
   Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_ *(professeur)*,

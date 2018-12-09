@@ -19,6 +19,8 @@ Optimisation des hyperparamètres
 *Lectures*
 
 * `Algorithms for Hyper-Parameter Optimization <https://papers.nips.cc/paper/4443-algorithms-for-hyper-parameter-optimization.pdf>`_
+* `Fine-tuning XGBoost in Python like a boss <https://towardsdatascience.com/fine-tuning-xgboost-in-python-like-a-boss-b4543ed8b1e>`_
+* `An Introductory Example of Bayesian Optimization in Python with Hyperopt <https://towardsdatascience.com/an-introductory-example-of-bayesian-optimization-in-python-with-hyperopt-aae40fff4ff0>`_
 
 *Modules*
 

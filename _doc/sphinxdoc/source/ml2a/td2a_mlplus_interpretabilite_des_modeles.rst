@@ -64,13 +64,14 @@ C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
 
 *Notebooks*
 
-(*à venir*)
+(*à venir*) lime, shap, unified approach
 
 *Lectures - LIME*
 
 * `"Why Should I Trust You?" Explaining the Predictions of Any Classifier <http://arxiv.org/pdf/1602.04938v1.pdf>`_
   (sans doute un des articles à lire en premier - `lime <https://github.com/marcotcr/lime>`_)
 * `Defining Locality for Surrogates in Post-hoc Interpretablity <https://128.84.21.199/abs/1806.07498v1>`_
+* `A Unified Approach to Interpreting Model Predictions <http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf>`_
 
 *Lectures : expliquer*
 
@@ -92,6 +93,7 @@ C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
 * `Interpretable Policies for Reinforcement Learning by Genetic Programming <https://arxiv.org/abs/1712.04170>`_
 * `An Efficient Explanation of Individual Classifications using Game Theory <http://lkm.fri.uni-lj.si/xaigor/slo/pedagosko/dr-ui/jmlr-strumbelj-kononenko.pdf>`_ **
 * `How to Explain Individual Classification Decisions <http://www.jmlr.org/papers/volume11/baehrens10a/baehrens10a.pdf>`_
+* `Interpretable Machine Learning with XGBoost <https://towardsdatascience.com/interpretable-machine-learning-with-xgboost-9ec80d148d27>`_
 
 *Lectures : monotonie*
 
@@ -142,6 +144,7 @@ C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
 *Modules*
 
 * `eli5 <https://github.com/TeamHG-Memex/eli5>`_
+* `shap <https://github.com/slundberg/shap>`_
 * `edward <http://edwardlib.org/>`_
 * `deepdive <http://deepdive.stanford.edu/>`_: ce n'est pas un module python,
   cet outil a été développé pour étudier les relations dans les données et plus
