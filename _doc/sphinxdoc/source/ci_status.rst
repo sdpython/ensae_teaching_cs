@@ -884,6 +884,9 @@ Outils
       - Implémentation d'une :epkg:`REST API` avec :epkg:`falcon`.
     * - :epkg:`manydataapi`
       - Outils et bouts de codes pour accéder à différentes API de données.
+    * - :epkg:`mathenjeu`
+      - Applications web pour créer des QCM ou autre séries de
+        questions sur internet.
     * - :epkg:`mlinsights`
       - Quelques fonctions pour jouer avec des modèles de machine learning.
     * - :epkg:`mlprodict`
