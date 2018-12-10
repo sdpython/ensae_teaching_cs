@@ -74,7 +74,7 @@ class TestRst2HtmlDeps(ExtTestCase):
                          spark='spk', manydataapi="mda", csharpy='cspy',
                          csharpyml='cspyml', Python='Python', ensae_teaching_dl='endl',
                          matplotlib="mpl", pandas="pds", statsmodels="stm",
-                         numpy="np", xgboost="xgb", XGBoost="xgb",
+                         numpy="np", xgboost="xgb", XGBoost="xgb", mathenjeu='mej',
                          antiseches_ml_basic_plot_binary_classification="chsh")
             links["scikit-learn"] = "skl"
             links.update({'ML.net': 'mlnet', 'C#': 'C#'})

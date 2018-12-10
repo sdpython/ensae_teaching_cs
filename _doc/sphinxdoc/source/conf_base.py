@@ -146,6 +146,7 @@ epkg_dictionary.update({
     "MacOS": "https://fr.wikipedia.org/wiki/MacOS",
     "mako": 'http://www.makotemplates.org/',
     "manydataapi": 'http://www.xavierdupre.fr/app/manydataapi/helpsphinx/index.html',
+    "mathenjeu": 'http://www.xavierdupre.fr/app/mathenjeu/helpsphinx/index.html',
     "matrice de confusion": "https://fr.wikipedia.org/wiki/Matrice_de_confusion",
     "Microsoft": 'https://fr.wikipedia.org/wiki/Microsoft',
     "miniconda": 'https://conda.io/miniconda.html',
