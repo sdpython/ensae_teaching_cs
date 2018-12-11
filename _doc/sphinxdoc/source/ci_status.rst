@@ -135,7 +135,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/cpyquickhelper/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/cpyquickhelper/tree/master
-      - .. image:: https://dev.azure.com/xavierdupre3/pyquickhelepr/_apis/build/status/sdpython.cpyquickhelper
+      - .. image:: https://dev.azure.com/xavierdupre3/cpyquickhelepr/_apis/build/status/sdpython.cpyquickhelper
             target: https://dev.azure.com/xavierdupre3/cpyquickhelepr/
       - .. image:: https://badge.fury.io/py/cpyquickhelper.svg
             :target: https://pypi.org/project/cpyquickhelper

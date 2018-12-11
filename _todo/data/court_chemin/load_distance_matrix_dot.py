@@ -1,4 +1,4 @@
-# coding:latin-1
+# -*- coding:utf-8 -*-
 import urllib
 import os
 import os.path
@@ -6,7 +6,7 @@ import os.path
 
 def charge_donnees(file="matrix_distance_7398.txt"):
     if os.path.exists(file):
-        # si le fichier existe (il a dÈj‡ ÈtÈ tÈlÈchargÈ une fois)
+        # si le fichier existe (il a d√©j√† √©t√© t√©l√©charg√© une fois)
         f = open(file, "r")
         text = f.read()
         f.close()
@@ -16,7 +16,7 @@ def charge_donnees(file="matrix_distance_7398.txt"):
             "python_td_minute/data/court_chemin/" + file
         url = urllib.urlopen(link)
         text = url.read()
-        # on enregistre les donnÈes pour Èviter de les tÈlÈcharger une seconde
+        # on enregistre les donn√©es pour √©viter de les t√©l√©charger une seconde
         # fois
         f = open(file, "w")
         f.write(text)
@@ -49,7 +49,7 @@ def graphviz_script(mat_dict):
         i1 = vertex[k[0]]
         i2 = vertex[k[1]]
         if i1 < i2 and v < 15000:
-            # on coupe des arcs car le tracÈ est trop long sinon
+            # on coupe des arcs car le trac√© est trop long sinon
             script.append("%d -- %d [label=\"%skm\"];" % (i1, i2, v / 1000))
     script.append("}")
     return "\n".join(script)
@@ -60,5 +60,5 @@ if __name__ == "__main__":
     f = open("graph.gv", "w")
     f.write(graphviz_script(mat))
     f.close()
-    print "nombre d'arcs ", len(mat)
+    print("nombre d'arcs ", len(mat))
     os.system("dot -Tpng -o graph.png graph.gv")

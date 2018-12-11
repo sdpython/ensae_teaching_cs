@@ -6,6 +6,11 @@ Outils
     :local:
     :depth: 2
 
+Code
+++++
+
+.. autosignature:: ensae_teaching_cs.helpers.code_helper.enumerate_inspect_source_code
+
 Cython
 ++++++
 
