@@ -17,6 +17,10 @@ ACP, ACM, ANOVA
 *Lectures*
 
 * `Probabilités, analyse des données et statistique <http://www.editionstechnip.com/fr/catalogue-detail/149/probabilites-analyse-des-donnees-et-statistique.html>`_ (Gilbert Saporta)
+* `ROBPCA: A New Approach to Robust Principal Component Analysis <https://pdfs.semanticscholar.org/250b/4f05982b491ad80ba8b986d958eedb69a6be.pdf>`_
+* `A Unified Framework for Outlier-Robust PCA-like Algorithm <http://proceedings.mlr.press/v37/yangc15.pdf>`_
+* `Online Robust PCA via Stochastic Optimization <https://papers.nips.cc/paper/5131-online-robust-pca-via-stochastic-optimization.pdf>`_
+* `Online PCA for Contaminated Data <https://papers.nips.cc/paper/5135-online-pca-for-contaminated-data.pdf>`_
 
 *Modules*
 

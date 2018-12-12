@@ -597,11 +597,8 @@ def information_about_package(name):
 
         Python est un langage très lent et c'est pourquoi la plupart des modules de calculs numériques
         incluent des parties implémentées en langage C++.
-        `numpy <http://www.numpy.org/>`_,
-        `pandas <http://pandas.pydata.org/>`_,
-        `matplotlib <http://matplotlib.org/>`_,
-        `scipy <http://www.scipy.org/>`_,
-        `scikit-learn <http://scikit-learn.org/stable/>`_,
+        :epkg:`numpy`, :epkg:`pandas`, :epkg:`matplotlib`,
+        :epkg:`scipy`, :epkg:`scikit-learn`,
         ...
 
         Sous Linux, le compilateur est intégré au système et l'installation de ces modules via

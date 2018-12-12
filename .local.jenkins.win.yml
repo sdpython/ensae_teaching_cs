@@ -8,7 +8,7 @@ virtualenv:
   - path: {{ospathjoin(root_path, pickname("%NAME_JENKINS%", project_name + "_%VERSION%_%DIST%_%NAME%"), "_venv")}}
   
 install:
-  - pip install --no-cache-dir --no-deps --index http://localhost:8067/simple/ pyquickhelper tkinterquickhelper pyensae pymmails pymyinstall pyrsslocal mlstatpy mlinsights jyquickhelper manydataapi
+  - pip install --no-cache-dir --no-deps --index http://localhost:8067/simple/ pyquickhelper tkinterquickhelper pyensae pymmails pymyinstall pyrsslocal mlstatpy mlinsights jyquickhelper manydataapi --upgrade
   - pip install -r requirements.txt
   - if exist _venv\lib\site-packages\enum\__init__.py pip uninstall -y enum34
   - pip freeze
@@ -27,9 +27,7 @@ script:
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_EX_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)).*\"", NAME: "UT_EX", TIMEOUT: 3600 }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_GUI_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)).*\"", NAME: "UT_GUI", TIMEOUT: 2400 }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*scraping.* -g \".*((SKIP)|(theano)|(keras)|(ete3)|(cvxopt)).*\"", NAME: "UT_SCRAPING", TIMEOUT: 3600 }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((pythonnet)).*\"", NAME: "UT_PYTHONNET" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((huge)).*\"", NAME: "UT_HUGE" }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((ete3)).*\"", NAME: "UT_ETE3" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*cvxopt.*\"", NAME: "UT_CVXOPT" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*students.*\"", NAME: "UT_STUDENTS" }
   - if [ ${VERSION} == "3.7" and ${DIST} == "std" ]
@@ -52,5 +50,5 @@ after_script:
 documentation:
   - if [ ${NAME} == "DOC1" ] then python -u setup.py build_sphinx html1 fi
   - if [ ${NAME} == "DOC3" ] then python -u setup.py build_sphinx html3 fi
-  - if [ ${NAME} == "DOC1" ] then copy -R -f xcopy /E /C /I /Y _doc\sphinxdoc\build\html dist\html fi
-  - if [ ${NAME} == "DOC3" ] then copy -R -f xcopy /E /C /I /Y _doc\sphinxdoc\build3\html dist\html3 fi
+  - if [ ${NAME} == "DOC1" ] then xcopy /E /C /I /Y _doc\sphinxdoc\build\html dist\html fi
+  - if [ ${NAME} == "DOC3" ] then xcopy /E /C /I /Y _doc\sphinxdoc\build3\html dist\html3 fi

@@ -55,10 +55,10 @@ quelque chose à condition d'y passer un peu de temps au démarrage.
 La programmation est indispensable pour traiter les données,
 les visualiser, automatiser les tâches les plus répétitives, et
 s'amuser (voir `lesenfantscodaient.fr <http://lesenfantscodaient.fr/>`_).
-:epkg:`Python`_ est maintenant un prérequis pour devenir datascientist.
+:epkg:`Python` est maintenant un prérequis pour devenir datascientist.
 La programmation est devenue indispensable dans tout travail
 datascience ou plus généalement tous les métiers manipulant des données.
-Certaines pratiques logicielles telles que les :epkg:`tests unitaites`
+Certaines pratiques logicielles telles que les :epkg:`tests unitaires`
 et des langages bas niveau tels que le :epkg:`C++` sont incontournables
 pour commencer une thèse. La thèse ou *PhD* est encore aujourd'hui
 le seul diplôme reconnu dans le monde entier et ouvre
@@ -139,9 +139,7 @@ sous *Windows*, *Linux* et *MacOS*.
 Le langage est devenu populaire aussi parmi les data scientists grâce à un ensemble
 de librairies qui ont offert un service équivalent à ce que propose :epkg:`R`.
 `pandas <http://fr.wikipedia.org/wiki/Panda>`_,
-`numpy <http://www.numpy.org/>`_,
-`matplotlib <http://matplotlib.org/>`_,
-`scikit-learn <http://scikit-learn.org/stable/>`_
+:epkg:`numpy`, :epkg:`matplotlib`, :epkg:`scikit-learn`
 ont élevé le niveau de fonctionnalités, les
 `notebooks Jupyter <http://jupyter.org/>`_
 ont changé la façon de travailler.

@@ -196,7 +196,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                              layout=[("html", "helpsphinx")],
                              modules=None, password=None, force_allow=None,
                              suffix=("_UT_%d%d_std" % sys.version_info[:2],),
-                             delay=0.5, exc=True, exc_transfer=False,
+                             delay=0.5, exc=False, exc_transfer=False,
                              transfer=True, fLOG=print):
     """
     Copies the documentation to the website.
@@ -285,7 +285,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                     p = os.path.abspath(location %
                                         (module, module, suffix[0], lay[0]))
                     raise FileNotFoundError(
-                        "first tried '{0}'\n last tried '{1}'".format(root, p))
+                        "First tried '{0}'\n last tried '{1}'".format(root, p))
                 else:
                     continue
                 fLOG("   ", root)

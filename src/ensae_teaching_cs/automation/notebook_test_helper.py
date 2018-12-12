@@ -174,6 +174,12 @@ def execute_notebooks(folder, notebooks, filter, clean_function=None,
             return False
         if " noeud tri n'est pas encore défini" in cell:
             return False
+        if "nuplet[1] = 5" in cell:
+            return False
+        if cell == "dico[0]":
+            return False
+        if cell == "dico[ [4,6] ] = 6":
+            return False
         return True
 
     addpaths = get_additional_paths()
@@ -197,7 +203,7 @@ def copy_data_file(notebook_folder, filename, dest, fLOG=noLOG):
 
     @param      notebook_folder     notebook_folder
     @param      filename            filename or list of file names
-    @param      destination         destination folder
+    @param      dest                destination folder
     @parm       fLOG                logging function
     @return                         copied files
     """
@@ -236,7 +242,7 @@ def a_test_notebook_runner(filename, name, folder, valid=None, copy_files=None, 
     if not os.path.exists(doc):
         raise FileNotFoundError(doc)
     keepnote = [os.path.join(doc, _) for _ in os.listdir(
-        doc) if name in _ and ".ipynb" in _]
+        doc) if name in _ and ".ipynb" in _ and ".ipynb_checkpoints" not in _]
     if len(keepnote) == 0:
         raise AssertionError("No found notebook in '{0}'\n{1}".format(
             doc, "\n".join(os.listdir(doc))))

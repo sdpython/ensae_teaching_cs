@@ -1,0 +1,22 @@
+
+.. blogpost::
+    :title: English content
+    :keywords: english content
+    :date: 2018-10-13
+    :categories: english
+
+    Most of the content is written in French.
+    Two reaons for that, my teachings are in French,
+    most of the content available on the internet
+    is already in English. However, there exist some
+    English content.
+    A good start would be the lectures by
+    `Gaël Varoquaux <http://gael-varoquaux.info/>`_ :`.
+    :ref:`l-ml-skgael`.
+    I wrote some challenges in English one about algorithmic,
+    the other one about unsupervized machine learning :
+    `Computer Science Challenges <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/i_challenges.html>`_.
+    The main goal of this course is to introduce many
+    standard machine learning problems and play with them.
+    I suggest doing one competition or study with a known
+    datasets (:epkg:`Kaggle`, :epkg:`UCI`).

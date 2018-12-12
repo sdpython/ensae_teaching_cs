@@ -123,7 +123,8 @@ Catalogue d'algorithmes
     * `trie <http://fr.wikipedia.org/wiki/Trie_(informatique)>`_ **déf**
     * `b-tree <http://fr.wikipedia.org/wiki/Arbre_B>`_ **déf**
     * `x-fast-trie <https://en.wikipedia.org/wiki/X-fast_trie>`_ **déf**
-    * `Fibonacci Heap <https://en.wikipedia.org/wiki/Fibonacci_heap>`_ **déf**
+    * `tas ou heap <https://fr.wikipedia.org/wiki/Tas_(informatique)>`_ ,
+      `Fibonacci Heap <https://en.wikipedia.org/wiki/Fibonacci_heap>`_ **déf**
 * Graphes
     * composantes connexes ou `parcours de graphe en profondeur <http://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_profondeur>`_,
       `parcours de graphe en largeur <http://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_largeur>`_ **déf/algo**
@@ -149,7 +150,6 @@ Catalogue d'algorithmes
       `fp-growth 1/3 <http://blog.khaledtannir.net/2012/07/lalgorithme-fp-growth-les-bases-13/#.WyS1xqczbSE>`_,
       `fp-growth 2/3 <http://blog.khaledtannir.net/2012/07/lalgorithme-fp-growth-construction-du-fp-tree-23/#.WyS1x6czbSE>`_,
       `fp-growth 3/3 <http://blog.khaledtannir.net/2012/07/lalgorithme-fp-growth-identification-des-itemsets-frequents-33/#.WyS1yaczbSE>`_
-
 * Texte
     * `Algorithme de Knuth-Morris-Pratt <http://fr.wikipedia.org/wiki/Algorithme_de_Knuth-Morris-Pratt>`_ **algo**
     * `Algorithme de Rabin-Karp <http://fr.wikipedia.org/wiki/Algorithme_de_Rabin-Karp>`_ **algo**
@@ -158,16 +158,19 @@ Catalogue d'algorithmes
     * `Algorithme d'Aho-Corasick <http://fr.wikipedia.org/wiki/Algorithme_d%27Aho-Corasick>`_ **algo**
     * `Transformée de Burrows-Wheeler <http://fr.wikipedia.org/wiki/Transform%C3%A9e_de_Burrows-Wheeler>`_ **algo**
     * `algorithme Apriori <https://en.wikipedia.org/wiki/Apriori_algorithm>`_ : apprentissage de règles d'associations **algo**
+* Optimisation
+    * `Simplexe <http://fr.wikipedia.org/wiki/Simplexe>`_ **algo**
+    * `Optimisation Combinatoire : Programmation Linéaire et Algorithmes <http://www-desir.lip6.fr/~fouilhoux/documents/OptComb.pdf>`_ **thèse**
+    * `Méthode de Nelder-Mead <https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Nelder-Mead>`_ **algo**,
+      `implémentation en Python <https://github.com/fchollet/nelder-mead>`_
 * Autre
     * `codage Huffman <http://fr.wikipedia.org/wiki/Codage_de_Huffman>`_ (voir aussi `LZ77, LZ78 <http://fr.wikipedia.org/wiki/LZ77_et_LZ78>`_) **algo**
     * `bootstrap, intervalles de confiance <http://fr.wikipedia.org/wiki/Bootstrap_(statistiques)#Intervalle_de_confiance>`_ **algo**
     * `filtre de Bloom <http://fr.wikipedia.org/wiki/Filtre_de_Bloom>`_ **algo**
     * `Algorithme de Strassen <http://fr.wikipedia.org/wiki/Algorithme_de_Strassen>`_ **algo**
-    * `Simplexe <http://fr.wikipedia.org/wiki/Simplexe>`_ **algo**
     * `Woodbury matrix identity <http://en.wikipedia.org/wiki/Woodbury_matrix_identity>`_ **algo**
     * `Blockwise inversion <http://en.wikipedia.org/wiki/Invertible_matrix#Blockwise_inversion>`_ **algo**
     * `Toom-Cook <https://en.wikipedia.org/wiki/Toom%E2%80%93Cook_multiplication>`_ **algo**
-    * `Optimisation Combinatoire : Programmation Linéaire et Algorithmes <http://www-desir.lip6.fr/~fouilhoux/documents/OptComb.pdf>`_ **thèse**
     * `Canopy Clustering <https://en.wikipedia.org/wiki/Canopy_clustering_algorithm>`_ **algo**
     * `LRU - Last Recent Used <https://fr.wikipedia.org/wiki/Algorithmes_de_remplacement_des_lignes_de_cache>`_ **algo**
 * Programmation
@@ -205,6 +208,8 @@ Articles sur des algorithmes
 * `Blossom5 <http://pub.ist.ac.at/~vnk/papers/blossom5.pdf>`_ **matching**
 * `Local max-cut in smoothed polynomial time <http://blogs.princeton.edu/imabandit/2016/10/24/local-max-cut-in-smoothed-polynomial-time/>`_ **max-cut**
 * `Expander Flows, Geometric Embeddings and Graph Partitioning <http://snap.stanford.edu/class/cs224w-readings/arora04expansion.pdf>`_ **graph partitionning**
+* `The Read-Optimized Burrows-Wheeler Transform <https://arxiv.org/pdf/1809.07320.pdf>`_
+* `String Periods in the Order-Preserving Model <https://arxiv.org/pdf/1801.01404.pdf>`_
 
 Livres
 ++++++
@@ -213,7 +218,7 @@ Livres
   Robert Faure, Bernard Lemaire, Christophe Picouleau
 * `Programming Pearls <https://www.amazon.com/Programming-Pearls-2nd-Jon-Bentley/dp/0201657880>`_,
   Jon Bentley
-* `Introduction to Algorithms <https://mitpress.mit.edu/books/introduction-algorithms>`_,
+* `Introduction to Algorithms 3rd Edition <https://mcdtu.files.wordpress.com/2017/03/introduction-to-algorithms-3rd-edition-sep-2010.pdf>`_,
   Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein
 * `Programmation efficace - 128 algorithmes qu'il faut avoir compris et codés en Python au cours de sa vie <http://www.editions-ellipses.fr/product_info.php?products_id=10829>`_,
   ce livre est accompagné d'un répertoire sur GitHub :

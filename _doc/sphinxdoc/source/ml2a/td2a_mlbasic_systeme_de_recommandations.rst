@@ -9,6 +9,8 @@
     :alt: Statistique
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
 
+.. _l-td2a-sys-recommandation:
+
 Système de recommandations
 ++++++++++++++++++++++++++
 
@@ -28,6 +30,8 @@ Système de recommandations
 * `Recommender Systems Using Linear Classifiers <http://www.jmlr.org/papers/volume2/zhang02a/zhang02a.pdf>`_ (approche intéressante)
 * `A Survey of Accuracy Evaluation Metrics of Recommendation Tasks <http://jmlr.csail.mit.edu/papers/volume10/gunawardana09a/gunawardana09a.pdf>`_
 * `Offline A/B Testing for Recommender Systems <https://dl.acm.org/citation.cfm?id=3159687>`_
+* `Probabilistic Matrix Factorization <http://papers.nips.cc/paper/3208-probabilistic-matrix-factorization.pdf>`_
+* `A Fast Parallel Stochastic Gradient Method for Matrix Factorization in Shared Memory Systems <https://www.csie.ntu.edu.tw/~cjlin/papers/libmf/libmf_journal.pdf>`_
 
 *Modules*
 

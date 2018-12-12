@@ -10,7 +10,7 @@ def explore_folder_produce_code_html(files, header, footer, destination,
                                      classpre="prettyprint", classpre_type="brush: {0}",
                                      classcom="codeintro", skip_missing=False):
     """
-    explore a list of files, extract all pieces of code and produces html page
+    Explores a list of files, extract all pieces of code and produces html page
     for each latex file
 
     @param      files           list of 2uple [ (file, title) ]
@@ -19,7 +19,7 @@ def explore_folder_produce_code_html(files, header, footer, destination,
     @param      destination     where to put the produced html file, name is the file with the extension replaced by .html
     @param      classpre        class for pre
     @param      classpre_type   if the type can be guessed, then this template will used instead of the first one
-    @param      classcoom       class for the comment
+    @param      classcom        class for the comment
     @param      skip_missing    skip missing file (True) or raise an exception (False)
     @return                     list of produced file
     """

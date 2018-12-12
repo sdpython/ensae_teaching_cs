@@ -162,7 +162,7 @@ Séance 1 Eco
     * :ref:`codelistetuplerst`
     * :ref:`structuresdonneesconversionrst`
 * Notebook : :ref:`td2acenoncesession2crst`
-* Compétation : :ref:`solution2016creditclementrst`
+* Compétition : :ref:`solution2016creditclementrst`
 
 .. _l-route2017-stat1:
 
@@ -178,7 +178,7 @@ Séance 1 Stat
     * :ref:`td2avisualisationrst`
     * `10 plotting libraries <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_
 * Cartes :
-    * :ref:`td1acenoncesession12rst`
+    * :ref:`td1acenoncesession12carterst`
     * :ref:`td1acorrectionsession12rst`
 * SQL :
     * :ref:`l-sql-principe-base-2a`
@@ -218,7 +218,7 @@ avoir lu pendant les 3 heures.
 
 Pour aller plus loin :
 
-* Panoplie de graphes et cartes : :ref:`td1acenoncesession12rst`
+* Panoplie de graphes et cartes : :ref:`td1acenoncesession12carterst`
 * ROC pour un modèle logit :epkg:`antiseches_ml_basic_plot_binary_classification`
 * Les exercices du notebook SQL : :ref:`td2aecosqlrst` (question 1)
 * Manipuler les données et modéliser les incidents dans le transport aérien

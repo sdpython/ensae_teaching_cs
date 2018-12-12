@@ -42,6 +42,7 @@ def enumerate_feedback(df1, col_group="Groupe",
                                 if an element in this list is a tuple ``(col_name, sep)``
     @param      subject         subject of the mail
     @param      begin           beginning of the mail
+    @param      end             end of the mail (signature)
     @param      template        template of the mail
     @param      template_col    template for additional columns, the outcome will be joined
                                 to fill ``{{ content }}`` in the other template
@@ -74,7 +75,7 @@ def enumerate_feedback(df1, col_group="Groupe",
     if begin is None:
         raise ValueError("begin cannot be None, it should be string.")
     if end is None:
-        raise ValueError("end cannot be None, it should be you signature.")
+        raise ValueError("end cannot be None, it should be your signature.")
     if subject is None:
         raise ValueError(
             "subject cannot be None, it should be the subject of the mail.")
@@ -134,7 +135,8 @@ def enumerate_feedback(df1, col_group="Groupe",
         aggs[col_name] = sums2
     for c in cols:
         if isinstance(c, tuple):
-            aggs[c[0]] = lambda s, sep=c[1]: sums3(s, sep)
+            aggs[c[0]] = lambda s, sep=c[1]: sums3(  # pylint: disable=W0631,W0640
+                s, sep)  # pylint: disable=W0631,W0640
         else:
             aggs[c] = lambda s: sums3(s, " ")
 
@@ -207,6 +209,7 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=(1000, 1500),
                                 <http://www.xavierdupre.fr/app/pymmails/helpsphinx/pymmails/sender/
                                 email_sender.html?pymmails.sender.email_sender.create_smtp_server>`_,
                                 if mailbox is None, the function displays the message and fails
+    @param      subject         subject
     @param      fr              from
     @param      df1             first dataframe
     @param      cc              additional receivers

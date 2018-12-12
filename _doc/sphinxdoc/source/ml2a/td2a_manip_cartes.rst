@@ -50,7 +50,7 @@ unique, c'est ce vers quoi tend le module :epkg:`geopandas`.
 
 *Notebooks*
 
-* :ref:`td1acenoncesession12rst`
+* :ref:`td1acenoncesession12carterst`
 * :ref:`td1acorrectionsession12rst`
 * `Evolution d'une population <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance4_projection_population_enonce.html>`_
 * `Evolution d'une population - correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html>`_

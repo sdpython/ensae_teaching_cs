@@ -241,3 +241,28 @@ Implémenter un SNN : Spiking Neural Network (2018)
 * `Python Tutorial: How to Write a Spiking Neural Network Simulation From Scratch <http://www.mjrlab.org/2014/05/08/tutorial-how-to-write-a-spiking-neural-network-simulation-from-scratch-in-python/>`_
 
 Voir aussi :ref:`l-ml2a-snn`.
+
+.. _l-ml-tree-graph:
+
+Ecrire une librairie pour représenter des modèles de machine learning (2018)
+----------------------------------------------------------------------------
+
+Supposons qu'une forêt aléatoire a été appris pour classifier un jeu de
+données, est-il possible de la représenter de façon à faciliter
+son interprétation. On pourra s'inspirer du module
+`animl <https://github.com/parrt/animl>`_.
+On choisira de limiter le nombre de dépendance au minimum.
+
+.. _l-ml-knn-pca:
+
+Implémenter un algorithme des plus proches voisins amélioré (2018)
+------------------------------------------------------------------
+
+Le sujet s'appuie sur l'article
+`Neighbourhood Components Analysis <http://www.cs.toronto.edu/~fritz/absps/nca.pdf>`_
+qui propose d'apprendre un modèle des plus proches voisins
+tout en apprenant également une distance dite de
+`Malahanobis <https://fr.wikipedia.org/wiki/Distance_de_Mahalanobis>`_
+qui permet de pondérer différemment chaque dimension. Il faudra comparar
+cet algorithme à d'autres approche de machine learning voire apporter
+sa propre contribution.

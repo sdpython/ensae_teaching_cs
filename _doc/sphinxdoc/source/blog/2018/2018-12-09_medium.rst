@@ -1,0 +1,27 @@
+
+.. blogpost::
+    :title: Des articles intéressants
+    :keywords:
+    :date: 2018-12-09
+    :categories: modules
+
+    Je retombe parfois sur ce site
+    `medium <https://medium.com/>`_
+    et il propose
+    quelques articles intéressant pour qui veut
+    apprendre à manipuler les données. Quelques articles
+    trouvés sur cet agrégateur :
+    `Markov Chain Monte Carlo in Python <https://towardsdatascience.com/markov-chain-monte-carlo-in-python-44f7e609be98>`_,
+    `Interpretable Machine Learning with XGBoost <https://towardsdatascience.com/interpretable-machine-learning-with-xgboost-9ec80d148d27>`_,
+    `An End-to-End Project on Time Series Analysis and Forecasting with Python <https://towardsdatascience.com/an-end-to-end-project-on-time-series-analysis-and-forecasting-with-python-4835e6bf050b>`_,
+    `The 2018 Web Developer Roadmap <https://codeburst.io/the-2018-web-developer-roadmap-826b1b806e8d>`_.
+    Le dernier montre quelques bizarreries des outils de traduction automatique :
+    `Introduction and main issues of Neural Machine Translation <https://towardsdatascience.com/introduction-and-main-issues-of-neural-machine-translation-3c67116721d1>`_.
+    Un dernier pour la route sur les déformations d'informations principalement sur facebook :
+    `France might be losing its first big information war <https://blog.0day.rocks/france-might-be-losing-its-first-big-information-war-2f3ab8b82fbb?fbclid=IwAR1HOZu7aas80VTvblgASIa-IMQxmq3dqsYzVAy5CYy2-tgDxk6TV2rRCJ8>`_.
+    Un paragraphe étudie les heures de parutions des articles ou réponses pur montrer
+    que les auteurs n'ont pas grand chose à voir avec les informations
+    qu'ils relaient. Il est difficile d'être anonyme sur Internet...
+    oui mais on peut noyer sa propre identité au milieu de plein d'autres
+    tout à fait fausses, comme on peut noyer la vérité au milieu
+    d'articles quelque peu déformés.

@@ -1,0 +1,70 @@
+
+.. blogpost::
+    :title: Plan séance 1 - Algorithmie
+    :keywords: plan
+    :date: 2018-09-04
+    :categories: cours
+
+    Plan de la première séance 4 septembre.
+
+    * Programmation / Algorithmie : pourquoi ?
+    * Le langage :epkg:`Python`
+    * Comparaison avec la formation dans d'autres pays
+    * Inventivité :
+      `La tournée du camion du poubelle <http://lesenfantscodaient.fr/sanso_algo/facteur_chinois.html>`_
+      (version anglaise `City Tour <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_tour.html>`_)
+    * Mathématiques :
+      :ref:`knnhighdimensionrst`
+
+    .. image:: http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/_images/city_tour_1_16_0.png
+        :width: 200
+
+    La culture générale, culture algorithmique,
+    LISEZ !
+
+    * :ref:`l-algoculture`
+
+    Pourquoi ce cours ?
+
+    * Apprendre un des langages les plus utilisés :
+      :epkg:`Python`
+    * Voir quelques algorithmes classiques
+    * Apprendre les bonnes pratiques en
+      ingéniérie logicielle
+    * Manipuler les données
+    * Optimiser des programmes écrits en :epkg:`Python`
+      avec du :epkg:`C++` car le langage :epkg:`Python`
+      reste l'un des plus lents
+
+    `Stanislas Dehaene <https://www.franceinter.fr/emissions/le-7-9/le-7-9-04-septembre-2018>`_ :
+    **on ne fait pas des erreurs, on fait des expériences**. L'informatique
+    est très souvent un lieu où l'erreur a peu de conséquences.
+    Essayer est le moyen le plus rapide d'avoir la réponse.
+
+    Contenus :
+
+    * Page du cours : :ref:`l-td1a`
+    * Plan du cours : :ref:`l-feuille-de-route-2018-1A`
+
+    Liens :
+
+    * `Apprendre la programmation avec Python <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html#teachpyx>`_
+    * `Les maths d’abord, la programmation ensuite <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html#mlstatpy>`_
+    * `Petit voyage au pays du machine learning <http://www.xavierdupre.fr/app/papierstat/helpsphinx/index.html>`_
+    * `Hackathons de l'ENSAE <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_
+    * `lesenfantscodaient.fr <http://lesenfantscodaient.fr/>`_
+
+    Quelques outils :
+
+    * `jyquickhelper <http://www.xavierdupre.fr/app/jyquickhelper/helpsphinx/index.html>`_
+    * `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
+    * `Exemples de Python + C <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
+
+    GitHub :
+
+    * `github/sdpython <https://github.com/sdpython>`_
+
+    Installation :
+
+    * Linux : `Install Python 3.7 and many packages on Linux Debian 9 <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx//blog/2018/2018-08-19_python37.html>`_
+    * Windows : `Unofficial Windows Binaries for Python Extension Packages <https://www.lfd.uci.edu/~gohlke/pythonlibs/>`_

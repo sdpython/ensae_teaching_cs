@@ -10,7 +10,7 @@
 **Dates de rendu**
 
 * dernier jour avant les vacances de Noël pour le rapport / notebook / programme
-* première semaine de janvier pour la vidéo
+* premières semaines de janvier pour la soutenance
 
 Data Scientist
 ++++++++++++++
@@ -52,7 +52,7 @@ plus qualitatif et collecte de données pour les économistes.
   à essayer tel modèle, tel feature, telle méthode.
 * La présence d'au moins un graphique.
 * Une conclusion : le modèle, les résultats sont-ils exploitables ?
-* Une vidéo, pas plus de 5 minutes pour présenter votre projet.
+* Soutenance
 
 **data scientist**
 
@@ -115,7 +115,7 @@ Il est recommandé d'aller loin sur au moins une des dimensions.
    il doit être approprié et justifié.
 #. **La représentation / application :** Là encore, plusieurs niveaux sont envisageables.
    Vous pouvez simplement représenter vos données en utilisant
-   :epkg:`matplotlib`, aller plus loin avec :epkg:`seaborn`,
+   :epkg:`matplotlib`, aller plus loin avec :epkg:`seaborn` ou :epkg:`scikit-plot`,
    (voire `D3.js <https://en.wikipedia.org/wiki/D3.js>`_ pour les plus motivés)
    ou encore réaliser une application en :epkg:`Flask`.
    La base d'une bonne visualisation est de trouver le type de graphique adéquat
@@ -123,14 +123,14 @@ Il est recommandé d'aller loin sur au moins une des dimensions.
    représenter une évolution ?) et de le rendre visible : une légende
    qui a du sens, des axes avec des noms etc.
 
-Barème
-++++++
+Barème approximatif
++++++++++++++++++++
 
-* rapport : 5 points
-* graphiques : 5 points
+* rapport : 6 points
+* graphiques : 3 points
 * prolongements : 3 points
-* démarche scientifique : 5 points
-* vidéo : 2 points
+* démarche scientifique : 4 points
+* soutenance : 4 points
 
 Le projet doit être réalisé seul ou par groupe de deux, voire trois.
 Un des modèles utilisés n'est pas linéaire et n'est pas un arbre de décision.
@@ -145,32 +145,6 @@ La note globale peut être interprétée comme suit :
 * *20* : les auteurs ont construit un raisonnement
   qui a abouti à un fait intéressant sur le jeu de données
   de départ.
-
-Vidéo
-+++++
-
-La vidéo est souvent le premier élément que le jury voit.
-Il faut la voir comme un support lors d'une réunion de travail
-qui doit à la fois mettre en scène le projet et donner
-confiance dans vos résultats. Le rapport vient appuyer ce premier
-discours par de façon plus détaillée. Elle peut être un petit
-film, des slides commentés oralement, avec ou sans l'incrustation
-des orateurs, un film réalisé avec un téléphone où quelques
-graphiques défilent préalablement imprimées, un professeur qui
-fait la leçon au tableau, une animation utilisant un des nombreux
-sites proposant de le faire.
-
-* `Convertir votre présentation en vidéo <http://office.microsoft.com/fr-fr/powerpoint-help/convertir-votre-presentation-en-video-HA010336763.aspx>`_
-* `Ma thèse en 180 secondes <http://mt180.fr/>`_
-
-La vidéo nécessite souvent de faire du montage vidéo. Il peut
-être fait soit en programmant avec des modules comme
-`moviepy <https://zulko.github.io/moviepy/>`_ ou
-`code_beatrix <http://lesenfantscodaient.fr//api/video.html>`_.
-Les outils de montage sont plus accessibles sur certains ordinateurs
-(Mac principalement) mais il existe des outils gratuits
-comme `ShotCut <https://www.shotcut.org/>`_
-ou `OpenShot <https://www.openshot.org/>`_.
 
 Liens
 +++++

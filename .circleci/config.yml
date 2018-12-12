@@ -148,7 +148,6 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install git+https://github.com/sdpython/sphinxcontrib-images.git --upgrade --no-deps
             pip install git+https://github.com/bokeh/datashader.git --upgrade --no-deps
             pip install git+https://github.com/sdpython/pyPdf --upgrade --no-deps
             

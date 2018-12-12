@@ -120,9 +120,10 @@ def py_to_html_folder(folder, addGoogleTracking=True):
 
 def py_to_html_file(file, writehtml="", addGoogleTracking=True, title=None):
     """
-    convert a python script into a html file
+    Converts a :epkg:`python` script into a html file.
 
     @param      folder              folder
+    @param      writehtml           filename
     @param      addGoogleTracking   add some code for the Google tracking (related to www.xavierdupre.fr), it looks like:
 
                                     ::

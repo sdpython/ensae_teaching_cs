@@ -68,11 +68,21 @@ tout en ne l'étant pas du tout sur une petite partie de la population.
 L'article `FairTest: Discovering Unwarranted Associations in Data-Driven Applications <https://arxiv.org/pdf/1510.02377.pdf>`_
 propose une réponse à ces deux problèmes.
 
+L'article `A Reductions Approach to Fair Classification <https://arxiv.org/pdf/1803.02453.pdf>`_
+pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle et l'égalité des chances
+(voir :ref:`blog-ethique-fairlearn`).
+
 *Notebooks*
 
 .. toctree::
 
-    ../notebooks/_gs2a_ethics
+    ../notebooks/td2a_ethics
+    ../notebooks/td2a_ethics_correction
+
+*Lectures mathémtiques*
+
+* `A Reductions Approach to Fair Classification <https://arxiv.org/pdf/1803.02453.pdf>`_
+* `FairTest: Discovering Unwarranted Associations in Data-Driven Applications <https://arxiv.org/pdf/1510.02377.pdf>`_
 
 *Lectures*
 
@@ -80,7 +90,6 @@ propose une réponse à ces deux problèmes.
   Les enjeux éthiques des algorithmes et de l’intelligence artificielle,
   Synthèse du débat public animé par la :epkg:`CNIL` dans le cadre de la mission
   de réflexion éthique confiée par la loi pour une république numérique.
-* `FairTest: Discovering Unwarranted Associations in Data-Driven Applications <https://arxiv.org/pdf/1510.02377.pdf>`_
 * `Equality of Opportunity in Supervised Learning <http://ttic.uchicago.edu/~nati/Publications/HardtPriceSrebro2016.pdf>`_
 * `O21 : La transparence des algorithmes relève des droits civiques <http://www.lemonde.fr/campus/article/2017/05/02/o21-la-transparence-des-algorithmes-releve-des-droits-civiques_5121201_4401467.html>`_
 * `TransAlgo : évaluer la responsabilité et la transparence des systèmes algorithmiques <https://www.inria.fr/actualite/actualites-inria/transalgo>`_
@@ -98,6 +107,8 @@ propose une réponse à ces deux problèmes.
 * `Predict Responsibly: Increasing Fairness by Learning to Defer <https://arxiv.org/pdf/1711.06664.pdf>`_
 * `Ethics by Design: necessity or curse? <http://www.aies-conference.com/wp-content/papers/main/AIES_2018_paper_68.pdf>`_
 * `Equality of Opportunity in Supervised Learning <https://arxiv.org/abs/1610.02413>`_
+* `Algorithm Assessment Report <https://www.data.govt.nz/assets/Uploads/Algorithm-Assessment-Report-Oct-2018.pdf>`_
+  (issu de l'INSEE néozélandaise)
 
 *Conférences*
 
@@ -134,3 +145,4 @@ propose une réponse à ces deux problèmes.
 *Modules*
 
 * `fairtest <https://github.com/columbia/fairtest>`_
+* `fairlearn <https://github.com/Microsoft/fairlearn>`_

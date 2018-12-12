@@ -14,7 +14,7 @@ def lambert93_to_WGPS(lambertE, lambertN):
     and their `GEOFLA <http://professionnels.ign.fr/geofla>`_ file format.
 
     @param      lambertE        east
-    @param      lambertW        west
+    @param      lambertN        north
     @return                     longitude, latitude
 
     The function is inspired from

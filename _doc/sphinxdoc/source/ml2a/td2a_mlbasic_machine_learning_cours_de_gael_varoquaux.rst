@@ -17,6 +17,8 @@ Machine learning, cours de Gaël Varoquaux
 `Gaël Varoquaux <http://gael-varoquaux.info/>`_
 est un des concepteurs de
 `scikit-learn <http://scikit-learn.org/stable/>`_.
+Les cours nécessitent quelques
+`notions mathématiques et informatiques <http://www.xavierdupre.fr/app/papierstat/helpsphinx/rappel.html>`_.
 
 * machine learning et `scikit-learn <http://scikit-learn.org/stable/>`_
   (`tutoriels sur scikit-learn <http://nbviewer.jupyter.org/github/GaelVaroquaux/sklearn_pandas_tutorial/tree/master/rendered_notebooks/>`_),
@@ -34,26 +36,49 @@ Les `notes de lectures <https://github.com/GaelVaroquaux/sklearn_ensae_course>`_
 ici :
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
-    ../notebooks/_gs2a_ensae_sklearn
-    ../specials/machine_learning
-    ../notebooks/td2a_eco_regressions_lineaires
+    ../notebooks/license_sklearn_ensae
+    ../notebooks/00_introduction_machine_learning_and_data
+    ../notebooks/01_data_manipulation
+    ../notebooks/02_basic_of_machine_learning_with_scikit-learn
+    ../notebooks/03_supervised_classification
+    ../notebooks/04_supervised_regression
+    ../notebooks/05_measuring_prediction_performance
+    ../notebooks/06_unsupervised_dimreduction
+    ../notebooks/07_application_to_face_recognition
+    ../notebooks/08_validation_and_learning_curves
 
 La série d'articles suivante est tirée de
 :epkg:`Freakeconometrics` revient sur les propriétés
 des modèles de classification et régression illustrées
 avec le langage :epkg:`R` :
+:ref:`Séries d'articles sur les modèles linéaires <post-freak-linear-models>`.
+Enfin, les deux notebooks suivant regroupent les termes principaux,
+ceux qu'il faut avoir retenus si on veut comprendre
+le machine learning.
 
-* :ref:`Séries d'articles sur les modèles linéaires <post-freak-linear-models>`
+.. toctree::
+    :maxdepth: 1
+
+    ../specials/machine_learning
+    ../notebooks/td2a_eco_regressions_lineaires
 
 *Notebooks*
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
-    ../notebooks/_gs2a_statdes
-    ../notebooks/_gs2a_ml_base
+    ../notebooks/td2a_cenonce_session_3A
+    ../notebooks/td2a_correction_session_3A
+    ../notebooks/td2a_cenonce_session_3B
+    ../notebooks/td2a_correction_session_3B
+    ../notebooks/td2a_cenonce_session_4A
+    ../notebooks/td2a_correction_session_4A
+    ../notebooks/td2a_ml_text_features
+    ../notebooks/td2a_ml_text_features_correction
+    ../notebooks/ml_scikit_learn_simple
+    ../notebooks/ml_scikit_learn_simple_correction
 
 *Lectures*
 
@@ -69,6 +94,7 @@ avec le langage :epkg:`R` :
 * `Round Robin Classification <http://www.jmlr.org/papers/volume2/fuernkranz02a/fuernkranz02a.pdf>`_
 * `ANN-Benchmarks: A Benchmarking Tool for Approximate Nearest Neighbor Algorithms? <http://www.itu.dk/people/maau/additional/sisap2017-preprint.pdf>`_
 * `Time for a Change: a Tutorial for Comparing Multiple Classifiers Through Bayesian Analysis <http://www.jmlr.org/papers/volume18/16-305/16-305.pdf>`_
+* `Neighbourhood Components Analysis <http://www.cs.toronto.edu/~fritz/absps/nca.pdf>`_
 
 *Livres*
 

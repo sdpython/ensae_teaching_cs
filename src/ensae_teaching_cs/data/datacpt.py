@@ -12,7 +12,7 @@ from pyquickhelper.filehelper.encryption import decrypt_stream
 
 def data_cpt_ENSAE_2016_11(folder=".", fLOG=noLOG):
     """
-    returns the data for the competition
+    Returns the data for the competition
     `Python 2A ENSAE 2016 <https://competitions.codalab.org/competitions/13301>`_,
     located on github `ensae_competition_2016.zip
     <https://github.com/sdpython/ensae_teaching_cs/raw/master/_doc/competitions/
@@ -34,7 +34,7 @@ def data_cpt_ENSAE_2016_11(folder=".", fLOG=noLOG):
 
 def data_cpt_ENSAE_2016_11_blind_set(password):
     """
-    returns the evaluation set for the competition
+    Returns the evaluation set for the competition
     `Python 2A ENSAE 2016 <https://competitions.codalab.org/competitions/13431>`_.
 
     @param      fLOG        logging function

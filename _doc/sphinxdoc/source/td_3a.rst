@@ -182,6 +182,7 @@ Algorithmes Distribués
 * `Communication Complexity of Distributed Convex Learning and Optimization <https://arxiv.org/pdf/1506.01900.pdf>`_
 * `Fast Distributed Gradient Methods <https://arxiv.org/pdf/1112.2972.pdf>`_
 * `A Generalized Accelerated Composite Gradient Method: Uniting Nesterov's Fast Gradient Method and FISTA <https://arxiv.org/abs/1705.10266>`_
+* `Demystifying Parallel and Distributed Deep Learning: An In-Depth Concurrency Analysis <https://arxiv.org/pdf/1802.09941.pdf>`_
 
 *Vidéo*
 
@@ -216,7 +217,7 @@ Structures de données
 
 *Lectures*
 
-* `Introduction to Algorithms, 2nd Edition <http://is.ptithcm.edu.vn/~tdhuy/Programming/Introduction.to.Algorithms.pdf>`_, Cormen, Leiserson, Rivest, Stein.
+* `Introduction to Algorithms, 3rd Edition <https://mcdtu.files.wordpress.com/2017/03/introduction-to-algorithms-3rd-edition-sep-2010.pdf>`_, Cormen, Leiserson, Rivest, Stein.
 * `Cracking the Coding Interview <http://www.valleytalk.org/wp-content/uploads/2012/10/CrackCode.pdf>`_
 * :ref:`Ecrire du code rapide <blog-post-optim-code-2018-08>` (article de blog)
 

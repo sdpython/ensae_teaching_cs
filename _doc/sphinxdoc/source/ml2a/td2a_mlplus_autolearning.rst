@@ -8,6 +8,8 @@
 Auto-Learning (metalearning)
 ++++++++++++++++++++++++++++
 
+.. index:: automl, auto learning, automatic machine learning
+
 *(à venir)*
 
 * `Angluin Algorithm <https://web.archive.org/web/20131202232143/http://www.cse.iitk.ac.in/users/chitti/thesis/references/learningRegSetsFromQueriesAndCounterExamples.pdf>`_
@@ -40,6 +42,7 @@ Auto-Learning (metalearning)
 * `Reptile: a Scalable Metalearning Algorithm <https://arxiv.org/abs/1803.02999>`_
 * `Generating Neural Networks with Neural Networks <https://arxiv.org/abs/1801.01952>`_
 * `Rapid Adaptation with Conditionally Shifted Neurons <https://arxiv.org/abs/1712.09926>`_
+* `Probabilistic Matrix Factorization for Automated Machine Learning <https://arxiv.org/abs/1705.05355>`_
 
 *Tutoriel*
 

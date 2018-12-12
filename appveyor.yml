@@ -14,6 +14,7 @@ init:
 
 install:
   - "%PYTHON%\\python -m pip install --upgrade pip"
+  - "%PYTHON%\\Scripts\\pip install numpy scipy scikit-learn pandas matplotlib numba cython"
   - "%PYTHON%\\Scripts\\pip install pymyinstall"
   - "%PYTHON%\\Scripts\\pymy_install3 --set=pyensae"
   - "%PYTHON%\\Scripts\\pymy_install3 cytoolz xarray dask pylzma shapely llvmlite numexpr"
@@ -32,7 +33,8 @@ install:
 build: off
 
 test_script:
-  - "%PYTHON%\\python -u setup.py unittests"
+  # The job is cut after an hour. Only a subset of unit test is run.
+  - "%PYTHON%\\python -u setup.py unittests -d 20"
 
 after_test:
   - "%PYTHON%\\python -u setup.py bdist_wheel"
@@ -40,3 +42,10 @@ after_test:
 artifacts:
   - path: dist
     name: ensae_teaching_cs
+
+cache:
+  # Use the appveyor cache to avoid re-downloading large archives such
+  # the MKL numpy and scipy wheels mirrored on a rackspace cloud
+  # container, speed up the appveyor jobs and reduce bandwidth.
+  # Tips taken from scikit-learn.
+  - '%APPDATA%\pip\Cache'

@@ -22,3 +22,9 @@ Classification Multi-label
 * `Classification by Selecting Plausible Formal Concepts in a Concept Lattice <http://ceur-ws.org/Vol-977/paper5.pdf>`_
 * `Large-scale Multi-label Learning with Missing Labels <http://jmlr.org/proceedings/papers/v32/yu14.pdf>`_
 * `Multiclass-Multilabel Classification with More Classes than Examples <http://www.jmlr.org/proceedings/papers/v9/dekel10a/dekel10a.pdf>`_
+* `Classifier Chains for Multi-label Classification <https://www.cs.waikato.ac.nz/~eibe/pubs/chains.pdf>`_
+* `An extensive experimental comparison of methods for multi-label learning <http://kt.ijs.si/DragiKocev/wikipage/lib/exe/fetch.php?media=2012pr_ml_comparison.pdf>`_
+
+*Modules*
+
+* `scikit-multilearn <http://scikit.ml/index.html>`_

@@ -113,7 +113,7 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
     On :epkg:`Linux`, package *chromium-driver* should be installed:
     ``apt-get install chromium-driver``.
 
-    ..faqref::
+    .. faqref::
         :tag: web
         :title: Issue with Selenium and Firefox
         :lid: faq-web-selenium
@@ -147,13 +147,13 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
                     raise FileNotFoundError(
                         "unable to install 'chromedriver.exe'")
             else:
-                fLOG("found chromedriver:", chromed)
+                fLOG("[_get_selenium_browser] found chromedriver:", chromed)
         else:
             chromed = 'chromedriver'
 
         start_navi = True
         if start_navi:
-            fLOG("start", navigator)
+            fLOG("[_get_selenium_browser] start", navigator)
             browser = webdriver.Chrome(chromed)
         else:
             # see
@@ -161,11 +161,11 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
             with warnings.catch_warnings():
                 warnings.simplefilter("ignore", ImportWarning)
                 import selenium.webdriver.chrome.service as wservice
-            fLOG("create service")
+            fLOG("[_get_selenium_browser] create service")
             service = wservice.Service(chromed)
-            fLOG("start service")
+            fLOG("[_get_selenium_browser] start service")
             service.start()
-            fLOG("declare remote")
+            fLOG("[_get_selenium_browser] declare remote")
             capabilities = {'chrome.binary': chromed}
             browser = webdriver.Remote(service.service_url, capabilities)
     elif navigator == "ie":
@@ -180,7 +180,7 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
                     raise FileNotFoundError(
                         "unable to install operadriver.exe")
             else:
-                fLOG("found chromedriver:", chromed)
+                fLOG("[_get_selenium_browser] found chromedriver:", chromed)
         else:
             chromed = 'operadriver'
         browser = webdriver.Opera(chromed)
@@ -189,7 +189,7 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
     else:
         raise Exception(
             "unable to interpret the navigator '{0}'".format(navigator))
-    fLOG("navigator is started")
+    fLOG("[_get_selenium_browser] navigator is started")
     return browser
 
 
@@ -215,18 +215,18 @@ def webhtml(url, navigator=default_driver, module="selenium", fLOG=noLOG):
             import selenium
         module = selenium.__name__
 
-    fLOG("[webshot] module=", module)
+    fLOG("[webhtml] module=", module)
     res = []
     if module == "selenium":
         browser = _get_selenium_browser(navigator, fLOG=fLOG)
         if not isinstance(url, list):
             url = [url]
         for u in url:
-            fLOG("get url", url)
+            fLOG("[webhtml] get url '{0}'".format(url))
             browser.get(u)
             i = browser.page_source
             res.append((u, i))
-        fLOG("quit", module)
+        fLOG("[webhtml] quit", module)
         browser.quit()
 
     elif module == "splinter":
@@ -243,6 +243,6 @@ def webhtml(url, navigator=default_driver, module="selenium", fLOG=noLOG):
                 i = browser.html
                 res.append((u, i))
     else:
-        raise ImportError("unknown module required '{0}'".format(module))
+        raise ImportError("Unknown module required '{0}'".format(module))
 
     return res

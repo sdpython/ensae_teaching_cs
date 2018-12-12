@@ -42,6 +42,14 @@ Meilleure efficacité avec des algorithmes
     td2a_talgo_streaming_algorithms
     td2a_talgo_automatic_differenciation
 
+Machine learning, algorithmes plus rapides
+==========================================
+
+.. toctree::
+    :maxdepth: 1
+
+    td2a_talgo_ml_faster
+
 Machine Learning en environnement contraint
 ===========================================
 

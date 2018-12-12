@@ -1,7 +1,7 @@
 
 .. _l-feuille-de-route-2018-1A:
 
-Feuille de route 2018 (21)
+Feuille de route 2018 (1A)
 ==========================
 
 .. contents::
@@ -19,25 +19,26 @@ Plan
 
     * - Séance
       - Notes
-    * - (1) - 4/9 - amphi court - TD
+    * - (1) 4/9 amphi court et TD
       - Présentation/rappel du langage :epkg:`Python` sur les élements du langage,
         (type de variables, tests, fonctions),
         présentation de l'environnement à l'ENSAE,
         installation de :epkg:`Python` sur Windows, Linux, Mac,
         installation de modules, présentation des notebooks,
         :ref:`l-route2018-algo1`
-    * - (2) - 11/9 - TD
+    * - (2) 11/9 TD
       - Premiers algorithmes simples, intégrale de Rienmann,
         2048, deviner la langue d'un texte, pyramide bigarrée,
         :ref:`l-route2018-algo2`
-    * - (3) - 18/9 - TD
+    * - (3) 18/9 TD
       - Classes, expression régulières, templating, fichiers,
         :ref:`l-route2018-algo3`
-    * - (4) - 25/9 - TD
+    * - (4) 25/9 TD
       - Graphes et distance d'édition,
         notions de coût algorithmique,
-        :ref:`l-route2018-algo4`
-    * - (5) - 2/10 - TD
+        :ref:`l-route2018-algo4`,
+        :ref:`2018-09-25distanceentremotsrst`
+    * - (5) 2/10 TD
       - Création d'un module :epkg:`Python` avec
         des tests unitaires, un setup, une documentation,
         pour ceux qui veulent :
@@ -45,22 +46,34 @@ Plan
         et mise en place de l'intégration continue, notion
         de :epkg:`git`, outil de profilage,
         :ref:`l-route2018-algo5`
-    * - (6) - 9/10 - TD
+    * - (6) 9/10 TD
       - Manipuler les matrices, les données sous :epkg:`Python`,
         :epkg:`numpy`, :epkg:`pandas`, :ref:`l-route2018-algo6`
-    * - (7) - 16/10 - TD
+    * - (7) 16/10 TD
       - Visualisation, statique et javascript,
         module :epkg:`matplotlib`, :epkg:`bokeh`,
         :epkg:`pyecharts`, réalisation de cartes
         avec :epkg:`cartopy`, création d'un site
         web avec :epkg:`flask`,
         :ref:`l-route2018-algo7`
-    * - (8) - 23/10 - TD
+    * - (8) 23/10 TD
       - Module :epkg:`numba`,
         mélanger du code C++ avec :epkg:`Cython`,
         :epkg:`pybind11`, optimisation quadratique
         pour ceux que le C++ rebute, algorithme de streaming,
         :ref:`l-route2018-algo8`
+
+Prérequis
++++++++++
+
+La programmation fait maintenant partie
+du programme des `classes préparatoires <https://info-llg.fr/>`_.
+Ce cours suppose que les
+`types du langage <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_lang/types.html>`_,
+sa `syntaxe <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_lang/syntaxe.html>`_
+sont connus tout comme quelques algorithmes de :ref:`tri <trinlndrst>` comme
+le `tri bulle <https://fr.wikipedia.org/wiki/Tri_%C3%A0_bulles>`_
+et le `tri fusion <https://fr.wikipedia.org/wiki/Tri_fusion>`_.
 
 Version de Python
 +++++++++++++++++
@@ -77,7 +90,8 @@ pour *Windows* et de celle-ci pour la distribution
 Intervenants
 ++++++++++++
 
-`Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_, ...
+`Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_,
+Lucie Neirac, Benoît Choffin.
 
 Notes
 +++++
@@ -95,6 +109,7 @@ Séance 1
 Les premiers notebooks de cette section.
 
 * :ref:`l-td1a-lesbases`
+* :ref:`matrixdictionaryrst`
 
 .. _l-route2018-algo2:
 
@@ -141,6 +156,7 @@ un algorithme sur les graphes,
 un autre sur la distance d'édition,
 
 * :ref:`l-td1a-algo-dicho-graphe`
+* :ref:`2018-09-25distanceentremotsrst`
 
 Jeter un oeil sur la liste
 :ref:`l-algoculture-shortlist`.

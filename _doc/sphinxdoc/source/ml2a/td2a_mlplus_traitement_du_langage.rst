@@ -120,6 +120,10 @@ exploitable par les algorithmes d'apprentissage.
   d'exemples, notemmant pour récupérer des données depuis internet
   `01-web <https://github.com/clips/pattern/tree/master/examples/01-web>`_
 
+*Modules de recherche*
+
+* `BERT <https://github.com/google-research/bert>`_
+
 *Modules moins ML*
 
 * `python-rake <https://pypi.python.org/pypi/python-rake/>`_ : petit module pour extraire des mot-clés

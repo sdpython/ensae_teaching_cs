@@ -1,0 +1,16 @@
+
+.. blogpost::
+    :title: Représenter un arbre de décision
+    :keywords: decision tree
+    :date: 2018-09-27
+    :categories: machine learning
+
+    Deux pistes :
+
+    * `ete3 <https://github.com/etetoolkit/ete>`_
+    * `animl <https://github.com/parrt/animl>`_
+
+    La première option est assez ennuyeuse à installer
+    car elle dépend de `PyQt <https://fr.wikipedia.org/wiki/PyQt>`_.
+    La seconde est plus simple car elle ne dépend que de
+    `graphviz <https://www.graphviz.org/>`_.

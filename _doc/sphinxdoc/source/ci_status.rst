@@ -10,17 +10,20 @@ La grande majorité des notebooks sont exécutés toutes les semaines
 afin de détecter facilement les problèmes pouvant survenir lors
 de la mise à jour de modules tels que *scikit-learn*, *pandas*, ...
 
+.. index:: ci, status
+
 Tableau de bord et statut des dépendances
 +++++++++++++++++++++++++++++++++++++++++
 
 .. list-table::
-    :widths: 12 10 10 8 15 10 10 10 10 10
+    :widths: 12 10 10 8 15 10 10 10 10 10 10
     :header-rows: 1
 
     * - Module
       - Travis
       - AppVeyor
       - CircleCI
+      - Azure
       - PyPi
       - Versions
       - Issues
@@ -36,6 +39,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/actuariat_python/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/actuariat_python/tree/master
+      -
       - .. image:: https://badge.fury.io/py/actuariat_python.svg
             :target: https://pypi.org/project/actuariat_python
       - .. image:: http://img.shields.io/pypi/pyversions/actuariat_python.png
@@ -59,6 +63,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/code_beatrix/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/code_beatrix/tree/master
+      -
       - .. image:: https://badge.fury.io/py/code_beatrix.svg
             :target: https://pypi.org/project/code_beatrix
       - .. image:: http://img.shields.io/pypi/pyversions/code_beatrix.png
@@ -82,6 +87,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/csharpy/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/csharpy/tree/master
+      -
       - .. image:: https://badge.fury.io/py/csharpy.svg
             :target: https://pypi.org/project/csharpy
       - .. image:: http://img.shields.io/pypi/pyversions/csharpy.png
@@ -105,6 +111,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/csharpyml/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/csharpyml/tree/master
+      -
       - .. image:: https://badge.fury.io/py/csharpyml.svg
             :target: https://pypi.org/project/csharpyml
       - .. image:: http://img.shields.io/pypi/pyversions/csharpyml.png
@@ -128,6 +135,8 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/cpyquickhelper/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/cpyquickhelper/tree/master
+      - .. image:: https://dev.azure.com/xavierdupre3/cpyquickhelepr/_apis/build/status/sdpython.cpyquickhelper
+            target: https://dev.azure.com/xavierdupre3/cpyquickhelepr/
       - .. image:: https://badge.fury.io/py/cpyquickhelper.svg
             :target: https://pypi.org/project/cpyquickhelper
       - .. image:: http://img.shields.io/pypi/pyversions/cpyquickhelper.png
@@ -151,6 +160,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/ensae_projects/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/ensae_projects/tree/master
+      -
       - .. image:: https://badge.fury.io/py/ensae_projects.svg
             :target: https://pypi.org/project/ensae_projects
       - .. image:: http://img.shields.io/pypi/pyversions/ensae_projects.png
@@ -174,6 +184,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/ensae_teaching_cs/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/ensae_teaching_cs/tree/master
+      -
       - .. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
             :target: https://pypi.org/project/ensae_teaching_cs
       - .. image:: http://img.shields.io/pypi/pyversions/ensae_teaching_cs.png
@@ -197,6 +208,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/ensae_teaching_dl/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/ensae_teaching_dl/tree/master
+      -
       - .. image:: https://badge.fury.io/py/ensae_teaching_dl.svg
             :target: https://pypi.org/project/ensae_teaching_dl
       - .. image:: http://img.shields.io/pypi/pyversions/ensae_teaching_dl.png
@@ -220,6 +232,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/jupytalk/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/jupytalk/tree/master
+      -
       - .. image:: https://badge.fury.io/py/jupytalk.svg
             :target: https://pypi.org/project/jupytalk
       - .. image:: http://img.shields.io/pypi/pyversions/jupytalk.png
@@ -243,6 +256,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/jyquickhelper/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/jyquickhelper/tree/master
+      -
       - .. image:: https://badge.fury.io/py/jyquickhelper.svg
             :target: https://pypi.org/project/jyquickhelper
       - .. image:: http://img.shields.io/pypi/pyversions/jyquickhelper.png
@@ -266,6 +280,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/lightmlboard/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/lightmlboard/tree/master
+      -
       - .. image:: https://badge.fury.io/py/lightmlboard.svg
             :target: https://pypi.org/project/lightmlboard
       - .. image:: http://img.shields.io/pypi/pyversions/lightmlboard.png
@@ -289,6 +304,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/lightmlrestapi/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/lightmlrestapi/tree/master
+      -
       - .. image:: https://badge.fury.io/py/lightmlrestapi.svg
             :target: https://pypi.org/project/lightmlrestapi
       - .. image:: http://img.shields.io/pypi/pyversions/lightmlrestapi.png
@@ -312,6 +328,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/manydataapi/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/manydataapi/tree/master
+      -
       - .. image:: https://badge.fury.io/py/manydataapi.svg
             :target: https://pypi.org/project/manydataapi
       - .. image:: http://img.shields.io/pypi/pyversions/manydataapi.png
@@ -326,6 +343,30 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/manydataapi/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
       -
+    * - :epkg:`mathenjeu`
+      - .. image:: https://travis-ci.org/sdpython/mathenjeu.svg?branch=master
+            :target: https://travis-ci.org/sdpython/mathenjeu
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/kewttt58ejfwduao?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/mathenjeu
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/mathenjeu/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/mathenjeu/tree/master
+      -
+      - .. image:: https://badge.fury.io/py/mathenjeu.svg
+            :target: https://pypi.org/project/mathenjeu
+      - .. image:: http://img.shields.io/pypi/pyversions/mathenjeu.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/mathenjeu
+      - .. image:: https://badge.waffle.io/sdpython/mathenjeu.png?label=to%20do&title=to%20do
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/mathenjeu
+      - .. image:: https://codecov.io/github/sdpython/mathenjeu/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/mathenjeu?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/mathenjeu/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/mathenjeu/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
+      -
     * - :epkg:`mlinsights`
       - .. image:: https://travis-ci.org/sdpython/mlinsights.svg?branch=master
             :target: https://travis-ci.org/sdpython/mlinsights
@@ -335,6 +376,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/mlinsights/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/mlinsights/tree/master
+      -
       - .. image:: https://badge.fury.io/py/mlinsights.svg
             :target: https://pypi.org/project/mlinsights
       - .. image:: http://img.shields.io/pypi/pyversions/mlinsights.png
@@ -358,6 +400,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/mlprodict/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/mlprodict/tree/master
+      -
       - .. image:: https://badge.fury.io/py/mlprodict.svg
             :target: https://pypi.org/project/mlprodict
       - .. image:: http://img.shields.io/pypi/pyversions/mlprodict.png
@@ -381,6 +424,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/mlstatpy/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/mlstatpy/tree/master
+      -
       - .. image:: https://badge.fury.io/py/mlstatpy.svg
             :target: https://pypi.org/project/mlstatpy
       - .. image:: http://img.shields.io/pypi/pyversions/mlstatpy.png
@@ -404,6 +448,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/pandas_streaming/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pandas_streaming/tree/master
+      -
       - .. image:: https://badge.fury.io/py/pandas_streaming.svg
             :target: https://pypi.org/project/pandas_streaming
       - .. image:: http://img.shields.io/pypi/pyversions/pandas_streaming.png
@@ -428,6 +473,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/papierstat/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/papierstat/tree/master
+      -
       - .. image:: https://badge.fury.io/py/papierstat.svg
             :target: https://pypi.org/project/papierstat
       - .. image:: http://img.shields.io/pypi/pyversions/papierstat.png
@@ -452,6 +498,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/pyenbc/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pyenbc/tree/master
+      -
       - .. image:: https://badge.fury.io/py/pyenbc.svg
             :target: https://pypi.org/project/pyenbc
       - .. image:: http://img.shields.io/pypi/pyversions/pyenbc.png
@@ -476,6 +523,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/pyensae/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pyensae/tree/master
+      -
       - .. image:: https://badge.fury.io/py/pyensae.svg
             :target: https://pypi.org/project/pyensae
       - .. image:: http://img.shields.io/pypi/pyversions/pyensae.png
@@ -499,6 +547,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/pymmails/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pymmails/tree/master
+      -
       - .. image:: https://badge.fury.io/py/pymmails.svg
             :target: https://pypi.org/project/pymmails
       - .. image:: http://img.shields.io/pypi/pyversions/pymmails.png
@@ -520,6 +569,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/pymyinstall/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pymyinstall/tree/master
+      -
       - .. image:: https://badge.fury.io/py/pymyinstall.svg
             :target: https://pypi.org/project/pymyinstall
       - .. image:: http://img.shields.io/pypi/pyversions/pymyinstall.png
@@ -543,6 +593,8 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/pyquickhelper/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pyquickhelper/tree/master
+      - .. image:: https://dev.azure.com/xavierdupre3/pyquickhelper/_apis/build/status/sdpython.pyquickhelper
+            :target: https://dev.azure.com/xavierdupre3/pyquickhelper/
       - .. image:: https://badge.fury.io/py/pyquickhelper.svg
             :target: https://pypi.org/project/pyquickhelper
       - .. image:: http://img.shields.io/pypi/pyversions/pyquickhelper.png
@@ -566,6 +618,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/pyrsslocal/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pyrsslocal/tree/master
+      -
       - .. image:: https://badge.fury.io/py/pyrsslocal.svg
             :target: https://pypi.org/project/pyrsslocal
       - .. image:: http://img.shields.io/pypi/pyversions/pyrsslocal.png
@@ -587,6 +640,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/pysqllike/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pysqllike/tree/master
+      -
       - .. image:: https://badge.fury.io/py/pysqllike.svg
             :target: https://pypi.org/project/pysqllike
       - .. image:: http://img.shields.io/pypi/pyversions/pysqllike.png
@@ -608,6 +662,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/sparkouille/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/sparkouille/tree/master
+      -
       - .. image:: https://badge.fury.io/py/sparkouille.svg
             :target: https://pypi.org/project/sparkouille
       - .. image:: http://img.shields.io/pypi/pyversions/sparkouille.png
@@ -631,6 +686,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/teachpyx/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/teachpyx/tree/master
+      -
       - .. image:: https://badge.fury.io/py/teachpyx.svg
             :target: https://pypi.org/project/teachpyx
       - .. image:: http://img.shields.io/pypi/pyversions/teachpyx.png
@@ -655,6 +711,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/tkinterquickhelper/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/tkinterquickhelper/tree/master
+      -
       - .. image:: https://badge.fury.io/py/tkinterquickhelper.svg
             :target: https://pypi.org/project/tkinterquickhelper
       - .. image:: http://img.shields.io/pypi/pyversions/tkinterquickhelper.png
@@ -677,6 +734,7 @@ Tableau de bord et statut des dépendances
       -
       -
       -
+      -
     * - `python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/python3_module_template.svg?branch=master
             :target: https://travis-ci.org/sdpython/python3_module_template
@@ -686,6 +744,8 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/python3_module_template/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/python3_module_template/tree/master
+      - .. image:: https://dev.azure.com/xavierdupre3/python3_module_template/_apis/build/status/sdpython.python3_module_template
+            :target: https://dev.azure.com/xavierdupre3/python3_module_template/
       -
       -
       - .. image:: https://badge.waffle.io/sdpython/python3_module_template.png?label=ready&title=Ready
@@ -708,11 +768,13 @@ Tableau de bord et statut des dépendances
       -
       -
       -
+      -
       - .. image:: https://api.codacy.com/project/badge/Grade/8837c17514064623a54e36d75ceb9d17
             :target: https://www.codacy.com/app/sdpython/td1a_unit_test_ci?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sdpython/td1a_unit_test_ci&amp;utm_campaign=Badge_Grade
     * - Les derniers sont des
       - projets
       - exploratoires.
+      -
       -
       -
       -
@@ -730,15 +792,17 @@ Tableau de bord et statut des dépendances
       -
       -
       -
+      -
     * - `machinelearningext <https://github.com/sdpython/machinelearningext>`_
       - .. image:: https://travis-ci.org/sdpython/machinelearningext.svg?branch=master
             :target: https://travis-ci.org/sdpython/machinelearningext
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/t2g9olcgqgdvqq3l?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/uwanivg3b5qibncs?svg=true
             :target: https://ci.appveyor.com/project/sdpython/machinelearningext
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/machinelearningext/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/machinelearningext/tree/master
+      -
       -
       -
       -
@@ -754,6 +818,7 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/xgboost/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/xgboost/tree/master
+      -
       -
       -
       -
@@ -808,7 +873,7 @@ Outils
       - Outils, exemples pour utiliser du :epkg:`C#` depuis :epkg:`Python`
         sous Windows ou Linux.
     * - :epkg:`csharpyml`
-      - :epkg:`csharpy` + :epkg:`ML.net`
+      - :epkg:`csharpy` + :epkg:`ML.net` + :epkg:`Scikit.ML`
     * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
       - Fonctions, outils implémentées en C, C++ et habillées en Python. C'est aussi
         un template pour ceux qui souhaite réaliser un module en C/C++/Cython.
@@ -819,6 +884,9 @@ Outils
       - Implémentation d'une :epkg:`REST API` avec :epkg:`falcon`.
     * - :epkg:`manydataapi`
       - Outils et bouts de codes pour accéder à différentes API de données.
+    * - :epkg:`mathenjeu`
+      - Applications web pour créer des QCM ou autre séries de
+        questions sur internet.
     * - :epkg:`mlinsights`
       - Quelques fonctions pour jouer avec des modèles de machine learning.
     * - :epkg:`mlprodict`

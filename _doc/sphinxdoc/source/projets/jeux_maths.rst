@@ -252,3 +252,22 @@ L'article suivant introduit un algorithme mathématique
 pour dessiner une structure complexe avec une imprimante 3D.
 
 * `Freeform Assembly Planning <https://arxiv.org/pdf/1801.00527.pdf>`_
+
+.. _l-string-period:
+
+Détection de période dans les séquences qui préservent l'ordre (2018)
+---------------------------------------------------------------------
+
+Le sujet s'appuie sur l'article
+`String Periods in the Order-Preserving Model <https://arxiv.org/pdf/1801.01404.pdf>`_.
+On considère deux séquences :math:`(X_1, ..., X_n)` et :math:`(Y_1, ..., Y_n)`
+où chaque :math:`X_i` et :math:`Y_i` sont choisis dans un ensemble fini d'entiers.
+On dit que les séquences sont équivalentes en ordre (noté :math:`X \approx Y`) si :
+
+.. math::
+
+    \forall i, j \in [1,...,n], \; X_i < X_j \Leftrightarrow Y_i < Y_j
+
+Example : 5 2 7 5 1 3 10 3 5 :math:`\approx` 6 4 7 6 3 5 9 5 6
+
+L'article se pose la question de détection de période dans ce type de séquences.

@@ -87,6 +87,7 @@ et qu'il est important de comprendre.
     notebooks/tableau_contingence
     notebooks/histogramme_rapide
     notebooks/code_multinomial
+    notebooks/matrix_dictionary
 
 Au terme de ces six séances, si la programmation est nouvelle pour vous ou
 si le langage vous paraît encore peu naturel,
@@ -223,16 +224,22 @@ Ces outils sont similaires à ceux qu'on trouve dans de nombreux languages à us
 Ces séances peuvent paraître plus longues car elles
 s'appuient sur des modules qu'il faut découvrir
 puis utiliser pour résoudre des exercices. Toutefois, les modules
-`numpy <http://www.numpy.org/>`_, `pandas <http://pandas.pydata.org/>`_,
-`matplotlib <http://matplotlib.org/>`_
+:epkg:`numpy`, :epkg:`pandas`, :epkg:`matplotlib`
 sont incontournables pour manipuler les données en :epkg:`Python`.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
-    notebooks/_gs1a_D_dataframe_matrice
-    notebooks/_gs1a_D_calcul_dicho_cython
-    notebooks/_gs1a_D_visualisation
+    notebooks/td1a_cenonce_session_10
+    notebooks/td1a_correction_session_10
+    notebooks/decorrelation
+    notebooks/decorrelation_correction
+    notebooks/td1a_cython_edit
+    notebooks/td1a_cython_edit_correction
+    notebooks/td1a_cenonce_session_12_plot
+    notebooks/td1a_cenonce_session_12_carte
+    notebooks/td1a_cenonce_session_12_js
+    notebooks/td1a_correction_session_12
 
 Il existe de nombreuses libraires de visualisation des données en :epkg:`Python` et
 elles se sont multipliées depuis l'avènement des notebooks :
@@ -413,6 +420,7 @@ Bibliographie
 * `8 Regular Expressions You Should Know <http://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149>`_ *(2016/03)*
 * `Love Python <http://love-python.blogspot.fr/>`_ *(2016/03)*
 * `The Hitchhiker's Guide to Python! <http://docs.python-guide.org/en/latest/>`_ *(2016/06)*
+* `Evolution of a salesman: A complete genetic algorithm tutorial for Python <https://towardsdatascience.com/evolution-of-a-salesman-a-complete-genetic-algorithm-tutorial-for-python-6fe5d2b3ca35>`_
 
 *Livres*
 
@@ -457,6 +465,11 @@ Bibliographie
 
 Intervenants
 ============
+
+* *2018-2019* :
+  Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_ *(professeur)*,
+  `Lucie Neirac <http://www.laneas.com/lucie-neirac>`_,
+  Benoît Choffin, `Laboratoire de Recherche en Informatique <https://www.lri.fr/>`_
 
 * *2017-2018* :
   Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_ *(professeur)*,

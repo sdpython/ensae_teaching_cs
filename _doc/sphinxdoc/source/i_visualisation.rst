@@ -11,11 +11,11 @@ Visualisation
 Modules et exemples
 ===================
 
-`matplotlib <http://matplotlib.org/>`_ reste la référence en matièce de graphique mais la librairie ne
+:epkg:`matplotlib` reste la référence en matièce de graphique mais la librairie ne
 produit que des images statiques. D'autres libraires utilisent pleinement le javascript au sein d'un
-notebook. La première est `bokeh <http://bokeh.pydata.org/en/latest/>`_ mais il en existe d'autres qui
+notebook. La première est :epkg:`bokeh` mais il en existe d'autres qui
 migrent une librairie javascript existant vers Python ou qui sont développées spécifiquement pour
-les notebooks. C'est le cas de `bqplot <https://github.com/bloomberg/bqplot>`_ qui permet
+les notebooks. C'est le cas de :epkg:`bqplot` qui permet
 assez facilement de modifier le graphique en fonction des actions de la souris. Pour choisir une librairie,
 il faut vous demander :
 
@@ -46,7 +46,7 @@ Galleries
 * :ref:`2A : TD 4A, Machine Learning et Marketting (correction)  <td2acorrectionsession4arst>` :
   courbe `ROC <https://fr.wikipedia.org/wiki/Receiver_operating_characteristic>`_ et
   `ACP <https://fr.wikipedia.org/wiki/Analyse_en_composantes_principales>`_ avec labels
-* :ref:`1A : TD 12, Visualisation des données <td1acenoncesession12rst>`  (:ref:`correction <td1acorrectionsession12rst>`) :
+* :ref:`1A : TD 12, Visualisation des données <td1acenoncesession12plotrst>`  (:ref:`correction <td1acorrectionsession12rst>`) :
   représentation de **graphes** (`networkx <https://networkx.github.io/>`_,
   `graphviz <http://www.graphviz.org/>`_), `Open Street Map <http://www.openstreetmap.org/>`_
   avec `folium <https://github.com/python-visualization/folium>`_

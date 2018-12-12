@@ -1,6 +1,6 @@
 
 .. blogpost::
-    :title: Notebook testés sur Debian 9
+    :title: Notebooks testés sur Debian 9
     :keywords: Debian
     :date: 2018-08-22
     :categories: automatisation
