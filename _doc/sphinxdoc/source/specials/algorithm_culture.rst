@@ -155,9 +155,11 @@ Catalogue d'algorithmes
     * `Algorithme de Rabin-Karp <http://fr.wikipedia.org/wiki/Algorithme_de_Rabin-Karp>`_ **algo**
     * `distance de Jaccard <http://fr.wikipedia.org/wiki/Indice_et_distance_de_Jaccard>`_ **algo**
     * `n-grammes <http://fr.wikipedia.org/wiki/N-gramme>`_ **déf**
-    * `Algorithme d'Aho-Corasick <http://fr.wikipedia.org/wiki/Algorithme_d%27Aho-Corasick>`_ **algo**
+    * `Algorithme d'Aho-Corasick <http://fr.wikipedia.org/wiki/Algorithme_d%27Aho-Corasick>`_ **algo**,
+      voir aussi `Commentz-Walter <https://en.wikipedia.org/wiki/Commentz-Walter_algorithm>`_
     * `Transformée de Burrows-Wheeler <http://fr.wikipedia.org/wiki/Transform%C3%A9e_de_Burrows-Wheeler>`_ **algo**
     * `algorithme Apriori <https://en.wikipedia.org/wiki/Apriori_algorithm>`_ : apprentissage de règles d'associations **algo**
+    * `Boyer–Moore string-search algorithm <https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_string-search_algorithm>`_
 * Optimisation
     * `Simplexe <http://fr.wikipedia.org/wiki/Simplexe>`_ **algo**
     * `Optimisation Combinatoire : Programmation Linéaire et Algorithmes <http://www-desir.lip6.fr/~fouilhoux/documents/OptComb.pdf>`_ **thèse**
@@ -210,6 +212,8 @@ Articles sur des algorithmes
 * `Expander Flows, Geometric Embeddings and Graph Partitioning <http://snap.stanford.edu/class/cs224w-readings/arora04expansion.pdf>`_ **graph partitionning**
 * `The Read-Optimized Burrows-Wheeler Transform <https://arxiv.org/pdf/1809.07320.pdf>`_
 * `String Periods in the Order-Preserving Model <https://arxiv.org/pdf/1801.01404.pdf>`_
+* `Recursive n-gram hashing is pairwise independent, at best <https://arxiv.org/pdf/0705.4676.pdf>`_,
+  `Hash-Grams: Faster N-Gram Features for Classification and Malware Detection <http://www.edwardraff.com/publications/hash-grams-faster.pdf>`_
 
 Livres
 ++++++
