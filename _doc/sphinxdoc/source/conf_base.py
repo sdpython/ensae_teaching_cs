@@ -137,6 +137,7 @@ epkg_dictionary.update({
     "keras": 'https://keras.io/',
     "keyring": 'https://github.com/jaraco/keyring',
     "Lasso": 'https://fr.wikipedia.org/wiki/Lasso_(statistiques)',
+    "lecture_citation": "http://www.xavierdupre.fr/app/lecture_citation/helpsphinx/index.html",
     "lightgbm": "https://github.com/Microsoft/LightGBM/",
     "lightmlboard": 'http://www.xavierdupre.fr/app/lightmlboard/helpsphinx/index.html',
     "lightmlrestapi": 'http://www.xavierdupre.fr/app/lightmlrestapi/helpsphinx/index.html',

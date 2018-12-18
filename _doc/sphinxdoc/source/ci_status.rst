@@ -271,6 +271,28 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/jyquickhelper/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
       -
+    * - :epkg:`lecture_citation`
+      - .. image:: https://travis-ci.org/sdpython/lecture_citation.svg?branch=master
+            :target: https://travis-ci.org/sdpython/lecture_citation
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/al9chaf5ivx7bmmx?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/lecture_citation
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/lecture_citation/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/lecture_citation/tree/master
+      -
+      - .. image:: https://badge.fury.io/py/lecture_citation.svg
+            :target: https://pypi.org/project/lecture_citation
+      - .. image:: http://img.shields.io/pypi/pyversions/lecture_citation.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/lecture_citation
+      - .. image:: https://badge.waffle.io/sdpython/lecture_citation.png?label=to%20do&title=to%20do
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/lecture_citation
+      - .. image:: https://codecov.io/github/sdpython/lecture_citation/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/lecture_citation?branch=master
+      - 
+      -
     * - :epkg:`lightmlboard`
       - .. image:: https://travis-ci.org/sdpython/lightmlboard.svg?branch=master
             :target: https://travis-ci.org/sdpython/lightmlboard
@@ -930,6 +952,8 @@ Contenu
       - Notebooks, contenu plus spécifiques au :epkg:`deep learning`.
     * - `jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
       - Présentations sous formes de notebooks données lors de conférences ou de cours.
+    * - :epkg:`lecture_citation`
+      - Souvenirs de lectures.
     * - `mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
       - Contenu plus théorique associé à la datascience, au machine learning,
         au traitement naturel du langage. Avec un peu plus de démonstrations
