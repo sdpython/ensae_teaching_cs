@@ -85,6 +85,7 @@ Liste exhaustive :
 #. Objets connectés : :ref:`l-tech-domo`
 #. Objets connectés : :ref:`l-visage-reel`
 #. Objets connectés : :ref:`l-parole-reel`
+#. Objets connectés : :ref:`l-parole-skype`
 #. Algo génétique : :ref:`l-gen-optim`
 #. Algo génétique : :ref:`l-gen-bag`
 #. Algo génétique : :ref:`l-gen-tsp`

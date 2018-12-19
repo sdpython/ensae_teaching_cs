@@ -218,3 +218,19 @@ Ci-dessous un exemple de code extrait du second article cité plus haut.
 
 Il faudra installer ces modules le plus tôt possible car selon les systèmes
 d'exploitation, ce n'est pas toujours un processus évident.
+
+.. _l-parole-skype:
+
+Mon Skype à moi (2019)
+----------------------
+
+Concrètement, cela consiste à programmer une application
+qui transmet de la parole entre deux ordinateurs.
+On utilise le plus souvent des
+`sockets <https://docs.python.org/3/library/socket.html>`_.
+Il reste à transmettre le son, voire le compresser au préalable.
+Bref, ce n'est pas simple au premier abord mais il existe
+des options open source comme
+`aiortc <https://github.com/jlaine/aiortc>`_.
+L'avantage d'avoir son propre Skype est que l'on peut crypter
+la conversation et qu'on est sûr des données qui sont stockées.
