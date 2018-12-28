@@ -50,7 +50,7 @@ Machine learning, algorithmes plus rapides
 
     td2a_talgo_ml_faster
 
-Machine Learning en environnement contraint
+Machine learning en environnement contraint
 ===========================================
 
 Les objets connectés sont petits et ne possède pas la puissance
@@ -66,6 +66,19 @@ la puissance de calculs.
 
     td2a_talgo_predire_en_environnement_contraint
     td2a_talgo_apprendre_en_environnement_contraint
+
+Optimisation
+============
+
+Les algorithmes d'optmisation sont la base du
+machine learning. Les connaître et les comprendre
+ne peut assurément pas faire de mal.
+
+.. toctree::
+    :maxdepth: 1
+
+    td2a_talgo_optimisation
+    td2a_mlplus_sgd
 
 Data Scientist en liberté
 =========================

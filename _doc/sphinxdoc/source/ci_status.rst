@@ -291,7 +291,7 @@ Tableau de bord et statut des dépendances
             :target: https://waffle.io/sdpython/lecture_citation
       - .. image:: https://codecov.io/github/sdpython/lecture_citation/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/lecture_citation?branch=master
-      - 
+      -
       -
     * - :epkg:`lightmlboard`
       - .. image:: https://travis-ci.org/sdpython/lightmlboard.svg?branch=master

@@ -8,13 +8,15 @@ Machine learning - extensions
 .. contents::
     :local:
 
-Machine Learning Avancé
-=======================
+Machine Learning Techniques
+===========================
 
 Des sujets qu'il faut avoir vu car ils se manifestent
 dès qu'on commence à passer le cap du modèle qu'on entraîne
 une fois pour s'intéresser à la maintenance des modèles
-et à leur entraînement sur le long terme.
+et à leur entraînement sur le long terme. Ces méthodes
+ne décrivent pas des modèles de machine learning mais des
+concepts communs à ne nombreux modèles.
 
 .. toctree::
     :maxdepth: 1
@@ -26,6 +28,9 @@ et à leur entraînement sur le long terme.
     td2a_mlplus_overfitting
     td2a_mlplus_regression_quantile
     td2a_mlplus_testab
+
+Modèles plus rares de machine learning
+======================================
 
 D'autres sujets parfois exotiques mais non moins intéressants.
 
@@ -46,15 +51,6 @@ D'autres sujets parfois exotiques mais non moins intéressants.
     td2a_mlplus_snn
     td2a_mlplus_surprise_modelling
     td2a_mlplus_tres_grande_dimension
-
-Les algorithmes d'optmisation sont la base du
-machine learning. Les connaître et les comprendre
-ne peut assurément pas faire de mal.
-
-.. toctree::
-    :maxdepth: 1
-
-    td2a_mlplus_sgd
 
 Séries temporelles
 ==================
