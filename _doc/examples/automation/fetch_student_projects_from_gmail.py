@@ -44,23 +44,24 @@ with warnings.catch_warnings():
 
 server = "imap.gmail.com"
 school = "ENSAE"
-date = "20-Oct-2018"
-pattern = "Python_{0}_TD_1A_2019"
+date = "19-Dec-2018"
+pattern = "Python_{0}_TD_2A_2019"
 group_def = "groupes.xlsx"
 col_subject, col_group, col_mail, col_student = "sujet", "groupe", "mail", "Nom"
+final_dest = ["2018-2019", "2A_projet"]
 
 
 if school == 'ENSAE':
     do_mail = True
-    mailfolder = ["ensae/ENSAE_1A"]
+    mailfolder = ["ensae/ENSAE_2A"]
     dest_folder = os.path.normpath(os.path.abspath(os.path.join(
-        *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "ENSAE", "2018-2019", "1A_projet"]))))
+        *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", school] + final_dest))))
     print("dest", dest_folder)
 elif school == 'PANTHEON':
     do_mail = True
     mailfolder = ["ensae/assas"]
     dest_folder = os.path.normpath(os.path.abspath(os.path.join(
-        *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", "PANTHEON", "2018-2019", "projet"]))))
+        *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", school] + final_dest))))
     print("dest", dest_folder)
 else:
     raise NotImplementedError()
