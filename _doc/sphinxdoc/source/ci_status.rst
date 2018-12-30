@@ -54,6 +54,30 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
       -
+    * - `botadi <http://www.xavierdupre.fr/app/botadi/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/botadi.svg?branch=master
+            :target: https://travis-ci.org/sdpython/botadi
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/5qqqxtf4qgab90ec?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/actuariat-python
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/botadi/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/botadi/tree/master
+      -
+      - .. image:: https://badge.fury.io/py/botadi.svg
+            :target: https://pypi.org/project/botadi
+      - .. image:: http://img.shields.io/pypi/pyversions/botadi.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/botadi
+      - .. image:: https://badge.waffle.io/sdpython/botadi.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/botadi
+      - .. image:: https://codecov.io/github/sdpython/botadi/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/botadi?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/botadi/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/botadi/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
+      -
     * - `code_beatrix <http://lesenfantscodaient.fr>`_
       - .. image:: https://travis-ci.org/sdpython/code_beatrix.svg?branch=master
             :target: https://travis-ci.org/sdpython/code_beatrix
@@ -891,6 +915,8 @@ Outils
 
     * - module
       - description
+    * - :epkg:`botadi`
+      - Experimentation autour des chatbots.
     * - :epkg:`csharpy`
       - Outils, exemples pour utiliser du :epkg:`C#` depuis :epkg:`Python`
         sous Windows ou Linux.
@@ -953,7 +979,9 @@ Contenu
     * - `jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
       - Présentations sous formes de notebooks données lors de conférences ou de cours.
     * - :epkg:`lecture_citation`
-      - Souvenirs de lectures.
+      - Souvenirs de lectures, rien à voir avec la programmation ou les statistiques à part
+        `Hume <http://www.xavierdupre.fr/app/lecture_citation/helpsphinx/lectures/2010.html#index-46>`_
+        peut-être.
     * - `mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
       - Contenu plus théorique associé à la datascience, au machine learning,
         au traitement naturel du langage. Avec un peu plus de démonstrations

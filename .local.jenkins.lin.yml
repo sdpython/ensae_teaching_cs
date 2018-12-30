@@ -33,20 +33,6 @@ script:
   - { CMD: "$PYINT -u setup.py unittests -e \".*((huge)).*\"", NAME: "UT_HUGE" }
   - { CMD: "$PYINT -u setup.py unittests -e \".*cvxopt.*\"", NAME: "UT_CVXOPT" }
   - { CMD: "$PYINT -u setup.py unittests -e \".*students.*\"", NAME: "UT_STUDENTS" }
-  - if [ ${VERSION} == "3.7" and ${DIST} == "std" ]
-      then 
-        --CMD=echo skip unit test;
-        --NAME=DOC1;
-        --CLEAN=0;
-        --TIMEOUT=5400
-      fi
-  - if [ ${VERSION} == "3.7" and ${DIST} == "std" ]
-      then 
-        --CMD=echo skip unit test;
-        --NAME=DOC3;
-        --CLEAN=0;
-        --TIMEOUT=5400
-      fi
 
 after_script:
   - $PYINT -u setup.py bdist_wheel
@@ -54,7 +40,6 @@ after_script:
 
 documentation:
   # The first run of the documentation may fail, the second goes one.
-  - if [ ${NAME} == "DOC1" ] then $PYINT -u setup.py build_sphinx html1 > doc1.log 2> err1.log fi
-  - if [ ${NAME} == "DOC3" ] then $PYINT -u setup.py build_sphinx html3 > doc3.log 2> err3.log fi
+  - if [ ${NAME} == "UT" ] then $PYINT -u setup.py build_sphinx fi
   - if [ ${NAME} == "DOC1" ] then cp -R -f _doc/sphinxdoc/build/html dist/html fi
   - if [ ${NAME} == "DOC3" ] then cp -R -f _doc/sphinxdoc/build3/html dist/html3 fi

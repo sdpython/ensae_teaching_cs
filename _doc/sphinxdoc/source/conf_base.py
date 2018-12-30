@@ -96,6 +96,7 @@ epkg_dictionary.update({
     "basemap": 'https://matplotlib.org/basemap/',
     "blockchain": 'https://fr.wikipedia.org/wiki/Blockchain',
     "bokeh": 'https://fr.wikipedia.org/wiki/Bokeh',
+    'botadi': 'http://www.xavierdupre.fr/app/botadi/helpsphinx/index.html',
     "Bresenham": 'https://fr.wikipedia.org/wiki/Algorithme_de_trac%C3%A9_de_segment_de_Bresenham',
     "C++": 'https://fr.wikipedia.org/wiki/C%2B%2B',
     "C#": 'https://fr.wikipedia.org/wiki/C_sharp',
