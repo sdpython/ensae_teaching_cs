@@ -5,7 +5,6 @@
 
 """
 
-import sys
 import re
 import html.parser
 import html.entities as htmlentitydefs

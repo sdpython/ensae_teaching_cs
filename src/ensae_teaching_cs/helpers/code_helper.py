@@ -2,6 +2,7 @@
 @file
 @brief Helpers about code.
 """
+import os
 import re
 from pyquickhelper.filehelper import explore_folder_iterfile
 
@@ -40,5 +41,7 @@ def enumerate_inspect_source_code(folder, file_pattern=".*[.]((py)|(ipynb))$",
             raise FileNotFoundError(
                 "Unable to process '{0}' due to '{1}'.".format(name, e))
     if nb == 0:
+        found = os.listdir(folder)
+        founds = "\n".join(found) if found else "EMPTY"
         raise FileNotFoundError(
-            "No file found in folder '{0}' with pattern '{1}'.".format(folder, file_pattern))
+            "No file found in folder '{0}' with pattern '{1}' (neg='{2}')\n--IN--\n{3}".format(folder, file_pattern, neg_pattern, founds))

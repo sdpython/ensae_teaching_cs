@@ -19,7 +19,7 @@ before_script:
 script:
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -g \".*((http)|(SKIP)|(LONG)|(GUI)|(cvxopt)|(theano)).*\"", NAME: "UT", TIMEOUT: 3600 }  # timeout is 3600 for the documentation
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*(http).*\"", NAME: "UT_HTTP" }
-  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*LONG.* -g .*cvxopt.*", NAME: "UT_LONG", TIMEOUT: 3600 }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*LONG.* -g .*((cvxopt)|(notebook_eleves)).*", NAME: "UT_LONG", TIMEOUT: 3600 }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*SKIP.* -g \".*((theano)|(keras)|(deep)|(scraping)|(pythonnet)|(huge)|(web)|(ete3)|(cvxopt)|(students)).*\"", NAME: "UT_SKIP" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_1A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)).*\"", NAME: "UT_1A" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*_2A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)).*\"", NAME: "UT_2A", TIMEOUT: 3600 }
@@ -29,6 +29,7 @@ script:
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e .*scraping.* -g \".*((SKIP)|(theano)|(keras)|(ete3)|(cvxopt)).*\"", NAME: "UT_SCRAPING", TIMEOUT: 3600 }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*((huge)).*\"", NAME: "UT_HUGE" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*cvxopt.*\"", NAME: "UT_CVXOPT" }
+  - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*notebook_eleves.*\"", NAME: "UT_NBELEVE" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*students.*\"", NAME: "UT_STUDENTS" }
   - if [ ${VERSION} == "3.7" and ${DIST} == "std" ]
       then 
