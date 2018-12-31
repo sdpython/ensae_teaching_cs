@@ -80,9 +80,10 @@ def compile_cython_single_script(script, skip_warn=True, fLOG=noLOG):
         from Cython.Build import cythonize
         setup(
             name='{1}',
-            ext_modules=cythonize("{0}")
+            ext_modules=cythonize("{0}",
+                                  compiler_directives={{'language_level': {2}}})
         )
-        """.replace("        ", "").format(name, namen)
+        """.replace("        ", "").format(name, namen, sys.version_info[0])
 
     current, name = os.path.split(script)
     filename = os.path.join(os.path.dirname(script), name + ".setup.py")

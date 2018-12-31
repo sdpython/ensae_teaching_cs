@@ -7,8 +7,6 @@
 
 import sys
 import re
-import json
-import io
 import html.parser
 import html.entities as htmlentitydefs
 from pyquickhelper.loghelper import get_url_content
@@ -27,11 +25,7 @@ def xmlParsingLongestDiv(text):
         """
 
         def __init__(self):
-            if sys.version_info.major >= 4 or (sys.version_info.minor >= 4 and
-                                               sys.version_info.major >= 3):
-                html.parser.HTMLParser.__init__(self, convert_charrefs=True)
-            else:
-                html.parser.HTMLParser.__init__(self)
+            html.parser.HTMLParser.__init__(self, convert_charrefs=True)
             self.mtag = []
             self.mvalue = []
             self.mall = []
@@ -198,20 +192,6 @@ def force_unicode(text):
     return text
 
 
-def retrieve_speeches_json(
-        url="http://www.elysee.fr/chronologie/download/json"):
-    """
-    Retrieves the speeches from the :epkg:`Elysees`.
-
-    @param      url     url
-    @return             list of documents
-    """
-    text = get_url_content(url)
-    stream = io.StringIO(text)
-    js = json.load(stream)
-    return js
-
-
 def remove_accent(text):
     """
     Replaces French accents by regular letters.
@@ -225,8 +205,7 @@ def remove_accent(text):
     return text
 
 
-def get_elysee_speech_from_elysees(
-        title, url="http://www.elysee.fr/chronologie/article/"):
+def get_elysee_speech_from_elysees(title, url="http://www.elysee.fr/"):
     """
     Retrieves the text from the :epkg:`Elysees`.
 
@@ -253,7 +232,7 @@ def get_elysee_speech_from_elysees(
     return xmlParsingLongestDiv(text)
 
 
-def enumerate_speeches_from_elysees(skip=0, use_json=False):
+def enumerate_speeches_from_elysees(skip=0):
     """
     Enumerates speeches from the :epkg:`Elysees`.
 
@@ -270,39 +249,22 @@ def enumerate_speeches_from_elysees(skip=0, use_json=False):
             for i,disc in enumerate(enumerate_speeches_from_elysees()):
                 print(disc)
 
+    Others links can be used such as
+    ``https://www.elysee.fr/recherche?query=discours``.
+    The website changed in 2018 and no longer support xml or json
+    streams.
     """
-    if use_json:
-        url = "http://www.elysee.fr/chronologie/download/json"
-        js = retrieve_speeches_json(url)
-        for i, event in enumerate(js):
-            if i < skip:
-                continue
-            items = event.get("items", None)
-            title = event.get("title", None)
-            if items is not None and title is not None and len(title) > 0:
-                load = False
-                for it in items:
-                    if it is None:
-                        continue
-                    if not isinstance(it, dict):
-                        continue
-                    tit = it.get("title", "")
-                    if tit is not None and "title" in it and "discours" in tit:
-                        load = True
-                        break
-                if load:
-                    content = get_elysee_speech_from_elysees(title)
-                    if content is not None:
-                        yield dict(text=content,
-                                   title=title,
-                                   date=event.get("date", None),
-                                   description=event.get("description", None))
-    else:
-        url = "http://www.elysee.fr/chronologie/download/xml"
-        xml = get_url_content(url)
-        reg = re.compile("(http://.*?/article/.*?/)")
-        links = reg.findall(xml)
-        for i, link in enumerate(links):
-            content = get_elysee_speech_from_elysees(link)
-            if content is not None:
-                yield dict(link=link, text=content)
+    base = "https://www.elysee.fr/"
+    url = "https://www.elysee.fr/agenda"
+    xml = get_url_content(url)
+    reg = re.compile(
+        "href=\\\"(.+?/[0-9]{4}/[0-9]{2}/[0-9]{2}/.+?)\\\" class=")
+    links = reg.findall(xml)
+    for i, link in enumerate(links):
+        if i < skip:
+            continue
+        if link.startswith("/"):
+            link = base + link
+        content = get_elysee_speech_from_elysees(link)
+        if content is not None:
+            yield dict(link=link, text=content)

@@ -7,6 +7,7 @@ import sys
 import os
 import unittest
 from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import ExtTestCase
 
 
 try:
@@ -25,7 +26,7 @@ except ImportError:
 from src.ensae_teaching_cs.td_1a.discours_politique import enumerate_speeches_from_elysees
 
 
-class TestRetrieveSpeeches(unittest.TestCase):
+class TestRetrieveSpeeches(ExtTestCase):
 
     def test_retrieve_speeches(self):
         fLOG(
@@ -46,10 +47,10 @@ class TestRetrieveSpeeches(unittest.TestCase):
         i = 0
         for i, disc in enumerate(enumerate_speeches_from_elysees()):
             fLOG(i, disc)
-            if i >= 2:
+            if i >= 1:
                 break
-            assert len(disc) > 0
-        assert i > 0
+            self.assertNotEmpty(disc)
+        self.assertGreater(i, 1)
 
 
 if __name__ == "__main__":
