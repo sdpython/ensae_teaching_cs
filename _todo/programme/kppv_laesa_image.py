@@ -12,18 +12,18 @@ import kppv_laesa
 import time
 import kppv_image
 
-# définit une classe héritant de kppv.nuage_points qui surcharge les 
+# dï¿½finit une classe hï¿½ritant de kppv.nuage_points qui surcharge les 
 # fonctions distance et label
 class nuage_point_leasa_distance_label (kppv_laesa.nuage_point_laesa) :
-    """hérite de kppv.nuage_point et surcharge les méthodes :
+    """hï¿½rite de kppv.nuage_point et surcharge les mï¿½thodes :
             - distance
             - label
     """
 
     def distance (self, obj1, obj2) :
         """surcharge de la fonction distance, comme les images sont toutes
-        de dimensions identiques, on peut compter les pixels de couleurs différentes,
-        le résultat est la distance entre deux images"""
+        de dimensions identiques, on peut compter les pixels de couleurs diffï¿½rentes,
+        le rï¿½sultat est la distance entre deux images"""
         if len (obj1) != len (obj2) :
             print "erreur, len (obj1) != len (obj2)"
         d = 0
@@ -37,16 +37,16 @@ class nuage_point_leasa_distance_label (kppv_laesa.nuage_point_laesa) :
     
         
 class nuage_image_leasa (kppv_image.nuage_image) :
-    """nuage de points, chaque élément est une image, 
+    """nuage de points, chaque ï¿½lï¿½ment est une image, 
     les images sont en noir et blanc, liste de 0 ou 1"""
     
     def __init__ (self, nuage_ppv, rep, nb, extension = "tif") :
-        """initialise le nuage d'images avec un répertoire
+        """initialise le nuage d'images avec un rï¿½pertoire
         qui est l'emplacement des images pour ce nuage, 
-        le nom des images contient une chaîne de caractères suivi 
-        d'un label séparés par un blanc soulignés, 
-        extension est le type de images à charger,
-        on ne considère que les nb premières images,
+        le nom des images contient une chaï¿½ne de caractï¿½res suivi 
+        d'un label sï¿½parï¿½s par un blanc soulignï¿½s, 
+        extension est le type de images ï¿½ charger,
+        on ne considï¿½re que les nb premiï¿½res images,
         nuage est une instance de la classe nuage_point ou nuage_point_laesa"""
                 
         kppv_image.nuage_image.__init__(self, nuage_ppv, rep, nb, extension)
@@ -89,19 +89,19 @@ if __name__ == "__main__" :
     nuage_test = nuage_image_leasa (ppv2, rep_test, nb_test)
     print "nombre de points : ", len (nuage_test)
     
-    print "résultat de la classification"
+    print "rï¿½sultat de la classification"
     erreur      = []
     bienclasse  = []
-    temps1      = time.clock ()
+    temps1      = time.perf_counter()
     good,bad = nuage_app.ppv_nuage (nuage_test, bienclasse, erreur)
-    temps2      = time.clock ()
+    temps2      = time.perf_counter()
     print "---------------------------------------------------------------------------"
     print "temps de traitement en secondes ", temps2 - temps1
     print "good, bad = ", good, bad
     print "taux de classification  : ", float (good) / (good + bad)
-    print "écriture du fichier ", html_file1
+    print "ï¿½criture du fichier ", html_file1
     nuage_app.html_couple (html_file1, bienclasse,   zoom = 4)
-    print "écriture du fichier ", html_file2
+    print "ï¿½criture du fichier ", html_file2
     nuage_app.html_couple (html_file2, erreur,       zoom = 4)
     
 

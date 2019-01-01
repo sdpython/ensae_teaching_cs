@@ -28,20 +28,20 @@ for N in [100,200,500,1000,2000,5000,10000,20000,50000,100000,200000] :
 
             mots.sort()
 
-            debut = time.clock()
+            debut = time.perf_counter()
             for k in cherche :
                 i = dicho(mots, k)
-            fin = time.clock()
+            fin = time.perf_counter()
             print ("dichotomie\t",N,"\t",taille,"\t",(fin - debut)/len(cherche))
             
         if True :
             # recherche dichotomique
             dico = { m:0 for m in mots }
 
-            debut = time.clock()
+            debut = time.perf_counter()
             for k in cherche :
                 i = dico[k]
-            fin = time.clock()
+            fin = time.perf_counter()
             print ("dictionnaire\t",N,"\t",taille,"\t",(fin - debut)/len(cherche))
             
         if True :
@@ -67,18 +67,18 @@ for N in [100,200,500,1000,2000,5000,10000,20000,50000,100000,200000] :
                 
             trie = build_trie(mots)
             
-            debut = time.clock()
+            debut = time.perf_counter()
             for k in cherche :
                 assert lookup(trie, k)
-            fin = time.clock()
+            fin = time.perf_counter()
             print ("trie\t",N,"\t",taille,"\t",(fin - debut)/len(cherche))
             
         if False :
             # recherche simple
-            debut = time.clock()
+            debut = time.perf_counter()
             for k in cherche :
                 i = mots.index(k)
-            fin = time.clock()
+            fin = time.perf_counter()
             print ("recherche simple\t",N,"\t",taille,"\t",(fin - debut)/len(cherche))
 
         

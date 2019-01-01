@@ -89,14 +89,14 @@ def execute_python_scripts(root, df, col_names=None, url=None, eol="/", fLOG=noL
             outs = []
             for py in sorted(store):
                 cmd = '"{0}" "{1}"'.format(sys.executable, py)
-                t1 = time.clock()
+                t1 = time.perf_counter()
                 try:
                     out, err = run_cmd(cmd, wait=True)
                 except Exception as e:
                     out = None
                     err = str(e)
                 out = post_process(out, eol)
-                t2 = time.clock()
+                t2 = time.perf_counter()
                 outs.append({col_out: out, col_err: post_process(err, eol),
                              col_prog: os.path.split(py)[-1], col_time: t2 - t1,
                              col_size: os.stat(py).st_size})

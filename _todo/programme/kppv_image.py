@@ -11,18 +11,18 @@ import random
 import kppv
 import time
 
-# définit une classe héritant de kppv.nuage_points qui surcharge les 
+# dï¿½finit une classe hï¿½ritant de kppv.nuage_points qui surcharge les 
 # fonctions distance et label
 class nuage_point_distance_label (kppv.nuage_points) :
-    """hérite de kppv.nuage_point et surcharge les méthodes :
+    """hï¿½rite de kppv.nuage_point et surcharge les mï¿½thodes :
             - distance
             - label
     """
 
     def distance (self, obj1, obj2) :
         """surcharge de la fonction distance, comme les images sont toutes
-        de dimensions identiques, on peut compter les pixels de couleurs différentes,
-        le résultat est la distance entre deux images"""
+        de dimensions identiques, on peut compter les pixels de couleurs diffï¿½rentes,
+        le rï¿½sultat est la distance entre deux images"""
         if len (obj1) != len (obj2) :
             print "erreur, len (obj1) != len (obj2)"
         d = 0
@@ -36,16 +36,16 @@ class nuage_point_distance_label (kppv.nuage_points) :
     
         
 class nuage_image (object) :
-    """nuage de points, chaque élément est une image, 
+    """nuage de points, chaque ï¿½lï¿½ment est une image, 
     les images sont en noir et blanc, liste de 0 ou 1"""
     
     def __init__ (self, nuage_ppv, rep, nb, extension = "tif") :
-        """initialise le nuage d'images avec un répertoire
+        """initialise le nuage d'images avec un rï¿½pertoire
         qui est l'emplacement des images pour ce nuage, 
-        le nom des images contient une chaîne de caractères suivi 
-        d'un label séparés par un blanc soulignés, 
-        extension est le type de images à charger,
-        on ne considère que les nb premières images,
+        le nom des images contient une chaï¿½ne de caractï¿½res suivi 
+        d'un label sï¿½parï¿½s par un blanc soulignï¿½s, 
+        extension est le type de images ï¿½ charger,
+        on ne considï¿½re que les nb premiï¿½res images,
         nuage est une instance de la classe nuage_point ou nuage_point_laesa"""
         
         def binarise (p) :
@@ -83,7 +83,7 @@ class nuage_image (object) :
 
         
     def image (self, obj) :
-        """reconstruit une image à partir d'un élément"""
+        """reconstruit une image ï¿½ partir d'un ï¿½lï¿½ment"""
         size    = obj [1]
         im      = PIL.Image.new ("RGB", size)
         nb      = len (obj) - 2
@@ -93,8 +93,8 @@ class nuage_image (object) :
         return im
     
     def html_couple (self, fichier, l, zoom = None) :
-        """écrit un fichier html contenant toutes les images mal classées, 
-        à partir de la liste erreur construite par la méthode nuage_points.ppv_nuage"""
+        """ï¿½crit un fichier html contenant toutes les images mal classï¿½es, 
+        ï¿½ partir de la liste erreur construite par la mï¿½thode nuage_points.ppv_nuage"""
         
         # nombre de colonnes maximales
         maxc = 0
@@ -108,7 +108,7 @@ class nuage_image (object) :
         f.table_next ()
         f.text ("label")
         f.table_next ()
-        f.text ("à classer")
+        f.text ("ï¿½ classer")
         f.table_next ()
         for n in xrange (1, maxc) :
             f.text ("label")
@@ -180,19 +180,19 @@ if __name__ == "__main__" :
     nuage_test = nuage_image (ppv2, rep_test, nb_test)
     print "nombre de points : ", len (nuage_test)
     
-    print "résultat de la classification"
+    print "rï¿½sultat de la classification"
     erreur      = []
     bienclasse  = []
-    temps1      = time.clock ()
+    temps1      = time.perf_counter ()
     good,bad = nuage_app.ppv_nuage (nuage_test, bienclasse, erreur)
-    temps2      = time.clock ()
+    temps2      = time.perf_counter ()
     print "---------------------------------------------------------------------------"
     print "temps de traitement en secondes ", temps2 - temps1
     print "good, bad = ", good, bad
     print "taux de classification  : ", float (good) / (good + bad)
-    print "écriture du fichier ", html_file1
+    print "ï¿½criture du fichier ", html_file1
     nuage_app.html_couple (html_file1, bienclasse,   zoom = 4)
-    print "écriture du fichier ", html_file2
+    print "ï¿½criture du fichier ", html_file2
     nuage_app.html_couple (html_file2, erreur,       zoom = 4)
     
 

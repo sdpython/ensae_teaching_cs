@@ -49,12 +49,12 @@ def tous_les_carres_permutation_ligne12_meme_somme( permut = None, pos = 0):
         if permut == None :
             permut = [ i+1 for i in range(9) ]
         for i in range (pos,9) :
-            # on permute les éléments i et pos
+            # on permute les ï¿½lï¿½ments i et pos
             a = permut[i]
             permut[i] = permut[pos]
             permut[pos] = a
 
-            res += tous_les_carres_permutation_ligne12_meme_somme(permut, pos+1)  # changé
+            res += tous_les_carres_permutation_ligne12_meme_somme(permut, pos+1)  # changï¿½
             
             # on effectue la permutation inverse
             a = permut[i]
@@ -63,7 +63,7 @@ def tous_les_carres_permutation_ligne12_meme_somme( permut = None, pos = 0):
         return res
         
 import time
-d = time.clock()    
+d = time.perf_counter()    
 res = tous_les_carres_permutation_ligne12_meme_somme()
-d = time.clock() - d
-print ("nombre de carrés", len(res), " en ", d)
+d = time.perf_counter() - d
+print ("nombre de carrï¿½s", len(res), " en ", d)
