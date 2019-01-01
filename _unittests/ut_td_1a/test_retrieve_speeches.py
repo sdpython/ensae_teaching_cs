@@ -45,7 +45,8 @@ class TestRetrieveSpeeches(ExtTestCase):
                 os.remove(f)
 
         i = 0
-        for i, disc in enumerate(enumerate_speeches_from_elysees()):
+        url = "agenda-decembre-2018"
+        for i, disc in enumerate(enumerate_speeches_from_elysees(url=url)):
             fLOG(i, disc)
             if i >= 1:
                 break

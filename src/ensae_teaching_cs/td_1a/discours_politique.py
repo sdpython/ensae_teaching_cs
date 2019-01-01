@@ -204,12 +204,12 @@ def remove_accent(text):
     return text
 
 
-def get_elysee_speech_from_elysees(title, url="http://www.elysee.fr/"):
+def get_elysee_speech_from_elysees(title, url="https://www.elysee.fr/"):
     """
     Retrieves the text from the :epkg:`Elysees`.
 
     @param      title       title of the document
-    @param      url         weebiste
+    @param      url         website
     @return                 html page
 
     The function tries something like::
@@ -231,12 +231,13 @@ def get_elysee_speech_from_elysees(title, url="http://www.elysee.fr/"):
     return xmlParsingLongestDiv(text)
 
 
-def enumerate_speeches_from_elysees(skip=0):
+def enumerate_speeches_from_elysees(url="agenda", skip=0):
     """
     Enumerates speeches from the :epkg:`Elysees`.
 
-    @param      skip        skip the first one in the list
-    @param      use_json    or json format or xml (json format is incomplete)
+    @param      url         subaddress, url source will be
+                            ``'https://www.elysee.fr/' + url``
+    @param      skip        skip the first *skip* one in the list
     @return                 enumerate dictionaries
 
     .. exref::
@@ -254,7 +255,8 @@ def enumerate_speeches_from_elysees(skip=0):
     streams.
     """
     base = "https://www.elysee.fr/"
-    url = "https://www.elysee.fr/agenda"
+    if not url.startswith("http"):
+        url = base + url
     xml = get_url_content(url)
     reg = re.compile(
         "href=\\\"(.+?/[0-9]{4}/[0-9]{2}/[0-9]{2}/.+?)\\\" class=")

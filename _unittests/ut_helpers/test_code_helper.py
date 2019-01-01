@@ -26,7 +26,7 @@ from src.ensae_teaching_cs.helpers import enumerate_inspect_source_code
 
 class TestCodeHelper(unittest.TestCase):
 
-    def test_size_object(self):
+    def test_size_object_in_folder(self):
         folder = os.path.abspath(os.path.dirname(__file__))
         patterns = "from src.ensae_teaching_cs[._a-zA-Z0-9]* import ([a-zA-Z0-9_]+)"
         res = []

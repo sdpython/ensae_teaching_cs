@@ -43,5 +43,9 @@ def enumerate_inspect_source_code(folder, file_pattern=".*[.]((py)|(ipynb))$",
     if nb == 0:
         found = os.listdir(folder)
         founds = "\n".join(found) if found else "EMPTY"
-        raise FileNotFoundError(
-            "No file found in folder '{0}' with pattern '{1}' (neg='{2}')\n--IN--\n{3}".format(folder, file_pattern, neg_pattern, founds))
+        pos_found = list(explore_folder_iterfile(
+            folder, pattern=file_pattern, fullname=fullname))
+        pos_founds = "\n".join(pos_found) if pos_found else "EMPTY"
+        mes = "No file found in folder '{0}' with pattern '{1}' (neg='{2}')\n--IN--\n{3}\n--IN--\n{4}"
+        raise FileNotFoundError(mes.format(
+            folder, file_pattern, neg_pattern, founds, pos_founds))
