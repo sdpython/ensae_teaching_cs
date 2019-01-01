@@ -147,6 +147,9 @@ numériques obtenus et faire au moins une ou deux allusions à la façon dont ce
 * description des résultats obtenus
 * prolongements et applications envisageables
 
+**Le code rendu doit contenir au moins un test unitaire.**
+Voir :ref:`td1aunittestcicorrectionrst`.
+
 Que faut-il en attendre ?
 -------------------------
 

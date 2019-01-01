@@ -75,7 +75,8 @@ class TestRst2HtmlDeps(ExtTestCase):
                          csharpyml='cspyml', Python='Python', ensae_teaching_dl='endl',
                          matplotlib="mpl", pandas="pds", statsmodels="stm",
                          numpy="np", xgboost="xgb", XGBoost="xgb", mathenjeu='mej',
-                         antiseches_ml_basic_plot_binary_classification="chsh")
+                         antiseches_ml_basic_plot_binary_classification="chsh",
+                         lecture_citation="lectcit", botadi="botadi")
             links["scikit-learn"] = "skl"
             links.update({'ML.net': 'mlnet', 'C#': 'C#'})
             for full in fulls:
