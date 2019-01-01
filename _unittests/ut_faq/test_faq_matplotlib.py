@@ -36,13 +36,13 @@ class TestFaqMatplotlib(ExtTestCase):
             OutputPrint=__name__ == "__main__")
         fix_tkinter_issues_virtualenv()
         import matplotlib.pyplot as plt
-        filter = {"NewYork": "NY", "Chicago": "CH",
-                  "SanFrancisco": "SF", "Seattle": "Sea"}
+        filters = {"NewYork": "NY", "Chicago": "CH",
+                   "SanFrancisco": "SF", "Seattle": "Sea"}
         temp = get_temp_folder(__file__, "temp_american_cities")
         data = os.path.join(temp, "..", "data", "american_cities.txt")
         df = pandas.read_csv(data)
         df["Longitude"] = -df["Longitude"]
-        df["City"] = df["City"].apply(lambda v: filter.get(v, ""))
+        df["City"] = df["City"].apply(lambda v: filters.get(v, ""))
         df = df[df.Latitude < 52]
         df = df[df.Longitude > -130].copy()
         fig, ax = graph_cities(df, markersize=3, fontcolor=(0, 1.0, 0), fontsize='40',

@@ -23,7 +23,7 @@ except ImportError:
 
 
 def _run_cmd_filter(name):
-    if "faq_matplotlib.py" in name:
+    if "faq_matplotlib.py" in name and "test_faq" not in name:
         return True
     print("*", name)
     return False
@@ -36,23 +36,11 @@ class TestCodeStyle(ExtTestCase):
         "skip pylint"
         self.assertFalse(src is None)
 
-    def run_cmd_filter(self, name):
-        """
-        Switch to a process as pylint makes python crashes
-        on a virtual environment on linux.
-        """
-        if not hasattr(self, "memo"):
-            self.memo = {}
-        if sys.platform.startswith("win"):
-            res = False
-        elif "_venv" in sys.executable:
-            res = True
-        else:
-            res = False
-        self.memo[name] = res
-        return res
-
     def test_style_src(self):
+        fLOG(
+            __file__,
+            self._testMethodName,
+            OutputPrint=__name__ == "__main__")
         thi = os.path.abspath(os.path.dirname(__file__))
         src_ = os.path.normpath(os.path.join(thi, "..", "..", "src"))
 
@@ -129,7 +117,6 @@ class TestCodeStyle(ExtTestCase):
 
         check_pep8(src_, fLOG=fLOG, skip=skip, verbose=False,
                    run_cmd_filter=_run_cmd_filter,
-                   # run_cmd_filter=self.run_cmd_filter,
                    pylint_ignore=('C0103', 'C1801', 'R0201', 'R1705', 'W0108', 'W0613',
                                   'C0111', 'R1702', 'C0200', 'W0703', 'W0223',
                                   'W020', 'W0212', 'C0123', 'C0302', 'W0221',
@@ -137,6 +124,10 @@ class TestCodeStyle(ExtTestCase):
                                   'R1711', 'R1714', 'W0107'))
 
     def test_style_test(self):
+        fLOG(
+            __file__,
+            self._testMethodName,
+            OutputPrint=__name__ == "__main__")
         thi = os.path.abspath(os.path.dirname(__file__))
         test = os.path.normpath(os.path.join(thi, "..", ))
         skip = ["src' imported but unused",
@@ -182,7 +173,6 @@ class TestCodeStyle(ExtTestCase):
 
         check_pep8(test, fLOG=fLOG, neg_pattern="temp_.*", skip=skip,
                    verbose=False, run_cmd_filter=_run_cmd_filter,
-                   # run_cmd_filter=self.run_cmd_filter,
                    pylint_ignore=('C0103', 'C1801', 'R0201', 'R1705', 'W0108', 'W0613',
                                   'C0111', 'C0200', 'C0122', "W0123", 'W0703',
                                   'W0212', 'W0201', 'R1711', 'R1714', 'W0107'))
