@@ -23,6 +23,8 @@ except ImportError:
 
 
 def _run_cmd_filter(name):
+    if "faq_matplotlib.py" in name:
+        return True
     print("*", name)
     return False
 
