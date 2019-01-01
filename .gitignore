@@ -531,8 +531,7 @@ _doc/notebooks/td2a_ml/sentiment labelled sentences/amazon_cells_labelled.txt
 _doc/notebooks/notebook_eleves/2018-2019/images/lemonde2
 _doc/notebooks/notebook_eleves/2018-2019/images/aznavour
 _doc/notebooks/notebook_eleves/2018-2019/images/lemonde
-
-_doc/notebooks/2a/model.onnx
-_doc/notebooks/2a/model_rf.onnx
+_doc/notebooks/2a/model*.onnx
 _doc/notebooks/td2a_eco2/spooky.csv
 _todo/data/court_chemin/graph.gv
+_doc/notebooks/notebook_eleves/2018-2019/images/personne
