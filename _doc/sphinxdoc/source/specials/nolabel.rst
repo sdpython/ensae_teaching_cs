@@ -167,6 +167,8 @@ pour un exemple de code).
     :alt: image extraite de *Adversarial Autoencoders*
     :scale: 80%
 
+    Autoencoder
+
     Image extraite de
     `Adversarial Autoencoders (with Pytorch) <https://blog.paperspace.com/adversarial-autoencoders-with-pytorch/>`_.
 
@@ -187,6 +189,8 @@ mais aussi à reconstuire *x* à partir d'une image bruitée de *x*.
 .. figure:: nolabelimg/sdae.png
     :width: 400
     :alt: Image extraite de *Stacked Denoising Autoencoders: Learning Useful Representations in a Deep Network with a Local Denoising Criterion*.
+
+    Autoencoder
 
     Image extraite de
     `Stacked Denoising Autoencoders: Learning Useful Representations in a Deep Network with a Local Denoising Criterion <http://www.jmlr.org/papers/volume11/vincent10a/vincent10a.pdf>`_.
@@ -294,6 +298,8 @@ le modèle est transformé pour faire apparaître une variable cachée qui la re
     :alt: Image extraite de *Adversarial Autoencoders*.
     :scale: 80%
 
+    Autoencoder
+
     Image extraite de `Adversarial Autoencoders <https://arxiv.org/abs/1511.05644>`_.
 
 L'apprentissage est modifié de telle sorte que la distribution de cette variable cachée
@@ -342,6 +348,8 @@ nouvelles variables.
 .. figure:: nolabelimg/tl.png
     :width: 300
     :alt: Illustration du *transfer learning*.
+
+    Transfer learning
 
     On garde les premières couches spécialisées dans le traitement de l'image.
     Elles extraient des informations pertinentes pour la dernière couche

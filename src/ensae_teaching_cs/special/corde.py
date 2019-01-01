@@ -166,15 +166,14 @@ def pygame_simulation(pygame, first_click=False, folder=None,
     @param      fLOG            logging function
 
     @param          nb          nombre de points
-    @param          p1          coordoonnées du premier point (fixe)
-    @param          p2          coordoonnées du dernier point (fixe)
     @param          m           masse de la corde,
                                 répartie entre tous les points
     @param          k           raideur de l'élastique
     @param          g           intensité de l'apesanteur,
                                 valeur positive
     @param          f           vitesse de freinage
-    @param          l           longueur de la corde
+    @param          dt          petit temps
+    @param          step        marche
     @param          flags       see `pygame.display.set_mode <https://www.pygame.org/docs/ref/display.html#pygame.display.set_mode>`_
     @param          fLOG        logging function
 

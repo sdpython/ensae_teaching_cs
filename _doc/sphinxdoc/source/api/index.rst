@@ -9,4 +9,4 @@ API
     data
     exos
     faq
-    tools
+

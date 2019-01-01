@@ -301,7 +301,13 @@ def pygame_simulation(pygame, folder=None, size=(800, 500), nb=200,
     @param      delay           delay between two tries
     @param      flags           see `pygame.display.set_mode <https://www.pygame.org/docs/ref/display.html#pygame.display.set_mode>`_
     @param      fLOG            logging function
-
+    @param      fs              paramètres
+    @param      max_iter        nombre d'itérations maximum
+    @param      alpha           paramètre alpha
+    @param      beta            paramètre beta
+    @param      dist_ratio      ratio distance
+    @param      tour            nombre de tours
+    @param      nb              nombre de points
 
     La simulation ressemble à ceci :
 
