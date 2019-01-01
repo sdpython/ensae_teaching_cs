@@ -269,3 +269,6 @@ def enumerate_speeches_from_elysees(url="agenda", skip=0):
         content = get_elysee_speech_from_elysees(link)
         if content is not None:
             yield dict(link=link, text=content)
+    if len(links) == 0:
+        raise ValueError("Unable to extract links from url='{0}'\npattern='{1}'\n-----\n{2}".format(
+            url, reg, xml))
