@@ -246,7 +246,7 @@ def enumerate_speeches_from_elysees(url="agenda", skip=0):
 
         ::
 
-            for i,disc in enumerate(enumerate_speeches_from_elysees()):
+            for i, disc in enumerate(enumerate_speeches_from_elysees()):
                 print(disc)
 
     Others links can be used such as
