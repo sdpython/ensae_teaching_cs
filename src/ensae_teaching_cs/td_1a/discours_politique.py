@@ -8,6 +8,7 @@
 import re
 import html.parser
 import html.entities as htmlentitydefs
+import warnings
 from pyquickhelper.loghelper import get_url_content
 
 
@@ -226,7 +227,8 @@ def get_elysee_speech_from_elysees(title, url="https://www.elysee.fr/"):
         full = url + "/" + link + "/"
     try:
         text = get_url_content(full)
-    except Exception:
+    except Exception as e:
+        warnings.warn(str(e))
         return None
     return xmlParsingLongestDiv(text)
 
