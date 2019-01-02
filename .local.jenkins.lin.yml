@@ -42,6 +42,6 @@ after_script:
 
 documentation:
   # The first run of the documentation may fail, the second goes one.
-  - if [ ${NAME} == "UT" ] then $PYINT -u setup.py build_sphinx fi
+  - if [ ${NAME} == "UT" ] then $PYINT -u setup.py build_sphinx &> sphinx_doc.log fi
   - if [ ${NAME} == "DOC1" ] then cp -R -f _doc/sphinxdoc/build/html dist/html fi
   - if [ ${NAME} == "DOC3" ] then cp -R -f _doc/sphinxdoc/build3/html dist/html3 fi
