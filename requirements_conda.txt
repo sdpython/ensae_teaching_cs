@@ -28,4 +28,5 @@ Sphinx>=1.7
 statsmodels
 sympy
 toolz
+ujson
 xarray
