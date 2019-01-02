@@ -726,6 +726,8 @@ class ProjectsRepository:
             for _ in nolink_if:
                 if _ in url:
                     return False
+            if ".ipynb_checkpoints" in url:
+                return False
             return True
 
         def clean_url(u):
@@ -791,7 +793,8 @@ class ProjectsRepository:
                     if rel == dest:
                         raise Exception("weird\n{0}\n{1}".format(rel, dest))
                     ssize = format_size(os.stat(name).st_size)
-                    if "__MACOSX" not in rel and "__MACOSX" not in dest:
+                    if "__MACOSX" not in rel and "__MACOSX" not in dest and \
+                            ".ipynb_checkpoints" not in dest and ".ipynb_checkpoints" not in rel:
                         created_files.append((rel, dest, ssize))
                 else:
                     mail = os.path.split(name)[-1]
@@ -822,7 +825,8 @@ class ProjectsRepository:
             for date, from_, url, domain, last in mlinks:
                 if url in done:
                     continue
-                if "__MACOSX" in url or "__MACOSX" in last:
+                if "__MACOSX" in url or "__MACOSX" in last or \
+                        ".ipynb_checkpoints" in last or ".ipynb_checkpoints" in url:
                     continue
                 links.append((date, from_, url, domain, last))
                 done[url] = True
