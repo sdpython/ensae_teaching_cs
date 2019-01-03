@@ -5,6 +5,7 @@
 import sys
 import os
 import unittest
+import warnings
 from pyquickhelper.loghelper.flog import fLOG
 from pyquickhelper.pycode import get_temp_folder
 from pyquickhelper.helpgen import rst2html
