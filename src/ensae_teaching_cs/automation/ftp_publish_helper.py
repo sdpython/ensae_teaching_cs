@@ -281,7 +281,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                 if transfer and os.path.exists(root):
                     break
             if transfer and not os.path.exists(root):
-                if exc and module != "ensae_teaching_cs":
+                if exc:
                     p = os.path.abspath(location %
                                         (module, module, suffix[0], lay[0]))
                     raise FileNotFoundError(
@@ -300,29 +300,43 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
 
         if module == "ensae_teaching_cs":
             lay = [_ for _ in layout if _[0] == "html"][0]
-            root1 = root.replace("_UT_", "_DOC1_")
-            if transfer:
-                if not os.path.exists(root1):
-                    if exc:
-                        raise FileNotFoundError(root1)
-                    else:
-                        pass
+            if transfer and not os.path.exists(root):
+                if exc:
+                    raise FileNotFoundError(root)
                 else:
-                    project = dict(status_file=os.path.join(folder_status, "status_doc1_%s.txt" % module),
-                                   local=root1, root_local=root1,
-                                   root_web=(rootw % (module, lay[1])).replace("_no_clean", ""))
-                    projects.append(project)
+                    continue
 
-            root3 = root.replace("_UT_", "_DOC3_").replace("html", "html3")
-            if transfer:
-                if not os.path.exists(root3):
-                    if exc:
-                        raise FileNotFoundError(root3)
-                else:
-                    project = dict(status_file=os.path.join(folder_status, "status_doc3_%s.txt" % module),
-                                   local=root3, root_local=root3,
-                                   root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
-                    projects.append(project)
+            local = root.replace("\\html", "\\html3")
+            if os.path.exists(local):
+                project = dict(status_file=os.path.join(folder_status, "status_3_%s.txt" % module),
+                               local=local,
+                               root_local=root.replace("\\html", "\\html3"),
+                               root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
+                projects.append(project)
+            else:
+                root1 = root.replace("_UT_", "_DOC1_")
+                if transfer:
+                    if not os.path.exists(root1):
+                        if exc:
+                            raise FileNotFoundError(root1)
+                        else:
+                            pass
+                    else:
+                        project = dict(status_file=os.path.join(folder_status, "status_doc1_%s.txt" % module),
+                                       local=root1, root_local=root1,
+                                       root_web=(rootw % (module, lay[1])).replace("_no_clean", ""))
+                        projects.append(project)
+
+                root3 = root.replace("_UT_", "_DOC3_").replace("html", "html3")
+                if transfer:
+                    if not os.path.exists(root3):
+                        if exc:
+                            raise FileNotFoundError(root3)
+                    else:
+                        project = dict(status_file=os.path.join(folder_status, "status_doc3_%s.txt" % module),
+                                       local=root3, root_local=root3,
+                                       root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
+                        projects.append(project)
 
         elif module == "python3_module_template":
             lay = [_ for _ in layout if _[0] == "html"][0]
