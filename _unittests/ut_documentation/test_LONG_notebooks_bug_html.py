@@ -23,21 +23,24 @@ except ImportError:
     import src
 
 
-class TestLONGNotebookBug(unittest.TestCase):
+class TestLONGNotebookBugHtml(unittest.TestCase):
 
-    def test_notebook_latex_problems(self):
+    def test_notebook_html_problems(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         path = os.path.abspath(os.path.split(__file__)[0])
         fold = os.path.normpath(os.path.join(
-            path, "..", "..", "_doc", "notebooks", "td2a_ml"))
+            path, "..", "..", "_doc", "notebooks", "td2a_eco2"))
         nbs = [os.path.join(fold, _)
-               for _ in os.listdir(fold) if _.endswith(".ipynb") and "problems" in _]
+               for _ in os.listdir(fold) if _.endswith(".ipynb") and "pocket" in _ and "correction" in _]
         nbs.sort()
-        formats = ["pdf", "ipynb", "html", "python", "rst", "docx"]
-        temp = get_temp_folder(__file__, "temp_nb_td2A_ml_bug_latex")
+        if len(nbs) == 0:
+            raise ValueError("No notebooks")
+        formats = ["pdf", "ipynb", "html", "python", "rst"]
+
+        temp = get_temp_folder(__file__, "temp_nb_td2A_eco2_bug_html")
 
         res = process_notebooks(nbs, temp, temp, formats=formats)
         fLOG("*****", len(res))

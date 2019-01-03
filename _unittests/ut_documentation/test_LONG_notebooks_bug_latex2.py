@@ -5,10 +5,9 @@
 import sys
 import os
 import unittest
-import warnings
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.helpgen import process_notebooks
-from pyquickhelper.pycode import is_travis_or_appveyor, get_temp_folder
+from pyquickhelper.pycode import get_temp_folder
 
 try:
     import src
@@ -38,11 +37,6 @@ class TestLONGNotebookBug2(unittest.TestCase):
                for _ in os.listdir(fold) if _.endswith(".ipynb") and "TD2A_eco_API_SNCF_corrige" in _]
         nbs.sort()
         formats = ["pdf", "ipynb", "html", "python", "rst", "docx"]
-
-        if is_travis_or_appveyor() in ('appveyor', 'travis'):
-            warnings.warn(
-                "travis, appveyor, unable to test %s" % self._testMethodName)
-            return
 
         temp = get_temp_folder(__file__, "temp_nb_td2A_eco_bug_latex2")
 

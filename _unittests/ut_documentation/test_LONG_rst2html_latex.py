@@ -4,10 +4,9 @@
 
 import sys
 import os
-import warnings
 import unittest
 from pyquickhelper.loghelper.flog import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
+from pyquickhelper.pycode import get_temp_folder
 from pyquickhelper.helpgen import rst2html
 
 
@@ -32,10 +31,6 @@ class TestRst2HtmlLatex(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-
-        if is_travis_or_appveyor():
-            # it requires latex
-            return
 
         self.assertTrue(src is not None)
 
