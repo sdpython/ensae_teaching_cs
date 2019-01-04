@@ -306,11 +306,11 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                 else:
                     continue
 
-            local = root.replace("\\html", "\\html3")
+            local = root.replace("\\build", "\\build3")
             if os.path.exists(local):
                 project = dict(status_file=os.path.join(folder_status, "status_3_%s.txt" % module),
                                local=local,
-                               root_local=root.replace("\\html", "\\html3"),
+                               root_local=root.replace("\\build", "\\build3"),
                                root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
                 projects.append(project)
             else:
@@ -347,8 +347,8 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                     continue
 
             project = dict(status_file=os.path.join(folder_status, "status_2_%s.txt" % module),
-                           local=root.replace("\\html", "\\html2"),
-                           root_local=root.replace("\\html", "\\html2"),
+                           local=root.replace("\\build", "\\build2"),
+                           root_local=root.replace("\\build", "\\build2"),
                            root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx2"))
             projects.append(project)
 

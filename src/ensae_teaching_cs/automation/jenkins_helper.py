@@ -85,7 +85,6 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None, platform=None)
         modules = default_jenkins_jobs()
         text = [str(m) for m in modules]
         print("\\n".join(text))
-
     """
     if platform is None:
         platform = sys.platform
