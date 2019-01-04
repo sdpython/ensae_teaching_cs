@@ -242,7 +242,7 @@ Séance 2 Stat
     * :ref:`td1aunittestcirst`
     * :ref:`td1aunittestcicorrectionrst`
 
-.. _l-route2017-exo3:
+.. _l-route2017-eco3:
 
 Séance 3 Eco
 ^^^^^^^^^^^^
@@ -343,14 +343,9 @@ Séance 6 Eco
 Séance 6 Maths
 ^^^^^^^^^^^^^^
 
-* deep learning : notebooks
-    * :ref:`100LogisticIRISrst`
-    * :ref:`110PerceptronIrisrst`
-    * :ref:`200PerceptronMNISTrst`
-    * :ref:`210ConvolutionMNISTrst`
-    * :ref:`300ConvolutionCIFAR10rst`
-    * :ref:`mldeeppythonrst`
-    * `Transfer Learning <https://github.com/sdpython/2017_deeplearning_demo/blob/master/Fine_Tuning_Deep_CNNs_with_GPU_rendered.ipynb>`_ (Olivier Grisel)
+* deep learning :
+  `Notebook, deep learning avec pytorch <http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/chapters/index.html>`_,
+  `Transfer Learning <https://github.com/sdpython/2017_deeplearning_demo/blob/master/Fine_Tuning_Deep_CNNs_with_GPU_rendered.ipynb>`_ (Olivier Grisel)
 * deep learning : présentations
     * `Introduction au Deep Learning <https://github.com/sdpython/ensae_teaching_cs/blob/master/_doc/sphinxdoc/source/specials/DEEP%20LEARNING%20FOR%20ENSAE.pdf>`_
     * :ref:`l-nolabel`
@@ -376,7 +371,7 @@ Séance 7 Maths
 
 * séries temporelles
     * :ref:`mltimeseriesbaserst`
-    * :ref:`mapreducetimeseriesrst`
+    * `Séries temporelles et map reduce <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/map_reduce_timeseries.html>`_
     * :ref:`td2atimeseriesrst`
     * :ref:`td2atimeseriescorrectionrst`
 * Machine Learning éthique

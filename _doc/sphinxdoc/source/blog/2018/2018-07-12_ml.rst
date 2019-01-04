@@ -1,6 +1,6 @@
 
 .. blogpost::
-    :title: Visualisation de mmodèles
+    :title: Visualisation de modèles
     :keywords: netron
     :date: 2018-07-12
     :categories: articles

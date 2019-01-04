@@ -368,7 +368,8 @@ Map Reduce
 Map Reduce en pratique
 ++++++++++++++++++++++
 
-* Itérateurs, lien avec le SQL (voir :ref:`mapreducetimeseriesrst`)
+* Itérateurs, lien avec le SQL
+  (voir `Séries temporelles et map reduce <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/map_reduce_timeseries.html>`_)
 * Distribution à base de hash (voir :ref:`hashdistributionrst`)
 * `Mapper, Reducer, Combiner, Partitionner <https://developer.yahoo.com/hadoop/tutorial/module4.html>`_
 * Graphe d'exécution, synchronisation - *Map Reduce Flow Chart*

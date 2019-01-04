@@ -49,19 +49,18 @@ Les exercices doivent être choisis sur le site
     * - 26/9
       - :ref:`numpy et le calcul matriciel <td2acenoncesession2Arst>`,
         :ref:`pandas, dataframe et premiers graphes <td2acenoncesession1rst>`,
-      - :ref:`visualisation <l-visualisation-2A>` (voir :ref:`l-note-2A-plan`)
+      - :ref:`l-visualisation-td2a` (voir :ref:`l-note-2A-plan`)
         :ref:`l-javascript-principe-base-2a`
       - :ref:`numpy et le calcul matriciel <td2acenoncesession2Arst>`
       - :ref:`pandas, dataframe et premiers graphes <td2acenoncesession1rst>`
     * - 3/10
-      - :ref:`SQL <l-sql-principe-base-2a>`,
-        :ref:`SQL <Python-Logique-SQLrst>`, :ref:`td2acenoncesession5rst`,
+      - :ref:`SQL <l-ml2a-sql>`, :ref:`td2acenoncesession5rst`,
         :ref:`traitement big data, itérateur <l-cluster-non-struct-2a>`,
         :ref:`dask <seance5daskrst>`,
       - :ref:`td2asomenlprst`, :ref:`td2abigdatamemoryrst`
-      - :ref:`SQL <l-sql-principe-base-2a>`, :ref:`SQL lien avec pandas <Python-Logique-SQLrst>`,
+      - :ref:`SQL lien avec pandas <Python-Logique-SQLrst>`,
         :ref:`l-donnees-struct-sql-2a`, :ref:`td2aecoexercicedefindeseancerst`
-      - :ref:`visualisation <l-visualisation-2A>`,
+      - :ref:`l-visualisation-td2a`,
         :ref:`td2avisualisationrst`
     * - 10/10
       - :ref:`l-2a-cplusplus-para-serie`

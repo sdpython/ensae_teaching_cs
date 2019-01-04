@@ -49,11 +49,8 @@ qgrid
 semantic_version
 seasonal
 shapely
-sphinxjp.themes.basicstrap
-sphinxjp.themes.sphinxjp
-sphinx_materialdesign_theme
+sphinx_bootstrap_theme
 sphinx_rtd_theme
-hbp_sphinx_theme
 tables
 toolz
 tkinterquickhelper

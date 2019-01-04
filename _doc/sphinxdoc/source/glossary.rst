@@ -295,7 +295,7 @@ Glossaire
     Pokemon
         C'est un jeu qui est régulièrement choisi par les élèves en tant que projet information.
         `TP: Pokemon, attrappez-les tous ! <https://openclassrooms.com/courses/apprenez-la-programmation-avec-scala/tp-pokemon-attrappez-les-tous>`_,
-        voir aussi :ref:`Site Web avec des Pokemons <TD2AEcoWebScrapingenoncerst>`.
+        voir aussi :ref:`Site Web avec des Pokemons <TD2AEcoWebScrapingrst>`.
 
     PR
         voir Pull Request

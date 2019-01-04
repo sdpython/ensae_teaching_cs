@@ -47,7 +47,7 @@ Exemple avec la fonction `XGDMatrixCreateFromFile <https://github.com/dmlc/xgboo
 Il est préférable de connaître le C/C++ pour comprendre pourquoi les types Python et C sont
 différentes ou encore ce que veut `ctypes.byref <https://docs.python.org/3.5/library/ctypes.html#ctypes.byref>`_.
 
-.. inde:: cython
+.. index:: cython
 
 C++ avec Cython
 +++++++++++++++

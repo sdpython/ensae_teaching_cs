@@ -18,8 +18,7 @@ Inférer les trajectoirs de vélo vélib
 
 C'était le sujet de la première coding party que personne
 n'est vraiment arrivé à conclure. Avec un peu plus de temps, qui sait ?
-
-:ref:`l-codingparty1`
+Voir aussi `Déterminer la vitesse moyenne des vélib <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/notebooks/velib_trajectories.html>`_.
 
 .. _l-data-nuage:
 

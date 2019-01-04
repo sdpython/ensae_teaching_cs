@@ -169,7 +169,6 @@ En diagonal
     * `Résumé de la syntaxe Python <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_resume/python_sheet.html>`_
 * Lectures
     * :ref:`Articles, Références, Blog <l-information>`
-    * :ref:`l-codingparty`
     * :ref:`blog <ap-main-0>` de ce cours
     * :ref:`code associé à ce cours <modindex>`
     * :ref:`l-ressources`
