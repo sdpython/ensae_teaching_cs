@@ -36,3 +36,7 @@ de clustering mais on cherche aussi à en déterminer le centre ou encore
 * `Discovering the hidden community structure of public transportation networks <https://arxiv.org/pdf/1801.03857.pdf>`_
   (article plutôt didactique)
 * `Python implementation of Newman's spectral methods to maximize modularity <https://github.com/zhiyzuo/python-modularity-maximization>`_
+
+*Modules*
+
+* `python-louvain <https://github.com/taynaud/python-louvain>`_
