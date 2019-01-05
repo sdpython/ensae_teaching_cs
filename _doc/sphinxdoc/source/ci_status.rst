@@ -59,7 +59,7 @@ Tableau de bord et statut des dépendances
             :target: https://travis-ci.org/sdpython/botadi
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/5qqqxtf4qgab90ec?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/actuariat-python
+            :target: https://ci.appveyor.com/project/sdpython/botadi
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/botadi/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/botadi/tree/master
