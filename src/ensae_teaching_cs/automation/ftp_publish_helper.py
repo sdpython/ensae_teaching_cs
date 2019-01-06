@@ -271,7 +271,8 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
 
     projects = []
     for module in modules:
-        fLOG("[ensae_teaching_cs] PUBLISH '{0}' - layout '{1}'".format(module, layout))
+        fLOG(
+            "[ensae_teaching_cs] PUBLISH '{0}' - layout '{1}'".format(module, layout))
         for lay in layout:
             for suf in suffix:
                 root = os.path.abspath(location %
@@ -304,7 +305,8 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                 else:
                     continue
 
-            local = root.replace("\\build", "\\build3").replace("\\html", "\\html3")
+            local = root.replace("\\build", "\\build3").replace(
+                "\\html", "\\html3")
             fLOG("[ensae_teaching_cs] checking folder '{0}'".format(local))
             fLOG("[ensae_teaching_cs] root is '{0}'".format(root))
             if os.path.exists(local):
@@ -347,7 +349,8 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                 else:
                     continue
 
-            local = root.replace("\\build", "\\build2").replace("\\dist", "\\dist2")
+            local = root.replace("\\build", "\\build2").replace(
+                "\\dist", "\\dist2")
             fLOG("[python3_module_template] ADD '{0}'".format(local))
             fLOG("[python3_module_template] root is '{0}'".format(root))
             project = dict(status_file=os.path.join(folder_status, "status_2_%s.txt" % module),
