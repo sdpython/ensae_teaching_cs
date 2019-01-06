@@ -271,9 +271,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
 
     projects = []
     for module in modules:
-
-        fLOG("  +", module, " -- ", layout)
-
+        fLOG("[ensae_teaching_cs] PUBLISH '{0}' - layout '{1}'".format(module, layout))
         for lay in layout:
             for suf in suffix:
                 root = os.path.abspath(location %
@@ -307,13 +305,16 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                     continue
 
             local = root.replace("\\build", "\\build3")
+            fLOG("[ensae_teaching_cs] checking folder '{0}'".format(local))
             if os.path.exists(local):
+                fLOG("[ensae_teaching_cs] found '{0}'".format(local))
                 project = dict(status_file=os.path.join(folder_status, "status_3_%s.txt" % module),
                                local=local,
                                root_local=root.replace("\\build", "\\build3"),
                                root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
                 projects.append(project)
             else:
+                fLOG("[ensae_teaching_cs] looking into DOC1, DOC3")
                 root1 = root.replace("_UT_", "_DOC1_")
                 if transfer:
                     if not os.path.exists(root1):
