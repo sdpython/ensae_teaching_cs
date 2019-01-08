@@ -19,7 +19,7 @@ install:
   - export DISPLAY=localhost:0.0
 
 script:
-  - { CMD: "$PYINT -u setup.py unittests -g \".*((http)|(SKIP)|(LONG)|(GUI)|(cvxopt)|(theano)|(code_style)).*\"", NAME: "UT", TIMEOUT: 3600, CLEAN: 0 }  # timeout is 3600 for the documentation
+  - { CMD: "$PYINT -u setup.py unittests -g \".*((http)|(SKIP)|(LONG)|(GUI)|(cvxopt)|(theano)|(code_style)).*\"", NAME: "UT", TIMEOUT: 3600, CLEAN: "0" }  # timeout is 3600 for the documentation
   - { CMD: "$PYINT -u setup.py unittests -e \".*code_style.*\"", NAME: "UT_STYLE" }
   - { CMD: "$PYINT -u setup.py unittests -e \".*(http).*\"", NAME: "UT_HTTP" }
   - { CMD: "$PYINT -u setup.py unittests -e .*LONG.* -g \".*((internet)|(cvxopt)|(notebook_eleves)).*\"", NAME: "UT_LONG", TIMEOUT: 3600 }
