@@ -60,7 +60,7 @@ class TestHelpGenStatHelper(unittest.TestCase):
         # self.assertTrue(counts.get(None, 0) > 0)
         self.assertTrue(counts["title"] > 0)
         self.assertTrue(len(nbfound) > 8)
-        self.assertIn("td_note_2015.ipynb", nbfound)
+        self.assertIn("code_multinomial.ipynb", nbfound)
         # self.assertTrue(counts.get("refn", 0) > 0)
         # self.assertTrue(counts.get("toctree", 0) > 0)
 
