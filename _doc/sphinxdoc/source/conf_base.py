@@ -87,6 +87,7 @@ epkg_dictionary.update({
 # packages and links
 
 epkg_dictionary.update({
+    'API REST': "https://en.wikipedia.org/wiki/Representational_state_transfer",
     "ACP": 'https://fr.wikipedia.org/wiki/Analyse_en_composantes_principales',
     "Anaconda": 'https://www.continuum.io/downloads',
     "anaconda": 'https://www.continuum.io/downloads',
@@ -121,6 +122,7 @@ epkg_dictionary.update({
     "ensae_teaching_dl": 'http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/index.html',
     "ENSAE": 'http://www.ensae.fr/',
     'Excel': 'https://fr.wikipedia.org/wiki/Microsoft_Excel',
+    'expressions régulières': 'https://fr.wikipedia.org/wiki/Expression_r%C3%A9guli%C3%A8re',
     "falcon": 'https://falconframework.org/',
     "FastText": 'https://fasttext.cc/',
     'flake8': 'http://flake8.pycqa.org/en/latest/',
@@ -197,7 +199,9 @@ epkg_dictionary.update({
     "Scikit.ML": 'https://github.com/xadupre/machinelearningext',
     "SciTE": 'http://www.scintilla.org/SciTE.html',
     "Scipy": 'https://www.scipy.org/',
+    'scraping': 'https://fr.wikipedia.org/wiki/Web_scraping',
     "seaborn": 'https://seaborn.pydata.org/',
+    'selenium': 'https://selenium-python.readthedocs.io/',
     'spacy': 'https://spacy.io/',
     "spark": 'https://spark.apache.org/',
     "Spark": 'https://spark.apache.org/',

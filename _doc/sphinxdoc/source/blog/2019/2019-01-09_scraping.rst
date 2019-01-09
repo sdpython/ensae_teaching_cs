@@ -1,0 +1,42 @@
+
+.. blogpost::
+    :title: Exercices de scrapping
+    :keywords: exercice
+    :date: 2019-01-09
+    :categories: exercice
+
+    Le site contient quelques notebooks à propos du :epkg:`scraping`.
+    Je distingue souvent deux niveaux de difficultés. Le plus simple
+    est d'utiliser une :epkg:`API REST`. On récupère alors des informations
+    formatées prêtes à être utilisées. Ces API sont souvent stables
+    mais nécessitent de s'authentifier.
+
+    * :ref:`TD2AecolesAPIrst`
+    * :ref:`TD2AEcoWebScrapingrst`
+    * :ref:`TD2AEcoWebScrapingcorrigerst`
+
+    Lorsque ces API n'existent pas, on peut alors
+    récupérer le contenu de pages HTML mais il faut se débrouiller
+    pour extraire le contenu intéressant des pages le plus souvent
+    avec des :epkg:`expressions régulières`.
+
+    * :ref:`2018-10-02scrapingrecupererimagesrst`
+
+    Ca marche plutôt bien si ce n'est que ce n'est pas très
+    stables, les sites ont tendance à mettre à jour leurs
+    styles souvent ce qui nécessite quelques mises à jour
+    d'expressions régulières si on souhaite mettre en place
+    un processus régulier. Les sites se protègent également
+    contre les adresses IP qui les scrapent trop fréquemment.
+    Avec quelques règles simples, il est possible de distinguer
+    un humain d'un robot qui récupère un contenu.
+
+    Enfin, la dernière difficulté vient du :epkg:`javascript`
+    qui change le contenu de la page après son chargement.
+    Il faut donc exécuter ce code si on souhaite récupérer
+    un contenu tel qu'il est affiché. Ce n'est pas le plus
+    évident mais surtout ça ralentit beaucoup la récupération
+    des données. Pour ce faire, le plus simple est d'utiliser le
+    module :epkg:`selenium`.
+
+    Vour aussi :ref:`l-2a-scraping`.
