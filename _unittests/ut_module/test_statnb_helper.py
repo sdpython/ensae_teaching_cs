@@ -54,13 +54,13 @@ class TestHelpGenStatHelper(unittest.TestCase):
                 counts["title"] += 1
             nbfound.add(rl[1])
             rows.append(rl[:2] + rl[-2:] + [r[1].split("_doc")[-1]])
-            if ind > 100:
+            if ind > 200:
                 break
         self.assertTrue(counts.get("ref", 0) > 0)
         # self.assertTrue(counts.get(None, 0) > 0)
         self.assertTrue(counts["title"] > 0)
         self.assertTrue(len(nbfound) > 8)
-        self.assertIn("code_multinomial.ipynb", nbfound)
+        self.assertIn("graph4exos.ipynb", nbfound)
         # self.assertTrue(counts.get("refn", 0) > 0)
         # self.assertTrue(counts.get("toctree", 0) > 0)
 
