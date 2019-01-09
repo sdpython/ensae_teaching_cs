@@ -41,7 +41,7 @@ class TestHelpGenStatHelper(unittest.TestCase):
         counts = {'title': 0}
         nbfound = set()
         rows = []
-        for r in enumerate_notebooks_link(nb_folder, nb_doc):
+        for ind, r in enumerate(enumerate_notebooks_link(nb_folder, nb_doc)):
             rl = list(r)
             rl[0] = None if r[0] is None else os.path.split(r[0])[-1]
             rl[1] = os.path.split(r[1])[-1]
@@ -54,6 +54,8 @@ class TestHelpGenStatHelper(unittest.TestCase):
                 counts["title"] += 1
             nbfound.add(rl[1])
             rows.append(rl[:2] + rl[-2:] + [r[1].split("_doc")[-1]])
+            if ind > 100:
+                break
         self.assertTrue(counts.get("ref", 0) > 0)
         # self.assertTrue(counts.get(None, 0) > 0)
         self.assertTrue(counts["title"] > 0)
