@@ -124,6 +124,9 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
         Voir `ChromeDriver download <http://chromedriver.storage.googleapis.com/index.html>`_,
         `Error message: 'chromedriver' executable needs to be available in the path
         <http://stackoverflow.com/questions/29858752/error-message-chromedriver-executable-needs-to-be-available-in-the-path>`_.
+
+    See `Selenium - Remote WebDriver example <https://sauceclient.readthedocs.io/en/latest/selenium_on_sauce.html#selenium-remote-webdriver-example>`_,
+    see also `Running the remote driver with Selenium and python <https://gist.github.com/alfredo/1962031>`_.
     """
     with warnings.catch_warnings():
         warnings.simplefilter("ignore", ImportWarning)
