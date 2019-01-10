@@ -9,6 +9,7 @@ import unittest
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.ipythonhelper import test_notebook_execution_coverage
 from pyquickhelper.pycode import add_missing_development_version, ExtTestCase
+from pyquickhelper.pycode import skipif_appveyor, skipif_travis, skipif_circleci
 
 try:
     import src
@@ -33,6 +34,9 @@ class TestNotebookCov_Sentiment(ExtTestCase):
         add_missing_development_version(["pymyinstall", "pyensae", "jyquickhelper"],
                                         __file__, hide=True)
 
+    @skipif_appveyor('missing module en_core_web_sm')
+    @skipif_travis('missing module en_core_web_sm')
+    @skipif_circleci('missing module en_core_web_sm')
     def test_notebook_sentiment(self):
         fLOG(
             __file__,
