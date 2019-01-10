@@ -36,7 +36,7 @@ class TestLONGNotebookBug2(unittest.TestCase):
         nbs = [os.path.join(fold, _)
                for _ in os.listdir(fold) if _.endswith(".ipynb") and "TD2A_eco_API_SNCF_corrige" in _]
         nbs.sort()
-        formats = ["pdf", "ipynb", "html", "python", "rst", "docx"]
+        formats = ["pdf", "ipynb", "html", "python", "rst"]
 
         temp = get_temp_folder(__file__, "temp_nb_td2A_eco_bug_latex2")
 

@@ -8,6 +8,7 @@ import unittest
 import pandas
 from pyquickhelper.loghelper.flog import fLOG
 from pyquickhelper.helpgen.stat_helper import enumerate_notebooks_link
+from pyquickhelper.pycode import ExtTestCase
 
 
 try:
@@ -24,7 +25,7 @@ except ImportError:
     import src
 
 
-class TestHelpGenStatHelper(unittest.TestCase):
+class TestHelpGenStatHelper(ExtTestCase):
 
     def test_format_history(self):
         fLOG(
@@ -54,12 +55,12 @@ class TestHelpGenStatHelper(unittest.TestCase):
                 counts["title"] += 1
             nbfound.add(rl[1])
             rows.append(rl[:2] + rl[-2:] + [r[1].split("_doc")[-1]])
-            if __name__ != "__main__" and ind > 10:
+            if __name__ != "__main__" and ind > 30:
                 break
-        self.assertTrue(counts.get("ref", 0) > 0)
+        self.assertGreater(counts.get("ref", 0), 0)
         # self.assertTrue(counts.get(None, 0) > 0)
-        self.assertTrue(counts["title"] > 0)
-        self.assertTrue(len(nbfound) > 8)
+        self.assertNotEmpty(counts["title"])
+        self.assertGreater(len(nbfound), 8)
         # self.assertIn("graph4exos.ipynb", nbfound)
         # self.assertTrue(counts.get("refn", 0) > 0)
         # self.assertTrue(counts.get("toctree", 0) > 0)
