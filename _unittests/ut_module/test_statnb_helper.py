@@ -60,7 +60,7 @@ class TestHelpGenStatHelper(ExtTestCase):
         self.assertGreater(counts.get("ref", 0), 0)
         # self.assertTrue(counts.get(None, 0) > 0)
         self.assertNotEmpty(counts["title"])
-        self.assertGreater(len(nbfound), 8)
+        self.assertGreater(len(nbfound), 5)
         # self.assertIn("graph4exos.ipynb", nbfound)
         # self.assertTrue(counts.get("refn", 0) > 0)
         # self.assertTrue(counts.get("toctree", 0) > 0)
