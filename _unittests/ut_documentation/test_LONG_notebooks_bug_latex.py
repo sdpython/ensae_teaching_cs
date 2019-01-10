@@ -36,7 +36,7 @@ class TestLONGNotebookBug(unittest.TestCase):
         nbs = [os.path.join(fold, _)
                for _ in os.listdir(fold) if _.endswith(".ipynb") and "problems" in _]
         nbs.sort()
-        formats = ["pdf", "ipynb", "html", "python", "rst", "docx"]
+        formats = ["pdf", "ipynb", "html", "python", "rst"]
         temp = get_temp_folder(__file__, "temp_nb_td2A_ml_bug_latex")
 
         res = process_notebooks(nbs, temp, temp, formats=formats)
