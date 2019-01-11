@@ -1,0 +1,21 @@
+
+.. blogpost::
+    :title: Spacy ressources
+    :keywords: spacy, nlp
+    :date: 2019-01-11
+    :categories: nlp
+    :lid: spacy-ressource
+
+    Le moyen le plus simple pour installer les ressources
+    linguistiques de :epkg:`spacy` est d'exécuter la commande
+    suivante pour la langue souhaitée :
+
+    ::
+
+        python3.7 -m spacy download en
+
+    Ou pour la langue française :
+
+    ::
+
+        python3.7 -m spacy download fr

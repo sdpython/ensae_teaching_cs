@@ -103,7 +103,7 @@ exploitable par les algorithmes d'apprentissage.
 * `nltk <http://www.nltk.org/>`_
 * `gensim <https://radimrehurek.com/gensim/>`_
 * `fasttext <https://github.com/facebookresearch/fastText>`_ (Facebook)
-* `spacy <https://spacy.io/>`_
+* `spacy <https://spacy.io/>`_ (:ref:`ressources spacy <spacy-ressource>`)
 * `thinc <https://github.com/explosion/thinc>`_
 * `Stanford CoreNLP <http://stanfordnlp.github.io/CoreNLP/other-languages.html#python>`_,
   `corenlpy <https://github.com/enewe101/corenlpy>`_

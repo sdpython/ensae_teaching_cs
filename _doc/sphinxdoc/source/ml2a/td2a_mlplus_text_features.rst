@@ -36,7 +36,7 @@ tout simplement des vecteurs.
 *Modules*
 
 * :epkg:`gensim`
-* :epkg:`spacy`
+* :epkg:`spacy` (:ref:`ressources spacy <spacy-ressource>`)
 * :epkg:`nltk`
 * :epkg:`scikit-learn`
 * `glove sur GitHub <https://github.com/stanfordnlp/GloVe>`_

@@ -31,7 +31,8 @@ Les meilleurs modèles sont des modèles de deep learning
 * `NLTK.tag <http://www.nltk.org/api/nltk.tag.html>`_
 * `hmmlearn <https://github.com/hmmlearn/hmmlearn>`_
 * `sklearn-crfsuite <https://sklearn-crfsuite.readthedocs.io/en/latest/>`_
-* `spacy - entity recognition <https://spacy.io/docs/usage/entity-recognition>`_
+* `spacy - entity recognition <https://spacy.io/docs/usage/entity-recognition>`_,
+  voir aussi :ref:`ressources spacy <spacy-ressource>`
 * `tagger <https://github.com/glample/tagger>`_
 * `MITIE <https://github.com/mit-nlp/MITIE>`_ (le module n'a pas l'air d'être vraiment maintenu)
 
