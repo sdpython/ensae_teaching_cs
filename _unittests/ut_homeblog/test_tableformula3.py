@@ -5,10 +5,7 @@
 import sys
 import os
 import unittest
-import random
 import numpy
-import pandas
-from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import ExtTestCase
 
 
@@ -47,7 +44,6 @@ class TestTableFormula3(ExtTestCase):
         vals = [0., 1.]
         vals = [vals, vals]
         tbl = TableFormula(vals)
-        z = tbl
         tbl.header = ["x", "y"]
         np = numpy.array(vals)
         tbl2 = TableFormula(np)
