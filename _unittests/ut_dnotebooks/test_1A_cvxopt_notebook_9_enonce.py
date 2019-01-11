@@ -7,7 +7,8 @@ import sys
 import os
 import unittest
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, skipif_travis
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
+from pyquickhelper.pycode import skipif_travis, skipif_appveyor
 
 
 try:
@@ -31,6 +32,7 @@ class TestNotebookRunner1a_enonce(unittest.TestCase):
                                         __file__, hide=True)
 
     @skipif_travis("issue with MKL")
+    @skipif_appveyor("issue with DLL missing")
     def test_notebook_runner_enonce_9(self):
         fLOG(
             __file__,
