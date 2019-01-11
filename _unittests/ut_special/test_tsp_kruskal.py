@@ -6,7 +6,7 @@ import os
 import sys
 import unittest
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
+from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, ExtTestCase
 
 
 try:
@@ -25,9 +25,10 @@ except ImportError:
 
 from src.ensae_teaching_cs.helpers.video_helper import make_video
 from src.ensae_teaching_cs.special.tsp_kruskal import construit_ville, pygame_simulation, tsp_kruskal_algorithm
+from src.ensae_teaching_cs.special.tsp_kruskal import equation_droite, evaluation_droite, intersection_segment
 
 
-class TestTspKruskal(unittest.TestCase):
+class TestTspKruskal(ExtTestCase):
 
     def test_kruskal(self):
         fLOG(
@@ -40,6 +41,16 @@ class TestTspKruskal(unittest.TestCase):
         villes = construit_ville(nb_ville, x, y)
         neurones = tsp_kruskal_algorithm(villes, fLOG=fLOG, max_iter=10)
         self.assertEqual(len(villes), len(neurones))
+
+    def test_equation_droite(self):
+        res = equation_droite((0., 0.), (1., 1.))
+        self.assertEqual(res, (1.0, -1.0, 0.0))
+        ev = evaluation_droite(*res, (0., 1.))
+        self.assertEqual(ev, -1.0)
+        inter = intersection_segment((0., 0.), (1., 1.), (0., 1.), (1., 0.))
+        self.assertTrue(inter)
+        inter = intersection_segment((0., 0.), (1., 1.), (0., 1.), (0.1, 1.1))
+        self.assertFalse(inter)
 
     def test_kruskal_pygame_simulation(self):
         fLOG(
@@ -65,13 +76,13 @@ class TestTspKruskal(unittest.TestCase):
                           pygame=pygame, folder=temp, flags=flags)
 
         files = os.listdir(temp)
-        assert len(files) > 9
+        self.assertGreater(len(files), 9)
         png = [os.path.join(temp, _)
                for _ in files if os.path.splitext(_)[-1] == ".png"]
-        assert len(png) > 0
+        self.assertGreater(len(png), 0)
         out = os.path.join(temp, "tsp_kruskal.avi")
         v = make_video(png, out, size=(800, 500), format="XVID", fps=20)
-        assert v is not None
+        self.assertNotEmpty(v)
 
 
 if __name__ == "__main__":

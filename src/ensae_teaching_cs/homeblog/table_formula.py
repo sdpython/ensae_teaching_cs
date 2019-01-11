@@ -838,8 +838,8 @@ class TableFormula(_TableFormulaStat):
         clth = ' class="%s"' % class_th if class_th is not None else ""
 
         rows = ["<table%s>" % clta]
-        rows.append(("<tr%s><th%s>" % (cltr, clth)) +
-                    ("</th><th%s>" % clth).join(self.header) + "</th></tr>")
+        rows.append(("<tr%s><th%s>" % (cltr, clth))
+                    + ("</th><th%s>" % clth).join(self.header) + "</th></tr>")
         septd = "</td><td%s>" % cltd
         strtd = "<tr%s><td%s>" % (cltr, cltd)
         for row in self.values:
@@ -1231,7 +1231,8 @@ class TableFormula(_TableFormulaStat):
         @return                 self
         """
         if len(vector) != len(self):
-            raise ValueError("vector and table have different length")
+            raise ValueError("vector and table have different length {0} != {1}".format(
+                len(vector), len(self)))
         for vec, row in zip(vector, self.values):
             row.append(vec)
         self.index[colname] = len(self.index)
@@ -1366,8 +1367,8 @@ class TableFormula(_TableFormulaStat):
                 elif logging is not None:
                     end = min(len(keep), 10)
                     mes = ",".join([str(_) for _ in keep[:end]])
-                    logging("removing column " + col +
-                            " no unique value: " + str(len(dd)) + ": " + mes)
+                    logging("removing column " + col
+                            + " no unique value: " + str(len(dd)) + ": " + mes)
             elif col.startswith("sum"):
                 functions.append(lambda v, col=col: identical(col, v))
                 labels.append(col)
@@ -1790,8 +1791,8 @@ class TableFormula(_TableFormulaStat):
         i2 = max(i1, i2)
         i2 = min(i2, lv)
         if i2 == i1:
-            raise RuntimeError("unable to extract quantile, the table is either " +
-                               "empty or chosen quantile are not correct")
+            raise RuntimeError("unable to extract quantile, the table is either "
+                               + "empty or chosen quantile are not correct")
         values = [_[1] for _ in values[i1:i2]]
         return self._private_getclass()(self.header, values)
 
@@ -1849,8 +1850,8 @@ class TableFormula(_TableFormulaStat):
         """
         if unique:
             if n > len(self):
-                raise ValueError("number of desired random rows is higher " +
-                                 "than the number of rows in the table")
+                raise ValueError("number of desired random rows is higher "
+                                 + "than the number of rows in the table")
             index = {}
             while len(index) < n:
                 h = random.randint(0, len(self) - 1)
