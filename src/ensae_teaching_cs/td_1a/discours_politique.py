@@ -228,7 +228,7 @@ def get_elysee_speech_from_elysees(title, url="https://www.elysee.fr/"):
     try:
         text = get_url_content(full)
     except Exception as e:
-        warnings.warn(str(e))
+        warnings.warn("Unable to retrieve '{0}'".format(full))
         return None
     return xmlParsingLongestDiv(text)
 

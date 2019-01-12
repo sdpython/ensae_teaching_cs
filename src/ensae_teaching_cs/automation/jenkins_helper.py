@@ -20,6 +20,8 @@ def get_interpreter(platform=None):
         return os.path.dirname(sys.executable)
     elif platform.startswith("win"):
         return "c:\\Python%d%d%d_x64" % sys.version_info[:3]
+    elif platform.startswith("darwin"):
+        return "/usr/local/bin"
     else:
         return "/usr/local/bin"
 

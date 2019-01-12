@@ -48,7 +48,7 @@ class TestRetrieveSpeeches(ExtTestCase):
         url = "agenda-decembre-2018"
         for i, disc in enumerate(enumerate_speeches_from_elysees(url=url)):
             fLOG(i, disc)
-            if i >= 1:
+            if i >= 2:
                 break
             self.assertNotEmpty(disc)
         self.assertGreater(i, 1)
