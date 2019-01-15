@@ -4,6 +4,7 @@
 """
 import re
 import os
+import json
 import warnings
 import zipfile
 from urllib.parse import urlparse
@@ -575,11 +576,45 @@ class ProjectsRepository:
 
             iter = iter_mail(body=True)
             location = self.get_group_location(group)
+
             r = renderer.write(iter=iter, location=location,
-                               filename=filename, overwrite=overwrite)
+                               filename=filename, overwrite=overwrite,
+                               file_jsatt="_summaryattachements_raw.json")
             renderer.flush()
+
+            # attachments in JSON format
+            json_att = []
+            metadata = {}
+
+            for name in self.enumerate_group_files(group):
+                if "attachments" not in name or not name.endswith('.metadata'):
+                    continue
+                sname = os.path.relpath(name, location).replace("\\", "/")
+                metadata[sname[:-9]] = sname
+
+            for name in self.enumerate_group_files(group):
+                if "attachments" not in name or name.endswith('.metadata'):
+                    continue
+                sname = os.path.relpath(name, location).replace("\\", "/")
+                info = dict(a=sname, name=sname)
+                if sname in metadata:
+                    info['info'] = '<a href="{0}">metadata</a>'.format(metadata[sname])
+                json_att.append(info)
+
             if convert_files:
-                self.unzip_convert(group)
+                converted = self.unzip_convert(group)
+                for conv in converted:
+                    sconv = os.path.relpath(conv, location).replace("\\", "/")
+                    json_att.append(
+                        dict(a=sconv, name=sconv, unzip_convert='Yes'))
+
+            file_jsatt = os.path.join(location, "_summaryattachements.json")
+            if json_att and not renderer.BufferWrite.exists(file_jsatt, local=not overwrite):
+                f = renderer.BufferWrite.open(
+                    file_jsatt, text=True, encoding='utf-8')
+                js = json.dumps(json_att)
+                f.write(js)
+
             return r
 
     def remove_group(self, group):
@@ -693,13 +728,14 @@ class ProjectsRepository:
                     </html>
                     """.replace("                    ", "")
 
-    def write_summary(self, render=None, link="index_mails.html",
+    def write_summary(self, renderer=None, link="index_mails.html",
                       outfile="index.html", title="summary",
                       nolink_if=None):
         """
         Produces a summary and uses a :epkg:`Jinja2` template.
 
-        @param      render      instance of `EmailMessageRenderer <http://www.xavierdupre.fr/app/pymmails/
+        @param      renderer    instance of `EmailMessageRenderer
+                                <http://www.xavierdupre.fr/app/pymmails/
                                 helpsphinx//pymmails/render/email_message_renderer.html>`_),
                                 can be None
         @param      link        look for this file in each folder
@@ -818,7 +854,7 @@ class ProjectsRepository:
             atts.sort()
             links.sort()
 
-            # we clean dupicated links
+            # we clean duplicated links
             mlinks = links
             links = []
             done = {}
@@ -839,18 +875,19 @@ class ProjectsRepository:
 
             groups.append(c)
 
-        if render is None:
+        # final summary
+        if renderer is None:
             tmpl = ProjectsRepository._default_template_summary
-            render = EmailMessageRenderer(tmpl=tmpl, fLOG=self.fLOG)
+            renderer = EmailMessageRenderer(tmpl=tmpl, fLOG=self.fLOG)
             dof = True
         else:
             dof = False
-        res = render.write(filename=outfile, location=self.Location,
-                           mail=None, attachments=None, groups=groups,
-                           title=title, len=len, os=os,
-                           format_size=format_size)
+        res = renderer.write(filename=outfile, location=self.Location,
+                             mail=None, attachments=None, groups=groups,
+                             title=title, len=len, os=os,
+                             format_size=format_size)
         if dof:
-            render.flush()
+            renderer.flush()
         return res
 
     def unzip_convert(self, group):

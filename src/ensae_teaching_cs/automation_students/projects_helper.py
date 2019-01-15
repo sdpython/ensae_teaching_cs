@@ -131,15 +131,15 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
         proj.Groups))
 
     # gathers mails
-    email_render = EmailMessageRenderer(
-        tmpl=template_email_html_short, fLOG=fLOG)
-    render = EmailMessageListRenderer(title=title,
-                                      email_renderer=email_render, fLOG=fLOG)
+    email_renderer = EmailMessageRenderer(tmpl=template_email_html_short,
+                                          fLOG=fLOG)
+    renderer = EmailMessageListRenderer(title=title, email_renderer=email_renderer,
+                                        fLOG=fLOG)
 
     box = MailBoxImap(user, pwd, server, ssl=True, fLOG=fLOG)
     box.login()
-    proj.dump_group_mails(render, group=None, mailbox=box, subfolder=mailfolder, date=date,
-                          overwrite=False, skip_if_empty=True)
+    proj.dump_group_mails(renderer, group=None, mailbox=box, subfolder=mailfolder,
+                          date=date, overwrite=False, skip_if_empty=True)
 
     box.logout()
 
