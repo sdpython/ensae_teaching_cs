@@ -24,7 +24,10 @@ Classification Multi-label
 * `Multiclass-Multilabel Classification with More Classes than Examples <http://www.jmlr.org/proceedings/papers/v9/dekel10a/dekel10a.pdf>`_
 * `Classifier Chains for Multi-label Classification <https://www.cs.waikato.ac.nz/~eibe/pubs/chains.pdf>`_
 * `An extensive experimental comparison of methods for multi-label learning <http://kt.ijs.si/DragiKocev/wikipage/lib/exe/fetch.php?media=2012pr_ml_comparison.pdf>`_
+* `Hoeffding Trees with nmin adaptation <https://arxiv.org/abs/1808.01145>`_
+* `Multi-label Classification <https://users.ics.aalto.fi/jesse/talks/Multilabel-Part02.pdf>`_
 
 *Modules*
 
 * `scikit-multilearn <http://scikit.ml/index.html>`_
+* `scikit-multiflow <https://github.com/scikit-multiflow/scikit-multiflow>`_

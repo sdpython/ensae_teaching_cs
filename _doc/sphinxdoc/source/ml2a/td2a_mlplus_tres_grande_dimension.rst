@@ -14,6 +14,7 @@ Très grande dimension
 * `Stabilized Sparse Online Learning for Sparse Data <http://www.jmlr.org/papers/volume18/16-190/16-190.pdf>`_
 * `Identifying a Minimal Class of Models for High–dimensional Data <http://www.jmlr.org/papers/volume18/16-172/16-172.pdf>`_
 * `Improving Variational Methods via Pairwise Linear Response Identities <http://www.jmlr.org/papers/volume18/16-070/16-070.pdf>`_
+* `The xyz algorithm for fast interaction search in high-dimensional data <http://www.jmlr.org/papers/volume19/16-515/16-515.pdf>`_
 
 *Modules*
 

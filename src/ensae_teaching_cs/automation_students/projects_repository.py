@@ -598,7 +598,8 @@ class ProjectsRepository:
                 sname = os.path.relpath(name, location).replace("\\", "/")
                 info = dict(a=sname, name=sname)
                 if sname in metadata:
-                    info['info'] = '<a href="{0}">metadata</a>'.format(metadata[sname])
+                    info['info'] = '<a href="{0}">metadata</a>'.format(
+                        metadata[sname])
                 json_att.append(info)
 
             if convert_files:

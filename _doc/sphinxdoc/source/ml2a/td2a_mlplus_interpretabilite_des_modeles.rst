@@ -94,6 +94,10 @@ C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
 * `An Efficient Explanation of Individual Classifications using Game Theory <http://lkm.fri.uni-lj.si/xaigor/slo/pedagosko/dr-ui/jmlr-strumbelj-kononenko.pdf>`_ **
 * `How to Explain Individual Classification Decisions <http://www.jmlr.org/papers/volume11/baehrens10a/baehrens10a.pdf>`_
 * `Interpretable Machine Learning with XGBoost <https://towardsdatascience.com/interpretable-machine-learning-with-xgboost-9ec80d148d27>`_
+* `Interpretability Beyond Feature Attribution: Quantitative Testing with Concept Activation Vectors (TCAV) <https://arxiv.org/abs/1711.11279>`_,
+  `tutorial <https://beenkim.github.io/papers/BeenK_FinaleDV_ICML2017_tutorial.pdf>`_)
+* `To Trust Or Not To Trust A Classifier <https://arxiv.org/abs/1805.11783>`_,
+  `Mind the Gap: A Generative Approach to Interpretable Feature Selection and Extraction <https://beenkim.github.io/papers/BKim2015NIPS.pdf>`_
 
 *Lectures : monotonie*
 
@@ -162,3 +166,7 @@ C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
   mais permet de visualiser des modèles de machine learning.
 * `VisualDL <https://github.com/PaddlePaddle/VisualDLn>`_ : cet outil n'explique pas vraiment
   mais permet de visualiser des modèles de deep learning.
+
+*A suivre*
+
+* `Been Lim <https://beenkim.github.io/>`_
