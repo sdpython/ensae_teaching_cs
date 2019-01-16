@@ -59,6 +59,7 @@ CPU
 * `Weld: A Multithreading Technique Towards Latencytolerant VLIW Processors  <http://tinker.cc.gatech.edu/symposia/hipc01.pdf>`_
 * `Stackless Python <https://bitbucket.org/stackless-dev/stackless>`_ : implémentation de l'interpréteur de Python
   spécialisée dans le micro threading.
+* `Why is it faster to process a sorted array than an unsorted array? <https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array/11227902#11227902>`_
 
 GPU
 +++

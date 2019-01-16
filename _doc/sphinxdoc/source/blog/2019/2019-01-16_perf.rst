@@ -1,0 +1,38 @@
+
+.. blogpost::
+    :title: Pipeline et processeur
+    :keywords: CPU, pipeline
+    :date: 2019-01-16
+    :categories: performance
+
+    Trois liens différents vers trois articles qui parlent
+    tous du même sujet :
+    `Why use an FPGA instead of a CPU or GPU? <https://blog.esciencecenter.nl/why-use-an-fpga-instead-of-a-cpu-or-gpu-b234cd4f309c>`_,
+    `Why use an FPGA instead of a CPU or GPU? (Quora) <https://www.quora.com/Why-use-an-FPGA-instead-of-a-CPU-or-GPU-1>`_,
+    `Why Use an FPGA Instead of a CPU or GPU? (News) <https://news.ycombinator.com/item?id=17757624>`_.
+    On y apprend que le :epkg:`FGPA` est plus lent que le :epkg:`CPU` et :epkg:`GPU`,
+    ou plus précisément qu'un cycle d'exécution du FGPA est plus lent.
+    En revanche, dans ce cycle, on peut y mettre plus d'instructions.
+    Le dernier article cite un chiffre : le FGPA est 10 plus lent mais
+    un cycle peut contenir 20 fois plus d'instructions qu'un CPU.
+    Le dernier article compare les forces et faiblesses
+    de plusieurs approches :
+    `FPGA vs CPU vs GPU vs Microcontroller: How Do They Fit into the Processing Jigsaw Puzzle? <https://www.arrow.com/en/research-and-events/articles/fpga-vs-cpu-vs-gpu-vs-microcontroller>`_.
+    FGPA permet d'aller plus vite mais il faut s'y connaître un peu
+    pour les obtenir.
+
+    Je recommande également la lecture de l'article
+    `Why is it faster to process a sorted array than an unsorted array? <https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array/11227902#11227902>`_
+    qui pourrait changer la façon dont vous écrivez du :epkg:`C++`
+    avec le concept de pipeline de processeur.
+    Si je résume, un processeur, pour aller plus vite, considère le nombre
+    d'instructions qu'il peut exécuter à la suite. Il ne garde pas qu'une
+    instruction (assembleur) dans dans ses registres mais plusieurs.
+    C'est ce qu'on appelle un pipeline. Or, un test modifie la séquence
+    d'une façon que le processeur ne peut prédire. En gros, le processeur
+    est un sprinter qui va plus vite en ligne droite et qui doit freiner
+    dès qu'il doit choisir sa route entre deux possibilités. Plus le
+    programme contient de lignes droites, plus il est rapide.
+    Et pour aller plus vite, le processeur fait un pari sur le résultat du test,
+    s'il a le bon, c'est comme s'il avait parcouru une ligne droite (un pipeline),
+    s'il s'est trompé, il va perdre beaucoup de temps.

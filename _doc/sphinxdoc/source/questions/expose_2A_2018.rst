@@ -240,7 +240,6 @@ Interprétabilité
   `Mind the Gap: A Generative Approach to Interpretable Feature Selection and Extraction <https://beenkim.github.io/papers/BKim2015NIPS.pdf>`_
 * `DALEX: Explainers for Complex Predictive Models in R <http://www.jmlr.org/papers/volume19/18-416/18-416.pdf>`_
 
-
 Très grande dimension
 ^^^^^^^^^^^^^^^^
 
