@@ -45,7 +45,7 @@ class TestNotebookEleves201809(unittest.TestCase):
         def valid_cell(cell):
             if "nuplet[1] = 5" in cell:
                 return False
-            if cell == "dico[0]":
+            if cell == "dico[0]  ##":
                 return False
             if cell == "dico[ [4,6] ] = 6":
                 return False

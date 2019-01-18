@@ -25,6 +25,7 @@ manydataapi
 mlinsights
 mlstatpy
 mpld3
+msgpack!=0.6.0  # https://github.com/explosion/spaCy/issues/2995
 mutagen
 opencv-python
 pandas_streaming
