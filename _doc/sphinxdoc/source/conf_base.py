@@ -99,6 +99,7 @@ epkg_dictionary.update({
     "bokeh": 'https://fr.wikipedia.org/wiki/Bokeh',
     'botadi': 'http://www.xavierdupre.fr/app/botadi/helpsphinx/index.html',
     'bqplot': 'https://github.com/bloomberg/bqplot',
+    'branching': 'https://en.wikipedia.org/wiki/Branch_(computer_science)',
     "Bresenham": 'https://fr.wikipedia.org/wiki/Algorithme_de_trac%C3%A9_de_segment_de_Bresenham',
     "C++": 'https://fr.wikipedia.org/wiki/C%2B%2B',
     "C#": 'https://fr.wikipedia.org/wiki/C_sharp',

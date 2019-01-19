@@ -54,6 +54,14 @@ Anatomie et histoire d'un ordinateur
 CPU
 +++
 
+*Notebooks*
+
+Le notebook suivant montre comment écrire du code C++ tout en
+l'utilisant depuis Python pour mesurer une optimisation que
+proposent les processeurs CPU : le :epkg:`branching`.
+
+* `Measures branching in C++ from python <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/notebooks/cbenchmark_branching.html#cbenchmarkbranchingrst>`_
+
 *Lectures*
 
 * `Weld: A Multithreading Technique Towards Latencytolerant VLIW Processors  <http://tinker.cc.gatech.edu/symposia/hipc01.pdf>`_
