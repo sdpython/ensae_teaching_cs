@@ -1,0 +1,14 @@
+
+.. blogpost::
+    :title: Mars : calcul distribué en python
+    :keywords: mars, numpy
+    :date: 2019-01-16
+    :categories: calcul
+
+    :epkg:`mars` est un projet open source depuis 15 jours
+    et qui permet de faire des calculs sur ds matrices
+    en grande dimension. Il est supporté par *Alibaba* :
+    `Alibaba Open-Sources Mars to Complement NumPy <https://medium.com/syncedreview/alibaba-open-sources-mars-to-complement-numpy-ea215ff1fa2f>`_.
+    Les performances ont l'air intéressantes même si mon premier
+    essai sur un produit scalaire montre que des vecteurs
+    de tailles humaines, :epkg:`numpy` restent difficile à battre.

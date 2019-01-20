@@ -281,6 +281,13 @@ Distribution des calculs, stratégies de stockage, SQL NoSQL
 * `rethinkdb <https://rethinkdb.com/>`_ (python : `rethinkdb <https://pypi.python.org/pypi/rethinkdb/>`_)
 * `FASTER <https://github.com/Microsoft/FASTER>`_
 
+*Distribution des calculs en Python*
+
+* :epkg:`dask`
+* :epkg:`mars`
+* :epkg:`h2o`
+* :epkg:`joblib`
+
 Compression des données
 +++++++++++++++++++++++
 
@@ -395,7 +402,9 @@ Map Reduce en pratique
 * Le hasard en distribué, :ref:`Réservoir sampling <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/reservoir_sampling.html>`
   (:ref:`correction <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/pig_reservoir_sampling_azure_correction.html>`)
 * Schéma des langages de map/reduce :
-  `lazy evaluation <https://en.wikipedia.org/wiki/Lazy_evaluation>`_ (évalusation presseuse, dask, Spark, PIG)
+  `lazy evaluation <https://en.wikipedia.org/wiki/Lazy_evaluation>`_
+   (évalusation presseuse, :epkg:`dask`, :epkg:`Spark`,
+   :epkg:`mars`, :epkg:`PIG`)
 
 *Lectures*
 
