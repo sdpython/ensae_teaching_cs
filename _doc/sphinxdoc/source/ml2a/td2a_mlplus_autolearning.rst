@@ -43,6 +43,7 @@ Auto-Learning (metalearning)
 * `Generating Neural Networks with Neural Networks <https://arxiv.org/abs/1801.01952>`_
 * `Rapid Adaptation with Conditionally Shifted Neurons <https://arxiv.org/abs/1712.09926>`_
 * `Probabilistic Matrix Factorization for Automated Machine Learning <https://arxiv.org/abs/1705.05355>`_
+* `Auto-Keras: Efficient Neural Architecture Search with Network Morphism <https://arxiv.org/abs/1806.10282>`_
 
 *Tutoriel*
 
@@ -65,3 +66,4 @@ Auto-Learning (metalearning)
 * `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
 * `RoBO <https://github.com/automl/RoBO>`_ (bayésien)
 * `POMDPy <https://github.com/pemami4911/POMDPy>`_
+* :epkg:`auto-keras` (deep learning)

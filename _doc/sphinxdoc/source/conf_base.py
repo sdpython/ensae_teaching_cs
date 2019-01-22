@@ -87,13 +87,14 @@ epkg_dictionary.update({
 # packages and links
 
 epkg_dictionary.update({
-    'API REST': "https://en.wikipedia.org/wiki/Representational_state_transfer",
     "ACP": 'https://fr.wikipedia.org/wiki/Analyse_en_composantes_principales',
     "Anaconda": 'https://www.continuum.io/downloads',
     "anaconda": 'https://www.continuum.io/downloads',
+    'API REST': "https://en.wikipedia.org/wiki/Representational_state_transfer",
     "Arduino": 'https://www.arduino.cc/',
     "array": 'https://docs.scipy.org/doc/numpy/reference/generated/numpy.array.html',
     "AUC": 'http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/roc.html#aire-sous-la-courbe',
+    "auto-keras": "https://github.com/jhfjhfj1/autokeras",
     "basemap": 'https://matplotlib.org/basemap/',
     "blockchain": 'https://fr.wikipedia.org/wiki/Blockchain',
     "bokeh": 'https://fr.wikipedia.org/wiki/Bokeh',

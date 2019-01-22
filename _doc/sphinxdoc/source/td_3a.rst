@@ -342,7 +342,7 @@ Deep Learning
 *Cours*
     * :ref:`Cours de deep learning appliqués au NLP <blog-stanford-nlp-deep>`
     * `Companion Jupyter notebooks for the book "Deep Learning with Python" <https://github.com/fchollet/deep-learning-with-python-notebooks>`_
-      (avec :epkg:`keras`)
+      (avec :epkg:`keras`, :epkg:`auto-keras`)
 
 Framework de deep learning
 ++++++++++++++++++++++++++
