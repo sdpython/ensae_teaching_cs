@@ -79,7 +79,7 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
     ../notebooks/td2a_ethics
     ../notebooks/td2a_ethics_correction
 
-*Lectures mathémtiques*
+*Lectures mathématiques*
 
 * `A Reductions Approach to Fair Classification <https://arxiv.org/pdf/1803.02453.pdf>`_
 * `FairTest: Discovering Unwarranted Associations in Data-Driven Applications <https://arxiv.org/pdf/1510.02377.pdf>`_
@@ -109,6 +109,7 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
 * `Equality of Opportunity in Supervised Learning <https://arxiv.org/abs/1610.02413>`_
 * `Algorithm Assessment Report <https://www.data.govt.nz/assets/Uploads/Algorithm-Assessment-Report-Oct-2018.pdf>`_
   (issu de l'INSEE néozélandaise)
+* `Impossibility and Uncertainty Theorems in AI Value Alignment <https://arxiv.org/pdf/1901.00064.pdf?utm_campaign=the_algorithm.unpaid.engagement&utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-8SQPvr8mh-ICrJzt0vJhRCEPzgIalY3fRUX7Q4iMwG1rNFf-v4-GR9BNEI_UB8R-0z08Jm>`_
 
 *Conférences*
 
@@ -141,6 +142,9 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
 *Articles*
 
 * `Microsoft is developing a tool to help engineers catch bias in algorithms <https://venturebeat.com/2018/05/25/microsoft-is-developing-a-tool-to-help-engineers-catch-bias-in-algorithms/>`_ (2018/05/25)
+* `Sent to Prison by a Software Program's Secret Algorithms <https://www.nytimes.com/2017/05/01/us/politics/sent-to-prison-by-a-software-programs-secret-algorithms.html>`_,
+  `Emotional Judges and Unlucky Juveniles <https://www.nber.org/papers/w22611?utm_campaign=ntw&utm_medium=email&utm_source=ntw>`_,
+  `How artificial intelligence can help us make judges less biased <https://www.theverge.com/2019/1/17/18186674/daniel-chen-machine-learning-rule-of-law-economics-psychology-judicial-system-policy>`_
 
 *Modules*
 
