@@ -65,4 +65,4 @@ et la réponse est souvent un mélange des trois :
 *Modules*
 
 * `imbalanced-learn <https://github.com/scikit-learn-contrib/imbalanced-learn>`_
-  (la documentation est intéressante)
+  (la `documentation <https://imbalanced-learn.readthedocs.io/en/stable/api.html>`_ est intéressante)

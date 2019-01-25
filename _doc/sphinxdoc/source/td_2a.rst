@@ -170,5 +170,5 @@ Feuilles de route et compétitions passées :
     questions/route_2A_2016
     questions/route_2A_2017
     questions/route_2A_2018
-    questions/expose_2A_2018
+    questions/expose_2A
     questions/competition_2A
