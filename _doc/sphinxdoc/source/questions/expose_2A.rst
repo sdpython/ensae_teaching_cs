@@ -189,7 +189,7 @@ Détection de biais
 Robustesse
 ^^^^^^^^^^
 
-* `Preserving Statistical Validity in Adaptive Data Analysis∗ <https://arxiv.org/pdf/1411.2664.pdf>`_
+* `Preserving Statistical Validity in Adaptive Data Analysis <https://arxiv.org/pdf/1411.2664.pdf>`_
 
 Evaluation de politique, relations causales
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

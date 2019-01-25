@@ -40,6 +40,7 @@ Projections, Réduction des dimensions
 * `Practical and Optimal LSH for Angular Distance <https://arxiv.org/abs/1509.02897>`_
 * `Optimal Data-Dependent Hashing for Approximate Near Neighbors <https://arxiv.org/abs/1501.01062>`_
 * `mQAPViz: A divide-and-conquer multi-objective optimization algorithm to compute large data visualizations <https://arxiv.org/abs/1804.00656>`_
+* `Feature Hashing for Large Scale Multitask Learning <https://arxiv.org/pdf/0902.2206.pdf>`_
 
 *Modules*
 
