@@ -109,6 +109,7 @@ class TestCodeStyle(ExtTestCase):
                 "send_feedback.py:292: E0602",
                 "send_feedback.py:137: W0631",
                 "send_feedback.py:137: W0640",
+                "R1720",
                 ]
 
         if is_travis_or_appveyor() == "appveyor":
@@ -165,6 +166,7 @@ class TestCodeStyle(ExtTestCase):
                 "test_SKIP_torch.py:67: E1123",
                 "test_SKIP_torch.py:102: E1101",
                 "test_SKIP_torch.py:104: E1101",
+                "R1720",
                 ]
 
         if is_travis_or_appveyor() == "appveyor":
