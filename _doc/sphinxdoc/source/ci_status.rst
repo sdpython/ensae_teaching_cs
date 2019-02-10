@@ -846,8 +846,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/uwanivg3b5qibncs?svg=true
             :target: https://ci.appveyor.com/project/sdpython/machinelearningext
             :alt: Build Status Windows
-      - .. image:: https://circleci.com/gh/sdpython/machinelearningext/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/machinelearningext/tree/master
+      -
       -
       -
       -
