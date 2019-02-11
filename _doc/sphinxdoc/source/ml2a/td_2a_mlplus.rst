@@ -129,3 +129,4 @@ les images ou le son.
     td2a_mlplus_tagging
     td2a_mlplus_ontologie
     td2a_mlplus_chat_bot
+    td2a_mlplus_summary
