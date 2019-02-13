@@ -38,6 +38,11 @@ fonction d'évaluation qu'une autre mais avec un niveau de difficulté ou de pro
 est meilleure. Avant de commencer la partie graphique, je suggère la lecture de cet article :
 `Frameworks for games in Python <http://www.xavierdupre.fr/blog/2014-01-01_nojs.html>`_.
 
+La rolls des intelligence artificielle s'appelle
+`AlphaZero <https://en.wikipedia.org/wiki/AlphaGo_Zero>`_,
+ce qu'explore l'article suivant :
+`Introduction to Monte Carlo Tree Search: The Game-Changing Algorithm behind DeepMind’s AlphaGo <https://medium.com/analytics-vidhya/introduction-to-monte-carlo-tree-search-the-game-changing-algorithm-behind-deepminds-alphago-554a9017f0c2>`_.
+
 .. _l-jeu-awa:
 
 Awalé

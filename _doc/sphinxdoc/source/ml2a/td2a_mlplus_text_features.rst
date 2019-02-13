@@ -17,7 +17,9 @@ Du texte aux features
 Ces méthodes sont non-supervisées et apparaissent
 le plus souvent comme prétraitements pour convertir
 le texte sous forme de features numériques ou
-tout simplement des vecteurs.
+tout simplement des vecteurs. On parlera ici de texte
+comme texte libre et non simplement une variable catégorielle
+représentée sous forme de texte.
 
 *Notebooks*
 
@@ -32,6 +34,7 @@ tout simplement des vecteurs.
 * `tf-idf <https://en.wikipedia.org/wiki/Tf%E2%80%93idf>`_
 * `Efficient Estimation of Word Representations in Vector Space <https://arxiv.org/abs/1301.3781>`_
 * `GloVe: Global Vectors for Word Representation <https://nlp.stanford.edu/pubs/glove.pdf>`_
+* `Multi-label Text Classification using BERT - The Mighty Transformer <https://medium.com/huggingface/multi-label-text-classification-using-bert-the-mighty-transformer-69714fa3fb3d>`_
 
 *Modules*
 

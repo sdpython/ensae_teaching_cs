@@ -82,6 +82,8 @@ Source de données
 * *santé* `MIMIC <https://mimic.physionet.org/>`_ : base de données de 40.000 patients passés par un service de réanimations,
   contient les résultats de plusieurs dizaines de tests par patient, des traitements qui leur ont
   été données.
+* *santé* `TransPlant <https://github.com/dataforgoodfr/batch_5_transplant>`_
+* *social* `HappyMeal <https://github.com/dataforgoodfr/batch5_phenix_happymeal>`_
 * *sports* `European Soccer Database <https://www.kaggle.com/hugomathien/soccer>`_
 * *texte* `soTweet: Studying Twitter at Scale <http://www-sop.inria.fr/members/Arnaud.Legout/Projects/sotweet.html>`_: base de 500 millions de tweets et 23 milliards de liens
 * *texte* `WordNet <https://wordnet.princeton.edu/wordnet/>`_, base de données anglaises sur le vocabulaire, la grammaire, les synonymes...
