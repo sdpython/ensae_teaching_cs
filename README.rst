@@ -1,9 +1,4 @@
 
-.. _l-README:
-
-README
-======
-
 .. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master
     :target: https://travis-ci.org/sdpython/ensae_teaching_cs
     :alt: Build status
@@ -41,6 +36,11 @@ README
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/all_notebooks_coverage.html
     :alt: Notebook Coverage
 
+.. _l-README:
+
+ensae_teaching_cs
+=================
+
 This page gives access to the content of practical sessions I give at the
 `ENSAE <http://www.ensae.fr/>`_. They are based on Python. The project
 is hosted on GitHub can be modified by sending me pull requests:
@@ -61,8 +61,6 @@ Setup
 -----
 
 `7zip <http://www.7-zip.org/>`_,
-`Anaconda <https://www.continuum.io/downloads>`_,
-2 and 3 (to be installed on the same hard drive than the Jenkins build folder),
 `Chrome <https://www.google.fr/chrome/browser/desktop/>`_,
 `CMake <https://cmake.org/>`_ (to build XGBoost),
 `Graphviz <http://www.graphviz.org/>`_,
@@ -75,10 +73,8 @@ Setup
 `Pandoc <http://pandoc.org/>`_ (documentation),
 `Python <https://www.python.org/>`_ 3.6, 64 bit
 (do not add the interpreter on the default PATH),
-`R 3.2.2 <https://cran.r-project.org/bin/windows/base/old/3.2.2/>`_,
 `Scite <http://www.scintilla.org/SciTE.html>`_,
-`mingw-w64 <https://mingw-w64.org/doku.php>`_,
-`Visual Studio 2015 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_
+`Visual Studio 2017 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_
 (check C++, C#, Python, CLang) (Cython).
 
 You can install the necessary modules with
