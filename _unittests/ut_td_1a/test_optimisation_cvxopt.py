@@ -28,6 +28,8 @@ from src.ensae_teaching_cs.td_1a.optimisation_contrainte import exercice_particu
 
 class TestOptimisationCVXOPT(ExtTestCase):
 
+    @unittest.skipIf(sys.platform.startswith("win"),
+                     reason="import cvxopt.base, ImportError: DLL load failed")
     def test_optimisation_cvxopt(self):
         fLOG(
             __file__,
