@@ -26,12 +26,12 @@ def gini(Y, X=None):
     couples[:, 0] /= max(couples[n - 1, 0], 1e-7)
     couples[:, 1] /= max(couples[n - 1, 1], 1e-7)
 
-    gini = 0.
+    g = 0.
     n = couples.shape[0]
 
     for i in range(0, n):
         dx = couples[i, 0] - couples[i - 1, 0]
         y = couples[i - 1, 1] + couples[i, 1]
-        gini += dx * y
+        g += dx * y
 
-    return (1. - gini) / 2
+    return (1. - g) / 2
