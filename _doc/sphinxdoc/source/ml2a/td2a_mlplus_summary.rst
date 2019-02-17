@@ -30,5 +30,3 @@ faible - qu'il ait du sens est un autre sujet.
 *Modules*
 
 * `text-summarization <https://github.com/franfj/Summarizer>`_
-
-
