@@ -18,6 +18,7 @@ Système de recommandations
 
 *Lectures*
 
+* `Item-Based Collaborative Filtering Recommendation Algorithms <http://files.grouplens.org/papers/www10_sarwar.pdf>`_
 * `Recommendations in Keras using triplet loss <https://github.com/maciejkula/triplet_recommendations_keras>`_
 * `AutoRec: Autoencoders Meet Collaborative Filtering <http://users.cecs.anu.edu.au/~akmenon/papers/autorec/autorec-paper.pdf>`_,
   `Hybrid Recommender System based on Autoencoders <https://hal.inria.fr/hal-01336912/file/AutoEnc.pdf>`_
@@ -32,6 +33,7 @@ Système de recommandations
 * `Offline A/B Testing for Recommender Systems <https://dl.acm.org/citation.cfm?id=3159687>`_
 * `Probabilistic Matrix Factorization <http://papers.nips.cc/paper/3208-probabilistic-matrix-factorization.pdf>`_
 * `A Fast Parallel Stochastic Gradient Method for Matrix Factorization in Shared Memory Systems <https://www.csie.ntu.edu.tw/~cjlin/papers/libmf/libmf_journal.pdf>`_
+* `Smart Adaptive Recommendations (SAR) Algorithm <https://github.com/Microsoft/Product-Recommendations/blob/master/doc/sar.md>`_
 
 *Modules*
 
