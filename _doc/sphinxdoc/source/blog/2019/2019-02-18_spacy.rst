@@ -1,0 +1,35 @@
+
+.. blogpost::
+    :title: Problème avec spacy
+    :keywords: spacy
+    :date: 2019-02-18
+    :categories: installation
+
+    Et voilà comment on peut perdre quelques heures à
+    comprendre pourquoi un notebook qui fonctionnait
+    ne fonctionne plus. C'est l'erreur que j'ai depuis
+    quelques semaines déjà pour laquelle je ne peux
+    pas vraiment mettre à jour certains modules sans
+    rencontrer l'erreur suivante :
+
+    ::
+
+        cymem.cymem.Pool size changed, may indicate binary incompatibility.
+        Expected 48 from C header, got 64 from PyObject
+
+    Voilà les versions que j'ai utilisées pour le faire
+    marcher :
+
+    ::
+
+        cymem==2.0.2
+        en-core-web-sm==2.0.0
+        fr-core-news-sm==2.0.0
+        msgpack==0.5.6
+        msgpack-numpy==0.4.4.2
+        murmurhash==1.0.1
+        numpy==1.16.1
+        preshed==2.0.1
+        plac==0.9.6   # la version 1.0.0 n'a pas l'air de marcher
+        spacy==2.0.18
+        thinc==6.12.1
