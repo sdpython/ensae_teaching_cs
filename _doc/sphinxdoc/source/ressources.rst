@@ -39,6 +39,7 @@ Source de données
 * *climat* `Land-Based Datasets and Products <http://www.ncdc.noaa.gov/data-access/land-based-station-data/land-based-datasets>`_,
   `Daily Global Weather Measurements, 1929-2009 (NCDC, GSOD) <https://aws.amazon.com/fr/datasets/daily-global-weather-measurements-1929-2009-ncdc-gsod/?tag=datasets%23keywords%23climate>`_,
   voir aussi `Daily Global Weather Measurements (http://spatial-analyst.net/) <http://spatial-analyst.net/book/getGSOD.R>`_
+* *climat* `Pangeo Data Catalog <http://pangeo.io/catalog.html>`_
 * *code* `Evénements GitHub <https://www.githubarchive.org/>`_ : tous les commit sur GitHub chaque jour (~15.000 commit par jour)
 * *consommation* `World Food Facts <https://www.kaggle.com/openfoodfacts/world-food-facts>`_
 * *deep*: `Microsoft Research Open Data <https://msropendata.com/>`_

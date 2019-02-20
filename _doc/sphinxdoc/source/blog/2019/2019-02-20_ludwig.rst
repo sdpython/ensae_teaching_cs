@@ -1,0 +1,24 @@
+
+.. blogpost::
+    :title: Ludwig, machine learning et réchauffement climatique
+    :keywords: ludwig, Uber
+    :date: 2019-02-20
+    :categories: module
+
+    Uber a sorti son module de machine learning
+    `ludwig <https://github.com/uber/ludwig>`_
+    (`documentation <https://uber.github.io/ludwig/>`_)
+    qui automatise plein de choses pour une catégorie
+    de problèmes de machine learning classique et deep.
+    Certains apprentissages peuvent être parallélisés
+    avec `mpi4py <https://rabernat.github.io/research_computing/parallel-programming-with-mpi-for-python.html>`_.
+    J'ai fini sur le site de son auteur
+    `Ryan Abernathey <https://rabernat.github.io/>`_
+    qui étudie la circulation de l'eau autour du globe,
+    ce qui m'a amené à `Pangeo <http://pangeo.io/>`_
+    *A community platform for Big Data geoscience*
+    et des jeux de données sur la Terre
+    `Pangeo Data Catalog <http://pangeo.io/catalog.html>`_
+    ou encore le module `xgcm <https://github.com/xgcm/xgcm>`_
+    qui pourrait être utile pour faire des simulations sur le
+    réchauffement climatique.
