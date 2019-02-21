@@ -21,7 +21,7 @@ def optimisation():
 
             q=matrix([[0,0,0]])
 
-        Mais la fonction `coneqp <http://abel.ee.ucla.edu/cvxopt/userguide/coneprog.html?highlight=coneqp#cvxopt.solvers.coneqp>`_
+        Mais la fonction :epkg:`coneqp`
         retourne l'erreur :
 
         ::
@@ -52,7 +52,7 @@ def optimisation():
         :tag: cvxopt
         :title: ValueError: Rank[|A|] < p or Rank[|[P; A; G]|] < n)
 
-        La fonction `coneqp <http://abel.ee.ucla.edu/cvxopt/userguide/coneprog.html?highlight=coneqp#cvxopt.solvers.coneqp>`_
+        La fonction :epkg:`coneqp`
         déclenche parfois cette erreur :
 
         ::

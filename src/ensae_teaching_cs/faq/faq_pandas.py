@@ -88,8 +88,7 @@ def df_to_clipboard(df, **args):
                         is ``\\t`` for this function until
                         it is defined otherwise
 
-    It relies on method
-    `to_clipboard <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_clipboard.html>`_.
+    It relies on method :epkg:`to_clipboard`_.
 
     .. faqref::
         :title: Copier un dataframe dans le presse-papier - clipboard
@@ -99,7 +98,7 @@ def df_to_clipboard(df, **args):
         `to_excel <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_excel.html>`_
         puis ouvrir le fichier dans Excel ou le copier dans le presse-papier et le coller
         dans une feuille ouverte dans Excel. C'est l'objet de la méthode
-        `to_clipboard <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_clipboard.html>`_ ::
+        :epkg:`to_clipboard`::
 
             df = pandas.DataFrame ( ... )
             df.to_clipboard(sep="\\t")
@@ -123,7 +122,7 @@ def df_equal(df1, df2):
     It reorders the columns before doing the comparison.
 
     If you need more complex comparison,
-    you can look into function `assert_frame_equal <https://github.com/pydata/pandas/blob/master/pandas/util/testing.py>`_.
+    you can look into function :epkg:`assert_frame_equal`_.
 
     The function does not handle well NaN values because ``numpy.nan != numpy.nan`` is true.
     It also compares types:
@@ -158,7 +157,7 @@ def df_equal(df1, df2):
         Autres alternatives :
 
         * `equals <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.equals.html>`_
-        * `assert_frame_equal <https://github.com/pydata/pandas/blob/29de89c1d961bea7aa030422b56b061c09255b96/pandas/util/testing.py#L621>`_
+        * :epkg:`assert_frame_equal`
     """
     if df1.shape != df2.shape:
         return False

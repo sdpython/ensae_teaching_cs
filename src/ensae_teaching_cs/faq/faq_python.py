@@ -528,7 +528,7 @@ def list_of_installed_packages():
         :tag: python
         :title: Obtenir des informations sur les packages installés
 
-        Le module `pip <https://pip.pypa.io/en/stable/>`_ retourne des informations
+        Le module :epkg:`pip` retourne des informations
         sur n'importe quel module installé, sa version, sa license ::
 
             pip show pandas
@@ -581,7 +581,7 @@ def information_about_package(name):
         :tag: python
         :title: Récupérer la liste des modules installés
 
-        Le module `pip <https://pip.pypa.io/en/stable/>`_ permet d'installer
+        Le module :epkg:`pip` permet d'installer
         de nouveaux modules mais aussi d'obtenir la liste des packages installés ::
 
             pip list

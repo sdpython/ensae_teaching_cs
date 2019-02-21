@@ -11,7 +11,7 @@ def lambert93_to_WGPS(lambertE, lambertN):
     Converts coordinates given in
     `Lambert 93 <https://fr.wikipedia.org/wiki/Projection_conique_conforme_de_Lambert>`_
     system, this system is used by `IGN <http://http://professionnels.ign.fr/>`_
-    and their `GEOFLA <http://professionnels.ign.fr/geofla>`_ file format.
+    and their :epkg:`GEOFLA` file format.
 
     @param      lambertE        east
     @param      lambertN        north
@@ -24,7 +24,7 @@ def lambert93_to_WGPS(lambertE, lambertN):
         :tag: geo
         :title: Les fichiers GEOFLA ne contiennent pas de longitude, latitude ?
 
-        Les coordonnées contenues dans les fichiers `GEOFLA <http://professionnels.ign.fr/geofla>`_
+        Les coordonnées contenues dans les fichiers :epkg:`GEOFLA`
         ne sont pas toujours des longitudes, latitudes mais des coordonnées exprimées dans un système
         de projection conique `Lambert 93 <https://fr.wikipedia.org/wiki/Projection_conique_conforme_de_Lambert>`_.
         Il faut convertir les coordonnées avant de pouvoir tracer la carte ou changer la projection

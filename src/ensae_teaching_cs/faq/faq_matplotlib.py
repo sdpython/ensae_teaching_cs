@@ -62,9 +62,9 @@ def graph_with_label(x, y, labels, barplot=True, title=None, figsize=(6, 4), sty
     @param      title   if not None, sets the title
     @param      figsize only if ax is not None
     @param      style   style
-    @param      ax      existing `Axes <http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes>`_ or None if it must be created
+    @param      ax      existing :epkg:`Axes` or None if it must be created
     @param      kwargs  others parameters
-    @return             `Axes <http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes>`_
+    @return             :epkg:`Axes`
 
     .. faqref::
         :tag: matplotlib
@@ -201,8 +201,8 @@ def change_legend_location(ax, new_location="lower center"):
     """
     Changes the location of the legend.
 
-    @param      ax              `Axes <http://matplotlib.org/api/axes_api.html#axes>`_
-    @param      new_location    new_location, see method `legend <http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes.legend>`_
+    @param      ax              :epkg:`Axes`
+    @param      new_location    new_location, see method :epkg:`legend`
     @return                     ax
 
     .. faqref::
@@ -212,8 +212,8 @@ def change_legend_location(ax, new_location="lower center"):
         On cherche ici à changer l'emplacement de la légende alors que celle-ci a déjà été
         définie par ailleurs. C'est pratique lorsque celle-ci cache une partie du graphe
         qu'on veut absolument montrer.
-        On ne dispose que de l'objet *ax* de type `Axes <http://matplotlib.org/api/axes_api.html#axes>`_.
-        On utilise pour cela la méthode `legend <http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes.legend>`_
+        On ne dispose que de l'objet *ax* de type :epkg:`Axes`.
+        On utilise pour cela la méthode :epkg:`legend`
         et le code suivant :
 
         ::
@@ -222,7 +222,7 @@ def change_legend_location(ax, new_location="lower center"):
             ax.legend(handles, labels, loc="lower center")
 
         Les différentes options pour le nouvel emplacement sont énoncées
-        dans l'aide associée à la méthode `legend <http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes.legend>`_.
+        dans l'aide associée à la méthode :epkg:`legend`.
     """
     handles, labels = ax.get_legend_handles_labels()
     ax.legend(handles, labels, loc=new_location)
@@ -231,14 +231,14 @@ def change_legend_location(ax, new_location="lower center"):
 
 def avoid_overlapping_dates(fig, **options):
     """
-    avoid overlapping dates by calling method
-    `autofmt_xdate <http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure.autofmt_xdate>`_
+    Avoids overlapping dates by calling method
+    :epkg:`autofmt_xdate`.
 
     .. faqref::
         :tag: matplotlib
         :title: Comment éviter les dates qui se superposent ?
 
-        La méthode `autofmt_xdate <http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure.autofmt_xdate>`_
+        La méthode :epkg:`autofmt_xdate`
         permet d'éviter les problèmes de dates
         qui se superposent.
 

@@ -30,7 +30,7 @@ def compile_cython_single_script(script, skip_warn=True, fLOG=noLOG):
     @param      fLOG        logging function
 
     The function applies the steps described in the basic tutorial
-    `The Basics of Cython <http://docs.cython.org/src/tutorial/cython_tutorial.html>`_.
+    :epkg:`The Basics of Cython`.
     The function creates a ``setup.py``
     in the same location and compiles it.
 
@@ -54,7 +54,7 @@ def compile_cython_single_script(script, skip_warn=True, fLOG=noLOG):
         Cette extension permet d'implémenter des fonctions Python dans un
         pseudo-langage proche du `C <https://en.wikipedia.org/wiki/C_(programming_language)>`_.
         Il faut suivre les instructions décrite dans le tutorial
-        `The Basics of Cython <http://docs.cython.org/src/tutorial/cython_tutorial.html>`_
+        :epkg:`The Basics of Cython`
         pour réussir à utiliser une fonction codée en Cython.
         C'est ce que fait la fonction :func:`compile_cython_single_script`.
 
