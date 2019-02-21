@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @file
-@brief Quelques problèmes récurrents avec `Jupyter <https://jupyter.org/>`_.
+@brief Quelques problèmes récurrents avec :epkg:`Jupyter`.
 
 """
 
@@ -117,7 +117,7 @@ def jupyter_open_notebook(filename, profile='default', fLOG=fLOG):
         :title: Lancer le serveur de notebooks
         :lid: i-launch_notebook-server
 
-        On suppose que le module `Jupyter <http://jupyter.org/notebook.html>`_ a été bien installé.
+        On suppose que le module :epkg:`Jupyter` a été bien installé.
         Depuis août 2015, IPython est devenu Jupyter qui n'est pas plus automatiquement
         associé à Python mais propose des notebooks pour de nombreux langages.
         Il faut installer le module *jupyter* (``pip install jupyter``).
