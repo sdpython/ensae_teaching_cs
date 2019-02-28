@@ -191,6 +191,13 @@ Problèmes NP-complets
   (`en <https://en.wikipedia.org/wiki/List_of_NP-complete_problems>`_)
 * :ref:`l-np-complets`
 
+.. index:: morphisme
+
+Un peu de morphisme parce que ça m'a toujours fasciné :
+
+* `Efficient and practical tree preconditioning for solving Laplacian systems <http://www.lix.polytechnique.fr/~maks/papers/SEA_2015_draft.pdf>`_
+* `A Survey on Data-driven Dictionary-based Methods for 3D Modeling <http://www.lix.polytechnique.fr/~maks/papers/dictionary_survey.pdf>`_
+
 Liens
 +++++
 
