@@ -98,6 +98,7 @@ epkg_dictionary.update({
     "auto-keras": "https://github.com/jhfjhfj1/autokeras",
     'autofmt_xdate': 'http://matplotlib.org/api/figure_api.html#matplotlib.figure.Figure.autofmt_xdate',
     'Axes': 'http://matplotlib.org/api/axes_api.html#matplotlib.axes.Axes',
+    "_benchamrks": 'http://www.xavierdupre.fr/app/_benchmarks/helpsphinx/index.html',
     "basemap": 'https://matplotlib.org/basemap/',
     "blockchain": 'https://fr.wikipedia.org/wiki/Blockchain',
     "bokeh": 'https://fr.wikipedia.org/wiki/Bokeh',

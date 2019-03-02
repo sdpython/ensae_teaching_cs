@@ -22,4 +22,4 @@ def get_teaching_modules():
             "lightmlboard", "lightmlrestapi", "mlinsights", "pyenbc", "mlprodict",
             "papierstat", "sparkouille", "manydataapi", "csharpy", "csharpyml",
             "ensae_teaching_dl", "machinelearningext", "mathenjeu", "lecture_citation",
-            "botadi"]
+            "botadi", "_benchmarks"]
