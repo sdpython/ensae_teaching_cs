@@ -15,8 +15,8 @@ def get_teaching_modules():
         from ensae_teaching_cs.automation import get_teaching_modules
         print('\\n'.join(sorted(get_teaching_modules())))
     """
-    return ["ensae_teaching_dl", "machinelearningext", "mathenjeu", "lecture_citation",
-            "botadi", "_benchmarks", "pyquickhelper", "jyquickhelper", "python3_module_template",
+    return ["_benchmarks", "ensae_teaching_dl", "machinelearningext", "lecture_citation",
+            "botadi", "pyquickhelper", "jyquickhelper", "python3_module_template", "mathenjeu",
             "pymmails", "pymyinstall", "pyensae", "pyrsslocal", "pysqllike", "ensae_projects",
             "ensae_teaching_cs", "code_beatrix", "actuariat_python", "mlstatpy", "jupytalk",
             "teachpyx", "tkinterquickhelper", "cpyquickhelper", "pandas_streaming",
