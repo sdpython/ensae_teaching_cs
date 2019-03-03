@@ -27,6 +27,7 @@ mlstatpy
 mpld3
 msgpack!=0.6.0  # https://github.com/explosion/spaCy/issues/2995
 mutagen
+git+https://github.com/sdpython/nbconvert.git@fixes
 opencv-python
 pandas_streaming
 partd
