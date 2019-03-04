@@ -98,6 +98,7 @@ C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
   `tutorial <https://beenkim.github.io/papers/BeenK_FinaleDV_ICML2017_tutorial.pdf>`_)
 * `To Trust Or Not To Trust A Classifier <https://arxiv.org/abs/1805.11783>`_,
   `Mind the Gap: A Generative Approach to Interpretable Feature Selection and Extraction <https://beenkim.github.io/papers/BKim2015NIPS.pdf>`_
+* `Interpretation of Neural Networks is Fragile <https://arxiv.org/pdf/1710.10547.pdf>`_
 
 *Lectures : monotonie*
 

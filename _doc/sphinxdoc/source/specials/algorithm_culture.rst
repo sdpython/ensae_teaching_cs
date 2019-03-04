@@ -221,6 +221,7 @@ Articles sur des algorithmes
 * `String Periods in the Order-Preserving Model <https://arxiv.org/pdf/1801.01404.pdf>`_
 * `Recursive n-gram hashing is pairwise independent, at best <https://arxiv.org/pdf/0705.4676.pdf>`_,
   `Hash-Grams: Faster N-Gram Features for Classification and Malware Detection <http://www.edwardraff.com/publications/hash-grams-faster.pdf>`_
+* `Computing Higher Order Derivatives of Matrix and Tensor Expressions <https://papers.nips.cc/paper/7540-computing-higher-order-derivatives-of-matrix-and-tensor-expressions.pdf>`_
 
 Livres
 ++++++

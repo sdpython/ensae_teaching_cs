@@ -94,6 +94,7 @@ GPU
 * `CUDA C Programming Guide <https://docs.nvidia.com/cuda/cuda-c-programming-guide/>`_
 * `Demystifying GPU Microarchitecture through Microbenchmarking <http://www.stuffedcow.net/files/gpuarch-ispass2010.pdf>`_
 * `Mixed-Precision Training of Deep Neural Networks <https://devblogs.nvidia.com/parallelforall/mixed-precision-training-deep-neural-networks/>`_
+* `Computing Higher Order Derivatives of Matrix and Tensor Expressions <https://papers.nips.cc/paper/7540-computing-higher-order-derivatives-of-matrix-and-tensor-expressions.pdf>`_
 
 *Lectures sur le C++*
 
