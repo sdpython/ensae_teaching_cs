@@ -30,7 +30,7 @@ install:
   - conda install conda-build
   - conda install -q --file=requirements_conda.txt
   - pip install pyquickhelper
-  - pip install -q -r requirements.txt
+  - pip install -r requirements.txt
   - pip install -U git+https://github.com/sdpython/pyPdf --no-deps
   - pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
   - pip install cairocffi cairosvg
