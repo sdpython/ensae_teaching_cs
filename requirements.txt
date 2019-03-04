@@ -53,8 +53,9 @@ seasonal
 shapely
 sphinx_bootstrap_theme
 sphinx_rtd_theme
-toolz
+tables
 tkinterquickhelper
+toolz
 treeinterpreter
 tutormagic
 wheel

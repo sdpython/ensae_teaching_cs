@@ -37,17 +37,17 @@ script:
   - { CMD: "$PYINT -u setup.py unittests -e \".*internet.*\"", NAME: "UT_INTERNET" }
 #  - if [ ${VERSION} == "3.7" and ${DIST} == "std" ]
 #      then 
-#        --CMD=echo skip unit test;
-#        --NAME=DOC1;
-#        --CLEAN=0;
-#        --TIMEOUT=5400
+#        --CMD=echo skip unit test;;
+#        --NAME=DOC1;;
+#        --CLEAN=0;;
+#        --TIMEOUT=5400;;
 #      fi
 #  - if [ ${VERSION} == "3.7" and ${DIST} == "std" ]
 #      then 
-#        --CMD=echo skip unit test;
-#        --NAME=DOC3;
-#        --CLEAN=0;
-#        --TIMEOUT=5400
+#        --CMD=echo skip unit test;;
+#        --NAME=DOC3;;
+#        --CLEAN=0;;
+#        --TIMEOUT=5400;;
 #      fi
 
 after_script:

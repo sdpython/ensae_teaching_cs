@@ -27,7 +27,6 @@ seaborn
 Sphinx>=1.7
 statsmodels
 sympy
-tables
 toolz
 ujson
 xarray
