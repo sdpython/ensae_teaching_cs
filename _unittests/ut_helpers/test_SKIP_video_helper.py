@@ -6,12 +6,7 @@ import os
 import sys
 import warnings
 import unittest
-try:
-    import re
-except (ImportError, AttributeError) as e:
-    import enum
-    raise ImportError(
-        "Unable to import re\nenum:{0}".format(enum.__file__)) from e
+import pyquickhelper
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, is_virtual_environment, run_base_script, ExtTestCase
 
@@ -67,7 +62,6 @@ class TestVideoHelper(ExtTestCase):
                 fLOG("success")
         else:
             # We run it with the original interpreter.
-            import pyquickhelper
             fLOG("switch from virtual environment", sys.base_prefix)
             fold = os.path.abspath(os.path.join(
                 os.path.dirname(pyquickhelper.__file__), ".."))

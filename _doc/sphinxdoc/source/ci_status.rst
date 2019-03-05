@@ -584,6 +584,30 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/pyensae/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
       -
+    * - `pymlbenchmark <http://www.xavierdupre.fr/app/pymlbenchmark/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/pymlbenchmark.svg?branch=master
+            :target: https://travis-ci.org/sdpython/pymlbenchmark
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/l2lk7a0r2pccpg3r?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/pymlbenchmark
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/pymlbenchmark/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/pymlbenchmark/tree/master
+      -
+      - .. image:: https://badge.fury.io/py/pymlbenchmark.svg
+            :target: https://pypi.org/project/pymlbenchmark
+      - .. image:: http://img.shields.io/pypi/pyversions/pymlbenchmark.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/pymlbenchmark
+      - .. image:: https://badge.waffle.io/sdpython/pymlbenchmark.png?label=ready&title=Ready
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/pymlbenchmark
+      - .. image:: https://codecov.io/github/sdpython/pymlbenchmark/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/pymlbenchmark?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/pymlbenchmark/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/pymlbenchmark/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
+      -
     * - `pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/pymmails.svg?branch=master
             :target: https://travis-ci.org/sdpython/pymmails
