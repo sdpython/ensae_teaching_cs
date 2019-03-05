@@ -38,7 +38,6 @@ class TestVideoHelper(ExtTestCase):
         This test does not work under a virtual environment.
         """
         fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
-        assert re is not None
 
         if is_travis_or_appveyor() == "travis":
             warnings.warn("cv2 is not available")

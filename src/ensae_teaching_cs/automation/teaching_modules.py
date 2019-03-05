@@ -17,7 +17,7 @@ def get_teaching_modules():
     """
     return ["pymlbenchmark", "_benchmarks", "ensae_teaching_dl", "machinelearningext",
             "lecture_citation", "botadi", "pyquickhelper", "jyquickhelper",
-            "python3_module_template", "mathenjeu", "pymmails", "pymyinstall", 
+            "python3_module_template", "mathenjeu", "pymmails", "pymyinstall",
             "pyensae", "pyrsslocal", "pysqllike", "ensae_projects", "ensae_teaching_cs",
             "code_beatrix", "actuariat_python", "mlstatpy", "jupytalk", "teachpyx",
             "tkinterquickhelper", "cpyquickhelper", "pandas_streaming",
