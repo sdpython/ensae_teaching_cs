@@ -955,6 +955,12 @@ Outils
     * - `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
       - Fonctionnalités uilisées par un ENSAE ou plus généralement pour un datascientist,
         récupération de données, commandes magiques, quelques graphes.
+    * - `pymlbenchmark <http://www.xavierdupre.fr/app/pymlbenchmark/helpsphinx/index.html>`_
+      - J'ai commencé à écrire un benchmark. Après trois copier/collers pour
+        des expériences similaires, j'en ai eu marre. J'ai donc cherché à
+        automatiser parce que je ne sais pas faire trois fois la même
+        chose sans rêver durant la dernière et faire une grande pause
+        pour que la quatrième ne tienne plus qu'en quatre lignes.
     * - `python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
       - Modèle de module Python utilisé pour ce cours. C'est un module vide facile à adapter.
     * - `tkinterquickhelper <http://www.xavierdupre.fr/app/tkinterquickhelper/helpsphinx/index.html>`_
