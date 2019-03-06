@@ -2,7 +2,12 @@
 language: python
 
 python:
-  - { PATH: "{{Python37}}", VERSION: 3.7, DIST: std, PYINT: python3.7 }
+  - { PATH: "{{Python37}}",
+      VERSION: 3.7,
+      DIST: std,
+      PYINT: python3.7,
+      LD_LIBRARY_PATH: /usr/local/Python-3.7.2,
+      PYTHONPATH: /home/dupre/xadupre/onnxruntime/build/debian37/Release }
   
 virtualenv:
   - path: {{ospathjoin(root_path, pickname("$NAME_JENKINS", project_name + "_$VERSION_$DIST_$NAME"), "_venv")}}
