@@ -29,6 +29,7 @@ Anonymisation des données / Privacy
 * `Privatics (INRIA) <https://team.inria.fr/privatics/>`_
 * `Differential Privacy for Bayesian Inference through Posterior Sampling∗ <http://www.jmlr.org/papers/volume18/15-257/15-257.pdf>`_
 * `Corrupt Bandits for Preserving Local Privacy <https://arxiv.org/abs/1708.05033>`_
+* `A General Approach to Adding Differential Privacy to Iterative Training Procedures <https://arxiv.org/pdf/1812.06210.pdf>`_
 
 *Tables rondes*
 
@@ -53,3 +54,4 @@ Anonymisation des données / Privacy
 *Modules*
 
 * `AGD Tools <https://github.com/SGMAP-AGD/anonymisation>`_ : ce module s'accompagne d'un wiki et de notebooks.
+* `tensorflow/privacy <https://github.com/tensorflow/privacy>`_

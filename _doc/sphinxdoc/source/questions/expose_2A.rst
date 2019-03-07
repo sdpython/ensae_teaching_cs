@@ -241,8 +241,14 @@ Interprétabilité
 * `DALEX: Explainers for Complex Predictive Models in R <http://www.jmlr.org/papers/volume19/18-416/18-416.pdf>`_
 
 Très grande dimension
-^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 
 * `Making Decision Trees Feasible in Ultrahigh Feature and Label Dimensions <http://jmlr.org/papers/volume18/16-466/16-466.pdf>`_
 * `Identifying a Minimal Class of Models for High–dimensional Data <http://www.jmlr.org/papers/volume18/16-172/16-172.pdf>`_
 * `The xyz algorithm for fast interaction search in high-dimensional data <http://www.jmlr.org/papers/volume19/16-515/16-515.pdf>`_
+
+Privacy
+^^^^^^^
+
+* `A General Approach to Adding Differential Privacy to Iterative Training Procedures <https://arxiv.org/pdf/1812.06210.pdf>`_,
+  `tensorflow/privacy <https://github.com/tensorflow/privacy>`_
