@@ -98,8 +98,7 @@ def text_transform(ftpp, filename, content):
 
 
 def publish_documentation(docs, ftpsite=None, login=None, password=None,
-                          footer_html=None,
-                          content_filter=trigger_on_specific_strings,
+                          footer_html=None, content_filter=trigger_on_specific_strings,
                           is_binary=content_as_binary, force_allow=None,
                           delay=0.5, exc=False, fLOG=print):
     """
@@ -157,7 +156,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
 
         fLOG("######################################################################")
         for k, v in sorted(project.items()):
-            fLOG("  {}={}".format(k, v))
+            fLOG("[publish_documentation] loop {}='{}'".format(k, v))
 
         location = project["local"]
         root_local = project["root_local"]
@@ -167,7 +166,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
         rootw = project["root_web"]
 
         # documentation + setup
-        fLOG("-------------------------", location)
+        fLOG("[publish_documentation] location='{}'".format(location))
 
         ftn = FileTreeNode(root_local)
         fftp = FolderTransferFTP(ftn, ftp, sfile, root_web=rootw, fLOG=fLOG, footer_html=footer_html,
@@ -197,29 +196,30 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                              modules=None, password=None, force_allow=None,
                              suffix=("_UT_%d%d_std" % sys.version_info[:2],),
                              delay=0.5, exc=False, exc_transfer=False,
-                             transfer=True, fLOG=print):
+                             transfer=True, additional_projects=None, fLOG=print):
     """
     Copies the documentation to the website.
 
-    @param      login           login
-    @param      ftpsite         ftp site
-    @param      google_id       google_id
-    @param      location        location of Jenkins build
-    @param      rootw           root on ftp site
-    @param      rootw2          root for ``lesenfantscodaient.fr``
-    @param      folder_status   folder status
-    @param      modules         list of modules to publish, if None, use @see fn get_teaching_modules
-    @param      password        if None, if will asked
-    @param      layout          last part of the folders
-    @param      suffix          suffixes to append to the project name
-    @param      force_allow     allow to publish files even if they contain these strings
-                                whereas they seem to be credentials
-    @param      delay           delay between two files being transferred
-    @param      exc             raise exception if not found (True) or skip (False)
-    @param      exc_transfer    raise an exception if cannot be transfered
-    @param      transfer        starts transfering, otherwise returns the list of
-                                transfering task to do
-    @param      fLOG            logging function
+    @param      login               login
+    @param      ftpsite             ftp site
+    @param      google_id           google_id
+    @param      location            location of Jenkins build
+    @param      rootw               root on ftp site
+    @param      rootw2              root for ``lesenfantscodaient.fr``
+    @param      folder_status       folder status
+    @param      modules             list of modules to publish, if None, use @see fn get_teaching_modules
+    @param      password            if None, if will asked
+    @param      layout              last part of the folders
+    @param      suffix              suffixes to append to the project name
+    @param      force_allow         allow to publish files even if they contain these strings
+                                    whereas they seem to be credentials
+    @param      delay               delay between two files being transferred
+    @param      exc                 raise exception if not found (True) or skip (False)
+    @param      exc_transfer        raise an exception if cannot be transfered
+    @param      transfer            starts transfering, otherwise returns the list of
+                                    transfering task to do
+    @param      additional_projects additional projects
+    @param      fLOG                logging function
 
     Example of use::
 
@@ -242,6 +242,13 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
             rootw=rootw, rootw2=rootw2,
             folder_status=os.path.abspath("."),
             password=password)
+
+    Example of an additional projects:
+
+    ::
+
+        other_projects = [dict(status_file="status_projects.txt"),
+                               root_local="...", root_web="...")]
     """
     if modules is None:
         modules = get_teaching_modules()
@@ -373,6 +380,8 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
             projects.append(project)
 
     # publish
+    if additional_projects:
+        projects.extends(additional_projects)
 
     if transfer:
         publish_documentation(projects, ftpsite=ftpsite, login=login, password=password,
