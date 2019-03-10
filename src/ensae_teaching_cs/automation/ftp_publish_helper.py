@@ -381,7 +381,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
 
     # publish
     if additional_projects:
-        projects.extends(additional_projects)
+        projects.extend(additional_projects)
 
     if transfer:
         publish_documentation(projects, ftpsite=ftpsite, login=login, password=password,
