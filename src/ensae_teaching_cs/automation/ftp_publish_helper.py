@@ -382,14 +382,14 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
     # publish
     if additional_projects:
         for proj in additional_projects:
-            if 'local' not in proj:
+            if 'root_local' not in proj:
                 if 'folder' not in proj:
-                    raise KeyError("Keys 'folder' or 'local' must be specified.")
+                    raise KeyError("Keys 'folder' or 'root_local' must be specified in {}.".format(proj))
                 proj = proj.copy()
-                proj['local'] = proj['folder']
+                proj['root_local'] = proj['folder']
             if 'folder' not in proj:
                 proj = proj.copy()
-                proj['folder'] = proj['local']
+                proj['folder'] = proj['root_local']
             projects.append(proj)
 
     if transfer:
