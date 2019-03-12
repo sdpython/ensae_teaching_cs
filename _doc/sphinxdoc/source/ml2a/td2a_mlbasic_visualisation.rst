@@ -1,0 +1,36 @@
+
+.. image:: pyeco.png
+    :height: 20
+    :alt: Economie
+    :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-economiste
+
+.. image:: pystat.png
+    :height: 20
+    :alt: Statistique
+    :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
+
+Visualisation
++++++++++++++
+
+.. index:: visualisation
+
+:epkg:`matplotlib` propose une série de graphes standard mais il est
+rare qu'il fournisse un graphe prêt à l'emploi sans qu'on doive
+lui rajouter des informations pour analyser ou interpréter.
+Certains librairies proposent des graphes plus complets et qui
+répondent aux besoins fréquents lorsqu'on fait du machine learning.
+Et parfois, on a envie de dessiner en
+`3D <https://hypertools.readthedocs.io/en/latest/auto_examples/plot_clusters.html#sphx-glr-auto-examples-plot-clusters-py>`_.
+
+*(à venir)*
+
+*Lectures*
+
+
+*Librairies*
+
+* :epkg:`matplotlib`
+* :epkg:`bokeh`
+* :epkg:`seaborn`
+* `yellowbrick <http://www.scikit-yb.org/en/latest/index.html>`_
+* `hypertools <https://hypertools.readthedocs.io/en/latest/>`_
