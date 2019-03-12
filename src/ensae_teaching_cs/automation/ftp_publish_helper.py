@@ -22,7 +22,8 @@ def trigger_on_specific_strings(content, filename=None, force_allow=None):
     @param      force_allow allow these expressions even if they seem to be credentials
     @return                 modified content
     """
-    strep = []
+    strep = [('/var/lib/jenkins/workspace/_automation/_automation_FORK_', 'somewhere'),
+             ('/var/lib/jenkins', 'somewhere')]
     for env in ['USERNAME', 'USER']:
         if env in os.environ and os.environ[env] != "jenkins":
             for sub in ["_data", "GitHub"]:
@@ -384,12 +385,16 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
         for proj in additional_projects:
             if 'root_local' not in proj:
                 if 'folder' not in proj:
-                    raise KeyError("Keys 'folder' or 'root_local' must be specified in {}.".format(proj))
+                    raise KeyError(
+                        "Key 'folder' or 'root_local' must be specified in {}.".format(proj))
                 proj = proj.copy()
                 proj['root_local'] = proj['folder']
             if 'folder' not in proj:
                 proj = proj.copy()
                 proj['folder'] = proj['root_local']
+            if 'local' not in proj:
+                proj = proj.copy()
+                proj['local'] = os.path.dirname(proj['root_local'])
             projects.append(proj)
 
     if transfer:

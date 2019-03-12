@@ -6,7 +6,7 @@ import sys
 import os
 import unittest
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.helpgen import process_notebooks
+from pyquickhelper.helpgen.process_notebooks import process_notebooks
 from pyquickhelper.pycode import get_temp_folder
 
 try:

@@ -9,7 +9,7 @@ import unittest
 import warnings
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
-from pyquickhelper.helpgen import process_notebooks
+from pyquickhelper.helpgen.process_notebooks import process_notebooks
 
 try:
     import src

@@ -44,11 +44,11 @@ with warnings.catch_warnings():
 
 server = "imap.gmail.com"
 school = "ENSAE"
-date = "25-Jan-2019"
-pattern = "Python_{0}_TD_2A_2019"
+date = "8-Feb-2019"
+pattern = "Python_{0}_TD_3A_master_2019"
 group_def = "groupes.xlsx"
 col_subject, col_group, col_mail, col_student = "sujet", "groupe", "mail", "Nom"
-final_dest = ["2018-2019", "3A_projet"]
+final_dest = ["2018-2019", "3A_projet_master"]
 
 
 if school == 'ENSAE':
