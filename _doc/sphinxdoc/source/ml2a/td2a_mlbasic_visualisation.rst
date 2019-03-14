@@ -26,7 +26,6 @@ Et parfois, on a envie de dessiner en
 
 *Lectures*
 
-
 *Librairies*
 
 * :epkg:`matplotlib`
