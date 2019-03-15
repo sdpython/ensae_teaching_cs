@@ -34,7 +34,7 @@ class TestNotebookRunner2aEcoNLP(unittest.TestCase):
         from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook2a_eco_nlp_" + sub)
         keepnote = ls_notebooks("td2a_eco")
-        if sub == "correction":
+        if sub in ("correction", "enonce"):
             folder = os.path.join(temp, "ressources_googleplus")
             os.mkdir(folder)
             folder_note = os.path.split(keepnote[0])[0]
@@ -64,9 +64,6 @@ class TestNotebookRunner2aEcoNLP(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        if is_travis_or_appveyor():
-            # requires credentials
-            return
         self.common_notebook_runner_2a_eco_nlp_enonce("enonce")
 
     def test_notebook_runner_2a_eco_nlp_correction(self):
