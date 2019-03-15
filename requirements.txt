@@ -14,6 +14,7 @@ folium
 forestci
 gensim
 geopy
+google-api-python-client
 google_compute_engine
 httplib2
 jsonpickle
