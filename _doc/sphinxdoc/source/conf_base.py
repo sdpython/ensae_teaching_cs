@@ -205,6 +205,7 @@ epkg_dictionary.update({
     "pytorch": 'http://pytorch.org/',
     "R": 'https://www.r-project.org/',
     "RaspberryPI": 'https://www.raspberrypi.org/',
+    "re2": 'https://github.com/google/re2',
     "requests": 'http://docs.python-requests.org/en/latest/',
     'REST API': "https://en.wikipedia.org/wiki/Representational_state_transfer",
     "ROC": 'http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/roc.html',

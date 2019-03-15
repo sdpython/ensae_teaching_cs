@@ -794,6 +794,30 @@ Tableau de bord et statut des dépendances
             :target: https://codecov.io/github/sdpython/tkinterquickhelper?branch=master
       -
       -
+    * - `wrapclib <http://www.xavierdupre.fr/app/wrapclib/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/wrapclib.svg?branch=master
+            :target: https://travis-ci.org/sdpython/wrapclib
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/auonxiihm1eihv3t?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/wrapclib
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/wrapclib/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/wrapclib/tree/master
+      -
+      - .. image:: https://badge.fury.io/py/wrapclib.svg
+            :target: https://pypi.org/project/wrapclib
+      - .. image:: http://img.shields.io/pypi/pyversions/wrapclib.png
+            :alt: PYPI Package
+            :target: https://pypi.python.org/pypi/wrapclib
+      - .. image:: https://badge.waffle.io/sdpython/wrapclib.png?label=to%20do&title=to%20do
+            :alt: Waffle
+            :target: https://waffle.io/sdpython/wrapclib
+      - .. image:: https://codecov.io/github/sdpython/wrapclib/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/wrapclib?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/wrapclib/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/wrapclib/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
+      -
     * - Les suivants sont des
       - exemples
       - pour créer de
@@ -966,6 +990,9 @@ Outils
     * - `tkinterquickhelper <http://www.xavierdupre.fr/app/tkinterquickhelper/helpsphinx/index.html>`_
       - Fonctions utilisées pour saisir rapidement des informations avec tkinter.
         Rarement utilisées depuis l'arrivée des notebooks.
+    * - `wrapclib <http://www.xavierdupre.fr/app/wrapclib/helpsphinx/index.html>`_
+      - Utilise des librairies C construites pas d'autres comme
+        :epkg:`re2`.
 
 Contenu
 +++++++
