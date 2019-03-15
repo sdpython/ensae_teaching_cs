@@ -50,7 +50,7 @@ class TestLONGNotebookRunner2aEco(unittest.TestCase):
         if not os.path.exists(folder):
             os.mkdir(folder)
         jsfile = os.path.join(os.path.dirname(keepnote[0]),
-            "ressources_googleplus", "107033731246200681024.json")
+                              "ressources_googleplus", "107033731246200681024.json")
         shutil.copy(jsfile, folder)
 
         def filter(i, n):
