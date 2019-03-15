@@ -15,6 +15,7 @@ forestci
 gensim
 geopy
 google_compute_engine
+httplib2
 jsonpickle
 jyquickhelper
 keyring
