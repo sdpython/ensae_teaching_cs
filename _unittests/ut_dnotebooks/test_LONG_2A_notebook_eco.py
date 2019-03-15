@@ -46,6 +46,13 @@ class TestLONGNotebookRunner2aEco(unittest.TestCase):
         keepnote = ls_notebooks("td2a_eco")
         shutil.copy(simple_database(), temp)
 
+        folder = os.path.join(temp, "ressources_googleplus")
+        if not os.path.exists(folder):
+            os.mkdir(folder)
+        jsfile = os.path.join(os.path.dirname(keepnote[0]),
+            "ressources_googleplus", "107033731246200681024.json")
+        shutil.copy(jsfile, folder)
+
         def filter(i, n):
             if "td2a_TD5_Traitement_automatique_des_langues_en_Python" in n:
                 return True
