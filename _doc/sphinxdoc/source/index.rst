@@ -14,7 +14,7 @@ Il existe deux formats disponibles :
 `plus large <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
 Les changements importants sont notés sur le :ref:`blog <ap-main-0>`
 associé à ce cours, certains modifications prévues
-sont notés sur `Waffle/ensae_teaching_cs <https://waffle.io/sdpython/ensae_teaching_cs>`_.
+sont notés sur `github/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs/issues>`_.
 
 .. |gitlogo| image:: _static/git_logo.png
              :height: 20
@@ -220,10 +220,6 @@ sans même avoir à récupérer tous les fichiers sur votre ordinateur :
 .. image:: http://img.shields.io/github/issues/sdpython/ensae_teaching_cs.png
     :alt: GitHub Issues
     :target: https://github.com/sdpython/ensae_teaching_cs/issues
-
-.. image:: https://badge.waffle.io/sdpython/ensae_teaching_cs.png?label=ready&title=Ready
-    :alt: Waffle
-    :target: https://waffle.io/sdpython/ensae_teaching_cs
 
 .. image:: https://api.codacy.com/project/badge/Grade/80a874c0eafd4ea68f3493d73b43f0c5
     :target: https://www.codacy.com/app/sdpython/ensae_teaching_cs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sdpython/ensae_teaching_cs&amp;utm_campaign=Badge_Grade
