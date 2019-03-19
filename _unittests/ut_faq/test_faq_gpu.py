@@ -30,7 +30,7 @@ class TestFaqGPU(ExtTestCase):
     def test_pyopencl_status(self):
         res = pyopencl_status()
         self.assertNotEmpty(res)
-        self.assertIn('===', res)
+        self.assertTrue("===" in res or "pyopencl is not available due" in res)
 
 
 if __name__ == "__main__":
