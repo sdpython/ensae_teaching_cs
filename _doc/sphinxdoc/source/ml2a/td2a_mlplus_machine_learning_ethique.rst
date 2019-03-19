@@ -84,23 +84,27 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
 * `A Reductions Approach to Fair Classification <https://arxiv.org/pdf/1803.02453.pdf>`_
 * `FairTest: Discovering Unwarranted Associations in Data-Driven Applications <https://arxiv.org/pdf/1510.02377.pdf>`_
 
-*Lectures*
+*Lectures françaises*
 
+* `Guide des algorithmes publics <https://etalab.github.io/algorithmes-publics/guide.html>`_
 * `Comment permettre à l'homme de garder la main ? <https://www.cnil.fr/sites/default/files/atoms/files/cnil_rapport_garder_la_main_web.pdf#page=58>`_,
   Les enjeux éthiques des algorithmes et de l’intelligence artificielle,
   Synthèse du débat public animé par la :epkg:`CNIL` dans le cadre de la mission
   de réflexion éthique confiée par la loi pour une république numérique.
-* `Equality of Opportunity in Supervised Learning <http://ttic.uchicago.edu/~nati/Publications/HardtPriceSrebro2016.pdf>`_
 * `O21 : La transparence des algorithmes relève des droits civiques <http://www.lemonde.fr/campus/article/2017/05/02/o21-la-transparence-des-algorithmes-releve-des-droits-civiques_5121201_4401467.html>`_
+* `Enquête : comment les apps Figaro, L'Equipe ou Closer participent au pistage de 10 millions de Français <https://www-numerama-com.cdn.ampproject.org/c/www.numerama.com/politique/282934-enquete-comment-les-apps-figaro-lequipe-ou-closer-participent-au-pistage-de-10-millions-de-francais.html/amp>`_
+* `Surveiller et prévenir, l'ère de la pénalité prédictive <https://bourgoinblog.wordpress.com/2017/11/10/surveiller-et-prevenir-lere-de-la-penalite-predictive/>`_
+* `Nozha Boujemaa : "Les algorithmes doivent apporter une aide à la décision mais pas en être les prescripteurs" <https://www.acteurspublics.com/2017/12/08/les-algorithmes-doivent-apporter-une-aide-a-la-decision-mais-pas-en-etre-les-prescripteurs>`_
+
+*Lectures*
+
+* `Equality of Opportunity in Supervised Learning <http://ttic.uchicago.edu/~nati/Publications/HardtPriceSrebro2016.pdf>`_
 * `TransAlgo : évaluer la responsabilité et la transparence des systèmes algorithmiques <https://www.inria.fr/actualite/actualites-inria/transalgo>`_
 * `Réguler les algorithmes : remise d'un rapport à Axelle Lemaire <https://www.economie.gouv.fr/reguler-algorithmes-rapport-axelle-lemaire-cge>`_
-* `Enquête : comment les apps Figaro, L'Equipe ou Closer participent au pistage de 10 millions de Français <https://www-numerama-com.cdn.ampproject.org/c/www.numerama.com/politique/282934-enquete-comment-les-apps-figaro-lequipe-ou-closer-participent-au-pistage-de-10-millions-de-francais.html/amp>`_
 * `Accountable Algorithms <https://www.jkroll.com/papers/dissertation.pdf>`_ (PhD thesis)
 * `Improving the Transparency of the Sharing Economy <http://mathias.lecuyer.me/assets/assets/www2017airbnb.pdf>`_
 * `Sunlight: Fine-grained Targeting Detection at Scale with Statistical Confidence <http://www.cs.columbia.edu/~djhsu/papers/sunlight.pdf>`_
 * `Justice actuarielle, algorithmes... et données <http://freakonometrics.hypotheses.org/51783>`_
-* `Surveiller et prévenir, l'ère de la pénalité prédictive <https://bourgoinblog.wordpress.com/2017/11/10/surveiller-et-prevenir-lere-de-la-penalite-predictive/>`_
-* `Nozha Boujemaa : "Les algorithmes doivent apporter une aide à la décision mais pas en être les prescripteurs" <https://www.acteurspublics.com/2017/12/08/les-algorithmes-doivent-apporter-une-aide-a-la-decision-mais-pas-en-etre-les-prescripteurs>`_
 * `On Fairness, Diversity and Randomness in Algorithmic Decision Making <https://arxiv.org/pdf/1706.10208.pdf>`_
 * `Ten simple rules for responsible big data research <https://www.microsoft.com/en-us/research/publication/ten-simple-rules-for-responsible-big-data-research/>`_
 * `Concrete Problems in AI Safety <https://arxiv.org/abs/1606.06565>`_
