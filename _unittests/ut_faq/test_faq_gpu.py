@@ -5,7 +5,6 @@
 import sys
 import os
 import unittest
-from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import ExtTestCase
 
 
