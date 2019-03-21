@@ -16,7 +16,7 @@ Tableau de bord et statut des dépendances
 +++++++++++++++++++++++++++++++++++++++++
 
 .. list-table::
-    :widths: 12 10 10 8 15 10 10 10 10 10 10
+    :widths: 12 10 10 8 15 10 10 10 10 10
     :header-rows: 1
 
     * - Module
@@ -723,7 +723,6 @@ Tableau de bord et statut des dépendances
       - pour créer de
       - nouveaux
       - modules.
-      -
       -
       -
       -

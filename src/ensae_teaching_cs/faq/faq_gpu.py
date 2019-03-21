@@ -43,12 +43,12 @@ def pyopencl_status():
         for device in plat.get_devices():
             rows.append('-' * 56)
             rows.append('Device - Name:  ' + catch(lambda: device.name))
-            rows.append('Device - Type:  '
-                        + catch(lambda: cl.device_type.to_string(device.type)))
-            rows.append(
-                'Device - Max Clock Speed:  {0} Mhz'.format(catch(lambda: device.max_clock_frequency)))
-            rows.append(
-                'Device - Compute Units:  {0}'.format(catch(lambda: device.max_compute_units)))
+            rows.append('Device - Type: {}'.format(
+                        catch(lambda: cl.device_type.to_string(device.type))))
+            rows.append('Device - Max Clock Speed:  {0} Mhz'.format(
+                catch(lambda: device.max_clock_frequency)))
+            rows.append('Device - Compute Units:  {0}'.format(
+                catch(lambda: device.max_compute_units)))
             rows.append('Device - Local Memory:  {0:.0f} KB'.format(
                 catch(lambda: device.local_mem_size / 1024.0)))
             rows.append('Device - Constant Memory:  {0:.0f} KB'.format(
@@ -57,7 +57,7 @@ def pyopencl_status():
                 catch(lambda: device.global_mem_size / 1073741824.0)))
             rows.append('Device - Max Buffer/Image Size: {0:.0f} MB'.format(
                 catch(lambda: device.max_mem_alloc_size / 1048576.0)))
-            rows.append(
-                'Device - Max Work Group Size: {0:.0f}'.format(catch(lambda: device.max_work_group_size)))
+            rows.append('Device - Max Work Group Size: {0:.0f}'.format(
+                catch(lambda: device.max_work_group_size)))
     rows.append('=' * 60)
     return "\n".join(rows)
