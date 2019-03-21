@@ -2,6 +2,7 @@
 import sys
 import os
 from pyquickhelper.helpgen.default_conf import set_sphinx_variables, get_default_stylesheet
+import ensae_teaching_cs
 
 source_path = os.path.normpath(os.path.join(
     os.path.abspath(os.path.split(__file__)[0])))
