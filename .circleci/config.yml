@@ -171,12 +171,14 @@ jobs:
             export SDL_VIDEODRIVER=dummy
             export SDL_AUDIODRIVER=disk
             export DISPLAY=localhost:0.0
+            export PYTHONPATH=src
             python setup.py unittests
 
       - run:
           name: wheel
           command: |
             . venv/bin/activate
+            export PYTHONPATH=src
             python setup.py bdist_wheel
             mkdir -p test-reports/dist
             cp dist/*.whl test-reports/dist
@@ -185,6 +187,7 @@ jobs:
           name: documentation
           command: |
             . venv/bin/activate
+            export PYTHONPATH=src
             python setup.py build_sphinx html1 nblight
             
       - run:

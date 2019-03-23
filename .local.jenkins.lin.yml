@@ -6,6 +6,7 @@ python:
       VERSION: 3.7,
       DIST: std,
       PYINT: python3.7,
+      PYTHONPATH: src,
       LD_LIBRARY_PATH: /usr/local/Python-3.7.2 }
   
 virtualenv:

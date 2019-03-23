@@ -29,6 +29,7 @@ install:
   # - "%PYTHON%\\Scripts\\pip install csharpy pythonnet"
   - "dir C:\\projects\\ensae-teaching-cs\\build\\update_modules\\Graphviz\\bin"
   - "set PATH=%PATH%;C:\\projects\\ensae-teaching-cs\\build\\update_modules\\Graphviz\\bin"
+  - set PYTHONPATH=src
 
 build: off
 
