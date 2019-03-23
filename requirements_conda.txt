@@ -19,6 +19,7 @@ numpy
 pandas
 pillow
 pyproj
+pytables
 pyzmq
 scikit-image
 scikit-learn
