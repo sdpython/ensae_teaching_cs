@@ -207,6 +207,7 @@ epkg_dictionary.update({
     "pymmails": 'http://www.xavierdupre.fr/app/pymmails/helpsphinx/',
     "pygame": 'https://www.pygame.org/',
     "pyproj": 'https://github.com/jswhit/pyproj',
+    'Python 2A ENSAE 2016': 'https://competitions.codalab.org/competitions/13431',
     "pytorch": 'http://pytorch.org/',
     "R": 'https://www.r-project.org/',
     "RaspberryPI": 'https://www.raspberrypi.org/',

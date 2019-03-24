@@ -13,7 +13,7 @@ from pyquickhelper.filehelper.encryption import decrypt_stream
 def data_cpt_ENSAE_2016_11(folder=".", fLOG=noLOG):
     """
     Returns the data for the competition
-    `Python 2A ENSAE 2016 <https://competitions.codalab.org/competitions/13301>`_,
+    :epkg:`Python 2A ENSAE 2016`,
     located on github `ensae_competition_2016.zip
     <https://github.com/sdpython/ensae_teaching_cs/raw/master/_doc/competitions/
     2016_ENSAE_2A/ensae_competition_2016.zip>`_.
@@ -35,7 +35,7 @@ def data_cpt_ENSAE_2016_11(folder=".", fLOG=noLOG):
 def data_cpt_ENSAE_2016_11_blind_set(password):
     """
     Returns the evaluation set for the competition
-    `Python 2A ENSAE 2016 <https://competitions.codalab.org/competitions/13431>`_.
+    :epkg:`Python 2A ENSAE 2016`.
 
     @param      fLOG        logging function
     @return                 2 dataframes, one with X, Y, the others one with only X

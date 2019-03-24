@@ -140,7 +140,7 @@ dans la section qui suit :
 * :ref:`l-td1a-lesbases`
 
 Pour le templating, il faut voir les modules
-:epkg:`Jinga2` ou :epkg:`mako`.
+:epkg:`jinja2` ou :epkg:`mako`.
 Le principe est assez simple et plutôt bien
 documenté. Indispensable pour concevoir des sites
 web. `TemPy <https://github.com/Hrabal/TemPy>`_
