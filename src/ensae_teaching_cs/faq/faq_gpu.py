@@ -16,7 +16,7 @@ def pyopencl_status():
         :showcode:
 
         from ensae_teaching_cs.faq.faq_gpu import pyopencl_status
-        rows.append(pyopencl_status())
+        print(pyopencl_status())
     """
     rows = []
     try:
