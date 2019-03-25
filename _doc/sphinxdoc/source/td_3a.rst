@@ -139,6 +139,21 @@ GPU
 * `numbapro <http://docs.continuum.io/numbapro/>`_
   (voir `A Monte Carlo Option Pricer <http://nbviewer.jupyter.org/gist/harrism/835a8ca39ced77fe751d>`_)
 
+BLAS, LAPACK
+++++++++++++
+
+*Lectures*
+
+* `Fonctions LAPACK <http://www.netlib.org/lapack95/L90index/>`_
+
+*Modules*
+
+* :epkg:`Cython`
+* `BLAS <http://www.netlib.org/blas/>`_
+* `LAPACK <http://www.netlib.org/lapack/>`_
+* `OpenBLAS <http://www.openblas.net/>`_
+* `cython-blis <https://github.com/explosion/cython-blis>`_
+
 Autres que CPU, GPU
 +++++++++++++++++++
 
