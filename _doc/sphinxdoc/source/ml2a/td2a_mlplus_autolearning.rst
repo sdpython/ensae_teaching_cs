@@ -44,6 +44,7 @@ Auto-Learning (metalearning)
 * `Rapid Adaptation with Conditionally Shifted Neurons <https://arxiv.org/abs/1712.09926>`_
 * `Probabilistic Matrix Factorization for Automated Machine Learning <https://arxiv.org/abs/1705.05355>`_
 * `Auto-Keras: Efficient Neural Architecture Search with Network Morphism <https://arxiv.org/abs/1806.10282>`_
+* `NNI / Tuners <https://github.com/Microsoft/nni/blob/master/docs/en_US/Builtin_Tuner.md>`_
 
 *Tutoriel*
 
@@ -67,3 +68,5 @@ Auto-Learning (metalearning)
 * `RoBO <https://github.com/automl/RoBO>`_ (bayésien)
 * `POMDPy <https://github.com/pemami4911/POMDPy>`_
 * :epkg:`auto-keras` (deep learning)
+* `nni <https://github.com/Microsoft/nni>`_, il faut lire la section
+  `tuner <https://github.com/Microsoft/nni/blob/master/docs/en_US/Builtin_Tuner.md>`_
