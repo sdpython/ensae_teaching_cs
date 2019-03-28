@@ -3,11 +3,12 @@
 """
 import unittest
 import time
+from pyquickhelper.pycode import ExtTestCase
 from ensae_teaching_cs.special.hermionne import solution, affiche_solution
 from ensae_teaching_cs.special.hermionne_classes import solution as solution_classe
 
 
-class TestHermionne(unittest.TestCase):
+class TestHermionne(ExtTestCase):
 
     def test_solution1(self):
         begin = time.perf_counter()
