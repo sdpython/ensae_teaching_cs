@@ -2,27 +2,12 @@
 @brief      test log(time=25s)
 """
 import os
-import sys
 import unittest
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import fix_tkinter_issues_virtualenv
 from pyensae.datasource import download_data
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-from src.ensae_teaching_cs.special.rues_paris import get_data, bellman, kruskal, possible_edges, distance_haversine, graph_degree
-from src.ensae_teaching_cs.special.rues_paris import eulerien_extension, distance_paris, euler_path, connected_components
+from ensae_teaching_cs.special.rues_paris import get_data, bellman, kruskal, possible_edges, distance_haversine, graph_degree
+from ensae_teaching_cs.special.rues_paris import eulerien_extension, distance_paris, euler_path, connected_components
 
 
 class TestRueParis(unittest.TestCase):

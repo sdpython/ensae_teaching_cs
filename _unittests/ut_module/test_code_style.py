@@ -1,25 +1,10 @@
 """
 @brief      test log(time=0s)
 """
-
-import sys
 import os
 import unittest
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import check_pep8, ExtTestCase, is_travis_or_appveyor
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
 
 
 def _run_cmd_filter(name):
@@ -30,10 +15,6 @@ def _run_cmd_filter(name):
 
 class TestCodeStyle(ExtTestCase):
     """Test style."""
-
-    def test_src(self):
-        "skip pylint"
-        self.assertFalse(src is None)
 
     def test_style_src(self):
         fLOG(
@@ -149,7 +130,7 @@ class TestCodeStyle(ExtTestCase):
                 "Redefining name 'path' from outer scope",
                 "Unused variable 'i'",
                 "Unable to import 'System",
-                "Module 'src.ensae_teaching_cs.pythonnet.",
+                "Module 'ensae_teaching_cs.pythonnet.",
                 "Unused variable 'skip___'",
                 "Module 'pygame' has no 'quit'",
                 "Unable to import 'primes'",

@@ -1,8 +1,6 @@
 """
 @brief      test log(time=3s)
 """
-
-import sys
 import os
 import unittest
 import warnings
@@ -13,24 +11,9 @@ with warnings.catch_warnings():
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from pyquickhelper.filehelper import zip_files
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-from src.ensae_teaching_cs.data.crypt_helper import encrypt_data, decrypt_data
-from src.ensae_teaching_cs.data.datacpt import data_cpt_ENSAE_2016_11, data_cpt_ENSAE_2016_11_blind_set
-from src.ensae_teaching_cs.ml.competitions import AUC
+from ensae_teaching_cs.data.crypt_helper import encrypt_data, decrypt_data
+from ensae_teaching_cs.data.datacpt import data_cpt_ENSAE_2016_11, data_cpt_ENSAE_2016_11_blind_set
+from ensae_teaching_cs.ml.competitions import AUC
 
 
 class TestCompetition(unittest.TestCase):

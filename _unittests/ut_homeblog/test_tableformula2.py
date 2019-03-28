@@ -1,39 +1,16 @@
 """
 @brief      test log(time=2s)
-
 """
-
-
-import sys
 import os
 import unittest
 import random
 import pandas
-from pyquickhelper.loghelper import fLOG
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-
-from src.ensae_teaching_cs.homeblog.table_formula import TableFormula
+from ensae_teaching_cs.homeblog.table_formula import TableFormula
 
 
 class TestTableFormula2(unittest.TestCase):
 
     def test_TableFormulaCore_Excel(self):
-        fLOG(__file__, self._testMethodName,
-             OutputPrint=__name__ == "__main__")
         fold = os.path.split(__file__)[0]
 
         assert TableFormula.delta is not None
@@ -64,8 +41,6 @@ class TestTableFormula2(unittest.TestCase):
         assert os.path.exists(tempexc)
 
     def test_issubclass(self):
-        fLOG(__file__, self._testMethodName,
-             OutputPrint=__name__ == "__main__")
         fold = os.path.split(__file__)[0]
 
         tbl = TableFormula
@@ -78,8 +53,6 @@ class TestTableFormula2(unittest.TestCase):
         assert r
 
     def test_addc(self):
-        fLOG(__file__, self._testMethodName,
-             OutputPrint=__name__ == "__main__")
         values = [random.random() for i in range(0, 100)]
         values = [[x, x + random.random() / 2] for x in values]
         tbl = TableFormula(["x", "y"], values)
@@ -102,8 +75,6 @@ class TestTableFormula2(unittest.TestCase):
         assert tbl[0, -1] == 9
 
     def test_pandas_matrix(self):
-        fLOG(__file__, self._testMethodName,
-             OutputPrint=__name__ == "__main__")
         fold = os.path.split(__file__)[0]
         file = os.path.join(fold, "data", "BNP.PA.txt")
 
@@ -128,8 +99,6 @@ class TestTableFormula2(unittest.TestCase):
         assert len(df) == 2344
 
     def test_pandas_matrix_index(self):
-        fLOG(__file__, self._testMethodName,
-             OutputPrint=__name__ == "__main__")
         fold = os.path.split(__file__)[0]
         file = os.path.join(fold, "data", "BNP.PA.txt")
         df = pandas.read_csv(file, sep=",", index_col=["Date"])

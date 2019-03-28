@@ -1,28 +1,12 @@
 """
 @brief      test log(time=93s)
 """
-
-import sys
 import os
 import unittest
 from pyquickhelper.loghelper.flog import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
 from pyquickhelper.pycode import ExtTestCase
 from pyquickhelper.helpgen import rst2html
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
 
 
 class TestRst2HtmlDeps(ExtTestCase):
@@ -87,7 +71,7 @@ class TestRst2HtmlDeps(ExtTestCase):
                 content = content.replace(":ref:", "     ")
                 writer = "rst"
                 content = content.replace(
-                    "from ensae_teaching", "from src.ensae_teaching")
+                    "from ensae_teaching", "from ensae_teaching")
                 text = rst2html(content, outdir=temp, writer=writer,
                                 imgmath_latex_preamble=preamble, layout="sphinx",
                                 extlinks=dict(issue=('https://link/%s',

@@ -27,7 +27,7 @@ def make_video(images, outvid=None, fps=5, size=None,
     """
     if len(images) == 0:
         raise ValueError("no image to convert into a video")
-    from cv2 import VideoWriter, VideoWriter_fourcc, imread, resize
+    from cv2 import VideoWriter, VideoWriter_fourcc, imread, resize  # pylint: disable=E0401
     fourcc = VideoWriter_fourcc(*format)
     vid = None
     for image in images:

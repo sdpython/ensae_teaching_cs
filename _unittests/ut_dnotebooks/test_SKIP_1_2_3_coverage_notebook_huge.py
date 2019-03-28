@@ -57,7 +57,7 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
 
         if sys.platform.startswith("win"):
             import numpy
-            import tables
+            import tables  # pylint: disable=E0401
             foldn = os.path.abspath(os.path.dirname(numpy.__file__))
             foldt = os.path.normpath(os.path.dirname(tables.__file__))
             rootn = os.path.dirname(foldn)
@@ -94,7 +94,7 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
                             cmd, out, err, "\n".join(lines), pp))
             return
 
-        import tables
+        import tables  # pylint: disable=E0401
         assert tables is not None
         this = os.path.abspath(os.path.dirname(tables.__file__))
         self.a_test_notebook_runner(

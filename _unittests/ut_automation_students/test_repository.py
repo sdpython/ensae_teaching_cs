@@ -1,7 +1,6 @@
 """
 @brief      test log(time=2s)
 """
-import sys
 import os
 import unittest
 import datetime
@@ -10,22 +9,7 @@ from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder
 from pymmails import MailBoxMock, EmailMessageRenderer, EmailMessageListRenderer
 from pymmails.render.email_message_style import template_email_html_short
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-from src.ensae_teaching_cs.automation_students import ProjectsRepository
+from ensae_teaching_cs.automation_students import ProjectsRepository
 
 
 class TestRepository(unittest.TestCase):

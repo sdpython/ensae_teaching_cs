@@ -9,22 +9,7 @@ import warnings
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from pyquickhelper.filehelper import encrypt_stream, decrypt_stream
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-from src.ensae_teaching_cs import __file__ as module_file
+from ensae_teaching_cs import __file__ as module_file
 
 
 class TestExam20161A(unittest.TestCase):

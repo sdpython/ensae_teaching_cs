@@ -1,30 +1,12 @@
 """
 @brief      test log(time=3s)
 """
-
-import sys
-import os
 import unittest
 import warnings
 import pandas
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-from src.ensae_teaching_cs.data import google_trends, twitter_zip
+from ensae_teaching_cs.data import google_trends, twitter_zip
 
 
 class TestDataWeb(unittest.TestCase):

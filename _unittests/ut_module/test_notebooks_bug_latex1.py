@@ -2,37 +2,16 @@
 @brief      test log(time=19s)
 @author     Xavier Dupre
 """
-
-import sys
 import os
 import unittest
 import warnings
-from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from pyquickhelper.helpgen.process_notebooks import process_notebooks
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
 
 
 class TestNoteBooksBugLatex_ecs(unittest.TestCase):
 
     def test_notebook_latex1(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
         path = os.path.abspath(os.path.split(__file__)[0])
         nbfold = os.path.normpath(
             os.path.join(path, "..", "..", "_doc", "notebooks"))
@@ -51,9 +30,7 @@ class TestNoteBooksBugLatex_ecs(unittest.TestCase):
             return
 
         res = process_notebooks(nbs, temp, temp, formats=formats)
-        fLOG("*****", len(res))
         for _ in res:
-            fLOG(_)
             assert os.path.exists(_[0])
 
 

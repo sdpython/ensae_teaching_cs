@@ -1,38 +1,16 @@
 """
 @brief      test log(time=8s)
 """
-
-import sys
 import os
 import unittest
 import pandas
-from pyquickhelper.loghelper.flog import fLOG
 from pyquickhelper.helpgen.stat_helper import enumerate_notebooks_link
 from pyquickhelper.pycode import ExtTestCase
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
 
 
 class TestHelpGenStatHelper(ExtTestCase):
 
     def test_format_history(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
         this = os.path.abspath(os.path.dirname(__file__))
         nb_folder = os.path.join(this, "..", "..", "_doc", "notebooks")
         self.assertTrue(os.path.exists(nb_folder))

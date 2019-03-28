@@ -50,7 +50,7 @@ class TestNotebook1236Coverage201711fair(unittest.TestCase):
         def valid(cell):
             return '[inv]' not in cell
 
-        import fairtest
+        import fairtest  # pylint: disable=E0401
         self.a_test_notebook_runner("ethics", "td2a_ml", valid=valid, copy_files=[
                                     "fairtesttree.png"], modules=[fairtest])
 

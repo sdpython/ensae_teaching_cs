@@ -2,27 +2,9 @@
 """
 @brief      test log(time=20s)
 """
-import sys
-import os
 import unittest
 from pyquickhelper.loghelper import fLOG
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-
-from src.ensae_teaching_cs.automation.modules_documentation import rst_table_modules
+from ensae_teaching_cs.automation.modules_documentation import rst_table_modules
 
 
 class TestModulesDocumentation(unittest.TestCase):

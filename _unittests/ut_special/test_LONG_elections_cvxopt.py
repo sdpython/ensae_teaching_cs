@@ -3,28 +3,11 @@
 @brief      test log(time=180s)
 """
 import os
-import sys
 import unittest
 import warnings
 from pyquickhelper.loghelper import fLOG, unzip
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-
-from src.ensae_teaching_cs.special.elections import ElectionResults
+from ensae_teaching_cs.special.elections import ElectionResults
 
 
 class TestElections(unittest.TestCase):

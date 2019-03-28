@@ -1,39 +1,16 @@
 """
 @brief      test log(time=35s)
 """
-
-import sys
 import os
 import unittest
 import pandas
-from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, fix_tkinter_issues_virtualenv, ExtTestCase
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-
-from src.ensae_teaching_cs.faq.faq_matplotlib import graph_cities
+from ensae_teaching_cs.faq.faq_matplotlib import graph_cities
 
 
 class TestFaqMatplotlib(ExtTestCase):
 
     def test_american_cities(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
         fix_tkinter_issues_virtualenv()
         import matplotlib.pyplot as plt
         filters = {"NewYork": "NY", "Chicago": "CH",
@@ -54,7 +31,6 @@ class TestFaqMatplotlib(ExtTestCase):
         fig.savefig(img)
         self.assertExists(img)
         plt.close('all')
-        fLOG("end")
 
 
 if __name__ == "__main__":

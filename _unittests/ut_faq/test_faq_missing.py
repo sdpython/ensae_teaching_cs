@@ -1,39 +1,21 @@
 """
 @brief      test log(time=4s)
 """
-
-import sys
 import os
 import unittest
 from datetime import datetime
 import pandas
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, fix_tkinter_issues_virtualenv
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-
-from src.ensae_teaching_cs.faq.faq_python import entier_grande_taille, difference_div, python_path, test_unitaire, same_variable, stringio
-from src.ensae_teaching_cs.faq.faq_python import property_example, enumerate_regex_search, download_from_url
-from src.ensae_teaching_cs.faq.faq_python import sortable_class, list_of_installed_packages
-from src.ensae_teaching_cs.faq.faq_python import information_about_package, get_month_name, get_day_name
-from src.ensae_teaching_cs.faq.faq_pandas import df_to_clipboard, df_equal, speed_dataframe
-from src.ensae_teaching_cs.faq.faq_matplotlib import change_legend_location, avoid_overlapping_dates
-from src.ensae_teaching_cs.faq.faq_jupyter_helper import find_best_server, nb_open
-from src.ensae_teaching_cs.faq.faq_jupyter import jupyter_open_notebook
-from src.ensae_teaching_cs.faq.faq_cvxopt import optimisation
+from ensae_teaching_cs.faq.faq_python import entier_grande_taille, difference_div, python_path, test_unitaire, same_variable, stringio
+from ensae_teaching_cs.faq.faq_python import property_example, enumerate_regex_search, download_from_url
+from ensae_teaching_cs.faq.faq_python import sortable_class, list_of_installed_packages
+from ensae_teaching_cs.faq.faq_python import information_about_package, get_month_name, get_day_name
+from ensae_teaching_cs.faq.faq_pandas import df_to_clipboard, df_equal, speed_dataframe
+from ensae_teaching_cs.faq.faq_matplotlib import change_legend_location, avoid_overlapping_dates
+from ensae_teaching_cs.faq.faq_jupyter_helper import find_best_server, nb_open
+from ensae_teaching_cs.faq.faq_jupyter import jupyter_open_notebook
+from ensae_teaching_cs.faq.faq_cvxopt import optimisation
 
 
 class TestFaqMissing(unittest.TestCase):

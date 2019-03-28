@@ -10,19 +10,6 @@ import platform
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
 
 class TestFaqCython(unittest.TestCase):
 
@@ -53,7 +40,7 @@ class TestFaqCython(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        from src.ensae_teaching_cs.faq.faq_cython import compile_cython_single_script
+        from ensae_teaching_cs.faq.faq_cython import compile_cython_single_script
         temp = get_temp_folder(__file__, "temp_cython_primes")
         newfile = os.path.join(temp, "primes.pyx")
         with open(newfile, "w") as f:

@@ -1,32 +1,14 @@
 """
 @brief      test log(time=4s)
 """
-
-
 import sys
-import os
 import unittest
 import time
 import requests
 from pyquickhelper.loghelper import fLOG, get_url_content
 from pyquickhelper.pycode import skipif_travis, skipif_circleci
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-from src.ensae_teaching_cs.td_1a.simple_flask_site import create_application
-from src.ensae_teaching_cs.td_1a.flask_helper import FlaskInThread
+from ensae_teaching_cs.td_1a.simple_flask_site import create_application
+from ensae_teaching_cs.td_1a.flask_helper import FlaskInThread
 
 
 class TestSimpleFlask(unittest.TestCase):

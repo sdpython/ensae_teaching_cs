@@ -58,7 +58,7 @@ class TestModulesFairTest(unittest.TestCase):
             # no fair test
             return
 
-        from fairtest import DataSource, Testing, train, test, report
+        from fairtest import DataSource, Testing, train, test, report  # pylint: disable=E0401
         temp = get_temp_folder(__file__, "temp_fairtest")
         data = ds.download_data("adult.data",
                                 url="https://archive.ics.uci.edu/ml/machine-learning-databases/adult/",

@@ -9,19 +9,6 @@ import shutil
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
 
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
 
 class TestSKIPSimpleServerRSSTeaching(unittest.TestCase):
 
@@ -40,7 +27,7 @@ class TestSKIPSimpleServerRSSTeaching(unittest.TestCase):
 
         from pyrsslocal.helper.download_helper import get_url_content_timeout
         from pyrsslocal import RSSServer
-        from src.ensae_teaching_cs.automation.rss_teachings_blog import rss_teachings_update_run_server
+        from ensae_teaching_cs.automation.rss_teachings_blog import rss_teachings_update_run_server
 
         if "travis" in sys.executable:
             # skip travis and Flask

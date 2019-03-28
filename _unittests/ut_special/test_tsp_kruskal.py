@@ -1,31 +1,13 @@
 """
 @brief      test log(time=10s)
-
 """
 import os
-import sys
 import unittest
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, ExtTestCase
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-
-from src.ensae_teaching_cs.helpers.video_helper import make_video
-from src.ensae_teaching_cs.special.tsp_kruskal import construit_ville, pygame_simulation, tsp_kruskal_algorithm
-from src.ensae_teaching_cs.special.tsp_kruskal import equation_droite, evaluation_droite, intersection_segment
+from ensae_teaching_cs.helpers.video_helper import make_video
+from ensae_teaching_cs.special.tsp_kruskal import construit_ville, pygame_simulation, tsp_kruskal_algorithm
+from ensae_teaching_cs.special.tsp_kruskal import equation_droite, evaluation_droite, intersection_segment
 
 
 class TestTspKruskal(ExtTestCase):

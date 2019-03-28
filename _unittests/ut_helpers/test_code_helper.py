@@ -3,32 +3,15 @@
 
 """
 import os
-import sys
 import unittest
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-
-from src.ensae_teaching_cs.helpers import enumerate_inspect_source_code
+from ensae_teaching_cs.helpers import enumerate_inspect_source_code
 
 
 class TestCodeHelper(unittest.TestCase):
 
     def test_size_object_in_folder(self):
         folder = os.path.abspath(os.path.dirname(__file__))
-        patterns = "from src.ensae_teaching_cs[._a-zA-Z0-9]* import ([a-zA-Z0-9_]+)"
+        patterns = "from ensae_teaching_cs[._a-zA-Z0-9]* import ([a-zA-Z0-9_]+)"
         res = []
         nb = 0
         for obs in enumerate_inspect_source_code(folder, line_patterns=patterns):

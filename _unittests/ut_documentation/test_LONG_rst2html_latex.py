@@ -9,20 +9,7 @@ import warnings
 from pyquickhelper.loghelper.flog import fLOG
 from pyquickhelper.pycode import get_temp_folder
 from pyquickhelper.helpgen import rst2html
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
+import ensae_teaching_cs
 
 
 class TestRst2HtmlLatex(unittest.TestCase):
@@ -33,7 +20,7 @@ class TestRst2HtmlLatex(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        self.assertTrue(src is not None)
+        self.assertTrue(ensae_teaching_cs is not None)
 
         links = {
             'Python': 'https://www.python.org/',
@@ -94,7 +81,8 @@ class TestRst2HtmlLatex(unittest.TestCase):
                 continue
             rem = []
             if "hermionne" in full:
-                p = os.path.abspath(os.path.dirname(src.__file__))
+                p = os.path.abspath(os.path.join(
+                    os.path.dirname(ensae_teaching_cs.__file__), ".."))
                 fLOG("add", p)
                 sys.path.append(p)
                 rem.append(p)

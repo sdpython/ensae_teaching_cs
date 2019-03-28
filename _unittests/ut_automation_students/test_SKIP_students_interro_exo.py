@@ -2,24 +2,10 @@
 @brief      test log(time=2s)
 """
 import os
-import sys
 import unittest
 import pandas
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, ExtTestCase, skipif_circleci
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
 
 
 class TestInterroExo(ExtTestCase):
@@ -35,7 +21,7 @@ class TestInterroExo(ExtTestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        from src.ensae_teaching_cs.automation_students.interro_motif import execute_python_scripts, _get_code
+        from ensae_teaching_cs.automation_students.interro_motif import execute_python_scripts, _get_code
         code = _get_code(b"aa.bb@ensae-paristech.fr")
         self.assertEqual(code, 51)
 

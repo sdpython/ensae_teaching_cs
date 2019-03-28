@@ -2,26 +2,11 @@
 """
 @brief      test log(time=50s)
 """
-
-import sys
 import os
 import unittest
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
+import ensae_teaching_cs
 
 
 class TestNotebookEnsaeSklearn(unittest.TestCase):
@@ -35,9 +20,9 @@ class TestNotebookEnsaeSklearn(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
-        from src.ensae_teaching_cs.automation.notebook_test_helper import copy_data_file
-        from src.ensae_teaching_cs.helpers.size_helper import total_size
+        from ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
+        from ensae_teaching_cs.automation.notebook_test_helper import copy_data_file
+        from ensae_teaching_cs.helpers.size_helper import total_size
         self.assertTrue(total_size)
         temp = get_temp_folder(__file__, "temp_notebook_ensae_sklearn")
         keepnote = ls_notebooks("sklearn_ensae_course")
@@ -52,7 +37,7 @@ class TestNotebookEnsaeSklearn(unittest.TestCase):
                           lambda i, n: True,
                           fLOG=fLOG,
                           clean_function=clean_function_1a,
-                          dump=src.ensae_teaching_cs,
+                          dump=ensae_teaching_cs,
                           additional_path=[os.path.dirname(keepnote[0])])
 
 

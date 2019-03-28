@@ -2,26 +2,12 @@
 """
 @brief      test log(time=183s)
 """
-
-import sys
 import os
 import unittest
 import shutil
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
+import ensae_teaching_cs
 
 
 class TestNotebookRunner2aEcoNLP(unittest.TestCase):
@@ -31,7 +17,7 @@ class TestNotebookRunner2aEcoNLP(unittest.TestCase):
                                         __file__, hide=True)
 
     def common_notebook_runner_2a_eco_nlp_enonce(self, sub):
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
+        from ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         temp = get_temp_folder(__file__, "temp_notebook2a_eco_nlp_" + sub)
         keepnote = ls_notebooks("td2a_eco")
         if sub in ("correction", "enonce"):
@@ -56,7 +42,7 @@ class TestNotebookRunner2aEcoNLP(unittest.TestCase):
                                 filter,
                                 fLOG=fLOG,
                                 clean_function=clean_function_1a,
-                                dump=src.ensae_teaching_cs)
+                                dump=ensae_teaching_cs)
         return res
 
     def test_notebook_runner_2a_eco_nlp_enonce(self):
@@ -71,7 +57,7 @@ class TestNotebookRunner2aEcoNLP(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        import nltk
+        import nltk  # pylint: disable=E0401
         nltk.download('stopwords')
         self.common_notebook_runner_2a_eco_nlp_enonce("correction")
 

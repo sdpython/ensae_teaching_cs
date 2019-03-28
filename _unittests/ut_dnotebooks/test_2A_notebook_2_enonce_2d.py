@@ -1,29 +1,12 @@
 """
 @brief      test log(time=50s)
 """
-
-import sys
-import os
 import unittest
 import warnings
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-
-from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
+from ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
+import ensae_teaching_cs
 
 
 class TestNotebookRunner2a_2_enonce_2D(unittest.TestCase):
@@ -49,7 +32,7 @@ class TestNotebookRunner2a_2_enonce_2D(unittest.TestCase):
             execute_notebooks(temp, keepnote, lambda i, n: "_2" in n and
                               "enonce" in n and "_2D" in n,
                               fLOG=fLOG, clean_function=clean_function_1a,
-                              dump=src.ensae_teaching_cs)
+                              dump=ensae_teaching_cs)
 
 
 if __name__ == "__main__":

@@ -1,26 +1,11 @@
 """
 @brief      test log(time=51s)
 """
-
-import sys
 import os
 import unittest
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import add_missing_development_version
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
+import ensae_teaching_cs
 
 
 class TestNotebookEleves201810(unittest.TestCase):
@@ -38,7 +23,7 @@ class TestNotebookEleves201810(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        from src.ensae_teaching_cs.automation.notebook_test_helper import a_test_notebook_runner
+        from ensae_teaching_cs.automation.notebook_test_helper import a_test_notebook_runner
         copy_files = [os.path.join("titanic.csv", "titanic.csv")]
         exe = os.path.join("notebook_eleves", "2018-2019")
 
@@ -52,7 +37,7 @@ class TestNotebookEleves201810(unittest.TestCase):
             return True
 
         a_test_notebook_runner(__file__, "2018-10", exe, fLOG=fLOG, valid=valid_cell,
-                               copy_files=copy_files, modules=[src.ensae_teaching_cs])
+                               copy_files=copy_files, modules=[ensae_teaching_cs])
 
 
 if __name__ == "__main__":
