@@ -19,6 +19,7 @@ class TestHermionne(ExtTestCase):
         self.assertEqual(res, [0, 1, 3, 0, 0, 1, 2])
         self.assertGreater(dur, 0)
         self.assertNotEmpty(res)
+        self.assertNotEmpty(mes)
 
     def test_solution2(self):
         begin = time.perf_counter()

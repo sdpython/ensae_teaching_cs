@@ -32,6 +32,6 @@ Jeux de données
 Outils
 ++++++
 
-.. autosignature:: ensae_teaching_cs.data.datahelper.crypt_helper.decrypt_data
+.. autosignature:: ensae_teaching_cs.data.data.crypt_helper.decrypt_data
 
-.. autosignature:: ensae_teaching_cs.data.datahelper.crypt_helper.encrypt_data
+.. autosignature:: ensae_teaching_cs.data.data.crypt_helper.encrypt_data
