@@ -21,7 +21,7 @@ set_sphinx_variables(__file__, "Python dans tous ses états", "Xavier Dupré",
                      extlinks=dict(
                          issue=('https://github.com/sdpython/ensae_teaching_cs/issues/%s', 'issue')),
                      book=True, nblayout='table',
-                     doc_version=ensae_teaching_cs.__init__)
+                     doc_version=ensae_teaching_cs.__version__)
 
 # do not put it back otherwise sphinx import matplotlib before setting up its backend
 # for the sphinx command .. plot::
