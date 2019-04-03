@@ -7,23 +7,8 @@ import sys
 import os
 import unittest
 from pyquickhelper.loghelper import fLOG
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-from src.ensae_teaching_cs.td_1a.construction_classique import recherche, minindex, text2mat, compte, integrale, vect2mat, mat2vect
-from src.ensae_teaching_cs.td_1a.construction_classique import recherche_dichotomique, mat2text, triindex, construit_matrice_carree
+from ensae_teaching_cs.td_1a.construction_classique import recherche, minindex, text2mat, compte, integrale, vect2mat, mat2vect
+from ensae_teaching_cs.td_1a.construction_classique import recherche_dichotomique, mat2text, triindex, construit_matrice_carree
 
 
 class TestConstructionClassique(unittest.TestCase):

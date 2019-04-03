@@ -6,22 +6,8 @@ import sys
 import unittest
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-from src.ensae_teaching_cs.special.rues_paris import get_data
-from src.ensae_teaching_cs.special.rues_paris import eulerien_extension, distance_paris
+from ensae_teaching_cs.special.rues_paris import get_data
+from ensae_teaching_cs.special.rues_paris import eulerien_extension, distance_paris
 
 
 class TestSKIPRueParis(unittest.TestCase):

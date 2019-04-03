@@ -8,20 +8,7 @@ import os
 import unittest
 from pyquickhelper.loghelper import fLOG, run_cmd
 from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, skipif_appveyor
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
+import ensae_teaching_cs
 
 
 class TestNotebook123CoverageHuge(unittest.TestCase):
@@ -31,8 +18,8 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
                                         __file__, hide=True)
 
     def a_test_notebook_runner(self, name, folder, additional_path=None):
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
-        from src.ensae_teaching_cs.helpers.size_helper import total_size
+        from ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
+        from ensae_teaching_cs.helpers.size_helper import total_size
         self.assertTrue(total_size)
         temp = get_temp_folder(__file__, "temp_notebook_123_{0}".format(name))
         keepnote = ls_notebooks(folder)
@@ -45,7 +32,7 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
                           lambda i, n: name in n,
                           fLOG=fLOG, replacements=replacements,
                           clean_function=clean_function_1a,
-                          dump=src.ensae_teaching_cs,
+                          dump=ensae_teaching_cs,
                           additional_path=additional_path)
 
     @skipif_appveyor("pytables has an issue")
@@ -75,11 +62,11 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
                 import pyquickhelper
                 import pyensae
                 import jyquickhelper
-                import src.ensae_teaching_cs
+                import ensae_teaching_cs
                 import mlstatpy
                 import pymyinstall
                 add = ["SECONDTRY"]
-                for mod in [pyquickhelper, pyensae, jyquickhelper, src.ensae_teaching_cs, mlstatpy, pymyinstall]:
+                for mod in [pyquickhelper, pyensae, jyquickhelper, ensae_teaching_cs, mlstatpy, pymyinstall]:
                     add.append(os.path.normpath(os.path.join(
                         os.path.dirname(mod.__file__), "..")))
                 fLOG("set PYTHONPATH={0}".format(";".join(add)))

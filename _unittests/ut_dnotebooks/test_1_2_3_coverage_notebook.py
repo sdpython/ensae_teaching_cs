@@ -8,20 +8,7 @@ import os
 import unittest
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
+import ensae_teaching_cs
 
 
 class TestNotebook123Coverage(unittest.TestCase):
@@ -31,8 +18,8 @@ class TestNotebook123Coverage(unittest.TestCase):
                                         __file__, hide=True)
 
     def a_test_notebook_runner_1a(self, name, folder):
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
-        from src.ensae_teaching_cs.helpers.size_helper import total_size
+        from ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
+        from ensae_teaching_cs.helpers.size_helper import total_size
         self.assertTrue(total_size)
         temp = get_temp_folder(__file__, "temp_notebook_123_{0}".format(name))
         keepnote = ls_notebooks(folder)
@@ -45,7 +32,7 @@ class TestNotebook123Coverage(unittest.TestCase):
                           lambda i, n: name in n,
                           fLOG=fLOG, replacements=replacements,
                           clean_function=clean_function_1a,
-                          dump=src.ensae_teaching_cs)
+                          dump=ensae_teaching_cs)
 
     def test_notebook_runner_1a_exo(self):
         fLOG(

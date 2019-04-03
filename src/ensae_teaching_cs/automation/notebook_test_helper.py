@@ -261,10 +261,7 @@ def a_test_notebook_runner(filename, name, folder, valid=None, copy_files=None, 
     import pyquickhelper
     import jyquickhelper
     import pyensae
-    if "src.ensae_teaching_cs" in sys.modules:
-        thismodule = sys.modules["src.ensae_teaching_cs"]
-    else:
-        thismodule = sys.modules["ensae_teaching_cs"]
+    thismodule = sys.modules["ensae_teaching_cs"]
     base = [jyquickhelper, pyquickhelper, pyensae, thismodule]
     if modules:
         base.extend(modules)

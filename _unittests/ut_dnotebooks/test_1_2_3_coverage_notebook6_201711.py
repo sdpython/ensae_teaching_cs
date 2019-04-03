@@ -10,20 +10,6 @@ from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import add_missing_development_version
 
 
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-
 class TestNotebook1236Coverage6_201711(unittest.TestCase):
 
     def setUp(self):
@@ -31,7 +17,7 @@ class TestNotebook1236Coverage6_201711(unittest.TestCase):
                                         __file__, hide=True)
 
     def a_test_notebook_runner(self, name, folder, valid=None, copy_files=None, modules=None):
-        from src.ensae_teaching_cs.automation.notebook_test_helper import a_test_notebook_runner
+        from ensae_teaching_cs.automation.notebook_test_helper import a_test_notebook_runner
         return a_test_notebook_runner(__file__, name, folder, valid=valid,
                                       copy_files=copy_files, modules=modules, fLOG=fLOG)
 

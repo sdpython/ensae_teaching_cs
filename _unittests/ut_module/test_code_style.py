@@ -117,7 +117,6 @@ class TestCodeStyle(ExtTestCase):
                 "skip___' imported but unused",
                 "Unused variable 'skip_'",
                 "imported as skip_",
-                "Unused import src",
                 "Module 'pygame' has no 'init' member",
                 "Module 'pygame' has no 'NOFRAME' member",
                 "Class 'mem_flags' has no ",

@@ -10,22 +10,7 @@ import random
 from difflib import SequenceMatcher
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-from src.ensae_teaching_cs.helpers.pygame_helper import build_diff_image, get_pygame_screen_font
+from ensae_teaching_cs.helpers.pygame_helper import build_diff_image, get_pygame_screen_font
 
 
 class TestDiff(unittest.TestCase):
@@ -61,7 +46,7 @@ class TestDiff(unittest.TestCase):
 
         pygame, screen, fonts = get_pygame_screen_font(h, size, flags=flags)
 
-        from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
+        from ensae_teaching_cs.helpers.pygame_helper import wait_event
 
         bars = [random.randint(10, 500) / 500.0 for s in seq2]
         screen.fill(white)
@@ -80,7 +65,7 @@ class TestDiff(unittest.TestCase):
 
         if __name__ == "__main__":
 
-            from src.ensae_teaching_cs.helpers.video_helper import make_video
+            from ensae_teaching_cs.helpers.video_helper import make_video
             png = [os.path.join(temp, _)
                    for _ in os.listdir(temp) if ".png" in _]
             out = os.path.join(temp, "diff.avi")
@@ -118,7 +103,7 @@ class TestDiff(unittest.TestCase):
 
         pygame, screen, fonts = get_pygame_screen_font(h, size, flags=flags)
 
-        from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
+        from ensae_teaching_cs.helpers.pygame_helper import wait_event
 
         bars = [random.randint(10, 500) / 500.0 for s in seq2]
         screen.fill(white)
@@ -137,7 +122,7 @@ class TestDiff(unittest.TestCase):
 
         if __name__ == "__main__":
 
-            from src.ensae_teaching_cs.helpers.video_helper import make_video
+            from ensae_teaching_cs.helpers.video_helper import make_video
             png = [os.path.join(temp, _)
                    for _ in os.listdir(temp) if ".png" in _]
             out = os.path.join(temp, "diff.avi")

@@ -9,19 +9,7 @@ import unittest
 import shutil
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, skipif_appveyor, skipif_travis, add_missing_development_version
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
+import ensae_teaching_cs
 
 
 class TestNotebookRunner2aAlgo(unittest.TestCase):
@@ -37,8 +25,8 @@ class TestNotebookRunner2aAlgo(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
-        from src.ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
-        from src.ensae_teaching_cs.data import simple_database
+        from ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
+        from ensae_teaching_cs.data import simple_database
         temp = get_temp_folder(__file__, "temp_notebook2a_algo")
         keepnote = ls_notebooks("td2a_algo")
         shutil.copy(simple_database(), temp)
@@ -67,7 +55,7 @@ class TestNotebookRunner2aAlgo(unittest.TestCase):
 
         execute_notebooks(temp, keepnote, filter, fLOG=fLOG,
                           clean_function=clean_function_1a_upgraded,
-                          dump=src.ensae_teaching_cs)
+                          dump=ensae_teaching_cs)
 
 
 if __name__ == "__main__":

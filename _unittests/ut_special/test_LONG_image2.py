@@ -9,27 +9,11 @@ import math
 import warnings
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-
-from src.ensae_teaching_cs.special.image.image_synthese_base import Vecteur, Couleur, Source, Repere
-from src.ensae_teaching_cs.special.image.image_synthese_sphere import Sphere
-from src.ensae_teaching_cs.special.image.image_synthese_phong import ScenePhong
-from src.ensae_teaching_cs.special.image.image_synthese_facette import Rectangle
-from src.ensae_teaching_cs.special.image.image_synthese_facette_image import RectangleImage, SphereReflet
+from ensae_teaching_cs.special.image.image_synthese_base import Vecteur, Couleur, Source, Repere
+from ensae_teaching_cs.special.image.image_synthese_sphere import Sphere
+from ensae_teaching_cs.special.image.image_synthese_phong import ScenePhong
+from ensae_teaching_cs.special.image.image_synthese_facette import Rectangle
+from ensae_teaching_cs.special.image.image_synthese_facette_image import RectangleImage, SphereReflet
 
 
 class TestImageSyntheseImage(unittest.TestCase):
@@ -68,7 +52,7 @@ class TestImageSyntheseImage(unittest.TestCase):
         s.ajoute_objet(RectangleImage(Vecteur(8, -3.5, 9), Vecteur(2, -3.5, 8),
                                       Vecteur(2, 3.8, 8), None, image, invertx=True, pygame=pygame))
 
-        from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
+        from ensae_teaching_cs.helpers.pygame_helper import wait_event
 
         screen = pygame.display.set_mode(s.dim)
         screen.fill((255, 255, 255))

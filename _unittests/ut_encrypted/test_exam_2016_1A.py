@@ -93,7 +93,7 @@ class TestExam20161A(unittest.TestCase):
             # no password
             return
 
-        from src.ensae_teaching_cs.td_1a.vigenere import code_vigenere
+        from ensae_teaching_cs.td_1a.vigenere import code_vigenere
 
         with warnings.catch_warnings():
             warnings.simplefilter('ignore', DeprecationWarning)
@@ -123,7 +123,7 @@ class TestExam20161A(unittest.TestCase):
             # no password
             return
 
-        from src.ensae_teaching_cs.td_1a.vigenere import code_vigenere
+        from ensae_teaching_cs.td_1a.vigenere import code_vigenere
 
         with warnings.catch_warnings():
             warnings.simplefilter('ignore', DeprecationWarning)

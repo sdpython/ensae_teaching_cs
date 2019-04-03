@@ -8,27 +8,11 @@ import math
 import warnings
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
-
-
-try:
-    import src
-except ImportError:
-    path = os.path.normpath(
-        os.path.abspath(
-            os.path.join(
-                os.path.split(__file__)[0],
-                "..",
-                "..")))
-    if path not in sys.path:
-        sys.path.append(path)
-    import src
-
-
-from src.ensae_teaching_cs.special.image.image_synthese_base import Vecteur, Couleur, Pixel, Rayon, Source, Repere
-from src.ensae_teaching_cs.special.image.image_synthese_sphere import Sphere
-from src.ensae_teaching_cs.special.image.image_synthese_scene import Scene
-from src.ensae_teaching_cs.special.image.image_synthese_phong import ScenePhong
-from src.ensae_teaching_cs.special.image.image_synthese_facette import Facette, Rectangle
+from ensae_teaching_cs.special.image.image_synthese_base import Vecteur, Couleur, Pixel, Rayon, Source, Repere
+from ensae_teaching_cs.special.image.image_synthese_sphere import Sphere
+from ensae_teaching_cs.special.image.image_synthese_scene import Scene
+from ensae_teaching_cs.special.image.image_synthese_phong import ScenePhong
+from ensae_teaching_cs.special.image.image_synthese_facette import Facette, Rectangle
 
 
 class TestImageSynthese(unittest.TestCase):
@@ -88,7 +72,7 @@ class TestImageSynthese(unittest.TestCase):
             return
 
         import pygame
-        from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
+        from ensae_teaching_cs.helpers.pygame_helper import wait_event
 
         screen = pygame.display.set_mode(s.dim)
         screen.fill((255, 255, 255))
@@ -124,7 +108,7 @@ class TestImageSynthese(unittest.TestCase):
         screen.fill((255, 255, 255))
         s.construit_image(screen, pygame=pygame, fLOG=fLOG)
 
-        from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
+        from ensae_teaching_cs.helpers.pygame_helper import wait_event
         pygame.image.save(screen, os.path.join(temp, "scene_phong.png"))
 
         if __name__ == "__main__":
@@ -160,7 +144,7 @@ class TestImageSynthese(unittest.TestCase):
         screen.fill((255, 255, 255))
         s.construit_image(screen, pygame=pygame, fLOG=fLOG)
 
-        from src.ensae_teaching_cs.helpers.pygame_helper import wait_event
+        from ensae_teaching_cs.helpers.pygame_helper import wait_event
         pygame.image.save(screen, os.path.join(temp, "scene_facette.png"))
 
         if __name__ == "__main__":

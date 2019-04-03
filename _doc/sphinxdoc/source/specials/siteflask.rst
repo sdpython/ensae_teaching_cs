@@ -40,8 +40,8 @@ Cela donne ::
 
     import sys, os, unittest, requests
     from pyquickhelper.loghelper import fLOG, get_url_content
-    from src.ensae_teaching_cs.td_1a.simple_flask_site import app
-    from src.ensae_teaching_cs.td_1a.flask_helper import FlaskInThread
+    from ensae_teaching_cs.td_1a.simple_flask_site import app
+    from ensae_teaching_cs.td_1a.flask_helper import FlaskInThread
 
     class TestSimpleFlask(unittest.TestCase):
 
