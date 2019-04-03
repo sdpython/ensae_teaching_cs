@@ -2,8 +2,6 @@
 """
 @brief      test log(time=50s)
 """
-
-import sys
 import os
 import unittest
 from pyquickhelper.loghelper import fLOG

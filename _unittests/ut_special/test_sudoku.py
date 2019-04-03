@@ -2,21 +2,13 @@
 @brief      test log(time=2s)
 
 """
-import os
-import sys
 import unittest
-from pyquickhelper.loghelper import fLOG
 from ensae_teaching_cs.special import resolution_sudoku, sudoku2str
 
 
 class TestSudoku(unittest.TestCase):
 
     def test_sudolu(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
         s = [[0, 0, 0, 3, 0, 0, 8, 0, 0],
              [0, 0, 7, 9, 0, 8, 0, 0, 5],
              [0, 0, 0, 2, 0, 4, 1, 0, 0],
@@ -28,7 +20,7 @@ class TestSudoku(unittest.TestCase):
              [0, 0, 0, 7, 0, 0, 0, 0, 0]]
 
         ps = sudoku2str(s)
-        fLOG(ps)
+        assert ps is not None
 
         resolution_sudoku(s)
 
@@ -38,7 +30,7 @@ class TestSudoku(unittest.TestCase):
             self.assertEqual(sum(s[i]), sum(range(1, 10)))
 
         ps = sudoku2str(s)
-        fLOG(ps)
+        assert ps is not None
 
 
 if __name__ == "__main__":

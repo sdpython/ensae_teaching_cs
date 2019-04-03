@@ -2,13 +2,10 @@
 """
 @brief      test log(time=13s)
 """
-
 import sys
-import os
 import unittest
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import add_missing_development_version
-import ensae_teaching_cs
 
 
 class TestNotebook1236Coverage201711fair(unittest.TestCase):

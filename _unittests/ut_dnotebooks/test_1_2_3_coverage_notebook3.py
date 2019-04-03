@@ -2,8 +2,6 @@
 """
 @brief      test log(time=21s)
 """
-
-import sys
 import os
 import unittest
 from pyquickhelper.loghelper import fLOG
@@ -37,11 +35,12 @@ class TestNotebook123Coverage3(unittest.TestCase):
         import pyquickhelper
         import jyquickhelper
         import pyensae
+        import ensae_teaching_cs
         add_path = get_additional_paths(
-            [jyquickhelper, pyquickhelper, pyensae, thismodule])
+            [jyquickhelper, pyquickhelper, pyensae, ensae_teaching_cs])
         res = execute_notebook_list(
             temp, keepnote, additional_path=add_path, valid=valid)
-        execute_notebook_list_finalize_ut(res, fLOG=fLOG, dump=thismodule)
+        execute_notebook_list_finalize_ut(res, fLOG=fLOG, dump=ensae_teaching_cs)
 
     def test_notebook_interro_rapide_20_minutes_2014_11(self):
         fLOG(

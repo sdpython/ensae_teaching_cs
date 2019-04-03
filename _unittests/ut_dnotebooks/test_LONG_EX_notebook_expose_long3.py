@@ -4,9 +4,6 @@
 
 notebook test
 """
-
-import sys
-import os
 import unittest
 from pyquickhelper.loghelper import fLOG, noLOG
 from pyquickhelper.pycode import get_temp_folder, add_missing_development_version

@@ -1,9 +1,7 @@
 """
 @brief      test log(time=3s)
 """
-
 import sys
-import os
 import unittest
 import warnings
 from pyquickhelper.loghelper import fLOG

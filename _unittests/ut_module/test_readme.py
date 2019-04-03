@@ -1,8 +1,6 @@
 """
 @brief      test tree node (time=50s)
 """
-
-import sys
 import os
 import unittest
 from pyquickhelper.loghelper import fLOG

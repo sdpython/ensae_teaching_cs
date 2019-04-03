@@ -1,9 +1,6 @@
 """
 @brief      test log(time=1s)
 """
-
-import sys
-import os
 import unittest
 from ensae_teaching_cs.doc import regex_cases
 

@@ -1,8 +1,6 @@
 """
 @brief      test log(time=10s)
 """
-import os
-import sys
 import unittest
 from pyquickhelper.loghelper import fLOG
 from ensae_teaching_cs.helpers.geo_helper import lambert93_to_WGPS

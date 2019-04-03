@@ -1,10 +1,6 @@
 """
 @brief      test log(time=1s)
 """
-
-
-import sys
-import os
 import unittest
 from pyquickhelper.loghelper import fLOG
 from ensae_teaching_cs.td_1a import edit_distance

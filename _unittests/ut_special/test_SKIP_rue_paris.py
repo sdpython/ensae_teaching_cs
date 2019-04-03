@@ -1,8 +1,6 @@
 """
 @brief      test log(time=1000s)
 """
-import os
-import sys
 import unittest
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder

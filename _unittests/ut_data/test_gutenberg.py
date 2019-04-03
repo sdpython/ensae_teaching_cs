@@ -1,9 +1,6 @@
 """
 @brief      test log(time=3s)
 """
-
-import sys
-import os
 import unittest
 from pyquickhelper.loghelper import fLOG
 from ensae_teaching_cs.data import gutenberg_name

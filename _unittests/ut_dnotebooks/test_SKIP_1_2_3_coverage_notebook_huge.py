@@ -66,7 +66,8 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
                 import mlstatpy
                 import pymyinstall
                 add = ["SECONDTRY"]
-                for mod in [pyquickhelper, pyensae, jyquickhelper, ensae_teaching_cs, mlstatpy, pymyinstall]:
+                for mod in [pyquickhelper, pyensae, jyquickhelper, ensae_teaching_cs,
+                            mlstatpy, pymyinstall]:
                     add.append(os.path.normpath(os.path.join(
                         os.path.dirname(mod.__file__), "..")))
                 fLOG("set PYTHONPATH={0}".format(";".join(add)))

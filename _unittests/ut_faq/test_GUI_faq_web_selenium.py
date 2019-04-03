@@ -1,8 +1,6 @@
 """
 @brief      test log(time=50s)
 """
-
-import sys
 import os
 import unittest
 import warnings

@@ -1,10 +1,6 @@
 """
 @brief      test tree node (time=5s)
 """
-
-
-import sys
-import os
 import unittest
 from pyquickhelper.pycode import get_temp_folder, ExtTestCase
 from pyquickhelper.pycode.setup_helper import write_module_scripts

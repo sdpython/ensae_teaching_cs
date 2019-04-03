@@ -2,8 +2,6 @@
 """
 @brief      test log(time=73s)
 """
-
-import sys
 import os
 import unittest
 import shutil

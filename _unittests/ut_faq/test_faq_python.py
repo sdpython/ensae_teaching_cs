@@ -1,9 +1,6 @@
 """
 @brief      test log(time=7s)
 """
-
-import sys
-import os
 import unittest
 from pyquickhelper.loghelper import fLOG
 from ensae_teaching_cs.faq.faq_python import get_month_name, get_day_name

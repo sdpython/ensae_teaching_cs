@@ -2,9 +2,6 @@
 @brief      test log(time=2s)
 
 """
-
-
-import sys
 import os
 import unittest
 import random

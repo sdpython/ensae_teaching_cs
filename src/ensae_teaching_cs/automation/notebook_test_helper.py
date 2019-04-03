@@ -261,11 +261,11 @@ def a_test_notebook_runner(filename, name, folder, valid=None, copy_files=None, 
     import pyquickhelper
     import jyquickhelper
     import pyensae
-    thismodule = sys.modules["ensae_teaching_cs"]
-    base = [jyquickhelper, pyquickhelper, pyensae, thismodule]
+    import ensae_teaching_cs
+    base = [jyquickhelper, pyquickhelper, pyensae, ensae_teaching_cs]
     if modules:
         base.extend(modules)
     add_path = pyq_get_additional_paths(base)
     res = execute_notebook_list(
         temp, keepnote, additional_path=add_path, valid=valid, fLOG=fLOG)
-    execute_notebook_list_finalize_ut(res, fLOG=fLOG, dump=thismodule)
+    execute_notebook_list_finalize_ut(res, fLOG=fLOG, dump=ensae_teaching_cs)

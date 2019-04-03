@@ -2,22 +2,14 @@
 @brief      test log(time=10s)
 
 """
-import os
-import sys
 import unittest
 import random
-from pyquickhelper.loghelper import fLOG
 from ensae_teaching_cs.special.tsp_bresenham import draw_line, draw_ellipse
 
 
 class TestTspBresenham(unittest.TestCase):
 
     def test_bresenham(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
         x, y = 500, 500
         for n in range(0, 10):
             x1 = random.randint(0, x - 1)
@@ -32,11 +24,6 @@ class TestTspBresenham(unittest.TestCase):
             draw_line(x1, y2, x2, y1)
 
     def test_bresenham_ellipses(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
         x, y = 500, 500
         for n in range(0, 10):
             x1 = random.randint(0, x - 1)

@@ -1,9 +1,6 @@
 """
 @brief      test log(time=6s)
 """
-
-
-import sys
 import os
 import unittest
 from pyPdf import PdfFileReader

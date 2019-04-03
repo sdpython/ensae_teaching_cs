@@ -2,8 +2,6 @@
 @brief      test log(time=200s)
 
 """
-import os
-import sys
 import unittest
 import math
 import warnings

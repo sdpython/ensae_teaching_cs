@@ -1,8 +1,6 @@
 """
 @brief      test log(time=10s)
 """
-import os
-import sys
 import unittest
 from pyquickhelper.loghelper import fLOG
 from ensae_teaching_cs.special.geometry_point import GeometryPoint

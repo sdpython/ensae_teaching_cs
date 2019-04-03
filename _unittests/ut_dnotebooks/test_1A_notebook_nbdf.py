@@ -2,9 +2,6 @@
 """
 @brief      test log(time=17s)
 """
-
-import sys
-import os
 import unittest
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, is_travis_or_appveyor
