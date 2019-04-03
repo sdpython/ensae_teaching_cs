@@ -8,7 +8,6 @@ import os
 import unittest
 from pyquickhelper.loghelper import fLOG, run_cmd
 from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, skipif_appveyor
-import ensae_teaching_cs
 
 
 class TestNotebook123CoverageHuge(unittest.TestCase):
@@ -20,6 +19,7 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
     def a_test_notebook_runner(self, name, folder, additional_path=None):
         from ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         from ensae_teaching_cs.helpers.size_helper import total_size
+        import ensae_teaching_cs
         self.assertTrue(total_size)
         temp = get_temp_folder(__file__, "temp_notebook_123_{0}".format(name))
         keepnote = ls_notebooks(folder)

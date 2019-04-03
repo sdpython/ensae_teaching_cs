@@ -41,7 +41,8 @@ class TestNotebook123Coverage2c2(unittest.TestCase):
             [jyquickhelper, pyquickhelper, pyensae, mlstatpy, ensae_teaching_cs])
         res = execute_notebook_list(
             temp, keepnote, additional_path=add_path, valid=valid)
-        execute_notebook_list_finalize_ut(res, fLOG=fLOG, dump=ensae_teaching_cs)
+        execute_notebook_list_finalize_ut(
+            res, fLOG=fLOG, dump=ensae_teaching_cs)
 
     @skipif_travis('endless execution')
     def test_notebook_progressbar(self):

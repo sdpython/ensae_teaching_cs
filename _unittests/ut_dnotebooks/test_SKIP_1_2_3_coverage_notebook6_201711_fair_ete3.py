@@ -2,7 +2,6 @@
 """
 @brief      test log(time=13s)
 """
-import sys
 import unittest
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import add_missing_development_version

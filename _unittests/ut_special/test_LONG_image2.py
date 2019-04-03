@@ -1,7 +1,7 @@
 """
 @brief      test log(time=200s)
-
 """
+import os
 import unittest
 import math
 import warnings

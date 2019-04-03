@@ -50,7 +50,8 @@ class TestLONGNotebook123Coverage4(unittest.TestCase):
         res = execute_notebook_list(
             temp, keepnote, additional_path=add_path, valid=valid,
             clean_function=clean_function)
-        execute_notebook_list_finalize_ut(res, fLOG=fLOG, dump=ensae_teaching_cs)
+        execute_notebook_list_finalize_ut(
+            res, fLOG=fLOG, dump=ensae_teaching_cs)
 
     def test_notebook_session_5_cor_short(self):
         fLOG(

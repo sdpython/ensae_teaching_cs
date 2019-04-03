@@ -5,7 +5,6 @@
 """
 import os
 import shutil
-import sys
 from pyquickhelper.loghelper import noLOG
 from pyquickhelper.ipythonhelper import execute_notebook_list, execute_notebook_list_finalize_ut
 from pyquickhelper.ipythonhelper import get_additional_paths as pyq_get_additional_paths
