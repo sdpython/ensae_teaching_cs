@@ -16,18 +16,17 @@ default_driver = "opera"
 
 
 def webshot(img, url, navigator=default_driver, add_date=False,
-            module="selenium", size=None, fLOG=noLOG):
+            size=None, fLOG=noLOG):
     """
-    Uses the modules `selenium <http://selenium-python.readthedocs.io/>`_ to take a picture of a website
-    (or the module `splinter <http://splinter.readthedocs.io/en/latest/>`_ - does not work with IE).
-    The function was only tested with Firefox.
-    If url and img are lists, the function goes through all the urls and save webshots.
+    Uses the module :epkg:`selenium`
+    to take a picture of a website.
+    If url and img are lists, the function goes
+    through all the urls and save webshots.
 
     @param      img             list of image names
     @param      url             url
     @param      navigator       firefox, chrome, (ie: does not work well)
     @param      add_date        add a date to the image filename
-    @param      module          module to use (selenium or splinter or None if you need to keep the first one available)
     @param      size            to resize the webshot (if not None)
     @param      fLOG            logging function
     @return                     list of [ ( url, image name) ]
@@ -45,63 +44,31 @@ def webshot(img, url, navigator=default_driver, add_date=False,
         with warnings.catch_warnings():
             warnings.simplefilter("ignore", ImportWarning)
             import selenium
-        module = selenium.__name__
 
     res = []
-    fLOG("[webshot] module=", module)
-    if module == "selenium":
-        browser = _get_selenium_browser(navigator, fLOG=fLOG)
+    browser = _get_selenium_browser(navigator, fLOG=fLOG)
 
-        if size is not None:
-            fLOG("set size", size)
-            browser.set_window_size(size[0], size[1])
+    if size is not None:
+        fLOG("set size", size)
+        browser.set_window_size(size[0], size[1])
 
-        if not isinstance(url, list):
-            url = [url]
-        if not isinstance(img, list):
-            img = [img]
-        if len(url) != len(img):
-            raise Exception("different number of urls and images")
-        for u, i in zip(url, img):
-            fLOG("url", url, " into ", img)
-            browser.get(u)
-            if add_date:
-                dt = datetime.datetime.now()
-                a, b = os.path.splitext(i)
-                i = "{0}.{1}{2}".format(a, str(dt).replace(
-                    ":", "-").replace("/", "-"), b)
-            browser.get_screenshot_as_file(i)
-            res.append((u, i))
-        browser.quit()
-
-    elif module == "splinter":
-
-        with warnings.catch_warnings():
-            warnings.simplefilter("ignore", ImportWarning)
-            from splinter import Browser
-
-        with Browser(navigator) as browser:
-            if size is not None:
-                browser.driver.set_window_size(size[0], size[1])
-
-            if not isinstance(url, list):
-                url = [url]
-            if not isinstance(img, list):
-                img = [img]
-            if len(url) != len(img):
-                raise Exception("different number of urls and images")
-            for u, i in zip(url, img):
-                browser.visit(u)
-                if add_date:
-                    dt = datetime.datetime.now()
-                    a, b = os.path.splitext(i)
-                    i = "{0}.{1}{2}".format(a, str(dt).replace(
-                        ":", "-").replace("/", "-"), b)
-                g = browser.screenshot(os.path.abspath(i))
-                res.append((u, g))
-    else:
-        raise ImportError("unknown module required '{0}'".format(module))
-
+    if not isinstance(url, list):
+        url = [url]
+    if not isinstance(img, list):
+        img = [img]
+    if len(url) != len(img):
+        raise Exception("different number of urls and images")
+    for u, i in zip(url, img):
+        fLOG("url", url, " into ", img)
+        browser.get(u)
+        if add_date:
+            dt = datetime.datetime.now()
+            a, b = os.path.splitext(i)
+            i = "{0}.{1}{2}".format(a, str(dt).replace(
+                ":", "-").replace("/", "-"), b)
+        browser.get_screenshot_as_file(i)
+        res.append((u, i))
+    browser.quit()
     return res
 
 
@@ -202,15 +169,13 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
     return browser
 
 
-def webhtml(url, navigator=default_driver, module="selenium", fLOG=noLOG):
+def webhtml(url, navigator=default_driver, fLOG=noLOG):
     """
-    Uses the modules `selenium <http://selenium-python.readthedocs.io/>`_ to retrieve the html of a website
-    (or the module `splinter <http://splinter.readthedocs.io/en/latest/>`_ - does not work with IE).
-    The function was only tested with Firefox.
+    Uses the module `selenium <http://selenium-python.readthedocs.io/>`_
+    to retrieve the html content of a website.
 
     @param      url             url
     @param      navigator       firefox, chrome, (ie: does not work well)
-    @param      module          module to use (selenium or splinter or None if you need to keep the first one available)
     @param      fLOG            logging function
     @return                     list of [ ( url, html) ]
 
@@ -222,36 +187,15 @@ def webhtml(url, navigator=default_driver, module="selenium", fLOG=noLOG):
         with warnings.catch_warnings():
             warnings.simplefilter("ignore", ImportWarning)
             import selenium
-        module = selenium.__name__
 
-    fLOG("[webhtml] module=", module)
     res = []
-    if module == "selenium":
-        browser = _get_selenium_browser(navigator, fLOG=fLOG)
-        if not isinstance(url, list):
-            url = [url]
-        for u in url:
-            fLOG("[webhtml] get url '{0}'".format(url))
-            browser.get(u)
-            i = browser.page_source
-            res.append((u, i))
-        fLOG("[webhtml] quit", module)
-        browser.quit()
-
-    elif module == "splinter":
-
-        with warnings.catch_warnings():
-            warnings.simplefilter("ignore", ImportWarning)
-            from splinter import Browser
-
-        with Browser(navigator) as browser:
-            if not isinstance(url, list):
-                url = [url]
-            for u in url:
-                browser.visit(u)
-                i = browser.html
-                res.append((u, i))
-    else:
-        raise ImportError("Unknown module required '{0}'".format(module))
-
+    browser = _get_selenium_browser(navigator, fLOG=fLOG)
+    if not isinstance(url, list):
+        url = [url]
+    for u in url:
+        fLOG("[webhtml] get url '{0}'".format(url))
+        browser.get(u)
+        i = browser.page_source
+        res.append((u, i))
+    browser.quit()
     return res

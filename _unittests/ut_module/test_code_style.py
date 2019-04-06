@@ -82,7 +82,6 @@ class TestCodeStyle(ExtTestCase):
                 "Unable to import 'pycuda",
                 "Unable to import 'pyopencl'",
                 "Unable to import 'selenium",
-                "Unable to import 'splinter'",
                 "Unable to import 'ensae_teaching_cs.td_1a.flask_helper'",
                 "Unused import clr",
                 "Module 'clr' has no 'AddReference' member",

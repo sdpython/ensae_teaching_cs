@@ -80,7 +80,8 @@ du javascript pour lesquels il faudrait simuler des événements au clavier
 (touches, souris) une fois le site lancé.
 Pour vérifier certains aspects du site web tels qu'ils seront par un internaute :
 
-* `Selenium with Python <http://selenium-python.readthedocs.io/>`_ (voir aussi :ref:`Issue with Selenium and Firefox <faq-web-selenium>`)
+* `Selenium with Python <http://selenium-python.readthedocs.io/>`_
+  (voir aussi :ref:`Issue with Selenium and Firefox <faq-web-selenium>`)
 * `Splinter <http://splinter.readthedocs.io/en/latest/>`_
 * `ghost.py <http://jeanphix.me/Ghost.py/>`_
 
