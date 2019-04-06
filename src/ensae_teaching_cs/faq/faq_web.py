@@ -40,11 +40,6 @@ def webshot(img, url, navigator=default_driver, add_date=False,
     installcustom/install_custom_chromedriver.html?highlight=chromedriver
     #pymyinstall.installcustom.install_custom_chromedriver.install_chromedriver>`_.
     """
-    if navigator is None:
-        with warnings.catch_warnings():
-            warnings.simplefilter("ignore", ImportWarning)
-            import selenium
-
     res = []
     browser = _get_selenium_browser(navigator, fLOG=fLOG)
 
@@ -132,8 +127,6 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
             browser = webdriver.Chrome(executable_path=chromed,
                                        chrome_options=chrome_options)
         else:
-            # see
-            # https://sites.google.com/a/chromium.org/chromedriver/getting-started
             with warnings.catch_warnings():
                 warnings.simplefilter("ignore", ImportWarning)
                 import selenium.webdriver.chrome.service as wservice
@@ -180,14 +173,10 @@ def webhtml(url, navigator=default_driver, fLOG=noLOG):
     @return                     list of [ ( url, html) ]
 
     Check the list of available webdriver at
-    `selenium/webdriver <https://github.com/SeleniumHQ/selenium/tree/master/py/selenium/webdriver>`_
+    `selenium/webdriver
+    <https://github.com/SeleniumHQ/selenium/tree/master/py/selenium/webdriver>`_
     and add one to the code if needed.
     """
-    if navigator is None:
-        with warnings.catch_warnings():
-            warnings.simplefilter("ignore", ImportWarning)
-            import selenium
-
     res = []
     browser = _get_selenium_browser(navigator, fLOG=fLOG)
     if not isinstance(url, list):
