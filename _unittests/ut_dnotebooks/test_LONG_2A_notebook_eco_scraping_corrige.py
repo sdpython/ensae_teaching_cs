@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@brief      test log(time=50s)
+@brief      test log(time=14s)
 """
 import unittest
 import shutil
@@ -9,7 +9,7 @@ from pyquickhelper.pycode import get_temp_folder, skipif_appveyor, skipif_travis
 import ensae_teaching_cs
 
 
-class TestNotebookRunner2aEcoScraping(unittest.TestCase):
+class TestNotebookRunner2aEcoScrapingCorrige(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
@@ -24,14 +24,14 @@ class TestNotebookRunner2aEcoScraping(unittest.TestCase):
             OutputPrint=__name__ == "__main__")
         from ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         from ensae_teaching_cs.data import simple_database
-        temp = get_temp_folder(__file__, "temp_notebook2a_eco_scraping")
+        temp = get_temp_folder(__file__, "temp_notebook2a_eco_scraping_corrige")
         keepnote = ls_notebooks("td2a_eco")
         shutil.copy(simple_database(), temp)
 
         def filter(i, n):
             if "Scraping" not in n:
                 return False
-            if "corrige" in n:
+            if "corrige" not in n:
                 return False
             return True
 
