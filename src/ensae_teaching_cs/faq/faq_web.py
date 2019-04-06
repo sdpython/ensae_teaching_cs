@@ -158,7 +158,12 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
         start_navi = True
         if start_navi:
             fLOG("[_get_selenium_browser] start", navigator)
-            browser = webdriver.Chrome(chromed)
+            chrome_options = webdriver.ChromeOptions()
+            chrome_options.add_argument('--headless')
+            chrome_options.add_argument('--no-sandbox')
+            chrome_options.add_argument('--verbose')
+            browser = webdriver.Chrome(executable_path=chromed,
+                                       chrome_options=chrome_options)
         else:
             # see
             # https://sites.google.com/a/chromium.org/chromedriver/getting-started
