@@ -1,13 +1,9 @@
 """
 @brief      test log(time=10s)
-
 """
 import os
-import sys
-import warnings
 import unittest
-import pyquickhelper
-from pyquickhelper.pycode import get_temp_folder, skipif_travis, is_virtual_environment, run_base_script, ExtTestCase
+from pyquickhelper.pycode import get_temp_folder, skipif_travis, ExtTestCase
 from ensae_teaching_cs.helpers.video_helper import make_video
 
 
@@ -26,13 +22,13 @@ class TestVideoHelper(ExtTestCase):
         imgs = os.listdir(img)
         png = [os.path.join(img, _)
                for _ in imgs if os.path.splitext(_)[-1] == ".png" and "00" in _]
-        assert len(png) > 0
+        self.assertGreater(len(png), 0)
         out = os.path.join(temp, "out_video.avi")
 
         v = make_video(png, out, size=(1000, 300))
-        assert os.path.exists(out)
-        assert os.stat(out).st_size > 90000
-        assert v is not None
+        self.assertExists(out)
+        self.assertGreater(os.stat(out).st_size, 90000)
+        self.assertNotEmpty(v)
 
 
 if __name__ == "__main__":
