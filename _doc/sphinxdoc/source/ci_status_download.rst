@@ -14,17 +14,17 @@ obtenu en exécutant la requête suivante sur
     #standardSQL
     SELECT
       file.project as Project,
+      details.distro.version as Version,
       COUNT(*) AS num_downloads,
       SUBSTR(_TABLE_SUFFIX, 1, 6) AS `month`
     FROM `the-psf.pypi.downloads*`
     WHERE
-      __CONDITION__
-      -- Only query the last 6 months of history
+      file.project = 'pyquickhelper' OR file.project = 'jyquickhelper' OR file.project = 'python3_module_template' OR file.project = 'pymmails' OR file.project = 'pymyinstall' OR file.project = 'pyensae' OR file.project = 'pyrsslocal' OR file.project = 'pysqllike' OR file.project = 'ensae_projects' OR file.project = 'ensae_teaching_cs' OR file.project = 'code_beatrix' OR file.project = 'actuariat_python' OR file.project = 'mlstatpy' OR file.project = 'jupytalk' OR file.project = 'teachpyx' OR file.project = 'tkinterquickhelper' OR file.project = 'cpyquickhelper' OR file.project = 'pandas_streaming' OR file.project = 'lightmlboard' OR file.project = 'lightmlrestapi' OR file.project = 'mlinsights' OR file.project = 'pyenbc' OR file.project = 'mlprodict' OR file.project = 'papierstat' OR file.project = 'sparkouille' OR file.project = 'manydataapi' OR file.project = 'csharpy' OR file.project = 'csharpyml' OR file.project = 'skl2onnx'  OR file.project = 'onnxruntime' OR file.project = 'nimbusml'  OR file.project = 'scikit-onnxruntime'
       AND _TABLE_SUFFIX
         BETWEEN FORMAT_DATE(
           '%Y%m01', DATE_SUB(CURRENT_DATE(), INTERVAL 12 MONTH))
         AND FORMAT_DATE('%Y%m%d', CURRENT_DATE())
-    GROUP BY `month`, `Project`
+    GROUP BY `month`, `Project`, `Version`
     """
 
     from ensae_teaching_cs.automation import get_teaching_modules
