@@ -27,6 +27,7 @@ ou *apprentissage par renforcement*
 * `Temporal difference learning <https://en.wikipedia.org/wiki/Temporal_difference_learning>`_
 * `Renewal Monte Carlo: Renewal theory based reinforcement learning <https://arxiv.org/abs/1804.01116>`_
 * `AlphaGo Zero - How and Why it Works <http://tim.hibal.org/blog/alpha-zero-how-and-why-it-works/>`_
+* `Open AI Spinning up <https://spinningup.openai.com/en/latest/index.html>`_
 
 *Lectures sur des applications*
 
