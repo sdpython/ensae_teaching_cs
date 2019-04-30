@@ -81,7 +81,8 @@ def content_as_binary(filename):
 
 def text_transform(ftpp, filename, content):
     """
-    if filename is rss.xml, replaces the string *__BLOG_ROOT__* by *self._root_web*
+    If filename is *rss.xml*,
+    replaces the string *__BLOG_ROOT__* by *self._root_web*.
 
     @param      ftpp        object FolderTransferFTP
     @param      filename    filename
@@ -355,30 +356,6 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                                        local=root3, root_local=root3,
                                        root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
                         projects.append(project)
-
-        elif module == "python3_module_template":
-            lay = [_ for _ in layout if _[0] == "html"][0]
-            if transfer and not os.path.exists(root):
-                if exc:
-                    raise FileNotFoundError(root)
-                else:
-                    continue
-
-            def _update_path(pth):
-                for a, b in [("\\build", "\\build2"),
-                             ("\\html", "\\html2"),
-                             ("/build", "/build2"),
-                             ("/html", "/html2")]:
-                    pth = pth.replace(a, b)
-                return pth
-
-            local = _update_path(root)
-            fLOG("[python3_module_template] ADD '{0}'".format(local))
-            fLOG("[python3_module_template] root is '{0}'".format(root))
-            project = dict(status_file=os.path.join(folder_status, "status_2_%s.txt" % module),
-                           local=local, root_local=local,
-                           root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx2"))
-            projects.append(project)
 
     # publish
     if additional_projects:
