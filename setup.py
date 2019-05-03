@@ -9,7 +9,6 @@ from setuptools import find_packages
 #########
 
 project_var_name = "ensae_teaching_cs"
-sversion = "0.8"
 versionPython = "%s.%s" % (sys.version_info.major, sys.version_info.minor)
 path = "Lib/site-packages/" + project_var_name
 readme = 'README.rst'
@@ -191,6 +190,7 @@ if not r:
         # builds the setup
 
         from pyquickhelper.pycode import clean_readme
+        from ensae_teaching_cs import __version__ as sversion
         long_description = clean_readme(long_description)
 
         setup(
