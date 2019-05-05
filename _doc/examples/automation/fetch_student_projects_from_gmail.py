@@ -43,12 +43,12 @@ with warnings.catch_warnings():
 # de la boîte de message.
 
 server = "imap.gmail.com"
-school = "ENSAE"
-date = "8-Feb-2019"
+school = "ASSAS"
+date = "1-May-2019"
 pattern = "Python_{0}_TD_3A_master_2019"
 group_def = "groupes.xlsx"
 col_subject, col_group, col_mail, col_student = "sujet", "groupe", "mail", "Nom"
-final_dest = ["2018-2019", "3A_projet_master"]
+final_dest = ["2018-2019", "assas_projet"]
 
 
 if school == 'ENSAE':
@@ -57,7 +57,7 @@ if school == 'ENSAE':
     dest_folder = os.path.normpath(os.path.abspath(os.path.join(
         *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", school] + final_dest))))
     print("dest", dest_folder)
-elif school == 'PANTHEON':
+elif school == 'ASSAS':
     do_mail = True
     mailfolder = ["ensae/assas"]
     dest_folder = os.path.normpath(os.path.abspath(os.path.join(
