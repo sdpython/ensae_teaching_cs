@@ -325,6 +325,7 @@ class CopyFileForFtp:
         """
         if not os.path.exists(file):
             raise FileNotFoundError(file)
+        nb = 0
         fi = os.listdir(file)
         for f in fi:
             if not os.path.isfile(file + "/" + f):
@@ -332,14 +333,21 @@ class CopyFileForFtp:
             ext = os.path.splitext(f)[1]
             if exte is None or ext[1:] == exte:
                 self.copy_file(file + "/" + f, to, doFTP, doClean)
+                nb += 1
+        if nb == 0:
+            raise RuntimeError("No file found in '{}'.".format(file))
 
     def copy_file_contains(self, file, pattern, to, doFTP=True, doClean=False):
         """
         @see me copy_file
         """
         fi = os.listdir(file)
+        nb = 0
         for f in fi:
             if not os.path.isfile(file + "/" + f):
                 continue
             if pattern in f:
                 self.copy_file(file + "/" + f, to, doFTP, doClean)
+                nb += 1
+        if nb == 0:
+            raise RuntimeError("No file found in '{}'.".format(file))
