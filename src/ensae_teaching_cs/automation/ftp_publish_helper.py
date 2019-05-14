@@ -356,6 +356,10 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                                        local=root3, root_local=root3,
                                        root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
                         projects.append(project)
+                        project = dict(status_file=os.path.join(folder_status, "status_doc2_%s.txt" % module),
+                                       local=root3, root_local=root3,
+                                       root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx2"))
+                        projects.append(project)
 
     # publish
     if additional_projects:

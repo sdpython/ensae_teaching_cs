@@ -43,17 +43,18 @@ with warnings.catch_warnings():
 # de la boîte de message.
 
 server = "imap.gmail.com"
-school = "ASSAS"
-date = "1-May-2019"
-pattern = "Python_{0}_TD_3A_master_2019"
+school = "ENSAE"
+date = "10-May-2019"
+year = '1A'
+pattern = "Python_{0}_TD_%s_2019" % year
 group_def = "groupes.xlsx"
 col_subject, col_group, col_mail, col_student = "sujet", "groupe", "mail", "Nom"
-final_dest = ["2018-2019", "assas_projet"]
+final_dest = ["2018-2019", "ensae_1A_projet"]
 
 
 if school == 'ENSAE':
     do_mail = True
-    mailfolder = ["ensae/ENSAE_3A"]
+    mailfolder = ["ensae/ENSAE_%s" % year]
     dest_folder = os.path.normpath(os.path.abspath(os.path.join(
         *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", school] + final_dest))))
     print("dest", dest_folder)
