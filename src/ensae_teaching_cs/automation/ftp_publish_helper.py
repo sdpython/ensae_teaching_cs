@@ -331,6 +331,10 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                                local=local, root_local=local,
                                root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
                 projects.append(project)
+                project = dict(status_file=os.path.join(folder_status, "status_2_%s.txt" % module),
+                               local=local, root_local=local,
+                               root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx2"))
+                projects.append(project)
             else:
                 fLOG("[ensae_teaching_cs] looking into DOC1, DOC3")
                 root1 = root.replace("_UT_", "_DOC1_")
