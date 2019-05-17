@@ -30,6 +30,8 @@ Et parfois, on a envie de dessiner en
 
 * :epkg:`matplotlib`
 * :epkg:`bokeh`
+* `hvplots <https://hvplot.pyviz.org/>`_ (:epkg:`bokeh` for :epkg:`pandas`)
 * :epkg:`seaborn`
 * `yellowbrick <http://www.scikit-yb.org/en/latest/index.html>`_
+  (pour les données en trois dimensions)
 * `hypertools <https://hypertools.readthedocs.io/en/latest/>`_
