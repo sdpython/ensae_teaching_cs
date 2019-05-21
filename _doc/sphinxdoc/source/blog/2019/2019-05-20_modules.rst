@@ -1,0 +1,143 @@
+
+.. blogpost::
+    :title: Quelques modules intéressants
+    :keywords: loguru, botflow, pandas
+    :date: 2019-05-20
+    :categories: modules
+
+    Une liste de modules à suivre.
+    Un benchmark sur :epkg:`pandas` pour commencer :
+    `Fast-Pandas <https://github.com/mm-mansour/Fast-Pandas>`_.
+    On voit que en deça de 10.000 lignes, l'ordinateur
+    passe son temps surtout dans le code python. Après,
+    il fait enfin un peu de calcul.
+
+    .. contents::
+        :local:
+
+    Pédagogie
+    +++++++++
+
+    `Algojammer <https://github.com/ChrisKnott/Algojammer>`_ fonctionne un
+    peu comme `PythonTutor <http://www.pythontutor.com/>`_
+    mais il est plus adapté aux algorithmes qui manipulent
+    de grandes données.
+
+    Web
+    +++
+
+    `vibora <https://github.com/vibora-io/vibora>`_ :
+    plus rapide que tout ce qui existe car écrit en
+    :epkg:`cython`. Le plus rapide est probablement
+    `ja-pronto <https://github.com/squeaky-pl/japronto>`_
+    mais il n'a pas l'air d'être vraiment maintenu.
+    Le site mentionne que le projet est en cours de réécriture.
+
+    Entre temps, je me suis dirigé sur
+    `starlette <https://www.starlette.io/>`_,
+    `hypercorn <https://github.com/pgjones/hypercorn>`_,
+    `uvicorn <https://www.uvicorn.org/>`_,
+    `falcon <https://falconframework.org/>`_
+
+    Ligne de commande
+    +++++++++++++++++
+
+    `python-nubia <https://github.com/facebookincubator/python-nubia>`_ :
+    pour créer des lignes de commandes facilement.
+    C'est plus rapide que ce que j'avais en tête avec la fonction
+    `cli_main_helper <http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/pyquickhelper/cli/cli_helper.html?pyquickhelper.cli.cli_helper.cli_main_helper>`_
+    qui parse la documentation pour construire la documentation de la fonction.
+    Malheureusement, cela inclut :epkg:`docutils` et :epkg:`sphinx`
+    qui sont des dépendances assez longues à charger.
+    Cette option est plus déclarative.
+
+    Optimisation
+    ++++++++++++
+
+    `pymagnitude <https://github.com/plasticityai/magnitude>`_ :
+    calculer les prédictions de modèles de deep learning un peu plus vite.
+
+    `lmdb-embeddings <https://github.com/ThoughtRiver/lmdb-embeddings>`_ est une
+    autre option qui permet de stocker les coefficients sur un disque
+    `SSD <https://en.wikipedia.org/wiki/Solid-state_drive>`_,
+    moins de choses en mémoire pour une perte très légère en performance.
+
+    Workflow
+    ++++++++
+
+    `faust <https://github.com/robinhood/faust>`_ :
+    traiter en temps réel des événements avec
+    `Kafka <https://kafka.apache.org/>`_.
+
+    `botflow <https://github.com/kkyon/botflow>`_ ou
+    comment créer des workflows pour manipuler
+    les données et donc faire du machine learning
+    sur des données conséquentes. Plus simple
+    que `luigi <https://github.com/spotify/luigi>`_,
+    fonctionne en local. Bref, il faut avoir du temps
+    et un besoin pour rentrer dans tout ça :
+    `Data pipelines, Luigi, Airflow: everything you need to know
+    <https://towardsdatascience.com/data-pipelines-luigi-airflow-everything-you-need-to-know-18dc741449b7>`_.
+
+    Logging, Profiling, Refactoring
+    +++++++++++++++++++++++++++++++
+
+    `pampy <https://github.com/santinic/pampy>`_
+    permet de retrouver des informations dans des
+    grosses structures de données. Utile pour débugger.
+
+    `Bowler <https://github.com/facebookincubator/Bowler>`_
+    est un outil pour faire du refactoring. Il se balade dans le code
+    avec des arbres syntaxiques.
+
+    `pyre-check <https://github.com/facebook/pyre-check>`_ :
+    vérifie les `annotations <https://docs.python.org/3/library/typing.html>`_.
+
+    `py-spy <https://github.com/benfred/py-spy>`_ est un profileur
+    qui regarde régulièrement où en est un programme. A la fin de l'exécution,
+    il compte le nombre de fois qu'il était dans telle ou telle fonction.
+    Ces profileurs dits *sampling profiler* sont en général plus rapide
+    car ils ne modifient pas le programme.
+
+    `loguru <https://github.com/Delgan/loguru>`_ :
+    pour logger plus facilement que
+    `logging <https://docs.python.org/3/library/logging.html>`_.
+    Pas mal pour logger les call stack :
+
+    ::
+
+        logger.add("output.log", backtrace=True, diagnose=True)  # Set 'False' to not leak sensitive data in prod
+
+        def func(a, b):
+            return a / b
+
+        def nested(c):
+            try:
+                func(5, c)
+            except ZeroDivisionError:
+                logger.exception("What?!")
+
+        nested(0)
+
+    Ce qui donne :
+
+    ::
+
+        2018-07-17 01:38:43.975 | ERROR    | __main__:nested:10 - What?!
+        Traceback (most recent call last):
+
+          File "test.py", line 12, in <module>
+            nested(0)
+            + <function nested at 0x7f5c755322f0>
+
+        > File "test.py", line 8, in nested
+            func(5, c)
+            ¦       + 0
+            + <function func at 0x7f5c79fc2e18>
+
+          File "test.py", line 4, in func
+            return a / b
+                   ¦   + 0
+                   + 5
+
+        ZeroDivisionError: division by zero
