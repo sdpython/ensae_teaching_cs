@@ -1,0 +1,16 @@
+
+.. blogpost::
+    :title: Un module pour annoter les données
+    :keywords: smart, annotations, label
+    :date: 2019-05-24
+    :categories: annotation
+
+    Le machine learning supervisé a besoin de données
+    labellisées. Sans label, pas d'apprentissage, quand
+    il n'y en a pas, il faut les fabriquer. C'est long,
+    fastidieux mais on apprend beaucoup on labellisant
+    ses données, il arrive souvent qu'on change
+    la façon de le faire en les regardant.
+    Toutefois, il faut le faire un jour. Je n'ai pas
+    essayé l'outil suivant mais il pourrait aider :
+    `SMART <https://rtiinternational.github.io/SMART/>`_.
