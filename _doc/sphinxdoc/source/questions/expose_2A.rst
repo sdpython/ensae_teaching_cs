@@ -252,3 +252,19 @@ Privacy
 
 * `A General Approach to Adding Differential Privacy to Iterative Training Procedures <https://arxiv.org/pdf/1812.06210.pdf>`_,
   `tensorflow/privacy <https://github.com/tensorflow/privacy>`_
+
+Thèmes - 2019
++++++++++++++
+
+Automated machine learning
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* `Probabilistic Matrix Factorization for Automated Machine Learning <https://arxiv.org/abs/1705.05355>`_
+* `auto-sklearn <https://automl.github.io/auto-sklearn/stable/>`_
+
+k-nearest neighbours
+^^^^^^^^^^^^^^^^^^^^
+
+* `Neighbourhood Components Analysis <https://cs.nyu.edu/~roweis/papers/ncanips.pdf>`_
+
+

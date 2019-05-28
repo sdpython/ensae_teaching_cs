@@ -99,6 +99,7 @@ de :ref:`l-imbalanced-classification`.
 * `Generalized Random Forests <https://arxiv.org/abs/1610.01271>`_
 * `Learning Certifiably Optimal Rule Lists for Categorical Data <http://www.jmlr.org/papers/volume18/17-716/17-716.pdf>`_
 * `tick: a Python Library for Statistical Learning, with an emphasis on Hawkes Processes and Time-Dependent Models <http://www.jmlr.org/papers/volume18/17-381/17-381.pdf>`_
+* `Neighbourhood Components Analysis <https://cs.nyu.edu/~roweis/papers/ncanips.pdf>`_
 
 `JMLR <http://www.jmlr.org/>`_
 poste régulièrement des articles sur des librairies de machine learning open source telles que
