@@ -64,7 +64,12 @@ C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
 
 *Notebooks*
 
-(*à venir*) lime, shap, unified approach
+(*à venir*) lime, shap, unified approach,
+`partial_dependence <https://scikit-learn.org/stable/modules/generated/sklearn.inspection.partial_dependence.html>`_,
+`permutation_importance <https://eli5.readthedocs.io/en/latest/blackbox/permutation_importance.html>`_ (bientôt dans scikit-learn 0.22)
+
+* `Interpret scikit-learn machine learning models <https://github.com/glemaitre/scikit-learn-workshop-2019/blob/master/interpretation.ipynb>`_
+  (from scikit-learn's consortium workshop)
 
 *Lectures - LIME*
 

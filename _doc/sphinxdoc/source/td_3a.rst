@@ -35,13 +35,17 @@ Anatomie et histoire d'un ordinateur
 *Lectures*
 
 * `Memory Latency over the years <https://people.eecs.berkeley.edu/~rcs/research/interactive_latency.html>`_
-* `What every computer scientist should know about floating point <http://faculty.tarleton.edu/agapie/documents/cs_343_arch/papers/1991_Goldberg_FloatingPoint.pdf>`_
+* `What every computer scientist should know about floating point
+  <http://faculty.tarleton.edu/agapie/documents/cs_343_arch/papers/1991_Goldberg_FloatingPoint.pdf>`_
 * `What every programmer should know about memory <https://www.akkadia.org/drepper/cpumemory.pdf>`_
 * `Introduction to High Performance Scientific Computing <http://pages.tacc.utexas.edu/~eijkhout/istc/istc.html>`_
 * `Zoologie des réseaux de neurones <http://www.asimovinstitute.org/neural-network-zoo/>`_
-* `Teaching a machine how to play Mario <http://www.cs.cmu.edu/~tom7/mario/mario.pdf>`_
-* `Introduction au système de recommandation par facteurs latents <https://datajobs.com/data-science-repo/Recommender-Systems-%5bNetflix%5d.pdf>`_
-* `The Unreasonable Effectiveness of Data <http://static.googleusercontent.com/media/research.google.com/fr//pubs/archive/35179.pdf>`_
+* `Teaching a machine how to play Mario
+  <http://www.cs.cmu.edu/~tom7/mario/mario.pdf>`_
+* `Introduction au système de recommandation par facteurs latents
+  <https://datajobs.com/data-science-repo/Recommender-Systems-%5bNetflix%5d.pdf>`_
+* `The Unreasonable Effectiveness of Data
+  <http://static.googleusercontent.com/media/research.google.com/fr//pubs/archive/35179.pdf>`_
 * :ref:`Après l'architecture Von Neumann <l-archi-vonneum-memory>`
 * `Learning Efficient Algorithms with Hierarchical Attentive Memory <https://arxiv.org/pdf/1602.03218.pdf>`_
 * `GotoBLAS <https://en.wikipedia.org/wiki/GotoBLAS>`_ (écrit par
@@ -49,7 +53,8 @@ Anatomie et histoire d'un ordinateur
 
 *Machine Learning*
 
-* `Infrastructure for Usable Machine Learning: The Stanford DAWN Project <https://arxiv.org/pdf/1705.07538.pdf>`_
+* `Infrastructure for Usable Machine Learning: The Stanford DAWN Project
+  <https://arxiv.org/pdf/1705.07538.pdf>`_
 
 CPU
 +++
@@ -60,14 +65,19 @@ Le notebook suivant montre comment écrire du code C++ tout en
 l'utilisant depuis Python pour mesurer une optimisation que
 proposent les processeurs CPU : le :epkg:`branching`.
 
-* `Measures branching in C++ from python <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/notebooks/cbenchmark_branching.html#cbenchmarkbranchingrst>`_
+* `Measures branching in C++ from python
+  <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/notebooks/cbenchmark_branching.html#cbenchmarkbranchingrst>`_
 
 *Lectures*
 
-* `Weld: A Multithreading Technique Towards Latencytolerant VLIW Processors  <http://tinker.cc.gatech.edu/symposia/hipc01.pdf>`_
+* `Weld: A Multithreading Technique Towards Latencytolerant VLIW Processors
+  <http://tinker.cc.gatech.edu/symposia/hipc01.pdf>`_
 * `Stackless Python <https://bitbucket.org/stackless-dev/stackless>`_ : implémentation de l'interpréteur de Python
   spécialisée dans le micro threading.
-* `Why is it faster to process a sorted array than an unsorted array? <https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array/11227902#11227902>`_
+* `Why is it faster to process a sorted array than an unsorted array?
+  <https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array/11227902#11227902>`_
+* `How to optimize C and C++ code in 2018
+  <https://medium.com/@aka.rider/how-to-optimize-c-and-c-code-in-2018-bd4f90a72c2b>`_
 
 GPU
 +++
@@ -82,31 +92,45 @@ GPU
 
 *Lectures sur le GPU*
 
-* `Comment apprendre aux ordinateurs à comprendre des images <https://www.ted.com/talks/fei_fei_li_how_we_re_teaching_computers_to_understand_pictures?language=fr>`_
+* `Comment apprendre aux ordinateurs à comprendre des images
+  <https://www.ted.com/talks/fei_fei_li_how_we_re_teaching_computers_to_understand_pictures?language=fr>`_
 * `Scaling-up Machine Learning Chapitre 16 et 17 <http://www.cambridge.org/catalogue/catalogue.asp?isbn=1139210408>`_
 * `Quelques exemples graphiques de kernel 3x3 de convolution <https://docs.gimp.org/en/plug-in-convmatrix.html>`_
 * `Introduction aux réseaux convolutifs <http://matlabtricks.com/post-5/3x3-convolution-kernels-with-online-demo#demo>`_,
   `Canny edge detector <https://en.wikipedia.org/wiki/Canny_edge_detector>`_
 * `Understanding Convolution in Deep Learning <http://timdettmers.com/2015/03/26/convolution-deep-learning/>`_
-* `Introduction au GPGPU <https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units>`_
-* `Quelques éléments de consommation électrique sur les GPU et CPU <http://blog.octo.com/la-technologie-gpgpu-1ere-partie-le-cote-obscur-de-la-geforce/>`_
-* `Inter-Block GPU Communication via Fast Barrier Synchronization <http://eprints.cs.vt.edu/archive/00001087/01/TR_GPU_synchronization.pdf>`_
+* `Introduction au GPGPU
+  <https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units>`_
+* `Quelques éléments de consommation électrique sur les GPU et CPU
+  <http://blog.octo.com/la-technologie-gpgpu-1ere-partie-le-cote-obscur-de-la-geforce/>`_
+* `Inter-Block GPU Communication via Fast Barrier Synchronization
+  <http://eprints.cs.vt.edu/archive/00001087/01/TR_GPU_synchronization.pdf>`_
 * `CUDA C Programming Guide <https://docs.nvidia.com/cuda/cuda-c-programming-guide/>`_
-* `Demystifying GPU Microarchitecture through Microbenchmarking <http://www.stuffedcow.net/files/gpuarch-ispass2010.pdf>`_
-* `Mixed-Precision Training of Deep Neural Networks <https://devblogs.nvidia.com/parallelforall/mixed-precision-training-deep-neural-networks/>`_
-* `Computing Higher Order Derivatives of Matrix and Tensor Expressions <https://papers.nips.cc/paper/7540-computing-higher-order-derivatives-of-matrix-and-tensor-expressions.pdf>`_
+* `Demystifying GPU Microarchitecture through Microbenchmarking
+  <http://www.stuffedcow.net/files/gpuarch-ispass2010.pdf>`_
+* `Mixed-Precision Training of Deep Neural Networks
+  <https://devblogs.nvidia.com/parallelforall/mixed-precision-training-deep-neural-networks/>`_
+* `Computing Higher Order Derivatives of Matrix and Tensor Expressions
+  <https://papers.nips.cc/paper/7540-computing-higher-order-derivatives-of-matrix-and-tensor-expressions.pdf>`_
 
 *Lectures sur le C++*
 
-* `Thinking in C++ <http://mindview.net/Books/TICPP/ThinkingInCPP2e.html>`_, Bruce Eckel
-* `Effective C++ <http://www.aristeia.com/books.html>`_, Scott Meyers
-* `What Every Programmer Should Know About Memory <http://www.akkadia.org/drepper/cpumemory.pdf>`_, Ulrich Drepper
-* `The Art of Multiprocessor Programming <http://edc.tversu.ru/elib/inf/0189.pdf>`_, Maurice Herlihy, Nir Shavit
-* `An Introduction to GPGPU Programming - CUDA Architecture <http://www.diva-portal.org/smash/get/diva2:447977/FULLTEXT01.pdf>`_, Rafia Inam
+* `Thinking in C++ <http://mindview.net/Books/TICPP/ThinkingInCPP2e.html>`_,
+  Bruce Eckel
+* `Effective C++ <http://www.aristeia.com/books.html>`_,
+  Scott Meyers
+* `What Every Programmer Should Know About Memory
+  <http://www.akkadia.org/drepper/cpumemory.pdf>`_, Ulrich Drepper
+* `The Art of Multiprocessor Programming <http://edc.tversu.ru/elib/inf/0189.pdf>`_,
+  Maurice Herlihy, Nir Shavit
+* `An Introduction to GPGPU Programming - CUDA Architecture
+  <http://www.diva-portal.org/smash/get/diva2:447977/FULLTEXT01.pdf>`_,
+  Rafia Inam
 
 *Python*
 
-* `GPU and pycuda or pyopencl on Windows <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx//blog/2017/2017-01-14_cuda.html>`_
+* `GPU and pycuda or pyopencl on Windows
+  <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx//blog/2017/2017-01-14_cuda.html>`_
 * `Pycuda <https://mathema.tician.de/software/pycuda/>`_ ou
   `pyopencl <https://documen.tician.de/pyopencl/>`_
   pour ceux qui n'ont pas de carte
@@ -116,11 +140,13 @@ GPU
 
 *Bas niveau*
 
-* `Low-Level Programming University <https://github.com/gurugio/lowlevelprogramming-university>`_
+* `Low-Level Programming University
+  <https://github.com/gurugio/lowlevelprogramming-university>`_
 
 *Sécurité et bas niveau*
 
-* `'Kernel memory leaking' Intel processor design flaw forces Linux, Windows redesign <http://www.theregister.co.uk/2018/01/02/intel_cpu_design_flaw/>`_
+* `'Kernel memory leaking' Intel processor design flaw forces Linux, Windows redesign
+  <http://www.theregister.co.uk/2018/01/02/intel_cpu_design_flaw/>`_
 * `KASLR is Dead: Long Live KASLR <https://gruss.cc/files/kaiser.pdf>`_
 * `Meltdown and Spectre <https://meltdownattack.com/>`_ :
   Bugs in modern computers leak passwords and sensitive data.
@@ -137,7 +163,8 @@ GPU
 * `scikit-cuda <http://scikit-cuda.readthedocs.io/en/latest/index.html>`_
 * `pycuda <https://developer.nvidia.com/pycuda>`_
 * `numbapro <http://docs.continuum.io/numbapro/>`_
-  (voir `A Monte Carlo Option Pricer <http://nbviewer.jupyter.org/gist/harrism/835a8ca39ced77fe751d>`_)
+  (voir `A Monte Carlo Option Pricer
+  <http://nbviewer.jupyter.org/gist/harrism/835a8ca39ced77fe751d>`_)
 
 BLAS, LAPACK
 ++++++++++++
@@ -159,13 +186,18 @@ Autres que CPU, GPU
 
 *Lectures*
 
-* `Plasticine: A Reconfigurable Architecture For Parallel Patterns <http://csl.stanford.edu/~christos/publications/2017.plasticine.isca.pdf>`_
-* `Introduction to CGRA <http://aces.snu.ac.kr/~bernhard/teaching/4541.775/lecture/4541.775.9.CGRA.Introduction.pdf>`_
+* `Plasticine: A Reconfigurable Architecture For Parallel Patterns
+  <http://csl.stanford.edu/~christos/publications/2017.plasticine.isca.pdf>`_
+* `Introduction to CGRA
+  <http://aces.snu.ac.kr/~bernhard/teaching/4541.775/lecture/4541.775.9.CGRA.Introduction.pdf>`_
   (`Coarse-Grained Reconfigurable Architecture <http://cccp.eecs.umich.edu/research/cgra.php>`_)
 * `Tensor Processor Unit (TPU) <https://en.wikipedia.org/wiki/Tensor_processing_unit>`_
-* `Application-specific integrated circuit (ASIC) <https://en.wikipedia.org/wiki/Application-specific_integrated_circuit>`_
-* `Field-programmable gate array (FGPA) <https://en.wikipedia.org/wiki/Field-programmable_gate_array>`_
-* `Ethereum: a Secure Decentralised Generalized Transaction Ledger EIP-150 Revision <http://gavwood.com/paper.pdf>`_
+* `Application-specific integrated circuit (ASIC)
+  <https://en.wikipedia.org/wiki/Application-specific_integrated_circuit>`_
+* `Field-programmable gate array (FGPA)
+  <https://en.wikipedia.org/wiki/Field-programmable_gate_array>`_
+* `Ethereum: a Secure Decentralised Generalized Transaction Ledger EIP-150 Revision
+  <http://gavwood.com/paper.pdf>`_
 
 ------------
 
@@ -180,18 +212,21 @@ Crypographie, block chain
 * Block chain, Bitcoin, Attque (Incentive, long term consensus, la probabilité qu'on soit en désaccord
   décroît avec le temps, monnaie stable, sûre, anonyme ?)
 * `Ethereum <https://en.wikipedia.org/wiki/Ethereum>`_
-* `Trustless Machine Learning Contracts; Evaluating and Exchanging Machine Learning Models on the Ethereum Blockchain <https://algorithmia.com/research/ml-models-on-blockchain>`_
+* `Trustless Machine Learning Contracts; Evaluating and Exchanging Machine Learning Models on the Ethereum Blockchain
+  <https://algorithmia.com/research/ml-models-on-blockchain>`_
 
 *Lectures*
 
 * The art of multiprocessor programming, *Nit Shavit*
 * `CS176: Multiprocessor Synchronization <http://cs.brown.edu/courses/cs176/course_information.shtml>`_
-* `Bitcoin and Cryptocurrency Technologies <https://d28rh4a8wq0iu5.cloudfront.net/bitcointech/readings/princeton_bitcoin_book.pdf?a=1>`_
+* `Bitcoin and Cryptocurrency Technologies
+  <https://d28rh4a8wq0iu5.cloudfront.net/bitcointech/readings/princeton_bitcoin_book.pdf?a=1>`_
 * `Delivery versus payment <http://www.multichain.com/blog/2015/09/delivery-versus-payment-blockchain/>`_
 * `Ethereum official website <https://www.ethereum.org/>`_
 * `Hello World in Ethereum <https://www.ethereum.org/greeter>`_
 * `Introduction to Smart Contracts <http://solidity.readthedocs.io/en/develop/introduction-to-smart-contracts.html>`_
-* `Monnaie, finance et économie réelle <http://www.editionsladecouverte.fr/catalogue/index-Monnaie__finance_et___conomie_r__elle-9782707185822.html>`_
+* `Monnaie, finance et économie réelle
+  <http://www.editionsladecouverte.fr/catalogue/index-Monnaie__finance_et___conomie_r__elle-9782707185822.html>`_
 
 .. _l-algo3A-distri:
 
@@ -204,16 +239,21 @@ Algorithmes Distribués
 
 * `Optimization Methods for Large-Scale Machine Learning <https://arxiv.org/abs/1606.04838>`_
 * `Diagonal Rescaling For Neural Networks <https://arxiv.org/abs/1705.09319>`_
-* `Communication Complexity of Distributed Convex Learning and Optimization <https://arxiv.org/pdf/1506.01900.pdf>`_
+* `Communication Complexity of Distributed Convex Learning and Optimization
+  <https://arxiv.org/pdf/1506.01900.pdf>`_
 * `Fast Distributed Gradient Methods <https://arxiv.org/pdf/1112.2972.pdf>`_
-* `A Generalized Accelerated Composite Gradient Method: Uniting Nesterov's Fast Gradient Method and FISTA <https://arxiv.org/abs/1705.10266>`_
-* `Demystifying Parallel and Distributed Deep Learning: An In-Depth Concurrency Analysis <https://arxiv.org/pdf/1802.09941.pdf>`_
+* `A Generalized Accelerated Composite Gradient Method: Uniting Nesterov's Fast Gradient Method and FISTA
+  <https://arxiv.org/abs/1705.10266>`_
+* `Demystifying Parallel and Distributed Deep Learning: An In-Depth Concurrency Analysis
+  <https://arxiv.org/pdf/1802.09941.pdf>`_
 
 *Vidéo*
 
-* `CS231n Winter 2016 Lecture 4 Backpropagation, Neural Networks 1- <https://www.youtube.com/watch?v=GZTvxoSHZIo&feature=youtu.be>`_
+* `CS231n Winter 2016 Lecture 4 Backpropagation, Neural Networks 1
+  <https://www.youtube.com/watch?v=GZTvxoSHZIo&feature=youtu.be>`_
 * :ref:`Algorithmes classiques implémentés <l-blog-algo-impl>`
-* `Fast Interesection of Sorted Lists Using SSE Instructions <https://highlyscalable.wordpress.com/2012/06/05/fast-intersection-sorted-lists-sse/>`_
+* `Fast Interesection of Sorted Lists Using SSE Instructions
+  <https://highlyscalable.wordpress.com/2012/06/05/fast-intersection-sorted-lists-sse/>`_
 * `Hogwild for Machine Learning on Multicore <https://www.youtube.com/watch?v=l5JqUvTdZts>`_
 
 ------------
@@ -242,7 +282,9 @@ Structures de données
 
 *Lectures*
 
-* `Introduction to Algorithms, 3rd Edition <https://mcdtu.files.wordpress.com/2017/03/introduction-to-algorithms-3rd-edition-sep-2010.pdf>`_, Cormen, Leiserson, Rivest, Stein.
+* `Introduction to Algorithms, 3rd Edition
+  <https://mcdtu.files.wordpress.com/2017/03/introduction-to-algorithms-3rd-edition-sep-2010.pdf>`_,
+  Cormen, Leiserson, Rivest, Stein.
 * `Cracking the Coding Interview <http://www.valleytalk.org/wp-content/uploads/2012/10/CrackCode.pdf>`_
 * :ref:`Ecrire du code rapide <blog-post-optim-code-2018-08>` (article de blog)
 
@@ -258,18 +300,23 @@ Threads et synchronisation
 * `TIL: clock skew exists (distributed system) <http://jvns.ca/blog/2016/02/10/til-clock-skew-exists/>`_
 * `Le dîner des philosophes <https://fr.wikipedia.org/wiki/D%C3%AEner_des_philosophes>`_,
   `The Part-Time Parliament <http://lamport.azurewebsites.net/pubs/lamport-paxos.pdf>`_
-* `Is Parallel Programming Hard, And, If So, What Can You Do About It? <https://www.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.html>`_
-* `Time, Clocks, and the Ordering of Events in a Distributed System <http://lamport.azurewebsites.net/pubs/time-clocks.pdf>`_
+* `Is Parallel Programming Hard, And, If So, What Can You Do About It?
+  <https://www.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.html>`_
+* `Time, Clocks, and the Ordering of Events in a Distributed System
+  <http://lamport.azurewebsites.net/pubs/time-clocks.pdf>`_
 * `Paxos Made Simple <http://lamport.azurewebsites.net/pubs/paxos-simple.pdf>`_
-* `Linearizability: A Correctness Condition for Concurrent Objects <https://cs.brown.edu/~mph/HerlihyW90/p463-herlihy.pdf>`_
+* `Linearizability: A Correctness Condition for Concurrent Objects
+  <https://cs.brown.edu/~mph/HerlihyW90/p463-herlihy.pdf>`_
 * :ref:`Calcul distribué en Python (CPU) <blog-parallel-computing-2018>`
 
 Plus proches voisins en grandes dimensions
 ++++++++++++++++++++++++++++++++++++++++++
 
 * `Efficient Distributed Locality Sensitive Hashing <https://arxiv.org/abs/1210.7057>`_
-* `Scalable Locality-Sensitive Hashing for Similarity Search in High-Dimensional, Large-Scale Multimedia Datasets <https://arxiv.org/abs/1310.4136>`_
-* `Streaming Similarity Search over one Billion Tweets using Parallel Locality-Sensitive Hashing <http://istc-bigdata.org/plsh/docs/plsh_paper.pdf>`_
+* `Scalable Locality-Sensitive Hashing for Similarity Search in High-Dimensional, Large-Scale Multimedia Datasets
+  <https://arxiv.org/abs/1310.4136>`_
+* `Streaming Similarity Search over one Billion Tweets using Parallel Locality-Sensitive Hashing
+  <http://istc-bigdata.org/plsh/docs/plsh_paper.pdf>`_
 
 .. _l-algo-distribues-3a:
 
@@ -285,16 +332,22 @@ Distribution des calculs, stratégies de stockage, SQL NoSQL
 *Lectures*
 
 * `What Every Data Scientist Needs to Know about SQL <http://joshualande.com/data-science-sql>`_
-* `Brewer's Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services <https://users.ece.cmu.edu/~adrian/731-sp04/readings/GL-cap.pdf>`_
-* `Distributed Algorithms in NoSQL Databases <https://highlyscalable.wordpress.com/2012/09/18/distributed-algorithms-in-nosql-databases/>`_
-* `No SQL Data Modeling Techniques <https://highlyscalable.wordpress.com/2012/03/01/nosql-data-modeling-techniques/>`_
-* `Distributed Systems and Parallel Computing <http://research.google.com/pubs/DistributedSystemsandParallelComputing.html>`_
-* `Faster: A Concurrent Key-Value Store with In-Place Updates <https://www.microsoft.com/en-us/research/uploads/prod/2018/03/faster-sigmod18.pdf>`_
+* `Brewer's Conjecture and the Feasibility of Consistent, Available, Partition-Tolerant Web Services
+  <https://users.ece.cmu.edu/~adrian/731-sp04/readings/GL-cap.pdf>`_
+* `Distributed Algorithms in NoSQL Databases
+  <https://highlyscalable.wordpress.com/2012/09/18/distributed-algorithms-in-nosql-databases/>`_
+* `No SQL Data Modeling Techniques
+  <https://highlyscalable.wordpress.com/2012/03/01/nosql-data-modeling-techniques/>`_
+* `Distributed Systems and Parallel Computing
+  <http://research.google.com/pubs/DistributedSystemsandParallelComputing.html>`_
+* `Faster: A Concurrent Key-Value Store with In-Place Updates
+  <https://www.microsoft.com/en-us/research/uploads/prod/2018/03/faster-sigmod18.pdf>`_
 
 *Logiciels*
 
 * `MongoDB <https://www.mongodb.com/>`_
-* `rethinkdb <https://rethinkdb.com/>`_ (python : `rethinkdb <https://pypi.python.org/pypi/rethinkdb/>`_)
+* `rethinkdb <https://rethinkdb.com/>`_
+  (python : `rethinkdb <https://pypi.python.org/pypi/rethinkdb/>`_)
 * `FASTER <https://github.com/Microsoft/FASTER>`_
 
 *Distribution des calculs en Python*
@@ -311,7 +364,8 @@ Lorsque les données sont volumineuses. Une solution consiste à les compresser.
 
 *Lectures*
 
-* `Compressed sparse row (CSR, CRS or Yale format) <https://en.wikipedia.org/wiki/Sparse_matrix#Compressed_sparse_row_.28CSR.2C_CRS_or_Yale_format.29>`_
+* `Compressed sparse row (CSR, CRS or Yale format)
+  <https://en.wikipedia.org/wiki/Sparse_matrix#Compressed_sparse_row_.28CSR.2C_CRS_or_Yale_format.29>`_
 * `Moving away from HDF5 <http://cyrille.rossant.net/moving-away-hdf5/>`_
 
 *Modules*
@@ -327,7 +381,8 @@ Workflow de données
 
 *Lectures*
 
-* `Composable Multi-Threading for Python Libraries <http://conference.scipy.org/proceedings/scipy2016/pdfs/anton_malakhov.pdf>`_
+* `Composable Multi-Threading for Python Libraries
+  <http://conference.scipy.org/proceedings/scipy2016/pdfs/anton_malakhov.pdf>`_
 
 *Modules*
 
@@ -342,12 +397,17 @@ Deep Learning
 +++++++++++++
 
 * deep learning : notebooks (Matthieu Bizien):
-    * `Réseaux de neurones et Deep Learning <http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/chapters/deep_reseaux_de_neurones_et_deep_learning.html>`_.
-    * `Transfer Learning <https://github.com/sdpython/2017_deeplearning_demo/blob/master/Fine_Tuning_Deep_CNNs_with_GPU_rendered.ipynb>`_ (Olivier Grisel)
-    * `Search images with deep learning <http://www.xavierdupre.fr/app/mlinsights/helpsphinx/notebooks/search_images.html#searchimagesrst>`_
+    * `Réseaux de neurones et Deep Learning
+      <http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/chapters/deep_reseaux_de_neurones_et_deep_learning.html>`_.
+    * `Transfer Learning
+      <https://github.com/sdpython/2017_deeplearning_demo/blob/master/Fine_Tuning_Deep_CNNs_with_GPU_rendered.ipynb>`_
+      (Olivier Grisel)
+    * `Search images with deep learning
+      <http://www.xavierdupre.fr/app/mlinsights/helpsphinx/notebooks/search_images.html#searchimagesrst>`_
 
 * deep learning : présentations
-    * `Introduction au Deep Learning <https://github.com/sdpython/ensae_teaching_cs/blob/master/_doc/sphinxdoc/source/specials/DEEP%20LEARNING%20FOR%20ENSAE.pdf>`_
+    * `Introduction au Deep Learning
+      <https://github.com/sdpython/ensae_teaching_cs/blob/master/_doc/sphinxdoc/source/specials/DEEP%20LEARNING%20FOR%20ENSAE.pdf>`_
     * :ref:`l-nolabel`
     * `Deep Learning 2017 <http://www.xavierdupre.fr/exposes/deeplearning/>`_ (avec Olivier Grisel)
 
@@ -357,7 +417,8 @@ Deep Learning
 
 *Cours*
     * :ref:`Cours de deep learning appliqués au NLP <blog-stanford-nlp-deep>`
-    * `Companion Jupyter notebooks for the book "Deep Learning with Python" <https://github.com/fchollet/deep-learning-with-python-notebooks>`_
+    * `Companion Jupyter notebooks for the book "Deep Learning with Python"
+      <https://github.com/fchollet/deep-learning-with-python-notebooks>`_
       (avec :epkg:`keras`, :epkg:`auto-keras`)
 
 Framework de deep learning
@@ -365,7 +426,8 @@ Framework de deep learning
 
 * `TensorFlow <https://www.tensorflow.org/>`_ : GPU (Deep Learning Google)
 * `Ray <https://github.com/ray-project/ray>`_ : (MPI, Berkeley),
-  `Meet Ray, the Real-Time Machine-Learning Replacement for Spark <https://www.datanami.com/2017/03/28/meet-ray-real-time-machine-learning-replacement-spark/>`_
+  `Meet Ray, the Real-Time Machine-Learning Replacement for Spark
+  <https://www.datanami.com/2017/03/28/meet-ray-real-time-machine-learning-replacement-spark/>`_
 * `CUDA <https://developer.nvidia.com/how-to-cuda-c-cpp>`_ : GPU for NVidia
 * `OpenCL <https://fr.wikipedia.org/wiki/OpenCL>`_
   (`Intel <https://software.intel.com/en-us/articles/opencl-drivers>`_,
@@ -396,7 +458,9 @@ s'il est toujours maintenu, s'il est utilisé...
   interdit des constructions qui ne sont pas
   `thread safe <https://fr.wikipedia.org/wiki/Thread_safety>`_.
   Firefox est réécrit avec le langage RUST :
-  `Firefox 48 : le navigateur va embarquer ses premiers composants en Rust <https://www.developpez.com/actu/101222/Firefox-48-le-navigateur-va-embarquer-ses-premiers-composants-en-Rust-le-langage-de-programmation-de-Mozilla-maintenant-disponible-en-version-1-10/>`_.
+  `Firefox 48 : le navigateur va embarquer ses premiers composants en Rust
+  <https://www.developpez.com/actu/101222/
+  Firefox-48-le-navigateur-va-embarquer-ses-premiers-composants-en-Rust-le-langage-de-programmation-de-Mozilla-maintenant-disponible-en-version-1-10/>`_.
 
 ------------
 
@@ -407,7 +471,8 @@ Map Reduce en pratique
 ++++++++++++++++++++++
 
 * Itérateurs, lien avec le SQL
-  (voir `Séries temporelles et map reduce <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/map_reduce_timeseries.html>`_)
+  (voir `Séries temporelles et map reduce
+  <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/map_reduce_timeseries.html>`_)
 * Distribution à base de hash (voir :ref:`hashdistributionrst`)
 * `Mapper, Reducer, Combiner, Partitionner <https://developer.yahoo.com/hadoop/tutorial/module4.html>`_
 * Graphe d'exécution, synchronisation - *Map Reduce Flow Chart*
@@ -421,7 +486,8 @@ Map Reduce en pratique
 * Stratégie de parallélisation, propriétés mathématiques
   optimisation d'une fonction convexe
 * Exemple de :ref:`k-means distribué <2015kmeansrst>`
-* Le hasard en distribué, :ref:`Réservoir sampling <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/reservoir_sampling.html>`
+* Le hasard en distribué, :ref:`Réservoir sampling
+  <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/reservoir_sampling.html>`
   (:ref:`correction <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/pig_reservoir_sampling_azure_correction.html>`)
 * Schéma des langages de map/reduce :
   `lazy evaluation <https://en.wikipedia.org/wiki/Lazy_evaluation>`_
@@ -432,8 +498,10 @@ Map Reduce en pratique
 
 * `Computer Systems for Big Data <https://columbia.github.io/systems-bigdata-class/2-lectures/>`_ (cours à Columbia)
 * `Map-Reduce Patterns, Algorithms, and Use Cases <https://highlyscalable.wordpress.com/2012/02/01/mapreduce-patterns/>`_
-* `MapReduce: Simplified Data Processing on Large Clusters <https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf>`_
-* `Speeding up Hadoop Builds using Distributed Unit tests <https://highlyscalable.wordpress.com/2012/08/14/speeding-up-hadoop-builds-distributed-parallel-unit-tests-on-jenkins/>`_
+* `MapReduce: Simplified Data Processing on Large Clusters
+  <https://static.googleusercontent.com/media/research.google.com/en//archive/mapreduce-osdi04.pdf>`_
+* `Speeding up Hadoop Builds using Distributed Unit tests
+  <https://highlyscalable.wordpress.com/2012/08/14/speeding-up-hadoop-builds-distributed-parallel-unit-tests-on-jenkins/>`_
 
 *Vidéos*
 
@@ -481,15 +549,22 @@ Trois projets réalisés par les élèves lors de l'année 2014-2015 :
 * `WebHCat <http://docs.hortonworks.com/HDPDocuments/HDP1/HDP-1.2.1/bk_dataintegration/content/ch_using_hcatalog_1.html>`_
 * `command pig <http://pig.apache.org/docs/r0.12.1/start.html#run>`_
 * `HIVE <https://hive.apache.org/>`_
-* `CUBE and ROLLUP: Two Apache Pig Functions That Every Data Scientist Should Know <http://joshualande.com/cube-rollup-pig-data-science/>`_
+* `CUBE and ROLLUP: Two Apache Pig Functions That Every Data Scientist Should Know
+  <http://joshualande.com/cube-rollup-pig-data-science/>`_
 * `How to Read and Write JSON-formatted Data With Apache Pig <http://joshualande.com/read-write-json-apache-pig/>`_
-* `Programming Pig <http://chimera.labs.oreilly.com/books/1234000001811/index.html>`_, Alan Gates (accessible en ligne)
-* `Programming Hive <http://shop.oreilly.com/product/0636920023555.do>`_, Edward Capriolo, Dean Wampler, Jason Rutherglen
-* `Hadoop: The Definitive Guide, 2nd Edition <http://shop.oreilly.com/product/0636920010388.do>`_, Tom White  (voir aussi `GitHub <https://github.com/tomwhite/hadoop-book/>`_)
+* `Programming Pig <http://chimera.labs.oreilly.com/books/1234000001811/index.html>`_,
+  Alan Gates (accessible en ligne)
+* `Programming Hive <http://shop.oreilly.com/product/0636920023555.do>`_,
+  Edward Capriolo, Dean Wampler, Jason Rutherglen
+* `Hadoop: The Definitive Guide, 2nd Edition <http://shop.oreilly.com/product/0636920010388.do>`_,
+  Tom White  (voir aussi `GitHub <https://github.com/tomwhite/hadoop-book/>`_)
 * `Hadoop in Practice <http://it-ebooks.info/book/1028/>`_, Alex Holmes
-* `Data-Intensive Text Processing with MapReduce <http://lintool.github.io/MapReduceAlgorithms/>`_, Jimmy Lin, Chris Dyer
-* `Introducing Microsoft Azure HDInsight <http://blogs.msdn.com/b/microsoft_press/archive/2014/05/27/free-ebook-introducing-microsoft-azure-hdinsight.aspx>`_, Avkash Chauhan, Valentine Fontama, Michele Hart, Wee Hyong Tok, Buck Woody
-* `Introduction to Apache Pig <http://www.cloudera.com/content/cloudera/en/resources/library/training/introduction-to-apache-pig.html>`_ (MOOC)
+* `Data-Intensive Text Processing with MapReduce <http://lintool.github.io/MapReduceAlgorithms/>`_,
+  Jimmy Lin, Chris Dyer
+* `Introducing Microsoft Azure HDInsight
+  <http://blogs.msdn.com/b/microsoft_press/archive/2014/05/27/free-ebook-introducing-microsoft-azure-hdinsight.aspx>`_, Avkash Chauhan, Valentine Fontama, Michele Hart, Wee Hyong Tok, Buck Woody
+* `Introduction to Apache Pig
+  <http://www.cloudera.com/content/cloudera/en/resources/library/training/introduction-to-apache-pig.html>`_ (MOOC)
 
 .. _l-spark-3a:
 
@@ -501,20 +576,29 @@ Les notebooks ont été déplacés sur
 
 *Lectures*
 
-* `Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing <http://www.cs.berkeley.edu/~matei/papers/2012/nsdi_spark.pdf>`_,
-  Matei Zaharia, Mosharaf Chowdhury, Tathagata Das, Ankur Dave, Justin Ma, Murphy McCauley, Michael J. Franklin, Scott Shenker, Ion Stoica
-* `From scikit-learn to Spark ML <http://blog.xebia.fr/2015/10/08/from-scikit-learn-to-spark-ml/>`_
+* `Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing
+  <http://www.cs.berkeley.edu/~matei/papers/2012/nsdi_spark.pdf>`_,
+  Matei Zaharia, Mosharaf Chowdhury, Tathagata Das, Ankur Dave, Justin Ma, Murphy McCauley,
+  Michael J. Franklin, Scott Shenker, Ion Stoica
+* `From scikit-learn to Spark ML
+  <http://blog.xebia.fr/2015/10/08/from-scikit-learn-to-spark-ml/>`_
 * `Deep Dive into Catalyst <https://spark-summit.org/2016/events/deep-dive-into-catalyst-apache-spark-20s-optimizer/>`_,
-  `Catalyst — Tree Manipulation Framework <https://jaceklaskowski.gitbooks.io/mastering-apache-spark/content/spark-sql-catalyst.html>`_
-* `What is Tungsten for Apache Spark? <https://community.hortonworks.com/articles/72502/what-is-tungsten-for-apache-spark.html>`_,
-  `Project Tungsten: Bringing Apache Spark Closer to Bare Metal <https://databricks.com/blog/2015/04/28/project-tungsten-bringing-spark-closer-to-bare-metal.html>`_
-* `Spark SQL: Another 16x times faster after Tungsten <https://spark-summit.org/east-2017/events/spark-sql-another-16x-faster-after-tungsten/>`_
+  `Catalyst — Tree Manipulation Framework
+  <https://jaceklaskowski.gitbooks.io/mastering-apache-spark/content/spark-sql-catalyst.html>`_
+* `What is Tungsten for Apache Spark?
+  <https://community.hortonworks.com/articles/72502/what-is-tungsten-for-apache-spark.html>`_,
+  `Project Tungsten: Bringing Apache Spark Closer to Bare Metal
+  <https://databricks.com/blog/2015/04/28/project-tungsten-bringing-spark-closer-to-bare-metal.html>`_
+* `Spark SQL: Another 16x times faster after Tungsten
+  <https://spark-summit.org/east-2017/events/spark-sql-another-16x-faster-after-tungsten/>`_
 * `Databricks <https://docs.databricks.com/index.html#>`_
 
 *FAQ*
 
-* `Avoid GroupByKey <https://databricks.gitbooks.io/databricks-spark-knowledge-base/content/best_practices/prefer_reducebykey_over_groupbykey.html>`_
-* `What is the difference between cache and persist? <https://stackoverflow.com/questions/26870537/what-is-the-difference-between-cache-and-persist>`_
+* `Avoid GroupByKey
+  <https://databricks.gitbooks.io/databricks-spark-knowledge-base/content/best_practices/prefer_reducebykey_over_groupbykey.html>`_
+* `What is the difference between cache and persist?
+  <https://stackoverflow.com/questions/26870537/what-is-the-difference-between-cache-and-persist>`_
 
 *Modules*
 
@@ -562,27 +646,42 @@ Bibliographie
 
 **Articles**
 
-* `Large Scale Distributed Deep Networks <http://www.cs.toronto.edu/~ranzato/publications/DistBeliefNIPS2012_withAppendix.pdf>`_, Jeffrey Dean, Greg S. Corrado, Rajat Monga, Kai Chen, Matthieu Devin, Quoc V. Le, Mark Z. Mao, Marc'Aurelio Ranzato, Andrew Senior, Paul Tucker, Ke Yang, Andrew Y. Ng
-* `Stochastic Gradient Descent Tricks <http://research.microsoft.com/pubs/192769/tricks-2012.pdf>`_, Léon Bottou
-* `A Fast Distributed Stochastic Gradient Descent Algorithm for Matrix Factorization <http://jmlr.org/proceedings/papers/v36/li14.pdf>`_, Fanglin Li, Bin Wu, Liutong Xu, Chuan Shi, Jing Shi
-* `Parallelized Stochastic Gradient Descent <http://martin.zinkevich.org/publications/nips2010.pdf>`_, Martin A. Zinkevich, Markus Weimer, Alex Smola, Lihong Li
-* `Topic Similarity Networks: Visual Analytics for Large Document Sets <http://arxiv.org/pdf/1409.7591v1.pdf>`_, Arun S. Maiya, Robert M. Rolfe
-* `Low-dimensional Embeddings for Interpretable Anchor-based Topic Inference <http://mimno.infosci.cornell.edu/papers/EMNLP2014138.pdf>`_, Moontae Lee, David Mimno
-* `K-means on Azure <http://apiacoa.org/publications/2010/durutrossi2010k-means-on.pdf>`_, Matthieu Durut, Fabrice Rossi
-* `Confidence intervals for AB-test <http://arxiv.org/abs/1501.07768>`_, Cyrille Dubarry
+* `Large Scale Distributed Deep Networks
+  <http://www.cs.toronto.edu/~ranzato/publications/DistBeliefNIPS2012_withAppendix.pdf>`_,
+  Jeffrey Dean, Greg S. Corrado, Rajat Monga, Kai Chen, Matthieu Devin, Quoc V. Le,
+  Mark Z. Mao, Marc'Aurelio Ranzato, Andrew Senior, Paul Tucker, Ke Yang, Andrew Y. Ng
+* `Stochastic Gradient Descent Tricks <http://research.microsoft.com/pubs/192769/tricks-2012.pdf>`_,
+  Léon Bottou
+* `A Fast Distributed Stochastic Gradient Descent Algorithm for Matrix Factorization
+  <http://jmlr.org/proceedings/papers/v36/li14.pdf>`_,
+  Fanglin Li, Bin Wu, Liutong Xu, Chuan Shi, Jing Shi
+* `Parallelized Stochastic Gradient Descent <http://martin.zinkevich.org/publications/nips2010.pdf>`_,
+  Martin A. Zinkevich, Markus Weimer, Alex Smola, Lihong Li
+* `Topic Similarity Networks: Visual Analytics for Large Document Sets <http://arxiv.org/pdf/1409.7591v1.pdf>`_,
+  Arun S. Maiya, Robert M. Rolfe
+* `Low-dimensional Embeddings for Interpretable Anchor-based Topic Inference
+  <http://mimno.infosci.cornell.edu/papers/EMNLP2014138.pdf>`_,
+  Moontae Lee, David Mimno
+* `K-means on Azure <http://apiacoa.org/publications/2010/durutrossi2010k-means-on.pdf>`_,
+  Matthieu Durut, Fabrice Rossi
+* `Confidence intervals for AB-test <http://arxiv.org/abs/1501.07768>`_,
+  Cyrille Dubarry
 
 **Liens**
 
 * `HackerRank <https://www.hackerrank.com/>`_
 * `15+ Great Books for Hadoop <http://blog.matthewrathbone.com/2013/05/31/hadoop-resources---books.html>`_
-* `A Roundup of Recent Text Analytics and Vis Work <http://blogger.ghostweather.com/2014/10/a-roundup-of-recent-text-analytics-and.html>`_
+* `A Roundup of Recent Text Analytics and Vis Work
+  <http://blogger.ghostweather.com/2014/10/a-roundup-of-recent-text-analytics-and.html>`_
 * `Don't use Hadoop - your data isn't that big <http://www.chrisstucchio.com/blog/2013/hadoop_hatred.html>`_
 * `Remote Notebook with Azure <http://www.xavierdupre.fr/blog/2014-11-09_nojs.html>`_
 * `Mahout 1.0 Features by Engine <https://mahout.apache.org/users/basics/algorithms.html>`_
 * `Pig Advantages and Disadvantages <http://bugra.github.io/work/notes/2014-02-08/pig-advantages-and-disadvantages/>`_
-* `Pig Not So Foreign Language Paper Notes <http://bugra.github.io/work/notes/2014-02-09/pig-not-so-foreign-language-paper-notes/>`_
+* `Pig Not So Foreign Language Paper Notes
+  <http://bugra.github.io/work/notes/2014-02-09/pig-not-so-foreign-language-paper-notes/>`_
 * `Tutorial: Spark-GPU Cluster Dev in a Notebook <https://iamtrask.github.io/2014/11/22/spark-gpu/>`_
-* `How CPU load averages work (and using them to triage webserver performance!) <http://jvns.ca/blog/2016/02/07/cpu-load-averages/>`_ *(2016/06)*
+* `How CPU load averages work (and using them to triage webserver performance!)
+  <http://jvns.ca/blog/2016/02/07/cpu-load-averages/>`_ *(2016/06)*
 
 **Librairies / outils**
 
@@ -590,22 +689,35 @@ Bibliographie
 * `Elastic Search <https://github.com/elastic/elasticsearch>`_ : moteur de recherche
 * `Giraph <http://giraph.apache.org/>`_ : Large-scale graph processing on Hadoop
 * `Hadoop <http://hadoop.apache.org/>`_ : système de fichier distribué + Map Reduce simple
-* `Kafka <http://kafka.apache.org/>`_ : distributed streaming platform, conçu pour stocker et récupérer en temps réel des événements de sites web
-* `Mesos <http://mesos.apache.org/>`_ : Apache Mesos abstracts CPU, memory, storage, and other compute resources away from machines (physical or virtual), `Elixi <https://github.com/ceteri/exelixi/wiki>`_
-* `MLlib <https://spark.apache.org/mllib/>`_ : distributed machine learning for Spark
-* `Parquet <http://parquet.apache.org/>`_ : Apache Parquet is a columnar storage format available to any project in the Hadoop ecosystem.
+* `Kafka <http://kafka.apache.org/>`_ :
+  distributed streaming platform, conçu pour stocker et récupérer en temps réel des événements de sites web
+* `Mesos <http://mesos.apache.org/>`_ :
+  Apache Mesos abstracts CPU, memory, storage, and other compute resources away from machines
+  (physical or virtual), `Elixi <https://github.com/ceteri/exelixi/wiki>`_
+* `MLlib <https://spark.apache.org/mllib/>`_ :
+  distributed machine learning for Spark
+* `Parquet <http://parquet.apache.org/>`_ :
+  Apache Parquet is a columnar storage format available to any project in the Hadoop ecosystem.
 * `Presto <https://prestodb.io/>`_ : Distributed SQL Query Engine for Big Data (Facebook)
-* `Spark <https://spark.apache.org/>`_ :  Map Reduce, minimise les accès disques, (`DPark <https://github.com/douban/dpark>`_ clone Python de Spark)
+* `Spark <https://spark.apache.org/>`_ :
+  Map Reduce, minimise les accès disques,
+  (`DPark <https://github.com/douban/dpark>`_ clone Python de Spark, pas vraiment maintenu)
 * `Spark SQL <https://spark.apache.org/sql/>`_ : SQL distribué, sur couche de Spark
-* `Storm <https://storm.apache.org/>`_ : Apache Storm is a free and open source distributed realtime computation system, conçu pour distribuer des pipelines de traitements de données
+* `Storm <https://storm.apache.org/>`_ :
+  Apache Storm is a free and open source distributed realtime computation system,
+  conçu pour distribuer des pipelines de traitements de données
 * `YARN <https://hadoop.apache.org/docs/r2.7.1/hadoop-yarn/hadoop-yarn-site/YARN.html>`_ : Ressource negociator
+* `rapids <https://rapids.ai/>`_ : :epkg:`numpy`, :epkg:`pandas` version GPU
+* `kubernetes <https://kubernetes.io/>`_ : automatisation de déploiement
+  d'applications dans des containers (type `docker <https://www.docker.com/>`_)
 
 *Librairies à suivre*
 
 * `multiverso <https://github.com/microsoft/multiverso>`_ : framework de parallélisation
 * `lightLDA <https://github.com/Microsoft/lightlda>`_ : Latent Dirichlet Application parallélisée
 * `lightGBM <https://github.com/Microsoft/lightGBM>`_ :
-  A fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART) framework based on decision tree algorithms.
+  A fast, distributed, high performance gradient boosting (GBDT, GBRT, GBM or MART)
+  framework based on decision tree algorithms.
 
 Feuilles de routes des années passées
 =====================================

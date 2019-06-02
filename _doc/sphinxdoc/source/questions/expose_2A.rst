@@ -266,5 +266,3 @@ k-nearest neighbours
 ^^^^^^^^^^^^^^^^^^^^
 
 * `Neighbourhood Components Analysis <https://cs.nyu.edu/~roweis/papers/ncanips.pdf>`_
-
-
