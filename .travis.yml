@@ -35,5 +35,6 @@ install:
   - pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
   - pip install cairocffi cairosvg
   - export PYTHONPATH=src
+  - pip freeze
 script:
   - python setup.py unittests
