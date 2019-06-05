@@ -50,11 +50,34 @@ Contributions
 
 Started in 2014/04. **Contributors:** `Xavier Dupré <http://www.xavierdupre.fr/>`_,
 Anne Muller, Elodie Royant, Matthieu Bizien,
-Nicolas Rousset, Jérémie Jakubowicz, Gilles Drigout (streaming),
+Nicolas Rousset, Jérémie Jakubowicz, Gilles Drigout,
 Gaël Varoquaux, ENSAE's students.
 
 Setup
 -----
+
+Continuous files 
+`travis.yml <https://github.com/sdpython/ensae_teaching_cs/blob/master/.travis.yml>`_ or
+`appveyor.yml <https://github.com/sdpython/ensae_teaching_cs/blob/master/appveyor.yml>`_
+give indications on how to setup a machine to run most of the notebooks.
+All notebooks do not run on travis or appveyor due to the excessive
+amount of times it requires. They are being run a debian machine every week.
+A `coverage page <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/all_notebooks_coverage.html>`_
+reports on which one runs and when was the last time it was run.
+
+Module
+`pymyinstall <https://pypi.python.org/pypi/pymyinstall/>`_
+was implemented to simplify the installation by just typing
+``pymy_install`` and then remove the modules
+being tested (such as this one). It was needed a couple
+of years ago but not really needed anymore now as most of
+the modules are now available on Windows and Linux on PyPi.
+
+Local Continuous Integration
+----------------------------
+
+Some of the tools used to modify and run all the notebooks
+but they are not optional in most of the cases.
 
 `7zip <http://www.7-zip.org/>`_,
 `Chrome <https://www.google.fr/chrome/browser/desktop/>`_,
@@ -73,15 +96,15 @@ Setup
 `Visual Studio 2017 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_
 (check C++, C#, Python, CLang) (Cython).
 
-You can install the necessary modules with
-`pymyinstall <https://pypi.python.org/pypi/pymyinstall/>`_
-and type ``pymy_install`` and then remove the modules
-being tested (such as this one).
+A *Jenkins* server was installed on a *debian* machine
+to run all the notebooks every week.
 *Jenkins* requires a few extensions:
 `Last Console Output <https://wiki.jenkins.io/display/JENKINS/Display+Console+Output+Plugin>`_,
 `Next Executions <https://wiki.jenkins.io/display/JENKINS/Next+Executions>`_,
 `Text File <https://wiki.jenkins-ci.org/display/JENKINS/Text+File+Operations+Plugin>`_.
-For `Jupyter <http://jupyter.org/>`_:
+Extension for `Jupyter <http://jupyter.org/>`_ notebooks
+can be installed with the following instructions but this is
+really optional.
 
 ::
 

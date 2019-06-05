@@ -58,18 +58,6 @@ jobs:
             pip install cython
 
       - run:
-          name: Install cvxopt (1)
-          command: |
-            sudo apt-get install -y libblas-dev liblapack-dev libsuitesparse-dev
-
-      - run:
-          name: Install cvxopt (2)
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install git+https://github.com/cvxopt/cvxopt.git@dev
-
-      - run:
           name: Install pyproj (1)
           command: |
             sudo apt-get -qq update
@@ -158,6 +146,13 @@ jobs:
             . venv/bin/activate
             pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
             
+      - run:
+          name: pip freeze
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            python3 -m pip freeze
+
       - save_cache:
           paths:
             - ./venv
@@ -188,13 +183,15 @@ jobs:
           command: |
             . venv/bin/activate
             export PYTHONPATH=src
-            python setup.py build_sphinx html1 nblight
+            echo SKIPPED
+            # python setup.py build_sphinx html1 nblight
             
       - run:
           name: copy documentation
           command: |
-            mkdir -p test-reports/doc
-            zip -r -9  test-reports/doc/documentation_html.zip _doc/sphinxdoc/build/html
+            echo SKIPPED
+            # mkdir -p test-reports/doc
+            # zip -r -9  test-reports/doc/documentation_html.zip _doc/sphinxdoc/build/html
             
       - store_artifacts:
           path: test-reports
