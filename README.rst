@@ -56,7 +56,7 @@ Gaël Varoquaux, ENSAE's students.
 Setup
 -----
 
-Continuous files 
+Continuous files
 `travis.yml <https://github.com/sdpython/ensae_teaching_cs/blob/master/.travis.yml>`_ or
 `appveyor.yml <https://github.com/sdpython/ensae_teaching_cs/blob/master/appveyor.yml>`_
 give indications on how to setup a machine to run most of the notebooks.
