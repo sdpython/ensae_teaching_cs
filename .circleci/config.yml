@@ -61,14 +61,8 @@ jobs:
           name: Install pyproj (1)
           command: |
             sudo apt-get -qq update
-            sudo apt-get install -y libproj-dev proj-bin proj-data
-
-      - run:
-          name: Install pyproj (2)
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install git+https://github.com/jswhit/pyproj.git
+            sudo apt-get install -y libproj-dev=6.1.0-1~exp1 proj-bin proj-data
+            pip install pyproj
 
       - run:
           name: Install pyproj (3) - optional
