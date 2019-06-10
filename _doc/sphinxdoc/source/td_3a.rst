@@ -166,12 +166,16 @@ GPU
   (voir `A Monte Carlo Option Pricer
   <http://nbviewer.jupyter.org/gist/harrism/835a8ca39ced77fe751d>`_)
 
-BLAS, LAPACK
-++++++++++++
+BLAS, LAPACK, calcul matriciel
+++++++++++++++++++++++++++++++
 
 *Lectures*
 
 * `Fonctions LAPACK <http://www.netlib.org/lapack95/L90index/>`_
+* `Introducing TensorNetwork, an Open Source Library for Efficient Tensor Calculations
+  <https://ai.googleblog.com/2019/06/introducing-tensornetwork-open-source.html>`_,
+  `Tensor in a Nutshell <https://arxiv.org/abs/1708.00006>`_
+  (`github <https://github.com/google/tensornetwork>`_)
 
 *Modules*
 
@@ -255,6 +259,33 @@ Algorithmes Distribués
 * `Fast Interesection of Sorted Lists Using SSE Instructions
   <https://highlyscalable.wordpress.com/2012/06/05/fast-intersection-sorted-lists-sse/>`_
 * `Hogwild for Machine Learning on Multicore <https://www.youtube.com/watch?v=l5JqUvTdZts>`_
+
+Compilateur, compilation à la volée, JIT
+++++++++++++++++++++++++++++++++++++++++
+
+La compilation à la volée ou 
+`JIT <https://en.wikipedia.org/wiki/Just-in-time_compilation>`_
+pour Just in Time est utilisé pour optimiser une partie du code
+après que l'exécution du programme ait démarrée. :epkg:`numba`
+permet de demander à un compilateur *JIT* de remplacer le code
+python par un code optimisé en C++ souvent beaucoup plus rapide
+si ce code est purement numérique.
+
+*Lectures*
+
+à venir
+
+*Modules*
+
+* `ast <https://docs.python.org/3/library/ast.html>`_
+* `ply <https://www.dabeaz.com/ply/ply.html>`_ (`Lex Yacc <http://dinosaur.compilertools.net/>`_)
+* `llvmlite <https://github.com/numba/llvmlite>`_
+* :epkg:`numba`
+* `cffi <https://cffi.readthedocs.io/en/latest/>`_
+* `jax <https://github.com/google/jax/>`_ : module pour calculer automatique
+  la dérivée d'une fonction écrité avec :epkg:`numpy`
+* `tensornetwork <https://github.com/google/TensorNetwork>`_
+* `clang <https://clang.llvm.org/>`_
 
 ------------
 
