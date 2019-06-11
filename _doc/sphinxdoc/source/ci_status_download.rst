@@ -10,8 +10,7 @@ obtenu en exécutant la requête suivante sur
 
 .. runpython::
 
-    query = """
-    #standardSQL
+    query = """#standardSQL
     SELECT
       file.project as Project,
       details.distro.version as Version,
@@ -19,16 +18,20 @@ obtenu en exécutant la requête suivante sur
       SUBSTR(_TABLE_SUFFIX, 1, 6) AS `month`
     FROM `the-psf.pypi.downloads*`
     WHERE
-      file.project = 'pyquickhelper' OR file.project = 'jyquickhelper' OR file.project = 'python3_module_template' OR file.project = 'pymmails' OR file.project = 'pymyinstall' OR file.project = 'pyensae' OR file.project = 'pyrsslocal' OR file.project = 'pysqllike' OR file.project = 'ensae_projects' OR file.project = 'ensae_teaching_cs' OR file.project = 'code_beatrix' OR file.project = 'actuariat_python' OR file.project = 'mlstatpy' OR file.project = 'jupytalk' OR file.project = 'teachpyx' OR file.project = 'tkinterquickhelper' OR file.project = 'cpyquickhelper' OR file.project = 'pandas_streaming' OR file.project = 'lightmlboard' OR file.project = 'lightmlrestapi' OR file.project = 'mlinsights' OR file.project = 'pyenbc' OR file.project = 'mlprodict' OR file.project = 'papierstat' OR file.project = 'sparkouille' OR file.project = 'manydataapi' OR file.project = 'csharpy' OR file.project = 'csharpyml' OR file.project = 'skl2onnx'  OR file.project = 'onnxruntime' OR file.project = 'nimbusml'  OR file.project = 'scikit-onnxruntime'
+      __CONDITION__
       AND _TABLE_SUFFIX
         BETWEEN FORMAT_DATE(
           '%Y%m01', DATE_SUB(CURRENT_DATE(), INTERVAL 12 MONTH))
         AND FORMAT_DATE('%Y%m%d', CURRENT_DATE())
-    GROUP BY `month`, `Project`, `Version`
-    """
+    GROUP BY `month`, `Project`, `Version`"""
 
     from ensae_teaching_cs.automation import get_teaching_modules
     modules = get_teaching_modules()
+    modules.extend([
+        'onnx', 'onnxruntime', 'skl2onnx', 'keras2onnx', 'nimbusml',
+        'scikit-learn', 'pandas', 'numpy', 'jupyter', 'matplotlib',
+        'protobuf'
+    ])
     conds = ["file.project = '{0}'".format(m) for m in modules]
     cond = " OR ".join(conds)
     print(query.replace('__CONDITION__', cond))
