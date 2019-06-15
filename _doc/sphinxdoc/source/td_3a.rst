@@ -263,7 +263,7 @@ Algorithmes Distribués
 Compilateur, compilation à la volée, JIT
 ++++++++++++++++++++++++++++++++++++++++
 
-La compilation à la volée ou 
+La compilation à la volée ou
 `JIT <https://en.wikipedia.org/wiki/Just-in-time_compilation>`_
 pour Just in Time est utilisé pour optimiser une partie du code
 après que l'exécution du programme ait démarrée. :epkg:`numba`

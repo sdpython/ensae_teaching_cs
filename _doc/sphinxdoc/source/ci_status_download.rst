@@ -55,9 +55,9 @@ obtenu en exécutant la requête suivante sur
         {'manydataapi', 'mlprodict', 'cpyquickhelper', 'mlinsights', 'mlstatpy', },
         {'csharpy', 'csharpyml', },
         {'lightmlboard', 'lightmlrestapi', 'pyrsslocal', 'pymmails', },
-        {'sparkouille', 'papierstat', 'teachpyx', 'ensae_teaching_cs', 'ensae_projects', 
+        {'sparkouille', 'papierstat', 'teachpyx', 'ensae_teaching_cs', 'ensae_projects',
          'actuariat_python', 'code_beatrix'},
-        {'tkinterquickhelper', 'pysqllike', 'pyenbc',}, 
+        {'tkinterquickhelper', 'pysqllike', 'pyenbc',},
     ]
 
     piv = df.pivot("month", "Project", "num_downloads").fillna(0)

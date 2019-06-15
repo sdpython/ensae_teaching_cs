@@ -1,0 +1,21 @@
+
+.. blogpost::
+    :title: Créer un exécutable
+    :keywords: setup, innosetup, pyinstaller
+    :date: 2019-06-15
+    :categories: installation
+
+    On me pose parfois la question, comment
+    faire pour créer son propre exécutable et ne
+    pas avoir à installer python chez un client
+    pour faire tourner ce qu'on a fait pour lui.
+    Cet article y répond :
+    `Making a Stand Alone Executable from a Python Script using PyInstaller
+    <https://medium.com/dreamcatcher-its-blog/making-an-stand-alone-executable-from-a-python-script-using-pyinstaller-d1df9170e263>`_.
+
+    J'avais l'habitude aussi de compresser de gros répertoire
+    dans un exécutable qui se décompresse tout seul
+    avec `innosetup <http://www.jrsoftware.org/isinfo.php>`_.
+    `NSIS <https://nsis.sourceforge.io/Main_Page>`_ qui est l'option
+    suggéré dans l'article me paraissait un peu plus complexe
+    à mettre en oeuvre et limité à 2Go il y a quelques temps.
