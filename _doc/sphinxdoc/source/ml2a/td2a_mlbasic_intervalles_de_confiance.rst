@@ -14,6 +14,19 @@ Intervalles de confiance
 
 (*à venir*)
 
+*Notebook*
+
+* `Regression with confidence interval
+  <http://www.xavierdupre.fr/app/mlinsights/helpsphinx/notebooks/regression_confidence_interval.html>`_
+
+*Lectures*
+
+* `Gaussian Processes for Machine Learning
+  <http://www.gaussianprocess.org/gpml/chapters/RW.pdf>`_,
+  approche bayésienne
+* `Confidence Interval and p-Value
+  <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/pvalues.html>`_
+
 *Modules*
 
 * `bootstrap_contrast <https://github.com/josesho/bootstrap_contrast>`_,

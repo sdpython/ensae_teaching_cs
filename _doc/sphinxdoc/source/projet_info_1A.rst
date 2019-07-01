@@ -150,6 +150,17 @@ numériques obtenus et faire au moins une ou deux allusions à la façon dont ce
 **Le code rendu doit contenir au moins un test unitaire.**
 Voir :ref:`td1aunittestcicorrectionrst`.
 
+Ces remarques sont plus un guide qu'un plan précis. Je vous encourage
+à voir cet extrait de film bien connu
+`The Pirate code <https://www.youtube.com/watch?v=WJVBvvS57j0>`_.
+
+D'une manière générale, il faut penser un rapport comme un document
+qui se lie consciencieusement une fois puis qui se relie
+plusieurs fois rapidement pour retrouver ce qu'on cherche,
+cela veut dire des graphiques complets lisibles sans trop de
+contexte, une conclusion explicite qui rappelle les résultats
+et le contexte d'exploitation de ceux-ci.
+
 Que faut-il en attendre ?
 -------------------------
 

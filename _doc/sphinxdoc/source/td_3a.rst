@@ -78,6 +78,22 @@ proposent les processeurs CPU : le :epkg:`branching`.
   <https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array/11227902#11227902>`_
 * `How to optimize C and C++ code in 2018
   <https://medium.com/@aka.rider/how-to-optimize-c-and-c-code-in-2018-bd4f90a72c2b>`_
+* `C++ Concurrency in Action (second edition, published 2019 by Manning Publications)
+  <http://www.cplusplusconcurrencyinaction.com/>`_
+
+*Vidéos*
+
+* `C++ and Beyond 2012: Herb Sutter - atomic<> Weapons, 1 of 2
+  <https://channel9.msdn.com/Shows/Going+Deep/Cpp-and-Beyond-2012-Herb-Sutter-atomic-Weapons-1-of-2>`_
+
+*Librairies*
+
+* `OpenMP <https://www.openmp.org/>`_ :
+  c'est une librairie très utilisée pour paralléliser les calculs en C++
+  sur plusieurs threads
+* `OpenMPI <https://www.open-mpi.org/>`_ :
+  c'est une librairie utilisée pour synchroniser des calculs parallélisés
+  sur plusieurs processeurs (ou machines)
 
 GPU
 +++
@@ -168,6 +184,15 @@ GPU
 
 BLAS, LAPACK, calcul matriciel
 ++++++++++++++++++++++++++++++
+
+*Notebook*
+
+Pas vraiment un notebook, un exemple d'utilisation
+d'une fonction LAPACK dans un code python / cython :
+`Résoudre une régression linéaire avec BLAS
+<http://www.xavierdupre.fr/app/mlinsights/helpsphinx/mlinsights/mlmodel/direct_blas_lapack.cpython-37m-x86_64-linux-gnu.html?highlight=lapack#module-mlinsights.mlmodel.direct_blas_lapack>`_
+(et le code associé `direct_blas_lapack.pyx
+<https://github.com/sdpython/mlinsights/blob/master/mlinsights/mlmodel/direct_blas_lapack.pyx>`_).
 
 *Lectures*
 
