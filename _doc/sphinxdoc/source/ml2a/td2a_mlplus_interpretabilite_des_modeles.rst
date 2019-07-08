@@ -61,6 +61,10 @@ une vue d'ensemble. Pour étudier un cas particulier, une observation,
 on choisira plutôt d'explorer autour d'une observation en changeant
 quelques-unes des variables par d'autres valeurs plausibles.
 C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
+Ces approches sont sensibles au nombre de variables, plus il y a
+de dimensions, plus il est difficile de donner du sens à une variable
+en particulier quand celle-ci est présente sur quelques observations
+seulement.
 
 *Notebooks*
 
@@ -147,6 +151,15 @@ C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
 * `Deep Learning and the Information Bottleneck Principle <https://arxiv.org/pdf/1503.02406.pdf>`_
 * `Opening the black box of Deep Neural Networks via Information <https://arxiv.org/pdf/1703.00810.pdf>`_
 
+*Lectures : causalité*
+
+.. index:: causalité, causality
+
+* `Machine Learning Methods Economists Should Know About <https://arxiv.org/abs/1903.10075>`_
+* `Counterfactual Inference <https://media.neurips.cc/Conferences/NIPS2018/Slides/Counterfactual_Inference.pdf>`_
+* `The State of Applied Econometrics: Causality and Policy Evaluation <https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.31.2.3>`_
+* `Estimating Treatment Effects with Causal Forests: An Application <https://arxiv.org/abs/1902.07409>`_
+
 *Vidéos*
 
 * `Explaining behavior of Machine Learning models with eli5 library <http://pyvideo.org/europython-2017/explaining-behavior-of-machine-learning-models-with-eli5-library.html>`_
@@ -154,7 +167,7 @@ C'est l'idée de l'approche `LIME <https://arxiv.org/abs/1602.04938>`_.
 *Modules*
 
 * `eli5 <https://github.com/TeamHG-Memex/eli5>`_
-* `shap <https://github.com/slundberg/shap>`_
+* `shap <https://github.com/slundberg/shap>`_ (développement actif)
 * `edward <http://edwardlib.org/>`_
 * `deepdive <http://deepdive.stanford.edu/>`_: ce n'est pas un module python,
   cet outil a été développé pour étudier les relations dans les données et plus

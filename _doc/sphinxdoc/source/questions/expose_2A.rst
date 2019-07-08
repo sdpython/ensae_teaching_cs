@@ -231,6 +231,32 @@ Les thèmes de l'année dernière déjà choisis peuvent être repris
 à condition d'ajouter un article non prévu dans la liste et publié
 en 2019.
 
+Automated machine learning
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* `Probabilistic Matrix Factorization for Automated Machine Learning <https://arxiv.org/abs/1705.05355>`_
+* `auto-sklearn <https://automl.github.io/auto-sklearn/stable/>`_
+
+Conformal Prediction
+^^^^^^^^^^^^^^^^^^^^
+
+* `A Tutorial on Conformal Prediction
+  <http://jmlr.csail.mit.edu/papers/volume9/shafer08a/shafer08a.pdf>`_
+* `Regression Conformal Prediction with Nearest Neighbours
+  <https://arxiv.org/ftp/arxiv/papers/1401/1401.3880.pdf>`_
+
+Causalité
+^^^^^^^^^
+
+* `Machine Learning Methods Economists Should Know About
+  <https://arxiv.org/abs/1903.10075>`_
+* `Counterfactual Inference
+  <https://media.neurips.cc/Conferences/NIPS2018/Slides/Counterfactual_Inference.pdf>`_
+* `The State of Applied Econometrics: Causality and Policy Evaluation
+  <https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.31.2.3>`_
+* `Estimating Treatment Effects with Causal Forests: An Application
+  <https://arxiv.org/abs/1902.07409>`_
+
 Interprétabilité
 ^^^^^^^^^^^^^^^^
 
@@ -240,12 +266,18 @@ Interprétabilité
   `Mind the Gap: A Generative Approach to Interpretable Feature Selection and Extraction <https://beenkim.github.io/papers/BKim2015NIPS.pdf>`_
 * `DALEX: Explainers for Complex Predictive Models in R <http://www.jmlr.org/papers/volume19/18-416/18-416.pdf>`_
 
-Très grande dimension
-^^^^^^^^^^^^^^^^^^^^^
+Fuzed Lasso
+^^^^^^^^^^^
 
-* `Making Decision Trees Feasible in Ultrahigh Feature and Label Dimensions <http://jmlr.org/papers/volume18/16-466/16-466.pdf>`_
-* `Identifying a Minimal Class of Models for High–dimensional Data <http://www.jmlr.org/papers/volume18/16-172/16-172.pdf>`_
-* `The xyz algorithm for fast interaction search in high-dimensional data <http://www.jmlr.org/papers/volume19/16-515/16-515.pdf>`_
+* `Sparsity and smoothness via the fused lasso <https://web.stanford.edu/group/SOL/papers/fused-lasso-JRSSB.pdf>`_
+* `Structured Association <http://www.cs.cmu.edu/~sssykim/teaching/s13/slides/Lecture_GFlasso.pdf>`_
+* `Properties and Refinements of the Fused Lasso <https://arxiv.org/pdf/0805.0234.pdf>`_
+* `Adaptive Generalized Fused-Lasso: Asymptotic Properties and Applications <https://hal.archives-ouvertes.fr/hal-00813281/document>`_
+
+k-nearest neighbours
+^^^^^^^^^^^^^^^^^^^^
+
+* `Neighbourhood Components Analysis <https://cs.nyu.edu/~roweis/papers/ncanips.pdf>`_
 
 Privacy
 ^^^^^^^
@@ -253,16 +285,9 @@ Privacy
 * `A General Approach to Adding Differential Privacy to Iterative Training Procedures <https://arxiv.org/pdf/1812.06210.pdf>`_,
   `tensorflow/privacy <https://github.com/tensorflow/privacy>`_
 
-Thèmes - 2019
-+++++++++++++
+Très grande dimension
+^^^^^^^^^^^^^^^^^^^^^
 
-Automated machine learning
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* `Probabilistic Matrix Factorization for Automated Machine Learning <https://arxiv.org/abs/1705.05355>`_
-* `auto-sklearn <https://automl.github.io/auto-sklearn/stable/>`_
-
-k-nearest neighbours
-^^^^^^^^^^^^^^^^^^^^
-
-* `Neighbourhood Components Analysis <https://cs.nyu.edu/~roweis/papers/ncanips.pdf>`_
+* `Making Decision Trees Feasible in Ultrahigh Feature and Label Dimensions <http://jmlr.org/papers/volume18/16-466/16-466.pdf>`_
+* `Identifying a Minimal Class of Models for High–dimensional Data <http://www.jmlr.org/papers/volume18/16-172/16-172.pdf>`_
+* `The xyz algorithm for fast interaction search in high-dimensional data <http://www.jmlr.org/papers/volume19/16-515/16-515.pdf>`_

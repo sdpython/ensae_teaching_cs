@@ -54,8 +54,10 @@ la variable est manquante.
 * `Multiple Imputation for Continuous and Categorical Data: Comparing Joint and Conditional Approaches <http://www.stat.columbia.edu/~gelman/research/published/MI_manuscript_RR.pdf>`_
 * `Multiple Imputation by Chained Equations: What is it and how does it work? <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3074241/>`_
 * `Much ado about nothing: A comparison of missing data methods and software to fit incomplete data regression models <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1839993/>`_
+* `Multivariate Imputation by Chained Equations in R <https://www.jstatsoft.org/article/view/v045i03>`_
 
 *Librairies*
 
 * `fancyimpute <https://github.com/hammerlab/fancyimpute>`_
 * `knnimpute <https://github.com/hammerlab/knnimpute>`_
+* `scikit-learn/impute <https://scikit-learn.org/stable/modules/impute.html>`_
