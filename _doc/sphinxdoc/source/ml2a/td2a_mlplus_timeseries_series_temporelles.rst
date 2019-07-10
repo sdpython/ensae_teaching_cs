@@ -17,7 +17,10 @@ Timeseries - Séries temporelles
 .. toctree::
     :maxdepth: 2
 
-    ../notebooks/_gs2a_timeseries
+    ../notebooks/ml_timeseries_base
+    ../notebooks/td2a_timeseries
+    ../notebooks/td2a_timeseries_correction
+    ../notebooks/seasonal_timeseries
 
 (à venir : modèles SETAR pour les séries non périodiques, modèles proies prédateurs)
 
