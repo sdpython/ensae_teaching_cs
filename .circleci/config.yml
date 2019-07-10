@@ -68,12 +68,7 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            # pip install git+https://github.com/jswhit/pyproj.git
-            sudo deb http://deb.debian.org/debian experimental main
-            sudo apt-get update
-            sudo apt-get install -y -t experimental libproj-dev=6.1.0-1~exp1
-            sudo apt-get -y proj-bin proj-data
-            pip install pyproj
+            pip install git+https://github.com/jswhit/pyproj.git
 
       - run:
           name: Install pyproj (3) - optional
