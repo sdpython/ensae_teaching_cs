@@ -24,7 +24,7 @@ lifelines
 lightgbm
 lightning-python
 manydataapi
-mlinsights
+mlinsights>=0.2.311
 mlstatpy
 mpld3
 msgpack!=0.6.0  # https://github.com/explosion/spaCy/issues/2995
