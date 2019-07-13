@@ -61,7 +61,7 @@ jobs:
           name: Install pyproj (1)
           command: |
             sudo apt-get -qq update
-            sudo apt-get install -y libproj-dev proj-bin proj-data
+            sudo apt-get -t experimental install -y libproj-dev proj-bin proj-data
 
       - run:
           name: Install pyproj (2)
