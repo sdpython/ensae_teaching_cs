@@ -35,3 +35,7 @@ Et parfois, on a envie de dessiner en
 * `yellowbrick <http://www.scikit-yb.org/en/latest/index.html>`_
   (pour les données en trois dimensions)
 * `hypertools <https://hypertools.readthedocs.io/en/latest/>`_
+
+Le site `pyviz <https://pyviz.org/index.html>`_
+recense de nnombreux outils pour créer des graphes
+et des dashboards.
