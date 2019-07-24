@@ -2796,8 +2796,8 @@ class TableFormula(_TableFormulaStat):
 
             wb = EXw.Workbook(
                 encoding=encoding) if encoding is not None else EXw.Workbook()
-            for sheetname, self in list_table:
-                ws0 = wb.add_sheet(sheetname)
+            for sheet_name, self in list_table:
+                ws0 = wb.add_sheet(sheet_name)
 
                 for i, l in enumerate(self.header):
                     ws0.write(0, i, l, style0)
@@ -2828,8 +2828,8 @@ class TableFormula(_TableFormulaStat):
         elif ext is None or ext == ".xlsx":
             wb = EXxw.Workbook(
                 filename) if filename is not None else EXxw.Workbook()
-            for sheetname, self in list_table:
-                ws0 = wb.add_worksheet(sheetname)
+            for sheet_name, self in list_table:
+                ws0 = wb.add_worksheet(sheet_name)
 
                 style0 = wb.add_format({'bold': True})
                 style0.set_font_name(font)
@@ -2862,20 +2862,20 @@ class TableFormula(_TableFormulaStat):
             raise NameError(
                 "extension should be .xls or .xlsx for file " + filename)
 
-    def save_as_excel(self, filename, font="Calibri", sheetname="sheet0",
+    def save_as_excel(self, filename, font="Calibri", sheet_name="sheet0",
                       close=True, encoding=None):
         """
         saves the table as a new Excel file, you can use ``.xls`` or ``.xlsx``
         if filename is None, the function returns an object(xslx) and does not save it.
 
         @param      filename        Excel filename
-        @param      sheetname       name of the sheet to add
+        @param      sheet_name      name of the sheet to add
         @param      font            font name
         @param      close           if True, close the file, otherwise, the user will have to
         @param      encoding        encoding
         @return                     object Workbook
         """
-        return TableFormula.save_multiple_as_excel(filename, [(sheetname, self)],
+        return TableFormula.save_multiple_as_excel(filename, [(sheet_name, self)],
                                                    font=font, close=close, encoding=encoding)
 
     def schema_database(self, add_id=True):

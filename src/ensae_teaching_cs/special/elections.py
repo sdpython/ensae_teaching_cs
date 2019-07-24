@@ -32,8 +32,8 @@ class ElectionResults:
         if isinstance(file, list):
             self.tours = file
         else:
-            self.tours = [pandas.read_excel(file, sheetname="%s T1" % level),
-                          pandas.read_excel(file, sheetname="%s T2" % level)]
+            self.tours = [pandas.read_excel(file, sheet_name="%s T1" % level),
+                          pandas.read_excel(file, sheet_name="%s T2" % level)]
             for i, t in enumerate(self.tours):
                 if len(t) == 0:
                     raise Exception("no data for tour %d" % (i + 1))

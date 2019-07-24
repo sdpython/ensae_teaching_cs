@@ -762,6 +762,9 @@ Fork / Clone / downloads
 .. runpython::
     :rst:
 
+    from textwrap import dedent, indent
+    from ensae_teaching_cs.automation.teaching_modules import get_teaching_modules
+
     text = dedent("""
     .. list-table::
         :widths: 12 10 10 10 10
@@ -803,7 +806,6 @@ Fork / Clone / downloads
                 :target: https://github.com/sdpython/{0}/
                 :alt: Stars"""), "    ")
 
-    from ensae_teaching_cs.automation.teaching_modules import get_teaching_modules
     modules = get_teaching_modules()
     skip = {'myblog'}
     rows = [text]

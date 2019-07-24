@@ -237,7 +237,7 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=(1000, 1500),
         from ensae_teaching_cs.automation_students import enumerate_feedback, enumerate_send_email
         import pymmails
 
-        df = pandas.read_excel("groupes_eleves_pitch.xlsx", sheetname=0)
+        df = pandas.read_excel("groupes_eleves_pitch.xlsx", sheet_name=0)
 
         mailbox = pymmails.sender.create_smtp_server("gmail", "xavier.dupre", "****")
         mails = enumerate_send_email(mailbox, sujet, "xavier.dupre@gmail.com",
