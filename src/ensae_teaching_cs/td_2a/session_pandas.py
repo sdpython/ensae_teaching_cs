@@ -55,7 +55,7 @@ def dfs2excel(dfs: dict, excel_file: str):
 
             dfs2excel( { 'Data 0':df1, 'Data 1':df2 }, "example.xlsx" )
     """
-    writer = pandas.ExcelWriter(excel_file)
+    writer = pandas.ExcelWriter(excel_file)  # pylint: disable=E0110
     for k, df in dfs.items():
         df.to_excel(writer, k)
     writer.save()
