@@ -231,6 +231,12 @@ Les thèmes de l'année dernière déjà choisis peuvent être repris
 à condition d'ajouter un article non prévu dans la liste et publié
 en 2019.
 
+Anonymisation
+^^^^^^^^^^^^^
+
+* `Estimating the success of re-identifications in incomplete datasets using generative models
+  <https://www.nature.com/articles/s41467-019-10933-3>`_
+
 Automated machine learning
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 

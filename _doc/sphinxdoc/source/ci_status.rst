@@ -85,44 +85,6 @@ Tableau de bord et statut des dépendances
       - .. image:: http://lesenfantscodaient.fr/_images/nbcov.png
             :target: http://lesenfantscodaient.fr/all_notebooks_coverage.html
             :alt: Notebook Coverage
-    * - `csharpy <http://www.xavierdupre.fr/app/csharpy/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/csharpy.svg?branch=master
-            :target: https://travis-ci.org/sdpython/csharpy
-            :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/ldrgt6sxeyfwtoo2?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/csharpy
-            :alt: Build Status Windows
-      - .. image:: https://circleci.com/gh/sdpython/csharpy/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/csharpy/tree/master
-      - .. image:: https://badge.fury.io/py/csharpy.svg
-            :target: https://pypi.org/project/csharpy
-      - .. image:: http://img.shields.io/github/issues/sdpython/csharpy.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/csharpy/issues
-      - .. image:: https://codecov.io/github/sdpython/csharpy/coverage.svg?branch=master
-            :target: https://codecov.io/github/sdpython/csharpy?branch=master
-      - .. image:: http://www.xavierdupre.fr/app/csharpy/helpsphinx/_images/nbcov.png
-            :target: http://www.xavierdupre.fr/app/csharpy/helpsphinx/all_notebooks_coverage.html
-            :alt: Notebook Coverage
-    * - `csharpyml <http://www.xavierdupre.fr/app/csharpyml/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/csharpyml.svg?branch=master
-            :target: https://travis-ci.org/sdpython/csharpyml
-            :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/0achvn5m9ga8bx2o?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/csharpyml
-            :alt: Build Status Windows
-      - .. image:: https://circleci.com/gh/sdpython/csharpyml/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/csharpyml/tree/master
-      - .. image:: https://badge.fury.io/py/csharpyml.svg
-            :target: https://pypi.org/project/csharpyml
-      - .. image:: http://img.shields.io/github/issues/sdpython/csharpyml.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/csharpyml/issues
-      - .. image:: https://codecov.io/github/sdpython/csharpyml/coverage.svg?branch=master
-            :target: https://codecov.io/github/sdpython/csharpyml?branch=master
-      - .. image:: http://www.xavierdupre.fr/app/csharpyml/helpsphinx/_images/nbcov.png
-            :target: http://www.xavierdupre.fr/app/csharpyml/helpsphinx/all_notebooks_coverage.html
-            :alt: Notebook Coverage
     * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/cpyquickhelper.svg?branch=master
             :target: https://travis-ci.org/sdpython/cpyquickhelper
@@ -704,6 +666,60 @@ Tableau de bord et statut des dépendances
             :target: https://github.com/sdpython/td1a_unit_test_ci/issues
       -
       -
+
+Les projets suivants lient :epkg:`C#` et :epkg:`python`.
+Ils ne sont pas maintenus de façon très soutenue.
+
+.. list-table::
+    :widths: 12 10 10 15 12 10 10 10
+    :header-rows: 1
+
+    * - Module
+      - Travis
+      - AppVeyor
+      - CircleCI / Azure / Codacy
+      - PyPi
+      - Issues
+      - Coverage
+      - Notebook Coverage
+    * - `csharpy <http://www.xavierdupre.fr/app/csharpy/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/csharpy.svg?branch=master
+            :target: https://travis-ci.org/sdpython/csharpy
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/ldrgt6sxeyfwtoo2?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/csharpy
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/csharpy/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/csharpy/tree/master
+      - .. image:: https://badge.fury.io/py/csharpy.svg
+            :target: https://pypi.org/project/csharpy
+      - .. image:: http://img.shields.io/github/issues/sdpython/csharpy.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/csharpy/issues
+      - .. image:: https://codecov.io/github/sdpython/csharpy/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/csharpy?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/csharpy/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/csharpy/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
+    * - `csharpyml <http://www.xavierdupre.fr/app/csharpyml/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/csharpyml.svg?branch=master
+            :target: https://travis-ci.org/sdpython/csharpyml
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/0achvn5m9ga8bx2o?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/csharpyml
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/csharpyml/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/csharpyml/tree/master
+      - .. image:: https://badge.fury.io/py/csharpyml.svg
+            :target: https://pypi.org/project/csharpyml
+      - .. image:: http://img.shields.io/github/issues/sdpython/csharpyml.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/csharpyml/issues
+      - .. image:: https://codecov.io/github/sdpython/csharpyml/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/csharpyml?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/csharpyml/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/csharpyml/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - Les derniers sont des
       - projets
       - exploratoires.
@@ -739,6 +755,65 @@ D'autres modules forkés sont disponibles sur
 `travis <https://travis-ci.org/sdpython/>`_,
 `appveyor <https://ci.appveyor.com/sdpython>`_,
 `circleci <https://circleci.com/gh/sdpython>`_.
+
+Fork / Clone / downloads
+++++++++++++++++++++++++
+
+.. runpython::
+    :rst:
+
+    text = dedent("""
+    .. list-table::
+        :widths: 12 10 10 10 10
+        :header-rows: 1
+
+        * - Module
+          - PyPi
+          - Issues
+          - Fork
+          - Clone""")
+
+    row = indent(dedent("""
+        * - `{0} <http://www.xavierdupre.fr/app/{0}/helpsphinx/index.html>`_
+          - .. image:: https://pepy.tech/badge/{0}
+                :target: https://pypi.org/project/{0}/
+                :alt: Downloads
+          - .. image:: http://img.shields.io/github/issues/sdpython/{0}.png
+                :alt: GitHub Issues
+                :target: https://github.com/sdpython/{0}/issues
+          - .. image:: https://img.shields.io/github/forks/sdpython/{0}.svg
+                :target: https://github.com/sdpython/{0}/
+                :alt: Forks
+          - .. image:: https://img.shields.io/github/stars/sdpython/{0}.svg
+                :target: https://github.com/sdpython/{0}/
+                :alt: Stars"""), "    ")
+
+    row2 = indent(dedent("""
+        * - `{0} <http://lesenfantscodaient.fr/>`_
+          - .. image:: https://pepy.tech/badge/{0}
+                :target: https://pypi.org/project/{0}/
+                :alt: Downloads
+          - .. image:: http://img.shields.io/github/issues/sdpython/{0}.png
+                :alt: GitHub Issues
+                :target: https://github.com/sdpython/{0}/issues
+          - .. image:: https://img.shields.io/github/forks/sdpython/{0}.svg
+                :target: https://github.com/sdpython/{0}/
+                :alt: Forks
+          - .. image:: https://img.shields.io/github/stars/sdpython/{0}.svg
+                :target: https://github.com/sdpython/{0}/
+                :alt: Stars"""), "    ")
+
+    from ensae_teaching_cs.automation.teaching_modules import get_teaching_modules
+    modules = get_teaching_modules()
+    skip = {'myblog'}
+    rows = [text]
+    for module in sorted(modules):
+        if module in skip:
+            continue
+        pat = row2 if module == 'code_beatrix' else row
+        rows.append(pat.format(module))
+
+    print("".join(rows))
 
 Automatisation
 ++++++++++++++
