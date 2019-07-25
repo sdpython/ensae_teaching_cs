@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.7.0
+      - image: circleci/python:3.7.3
     
     working_directory: ~/repo
     
@@ -61,7 +61,7 @@ jobs:
           name: Install pyproj (1)
           command: |
             sudo apt-get -qq update
-            sudo apt-get -t experimental install -y libproj-dev proj-bin proj-data
+            sudo apt-get install -y libproj-dev proj-bin proj-data
 
       - run:
           name: Install pyproj (2)
