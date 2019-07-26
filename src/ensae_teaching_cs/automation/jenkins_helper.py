@@ -94,7 +94,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None, platform=None)
     yml = []
     pattern = "https://raw.githubusercontent.com/sdpython/%s/master/.local.jenkins.{0}.yml".format(
         plat)
-    modules = ["_automation"] + get_teaching_modules()
+    modules = ["_automation", "_bugs"] + get_teaching_modules()
     for c in modules:
         yml.append(pattern % c)
 
