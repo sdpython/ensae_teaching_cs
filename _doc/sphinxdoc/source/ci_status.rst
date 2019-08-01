@@ -758,7 +758,7 @@ D'autres modules forkés sont disponibles sur
 `appveyor <https://ci.appveyor.com/sdpython>`_,
 `circleci <https://circleci.com/gh/sdpython>`_.
 
-Fork / Clone / downloads
+Fork / Stars / Downloads
 ++++++++++++++++++++++++
 
 .. runpython::
@@ -775,8 +775,8 @@ Fork / Clone / downloads
         * - Module
           - PyPi
           - Issues
-          - Fork
-          - Clone""")
+          - Forks
+          - Stars""")
 
     row = indent(dedent("""
         * - `{0} <http://www.xavierdupre.fr/app/{0}/helpsphinx/index.html>`_

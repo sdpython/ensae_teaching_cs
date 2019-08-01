@@ -39,6 +39,7 @@ Modèles bayésiens
 * `kabuki <https://pypi.python.org/pypi/kabuki/>`_
 * `bnpy <https://github.com/bnpy/bnpy>`_
 * `pyro <http://pyro.ai/>`_ : modèle bayèsiens et deep learning
+* `arviz <https://arviz-devs.github.io/arviz/>`_
 
 *Exemples de code*
 
