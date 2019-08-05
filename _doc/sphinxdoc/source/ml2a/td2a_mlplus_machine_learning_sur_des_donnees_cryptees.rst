@@ -45,3 +45,6 @@ Machine Learning sur des données cryptées
 * `python-paillier (phe) <https://github.com/n1analytics/python-paillier>`_ : a library for partially homomorphic encryption in python,
   cette librairie fait du machine learning en clair une fois les données et le modèle décryptées,
   elle promet de faire `mieux <https://github.com/OpenMined/PySyft/blob/master/syft/nn/linear.py#L92>`_
+* `PySEAL <https://github.com/Lab41/PySEAL>`_ (`SEAL <https://github.com/microsoft/SEAL>`_,
+  `PySEAL: A Python wrapper implementation of the SEAL homomorphic encryption library
+  <https://arxiv.org/abs/1803.01891>`_)

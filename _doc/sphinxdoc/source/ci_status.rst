@@ -793,6 +793,19 @@ Fork / Stars / Downloads
                 :target: https://github.com/sdpython/{0}/
                 :alt: Stars"""), "    ")
 
+    row_nod = indent(dedent("""
+        * - `{0} <http://www.xavierdupre.fr/app/{0}/helpsphinx/index.html>`_
+          - 
+          - .. image:: http://img.shields.io/github/issues/sdpython/{0}.png
+                :alt: GitHub Issues
+                :target: https://github.com/sdpython/{0}/issues
+          - .. image:: https://img.shields.io/github/forks/sdpython/{0}.svg
+                :target: https://github.com/sdpython/{0}/
+                :alt: Forks
+          - .. image:: https://img.shields.io/github/stars/sdpython/{0}.svg
+                :target: https://github.com/sdpython/{0}/
+                :alt: Stars"""), "    ")
+
     row2 = indent(dedent("""
         * - `{0} <http://lesenfantscodaient.fr/>`_
           - .. image:: https://pepy.tech/badge/{0}
@@ -809,12 +822,16 @@ Fork / Stars / Downloads
                 :alt: Stars"""), "    ")
 
     modules = get_teaching_modules()
-    skip = {'myblog', '_benchmark'}
+    skip = {'myblog', '_benchmarks', 'lecture_citation',
+            'machinelearningext', 'python3_module_template'}
     rows = [text]
     for module in sorted(modules):
         if module in skip:
-            continue
-        pat = row2 if module == 'code_beatrix' else row
+            pat = row_nod
+        elif module == 'code_beatrix':
+            pat = row2
+        else:
+            pat = row
         rows.append(pat.format(module))
 
     print("".join(rows))
