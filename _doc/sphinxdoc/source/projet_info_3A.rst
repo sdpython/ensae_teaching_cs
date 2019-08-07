@@ -121,6 +121,11 @@ Suggestions d'articles
 * `DSCOVR: Randomized Primal-Dual Block Coordinate Algorithms for Asynchronous Distributed Optimization <https://www.microsoft.com/en-us/research/wp-content/uploads/2017/10/dscovr.pdf>`_
 * `A Fast Parallel Stochastic Gradient Method for Matrix Factorization in Shared Memory Systems <https://www.csie.ntu.edu.tw/~cjlin/papers/libmf/libmf_journal.pdf>`_
 
+*2019-2020*
+
+* `Anatomy of High-Performance Many-Threaded Matrix Multiplication
+  <http://www.cs.utexas.edu/users/flame/pubs/blis3_ipdps14.pdf>`_
+
 Nous vous recommandons d'adopter la démarche suivante:
 
 #. implémentation et débugging sur un petit jeu de données synthétiques

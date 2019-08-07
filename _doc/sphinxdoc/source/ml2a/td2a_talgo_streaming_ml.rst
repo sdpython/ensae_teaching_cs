@@ -12,6 +12,10 @@ Streaming machine learning
 *Lectures*
 
 * `scikit-multiflow A multi-output/multi-label and stream data framework. <https://scikit-multiflow.github.io/>`_
+* `Journal of Machine Learning Research 20 (2019) 1-62Submitted 12/16; Revised 2/19; Published 2/19Streaming Principal Component AnalysisFrom Incomplete Data
+  <http://jmlr.org/papers/volume20/16-627/16-627.pdf>`_
+* `Régression linéaire par morceaux (streaming)
+  <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/piecewise.html>`_
 
 *Modules*
 

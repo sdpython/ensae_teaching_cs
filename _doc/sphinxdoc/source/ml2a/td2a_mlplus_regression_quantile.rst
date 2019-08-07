@@ -23,6 +23,7 @@ Régression quantile
 * `Iteratively reweighted least squares <https://en.wikipedia.org/wiki/Iteratively_reweighted_least_squares>`_
 * `Robust Penalized Quantile Regression Estimation for Panel Data <http://www.wise.xmu.edu.cn/PANEL2007/paper/LAMARCHE(CARLOS).pdf>`_
 * `Adaptive LASSO model selection in a multiphase quantile regression <https://arxiv.org/abs/1309.1262>`_
+* `Monotone Least Squares and Isotonic Quantiles <https://arxiv.org/abs/1901.02398>`_
 
 *Modules*
 

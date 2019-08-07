@@ -31,6 +31,8 @@ complique également l'interprétation des résultats.
 * `Variable selection using pseudo-variables <https://arxiv.org/abs/1804.01201>`_ :
   l'article utilise la pénalisation pour classer les variables par importance,
   plus le modèle est pénalisé (type :epkg:`Lasso`), plus il réduit le nombre de variables.
+* `Complete Search for Feature Selection in Decision Trees
+  <http://jmlr.org/papers/volume20/18-035/18-035.pdf>`_
 
 * *Modules*
 

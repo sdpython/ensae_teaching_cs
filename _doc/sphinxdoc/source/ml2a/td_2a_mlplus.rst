@@ -66,6 +66,7 @@ Séries temporelles
     td2a_mlplus_finance
     td2a_mlplus_sequence_learning
     td2a_mlplus_timeseries_anomalie
+    td2a_mlplus_timeseries_changepoint
 
 Interprétation, Anonymisation
 =============================

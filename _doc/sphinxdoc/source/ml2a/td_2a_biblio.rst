@@ -13,20 +13,31 @@ Livres sur le machine learning
 
 * `The Elements of Statistical Learning <http://statweb.stanford.edu/~tibs/ElemStatLearn/>`_, Trevor Hastie, Robert Tibshirani, Jerome Friedman
 * `Python for Data Analysis <http://shop.oreilly.com/product/0636920023784.do>`_, Wes McKinney
-* `Building Machine Learning Systems with Python <https://www.packtpub.com/big-data-and-business-intelligence/building-machine-learning-systems-python>`_, Willi Richert, Luis Pedro Coelho
-* `Learning scikit-learn: Machine Learning in Python <https://www.packtpub.com/big-data-and-business-intelligence/learning-scikit-learn-machine-learning-python>`_, Raúl Garreta, Guillermo Moncecchi
+* `Building Machine Learning Systems with Python
+  <https://www.packtpub.com/big-data-and-business-intelligence/building-machine-learning-systems-python>`_,
+  Willi Richert, Luis Pedro Coelho
+* `Learning scikit-learn: Machine Learning in Python
+  <https://www.packtpub.com/big-data-and-business-intelligence/learning-scikit-learn-machine-learning-python>`_,
+  Raúl Garreta, Guillermo Moncecchi
 * `Modeling Creativity: Case Studies in Python <http://arxiv.org/abs/1410.0281>`_, Tom De Smedt
-* `Critical Mass: How One Thing Leads to Another <http://www.philipball.co.uk/index.php?option=com_content&view=article&id=15:critical-mass-how-one-thing-leads-to-another&catid=3:books&Itemid=4>`_, Philip Ball
-* `Bugra Akyildiz <http://bugra.github.io/>`_
-* `Deep Learning <http://www-labs.iro.umontreal.ca/~bengioy/dlbook/>`_, Yoshua Bengio, Ian Goodfellow and Aaron Courville
-* `Artificial Intelligence: A Modern Approach <http://aima.cs.berkeley.edu/>`_, Stuart Russell, Peter Norvig *(2016/08)*
-* `Speech and Language Processing <http://www.cs.colorado.edu/~martin/slp.html>`_,  Daniel Jurafsky and James H. Martin *(2016/08)*,
-  see also `Draft chapters in progress <https://web.stanford.edu/~jurafsky/slp3/>`_
+* `Deep Learning <http://www-labs.iro.umontreal.ca/~bengioy/dlbook/>`_,
+  Yoshua Bengio, Ian Goodfellow and Aaron Courville
+* `Artificial Intelligence: A Modern Approach <http://aima.cs.berkeley.edu/>`_,
+  Stuart Russell, Peter Norvig
+* `Speech and Language Processing <http://www.cs.colorado.edu/~martin/slp.html>`_,  Daniel Jurafsky and James H. Martin,
+  voir aussi `Draft chapters in progress <https://web.stanford.edu/~jurafsky/slp3/>`_
+* `The Hundred Page Machine Learning <http://themlbook.com/>`_, Andriy Burkov
+  (sur github : ` <aburkov/theMLbook>`_)
+
+* `Critical Mass: How One Thing Leads to Another
+  <http://www.philipball.co.uk/index.php?option=com_content&view=article&id=15:critical-mass-how-one-thing-leads-to-another&catid=3:books&Itemid=4>`_,
+  Philip Ball
 
 Livres sur les algorithmes
 ==========================
 
-* `Introduction to Algorithms <http://mitpress.mit.edu/books/introduction-algorithms>`_, Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest and Clifford Stein
+* `Introduction to Algorithms <http://mitpress.mit.edu/books/introduction-algorithms>`_,
+  Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest and Clifford Stein
 * `The Algorithm Design Manual <http://www.algorist.com/>`_, Steven S. Skiena
 * `Competitive Programming <http://www.comp.nus.edu.sg/~stevenha/myteaching/competitive_programming/cp1.pdf>`_, Steven Halim
 

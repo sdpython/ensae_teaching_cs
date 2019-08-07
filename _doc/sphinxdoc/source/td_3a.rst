@@ -201,6 +201,8 @@ d'une fonction LAPACK dans un code python / cython :
   <https://ai.googleblog.com/2019/06/introducing-tensornetwork-open-source.html>`_,
   `Tensor in a Nutshell <https://arxiv.org/abs/1708.00006>`_
   (`github <https://github.com/google/tensornetwork>`_)
+* `Anatomy of High-Performance Many-Threaded Matrix Multiplication
+  <http://www.cs.utexas.edu/users/flame/pubs/blis3_ipdps14.pdf>`_
 
 *Modules*
 
@@ -275,6 +277,7 @@ Algorithmes Distribués
   <https://arxiv.org/abs/1705.10266>`_
 * `Demystifying Parallel and Distributed Deep Learning: An In-Depth Concurrency Analysis
   <https://arxiv.org/pdf/1802.09941.pdf>`_
+* `Measuring the Effects of Data Parallelismon Neural Network Training <http://jmlr.org/papers/volume20/18-789/18-789.pdf>`_
 
 *Vidéo*
 
@@ -541,10 +544,6 @@ Map Reduce en pratique
 * Descente du gradient : itératif
 * Stratégie de parallélisation, propriétés mathématiques
   optimisation d'une fonction convexe
-* Exemple de :ref:`k-means distribué <2015kmeansrst>`
-* Le hasard en distribué, :ref:`Réservoir sampling
-  <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/reservoir_sampling.html>`
-  (:ref:`correction <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/pig_reservoir_sampling_azure_correction.html>`)
 * Schéma des langages de map/reduce :
   `lazy evaluation <https://en.wikipedia.org/wiki/Lazy_evaluation>`_
    (évalusation presseuse, :epkg:`dask`, :epkg:`Spark`,
@@ -564,17 +563,26 @@ Map Reduce en pratique
 * `Calculer sur des données massives <https://interstices.info/jcms/p_83082/calculer-sur-des-donnees-massives>`_
 * `Le hachage <https://interstices.info/jcms/c_45523/le-hachage>`_
 
-avec PIG sur Azure et Cloudera
-++++++++++++++++++++++++++++++
+avec PIG
+++++++++
 
-Les trois séances suivantes sont plus appliquées et dédiées à la découverte
+:epkg:`PIG` n'est plus un langage très utilisé, il a été
+supplanté par :epkg:`Spark`. Pour l'avoir utilisé quotidiennement
+en 2008-2009, sa logique est proche du :epkg:`SQL`, il était
+et doit encore être difficile à débugger dès qu'il inclut des
+scripts non PIG traitant des lignes de texte. Mais il était
+difficile de faire du PIG sans bien comprendre le map/reduce
+alors que Spark donne l'impression c'est plus facile.
+
+Trois séances avaient été appliquées et dédiées à la découverte
 de `Hadoop <http://fr.wikipedia.org/wiki/Hadoop>`_, un environnement
 qui permet d'exécuter des tâches
 `Map/Reduce <http://fr.wikipedia.org/wiki/MapReduce>`_.
 Plusieurs angles d'approche sont possibles. Celle retenue est l'utilisation
 du langage `PIG-latin <http://en.wikipedia.org/wiki/Pig_Latin>`_ dont la logique
 ressemble beaucoup à celle du `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_.
-Les outils Python [#fp1]_ simplifient la communication avec le cluster.
+Les outils Python simplifient la communication avec le cluster
+mais peuvent être effectuées via un terminal.
 
 .. toctree::
     :maxdepth: 2
@@ -621,6 +629,9 @@ Trois projets réalisés par les élèves lors de l'année 2014-2015 :
   <http://blogs.msdn.com/b/microsoft_press/archive/2014/05/27/free-ebook-introducing-microsoft-azure-hdinsight.aspx>`_, Avkash Chauhan, Valentine Fontama, Michele Hart, Wee Hyong Tok, Buck Woody
 * `Introduction to Apache Pig
   <http://www.cloudera.com/content/cloudera/en/resources/library/training/introduction-to-apache-pig.html>`_ (MOOC)
+* Le hasard en distribué, :ref:`Réservoir sampling
+  <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/reservoir_sampling.html>`
+  (:ref:`correction <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/pig_reservoir_sampling_azure_correction.html>`)
 
 .. _l-spark-3a:
 
@@ -671,9 +682,12 @@ Getting started, installation, setup
 PIG
 +++
 
-Ces enseignements vous sont proposés via des notebooks.
-Ils requièrent une surcouche apporté par le module
-`pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_.
+Les examples sur :epkg:`PIG` ne sont plus utilisés.
+Les instructions qui suivent datent de 2015. Il est très
+probable qu'elles ne fonctionnent plus telles quelles.
+Les notebooks proposés en exemple requièrent une surcouche
+apportée par le module
+`pyenbc <http://www.xavierdupre.fr/app/pyenbc/helpsphinx/index.html>`_.
 Le python n'est pas l'objet de ce cours, les notebooks sont utilisés
 pour pouvoir regrouper dans un même document toutes les opérations
 effectuées dans un langage Map/Reduce.
@@ -783,8 +797,6 @@ Feuilles de routes des années passées
     questions/route_3A_2017
 
 .. rubric:: Footnotes
-
-.. [#fp1] C'est l'objet du paragraphe :ref:`l-td3a-start`.
 
 .. [#f3write1] Contributeur et coordinateur du cours.
 

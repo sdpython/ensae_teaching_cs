@@ -3,7 +3,6 @@
 
 Feuille de route 2018 (2A)
 ==========================
-*en préparation*
 
 .. contents::
     :local:
