@@ -1,5 +1,5 @@
 
-1A - Exposés, Exercices pour apprendre la programmation et les algorithmes
+1A - Exposés, exercices pour apprendre la programmation et les algorithmes
 --------------------------------------------------------------------------
 
 Ces exercices sont utiles pour apprendre la programmation et les algorithmes.
