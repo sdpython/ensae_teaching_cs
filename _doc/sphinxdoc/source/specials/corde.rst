@@ -30,6 +30,14 @@ de la corde atteignant sa position d'équilibre.
     <source src="http://www.xavierdupre.fr/enseignement/complements/corde.mp4" type="video/mp4" />
     </video>
 
+Le même code légèrement modifié peut également simuler un pendule.
+
+.. raw:: html
+
+    <video autoplay="" height="400" controls="" loop="">
+    <source src="http://www.xavierdupre.fr/enseignement/complements/pendule.mp4" type="video/mp4" />
+    </video>
+
 On construit l'algorithme suivant étant donné une corde de longueur *L*
 suspendue entre les points d'abscisse :math:`(-x_0,0)` et :math:`(0,0)`
 de telle sorte que :math:`2 x_0 < L`. Cette corde à une masse *M* et une
