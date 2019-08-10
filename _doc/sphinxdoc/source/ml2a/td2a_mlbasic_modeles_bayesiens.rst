@@ -24,6 +24,8 @@ Modèles bayésiens
 * `Auto-Encoding Variational Bayes <https://arxiv.org/pdf/1312.6114.pdf>`_
 * `Particle Gibbs with Ancestor Sampling <http://jmlr.org/papers/volume15/lindsten14a/lindsten14a.pdf>`_
 * `Controlled Sequential Monte Carlo <https://arxiv.org/abs/1708.08396>`_
+* `Functional probabilistic programming for scalable Bayesian modelling <https://arxiv.org/abs/1908.02062>`_
+* `Meta-Learning Probabilistic Inference For Prediction <https://arxiv.org/abs/1805.09921>`_
 
 *Vidéo*
 

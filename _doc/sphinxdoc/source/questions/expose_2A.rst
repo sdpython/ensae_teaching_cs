@@ -263,6 +263,18 @@ Causalité
 * `Estimating Treatment Effects with Causal Forests: An Application
   <https://arxiv.org/abs/1902.07409>`_
 
+Détection de changements de régime
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* `Selective review of offline change point detection methods
+  <https://arxiv.org/abs/1801.00718>`_
+* `ruptures <https://github.com/deepcharles/ruptures>`_
+
+Extraction de features
+^^^^^^^^^^^^^^^^^^^^^^
+
+* `Unsupervised Feature Extraction by Time-Contrastive Learning and Nonlinear ICA <https://arxiv.org/abs/1605.06336>`_
+
 Interprétabilité
 ^^^^^^^^^^^^^^^^
 
@@ -297,3 +309,9 @@ Très grande dimension
 * `Making Decision Trees Feasible in Ultrahigh Feature and Label Dimensions <http://jmlr.org/papers/volume18/16-466/16-466.pdf>`_
 * `Identifying a Minimal Class of Models for High–dimensional Data <http://www.jmlr.org/papers/volume18/16-172/16-172.pdf>`_
 * `The xyz algorithm for fast interaction search in high-dimensional data <http://www.jmlr.org/papers/volume19/16-515/16-515.pdf>`_
+
+Sélection de variables
+^^^^^^^^^^^^^^^^^^^^^^
+
+* `Complete Search for Feature Selection in Decision Trees
+  <http://jmlr.org/papers/volume20/18-035/18-035.pdf>`_

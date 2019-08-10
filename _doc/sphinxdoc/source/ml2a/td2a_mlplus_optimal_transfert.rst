@@ -16,6 +16,7 @@ Optimal transfert
 * `Multitemporal classification without new labels: A solution with optimal transport <https://hal.archives-ouvertes.fr/hal-01254329/document>`_
 * `Monge’s Optimal Transport Distance with Applications for Nearest Neighbour Image Classification <https://arxiv.org/pdf/1612.00181.pdf>`_
 * `Wasserstein Discriminant Analysis <http://pot.readthedocs.io/en/stable/auto_examples/plot_WDA.html#compute-wasserstein-discriminant-analysis>`_
+* `Optimal Transport: Fast Probabilistic Approximation withExact Solvers <http://jmlr.org/papers/volume20/18-079/18-079.pdf>`_
 
 *Modules*
 

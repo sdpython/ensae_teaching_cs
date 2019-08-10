@@ -3,7 +3,6 @@
 
 Feuille de route 2018 (2A)
 ==========================
-*en préparation*
 
 .. contents::
     :local:
@@ -374,7 +373,7 @@ Séance 7
 * `Search images with deep learning <http://www.xavierdupre.fr/app/mlinsights/helpsphinx/notebooks/search_images.html>`_
 * `GAN <http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/chapters/deep_generative_adversarial_network_gan.html>`_
 
-*Ethide dans les données par Frédéric Bardolle*
+*Ethique dans les données par Frédéric Bardolle*
 
 * `Les fossoyeurs de l’innovation <https://salon.thefamily.co/les-fossoyeurs-de-l-innovation-6a754d1e8e35>`_ par Nicolas Colin
 * `Tristan Harris : «Beaucoup de ficelles invisibles dans la tech nous agitent comme des marionnettes» <http://www.lefigaro.fr/secteur/high-tech/2018/05/31/32001-20180531ARTFIG00004-tristan-harris-beaucoup-de-ficelles-invisibles-dans-la-tech-nous-agitent-comme-des-marionnettes.php>`_

@@ -21,9 +21,11 @@ Processus Gaussiens (GP)
 * `Introduction aux Processus Gaussiens <http://www.iro.umontreal.ca/~pift6266/A06/cours/030819_talk_lisa_gaussian-process.pdf>`_
 * `Processus gaussiens déformés pour l'apprentissage de zones instationnaires <https://hal.archives-ouvertes.fr/hal-01402259/document>`_
 * `Corresponce entre régression par processus gaussien et splines d'interpolation sous contraintes linéaires de type inégalités, théorie et application <https://tel.archives-ouvertes.fr/tel-01282224/document>`_
+* `Maximum Likelihood for Gaussian Process Classification andGeneralized Linear Mixed Models under Case-ControlSampling <http://jmlr.org/papers/volume20/18-298/18-298.pdf>`_
 
 *Modules*
 
+* :epkg:`scikit-learn`
 * `GPy <https://github.com/SheffieldML/GPy>`_
 * `GPflow <http://gpflow.readthedocs.io/en/latest/index.html>`_
   (réimplémentation du module précédent sur GPU)

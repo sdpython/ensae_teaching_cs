@@ -24,6 +24,10 @@ Timeseries - Séries temporelles
 
 (à venir : modèles SETAR pour les séries non périodiques, modèles proies prédateurs)
 
+Quelques rappels sur les lissages, saisonnalités, modèles linéaires
+appliqués aux séries temporelles :
+`Projet Machine Learning pour la Prévision: séries temporelles <https://www.math.u-psud.fr/~goude/Materials/ProjetMLF/time_series.html>`_
+
 *Lectures*
 
 * `Time series analysis with pandas <http://earthpy.org/pandas-basics.html>`_

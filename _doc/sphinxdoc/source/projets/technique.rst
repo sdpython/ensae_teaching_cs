@@ -179,11 +179,9 @@ d'exploitation, ce n'est pas toujours un processus évident.
 Reconnaissance de la parole en temps réel et BOT (2017)
 -------------------------------------------------------
 
-Deux exemples et deux articles pour commencer :
-
-* `Realtime Audio Visualization in Python <http://www.swharden.com/wp/2016-07-19-realtime-audio-visualization-in-python>`_
-* `Easy Speech Recognition in Python with PyAudio and Pocketsphinx <http://www.codesofinterest.com/2017/03/python-speech-recognition-pocketsphinx.html>`_
-
+Un article pour commencer :
+`Realtime Audio Visualization in Python
+<http://www.swharden.com/wp/2016-07-19-realtime-audio-visualization-in-python>`_.
 L'idée du projet est d'abord d'arriver à faire fonctionner la reconnaissance de la parole
 en temps réel puis de se diriger vers l'implémentation d'un
 `BOT <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2017/devoxx2017.html>`_.
@@ -213,7 +211,6 @@ Ci-dessous un exemple de code extrait du second article cité plus haut.
 *Modules à installer*
 
 * `pyaudio <https://people.csail.mit.edu/hubert/pyaudio/docs/>`_
-* `pocketsphinx <https://pypi.python.org/pypi/pocketsphinx>`_
 * `speechrecognition <https://pypi.python.org/pypi/SpeechRecognition/>`_
 
 Il faudra installer ces modules le plus tôt possible car selon les systèmes

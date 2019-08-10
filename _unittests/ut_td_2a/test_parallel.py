@@ -18,7 +18,7 @@ class TestParallel(unittest.TestCase):
         def inv(m):
             return numpy.linalg.inv(m)
 
-        nps = [[numpy.random.random((5, 5))] for i in range(0, 1000)]
+        nps = [[numpy.random.random((5, 5))] for i in range(0, 1000)]  # pylint: disable=E1101
         mm = ParallelThread.parallel(inv, nps, 10)
         fLOG(len(mm))
         self.assertEqual(len(mm), 1000)

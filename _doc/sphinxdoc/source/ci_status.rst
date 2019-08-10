@@ -795,7 +795,7 @@ Fork / Stars / Downloads
 
     row_nod = indent(dedent("""
         * - `{0} <http://www.xavierdupre.fr/app/{0}/helpsphinx/index.html>`_
-          - 
+          -
           - .. image:: http://img.shields.io/github/issues/sdpython/{0}.png
                 :alt: GitHub Issues
                 :target: https://github.com/sdpython/{0}/issues
