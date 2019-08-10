@@ -87,7 +87,7 @@ class ObjetMasseReliees:
         Calcule les forces qui s'exerce en un point,
         retourne un point *x, y*.
         """
-        raise NotIplementedError()
+        raise NotImplementedError()
 
     def iteration(self, dt):
         """
@@ -95,7 +95,7 @@ class ObjetMasseReliees:
         on ne déplace pas les points situés aux extrémités,
         retourne la somme des vitesses et des accélérations au carré.
         """
-        raise NotIplementedError()
+        raise NotImplementedError()
 
 
 class Corde(ObjetMasseReliees):
@@ -213,7 +213,7 @@ class Pendule(ObjetMasseReliees):
             self.list[i].deplace_point(self.vitesse[i], dt)
 
         d = 0
-        for f in force:
+        for _ in force:
             d += self.vitesse[0].x ** 2 + force[i].x ** 2
             d += self.vitesse[1].y ** 2 + force[i].y ** 2
 
