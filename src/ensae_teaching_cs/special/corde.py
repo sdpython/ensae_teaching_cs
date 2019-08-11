@@ -48,15 +48,15 @@ class Point:
         return "(x,y) = (%4.2f,%4.2f) masse %f" % (self.x, self.y, self.m)
 
 
-class Corde:
+class ObjetMasseReliees:
     """
-    définition d'une corde, une liste de points
+    Définit un objet commun à une corde ou un pendule
+    physiquement représenté comme un ensemble de masses
+    reliées des élastiques.
     """
 
     def __init__(self, nb, p1, p2, m, k, g, f, lo):
         """
-        initialisation d'une corde
-
         @param          nb          nombre de points
         @param          p1          coordoonnées du premier point (fixe)
         @param          p2          coordoonnées du dernier point (fixe)
@@ -66,7 +66,7 @@ class Corde:
         @param          g           intensité de l'apesanteur,
                                     valeur positive
         @param          f           vitesse de freinage
-        @param          lo          longueur de la corde
+        @param          lo          longueur totale de la corde
         """
         x1, y1 = p1[0], p1[1]
         x2, y2 = p2[0], p2[1]
@@ -81,6 +81,28 @@ class Corde:
         self.g = g
         self.lo = float(lo) / (nb - 1)
         self.f = f
+
+    def force_point(self, i):
+        """
+        Calcule les forces qui s'exerce en un point,
+        retourne un point *x, y*.
+        """
+        raise NotImplementedError()
+
+    def iteration(self, dt):
+        """
+        Calcule les déplacements de chaque point et les met à jour,
+        on ne déplace pas les points situés aux extrémités,
+        retourne la somme des vitesses et des accélérations au carré.
+        """
+        raise NotImplementedError()
+
+
+class Corde(ObjetMasseReliees):
+    """
+    Définition d'une corde, une liste de masses reliées
+    par des élastiques et attachées au deux extrémités.
+    """
 
     def force_point(self, i):
         """
@@ -136,7 +158,69 @@ class Corde:
         return d
 
 
-def display_corde(corde, screen, pygame):
+class Pendule(ObjetMasseReliees):
+    """
+    Définition d'un pendule, une liste de masses reliées
+    par des élastiques et attachées à une extrémités.
+    Contribution de *Pascal Grandeau*.
+    """
+
+    def force_point(self, i):
+        """
+        calcule les forces qui s'exerce en un point, retourne un point x,y
+        """
+        x, y = 0, 0
+        # poids
+        y -= self.g * self.list[i].m
+        # voisin de gauche
+        dxdy = self.list[i].difference(self.list[i - 1])
+        d = dxdy.norme()
+        if d > self.lo:
+            dxdy.x = (d - self.lo) / d * dxdy.x
+            dxdy.y = (d - self.lo) / d * dxdy.y
+            x += self.k * dxdy.x
+            y += self.k * dxdy.y
+        # voisin de droite
+        if i < len(self.list) - 1:
+            dxdy = self.list[i].difference(self.list[i + 1])
+            d = dxdy.norme()
+            if d > self.lo:
+                dxdy.x = (d - self.lo) / d * dxdy.x
+                dxdy.y = (d - self.lo) / d * dxdy.y
+                x += self.k * dxdy.x
+                y += self.k * dxdy.y
+        # freinage
+        x += - self.f * self.vitesse[i].x
+        y += - self.f * self.vitesse[i].y
+
+        return Point(x, y, 0)
+
+    def iteration(self, dt):
+        """
+        Calcule les déplacements de chaque point et les met à jour,
+        on ne déplace pas les points situés aux extrémités,
+        retourne la somme des vitesses et des accélérations au carré
+        """
+        force = [Point(0, 0, 0)]
+        for i in range(1, len(self.list)):
+            xy = self.force_point(i)
+            force.append(xy)
+        force.append(Point(0, 0, 0))
+
+        # déplacement
+        for i in range(1, len(self.list)):
+            self.vitesse[i].deplace_point(force[i], dt)
+            self.list[i].deplace_point(self.vitesse[i], dt)
+
+        d = 0
+        for _ in force:
+            d += self.vitesse[0].x ** 2 + force[i].x ** 2
+            d += self.vitesse[1].y ** 2 + force[i].y ** 2
+
+        return d
+
+
+def display_masses(corde, screen, pygame):
     """
     affichage de la corde à l'aide du module pyagame
     """
@@ -154,7 +238,7 @@ def display_corde(corde, screen, pygame):
 def pygame_simulation(pygame, first_click=False, folder=None,
                       iter=1000, size=(800, 500), nb=10,
                       m=40, k=0.1, g=0.1, f=0.02, dt=0.1, step=10,
-                      flags=0, fLOG=fLOG):
+                      flags=0, model='corde', fLOG=fLOG):
     """
     Simulation graphique.
     Simule la chute d'une corde suspendue à ces deux extrémités.
@@ -165,19 +249,21 @@ def pygame_simulation(pygame, first_click=False, folder=None,
     @param      iter            number of iterations to run
     @param      fLOG            logging function
 
-    @param          nb          nombre de points
-    @param          m           masse de la corde,
+    @param      nb              nombre de points
+    @param      m               masse de la corde,
                                 répartie entre tous les points
-    @param          k           raideur de l'élastique
-    @param          g           intensité de l'apesanteur,
+    @param      k               raideur de l'élastique
+    @param      g               intensité de l'apesanteur,
                                 valeur positive
-    @param          f           vitesse de freinage
-    @param          dt          petit temps
-    @param          step        marche
-    @param          flags       see `pygame.display.set_mode <https://www.pygame.org/docs/ref/display.html#pygame.display.set_mode>`_
-    @param          fLOG        logging function
+    @param      f               vitesse de freinage
+    @param      dt              petit temps
+    @param      step            marche
+    @param      flags           see `pygame.display.set_mode
+                                <https://www.pygame.org/docs/ref/display.html#pygame.display.set_mode>`_
+    @param      model           ``'corde'`` ou ``'pendule'``
+    @param      fLOG            logging function
 
-    The simulation looks like this:
+    La simulation ressemble à ceci dans le cas d'une corde :
 
     .. raw:: html
 
@@ -185,23 +271,37 @@ def pygame_simulation(pygame, first_click=False, folder=None,
         <source src="http://www.xavierdupre.fr/enseignement/complements/corde.mp4" type="video/mp4" />
         </video>
 
+    Ou cela dans le cas d'un pendule :
+
+    .. raw:: html
+
+        <video autoplay="" controls="" loop="" height="400">
+        <source src="http://www.xavierdupre.fr/enseignement/complements/pendule.mp4" type="video/mp4" />
+        </video>
+
     Pour lancer la simulation::
 
         from ensae_teaching_cs.special.corde import pygame_simulation
         import pygame
-        pygame_simulation(pygame)
-
+        pygame_simulation(pygame, model='corde')
     """
-    pygame.init()
-    white = 255, 255, 255
-    screen = pygame.display.set_mode(size, flags)
-
     # création de la corde
     nb = 10
     dx = size[0] // 8
     dy = size[1] // 8
-    c = Corde(nb, (dx, size[1] - dy), (size[0] - dx, size[1] - dy),
-              m=m, k=k, g=g, f=f, lo=size[0])
+
+    if model == 'corde':
+        c = Corde(nb, (dx, size[1] - dy), (size[0] - dx, size[1] - dy),
+                  m=m, k=k, g=g, f=f, lo=size[0])
+    elif model == 'pendule':
+        c = Pendule(nb, (size[0] // 2, size[1] - dy), (size[0] - dx, size[1] - dy),
+                    m=m, k=k, g=g, f=f, lo=size[0] // 2)
+    else:
+        raise ValueError("Model '{}' is not recognized.".format(model))
+
+    pygame.init()
+    white = 255, 255, 255
+    screen = pygame.display.set_mode(size, flags)
 
     # numéro d'itération
     it = 0
@@ -217,7 +317,7 @@ def pygame_simulation(pygame, first_click=False, folder=None,
                 fLOG("it={0}/{1} dep={2} #{3}".format(it, iter, dep, len(images)))
             empty_main_loop(pygame)
             screen.fill(white)
-            display_corde(c, screen, pygame)
+            display_masses(c, screen, pygame)
             pygame.display.flip()
 
         # on fait une pause dès la première itérations pour voir la corde
