@@ -54,7 +54,7 @@ API et non via un site.
 
 Aborder les prétraitement comme la
 `normalisation <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_normalisation.html>`_,
-la :epkg:`dimensionsreductionrst`.
+la :ref:`dimensionsreductionrst`.
 
 Séance 3 - 24/9 - TD - prétraitement et catégories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -115,7 +115,7 @@ Séance 9 - 12/10 - amphi - sérialisation, webscrapping
   en utilisant l'API de :epkg:`scikit-learn`,
   `Prédicteur pour chaque catégorie
   <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_color_linear.html>`_,
-  :ref:`2019-09-18sklearnapirst`,
+  :ref:`2018-09-18sklearnapirst`,
   `Contributing <http://scikit-learn.org/stable/developers/contributing.html#contributing-code>`_,
   `sklearn.base <http://scikit-learn.org/stable/modules/classes.html#module-sklearn.base>`_
 * `Understanding and diagnosing your machine-learning models

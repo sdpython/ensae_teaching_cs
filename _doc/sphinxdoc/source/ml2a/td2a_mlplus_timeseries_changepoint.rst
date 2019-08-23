@@ -23,3 +23,4 @@ par un autre modèle.
 *Modules*
 
 * `ruptures <https://github.com/deepcharles/ruptures>`_
+* `fbprophet <https://facebook.github.io/prophet/>`_
