@@ -1,4 +1,12 @@
 
+.. image:: https://github.com/sdpython/ensae_teaching_cs/blob/master/_doc/sphinxdoc/source/phdoc_static/project_ico.png?raw=true
+    :target: https://github.com/sdpython/ensae_teaching_cs/
+
+.. _l-README:
+
+ensae_teaching_cs: teaching materials, algorithmic, machine learning
+====================================================================
+
 .. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master
     :target: https://travis-ci.org/sdpython/ensae_teaching_cs
     :alt: Build status
@@ -32,10 +40,17 @@
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/all_notebooks_coverage.html
     :alt: Notebook Coverage
 
-.. _l-README:
+.. image:: https://pepy.tech/badge/ensae_teaching_cs
+    :target: https://pypi.org/project/ensae_teaching_cs/
+    :alt: Downloads
 
-ensae_teaching_cs
-=================
+.. image:: https://img.shields.io/github/forks/sdpython/ensae_teaching_cs.svg
+    :target: https://github.com/sdpython/ensae_teaching_cs/
+    :alt: Forks
+
+.. image:: https://img.shields.io/github/stars/sdpython/ensae_teaching_cs.svg
+    :target: https://github.com/sdpython/ensae_teaching_cs/
+    :alt: Stars
 
 This page gives access to the content of practical sessions I give at the
 `ENSAE <http://www.ensae.fr/>`_. They are based on Python. The project
@@ -51,7 +66,7 @@ Contributions
 Started in 2014/04. **Contributors:** `Xavier Dupré <http://www.xavierdupre.fr/>`_,
 Anne Muller, Elodie Royant, Matthieu Bizien,
 Nicolas Rousset, Jérémie Jakubowicz, Gilles Drigout,
-Gaël Varoquaux, ENSAE's students.
+Gaël Varoquaux, Xavier Dupré, ENSAE's students.
 
 Setup
 -----
@@ -63,15 +78,7 @@ give indications on how to setup a machine to run most of the notebooks.
 All notebooks do not run on travis or appveyor due to the excessive
 amount of times it requires. They are being run a debian machine every week.
 A `coverage page <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/all_notebooks_coverage.html>`_
-reports on which one runs and when was the last time it was run.
-
-Module
-`pymyinstall <https://pypi.python.org/pypi/pymyinstall/>`_
-was implemented to simplify the installation by just typing
-``pymy_install`` and then remove the modules
-being tested (such as this one). It was needed a couple
-of years ago but not really needed anymore now as most of
-the modules are now available on Windows and Linux on PyPi.
+reports on which ones run and the last time it was run.
 
 Local Continuous Integration
 ----------------------------
@@ -81,7 +88,7 @@ but they are not optional in most of the cases.
 
 `7zip <http://www.7-zip.org/>`_,
 `Chrome <https://www.google.fr/chrome/browser/desktop/>`_,
-`CMake <https://cmake.org/>`_ (to build XGBoost),
+`CMake <https://cmake.org/>`_,
 `Graphviz <http://www.graphviz.org/>`_,
 `Git <https://git-scm.com/>`_,
 `GitHub <https://desktop.github.com/>`_,
@@ -90,10 +97,10 @@ but they are not optional in most of the cases.
 `Miktex Basic Installer 64 bit <https://miktex.org/download>`_ (formula in the documentation)
 (check the option to silently install new packages),
 `Pandoc <http://pandoc.org/>`_ (documentation),
-`Python <https://www.python.org/>`_ 3.6, 64 bit
-(do not add the interpreter on the default PATH),
-`Scite <http://www.scintilla.org/SciTE.html>`_,
-`Visual Studio 2017 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_
+`Python <https://www.python.org/>`_ 3.7, 64 bit
+(do not add the interpreter on the default `PATH` on Windows),
+`Scite <http://www.scintilla.org/SciTE.html>`_ (Windows),
+`Visual Studio 2017 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_ (Windows)
 (check C++, C#, Python, CLang) (Cython).
 
 A *Jenkins* server was installed on a *debian* machine
@@ -117,8 +124,13 @@ A local PyPi server needs to be installed:
 
     pypi-server.exe -u -p 8067 --disable-fallback ..\..\local_pypi\local_pypi_server
 
-If some Python scripts use
+Some Python scripts and notebooks use
 `keyring <https://pypi.python.org/pypi/keyring>`_
-to retrieve passwords,
-the Jenkins service needs to authentify.
-On *Windows*, it goes through ``services.msc``.
+to retrieve passwords, usually to access private data.
+You would have to set them to point to your own data.
+The following command line tells how to automatically add
+Jenkins jobs to a local Jenkins server:
+
+::
+
+    python setup.py local_jenkins --help

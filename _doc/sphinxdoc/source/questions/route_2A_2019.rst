@@ -40,11 +40,11 @@ Séance 1 - 10/9 - amphi - régression et classification
 * **A faire pour la prochaine fois** : exécuter trois notebooks,
   :ref:`structuresdonneesconversionrst`, :ref:`histogrammerapiderst`,
   :ref:`mlfeaturesmodelrst`
-  
+
 Séance 2 - 17/9 - TD - régression et classification par la pratique
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Organisée comme une compétition, choisir un jeu de données 
+Organisée comme une compétition, choisir un jeu de données
 sur `UCI <https://archive.ics.uci.edu/ml/datasets.php>`_
 et enregister les performances. La séance commencera
 par le requêtage d'une API REST car la soumission se fera via une
@@ -123,7 +123,6 @@ Séance 9 - 12/10 - amphi - sérialisation, webscrapping
 * Les cours de Gaël Varoquaux :ref:`l-ml-skgael`,
   les notebooks d'exercices associées à ces lectures.
 
-
 Prérequis
 +++++++++
 
@@ -170,7 +169,7 @@ Liens utiles et trop nombreux
 * :ref:`l-td2a-ml-crypted`
 * :ref:`mltimeseriesbaserst`, :ref:`timeseriesssarst`
 * :ref:`l-td2a-hyperparametre` et :ref:`l-ml2a-autolearning`
-* `Counterfactual Reasoning and Learning Systems: The Example of Computational Advertising 
+* `Counterfactual Reasoning and Learning Systems: The Example of Computational Advertising
   <http://jmlr.org/papers/v14/bottou13a.html>`_
 * `Making Contextual Decisions with Low Technical Debt <https://arxiv.org/pdf/1606.03966.pdf>`_
 * deep reinforcement learning, `Alpha Go Zero <https://deepmind.com/blog/alphago-zero-learning-scratch/>`_

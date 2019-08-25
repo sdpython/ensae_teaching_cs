@@ -228,3 +228,15 @@ sans même avoir à récupérer tous les fichiers sur votre ordinateur :
 .. image:: nbcov.png
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/all_notebooks_coverage.html
     :alt: Notebook Coverage
+
+.. image:: https://pepy.tech/badge/ensae_teaching_cs
+    :target: https://pypi.org/project/ensae_teaching_cs/
+    :alt: Downloads
+
+.. image:: https://img.shields.io/github/forks/sdpython/ensae_teaching_cs.svg
+    :target: https://github.com/sdpython/ensae_teaching_cs/
+    :alt: Forks
+
+.. image:: https://img.shields.io/github/stars/sdpython/ensae_teaching_cs.svg
+    :target: https://github.com/sdpython/ensae_teaching_cs/
+    :alt: Stars

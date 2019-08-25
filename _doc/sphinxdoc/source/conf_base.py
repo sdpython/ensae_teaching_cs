@@ -89,6 +89,7 @@ epkg_dictionary.update({
 # packages and links
 
 epkg_dictionary.update({
+    "2048": "https://play2048.co/",
     "ACP": 'https://fr.wikipedia.org/wiki/Analyse_en_composantes_principales',
     "Anaconda": 'https://www.continuum.io/downloads',
     "anaconda": 'https://www.continuum.io/downloads',
