@@ -17,12 +17,12 @@ class TestCp2048(unittest.TestCase):
         self.assertEqual(r, [8, 0, 0, 0])
 
         game = Game2048.create_game()
-        for i in range(0,5):
+        for i in range(0, 5):
             game.next_turn()
             direction = i % 4
             game.play(direction)
         self.assertEqual(game.game.shape, (4, 4))
-        
+
     def test_random_2048(self):
         game = Game2048.create_game()
         scores = list(game.evaluate_strategy())
