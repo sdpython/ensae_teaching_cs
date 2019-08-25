@@ -60,8 +60,9 @@ jobs:
       - run:
           name: Install pyproj (1)
           command: |
+            sudo deb http://deb.debian.org/debian experimental main
             sudo apt-get -qq update
-            sudo apt-get -t experimental install -y libproj-dev proj-bin proj-data
+            sudo apt-get -t experimental install -y libproj-dev proj-bin proj-data libgeos-dev
 
       - run:
           name: Install pyproj (2)
