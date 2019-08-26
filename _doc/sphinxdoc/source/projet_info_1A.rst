@@ -77,6 +77,7 @@ Liste exhaustive :
 #. Finance : :ref:`l-fi-port`
 #. Finance : :ref:`l-fi-pair`
 #. Finance : :ref:`l-fi-ml`
+#. Finance : :ref:`l-fi-etf`
 #. Simulation : :ref:`l-sim-segre`
 #. Simulation : :ref:`l-sim-panique`
 #. Simulation : :ref:`l-sim-social`

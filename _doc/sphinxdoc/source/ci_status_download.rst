@@ -13,7 +13,6 @@ obtenu en exécutant la requête suivante sur
     query = """#standardSQL
     SELECT
       file.project as Project,
-      details.distro.version as Version,
       COUNT(*) AS num_downloads,
       SUBSTR(_TABLE_SUFFIX, 1, 6) AS `month`
     FROM `the-psf.pypi.downloads*`
@@ -23,14 +22,14 @@ obtenu en exécutant la requête suivante sur
         BETWEEN FORMAT_DATE(
           '%Y%m01', DATE_SUB(CURRENT_DATE(), INTERVAL 12 MONTH))
         AND FORMAT_DATE('%Y%m%d', CURRENT_DATE())
-    GROUP BY `month`, `Project`, `Version`"""
+    GROUP BY `month`, `Project`"""
 
     from ensae_teaching_cs.automation import get_teaching_modules
     modules = get_teaching_modules()
     modules.extend([
         'onnx', 'onnxruntime', 'skl2onnx', 'keras2onnx', 'nimbusml',
         'scikit-learn', 'pandas', 'numpy', 'jupyter', 'matplotlib',
-        'protobuf'
+        'protobuf', 'nimbusml'
     ])
     conds = ["file.project = '{0}'".format(m) for m in modules]
     cond = " OR ".join(conds)
@@ -38,10 +37,8 @@ obtenu en exécutant la requête suivante sur
 
 .. plot::
 
-    import pandas
-    import matplotlib.pyplot as plt
-
-    df = pandas.read_csv(url).drop("Version", axis=1)
+    url = "pypi_downloads.csv"
+    df = pandas.read_csv(url)
     df = df.groupby(["Project", "month"], as_index=False).sum()
     df = df.sort_values(["Project", "month"])
     df['month'] = df.month.astype(str)
@@ -55,14 +52,14 @@ obtenu en exécutant la requête suivante sur
         {'manydataapi', 'mlprodict', 'cpyquickhelper', 'mlinsights', 'mlstatpy', },
         {'csharpy', 'csharpyml', },
         {'lightmlboard', 'lightmlrestapi', 'pyrsslocal', 'pymmails', },
-        {'sparkouille', 'papierstat', 'teachpyx', 'ensae_teaching_cs', 'ensae_projects',
-         'actuariat_python', 'code_beatrix'},
+        {'sparkouille', 'ensae_projects', 'actuariat_python', 'code_beatrix', 'jupytalk'},
+        {'papierstat', 'teachpyx', 'ensae_teaching_cs', 'ensae_teaching_dl', 'teachpyx'},
         {'tkinterquickhelper', 'pysqllike', 'pyenbc',},
     ]
 
     piv = df.pivot("month", "Project", "num_downloads").fillna(0)
 
-    fig, ax = plt.subplots(len(sets), 1, figsize=(12,20))
+    fig, ax = plt.subplots(len(sets), 1, figsize=(12,40))
     colormaps = ['Accent', "tab10", "Paired", "tab20"]
     for i in range(len(sets)):
         sub = sets[i].intersection(set(df['Project']))

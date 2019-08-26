@@ -64,8 +64,10 @@ D'autres idées avec d'autres lectures :
 Les compétitions sont aussi une bonne source d'inspiration comme
 `Two Sigma Financial Modeling Challenge <https://www.kaggle.com/c/two-sigma-financial-modeling>`_.
 Des participants décrivent leurs idées dans les articles suivants :
-`Two Sigma Financial Modeling Code Competition, 5th Place Winners' Interview: Team Best Fitting | Bestfitting, Zero, & CircleCircle <http://blog.kaggle.com/2017/05/11/two-sigma-financial-modeling-code-competition-5th-place-winners-interview-team-best-fitting-bestfitting-zero-circlecircle/>`_,
-`Two Sigma Financial Modeling Challenge, Winner's Interview: 2nd Place, Nima Shahbazi, Chahhou Mohamed <http://blog.kaggle.com/2017/05/25/two-sigma-financial-modeling-challenge-winners-interview-2nd-place-nima-shahbazi-chahhou-mohamed/>`_.
+`Two Sigma Financial Modeling Code Competition, 5th Place Winners' Interview: Team Best Fitting | Bestfitting, Zero, & CircleCircle
+<http://blog.kaggle.com/2017/05/11/two-sigma-financial-modeling-code-competition-5th-place-winners-interview-team-best-fitting-bestfitting-zero-circlecircle/>`_,
+`Two Sigma Financial Modeling Challenge, Winner's Interview: 2nd Place, Nima Shahbazi, Chahhou Mohamed
+<http://blog.kaggle.com/2017/05/25/two-sigma-financial-modeling-challenge-winners-interview-2nd-place-nima-shahbazi-chahhou-mohamed/>`_.
 
 .. _l-fi-trend:
 
@@ -79,8 +81,10 @@ Il existe de nombreuses variantes. En voici une :
     On compare la moyenne mobile à 10 jours avec la moyenne mobile à 100 jours.
     Deux cas sont à considérer :
 
-        - si la moyenne à court terme est plus élevée que la moyenne à long terme, nous sommes sur une tendance haussière :math:`\rightarrow` on achète
-        - si la moyenne à court terme est inférieure à la moyenne à long terme, la tendance est baissière :math:`\rightarrow` on vend
+    - si la moyenne à court terme est plus élevée que la moyenne à long terme,
+      nous sommes sur une tendance haussière :math:`\rightarrow` on achète
+    - si la moyenne à court terme est inférieure à la moyenne à long terme,
+      la tendance est baissière :math:`\rightarrow` on vend
 
 Vous trouverez plus à cette page :
 :ref:`finance_strategie_automatique`.
@@ -137,6 +141,23 @@ des indicateurs comme la volatilité, la distance à différentes moyennes mobil
 une autre action, le `RSI <http://fr.wikipedia.org/wiki/Relative_strength_index>`_... Ces indicateurs ne dépendent que du passé de la série.
 L'objectif est de construire une fonction qui prédit la bonne décision :math:`Y_t = f(X_t) + \epsilon_t`. On utilise
 des techniques issues du machine learning et des modules tels que `scikit-learn <http://scikit-learn.org/stable/>`_.
+
+.. _l-fi-etf:
+
+ETF: réplication d'un indice
+----------------------------
+
+Un tracker ou ETF (Exchange Traded Funds) est un fonds de placement en valeurs mobilières
+dont les parts peuvent être transigées en bourse, comme des actions.
+(source: `Fonds négocié en bourse <https://fr.wikipedia.org/wiki/Fonds_n%C3%A9goci%C3%A9_en_bourse>`_).
+La plupart des fonds négociés en bourse sont des fonds indiciels, véhicules de placement qui 
+reproduisent le comportement d'un indice boursier et caractérisés par des frais d'administration 
+minimes ; on parle alors de fonds indiciels cotés (trackers en anglais).
+L'idée de ce projet est de répliquer une indice de votre choix
+d'une manière différente. On peut par exemple reproduire un indice américain
+avec des actions européennes.
+Un autre exemple sous forme de notebook : `etf-replicate.ipynb
+<https://github.com/alpacahq/blogmaterials/blob/master/001-etf-replicator/etf-replicate.ipynb>`_.
 
 Travail attendu
 ---------------
