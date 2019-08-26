@@ -780,8 +780,8 @@ Fork / Stars / Downloads
 
     row = indent(dedent("""
         * - `{0} <http://www.xavierdupre.fr/app/{0}/helpsphinx/index.html>`_
-          - .. image:: https://pepy.tech/badge/{0}
-                :target: https://pypi.org/project/{0}/
+          - .. image:: https://pepy.tech/badge/{0}/month
+                :target: https://pepy.tech/project/{0}/
                 :alt: Downloads
           - .. image:: http://img.shields.io/github/issues/sdpython/{0}.png
                 :alt: GitHub Issues
@@ -808,8 +808,8 @@ Fork / Stars / Downloads
 
     row2 = indent(dedent("""
         * - `{0} <http://lesenfantscodaient.fr/>`_
-          - .. image:: https://pepy.tech/badge/{0}
-                :target: https://pypi.org/project/{0}/
+          - .. image:: https://pepy.tech/badge/{0}/month
+                :target: https://pepy.tech/project/{0}/
                 :alt: Downloads
           - .. image:: http://img.shields.io/github/issues/sdpython/{0}.png
                 :alt: GitHub Issues
