@@ -62,7 +62,8 @@ jobs:
           command: |
             echo "deb http://deb.debian.org/debian experimental main" | sudo tee /etc/apt/sources.list.d/proj.list
             sudo apt-get -qq update
-            sudo apt-get -t experimental install -y libproj-dev proj-bin proj-data libgeos-dev
+            sudo apt-get -t experimental install -y libproj-dev proj-bin=6.1.1-1 proj-data libgeos-dev
+            sudo apt-get install -y python-gdal gdal-bin libc6
 
       - run:
           name: Install pyproj (2)
@@ -71,16 +72,13 @@ jobs:
             . venv/bin/activate
             pip install git+https://github.com/jswhit/pyproj.git
 
-      - run:
-          name: Install pyproj (3) - optional
-          command: |
-            sudo apt-get install -y libc6
-            sudo apt-get install libgeos-dev
-            sudo apt-get install python-gdal gdal-bin
-            wget http://es.archive.ubuntu.com/ubuntu/pool/universe/p/proj/libproj9_4.9.2-2_amd64.deb 
-            sudo dpkg -i libproj9_4.9.2-2_amd64.deb 
-            wget http://es.archive.ubuntu.com/ubuntu/pool/universe/p/proj/libproj-dev_4.9.2-2_amd64.deb
-            sudo dpkg -i libproj-dev_4.9.2-2_amd64.deb
+#      - run:
+#          name: Install pyproj (3) - optional
+#          command: |
+#            wget http://es.archive.ubuntu.com/ubuntu/pool/universe/p/proj/libproj9_4.9.2-2_amd64.deb 
+#            sudo dpkg -i libproj9_4.9.2-2_amd64.deb 
+#            wget http://es.archive.ubuntu.com/ubuntu/pool/universe/p/proj/libproj-dev_4.9.2-2_amd64.deb
+#            sudo dpkg -i libproj-dev_4.9.2-2_amd64.deb
 
       - run:
           name: Install pygame
