@@ -22,15 +22,6 @@ jobs:
                     sudo dpkg -i pandoc-2.2.1-1-amd64.deb
           
       - run:
-          name: Install tex
-          command: |
-                    sudo apt-get install -y texlive
-                    sudo apt-get install -y texlive-latex-extra
-                    sudo apt-get install -y texlive-lang-french
-                    sudo apt-get install -y texlive-xetex
-                    sudo apt-get install -y dvipng
-          
-      - run:
           name: Install 7z
           command: |
                     sudo apt-get install -y p7zip-full
@@ -62,7 +53,7 @@ jobs:
           command: |
             echo "deb http://deb.debian.org/debian sid main" | sudo tee /etc/apt/sources.list.d/proj.list
             sudo apt-get -qq update
-            sudo apt-get -t experimental install -y libproj-dev proj-bin=6.1.1-1 proj-data libgeos-dev
+            sudo apt-get -t sid install -y libproj-dev proj-bin=6.1.1-1 proj-data libgeos-dev
             sudo apt-get install -y python-gdal gdal-bin libc6
 
       - run:
@@ -152,6 +143,15 @@ jobs:
             . venv/bin/activate
             python3 -m pip freeze
 
+      - run:
+          name: Install tex
+          command: |
+                    sudo apt-get install -y texlive
+                    sudo apt-get install -y texlive-latex-extra
+                    sudo apt-get install -y texlive-lang-french
+                    sudo apt-get install -y texlive-xetex
+                    sudo apt-get install -y dvipng
+          
       - save_cache:
           paths:
             - ./venv
