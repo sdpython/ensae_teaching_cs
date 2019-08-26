@@ -60,15 +60,16 @@ jobs:
           command: |
             python3 -m venv venv
             . venv/bin/activate
-            pip install git+https://github.com/jswhit/pyproj.git
+            pip install git+https://github.com/pyproj4/pyproj.git
 
-#      - run:
-#          name: Install pyproj (3) - optional
-#          command: |
-#            wget http://es.archive.ubuntu.com/ubuntu/pool/universe/p/proj/libproj9_4.9.2-2_amd64.deb 
-#            sudo dpkg -i libproj9_4.9.2-2_amd64.deb 
-#            wget http://es.archive.ubuntu.com/ubuntu/pool/universe/p/proj/libproj-dev_4.9.2-2_amd64.deb
-#            sudo dpkg -i libproj-dev_4.9.2-2_amd64.deb
+            # needed otherwise error: ImportError: libproj.so.9: cannot open shared object file: No such file or directory
+      - run:
+          name: Install pyproj (3)
+          command: |
+            wget http://es.archive.ubuntu.com/ubuntu/pool/universe/p/proj/libproj9_4.9.2-2_amd64.deb 
+            sudo dpkg -i libproj9_4.9.2-2_amd64.deb 
+            wget http://es.archive.ubuntu.com/ubuntu/pool/universe/p/proj/libproj-dev_4.9.2-2_amd64.deb
+            sudo dpkg -i libproj-dev_4.9.2-2_amd64.deb
 
       - run:
           name: Install pygame
