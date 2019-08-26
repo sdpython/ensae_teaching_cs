@@ -62,7 +62,7 @@ jobs:
           command: |
             echo "deb http://deb.debian.org/debian experimental main" | sudo tee /etc/apt/sources.list.d/proj.list
             sudo apt-get -qq update
-            sudo apt-get -t experimental install -y libproj-dev proj-bin=6.1.1-1 proj-data libgeos-dev
+            sudo apt-get -t experimental install -y libproj-dev proj-bin=6.1.1-1~exp1 proj-data libgeos-dev
             sudo apt-get install -y python-gdal gdal-bin libc6
 
       - run:
