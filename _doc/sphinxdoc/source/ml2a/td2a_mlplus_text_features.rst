@@ -45,3 +45,4 @@ représentée sous forme de texte.
 * :epkg:`scikit-learn`
 * `glove sur GitHub <https://github.com/stanfordnlp/GloVe>`_
 * `chars2vec <https://github.com/IntuitionEngineeringTeam/chars2vec>`_
+* `pyldavis <https://github.com/bmabey/pyLDAvis>`_

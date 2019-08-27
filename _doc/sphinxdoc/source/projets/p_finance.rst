@@ -150,8 +150,8 @@ ETF: réplication d'un indice
 Un tracker ou ETF (Exchange Traded Funds) est un fonds de placement en valeurs mobilières
 dont les parts peuvent être transigées en bourse, comme des actions.
 (source: `Fonds négocié en bourse <https://fr.wikipedia.org/wiki/Fonds_n%C3%A9goci%C3%A9_en_bourse>`_).
-La plupart des fonds négociés en bourse sont des fonds indiciels, véhicules de placement qui 
-reproduisent le comportement d'un indice boursier et caractérisés par des frais d'administration 
+La plupart des fonds négociés en bourse sont des fonds indiciels, véhicules de placement qui
+reproduisent le comportement d'un indice boursier et caractérisés par des frais d'administration
 minimes ; on parle alors de fonds indiciels cotés (trackers en anglais).
 L'idée de ce projet est de répliquer une indice de votre choix
 d'une manière différente. On peut par exemple reproduire un indice américain

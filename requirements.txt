@@ -41,6 +41,7 @@ pyensae>=1.2.788
 pygal
 pygal_maps_fr
 pygame
+pyldavis
 pylzma
 pymmails
 pympler
@@ -49,6 +50,7 @@ pyqt5
 pyquickhelper>1.9
 pyrsslocal
 python-jenkins
+pywaffle
 qgrid
 semantic_version
 seasonal
