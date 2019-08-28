@@ -21,7 +21,6 @@ class TestLONGNotebookRunner2aEcoNLP1(unittest.TestCase):
             OutputPrint=__name__ == "__main__")
 
         from ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
-        from ensae_teaching_cs.data import simple_database
         temp = get_temp_folder(__file__, "temp_notebook2a_eco_nlp_long1")
         keepnote = ls_notebooks("td2a_eco2")
 
