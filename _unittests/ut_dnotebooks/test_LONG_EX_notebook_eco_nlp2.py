@@ -2,11 +2,9 @@
 """
 @brief      test log(time=608s)
 """
-import os
 import unittest
-import shutil
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor, add_missing_development_version
+from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
 import ensae_teaching_cs
 
 
