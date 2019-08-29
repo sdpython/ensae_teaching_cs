@@ -64,7 +64,7 @@ class Game2048:
             :showcode:
 
             from ensae_teaching_cs.td_1a.cp2048 import Game2048
-            print(g.process_line([0, 2, 2, 4]))
+            print(Game2048.process_line([0, 2, 2, 4]))
         """
         res = []
         for n in line:
