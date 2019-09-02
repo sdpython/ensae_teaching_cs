@@ -5,10 +5,9 @@
 Algorithmes et programmation
 ============================
 
-`ENSAE - OMI1C4 <http://www.ensae.fr/ensae/fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100115>`_,
-`ENSAE - OMI1C9 <http://www.ensae.fr/ensae/fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/1re-anne-formationsdiplome-94.html?id=100332>`_
+`Algorithmes et Programmation <https://www.ensae.fr/courses/algorithmes-et-programmation/>`_ (ENSAE)
 
-Plan approximatif du cours : :ref:`l-feuille-de-route-2018-1A`.
+Plan approximatif du cours : :ref:`l-feuille-de-route-2019-1A`.
 
 Cours animé par
 `Xavier Dupré <http://www.xavierdupre.fr/>`_
@@ -22,8 +21,10 @@ depuis 2001.
              :height: 20
              :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/pressphinx/index.html
 
-Le cours est évalué au premier semestre par un examen et aussi :ref:`l-examens-1A-algo`.
-Le second semestre et facultatif et est évalué par :ref:`projet informatique <l-projinfo1a>`.
+Le cours est évalué au premier semestre par la construction d'un
+package :epkg:`python` (:ref:`l-examens-1A-algo`) et d'un examen.
+Le second semestre et facultatif et est évalué par
+:ref:`projet informatique <l-projinfo1a>`.
 Si vous savez déjà programmer, vous devriez aller jusqu'au bout d'un des énoncés
 des :ref:`examens précédents <l-examens>` en moins de deux heures.
 L'informatique est plus souvent un outil qu'une matière à part entière.
@@ -46,6 +47,8 @@ est celui qui maîtrise à la fois un domaine métier,
 celui pour lequel il a été formé, et les techniques informatiques
 qu'il sera amené à manipuler au quotidien. Tous les thèmes ne seront
 pas abordés, les thèmes suivant intéresseront sans doute les plus curieux.
+Les connaissances en informatique sont hétérogènes après les classes
+préparatoires, les énoncés sont à choisir en fonction des lacunes.
 
 .. contents::
     :local:
@@ -58,7 +61,8 @@ TD - Les bases
 ==============
 
 Les premières séances exposent les éléments de syntaxe propres à
-la `programmation impérative <https://fr.wikipedia.org/wiki/Programmation_imp%C3%A9rative>`_
+la `programmation impérative
+<https://fr.wikipedia.org/wiki/Programmation_imp%C3%A9rative>`_
 et au langage :epkg:`Python`.
 
 .. toctree::
@@ -88,14 +92,16 @@ et qu'il est important de comprendre.
     notebooks/histogramme_rapide
     notebooks/code_multinomial
     notebooks/matrix_dictionary
+    notebooks/coloriage_carre
 
 Au terme de ces six séances, si la programmation est nouvelle pour vous ou
 si le langage vous paraît encore peu naturel,
 je vous encourage à faire d'autres exercices comme
 piocher dans les anciens :ref:`l-examens`, à regarder la liste des exercices
-proposées à `Quelques exercices du Project Euler <http://mathprepa.fr/python-project-euler-mpsi/>`_.
-La plupart de ces notions font déjà partie du programme des classes préparatoires
-scientifiques.
+proposées à `Quelques exercices du Project Euler
+<http://mathprepa.fr/python-project-euler-mpsi/>`_.
+La plupart de ces notions font déjà partie du programme
+des classes préparatoires scientifiques.
 
 ------------
 
@@ -161,10 +167,12 @@ Il y a deux grandes astuces pour aller plus vite :
 Le tout est d'exprimer la solution en faisant apparaître l'un ou l'autre ou une
 combinaison des deux pour les problèmes
 les plus complexes.
-La programmation dynamique apparaît souvent quand on considère la solution sous forme récurrente.
+La programmation dynamique apparaît souvent
+quand on considère la solution sous forme récurrente.
 La dichotomie consiste à résoudre à couper l'ensemble de départ en deux,
 à résoudre le problème pour les deux sous-ensembles,
-puis à fusionner les deux solutions. Cela ne dépend pas du langage :epkg:`Python`.
+puis à fusionner les deux solutions.
+Cela ne dépend pas du langage :epkg:`Python`.
 Pour vous exercer :
 
 .. toctree::
@@ -190,9 +198,10 @@ S'amuser avec les algorithmes
 Un peu plus ludique et présentés sous la forme de défis :
 
 * :ref:`l-hermionne`
-* `Optimisation de la tournée d'un camion poubelle <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_tour.html>`_ :
-  le camion poubelle doit parcourir toutes les rues d'une ville, comment trouve-t-il le chemin le
-  plus court ?
+* `Optimisation de la tournée d'un camion poubelle
+  <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_tour.html>`_ :
+  le camion poubelle doit parcourir toutes les rues d'une ville,
+  comment trouve-t-il le chemin le plus court ?
 
 .. toctree::
     :maxdepth: 2
@@ -203,7 +212,8 @@ Un peu plus ludique et présentés sous la forme de défis :
 
 * `Rosalind <http://rosalind.info/problems/topics/>`_
 * `Google Jam <https://code.google.com/codejam/>`_
-  (exemple : `Le problème des milkshakes <https://code.google.com/codejam/contest/32016/dashboard#s=p1​>`_)
+  (exemple : `Le problème des milkshakes
+  <https://code.google.com/codejam/contest/32016/dashboard#s=p1​>`_)
 * :ref:`Algorithmes classiques implémentés <l-blog-algo-impl>`
 * `tryalgo <https://github.com/jilljenn/tryalgo>`_
 
@@ -243,7 +253,8 @@ sont incontournables pour manipuler les données en :epkg:`Python`.
 
 Il existe de nombreuses libraires de visualisation des données en :epkg:`Python` et
 elles se sont multipliées depuis l'avènement des notebooks :
-`10 plotting libraries at PyData 2016 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_.
+`10 plotting libraries at PyData 2016
+<http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_.
 
 S'amuser avec des données
 +++++++++++++++++++++++++
@@ -374,10 +385,11 @@ est régulière, vous devriez aller trois fois plus vite à la fin de la scolari
 Getting started
 ===============
 
-Il faut vous reporter à la section :ref:`l-installation-courte` pour installer :epkg:`Python`.
-Certaines séances pratiques utilisent des données depuis ce site.
-Elles sont facilement téléchargeables avec ces deux modules
-:epkg:`pyquickhelper` et :epkg:`pyensae`.
+Il faut vous reporter à la section :ref:`l-installation-courte`
+pour installer :epkg:`Python`. Certaines séances pratiques
+utilisent des données depuis ce site. Elles sont facilement
+téléchargeables avec ces deux modules :epkg:`pyquickhelper`
+et :epkg:`pyensae`.
 
 Il faut ensuite un outil pour écrire des programmes.
 Si la majorité des exemples sont fournis sous forme de
@@ -403,35 +415,54 @@ Bibliographie
 
 *Liens*
 
-* `Message de service aux débutants en Python <http://sametmax.com/message-de-service-aux-debutants-en-python/>`_
+* `Message de service aux débutants en Python
+  <http://sametmax.com/message-de-service-aux-debutants-en-python/>`_
 * `Cours et tutos <http://sametmax.com/cours-et-tutos/>`_
-* `Les trucmuchables en Python <http://sametmax.com/les-trucmuchables-en-python/>`_ (iterable, mutable, immutable, ...)
-* `A gallery of interesting IPython Notebooks <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
+* `Les trucmuchables en Python <http://sametmax.com/les-trucmuchables-en-python/>`_
+  (iterable, mutable, immutable, ...)
+* `A gallery of interesting IPython Notebooks
+  <https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks>`_
 * `Data Science in Python <http://blog.yhathq.com/posts/data-science-in-python-tutorial.html>`_
-* `Installer Python pour faire des statistiques <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
-* `Exercices de programmation <http://www.xavierdupre.fr/blog/2014-03-22_nojs.html>`_
-* `De l'idée au programme informatique <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_
+* `Installer Python pour faire des statistiques
+  <http://www.xavierdupre.fr/blog/2014-02-26_nojs.html>`_
+* `Exercices de programmation
+  <http://www.xavierdupre.fr/blog/2014-03-22_nojs.html>`_
+* `De l'idée au programme informatique
+  <http://www.xavierdupre.fr/blog/2013-11-08_nojs.html>`_
 * `Questions Fréquentes <https://docs.python.org/3/faq/index.html>`_
 * :ref:`l-FAQs`
 * :ref:`l-glossary`
 * :ref:`l-questions`
 * `Débugger en Python <http://www.xavierdupre.fr/blog/2014-06-02_nojs.html>`_
 * `Modules standards <https://docs.python.org/3/library/>`_
-* `8 Regular Expressions You Should Know <http://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149>`_ *(2016/03)*
+* `8 Regular Expressions You Should Know
+  <http://code.tutsplus.com/tutorials/8-regular-expressions-you-should-know--net-6149>`_ *(2016/03)*
 * `Love Python <http://love-python.blogspot.fr/>`_ *(2016/03)*
-* `The Hitchhiker's Guide to Python! <http://docs.python-guide.org/en/latest/>`_ *(2016/06)*
-* `Evolution of a salesman: A complete genetic algorithm tutorial for Python <https://towardsdatascience.com/evolution-of-a-salesman-a-complete-genetic-algorithm-tutorial-for-python-6fe5d2b3ca35>`_
+* `The Hitchhiker's Guide to Python!
+  <http://docs.python-guide.org/en/latest/>`_ *(2016/06)*
+* `Evolution of a salesman: A complete genetic algorithm tutorial for Python
+  <https://towardsdatascience.com/evolution-of-a-salesman-a-complete-genetic-algorithm-tutorial-for-python-6fe5d2b3ca35>`_
 
 *Livres*
 
-* `Apprentissage de la programmation <http://inforef.be/swi/python.htm>`_, Gérald Swinnen
-* `Une introduction à Python 3 <https://perso.limsi.fr/pointal/python:courspython3>`_
-* `Programmation avec le langage Python <http://www.xavierdupre.fr/site2013/documents/python/initiation_via_python_ellipse_mai_2010.pdf>`_ (PDF, ou version `Ellipse <http://www.editions-ellipses.fr/product_info.php?products_id=6891>`_),
+* `Apprentissage de la programmation
+  <http://inforef.be/swi/python.htm>`_, Gérald Swinnen
+* `Une introduction à Python 3
+  <https://perso.limsi.fr/pointal/python:courspython3>`_
+* `Programmation avec le langage Python
+  <http://www.xavierdupre.fr/site2013/documents/python/initiation_via_python_ellipse_mai_2010.pdf>`_
+  (PDF, ou version `Ellipse <http://www.editions-ellipses.fr/product_info.php?products_id=6891>`_),
   version web et plus récentes : :epkg:`teachpyx`.
-* `Teach Yourself Python in 24 Hours <http://www.pauahtun.org/TYPython/>`_, Ivan Van Laningham
-  (le site est visuellement difficile, `version PDF <http://ptgmedia.pearsoncmg.com/images/9780672336874/samplepages/0672336871.pdf>`_)
-* `Précis de recherche opérationnelle <http://www.eyrolles.com/Informatique/Livre/precis-de-recherche-operationnelle-9782100706129>`_, Robert Faure, Bernard Lemaire, Christophe Picouleau
-* `Problem Solving with Algorithms and Data Structures <https://www.cs.auckland.ac.nz/courses/compsci107s1c/resources/ProblemSolvingwithAlgorithmsandDataStructures.pdf>`_, Brad Miller, David Ranum (version `html <http://interactivepython.org/courselib/static/pythonds/index.html>`_)
+* `Teach Yourself Python in 24 Hours
+  <http://www.pauahtun.org/TYPython/>`_, Ivan Van Laningham
+  (le site est visuellement difficile, `version PDF
+  <http://ptgmedia.pearsoncmg.com/images/9780672336874/samplepages/0672336871.pdf>`_)
+* `Précis de recherche opérationnelle
+  <http://www.eyrolles.com/Informatique/Livre/precis-de-recherche-operationnelle-9782100706129>`_,
+  Robert Faure, Bernard Lemaire, Christophe Picouleau
+* `Problem Solving with Algorithms and Data Structures
+  <https://www.cs.auckland.ac.nz/courses/compsci107s1c/resources/ProblemSolvingwithAlgorithmsandDataStructures.pdf>`_,
+  Brad Miller, David Ranum (version `html <http://interactivepython.org/courselib/static/pythonds/index.html>`_)
 * `Automate Boring Stuff with Python <https://automatetheboringstuff.com/>`_ (2016/03)
 * `Intermediate Python Release <http://pythontips.com/2015/08/17/intermediate-python-released/#more-665>`_ (2016/03)
 
@@ -500,3 +531,4 @@ revêt de plus en plus d'importance en datascience.
     :maxdepth: 1
 
     questions/route_1A_2018
+    questions/route_1A_2019

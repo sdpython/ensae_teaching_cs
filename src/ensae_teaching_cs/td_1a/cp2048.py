@@ -6,7 +6,7 @@ import random
 import numpy
 
 
-class GameOverException(Exception):
+class GameOverException(RuntimeError):
     """
     Raised when the game is over.
     """
@@ -18,15 +18,20 @@ class Game2048:
     Implements the logic of the game :epkg:`2048`.
     """
 
-    def __init__(self, game):
+    def __init__(self, game=None):
         """
-        :param game: matrix 4x4
+        :param game: None or matrix 4x4
         """
-        self.game = game
+        self.game = game or numpy.zeros((4, 4), dtype=int)
+        self.moves = []
 
     def __str__(self):
         "Displays the game as a string."
-        return str(self.game)
+        if len(self.moves) > 3:
+            last_moves = self.moves[-3:]
+        else:
+            last_moves = self.moves
+        return "{}\n{}".format(str(self.game), str(last_moves))
 
     def gameover(self):
         "Checks the game is over or not. Returns True in that case."
@@ -47,12 +52,8 @@ class Game2048:
                 if self.game[i, j] == 0:
                     n = random.randint(0, 3)
                     self.game[i, j] = 4 if n == 0 else 2
+                    self.moves.append((i, j, self.game[i, j]))
                     break
-
-    @staticmethod
-    def create_game():
-        "Creates an empty matrix."
-        return Game2048(numpy.zeros((4, 4), dtype=int))
 
     @staticmethod
     def process_line(line):
@@ -105,31 +106,62 @@ class Game2048:
                      for i in range(self.game.shape[1])]
             self.game = numpy.array(lines).T
 
-    def best_move(self):
-        """
-        Selects the best move knowing the current game.
-        By default, selects a random direction.
-        This function must not modify the game.
-        """
-        return random.randint(0, 3)
-
     def score(self):
         "Returns the maximum values."
         return numpy.max(self.game)
 
-    def evaluate_strategy(self, ntries=10):
+    def best_move(self, game=None, moves=None):
         """
-        Applies method *best_move* until gameover
-        starting from the current position. Repeats *ntries* times
-        and the maximum number in every try.
+        Selects the best move knowing the current game.
+        By default, selects a random direction.
+        This function must not modify the game.
+
+        @param  game        4x4 matrix or None for the current matrix
+        @param  moves       all moves since the begining
+        @return             one integer
         """
-        for i in range(0, ntries):
-            g = self.copy()
-            while True:
-                try:
-                    g.next_turn()
-                except GameOverException:
-                    break
-                d = g.best_move()
-                g.play(d)
-            yield g.score()
+        if game is None:
+            game = self.game
+        if moves is None:
+            moves = self.moves
+        if moves is None:
+            raise ValueError("moves cannot be None")
+        if not isinstance(game, numpy.ndarray) or game.shape != (4, 4):
+            raise ValueError("game must be a matrix (4x4).")
+        return random.randint(0, 3)
+
+
+def evaluate_strategy(fct_strategy, ntries=10):
+    """
+    Applies method *best_move* until gameover
+    starting from the current position. Repeats *ntries* times
+    and the maximum number in every try.
+
+    @param      fct_strategy    a function which returns the best move
+                                (see below)
+    @return                     enumerator on scores
+
+    One example to show how to test a strategy:
+
+    .. runpython::
+        :showcode:
+
+        import random
+        from ensae_teaching_cs.td_1a.cp2048 import evaluate_strategy
+
+        def random_strategy(game, moves):
+            return random.randint(0, 3)
+
+        scores = list(evaluate_strategy(random_strategy))
+        print(scores)
+    """
+    for i in range(0, ntries):
+        g = Game2048()
+        while True:
+            try:
+                g.next_turn()
+            except (GameOverException, RuntimeError):
+                break
+            d = fct_strategy(g.game, g.moves)
+            g.play(d)
+        yield g.score()

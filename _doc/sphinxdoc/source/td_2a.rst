@@ -5,7 +5,8 @@
 Python pour un Data Scientist / Economiste
 ==========================================
 
-`ENSAE - OMI2F2 <http://www.ensae.fr/ensae/fr/formations-navhorizontale-172/statisticien-conomiste-navhorizontale-48/2me-anne-formationsdiplome-95.html?id=101352>`_
+`Python pour un datascientist ou un économiste
+<https://www.ensae.fr/courses/python-pour-le-data-scientist-pour-leconomiste/>`_.
 
 Ce cours s'étale sur 24 heures de cours/TD.
 Les outils proposés sont en langage :epkg:`Python`. Ils sont tous :epkg:`open source`,

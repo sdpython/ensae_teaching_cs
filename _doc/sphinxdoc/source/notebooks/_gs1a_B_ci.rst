@@ -1,4 +1,6 @@
 
+.. _l-ci-1a-notebooks:
+
 Tests Unitaires, Continuous Integration
 =======================================
 

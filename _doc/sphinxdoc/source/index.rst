@@ -3,18 +3,18 @@
 Python dans tous ses états
 ==========================
 
-Contenu des séances de travaux pratiques en programmation
-que je dispense à l':epkg:`ENSAE`.
-Ces cours s'appuient principalement sur
-le langage :epkg:`Python`.
-Le contenu est librement disponible sur `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs>`_ |gitlogo|
+Ce site propose le contenu des séances de travaux pratiques en programmation
+que je dispense à l':epkg:`ENSAE`. Ces cours s'appuient principalement sur
+le langage :epkg:`Python`. Le contenu est librement disponible
+sur `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs>`_ |gitlogo|
 et permet à quiconque de contribuer à ce cours.
 Il existe deux formats disponibles :
 `mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_ ou
 `plus large <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
 Les changements importants sont notés sur le :ref:`blog <ap-main-0>`
-associé à ce cours, certains modifications prévues
-sont notés sur `github/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs/issues>`_.
+associé à ce cours, certaines modifications prévues
+sont notés sur `github/ensae_teaching_cs
+<https://github.com/sdpython/ensae_teaching_cs/issues>`_.
 
 .. |gitlogo| image:: _static/git_logo.png
              :height: 20
@@ -26,26 +26,41 @@ sont notés sur `github/ensae_teaching_cs <https://github.com/sdpython/ensae_tea
     :depth: 1
     :local:
 
-Ce site est principalement un site d'exercices. D'autres contenus sont disponibles :
+Ce site est principalement un site d'exercices. D'autres contenus
+dont je suis l'auteur principal sont disponibles :
 
 * `Cours de machine learning <http://www.xavierdupre.fr/app/papierstat/helpsphinx/index.html>`_,
-* `Eléments théoriques de machine learning <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html#mlstatpy>`_
-* `Programmation avec Python <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_,
-* `Jeux autour d'algorithmes pour les enfatns <http://lesenfantscodaient.fr/>`_,
-* `Présentations, conférences <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_,
-* `Hackathons organisés pour les étudiants <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_.
+  ce site est plus didactique, il contient moins d'exercices et souvent plus simples,
+  il explique certains aspect du machine learning,
+* `Eléments théoriques de machine learning
+  <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html#mlstatpy>`_,
+  ce site dérive de ma thèse, il arborde certains points précis d'un point de vue
+  très mathématiques,
+* `Programmation avec Python
+  <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_,
+  ce site revient sur les éléments du langage :epkg:`Python`,
+* `Jeux autour d'algorithmes pour les enfatns
+  <http://lesenfantscodaient.fr/>`_, ce site contient des jeux
+  avec ou sans ordinateurs pour comprendre des algorithms.
+* `Présentations, conférences
+  <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_,
+  un endroit où je mets en ligne mes présentations publiques,
+* `Hackathons organisés pour les étudiants
+  <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_,
+  le site où je garde la trace des hackathons de l'ENSAE.
 
 Avant-propos
 ============
 
 Les langages :epkg:`R` et
 :epkg:`Python` sont devenus
-incontournables dans le domaine des statistiques.
-Ils sont simples,
+incontournables dans le domaine des statistiques. *Python* l'est encore
+plus dans le domaine de l'intelligence artificielle et notemment
+du deep learning. Ils sont simples,
 `open source <https://fr.wikipedia.org/wiki/Open_source>`_,
 s'apprennent rapidement, sont utilisés
 par beaucoup et disposent de nombreuses pages, blogs, listes
-de diffusions qui leur sont dédiées.
+de diffusions qui leur sont dédiés.
 :epkg:`R` est le terrain de jeu préféré des chercheurs
 mais il est peu pratique pour développer un site web ou un jeu.
 :epkg:`Python` est beaucoup plus polyvalent
@@ -148,7 +163,8 @@ avec la distribution `Anaconda <https://www.continuum.io/downloads>`_.
 Sous Windows, le site
 `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
 proposent de nombreux modules qui nécessitent un compilateur C++. On les repère car
-l'installation ``pip install <module>`` échoue à moins de savoir bidouiller sa machine.
+l'installation ``pip install <module>``
+échoue à moins de savoir bidouiller sa machine.
 
 Dépendences et automatisation
 +++++++++++++++++++++++++++++
