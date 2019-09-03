@@ -33,8 +33,7 @@ Voici un exemple :
 La stratégie devra venir du module que vous devrez implémenter
 de la façon suivant :
 
-.. runpython::
-    :showcode:
+::
 
     import random
     from ensae_teaching_cs.td_1a.cp2048 import evaluate_strategy
