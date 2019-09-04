@@ -2,24 +2,21 @@
 @brief      test log(time=7s)
 """
 
-import sys
 import os
 import unittest
-import warnings
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, fix_tkinter_issues_virtualenv, ExtTestCase
+from pyquickhelper.pycode import (
+    get_temp_folder, fix_tkinter_issues_virtualenv, ExtTestCase, skipif_circleci
+)
 from ensae_teaching_cs.tests.american_cities import american_cities
 
 
 class TestFaqMatplotlibVideo(ExtTestCase):
 
+    @skipif_circleci("Received 'segmentation fault' signal")
     def test_american_cities(self):
         fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
 
-        if sys.version_info[:2] <= (3, 4):
-            warnings.warn(
-                "Issue with Python 3.4, bug probably related to wrong pointers")
-            return
         fix_tkinter_issues_virtualenv()
         temp = get_temp_folder(__file__, "temp_matplotlib_video")
         name = os.path.join(temp, "..", "data", "american_cities.txt")

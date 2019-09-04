@@ -1,4 +1,6 @@
 
+.. _l-1a-classe-heritage:
+
 Classes, héritages
 ==================
 
