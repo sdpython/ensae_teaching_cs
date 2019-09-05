@@ -53,6 +53,14 @@ préparatoires, les énoncés sont à choisir en fonction des lacunes.
 .. contents::
     :local:
 
+Au terme du cours, les élèves sauront :
+
+* résoudre un problème avec un assemblage d'algorithmes
+* implémenter un algorithme sur les graphes
+* construire un module python
+* maîtriser les bases des outils python permettant de
+  manipuler et représenter les données
+
 ------------
 
 .. _l-td1a-lesbases:
