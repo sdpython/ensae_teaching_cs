@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-@brief      test log(time=28s)
+@brief      test log(time=53s)
 """
 import unittest
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
+from pyquickhelper.pycode import (
+    get_temp_folder, add_missing_development_version, skipif_circleci
+)
 import ensae_teaching_cs
 
 
@@ -14,6 +16,7 @@ class TestNotebookRunner1a_soft(unittest.TestCase):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper", "mlstatpy"],
                                         __file__, hide=True)
 
+    @skipif_circleci('too long')
     def test_notebook_runner_soft(self):
         fLOG(
             __file__,
