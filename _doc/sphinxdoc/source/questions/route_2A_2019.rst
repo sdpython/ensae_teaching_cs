@@ -3,6 +3,7 @@
 
 Feuille de route 2019 (2A)
 ==========================
+
 *en préparation*
 
 .. contents::
@@ -11,21 +12,39 @@ Feuille de route 2019 (2A)
 
 :ref:`Page principale du cours <l-td2a>`
 
-Plan
-++++
-
-Les cours et séances se déroulent sur 8 séances de 3h
+Les cours et séances se déroulent sur 9 séances de 3h
 mardi matin. Le cours est divisé en deux pistes
 *Stat* et *Eco* qui correspondent aux profils décrits
-dans :ref:`l-td2a-notions`. Un compte **slack**
-`python-ensae-2a.slack.com <https://python-ensae-2a.slack.com/>`_
-a été créé pour faciliter les échanges, annonces et questions.
-Une compétition sera ouverte le premier jour et
-fermée à la dernière session où les résultas et les idées seront
-discutées.
+dans :ref:`l-td2a-notions`. Voici les principaux
+thèmes abordés durant le cours :
 
-Séance 1 - 10/9 - amphi - régression et classification
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*Commun data scientist - économiste*
+
+* Pratique des principaux problèmes de machines Learning 
+  avec scikit-learn (classification, régression, 
+  clustering, prétraitement)
+* Visualisation des données
+* Construction d'un module python
+* Traitement des données textuelles (NLP, analyse de sentiments...) 
+
+*Data scientiste*
+
+* Implémentation de modèles personnalisés avec scikit-learn
+* Déploiement de modèles de machine Learning via des API rest
+* Problèmes moins fréquents de machine learning : 
+  apprentissage par renforcement, ranking, recommandation
+
+*Economiste*
+
+* Rappel sur les notebooks,
+  les dataframes, pandas, numpy, manipulation de données... 
+* Cartographie
+* Ethique des données
+* Webscrapping, API et expressions régulières
+* Séries temporelles
+
+Séance 1 - 10/9 - amphi - introduction
+++++++++++++++++++++++++++++++++++++++
 
 * Précision sur le cours, évaluation, exposés, ressources, TD, amphi,
 * `Rappels de mathématiques <http://www.xavierdupre.fr/app/papierstat/helpsphinx/rappel.html>`_
@@ -37,98 +56,99 @@ Séance 1 - 10/9 - amphi - régression et classification
 * `Base d'apprentissage et de test <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_knn_split.html>`_
 * `Classifications et courbes ROC <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_color_roc.html>`_
 * `Validation croisée <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_knn_cross_val.html>`_
-* **A faire pour la prochaine fois** : exécuter trois notebooks,
-  :ref:`structuresdonneesconversionrst`, :ref:`histogrammerapiderst`,
-  :ref:`mlfeaturesmodelrst`
 
-Séance 2 - 17/9 - TD - régression et classification par la pratique
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**A faire pour la prochaine fois** : exécuter trois notebooks,
+:ref:`structuresdonneesconversionrst`, :ref:`histogrammerapiderst`,
+:ref:`mlfeaturesmodelrst`
 
-Organisée comme une compétition, choisir un jeu de données
-sur `UCI <https://archive.ics.uci.edu/ml/datasets.php>`_
-et enregister les performances. La séance commencera
-par le requêtage d'une API REST car la soumission se fera via une
-API et non via un site.
 
-**prévoir deux jeux d'apprentissage et de tests**
+**suite à réécrire**
 
-Aborder les prétraitement comme la
-`normalisation <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_normalisation.html>`_,
-la :ref:`dimensionsreductionrst`.
+Séance 2 - 17/9
+^^^^^^^^^^^^^^^
 
-Séance 3 - 24/9 - TD - prétraitement et catégories
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**DS - TD** : régression quantile - détection d'anomalies
 
-* `normalisation <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_normalisation.html>`_,
-* :epkg:`dimensionsreductionrst`
-* traitement des catégories avec le jeu de données tiré de l'exemple
-  `Investigating dirty categories
-  <https://dirty-cat.github.io/stable/auto_examples/01_investigating_dirty_categories.html>`_
-* comparaison de modèles, régression logistique, plus proche voisin, random forest,
-  gradient boosting classifier, xgboost, lightgbm, catboost, Lasso, Ridge,
-  toujours sous la forme d'une compétition
+* `Régression quantile
+  <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/questions/exams_1A.html>`_
+  (correction : :ref:`tdnote20172rst`)
+* `Wine Quality Datasets <http://archive.ics.uci.edu/ml/datasets/Wine+Quality?ref=datanews.io>`_,
+  corréler les erreurs de prédictions de plusieurs modèles
+  avec plusieurs détection d'anomalies
 
-Séance 4 - 1/10 - amphi - ranking et compagnie
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Eco - Cours** : rappels :epkg:`pandas` :epkg:`numpy`
+:epkg:`matplotlib` début :epkg:`scikit-learn`
 
-* Ranking, détection d'anomalies, clustering, valeurs manquantes,
-  recommandations, imbalanced classification
 
-Séance 5 - 8/10 - TD - séries temporelles - gestion du texte
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Séance 3 - 24/9
+^^^^^^^^^^^^^^^
 
-Toujours sous la forme d'une compétition
+**DS**
 
-* `Variables textuelles <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/preprocessing.html>`_
-* `tokenisation <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_tokenize.html>`_
-* `de la tokenisation aux features <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_tokenize_features.html>`_
-* `word2vec <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/text_sentiment_wordvec.html>`_
-* :ref:`l-ml2a-text-features`
+**Eco**
 
-Séance 6 - 15/10 - TD - amphi - modèles mathématiques - éthique
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Propriétés des modèles mathématiques, modèles linéaires, modèles ensemblistes, modèles,
-  dérivables, gradient, feature importance, parallélisme, boosting
-* Ethique, machine learning éthique (Frédéric Bardolle)
 
-Séance 7 - 22/10 - TD - sérialisation, webscrapping
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Séance 4 - 1/10
+^^^^^^^^^^^^^^^
 
-* API SNCF
-* webscrapping
-* écriture de code rapide
-* traitement de gros volumes de données (base de données open food facts)
+**DS**
 
-Séance 8 - 5/11 - amphi/TD - datascience agile
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Eco**
 
-* Notion de pipeline
-* Mise en production de modèles de machine learning avec
-  :epkg:`docker`, :epkg:`kubernetes`...
 
-Séance 9 - 12/10 - amphi - sérialisation, webscrapping
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* discussion sur les projets
-* créer son propre modèle de machine learning
-  en utilisant l'API de :epkg:`scikit-learn`,
-  `Prédicteur pour chaque catégorie
-  <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_color_linear.html>`_,
-  :ref:`2018-09-18sklearnapirst`,
-  `Contributing <http://scikit-learn.org/stable/developers/contributing.html#contributing-code>`_,
-  `sklearn.base <http://scikit-learn.org/stable/modules/classes.html#module-sklearn.base>`_
-* `Understanding and diagnosing your machine-learning models
-  <http://gael-varoquaux.info/interpreting_ml_tuto/>`_
-* Les cours de Gaël Varoquaux :ref:`l-ml-skgael`,
-  les notebooks d'exercices associées à ces lectures.
+Séance 5 - 8/10
+^^^^^^^^^^^^^^^
+
+
+**DS**
+
+**Eco**
+
+
+Séance 6 - 15/10
+^^^^^^^^^^^^^^^^
+
+
+**DS**
+
+**Eco**
+
+
+Séance 7 - 22/10
+^^^^^^^^^^^^^^^^
+
+
+**DS**
+
+**Eco**
+
+Séance 8 - 5/11
+^^^^^^^^^^^^^^^
+
+
+**DS**
+
+**Eco**
+
+
+Séance 9 - 12/10
+^^^^^^^^^^^^^^^^
+
+
+**DS**
+
+**Eco**
+
 
 Prérequis
 +++++++++
 
 * *Voix stat* : maîtrise du langage :epkg:`Python`,
-  connaissance des modules :epkg:`pandas`, :epkg:`numpy`, :epkg:`matplotlib`, voir
-  `quelques rappels <http://www.xavierdupre.fr/app/papierstat/helpsphinx/rappel.html>`_
+  connaissance des modules :epkg:`pandas`, :epkg:`numpy`,
+  :epkg:`matplotlib`, voir `quelques rappels 
+  <http://www.xavierdupre.fr/app/papierstat/helpsphinx/rappel.html>`_
 * *Voix éco* : maîtrise du langage :epkg:`Python`, :ref:`td2ecorappels1arst`
 
 Intervenants
@@ -143,6 +163,78 @@ Frédéric Bardolle,
 
 Liens utiles et trop nombreux
 +++++++++++++++++++++++++++++
+
+Organisée comme une compétition, choisir un jeu de données
+sur `UCI <https://archive.ics.uci.edu/ml/datasets.php>`_
+et enregister les performances. La séance commencera
+par le requêtage d'une API REST car la soumission se fera via une
+API et non via un site.
+
+**prévoir deux jeux d'apprentissage et de tests**
+
+Aborder les prétraitement comme la
+`normalisation <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_normalisation.html>`_,
+la :ref:`dimensionsreductionrst`.
+
+
+
+* `normalisation <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_normalisation.html>`_,
+* :ref:`dimensionsreductionrst`
+* traitement des catégories avec le jeu de données tiré de l'exemple
+  `Investigating dirty categories
+  <https://dirty-cat.github.io/stable/auto_examples/01_investigating_dirty_categories.html>`_
+* comparaison de modèles, régression logistique, plus proche voisin, random forest,
+  gradient boosting classifier, :epkg:`xgboost`, :epkg:`lightgbm`,
+  :epkg:`catboost`, Lasso, Ridge,
+  toujours sous la forme d'une compétition
+
+
+* Ranking, détection d'anomalies, clustering, valeurs manquantes,
+  recommandations, imbalanced classification
+
+
+
+Toujours sous la forme d'une compétition
+
+* `Variables textuelles <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/preprocessing.html>`_
+* `tokenisation <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_tokenize.html>`_
+* `de la tokenisation aux features <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_tokenize_features.html>`_
+* `word2vec <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/text_sentiment_wordvec.html>`_
+* :ref:`l-ml2a-text-features`
+
+
+
+* Propriétés des modèles mathématiques, modèles linéaires, modèles ensemblistes, modèles,
+  dérivables, gradient, feature importance, parallélisme, boosting
+* Ethique, machine learning éthique (Frédéric Bardolle)
+
+
+
+
+
+* API SNCF
+* webscrapping
+* écriture de code rapide
+* traitement de gros volumes de données (base de données open food facts)
+
+* Notion de pipeline
+* Mise en production de modèles de machine learning avec
+  :epkg:`docker`, :epkg:`kubernetes`...
+
+
+* discussion sur les projets
+* créer son propre modèle de machine learning
+  en utilisant l'API de :epkg:`scikit-learn`,
+  `Prédicteur pour chaque catégorie
+  <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_color_linear.html>`_,
+  :ref:`2018-09-18sklearnapirst`,
+  `Contributing <http://scikit-learn.org/stable/developers/contributing.html#contributing-code>`_,
+  `sklearn.base <http://scikit-learn.org/stable/modules/classes.html#module-sklearn.base>`_
+* `Understanding and diagnosing your machine-learning models
+  <http://gael-varoquaux.info/interpreting_ml_tuto/>`_
+* Les cours de Gaël Varoquaux :ref:`l-ml-skgael`,
+  les notebooks d'exercices associées à ces lectures.
+
 
 * :ref:`td1acenoncesession12carterst`
 * :ref:`td1acenoncesession12plotrst`, :ref:`td1acenoncesession12carterst`,

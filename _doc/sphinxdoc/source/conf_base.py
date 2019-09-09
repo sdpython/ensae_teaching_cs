@@ -224,6 +224,7 @@ epkg_dictionary.update({
     "SciTE": 'http://www.scintilla.org/SciTE.html',
     "Scipy": 'https://www.scipy.org/',
     'scraping': 'https://fr.wikipedia.org/wiki/Web_scraping',
+    'sdpython': 'https://github.com/sdpython',
     "seaborn": 'https://seaborn.pydata.org/',
     'selenium': 'https://selenium-python.readthedocs.io/',
     'spacy': 'https://spacy.io/',
