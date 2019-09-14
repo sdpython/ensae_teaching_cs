@@ -23,7 +23,9 @@ Chaque société a développé ses propres outils,
 certaines l'ont mis à disposition de façon open source.
 Cette partie vise à présenter l'une d'entre elles.
 
-(*à venir*)
+*Notebooks*
+
+* :ref:`td2aenonceclreganomalyrst` (:ref:`correction <td2acorrectionclreganomalyrst>`)
 
 *Lectures*
 

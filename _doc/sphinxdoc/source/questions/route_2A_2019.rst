@@ -20,24 +20,24 @@ thèmes abordés durant le cours :
 
 *Commun data scientist - économiste*
 
-* Pratique des principaux problèmes de machines Learning 
-  avec scikit-learn (classification, régression, 
+* Pratique des principaux problèmes de machines Learning
+  avec scikit-learn (classification, régression,
   clustering, prétraitement)
 * Visualisation des données
 * Construction d'un module python
-* Traitement des données textuelles (NLP, analyse de sentiments...) 
+* Traitement des données textuelles (NLP, analyse de sentiments...)
 
 *Data scientiste*
 
 * Implémentation de modèles personnalisés avec scikit-learn
 * Déploiement de modèles de machine Learning via des API rest
-* Problèmes moins fréquents de machine learning : 
+* Problèmes moins fréquents de machine learning :
   apprentissage par renforcement, ranking, recommandation
 
 *Economiste*
 
 * Rappel sur les notebooks,
-  les dataframes, pandas, numpy, manipulation de données... 
+  les dataframes, pandas, numpy, manipulation de données...
 * Cartographie
 * Ethique des données
 * Webscrapping, API et expressions régulières
@@ -61,7 +61,6 @@ Séance 1 - 10/9 - amphi - introduction
 :ref:`structuresdonneesconversionrst`, :ref:`histogrammerapiderst`,
 :ref:`mlfeaturesmodelrst`
 
-
 **suite à réécrire**
 
 Séance 2 - 17/9
@@ -75,10 +74,10 @@ Séance 2 - 17/9
 * `Wine Quality Datasets <http://archive.ics.uci.edu/ml/datasets/Wine+Quality?ref=datanews.io>`_,
   corréler les erreurs de prédictions de plusieurs modèles
   avec plusieurs détection d'anomalies
+* :ref:`td2aenonceclreganomalyrst` (:ref:`correction <td2acorrectionclreganomalyrst>`)
 
 **Eco - Cours** : rappels :epkg:`pandas` :epkg:`numpy`
 :epkg:`matplotlib` début :epkg:`scikit-learn`
-
 
 Séance 3 - 24/9
 ^^^^^^^^^^^^^^^
@@ -87,8 +86,6 @@ Séance 3 - 24/9
 
 **Eco**
 
-
-
 Séance 4 - 1/10
 ^^^^^^^^^^^^^^^
 
@@ -96,29 +93,22 @@ Séance 4 - 1/10
 
 **Eco**
 
-
-
 Séance 5 - 8/10
 ^^^^^^^^^^^^^^^
-
 
 **DS**
 
 **Eco**
-
 
 Séance 6 - 15/10
 ^^^^^^^^^^^^^^^^
 
-
 **DS**
 
 **Eco**
 
-
 Séance 7 - 22/10
 ^^^^^^^^^^^^^^^^
-
 
 **DS**
 
@@ -127,27 +117,23 @@ Séance 7 - 22/10
 Séance 8 - 5/11
 ^^^^^^^^^^^^^^^
 
-
 **DS**
 
 **Eco**
-
 
 Séance 9 - 12/10
 ^^^^^^^^^^^^^^^^
 
-
 **DS**
 
 **Eco**
-
 
 Prérequis
 +++++++++
 
 * *Voix stat* : maîtrise du langage :epkg:`Python`,
   connaissance des modules :epkg:`pandas`, :epkg:`numpy`,
-  :epkg:`matplotlib`, voir `quelques rappels 
+  :epkg:`matplotlib`, voir `quelques rappels
   <http://www.xavierdupre.fr/app/papierstat/helpsphinx/rappel.html>`_
 * *Voix éco* : maîtrise du langage :epkg:`Python`, :ref:`td2ecorappels1arst`
 
@@ -176,8 +162,6 @@ Aborder les prétraitement comme la
 `normalisation <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_normalisation.html>`_,
 la :ref:`dimensionsreductionrst`.
 
-
-
 * `normalisation <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_normalisation.html>`_,
 * :ref:`dimensionsreductionrst`
 * traitement des catégories avec le jeu de données tiré de l'exemple
@@ -188,11 +172,8 @@ la :ref:`dimensionsreductionrst`.
   :epkg:`catboost`, Lasso, Ridge,
   toujours sous la forme d'une compétition
 
-
 * Ranking, détection d'anomalies, clustering, valeurs manquantes,
   recommandations, imbalanced classification
-
-
 
 Toujours sous la forme d'une compétition
 
@@ -202,15 +183,9 @@ Toujours sous la forme d'une compétition
 * `word2vec <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/text_sentiment_wordvec.html>`_
 * :ref:`l-ml2a-text-features`
 
-
-
 * Propriétés des modèles mathématiques, modèles linéaires, modèles ensemblistes, modèles,
   dérivables, gradient, feature importance, parallélisme, boosting
 * Ethique, machine learning éthique (Frédéric Bardolle)
-
-
-
-
 
 * API SNCF
 * webscrapping
@@ -220,7 +195,6 @@ Toujours sous la forme d'une compétition
 * Notion de pipeline
 * Mise en production de modèles de machine learning avec
   :epkg:`docker`, :epkg:`kubernetes`...
-
 
 * discussion sur les projets
 * créer son propre modèle de machine learning
@@ -234,7 +208,6 @@ Toujours sous la forme d'une compétition
   <http://gael-varoquaux.info/interpreting_ml_tuto/>`_
 * Les cours de Gaël Varoquaux :ref:`l-ml-skgael`,
   les notebooks d'exercices associées à ces lectures.
-
 
 * :ref:`td1acenoncesession12carterst`
 * :ref:`td1acenoncesession12plotrst`, :ref:`td1acenoncesession12carterst`,

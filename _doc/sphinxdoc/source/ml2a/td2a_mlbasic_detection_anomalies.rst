@@ -11,10 +11,12 @@
 
 .. _l-mlbasic-anomaly:
 
-Détection d'anomalies
-+++++++++++++++++++++
+Détection d'anomalies - outliers
+++++++++++++++++++++++++++++++++
 
-*(à venir)*
+*Notebooks*
+
+* :ref:`td2aenonceclreganomalyrst` (:ref:`correction <td2acorrectionclreganomalyrst>`)
 
 *Lectures*
 
@@ -23,6 +25,7 @@ Détection d'anomalies
 * `Robust Random Cut Forest Based Anomaly Detection On Streams <http://jmlr.org/proceedings/papers/v48/guha16.pdf>`_
 * `Network Traffic Decomposition for Anomaly Detection <https://arxiv.org/abs/1403.0157v1>`_
 * `Network Volume Anomaly Detection and Identification in Large-scale Networks based on Online Time-structured Traffic Tensor Tracking <https://arxiv.org/abs/1608.05493v1>`_
+* `Novelty and Outlier Detection <https://scikit-learn.org/stable/modules/outlier_detection.html>`_
 
 *Vidéos*
 
@@ -33,3 +36,4 @@ Détection d'anomalies
 * `scikit-learn <http://scikit-learn.org/stable/modules/outlier_detection.html>`_
 * `pyculiarity <https://github.com/nicolasmiller/pyculiarity>`_
 * `lsanomaly <https://github.com/lsanomaly/lsanomaly>`_
+* `pyod <https://github.com/yzhao062/pyod>`_

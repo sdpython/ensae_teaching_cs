@@ -12,12 +12,11 @@
 Intervalles de confiance
 ++++++++++++++++++++++++
 
-(*à venir*)
-
 *Notebook*
 
 * `Regression with confidence interval
   <http://www.xavierdupre.fr/app/mlinsights/helpsphinx/notebooks/regression_confidence_interval.html>`_
+* :ref:`td2aenonceclreganomalyrst` (:ref:`correction <td2acorrectionclreganomalyrst>`)
 
 *Lectures*
 
