@@ -71,6 +71,12 @@ Le même exemple sur github `td2a_plotting
 <https://github.com/sdpython/td2a_plotting>`_
 pourra être utilisé pour réaliser le module.
 
+Le modèle n'est pas nécessairement un nouveau modèle mais
+aussi un assemblage de modèles existants. Quelques exemples :
+`ClassifierAfterKMeans <http://www.xavierdupre.fr/app/mlinsights/helpsphinx/mlinsights/mlmodel/classification_kmeans.html>`_,
+`IntervalRegressor <http://www.xavierdupre.fr/app/mlinsights/helpsphinx/mlinsights/mlmodel/interval_regressor.html>`_,
+`PiecewiseRegressor <http://www.xavierdupre.fr/app/mlinsights/helpsphinx/mlinsights/mlmodel/piecewise_estimator.html>`_...
+
 Données suggérées
 +++++++++++++++++
 
