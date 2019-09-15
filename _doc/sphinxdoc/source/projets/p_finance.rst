@@ -48,21 +48,34 @@ prédire les actions pour la date *t+1*.
 
 Notebook conseillés :
 
-* `An Introduction to Stock Market Data Analysis with Python (Part 1) <http://blog.yhat.com/posts/stock-data-python.html>`_
-* `An Introduction to Stock Market Data Analysis with Python (Part 2) <http://blog.yhat.com/posts/stock-data-python-pt2.html>`_
+* `An Introduction to Stock Market Data Analysis with Python (Part 1)
+  <http://blog.yhat.com/posts/stock-data-python.html>`_
+* `An Introduction to Stock Market Data Analysis with Python (Part 2)
+  <http://blog.yhat.com/posts/stock-data-python-pt2.html>`_
 
 D'autres idées avec d'autres lectures :
 
-* `Random walks down Wall Street - Stochastic Processes in Python  <http://www.stuartreid.co.za/random-walks-down-wall-street-stochastic-processes-in-python/>`_,
-* `10 Common Misconceptions about Neural Networks <http://www.stuartreid.co.za/misconceptions-about-neural-networks/>`_
-* `Algorithmic trading system requirements <http://www.stuartreid.co.za/algorithmic-trading-system-requirements-post/>`_
-* et `d'autres articles de Stuart Reid <http://www.stuartreid.co.za/one-year-later-metapost-computational-finance-blog/>`_
-* `OLPS:AToolboxforOn-LinePortfolioSelection <http://www.jmlr.org/papers/volume17/15-317/15-317.pdf>`_ *(2016/08)*
-* `Dynamic Correlations, Estimation Risk, and Portfolio Management during the Financial Crisis <https://www.cemfi.es/ftp/wp/1103.pdf>`_
-* `Les marchés prédictifs comme technique de prévision <http://freakonometrics.hypotheses.org/50870>`_ *(2017/10)*
+* `Random walks down Wall Street - Stochastic Processes in Python
+  <http://www.stuartreid.co.za/random-walks-down-wall-street-stochastic-processes-in-python/>`_,
+* `10 Common Misconceptions about Neural Networks
+  <http://www.stuartreid.co.za/misconceptions-about-neural-networks/>`_
+* `Algorithmic trading system requirements
+  <http://www.stuartreid.co.za/algorithmic-trading-system-requirements-post/>`_
+* `d'autres articles de Stuart Reid
+  <http://www.stuartreid.co.za/one-year-later-metapost-computational-finance-blog/>`_
+* `OLPS:AToolboxforOn-LinePortfolioSelection
+  <http://www.jmlr.org/papers/volume17/15-317/15-317.pdf>`_ *(2016/08)*
+* `Dynamic Correlations, Estimation Risk, and Portfolio Management during the Financial Crisis
+  <https://www.cemfi.es/ftp/wp/1103.pdf>`_
+* `Les marchés prédictifs comme technique de prévision
+  <http://freakonometrics.hypotheses.org/50870>`_ *(2017/10)*
+* `Trend Trading vs Mean Reversion Trading — Which is better?
+  <https://medium.com/@EvreuxFX/trend-trading-vs-mean-reversion-trading-which-is-better-4068b67968ef>`_
+  (*2019/9*), cet article décrit une stratégie de trading
 
 Les compétitions sont aussi une bonne source d'inspiration comme
-`Two Sigma Financial Modeling Challenge <https://www.kaggle.com/c/two-sigma-financial-modeling>`_.
+`Two Sigma Financial Modeling Challenge
+<https://www.kaggle.com/c/two-sigma-financial-modeling>`_.
 Des participants décrivent leurs idées dans les articles suivants :
 `Two Sigma Financial Modeling Code Competition, 5th Place Winners' Interview: Team Best Fitting | Bestfitting, Zero, & CircleCircle
 <http://blog.kaggle.com/2017/05/11/two-sigma-financial-modeling-code-competition-5th-place-winners-interview-team-best-fitting-bestfitting-zero-circlecircle/>`_,

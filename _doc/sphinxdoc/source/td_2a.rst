@@ -23,7 +23,7 @@ Il est évalué par un projet de datascience et d'un exposé
 fait à plusieurs sur un sujet tiré d'articles de recherche récents.
 
 * :ref:`l-projinfo2a`
-* :ref:`l-expoinfo2a`
+* :ref:`l-projinfo2a-plot`
 * :ref:`l-feuille-de-route-2019-2A`
 
 Le terme *cheat sheet* est un mot-clé plutôt efficace sur Internet pour

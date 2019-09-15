@@ -25,6 +25,7 @@ lightgbm
 lightning-python
 manydataapi
 mlinsights>=0.2.311
+mlprodict
 mlstatpy
 mpld3
 msgpack!=0.6.0  # https://github.com/explosion/spaCy/issues/2995
@@ -54,6 +55,7 @@ pywaffle
 qgrid
 semantic_version
 seasonal
+git+https://github.com/xadupre/sklearn-onnx.git@jenkins
 shapely
 sphinx_bootstrap_theme
 sphinx_rtd_theme

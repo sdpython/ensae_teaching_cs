@@ -47,15 +47,22 @@ Séance 1 - 10/9 - amphi - introduction
 ++++++++++++++++++++++++++++++++++++++
 
 * Précision sur le cours, évaluation, exposés, ressources, TD, amphi,
-* `Rappels de mathématiques <http://www.xavierdupre.fr/app/papierstat/helpsphinx/rappel.html>`_
-* :ref:`td2ecorappels1arst`, :ref:`mlcmachinelearningproblemsrst`
+* `Rappels de mathématiques
+  <http://www.xavierdupre.fr/app/papierstat/helpsphinx/rappel.html>`_
+* :ref:`td2ecorappels1arst`,
+  :ref:`mlcmachinelearningproblemsrst`
 * Support de cours, ce site,
-  `Lectures sur le machine learning <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/index.html>`_,
+  `Lectures sur le machine learning
+  <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/index.html>`_,
   github: :epkg:`sdpython`
-* `Un exemple simple de régression linéaire <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/2019-01-25_linreg.html>`_
-* `Base d'apprentissage et de test <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_knn_split.html>`_
-* `Classifications et courbes ROC <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_color_roc.html>`_
-* `Validation croisée <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_knn_cross_val.html>`_
+* `Un exemple simple de régression linéaire
+  <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/2019-01-25_linreg.html>`_
+* `Base d'apprentissage et de test
+  <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_knn_split.html>`_
+* `Classifications et courbes ROC
+  <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_color_roc.html>`_
+* `Validation croisée
+  <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/wines_knn_cross_val.html>`_
 
 **A faire pour la prochaine fois** : exécuter trois notebooks,
 :ref:`structuresdonneesconversionrst`, :ref:`histogrammerapiderst`,
@@ -71,10 +78,12 @@ Séance 2 - 17/9
 * `Régression quantile
   <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/questions/exams_1A.html>`_
   (correction : :ref:`tdnote20172rst`)
-* `Wine Quality Datasets <http://archive.ics.uci.edu/ml/datasets/Wine+Quality?ref=datanews.io>`_,
+* `Wine Quality Datasets
+  <http://archive.ics.uci.edu/ml/datasets/Wine+Quality?ref=datanews.io>`_,
   corréler les erreurs de prédictions de plusieurs modèles
   avec plusieurs détection d'anomalies
-* :ref:`td2aenonceclreganomalyrst` (:ref:`correction <td2acorrectionclreganomalyrst>`)
+* :ref:`td2aenonceclreganomalyrst`
+  (:ref:`correction <td2acorrectionclreganomalyrst>`)
 
 **Eco - Cours** : rappels :epkg:`pandas` :epkg:`numpy`
 :epkg:`matplotlib` début :epkg:`scikit-learn`

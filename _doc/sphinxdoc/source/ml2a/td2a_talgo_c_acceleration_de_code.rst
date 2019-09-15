@@ -13,7 +13,6 @@ C++, Accélération de code
 .. toctree::
     :maxdepth: 1
 
-    ../notebooks/python_r
     ../notebooks/cffi_linear_regression
 
   Un notebook avec :epkg:`C#` est disponible

@@ -668,6 +668,17 @@ Tableau de bord et statut des dépendances
             :target: https://github.com/sdpython/td1a_unit_test_ci/issues
       -
       -
+    * - `td2_plotting <http://www.xavierdupre.fr/app/td2_plotting/helpsphinx/index.html>`_
+      -
+      -
+      - .. image:: https://circleci.com/gh/sdpython/td2_plotting/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/td2_plotting/tree/master
+      -
+      - .. image:: http://img.shields.io/github/issues/sdpython/td2_plotting.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/td2_plotting/issues
+      -
+      -
 
 Les projets suivants lient :epkg:`C#` et :epkg:`python`.
 Ils ne sont pas maintenus de façon très soutenue.
