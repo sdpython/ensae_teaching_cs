@@ -24,7 +24,7 @@ lifelines
 lightgbm
 lightning-python
 manydataapi
-mlinsights>=0.2.311
+mlinsights>=0.2.360
 mlprodict
 mlstatpy
 mpld3

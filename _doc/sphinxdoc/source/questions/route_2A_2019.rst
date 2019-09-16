@@ -88,6 +88,22 @@ Séance 2 - 17/9
 **Eco - Cours** : rappels :epkg:`pandas` :epkg:`numpy`
 :epkg:`matplotlib` début :epkg:`scikit-learn`
 
+* Rappels sur le langage :epkg:`python`,
+  `Cheat sheet: Python <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_resume/python_sheet.html>`_,
+  variable, listes, dictionnaires, boucles, fonctions, 
+  :ref:`structuresdonneesconversionrst`, :ref:`histogrammerapiderst`,
+  :ref:`mlfeaturesmodelrst`
+* Rappels sur :epkg:`pandas`, notion de table, lecture, écriture de fichiers 
+  texte, :epkg:`Excel`, ajout de colonne, opérations entre 
+  colonne, *apply*, opérations standard (sort, filter, group by, join),
+  :epkg:`numpy`, opérations standard, calcul matriciel, différences 
+  avec un dataframe, 
+  :ref:`2018-09-18rappelspythonrst`,
+  :ref:`2018-09-18rappelspythonpandasmatplotlibrst`
+* :ref:`td2ecorappels1arst`
+* :ref:`td2acenoncesession2arst`
+* :ref:`td2acorrectionsession2arst`
+
 Séance 3 - 24/9
 ^^^^^^^^^^^^^^^
 
