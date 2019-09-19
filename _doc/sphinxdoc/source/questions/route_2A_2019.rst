@@ -90,14 +90,14 @@ Séance 2 - 17/9
 
 * Rappels sur le langage :epkg:`python`,
   `Cheat sheet: Python <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_resume/python_sheet.html>`_,
-  variable, listes, dictionnaires, boucles, fonctions, 
+  variable, listes, dictionnaires, boucles, fonctions,
   :ref:`structuresdonneesconversionrst`, :ref:`histogrammerapiderst`,
   :ref:`mlfeaturesmodelrst`
-* Rappels sur :epkg:`pandas`, notion de table, lecture, écriture de fichiers 
-  texte, :epkg:`Excel`, ajout de colonne, opérations entre 
+* Rappels sur :epkg:`pandas`, notion de table, lecture, écriture de fichiers
+  texte, :epkg:`Excel`, ajout de colonne, opérations entre
   colonne, *apply*, opérations standard (sort, filter, group by, join),
-  :epkg:`numpy`, opérations standard, calcul matriciel, différences 
-  avec un dataframe, 
+  :epkg:`numpy`, opérations standard, calcul matriciel, différences
+  avec un dataframe,
   :ref:`2018-09-18rappelspythonrst`,
   :ref:`2018-09-18rappelspythonpandasmatplotlibrst`
 * :ref:`td2ecorappels1arst`

@@ -102,7 +102,7 @@ def text_transform(ftpp, filename, content):
 def publish_documentation(docs, ftpsite=None, login=None, password=None,
                           footer_html=None, content_filter=trigger_on_specific_strings,
                           is_binary=content_as_binary, force_allow=None,
-                          delay=0.5, exc=False, fLOG=print):
+                          delay=0.5, exc=False, ftps='FTP', fLOG=print):
     """
     Publishes the documentation and the setups of a python module on a webiste,
     it assumes the modules is organized the same way as :epkg:`pyquickhelper`.
@@ -119,6 +119,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
                                 except if this string is part of *force_allow*
     @param      delay           delay between file transferring (in average)
     @param      exc             raise exception if not able to transfer
+    @param      ftps            use protocol FTP, TLS, or SFTP
     @param      fLOG            logging function
 
     *docs* is a list of dictionaries which must contain for each folder
@@ -152,7 +153,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
 
     filter_out = "([/\\\\]((moduletoc.html)|(blogtoc.html)|(searchbox.html)))|([.]buildinfo)"
 
-    ftp = TransferFTP(ftpsite, login, password, fLOG=fLOG)
+    ftp = TransferFTP(ftpsite, login, password, ftps=ftps, fLOG=fLOG)
 
     for project in docs:
 
@@ -198,7 +199,8 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                              modules=None, password=None, force_allow=None,
                              suffix=("_UT_%d%d_std" % sys.version_info[:2],),
                              delay=0.5, exc=False, exc_transfer=False,
-                             transfer=True, additional_projects=None, fLOG=print):
+                             transfer=True, additional_projects=None,
+                             ftps='FTP', fLOG=print):
     """
     Copies the documentation to the website.
 
@@ -221,6 +223,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
     @param      transfer            starts transfering, otherwise returns the list of
                                     transfering task to do
     @param      additional_projects additional projects
+    @param      ftps                use protocol FTP, TLS, or SFTP
     @param      fLOG                logging function
 
     Example of use::
@@ -385,5 +388,5 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
     if transfer:
         publish_documentation(projects, ftpsite=ftpsite, login=login, password=password,
                               footer_html=footer, force_allow=force_allow, delay=delay,
-                              exc=exc_transfer, fLOG=fLOG)
+                              exc=exc_transfer, ftps=ftps, fLOG=fLOG)
     return projects
