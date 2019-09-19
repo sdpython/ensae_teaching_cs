@@ -102,7 +102,8 @@ def text_transform(ftpp, filename, content):
 def publish_documentation(docs, ftpsite=None, login=None, password=None,
                           footer_html=None, content_filter=trigger_on_specific_strings,
                           is_binary=content_as_binary, force_allow=None,
-                          delay=0.5, exc=False, ftps='FTP', fLOG=print):
+                          delay=0.5, exc=False, ftps='FTP',
+                          page_transform=None, fLOG=print):
     """
     Publishes the documentation and the setups of a python module on a webiste,
     it assumes the modules is organized the same way as :epkg:`pyquickhelper`.
@@ -120,6 +121,9 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
     @param      delay           delay between file transferring (in average)
     @param      exc             raise exception if not able to transfer
     @param      ftps            use protocol FTP, TLS, or SFTP
+    @param      page_transform  function which transforms
+                                the page before uploading it,
+                                @see fn text_transform
     @param      fLOG            logging function
 
     *docs* is a list of dictionaries which must contain for each folder
@@ -155,6 +159,16 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
 
     ftp = TransferFTP(ftpsite, login, password, ftps=ftps, fLOG=fLOG)
 
+    if page_transform is None:
+        fct_transform = text_transform
+    else:
+
+        def combined_transform(ftpp, filename, content):
+            text_transform(ftpp, filename, content)
+            page_transform(ftpp, filename, content)
+
+        fct_transform = combined_transform
+
     for project in docs:
 
         fLOG("######################################################################")
@@ -174,7 +188,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
         ftn = FileTreeNode(root_local)
         fftp = FolderTransferFTP(ftn, ftp, sfile, root_web=rootw, fLOG=fLOG, footer_html=footer_html,
                                  content_filter=content_filter, is_binary=is_binary,
-                                 text_transform=text_transform, filter_out=filter_out,
+                                 text_transform=fct_transform, filter_out=filter_out,
                                  force_allow=force_allow, exc=exc)
 
         fftp.start_transfering(delay=delay)
@@ -184,7 +198,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
         fftp = FolderTransferFTP(ftn, ftp, sfile,
                                  root_web=root_web.replace("helpsphinx", ""), fLOG=fLOG,
                                  footer_html=footer_html, content_filter=content_filter,
-                                 is_binary=is_binary, text_transform=text_transform)
+                                 is_binary=is_binary, text_transform=fct_transform)
 
         fftp.start_transfering()
 
@@ -200,7 +214,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                              suffix=("_UT_%d%d_std" % sys.version_info[:2],),
                              delay=0.5, exc=False, exc_transfer=False,
                              transfer=True, additional_projects=None,
-                             ftps='FTP', fLOG=print):
+                             ftps='FTP', page_transform=None, fLOG=print):
     """
     Copies the documentation to the website.
 
@@ -224,6 +238,8 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                                     transfering task to do
     @param      additional_projects additional projects
     @param      ftps                use protocol FTP, TLS, or SFTP
+    @param      page_transform      function which transforms a page before uploading it,
+                                    @see fn text_transform
     @param      fLOG                logging function
 
     Example of use::
@@ -388,5 +404,6 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
     if transfer:
         publish_documentation(projects, ftpsite=ftpsite, login=login, password=password,
                               footer_html=footer, force_allow=force_allow, delay=delay,
-                              exc=exc_transfer, ftps=ftps, fLOG=fLOG)
+                              exc=exc_transfer, ftps=ftps, page_transform=page_transform,
+                              fLOG=fLOG)
     return projects
