@@ -37,17 +37,22 @@ obtenu en exécutant la requête suivante sur
 
 .. plot::
 
+    import pandas
+    import matplotlib.pyplot as plt
+
     url = "pypi_downloads.csv"
     df = pandas.read_csv(url)
     df = df.groupby(["Project", "month"], as_index=False).sum()
     df = df.sort_values(["Project", "month"])
     df['month'] = df.month.astype(str)
     df = df[df.month >= "2017"]
-    gr = df.groupby("Project", as_index=False).sum().sort_values("num_downloads").reset_index(drop=True)
+    gr = df.groupby("Project", as_index=False).sum().sort_values(
+        "num_downloads").reset_index(drop=True)
     med = gr.iloc[gr.shape[0]//2, 1]
 
     sets = [
-        {'skl2onnx', 'onnxruntime', 'nimbusml', 'onnxmltools', 'scikit-onnxruntime', 'keras2onnx'},
+        {'skl2onnx', 'onnxruntime', 'nimbusml', 'onnxmltools',
+         'scikit-onnxruntime', 'keras2onnx'},
         {'jyquickhelper', 'pymyinstall', 'pyquickhelper', 'pyensae'},
         {'manydataapi', 'mlprodict', 'cpyquickhelper', 'mlinsights', 'mlstatpy', },
         {'csharpy', 'csharpyml', },

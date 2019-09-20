@@ -208,7 +208,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
 def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None,  # pylint: disable=W0102
                              location="c:\\jenkins\\pymy\\%s\\%s%s\\dist\\%s",
                              rootw="/www/htdocs/app/%s/%s",
-                             rootw2="/lesenfantscodaient.fr", folder_status=".",
+                             folder_status=".",
                              layout=[("html", "helpsphinx")],
                              modules=None, password=None, force_allow=None,
                              suffix=("_UT_%d%d_std" % sys.version_info[:2],),
@@ -223,7 +223,6 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
     @param      google_id           google_id
     @param      location            location of Jenkins build
     @param      rootw               root on ftp site
-    @param      rootw2              root for ``lesenfantscodaient.fr``
     @param      folder_status       folder status
     @param      modules             list of modules to publish, if None, use @see fn get_teaching_modules
     @param      password            if None, if will asked
@@ -253,14 +252,13 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
         login = "..."
         website = "ftp...."
         rootw = "/www/htdocs/app/%s/%s"
-        rootw2 = "/lesenfantscodaient.fr"
 
         password = None
 
         publish_teachings_to_web(login, ftpsite=website,
             google_id="google_id",
             location="<something>\\\\%s\\\\%s%s\\\\dist\\\\%s",
-            rootw=rootw, rootw2=rootw2,
+            rootw=rootw,
             folder_status=os.path.abspath("."),
             password=password)
 
@@ -316,10 +314,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
                 else:
                     continue
                 fLOG("   ", root)
-            if module != "code_beatrix":
-                rw = rootw % (module, lay[1])
-            else:
-                rw = rootw2
+            rw = rootw % (module, lay[1])
 
             project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
                            local=root, root_local=root, root_web=rw)
