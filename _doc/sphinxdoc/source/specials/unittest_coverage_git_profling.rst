@@ -350,7 +350,6 @@ plus il est difficile de garder la trace de ce que chacun fait.
 Cette approche a été en quelque sorte validée par la pratique.
 
 * `5 open source alternatives to Trello <https://opensource.com/business/15/8/5-open-source-alternatives-trello>`_
-* `Waffle <https://waffle.io/>`_
 * `Top Agile Tools – Best Kanban Tools <http://agilescout.com/best-kanban-tools/>`_
 * `Portable Kanban <https://dmitryivanov.net/>`_
 * `Kanboard <https://kanboard.net/>`_
