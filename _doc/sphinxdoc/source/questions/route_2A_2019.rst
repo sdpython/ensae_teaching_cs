@@ -68,7 +68,7 @@ Séance 1 - 10/9 - amphi - introduction
 :ref:`structuresdonneesconversionrst`, :ref:`histogrammerapiderst`,
 :ref:`mlfeaturesmodelrst`
 
-**suite à réécrire**
+.. _l-seance2-2A-2019:
 
 Séance 2 - 17/9
 ^^^^^^^^^^^^^^^
@@ -84,6 +84,33 @@ Séance 2 - 17/9
   avec plusieurs détection d'anomalies
 * :ref:`td2aenonceclreganomalyrst`
   (:ref:`correction <td2acorrectionclreganomalyrst>`)
+
+**DS - cours**
+
+* Retour sur la classification, notion de frontière comme
+  le `ratio de deux probabilités
+  <http://www.xavierdupre.fr/app/papierstat/helpsphinx/lectures/regclass.html#classification>`_
+* Cas multi-classe
+* Présentation des `réseaux de neurones
+  <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/rn/rn_1_def.html
+  #un-reseau-de-neurones-le-perceptron>`_
+* `Overfitting avec les réseaux de neurones
+  <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/rn/rn_2_reg.html>`_
+* Apprentissage méthode à `base de gradient
+  <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/rn/rn_5_newton.html>`_
+* Différence entre le gradient global et le `gradient stochastique
+  <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/rn/rn_6_apprentissage.html
+  #apprentissage-avec-gradient-stochastique>`_
+* Méthode ensembliste
+* Le cas des random forest pour éviter l'overfitting
+* Normalalisation L1, L2,
+  L1 = `sélection de variables
+  <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/ml_scikit_learn_simple_correction.html
+  ?highlight=ridge#exercice-8-augmenter-le-nombre-de-features-et-regulariser-une-regression-logistique>`_,
+  L2 = dilution de la masse des coefficients
+* Retour sur le cas multi-classe avec un nombre de classes grand,
+  notion de `imbalanced dataset
+  <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_multiclass.html>`_
 
 **Eco - Cours** : rappels :epkg:`pandas` :epkg:`numpy`
 :epkg:`matplotlib` début :epkg:`scikit-learn`
@@ -107,9 +134,21 @@ Séance 2 - 17/9
 Séance 3 - 24/9
 ^^^^^^^^^^^^^^^
 
-**DS**
+**DS - TD**
+
+Voir :ref:`l-seance2-2A-2019`.
+
+**DS - cours**
+
+Voir :ref:`l-seance2-2A-2019`.
 
 **Eco**
+
+* :ref:`td2avisualisationrst`
+* :ref:`td2aecoexercicesdemanipulationdedonneesrst`
+* :ref:`td2aecoexercicesdemanipulationdedonneescorrectionarst`
+* :ref:`td2aecoexercicesdemanipulationdedonneescorrectionbrst`
+* :ref:`td2aecoexercicesdemanipulationdedonneescorrectioncrst`
 
 Séance 4 - 1/10
 ^^^^^^^^^^^^^^^
