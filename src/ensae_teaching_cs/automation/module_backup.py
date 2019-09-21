@@ -6,9 +6,10 @@ import warnings
 from pyquickhelper.filehelper import TransferFTP
 
 
-def ftp_list_modules(ftp_location="/www/htdocs/enseignement/setup",
+def ftp_list_modules(ftp_location="/home/ftpuser/ftp/web/enseignement/setup",
                      http_location="http://www.xavierdupre.fr/enseignement/setup",
-                     filename="index_modules_list.html"):
+                     filename="index_modules_list.html",
+                     ftps='SFTP'):
     """
     Updates the list of backuped modules assuming they are stored on a FTP website.
     It gets the list of wheels in a folder and creates a HTML pages.
@@ -24,19 +25,20 @@ def ftp_list_modules(ftp_location="/www/htdocs/enseignement/setup",
 
     ::
 
-        keyring.get_password("ftp_list_modules", "ensae_teaching_cs,site", "...")
-        keyring.get_password("ftp_list_modules", "ensae_teaching_cs,login", "...")
-        keyring.get_password("ftp_list_modules", "ensae_teaching_cs,password", "...")
+        keyring.get_password("ftp_list_modules", "ensae_teaching_cs2,site", "...")
+        keyring.get_password("ftp_list_modules", "ensae_teaching_cs2,login", "...")
+        keyring.get_password("ftp_list_modules", "ensae_teaching_cs2,password", "...")
     """
     with warnings.catch_warnings():
         warnings.simplefilter('ignore', DeprecationWarning)
         import keyring
 
     ftp_site = keyring.get_password(
-        "ftp_list_modules", "ensae_teaching_cs,site")
-    login = keyring.get_password("ftp_list_modules", "ensae_teaching_cs,login")
+        "ftp_list_modules", "ensae_teaching_cs2,site")
+    login = keyring.get_password(
+        "ftp_list_modules", "ensae_teaching_cs2,login")
     password = keyring.get_password(
-        "ftp_list_modules", "ensae_teaching_cs,password")
+        "ftp_list_modules", "ensae_teaching_cs2,password")
 
     if not ftp_site:
         raise ValueError("ftp_site is empty, some missing keyring?")
@@ -45,7 +47,7 @@ def ftp_list_modules(ftp_location="/www/htdocs/enseignement/setup",
     if not password:
         raise ValueError("password is empty")
 
-    ftp = TransferFTP(ftp_site, login, password)
+    ftp = TransferFTP(ftp_site, login, password, ftps=ftps)
     res = ftp.ls(ftp_location)
 
     rows = ["<html><body><h1>storage for unit test</h1>\n<ul>"]
