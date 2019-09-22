@@ -1,0 +1,15 @@
+
+.. blogpost::
+    :title: Notebook maintenance
+    :keywords: exercice
+    :date: 2019-09-21
+    :categories: maintenance
+
+    Je dis souvent en cours qu'un notebook pète tous les
+    quinze jours. Le dernier :ref:`mltablemortaliterst`
+    plante sur une instruction qui me fait penser que j'attendrais
+    la prochaine version avant de me pencher dessus car je n'en
+    comprends pas la logique. Je l'ai laissée avec une exception
+    et j'ai ajouté une ligne équivalente mais très probablement
+    moins efficace. Tout cela à cause de :epkg:`xarray`.
+    Le monde open source est pavé de bonnes intentions.

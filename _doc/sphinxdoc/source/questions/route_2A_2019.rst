@@ -4,7 +4,7 @@
 Feuille de route 2019 (2A)
 ==========================
 
-*en préparation*
+*en constante élaboration*
 
 .. contents::
     :local:
@@ -208,6 +208,10 @@ Intervenants
 Anne Muller,
 Eliot Barril,
 Mayeul Picard,
+Salomé Do,
+Gilles Cornec,
+Gabriel Romon,
+Jean-Baptiste Rémy,
 Frédéric Bardolle,
 `Gaël Varoquaux <http://gael-varoquaux.info/>`_.
 
