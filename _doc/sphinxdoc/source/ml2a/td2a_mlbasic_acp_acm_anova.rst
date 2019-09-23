@@ -31,3 +31,6 @@ ACP, ACM, ANOVA
 * `fbpca <http://fbpca.readthedocs.io/en/latest/>`_ : ACP
 * `prince <https://github.com/MaxHalford/Prince>`_ : ACM
 * `scikit-gof <https://github.com/wrwrwr/scikit-gof>`_
+* `mlxtend <http://rasbt.github.io/mlxtend/>`_
+  (et ce graphique `variable ACP
+  <http://rasbt.github.io/mlxtend/user_guide/plotting/plot_pca_correlation_graph/>`_)

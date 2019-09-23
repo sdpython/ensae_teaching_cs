@@ -28,6 +28,8 @@ Révisions rapides
 * :ref:`structuresdonneesconversionrst`
 * :ref:`tableaucontingencerst`
 
+.. _l-seances-notees-1A:
+
 Séances notées
 ++++++++++++++
 

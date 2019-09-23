@@ -10,6 +10,13 @@ Feuille de route 2019 (1A)
 
 :ref:`Page principale du cours <l-td1a>`
 
+Evaluation
+++++++++++
+
+* :ref:`projet informatique <l-projinfo1a>`
+  (à rendre lors du dernier TD)
+* :ref:`l-seances-notees-1A` (dernier TD)
+
 Prérequis
 +++++++++
 
