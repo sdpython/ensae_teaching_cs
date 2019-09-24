@@ -13,9 +13,13 @@ Feuille de route 2019 (1A)
 Evaluation
 ++++++++++
 
-* :ref:`projet informatique <l-projinfo1a>`
-  (à rendre lors du dernier TD)
+* :ref:`module informatique <l-examens-1A-algo>`
+  (à rendre après les vacances de Toussaint)
 * :ref:`l-seances-notees-1A` (dernier TD)
+
+Au second semestre, pas de TD, juste un
+:ref:`projet informatique <l-projinfo1a>`,
+par groupe à soutenir en juin.
 
 Prérequis
 +++++++++
@@ -38,7 +42,7 @@ Le plus simple pour installer :epkg:`Python` est d'utiliser la distribution
 `Unofficial Windows Binaries for Python Extension Packages
 <https://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
 pour *Windows* et de celle-ci pour la distribution
-*Debian 9* (*Ubuntu est très similaire) :
+*Debian 9* (Ubuntu est très similaire) :
 `Install Python 3.7 and many packages on Linux Debian 9
 <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2018/2018-12-29_python37_2.html>`_.
 

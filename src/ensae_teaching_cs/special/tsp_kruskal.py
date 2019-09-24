@@ -322,10 +322,9 @@ def circuit_eulerien(villes, arbre, screen, pygame, fLOG):
                     bvec = vec2
                     # no need to go further if the points are equal
                     break
-                else:
-                    # we skip
-                    continue
-            elif opvec == vec2:
+                # we skip
+                continue
+            if opvec == vec2:
                 angle = -math.pi
             else:
                 cos = vecteur_cosinus(vec, vec2)

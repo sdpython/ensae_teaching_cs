@@ -104,7 +104,7 @@ def enumerate_feedback(df1, col_group="Groupe",
             if isinstance(_, float):
                 if numpy.isnan(_):
                     continue
-                elif int(_) == _:
+                if int(_) == _:
                     s_ = str(int(_))
                 else:
                     s_ = str(_)

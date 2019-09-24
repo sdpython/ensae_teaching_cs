@@ -10,7 +10,10 @@ Réalisation d'un module python par groupe de 3 à 5
 
 Un embryon de jeu :epkg:`2048` est implémenté dans l'exemple
 suivant `cp2048.py
-<https://github.com/sdpython/ensae_teaching_cs/blob/master/src/ensae_teaching_cs/td_1a/cp2048.py>`_.
+<https://github.com/sdpython/ensae_teaching_cs/blob/master/src/ensae_teaching_cs/td_1a/cp2048.py>`_,
+un exemple complet de projet est illustré par le module
+`pystrat2048 <https://github.com/sdpython/pystrat2048>`_
+(`documentation <http://www.xavierdupre.fr/app/pystrat2048/helpsphinx/index.html>`_).
 Un exemple d'utilisation est présent dans un second fichier
 `test_cp2048.py <https://github.com/sdpython/ensae_teaching_cs/blob/master/_unittests/ut_td_1a/test_cp2048.py>`_.
 La strétagie à implémenter doit pouvoir être
@@ -42,6 +45,6 @@ de la façon suivant :
     scores = list(evaluate_strategy(strategy_2048))
     print(scores)
 
-La meilleure stratégie sera évaluée sur 100 parties.
+La meilleure stratégie sera évaluée sur 1000 parties.
 Pour finir, les deux notebooks suivants vous seront utiles :
 :ref:`l-ci-1a-notebooks`.

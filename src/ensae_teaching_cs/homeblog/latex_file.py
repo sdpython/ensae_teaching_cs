@@ -230,7 +230,6 @@ class LatexFile:
             else:
                 raise e
         lines = content.split("\n")
-        content = content
 
         linebeginning = []
         s = 0

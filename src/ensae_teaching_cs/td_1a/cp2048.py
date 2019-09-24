@@ -35,7 +35,7 @@ class Game2048:
 
     def gameover(self):
         "Checks the game is over or not. Returns True in that case."
-        return numpy.ma.masked_not_equal(self.game, 0).count() == 0
+        return numpy.ma.masked_not_equal(self.game, 0).count() == 0  # pylint: disable=E1101
 
     def copy(self):
         "Makes a copy of the game."

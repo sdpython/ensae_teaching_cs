@@ -21,7 +21,6 @@ def gini(Y, X=None):
     else:
         couples[:, 0] = X
     couples[:, 1] = Y
-    couples = couples
     couples = numpy.cumsum(couples, axis=0)
     couples[:, 0] /= max(couples[n - 1, 0], 1e-7)
     couples[:, 1] /= max(couples[n - 1, 1], 1e-7)

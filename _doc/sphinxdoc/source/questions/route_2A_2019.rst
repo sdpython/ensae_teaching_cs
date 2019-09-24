@@ -103,11 +103,12 @@ Séance 2 - 17/9
   #apprentissage-avec-gradient-stochastique>`_
 * Méthode ensembliste
 * Le cas des random forest pour éviter l'overfitting
-* Normalalisation L1, L2,
+* Normalisation L1, L2,
   L1 = `sélection de variables
   <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/ml_scikit_learn_simple_correction.html
   ?highlight=ridge#exercice-8-augmenter-le-nombre-de-features-et-regulariser-une-regression-logistique>`_,
-  L2 = dilution de la masse des coefficients
+  L2 = dilution de la masse des coefficients,
+  `Pénalisation L1 L2 <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/l1l2.html>`_
 * Retour sur le cas multi-classe avec un nombre de classes grand,
   notion de `imbalanced dataset
   <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/artificiel_multiclass.html>`_
@@ -153,7 +154,14 @@ Voir :ref:`l-seance2-2A-2019`.
 Séance 4 - 1/10
 ^^^^^^^^^^^^^^^
 
-**DS**
+**DS - TD**
+
+**DS - cours**
+
+* Prétraitements des données, réductions de dimensions,
+  normalisation, transformation du texte en variable
+  numériques
+* API scikit-learn, notion de pipeline, visualisation de pipeline
 
 **Eco**
 

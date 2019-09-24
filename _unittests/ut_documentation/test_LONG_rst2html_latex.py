@@ -100,8 +100,7 @@ class TestRst2HtmlLatex(unittest.TestCase):
                 if "Unknown node: todoext_node" in str(e):
                     warnings.warn("todoext has no outputs in latex")
                     continue
-                else:
-                    raise e
+                raise e
 
             for r in rem:
                 find = sys.path.index(r)
