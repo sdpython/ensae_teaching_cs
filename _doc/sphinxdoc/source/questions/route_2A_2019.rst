@@ -156,6 +156,9 @@ Séance 4 - 1/10
 
 **DS - TD**
 
+* :ref:`td2atreeselectionenoncerst`,
+  :ref:`td2atreeselectioncorrectionrst`
+
 **DS - cours**
 
 * Prétraitements des données, réductions de dimensions,

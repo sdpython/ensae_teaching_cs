@@ -20,7 +20,10 @@ cette puissance est de plus en plus accessible via la parallélisation
 qui nécessite quelques ajustements algorithmiques. L'ajout de features
 complique également l'interprétation des résultats.
 
-*à vénir*
+*Notebooks*
+
+* :ref:`td2atreeselectionenoncerst`,
+  :ref:`td2atreeselectioncorrectionrst`
 
 *Lectures*
 
