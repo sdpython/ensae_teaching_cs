@@ -5,9 +5,25 @@
 History
 =======
 
-current - 2018-10-23 - 0.00Mb
+current - 2019-09-25 - 0.00Mb
 =============================
 
+* `87`: Ajout de notebooks pour la séance du 17/10/2019 (2019-09-14)
+* `86`: Implements a random strategy for 2048. (2019-08-25)
+* `84`: Modification de la simulation d'une corde pour simuler un pendule (2019-08-11)
+* `85`: Simulation d'un pendule (2019-08-11)
+* `83`: Préparation pour l'année 2019-2020 (2019-08-10)
+* `82`: notebook TD2A_eco_les_API is broken (2019-07-17)
+* `80`: removes smopy, not maintained anymore (2019-06-05)
+* `77`: corriger le notebook sur le morse (2019-04-18)
+* `76`: remove test on splinter (2019-04-06)
+* `75`: fix link for chromedriver in install_chromedriver (2019-04-06)
+* `74`: remove waffle (deprecated) (2019-03-16)
+* `73`: api google plus disappeared, a notebook using it must be changed (2019-03-14)
+* `72`: add page on ml visualisation (2019-03-12)
+* `71`: fix bad links in FAQ (2019-02-21)
+* `70`: publishing fails (2019-02-21)
+* `69`: add code to detect a specific pattern in code (2018-12-11)
 * `68`: td noté + correction TD noté 2018 (2018-10-23)
 * `67`: move velib to ensae_projects (2018-10-14)
 * `66`: ajouter un notebook sur SSA (2018-10-14)
@@ -58,10 +74,6 @@ current - 2018-10-23 - 0.00Mb
 * `34`: lien vers le bon repo pour l'anonymisation (2017-08-06)
 * `31`: rédiger un ou deux notebook sur le traitement du langage (2017-05-05)
 * `29`: techniques de webscrapping (2017-05-05)
-
-0.8.1824 - 2017-04-06 - 6.63Mb
-==============================
-
 * `15`: fix seance_5_intro_et_json.html (formatting + json) (2017-02-11)
 * `18`: add unit test for notebook eco sql, matplotlib (2016-12-27)
 * `12`: intégrer Python pour un économiste (2016-12-27)
