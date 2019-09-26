@@ -71,7 +71,7 @@ Séance 1 - 10/9 - amphi - introduction
 .. _l-seance2-2A-2019:
 
 Séance 2 - 17/9
-^^^^^^^^^^^^^^^
++++++++++++++++
 
 **DS - TD** : régression quantile - détection d'anomalies
 
@@ -133,7 +133,7 @@ Séance 2 - 17/9
 * :ref:`td2acorrectionsession2arst`
 
 Séance 3 - 24/9
-^^^^^^^^^^^^^^^
++++++++++++++++
 
 **DS - TD**
 
@@ -152,12 +152,12 @@ Voir :ref:`l-seance2-2A-2019`.
 * :ref:`td2aecoexercicesdemanipulationdedonneescorrectioncrst`
 
 Séance 4 - 1/10
-^^^^^^^^^^^^^^^
++++++++++++++++
 
 **DS - TD**
 
 * :ref:`td2atreeselectionenoncerst`,
-  :ref:`td2atreeselectioncorrectionrst`
+  :ref:`correction <td2atreeselectioncorrectionrst>`
 
 **DS - cours**
 
@@ -169,35 +169,35 @@ Séance 4 - 1/10
 **Eco**
 
 Séance 5 - 8/10
-^^^^^^^^^^^^^^^
++++++++++++++++
 
 **DS**
 
 **Eco**
 
 Séance 6 - 15/10
-^^^^^^^^^^^^^^^^
+++++++++++++++++
 
 **DS**
 
 **Eco**
 
 Séance 7 - 22/10
-^^^^^^^^^^^^^^^^
+++++++++++++++++
 
 **DS**
 
 **Eco**
 
 Séance 8 - 5/11
-^^^^^^^^^^^^^^^
++++++++++++++++
 
 **DS**
 
 **Eco**
 
 Séance 9 - 12/10
-^^^^^^^^^^^^^^^^
+++++++++++++++++
 
 **DS**
 
