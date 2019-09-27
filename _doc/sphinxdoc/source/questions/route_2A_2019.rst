@@ -168,6 +168,10 @@ Séance 4 - 1/10
 
 **Eco**
 
+* :ref:`td2aeco5dTravaillerdutextelesexpressionsregulieresrst`
+* :ref:`2018-10-02scrapingrecupererimagesrst`
+* :ref:`TD2AEcoWebScrapingrst`
+
 Séance 5 - 8/10
 +++++++++++++++
 

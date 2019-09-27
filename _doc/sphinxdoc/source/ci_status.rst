@@ -671,12 +671,21 @@ Tableau de bord et statut des dépendances
     * - `td2_plotting <http://www.xavierdupre.fr/app/td2_plotting/helpsphinx/index.html>`_
       -
       -
-      - .. image:: https://circleci.com/gh/sdpython/td2_plotting/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/td2_plotting/tree/master
-      -
+      - .. image:: https://circleci.com/gh/sdpython/td2a_plotting.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/td2a_plotting      -
       - .. image:: http://img.shields.io/github/issues/sdpython/td2_plotting.png
             :alt: GitHub Issues
             :target: https://github.com/sdpython/td2_plotting/issues
+      -
+      -
+    * - `pystrat2048 <http://www.xavierdupre.fr/app/pystrat2048/helpsphinx/index.html>`_
+      -
+      -
+      - .. image:: https://circleci.com/gh/sdpython/pystrat2048.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/pystrat2048      -
+      - .. image:: http://img.shields.io/github/issues/sdpython/pystrat2048.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/pystrat2048/issues
       -
       -
 
@@ -932,6 +941,28 @@ Outils
     * - `wrapclib <http://www.xavierdupre.fr/app/wrapclib/helpsphinx/index.html>`_
       - Utilise des librairies C construites pas d'autres comme
         :epkg:`re2`.
+
+Outils
+++++++
+
+.. list-table::
+    :widths: 5 15
+    :header-rows: 1
+
+    * - `python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
+      - Modèle de module Python utilisé pour ce cours. C'est un module vide facile à adapter.
+    * - `td1a_unit_test_ci <http://www.xavierdupre.fr/app/td1a_unit_test_ci/helpsphinx/index.html>`_
+      - Modèle de module python qui a servi de modèle
+        :epkg:`pystrat2048` et :epkg:`td2a_plotting`
+    * - `pystrat2048 <http://www.xavierdupre.fr/app/pystrat2048/helpsphinx/index.html>`_
+      - Modèle de module python implémentant une stratégie python, il inclut des tests unitaires,
+        une documentation, l'intégration continue, il peut être réutilisé pour tout
+        algorithme numérique
+    * - `td2a_plotting <http://www.xavierdupre.fr/app/td2a_plotting/helpsphinx/index.html>`_
+      - Modèle de module python implémentant un graphe :epkg:`matplotlib`,
+        il inclut des tests unitaires,
+        une documentation, l'intégration continue, il peut être réutilisé pour tout projet
+        similaire
 
 Contenu
 +++++++
