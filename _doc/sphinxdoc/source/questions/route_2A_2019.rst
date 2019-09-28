@@ -158,6 +158,8 @@ Séance 4 - 1/10
 
 * :ref:`td2atreeselectionenoncerst`,
   :ref:`correction <td2atreeselectioncorrectionrst>`
+* :ref:`td2apipelinetreeselectionenoncerst>`,
+  :ref:`correction <td2apipelinetreeselectioncorrectionrst>`
 
 **DS - cours**
 
