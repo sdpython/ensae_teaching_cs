@@ -678,6 +678,7 @@ Tableau de bord et statut des dépendances
             :target: https://github.com/sdpython/td2_plotting/issues
       -
       -
+      -
     * - `pystrat2048 <http://www.xavierdupre.fr/app/pystrat2048/helpsphinx/index.html>`_
       -
       -
@@ -686,6 +687,7 @@ Tableau de bord et statut des dépendances
       - .. image:: http://img.shields.io/github/issues/sdpython/pystrat2048.png
             :alt: GitHub Issues
             :target: https://github.com/sdpython/pystrat2048/issues
+      -
       -
       -
 
