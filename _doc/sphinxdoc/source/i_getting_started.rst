@@ -246,7 +246,7 @@ Désinstallation des modules implémentés pour ce cours
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 Il est possible de désinstaller simplement les modules installés pour
-ces enseignements ::
+ces enseignements :
 
 .. runpython::
 
@@ -261,6 +261,8 @@ Les notebooks utilisent le module :epkg:`pyensae`
 développé pour ces enseignements. Pour installer ses dépendances,
 il faut utiliser le module :epkg:`pymyinstall`. Les dépendances
 s'installent comme suit :
+
+::
 
     pymy_install3 --set=ensae_teaching_cs
     pip install ensae_teaching_cs
