@@ -163,10 +163,13 @@ Séance 4 - 1/10
 
 **DS - cours**
 
+* `API de scikit-learn et implémentation de modèles customisés
+  <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2019/sklearnapi201910.html>`_
+* :class:`LassoRandomForestRegressor
+  <ensae_teaching_cs.ml.lasso_random_forest_regressor.LassoRandomForestRegressor>`
 * Prétraitements des données, réductions de dimensions,
   normalisation, transformation du texte en variable
   numériques
-* API scikit-learn, notion de pipeline, visualisation de pipeline
 
 **Eco**
 
