@@ -182,7 +182,13 @@ Séance 5 - 8/10
 
 **DS**
 
+* Reinforcement learning avec Jean-Baptiste Rémy (amphi à 8h30, TD à 10h15 en amphi)
+
 **Eco**
+
+* :ref:`TD2AecolesAPIrst`
+* :ref:`TD2AecoAPISNCFrst`
+* :ref:`TD2AecoAPISNCFcorrigerst`
 
 Séance 6 - 15/10
 ++++++++++++++++
@@ -231,9 +237,7 @@ Mayeul Picard,
 Salomé Do,
 Gilles Cornec,
 Gabriel Romon,
-Jean-Baptiste Rémy,
-Frédéric Bardolle,
-`Gaël Varoquaux <http://gael-varoquaux.info/>`_.
+Jean-Baptiste Rémy
 
 Liens utiles et trop nombreux
 +++++++++++++++++++++++++++++
