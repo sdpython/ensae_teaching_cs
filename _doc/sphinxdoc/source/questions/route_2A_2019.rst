@@ -182,7 +182,8 @@ Séance 5 - 8/10
 
 **DS**
 
-* Reinforcement learning avec Jean-Baptiste Rémy (amphi à 8h30, TD à 10h15 en amphi)
+* Reinforcement learning avec Jean-Baptiste Rémy (amphi à 8h30, TD à 10h15 en amphi),
+  notebooks : `Reinforcement_Toys <https://github.com/JbRemy/Reinforcement_Toys>`_
 
 **Eco**
 
