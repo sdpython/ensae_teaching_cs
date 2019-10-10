@@ -4,12 +4,16 @@
 import os
 import unittest
 import pandas
-from pyquickhelper.pycode import get_temp_folder, fix_tkinter_issues_virtualenv, ExtTestCase
+from pyquickhelper.pycode import (
+    get_temp_folder, fix_tkinter_issues_virtualenv, ExtTestCase,
+    skipif_circleci
+)
 from ensae_teaching_cs.faq.faq_matplotlib import graph_cities
 
 
 class TestFaqMatplotlib(ExtTestCase):
 
+    @skipif_circleci('does not end')
     def test_american_cities(self):
         fix_tkinter_issues_virtualenv()
         import matplotlib.pyplot as plt
