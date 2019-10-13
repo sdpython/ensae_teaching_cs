@@ -13,9 +13,15 @@ Feuille de route 2019 (1A)
 Evaluation
 ++++++++++
 
-* :ref:`module informatique <l-examens-1A-algo>`
-  (à rendre après les vacances de Toussaint)
-* :ref:`l-seances-notees-1A` (dernier TD)
+* :ref:`module informatique <l-examens-1A-algo>` -
+  8 novembre (vendredi) - 1/3 de la note finale,
+  (6/20 pour réaliser le module, 6/20 pour
+  implémenter une stratégie qui fonctionne, 6/20 pour
+  écrire un test unitaire, 2/20 pour fournir un exemple
+  d'utilisation du module qui fonctionne, 1 point
+  pour être dans les 5 premiers)
+* :ref:`l-seances-notees-1A` - 22 octobre -
+  2/3 de la note finale
 
 Au second semestre, pas de TD, juste un
 :ref:`projet informatique <l-projinfo1a>`,

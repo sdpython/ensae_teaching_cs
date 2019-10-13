@@ -87,9 +87,12 @@ Données suggérées
 * `Deal flow des projets verts - Projets financés en 2019 et investissements envisagés en 2019
   <https://data.ademe.fr/datasets/jeu-de-donnees-deal-flow-2019>`_
 
+Le notebook :ref:`dealflowespacevertrst` effectue les premiers pas avec de jeu de données.
+
 **Jeu 2 :** données sur les émissions polluantes
 
-* `Données sur les émissions polluantes (IREP) <http://www.georisques.gouv.fr/dossiers/irep/telechargement>`_
+* `Données sur les émissions polluantes (IREP)
+  <http://www.georisques.gouv.fr/dossiers/irep/telechargement>`_
 
 Ces données sont produites par le `BRGM <http://www.georisques.gouv.fr/>`_.
 Le même lien permet de télécharger les données de plusieurs années.
@@ -117,3 +120,5 @@ Les fichiers ZIP incluent plusieurs fichiers dont :
     061.10406,REVAGA,51058711600037,,69390,MILLERY,RHONE,AUVERGNE-RHONE-ALPES,790678,2073093,3811Z,Collecte des dÃ©chets non dangereux,,
     124.00155,SATE,42976802100025,,90150,FONTAINE,TERRITOIRE-DE-BELFORT,BOURGOGNE-FRANCHE-COMTE,949818,2305514,2751Z,Fabrication d'appareils Ã©lectromÃ©nagers,,
     ...
+
+Le notebook :ref:`dataireprst` effectue les premiers pas avec de jeu de données.

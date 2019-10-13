@@ -544,3 +544,5 @@ _doc/notebooks/td2a_eco2/*pocket.zip
 _doc/notebooks/td2a_eco2/*pocket.csv
 _doc/notebooks/td2a_eco2/*pocket.json
 _doc/sphinxdoc/source/plot_pypi.py
+_unittests/ut_data/DEAL Flow automatisation 2019.xlsx
+_unittests/ut_data/Jeu de données deal flow 2018.csv

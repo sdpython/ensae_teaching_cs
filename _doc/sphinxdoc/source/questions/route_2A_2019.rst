@@ -43,6 +43,17 @@ thèmes abordés durant le cours :
 * Webscrapping, API et expressions régulières
 * Séries temporelles
 
+Evaluation
+++++++++++
+
+* :ref:`l-projinfo2a-plot` - 19 novembre (1/3 de la note finale,
+  6/20 pour réaliser le module, 6/20 pour un graphique
+  ou un algorithme qui fonctionne, 6/20 pour
+  écrire un test unitaire, 2/20 pour fournir un exemple
+  d'utilisation du module qui fonctionne)
+* :ref:`l-projinfo2a` - rapport 20 décembre, soutenance mi-janvier,
+  (2/3 de la note finale)
+
 Séance 1 - 10/9 - amphi - introduction
 ++++++++++++++++++++++++++++++++++++++
 
@@ -194,9 +205,40 @@ Séance 5 - 8/10
 Séance 6 - 15/10
 ++++++++++++++++
 
-**DS**
+Deux notebooks ont été ajoutés pour le projet :ref:`l-projinfo2a-plot`,
+ils présentent les deux jeux de données disponibles pour cet exercice
+si le graphe est choisi. Si c'est l'algorithme, il est possible de
+s'inspirer de `lasso_random_forest_regressor.py
+<https://github.com/sdpython/ensae_teaching_cs/blob/master/src/ensae_teaching_cs/ml/lasso_random_forest_regressor.py>`_
+qui implémente la réduction d'une random forest à l'aide
+d'une régression Lasso.
+
+**DS - TD**
+
+* :ref:`td2atreeselectionenoncerst`,
+  :ref:`correction <td2atreeselectioncorrectionrst>`
+* :ref:`td2apipelinetreeselectionenoncerst`,
+  :ref:`correction <td2apipelinetreeselectioncorrectionrst>`
+
+**DS - cours**
+
+* `API de scikit-learn et implémentation de modèles customisés
+  <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2019/sklearnapi201910.html>`_
+* :class:`LassoRandomForestRegressor
+  <ensae_teaching_cs.ml.lasso_random_forest_regressor.LassoRandomForestRegressor>`
+* Prétraitements des données, réductions de dimensions,
+  normalisation, transformation du texte en variable
+  numériques
 
 **Eco**
+
+* :ref:`td2acenoncesession3Arst`
+* :ref:`td2aecoregressionslineairesrst`
+* `Maximum Likelihood Estimation
+  <https://github.com/QuantEcon/quantecon-notebooks-python/blob/master/mle.ipynb>`_
+  du site `QuantEcon <https://quantecon.org/>`_
+* :ref:`mltimeseriesbaserst`
+* :ref:`td2aenonceclreganomalyrst`
 
 Séance 7 - 22/10
 ++++++++++++++++
