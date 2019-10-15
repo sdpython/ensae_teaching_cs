@@ -5,9 +5,7 @@
 `Google Jam <https://code.google.com/codejam/>`_.
 
 """
-from collections import OrderedDict
-from pyquickhelper.loghelper import noLOG
-from .edmonds_karp import EdmondsKarpGraph
+import numpy
 
 
 class DiceStraight:
@@ -48,7 +46,7 @@ class DiceStraight:
             nbd = int(lines[pos])
             pos += 1
             dices = []
-            for j in range(0, nbd):
+            for _ in range(0, nbd):
                 dice = [int(_) for _ in lines[pos].split()]
                 if len(dice) != 6:
                     raise ValueError(
@@ -64,210 +62,75 @@ class DiceStraight:
         """
         return len(self.dices)
 
-    def compute_edges(self, add_position=True):
-        """
-        Computes all possible edges.
-
-        @param      add_position    add position into the node definition
-        @return                     ``list of tuple (n1, n2)``
-
-        Each node is a triplet: (position, dice, face value) if *app_position*,
-        a couple (dice, face value) otherwise.
-        """
-        values = {}
-        root = (-1, -1, -1) if add_position else (-1, -1)
-        edges = []
-        for di in range(len(self)):
-            for face in range(0, 6):
-                value = self.dices[di][face]
-                if add_position:
-                    for pos in range(len(self)):
-                        key = (pos, di, value)
-                        if value not in values:
-                            values[value] = []
-                        values[value].append(key)
-                        if pos == 0:
-                            edges.append((root, key))
-                else:
-                    key = (di, value)
-                    if value not in values:
-                        values[value] = []
-                    values[value].append(key)
-
-        for val, keys in values.items():
-            cross = values.get(val + 1)
-            if cross is None:
-                continue
-            for val2 in cross:
-                for key in keys:
-                    if key[1] == val2[1]:
-                        # Reject edges to itself.
-                        continue
-                    if not add_position or key[0] == val2[0] - 1:
-                        edges.append((key, val2))
-        return edges
-
-    def compute_paths(self, edges):
-        """
-        Computes the paths accross every node if the position is
-        included in the node description as triplet.
-        The function checks that the same dice does not appear twice along the path.
-        The function returns a list of paths described by a list
-        of tuple (dice, face).
-        """
-        # Stores keys by positions.
-        pos = {}
-        for b, f in edges:
-            p = b[0]
-            if p not in pos:
-                pos[p] = set()
-            pos[p].add((b, f))
-
-        # Computes the number of path. Use the properties of the topology.
-        root = (-1, -1, -1)
-        paths = {root: [OrderedDict()]}
-        paths[root][0][-1] = -1
-        for p in range(-1, len(self) - 1):
-            if p not in pos:
-                continue
-            for k1, k2 in pos[p]:
-                if k1 not in paths:
-                    continue
-                if (k1, k2) in edges:
-                    if k1[1] == k2[1]:
-                        continue
-                    if k2 not in paths:
-                        paths[k2] = []
-                    d = k2[1]
-                    for exp in paths[k1]:
-                        if d not in exp:
-                            e = exp.copy()
-                            e[d] = k2[2]
-                            paths[k2].append(e)
-                            if len(paths) > 1000:
-                                raise ValueError(
-                                    "The number of paths is more than 1000 in one particular note {0}.".format(k2))
-        return paths
-
     def __str__(self):
         """
-        Usual.
+        Displays dices.
         """
-        return "\n".join(str(list(sorted(_))) for _ in self.dices)
-
-    def find_intervals(self):
-        """
-        We need to find the longest sequence of consecutive
-        face values. We are then looking to order the face
-        values and to determine intervals of consecutives
-        values. Wwe check that every pair of
-        consecutive numbers can be linked with two different dices.
-
-        @return     list of intervals.
-        """
-        cons = set()
-        for n1, n2 in self.compute_edges(add_position=False):
-            cons.add((n1[1], n2[1]))
-
-        values = set()
+        rows = []
         for dice in self.dices:
-            for p in dice:
-                values.add(p)
-        values = list(sorted(values))
-        intervals = []
-        first = values[0]
-        for i in range(1, len(values)):
-            v1, v2 = values[i] - 1, values[i]
-            if (v1, v2) not in cons:
-                if first != values[i - 1]:
-                    intervals.append((first, values[i - 1]))
-                first = values[i]
-        i = len(values)
-        if first != values[i - 1]:
-            intervals.append((first, values[i - 1]))
+            rows.append('%r' % dice)
+        return '\n'.join(rows)
 
-        return intervals
+    @staticmethod
+    def max_number_sequences(n):
+        """
+        Returns the maximum number of sequences
+        given the number of dices.
+        """
+        res = []
+        for k in range(1, n + 1):
+            res.append(((6. * n / k) ** k, k))
+        return max(res)
 
-    def longest_path_length_graph(self, fLOG=noLOG):
+    def longest_straight_sequence(self):
         """
-        This solution is fast as long as the problem
-        does not include too similar dices.
-        In that case, the created graph is too big.
+        Returns one of the longest sequence of consecutive integers.
+        It returns a list of tuple (face, dice). The implementation
+        may be improved a lot.
         """
-        fLOG(
-            "[longest_path_length_triplet] compute edges with {0} dices".format(len(self)))
-        edges = self.compute_edges()
-        fLOG("[longest_path_length_triplet] nb edges {0}".format(len(edges)))
-        paths = self.compute_paths(edges)
-        fLOG("[longest_path_length_triplet] nb paths {0}".format(len(paths)))
-        new_paths = []
-        for ps in paths.values():
-            for path in ps:
-                del path[-1]
-                new_paths.append([(k, v) for k, v in path.items()])
+        des = numpy.array(self.dices)
+        faces = []
+        nde = []
+        for i in range(des.shape[0]):
+            faces.extend(des[i, :])
+            nde.extend([i for j in range(des.shape[1])])
+        ensemble = list(zip(faces, nde))
+        ensemble.sort()
+
+        def sequence(ensemble, pos, seq):
+            des_choisis = set(ensemble[s][1] for s in seq)
+            face = ensemble[pos][0]
+
+            a = pos + 1
+            while a < len(ensemble) and ensemble[a][0] == face:
+                a += 1
+            if a >= len(ensemble) or ensemble[a][0] != face + 1:
+                # pas possible
+                return seq
+
+            b = a
+            while b < len(ensemble) and ensemble[b][0] == face + 1:
+                b = b + 1
+
+            seqs = []
+            for i in range(a, b):
+                if ensemble[i][1] not in des_choisis:
+                    seq2 = seq.copy()
+                    seq2.append(i)
+                    seq2 = sequence(ensemble, i, seq2)
+                    seqs.append(seq2)
+            if len(seqs) == 0:
+                return seq
+            seqs_len = max([(len(s), s) for s in seqs])
+            return seqs_len[1]
+
         best = None
-        for path in sorted(new_paths):
-            if best is None or len(path) > len(best):
-                best = path
-        # del best[-1]
-        fLOG("[longest_path_length_triplet] path {0}".format(best))
-        return best
+        for i in range(len(ensemble)):
+            res = sequence(ensemble, i, [i])
+            if best is None or len(res) > len(best):
+                best = res
 
-    def longest_path_length_flow(self, fLOG=noLOG, verbose=False):
-        """
-        We use an algorithm of maximum flow to solve the graph.
-        We use the graph where each node is a triplet *(position, dice, face value)*.
-        Each node is connected to *(-1, -1, -1)*.
-        We add another node *(-2, -2, -2)* which begins every path.
-        We write *N* as the number of dices + 1.
-        We add edges to nodes *(position, N, N)* from every node.
-        We finally add final edges from nodes *(position, N, N)* to
-        *(N, N, N)* whose weight is ``1/N``.
-        Let's denote the maximum flow as *M*. *MN* determines
-        the longest length.
-        """
-        edges = self.compute_edges(add_position=True)
-        edges = list(filter(lambda e: e[0][0] >= 0, edges))
-        edges_dices_pos = set(
-            (('p%d' % e1[0], "D%d" % e1[1]), ('p%d' % e2[0], "d%d" % e2[1])) for e1, e2 in edges)
-        edges_dices_pos_A = set(
-            (('p%d' % e2[0], "d%d" % e2[1]), ('p%d' % e2[0], "D%d" % e2[1])) for e1, e2 in edges)
-        edges_dices_pos_B = set(
-            (('p%d' % e1[0], "d%d" % e1[1]), ('p%d' % e1[0], "D%d" % e1[1])) for e1, e2 in edges)
-        edges_pos = set(
-            (('p%d' % e2[0], "D%d" % e2[1]), ('p%d' % e2[0], 'END')) for e1, e2 in edges)
-        edges_pos_ = set(
-            (('p%d' % e1[0], "D%d" % e2[1]), ('p%d' % e1[0], 'END')) for e1, e2 in edges)
-        edges_start = set((('START', ''), ('p0', "d%d" % i))
-                          for i in range(0, len(self)))
-        edges = []
-        for ens in [edges_dices_pos, edges_dices_pos_A, edges_dices_pos_B,
-                    edges_pos, edges_pos_, edges_start]:
-            edges.extend(ens)
-        capacity = [(e[0], e[1], 1) for e in edges]
-
-        capacity.extend((('p%d' % i, 'END'), ('END', ''), 1.0 / len(self))
-                        for i in range(0, len(self)))
-
-        def update(graph, u, v, path_flow):
-            if u[0][0] == 'p' == v[0][0] and u[1].upper() == v[1]:
-                # Example: ('p0', 'd0') -> ('p0', 'D0')
-                for i in range(0, len(self)):
-                    u_ = ('p%d' % i, u[1])
-                    v_ = ('p%d' % i, v[1])
-                    graph[u_][v_] -= path_flow
-                    graph[v_][u_] += path_flow
-            else:
-                graph[u][v] -= path_flow
-                graph[v][u] += path_flow
-
-        # Il ne faut pas EdmondsKarp ou il faut pouvoir
-        # revenir un arrière --> Floyd Flukerson modifié.
-        edmond = EdmondsKarpGraph(capacity)
-        try:
-            max_flow = edmond.edmonds_karp(("START", ''), ("END", ''), fLOG=fLOG,
-                                           verbose=verbose, update=update)
-        except ValueError:
-            # No available path.
-            return 0
-        return int(max_flow * len(self) + 1e-5)
+        if len(best) == 1:
+            return []
+        res = [ensemble[i] for i in best]
+        return [(d, f) for (f, d) in res]
