@@ -38,10 +38,14 @@ ou *apprentissage par renforcement*
 *Exemples*
 
 * `pg-pong.py <https://gist.github.com/karpathy/a4166c7fe253700972fcbc77e4ea32c5>`_
+* `Reinforcement_Toys <https://github.com/JbRemy/Reinforcement_Toys>`_,
+  notebooks pour découvrir l'apprentissage par renforcement
 
 *Modules*
 
 * `Ray RLlib <http://ray.readthedocs.io/en/latest/rllib.html>`_ (ray - rllib)
+* `keras-rl <https://github.com/keras-rl/keras-rl>`_
+* `gym <https://github.com/openai/gym>`_
 
 *Environnements*
 

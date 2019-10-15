@@ -1,17 +1,31 @@
 
+
 .. _l-HISTORY:
 
 =======
 History
 =======
 
-current - 2019-09-25 - 0.00Mb
+current - 2019-10-15 - 0.00Mb
 =============================
+
+* `92`: Add notebooks and helpers to load data for students projects (2019-10-15)
+
+0.9.2873 - 2019-09-30 - 6.39Mb
+==============================
+
+* `91`: Implements LassoRandomForestRegressor which reduces the number of trees of a random forest (2019-09-30)
+* `88`: Fix failing unit test due to the move of the website. (2019-09-30)
+* `90`: Notebooks for session 10/3 (2019-09-28)
+* `89`: Ajout de notebooks sur la sélection de variable appliquée à la sélection d'arbres d'une random forest (2019-09-25)
+
+0.9.2865 - 2019-09-25 - 6.39Mb
+==============================
 
 * `87`: Ajout de notebooks pour la séance du 17/10/2019 (2019-09-14)
 * `86`: Implements a random strategy for 2048. (2019-08-25)
-* `84`: Modification de la simulation d'une corde pour simuler un pendule (2019-08-11)
 * `85`: Simulation d'un pendule (2019-08-11)
+* `84`: Modification de la simulation d'une corde pour simuler un pendule (2019-08-11)
 * `83`: Préparation pour l'année 2019-2020 (2019-08-10)
 * `82`: notebook TD2A_eco_les_API is broken (2019-07-17)
 * `80`: removes smopy, not maintained anymore (2019-06-05)

@@ -39,6 +39,8 @@ Machine Learning sur des données cryptées
 
 *Modules*
 
+* `CrypTen <https://github.com/facebookresearch/CrypTen>`_ :
+  l'approche la plus prometteuse par Facebook
 * `ciphermed <https://github.com/rbost/ciphermed>`_, pas maintenu par l'auteur mais un peu
   plus par d'autres `ciphermed-forests <https://github.com/paberr/ciphermed-forests>`_
 * `PySyft <https://github.com/OpenMined/PySyft>`_ : encrypted deep learning library
