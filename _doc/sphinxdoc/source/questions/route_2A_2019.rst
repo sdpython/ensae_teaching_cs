@@ -270,6 +270,15 @@ Prérequis
   <http://www.xavierdupre.fr/app/papierstat/helpsphinx/rappel.html>`_
 * *Voix éco* : maîtrise du langage :epkg:`Python`, :ref:`td2ecorappels1arst`
 
+Autres contenus
++++++++++++++++
+
+* Apprentissage par renforcement,
+  `Reinforcement_Toys <https://github.com/JbRemy/Reinforcement_Toys>`_,
+  de Jean-Baptiste Rémy
+* `ensae-python-2019 <https://github.com/sally14/ensae-python-2019>`_,
+  de Solamé Do
+
 Intervenants
 ++++++++++++
 
