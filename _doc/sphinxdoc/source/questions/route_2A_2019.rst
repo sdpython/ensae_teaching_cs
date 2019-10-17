@@ -278,6 +278,9 @@ Autres contenus
   de Jean-Baptiste Rémy
 * `ensae-python-2019 <https://github.com/sally14/ensae-python-2019>`_,
   de Solamé Do
+* `Données de l'IREP et Devoir
+  <https://nbviewer.jupyter.org/github/gabsens/Python-for-Data-Scientists-ENSAE/
+  blob/master/Devoir/IREP%20et%20devoir.ipynb>`_ de Gabriel Romon
 
 Intervenants
 ++++++++++++

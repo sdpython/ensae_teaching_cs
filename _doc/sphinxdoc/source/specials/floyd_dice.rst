@@ -31,31 +31,10 @@ Quelques propriétés
 On peut aisément trouver des majorants pour cette séquence la plus grande :
 
 - Elle ne peut pas être plus grande que le nombre de dés.
-- Elle ne peut pas être plus grande que la différence qui séparé
+- Elle ne peut pas être plus grande que la différence qui sépare
   la plus petite et la plus grande face.
-
-La seconde propriété peut même être affinée. Nn note *V*
-l'ensemble des faces. Si une face *f* n'existe pas dans l'intervalle
-:math:`[min(V), max(V)]`, on sait que la plus grande séquence
-sera soit dans l'intervalle :math:`[min(V), f-1]`,
-soit :math:`[f+1, max(V)]`.
-On poursuit ce raisonnement et on construit une suite d'intervalles
-qui contiennent des entiers consécutifs de telle sorte que deux entiers
-dans l'intervalle apparaissent sur les faces de deux dés distincts.
-
-.. runpython::
-    :showcode:
-
-    text = """1
-    4
-    4 8  15 16 23 42
-    8 6  7  5  30 9
-    1 2  3  4  55 6
-    2 10 18 36 54 86"""
-
-    from ensae_teaching_cs.td_2a import DiceStraight
-    probs = DiceStraight.parse(text)
-    print(probs[0].find_intervals())
+- Si un entier n'est présent sur aucune face, la séquence la plus grande
+  est constituée d'entiers strictement supérieurs ou strictement inférieurs.
 
 Une piste gourmande
 +++++++++++++++++++
@@ -92,21 +71,6 @@ réprésente deux dés qu'on peut placer dans une séquence.
 Le graphe est plus grand mais possède moins d'arcs. Mais cela
 a peut de chance d'aboutir.
 
-.. runpython::
-    :showcode:
-
-    text = """1
-    4
-    4 8  15 16 23 42
-    8 6  7  5  30 9
-    1 2  3  4  55 6
-    2 10 18 36 54 86"""
-
-    from ensae_teaching_cs.td_2a import DiceStraight
-    probs = DiceStraight.parse(text)
-    seq = probs[0].longest_path_length_graph(fLOG=print)
-    print("Séquence la plus grande :", seq)
-
 Problème de flots
 +++++++++++++++++
 
@@ -138,4 +102,10 @@ partager les capacités de sorte que s'il est emprunté
 l'algorithme original afin de tenir compte de ces coefficients
 partagés sans garantie toutefois que l'algorithme converge.
 
-*à suivre*
+Une solution simple
++++++++++++++++++++
+
+Cette approche consiste à trier les faces par ordre
+croissant. Une fois ceci fait, une séquence de dés qui vérifie
+les conditions initiales est un sous-ensemble de faces prises
+dans le même ordre.

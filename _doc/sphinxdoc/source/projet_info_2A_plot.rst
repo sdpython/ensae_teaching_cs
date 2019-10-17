@@ -121,4 +121,8 @@ Les fichiers ZIP incluent plusieurs fichiers dont :
     124.00155,SATE,42976802100025,,90150,FONTAINE,TERRITOIRE-DE-BELFORT,BOURGOGNE-FRANCHE-COMTE,949818,2305514,2751Z,Fabrication d'appareils Ã©lectromÃ©nagers,,
     ...
 
-Le notebook :ref:`dataireprst` effectue les premiers pas avec de jeu de données.
+Le notebook :ref:`dataireprst` effectue les premiers pas avec ce jeu de données,
+le notebook suivant, plus complet, a été préparé par Gabriel Romon :
+`Données de l'IREP et Devoir
+<https://nbviewer.jupyter.org/github/gabsens/Python-for-Data-Scientists-ENSAE/
+blob/master/Devoir/IREP%20et%20devoir.ipynb>`_.
