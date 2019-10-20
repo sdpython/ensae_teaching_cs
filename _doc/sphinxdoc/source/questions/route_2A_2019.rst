@@ -243,7 +243,25 @@ d'une régression Lasso.
 Séance 7 - 22/10
 ++++++++++++++++
 
-**DS**
+**DS - cours**
+
+* Valeurs manquantes
+* Système de recommandations
+* Séries temporelles
+* Notions de graphes, matrice d'adjacence
+  :epkg:`sklearn:cluster:SpectralClustering.html`,
+  énigmes algorithmiques
+  (placements de tables, énigme des dés,
+  :ref:`td2acenoncesession6Arst` - :ref:`corretion <td2acorrectionsession6Arst>`),
+  :ref:`td2acenoncesession6Brst` - :ref:`correction <td2acorrectionsession6Brst>`,
+  :ref:`mlrueparisparcoursrst`, :ref:`exposerwrrecommandationrst`,
+  :ref:`exerciceplusgrandesommerst`)
+
+**DS - TD**
+
+* :ref:`mllassorfgridsearchenoncerst`
+  (:ref:`correction <mllassorfgridsearchcorrectionrst>`)
+* :ref:`mlbimbalancedrst`
 
 **Eco**
 
