@@ -265,6 +265,13 @@ Séance 7 - 22/10
 
 **Eco**
 
+* :ref:`td2aecoNLPtfidfngramsLDAword2vecsurdesextraitslitterairesrst`
+* :ref:`td2aTD5TraitementautomatiquedeslanguesenPythonrst`
+* `Classification de phrases avec word2vec
+  <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/text_sentiment_wordvec.html>`_
+* :ref:`td2asomenlprst`
+* :ref:`td2asentimentanalysisrst`
+
 Séance 8 - 5/11
 +++++++++++++++
 
