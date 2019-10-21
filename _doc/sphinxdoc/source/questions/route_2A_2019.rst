@@ -249,7 +249,7 @@ Séance 7 - 22/10
 * Système de recommandations
 * Séries temporelles
 * Notions de graphes, matrice d'adjacence
-  :epkg:`sklearn:cluster:SpectralClustering.html`,
+  :epkg:`sklearn:cluster:SpectralClustering`,
   énigmes algorithmiques
   (placements de tables, énigme des dés,
   :ref:`td2acenoncesession6Arst` - :ref:`corretion <td2acorrectionsession6Arst>`),
