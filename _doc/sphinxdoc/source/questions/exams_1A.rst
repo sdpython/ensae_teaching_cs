@@ -138,6 +138,12 @@ les modules standard du langage :epkg:`Python` et parfois
                 </a>
             (remplacement de valeurs manquantes)
         </li>
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2020.pdf">énoncé 2019-2020</a>,
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2020.html">
+                <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
+                </a>
+            (positionnement de tables dans une salle ronde ou carrée)
+        </li>
     </ul>
     </p>
 
@@ -267,6 +273,8 @@ TD notés, correction
     ../notebooks/td_note_2018_2
     ../notebooks/td_note_2019_1
     ../notebooks/td_note_2019_2
+    ../notebooks/td_note_2020_1
+    ../notebooks/td_note_2020_2
 
 Autres sources d'énoncés d'examens
 ++++++++++++++++++++++++++++++++++
