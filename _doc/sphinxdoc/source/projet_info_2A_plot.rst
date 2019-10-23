@@ -93,6 +93,8 @@ Le notebook :ref:`dealflowespacevertrst` effectue les premiers pas avec de jeu d
 
 * `Données sur les émissions polluantes (IREP)
   <http://www.georisques.gouv.fr/dossiers/irep/telechargement>`_
+  (`lien pour les fichiers zippés
+  <http://www.xavierdupre.fr/enseignement/complements/irep.zip>`_)
 
 Ces données sont produites par le `BRGM <http://www.georisques.gouv.fr/>`_.
 Le même lien permet de télécharger les données de plusieurs années.
