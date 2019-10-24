@@ -80,6 +80,7 @@ class TestRepository(unittest.TestCase):
         self.assertEqual(len(mails), 1)
         self.assertIn(mails[0], emails)
         fLOG("------", os.path.exists(os.path.join(temp, "mail_style.css")))
+        proj.write_run_command()
         proj.write_summary()
         fLOG("------")
         files = [os.path.join(temp, "index.html"),

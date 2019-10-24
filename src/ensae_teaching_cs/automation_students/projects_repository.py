@@ -4,7 +4,9 @@
 """
 import re
 import os
+import sys
 import json
+import textwrap
 import warnings
 import zipfile
 from urllib.parse import urlparse
@@ -703,7 +705,9 @@ class ProjectsRepository:
                     {% for ps in groups %}
                         <li><a href="{{ ps["link"] }}">{{ ps["group"] }}</a><small><i>
                             {{ ps["nb"] }} files - {{ format_size(ps["size"]) }} -
-                            last mail {{ ps["emails"][-1]["date"] }} ---
+                            {% if len(ps["emails"]) > 0 %}
+                            last mail {{ ps["emails"][-1]["date"] }} ---{% else %}
+                            No mail found. {% endif %}
                             {{ len(ps["attachments"]) }} attachments</i></small>
                         {% if len(ps["attachments"]) + len(ps["links"]) > 0 %}
                             <ul>
@@ -728,6 +732,28 @@ class ProjectsRepository:
                     </body>
                     </html>
                     """.replace("                    ", "")
+
+    def write_run_command(self, filename=None, renderer=None):
+        """
+        Writes a command script to run a server for this local content.
+        The server runs the javascripts fetching for local files.
+        The content is available at ``http://localhost:9000/``.
+        """
+        if filename is None:
+            if sys.platform.startswith('win'):
+                filename = "run_server.bat"
+            else:
+                filename = "run_server.sh"
+
+        url = "http://localhost:9000/"
+        content = textwrap.dedent("""
+            echo Open a browser with url '{}'
+            python3 -m http.server 9000
+            """).format(url)
+        dest = os.path.join(self.Location, filename)
+        self.fLOG("[write_run_command] write '{}'.".format(dest))
+        with open(dest, 'w') as f:
+            f.write(content)
 
     def write_summary(self, renderer=None, link="index_mails.html",
                       outfile="index.html", title="summary",

@@ -149,17 +149,18 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
         att = [_ for _ in files if ".html" in _]
         if len(att) <= 1:
             fLOG(
-                "[extract_students_mails_from_gmail_and_stores_in_folders] remove ", group)
+                "[extract_students_mails_from_gmail_and_stores_in_folders] remove '{}'".format(group))
             proj.remove_group(group)
 
     # unzip files and convert notebooks
     for group in proj.Groups:
         proj.unzip_convert(group)
 
-    fLOG("[extract_students_mails_from_gmail_and_stores_in_folders] summary ")
     summary = os.path.join(folder, "index.html")
+    fLOG("[extract_students_mails_from_gmail_and_stores_in_folders] write summary '{}'".format(summary))
     if os.path.exists(summary):
         os.remove(summary)
+    proj.write_run_command()
     proj.write_summary(nolink_if=nolink_if)
 
     fLOG("[extract_students_mails_from_gmail_and_stores_in_folders] zip everything in", zipfilename)
@@ -168,7 +169,8 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
     proj.zip_group(None, zipfilename,
                    addition=["index.html", "mail_style.css", "emails.txt"])
 
-    fLOG("[extract_students_mails_from_gmail_and_stores_in_folders] encrypt the zip file in", zipfilenameenc)
+    fLOG("[extract_students_mails_from_gmail_and_stores_in_folders] encrypt the zip file in '{}'.".format(
+        zipfilenameenc))
     if os.path.exists(zipfilenameenc):
         os.remove(zipfilenameenc)
     encrypt_stream(zipencpwd, zipfilename, zipfilenameenc, chunksize=2 ** 30)

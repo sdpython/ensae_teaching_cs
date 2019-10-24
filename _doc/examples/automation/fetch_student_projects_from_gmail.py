@@ -44,12 +44,12 @@ with warnings.catch_warnings():
 
 server = "imap.gmail.com"
 school = "ENSAE"
-date = "10-May-2019"
+date = "21-Oct-2019"
 year = '1A'
 pattern = "Python_{0}_TD_%s_2019" % year
 group_def = "groupes.xlsx"
 col_subject, col_group, col_mail, col_student = "sujet", "groupe", "mail", "Nom"
-final_dest = ["2018-2019", "ensae_1A_projet"]
+final_dest = ["2019-2020", "1A-TD"]
 
 
 if school == 'ENSAE':
@@ -216,6 +216,7 @@ if True:
     index = os.path.join(dest_folder, "index.html")
     if os.path.exists(index):
         os.remove(index)
+    proj.write_run_command()
     proj.write_summary()
 
 
