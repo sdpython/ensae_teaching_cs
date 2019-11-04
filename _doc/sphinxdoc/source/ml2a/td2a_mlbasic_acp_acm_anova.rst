@@ -21,6 +21,8 @@ ACP, ACM, ANOVA
 * `A Unified Framework for Outlier-Robust PCA-like Algorithm <http://proceedings.mlr.press/v37/yangc15.pdf>`_
 * `Online Robust PCA via Stochastic Optimization <https://papers.nips.cc/paper/5131-online-robust-pca-via-stochastic-optimization.pdf>`_
 * `Online PCA for Contaminated Data <https://papers.nips.cc/paper/5135-online-pca-for-contaminated-data.pdf>`_
+* `Principal Component Analysis: A Generalized Gini Approach
+  <https://arxiv.org/pdf/1910.10133.pdf>`_
 
 *Modules*
 

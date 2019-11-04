@@ -5,8 +5,16 @@
 History
 =======
 
-current - 2019-10-15 - 0.00Mb
+current - 2019-11-04 - 0.00Mb
 =============================
+
+* `96`: Fix bug in 2048, see pystrat2048 (2019-11-04)
+* `93`: Implémenter la solution de l'énigme des dés + notebook (2019-11-04)
+* `94`: Enoncés et corrections du TD noté 2019-2020 (2019-10-22)
+* `95`: Fix notebook on tastekid API (url has changed) (2019-10-20)
+
+0.9.2878 - 2019-10-15 - 6.65Mb
+==============================
 
 * `92`: Add notebooks and helpers to load data for students projects (2019-10-15)
 
@@ -16,11 +24,11 @@ current - 2019-10-15 - 0.00Mb
 * `91`: Implements LassoRandomForestRegressor which reduces the number of trees of a random forest (2019-09-30)
 * `88`: Fix failing unit test due to the move of the website. (2019-09-30)
 * `90`: Notebooks for session 10/3 (2019-09-28)
-* `89`: Ajout de notebooks sur la sélection de variable appliquée à la sélection d'arbres d'une random forest (2019-09-25)
 
 0.9.2865 - 2019-09-25 - 6.39Mb
 ==============================
 
+* `89`: Ajout de notebooks sur la sélection de variable appliquée à la sélection d'arbres d'une random forest (2019-09-25)
 * `87`: Ajout de notebooks pour la séance du 17/10/2019 (2019-09-14)
 * `86`: Implements a random strategy for 2048. (2019-08-25)
 * `85`: Simulation d'un pendule (2019-08-11)
