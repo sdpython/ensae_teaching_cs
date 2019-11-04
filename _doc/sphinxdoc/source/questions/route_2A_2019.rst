@@ -275,9 +275,37 @@ Séance 7 - 22/10
 Séance 8 - 5/11
 +++++++++++++++
 
-**DS**
+**DS - cours**
+
+* Valeurs manquantes
+* Système de recommandations
+* Séries temporelles
+* Notions de graphes, matrice d'adjacence
+  :epkg:`sklearn:cluster:SpectralClustering`,
+  énigmes algorithmiques
+  (placements de tables, énigme des dés,
+  :ref:`td2acenoncesession6Arst` - :ref:`corretion <td2acorrectionsession6Arst>`),
+  :ref:`td2acenoncesession6Brst` - :ref:`correction <td2acorrectionsession6Brst>`,
+  :ref:`mlrueparisparcoursrst`, :ref:`exposerwrrecommandationrst`,
+  :ref:`exerciceplusgrandesommerst`)
+* **Questions pour le projet de cartes**
+
+**DS - TD**
+
+* :ref:`mllassorfgridsearchenoncerst`
+  (:ref:`correction <mllassorfgridsearchcorrectionrst>`)
+* :ref:`mlbimbalancedrst`
+* **Questions pour le projet de cartes**
 
 **Eco**
+
+* :ref:`td2aecoNLPtfidfngramsLDAword2vecsurdesextraitslitterairesrst`
+* :ref:`td2aTD5TraitementautomatiquedeslanguesenPythonrst`
+* `Classification de phrases avec word2vec
+  <http://www.xavierdupre.fr/app/papierstat/helpsphinx/notebooks/text_sentiment_wordvec.html>`_
+* :ref:`td2asomenlprst`
+* :ref:`td2asentimentanalysisrst`
+* **Questions pour le projet de cartes**
 
 Séance 9 - 12/10
 ++++++++++++++++

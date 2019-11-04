@@ -114,6 +114,15 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
 * `Algorithm Assessment Report <https://www.data.govt.nz/assets/Uploads/Algorithm-Assessment-Report-Oct-2018.pdf>`_
   (issu de l'INSEE néozélandaise)
 * `Impossibility and Uncertainty Theorems in AI Value Alignment <https://arxiv.org/pdf/1901.00064.pdf?utm_campaign=the_algorithm.unpaid.engagement&utm_source=hs_email&utm_medium=email&_hsenc=p2ANqtz-8SQPvr8mh-ICrJzt0vJhRCEPzgIalY3fRUX7Q4iMwG1rNFf-v4-GR9BNEI_UB8R-0z08Jm>`_
+* `Themis-ml: A Fairness-aware Machine Learning Interface for
+  End-to-end Discrimination Discovery and Mitigation
+  <https://github.com/cosmicBboy/themis-ml/blob/master/paper/main.pdf>`_
+* `Automated Directed Fairness Testing <https://arxiv.org/abs/1807.00468>`_
+* `Automated Experiments on Ad Privacy Settings
+  <http://www.andrew.cmu.edu/user/danupam/dtd-pets15.pdf>`_
+* `Fairness in Criminal Justice Risk Assessments: The State of the Art
+  <https://arxiv.org/abs/1703.09207>`_
+* `Counterfactual Fairness <https://arxiv.org/pdf/1703.06856.pdf>`_
 
 *Conférences*
 
@@ -142,6 +151,9 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
   qui traite des biais qui peuvent survenir lorsqu'on adapte les décisions
   médicales en fonction des données récoltées pour une personne
   en particulier (*precision medecine*).
+* `CS 294: Fairness in Machine Learning <https://fairmlclass.github.io/>`_
+* `Algorithms and Bias: Q. and A. With Cynthia Dwork
+  <https://www.nytimes.com/2015/08/11/upshot/algorithms-and-bias-q-and-a-with-cynthia-dwork.html>`_
 
 *Articles*
 
@@ -149,8 +161,18 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
 * `Sent to Prison by a Software Program's Secret Algorithms <https://www.nytimes.com/2017/05/01/us/politics/sent-to-prison-by-a-software-programs-secret-algorithms.html>`_,
   `Emotional Judges and Unlucky Juveniles <https://www.nber.org/papers/w22611?utm_campaign=ntw&utm_medium=email&utm_source=ntw>`_,
   `How artificial intelligence can help us make judges less biased <https://www.theverge.com/2019/1/17/18186674/daniel-chen-machine-learning-rule-of-law-economics-psychology-judicial-system-policy>`_
+* `How We Analyzed the COMPAS Recidivism Algorithm
+  <https://www.propublica.org/article/how-we-analyzed-the-compas-recidivism-algorithm>`_
 
 *Modules*
 
-* `fairtest <https://github.com/columbia/fairtest>`_
+* `aequitas <https://github.com/dssg/aequitas>`_
+* `fair-classification <https://github.com/mbilalzafar/fair-classification>`_
+  (non maintenu)
+* `fairml <https://github.com/adebayoj/fairml>`_ (non maintenu)
+* `fairml-farm <https://github.com/yoshavit/fairml-farm>`_ (non maintenu)
 * `fairlearn <https://github.com/Microsoft/fairlearn>`_
+* `fairness-comparison <https://github.com/algofairness/fairness-comparison>`_
+  (un peu maintenu)
+* `fairtest <https://github.com/columbia/fairtest>`_ (non maintenu)
+* `themis-ml <https://github.com/cosmicBboy/themis-ml>`_ (non maintenu)
