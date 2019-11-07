@@ -48,3 +48,23 @@ de la façon suivant :
 La meilleure stratégie sera évaluée sur 1000 parties.
 Pour finir, les deux notebooks suivants vous seront utiles :
 :ref:`l-ci-1a-notebooks`.
+
+**Rendu**
+
+Le projet doit être rendu sous la forme d'un fichier zip
+avec les sources accompagnées d'un exemple sous la forme
+d'un fichier python ou notebook. La documentation
+n'est pas indispensable. Le projet minimal doit ressembler
+à ce qui suit :
+
+::
+
+    zip
+     +-- votre_module
+     |      +-- __init__.py
+     |      +-- fichier.py
+     +-- tests
+     |      +-- test_strategy.py
+     +-- setup.py
+     |
+     +-- example.py ou example.ipynb

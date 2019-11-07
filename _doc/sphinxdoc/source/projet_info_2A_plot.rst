@@ -15,6 +15,26 @@ machine learning qui suit l'API de :epkg:`scikit-learn`.
 Ce projet doit être rendu le jour du dernier TD.
 Il doit être effectué par groupe de 3 à 5 personnes.
 
+**Rendu**
+
+Le projet doit être rendu sous la forme d'un fichier zip
+avec les sources accompagnées d'un exemple sous la forme
+d'un notebook. La documentation
+n'est pas indispensable. Le projet minimal doit ressembler
+à ce qui suit :
+
+::
+
+    zip
+     +-- votre_module
+     |      +-- __init__.py
+     |      +-- fichier.py
+     +-- tests
+     |      +-- test_strategy.py
+     +-- setup.py
+     |
+     +-- example.ipynb
+
 Graphes
 +++++++
 
