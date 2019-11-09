@@ -61,7 +61,7 @@ du deep learning. Ils sont simples,
 s'apprennent rapidement, sont utilisés
 par beaucoup et disposent de nombreuses pages, blogs, listes
 de diffusions qui leur sont dédiés.
-:epkg:`R` est le terrain de jeu préféré des chercheurs
+:epkg:`R` est utilisé par les chercheurs
 mais il est peu pratique pour développer un site web ou un jeu.
 :epkg:`Python` est beaucoup plus polyvalent
 et de plus en plus populaire. Il est enseigné à l':epkg:`ENSAE` depuis 2004.

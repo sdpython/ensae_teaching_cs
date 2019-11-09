@@ -633,6 +633,24 @@ Tableau de bord et statut des dépendances
       -
       -
       -
+    * - `_check_python_install <http://www.xavierdupre.fr/app/_check_python_install/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/_check_python_install.svg?branch=master
+            :target: https://travis-ci.org/sdpython/_check_python_install
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/dy37r7bykm3ulcfl?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/check-python-install
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/_check_python_install/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/_check_python_install/tree/master
+        .. image:: https://dev.azure.com/xavierdupre3/check_python_install/_apis/build/status/sdpython._check_python_install
+            :target: https://dev.azure.com/xavierdupre3/check_python_install/
+      -
+      - .. image:: http://img.shields.io/github/issues/sdpython/_check_python_install.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/_check_python_install/issues
+      - .. image:: https://codecov.io/github/sdpython/_check_python_install/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/_check_python_install?branch=master
+      - 
     * - `python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/python3_module_template.svg?branch=master
             :target: https://travis-ci.org/sdpython/python3_module_template
@@ -668,14 +686,14 @@ Tableau de bord et statut des dépendances
             :target: https://github.com/sdpython/td1a_unit_test_ci/issues
       -
       -
-    * - `td2_plotting <http://www.xavierdupre.fr/app/td2_plotting/helpsphinx/index.html>`_
+    * - `td2a_plotting <http://www.xavierdupre.fr/app/td2a_plotting/helpsphinx/index.html>`_
       -
       -
       - .. image:: https://circleci.com/gh/sdpython/td2a_plotting.svg?style=svg
             :target: https://circleci.com/gh/sdpython/td2a_plotting      -
-      - .. image:: http://img.shields.io/github/issues/sdpython/td2_plotting.png
+      - .. image:: http://img.shields.io/github/issues/sdpython/td2a_plotting.png
             :alt: GitHub Issues
-            :target: https://github.com/sdpython/td2_plotting/issues
+            :target: https://github.com/sdpython/td2a_plotting/issues
       -
       -
       -
@@ -951,6 +969,8 @@ Outils
     :widths: 5 15
     :header-rows: 1
 
+    * - `_check_python_install <http://www.xavierdupre.fr/app/_check_python_install/helpsphinx/index.html>`_
+      - Rassemble diverses instructions pour installer certains packages compliqués.
     * - `python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
       - Modèle de module Python utilisé pour ce cours. C'est un module vide facile à adapter.
     * - `td1a_unit_test_ci <http://www.xavierdupre.fr/app/td1a_unit_test_ci/helpsphinx/index.html>`_
