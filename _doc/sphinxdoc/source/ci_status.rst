@@ -650,7 +650,7 @@ Tableau de bord et statut des dépendances
             :target: https://github.com/sdpython/_check_python_install/issues
       - .. image:: https://codecov.io/github/sdpython/_check_python_install/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/_check_python_install?branch=master
-      - 
+      -
     * - `python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/python3_module_template.svg?branch=master
             :target: https://travis-ci.org/sdpython/python3_module_template

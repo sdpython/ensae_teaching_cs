@@ -27,7 +27,7 @@ if not os.path.exists(templates_path[0]):
     raise FileNotFoundError(templates_path[0])
 
 
-html_logo = "project_ico_small.png"
+html_logo = os.path.join(templates_path[0], "project_ico_small.png")
 
 if html_theme == "bootstrap":
     html_theme_options = {
