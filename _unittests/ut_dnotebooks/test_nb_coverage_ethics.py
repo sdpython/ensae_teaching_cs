@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@brief      test log(time=25s)
+@brief      test log(time=43s)
 """
 import os
 import unittest
@@ -16,15 +16,13 @@ class TestNotebookCov_Ethics(ExtTestCase):
         add_missing_development_version(["pymyinstall", "pyensae", "jyquickhelper"],
                                         __file__, hide=True)
 
-    def test_notebook_tsp(self):
+    def test_notebook_ethic(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
         def valid(cell):
-            if "from fairtest import" in cell:
-                return False
             if "test([inv])" in cell:
                 return False
             return True
