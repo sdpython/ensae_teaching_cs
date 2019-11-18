@@ -155,7 +155,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
     login = params["login"]
     ftpsite = params["ftpsite"]
 
-    filter_out = "([/\\\\]((moduletoc.html)|(blogtoc.html)|(searchbox.html)))|([.]buildinfo)"
+    filter_out = "([/\\\\]((moduletoc.html)|(blogtoc.html)|(searchbox.html)))|([.]buildinfo)|([.]pyc)"
 
     ftp = TransferFTP(ftpsite, login, password, ftps=ftps, fLOG=fLOG)
 
@@ -168,12 +168,6 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
             page_transform(ftpp, filename, content)
 
         fct_transform = combined_transform
-
-    def _filter_out(full_file_name, filename):
-        ext = os.path.splitext(filename)[-1]
-        if ext in {'.pyc'}:
-            return False
-        return True
 
     for project in docs:
 
@@ -195,7 +189,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
         fftp = FolderTransferFTP(ftn, ftp, sfile, root_web=rootw, fLOG=fLOG, footer_html=footer_html,
                                  content_filter=content_filter, is_binary=is_binary,
                                  text_transform=fct_transform, filter_out=filter_out,
-                                 force_allow=force_allow, exc=exc, filter_out=_filter_out)
+                                 force_allow=force_allow, exc=exc)
 
         fftp.start_transfering(delay=delay)
 
@@ -205,7 +199,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
                                  root_web=root_web.replace("helpsphinx", ""), fLOG=fLOG,
                                  footer_html=footer_html, content_filter=content_filter,
                                  is_binary=is_binary, text_transform=fct_transform,
-                                 filter_out=_filter_out)
+                                 filter_out=filter_out)
 
         fftp.start_transfering()
 
