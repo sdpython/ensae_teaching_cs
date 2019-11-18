@@ -169,6 +169,12 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
 
         fct_transform = combined_transform
 
+    def _filter_out(full_file_name, filename):
+        ext = os.path.splitext(filename)[-1]
+        if ext in {'.pyc'}:
+            return False
+        return True
+
     for project in docs:
 
         fLOG("######################################################################")
@@ -189,7 +195,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
         fftp = FolderTransferFTP(ftn, ftp, sfile, root_web=rootw, fLOG=fLOG, footer_html=footer_html,
                                  content_filter=content_filter, is_binary=is_binary,
                                  text_transform=fct_transform, filter_out=filter_out,
-                                 force_allow=force_allow, exc=exc)
+                                 force_allow=force_allow, exc=exc, filter_out=_filter_out)
 
         fftp.start_transfering(delay=delay)
 
@@ -198,7 +204,8 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
         fftp = FolderTransferFTP(ftn, ftp, sfile,
                                  root_web=root_web.replace("helpsphinx", ""), fLOG=fLOG,
                                  footer_html=footer_html, content_filter=content_filter,
-                                 is_binary=is_binary, text_transform=fct_transform)
+                                 is_binary=is_binary, text_transform=fct_transform,
+                                 filter_out=_filter_out)
 
         fftp.start_transfering()
 
