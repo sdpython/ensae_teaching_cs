@@ -57,6 +57,7 @@ Source de données
 * *ML* `Ensembles de données publics AWS (Amazon) <https://aws.amazon.com/public-data-sets/>`_, `AWS Public Data Sets <https://aws.amazon.com/datasets/>`_
 * *ML* `Data Analysis, Modeling and Machine Learning Group <http://ama.liglab.fr/resourcestools/datasets/>`_
 * *ML* `List of datasets for machine learning research <https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research>`_
+* *ML-big-santé* `Imagerie médicale, photo de cancers <https://wiki.cancerimagingarchive.net/>`_
 * *ML-big* `Pascal Large Scale Learning Challenge <http://largescale.ml.tu-berlin.de/instructions/>`_
 * *ML-big* `170 millions courses de taxi à New-York <http://chriswhong.com/open-data/foil_nyc_taxi/>`_
   (via l'article `Building Azure ML Models on the NYC Taxi Dataset <http://blogs.technet.com/b/machinelearning/archive/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset.aspx>`_)

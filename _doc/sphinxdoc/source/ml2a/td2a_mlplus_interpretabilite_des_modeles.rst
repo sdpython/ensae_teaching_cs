@@ -75,12 +75,15 @@ seulement.
 * `Interpret scikit-learn machine learning models <https://github.com/glemaitre/scikit-learn-workshop-2019/blob/master/interpretation.ipynb>`_
   (from scikit-learn's consortium workshop)
 
-*Lectures - LIME*
+*Lectures - LIME - SHAP*
 
 * `"Why Should I Trust You?" Explaining the Predictions of Any Classifier <http://arxiv.org/pdf/1602.04938v1.pdf>`_
   (sans doute un des articles à lire en premier - `lime <https://github.com/marcotcr/lime>`_)
-* `Defining Locality for Surrogates in Post-hoc Interpretablity <https://128.84.21.199/abs/1806.07498v1>`_
-* `A Unified Approach to Interpreting Model Predictions <http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf>`_
+* `Defining Locality for Surrogates in Post-hoc Interpretablity
+  <https://128.84.21.199/abs/1806.07498v1>`_
+* `A Unified Approach to Interpreting Model Predictions
+  <http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf>`_
+  (SHAP)
 
 *Lectures : expliquer*
 

@@ -29,7 +29,10 @@ Anonymisation des données / Privacy
 * `Privatics (INRIA) <https://team.inria.fr/privatics/>`_
 * `Differential Privacy for Bayesian Inference through Posterior Sampling∗ <http://www.jmlr.org/papers/volume18/15-257/15-257.pdf>`_
 * `Corrupt Bandits for Preserving Local Privacy <https://arxiv.org/abs/1708.05033>`_
-* `A General Approach to Adding Differential Privacy to Iterative Training Procedures <https://arxiv.org/pdf/1812.06210.pdf>`_
+* `A General Approach to Adding Differential Privacy to Iterative Training Procedures
+  <https://arxiv.org/pdf/1812.06210.pdf>`_
+* `Peeking Inside the Black-Box: A Survey on Explainable Artificial Intelligence (XAI)
+  <https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8466590>`_
 
 *Tables rondes*
 

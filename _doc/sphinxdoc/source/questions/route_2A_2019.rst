@@ -318,6 +318,8 @@ python.
 * :ref:`l-ml2a-autolearning`
 * :ref:`l-ml2a-mlethical`
 * :ref:`l-td2a-ml-crypted`
+* `Petit voyage au pays des assurances, un jeu de données hypothétique
+  <http://www.xavierdupre.fr/app/papierstat/helpsphinx/histoires/assurance.html>`_
 
 Prérequis
 +++++++++
