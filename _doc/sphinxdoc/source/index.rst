@@ -117,6 +117,7 @@ Contenu des enseignements
     10. Galleries d'exemples <i_galleries>
     11. Index <i_index>
     12. API <api/index>
+    13. Command lines <i_cmd>
 
 Getting Started - Démarrer
 ==========================
