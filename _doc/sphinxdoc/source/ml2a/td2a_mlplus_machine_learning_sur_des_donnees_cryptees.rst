@@ -31,11 +31,17 @@ Machine Learning sur des données cryptées
 * `NuCypher KMS: Decentralized key management system <https://arxiv.org/abs/1707.06140>`_
 * `Hawk: The Blockchain Model of Cryptography and Privacy-Preserving Smart Contracts <https://eprint.iacr.org/2015/675.pdf>`_
 * `Privacy-Preserving Classification on Deep Neural Network <https://eprint.iacr.org/2017/035.pdf>`_
+* `Awesome Homomorphic Encryption <https://github.com/jonaschn/awesome-he>`_
 
 *Lectures - alternatives*
 
 * `Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data <https://arxiv.org/abs/1610.05755>`_
 * `Practical Black-Box Attacks against Machine Learning <https://arxiv.org/abs/1602.02697>`_
+* `awesome-differential-privacy <https://github.com/menisadi/awesome-differential-privacy>`_
+
+*Lectures - MPC*
+
+* `awesome-mpc <https://github.com/rdragos/awesome-mpc>`_ (Multi-Party Computation)
 
 *Modules*
 
