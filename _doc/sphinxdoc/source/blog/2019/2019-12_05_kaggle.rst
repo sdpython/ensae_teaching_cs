@@ -1,0 +1,30 @@
+
+.. blogpost::
+    :title: Kaggle...
+    :keywords: exercice
+    :date: 2019-12-05
+    :categories: kaggle
+
+    :epkg:`Kaggle` propose des sujets principalement
+    académiques depuis quelques années. Est-ce une bonne
+    source de données pour un projet étudiant ? Ca l'a été.
+    Maintenant, les étudiants n'ont plus grand chose à faire
+    pour sortir de ce qui a déjà été fait.
+    Le sujet `soccer <https://www.kaggle.com/hugomathien/soccer>`_
+    a été étudié sous toutes les coutures par beaucoup de gens qui
+    laissent le fruit de leur travail sur le site. Un des derniers
+    parus `Match Outcome Prediction Project
+    <https://www.kaggle.com/airback/match-outcome-prediction-in-football>`_
+    correspond à ce qu'on attend d'un futur datascientist.
+    Il faudrait que je regarde ce que le site contient
+    avant de me pencher sur le projet d'un étudiant qui a choisi
+    ce jeu de données. Il serait possible de bannir *kaggle* de la
+    liste des sources de données admissibles ou faire confiance
+    aux étudiants. J'avoue qu'à leur âge, je ne lisais pas beaucoup,
+    internet n'existait pas il est vrai. Mais ça m'amusait plus
+    d'inventer mes propres trucs que de réutiliser ceux des autres
+    qui marchaient pourtant bien. C'est comme ça que j'ai recodé
+    plein de trucs inutiles pour le principe de faire quelque
+    chose qui m'appartienne. Ou alors ça me paraissait plus
+    simple d'inventer un truc nouveau que de comprendre le travail
+    des autres.
