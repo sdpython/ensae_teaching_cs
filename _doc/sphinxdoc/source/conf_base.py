@@ -235,6 +235,7 @@ epkg_dictionary.update({
     "statsmodels": 'https://www.statsmodels.org/stable/index.html',
     "Spyder": 'https://github.com/spyder-ide/spyder',
     'td2a_plotting': 'http://www.xavierdupre.fr/app/td2a_plotting/helpsphinx/index.html',
+    'td3a_cpp': 'http://www.xavierdupre.fr/app/td3a_cpp/helpsphinx/index.html',
     "teachpyx": 'http://www.xavierdupre.fr/app/teachpyx/helpsphinx/',
     "tensorFlow": 'https://www.tensorflow.org/',
     "TensorFlow": 'https://www.tensorflow.org/',

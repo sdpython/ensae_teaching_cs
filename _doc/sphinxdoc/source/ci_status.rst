@@ -697,6 +697,23 @@ Tableau de bord et statut des dépendances
       -
       -
       -
+    * - `td3a_cpp <http://www.xavierdupre.fr/app/td3a_cpp/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/td3a_cpp.svg?branch=master
+            :target: https://travis-ci.org/sdpython/td3a_cpp
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/wvo6ovlaxi8ypua4?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/python3-module-template
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/td3a_cpp.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/td3a_cpp      -
+        .. image:: https://dev.azure.com/xavierdupre3/cpyquickhelper/_apis/build/status/sdpython.cpyquickhelper
+            :target: https://dev.azure.com/xavierdupre3/cpyquickhelper/
+      - .. image:: http://img.shields.io/github/issues/sdpython/td3a_cpp.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/td3a_cpp/issues
+      -
+      -
+      -
     * - `pystrat2048 <http://www.xavierdupre.fr/app/pystrat2048/helpsphinx/index.html>`_
       -
       -
