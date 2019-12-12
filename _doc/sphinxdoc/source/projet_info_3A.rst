@@ -21,18 +21,13 @@ Les technologies proposées sont donc :
 
 * GPU : `CUDA <http://fr.wikipedia.org/wiki/Compute_Unified_Device_Architecture>`_ et C, ou CUDA et python via
   `pyCUDA <http://mathema.tician.de/software/pycuda/>`_
-* Map/Reduce : `PIG <http://en.wikipedia.org/wiki/Pig_Latin>`_,
-  `Hive <http://fr.wikipedia.org/wiki/Hive>`_, Java sur un cluster Cloudera ou Azure,
-  `Spark <https://spark.apache.org/>`_
-* implémentation d'un calcul réparti ou distribué : `QueueStorage <http://azure.microsoft.com/fr-fr/documentation/articles/storage-dotnet-how-to-use-queues/>`_ +
-  `Blobstorage <http://azure.microsoft.com/fr-fr/documentation/articles/storage-dotnet-how-to-use-blobs/>`_
-  comme primitives de communication (C#, .Net) sur Azure.
+* n'importe quelle technologie sur CPU, une option proposée
+  est un projet utilisant ;epkg:`python`, :epkg:`cython` et :epkg:`openmp`.
+  Le projet :epkg:`td3a_cpp` peut être utilisé comme point de départ.
 
 Vous êtes libres de traiter l'algorithme de votre choix avec la technologie
 de votre choix avec la contrainte que l'algorithme implémenté soit distribué
 par votre implémentation et non par la librairie que vous utilisez.
-**Dans ce cadre, un projet sur un réseau de neurones profond seul
-n'est pas valide.**
 Nous vous en proposons certains dans les articles ci-dessous.
 
 **A souligner dans le rapport et le code**
@@ -125,6 +120,10 @@ Suggestions d'articles
 
 * `Anatomy of High-Performance Many-Threaded Matrix Multiplication
   <http://www.cs.utexas.edu/users/flame/pubs/blis3_ipdps14.pdf>`_
+* `OpenMP parallelization of multiple precision Taylor series method
+  <https://arxiv.org/abs/1908.09301>`_
+* `Parallel Adaptive Sampling with almost no Synchronization
+  <https://arxiv.org/abs/1903.09422>`_
 
 Nous vous recommandons d'adopter la démarche suivante:
 
@@ -134,7 +133,8 @@ Nous vous recommandons d'adopter la démarche suivante:
 #. application à un vrai jeu de données que vous aurez sélectionné sur un des sites suivants
    `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_,
    `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_
-   ou autre (voir :ref:`l-datasources`).
+   ou autre (voir :ref:`l-datasources`), cette approche est aussi valable
+   que de générer des jeux de données articielles de tailles différentes.
 
 Le site
 `Kaggle <https://www.kaggle.com/competitions/search?SearchVisibility=AllCompetitions&ShowActive=true&ShowCompleted=true&ShowProspect=true&ShowOpenToAll=true&ShowPrivate=true&ShowLimited=true&DeadlineColumnSort=Descending>`_ `(2) <http://inclass.kaggle.com/>`_

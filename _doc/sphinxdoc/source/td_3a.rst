@@ -14,7 +14,7 @@ Matthieu Durut,
 Xavier Dupré.
 
 Le cours est évalué avec un :ref:`projet informatique <l-projinfo3a>`.
-Programme de l'année 2017 : :ref:`l-feuille-de-route-2017-3A`.
+Programme de l'année 2019 : :ref:`l-feuille-de-route-2019-3A`.
 
 .. contents::
     :local:
@@ -797,3 +797,5 @@ Feuilles de routes des années passées
 .. toctree::
 
     questions/route_3A_2017
+    questions/cython_python
+    questions/route_3A_2019
