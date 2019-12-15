@@ -64,7 +64,7 @@ A ce sujet : `The Boosting Approach to Machine Learning An Overview <https://www
 `weak learner <https://stats.stackexchange.com/questions/82049/what-is-meant-by-weak-learner>`_.
 
 `XGBoost <http://xgboost.readthedocs.io/>`_
-est un librairie qui a bénéficié de nombreux apports au fur et à
+est une librairie qui a bénéficié de nombreux apports au fur et à
 mesure des compétitions `Kaggle <https://www.kaggle.com/>`_
 qu'elle a permis de gagner. Certains paramètres qui pilotent l'apprentissage
 du modèle ne sont pas issus de la théorie mais de la pratique
@@ -114,8 +114,12 @@ poste régulièrement des articles sur des librairies de machine learning open s
 
 *Digressions*
 
-* `A Network That Learns Strassen Multiplication <http://www.jmlr.org/papers/volume17/16-074/16-074.pdf>`_
-* `Learning Theory for Distribution Regression <http://www.jmlr.org/papers/volume17/14-510/14-510.pdf>`_
+* `A Network That Learns Strassen Multiplication
+  <http://www.jmlr.org/papers/volume17/16-074/16-074.pdf>`_
+* `Learning Theory for Distribution Regression
+  <http://www.jmlr.org/papers/volume17/14-510/14-510.pdf>`_
+* `Distilling a Neural Network Into a Soft Decision Tree
+  <https://arxiv.org/pdf/1711.09784.pdf>`_
 
 *Métriques*
 
