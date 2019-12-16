@@ -137,6 +137,7 @@ Il y a deux questions qu'on doit se poser en premier pour entrevoir une solution
     :maxdepth: 2
 
     notebooks/recherche_dichotomique
+    notebooks/nbheap
     specials/algorithm_culture
     specials/np_complet
     specials/graphes

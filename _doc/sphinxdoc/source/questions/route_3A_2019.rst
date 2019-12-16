@@ -60,7 +60,7 @@ pour construire un projet utilisant :epkg:`pythran` et :epkg:`openmp`.
 
 Le GPU sous Python est plus facile d'accès avec une librairie
 de deep learning déjà compilée. :epkg:`pytorch` est populaire parmi
-les chercheurs, :epkg:`tensorflow` est le pionnier et de ce fait le 
+les chercheurs, :epkg:`tensorflow` est le pionnier et de ce fait le
 plus utilisé, notamment avec :epkg:`keras`. Une librairie jeune mais
 qui s'attaque au machine learning standard sous GPU est :epkg:`rapids`
 (lire `RAPIDS cuGraph — The vision and journey to version 1.0 and beyond

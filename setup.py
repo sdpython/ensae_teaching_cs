@@ -124,7 +124,7 @@ if is_local():
     deps = ["pyquickhelper", "jyquickhelper", "pymmails", "pyensae", "pyenbc",
             "pyrsslocal", "pymyinstall", "mlstatpy", "tkinterquickhelper",
             "pandas_streaming", "fairtest", 'BLIBmpld3', 'manydataapi',
-            'mlinsights']
+            'mlinsights', 'cpyquickhelper']
     if "html1" in sys.argv:
         layout = ["html"]
         sys.argv = [_ for _ in sys.argv if _ != "html1"]
