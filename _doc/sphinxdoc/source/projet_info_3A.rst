@@ -37,9 +37,6 @@ Nous vous en proposons certains dans les articles ci-dessous.
 * **Calcul distribué** : indiquer les parties parallélisées,
   les variables partagées, si cela est fait via un thread ou un processus,
   une estimation du coût de l'algorithme communication / CPU / nombre de verrous.
-* **Map/Reduce** (Spark ou autre) : préfixer le noms des colonnes par *m_* ou *d_* selon la colonne
-  contient des données ou un coefficient du modèle optimisé, donner une estimation du nombre de
-  lignes de chaque flux manipulé.
 
 .. _l-suggestio-articles-projet-3A:
 
@@ -48,7 +45,6 @@ Suggestions d'articles
 
 *Articles ou sujet que vous ne pouvez plus choisir*
 
-* `Dimension Independent Matrix Square using MapReduce (DIMSUM) <http://stanford.edu/~rezab/papers/dimsum.pdf>`_
 * `Map/Reduce Affinity Propagation Clustering Algorithm <http://www.ijeee.net/uploadfile/2014/0807/20140807114023665.pdf>`_ ou
   `Parallel Hierarchical Affinity Propagation with MapReduce <https://arxiv.org/abs/1403.7394>`_
 * Algorithme `k-means clustering <https://en.wikipedia.org/wiki/K-means_clustering>`_
@@ -124,6 +120,8 @@ Suggestions d'articles
   <https://arxiv.org/abs/1908.09301>`_
 * `Parallel Adaptive Sampling with almost no Synchronization
   <https://arxiv.org/abs/1903.09422>`_
+* `Programming Parallel Dense Matrix Factorizations with Look-Ahead and OpenMP
+  <https://arxiv.org/abs/1804.07017>`_
 
 Nous vous recommandons d'adopter la démarche suivante:
 
