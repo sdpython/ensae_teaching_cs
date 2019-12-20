@@ -706,8 +706,8 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/td3a_cpp.svg?style=svg
             :target: https://circleci.com/gh/sdpython/td3a_cpp
-        .. image:: https://dev.azure.com/xavierdupre3/cpyquickhelper/_apis/build/status/sdpython.cpyquickhelper
-            :target: https://dev.azure.com/xavierdupre3/cpyquickhelper/
+        .. image:: https://dev.azure.com/xavierdupre3/td3a_cpp/_apis/build/status/sdpython.cpyquickhelper
+            :target: https://dev.azure.com/xavierdupre3/td3a_cpp/
       - .. image:: http://img.shields.io/github/issues/sdpython/td3a_cpp.png
             :alt: GitHub Issues
             :target: https://github.com/sdpython/td3a_cpp/issues
