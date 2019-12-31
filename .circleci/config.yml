@@ -58,7 +58,8 @@ jobs:
           command: |
             echo "deb http://deb.debian.org/debian sid main" | sudo tee /etc/apt/sources.list.d/proj.list
             sudo apt-get -qq update
-            sudo apt-get -t sid install -y libproj-dev proj-bin=6.2.1-1 proj-data libgeos-dev
+            sudo apt-get -t sid install -y libproj-dev proj-bin=6.2.1-1 proj-data
+# sudo apt-get -t sid install -y libgeos-dev
 
       - run:
           name: Install pyproj (2)

@@ -1002,6 +1002,9 @@ Outils
         il inclut des tests unitaires,
         une documentation, l'intégration continue, il peut être réutilisé pour tout projet
         similaire
+    * - `td3a_cpp <http://www.xavierdupre.fr/app/td3a_cpp/helpsphinx/index.html>`_
+      - Modèle de module python implémentant un calcul parallélisé à l'aide de
+        :epkg:`cython` et :epkg:`openmp`.
 
 Contenu
 +++++++

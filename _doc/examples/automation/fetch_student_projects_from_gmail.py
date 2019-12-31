@@ -44,9 +44,9 @@ with warnings.catch_warnings():
 
 server = "imap.gmail.com"
 school = "ENSAE"
-date = "11-Nov-2019"
+date = "1-Nov-2019"
 year = '2A'
-exam = 'plotting'
+exam = 'projects'
 pattern = "Python_{0}_{1}_2019".format(year, exam)
 group_def = "groupes.xlsx"
 col_subject, col_group, col_mail, col_student = "sujet", "groupe", "mail", "Nom"
