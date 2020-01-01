@@ -30,7 +30,7 @@ class TestCp2048(unittest.TestCase):
         self.assertEqual(len(scores), 10)
         self.assertGreater(min(scores), 4)
 
-        def random_strategy(game, moves):
+        def random_strategy(game, state, moves):
             return random.randint(0, 3)
 
         scores = list(evaluate_strategy(random_strategy))
