@@ -22,8 +22,7 @@ def get_interpreter(platform=None):
         return "c:\\Python%d%d%d_x64" % sys.version_info[:3]
     elif platform.startswith("darwin"):
         return "/usr/local/bin"
-    else:
-        return "/usr/local/bin"
+    return "/usr/local/bin"
 
 
 def engines_default(prefix="c:\\", prefix_python="c:\\", prefix_conda="c:\\", platform=None):
@@ -47,26 +46,30 @@ def engines_default(prefix="c:\\", prefix_python="c:\\", prefix_conda="c:\\", pl
         res = dict(anaconda2=os.path.join(prefix_conda, "Anaconda2"),
                    anaconda3=os.path.join(prefix_conda, "Anaconda3"),
                    default=get_interpreter(platform=platform),
+                   py38=get_interpreter(platform=platform),
                    py37=get_interpreter(platform=platform),
                    py36=os.path.join(prefix_python, "Python36_x64"),
                    py27=os.path.join(prefix_python, "Python27_x64"),
-                   winpython36=os.path.join(
-                       prefix_python, "WinPython36_x64", "python-3.6.3.amd64"),
+                   Python38pyq=os.path.join(
+                       prefix, "jenkins", "venv", "py38", "pyq", "Scripts"),
                    Python37pyq=os.path.join(
                        prefix, "jenkins", "venv", "py37", "pyq", "Scripts"),
                    Python36pyq=os.path.join(prefix, "jenkins", "venv", "py36", "pyq", "Scripts"))
         res["Python27"] = res["py27"]
         res["Python36"] = res["py36"]
         res["Python37"] = res["py37"]
+        res["Python38"] = res["py38"]
         res["Anaconda2"] = res["anaconda2"]
         res["Anaconda3"] = res["anaconda3"]
-        res["WinPython36"] = res["winpython36"]
         return res
-    else:
-        key = "Python%d%d" % sys.version_info[:2]
-        res = {key: get_interpreter(platform=platform)}
-        res["py%d%d" % sys.version_info[:2]] = res[key]
-        return res
+
+    res = {}
+    for k in [-1, 0, 1]:
+        vers = (sys.version_info[0], sys.version_info[1] + k)        
+        key = "Python%d%d" % vers
+        res[key] = get_interpreter(platform=platform)
+        res["py%d%d" % vers] = res[key]
+    return res
 
 
 def default_jenkins_jobs(filter=None, neg_filter=None, root=None, platform=None):
