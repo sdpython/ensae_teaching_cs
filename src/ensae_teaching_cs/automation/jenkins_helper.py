@@ -65,7 +65,7 @@ def engines_default(prefix="c:\\", prefix_python="c:\\", prefix_conda="c:\\", pl
 
     res = {}
     for k in [-1, 0, 1]:
-        vers = (sys.version_info[0], sys.version_info[1] + k)        
+        vers = (sys.version_info[0], sys.version_info[1] + k)
         key = "Python%d%d" % vers
         res[key] = get_interpreter(platform=platform)
         res["py%d%d" % vers] = res[key]
