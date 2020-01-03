@@ -33,7 +33,7 @@ Voici un exemple :
     import random
     from ensae_teaching_cs.td_1a.cp2048 import evaluate_strategy
 
-    def random_strategy(game, moves):
+    def random_strategy(game, state, moves):
         return random.randint(0, 3)
 
     scores = list(evaluate_strategy(random_strategy))
