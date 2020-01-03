@@ -37,9 +37,9 @@ jobs:
                     sudo apt-get install -y graphviz
 
       - run:
-          name: install avconv (ffmpeg)
+          name: install ffmpeg
           command: |
-                    sudo apt-get install libav-tools
+                    sudo apt-get install ffmpeg
 
       - run:
           name: Install cython

@@ -38,6 +38,7 @@ partd
 plotly
 pocket
 psutil
+pybind11
 pydub
 pyensae>=1.2.788
 pygal
