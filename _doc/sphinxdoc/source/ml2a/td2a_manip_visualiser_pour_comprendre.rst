@@ -16,7 +16,7 @@ Visualiser pour comprendre
 
 *Modules*
 
-* `TensorBoard <https://www.tensorflow.org/versions/r0.12/tutorials/>`_ :  
+* `TensorBoard <https://www.tensorflow.org/versions/r0.12/tutorials/>`_ :
   Il sert à visualiser les résultats intermédiaires, à comparer,
   à voir les résultats d'un processus
   de machine learning, en particulier les réseaux de neurones profond.

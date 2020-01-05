@@ -9,7 +9,10 @@
 Boosting
 ++++++++
 
-*(à venir)*
+.. toctree::
+    :maxdepth: 1
+
+    ../notebooks/gradient_boosting
 
 *Lectures*
 
