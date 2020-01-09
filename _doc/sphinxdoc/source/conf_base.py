@@ -248,6 +248,7 @@ epkg_dictionary.update({
     "teachpyx": 'http://www.xavierdupre.fr/app/teachpyx/helpsphinx/',
     "tensorFlow": 'https://www.tensorflow.org/',
     "TensorFlow": 'https://www.tensorflow.org/',
+    "tensorflow": 'https://www.tensorflow.org/',
     "test unitaire": 'https://fr.wikipedia.org/wiki/Test_unitaire',
     "tests unitaires": 'https://fr.wikipedia.org/wiki/Test_unitaire',
     "theano": 'http://deeplearning.net/software/theano/',
