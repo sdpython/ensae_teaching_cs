@@ -11,3 +11,4 @@ La théorie face à la pratique
     ml_cc_machine_learning_problems2
     ml_ccc_machine_learning_interpretabilite
     td2a_correction_cl_reg_anomaly
+    gradient_boosting

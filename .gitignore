@@ -549,3 +549,4 @@ _unittests/ut_data/Jeu de données deal flow 2018.csv
 _doc/notebooks/2a/twitter_for_network_100000.db.zip
 _doc/notebooks/2a/twitter_for_network_100000.db
 _doc/notebooks/2a/tw_users.json
+_doc/notebooks/td2a_ml/catboost_info/*
