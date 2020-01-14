@@ -87,3 +87,7 @@ Séance 4
 
 Séance 5
 ^^^^^^^^
+
+* Distribution des calculs, coûts, application au k-means
+* `Convergence Properties of the KMeans Algorithm
+  <http://www.iro.umontreal.ca/~lisa/pointeurs/kmeans-nips7.pdf>`_

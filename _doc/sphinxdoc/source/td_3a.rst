@@ -738,6 +738,8 @@ Bibliographie
   Matthieu Durut, Fabrice Rossi
 * `Confidence intervals for AB-test <http://arxiv.org/abs/1501.07768>`_,
   Cyrille Dubarry
+* `Convergence Properties of the KMeans Algorithm
+  <http://www.iro.umontreal.ca/~lisa/pointeurs/kmeans-nips7.pdf>`_
 
 **Liens**
 

@@ -32,6 +32,8 @@ Clustering
 
 *Lectures*
 
+* `Convergence Properties of the KMeans Algorithm
+  <http://www.iro.umontreal.ca/~lisa/pointeurs/kmeans-nips7.pdf>`_
 * `A New Algorithm and Theory for Penalized Regression-based Clustering <http://www.jmlr.org/papers/volume17/15-553/15-553.pdf>`_ :
   méthode de sélection de variables pour des méthodes non supervisés de clustering, voir aussi
   `Penalized Model-Based Clustering with Application to Variable Selection <http://www.jmlr.org/papers/volume8/pan07a/pan07a.pdf>`_
@@ -42,7 +44,7 @@ Clustering
 * `Parallel Hierarchical Affinity Propagation with MapReduce <https://arxiv.org/abs/1403.7394>`_
 * `Cats & Co: Categorical Time Series Coclustering <https://arxiv.org/abs/1505.01300v1>`_
 * `Comparing Python Clustering Algorithms <https://github.com/scikit-learn-contrib/hdbscan/blob/master/docs/comparing_clustering_algorithms.rst>`_
-* `Fast and Provably Good Seedings for k-Means <https://papers.nips.cc/paper/6478-fast-and-provably-good-seedings-for-k-means.pdf>`_
+* `Fast and Probably Good Seedings for k-Means <https://papers.nips.cc/paper/6478-fast-and-provably-good-seedings-for-k-means.pdf>`_
 * `Clustering with Same-Cluster Queries <https://papers.nips.cc/paper/6449-clustering-with-same-cluster-queries.pdf>`_
 * `The K-Modes Algorithm for Clustering <https://arxiv.org/pdf/1304.6478v1.pdf>`_
 * `Clustering of Categorical variables <http://eric.univ-lyon2.fr/~ricco/cours/slides/en/classif_variables_quali.pdf>`_
