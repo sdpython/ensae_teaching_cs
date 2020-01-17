@@ -2,7 +2,6 @@ aequitas
 bayespy
 beautifulsoup4
 blockdiag
-blosc
 bqplot
 chardet
 cloudpickle
