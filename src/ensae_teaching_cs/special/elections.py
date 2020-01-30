@@ -202,11 +202,11 @@ class ElectionResults:
         @return                     results (as a DataFrame)
         """
         cols0 = [_ for _ in self.tours[0] if _ not in self.LevelCol]
-        X = self.tours[0][cols0].as_matrix()
+        X = self.tours[0][cols0].values
         X = numpy.matrix(X)
 
         cols1 = [_ for _ in self.tours[1] if _ not in self.LevelCol]
-        Y = self.tours[1][cols1].as_matrix()
+        Y = self.tours[1][cols1].values
         Y = numpy.matrix(Y)
 
         nbC = Y.shape[1]

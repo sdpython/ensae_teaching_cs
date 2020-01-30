@@ -94,7 +94,7 @@ print (thispiv.head())
 beg = "4-16:00"
 piv = thispiv 
 piv.ix[beg:,31] = numpy.NaN
-mx = numpy.array(piv.as_matrix())
+mx = numpy.array(piv.values)
 print (mx)
 print (piv.index)
 
