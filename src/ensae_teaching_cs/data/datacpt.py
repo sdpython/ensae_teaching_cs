@@ -51,6 +51,8 @@ def data_cpt_ENSAE_2016_11_blind_set(password):
             raise FileNotFoundError(name)
         with open(name, "rb") as f:
             c = f.read()
+        if password is None:
+            raise ValueError("password cannot be None.")
         if not isinstance(password, bytes):
             password = bytes(password, "ascii")
         res = decrypt_stream(password, c)
