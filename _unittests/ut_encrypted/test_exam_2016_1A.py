@@ -33,6 +33,8 @@ class TestExam20161A(unittest.TestCase):
             fLOG("crypt")
             pwd = keyring.get_password(
                 "exam", "ensae_teaching_cs,key")
+            if pwd is None:
+                raise ValueError("pwd cannot be None")
             pwd += "*" * (16 - len(pwd))
             pwd = pwd.encode("ascii")
             fLOG(type(pwd))
