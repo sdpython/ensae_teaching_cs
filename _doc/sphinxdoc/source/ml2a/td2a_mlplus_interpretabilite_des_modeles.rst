@@ -111,6 +111,8 @@ seulement.
 * `To Trust Or Not To Trust A Classifier <https://arxiv.org/abs/1805.11783>`_,
   `Mind the Gap: A Generative Approach to Interpretable Feature Selection and Extraction <https://beenkim.github.io/papers/BKim2015NIPS.pdf>`_
 * `Interpretation of Neural Networks is Fragile <https://arxiv.org/pdf/1710.10547.pdf>`_
+* `Intelligible Models for HealthCare: Predicting Pneumonia Risk and Hospital 30-day Readmission
+  <https://www.microsoft.com/en-us/research/wp-content/uploads/2017/06/KDD2015FinalDraftIntelligibleModels4HealthCare_igt143e-caruanaA.pdf>`_
 
 *Lectures : monotonie*
 
@@ -171,6 +173,7 @@ seulement.
 
 * `eli5 <https://github.com/TeamHG-Memex/eli5>`_
 * `shap <https://github.com/slundberg/shap>`_ (développement actif)
+* `interpretml <https://github.com/interpretml/interpret>`_
 * `edward <http://edwardlib.org/>`_
 * `deepdive <http://deepdive.stanford.edu/>`_: ce n'est pas un module python,
   cet outil a été développé pour étudier les relations dans les données et plus
