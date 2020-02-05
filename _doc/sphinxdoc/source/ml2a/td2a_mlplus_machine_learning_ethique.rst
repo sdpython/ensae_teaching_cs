@@ -123,6 +123,8 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
 * `Fairness in Criminal Justice Risk Assessments: The State of the Art
   <https://arxiv.org/abs/1703.09207>`_
 * `Counterfactual Fairness <https://arxiv.org/pdf/1703.06856.pdf>`_
+* `Fairness Constraints: A Flexible Approach for Fair Classification
+  <http://www.jmlr.org/papers/volume20/18-262/18-262.pdf>`_
 
 *Conférences*
 

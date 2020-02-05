@@ -44,10 +44,10 @@ with warnings.catch_warnings():
 
 server = "imap.gmail.com"
 school = "ENSAE"
-date = "1-Nov-2019"
-year = '2A'
+date = "20-Jan-2020"
+year = '3A'
 exam = 'projects'
-pattern = "Python_{0}_{1}_2019".format(year, exam)
+pattern = "Python_{0}_{1}_2020".format(year, exam)
 group_def = "groupes.xlsx"
 col_subject, col_group, col_mail, col_student = "sujet", "groupe", "mail", "Nom"
 final_dest = ["2019-2020", "{}-{}".format(year, exam)]

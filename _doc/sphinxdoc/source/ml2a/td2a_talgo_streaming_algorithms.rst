@@ -40,6 +40,8 @@ est inconnue à l'avance.
   `Data Streaming Algorithms 2011 <http://www.cs.dartmouth.edu/~ac/Teach/CS49-Fall11/Notes/lecnotes.pdf>`_
 * `Data Stream Management <http://web.cs.ucla.edu/classes/winter17/cs240B/notes/DataStreamMg.pdf>`_
   (collection d'articles)
+* `Streaming Principal Component Analysis From Incomplete Data
+  <http://www.jmlr.org/papers/volume20/16-627/16-627.pdf>`_
 
 *Modules*
 

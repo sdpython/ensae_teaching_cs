@@ -25,3 +25,4 @@ Online training
 *Modules*
 
 * `scikit-garden <https://github.com/scikit-garden/scikit-garden>`_
+* `scikit-multiflow <https://scikit-multiflow.github.io/>`_

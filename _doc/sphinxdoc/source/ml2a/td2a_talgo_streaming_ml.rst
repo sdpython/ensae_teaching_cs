@@ -16,6 +16,8 @@ Streaming machine learning
   <http://jmlr.org/papers/volume20/16-627/16-627.pdf>`_
 * `Régression linéaire par morceaux (streaming)
   <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/piecewise.html>`_
+* `Streaming Principal Component Analysis From Incomplete Data
+  <http://www.jmlr.org/papers/volume20/16-627/16-627.pdf>`_
 
 *Modules*
 

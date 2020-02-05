@@ -25,6 +25,11 @@ Intervalles de confiance
   approche bayésienne
 * `Confidence Interval and p-Value
   <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/pvalues.html>`_
+* `Online Bootstrap Confidence Intervals for the Stochastic Gradient Descent Estimator
+  <http://www.jmlr.org/papers/volume19/17-370/17-370.pdf>`_, l'article démontre
+  également la convergence de l'algorithme du gradient stochastique dans
+  le cas d'une fonction convexe, différentiable deux fois, et quelques
+  autres propriétés.
 
 *Modules*
 
