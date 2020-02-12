@@ -13,6 +13,7 @@ virtualenv:
   - path: {{ospathjoin(root_path, pickname("$NAME_JENKINS", project_name + "_$VERSION_$DIST_$NAME"), "_venv")}}
   
 install:
+  - $PYINT -m pip install --upgrade pip
   - $PYINT -m pip install --no-cache-dir --no-deps --index http://localhost:8067/simple/ pyquickhelper tkinterquickhelper pyensae pymmails pymyinstall pyrsslocal mlstatpy mlinsights jyquickhelper manydataapi skl2onnx onnx onnxruntime_dnnl onnxconverter_common mlprodict --upgrade --extra-index-url=https://pypi.python.org/simple/
   - $PYINT -m pip install -r requirements_conda.txt
   - $PYINT -m pip install -r requirements.txt

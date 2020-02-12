@@ -156,25 +156,44 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
 * `CS 294: Fairness in Machine Learning <https://fairmlclass.github.io/>`_
 * `Algorithms and Bias: Q. and A. With Cynthia Dwork
   <https://www.nytimes.com/2015/08/11/upshot/algorithms-and-bias-q-and-a-with-cynthia-dwork.html>`_
+* `Fairness is not static: deeper understanding of long term fairness via simulation studies
+  <https://github.com/google/ml-fairness-gym/blob/master/papers/acm_fat_2020_fairness_is_not_static.pdf>`_
 
 *Articles*
 
-* `Microsoft is developing a tool to help engineers catch bias in algorithms <https://venturebeat.com/2018/05/25/microsoft-is-developing-a-tool-to-help-engineers-catch-bias-in-algorithms/>`_ (2018/05/25)
-* `Sent to Prison by a Software Program's Secret Algorithms <https://www.nytimes.com/2017/05/01/us/politics/sent-to-prison-by-a-software-programs-secret-algorithms.html>`_,
-  `Emotional Judges and Unlucky Juveniles <https://www.nber.org/papers/w22611?utm_campaign=ntw&utm_medium=email&utm_source=ntw>`_,
-  `How artificial intelligence can help us make judges less biased <https://www.theverge.com/2019/1/17/18186674/daniel-chen-machine-learning-rule-of-law-economics-psychology-judicial-system-policy>`_
+* `Microsoft is developing a tool to help engineers catch bias in algorithms
+  <https://venturebeat.com/2018/05/25/microsoft-is-developing-a-tool-to-help-engineers-catch-bias-in-algorithms/>`_
+* `Sent to Prison by a Software Program's Secret Algorithms
+  <https://www.nytimes.com/2017/05/01/us/politics/sent-to-prison-by-a-software-programs-secret-algorithms.html>`_,
+  `Emotional Judges and Unlucky Juveniles
+  <https://www.nber.org/papers/w22611?utm_campaign=ntw&utm_medium=email&utm_source=ntw>`_,
+  `How artificial intelligence can help us make judges less biased
+  <https://www.theverge.com/2019/1/17/18186674/daniel-chen-machine-learning-rule-of-law-economics-psychology-judicial-system-policy>`_
 * `How We Analyzed the COMPAS Recidivism Algorithm
   <https://www.propublica.org/article/how-we-analyzed-the-compas-recidivism-algorithm>`_
+* `ML-fairness-gym: A Tool for Exploring Long-Term Impacts of Machine Learning Systems
+  <https://ai.googleblog.com/2020/02/ml-fairness-gym-tool-for-exploring-long.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+blogspot%2FgJZg+%28Google+AI+Blog%29>`_
 
 *Modules*
 
 * `aequitas <https://github.com/dssg/aequitas>`_
+* `fairlearn <https://github.com/Microsoft/fairlearn>`_
+* `fairness-comparison <https://github.com/algofairness/fairness-comparison>`_
+  (un peu maintenu)
+* `fairness-indicators
+  <https://github.com/tensorflow/fairness-indicators>`_
+* `ml-fairness-gym <https://github.com/google/ml-fairness-gym>`_
+
+*Modules non maintenu*
+
+C'est souvent le cas de code produit par des chercheurs qui
+écrive le code pour écrire un article scientifique et qui n'a
+pas vocation à être maintenu par la suite.
+
 * `fair-classification <https://github.com/mbilalzafar/fair-classification>`_
   (non maintenu)
 * `fairml <https://github.com/adebayoj/fairml>`_ (non maintenu)
 * `fairml-farm <https://github.com/yoshavit/fairml-farm>`_ (non maintenu)
-* `fairlearn <https://github.com/Microsoft/fairlearn>`_
-* `fairness-comparison <https://github.com/algofairness/fairness-comparison>`_
-  (un peu maintenu)
 * `fairtest <https://github.com/columbia/fairtest>`_ (non maintenu)
 * `themis-ml <https://github.com/cosmicBboy/themis-ml>`_ (non maintenu)
+
