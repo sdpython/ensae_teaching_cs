@@ -21,6 +21,10 @@ Online training
 * `Extremely randomized trees <http://www.montefiore.ulg.ac.be/~ernst/uploads/news/id63/extremely-randomized-trees.pdf>`_
 * `Approximation Vector Machines for Large-scale Online Learning <http://www.jmlr.org/papers/volume18/16-191/16-191.pdf>`_
 * `Online Learning to Rank with Top-k Feedback <http://www.jmlr.org/papers/volume18/16-285/16-285.pdf>`_
+* `Online Learning for Matrix Factorization and Sparse Coding <https://www.di.ens.fr/~fbach/mairal10a.pdf>`_
+* `Online Sufficient Dimension Reduction Through Sliced Inverse Regression
+  <http://www.jmlr.org/papers/volume21/18-567/18-567.pdf>`_
+* `Online PCA with Optimal Regret <http://jmlr.org/papers/volume17/15-320/15-320.pdf>`_
 
 *Modules*
 

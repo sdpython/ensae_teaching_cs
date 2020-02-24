@@ -51,6 +51,7 @@ D'autres sujets parfois exotiques mais non moins intéressants.
     td2a_mlplus_snn
     td2a_mlplus_surprise_modelling
     td2a_mlplus_tres_grande_dimension
+    td2a_mlplus_dynamic_selection
 
 Séries temporelles
 ==================

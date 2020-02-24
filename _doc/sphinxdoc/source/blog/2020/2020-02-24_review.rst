@@ -1,0 +1,60 @@
+
+.. blogpost::
+    :title: Articles
+    :keywords: articles
+    :date: 2020-02-20
+    :categories: papers
+
+    La librairie `deslib
+    <https://deslib.readthedocs.io/en/latest/index.html>`_
+    implémente plusieurs algorithme de sélection de modèles
+    sur des problèmes de classifications. Mais plutôt que
+    de sélectionner un modèle ou un ensemble de modèle
+    sur toutes la base, elle sélectionne les meilleurs
+    modèles localement. On appelle cela la
+    `sélection dynamique de classifieurs
+    <https://www.sciencedirect.com/science/article/pii/S1566253517304074>`_
+    (voir :ref:`l-dynamic-selection-ml`).
+
+    Quelques lectures plus loin
+    (`Generalized probabilistic principal component analysis of correlated data
+    <http://www.jmlr.org/papers/volume21/18-595/18-595.pdf>`_), j'ai découvert
+    `PPCA = Probabilistic PCA
+    <http://www.robots.ox.ac.uk/~cvrg/hilary2006/ppca.pdf>`_
+    qui produit des résultats équivalents mais formule
+    le problème d'une façon plus interprétable
+    (voir aussi `edwards - probabilistic pca
+    <http://edwardlib.org/tutorials/probabilistic-pca>`_.
+
+    Je suis tombé aussi sur cet article
+    `A Unified Framework for Structured Graph Learning via Spectral Constraints
+    <http://www.jmlr.org/papers/volume21/19-276/19-276.pdf>`_.
+    Il m'a fait découvrir la forme des valeurs propres de la matrice
+    Laplacien construite à partir d'un graphe bi-partite. La première équation
+    m'a intrigué car je manque de culture dans ce domaine :
+    :math:`\max_{\Theta \in \mathcal{S}^p_{++}} \log \det \Theta - \tr(\Theta S)`
+    où :math:`\mathcal{S}^p_{++}` est l'ensemble des matrices
+    dans :math:`\mathbb{R}^{p \times \p}` définies positives pour me demander le maximum
+    de :math:`\max_x f(x) = \log x - s x \Rightarrow x = \frac{1}{s}` et
+    :math:`f(\frac{1}{s}) = - log s - 1`.
+
+    L'article suivant essaye de faire du clustering
+    `Path-Based Spectral Clustering: Guarantees, Robustness to Outliers, and Fast Algorithms
+    <http://www.jmlr.org/papers/volume21/18-085/18-085.pdf>`_ en utilisant
+    l'arc le plus long parmi dans le chemin le plus court reliant
+    deux noeuds. L'algorithme résultat est apparemment capable
+    de séparer deux spirales enlacées.
+    
+    Deux autres articles 
+    `Online Sufficient Dimension Reduction Through Sliced Inverse Regression
+    <http://www.jmlr.org/papers/volume21/18-567/18-567.pdf>`_,
+    `Online PCA with Optimal Regret <http://jmlr.org/papers/volume17/15-320/15-320.pdf>`_
+    m'ont ramené à quelques idées développées pour
+    l'implémentation d'une `régression linéaire par morceaux
+    <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/piecewise.html>`_.
+
+    Le dernier article apprend lui-aussi à réduire les dimensions
+    `Perturbation Bounds for Procrustes, Classical Scaling, and Trilateration, with Applications to Manifold Learning
+    <http://www.jmlr.org/papers/volume21/18-720/18-720.pdf>`_. Je l'ai ouvert
+    car certains mots du titres me faisait penser à formules
+    magiques tirées de Harry Potter.

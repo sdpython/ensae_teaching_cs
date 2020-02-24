@@ -25,6 +25,10 @@ Clustering de Graphes
 * `A Tensor Approach to Learning Mixed Membership Community Models <http://jmlr.org/papers/volume15/anandkumar14a/anandkumar14a.pdf>`_
 * `Clustering from General Pairwise Observations with Applications to Time-varying Graphs <http://www.jmlr.org/papers/volume18/15-659/15-659.pdf>`_
 * `A Spectral Algorithm with Additive Clustering for the Recovery of Overlapping Communities in Networks <https://arxiv.org/abs/1506.04158>`_
+* `A Unified Framework for Structured Graph Learning via Spectral Constraints
+  <http://www.jmlr.org/papers/volume21/19-276/19-276.pdf>`_
+* `Path-Based Spectral Clustering: Guarantees, Robustness to Outliers, and Fast Algorithms
+  <http://www.jmlr.org/papers/volume21/18-085/18-085.pdf>`_
 
 *Lectures - métriques*
 

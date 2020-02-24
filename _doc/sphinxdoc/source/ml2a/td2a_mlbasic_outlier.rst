@@ -18,7 +18,10 @@ Détection d'outliers
 
 *Lectures*
 
-* `Novelty and Outlier Detection <https://scikit-learn.org/stable/modules/outlier_detection.html>`_
+* `Novelty and Outlier Detection
+  <https://scikit-learn.org/stable/modules/outlier_detection.html>`_
+* `A model of fake data in data-driven analysis
+  <http://www.jmlr.org/papers/volume21/17-360/17-360.pdf>`_
 
 *Modules*
 
