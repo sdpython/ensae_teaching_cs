@@ -211,7 +211,9 @@ if not r:
             package_data=package_data,
             setup_requires=["pyquickhelper"],
             install_requires=[
-                "pyquickhelper>=1.9", "pyensae", "pymyinstall", "pymmails",
-                "scikit-learn", "pyrsslocal", "pandas", "numpy", "pyenbc",
-                "matplotlib", "jupyter", "mlstatpy", "manydataapi", "mlinsights"],
+                "pyquickhelper>=1.9.3280", "pyensae>=1.2.788",
+                "pymyinstall", "pymmails",
+                "scikit-learn>=0.22", "pyrsslocal", "pandas", "numpy", "pyenbc",
+                "matplotlib", "jupyter", "mlstatpy", "manydataapi",
+                "mlinsights>=0.2.360"],
         )

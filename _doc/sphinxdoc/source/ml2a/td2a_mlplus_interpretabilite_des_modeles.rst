@@ -173,6 +173,7 @@ seulement.
 
 * `eli5 <https://github.com/TeamHG-Memex/eli5>`_
 * `shap <https://github.com/slundberg/shap>`_ (développement actif)
+* `trelawney <https://github.com/aredier/trelawney>`_
 * `interpretml <https://github.com/interpretml/interpret>`_
 * `edward <http://edwardlib.org/>`_
 * `deepdive <http://deepdive.stanford.edu/>`_: ce n'est pas un module python,
