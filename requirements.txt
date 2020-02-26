@@ -61,6 +61,7 @@ sphinx_bootstrap_theme
 sphinx_rtd_theme
 tkinterquickhelper
 toolz
+tqdm
 treeinterpreter
 tutormagic
 wheel
