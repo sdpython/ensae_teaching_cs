@@ -14,7 +14,7 @@
 Sélection dynamique de modèles
 ++++++++++++++++++++++++++++++
 
-La plupart du temps, on souhaite sélectionner le meilleur 
+La plupart du temps, on souhaite sélectionner le meilleur
 modèle sur l'ensemble d'une base de données. Cette fois-ci,
 le problème est de sélectionner le ou les meilleurs modèles
 pour une observation donnée. Ces techniques introduisent
@@ -42,4 +42,3 @@ donné.
 *Modules*
 
 * `deslib <https://deslib.readthedocs.io/en/latest/>`_
-

@@ -44,8 +44,8 @@
     l'arc le plus long parmi dans le chemin le plus court reliant
     deux noeuds. L'algorithme résultat est apparemment capable
     de séparer deux spirales enlacées.
-    
-    Deux autres articles 
+
+    Deux autres articles
     `Online Sufficient Dimension Reduction Through Sliced Inverse Regression
     <http://www.jmlr.org/papers/volume21/18-567/18-567.pdf>`_,
     `Online PCA with Optimal Regret <http://jmlr.org/papers/volume17/15-320/15-320.pdf>`_

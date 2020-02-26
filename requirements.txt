@@ -48,7 +48,6 @@ pylzma
 pymmails
 pympler
 pymyinstall
-pyqt5
 pyquickhelper>=1.9.3280
 pyrsslocal
 python-jenkins

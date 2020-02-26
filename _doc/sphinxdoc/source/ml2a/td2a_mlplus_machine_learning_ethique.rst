@@ -196,4 +196,3 @@ pas vocation à être maintenu par la suite.
 * `fairml-farm <https://github.com/yoshavit/fairml-farm>`_ (non maintenu)
 * `fairtest <https://github.com/columbia/fairtest>`_ (non maintenu)
 * `themis-ml <https://github.com/cosmicBboy/themis-ml>`_ (non maintenu)
-

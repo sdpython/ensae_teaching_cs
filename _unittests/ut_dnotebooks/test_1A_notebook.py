@@ -7,6 +7,7 @@ import unittest
 import shutil
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import get_temp_folder, add_missing_development_version
+from pyquickhelper.ipythonhelper import test_notebook_execution_coverage
 import ensae_teaching_cs
 
 
@@ -55,6 +56,12 @@ class TestNotebookRunner1a_(unittest.TestCase):
                           fLOG=fLOG,
                           clean_function=clean_function_1a,
                           dump=ensae_teaching_cs)
+
+    def test_notebook_maxtrix_dictionary(self):
+        folder = os.path.join(os.path.dirname(__file__),
+                              "..", "..", "_doc", "notebooks", "td1a")
+        test_notebook_execution_coverage(__file__, "matrix_dictionary", folder,
+                                         this_module_name="ensae_teaching_cs", fLOG=fLOG)
 
 
 if __name__ == "__main__":
