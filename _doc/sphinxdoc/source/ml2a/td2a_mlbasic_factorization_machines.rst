@@ -15,6 +15,7 @@ Factorization Machines
 * `Stochastic Subsampling for Factorizing Huge Matrices <https://hal.archives-ouvertes.fr/hal-01431618v3>`_
 * `Field-aware Factorization Machines in a Real-world Online Advertising System <https://arxiv.org/abs/1701.04099>`_
 * `fastFM: A Library for Factorization Machines <fastFM: A Library for Factorization Machines>`_
+* `Factorization Machines <https://www.csie.ntu.edu.tw/~b97053/paper/Rendle2010FM.pdf>`_
 
 *Librairies*
 
