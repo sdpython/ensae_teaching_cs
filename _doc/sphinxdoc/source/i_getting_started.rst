@@ -474,7 +474,8 @@ Pour être compilée, la documentation requiert également :
   `Build timeout plugin <https://wiki.jenkins-ci.org/display/JENKINS/Build-timeout+Plugin>`_,
   `Console column plugin <https://wiki.jenkins-ci.org/display/JENKINS/Console+Column+Plugin>`_,
   `Next executions <https://wiki.jenkins-ci.org/display/JENKINS/Next+Executions>`_,
-  `Collapsing Console Sections Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Collapsing+Console+Sections+Plugin>`_)
+  `Collapsing Console Sections Plugin <https://wiki.jenkins-ci.org/display/JENKINS/Collapsing+Console+Sections+Plugin>`_,
+  `Exclusive Execution <https://plugins.jenkins.io/exclusive-execution/>`_)
 * :epkg:`Visual Studio Community Edition 2015` : C++, C#, F#, Python
   avec `PTVS <https://microsoft.github.io/PTVS/>`_
 * :epkg:`MinGW` : compilateur C++
