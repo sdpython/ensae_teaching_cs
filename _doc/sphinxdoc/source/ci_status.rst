@@ -725,6 +725,23 @@ Tableau de bord et statut des dépendances
       -
       -
       -
+    * - Les suivants sont des
+      - expérimentations.
+      -
+      -
+      -
+      -
+      -
+      -
+    * - `_bugs <https://github.com/sdpython/_bugs>`_
+      -
+      -
+      - .. image:: https://dev.azure.com/xavierdupre3/benchmark/_apis/build/status/sdpython._bugs
+            :target: https://dev.azure.com/xavierdupre3/benchmark/
+      -
+      -
+      -
+      -
 
 Les projets suivants lient :epkg:`C#` et :epkg:`python`.
 Ils ne sont pas maintenus de façon très soutenue.

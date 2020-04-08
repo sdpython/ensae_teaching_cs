@@ -1,0 +1,32 @@
+
+.. blogpost::
+    :title: Worst case scenarios
+    :keywords: tree, branch bound
+    :date: 2020-04-08
+    :categories: papers
+
+    J'ai découvert les publications de
+    `Maria-Florina Balcan <https://www.csd.cs.cmu.edu/people/faculty/maria-balcan>`_
+    aujourd'hui. Un de ses axes de recherches est - je cite -
+    **Analysis of Algorithms beyond the Worst Case**.
+    Celui-ci propose une amélioration de la construction d'arbres
+    utilisés pour optimiser la recherche d'éléments dans
+    un espace vectoriel : `Learning to Branch
+    <http://www.cs.cmu.edu/~ninamf/papers/learn-branch.pdf>`_.
+    Je recommande aussi les livres cités sur la page de son cours :
+    `Advanced Introduction to Machine Learning <http://www.cs.cmu.edu/~10715-f18/>`_.
+    Parmi ceux que j'ai envie de lire :
+    `The Power of Localization
+    for Efficiently Learning Linear Separators with Noise
+    <http://www.cs.cmu.edu/~ninamf/papers/ABL16_malicious_jacm.pdf>`_,
+    `Data Driven Resource Allocation for Distributed Learning
+    <http://www.cs.cmu.edu/~ninamf/papers/data-driven-resource-allocation.pdf>`_,
+    `Learning Valuation Functions
+    <http://www.cs.cmu.edu/~ninamf/papers/learn-vals.pdf>`_,
+    `Dispersion for Data-Driven Algorithm Design, Online Learning, and Private Optimization
+    <https://arxiv.org/pdf/1711.03091.pdf>`_.    
+    
+    Je vous recommande aussi un petit tour sur
+    la nouvelle documentation de `pandas
+    <https://pandas.pydata.org/docs/>`_.
+    Elle est beaucoup mieux qu'avant.

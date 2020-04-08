@@ -70,6 +70,20 @@ proposent les processeurs CPU : le :epkg:`branching`.
 * `Measures branching in C++ from python
   <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/notebooks/cbenchmark_branching.html#cbenchmarkbranchingrst>`_
 
+*Code*
+
+* `ENH: Improves speed of one hot encoding
+  <https://github.com/scikit-learn/scikit-learn/pull/15762>`_,
+  cette pull request (PR) modifie un code très court pour réduire
+  le nombre d'allocations mémoire avec :epkg:`numpy`
+* `New K-means implementation for improved performances
+  <https://github.com/scikit-learn/scikit-learn/pull/11950>`_,
+  cette pull request (PR) étudie une nouvelle implémentation
+  de l'algorithme des k-means, il n'est pas évident de se plonger
+  dans le code mais il faut lire les commentaires qui illustrent
+  les différences de performances selon que la machine utilise
+  ses caches L2, L3.
+
 *Lectures*
 
 * `Weld: A Multithreading Technique Towards Latencytolerant VLIW Processors
