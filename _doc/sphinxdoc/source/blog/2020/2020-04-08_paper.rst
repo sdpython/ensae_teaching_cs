@@ -24,8 +24,8 @@
     `Learning Valuation Functions
     <http://www.cs.cmu.edu/~ninamf/papers/learn-vals.pdf>`_,
     `Dispersion for Data-Driven Algorithm Design, Online Learning, and Private Optimization
-    <https://arxiv.org/pdf/1711.03091.pdf>`_.    
-    
+    <https://arxiv.org/pdf/1711.03091.pdf>`_.
+
     Je vous recommande aussi un petit tour sur
     la nouvelle documentation de `pandas
     <https://pandas.pydata.org/docs/>`_.
