@@ -110,6 +110,17 @@ proposent les processeurs CPU : le :epkg:`branching`.
 * `OpenMPI <https://www.open-mpi.org/>`_ :
   c'est une librairie utilisée pour synchroniser des calculs parallélisés
   sur plusieurs processeurs (ou machines)
+* `daal4py <https://intelpython.github.io/daal4py/>`_,
+  réécriture d'algorithme de machine learning optimisée
+  pour les processeurs Intel
+
+Intel propose une version de l'interpréteur python avec
+les principaux modules compilée spécifiquement
+pour ces processeurs :
+`Intel Python <https://software.intel.com/en-us/distribution-for-python>`_.
+L'accélération n'est pas exceptionnelle pour un processeur
+avec un ou deux coeurs, mais elle l'est particulièrement
+sur des machines dédiées aux calculs.
 
 GPU
 +++
