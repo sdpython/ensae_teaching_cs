@@ -101,6 +101,15 @@ Catalogue d'algorithmes
 * Diviser pour reigner
     * `dichotomie <http://fr.wikipedia.org/wiki/Dichotomie>`_ **algo**
     * `branch and bound <http://en.wikipedia.org/wiki/Branch_and_bound>`_ **algo**
+    * `The Ultimate Planar Convex Hull Algorithm?
+      <https://www.cs.princeton.edu/~chazelle/temp/451/451-2019/KirkSeidel.pdf>`_ **algo**
+      (relectures `Kirkpatrick-Seidel’s Prune-and-Search Convex Hull Algorithm
+      <http://www.cse.yorku.ca/~andy/courses/6114/lecture-notes/KirkSeidel.pdf>`_,
+      `An Algorithm for Finding Convex Hulls of Planar Point Sets
+      <https://arxiv.org/ftp/arxiv/papers/1212/1212.6043.pdf>`_),
+      détermine l'enveloppe convexe d'un ensemble de points avec
+      un coût de :math:`O(n \ln H)` où *H* est le nombre de segments
+      de l'enveloppe
 * Programmation dynamique
     * `distance d'édition <http://fr.wikipedia.org/wiki/Distance_de_Levenshtein>`_ **algo**
     * `plus court chemin dans un graphe <orghttp://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra>`_ **algo**
