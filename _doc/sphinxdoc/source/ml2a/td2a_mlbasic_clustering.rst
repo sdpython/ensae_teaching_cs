@@ -34,36 +34,59 @@ Clustering
 
 * `Convergence Properties of the KMeans Algorithm
   <http://www.iro.umontreal.ca/~lisa/pointeurs/kmeans-nips7.pdf>`_
-* `A New Algorithm and Theory for Penalized Regression-based Clustering <http://www.jmlr.org/papers/volume17/15-553/15-553.pdf>`_ :
+* `A New Algorithm and Theory for Penalized Regression-based Clustering
+  <http://www.jmlr.org/papers/volume17/15-553/15-553.pdf>`_ :
   méthode de sélection de variables pour des méthodes non supervisés de clustering, voir aussi
-  `Penalized Model-Based Clustering with Application to Variable Selection <http://www.jmlr.org/papers/volume8/pan07a/pan07a.pdf>`_
+  `Penalized Model-Based Clustering with Application to Variable Selection
+  <http://www.jmlr.org/papers/volume8/pan07a/pan07a.pdf>`_
 * `K-means <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_clus/kmeans.html>`_
-* `Cartes de Kohonen <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_clus/kohonen.html>`_
-* `Clustering by Passing Messages Between Data Points <http://www.icmla-conference.org/icmla07/FreyDueckScience07.pdf>`_
-* `Map/Reduce Affinity Propagation Clustering Algorithm <http://www.ijeee.net/uploadfile/2014/0807/20140807114023665.pdf>`_
-* `Parallel Hierarchical Affinity Propagation with MapReduce <https://arxiv.org/abs/1403.7394>`_
-* `Cats & Co: Categorical Time Series Coclustering <https://arxiv.org/abs/1505.01300v1>`_
-* `Comparing Python Clustering Algorithms <https://github.com/scikit-learn-contrib/hdbscan/blob/master/docs/comparing_clustering_algorithms.rst>`_
-* `Fast and Probably Good Seedings for k-Means <https://papers.nips.cc/paper/6478-fast-and-provably-good-seedings-for-k-means.pdf>`_
-* `Clustering with Same-Cluster Queries <https://papers.nips.cc/paper/6449-clustering-with-same-cluster-queries.pdf>`_
-* `The K-Modes Algorithm for Clustering <https://arxiv.org/pdf/1304.6478v1.pdf>`_
-* `Clustering of Categorical variables <http://eric.univ-lyon2.fr/~ricco/cours/slides/en/classif_variables_quali.pdf>`_
-* `Classification d'un ensemble de variables qualitatives <http://archive.numdam.org/ARCHIVE/RSA/RSA_1998__46_4/RSA_1998__46_4_5_0/RSA_1998__46_4_5_0.pdf>`_
-* `Yinyang K-Means: A Drop-In Replacement of the Classic K-Means with Consistent Speedup <https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ding15.pdf>`_
+* `Cartes de Kohonen
+  <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_clus/kohonen.html>`_
+* `Clustering by Passing Messages Between Data Points
+  <http://www.icmla-conference.org/icmla07/FreyDueckScience07.pdf>`_
+* `Map/Reduce Affinity Propagation Clustering Algorithm
+  <http://www.ijeee.net/uploadfile/2014/0807/20140807114023665.pdf>`_
+* `Parallel Hierarchical Affinity Propagation with MapReduce
+  <https://arxiv.org/abs/1403.7394>`_
+* `Cats & Co: Categorical Time Series Coclustering
+  <https://arxiv.org/abs/1505.01300v1>`_
+* `Comparing Python Clustering Algorithms
+  <https://github.com/scikit-learn-contrib/hdbscan/blob/master/docs/comparing_clustering_algorithms.rst>`_
+* `Fast and Probably Good Seedings for k-Means
+  <https://papers.nips.cc/paper/6478-fast-and-provably-good-seedings-for-k-means.pdf>`_
+* `Clustering with Same-Cluster Queries
+  <https://papers.nips.cc/paper/6449-clustering-with-same-cluster-queries.pdf>`_
+* `The K-Modes Algorithm for Clustering
+  <https://arxiv.org/pdf/1304.6478v1.pdf>`_
+* `Clustering of Categorical variables
+  <http://eric.univ-lyon2.fr/~ricco/cours/slides/en/classif_variables_quali.pdf>`_
+* `Classification d'un ensemble de variables qualitatives
+  <http://archive.numdam.org/ARCHIVE/RSA/RSA_1998__46_4/RSA_1998__46_4_5_0/RSA_1998__46_4_5_0.pdf>`_
+* `Yinyang K-Means: A Drop-In Replacement of the Classic K-Means with Consistent Speedup
+  <https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ding15.pdf>`_
 * `Online Clustering with Experts <http://www.jmlr.org/proceedings/papers/v26/choromanska12a/choromanska12a.pdf>`_
-* `Kernel K-means and Spectral Clustering <https://pdfs.semanticscholar.org/6be9/e527f94e88fef82e2270e94162d31a2dbfbc.pdf>`_
+* `Kernel K-means and Spectral Clustering
+  <https://pdfs.semanticscholar.org/6be9/e527f94e88fef82e2270e94162d31a2dbfbc.pdf>`_
 * `Scalable Density-Based Clustering with Quality Guarantees using Random Projections <http://alumni.cs.ucr.edu/~mvlachos/erc/projects/density-based/paper.pdf>`_
-* `Clustering Via Decision Tree Construction <http://web.cs.ucla.edu/~wwc/course/cs245a/CLTrees.pdf>`_
+* `Clustering Via Decision Tree Construction
+  <http://web.cs.ucla.edu/~wwc/course/cs245a/CLTrees.pdf>`_
   (implémentation en python `dimitrs/CLTree <https://github.com/dimitrs/CLTree>`_)
-* `Spectral Clustering Based on Local PCA <http://www.jmlr.org/papers/volume18/14-318/14-318.pdf>`_
+* `Spectral Clustering Based on Local PCA
+  <http://www.jmlr.org/papers/volume18/14-318/14-318.pdf>`_
 * `Brown clustering <https://en.wikipedia.org/wiki/Brown_clustering>`_
-* `Hierarchical Clustering via Spreading Metrics <http://www.jmlr.org/papers/volume18/17-081/17-081.pdf>`_
+* `Hierarchical Clustering via Spreading Metrics
+  <http://www.jmlr.org/papers/volume18/17-081/17-081.pdf>`_
+* `Alternatives to the k-means algorithm that find better clusterings
+  <http://people.csail.mit.edu/tieu/notebook/kmeans/15_p600-hamerly.pdf>`_
 
 *Lectures - Constraint KMeans*
 
-* `Same-size k-Means Variation <https://elki-project.github.io/tutorial/same-size_k_means>`_
-* `Constrained K-means Clustering with Background Knowledge <http://cse.msu.edu/~cse802/notes/WagstaffCOPKmeans.pdf>`_
- (voir aussi `cop_kmeans.py <https://github.com/Behrouz-Babaki/COP-Kmeans/blob/master/copkmeans/cop_kmeans.py>`_)
+* `Same-size k-Means Variation
+  <https://elki-project.github.io/tutorial/same-size_k_means>`_
+* `Constrained K-means Clustering with Background Knowledge
+  <http://cse.msu.edu/~cse802/notes/WagstaffCOPKmeans.pdf>`_
+  (voir aussi `cop_kmeans.py
+  <https://github.com/Behrouz-Babaki/COP-Kmeans/blob/master/copkmeans/cop_kmeans.py>`_)
 
 *Modules*
 
