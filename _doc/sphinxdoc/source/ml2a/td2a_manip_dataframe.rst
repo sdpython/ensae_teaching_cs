@@ -54,3 +54,6 @@ DataFrame
 *Modules*
 
 * `pandas <http://pandas.pydata.org/>`_
+* `csvkit <https://csvkit.readthedocs.io/en/latest/index.html>`_
+* `geopandas <https://geopandas.org/>`_
+  (pour manipuler des coordinnées géographiques)
