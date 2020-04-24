@@ -261,6 +261,7 @@ epkg_dictionary.update({
     "Unofficial Windows Binaries for Python Extension Packages": 'https://www.lfd.uci.edu/~gohlke/pythonlibs/',
     "utf-8": "https://fr.wikipedia.org/wiki/UTF-8",
     "Windows": 'https://fr.wikipedia.org/wiki/Microsoft_Windows',
+    'xarray': 'http://xarray.pydata.org/en/stable/',
     "xgboost": "https://xgboost.readthedocs.io/en/latest/",
     "XGBoost": "https://xgboost.readthedocs.io/en/latest/",
     "XML": "https://fr.wikipedia.org/wiki/Extensible_Markup_Language",
