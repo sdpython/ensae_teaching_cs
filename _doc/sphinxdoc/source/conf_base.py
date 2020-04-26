@@ -91,6 +91,7 @@ epkg_dictionary.update({
 epkg_dictionary.update({
     "2048": "https://play2048.co/",
     "ACP": 'https://fr.wikipedia.org/wiki/Analyse_en_composantes_principales',
+    'aftercovid': 'http://www.xavierdupre.fr/app/aftercovid/helpsphinx/index.html',
     "Anaconda": 'https://www.continuum.io/downloads',
     "anaconda": 'https://www.continuum.io/downloads',
     'API REST': "https://en.wikipedia.org/wiki/Representational_state_transfer",
