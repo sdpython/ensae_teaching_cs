@@ -21,3 +21,4 @@ Optimal transfert
 *Modules*
 
 * `Python Optimal Transfer <https://github.com/rflamary/POT>`_
+  (`documentation <https://pythonot.github.io/index.html>`_)

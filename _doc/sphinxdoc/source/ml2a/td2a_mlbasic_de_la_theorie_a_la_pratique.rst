@@ -134,3 +134,4 @@ poste régulièrement des articles sur des librairies de machine learning open s
 * :epkg:`catboost`
 * `GBDT-PL <https://github.com/GBDT-PL/GBDT-PL>`_ (en train d'être implémenté)
 * `thundersvm <https://github.com/Xtra-Computing/thundersvm>`_
+* `celer <https://mathurinm.github.io/celer/index.html>`_
