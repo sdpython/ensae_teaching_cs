@@ -1,0 +1,40 @@
+
+.. blogpost::
+    :title: Quelques vidéos de PyCon
+    :keywords: pycon, conférences
+    :date: 2020-05-01
+    :categories: papers
+
+    Première vidéo à propos de "privacy" ou protection des données :
+    `tensorflow_privacy <https://github.com/tensorflow/privacy>`_,
+    `Practical privacy-preserving machine learning in Python
+      <https://www.youtube.com/watch?v=NUk6QN02UxQ>`_.
+
+    Seconde vidéo sur comment construire une application
+    pour avoir en temps réel l'état de ses plantes :
+    `How to build an intelligent "indoor garden"
+    <https://www.youtube.com/watch?v=8STo1-rRV1E>`_.
+    L'application s'appui sur `circuitpython
+    <https://circuitpython.org/>`_.
+    La suivante est pour ceux qui font l'école à la maison :
+    `Mixing a Raspberry Pi with Python into a 5th Grade Science Fair Project
+    <https://www.youtube.com/watch?v=YB9aGx5zpto>`_.
+
+    Le titre de la suivante est intriguant :
+    `It's Officially Legal so Let's Scrape the Web
+    <https://www.youtube.com/watch?v=RUQWPJ1T6Zc>`_.
+    Il s'agit de scrapper wikipedia.
+
+    J'ai un petit faible pour la suivante et l'écriture de poème
+    automatique :
+    `Pyambic Pentameter: generating rhyming and metered poems
+    <https://www.youtube.com/watch?v=2ymZVpuqvSc>`_.
+
+    La programmation parallèle, c'est parfois ennuyeux,
+    mais écouter la parallélisation en temps réelle,
+    c'est pas mal :
+    `AsyncIO + Music <https://www.youtube.com/watch?v=02CLD-42VdI>`_.
+
+    La liste des vidéos :
+    `PyCon 2020
+    <https://www.youtube.com/channel/UCMjMBMGt0WJQLeluw6qNJuA/videos?view=0&sort=dd&shelf_id=1>`_.

@@ -143,8 +143,7 @@ def repartition_zone(villes, zone_taille, ask_zone=False):
 
     if ask_zone:
         return zones, X, Y, mx, my, Zmax, zone
-    else:
-        return zones, X, Y, mx, my, Zmax
+    return zones, X, Y, mx, my, Zmax
 
 
 def voisinage_zone(z, Zmax, X, Y):
@@ -203,8 +202,8 @@ def arbre_poids_minimal(villes, zone_taille, distance):
         else:
             return 0
 
-    zones, X, Y, mx, my, Zmax = repartition_zone(
-        villes, zone_taille=zone_taille)
+    rz = repartition_zone(villes, zone_taille=zone_taille)
+    zones, X, Y, mx, my, Zmax = rz[:6]
 
     # calcul des distances
     li = []
