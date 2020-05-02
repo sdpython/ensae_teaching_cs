@@ -67,9 +67,9 @@ class FileToCopy:
 
 class CopyFileForFtp:
     """
-    this classes maintains a list of files
+    This classes maintains a list of files
     and does some verifications in order to check if a file
-    was modified or not (if yes, then it will be updated to the website)
+    was modified or not (if yes, then it will be updated to the website).
     """
     @staticmethod
     def convert_st_date_to_datetime(t):
@@ -87,8 +87,6 @@ class CopyFileForFtp:
                  giflatex="giflatex",
                  giflatextemp="giflatex/temp",
                  specificTrigger=False):
-        """constructor"""
-
         self.copyFiles = {}
         self.fileKeep = file
         self.LOG = logfunction
@@ -128,7 +126,8 @@ class CopyFileForFtp:
 
     def save_dates(self, checkfile=None):
         """
-        save the status of the copy
+        Saves the status of the copy.
+
         @param      checkfile       check the status for file checkfile
         """
         if checkfile is None:
@@ -165,7 +164,8 @@ class CopyFileForFtp:
 
     def has_been_modified_and_reason(self, file):
         """
-        returns True, reason if a file was modified or False,None if not
+        Returns True, reason if a file was modified or False, None if not.
+
         @param      file        filename
         @return                 True,reason or False,None
         """
@@ -210,7 +210,8 @@ class CopyFileForFtp:
 
     def add_if_modified(self, file):
         """
-        add a file to self.modifiedList if it was modified
+        Adds a file to self.modifiedList if it was modified.
+
         @param      file    filename
         @return             True or False
         """
@@ -224,7 +225,8 @@ class CopyFileForFtp:
 
     def update_copied_file(self, file):
         """
-        update the file in copyFiles (before saving), update all field
+        Updates the file in copyFiles (before saving), update all field.
+
         @param      file        filename
         @return                 file object
         """
@@ -240,6 +242,7 @@ class CopyFileForFtp:
     def copy_file(self, file, to, doFTP=True, doClean=False, to_is_a_file=False):
         """
         Processes a file copy.
+
         @param      file            file to copy
         @param      to              destination (folder)
         @param      doFTP           if True, does some latex modifications (creates an image)
@@ -262,7 +265,7 @@ class CopyFileForFtp:
                 raise ValueError("are you sure to is not a file :" + to + "?")
 
             if not os.path.exists(folder):
-                self.LOG("creating folder ", folder)
+                self.LOG("[copy_file] creating folder ", folder)
                 os.makedirs(folder)
 
         if doFTP:
@@ -272,27 +275,32 @@ class CopyFileForFtp:
                 # some exception for latex
                 if self.specificTrigger and "2013-02-04" not in file and \
                         file.endswith(".html") and "-" in file:
-                    fLOG("   latex exception for: ", file)
+                    fLOG("[copy_file]   latex exception for: ", file)
                     replace_file(file, file, self.bloggiflatex,
                                  self.giflatex, self.LOG, self.giflatextemp)
 
                 if not os.path.exists(to):
-                    self.LOG("creating directory ", to)
+                    self.LOG("[copy_file] creating directory ", to)
                     os.mkdir(to)
 
-                self.LOG("copy of ", file, " \t to ", to)
+                self.LOG("[copy_file] copy of '{}' to '{}'.".format(file, to))
                 reason = "new" if file not in self.copyFiles else \
                     ("new size %s != old size %s" % (str(os.stat(file).st_size),
                                                      str(self.copyFiles[file].size)))
 
                 try:
-                    shutil.copy(file, to)
+                    try:
+                        shutil.copy(file, to)
+                    except shutil.SameFileError:
+                        pass
                     self.modifiedFile.append((file, reason))
                     return to
 
                 except Exception as e:
-                    self.LOG("issue with ", file, " copy to ", to)
-                    self.LOG("message d'erreur ", e)
+                    self.LOG(
+                        "[copy_file] issue with '{}' copy to '{}'.".format(file, to))
+                    self.LOG(
+                        "[copy_file] message d'erreur {}: {}".format(type(e), e))
             return to
         else:
             try:
@@ -321,8 +329,9 @@ class CopyFileForFtp:
 
     def copy_file_ext(self, file, exte, to, doFTP=True, doClean=False):
         """
-        @see me copy_file
+        @see me copy_file,
         """
+        res = []
         if not os.path.exists(file):
             raise FileNotFoundError(file)
         nb = 0
@@ -333,9 +342,11 @@ class CopyFileForFtp:
             ext = os.path.splitext(f)[1]
             if exte is None or ext[1:] == exte:
                 self.copy_file(file + "/" + f, to, doFTP, doClean)
+                res.append(file + "/" + f)
                 nb += 1
         if nb == 0:
             raise RuntimeError("No file found in '{}'.".format(file))
+        return res
 
     def copy_file_contains(self, file, pattern, to, doFTP=True, doClean=False):
         """
