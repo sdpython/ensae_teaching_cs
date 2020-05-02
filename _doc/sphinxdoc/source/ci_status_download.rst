@@ -29,7 +29,7 @@ obtenu en exécutant la requête suivante sur
     modules.extend([
         'onnx', 'onnxruntime', 'skl2onnx', 'keras2onnx', 'nimbusml',
         'scikit-learn', 'pandas', 'numpy', 'jupyter', 'matplotlib',
-        'protobuf', 'nimbusml'
+        'protobuf', 'nimbusml', 'aftercovid'
     ])
     conds = ["file.project = '{0}'".format(m) for m in modules]
     cond = " OR ".join(conds)
@@ -54,11 +54,13 @@ obtenu en exécutant la requête suivante sur
         {'skl2onnx', 'onnxruntime', 'nimbusml', 'onnxmltools',
          'scikit-onnxruntime', 'keras2onnx'},
         {'jyquickhelper', 'pymyinstall', 'pyquickhelper', 'pyensae'},
-        {'manydataapi', 'mlprodict', 'cpyquickhelper', 'mlinsights', 'mlstatpy', },
+        {'manydataapi', 'cpyquickhelper', 'mlstatpy', },
+        {'mlinsights', 'mlprodict', },
         {'csharpy', 'csharpyml', },
         {'lightmlboard', 'lightmlrestapi', 'pyrsslocal', 'pymmails', },
         {'sparkouille', 'ensae_projects', 'actuariat_python', 'code_beatrix', 'jupytalk'},
-        {'papierstat', 'teachpyx', 'ensae_teaching_cs', 'ensae_teaching_dl', 'teachpyx'},
+        {'papierstat', 'teachpyx', 'ensae_teaching_cs', 'ensae_teaching_dl', 'teachpyx',
+         'aftercovid'},
         {'tkinterquickhelper', 'pysqllike', 'pyenbc',},
     ]
 
@@ -70,7 +72,7 @@ obtenu en exécutant la requête suivante sur
         sub = sets[i].intersection(set(df['Project']))
         piv2 = piv[sub]
         piv2.plot.area(colormap=colormaps[i % len(colormaps)], ax=ax[i])
-        ax[i].set_xticks(list(range(0, len(piv2.index), 2)))
+        ax[i].set_xticks(list(range(0, len(piv2.index), 2)), rotation=30)
         ax[i].set_xticklabels(list(piv2.index)[::2])
 
     plt.show()

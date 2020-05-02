@@ -47,22 +47,22 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
-    * - `after_covid <http://www.xavierdupre.fr/app/after_covid/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/after_covid.svg?branch=master
-            :target: https://travis-ci.org/sdpython/after_covid
+    * - `aftercovid <http://www.xavierdupre.fr/app/aftercovid/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/aftercovid.svg?branch=master
+            :target: https://travis-ci.org/sdpython/aftercovid
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/ffne8nhh96jdqo4p?svg=true
             :target: https://ci.appveyor.com/project/sdpython/actuariat-python
             :alt: Build Status Windows
-      - .. image:: https://circleci.com/gh/sdpython/after_covid/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/after_covid/tree/master
-      - .. image:: https://badge.fury.io/py/after_covid.svg
-            :target: https://pypi.org/project/after_covid
-      - .. image:: http://img.shields.io/github/issues/sdpython/after_covid.png
+      - .. image:: https://circleci.com/gh/sdpython/aftercovid.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/aftercovid
+      - .. image:: https://badge.fury.io/py/aftercovid.svg
+            :target: https://pypi.org/project/aftercovid
+      - .. image:: http://img.shields.io/github/issues/sdpython/aftercovid.png
             :alt: GitHub Issues
-            :target: https://github.com/sdpython/after_covid/issues
-      - .. image:: https://codecov.io/github/sdpython/after_covid/coverage.svg?branch=master
-            :target: https://codecov.io/github/sdpython/after_covid?branch=master
+            :target: https://github.com/sdpython/aftercovid/issues
+      - .. image:: https://codecov.io/github/sdpython/aftercovid/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/aftercovid?branch=master
       -
     * - `botadi <http://www.xavierdupre.fr/app/botadi/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/botadi.svg?branch=master
