@@ -20,6 +20,10 @@ Timeseries - Filtre de Kalman
 * `Multidimensional Kalman-Filter <https://github.com/balzer82/Kalman>`_
 * `Deep Kalman Filters <https://arxiv.org/abs/1511.05121>`_
 * `Nonparametric Risk Bounds for Time-Series Forecasting <http://jmlr.org/papers/volume18/13-336/13-336.pdf>`_
+* `The Kalman Filter and (Maximum) Likelihood <https://towardsdatascience.com/the-kalman-filter-and-maximum-likelihood-9861666f6742>`_
+  (article contenant du code avec :epkg:`statsmodels` avec la réécriture d'un modèle :epkg:`ARMA`
+  sous la forme d'un filtre de Kalman inspiré de
+  `State-Space Models <http://www-stat.wharton.upenn.edu/~stine/stat910/lectures/14_state_space.pdf>`_)
 
 *Modules*
 

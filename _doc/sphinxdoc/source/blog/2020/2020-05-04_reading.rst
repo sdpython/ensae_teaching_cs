@@ -1,0 +1,19 @@
+
+.. blogpost::
+    :title: Parallélisation avec pathos
+    :keywords: pathos, livre, tutoriel
+    :date: 2020-05-04
+    :categories: module
+
+    * `pathos <https://pypi.org/project/pathos/>`_
+    * `interlap <http://brentp.github.io/interlap/>`_
+    * `BayesianOptimization <https://github.com/fmfn/BayesianOptimization>`_,
+      optimisation bayésienne en pure python
+
+    Le livre suivant a l'air pas mal du tout :
+    `Mastering Large Datasets with Python
+    <https://www.manning.com/books/mastering-large-datasets-with-python>`_.
+
+    Et ça n'a rien à voir :
+    `React Native 0.62 and Flipper Will Change Your Mobile Development Experience and make it easier!
+    <https://medium.com/javascript-in-plain-english/react-native-0-62-and-flipper-will-change-your-mobile-development-experience-and-make-it-easier-8945d345f644>`_.

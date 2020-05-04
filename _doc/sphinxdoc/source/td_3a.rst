@@ -548,6 +548,11 @@ s'il est toujours maintenu, s'il est utilisé...
   <https://www.developpez.com/actu/101222/
   Firefox-48-le-navigateur-va-embarquer-ses-premiers-composants-en-Rust-le-langage-de-programmation-de-Mozilla-maintenant-disponible-en-version-1-10/>`_.
 
+Données massives avec python
+++++++++++++++++++++++++++++
+
+Voir :ref:`l-td2A-massive-data`.
+
 ------------
 
 Map Reduce

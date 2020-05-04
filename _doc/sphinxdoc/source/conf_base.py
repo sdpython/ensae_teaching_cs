@@ -199,6 +199,8 @@ epkg_dictionary.update({
     "OpenStreetMap": 'https://www.openstreetmap.org/',
     "OSM": 'https://www.openstreetmap.org/',
     "OS/X": 'https://fr.wikipedia.org/wiki/MacOS',
+    'pandas_streaming': 'http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/index.html',
+    'pathos': 'https://github.com/uqfoundation/pathos',
     "PDF": 'https://fr.wikipedia.org/wiki/Portable_Document_Format',
     "pep8": 'https://www.python.org/dev/peps/pep-0008/?',
     "PGCD": 'https://fr.wikipedia.org/wiki/Plus_grand_commun_diviseur',

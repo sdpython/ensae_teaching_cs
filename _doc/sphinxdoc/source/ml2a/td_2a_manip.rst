@@ -60,11 +60,12 @@ Visualisation
     td2a_manip_graphes_pour_des_statisticiens
     td2a_manip_visualiser_pour_comprendre
 
-Pipelines
-=========
+Données massives
+================
 
 .. toctree::
     :maxdepth: 1
 
     td2a_manip_sequence_de_traitemements_de_donnees
     td2a_manip_workflows_data_pipelines
+    td2a_manip_parallelisation

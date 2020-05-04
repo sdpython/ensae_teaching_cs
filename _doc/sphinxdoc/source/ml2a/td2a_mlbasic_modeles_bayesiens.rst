@@ -42,6 +42,8 @@ Modèles bayésiens
 * `bnpy <https://github.com/bnpy/bnpy>`_
 * `pyro <http://pyro.ai/>`_ : modèle bayèsiens et deep learning
 * `arviz <https://arviz-devs.github.io/arviz/>`_
+* `BayesianOptimization <https://github.com/fmfn/BayesianOptimization>`_,
+  optimisation bayésienne en python pur
 
 *Exemples de code*
 
