@@ -14,13 +14,13 @@ def inspect_source_code(folder, file_pattern=".*[.]((py)|(ipynb))$",
     can be opened as text files encoded in :epkg:`utf-8` character set.
     Prints the results on the standard output. First line is a header.
 
-    @param      folder          folder to dig into
-    @param      file_pattern    files to consider
-    @param      neg_pattern     negative patterns for filenames
-    @param      line_patterns   patterns to look into, separated by ``;;``
-    @param      fullname        if True, include the subfolder while checking the regex
-    @param      fLOG            logging function
-    @return                     list of dictionaries
+    :param folder: folder to dig into
+    :param file_pattern: files to consider
+    :param neg_pattern: negative patterns for filenames
+    :param line_patterns: patterns to look into, separated by ``;;``
+    :param fullname: if True, include the subfolder while checking the regex
+    :param fLOG: logging function
+    :return: list of dictionaries
     """
     cols = None
     for obs in enumerate_inspect_source_code(folder, file_pattern=file_pattern,
