@@ -6,7 +6,8 @@ import os
 import unittest
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.ipythonhelper import test_notebook_execution_coverage
-from pyquickhelper.pycode import add_missing_development_version, ExtTestCase
+from pyquickhelper.pycode import (
+    add_missing_development_version, ExtTestCase, skipif_circleci)
 
 
 class TestNotebookData(ExtTestCase):
@@ -17,6 +18,7 @@ class TestNotebookData(ExtTestCase):
         import ensae_teaching_cs
         self.assertTrue(ensae_teaching_cs is not None)
 
+    @skipif_circleci('too long')
     def test_notebook_data_irep(self):
         folder = os.path.join(os.path.dirname(__file__),
                               "..", "..", "_doc", "notebooks", "data")
