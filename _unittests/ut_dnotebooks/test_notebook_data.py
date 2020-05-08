@@ -25,6 +25,7 @@ class TestNotebookData(ExtTestCase):
         test_notebook_execution_coverage(__file__, "irep", folder,
                                          this_module_name="ensae_teaching_cs", fLOG=fLOG)
 
+    @skipif_circleci('too long')
     def test_notebook_data_espace_vert(self):
         folder = os.path.join(os.path.dirname(__file__),
                               "..", "..", "_doc", "notebooks", "data")
