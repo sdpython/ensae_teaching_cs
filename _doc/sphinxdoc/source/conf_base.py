@@ -133,6 +133,7 @@ epkg_dictionary.update({
     'dirty-cat': 'https://dirty-cat.github.io/stable/',
     "dlib": 'http://dlib.net/',
     'docker': 'https://en.wikipedia.org/wiki/Docker_(software)',
+    'dtreeviz': 'https://github.com/parrt/dtreeviz',
     'Elysees': 'http://www.elysee.fr/',
     "ensae_teaching_cs": 'http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html',
     "ensae_teaching_dl": 'http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/index.html',

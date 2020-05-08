@@ -6,7 +6,9 @@ import os
 import unittest
 import shutil
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import get_temp_folder, skipif_appveyor, skipif_travis, add_missing_development_version
+from pyquickhelper.pycode import (
+    get_temp_folder, skipif_appveyor, skipif_travis, add_missing_development_version,
+    skipif_circleci)
 import ensae_teaching_cs
 
 
@@ -18,6 +20,7 @@ class TestNotebookRunner2aML2(unittest.TestCase):
 
     @skipif_appveyor("too long for appveyor")
     @skipif_travis("execution does not stop")
+    @skipif_circleci("too long for circleci")
     def test_notebook_runner_2a_ml(self):
         fLOG(
             __file__,

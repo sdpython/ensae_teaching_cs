@@ -230,6 +230,8 @@ d'une fonction LAPACK dans un code python / cython :
   (`github <https://github.com/google/tensornetwork>`_)
 * `Anatomy of High-Performance Many-Threaded Matrix Multiplication
   <http://www.cs.utexas.edu/users/flame/pubs/blis3_ipdps14.pdf>`_
+* `Computing the vector norm
+  <http://fa.bianp.net/blog/2011/computing-the-vector-norm/>`_
 
 *Modules*
 

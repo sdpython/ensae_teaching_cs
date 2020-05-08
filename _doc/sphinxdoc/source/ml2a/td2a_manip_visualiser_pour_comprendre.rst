@@ -36,3 +36,4 @@ Visualiser pour comprendre
 * `labelImg <https://github.com/tzutalin/labelImg>`_ : annotation d'images
 * :epkg:`streamlit` : cet outil permet de faire des dashboards pour
     visualiser les données selon différents angles.
+* :epkg:`dtreeviz` : pour visualiser les arbres de décision
