@@ -72,7 +72,7 @@ obtenu en exécutant la requête suivante sur
         sub = sets[i].intersection(set(df['Project']))
         piv2 = piv[sub]
         piv2.plot.area(colormap=colormaps[i % len(colormaps)], ax=ax[i])
-        ax[i].set_xticks(list(range(0, len(piv2.index), 2)), rotation=30)
-        ax[i].set_xticklabels(list(piv2.index)[::2])
+        ax[i].set_xticks(list(range(0, len(piv2.index), 2)))
+        ax[i].set_xticklabels(list(piv2.index)[::2], rotation=30)
 
     plt.show()
