@@ -134,6 +134,14 @@ Catalogue d'algorithmes
     * `x-fast-trie <https://en.wikipedia.org/wiki/X-fast_trie>`_ **déf**
     * `tas ou heap <https://fr.wikipedia.org/wiki/Tas_(informatique)>`_ ,
       `Fibonacci Heap <https://en.wikipedia.org/wiki/Fibonacci_heap>`_ **déf**
+    * `Judy Arrays <https://en.wikipedia.org/wiki/Judy_array>`_,
+      `site <http://judy.sourceforge.net/>`_,
+      `en python <https://github.com/arnimarj/py-judy>`_,
+      `en C <https://github.com/JanX2/judy-arrays>`_,
+      cette structure implémente un mapping int/int plus efficace que 
+      l'implémentation traditionnelle avec une table de hashage,
+      la structure utilise les propriétés des caches dans les
+      processeurs **déf**
 * Graphes
     * composantes connexes ou `parcours de graphe en profondeur <http://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_profondeur>`_,
       `parcours de graphe en largeur <http://fr.wikipedia.org/wiki/Algorithme_de_parcours_en_largeur>`_ **déf/algo**

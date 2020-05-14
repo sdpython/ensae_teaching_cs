@@ -52,6 +52,12 @@ Anatomie et histoire d'un ordinateur
 * `Learning Efficient Algorithms with Hierarchical Attentive Memory <https://arxiv.org/pdf/1602.03218.pdf>`_
 * `GotoBLAS <https://en.wikipedia.org/wiki/GotoBLAS>`_ (écrit par
   `Kazushige Gotō <https://en.wikipedia.org/wiki/Kazushige_Goto>`_)
+* `Judy Arrays <https://en.wikipedia.org/wiki/Judy_array>`_,
+  `site <http://judy.sourceforge.net/>`_, cette structure
+  implémente un mapping int/int plus efficace que 
+  l'implémentation traditionnelle avec une table de hashage,
+  la structure utilise les propriétés des caches dans les
+  processeurs
 
 *Machine Learning*
 
