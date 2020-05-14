@@ -138,7 +138,7 @@ Catalogue d'algorithmes
       `site <http://judy.sourceforge.net/>`_,
       `en python <https://github.com/arnimarj/py-judy>`_,
       `en C <https://github.com/JanX2/judy-arrays>`_,
-      cette structure implémente un mapping int/int plus efficace que 
+      cette structure implémente un mapping int/int plus efficace que
       l'implémentation traditionnelle avec une table de hashage,
       la structure utilise les propriétés des caches dans les
       processeurs **déf**

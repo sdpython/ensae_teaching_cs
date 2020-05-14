@@ -9,7 +9,7 @@ df['month'] = df.month.astype(str)
 df = df[df.month >= "2017"]
 gr = df.groupby("Project", as_index=False).sum().sort_values(
     "num_downloads").reset_index(drop=True)
-med = gr.iloc[gr.shape[0]//2, 1]
+med = gr.iloc[gr.shape[0] // 2, 1]
 
 sets = [
     {'skl2onnx', 'onnxruntime', 'nimbusml', 'onnxmltools',
@@ -22,12 +22,12 @@ sets = [
     {'sparkouille', 'ensae_projects', 'actuariat_python', 'code_beatrix', 'jupytalk'},
     {'papierstat', 'teachpyx', 'ensae_teaching_cs', 'ensae_teaching_dl', 'teachpyx',
      'aftercovid'},
-    {'tkinterquickhelper', 'pysqllike', 'pyenbc',},
+    {'tkinterquickhelper', 'pysqllike', 'pyenbc', },
 ]
 
 piv = df.pivot("month", "Project", "num_downloads").fillna(0)
 
-fig, ax = plt.subplots(len(sets), 1, figsize=(12,40))
+fig, ax = plt.subplots(len(sets), 1, figsize=(12, 40))
 colormaps = ['Accent', "tab10", "Paired", "tab20"]
 for i in range(len(sets)):
     sub = sets[i].intersection(set(df['Project']))
