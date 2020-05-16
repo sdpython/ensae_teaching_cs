@@ -871,8 +871,8 @@ Fork / Stars / Downloads
 
     row = indent(dedent("""
         * - `{0} <http://www.xavierdupre.fr/app/{0}/helpsphinx/index.html>`_
-          - .. image:: https://pepy.tech/badge/{0}/month
-                :target: https://pepy.tech/project/{0}/
+          - .. image:: https://pepy.tech/badge/{1}/month
+                :target: https://pepy.tech/project/{1}/
                 :alt: Downloads
           - .. image:: http://img.shields.io/github/issues/sdpython/{0}.png
                 :alt: GitHub Issues
@@ -899,8 +899,8 @@ Fork / Stars / Downloads
 
     row2 = indent(dedent("""
         * - `{0} <http://lesenfantscodaient.fr/>`_
-          - .. image:: https://pepy.tech/badge/{0}/month
-                :target: https://pepy.tech/project/{0}/
+          - .. image:: https://pepy.tech/badge/{1}/month
+                :target: https://pepy.tech/project/{1}/
                 :alt: Downloads
           - .. image:: http://img.shields.io/github/issues/sdpython/{0}.png
                 :alt: GitHub Issues
@@ -923,7 +923,7 @@ Fork / Stars / Downloads
             pat = row2
         else:
             pat = row
-        rows.append(pat.format(module))
+        rows.append(pat.format(module, module.replace("_", "-")))
 
     print("".join(rows))
 
