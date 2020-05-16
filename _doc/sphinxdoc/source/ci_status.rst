@@ -52,7 +52,7 @@ Tableau de bord et statut des dépendances
             :target: https://travis-ci.org/sdpython/aftercovid
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/ffne8nhh96jdqo4p?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/actuariat-python
+            :target: https://ci.appveyor.com/project/sdpython/aftercovid
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/aftercovid.svg?style=svg
             :target: https://circleci.com/gh/sdpython/aftercovid
@@ -223,7 +223,7 @@ Tableau de bord et statut des dépendances
             :target: https://travis-ci.org/sdpython/lecture_citation
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/al9chaf5ivx7bmmx?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/lecture_citation
+            :target: https://ci.appveyor.com/project/sdpython/lecture-citation
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/lecture_citation/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/lecture_citation/tree/master
@@ -377,7 +377,7 @@ Tableau de bord et statut des dépendances
             :target: https://travis-ci.org/sdpython/pandas_streaming
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/4te066r8ne1ymmhy?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/pandas_streaming
+            :target: https://ci.appveyor.com/project/sdpython/pandas-streaming
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/pandas_streaming/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pandas_streaming/tree/master
