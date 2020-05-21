@@ -14,7 +14,7 @@ virtualenv:
   
 install:
   - $PYINT -m pip install --upgrade pip
-  - $PYINT -m pip install --no-cache-dir --upgrade --no-deps --index http://localhost:8067/simple/ onnxruntime_dnnl --extra-index-url=https://pypi.python.org/simple/
+  - $PYINT -m pip install --no-cache-dir --upgrade --no-deps --index http://localhost:8067/simple/ onnxruntime --extra-index-url=https://pypi.python.org/simple/
   - $PYINT -m pip install --no-cache-dir --upgrade --no-deps --index http://localhost:8067/simple/ pyquickhelper tkinterquickhelper pyensae pymmails pymyinstall pyrsslocal mlstatpy mlinsights jyquickhelper manydataapi skl2onnx onnx onnxconverter_common mlprodict --extra-index-url=https://pypi.python.org/simple/
   - $PYINT -m pip install -r requirements_conda.txt
   - $PYINT -m pip install -r requirements.txt
