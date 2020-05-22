@@ -570,13 +570,13 @@ def echange_position_essai(chemin, a, b, x, inversion, negligeable=1e-5, distanc
         if xp < b:
             xp += nb
 
-        for l in range(b + 1, xp + 1):
-            ll = l % nb
-            bp = (a + l - b - 1) % nb
+        for le in range(b + 1, xp + 1):
+            ll = le % nb
+            bp = (a + le - b - 1) % nb
             chemin[bp] = chemin[ll]
 
-        for l in range(0, len(ech)):
-            chemin[(x + l - diff + 1 + nb) % nb] = ech[l]
+        for le in range(0, len(ech)):
+            chemin[(x + le - diff + 1 + nb) % nb] = ech[le]
 
         return True
 
@@ -626,13 +626,13 @@ def echange_position_essai(chemin, a, b, x, inversion, negligeable=1e-5, distanc
         if xp < b:
             xp += nb
 
-        for l in range(b + 1, xp + 1):
-            ll = l % nb
-            bp = (a + l - b - 1) % nb
+        for le in range(b + 1, xp + 1):
+            ll = le % nb
+            bp = (a + le - b - 1) % nb
             chemin[bp] = chemin[ll]
 
-        for l in range(0, len(ech)):
-            chemin[(x + l - diff + 1 + nb) % nb] = ech[l]
+        for le in range(0, len(ech)):
+            chemin[(x + le - diff + 1 + nb) % nb] = ech[le]
 
         return True
 

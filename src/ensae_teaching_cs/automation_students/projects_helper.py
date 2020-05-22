@@ -96,7 +96,7 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
                 "[extract_students_mails_from_gmail_and_stores_in_folders] read addresses from ", filemails)
             with open(filemails, "r", encoding="utf8") as f:
                 lines = f.readlines()
-            emails = [l.strip("\r\t\n ") for l in lines]
+            emails = [li.strip("\r\t\n ") for li in lines]
         else:
             fLOG(
                 "[extract_students_mails_from_gmail_and_stores_in_folders] mine address ")

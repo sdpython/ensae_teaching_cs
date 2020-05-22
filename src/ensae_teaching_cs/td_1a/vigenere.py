@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @file
-@brief  quelques fonctions à propos de la séance 3
-
+@brief  Quelques fonctions à propos d'une séance 3.
 """
 
 
@@ -172,22 +171,22 @@ def DecodeVigenereLongueurCle(message, mot=3):
         return DecodeVigenereLongueurCle(message, mot + 1)
 
 
-def DecodeVigenereCle(code, l):
+def DecodeVigenereCle(code, lc):
     """
     Détermine la cle du message code, connaissant sa longueur,
     on suppose que la lettre E est la lettre la plus fréquente
 
     @param      code        message codé
-    @param      l           longueur probable de la clé
+    @param      lc          longueur probable de la clé
     @return                 message décodé
     """
     al = "".join([chr(97 + i)
                   for i in range(0, 26)])  # l'alphabet en minuscule
     al = al.upper()
     cle = ""
-    for i in range(0, l):
+    for i in range(0, lc):
         nombre = [0 for a in al]
-        sous = code[i:len(code):l]  # on extrait toutes les lettres
+        sous = code[i:len(code):lc]  # on extrait toutes les lettres
         # i, i+l, i+2l; i+3l, ...
 
         # on compte les lettres

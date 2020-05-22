@@ -474,8 +474,8 @@ class TableFormula(_TableFormulaStat):
                 labels = [k for k, v in self.index.items()]
                 labels.sort()
                 self.index = {}
-                for l in labels:
-                    self.index[l] = len(self.index)
+                for la in labels:
+                    self.index[la] = len(self.index)
 
                 for row in file:
                     line = [None for k in self.index]
@@ -872,8 +872,8 @@ class TableFormula(_TableFormulaStat):
             for i, v in enumerate(row):
                 length[i] = max(length[i], len(v))
         length = [_ + 2 for _ in length]
-        line = ["-" * l for l in length]
-        lineb = ["=" * l for l in length]
+        line = ["-" * le for le in length]
+        lineb = ["=" * le for le in length]
         sline = "+%s+" % ("+".join(line))
         slineb = "+%s+" % ("+".join(lineb))
         res = [sline]

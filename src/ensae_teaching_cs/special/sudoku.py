@@ -45,9 +45,9 @@ def chiffre_barre_carre(s, r, i, j):
     a = i // 3 * 3
     b = j // 3 * 3
     for k in range(a, a + 3):
-        for l in range(b, b + 3):
-            if s[k][l] > 0:
-                r[s[k][l] - 1] = 0
+        for lb in range(b, b + 3):
+            if s[k][lb] > 0:
+                r[s[k][lb] - 1] = 0
 
 
 def nombre_possible(s, i, j):

@@ -58,3 +58,5 @@ Anonymisation des données / Privacy
 
 * `AGD Tools <https://github.com/SGMAP-AGD/anonymisation>`_ : ce module s'accompagne d'un wiki et de notebooks.
 * `tensorflow/privacy <https://github.com/tensorflow/privacy>`_
+* `whitenoise <https://github.com/opendifferentialprivacy/whitenoise-core-python>`_,
+  *WhiteNoise Core Differential Privacy Library Python Bindings*

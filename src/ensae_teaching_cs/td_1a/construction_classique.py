@@ -187,8 +187,8 @@ def text2mat(s, sep_row="\n", sep_col="\t"):
         `read_excel <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.io.excel.read_excel.html>`_ et écrire dans ce même format
         `to_excel <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.to_excel.html>`_.
     """
-    ligne = s.split(sep_row)                     # lignes
-    mat = [l.split(sep_col) for l in ligne]  # colonnes
+    ligne = s.split(sep_row)                   # lignes
+    mat = [li.split(sep_col) for li in ligne]  # colonnes
     return mat
 
 
@@ -215,7 +215,7 @@ def mat2text(mat, sep_row="\n", sep_col="\t"):
 
             print(s)
     """
-    ligne = [";".join(l) for l in mat]     # colonnes
+    ligne = [";".join(lc) for lc in mat] # colonnes
     s = "|".join(ligne)                  # lignes
     return s
 
