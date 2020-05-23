@@ -215,8 +215,8 @@ def mat2text(mat, sep_row="\n", sep_col="\t"):
 
             print(s)
     """
-    ligne = [";".join(lc) for lc in mat] # colonnes
-    s = "|".join(ligne)                  # lignes
+    ligne = [";".join(lc) for lc in mat]  # colonnes
+    s = "|".join(ligne)                   # lignes
     return s
 
 
