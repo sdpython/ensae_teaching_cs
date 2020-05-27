@@ -23,7 +23,7 @@ class TestJenkins(unittest.TestCase):
                        py36="c:\\Python36_x64", Python34="py34", Python35="py35",
                        Python36="py36", Anaconda3="apy35", Anaconda2="apy27",
                        Python27="py27", WinPython35="wpy35", WinPython36="wpy36",
-                       Python35pyq="DDD", Python37="py37")
+                       Python35pyq="DDD", Python37="py37", Python38="py38")
         vers = "%d%d" % sys.version_info[:2]
         engines["Python" + vers] = "py" + vers
 
@@ -49,7 +49,7 @@ class TestJenkins(unittest.TestCase):
             OutputPrint=__name__ == "__main__")
 
         modules = default_jenkins_jobs(".*yml.*", ".*update.*")
-        self.assertEqual(len(modules), 40)
+        self.assertEqual(len(modules), 39)
         modules = default_jenkins_jobs(".*27.*", ".*update.*")
         self.assertEqual(len(modules), 0)
 
