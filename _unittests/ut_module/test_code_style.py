@@ -147,6 +147,8 @@ class TestCodeStyle(ExtTestCase):
                 "test_SKIP_torch.py:102: E1101",
                 "test_SKIP_torch.py:104: E1101",
                 "R1720",
+                "quicksort.py",
+                "quicksort2.py",
                 ]
 
         if is_travis_or_appveyor() == "appveyor":
