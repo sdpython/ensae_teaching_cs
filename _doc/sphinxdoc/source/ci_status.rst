@@ -750,15 +750,6 @@ Tableau de bord et statut des dépendances
       -
       -
       -
-    * - `_bugs <https://github.com/sdpython/_bugs>`_
-      -
-      -
-      - .. image:: https://dev.azure.com/xavierdupre3/benchmark/_apis/build/status/sdpython._bugs
-            :target: https://dev.azure.com/xavierdupre3/benchmark/
-      -
-      -
-      -
-      -
 
 Les projets suivants lient :epkg:`C#` et :epkg:`python`.
 Ils ne sont pas maintenus de façon très soutenue.
@@ -1116,7 +1107,7 @@ Git Clone
 
     from ensae_teaching_cs.automation import get_teaching_modules
     pattern = 'if not exist {0} git clone https://github.com/sdpython/{0}.git'
-    add = ['myblog', 'thesis_handwriting', '_automation', '_bugs']
+    add = ['myblog', 'thesis_handwriting', '_automation']
     modules = get_teaching_modules() + add
     print('\n'.join(pattern.format(_) for _ in sorted(modules)))
 

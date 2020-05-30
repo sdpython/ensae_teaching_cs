@@ -196,6 +196,39 @@ class TestTableFormula(unittest.TestCase):
 
         assert len(lines) == len(lines1) + len(lines2) - 1
 
+    def test_split_files_utf8(self):
+        fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
+        fold = os.path.split(__file__)[0]
+        file = os.path.join(fold, "data", "BNP.PA.txt")
+        tempf = os.path.join(fold, "temp_split_utf8")
+        assert os.path.exists(file)
+        if not os.path.exists(tempf):
+            os.mkdir(tempf)
+        f_ = os.path.join(tempf, "temp_split")
+        f1 = f_ + ".0000.txt"
+        f2 = f_ + ".0001.txt"
+        for f in [f1, f2]:
+            if os.path.exists(f):
+                os.remove(f)
+
+        split = TableFormula.random_split_file(
+            file, f_, 2, logFunction=fLOG, encoding='utf-8')
+        assert split
+        for f in [f1, f2]:
+            fLOG(f)
+            assert os.path.exists(f)
+
+        with open(file, "r") as f:
+            lines = f.readlines()
+        with open(f1, "r") as f:
+            lines1 = f.readlines()
+        with open(f2, "r") as f:
+            lines2 = f.readlines()
+
+        assert len(lines) == len(lines1) + len(lines2) - 1
+        tbl = TableFormula(f1)
+        tbl.save(f1 + '2.csv')
+
     def test_correlation(self):
         fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
         values = [random.random() for i in range(0, 100)]
@@ -211,6 +244,32 @@ class TestTableFormula(unittest.TestCase):
         assert cov[1, 1] == cov[0, 2]
         assert abs(cor[0, 1] - cor[1, 2]) < 1e-5
         assert abs(1 - cor[1, 2]) < 1e-5
+        assert tbl.shape is not None
+        tbl[0, 0] = 0.
+        tbl[0, 1] = 0.
+        row = tbl[0]
+        assert row is not None
+        assert tbl[0, 0] == 0
+        row = tbl[:1]
+        assert row is not None
+        row = tbl[[0]]
+        assert row is not None
+        tbl2 = None
+        assert tbl != tbl2
+        tbl2 = tbl
+        assert tbl == tbl2
+        res = tbl.avg_std(lambda r: r['x'])
+        self.assertIsInstance(res, tuple)
+        cor = tbl.correlation_col('x', 'y')
+        self.assertIsInstance(cor, float)
+        cor = tbl.correlation_row(0, 1)
+        self.assertIsInstance(cor, float)
+        cor = tbl.covariance_row(0, 1)
+        self.assertIsInstance(cor, float)
+        cor = tbl.correlation()
+        self.assertEqual(cor.shape, (2, 3))
+        cor = tbl.correlation(useBootstrap=True)
+        self.assertEqual(cor.shape, (2, 3))
 
     def test_histogram(self):
         fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")

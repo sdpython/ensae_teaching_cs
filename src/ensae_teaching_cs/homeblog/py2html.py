@@ -533,7 +533,7 @@ def makeBlock(data):
     return "%s%s%s" % (appliedstyle['block'][0], data, appliedstyle['block'][1])
 
 
-def cmdLine():
+def cmdLine():  # pragma: no cover
     '''This is the function that handles
     command line mode'''
     global appliedstyle
@@ -615,7 +615,7 @@ def cmdLine():
         print(html)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     import getopt
     import sys
     cmdLine()

@@ -242,7 +242,7 @@ class TableFormula(_TableFormulaStat):
             if encoding is None:
                 with open(filename, "r") as f:
                     firstline = f.readline().strip("\n\r ")
-            else:
+            else:  # pragma: no cover
                 with open(filename, "r", encoding=encoding) as f:
                     firstline = f.readline().strip("\n\r ")
 
@@ -370,9 +370,8 @@ class TableFormula(_TableFormulaStat):
         if v != 0:
             co /= v
         if deviations:
-            return co, vx, vy
-        else:
-            return co
+            return co, vx, vy  # pragma: no cover
+        return co
 
     def _private_getclass(self):
         """
@@ -454,13 +453,15 @@ class TableFormula(_TableFormulaStat):
             else:
                 lines = file.split("\n")
                 if len(lines) == 1:
-                    raise FileNotFoundError(
-                        "a file was probably expected but was not found: " + file)
+                    raise FileNotFoundError(  # pragma: no cover
+                        "A file was probably expected but was not found: '{}'."
+                        "".format(file))
                 self._readlines(lines, numeric_column, sep)
 
         elif isinstance(file, list):
             if len(file) == 0:
-                raise ValueError("empty data and columns are not allowed")
+                raise ValueError(  # pragma: no cover
+                    "Empty data and columns are not allowed.")
 
             if isinstance(file[0], dict):
                 self.index = {}
@@ -526,10 +527,10 @@ class TableFormula(_TableFormulaStat):
                 for i, h in enumerate(self.header):
                     self.index[h] = i
             else:
-                raise RuntimeError(
-                    "this case should not happen " + str(type(file[0])))
+                raise RuntimeError(  # pragma: no cover
+                    "This case should not happen: " + str(type(file[0])))
 
-        elif isinstance(file, numpy.matrix):
+        elif isinstance(file, numpy.matrix):  # pragma: no cover
             self.header = ["c%d" % d for d in range(file.shape[1])]
             self.index = {}
             for i, h in enumerate(self.header):
@@ -564,8 +565,8 @@ class TableFormula(_TableFormulaStat):
                 for i, h in enumerate(self.header):
                     self.index[h] = i
             else:
-                raise TypeError(
-                    "file has an unexpected type: " + str(type(file)))
+                raise TypeError(  # pragma: no cover
+                    "File has an unexpected type: " + str(type(file)))
 
         unique = {}
         for i, c in enumerate(self.header):
@@ -574,7 +575,7 @@ class TableFormula(_TableFormulaStat):
                     c = "%s_%d" % (c, i)
                     self.header[i] = c
                 else:
-                    raise KeyError(
+                    raise KeyError(  # pragma: no cover
                         "column '{0}' already exists in '{1}'".format(c, self.header))
             unique[c] = True
 
@@ -585,10 +586,10 @@ class TableFormula(_TableFormulaStat):
         @return             new matrix, keep the header of the first matrix
         """
         if len(self) != len(other):
-            raise ValueError(
+            raise ValueError(  # pragma: no cover
                 "both matrices should have the same number of rows")
         if len(self.header) != len(other.header):
-            raise ValueError(
+            raise ValueError(  # pragma: no cover
                 "both matrices should have the same number of columns")
         values = []
         for row, rowo in zip(self.values, other.values):
@@ -609,7 +610,8 @@ class TableFormula(_TableFormulaStat):
         @return             new matrix, keep the header of the first matrix
         """
         if not isinstance(other, float) and not isinstance(other, int):
-            raise TypeError("other should be a number")
+            raise TypeError(  # pragma: no cover
+                "other should be a number")
         values = []
         for row in self.values:
             r = []
@@ -631,10 +633,10 @@ class TableFormula(_TableFormulaStat):
         @return             new matrix, keep the header of the first matrix
         """
         if len(self) != len(other):
-            raise ValueError(
+            raise ValueError(  # pragma: no cover
                 "both matrices should have the same number of rows")
         if len(self.header) != len(other.header):
-            raise ValueError(
+            raise ValueError(  # pragma: no cover
                 "both matrices should have the same number of columns")
         values = []
         for row, rowo in zip(self.values, other.values):
@@ -701,20 +703,21 @@ class TableFormula(_TableFormulaStat):
                                     - tuple --> a value
         """
         if isinstance(irow, int):
-            return self._private_getclass()(self.header, [self.values[irow]])
-        elif isinstance(irow, slice):
-            return self._private_getclass()(self.header, [self.values[ii] for ii in range(*irow.indices(len(self)))])
-        elif isinstance(irow, list):
-            return self._private_getclass()(self.header, [self.values[ii] for ii in irow])
-        elif isinstance(irow, tuple):
+            return self._private_getclass()(
+                self.header, [self.values[irow]])
+        if isinstance(irow, slice):
+            return self._private_getclass()(
+                self.header, [self.values[ii] for ii in range(*irow.indices(len(self)))])
+        if isinstance(irow, list):
+            return self._private_getclass()(
+                self.header, [self.values[ii] for ii in irow])
+        if isinstance(irow, tuple):
             if isinstance(irow[1], str):
                 row = self.values[irow[0]]
                 v = self._interpret_row(row)
                 return v[irow[1]]
-            else:
-                return self.values[irow[0]][irow[1]]
-        else:
-            raise TypeError("Invalid argument type: " + str(type(irow)))
+            return self.values[irow[0]][irow[1]]
+        raise TypeError("Invalid argument type: " + str(type(irow)))
 
     def __setitem__(self, irow, value):
         """
@@ -730,7 +733,7 @@ class TableFormula(_TableFormulaStat):
             else:
                 self.values[irow[0]][irow[1]] = value
         else:
-            raise TypeError(
+            raise TypeError(  # pragma: no cover
                 "Invalid argument type(only tuple accepted): " + str(type(irow)))
 
     def __len__(self):
@@ -1124,7 +1127,7 @@ class TableFormula(_TableFormulaStat):
 
         elif isinstance(function, list):
             if len(colname) != len(function):
-                raise ValueError(
+                raise ValueError(  # pragma: no cover
                     "unable to continue, colname and function do not have the same number of elements")
             if position == -1:
                 position = [-1] * len(colname)
@@ -1132,8 +1135,9 @@ class TableFormula(_TableFormulaStat):
                 position = [position] * len(colname)
             else:
                 if len(position) != len(colname):
-                    raise RuntimeError(
-                        "unable to continue, colname and position do not have the same number of elements")
+                    raise RuntimeError(  # pragma: no cover
+                        "Unable to continue, colname and position do not "
+                        "have the same number of elements.")
             dec = 0
             for a, b, c in zip(colname, function, position):
                 self.add_column(a, b, c + dec)
@@ -1142,7 +1146,8 @@ class TableFormula(_TableFormulaStat):
         else:
             # we assume here, the function returns a tuple
             if not isinstance(position, int):
-                raise TypeError("we expect an int for position for this case")
+                raise TypeError(  # pragma: no cover
+                    "Int expected for position for this case.")
 
             if position == -1:
                 for row in self.values:
@@ -1548,12 +1553,11 @@ class TableFormula(_TableFormulaStat):
             cols = [_ for i, _ in enumerate(
                 self.header) if _ not in listColumns and i not in listColumns]
             return self.extract_columns(cols)
-        elif isinstance(listColumns, str):
+        if isinstance(listColumns, str):
             cols = [_ for _ in self.header if _ != listColumns]
             return self.extract_columns(cols)
-        else:
-            cols = [_ for _ in self.header if not listColumns(_)]
-            return self.extract_columns(cols)
+        cols = [_ for _ in self.header if not listColumns(_)]
+        return self.extract_columns(cols)
 
     def innerjoin(self, table, functionKey1, functionKey2, nameKey="key",
                   addSuffixAnyWay=False, prefixToAdd=None, full=False,
@@ -2187,7 +2191,7 @@ class TableFormula(_TableFormulaStat):
 
     def transpose(self, labelC=None, labelAsRow=True):
         """
-        computes the transpose
+        Computes the transpose.
         @param      labelC          proposes labels for the column,
                                     if None, take "r%d" % i,
                                     if it is a string, the function assumes it is a column name
@@ -2218,8 +2222,8 @@ class TableFormula(_TableFormulaStat):
 
     def covariance(self):
         """
-        computes the covariance matrix, the first column
-        will contains the column names
+        Computes the covariance matrix, the first column
+        will contains the column names.
         @return         new table
         """
         for i, x in enumerate(self.values[0]):
@@ -2241,7 +2245,7 @@ class TableFormula(_TableFormulaStat):
 
     def correlation_col(self, col1, col2, noCenter=False):
         """
-        computes the correlation between two columns
+        Computes the correlation between two columns.
         @param      col1        column 1
         @param      col2        column 2
         @param      noCenter    does the computation without removing the average
@@ -2250,7 +2254,7 @@ class TableFormula(_TableFormulaStat):
         values = [[self._interpret_row(row)[col1], self._interpret_row(row)[
             col2]] for row in self.values]
         if len(values) <= 1:
-            raise ValueError(
+            raise ValueError(  # pragma: no cover
                 "expecting more than one observation, not %d" % len(values))
         mx = 0.
         my = 0.
@@ -2283,7 +2287,7 @@ class TableFormula(_TableFormulaStat):
 
     def covariance_col(self, col1, col2, noCenter=False):
         """
-        computes the correlation between two columns
+        Computes the correlation between two columns.
         @param      col1        column 1
         @param      col2        column 2
         @param      noCenter    does the computation without removing the average
@@ -2293,7 +2297,7 @@ class TableFormula(_TableFormulaStat):
                    self._interpret_row(row)[col2]] for row in self.values]
 
         if len(values) <= 1:
-            raise ValueError(
+            raise ValueError(  # pragma: no cover
                 "expecting more than one observation, not %d" % len(values))
 
         mx = 0.
@@ -2322,7 +2326,7 @@ class TableFormula(_TableFormulaStat):
         """
         values = [[a, b] for a, b in zip(self.values[row1], self.values[row2])]
         if len(values) <= 1:
-            raise ValueError(
+            raise ValueError(  # pragma: no cover
                 "expecting more than one observation, not %d" % len(values))
         mx = 0.
         my = 0.
@@ -2363,7 +2367,7 @@ class TableFormula(_TableFormulaStat):
         """
         values = [[a, b] for a, b in zip(self.values[row1], self.values[row2])]
         if len(values) <= 1:
-            raise ValueError(
+            raise ValueError(  # pragma: no cover
                 "expecting more than one observation, not %d" % len(values))
         mx = 0.
         my = 0.
@@ -2408,14 +2412,15 @@ class TableFormula(_TableFormulaStat):
                         st = functionKeepValue(bo[0], bo[2], bo[3])
                         values[i][j + 1] = st
                     else:
-                        raise NotImplementedError(
+                        raise NotImplementedError(  # pragma: no cover
                             "collapseFormat False is not implemented yet")
             tbl = self._private_getclass()(head, values)
             return tbl
         else:
             for i, x in enumerate(self.values[0]):
                 if not isinstance(x, float):
-                    raise TypeError("expecting a float on column %d" % i)
+                    raise TypeError(  # pragma: no cover
+                        "expecting a float on column %d" % i)
 
             values = self.np_matrix
             N = values.shape[0]
@@ -2544,8 +2549,9 @@ class TableFormula(_TableFormulaStat):
             values.sort()
             al = int(len(values) * removeExtreme / 2)
             if al == 0:
-                raise Exception("removeExtreme has no impact(%d,%f)" % (
-                    len(values), len(values) * removeExtreme / 2))
+                raise Exception(  # pragma: no cover
+                    "removeExtreme has no impact(%d,%f)" % (
+                        len(values), len(values) * removeExtreme / 2))
             if al * 2 < len(values):
                 values = values[al:len(values) - al]
 
@@ -2602,8 +2608,9 @@ class TableFormula(_TableFormulaStat):
             values.sort()
             al = int(len(values) * removeExtreme / 2)
             if al == 0:
-                raise Exception("removeExtreme has no impact(%d,%f)" % (
-                    len(values), len(values) * removeExtreme / 2))
+                raise Exception(  # pragma: no cover
+                    "removeExtreme has no impact(%d,%f)" % (
+                        len(values), len(values) * removeExtreme / 2))
             if al * 2 < len(values):
                 values = values[al:len(values) - al]
 
@@ -2612,7 +2619,7 @@ class TableFormula(_TableFormulaStat):
         W = len(values)
         div = (ma - mi) / nbDiv
         if div == 0:
-            raise RuntimeError(
+            raise RuntimeError(  # pragma: no cover
                 "unable to continue since div is null: min,max = %f,%f" % (mi, ma))
         hist = [[mi + n * div, 0.] for n in range(0, nbDiv + 1)]
         value = {i: {histxName: hist[i][0]} for i in range(len(hist))}

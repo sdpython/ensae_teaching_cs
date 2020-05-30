@@ -88,23 +88,23 @@ class ProjectsRepository:
         @return                     list of mails
         """
         if not os.path.exists(path):
-            raise FileNotFoundError(path)
+            raise FileNotFoundError(path)  # pragma: no cover
         filename = os.path.join(path, suivi)
         if not os.path.exists(filename):
-            raise FileNotFoundError(filename)
+            raise FileNotFoundError(filename)  # pragma: no cover
 
         try:
             with open(filename, "r", encoding="utf8") as f:
                 content = f.read()
         except UnicodeDecodeError as e:
-            raise ValueError(
+            raise ValueError(  # pragma: no cover
                 'unable to parse file:\n  File "{0}", line 1'.format(filename)) from e
 
         mails = regex.findall(content)
         if len(mails) == 0:
             if skip_if_empty:
                 return []
-            raise Exception(
+            raise Exception(  # pragma: no cover
                 "unable to find the regular expression {0} in {1}".format(
                     regex.pattern, filename))
 
@@ -128,11 +128,11 @@ class ProjectsRepository:
                                                 skip_if_empty=skip_if_empty)
         for a in allmails:
             if "\n" in a:
-                raise ValueError(
+                raise ValueError(  # pragma: no cover
                     "unable to interpret " + str([a]) + " from path " + path)
             ff = a.split("@")
             if len(ff) != 2:
-                raise RegexRepositoryException(
+                raise RegexRepositoryException(  # pragma: no cover
                     "unable to understand mail {0} in {1} (suivi={2} (mail separator is ;)".format(
                         a,
                         path,
@@ -174,16 +174,16 @@ class ProjectsRepository:
         """
         path = os.path.join(self._location, group)
         if not os.path.exists(path):
-            raise FileNotFoundError(path)
+            raise FileNotFoundError(path)  # pragma: no cover
         filename = os.path.join(path, self._suivi)
         if not os.path.exists(filename):
-            raise FileNotFoundError(filename)
+            raise FileNotFoundError(filename)  # pragma: no cover
 
         try:
             with open(filename, "r", encoding="utf8") as f:
                 content = f.read()
         except UnicodeDecodeError as e:
-            raise ValueError(
+            raise ValueError(  # pragma: no cover
                 'unable to parse file:\n  File "{0}", line 1'.format(filename)) from e
 
         lines = [_.strip("\r").rstrip() for _ in content.split("\n")]
@@ -260,7 +260,7 @@ class ProjectsRepository:
         res = [_ for _ in res if _[0] <= threshold]
         res.sort()
         if exc and len(res) == 0:
-            raise ProjectsRepository.MailNotFound(
+            raise ProjectsRepository.MailNotFound(  # pragma: no cover
                 "unable to find a mail for {0} among\n{1}".format(name, "\n".join(emails)))
         return res
 
@@ -324,7 +324,7 @@ class ProjectsRepository:
         this function is replaced by @see me match_mails.
         """
         if col_mail is None and email_function is None:
-            raise ValueError(
+            raise ValueError(  # pragma: no cover
                 "col_mail cannot be None if email_function is None")
         if col_student is None:
             col_student = col_mail
@@ -352,8 +352,9 @@ class ProjectsRepository:
                     ind_student = list(df.columns).index(col_student) + 1
                     ind_mail = list(df.columns).index(col_mail) + 1
                 except ValueError:
-                    raise ValueError("Unable to find '{0}' or '{1}' in {2}".format(
-                        col_student, col_mail, df.columns))
+                    raise ValueError(  # pragma: no cover
+                        "Unable to find '{0}' or '{1}' in {2}".format(
+                            col_student, col_mail, df.columns))
                 mapping = {}
                 for row in df.itertuples():
                     mapping[row[ind_student]] = row[ind_mail]
@@ -379,7 +380,7 @@ class ProjectsRepository:
         folds = []
 
         if df.shape[1] == 0:
-            raise Exception("No column in the dataframe.")
+            raise Exception("No column in the dataframe.")  # pragma: no cover
 
         if col_group:
             gr = df.groupby(col_group)
@@ -398,7 +399,7 @@ class ProjectsRepository:
                 s = [_ for _ in s if not isinstance(
                     _, float) or ~numpy.isnan(_)]
                 if len(s) > 1:
-                    raise TooManyProjectsException(
+                    raise TooManyProjectsException(  # pragma: no cover
                         "more than one subject for group: " + str(name) + "\n" + str(s))
                 elif len(s) == 0:
                     s = ["unknown"]
@@ -415,14 +416,13 @@ class ProjectsRepository:
                     # we skip only if a group has no mails at all
                     if isinstance(email_function, (list, set)):
                         mes = "unable to find a mail for\n{0}\nname={1}\nskip:{4}\n{5}\namong\n{3}\nGROUP\n{2}\nlocal_function: {6}"
-                        raise ProjectsRepository.MailNotFound(mes.format(
-                            "; ".join("'%s'" % _ for _ in eleves),
-                            name, group, "\n".join(email_function),
-                            skip, skip_names, local_function))
-                    else:
-                        raise ProjectsRepository.MailNotFound(
-                            "unable to find a mail for {0}\nname={1}\n with function\n{3}\nGROUP\n{2}\nTYPE:\n{4}".format(
-                                " ;".join(eleves), name, group, email_function, type(email_function)))
+                        raise ProjectsRepository.MailNotFound(  # pragma: no cover
+                            mes.format("; ".join("'%s'" % _ for _ in eleves),
+                                       name, group, "\n".join(email_function),
+                                       skip, skip_names, local_function))
+                    raise ProjectsRepository.MailNotFound(  # pragma: no cover
+                        "unable to find a mail for {0}\nname={1}\n with function\n{3}\nGROUP\n{2}\nTYPE:\n{4}".format(
+                            " ;".join(eleves), name, group, email_function, type(email_function)))
                 if skip_if_nomail and (not skip and len(mails) == 0):
                     fLOG("[ProjectsRepository.create_folders_from_dataframe] skipping {0}".format(
                         "; ".join(eleves)))
@@ -430,10 +430,10 @@ class ProjectsRepository:
                 if mails:
                     for m in mails:
                         if "@" not in m:
-                            raise ValueError(
+                            raise ValueError(  # pragma: no cover
                                 "mails contains a mail with no @: {0}".format(m))
                         if "<" in m or ">" in m:
-                            raise ValueError(
+                            raise ValueError(  # pragma: no cover
                                 "one mail contains weird characters: {0}".format(m))
                     jmail = "; ".join(mails)
                 else:
@@ -443,7 +443,7 @@ class ProjectsRepository:
 
             if jmail is not None:
                 if "@" not in jmail:
-                    raise ValueError(
+                    raise ValueError(  # pragma: no cover
                         "jmail does not contain any @: {0}".format(jmail))
 
             members = ", ".join(eleves)
@@ -469,7 +469,7 @@ class ProjectsRepository:
 
             if not os.path.exists(folder):
                 if '@' in folder:
-                    raise ValueError(
+                    raise ValueError(  # pragma: no cover
                         "Folder '{0}' must not contain '@'.".format(folder))
                 os.mkdir(folder)
 
@@ -485,7 +485,8 @@ class ProjectsRepository:
             for gr in proj.Groups:
                 mails = proj.get_emails(gr)
                 if len(mails) == 0:
-                    raise ValueError("No mail for group '{0}'.".format(gr))
+                    raise ValueError(  # pragma: no cover
+                        "No mail for group '{0}'.".format(gr))
         return proj
 
     def enumerate_group_mails(self, group, mailbox, subfolder, date=None,
@@ -857,7 +858,8 @@ class ProjectsRepository:
                     rel = os.path.relpath(name, loc)
                     dest = os.path.relpath(name, self._location)
                     if rel == dest:
-                        raise Exception("weird\n{0}\n{1}".format(rel, dest))
+                        raise Exception(  # pragma: no cover
+                            "weird\n{0}\n{1}".format(rel, dest))
                     ssize = format_size(os.stat(name).st_size)
                     if "__MACOSX" not in rel and "__MACOSX" not in dest and \
                             ".ipynb_checkpoints" not in dest and ".ipynb_checkpoints" not in rel:

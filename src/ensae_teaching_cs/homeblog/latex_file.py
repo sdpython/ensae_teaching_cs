@@ -59,7 +59,7 @@ class LatexCode:
 
 class LatexIncludedFile:
     """
-    describe a file included a latex file
+    Describes a file included a latex file.
 
     @var    parent      (LatexFile)
     @var    line        (int) line number
@@ -70,8 +70,6 @@ class LatexIncludedFile:
 
     def __init__(self, parent, line, file, comment):
         """
-        constructor
-
         @param      parent  (LatexFile) which contains this file
         @param      line    line number where it was found in the late file it belongs to
         @param      file    file name
@@ -85,7 +83,7 @@ class LatexIncludedFile:
 
     def init(self):
         """
-        complete the contructor
+        Completes the contructor.
         """
         ext = os.path.splitext(self.file)[-1].lower()
         if ext == ".tex":
@@ -115,7 +113,8 @@ class LatexIncludedFile:
 
     def enumerate_code(self, skip_missing=False):
         """
-        enumerate all pieces of code (in ``verbatim``, ``verbatimx`` or ``\\inputcode`` sections
+        Enumerates all pieces of code (in ``verbatim``,
+        ``verbatimx`` or ``\\inputcode`` sections.
 
         @return         LatexCode
         """
@@ -132,9 +131,9 @@ class LatexIncludedFile:
 
 class LatexFile:
     """
-    description of a latex file
+    Description of a latex file.
 
-    @var    file        file name for the late file
+    @var    file        file name for the latex file
     @var    root        every file referenced in the latex will use ``root`` as a root for the relative paths
     @var    filelines   for each line, we store every included file here,
                         it is a dictionary { line number : object file }

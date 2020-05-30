@@ -22,17 +22,21 @@ class FileToCopy:
         self.mdate = mdate    # modification date
         self.checksum = checksum
         if date is not None and not isinstance(self.date, datetime.datetime):
-            raise ValueError("mismatch for date (%s) and file %s" %
-                             (str(type(date)), filename))
+            raise ValueError(  # pragma: no cover
+                "mismatch for date (%s) and file %s" %
+                (str(type(date)), filename))
         if mdate is not None and not isinstance(self.mdate, datetime.datetime):
-            raise ValueError("mismatch for mdate (%s) and file %s" %
-                             (str(type(mdate)), filename))
+            raise ValueError(  # pragma: no cover
+                "mismatch for mdate (%s) and file %s" %
+                (str(type(mdate)), filename))
         if not isinstance(size, int):
-            raise ValueError("mismatch for size (%s) and file %s" %
-                             (str(type(size)), filename))
+            raise ValueError(  # pragma: no cover
+                "mismatch for size (%s) and file %s" %
+                (str(type(size)), filename))
         if checksum is not None and not isinstance(checksum, str):
-            raise ValueError("mismatch for checksum (%s) and file %s" %
-                             (str(type(checksum)), filename))
+            raise ValueError(  # pragma: no cover
+                "mismatch for checksum (%s) and file %s" %
+                (str(type(checksum)), filename))
         if date is not None and mdate is not None:
             if mdate > date:
                 raise ValueError(
@@ -76,10 +80,8 @@ class CopyFileForFtp:
         if isinstance(t, str):
             if "." in t:
                 return datetime.datetime.strptime(t, "%Y-%m-%d %H:%M:%S.%f")
-            else:
-                return datetime.datetime.strptime(t, "%Y-%m-%d %H:%M:%S")
-        else:
-            return datetime.datetime.fromtimestamp(t)
+            return datetime.datetime.strptime(t, "%Y-%m-%d %H:%M:%S")
+        return datetime.datetime.fromtimestamp(t)
 
     def __init__(self, file,
                  logfunction=fLOG,
@@ -95,7 +97,7 @@ class CopyFileForFtp:
         self.giflatextemp = giflatextemp
         self.specificTrigger = specificTrigger
 
-        if os.path.exists(self.fileKeep):
+        if os.path.exists(self.fileKeep):  # pragma: no cover
             f = open(self.fileKeep, "r")
             for _ in f.readlines():
                 spl = _.strip("\r\n ").split("\t")
@@ -113,9 +115,9 @@ class CopyFileForFtp:
                             obj.set_md5(spl[4])
                         self.copyFiles[a] = obj
                     else:
-                        raise ValueError(
+                        raise ValueError(  # pragma: no cover
                             "expecting a filename and a date on this line: " + _)
-                except Exception as e:
+                except Exception as e:  # pragma: no cover
                     fLOG("issue with line", _, spl)
                     raise e
 
@@ -140,13 +142,13 @@ class CopyFileForFtp:
             sum5 = "" if obj.checksum is None else str(obj.checksum)
 
             if k in checkfile and len(da) == 0:
-                raise ValueError(
+                raise ValueError(  # pragma: no cover
                     "there should be a date for file " + k + "\n" + str(obj))
             if k in checkfile and len(mda) == 0:
-                raise ValueError(
+                raise ValueError(  # pragma: no cover
                     "there should be a mdate for file " + k + "\n" + str(obj))
             if k in checkfile and len(sum5) <= 10:
-                raise ValueError(
+                raise ValueError(  # pragma: no cover
                     "there should be a checksum( for file " + k + "\n" + str(obj))
 
             values = [k, str(obj.size), da, mda, sum5]
@@ -291,12 +293,12 @@ class CopyFileForFtp:
                 try:
                     try:
                         shutil.copy(file, to)
-                    except shutil.SameFileError:
+                    except shutil.SameFileError:  # pragma: no cover
                         pass
                     self.modifiedFile.append((file, reason))
                     return to
 
-                except Exception as e:
+                except Exception as e:  # pragma: no cover
                     self.LOG(
                         "[copy_file] issue with '{}' copy to '{}'.".format(file, to))
                     self.LOG(
@@ -308,7 +310,7 @@ class CopyFileForFtp:
                 if not os.path.isfile(to):
                     to = os.path.join(to, os.path.split(file)[-1])
                 fLOG("copy ", file, " as ", to)
-            except Exception as e:
+            except Exception as e:  # pragma: no cover
                 self.LOG("issue with ", file, " copy to ", to)
                 self.LOG("message d'erreur ", e)
 
