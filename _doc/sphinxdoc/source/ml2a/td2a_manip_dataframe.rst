@@ -57,3 +57,8 @@ DataFrame
 * `csvkit <https://csvkit.readthedocs.io/en/latest/index.html>`_
 * `geopandas <https://geopandas.org/>`_
   (pour manipuler des coordinnées géographiques)
+
+*Modules - grands jeux de données*
+
+* `pandas_streaming <https://github.com/sdpython/pandas_streaming/>`_
+* `vaex <https://docs.vaex.io/en/latest/installing.html>`_

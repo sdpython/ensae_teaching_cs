@@ -7,6 +7,7 @@ import re
 import sys
 from pyquickhelper.loghelper import noLOG
 from pyquickhelper.jenkinshelper import setup_jenkins_server_yml
+from pyquickhelper.jenkinshelper.yaml_helper import load_yaml
 from .teaching_modules import get_teaching_modules
 
 
@@ -131,12 +132,17 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None, platform=None)
                 raise TypeError("{0} - {1}".format(row, type(row)))
         return new_res
     else:
+        yml_data = load_yaml(pattern % '_automation', context={})
+        pyth = yml_data[0]['python']
         res = []
+        for pyt in pyth:
+            v = pyt['VERSION'] + 0.01
+            vers = (int(v), int((v - int(v)) * 10))
+            res.extend(["standalone [local_pypi] [py%d%d]" % vers,
+                        ("pymyinstall [update_modules] [py%d%d]" % vers,
+                         "H H(0-1) * * 5")])
         res.extend(('yml', c, 'H H(0-1) * * %d' % (i % 7))
                    for i, c in enumerate(yml))
-        res += ["standalone [local_pypi] [py%d%d]" % sys.version_info[:2],
-                ("pymyinstall [update_modules] [py%d%d]" % sys.version_info[:2],
-                 "H H(0-1) * * 5")]
         return res
 
 

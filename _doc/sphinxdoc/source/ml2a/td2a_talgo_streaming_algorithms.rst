@@ -45,6 +45,7 @@ est inconnue à l'avance.
 
 *Modules*
 
-* `StreamLib <https://github.com/jiecchen/StreamLib>`_
 * `pandas_streaming <https://github.com/sdpython/pandas_streaming/>`_
 * `streamparse <https://github.com/Parsely/streamparse>`_
+* `vaex <https://docs.vaex.io/en/latest/installing.html>`_
+* `StreamLib <https://github.com/jiecchen/StreamLib>`_ (mas maintenu)

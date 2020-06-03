@@ -64,6 +64,7 @@ appliqués aux séries temporelles :
 * `pyflux <http://pyflux.readthedocs.io/en/latest/>`_ (la documentation est plutôt bien faite)
 * `fbprophet <https://github.com/facebookincubator/prophet/tree/master/python>`_
   (requires `pystan <http://pystan.readthedocs.io/en/latest/index.html>`_)
+* `tensorflow <https://www.tensorflow.org/tutorials/structured_data/time_series>`_
 * `Rob J Hyndman software <https://robjhyndman.com/software/>`_
   (disponible uniquement en R)
 * `influxdb <https://github.com/influxdata/influxdb>`_ (An Open-Source Time Series Database)
