@@ -257,3 +257,7 @@ sans même avoir à récupérer tous les fichiers sur votre ordinateur :
 .. image:: https://img.shields.io/github/stars/sdpython/ensae_teaching_cs.svg
     :target: https://github.com/sdpython/ensae_teaching_cs/
     :alt: Stars
+
+.. image:: https://img.shields.io/github/repo-size/sdpython/ensae_teaching_cs
+    :target: https://github.com/sdpython/ensae_teaching_cs/
+    :alt: size

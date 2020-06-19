@@ -52,6 +52,10 @@ ensae_teaching_cs: teaching materials, algorithmic, machine learning
     :target: https://github.com/sdpython/ensae_teaching_cs/
     :alt: Stars
 
+.. image:: https://img.shields.io/github/repo-size/sdpython/ensae_teaching_cs
+    :target: https://github.com/sdpython/ensae_teaching_cs/
+    :alt: size
+
 This page gives access to the content of practical sessions I give at the
 `ENSAE <http://www.ensae.fr/>`_. They are based on Python. The project
 is hosted on GitHub can be modified by sending me pull requests:

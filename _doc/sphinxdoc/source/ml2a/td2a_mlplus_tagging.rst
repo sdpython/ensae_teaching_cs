@@ -35,6 +35,7 @@ Les meilleurs modèles sont des modèles de deep learning
   voir aussi :ref:`ressources spacy <spacy-ressource>`
 * `tagger <https://github.com/glample/tagger>`_
 * `MITIE <https://github.com/mit-nlp/MITIE>`_ (le module n'a pas l'air d'être vraiment maintenu)
+* `stanza <https://github.com/stanfordnlp/stanza>`_
 
 *Modules deep learning*
 

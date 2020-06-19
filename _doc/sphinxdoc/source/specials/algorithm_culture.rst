@@ -200,6 +200,9 @@ Catalogue d'algorithmes
 * Algorithmes probabilistes
     * `Probabilistic Data Structures for Web Analytics and Data Mining <https://highlyscalable.wordpress.com/2012/05/01/probabilistic-structures-web-analytics-data-mining/>`_
 
+Beaucoup de ces algorithmes sont implémentés dans ce projet :
+`TheAlgorithms <https://github.com/TheAlgorithms/Python>`_.
+
 Problèmes NP-complets
 +++++++++++++++++++++
 

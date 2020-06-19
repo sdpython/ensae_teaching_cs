@@ -1,0 +1,42 @@
+
+.. blogpost::
+    :title: Outils pour trucs chiants
+    :keywords: outils, automatisation
+    :date: 2020-06-19
+    :categories: automatisation
+
+    Il existe beaucoup de trucs chiants qu'on fait
+    régulièrement quand on programme. Par exemple, pour ces cours,
+    maintenir à jour tous les notebooks en dépit des nombreuses
+    mises à jour de pandas, scikit-learn, numpy et j'en passe...
+    C'est très chiant, surtout si on envisage de le faire manuellement
+    (il y a plus de 200 notebooks). Alors c'est quand même beaucoup
+    moins chiants de réfléchir à une façon de l'automatiser.
+    Quand j'ai commencé il y a cinq ans à réfléchir à tout
+    ça, il n'existait pas tous les outils dont on dispose aujourd'hui.
+    J'ai fourré plein de codes dans un module :epkg:`pyquickhelper`
+    qui m'aide à faire tourner tous les notebooks chaque semaine
+    avec :epkg:`Jenkins` pour m'assurer qu'ils fonctionnent encore.
+    Mais aujourd'hui, je vous dirais qu'il existe un outil pour
+    à peu près tout car il est très probable que, quelque soit
+    votre besoin, quelqu'un ait eu le même. Il suffit de chercher.
+
+    * :epkg:`Jenkins`
+    * `PyInquirer <https://github.com/CITGuru/PyInquirer>`_
+    * `Wooey <https://github.com/wooey/wooey>`_,
+      `Gooey <https://github.com/chriskiehl/Gooey>`_
+    * `tavern <https://tavern.readthedocs.io/en/latest/>`_
+    * `RobotFramework <https://robotframework.org/>`_
+    * `automagica <https://github.com/automagica/automagica>`_
+    * `pyjest <https://github.com/cpojer/pyjest>`_
+    * `locust <https://locust.io/>`_
+    * `TheAlgorithms <https://github.com/TheAlgorithms/Python>`_
+    * `pyarmor <https://github.com/dashingsoft/pyarmor>`_
+    * `salmon <https://github.com/moggers87/salmon>`_
+    * `stanza <https://github.com/stanfordnlp/stanza>`_
+    * `errbot <https://github.com/errbotio/errbot/>`_
+    
+    Et toujours :
+    
+    * `awesome-python <https://github.com/vinta/awesome-python>`_
+    
