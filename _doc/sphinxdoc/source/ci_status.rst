@@ -858,7 +858,8 @@ Fork / Stars / Downloads
           - PyPi
           - Issues
           - Forks
-          - Stars""")
+          - Stars
+          - Size""")
 
     row = indent(dedent("""
         * - `{0} <http://www.xavierdupre.fr/app/{0}/helpsphinx/index.html>`_
@@ -873,7 +874,10 @@ Fork / Stars / Downloads
                 :alt: Forks
           - .. image:: https://img.shields.io/github/stars/sdpython/{0}.svg
                 :target: https://github.com/sdpython/{0}/
-                :alt: Stars"""), "    ")
+                :alt: Stars
+          - .. image:: https://img.shields.io/github/repo-size/sdpython/{0}.svg
+                :target: https://github.com/sdpython/{0}/
+                :alt: Size"""), "    ")
 
     row_nod = indent(dedent("""
         * - `{0} <http://www.xavierdupre.fr/app/{0}/helpsphinx/index.html>`_
@@ -886,7 +890,10 @@ Fork / Stars / Downloads
                 :alt: Forks
           - .. image:: https://img.shields.io/github/stars/sdpython/{0}.svg
                 :target: https://github.com/sdpython/{0}/
-                :alt: Stars"""), "    ")
+                :alt: Stars
+          - .. image:: https://img.shields.io/github/repo-size/sdpython/{0}.svg
+                :target: https://github.com/sdpython/{0}/
+                :alt: Size"""), "    ")
 
     row2 = indent(dedent("""
         * - `{0} <http://lesenfantscodaient.fr/>`_
@@ -901,7 +908,10 @@ Fork / Stars / Downloads
                 :alt: Forks
           - .. image:: https://img.shields.io/github/stars/sdpython/{0}.svg
                 :target: https://github.com/sdpython/{0}/
-                :alt: Stars"""), "    ")
+                :alt: Stars
+          - - .. image:: https://img.shields.io/github/repo-size/sdpython/{0}.svg
+                :target: https://github.com/sdpython/{0}/
+                :alt: Size"""), "    ")
 
     modules = get_teaching_modules()
     skip = {'myblog', '_benchmarks', 'lecture_citation',
