@@ -38,12 +38,14 @@ plotly
 pocket
 psutil
 pybind11
+pycodestyle
 pydub
 pyensae>=1.2.788
 pygal
 pygal_maps_fr
 pygame
 pyldavis
+pylint
 pylzma
 pymmails
 pympler
