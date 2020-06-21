@@ -851,7 +851,7 @@ Fork / Stars / Downloads
 
     text = dedent("""
     .. list-table::
-        :widths: 12 10 10 10 10
+        :widths: 12 10 10 10 10 10
         :header-rows: 1
 
         * - Module

@@ -1,4 +1,5 @@
 aequitas
+autopep8
 bayespy
 beautifulsoup4
 blockdiag
