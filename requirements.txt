@@ -60,7 +60,9 @@ seasonal
 git+https://github.com/xadupre/sklearn-onnx.git@jenkins
 shapely
 sphinx_bootstrap_theme
+sphinx_gallery
 sphinx_rtd_theme
+sphinxcontrib.imagesvg
 tkinterquickhelper
 toolz
 tqdm
