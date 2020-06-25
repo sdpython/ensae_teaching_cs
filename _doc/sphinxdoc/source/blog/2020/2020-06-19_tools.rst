@@ -35,8 +35,7 @@
     * `salmon <https://github.com/moggers87/salmon>`_
     * `stanza <https://github.com/stanfordnlp/stanza>`_
     * `errbot <https://github.com/errbotio/errbot/>`_
-    
+
     Et toujours :
-    
+
     * `awesome-python <https://github.com/vinta/awesome-python>`_
-    
