@@ -135,3 +135,4 @@ poste régulièrement des articles sur des librairies de machine learning open s
 * `GBDT-PL <https://github.com/GBDT-PL/GBDT-PL>`_ (en train d'être implémenté)
 * `thundersvm <https://github.com/Xtra-Computing/thundersvm>`_
 * `celer <https://mathurinm.github.io/celer/index.html>`_
+* `scikit-lego <https://github.com/koaning/scikit-lego>`_
