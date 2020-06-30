@@ -61,7 +61,8 @@ class TestRst2HtmlDeps(ExtTestCase):
                          numpy="np", xgboost="xgb", XGBoost="xgb", mathenjeu='mej',
                          antiseches_ml_basic_plot_binary_classification="chsh",
                          lecture_citation="lectcit", botadi="botadi",
-                         python='python', aftercovid='aftercovid')
+                         python='python', aftercovid='aftercovid',
+                         onnxcustom='onnxcustom')
             links["scikit-learn"] = "skl"
             links.update({'ML.net': 'mlnet', 'C#': 'C#'})
             for full in fulls:

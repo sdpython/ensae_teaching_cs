@@ -192,6 +192,7 @@ epkg_dictionary.update({
     "notebook": 'http://jupyter.org/',
     "Notepad++": "https://notepad-plus-plus.org/",
     "numba": "https://numba.pydata.org/",
+    'onnxcustom': 'http://www.xavierdupre.fr/app/onnxcustom/helpsphinx/index.html',
     "open source": 'http://fr.wikipedia.org/wiki/Open_source',
     "OpenCV": 'https://opencv.org/',
     "opencv": 'https://opencv.org/',

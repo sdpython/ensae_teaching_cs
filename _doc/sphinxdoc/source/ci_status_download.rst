@@ -29,7 +29,7 @@ obtenu en exécutant la requête suivante sur
     modules.extend([
         'onnx', 'onnxruntime', 'skl2onnx', 'keras2onnx', 'nimbusml',
         'scikit-learn', 'pandas', 'numpy', 'jupyter', 'matplotlib',
-        'protobuf', 'nimbusml', 'aftercovid'
+        'protobuf', 'nimbusml', 'aftercovid', 'onnxcustom'
     ])
     conds = ["file.project = '{0}'".format(m) for m in modules]
     cond = " OR ".join(conds)

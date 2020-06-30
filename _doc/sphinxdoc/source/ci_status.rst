@@ -372,6 +372,23 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
+    * - `onnxcustom <http://www.xavierdupre.fr/app/onnxcustom/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.org/sdpython/onnxcustom.svg?branch=master
+            :target: https://travis-ci.org/sdpython/onnxcustom
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/a3sn45a2fayoxb5q?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/onnxcustom
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/onnxcustom.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/onnxcustom
+      - .. image:: https://badge.fury.io/py/onnxcustom.svg
+            :target: https://pypi.org/project/onnxcustom
+      - .. image:: http://img.shields.io/github/issues/sdpython/onnxcustom.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/onnxcustom/issues
+      - .. image:: https://codecov.io/github/sdpython/onnxcustom/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/onnxcustom?branch=master
+      -
     * - `pandas_streaming <http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/pandas_streaming.svg?branch=master
             :target: https://travis-ci.org/sdpython/pandas_streaming
@@ -993,6 +1010,8 @@ Outils
     * - :epkg:`mlprodict`
       - Conversion de modèle de machine learning en code C pour prédire
         plus rapidement.
+    * - :epkg:`onnxcustom`
+      - Tutoriels pour customiser le déploiement avec ONNX
     * - `pandas_streaming <http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/index.html>`_
       - Utilisation de :epkg:`pandas` pour opérer sur des fichiers qui ne tiennent pas
         en mémoire en implémentant des algorithmes de streaming.

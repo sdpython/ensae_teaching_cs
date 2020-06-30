@@ -21,7 +21,7 @@ sets = [
     {'lightmlboard', 'lightmlrestapi', 'pyrsslocal', 'pymmails', },
     {'sparkouille', 'ensae_projects', 'actuariat_python', 'code_beatrix', 'jupytalk'},
     {'papierstat', 'teachpyx', 'ensae_teaching_cs', 'ensae_teaching_dl', 'teachpyx',
-     'aftercovid'},
+     'aftercovid', 'onnxcustom'},
     {'tkinterquickhelper', 'pysqllike', 'pyenbc', },
 ]
 
