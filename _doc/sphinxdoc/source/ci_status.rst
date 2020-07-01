@@ -981,6 +981,8 @@ Outils
     :widths: 5 15
     :header-rows: 1
 
+    * - module
+      - description
     * - :epkg:`aftercovid`
       - Explorations autour des données liées au COVID-19
     * - module
@@ -1042,6 +1044,8 @@ Outils
     :widths: 5 15
     :header-rows: 1
 
+    * - module
+      - description
     * - `_check_python_install <http://www.xavierdupre.fr/app/_check_python_install/helpsphinx/index.html>`_
       - Rassemble diverses instructions pour installer certains packages compliqués.
     * - `python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
