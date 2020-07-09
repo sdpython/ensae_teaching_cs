@@ -25,8 +25,11 @@ Online training
 * `Online Sufficient Dimension Reduction Through Sliced Inverse Regression
   <http://www.jmlr.org/papers/volume21/18-567/18-567.pdf>`_
 * `Online PCA with Optimal Regret <http://jmlr.org/papers/volume17/15-320/15-320.pdf>`_
+* `Online machine learning
+  <https://www.wikiwand.com/en/Online_machine_learning#/overview>`_
 
 *Modules*
 
 * `scikit-garden <https://github.com/scikit-garden/scikit-garden>`_
 * `scikit-multiflow <https://scikit-multiflow.github.io/>`_
+* `creme <https://github.com/creme-ml/creme>`_
