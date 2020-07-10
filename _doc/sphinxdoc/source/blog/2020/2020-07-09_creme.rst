@@ -1,0 +1,14 @@
+
+.. blogpost::
+    :title: Online machine learning
+    :keywords: sprint, scikit-learn, online machine learning
+    :date: 2020-07-09
+    :categories: library
+
+    A découvrir :
+    `creme <https://github.com/creme-ml/creme/>`_
+    pour faire de l'online machine learning
+    (streaming).
+
+    Et le blog :
+    `Max Halford <https://maxhalford.github.io/>`_.
