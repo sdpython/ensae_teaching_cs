@@ -90,10 +90,11 @@ Modules Python écrits en C
 ++++++++++++++++++++++++++
 
 Il faut lire le tutoriel
-`Extending Python with C or C++ <https://docs.python.org/3/extending/extending.html>_.
+`Extending Python with C or C++ <https://docs.python.org/3/extending/extending.html>`_.
 C'est la solution qui produit le code le plus efficace mais il faut constamment convertir des
 données depuis Python vers C et réciproquement. Il faut aussi gérer soi-même le
-`comptage des références <https://docs.python.org/3.6/c-api/refcounting.html?highlight=py_incref#reference-counting>`_
+`comptage des références
+<https://docs.python.org/3/c-api/refcounting.html?highlight=py_incref#reference-counting>`_
 afin que le `garbage collector <https://fr.wikipedia.org/wiki/Ramasse-miettes_(informatique)>`_
 garde la trace des objets créés et détruits.
 
