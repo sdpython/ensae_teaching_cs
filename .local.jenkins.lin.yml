@@ -8,6 +8,12 @@ python:
       PYINT: python3.7,
       PYTHONPATH: src,
       LD_LIBRARY_PATH: /usr/local/Python-3.7.2 }
+  - { PATH: "{{Python38}}",
+      VERSION: 3.8,
+      DIST: std,
+      PYINT: python3.8,
+      PYTHONPATH: src,
+      LD_LIBRARY_PATH: /usr/local/Python-3.8.1 }
   
 virtualenv:
   - path: {{ospathjoin(root_path, pickname("$NAME_JENKINS", project_name + "_$VERSION_$DIST_$NAME"), "_venv")}}
