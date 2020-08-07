@@ -14,6 +14,7 @@ duecredit
 ete3
 folium
 forestci
+future
 gensim
 geopy
 google-api-python-client
