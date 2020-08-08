@@ -57,7 +57,7 @@ class TestMatplotlibHelperVizScatterPlots(unittest.TestCase):
         assert os.path.exists(im)
         if __name__ == "__main__":
             import matplotlib
-            matplotlib.use(matplotlib.get_backend(), warn=False, force=True)
+            matplotlib.use(matplotlib.get_backend(), force=True)
             from matplotlib import rcParams
             rcParams["backend"] = self.backend
         plt.close('all')
@@ -105,7 +105,7 @@ class TestMatplotlibHelperVizScatterPlots(unittest.TestCase):
         assert os.path.exists(im)
         if __name__ == "__main__":
             import matplotlib
-            matplotlib.use(matplotlib.get_backend(), warn=False, force=True)
+            matplotlib.use(matplotlib.get_backend(), force=True)
             from matplotlib import rcParams
             rcParams["backend"] = self.backend
         plt.close('all')
@@ -146,7 +146,7 @@ class TestMatplotlibHelperVizScatterPlots(unittest.TestCase):
         assert os.path.exists(im)
         if __name__ == "__main__":
             import matplotlib
-            matplotlib.use(matplotlib.get_backend(), warn=False, force=True)
+            matplotlib.use(matplotlib.get_backend(), force=True)
             from matplotlib import rcParams
             rcParams["backend"] = self.backend
 

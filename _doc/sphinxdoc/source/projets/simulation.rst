@@ -111,4 +111,3 @@ Ce projet est une façon de revenir sur l'épidémie de 2020 de
 façon un peu plus mathématique. Quelques lectures :
 `Lectures sur le COVID
 <http://www.xavierdupre.fr/app/aftercovid/helpsphinx/readings.html>`_.
-

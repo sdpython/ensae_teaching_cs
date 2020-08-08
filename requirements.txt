@@ -33,6 +33,7 @@ mlstatpy
 mpld3
 msgpack!=0.6.0  # https://github.com/explosion/spaCy/issues/2995
 mutagen
+onnx>=1.7.0
 opencv-python
 pandas_streaming
 partd
@@ -58,6 +59,7 @@ pywaffle
 qgrid
 semantic_version
 seasonal
+git+https://github.com/xadupre/onnxconverter-common.git@jenkins
 git+https://github.com/xadupre/sklearn-onnx.git@jenkins
 shapely
 sphinx_bootstrap_theme

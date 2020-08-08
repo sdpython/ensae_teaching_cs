@@ -16,7 +16,7 @@ networkx
 nltk
 numba
 numpy
-pandas
+pandas>=1.0
 pillow
 pyproj
 pyzmq
