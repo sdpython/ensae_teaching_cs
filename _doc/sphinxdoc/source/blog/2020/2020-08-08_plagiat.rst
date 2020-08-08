@@ -1,0 +1,10 @@
+
+.. blogpost::
+    :title: Plagiat
+    :keywords: plagiat
+    :date: 2020-08-08
+    :categories: library
+
+    Je suis tombé dessus par hasard :
+    `pycode_similar <https://github.com/fyrestone/pycode_similar>`_.
+    Je n'ai pas essayé.

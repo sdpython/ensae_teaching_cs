@@ -266,3 +266,19 @@ tout en apprenant également une distance dite de
 qui permet de pondérer différemment chaque dimension. Il faudra comparar
 cet algorithme à d'autres approche de machine learning voire apporter
 sa propre contribution.
+
+.. _l-ml-code-plagiat:
+
+Détecter le plagiat dans le code (2020)
+---------------------------------------
+
+Comment détecter des emprunts de code ?
+Ils ne sont pas tous interdits, tout dépend de la licence
+choisie par l'auteur. `Celle de ce site
+<https://github.com/sdpython/ensae_teaching_cs/blob/master/LICENSE.txt>`_
+vous donne le droit de tout faire excepté celui de le faire
+sans le dire. Quelques sources d'inspiration ci-dessous.
+
+* `Winnowing: Local Algorithms for Document Fingerprinting
+  <http://theory.stanford.edu/~aiken/publications/papers/sigmod03.pdf>`_
+* `pycode_similar <https://github.com/fyrestone/pycode_similar>`_

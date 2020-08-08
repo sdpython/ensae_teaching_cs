@@ -9,18 +9,24 @@ Simulations économiques, sociales
 
 Assez proches des algorithmes génétiques dans l'implémentation, les simulations
 permettent à partir de règles simples sur le comportement des individus d'obtenir
-des résultats sur l'ensemble d'une population. Le projet doit comporter les élémens suivants :
+des résultats sur l'ensemble d'une population.
+Le projet doit comporter les élémens suivants :
 
 * Description du problème et des interactions entre individus
-* Réalisation d'une simulation réduite pour vérifier que le programme donne des résultats numériquement fiables
-  et cohérents avec l'intuition qu'on a du problème (lire `Common sense and statistics <http://andrewgelman.com/2014/12/25/common-sense-statistics/>`_)
+* Réalisation d'une simulation réduite pour vérifier
+  que le programme donne des résultats numériquement fiables
+  et cohérents avec l'intuition qu'on a du problème
+ (lire `Common sense and statistics
+ <http://andrewgelman.com/2014/12/25/common-sense-statistics/>`_)
 * Réalisation de simulations plus poussées
 * Analyse des résultats obtenus avec le programme, comparaison avec la réalité
 
 Et encore :
 
-* `Pourrait-on programmer une fourmilière ? <http://rue89.nouvelobs.com/2014/12/31/pourrait-programmer-fourmiliere-256679>`_
-* `Economics Simulation <http://nbviewer.jupyter.org/url/norvig.com/ipython/Economics.ipynb>`_ *(2016/08)*
+* `Pourrait-on programmer une fourmilière ?
+  <http://rue89.nouvelobs.com/2014/12/31/pourrait-programmer-fourmiliere-256679>`_
+* `Economics Simulation
+  <http://nbviewer.jupyter.org/url/norvig.com/ipython/Economics.ipynb>`_ *(2016/08)*
 
 .. _l-sim-segre:
 
@@ -95,3 +101,14 @@ une simulation sur des réseaux très simples. Quelques liens pour cela :
 
 Dans un second temps, en utilisant ce que la première étape
 vous a appris, que pourriez-vous dire du `Grand Paris <http://www.societedugrandparis.fr/projet#la-carte-du-projet>`_ ?
+
+.. _l-sim-covid:
+
+Simuler une épidémie avec un modèle SIRD (2020)
+-----------------------------------------------
+
+Ce projet est une façon de revenir sur l'épidémie de 2020 de
+façon un peu plus mathématique. Quelques lectures :
+`Lectures sur le COVID
+<http://www.xavierdupre.fr/app/aftercovid/helpsphinx/readings.html>`_.
+

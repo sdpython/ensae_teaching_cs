@@ -75,6 +75,7 @@ Liste exhaustive :
 #. ML : :ref:`l-ml-fire-detection`
 #. ML : :ref:`l-ml-snn`
 #. ML : :ref:`l-ml-knn-pca`
+#. ML : :ref:`l-ml-code-plagiat`
 #. Finance : :ref:`l-fi-trend`
 #. Finance : :ref:`l-fi-port`
 #. Finance : :ref:`l-fi-pair`
@@ -84,6 +85,7 @@ Liste exhaustive :
 #. Simulation : :ref:`l-sim-panique`
 #. Simulation : :ref:`l-sim-social`
 #. Simulation : :ref:`l-sim-autoroute`
+#. Simulation : :ref:`l-sim-covid`
 #. Objets connectés : :ref:`l-tech-smart`
 #. Objets connectés : :ref:`l-tech-domo`
 #. Objets connectés : :ref:`l-visage-reel`
@@ -188,21 +190,30 @@ Références
 
 **Articles de blogs**
 
-* `Deux ou trois choses à vérifier avant de rendre un projet informatique <http://www.xavierdupre.fr/blog/2014-05-14_nojs.html>`_
-* `Récupérer des données financières <http://www.xavierdupre.fr/blog/2014-05-04_nojs.html>`_
-* `Travailler à plusieurs sur le même projet informatique <http://www.xavierdupre.fr/blog/2014-02-12_nojs.html>`_
-* `Quelques précisions sur les projets informatiques <http://www.xavierdupre.fr/blog/2013-02-03_nojs.html>`_
-* `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
-* `Frameworks for games in Python <http://www.xavierdupre.fr/blog/2014-01-01_nojs.html>`_
-* `Ideas for making better conference talks & conferences <http://jvns.ca/blog/2016/06/06/make-better-conference-talks/>`_ *(2016/06)*
+* `Deux ou trois choses à vérifier avant de rendre un projet informatique
+  <http://www.xavierdupre.fr/blog/2014-05-14_nojs.html>`_
+* `Récupérer des données financières
+  <http://www.xavierdupre.fr/blog/2014-05-04_nojs.html>`_
+* `Travailler à plusieurs sur le même projet informatique
+  <http://www.xavierdupre.fr/blog/2014-02-12_nojs.html>`_
+* `Quelques précisions sur les projets informatiques
+  <http://www.xavierdupre.fr/blog/2013-02-03_nojs.html>`_
+* `Python extensions to do machine learning
+  <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
+* `Frameworks for games in Python
+  <http://www.xavierdupre.fr/blog/2014-01-01_nojs.html>`_
+* `Ideas for making better conference talks & conferences
+  <http://jvns.ca/blog/2016/06/06/make-better-conference-talks/>`_ *(2016/06)*
 
 **Resources**
 
 * `données <http://www.xavierdupre.fr/site2013/enseignements/projets/donnees/>`_
 * :ref:`l-datasources`.
 * `bibliographie <http://www.xavierdupre.fr/site2013/enseignements/projets/biblio/>`_
-* `Barème indicatif des projets informatiques (année 2012-2013) <http://www.xavierdupre.fr/site2013/enseignements/bareme.html>`_
-* `Barème indicatif des projets informatiques (année 2013-2014) <http://www.xavierdupre.fr/site2013/enseignements/bareme-2014.html>`_
+* `Barème indicatif des projets informatiques (année 2012-2013)
+  <http://www.xavierdupre.fr/site2013/enseignements/bareme.html>`_
+* `Barème indicatif des projets informatiques (année 2013-2014)
+  <http://www.xavierdupre.fr/site2013/enseignements/bareme-2014.html>`_
 
 Ce que vous ne lisez jamais mais que j'observe chaque année
 -----------------------------------------------------------
