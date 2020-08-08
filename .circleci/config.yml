@@ -120,7 +120,14 @@ jobs:
             pip install git+https://github.com/sdpython/pyPdf --upgrade --no-deps
             
       - run:
-          name: install dependencies 4 - fairtest
+          name: install dependencies (4) - pygame
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install pygame==2.0.0.dev10
+            
+      - run:
+          name: install dependencies (5) - fairtest
           command: |
             python3 -m venv venv
             . venv/bin/activate

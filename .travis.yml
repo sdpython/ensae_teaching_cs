@@ -31,6 +31,7 @@ install:
   - conda install -q --file=requirements_conda.txt
   # - conda install -c cogsci pygame
   - pip install -r requirements.txt
+  - pip install pygame==2.0.0.dev10
   - pip install -U git+https://github.com/sdpython/pyPdf --no-deps
   - pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
   - pip install cairocffi cairosvg
