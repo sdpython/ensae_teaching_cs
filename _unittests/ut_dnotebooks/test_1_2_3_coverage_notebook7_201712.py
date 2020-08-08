@@ -4,7 +4,7 @@
 """
 import unittest
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import add_missing_development_version
+from pyquickhelper.pycode import add_missing_development_version, skipif_travis
 
 
 class TestNotebook1237Coverage7_201712(unittest.TestCase):
@@ -27,6 +27,7 @@ class TestNotebook1237Coverage7_201712(unittest.TestCase):
         self.a_test_notebook_runner(
             "dimensions_reduction", "notebook_eleves/2017-2018")
 
+    @skipif_travis("too long")
     def test_notebook_git_notebook(self):
         fLOG(
             __file__,
