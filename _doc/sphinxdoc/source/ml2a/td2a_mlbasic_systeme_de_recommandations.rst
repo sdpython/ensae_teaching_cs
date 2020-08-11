@@ -42,3 +42,4 @@ Système de recommandations
   l'algorithme décrit dans l'article
   `Large-Scale Matrix Factorization with Missing Data under Additional Constraints <http://www.cfar.umd.edu/~rama/Publications/mitra_nips_2010.pdf>`_
 * `scikit-surprise <http://surpriselib.com/>`_ (`documentation <http://surprise.readthedocs.io/en/stable/>`_)
+* `pyrwr <https://github.com/jinhongjung/pyrwr>`_

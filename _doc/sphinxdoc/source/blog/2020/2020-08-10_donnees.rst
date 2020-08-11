@@ -1,0 +1,15 @@
+
+.. blogpost::
+    :title: Schéma de données de modélisation de risques
+    :keywords: plagiat
+    :date: 2020-08-10
+    :categories: library
+
+    Je suis tombé dessus par hasard :
+    `RDOS <https://github.com/RMS-open-standards/RDOS>`_.
+    Ce ne sont pas des données mais des schémas de données
+    qui permettent de modéliser différents risques financiers
+    liés à la propriétés. Cela donne des idées pour qui
+    voudrait faire quelque chose dans ce sens. Ce ne sont pas
+    des données, mais ça donne une idée des données qu'il faudrait
+    aller chercher.
