@@ -25,7 +25,8 @@ install:
   - $PYINT -m pip install spacy plac
   - $PYINT -m pip install -r requirements_conda.txt
   - $PYINT -m pip install -r requirements.txt
-  - $PYINT -m pip install shapely==1.6.4 keras tensorflow
+  - $PYINT -m pip install keras tensorflow
+  - $PYINT -m pip install shapely!=1.7.0,!=1.7.1
   - $PYINT --version
   - $PYINT -m pip freeze
   - export AUDIODEV=null
