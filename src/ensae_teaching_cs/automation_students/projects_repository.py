@@ -351,10 +351,10 @@ class ProjectsRepository:
                 try:
                     ind_student = list(df.columns).index(col_student) + 1
                     ind_mail = list(df.columns).index(col_mail) + 1
-                except ValueError:
+                except ValueError as e:
                     raise ValueError(  # pragma: no cover
                         "Unable to find '{0}' or '{1}' in {2}".format(
-                            col_student, col_mail, df.columns))
+                            col_student, col_mail, df.columns)) from e
                 mapping = {}
                 for row in df.itertuples():
                     mapping[row[ind_student]] = row[ind_mail]
