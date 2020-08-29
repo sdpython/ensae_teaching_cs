@@ -43,6 +43,7 @@ du problème initiale.
     td2a_mlbasic_variables_categorielles
     td2a_mlbasic_distances
     td2a_mlbasic_clustering
+    td2a_mlbasic_linear
     td2a_mlbasic_detection_anomalies
     td2a_mlbasic_text_embedding
     td2a_mlbasic_embedding_de_donnees_complexes
