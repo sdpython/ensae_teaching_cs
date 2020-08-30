@@ -85,6 +85,10 @@ seulement.
   <http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf>`_
   (SHAP)
 
+*Lectures : livre*
+
+* `Explanatory Model Analysis <https://pbiecek.github.io/ema/>`_
+
 *Lectures : expliquer*
 
 * `Ideas on interpreting machine learning <https://www.oreilly.com/ideas/ideas-on-interpreting-machine-learning>`_
@@ -185,6 +189,7 @@ seulement.
   méthode empiriques pour observer les prédictions en fonctions
   de variations des features
 * `savvy <https://github.com/lmc2179/savvy>`_
+* `dalex <https://github.com/ModelOriented/DALEX>`_
 
 *Modules de visualisation*
 
@@ -192,6 +197,7 @@ seulement.
   mais permet de visualiser des modèles de machine learning.
 * `VisualDL <https://github.com/PaddlePaddle/VisualDLn>`_ : cet outil n'explique pas vraiment
   mais permet de visualiser des modèles de deep learning.
+* `dalex <https://github.com/ModelOriented/DALEX>`_
 
 *A suivre*
 
