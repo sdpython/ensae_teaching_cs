@@ -247,6 +247,15 @@ d'une fonction LAPACK dans un code python / cython :
 * `OpenBLAS <http://www.openblas.net/>`_
 * `cython-blis <https://github.com/explosion/cython-blis>`_
 
+Optimisations logicielles
++++++++++++++++++++++++++
+
+* `Compiling ONNX Neural Network Models Using   MLIR <https://arxiv.org/pdf/2008.08272.pdf>`_
+* `Compiling Classical ML Pipelines into Tensor Computations for One-size-fits-all Prediction Serving
+  <http://learningsys.org/neurips19/assets/papers/27_CameraReadySubmission_Hummingbird%20(5).pdf>`_,
+  `Taming Model Serving Complexity, Performance and Cost: A Compilation to Tensor Computations Approach
+  <https://scnakandala.github.io/papers/TR_2020_Hummingbird.pdf>`_
+
 Autres que CPU, GPU
 +++++++++++++++++++
 

@@ -25,6 +25,12 @@ Les meilleurs modèles sont des modèles de deep learning
 *Lectures*
 
 * `Understanding LSTM Networks <http://colah.github.io/posts/2015-08-Understanding-LSTMs/>`_
+* `Establishing a New State-of-the-Art for French Named Entity Recognition
+  <https://hal.inria.fr/hal-02617950/file/lrec19ner.pdf>`_
+* `Extracting an Etymological Database from Wiktionary
+  <https://hal.inria.fr/hal-01592061/file/paper44.pdf>`_
+* `Cheating a Parser to Death: Data-driven Cross-Treebank Annotation Transfer
+  <https://hal.inria.fr/hal-01798801/file/1101.pdf>`_
 
 *Modules*
 
@@ -45,3 +51,9 @@ Les meilleurs modèles sont des modèles de deep learning
 *Expérimental*
 
 * `NeuroNER <https://github.com/Franck-Dernoncourt/NeuroNER>`_
+
+.. index:: corpus
+
+*Corpus*
+
+* `https://camembert-model.fr/ <https://camembert-model.fr/>`_
