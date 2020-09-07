@@ -48,7 +48,7 @@ Le coût de nombreux algorithmes non NP-complet se décomposer comme suit :
 
 Dès qu'on sort des puissances entières, il faut s'attendre à un algorithme non trivial
 tel que l'`algorithme de Strassen <https://fr.wikipedia.org/wiki/Algorithme_de_Strassen>`_
-pour la multiplication de matrice (:math:`n^{2.807}), ou celui
+pour la multiplication de matrice (:math:`n^{2.807}`), ou celui
 de `Marco Bodrato <http://www.bodrato.it/papers/>`_
 (`A Strassen-like Matrix Multiplication Suited for Squaring and Higher Power Computation <http://marco.bodrato.it/papers/Bodrato2010-StrassenLikeMatrixMultiplicationForSquares.pdf>`_).
 

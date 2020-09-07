@@ -7,7 +7,7 @@ Algorithmes et programmation
 
 `Algorithmes et Programmation <https://www.ensae.fr/courses/algorithmes-et-programmation/>`_ (ENSAE)
 
-Plan approximatif du cours : :ref:`l-feuille-de-route-2019-1A`.
+Plan approximatif du cours : :ref:`l-feuille-de-route-2020-1A`.
 
 Cours animé par
 `Xavier Dupré <http://www.xavierdupre.fr/>`_
@@ -541,3 +541,4 @@ revêt de plus en plus d'importance en datascience.
 
     questions/route_1A_2018
     questions/route_1A_2019
+    questions/route_1A_2020
