@@ -2,7 +2,7 @@
 TD 2A
 =====
 
-Des fonctions à copier coller.
+Des fonctions Ã  copier coller.
 
 .. autosignature:: ensae_teaching_cs.td_2a.serialization.dfs2excel
 

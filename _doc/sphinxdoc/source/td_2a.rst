@@ -29,7 +29,9 @@ fait à plusieurs sur un sujet tiré d'articles de recherche récents.
 Le terme *cheat sheet* est un mot-clé plutôt efficace sur Internet pour
 retrouver les bout de codes les plus fréquents. Cette page regroupe des
 *cheat sheets* sur beaucoup de sujet évoqués ci-dessous :
-`Essential Cheat Sheets for Machine Learning and Deep Learning Engineers <https://startupsventurecapital.com/essential-cheat-sheets-for-machine-learning-and-deep-learning-researchers-efb6a8ebd2e5>`_.
+`Essential Cheat Sheets for Machine Learning and Deep Learning Engineers
+<https://startupsventurecapital.com/
+essential-cheat-sheets-for-machine-learning-and-deep-learning-researchers-efb6a8ebd2e5>`_.
 Le site :epkg:`Kaggle` recense de nombreuses compétitions de machine learning
 qui permettent de s'exercer ou de se mesurer à d'autres data scientists.
 Quelques compétitions ont aussi été créées pour ce cours :
@@ -103,7 +105,9 @@ Galleries de problèmes résolus ou presque
 =========================================
 
 Il faut voir la page
-`Galleries de problèmes résolus ou presque <http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/chapters/dl_resolus.html>`_.
+`Galleries de problèmes résolus ou presque
+<http://www.xavierdupre.fr/app/ensae_teaching_dl/
+helpsphinx/chapters/dl_resolus.html>`_.
 Ces problèmes sont principalement résolus à l'aide
 de :epkg:`deep learning`. Chaque problème n'est pas
 nécessairement compliqué en soi mais chaque modèle

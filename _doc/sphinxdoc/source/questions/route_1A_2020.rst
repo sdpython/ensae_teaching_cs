@@ -30,10 +30,12 @@ Prérequis
 La programmation fait maintenant partie
 du programme des `classes préparatoires <https://info-llg.fr/>`_.
 Ce cours suppose que les
-`types du langage <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_lang/types.html>`_,
-sa `syntaxe <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/c_lang/syntaxe.html>`_
-sont connus tout comme quelques algorithmes de :ref:`tri <trinlndrst>` comme
-le `tri bulle <https://fr.wikipedia.org/wiki/Tri_%C3%A0_bulles>`_
+`types du langage <http://www.xavierdupre.fr/
+app/teachpyx/helpsphinx/c_lang/types.html>`_,
+sa `syntaxe <http://www.xavierdupre.fr/
+app/teachpyx/helpsphinx/c_lang/syntaxe.html>`_
+sont connus tout comme quelques algorithmes de :ref:`tri <trinlndrst>`
+comme le `tri bulle <https://fr.wikipedia.org/wiki/Tri_%C3%A0_bulles>`_
 et le `tri fusion <https://fr.wikipedia.org/wiki/Tri_fusion>`_.
 
 Version de Python
@@ -47,7 +49,8 @@ Le plus simple pour installer :epkg:`Python` est d'utiliser la distribution
 pour *Windows* et de celle-ci pour la distribution
 *Debian 9* (Ubuntu est très similaire) :
 `Install Python 3.7 and many packages on Linux Debian 9
-<http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2018/2018-12-29_python37_2.html>`_.
+<http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/
+2018/2018-12-29_python37_2.html>`_.
 
 Intervenants
 ^^^^^^^^^^^^
@@ -74,11 +77,11 @@ quelques mots sur les années prochaines...
 
 * :ref:`2020surfacerst`
 
-Séance 2 - 8/9 - tri, regex
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Séance 2 - 8/9 - jeu de dictionnaires, regex
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Algorithme : tri fusion
-* Expression régulières : extraire des chiffres dans un texte
+* Algorithme : :ref:`2020suffixrst`
+* Technique : :ref:`2020regexrst`
 
 Séance 3 - 15/9 - top k, profiling
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

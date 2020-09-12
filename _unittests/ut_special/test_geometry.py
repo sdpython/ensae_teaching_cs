@@ -2,20 +2,15 @@
 @brief      test log(time=10s)
 """
 import unittest
-from pyquickhelper.loghelper import fLOG
+from pyquickhelper.pycode import ExtTestCase
 from ensae_teaching_cs.special.geometry_point import GeometryPoint
 from ensae_teaching_cs.special.geometry_segment import GeometrySegment
 from ensae_teaching_cs.special.geometry_polygone import GeometryPolygone
 
 
-class TestGeometry(unittest.TestCase):
+class TestGeometry(ExtTestCase):
 
     def test_geometry_point(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
         p = GeometryPoint(4, 5)
         p += p
         self.assertEqual(p, (8, 10))
@@ -29,33 +24,22 @@ class TestGeometry(unittest.TestCase):
         self.assertEqual(norms, norm)
 
     def test_geometry_polygone(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
         middle = GeometryPoint(GeometryPoint(0.5, 0.1))
-
         poly = GeometryPolygone([GeometryPoint(0, 0), GeometryPoint(1, 0),
                                  GeometryPoint(1, 1), GeometryPoint(0, 1)])
         r = poly.in_convex(middle)
-        assert r
+        self.assertNotEmpty(r)
         out = GeometryPoint(0.5, -0.1)
         r = poly.in_convex(out)
-        assert not r
+        self.assertFalse(r)
 
     def test_geometry_polygone2(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
-
         poly = GeometryPolygone([GeometryPoint(0, 0), GeometryPoint(0, 1),
                                  GeometryPoint(1, 1), GeometryPoint(1, 0)])
         convex = poly.convex()
-        fLOG(convex)
         self.assertEqual(len(convex), len(poly))
-        r = [GeometryPoint(0, 1), GeometryPoint(
-            0, 0), GeometryPoint(1, 0), GeometryPoint(1, 1)]
+        r = [GeometryPoint(0, 1), GeometryPoint(0, 0),
+             GeometryPoint(1, 0), GeometryPoint(1, 1)]
         for p, e in zip(convex, r):
             self.assertEqual(p, e)
 

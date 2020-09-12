@@ -21,8 +21,6 @@ class GeometryPoint:
 
     def __init__(self, *x):
         """
-        constructor
-
         @param      x       is a vector
         """
         if isinstance(x, (tuple, list)):
@@ -32,7 +30,8 @@ class GeometryPoint:
                 self._x = x[0]._x
             else:
                 self._x = tuple(x)
-        raise TypeError(type(x))
+        else:
+            raise TypeError("Unexpected type %r." % type(x))
 
     def __eq__(self, x):
         """
