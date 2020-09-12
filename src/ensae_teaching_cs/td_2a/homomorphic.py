@@ -9,6 +9,8 @@ import random
 class HomomorphicInt:
     """
     Implements an "homomorphic integer".
+    See `Homomorphic encryption
+    <https://en.wikipedia.org/wiki/Homomorphic_encryption>`_.
     """
     __slots__ = ['V', 'N', 'P', 'Q', 'E']
 

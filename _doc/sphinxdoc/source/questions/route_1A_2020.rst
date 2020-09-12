@@ -58,6 +58,9 @@ Plan proposé
 ++++++++++++
 
 Liens, notebooks prévus pour les séances pratiques.
+Chaque session présentera un algorithme et des outils
+ou concepts informatiques utiles pour la manipulation
+de données.
 
 .. contents::
     :local:
@@ -70,3 +73,51 @@ modules, mise en production, algorithmes,
 quelques mots sur les années prochaines...
 
 * :ref:`2020surfacerst`
+
+Séance 2 - 8/9 - tri, regex
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Algorithme : tri fusion
+* Expression régulières : extraire des chiffres dans un texte
+
+Séance 3 - 15/9 - top k, profiling
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Algorithme : recherche les k éléments les plus grands d'un tableau
+* Technique : profiling
+
+Séance 4 - 22/9 - edit distance, numpy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Algorithme : distance d'édition
+* Technique : calcul matriciel
+
+Séance 5 - 6/10 - TSP, dataframe
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Algorithme : TSP
+* Technique : dataframe
+
+Séance 6 - 13/10 - bag, json, xml
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Algorithme : sac à dos
+* Technique : format json, xml
+
+Séance 7 - 3/11 - graphes, flask
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Algorithme : matrice d'adjacence, composantes connexes
+* Technique : site web, flask
+
+Séance 8 - 10/11 - graphes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* Algorithme : ordonnancement
+* Technique : graphes, cartes
+
+Séance 9 - 22/11 - ?
+^^^^^^^^^^^^^^^^^^^^
+
+* ?
+* ?

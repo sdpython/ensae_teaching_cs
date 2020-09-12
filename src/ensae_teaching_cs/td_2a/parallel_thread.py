@@ -7,7 +7,7 @@ import threading
 import time
 
 
-class ParallelThread (threading.Thread):
+class ParallelThread(threading.Thread):
 
     """
     Cette classe implémente un thread qui exécute en boucle une fonction
@@ -67,5 +67,4 @@ class ParallelThread (threading.Thread):
             for i in range(nbthread):
                 final[i::nbthread] = th[i].results
             return final
-        else:
-            return th
+        return th

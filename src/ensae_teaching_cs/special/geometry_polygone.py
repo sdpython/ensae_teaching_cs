@@ -8,7 +8,7 @@ from .geometry_point import GeometryException
 from .geometry_segment import GeometrySegment
 
 
-class GeometryPolygone (list):
+class GeometryPolygone(list):
     """
     A sequence of point, the last one is connected to the first one.
     """

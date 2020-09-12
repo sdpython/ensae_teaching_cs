@@ -180,7 +180,7 @@ class Ville:
         return d
 
 
-class VilleImage (Ville):
+class VilleImage(Ville):
     """
     Définit une ville à partir d'une image (donc non aléatoire).
     """

@@ -295,7 +295,7 @@ def kruskal(edges, extension, fLOG=None):
 def eulerien_extension(
         edges, iter=20, fLOG=noLOG, alpha=0.5, distance=distance_haversine):
     """
-    Contruit une extension eulérienne d'un graphe.
+    Construit une extension eulérienne d'un graphe.
 
     @param      edges       liste des arcs
     @param      iter        nombre d'itérations pour la fonction @see fn bellman
@@ -364,7 +364,7 @@ def euler_path(edges, added_edges):
 
     @param      edges           initial edges
     @param      added_edges     added edges
-    @return                     path, list of (vertex,edge)
+    @return                     path, list of `(vertex, edge)`
     """
     alledges = {}
     edges_from = {}

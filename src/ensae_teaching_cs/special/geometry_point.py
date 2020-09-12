@@ -32,8 +32,7 @@ class GeometryPoint:
                 self._x = x[0]._x
             else:
                 self._x = tuple(x)
-        else:
-            raise TypeError(type(x))
+        raise TypeError(type(x))
 
     def __eq__(self, x):
         """
@@ -60,11 +59,11 @@ class GeometryPoint:
         if len(self) == 2:
             s = "({0},{1})".format(*self._x)
             return s.replace(".000000", "")
-        else:
-            format = ", ".join(["{}" for _ in self._x])
-            t = format.format(*self._x)
-            s = "(%s)" % t
-            return s.replace(".000000", "")
+
+        format = ", ".join(["{}" for _ in self._x])
+        t = format.format(*self._x)
+        s = "(%s)" % t
+        return s.replace(".000000", "")
 
     def __repr__(self):
         """
@@ -106,8 +105,7 @@ class GeometryPoint:
                                     (len(self), len(x)))
         if len(self) == 2:
             return GeometryPoint(self._x[0] - x._x[0], self._x[1] - x._x[1])
-        else:
-            return GeometryPoint(a - b for a, b in zip(self._x, x._x))
+        return GeometryPoint(a - b for a, b in zip(self._x, x._x))
 
     def __imul__(self, k):
         """

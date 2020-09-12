@@ -262,7 +262,9 @@ Pour s'entraîner
 ++++++++++++++++
 
 * `Project Euler <https://projecteuler.net/about>`_
-* `Google Jam <https://code.google.com/codejam/>`_
+* `Google Jam <https://codingcompetitions.withgoogle.com/codejam>`_,
+  voir aussi `Solutions to problems of Code Jam 2020, 2019, 2018, 2017 and earlier
+  <https://github.com/salvois/codejam>`_
 * `Compétitions de programmation <http://tryalgo.org/contests/>`_,
   ce site recensent plusieurs compétitions comme celle-ci
   `Southwestern Europe Regional Contest (SWERC) <https://swerc.eu/2018/about/>`_

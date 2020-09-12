@@ -20,12 +20,12 @@ class CustomMagics(Magics):
         """
         if "site" in line:
             return HTML(
-                '<a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html">ENSAE TD</a>')
-        elif "blog" in line:
+                '<a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/'
+                'helpsphinx/index.html">ENSAE TD</a>')
+        if "blog" in line:
             return HTML(
                 '<a href="http://www.xavierdupre.fr/blog/xd_blog_nojs.html">blog</a>')
-        else:
-            raise Exception("unknown command: " + line)
+        raise Exception("unknown command: " + line)
 
     @cell_magic
     def ENSAEb(self, line, cell):
@@ -55,12 +55,9 @@ class CustomMagics(Magics):
                     import pyensae
                     r = pyensae.download_data(spl[1])
                     return r
-                else:
-                    raise Exception("unable to interpret: " + line)
-            else:
-                return self.ENSAEl(line)
-        else:
-            raise Exception("unable to interpret:\n" + cell)
+                raise Exception("unable to interpret: %r" % line)
+            return self.ENSAEl(line)
+        raise RuntimeError("Unable to interpret:\n" + cell)
 
 
 def load_ipython_extension(ip):
