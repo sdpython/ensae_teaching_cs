@@ -104,7 +104,7 @@ Séance 5 - 6/10 - TSP, dataframe
 Séance 6 - 13/10 - bag, json, xml
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Algorithme : sac à dos
+* Algorithme : simulation COVID
 * Technique : format json, xml
 
 Séance 7 - 3/11 - graphes, flask
