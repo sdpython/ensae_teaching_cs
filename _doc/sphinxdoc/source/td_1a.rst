@@ -23,8 +23,7 @@ depuis 2001.
 
 Le cours est évalué au premier semestre par la construction d'un
 package :epkg:`python` (:ref:`l-examens-1A-algo`) et d'un examen.
-Le second semestre et facultatif et est évalué par
-:ref:`projet informatique <l-projinfo1a>`.
+Le second semestre est évalué par :ref:`projet informatique <l-projinfo1a>`.
 Si vous savez déjà programmer, vous devriez aller jusqu'au bout d'un des énoncés
 des :ref:`examens précédents <l-examens>` en moins de deux heures.
 L'informatique est plus souvent un outil qu'une matière à part entière.
@@ -94,6 +93,8 @@ et qu'il est important de comprendre.
 
     notebooks/code_liste_tuple
     notebooks/exercice_echelle
+    notebooks/2020_surface
+    notebooks/2020_suffix
     i_examples_classiques
     notebooks/structures_donnees_conversion
     notebooks/tableau_contingence
@@ -138,6 +139,7 @@ Il y a deux questions qu'on doit se poser en premier pour entrevoir une solution
 
     notebooks/recherche_dichotomique
     notebooks/nbheap
+    notebooks/2020_topk
     specials/algorithm_culture
     specials/np_complet
     specials/graphes
@@ -249,6 +251,7 @@ sont incontournables pour manipuler les données en :epkg:`Python`.
 .. toctree::
     :maxdepth: 1
 
+    notebooks/2020_regex
     notebooks/td1a_cenonce_session_10
     notebooks/td1a_correction_session_10
     notebooks/decorrelation
@@ -298,6 +301,7 @@ tests unitaires, le templating, les sites Web, le scraping, encoding, les notebo
     specials/unittest_coverage_git_profling
     notebooks/git_notebook
     notebooks/profiling_example
+    notebooks/2020_profile
     notebooks/notebook_convert
     notebooks/jupyter_custom_magics
     specials/python_cplusplus

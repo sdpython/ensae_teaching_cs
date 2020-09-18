@@ -80,14 +80,14 @@ quelques mots sur les années prochaines...
 Séance 2 - 8/9 - jeu de dictionnaires, regex
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Algorithme : :ref:`2020suffixrst`
-* Technique : :ref:`2020regexrst`
+* :ref:`2020suffixrst`
+* :ref:`2020regexrst`
 
 Séance 3 - 15/9 - top k, profiling
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Algorithme : recherche les k éléments les plus grands d'un tableau
-* Technique : profiling
+* :ref:`2020topkrst`
+* :ref:`2020profilerst`
 
 Séance 4 - 22/9 - edit distance, numpy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
