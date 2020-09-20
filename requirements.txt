@@ -33,7 +33,7 @@ mlstatpy
 mpld3
 msgpack!=0.6.0  # https://github.com/explosion/spaCy/issues/2995
 mutagen
-nbconvert<6.0
+nbconvert>=6.0.2
 onnx>=1.7.0
 opencv-python
 pandas_streaming
