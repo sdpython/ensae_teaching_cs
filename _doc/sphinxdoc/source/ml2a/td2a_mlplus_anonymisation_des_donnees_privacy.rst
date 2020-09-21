@@ -34,6 +34,11 @@ Anonymisation des données / Privacy
 * `Peeking Inside the Black-Box: A Survey on Explainable Artificial Intelligence (XAI)
   <https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8466590>`_
 
+*Articles*
+
+* `Differential Privacy Series Part 1 | DP-SGD Algorithm Explained
+  <https://medium.com/pytorch/differential-privacy-series-part-1-dp-sgd-algorithm-explained-12512c3959a3>`_
+
 *Tables rondes*
 
 * `La protection des données personnelles en assurance dialogue du juriste avec l'actuaire <https://f-origin.hypotheses.org/wp-content/blogs.dir/253/files/2018/02/DAR.pdf>`_
@@ -60,3 +65,4 @@ Anonymisation des données / Privacy
 * `tensorflow/privacy <https://github.com/tensorflow/privacy>`_
 * `whitenoise <https://github.com/opendifferentialprivacy/whitenoise-core-python>`_,
   *WhiteNoise Core Differential Privacy Library Python Bindings*
+* `opacus <https://opacus.ai/>`_
