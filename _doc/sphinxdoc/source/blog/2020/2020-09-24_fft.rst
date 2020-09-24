@@ -1,0 +1,11 @@
+
+.. blogpost::
+    :title: Un article simple sur le profiling
+    :keywords: plagiat
+    :date: 2020-09-24
+    :categories: algorithme
+
+    Un article simple sur plusieurs écriture de la
+    même fonction de façon de plus en plus efficace :
+    `Understanding the FFT Algorithm
+    <https://jakevdp.github.io/blog/2013/08/28/understanding-the-fft/>`_.
