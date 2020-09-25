@@ -92,7 +92,7 @@ Séance 3 - 15/9 - top k, profiling
 Séance 4 - 22/9 - edit distance, numpy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Algorithme : distance d'édition
+* :ref:`2020editrst`
 * Technique : calcul matriciel
 
 Séance 5 - 6/10 - TSP, dataframe
