@@ -93,7 +93,7 @@ Séance 4 - 22/9 - edit distance, numpy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * :ref:`2020editrst`
-* Technique : calcul matriciel
+* :ref:`2020numpyrst`
 
 Séance 5 - 6/10 - TSP, dataframe
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
