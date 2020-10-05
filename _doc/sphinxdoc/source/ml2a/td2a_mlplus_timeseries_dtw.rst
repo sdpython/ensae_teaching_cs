@@ -12,3 +12,10 @@ Timeseries - Dynamic Time Wrapping
 *Lectures*
 
 * `K Nearest Neighbors & Dynamic Time Warping <https://github.com/markdregan/K-Nearest-Neighbors-with-Dynamic-Time-Warping>`_
+
+*Modules*
+
+* `tslearn <https://github.com/tslearn-team/tslearn>`_ :
+  dynamic time warping, classification, clustering,
+  plus proches voisins, étude de sous-séquences    
+* `soft-dtw <https://github.com/mblondel/soft-dtw/>`_

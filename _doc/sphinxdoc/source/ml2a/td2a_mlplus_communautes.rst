@@ -40,3 +40,8 @@ de clustering mais on cherche aussi à en déterminer le centre ou encore
 *Modules*
 
 * `python-louvain <https://github.com/taynaud/python-louvain>`_
+* `GraKeL <https://github.com/ysig/GraKeL>`_ :
+  algorithmes sur les graphes, plus court chemin,
+  marches aléatoires, méthodes à noyaux
+* `scikit-network <https://scikit-network.readthedocs.io/en/latest/index.html>`_ :
+  de nombreux algorithmes comme PageRank, Louvain, ...

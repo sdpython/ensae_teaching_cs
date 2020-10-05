@@ -123,6 +123,11 @@ Suggestions d'articles
 * `Programming Parallel Dense Matrix Factorizations with Look-Ahead and OpenMP
   <https://arxiv.org/abs/1804.07017>`_
 
+*2020-2021*
+
+* `GADMM: Fast and Communication Efficient Framework for Distributed Machine Learning
+  <https://www.jmlr.org/papers/volume21/19-718/19-718.pdf>`_
+
 Nous vous recommandons d'adopter la démarche suivante:
 
 #. implémentation et débugging sur un petit jeu de données synthétiques

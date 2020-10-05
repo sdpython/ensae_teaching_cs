@@ -47,3 +47,8 @@ Clustering de Graphes
   `py2neo <http://py2neo.org/v3/>`_,
   `neo4j-python-driver <https://github.com/neo4j/neo4j-python-driver>`_
 * `snap.py <https://snap.stanford.edu/snappy/index.html#docs>`_
+* `GraKeL <https://github.com/ysig/GraKeL>`_ :
+  algorithmes sur les graphes, plus court chemin,
+  marches aléatoires, méthodes à noyaux
+* `scikit-network <https://scikit-network.readthedocs.io/en/latest/index.html>`_ :
+  de nombreux algorithmes comme PageRank, Louvain, ...

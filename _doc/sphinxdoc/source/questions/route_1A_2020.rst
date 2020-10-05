@@ -98,7 +98,7 @@ Séance 4 - 22/9 - edit distance, numpy
 Séance 5 - 6/10 - TSP, dataframe
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Algorithme : TSP
+* :ref:`2020tsprst`
 * Technique : dataframe
 
 Séance 6 - 13/10 - bag, json, xml

@@ -15,3 +15,10 @@ Distances
 * `From Word Embeddings To Document Distances <http://jmlr.org/proceedings/papers/v37/kusnerb15.pdf>`_
 * `Detecting Near-Duplicates for Web Crawling <http://www.wwwconference.org/www2007/papers/paper215.pdf>`_
 * `Deep metric learning using Triplet network <https://arxiv.org/abs/1412.6622>`_
+
+*Modules*
+
+* `pyDML <https://github.com/jlsuarezdiaz/pyDML>`_ :
+  apprentissage de distances métriques
+* `metric-learn <http://contrib.scikit-learn.org/metric-learn/index.html>`_ :
+  apprentissage de distances métriques      

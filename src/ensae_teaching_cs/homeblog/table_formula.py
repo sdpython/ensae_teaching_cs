@@ -383,17 +383,17 @@ class TableFormula(_TableFormulaStat):
     def __init__(self, file, numeric_column=None, sep="\t", encoding=None,
                  read_n_lines=-1, sheet=0, **options):
         """
-        constructor, it can either take a filename, an object TableFormula,
+        It can either take a filename, an object TableFormula,
         a list of columns and values.
 
-        @param      file                filename or a list of column names or a dictionary,
-                                        file can also be a `pandas DataFrame
-                                        <http://pandas.pydata.org/pandas-docs/dev/dsintro.html#dataframe>`_.
-        @param      numeric_column      depends on file types(see below examples)
-        @param      sep                 column separator if file is a filename
-        @param      read_n_lines        read the first n lines(or all if it is -1)
-        @param      sheet               in case the file is an Excel file, this parameter precises the sheet number or name
-        @param      suffix_nb           if True, adds an integer to the column name if it is a duplicate
+        :param file: filename or a list of column names or a dictionary,
+            file can also be a `pandas DataFrame
+            <http://pandas.pydata.org/pandas-docs/dev/dsintro.html#dataframe>`_.
+        :param numeric_column: depends on file types(see below examples)
+        :param sep: column separator if file is a filename
+        :param read_n_lines: read the first n lines(or all if it is -1)
+        :param sheet: in case the file is an Excel file, this parameter precises the sheet number or name
+        :param suffix_nb: if True, adds an integer to the column name if it is a duplicate
 
         Example:
 
@@ -582,8 +582,8 @@ class TableFormula(_TableFormulaStat):
     def __add__(self, other):
         """
         do an addition, add values if types are matching
-        @param   other      matrix or float or string
-        @return             new matrix, keep the header of the first matrix
+        :param other: matrix or float or string
+        :return: new matrix, keep the header of the first matrix
         """
         if len(self) != len(other):
             raise ValueError(  # pragma: no cover
@@ -606,8 +606,8 @@ class TableFormula(_TableFormulaStat):
     def __mul__(self, other):
         """
         do a multiplication(by a number)
-        @param   other      matrix or float or string
-        @return             new matrix, keep the header of the first matrix
+        :param other: matrix or float or string
+        :return: new matrix, keep the header of the first matrix
         """
         if not isinstance(other, float) and not isinstance(other, int):
             raise TypeError(  # pragma: no cover
@@ -629,8 +629,8 @@ class TableFormula(_TableFormulaStat):
         do a multiplication term by term(similar to an addition),
         add values if types are matching
 
-        @param   other      matrix or float or string
-        @return             new matrix, keep the header of the first matrix
+        :param other: matrix or float or string
+        :return: new matrix, keep the header of the first matrix
         """
         if len(self) != len(other):
             raise ValueError(  # pragma: no cover
@@ -652,8 +652,8 @@ class TableFormula(_TableFormulaStat):
 
     def replicate(self, times):
         """replicates all rows a given number of times
-        @param   times      number of multiplication
-        @return             new matrix, keep the header of the first matrix
+        :param times: number of multiplication
+        :return: new matrix, keep the header of the first matrix
         """
         values = []
         for i in range(0, times):
@@ -677,7 +677,7 @@ class TableFormula(_TableFormulaStat):
     def _fill_by_row(self, values):
         """
         fill the table
-        @param      values      dictionary { <int_row_index>: { <column name>: value} }
+        :param values: dictionary { <int_row_index>: { <column name>: value} }
         """
         mx = max(values.keys()) + 1
         self.index = {}
@@ -695,12 +695,12 @@ class TableFormula(_TableFormulaStat):
     def __getitem__(self, irow):
         """
         operator [], accepts slices
-        @param      irow        integer, tuple, slice or list
-        @return                 depends on irow
-                                    - int --> a table with one row
-                                    - slice --> a table with several rows
-                                    - list --> a table with the selected rows
-                                    - tuple --> a value
+        :param irow: integer, tuple, slice or list
+        :return: depends on irow
+            - int --> a table with one row
+            - slice --> a table with several rows
+            - list --> a table with the selected rows
+            - tuple --> a value
         """
         if isinstance(irow, int):
             return self._private_getclass()(
@@ -722,8 +722,8 @@ class TableFormula(_TableFormulaStat):
     def __setitem__(self, irow, value):
         """
         operator [], just accepts tuple(to change a value)
-        @param      irow        2-uple
-        @param      value       new value
+        :param irow: 2-uple
+        :param value: new value
         """
         if isinstance(irow, tuple):
             if isinstance(irow[1], str):
@@ -764,8 +764,8 @@ class TableFormula(_TableFormulaStat):
         """
         returns a list of differences between self and others
 
-        @param      other       TableFormula
-        @return                 list of differences(first one)
+        :param other: TableFormula
+        :return: list of differences(first one)
         """
         if other is None:
             return False
@@ -793,8 +793,8 @@ class TableFormula(_TableFormulaStat):
     def __eq__(self, other):
         """
         check if two tables are equal by value
-        @param      other       other table
-        @return                 boolean
+        :param other: other table
+        :return: boolean
         """
         if other is None:
             return False
@@ -818,7 +818,7 @@ class TableFormula(_TableFormulaStat):
     def __str__(self):
         """
         convert the table into a string
-        @return     string
+        :return: string
         """
         rows = ["\t".join(self.header)]
         for row in self.values:
@@ -830,10 +830,10 @@ class TableFormula(_TableFormulaStat):
         """
         Converts the table into a :epkg:`html` string.
 
-        @param  class_table     adds a class to the tag ``table`` (None for none)
-        @param  class_td        adds a class to the tag ``td`` (None for none)
-        @param  class_tr        adds a class to the tag ``tr`` (None for none)
-        @param  class_th        adds a class to the tag ``th`` (None for none)
+        :param class_table: adds a class to the tag ``table`` (None for none)
+        :param class_td: adds a class to the tag ``td`` (None for none)
+        :param class_tr: adds a class to the tag ``tr`` (None for none)
+        :param class_th: adds a class to the tag ``th`` (None for none)
         """
         clta = ' class="%s"' % class_table if class_table is not None else ""
         cltr = ' class="%s"' % class_tr if class_tr is not None else ""
@@ -867,7 +867,7 @@ class TableFormula(_TableFormulaStat):
             | body row 2             | ...        | ...      |          |
             +------------------------+------------+----------+----------+
 
-        @param      add_line        add a line separator between each row
+        :param add_line: add a line separator between each row
         """
         tbl = self.values_to_str()
         length = [len(_) for _ in tbl.header]
@@ -945,7 +945,7 @@ class TableFormula(_TableFormulaStat):
         """
         change the column names
 
-        @param      new_header      a list or a function which modifies the header
+        :param new_header: a list or a function which modifies the header
 
         Example:
 
@@ -953,7 +953,7 @@ class TableFormula(_TableFormulaStat):
 
             tbl.change_header(lambda h: h if h != "column" else "new_name")
 
-        @warning Do not do that yourself, the class holds a dictionary up to date with the column index.
+        .. warning:: Do not do that yourself, the class holds a dictionary up to date with the column index.
         """
         if isinstance(new_header, list):
             self.header = new_header
@@ -968,8 +968,8 @@ class TableFormula(_TableFormulaStat):
         """
         rename a column
 
-        @param      old_name    old name
-        @param      new_name    new name
+        :param old_name: old name
+        :param new_name: new name
         """
         header = [{old_name: new_name}.get(_, _) for _ in self.header]
         self.change_header(header)
@@ -978,10 +978,10 @@ class TableFormula(_TableFormulaStat):
         """
         saves the tables in a text file, first row is the column names
 
-        @param      filename        filename
-        @param      sep             column separator
-        @param      encoding        encoding
-        @param      newline         line separator
+        :param filename: filename
+        :param sep: column separator
+        :param encoding: encoding
+        :param newline: line separator
         """
         if sys.version_info.major >= 3 or encoding is None:
             if encoding is None:
@@ -1094,9 +1094,9 @@ class TableFormula(_TableFormulaStat):
     def add_column(self, colname, function, position=-1):
         """
         Adds a column.
-        @param      colname     column name or columns name if it is a list or a tuple
-        @param      function    function which will gives the values(or a list of functions, or a function which return a tuple)
-        @param      position    where to insert the column, -1 for the end
+        :param colname: column name or columns name if it is a list or a tuple
+        :param function: function which will gives the values(or a list of functions, or a function which return a tuple)
+        :param position: where to insert the column, -1 for the end
 
         Example:
 
@@ -1231,9 +1231,9 @@ class TableFormula(_TableFormulaStat):
         """
         add a column defined by vector(list of values for each row)
 
-        @param      colname     column to add
-        @param      vector      (list) list of values to add to each row
-        @return                 self
+        :param colname: column to add
+        :param vector: (list) list of values to add to each row
+        :return self
         """
         if len(vector) != len(self):
             raise ValueError("vector and table have different length {0} != {1}".format(

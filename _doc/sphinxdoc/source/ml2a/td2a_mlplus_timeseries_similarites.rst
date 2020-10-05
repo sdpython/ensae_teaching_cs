@@ -4,8 +4,8 @@
     :alt: Statistique
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
 
-Timeseries - Similarités
-++++++++++++++++++++++++
+Timeseries - Similarités - Clustering
++++++++++++++++++++++++++++++++++++++
 
 *(à venir)*
 
@@ -18,4 +18,8 @@ Timeseries - Similarités
 
 * `LBImproved C++ Library <https://github.com/lemire/lbimproved>`_,
   `LBImproved C++ Library and Python <https://github.com/felixr/dtw_lbimproved>`_
-* `soft-dtw <https://github.com/mblondel/soft-dtw/>`_
+* `pyts <https://github.com/johannfaouzi/pyts>`_ :
+  classification de séries temporelles
+* `tslearn <https://github.com/tslearn-team/tslearn>`_ :
+  dynamic time warping, classification, clustering,
+  plus proches voisins, étude de sous-séquences    

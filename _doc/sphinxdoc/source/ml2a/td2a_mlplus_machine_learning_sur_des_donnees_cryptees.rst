@@ -32,6 +32,8 @@ Machine Learning sur des données cryptées
 * `Hawk: The Blockchain Model of Cryptography and Privacy-Preserving Smart Contracts <https://eprint.iacr.org/2015/675.pdf>`_
 * `Privacy-Preserving Classification on Deep Neural Network <https://eprint.iacr.org/2017/035.pdf>`_
 * `Awesome Homomorphic Encryption <https://github.com/jonaschn/awesome-he>`_
+* `Cryptotree : fast and accurate predictions on encrypted structured data
+  <https://arxiv.org/pdf/2006.08299.pdf>`_
 
 *Lectures - alternatives*
 
@@ -56,3 +58,4 @@ Machine Learning sur des données cryptées
 * `PySEAL <https://github.com/Lab41/PySEAL>`_ (`SEAL <https://github.com/microsoft/SEAL>`_,
   `PySEAL: A Python wrapper implementation of the SEAL homomorphic encryption library
   <https://arxiv.org/abs/1803.01891>`_)
+* `cryptotree <https://github.com/dhuynh95/cryptotree>`_
