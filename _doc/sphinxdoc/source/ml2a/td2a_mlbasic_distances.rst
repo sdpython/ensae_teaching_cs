@@ -21,4 +21,4 @@ Distances
 * `pyDML <https://github.com/jlsuarezdiaz/pyDML>`_ :
   apprentissage de distances métriques
 * `metric-learn <http://contrib.scikit-learn.org/metric-learn/index.html>`_ :
-  apprentissage de distances métriques      
+  apprentissage de distances métriques

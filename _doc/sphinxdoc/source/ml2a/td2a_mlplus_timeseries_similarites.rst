@@ -22,4 +22,4 @@ Timeseries - Similarités - Clustering
   classification de séries temporelles
 * `tslearn <https://github.com/tslearn-team/tslearn>`_ :
   dynamic time warping, classification, clustering,
-  plus proches voisins, étude de sous-séquences    
+  plus proches voisins, étude de sous-séquences

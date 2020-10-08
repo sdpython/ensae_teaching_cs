@@ -11,7 +11,7 @@
       classification de séries temporelles
     * `tslearn <https://github.com/tslearn-team/tslearn>`_ :
       dynamic time warping, classification, clustering,
-      plus proches voisins, étude de sous-séquences    
+      plus proches voisins, étude de sous-séquences
     * `GraKeL <https://github.com/ysig/GraKeL>`_ :
       algorithmes sur les graphes, plus court chemin,
       marches aléatoires, méthodes à noyaux
@@ -20,11 +20,10 @@
     * `pyDML <https://github.com/jlsuarezdiaz/pyDML>`_ :
       apprentissage de distances métriques
     * `metric-learn <http://contrib.scikit-learn.org/metric-learn/index.html>`_ :
-      apprentissage de distances métriques      
-      
-    
+      apprentissage de distances métriques
+
     Deux articles intéressants pour optimiser les calculs :
-    
+
     * `Tensor Train Decomposition on TensorFlow (T3F)
       <https://www.jmlr.org/papers/volume21/18-008/18-008.pdf>`_
     * `GADMM: Fast and Communication Efficient Framework for Distributed Machine Learning
