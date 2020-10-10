@@ -99,7 +99,7 @@ Séance 5 - 6/10 - TSP, dataframe
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * :ref:`2020tsprst`
-* Technique : dataframe
+* :ref:`2020pandasrst`
 
 Séance 6 - 13/10 - bag, json, xml
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -123,4 +123,4 @@ Séance 9 - 22/11 - ?
 ^^^^^^^^^^^^^^^^^^^^
 
 * ?
-* ?
+* TD noté

@@ -47,6 +47,7 @@ pydub
 pyensae>=1.2.788
 pygal
 pygal_maps_fr
+pyinstrument
 pyldavis
 pylint
 pylzma
