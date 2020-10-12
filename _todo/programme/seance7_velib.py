@@ -11,8 +11,8 @@ from matplotlib.ticker import Formatter
 
 import sys, datetime
 sys.path.append(r"python\pyensae\src")
-import pyensae
-file = pyensae.download_data("velib_vanves.zip", website = "xd")
+import pyensae.datasource
+file = pyensae.datasource.download_data("velib_vanves.zip", website = "xd")
 file = file[0]
 
 

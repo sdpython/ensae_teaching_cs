@@ -64,7 +64,7 @@ def get_data(whereTo=".", timeout=None, fLOG=noLOG):
     - d: distance
 
     """
-    from pyensae import download_data
+    from pyensae.datasource import download_data
     data = download_data(
         "paris_54000.zip",
         whereTo=whereTo,

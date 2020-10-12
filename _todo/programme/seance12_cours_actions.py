@@ -11,8 +11,8 @@ sys.path.append(r"program\python\pyensae\src")
 
 # t�l�charge la composition du CAC 40 depuis mon site
 # elle a �t� r�cup�r�e ici: http://finance.yahoo.com/q/cp?s=^FCHI+Components
-import pyensae
-pyensae.download_data('cac40_2013_11_11.txt', website = 'xd')
+import pyensae.datasource
+pyensae.datasource.download_data('cac40_2013_11_11.txt', website = 'xd')
 
 # t�l�charge tous les cours (s'ils ne l'ont pas d�j� �t�)
 import pandas

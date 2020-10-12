@@ -2,7 +2,7 @@
 import sys, datetime
 sys.path.append("../../../../program/python/pyensae/src")
 
-from pyensae import download_data
+from pyensae.datasource import download_data
 
 print ("A",datetime.datetime.now())
 download_data("SQLiteSpy.zip", website = 'xd')

@@ -26,11 +26,11 @@ def any_local_file(name, subfolder, local=True, cache_folder=".",
         if not os.path.exists(this):
             raise FileNotFoundError(this)
     else:
-        import pyensae
+        import pyensae.datasource
         if not unzip and name.endswith(".zip"):
             raise ValueError(
                 "The file will be unzipped anyway: {0}".format(name))
-        this = pyensae.download_data(name, whereTo=cache_folder)
+        this = pyensae.datasource.download_data(name, whereTo=cache_folder)
         unzip = False
     if unzip:
         this = unzip_files(this, where_to=cache_folder)

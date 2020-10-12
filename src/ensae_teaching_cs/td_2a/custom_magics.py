@@ -52,8 +52,8 @@ class CustomMagics(Magics):
             if line.startswith("download"):
                 spl = line.split()
                 if len(spl) == 2:
-                    import pyensae
-                    r = pyensae.download_data(spl[1])
+                    import pyensae.datasource
+                    r = pyensae.datasource.download_data(spl[1])
                     return r
                 raise Exception("unable to interpret: %r" % line)
             return self.ENSAEl(line)

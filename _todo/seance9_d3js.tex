@@ -12,16 +12,16 @@
 
 \partietdVU{d3.js, javascript}{graphique, animation}
 
-Les parties A,B,D sont indépendantes. Les parties B et C sont liées.
+Les parties A,B,D sont indï¿½pendantes. Les parties B et C sont liï¿½es.
 
 
-\partietda{Représenter des données géographiques avec \codes{matplotlib} et OpenStreetMap\footnote{\httpstyle{http://www.openstreetmap.org/\#map=19/48.82435/2.30318}} et javascript\footnote{\httpstyle{http://fr.wikipedia.org/wiki/JavaScript}}}
+\partietda{Reprï¿½senter des donnï¿½es gï¿½ographiques avec \codes{matplotlib} et OpenStreetMap\footnote{\httpstyle{http://www.openstreetmap.org/\#map=19/48.82435/2.30318}} et javascript\footnote{\httpstyle{http://fr.wikipedia.org/wiki/JavaScript}}}
 
-On utilise toujours les données velib. On cherche à représenter graphiquement ces données. 
+On utilise toujours les donnï¿½es velib. On cherche ï¿½ reprï¿½senter graphiquement ces donnï¿½es. 
 
-%%% récupération des données velib pour ce TD %%%
+%%% rï¿½cupï¿½ration des donnï¿½es velib pour ce TD %%%
 \begin{verbatimx}
-from pyensae import download_data
+from pyensae.datasource import download_data
 import pandas
 
 download_data("td9_data.zip", website = 'xd')
@@ -29,7 +29,7 @@ file1 = "td9_full.txt"
 tbl = pandas.read_csv (file1, sep = "\t")
 \end{verbatimx}
 
-Les données contiennent deux fichiers \codes{td9\_full.txt} et \codes{td9\_sub.txt}. Ils contiennent tous deux les vélos et places disponibles toutes les cinq minutes pour toutes les stations velib pour la journée de \codes{2013-09-10}. Le fichier \codes{td9\_sub.txt} ne contient que quelques stations et permet de tester son programme sur un petit jeu. On crée un graphe XY (\textit{scatter plot}) avec la longitude et la latitude des stations (voir figure~\ref{td9_parisv}).
+Les donnï¿½es contiennent deux fichiers \codes{td9\_full.txt} et \codes{td9\_sub.txt}. Ils contiennent tous deux les vï¿½los et places disponibles toutes les cinq minutes pour toutes les stations velib pour la journï¿½e de \codes{2013-09-10}. Le fichier \codes{td9\_sub.txt} ne contient que quelques stations et permet de tester son programme sur un petit jeu. On crï¿½e un graphe XY (\textit{scatter plot}) avec la longitude et la latitude des stations (voir figure~\ref{td9_parisv}).
 
 %%% premier graphe %%%
 \begin{verbatimx}
@@ -52,7 +52,7 @@ pylab.show()
 \end{figure}
 
 
-Le résultat est satisfaisant excepté qu'il est difficile saisir où se trouve trouve exactement chaque station par rapport aux rues de Paris. Introduire une carte n'est pas toujours chose facile en \python. On va plutôt choisir le \textit{javascript} et OpenStreetMap\footnote{\httpstyle{http://www.openstreetmap.org/}}. Tout d'abord, on va copier coller l'exemple suivant dans un fichier HTML (\codes{td9.html} par exemple) puis l'ouvrir avec un navigateur. Une carte devrait apparaître.
+Le rï¿½sultat est satisfaisant exceptï¿½ qu'il est difficile saisir oï¿½ se trouve trouve exactement chaque station par rapport aux rues de Paris. Introduire une carte n'est pas toujours chose facile en \python. On va plutï¿½t choisir le \textit{javascript} et OpenStreetMap\footnote{\httpstyle{http://www.openstreetmap.org/}}. Tout d'abord, on va copier coller l'exemple suivant dans un fichier HTML (\codes{td9.html} par exemple) puis l'ouvrir avec un navigateur. Une carte devrait apparaï¿½tre.
 
 
 %%% fichier osm_essai.html %%%
@@ -83,7 +83,7 @@ Le résultat est satisfaisant excepté qu'il est difficile saisir où se trouve tro
 
 \textbf{Exercice 1}
 
-L'exemple HTML utilise du javascript. Sa syntaxe est différente mais la logique est semblable. Pour ajouter une position sur la carte, il suffit d'ajouter deux lignes. Et pour ajouter autant de positions que de stations velib, il suffit de se servir de Python et du sketch de programme qui suit (et vous devriez obtenir quelque chose de semblable à la figure~\ref{td9_vensaeosm})\footnote{voir aussi \httpstyle{http://www.xavierdupre.fr/blog/2013-09-26\_nojs.html}}.
+L'exemple HTML utilise du javascript. Sa syntaxe est diffï¿½rente mais la logique est semblable. Pour ajouter une position sur la carte, il suffit d'ajouter deux lignes. Et pour ajouter autant de positions que de stations velib, il suffit de se servir de Python et du sketch de programme qui suit (et vous devriez obtenir quelque chose de semblable ï¿½ la figure~\ref{td9_vensaeosm})\footnote{voir aussi \httpstyle{http://www.xavierdupre.fr/blog/2013-09-26\_nojs.html}}.
 
 
 %%% fichier osm_essai.html %%%
@@ -93,7 +93,7 @@ lines = [ ]
 for i,row in enumerate(gr.values) :
     y = lat = row[1]
     x = lng = row[0]
-    # utiliser i,x,y pour construire la ligne de javascript correspondant à la station i
+    # utiliser i,x,y pour construire la ligne de javascript correspondant ï¿½ la station i
     lines.append(line)
     
 text = "\n".join( lines )
@@ -102,8 +102,8 @@ with open("velib.html", "w") as f : f.write(html)
 \end{verbatimx}
 
 
-\begin{xremark}{confidentialité}
-A aucun moment, les données d'OpenStreetMap n'ont été téléchargées. Le script utilisé fait également référence à un code javascript\footnote{\httpstyle{http://www.openlayers.org/api/OpenLayers.js}} dont ne sait pas tout ce qu'il fait. Cela veut dire que vos données sont potentiellement envoyées à un site extérieur qui peut ou non décider de s'y intéresser. Il évident aussi que cet exemple ne fonctionnera pas sans connexion internet. 
+\begin{xremark}{confidentialitï¿½}
+A aucun moment, les donnï¿½es d'OpenStreetMap n'ont ï¿½tï¿½ tï¿½lï¿½chargï¿½es. Le script utilisï¿½ fait ï¿½galement rï¿½fï¿½rence ï¿½ un code javascript\footnote{\httpstyle{http://www.openlayers.org/api/OpenLayers.js}} dont ne sait pas tout ce qu'il fait. Cela veut dire que vos donnï¿½es sont potentiellement envoyï¿½es ï¿½ un site extï¿½rieur qui peut ou non dï¿½cider de s'y intï¿½resser. Il ï¿½vident aussi que cet exemple ne fonctionnera pas sans connexion internet. 
 \end{xremark}
 
 \begin{figure}[ht]
@@ -128,9 +128,9 @@ webbrowser.open(<url>)
 
 \partietdb{d3.js\footnote{\httpstyle{http://d3js.org/}}}
 
-d3.js est l'outil à utiliser pour réaliser un graphique mobile ou qu'on souhaite intégrer à un site internet. Pour s'en servir, le plus simple est de regarder les galleries d'exemples\footnote{\httpstyle{https://github.com/mbostock/d3/wiki/Gallery}}\footnote{\httpstyle{https://github.com/mbostock/d3/wiki/Gallery}}\footnote{\httpstyle{http://techslides.com/over-1000-d3-js-examples-and-demos/}}, de choisir celui qu'on veut, de copier coller le code puis de remplacer les données de l'exemple par les siennes. En pratique, c'est vrai pour les graphiques les plus simples. Pour les plus complexes, cela va plus vite si on connaît le javascript.
+d3.js est l'outil ï¿½ utiliser pour rï¿½aliser un graphique mobile ou qu'on souhaite intï¿½grer ï¿½ un site internet. Pour s'en servir, le plus simple est de regarder les galleries d'exemples\footnote{\httpstyle{https://github.com/mbostock/d3/wiki/Gallery}}\footnote{\httpstyle{https://github.com/mbostock/d3/wiki/Gallery}}\footnote{\httpstyle{http://techslides.com/over-1000-d3-js-examples-and-demos/}}, de choisir celui qu'on veut, de copier coller le code puis de remplacer les donnï¿½es de l'exemple par les siennes. En pratique, c'est vrai pour les graphiques les plus simples. Pour les plus complexes, cela va plus vite si on connaï¿½t le javascript.
 
-Pour ce TD, on va dessiner un graphe~: \httpstyle{http://bl.ocks.org/mbostock/2706022}. On souhaite représenter les connexions entre les différents personnages de la série \textit{L-World}\footnote{\httpstyle{http://en.wikipedia.org/wiki/The\_L\_Word}}. Pour que cela marche, il faut transformer des données d'un format à un autre.
+Pour ce TD, on va dessiner un graphe~: \httpstyle{http://bl.ocks.org/mbostock/2706022}. On souhaite reprï¿½senter les connexions entre les diffï¿½rents personnages de la sï¿½rie \textit{L-World}\footnote{\httpstyle{http://en.wikipedia.org/wiki/The\_L\_Word}}. Pour que cela marche, il faut transformer des donnï¿½es d'un format ï¿½ un autre.
 
 \begin{verbatimx}
 agatha,frank
@@ -154,35 +154,35 @@ var links = [
 
 Ce qu'on peut faire avec le programme suivant~:
 
-\inputcode{../python_td_2013/programme/td9_graph_lworld.py}{conversion des données d'un fichier texte au javascript}
+\inputcode{../python_td_2013/programme/td9_graph_lworld.py}{conversion des donnï¿½es d'un fichier texte au javascript}
 
 
 
 
 \textbf{Exercice 2 :}
 
-Il s'agit d'assembler les différents éléments pour construire le graphe. Les données ainsi que la page HTML peuvent être récupérées avec le programme suivant~:
+Il s'agit d'assembler les diffï¿½rents ï¿½lï¿½ments pour construire le graphe. Les donnï¿½es ainsi que la page HTML peuvent ï¿½tre rï¿½cupï¿½rï¿½es avec le programme suivant~:
 
 %%% lancer directement le navigateur %%%
 \begin{verbatimx}
-import pyensae
-pyensae.download_data("td9_graph_lworld.zip", website = 'xd') 
+import pyensae.datasource
+pyensae.datasource.download_data("td9_graph_lworld.zip", website = 'xd') 
 \end{verbatimx}
 
 
 
 
-\partietdc{Un graphique avec des événements}
+\partietdc{Un graphique avec des ï¿½vï¿½nements}
 
-Le code ayant servi d'exemple\footnote{\httpstyle{http://bl.ocks.org/mbostock/2706022}} contient deux fonctions introduisant des animations qui doivent se produire si le curseur de la souris passe au-dessus de la zone d'un n\oe ud. Il faudra les ajouter à votre page HTML.
+Le code ayant servi d'exemple\footnote{\httpstyle{http://bl.ocks.org/mbostock/2706022}} contient deux fonctions introduisant des animations qui doivent se produire si le curseur de la souris passe au-dessus de la zone d'un n\oe ud. Il faudra les ajouter ï¿½ votre page HTML.
 
 \textbf{Exercice 3 :}
 
-Ensuite, à partir de la page Internet suivante \httpstyle{http://stackoverflow.com/questions/14929212/changing-text-attribute-based-upon-event-handler-in-d3-js}, il faudra changer le texte du n\oe ud. Une astuce~:
+Ensuite, ï¿½ partir de la page Internet suivante \httpstyle{http://stackoverflow.com/questions/14929212/changing-text-attribute-based-upon-event-handler-in-d3-js}, il faudra changer le texte du n\oe ud. Une astuce~:
 
 %%% astuce pour modifier le texte et sa taille %%%
 \begin{verbatimx}
-// bien placé, le code suivant modifie le texte affiché et sa taille
+// bien placï¿½, le code suivant modifie le texte affichï¿½ et sa taille
 d3.select(this)
 	.select("text")
 			.style("font-size", "10px")
@@ -194,7 +194,7 @@ d3.select(this)
 
 \partietdd{Zoomer}
 
-Pour cela, il vous faudra lire le blog~: \httpstyle{http://www.xavierdupre.fr/blog/2013-09-29\_nojs.html} puis essayer de répliquer ce qui y est décrit.
+Pour cela, il vous faudra lire le blog~: \httpstyle{http://www.xavierdupre.fr/blog/2013-09-29\_nojs.html} puis essayer de rï¿½pliquer ce qui y est dï¿½crit.
 
 http://mbostock.github.io/d3/tutorial/circle.html
 

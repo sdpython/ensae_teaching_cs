@@ -2,7 +2,7 @@
 import sys
 sys.path.append("../../../../program/python/pyensae/src")  # ligne inutile
 
-from pyensae import download_data
+from pyensae.datasource import download_data
 import pandas
 
 download_data("td9_station_travail.zip", website = 'xd')
