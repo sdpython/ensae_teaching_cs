@@ -6,6 +6,7 @@
 from .crypt_helper import encrypt_data, decrypt_data
 from .data1a import marathon, donnees_enquete_2003_television
 from .data2a import wines_quality
+from .data_shape_files import data_shape_files, load_french_departments
 from .data_irep import load_irep
 from .datasql import simple_database
 from .datatext import load_sentiment_dataset
