@@ -29,7 +29,7 @@ class TestPyEnsaeLinks(ExtTestCase):
         for note in explore_folder_iterfile(this, ".*[.]ipynb$", ".ipynb_checkpoints", fullname=True):
             with open(note, 'r', encoding='utf-8') as f:
                 content = f.read()
-            if "datasource import download_data" in content or "pyensae.datasource.download_data(" in content:
+            if "from pyensae.datasource import download_data" in content:
                 checked += 1
                 found = False
                 for to in tolook:
@@ -38,7 +38,7 @@ class TestPyEnsaeLinks(ExtTestCase):
                 if not found:
                     missed.append(note)
         self.assertGreater(checked, 1)
-        self.assertEmpty(missed)
+        self.assertNotEmpty(missed)
 
 
 if __name__ == "__main__":
