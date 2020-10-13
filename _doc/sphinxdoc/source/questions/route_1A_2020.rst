@@ -77,31 +77,31 @@ quelques mots sur les années prochaines...
 
 * :ref:`2020surfacerst`
 
-Séance 2 - 8/9 - jeu de dictionnaires, regex
+Séance 2 - 15/9 - jeu de dictionnaires, regex
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * :ref:`2020suffixrst`
 * :ref:`2020regexrst`
 
-Séance 3 - 15/9 - top k, profiling
+Séance 3 - 22/9 - top k, profiling
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * :ref:`2020topkrst`
 * :ref:`2020profilerst`
 
-Séance 4 - 22/9 - edit distance, numpy
+Séance 4 - 6/10 - edit distance, numpy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * :ref:`2020editrst`
 * :ref:`2020numpyrst`
 
-Séance 5 - 6/10 - TSP, dataframe
+Séance 5 - 13/10 - TSP, dataframe
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * :ref:`2020tsprst`
 * :ref:`2020pandasrst`
 
-Séance 6 - 13/10 - bag, json, xml
+Séance 6 - 20/10 - bag, json, xml
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Algorithme : simulation COVID
