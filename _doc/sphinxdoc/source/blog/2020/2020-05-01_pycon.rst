@@ -8,7 +8,7 @@
     Première vidéo à propos de "privacy" ou protection des données :
     `tensorflow_privacy <https://github.com/tensorflow/privacy>`_,
     `Practical privacy-preserving machine learning in Python
-      <https://www.youtube.com/watch?v=NUk6QN02UxQ>`_.
+    <https://www.youtube.com/watch?v=NUk6QN02UxQ>`_.
 
     Seconde vidéo sur comment construire une application
     pour avoir en temps réel l'état de ses plantes :

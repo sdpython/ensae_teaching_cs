@@ -104,8 +104,8 @@ Séance 5 - 13/10 - TSP, dataframe
 Séance 6 - 20/10 - bag, json, xml
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Algorithme : simulation COVID
-* Technique : format json, xml
+* Algorithme : :ref:`2020covidrst`
+* Technique : :ref:`2020jsonxmlrst`
 
 Séance 7 - 3/11 - graphes, flask
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

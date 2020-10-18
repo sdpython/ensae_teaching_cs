@@ -1,0 +1,27 @@
+
+.. blogpost::
+    :title: Bluffer les modèles de machine learning
+    :keywords: packages
+    :date: 2020-10-14
+    :categories: sécurité
+
+    Je suis tombé sur cette vidéo qui parle des façons de duper
+    les modèles de machine learning comme ceux utilisés dans les caméras
+    de surveillance, les voitures Tesla. Et je ne peux pas résister aux
+    chercheurs qui disent aimer les maths avec autant de plaisir,
+    `Don't Red Team AI Like a Chump
+    <https://cyber.harvard.edu/story/2019-11/dont-red-team-ai-chump>`_,
+    et son auteure : `Ariel Herbert-Voss
+    <https://cyber.harvard.edu/people/ariel-herbert-voss>`_.
+
+    Cela m'a permis de trouvé également des outils python
+    qui permettent de tester la sécurité d'un site web,
+    `Distributed Denial of Service (DDoS) Attack Scripts
+    <https://github.com/PraneethKarnena/DDoS-Scripts>`_,
+    `ufonet
+    <https://github.com/epsylon/ufonet>`_,
+    `wombat
+    <https://gitlab.com/pictyeye/wombat>`_.
+    Le dernier permet de s'attaquer à l'algorithme de cryptage RSA
+    avec une approche qui ressemblent à celle utilisée pour casser
+    le code Enigma.
