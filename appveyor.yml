@@ -1,21 +1,15 @@
+image:
+  - Visual Studio 2019
 environment:
-
-  global:
-    WITH_COMPILER: "cmd /E:ON /V:ON /C .\\appveyor\\run_with_compiler.cmd"
-
   matrix:
-
-    - PYTHON: "C:\\Python37-x64"
-      PYTHON_VERSION: "3.7.x"
+    - PYTHON: "C:\\Python38-x64"
+      PYTHON_VERSION: "3.8.x"
       PYTHON_ARCH: "64"
-
 init:
   - "ECHO %PYTHON% %PYTHON_VERSION% %PYTHON_ARCH%"
 
 install:
   - "%PYTHON%\\python -m pip install --upgrade pip"
-  - "%PYTHON%\\Scripts\\pip install pymyinstall"
-  #- "%PYTHON%\\Scripts\\pymy_install3 pylzma"
   - "%PYTHON%\\Scripts\\pymy_install3 cartopy"
   - "%PYTHON%\\Scripts\\pip install numpy pylzma"
   - "%PYTHON%\\Scripts\\pip install -r requirements_conda.txt"
@@ -23,10 +17,7 @@ install:
   - "%PYTHON%\\Scripts\\pip install pygame==2.0.0.dev10"
   - "%PYTHON%\\Scripts\\pip install -U git+https://github.com/sdpython/pyPdf --no-deps"
   - "%PYTHON%\\Scripts\\pip install tools"
-  - "%PYTHON%\\Scripts\\pymy_install3 --task=tool --source=zip graphviz"
   # - "%PYTHON%\\Scripts\\pip install csharpy pythonnet"
-  - "dir C:\\projects\\ensae-teaching-cs\\build\\update_modules\\Graphviz\\bin"
-  - "set PATH=%PATH%;C:\\projects\\ensae-teaching-cs\\build\\update_modules\\Graphviz\\bin"
   - set PYTHONPATH=src
   - "%PYTHON%\\Scripts\\pip freeze"
 
