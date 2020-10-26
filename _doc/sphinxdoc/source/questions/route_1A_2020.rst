@@ -95,14 +95,14 @@ Séance 4 - 6/10 - edit distance, numpy
 * :ref:`2020editrst`
 * :ref:`2020numpyrst`
 
-Séance 5 - 13/10 - TSP, dataframe
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Séance 5 - 13/10 - TSP, dataframe avec données COVID
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * :ref:`2020tsprst`
 * :ref:`2020pandasrst`
 
-Séance 6 - 20/10 - bag, json, xml
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Séance 6 - 3/11 - bag, json, xml, COVID
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Algorithme : :ref:`2020covidrst`
 * Technique : :ref:`2020jsonxmlrst`
