@@ -43,26 +43,45 @@ et la réponse est souvent un mélange des trois :
 
 *Lectures*
 
-* `Classification of Imbalanced Data with a Geometric Digraph Family <http://www.jmlr.org/papers/volume17/15-604/15-604.pdf>`_
-* `RUSBoost: A Hybrid Approach to Alleviating Class Imbalance <http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=9260A5C92AC5F8FA3B8590A53A06248D?doi=10.1.1.309.2305&rep=rep1&type=pdf>`_
-* `RAMOBoost: Ranked Minority Oversampling in Boosting <https://ai2-s2-pdfs.s3.amazonaws.com/9640/1540d5d8c4d5d956ae5fa487590dd8682507.pdf>`_
+* `Classification of Imbalanced Data with a Geometric Digraph Family
+  <http://www.jmlr.org/papers/volume17/15-604/15-604.pdf>`_
+* `RUSBoost: A Hybrid Approach to Alleviating Class Imbalance
+  <http://citeseerx.ist.psu.edu/viewdoc/
+  download;jsessionid=9260A5C92AC5F8FA3B8590A53A06248D?
+  doi=10.1.1.309.2305&rep=rep1&type=pdf>`_
+* `RAMOBoost: Ranked Minority Oversampling in Boosting
+  <https://ai2-s2-pdfs.s3.amazonaws.com/9640/1540d5d8c4d5d956ae5fa487590dd8682507.pdf>`_
 * `ND DIAL: Imbalanced Algorithms <https://github.com/dialnd/imbalanced-algorithms>`_
 * `rusboost.py <https://github.com/harusametime/RUSBoost>`_ (plutôt un bout de code)
 * `xgboost <https://xgboost.readthedocs.io/en/latest/>`_
-* `Boosting and AdaBoost for Machine Learning <https://machinelearningmastery.com/boosting-and-adaboost-for-machine-learning/>`_,
-  `A Gentle Introduction to the Gradient Boosting Algorithm for Machine Learning <https://machinelearningmastery.com/gentle-introduction-gradient-boosting-algorithm-machine-learning/>`_,
-  `Thoughts on Hypothesis Boosting <https://www.cis.upenn.edu/~mkearns/papers/boostnote.pdf>`_,
-  `Predictions Games and Arcing Algorithms <https://www.stat.berkeley.edu/~breiman/games.pdf>`_
+* `Boosting and AdaBoost for Machine Learning
+  <https://machinelearningmastery.com/boosting-and-adaboost-for-machine-learning/>`_,
+  `A Gentle Introduction to the Gradient Boosting Algorithm for Machine Learning
+  <https://machinelearningmastery.com/
+  gentle-introduction-gradient-boosting-algorithm-machine-learning/>`_,
+  `Thoughts on Hypothesis Boosting
+  <https://www.cis.upenn.edu/~mkearns/papers/boostnote.pdf>`_,
+  `Predictions Games and Arcing Algorithms
+  <https://www.stat.berkeley.edu/~breiman/games.pdf>`_
+* `Focal Loss for Dense Object Detection
+  <https://arxiv.org/pdf/1708.02002.pdf>`_
 
 *Lectures - subsampling*
 
-* `Data Subsampling (Edward) <http://edwardlib.org/api/inference-data-subsampling>`_
-* `5601 Notes: The Subsampling Bootstrap <http://www.stat.umn.edu/geyer/5601/notes/sub.pdf>`_
-* `Bootstrapping and Subsampling: Part I <https://normaldeviate.wordpress.com/2013/01/19/bootstrapping-and-subsampling-part-i/>`_
-* `Subsampling versus bootstrapping in resampling-based model selection for multivariable regression <https://epub.ub.uni-muenchen.de/21724/1/technRep_171.pdf>`_
-* `Subsampling vs Bootstrap <https://web.stanford.edu/~doubleh/lecturenotes/lecture13.pdf>`_
+* `Data Subsampling (Edward)
+  <http://edwardlib.org/api/inference-data-subsampling>`_
+* `5601 Notes: The Subsampling Bootstrap
+  <http://www.stat.umn.edu/geyer/5601/notes/sub.pdf>`_
+* `Bootstrapping and Subsampling: Part I
+  <https://normaldeviate.wordpress.com/2013/01/19/bootstrapping-and-subsampling-part-i/>`_
+* `Subsampling versus bootstrapping in resampling-based model
+  selection for multivariable regression
+  <https://epub.ub.uni-muenchen.de/21724/1/technRep_171.pdf>`_
+* `Subsampling vs Bootstrap
+  <https://web.stanford.edu/~doubleh/lecturenotes/lecture13.pdf>`_
 
 *Modules*
 
 * `imbalanced-learn <https://github.com/scikit-learn-contrib/imbalanced-learn>`_
-  (la `documentation <https://imbalanced-learn.readthedocs.io/en/stable/api.html>`_ est intéressante)
+  (la `documentation <https://imbalanced-learn.readthedocs.io/en/stable/api.html>`_
+  est intéressante)

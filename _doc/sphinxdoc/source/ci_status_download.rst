@@ -6,7 +6,7 @@ Pypi download
 
 Le nombre de téléchargements peut être
 obtenu en exécutant la requête suivante sur
-`Google BigQuery <https://bigquery.cloud.google.com/results/>`_.
+`Google BigQuery <https://console.cloud.google.com/bigquery>`_.
 
 .. runpython::
 

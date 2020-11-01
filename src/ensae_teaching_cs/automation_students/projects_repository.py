@@ -585,7 +585,8 @@ class ProjectsRepository:
 
             r = renderer.write(iter=iter, location=location,
                                filename=filename, overwrite=overwrite,
-                               file_jsatt="_summaryattachements_raw.json")
+                               file_jsatt="_summaryattachements_raw.json",
+                               attach_folder="attachments")
             renderer.flush()
 
             # attachments in JSON format
