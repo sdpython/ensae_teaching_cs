@@ -122,7 +122,8 @@ if is_local():
     logging_function = pyquickhelper.get_fLOG()
     from pyquickhelper.pycode import process_standard_options_for_setup
     logging_function(OutputPrint=True)
-    deps = ["pyquickhelper", "jyquickhelper", "pymmails", "pyensae", "pyenbc",
+    deps = ["pyquickhelper", "jyquickhelper", "pymmails>=0.2.290",
+            "pyensae", "pyenbc",
             "pyrsslocal", "pymyinstall", "mlstatpy", "tkinterquickhelper",
             "pandas_streaming", "fairtest", 'BLIBmpld3', 'manydataapi',
             'mlinsights', 'cpyquickhelper']

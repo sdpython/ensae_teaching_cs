@@ -52,7 +52,7 @@ pyinstrument
 pyldavis
 pylint
 pylzma
-pymmails
+pymmails>=0.2.290
 pympler
 pymyinstall
 pyquickhelper>=1.9.3280
