@@ -250,7 +250,8 @@ d'une fonction LAPACK dans un code python / cython :
 Optimisations logicielles
 +++++++++++++++++++++++++
 
-* `Compiling ONNX Neural Network Models Using   MLIR <https://arxiv.org/pdf/2008.08272.pdf>`_
+* `Compiling ONNX Neural Network Models Using MLIR
+   <https://arxiv.org/pdf/2008.08272.pdf>`_
 * `Compiling Classical ML Pipelines into Tensor Computations for One-size-fits-all Prediction Serving
   <http://learningsys.org/neurips19/assets/papers/27_CameraReadySubmission_Hummingbird%20(5).pdf>`_,
   `Taming Model Serving Complexity, Performance and Cost: A Compilation to Tensor Computations Approach
@@ -321,7 +322,12 @@ Algorithmes Distribués
   <https://arxiv.org/abs/1705.10266>`_
 * `Demystifying Parallel and Distributed Deep Learning: An In-Depth Concurrency Analysis
   <https://arxiv.org/pdf/1802.09941.pdf>`_
-* `Measuring the Effects of Data Parallelismon Neural Network Training <http://jmlr.org/papers/volume20/18-789/18-789.pdf>`_
+* `Measuring the Effects of Data Parallelismon Neural Network Training
+  <http://jmlr.org/papers/volume20/18-789/18-789.pdf>`_
+* `Scaling Distributed Training with Adaptive Summation
+  <https://arxiv.org/abs/2006.02924>`_
+* `ZeRO: Memory Optimizations Toward Training Trillion Parameter Models
+  <https://arxiv.org/abs/1910.02054>`_
 
 *Vidéo*
 

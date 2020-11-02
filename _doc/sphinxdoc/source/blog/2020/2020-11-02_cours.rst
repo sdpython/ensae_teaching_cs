@@ -1,0 +1,20 @@
+
+.. blogpost::
+    :title: Cours de statistiques descriptives, machine learning...
+    :keywords: Arthur Charpentier
+    :date: 2020-11-02
+    :categories: cours
+
+    * `Analyse des données en actuariat <https://github.com/freakonometrics/ACT6100/>`_
+    * `Moindres carrés <https://freakonometrics.hypotheses.org/61450>`_
+    * `Analyse non supervisée <https://freakonometrics.hypotheses.org/61441>`_
+    * `Rappel et Compléments <https://freakonometrics.hypotheses.org/61305>`_
+
+    Quelques articles sur l'épidémie :
+
+    * `pyepidemics <https://github.com/collectif-codata/pyepidemics>`_
+    * `COVID-19 pandemics control <https://freakonometrics.hypotheses.org/61300>`_
+    * `modcov19 <https://modcov19.math.cnrs.fr/>`_
+    * `aftercovid <http://www.xavierdupre.fr/app/aftercovid/helpsphinx/index.html>`_
+    * `COVID-19 - France <https://dashboard.covid19.data.gouv.fr/vue-d-ensemble?location=FRA>`_
+    * `Awesome COVID19 resources <https://github.com/collectif-codata/awesome-covid19>`_
