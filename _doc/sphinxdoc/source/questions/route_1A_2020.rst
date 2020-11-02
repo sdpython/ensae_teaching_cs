@@ -107,20 +107,15 @@ Séance 6 - 3/11 - bag, json, xml, COVID
 * Algorithme : :ref:`2020covidrst`
 * Technique : :ref:`2020jsonxmlrst`
 
-Séance 7 - 3/11 - graphes, flask
+Séance 7 - 10/11 - graphes, flask
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Algorithme : matrice d'adjacence, composantes connexes
 * Technique : site web, flask
 
-Séance 8 - 10/11 - graphes
+Séance 8 - 24/11 - graphes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Algorithme : ordonnancement
 * Technique : graphes, cartes
-
-Séance 9 - 22/11 - ?
-^^^^^^^^^^^^^^^^^^^^
-
-* ?
 * TD noté
