@@ -551,4 +551,5 @@ _doc/notebooks/2a/twitter_for_network_100000.db
 _doc/notebooks/2a/tw_users.json
 _doc/notebooks/td2a_ml/catboost_info/*
 _doc/notebooks/td1a_home/departements-20180101*
-_doc/notebooks/td1a_home/data.csv
+_doc/notebooks/td1a_home/data.*
+_doc/notebooks/td1a_home/fleurs.*

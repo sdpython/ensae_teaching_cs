@@ -18,3 +18,8 @@
     * `aftercovid <http://www.xavierdupre.fr/app/aftercovid/helpsphinx/index.html>`_
     * `COVID-19 - France <https://dashboard.covid19.data.gouv.fr/vue-d-ensemble?location=FRA>`_
     * `Awesome COVID19 resources <https://github.com/collectif-codata/awesome-covid19>`_
+
+    Et un dernier pour la route :
+
+    * `'Less Than One'-Shot Learning: Learning N Classes From M<N Samples
+      <https://arxiv.org/abs/2009.08449>`_
