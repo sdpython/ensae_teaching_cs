@@ -21,6 +21,7 @@ concepts communs à ne nombreux modèles.
 .. toctree::
     :maxdepth: 1
 
+    td2a_mlplus_active_learning
     td2a_mlplus_apprendre_aberrant
     td2a_mlplus_autolearning
     td2a_mlplus_optimisation_des_hyperparametres
@@ -50,6 +51,7 @@ D'autres sujets parfois exotiques mais non moins intéressants.
     td2a_mlplus_reinforcement_learning_marl
     td2a_mlplus_snn
     td2a_mlplus_surprise_modelling
+    td2a_mlplus_survival_analysis
     td2a_mlplus_tres_grande_dimension
     td2a_mlplus_dynamic_selection
 
@@ -124,6 +126,7 @@ les images ou le son.
 .. toctree::
     :maxdepth: 1
 
+    td2a_mlbasic_text_embedding
     td2a_mlplus_text_features
     td2a_mlplus_traitement_du_langage
     td2a_mlplus_topic
@@ -132,3 +135,11 @@ les images ou le son.
     td2a_mlplus_ontologie
     td2a_mlplus_chat_bot
     td2a_mlplus_summary
+
+Ingénierie
+==========
+
+.. toctree::
+    :maxdepth: 1
+
+    td2a_mlplus_production

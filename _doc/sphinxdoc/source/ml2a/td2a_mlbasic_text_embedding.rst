@@ -9,8 +9,8 @@
     :alt: Statistique
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_2a_notions.html#pour-un-profil-plutot-data-scientist
 
-Text embedding
-++++++++++++++
+Text Embedding (NLP)
+++++++++++++++++++++
 
 Les modèles de machine learning n'acceptent que des
 entrées numériques. Il faut nécessairement convertir
@@ -21,3 +21,14 @@ Il faut donc passer d'un texte de longueur variable
 La section :ref:`l-ml2a-text-features` détaille les
 méthodes les plus courantes. La section
 :ref:`l-td2a-nlp` explore d'autres directions.
+
+*Modules*
+
+* `spacy <https://spacy.io/>`_
+* `gensim <https://radimrehurek.com/gensim/>`_
+* *HuggingFace*:
+  * `huggingface/transformers <https://github.com/huggingface/transformers>`_
+    (State-of-the-art Natural Language Processing for PyTorch and TensorFlow 2.0)
+  * `tokenizers <https://github.com/huggingface/tokenizers>`_
+    (Provides an implementation of today's most used tokenizers,
+    with a focus on performance and versatility.)

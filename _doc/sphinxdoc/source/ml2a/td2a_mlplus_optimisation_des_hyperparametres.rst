@@ -29,3 +29,5 @@ Optimisation des hyperparamètres
 * `hyperopt <https://github.com/hyperopt/hyperopt>`_
 * `RayTune <http://ray.readthedocs.io/en/latest/tune.html>`_
 * `auto-sklearn <https://github.com/automl/auto-sklearn/>`_
+* `hyperband <https://github.com/zygmuntz/hyperband>`_
+* `orion <https://github.com/epistimio/orion>`_

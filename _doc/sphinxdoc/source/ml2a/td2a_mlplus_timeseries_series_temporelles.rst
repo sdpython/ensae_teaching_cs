@@ -70,6 +70,8 @@ appliqués aux séries temporelles :
 * `influxdb <https://github.com/influxdata/influxdb>`_ (An Open-Source Time Series Database)
 * `seasonal <https://github.com/welch/seasonal>`_
 * `seglearn <https://github.com/dmbee/seglearn>`_
+* `sktime <https://github.com/alan-turing-institute/sktime>`_
+* `flow-forecast <https://github.com/AIStream-Peelout/flow-forecast>`_
 
 Un peu plus expérimental :
 

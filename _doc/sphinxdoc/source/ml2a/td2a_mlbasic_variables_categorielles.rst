@@ -61,6 +61,8 @@ ennuyeuses mais contenant de l'information.
 * `Similarity encoding for learning with dirty categorical variables <https://hal.inria.fr/hal-01806175>`_
 * `CatBoost vs. Light GBM vs. XGBoost <https://towardsdatascience.com/catboost-vs-light-gbm-vs-xgboost-5f93620723db>`_
 * `Similarity encoding for learning with dirty categorical variables <https://arxiv.org/pdf/1806.00979.pdf>`_
+* `Benchmarking Categorical Encoders
+  <https://towardsdatascience.com/benchmarking-categorical-encoders-9c322bd77ee8>`_
 
 *Modules*
 

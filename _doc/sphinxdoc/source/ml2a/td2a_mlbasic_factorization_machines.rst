@@ -21,3 +21,4 @@ Factorization Machines
 
 * `libffm <http://www.csie.ntu.edu.tw/~r01922136/libffm/>`_ (C++)
 * `fastFM <https://github.com/ibayer/fastFM>`_
+* `nimfa <https://nimfa.biolab.si/>`_

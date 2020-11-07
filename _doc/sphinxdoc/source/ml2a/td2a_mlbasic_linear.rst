@@ -23,6 +23,8 @@ C'est pour cette raison qu'il est important de les connaître.
 
 * `Probabilités, Analyse des données et Statistiques
   <http://www.editionstechnip.com/en/catalogue-detail/149/probabilites-analyse-des-donnees-et-statistique.html>`_
+* `Common pitfalls in interpretation of coefficients of linear models
+  <https://scikit-learn.org/stable/auto_examples/inspection/plot_linear_model_coefficient_interpretation.html>`_
 
 *Modules*
 

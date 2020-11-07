@@ -100,6 +100,8 @@ de :ref:`l-imbalanced-classification`.
 * `Learning Certifiably Optimal Rule Lists for Categorical Data <http://www.jmlr.org/papers/volume18/17-716/17-716.pdf>`_
 * `tick: a Python Library for Statistical Learning, with an emphasis on Hawkes Processes and Time-Dependent Models <http://www.jmlr.org/papers/volume18/17-381/17-381.pdf>`_
 * `Neighbourhood Components Analysis <https://cs.nyu.edu/~roweis/papers/ncanips.pdf>`_
+* `Common pitfalls in interpretation of coefficients of linear models
+  <https://scikit-learn.org/stable/auto_examples/inspection/plot_linear_model_coefficient_interpretation.html>`_
 
 `JMLR <http://www.jmlr.org/>`_
 poste régulièrement des articles sur des librairies de machine learning open source telles que
@@ -125,8 +127,13 @@ poste régulièrement des articles sur des librairies de machine learning open s
 
 * `Optimization of AMS using Weighted AUC optimized models <http://jmlr.org/proceedings/papers/v42/diaz14.pdf>`_
 
+*Benchmarks*
+
+* `scikit-learn-benchmarks <https://scikit-learn.org/scikit-learn-benchmarks/>`_
+
 *Modules*
 
+* :epkg:`scikit-learn`
 * `statsmodels <http://statsmodels.sourceforge.net/>`_
 * :epkg:`xgboost`
 * :epkg:`lightgbm`

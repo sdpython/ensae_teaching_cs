@@ -49,3 +49,4 @@ est inconnue à l'avance.
 * `streamparse <https://github.com/Parsely/streamparse>`_
 * `vaex <https://docs.vaex.io/en/latest/installing.html>`_
 * `StreamLib <https://github.com/jiecchen/StreamLib>`_ (mas maintenu)
+* `modin <https://github.com/modin-project/modin>`_
