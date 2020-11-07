@@ -110,7 +110,7 @@ Séance 6 - 3/11 - bag, json, xml, COVID
 Séance 7 - 10/11 - graphes, flask
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Algorithme : matrice d'adjacence, composantes connexes
+* Algorithme : :ref:`2020graphrst`
 * Technique : site web, flask
 
 Séance 8 - 24/11 - graphes

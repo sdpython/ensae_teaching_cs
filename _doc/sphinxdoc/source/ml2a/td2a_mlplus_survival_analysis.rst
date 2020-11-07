@@ -19,7 +19,7 @@ prédire n'est pas toujours connue. On sait juste qu'elle ne
 s'est pas encore produite. L'analyse de survie nécessite de prendre
 en compte la date à laquelle les données ont été récoltées et la
 date à laquelle on cherche à prédire. On ne peut pas prédire
-si un cancer reviendra mais on peut prédire s'il reviendra 
+si un cancer reviendra mais on peut prédire s'il reviendra
 en deça d'un certain laps de temps.
 
 *Notebooks*
