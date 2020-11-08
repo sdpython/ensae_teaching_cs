@@ -111,7 +111,7 @@ Séance 7 - 10/11 - graphes, flask
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Algorithme : :ref:`2020graphrst`
-* Technique : site web, flask
+* Technique : :ref:`2020restrst`
 
 Séance 8 - 24/11 - graphes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

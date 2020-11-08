@@ -14,3 +14,4 @@ from .data_ts import generate_sells
 from .dataweb import google_trends, twitter_zip
 from .datazips import besancon_df, added, deal_flow_espace_vert_2018_2019
 from .gutenberg import gutenberg_name
+from .imagenet_classes import interpret_imagenet_results
