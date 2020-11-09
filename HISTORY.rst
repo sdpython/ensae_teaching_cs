@@ -5,8 +5,19 @@
 History
 =======
 
-current - 2019-11-04 - 0.00Mb
+current - 2020-11-09 - 0.00Mb
 =============================
+
+* `105`: Add function to add class names to results for ImageNet competition (2020-11-09)
+* `103`: Add way to retrieve shapefiles for French departments (2020-10-12)
+* `100`: Fix API issue with worldbank (notebook TD2A_eco_les_API.ipynb) (2020-06-25)
+* `99`: Fix SVC issues with scikit-learn 0.23 (2020-05-14)
+* `98`: Update notebook after update to pandas 1.0 (2020-02-26)
+* `81`: Notebook sur openmp (2020-01-30)
+* `97`: Notebook sur topk with heap (2019-12-16)
+
+0.9.2894 - 2019-11-05 - 6.65Mb
+==============================
 
 * `96`: Fix bug in 2048, see pystrat2048 (2019-11-04)
 * `93`: Implémenter la solution de l'énigme des dés + notebook (2019-11-04)
@@ -48,17 +59,9 @@ current - 2019-11-04 - 0.00Mb
 * `68`: td noté + correction TD noté 2018 (2018-10-23)
 * `67`: move velib to ensae_projects (2018-10-14)
 * `66`: ajouter un notebook sur SSA (2018-10-14)
-
-0.8.2561 - 2018-10-01 - 6.29Mb
-==============================
-
 * `65`: replaces RandomizedPCA with PCA(svd_solver="randomized") (2018-10-01)
 * `64`: terminer la correction sur le clustering (2018-09-30)
 * `63`: parler de plotly offline, réduire la taille des notebooks sur la visualisation (2018-09-23)
-
-0.8.2511 - 2018-08-25 - 6.29Mb
-==============================
-
 * `62`: remove any link to cspython (2018-08-24)
 * `60`: remove dependency on fastcluster (2018-07-29)
 * `40`: ajouter geopandas (2018-07-27)
@@ -67,10 +70,6 @@ current - 2019-11-04 - 0.00Mb
 * `59`: fix images on page Tests unitaires, setup et ingéniérie logiciel (correction) (2018-06-08)
 * `58`: remove function based on ffmpeg.zip (2018-05-27)
 * `57`: fix notebook with pytorch (2018-05-27)
-
-0.8.2426 - 2018-05-24 - 6.30Mb
-==============================
-
 * `56`: remove ggplot (2018-05-24)
 * `55`: remove old presentations (2018-05-23)
 * `54`: replaces griddata by matplotlib.tri.Triangulation (2018-05-23)
