@@ -116,6 +116,6 @@ Séance 7 - 10/11 - graphes, flask
 Séance 8 - 24/11 - graphes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Algorithme : ordonnancement
-* Technique : graphes, cartes
-* TD noté
+* Algorithme : :ref:`2020ordonnancementrst`
+* Technique : :ref:`2020cartesrt`
+* TD noté... lien après la séance
