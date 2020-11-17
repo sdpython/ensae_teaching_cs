@@ -10,6 +10,7 @@ coverage
 cpyquickhelper
 cytoolz
 dbfread
+descartes
 duecredit
 ete3
 folium
