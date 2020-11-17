@@ -32,7 +32,30 @@ en deça d'un certain laps de temps.
   <http://www.stat.columbia.edu/~madigan/W2025/notes/survival.pdf>`_
 * `Survival Analysis Part A
   <https://towardsdatascience.com/survival-analysis-part-a-70213df21c2e>`_
+* `Introduction to Survival Analysis with scikit-survival
+  <https://scikit-survival.readthedocs.io/en/stable/user_guide/00-introduction.html>`_
+* `Cox Regression
+  <https://ncss-wpengine.netdna-ssl.com/wp-content/themes/ncss/pdf/Procedures/NCSS/Cox_Regression.pdf>`_
+* `Learning Transformation Models for Ranking and Survival Analysis
+  <https://jmlr.org/papers/volume12/vanbelle11a/vanbelle11a.pdf>`_
+* `Time-to-Event Prediction with Neural Networks and Cox Regression
+  <https://jmlr.org/papers/volume20/18-424/18-424.pdf>`_
+* `Effective Ways to Build and Evaluate Individual Survival Distributions
+  <https://www.jmlr.org/papers/volume21/18-772/18-772.pdf>`_
+* `Estimateur de Kaplan-Meier
+  <https://fr.wikipedia.org/wiki/Estimateur_de_Kaplan-Meier>`_
+* `Regression de Cox
+  <https://fr.wikipedia.org/wiki/R%C3%A9gression_de_Cox>`_
+  
+*Livres*
+
+* David G. Kleinbaum and Mitchel Klein (2012), Survival Analysis: A Self-Learning Text, Springer.
+* John P. Klein and Melvin L. Moeschberger (2003),
+  Survival Analysis: Techniques for Censored and Truncated Data, Springer.
+  `pdf <http://sistemas.fciencias.unam.mx/~ediaz/Cursos/Estadistica3/Libros/0a9X.pdf>`_
 
 *Modules*
 
 * `lifelines <https://github.com/CamDavidsonPilon/lifelines>`_
+* `scikit-survival <https://scikit-survival.readthedocs.io/en/stable/index.html>`_
+* `pycox <https://github.com/havakv/pycox>`_
