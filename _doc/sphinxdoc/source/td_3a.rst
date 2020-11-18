@@ -74,7 +74,8 @@ l'utilisant depuis Python pour mesurer une optimisation que
 proposent les processeurs CPU : le :epkg:`branching`.
 
 * `Measures branching in C++ from python
-  <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/notebooks/cbenchmark_branching.html#cbenchmarkbranchingrst>`_
+  <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/notebooks/
+  cbenchmark_branching.html#cbenchmarkbranchingrst>`_
 
 *Code*
 
@@ -94,10 +95,12 @@ proposent les processeurs CPU : le :epkg:`branching`.
 
 * `Weld: A Multithreading Technique Towards Latencytolerant VLIW Processors
   <http://tinker.cc.gatech.edu/symposia/hipc01.pdf>`_
-* `Stackless Python <https://bitbucket.org/stackless-dev/stackless>`_ : implémentation de l'interpréteur de Python
+* `Stackless Python <https://bitbucket.org/stackless-dev/stackless>`_ :
+  implémentation de l'interpréteur de Python
   spécialisée dans le micro threading.
 * `Why is it faster to process a sorted array than an unsorted array?
-  <https://stackoverflow.com/questions/11227809/why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array/11227902#11227902>`_
+  <https://stackoverflow.com/questions/11227809/
+  why-is-it-faster-to-process-a-sorted-array-than-an-unsorted-array/11227902#11227902>`_
 * `How to optimize C and C++ code in 2018
   <https://medium.com/@aka.rider/how-to-optimize-c-and-c-code-in-2018-bd4f90a72c2b>`_
 * `C++ Concurrency in Action (second edition, published 2019 by Manning Publications)
@@ -106,7 +109,8 @@ proposent les processeurs CPU : le :epkg:`branching`.
 *Vidéos*
 
 * `C++ and Beyond 2012: Herb Sutter - atomic<> Weapons, 1 of 2
-  <https://channel9.msdn.com/Shows/Going+Deep/Cpp-and-Beyond-2012-Herb-Sutter-atomic-Weapons-1-of-2>`_
+  <https://channel9.msdn.com/Shows/Going+Deep/
+  Cpp-and-Beyond-2012-Herb-Sutter-atomic-Weapons-1-of-2>`_
 
 *Librairies*
 
@@ -135,19 +139,25 @@ GPU
 * `Introduction to CUDA C <http://www.nvidia.com/content/gtc-2010/pdfs/2131_gtc2010.pdf>`_
 * Notion de block, threads
 * Echange d'information entre CPU et GPU
-* `index de thread <http://www.martinpeniak.com/index.php?option=com_content&view=article&catid=17:updates&id=288:cuda-thread-indexing-explained>`_
-* `syncthread <http://stackoverflow.com/questions/15240432/does-syncthreads-synchronize-all-threads-in-the-grid>`_
+* `index de thread <http://www.martinpeniak.com/index.php?
+  option=com_content&view=article&catid=17:updates&id=288:cuda-thread-indexing-explained>`_
+* `syncthread <http://stackoverflow.com/questions/15240432/
+  does-syncthreads-synchronize-all-threads-in-the-grid>`_
 * `shared array <http://supercomputingblog.com/cuda/cuda-tutorial-3-thread-communication/>`_
 
 *Lectures sur le GPU*
 
 * `Comment apprendre aux ordinateurs à comprendre des images
   <https://www.ted.com/talks/fei_fei_li_how_we_re_teaching_computers_to_understand_pictures?language=fr>`_
-* `Scaling-up Machine Learning Chapitre 16 et 17 <http://www.cambridge.org/catalogue/catalogue.asp?isbn=1139210408>`_
-* `Quelques exemples graphiques de kernel 3x3 de convolution <https://docs.gimp.org/en/plug-in-convmatrix.html>`_
-* `Introduction aux réseaux convolutifs <http://matlabtricks.com/post-5/3x3-convolution-kernels-with-online-demo#demo>`_,
+* `Scaling-up Machine Learning Chapitre 16 et 17
+  <http://www.cambridge.org/catalogue/catalogue.asp?isbn=1139210408>`_
+* `Quelques exemples graphiques de kernel 3x3 de convolution
+  <https://docs.gimp.org/en/plug-in-convmatrix.html>`_
+* `Introduction aux réseaux convolutifs
+  <http://matlabtricks.com/post-5/3x3-convolution-kernels-with-online-demo#demo>`_,
   `Canny edge detector <https://en.wikipedia.org/wiki/Canny_edge_detector>`_
-* `Understanding Convolution in Deep Learning <http://timdettmers.com/2015/03/26/convolution-deep-learning/>`_
+* `Understanding Convolution in Deep Learning
+  <http://timdettmers.com/2015/03/26/convolution-deep-learning/>`_
 * `Introduction au GPGPU
   <https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units>`_
 * `Quelques éléments de consommation électrique sur les GPU et CPU
@@ -160,7 +170,8 @@ GPU
 * `Mixed-Precision Training of Deep Neural Networks
   <https://devblogs.nvidia.com/parallelforall/mixed-precision-training-deep-neural-networks/>`_
 * `Computing Higher Order Derivatives of Matrix and Tensor Expressions
-  <https://papers.nips.cc/paper/7540-computing-higher-order-derivatives-of-matrix-and-tensor-expressions.pdf>`_
+  <https://papers.nips.cc/paper/
+  7540-computing-higher-order-derivatives-of-matrix-and-tensor-expressions.pdf>`_
 
 *Lectures sur le C++*
 
@@ -238,6 +249,12 @@ d'une fonction LAPACK dans un code python / cython :
   <http://www.cs.utexas.edu/users/flame/pubs/blis3_ipdps14.pdf>`_
 * `Computing the vector norm
   <http://fa.bianp.net/blog/2011/computing-the-vector-norm/>`_
+* `Faster identification of optimal contraction sequences for tensor networks
+  <https://arxiv.org/pdf/1304.6112.pdf>`_, cet article s'intéresse à
+  l'implémentation optimale de réaliser une opération de type `einsum
+  <https://numpy.org/devdocs/reference/generated/numpy.einsum.html>`_,
+  les découvertes de l'article sont implémentées dans le module
+  `opt-einsum <https://github.com/dgasmith/opt_einsum>`_.
 
 *Modules*
 

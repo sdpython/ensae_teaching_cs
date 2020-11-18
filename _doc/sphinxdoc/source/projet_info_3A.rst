@@ -140,7 +140,10 @@ Nous vous recommandons d'adopter la démarche suivante:
    que de générer des jeux de données articielles de tailles différentes.
 
 Le site
-`Kaggle <https://www.kaggle.com/competitions/search?SearchVisibility=AllCompetitions&ShowActive=true&ShowCompleted=true&ShowProspect=true&ShowOpenToAll=true&ShowPrivate=true&ShowLimited=true&DeadlineColumnSort=Descending>`_ `(2) <http://inclass.kaggle.com/>`_
+`Kaggle <https://www.kaggle.com/competitions/search?
+SearchVisibility=AllCompetitions&ShowActive=true&ShowCompleted=true&
+ShowProspect=true&ShowOpenToAll=true&ShowPrivate=true&
+ShowLimited=true&DeadlineColumnSort=Descending>`_ `(2) <http://inclass.kaggle.com/>`_
 référence de nombreuses compétitions intéressantes.
 Toutefois, avant d'utiliser les données Kaggle, je vous encourage à lire les articles
 `Date use for teaching after competition concludes <http://www.kaggle.com/c/decoding-the-human-brain/forums/t/8331/date-use-for-teaching-after-competition-concludes>`_

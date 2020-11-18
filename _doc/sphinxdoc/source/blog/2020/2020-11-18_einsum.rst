@@ -1,0 +1,21 @@
+
+.. blogpost::
+    :title: Un problème d'optimisation pour optimiser un calcul matriciel
+    :keywords: einsum
+    :date: 2020-11-18
+    :categories: optimisation
+
+    Je suis tombé par hasard sur le package
+    `opt-einsum <https://github.com/dgasmith/opt_einsum>`_ qui
+    est utilisé par :epkg:`tensorflow` pour optimiser le calcul
+    de la fonction :epkg:`numpy:einsum`. En lisant la documentation,
+    j'ai abouti à l'article :    
+    `Faster identification of optimal contraction sequences for tensor networks
+    <https://arxiv.org/pdf/1304.6112.pdf>`_, cet article s'intéresse à
+    l'implémentation optimale de réaliser une opération de type `einsum
+    <https://numpy.org/devdocs/reference/generated/numpy.einsum.html>`_.
+
+    Et il faut que je lise cela aussi :
+    :ref:`l-ml2a-survival-analysis`.
+
+    
