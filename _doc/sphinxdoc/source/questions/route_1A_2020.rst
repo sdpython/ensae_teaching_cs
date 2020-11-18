@@ -117,5 +117,5 @@ Séance 8 - 24/11 - graphes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Algorithme : :ref:`2020ordonnancementrst`
-* Technique : :ref:`2020cartesrt`
+* Technique : :ref:`2020carterst`
 * TD noté... lien après la séance
