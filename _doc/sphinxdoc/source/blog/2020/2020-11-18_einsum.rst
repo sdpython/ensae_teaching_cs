@@ -9,7 +9,7 @@
     `opt-einsum <https://github.com/dgasmith/opt_einsum>`_ qui
     est utilisé par :epkg:`tensorflow` pour optimiser le calcul
     de la fonction :epkg:`numpy:einsum`. En lisant la documentation,
-    j'ai abouti à l'article :    
+    j'ai abouti à l'article :
     `Faster identification of optimal contraction sequences for tensor networks
     <https://arxiv.org/pdf/1304.6112.pdf>`_, cet article s'intéresse à
     l'implémentation optimale de réaliser une opération de type `einsum
@@ -17,5 +17,3 @@
 
     Et il faut que je lise cela aussi :
     :ref:`l-ml2a-survival-analysis`.
-
-    

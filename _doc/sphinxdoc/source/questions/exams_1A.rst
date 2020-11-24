@@ -147,6 +147,12 @@ les modules standard du langage :epkg:`Python` et parfois
                 </a>
             (positionnement de tables dans une salle ronde ou carrée)
         </li>
+    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2021.pdf">énoncé 2020-2021</a>,
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2021.html">
+                <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
+                </a>
+            (estimateur de Kaplan-Meier, seuil de vaccination)
+        </li>
     </ul>
     </p>
 
@@ -278,6 +284,7 @@ TD notés, correction
     ../notebooks/td_note_2019_2
     ../notebooks/td_note_2020_1
     ../notebooks/td_note_2020_2
+    ../notebooks/td_note_2021
 
 Autres sources d'énoncés d'examens
 ++++++++++++++++++++++++++++++++++

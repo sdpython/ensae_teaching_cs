@@ -46,7 +46,7 @@ en deça d'un certain laps de temps.
   <https://fr.wikipedia.org/wiki/Estimateur_de_Kaplan-Meier>`_
 * `Regression de Cox
   <https://fr.wikipedia.org/wiki/R%C3%A9gression_de_Cox>`_
-  
+
 *Livres*
 
 * David G. Kleinbaum and Mitchel Klein (2012), Survival Analysis: A Self-Learning Text, Springer.

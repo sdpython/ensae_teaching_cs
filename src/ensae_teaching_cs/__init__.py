@@ -11,7 +11,7 @@ import os
 if sys.version_info[0] < 3:
     raise ImportError("ensae_teaching_cs only works with Python 3")
 
-__version__ = "0.9.3079"
+__version__ = "0.9.3086"
 __author__ = "Xavier Dupré"
 __github__ = "https://github.com/sdpython/ensae_teaching_cs"
 __url__ = "http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html"
