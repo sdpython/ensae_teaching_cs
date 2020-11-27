@@ -169,6 +169,15 @@ seulement.
 * `The State of Applied Econometrics: Causality and Policy Evaluation <https://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.31.2.3>`_
 * `Estimating Treatment Effects with Causal Forests: An Application <https://arxiv.org/abs/1902.07409>`_
 
+*Lectures : régression discontinue*
+
+.. index:: régression discontinue, Regression Discontinuity
+
+* `150C Causal Inference Regression Discontinuity Design
+  <https://scholar.princeton.edu/sites/default/files/jmummolo/files/rdd_jm.pdf>`_
+* `Regression Discontinuity for Causal Effect Estimation in Epidemiology
+  <https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4978750/>`_
+
 *Vidéos*
 
 * `Explaining behavior of Machine Learning models with eli5 library <http://pyvideo.org/europython-2017/explaining-behavior-of-machine-learning-models-with-eli5-library.html>`_
