@@ -1,0 +1,28 @@
+
+.. blogpost::
+    :title: Quelques lectures...
+    :keywords: papers
+    :date: 2020-12-06
+    :categories: lectures
+
+    Interpreation
+
+    * `Regression Discontinuity for Causal Effect Estimation in Epidemiology
+      <https://www.semanticscholar.org/paper/
+      Regression-Discontinuity-for-Causal-Effect-in-Oldenburg-Moscoe/
+      14786a09e5ba97e388aff293e9bbe7db7dd9dc59>`_
+
+    Efficiency
+
+    * `Performance Optimization Strategies for WRF Physics Schemes Used in Weather Modeling
+      <https://www.researchgate.net/publication/
+      326307125_Performance_Optimization_Strategies_for_WRF_Physics_Schemes_Used_in_Weather_Modeling>`_
+    * `Cache Memories
+      <https://www.cs.cmu.edu/~213/lectures/11-cache-memories.pdf>`_
+
+    Survival Analysis
+
+    * `Introduction to Survival Analysis
+      <http://www.stat.columbia.edu/~madigan/W2025/notes/survival.pdf>`_
+    * `Effective Ways to Build and Evaluate Individual Survival Distributions
+      <https://www.jmlr.org/papers/volume21/18-772/18-772.pdf>`_
