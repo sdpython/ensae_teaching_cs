@@ -926,7 +926,7 @@ Fork / Stars / Downloads
           - .. image:: https://img.shields.io/github/stars/sdpython/{0}.svg
                 :target: https://github.com/sdpython/{0}/
                 :alt: Stars
-          - - .. image:: https://img.shields.io/github/repo-size/sdpython/{0}.svg
+          - .. image:: https://img.shields.io/github/repo-size/sdpython/{0}.svg
                 :target: https://github.com/sdpython/{0}/
                 :alt: Size"""), "    ")
 

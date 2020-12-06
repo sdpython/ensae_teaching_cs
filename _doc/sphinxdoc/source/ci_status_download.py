@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 url = "pypi_downloads.csv"
 df = pandas.read_csv(url)
+df.sort_values(["month", "Project"]).to_csv("pypi_downloads.sorted.csv", index=False)
 df = df.groupby(["Project", "month"], as_index=False).sum()
 df = df.sort_values(["Project", "month"])
 df['month'] = df.month.astype(str)

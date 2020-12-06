@@ -15,13 +15,7 @@ obtenu en exécutant la requête suivante sur
       file.project as Project,
       COUNT(*) AS num_downloads,
       SUBSTR(_TABLE_SUFFIX, 1, 6) AS `month`
-    FROM `the-psf.pypi.downloads*`
-    WHERE
-      __CONDITION__
-      AND _TABLE_SUFFIX
-        BETWEEN FORMAT_DATE(
-          '%Y%m01', DATE_SUB(CURRENT_DATE(), INTERVAL 12 MONTH))
-        AND FORMAT_DATE('%Y%m%d', CURRENT_DATE())
+    FROM `the-psf.pypi.downloads202008*`
     GROUP BY `month`, `Project`"""
 
     from ensae_teaching_cs.automation import get_teaching_modules
@@ -31,6 +25,8 @@ obtenu en exécutant la requête suivante sur
         'scikit-learn', 'pandas', 'numpy', 'jupyter', 'matplotlib',
         'protobuf', 'nimbusml', 'aftercovid', 'onnxcustom'
     ])
+    dont = {'numpy', 'matplotlib', 'pandas', 'jupyter'}
+    modules =[_ for _ in modules if _ not in dont]
     conds = ["file.project = '{0}'".format(m) for m in modules]
     cond = " OR ".join(conds)
     print(query.replace('__CONDITION__', cond))
