@@ -23,7 +23,8 @@ obtenu en exécutant la requête suivante sur
     modules.extend([
         'onnx', 'onnxruntime', 'skl2onnx', 'keras2onnx', 'nimbusml',
         'scikit-learn', 'pandas', 'numpy', 'jupyter', 'matplotlib',
-        'protobuf', 'nimbusml', 'aftercovid', 'onnxcustom'
+        'protobuf', 'nimbusml', 'aftercovid', 'onnxcustom',
+        'onnxconverter-common', 'tensorflow-onnx', 'ort-customops',
     ])
     dont = {'numpy', 'matplotlib', 'pandas', 'jupyter'}
     modules =[_ for _ in modules if _ not in dont]
@@ -47,8 +48,10 @@ obtenu en exécutant la requête suivante sur
     med = gr.iloc[gr.shape[0]//2, 1]
 
     sets = [
-        {'skl2onnx', 'onnxruntime', 'nimbusml', 'onnxmltools',
-         'scikit-onnxruntime', 'keras2onnx'},
+        {'skl2onnx', 'onnxruntime', 'onnxmltools',
+         'keras2onnx', 'tensorflow-onnx', 'onnxconverter-common',
+         'ort-customops'},
+        {'onnx'},
         {'jyquickhelper', 'pymyinstall', 'pyquickhelper', 'pyensae'},
         {'manydataapi', 'cpyquickhelper', 'mlstatpy', },
         {'mlinsights', 'mlprodict', },
@@ -57,7 +60,9 @@ obtenu en exécutant la requête suivante sur
         {'sparkouille', 'ensae_projects', 'actuariat_python', 'code_beatrix', 'jupytalk'},
         {'papierstat', 'teachpyx', 'ensae_teaching_cs', 'ensae_teaching_dl', 'teachpyx',
          'aftercovid', 'onnxcustom'},
-        {'tkinterquickhelper', 'pysqllike', 'pyenbc',},
+        {'tkinterquickhelper', 'pysqllike', 'pyenbc', },
+        {'nimbusml', },
+        {'numpy', 'pandas', 'jupyter', 'matplotlib'},
     ]
 
     piv = df.pivot("month", "Project", "num_downloads").fillna(0)
