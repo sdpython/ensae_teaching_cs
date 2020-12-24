@@ -50,15 +50,25 @@ DataFrame
     ../notebooks/td2a_eco_exercices_de_manipulation_de_donnees_correction_a
     ../notebooks/td2a_eco_exercices_de_manipulation_de_donnees_correction_b
     ../notebooks/td2a_eco_exercices_de_manipulation_de_donnees_correction_c
+    ../notebooks/2020_carte
 
 *Modules*
 
 * `pandas <http://pandas.pydata.org/>`_
 * `csvkit <https://csvkit.readthedocs.io/en/latest/index.html>`_
 * `geopandas <https://geopandas.org/>`_
-  (pour manipuler des coordinnées géographiques)
+  (pour manipuler des coordonnées géographiques)
 
 *Modules - grands jeux de données*
 
 * `pandas_streaming <https://github.com/sdpython/pandas_streaming/>`_
 * `vaex <https://docs.vaex.io/en/latest/installing.html>`_
+
+*Optimisation*
+
+* `swifter <https://github.com/jmcarpenter2/swifter>`_ :
+  optimisation des lambdas de :epkg:`pandas`
+* `modin.dataframe <https://github.com/modin-project/modin>`_ :
+  cette implémentation des dataframes copie l'interface de :epkg:`pandas`
+  mais propose des implémentations parallélisées sur une ou plusieurs
+  machines (:epkg:`xarray`, :epkg:`dask`)
