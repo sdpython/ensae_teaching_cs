@@ -45,10 +45,11 @@ install:
   - pip install -U git+https://github.com/sdpython/pyPdf --no-deps
   - pip install -i https://test.pypi.org/simple/ ort-nightly
   - pip install -r requirements.txt
+  - pip install pygame
   - pip uninstall -y shapely
   - pip install --no-binary shapely shapely
   # settings
   - export PYTHONPATH=src
 
 script:
-    - python setup.py unittests
+    - python setup.py unittests -d 45
