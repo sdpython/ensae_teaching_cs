@@ -14,7 +14,7 @@ install:
   # for many packages
   - "%PYTHON%\\Scripts\\pip install -r requirements-win.txt"
   # install precompiled versions not available on pypi
-  - "%PYTHON%\\Scripts\\pymy_install3 llvmlite numba cartopy shapely pyproj"
+  - "%PYTHON%\\Scripts\\pymy_install3 llvmlite numba cartopy shapely pyproj cpyquickhelper"
   # onnx
   #- git clone -b master --single-branch https://github.com/onnx/onnx.git --recursive
   #- cd onnx
