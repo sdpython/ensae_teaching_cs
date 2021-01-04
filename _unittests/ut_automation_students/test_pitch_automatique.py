@@ -26,7 +26,7 @@ class TestFeedback(ExtTestCase):
         data = os.path.abspath(os.path.dirname(__file__))
         data = os.path.join(data, "data")
         xls = os.path.join(data, "groupes_eleves_pitch.xlsx")
-        df = pandas.read_excel(xls, sheet_name=0)
+        df = pandas.read_excel(xls, sheet_name=0, engine='openpyxl')
         mails = list(enumerate_feedback(df, exc=False, fLOG=fLOG,
                                         begin="BEGIN", end="END", subject="SUBJECT",
                                         col_name="Nom", cols=["Pitch", "Code"]))
@@ -50,7 +50,7 @@ class TestFeedback(ExtTestCase):
         xls = os.path.join(data, "groupes_eleves_pitch.xlsx")
         # pymmails.sender.create_smtp_server("gmail", login, pwd)
         mailbox = None
-        df = pandas.read_excel(xls, sheet_name=0)
+        df = pandas.read_excel(xls, sheet_name=0, engine='openpyxl')
         try:
             mails = list(enumerate_send_email(mailbox, fr="me", col_name="Nom", cols=["Pitch", "Code"],
                                               df1=df, exc=False, fLOG=fLOG, delay_sending=True,

@@ -23,7 +23,7 @@ class TestRepository(unittest.TestCase):
         data = os.path.abspath(os.path.dirname(__file__))
         data = os.path.join(data, "data")
         dfile = os.path.join(data, "notes_eleves_2104_2015.xlsx")
-        df = pandas.read_excel(dfile, skiprows=5)
+        df = pandas.read_excel(dfile, skiprows=5, engine='openpyxl')
         df = df[df["Groupe"] != "moyenne"].copy()
         fLOG(df.columns)
         fLOG(df.tail())
