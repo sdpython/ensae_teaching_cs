@@ -2,7 +2,7 @@ dist: focal
 sudo: true
 language: python
 python:
-  - "3.9"
+  - "3.8"
 addons:
 -  apt:
 -    packages:
@@ -31,14 +31,14 @@ before_install:
     - export LLVM_CONFIG=/usr/bin/llvm-config
     - sudo apt-get -y install graphviz
     # onnx
-    - sudo apt-get install protobuf-compiler libprotoc-dev cmake
-    - git clone -b master --single-branch https://github.com/onnx/onnx.git --recursive
-    - cd onnx
-    - export ONNX_ML=1
-    - export ONNX_BUILD_TESTS=1
-    - export ONNXIFI_DUMMY_BACKEND=1
-    - pip install -e .
-    - cd ..
+    #- sudo apt-get install protobuf-compiler libprotoc-dev cmake
+    #- git clone -b master --single-branch https://github.com/onnx/onnx.git --recursive
+    #- cd onnx
+    #- export ONNX_ML=1
+    #- export ONNX_BUILD_TESTS=1
+    #- export ONNXIFI_DUMMY_BACKEND=1
+    #- pip install -e .
+    #- cd ..
 
 install:
   # extra dependencies

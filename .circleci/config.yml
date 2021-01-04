@@ -150,6 +150,7 @@ jobs:
           name: wheel
           command: |
             . venv/bin/activate
+            export PYTHONPATH=src
             python setup.py bdist_wheel
             mkdir -p test-reports/dist
             cp dist/*.whl test-reports/dist
