@@ -31,8 +31,10 @@ statsmodels
 sympy
 toolz
 ujson
-xarray
 wheel
+xarray
+xlrd
+xlsxwriter
 
 # other
 aequitas

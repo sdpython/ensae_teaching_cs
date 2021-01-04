@@ -12,6 +12,7 @@ jupyter
 matplotlib
 nbformat
 numpy
+openpyxl
 pandas
 psutil
 pybind11
@@ -22,4 +23,6 @@ pyquickhelper
 pyshp
 scikit-learn
 threadpoolctl
+xlrd
+xlsxwriter
 wheel
