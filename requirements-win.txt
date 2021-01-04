@@ -22,6 +22,7 @@ pymyinstall
 pyquickhelper
 pyshp
 scikit-learn
+statsmodels
 threadpoolctl
 xlrd
 xlsxwriter
