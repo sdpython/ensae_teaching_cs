@@ -17,6 +17,7 @@ networkx
 nltk
 numba
 numpy
+openpyxl
 pandas>=1.0
 pillow
 pyproj
