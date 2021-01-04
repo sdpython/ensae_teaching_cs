@@ -110,8 +110,7 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip freeze | grep onnx
-            pip install onnxruntime>=1.6.0 --verbose
-            pip show onnxruntime
+            pip install onnxruntime>=1.6.0
 
       - save_cache:
           paths:
