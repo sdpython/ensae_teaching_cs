@@ -143,7 +143,7 @@ jobs:
             export DISPLAY=localhost:0.0
             # unittest
             export PYTHONPATH=src
-            python setup.py unittests -d 15 -g ".*((LONG)|(SKIP)|(notebooks)).*"
+            python setup.py unittests -d 15 -g ".*((LONG)|(SKIP)|(notebook)).*"
           # Some tests take for ever, cutting the list.
 
       - run:
