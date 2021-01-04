@@ -119,3 +119,6 @@ xgboost
 xlrd
 xlsxwriter
 xlwt
+
+# dask
+fsspec>=0.3.3

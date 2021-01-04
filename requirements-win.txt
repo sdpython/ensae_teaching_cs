@@ -28,4 +28,5 @@ statsmodels
 threadpoolctl
 xlrd
 xlsxwriter
+werkzeug
 wheel

@@ -69,7 +69,8 @@ Xavier
 # Lecture des de la feuille Excel
 
 import pandas
-df = pandas.read_excel(student, sheet_name=0, skiprows=skiprows, engine='openpyxl')
+df = pandas.read_excel(student, sheet_name=0,
+                       skiprows=skiprows, engine='openpyxl')
 
 if len(df.columns) < 4:
     raise ValueError("Probably an issue while reading the spreadsheet:\n{0}\n{1}".format(

@@ -52,4 +52,4 @@ install:
   - export PYTHONPATH=src
 
 script:
-    - python setup.py unittests -d 45
+    - python setup.py unittests -d 45 -g ".*((LONG)|(SKIP)|(session9)).*"

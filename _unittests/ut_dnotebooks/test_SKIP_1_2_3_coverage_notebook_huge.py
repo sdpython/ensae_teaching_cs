@@ -6,8 +6,10 @@
 import sys
 import os
 import unittest
+import warnings
 from pyquickhelper.loghelper import fLOG, run_cmd
-from pyquickhelper.pycode import get_temp_folder, add_missing_development_version, skipif_appveyor
+from pyquickhelper.pycode import (
+    get_temp_folder, add_missing_development_version, skipif_appveyor)
 
 
 class TestNotebook123CoverageHuge(unittest.TestCase):
@@ -82,8 +84,11 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
                             cmd, out, err, "\n".join(lines), pp))
             return
 
-        import tables  # pylint: disable=E0401
-        assert tables is not None
+        try:
+            import tables  # pylint: disable=E0401
+        except ImportError:
+            warnings.warn("tables is not installed")
+            return
         this = os.path.abspath(os.path.dirname(tables.__file__))
         self.a_test_notebook_runner(
             "ml_huge", "expose", additional_path=[this])

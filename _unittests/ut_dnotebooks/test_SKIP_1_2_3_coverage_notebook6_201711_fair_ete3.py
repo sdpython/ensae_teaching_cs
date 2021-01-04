@@ -3,8 +3,9 @@
 @brief      test log(time=13s)
 """
 import unittest
+import warnings
 from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import add_missing_development_version
+from pyquickhelper.pycode import add_missing_development_version, is_travis_or_appveyor
 
 
 class TestNotebook1236Coverage201711fair(unittest.TestCase):
@@ -29,6 +30,23 @@ class TestNotebook1236Coverage201711fair(unittest.TestCase):
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
+
+        if is_travis_or_appveyor():
+            # no fair test
+            return
+
+        # ete3 is needed by fairtest.
+        try:
+            import ete3
+        except ImportError:
+            warnings.warn("ete3 not installed.")
+            return
+
+        try:
+            import fairtest
+        except ImportError:
+            warnings.warn("fairtest not installed.")
+            return
 
         def valid(cell):
             return '[inv]' not in cell
