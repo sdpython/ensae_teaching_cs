@@ -25,6 +25,7 @@ class TestRepository(unittest.TestCase):
         dfile = os.path.join(data, "notes_eleves_2104_2015.xlsx")
         df = pandas.read_excel(dfile, skiprows=5, engine='openpyxl')
         df = df[df["Groupe"] != "moyenne"].copy()
+        df = df[~df["Eleves"].isna()].copy()
         fLOG(df.columns)
         fLOG(df.tail())
         fLOG(df.shape)
@@ -32,12 +33,10 @@ class TestRepository(unittest.TestCase):
                   "one_name.another_name.third.fourth@machin.fr"]
         temp = get_temp_folder(__file__, "temp_repository")
         try:
-            proj = ProjectsRepository.create_folders_from_dataframe(df, temp, col_subject="sujet",
-                                                                    fLOG=fLOG, col_group=None,
-                                                                    col_student="Eleves",
-                                                                    col_mail=None,
-                                                                    email_function=emails,
-                                                                    skip_if_nomail=True)
+            proj = ProjectsRepository.create_folders_from_dataframe(
+                df, temp, col_subject="sujet", fLOG=fLOG, col_group=None,
+                col_student="Eleves", col_mail=None, email_function=emails,
+                skip_if_nomail=True)
         except ProjectsRepository.MailNotFound:
             pass
 
@@ -45,12 +44,10 @@ class TestRepository(unittest.TestCase):
                   "firstname.SECOND@hhh.fr",
                   "one_name.another_name.third.fourth@machin.fr"]
 
-        proj = ProjectsRepository.create_folders_from_dataframe(df, temp, col_subject="sujet",
-                                                                fLOG=fLOG, col_group=None,
-                                                                col_student="Eleves",
-                                                                col_mail=None,
-                                                                email_function=emails,
-                                                                must_have_email=False)
+        proj = ProjectsRepository.create_folders_from_dataframe(
+            df, temp, col_subject="sujet", fLOG=fLOG, col_group=None,
+            col_student="Eleves", col_mail=None, email_function=emails,
+            must_have_email=False)
 
         do_test = True
         if do_test:

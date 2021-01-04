@@ -22,30 +22,33 @@ env:
     - PYTHONUNBUFFERED=True
     - SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=disk
 
+before_install:
+    - sudo apt-get install libgeos-dev libproj-dev proj-data graphviz libblas-dev liblapack-dev
+    - wget https://apt.llvm.org/llvm.sh
+    - chmod +x llvm.sh
+    - sudo ./llvm.sh 10
+    - ls /usr/bin/llvm*
+    - export LLVM_CONFIG=/usr/bin/llvm-config
+    - sudo apt-get -y install graphviz
+    # onnx
+    - sudo apt-get install protobuf-compiler libprotoc-dev cmake
+    - git clone -b master --single-branch https://github.com/onnx/onnx.git --recursive
+    - cd onnx
+    - export ONNX_ML=1
+    - export ONNX_BUILD_TESTS=1
+    - export ONNXIFI_DUMMY_BACKEND=1
+    - pip install -e .
+    - cd ..
+
 install:
-  - sudo apt-get install libgeos-dev libproj-dev proj-data graphviz libblas-dev liblapack-dev
-  - wget https://apt.llvm.org/llvm.sh
-  - chmod +x llvm.sh
-  - sudo ./llvm.sh 10
-  - ls /usr/bin/llvm*
-  - export LLVM_CONFIG=/usr/bin/llvm-config
   # extra dependencies
   # - pip install -U git+https://github.com/sdpython/pyPdf --no-deps
   - pip install -i https://test.pypi.org/simple/ ort-nightly
   - pip install -r requirements.txt
   - pip uninstall -y shapely
   - pip install --no-binary shapely shapely
-  # onnx
-  - sudo apt-get install protobuf-compiler libprotoc-dev cmake
-  - git clone -b master --single-branch https://github.com/onnx/onnx.git --recursive
-  - cd onnx
-  - export ONNX_ML=1
-  - export ONNX_BUILD_TESTS=1
-  - export ONNXIFI_DUMMY_BACKEND=1
-  - pip install -e .
-  - cd ..
   # settings
   - export PYTHONPATH=src
 
 script:
-  - python setup.py unittests
+    - python setup.py unittests
