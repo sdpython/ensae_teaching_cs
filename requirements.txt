@@ -1,3 +1,39 @@
+# conda
+biopython
+bokeh
+cartopy
+cffi
+cvxopt
+Cython
+cytoolz
+dask
+datashape
+flask
+h5py
+jupyter
+matplotlib
+notebook
+networkx
+nltk
+numba
+numpy
+pandas>=1.0
+pillow
+pyproj
+pyzmq
+scikit-image
+scikit-learn
+scipy
+seaborn
+Sphinx>=2.0
+statsmodels
+sympy
+toolz
+ujson
+xarray
+wheel
+
+# other
 aequitas
 autopep8
 bayespy
@@ -29,14 +65,14 @@ lifelines
 lightgbm
 lightning-python
 manydataapi
-mlinsights>=0.2.360
+mlinsights>=0.3
 mlprodict
 mlstatpy
 mpld3
 msgpack!=0.6.0  # https://github.com/explosion/spaCy/issues/2995
 mutagen
 nbconvert>=6.0.2
-onnx>=1.7.0
+onnx>=1.8.0
 onnxruntime
 opencv-python
 pandas_streaming
@@ -57,7 +93,7 @@ pylzma
 pymmails>=0.3
 pympler
 pymyinstall
-pyquickhelper>=1.9.3280
+pyquickhelper>=1.10
 pyrsslocal
 python-jenkins
 pywaffle

@@ -9,14 +9,17 @@ obtenu en exécutant la requête suivante sur
 `Google BigQuery <https://console.cloud.google.com/bigquery>`_.
 
 .. runpython::
+    :showcode:
 
     query = """#standardSQL
     SELECT
       file.project as Project,
       COUNT(*) AS num_downloads,
       SUBSTR(_TABLE_SUFFIX, 1, 6) AS `month`
-    FROM `the-psf.pypi.downloads202008*`
-    GROUP BY `month`, `Project`"""
+    FROM `the-psf.pypi.downloads202011*`
+    WHERE __CONDITION__
+    GROUP BY `month`, `Project`
+    """
 
     from ensae_teaching_cs.automation import get_teaching_modules
     modules = get_teaching_modules()

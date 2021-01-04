@@ -10,16 +10,26 @@ init:
 
 install:
   - "%PYTHON%\\python -m pip install --upgrade pip"
-  - "%PYTHON%\\Scripts\\pip install numpy pylzma pymyinstall"
-  - "%PYTHON%\\Scripts\\pymy_install3 cartopy"
-  - "%PYTHON%\\Scripts\\pip install -r requirements_conda.txt"
-  - "%PYTHON%\\Scripts\\pip install -r requirements.txt"
-  - "%PYTHON%\\Scripts\\pip install pygame==2.0.0.dev10"
-  - "%PYTHON%\\Scripts\\pip install -U git+https://github.com/sdpython/pyPdf --no-deps"
-  - "%PYTHON%\\Scripts\\pip install tools"
-  # - "%PYTHON%\\Scripts\\pip install csharpy pythonnet"
+  - pip install wheel
+  # for many packages
+  - "%PYTHON%\\Scripts\\pip install -r requirements-win.txt"
+  # install precompiled versions not available on pypi
+  - "%PYTHON%\\Scripts\\pymy_install3 llvmlite numba"
+  # onnx
+  #- git clone -b master --single-branch https://github.com/onnx/onnx.git --recursive
+  #- cd onnx
+  #- set ONNX_ML=1
+  #- set ONNX_BUILD_TESTS=1
+  #- set ONNXIFI_DUMMY_BACKEND=1
+  #- python setup.py bdist_wheel
+  #- dir dist
+  #- python setup.py install
+  #- cd ..
+  # onnxruntime
+  - "%PYTHON%\\Scripts\\pip install -i https://test.pypi.org/simple/ ort-nightly"
+  # other dependencies
+  - "%PYTHON%\\Scripts\\pip install -r requirements.txt --no-deps"
   - set PYTHONPATH=src
-  - "%PYTHON%\\Scripts\\pip freeze"
 
 build: off
 

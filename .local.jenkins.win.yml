@@ -2,7 +2,7 @@
 language: python
 
 python:
-  - { PATH: "{{replace(Python37, '\\', '\\\\')}}", VERSION: 3.7, DIST: std, PYTHONPATH: src }
+  - { PATH: "{{replace(Python39, '\\', '\\\\')}}", VERSION: 3.9, DIST: std, PYTHONPATH: src }
   
 virtualenv:
   - path: {{ospathjoin(root_path, pickname("%NAME_JENKINS%", project_name + "_%VERSION%_%DIST%_%NAME%"), "_venv")}}
@@ -34,14 +34,14 @@ script:
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*notebook_eleves.*\"", NAME: "UT_NBELEVE" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*students.*\"", NAME: "UT_STUDENTS" }
   - { CMD: "python -X faulthandler -X showrefcount -u setup.py unittests -e \".*internet.*\"", NAME: "UT_INTERNET" }
-  - if [ ${VERSION} == "3.7" and ${DIST} == "std" ]
+  - if [ ${VERSION} == "3.9" and ${DIST} == "std" ]
       then 
         --CMD=echo skip unit test;;
         --NAME=DOC1;;
         --CLEAN=0;;
         --TIMEOUT=5400;;
       fi
-  - if [ ${VERSION} == "3.7" and ${DIST} == "std" ]
+  - if [ ${VERSION} == "3.9" and ${DIST} == "std" ]
       then 
         --CMD=echo skip unit test;;
         --NAME=DOC3;;
@@ -50,7 +50,7 @@ script:
       fi
 after_script:
   - python -u setup.py bdist_wheel
-  - if [ ${DIST} != "conda" and ${NAME} == "UT" ] then copy dist\*.whl {{root_path}}\..\..\local_pypi\local_pypi_server fi
+  - if [ ${NAME} == "UT" ] then copy dist\*.whl {{root_path}}\..\..\local_pypi\local_pypi_server fi
 documentation:
   - if [ ${NAME} == "UT" ] then python -u setup.py build_sphinx html1 fi
   - if [ ${NAME} == "UT" ] then python -u setup.py build_sphinx html3 fi

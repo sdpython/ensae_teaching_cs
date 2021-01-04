@@ -1,8 +1,8 @@
-dist: bionic
+dist: focal
 sudo: true
 language: python
 python:
-  - "3.8"
+  - "3.9"
 addons:
 -  apt:
 -    packages:
@@ -14,28 +14,27 @@ addons:
       - liblapack-dev
       - gfortran      
       - libgeos-dev
+
 env:
   global:
     - LD_PRELOAD=/lib/x86_64-linux-gnu/libSegFault.so
     - SEGFAULT_SIGNALS=all
     - PYTHONUNBUFFERED=True
     - SDL_VIDEODRIVER=dummy SDL_AUDIODRIVER=disk
+
 install:
-  - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-  - bash miniconda.sh -b -p $HOME/miniconda
-  - export PATH="$HOME/miniconda/bin:$PATH"
-  - hash -r
-  - conda config --set always_yes yes --set changeps1 no
-  - conda update -q conda
-  - conda install conda-build
-  - conda install -q --file=requirements_conda.txt
-  # - conda install -c cogsci pygame
+  - sudo apt-get install libgeos-dev libproj-dev proj-data graphviz libblas-dev liblapack-dev
+  - wget https://apt.llvm.org/llvm.sh
+  - chmod +x llvm.sh
+  - sudo ./llvm.sh 10
+  - ls /usr/bin/llvm*
+  - export LLVM_CONFIG=/usr/bin/llvm-config
+  # extra dependencies
+  # - pip install -U git+https://github.com/sdpython/pyPdf --no-deps
   - pip install -r requirements.txt
-  - pip install pygame==2.0.0.dev10
-  - pip install -U git+https://github.com/sdpython/pyPdf --no-deps
-  - pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
-  - pip install cairocffi cairosvg
+  - pip uninstall -y shapely
+  - pip install --no-binary shapely shapely
   - export PYTHONPATH=src
-  - pip freeze
+
 script:
   - python setup.py unittests

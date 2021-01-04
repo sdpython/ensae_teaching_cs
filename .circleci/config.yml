@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.8.5
+      - image: circleci/python:3.8.7
     
     working_directory: ~/repo
     
@@ -14,20 +14,32 @@ jobs:
           - v2-dependencies-{{ checksum "requirements.txt" }}
           - v2-dependencies-
 
+#       - run:
+#           name: Install omp
+#           command: |
+#                     sudo apt-get install -y libomp-dev
+          
       - run:
           name: Install pandoc
           command: |
                     sudo apt-get update 
-                    wget https://github.com/jgm/pandoc/releases/download/2.11.2/pandoc-2.11.2-1-amd64.deb
-                    sudo dpkg -i pandoc-2.11.2-1-amd64.deb
+                    wget https://github.com/jgm/pandoc/releases/download/2.11.3.2/pandoc-2.11.3.2-1-amd64.deb
+                    sudo dpkg -i pandoc-2.11.3.2-1-amd64.deb
           
       - run:
-          name: Install cmake
+          name: Install tex
           command: |
-                    sudo apt-get install -y cmake
+                    sudo apt-get install -y texlive
+                    sudo apt-get install -y texlive-latex-extra
+                    sudo apt-get install -y dvipng
+          
+      - run:
+          name: install language package for onnxruntime
+          command: |
+                    sudo locale-gen
 
       - run:
-          name: Install 7z
+          name: Install 7z, unrar
           command: |
                     sudo apt-get install -y p7zip-full
           
@@ -42,157 +54,114 @@ jobs:
                     sudo apt-get install -y graphviz
 
       - run:
-          name: install ffmpeg
+          name: Install llvmlite
           command: |
-                    sudo apt-get install ffmpeg
+            sudo apt-get install lsb-release wget software-properties-common
+            wget https://apt.llvm.org/llvm.sh
+            chmod +x llvm.sh
+            sudo ./llvm.sh 10
+            ls /usr/bin/llvm*
 
       - run:
-          name: Install cython
+          name: Install protobuf-compiler cmake
           command: |
-            python3 -m venv venv
+            sudo apt-get install protobuf-compiler libprotoc-dev cmake
+
+      - run:
+          name: Install standard libraries
+          command: |
+            python -m venv venv
             . venv/bin/activate
-            pip install cython
+            pip install scipy matplotlib numpy cython pandas wheel pybind11
 
       - run:
-          name: Install gdal
+          name: Install numba, llvmlite
           command: |
-            sudo apt-get install -y python-gdal gdal-bin libc6
-
-      - run:
-          name: Install pyproj for cartopy
-          command: |
-            sudo apt-get install -y libproj-dev proj-bin proj-data libgeos-dev python-gdal gdal-bin
-            python3 -m venv venv
+            python -m venv venv
             . venv/bin/activate
-            pip install pyproj
+            # export LLVM_CONFIG=/usr/local/opt/llvm/bin/llvm-config
+            sudo ln -s /usr/bin/llvm-config-10 /usr/bin/llvm-config
+            pip install llvmlite numba
+
+#      - run:
+#          name: Build onnx
+#          command: |
+#            python3 -m venv venv
+#            git clone -b master --single-branch https://github.com/onnx/onnx.git --recursive
+#            cd onnx
+#            export ONNX_ML=1
+#            export ONNX_BUILD_TESTS=1
+#            export ONNXIFI_DUMMY_BACKEND=1
+#            python setup.py bdist_wheel
+#            ls dist
+#            python setup.py install
+#            cd ..
 
       - run:
-          name: Install pygame
-          command: |
-                    sudo apt-get install libasound2-dev
-                    sudo apt-get install libx11-dev
-                    sudo apt-get -y install xvfb pulseaudio
-                    sudo apt-get install -y python-pygame
-
-      - run:
-          name: Install hdf5 (1)
-          command: |
-            sudo apt-get install libhdf5-dev libblosc-dev liblzo2-dev
-
-      # statsmodels setup.py requires it
-      - run:
-          name: install numpy
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install numpy
-
-      # skimage setup.py requires it
-      - run:
-          name: install cython
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install cython
-
-      - run:
-          name: install dependencies (1) - requirements_conda
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install -r requirements_conda.txt
-            
-      - run:
-          name: install dependencies (2) - requirements
+          name: install dependencies (2)
           command: |
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
-            
-      - run:
-          name: install dependencies (2) - cairo
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install cairocffi cairosvg
-            
-      - run:
-          name: install dependencies (3) - sphinxcontrib, datashader, pyPDF
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install git+https://github.com/bokeh/datashader.git --upgrade --no-deps
-            pip install git+https://github.com/sdpython/pyPdf --upgrade --no-deps
-            
-      - run:
-          name: install dependencies (4) - pygame
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install pygame==2.0.0.dev10
-            
-      - run:
-          name: install dependencies (5) - fairtest
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install https://github.com/sdpython/fairtest/releases/download/0.1/fairtest-0.1-py3-none-any.whl
-            
-      - run:
-          name: pip freeze
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            python3 -m pip freeze
 
       - run:
-          name: Install tex
+          name: install onnxruntime
           command: |
-                    sudo apt-get install -y texlive
-                    sudo apt-get install -y texlive-latex-extra
-                    sudo apt-get install -y texlive-lang-french
-                    sudo apt-get install -y texlive-xetex
-                    sudo apt-get install -y dvipng
-          
+            python3 -m venv venv
+            . venv/bin/activate
+            pip freeze | grep onnx
+            pip install onnxruntime>=1.6.0 --verbose
+            pip show onnxruntime
+
       - save_cache:
           paths:
             - ./venv
           key: v2-dependencies-{{ checksum "requirements.txt" }}
         
       - run:
+          name: install sklearn-onnx, onnxconverter-common
+          command: |
+            . venv/bin/activate
+            pip install git+https://github.com/xadupre/onnxconverter-common.git@jenkins --upgrade
+            pip install git+https://github.com/xadupre/sklearn-onnx.git@jenkins --upgrade
+
+      - run:
+          name: check list of dependencies
+          command: |
+            python -m venv venv
+            . venv/bin/activate
+            pip freeze
+            apt list --installed
+        
+      - run:
           name: run tests
           command: |
             . venv/bin/activate
-            export AUDIODEV=null
-            export SDL_VIDEODRIVER=dummy
-            export SDL_AUDIODRIVER=disk
-            export DISPLAY=localhost:0.0
             export PYTHONPATH=src
-            python setup.py unittests
+            python setup.py unittests -d 15 -g ".*((LONG)|(SKIP)|(notebooks)).*"
+          # Some tests take for ever, cutting the list.
 
       - run:
           name: wheel
           command: |
             . venv/bin/activate
-            export PYTHONPATH=src
             python setup.py bdist_wheel
             mkdir -p test-reports/dist
             cp dist/*.whl test-reports/dist
+            mkdir -p test-reports/src
+            cp -r  ensae_teaching_cs test-reports/src
 
-      - run:
-          name: documentation
-          command: |
-            . venv/bin/activate
-            export PYTHONPATH=src
-            echo SKIPPED
-            # python setup.py build_sphinx html1 nblight
-            
-      - run:
-          name: copy documentation
-          command: |
-            echo SKIPPED
-            # mkdir -p test-reports/doc
-            # zip -r -9  test-reports/doc/documentation_html.zip _doc/sphinxdoc/build/html
+#      - run:
+#          name: documentation
+#          command: |
+#           . venv/bin/activate
+#           python setup.py build_sphinx
+#           
+#      - run:
+#          name: copy documentation
+#          command: |
+#           mkdir -p test-reports/doc
+#           zip -r -9  test-reports/doc/documentation_html.zip _doc/sphinxdoc/build/html
             
       - store_artifacts:
           path: test-reports
