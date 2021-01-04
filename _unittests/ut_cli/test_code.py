@@ -39,7 +39,7 @@ class TestCodeCli(ExtTestCase):
         st = TempBuffer()
         main(args="inspect_source_code --help".split(), fLOG=st.fprint)
         res = str(st)
-        self.assertIn("Counts groups extracted", res)
+        self.assertIn("usage: inspect_source_code", res)
 
     def test_inspect_code(self):
         fold = os.path.abspath(os.path.dirname(__file__))
