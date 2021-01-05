@@ -24,6 +24,7 @@ pygame
 pylint
 pymyinstall
 pyquickhelper
+python-jenkins
 pyshp
 scikit-learn
 statsmodels
