@@ -1,9 +1,11 @@
 astroid
+blockdiag
 branca
 cython
 docutils
 et_xmlfile
 flask
+funcparserlib
 ijson
 importlib_metadata
 ipython
