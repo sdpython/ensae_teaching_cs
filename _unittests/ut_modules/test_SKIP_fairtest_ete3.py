@@ -1,7 +1,6 @@
 """
 @brief      test log(time=6s)
 """
-import sys
 import os
 import unittest
 import warnings
@@ -22,13 +21,13 @@ class TestModulesFairTest(unittest.TestCase):
 
         # ete3 is needed by fairtest.
         try:
-            import ete3
+            import ete3  # pylint: disable=W0611
         except ImportError:
             warnings.warn("ete3 not installed.")
             return
 
         try:
-            import fairtest
+            import fairtest  # pylint: disable=W0611
         except ImportError:
             warnings.warn("fairtest not installed.")
             return

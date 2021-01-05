@@ -13,7 +13,7 @@ class TestNotebook1236Coverage201711fair(unittest.TestCase):
     def setUp(self):
         base = ["pymyinstall", "pyensae", "pymmails", "jyquickhelper"]
         try:
-            import fairtest
+            import fairtest  # pylint: disable=W0611
             self.fairtest_installed = fairtest
         except ImportError:
             self.fairtest_installed = None
