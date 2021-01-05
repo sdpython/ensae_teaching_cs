@@ -22,6 +22,7 @@ pandas
 psutil
 pybind11
 pycodestyle
+pycryptodomex
 pygame
 pylint
 pymyinstall

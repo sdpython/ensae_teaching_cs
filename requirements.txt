@@ -20,6 +20,7 @@ numpy
 openpyxl
 pandas>=1.0
 pillow
+pycryptodomex
 pyproj
 pyzmq
 scikit-image
