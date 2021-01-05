@@ -23,8 +23,6 @@ Conversion
 
 .. autosignature:: ensae_teaching_cs.helpers.video_helper.make_video
 
-.. autosignature:: ensae_teaching_cs.helpers.pypdf_helper.pdf_read_content
-
 Dataframes
 ++++++++++
 
