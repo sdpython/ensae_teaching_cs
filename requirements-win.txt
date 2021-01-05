@@ -24,8 +24,9 @@ pygame
 pylint
 pymyinstall
 pyquickhelper
-python-jenkins
 pyshp
+python-jenkins
+PyYAML
 scikit-learn
 statsmodels
 threadpoolctl

@@ -17,7 +17,7 @@ Tableau de bord et statut des dépendances
 +++++++++++++++++++++++++++++++++++++++++
 
 .. list-table::
-    :widths: 12 10 10 15 12 10 10 10
+    :widths: 12 8 8 15 14 12 10 10
     :header-rows: 1
 
     * - Module
@@ -634,9 +634,9 @@ Tableau de bord et statut des dépendances
             :target: https://circleci.com/gh/sdpython/tkinterquickhelper/tree/master
       - .. image:: https://badge.fury.io/py/tkinterquickhelper.svg
             :target: https://pypi.org/project/tkinterquickhelper
-      - .. image:: http://img.shields.io/github/issues/sdpython/tkinterhelper.png
+      - .. image:: http://img.shields.io/github/issues/sdpython/tkinterquickhelper.png
             :alt: GitHub Issues
-            :target: https://github.com/sdpython/tkinterhelper/issues
+            :target: https://github.com/sdpython/tkinterquickhelper/issues
       - .. image:: https://codecov.io/github/sdpython/tkinterquickhelper/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/tkinterquickhelper?branch=master
       -
