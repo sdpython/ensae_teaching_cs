@@ -525,13 +525,6 @@ Pour chaque version de :epkg:`Python`, il faut installer
 `pymyinstall <https://pypi.python.org/pypi/pymyinstall/>`_
 puis écrire ``pymy_install`` puis supprimer les modules qu'on
 souhaite compiler et tester (voir :ref:`l-desinstallation-modules`).
-
-Quelques modules particuliers : plus trop maintenus mais parfois utiles et parfois modifiés
-
-::
-
-    pip install https://github.com/sdpython/pyPdf/archive/trunk.zip
-
 En plus :
 
 * `Cygwin <https://www.cygwin.com/>`_

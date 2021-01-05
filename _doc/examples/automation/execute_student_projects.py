@@ -49,7 +49,7 @@ def gen_mail(mail):
 ###########################
 # lecture du fichier récupéré par le script
 # fetch_student_projects_from_gmail.py
-input = pandas.read_excel(excel_filename)
+input = pandas.read_excel(excel_filename, engine='openpyxl')
 
 ###########################
 # exécution des scripts

@@ -5,8 +5,11 @@
 History
 =======
 
-current - 2020-11-09 - 0.00Mb
+current - 2021-01-04 - 0.00Mb
 =============================
+
+0.9.3079 - 2020-11-09 - 6.67Mb
+==============================
 
 * `105`: Add function to add class names to results for ImageNet competition (2020-11-09)
 * `103`: Add way to retrieve shapefiles for French departments (2020-10-12)

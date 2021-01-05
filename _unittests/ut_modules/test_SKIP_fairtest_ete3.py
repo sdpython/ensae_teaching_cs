@@ -1,11 +1,9 @@
 """
 @brief      test log(time=6s)
 """
-
-
-import sys
 import os
 import unittest
+import warnings
 import pandas
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import is_travis_or_appveyor, get_temp_folder
@@ -17,29 +15,21 @@ class TestModulesFairTest(unittest.TestCase):
     def test_fairtest(self):
         fLOG(__file__, self._testMethodName, OutputPrint=__name__ == "__main__")
 
-        # ete3 is needed by fairtest.
-        import ete3
-        assert ete3 is not None
-        # We check it is working. Otherwise, you should remove PyQt5.
-
-        try:
-            import fairtest as skip___
-        except ImportError:
-            path = os.path.normpath(
-                os.path.abspath(
-                    os.path.join(
-                        os.path.split(__file__)[0],
-                        "..",
-                        "..",
-                        "..",
-                        "fairtest",
-                        "src")))
-            if path not in sys.path:
-                sys.path.append(path)
-            import fairtest as skip___
-
         if is_travis_or_appveyor():
             # no fair test
+            return
+
+        # ete3 is needed by fairtest.
+        try:
+            import ete3  # pylint: disable=W0611
+        except ImportError:
+            warnings.warn("ete3 not installed.")
+            return
+
+        try:
+            import fairtest  # pylint: disable=W0611
+        except ImportError:
+            warnings.warn("fairtest not installed.")
             return
 
         from fairtest import DataSource, Testing, train, test, report  # pylint: disable=E0401

@@ -104,8 +104,8 @@ class ProjectsRepository:
         if len(mails) == 0:
             if skip_if_empty:
                 return []
-            raise Exception(  # pragma: no cover
-                "unable to find the regular expression {0} in {1}".format(
+            raise RuntimeError(  # pragma: no cover
+                "Unable to find the regular expression '{0}' in '{1}'".format(
                     regex.pattern, filename))
 
         allmails = []
@@ -242,6 +242,8 @@ class ProjectsRepository:
         The second results is True if no email were found in the list.
         """
         # we check the easy case
+        if isinstance(name, float):
+            name = str(name) if not numpy.isnan(name) else ""
         if name in emails:
             return [(0, name)]
 
@@ -446,7 +448,7 @@ class ProjectsRepository:
                     raise ValueError(  # pragma: no cover
                         "jmail does not contain any @: {0}".format(jmail))
 
-            members = ", ".join(eleves)
+            members = ", ".join(map(str, eleves))
             content = [members]
             content.append("=" * len(members))
             content.append("")
@@ -462,7 +464,7 @@ class ProjectsRepository:
             content.append("")
             content.append("")
 
-            last = "-".join(ul(a) for a in sorted(eleves))
+            last = "-".join(ul(a) for a in sorted(map(str, eleves)))
 
             folder = os.path.join(root, last)
             filename = os.path.join(folder, report)

@@ -73,7 +73,7 @@ else:
 
 path_df = os.path.join(dest_folder, group_def)
 if os.path.exists(path_df):
-    df_group = pandas.read_excel(path_df)
+    df_group = pandas.read_excel(path_df, engine='openpyxl')
     for col in [col_subject, col_mail, col_group, col_student]:
         if col not in df_group.columns:
             raise Exception('{0} not in {1}'.format(

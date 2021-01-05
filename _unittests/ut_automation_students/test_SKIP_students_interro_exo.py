@@ -28,7 +28,7 @@ class TestInterroExo(ExtTestCase):
         temp = get_temp_folder(__file__, "temp_interro_motif")
         data = os.path.join(temp, "..", "projects", "exo_1A_2016.xlsx")
         root = os.path.join(temp, "..", "projects")
-        input = pandas.read_excel(data)
+        input = pandas.read_excel(data, engine='openpyxl')
         url = "http://www.xavierdupre.fr/enseignement/examens/1A_2016/enonce_{0}.txt"
         col_names = dict(folder="nom_prenom", mail="nom_prenom")
         df = execute_python_scripts(

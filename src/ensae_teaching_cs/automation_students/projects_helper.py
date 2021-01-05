@@ -85,7 +85,7 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
         df = dataframe
     elif dataframe.endswith("xlsx"):
         fLOG("[extract_students_mails_from_gmail_and_stores_in_folders] read dataframe", dataframe)
-        df = pandas.read_excel(dataframe)
+        df = pandas.read_excel(dataframe, engine='openpyxl')
     else:
         df = pandas.read_csv(dataframe, sep="\t", encoding="utf8")
 
