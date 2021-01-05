@@ -497,7 +497,6 @@ Lorsque les données sont volumineuses. Une solution consiste à les compresser.
 *Modules*
 
 * `ASDF <http://asdf-standard.readthedocs.io/en/latest/>`_
-* `bcolz <http://bcolz.blosc.org/>`_
 * `blosc <http://blosc.org/>`_
 * `h5py <http://www.h5py.org/>`_
 * `Zarr <https://github.com/alimanfoo/zarr>`_
