@@ -3,10 +3,12 @@ branca
 cython
 docutils
 et_xmlfile
+flask
 ijson
 importlib_metadata
 ipython
 isort
+itsdangerous
 jdcal
 joblib
 jupyter
