@@ -649,6 +649,8 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/wrapclib/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/wrapclib/tree/master
+        .. image:: https://dev.azure.com/xavierdupre3/wrapclib/_apis/build/status/sdpython.wrapclib
+            :target: https://dev.azure.com/xavierdupre3/wrapclib/
       - .. image:: https://badge.fury.io/py/wrapclib.svg
             :target: https://pypi.org/project/wrapclib
       - .. image:: http://img.shields.io/github/issues/sdpython/wrapclib.png
