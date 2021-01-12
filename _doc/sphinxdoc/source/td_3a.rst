@@ -413,6 +413,8 @@ Structures de données
   Cormen, Leiserson, Rivest, Stein.
 * `Cracking the Coding Interview <http://www.valleytalk.org/wp-content/uploads/2012/10/CrackCode.pdf>`_
 * :ref:`Ecrire du code rapide <blog-post-optim-code-2018-08>` (article de blog)
+* `The NumPy array: a structure for efficient numerical computation
+  <https://hal.inria.fr/inria-00564007/document>`_
 
 Threads et synchronisation
 ++++++++++++++++++++++++++
@@ -618,7 +620,7 @@ Map Reduce en pratique
 * Schéma des langages de map/reduce :
   `lazy evaluation <https://en.wikipedia.org/wiki/Lazy_evaluation>`_
    (évalusation presseuse, :epkg:`dask`, :epkg:`Spark`,
-   :epkg:`mars`, :epkg:`PIG`)
+   :epkg:`mars`)
 
 *Lectures*
 
@@ -633,76 +635,6 @@ Map Reduce en pratique
 
 * `Calculer sur des données massives <https://interstices.info/jcms/p_83082/calculer-sur-des-donnees-massives>`_
 * `Le hachage <https://interstices.info/jcms/c_45523/le-hachage>`_
-
-avec PIG
-++++++++
-
-:epkg:`PIG` n'est plus un langage très utilisé, il a été
-supplanté par :epkg:`Spark`. Pour l'avoir utilisé quotidiennement
-en 2008-2009, sa logique est proche du :epkg:`SQL`, il était
-et doit encore être difficile à débugger dès qu'il inclut des
-scripts non PIG traitant des lignes de texte. Mais il était
-difficile de faire du PIG sans bien comprendre le map/reduce
-alors que Spark donne l'impression c'est plus facile.
-
-Trois séances avaient été appliquées et dédiées à la découverte
-de `Hadoop <http://fr.wikipedia.org/wiki/Hadoop>`_, un environnement
-qui permet d'exécuter des tâches
-`Map/Reduce <http://fr.wikipedia.org/wiki/MapReduce>`_.
-Plusieurs angles d'approche sont possibles. Celle retenue est l'utilisation
-du langage `PIG-latin <http://en.wikipedia.org/wiki/Pig_Latin>`_ dont la logique
-ressemble beaucoup à celle du `SQL <http://fr.wikipedia.org/wiki/Structured_Query_Language>`_.
-Les outils Python simplifient la communication avec le cluster
-mais peuvent être effectuées via un terminal.
-
-.. toctree::
-    :maxdepth: 2
-
-    specials/azure
-    td_3a_A
-    td_3a_B
-    td_3a_C
-
-.. index:: PageRank, k-means, factorisation de matrice
-
-Trois projets réalisés par les élèves lors de l'année 2014-2015 :
-
-.. toctree::
-    :maxdepth: 1
-
-    notebooks/2015_page_rank
-    notebooks/2015_kmeans
-    notebooks/2015_factorisation_matrice
-
-*Lectures*
-
-* `PIG tutorial <https://developer.yahoo.com/hadoop/tutorial/pigtutorial.html>`_
-* `PIG <http://pig.apache.org/>`_, `PIG syntax <http://pig.apache.org/docs/r0.14.0/basic.html>`_
-* `commandes HDFS <http://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/FileSystemShell.html>`_
-* `commandes linux <http://doc.ubuntu-fr.org/tutoriel/console_commandes_de_base>`_
-* `azure (python) <http://www.xavierdupre.fr/app/azure-sdk-for-python/helpsphinx/index.html>`_
-* `WebHCat <http://docs.hortonworks.com/HDPDocuments/HDP1/HDP-1.2.1/bk_dataintegration/content/ch_using_hcatalog_1.html>`_
-* `command pig <http://pig.apache.org/docs/r0.12.1/start.html#run>`_
-* `HIVE <https://hive.apache.org/>`_
-* `CUBE and ROLLUP: Two Apache Pig Functions That Every Data Scientist Should Know
-  <http://joshualande.com/cube-rollup-pig-data-science/>`_
-* `How to Read and Write JSON-formatted Data With Apache Pig <http://joshualande.com/read-write-json-apache-pig/>`_
-* `Programming Pig <http://chimera.labs.oreilly.com/books/1234000001811/index.html>`_,
-  Alan Gates (accessible en ligne)
-* `Programming Hive <http://shop.oreilly.com/product/0636920023555.do>`_,
-  Edward Capriolo, Dean Wampler, Jason Rutherglen
-* `Hadoop: The Definitive Guide, 2nd Edition <http://shop.oreilly.com/product/0636920010388.do>`_,
-  Tom White  (voir aussi `GitHub <https://github.com/tomwhite/hadoop-book/>`_)
-* `Hadoop in Practice <http://it-ebooks.info/book/1028/>`_, Alex Holmes
-* `Data-Intensive Text Processing with MapReduce <http://lintool.github.io/MapReduceAlgorithms/>`_,
-  Jimmy Lin, Chris Dyer
-* `Introducing Microsoft Azure HDInsight
-  <http://blogs.msdn.com/b/microsoft_press/archive/2014/05/27/free-ebook-introducing-microsoft-azure-hdinsight.aspx>`_, Avkash Chauhan, Valentine Fontama, Michele Hart, Wee Hyong Tok, Buck Woody
-* `Introduction to Apache Pig
-  <http://www.cloudera.com/content/cloudera/en/resources/library/training/introduction-to-apache-pig.html>`_ (MOOC)
-* Le hasard en distribué, :ref:`Réservoir sampling
-  <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/reservoir_sampling.html>`
-  (:ref:`correction <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/pig_reservoir_sampling_azure_correction.html>`)
 
 .. _l-spark-3a:
 
@@ -749,24 +681,6 @@ Les notebooks ont été déplacés sur
 
 Getting started, installation, setup
 ====================================
-
-PIG
-+++
-
-Les examples sur :epkg:`PIG` ne sont plus utilisés.
-Les instructions qui suivent datent de 2015. Il est très
-probable qu'elles ne fonctionnent plus telles quelles.
-Les notebooks proposés en exemple requièrent une surcouche
-apportée par le module
-`pyenbc <http://www.xavierdupre.fr/app/pyenbc/helpsphinx/index.html>`_.
-Le python n'est pas l'objet de ce cours, les notebooks sont utilisés
-pour pouvoir regrouper dans un même document toutes les opérations
-effectuées dans un langage Map/Reduce.
-La page :ref:`l-installation-courte` décrit comment installer
-ces outils sur les trois OS principaux
-`Windows <http://www.microsoft.com/fr-fr/windows>`_,
-`OS X <http://www.apple.com/osx/>`_,
-`Linux <https://en.wikipedia.org/wiki/Linux>`_.
 
 SPARK
 +++++
@@ -819,9 +733,6 @@ Bibliographie
 * `Don't use Hadoop - your data isn't that big <http://www.chrisstucchio.com/blog/2013/hadoop_hatred.html>`_
 * `Remote Notebook with Azure <http://www.xavierdupre.fr/blog/2014-11-09_nojs.html>`_
 * `Mahout 1.0 Features by Engine <https://mahout.apache.org/users/basics/algorithms.html>`_
-* `Pig Advantages and Disadvantages <http://bugra.github.io/work/notes/2014-02-08/pig-advantages-and-disadvantages/>`_
-* `Pig Not So Foreign Language Paper Notes
-  <http://bugra.github.io/work/notes/2014-02-09/pig-not-so-foreign-language-paper-notes/>`_
 * `Tutorial: Spark-GPU Cluster Dev in a Notebook <https://iamtrask.github.io/2014/11/22/spark-gpu/>`_
 * `How CPU load averages work (and using them to triage webserver performance!)
   <http://jvns.ca/blog/2016/02/07/cpu-load-averages/>`_ *(2016/06)*
@@ -866,7 +777,9 @@ Feuilles de routes des années passées
 =====================================
 
 .. toctree::
+    :maxdepth: 1
 
     questions/route_3A_2017
     questions/cython_python
     questions/route_3A_2019
+    questions/route_3A_2020

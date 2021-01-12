@@ -153,15 +153,6 @@ car on ne peut pas tout faire avec les données disponibles sur ce site.
 
 .. index:: PageRank, k-means, factorisation de matrice
 
-Exemples d'implémentation d'algorithme en PIG
-+++++++++++++++++++++++++++++++++++++++++++++
-
-Trois projets réalisés par les élèves lors de l'année 2014-2015 :
-
-* :ref:`2015pagerankrst`
-* :ref:`2015kmeansrst`
-* :ref:`2015factorisationmatricerst`
-
 Code de survie
 ++++++++++++++
 
