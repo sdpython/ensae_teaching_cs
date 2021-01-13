@@ -6,8 +6,7 @@ import os
 import unittest
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import (
-    get_temp_folder, fix_tkinter_issues_virtualenv, ExtTestCase, skipif_circleci
-)
+    get_temp_folder, fix_tkinter_issues_virtualenv, ExtTestCase, skipif_circleci)
 from ensae_teaching_cs.tests.american_cities import american_cities
 
 
