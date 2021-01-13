@@ -2,7 +2,7 @@
 @file
 @brief backup the list of modules
 """
-import warnings
+from pyquickhelper.loghelper import get_password
 from pyquickhelper.filehelper import TransferFTP
 
 
@@ -25,19 +25,16 @@ def ftp_list_modules(ftp_location="/home/ftpuser/ftp/web/enseignement/setup",
 
     ::
 
-        keyring.get_password("ftp_list_modules", "ensae_teaching_cs2,site", "...")
-        keyring.get_password("ftp_list_modules", "ensae_teaching_cs2,login", "...")
-        keyring.get_password("ftp_list_modules", "ensae_teaching_cs2,password", "...")
+        from pyquickhelper.loghelper import get_password
+        get_password("ftp_list_modules", "ensae_teaching_cs2,site", "...")
+        get_password("ftp_list_modules", "ensae_teaching_cs2,login", "...")
+        get_password("ftp_list_modules", "ensae_teaching_cs2,password", "...")
     """
-    with warnings.catch_warnings():
-        warnings.simplefilter('ignore', DeprecationWarning)
-        import keyring
-
-    ftp_site = keyring.get_password(
+    ftp_site = get_password(
         "ftp_list_modules", "ensae_teaching_cs2,site")
-    login = keyring.get_password(
+    login = get_password(
         "ftp_list_modules", "ensae_teaching_cs2,login")
-    password = keyring.get_password(
+    password = get_password(
         "ftp_list_modules", "ensae_teaching_cs2,password")
 
     if not ftp_site:

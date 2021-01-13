@@ -14,15 +14,17 @@
 
     ::
 
-        import keyring, os
-        key = keyring.get_password("tastekid", "ensae_teaching_cs,key")
+        import os
+        from pyquickhelper.loghelper import get_password
+        key = get_password("tastekid", "ensae_teaching_cs,key")
 
     Le code précédent récupère une clé stockée grâce au code suivant :
 
     ::
 
-        import keyring, os
-        key = keyring.set_password("tastekid", "ensae_teaching_cs,key", "<la clé en question>")
+        import os
+        from pyquickhelper.loghelper import get_password
+        key = set_password("tastekid", "ensae_teaching_cs,key", "<la clé en question>")
 
     Ce code doit être exécuté une fois seulement et à chaque fois que le mot de passe
     est changé. Ce procédé évite de laisser un mot de passe en clair dans un notebook

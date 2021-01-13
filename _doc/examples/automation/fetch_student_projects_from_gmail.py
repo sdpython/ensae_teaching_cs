@@ -33,9 +33,7 @@ import sys
 import os
 import pandas
 import warnings
-with warnings.catch_warnings():
-    warnings.simplefilter('ignore', DeprecationWarning)
-    import keyring
+from pyquickhelper.loghelper import get_keyword
 
 #################################
 # Paramètres de la récupération,
@@ -106,19 +104,19 @@ from pymmails import MailBoxImap, EmailMessageRenderer, EmailMessageListRenderer
 from pymmails.render.email_message_style import template_email_html_short
 
 ###########
-# Identifiants. On utilise :epkg:`keyring` pour récupérer des mots de passe.
+# Identifiants.
 
-user = keyring.get_password("gmail", "ensae_teaching_cs,user")
-pwd = keyring.get_password("gmail", "ensae_teaching_cs,pwd")
-password = keyring.get_password("enc", "ensae_teaching_cs,pwd")
+user = get_password("gmail", "ensae_teaching_cs,user")
+pwd = get_password("gmail", "ensae_teaching_cs,pwd")
+password = get_password("enc", "ensae_teaching_cs,pwd")
 if user is None or pwd is None or password is None:
     print("ERROR: password or user or crypting password is empty, you should execute:")
     print(
-        'keyring.set_password("gmail", "ensae_teaching_cs,user", "..")')
+        'set_password("gmail", "ensae_teaching_cs,user", "..")')
     print(
-        'keyring.set_password("gmail", "ensae_teaching_cs,pwd", "..")')
+        'set_password("gmail", "ensae_teaching_cs,pwd", "..")')
     print(
-        'keyring.set_password("enc", "ensae_teaching_cs,pwd", "..")')
+        'set_password("enc", "ensae_teaching_cs,pwd", "..")')
     print("Exit")
     sys.exit(0)
 

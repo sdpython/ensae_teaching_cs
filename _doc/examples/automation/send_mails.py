@@ -84,12 +84,9 @@ fLOG("columns", df.columns)
 ###################################
 # mot de passe
 
-with warnings.catch_warnings():
-    warnings.simplefilter('ignore', DeprecationWarning)
-    import keyring
-
-user = keyring.get_password("gmail", "ensae_teaching_cs,user")
-pwd = keyring.get_password("gmail", "ensae_teaching_cs,pwd")
+from pyquickhelper.loghelper import get_keyword
+user = get_password("gmail", "ensae_teaching_cs,user")
+pwd = get_password("gmail", "ensae_teaching_cs,pwd")
 
 ###################################
 # On envoie les mails.

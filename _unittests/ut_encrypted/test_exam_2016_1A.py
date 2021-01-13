@@ -5,8 +5,7 @@
 import sys
 import os
 import unittest
-import warnings
-from pyquickhelper.loghelper import fLOG
+from pyquickhelper.loghelper import fLOG, get_password
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from pyquickhelper.filehelper import encrypt_stream, decrypt_stream
 from ensae_teaching_cs import __file__ as module_file
@@ -24,15 +23,11 @@ class TestExam20161A(unittest.TestCase):
             # no password
             return
 
-        with warnings.catch_warnings():
-            warnings.simplefilter('ignore', DeprecationWarning)
-            import keyring
         this = os.path.abspath(os.path.dirname(module_file))
         dst = os.path.join(this, "encrypted", "cryptcode_exam_2016.crypted")
         if not os.path.exists(dst) or os.stat(dst).st_size < 10:
             fLOG("crypt")
-            pwd = keyring.get_password(
-                "exam", "ensae_teaching_cs,key")
+            pwd = get_password("exam", "ensae_teaching_cs,key")
             if pwd is None:
                 raise ValueError("pwd cannot be None")
             pwd += "*" * (16 - len(pwd))
@@ -53,11 +48,8 @@ class TestExam20161A(unittest.TestCase):
             # no password
             return
 
-        with warnings.catch_warnings():
-            warnings.simplefilter('ignore', DeprecationWarning)
-            import keyring
         temp = get_temp_folder(__file__, "temp_import_exam")
-        pwd = keyring.get_password("exam", "ensae_teaching_cs,key")
+        pwd = get_password("exam", "ensae_teaching_cs,key")
         pwd += "*" * (16 - len(pwd))
         pwd = pwd.encode("ascii")
         this = os.path.abspath(os.path.dirname(module_file))
@@ -97,15 +89,11 @@ class TestExam20161A(unittest.TestCase):
 
         from ensae_teaching_cs.td_1a.vigenere import code_vigenere
 
-        with warnings.catch_warnings():
-            warnings.simplefilter('ignore', DeprecationWarning)
-            import keyring
         this = os.path.abspath(os.path.dirname(module_file))
         dst = os.path.join(this, "encrypted", "cryptcode_exam_2016.vigenere")
         if not os.path.exists(dst) or os.stat(dst).st_size < 10:
             fLOG("crypt")
-            pwd = keyring.get_password(
-                "exam", "ensae_teaching_cs,key")
+            pwd = get_password("exam", "ensae_teaching_cs,key")
             pwd = pwd.encode("ascii")
             this = os.path.join(this, "cryptcode.py")
             assert os.path.exists(this)
@@ -127,11 +115,8 @@ class TestExam20161A(unittest.TestCase):
 
         from ensae_teaching_cs.td_1a.vigenere import code_vigenere
 
-        with warnings.catch_warnings():
-            warnings.simplefilter('ignore', DeprecationWarning)
-            import keyring
         temp = get_temp_folder(__file__, "temp_import_exam_vigenere")
-        pwd = keyring.get_password("exam", "ensae_teaching_cs,key")
+        pwd = get_password("exam", "ensae_teaching_cs,key")
         pwd = pwd.encode("ascii")
         this = os.path.abspath(os.path.dirname(module_file))
         dst = os.path.join(this, "encrypted", "cryptcode_exam_2016.vigenere")

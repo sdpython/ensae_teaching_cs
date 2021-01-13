@@ -3,12 +3,8 @@
 """
 import os
 import unittest
-import warnings
 import pandas
-with warnings.catch_warnings():
-    warnings.simplefilter('ignore', DeprecationWarning)
-    import keyring
-from pyquickhelper.loghelper import fLOG
+from pyquickhelper.loghelper import fLOG, get_password
 from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
 from pyquickhelper.filehelper import zip_files
 from ensae_teaching_cs.data.crypt_helper import encrypt_data, decrypt_data
@@ -62,8 +58,7 @@ class TestCompetition(unittest.TestCase):
         if is_travis_or_appveyor():
             # no stored password
             return
-        password = keyring.get_password(
-            "cpt", "ensae_teaching_cs,pwd")
+        password = get_password("cpt", "ensae_teaching_cs,pwd")
         r = data_cpt_ENSAE_2016_11_blind_set(password)
         self.assertEqual(len(r), 7500)
         truth = r
