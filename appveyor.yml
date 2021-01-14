@@ -33,8 +33,14 @@ install:
   - set PYTHONPATH=src
 
 build: off
+
 cache:
-  - '%LOCALAPPDATA%\pip\Cache'
+  # Use the appveyor cache to avoid re-downloading large archives such
+  # the MKL numpy and scipy wheels mirrored on a rackspace cloud
+  # container, speed up the appveyor jobs and reduce bandwidth.
+  # Tips taken from scikit-learn.
+  - '%APPDATA%\pip\Cache'
+
 test_script:
   # The job is cut after an hour. Only a subset of unit test is run.
   - "%PYTHON%\\python -u setup.py unittests -d 20 -g \".*((LONG)|(SKIP)|(session9)).*\""
@@ -45,10 +51,3 @@ after_test:
 artifacts:
   - path: dist
     name: ensae_teaching_cs
-
-cache:
-  # Use the appveyor cache to avoid re-downloading large archives such
-  # the MKL numpy and scipy wheels mirrored on a rackspace cloud
-  # container, speed up the appveyor jobs and reduce bandwidth.
-  # Tips taken from scikit-learn.
-  - '%APPDATA%\pip\Cache'
