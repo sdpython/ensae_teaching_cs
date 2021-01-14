@@ -51,5 +51,6 @@ install:
   # settings
   - export PYTHONPATH=src
 
+cache: pip
 script:
     - python setup.py unittests -d 45 -g ".*((LONG)|(SKIP)|(session9)).*"

@@ -33,7 +33,8 @@ install:
   - set PYTHONPATH=src
 
 build: off
-
+cache:
+  - '%LOCALAPPDATA%\pip\Cache'
 test_script:
   # The job is cut after an hour. Only a subset of unit test is run.
   - "%PYTHON%\\python -u setup.py unittests -d 20 -g \".*((LONG)|(SKIP)|(session9)).*\""
