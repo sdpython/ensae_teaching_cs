@@ -163,7 +163,7 @@ if is_local():
         blog_list=os.path.abspath(os.path.join(
             "src", project_var_name, package_data[project_var_name][0])),
         covtoken=("5e030cea-7d27-46e7-bb2e-2fc3db0ae9f6",
-                  "'_UT_37_std' in outfile"),
+                  "'_UT_39_std' in outfile"),
         nbformats=nbformats, layout=layout,
         fLOG=logging_function, github_owner="sdpython")
 else:
