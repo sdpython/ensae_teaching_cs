@@ -6,8 +6,7 @@ python:
       VERSION: 3.9,
       DIST: std,
       PYINT: python3.9,
-      PYTHONPATH: src,
-      LD_LIBRARY_PATH: /usr/local/python-3.9.1 }
+      PYTHONPATH: src }
   
 virtualenv:
   - path: {{ospathjoin(root_path, pickname("$NAME_JENKINS", project_name + "_$VERSION_$DIST_$NAME"), "_venv")}}
