@@ -9,18 +9,19 @@ from pyquickhelper.pandashelper import df2rst
 
 def rst_table_modules(classifier=False):
     """
-    Produces a table with all modules recommended to do machine learning.
+    Produces a table with some modules useful
+    to do machine learning.
 
     @param      classifier  keep classifiers?
     @return                 string
     """
     try:
-        from pymyinstall.packaged import ensae_fullset, classifiers2string
+        from pymyinstall.packaged import small_set, classifiers2string
     except KeyError:
         from pyquickhelper.pycode.pip_helper import fix_pip_902
         fix_pip_902()
-        from pymyinstall.packaged import ensae_fullset, classifiers2string
-    mod = ensae_fullset()
+        from pymyinstall.packaged import small_set, classifiers2string
+    mod = small_set()
     mod.sort()
     df = pandas.DataFrame(_.as_dict(rst_link=True) for _ in mod)
     if classifier:
