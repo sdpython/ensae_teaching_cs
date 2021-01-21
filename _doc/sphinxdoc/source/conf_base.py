@@ -3,6 +3,7 @@ import sys
 import os
 from pyquickhelper.helpgen.default_conf import set_sphinx_variables, get_default_stylesheet
 import ensae_teaching_cs
+import pydata_sphinx_theme
 
 source_path = os.path.normpath(os.path.join(
     os.path.abspath(os.path.split(__file__)[0])))
@@ -15,7 +16,8 @@ except ImportError:
 
 
 set_sphinx_variables(__file__, "Python dans tous ses états", "Xavier Dupré",
-                     2021, "sphinx_rtd_theme", None,
+                     2021, "pydata_sphinx_theme",
+                     pydata_sphinx_theme.get_html_theme_path(),
                      locals(), add_extensions=None,
                      github_repo="https://github.com/sdpython/ensae_teaching_cs.git",
                      extlinks=dict(

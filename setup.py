@@ -127,17 +127,7 @@ if is_local():
             "pyrsslocal", "pymyinstall", "mlstatpy", "tkinterquickhelper",
             "pandas_streaming", "fairtest", 'BLIBmpld3', 'manydataapi',
             'mlinsights', 'cpyquickhelper']
-    if "html1" in sys.argv:
-        layout = ["html"]
-        sys.argv = [_ for _ in sys.argv if _ != "html1"]
-    elif "html3" in sys.argv:
-        layout = [("html", "build3", {
-                           "html_theme": "bootstrap"}, "source/conf3")]
-        sys.argv = [_ for _ in sys.argv if _ != "html3"]
-    else:
-        layout = ["html", ("html", "build3", {
-                           "html_theme": "bootstrap"}, "source/conf3")]
-
+    layout = ["html"]
     if "nblight" in sys.argv:
         nbformats = ['ipynb', 'html', 'rst', 'github']
         sys.argv = [_ for _ in sys.argv if _ != "nblight"]

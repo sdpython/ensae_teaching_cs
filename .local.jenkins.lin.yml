@@ -41,20 +41,6 @@ script:
   - { CMD: "$PYINT -u setup.py unittests -e \".*notebook_eleves.*\"", NAME: "UT_NBELEVE", SCHEDULER: "H H(1-2) 24 * *" }
   - { CMD: "$PYINT -u setup.py unittests -e \".*students.*\"", NAME: "UT_STUDENTS", SCHEDULER: "H H(1-2) 24 * *" }
   - { CMD: "$PYINT -u setup.py unittests -e \".*internet.*\"", NAME: "UT_INTERNET", SCHEDULER: "H H(1-2) 24 * *" }
-#  - if [ ${VERSION} == "3.7" and ${DIST} == "std" ]
-#      then 
-#        --CMD=echo skip unit test;;
-#        --NAME=DOC1;;
-#        --CLEAN=0;;
-#        --TIMEOUT=5400;;
-#      fi
-#  - if [ ${VERSION} == "3.7" and ${DIST} == "std" ]
-#      then 
-#        --CMD=echo skip unit test;;
-#        --NAME=DOC3;;
-#        --CLEAN=0;;
-#        --TIMEOUT=5400;;
-#      fi
 
 after_script:
   - $PYINT -u setup.py bdist_wheel
@@ -63,9 +49,5 @@ after_script:
 documentation:
   # The first run of the documentation may fail, the second goes one.
   - if [ ${NAME} == "UT" ] then $PYINT -u setup.py build_sphinx fi
-  - if [ ${NAME} == "DOC1" ] then python -u setup.py build_sphinx html1 > sphinx_doc1.log 2>&1 fi
-  - if [ ${NAME} == "DOC3" ] then python -u setup.py build_sphinx html3 > sphinx_doc3.log 2>&1 fi
   - if [ ${NAME} == "UT" ] then cp -R -f _doc/sphinxdoc/build/html dist/html fi
-  - if [ ${NAME} == "UT" ] then cp -R -f _doc/sphinxdoc/build3/html dist/html3 fi
-  - if [ ${NAME} == "DOC1" ] then cp -R -f _doc/sphinxdoc/build/html dist/html fi
-  - if [ ${NAME} == "DOC3" ] then cp -R -f _doc/sphinxdoc/build3/html dist/html3 fi
+  - if [ ${NAME} == "UT" ] then cp -R -f _doc/sphinxdoc/build/html dist/html3 fi

@@ -85,6 +85,7 @@ pocket
 psutil
 pybind11
 pycodestyle
+pydata_sphinx_theme
 pydub
 pyensae>=1.2.788
 pygal

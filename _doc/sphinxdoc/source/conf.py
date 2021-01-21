@@ -14,8 +14,8 @@ except ImportError:
     sys.path.append(source_path)
     from conf_base import *
 
-html_theme = 'sphinx_rtd_theme'
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme = 'pydata_sphinx_theme'
+html_theme_path = sphinx_rtd_theme.get_html_theme_path()
 templates_path = [os.path.join(source_path, 'phdoc_static')]
 html_static_path = [os.path.join(source_path, 'phdoc_static')]
 
