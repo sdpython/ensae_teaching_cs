@@ -16,6 +16,7 @@ install:
   - $PYINT -m pip install --upgrade --no-cache-dir --no-deps --index http://localhost:8067/simple/ onnxruntime scikit-learn --extra-index-url=https://pypi.python.org/simple/
   - $PYINT -m pip install --upgrade --no-cache-dir --no-deps --index http://localhost:8067/simple/ pyquickhelper tkinterquickhelper pyensae pymmails pymyinstall pyrsslocal mlstatpy mlinsights jyquickhelper manydataapi skl2onnx onnx onnxconverter_common mlprodict cpyquickhelper pandas-streaming --extra-index-url=https://pypi.python.org/simple/
   - $PYINT -m pip install -r requirements.txt
+  - $PYINT -m pip install aequitas --no-deps
   - $PYINT --version
   - $PYINT -m pip freeze
   - export AUDIODEV=null
