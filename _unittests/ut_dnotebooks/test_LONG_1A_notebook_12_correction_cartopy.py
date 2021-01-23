@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-@brief      test log(time=51s)
+@brief      test log(time=452s)
 """
 import unittest
 from pyquickhelper.loghelper import fLOG, noLOG
