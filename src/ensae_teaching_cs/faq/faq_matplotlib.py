@@ -362,7 +362,8 @@ def graph_cities(df, names=("Longitude", "Latitude", "City"), ax=None, linked=Fa
         ax.set_extent(bounds)
     else:
         ax.set_extent([minx, maxx, miny, maxy])
-        print([minx, maxx, miny, maxy])
+        if fLOG:
+            fLOG("[graph_cities] ", [minx, maxx, miny, maxy])
 
     view = df[list(names)]
     for x, y, t in view.itertuples(index=False):

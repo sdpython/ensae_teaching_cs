@@ -6,6 +6,9 @@
 Découvrir
 =========
 
+.. contents::
+    :local:
+
 Culture algorithmique
 =====================
 
@@ -90,6 +93,7 @@ Machine learning illustré
 .. toctree::
     :maxdepth: 1
 
+    i_visualisation
     elections
     notebooks/expose_velib
     notebooks/ml_table_mortalite

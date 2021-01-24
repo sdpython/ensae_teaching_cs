@@ -105,19 +105,16 @@ Contenu des enseignements
 .. toctree::
     :maxdepth: 1
 
-    1. Algorithmes et programmation <td_1a>
-    2. Python pour un Data Scientist / Economiste <td_2a>
-    3. Eléments logiciels pour le traitement des données massives <td_3a>
-    4. Projets informatiques <projet_info>
+    1. Algorithmes <td_1a>
+    2. Datascience <td_2a>
+    3. Données massives <td_3a>
+    4. Projets <projet_info>
     5. Examens <questions/exams_1A>
     6. Découvrir <i_decouvrir>
-    7. Visualisation <i_visualisation>
-    8. Modules, Bibliographie, Articles, FAQ... <i_informations>
-    9. Getting started <i_getting_started>
-    10. Galleries d'exemples <i_galleries>
-    11. Index <i_index>
-    12. API <api/index>
-    13. Command lines <i_cmd>
+    7. Biblio, FAQ... <i_informations>
+    8. Getting started <i_getting_started>
+    9. Galleries <i_galleries>
+    10. Index, API <i_index>
 
 Getting Started - Démarrer
 ==========================

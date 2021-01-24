@@ -16,15 +16,17 @@ produit que des images statiques. D'autres libraires utilisent pleinement le jav
 notebook. La première est :epkg:`bokeh` mais il en existe d'autres qui
 migrent une librairie javascript existant vers Python ou qui sont développées spécifiquement pour
 les notebooks. C'est le cas de :epkg:`bqplot` qui permet
-assez facilement de modifier le graphique en fonction des actions de la souris. Pour choisir une librairie,
-il faut vous demander :
+assez facilement de modifier le graphique en fonction des actions de la souris.
+Pour choisir une librairie, il faut vous demander :
 
 * si le graphique que vous souhaitez faire est disponible,
 * si vous souhaitez un graphique statique ou en javascript (zoom, déplacement),
-* si vous souhaitez ajouter des animations en fonction de ce que fait la souris (afficher une valeur, changer la couleur),
+* si vous souhaitez ajouter des animations en fonction de ce que fait la souris
+  (afficher une valeur, changer la couleur),
 * si vous souhaitez faire une animations (avec un curseur pour le temps par exemple),
 * si vous souhaitez interagir avec l'utilisateur via le graphique,
-* si vous souhaitez que le graphique fasse parti d'un site web et puisse être exploité en dehors du notebook).
+* si vous souhaitez que le graphique fasse parti d'un site web et
+  puisse être exploité en dehors du notebook).
 
 Lire `10 plotting librairies <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_.
 
@@ -40,13 +42,16 @@ Galleries
 * :mod:`matplotlib_helper_xyz <ensae_teaching_cs.helpers.matplotlib_helper_xyz>` :
   trois fonctions pour afficher des **scatter plots** (graphes XY) avec plusieurs couleurs, des **lignes de niveau**,
   ou une courbe en **3D** définie à partir de quelques points
-* `2A : TD 4B, Visualisation <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
-  (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/seance6_graphes_correction.html#seance6graphescorrectionrst>`_),
+* `2A : TD 4B, Visualisation <http://www.xavierdupre.fr/app/actuariat_python/
+  helpsphinx/notebooks/seance6_graphes_enonce.html#seance6graphesenoncerst>`_
+  (`correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/
+  seance6_graphes_correction.html#seance6graphescorrectionrst>`_),
   ce notebook présente un moyen de faire une **carte** géographique, **seaborn**
 * :ref:`2A : TD 4A, Machine Learning et Marketting (correction)  <td2acorrectionsession4arst>` :
   courbe `ROC <https://fr.wikipedia.org/wiki/Receiver_operating_characteristic>`_ et
   `ACP <https://fr.wikipedia.org/wiki/Analyse_en_composantes_principales>`_ avec labels
-* :ref:`1A : TD 12, Visualisation des données <td1acenoncesession12plotrst>`  (:ref:`correction <td1acorrectionsession12rst>`) :
+* :ref:`1A : TD 12, Visualisation des données <td1acenoncesession12plotrst>`
+  (:ref:`correction <td1acorrectionsession12rst>`) :
   représentation de **graphes** (`networkx <https://networkx.github.io/>`_,
   `graphviz <http://www.graphviz.org/>`_), `Open Street Map <http://www.openstreetmap.org/>`_
   avec `folium <https://github.com/python-visualization/folium>`_
