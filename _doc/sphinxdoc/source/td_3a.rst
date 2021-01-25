@@ -226,6 +226,20 @@ GPU
   (voir `A Monte Carlo Option Pricer
   <http://nbviewer.jupyter.org/gist/harrism/835a8ca39ced77fe751d>`_)
 
+TPU, IPU, FGPA, ...
++++++++++++++++++++
+
+* `Tensor Processor Unit (TPU)
+  <https://en.wikipedia.org/wiki/Tensor_Processing_Unit>`_
+* `How different is a TPU from GPU?
+  <https://www.quora.com/How-different-is-a-TPU-from-GPU>`_
+* `Using the Graphcore IPU for traditional HPC applications
+  <http://workshops.inf.ed.ac.uk/accml/papers/2021/3rd_AccML_paper_5.pdf>`_
+* `A List of Chip/IP for Deep Learning
+  <https://medium.com/@shan.tang.g/a-list-of-chip-ip-for-deep-learning-48d05f1759ae>`_
+* `FPGA vs GPU for Machine Learning Applications: Which one is better?
+  <https://www.aldec.com/en/company/blog/167--fpgas-vs-gpus-for-machine-learning-applications-which-one-is-better>`_
+
 BLAS, LAPACK, calcul matriciel
 ++++++++++++++++++++++++++++++
 
