@@ -37,8 +37,8 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/actuariat_python/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/actuariat_python/tree/master
-      - .. image:: https://badge.fury.io/py/actuariat_python.svg
-            :target: https://pypi.org/project/actuariat_python
+      - .. image:: https://badge.fury.io/py/actuariat-python.svg
+            :target: https://pypi.org/project/actuariat-python
       - .. image:: http://img.shields.io/github/issues/sdpython/actuariat_python.png
             :alt: GitHub Issues
             :target: https://github.com/sdpython/actuariat_python/issues
@@ -92,8 +92,8 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/code_beatrix/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/code_beatrix/tree/master
-      - .. image:: https://badge.fury.io/py/code_beatrix.svg
-            :target: https://pypi.org/project/code_beatrix
+      - .. image:: https://badge.fury.io/py/code-beatrix.svg
+            :target: https://pypi.org/project/code-beatrix
       - .. image:: http://img.shields.io/github/issues/sdpython/code_beattrix.png
             :alt: GitHub Issues
             :target: https://github.com/sdpython/code_beatrix/issues
@@ -132,8 +132,8 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/ensae_projects/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/ensae_projects/tree/master
-      - .. image:: https://badge.fury.io/py/ensae_projects.svg
-            :target: https://pypi.org/project/ensae_projects
+      - .. image:: https://badge.fury.io/py/ensae-projects.svg
+            :target: https://pypi.org/project/ensae-projects
       - .. image:: http://img.shields.io/github/issues/sdpython/ensae_projects.png
             :alt: GitHub Issues
             :target: https://github.com/sdpython/ensae_projects/issues
@@ -151,8 +151,8 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/ensae_teaching_cs/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/ensae_teaching_cs/tree/master
-      - .. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
-            :target: https://pypi.org/project/ensae_teaching_cs
+      - .. image:: https://badge.fury.io/py/ensae-teaching-cs.svg
+            :target: https://pypi.org/project/ensae-teaching-cs
       - .. image:: http://img.shields.io/github/issues/sdpython/ensae_teaching_cs.png
             :alt: GitHub Issues
             :target: https://github.com/sdpython/ensae_teaching_cs/issues
@@ -170,8 +170,8 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/ensae_teaching_dl/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/ensae_teaching_dl/tree/master
-      - .. image:: https://badge.fury.io/py/ensae_teaching_dl.svg
-            :target: https://pypi.org/project/ensae_teaching_dl
+      - .. image:: https://badge.fury.io/py/ensae-teaching-dl.svg
+            :target: https://pypi.org/project/ensae-teaching-dl
       - .. image:: http://img.shields.io/github/issues/sdpython/ensae_teaching_dl.png
             :alt: GitHub Issues
             :target: https://github.com/sdpython/ensae_teaching_dl/issues
@@ -227,8 +227,8 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/lecture_citation/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/lecture_citation/tree/master
-      - .. image:: https://badge.fury.io/py/lecture_citation.svg
-            :target: https://pypi.org/project/lecture_citation
+      - .. image:: https://badge.fury.io/py/lecture-citation.svg
+            :target: https://pypi.org/project/lecture-citation
       - .. image:: http://img.shields.io/github/issues/sdpython/lecture_citation.png
             :alt: GitHub Issues
             :target: https://github.com/sdpython/lecture_citation/issues
@@ -402,8 +402,8 @@ Tableau de bord et statut des dépendances
             :target: https://dev.azure.com/xavierdupre3/pandas_streaming/
         .. image:: https://api.codacy.com/project/badge/Grade/f53b7f4d6a0447aa9ce0c4ad5df659ef
             :target: https://www.codacy.com/app/sdpython/pandas_streaming?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sdpython/pandas_streaming&amp;utm_campaign=Badge_Grade
-      - .. image:: https://badge.fury.io/py/pandas_streaming.svg
-            :target: https://pypi.org/project/pandas_streaming
+      - .. image:: https://badge.fury.io/py/pandas-streaming.svg
+            :target: https://pypi.org/project/pandas-streaming
       - .. image:: http://img.shields.io/github/issues/sdpython/pandas_streaming.png
             :alt: GitHub Issues
             :target: https://github.com/sdpython/pandas_streaming/issues

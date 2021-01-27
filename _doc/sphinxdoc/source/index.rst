@@ -221,8 +221,8 @@ sans même avoir à récupérer tous les fichiers sur votre ordinateur :
 .. image:: https://circleci.com/gh/sdpython/ensae_teaching_cs/tree/master.svg?style=svg
     :target: https://circleci.com/gh/sdpython/ensae_teaching_cs/tree/master
 
-.. image:: https://badge.fury.io/py/ensae_teaching_cs.svg
-    :target: http://badge.fury.io/py/ensae_teaching_cs
+.. image:: https://badge.fury.io/py/ensae-teaching-cs.svg
+    :target: https://pypi.org/project/ensae-teaching-cs/
 
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
     :alt: MIT License

@@ -1,5 +1,15 @@
+import io
+import os
 import pandas
 import matplotlib.pyplot as plt
+
+local_file = ("c:/temp/results-20210127-103523.csv", '202101')
+if os.path.exists(local_file[0]):
+    df = pandas.read_csv(local_file[0])
+    df['month'] = local_file[1]
+    f = io.StringIO()
+    df.to_csv(f, index=False)
+    print(f.getvalue().replace("\r\n", "\n"))
 
 url = "pypi_downloads.csv"
 df = pandas.read_csv(url)
