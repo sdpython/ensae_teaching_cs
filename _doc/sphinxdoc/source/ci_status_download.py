@@ -24,10 +24,11 @@ gr = df.groupby("Project", as_index=False).sum().sort_values(
 med = gr.iloc[gr.shape[0] // 2, 1]
 
 sets = [
-    {'skl2onnx', 'onnxruntime', 'onnxmltools',
+    {'skl2onnx', 'onnxmltools',
      'keras2onnx', 'tensorflow-onnx', 'onnxconverter-common',
      'ort-customops'},
     {'onnx'},
+    {'onnxruntime'},
     {'jyquickhelper', 'pymyinstall', 'pyquickhelper', 'pyensae'},
     {'manydataapi', 'cpyquickhelper', 'mlstatpy', },
     {'mlinsights', 'mlprodict', },
@@ -38,7 +39,7 @@ sets = [
      'aftercovid', 'onnxcustom'},
     {'tkinterquickhelper', 'pysqllike', 'pyenbc', },
     {'nimbusml', },
-    {'numpy', 'pandas', 'jupyter', 'matplotlib'},
+    {'scikit-learn'},
 ]
 
 piv = df.pivot("month", "Project", "num_downloads").fillna(0)

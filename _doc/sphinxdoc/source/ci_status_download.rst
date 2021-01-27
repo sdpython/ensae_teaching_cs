@@ -30,7 +30,7 @@ obtenu en exécutant la requête suivante sur
         'onnxconverter-common', 'tensorflow-onnx', 'ort-customops',
     ])
     dont = {'numpy', 'matplotlib', 'pandas', 'jupyter'}
-    modules =[_ for _ in modules if _ not in dont]
+    modules = [_ for _ in modules if _ not in dont]
     conds = ["file.project = '{0}'".format(m) for m in modules]
     cond = " OR ".join(conds)
     print(query.replace('__CONDITION__', cond))
@@ -51,10 +51,11 @@ obtenu en exécutant la requête suivante sur
     med = gr.iloc[gr.shape[0]//2, 1]
 
     sets = [
-        {'skl2onnx', 'onnxruntime', 'onnxmltools',
+        {'skl2onnx', 'onnxmltools',
          'keras2onnx', 'tensorflow-onnx', 'onnxconverter-common',
          'ort-customops'},
         {'onnx'},
+        {'onnxruntime'},
         {'jyquickhelper', 'pymyinstall', 'pyquickhelper', 'pyensae'},
         {'manydataapi', 'cpyquickhelper', 'mlstatpy', },
         {'mlinsights', 'mlprodict', },
@@ -65,7 +66,7 @@ obtenu en exécutant la requête suivante sur
          'aftercovid', 'onnxcustom'},
         {'tkinterquickhelper', 'pysqllike', 'pyenbc', },
         {'nimbusml', },
-        {'numpy', 'pandas', 'jupyter', 'matplotlib'},
+        {'scikit-learn'},
     ]
 
     piv = df.pivot("month", "Project", "num_downloads").fillna(0)
