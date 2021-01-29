@@ -23,16 +23,6 @@ html_split_index = True
 
 blog_root = "http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/"
 blog_background = False
-# html_context = {
-#     'css_files': get_default_stylesheet() + ['_static/my-styles.css'],
-# }
-
-# do not put it back otherwise sphinx import matplotlib before setting up its backend
-# for the sphinx command .. plot::
-# import pyquickhelper
-# import pyensae
-# import pymmails
-# import pyrsslocal
 
 custom_preamble = """\n\\newcommand{\\girafedec}[3]{ \\begin{array}{ccccc} #1 &=& #2 &+& #3 \\\\ a' &=& a &-& o  \\end{array}}
 \\newcommand{\\vecteur}[2]{\\pa{#1,\\dots,#2}}

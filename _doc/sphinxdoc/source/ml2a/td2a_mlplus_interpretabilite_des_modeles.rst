@@ -117,6 +117,8 @@ seulement.
 * `Interpretation of Neural Networks is Fragile <https://arxiv.org/pdf/1710.10547.pdf>`_
 * `Intelligible Models for HealthCare: Predicting Pneumonia Risk and Hospital 30-day Readmission
   <https://www.microsoft.com/en-us/research/wp-content/uploads/2017/06/KDD2015FinalDraftIntelligibleModels4HealthCare_igt143e-caruanaA.pdf>`_
+* `How Interpretable and Trustworthy are GAMs?
+  <https://arxiv.org/abs/2006.06466>`_
 
 *Lectures : monotonie*
 
