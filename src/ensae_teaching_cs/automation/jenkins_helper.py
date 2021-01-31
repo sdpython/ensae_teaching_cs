@@ -132,7 +132,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None, platform=None)
                 raise TypeError("{0} - {1}".format(row, type(row)))
         return new_res
     else:
-        context = {'Python37': 'python3.7'}
+        context = {'Python37': 'python3.7', 'Python38': 'python3.8', 'Python39': 'python3.9'}
         yml_data = load_yaml(pattern % '_automation', context=context)
         pyth = yml_data[0]['python']
         res = []
