@@ -27,7 +27,7 @@ install:
 script:
   - { CMD: "$PYINT -u setup.py unittests -g \".*((http)|(SKIP)|(LONG)|(GUI)|(cvxopt)|(theano)|(code_style)|(cartopy)).*\"", NAME: "UT", TIMEOUT: 3600 }  # timeout is 3600 for the documentation
   - { CMD: "$PYINT -u setup.py unittests -e \".*code_style.*\"", NAME: "UT_STYLE", SCHEDULER: "H H(1-2) 24 * *" }
-  - { CMD: "$PYINT -u setup.py unittests -e \".*cartopy.*\"", NAME: "UT_MAP", SCHEDULER: "H H(1-2) 24 * *" }
+  - { CMD: "$PYINT -u setup.py unittests -e \".*cartopy.*\"", NAME: "UT_MAP", SCHEDULER: "H H(1-2) 24 * *", TIMEOUT: 7200 }
   - { CMD: "$PYINT -u setup.py unittests -e \".*(http).*\"", NAME: "UT_HTTP", SCHEDULER: "H H(1-2) 24 * *" }
   - { CMD: "$PYINT -u setup.py unittests -e .*LONG.* -g \".*((internet)|(cvxopt)|(notebook_eleves)|(cartopy)).*\"", NAME: "UT_LONG", TIMEOUT: 3600, SCHEDULER: "H H(1-2) 24 * *" }
   - { CMD: "$PYINT -u setup.py unittests -e .*SKIP.* -g \".*((theano)|(keras)|(deep)|(scraping)|(pythonnet)|(huge)|(web)|(ete3)|(cvxopt)|(students)|(cartopy)).*\"", NAME: "UT_SKIP", SCHEDULER: "H H(1-2) 24 * *" }
