@@ -1,0 +1,31 @@
+
+.. blogpost::
+    :title: Lectures, mise en production
+    :keywords: papers, production
+    :date: 2021-02-01
+    :categories: lectures
+
+    J'ai créé ce notebook pour :ref:`2020covidrst` pour introduire
+    les modèles épidémiologiques, sujets que j'ai abordés durant mes cours
+    cette année. Cela m'a aidé à mieux anticiper les décisions
+    liées à la gestion de l'épidémie du COVID et les élèves étaient
+    curieux.
+
+    Un article qui n'a rien à voir
+    `The Indirect Convolution Algorithm <https://arxiv.org/pdf/1907.02129.pdf>`_.
+    
+    Je m'aperçois également que beaucoup de projets
+    de machine learning commencent par la mise au point
+    d'un modèle et repoussent la mise en production à plus tard,
+    sans doute parce que si la première étape échoue,
+    la seconde est inutile, bien que qu'elle soit quasi
+    identique pour tous les projets. Et une fois passée
+    la première étape, on pense surtout au modèle suivant,
+    et la mise en production est bâclée.
+
+    La mise en production
+    est un sujet récurrent qui devient vite une source de
+    coût et de problèmes. Il devrait sans doute être abordé
+    dès le début car les choix techniques pourraient
+    poser quelques contraintes sur le modèle de
+    machine learning à construire.
