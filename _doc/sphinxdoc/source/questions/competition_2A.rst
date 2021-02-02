@@ -57,7 +57,7 @@ prédiction erronnée.
 Compétition 2016 - défaut de paiement
 +++++++++++++++++++++++++++++++++++++
 
-* Liens vers la compétation sur codalab : `Python 2A ENSAE - 2016 <https://competitions.codalab.org/competitions/13431>`_.
+* Liens vers la compétition sur codalab : `Python 2A ENSAE - 2016 <https://competitions.codalab.org/competitions/13431>`_.
 * Source : `default of credit card clients Data Set  <https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients>`_
 * Données : `ensae_competition_2016.zip <https://github.com/sdpython/ensae_teaching_cs/raw/master/_doc/competitions/2016_ENSAE_2A/ensae_competition_2016.zip>`_
 * BlindSet : :func:`data_cpt_ENSAE_2016_11_blind_set <ensae_teaching_cs.data.datacpt.data_cpt_ENSAE_2016_11_blind_set>`
