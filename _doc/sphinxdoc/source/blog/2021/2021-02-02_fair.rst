@@ -1,0 +1,31 @@
+
+.. blogpost::
+    :title: Ethique, fairness, machine learning
+    :keywords: éthique
+    :date: 2021-02-02
+    :categories: fairness
+
+    La recherche dans le domaine du machine learning éthique est
+    assez disparate. Je suis tombé sur cet article    
+    `An overview of some available Fairness Frameworks & Packages
+    <https://www.linkedin.com/pulse/
+    overview-some-available-fairness-frameworks-packages-murat-durmus/>`_
+    qui reprend différentes approches sur le sujet. Il contient de nombreux
+    liens vers des articles sur le sujet. Il existe de nombreux
+    outils pour mesurer le côté éthique d'un modèle, voire d'apprendre
+    un modèle de façon éthique. La plupart du temps, c'est l'initiative
+    d'un ou plusieurs chercheurs qui arrêtent leur effort de maintenance
+    une fois leur article publié.
+
+    Quelques approches intègrent une inferace graphique.
+    Il est aussi important de mesurer numériquement le côté
+    éthique d'un modèle que de représenter visuellement les biais
+    que ceux-ci pourraient avoir. Cela rend la librairie plus difficile
+    à maintenir puisqu'il faut maintenir non seulement les calculs
+    mais aussi l'interface.
+
+    * `A comparative study of fairness-enhancing interventions in machine learning
+      <https://arxiv.org/abs/1802.04422>`_
+    * `CERTIFAI: A Common Framework to Provide Explanations and
+      Analyse the Fairness and Robustness of Black-box Models
+      <https://www.aies-conference.com/2020/wp-content/papers/099.pdf>`_

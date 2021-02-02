@@ -11,8 +11,8 @@
 
 .. _l-ml2a-mlethical:
 
-Machine Learning éthique
-++++++++++++++++++++++++
+Machine Learning éthique (fairness)
++++++++++++++++++++++++++++++++++++
 
 Toutes les entreprises ont des données. Ce qui a changé récemment est
 ce ne sont plus seulement des données à caractère personnel, l'ensemble
@@ -83,6 +83,11 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
 
 * `A Reductions Approach to Fair Classification <https://arxiv.org/pdf/1803.02453.pdf>`_
 * `FairTest: Discovering Unwarranted Associations in Data-Driven Applications <https://arxiv.org/pdf/1510.02377.pdf>`_
+* `A comparative study of fairness-enhancing interventions in machine learning
+  <https://arxiv.org/abs/1802.04422>`_
+* `CERTIFAI: A Common Framework to Provide Explanations and
+  Analyse the Fairness and Robustness of Black-box Models
+  <https://www.aies-conference.com/2020/wp-content/papers/099.pdf>`_
 
 *Lectures françaises*
 
@@ -97,6 +102,13 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
 * `Nozha Boujemaa : "Les algorithmes doivent apporter une aide à la décision mais pas en être les prescripteurs" <https://www.acteurspublics.com/2017/12/08/les-algorithmes-doivent-apporter-une-aide-a-la-decision-mais-pas-en-etre-les-prescripteurs>`_
 
 *Lectures*
+
+*2020-2021*
+
+* `An overview of some available Fairness Frameworks & Packages
+  <https://www.linkedin.com/pulse/overview-some-available-fairness-frameworks-packages-murat-durmus/>`_
+
+*2018-2020*
 
 * `Equality of Opportunity in Supervised Learning <http://ttic.uchicago.edu/~nati/Publications/HardtPriceSrebro2016.pdf>`_
 * `TransAlgo : évaluer la responsabilité et la transparence des systèmes algorithmiques <https://www.inria.fr/actualite/actualites-inria/transalgo>`_
@@ -176,8 +188,8 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
 
 *Modules*
 
-* `aequitas <https://github.com/dssg/aequitas>`_
 * `fairlearn <https://github.com/Microsoft/fairlearn>`_
+* `LiFT <https://github.com/linkedin/LiFT>`_
 * `fairness-comparison <https://github.com/algofairness/fairness-comparison>`_
   (un peu maintenu)
 * `fairness-indicators
@@ -190,9 +202,12 @@ C'est souvent le cas de code produit par des chercheurs qui
 écrive le code pour écrire un article scientifique et qui n'a
 pas vocation à être maintenu par la suite.
 
+* `aequitas <https://github.com/dssg/aequitas>`_
 * `fair-classification <https://github.com/mbilalzafar/fair-classification>`_
   (non maintenu)
-* `fairml <https://github.com/adebayoj/fairml>`_ (non maintenu)
-* `fairml-farm <https://github.com/yoshavit/fairml-farm>`_ (non maintenu)
-* `fairtest <https://github.com/columbia/fairtest>`_ (non maintenu)
-* `themis-ml <https://github.com/cosmicBboy/themis-ml>`_ (non maintenu)
+* `fairml <https://github.com/adebayoj/fairml>`_
+* `fairml-farm <https://github.com/yoshavit/fairml-farm>`_
+* `fairtest <https://github.com/columbia/fairtest>`_
+* `themis-ml <https://github.com/cosmicBboy/themis-ml>`_
+* `FairSight <https://github.com/ayong8/FairSight>`_
+* `BlackBoxAuditing <https://github.com/algofairness/BlackBoxAuditing>`_
