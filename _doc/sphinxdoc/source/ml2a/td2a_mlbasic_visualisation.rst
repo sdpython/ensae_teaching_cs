@@ -20,7 +20,8 @@ lui rajouter des informations pour analyser ou interpréter.
 Certains librairies proposent des graphes plus complets et qui
 répondent aux besoins fréquents lorsqu'on fait du machine learning.
 Et parfois, on a envie de dessiner en
-`3D <https://hypertools.readthedocs.io/en/latest/auto_examples/plot_clusters.html#sphx-glr-auto-examples-plot-clusters-py>`_.
+`3D <https://hypertools.readthedocs.io/en/latest/auto_examples/
+plot_clusters.html#sphx-glr-auto-examples-plot-clusters-py>`_.
 
 *(à venir)*
 
@@ -35,6 +36,7 @@ Et parfois, on a envie de dessiner en
 * `yellowbrick <http://www.scikit-yb.org/en/latest/index.html>`_
   (pour les données en trois dimensions)
 * `hypertools <https://hypertools.readthedocs.io/en/latest/>`_
+* `pydeck <https://deckgl.readthedocs.io/en/latest/>`_
 
 Le site `pyviz <https://pyviz.org/index.html>`_
 recense de nnombreux outils pour créer des graphes
