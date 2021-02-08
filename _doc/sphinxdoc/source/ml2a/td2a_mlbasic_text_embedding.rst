@@ -22,6 +22,13 @@ La section :ref:`l-ml2a-text-features` détaille les
 méthodes les plus courantes. La section
 :ref:`l-td2a-nlp` explore d'autres directions.
 
+*Lectures*
+
+* `Google Brain Introduces Symbolic Programming + PyGlove Library to Reformulate AutoML
+  <https://medium.com/huggingface/encoder-decoders-in-transformers-a-hybrid-pre-trained-architecture-for-seq2seq-af4d7bf14bb8>`_
+* `Encoder-decoders in Transformers: a hybrid pre-trained architecture for seq2se
+  <https://medium.com/huggingface/encoder-decoders-in-transformers-a-hybrid-pre-trained-architecture-for-seq2seq-af4d7bf14bb8>`_
+
 *Modules*
 
 * `spacy <https://spacy.io/>`_
@@ -32,3 +39,4 @@ méthodes les plus courantes. La section
   * `tokenizers <https://github.com/huggingface/tokenizers>`_
     (Provides an implementation of today's most used tokenizers,
     with a focus on performance and versatility.)
+* `pyglove <https://github.com/Lguyogiro/pyglove>`_
