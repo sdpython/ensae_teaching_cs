@@ -186,11 +186,15 @@ seulement.
 
 *Modules*
 
-* `eli5 <https://github.com/TeamHG-Memex/eli5>`_
+* `eli5 <https://github.com/TeamHG-Memex/eli5>`_ (développement actif)
 * `shap <https://github.com/slundberg/shap>`_ (développement actif)
+* `alibi explain <https://github.com/SeldonIO/alibi>`_ (développement actif)
+* `facet <https://github.com/BCG-Gamma/facet>`_
+* `aix360 <https://github.com/Trusted-AI/AIX360>`_
+* `skater <https://github.com/oracle/Skater>`_
+* `edward <http://edwardlib.org/>`_
 * `trelawney <https://github.com/aredier/trelawney>`_
 * `interpretml <https://github.com/interpretml/interpret>`_
-* `edward <http://edwardlib.org/>`_
 * `deepdive <http://deepdive.stanford.edu/>`_: ce n'est pas un module python,
   cet outil a été développé pour étudier les relations dans les données et plus
   particulièrement les `dark data <https://en.wikipedia.org/wiki/Dark_data>`_
@@ -201,6 +205,7 @@ seulement.
   de variations des features
 * `savvy <https://github.com/lmc2179/savvy>`_
 * `dalex <https://github.com/ModelOriented/DALEX>`_
+* `skope-rules <https://skope-rules.readthedocs.io/en/latest/index.html>`_
 
 *Modules de visualisation*
 
