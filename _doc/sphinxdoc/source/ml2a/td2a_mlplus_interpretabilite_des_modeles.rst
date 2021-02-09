@@ -119,6 +119,8 @@ seulement.
   <https://www.microsoft.com/en-us/research/wp-content/uploads/2017/06/KDD2015FinalDraftIntelligibleModels4HealthCare_igt143e-caruanaA.pdf>`_
 * `How Interpretable and Trustworthy are GAMs?
   <https://arxiv.org/abs/2006.06466>`_
+* `TREPAN Reloaded: A Knowledge-driven Approach to Explaining Black-box Models
+  <https://arxiv.org/pdf/1906.08362.pdf>`_
 
 *Lectures : monotonie*
 
@@ -185,6 +187,10 @@ seulement.
 * `Explaining behavior of Machine Learning models with eli5 library <http://pyvideo.org/europython-2017/explaining-behavior-of-machine-learning-models-with-eli5-library.html>`_
 
 *Modules*
+
+Plein d'autres options sont disponibles sur cette page :
+`awesome-machine-learning-interpretability
+<https://github.com/jphall663/awesome-machine-learning-interpretability>`_.
 
 * `eli5 <https://github.com/TeamHG-Memex/eli5>`_ (développement actif)
 * `shap <https://github.com/slundberg/shap>`_ (développement actif)
