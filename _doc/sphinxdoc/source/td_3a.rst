@@ -105,6 +105,7 @@ proposent les processeurs CPU : le :epkg:`branching`.
   <https://medium.com/@aka.rider/how-to-optimize-c-and-c-code-in-2018-bd4f90a72c2b>`_
 * `C++ Concurrency in Action (second edition, published 2019 by Manning Publications)
   <http://www.cplusplusconcurrencyinaction.com/>`_
+* `Embarrassingly parallel for loops <https://joblib.readthedocs.io/en/latest/parallel.html>`_
 
 *Vidéos*
 
