@@ -70,8 +70,8 @@ les modules standard du langage :epkg:`Python` et parfois
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2013.pdf">énoncé 2012-2013</a>, <a href="http://www.xavierdupre.fr/site2013/enseignements/tdnote/td_note_2013.pdf">correction</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2013.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
             (coloriage)
             <ul>
-            <li><a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2013_bout_de_code_coloriage.html">éléments de code dans un notebook pour le coloriage</a></li>
-            <li><a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2013_coloriage_correction.html">correction pour le coloriage</a></li></li>
+            <li><a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td_note_2013_bout_de_code_coloriage.html">éléments de code dans un notebook pour le coloriage</a></li>
+            <li><a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td_note_2013_coloriage_correction.html">correction pour le coloriage</a></li></li>
             </ul>
             </li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2013_rattrape.pdf">énoncé 2012-2013</a> <a href="http://www.xavierdupre.fr/site2013/enseignements/code_examples/td_note_2013_rattrape.html"><img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
@@ -86,32 +86,32 @@ les modules standard du langage :epkg:`Python` et parfois
         </li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2015.pdf">énoncé 2014-2015</a>,
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2015.pdf">correction</a>
-            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2015.html">
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td_note_2015.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
             (parcours de graphe, distance d'édition, plus court chemin)
         </li>
     <li><a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2015_rattrapage_enonce.pdf">énoncé 2014-2015</a>
-        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2015_rattrapage_enonce.html">
+        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td_note_2015_rattrapage_enonce.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (2048 - google jam)</li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2016.pdf">énoncé 2015-2016</a>,
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2016.pdf">correction</a>
-            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2016.html">
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td_note_2016.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
             (simulation de prêts immobilier, meilleure stratégie pour acheter)
         </li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2017.pdf">énoncé 2016-2017</a>,
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2017.pdf">correction</a>
-            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2017.html">
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td_note_2017.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
             (régression linéaire, étude de variables catégorielles)
         </li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2017_rattrapage.pdf">énoncé 2016-2017</a>,
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2017_2.pdf">correction</a>
-            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2017_2.html">
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td_note_2017_2.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
             (médiane, moyenne, régression quantile)
@@ -119,10 +119,10 @@ les modules standard du langage :epkg:`Python` et parfois
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2018.pdf">énoncé 2017-2018</a>,
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2018_1.pdf">correction 1</a>
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2018_2.pdf">2</a>
-            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2018_1.html">
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td_note_2018_1.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
-            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2018_2.html">
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td_note_2018_2.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
             (arbre de décision)
@@ -130,25 +130,25 @@ les modules standard du langage :epkg:`Python` et parfois
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2019.pdf">énoncé 2018-2019</a>,
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2019_1.pdf">correction 1</a>
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/td_note_2019_2.pdf">2</a>
-            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2019_1.html">
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td_note_2019_1.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
-            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2019_2.html">
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td_note_2019_2.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
             (remplacement de valeurs manquantes)
         </li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2020.pdf">énoncé 2019-2020</a>,
-            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2020_1.html">
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td_note_2020_1.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
-            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2020_2.html">
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td_note_2020_2.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
             (positionnement de tables dans une salle ronde ou carrée)
         </li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2021.pdf">énoncé 2020-2021</a>,
-            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/td_note_2021.html">
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td_note_2021.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
             (estimateur de Kaplan-Meier, seuil de vaccination)
@@ -185,22 +185,22 @@ Interrogations rapides
         (fréquence des lettres dans un mot, anagrammes)</li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_20_minutes_2014_09.pdf">énoncé 2014-2015 (1)</a>,
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_20_minutes_2014_09.pdf">correction</a>
-        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/interro_rapide_20_minutes_2014_09.html">
+        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/interro_rapide_20_minutes_2014_09.html">
                     <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (multiple, minimum, liste triée)</li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_20_minutes_2014_10.pdf">énoncé 2014-2015 (2)</a>,
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_20_minutes_2014_10.pdf">correction</a>
-        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/interro_rapide_20_minutes_2014_10.html">
+        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/interro_rapide_20_minutes_2014_10.html">
                     <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (matrice, somme, anagramme, coût)</li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interro_rapide_20_minutes_2014_11.pdf">énoncé 2014-2015 (3)</a>,
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_20_minutes_2014_11.pdf">correction</a>
-        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/interro_rapide_20_minutes_2014_11.html">
+        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/interro_rapide_20_minutes_2014_11.html">
                     <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (syntaxe, dictionnaire, coût, liste, division)</li>
     <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/interrogation_rattrape_2014-12-12-yg.pdf">énoncé 2014-2015 (4) - rattrapage (Yves Gerey)</a>,
         <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/_downloads/interro_rapide_20_minutes_2014_12.pdf">correction</a>
-        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/interro_rapide_20_minutes_2014_12.html">
+        <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/interro_rapide_20_minutes_2014_12.html">
                     <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" /></a>
         (syntaxe, dictionnaire, fonctions)</li>
     </ul>

@@ -61,7 +61,7 @@ This page gives access to the content of practical sessions I give at the
 is hosted on GitHub can be modified by sending me pull requests:
 
 * `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs/>`_
-* `documentation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_
+* `documentation <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_
 * `Blog <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/blog/main_0000.html#ap-main-0>`_
 
 Contributions
@@ -81,7 +81,7 @@ Continuous files
 give indications on how to setup a machine to run most of the notebooks.
 All notebooks do not run on travis or appveyor due to the excessive
 amount of times it requires. They are being run a debian machine every week.
-A `coverage page <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/all_notebooks_coverage.html>`_
+A `coverage page <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/all_notebooks_coverage.html>`_
 reports on which ones run and the last time it was run.
 
 Local Continuous Integration

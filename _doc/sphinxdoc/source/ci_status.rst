@@ -142,7 +142,7 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
-    * - `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_
+    * - `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master
             :target: https://travis-ci.org/sdpython/ensae_teaching_cs
             :alt: Build status
@@ -1089,7 +1089,7 @@ Contenu
         à `lesenfantscodaient.fr <http://lesenfantscodaient.fr/>`_.
         Ce sont des jeux pour apprendre à programmer avec ou sans ordinateurs
         et que j'utilise parfois durant les cours avec les plus grands.
-    * - `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_
+    * - `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_
       - Contenu des enseignements donnés à l'ENSAE.
         Le module inclut également des fonctions d'automatisation et des morceaux de codes
         illustrant des exercices (voir :ref:`modindex`).

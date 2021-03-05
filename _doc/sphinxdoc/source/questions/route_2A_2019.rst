@@ -87,7 +87,7 @@ Séance 2 - 17/9
 **DS - TD** : régression quantile - détection d'anomalies
 
 * `Régression quantile
-  <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/questions/exams_1A.html>`_
+  <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/questions/exams_1A.html>`_
   (correction : :ref:`tdnote20172rst`)
 * `Wine Quality Datasets
   <http://archive.ics.uci.edu/ml/datasets/Wine+Quality?ref=datanews.io>`_,
@@ -116,7 +116,7 @@ Séance 2 - 17/9
 * Le cas des random forest pour éviter l'overfitting
 * Normalisation L1, L2,
   L1 = `sélection de variables
-  <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/ml_scikit_learn_simple_correction.html
+  <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/ml_scikit_learn_simple_correction.html
   ?highlight=ridge#exercice-8-augmenter-le-nombre-de-features-et-regulariser-une-regression-logistique>`_,
   L2 = dilution de la masse des coefficients,
   `Pénalisation L1 L2 <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/l1l2.html>`_

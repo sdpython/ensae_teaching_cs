@@ -54,6 +54,7 @@ D'autres sujets parfois exotiques mais non moins intéressants.
     td2a_mlplus_survival_analysis
     td2a_mlplus_tres_grande_dimension
     td2a_mlplus_dynamic_selection
+    td2a_mlplus_unsupervized_learning
 
 Séries temporelles
 ==================

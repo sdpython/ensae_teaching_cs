@@ -10,7 +10,7 @@ sur `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs>`_ 
 et permet à quiconque de contribuer à ce cours.
 Il existe deux formats disponibles :
 `mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_ ou
-`plus large <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_.
+`plus large <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_.
 Les changements importants sont notés sur le :ref:`blog <ap-main-0>`
 associé à ce cours, certaines modifications prévues
 sont notés sur `github/ensae_teaching_cs

@@ -72,15 +72,15 @@ Séance 3
 ^^^^^^^^
 
 * `Implémentation d'un tas pour la recheche des k éléments minimaux
-  <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/nbheap.html>`_
+  <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/nbheap.html>`_
 * `Comparaison Top k scikit-learn et implémentation C++
   <http://www.xavierdupre.fr/app/mlprodict/helpsphinx/notebooks/topk_cpp.html>`_
 * `Plus proches voisins en grandes dimensions
-  <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/knn_high_dimension.html>`_,
+  <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/knn_high_dimension.html>`_,
   `correction
-  <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/notebooks/knn_high_dimension_correction.html>`_
+  <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/knn_high_dimension_correction.html>`_
 * `No SQL et autres considérations
-  <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/td_3a_s5_synthese.html>`_
+  <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_3a_s5_synthese.html>`_
 
 Séance 4
 ^^^^^^^^
