@@ -20,6 +20,7 @@ Finance
 * `prophet <http://prophet.michaelsu.io/en/latest/>`_ (not updated anymore)
 * `bloomberg API <https://www.bloomberglabs.com/api/libraries/>`_
 * `ta-lib <https://github.com/mrjbq7/ta-lib>`_
+* `mlfinlab <https://mlfinlab.readthedocs.io/en/latest/index.html>`_
 
 *Modules data*
 
