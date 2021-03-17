@@ -2543,7 +2543,7 @@ class TableFormula(_TableFormulaStat):
         @param      removeExtreme           remove extreme values at both sides(0.05 means 0.025 on each side)
         @return                             table with two columns
         """
-        values = list([functionValue(self._interpret_row(row))
+        values = list([functionValue(self._interpret_row(row))  # pylint: disable=R1728
                        for row in self.values])
         if removeExtreme is not None and removeExtreme > 0:
             values.sort()
