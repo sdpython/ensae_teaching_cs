@@ -1,0 +1,13 @@
+
+.. blogpost::
+    :title: Une alternative à pandas
+    :keywords: py-polars, pandas
+    :date: 2021-03-21
+    :categories: modules
+
+    `py-polars <https://github.com/ritchie46/polars>`_ implémente
+    des dataframes, comme :epkg:`pandas`, à ceci près qu'elle
+    propose également une interface *lazy* ou streaming.
+    Elle est implémentée en :epkg:`Rust`.
+
+    

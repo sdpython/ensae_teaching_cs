@@ -55,6 +55,7 @@ DataFrame
 *Modules*
 
 * `pandas <http://pandas.pydata.org/>`_
+* `py-polars <https://github.com/ritchie46/polars>`_
 * `csvkit <https://csvkit.readthedocs.io/en/latest/index.html>`_
 * `geopandas <https://geopandas.org/>`_
   (pour manipuler des coordonnées géographiques)
@@ -63,6 +64,7 @@ DataFrame
 
 * `pandas_streaming <https://github.com/sdpython/pandas_streaming/>`_
 * `vaex <https://docs.vaex.io/en/latest/installing.html>`_
+* `py-polars <https://github.com/ritchie46/polars>`_
 
 *Optimisation*
 

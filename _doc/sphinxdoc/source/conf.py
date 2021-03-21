@@ -227,6 +227,7 @@ epkg_dictionary.update({
     'REST API': "https://en.wikipedia.org/wiki/Representational_state_transfer",
     "ROC": 'http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/roc.html',
     "RSA": 'https://fr.wikipedia.org/wiki/Chiffrement_RSA',
+    "Rust": "https://www.rust-lang.org/",
     "scikit-plot": 'https://scikit-plot.readthedocs.io/en/stable/',
     "Scikit.ML": 'https://github.com/xadupre/machinelearningext',
     "SciTE": 'http://www.scintilla.org/SciTE.html',
