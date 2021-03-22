@@ -1,6 +1,6 @@
 
 .. blogpost::
-    :title: Une alternative à pandas
+    :title: pandas en plus rapide
     :keywords: py-polars, pandas
     :date: 2021-03-21
     :categories: modules
