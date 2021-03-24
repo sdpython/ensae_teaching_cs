@@ -289,6 +289,18 @@ Optimisations logicielles
   `Taming Model Serving Complexity, Performance and Cost: A Compilation to Tensor Computations Approach
   <https://scnakandala.github.io/papers/TR_2020_Hummingbird.pdf>`_
 
+Calcul matriciel
+++++++++++++++++
+
+* `How to optimize GEMM on CPU
+  <https://tvm.apache.org/docs/tutorials/optimize/opt_gemm.html#sphx-glr-tutorials-optimize-opt-gemm-py>`_
+* `HIGH PERFORMANCE CODE GENERATION IN MLIR: AN EARLY CASE STUDY WITH GEMM
+  <https://arxiv.org/pdf/2003.00532v1.pdf>`_
+* `Fireiron: A Data-Movement-Aware Scheduling Language for GPUs
+  <https://dl.acm.org/doi/pdf/10.1145/3410463.3414632>`_
+* `Linalg Dialect Rationale: The Case For Compiler-Friendly Custom Operations
+  <https://mlir.llvm.org/docs/Rationale/RationaleLinalgDialect/>`_
+
 Autres que CPU, GPU
 +++++++++++++++++++
 
