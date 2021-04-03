@@ -6,8 +6,12 @@ import unittest
 from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import fix_tkinter_issues_virtualenv
 from pyensae.datasource import download_data
-from ensae_teaching_cs.special.rues_paris import get_data, bellman, kruskal, possible_edges, distance_haversine, graph_degree
-from ensae_teaching_cs.special.rues_paris import eulerien_extension, distance_paris, euler_path, connected_components
+from ensae_teaching_cs.special.rues_paris import (
+    get_data, bellman, kruskal, possible_edges, distance_haversine,
+    graph_degree)
+from ensae_teaching_cs.special.rues_paris import (
+    eulerien_extension, distance_paris, euler_path,
+    connected_components)
 
 
 class TestRueParis(unittest.TestCase):
