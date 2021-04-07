@@ -27,7 +27,7 @@ obtenu en exécutant la requête suivante sur
         'onnx', 'onnxruntime', 'skl2onnx', 'keras2onnx', 'nimbusml',
         'scikit-learn', 'pandas', 'numpy', 'jupyter', 'matplotlib',
         'protobuf', 'nimbusml', 'aftercovid', 'onnxcustom',
-        'onnxconverter-common', 'tensorflow-onnx', 'ort-customops',
+        'onnxconverter-common', 'tf2onnx', 'ort-customops',
     ])
     dont = {'numpy', 'matplotlib', 'pandas', 'jupyter'}
     modules = [_ for _ in modules if _ not in dont]
