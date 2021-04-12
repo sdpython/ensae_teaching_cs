@@ -59,6 +59,7 @@ Visualisation
     td2a_manip_cartes
     td2a_manip_graphes_pour_des_statisticiens
     td2a_manip_visualiser_pour_comprendre
+    td2a_manip_api
 
 Données massives
 ================
