@@ -389,6 +389,27 @@ Tableau de bord et statut des dépendances
       - .. image:: https://codecov.io/github/sdpython/onnxcustom/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/onnxcustom?branch=master
       -
+    * - :epkg:`onnxortext`
+      - .. image:: https://travis-ci.org/sdpython/onnxortext.svg?branch=master
+            :target: https://travis-ci.org/sdpython/onnxortext
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/r7st490hekggad3d?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/onnxortext
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/onnxortext/tree/master.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/onnxortext/tree/master
+        .. image:: https://dev.azure.com/xavierdupre3/onnxortext/_apis/build/status/sdpython.onnxortext
+            :target: https://dev.azure.com/xavierdupre3/onnxortext/
+      - .. image:: https://badge.fury.io/py/onnxortext.svg
+            :target: https://pypi.org/project/onnxortext
+      - .. image:: http://img.shields.io/github/issues/sdpython/onnxortext.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/onnxortext/issues
+      - .. image:: https://codecov.io/github/sdpython/onnxortext/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/onnxortext?branch=master
+      - .. image:: http://www.xavierdupre.fr/app/onnxortext/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/onnxortext/helpsphinx/all_notebooks_coverage.html
+            :alt: Notebook Coverage
     * - `pandas_streaming <http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.org/sdpython/pandas_streaming.svg?branch=master
             :target: https://travis-ci.org/sdpython/pandas_streaming

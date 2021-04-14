@@ -25,13 +25,13 @@ med = gr.iloc[gr.shape[0] // 2, 1]
 
 sets = [
     {'skl2onnx', 'onnxmltools',
-     'keras2onnx', 'tensorflow-onnx', 'onnxconverter-common',
+     'keras2onnx', 'tf2onnx', 'onnxconverter-common',
      'ort-customops'},
     {'onnx'},
     {'onnxruntime'},
     {'jyquickhelper', 'pymyinstall', 'pyquickhelper', 'pyensae'},
     {'manydataapi', 'cpyquickhelper', 'mlstatpy', },
-    {'mlinsights', 'mlprodict', },
+    {'mlinsights', 'mlprodict', 'onnxortext'},
     {'csharpy', 'csharpyml', },
     {'lightmlboard', 'lightmlrestapi', 'pyrsslocal', 'pymmails', },
     {'sparkouille', 'ensae_projects', 'actuariat_python', 'code_beatrix', 'jupytalk'},
