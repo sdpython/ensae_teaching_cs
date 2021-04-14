@@ -193,6 +193,7 @@ epkg_dictionary.update({
     "OpenMP": 'https://en.wikipedia.org/wiki/OpenMP',
     "openmp": 'https://en.wikipedia.org/wiki/OpenMP',
     "OpenStreetMap": 'https://www.openstreetmap.org/',
+    'onnxortext': 'http://www.xavierdupre.fr/app/onnxortext/helpsphinx/index.html',
     "OSM": 'https://www.openstreetmap.org/',
     "OS/X": 'https://fr.wikipedia.org/wiki/MacOS',
     'pandas_streaming': 'http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/index.html',
