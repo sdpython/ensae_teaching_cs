@@ -83,34 +83,12 @@ jobs:
             sudo ln -s /usr/bin/llvm-config-10 /usr/bin/llvm-config
             pip install llvmlite numba
 
-#      - run:
-#          name: Build onnx
-#          command: |
-#            python3 -m venv venv
-#            git clone -b master --single-branch https://github.com/onnx/onnx.git --recursive
-#            cd onnx
-#            export ONNX_ML=1
-#            export ONNX_BUILD_TESTS=1
-#            export ONNXIFI_DUMMY_BACKEND=1
-#            python setup.py bdist_wheel
-#            ls dist
-#            python setup.py install
-#            cd ..
-
       - run:
           name: install dependencies (2)
           command: |
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
-
-      - run:
-          name: install onnxruntime
-          command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip freeze | grep onnx
-            pip install onnxruntime>=1.6.0
 
       - save_cache:
           paths:

@@ -42,7 +42,6 @@ before_install:
 
 install:
   # extra dependencies
-  - pip install onnxruntime
   - pip install tensorflow_model_optimization
   - pip install -r requirements.txt
   - pip install pygame
