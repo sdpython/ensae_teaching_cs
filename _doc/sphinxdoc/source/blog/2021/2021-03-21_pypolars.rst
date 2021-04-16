@@ -9,5 +9,3 @@
     des dataframes, comme :epkg:`pandas`, à ceci près qu'elle
     propose également une interface *lazy* ou streaming.
     Elle est implémentée en :epkg:`Rust`.
-
-    

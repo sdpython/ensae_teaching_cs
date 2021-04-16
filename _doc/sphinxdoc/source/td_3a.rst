@@ -124,7 +124,7 @@ proposent les processeurs CPU : le :epkg:`branching`.
 * `daal4py <https://intelpython.github.io/daal4py/>`_,
   réécriture d'algorithme de machine learning optimisée
   pour les processeurs Intel
-  
+
 *Outils*
 
 * `Introducing PyTorch Profiler - the new and improved performance tool

@@ -13,7 +13,7 @@
 
     Un article qui n'a rien à voir
     `The Indirect Convolution Algorithm <https://arxiv.org/pdf/1907.02129.pdf>`_.
-    
+
     Je m'aperçois également que beaucoup de projets
     de machine learning commencent par la mise au point
     d'un modèle et repoussent la mise en production à plus tard,

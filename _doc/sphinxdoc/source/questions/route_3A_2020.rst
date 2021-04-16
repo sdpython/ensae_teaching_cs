@@ -79,7 +79,6 @@ Séance 3
 Séance 4
 ^^^^^^^^
 
-
 Séance 5
 ^^^^^^^^
 
@@ -94,7 +93,7 @@ Parallelisation CPU
 Cython
 * `Presentation <https://cython.org/>`_
 * Compilateur (`Windows <https://visualstudio.microsoft.com/fr/vs/community/>`_ (VS),
-  `Linux <https://doc.ubuntu-fr.org/gcc>`_ (gcc), 
+  `Linux <https://doc.ubuntu-fr.org/gcc>`_ (gcc),
   `MacOs <https://developer.apple.com/xcode/>`_ (xcode))
 * `manylinux <https://www.python.org/dev/peps/pep-0513/>`_ sur pypi
 * `C et Cython <https://cython.readthedocs.io/en/latest/src/userguide/external_C_code.html>`_
@@ -126,11 +125,11 @@ Libraires pour aller plus vite sur CPU
 * `Torch <https://pytorch.org/docs/stable/torch.html>`_ = numpy + numba + pybind11
 
 Stratégies d'optimisation
-* Composer à partir de librairies implémentant des calculs standards (matriciel) 
-* Fusionner deux opérations en une seule (transposition + multiplication A B' -> 
-  `gemm <https://en.wikipedia.org/wiki/GEMM>`_), 
+* Composer à partir de librairies implémentant des calculs standards (matriciel)
+* Fusionner deux opérations en une seule (transposition + multiplication A B' ->
+  `gemm <https://en.wikipedia.org/wiki/GEMM>`_),
   `opt_einsum <https://github.com/dgasmith/opt_einsum>`_
-  = recomposition des calculs, nombre accru d'opérations, 
+  = recomposition des calculs, nombre accru d'opérations,
   `MLPRegressor <http://www.xavierdupre.fr/app/mlprodict/helpsphinx/
   skl_converters/visual-neural_network-004.html>`_
 * Implémentation spécifiques (graphes, arbres)
@@ -154,12 +153,11 @@ Demain
     * `Trends pytorch,tensorflow,numpy <https://trends.google.com/trends/explore?date=all&geo=US&q=pytorch,tensorflow,numpy>`_
     * `NVidia Stock <https://www.google.com/search?q=nvidia+stock&oq=nvidia+stock&aqs=chrome..69i57.2676j0j4&sourceid=chrome&ie=UTF-8>`_
     * `Intel Stock <https://www.google.com/search?ei=T6kGYIP3FInYaIbNvbAC&q=intel+stock&oq=intel+stock&gs_lcp=CgZwc3ktYWIQAzIFCAAQkQIyBggAEAcQHjIGCAAQBxAeMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADoECAAQR1DhY1jFZ2D5aGgAcAN4AIABVYgBlAOSAQE2mAEAoAEBqgEHZ3dzLXdpesgBCMABAQ&sclient=psy-ab&ved=0ahUKEwjD2tun2qfuAhUJLBoKHYZmDyYQ4dUDCA0&uact=5>`_
-    
+
 Liens `pytorch <https://pytorch.org/>`_:
 * `CUSTOM C++ AND CUDA EXTENSIONS <https://pytorch.org/tutorials/advanced/cpp_extension.html?highlight=thread>`_
 * `Convert Torch Tensor to flattened C++ array <https://discuss.pytorch.org/t/convert-torch-tensor-to-flattened-c-array/94341>`_
 * `TORCH.FROM_NUMPY <https://pytorch.org/docs/stable/generated/torch.from_numpy.html>`_
-
 
 **Notes en vrac**
 
@@ -173,7 +171,6 @@ Processus
 --> Traitement de texte --> 1 processus
 --> Python --> 1 processus
 --> Python --> 1 autre processus
-   
 
 Serialisation
 Données --> d'une machine à une autre
@@ -201,7 +198,7 @@ Cython prérequis
     * Interpréteur python (3.7+)
     * Compilateur (gcc sur linux (clang), Visual Studio Windows (Community Edition), gcc MacOs
 
-Programme 
+Programme
     * 1 fichier python
     * 1 fichier cython --> cython le convertit en C ou C++ --> compilé (DLL, .pyd, .so)  --> prêt à l'emploi
 
@@ -209,7 +206,7 @@ On veut paralléliser sous linux avec une librairie openmp sous Linux:
     * "Error: je ne trouve libomp" --> sudo apt-get install libomp (dépendance)
 
 Plus rapide:
-Matrice: 
+Matrice:
 Langage sécurisé
 	Liste = [1, 4, 5, 6]
 	Liste[3] = 4  --> remplace un élément
@@ -218,7 +215,7 @@ Langage sécurisé
 Interprétable = portable
     * Python interprète le code python --> fichier .pyc créé
     * Liste[3] = 4  --> appelle une fonction python qui modifie l'objet liste
-    * Le Code peut évoluer dynamiquement --> 
+    * Le Code peut évoluer dynamiquement -->
         * Les erreurs de syntaxe ne sont pas toujours découvertes avant l'exécution
 Mémoire
     * Jamais accès en python à la mémoire directement
@@ -250,15 +247,12 @@ Git --> va fusionner les deux pour avoir une unique avec dot1.pyx + dot2.pyx
 Intégration continue :
     * S'assurer qu'à chaque modification, aucun bug n'a été créé ailleurs que dans le code modifié
 
-
 Cython
     * Python setup.py build_ext --inplace
         * Convertit cython en C/C++
         * Compiler le code C/C++
         * Link --> .pyd (Windows) ou .so sous MacOs
 
-
 M3 est modifiée par deux threads en même temps mais pas au même endroit --> donc pas besoin de verrou
-
 
 A B C  -> (A B ) C ou A (B C)

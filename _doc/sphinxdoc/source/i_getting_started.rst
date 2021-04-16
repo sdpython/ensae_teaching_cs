@@ -46,7 +46,6 @@ Les traces d'installation ont été conservées dans cet article
 `2021-01-09 Install Python 3.9 and many packages on Linux Debian 10
 <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx//blog/2021/2021-01-09_debian.html>`_.
 
-
 2018-2020
 +++++++++
 
@@ -100,14 +99,13 @@ Et Les plus utilisés sont de plus en plus disponibles sur
 `pypi <https://pypi.org/>`_. Pour les autres, il faut allez à
 `Unofficial Windows Binaries for Python Extension Packages
 <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
-Certains modules n'existent pas sous forme précompilée à 
+Certains modules n'existent pas sous forme précompilée à
 moins de le faire soi-même. Il faut qu'un compilateur
 soit installée sur la machine et sans doute d'autres
 dépendances. Il est possible aussi de suivre les instructions
 exécutées à chaque changement :
 `appveyor.yml
 <https://github.com/sdpython/ensae_teaching_cs/blob/master/appveyor.yml>`_.
-
 
 Linux en ligne de commande / MacOS
 ++++++++++++++++++++++++++++++++++
@@ -121,7 +119,7 @@ Vous pouvez aussi suivre les instructions utilisées à chaque
 changement `config.yml
 <https://github.com/sdpython/ensae_teaching_cs/blob/master/.circleci/config.yml>`_.
 
-Il existe des différences sur MacOs. Mais vous pouvez suivre 
+Il existe des différences sur MacOs. Mais vous pouvez suivre
 les instructions contenus dans ce fichier `azure-pipelines.yml
 <https://github.com/sdpython/mlprodict/blob/master/azure-pipelines.yml#L63>`_.
 
@@ -323,7 +321,7 @@ Les modules indispensables sont intégrés à la distribution
 
 *Visualisation*
 
-Voir `10 plotting libraries at PyData 06/14/2016 in Paris 
+Voir `10 plotting libraries at PyData 06/14/2016 in Paris
 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_
 ou :ref:`l-visualisation`.
 
@@ -540,7 +538,7 @@ ou un prof fera l'affaire. Ensuite, des livres de mathématiques, des articles..
 * `Quelques astuces pour faire du machine learning <http://www.xavierdupre.fr/blog/2014-03-28_nojs.html>`_
 * `Python Tools for Machine Learning <http://www.cbinsights.com/blog/python-tools-machine-learning/>`_
 * `Python extensions to do machine learning <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
-* `22 outils gratuits pour visualiser et analyser les données (1ère partie) 
+* `22 outils gratuits pour visualiser et analyser les données (1ère partie)
   <http://www.lemondeinformatique.fr/actualites/lire-22-outils-gratuits-pour-visualiser-et-analyser-les-donnees-1ere-partie-47241-page-3.html>`_
 * `Gradient Boosted Regression Trees <http://orbi.ulg.ac.be/bitstream/2268/163521/1/slides.pdf>`_
 * `A Reliable Effective Terascale Linear Learning System <http://arxiv.org/pdf/1110.4198v3.pdf>`_

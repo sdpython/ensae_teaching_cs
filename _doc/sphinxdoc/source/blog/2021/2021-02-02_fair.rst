@@ -6,7 +6,7 @@
     :categories: fairness
 
     La recherche dans le domaine du machine learning éthique est
-    assez disparate. Je suis tombé sur cet article    
+    assez disparate. Je suis tombé sur cet article
     `An overview of some available Fairness Frameworks & Packages
     <https://www.linkedin.com/pulse/
     overview-some-available-fairness-frameworks-packages-murat-durmus/>`_
