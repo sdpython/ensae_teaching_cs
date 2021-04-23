@@ -1,0 +1,39 @@
+
+.. blogpost::
+    :title: Quelques modules intéressants
+    :keywords: ascii, remote, putty
+    :date: 2021-04-23
+    :categories: module
+
+    Le module permet de tracer des graphes comme :epkg:`matplotlib`
+    `bashplotlib <https://github.com/glamp/bashplotlib>`_
+    mais en mode ascii, très pratique pour ceux qui travaillent
+    en ligne de commande.
+    Sinon, il y a toujours l'extension de Visual Studio
+    `VS Code Remote Development
+    <https://code.visualstudio.com/docs/remote/remote-overview>`_
+    qui permet de coder en local avec une machine distante comme machine
+    de calcul.
+
+    De la même manière `prettytable <https://github.com/jazzband/prettytable>`_
+    est pratique pour imprimer des tables en mode ascii.
+
+    Pour faire des animations en 3D :
+    `vpython <https://vpython.org/>`_.
+    
+    Pour faire du deep learning en ligne de commande :
+    `luminoth <https://luminoth.readthedocs.io/en/latest/>`_.
+
+    Prétraitement de texte :
+    `textblob <https://textblob.readthedocs.io/en/dev/>`_.
+
+    Un énième wrapper autour de :epkg:`graphviz` :
+    `flowgiston <https://github.com/KairosAerospace/flowgiston>`_.
+    Mais bon, :epkg:`graphviz` ne fonctionne qu'en ligne de commande
+    donc un wrapper est toujours le bienvenu.
+
+    Pour finir, un truc pratique à utiliser pendant les cours pour éviter
+    aux étudiants les sorties très verbeuses des exceptions :
+    `PrettyErrors <https://github.com/onelivesleft/PrettyErrors>`_.
+    En même, les messages inhumains des langages d'erreurs,
+    c'est le quotidien.
