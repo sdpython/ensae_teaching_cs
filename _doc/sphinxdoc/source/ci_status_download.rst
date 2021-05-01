@@ -11,14 +11,18 @@ obtenu en exécutant la requête suivante sur
 .. runpython::
     :showcode:
 
-    query = """#standardSQL
-    SELECT
-      file.project as Project,
-      COUNT(*) AS num_downloads,
-      SUBSTR(_TABLE_SUFFIX, 1, 6) AS `month`
-    FROM `the-psf.pypi.downloads202011*`
-    WHERE __CONDITION__
-    GROUP BY `month`, `Project`
+    SELECT 
+        file.project AS Project,
+        COUNT(*) AS num_downloads,
+        FORMAT_DATE("%Y%m", DATE(timestamp)) AS Month
+    FROM `bigquery-public-data.pypi.file_downloads`
+    WHERE 
+      (__CONDITION__)
+      AND DATE(timestamp)
+        BETWEEN DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 2 MONTH), MONTH)
+        AND CURRENT_DATE()
+     GROUP BY `Project`, `Month`
+     ORDER BY `Month`, `Project`    
     """
 
     from ensae_teaching_cs.automation import get_teaching_modules

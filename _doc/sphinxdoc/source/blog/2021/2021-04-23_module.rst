@@ -20,7 +20,7 @@
 
     Pour faire des animations en 3D :
     `vpython <https://vpython.org/>`_.
-    
+
     Pour faire du deep learning en ligne de commande :
     `luminoth <https://luminoth.readthedocs.io/en/latest/>`_.
 

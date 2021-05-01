@@ -99,6 +99,7 @@ pymmails>=0.3
 pympler
 pymyinstall
 pyquickhelper>=1.10.3519
+pyquicksetup
 pyrsslocal
 python-jenkins
 pywaffle
