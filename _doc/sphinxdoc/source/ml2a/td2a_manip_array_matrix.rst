@@ -66,6 +66,7 @@ qui utilise les instructions processeur
 
 *Lectures*
 
+* `NumPy tutorials <https://numpy.org/numpy-tutorials/>`_
 * `From Python to Numpy <http://www.labri.fr/perso/nrougier/from-python-to-numpy/>`_
 * :ref:`Pourquoi pandas et numpy, pourquoi pas seulement pandas ? <blog-pandas-numpy>`
 * :ref:`cffilinearregressionrst`

@@ -34,6 +34,8 @@ Système de recommandations
 * `Probabilistic Matrix Factorization <http://papers.nips.cc/paper/3208-probabilistic-matrix-factorization.pdf>`_
 * `A Fast Parallel Stochastic Gradient Method for Matrix Factorization in Shared Memory Systems <https://www.csie.ntu.edu.tw/~cjlin/papers/libmf/libmf_journal.pdf>`_
 * `Smart Adaptive Recommendations (SAR) Algorithm <https://github.com/Microsoft/Product-Recommendations/blob/master/doc/sar.md>`_
+* `Flexible, Scalable, Differentiable Simulation of Recommender Systems with RecSim NG
+  <https://ai.googleblog.com/2021/04/flexible-scalable-differentiable.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+blogspot%2FgJZg+%28Google+AI+Blog%29>`_
 
 *Modules*
 
