@@ -11,6 +11,7 @@ obtenu en exécutant la requête suivante sur
 .. runpython::
     :showcode:
 
+    query = """
     SELECT 
         file.project AS Project,
         COUNT(*) AS num_downloads,
