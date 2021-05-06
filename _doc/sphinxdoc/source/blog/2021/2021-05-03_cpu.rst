@@ -6,8 +6,23 @@
     :categories: performance
 
     Quelques articles sur la performance.
-    
+
     * `How to optimize GEMM on CPU <https://tvm.apache.org/docs/tutorials/optimize/opt_gemm.html#sphx-glr-tutorials-optimize-opt-gemm-py>`_
     * `SLIDE : In Defense of Smart Algorithms over Hardware Acceleration for Large-Scale Deep Learning Systems <https://arxiv.org/abs/1903.03129>`_
     * `Scalable and Sustainable Deep Learning via Randomized Hashing <https://arxiv.org/abs/1602.08194>`_
     * `Accelerating SLIDE Deep Learning on Modern CPUs: Vectorization, Quantizations, Memory Optimizations, and More <https://arxiv.org/abs/2103.10891>`_
+
+    Other papers:
+    
+    * `ZeRO: Memory Optimizations Toward Training Trillion Parameter Models <https://arxiv.org/abs/1910.02054>`_
+
+    Fairness:
+
+    * `How Facebook got addicted to spreading misinformation
+      <https://www.technologyreview.com/2021/03/11/1020600/facebook-responsible-ai-misinformation/>`_
+    * `Fairness and machine learning <https://fairmlbook.org/>`_
+
+    Neural networks:
+
+    * `Neural Tangent Kernel: Convergence and Generalization in Neural Networks
+      <https://arxiv.org/pdf/1806.07572.pdf>`_

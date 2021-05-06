@@ -79,6 +79,10 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
     ../notebooks/td2a_ethics
     ../notebooks/td2a_ethics_correction
 
+*Livres*
+
+* `Fairness and machine learning <https://fairmlbook.org/>`_
+
 *Lectures mathématiques*
 
 * `A Reductions Approach to Fair Classification <https://arxiv.org/pdf/1803.02453.pdf>`_
@@ -107,6 +111,8 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
 
 * `An overview of some available Fairness Frameworks & Packages
   <https://www.linkedin.com/pulse/overview-some-available-fairness-frameworks-packages-murat-durmus/>`_
+* `How Facebook got addicted to spreading misinformation
+  <https://www.technologyreview.com/2021/03/11/1020600/facebook-responsible-ai-misinformation/>`_
 
 *2018-2020*
 

@@ -106,6 +106,8 @@ proposent les processeurs CPU : le :epkg:`branching`.
 * `C++ Concurrency in Action (second edition, published 2019 by Manning Publications)
   <http://www.cplusplusconcurrencyinaction.com/>`_
 * `Embarrassingly parallel for loops <https://joblib.readthedocs.io/en/latest/parallel.html>`_
+* `ZeRO: Memory Optimizations Toward Training Trillion Parameter Models <https://arxiv.org/abs/1910.02054>`_
+* `SLIDE : In Defense of Smart Algorithms over Hardware Acceleration for Large-Scale Deep Learning Systems <https://arxiv.org/abs/1903.03129>`_
 
 *Vidéos*
 
