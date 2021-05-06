@@ -131,6 +131,7 @@ proposent les processeurs CPU : le :epkg:`branching`.
 
 * `Introducing PyTorch Profiler - the new and improved performance tool
   <https://pytorch.org/blog/introducing-pytorch-profiler-the-new-and-improved-performance-tool/>`_
+* `DeepSpeed <https://github.com/microsoft/DeepSpeed>`_
 
 Intel propose une version de l'interpréteur python avec
 les principaux modules compilée spécifiquement
