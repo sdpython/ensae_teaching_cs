@@ -26,3 +26,7 @@
 
     * `Neural Tangent Kernel: Convergence and Generalization in Neural Networks
       <https://arxiv.org/pdf/1806.07572.pdf>`_
+
+    Arbres :
+    
+    * `Unbiased Measurement of Feature Importance in Tree-Based Methods <https://arxiv.org/abs/1903.05179>`_

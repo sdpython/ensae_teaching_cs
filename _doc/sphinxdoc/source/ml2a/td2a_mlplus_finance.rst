@@ -8,6 +8,10 @@ Finance
 +++++++
 
  (*à venir*)
+ 
+*Lectures*
+ 
+* `Intelligence Artificielle et Finance : des application à la régulation <http://variances.eu/?p=5896>`_ 
 
 *Modules*
 
