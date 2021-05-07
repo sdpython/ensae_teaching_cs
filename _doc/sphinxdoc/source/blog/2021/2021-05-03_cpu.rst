@@ -30,3 +30,22 @@
     Arbres :
     
     * `Unbiased Measurement of Feature Importance in Tree-Based Methods <https://arxiv.org/abs/1903.05179>`_
+    
+    Collèges de France
+    
+    * `Une vision mathématique du "Deep Learning"
+      <https://www.college-de-france.fr/site/pierre-louis-lions/seminar-2018-11-09-11h15.htm>`_
+    * `Stéphane Mallat, Représentation Parcimonieuse
+      <https://www.college-de-france.fr/site/stephane-mallat/course-2021-01-13-09h30.htm>`_
+    * `Algorithmes quantiques : quand la physique quantique défie la thèse de Church-Turing
+      <https://www.college-de-france.fr/site/frederic-magniez/inaugural-lecture-2021-04-01-18h00.htm>`_
+      
+    Autres
+    
+    * `Invariant Risk Minimization <https://arxiv.org/abs/1907.02893>`_  (... Bottou ...)
+    * `Deep Neural Networks Motivated by Partial Differential Equations <https://arxiv.org/abs/1804.04272>`_
+    * `Lagrangian Neural Networks <https://arxiv.org/abs/2003.04630>`_
+
+    ML
+    
+    * `A Hierarchical Model for Data-to-Text Generation <https://arxiv.org/abs/1912.10011>`_
