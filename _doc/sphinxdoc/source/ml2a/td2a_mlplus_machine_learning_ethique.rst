@@ -113,6 +113,8 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
   <https://www.linkedin.com/pulse/overview-some-available-fairness-frameworks-packages-murat-durmus/>`_
 * `How Facebook got addicted to spreading misinformation
   <https://www.technologyreview.com/2021/03/11/1020600/facebook-responsible-ai-misinformation/>`_
+* `Your old mobile phone number could compromise your cybersecurity
+  <https://techxplore.com/news/2021-05-mobile-compromise-cybersecurity.html>`_
 
 *2018-2020*
 
