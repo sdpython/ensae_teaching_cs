@@ -181,6 +181,8 @@ GPU
 * `Computing Higher Order Derivatives of Matrix and Tensor Expressions
   <https://papers.nips.cc/paper/
   7540-computing-higher-order-derivatives-of-matrix-and-tensor-expressions.pdf>`_
+* `Enclaves as accelerators: learning lessons from GPU computing for designing efficient runtimes for enclaves
+  <https://marksilberstein.com/wp-content/uploads/2020/04/systex16sgx.pdf>`_
 
 *Lectures sur le C++*
 
