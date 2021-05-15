@@ -52,6 +52,8 @@ appliqués aux séries temporelles :
   `Initializing the Holt-Winters method <https://robjhyndman.com/hyndsight/hw-initialization/>`_
 * `A Comparison of Estimation Methods for Vector Autoregressive Moving-Average Models <http://www.christiankascha.com/wp-content/uploads/2013/03/ERVARMAmain_final.pdf>`_
 * `A state space framework for automatic forecasting using exponential smoothing methods <https://robjhyndman.com/papers/hksg.pdf>`_
+* `Clustering Time Series with Nonlinear Dynamics: A Bayesian Non-Parametric and Particle-Based Approach
+  <https://arxiv.org/abs/1810.09920>`_
 
 *Compétitions*
 

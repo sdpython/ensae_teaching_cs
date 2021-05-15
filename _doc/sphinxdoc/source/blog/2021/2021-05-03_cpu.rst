@@ -49,3 +49,15 @@
     ML
     
     * `A Hierarchical Model for Data-to-Text Generation <https://arxiv.org/abs/1912.10011>`_
+    
+    Apprentissage par renforcement
+    
+    * `Dynamic Programming in Distributional Reinforcement Learning
+      <https://hal.archives-ouvertes.fr/hal-03168889>`_
+    * `A Distributional Perspective on Reinforcement Learning
+      <https://arxiv.org/abs/1707.06887>`_
+      
+    Ethique
+    
+    * `Quelle responsabilité pour les algorithmes
+      <https://freakonometrics.hypotheses.org/files/2020/06/Risques-122_Bigot_Charpentier.pdf>`_
