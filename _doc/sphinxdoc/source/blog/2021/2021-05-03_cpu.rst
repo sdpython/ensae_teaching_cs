@@ -61,3 +61,12 @@
     
     * `Quelle responsabilité pour les algorithmes
       <https://freakonometrics.hypotheses.org/files/2020/06/Risques-122_Bigot_Charpentier.pdf>`_
+
+    Quelques autres directions :
+
+    * `plaidml <https://github.com/plaidml/plaidml>`_,
+      `Stripe: Tensor Compilation via the Nested Polyhedral Model
+      <https://arxiv.org/abs/1903.06498>`_
+
+    Une énième implémentation de pipeline de machine learning :
+    `kedro <https://github.com/quantumblacklabs/kedro>`_.
