@@ -33,7 +33,7 @@ import sys
 import os
 import pandas
 import warnings
-from pyquickhelper.loghelper import get_keyword
+from pyquickhelper.loghelper import get_password
 
 #################################
 # Paramètres de la récupération,
@@ -42,13 +42,13 @@ from pyquickhelper.loghelper import get_keyword
 
 server = "imap.gmail.com"
 school = "ENSAE"
-date = "23-Nov-2020"
+date = "24-May-2021"
 year = '1A'
-exam = 'tdnote'
-pattern = "Python_{0}_{1}_2020".format(year, exam)
+exam = 'projet'
+pattern = "Python_{0}_{1}_2021".format(year, exam)
 group_def = "groupes.xlsx"
 col_subject, col_group, col_mail, col_student = "sujet", "groupe", "mail", "Nom"
-final_dest = ["2020-2021", "{}-{}".format(year, exam)]
+final_dest = ["2021-2022", "{}-{}".format(year, exam)]
 
 
 if school == 'ENSAE':
@@ -122,6 +122,7 @@ if user is None or pwd is None or password is None:
 
 password = bytes(password, "ascii")
 
+print([user, pwd, password])
 
 ###########
 # Les adresses à éviter...
