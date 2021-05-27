@@ -389,7 +389,7 @@ fait partie des systèmes d'intégration continue :
 
 Ce circuit est effectué à chaque modification ou chaque nuit.
 C'est ce type de service que propose gratuitement pour les projets open source
-`travis <https://travis-ci.org/>`_ sur Linux,
+`travis <https://travis-ci.com/>`_ sur Linux,
 `Circle CI <https://circleci.com/>`_,
 `appveyor <https://www.appveyor.com/>`_ sur Windows.
 Ces solutions s'exécutent à distance. Localement,

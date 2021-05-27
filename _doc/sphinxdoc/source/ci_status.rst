@@ -29,8 +29,8 @@ Tableau de bord et statut des dépendances
       - Coverage
       - Notebook Coverage
     * - `actuariat_python <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/actuariat_python.svg?branch=master
-            :target: https://travis-ci.org/sdpython/actuariat_python
+      - .. image:: https://travis-ci.com/sdpython/actuariat_python.svg?branch=master
+            :target: https://travis-ci.com/sdpython/actuariat_python
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/nelemxw6md6bt95a?svg=true
             :target: https://ci.appveyor.com/project/sdpython/actuariat-python
@@ -48,8 +48,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `aftercovid <http://www.xavierdupre.fr/app/aftercovid/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/aftercovid.svg?branch=master
-            :target: https://travis-ci.org/sdpython/aftercovid
+      - .. image:: https://travis-ci.com/sdpython/aftercovid.svg?branch=master
+            :target: https://travis-ci.com/sdpython/aftercovid
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/ffne8nhh96jdqo4p?svg=true
             :target: https://ci.appveyor.com/project/sdpython/aftercovid
@@ -65,8 +65,8 @@ Tableau de bord et statut des dépendances
             :target: https://codecov.io/github/sdpython/aftercovid?branch=master
       -
     * - `botadi <http://www.xavierdupre.fr/app/botadi/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/botadi.svg?branch=master
-            :target: https://travis-ci.org/sdpython/botadi
+      - .. image:: https://travis-ci.com/sdpython/botadi.svg?branch=master
+            :target: https://travis-ci.com/sdpython/botadi
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/5qqqxtf4qgab90ec?svg=true
             :target: https://ci.appveyor.com/project/sdpython/botadi
@@ -84,8 +84,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/botadi/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `code_beatrix <http://lesenfantscodaient.fr>`_
-      - .. image:: https://travis-ci.org/sdpython/code_beatrix.svg?branch=master
-            :target: https://travis-ci.org/sdpython/code_beatrix
+      - .. image:: https://travis-ci.com/sdpython/code_beatrix.svg?branch=master
+            :target: https://travis-ci.com/sdpython/code_beatrix
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/g7065ubabg7xxpm6?svg=true
             :target: https://ci.appveyor.com/project/sdpython/code-beatrix
@@ -103,8 +103,8 @@ Tableau de bord et statut des dépendances
             :target: http://lesenfantscodaient.fr/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/cpyquickhelper.svg?branch=master
-            :target: https://travis-ci.org/sdpython/cpyquickhelper
+      - .. image:: https://travis-ci.com/sdpython/cpyquickhelper.svg?branch=master
+            :target: https://travis-ci.com/sdpython/cpyquickhelper
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/sia7wxgjv8e1fi5a?svg=true
             :target: https://ci.appveyor.com/project/sdpython/cpyquickhelper
@@ -124,8 +124,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `ensae_projects <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/ensae_projects.svg?branch=master
-            :target: https://travis-ci.org/sdpython/ensae_projects
+      - .. image:: https://travis-ci.com/sdpython/ensae_projects.svg?branch=master
+            :target: https://travis-ci.com/sdpython/ensae_projects
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/5qbwt4kaxpc8w415?svg=true
             :target: https://ci.appveyor.com/project/sdpython/ensae-projects
@@ -143,8 +143,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master
-            :target: https://travis-ci.org/sdpython/ensae_teaching_cs
+      - .. image:: https://travis-ci.com/sdpython/ensae_teaching_cs.svg?branch=master
+            :target: https://travis-ci.com/sdpython/ensae_teaching_cs
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/ko5g064idp5srm74?svg=true
             :target: https://ci.appveyor.com/project/sdpython/ensae-teaching-cs
@@ -162,8 +162,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `ensae_teaching_dl <http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/ensae_teaching_dl.svg?branch=master
-            :target: https://travis-ci.org/sdpython/ensae_teaching_dl
+      - .. image:: https://travis-ci.com/sdpython/ensae_teaching_dl.svg?branch=master
+            :target: https://travis-ci.com/sdpython/ensae_teaching_dl
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/b7c2o4fqlaxl0r0a?svg=true
             :target: https://ci.appveyor.com/project/sdpython/ensae-teaching-dl
@@ -181,8 +181,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/ensae_teaching_dl/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `jupytalk <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/jupytalk.svg?branch=master
-            :target: https://travis-ci.org/sdpython/jupytalk
+      - .. image:: https://travis-ci.com/sdpython/jupytalk.svg?branch=master
+            :target: https://travis-ci.com/sdpython/jupytalk
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/cq8d56y2o4ldi7rn?svg=true
             :target: https://ci.appveyor.com/project/sdpython/jupytalk
@@ -200,8 +200,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/jupytalk/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - :epkg:`jyquickhelper`
-      - .. image:: https://travis-ci.org/sdpython/jyquickhelper.svg?branch=master
-            :target: https://travis-ci.org/sdpython/jyquickhelper
+      - .. image:: https://travis-ci.com/sdpython/jyquickhelper.svg?branch=master
+            :target: https://travis-ci.com/sdpython/jyquickhelper
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/2tyc3or7snm6w4xl?svg=true
             :target: https://ci.appveyor.com/project/sdpython/jyquickhelper
@@ -219,8 +219,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/jyquickhelper/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - :epkg:`lecture_citation`
-      - .. image:: https://travis-ci.org/sdpython/lecture_citation.svg?branch=master
-            :target: https://travis-ci.org/sdpython/lecture_citation
+      - .. image:: https://travis-ci.com/sdpython/lecture_citation.svg?branch=master
+            :target: https://travis-ci.com/sdpython/lecture_citation
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/al9chaf5ivx7bmmx?svg=true
             :target: https://ci.appveyor.com/project/sdpython/lecture-citation
@@ -236,8 +236,8 @@ Tableau de bord et statut des dépendances
             :target: https://codecov.io/github/sdpython/lecture_citation?branch=master
       -
     * - :epkg:`lightmlboard`
-      - .. image:: https://travis-ci.org/sdpython/lightmlboard.svg?branch=master
-            :target: https://travis-ci.org/sdpython/lightmlboard
+      - .. image:: https://travis-ci.com/sdpython/lightmlboard.svg?branch=master
+            :target: https://travis-ci.com/sdpython/lightmlboard
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/6g0xro11tmc6t05d?svg=true
             :target: https://ci.appveyor.com/project/sdpython/lightmlboard
@@ -255,8 +255,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/lightmlboard/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - :epkg:`lightmlrestapi`
-      - .. image:: https://travis-ci.org/sdpython/lightmlrestapi.svg?branch=master
-            :target: https://travis-ci.org/sdpython/lightmlrestapi
+      - .. image:: https://travis-ci.com/sdpython/lightmlrestapi.svg?branch=master
+            :target: https://travis-ci.com/sdpython/lightmlrestapi
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/itkrtmperlhjm4xw?svg=true
             :target: https://ci.appveyor.com/project/sdpython/lightmlrestapi
@@ -274,8 +274,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/lightmlrestapi/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - :epkg:`manydataapi`
-      - .. image:: https://travis-ci.org/sdpython/manydataapi.svg?branch=master
-            :target: https://travis-ci.org/sdpython/manydataapi
+      - .. image:: https://travis-ci.com/sdpython/manydataapi.svg?branch=master
+            :target: https://travis-ci.com/sdpython/manydataapi
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/hbi3d7kl4gde07o0?svg=true
             :target: https://ci.appveyor.com/project/sdpython/manydataapi
@@ -293,8 +293,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/manydataapi/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - :epkg:`mathenjeu`
-      - .. image:: https://travis-ci.org/sdpython/mathenjeu.svg?branch=master
-            :target: https://travis-ci.org/sdpython/mathenjeu
+      - .. image:: https://travis-ci.com/sdpython/mathenjeu.svg?branch=master
+            :target: https://travis-ci.com/sdpython/mathenjeu
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/kewttt58ejfwduao?svg=true
             :target: https://ci.appveyor.com/project/sdpython/mathenjeu
@@ -312,8 +312,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/mathenjeu/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - :epkg:`mlinsights`
-      - .. image:: https://travis-ci.org/sdpython/mlinsights.svg?branch=master
-            :target: https://travis-ci.org/sdpython/mlinsights
+      - .. image:: https://travis-ci.com/sdpython/mlinsights.svg?branch=master
+            :target: https://travis-ci.com/sdpython/mlinsights
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/uj6tq445k3na7hs9?svg=true
             :target: https://ci.appveyor.com/project/sdpython/mlinsights
@@ -333,8 +333,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/mlinsights/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - :epkg:`mlprodict`
-      - .. image:: https://travis-ci.org/sdpython/mlprodict.svg?branch=master
-            :target: https://travis-ci.org/sdpython/mlprodict
+      - .. image:: https://travis-ci.com/sdpython/mlprodict.svg?branch=master
+            :target: https://travis-ci.com/sdpython/mlprodict
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/g8chk1ufyk1m8uep?svg=true
             :target: https://ci.appveyor.com/project/sdpython/mlprodict
@@ -354,8 +354,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/mlprodict/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `mlstatpy <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/mlstatpy.svg?branch=master
-            :target: https://travis-ci.org/sdpython/mlstatpy
+      - .. image:: https://travis-ci.com/sdpython/mlstatpy.svg?branch=master
+            :target: https://travis-ci.com/sdpython/mlstatpy
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/5env33qptorgshaq?svg=true
             :target: https://ci.appveyor.com/project/sdpython/mlstatpy
@@ -373,8 +373,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `onnxcustom <http://www.xavierdupre.fr/app/onnxcustom/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/onnxcustom.svg?branch=master
-            :target: https://travis-ci.org/sdpython/onnxcustom
+      - .. image:: https://travis-ci.com/sdpython/onnxcustom.svg?branch=master
+            :target: https://travis-ci.com/sdpython/onnxcustom
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/a3sn45a2fayoxb5q?svg=true
             :target: https://ci.appveyor.com/project/sdpython/onnxcustom
@@ -390,8 +390,8 @@ Tableau de bord et statut des dépendances
             :target: https://codecov.io/github/sdpython/onnxcustom?branch=master
       -
     * - :epkg:`onnxortext`
-      - .. image:: https://travis-ci.org/sdpython/onnxortext.svg?branch=master
-            :target: https://travis-ci.org/sdpython/onnxortext
+      - .. image:: https://travis-ci.com/sdpython/onnxortext.svg?branch=master
+            :target: https://travis-ci.com/sdpython/onnxortext
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/r7st490hekggad3d?svg=true
             :target: https://ci.appveyor.com/project/sdpython/onnxortext
@@ -411,8 +411,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/onnxortext/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `pandas_streaming <http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/pandas_streaming.svg?branch=master
-            :target: https://travis-ci.org/sdpython/pandas_streaming
+      - .. image:: https://travis-ci.com/sdpython/pandas_streaming.svg?branch=master
+            :target: https://travis-ci.com/sdpython/pandas_streaming
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/4te066r8ne1ymmhy?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pandas-streaming
@@ -434,8 +434,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/pandas_streaming/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `papierstat <http://www.xavierdupre.fr/app/papierstat/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/papierstat.svg?branch=master
-            :target: https://travis-ci.org/sdpython/papierstat
+      - .. image:: https://travis-ci.com/sdpython/papierstat.svg?branch=master
+            :target: https://travis-ci.com/sdpython/papierstat
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/34isqaj7je3u1xil/branch/master?svg=true
             :target: https://ci.appveyor.com/project/sdpython/papierstat
@@ -455,8 +455,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/papierstat/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `pyenbc <http://www.xavierdupre.fr/app/pyenbc/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/pyenbc.svg?branch=master
-            :target: https://travis-ci.org/sdpython/pyenbc
+      - .. image:: https://travis-ci.com/sdpython/pyenbc.svg?branch=master
+            :target: https://travis-ci.com/sdpython/pyenbc
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/scv9gmggw7qc462i?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pyenbc
@@ -476,8 +476,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/pyenbc/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `pyensae <http://www.xavierdupre.fr/app/pyensae/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/pyensae.svg?branch=master
-            :target: https://travis-ci.org/sdpython/pyensae
+      - .. image:: https://travis-ci.com/sdpython/pyensae.svg?branch=master
+            :target: https://travis-ci.com/sdpython/pyensae
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/jioxwx1igwbqwa28?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pyensae
@@ -495,8 +495,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/pyensae/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `pymlbenchmark <http://www.xavierdupre.fr/app/pymlbenchmark/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/pymlbenchmark.svg?branch=master
-            :target: https://travis-ci.org/sdpython/pymlbenchmark
+      - .. image:: https://travis-ci.com/sdpython/pymlbenchmark.svg?branch=master
+            :target: https://travis-ci.com/sdpython/pymlbenchmark
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/l2lk7a0r2pccpg3r?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pymlbenchmark
@@ -514,8 +514,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/pymlbenchmark/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `pymmails <http://www.xavierdupre.fr/app/pymmails/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/pymmails.svg?branch=master
-            :target: https://travis-ci.org/sdpython/pymmails
+      - .. image:: https://travis-ci.com/sdpython/pymmails.svg?branch=master
+            :target: https://travis-ci.com/sdpython/pymmails
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/hqhhdndvayrx0r9k?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pymmails
@@ -531,8 +531,8 @@ Tableau de bord et statut des dépendances
             :target: https://codecov.io/github/sdpython/pymmails?branch=master
       -
     * - :epkg:`pymyinstall`
-      - .. image:: https://travis-ci.org/sdpython/pymyinstall.svg?branch=master
-            :target: https://travis-ci.org/sdpython/pymyinstall
+      - .. image:: https://travis-ci.com/sdpython/pymyinstall.svg?branch=master
+            :target: https://travis-ci.com/sdpython/pymyinstall
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/ccsvoi29n3a71i6j?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pymyinstall
@@ -550,8 +550,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - :epkg:`pyquickhelper`
-      - .. image:: https://travis-ci.org/sdpython/pyquickhelper.svg?branch=master
-            :target: https://travis-ci.org/sdpython/pyquickhelper
+      - .. image:: https://travis-ci.com/sdpython/pyquickhelper.svg?branch=master
+            :target: https://travis-ci.com/sdpython/pyquickhelper
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/t2g9olcgqgdvqq3l?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pyquickhelper
@@ -571,8 +571,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/pyquickhelper/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `pyrsslocal <http://www.xavierdupre.fr/app/pyrsslocal/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/pyrsslocal.svg?branch=master
-            :target: https://travis-ci.org/sdpython/pyrsslocal
+      - .. image:: https://travis-ci.com/sdpython/pyrsslocal.svg?branch=master
+            :target: https://travis-ci.com/sdpython/pyrsslocal
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/0cc1qtlccq8k7hdx?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pyrsslocal
@@ -588,8 +588,8 @@ Tableau de bord et statut des dépendances
             :target: https://codecov.io/github/sdpython/pyrsslocal?branch=master
       -
     * - `pysqllike <http://www.xavierdupre.fr/app/pysqllike/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/pysqllike.svg?branch=master
-            :target: https://travis-ci.org/sdpython/pysqllike
+      - .. image:: https://travis-ci.com/sdpython/pysqllike.svg?branch=master
+            :target: https://travis-ci.com/sdpython/pysqllike
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/rrpks1pgivea23js?svg=true
             :target: https://ci.appveyor.com/project/sdpython/pysqllike
@@ -605,8 +605,8 @@ Tableau de bord et statut des dépendances
             :target: https://codecov.io/github/sdpython/pysqllike?branch=master
       -
     * - :epkg:`sparkouille`
-      - .. image:: https://travis-ci.org/sdpython/sparkouille.svg?branch=master
-            :target: https://travis-ci.org/sdpython/sparkouille
+      - .. image:: https://travis-ci.com/sdpython/sparkouille.svg?branch=master
+            :target: https://travis-ci.com/sdpython/sparkouille
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/chiwkjr9li91qd02?svg=true
             :target: https://ci.appveyor.com/project/sdpython/sparkouille
@@ -624,8 +624,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/sparkouille/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `teachpyx <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/teachpyx.svg?branch=master
-            :target: https://travis-ci.org/sdpython/teachpyx
+      - .. image:: https://travis-ci.com/sdpython/teachpyx.svg?branch=master
+            :target: https://travis-ci.com/sdpython/teachpyx
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/5jl303wl14dtesl0?svg=true
             :target: https://ci.appveyor.com/project/sdpython/teachpyx
@@ -645,8 +645,8 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/teachpyx/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `tkinterquickhelper <http://www.xavierdupre.fr/app/tkinterquickhelper/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/tkinterquickhelper.svg?branch=master
-            :target: https://travis-ci.org/sdpython/tkinterquickhelper
+      - .. image:: https://travis-ci.com/sdpython/tkinterquickhelper.svg?branch=master
+            :target: https://travis-ci.com/sdpython/tkinterquickhelper
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/oqqayew2qan2bh6h?svg=true
             :target: https://ci.appveyor.com/project/sdpython/tkinterquickhelper
@@ -662,8 +662,8 @@ Tableau de bord et statut des dépendances
             :target: https://codecov.io/github/sdpython/tkinterquickhelper?branch=master
       -
     * - `wrapclib <http://www.xavierdupre.fr/app/wrapclib/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/wrapclib.svg?branch=master
-            :target: https://travis-ci.org/sdpython/wrapclib
+      - .. image:: https://travis-ci.com/sdpython/wrapclib.svg?branch=master
+            :target: https://travis-ci.com/sdpython/wrapclib
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/auonxiihm1eihv3t?svg=true
             :target: https://ci.appveyor.com/project/sdpython/wrapclib
@@ -691,8 +691,8 @@ Tableau de bord et statut des dépendances
       -
       -
     * - `_check_python_install <http://www.xavierdupre.fr/app/_check_python_install/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/_check_python_install.svg?branch=master
-            :target: https://travis-ci.org/sdpython/_check_python_install
+      - .. image:: https://travis-ci.com/sdpython/_check_python_install.svg?branch=master
+            :target: https://travis-ci.com/sdpython/_check_python_install
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/dy37r7bykm3ulcfl?svg=true
             :target: https://ci.appveyor.com/project/sdpython/check-python-install
@@ -709,8 +709,8 @@ Tableau de bord et statut des dépendances
             :target: https://codecov.io/github/sdpython/_check_python_install?branch=master
       -
     * - `python3_module_template <http://www.xavierdupre.fr/app/python3_module_template/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/python3_module_template.svg?branch=master
-            :target: https://travis-ci.org/sdpython/python3_module_template
+      - .. image:: https://travis-ci.com/sdpython/python3_module_template.svg?branch=master
+            :target: https://travis-ci.com/sdpython/python3_module_template
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/8yv4brsckay4374a?svg=true
             :target: https://ci.appveyor.com/project/sdpython/python3-module-template
@@ -755,8 +755,8 @@ Tableau de bord et statut des dépendances
       -
       -
     * - `td3a_cpp <http://www.xavierdupre.fr/app/td3a_cpp/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/td3a_cpp.svg?branch=master
-            :target: https://travis-ci.org/sdpython/td3a_cpp
+      - .. image:: https://travis-ci.com/sdpython/td3a_cpp.svg?branch=master
+            :target: https://travis-ci.com/sdpython/td3a_cpp
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/wvo6ovlaxi8ypua4?svg=true
             :target: https://ci.appveyor.com/project/sdpython/python3-module-template
@@ -807,8 +807,8 @@ Ils ne sont pas maintenus de façon très soutenue.
       - Coverage
       - Notebook Coverage
     * - `csharpy <http://www.xavierdupre.fr/app/csharpy/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/csharpy.svg?branch=master
-            :target: https://travis-ci.org/sdpython/csharpy
+      - .. image:: https://travis-ci.com/sdpython/csharpy.svg?branch=master
+            :target: https://travis-ci.com/sdpython/csharpy
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/ldrgt6sxeyfwtoo2?svg=true
             :target: https://ci.appveyor.com/project/sdpython/csharpy
@@ -826,8 +826,8 @@ Ils ne sont pas maintenus de façon très soutenue.
             :target: http://www.xavierdupre.fr/app/csharpy/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `csharpyml <http://www.xavierdupre.fr/app/csharpyml/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.org/sdpython/csharpyml.svg?branch=master
-            :target: https://travis-ci.org/sdpython/csharpyml
+      - .. image:: https://travis-ci.com/sdpython/csharpyml.svg?branch=master
+            :target: https://travis-ci.com/sdpython/csharpyml
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/0achvn5m9ga8bx2o?svg=true
             :target: https://ci.appveyor.com/project/sdpython/csharpyml
@@ -861,8 +861,8 @@ Ils ne sont pas maintenus de façon très soutenue.
       -
       -
     * - `machinelearningext <https://github.com/sdpython/machinelearningext>`_
-      - .. image:: https://travis-ci.org/sdpython/machinelearningext.svg?branch=master
-            :target: https://travis-ci.org/sdpython/machinelearningext
+      - .. image:: https://travis-ci.com/sdpython/machinelearningext.svg?branch=master
+            :target: https://travis-ci.com/sdpython/machinelearningext
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/uwanivg3b5qibncs?svg=true
             :target: https://ci.appveyor.com/project/sdpython/machinelearningext
@@ -876,7 +876,7 @@ Ils ne sont pas maintenus de façon très soutenue.
       -
 
 D'autres modules forkés sont disponibles sur
-`travis <https://travis-ci.org/sdpython/>`_,
+`travis <https://travis-ci.com/sdpython/>`_,
 `appveyor <https://ci.appveyor.com/sdpython>`_,
 `circleci <https://circleci.com/gh/sdpython>`_.
 

@@ -166,7 +166,7 @@ propre compte :epkg:`GitHub` en le `forkant <https://fr.wikipedia.org/wiki/Fork_
 Intégration continue
 --------------------
 
-`travis <https://travis-ci.org/>`_ est un des plus simples.
+`travis <https://travis-ci.com/>`_ est un des plus simples.
 Nous allons essayer `circleci <https://circleci.com/>`_.
 Il fonctionne comme tous les autres.
 Il faut d'abord créer un compte.

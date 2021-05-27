@@ -210,8 +210,8 @@ sans même avoir à récupérer tous les fichiers sur votre ordinateur :
 | :ref:`genindex`      |  :ref:`l-FAQs`      | :ref:`l-notebooks`  | :ref:`l-getting_started_full`  | :ref:`l-statcode`      | `Unit Test Coverage <coverage/index.html>`_    |
 +----------------------+---------------------+---------------------+--------------------------------+------------------------+------------------------------------------------+
 
-.. image:: https://travis-ci.org/sdpython/ensae_teaching_cs.svg?branch=master
-    :target: https://travis-ci.org/sdpython/ensae_teaching_cs
+.. image:: https://travis-ci.com/sdpython/ensae_teaching_cs.svg?branch=master
+    :target: https://travis-ci.com/sdpython/ensae_teaching_cs
     :alt: Build status
 
 .. image:: https://ci.appveyor.com/api/projects/status/ko5g064idp5srm74?svg=true
