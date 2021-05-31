@@ -25,6 +25,7 @@ Finance
 * `bloomberg API <https://www.bloomberglabs.com/api/libraries/>`_
 * `ta-lib <https://github.com/mrjbq7/ta-lib>`_
 * `mlfinlab <https://mlfinlab.readthedocs.io/en/latest/index.html>`_
+* `PyPortfolioOpt <https://github.com/robertmartin8/PyPortfolioOpt>`_
 
 *Modules data*
 
