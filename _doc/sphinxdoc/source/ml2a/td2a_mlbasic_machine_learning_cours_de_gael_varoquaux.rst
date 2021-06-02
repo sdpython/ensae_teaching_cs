@@ -80,6 +80,10 @@ le machine learning.
     ../notebooks/ml_scikit_learn_simple
     ../notebooks/ml_scikit_learn_simple_correction
 
+*MOOC - cours*
+
+* `Scikit-learn course <https://inria.github.io/scikit-learn-mooc/index.html>`_
+
 *Lectures*
 
 * `API design for machine learning software: experiences from the scikit-learn project <https://arxiv.org/pdf/1309.0238.pdf>`_
