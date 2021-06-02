@@ -70,3 +70,10 @@
 
     Une énième implémentation de pipeline de machine learning :
     `kedro <https://github.com/quantumblacklabs/kedro>`_.
+
+    Quelques PR intéressantes (scikit-learn) :
+
+    * `Improve near constant feature detection in scalers
+      <https://github.com/scikit-learn/scikit-learn/issues/19898>`_
+    * `MNT Avoid catastrophic cancellation in mean_variance_axis
+      <https://github.com/scikit-learn/scikit-learn/pull/19766>`_
