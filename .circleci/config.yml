@@ -59,6 +59,21 @@ jobs:
             sudo apt-get install protobuf-compiler libprotoc-dev cmake
 
       - run:
+          name: Install libproj
+          command: |
+            sudo apt-get install -y libgeos-dev libproj-dev proj-data graphviz
+
+      - run:
+          name: Install pyproj, shapely, cartopy
+          command: |
+            python -m venv venv
+            . venv/bin/activate
+            pip install pyproj
+            pip uninstall -y shapely
+            pip install --no-binary shapely shapely
+            pip install cartopy
+
+      - run:
           name: Install standard libraries
           command: |
             python -m venv venv
