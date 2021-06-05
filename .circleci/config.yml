@@ -81,6 +81,13 @@ jobs:
             pip install scipy matplotlib numpy cython pandas wheel pybind11 llvmlite numba
 
       - run:
+          name: Install pygame
+          command: |
+            python -m venv venv
+            . venv/bin/activate
+            pip install pygame
+
+      - run:
           name: install dependencies
           command: |
             python3 -m venv venv
