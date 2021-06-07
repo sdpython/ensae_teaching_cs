@@ -26,6 +26,9 @@ Finance
 * `ta-lib <https://github.com/mrjbq7/ta-lib>`_
 * `mlfinlab <https://mlfinlab.readthedocs.io/en/latest/index.html>`_
 * `PyPortfolioOpt <https://github.com/robertmartin8/PyPortfolioOpt>`_
+* `empyrial <https://github.com/ssantoshp/Empyrial>`_,
+   ce module a quelques visualisations intéressantes :
+   `exemple <https://github.com/ssantoshp/Empyrial#usage>`_
 
 *Modules data*
 
