@@ -1,0 +1,14 @@
+
+.. blogpost::
+    :title: DGML, open.data.gouv pour le machine learning
+    :keywords: scikit-learn, DGML
+    :date: 2021-06-10
+    :categories: cours
+
+    Jusqu'à présent, `UCI <https://archive.ics.uci.edu/ml/datasets.php>`_
+    était le premier réflexe pour obtenir un jeu de données
+    propres et ne nécessitant aucune inscription pour obtenir
+    le jeu comme sur Kaggle. L'Etat français vient de faire
+    de même avec `DGML <https://datascience.etalab.studio/dgml/>`_
+    ou *Data Gouv pour le Machine Learning*. Ce sera dorénavant mon
+    premier réflexe avant de retourner à mes vieilles habitudes.

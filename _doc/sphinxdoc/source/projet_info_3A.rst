@@ -171,7 +171,8 @@ Nous vous recommandons d'adopter la démarche suivante:
 #. implémentation et débugging sur un petit jeu de données synthétiques
    où les choses sont sensées bien se passer
    et la taille du jeu de données rend le debugging plus rapide,
-#. application à un vrai jeu de données que vous aurez sélectionné sur un des sites suivants
+#. application à un vrai jeu de données que vous aurez sélectionné
+   sur un des sites suivants, :epkg:`DGML`,
    `Stanford Large Network Dataset Collection <http://snap.stanford.edu/data/>`_,
    `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_
    ou autre (voir :ref:`l-datasources`), cette approche est aussi valable

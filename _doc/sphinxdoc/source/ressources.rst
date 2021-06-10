@@ -46,6 +46,7 @@ Source de données
 * *finance* `Daily News for Stock Market Prediction <https://www.kaggle.com/aaron7sun/stocknews>`_
 * *images* `ImageNet <http://image-net.org/>`_, base de données d'images avec leur contenu
 * *ML* `Kaggle Datasets <https://www.kaggle.com/datasets>`_
+* *ML* `Data Gouv pour le Machine Learning <https://datascience.etalab.studio/dgml/>`_
 * *ML* `UCI Machine Learning Repository <https://archive.ics.uci.edu/ml/datasets.html>`_
   (collection de jeux de données classés par type de problème - régression, classification, ...)
   Les jeux **UCI** apparaissent dans de nombreux scientifiques.

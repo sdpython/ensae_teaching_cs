@@ -122,6 +122,7 @@ epkg_dictionary.update({
     "Cython": 'http://cython.org/',
     "cython": 'http://cython.org/',
     "dask": 'http://dask.pydata.org/en/latest/',
+    "DGML": 'https://datascience.etalab.studio/dgml/',
     'Debian 9': 'https://fr.wikipedia.org/wiki/Debian',
     'deep learning': 'https://en.wikipedia.org/wiki/Deep_learning',
     'dirty-cat': 'https://dirty-cat.github.io/stable/',
