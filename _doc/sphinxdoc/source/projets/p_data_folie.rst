@@ -73,6 +73,7 @@ Twitter
 On peut faire beaucoup de choses avec `Twitter <https://twitter.com/>`_. La première étape consiste à récupérer des données
 avec des modules tels que :
 
+- `twint <https://github.com/twintproject/twint>`_
 - `tweepy <http://www.tweepy.org/>`_
 - `twitter <https://pypi.python.org/pypi/twitter>`_
 - `python-twitter <https://pypi.python.org/pypi/python-twitter>`_
