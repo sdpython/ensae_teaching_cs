@@ -31,9 +31,10 @@ Le plan suggéré est le suivant :
 Le modèle classique pour concevoir une stratégie consiste à utiliser une fonction d'évaluation qui
 donne un score à chaque coup possible. On utilise ensuite un algorithme
 `minimax <http://fr.wikipedia.org/wiki/Algorithme_minimax>`_
-(voir aussi `Using Artificial Intelligence to solve the 2048 Game (JAVA code) <http://blog.datumbox.com/using-artificial-intelligence-to-solve-the-2048-game-java-code/>`_)
-pour construire
-différents niveaux de difficulté. On pourra par exemple vérifier qu'une stratégie utilisant la même
+(voir aussi `Using Artificial Intelligence to solve the 2048 Game (JAVA code)
+<http://blog.datumbox.com/using-artificial-intelligence-to-solve-the-2048-game-java-code/>`_)
+pour construire différents niveaux de difficulté. On pourra par
+exemple vérifier qu'une stratégie utilisant la même
 fonction d'évaluation qu'une autre mais avec un niveau de difficulté ou de profondeur plus élevée
 est meilleure. Avant de commencer la partie graphique, je suggère la lecture de cet article :
 `Frameworks for games in Python <http://www.xavierdupre.fr/blog/2014-01-01_nojs.html>`_.
@@ -60,8 +61,8 @@ pour ceux qui veulent réaliser une interface graphique.
 
 .. _l-jeu-echec:
 
-Echec
------
+Echecs
+------
 
 Quelques liens :
 
@@ -70,6 +71,15 @@ Quelques liens :
 * `StockFish <https://stockfishchess.org/>`_ : l'état de l'art sans deep learning
 * `Google's AlphaZero Destroys Stockfish In 100-Game  <https://www.chess.com/news/view/google-s-alphazero-destroys-stockfish-in-100-game-match>`_ :
   l'état de l'art avec deep learning (deep reinforcement learning) : Alpha-Zero
+
+.. _l-jeu-echec1d:
+
+Echecs 1D (2021)
+----------------
+
+Une version simplifiée des échecs pour les enfants :
+`1DChess <https://gumroad.com/l/1DChess>`_. Le jeu se déroule
+sur un ruban.
 
 .. _l-jeu-gomo:
 

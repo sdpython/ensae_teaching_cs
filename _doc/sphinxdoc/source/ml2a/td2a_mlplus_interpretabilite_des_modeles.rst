@@ -121,6 +121,8 @@ seulement.
   <https://arxiv.org/abs/2006.06466>`_
 * `TREPAN Reloaded: A Knowledge-driven Approach to Explaining Black-box Models
   <https://arxiv.org/pdf/1906.08362.pdf>`_
+* `Controlling a confound in predictive models with a test set minimizing its effect
+  <https://hal.archives-ouvertes.fr/hal-01831701/document>`_
 
 *Lectures : monotonie*
 
@@ -212,6 +214,8 @@ Plein d'autres options sont disponibles sur cette page :
 * `savvy <https://github.com/lmc2179/savvy>`_
 * `dalex <https://github.com/ModelOriented/DALEX>`_
 * `skope-rules <https://skope-rules.readthedocs.io/en/latest/index.html>`_
+* `confound_prediction <https://github.com/darya-chyzhyk/confound_prediction>`_,
+  plus vraiment maintenu mais il y a peut-être quelques idées à récupérer
 
 *Modules de visualisation*
 

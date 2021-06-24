@@ -194,6 +194,8 @@ epkg_dictionary.update({
     "OpenMP": 'https://en.wikipedia.org/wiki/OpenMP',
     "openmp": 'https://en.wikipedia.org/wiki/OpenMP',
     "OpenStreetMap": 'https://www.openstreetmap.org/',
+    "onnx": "https://github.com/onnx/onnx",
+    "ONNX": "https://onnx.ai/",
     'onnxortext': 'http://www.xavierdupre.fr/app/onnxortext/helpsphinx/index.html',
     "OSM": 'https://www.openstreetmap.org/',
     "OS/X": 'https://fr.wikipedia.org/wiki/MacOS',

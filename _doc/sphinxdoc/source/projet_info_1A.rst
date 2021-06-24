@@ -98,6 +98,7 @@ Liste exhaustive :
 #. Algo génétique : :ref:`l-gen-motif`
 #. Jeu 2 : :ref:`l-jeu-awa`
 #. Jeu 2 : :ref:`l-jeu-echec`
+#. Jeu 2 : :ref:`l-jeu-echec1d`
 #. Jeu 2 : :ref:`l-jeu-go`
 #. Jeu 2 : :ref:`l-jeu-gomo`
 #. Jeu 2 : :ref:`l-jeu-oth`

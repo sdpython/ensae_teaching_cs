@@ -8,13 +8,6 @@ que je dispense à l':epkg:`ENSAE`. Ces cours s'appuient principalement sur
 le langage :epkg:`Python`. Le contenu est librement disponible
 sur `GitHub/ensae_teaching_cs <https://github.com/sdpython/ensae_teaching_cs>`_ |gitlogo|
 et permet à quiconque de contribuer à ce cours.
-Il existe deux formats disponibles :
-`mobile/PC <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_ ou
-`plus large <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_.
-Les changements importants sont notés sur le :ref:`blog <ap-main-0>`
-associé à ce cours, certaines modifications prévues
-sont notés sur `github/ensae_teaching_cs
-<https://github.com/sdpython/ensae_teaching_cs/issues>`_.
 
 .. |gitlogo| image:: _static/git_logo.png
              :height: 20
@@ -42,6 +35,11 @@ dont je suis l'auteur principal sont disponibles :
 * `Jeux autour d'algorithmes pour les enfatns
   <http://lesenfantscodaient.fr/>`_, ce site contient des jeux
   avec ou sans ordinateurs pour comprendre des algorithms.
+* `mlinsights <http://www.xavierdupre.fr/app/mlinsights/helpsphinx/index.html>`_,
+  quelques extensions pour :epkg:`scikit-learn`,
+* `mlprodict <http://www.xavierdupre.fr/app/mlprodict/helpsphinx/index.html>`_,
+  des outils pour aider à la conversion d'un modèle de machine learning
+  au format :epkg:`ONNX`,
 * `Présentations, conférences
   <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/index.html>`_,
   un endroit où je mets en ligne mes présentations publiques,
@@ -158,7 +156,9 @@ ont élevé le niveau de fonctionnalités, les
 ont changé la façon de travailler.
 Les modules les plus utilisés sont maintenant fournis sur toutes les plate-formes
 avec la distribution `Anaconda <https://www.continuum.io/downloads>`_.
-Sous Windows, le site
+
+Sous Windows, la plupart des modules sont disponibles.
+Quand bien même ce ne serait pas le cas, le site
 `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
 proposent de nombreux modules qui nécessitent un compilateur C++. On les repère car
 l'installation ``pip install <module>``
