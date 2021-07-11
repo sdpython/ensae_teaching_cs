@@ -1,0 +1,9 @@
+
+.. blogpost::
+    :title: Article à lire
+    :keywords: apprentissage par renforcement
+    :date: 2021-07-11
+    :categories: article
+
+    `Causal Reinforcement Learning using Observational and Interventional Data
+    <https://arxiv.org/pdf/2106.14421.pdf>`_
