@@ -29,7 +29,7 @@ script:
   - { CMD: "$PYINT -u setup.py unittests -e \".*code_style.*\"", NAME: "UT_STYLE", SCHEDULER: "H H(1-2) 24 * *" }
   - { CMD: "$PYINT -u setup.py unittests -e \".*cartopy.*\"", NAME: "UT_MAP", SCHEDULER: "H H(1-2) 24 * *", TIMEOUT: 7200 }
   - { CMD: "$PYINT -u setup.py unittests -e \".*(http).*\"", NAME: "UT_HTTP", SCHEDULER: "H H(1-2) 24 * *" }
-  - { CMD: "$PYINT -u setup.py unittests -e .*LONG.* -g \".*((internet)|(cvxopt)|(notebook_eleves)|(cartopy)).*\"", NAME: "UT_LONG", TIMEOUT: 4800, SCHEDULER: "H H(1-2) 24 * *" }
+  - { CMD: "$PYINT -u setup.py unittests -e .*LONG.* -g \".*((internet)|(cvxopt)|(notebook_eleves)|(cartopy)|(dask)).*\"", NAME: "UT_LONG", TIMEOUT: 4800, SCHEDULER: "H H(1-2) 24 * *" }
   - { CMD: "$PYINT -u setup.py unittests -e .*SKIP.* -g \".*((theano)|(keras)|(deep)|(scraping)|(pythonnet)|(huge)|(web)|(ete3)|(cvxopt)|(students)|(cartopy)).*\"", NAME: "UT_SKIP", SCHEDULER: "H H(1-2) 24 * *" }
   - { CMD: "$PYINT -u setup.py unittests -e .*_1A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)|(cartopy)).*\"", NAME: "UT_1A", SCHEDULER: "H H(1-2) 24 * *" }
   - { CMD: "$PYINT -u setup.py unittests -e .*_2A_.* -g \".*((SKIP)|(theano)|(keras)|(scraping)|(ete3)|(cvxopt)|(cartopy)|(dask)).*\"", NAME: "UT_2A", TIMEOUT: 4800, SCHEDULER: "H H(1-2) 24 * *" }
@@ -41,6 +41,7 @@ script:
   - { CMD: "$PYINT -u setup.py unittests -e \".*notebook_eleves.*\"", NAME: "UT_NBELEVE", SCHEDULER: "H H(1-2) 24 * *" }
   - { CMD: "$PYINT -u setup.py unittests -e \".*students.*\"", NAME: "UT_STUDENTS", SCHEDULER: "H H(1-2) 24 * *" }
   - { CMD: "$PYINT -u setup.py unittests -e \".*internet.*\"", NAME: "UT_INTERNET", SCHEDULER: "H H(1-2) 24 * *" }
+  - { CMD: "$PYINT -u setup.py unittests -e .*dask.*", NAME: "UT_LONG_DASK", TIMEOUT: 9600, SCHEDULER: "H H(1-2) 24 * *" }
 
 after_script:
   - $PYINT -u setup.py bdist_wheel
