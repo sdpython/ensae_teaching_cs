@@ -23,7 +23,7 @@ def data_shape_files(name, cache=".", load=True):
       <https://www.data.gouv.fr/en/datasets/contours-des-departements-francais-issus-d-openstreetmap/>`_
     """
     if name == 'depfr2018':
-        url = 'https://www.data.gouv.fr/en/datasets/r/eb36371a-761d-44a8-93ec-3d728bec17ce'
+        url = 'https://github.com/sdpython/data/raw/master/shapefiles/france_departements/departements-20180101-shp.zip'
         dest = os.path.join(cache, 'departements-20180101-shp.zip')
         if not os.path.exists(dest):
             get_url_content_timeout(url, output=dest, encoding=None)
