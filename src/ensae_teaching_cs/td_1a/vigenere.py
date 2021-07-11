@@ -144,7 +144,7 @@ def DecodeVigenereLongueurCle(message, mot=3):
     # on va garder toutes les distances entre
     # entre deux occurrences du meme mot de n lettres
     dis = []
-    for d in dico:
+    for d in dico:  # pylint: disable=C0206
         p = dico[d]
         if len(p) > 1:
             for i in range(0, len(p) - 1):

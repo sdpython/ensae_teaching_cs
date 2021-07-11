@@ -24,7 +24,7 @@ class TestDataZipShapeFiles(ExtTestCase):
     def test_load_french_departments(self):
         df = load_french_departments()
         self.assertEqual(df.shape, (102, 7))
-        self.assertIn('DEPLAT', df.columns)
+        self.assertIn('DEPLAT', df.columns)  # pylint: disable=E1101
 
 
 if __name__ == "__main__":

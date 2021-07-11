@@ -50,7 +50,7 @@ class pyhomeFTP (FTP):
         fLOG("disconnecting")
         FTP.quit(self)
 
-    def mkd(self, path):
+    def mkd(self, path):  # pylint: disable=W0237
         return self.RunCommand(FTP.mkd, path)
 
     def cwd(self, path, create=False):

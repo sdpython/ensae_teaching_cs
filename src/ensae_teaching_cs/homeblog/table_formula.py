@@ -1456,7 +1456,7 @@ class TableFormula(_TableFormulaStat):
                     for i, f in enumerate(functionsValue):
                         h[i].append(f(v) * w)
 
-            for key in hist:
+            for key in hist:  # pylint: disable=C0206
                 h = hist[key]
                 w = sum(histWeight[key])
                 for i in range(0, len(h)):
@@ -1481,7 +1481,7 @@ class TableFormula(_TableFormulaStat):
                     for i, f in enumerate(functionsValue):
                         h[i].append(f(v))
 
-            for key in hist:
+            for key in hist:  # pylint: disable=C0206
                 h = hist[key]
                 for i in range(0, len(h)):
                     h[i] = functionsAgg[i](h[i])
@@ -1614,7 +1614,7 @@ class TableFormula(_TableFormulaStat):
                 for _ in d:
                     del keys[_]
             else:
-                for k in keys:
+                for k in keys:  # pylint: disable=C0206
                     v = keys[k]
                     if v[0] is None:
                         keys[k] = (defaultVal1, v[1])
@@ -1698,7 +1698,7 @@ class TableFormula(_TableFormulaStat):
                 for _ in d:
                     del keys[_]
             else:
-                for k in keys:
+                for k in keys:  # pylint: disable=C0206
                     v = keys[k]
                     if v[0] is None:
                         keys[k] = ([defaultVal1], v[1])

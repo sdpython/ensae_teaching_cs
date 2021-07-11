@@ -79,8 +79,8 @@ class TestTableFormula2(unittest.TestCase):
         file = os.path.join(fold, "data", "BNP.PA.txt")
 
         df = pandas.read_csv(file, sep=",")
-        assert "Date" in df.columns
-        assert "High" in df.columns
+        assert "Date" in df.columns  # pylint: disable=E1101
+        assert "High" in df.columns  # pylint: disable=E1101
         assert len(df) == 2344
         mat = TableFormula(df)
         assert len(mat) == 2344

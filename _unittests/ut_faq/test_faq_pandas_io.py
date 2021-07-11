@@ -21,8 +21,8 @@ class TestFaqPandasIo(unittest.TestCase):
             "dfbom.txt")
         df = read_csv(data, encoding="utf8")
         fLOG(df.columns)
-        fLOG(df.dtypes)
-        assert "\ufeff" not in df.columns[0]
+        fLOG(df.dtypes)  # pylint: disable=E1101
+        assert "\ufeff" not in df.columns[0]  # pylint: disable=E1101
         try:
             df = read_csv(data, encoding="ascii")
         except UnicodeDecodeError:

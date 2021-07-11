@@ -41,8 +41,8 @@ class TestModulesFairTest(unittest.TestCase):
                  "race,sex,capital-gain,capital-loss,hours-per-week,native-country,income").split(",")
         df = pandas.read_csv(data, names=names)
         if df.shape[0] > 100:
-            fLOG(df.shape)
-            df = df[:100]
+            fLOG(df.shape)  # pylint: disable=E1101
+            df = df[:100]  # pylint: disable=E1136
         data = DataSource(df, budget=1, conf=0.95)
         SENS = ['sex', 'race']     # Protected features
         TARGET = 'income'             # Output

@@ -172,8 +172,8 @@ def load_and_modify_xml_dom(file, outfile, check_keywords=True):
         date = date[:10]
         attr["date"] = date
         ele = dom.createElement("meta")
-        ele.attributes["name"] = "date"
-        ele.attributes["content"] = date
+        ele.attributes["name"] = "date"  # pylint: disable=E1101
+        ele.attributes["content"] = date  # pylint: disable=E1101
         head.appendChild(ele)
 
     # change keywords
