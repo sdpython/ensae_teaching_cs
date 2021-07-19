@@ -100,6 +100,7 @@ mais cela revient à se priver de tout un tas d'outils écrit dans ce langage :
 `jquery <http://jquery.com/>`_,
 `angularJS <https://angularjs.org/>`_,
 `node.js <http://nodejs.org/>`_,
+`deno <https://deno.land/>`_,
 `meteor <https://www.meteor.com/>`_ ...
 
 Une dizaine de modules Python permettant de créer un site web

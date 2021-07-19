@@ -24,3 +24,4 @@ par un autre modèle.
 
 * `ruptures <https://github.com/deepcharles/ruptures>`_
 * `fbprophet <https://facebook.github.io/prophet/>`_
+* `kats <https://github.com/facebookresearch/Kats>`_
