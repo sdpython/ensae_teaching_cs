@@ -92,3 +92,14 @@ pistes dans le reinforcement learning.
 * `How to design good Tetris players <https://hal.inria.fr/hal-00926213/document>`_
 * `Tetris Artificial Intelligence <https://web.engr.illinois.edu/~cyen4/pdf/Tetris_AI.pdf>`_
 * `The Theory of Tetris <http://liacs.leidenuniv.nl/~kosterswa/tetris/tot.pdf>`_
+
+.. _l-rihikudo:
+
+Rikudo, Hikudo (2021)
+---------------------
+
+`Rikudo, Hikudo <https://www.educmat.fr/categories/jeux_reflexion/fiches_jeux/rikudo/index.php>`_
+
+Ces deux jeux se jouent seuls. Ils s'agit de reconstituer un parcours de la totalité
+des cases sachant quelques éléments de ce chemin. L'idée est d'imaginer 
+un algorithme qui sache résoudre ce type de problème.

@@ -66,6 +66,7 @@ Liste exhaustive :
 #. Jeu 1 : :ref:`l-jeuvoronoi`
 #. Jeu 1 : :ref:`l-puzzle-GCHQ`
 #. Jeu 1 : :ref:`l-tetrisia`
+#. Jeu 1 : :ref:`l-rihikudo`
 #. ML : :ref:`l-data-velib`
 #. ML : :ref:`l-data-nuage`
 #. ML : :ref:`l-data-twitter`
