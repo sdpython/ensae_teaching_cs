@@ -1,0 +1,15 @@
+
+.. blogpost::
+    :title: Article à lire
+    :keywords: assurance
+    :date: 2021-07-21
+    :categories: article
+
+    * `Collaborative Insurance Sustainability and Network Structure
+      <https://arxiv.org/abs/2107.02764>`_
+    * `Autocalibration and Tweedie-dominance for Insurance Pricing with Machine Learning
+      <https://arxiv.org/abs/2103.03635>`_
+    * `Estimating Inequality Measures from Quantile Data
+      <https://halshs.archives-ouvertes.fr/halshs-02320110>`_
+    * `Données Agrégées et Variables Compositionnelles : Note Méthodologique
+      <https://hal.archives-ouvertes.fr/hal-02097031>`_
