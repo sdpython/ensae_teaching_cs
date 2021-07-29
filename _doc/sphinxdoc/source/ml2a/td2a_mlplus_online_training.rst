@@ -32,4 +32,5 @@ Online training
 
 * `scikit-garden <https://github.com/scikit-garden/scikit-garden>`_
 * `scikit-multiflow <https://scikit-multiflow.github.io/>`_
-* `creme <https://github.com/creme-ml/creme>`_
+* `creme <https://github.com/online-ml/river>`_
+* `river <https://github.com/online-ml/river>`_

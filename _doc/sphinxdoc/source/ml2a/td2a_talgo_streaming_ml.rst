@@ -28,4 +28,5 @@ Streaming machine learning
   apprend en local sur des volumes de données plus grands que
   :epkg:`scikit-learn`, cette librairie est un wrapper python
   pour `ML.net <https://github.com/dotnet/machinelearning>`_.
-* `creme <https://github.com/creme-ml/creme>`_
+* `creme <https://github.com/online-ml/river>`_
+* `river <https://github.com/online-ml/river>`_

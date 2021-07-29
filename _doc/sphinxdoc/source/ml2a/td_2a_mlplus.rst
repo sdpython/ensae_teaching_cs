@@ -45,8 +45,9 @@ D'autres sujets parfois exotiques mais non moins intéressants.
     td2a_mlplus_collaborative_learning
     td2a_mlplus_gaussian_processes
     td2a_mlplus_modeles_avec_dependances_dans_le_temps
-    td2a_mlplus_predire_une_distribution
+    td2a_mlplus_multiview
     td2a_mlplus_optimal_transfert
+    td2a_mlplus_predire_une_distribution
     td2a_mlplus_systeme_de_recommandation_avec_contraintes
     td2a_mlplus_reinforcement_learning_marl
     td2a_mlplus_snn

@@ -18,6 +18,10 @@ Optimal transfert
 * `Wasserstein Discriminant Analysis <http://pot.readthedocs.io/en/stable/auto_examples/plot_WDA.html#compute-wasserstein-discriminant-analysis>`_
 * `Optimal Transport: Fast Probabilistic Approximation withExact Solvers <http://jmlr.org/papers/volume20/18-079/18-079.pdf>`_
 
+*Livres*
+
+* `Computational Optimal Transport <https://arxiv.org/abs/1803.00567>`_
+
 *Vidéos*
 
 * `Marco Cuturi - Computational Optimal Transport <https://www.youtube.com/watch?v=V7RuzfR3mu4>`_
@@ -30,5 +34,4 @@ Optimal transfert
 
 *Modules*
 
-* `Python Optimal Transfer <https://github.com/rflamary/POT>`_
-  (`documentation <https://pythonot.github.io/index.html>`_)
+* `POT <https://pythonot.github.io/>`_

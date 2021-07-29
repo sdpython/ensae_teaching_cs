@@ -22,3 +22,7 @@ Graphe et embedding
 * `Convolutional Neural Networks on Graphs with Fast Localized Spectral Filtering <https://arxiv.org/abs/1606.09375>`_
 * `Deep Convolutional Networks on Graph-Structured Data <https://arxiv.org/abs/1506.05163>`_
 * `Graph2Seq: Graph to Sequence Learning with Attention-based Neural Networks <https://arxiv.org/abs/1804.00823>`_
+
+*Modules*
+
+* `pykeen <https://github.com/pykeen/pykeen>`_

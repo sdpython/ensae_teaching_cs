@@ -1,0 +1,68 @@
+
+.. blogpost::
+    :title: Articles à lire
+    :keywords: assurance
+    :date: 2021-07-29
+    :categories: article
+
+    Assurance, ML
+
+    * `Predicting Drought and Subsidence Risks in France
+      <https://arxiv.org/abs/2107.07668>`_
+    * `Collaborative Insurance Sustainability and Network Structure
+      <https://arxiv.org/abs/2107.02764>`_
+    * `Autocalibration and Tweedie-dominance for Insurance Pricing with Machine Learning
+      <https://arxiv.org/abs/2103.03635>`_
+    * `A new GEE method to account for heteroscedasticity, using asymmetric least-square regressions
+      <https://arxiv.org/abs/1810.09214>`_
+
+    JMLR
+
+    * `Finite-sample Analysis of Interpolating Linear Classifiers in the Overparameterized Regime
+      <https://www.jmlr.org/papers/volume22/20-974/20-974.pdf>`_
+    * `LassoNet: A Neural Network with Feature Sparsity
+      <https://www.jmlr.org/papers/volume22/20-848/20-848.pdf>`_
+    * `Bandit Convex Optimization in Non-stationary Environments
+      <https://www.jmlr.org/papers/volume22/20-763/20-763.pdf>`_
+    * `A General Framework for Adversarial Label Learning
+      <https://www.jmlr.org/papers/volume22/20-537/20-537.pdf>`_
+    * `Non-parametric Quantile Regression via the K-NN Fused Lasso
+      <https://www.jmlr.org/papers/volume22/20-1462/20-1462.pdf>`_
+    * `Towards a Unified Analysis of Random Fourier Features
+      <https://www.jmlr.org/papers/volume22/20-1369/20-1369.pdf>`_
+    * `Online stochastic gradient descent on non-convex losses from high-dimensional inference
+      <https://www.jmlr.org/papers/volume22/20-1288/20-1288.pdf>`_
+    * `Explaining Explanations: Axiomatic Feature Interactions for Deep Networks
+      <https://www.jmlr.org/papers/volume22/20-1223/20-1223.pdf>`_
+    * `LocalGAN: Modeling Local Distributions for Adversarial Response Generation
+      <https://www.jmlr.org/papers/volume22/20-052/20-052.pdf>`_
+    * `Prediction against a limited adversary
+      <https://www.jmlr.org/papers/volume22/20-1234/20-1234.pdf>`_
+    * `Sparse Tensor Additive Regression
+      <https://www.jmlr.org/papers/volume22/19-769/19-769.pdf>`_
+    * `RaSE: Random Subspace Ensemble Classification
+      <https://www.jmlr.org/papers/volume22/20-600/20-600.pdf>`_
+    * `Asynchronous Online Testing of Multiple Hypotheses
+      <https://www.jmlr.org/papers/volume22/19-910/19-910.pdf>`_
+    * `FLAME: A Fast Large-scale Almost Matching Exactly Approach to Causal Inference
+      <https://www.jmlr.org/papers/volume22/19-853/19-853.pdf>`_
+    * `Single and Multiple Change-Point Detection with Differential Privacy
+      <https://www.jmlr.org/papers/volume22/19-770/19-770.pdf>`_
+    * `Simple and Fast Algorithms for Interactive Machine Learning with Random Counter-examples
+      <https://www.jmlr.org/papers/volume22/19-372/19-372.pdf>`_
+    * `On Multi-Armed Bandit Designs for Dose-Finding Clinical Trials
+      <https://www.jmlr.org/papers/volume22/19-228/19-228.pdf>`_
+    * `Consistent estimation of small masses in feature sampling
+      <https://www.jmlr.org/papers/volume22/18-534/18-534.pdf>`_
+    * `On Multi-Armed Bandit Designs for Dose-Finding Clinical Trials
+      <https://www.jmlr.org/papers/volume22/19-228/19-228.pdf>`_
+    
+    python
+    
+    * `river <https://github.com/online-ml/river>`_: online machine learning
+    * `mvlearn <https://mvlearn.github.io/>`_
+    * `pykeen <https://github.com/pykeen/pykeen>`_
+    * `POT <https://pythonot.github.io/>`_ (Python Optimal Transfer)
+    * `giotto-tda <https://github.com/giotto-ai/giotto-tda>`_
+      (topological machine learning)
+    * `Pykg2vec <https://github.com/Sujit-O/pykg2vec>`_
