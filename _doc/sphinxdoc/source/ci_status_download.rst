@@ -7,6 +7,9 @@ Pypi download
 Le nombre de téléchargements peut être
 obtenu en exécutant la requête suivante sur
 `Google BigQuery <https://console.cloud.google.com/bigquery>`_.
+On peut retrouver la plupart de ces résultats sur
+`pypistat <https://pypistats.org/>`_. Exemple avec
+`pypistat/mlinsights <https://pypistats.org/packages/mlinsights>`_.
 
 .. runpython::
     :showcode:
