@@ -211,7 +211,7 @@ sans même avoir à récupérer tous les fichiers sur votre ordinateur :
 +----------------------+---------------------+---------------------+--------------------------------+------------------------+------------------------------------------------+
 
 .. image:: https://travis-ci.com/sdpython/ensae_teaching_cs.svg?branch=master
-    :target: https://travis-ci.com/sdpython/ensae_teaching_cs
+    :target: https://app.travis-ci.com/github/sdpython/ensae_teaching_cs
     :alt: Build status
 
 .. image:: https://ci.appveyor.com/api/projects/status/ko5g064idp5srm74?svg=true
