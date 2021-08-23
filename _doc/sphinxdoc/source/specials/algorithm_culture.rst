@@ -199,6 +199,11 @@ Catalogue d'algorithmes
     * `récursivité <http://fr.wikipedia.org/wiki/R%C3%A9cursivit%C3%A9>`_ **déf**
 * Algorithmes probabilistes
     * `Probabilistic Data Structures for Web Analytics and Data Mining <https://highlyscalable.wordpress.com/2012/05/01/probabilistic-structures-web-analytics-data-mining/>`_
+* Compression
+    * `LZFSE <https://github.com/lzfse/lzfse>`_ **algo**
+    * `LZMA <https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm>`_ **algo**
+    * `LZ77 and LZ78 <https://en.wikipedia.org/wiki/LZ77_and_LZ78>`_ **algo**
+    * `Squash Benchmark <http://quixdb.github.io/squash-benchmark/>`_
 
 Beaucoup de ces algorithmes sont implémentés dans ce projet :
 `TheAlgorithms <https://github.com/TheAlgorithms/Python>`_.
