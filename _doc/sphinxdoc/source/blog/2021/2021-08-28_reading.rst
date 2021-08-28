@@ -1,0 +1,24 @@
+
+.. blogpost::
+    :title: Articles à lire
+    :keywords: assurance
+    :date: 2021-08-28
+    :categories: article
+    :lid: blog-article-graph-distance
+
+    Quelques liens autour des graphes,
+    distances entre graphes.
+
+
+    * `A MEASURE OF SIMILARITY BETWEEN GRAPH VERTICES: APPLICATIONS TO SYNONYM EXTRACTION AND WEB SEARCHING
+      <https://arxiv.org/pdf/cs/0407061.pdf>`_
+    * `An Exact Graph Edit Distance Algorithm for Solving Pattern Recognition Problems
+      <https://hal.archives-ouvertes.fr/hal-01168816>`_
+    * `graphsim <https://github.com/caesar0301/graphsim>`_
+      (un vieux module python)
+    * `Similarity Measures (networkx)
+      <https://networkx.org/documentation/stable/reference/algorithms/similarity.html>`_
+    * `distance de Robinson–Foulds
+      <https://en.wikipedia.org/wiki/Robinson%E2%80%93Foulds_metric>`_
+    * `Comparing phylogenetic trees according to tip label categories
+      <https://www.biorxiv.org/content/10.1101/251710v1.full.pdf>`_

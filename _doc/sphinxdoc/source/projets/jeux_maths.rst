@@ -214,6 +214,8 @@ distance existe :
 `distance de Robinson–Foulds <https://en.wikipedia.org/wiki/Robinson%E2%80%93Foulds_metric>`_.
 L'objectif du projet est d'implémenter cette distance et de l'application
 à des arbres de décision, telle que ceux produits par `scikit-learn <http://scikit-learn.org/>`_.
+Vous trouvez d'autres articles dans cet article
+:ref:`Référence similarités entre graphes <blog-article-graph-distance>`.
 
 .. index:: inéquations, résolution, systèmes
 
