@@ -7,7 +7,7 @@ Algorithmes et programmation
 
 `Algorithmes et Programmation <https://www.ensae.fr/courses/algorithmes-et-programmation/>`_ (ENSAE)
 
-Plan approximatif du cours : :ref:`l-feuille-de-route-2020-1A`.
+Plan approximatif du cours : :ref:`l-feuille-de-route-2021-1A`.
 
 Cours animé par
 `Xavier Dupré <http://www.xavierdupre.fr/>`_
@@ -510,7 +510,7 @@ Bibliographie
 Intervenants
 ============
 
-* *2018-2019* :
+* *2018-* :
   Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_ *(professeur)*,
   `Lucie Neirac <http://www.laneas.com/lucie-neirac>`_,
   Benoît Choffin, `Laboratoire de Recherche en Informatique <https://www.lri.fr/>`_
@@ -546,3 +546,4 @@ revêt de plus en plus d'importance en datascience.
     questions/route_1A_2018
     questions/route_1A_2019
     questions/route_1A_2020
+    questions/route_1A_2021

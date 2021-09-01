@@ -1,6 +1,6 @@
 
 .. blogpost::
-    :title: Articles à lire
+    :title: Articles à lire, graphes, distance
     :keywords: assurance
     :date: 2021-08-28
     :categories: article

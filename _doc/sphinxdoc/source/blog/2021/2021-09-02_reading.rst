@@ -1,0 +1,18 @@
+
+.. blogpost::
+    :title: Articles à lire, computing
+    :keywords: assurance
+    :date: 2021-09-02
+    :categories: article
+
+    Accelerating deep learning (hardware)
+
+    * `Google's AI Processor's (TPU) Heart Throbbing Inspiration
+      <https://medium.com/intuitionmachine/googles-ai-processor-is-inspired-by-the-heart-d0f01b72defe>`_
+    * `An in-depth look at Google's first Tensor Processing Unit (TPU)
+      <https://cloud.google.com/blog/products/ai-machine-learning/an-in-depth-look-at-googles-first-tensor-processing-unit-tpu>`_
+
+    Accelerating deep learning (algorithm)
+
+    * `triton <https://openai.com/blog/triton/>`_
+    * `deepspeed <https://github.com/microsoft/DeepSpeed>`_

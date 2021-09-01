@@ -1,6 +1,6 @@
 
 .. blogpost::
-    :title: Articles à lire
+    :title: Articles à lire - JMLR
     :keywords: assurance
     :date: 2021-07-29
     :categories: article

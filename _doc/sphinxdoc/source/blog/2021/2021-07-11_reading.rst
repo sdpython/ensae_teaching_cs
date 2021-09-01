@@ -1,6 +1,6 @@
 
 .. blogpost::
-    :title: Article à lire
+    :title: Article à lire - reinforcement learning
     :keywords: apprentissage par renforcement
     :date: 2021-07-11
     :categories: article

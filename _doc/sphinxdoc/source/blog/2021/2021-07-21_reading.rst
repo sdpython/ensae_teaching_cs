@@ -1,6 +1,6 @@
 
 .. blogpost::
-    :title: Article à lire
+    :title: Article à lire, assurance
     :keywords: assurance
     :date: 2021-07-21
     :categories: article

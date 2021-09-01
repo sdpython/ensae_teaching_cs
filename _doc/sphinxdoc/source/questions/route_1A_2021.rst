@@ -1,7 +1,7 @@
 
-.. _l-feuille-de-route-2020-1A:
+.. _l-feuille-de-route-2021-1A:
 
-Feuille de route 2020 (1A)
+Feuille de route 2021 (1A)
 ==========================
 
 .. contents::
@@ -16,9 +16,8 @@ Cours
 Evaluation
 ^^^^^^^^^^
 
-Au premier semestre, le cours se conclue d'habitude
+Au premier semestre, le cours se conclue
 par un TD noté (voir :ref:`l-seances-notees-1A`).
-Mais il y a quelques imprévus cette année.
 
 Au second semestre, pas de TD, juste un
 :ref:`projet informatique <l-projinfo1a>`,
@@ -48,9 +47,8 @@ Le plus simple pour installer :epkg:`Python` est d'utiliser la distribution
 <https://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
 pour *Windows* et de celle-ci pour la distribution
 *Debian 9* (Ubuntu est très similaire) :
-`Install Python 3.7 and many packages on Linux Debian 9
-<http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/
-2018/2018-12-29_python37_2.html>`_.
+`Install Python 3.9 and many packages on Linux Debian 10
+<http://www.xavierdupre.fr/app/pymyinstall/helpsphinx//blog/2021/2021-01-09_debian.html>`_.
 
 Plan proposé
 ++++++++++++
@@ -66,9 +64,7 @@ de données.
 Séance 1 - 8/9 - introduction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Python, choix du langage, évaluation,
-modules, mise en production, algorithmes,
-quelques mots sur les années prochaines...
+Voir :ref:`Introduction <blog-intro-2021-ensae>`.
 
 * :ref:`2020surfacerst`
 
@@ -78,37 +74,37 @@ Séance 2 - 15/9 - jeu de dictionnaires, regex
 * :ref:`2020suffixrst`
 * :ref:`2020regexrst`
 
-Séance 3 - 22/9 - top k, profiling
+Séance 3 - 16/9 - top k, profiling
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * :ref:`2020topkrst`
 * :ref:`2020profilerst`
 
-Séance 4 - 6/10 - edit distance, numpy
+Séance 4 - 22/9 - edit distance, numpy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * :ref:`2020editrst`
 * :ref:`2020numpyrst`
 
-Séance 5 - 13/10 - TSP, dataframe avec données COVID
+Séance 5 - 6/10 - TSP, dataframe avec données COVID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * :ref:`2020tsprst`
 * :ref:`2020pandasrst`
 
-Séance 6 - 3/11 - bag, json, xml, COVID
+Séance 6 - 13/10 - bag, json, xml, COVID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Algorithme : :ref:`2020covidrst`
 * Technique : :ref:`2020jsonxmlrst`
 
-Séance 7 - 10/11 - graphes, flask
+Séance 7 - 20/10 - graphes, flask
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Algorithme : :ref:`2020graphrst`
 * Technique : :ref:`2020restrst`
 
-Séance 8 - 24/11 - graphes
+Séance 8 - 3/11 - graphes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Algorithme : :ref:`2020ordonnancementrst`

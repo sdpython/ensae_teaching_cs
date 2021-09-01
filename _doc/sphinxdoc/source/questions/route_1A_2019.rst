@@ -52,12 +52,6 @@ pour *Windows* et de celle-ci pour la distribution
 `Install Python 3.7 and many packages on Linux Debian 9
 <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2018/2018-12-29_python37_2.html>`_.
 
-Intervenants
-++++++++++++
-
-`Xavier Dupré <mailto:xavier.dupre AT gmail.com>`_,
-Lucie Neirac, François Hu, Guillaume Bied.
-
 Plan proposé
 ++++++++++++
 
