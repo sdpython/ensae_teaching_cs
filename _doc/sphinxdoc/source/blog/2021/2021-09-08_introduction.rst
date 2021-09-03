@@ -59,3 +59,6 @@
     * `Compétition de code par Google <https://codingcompetitions.withgoogle.com/codejam>`_
     * `Compétition de code en français ou presque <https://tryalgo.org/contests/>`_
     * `Projet Euler <https://projecteuler.net/>`_
+
+    La page suivante :ref:`l-seances-notees-1A` reprend les énoncés des examens
+    des années précédentes.
