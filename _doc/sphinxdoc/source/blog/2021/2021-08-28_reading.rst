@@ -22,3 +22,4 @@
       <https://en.wikipedia.org/wiki/Robinson%E2%80%93Foulds_metric>`_
     * `Comparing phylogenetic trees according to tip label categories
       <https://www.biorxiv.org/content/10.1101/251710v1.full.pdf>`_
+    * `Deep Graph Matching Consensus <https://openreview.net/pdf?id=HyeJf1HKvS>`_

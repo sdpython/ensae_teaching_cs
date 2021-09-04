@@ -106,6 +106,7 @@ Graphes - Réseaux - Structures
     td2a_mlplus_clustering_de_graphes
     td2a_mlplus_communautes
     td2a_mlplus_structures
+    td2a_mlplus_graph_network
 
 .. _l-deep-learning:
 
