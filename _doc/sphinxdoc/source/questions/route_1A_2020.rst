@@ -113,4 +113,5 @@ Séance 8 - 24/11 - graphes
 
 * Algorithme : :ref:`2020ordonnancementrst`
 * Technique : :ref:`2020carterst`
-* TD noté... lien après la séance
+* `TD noté <http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2021.pdf>`_,
+  correction : :ref:`tdnote2021rst`
