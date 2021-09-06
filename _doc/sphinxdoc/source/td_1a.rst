@@ -305,6 +305,7 @@ tests unitaires, le templating, les sites Web, le scraping, encoding, les notebo
     notebooks/notebook_convert
     notebooks/jupyter_custom_magics
     specials/python_cplusplus
+    specials/gui
 
 *Exercices*
 
