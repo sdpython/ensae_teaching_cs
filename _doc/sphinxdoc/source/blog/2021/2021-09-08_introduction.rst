@@ -132,4 +132,5 @@
       <https://www.franceinter.fr/emissions/le-13-14/le-13-14-03-juin-2021>`_,
       `Xavier Jaravel, meilleur jeune économiste 2021 pour ses travaux sur l'innovation et les inégalités
       <https://start.lesechos.fr/societe/economie/xavier-jaravel-meilleur-jeune-economiste-2021-pour-ses-travaux-sur-linnovation-et-les-inegalites-1319721>`_,
-      
+    
+    Tout est sur `GitHub <https://github.com/sdpython>`_.
