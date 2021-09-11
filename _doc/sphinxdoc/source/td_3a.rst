@@ -183,6 +183,8 @@ GPU
   7540-computing-higher-order-derivatives-of-matrix-and-tensor-expressions.pdf>`_
 * `Enclaves as accelerators: learning lessons from GPU computing for designing efficient runtimes for enclaves
   <https://marksilberstein.com/wp-content/uploads/2020/04/systex16sgx.pdf>`_
+* `WarpDrive: Extremely Fast End-to-End Deep Multi-Agent Reinforcement Learning on a GPU
+  <https://arxiv.org/abs/2108.13976>`_
 
 *Lectures sur le C++*
 

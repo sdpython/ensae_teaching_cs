@@ -32,8 +32,6 @@ retrouver les bout de codes les plus fréquents. Cette page regroupe des
 `Essential Cheat Sheets for Machine Learning and Deep Learning Engineers
 <https://startupsventurecapital.com/
 essential-cheat-sheets-for-machine-learning-and-deep-learning-researchers-efb6a8ebd2e5>`_.
-Le site :epkg:`Kaggle` recense de nombreuses compétitions de machine learning
-qui permettent de s'exercer ou de se mesurer à d'autres data scientists.
 Quelques compétitions ont aussi été créées pour ce cours :
 :ref:`l-competition`.
 Le cours est organisé sous forme de thèmes,
@@ -57,6 +55,10 @@ des articles, des modules connus.
             :height: 20
             :alt: Statistique
             :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_2a_notions.html#pour-un-profil-plutot-data-scientist
+
+Le cours continue mais sans moi depuis 2020 :
+`Python pour les data-scientists et économistes <https://linogaliana-teaching.netlify.app/>`_
+`Arthur Charpentier, lectures <https://freakonometrics.github.io/videos/>`_ (français)
 
 Agilité avec les données
 ========================

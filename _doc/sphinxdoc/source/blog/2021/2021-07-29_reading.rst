@@ -56,9 +56,9 @@
       <https://www.jmlr.org/papers/volume22/18-534/18-534.pdf>`_
     * `On Multi-Armed Bandit Designs for Dose-Finding Clinical Trials
       <https://www.jmlr.org/papers/volume22/19-228/19-228.pdf>`_
-    
+
     python
-    
+
     * `river <https://github.com/online-ml/river>`_: online machine learning
     * `mvlearn <https://mvlearn.github.io/>`_
     * `pykeen <https://github.com/pykeen/pykeen>`_

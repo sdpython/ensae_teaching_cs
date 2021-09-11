@@ -34,7 +34,7 @@ Machine Learning sur des données cryptées
 * `Awesome Homomorphic Encryption <https://github.com/jonaschn/awesome-he>`_
 * `Cryptotree : fast and accurate predictions on encrypted structured data
   <https://arxiv.org/pdf/2006.08299.pdf>`_
-  
+
 *2021*
 
 * `Enclaves as accelerators: learning lessons from GPU computing for designing efficient runtimes for enclaves
@@ -42,7 +42,7 @@ Machine Learning sur des données cryptées
 * `Collisions in MD5... and how to use them for fun and profit
   <https://antoine.delignat-lavaud.fr/doc/slides_md5.pdf>`_
 * `On the Security of Authentication Protocols for the Web
-  <https://antoine.delignat-lavaud.fr/doc/phd_thesis.pdf>`_  
+  <https://antoine.delignat-lavaud.fr/doc/phd_thesis.pdf>`_
 
 *Lectures - alternatives*
 

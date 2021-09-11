@@ -9,7 +9,6 @@
     Quelques liens autour des graphes,
     distances entre graphes.
 
-
     * `A MEASURE OF SIMILARITY BETWEEN GRAPH VERTICES: APPLICATIONS TO SYNONYM EXTRACTION AND WEB SEARCHING
       <https://arxiv.org/pdf/cs/0407061.pdf>`_
     * `An Exact Graph Edit Distance Algorithm for Solving Pattern Recognition Problems

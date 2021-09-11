@@ -101,5 +101,5 @@ Rikudo, Hikudo (2021)
 `Rikudo, Hikudo <https://www.educmat.fr/categories/jeux_reflexion/fiches_jeux/rikudo/index.php>`_
 
 Ces deux jeux se jouent seuls. Ils s'agit de reconstituer un parcours de la totalité
-des cases sachant quelques éléments de ce chemin. L'idée est d'imaginer 
+des cases sachant quelques éléments de ce chemin. L'idée est d'imaginer
 un algorithme qui sache résoudre ce type de problème.

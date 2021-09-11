@@ -1,0 +1,10 @@
+
+.. blogpost::
+    :title: Lecture sur le machine learning et autres...
+    :keywords: machine learning
+    :date: 2021-09-11
+    :categories: conférence
+
+    `Arthur Charpentier, lectures <https://freakonometrics.github.io/videos/>`_
+
+    Une conséquence de l'épidémie...

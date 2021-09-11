@@ -21,7 +21,7 @@ du programme mais ce n'est pas la seule option :
 **Design**
 
 Dans le cas d'un site web, il est conseillé de développer une API REST
-à laquelle le front end (la partie affichée dans le navigateur) fera 
+à laquelle le front end (la partie affichée dans le navigateur) fera
 appelle. Cela permet de dissocier le code graphique du reste. Cela permet
 aussi d'automatiser - ce qui arrive nécessairement quand on manipule des données.
 Cela permet aussi de changer d'interface si besoin.
@@ -71,6 +71,5 @@ trois petits choses avant de commencer :
 * `Godot <https://github.com/touilleMan/godot-python>`_ :
   pour faire des jeux en 3D, mais nécessite un investissement
   certain.
-* `BeeWare <https://docs.beeware.org/en/latest/>`_ : 
+* `BeeWare <https://docs.beeware.org/en/latest/>`_ :
   Python sur Android.
-

@@ -15,18 +15,18 @@ On peut retrouver la plupart de ces résultats sur
     :showcode:
 
     query = """
-    SELECT 
+    SELECT
         file.project AS Project,
         COUNT(*) AS num_downloads,
         FORMAT_DATE("%Y%m", DATE(timestamp)) AS Month
     FROM `bigquery-public-data.pypi.file_downloads`
-    WHERE 
+    WHERE
       (__CONDITION__)
       AND DATE(timestamp)
         BETWEEN DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 2 MONTH), MONTH)
         AND CURRENT_DATE()
      GROUP BY `Project`, `Month`
-     ORDER BY `Month`, `Project`    
+     ORDER BY `Month`, `Project`
     """
 
     from ensae_teaching_cs.automation import get_teaching_modules

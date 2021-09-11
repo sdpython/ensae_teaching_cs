@@ -92,6 +92,7 @@ MOOC
 Autres cours, notebooks
 =======================
 
+* `Arthur Charpentier, lectures <https://freakonometrics.github.io/videos/>`_ (français)
 * `CS109 Data Science (Harvard) <http://cs109.github.io/2014/>`_ -
   `TD <https://github.com/cs109/content>`_ -
   `Talks <http://cm.dce.harvard.edu/2015/01/14328/publicationListing.shtml>`_

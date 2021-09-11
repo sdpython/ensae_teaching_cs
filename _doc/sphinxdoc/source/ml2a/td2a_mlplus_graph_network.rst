@@ -8,9 +8,9 @@ Graph Neural Network
 ++++++++++++++++++++
 
  (*à venir*)
- 
+
 *Lectures*
- 
+
 * `Building a Recommender System Using Graph Neural Networks
   <https://medium.com/decathlondevelopers/building-a-recommender-system-using-graph-neural-networks-2ee5fc4e706d>`_
 * `Graph Neural Networks in Recommender Systems: A Survey
@@ -24,4 +24,3 @@ Graph Neural Network
 *Modules*
 
 * `pytorch-geometric <https://github.com/rusty1s/pytorch_geometric>`_
-

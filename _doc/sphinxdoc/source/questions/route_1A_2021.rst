@@ -67,6 +67,7 @@ Séance 1 - 8/9 - introduction
 Voir :ref:`Introduction <blog-intro-2021-ensae>`.
 
 * :ref:`2020surfacerst`
+* :ref:`2021tsprst`
 
 Séance 2 - 15/9 - jeu de dictionnaires, regex
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

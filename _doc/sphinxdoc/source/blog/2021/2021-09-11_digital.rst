@@ -1,0 +1,11 @@
+
+.. blogpost::
+    :title: Transformation digitale
+    :keywords: teachings
+    :date: 2021-09-11
+    :categories: conférence
+
+    A découvrir...
+
+    `Keynote : La transformation digitale est finie, place à l'IA et au big data !
+    <https://www.youtube.com/watch?v=GSYNYWvPp2k>`_

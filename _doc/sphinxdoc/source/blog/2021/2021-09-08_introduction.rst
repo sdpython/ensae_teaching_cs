@@ -7,7 +7,7 @@
     :lid: blog-intro-2021-ensae
 
     **Présentation**
-    
+
     * Programmation en classes préparatoires,
       `Informatique en CPGE <https://info-llg.fr/>`_
         * architecture d'un ordinateur
@@ -28,9 +28,9 @@
         * Trouver le plus court chemin d'une station de métro à une autre ? -->
           plus court chemin dans un graphe
         * Même question en tenant compte des temps de changement de ligne ?
-    
+
     **Machine learning aujourd'hui**
-    
+
     * Apprentissage fait avec python
         * :epkg:`scikit-learn`
         * deep learning : :epkg:`pytorch`
@@ -47,9 +47,9 @@
     * Démocratisation dans de nombreux pays
         * `Health Data Hub <https://www.health-data-hub.fr/>`_
         * `data.gouv.fr <https://www.data.gouv.fr/fr/>`_
-    
+
     **Deep Learning**
-    
+
     * Le deep learning envahit la vie quotidienne
         * santé (aide au diagnotisque)
         * sécurité (vidéo surveillance),
@@ -66,7 +66,7 @@
       il faut être les deux
 
     **Ingéniérie logicielle**
-    
+
     * Le point faible des ingénieurs français
         * On commence l'informatique avant la prépa dans d'autres pays
         * Pas assez de pratique, un bon codeur a beaucoup codé.
@@ -84,30 +84,30 @@
         * Un outil injustement méconnu des juristes.
 
     **Thèse...**
-    
+
     * C/C++ : même si vous n'en avez pas besoin tous les jours,
       on code mieux en python quand on connaît un langage bas niveau
       car on comprend mieux tout ce que le langage nous cache
     * linux
 
     Cours, premiere semestre
-    
+
     * TD : :ref:`l-td1a`
     * Evaluation, anciens examens :ref:`l-seances-notees-1A`
 
     **Cours, second semestre**
-    
+
     * Projet : :ref:`l-projinfo1a`
 
     **Ressource, supports pour ce cours**
-    
+
     * TD : `Python dans tous ses états <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx3/index.html>`_
     * Rappels : `Petit voyage au pays du machine learning <http://www.xavierdupre.fr/app/papierstat/helpsphinx/index.html>`_
     * Programmation : `Apprendre la programmation avec Python <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_
     * Un peu plus mathématique : `Les maths d’abord, la programmation ensuite <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/index.html#mlstatpy>`_
-    
+
     Et puis...
-    
+
     * Les moteurs de recherche : `python + message d'erreur`, `cheatsheet`
     * `Questions tagged [python] <https://stackoverflow.com/questions/tagged/python>`_
     * `Compétition de code par Google <https://codingcompetitions.withgoogle.com/codejam>`_
@@ -115,7 +115,7 @@
     * `Projet Euler <https://projecteuler.net/>`_
 
     **A la fin de l'année, vous devriez pouvoir...**
-    
+
     * Imaginer une stratégie automatique au 2048.
     * Simuler une épidémie, des régimes de retraites
     * Supprimer les pesticides en programmant des drones pour couper
@@ -132,5 +132,5 @@
       <https://www.franceinter.fr/emissions/le-13-14/le-13-14-03-juin-2021>`_,
       `Xavier Jaravel, meilleur jeune économiste 2021 pour ses travaux sur l'innovation et les inégalités
       <https://start.lesechos.fr/societe/economie/xavier-jaravel-meilleur-jeune-economiste-2021-pour-ses-travaux-sur-linnovation-et-les-inegalites-1319721>`_,
-    
+
     Tout est sur `GitHub <https://github.com/sdpython>`_.
