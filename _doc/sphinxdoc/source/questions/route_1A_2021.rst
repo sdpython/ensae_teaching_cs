@@ -70,10 +70,11 @@ Voir :ref:`Introduction <blog-intro-2021-ensae>`.
 * :ref:`2021tsprst`
 
 Séance 2 - 15/9 - jeu de dictionnaires, regex
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * :ref:`2020suffixrst`
 * :ref:`2020regexrst`
+* :ref:`2021randomgraphrst`
 
 Séance 3 - 16/9 - top k, profiling
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
