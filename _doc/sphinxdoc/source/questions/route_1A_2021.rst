@@ -67,6 +67,9 @@ Séance 1 - 8/9 - introduction
 Voir :ref:`Introduction <blog-intro-2021-ensae>`.
 
 * :ref:`2020surfacerst`
+
+Choix alternatif :
+
 * :ref:`2021tsprst`
 
 Séance 2 - 15/9 - jeu de dictionnaires, regex
@@ -74,6 +77,10 @@ Séance 2 - 15/9 - jeu de dictionnaires, regex
 
 * :ref:`2020suffixrst`
 * :ref:`2020regexrst`
+
+Choix alternatif :
+
+* :ref:`2020suffixrst`
 * :ref:`2021randomgraphrst`
 
 Séance 3 - 16/9 - top k, profiling
@@ -81,6 +88,12 @@ Séance 3 - 16/9 - top k, profiling
 
 * :ref:`2020topkrst`
 * :ref:`2020profilerst`
+
+Choix alternatif :
+
+* :ref:`2021randomgraphrst` (suite)
+* :ref:`2020numpyrst`
+* :ref:`2020pandasrst`
 
 Séance 4 - 22/9 - edit distance, numpy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
