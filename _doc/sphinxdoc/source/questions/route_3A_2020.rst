@@ -83,6 +83,7 @@ Séance 5
 ^^^^^^^^
 
 Parallelisation CPU
+
 * `Threads <https://realpython.com/intro-to-python-threading/>`_
 * `Processus <https://docs.python.org/fr/3.9/library/subprocess.html>`_
 * `sérialisation <https://python-guide-pt-br.readthedocs.io/fr/latest/scenarios/serialization.html>`_
@@ -91,6 +92,7 @@ Parallelisation CPU
 * `Cache https://en.wikipedia.org/wiki/CPU_cache>`_
 
 Cython
+
 * `Presentation <https://cython.org/>`_
 * Compilateur (`Windows <https://visualstudio.microsoft.com/fr/vs/community/>`_ (VS),
   `Linux <https://doc.ubuntu-fr.org/gcc>`_ (gcc),
@@ -103,6 +105,7 @@ Cython
   (voir aussi `GIL <https://www.codeflow.site/fr/article/python-gil>`_)
 
 Example
+
 * `td3a_cpp <https://github.com/sdpython/td3a_cpp>`_ - multiplication de matrices
   `PR TD 2021/01 <https://github.com/sdpython/td3a_cpp/pull/2>`_
 * `git <https://git-scm.com/>`_ (Windows)
@@ -110,11 +113,13 @@ Example
 * `prange <https://cython.readthedocs.io/en/latest/src/userguide/parallelism.html>`_
 
 Profiling
+
 * `py-spy <https://github.com/benfred/py-spy>`_
 * `pyinstrument <https://github.com/joerick/pyinstrument>`_
 * Fonctionnement
 
 Libraires pour aller plus vite sur CPU
+
 * Librairies `BLAS <https://fr.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms>`_,
   `LAPACK <https://fr.wikipedia.org/wiki/LAPACK>`_
   - des algorithmes hyper-optimisés au long des décennies de leur existence
@@ -125,6 +130,7 @@ Libraires pour aller plus vite sur CPU
 * `Torch <https://pytorch.org/docs/stable/torch.html>`_ = numpy + numba + pybind11
 
 Stratégies d'optimisation
+
 * Composer à partir de librairies implémentant des calculs standards (matriciel)
 * Fusionner deux opérations en une seule (transposition + multiplication A B' ->
   `gemm <https://en.wikipedia.org/wiki/GEMM>`_),
@@ -142,6 +148,7 @@ Stratégies d'optimisation
   (https://pytorch.org/docs/stable/distributed.html)
 
 Demain
+
 * CPU, GPU (Nvidia, `A100 <https://www.nvidia.com/en-us/data-center/a100/>`_), ARM
 * `cupy <https://github.com/cupy/cupy>`_,
   `minpy <https://minpy.readthedocs.io/en/latest/index.html>`_,
@@ -155,6 +162,7 @@ Demain
     * `Intel Stock <https://www.google.com/search?ei=T6kGYIP3FInYaIbNvbAC&q=intel+stock&oq=intel+stock&gs_lcp=CgZwc3ktYWIQAzIFCAAQkQIyBggAEAcQHjIGCAAQBxAeMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADoECAAQR1DhY1jFZ2D5aGgAcAN4AIABVYgBlAOSAQE2mAEAoAEBqgEHZ3dzLXdpesgBCMABAQ&sclient=psy-ab&ved=0ahUKEwjD2tun2qfuAhUJLBoKHYZmDyYQ4dUDCA0&uact=5>`_
 
 Liens `pytorch <https://pytorch.org/>`_:
+
 * `CUSTOM C++ AND CUDA EXTENSIONS <https://pytorch.org/tutorials/advanced/cpp_extension.html?highlight=thread>`_
 * `Convert Torch Tensor to flattened C++ array <https://discuss.pytorch.org/t/convert-torch-tensor-to-flattened-c-array/94341>`_
 * `TORCH.FROM_NUMPY <https://pytorch.org/docs/stable/generated/torch.from_numpy.html>`_
@@ -206,10 +214,12 @@ On veut paralléliser sous linux avec une librairie openmp sous Linux:
     * "Error: je ne trouve libomp" --> sudo apt-get install libomp (dépendance)
 
 Plus rapide:
+
 Matrice:
+
 Langage sécurisé
-	Liste = [1, 4, 5, 6]
-	Liste[3] = 4  --> remplace un élément
+	* Liste = [1, 4, 5, 6]
+	* Liste[3] = 4  --> remplace un élément
         * Est-ce que 3 est un index admissible ?  (vérification)
         * Faire une copie ? Object mutable, immutable ?
 Interprétable = portable
