@@ -101,6 +101,10 @@ Séance 4 - 22/9 - edit distance, numpy
 * :ref:`2020editrst`
 * :ref:`2020numpyrst`
 
+Choix alternatif :
+
+* :ref:`2021editdistrst`
+
 Séance 5 - 6/10 - TSP, dataframe avec données COVID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
