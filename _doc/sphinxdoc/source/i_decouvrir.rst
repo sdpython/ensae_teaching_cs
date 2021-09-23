@@ -57,6 +57,7 @@ Algorithmes illustrés
     notebooks/expose_vigenere
     notebooks/expose_einstein_riddle
     specials/puzzle_girafe
+    specials/puzzle_2
     specials/hermionne
     specials/sudoku
 
