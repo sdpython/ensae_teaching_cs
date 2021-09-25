@@ -143,7 +143,7 @@ def py_to_html_file(file, writehtml="", addGoogleTracking=True, title=None):
         with open(file, "r", encoding="utf-8") as tf:
             content = tf.read()
         encoding = "utf-8"
-    except UnicodeDecodeError as e:
+    except UnicodeDecodeError:
         try:
             with open(file, "r", encoding="latin-1") as tf:
                 content = tf.read()
