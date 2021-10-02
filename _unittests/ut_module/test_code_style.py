@@ -103,7 +103,7 @@ class TestCodeStyle(ExtTestCase):
                                   'R0912', 'E0203', 'W0201', 'R1710', 'W0603',
                                   'R1711', 'R1714', 'W0107', 'W0640', 'C0415',
                                   'W1114', 'R1721', 'R1732', 'R1730', 'R1731',
-                                  'W1514'))
+                                  'W1514', 'C0209'))
 
     def test_style_test(self):
         fLOG(

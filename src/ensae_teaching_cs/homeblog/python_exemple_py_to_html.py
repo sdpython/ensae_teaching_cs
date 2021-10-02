@@ -72,30 +72,29 @@ def get_first_col(file):
     s = "".join(sall)
     if "thread" in s:
         return "Chapitre 10 : thread"
-    elif "Tkinter" in s:
+    if "Tkinter" in s:
         return "Chapitre 9 : interface"
-    elif "struct" in s:
+    if "struct" in s:
         return "Chapitre 8 : fichiers"
-    elif "glob" in s:
+    if "glob" in s:
         return "Chapitre 8 : fichiers"
-    elif "import Tix" in s:
+    if "import Tix" in s:
         return "Chapitre 9 : interface"
-    elif "selection" in file:
+    if "selection" in file:
         return "Chapitre 9 : interface"
-    elif "filelist" in file:
+    if "filelist" in file:
         return "Chapitre 9 : interface"
-    elif "class" in file:
+    if "class" in file:
         return "Chapitre 5 : classes"
-    elif "exemple" in file:
+    if "exemple" in file:
         return "Chapitre 7 : modules"
-    elif "setup" in file:
+    if "setup" in file:
         return "Chapitre 7 : modules"
-    elif "PythonSample" in file:
+    if "PythonSample" in file:
         return "Chapitre 7 : modules"
-    elif "init" in file:
+    if "init" in file:
         return "Chapitre 7 : modules"
-    else:
-        return "-"
+    return "-"
 
 
 def py_to_html_folder(folder, addGoogleTracking=True):
