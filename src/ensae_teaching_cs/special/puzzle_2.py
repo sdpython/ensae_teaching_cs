@@ -94,7 +94,7 @@ class Puzzle2Piece:
         self.bord = []
 
         for i in range(0, 3):
-            self.bord.append(Puzzle2Bord(definition[i:i+2]))
+            self.bord.append(Puzzle2Bord(definition[i:i + 2]))
         self.bord.append(Puzzle2Bord(definition[-1] + definition[0]))
 
         self.orientation = 0
@@ -176,7 +176,7 @@ class Puzzle2:
     """
     Définition d'une classe puzzle, elle contient simplement
     une liste de 9 pièces dont les positions sont:
-    
+
     ::
 
           1
@@ -199,7 +199,7 @@ class Puzzle2:
           chacun des 4 bords de chacune des 9 pièces :
 
         ::
-        
+
             GBYR
             BRYG
             BGYR
@@ -250,7 +250,7 @@ class Puzzle2:
 
     def pixel(self, position):
         """
-        Retourne en fonction de la position (1 à 8) de la 
+        Retourne en fonction de la position (1 à 8) de la
         pièce sa position sur l'écran, soit deux coordonnées.
 
         :return: `tuple(x,y)`
@@ -483,7 +483,7 @@ def pygame_simulation(pygame, first_click=False, folder=None,
     Pour lancer la simulation :
 
     ::
-    
+
         from ensae_teaching_cs.special.puzzle_girafe import pygame_simulation
         import pygame
         pygame_simulation(pygame)
