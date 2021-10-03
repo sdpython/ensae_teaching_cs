@@ -185,6 +185,10 @@ GPU
   <https://marksilberstein.com/wp-content/uploads/2020/04/systex16sgx.pdf>`_
 * `WarpDrive: Extremely Fast End-to-End Deep Multi-Agent Reinforcement Learning on a GPU
   <https://arxiv.org/abs/2108.13976>`_
+* `A friendly introduction to machine learning compilers and optimizers
+  <https://huyenchip.com/2021/09/07/a-friendly-introduction-to-machine-learning-compilers-and-optimizers.html?fbclid=IwAR3Fc1TuBmKtu886Vur4gl4bSSvJDvViKeaY1r-AuBrj51rZ8YNMvYBI1dc#next>`_
+* `CUDA C/C++ Streams and Concurrency
+  <https://developer.download.nvidia.com/CUDA/training/StreamsAndConcurrencyWebinar.pdf>`_
 
 *Lectures sur le C++*
 
@@ -199,6 +203,8 @@ GPU
 * `An Introduction to GPGPU Programming - CUDA Architecture
   <http://www.diva-portal.org/smash/get/diva2:447977/FULLTEXT01.pdf>`_,
   Rafia Inam
+* `SizeBench: a new tool for analyzing Windows binary size
+  <https://devblogs.microsoft.com/performance-diagnostics/sizebench-a-new-tool-for-analyzing-windows-binary-size/>`_
 
 *Python*
 
