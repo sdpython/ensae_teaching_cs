@@ -30,5 +30,5 @@ Ailleurs
 * `Elecions et cartes électorales <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/election_carte_electorale.html>`_
   et `correction <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/notebooks/election_carte_electorale_correction.html>`_
 * `Postier chinois <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/challenges/city_tour.html>`_
-  et `correction <http://lesenfantscodaient.fr/sanso_algo/facteur_chinois_solution.html#l-algo-facteur-chinois-sol>`_
-* `Algorithmes sans ordinateur <http://lesenfantscodaient.fr/sanso_algo/algorithme_sans_ordinateur.html>`_
+  et `correction <http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/sanso_algo/facteur_chinois_solution.html#l-algo-facteur-chinois-sol>`_
+* `Algorithmes sans ordinateur <http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/sanso_algo/algorithme_sans_ordinateur.html>`_
