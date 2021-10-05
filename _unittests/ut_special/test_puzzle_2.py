@@ -16,10 +16,7 @@ class TestPuzzle2(unittest.TestCase):
         p = Puzzle2()
         p.solution()
         res = str(p)
-        print(res)
-        self.assertIn(
-            "1 : haut orange - bas bleu clair - bas bleu fonce - "
-            "haut violet -  orientation 0 numero 1", res)
+        self.assertIn("BY-YR-RG-GB", res)
 
     def test_image_video_puzzle_2(self):
         temp = get_temp_folder(__file__, "temp_image_video_2")
@@ -43,7 +40,7 @@ class TestPuzzle2(unittest.TestCase):
                for _ in files if os.path.splitext(_)[-1] == ".png"]
         self.assertGreater(len(png), 1)
         out = os.path.join(temp, "puzzle_2.avi")
-        v = make_video(png, out, size=(500, 500), format="XVID", fps=4)
+        v = make_video(png, out, size=(750, 500), format="XVID", fps=4)
         self.assertNotEmpty(v)
 
 

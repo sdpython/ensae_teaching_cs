@@ -120,10 +120,14 @@ class Puzzle2Piece:
         @see cl Puzzle2Piece.
         """
         s = str(self.position) + " : "
-        for b in self.bord:
-            s += str(b) + " - "
-        s += " orientation " + str(self.orientation)
-        s += " numero " + str(self.numero)
+        s += "-".join("".join(self.bord_angle(a * 90, 0).couleur)
+                      for a in range(0, 4))
+        s += " :: "
+        s += "-".join("".join(self.bord_angle(a * 90, self.orientation).couleur)
+                      for a in range(0, 4))
+        s += " or=%d" % self.orientation
+        s += " numero=%d" % self.numero
+        s += " pos=%d" % self.position
         return s
 
     def bord_angle(self, angle, orientation=None):
@@ -141,36 +145,6 @@ class Puzzle2Piece:
         dif = (angle - orientation + 360) % 360 // 90
         return self.bord[dif]
 
-    def voisin_possible(self, p, a):
-        """
-        Détermine si la pièce *self* peut être voisine
-        avec la pièce *p* tournée de l'angle *a*.
-        """
-        d = p.position - self.position
-        if abs(d) == 1 and (p.position - 1) // 3 == (self.position - 1) // 3:
-            # voisin en x
-            if d == 1:
-                a1 = 0
-                a2 = a1 + 180
-            else:
-                a1 = 180
-                a2 = 0
-        elif abs(d) == 3:
-            # voisin en y
-            if d == 1:
-                a1 = 90
-                a2 = 270
-            else:
-                a1 = 270
-                a2 = 90
-        else:
-            # pas voisin
-            return False
-
-        b1 = self.bord_angle(a1)
-        b2 = p.bord_angle(a2, a)
-        return b1.compatible(b2)
-
 
 class Puzzle2:
     """
@@ -179,9 +153,9 @@ class Puzzle2:
 
     ::
 
-          1
-        2 3 4
-          5 6 7
+          5
+        6 1 2
+          4 3 7
             8
 
     et les orientations choisies dans l'ensemble ``{ 0, 90, 180, 270 }``
@@ -220,8 +194,10 @@ class Puzzle2:
         for i in range(1, 9):
             name = os.path.join(dir_, "piece2%d.png" % i)
             d = bo[i - 1].strip(" \n\r")
+            d = d[1:] + d[0]
             p = Puzzle2Piece(name, d, 0, i)
             self.piece.append(p)
+            print(p)
 
     def load_images(self, pygame):
         """
@@ -239,11 +215,11 @@ class Puzzle2:
         @see cl Puzzle2.
         """
         s = dedent("""
-                1
-              2 3 4
-                5 6 7
-                  8
-            """).strip("\n\r")
+              5
+            6 1 2
+              4 3 7
+                8
+            """).strip("\n\r") + "\n"
         for p in self.piece:
             s += str(p) + "\n"
         return s
@@ -254,10 +230,25 @@ class Puzzle2:
         pièce sa position sur l'écran, soit deux coordonnées.
 
         :return: `tuple(x,y)`
+
+        ::
+
+              5
+            6 1 2
+              4 3 7
+                8
         """
-        p = position - 1
-        ligne = p // 3
-        colonne = p % 3
+        positions = {
+            1: (1, 1),
+            2: (1, 2),
+            3: (2, 2),
+            4: (2, 1),
+            5: (0, 1),
+            6: (1, 0),
+            7: (2, 3),
+            8: (3, 2)
+        }
+        ligne, colonne = positions[position]
         return (colonne * 250, ligne * 250)
 
     def meilleure_piece(self, free, pos):
@@ -282,25 +273,38 @@ class Puzzle2:
     def ensemble_voisin(self, i):
         """
         Retourne les positions voisins de la position i.
+        Retourne toujours quatre voisins, 0 si la case
+        est hors-jeu.
+
+        ::
+
+              5
+            6 1 2
+              4 3 7
+                8
+
+        ::
+              1
+            0   3
+              2
         """
-        i -= 1
-        res = []
-        for x in [-1, 0, 1]:
-            for y in [-1, 0, 1]:
-                if abs(x) == abs(y):
-                    continue
-                if x == -1 and i % 3 == 0:
-                    continue
-                if x == 1 and i % 3 == 2:
-                    continue
-                if y == -1 and i // 3 == 0:
-                    continue
-                if y == 1 and i // 3 == 2:
-                    continue
-                j = i + x + y * 3
-                if j in range(0, 9):
-                    res.append(j)
-        return [j + 1 for j in res]
+        if i == 1:
+            return [6, 5, 4, 2]
+        if i == 2:
+            return [1, 0, 3, 0]
+        if i == 3:
+            return [4, 2, 8, 7]
+        if i == 4:
+            return [0, 1, 0, 3]
+        if i == 5:
+            return [0, 0, 1, 0]
+        if i == 6:
+            return [0, 0, 0, 1]
+        if i == 7:
+            return [3, 0, 0, 0]
+        if i == 8:
+            return [0, 3, 0, 0]
+        raise ValueError("Unexpected position %r." % i)
 
     def nb_place(self):
         """
@@ -311,6 +315,42 @@ class Puzzle2:
             if p.position == 0:
                 i += 1
         return i
+
+    def voisin_possible(self, piece, p, a):
+        """
+        Détermine si la pièce *self* peut être voisine
+        avec la pièce *p* tournée de l'angle *a*.
+        """
+        v1 = self.ensemble_voisin(piece.position)
+        if p.position not in set(v1):
+            return False
+        v2 = self.ensemble_voisin(p.position)
+        if piece.position not in set(v2):
+            return False
+        d = p.position - piece.position
+        if abs(d) == 1 and (p.position - 1) // 3 == (piece.position - 1) // 3:
+            # voisin en x
+            if d == 1:
+                a1 = 0
+                a2 = a1 + 180
+            else:
+                a1 = 180
+                a2 = 0
+        elif abs(d) == 3:
+            # voisin en y
+            if d == 1:
+                a1 = 90
+                a2 = 270
+            else:
+                a1 = 270
+                a2 = 90
+        else:
+            # pas voisin
+            return False
+
+        b1 = piece.bord_angle(a1)
+        b2 = p.bord_angle(a2, a)
+        return b1.compatible(b2)
 
     def angle_possible(self, p, display=False):
         """
@@ -324,9 +364,12 @@ class Puzzle2:
         for a in [0, 90, 180, 270]:
             r = True
             for v in voisin:
+                if v == 0:
+                    continue
                 piece = self.piece_position(v)
                 if piece is not None:
-                    r = r and piece.voisin_possible(p, a)
+                    t = self.voisin_possible(piece, p, a)
+                    r = r and t
             if r:
                 res.append(a)
         return res
@@ -364,7 +407,7 @@ class Puzzle2:
                 free.append(p)
 
         if screen is not None and pygame is not None and images is not None:
-            empty_main_loop(pygame)
+            empty_main_loop(pygame, lambda: str(self))
             display_puzzle_2(self, screen, True, pygame=pygame)
             pygame.display.flip()
             images.append(screen.copy())
@@ -456,7 +499,7 @@ def display_puzzle_2_piece(self, screen, position, pygame):
 
 
 def pygame_simulation(pygame, first_click=False, folder=None,
-                      size=(750, 750), fLOG=fLOG, delay=200,
+                      size=(1000, 1000), fLOG=fLOG, delay=200,
                       flags=0):
     """
     Simulation graphique.

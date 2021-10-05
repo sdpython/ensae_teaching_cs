@@ -32,7 +32,7 @@ def wait_event(pygame):
                 return None
 
 
-def empty_main_loop(pygame):
+def empty_main_loop(pygame, msg=None):
     """
     Removes all events in the main loop,
     a mouse click make the program halt,
@@ -45,6 +45,8 @@ def empty_main_loop(pygame):
         if event.type == pygame.QUIT:
             return False
         if event.type == pygame.MOUSEBUTTONUP:
+            if msg is not None:
+                print(msg())
             wait_event(pygame)
     return True
 

@@ -10,7 +10,8 @@ Résolution d'un autre puzzle
 Pour la petite histoire
 +++++++++++++++++++++++
 
-Ce puzzle m'est parvenu par mail...
+Ce puzzle m'est parvenu par mail. La résolution est similaire à
+:ref:`l-puzzle_girafe`. Seule change la disposition des pièces.
 
 .. image:: puzzle_2.png
 
