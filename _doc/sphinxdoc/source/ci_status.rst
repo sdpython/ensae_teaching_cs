@@ -99,8 +99,8 @@ Tableau de bord et statut des dépendances
             :target: https://github.com/sdpython/code_beatrix/issues
       - .. image:: https://codecov.io/github/sdpython/code_beatrix/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/code_beatrix?branch=master
-      - .. image:: http://lesenfantscodaient.fr/_images/nbcov.png
-            :target: http://lesenfantscodaient.fr/all_notebooks_coverage.html
+      - .. image:: http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/_images/nbcov.png
+            :target: http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.com/sdpython/cpyquickhelper.svg?branch=master
@@ -936,7 +936,7 @@ Fork / Stars / Downloads
                 :alt: Size"""), "    ")
 
     row2 = indent(dedent("""
-        * - `{0} <http://lesenfantscodaient.fr/>`_
+        * - `{0} <http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/>`_
           - .. image:: https://pepy.tech/badge/{1}/month
                 :target: https://pepy.tech/project/{1}/
                 :alt: Downloads
@@ -1107,7 +1107,7 @@ Contenu
       - Contenu des enseignements donnés à l'Institut des Actuaires.
     * - `code_beatrix <http://lesenfantscodaient.fr>`_
       - Contenu des jeux et exercices pour les enfants disponible
-        à `lesenfantscodaient.fr <http://lesenfantscodaient.fr/>`_.
+        à `code_beatrix <http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/>`_.
         Ce sont des jeux pour apprendre à programmer avec ou sans ordinateurs
         et que j'utilise parfois durant les cours avec les plus grands.
     * - `ensae_teaching_cs <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/index.html>`_

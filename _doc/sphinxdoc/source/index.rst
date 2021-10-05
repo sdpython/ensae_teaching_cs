@@ -33,7 +33,7 @@ dont je suis l'auteur principal sont disponibles :
   <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/index.html>`_,
   ce site revient sur les éléments du langage :epkg:`Python`,
 * `Jeux autour d'algorithmes pour les enfatns
-  <http://lesenfantscodaient.fr/>`_, ce site contient des jeux
+  <http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/>`_, ce site contient des jeux
   avec ou sans ordinateurs pour comprendre des algorithms.
 * `mlinsights <http://www.xavierdupre.fr/app/mlinsights/helpsphinx/index.html>`_,
   quelques extensions pour :epkg:`scikit-learn`,
@@ -67,7 +67,8 @@ Les premiers pas sont parfois rebutants mais on arrive vite à
 quelque chose à condition d'y passer un peu de temps au démarrage.
 La programmation est indispensable pour traiter les données,
 les visualiser, automatiser les tâches les plus répétitives, et
-s'amuser (voir `lesenfantscodaient.fr <http://lesenfantscodaient.fr/>`_).
+s'amuser (voir `code_beatrix
+<http://www.xavierdupre.fr/app/code_beatrix/helpsphinx/>`_).
 :epkg:`Python` est maintenant un prérequis pour devenir datascientist.
 La programmation est devenue indispensable dans tout travail
 datascience ou plus généalement tous les métiers manipulant des données.

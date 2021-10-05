@@ -113,7 +113,7 @@ class PuzzleGirafePiece:
         """
         charge l'image pour une simulation graphique
 
-        @param      pygame      moulde pygame
+        @param      pygame      module :epkg:`pygame`
         """
         image = pygame.image.load(self.name)
         self.image = pygame.transform.scale(image, (250, 250))
@@ -230,7 +230,7 @@ class PuzzleGirafe:
         """
         charge les images pour une simulation graphique
 
-        @param      pygame      moulde pygame
+        @param      pygame      module :epkg:`pygame`
         """
         for p in self.piece:
             p.load_image(pygame)

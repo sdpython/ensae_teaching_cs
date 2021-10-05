@@ -529,7 +529,7 @@ def file2HTML(file_name, format, style, Replace, entity="1", encoding="utf-8"):
 def makeBlock(data):
     """Applies the block tags to text
     """
-    global appliedstyle
+    global appliedstyle  # pylint: disable=W0602
     return "%s%s%s" % (appliedstyle['block'][0], data, appliedstyle['block'][1])
 
 
