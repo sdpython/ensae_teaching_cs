@@ -75,6 +75,7 @@ modules = [
     "jupytalk",
     "jyquickhelper",
     "mlstatpy",
+    "onnxcustom",
     "pyensae",
     "pymmails",
     "pymyinstall",
