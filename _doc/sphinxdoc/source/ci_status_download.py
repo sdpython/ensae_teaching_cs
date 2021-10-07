@@ -25,8 +25,8 @@ med = gr.iloc[gr.shape[0] // 2, 1]
 
 sets = [
     {'skl2onnx', 'onnxmltools',
-     'keras2onnx', 'tf2onnx', 'onnxconverter-common',
-     'ort-customops'},
+     'tf2onnx', 'onnxconverter-common',
+     'onnxruntime-extensions'},
     {'onnx'},
     {'onnxruntime'},
     {'jyquickhelper', 'pymyinstall', 'pyquickhelper', 'pyensae'},

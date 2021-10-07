@@ -35,7 +35,7 @@ On peut retrouver la plupart de ces résultats sur
         'onnx', 'onnxruntime', 'skl2onnx', 'keras2onnx', 'nimbusml',
         'scikit-learn', 'pandas', 'numpy', 'jupyter', 'matplotlib',
         'protobuf', 'nimbusml', 'aftercovid', 'onnxcustom',
-        'onnxconverter-common', 'tf2onnx', 'ort-customops',
+        'onnxconverter-common', 'tf2onnx', 'onnxruntime-extensions',
     ])
     dont = {'numpy', 'matplotlib', 'pandas', 'jupyter'}
     modules = [_ for _ in modules if _ not in dont]
@@ -60,8 +60,8 @@ On peut retrouver la plupart de ces résultats sur
 
     sets = [
         {'skl2onnx', 'onnxmltools',
-         'keras2onnx', 'tf2onnx', 'onnxconverter-common',
-         'ort-customops'},
+         'tf2onnx', 'onnxconverter-common',
+         'onnxruntime-extensions'},
         {'onnx'},
         {'onnxruntime'},
         {'jyquickhelper', 'pymyinstall', 'pyquickhelper', 'pyensae'},
