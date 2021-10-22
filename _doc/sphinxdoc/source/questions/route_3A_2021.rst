@@ -61,8 +61,14 @@ carte GPU.
     * Course logicielle matérielle (`A100 <https://www.nvidia.com/en-us/data-center/a100/>`_)
 * Machine learning open source ?
 * Le graal : concevoir un modèle avec un outil simple et faisant des calculs rapides.
+    * Ecrire des calculs rapides exige une connaissance des processeurs
+    * Ecrire un modèle performant exige des connaissances mathématiques
+    * Mécanicien et pilote sont des métiers devenus différents
 * Illustrations
-    * Calcul : produit matriciel de 3 matrices
+    * Calcul : produit matriciel de 3 matrices ?
+      `Associativity and matrix multiplication
+      <http://www.xavierdupre.fr/app/td3a_cpp/helpsphinx/auto_examples/plot_benchmark_associative.html>`_,
+      (`opt-einsum <https://optimized-einsum.readthedocs.io/en/stable/>`_)
     * Fonction einsum : `Einsum decomposition
       <http://www.xavierdupre.fr/app/mlprodict/helpsphinx/notebooks/einsum_decomposition.html>`_,
       `bsnh,ctnh->nts <http://www.xavierdupre.fr/app/mlprodict/helpsphinx/notebooks/einsum_decomposition.html#decomposition-of-bsnh-ctnh-nts>`_
@@ -76,7 +82,7 @@ carte GPU.
         * `Processus <https://docs.python.org/fr/3.9/library/subprocess.html>`_
         * `sérialisation <https://python-guide-pt-br.readthedocs.io/fr/latest/scenarios/serialization.html>`_
     * `AVX <https://fr.wikipedia.org/wiki/Advanced_Vector_Extensions>`_
-    * `Cache https://en.wikipedia.org/wiki/CPU_cache>`_
+    * `Cache <https://en.wikipedia.org/wiki/CPU_cache>`_
     * Synchronisation et `GIL <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/notebooks/gil_example.html>`_
       (voir aussi `GIL <https://www.codeflow.site/fr/article/python-gil>`_)
     * Garbage Collector
@@ -103,6 +109,11 @@ carte GPU.
     * `JIT <https://fr.wikipedia.org/wiki/Compilation_%C3%A0_la_vol%C3%A9e>`_
     * `Quantization <https://pytorch.org/docs/stable/quantization.html>`_
     * `Sparse <https://en.wikipedia.org/wiki/Sparse_matrix>`_
+    * Streaming Algorithm: :ref:`BJKSTrst`,
+      `river <https://github.com/online-ml/river>`_,
+      :ref:`l-ml2a-streaming-algorithm`, :ref:`l-ml2a-streaming-ml`,
+      notes de cours : `Data Stream Algorithm
+      <https://www.cs.dartmouth.edu/~ac/Teach/data-streams-lecnotes.pdf>`_
 
 Séance 3
 ^^^^^^^^

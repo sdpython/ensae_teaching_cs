@@ -4,6 +4,8 @@
     :alt: Statistique
     :target: http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/td_2a_notions.html#pour-un-profil-plutot-data-scientist
 
+.. _l-ml2a-streaming-ml:
+
 Streaming machine learning
 ++++++++++++++++++++++++++
 
