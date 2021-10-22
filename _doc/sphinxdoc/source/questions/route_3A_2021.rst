@@ -64,6 +64,9 @@ carte GPU.
     * Ecrire des calculs rapides exige une connaissance des processeurs
     * Ecrire un modèle performant exige des connaissances mathématiques
     * Mécanicien et pilote sont des métiers devenus différents
+* La simplicité, documentation
+    * `API scikit-learn <https://scikit-learn.org/stable/modules/classes.html>`_
+    * `pytorch tutorial <https://pytorch.org/tutorials/beginner/basics/intro.html>`_
 * Illustrations
     * Calcul : produit matriciel de 3 matrices ?
       `Associativity and matrix multiplication
@@ -80,6 +83,7 @@ carte GPU.
     * Parallélisation
         * `Threads <https://realpython.com/intro-to-python-threading/>`_
         * `Processus <https://docs.python.org/fr/3.9/library/subprocess.html>`_
+        * Cloud
         * `sérialisation <https://python-guide-pt-br.readthedocs.io/fr/latest/scenarios/serialization.html>`_
     * `AVX <https://fr.wikipedia.org/wiki/Advanced_Vector_Extensions>`_
     * `Cache <https://en.wikipedia.org/wiki/CPU_cache>`_
@@ -96,7 +100,9 @@ carte GPU.
       (`mlas <https://github.com/microsoft/onnxruntime/tree/master/onnxruntime/core/mlas/lib>`_)
 * Outils du développeur
     * Outils du dévelopeur : compilateur, éditeur (Visual Studio Code)
-    * git
+    * git, notion d'intégration continue
+        * `Fixes #13173, implements faster polynomial features for dense matrices #13290
+          <https://github.com/scikit-learn/scikit-learn/pull/13290>`_
     * Profileur
         * `cProfile <https://docs.python.org/3/library/profile.html>`_
         * `py-spy <https://github.com/benfred/py-spy>`_
@@ -122,5 +128,8 @@ Séance 4
 ^^^^^^^^
 
 Séance 5
+^^^^^^^^
+
+Séance 6
 ^^^^^^^^
 
