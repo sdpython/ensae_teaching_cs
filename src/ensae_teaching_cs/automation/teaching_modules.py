@@ -23,5 +23,5 @@ def get_teaching_modules():
             "tkinterquickhelper", "cpyquickhelper", "pandas_streaming",
             "lightmlboard", "lightmlrestapi", "mlinsights", "pyenbc", "mlprodict",
             "papierstat", "sparkouille", "manydataapi", "csharpy", "csharpyml",
-            "wrapclib", "myblog", "_check_python_install", "onnxortext", 'onnxcustom'
-            ]
+            "wrapclib", "myblog", "_check_python_install", "onnxortext", 'onnxcustom',
+            'deeponnxcustom']
