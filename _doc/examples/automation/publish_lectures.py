@@ -71,6 +71,7 @@ modules = [
     "actuariat_python",
     "code_beatrix",
     "cpyquickhelper",
+    "deeponnxcustom",
     "ensae_projects",
     "jupytalk",
     "jyquickhelper",

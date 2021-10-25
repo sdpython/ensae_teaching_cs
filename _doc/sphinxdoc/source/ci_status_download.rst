@@ -71,7 +71,7 @@ On peut retrouver la plupart de ces résultats sur
         {'lightmlboard', 'lightmlrestapi', 'pyrsslocal', 'pymmails', },
         {'sparkouille', 'ensae_projects', 'actuariat_python', 'code_beatrix', 'jupytalk'},
         {'papierstat', 'teachpyx', 'ensae_teaching_cs', 'ensae_teaching_dl', 'teachpyx',
-         'aftercovid', 'onnxcustom'},
+         'aftercovid', 'onnxcustom', 'deeponnxcustom'},
         {'tkinterquickhelper', 'pysqllike', 'pyenbc', },
         {'nimbusml', },
         {'scikit-learn'},

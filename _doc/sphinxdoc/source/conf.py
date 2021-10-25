@@ -125,6 +125,7 @@ epkg_dictionary.update({
     "DGML": 'https://datascience.etalab.studio/dgml/',
     'Debian 9': 'https://fr.wikipedia.org/wiki/Debian',
     'deep learning': 'https://en.wikipedia.org/wiki/Deep_learning',
+    'deeponnxcustom': 'http://www.xavierdupre.fr/app/deeponnxcustom/helpsphinx/index.html',
     'dirty-cat': 'https://dirty-cat.github.io/stable/',
     "dlib": 'http://dlib.net/',
     'docker': 'https://en.wikipedia.org/wiki/Docker_(software)',

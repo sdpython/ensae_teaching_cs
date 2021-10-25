@@ -123,6 +123,23 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
+    * - `onnxcustom <http://www.xavierdupre.fr/app/deeponnxcustom/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.com/sdpython/deeponnxcustom.svg?branch=master
+            :target: https://app.travis-ci.com/github/sdpython/deeponnxcustom
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/a3sn45a2fayoxb5q?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/deeponnxcustom
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/deeponnxcustom.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/deeponnxcustom
+      - .. image:: https://badge.fury.io/py/deeponnxcustom.svg
+            :target: https://pypi.org/project/deeponnxcustom
+      - .. image:: http://img.shields.io/github/issues/sdpython/deeponnxcustom.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/deeponnxcustom/issues
+      - .. image:: https://codecov.io/github/sdpython/deeponnxcustom/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/deeponnxcustom?branch=master
+      -
     * - `ensae_projects <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.com/sdpython/ensae_projects.svg?branch=master
             :target: https://app.travis-ci.com/github/sdpython/ensae_projects
@@ -1020,6 +1037,8 @@ Outils
     * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
       - Fonctions, outils implémentées en C, C++ et habillées en Python. C'est aussi
         un template pour ceux qui souhaite réaliser un module en C/C++/Cython.
+    * - :epkg:`deeponnxcustom`
+      - ONNX, deep learning, onnxruntime, pytorch
     * - :epkg:`lightmlboard`
       - Implémentation d'un site web dédié aux compétitions de machine learning
         basé sur :epkg:`tornado`.
