@@ -15,7 +15,8 @@ def get_teaching_modules():
         from ensae_teaching_cs.automation import get_teaching_modules
         print('\\n'.join(sorted(get_teaching_modules())))
     """
-    return ["pymlbenchmark", "_benchmarks", "ensae_teaching_dl", "machinelearningext",
+    return ['deeponnxcustom:main', 'onnxcustom',
+            "pymlbenchmark", "_benchmarks", "ensae_teaching_dl", "machinelearningext",
             "lecture_citation", "botadi", "pyquickhelper", "jyquickhelper",
             "python3_module_template", "mathenjeu", "pymmails", "pymyinstall",
             "pyensae", "pyrsslocal", "pysqllike", "ensae_projects", "ensae_teaching_cs",
@@ -23,5 +24,4 @@ def get_teaching_modules():
             "tkinterquickhelper", "cpyquickhelper", "pandas_streaming",
             "lightmlboard", "lightmlrestapi", "mlinsights", "pyenbc", "mlprodict",
             "papierstat", "sparkouille", "manydataapi", "csharpy", "csharpyml",
-            "wrapclib", "myblog", "_check_python_install", "onnxortext", 'onnxcustom',
-            'deeponnxcustom']
+            "wrapclib", "myblog", "_check_python_install", "onnxortext"]

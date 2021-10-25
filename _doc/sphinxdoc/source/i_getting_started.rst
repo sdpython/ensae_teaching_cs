@@ -243,6 +243,7 @@ ces enseignements :
 
     from ensae_teaching_cs.automation.teaching_modules import get_teaching_modules
     for mod in sorted(get_teaching_modules()):
+        mod = mod.split(':')[0]
         print('pip uninstall -y {}'.format(mod))
 
 Configuration pour ces cours

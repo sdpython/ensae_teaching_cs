@@ -124,7 +124,7 @@ Tableau de bord et statut des dépendances
             :target: http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - `deeponnxcustom <http://www.xavierdupre.fr/app/deeponnxcustom/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.com/sdpython/deeponnxcustom.svg?branch=master
+      - .. image:: https://travis-ci.com/sdpython/deeponnxcustom.svg?branch=main
             :target: https://app.travis-ci.com/github/sdpython/deeponnxcustom
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/g9wt6riyh6n74t23?svg=true
@@ -137,8 +137,8 @@ Tableau de bord et statut des dépendances
       - .. image:: http://img.shields.io/github/issues/sdpython/deeponnxcustom.png
             :alt: GitHub Issues
             :target: https://github.com/sdpython/deeponnxcustom/issues
-      - .. image:: https://codecov.io/github/sdpython/deeponnxcustom/coverage.svg?branch=master
-            :target: https://codecov.io/github/sdpython/deeponnxcustom?branch=master
+      - .. image:: https://codecov.io/github/sdpython/deeponnxcustom/coverage.svg?branch=main
+            :target: https://codecov.io/github/sdpython/deeponnxcustom?branch=main
       -
     * - `ensae_projects <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.com/sdpython/ensae_projects.svg?branch=master
@@ -971,6 +971,7 @@ Fork / Stars / Downloads
                 :alt: Size"""), "    ")
 
     modules = get_teaching_modules()
+    modules = [m.split(':')[0] for m in modules]
     skip = {'myblog', '_benchmarks', 'lecture_citation',
             'machinelearningext', 'python3_module_template'}
     rows = [text]
@@ -1184,6 +1185,7 @@ Git Clone
     pattern = 'if not exist {0} git clone https://github.com/sdpython/{0}.git'
     add = ['myblog', 'thesis_handwriting', '_automation']
     modules = get_teaching_modules() + add
+    modules = [m.split(':')[0] for m in modules]
     print('\n'.join(pattern.format(_) for _ in sorted(modules)))
 
 Pypi download

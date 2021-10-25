@@ -37,6 +37,7 @@ On peut retrouver la plupart de ces résultats sur
         'protobuf', 'nimbusml', 'aftercovid', 'onnxcustom',
         'onnxconverter-common', 'tf2onnx', 'onnxruntime-extensions',
     ])
+    modules = [m.split(':')[0] for m in modules]
     dont = {'numpy', 'matplotlib', 'pandas', 'jupyter'}
     modules = [_ for _ in modules if _ not in dont]
     conds = ["file.project = '{0}'".format(m) for m in modules]

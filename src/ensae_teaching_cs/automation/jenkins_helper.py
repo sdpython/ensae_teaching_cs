@@ -96,11 +96,15 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None, platform=None)
         platform = sys.platform
     plat = "win" if platform.startswith("win") else "lin"
     yml = []
-    pattern = "https://raw.githubusercontent.com/sdpython/%s/master/.local.jenkins.{0}.yml".format(
+    pattern = "https://raw.githubusercontent.com/sdpython/%s/%s/.local.jenkins.{0}.yml".format(
         plat)
     modules = ["_automation"] + get_teaching_modules()
     for c in modules:
-        yml.append(pattern % c)
+        if ':' in c:
+            c, branch = c.split(':')
+        else:
+            branch = 'master'
+        yml.append(pattern % (c, branch))
 
     if filter is not None or neg_filter is not None:
         reg = re.compile(filter if filter else ".*")
@@ -134,7 +138,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None, platform=None)
     else:
         context = {'Python37': 'python3.7',
                    'Python38': 'python3.8', 'Python39': 'python3.9'}
-        yml_data = load_yaml(pattern % '_automation', context=context)
+        yml_data = load_yaml(pattern % ('_automation', 'master'), context=context)
         pyth = yml_data[0]['python']
         res = []
         for pyt in pyth:
