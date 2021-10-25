@@ -123,11 +123,11 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
-    * - `onnxcustom <http://www.xavierdupre.fr/app/deeponnxcustom/helpsphinx/index.html>`_
+    * - `deeponnxcustom <http://www.xavierdupre.fr/app/deeponnxcustom/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.com/sdpython/deeponnxcustom.svg?branch=master
             :target: https://app.travis-ci.com/github/sdpython/deeponnxcustom
             :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/a3sn45a2fayoxb5q?svg=true
+      - .. image:: https://ci.appveyor.com/api/projects/status/g9wt6riyh6n74t23?svg=true
             :target: https://ci.appveyor.com/project/sdpython/deeponnxcustom
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/deeponnxcustom.svg?style=svg
