@@ -15,18 +15,6 @@ install:
   - "%PYTHON%\\Scripts\\pip install -r requirements-win.txt"
   # install precompiled versions not available on pypi
   - "%PYTHON%\\Scripts\\pymy_install3 cartopy shapely pyproj fiona gdal"
-  # onnx
-  #- git clone -b master --single-branch https://github.com/onnx/onnx.git --recursive
-  #- cd onnx
-  #- set ONNX_ML=1
-  #- set ONNX_BUILD_TESTS=1
-  #- set ONNXIFI_DUMMY_BACKEND=1
-  #- python setup.py bdist_wheel
-  #- dir dist
-  #- python setup.py install
-  #- cd ..
-  # onnxruntime
-  - "%PYTHON%\\Scripts\\pip install tensorflow_model_optimization"
   # other dependencies
   - "%PYTHON%\\Scripts\\pip install -r requirements.txt --no-deps"
   - set PYTHONPATH=src
