@@ -272,7 +272,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
     """
     if modules is None:
         modules = get_teaching_modules()
-    modules = [m.split(':')[0] for m in modules]
+    modules = [m.split(':', maxsplit=1)[0] for m in modules]
 
     if google_id is None:
         google_id = ""
