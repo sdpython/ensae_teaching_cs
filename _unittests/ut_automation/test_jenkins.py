@@ -8,7 +8,7 @@ from pyquickhelper.loghelper import fLOG
 from pyquickhelper.pycode import ExtTestCase
 from pyquickhelper.jenkinshelper import JenkinsExt
 from ensae_teaching_cs.automation.jenkins_helper import (
-    setup_jenkins_server, default_jenkins_jobs)
+    default_jenkins_jobs)
 
 
 class TestJenkins(ExtTestCase):
