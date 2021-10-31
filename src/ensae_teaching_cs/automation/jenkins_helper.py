@@ -98,7 +98,7 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None, platform=None)
     yml = []
     pattern = "https://raw.githubusercontent.com/sdpython/%s/%s/.local.jenkins.{0}.yml".format(
         plat)
-    modules = ["_automation"] + get_teaching_modules()
+    modules = ["_automation"] + get_teaching_modules(branch=True)
     for c in modules:
         if ':' in c:
             c, branch = c.split(':')

@@ -970,8 +970,7 @@ Fork / Stars / Downloads
                 :target: https://github.com/sdpython/{0}/
                 :alt: Size"""), "    ")
 
-    modules = get_teaching_modules()
-    modules = [m.split(':')[0] for m in modules]
+    modules = get_teaching_modules(branch=False)
     skip = {'myblog', '_benchmarks', 'lecture_citation',
             'machinelearningext', 'python3_module_template'}
     rows = [text]
@@ -1184,8 +1183,7 @@ Git Clone
     from ensae_teaching_cs.automation import get_teaching_modules
     pattern = 'if not exist {0} git clone https://github.com/sdpython/{0}.git'
     add = ['myblog', 'thesis_handwriting', '_automation']
-    modules = get_teaching_modules() + add
-    modules = [m.split(':')[0] for m in modules]
+    modules = get_teaching_modules(branch=False) + add
     print('\n'.join(pattern.format(_) for _ in sorted(modules)))
 
 Pypi download

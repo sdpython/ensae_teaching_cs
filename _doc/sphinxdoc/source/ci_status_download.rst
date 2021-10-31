@@ -30,13 +30,12 @@ On peut retrouver la plupart de ces résultats sur
     """
 
     from ensae_teaching_cs.automation import get_teaching_modules
-    modules = get_teaching_modules()
+    modules = get_teaching_modules(branch=False)
     modules.extend([
         'onnx', 'onnxruntime', 'skl2onnx', 'keras2onnx', 'nimbusml',
         'scikit-learn', 'pandas', 'numpy', 'jupyter', 'matplotlib',
-        'protobuf', 'nimbusml', 'aftercovid', 'onnxcustom',
-        'onnxconverter-common', 'tf2onnx', 'onnxruntime-extensions',
-    ])
+        'protobuf', 'nimbusml', 'aftercovid',
+        'onnxconverter-common', 'tf2onnx', 'onnxruntime-extensions'])
     modules = [m.split(':')[0] for m in modules]
     dont = {'numpy', 'matplotlib', 'pandas', 'jupyter'}
     modules = [_ for _ in modules if _ not in dont]
