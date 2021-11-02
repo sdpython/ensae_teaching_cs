@@ -127,6 +127,23 @@ Séance 3
 Séance 4
 ^^^^^^^^
 
+* CUDA
+    * `CUDA C/C++ Basics <https://www.nvidia.com/docs/IO/116711/sc11-cuda-c-basics.pdf>`_
+    * `CUDA Thread Indexing Cheatsheet
+      <https://cs.calvin.edu/courses/cs/374/CUDA/CUDA-Thread-Indexing-Cheatsheet.pdf>`_
+    * `CUDA Thread Basics
+      <http://users.wfu.edu/choss/CUDA/docs/Lecture%205.pdf>`_
+    * `CUDA 11 Features Revealed
+      <https://developer.nvidia.com/blog/cuda-11-features-revealed/>`_
+      
+* Visual Studio
+    * `NVIDIA Nsight Integration
+      <https://developer.nvidia.com/nsight-tools-visual-studio-integration>`_
+      
+* torch
+    * `Custom C++ and CUDA Extensions 
+      <https://pytorch.org/tutorials/advanced/cpp_extension.html>`_
+
 Séance 5
 ^^^^^^^^
 
