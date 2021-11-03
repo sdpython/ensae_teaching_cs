@@ -15,7 +15,9 @@ install:
   - "%PYTHON%\\Scripts\\pip install -r requirements-win.txt"
   # install precompiled versions not available on pypi
   - "%PYTHON%\\Scripts\\pymy_install3 shapely pyproj"
+  - "%PYTHON%\\Scripts\\pip install http://www.xavierdupre.fr/enseignement/setup/Cartopy-0.20.1-cp39-cp39-win_amd64.whl"
   - "%PYTHON%\\Scripts\\pymy_install3 cartopy fiona gdal"
+  # - "%PYTHON%\\Scripts\\pymy_install3 cartopy"
   # other dependencies
   - "%PYTHON%\\Scripts\\pip install -r requirements.txt --no-deps"
   - set PYTHONPATH=src
