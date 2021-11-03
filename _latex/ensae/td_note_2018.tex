@@ -1,0 +1,211 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\newcommand{\sametextforthisinterro}[0]{ 
+\huge ENSAE TD noté, mardi 12 décembre 2017
+
+\normalsize
+\textit{Le programme devra être envoyé par mail au chargé de TD et au professeur. Toutes les questions valent 2 points.}
+\smallskip
+}
+
+\sametextforthisinterro
+}
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label1_2018}%\indexfrr{énoncé}{pratique}
+
+
+\exequest Générer un ensemble aléatoire de 1000 nombres $(X_i,Y_i)$ qui vérifie :
+
+\begin{itemize}
+\item $X_i$ suit une loi uniforme sur $[0,16]$
+\item $Y_i = \indicatrice{[\sqrt{X_i}] \mod 2 = 0}$ où $[A]$ est la partie entière de $A$.
+\end{itemize}
+
+On pourra se servir de la fonction \codes{random} du module \codes{random}.
+Vous pourrez vérifier que le nuage de points correspond à ce qui est demandé
+en exécutant le code suivant (si vous êtes dans un notebook, n'oubliez pas
+\codes{\%matplotlib \; inline}).
+
+\begin{verbatimx}
+import matplotlib.pyplot as plt
+plt.plot(X, Y, '.')
+\end{verbatimx}
+
+
+\exequest Trier les points selon les $X$. L'instruction 
+\codes{list(zip(X,Y))} devrait vous mettre sur la piste.
+
+
+\exequest On suppose que les $Y$ sont triés selon les $X_i$ croissants.
+Calculer la somme des différences entre les $Y_i$ et la moyenne $m$ des $Y_i$
+(en valeur absolue) sur un intervalle $[i,j]$, $j$ exclu.
+Ecrire une fonction \codes{def \; somme\_diff(nuage, i, j)} qui exécute ce calcul
+qui correspond à $\sum_{k=i}^{j-1} |Y_k - m|$ avec $m = (\sum_{k=i}^{j-1} Y_k)/(j-i)$.
+
+
+\exequest Soit $i,j$ deux entiers, on coupe l'intervalle en deux : $i,k$ et $k,j$. 
+On calcule \codes{somme\_diff} sur ces deux intervalles, on compare leur somme
+à celle obtenue sur l'ensemble de l'intervalle. On écrit la fonction 
+\codes{def \; difference(nuage, i, j, k):}. Elle doit calculer 
+$|\Delta_{i}^k + \Delta_{k}^j - \Delta_{i}^j|$ où $\Delta$ correspond à la fonction
+\codes{somme\_diff}.
+
+
+\exequest Le langage Python permet de passer une fonction à une autre fonction en
+tant qu'argument :
+
+\begin{verbatimx}
+def fct(x, y):
+    return abs(x-y)
+def distance_list(list_x, list_y, f):
+    return sum(f(x,y) for x,y in zip(list_x, list_y))
+distance_list([0, 1], [0, 2], fct)
+\end{verbatimx}
+
+On veut réécrire les fonctions \codes{def \; somme\_diff(nuage, i, j, fct)}
+et \codes{def \; difference(nuage, i, j, k, fct):} de telle sorte 
+que \codes{somme\_diff} calcule  
+$(\sum_{k=i}^{j-1} \mathbf{fct}(Y_k, m)$.
+
+
+\exequest On veut déterminer le $k$ optimal, celui qui maximise la
+quantité précédente dans l'intervalle $[i,j]=[0,16]$. On souhaite garder la
+fonction \codes{fct} comme argument. Pour cela, implémenter la fonction
+\codes{def \; optimise(nuage, i, j, fct):}. Elle retourne le point de coupure
+et la quantité optimale.
+
+
+\exequest Recommencer sur les deux intervalles trouvés $[i,k]$, $[k,j]$
+et calculer le résultat.
+
+
+\exequest Pouvez-vous imaginer une fonction récursive qui produit toutes les
+séparations. Entre deux séparations, tous les $Y$ sont constants.
+Ecrire la fonction \codes{def \; recursive(nuage, i, j, fct):}.
+
+
+\exequest Quel est le coût de la fonction \codes{optimise} 
+en fonction de la taille de
+l'intervalle ? Peut-on mieux faire (ce qu'on n'implémentera pas).
+
+\exequest Comment l'algorithme se comporte-t-il 
+lorsque tous les points sont distincts ?
+
+
+\end{xexercice}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\firstpassagedo{
+\newpage
+\sametextforthisinterro
+}
+
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label2_2018}%\indexfrr{énoncé}{pratique}
+
+
+\exequest Générer un ensemble aléatoire de 1000 nombres $(X_i,Y_i)$ qui vérifie :
+
+\begin{itemize}
+\item $X_i$ suit une loi uniforme sur $[0,16]$
+\item $Y_i = \sqrt{X_i} [\sqrt{X_i}]$ où $[A]$ est la partie entière de $A$.
+\end{itemize}
+
+On pourra se servir de la fonction \codes{random} du module \codes{random}.
+Vous pourrez vérifier que le nuage de points correspond à ce qui est demandé
+en exécutant le code suivant.
+
+\begin{verbatimx}
+%matplotlib inline
+import matplotlib.pyplot as plt
+plt.plot(X, Y, '.')
+\end{verbatimx}
+
+
+\exequest Trier les points selon les $X$. L'instruction 
+\codes{list(zip(X,Y))} devrait vous mettre sur la piste.
+
+
+\exequest On suppose que les $Y$ sont triés selon les $X_i$ croissants.
+Calculer la somme des différences au carré entre les $Y_i$ et la moyenne $m$ des $Y_i$
+sur un intervalle $[i,j]$, $j$ exclu.
+Ecrire une fonction \codes{def \; somme\_diff(nuage, i, j)} qui exécute ce calcul
+qui correspond à $\sum_{k=i}^{j-1} (Y_k - m)^2$ avec $m = (\sum_{k=i}^{j-1} Y_k)/(j-i)$.
+
+
+\exequest Soit $i,j$ deux entiers, on coupe l'intervalle en deux : $i,k$ et $k,j$. 
+On calcule \codes{somme\_diff} sur ces deux intervalles, on compare leur somme
+à celle obtenue sur l'ensemble de l'intervalle. On écrit la fonction 
+\codes{def \; difference(nuage, i, j, k):}. Elle doit calculer 
+$|\Delta_{i}^k + \Delta_{k}^j - \Delta_{i}^j|$ où $\Delta$ correspond à la fonction
+\codes{somme\_diff}.
+
+
+\exequest Le langage Python permet de passer une fonction à une autre fonction en
+tant qu'argument :
+
+\begin{verbatimx}
+def fct(x, y): return (x-y)**2
+def distance_list(list_x, list_y, f): return sum(f(x,y) for x,y in zip(list_x, list_y))
+distance_list([0, 1], [0, 2], fct)
+\end{verbatimx}
+
+On veut réécrire les fonctions \codes{def \; somme\_diff(nuage, i, j, fct)}
+et \codes{def \; difference(nuage, i, j, k, fct):} de telle sorte 
+que \codes{somme\_diff} calcule  
+$(\sum_{k=i}^{j-1} \mathbf{fct}(Y_k, m)$.
+
+
+\exequest On veut déterminer le $k$ optimal, celui qui maximise la
+quantité précédente dans l'intervalle $[i,j]=[0,16]$. On souhaite garder la
+fonction \codes{fct} comme argument. Pour cela, implémenter la fonction
+\codes{def \; optimise(nuage, i, j, fct):}. Elle retourne le point de coupure
+et la quantité optimale.
+
+
+\exequest Recommencer sur les deux intervalles trouvés $[i,k]$, $[k,j]$
+et calculer le résultat.
+
+
+\exequest Pouvez-vous imaginer une fonction récursive qui produit toutes les
+séparations. Entre deux séparations, tous les $Y$ sont constants.
+Ecrire la fonction \codes{def \; recursive(nuage, i, j, fct):}.
+
+
+
+\exequest L'algorithme produit beaucoup de points de coupures.
+On souhaite arrêter la récursion plus tôt en mettant un seuil sur la
+quantité obtenue $|\Delta_{i}^k + \Delta_{k}^j - \Delta_{i}^j|$ qui
+doit être supérieur à 50.
+
+
+
+\exequest Quel est le coût de la fonction \codes{optimise} 
+en fonction de la taille de
+l'intervalle ? Peut-on mieux faire (ce qu'on n'implémentera pas).
+
+\end{xexercice}
+
+
+
+
+
+
+\input{../../common/exo_end.tex}%

@@ -1,0 +1,93 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\ifx\ifnotellipse\undefined
+\newcommand{\ifnotellipse}[1]{}
+\fi
+
+\firstpassagedo{
+\huge TD noté, mercredi 3 décembre 2008
+
+\normalsize
+\textit{Le programme construit au fur et à mesure des questions devra être imprimé à la fin du TD et rendu au chargé de TD. Il ne faut pas oublier de mentionner son nom en commentaires au début du programme et l'ajouter sur chaque page. Les réponses autres que des parties de programme seront insérées sous forme de commentaires.} \medskip
+}
+
+
+\exosubject{}
+\begin{xexercicenot}\label{td_note_label91}%\indexfrr{énoncé}{pratique}
+
+Le président de la république souhaite créer une pièce de monnaie à son effigie à condition que celle-ci facilite la vie des citoyens. Il voudrait que celle-ci soit d'un montant compris entre 1~et~10~euros et qu'elle permette de construire la somme de 99~euros avec moins de pièces qu'actuellement. Les questions qui suivent ont pour but de décomposer en pièces n'importe quel montant avec un jeu de pièces donné.
+
+\exequest On considère que \codes{pieces} est une liste de pièces triées par ordre croissant. Compléter le programme suivant afin d'obtenir la liste triée par ordre décroissant\footnote{On peut s'aider de tout type de document. Il est possible d'utiliser les méthodes associées à la classe \codes{list} qu'on peut aussi retrouver via un moteur de recherche internet avec la requête \textit{python list}.}. (2~points)
+\vspace{-0.2cm}
+\begin{verbatimx}
+pieces = [1,2,5,10,20,50]
+...
+\end{verbatimx}
+\vspace{-0.2cm}
+
+\exequest On souhaite écrire une fonction qui prend comme argument un montant \codes{m} et une liste \codes{pieces} toujours triée en ordre décroissant. Cette fonction doit retourner la plus grande pièce inférieure ou égale au montant~\codes{m}. (3~points)
+
+\exequest En utilisant la fonction précédente, on veut décomposer un montant \codes{m} en une liste de pièces dont la somme est égale au montant. On construit pour cela une seconde fonction qui prend aussi comme argument un montant \codes{m} et une liste de pièces \codes{pieces}. Cette fonction retourne une liste de pièces dont la somme est égale au montant. Une même pièce peut apparaître plusieurs fois. L'algorithme proposé est le suivant~: 
+
+\begin{enumerate} 
+\item La fonction cherche la plus grande pièce inférieure ou égale au montant.
+\item Elle ajoute cette pièce au résultat puis la soustrait au montant.
+\item Si la somme restante est toujours positive, on retourne à la première étape.
+\end{enumerate}
+
+Cet algorithme fonctionne pour le jeu de pièces donné en exemple et décompose 49~euros en $49=20+20+5+2+2$.
+(5~points)
+
+\exequest Prolongez votre programme pour déterminer avec cet algorithme le plus grand montant compris entre 1 et 99 euros inclus et qui nécessite le plus grand nombre de pièces~? (2~points)
+
+\exequest On ajoute la pièce 4 à la liste des pièces~:
+\vspace{-0.2cm}
+\begin{verbatimx}
+pieces = [1,2,4,5,10,20,50]
+\end{verbatimx}
+\vspace{-0.2cm}
+Que retourne l'algorithme précédent comme réponse à la question~3 avec cette nouvelle liste et pour le montant 98~? Est-ce la meilleure solution~? (2~points)
+
+\newpage
+
+\exequest Comme l'algorithme précédent ne fournit pas la bonne solution pour tous les montants, il faut imaginer une solution qui puisse traiter tous les jeux de pièces. On procède par récurrence. Soit $P=\vecteur{p_1}{p_n}$ l'ensemble des pièces. On définit la fonction $f(m,P)$ comme étant le nombre de pièces nécessaire pour décomposer le montant~$m$. On vérifie tout d'abord que~:
+\begin{enumerate}
+\item La fonction $f(m,P)$ doit retourner 1 si le montant $m$ est déjà une pièce.
+\item La fonction $f(m,P)$ vérifie la relation de récurrence suivante~:
+				\begin{eqnarray*}
+				f(m,P) &=& \min\acc{f(m-p,P)+1 \text{ pour tout } p \in P }
+				\end{eqnarray*}
+\end{enumerate}
+Cet algorithme permet de construire la meilleure décomposition en pièces pour tout montant. La dernière expression signifie que si le montant~$m$ est décomposé de façon optimale avec les pièces $(p_1,p_2,p_3,p_4)$ alors le montant $m-p_4$ est aussi décomposé de façon optimale avec les mêmes pièces $(p_1,p_2,p_3)$.
+
+Il ne reste plus qu'à implémenter la fonction\footnote{Même si l'algorithme est présenté de façon récurrente, il peut être implémenté de façon récurrente ou non. La méthode récurrente est toutefois déconseillée car beaucoup plus lente.} $f(m,P)$. (5~points)
+
+\exequest Qu'obtient-on avec le jeu de pièces \codes{pieces = [1,2,4,5,10,20,50]}~? Prolongez le programme pour déterminer tous les choix possibles du président parmi les pièces \codes[{3,4,6,7,8,9]}~? (1~point) 
+
+\exequest Quel est le coût de votre algorithme~? (facultatif)
+
+
+\end{xexercicenot}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifnum\correctionenonce = 1
+\begin{xdemoexonot}{td_note_label91}
+
+
+
+
+
+\bigskip
+\inputcodes{../python_examen/td_note_2009.py}{exercice pour s'évaluer}{, correction 2009}
+\vspaceneg
+
+
+L'algorithme qui décompose un montant de façon optimale quelque soient le montant et le jeu de pièces s'apparente à la programmation dynamique. C'est le même algorithme que celui qui permet de chercher le plus court chemin dans un graphe où les n\oe uds serait les montants de 0~à~99 et où il y aurait autant d'arcs que de pièces partant de chaque n\oe uds. Les arcs seraient tous de même poids~:~1. Avec cette description, trouver la meilleure décomposition revient à trouver le chemin incluant le moins d'arcs possible.
+
+\end{xdemoexonot}
+\fi
+
+
+\input{../../common/exo_end.tex}%

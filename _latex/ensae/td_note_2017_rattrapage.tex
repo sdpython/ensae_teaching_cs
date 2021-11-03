@@ -1,0 +1,195 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\newcommand{\sametextforthisinterro}[0]{ 
+\huge ENSAE TD noté rattrapage, mardi 21 février 2017
+
+\normalsize
+\textit{Le programme devra être imprimé et rendu au chargé de TD. Toutes les questions valent 2 points. Vous êtes libres d'utiliser numpy ou non à toutes les questions.}
+\smallskip
+}
+
+\sametextforthisinterro
+}
+
+Quelques fonctions dont vous pourriez avoir besoin :
+
+\begin{verbatimx}
+@                     ou numpy.dot
+numpy.array
+numpy.abs
+numpy.mean
+numpy.sum
+numpy.diag
+numpy.linalg.inv
+numpy.maximum
+numpy.ones
+numpy.reciprocal
+random.randint
+sort
+X.reshape
+X.shape
+X.T
+\end{verbatimx}
+
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label10_2017}%\indexfrr{énoncé}{pratique}
+
+\exequest A l'aide du module \text{random}, générer un ensemble d'entiers aléatoires compris entre 0 et 100 excepté le premier égal à 1000.
+
+\begin{verbatimx}
+def ensemble_aleatoire(n):
+    ....
+    return
+\end{verbatimx}
+
+\exequest La médiane d'un ensemble de points $\acc{X_1, ..., X_n}$ est une valeur $X_M$ telle que : 
+
+$$\sum_i \indicatrice{X_i < X_m} = \sum_i \indicatrice{X_i > X_m}$$
+
+Autrement dit, il y a autant de valeurs inférieures que supérieures à $X_M$. On obtient cette valeur en triant les éléments par ordre croissant et en prenant celui du milieu.
+
+ Ecrire une fonction qui calcule la médiane.
+
+\begin{verbatimx}
+def mediane(ensemble):
+    ....
+    return
+\end{verbatimx}
+
+\exequest Lorsque le nombre de points est pair, la médiane peut être n'importe quelle valeur dans un intervalle. Modifier votre fonction de façon à ce que la fonction précédente retourne le milieu de la fonction.
+
+\exequest Pour un ensemble de points $E=\acc{X_1, ..., X_n}$, on considère la fonction suivante : 
+
+$$f(x) = \sum_{i=1}^n \abs{x - X_i}$$.
+
+On suppose que la médiane $X_M$ de l'ensemble $E$ n'appartient pas à $E$ : $X_M \notin E$. Que vaut $f'(X_M)$ ?
+On acceptera le fait que la médiane est le seul point dans ce cas.
+
+\exequest On suppose qu'on dispose d'un ensemble d'observations $\pa{X_i, Y_i}$ avec $X_i, Y_i \in \R$.
+La régression linéaire consiste en une relation linéaire $Y_i = a X_i + b + \epsilon_i$
+qui minimise la variance du bruit. On pose :
+
+$$
+E(a, b) = \sum_i \pa{Y_i - (a X_i + b)}^2
+$$
+
+
+On cherche $a, b$ tels que :
+
+$$
+a^*, b^* = \arg \min E(a, b) = \arg \min \sum_i \pa{Y_i - (a X_i + b)}^2
+$$
+
+La fonction est dérivable et on trouve :
+
+$$
+\partialfrac{E(a,b)}{a} = - 2 \sum_i X_i ( Y_i - (a X_i + b))
+\text{ et } \partialfrac{E(a,b)}{b} = - 2 \sum_i ( Y_i - (a X_i + b))
+$$
+
+Il suffit alors d'annuler les dérivées. On résoud un système d'équations linéaires. On note :
+
+$$
+\begin{array}{l}
+\esp X = \frac{1}{n}\sum_{i=1}^n X_i \text{ et } \esp Y = \frac{1}{n}\sum_{i=1}^n Y_i \\
+\esp{X^2} = \frac{1}{n}\sum_{i=1}^n X_i^2 \text{ et } \esp {XY} = \frac{1}{n}\sum_{i=1}^n X_i Y_i 
+\end{array}
+$$
+
+Finalement :
+
+$$
+\begin{array}{l}
+a^* = \frac{ \esp {XY} - \esp X \esp Y}{\esp{X^2} - (\esp X)^2} \text{ et } b^* = \esp Y - a^* \esp X
+\end{array}
+$$
+
+Lorsqu'on a plusieurs dimensions pour $X$, on écrit le problème d'optimisation, on cherche les coefficients $\beta^*$ qui minimisent :
+
+$$E(\beta)=\sum_{i=1}^n \pa{y_i - X_i \beta}^2 = \norme{Y - X\beta}^2$$
+
+La solution est : 
+
+$$\beta^* = (X'X)^{-1}X'Y$$
+
+Ecrire une fonction qui calcule ce vecteur optimal :
+
+\begin{verbatimx}
+def regression_lineaire(X, Y):
+    ....
+    return
+\end{verbatimx}
+
+\exequest Ecrire une fonction qui transforme un vecteur en une matrice diagonale :
+
+\begin{verbatimx}
+def matrice_diagonale(W):
+    ....
+    return
+\end{verbatimx}
+
+
+\exequest On considère maintenant que chaque observation est pondérée par un poids $w_i$. On veut maintenant trouver le vecteur $\beta$ qui minimise :
+
+$$E(\beta)=\sum_{i=1}^n w_i \pa{y_i - X_i \beta}^2 = \norme{W^{\frac{1}{2}}(Y - X\beta)}^2$$
+
+Où $W=diag(w_1, ..., w_n)$ est la matrice diagonale. La solution est :
+
+$$\beta_* = (X'WX)^{-1}X'WY$$.
+
+Ecrire une fonction qui calcule la solution de la régression pondérée.
+
+\begin{verbatimx}
+def regression_lineaire_ponderee(X, Y, W):
+    ....
+    return
+\end{verbatimx}
+
+\exequest Ecrire une fonction qui calcule les quantités suivantes :
+
+$$z_i = \frac{1}{\max\pa{ \delta, \abs{y_i - X_i \beta}}}$$
+
+
+\begin{verbatimx}
+def calcule_z(X, beta, Y, W, delta=0.0001):
+    ....
+    return
+\end{verbatimx}
+
+\exequest  On souhaite coder l'algorithme suivant :
+
+\begin{enumerate}
+\item $w_i^{(1)} = 1$
+\item $\beta_{(t)} = (X'W^{(t)}X)^{-1}X'W^{(t)}Y$
+\item $w_i^{(t+1)} = \frac{1}{\max\pa{ \delta, \abs{y_i - X_i \beta^{(t)}}}}$
+\item $t = t+1$
+\item Retour à l'étape 2.
+\end{enumerate}
+
+\begin{verbatimx}
+def algorithm(X, Y, delta=0.0001):
+    ....
+    return
+\end{verbatimx}
+
+\exequest On pose $Y$ le vecteur aléatoire de la question 1. $X$ est un vecteur de même dimension constant et égale à 1. Calculer les quatre valeurs suivantes : 
+
+\begin{enumerate}
+\item $algorithm(X,Y)$
+\item $regression\_lineaire(X,Y)$
+\item $mediane(Y)$
+\item $moyenne(Y)$
+\end{enumerate}
+
+Que constatez-vous ?
+
+\end{xexercice}
+
+
+
+\input{../../common/exo_end.tex}%

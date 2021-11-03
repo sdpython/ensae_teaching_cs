@@ -1,0 +1,143 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\newcommand{\sametextforthisinterro}[0]{ 
+\huge Formation pour l'Actuaire Data Scientist, TD noté
+\normalsize
+}
+
+\sametextforthisinterro
+}
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label1__2016}%\indexfrr{énoncé}{pratique}
+
+
+Louer ou acheter un appartement ? A surface égale, est-il préférable de louer ou d'acheter son appartement~? Cet exercice propose différentes questions afin d'y répondre. On rappelle le mécanisme d'un prêt. On emprunte une somme $K$ à un taux $p$ et on paye une mensualité $M$. Le taux mensuel est $m=(1+p)^\frac{1}{12}-1$. 
+Ce taux s'applique chaque mois sur la somme du capital restant à rembourser. Au mois suivant, l'emprunteur aura payé $M$ euros dont $Km$ en intérêt et $M-Km$ en capital. Le mois suivant, l'emprunteur doit rembourser $K-Km$.
+
+\exequest La fonction suivante calcule toutes les mensualités de ce prêt.
+
+\begin{verbatimx}
+def mensualites(K,M,p):
+    res = []
+    while K > 0:
+        i = K * ((1+p)**(1.0/12)-1)
+        cap = M-i
+        if cap < 0:
+            raise Exception("cas exceptionnel")
+        K -= cap
+        if K < 0:
+            res.append(M + K)  #  ligne A
+        else:
+            res.append(M)
+    return res
+\end{verbatimx}
+
+\begin{itemize}
+\item Quelle relation relie le durée du prêt et la longueur de la liste retournée par la fonction ? (1 point)
+\item A quoi correspond le cas exceptionnel ? (1 point)
+\item A quoi sert la ligne A ? (1 point)
+\end{itemize}
+
+\exequest La fonction précédente calcule la durée d'un prêt en fonction du montant, de la mensualité et du taux d'intérêt ? Que fait la fonction suivante ? (1 point)
+
+\begin{verbatimx}
+def somme_maximale(M,p,Y):
+    K = 20000
+    l = mensualites(K, M, p)
+    while len(l) < Y*12:
+        K += 1000
+        l = mensualites(K, M, p)
+    return K
+\end{verbatimx}
+		
+
+\exequest A Paris, on loue un appartement pour $L$ euros du m$^2$. Un parisien loue son appartement de $S m^2$ pour $SL$ euros. Ce parisien peut dépenser $A$ euros par mois répartis en $SL$ le loyer et $A-SL$ les économies. Ecrire une fonction qui calcule les économies réalisées au bout de $Y$ années : (1~point)
+
+\begin{verbatimx}
+def economie(A,S,L,r,Y):
+    # ....
+    return economie
+\end{verbatimx}
+ 
+
+\exequest En considérant que ce même parisien ne peut dépenser plus de $A$ euros par mois, qu'il ne possède rien au début de sa carrière professionnelle, on veut connaître la surface qu'il sera en mesure d'acheter chaque année entre 20 et 40 ans. On suppose qu'il peut se constituer un apport en capital issu de ces économies et d'un don de ses parents. On suppose que le prix au mètre carré à Paris est $C$ et qu'il veut emprunter avec un prêt d'une durée fixe. Voici les constantes à utiliser : (2~points)
+
+\begin{center}\begin{small}\begin{tabular}{l|r|l|l} 
+nom & valeur & unité & sens \\ \hline
+D & 50000 & euros & don de ses parents \\
+A & 1200 & euros/mois & somme allouée au loyer + économies \\
+S & 35 & $m^2$ &  surface de l'appartement \\
+L & 25 & euros/$m^2$ & prix du loyer au mètre carré \\
+r & 0.01 & & rendement annuel de l'argent (livret A) \\
+Y & 20 &  années & durée de l'emprunt \\
+C & 8000 & euros/$m^2$ & prix d'achat au mètre carré \\
+p & 0.02 & & taux annuel de l'emprunt bancaire  
+\end{tabular}\end{small}\end{center}
+
+\begin{verbatimx}
+def tableau_surface(D,A,S,L,r,Y,C,p):
+    # ....
+    return liste [(année, surface, prix)]
+\end{verbatimx}
+
+\exequest Même question mais on tient compte de l'inflation du prix du mètre carré à Paris, environ $i=5\%$ par ans. (2~points)
+
+\exequest Construire un dataframe avec les résultats de la fonction précédente. Ce dataframe aura une ligne pour chaque année et trois colonnes pour trois taux d'inflation différents : 3\%, 5\%, 7\%. Afficher les trois courbes sur le même graphique.
+
+\exequest Même question mais on tient compte d'une augmentation de salaire selon un scénario de votre choix. (2~points)
+
+\exequest Construire un dataframe avec les résultats de la fonction précédente. Ce dataframe aura une ligne pour chaque année et trois colonnes pour trois scénarios différents. Afficher les trois courbes sur le même graphique. (1~point)
+
+\exequest Fusionner les deux tableaux de la manière la plus élégante qui soit. (1~point).
+
+
+\end{xexercice}
+
+
+\newpage 
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label6_2016}%\indexfrr{énoncé}{pratique}
+
+
+\exequest Michel perd souvent ses carnets de numéros et pour éviter d'importuner ses proches de recevoir des coups de fils impromptus, il utilise un code très simple. On découpe un numéro de téléphone par groupe de deux chiffres. Si la première lettre est une voyelle, il permute le groupe 2 avec le groupe 3 sinon il les laisse en l'état. Si la seconde lettre est une voyelle, il permute le groupe 3 et 4, rien en cas de consonnes. On ne fait rien si la lettre associée au dernier groupe est une voyelle. 
+
+\begin{verbatimx}
+adele   06 64 34 22 67
+           aa dd ee ll
+					
+Etape 1 06 34 64 22 67    on permute 64 et 34 car le groupe 64 est associé à la lettre a
+Etape 2 06 34 64 22 67    on ne fait rien car le groupe 34 est associé à la lettre d
+Etape 3 06 34 64 67 22    on permute 22 et 67 le groupe 22 est associé à la lettre e
+Etape 4 06 34 64 67 22    on ne fait rien car le groupe 34 est associé à la lettre l
+\end{verbatimx}
+
+Un autre exemple :
+
+\begin{verbatimx}
+adele   06 64 34 22 67 --> 06 34 64 67 22  lettres 06 aa dd ee ll  
+gerard  06 64 34 22 68 --> 06 64 22 34 68  lettres 06 gg ee rr aa
+\end{verbatimx}
+
+Ecrire la fonction qui transforme un numéro. Il est recommandé de ne pas tenir compte des espaces. (2~points)
+
+\exequest Ecrire la fonction qui effectue la transformation inverse. (2~points)
+
+
+\exequest Est-ce que cela fonctionne pour le prénom \texttt{Maude} qui contient deux voyelles consécutives ? Peut-on encore retrouver le numéro codé ? (1~point)
+
+
+\end{xexercice}
+
+
+
+
+
+
+
+
+\input{../../common/exo_end.tex}%

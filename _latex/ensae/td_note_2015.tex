@@ -1,0 +1,241 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\newcommand{\sametextforthisinterro}[0]{ 
+\huge ENSAE TD noté, vendredi 5 décembre 2014
+
+\normalsize
+\textit{Le programme construit au fur et à mesure des questions devra être imprimé à la fin du TD et rendu au chargé de TD. \textbf{Il ne faut pas oublier de mentionner son nom sur chaque page.} Les réponses autres que des parties de programme seront insérées sous forme de commentaires. \textbf{Il faudra aussi indiquer le numéro des exercices sous forme de commentaires.}} 
+\smallskip
+}
+
+\sametextforthisinterro
+}
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label1_2015}%\indexfrr{énoncé}{pratique}
+
+L'objectif de cet exercice est d'énumérer tous les chemins d'un graphe acyclique et orienté (on ne peut pas revenir à un n\oe ud déjà visité, on ne parcourt les arcs que dans un sens). Si un arc relie $i$ à $j$, $j$ est appelé le \textbf{successeur direct} de $i$.
+
+\exequest On définit un graphe de $N$ n\oe uds par une matrice d'adjacence. Chaque n\oe ud $i$ est connecté au n\oe ud $i+1$. Construire cette matrice. Chaque coefficient $m_{ij}$ vaut 1 s'il existe un arc $i \rightarrow j$, 0 sinon. Exemple pour trois n\oe uds~:
+
+$$
+ adj[i][j]  = 
+\begin{array}{ccc}
+\pa{ \begin{array}{ccc}
+. & 1 & . \\
+. & . & 1 \\
+. & . & . 
+\end{array}
+}
+&
+graphe :
+&
+\xymatrix{ *+[o][F]{0}   \ar@/_/[r]  & *+[o][F]{1} \ar@/_/[r]  & *+[o][F]{2} } 
+\end{array}
+$$
+
+
+(2~points)
+
+\exequest On ajoute 5 arcs aléatoires entre les n\oe uds $i$ et $j$ avec $i <j$ (module \codes{random}).  (2~points)
+
+\exequest Ecrire une fonction \codes{successeurs(adj, i) } qui détermine pour un n\oe ud $i$ tous ses successeurs directs.  (2~points)
+
+\exequest Ecrire une fonction \codes{successeurs\_dico(adj)} qui constuit un dictionnaire dont les clés sont les n\oe uds (0 à $N-1$) et les valeurs la liste des successeurs directs.  (2~points)
+
+\exequest On représente un chemin sous la forme d'une liste d'entiers. Il existe autant de manières de continuer ce chemin qu'il y a de successeurs directs. Ecrire une fonction \codes{suites\_chemin(chemin, dico)} qui prend comme argument un chemin \codes{c} et le dictionnaire construit par la fonction précédente et qui retourne tous les suites possibles du chemin \codes{c}. Par exemple, pour l'exemple de la question 1 :
+
+\begin{verbatimx}
+suites_chemin( [ 0, 1 ], dico ) --> [ [ 0, 1, 2 ] ]
+suites_chemin( [ 0, 1, 2 ], dico ) --> [  ]   # il n'y pas de suite possible
+\end{verbatimx}
+
+(2~points)
+
+\exequest Par construction, le n\oe ud $0$ est normalement le seul n\oe ud qui n'est pas un successeur. On l'appelle la \textbf{racine}. On veut énumérer tous les chemins partant de ce n\oe ud. Implémentez l'algorithme suivant :
+
+\begin{enumerate}
+\item Initialisation de \codes{chemins = [ \; [ \; 0 \; ] \; ] }
+\item A l'itération $i$, on initialise la liste \codes{chemins2 = [] }
+\item Pour chaque élément de \codes{chemins}, on lui applique la fonction \codes{suites\_chemin}. On ajoute le résultat à la liste \codes{chemins2}.
+\item On remplace \codes{chemins} par \codes{chemins2} puis on retourne à l'étape 2 jusqu'à ce que plus rien de change.
+\end{enumerate}
+
+
+Il faut faire attention à ce que deviennent les chemins qui sont \textit{terminés} : le dernier n\oe ud n'a pas de successeur direct. 
+
+(4~points)
+
+\exequest On distingue deux types de parcours d'arbres : en \textit{profondeur d'abord} ou en \textit{largeur d'abord}. Qu'est-ce qui le correspond le mieux à cet algorithme~? Et pourquoi~?  (1~point)
+
+\exequest On considère un autre graphe dont la matrice d'adjence vérifie $m_{ij} = 1$ pour tout $i<j$ et 0 pour tous les autres éléments. Quel est le nombre de chemins possibles~? Justifiez.  (2~points)
+
+
+
+
+\end{xexercice}
+
+
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label2_2015}%\indexfrr{énoncé}{pratique}
+
+%%% vérifier que tous les éléments de la liste sont bien retrouvés %%%
+%\begin{verbatimx}
+%l = [ 0, 2, 4, 6, 8, 100, 1000 ]
+%for i in l :
+%    print (i,recherche_dichotomique(i, l)) 
+%\end{verbatimx}
+
+\exequest On suppose qu'on dispose d'un tableau de nombres non trié. Ecrire une fonction qui retourne les trois éléments minimaux. 
+
+(2 points pour un coût de $O(n\ln n)$)
+
+(3 points pour un coût inférieur ou égal à $O(n)$)
+
+
+
+
+
+\end{xexercice}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\firstpassagedo{
+\newpage
+\sametextforthisinterro
+}
+
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label3_2015}%\indexfrr{énoncé}{pratique}
+
+Quand on pense à la programmation dynamique, le premier exemple qu'on cite est l'algorithme du calcul du plus court chemin dans un graphe. La distance d'édition entre deux mots tient aussi de la programmation dynamique. Elle est définie par récurrence pour deux mots $A=(a_1,...,a_p)$ et $B=(b_1,...,b_q)$~:
+
+
+\begin{eqnarray}
+d(i,0)&=&d(0,i)=i \\
+d(i,j) &=& \min \left \{ \begin{array}{l}
+								d(i-1,j) + 1 \\
+								d(i,j-1) + 1 \\
+								d(i-1,j-1) + cout(a_i,b_j)
+								\end{array} \right .
+\end{eqnarray}								
+
+La valeur $d(i,j)$ définit la distance entre les débuts de mots $(a_1,...,a_i)$ et $(b_1,...,b_j)$. La fonction $cout(a_i,b_j)=0$ si les deux caractères vérifient $a_i=b_j$, 1 sinon. On donne quelques exemples :
+
+\begin{itemize}
+\item distance(ami,amie) = 1 : on a ajouté \textit{e} à la fin du second mot
+\item distance(amie,ami) = 1 : on a supprimé \textit{e} à la fin du premier mot
+\item distance(ami,agi) = 1 : on a remplacé \textit{m} par \textit{g}
+\end{itemize}
+
+
+On va transformer ce problème en un problème du plus court chemin. Dans la suite, on considère deux \texttt{mot1='python'} et \texttt{mot2='piton'}. On rappelle que les deux notations suivantes sont équivalentes pour un dictionnaire~:
+
+\begin{verbatimx}
+dictionnaire [  i,j  ]
+dictionnaire [ (i,j) ]
+\end{verbatimx}
+
+\exequest Ecrire une fonction \codes{word2dict(mot)} qui prend comme argument un mot \codes{mot} et qui construit un dictionnaire qui associe à tous les positions \codes{i} la sous chaîne de caractères formée des premiers caractères de 1 à \codes{i} exclu. Exemple~:
+
+\begin{verbatimx}
+mot --> { 0:'', 1:'m', 2:'mo', 3:'mot' }
+\end{verbatimx}
+
+On applique cette fonction aux deux mots \codes{mot1} et \codes{mot2}. Indice : utiliser \codes{mot[0:i]}. (2~points)
+
+
+\exequest Une seconde fonction \codes{two\_words2dicts(d1,d2)} qui construit un troisième dictionnaire à partir des deux premiers qu'on définit pour toutes les clés \codes{i} de \codes{d1} et toutes les clés \codes{j} de \codes{d2}. (2 points)
+
+\begin{verbatimx}
+vertices = {  (i,j): (d1[i],d2[j]) }
+\end{verbatimx}
+
+\exequest Combien y a-t-il de clés dans ce dictionnaire ? (en fonction de $p$ et $q$ les tailles des deux mots) (1 point)
+
+\exequest Comme le nom du dictionnaire choisi précédemment le suggère, le dictionnaire de la question précédente représente les noeuds du graphe. Il faut maintenant construire les arcs. 
+
+
+$$
+\xymatrix{ *+[-][F]{vertices[i-1,j-1]}   \ar@/_/[r]^1 \ar@/_/[d]^1 \ar@/_/[dr]^{cout(a_i,b_j)} & *+[-][F]{vertices[i-1,j]}  \\ 
+					*+[-][F]{vertices[i,j-1]}  & *+[-][F]{vertices[i,j]}
+} 
+$$
+
+
+On pourra ensuite appliquer l'algorithme du plus court chemin. Dans ce cas, on définit l'ensemble des arcs du graphe (la matrice d'adjacence) par un dictionnaire :
+
+\begin{verbatimx}
+edges = { (i1,j1),(i2,j2) : valeur }
+\end{verbatimx}
+
+Au début, ce dictionnaire est vide. Dans un premier temps, on ajoute les clés (arcs) suivants :
+
+\begin{verbatimx}
+edges [ (i1,j1),(i2,j2) ] = 1 si  (i2-i1 == 1 et j1 == j2) ou (j2-j1 == 1 et i1 == i2)
+\end{verbatimx}
+
+Ecrire la fonction \codes{ add\_edge\_hv(vertices) } qui ajoute les arcs horizontaux et verticaux. (2 points)
+
+\exequest Combien a-t-on ajouté d'arcs ? (en fonction de $p$ et $q$ les tailles des deux mots) (1 point)
+
+
+\exequest On s'intéresse maintenant au cas où \codes{  i2-i1 = j2-j1 = 1}. Dans ce cas, la valeur ajoutée au dictionnaire est soit 1, soit 0 (= $cout(a_i,b_j)$). C'est 0 si les deux chaînes référencées par \codes{vertices [ i2,j2 ]} se terminent par le même caractères, 1 sinon. (2~points)
+
+\exequest Il ne reste plus qu'à implémenter l'algorithme du plus court chemin entre les n\oe uds $(0,0)$ et $(p,q)$. La seule difficulté est peut-être que les n\oe uds sont référencés par deux indices au lieu d'un entier. On crée un dernier dictionnaire $distance [ i,j ]$ qui contient la distance minimum entre le n\oe uds $(i,j)$ et le n\oe uds $(0,0)$. On initialise le dictionnaire avec $distance [ 0,0 ] = 0$. On crée uen fonction \codes{loop\_on\_edges} qui met à jour ce dictionnaire de la façon suivante :
+
+\begin{itemize}
+\item pour toutes les arcs \codes{(i1,j1),(i2,j2)} : \\
+			\codes{distance [ i2,j2 ] = min ( distance [ i2,j2 ], distance [ i1,j1 ] + edges [ (i1,j1),(i2,j2) ] )}
+\end{itemize}
+
+(3 points)
+
+\exequest La dernière fonction exécute la fonction \codes{loop\_on\_edges} de nombreuses fois jusqu'à ce que le dictionnaire \codes{distance} n'évolue plus. (3 points)
+
+\exequest Appliquer le résultat à la paire \texttt{mot1='python'} et \texttt{mot2='piton'}. (1 point)
+
+\end{xexercice}
+
+
+
+
+
+
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label4_2015}%\indexfrr{énoncé}{pratique}
+
+On a un tableau d'entiers \codes{ l = [ 1, 8, 5, 7, 3, 6, 9 ] }. On veut placer les entiers pairs en premiers et les entiers impairs en derniers : \codes{ 8, 6, 1, 5, 7, 3, 9 }. Ecrire une fonction qui fait cela. 
+
+(2 points si elle le fait avec un coût de $O(n \ln n)$)
+
+(3 points  si elle le fait avec un coût de $O(n)$
+
+
+\end{xexercice}
+
+
+
+
+
+\input{../../common/exo_end.tex}%
