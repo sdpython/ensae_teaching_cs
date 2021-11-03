@@ -1,0 +1,99 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\newcommand{\sametextforthisinterro}[0]{ 
+\huge ENSAE TD noté, mardi 24 novembre 2020
+
+\normalsize
+\textit{Le programme devra être envoyé par mail au chargé de TD et au professeur. Toutes les questions valent 2 points excepté deux questions.}
+\smallskip
+}
+
+\sametextforthisinterro
+}
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label1_2021}%\indexfrr{énoncé}{pratique}
+
+On dispose de données issues des hôpitaux relative à l'épidémie. On s'intéresse au temps passé dans l'hôpital. Pour chaque personne, on connaît :
+\begin{itemize}
+\item Sa date d'entrée (jour de l'année)
+\item Sa date de sortie si la personne est guérie,
+\item L'issue : décès (0) ou guérison (1)
+\end{itemize}
+
+On veut calculer une fonction $S(t)$ qui détermine la probabilité de survie des malades encore dans l'hôpital $t$ jours après leur arrivée. Cette courbe s'appelle l'estimateur de \textit{Kaplan-Meier}.
+
+\exequest Récupérer les données disponibles à l'adresse suivante sous la forme d'un DataFrame avec l'instruction :
+
+\texttt{pandas.read\_csv("http://www.xavierdupre.fr/enseignement/complements/examen2021.zip")}
+
+\exequest Calculer la durée de séjour à l'hôpital pour chaque personne, quelle que soit l'issue.
+
+\exequest On note $n(t)$ nombre de personnes entrées à l'hôpital et qui y sont encore après $t$ jours, on note $d(t)$ le nombre de personnes qui sont décédées au jour $t$ à partir de leur entrée à l'hôpital. L'estimateur de \textit{Kaplan-Meier} est défini par $S(t)=\frac{n(t) - d(t)}{n(t)}$. Ecrire une fonction qui retourne le résultat de cet estimateur pour un $t$ donné.
+
+\exequest Calculer tous les $S(t)$ pour $t$ allant de 1 à 100.
+
+\exequest Tracer cette fonction avec matplotlib. Vous pourrez vous inspirer du code fourni dans l'énoncé (1 point)
+
+
+\begin{verbatimx}
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots(1, 1, figsize=(4, 4))
+T = [0, 1, 2, 3]
+St = [1, 0.8, 0.6, 0.2]
+ax.plot(T, St)
+\end{verbatimx}
+
+\exequest Les données des hôpitaux en accès libre recensent chaque jour le nombre de personnes entrées à l'hôpital, le nombre de personnes décédées et guéries à l'hôpital. Est-il possible de calculer l'estimateur précédent sur ses données ? Expliquez pourquoi. (On ne demande pas de le faire si c'est possible). (1 point)
+
+\end{xexercice}
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label2_2021}%\indexfrr{énoncé}{pratique}
+
+On s'intéresse à la propagation d'un virus dans une classe. On suppose que chacun reste assis à la même place sans bouger. Il faut une heure pour qu'une personne contamine son voisin. Une personne a quatre voisins :
+
+\begin{figure}[ht]
+\begin{center}\begin{tabular}{|c|}\hline 
+\includegraphics[width=4cm]{../python_examen/image/pixel.png} \\ \hline
+\end{tabular}
+\end{center}
+\caption{Voisinage pixels}
+\label{voisinage_pixel}
+\end{figure}
+
+
+\exequest On considère une matrice carrée \texttt{M = numpy.zeros(N, N)} avec un élève par place. L'élève $ij$ est contaminé (\texttt{M[i,j]=1}) ($i,j = 4,5$ par exemple). On suppose connu l'état de la contamination à l'instant $t$ (heures), calculer la matrice des personnes contaminées à l'heure $t+1$ d'après.
+
+Il est possible de répondre à cette en utilisant la fonction \texttt{numpy.maximum} et aucune boucle.
+
+\exequest même chose après $T$ heures.
+
+\exequest On vaccine une proportion $p$ de la classe, on crée une matrice de la même dimension qui contient 1 si la personne est vaccinée, 0 sinon.
+
+\texttt{vaccine = (numpy.random.rand(N, N) <= p).astype(numpy.int32)}.
+
+Une personne vaccinée stoppe la propagation. Calculer la propagation l'heure $t+1$.
+
+\exequest même chose après $T$ heures.
+
+\exequest Faites varier $p$, recommencer plusieurs fois. Quel $p$ faut-il pour éviter la propagation ?
+
+
+\end{xexercice}
+
+
+
+
+
+\input{../../common/exo_end.tex}%

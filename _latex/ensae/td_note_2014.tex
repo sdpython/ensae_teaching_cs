@@ -1,0 +1,351 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\newcommand{\sametextforthisinterro}[0]{ 
+\huge ENSAE TD noté, mardi 27 décembre 2013
+
+\normalsize
+\textit{Le programme construit au fur et à mesure des questions devra être imprimé à la fin du TD et rendu au chargé de TD. \textbf{Il ne faut pas oublier de mentionner son nom inséré en commentaire au début du programme et de l'ajouter sur chaque page.} Les réponses autres que des parties de programme seront insérées sous forme de commentaires. Les squelettes de fonctions proposés ne sont que des suggestions. \textbf{Il faudra aussi indiquer le numéro des exercices sous forme de commentaires.}} 
+\smallskip
+}
+
+\sametextforthisinterro
+}
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label1_2014}%\indexfrr{énoncé}{pratique}
+
+La recherche dichotomique est assez simple. On cherche un élément~$e$ dans un tableau trié~:
+
+\begin{enumerate}
+\item On compare $e$ à l'élément du milieu.
+\item S'ils sont égaux, on s'arrête. Si $e$ est inférieur, on cherche dans la première partie du tableau. On cherche dans la partie supérieure dans l'autre cas.
+\end{enumerate}
+
+On part de l'algorithme implémenté ici de façon récursive ou non et disponible ici~: \httpstyle{http://www.xavierdupre.fr/blog/2013-12-01_nojs.html}.
+
+
+\exequest Récupérez l'algorithme de la recherche dichotomique et appliquez-le à la liste [ 0, 2, 4, 6, 8, 100, 1000 ] et le nombre 100. (1~point)
+
+\exequest On suppose qu'on dispose de deux listes triées de nombres, une pour les nombres impairs et une autre pour les nombres pairs. On veut écrire une fonction qui recherche un entier dans une de ces deux listes sachant que la parité du nombre indique dans quelle liste chercher et que le nombre cherché s'y trouve.
+
+%%% extrait 1 à copier pour l'énoncé de décembre 2013 %%%
+\begin{verbatimx}
+def deux_recherches(element, liste_impaire, liste_paire) :
+    # ....
+    return position_dans_liste_impaire, position_dans_liste_paire
+\end{verbatimx}
+
+Vous pouvez appliquer votre fonction à l'élement 100 et aux listes [ 0, 2, 4, 6, 8, 100, 1000 ], [ 1,3,5]. Le résultat attendu est (-1,5).
+
+(2~points)
+
+\exequest On suppose que les deux listes (nombres impairs, nombres pairs) sont de même tailles $n$. Dans le cas d'une recherche simple, le fait de couper la liste en deux est un avantage, est-ce toujours le cas dans le cas d'une recherche dichotomique~? Justifiez. (1~point)
+
+\exequest Adaptez l'algorithme (de la question~1) pour retourner -1 lorsque l'élément à chercher n'est pas dans la liste. Il peut être utile de vérifier que vous arrivez bien à retrouver tous les éléments. (3~points) 
+
+%%% vérifier que tous les éléments de la liste sont bien retrouvés %%%
+\begin{verbatimx}
+l = [ 0, 2, 4, 6, 8, 100, 1000 ]
+for i in l :
+    print (i,recherche_dichotomique(i, l)) 
+\end{verbatimx}
+
+
+\exequest On modifie maintenant la fonction (de la question~2) de telle sorte qu'on cherche d'abord dans la liste des nombres impairs et si on ne trouve pas, on cherche dans la liste des nombres pairs. (2~points)
+
+\exequest On doit chercher 1000 nombres impairs et 1 nombre pair. Quelle est la fonction la plus rapide pour $\ln_2(n)=30$ ($n=2^{30} \sim 10^9)$)~? Pourquoi~? (1~point)
+
+% 1000 \ln_2(n) + 2 \ln_2(n)  = A 
+% 1001 \ln_2(2n) = 1001 (1 + \ln_2(n)) = 1000 ( 1 + \ln_2(2)) +  1 + \ln_2(2) = B
+% A - B = 2 \ln_2(n) - (1001 + \ln_2(n)) = \ln_2(n) - 1001
+
+
+
+
+
+
+
+\end{xexercice}
+
+
+
+\ifnum\correctionenonce=1
+
+
+\begin{xdemoexonot}{td_note_label1_2014}
+
+\inputcodes{../python_examen/td_note_2014_ex1.1.dicho.py}{recherche dichotomique (1)}{, énoncé 2014}
+
+\textbf{Quelques remarques~:}
+
+\begin{enumerate}
+\item Question~2~: il était préférable d'appeler la première fonction plutôt que de recopier son code deux fois.
+\item Question~4~: il était simple d'ajouter la ligne A à la fonction de la question 1 mais la recherche n'est plus dichotomique. Rechercher un élément dans une liste avec le mot clé \codes{in} revient à passer les éléments de la liste en revue. La fonction fait alors deux recherches~: une non-dichotomique et une seconde dichotomique. \label{rem2014_q4_ex1}
+
+%%% cas où la recherche n'est plus dichotomique %%%
+\begin{verbatimx}
+def recherche_dichotomique( element, liste_triee ):
+    if element not in list_triee : return -1 # ligne A
+    a = 0
+    b = len(liste_triee)-1
+    m = (a+b)//2
+    while a < b :
+        if liste_triee[m] == element :
+            return m
+        elif liste_triee[m] > element :
+            b = m-1
+        else :
+            a = m+1
+        m = (a+b)//2
+    return a
+\end{verbatimx}
+
+J'ai enlevé un point.
+
+\item Question~5~: il faut faire attention à ne pas appeler la fonction \texttt{recherche\_dichotomique} plus de fois que nécessaire. Dans le cas qui suit, on recherche soit une fois dans chaque liste, soit deux fois dans la liste \texttt{liste\_impair}. J'ai enlevé 0.5 point.
+
+\begin{verbatimx}
+def deux_recherches(element,liste_impair,liste_pair) :
+    if recherche_dichotomique(element, liste_impair) == -1 : 
+       return recherche_dichotomique(element, liste_pair)
+    else : return recherche_dichotomique(element, liste_impair)
+\end{verbatimx}
+
+
+\item Question~6~: pour ces questions de coûts, il est préférable d'éviter des affirmations qualitatives du type \textit{un coût qui s'avère fatal}. J'ai enlevé 0.5 point.
+
+\end{enumerate}
+
+\end{xdemoexonot}
+\fi
+
+
+
+\newpage
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label2_2014}%\indexfrr{énoncé}{pratique}
+
+On s'intéresse à la distance de Levensthein qui est une distance entre deux mots. Pour deux mots $L=(l_1,..,l_m)$ et $K=(k_1,...,k_n)$, elle se résume par la relation de récurrence suivante~:
+
+\begin{eqnarray}
+d(i,j) &=&  \min \left \{ \begin{array}{l}  d(i-1,j) + 1 \\ d(i,j-1) + 1 \\ d(i-1,j-1) + \indicatrice { l_i \neq k_j } \end{array} \right \} \label{td2013_eq21}
+\end{eqnarray}
+
+Le code est disponible à l'adresse~: \httpstyle{http://www.xavierdupre.fr/blog/2013-12-02_nojs.html}
+
+\exequest Récupérez la fonction sur Internet et appliquez cette fonction sur les couples de mots suivant~:
+
+\begin{enumerate}
+\item $d(levenstein,levenshtein)$
+\item $d(bonbon,bombon)$
+\item $d(example,exemples)$
+\item $d(esche,eche)$
+\end{enumerate}
+
+(1~point)
+
+\exequest Vérifiez que la distance est symétrique pour ces exemples. (1~point)
+
+\exequest La fonction donne le même poids à toutes les confusions entre deux caractères. On souhaite que confondre $n$ et $m$ ait un coût de 0,5 au lieu de~1. Que vaut cette nouvelle distance pour la paire $d(bonbon,bombon)$~? Modifiez le code de la fonction récupérée à la question~1.   (3~points)
+
+\exequest On veut faire en sorte qu'ajouter (ou supprimer) un $s$ ait un coût de 0.5~?  Modifiez le code de la fonction. Que vaut la nouvelle distance $d(example,exemples)$~? (3~points)
+
+\exequest On veut faire en sorte qu'ajouter (ou supprimer) un $s$ à la fin d'un mot ait un coût de 0,2~? Que vaut la nouvelle distance $d(example,exemples)$. Modifiez le code de la fonction (de la question précédente). (2~points)
+
+
+\end{xexercice}
+
+
+
+\ifnum\correctionenonce = 1
+
+\begin{xdemoexonot}{td_note_label2_2014}
+
+\inputcodes{../python_examen/td_note_2014_ex1.2.dist.py}{distance d'édition (2)}{, énoncé 2014}
+
+\textbf{Quelques remarques~:}
+
+\begin{enumerate}
+\item Question~3~: une réponse simple consistait à changer le coût de toutes les comparaisons. Dans ce cas, on ne change pas seulement le coût n/m mais tous les coûts. Ce n'était pas l'effet souhaité ici. J'ai enlevé un point.
+
+\begin{verbatimx}
+            if (i-1,j-1) in dist :
+                x = dist[i-1,j-1] + (0.5 if c != d else 0)  # 1 --> 0.5
+\end{verbatimx}
+
+\item Question~4~: la tentation de faire aussi simple ici était la même en changeant le coût de toutes les insertions. J'ai enlevé un point.
+
+\item Question~5~: la tentation était de traiter le cas spécifique ou le \texttt{mot1==mot2+"s"} et non pas tous les cas où il y a un "s" final et deux débuts de mot parfois différent. J'ai enlevé un point.
+
+\end{enumerate}
+
+\end{xdemoexonot}
+\fi
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\firstpassagedo{
+\newpage
+\sametextforthisinterro
+}
+
+
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label3_2014}%\indexfrr{énoncé}{pratique}
+
+On s'intéresse à la distance de Levenshtein qui est une distance entre deux mots. Pour deux mots $L=(l_1,..,l_m)$ et $K=(k_1,...,k_n)$, elle se résume par la relation de récurrence suivante~:
+
+\begin{eqnarray}
+d(i,j) &=&  \min \left \{ \begin{array}{l}  d(i-1,j) + 1 \\ d(i,j-1) + 1 \\ d(i-1,j-1) + \indicatrice { l_i \neq k_j } \end{array} \right \} \label{td2013_eq21}
+\end{eqnarray}
+
+Le code est disponible à l'adresse~: \httpstyle{http://www.xavierdupre.fr/blog/2013-12-02_nojs.html}
+
+\exequest Récupérez la fonction sur Internet et appliquez cette fonction sur les couples de mots suivant~:
+
+\begin{enumerate}
+\item $d(levenstein,levenstien)$
+\item $d(bonbbon,bonbon)$
+\item $d(example,exemples)$
+\end{enumerate}
+
+(1~point)
+
+\exequest Vérifiez que la distance est symétrique pour ces exemples. (1~point)
+
+\exequest La fonction donne le même poids à toutes les confusions entre deux caractères. On veut modifier la fonction de telle sorte qu'elle donne un coût deux fois moindre aux inversions de lettres. Modifiez le code de la fonction récupérée à la question~1. Quel est le nouveau coût de la paire $d(levenstein,levenstien)$~?  (4~points)
+
+\exequest On veut donner à un coût de 0.45 à toutes les répétitions de lettres. Quel est le nouveau coût de la paire $d(bonbbon,bonbon)$~? Modifiez le code de la fonction (de la question précédente). (4~points)
+
+
+\end{xexercice}
+
+
+
+\ifnum\correctionenonce = 1
+
+\begin{xdemoexonot}{td_note_label3_2014}
+
+
+\inputcodes{../python_examen/td_note_2014_ex2.3.dist.py}{distance d'édition (3)}{, énoncé 2014}
+
+\textbf{Quelques remarques~:}
+
+\begin{enumerate}
+
+\item Question~3~et~4~:  peu ont pensé à ajouter un cas dans la liste \texttt{opt}, aucun n'a utilisé les indices $i-2$ et $j-2$. Quelques-uns ont utilisé la différence $i-j$~:
+
+\begin{verbatimx}
+			if abs(i-j)==1 and mot1[i]==mot2[j] and (mot1[i+1]==mot2[j-1] or mot1[i-1]==mot2[j+1]):
+\end{verbatimx}
+
+Cela marche uniquement pour une inversion à la même position dans les deux mots. J'ai enlevé 0.5 points.
+
+D'autres ont modifié le contenu de la liste \texttt{opt} à la fin~:
+
+\begin{verbatimx}
+			if abs(j-i)==1 and mot1[i]==mot2[j] and (mot1[i+1]==mot2[j-1] or mot1[i-1]==mot2[j+1]):
+				dist[i,j] = min(opt)-1
+			else:
+				dist[i,j]=min(opt)
+\end{verbatimx}
+
+Cette solution fonctionne parfois mais pas dans tous les cas. Outre quelques problèmes d'indice (\texttt{i+1}) lorsqu'on approche la fin d'un mot, cela modifie le coût associée à chaque transformation. Chaque élément dans la liste \texttt{opt} correspond à une étape dans la construction du meilleur alignement dans les deux mots. Cela introduit des effets non désirables dans le cas où les deux mots sont \texttt{"eeeeeeeee"} et \texttt{"eeeefeeeee"}. Certaines réponses ont donné des distances négatives.
+J'ai enlevé 1 point.
+
+\end{enumerate}
+
+
+\end{xdemoexonot}
+\fi
+
+
+
+\newpage
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label4_2014}%\indexfrr{énoncé}{pratique}
+
+La recherche dichotomique est assez simple. On cherche un élément~$e$ dans un tableau trié~:
+
+\begin{enumerate}
+\item On compare $e$ à l'élément du milieu.
+\item S'ils sont égaux, on s'arrête. Si $e$ est inférieur, on cherche dans la première partie du tableau. On cherche dans la partie supérieure dans l'autre cas.
+\end{enumerate}
+
+On part de l'algorithme implémenté ici de façon récursive ou non et disponible ici~: \httpstyle{http://www.xavierdupre.fr/blog/2013-12-01_nojs.html}.
+
+
+\exequest Récupérez l'algorithme de la recherche dichotomique et appliquez-le à la liste [ 0, 2, 3, 5, 10, 100, 340 ] et le nombre 100. (1~point)
+
+\exequest Adaptez l'algorithme pour retourner -1 lorsque l'élément à chercher n'est pas dans la liste. Il peut être utile de vérifier que vous arrivez bien à retrouver tous les éléments. (3~points)  
+
+%%% vérifier que tous les éléments de la liste sont bien retrouvés %%%
+\begin{verbatimx}
+l = [ 0, 2, 4, 6, 8, 100, 1000 ]
+for i in l :
+    print (i,recherche_dichotomique(i, l)) 
+\end{verbatimx}
+
+\exequest On suppose qu'on a maintenant deux listes triées, il faut écrire une fonction qui cherche un élément dans chacune des deux listes et qui retourne deux positions. (2~points)
+
+%%% extrait 2 à copier pour l'énoncé de décembre 2013 %%%
+\begin{verbatimx}
+def deux_recherches(element, liste1, liste2) :
+    # ....
+    return position_dans_liste1, position_dans_liste2
+\end{verbatimx}
+
+\exequest On suppose que la liste~1 est 10 fois plus petite que la liste~2. On effectue 1010 recherches. Parmi elles, 1000 nombres sont dans la liste~1, 10 sont dans la liste~2. On considère deux options~:
+\begin{enumerate}
+\item On cherche d'abord dans la liste~1. Si rien n'a été trouvé, on cherche dans la liste~2.
+\item On cherche dans une liste triée qui contient les deux listes.
+\end{enumerate}
+
+Quelle est la plus rapide~? (2~points)
+
+\exequest On suppose que tous les éléments de la liste~1 sont inférieurs à tous les éléments de la liste~2. Comment utiliser cette information pour ne faire qu'une seule recherche. (2~points)
+
+
+
+\end{xexercice}
+
+
+
+\ifnum\correctionenonce = 1
+
+\begin{xdemoexonot}{td_note_label1_2014}
+
+\inputcodes{../python_examen/td_note_2014_ex2.4.dicho.py}{recherche dichotomique (4)}{, énoncé 2014}
+
+\textbf{Quelques remarques~:}
+
+\begin{enumerate}
+\item Question~2~: voir la première remarque associée à la question 4 de l'exercice 1 (page~\pageref{rem2014_q4_ex1}).
+\end{enumerate}
+
+
+\end{xdemoexonot}
+\fi
+
+
+
+
+
+\input{../../common/exo_end.tex}%

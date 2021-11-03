@@ -1,0 +1,167 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\huge ENSAE TD noté, mardi 29 novembre 2011
+
+\normalsize
+\textit{Le programme construit au fur et à mesure des questions devra être imprimé à la fin du TD et rendu au chargé de TD. Il ne faut pas oublier de mentionner son nom en commentaires au début du programme et l'ajouter sur chaque page. Les réponses autres que des parties de programme seront insérées sous forme de commentaires. Les définitions de fonctions proposées ne sont que des suggestions. } \smallskip
+}
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label_2012}%\indexfrr{énoncé}{pratique}
+
+\textbf{Cet exercice doit être réalisé avec le module \codes{numpy}.}
+
+Cet exercice a pour but de revenir sur le calcul matriciel proposé par le module \codes{numpy}. Il s'appuie sur une enquête de l'INSEE réalisée en 2003 sur un échantillon du 8000 personnes\footnote{disponible à l'adresse \httpstyle{http://www.insee.fr/fr/themes/detail.asp?ref\_id=fd-hdv03\&page=fichiers\_detail/HDV03/telechargement.htm}} dont on a extrait une sous-partie que récupère le programme suivant\footnote{téléchargeable à l'adresse \httpstyle{http://www.xavierdupre.fr/enseignement/examen\_python/python\_examen\_2011\_2012.py}}. Ce programme fournit également quelques exemples de manipulation de la classe \codes{array} du module \codes{numpy}.
+
+\inputcodes{../python_examen/data/donnes_INSEE_enquete_2003/python_examen_2011_2012.py}{point de départ du TD noté}{, énoncé 2012}
+
+Le fichier téléchargé\footnote{\httpstyle{http://www.xavierdupre.fr/enseignement/td\_python/python\_td\_minute/data/examen/donnees\_enquete\_2003\_television.txt}} est stocké dans la variable \codes{matrice}, il contient quatre colonnes~:
+
+\begin{center}
+\begin{tabularx}{14cm}{llX}
+\textbf{colonne} & \textbf{nom} & \textbf{description} \\ \hline
+0 & POIDSLOG & Pondération individuelle relative \\ \hline
+1 & POIDSF   & Variable de pondération individuelle \\ \hline
+2 & cLT1FREQ & Nombre d'heures en moyenne passées à regarder la télévision \\ \hline
+3 & cLT2FREQ & Unité de temps utilisée pour compter le nombre d'heures passées à regarder la télévision, cette unité est représentée par les quatre valeurs suivantes~: \\
+&& \begin{tabular}{ll}
+0 & non concerné \\
+1 & jour \\
+2 & semaine \\
+3 & mois 
+\end{tabular}
+\end{tabularx}
+\end{center}
+
+Le fichier contient des lignes comme celles qui suivent. Sur la première ligne contenant des chiffres, un individu a déclaré passer deux heures par jour devant la télévision. Sur la suivante, un autre individu a déclaré passer six heures par semaine.
+
+\begin{verbatimx}
+POIDLOG       POIDSF         cLT1FREQ  cLT2FREQ
+0.8894218317  4766.8652013   2         1
+2.740069772   14685.431344   6         2
+\end{verbatimx}
+
+Après la première exécution, le fichier est présent sur votre disque dur à côté du programme, il est alors facile de l'ouvrir de voir ce qu'il contient.
+
+\exequest Toutes les lignes ne sont pas renseignées. Modifier la matrice pour enlever les lignes pour lesquelles l'unité de temps (cLT2FREQ) n'est pas renseignée ou égale à zéro. (1~point)
+
+\exequest Remplacer les valeurs de la quatrième colonne par une durée en heures. (1~point)
+
+\exequest Calculer le nombre d'heures par jour moyen passées devant la télévision et écrire la réponse en commentaire de la fonction. (1~point)
+
+\exequest Calculer ce même nombre mais pondéré par la colonne POIDSF et écrire la réponse en commentaire de la fonction.  (2~points)
+
+\exequest Combien de gens dans l'échantillon regardent-ils la télévision plus de 24h par jour~? Quelle est la raison la plus probable~? Ecrire la réponse en commentaire de la fonction.  (1~point)
+
+\exequest Calculer la médiane non pondérée. Ecrire la réponse en commentaire de la fonction.  (2~points)
+
+\if 0
+\exequest On veut calculer la médiane pondérée en suivant la méthode suivante~:
+\begin{enumerate}
+\item On crée une matrice $(X_{ij})$ de 3 colonnes~:
+					\begin{enumerate}
+					\item le temps passé devant la télévision (en pourcentage)
+					\item le poids affecté à chaque individu
+					\item la multiplication des deux premières colonnes
+					\end{enumerate}
+\item On détermine le premier entier $i_m$ tel que~:
+					\begin{eqnarray}
+					i_m &=& \min_i \acc{ i | \frac{ \sum_{k=1}^{i} X_{k,3} } { \sum_{k=1}^{N} X_{k,3}  } > \frac{1}{2} }
+					\end{eqnarray}
+\item La médiane pondérée est alors définie par~:					
+					\begin{eqnarray}
+					\frac{ \sum_{k=1}^{i_m} X_{k,3} } { \sum_{k=1}^{i_m} X_{k,2}  } 
+					\end{eqnarray}
+\end{enumerate}					
+
+Ecrire la réponse en commentaire de la fonction.  (2~points)
+\fi
+
+
+
+\end{xexercice}
+
+\newpage 
+\exosubject{}
+\begin{xexercice}\label{td_note_label_2012}%\indexfrr{énoncé}{pratique}
+
+\textbf{Cet exercice peut-être réalisé indifféremment avec le module \codes{numpy} ou non.}
+
+Mes grands-parents passent chaque année l'été à Charleville-Mézières (dans le Nord-Est de la France) et l'hiver à Cannes (dans le Sud). Les températures mesurées quotidiennement sur l'année 2010 sont représentées par la figure~\ref{temperature_cannes_charleville_2010}\footnote{Ces données sont extraites du site \httpstyle{http://www.meteociel.fr/climatologie/villes.php}.}. Mes grands-parents cherchent à se rapprocher d'une température idéale de 20~degrés. Ils voudraient savoir quand ils auraient dû partir à Cannes et quand en revenir pour atteindre le plus possible cet objectif en 2010.
+
+\begin{figure}[ht]
+\begin{center}\begin{tabular}{|c|}\hline 
+\includegraphics[width=16cm]{../python_examen/image/cc_max_2010.png} \\ \hline
+\end{tabular}
+\end{center}
+\caption{Températures maximales mesurées quotidiennement à Cannes et Charleville-Mézières en 2010.}
+\label{temperature_cannes_charleville_2010}
+\end{figure}
+
+L'exercice précédent utilise une fonction \codes{charge\_donnees} qu'on utilise également pour récupérer les données de températures\footnote{\httpstyle{http://www.xavierdupre.fr/enseignement/td\_python/python\_td\_minute/data/examen/cannes\_charleville\_2010\_max\_t.txt}}.
+
+\begin{verbatimx}
+temperature = charge_donnees("cannes_charleville_2010_max_t.txt")
+\end{verbatimx}
+
+Après la première exécution, le fichier est présent sur votre disque dur à côté du programme, il est alors facile de l'ouvrir de voir ce qu'il contient. L'ensemble peut être aussi copié/collé sous Excel.
+
+
+\exequest Ecrire une fonction qui récupère le tableau matrice et convertit tous les éléments en réels (faire attention à la première ligne). (1~point)
+
+\exequest Certaines valeurs sont manquantes et sont remplacées par la valeur -1000 choisie par convention (voir la date du 4~mai). Ecrire une fonction qui remplace ces valeurs par la moyenne des deux valeurs adjacentes. (3~points)
+
+On pourra s'aider de la fonction suivante pour vérifier que les manquantes ne sont plus présentes~:
+
+\begin{verbatimx}
+def dessin_temperature (temperature) :
+    import pylab
+    u = [ t[3] for t in temperature ]
+    v = [ t[4] for t in temperature ]
+    pylab.plot (u)
+    pylab.plot (v)
+    pylab.show()
+\end{verbatimx}
+    
+
+\exequest Après avoir discuté avec mes grands-parents, nous avons décidé d'utiliser une fonction de coût égale au carré de l'écart entre deux températures~: la température qu'ils souhaitent (20 degré) et la température qu'ils ont (celle de Charleville ou Cannes). Ecrire une fonction \codes{distance} qui calcule la fonction suivante~: (1~point)
+\begin{eqnarray}
+d(T_1,T_2)&=& (T_1-T_2)^2
+\end{eqnarray}
+
+\exequest Supposons que nous connaissons les deux dates d'aller $t_1$ et de retour $t_2$, mes grands-parents seraient donc à~:
+\begin{center}\begin{tabular}{c|c|c|c|c} 
+hiver & $t_1$ & été & $t_2$ & hiver \\ \hline
+Cannes & & Charleville & & Cannes 
+\end{tabular}\end{center}
+Ecrire une fonction qui calcule la somme des écarts de température au carré entre la température $T$ souhaitée et la température où ils sont~: (3~points)
+\begin{eqnarray}
+E &=& \sum_{t=1}^{t=t_1} d\pa{T(Cannes,t) , T} + \sum_{t=t_1}^{t=t_2} d\pa{T(Charleville,t) , T}
+      + \sum_{t=t_2}^{t=365} d\pa{T(Cannes,t) , T}
+\end{eqnarray}
+
+\exequest Ecrire une fonction qui détermine les meilleures valeurs $t_1$ et $t_2$. Ecrire en commentaire de votre programme le raisonnement suivi et la réponse trouvée. (3~points)
+
+\exequest Quel est le coût de votre algorithme en fonction du nombre de jours~? Si, on remplace la série de températures quotidienne par une série hebdomadaire, l'algorithme est combien de fois plus rapide~? (1~point) 
+
+\end{xexercice}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifnum\correctionenonce = 1
+
+\begin{xdemoexonot}{td_note_label_2012}
+
+\inputcodes{../python_examen/td_note_2012.py}{exercice pour s'évaluer}{, correction 2012}
+
+
+
+\end{xdemoexonot}
+\fi
+
+\input{../../common/exo_end.tex}%

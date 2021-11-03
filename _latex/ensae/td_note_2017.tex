@@ -1,0 +1,282 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\newcommand{\sametextforthisinterro}[0]{ 
+\huge ENSAE TD noté, vendredi 16 décembre 2016
+
+\normalsize
+\textit{Le programme devra être imprimé et rendu au chargé de TD. Toutes les questions valent 2 points. Vous êtes libres d'utiliser numpy ou non à toutes les questions.}
+\smallskip
+}
+
+\sametextforthisinterro
+}
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label1_2017}%\indexfrr{énoncé}{pratique}
+
+On suppose qu'on dispose d'un ensemble d'observations $\pa{X_i, Y_i}$ avec $X_i, Y_i \in \R$.
+La régression linéaire consiste une relation linéaire $Y_i = a X_i + b + \epsilon_i$
+qui minimise la variance du bruit. On pose :
+
+$$
+E(a, b) = \sum_i \pa{Y_i - (a X_i + b)}^2
+$$
+
+
+On cherche $a, b$ tels que :
+
+$$
+a^*, b^* = \arg \min E(a, b) = \arg \min \sum_i \pa{Y_i - (a X_i + b)}^2
+$$
+
+La fonction est dérivable et on trouve :
+
+$$
+\partialfrac{E(a,b)}{a} = - 2 \sum_i X_i ( Y_i - (a X_i + b))
+\text{ et } \partialfrac{E(a,b)}{b} = - 2 \sum_i ( Y_i - (a X_i + b))
+$$
+
+Il suffit alors d'annuler les dérivées. On résoud un système d'équations linéaires. On note :
+
+$$
+\begin{array}{l}
+\esp X = \frac{1}{n}\sum_{i=1}^n X_i \text{ et } \esp Y = \frac{1}{n}\sum_{i=1}^n Y_i \\
+\esp{X^2} = \frac{1}{n}\sum_{i=1}^n X_i^2 \text{ et } \esp {XY} = \frac{1}{n}\sum_{i=1}^n X_i Y_i 
+\end{array}
+$$
+
+Finalement :
+
+$$
+\begin{array}{l}
+a^* = \frac{ \esp {XY} - \esp X \esp Y}{\esp{X^2} - (\esp X)^2} \text{ et } b^* = \esp Y - a^* \esp X
+\end{array}
+$$
+
+On génère un nuage de points avec le code suivant :
+
+\begin{verbatimx}
+import random
+def generate_xy(n=100, a=0.5, b=1):
+    res = []
+    for i in range(0, n):
+        x = random.uniform(0, 10)
+        res.append((x, x*a + b + random.gauss(0,1)))
+    return res
+\end{verbatimx}
+
+\exequest Recopier la fonction précédente et générer 10 points (ou 10 couples de points).
+
+\exequest Ecrire une fonction qui calcule $\esp X, \esp Y, \esp {XY}, \esp{X^2}$.
+
+\begin{verbatimx}
+def calcule_exyxyx2(obs):
+    ....
+\end{verbatimx}
+
+
+\exequest Calculer les grandeurs $a^*, b^*$.
+
+\begin{verbatimx}
+def calcule_ab(obs):
+    ....
+\end{verbatimx}
+
+Tout se passe bien quand $X_i$ est une variable continue.
+Quand c'est une variable catégorielle, cela n'est plus possible.
+
+\exequest Compléter le programme ci-dessous (....) pour qu'il génère des couples tel que :
+
+\begin{verbatimx}
+[('rouge', 1.4281790866123962), ('vert', 3.1438708048684716), 
+ ('rouge', 0.7193245827013746), ('vert', 0.5293831925619408), 
+ ('bleu', 0.27344460504234447), ... ]
+\end{verbatimx}
+
+\begin{verbatimx}
+def generate_caty(n=100, a=0.5, b=1, cats=["rouge", "vert", "bleu"]):
+    res = []
+    for i in range(0, n):
+        x = ....
+        cat = cats[x]
+        res.append((cat, 10*x**2*a + b + random.gauss(0,1)))
+    return res
+\end{verbatimx}
+
+\exequest On voudrait quand même faire une régression de la variable $Y$ sur la variable catégorielle. On construit une fonction qui assigne un numéro quelconque mais distinct à chaque catégorie. La fonction retourne un dictionnaire avec les catégories comme clé et les numéros comme valeurs.
+
+\begin{verbatimx}
+def numero_cat(obs):
+    ....
+\end{verbatimx}
+
+\exequest On construit la matrice $M_{ic}$ tel que : $M_{ic}$ vaut 1 si $c$ est le numéro de la catégorie $X_i$, 0 sinon.
+
+\begin{verbatimx}
+def matrice_cat(obs, numero):
+    ....
+\end{verbatimx}
+
+\exequest Il est conseillé de convertir la matrice $M$ et les $Y$ au format \textit{numpy}. On ajoute un vecteur constant à la matrice $M$.
+
+\begin{verbatimx}
+def convert_numpy(obs, M):
+    ....
+\end{verbatimx}
+
+\exequest On résoud la régression multidimensionnelle en appliquant la formule $C^* = (M'M)^{-1}M'Y$.
+
+\exequest La régression détermine les coefficients $\alpha$ dans la régression $Y_i = \alpha_{rouge} \indicatrice{X_i = rouge} + \alpha_{vert} \indicatrice{X_i = vert} + \alpha_{bleu} \indicatrice{X_i = bleu} + \epsilon_i$. Construire le vecteur $\hat{Y_i} = \alpha_{rouge} \indicatrice{X_i = rouge} + \alpha_{vert} \indicatrice{X_i = vert} + \alpha_{bleu} \indicatrice{X_i = bleu}$.
+
+\exequest Utiliser le résultat de la question 3 pour calculer les coefficients de la régression $Y_i = a^* \hat{Y_i} + b^*$.
+
+
+\end{xexercice}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\firstpassagedo{
+\newpage
+\sametextforthisinterro
+}
+
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label2_2017}%\indexfrr{énoncé}{pratique}
+
+On suppose qu'on dispose d'un ensemble d'observations $\pa{X_i, Y_i}$ avec $X_i, Y_i \in \R$.
+La régression linéaire consiste une relation linéaire $Y_i = a X_i + b + \epsilon_i$
+qui minimise la variance du bruit. On pose :
+
+$$
+E(a, b) = \sum_i \pa{Y_i - (a X_i + b)}^2
+$$
+
+
+On cherche $a, b$ tels que :
+
+$$
+a^*, b^* = \arg \min E(a, b) = \arg \min \sum_i \pa{Y_i - (a X_i + b)}^2
+$$
+
+La fonction est dérivable et on trouve :
+
+$$
+\partialfrac{E(a,b)}{a} = - 2 \sum_i X_i ( Y_i - (a X_i + b))
+\text{ et } \partialfrac{E(a,b)}{b} = - 2 \sum_i ( Y_i - (a X_i + b))
+$$
+
+Il suffit alors d'annuler les dérivées. On résoud un système d'équations linéaires. On note :
+
+$$
+\begin{array}{l}
+\esp X = \frac{1}{n}\sum_{i=1}^n X_i \text{ et } \esp Y = \frac{1}{n}\sum_{i=1}^n Y_i \\
+\esp{X^2} = \frac{1}{n}\sum_{i=1}^n X_i^2 \text{ et } \esp {XY} = \frac{1}{n}\sum_{i=1}^n X_i Y_i 
+\end{array}
+$$
+
+Finalement :
+
+$$
+\begin{array}{l}
+a^* = \frac{ \esp {XY} - \esp X \esp Y}{\esp{X^2} - (\esp X)^2} \text{ et } b^* = \esp Y - a^* \esp X
+\end{array}
+$$
+
+On génère un nuage de points avec le code suivant :
+
+\begin{verbatimx}
+import random
+def generate_xy(n=100, a=0.5, b=1):
+    res = []
+    for i in range(0, n):
+        x = random.uniform(0, 10)
+        res.append((x, x*a + b + random.gauss(0,1)))
+    return res
+\end{verbatimx}
+
+\exequest Recopier la fonction précédente et générer 10 points (ou 10 couples de points).
+
+\exequest Ecrire une fonction qui calcule $\esp X, \esp Y, \esp {XY}, \esp{X^2}$.
+
+\begin{verbatimx}
+def calcule_exyxyx2(obs):
+    ....
+\end{verbatimx}
+
+
+\exequest Calculer les grandeurs $a^*, b^*$.
+
+\begin{verbatimx}
+def calcule_ab(obs):
+    ....
+\end{verbatimx}
+
+Tout se passe bien quand $X_i$ est une variable continue.
+Quand c'est une variable catégorielle, cela n'est plus possible.
+
+\exequest Compléter le programme ci-dessous (....) pour qu'il génère des couples tel que :
+
+\begin{verbatimx}
+[('rouge', 1.4281790866123962), ('vert', 3.1438708048684716), 
+ ('rouge', 0.7193245827013746), ('vert', 0.5293831925619408), 
+ ('bleu', 0.27344460504234447), ... ]
+\end{verbatimx}
+
+\begin{verbatimx}
+def generate_caty(n=100, a=0.5, b=1, cats=["rouge", "vert", "bleu"]):
+    res = []
+    for i in range(0, n):
+        x = ....     # on veut 50% de rouge, 30% de vert, 20% de bleu
+        cat = cats[x]
+        res.append((cat, 10*x**2*a + b + random.gauss(0,1)))
+    return res
+\end{verbatimx}
+
+\exequest On voudrait quand même faire une régression de la variable $Y$ sur la variable catégorielle. On commence par les compter. Construire une fonction qui compte le nombre de fois qu'une catégorie est présente dans les données (un histogramme).
+
+
+\begin{verbatimx}
+def histogram_cat(obs):
+    ....
+\end{verbatimx}
+
+\exequest Construire une fonction qui calcule la moyenne des $Y_i$ pour chaque catégorie : $\esp{Y | rouge}$, $\esp{Y | vert}$, $\esp{Y | bleu}$. La fonction retourne un dictionnaire \texttt{ \{ couleur : moyenne \}}.
+
+\begin{verbatimx}
+def moyenne_cat(hist, Y):
+    ....
+\end{verbatimx}
+
+\exequest Construire le vecteur $Z_i = \esp{Y | rouge}\indicatrice{X_i = rouge} + \esp{Y | vert} \indicatrice{X_i = vert} + \esp{Y | bleu} \indicatrice{X_i = bleu}$.
+
+\exequest Utiliser le résultat de la question 3 pour calculer les coefficients de la régression $Y_i = a^* Z_i + b^*$.
+
+
+\exequest Calculer la matrice de variance / covariance pour les variables $(Y_i)$, $(Z_i)$, $(Y_i - Z_i)$, $\indicatrice{X_i = rouge}$, $\indicatrice{X_i = vert}$, $\indicatrice{X_i = bleu}$. 
+
+\exequest On permute rouge et vert. Construire le vecteur $W_i = \esp{Y | rouge}\indicatrice{X_i = vert} + \esp{Y | vert} \indicatrice{X_i = rouge} + \esp{Y | bleu} \indicatrice{X_i = bleu}$. Utiliser le résultat de la question 3 pour calculer les coefficients de la régression $Y_i = a^* W_i + b^*$. Vérifiez que l'erreur est supérieure.
+
+
+\end{xexercice}
+
+
+
+
+
+
+\input{../../common/exo_end.tex}%

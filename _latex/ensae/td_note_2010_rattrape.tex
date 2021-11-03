@@ -1,0 +1,203 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\ifx\ifnotellipse\undefined
+\newcommand{\ifnotellipse}[1]{}
+\fi
+
+\firstpassagedo{
+\huge Initiation à l'informatique 
+
+\Large TD noté, rattrapage 2010
+
+\normalsize 
+
+
+\textit{Le programme construit au fur et à mesure des questions devra être imprimé à la fin du TD et rendu. A chaque question correspond une fonction à écrire. Le choix des paramètres et du résultat est laissé libre bien que l'énoncé propose des suggestions. Tout document autorisé.} \medskip
+}
+
+
+
+
+\exosubject{}
+\begin{xexercicenot}\label{td_note_rattrapage2010}%\indexfrr{énoncé}{pratique}
+
+On souhaite au cours de cette séance traverser quelques villes de France le plus rapidement possible. Il est plutôt évident que le chemin illustré par le graphique~\ref{fig_td2010_tourfr} n'est pas le plus rapide. On cherchera à implémenter quelques astuces qui permettront de construire un chemin "acceptable".
+
+        \begin{figure}[ht]
+        \figureoneimage
+        {\caption{Le tour de France. On veut trouver le plus court chemin passant par toutes les villes. Ce problème 
+        				  est aussi connu sous le nom du problème du voyageur de commerce.}}
+        { \includegraphics[width=9.5cm]{\filextellipse{../python_examen/image/tourfr}
+        {../python_examen/image_ellipse/tourfr}} }
+        {\label{fig_td2010_tourfr}}
+        \end{figure}
+        
+\exequest La première étape consiste à représenter la liste des villes et de leurs coordonnées via des listes \pythons~:
+
+
+\begin{center}\begin{footnotesize}\begin{tabular}{|lrr|} \hline
+Auxerre	&	 3,537  	&	 47,767  	\\ 
+Bastia	&	 9,434  	&	 42,662  	\\ 
+Bordeaux	&	-0,643  	&	 44,808  	\\ 
+Boulogne	&	 1,580  	&	 50,709  	\\ 
+\if 0
+Caen	&	-0,419  	&	 49,147  	\\ 
+Le Havre	&	 0,038  	&	 49,459  	\\ 
+Lens	&	 2,787  	&	 50,405  	\\ 
+Lille	&	 2,957  	&	 50,574  	\\ 
+Lyon	&	 4,769  	&	 45,704  	\\ 
+Paris	&	 2,087  	&	 48,658  	\\ 
+Lyon	&	 4,769  	&	 45,704  	\\ 
+Marseille	&	 5,290  	&	 43,193  	\\ 
+Lille	&	 2,957  	&	 50,574  	\\ 
+Nantes	&	-1,651  	&	 47,169  	\\ 
+Rennes	&	-1,759  	&	 48,057  	\\ 
+Toulouse	&	 1,356  	&	 43,539  	\\ 
+Strasbourg	&	 7,687  	&	 48,496  	\\ 
+Nancy	&	 6,134  	&	 48,667  	\\ 
+Nice	&	 7,199  	&	 43,658  	\\ 
+Saint-Etienne	&	 4,356  	&	 45,400  	\\ 
+Brest	&	-4,552  	&	 48,360  	\\ 
+Metz	&	 6,117  	&	 49,073  	\\ 
+Sedan	&	 4,896  	&	 49,684  	\\ 
+\fi 
+... & ... & ... \\
+Grenoble	&	 5,684  	&	 45,139  	\\ 
+Annecy	&	 6,082  	&	 45,878  	\\  \hline
+\end{tabular}\end{footnotesize}\end{center}
+
+Elles sont accessibles depuis l'adresse \httpstyle{http://www.xavierdupre.fr/enseignement/examen\_python/villes.txt}. Il s'agit de créer une fonction qui récupère ces informations, soit depuis un fichier texte, soit elles peuvent être directement insérées dans le programme sous la forme d'une seule chaîne de caractères. 
+
+L'objectif est ensuite d'obtenir une matrice avec le nom de chaque ville en première colonne, l'abscisse et l'ordonnée en seconde et troisième colonnes. Les fonctions \codes{strip}, \codes{replace}, \codes{split} pourraient vous être utiles.
+
+\begin{verbatimx}
+[['Auxerre', 3.537309885, 47.767200469999999], 
+ ['Bastia', 9.4343004229999998, 42.661758419999998], 
+ ...         
+\end{verbatimx}
+
+L'abscisse et l'ordonnée doivent être des réels (\codes{float}) afin d'être facilement manipulées par la suite. (3~points) \textit{Insérer directement dans le programme la matrice dans sa forme finale ne rapporte pas de point.}
+
+\begin{verbatimx}
+def get_tour () :
+    stour = """Auxerre	3,537309885	47,76720047
+Bastia	9,434300423	42,66175842
+Bordeaux	-0,643329978	44,80820084"""
+    ...
+    return tour
+\end{verbatimx}
+
+
+\exequest Ecrire une fonction \codes{distance} qui calcule la distance euclidienne entre deux villes. On supposera que la distance à vol d'oiseau est une approximation acceptable de la distance entre deux villes. (2~points)
+
+\begin{verbatimx}
+def distance (tour, i,j) :
+    ...
+    return d
+\end{verbatimx}
+
+\exequest Ecrire une fonction \codes{longueur\_tour} qui retourne la longueur d'un circuit. Un circuit est décrit par la matrice de la première question~: on parcourt les villes les unes à la suite des autres dans l'ordre où elles apparaissent dans la matrice. On commence à Auxerre, on va à Bastia puis Bordeaux pour terminer à Annecy et revenir à Auxerre. (2~points)
+
+\begin{verbatimx}
+def longueur_tour (tour) :
+    ...
+    return d
+\end{verbatimx}
+
+\exequest Il est facile de vérifier visuellement si un chemin est absurde comme celui de la figure~\ref{fig_td2010_tourfr}. La fonction suivante vous aidera à tracer ce chemin. Il faut la compléter. (2~points)
+
+\begin{verbatimx}
+import pylab
+def graph (tour) :
+    x = [ t[1] for t in tour ]
+    y = [ t[2] for t in tour ]
+    ....
+    ....
+    pylab.plot (x,y)
+    for ville,x,y in tour :
+        pylab.text (x,y,ville)
+    pylab.show ()
+\end{verbatimx}
+    
+\exequest La première idée pour construire un chemin plus court est de partir du chemin initial. On échange deux villes choisies aléatoirement puis on calcule la distance du nouveau chemin. Si elle est plus courte, on conserve la modification. Si elle est plus longue, on annule cette modification. On continue tant qu'il n'est plus possible d'améliorer la distance.  (4~points)
+
+        \begin{figure}[ht]
+        \figureoneimage
+        {\caption{Le tour de France lorsque des chemins se croisent. Ce chemin n'est pas optimal de manière évidente.}}
+        { \includegraphics[width=8cm]{\filextellipse{../python_examen/image/tourfrcr}
+        {../python_examen/image_ellipse/tourfrcr}} }
+        {\label{fig_td2010_tourfrcr}}
+        \end{figure}
+        
+\begin{verbatimx}
+def permutation (tour) :
+\end{verbatimx}
+        
+
+\exequest Le résultat n'est pas parfait. Parfois, les chemins se croisent comme sur la figure~\ref{fig_td2010_tourfrcr}. Pour cela on va essayer de retourner une partie du chemin. Il s'agit ici de construire une fonction \codes{retourne} qui retourne un chemin entre deux villes~$i$ et~$j$. (3~points)
+
+Avant l'exécution de cette fonction, on a~:
+
+\begin{center}\begin{minipage}{10cm}
+\xymatrix @-1pc {
+v_1 \ar[r] &v_2 \ar[r] &... \ar[r] &v_{i-1} \ar[r] &v_i \ar[r] &v_{i+1} \ar[r] &... \ar[r] &v_{j-1} \ar[r] &v_j \ar[r] &v_{j + 1} \ar[r] &...
+}
+\end{minipage}\end{center}
+
+Après l'exécution de cette fonction, on a~:
+
+\begin{center}\begin{minipage}{10cm}
+\xymatrix @-1pc {
+v_1 \ar[r] &v_2 \ar[r] &... \ar[r] &v_{i-1} \ar@/^2pc/[rrrrr] &v_i \ar@/_2pc/[rrrrr] &v_{i+1} \ar[l] &... \ar[l] &v_{j-1} \ar[l] &v_j \ar[l] &v_{j + 1} \ar[r] &...
+}
+\end{minipage}\end{center}
+
+Ou encore~:
+
+\begin{center}\begin{minipage}{10cm}
+\xymatrix @-1pc {
+v_1 \ar[r] &v_2 \ar[r] &... \ar[r] &v_{i-1} \ar[r] &v_j \ar[r] &v_{j-1} \ar[r] &... \ar[r] &v_{i+1} \ar[r] &v_i \ar[r] &v_{j + 1} \ar[r] &...
+}
+\end{minipage}\end{center}
+
+
+\begin{verbatimx}
+def retourne (tour, i,j) :
+\end{verbatimx}
+        
+
+\exequest De la même manière qu'à la question~5, on choisit deux villes au hasard. On applique la fonction précédente entre ces deux villes. Si la distance est plus courte, on garde ce changement, sinon, on revient à la configuration précédente. On répète cette opération tant que la distance du chemin total diminue.  (2~points)
+
+\begin{verbatimx}
+def croisement (tour) :
+\end{verbatimx}
+        
+\exequest On termine par l'exécution des fonctions \codes{permutation}, \codes{croisement}, \codes{graph}. On vérifie que le chemin obtenu est vraisemblable même s'il n'est pas optimal. 
+
+\begin{verbatimx}
+def resoud_et_dessine (tour) :
+\end{verbatimx}
+
+Les deux transformations proposées pour modifier le chemin sont décrites par les fonctions \codes{permutation} et \codes{croisement}. A aucun moment, on ne s'est soucié du fait que le chemin est circulaire. Est-ce nécessaire~? Justifier. (2~points)
+
+\end{xexercicenot}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\ifnum\correctionenonce = 1
+
+\begin{xdemoexonot}{td_note_rattrapage2010}
+
+La dernière question suggère que l'aspect circulaire du circuit n'a pas été pris en compte par les fonctions \codes{croisement} et \codes{permutation}. Pour échanger deux villes, il n'est nul besoin de tenir compte du fait que la dernière ville est reliée à la première. En ce qui concerne la fonction \codes{croisement}, il est vrai qu'on ne considère aucune portion incluant le segment reliant la première et la dernière ville. Toutefois, lorsqu'on retourne toutes les villes dans l'intervalle $\cro{i}{j}$, on aboutit au même résultat que si on retournait toutes les villes qui n'y sont pas.
+
+\bigskip
+\inputcodes{../python_examen/td_note_2010_rattrape.py}{exercice pour s'évaluer}{, correction 2010}
+\vspaceneg
+
+\end{xdemoexonot}
+\fi
+
+\input{../../common/exo_end.tex}%

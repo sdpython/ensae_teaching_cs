@@ -1,0 +1,356 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\huge TD noté, jeudi 10  décembre 2009
+
+\normalsize
+\textit{Le programme construit au fur et à mesure des questions devra être imprimé à la fin du TD et rendu au chargé de TD. Il ne faut pas oublier de mentionner son nom en commentaires au début du programme et l'ajouter sur chaque page. Les réponses autres que des parties de programme seront insérées sous forme de commentaires. Les définitions de fonctions proposées ne sont que des suggestions. } \smallskip
+}
+
+Glossaire~:
+
+\begin{tabular}{@{}lp{11.7cm}@{}}
+barycentre & Un barycentre est le centre d'un ensemble de points $(x_i,y_i)_{1 \infegal i \infegal n}$. Dans le plan, il a deux coordonnées $(X,Y)$ égales à $X = \frac{1}{n}\sum_i x_i$ et $Y = \frac{1}{n}\sum_i y_i$. Ses coordonnées le placent au milieu des points dans il est le barycentre~: il est situé dans l'enveloppe convexe formée par l'ensemble des points. \medskip\\
+centree & En dimension deux, même si c'est une expression employée dans la suite de l'énoncé, une loi normale de centre $(x,y)$ n'est pas une expression correcte. On devrait dire une loi normale de moyenne $(x,y)$. De même, cette loi n'a pas une variance $\sigma\in\R$, on devrait dire une variance $\pa{\begin{array}{cc}\sigma&0\\0&\sigma\end{array}}$.
+\end{tabular}
+
+\exosubject{}
+\begin{xexercicenot}\label{td_note_label_2010}%\indexfrr{énoncé}{pratique}
+
+Les nuées dynamiques servent à construire automatiquement des classes dans un ensemble d'observations. C'est une façon de regrouper entre elles des observations qui sont proches les unes des autres. Prenons par exemple le nuage de points suivant qui inclut trois sous-nuages.
+
+
+\begin{tabular}{@{}p{3.8cm}r@{}}
+\vspace{-4cm}
+Le nuage de points contient trois sous-ensembles de points. Chacun est un ensemble de points simulés selon une loi normale de variance~1 et de moyenne identique à l'intérieur d'un sous-ensemble. &
+\input{../python_examen/td_note_2010_fig1.tex}
+\end{tabular}
+
+\exequest La fonction \codes{gauss} du module \codes{random} permet de générer un nombre selon une loi normale. Le premier objectif est de créer une fonction qui retourne un ensemble de points simulés selon une loi normale de variance~$v$ et de centre $(x,y)$. (2~points)
+\begin{verbatimx}
+def sous_nuage (nb, x, y, v) :  # retourne une liste de 2-uples
+\end{verbatimx}
+
+\exequest On cherche à créer un nuage regroupant $n$ sous-nuages de même variance~1 avec la fonction précédente. Chaque sous-nuage est centré autour d'une moyenne choisie aléatoirement selon une loi de votre choix. La fonction dépend de deux paramètres~: le nombre de points dans chaque classe et le nombre de classes. (2~points)
+\begin{verbatimx}
+def n_sous_nuages (n, nb) :     # retourne une liste de 2-uples
+\end{verbatimx}
+
+\exequest Dessiner le nuage avec le module \codes{matplotlib} pour vérifier que le résultat correspond à vos attentes. On pourra s'appuyer sur l'extrait qui suit. (1~point)
+
+\begin{verbatimx}
+import matplotlib.pyplot as plt
+x   = [ ... ]
+y   = [ ... ]
+fig = plt.figure()
+ax  = fig.add_subplot(111)
+ax.plot (x,y, 'o')
+plt.savefig ("im1.png") # ou plt.show () pour afficher le graphe
+\end{verbatimx}
+
+\exequest L'algorithme des nuées dynamiques commence par affecter chaque point à une classe choisie au hasard. Pour cette tâche, on pourra utiliser la fonction \codes{randint} du module \codes{random}. On veut créer une fonction qui retourne une classe aléatoire pour chaque point du nuage. Elle doit prendre comme entrée le nombre de classes souhaité. (2~points)
+\begin{verbatimx}
+def random_class (points, n) :  # retourne une liste d'entiers
+\end{verbatimx}
+
+
+
+\exequest L'algorithme des nuées dynamiques répète ensuite alternativement deux étapes~:
+\begin{center}
+\begin{tabular}{lp{12cm}}
+\textbf{Etape 1} & On calcule le barycentre de chaque classe. \\
+\textbf{Etape 2} & On associe à chaque point la classe dont le barycentre est le plus proche (au sens de la distance euclidienne).
+\end{tabular}
+\end{center}
+
+On propose de commencer par écrire une fonction qui retourne pour un point donné le barycentre le plus proche. (2~points)
+\begin{verbatimx}
+def proche_barycentre (point, barycentres) :   # retourne un entier
+\end{verbatimx}
+
+\exequest La fonction suivante retourne le barycentre le plus proche pour chaque point. (2~points)
+\begin{verbatimx}
+def association_barycentre (points, barycentres) :  # retourne une liste d'entiers
+\end{verbatimx}
+
+\exequest On découpe la première étape de la même façon~:
+\begin{enumerate}
+\item Première fonction~: calcule le barycentre d'une classe.
+\item Seconde fonction~: calcule le barycentre de toutes les classes.
+\end{enumerate}
+Il faut implémenter ces deux fonctions. (3~points sans utiliser \codes{numpy}, 4~points avec \codes{numpy} et une fonction).
+\begin{verbatimx}
+def barycentre_classe (points, classes, numero_class) :   # retourne un 2-uple
+def tous_barycentres  (points, classes) :       # retourne une liste de 2-uples
+\end{verbatimx}
+
+\exequest L'algorithme commence par la création des classes (fonction \codes{n\_sous\_nuages}) et l'attribution d'une classe au hasard (fonction \codes{random\_class}). Il faut ensuite répéter les fonctions \codes{tous\_barycentres} et \codes{association\_barycentre}. L'enchaînement de ces opérations est effectué par la fonction \codes{nuees\_dynamiques}. (2~points)
+\begin{verbatimx}
+def nuees_dynamiques (points, nombre_classes) : # retourne une liste d'entiers
+\end{verbatimx}
+
+
+%\begin{tabular}{@{}p{6cm}r@{}}
+%\vspace{-2.2cm}
+\exequest Dessiner le résultat permettra de vérifier que tout s'est bien passé, toujours avec un code similaire à celui-ci. (2~points)
+%&
+%\begin{minipage}{10cm}
+\begin{verbatimx}
+import matplotlib.pyplot as plt
+x1  = [ ... ]
+y1  = [ ... ]
+x2  = [ ... ]
+y2  = [ ... ]
+fig = plt.figure()
+ax  = fig.add_subplot(111)
+ax.plot (x1,y1, 'o')
+ax.plot (x2,y2, 'x')     # ligne ajoutée, 'x', 'bo', ...
+plt.savefig ("im2.png")  # 'rx', 'go', 'gs', 'bs', ...
+\end{verbatimx}
+%\end{minipage}
+%\end{tabular}
+
+\exequest Question facultative~: comment savoir quand s'arrêter~? (0~point)
+
+
+\end{xexercicenot}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifnum\correctionenonce = 1
+
+\begin{xdemoexonot}{td_note_label_2010}
+
+
+Le corrigé final apparaît après les commentaires qui suivent. Ils sont inspirés des réponses des élèves.
+
+\exequest\exequest Le centre de chaque sous-nuages a été généré selon diverses lois aléatoires, des lois normales, uniformes réelles ou discrètes. 
+
+\begin{center}
+\begin{tabular}{cc}
+\begin{minipage}{6.5cm}
+\begin{verbatimx}
+def n_sous_nuages (n, nb):
+    m = []
+    for i in range (0,n):
+        x = 5*random.random()
+        y = 5*random.random()
+        d = sous_nuage(nb,x,y,1)
+        m += d
+    return m
+\end{verbatimx}
+\end{minipage}
+&
+\begin{minipage}{6.5cm}
+\begin{verbatimx}
+def n_sous_nuages (n, nb):
+    m = []
+    for i in range (0,n):
+        x = random.randint(0,20)
+        y = random.randint(0,20)
+        d = sous_nuage(nb,x,y,1)
+        m += d
+    return m
+\end{verbatimx}
+\end{minipage}
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{cc}
+\begin{minipage}{6.5cm}
+L'exemple de droite utilise la même loi pour générer aléatoirement à la fois le centre de chaque nuage et les points qu'ils incluent. Il sera alors difficile de distinguer visuellement plusieurs sous-nuages avec le graphe dessiné à la question suivante.
+\end{minipage}
+&
+\begin{minipage}{6.5cm}
+\begin{verbatimx}
+def n_sous_nuages (n, nb):
+    m = []
+    for i in range (0,n):
+        x = random.gauss(0,1)
+        y = random.gauss(0,1)
+        d = sous_nuage(nb,x,y,1)
+        m += d
+    return m
+\end{verbatimx}
+\end{minipage}
+\end{tabular}
+\end{center}
+
+Quels que soient les points simulés, les réponses aux questions suivantes n'en dépendaient pas. L'algorithme des centres mobiles s'appliquent à n'importe quel ensemble de points bien que le résultat ne soit pas toujours pertinent.
+
+\begin{center}
+\begin{tabular}{cc}
+\begin{minipage}{6.5cm}
+Certains élèves ont ajouté \codes{[d]} au lieu de \codes{d} seul. Au lieu d'obtenir comme résultat une liste de 2~coordonnées (une matrice de deux colonnes), le résultat est alors une liste de matrices de deux colonnes~: c'est un tableau à trois dimensions. Ce n'est pas faux mais cela complique inutilement l'écriture des fonctions qui suivent en ajoutant une boucle à chaque fois qu'on parcourt l'ensemble des points.
+\end{minipage}
+&
+\begin{minipage}{6.5cm}
+\begin{verbatimx}
+def n_sous_nuages (n, nb):
+    m = []
+    for i in range (0,n):
+        x = random.gauss(0,1)
+        y = random.gauss(0,1)
+        d = sous_nuage(nb,x,y,1)
+        m +=  [ d ]                
+           # le résultat n'est 
+           # plus une liste
+    return m
+\end{verbatimx}
+\end{minipage}
+\end{tabular}
+\end{center}
+
+\exequest Utiliser l'exemple de l'énoncé n'a pas posé de problème excepté un cas particulier~:
+
+\begin{verbatimx}
+import matplotlib.pyplot as plt
+x = [ p [0] for p in n_sous_nuages (3,50) ] 
+y = [ p [1] for p in n_sous_nuages (3,50) ] 
+fig = plt.figure()
+ax = fig.add_subplot(111)
+ax.plot (x,y, 'o' )
+plt.savefig ("im1.png")
+\end{verbatimx}
+
+Dans cet exemple, la fonction \codes{n\_sous\_nuages} est appelée une fois pour extraire les abscisses, une seconde fois pour extraire les ordonnées. Etant donné que cette fonction retourne un résultat aléatoire, il est très peu probable qu'elle retourne deux fois le même résultat. Par conséquence, les abscisses et les ordonnées ne proviennent pas du même nuage~: le graphique résultant ne montrera pas trois nuages séparés.
+
+\exequest La fonction \codes{randint(a,b)} retourne un nombre entier aléatoire compris entre \codes{a}~et~\codes{b} \textbf{inclus}. Il fallait donc bien choisir \codes{a}~et~\codes{b}. Le meilleur choix était $a=0$ et $b=n-1$. Un autre choix assez fréquent était $a=1$ et~$b=n$ comme dans l'exemple suivant~:
+
+\begin{verbatimx}
+def random_class(l,n):
+    l = []
+    for i in range(0,len(l)):
+        l += [ random.randint (1,n) ]
+    return l
+\end{verbatimx}
+
+Les deux réponses sont correctes. Toutefois, la solution ci-dessus implique de faire un peu plus attention par la suite car elle complique la correspondance entre les barycentres et le numéro de la classe qu'il représente. En effet, qu'en est-il de la classe~0 dans ce cas. Dans cet exemple, la fonction \codes{random\_class} n'associe aucun point à la classe~0. On peut alors se demander à quoi correspond le premier élément du tableau \codes{barycentre} utilisé dans les fonctions des questions suivantes. Quoi qu'il en soit, la fonction \codes{proche\_barycentre} retourne l'indice du barycentre le plus proche, pas le numéro de la classe à laquelle il correspond. Selon les programmes, avec un peu de chance, les numéros des classes ont commencé à~0 après le premier appel à la fonction \codes{proche\_barycentre}. Le calcul du barycentre de la première classe amène une division par zéro à moins que ce cas ait été pris en compte. 
+
+Dans l'exemple suivant, on tire une classe aléatoire parmi $n+1$ numéros. Il y a donc une classe de plus qu'attendu mais là encore, cette erreur peut être compensée par une autre plus loin.
+\begin{verbatimx}
+def random_class(l,n):
+    l = []
+    for i in range(0,len(l)):
+        l += [ random.randint (0,n) ]
+    return l
+\end{verbatimx}
+
+Un élève a fait une allusion à la probabilité qu'une classe soit vide~: un numéro entre $0$ et $n-1$ n'est jamais attribué. On peut déjà se pencher sur la probabilité que la classe 0 soit vide. Chaque point a un probabilité $\frac{1}{n}$ d'être associé à la classe~0. La probabilité cherchée est donc~: $\pa{\frac{n-1}{n}}^N$ où $N$~est le nombre de points. On peut ainsi majorer la probabilité qu'une classe soit vide par~: $n\pa{\frac{n-1}{n}}^N$.
+
+\exequest La fonction \codes{proche\_barycentre} a été plutôt bien traitée malgré deux erreurs fréquentes. La première concerne la fonction puissance lors du calcul de la distance euclidienne~:
+\begin{verbatimx}
+d= (  (p[0]-f[0])**2+(p[1]-f[1])**2 ) ** (1/2)
+\end{verbatimx}
+Dans l'exemple précédente, \codes{1/2} est une division entière et son résultat est nul. Comme $\forall x, \, x^0=1$ (pour \pythons du moins), toutes les distances calculées sont donc égales à~1. Il faut noter que la racine carrée n'était pas indispensable puisqu'on cherchait le barycentre le plus proche~: seule la plus petite valeur comptait et non la valeur elle-même.
+
+L'autre erreur fréquente est celle-ci~:
+\begin{verbatimx}
+def proche_barycentre (point,barycentres):
+    d=distance_euclidienne(point,barycentres[0])
+    for i in range (0,len(barycentres)):
+        if distance_euclidienne(point,barycentres[i])<=d: 
+            d=distance_euclidienne(point,barycentres[i])
+    return d
+\end{verbatimx}
+On retourne non pas l'indice du barycentre le plus proche mais la distance de ce barycentre au point considéré. 
+
+\exequest Cette question a été bien traitée. Les erreurs introduites dans la fonction précédentes se sont propagées sans provoquer d'erreur d'exécution.
+
+\exequest Dans la fonction suivante, si la plupart ont pensé à ne prendre que les points de la classe \codes{numero\_class}, ils ont parfois oublié de diviser par le bon nombre d'éléments. Ici, c'est la variable \codes{n} qui n'est définie nulle part. Si le programme ne provoque pas d'erreurs, c'est donc une variable globale déclarée avant. 
+
+\begin{verbatimx}
+def barycentre_classe (points, classes, numero_class):
+    x=0
+    y=0
+    for i in range (0,len(classes)):
+        if classes[i]==numero_class:  # ligne importante
+            l=point[i]
+            x=x+l[0]
+            y=y+l[1]
+    c=[x/n,y/n]                       # ligne importante
+    return c
+\end{verbatimx}
+
+La variable \codes{n} a parfois été remplacée par \codes{len(classes)} qui est aussi faux puisque cela correspond au nombre total de points et non celui de la classe \codes{numero\_class}.
+
+Il arrive que la fonction provoque une division par zéro lorsqu'une classe est vide. C'est un cas à prendre en compte. L'algorithme peut alors évoluer dans deux directions. La première consiste à supprimer la classe. Le second choix évite la disparition d'une classe en affectant un ou plusieurs points désignés aléatoirement à la classe disparue. L'énoncé ne demandait à ce qu'il en soit tenu compte même si cela serait souhaitable. 
+
+La fonction \codes{tous\_barycentre} a été victime de deux erreurs. La première est la suivante où on construit autant de barycentres qu'il y a de points alors qu'on souhaite autant de barycentres qu'il y a de classes~:
+
+\begin{verbatimx}
+def tous_barycentres (points,classes):
+    c=[]
+    for i in classes :   # or on a len(classes) == len(points)
+        c+=[barycentre_classe (points,classes,i)]
+    return c
+\end{verbatimx}
+
+La seconde erreur intervient lors du numéro de classes et fait écho à la fonction \codes{randon\_class} et ses erreurs. Dans l'exemple suivant, la classe dont le numéro est le plus grand a pour numéro \codes{max(classes)}. Or dans la boucle \codes{for\;i \;in \; range(0,mx) : }, elle est oubliée car la fonction \codes{range} va jusqu'à \codes{mx-1} inclus. Il aurait fallu écrire \codes{mx=max(classes)+1}. Dans le cas contraire, on perd une classe à chaque fois qu'on appelle la fonction \codes{tous\_barycentres}.
+
+\begin{verbatimx}
+def tous_barycentres (points,classes):
+    c=[]
+    mx=max(classes)        # il faut ajouter +1
+    for i in range(0,mx) : 
+        c+=[barycentre_classe (points,classes,i)]
+    return c
+\end{verbatimx}
+
+Il faut noter également que la classe~0 reçoit un barycentre après la fonction \codes{tous\_barycentres} même si la fonction \codes{random\_class} ne lui en donnait pas lorsqu'elle utilise l'instruction \codes{random.randint(1,n)}.
+
+Peu d'élèves ont utilisé le module \codes{numpy}. Son usage avait pour but d'éviter une boucle sur les points~: elle ne disparaît pas mais est prise en charge par les fonctions de calcul matriciel proposées par le module \codes{numpy}. Cette boucle a persisté dans la grande majorité des solutions envisagées. La difficulté réside dans la construction d'une ou deux matrices qui mènent au calcul des barycentre par quelques manipulations matricielles. La correction qui suit présente deux implémentations dont les seules boucles portent sur le nombre de classes.
+
+\exequest La dernière fonction de l'algorithme de classification a connu trois gros défauts. Le premier est l'oubli de la boucle qui permet de répéter les opérations plus d'une fois. Le second défaut apparaît lorsque le résultat de la fonction \codes{association\_barycentre} n'est pas utilisé. Dans l'exemple suivant, le calcul des barycentres a toujours lieu avec la liste \codes{l} qui n'est jamais modifiée~: le résultat \codes{a} est toujours celui de l'algorithme après la première itération qui est répétée ici 10~fois exactement de la même manière.
+
+\begin{verbatimx}
+def nuees_dynamiques (points,nombre_classes):
+    l = random_class (points,nombre_classes)
+    for j in range (0,10):
+        c = tous_barycentres (points, l)
+        a = association_barycentre (points,c)
+                        # il faut ajouter ici l = a pour corriger la fonction
+    return a
+\end{verbatimx}
+
+La dernière erreur suit la même logique~: l'instruction \codes{l=a} est bien présente mais son effet est annulé par le fait de générer aléatoirement un numéro de classe à chaque itération. 
+
+\begin{verbatimx}
+def nuees_dynamiques (points,nombre_classes):
+    for j in range (0,10):
+        l = random_class (points,nombre_classes)
+        c = tous_barycentres (points, l)
+        a = association_barycentre (points,c)
+        l = a
+    return a
+\end{verbatimx}
+
+Enfin, une erreur grossière est parfois survenue~: l'exemple suivant change les données du problème à chaque itération. Le résultat a peu de chance de signifier quoi que ce soit.
+
+\begin{verbatimx}
+def nuees_dynamiques (n,nb):
+    for j in range (0,10):
+        points = n_sous_nuage (n,nb)
+        l = random_class (points,nombre_classes)
+        c = tous_barycentres (points, l)
+        a = association_barycentre (points,c)
+        l = a
+    return a
+\end{verbatimx}
+
+\exequest La dernière question fut plus ou moins bien implémentée, souvent très bien pour le cas particulier de deux classes. Le cas général où le nombre de classes est variable n'a pas été souvent traité. La correction complète suit.
+
+\bigskip
+\inputcodes{../python_examen/td_note_2010.py}{exercice pour s'évaluer}{, correction 2010}
+\vspaceneg
+
+
+
+\end{xdemoexonot}
+\fi
+
+\input{../../common/exo_end.tex}%

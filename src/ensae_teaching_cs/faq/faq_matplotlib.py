@@ -330,7 +330,8 @@ def graph_cities(df, names=("Longitude", "Latitude", "City"), ax=None, linked=Fa
     if ax is None:
         import cartopy.crs as ccrs
         import matplotlib.pyplot as plt
-        projection = params.pop('projection', ccrs.PlateCarree())
+        projection = params.pop(  # pylint: disable=E0110
+            'projection', ccrs.PlateCarree())  # pylint: disable=E0110
         fig = plt.figure(**params)
         ax = fig.add_subplot(1, 1, 1, projection=projection)
     else:
