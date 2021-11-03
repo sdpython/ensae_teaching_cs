@@ -153,11 +153,11 @@ les modules standard du langage :epkg:`Python` et parfois
                 </a>
             (estimateur de Kaplan-Meier, seuil de vaccination)
         </li>
-    <li><a href="http://www.xavierdupre.fr/site2013/enseignements/tdnoteseul/td_note_2022.pdf">énoncé 2021-2022</a>,
+    <li><a href="https://raw.githubusercontent.com/sdpython/ensae_teaching_cs/master/_latex/ensae/pdf/td_note_2022.pdf">énoncé 2021-2022</a>,
             <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td_note_2022.html">
                 <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
                 </a>
-            (estimateur de Kaplan-Meier, seuil de vaccination)
+            (optimisation du produit matriciel de plusieurs matrices)
         </li>
     </ul>
     </p>
