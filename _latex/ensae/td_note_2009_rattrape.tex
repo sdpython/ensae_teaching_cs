@@ -1,0 +1,149 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\ifx\ifnotellipse\undefined
+\newcommand{\ifnotellipse}[1]{}
+\fi
+
+\firstpassagedo{
+\huge TD noté, rattrapage 2009
+
+\normalsize
+
+\textit{Le programme construit au fur et à mesure des questions devra être imprimé à la fin du TD et rendu. Toutes les questions valent 3~points sauf la première et la dernière qui valent 1~point. Tout document autorisé.} \medskip
+}
+
+
+
+
+\exosubject{}
+\begin{xexercicenot}\label{td_note_rattrapage2009}%\indexfrr{énoncé}{pratique}
+
+Cet exercice propose de fusionner des données provenant de deux sources. La première étape consiste à télécharger deux fichiers disponibles à l'adresse suivante~: \url{http://www.xavierdupre.fr/mywiki/InitiationPython}~:
+
+\begin{center}
+\url{td\_note\_2009\_cluedo\_1.txt} et \url{td\_note\_2009\_cluedo\_2.txt}.
+\end{center}
+
+Il est préférable de placer ces pièces jointes dans le même répertoire que le progamme lui-même. Le premier fichier contient une matrice dont chaque ligne contient 4~informations séparées par des tabulations~:
+
+\vspace{-0.15cm}
+\begin{center}\begin{tabular}{llll}
+un nom & un prénom & une couleur & une arme
+\end{tabular}\end{center}
+\vspace{-0.15cm}
+
+Les premières lignes sont les suivantes\footnote{Ces données sont complètement aléatoires.}~:
+\vspace{-0.15cm}
+\begin{verbatimx}
+N10   P10   gris     corde
+N15   P15   rouge    chandelier
+N8    P8    marron   fer à cheval
+\end{verbatimx}
+\vspace{-0.15cm}
+
+Le second fichier contient une matrice dont chaque ligne contient 3~informations séparées par des tabulations~:
+
+\vspace{-0.15cm}
+\begin{center}\begin{tabular}{lll}
+un nom & un prénom & une pièce
+\end{tabular}\end{center}
+\vspace{-0.15cm}
+
+Les premières lignes sont les suivantes\footnote{Ces données sont aussi complètement aléatoires.}~:
+\vspace{-0.15cm}
+\begin{verbatimx}
+N3    P3    cuisine
+N19   P19   bureau
+N20   P20   salle à manger
+\end{verbatimx}
+\vspace{-0.15cm}
+
+Certaines élèves sont présents dans les deux fichiers, l'objectif de cet exercice et de construire un troisième fichier regroupant les informations concernant les élèves présents dans les deux fichiers. Ce fichier contiendra donc 5~colonnes.
+
+\exequest Construire une fonction qui prend comme argument un nom de fichier et qui retourne le contenu du fichier dans une matrice (une liste de listes)\footnote{On pourra s'inspirer du programme présent à l'adresse \url{http://www.xavierdupre.fr/enseignement/initiation/initiation_via_python_all/chap7_fichiers_200_.html}.}.
+\vspace{-0.15cm}
+\begin{verbatimx}
+def convertit_fichier_en_matrice (fichier) :
+...
+\end{verbatimx}
+
+\exequest Construire une fonction qui prend comme entrée une matrice et qui construit un dictionnaire dont~:
+\begin{itemize}
+\item la clé est un tuple composé des valeurs des deux premières colonnes (nom, prénom)
+\item la valeur est la liste des valeurs des autres colonnes
+\end{itemize}
+\vspace{-0.15cm}
+
+\begin{verbatimx}
+def convertit_matrice_en_dictionnaire (matrice) :
+...
+\end{verbatimx}
+
+\exequest Construire une fonction qui effectue la fusion de deux dictionnaires. Le dictionnaire résultant vérifie~:
+\begin{itemize}
+\item chaque clé est présente dans les deux dictionnaires à la fois
+\item la valeur associée à une clé est la somme des deux listes associées à cette même clé dans chacun des deux dictionnaires.
+\end{itemize}
+\vspace{-0.15cm}
+
+\begin{verbatimx}
+def fusion_dictionnaire (dico1, dico2) :
+\end{verbatimx}
+\vspace{-0.15cm}
+
+
+\exequest Construire une fonction qui convertit un dictionnaire en matrice. C'est la fonction réciproque de la fonction de la question~2. Les deux premières colonnes sont celles de la clé, les suivantes sont celles des valeurs.
+\vspace{-0.15cm}
+
+\begin{verbatimx}
+def convertit_dictionnaire_en_matrice (dico) :
+\end{verbatimx}
+\vspace{-0.15cm}
+
+\exequest Ecrire une fonction qui écrit une matrice dans un fichier texte.
+\vspace{-0.15cm}
+
+\begin{verbatimx}
+def convertit_matrice_en_fichier (mat, fichier) :
+\end{verbatimx}
+\vspace{-0.15cm}
+
+\exequest En utilisant toutes les fonctions précédentes, écrire une fonction qui effectue la fusion de deux fichiers et qui écrit le résultat dans un autre fichier.
+\vspace{-0.15cm}
+
+\begin{verbatimx}
+def fusion_fichier (fichier1, fichier2, fichier_resultat) :
+\end{verbatimx}
+\vspace{-0.15cm}
+
+\exequest En vous inspirant du schéma proposé dans les précédentes questions, il s'agit ici de produire un troisième fichier qui contient tous les couples (nom, prénom) qui sont présents dans un fichier mais pas dans les deux à la fois.
+
+\vspace{-0.15cm}
+\begin{verbatimx}
+def union_moins_intersection_fichier (fichier1, fichier2, fichier_resultat) :
+\end{verbatimx}
+
+\exequest Serait-il compliqué d'écrire une fonction qui permette de fusionner 3~fichiers~? $n$~fichiers~? Justifier.
+
+\textbf{A quoi ça sert~:} cette opération de fusion peut être effectuée sous Excel lorsque la taille des fichiers n'excède pas 65000 lignes. Au delà, cet énoncé propose un moyen de fusionner des fichiers de plusieurs millions de lignes.
+
+\end{xexercicenot}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\ifnum\correctionenonce = 1
+
+\begin{xdemoexonot}{td_note_rattrapage2009}
+
+\bigskip
+\inputcodes{../python_examen/ecrit_2009_rattrapage.py}{exercice pour s'évaluer}{, correction 2009}
+\vspaceneg
+
+\end{xdemoexonot}
+\fi
+
+\input{../../common/exo_end.tex}%

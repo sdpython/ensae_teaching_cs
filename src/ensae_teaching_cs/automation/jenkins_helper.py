@@ -138,7 +138,8 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None, platform=None)
     else:
         context = {'Python37': 'python3.7',
                    'Python38': 'python3.8', 'Python39': 'python3.9'}
-        yml_data = load_yaml(pattern % ('_automation', 'master'), context=context)
+        yml_data = load_yaml(pattern %
+                             ('_automation', 'master'), context=context)
         pyth = yml_data[0]['python']
         res = []
         for pyt in pyth:

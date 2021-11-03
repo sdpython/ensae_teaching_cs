@@ -1,0 +1,20 @@
+N5	P5	cuisine
+N6	P6	bureau
+N7	P7	salle à manger
+N8	P8	salon
+N9	P9	grand salon
+N10	P10	cave
+N11	P11	hall
+N12	P12	véranda
+N13	P13	studio
+N14	P14	bibliothèque
+N15	P15	bureau
+N16	P16	cuisine
+N17	P17	cave
+N18	P18	véranda
+N19	P19	grand salon
+N20	P20	salle à manger
+N21	P21	hall
+N22	P22	case
+N23	P23	bureau
+N24	P24	cuisine

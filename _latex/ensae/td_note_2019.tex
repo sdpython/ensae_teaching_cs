@@ -1,0 +1,119 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\newcommand{\sametextforthisinterro}[0]{ 
+\huge ENSAE TD noté, mardi 23 octobre 2018
+
+\normalsize
+\textit{Le programme devra être envoyé par mail au chargé de TD et au professeur. Toutes les questions valent 2 points.}
+\smallskip
+}
+
+\sametextforthisinterro
+}
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label1_2019}%\indexfrr{énoncé}{pratique}
+
+
+Lisez d'abord les deux dernières questions avant de commencer, elles pourraient vous orienter sur la meilleure façon d'écrire les résultats aux questions qui précèdent pour y répondre rapidement.
+
+\exequest Générer un ensemble de $N=1000$ couples aléatoires $(X_i,Y_i)$ qui vérifient :
+\begin{itemize}
+\item $X_i$ suit une loi normale de variance 1.
+\item $Y_i = 2 X_i + \epsilon_i$ où $\epsilon_i$ suit une loi normale de variance 1.
+\end{itemize}
+
+Fonction suggérée : \codes{def \; random\_mat(N):} Quelques fonctions utiles : \codes{numpy.random.normal}.
+
+\exequest On définit la matrice $M \in \mathbb{M}_{N,2}(\mathbb{R})$ définie par les deux vecteurs colonnes $(X_i)$ et $(Y_i)$. Choisir aléatoirement 20 valeurs dans cette matrice et les remplacer par \codes{numpy.nan}. On obtient la matrice $M_1$. Quelques fonctions utiles : \codes{numpy.random.normal}.
+Fonction suggérée : \codes{def \; build\_m1(mat, n=20):}.
+
+\exequest Calculer $\esp{X} = \frac{1}{N}\sum_i^N X_i$ et $\esp{Y} = \frac{1}{N}\sum_i^N Y_i$. On ne tient pas compte des valeurs manquantes (donc il y aura moins de $N$ valeurs à sommer). Quelques fonctions utiles : \codes{numpy.isnan}.
+
+Fonction suggérée : \codes{def \; mean\_no\_nan(mat):}
+
+\exequest Remplacer les valeurs manquantes de la matrice $M_1$ par la moyenne de leur colonnes respectives. On obtient la matrice $M_2$.
+
+\exequest On suppose qu'on dispose d'une fonction qui trie la matrice $M_1$ selon une colonne. Celle-ci remplace les valeurs manquantes en faisant la moyenne des valeurs qui l'entourent pour une colonne en particulier. Ci-dessous, un exemple pour la second colonne qui contient les $y$. Il faut appliquer cette fonction à chaque colonne.
+
+$\begin{array}{ccr}
+x_1 & y_1 \\
+x_2 & \frac{2}{3} y_1 +  \frac{1}{3} y_4 &\text{(valeur manquante remplacée)}\\
+x_3 & \frac{1}{3} y_1 +  \frac{2}{3} y_4 &\text{(valeur manquante remplacée)}\\
+x_4 & y_4 
+\end{array}$
+
+
+\exequest On a deux méthodes pour compléter les valeurs manquantes, quelle est la meilleure ? Il faut vérifier numériquement en comparant $\norm{M-M_2}^2$ et $\norm{M-M_3}^2$. L'erreur la plus faible détermine la méthode la plus efficace. \textbf{Les réponses numériques doivent apparaître sur votre copie.}
+
+\exequest Une experience réussie ne veut pas dire que cela fonctionne tout le temps. Recommencer 10 fois en changeant le nuage de points et les valeurs manquantes ajoutées.
+
+Fonction suggérée : \codes{def \; repetition(N=1000, n=20, nb=10):}
+
+\exequest Et si on augmente le nombre de valeurs manquantes, donc de 100 à 1000 tous les 100, l'écart se creuse-t-il ou se réduit -il ? Montrez-le numériquement.
+
+\exequest S'il n'y qu'une valeur manquante, peut-on sans changer le résultat (celui de la question 5) se passer de tri pour avoir un coût linéaire ?
+
+\exequest Pour cette question, vous avez le choix entre implémenter la solution que vous proposez à la question précédente (choix sans doute le plus risqué) ou proposer une façon d'étendre la méthode dans le cas où il y a 3 dimensions. Pour remplacer les valeurs manquantes d'une colonne, on trie selon l'autre colonne. Maintenant qu'il y en a trois, laquelle choisir ?
+
+\end{xexercice}
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\sametextforthisinterro
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label2_2019}%\indexfrr{énoncé}{pratique}
+
+
+Lisez d'abord les deux dernières questions avant de commencer, elles pourraient vous orienter sur la meilleure façon d'écrire les résultats aux questions qui précèdent pour y répondre rapidement. 
+
+\exequest Générer un ensemble de $N=1000$ couples aléatoires $(X_i,Y_i)$ qui vérifient :
+\begin{itemize}
+\item $X_i$ suit une loi normale de variance 1.
+\item $Y_i = 2 X_i + \epsilon_i$ où $\epsilon_i$ suit une loi normale de variance 1.
+\end{itemize}
+
+Fonction suggérée : \codes{def \; random\_mat(N):} Quelques fonctions utiles : \codes{numpy.random.normal}.
+
+
+\exequest On définit la matrice $M \in \mathbb{M}_{N,2}(\mathbb{R})$ définie par les deux vecteurs colonnes $(X_i)$ et $(Y_i)$. Choisir aléatoirement 20 valeurs dans cette matrice et les remplacer par \codes{numpy.nan}. On obtient la matrice $M_1$. 
+Fonction suggérée : \codes{def \; build\_m1(mat, n=20):}.
+
+
+\exequest Calculer $\esp{X} = \frac{1}{N}\sum_i^N X_i$ et $\esp{Y} = \frac{1}{N}\sum_i^N Y_i$. On ne tient pas compte des valeurs manquantes (donc il y aura moins de $N$ valeurs à sommer). Quelques fonctions utiles : \codes{numpy.isnan}.
+
+Fonction suggérée : \codes{def \; mean\_no\_nan(mat):}
+
+\exequest Remplacer les valeurs manquantes de la matrice $M_1$ par la moyenne de leur colonnes respectives. On obtient la matrice $M_2$.
+
+\exequest On considère le point de coordonnées $(x, y)$, écrire une fonction qui retourne le point de la matrice $M$ dont l'abscisse est la plus proche de $x$ et pour lequel $y$ n'est pas \codes{numpy.nan}.
+
+\exequest Pour chaque $y$ manquant, on utilise la fonction précédente pour retourner le point dont l'abscisse et la plus proche et on remplace l'ordonnée $y$ par celle du point trouvé. On fait de même avec les $x$ manquant. Si les deux manquent, on remplacera par la moyenne.
+On construit la matrice ainsi $M_3$ à partir de $M_1$.
+
+\exequest On a deux méthodes pour compléter les valeurs manquantes, quelle est la meilleure ? Il faut vérifier numériquement en comparant $\norm{M-M_2}^2$ et $\norm{M-M_3}^2$. \textbf{Les réponses numériques doivent apparaître sur votre copie.}
+
+\exequest Une experience réussie ne veut pas dire que cela fonctionne. Recommencer 10 fois en changeant le nuages de points et les valeurs manquantes ajoutées.
+
+Fonction suggérée : \codes{def \; repetition(N=1000, n=20, nb=10):}
+
+\exequest Et si on augmente le nombre de valeurs manquantes, l'écart se creuse-t-il ou se réduit -il ? Montrez-le numériquement.
+
+\exequest Votre fonction de la question 5 a probablement un coût plus que linéaire. Il est probablement possible de faire mieux, si oui, il faut préciser comment et ce que cela implique sur les données. Il ne faut pas l'implémenter.
+
+\end{xexercice}
+
+
+
+
+
+\input{../../common/exo_end.tex}%

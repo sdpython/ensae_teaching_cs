@@ -1,0 +1,100 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\huge TD noté 2006 jeudi 30 novembre
+
+\normalsize
+\textit{
+Les deux exercices devront être imprimés à la fin du TD et rendus au chargé de TD. Il ne faut pas oublier de mentionner son nom en commentaires au début du programme.}
+}
+\indexfrr{énoncé}{pratique}
+
+\exosubject{Avec des fonctions uniquement}
+\begin{xexercice}\label{td_note_label71}
+
+Le gouvernement désire ajouter un jour férié mais il voudrait le faire à une date éloignée des jours fériés existant. On suppose également que ce jour ne sera pas inséré entre Noël et le jour de l'an. On va donc calculer le nombre de jours qui sépare deux jours fériés dont voici la liste pour l'année 2007~:
+
+\begin{small}
+\begin{center}\begin{tabular}{lr}
+Jour de l'an & 1er janvier 2007 \\
+Lundi de Pâques & 9 avril 2007 \\
+Fête du travail & 1er mai 2007 \\
+Victoire de 1945 & 8 mai 2007 \\
+Ascension & 17 mai 2007 \\
+Lundi de Pentecôte & 4 juin 2007 \\
+Fête nationale & 14 juillet 2007 \\
+Assomption & 15 août 2007 \\
+Toussaint & 1er novembre 2007 \\
+Armistice de 1918 & 11 novembre 2007 \\
+Noël & 25 décembre 2007 
+\end{tabular}\end{center}
+\end{small}
+
+
+On rappelle que l'année 2007 n'est pas une année bissextile et qu'en conséquence, le mois de février ne comporte que 28~jours.
+
+\exequest Afin de simplifier la tâche, on cherche à attribuer un numéro de jour à chaque jour férié~: l'année a 365 jours, pour le numéro du lundi de Pâques, soit 31 (mois de janvier) + 28 (février) + 31 (mars) + 9 = 89. La première question consiste à construire une fonction qui calcule le numéro d'une date étant donné un jour et un mois. Cette fonction prend comme entrée~:\ifnotellipse{ (4~points)}
+
+\begin{small}
+\begin{itemize}
+\item un numéro de jour
+\item un numéro de mois
+\item une liste de 12 nombres correspondant au nombre de jours dans chacun des douze mois de l'année
+\end{itemize}
+\end{small}
+
+
+
+\exequest Si on définit la liste des jours fériés comme étant une liste de couples (jour, mois) triée par ordre chronologique, il est facile de convertir cette liste en une liste de nombres correspondant à leur numéro dans l'année. La fonction à écrire ici appelle la précédente et prend une liste de couples en entrée et retourne comme résultat une liste d'entiers.\ifnotellipse{ (4 points)}
+
+\exequest A partir de cette liste d'entiers, il est facile de calculer l'écart ou le nombre de jours qui séparent deux jours fériés. Il ne reste plus qu'à écrire une fonction qui retourne l'écart maximal entre deux jours fériés, ceux-ci étant définis par la liste de numéros définie par la question précédente. Un affichage du résultat permet de déterminer les deux jours fériés les plus éloignés l'un de l'autre. Quels sont-ils~?\ifnotellipse{ (4~points)}
+
+\end{xexercice}
+
+
+\exosubject{Programme équivalent avec des classes}
+\begin{xexercice}\label{td_note_label72}
+
+Le programme précédent n'utilise pas de classe. L'objectif de ce second exercice est de le réécrire avec une classe.
+
+\exequest Une fonction du programme précédent effectue la conversion entre un couple jour-mois et un numéro de jour. Les calculs sont faits avec le numéro mais le résultat désiré est une date~: les numéros ne sont que des intermédiaires de calculs qui ne devraient pas apparaître aussi explicitement. La première question consiste à créer une classe \codes{Date}~:\ifnotellipse{ (2~points)}
+%
+\vspaceneg
+\begin{verbatimx}
+class Date :
+    def __init__ (self, jour, mois) :
+        ...
+\end{verbatimx}
+\vspaceneg
+
+\exequest A cette classe, on ajoute une méthode qui retourne la conversion du couple jour-mois en un numéro de jour de l'année.\ifnotellipse{ (2 points)}
+
+\exequest On ajoute maintenant une méthode calculant le nombre de jours séparant deux dates (ou objet de type \codes{Date} et non pas numéros). Cette méthode pourra par exemple s'appeler \codes{difference}.\ifnotellipse{ (2~points)}
+
+\exequest Il ne reste plus qu'à compléter le programme pour obtenir les mêmes résultats que le programme de l'exercice~1.\ifnotellipse{ (2~points)}
+
+\exequest Avec ce programme, lors du calcul des écarts entre tous les jours fériés consécutifs, combien de fois effectuez-vous la conversion du couple jour-mois en numéro pour le second jour férié de l'année~? Est-ce le même nombre que pour le programme précédent (en toute logique, la réponse pour le premier programme est~1)~?\ifnotellipse{ (2~points)}
+
+\exequest La réponse à la question précédente vous suggère-t-elle une modification de ce second programme~?\ifnotellipse{ (2~points)}
+
+
+\end{xexercice}
+
+
+\ifnum\correctionenonce = 1
+
+\begin{xdemoexo}{td_note_label71}
+
+\bigskip
+\inputcodes{../python_examen/td_note_2007.py}{exercice pour s'évaluer}{, correction 2007}
+\vspaceneg
+
+On pourrait encore améliorer la dernière classe \codes{Date} en créant un attribut statique pour l'attribut \codes{duree} qui est identique pour toutes les instances de la classe \codes{Date}.
+
+\end{xdemoexo}
+\fi
+
+
+
+\input{../../common/exo_end.tex}%

@@ -1,0 +1,71 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\huge ENSAE TD noté, mercredi 8 décembre 2010
+
+\normalsize
+\textit{Le programme construit au fur et à mesure des questions devra être imprimé à la fin du TD et rendu au chargé de TD. Il ne faut pas oublier de mentionner son nom en commentaires au début du programme et l'ajouter sur chaque page. Les réponses autres que des parties de programme seront insérées sous forme de commentaires. Les définitions de fonctions proposées ne sont que des suggestions. } \smallskip
+}
+
+
+
+\exosubject{}
+\begin{xexercicenot}\label{td_note_label_2011}%\indexfrr{énoncé}{pratique}
+
+Lors de cette séance, on s'intéresse aux restaurants de Paris et à leur répartition selon les arrondissements. Ils sont décrits dans le fichier accessible à l'adresse~: \httpstyle{http://www.xavierdupre.fr/enseignement/examen\_python/restaurant\_paris.txt}. Ce fichier contient trois colonnes~: l'arrondissement, la longitude, la latitude. On supposera que Paris est suffisamment petit pour que la longitude et la latitude soient considérées comme des coordonnées cartésiennes.
+
+
+\exequest La première question consiste à télécharger le fichier puis à récupérer ses informations via la fonction \codes{def \; lit\_fichier}. Cette fonction retourne une matrice (une liste de listes). (2~points)
+
+\exequest On souhaite ensuite compter le nombre de restaurants par arrondissement pour déterminer celui qui en contient le plus et celui qui en contient le moins. On écrit une seule fonction \codes{def \; compte\_restaurant (mat)} qui retourne un dictionnaire contenant le décompte des restaurants par arrondissement. (3~points)
+
+\exequest Certains arrondissements sont plus grands que d'autres et on aimerait mesurer la densité des restaurants par arrondissement plutôt que leur nombre. Cependant il n'est pas évident de deviner la superficie d'un arrondissement à partir des seuls restaurants. On construit donc l'approximation suivante~:
+
+\vspace{-0.5cm}
+\begin{tabularx}{\textwidth}{@{}Xr@{}}
+\vspace{-4cm}
+\begin{enumerate}
+\item Chaque arrondissement est un cercle.
+\item Le centre de ce cercle est le barycentre de tous les restaurants qu'il contient.
+\item Le rayon est la distance séparant le barycentre du premier restaurant en dehors de l'arrondissement.
+\item La superficie de l'arrondissement est alors $\pi R^2$.
+\end{enumerate}
+&
+\includegraphics[width=6cm]{../python_examen/image/restoarr.png} 
+\end{tabularx}
+
+On cherche d'abord à calculer le barycentre de chaque arrondissement. On constuit la fonction \codes{def \; barycentre (mat)} qui retourne un dictionnaire associant un couple de points à chaque arrondissement. (4~points) \textbf{Cette question vaut 5~points si le coût de l'algorithme est optimal.}
+
+\exequest On cherche maintenant à connaître le plus proche restaurant en dehors de l'arrondissement. Ecrire une fonction qui calcule la distance euclidienne entre deux points~: \codes{def \; distance (x1, y1, x2, y2)}. (2~points)
+
+\exequest Pour un arrondissement, écrire une fonction \codes{def \; plus\_proche\_restaurant (x,y, arr, mat)} qui retourne le restaurant le plus proche du point \codes{(x,y)} en dehors  de l'arrondissement \codes{arr}. (4~points)
+
+\exequest Ecrire une dernière fonction qui retourne sous forme de dictionnaire la densité approchée pour chaque arrondissement~: \codes{def \; densite\_approchee (mat)}. Quelles sont les arrondissements le plus et le moins dense~? Commentez les résultats et proposez des améliorations~? (4~points)
+
+\begin{verbatimx}
+75002    2.407478    48.930141         75010    2.405963    48.921033
+75002    2.400573    48.913487         75018    2.391144    48.934509
+\end{verbatimx}
+
+
+
+
+
+\end{xexercicenot}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifnum\correctionenonce = 1
+
+\begin{xdemoexonot}{td_note_label_2011}
+
+\inputcodes{../python_examen/td_note_2011.py}{exercice pour s'évaluer}{, correction 2011}
+
+
+
+\end{xdemoexonot}
+\fi
+
+\input{../../common/exo_end.tex}%

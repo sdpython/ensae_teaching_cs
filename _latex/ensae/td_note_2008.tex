@@ -1,0 +1,68 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\ifx\ifnotellipse\undefined
+\newcommand{\ifnotellipse}[1]{}
+\fi
+
+\firstpassagedo{
+\huge TD noté, 12 décembre 2007
+
+\normalsize
+\textit{Le programme construit au fur et à mesure des questions devra être imprimé à la fin du TD et rendu au chargé de TD. Il ne faut pas oublier de mentionner son nom en commentaires au début du programme. Des commentaires insérés dans le programme permettront de retrouver les réponses de chaque question.}
+}
+\indexfrr{énoncé}{pratique}
+
+\exosubject{}
+\begin{xexercicenot}\label{td_note_label81}
+
+Lorsqu'on se connecte à un site internet, celui-ci enregistre votre adresse IP, l'heure et la date de connexion ainsi que la page ou le fichier désiré. Ainsi le fichier \textit{logpdf.txt}\footnote{Il faut télécharger ce fichier depuis l'adresse \url{http://www.xavierdupre.fr/enseignement/initiation/logpdf.txt}} recense ces quatre informations séparées par des espaces pour les fichiers d'extension \textit{pdf} téléchargés sur le site \url{http://www.xavierdupre.fr/}.
+
+\exequest La première étape consiste à charger les informations depuis le fichier texte dans une matrice de 4 colonnes (liste de listes, liste de t-uples). On utilisera pour cela les fonctions \codes{open} et les méthodes \codes{split}, \codes{replace} associées aux chaînes de caractères. On pourra s'aider des corrections des TD précédents.\ifnotellipse{ (2~points)}
+
+\exequest On souhaite dans un premier temps faire des statistiques sur les dates~: on veut compter le nombre de fichiers téléchargés pour chaque date présente dans les données. On pourra pour cela utiliser un dictionnaire dont la clé sera bien choisie. Le résultat devra être inséré dans une fonction prenant comme entrée une matrice (ou liste de listes, liste de t-uples) et retournant un dictionnaire comme résultat.\ifnotellipse{ (4~points)}
+
+\exequest On s'intéresse au programme suivant~: \vspaceneg
+%
+\begin{verbatimx}
+l = [ (1, "un"), (3, "deux",), (2, "deux"), (1, "hun"), (-1, "moinsun") ]
+l.sort (reverse = True)
+print l
+\end{verbatimx}
+%
+\vspaceneg Donc le résultat est~: \vspaceneg
+%
+\begin{verbatimx}
+[(3, 'deux'), (2, 'deux'), (1, 'un'), (1, 'hun'), (-1, 'moinsun')]
+\end{verbatimx}
+%
+\vspaceneg Que s'est-il passé~?\ifnotellipse{ (2~points)}
+
+\exequest On désire maintenant connaître les 10 dates pour lesquelles il y a eu le plus de téléchargements ces jours-là. L'inconvénient est que le dictionnaire élaboré à la question~2 ne retourne pas les réponses dans l'ordre souhaité~: il faut classer les dates par nombre de téléchargements croissants. Il faut ici imaginer une fonction qui retourne ces dix meilleures dates et des dix fréquentations correspondantes en se servant de la remarque de la question~3.\ifnotellipse{ (4~points)} \ifnotellipse{A quels événements correspondent les quatre premières dates~? (Cette petite question ne rapporte pas de point.)}
+
+\exequest Effectuez le même travail pour déterminer les dix documents les plus téléchargés.\ifnotellipse{ (2~points)}
+
+\exequest Ecrire une fonction qui retourne l'heure sous forme d'entier à partir d'une date définie par une chaîne de caractères au format \codes{"hh:mm:ss"}. Par exemple, pour \codes{"14:55:34"}, la fonction doit retourner~14 sous forme d'entier. L'instruction \codes{int ("14")} convertit une chaîne de caractères en un entier.\ifnotellipse{ (2~points)}
+
+\exequest Calculer le nombre de documents téléchargés pour chaque heure de la journée. Le site est-il consulté plutôt le matin ou le soir~? Serait-il possible de conclure aussi rapidement pour un site d'audience internationale~?\ifnotellipse{ (4~points)}
+
+
+\end{xexercicenot}
+
+
+
+
+\ifnum\correctionenonce = 1
+
+\begin{xdemoexonot}{td_note_label81}
+
+\bigskip
+\inputcodes{../python_examen/td_note_2008.py}{exercice pour s'évaluer}{, correction 2008}
+\vspaceneg
+
+\end{xdemoexonot}
+
+\fi
+
+
+\input{../../common/exo_end.tex}%

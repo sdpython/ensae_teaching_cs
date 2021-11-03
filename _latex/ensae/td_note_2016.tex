@@ -1,0 +1,275 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\newcommand{\sametextforthisinterro}[0]{ 
+\huge ENSAE TD noté, vendredi 11 décembre 2015
+
+\normalsize
+\textit{Le programme devra être imprimé et rendu au chargé de TD. Il ne faut pas oublier de mentionner son nom sur chaque page et le numéro des exercices. Toutes les questions valent 2 points.}
+\smallskip
+}
+
+\sametextforthisinterro
+}
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label1_2016}%\indexfrr{énoncé}{pratique}
+
+
+Louer ou acheter un appartement ? A surface égale, est-il préférable de louer ou d'acheter son appartement~? Cet exercice propose différentes questions afin d'y répondre.
+
+
+\exequest On suppose qu'on a $X$ euros d'apport, écrire une fonction qui calcule la somme d'argent obtenue après $n$ années d'un placement à $r$ \% ? Par exemple, pour $n=2$, la fonction retourne $x + rx + r(1+r)x = (1+r)^2 x$.
+
+\begin{verbatimx}
+def rendement(x, n, r):
+    # ....
+    return
+\end{verbatimx}
+
+\exequest Une banque prête de l'argent à un taux annuel $p$, c'est-à-dire au taux mensuel $m=(1+p)^\frac{1}{12}-1$. Ce taux s'applique chaque mois sur la somme du capital restant à rembourser. On emprunte $K$ euros avec une mensualité fixée à $M$ euros, écrire une fonction qui décompose la mensualité $M$ en capital remboursé et intérêt.
+
+\begin{verbatimx}
+def decompose_mensualite(K,M,p):
+    # ...
+    return capital, interet
+\end{verbatimx}
+
+
+\exequest Ecrire une fonction qui calcule toutes les mensualités.
+
+\begin{verbatimx}
+def mensualites(K,M,p):
+    # ....
+    return [ liste de mensualités ]
+\end{verbatimx}
+
+
+\exequest Un emprunteur souhaite contracter un emprunt pour $Y$ années. La mensualité maximum qu'il peut consacrer par mois est $M$, le taux de l'emprunt est $p$. Quelle est la somme maximale qu'on puisse emprunter ? On se contentera d'une valeur approchée à 1000 euros près.
+
+\begin{verbatimx}
+def somme_maximale(M,p,Y):
+    # ....
+    return K max
+\end{verbatimx}
+
+
+\exequest A Paris, on loue un appartement pour $L$ euros du m$^2$. Un parisien loue son appartement de $S m^2$ pour $SL$ euros. Ce parisien peut dépenser $A$ euros par mois répartis en $SL$ le loyer et $A-SL$ les économies. Ecrire une fonction qui calcule les économies réalisées au bout de $Y$ années :
+
+\begin{verbatimx}
+def economie(A,S,L,r,Y):
+    # ....
+    return economie
+\end{verbatimx}
+ 
+
+\exequest En considérant que ce même parisien ne peut dépenser plus de $A$ euros par mois, qu'il ne possède rien au début de sa carrière professionnelle, on veut savoir à partir de combien d'années il sera en mesure d'acheter son appartement à supposer qu'il peut se constituer un apport en capital issu de ces économies. On suppose que le prix au mètre carré à Paris est $C$ et qu'il veut emprunter avec un prêt d'une durée fixe. Voici les constantes à utiliser :
+
+\begin{center}\begin{small}\begin{tabular}{l|r|l|l} 
+nom & valeur & unité & sens \\ \hline
+A & 1200 & euros/mois & somme allouée au loyer + économies \\
+S & 35 & $m^2$ &  surface de l'appartement \\
+L & 25 & euros/$m^2$ & prix du loyer au mètre carré \\
+r & 0.01 & & rendement annuel de l'argent (livret A) \\
+Y & 20 &  années & durée de l'emprunt \\
+C & 8000 & euros/$m^2$ & prix d'achat au mètre carré \\
+p & 0.02 & & taux annuel de l'emprunt bancaire  
+\end{tabular}\end{small}\end{center}
+
+\begin{verbatimx}
+def bascule(A,S,L,r,Y,C,p):
+    # ....
+    return nombre d'années
+\end{verbatimx}
+
+
+\exequest Ecrire une fonction qui détermine la plus petite surface que ce parisien ne pourra jamais s'offrir avant 20 ans au mètre carré près.
+
+\begin{verbatimx}
+def surface_max(A,L,r,Y,C,p,delay=20):
+    # ....
+    return surface
+\end{verbatimx}
+
+
+
+
+
+\exequest Ce modèle ne prend pas en compte tous les paramètres de la vie réelle. Citez-en un.
+
+\exequest \textbf{Question bonus.} A la question 4, on a implémenté la fonction \codes{somme\_maximale}. S'il fallait trouver un résultat égal à $K$, une implémentation naïve appelle $K/1000$ fois la fonction \codes{mensualites}. Pouvez-vous faire mieux ?
+
+\end{xexercice}
+
+
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label2_2016}%\indexfrr{énoncé}{pratique}
+
+
+\exequest Michel perd souvent ses carnets de numéros et pour éviter d'importuner ses proches de recevoir des coups de fils impromptus, il utilise un code. Si la première lettre est une voyelle, il permute les numéros 3 et 4 sinon il les laisse en l'état. Si la seconde lettre est une voyelle, il permute les numéros 5 et 6, rien en cas de consonnes. Exemple (on enlève volontairement les accents) :
+
+\begin{verbatimx}
+adele   06 64 34 22 67 --> 06 46 34 22 67  lettres 06 aa dd ee ll  
+gerard  06 64 34 22 68 --> 06 64 43 22 86  lettres 06 gg ee rr aa
+\end{verbatimx}
+
+Ecrire la fonction qui transforme un numéro. Il est recommandé de ne pas tenir compte des espaces.
+
+
+\begin{verbatimx}
+def transforme_numero(prenom, numero):
+    # ....
+    return 
+\end{verbatimx}
+
+\exequest Ecrire la fonction qui effectue la transformation inverse.
+
+
+\end{xexercice}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\firstpassagedo{
+\newpage
+\sametextforthisinterro
+}
+
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label3_2016}%\indexfrr{énoncé}{pratique}
+
+
+\exequest Michel perd souvent ses carnets de numéros et pour éviter d'importuner ses proches de recevoir des coups de fils impromptus, il utilise un code. Si la première lettre est une voyelle, il fait la somme des chiffres 3 et 4 et remplace le chiffre 4 par celui des unités de l'addition, sinon il les laisse en l'état. Si la seconde lettre est une voyelle, il additionne les chiffres 5 et 6 et remplace le chiffre 6 par celui des unités de l'addition, rien en cas de consonnes. Exemple (on enlève volontairement les accents) :
+
+\begin{verbatimx}
+Adèle   06 64 34 22 67 --> 06 60 34 24 67  lettres 06 aa dd ee ll  
+Gérard  06 64 34 22 68 --> 06 64 37 22 64  lettres 06 gg ee rr aa
+\end{verbatimx}
+
+Ecrire la fonction qui transforme un numéro. Il est recommandé de ne pas tenir compte des espaces.
+
+
+\begin{verbatimx}
+def transforme_numero(prenom, numero):
+    # ....
+		return 
+\end{verbatimx}
+
+\exequest A votre avis, est-il possible d'écrire la fonction qui effectue la transformation inverse. Justifiez.
+
+
+
+
+\end{xexercice}
+
+
+
+
+
+
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label4_2016}%\indexfrr{énoncé}{pratique}
+
+
+
+
+Louer ou acheter un appartement ? A surface égale, est-il préférable de louer ou d'acheter son appartement~? Cet exercice propose différentes questions afin d'y répondre.
+
+
+\exequest On suppose qu'on a $X$ euros d'apport, écrire une fonction qui calcule la somme d'argent obtenue après $n$ années d'un placement à $r$ \% ? Par exemple, pour $n=2$, la fonction retourne $x + rx + r(1+r)x = (1+r)^2 x$.
+
+\begin{verbatimx}
+def rendement(x, n, r):
+    # ....
+    return
+\end{verbatimx}
+
+\exequest Une banque prête de l'argent à un taux annuel $p$, c'est-à-dire au taux mensuel $m=(1+p)^\frac{1}{12}-1$. Ce taux s'applique chaque mois sur la somme du capital restant à rembourser. On emprunte $K$ euros avec une mensualité fixée à $M$ euros, écrire une fonction qui calcule toutes les mensualités.
+
+\begin{verbatimx}
+def mensualites(K,M,p):
+    # ....
+    return [ liste de mensualités ]
+\end{verbatimx}
+
+
+\exequest On retourne le problème : on fixe le nombre maximal de mensualités à $Y$ années, toujours le taux $p$ et le montant de la mensualité $M$. Calculer la somme maximale $K$ qu'on puisse emprunter. Il n'est pas forcément nécessaire d'utiliser une formule explicite.
+
+\begin{verbatimx}
+def somme_maximale(M,p,Y):
+    # ....
+    return K max
+\end{verbatimx}
+
+
+\exequest A Paris, on loue un appartement pour $L$ euros du m$^2$. Un parisien loue son appartement de $S m^2$ pour $SL$ euros. Ce parisien peut dépenser $A$ euros par mois répartis en $SL$ le loyer et $A-SL$ les économies. Ecrire une fonction qui calcule les économies réalisées au bout de $Y$ années :
+
+\begin{verbatimx}
+def economie(A,S,L,r,Y):
+    # ....
+    return economie
+\end{verbatimx}
+ 
+
+\exequest En considérant que ce même parisien ne peut dépenser plus de $A$ euros par mois, qu'il ne possède rien au début de sa carrière professionnelle, on veut savoir à partir de combien d'années il sera en mesure d'acheter son appartement à supposer qu'il peut se constituer un apport en capital issu de ces économies. On suppose que le prix au mètre carré à Paris est $C$ et qu'il veut emprunter avec un prêt d'une durée fixe. 
+
+\begin{verbatimx}
+def bascule(A,S,L,r,Y,C,p):
+    # ....
+    return nombre d'années
+\end{verbatimx}
+
+
+Voici les constantes à utiliser :
+
+\begin{center}\begin{small}\begin{tabular}{l|r|l|l} 
+nom & valeur & unité & sens \\ \hline
+A & 1200 & euros/mois & somme allouée au loyer + économies \\
+S & 35 & $m^2$ &  surface de l'appartement \\
+L & 25 & euros/$m^2$ & prix du loyer au mètre carré \\
+r & 0.01 & & rendement annuel de l'argent (livret A) \\
+Y & 20 &  années & durée de l'emprunt \\
+C & 8000 & euros/$m^2$ & prix d'achat au mètre carré \\
+p & 0.02 & & taux annuel de l'emprunt bancaire  
+\end{tabular}\end{small}\end{center}
+
+\exequest Déterminer la somme $A$ à 100 euros près qu'il faille investir pour acheter 40 $m^2$ à 30 ans en supposant que ce parisien a commencé à travailler à 23 ans et commence à louer un appartement de cette surface. 
+
+
+\begin{verbatimx}
+def A40a30(L,r,Y,C,p):
+    # ....
+    return surface
+\end{verbatimx}
+
+
+\exequest Ce modèle ne prend pas en compte tous les paramètres de la vie réelle. Citez-en un.
+
+\exequest \textbf{Question bonus.} A la question 4, on a implémenté la fonction \codes{somme\_maximale}. S'il fallait trouver un résultat égal à $K$, une implémentation naïve appelle $K/1000$ fois la fonction \codes{mensualites}. Pouvez-vous faire mieux ?
+
+
+\end{xexercice}
+
+
+
+
+
+\input{../../common/exo_end.tex}%

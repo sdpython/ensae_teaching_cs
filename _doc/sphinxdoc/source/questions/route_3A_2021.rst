@@ -90,7 +90,7 @@ carte GPU.
     * Synchronisation et `GIL <http://www.xavierdupre.fr/app/teachpyx/helpsphinx/notebooks/gil_example.html>`_
       (voir aussi `GIL <https://www.codeflow.site/fr/article/python-gil>`_)
     * Garbage Collector
-    * :epkg:`Cython`, :epkg:`pybind11`    
+    * :epkg:`Cython`, :epkg:`pybind11`
 * Etude de cas
     * dot, matmul, syntaxe
     * `prange <https://cython.readthedocs.io/en/latest/src/userguide/parallelism.html>`_
@@ -149,4 +149,3 @@ Séance 5
 
 Séance 6
 ^^^^^^^^
-

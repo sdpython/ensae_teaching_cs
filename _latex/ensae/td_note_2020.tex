@@ -1,0 +1,117 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\newcommand{\sametextforthisinterro}[0]{ 
+\huge ENSAE TD noté, mardi 22 octobre 2019
+
+\normalsize
+\textit{Le programme devra être envoyé par mail au chargé de TD et au professeur. Toutes les questions valent 2 points.}
+\smallskip
+}
+
+\sametextforthisinterro
+}
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label1_2020}%\indexfrr{énoncé}{pratique}
+
+\exequest C'est un mariage dans une salle ronde. On veut disposer les tables de sortes qu'elles soient éloignées le plus possible les unes des autres et du bord de la salle. Les tables ont toutes le même rayon. Ecrire une fonction qui calcule la distance entre deux tables rondes dont on connaît le centre. Et comme ce sont des tables rondes, on ne considère que la distance euclidienne entre leurs centres. \textbf{Fonction suggérée :} \codes{def \; distance\_table(x1, y1, x2, y2):}
+
+\exequest Ecrire une fonction qui calcule la distance entre une table (son centre) et le bord de la salle de rayon \textit{R}. \textbf{Fonction suggérée :} \codes{def \; distance\_bord(x1, y1, R):}
+
+\exequest Ecrire une fonction qui tire aléatoirement une table dans le cercle de rayon \textit{R}.
+\textbf{Fonction suggérée :} \codes{def \; table\_alea(R):}
+
+\exequest Ecrire une fonction qui tire aléatoirement \textit{N} tables dans le cercle de rayon \textit{R}.
+\textbf{Fonction suggérée :} \codes{def \; n_table\_alea(N, R):}
+
+\exequest Ecrire une fonction qui retourne la table la plus proche d'une table ou du bord. La fonction doit retourner l'indice de la table la plus proche ou -1 si c'est le bord, puis la distance associée. On ajoute un paramètre \textit{skip\_i} pour éviter une table.
+\textbf{Fonction suggérée :} \codes{def \; table\_proches(x1, y1, list\_tables, R, skip\_i):}
+
+\exequest Ecrire une fonction qui tire \textit{N} tables aléatoirement dans la salle ronde et qui retourne la distance minimum entre deux tables ou le mur et les tables.
+\textbf{Fonction suggérée :} \codes{def \; distance\_table\_alea(N, R):}
+
+\exequest Ecrire une fonction qui appelle \textit{k} fois la fonction précédente et qui retourne la meilleure distribution aléatoire des tables.
+\textbf{Fonction suggérée :} \codes{def \; meilleur\_table\_alea(k, N, R):}
+
+\exequest Ecrire une fonction qui retourne le résultat pour 11 tables et une salle de diamètre 1.
+
+\exequest Ecrire une fonction qui représente la solution avec matplotlib en partant de l'exemple donné.
+\textbf{Fonction suggérée :} \codes{def \; plot\_tables(R, list\_tables):}
+
+
+\begin{verbatimx}
+import matplotlib.pyplot as plt
+from matplotlib.patches import Circle
+fig, ax = plt.subplots(1, 1, figsize=(4, 4))
+ax.set_xlim([-1, 1])
+ax.set_ylim([-1, 1])
+ax.add_artist(Circle((0, 0), 1, alpha=0.2))
+ax.plot([-0.5, 0.2], [-0.2, 0.3], 'o');
+\end{verbatimx}
+
+\exequest Imaginer un algorithme qui soit meilleur que le hasard pour répartir les tables... Le quadrillage idéal serait sans doute que toutes les tables forment un quadrillage fait de triangles équilatéraux. Avez-vous déjà entendu parler des diagrammes de Voronoï ?
+
+\end{xexercice}
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\sametextforthisinterro
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label2_2020}%\indexfrr{énoncé}{pratique}
+
+\exequest C'est un mariage dans une salle carrée. On veut disposer les tables de sortes qu'elles soient éloignées le plus possible les unes des autres et du bord de la salle. Les tables sont toutes carrées et ont toutes la même taille. Ecrire une fonction qui calcule la distance entre deux tables carrées dont on connaît le centre. Et comme ce sont des tables carrées, on considère que la distance entre deux tables est la plus grande des valeurs absolues des différences de coordonnées des centres.
+\textbf{Fonction suggérée :} \codes{def \; distance\_table(x1, y1, x2, y2):}
+
+\exequest Ecrire une fonction qui calcule la distance entre une table (son centre) et le bord de la salle de côté \textit{2C} et dont le centre est placé aux coordonnées \textit{(0, 0)}. La fonction retourne une valeur négative si la table n'est pas dans la salle. Le bord le plus proche est celui qui est horizontalement ou verticalement le plus proche.
+\textbf{Fonction suggérée :} \codes{def \; distance\_bord(x1, y1, C):}
+
+\exequest Ecrire une fonction qui tire aléatoirement une table dans le carré de côté \textit{2C}.
+\textbf{Fonction suggérée :} \codes{def \; table\_alea(C):}
+
+\exequest Ecrire une fonction qui tire aléatoirement \textit{N} tables dans le carré de côté \textit{2C}.
+\textbf{Fonction suggérée :} \codes{def \; n\_table\_alea(N, C):}
+
+\exequest Ecrire une fonction qui retourne la table la plus proche d'une table ou du bord. La fonction doit retourner l'indice de la table la plus proche ou -1 si c'est le bord, puis la distance associée. On ajoute un paramètre \textit{skip\_i} pour éviter une table.
+\textbf{Fonction suggérée :} \codes{def \; table\_proches(x1, y1, list\_tables, C, skip\_i):}
+
+\exequest Ecrire une fonction qui tire \textit{N} tables aléatoirement et qui retourne la distance minimum entre deux tables ou le mur et les tables.
+\textbf{Fonction suggérée :} \codes{def \; distance\_n\_tables\_alea(N, C):}
+
+\exequest Ecrire une fonction qui appelle \textit{k} fois la fonction précédente et qui retourne la meilleure distribution aléatoire des tables.
+\textbf{Fonction suggérée :} \codes{def \; meilleur\_table\_alea(k, N, C):}
+
+\exequest Ecrire une fonction qui retourne le résultat pour 11 tables et une salle de diamètre 1 et 10 essais.
+
+\exequest Ecrire une fonction qui représente la solution avec matplotlib en partant de l'exemple donné.
+\textbf{Fonction suggérée :} \codes{def \; plot\_tables(C, list\_tables):}
+
+\begin{verbatimx}
+import matplotlib.pyplot as plt
+from matplotlib.patches import Rectangle
+fig, ax = plt.subplots(1, 1, figsize=(4, 4))
+ax.set_xlim([-1, 1])
+ax.set_ylim([-1, 1])
+ax.add_artist(Rectangle((-1, -1), 2, 2, alpha=0.2))
+ax.plot([-0.5, 0.2], [-0.2, 0.3], 'o');
+\end{verbatimx}
+
+
+\exequest Imaginer un algorithme qui soit meilleur que le hasard pour répartir les tables... Le quadrillage idéal serait sans doute que toutes les tables forment un quadrillage fait de triangles rectangles. Avez-vous déjà entendu parler des diagrammes de Voronoï ?
+
+
+\end{xexercice}
+
+
+
+
+
+\input{../../common/exo_end.tex}%

@@ -1,0 +1,118 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\newcommand{\sametextforthisinterro}[0]{ 
+\huge ENSAE TD noté, vendredi 29 décembre 2016
+
+\normalsize
+\textit{Le programme devra être imprimé et rendu au chargé de TD. Il ne faut pas oublier de mentionner son nom sur chaque page et le numéro des exercices. }
+\smallskip
+}
+
+\sametextforthisinterro
+}
+
+
+Le premier exercice reprend l'énoncé proposé lors de l'examen donné à l'ENSAE en décembre 2015\footnote{\url{http://www.xavierdupre.fr/app/ensae_teaching\_cs/helpsphinx3/notebooks/td\_note\_2016.html}}. Les premières questions sont presque identiques. Vous avez le droit de vous servir de la correction.
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label1_2016}%\indexfrr{énoncé}{pratique}
+
+
+Louer ou acheter un appartement ? A surface égale, est-il préférable de louer ou d'acheter son appartement~? Cet exercice propose différentes questions afin d'y répondre.
+
+
+\exequest On suppose qu'on a $X$ euros d'apport, écrire une fonction qui calcule la somme d'argent obtenue après $n$ années d'un placement à $r$ \% ? Par exemple, pour $n=2$, la fonction retourne $x + rx + r(1+r)x = (1+r)^2 x$. (1~point)
+
+\begin{verbatimx}
+def rendement(x, n, r):
+    # ....
+    return
+\end{verbatimx}
+
+\exequest Une banque prête de l'argent à un taux annuel $p$, c'est-à-dire au taux mensuel $m=(1+p)^\frac{1}{12}-1$. Ce taux s'applique chaque mois sur la somme du capital restant à rembourser. On emprunte $K$ euros avec une mensualité fixée à $M$ euros, écrire une fonction qui décompose la mensualité $M$ en capital remboursé et intérêt. (1~point)
+
+\begin{verbatimx}
+def decompose_mensualite(K,M,p):
+    # ...
+    return capital, interet
+\end{verbatimx}
+
+
+\exequest Ecrire une fonction qui calcule toutes les mensualités. (1~point)
+
+\begin{verbatimx}
+def mensualites(K,M,p):
+    # ....
+    return [ liste de mensualités ]
+\end{verbatimx}
+
+
+\exequest A Paris, on loue un appartement pour $L$ euros du m$^2$. Un parisien loue son appartement de $S m^2$ pour $SL$ euros. Ce parisien peut dépenser $A$ euros par mois répartis en $SL$ le loyer et $A-SL$ les économies. Ecrire une fonction qui calcule les économies réalisées au bout de $Y$ années : (1~point)
+
+\begin{verbatimx}
+def economie(A,S,L,r,Y):
+    # ....
+    return economie
+\end{verbatimx}
+ 
+
+\exequest En considérant que ce même parisien ne peut dépenser plus de $A$ euros par mois, qu'il ne possède rien au début de sa carrière professionnelle, on veut connaître la surface qu'il sera en mesure d'acheter chaque année entre 20 et 40 ans. On suppose qu'il peut se constituer un apport en capital issu de ces économies et d'un don de ses parents. On suppose que le prix au mètre carré à Paris est $C$ et qu'il veut emprunter avec un prêt d'une durée fixe. Voici les constantes à utiliser : (2~points)
+
+\begin{center}\begin{small}\begin{tabular}{l|r|l|l} 
+nom & valeur & unité & sens \\ \hline
+D & 50000 & euros & don de ses parents \\
+A & 1200 & euros/mois & somme allouée au loyer + économies \\
+S & 35 & $m^2$ &  surface de l'appartement \\
+L & 25 & euros/$m^2$ & prix du loyer au mètre carré \\
+r & 0.01 & & rendement annuel de l'argent (livret A) \\
+Y & 20 &  années & durée de l'emprunt \\
+C & 8000 & euros/$m^2$ & prix d'achat au mètre carré \\
+p & 0.02 & & taux annuel de l'emprunt bancaire  
+\end{tabular}\end{small}\end{center}
+
+\begin{verbatimx}
+def tableau_surface(D,A,S,L,r,Y,C,p):
+    # ....
+    return liste [(année, surface, prix)]
+\end{verbatimx}
+
+\exequest Même question mais on tient compte de l'inflation du prix du mètre carré à Paris, environ $i=5\%$ par ans. (3~points)
+
+\exequest Même question mais on tient compte d'une augmentation de salaire selon un scénario de votre choix. (3~points)
+
+
+\end{xexercice}
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label6_2016}%\indexfrr{énoncé}{pratique}
+
+
+\exequest Michel perd souvent ses carnets de numéros et pour éviter d'importuner ses proches de recevoir des coups de fils impromptus, il utilise un code. On découpe un numéro de téléphone par groupe de deux chiffres. Si la première lettre est une voyelle, il permute le groupe 2 avec le groupe 3 sinon il les laisse en l'état. Si la seconde lettre est une voyelle, il permute le groupe 3 et 4, rien en cas de consonnes. On ne fait rien si la lettre associée au dernier groupe est une voyelle. Exemple (on enlève volontairement les accents) :
+
+\begin{verbatimx}
+adele   06 64 34 22 67 --> 06 34 64 67 22  lettres 06 aa dd ee ll  
+gerard  06 64 34 22 68 --> 06 64 22 34 68  lettres 06 gg ee rr aa
+\end{verbatimx}
+
+Ecrire la fonction qui transforme un numéro. Il est recommandé de ne pas tenir compte des espaces. (2~points)
+
+\exequest Ecrire la fonction qui effectue la transformation inverse. (2~points)
+
+
+\exequest Que se passe-t-il pour le prénom \texttt{Maude} ? Peut-on encore retrouver le numéro codé ? (2~points)
+
+
+\end{xexercice}
+
+
+
+
+
+
+
+
+\input{../../common/exo_end.tex}%

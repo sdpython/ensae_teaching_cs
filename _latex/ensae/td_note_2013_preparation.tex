@@ -1,0 +1,426 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\huge ENSAE exercice de préparation pour le TD noté, mardi 27 novembre 2012
+
+\normalsize
+\textit{Ces exercices abordent des sujets en rapport avec le TD noté.  } \smallskip
+}
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label_2013_prep1}%\indexfrr{énoncé}{pratique}
+
+On construit une séquence selon le procédé suivant~:
+\begin{enumerate}
+\item On tire un nombre entier entre 0 et 2. 
+\item On l'ajoute à la séquence. 
+\item Si le nombre tiré est~0, on s'arrête. 
+\item Si c'est~1, on tire à nouveau une fois et on répète le même processus depuis l'étape~2.
+\item Si c'est~2, on tire deux nombres qu'on ajoute à la séquence et on tire encore autant de fois que la somme des deux nombres tirés. Pour chacun d'entre eux, on répète le processus depuis l'étape~3.
+\end{enumerate}
+
+\textbf{Rappel~:} voici deux lignes de code permettant de générer un nombre aléatoire entier entre 0 et 5 inclus
+\begin{verbatimx}
+import random
+i = random.randint(0,5)
+\end{verbatimx}
+
+\exequest Construire une fonction qui construit une séquence telle que celle définie plus haut.
+
+\exequest Construire une fonction qui calcule la moyenne des longueurs des séquences obtenues (sur 1000 séquences par exemple)~?
+
+\end{xexercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifnum\correctionenonce = 1
+
+\begin{xdemoexonot}{td_note_label_2013_prep1}
+
+
+
+
+L'énoncé peut suggérer qu'il faut agir différemment selon que le nombre entier aléatoire est 0,~1 ou~2. Cependant, il est utile de remarquer que le nombre de tirages  restant à faire dépend de la longueur de la séquence de nombres et de la somme des nombres qu'elle contient. Si on note \codes{s} la séquence de nombres aléatoires dans un état intermédiaire, le nombre de tirages aléatoires restant à effectuer est égal à \codes{sum(s) - len(s) + 1}. On vérifie que cela fonctionne lorsque \codes{s} contient juste un nombre.
+
+La seconde question ne pose pas de problème puisqu'il s'agit de faire une moyenne des longueurs d'un grand nombre de séquences, 100 dans le programme qui suit.
+
+\inputcodes{../python_examen/td_note_2013_preparation1.py}{exercice pour s'évaluer}{, correction 2013}
+
+Après quelques exécutions, on remarque que cette moyenne n'est pas jamais la même ou tout simplement que le programme ne se termine pas. Il y a deux explications possibles~:
+\begin{enumerate}
+\item Soit 100 tirages ne suffisent pas pour faire converger la moyenne des longueurs,
+\item Soit la moyenne n'existe pas.
+\end{enumerate}
+
+Le programme informatique ne permet pas de répondre de manière certaine à cette question, il permet juste d'avoir une intuition qui serait dans ce cas que la moyenne n'existe pas. La preuve doit être mathématique. 
+
+
+
+
+
+\textbf{Aparté}
+
+On note $S_n=(N_1,N_2,...,N_n)$ une séquence de nombres aléatoires tirés dans l'ensemble $\acc{0,1,2}$ avec les probabilités $(a,b,c)$. Cette séquence correspond à celle de l'énoncé dans le cas où $a=b=c=\frac{1}{3}$. L'intuition est que si $a>c$, la moyenne des longueurs des séquences est finie et si $a\infegal c$ alors elle est infinie. 
+
+La démonstration qui suit repose sur l'indépendance des tirages aléatoires. On note la variable aléatoire $\#S$ qui désigne la longueur d'une séquence générée selon le processus décrit au paragraphe précédent. On décompose cette variable comme ceci~:
+\begin{eqnarray}
+\#S = k + \#S_k
+\end{eqnarray}
+
+Où $\#S_k$ est la longueur de la séquence après le $k^\text{ième}$ élément exclu. En tenant compte de l'indépendance des tirages et en supposant que l'espérance de $\#S$ existe, on peut dire que~:
+
+\begin{eqnarray}
+\esp{\#S_k | \sum_{j=0}^{k}N_j\infegal k+1} &=& 0 \\ 
+\esp{\#S_k | \sum_{j=0}^{k}N_j =k+2} &=& \esp{\#S} \\ 
+\esp{\#S_k | \sum_{j=0}^{k}N_j =k+3} &=& 2\esp{\#S} 
+\end{eqnarray}
+
+La première assertion est évidente. Si à partir d'un certain rang, la somme des nombres tirés est inférieure à $k+1$, la séquence s'arrête. La deuxième assertion l'est également, à partir du rang $k$, il reste un nombre à tirer, l'espérance de la longueur de la séquence qui commence à partir de cette position est identique à celle au début de celle-ci. 
+
+Pour la dernière assertion, imaginons que nous devions tirer $2$ nombres aléatoires. On peut le faire aux positions $k+1$ et $k+2$ ou on peut tirer le premier nombre, continuer la séquence, attendre qu'il n'y ait plus de nombres à tirer puis tirer le second. Dans ce cas, on comprend que l'espérance de la longueur est bien 2~fois celle d'une séquence. On en déduit que~:
+
+\begin{eqnarray}
+\esp{\#S_k } &=& \sum_{m=0}^{\infty} \esp{\#S_k | \sum_{j=0}^{k}N_j =k+m+1} \pr{ \sum_{j=0}^{k}N_j =k+m+1 } \\
+						 &=& \sum_{m=0}^{\infty} m \esp{\#S} \pr{ \sum_{j=0}^{k}N_j =k+m+1 } 
+\end{eqnarray}
+
+
+Pour utiliser ce raisonnement, on isole le premier nombre $s_0$ de la séquence aléatoire $S$ en $S = ( N_0, S \ N_0)$. $\#S_1$ est la séquence $S$ privée de $N_0$. On applique le résultat précédent~:
+
+
+\begin{eqnarray}
+\esp{\#S} 
+&=& \left \{ \begin{array}{ll}
+				1 																														& \text{ si } N_0 = 0 \\ 
+				1 + \esp{ \#S } 				                          						& \text{ si } N_0 = 1 \\ 
+				1 + 2 \esp{ \#S }   			& \text{ si } N_0 = 2 
+				\end{array}\right .
+\end{eqnarray}
+
+On en déduit que~:
+
+\begin{eqnarray}
+\esp{\#S} &=& a + b \cro{  1 + \esp{\# S} } + c \cro{ 1 + 2\esp{\# S} }\nonumber \\
+		      &=& a + b + c + \esp{\# S} ( b + 2c) \nonumber \\
+		      &=& 1 + \esp{\# S} ( 1 - a + c) 
+\end{eqnarray}
+
+On en déduit que~:
+
+\begin{eqnarray}
+\esp{\# S} &=& \frac{1}{a-c} \label{td_2013_prep_formule}
+\end{eqnarray}
+
+
+Sachant que cette quantité est forcément positive, elle n'est définie que si $a>c$. Le programme suivant permet de vérifier qu'en simulant des séquences pour plusieurs valeurs $a,b,c$, on retrouve bien une espérance proche de celle donnée par cette formule.
+
+\inputcodes{../python_examen/td_note_2013_preparation1c.py}{exercice pour s'évaluer}{, correction 2013}
+
+
+
+\textbf{Second aparté}
+
+
+
+$S_n=(N_1,N_2,...,N_n)$ est toujours une séquence de nombres aléatoires tirés dans l'ensemble $\acc{0,1,2}$ avec des probabilités équiprobables ($a,b,c$), le nombre de tirages $T_n$ restant à effectuer après $n$~tirages est~:
+\begin{eqnarray}
+T_n = \sum_{i=1}^{n} N_i - n + 1
+\end{eqnarray}
+
+Si définit la séquence $S'_n = (N'_1, ..., N'_n) = (N_1-1, ..., N_n-1)$ où $N'_i$ est une variable aléatoire à valeur dans l'ensemble $\acc{-1,0,+1}$~:
+\begin{eqnarray}
+T_n = \sum_{i=1}^{n} N'_i + 1 = T'_n + 1
+\end{eqnarray}
+
+La séquence $S'_n$ est de longueur finie s'il existe $n$ tel que $T'_n=0$. $T'_n$ est en quelque sorte une marche aléatoire dont on peut définir l'espérance et la variance~:
+\begin{eqnarray}
+\esp{T'_n} &=& \sum_{i=1}^{n} \esp{N'_i} = n \esp{N'_1} = 0 \\
+\var{T'_n} &=& \sum_{i=1}^{n} \var{N'_i} = n \var{N'_1} = n \cro{\esp{(N'_1)^2} - (\esp{N'_1})^2]} = n(a+c - (c-a)^2)
+\end{eqnarray}
+
+Dans la suite, on pose $e=-1$. On définit le nombre $U$ tel que ~: $U = \inf \acc{ u | T'_u = e}$. $U$ est la longueur de la séquence~$S$. C'est aussi une variable aléatoire qui vérifie~:
+\begin{eqnarray}
+&& \left \{ \begin{array}{l} T'_U = e \\  \forall u < U, \; T'_u \neq e  \end{array} \right.
+\end{eqnarray}
+
+$U$ est un temps d'arrêt pour le processus aléatoire~$(S'n)_n$. On s'intéresse maintenant à la séquence $S'_n$. Etant donné que chaque élément peut prendre trois valeurs, il existe $3^n$ séquences différentes. On va chercher à calculer la probabilité de chaque séquence $S'_n$ vérifiant~:
+\begin{eqnarray}
+\forall u < n, \; T'_u = \sum_{i=1}^u N'_i \neq e
+\end{eqnarray}
+
+Donc notre cas, on suppose $e=-1$ ce qui implique pour la marche aléatoire de rester positive. Le raisonnement serait le même pour $e>0$. La probabilité $\pr{U=u}$ revient à énumérer toutes les marches aléatoires (ou le nombre de chemins) qui terminent à $e$ tout en restant supérieures à $e$ entre 1 et~$u$ exclu. On définit $p_{ui}$ le nombre de chemins terminant par $T'_u = e$ et ne passant jamais par~$e$ ($\forall k <u, \, T'_k \neq e$). On définit~:
+
+\begin{eqnarray}
+p_{ue} = f_e(u) = \pr{ T'_u = e, \; T'_k \neq e \; \forall k < u}
+\end{eqnarray}
+
+Si $e<0$, on peut construire $p_{ui}$ par récurrence~:
+
+\begin{eqnarray}
+p_{1k}&=&  \left\{ \begin{array}{ll}0 & \text{ si } k \neq 1 \\ 1 & \text{ si } k = 0 \end{array} \right. \\
+p_{uk}&=&  \left\{ \begin{array}{lllll}
+										c \, p_{u-1,k-1} &+ b \, p_{u-1,k} &+ a \, p_{u-1,k+1} & \text{ si } k > e+1 \\ 
+										&b \, p_{u-1,k}   &+ a \, p_{u-1,k+1}  & \text{ si } k = e+1  \\
+										&&a \, p_{u-1,k+1}  & \text{ si } k = e  \\
+										0 &&&& \text{ sinon }
+										\end{array} \right .
+\end{eqnarray}
+
+A partir de cette définition, on peut désormais écrire que si l'espérance de~$U$ existe, alors~:
+\begin{eqnarray}
+\esp{U} &=&           \sum_{u=1}^{\infty} u \pr{U=u} 
+			  =    \lim_{n\rightarrow\infty} \sum_{u=1}^{n} u \pr{U=u} \\
+        &=&  \lim_{n\rightarrow\infty} \sum_{u=1}^{n} u \pr{T_u=e, T_k \neq e \, \forall k < u}   \\
+        &=&  \lim_{n\rightarrow\infty} \sum_{u=1}^{n} u  p_{ue}  = 
+             \lim_{n\rightarrow\infty} r_n \label{eqn_2013_suite_rn_conv}
+\end{eqnarray}
+
+On repasse à l'informatique pour avoir l'intuition mathématique de la limite de $(r_u)_u$ lorsque $u$ tend vers l'infini.
+
+\inputcodes{../python_examen/td_note_2013_preparation1b.py}{exercice pour s'évaluer}{, correction 2013}
+
+Pour $a>c$, on vérifie que la suite $(r_u)_u$ converge vers l'expression (\ref{td_2013_prep_formule}). Pour $a=b=c=\frac{1}{3}$, cela donne~:
+
+\begin{verbatimx}
+u    1 P(U=u) 0.333333    r_u  0.333333
+u    2 P(U=u) 0.111111    r_u  0.555556
+u   50 P(U=u) 0.0013566   r_u  5.57241
+u  100 P(U=u) 0.00048407  r_u  8.38753
+u  150 P(U=u) 0.000264311 r_u 10.5627
+u  200 P(U=u) 0.000171942 r_u 12.4016
+u  250 P(U=u) 0.000123146 r_u 14.0242
+u  300 P(U=u) 9.37388e-05 r_u 15.4926
+u  350 P(U=u) 7.44204e-05 r_u 16.8438
+u  400 P(U=u) 6.09325e-05 r_u 18.1021
+u  450 P(U=u) 5.10779e-05 r_u 19.2843
+u  500 P(U=u) 4.36202e-05 r_u 20.4028
+u  550 P(U=u) 3.78157e-05 r_u 21.4669
+u  600 P(U=u) 3.31933e-05 r_u 22.4839
+\end{verbatimx}
+
+Il en ressort que la suite $P(U=u)$ semble tendre vers~0 à l'infini. Ceci signifierait que la probabilité de construire une séquence $S_n$ infinie est nulle. Mais la suite $(r_u)_u$ semble tendre vers l'infini ce qui signifirait que la moyenne des longueurs des séquences initiales $S_n$ n'existe pas. On vérifie en traçant le graphe $ (\log u, \log r_u)_u$ (voir figure~\ref{tdprep_2013_image_log}). Il suggère que $r_n \sim c n^{\alpha}$ avec $0<\alpha <1$.
+
+			\begin{figure}[ht]
+			\figureoneimage{ \caption{	Graphe $(\log u, \log r_u)_u$ défini par (\ref{eqn_2013_suite_rn_conv}). \vspace{-0.5cm}} }
+  		{ \includegraphics[width=9cm]{\filextellipse{../python_examen/image/marchealealog}{../python_cours/image_ellipse/marchealealog}} }
+  		{\label{tdprep_2013_image_log}}
+  		\end{figure}
+
+
+
+Il reste à démontrer formellement que la suite $r_n$ tend vers l'infini. Pour cela, on définit~:
+
+\begin{eqnarray}
+f_e(n) &=& \pr{ U=n } = \pr{ T'_n = e, T'_i \neq e \text{ si } i < n}
+\end{eqnarray}
+
+$f_e(n)$ est différent de la suite $p_{n0}$. La marche aléatoire pour atteindre -1 au temps $n$ doit nécessaire commencer par 0 ou~1. Si on note, $k$ le premier temps auquel elle passe par~0, on peut décompser $f_{-1}(n)$~:
+
+\begin{eqnarray}
+f_{-1}(1)  &=& c  \\
+f_{-1} (n) &=& b f_{-1}(n-1) + c\cro{ \sum_{k=2}^{n-1}
+                                      \pr{ \sum_{i=2}^{k} S'_i = -1} 
+                                      \pr{ \sum_{i=k+1}^{n} S'_i = -1}
+                                  }
+\end{eqnarray}
+
+On en déduit que~:
+
+\begin{eqnarray}
+f_{-1}(1)  &=& a  \\
+f_{-1} (n) &=& b f_{-1}(n-1) + c\cro{ \sum_{k=2}^{n-1} f_{-1}(k-1)f_{-1}(n-k)  } \label{exp_prep_2013_equation}
+\end{eqnarray}
+
+
+On pose~:
+\begin{eqnarray}
+F_e(s) &=& \sum_{n=1}^{\infty} f_e(n) s^n
+\end{eqnarray}
+
+$F_e(1)=\sum_{n=1}^{\infty} f_e(n)$ correspond à la probabilité que la marché aléatoire atteint~$e$ en un temps fini. La moyenne des longueurs des séquences $S'n$ est défini comme le temps moyen d'arrivée en $e$~: $ \sum_{n=1}^{\infty} n f_e(n)$. On utilise le théorème de la convergence monotone\footnote{\httpstyle{http://fr.wikipedia.org/wiki/Th\%C3\%A9or\%C3\%A8me\_de\_convergence\_monotone}} pour montrer que~:
+
+\begin{eqnarray}
+&& \sum_{n=1}^{\infty} n f_e(n) s^n = F'_e(s) \nonumber \\
+\Longrightarrow && \lim_{s \rightarrow 1} \sum_{n=1}^{\infty} n f_e(n) s^n = \sum_{n=1}^{\infty} n f_e(n) = F'_e(1) \label{label_2013_limite_eg}
+\end{eqnarray}
+
+On cherche une relation fonctionnelle du type $ x [F_{-1}(s)]^2 + y F_{-1}(s) + z = 0$ en utilisant (\ref{exp_prep_2013_equation}).
+
+\begin{eqnarray}
+[F_{-1}(s)]^2 &=& \cro{ \sum_{n=1}^{\infty} f_{-1}(n) s^n }^2 \nonumber \\
+&=& \sum_{n=3}^{\infty} s^{n-1} \cro{  \sum_{k=2}^{n-1} f_{-1}(k-1) f_{-1}(n-k)    } \nonumber \\
+&=& \sum_{n=3}^{\infty} s^{n-1} \frac{1}{c}\cro{  f_{-1}(n) - b f_{-1}(n-1)    } \nonumber \\
+&=& \frac{1}{cs} \sum_{n=3}^{\infty} s^n f_{-1}(n) - \frac{b}{cs} \sum_{n=3}^{\infty}  s^n f_{-1}(n-1)     \nonumber \\
+&=& \frac{1}{cs} \cro{ F_{-1}(s) - f_{-1}(1)s } - \frac{b}{c} F_{-1}(s)   \nonumber \\
+&=& F_{-1}(s) \cro{  \frac{1}{cs} - \frac{b}{c} } - \frac{f_{-1}(1)}{c}  \nonumber \\
+\Longrightarrow   && cs [F_{-1}(s)]^2 -  F_{-1}(s) (1 - bs) - sf_{-1}(1)   = 0
+\end{eqnarray}
+
+En résolvant le polynôme $cs x^2  - (1 - bs)  x - sf_{-1}(1)  = 0$, il est possible de déterminer l'expression de $F_{-1}(s)$. On rappelle que $f_{-1}(1) = a$. Une seule des solutions du polynôme du second degré est positive\footnote{Les solutions d'un polynôme du second degré de type $ax^2+bx+c=0$ sont de type~: $x = \frac{-b +/- \sqrt{ b^2 - 4ac}}{2a}$.}.
+
+\begin{eqnarray}
+F_{-1}(s) &=& \frac{   (1 - bs) + \sqrt{ (1 - bs)^2 + 4 acs^2 } } 
+										{   2cs } 
+\end{eqnarray}
+
+ 
+Il ne reste plus qu'à dériver et à trouver la limite lorsque $s \rightarrow 1$.
+
+A suivre.
+
+\end{xdemoexonot}
+
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label_2013_prep2}%\indexfrr{énoncé}{pratique}
+
+On considère une matrice $10\times10$ remplie de 0 et de 1 aléatoirement avec la probabilité d'avoir~1 égale à 0,2.
+
+\exequest Construire une telle matrice.
+
+\exequest Compter le nombre de points $m_{ij}$ de la matrice vérifiant les conditions suivantes~:
+\begin{enumerate}
+\item $m_{ij}=0$
+\item $m_{i-1,j}=1$ ou $m_{i+1,j}=1$ ou $m_{i,j-1}=1$ ou $m_{i,j+1}=1$
+\end{enumerate}
+\end{xexercice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifnum\correctionenonce = 1
+
+
+\begin{xdemoexonot}{td_note_label_2013_prep2}
+Pour obtenir 1 avec une probabilité de 0,2, il suffit de tirer un nombre aléatoire $N$ entre 1 et 5 inclus et de ne considérer que le cas où $N=1$.
+
+\begin{verbatimx}
+import random
+N = 10
+M = [ [  1 if random.randint(1,5) == 1 else 0 for i in range (N) ] for j in range(N) ]
+for l in M : print l
+    
+nb = 0
+for i in range(N) :
+    for j in range (N) :
+        if   i > 0   and M[i-1][j] == 1 : nb += 1
+        elif i < N-1 and M[i+1][j] == 1 : nb += 1
+        elif j > 0   and M[i][j-1] == 1 : nb += 1
+        elif j < N-1 and M[i][j+1] == 1 : nb += 1
+print nb
+\end{verbatimx}
+
+Cela donne pour un exemple~:
+
+\begin{verbatimx}
+[0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 1, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 1, 0, 1, 1]
+[0, 0, 0, 0, 1, 0, 1, 1, 0, 1]
+[0, 0, 1, 0, 1, 0, 0, 1, 1, 1]
+[0, 0, 0, 0, 0, 1, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
+[0, 1, 0, 0, 0, 1, 0, 0, 0, 0]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+46
+\end{verbatimx}
+
+Ce n'est pas évident de vérifier qu'on ne s'est pas trompé. Un moyen simple consiste à prendre une valeur de $N$ plus petite.
+
+\begin{verbatimx}
+[0, 1, 0]
+[0, 0, 1]
+[0, 0, 0]
+4
+\end{verbatimx}
+
+
+\end{xdemoexonot}
+
+\fi
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label_2013_prep3}%\indexfrr{énoncé}{pratique}
+
+On considère une matrice $10\times10$ remplie de nombres entiers aléatoires tirés entre 0 et 100. On apelle $M$ cette matrice.
+
+\exequest Créer une autre matrice $N$ qui vérifie~: $N_{ij} = \frac{ M_{ij} } { \sum_{i=1}^{10} M_{ij} }$. Le module \codes{numpy} simplifie l'écriture du programme.
+
+\end{xexercice}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifnum\correctionenonce = 1
+
+\begin{xdemoexonot}{td_note_label_2013_prep3}
+
+\begin{verbatimx}
+import random, numpy
+N  = 10
+M  = [ [  1.0 if random.randint(1,5) == 1 else 0.0 for i in range (N) ] for j in range(N) ]
+M  = numpy.matrix(M)
+MM = numpy.matrix(M)
+for i in range (N) : 
+    s = numpy.sum(M[i,:])  # ou M[i,:].sum()
+    if s > 0 : MM [i,:] = M [i,:] / s
+print MM
+\end{verbatimx}
+
+Le dernier exercice cache deux pièges. Le premier est le problème des divisions entières. Si on remplace \codes{1.0} et \codes{0.0} par~1 et~0 sur la troisième ligne, tous les nombres manipulés deviennent entiers. La matrice \codes{MM} est alors peuplée de~0 et de~1 uniquement. Le second piège intervient quand on pense avoir résolu le premier en forçant une division réelle en multipliant d'un côté par \codes{1.0}~:
+
+
+\begin{verbatimx}
+import random, numpy
+N  = 5
+M  = [ [  1 if random.randint(1,5) == 1 else 0 for i in range (N) ] for j in range(N) ]
+M  = numpy.matrix (M)
+MM = numpy.matrix(M)
+for i in range (N) : 
+    s = numpy.sum(M[i,:])
+    if s > 0 : MM [i,:] = M [i,:]*1.0 / s   # multiplication par 1.0
+print MM
+\end{verbatimx}
+
+Comme initialement, on a créé la matrice \codes{M} avec des entiers, le module \codes{numpy} refuse l'ajout ultérieur de nombres réels. On peut regretter que le module \codes{numpy} soit aussi strict ou ne jette une erreur indiquant au programmeur qu'il s'est trompé. Le fait même de vérifier les types des objets contenus dans la matrice et ceux qu'on lui injecte aurait le désavantage de ralentir les calculs.
+
+\end{xdemoexonot}
+
+
+\fi
+
+\input{../../common/exo_end.tex}%

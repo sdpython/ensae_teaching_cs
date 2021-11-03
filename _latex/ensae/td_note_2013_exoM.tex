@@ -1,0 +1,72 @@
+\textbf{Certaines questions suggèrent l'utilisation du module \codes{numpy}, ne pas le faire ne sera pas pénalisé si les réponses proposées produisent des résultats équivalents. }
+
+Cet exercice utilise des données\footnote{lien \httpstyle{http://www.xavierdupre.fr/enseignement/complements\_site\_web/equipements\_sportif\_2011.zip}} fournies en pièce jointe. Elles comptabilisent le nombre d'équipements sportifs par canton. Il faudra utiliser le programme également fourni en pièce jointe\footnote{lien \httpstyle{http://www.xavierdupre.fr/enseignement/complements\_site\_web/td\_note\_2013\_novembre\_2012\_exoM.py}} pour les récupérer sous forme de tableau. Ce code ne sera pas modifié durant l'examen excepté le dernier paramètre transmis à la fonction \codes{construit\_matrice} qui permet de ne considérer qu'une partie des données pour tester plus rapidement ses idées sur les premières lignes. On souhaite mesurer si les Français ont accès aux mêmes équipements sportifs sur tout le territoire français. \textbf{Afin d'éviter son inclusion (et son impression), votre programme devra impérativement commencer par~:}
+
+\begin{verbatimx}
+#coding:latin-1
+import exoM
+fichier_zip   = exoM.import_module_or_file_from_web_site ("equipements_sportif_2011.zip")
+fichier_texte = exoM.unzip_fichier (fichier_zip)
+# enlever le dernier paramètre 500 pour avoir le tableau complet
+colonne, intitule, variables = exoM.construit_matrice (fichier_texte, 500)  
+    # colonne   : contient le nom des colonnes
+    # intitule  : contient les deux premières colonnes du fichier textes avec du texte
+    # variables : contient les autres colonnes avec des valeurs numériques 
+\end{verbatimx}
+
+Les lignes suivantes permettent de convertir les informations extraites en un tableau \codes{numpy}\footnote{Documentation~: \httpstyle{http://docs.scipy.org/doc/numpy/reference/}}.
+
+\begin{verbatimx}
+import numpy
+intitule  = numpy.array(intitule)  # array et non matrix
+variables = numpy.array(variables) # array et non matrix
+
+# utilisation de numpy pour sélectionner des lignes spécifiques
+print intitule [ intitule[:,1] == "Chevroux", : ]  # affiche [['01102' 'Chevroux']]
+print variables[ intitule[:,1] == "Chevroux", : ]  # affiche [[  82.    1.   12 ...
+\end{verbatimx}
+
+\exequest Le tableau \codes{intitule} a deux colonnes~: le code postal et la ville. On veut créer un tableau \codes{intitule3} qui contient trois colonnes~: celles de \codes{intitule} et le département déduit du code postal. Quelques fonctions utiles~: (2~points)
+\begin{verbatimx}
+print tab.shape                     # si tab est une matrice ou un tableau numpy à deux dimensions,
+                                    # tab.shape est un couple (nb_lignes, nb_colonnes)
+a = numpy.column_stack ( ( m, e ) ) # coller deux matrices, tableaux ayant le même nombre de lignes
+\end{verbatimx}
+
+Au final, la ligne \codes{['01008', 'Ambutrix']} deviendra \codes{['01008', 'Ambutrix', '01']}.
+
+
+
+\exequest Construire la liste des départements, cette liste contient une unique instance du code du département. Elle doit être triée par ordre croissant. Il n'est pas recommandé d'utiliser \codes{numpy} pour cette question. En anglais, tri se dit \textit{sort}. (2~points)
+
+\exequest Construire un tableau $D$ de dimension $d \times v$ où $d$~est le nombre de départements distincts, $v$~est le nombre de variables (normalement~105). Le coefficient $D_{ij}$ est la somme des valeurs pour la variable~$j$ et le département~$i$. Si $A$ désigne le tableau \codes{variables}, $B$ le tableau à trois colonnes de la question~1, $C$ la liste des départements distincts (question~2)~:
+$$
+D_{ij} = \sum_{k | B_{k,3} = C_i} A_{kj}
+$$
+
+
+L'objectif de cette question est d'agréger des données par départements alors qu'elles sont disponibles par canton. (3~points)
+
+\textbf{Remarque~:} l'instruction suivante pourrait être utile.
+
+\begin{verbatimx}
+# crée une matrice de dimension nb_lignes x nb_colonnes initialisés à zéro
+mvide = numpy.zeros ( ( nb_lignes, nb_colonnes) )
+\end{verbatimx}
+
+
+
+\exequest La colonne~5 du tableau~$D$ (la première colonne a l'indice~0) contient la population. Créer un autre tableau~$E$ qui vérifie~: $E_{ij} = D_{ij} / D_{i5}$. (1~point)
+
+\exequest Le programme fourni en pièce jointe contient une fonction \codes{coefficient\_gini} qui calcule le coefficient de Gini\footnote{\httpstyle{http://fr.wikipedia.org/wiki/Coefficient\_de\_Gini}}. On l'utilise pour comparer le nombre d'équipements par habitants. Il vaut~0 si ce ratio est constant quelque soit le département, il vaut~1 si un seul département propose un certain type d'équipement. Entre~0 et~1, il indique l'inégalité de la distribution. Quel est l'équipement sportif le plus inégalitairement réparti sur tout le territoire~? (2~points)
+
+\textbf{Remarque~:} les lignes suivantes pourront vous aider.
+
+\begin{verbatimx}
+li = list ( mat [:,i] )           # convertit une colonne d'un tableau numpy en une liste
+print colonne[0][i+2]             # affiche le label de la colonne i
+gini = exoM.coefficient_gini (li) # retourne le coefficient de Gini
+                                  # pour la liste li
+\end{verbatimx}
+
+
