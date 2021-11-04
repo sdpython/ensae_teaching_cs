@@ -23,7 +23,8 @@ Les technologies proposées sont donc :
   `pyCUDA <http://mathema.tician.de/software/pycuda/>`_
 * n'importe quelle technologie sur CPU, une option proposée
   est un projet utilisant ;epkg:`python`, :epkg:`cython` et :epkg:`openmp`.
-  Le projet :epkg:`td3a_cpp` peut être utilisé comme point de départ.
+  Les projet :epkg:`td3a_cpp` ou :epkg:`td3a_cpp_deep`
+  peuvent être utilisés comme point de départ.
 
 Vous êtes libres de traiter l'algorithme de votre choix avec la technologie
 de votre choix avec la contrainte que l'algorithme implémenté soit distribué
