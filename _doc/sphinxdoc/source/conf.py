@@ -250,6 +250,7 @@ epkg_dictionary.update({
     'streamlit': 'https://streamlit.io/docs/',
     'td2a_plotting': 'http://www.xavierdupre.fr/app/td2a_plotting/helpsphinx/index.html',
     'td3a_cpp': 'http://www.xavierdupre.fr/app/td3a_cpp/helpsphinx/index.html',
+    'td3a_cpp_deep': 'http://www.xavierdupre.fr/app/td3a_cpp_deep/helpsphinx/index.html',
     "teachpyx": 'http://www.xavierdupre.fr/app/teachpyx/helpsphinx/',
     "tensorFlow": 'https://www.tensorflow.org/',
     "TensorFlow": 'https://www.tensorflow.org/',

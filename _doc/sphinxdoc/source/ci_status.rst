@@ -788,6 +788,23 @@ Tableau de bord et statut des dépendances
       -
       -
       -
+    * - `td3a_cpp_deep <http://www.xavierdupre.fr/app/td3a_cpp_deep/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.com/sdpython/td3a_cpp_deep.svg?branch=main
+            :target: https://app.travis-ci.com/github/sdpython/td3a_cpp_deep
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/9db19ijdr8xplptj?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/python3-module-template
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/td3a_cpp_deep.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/td3a_cpp_deep
+        .. image:: https://dev.azure.com/xavierdupre3/td3a_cpp_deep/_apis/build/status/sdpython.cpyquickhelper
+            :target: https://dev.azure.com/xavierdupre3/td3a_cpp_deep/
+      - .. image:: http://img.shields.io/github/issues/sdpython/td3a_cpp_deep.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/td3a_cpp_deep/issues
+      -
+      -
+      -
     * - `pystrat2048 <http://www.xavierdupre.fr/app/pystrat2048/helpsphinx/index.html>`_
       -
       -
@@ -1107,6 +1124,8 @@ Outils
     * - `td3a_cpp <http://www.xavierdupre.fr/app/td3a_cpp/helpsphinx/index.html>`_
       - Modèle de module python implémentant un calcul parallélisé à l'aide de
         :epkg:`cython` et :epkg:`openmp`.
+    * - `td3a_cpp_deep <http://www.xavierdupre.fr/app/td3a_cpp_deep/helpsphinx/index.html>`_
+      - Modèle de module python implémentant une extension de :epkg:`pytorch`
 
 Contenu
 +++++++

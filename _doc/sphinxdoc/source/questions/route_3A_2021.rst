@@ -127,6 +127,54 @@ Séance 3
 Séance 4
 ^^^^^^^^
 
+CUDA
+
+* `CUDA C/C++ Basics <https://www.nvidia.com/docs/IO/116711/sc11-cuda-c-basics.pdf>`_
+* `CUDA Thread Indexing Cheatsheet
+  <https://cs.calvin.edu/courses/cs/374/CUDA/CUDA-Thread-Indexing-Cheatsheet.pdf>`_
+* `CUDA Thread Basics
+  <http://users.wfu.edu/choss/CUDA/docs/Lecture%205.pdf>`_
+* `CUDA 11 Features Revealed
+  <https://developer.nvidia.com/blog/cuda-11-features-revealed/>`_
+      
+Visual Studio
+
+* `NVIDIA Nsight Integration
+  <https://developer.nvidia.com/nsight-tools-visual-studio-integration>`_
+      
+torch
+
+* `Custom C++ and CUDA Extensions 
+  <https://pytorch.org/tutorials/advanced/cpp_extension.html>`_
+* `td3a_cpp_deep <http://www.xavierdupre.fr/app/td3a_cpp_deep/helpsphinx/index.html>`_
+      
+histoire
+
+* nom des quarties de paris
+* fusion d'annuaire, géocoding
+* tournée du camion poubelle
+* streaming, :epkg:`pandas_streaming`
+* `complétion
+  <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_nlp/completion_formalisation.html>`_
+* `Distance entre deux graphes
+  <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_algo/graph_distance.html>`_
+* `arbre de décision et réseau de neurones
+  <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/lr_trees.html>`_,
+  `Un arbre de décision en réseaux de neurones
+  <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/neural_tree.html>`_
+* `régression quantile
+  <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/regression_quantile.html>`_
+* `plus proche voisins 
+  <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/kppv.html>`_
+* parallélisation
+* einsum
+    * `Compares implementations of Einsum
+      <http://www.xavierdupre.fr/app/mlprodict/helpsphinx/gyexamples/plot_op_einsum.html?highlight=einsum>`_
+    * `Einsum decomposition
+      <http://www.xavierdupre.fr/app/mlprodict/helpsphinx/notebooks/einsum_decomposition.html?highlight=einsum>`_
+    * `Decompose einsum into numpy operators
+      <http://www.xavierdupre.fr/app/mlprodict/helpsphinx/blog/2021/2021-08-11_einsum.html?highlight=einsum>`_
+
 Séance 5
 ^^^^^^^^
 
