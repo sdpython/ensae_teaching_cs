@@ -146,6 +146,7 @@ torch
 
 * `Custom C++ and CUDA Extensions 
   <https://pytorch.org/tutorials/advanced/cpp_extension.html>`_
+* `Pytorch C++ API <https://pytorch.org/cppdocs/>`_
 * `td3a_cpp_deep <http://www.xavierdupre.fr/app/td3a_cpp_deep/helpsphinx/index.html>`_
       
 histoire
