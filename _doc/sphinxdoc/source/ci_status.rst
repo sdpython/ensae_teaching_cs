@@ -789,7 +789,7 @@ Tableau de bord et statut des dépendances
       -
       -
     * - `td3a_cpp_deep <http://www.xavierdupre.fr/app/td3a_cpp_deep/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.com/sdpython/td3a_cpp_deep.svg?branch=master
+      - .. image:: https://travis-ci.com/sdpython/td3a_cpp_deep.svg?branch=main
             :target: https://app.travis-ci.com/github/sdpython/td3a_cpp_deep
             :alt: Build status
       - .. image:: https://ci.appveyor.com/api/projects/status/9db19ijdr8xplptj?svg=true
