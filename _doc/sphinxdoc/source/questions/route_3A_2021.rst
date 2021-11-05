@@ -124,9 +124,34 @@ carte GPU.
 Séance 3
 ^^^^^^^^
 
+* Modèle de mémoire (
+* Description de la stack, pile d'appel, stackoverflow
+* Threads
+* GPU, bloc, threads, synchronisation
+
 Séance 4
 ^^^^^^^^
 
+**Paralléliser des calculs avec pytorch**
+
+:epkg:`pytorch` est une librairie qui a su séduire beaucoup de développeurs
+grâce à un design intuitif et à une documentation de bonne qualité.
+Aujourd'hui se pose la question de créer un code rapide en dehors d'un système
+existant ou d'étendre une librairie qui offre déjà beaucoup de fonctionnalités.
+L'option qui est proposée ici est celle d'étendre *pytorch* dans la mesure
+où les dernières versions de la librairies ont été pensées pour faciliter
+ce scénario.
+
+On peut utilier du code C++ depuis python ou utiliser du code
+Python depuis C++. C'est le premier scénario qui est illustré.
+
+torch
+
+* `Custom C++ and CUDA Extensions 
+  <https://pytorch.org/tutorials/advanced/cpp_extension.html>`_
+* `Pytorch C++ API <https://pytorch.org/cppdocs/>`_
+* `td3a_cpp_deep <http://www.xavierdupre.fr/app/td3a_cpp_deep/helpsphinx/index.html>`_
+      
 CUDA
 
 * `CUDA C/C++ Basics <https://www.nvidia.com/docs/IO/116711/sc11-cuda-c-basics.pdf>`_
@@ -136,20 +161,66 @@ CUDA
   <http://users.wfu.edu/choss/CUDA/docs/Lecture%205.pdf>`_
 * `CUDA 11 Features Revealed
   <https://developer.nvidia.com/blog/cuda-11-features-revealed/>`_
+  
+CUDA streams
+
+* `CUDA Streams And Concurrency
+  <https://developer.download.nvidia.com/CUDA/training/StreamsAndConcurrencyWebinar.pdf>`_
       
 Visual Studio
 
 * `NVIDIA Nsight Integration
   <https://developer.nvidia.com/nsight-tools-visual-studio-integration>`_
-      
-torch
 
-* `Custom C++ and CUDA Extensions 
-  <https://pytorch.org/tutorials/advanced/cpp_extension.html>`_
-* `Pytorch C++ API <https://pytorch.org/cppdocs/>`_
-* `td3a_cpp_deep <http://www.xavierdupre.fr/app/td3a_cpp_deep/helpsphinx/index.html>`_
-      
-histoire
+**Combiner pytorch avec autre chose**
+
+La librairie pytorch utilise une structure de données appelée *Tensor*
+pour représenter un vecteur, une matrice... Elle est décrite par :
+
+* un vecteur *shape* (les dimensions)
+* un vecteur *strides* (sous ensemble)
+* un emplacement, une adresse
+* un type (float32, float64, double, int64, ...)
+* un device (CPU, GPU, ...)
+* un numéro de device (s'il y a plusieus GPU)
+* un destructeur permettant de détruire la structure (pas les données)
+
+S'échanger fes informations d'une librairie à une autre, dans le plus simple
+des cas veut dire les copier. Mais ça prend trop de temps d'où l'introduction
+d'une structure commune d'échange (API).
+Elle a été récemment introduite dans les dernières versions de torch.
+Elle est encore en projets dans numpy.
+
+* `DLPack <https://github.com/dmlc/dlpack>`_
+* `torch.dlpack <https://pytorch.org/docs/stable/dlpack.html>`_
+* about numpy `ENH: Implement the DLPack Array API protocols for ndarray.
+  <https://github.com/numpy/numpy/pull/19083>`_
+* Notion de `capsule en python <https://docs.python.org/3/c-api/capsule.html>`_
+  
+**Traiter un jeu gros de données**
+
+La base `Open DAMIR : base complète sur les dépenses d'assurance maladie inter régimes
+<https://www.data.gouv.fr/en/datasets/open-damir-base-complete-sur-les-depenses-dassurance-maladie-inter-regimes/>`_
+est sans doute une base très intéressante mais aussi un défi quand on
+souhaite s'y attaquer.
+
+Streaming local
+
+* `sqlite3 <https://www.sqlite.org/index.html>`_,
+  `python.sqlite3 <https://docs.python.org/3/library/sqlite3.html>`_
+* :epkg:`pandas_streaming` : surcouche autour des itérateur
+  `pandas.read_csv
+  <https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html>`_
+* serveur :epkg:`SQL` (PostGreSQL
+
+Streaming distant
+
+* `dask <https://dask.org/>`_, s'interface avec scikit-learm
+* `spark <https://spark.apache.org/>`_
+
+Voir également `awesome-streaming <https://project-awesome.org/manuzhang/awesome-streaming#streaming-library>`_.
+
+**Histoires, problèmes résolus**
 
 * nom des quarties de paris
 * fusion d'annuaire, géocoding
