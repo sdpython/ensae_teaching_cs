@@ -63,18 +63,28 @@ appliqués aux séries temporelles :
 *Modules*
 
 * `statsmodels <http://statsmodels.sourceforge.net/>`_
+* `sktime <https://www.sktime.org/en/latest/index.html>`_,
+  suit l'API de scikit-learn, assez complet
+* `pmdarima <http://alkaline-ml.com/pmdarima/>`_,
+  ARIMA, saisonnalités, pipelines
 * `pyflux <http://pyflux.readthedocs.io/en/latest/>`_ (la documentation est plutôt bien faite)
 * `fbprophet <https://github.com/facebookincubator/prophet/tree/master/python>`_
   (requires `pystan <http://pystan.readthedocs.io/en/latest/index.html>`_)
-* `kats <https://github.com/facebookresearch/Kats>`_
+* `kats <https://github.com/facebookresearch/Kats>`_,
+  modèle SARIMA, clustering de séries temporelles
+* `pastas <https://pastas.readthedocs.io/en/latest/>`_,
+  pour les séries hydrologiques
+* `darts <https://github.com/unit8co/darts>`_
+* `orbits <https://github.com/uber/orbit>`_, bayesian forecasting
 * `tensorflow <https://www.tensorflow.org/tutorials/structured_data/time_series>`_
 * `Rob J Hyndman software <https://robjhyndman.com/software/>`_
   (disponible uniquement en R)
 * `influxdb <https://github.com/influxdata/influxdb>`_ (An Open-Source Time Series Database)
 * `seasonal <https://github.com/welch/seasonal>`_
 * `seglearn <https://github.com/dmbee/seglearn>`_
-* `sktime <https://github.com/alan-turing-institute/sktime>`_
 * `flow-forecast <https://github.com/AIStream-Peelout/flow-forecast>`_
+* `Auto_TS <https://github.com/AutoViML/Auto_TS>`_,
+  automated learning for time series
 
 Un peu plus expérimental :
 
