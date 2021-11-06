@@ -183,7 +183,7 @@ groups = proj.Groups
 if do_mail or len(groups) < 10:
     fLOG("[fetch_student_projects_from_gmail] create list of groups")
     proj = ProjectsRepository.create_folders_from_dataframe(
-        df, folder, col_subject=col_subject, 
+        df, folder, col_subject=col_subject,
         col_group=col_group, col_mail=col_mail,
         email_function=emails, skip_if_nomail=False,
         must_have_email=True, fLOG=fLOG,

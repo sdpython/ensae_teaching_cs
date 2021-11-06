@@ -158,10 +158,16 @@ class Scene:
                 c = self.rayon_couleur(r, True)
                 q = (p.x, self.dim[1] - p.y - 1)
                 d = (int(c.x * 255), int(c.y * 255), int(c.z * 255))
-                pygame.draw.line(screen, d, q, q)
+                if pygame is None:
+                    for i, di in enumerate(d):
+                        screen[q[0], q[1], i] = di
+                else:
+                    pygame.draw.line(screen, d, q, q)
                 count += 1
-                if count % 150 == 0:
-                    pygame.display.flip()
+                if pygame is not None:
+                    if count % 150 == 0:
+                        pygame.display.flip()
                 if count % nbpixel == 0:
                     fLOG("avancement ", count // nbpixel, "%")
-        pygame.display.flip()
+        if pygame is not None:
+            pygame.display.flip()

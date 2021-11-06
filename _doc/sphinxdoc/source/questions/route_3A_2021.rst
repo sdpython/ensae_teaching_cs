@@ -147,11 +147,11 @@ Python depuis C++. C'est le premier scénario qui est illustré.
 
 torch
 
-* `Custom C++ and CUDA Extensions 
+* `Custom C++ and CUDA Extensions
   <https://pytorch.org/tutorials/advanced/cpp_extension.html>`_
 * `Pytorch C++ API <https://pytorch.org/cppdocs/>`_
 * `td3a_cpp_deep <http://www.xavierdupre.fr/app/td3a_cpp_deep/helpsphinx/index.html>`_
-      
+
 CUDA
 
 * `CUDA C/C++ Basics <https://www.nvidia.com/docs/IO/116711/sc11-cuda-c-basics.pdf>`_
@@ -161,12 +161,12 @@ CUDA
   <http://users.wfu.edu/choss/CUDA/docs/Lecture%205.pdf>`_
 * `CUDA 11 Features Revealed
   <https://developer.nvidia.com/blog/cuda-11-features-revealed/>`_
-  
+
 CUDA streams
 
 * `CUDA Streams And Concurrency
   <https://developer.download.nvidia.com/CUDA/training/StreamsAndConcurrencyWebinar.pdf>`_
-      
+
 Visual Studio
 
 * `NVIDIA Nsight Integration
@@ -196,7 +196,7 @@ Elle est encore en projets dans numpy.
 * about numpy `ENH: Implement the DLPack Array API protocols for ndarray.
   <https://github.com/numpy/numpy/pull/19083>`_
 * Notion de `capsule en python <https://docs.python.org/3/c-api/capsule.html>`_
-  
+
 **Traiter un jeu gros de données**
 
 La base `Open DAMIR : base complète sur les dépenses d'assurance maladie inter régimes
@@ -236,7 +236,7 @@ Voir également `awesome-streaming <https://project-awesome.org/manuzhang/awesom
   <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/notebooks/neural_tree.html>`_
 * `régression quantile
   <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/regression_quantile.html>`_
-* `plus proche voisins 
+* `plus proche voisins
   <http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_ml/kppv.html>`_
 * parallélisation
 * einsum

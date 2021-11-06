@@ -6,7 +6,7 @@
 import numpy
 
 
-def graph_style(style='ggplot'):
+def graph_style(style='ggplot'):  # pragma: no cover
     """
     Changes :epkg:`matplotlib` style.
 
@@ -29,7 +29,7 @@ def graph_style(style='ggplot'):
     plt.style.use(style)
 
 
-def close_all():
+def close_all():  # pragma: no cover
     """
     Closes every graph with :epkg:`matplotlib`.
 

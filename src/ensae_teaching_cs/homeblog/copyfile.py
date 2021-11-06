@@ -154,7 +154,7 @@ class CopyFileForFtp:
             values = [k, str(obj.size), da, mda, sum5]
             sval = "%s\n" % "\t".join(values)
             if "\tNone" in sval:
-                raise AssertionError(
+                raise AssertionError(  # pragma: no cover
                     "this case should happen " + sval + "\n" + str(obj))
 
             rows.append(sval)
@@ -253,10 +253,11 @@ class CopyFileForFtp:
         @param      to_is_a_file    it means to is a file, not a folder
         """
         if doClean and doFTP:
-            raise AssertionError(
+            raise AssertionError(  # pragma: no cover
                 "this case is not meant to happen, doClean and doFTP, set up at the same time")
         if len(to) == 0:
-            raise ValueError("an empty folder is not allowed for parameter to")
+            raise ValueError(  # pragma: no cover
+                "an empty folder is not allowed for parameter to")
 
         folder = to
         if not os.path.exists(folder):
@@ -335,7 +336,7 @@ class CopyFileForFtp:
         """
         res = []
         if not os.path.exists(file):
-            raise FileNotFoundError(file)
+            raise FileNotFoundError(file)  # pragma: no cover
         nb = 0
         fi = os.listdir(file)
         for f in fi:
@@ -347,7 +348,8 @@ class CopyFileForFtp:
                 res.append(file + "/" + f)
                 nb += 1
         if nb == 0:
-            raise RuntimeError("No file found in '{}'.".format(file))
+            raise RuntimeError(  # pragma: no cover
+                "No file found in '{}'.".format(file))
         return res
 
     def copy_file_contains(self, file, pattern, to, doFTP=True, doClean=False):
@@ -363,4 +365,5 @@ class CopyFileForFtp:
                 self.copy_file(file + "/" + f, to, doFTP, doClean)
                 nb += 1
         if nb == 0:
-            raise RuntimeError("No file found in '{}'.".format(file))
+            raise RuntimeError(  # pragma: no cover
+                "No file found in '{}'.".format(file))

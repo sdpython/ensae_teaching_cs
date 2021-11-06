@@ -200,29 +200,35 @@ class TableFormula(_TableFormulaStat):
                 firstline = f.readline().strip("\n\r ")
             su = sum(map(lambda _: 1 if _ in header else 0, firstline.split("\t")))
             if su < len(header) / 2.0:
-                logFunction("add_header_if_not_present: adding header({0}<{1}){2} to '{3}'\nfirstline:\n{4}".format(
-                    su, len(header) / 2, header, filename, firstline))
+                logFunction(  # pragma: no cover
+                    "add_header_if_not_present: adding header({0}<{1}){2} to '{3}'\nfirstline:\n{4}".format(
+                        su, len(header) / 2, header, filename, firstline))
                 with open(filename, "r") as f:
                     text = f.read()
                 text = "\t".join(header) + "\n" + text
-                logFunction("add_header_if_not_present: writing")
+                logFunction(  # pragma: no cover
+                    "add_header_if_not_present: writing")
                 with open(filename, "w") as f:
                     f.write(text)
-                logFunction("add_header_if_not_present: complete")
+                logFunction(  # pragma: no cover
+                    "add_header_if_not_present: complete")
         else:
             with open(filename, "r", encoding=encoding) as f:
                 firstline = f.readline().strip("\n\r ")
             su = sum(map(lambda _: 1 if _ in header else 0, firstline.split("\t")))
             if su < len(header) / 2.0:
-                logFunction("add_header_if_not_present: adding header({0}<{1}){2} to '{3}'\nfirstline:\n{4}".format(
-                    su, len(header) / 2, header, filename, firstline))
+                logFunction(  # pragma: no cover
+                    "add_header_if_not_present: adding header({0}<{1}){2} to '{3}'\nfirstline:\n{4}".format(
+                        su, len(header) / 2, header, filename, firstline))
                 with open(filename, "r", encoding=encoding) as f:
                     text = f.read()
                 text = "\t".join(header) + "\n" + text
-                logFunction("add_header_if_not_present: writing")
+                logFunction(  # pragma: no cover
+                    "add_header_if_not_present: writing")
                 with open(filename, "w", encoding=encoding) as f:
                     f.write(text)
-                logFunction("add_header_if_not_present: complete")
+                logFunction(  # pragma: no cover
+                    "add_header_if_not_present: complete")
 
     @staticmethod
     def random_split_file(filename, outfileprefix, nb, has_header=True, encoding=None, logFunction=noLOG):
@@ -246,8 +252,9 @@ class TableFormula(_TableFormulaStat):
                 with open(filename, "r", encoding=encoding) as f:
                     firstline = f.readline().strip("\n\r ")
 
-            logFunction("random_split_file: file %s has header %s" %
-                        (filename, firstline))
+            logFunction(  # pragma: no cover
+                "random_split_file: file %s has header %s" %
+                (filename, firstline))
 
         logFunction("random_split_file: split %s in %d parts" % (filename, nb))
         fileName = [outfileprefix + (".%04d.txt" % n) for n in range(0, nb)]
@@ -268,7 +275,7 @@ class TableFormula(_TableFormulaStat):
                     line = f.readline()
                     nbline += 1
                     if nbline % 1000000 == 0:
-                        logFunction(
+                        logFunction(  # pragma: no cover
                             "random_split_file: processed %d lines" % nbline)
         else:
             filesP = [open(_, "w", encoding=encoding) for _ in fileName]
@@ -285,7 +292,7 @@ class TableFormula(_TableFormulaStat):
                     line = f.readline()
                     nbline += 1
                     if nbline % 1000000 == 0:
-                        logFunction(
+                        logFunction(  # pragma: no cover
                             "random_split_file: processed %d lines" % nbline)
 
         for _ in filesP:
@@ -339,7 +346,7 @@ class TableFormula(_TableFormulaStat):
         @return                     correlation factor or correlation, sigma1, sigma2 if deviations is True
         """
         if len(values) <= 1:
-            raise ValueError(
+            raise ValueError(  # pragma: no cover
                 "expecting more than one observation, not %d" % len(values))
 
         mx = 0.
@@ -1236,8 +1243,9 @@ class TableFormula(_TableFormulaStat):
         :return self
         """
         if len(vector) != len(self):
-            raise ValueError("vector and table have different length {0} != {1}".format(
-                len(vector), len(self)))
+            raise ValueError(  # pragma: no cover
+                "vector and table have different length {0} != {1}".format(
+                    len(vector), len(self)))
         for vec, row in zip(vector, self.values):
             row.append(vec)
         self.index[colname] = len(self.index)
@@ -1254,7 +1262,8 @@ class TableFormula(_TableFormulaStat):
             table.add_column_smooth("has_A_smooth", lambda v: v["has_A"], [-1,0,1], [x,x,x])
         """
         if len(position) != len(weights):
-            raise ValueError("position and weights must have the same length")
+            raise ValueError(  # pragma: no cover
+                "position and weights must have the same length")
         self.index[colname] = len(self.index)
         column = [function(self._interpret_row(row)) for row in self.values]
         tw = sum(weights)
@@ -1813,11 +1822,13 @@ class TableFormula(_TableFormulaStat):
             union = table.union(table2)
         """
         if len(self.header) != len(table.header):
-            raise ValueError("tables do not have the same number of columns\ntbl1: %s\ntbl2: %s" % (
-                ",".join(self.header), ",".join(table.header)))
+            raise ValueError(  # pragma: no cover
+                "tables do not have the same number of columns\ntbl1: %s\ntbl2: %s" % (
+                    ",".join(self.header), ",".join(table.header)))
         for a, b in zip(self.header, table.header):
             if a != b:
-                raise ValueError("tables do not have the same column names")
+                raise ValueError(  # pragma: no cover
+                    "tables do not have the same column names")
         return self._private_getclass()(self.header, self.values + table.values)
 
     def concatenate(self, table, addPrefix=""):
@@ -1854,8 +1865,9 @@ class TableFormula(_TableFormulaStat):
         """
         if unique:
             if n > len(self):
-                raise ValueError("number of desired random rows is higher "
-                                 "than the number of rows in the table")
+                raise ValueError(  # pragma: no cover
+                    "number of desired random rows is higher "
+                    "than the number of rows in the table")
             index = {}
             while len(index) < n:
                 h = random.randint(0, len(self) - 1)
@@ -2763,7 +2775,7 @@ class TableFormula(_TableFormulaStat):
         @return                         the same table(with only the considered columns)
         """
         if op not in [None, "mean", "norm"]:
-            raise ValueError(
+            raise ValueError(  # pragma: no cover
                 'expecting a value in [None, "mean", "norm"] for op')
         if columnsSet is None:
             columnsSet = self.header
