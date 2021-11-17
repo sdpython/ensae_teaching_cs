@@ -17,7 +17,7 @@ def load_file(filename):
         text = f.read()
         f.close()
         return text
-    except Exception as e:
+    except Exception as e:  # pragma: no cover
         fLOG("e,", __name__, ": issue with ", filename)
         raise e
 

@@ -24,3 +24,5 @@ selon une disposition.
     <video autoplay="" controls="" loop="" height="500">
     <source src="http://www.xavierdupre.fr/enseignement/complements/puzzle_2.mp4" type="video/mp4" />
     </video>
+
+La résolution est effectué par la classe :class:`Puzzle2 <ensae_teaching_cs.special.puzzle_2.Puzzle2>`.

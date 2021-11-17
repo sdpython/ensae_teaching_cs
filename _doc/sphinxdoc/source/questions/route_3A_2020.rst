@@ -89,7 +89,7 @@ Parallelisation CPU
 * `sérialisation <https://python-guide-pt-br.readthedocs.io/fr/latest/scenarios/serialization.html>`_
 * Plusieurs machines
 * `AVX <https://fr.wikipedia.org/wiki/Advanced_Vector_Extensions>`_
-* `Cache https://en.wikipedia.org/wiki/CPU_cache>`_
+* `Cache <https://en.wikipedia.org/wiki/CPU_cache>`_
 
 Cython
 

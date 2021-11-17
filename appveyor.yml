@@ -2,8 +2,8 @@ image:
   - Visual Studio 2019
 environment:
   matrix:
-    - PYTHON: "C:\\Python38-x64"
-      PYTHON_VERSION: "3.8.x"
+    - PYTHON: "C:\\Python39-x64"
+      PYTHON_VERSION: "3.9.x"
       PYTHON_ARCH: "64"
 init:
   - "ECHO %PYTHON% %PYTHON_VERSION% %PYTHON_ARCH%"
@@ -14,19 +14,10 @@ install:
   # for many packages
   - "%PYTHON%\\Scripts\\pip install -r requirements-win.txt"
   # install precompiled versions not available on pypi
-  - "%PYTHON%\\Scripts\\pymy_install3 cartopy shapely pyproj cpyquickhelper"
-  # onnx
-  #- git clone -b master --single-branch https://github.com/onnx/onnx.git --recursive
-  #- cd onnx
-  #- set ONNX_ML=1
-  #- set ONNX_BUILD_TESTS=1
-  #- set ONNXIFI_DUMMY_BACKEND=1
-  #- python setup.py bdist_wheel
-  #- dir dist
-  #- python setup.py install
-  #- cd ..
-  # onnxruntime
-  - "%PYTHON%\\Scripts\\pip install tensorflow_model_optimization"
+  - "%PYTHON%\\Scripts\\pymy_install3 shapely pyproj"
+  - "%PYTHON%\\Scripts\\pip install http://www.xavierdupre.fr/enseignement/setup/Cartopy-0.20.1-cp39-cp39-win_amd64.whl"
+  - "%PYTHON%\\Scripts\\pymy_install3 cartopy fiona gdal"
+  # - "%PYTHON%\\Scripts\\pymy_install3 cartopy"
   # other dependencies
   - "%PYTHON%\\Scripts\\pip install -r requirements.txt --no-deps"
   - set PYTHONPATH=src

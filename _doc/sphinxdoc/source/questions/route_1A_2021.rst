@@ -111,11 +111,19 @@ Séance 5 - 6/10 - TSP, dataframe avec données COVID
 * :ref:`2020tsprst`
 * :ref:`2020pandasrst`
 
+Choix alternatif :
+
+* :ref:`20212048classerst`
+
 Séance 6 - 13/10 - bag, json, xml, COVID
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Algorithme : :ref:`2020covidrst`
 * Technique : :ref:`2020jsonxmlrst`
+
+Choix alternatif :
+
+* :ref:`2021covidpicklerst`
 
 Séance 7 - 20/10 - graphes, flask
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

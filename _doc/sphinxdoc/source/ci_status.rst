@@ -123,6 +123,23 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
+    * - `deeponnxcustom <http://www.xavierdupre.fr/app/deeponnxcustom/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.com/sdpython/deeponnxcustom.svg?branch=main
+            :target: https://app.travis-ci.com/github/sdpython/deeponnxcustom
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/g9wt6riyh6n74t23?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/deeponnxcustom
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/deeponnxcustom.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/deeponnxcustom
+      - .. image:: https://badge.fury.io/py/deeponnxcustom.svg
+            :target: https://pypi.org/project/deeponnxcustom
+      - .. image:: http://img.shields.io/github/issues/sdpython/deeponnxcustom.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/deeponnxcustom/issues
+      - .. image:: https://codecov.io/github/sdpython/deeponnxcustom/coverage.svg?branch=main
+            :target: https://codecov.io/github/sdpython/deeponnxcustom?branch=main
+      -
     * - `ensae_projects <http://www.xavierdupre.fr/app/ensae_projects/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.com/sdpython/ensae_projects.svg?branch=master
             :target: https://app.travis-ci.com/github/sdpython/ensae_projects
@@ -771,6 +788,23 @@ Tableau de bord et statut des dépendances
       -
       -
       -
+    * - `td3a_cpp_deep <http://www.xavierdupre.fr/app/td3a_cpp_deep/helpsphinx/index.html>`_
+      - .. image:: https://travis-ci.com/sdpython/td3a_cpp_deep.svg?branch=main
+            :target: https://app.travis-ci.com/github/sdpython/td3a_cpp_deep
+            :alt: Build status
+      - .. image:: https://ci.appveyor.com/api/projects/status/9db19ijdr8xplptj?svg=true
+            :target: https://ci.appveyor.com/project/sdpython/python3-module-template
+            :alt: Build Status Windows
+      - .. image:: https://circleci.com/gh/sdpython/td3a_cpp_deep.svg?style=svg
+            :target: https://circleci.com/gh/sdpython/td3a_cpp_deep
+        .. image:: https://dev.azure.com/xavierdupre3/td3a_cpp_deep/_apis/build/status/sdpython.cpyquickhelper
+            :target: https://dev.azure.com/xavierdupre3/td3a_cpp_deep/
+      - .. image:: http://img.shields.io/github/issues/sdpython/td3a_cpp_deep.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/td3a_cpp_deep/issues
+      -
+      -
+      -
     * - `pystrat2048 <http://www.xavierdupre.fr/app/pystrat2048/helpsphinx/index.html>`_
       -
       -
@@ -953,7 +987,7 @@ Fork / Stars / Downloads
                 :target: https://github.com/sdpython/{0}/
                 :alt: Size"""), "    ")
 
-    modules = get_teaching_modules()
+    modules = get_teaching_modules(branch=False)
     skip = {'myblog', '_benchmarks', 'lecture_citation',
             'machinelearningext', 'python3_module_template'}
     rows = [text]
@@ -1020,6 +1054,8 @@ Outils
     * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
       - Fonctions, outils implémentées en C, C++ et habillées en Python. C'est aussi
         un template pour ceux qui souhaite réaliser un module en C/C++/Cython.
+    * - :epkg:`deeponnxcustom`
+      - ONNX, deep learning, onnxruntime, pytorch
     * - :epkg:`lightmlboard`
       - Implémentation d'un site web dédié aux compétitions de machine learning
         basé sur :epkg:`tornado`.
@@ -1088,6 +1124,8 @@ Outils
     * - `td3a_cpp <http://www.xavierdupre.fr/app/td3a_cpp/helpsphinx/index.html>`_
       - Modèle de module python implémentant un calcul parallélisé à l'aide de
         :epkg:`cython` et :epkg:`openmp`.
+    * - `td3a_cpp_deep <http://www.xavierdupre.fr/app/td3a_cpp_deep/helpsphinx/index.html>`_
+      - Modèle de module python implémentant une extension de :epkg:`pytorch`
 
 Contenu
 +++++++
@@ -1164,7 +1202,7 @@ Git Clone
     from ensae_teaching_cs.automation import get_teaching_modules
     pattern = 'if not exist {0} git clone https://github.com/sdpython/{0}.git'
     add = ['myblog', 'thesis_handwriting', '_automation']
-    modules = get_teaching_modules() + add
+    modules = get_teaching_modules(branch=False) + add
     print('\n'.join(pattern.format(_) for _ in sorted(modules)))
 
 Pypi download

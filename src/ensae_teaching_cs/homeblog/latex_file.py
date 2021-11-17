@@ -33,7 +33,8 @@ class LatexCode:
         self.content = content
         self.comment = comment
         if not isinstance(line, tuple):
-            raise TypeError("we expect tuple for the line number")
+            raise TypeError(  # pragma: no cover
+                "we expect tuple for the line number")
         if content_type is not None:
             self.content_type = content_type
         elif self.comment is None:
@@ -98,7 +99,7 @@ class LatexIncludedFile:
                 try:
                     with open(self.file, "r", encoding="latin-1") as f:
                         content = f.read()
-                except UnicodeDecodeError:
+                except UnicodeDecodeError:  # pragma: no cover
                     with open(self.file, "r") as f:
                         content = f.read()
             sexp = ext.strip(". ")
@@ -108,7 +109,7 @@ class LatexIncludedFile:
             self.obj = LatexCode(self.parent, self.line,
                                  content, self.comment, content_type=typ)
         else:
-            raise ValueError(
+            raise ValueError(  # pragma: no cover
                 "unable to read file %s, not python, not latex" % self.file)
 
     def enumerate_code(self, skip_missing=False):
@@ -125,8 +126,8 @@ class LatexIncludedFile:
         elif isinstance(self.obj, LatexCode):
             yield self.obj
         else:
-            raise TypeError("unexpected class for self.obj: %s" %
-                            str(type(self.obj)))
+            raise TypeError(  # pragma: no cover
+                "unexpected class for self.obj: %s" % str(type(self.obj)))
 
 
 class LatexFile:
@@ -183,7 +184,7 @@ class LatexFile:
                 try:
                     with open(self.file, "r", encoding="latin-1") as f:
                         content = f.read()
-                except UnicodeDecodeError:
+                except UnicodeDecodeError:  # pragma: no cover
                     with open(self.file, "r") as f:
                         content = f.read()
             self.content = content
@@ -222,7 +223,7 @@ class LatexFile:
         """
         try:
             content = self.read()
-        except FileNotFoundError as e:
+        except FileNotFoundError as e:  # pragma: no cover
             if skip_missing:
                 fLOG("w,unable to find file", self.file)
                 content = " "

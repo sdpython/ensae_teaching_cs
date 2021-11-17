@@ -415,7 +415,7 @@ def readStyleFile(filename):
                         print("Error in style file:\n", line)
                         sys.exit(1)
             return appliedstyle
-        except Exception:
+        except Exception:  # pragma: no cover
             appliedstyle = py_style
             return py_style
 
@@ -459,7 +459,7 @@ def file2HTML(file_name, format, style, Replace, entity="1", encoding="utf-8"):
             # , encoding="utf8").readlines() #copy all lines into lines list
             with open(file_name, 'r', encoding=encoding) as f:
                 lines = f.readlines()
-        except UnicodeDecodeError as e:
+        except UnicodeDecodeError as e:  # pragma: no cover
             print("issue with file ", file_name)
             raise e
     else:
@@ -511,9 +511,9 @@ def file2HTML(file_name, format, style, Replace, entity="1", encoding="utf-8"):
             # now update pointers
             old_line = tupe[3][0]
             old_column = tupe[3][1]
-    except tokenize.TokenError:
+    except tokenize.TokenError:  # pragma: no cover
         return "File cannot be tokenized by tokenize"
-    except IndexError:
+    except IndexError:  # pragma: no cover
         pass
     text = ''.join(page)
     if Replace:

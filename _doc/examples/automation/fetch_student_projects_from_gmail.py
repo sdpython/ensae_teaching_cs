@@ -42,10 +42,10 @@ from pyquickhelper.loghelper import get_password
 
 server = "imap.gmail.com"
 school = "ENSAE"
-date = "24-May-2021"
+date = "01-Nov-2021"
 year = '1A'
-exam = 'projet'
-pattern = "Python_{0}_{1}_2021".format(year, exam)
+exam = 'tdnote'
+pattern = "Python_{0}_{1}".format(year, exam)
 group_def = "groupes.xlsx"
 col_subject, col_group, col_mail, col_student = "sujet", "groupe", "mail", "Nom"
 final_dest = ["2021-2022", "{}-{}".format(year, exam)]
@@ -182,11 +182,12 @@ proj = ProjectsRepository(folder, fLOG=fLOG)
 groups = proj.Groups
 if do_mail or len(groups) < 10:
     fLOG("[fetch_student_projects_from_gmail] create list of groups")
-    proj = ProjectsRepository.create_folders_from_dataframe(df, folder, col_subject=col_subject,
-                                                            col_group=col_group, col_mail=col_mail,
-                                                            email_function=emails, skip_if_nomail=False,
-                                                            must_have_email=True, fLOG=fLOG,
-                                                            col_student=col_student)
+    proj = ProjectsRepository.create_folders_from_dataframe(
+        df, folder, col_subject=col_subject,
+        col_group=col_group, col_mail=col_mail,
+        email_function=emails, skip_if_nomail=False,
+        must_have_email=True, fLOG=fLOG,
+        col_student=col_student)
 elif len(groups) < 10:
     fLOG("[fetch_student_projects_from_gmail] skip fetching mails: {0} groups already".format(
         len(groups)))

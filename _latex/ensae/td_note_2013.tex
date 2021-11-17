@@ -1,0 +1,80 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\huge ENSAE TD noté, mardi 27 novembre 2012
+
+\normalsize
+\textit{Le programme construit au fur et à mesure des questions devra être imprimé à la fin du TD et rendu au chargé de TD. \textbf{Il ne faut pas oublier de mentionner son nom inséré en commentaire au début du programme et de l'ajouter sur chaque page.} Les réponses autres que des parties de programme seront insérées sous forme de commentaires. Les squelettes de fonctions proposés ne sont que des suggestions. Les programmes fournis avec l'énoncé ne devront pas être rendus. \textbf{Il faudra aussi indiquer le numéro des exercices sous forme de commentaires.}} 
+\smallskip
+}
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_labelS_2013}%\indexfrr{énoncé}{pratique}
+\input{../python_examen/td_note_2013_exoS.tex}
+
+\textbf{Il y avait deux questions différentes selon les énonces.}
+
+\exequest Enoncé~1~: Ecrire une fonction qui retourne la surface coloriée. (2~points)
+\begin{verbatimx}
+def surface_coloriee ( matrice ) :
+    # ...
+    return surface
+\end{verbatimx}
+
+\exequest Enoncé~4~: Créer une autre fonction identique à celle de la question 3 à ceci près qu'elle doit s'arrêter après que environ 1000 points distincts ont été coloriés. (2~points)
+\begin{verbatimx}
+def fonction_coloriage_environ_1000 ( matrice, i0, j0 ) :
+    # ...
+    return surface
+\end{verbatimx}
+
+\textbf{Programme générant la spirale}
+\inputcodes{../python_examen/td_note_2013_novembre_2012_exoS.py}{génération des deux spirales}{, énoncé 2013}
+\end{xexercice}
+
+
+
+\ifnum\correctionenonce = 1
+
+\begin{xdemoexonot}{td_note_label_2013_S}
+
+\inputcodes{../python_examen/td_note_2013.py}{exercice pour s'évaluer}{, correction 2013}
+
+
+
+\end{xdemoexonot}
+\fi
+
+
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_labelM_2013}%\indexfrr{énoncé}{pratique}
+\input{../python_examen/td_note_2013_exoM.tex}
+
+\medskip
+
+\textbf{Programme préparant les données~:}
+\inputcodes{../python_examen/td_note_2013_novembre_2012_exoM.py}{import des données}{, énoncé 2013}
+\end{xexercice}
+
+
+
+
+
+\ifnum\correctionenonce = 1
+
+\begin{xdemoexonot}{td_note_label_2013_M}
+
+\inputcodes{../python_examen/td_note_2013_M.py}{exercice pour s'évaluer}{, correction 2013}
+
+
+
+\end{xdemoexonot}
+\fi
+
+
+\input{../../common/exo_end.tex}%

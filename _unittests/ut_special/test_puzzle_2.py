@@ -4,13 +4,14 @@
 """
 import os
 import unittest
-from pyquickhelper.pycode import get_temp_folder, is_travis_or_appveyor
+from pyquickhelper.pycode import (
+    get_temp_folder, is_travis_or_appveyor, ExtTestCase)
 from pyquickhelper.loghelper import fLOG
 from ensae_teaching_cs.special.puzzle_2 import pygame_simulation, Puzzle2
 from ensae_teaching_cs.helpers.video_helper import make_video
 
 
-class TestPuzzle2(unittest.TestCase):
+class TestPuzzle2(ExtTestCase):
 
     def test_image_video_puzzle_2_resolution(self):
         p = Puzzle2()

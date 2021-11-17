@@ -5,9 +5,13 @@
 """
 
 
-def get_teaching_modules():
+def get_teaching_modules(branch=True):
     """
     List of teachings modules to maintain (CI + documentation).
+
+    :param branch: the default branch is usually master but could
+        be main. If False, the branch name is not returned,
+        otherwise the module name is `module:branch`.
 
     .. runpython::
         :showcode:
@@ -15,7 +19,8 @@ def get_teaching_modules():
         from ensae_teaching_cs.automation import get_teaching_modules
         print('\\n'.join(sorted(get_teaching_modules())))
     """
-    return ["pymlbenchmark", "_benchmarks", "ensae_teaching_dl", "machinelearningext",
+    mods = ['deeponnxcustom:main', 'onnxcustom',
+            "pymlbenchmark", "_benchmarks", "ensae_teaching_dl", "machinelearningext",
             "lecture_citation", "botadi", "pyquickhelper", "jyquickhelper",
             "python3_module_template", "mathenjeu", "pymmails", "pymyinstall",
             "pyensae", "pyrsslocal", "pysqllike", "ensae_projects", "ensae_teaching_cs",
@@ -23,5 +28,7 @@ def get_teaching_modules():
             "tkinterquickhelper", "cpyquickhelper", "pandas_streaming",
             "lightmlboard", "lightmlrestapi", "mlinsights", "pyenbc", "mlprodict",
             "papierstat", "sparkouille", "manydataapi", "csharpy", "csharpyml",
-            "wrapclib", "myblog", "_check_python_install", "onnxortext", 'onnxcustom'
-            ]
+            "wrapclib", "myblog", "_check_python_install", "onnxortext"]
+    if not branch:
+        mods = [m.split(':', maxsplit=1)[0] for m in mods]
+    return mods

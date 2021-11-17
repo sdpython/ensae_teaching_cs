@@ -1026,8 +1026,9 @@ def tsp_kruskal_algorithm(points, size=20, length=10, max_iter=None,
     chemin = circuit_eulerien(points, arbre, screen, pygame, fLOG)
 
     if len(chemin) != len(points):
-        raise Exception("The path should include all points: path:{0} points:{1}".format(
-            len(chemin), len(points)))
+        raise Exception(  # pragma: no cover
+            "The path should include all points: path:{0} points:{1}".format(
+                len(chemin), len(points)))
 
     if screen is not None:
         display_chemin([points[c] for c in chemin], 0,
@@ -1145,7 +1146,7 @@ def pygame_simulation(size=(800, 500), zone=20, length=10, max_iter=None,
     points = construit_ville(nb, x, y)
 
     if first_click:
-        wait_event(pygame)
+        wait_event(pygame)  # pragma: no cover
 
     images = [] if folder is not None else None
     tsp_kruskal_algorithm(points, size=zone, length=length, max_iter=max_iter,
@@ -1155,7 +1156,7 @@ def pygame_simulation(size=(800, 500), zone=20, length=10, max_iter=None,
     fLOG("images", len(images))
 
     if first_click:
-        wait_event(pygame)
+        wait_event(pygame)  # pragma: no cover
 
     if folder is not None:
         fLOG("saving images")

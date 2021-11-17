@@ -25,8 +25,8 @@ med = gr.iloc[gr.shape[0] // 2, 1]
 
 sets = [
     {'skl2onnx', 'onnxmltools',
-     'keras2onnx', 'tf2onnx', 'onnxconverter-common',
-     'ort-customops'},
+     'tf2onnx', 'onnxconverter-common',
+     'onnxruntime-extensions'},
     {'onnx'},
     {'onnxruntime'},
     {'jyquickhelper', 'pymyinstall', 'pyquickhelper', 'pyensae'},
@@ -36,7 +36,7 @@ sets = [
     {'lightmlboard', 'lightmlrestapi', 'pyrsslocal', 'pymmails', },
     {'sparkouille', 'ensae_projects', 'actuariat_python', 'code_beatrix', 'jupytalk'},
     {'papierstat', 'teachpyx', 'ensae_teaching_cs', 'ensae_teaching_dl', 'teachpyx',
-     'aftercovid', 'onnxcustom'},
+     'aftercovid', 'onnxcustom', 'deeponnxcustom'},
     {'tkinterquickhelper', 'pysqllike', 'pyenbc', },
     {'nimbusml', },
     {'scikit-learn'},

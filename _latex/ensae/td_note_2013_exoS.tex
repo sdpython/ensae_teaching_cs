@@ -1,0 +1,64 @@
+L'objectif de cet exercice est de colorier l'espace situé entre les deux spirales de la figure~\ref{double_spirale_2013}.
+
+
+\begin{figure}[ht]
+\begin{center}\begin{tabular}{|c|}\hline 
+\includegraphics[width=8cm]{../python_examen/image/double_ellipse.png} \\ \hline
+\end{tabular}
+\end{center}
+\caption{Double spirale}
+\label{double_spirale_2013}
+\end{figure}
+
+Le code qui a servi à construire ces deux spirales vous est fourni en pièce jointe\footnote{lien \httpstyle{http://www.xavierdupre.fr/enseignement/complements\_site\_web/td\_note\_2013\_novembre\_2012\_exoM.py}}. Ce code vous est donné, aucune question ne vous sera posée dessus. Il est présent à la fin de l'énoncé de l'exercice. \textbf{Afin d'éviter son inclusion (et son impression), votre programme devra impérativement commencer par~:}
+
+\begin{verbatimx}
+#coding:latin-1
+import exoS
+matrice = exoS.construit_matrice(100)
+\end{verbatimx}
+
+Pour visualiser la matrice et obtenir la figure~\ref{double_spirale_2013}, il faut écrire~:
+\begin{verbatimx}
+exoS.dessin_matrice(matrice)   # cette fonction place un point bleu pour une case contenant 1,
+                               # rouge pour une case contenant 2,
+                               # rien si elle contient 0
+\end{verbatimx}
+
+Au départ la matrice retournée par la fonction \codes{construit\_matrice} contient soit~0 si la case est vide, soit~1 si cette case fait partie du tracé d'une spirale. L'objectif de cet exercice est de colorier une zone de la matrice.
+
+\exequest Ecrire une fonction qui prend comme entrée une matrice, deux entiers et qui retourne la liste des voisins parmi les quatre possibles pour lesquels la matrice contient une valeur nulle. On fera attention aux bords du quadrillage. (2~points)
+
+\begin{verbatimx}
+def voisins_a_valeur_nulle ( matrice, i, j ) :
+    resultat = [ ]
+    # ...
+    return resultat
+\end{verbatimx}
+
+
+\exequest En utilisant la fonction précédente, écrire une fonction qui reçoit une liste de points de la matrice contenant une valeur nulle et qui retourne tous les voisins possibles contenant une valeur nulle pour tous les points de la liste. (2~points)
+
+\begin{verbatimx}
+def tous_voisins_a_valeur_nulle ( matrice, liste_points ) :
+    resultat = [ ]
+    # ...
+    return resultat
+\end{verbatimx}
+
+\exequest On a tous les éléments pour écrire l'algorithme de coloriage~:
+\begin{enumerate}
+\item On part d'un point $(i0,j0)$ qui fait partie de la zone à colorier, qu'on insère dans une liste \codes{acolorier = [(i0,j0)]}.
+\item Pour tous les points $(i,j)$ de la liste \codes{acolorier}, on change la valeur de la case $(i,j)$ de 0 à 2.
+\item Pour tous les points $(i,j)$ de la liste \codes{acolorier}, on regarde les quatre voisins $(i,j+1), (i,j-1), (i+1,j), (i-1,j)$. Si la matrice contient 0 pour un de ces voisins, on l'ajoute à la liste et on retourne l'étape précédente tant que cette liste n'est pas vide.
+\end{enumerate}
+
+En utilisant la fonction précédente, écrire une fonction qui colorie la matrice à partir d'un point $(i0,j0)$. (3~points)
+
+\begin{verbatimx}
+def fonction_coloriage( matrice, i0, j0) :
+    # ...
+\end{verbatimx}
+
+
+\exequest Tester la fonction précédente avec le point de coordonnées $(53,53)$ puis afficher le résultat avec la fonction \codes{dessin\_matrice}. (1~point)

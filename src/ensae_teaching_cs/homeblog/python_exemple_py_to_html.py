@@ -142,7 +142,7 @@ def py_to_html_file(file, writehtml="", addGoogleTracking=True, title=None):
         with open(file, "r", encoding="utf-8") as tf:
             content = tf.read()
         encoding = "utf-8"
-    except UnicodeDecodeError:
+    except UnicodeDecodeError:  # pragma: no cover
         try:
             with open(file, "r", encoding="latin-1") as tf:
                 content = tf.read()
@@ -161,7 +161,7 @@ def py_to_html_file(file, writehtml="", addGoogleTracking=True, title=None):
         block = makeBlock(data)
         page = py_page.replace(googleTrackerMarker, googlet)
         html = page % (title or f, title or f, block, py2html__version__)
-    except Exception as e:
+    except Exception as e:  # pragma: no cover
         raise Exception(
             "Not a python file, running it again '{0}'.".format(
                 file)) from e

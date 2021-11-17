@@ -1,0 +1,16 @@
+N1	P1	rouge	poignard
+N2	P2	jaune	révolver
+N3	P3	blanc	matraque
+N4	P4	vert	chandelier
+N5	P5	bleu	corde
+N6	P6	violet	clé anglaise
+N7	P7	rose	flacon de poison
+N8	P8	marron	fer à cheval
+N9	P9	orange	matraque
+N10	P10	gris	corde
+N11	P11	pêche	poignard
+N12	P12	blanc	révolver
+N13	P13	marron	corde
+N14	P14	vert	flacon de poison
+N15	P15	rouge	chandelier
+N16	P16	rose	révolver
