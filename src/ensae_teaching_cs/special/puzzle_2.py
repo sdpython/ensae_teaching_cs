@@ -108,7 +108,7 @@ class Puzzle2Piece:
         :param pygame: module :epkg:`pygame`
         """
         image = pygame.image.load(self.name)
-        self.image = pygame.transform.scale(image, (250, 250))
+        self.image = pygame.transform.scale(image, (150, 150))
         s = self.image.get_size()
         self.image_petite = pygame.transform.scale(
             self.image, (int(s[0] * 0.7), int(s[1] * 0.7)))
@@ -249,7 +249,7 @@ class Puzzle2:
             8: (3, 2)
         }
         ligne, colonne = positions[position]
-        return (colonne * 250, ligne * 250)
+        return (colonne * 150, ligne * 150)
 
     def meilleure_piece(self, free, pos):
         """
@@ -490,7 +490,7 @@ def display_puzzle_2_piece(self, screen, position, pygame):
     et de son orientation.
     """
     if "darker" in self.__dict__ and self.darker:
-        position = (position[0] + 20, position[1] + 20)
+        position = (position[0] + 120, position[1] + 120)
         image = pygame.transform.rotate(self.image_petite, self.orientation)
         screen.blit(image, position)
     else:
@@ -499,7 +499,7 @@ def display_puzzle_2_piece(self, screen, position, pygame):
 
 
 def pygame_simulation(pygame, first_click=False, folder=None,
-                      size=(1000, 1000), fLOG=fLOG, delay=200,
+                      size=(700, 700), fLOG=fLOG, delay=200,
                       flags=0):
     """
     Simulation graphique.
@@ -527,7 +527,7 @@ def pygame_simulation(pygame, first_click=False, folder=None,
 
     ::
 
-        from ensae_teaching_cs.special.puzzle_girafe import pygame_simulation
+        from ensae_teaching_cs.special.puzzle_2 import pygame_simulation
         import pygame
         pygame_simulation(pygame)
 
