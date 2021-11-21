@@ -15,7 +15,6 @@ jdcal
 joblib
 jupyter
 matplotlib
-nbformat
 numpy
 openpyxl
 pandas

@@ -12,9 +12,10 @@ flask
 h5py
 jupyter
 matplotlib
-notebook
+nbconvert!=6.3.0
 networkx
 nltk
+notebook
 numba
 numpy
 openpyxl
