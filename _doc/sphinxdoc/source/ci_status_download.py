@@ -29,6 +29,7 @@ sets = [
      'onnxruntime-extensions'},
     {'onnx'},
     {'onnxruntime'},
+    {'onnxruntime-training'},
     {'jyquickhelper', 'pymyinstall', 'pyquickhelper', 'pyensae'},
     {'manydataapi', 'cpyquickhelper', 'mlstatpy', },
     {'mlinsights', 'mlprodict', 'onnxortext'},

@@ -274,4 +274,5 @@ epkg_dictionary.update({
     "xgboost": "https://xgboost.readthedocs.io/en/latest/",
     "XGBoost": "https://xgboost.readthedocs.io/en/latest/",
     "XML": "https://fr.wikipedia.org/wiki/Extensible_Markup_Language",
+    "woob": "https://woob.tech/",
 })
