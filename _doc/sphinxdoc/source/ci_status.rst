@@ -413,10 +413,7 @@ Tableau de bord et statut des dépendances
       - .. image:: https://ci.appveyor.com/api/projects/status/r7st490hekggad3d?svg=true
             :target: https://ci.appveyor.com/project/sdpython/onnxortext
             :alt: Build Status Windows
-      - .. image:: https://circleci.com/gh/sdpython/onnxortext/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/onnxortext/tree/master
-        .. image:: https://dev.azure.com/xavierdupre3/onnxortext/_apis/build/status/sdpython.onnxortext
-            :target: https://dev.azure.com/xavierdupre3/onnxortext/
+      -
       - .. image:: https://badge.fury.io/py/onnxortext.svg
             :target: https://pypi.org/project/onnxortext
       - .. image:: http://img.shields.io/github/issues/sdpython/onnxortext.png
@@ -438,8 +435,6 @@ Tableau de bord et statut des dépendances
             :target: https://circleci.com/gh/sdpython/pandas_streaming/tree/master
         .. image:: https://dev.azure.com/xavierdupre3/pandas_streaming/_apis/build/status/sdpython.pandas_streaming
             :target: https://dev.azure.com/xavierdupre3/pandas_streaming/
-        .. image:: https://api.codacy.com/project/badge/Grade/f53b7f4d6a0447aa9ce0c4ad5df659ef
-            :target: https://www.codacy.com/app/sdpython/pandas_streaming?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sdpython/pandas_streaming&amp;utm_campaign=Badge_Grade
       - .. image:: https://badge.fury.io/py/pandas-streaming.svg
             :target: https://pypi.org/project/pandas-streaming
       - .. image:: http://img.shields.io/github/issues/sdpython/pandas_streaming.png
@@ -459,8 +454,6 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/papierstat/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/papierstat/tree/master
-        .. image:: https://api.codacy.com/project/badge/Grade/de06bee4406c4a68a05ba5aecfbed07d
-            :target: https://www.codacy.com/app/sdpython/papierstat?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sdpython/papierstat&amp;utm_campaign=Badge_Grade
       - .. image:: https://badge.fury.io/py/papierstat.svg
             :target: https://pypi.org/project/papierstat
       - .. image:: http://img.shields.io/github/issues/sdpython/papierstat.png
@@ -480,8 +473,6 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/pyenbc/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/pyenbc/tree/master
-        .. image:: https://api.codacy.com/project/badge/Grade/25d3472081224821be06fae5a2415247
-            :target: https://www.codacy.com/app/sdpython/pyenbc?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sdpython/pyenbc&amp;utm_campaign=Badge_Grade
       - .. image:: https://badge.fury.io/py/pyenbc.svg
             :target: https://pypi.org/project/pyenbc
       - .. image:: http://img.shields.io/github/issues/sdpython/pyenbc.png
@@ -649,8 +640,6 @@ Tableau de bord et statut des dépendances
             :alt: Build Status Windows
       - .. image:: https://circleci.com/gh/sdpython/teachpyx/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/teachpyx/tree/master
-        .. image:: https://api.codacy.com/project/badge/Grade/0173c4ee92d24c4bb5af3c0f70e517c2
-            :target: https://www.codacy.com/app/sdpython/teachpyx?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sdpython/teachpyx&amp;utm_campaign=Badge_Grade
       - .. image:: https://badge.fury.io/py/teachpyx.svg
             :target: https://pypi.org/project/teachpyx
       - .. image:: http://img.shields.io/github/issues/sdpython/teachpyx.png
@@ -736,8 +725,6 @@ Tableau de bord et statut des dépendances
             :target: https://circleci.com/gh/sdpython/python3_module_template/tree/master
         .. image:: https://dev.azure.com/xavierdupre3/python3_module_template/_apis/build/status/sdpython.python3_module_template
             :target: https://dev.azure.com/xavierdupre3/python3_module_template/
-        .. image:: https://api.codacy.com/project/badge/Grade/7b995591aeba40f9a869fd178a0695d9
-            :target: https://www.codacy.com/app/sdpython/python3_module_template?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sdpython/python3_module_template&amp;utm_campaign=Badge_Grade
       -
       - .. image:: http://img.shields.io/github/issues/sdpython/python3_module_template.png
             :alt: GitHub Issues
@@ -752,8 +739,6 @@ Tableau de bord et statut des dépendances
       -
       - .. image:: https://circleci.com/gh/sdpython/td1a_unit_test_ci/tree/master.svg?style=svg
             :target: https://circleci.com/gh/sdpython/td1a_unit_test_ci/tree/master
-        .. image:: https://api.codacy.com/project/badge/Grade/8837c17514064623a54e36d75ceb9d17
-            :target: https://www.codacy.com/app/sdpython/td1a_unit_test_ci?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sdpython/td1a_unit_test_ci&amp;utm_campaign=Badge_Grade
       -
       - .. image:: http://img.shields.io/github/issues/sdpython/td1a_unit_test_ci.png
             :alt: GitHub Issues

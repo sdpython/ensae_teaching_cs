@@ -8,7 +8,7 @@ import pydata_sphinx_theme
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0])))
 
 set_sphinx_variables(__file__, "Python dans tous ses états", "Xavier Dupré",
-                     2021, "pydata_sphinx_theme",
+                     2022, "pydata_sphinx_theme",
                      pydata_sphinx_theme.get_html_theme_path(),
                      locals(), add_extensions=None,
                      github_repo="https://github.com/sdpython/ensae_teaching_cs.git",
