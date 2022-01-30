@@ -1,0 +1,92 @@
+%!TEX encoding =  IsoLatin
+\input{../../common/exo_begin.tex}%
+
+\firstpassagedo{
+\newcommand{\sametextforthisinterro}[0]{ 
+\huge ENSAE TD noté, rattrapage, mardi 15 novembre 2021
+
+\normalsize
+\textit{Le programme devra être envoyé par mail au chargé de TD et au professeur.}
+\smallskip
+}
+
+\sametextforthisinterro
+}
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label2_2022}%\indexfrr{énoncé}{pratique}
+
+On cherche à expliquer la forme des briques de lait. On rappelle quelques formules :
+
+\begin{itemize}
+\item aire d'une surface : S = longueur $\times$ largeur
+\item volume d'une brique : V = longueur $\times$ largeur $\times$ hauteur
+\end{itemize}
+
+
+\exequest Ecrire une fonction qui calcule l'aire d'une surface (1 point)
+
+\begin{verbatimx}
+def surface(longueur, largeur):
+  # ...
+\end{verbatimx}
+
+\exequest Ecrire une fonction qui calcule le volume d'une brique (1 point)
+
+\begin{verbatimx}
+def volume(longueur, largeur, hauteur):
+  # ...
+\end{verbatimx}
+
+\exequest Ecrire une fonction qui retourne la somme des surfaces des faces d'une brique (2 points)
+
+\begin{verbatimx}
+def surface_brique(longueur, largeur, hauteur):
+   # ...
+\end{verbatimx}
+
+\exequest La brique optimale : on considère l'ensemble \texttt{[0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1., 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.]}. On fait varier plusieurs dimensions dans cet ensemble, on ne garde que celle dont le volume est 1 et la surface minimale. Quelles sont les dimensions optimales ? (3 points)
+
+\begin{verbatimx}
+def brique_optimale(ensemble):
+  # ...
+\end{verbatimx}
+
+\exequest On inclut la surface nécessaire pour coller les extremités. Pour fermer une brique, il faut pouvoir coller les faces entre elles. La surface additionnelle est égale à une fois la plus petite des faces + la surface d'un carré de côté la plus petite dimension. Modifier la fonction précédente pour en tenir compte. (3 points)
+
+\begin{verbatimx}
+def brique_optimale_surplus(ensemble):
+   # ...
+\end{verbatimx}
+
+\exequest Une bouteille de deux litres deux fois plus large : un producteur souhaite écouler la moitié de sa marchandise avec des bouteilles de lait de deux litres, aussi hautes et longues mais deux fois plus large pour pouvoir les stocker facilement. La surface de cette bouteille est celle-ci :
+
+\texttt{surface\_brique2(longueur, largeur, hauteur) = surface\_brique(longueur, largeur, hauteur) - 2 * surface(largeur, hauteur)}
+
+Quelles sont les dimensions optimales ? (3 points)
+
+\begin{verbatimx}
+def brique_optimale_surplus_deux_litres(ensemble):
+   # ....
+\end{verbatimx}
+
+\exequest Messages codés : Le producteur se sert d'une rangée de longueur de 10 briques de 1 litre dans laquelle il insère des briques de deux litres pour envoyer des messages codés (en binaire).
+
+Example de message : \texttt{A A B B A B B A B B} où A = une bouteille de 1 litre, B = moitié d'une bouteille de deux litres.
+
+Combien y a-t-il de possibilités dans une rangée d'une longueur de 10 briques de 1 litre ? Il faut écrire une fonction qui permettent de répondre à n'importe quelle rangée. (4 points)
+
+
+\exequest On suppose maintenant que les messages sont codés sur deux rangées de 10 longueurs. Combien y-a-il de possibilités ? (3 points)
+
+
+\end{xexercice}
+
+
+
+
+
+
+
+\input{../../common/exo_end.tex}%

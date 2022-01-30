@@ -159,6 +159,12 @@ les modules standard du langage :epkg:`Python` et parfois
                 </a>
             (optimisation du produit matriciel de plusieurs matrices)
         </li>
+    <li><a href="https://raw.githubusercontent.com/sdpython/ensae_teaching_cs/master/_latex/ensae/pdf/td_note_2022_rattrapage.pdf">énoncé 2021-2022 (2)</a>,
+            <a href="http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/notebooks/td_note_2022_rattrapage.html">
+                <img src="http://www.xavierdupre.fr/site2013/enseignements/copier_coller.png" width="12px" />
+                </a>
+            (optimisation du produit matriciel de plusieurs matrices)
+        </li>
     </ul>
     </p>
 
@@ -292,6 +298,7 @@ TD notés, correction
     ../notebooks/td_note_2020_2
     ../notebooks/td_note_2021
     ../notebooks/td_note_2022
+    ../notebooks/td_note_2022_rattrapage
 
 Autres sources d'énoncés d'examens
 ++++++++++++++++++++++++++++++++++
