@@ -8,7 +8,7 @@ import pydata_sphinx_theme
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.split(__file__)[0])))
 
 set_sphinx_variables(__file__, "Python dans tous ses états", "Xavier Dupré",
-                     2021, "pydata_sphinx_theme",
+                     2022, "pydata_sphinx_theme",
                      pydata_sphinx_theme.get_html_theme_path(),
                      locals(), add_extensions=None,
                      github_repo="https://github.com/sdpython/ensae_teaching_cs.git",
@@ -90,6 +90,7 @@ epkg_dictionary.update({
     "anaconda": 'https://www.continuum.io/downloads',
     'API REST': "https://en.wikipedia.org/wiki/Representational_state_transfer",
     "Arduino": 'https://www.arduino.cc/',
+    'ARMA': 'https://fr.wikipedia.org/wiki/ARMA',
     "array": 'https://docs.scipy.org/doc/numpy/reference/generated/numpy.array.html',
     'assert_frame_equal': 'https://github.com/pydata/pandas/blob/master/pandas/util/testing.py',
     "AUC": 'http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/c_metric/roc.html#aire-sous-la-courbe',
@@ -157,6 +158,7 @@ epkg_dictionary.update({
     "Jinja2": 'http://jinja.pocoo.org/docs/',
     'joblib': 'https://joblib.readthedocs.io/en/latest/',
     "Julia": 'https://julialang.org/',
+    'ImageNet': 'https://www.image-net.org/',
     "Kaggle": 'https://www.kaggle.com/',
     "keras": 'https://keras.io/',
     "keyring": 'https://github.com/jaraco/keyring',
@@ -246,6 +248,7 @@ epkg_dictionary.update({
     "Spark": 'https://spark.apache.org/',
     "sparkouille": 'http://www.xavierdupre.fr/app/sparkouille/helpsphinx/index.html',
     "Spyder": 'https://github.com/spyder-ide/spyder',
+    'SQL': 'https://fr.wikipedia.org/wiki/Structured_Query_Language',
     "statsmodels": 'https://www.statsmodels.org/stable/index.html',
     'streamlit': 'https://streamlit.io/docs/',
     'td2a_plotting': 'http://www.xavierdupre.fr/app/td2a_plotting/helpsphinx/index.html',
@@ -271,4 +274,5 @@ epkg_dictionary.update({
     "xgboost": "https://xgboost.readthedocs.io/en/latest/",
     "XGBoost": "https://xgboost.readthedocs.io/en/latest/",
     "XML": "https://fr.wikipedia.org/wiki/Extensible_Markup_Language",
+    "woob": "https://woob.tech/",
 })

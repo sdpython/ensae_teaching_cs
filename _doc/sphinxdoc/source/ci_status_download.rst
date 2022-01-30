@@ -34,7 +34,7 @@ On peut retrouver la plupart de ces résultats sur
     modules.extend([
         'onnx', 'onnxruntime', 'skl2onnx', 'keras2onnx', 'nimbusml',
         'scikit-learn', 'pandas', 'numpy', 'jupyter', 'matplotlib',
-        'protobuf', 'nimbusml', 'aftercovid',
+        'protobuf', 'nimbusml', 'aftercovid', 'onnxruntime-training',
         'onnxconverter-common', 'tf2onnx', 'onnxruntime-extensions'])
     modules = [m.split(':')[0] for m in modules]
     dont = {'numpy', 'matplotlib', 'pandas', 'jupyter'}
@@ -64,6 +64,7 @@ On peut retrouver la plupart de ces résultats sur
          'onnxruntime-extensions'},
         {'onnx'},
         {'onnxruntime'},
+        {'onnxruntime-training'},
         {'jyquickhelper', 'pymyinstall', 'pyquickhelper', 'pyensae'},
         {'manydataapi', 'cpyquickhelper', 'mlstatpy', },
         {'mlinsights', 'mlprodict', 'onnxortext'},
