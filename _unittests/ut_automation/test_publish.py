@@ -20,12 +20,12 @@ class TestPublish(ExtTestCase):
             location = "/var/lib/jenkins/workspace/%s/%s%s/dist/%s"
 
         rootw = "/www/htdocs/app/%s/%s"
-        google_id = "NOGOODID"
+        tracking_id = "NOGOODID"
         suffix = ("_UT_%d%d_std" % sys.version_info[:2],)
 
         projects = publish_teachings_to_web("nologin", location=location, exc=False,
                                             suffix=suffix, transfer=False,
-                                            fLOG=noLOG, google_id=google_id,
+                                            fLOG=noLOG, tracking_id=tracking_id,
                                             rootw=rootw)
         n = 0
         for _ in projects:

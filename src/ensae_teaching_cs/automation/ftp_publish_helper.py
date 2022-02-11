@@ -206,7 +206,8 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
     ftp.close()
 
 
-def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None,  # pylint: disable=W0102
+def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr",  # pylint: disable=W0102
+                             tracking_id=None,
                              location="c:\\jenkins\\pymy\\%s\\%s%s\\dist\\%s",
                              rootw="/www/htdocs/app/%s/%s",
                              folder_status=".",
@@ -221,7 +222,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
 
     @param      login               login
     @param      ftpsite             ftp site
-    @param      google_id           google_id
+    @param      tracking_id         tracking_id
     @param      location            location of Jenkins build
     @param      rootw               root on ftp site
     @param      folder_status       folder status
@@ -257,7 +258,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
         password = None
 
         publish_teachings_to_web(login, ftpsite=website,
-            google_id="google_id",
+            tracking_id="tracking_id",
             location="<something>\\\\%s\\\\%s%s\\\\dist\\\\%s",
             rootw=rootw,
             folder_status=os.path.abspath("."),
@@ -273,16 +274,11 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr", google_id=None
     if modules is None:
         modules = get_teaching_modules(branch=False)
 
-    if google_id is None:
-        google_id = ""
+    if tracking_id is None:
+        tracking_id = ""
     else:
         footer = """
-        <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
-        <script type="text/javascript">
-        _uacct = "{}";
-        urchinTracker();
-        </script>
-        """.format(google_id)
+        """.format(tracking_id)
 
     if password is None and transfer:
         raise ValueError("password is empty")

@@ -43,17 +43,15 @@ py_page = """
 created avec py2html version:%s
 <p>
 </p>
-__GOOGLETRACKER__
+__TRACKER__
 </body>
 </html>"""
 
-googleTrackerMarker = "__GOOGLETRACKER__"
+trackerMarker = "__TRACKER__"
 ### tohtmlreplace BEGIN ###
-googleTrackerFooter = ""
+trackerFooter = ""
 ### tohtmlreplace ELSE ###
-googleTrackerFooter = """
-<script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
-<script type="text/javascript">_uacct = "UA-2815364-1";urchinTracker();</script>
+trackerFooter = """
 """
 ### tohtmlreplace END ###
 
@@ -102,7 +100,7 @@ def py_to_html_folder(folder, addGoogleTracking=True):
     Converts all :epkg:`python` files from a folder into html files.
 
     @param      folder              folder
-    @param      addGoogleTracking   add some code for the Google tracking (related to www.xavierdupre.fr),
+    @param      addGoogleTracking   add some code for the tracking,
                                     @see fn py_to_html_file
     @return                         list of processed files
     """
@@ -117,22 +115,16 @@ def py_to_html_folder(folder, addGoogleTracking=True):
     return res
 
 
-def py_to_html_file(file, writehtml="", addGoogleTracking=True, title=None):
+def py_to_html_file(file, writehtml="", addTracking=True, title=None):
     """
     Converts a :epkg:`python` script into a html file.
 
     @param      folder              folder
     @param      writehtml           filename
-    @param      addGoogleTracking   add some code for the Google tracking (related to www.xavierdupre.fr), it looks like:
-
-                                    ::
-
-                                        <script src="http://www.google-analytics.com/urchin.js" type="text/javascript"></script>
-                                        <script type="text/javascript">_uacct = "UA-XXXXXXX-X";urchinTracker();</script>
-
+    @param      addTracking         add some code for tracking
     @return                         the processed file (same file but with extension .html)
     """
-    googlet = googleTrackerFooter if addGoogleTracking else ""
+    tracking_code = trackerFooter if addTracking else ""
 
     fLOG("[py_to_html_file] converting pyfile '{}' in html.".format(file))
     f = file
@@ -159,7 +151,7 @@ def py_to_html_file(file, writehtml="", addGoogleTracking=True, title=None):
         data = file2HTML(content, "0", appliedstyle,
                          False, "1", encoding=encoding)
         block = makeBlock(data)
-        page = py_page.replace(googleTrackerMarker, googlet)
+        page = py_page.replace(trackerMarker, tracking_code)
         html = page % (title or f, title or f, block, py2html__version__)
     except Exception as e:  # pragma: no cover
         raise Exception(
