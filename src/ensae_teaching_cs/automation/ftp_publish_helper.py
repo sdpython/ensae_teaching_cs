@@ -277,8 +277,9 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr",  # pylint: dis
     if tracking_id is None:
         tracking_id = ""
     else:
-        footer = """
-        """.format(tracking_id)
+        # footer = """
+        # """.format(tracking_id)
+        footer = ""
 
     if password is None and transfer:
         raise ValueError("password is empty")

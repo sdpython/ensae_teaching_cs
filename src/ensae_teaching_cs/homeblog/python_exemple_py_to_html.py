@@ -95,12 +95,12 @@ def get_first_col(file):
     return "-"
 
 
-def py_to_html_folder(folder, addGoogleTracking=True):
+def py_to_html_folder(folder, addTracking=True):
     """
     Converts all :epkg:`python` files from a folder into html files.
 
     @param      folder              folder
-    @param      addGoogleTracking   add some code for the tracking,
+    @param      addTracking         add some code for the tracking,
                                     @see fn py_to_html_file
     @return                         list of processed files
     """
@@ -110,7 +110,7 @@ def py_to_html_folder(folder, addGoogleTracking=True):
         fullf = folder + "/" + f
         ext = os.path.splitext(fullf)[1]
         if ext == ".py":
-            r = py_to_html_file(fullf, addGoogleTracking=addGoogleTracking)
+            r = py_to_html_file(fullf, addTracking=addTracking)
             res.append(r)
     return res
 
