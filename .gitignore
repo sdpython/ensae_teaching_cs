@@ -557,3 +557,5 @@ _doc/notebooks/td1a_home/apiapp.py
 _doc/sphinxdoc/source/pypi_downloads.sorted.csv
 _doc/notebooks/td1a_home/*.pickle
 _doc/notebooks/td1a_home/df.csv
+_doc/notebooks/data/DEAL Flow automatisation 2019.xlsx
+_doc/notebooks/data/Jeu de données deal flow 2018.csv
