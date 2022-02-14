@@ -25,6 +25,49 @@ par lesquelles on passe dans ce type d'aventure.
 .. contents::
     :local:
 
+Travail attendu et contraintes
+------------------------------
+
+Le projet dure quatre mois au second semestre (de février à mai).
+Il se conclut par un programme
+et un rapport. Une soutenance fin mai, début juin.
+Le rapport doit souligner la contribution originale des élèves,
+illuster les résultats numériques obtenus et la
+façon dont ils ont été obtenus.
+On suppose que le rapport s'adresse à un public expert.
+La soutenance doit reprendre les points principaux,
+décrire brièvement la façon dont le travail a été réparti
+au sein de l'équipe.
+
+Chaque projet, quelque soit le sujet, devra comporter une **composante numérique**
+(statistique, économique, financière, ...), que ce soit une stratégie de trading,
+l'optimisation d'une intelligence artificielle pour un jeu, une simulation économique.
+Cet aspect devra ressortir lors de la rédaction du rapport final qui devra exposer les résultats
+numériques obtenus et faire au moins une ou deux allusions à la façon dont ces calculs ont
+été implémentés. Voici la liste des contraintes :
+
+* le projet doit inclure une **composante numérique**,
+* le code doit inclure un **test unitaire**
+  (voir :ref:`td1aunittestcicorrectionrst`),
+* le projet ne doit inclure **aucune donnée réelle**,
+* lors de la soutenance, chaque membre d'un groupe devra
+  décrire le code d'un **algorithme utilisé** dans le projet
+  et dire en quoi il est **optimal**.
+
+Recommandations
+---------------
+
+Ces remarques sont plus un guide qu'un plan précis comme cet extrait de film bien connu
+`The Pirate code <https://www.youtube.com/watch?v=WJVBvvS57j0>`_.
+
+* :epkg:`git` et :epkg:`github`, tous les projets open source
+  l'utilisent, il facilite le travail à plusieurs
+* les **tests unitaires** sont utiles pour s'assurer qu'un algorithme
+  fonctionne toujours malgré toutes les modifications
+* un algorithme ne doit pas s'arrêter en cours de route, il doit
+  aussi produire des résultats, un graphique permet en coup d'oeil
+  d'en juger la cohérence.
+
 Sujets proposés
 ---------------
 
@@ -126,48 +169,6 @@ Liste exhaustive :
 #. Jeu hasard : :ref:`l-carte-poker`
 #. Jeu hasard : :ref:`l-carte-belotte`
 
-Travail attendu
----------------
-
-Le projet dure quatre mois au second semestre (de février à mai). Il se conclut par un programme
-et un rapport. Une soutenance suit mi-juin.
-Le rapport doit souligner la contribution originale des élèves,
-illuster les résultats numériques obtenus et la
-façon dont ils ont été obtenus. On suppose que le rapport s'adresse à un public expert.
-La soutenance doit reprendre les points principaux,
-décrire brièvement la façon dont le travail a été réparti
-au sein de l'équipe.
-
-Chaque projet, quelque soit le sujet, devra comporter une **composante numérique**
-(statistique, économique, financière, ...), que ce soit une stratégie de trading,
-l'optimisation d'une intelligence artificielle pour un jeu, une simulation économique.
-Cet aspect devra ressortir lors de la rédaction du rapport final qui devra exposer les résultats
-numériques obtenus et faire au moins une ou deux allusions à la façon dont ces calculs ont
-été implémentés. Le rapport doit contenir les éléments suivants :
-
-* instructions pour exécuter le programme
-* description d'un point de design de code
-* description d'un algorithme du programme et son coût
-* description d'une difficulté qui vous a fait perdre beaucoup de temps
-  (hors celles liées à votre apprentissage de la programmation)
-* description d'une contribution originale
-* description des résultats obtenus
-* prolongements et applications envisageables
-
-**Le code rendu doit contenir au moins un test unitaire.**
-Voir :ref:`td1aunittestcicorrectionrst`.
-
-Ces remarques sont plus un guide qu'un plan précis. Je vous encourage
-à voir cet extrait de film bien connu
-`The Pirate code <https://www.youtube.com/watch?v=WJVBvvS57j0>`_.
-
-D'une manière générale, il faut penser un rapport comme un document
-qui se lie consciencieusement une fois puis qui se relie
-plusieurs fois rapidement pour retrouver ce qu'on cherche,
-cela veut dire des graphiques complets lisibles sans trop de
-contexte, une conclusion explicite qui rappelle les résultats
-et le contexte d'exploitation de ceux-ci.
-
 Que faut-il en attendre ?
 -------------------------
 
@@ -186,36 +187,6 @@ Mais là encore, il existe des solutions.
 Le plus important sans doute, programmer veut aussi dire être **créatif**.
 Pour finir, voici ce qu'en ont retiré les élèves de première année en 2015 :
 :ref:`l-extrait-projet-1A-2015`.
-
-Références
-----------
-
-**Articles de blogs**
-
-* `Deux ou trois choses à vérifier avant de rendre un projet informatique
-  <http://www.xavierdupre.fr/blog/2014-05-14_nojs.html>`_
-* `Récupérer des données financières
-  <http://www.xavierdupre.fr/blog/2014-05-04_nojs.html>`_
-* `Travailler à plusieurs sur le même projet informatique
-  <http://www.xavierdupre.fr/blog/2014-02-12_nojs.html>`_
-* `Quelques précisions sur les projets informatiques
-  <http://www.xavierdupre.fr/blog/2013-02-03_nojs.html>`_
-* `Python extensions to do machine learning
-  <http://www.xavierdupre.fr/blog/2013-09-15_nojs.html>`_
-* `Frameworks for games in Python
-  <http://www.xavierdupre.fr/blog/2014-01-01_nojs.html>`_
-* `Ideas for making better conference talks & conferences
-  <http://jvns.ca/blog/2016/06/06/make-better-conference-talks/>`_ *(2016/06)*
-
-**Resources**
-
-* `données <http://www.xavierdupre.fr/site2013/enseignements/projets/donnees/>`_
-* :ref:`l-datasources`.
-* `bibliographie <http://www.xavierdupre.fr/site2013/enseignements/projets/biblio/>`_
-* `Barème indicatif des projets informatiques (année 2012-2013)
-  <http://www.xavierdupre.fr/site2013/enseignements/bareme.html>`_
-* `Barème indicatif des projets informatiques (année 2013-2014)
-  <http://www.xavierdupre.fr/site2013/enseignements/bareme-2014.html>`_
 
 Ce que vous ne lisez jamais mais que j'observe chaque année
 -----------------------------------------------------------
