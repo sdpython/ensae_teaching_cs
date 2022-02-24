@@ -38,6 +38,10 @@ Anonymisation des données / Privacy
 
 * `Differential Privacy Series Part 1 | DP-SGD Algorithm Explained
   <https://medium.com/pytorch/differential-privacy-series-part-1-dp-sgd-algorithm-explained-12512c3959a3>`_
+* `Calibrating Noise to Sensitivity in Private Data Analysis
+  <https://iacr.org/archive/tcc2006/38760266/38760266.pdf>`_
+* `The Algorithmic Foundations of Differential Privacy
+  <https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf>`_
 
 *Tables rondes*
 
