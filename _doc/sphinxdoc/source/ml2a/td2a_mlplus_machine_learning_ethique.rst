@@ -104,8 +104,39 @@ pousse ces concepts jusqu'à définir mathématiquement la parité d'un modèle 
 * `Enquête : comment les apps Figaro, L'Equipe ou Closer participent au pistage de 10 millions de Français <https://www-numerama-com.cdn.ampproject.org/c/www.numerama.com/politique/282934-enquete-comment-les-apps-figaro-lequipe-ou-closer-participent-au-pistage-de-10-millions-de-francais.html/amp>`_
 * `Surveiller et prévenir, l'ère de la pénalité prédictive <https://bourgoinblog.wordpress.com/2017/11/10/surveiller-et-prevenir-lere-de-la-penalite-predictive/>`_
 * `Nozha Boujemaa : "Les algorithmes doivent apporter une aide à la décision mais pas en être les prescripteurs" <https://www.acteurspublics.com/2017/12/08/les-algorithmes-doivent-apporter-une-aide-a-la-decision-mais-pas-en-etre-les-prescripteurs>`_
+* `L'équité de l'apprentissage machine en assurance <https://hal.archives-ouvertes.fr/hal-03561709/document>`_
 
 *Lectures*
+
+*2021-2022*
+
+* `Calibration for the (Computationally-Identifiable) Masses
+  <https://arxiv.org/abs/1711.08513>`_
+* `Outcome Indistinguishability
+  <https://www-cs.stanford.edu/~mpkim/pubs/OI.pdf>`_
+* `L'équité de l'apprentissage machine en assurance
+  <https://hal.archives-ouvertes.fr/hal-03561709/document>`_
+
+Extraits :
+
+* Les biais de type 1 sont liés à des classes qui ne reflèteraient pas la réalité
+  du risque, mais seraient motivés par de purs préjugés (critique qui ne remet
+  pas en question le principe du bien-fondé de la classification). Justifiée en
+  amont par le mythe d'une causalité des signes astrologiques sur les
+  accidents par exemple, une classification zodiacale se révèlerait à l'usage
+  comme « biaisée », au sens trivial où le modèle est faux ;
+* Les biais de type 2 sont liés à des classes qui reflètent une réalité statistique
+  avérée (une corrélation avec le risque, donc un modèle exact) mais non
+  causale, ce qui rend leur usage suspect d'un parti-pris et d'un choix
+  arbitraire. C'est le cas par exemple du paramètre homme/femme. Là aussi
+  on admet le bien-fondé d'une classification qui s'appuierait uniquement sur
+  des variables causales, mais la corrélation seule ne donne pas lieu à une
+  explication acceptable ;
+* Les biais de types 3 sont liés à des classes qui reflètent une réalité statistique
+  et causale, mais qui est elle-même le fait de discriminations sociales en
+  amont. Dans ce cas, le modèle est exact mais la classification est
+  intrinsèquement nuisible car elle reproduit et ancre dans la réalité une
+  situation contre laquelle il faut lutter.
 
 *2020-2021*
 
