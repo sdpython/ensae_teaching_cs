@@ -36,8 +36,10 @@ Comprendre le coût d'un algorithme
 Le coût de nombreux algorithmes non NP-complet se décomposer comme suit :
 :math:`O(n^\alpha) O( \ln^\beta n ) O(1)`. Chaque terme correspond à :
 
-* :math:`O(n^\alpha)` avec :math:`\alpha \in \mathbb{N} > 1` : un probème combinatoire se résume à un algorithme
-  de coût quadratique, cela est dû à la `programmation dynamique <https://fr.wikipedia.org/wiki/Programmation_dynamique>`_.
+* :math:`O(n^\alpha)` avec :math:`\alpha \in \mathbb{N} > 1` :
+  un probème combinatoire se résume à un algorithme
+  de coût quadratique, cela est dû à la `programmation dynamique 
+  <https://fr.wikipedia.org/wiki/Programmation_dynamique>`_.
   Dans la plupart des cas, on obtient ce coût après avoir transformé le problème dans une forme
   récurrente : on écrit ce qu'il faut faire pour calculer la solution avec *n+1* éléments
   sachant qu'on connaît la solution avec *n* éléments.
@@ -50,7 +52,8 @@ Dès qu'on sort des puissances entières, il faut s'attendre à un algorithme no
 tel que l'`algorithme de Strassen <https://fr.wikipedia.org/wiki/Algorithme_de_Strassen>`_
 pour la multiplication de matrice (:math:`n^{2.807}`), ou celui
 de `Marco Bodrato <http://www.bodrato.it/papers/>`_
-(`A Strassen-like Matrix Multiplication Suited for Squaring and Higher Power Computation <http://marco.bodrato.it/papers/Bodrato2010-StrassenLikeMatrixMultiplicationForSquares.pdf>`_).
+(`A Strassen-like Matrix Multiplication Suited for Squaring and Higher Power Computation
+<http://marco.bodrato.it/papers/Bodrato2010-StrassenLikeMatrixMultiplicationForSquares.pdf>`_).
 
 Le coût minimal d'un algorithme de tri est :math:`O(n \ln n)` dans le cas générique
 c'est-à-dire sans hypothèse sur les données. En revanche, dans le cas où les données
@@ -58,7 +61,8 @@ sont issues d'un ensemble fini de cardinal *m*, le meilleur tri revient à calcu
 et est de coût inférieur à :math:`O( \inf \{ n \ln n, m \} )`.
 
 L'article de blog
-`Fast Interesection of Sorted Lists Using SSE Instructions <https://highlyscalable.wordpress.com/2012/06/05/fast-intersection-sorted-lists-sse/>`_
+`Fast Interesection of Sorted Lists Using SSE Instructions
+<https://highlyscalable.wordpress.com/2012/06/05/fast-intersection-sorted-lists-sse/>`_
 part d'un problème simple qui est l'intersection de deux listes triées et montre
 comment optimiser son implémentation en introduisant la notion de partitions et un peu
 de parallélisation.
@@ -114,6 +118,8 @@ Catalogue d'algorithmes
     * `distance d'édition <http://fr.wikipedia.org/wiki/Distance_de_Levenshtein>`_ **algo**
     * `plus court chemin dans un graphe <orghttp://fr.wikipedia.org/wiki/Algorithme_de_Dijkstra>`_ **algo**
     * `problème d'ordonnancement <http://fr.wikipedia.org/wiki/Th%C3%A9orie_de_l'ordonnancement>`_ **algo**
+* Permutations
+    * `Sattolo's algorithm <https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#Sattolo's_algorithm>`_ **algo**
 * Problème non `NP-complet <http://fr.wikipedia.org/wiki/Liste_de_probl%C3%A8mes_NP-complets>`_
     * `Problème du voyageur de commerce <http://fr.wikipedia.org/wiki/Probl%C3%A8me_du_voyageur_de_commerce>`_  **algo**
       (ou `Graphe Hamiltonien <http://fr.wikipedia.org/wiki/Graphe_hamiltonien>`_),
