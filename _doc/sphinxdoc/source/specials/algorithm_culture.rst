@@ -38,7 +38,7 @@ Le coût de nombreux algorithmes non NP-complet se décomposer comme suit :
 
 * :math:`O(n^\alpha)` avec :math:`\alpha \in \mathbb{N} > 1` :
   un probème combinatoire se résume à un algorithme
-  de coût quadratique, cela est dû à la `programmation dynamique 
+  de coût quadratique, cela est dû à la `programmation dynamique
   <https://fr.wikipedia.org/wiki/Programmation_dynamique>`_.
   Dans la plupart des cas, on obtient ce coût après avoir transformé le problème dans une forme
   récurrente : on écrit ce qu'il faut faire pour calculer la solution avec *n+1* éléments
