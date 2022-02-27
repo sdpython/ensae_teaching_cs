@@ -203,6 +203,7 @@ Catalogue d'algorithmes
     * `mémoïzation <http://fr.wikipedia.org/wiki/M%C3%A9mo%C3%AFsation>`_ **déf** (voir aussi `Mémoïzation d'une fonction Python <http://sametmax.com/memoization-dune-fonction-python/>`_)
     * `programmation fonctionnelle <http://fr.wikipedia.org/wiki/Programmation_fonctionnelle>`_ **déf**
     * `récursivité <http://fr.wikipedia.org/wiki/R%C3%A9cursivit%C3%A9>`_ **déf**
+    * `Kahan summation algorithm <https://en.wikipedia.org/wiki/Kahan_summation_algorithm>`_ **algo**
 * Algorithmes probabilistes
     * `Probabilistic Data Structures for Web Analytics and Data Mining <https://highlyscalable.wordpress.com/2012/05/01/probabilistic-structures-web-analytics-data-mining/>`_
 * Compression
