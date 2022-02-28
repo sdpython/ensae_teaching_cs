@@ -30,3 +30,4 @@ Ou *descente de gradient stochastique* en français.
 * `k-SVRG: Variance Reduction for Large Scale Optimization <https://arxiv.org/abs/1805.00982>`_
 * `Accelerating Stochastic Gradient Descent using Predictive Variance Reduction <https://papers.nips.cc/paper/4937-accelerating-stochastic-gradient-descent-using-predictive-variance-reduction.pdf>`_
 * `Gradients without Backpropagation <https://arxiv.org/abs/2202.08587>`_
+* `Large Batch Optimization for Deep Learning: Training BERT in 76 minutes <https://arxiv.org/abs/1904.00962>`_
