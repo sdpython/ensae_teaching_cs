@@ -1,0 +1,230 @@
+%-----------------------------------------------------------------------------------------------------------
+% packages
+%------------------------------------------------------------------------------------------------------------
+
+
+\ifx\firstpassage\undefined
+\def\firstpassage{1}
+\newcount\nbpassages
+\nbpassages=1
+
+
+%-----------------------------------------------------------------------------------------------------------
+% packages
+%------------------------------------------------------------------------------------------------------------
+%\documentclass[french,11pt]{report}
+\documentclass[french,11pt]{article}
+\input{package.tex}
+
+\usepackage[lmargin=2.5cm,rmargin=2.5cm,tmargin=2.5cm,bmargin=2.5cm]{geometry}
+
+%-----------------------------------------------------------------------------------------------------------
+% graphics path
+%-----------------------------------------------------------------------------------------------------------
+%\graphicspath{d:/home/dupre/rapport/these/dessin2}
+
+
+% note de bas de page : \footnote
+% reference (section, theoreme) : \label{a} ... ~\ref{a}...~\pageref{a}
+% reference (figure) : \label{a-fig} ... ~\ref{a-fig}...~\pageref{a-fig}
+% chapter, section, subsection, ..., plus dans la table des matières, ..., subsubsection, paragraph,
+% subparagraphe
+% cadre : \frame{$ ... $}
+% tableau, matrice : \begin{array}{lll} (alignement des colonnes) ... \end{array}
+% liste d'équation non numérotées \begin{eqnarray} \\ passage à la ligne, &=& alignement \end{eqnarray}
+% index  : \index{cle@ecrit}
+
+
+%------------------------------------------------------------------------------------------------------------
+% marges -------------------------------------------------------------------------------------------------------------
+\setlength{\parindent}{0cm} \setlength{\parskip}{1ex} \linespread{1}
+
+\newcounter {chapter}
+
+
+\input{livre_begin_no_html_common.tex}
+
+
+
+
+\renewenvironment{xexercice}
+    {   \setcounter{cxexercicequest}{0}
+            \refstepcounter{cxexercice}
+         %\subsection{\exolabelExercice\exolabelsubject}
+         \section{\exolabelExercice\exolabelsubject}
+         %\subsubsection*{Enoncé} 
+    }
+    {  \bigskip%\bigskip
+    }
+
+
+\renewenvironment{xdemoexo}[1]
+    {   \setcounter{cxexercicequest}{0}
+        \renewcommand{\legenddemotype}{\ref{#1}}\vspace{-0.6cm}
+        \subsubsection*{Correction %de l'exercice \ref{#1}
+        \vspace{-0.2cm}
+        } 
+    }
+    {   
+     %   \hfill{}\textbf{fin exo \legenddemotype }\cqfd \medskip
+        }
+
+
+     
+\renewenvironment{xtdcor}[1]
+    {  \setcounter{cxtdquest}{0}
+            \refstepcounter{cxtdcor}
+        \renewcommand{\legenddemotype}{\ref{#1}}
+        \subsection{Correction} 
+    }
+    {   
+        \hfill{}\textbf{fin correction TD \legenddemotype}\cqfd \bigskip\bigskip
+        }
+
+
+
+\renewenvironment{xexempleprog}[2]
+    {    \setcounter{cxexemplequest}{0}
+            \stepcounter{cxexemple}
+        %\section{#1}
+        %\subsection{Enoncé}
+        \label{#2}
+    }
+    {  
+    		%\bigskip\bigskip
+    }
+        %\hfill{}\textbf{ (\legenddemonumber)}\cqfd
+
+\renewenvironment{xexempleprogcor}[1]
+    {   \bigskip \setcounter{cxexemplequest}{0}
+            \refstepcounter{cxexemplecor} 
+        \renewcommand{\legenddemotype}{\ref{#1}}
+        \textbf{Correction}\medskip
+        
+     }
+    {   
+        %\hfill{}\textbf{fin correction exemple \legenddemotype}\cqfd \bigskip\bigskip
+        }
+
+
+
+\renewenvironment{xtd}[2]
+    {   \newpage \setcounter{cxtdquest}{0}
+            \refstepcounter{cxtd}
+        \section{TD \thecxtd~: #1} \textbf{(correction page~\pageref{#2})}\medskip
+    }
+    {  \bigskip\bigskip}
+        %\hfill{}\textbf{ (\legenddemonumber)}\cqfd
+
+\renewenvironment{xtdcor}[1]
+    {   \newpage \setcounter{cxtdquest}{0}
+            \refstepcounter{cxtdcor}
+        \renewcommand{\legenddemotype}{\ref{#1}}
+        \section{Correction du TD \thecxtdcor
+									% \ref{#1}, page~\pageref{#1}
+							} \normalsize \bigskip
+    }
+    {   
+        \hfill{}\textbf{fin correction TD \legenddemotype}\cqfd \bigskip\bigskip}
+
+
+
+
+%\renewcommand{\exequest}{\refstepcounter{cxexercicequest}\textbf{\thecxexercicequest)$\,$}}
+
+
+						
+\newcommand{\tdtitre}[1]{\huge{\textbf{#1}}\normalsize}
+%\newcommand{\inputcode}[2]{ \indexfrr{programme}{#2}\footnotesize \listinginput[5]{1}{#1} \normalsize}
+\newcommand{\inputcode}[2]{ \indexprograms{#2}{} %\VerbatimInput[frame=single,numbers=right,numbersep=2pt,stepnumber=5,firstnumber=1,fontsize=\footnotesize]{#1} }
+\VerbatimInput[frame=single,fontsize=\footnotesize]{#1} }
+
+\newcommand{\inputcodes}[3]{ \indexprograms{#2}{#3} %\VerbatimInput[frame=single,numbers=right,numbersep=2pt,stepnumber=5,firstnumber=1,fontsize=\footnotesize]{#1} }
+\VerbatimInput[frame=single,fontsize=\footnotesize]{#1} }
+
+\newcommand{\inputcodeVBA}[2]{ \indexfrr{programmes \textit{VBA}}{#2} %\VerbatimInput[frame=single,numbers=right,numbersep=2pt,stepnumber=5,firstnumber=1,fontsize=\footnotesize]{#1} }
+\VerbatimInput[frame=single,fontsize=\footnotesize]{#1} }
+
+
+%------------------------------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------------------------------------
+% image
+%------------------------------------------------------------------------------------------------------------
+
+\newcount \filextensionnum
+\filextensionnum = 0
+\newcount \correctionenonce
+\correctionenonce = 1
+
+\input{compile.tex}
+
+\ifnum \filextensionnum = 1
+\newcommand{\filext}[1]{#1.png}
+\newcommand{\filefig}[1]{\input{#1.tex}}
+\else
+\ifnum \filextensionnum < 4
+	\newcommand{\filext}[1]{#1.png}
+	\newcommand{\filextellipse}[2]{#1.png}
+	\newcommand{\filefig}[1]{\includegraphics{#1.pdf}}
+\else
+	\newcommand{\filext}[1]{#1.png}
+	\newcommand{\filextellipse}[2]{#2.png}
+	\newcommand{\filefig}[1]{\includegraphics{#1.pdf}}
+\fi
+%\usepackage[latin1]{inputenc}
+\usepackage{hyperref}  %lien en PDF
+\fi
+\newcommand{\filextel}[1]{#1.png}
+%\usepackage{tocvsec2}  % pour ajouter de la profondeur aux liens PDF
+
+\newcommand{\firstpassagedo}[1]{ \ifnum\nbpassages=1 #1 \fi }
+
+\newcommand{\ifnotellipse}[1]{#1}
+
+%------------------------------------------------------------------------------------------------------------
+% segmentations douloureuses
+%------------------------------------------------------------------------------------------------------------
+\hyphenation{ap-pren-tis-sa-ge}
+
+%-----------------------------------------------------------------------------------------------------------
+% profondeur de la table des matières
+%-----------------------------------------------------------------------------------------------------------
+\setcounter{tocdepth}{3}     % Dans la table des matieres
+\setcounter{secnumdepth}{3}  % Avec un numero.
+
+%-----------------------------------------------------------------------------------------------------------
+% prévoit de faire un index 
+%-----------------------------------------------------------------------------------------------------------
+
+\makeindex
+
+
+%-----------------------------------------------------------------------------------------------------------
+% document 
+%-----------------------------------------------------------------------------------------------------------
+\begin{document}
+
+
+\sloppy
+
+\else
+
+\ifnum\nbpassages=4
+\nbpassages=5
+\fi 
+
+\ifnum\nbpassages=3
+\nbpassages=4
+\fi 
+
+\ifnum\nbpassages=2
+\nbpassages=3
+\fi 
+
+\ifnum\nbpassages=1
+\nbpassages=2
+\fi 
+
+
+
+\fi

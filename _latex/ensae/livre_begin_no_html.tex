@@ -1,0 +1,192 @@
+%-----------------------------------------------------------------------------------------------------------
+% packages
+%------------------------------------------------------------------------------------------------------------
+%\documentclass[french,11pt]{report}
+\documentclass[french,11pt]{thesis_x}
+\input{package.tex}
+
+
+\usepackage[lmargin=2cm,rmargin=2cm,tmargin=2cm,bmargin=2cm]{geometry}
+%\usepackage[lmargin=4cm,rmargin=4cm,tmargin=3.5cm,bmargin=3.5cm]{geometry}
+
+
+%-----------------------------------------------------------------------------------------------------------
+% graphics path
+%-----------------------------------------------------------------------------------------------------------
+%\graphicspath{d:/home/dupre/rapport/these/dessin2}
+
+
+% note de bas de page : \footnote
+% reference (section, theoreme) : \label{a} ... ~\ref{a}...~\pageref{a}
+% reference (figure) : \label{a-fig} ... ~\ref{a-fig}...~\pageref{a-fig}
+% chapter, section, subsection, ..., plus dans la table des matières, ..., subsubsection, paragraph,
+% subparagraphe
+% cadre : \frame{$ ... $}
+% tableau, matrice : \begin{array}{lll} (alignement des colonnes) ... \end{array}
+% liste d'équation non numérotées \begin{eqnarray} \\ passage à la ligne, &=& alignement \end{eqnarray}
+% index  : \index{cle@ecrit}
+
+
+%------------------------------------------------------------------------------------------------------------
+% marges -------------------------------------------------------------------------------------------------------------
+\setlength{\parindent}{0cm} \setlength{\parskip}{0.7ex} \linespread{0.94}
+
+
+%\addtocounter{counter}{value}
+\renewcommand{\xpagevalue}{18cm}
+\newcommand{\xpagevaluedef}{16.6cm}
+\newcommand{\xpagevalueloop}{14.2cm}
+
+\input{livre_begin_no_html_common.tex}
+
+%\newcommand{\inputcode}[2]{ \indexfrr{programme}{#2}\footnotesize \listinginput[5]{1}{#1} \normalsize}
+\newcommand{\inputcode}[2]{ \indexprograms{#2}{} \VerbatimInput[frame=single,numbers=right,numbersep=2pt,stepnumber=5,firstnumber=1,fontsize=\footnotesize]{#1} }
+\newcommand{\inputcodell}[3]{ \indexprograms{#2}{} \VerbatimInput[frame=single,numbers=right,numbersep=2pt,stepnumber=5,firstnumber=1,fontsize=\footnotesize,lastline=#3]{#1} }
+
+\newcommand{\inputcodes}[3]{ \indexprograms{#2}{#3} \VerbatimInput[frame=single,numbers=right,numbersep=2pt,stepnumber=5,firstnumber=1,fontsize=\footnotesize]{#1} }
+
+\newcommand{\inputcodeVBA}[2]{ \indexfrr{programmes \textit{VBA}}{#2} \VerbatimInput[frame=single,numbers=right,numbersep=2pt,stepnumber=5,firstnumber=1,fontsize=\footnotesize]{#1} }
+
+
+% insère une entrée dans la bibliographie
+%		1 - identifiant
+%		2 - année
+%		3 - auteurs
+%		4 - titre
+%		5 - revue
+%		6 - volume
+%		7 - page début
+%		8 - page fin
+% rappel : 					 			\newcommand{\setoperator}[1]{\expandafter\xdef\csname meop@#1\endcsname{1}}
+%													\newcommand{\testoperator}[3]{\expandafter\ifx\csname meop@#1\endcsname\relax#3\else#2\fi}
+
+\newcommand{\bibitemstyle}[8]{  
+				\testoperator{yc#2}	{	
+				}	
+				{		\setoperator{yc#2}
+						\counterbiblioyear{#2}
+  			}
+				\testoperator{#1}	{	
+					\bibitem[#1]{#1} - voir page~\pageref{bibpage@#1}
+				}	
+				{	  \bibitemstylefirstpage=#7
+						\counterbiblioyearadd{#2}
+						\addtocounter{nbcitations}{1}
+						\setoperator{#1}
+						\label{bibpage@#1}
+						\bibitemindex{#1}
+						\testoperator{cite@#1}{}{ \textbf{- jamais cité -} }
+						#3, \textit{#4}, #5 #6 %
+						\ifnum\bibitemstylefirstpage=0%
+						(#2)%
+						\else%
+						(#2), pp #7-#8%
+						\fi%
+  			}
+}
+
+\newcommand{\bibinserttitle}[1]{ \bibitem{} \medskip \medskip \begin{huge} \textbf{#1} \end{huge} \medskip \medskip }
+
+%------------------------------------------------------------------------------------------------------------
+% annexe
+%------------------------------------------------------------------------------------------------------------
+
+% voir les annexes : label, marques dans l'index
+\newcommand{\seeannex}[2]{\indexfrr{références aux annexes}{#2}\footnote{Annexes~: voir paragraphe~\ref{#1}, page~\pageref{#1}}}
+
+
+%------------------------------------------------------------------------------------------------------------
+% image
+%------------------------------------------------------------------------------------------------------------
+
+\newcount \filextensionnum
+\filextensionnum = 0
+\newcount \correctionenonce
+\correctionenonce = 1
+
+\input{compile.tex}
+
+\ifnum \filextensionnum = 1
+\newcommand{\filext}[1]{#1.png}
+\newcommand{\filefig}[1]{\input{#1.tex}}
+\else
+\ifnum \filextensionnum < 4
+	\newcommand{\filext}[1]{#1.png}
+	\newcommand{\filextellipse}[2]{#1.png}
+	\newcommand{\filefig}[1]{\includegraphics{#1.pdf}}
+\else
+	%\newcommand{\filext}[1]{#1.png}
+	\newcommand{\filextellipse}[2]{#2.png}
+	\newcommand{\filefig}[1]{\includegraphics{#1.pdf}}
+\fi
+%\usepackage[latin1]{inputenc}
+\usepackage{hyperref}  %lien en PDF
+\fi
+\newcommand{\filextel}[1]{#1.png}
+\usepackage{tocvsec2}  % pour ajouter de la profondeur aux liens PDF
+
+%------------------------------------------------------------------------------------------------------------
+% test pour savoir si c'est le premier passage
+%------------------------------------------------------------------------------------------------------------
+\newcommand{\firstpassagedo}[1]{ \ifnum\nbpassages=1 #1 \fi }
+\newcommand{\ifnotellipse}[1]{ \ifnum\filextensionnum<4 #1 \fi }
+\newcommand{\ifellipse}[1]{ \ifnum\filextensionnum=4 #1 \fi }
+
+%------------------------------------------------------------------------------------------------------------
+% commentaire
+%------------------------------------------------------------------------------------------------------------
+\renewcommand{\comment}[1]{  }
+
+
+
+
+%-----------------------------------------------------------------------------------------------------------
+% profondeur de la table des matières
+%-----------------------------------------------------------------------------------------------------------
+\setcounter{tocdepth}{3}     % Dans la table des matieres
+\setcounter{secnumdepth}{3}  % Avec un numero.
+
+%-----------------------------------------------------------------------------------------------------------
+% prévoit de faire un index 
+%-----------------------------------------------------------------------------------------------------------
+
+\makeindex
+
+%-----------------------------------------------------------------------------------------------------------
+% ligne au-dessus et au-dessous des figures et tables
+%-----------------------------------------------------------------------------------------------------------
+
+%\let\topfigrule\hrule
+\newcommand{\topfigrule}[0]{\hrule\vspace{0.05cm}\hrule}
+%\let\botfigrule\hrule
+
+%\let\toptabrule\hrule
+\newcommand{\toptabrule}[0]{\hrule\vspace{0.05cm}\hrule}
+%\let\bottabrule\hrule
+
+%\newcommand{\topfigrule}{%
+%  \vspace*{3pt}\noindent\rule{\linewidth}{0.4pt}\vspace{-3.4pt}}
+%\newcommand{\botfigrule}{%
+%  \vspace*{3pt}\noindent\rule{\linewidth}{0.4pt}\vspace{-3.4pt}}
+
+%\newcommand{\toptabrule}{\topfigrule}
+%\newcommand{\bottabrule}{\botfigrule}
+
+\newcommand{\chapterellipse}[0]{\chapter}
+
+%-----------------------------------------------------------------------------------------------------------
+% modifier l'espace entre la figure et sa légende
+%-----------------------------------------------------------------------------------------------------------
+
+\setlength\belowcaptionskip{0.3cm}
+\setlength\abovecaptionskip{-0.3cm}
+\setlength\beforechaptervspace{0.5cm}
+\setlength\afterchaptervspace{1.0cm}
+
+
+
+%-----------------------------------------------------------------------------------------------------------
+% document 
+%-----------------------------------------------------------------------------------------------------------
+\begin{document}
+
