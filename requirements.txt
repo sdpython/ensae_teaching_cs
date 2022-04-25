@@ -22,6 +22,7 @@ openpyxl
 pandas>=1.0
 pillow
 pycryptodomex
+pylint>=2.13.7
 pyproj
 pyzmq
 scikit-image
