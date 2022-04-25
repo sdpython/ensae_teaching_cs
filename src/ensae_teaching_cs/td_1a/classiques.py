@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# pylint: disable=W4701
 """
 @file
 @brief  quelques fonctions à propos de la première séance

@@ -1368,7 +1368,7 @@ class TableFormula(_TableFormulaStat):
                         dd[v[1]] = {}
                     dd[v[1]][v[0]] = 1
                 for k in dd:
-                    dd[k] = len(dd[k])
+                    dd[k] = len(dd[k])  # pylint: disable=E4702
                 keep = []
                 for k, v in dd.items():
                     if v > 1:
@@ -1626,9 +1626,9 @@ class TableFormula(_TableFormulaStat):
                 for k in keys:  # pylint: disable=C0206
                     v = keys[k]
                     if v[0] is None:
-                        keys[k] = (defaultVal1, v[1])
+                        keys[k] = (defaultVal1, v[1])  # pylint: disable=E4702
                     elif v[1] is None:
-                        keys[k] = (v[0], defaultVal2)
+                        keys[k] = (v[0], defaultVal2)  # pylint: disable=E4702
 
             if keepKey:
                 columns = [nameKey]
@@ -1710,9 +1710,9 @@ class TableFormula(_TableFormulaStat):
                 for k in keys:  # pylint: disable=C0206
                     v = keys[k]
                     if v[0] is None:
-                        keys[k] = ([defaultVal1], v[1])
+                        keys[k] = ([defaultVal1], v[1])  # pylint: disable=E4702
                     elif v[1] is None:
-                        keys[k] = (v[0], [defaultVal2])
+                        keys[k] = (v[0], [defaultVal2])  # pylint: disable=E4702
 
             if keepKey:
                 columns = [nameKey]

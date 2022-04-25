@@ -100,7 +100,7 @@ def get_data(whereTo=".", timeout=None, fLOG=noLOG):
             raise Exception("unable to interpret line {0}: ".format(i) + line)
 
     pairs = {}
-    for e in pairs:
+    for e in edges:
         p = e[:2]
         if p in pairs:
             raise ValueError("unexpected pairs, already present: " + str(e))
