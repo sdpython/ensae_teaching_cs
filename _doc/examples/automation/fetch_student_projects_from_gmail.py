@@ -42,9 +42,9 @@ from pyquickhelper.loghelper import get_password
 
 server = "imap.gmail.com"
 school = "ENSAE"
-date = "01-Nov-2021"
+date = "20-Apr-2022"
 year = '1A'
-exam = 'tdnote'
+exam = 'projet'
 pattern = "Python_{0}_{1}".format(year, exam)
 group_def = "groupes.xlsx"
 col_subject, col_group, col_mail, col_student = "sujet", "groupe", "mail", "Nom"

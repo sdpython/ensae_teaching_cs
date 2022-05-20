@@ -1059,7 +1059,8 @@ class ProjectsRepository:
             ext = os.path.splitext(name)[-1]
             if ext == ".ipynb":
                 self.fLOG(
-                    "[ProjectsRepository.convert_files] convert '{0}'".format(name))
+                    "[ProjectsRepository.convert_files] convert '{0}'."
+                    "".format(name))
                 out = name + ".html"
                 if os.path.exists(out):
                     warnings.warn(
@@ -1070,7 +1071,8 @@ class ProjectsRepository:
                     files.append(out)
                 except Exception as e:
                     warnings.warn(
-                        "unable to convert a notebook '{0}' because of {1}".format(name, e))
+                        "Unable to convert a notebook '{0}' because of {1}."
+                        "".format(name, e))
             elif ext == ".py":
                 self.fLOG(
                     "[ProjectsRepository.convert_files] convert '{0}'".format(name))
