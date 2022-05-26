@@ -5,8 +5,33 @@
 Python pour un Data Scientist / Economiste
 ==========================================
 
-`Python pour un datascientist ou un économiste
-<https://www.ensae.fr/courses/python-pour-le-data-scientist-pour-leconomiste/>`_.
+.. note::
+    J'ai créé ce cours et je l'ai animé sur cinq ans jusqu'en 2019.
+    Il l'est maintenant par Lino Galiana et son contenu est également
+    disponible : `Python pour les data-scientists et économistes
+    <https://linogaliana-teaching.netlify.app/>`_.
+    Page ENSAE : `Python pour un datascientist ou un économiste
+    <https://www.ensae.fr/courses/python-pour-le-data-scientist-pour-leconomiste/>`_.
+    En cinq ans, le cours est passé de 20 étudiants à plus de 130.
+    Derrière les coulisses, lors de la dernière année,
+    des élèves diplômés ayant assisté au cours sont venus à leur tour
+    assurer des séances de TD. Je passais également plus de temps
+    à lire des rapports d'étudiants que temps dans les amphithéâtres.
+    Je ne sais pas combien de lignes de code j'ai écrites pour
+    automatiser la mise à jour du site, faire tourner des tests
+    unitaires sur les centaines de notebooks pour être à peu près sûr
+    que tout marche bien sans avoir à tout retester la veille.
+    J'ai même écrit du code qui récupère tous les projets depuis
+    ma boîte mail. J'ai quelques souvenirs d'avoir envoyé l'énoncé d'un TD
+    à trois heures du matin pour des chargés de TD le découvrant
+    dans le métro quelques heures plus tard. Les premières années
+    étaient rock'n roll. On ne construit pas un contenu riche
+    en quelques nuits. On m'a proposé également d'écrire un livre
+    mais les nuits étaient trop courtes déjà.
+
+    Les tests unitaires continuent encore. Le contenu va tout doucement
+    vieillir. Ainsi va la vie de l'aventure d'un cours dans un domaine
+    en perpétuelle évolution.
 
 Ce cours s'étale sur 24 heures de cours/TD.
 Les outils proposés sont en langage :epkg:`Python`. Ils sont tous :epkg:`open source`,
