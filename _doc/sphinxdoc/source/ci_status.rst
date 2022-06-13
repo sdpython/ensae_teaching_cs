@@ -64,25 +64,6 @@ Tableau de bord et statut des dépendances
       - .. image:: https://codecov.io/github/sdpython/aftercovid/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/aftercovid?branch=master
       -
-    * - `botadi <http://www.xavierdupre.fr/app/botadi/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.com/sdpython/botadi.svg?branch=master
-            :target: https://app.travis-ci.com/github/sdpython/botadi
-            :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/5qqqxtf4qgab90ec?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/botadi
-            :alt: Build Status Windows
-      - .. image:: https://circleci.com/gh/sdpython/botadi/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/botadi/tree/master
-      - .. image:: https://badge.fury.io/py/botadi.svg
-            :target: https://pypi.org/project/botadi
-      - .. image:: http://img.shields.io/github/issues/sdpython/botadi.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/botadi/issues
-      - .. image:: https://codecov.io/github/sdpython/botadi/coverage.svg?branch=master
-            :target: https://codecov.io/github/sdpython/botadi?branch=master
-      - .. image:: http://www.xavierdupre.fr/app/botadi/helpsphinx/_images/nbcov.png
-            :target: http://www.xavierdupre.fr/app/botadi/helpsphinx/all_notebooks_coverage.html
-            :alt: Notebook Coverage
     * - `code_beatrix <http://lesenfantscodaient.fr>`_
       - .. image:: https://travis-ci.com/sdpython/code_beatrix.svg?branch=master
             :target: https://app.travis-ci.com/github/sdpython/code_beatrix
@@ -1029,7 +1010,7 @@ Outils
       - Explorations autour des données liées au COVID-19
     * - module
       - description
-    * - :epkg:`botadi`
+    * - :epkg:`botadi` (archivé)
       - Experimentation autour des chatbots.
     * - :epkg:`csharpy`
       - Outils, exemples pour utiliser du :epkg:`C#` depuis :epkg:`Python`

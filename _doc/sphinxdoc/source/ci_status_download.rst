@@ -22,9 +22,7 @@ On peut retrouver la plupart de ces résultats sur
     FROM `bigquery-public-data.pypi.file_downloads`
     WHERE
       (__CONDITION__)
-      AND DATE(timestamp)
-        BETWEEN DATE_TRUNC(DATE_SUB(CURRENT_DATE(), INTERVAL 2 MONTH), MONTH)
-        AND CURRENT_DATE()
+      AND DATE(timestamp) BETWEEN DATE '2022-05-01' AND '2022-05-31'
      GROUP BY `Project`, `Month`
      ORDER BY `Month`, `Project`
     """
