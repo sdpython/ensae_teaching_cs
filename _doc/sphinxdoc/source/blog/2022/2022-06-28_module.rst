@@ -1,0 +1,18 @@
+
+.. blogpost::
+    :title: Articles, liens, code efficaces
+    :keywords: implémentation
+    :date: 2021-03-24
+    :categories: papers
+
+    * `pyornear <https://pyronear.org/>`_ : détection de départs de feux
+    * `Réseaux sociaux : la modélisation mathématique peut-elle contribuer à réduire la polarisation des opinions ?
+      <https://www.inria.fr/fr/reseaux-sociaux-biais-cognitifs-modelisation-mathematique>`_
+    * `dowhy <https://github.com/py-why/dowhy>`_ : An end-to-end library for causal inference
+    * `merlion <https://github.com/salesforce/Merlion>`_ A Machine Learning Library for Time Series
+    * `On the Convergence of Adam and Beyond <https://arxiv.org/abs/1904.09237>`_
+    * `A Path Towards Autonomous Machine Intelligence
+      <https://openreview.net/forum?id=BZ5a1r-kVsf>`_
+    * `Gradient Descent Provably Optimizes Over-parameterized Neural Networks
+      <https://arxiv.org/abs/1810.02054>`_
+    * `jupyterlite <https://jupyterlite.readthedocs.io/en/latest/>`_

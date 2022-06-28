@@ -62,14 +62,18 @@ appliqués aux séries temporelles :
 
 *Modules*
 
+*`merlion <https://github.com/salesforce/Merlion>`_
 * `statsmodels <http://statsmodels.sourceforge.net/>`_
 * `sktime <https://www.sktime.org/en/latest/index.html>`_,
   suit l'API de scikit-learn, assez complet
-* `pmdarima <http://alkaline-ml.com/pmdarima/>`_,
-  ARIMA, saisonnalités, pipelines
 * `pyflux <http://pyflux.readthedocs.io/en/latest/>`_ (la documentation est plutôt bien faite)
 * `fbprophet <https://github.com/facebookincubator/prophet/tree/master/python>`_
   (requires `pystan <http://pystan.readthedocs.io/en/latest/index.html>`_)
+
+*autres*
+
+* `pmdarima <http://alkaline-ml.com/pmdarima/>`_,
+  ARIMA, saisonnalités, pipelines
 * `kats <https://github.com/facebookresearch/Kats>`_,
   modèle SARIMA, clustering de séries temporelles
 * `pastas <https://pastas.readthedocs.io/en/latest/>`_,
