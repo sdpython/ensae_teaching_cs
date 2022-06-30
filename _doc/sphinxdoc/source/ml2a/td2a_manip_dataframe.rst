@@ -66,6 +66,10 @@ DataFrame
 * `vaex <https://docs.vaex.io/en/latest/installing.html>`_
 * `py-polars <https://github.com/ritchie46/polars>`_
 
+*Modules - Excel*
+
+* `bamboolib <https://github.com/tkrabel/bamboolib>`_
+
 *Optimisation*
 
 * `swifter <https://github.com/jmcarpenter2/swifter>`_ :

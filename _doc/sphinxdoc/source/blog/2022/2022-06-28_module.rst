@@ -2,7 +2,7 @@
 .. blogpost::
     :title: Articles, liens, code efficaces
     :keywords: implémentation
-    :date: 2021-03-24
+    :date: 2022-06-28
     :categories: papers
 
     * `pyornear <https://pyronear.org/>`_ : détection de départs de feux

@@ -1,0 +1,8 @@
+
+.. blogpost::
+    :title: Un module python pour avoir un clone d'Excel dans un notebook
+    :keywords: excel
+    :date: 2022-06-30
+    :categories: modules
+
+    Voir `bamboolib <https://github.com/tkrabel/bamboolib>`_.
