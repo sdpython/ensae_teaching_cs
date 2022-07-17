@@ -1,0 +1,40 @@
+
+.. blogpost::
+    :title: Quelques articles intéressants
+    :keywords: deep learning
+    :date: 2022-07-17
+    :categories: articles
+
+    * `Training Deep Networks without Learning Rates Through Coin Betting
+      <https://arxiv.org/abs/1705.07795>`_
+    * `Model Comparison and Calibration Assessment: User Guide for 
+      Consistent Scoring Functions in Machine Learning and Actuarial Practice
+      <https://arxiv.org/abs/2202.12780>`_
+    * `On Embeddings for Numerical Features in Tabular Deep Learning
+      <https://arxiv.org/abs/2203.05556>`,
+      `TABULAR DATA MODELING VIA CONTEXTUAL EMBEDDINGS
+      <https://weasul.github.io/papers/7.pdf>`_
+    * `MLGO: a Machine Learning Guided Compiler Optimizations Framework
+      <https://arxiv.org/abs/2101.04808>`_
+    * `Embedding Recycling for Language Models
+      <https://arxiv.org/abs/2207.04993>`_
+    * `Language Modelling with Pixels
+      <https://arxiv.org/abs/2207.06991>`_
+    * `XLS-R: Self-supervised Cross-lingual Speech Representation Learning at Scale
+      <https://paperswithcode.com/paper/xls-r-self-supervised-cross-lingual-speech>`_
+    * `Emerging Cross-lingual Structure in Pretrained Language Models
+      <https://arxiv.org/abs/1911.01464>`_
+    * `Word Translation Without Parallel Data
+      <https://arxiv.org/abs/1710.04087>`_
+    * `Very Deep Convolutional Networks for Text Classification
+      <https://arxiv.org/abs/1606.01781>`_
+    * `XTREME-S: Evaluating Cross-lingual Speech Representations
+      <https://arxiv.org/abs/2203.10752>`_
+
+    Un site
+
+    * `paperwithcode <https://paperswithcode.com/>`_
+
+    Librairies
+    
+    * `TorchArrow <https://github.com/pytorch/torcharrow>`_
