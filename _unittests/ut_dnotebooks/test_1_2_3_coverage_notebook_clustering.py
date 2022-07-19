@@ -18,7 +18,7 @@ class TestNotebook123CoverageClustering(unittest.TestCase):
         from ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         from ensae_teaching_cs.helpers.size_helper import total_size
         self.assertTrue(total_size)
-        temp = get_temp_folder(__file__, "temp_notebook_123_{0}".format(name))
+        temp = get_temp_folder(__file__, f"temp_notebook_123_{name}")
         keepnote = ls_notebooks(folder)
         self.assertTrue(len(keepnote) > 0)
 

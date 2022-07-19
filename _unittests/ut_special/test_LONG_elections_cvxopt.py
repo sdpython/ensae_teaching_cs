@@ -56,13 +56,13 @@ class TestElections(unittest.TestCase):
             if x < 0.01:
                 return ""
             else:
-                return "%3.0f" % (x * 100) + "%"
+                return f"{x * 100:3.0f}" + "%"
 
         def pour2(x):
             if x < 0.01:
                 return "0%"
             else:
-                return "%3.0f" % (x * 100) + "%"
+                return f"{x * 100:3.0f}" + "%"
 
         def agg(x):
             if x[0] == x[1]:

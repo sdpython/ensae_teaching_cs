@@ -87,7 +87,7 @@ class TestVigenere(unittest.TestCase):
             for i in range(0, len(decode)):
                 if message[i] != decode[i]:
                     rows.append(
-                        "{0}: {1} --- {2}".format(i, message[i], decode[i]))
+                        f"{i}: {message[i]} --- {decode[i]}")
             raise Exception("\n".join(rows))
 
     def test_vigenere_binary(self):

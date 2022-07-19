@@ -22,7 +22,7 @@ class TestSuivi(unittest.TestCase):
         groups = list(sorted(repo.Groups))
         gr = groups[0]
         if gr is None or len(gr) < 2:
-            raise Exception("Empty group '{0}'".format(gr))
+            raise Exception(f"Empty group '{gr}'")
         self.assertEqual(gr, 'group_el1')
         emails = repo.get_emails(gr)
         self.assertEqual(emails, ['name.lastname@something.fr', 'name.lastname@something',
@@ -44,7 +44,7 @@ class TestSuivi(unittest.TestCase):
         groups = list(sorted(repo.Groups))
         gr = groups[0]
         if gr is None or len(gr) < 2:
-            raise Exception("Empty group '{0}'".format(gr))
+            raise Exception(f"Empty group '{gr}'")
         self.assertEqual(gr, 'group_el1')
         sections = repo.get_sections(gr)
         names = [k for k in sorted(sections)]

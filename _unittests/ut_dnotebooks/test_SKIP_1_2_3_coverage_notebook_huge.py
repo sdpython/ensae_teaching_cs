@@ -23,7 +23,7 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
         from ensae_teaching_cs.helpers.size_helper import total_size
         import ensae_teaching_cs
         self.assertTrue(total_size)
-        temp = get_temp_folder(__file__, "temp_notebook_123_{0}".format(name))
+        temp = get_temp_folder(__file__, f"temp_notebook_123_{name}")
         keepnote = ls_notebooks(folder)
         self.assertTrue(len(keepnote) > 0)
 
@@ -55,12 +55,12 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
                 pp = os.environ.get('PYTHONPATH', '')
                 if "SECONDTRY" in pp:
                     raise Exception(
-                        "Infinite loog\n{0}\n{1}\n**EXE\n{2}\n**PP\n{3}\n****".format(rootn, roott, sys.executable, pp))
+                        f"Infinite loog\n{rootn}\n{roott}\n**EXE\n{sys.executable}\n**PP\n{pp}\n****")
                 # We need to run this file with the main python.
                 # Otherwise it fails for tables: DLL load failed.
                 exe = os.path.normpath(os.path.join(
                     rootn, "..", "..", "python.exe"))
-                cmd = '"{0}" -u "{1}"'.format(exe, os.path.abspath(__file__))
+                cmd = f'"{exe}" -u "{os.path.abspath(__file__)}"'
                 import pyquickhelper
                 import pyensae
                 import jyquickhelper
@@ -72,7 +72,7 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
                             mlstatpy, pymyinstall]:
                     add.append(os.path.normpath(os.path.join(
                         os.path.dirname(mod.__file__), "..")))
-                fLOG("set PYTHONPATH={0}".format(";".join(add)))
+                fLOG(f"set PYTHONPATH={';'.join(add)}")
                 os.environ['PYTHONPATH'] = ";".join(add)
                 out, err = run_cmd(cmd, wait=True, fLOG=fLOG)
                 if len(err) > 0:

@@ -33,7 +33,7 @@ class TestFaqPandas(unittest.TestCase):
         b = df_equal(exp, res)
         if not b:
             raise Exception(
-                "dataframe not equal\nRES:\n{0}\nEXP\n{1}".format(str(res), str(exp)))
+                f"dataframe not equal\nRES:\n{str(res)}\nEXP\n{str(exp)}")
 
     def test_df_equal(self):
         fLOG(

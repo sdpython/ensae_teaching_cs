@@ -17,7 +17,7 @@ class TestNotebook123Coverage2c(unittest.TestCase):
                                         __file__, hide=True)
 
     def a_test_notebook_runner(self, name, folder, valid=None, copy_folder=None):
-        temp = get_temp_folder(__file__, "temp_notebook_123_{0}".format(name))
+        temp = get_temp_folder(__file__, f"temp_notebook_123_{name}")
         doc = os.path.join(temp, "..", "..", "..", "_doc", "notebooks", folder)
         self.assertTrue(os.path.exists(doc))
         keepnote = [os.path.join(doc, _) for _ in os.listdir(doc) if name in _]

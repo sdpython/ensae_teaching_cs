@@ -55,7 +55,7 @@ class TestImageSynthese(unittest.TestCase):
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
 
-        temp = get_temp_folder(__file__, "temp_scene%r" % use_pygame)
+        temp = get_temp_folder(__file__, f"temp_scene{use_pygame!r}")
 
         s = Scene(Repere(), math.pi / 1.5, 400, 300)
         s.ajoute_source(Source(Vecteur(0, 10, 10), Couleur(1, 1, 1)))

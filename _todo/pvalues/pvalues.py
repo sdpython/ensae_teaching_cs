@@ -43,7 +43,7 @@ def pprint(ps,dps,table, format, fileFormat = "latex") :
         row  = [""] + [ r"%1.3f" % _ for _ in dps ]
         text.append("\t".join(row) )
         for p,line in zip(ps,table) :
-            row  = ["%1.2f" % p] + \
+            row  = [f"{p:1.2f}"] + \
                    [ format % _ if _ != -1 else ""  for _ in line ]
             text.append("\t".join(row) )
         return "\n".join(text)
