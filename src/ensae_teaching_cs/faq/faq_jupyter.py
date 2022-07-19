@@ -97,7 +97,7 @@ def jupyter_get_variable(name, magic_command_instance):
         raise Exception(
             "no context, you probably execute this function outside a notebook")
     if name not in magic_command_instance.shell.user_ns:
-        raise KeyError("variable {0} not found".format(name))
+        raise KeyError(f"variable {name} not found")
     return magic_command_instance.shell.user_ns[name]
 
 

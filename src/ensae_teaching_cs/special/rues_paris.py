@@ -97,7 +97,7 @@ def get_data(whereTo=".", timeout=None, fLOG=noLOG):
                      p2[0],
                      p2[1])))
         elif i > 0:
-            raise Exception("unable to interpret line {0}: ".format(i) + line)
+            raise Exception(f"unable to interpret line {i}: " + line)
 
     pairs = {}
     for e in edges:
@@ -199,7 +199,7 @@ def bellman(edges, iter=20, fLOG=noLOG, allow=None, init=None):
             edges_from[e[1]].append((e[1], e[0], e[2], e[4], e[3], e[5]))
         else:
             raise ValueError(
-                "an edge should be a tuple of 2, 3, or 6 elements, last item is the weight, not:\n{0}".format(e))
+                f"an edge should be a tuple of 2, 3, or 6 elements, last item is the weight, not:\n{e}")
 
     modif = 1
     total_possible_edges = (len(edges_from) ** 2 - len(edges_from)) // 2
@@ -224,7 +224,7 @@ def bellman(edges, iter=20, fLOG=noLOG, allow=None, init=None):
                         init[new_e] = new_d
                         modif += 1
         fLOG("iteration ", it, " modif ", modif, " # ", len(initc) // 2, "/", total_possible_edges, "=",
-             "%1.2f" % (len(initc) * 50 / total_possible_edges) + "%")
+             f"{len(initc) * 50 / total_possible_edges:1.2f}" + "%")
         it += 1
         if it > iter:
             break
@@ -418,7 +418,7 @@ def euler_path(edges, added_edges):
                         to,
                         v))
             if to == v:
-                raise Exception("circular edge {0}".format(to))
+                raise Exception(f"circular edge {to}")
 
     # loop
     path = _explore_path(edges_from, begin)
@@ -505,7 +505,7 @@ def _explore_path(edges_from, begin):
                 to = e[1] if n != e[1] else e[2]
                 nb -= 1
                 if nb < 0:
-                    raise Exception("algorithm issue {0}".format(len(path)))
+                    raise Exception(f"algorithm issue {len(path)}")
 
         if len(edges_from[to]) == 1:
             if begin != to:

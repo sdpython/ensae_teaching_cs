@@ -45,7 +45,7 @@ class Point:
         """
         afficher le point
         """
-        return "(x,y) = (%4.2f,%4.2f) masse %f" % (self.x, self.y, self.m)
+        return f"(x,y) = ({self.x:4.2f},{self.y:4.2f}) masse {self.m:f}"
 
 
 class ObjetMasseReliees:
@@ -297,7 +297,7 @@ def pygame_simulation(pygame, first_click=False, folder=None,
         c = Pendule(nb, (size[0] // 2, size[1] - dy), (size[0] - dx, size[1] - dy),
                     m=m, k=k, g=g, f=f, lo=size[0] // 2)
     else:
-        raise ValueError("Model '{}' is not recognized.".format(model))
+        raise ValueError(f"Model '{model}' is not recognized.")
 
     pygame.init()
     white = 255, 255, 255
@@ -314,7 +314,7 @@ def pygame_simulation(pygame, first_click=False, folder=None,
 
         if it % step == 0:
             if it % (step * 10) == 0:
-                fLOG("it={0}/{1} dep={2} #{3}".format(it, iter, dep, len(images)))
+                fLOG(f"it={it}/{iter} dep={dep} #{len(images)}")
             empty_main_loop(pygame)
             screen.fill(white)
             display_masses(c, screen, pygame)

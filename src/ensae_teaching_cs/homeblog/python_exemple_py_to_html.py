@@ -126,7 +126,7 @@ def py_to_html_file(file, writehtml="", addTracking=True, title=None):
     """
     tracking_code = trackerFooter if addTracking else ""
 
-    fLOG("[py_to_html_file] converting pyfile '{}' in html.".format(file))
+    fLOG(f"[py_to_html_file] converting pyfile '{file}' in html.")
     f = file
     racine = os.path.splitext(file)[0]
 
@@ -155,8 +155,7 @@ def py_to_html_file(file, writehtml="", addTracking=True, title=None):
         html = page % (title or f, title or f, block, py2html__version__)
     except Exception as e:  # pragma: no cover
         raise Exception(
-            "Not a python file, running it again '{0}'.".format(
-                file)) from e
+            f"Not a python file, running it again '{file}'.") from e
 
     if len(writehtml) > 0:
         outfile = writehtml
@@ -165,7 +164,6 @@ def py_to_html_file(file, writehtml="", addTracking=True, title=None):
 
     with open(outfile, "w", encoding=encoding) as f:
         f.write(html)
-    fLOG("[py_to_html_file] encoding='{}' wrote '{}'.".format(
-        encoding, outfile))
+    fLOG(f"[py_to_html_file] encoding='{encoding}' wrote '{outfile}'.")
 
     return outfile

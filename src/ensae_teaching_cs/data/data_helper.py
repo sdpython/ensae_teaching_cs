@@ -29,7 +29,7 @@ def any_local_file(name, subfolder, local=True, cache_folder=".",
         import pyensae.datasource
         if not unzip and name.endswith(".zip"):
             raise ValueError(
-                "The file will be unzipped anyway: {0}".format(name))
+                f"The file will be unzipped anyway: {name}")
         this = pyensae.datasource.download_data(name, whereTo=cache_folder)
         unzip = False
     if unzip:
@@ -40,10 +40,10 @@ def any_local_file(name, subfolder, local=True, cache_folder=".",
         if isinstance(this, list):
             if len(this) > 1:
                 raise ValueError(
-                    "more than one file for: {0}\n{1}".format(name, this))
+                    f"more than one file for: {name}\n{this}")
             else:
                 this = this[0]
         if os.path.splitext(this)[-1] in (".zip", ".gz", ".tar", ".7z"):
-            raise ValueError("Cannot read file as text: {0}".format(this))
+            raise ValueError(f"Cannot read file as text: {this}")
         with open(this, "r", encoding=encoding) as f:
             return f.read()

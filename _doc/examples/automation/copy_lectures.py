@@ -44,13 +44,13 @@ for name in explore_folder_iterfile(root, pattern):
         if "_UT_" in spl:
             parent, spl = os.path.split(parent)
         if "_UT_" in spl:
-            raise ValueError("Something is weird with: '{0}'".format(name))
+            raise ValueError(f"Something is weird with: '{name}'")
         index.append((spl, os.path.dirname(name)))
         if spl in done:
             raise ValueError("Duplicated package '{0}'.\n{1}".format(
                 spl, "\n".join("{0}={1}".format(k, v) for k, v in sorted(done.items()))))
 
-fLOG("Found {0} directories".format(len(index)))
+fLOG(f"Found {len(index)} directories")
 for ind in index:
     fLOG("  ", ind)
 

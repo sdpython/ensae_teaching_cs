@@ -274,11 +274,11 @@ def enumerate_send_email(mailbox, subject, fr, df1, cc=None, delay=(1000, 1500),
                     "fLOG should be send to the function as a parameter, it is used to display the message when mailbox is None")
             fLOG = params["fLOG"]
             fLOG("***********************")
-            fLOG("fr={0}".format(fr))
-            fLOG("to={0}".format(mails))
-            fLOG("cc={0}".format(cc))
-            fLOG("subject={0}".format(subject))
-            fLOG("body\n{0}".format(html))
+            fLOG(f"fr={fr}")
+            fLOG(f"to={mails}")
+            fLOG(f"cc={cc}")
+            fLOG(f"subject={subject}")
+            fLOG(f"body\n{html}")
             with open("enumerate_send_email_debug.html", "w", encoding="utf-8") as f:
                 f.write(html)
             raise ValueError(

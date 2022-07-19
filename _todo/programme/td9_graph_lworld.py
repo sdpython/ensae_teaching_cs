@@ -14,7 +14,7 @@ with open("td9_graph_lworld.js", "w") as f :
     f.write ("var links = [\n")
     for l in links :
         f.write("{")
-        f.write( ",".join ( [ "{0}:'{1}'".format (k,v) for k,v in l.items() ] ) )
+        f.write( ",".join ( [ f"{k}:'{v}'" for k,v in l.items() ] ) )
         f.write("},\n")
     f.write("\n];\n")
     

@@ -29,10 +29,10 @@ class Puzzle2Bord:
         G (green, vert), B (blue, bleu).
         """
         if len(definition) != 2:
-            raise ValueError("Deux couleurs attendues pas %r." % definition)
+            raise ValueError(f"Deux couleurs attendues pas {definition!r}.")
         for i in range(2):
             if definition[i] not in 'RYGB':
-                raise ValueError("Couleurs inattendues: %r." % definition)
+                raise ValueError(f"Couleurs inattendues: {definition!r}.")
         self.couleur = tuple(definition)
 
     def __str__(self):
@@ -304,7 +304,7 @@ class Puzzle2:
             return [3, 0, 0, 0]
         if i == 8:
             return [0, 3, 0, 0]
-        raise ValueError("Unexpected position %r." % i)
+        raise ValueError(f"Unexpected position {i!r}.")
 
     def nb_place(self):
         """

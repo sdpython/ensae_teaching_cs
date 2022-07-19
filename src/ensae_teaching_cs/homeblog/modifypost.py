@@ -40,7 +40,7 @@ def Text_writexml(self, writer, indent="", addindent="", newl=""):
         section = self.sectionNameSpecial
     if section is None:
         raise ValueError("section name is empty")
-    _write_data(writer, "%s%s%s" % (indent, self.data, newl), section)
+    _write_data(writer, f"{indent}{self.data}{newl}", section)
 
 
 def Element_writexml(self, writer, indent="", addindent="", newl=""):
@@ -53,18 +53,18 @@ def Element_writexml(self, writer, indent="", addindent="", newl=""):
     a_names = sorted(attrs.keys())
 
     for a_name in a_names:
-        writer.write(" %s=\"" % a_name)
+        writer.write(f" {a_name}=\"")
         _write_data(writer, attrs[a_name].value, "")
         writer.write("\"")
     if self.childNodes:
-        writer.write(">%s" % (newl))
+        writer.write(f">{newl}")
         for node in self.childNodes:
             if node.localName is None:
                 node.sectionNameSpecial = self.localName
             node.writexml(writer, indent + addindent, addindent, newl)
-        writer.write("%s</%s>%s" % (indent, self.tagName, newl))
+        writer.write(f"{indent}</{self.tagName}>{newl}")
     else:
-        writer.write("/>%s" % (newl))
+        writer.write(f"/>{newl}")
 
 
 xml.dom.minidom._write_data = _write_data
@@ -82,7 +82,7 @@ def information_from_xml(fullFileContent, file):
         fLOG("issue with file ", file)
         ee = str(e)
         ee = ee[ee.find("line"):]
-        print("  File \"%s\", %s syntax error" % (file, ee))
+        print(f"  File \"{file}\", {ee} syntax error")
         raise e
 
     # get attributes

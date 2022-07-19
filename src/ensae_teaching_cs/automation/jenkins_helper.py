@@ -129,11 +129,11 @@ def default_jenkins_jobs(filter=None, neg_filter=None, root=None, platform=None)
                         if reg.search(item[0]) and not neg_reg.search(item[0]):
                             sub.append(item)
                     else:
-                        raise TypeError("{0} - {1}".format(item, type(item)))
+                        raise TypeError(f"{item} - {type(item)}")
                 if len(sub) > 0:
                     new_res.append(sub)
             else:
-                raise TypeError("{0} - {1}".format(row, type(row)))
+                raise TypeError(f"{row} - {type(row)}")
         return new_res
     else:
         context = {'Python37': 'python3.7',

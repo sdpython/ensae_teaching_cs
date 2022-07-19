@@ -59,10 +59,10 @@ html_split_index = True
 
 texinfo_documents = [
     ('index',
-     '%s' % project_var_name,
-     '%s' % project_var_name_t,
+     f'{project_var_name}',
+     f'{project_var_name_t}',
      author,
-     '%s' % project_var_name,
+     f'{project_var_name}',
      'ENSAE, contenu des enseignements',
      'teachings'),
 ]

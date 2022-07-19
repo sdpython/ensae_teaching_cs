@@ -106,7 +106,7 @@ class EdmondsKarpGraph:
             for k, v in sorted(graph.items()):
                 for kk, vv in sorted(v.items()):
                     if ini[k][kk] > 0:
-                        fLOG("  {0} -> {1} : {2:03f}".format(k, kk, vv))
+                        fLOG(f"  {k} -> {kk} : {vv:03f}")
             fLOG("---------")
 
         # This array is filled by BFS and to store path
@@ -126,7 +126,7 @@ class EdmondsKarpGraph:
         while self.bfs(graph, source, sink, parent):
             iteration += 1
             if fLOG:
-                fLOG("[edmonds_karp] max_flow={0}".format(max_flow))
+                fLOG(f"[edmonds_karp] max_flow={max_flow}")
 
             # Find minimum residual capacity of the edges along the
             # path filled by BFS. Or we can say find the maximum flow
@@ -157,8 +157,8 @@ class EdmondsKarpGraph:
                 for kk, vv in sorted(v.items()):
                     if ini[k][kk] != vv and ini[k][kk] > 0:
                         fLOG(
-                            "  {0} -> {1} : {2:03f} -- ini {3:03f}".format(k, kk, vv, ini[k][kk]))
+                            f"  {k} -> {kk} : {vv:03f} -- ini {ini[k][kk]:03f}")
             fLOG("---", max_flow)
         if fLOG:
-            fLOG("[edmonds_karp] max_flow={0}".format(max_flow))
+            fLOG(f"[edmonds_karp] max_flow={max_flow}")
         return max_flow

@@ -48,7 +48,7 @@ def grab_addresses(mailbox, subfolder, date, no_domain=False, max_dest=5, names=
     for i, mail in enumerate(emails):
         if i % 25 == 0:
             if len(suggestions) == 0:
-                fLOG("[grab_addresses] {0} collected {1}".format(i, len(res)))
+                fLOG(f"[grab_addresses] {i} collected {len(res)}")
             else:
                 fLOG("[grab_addresses] {0} collected {1} names {2}".format(
                     i, len(res), len(suggestions)))

@@ -253,8 +253,7 @@ class TableFormula(_TableFormulaStat):
                     firstline = f.readline().strip("\n\r ")
 
             logFunction(  # pragma: no cover
-                "random_split_file: file %s has header %s" %
-                (filename, firstline))
+                f"random_split_file: file {filename} has header {firstline}")
 
         logFunction("random_split_file: split %s in %d parts" % (filename, nb))
         fileName = [outfileprefix + (".%04d.txt" % n) for n in range(0, nb)]
@@ -347,7 +346,7 @@ class TableFormula(_TableFormulaStat):
         """
         if len(values) <= 1:
             raise ValueError(  # pragma: no cover
-                "expecting more than one observation, not %d" % len(values))
+                f"expecting more than one observation, not {len(values)}")
 
         mx = 0.
         my = 0.
@@ -461,8 +460,7 @@ class TableFormula(_TableFormulaStat):
                 lines = file.split("\n")
                 if len(lines) == 1:
                     raise FileNotFoundError(  # pragma: no cover
-                        "A file was probably expected but was not found: '{}'."
-                        "".format(file))
+                        f"A file was probably expected but was not found: '{file}'.")
                 self._readlines(lines, numeric_column, sep)
 
         elif isinstance(file, list):
@@ -583,7 +581,7 @@ class TableFormula(_TableFormulaStat):
                     self.header[i] = c
                 else:
                     raise KeyError(  # pragma: no cover
-                        "column '{0}' already exists in '{1}'".format(c, self.header))
+                        f"column '{c}' already exists in '{self.header}'")
             unique[c] = True
 
     def __add__(self, other):
@@ -842,16 +840,16 @@ class TableFormula(_TableFormulaStat):
         :param class_tr: adds a class to the tag ``tr`` (None for none)
         :param class_th: adds a class to the tag ``th`` (None for none)
         """
-        clta = ' class="%s"' % class_table if class_table is not None else ""
-        cltr = ' class="%s"' % class_tr if class_tr is not None else ""
-        cltd = ' class="%s"' % class_td if class_td is not None else ""
-        clth = ' class="%s"' % class_th if class_th is not None else ""
+        clta = f' class="{class_table}"' if class_table is not None else ""
+        cltr = f' class="{class_tr}"' if class_tr is not None else ""
+        cltd = f' class="{class_td}"' if class_td is not None else ""
+        clth = f' class="{class_th}"' if class_th is not None else ""
 
-        rows = ["<table%s>" % clta]
+        rows = [f"<table{clta}>"]
         rows.append("{0}{1}{2}".format(("<tr%s><th%s>" % (cltr, clth)),
                                        ("</th><th%s>" % clth).join(self.header), "</th></tr>"))
-        septd = "</td><td%s>" % cltd
-        strtd = "<tr%s><td%s>" % (cltr, cltd)
+        septd = f"</td><td{cltd}>"
+        strtd = f"<tr{cltr}><td{cltd}>"
         for row in self.values:
             s = septd.join([str(_) for _ in row])
             rows.append(strtd + s + "</td></tr>")
@@ -884,8 +882,8 @@ class TableFormula(_TableFormulaStat):
         length = [_ + 2 for _ in length]
         line = ["-" * le for le in length]
         lineb = ["=" * le for le in length]
-        sline = "+%s+" % ("+".join(line))
-        slineb = "+%s+" % ("+".join(lineb))
+        sline = f"+{'+'.join(line)}+"
+        slineb = f"+{'+'.join(lineb)}+"
         res = [sline]
 
         def complete(cool):
@@ -895,10 +893,9 @@ class TableFormula(_TableFormulaStat):
                 s += " " * (i - len(s))
             return s
 
-        res.append("| %s |" % " | ".join(
-            map(complete, zip(tbl.header, length))))
+        res.append(f"| {' | '.join(map(complete, zip(tbl.header, length)))} |")
         res.append(slineb)
-        res.extend(["| %s |" % " | ".join(map(complete, zip(row, length)))
+        res.extend([f"| {' | '.join(map(complete, zip(row, length)))} |"
                     for row in tbl.values])
         if add_line:
             t = len(res)
@@ -1055,7 +1052,7 @@ class TableFormula(_TableFormulaStat):
                         row[i] = datetime.datetime.utcfromtimestamp(row[i])
                     else:
                         raise Exception(
-                            "unable to extract a date from type {0}".format(type(row[i])))
+                            f"unable to extract a date from type {type(row[i])}")
             elif condition(k):
                 for row in self.values:
                     row[i] = float(row[i])
@@ -1244,8 +1241,7 @@ class TableFormula(_TableFormulaStat):
         """
         if len(vector) != len(self):
             raise ValueError(  # pragma: no cover
-                "vector and table have different length {0} != {1}".format(
-                    len(vector), len(self)))
+                f"vector and table have different length {len(vector)} != {len(self)}")
         for vec, row in zip(vector, self.values):
             row.append(vec)
         self.index[colname] = len(self.index)
@@ -2047,7 +2043,7 @@ class TableFormula(_TableFormulaStat):
                     nb = 0
                     for h in table.header:
                         if not h.endswith("~") and nb < orig:
-                            head.append("%s|%s" % (distinct[0], h))
+                            head.append(f"{distinct[0]}|{h}")
                             nb += 1
                         else:
                             head.append(h)
@@ -2061,7 +2057,7 @@ class TableFormula(_TableFormulaStat):
             nb = 0
             for h in table.header:
                 if not h.endswith("~") and nb < orig:
-                    head.append("%s|%s" % (distinct[0], h))
+                    head.append(f"{distinct[0]}|{h}")
                     nb += 1
                 else:
                     head.append(h)
@@ -2093,7 +2089,7 @@ class TableFormula(_TableFormulaStat):
             nr = functionIndex(v)
             if nr in self.indexspecial:
                 raise KeyError(
-                    "unable to add %s because it is already present" % str(nr))
+                    f"unable to add {str(nr)} because it is already present")
             self.indexspecial[nr] = row
         return self
 
@@ -2267,7 +2263,7 @@ class TableFormula(_TableFormulaStat):
             col2]] for row in self.values]
         if len(values) <= 1:
             raise ValueError(  # pragma: no cover
-                "expecting more than one observation, not %d" % len(values))
+                f"expecting more than one observation, not {len(values)}")
         mx = 0.
         my = 0.
         vx = 0.
@@ -2310,7 +2306,7 @@ class TableFormula(_TableFormulaStat):
 
         if len(values) <= 1:
             raise ValueError(  # pragma: no cover
-                "expecting more than one observation, not %d" % len(values))
+                f"expecting more than one observation, not {len(values)}")
 
         mx = 0.
         my = 0.
@@ -2339,7 +2335,7 @@ class TableFormula(_TableFormulaStat):
         values = [[a, b] for a, b in zip(self.values[row1], self.values[row2])]
         if len(values) <= 1:
             raise ValueError(  # pragma: no cover
-                "expecting more than one observation, not %d" % len(values))
+                f"expecting more than one observation, not {len(values)}")
         mx = 0.
         my = 0.
         vx = 0.
@@ -2380,7 +2376,7 @@ class TableFormula(_TableFormulaStat):
         values = [[a, b] for a, b in zip(self.values[row1], self.values[row2])]
         if len(values) <= 1:
             raise ValueError(  # pragma: no cover
-                "expecting more than one observation, not %d" % len(values))
+                f"expecting more than one observation, not {len(values)}")
         mx = 0.
         my = 0.
         co = 0.
@@ -2398,7 +2394,7 @@ class TableFormula(_TableFormulaStat):
         return co
 
     def correlation(self, useBootstrap=False, collapseFormat=True, nbdraws=-1, alpha=0.05,
-                    functionKeepValue=lambda val, low, high: "%f|%f,%f" % (val, low, high)):
+                    functionKeepValue=lambda val, low, high: f"{val:f}|{low:f},{high:f}"):
         """
         Computes the correlation matrix, the first column
         will contains the column names.
@@ -2632,7 +2628,7 @@ class TableFormula(_TableFormulaStat):
         div = (ma - mi) / nbDiv
         if div == 0:
             raise RuntimeError(  # pragma: no cover
-                "unable to continue since div is null: min,max = %f,%f" % (mi, ma))
+                f"unable to continue since div is null: min,max = {mi:f},{ma:f}")
         hist = [[mi + n * div, 0.] for n in range(0, nbDiv + 1)]
         value = {i: {histxName: hist[i][0]} for i in range(len(hist))}
         su = {}

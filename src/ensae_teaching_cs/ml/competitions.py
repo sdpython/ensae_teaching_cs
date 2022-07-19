@@ -18,7 +18,7 @@ def main_codalab_wrapper(fct, metric_name, argv, truth_file="truth.txt", submiss
     truth_dir = os.path.join(input_dir, 'ref')
 
     if not os.path.isdir(submit_dir):
-        raise FileNotFoundError("%s doesn't exist" % submit_dir)
+        raise FileNotFoundError(f"{submit_dir} doesn't exist")
 
     if os.path.isdir(submit_dir) and os.path.isdir(truth_dir):
         if not os.path.exists(output_dir):
@@ -30,7 +30,7 @@ def main_codalab_wrapper(fct, metric_name, argv, truth_file="truth.txt", submiss
                                 output=os.path.join(output_dir, output_file))
     else:
         raise FileNotFoundError(
-            "{0} or {1} is not a folder".format(submit_dir, truth_dir))
+            f"{submit_dir} or {truth_dir} is not a folder")
 
 
 def private_codalab_wrapper(fct, metric_name, fold1, fold2, f1="answer.txt", f2="answer.txt",
@@ -55,12 +55,12 @@ def private_codalab_wrapper(fct, metric_name, fold1, fold2, f1="answer.txt", f2=
     f1 = os.path.join(fold1, f1)
     f2 = os.path.join(fold2, f2)
     if not os.path.exists(f1):
-        raise FileNotFoundError("unable to find '{0}'".format(f1))
+        raise FileNotFoundError(f"unable to find '{f1}'")
     if not os.path.exists(f2):
-        raise FileNotFoundError("unable to find '{0}'".format(f2))
+        raise FileNotFoundError(f"unable to find '{f2}'")
     if f1 == f2:
         raise ValueError(
-            "answers and scores are the same file: '{0}'".format(f1))
+            f"answers and scores are the same file: '{f1}'")
 
     with open(f1, "r") as f:
         lines = f.readlines()
@@ -77,7 +77,7 @@ def private_codalab_wrapper(fct, metric_name, fold1, fold2, f1="answer.txt", f2=
         print("First scores:", scores[:10])
 
     metric = fct(answers, scores)
-    res = "{0}:{1}".format(metric_name, metric)
+    res = f"{metric_name}:{metric}"
     if use_print:
         print("Results=", res)
     with open(output, "w") as f:
@@ -113,5 +113,5 @@ def AUC(answers, scores):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        raise Exception("bad arguments: {0}".format(sys.argv))
+        raise Exception(f"bad arguments: {sys.argv}")
     main_codalab_wrapper(AUC, "AUC", sys.argv)

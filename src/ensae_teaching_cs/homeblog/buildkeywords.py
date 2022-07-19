@@ -111,7 +111,7 @@ def modify_all_blogs_list_in_place(folder=".",
     trois = cont.split("//////////////////////////////////////////")
     assert len(trois) == 3
     file.sort(reverse=True)
-    trois[1] = "\n" + ",\n".join(["\"%s\"" % _ for _ in file]) + "\n"
+    trois[1] = "\n" + ",\n".join([f"\"{_}\"" for _ in file]) + "\n"
     cont = "//////////////////////////////////////////".join(trois)
     f = open(outmainpage, "w", encoding="utf8")
     f.write(cont)
@@ -158,15 +158,15 @@ def file_all_keywords(folder=".",
     rows = []
     for k, v in res:
         files = []
-        text = '"%s":' % removeAccent(v)
+        text = f'"{removeAccent(v)}":'
         for f in keepfile:
             keywords = store_keywords[f]
             if v in keywords:
                 files.append(f)
         files = [os.path.split(_)[-1].replace(".html", "") for _ in files]
         files.sort(reverse=True)
-        files = ['"%s"' % _ for _ in files]
-        text += "[ %s ] " % ", ".join(files)
+        files = [f'"{_}"' for _ in files]
+        text += f"[ {', '.join(files)} ] "
         rows.append(text)
     trois[1] = "\n" + ",\n".join([_ for _ in rows]) + "\n"
 
@@ -177,7 +177,7 @@ def file_all_keywords(folder=".",
     rows = []
     for k, v in res:
         text = removeAccent(v)
-        rows.append('"%s":"%s"' % (text, FixIssuesWithAccent(v)))
+        rows.append(f'"{text}":"{FixIssuesWithAccent(v)}"')
     trois[1] = "\n" + ",\n".join([_ for _ in rows]) + "\n"
     cont = "////////////+++++++++++++++++".join(trois)
 
@@ -330,7 +330,7 @@ def generate_html_article(res,
                 replacetitle = title
 
             title = title.replace("title>", "h2>")
-            link = '<a href="%s_nojs.html"><b>%s</b></a>' % (date, date)
+            link = f'<a href="{date}_nojs.html"><b>{date}</b></a>'
             title = title.replace("<h2>", "<h2>" + link + " ")
 
             scripts = dom.documentElement.getElementsByTagName("script")
@@ -349,7 +349,7 @@ def generate_html_article(res,
                 # document
                 body = body.split('<!-- CUT PAGE HERE -->')[0]
                 body += "<br />" + \
-                    '<a href="%s_nojs.html">%s</a>' % (date, "more...")
+                    f"<a href=\"{date}_nojs.html\">{'more...'}</a>"
 
             if len(body.strip()) == 0:
                 raise ValueError("empty body for " + file)
@@ -385,9 +385,9 @@ def generate_html_article(res,
 
         enabled = False
         if enabled:
-            olayer = '<p class="keywordtitle"><a href="xd_blog.html?date=%s">Other Layer</a></p>' % date \
+            olayer = f'<p class="keywordtitle"><a href="xd_blog.html?date={date}">Other Layer</a></p>' \
                 if otherLayer is None else \
-                '<p class="keywordtitle"><a href="%s">Other Layer</a></p>' % otherLayer
+                f'<p class="keywordtitle"><a href="{otherLayer}">Other Layer</a></p>'
             post = post.replace("<!-- other layer -->", olayer)
             # it does not work (pages too big)
 
@@ -524,9 +524,9 @@ def build_process_all_pages(res,
             xd_blog_template_nojs,
             siteFolder,
             True,
-            "xd_blog_key_%s.html" % bb,
+            f"xd_blog_key_{bb}.html",
             keywordsText=FixIssuesWithAccent(b),
-            otherLayer="xd_blog.html?tag=%s" % FixIssuesWithAccent(b))
+            otherLayer=f"xd_blog.html?tag={FixIssuesWithAccent(b)}")
 
     # build months pages
     fLOG("building aggregated page for months")
@@ -552,9 +552,9 @@ def build_process_all_pages(res,
             xd_blog_template_nojs,
             siteFolder,
             True,
-            "xd_blog_month_%s.html" % bb,
+            f"xd_blog_month_{bb}.html",
             keywordsText=FixIssuesWithAccent(b),
-            otherLayer="xd_blog.html?tag=%s" % FixIssuesWithAccent(b))
+            otherLayer=f"xd_blog.html?tag={FixIssuesWithAccent(b)}")
 
     # build all pages (one per blog)
     fLOG("building all pages")

@@ -13,7 +13,7 @@ class Vecteur:
 
     def __str__(self):
         """pour l'affichage"""
-        return "(%3.2f,%3.2f,%3.2f)" % (self.x, self.y, self.z)
+        return f"({self.x:3.2f},{self.y:3.2f},{self.z:3.2f})"
 
     def __init__(self, x, y, z):
         """initialisation"""

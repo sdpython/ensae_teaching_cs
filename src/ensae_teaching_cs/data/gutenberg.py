@@ -54,4 +54,4 @@ def gutenberg_name(name="condamne", local=False, load=False):
                 return url
     else:
         raise ValueError(
-            "unknown name '{0}', check the code of the function".format(name))
+            f"unknown name '{name}', check the code of the function")

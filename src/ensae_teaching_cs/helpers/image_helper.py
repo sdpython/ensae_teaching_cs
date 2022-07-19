@@ -47,7 +47,7 @@ def convert_image(imgs, ext, dest=None, fLOG=None):
     if len(ext) == 0:
         raise ValueError("ext must not be empty")
     if ext.startswith("."):
-        raise ValueError("ext must not start with a point '{0}'".format(ext))
+        raise ValueError(f"ext must not start with a point '{ext}'")
     saved = []
     for img in imgs:
         if fLOG is not None:

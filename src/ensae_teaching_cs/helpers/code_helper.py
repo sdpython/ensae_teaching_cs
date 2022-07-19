@@ -39,7 +39,7 @@ def enumerate_inspect_source_code(folder, file_pattern=".*[.]((py)|(ipynb))$",
                                 yield obs
         except UnicodeDecodeError as e:
             raise FileNotFoundError(
-                "Unable to process '{0}' due to '{1}'.".format(name, e)) from e
+                f"Unable to process '{name}' due to '{e}'.") from e
     if nb == 0:
         found = os.listdir(folder)
         founds = "\n".join(found) if found else "EMPTY"

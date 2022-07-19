@@ -345,15 +345,12 @@ def circuit_eulerien(villes, arbre, screen, pygame, fLOG):
             # something is wrong (it might an issue with duplicated points)
             rows = []
             for i, p in enumerate(villes):
-                rows.append("p{0}: {1},{2}".format(i, p[0], p[1]))
+                rows.append(f"p{i}: {p[0]},{p[1]}")
             for i, c in enumerate(chemin):
-                rows.append("c{0}: i={1} -> {2},{3}".format(i,
-                                                            c, villes[c][0], villes[c][1]))
-            rows.append("bm={0} ma={1} bvec={2} vec={3} bl={4}".format(
-                bm, ma, vec2, vec, bl))
-            rows.append("arbre[{0}]={1}".format(bm, arbre[bm]))
-            rows.append("arbre[{0}]={1}".format(
-                arbre[bm][0], arbre[arbre[bm][0]]))
+                rows.append(f"c{i}: i={c} -> {villes[c][0]},{villes[c][1]}")
+            rows.append(f"bm={bm} ma={ma} bvec={vec2} vec={vec} bl={bl}")
+            rows.append(f"arbre[{bm}]={arbre[bm]}")
+            rows.append(f"arbre[{arbre[bm][0]}]={arbre[arbre[bm][0]]}")
             mes = "\n".join(rows)
             raise Exception("this case should not happen\n" + mes)
 
@@ -361,12 +358,10 @@ def circuit_eulerien(villes, arbre, screen, pygame, fLOG):
         # something is wrong (it might an issue with duplicated points)
         rows = []
         for i, p in enumerate(villes):
-            rows.append("p{0}: {1},{2}".format(i, p[0], p[1]))
+            rows.append(f"p{i}: {p[0]},{p[1]}")
         for i, c in enumerate(chemin):
-            rows.append("c{0}: i={1} -> {2},{3}".format(i,
-                                                        c, villes[c][0], villes[c][1]))
-        rows.append("bm={0} ma={1} bvec={2} vec={3} bl={4}".format(
-            bm, ma, vec2, vec, bl))
+            rows.append(f"c{i}: i={c} -> {villes[c][0]},{villes[c][1]}")
+        rows.append(f"bm={bm} ma={ma} bvec={vec2} vec={vec} bl={bl}")
         mes = "\n".join(rows)
         raise Exception("circuit_eulerien cannot give a path:\n" + mes)
 
@@ -1006,12 +1001,10 @@ def tsp_kruskal_algorithm(points, size=20, length=10, max_iter=None,
 
     before = len(points)
     points = [v[0] for v in groups.values()]
-    fLOG("[tsp_kruskal_algorithm] with no duplicates {0} <= {1}".format(
-        len(points), before))
+    fLOG(f"[tsp_kruskal_algorithm] with no duplicates {len(points)} <= {before}")
 
     # begin of the algortihm
-    fLOG("[tsp_kruskal_algorithm] arbre_poids_minimal nb={0}".format(
-        len(points)))
+    fLOG(f"[tsp_kruskal_algorithm] arbre_poids_minimal nb={len(points)}")
     di = arbre_poids_minimal(points, size, distance=distance)
     arbre = di["arbre"]
     X, Y = di["X"], di["Y"]
@@ -1022,7 +1015,7 @@ def tsp_kruskal_algorithm(points, size=20, length=10, max_iter=None,
             c = screen.copy()
             for i in range(0, 5):
                 images.append(c)
-    fLOG("[tsp_kruskal_algorithm] circuit_eulerien X={0} Y={1}".format(X, Y))
+    fLOG(f"[tsp_kruskal_algorithm] circuit_eulerien X={X} Y={Y}")
     chemin = circuit_eulerien(points, arbre, screen, pygame, fLOG)
 
     if len(chemin) != len(points):

@@ -47,7 +47,7 @@ class GeometrySegment:
         """
         usual
         """
-        return "%s --> %s" % (str(self._a), str(self._b))
+        return f"{str(self._a)} --> {str(self._b)}"
 
     def __imul__(self, k):
         """

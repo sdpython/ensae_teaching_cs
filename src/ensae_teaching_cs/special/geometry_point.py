@@ -31,7 +31,7 @@ class GeometryPoint:
             else:
                 self._x = tuple(x)
         else:
-            raise TypeError("Unexpected type %r." % type(x))
+            raise TypeError(f"Unexpected type {type(x)!r}.")
 
     def __eq__(self, x):
         """
@@ -61,22 +61,21 @@ class GeometryPoint:
 
         format = ", ".join(["{}" for _ in self._x])
         t = format.format(*self._x)
-        s = "(%s)" % t
+        s = f"({t})"
         return s.replace(".000000", "")
 
     def __repr__(self):
         """
         ``eval(__repr__)`` should return the same object
         """
-        return "GeometryPoint(%s)" % ", ".join(str(_) for _ in self._x)
+        return f"GeometryPoint({', '.join(str(_) for _ in self._x)})"
 
     def __iadd__(self, x):
         """
         addition
         """
         if len(self) != len(x):
-            raise GeometryException("dimension problem %d != %d" %
-                                    (len(self), len(x)))
+            raise GeometryException(f"dimension problem {len(self)} != {len(x)}")
         if len(self) == 2:
             self._x = (self._x[0] + x._x[0], self._x[1] + x._x[1])
         else:
@@ -88,8 +87,7 @@ class GeometryPoint:
         addition
         """
         if len(self) != len(x):
-            raise GeometryException("dimension problem %d != %d" %
-                                    (len(self), len(x)))
+            raise GeometryException(f"dimension problem {len(self)} != {len(x)}")
         if len(self) == 2:
             return GeometryPoint(self._x[0] + x._x[0], self._x[1] + x._x[1])
         else:
@@ -100,8 +98,7 @@ class GeometryPoint:
         substraction
         """
         if len(self) != len(x):
-            raise GeometryException("dimension problem %d != %d" %
-                                    (len(self), len(x)))
+            raise GeometryException(f"dimension problem {len(self)} != {len(x)}")
         if len(self) == 2:
             return GeometryPoint(self._x[0] - x._x[0], self._x[1] - x._x[1])
         return GeometryPoint(a - b for a, b in zip(self._x, x._x))
@@ -142,8 +139,7 @@ class GeometryPoint:
         comparison
         """
         if len(self) != len(x):
-            raise GeometryException("dimension problem %d != %d" %
-                                    (len(self), len(x)))
+            raise GeometryException(f"dimension problem {len(self)} != {len(x)}")
         for a, b in zip(self._x, x._x):
             t = -1 if a < b else (0 if a == b else 1)
             if t != 0:

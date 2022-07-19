@@ -28,8 +28,7 @@ class ScenePhong (Scene):
     def __str__(self):
         """affichage"""
         s = Scene.__str__(self)
-        s += "ka = %1.3f   kb = %1.3f   kc = %1.3f\n" % (
-            self.ka, self.kb, self.kc)
+        s += f"ka = {self.ka:1.3f}   kb = {self.kb:1.3f}   kc = {self.kc:1.3f}\n"
         s += "reflet " + str(self.reflet) + "\n"
         s += "couleur du fond " + str(self.fond) + "\n"
         return s

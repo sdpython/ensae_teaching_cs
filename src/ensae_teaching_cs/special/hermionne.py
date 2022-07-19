@@ -64,7 +64,7 @@ def affiche_solution(sol):
     a = ["poison", "vin", "reculer", "avancer"]
     res = ""
     for s in sol:
-        res += "{0}, ".format(a[s])
+        res += f"{a[s]}, "
     return res
 
 

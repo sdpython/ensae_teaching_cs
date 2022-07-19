@@ -64,7 +64,7 @@ def normalize_name_and_numbers(files):
                 for i in range(len(words)):
                     words[i] = words[i][0].upper() + words[i][1:]
                 nam = " ".join(words)
-                sugg = "{0} - {1}{2}".format(nam, num, ext)
+                sugg = f"{nam} - {num}{ext}"
                 if solution is None or len(nam) > len(solution[1]):
                     solution = (num, nam, ext, sugg, fi)
         if solution is not None:

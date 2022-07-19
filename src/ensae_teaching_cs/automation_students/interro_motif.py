@@ -51,7 +51,7 @@ def execute_python_scripts(root, df, col_names=None, url=None, eol="/", fLOG=noL
     res = []
     for name, mail in zip(df[col_names.get("folder", "folder")], df[col_names.get("mail", "mail")]):
         row = {col_names.get("folder", "folder"): name}
-        fLOG("[execute_python_script], look into '{0}'".format(name))
+        fLOG(f"[execute_python_script], look into '{name}'")
         subf = os.path.join(root, name)
         col_find = col_names.get("exists", "exists")
         if not os.path.exists(subf):
@@ -88,7 +88,7 @@ def execute_python_scripts(root, df, col_names=None, url=None, eol="/", fLOG=noL
             # test all programs
             outs = []
             for py in sorted(store):
-                cmd = '"{0}" "{1}"'.format(sys.executable, py)
+                cmd = f'"{sys.executable}" "{py}"'
                 t1 = time.perf_counter()
                 try:
                     out, err = run_cmd(cmd, wait=True)

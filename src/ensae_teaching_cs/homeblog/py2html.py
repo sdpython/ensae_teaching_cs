@@ -341,9 +341,9 @@ def apply_style(index, token, start, src, format, style, entity="1"):
     if format != "0":
         if format == "1":
             if token in spaced_tokens and not definingmode:
-                token = " %s " % (token,)
+                token = f" {token} "
             elif token in monospaced_tokens:
-                token = "%s " % (token,)
+                token = f"{token} "
             elif (isres or index == COMMENT) and prev in [WORD, NUMBER, STRING, OPERATOR]:
                 token = " " + token
             elif index in [WORD, NUMBER, STRING] and prev == WORD:
@@ -353,11 +353,11 @@ def apply_style(index, token, start, src, format, style, entity="1"):
         elif format == "2":
             if token in spaced_fmt2:
                 if (prev == OPERATOR and token in "+-~"):
-                    token = " %s" % (token,)
+                    token = f" {token}"
                 else:
-                    token = " %s " % (token,)
+                    token = f" {token} "
             elif token in monospaced_tokens:
-                token = "%s " % (token,)
+                token = f"{token} "
             elif isres and prev in [WORD, NUMBER, STRING, OPERATOR]:
                 token = " " + token
             elif index in [WORD, NUMBER, STRING] and prev == WORD:
@@ -530,7 +530,7 @@ def makeBlock(data):
     """Applies the block tags to text
     """
     global appliedstyle  # pylint: disable=W0602
-    return "%s%s%s" % (appliedstyle['block'][0], data, appliedstyle['block'][1])
+    return f"{appliedstyle['block'][0]}{data}{appliedstyle['block'][1]}"
 
 
 def cmdLine():  # pragma: no cover

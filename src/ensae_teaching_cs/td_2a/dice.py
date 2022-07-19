@@ -52,7 +52,7 @@ class DiceStraight:
                 dice = [int(_) for _ in lines[pos].split()]
                 if len(dice) != 6:
                     raise ValueError(
-                        "A dice has no 6 faces '{0}'".format(lines[pos]))
+                        f"A dice has no 6 faces '{lines[pos]}'")
                 pos += 1
                 dices.append(dice)
             parsed.append(DiceStraight(dices))
@@ -70,7 +70,7 @@ class DiceStraight:
         """
         rows = []
         for dice in self.dices:
-            rows.append('%r' % dice)
+            rows.append(f'{dice!r}')
         return '\n'.join(rows)
 
     @staticmethod

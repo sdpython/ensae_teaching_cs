@@ -59,8 +59,7 @@ def webshot(img, url, navigator=default_driver, add_date=False,
         if add_date:
             dt = datetime.datetime.now()
             a, b = os.path.splitext(i)
-            i = "{0}.{1}{2}".format(a, str(dt).replace(
-                ":", "-").replace("/", "-"), b)
+            i = f"{a}.{str(dt).replace(':', '-').replace('/', '-')}{b}"
         browser.get_screenshot_as_file(i)
         res.append((u, i))
     browser.quit()
@@ -157,7 +156,7 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
         browser = webdriver.Edge()
     else:
         raise Exception(
-            "unable to interpret the navigator '{0}'".format(navigator))
+            f"unable to interpret the navigator '{navigator}'")
     fLOG("[_get_selenium_browser] navigator is started")
     return browser
 
@@ -182,7 +181,7 @@ def webhtml(url, navigator=default_driver, fLOG=noLOG):
     if not isinstance(url, list):
         url = [url]
     for u in url:
-        fLOG("[webhtml] get url '{0}'".format(url))
+        fLOG(f"[webhtml] get url '{url}'")
         browser.get(u)
         i = browser.page_source
         res.append((u, i))

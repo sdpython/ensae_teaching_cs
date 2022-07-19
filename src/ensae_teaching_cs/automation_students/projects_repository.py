@@ -98,7 +98,7 @@ class ProjectsRepository:
                 content = f.read()
         except UnicodeDecodeError as e:
             raise ValueError(  # pragma: no cover
-                'unable to parse file:\n  File "{0}", line 1'.format(filename)) from e
+                f'unable to parse file:\n  File "{filename}", line 1') from e
 
         mails = regex.findall(content)
         if len(mails) == 0:
@@ -184,7 +184,7 @@ class ProjectsRepository:
                 content = f.read()
         except UnicodeDecodeError as e:
             raise ValueError(  # pragma: no cover
-                'unable to parse file:\n  File "{0}", line 1'.format(filename)) from e
+                f'unable to parse file:\n  File "{filename}", line 1') from e
 
         lines = [_.strip("\r").rstrip() for _ in content.split("\n")]
         added_in = []
@@ -419,7 +419,7 @@ class ProjectsRepository:
                     if isinstance(email_function, (list, set)):
                         mes = "unable to find a mail for\n{0}\nname={1}\nskip:{4}\n{5}\namong\n{3}\nGROUP\n{2}\nlocal_function: {6}"
                         raise ProjectsRepository.MailNotFound(  # pragma: no cover
-                            mes.format("; ".join("'%s'" % _ for _ in eleves),
+                            mes.format("; ".join(f"'{_}'" for _ in eleves),
                                        name, group, "\n".join(email_function),
                                        skip, skip_names, local_function))
                     raise ProjectsRepository.MailNotFound(  # pragma: no cover
@@ -433,10 +433,10 @@ class ProjectsRepository:
                     for m in mails:
                         if "@" not in m:
                             raise ValueError(  # pragma: no cover
-                                "mails contains a mail with no @: {0}".format(m))
+                                f"mails contains a mail with no @: {m}")
                         if "<" in m or ">" in m:
                             raise ValueError(  # pragma: no cover
-                                "one mail contains weird characters: {0}".format(m))
+                                f"one mail contains weird characters: {m}")
                     jmail = "; ".join(mails)
                 else:
                     jmail = None
@@ -446,17 +446,17 @@ class ProjectsRepository:
             if jmail is not None:
                 if "@" not in jmail:
                     raise ValueError(  # pragma: no cover
-                        "jmail does not contain any @: {0}".format(jmail))
+                        f"jmail does not contain any @: {jmail}")
 
             members = ", ".join(map(str, eleves))
             content = [members]
             content.append("=" * len(members))
             content.append("")
 
-            content.append("* members: {0}".format(members))
+            content.append(f"* members: {members}")
             if subject:
-                content.append("* subject: {0}".format(subject))
-            content.append("* G: {0}".format(name))
+                content.append(f"* subject: {subject}")
+            content.append(f"* G: {name}")
 
             if jmail:
                 content.append("* mails: " + jmail)
@@ -472,7 +472,7 @@ class ProjectsRepository:
             if not os.path.exists(folder):
                 if '@' in folder:
                     raise ValueError(  # pragma: no cover
-                        "Folder '{0}' must not contain '@'.".format(folder))
+                        f"Folder '{folder}' must not contain '@'.")
                 os.mkdir(folder)
 
             if overwrite or not os.path.exists(filename):
@@ -488,7 +488,7 @@ class ProjectsRepository:
                 mails = proj.get_emails(gr)
                 if len(mails) == 0:
                     raise ValueError(  # pragma: no cover
-                        "No mail for group '{0}'.".format(gr))
+                        f"No mail for group '{gr}'.")
         return proj
 
     def enumerate_group_mails(self, group, mailbox, subfolder, date=None,
@@ -507,7 +507,7 @@ class ProjectsRepository:
         if group is None:
             for group_ in self.Groups:
                 self.fLOG(
-                    "[ProjectsRepository.enumerate_group_mails] group='{0}'".format(group_))
+                    f"[ProjectsRepository.enumerate_group_mails] group='{group_}'")
                 iter = self.enumerate_group_mails(group_, mailbox, subfolder=subfolder,
                                                   date=date, skip_function=skip_function, max_dest=max_dest)
                 for mail in iter:
@@ -607,8 +607,7 @@ class ProjectsRepository:
                 sname = os.path.relpath(name, location).replace("\\", "/")
                 info = dict(a=sname, name=sname)
                 if sname in metadata:
-                    info['info'] = '<a href="{0}">metadata</a>'.format(
-                        metadata[sname])
+                    info['info'] = f'<a href="{metadata[sname]}">metadata</a>'
                 json_att.append(info)
 
             if convert_files:
@@ -758,7 +757,7 @@ class ProjectsRepository:
             python3 -m http.server 9000
             """).format(url)
         dest = os.path.join(self.Location, filename)
-        self.fLOG("[write_run_command] write '{}'.".format(dest))
+        self.fLOG(f"[write_run_command] write '{dest}'.")
         with open(dest, 'w') as f:
             f.write(content)
 
@@ -817,13 +816,13 @@ class ProjectsRepository:
 
         def format_size(s):
             if s <= 2 ** 11:
-                return "{0} bytes".format(s)
+                return f"{s} bytes"
             elif s <= 2 ** 21:
-                return "{0} Kb".format(s // (2 ** 10))
+                return f"{s // 2 ** 10} Kb"
             elif s <= 2 ** 31:
-                return "{0} Mb".format(s // (2 ** 20))
+                return f"{s // 2 ** 20} Mb"
             else:
-                return "{0} Gb".format(s // (2 ** 30))
+                return f"{s // 2 ** 30} Gb"
 
         groups = []
         for group in self.Groups:
@@ -831,7 +830,7 @@ class ProjectsRepository:
             if os.path.exists(lp):
                 c = os.path.relpath(lp, self._location), group
             else:
-                c = "file:///{0}".format(group), group
+                c = f"file:///{group}", group
             nb_files = 0
             size = 0
             atts = []
@@ -862,7 +861,7 @@ class ProjectsRepository:
                     dest = os.path.relpath(name, self._location)
                     if rel == dest:
                         raise Exception(  # pragma: no cover
-                            "weird\n{0}\n{1}".format(rel, dest))
+                            f"weird\n{rel}\n{dest}")
                     ssize = format_size(os.stat(name).st_size)
                     if "__MACOSX" not in rel and "__MACOSX" not in dest and \
                             ".ipynb_checkpoints" not in dest and ".ipynb_checkpoints" not in rel:
@@ -966,16 +965,16 @@ class ProjectsRepository:
                 folder = clean_f(folder)
                 if not os.path.exists(folder):
                     self.fLOG(
-                        "[ProjectsRepository.unzip_files] unzip '{0}'".format(name))
+                        f"[ProjectsRepository.unzip_files] unzip '{name}'")
                     self.fLOG(
-                        "[ProjectsRepository.unzip_files] creating '{0}'".format(folder))
+                        f"[ProjectsRepository.unzip_files] creating '{folder}'")
                     os.makedirs(folder)
                     try:
                         lf = unzip_files(
                             name, folder, fLOG=self.fLOG, fvalid=fvalid, fail_if_error=False)
                     except (zipfile.BadZipFile, NotImplementedError, OSError) as e:
                         self.fLOG(
-                            "[ProjectsRepository.unzip_files]    ERROR: unable to unzip '{0}' because of '{1}']".format(name, e))
+                            f"[ProjectsRepository.unzip_files]    ERROR: unable to unzip '{name}' because of '{e}']")
                         lf = []
                     files.extend(lf)
                 else:
@@ -986,9 +985,9 @@ class ProjectsRepository:
                 folder = clean_f(folder)
                 if not os.path.exists(folder):
                     self.fLOG(
-                        "[ProjectsRepository.un7zip_files] un7zip '{0}'".format(name))
+                        f"[ProjectsRepository.un7zip_files] un7zip '{name}'")
                     self.fLOG(
-                        "[ProjectsRepository.un7zip_files] creating '{0}'".format(folder))
+                        f"[ProjectsRepository.un7zip_files] creating '{folder}'")
                     os.makedirs(folder)
                     lf = un7zip_files(
                         name, folder, fLOG=self.fLOG, fvalid=fvalid)
@@ -1001,9 +1000,9 @@ class ProjectsRepository:
                 folder = clean_f(folder)
                 if not os.path.exists(folder):
                     self.fLOG(
-                        "[ProjectsRepository.unrar_files] unrar '{0}'".format(name))
+                        f"[ProjectsRepository.unrar_files] unrar '{name}'")
                     self.fLOG(
-                        "[ProjectsRepository.unrar_files] creating '{0}'".format(folder))
+                        f"[ProjectsRepository.unrar_files] creating '{folder}'")
                     os.makedirs(folder)
                     lf = unrar_files(
                         name, folder, fLOG=self.fLOG, fvalid=fvalid)
@@ -1016,9 +1015,9 @@ class ProjectsRepository:
                 folder = clean_f(folder)
                 if not os.path.exists(folder):
                     self.fLOG(
-                        "[ProjectsRepository.untar_files] ungzip '{0}'".format(name))
+                        f"[ProjectsRepository.untar_files] ungzip '{name}'")
                     self.fLOG(
-                        "[ProjectsRepository.untar_files] creating '{0}'".format(folder))
+                        f"[ProjectsRepository.untar_files] creating '{folder}'")
                     os.makedirs(folder)
                     unzip = "pkl.gz" not in name
                     lf = untar_files(name, folder, fLOG=self.fLOG)
@@ -1031,9 +1030,9 @@ class ProjectsRepository:
                 folder = clean_f(folder)
                 if not os.path.exists(folder):
                     self.fLOG(
-                        "[ProjectsRepository.ungzip_files] ungzip '{0}'".format(name))
+                        f"[ProjectsRepository.ungzip_files] ungzip '{name}'")
                     self.fLOG(
-                        "[ProjectsRepository.ungzip_files] creating '{0}'".format(folder))
+                        f"[ProjectsRepository.ungzip_files] creating '{folder}'")
                     os.makedirs(folder)
                     unzip = "pkl.gz" not in name
                     lf = ungzip_files(
@@ -1059,27 +1058,25 @@ class ProjectsRepository:
             ext = os.path.splitext(name)[-1]
             if ext == ".ipynb":
                 self.fLOG(
-                    "[ProjectsRepository.convert_files] convert '{0}'."
-                    "".format(name))
+                    f"[ProjectsRepository.convert_files] convert '{name}'.")
                 out = name + ".html"
                 if os.path.exists(out):
                     warnings.warn(
-                        "[convert_files] overwriting '{0}'".format(out))
+                        f"[convert_files] overwriting '{out}'")
                 try:
                     upgrade_notebook(name)
                     nb2html(name, out, exc=False)
                     files.append(out)
                 except Exception as e:
                     warnings.warn(
-                        "Unable to convert a notebook '{0}' because of {1}."
-                        "".format(name, e))
+                        f"Unable to convert a notebook '{name}' because of {e}.")
             elif ext == ".py":
                 self.fLOG(
-                    "[ProjectsRepository.convert_files] convert '{0}'".format(name))
+                    f"[ProjectsRepository.convert_files] convert '{name}'")
                 out = name + ".html"
                 if os.path.exists(out):
                     warnings.warn(
-                        "[convert_files] overwriting '{0}'".format(out))
+                        f"[convert_files] overwriting '{out}'")
                 try:
                     py_to_html_file(name, out, False, title=os.path.relpath(
                         name, self.get_group_location(group)))
@@ -1087,5 +1084,5 @@ class ProjectsRepository:
                 except Exception:
                     # the syntax of the python file might be wrong
                     warnings.warn(
-                        "unable to convert File \"{0}\"".format(name))
+                        f"unable to convert File \"{name}\"")
         return files

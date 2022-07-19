@@ -32,10 +32,8 @@ def trigger_on_specific_strings(content, filename=None, force_allow=None):
                                (os.environ[env], sub), "somewhere"),
                               ("C:\\%s\\__home_\\%s\\" %
                                (os.environ[env], sub), "somewhere"),
-                              ("C:%s__home_%s" %
-                               (os.environ[env], sub), "somewhere"),
-                              ("%s__home_%s" %
-                               (os.environ[env], sub), "somewhere")
+                              (f"C:{os.environ[env]}__home_{sub}", "somewhere"),
+                              (f"{os.environ[env]}__home_{sub}", "somewhere")
                               ])
     for s, b in strep:
         if s in content:
@@ -56,7 +54,7 @@ def trigger_on_specific_strings(content, filename=None, force_allow=None):
                 continue
             if s not in force_allow and s in lower_content:
                 raise Exception(
-                    'string {0}:{1} was found in\n  File "{2}", line 1'.format(st, s, filename))
+                    f'string {st}:{s} was found in\n  File "{filename}", line 1')
     return content
 
 
@@ -145,7 +143,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
     nbnone = len([v for k, v in params.items() if v is None or len(v) == 0])
     if nbnone > 0:
         raise ValueError(
-            "One of the following parameters is not specified:\n{0}".format(params))
+            f"One of the following parameters is not specified:\n{params}")
 
     nbnone = [v for k, v in params.items() if v is None or len(v) == 0]
     if len(nbnone) > 0:
@@ -173,7 +171,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
 
         fLOG("######################################################################")
         for k, v in sorted(project.items()):
-            fLOG("[publish_documentation] loop {}='{}'".format(k, v))
+            fLOG(f"[publish_documentation] loop {k}='{v}'")
 
         location = project["local"]
         root_local = project["root_local"]
@@ -183,7 +181,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
         rootw = project["root_web"]
 
         # documentation + setup
-        fLOG("[publish_documentation] location='{}'".format(location))
+        fLOG(f"[publish_documentation] location='{location}'")
 
         ftn = FileTreeNode(root_local)
         fftp = FolderTransferFTP(ftn, ftp, sfile, root_web=rootw, fLOG=fLOG, footer_html=footer_html,
@@ -296,7 +294,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr",  # pylint: dis
     projects = []
     for module in modules:
         fLOG(
-            "[ensae_teaching_cs] PUBLISH '{0}' - layout '{1}'".format(module, layout))
+            f"[ensae_teaching_cs] PUBLISH '{module}' - layout '{layout}'")
         for lay in layout:
             for suf in suffix:
                 root = os.path.abspath(location %
@@ -308,13 +306,13 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr",  # pylint: dis
                     p = os.path.abspath(location %
                                         (module, module, suffix[0], lay[0]))
                     raise FileNotFoundError(
-                        "First tried '{0}'\n last tried '{1}'".format(root, p))
+                        f"First tried '{root}'\n last tried '{p}'")
                 else:
                     continue
                 fLOG("   ", root)
             rw = rootw % (module, lay[1])
 
-            project = dict(status_file=os.path.join(folder_status, "status_%s.txt" % module),
+            project = dict(status_file=os.path.join(folder_status, f"status_{module}.txt"),
                            local=root, root_local=root, root_web=rw)
             projects.append(project)
 
@@ -335,15 +333,15 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr",  # pylint: dis
                 return pth
 
             local = _update_path(root)
-            fLOG("[ensae_teaching_cs] checking folder '{0}'".format(local))
-            fLOG("[ensae_teaching_cs] root is '{0}'".format(root))
+            fLOG(f"[ensae_teaching_cs] checking folder '{local}'")
+            fLOG(f"[ensae_teaching_cs] root is '{root}'")
             if os.path.exists(local):
-                fLOG("[ensae_teaching_cs] found '{0}'".format(local))
-                project = dict(status_file=os.path.join(folder_status, "status_3_%s.txt" % module),
+                fLOG(f"[ensae_teaching_cs] found '{local}'")
+                project = dict(status_file=os.path.join(folder_status, f"status_3_{module}.txt"),
                                local=local, root_local=local,
                                root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
                 projects.append(project)
-                project = dict(status_file=os.path.join(folder_status, "status_2_%s.txt" % module),
+                project = dict(status_file=os.path.join(folder_status, f"status_2_{module}.txt"),
                                local=local, root_local=local,
                                root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx2"))
                 projects.append(project)
@@ -357,7 +355,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr",  # pylint: dis
                         else:
                             pass
                     else:
-                        project = dict(status_file=os.path.join(folder_status, "status_doc1_%s.txt" % module),
+                        project = dict(status_file=os.path.join(folder_status, f"status_doc1_{module}.txt"),
                                        local=root1, root_local=root1,
                                        root_web=(rootw % (module, lay[1])).replace("_no_clean", ""))
                         projects.append(project)
@@ -368,11 +366,11 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr",  # pylint: dis
                         if exc:
                             raise FileNotFoundError(root3)
                     else:
-                        project = dict(status_file=os.path.join(folder_status, "status_doc3_%s.txt" % module),
+                        project = dict(status_file=os.path.join(folder_status, f"status_doc3_{module}.txt"),
                                        local=root3, root_local=root3,
                                        root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx3"))
                         projects.append(project)
-                        project = dict(status_file=os.path.join(folder_status, "status_doc2_%s.txt" % module),
+                        project = dict(status_file=os.path.join(folder_status, f"status_doc2_{module}.txt"),
                                        local=root3, root_local=root3,
                                        root_web=(rootw % (module, lay[1])).replace("_no_clean", "").replace("/helpsphinx", "/helpsphinx2"))
                         projects.append(project)
@@ -383,7 +381,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr",  # pylint: dis
             if 'root_local' not in proj:
                 if 'folder' not in proj:
                     raise KeyError(
-                        "Key 'folder' or 'root_local' must be specified in {}.".format(proj))
+                        f"Key 'folder' or 'root_local' must be specified in {proj}.")
                 proj = proj.copy()
                 proj['root_local'] = proj['folder']
             if 'folder' not in proj:

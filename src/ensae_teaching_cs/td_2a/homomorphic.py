@@ -98,7 +98,7 @@ class HomomorphicInt:
         """
         Usual
         """
-        return 'HomomorphicInt({},{},{},{})'.format(self.V, self.P, self.Q, self.E).replace(" ", "")
+        return f'HomomorphicInt({self.V},{self.P},{self.Q},{self.E})'.replace(" ", "")
 
     def __pow__(self, n):
         """
@@ -118,7 +118,7 @@ class HomomorphicInt:
         Addition.
         """
         if self.N != o.N:
-            raise ValueError("{0} != {1}".format(self.N, o.N))
+            raise ValueError(f"{self.N} != {o.N}")
         return HomomorphicInt(self.V + o.V, self.P, self.Q, self.E)
 
     def __sub__(self, o):
@@ -126,7 +126,7 @@ class HomomorphicInt:
         Soustraction.
         """
         if self.N != o.N:
-            raise ValueError("{0} != {1}".format(self.N, o.N))
+            raise ValueError(f"{self.N} != {o.N}")
         return HomomorphicInt(self.V - o.V, self.P, self.Q, self.E)
 
     def __mul__(self, o):
@@ -134,7 +134,7 @@ class HomomorphicInt:
         Multiplication.
         """
         if self.N != o.N:
-            raise ValueError("{0} != {1}".format(self.N, o.N))
+            raise ValueError(f"{self.N} != {o.N}")
         return HomomorphicInt(self.V * o.V, self.P, self.Q, self.E)
 
     def inv(self):
@@ -151,7 +151,7 @@ class HomomorphicInt:
                 return HomomorphicInt(i, self.P, self.Q, self.E)
         if ((s * self.V) % self.N) != 1:
             raise ZeroDivisionError(
-                "Inverse of {0} does not exist.".format(self.V))
+                f"Inverse of {self.V} does not exist.")
         return HomomorphicInt(s, self.P, self.Q, self.E)
 
     def __div__(self, o):
@@ -159,7 +159,7 @@ class HomomorphicInt:
         Division, implies to find the inverse (so very costly).
         """
         if self.N != o.N:
-            raise ValueError("{0} != {1}".format(self.N, o.N))
+            raise ValueError(f"{self.N} != {o.N}")
         i = o.inv()
         return HomomorphicInt(self.V * i.V, self.P, self.Q, self.E)
 

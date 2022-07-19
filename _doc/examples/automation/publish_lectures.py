@@ -100,10 +100,10 @@ modules = [_ for _ in modules if os.path.exists(
 if len(modules) == 0:
     _ = modules0[0]
     one = location % (_, _, suffix[0], "html")
-    raise ValueError("No module can be updated, for example '{0}'".format(one))
+    raise ValueError(f"No module can be updated, for example '{one}'")
 print("List of modules to publish:")
 for i, mod in enumerate(sorted(modules)):
-    print("  {0}/{1}: {2}".format(i + 1, len(modules), mod))
+    print(f"  {i + 1}/{len(modules)}: {mod}")
 
 ##################
 # La fonction :func:`publish_teachings_to_web cache` cache beaucoup de chose.

@@ -149,7 +149,7 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
         att = [_ for _ in files if ".html" in _]
         if len(att) <= 1:
             fLOG(
-                "[extract_students_mails_from_gmail_and_stores_in_folders] remove '{}'".format(group))
+                f"[extract_students_mails_from_gmail_and_stores_in_folders] remove '{group}'")
             proj.remove_group(group)
 
     # unzip files and convert notebooks
@@ -157,7 +157,7 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
         proj.unzip_convert(group)
 
     summary = os.path.join(folder, "index.html")
-    fLOG("[extract_students_mails_from_gmail_and_stores_in_folders] write summary '{}'".format(summary))
+    fLOG(f"[extract_students_mails_from_gmail_and_stores_in_folders] write summary '{summary}'")
     if os.path.exists(summary):
         os.remove(summary)
     proj.write_run_command()

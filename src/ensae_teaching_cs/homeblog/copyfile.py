@@ -23,20 +23,16 @@ class FileToCopy:
         self.checksum = checksum
         if date is not None and not isinstance(self.date, datetime.datetime):
             raise ValueError(  # pragma: no cover
-                "mismatch for date (%s) and file %s" %
-                (str(type(date)), filename))
+                f"mismatch for date ({str(type(date))}) and file {filename}")
         if mdate is not None and not isinstance(self.mdate, datetime.datetime):
             raise ValueError(  # pragma: no cover
-                "mismatch for mdate (%s) and file %s" %
-                (str(type(mdate)), filename))
+                f"mismatch for mdate ({str(type(mdate))}) and file {filename}")
         if not isinstance(size, int):
             raise ValueError(  # pragma: no cover
-                "mismatch for size (%s) and file %s" %
-                (str(type(size)), filename))
+                f"mismatch for size ({str(type(size))}) and file {filename}")
         if checksum is not None and not isinstance(checksum, str):
             raise ValueError(  # pragma: no cover
-                "mismatch for checksum (%s) and file %s" %
-                (str(type(checksum)), filename))
+                f"mismatch for checksum ({str(type(checksum))}) and file {filename}")
         if date is not None and mdate is not None:
             if mdate > date:
                 raise ValueError(
@@ -181,8 +177,7 @@ class CopyFileForFtp:
             obj = self.copyFiles[file]
             st = os.stat(file)
             if st.st_size != obj.size:
-                reason = "size %s != old size %s" % (
-                    str(st.st_size), str(obj.size))
+                reason = f"size {str(st.st_size)} != old size {str(obj.size)}"
                 res = True
             else:
                 l_ = obj.mdate
@@ -286,7 +281,7 @@ class CopyFileForFtp:
                     self.LOG("[copy_file] creating directory ", to)
                     os.mkdir(to)
 
-                self.LOG("[copy_file] copy of '{}' to '{}'.".format(file, to))
+                self.LOG(f"[copy_file] copy of '{file}' to '{to}'.")
                 reason = "new" if file not in self.copyFiles else \
                     ("new size %s != old size %s" % (str(os.stat(file).st_size),
                                                      str(self.copyFiles[file].size)))
@@ -301,9 +296,9 @@ class CopyFileForFtp:
 
                 except Exception as e:  # pragma: no cover
                     self.LOG(
-                        "[copy_file] issue with '{}' copy to '{}'.".format(file, to))
+                        f"[copy_file] issue with '{file}' copy to '{to}'.")
                     self.LOG(
-                        "[copy_file] message d'erreur {}: {}".format(type(e), e))
+                        f"[copy_file] message d'erreur {type(e)}: {e}")
             return to
         else:
             try:
@@ -349,7 +344,7 @@ class CopyFileForFtp:
                 nb += 1
         if nb == 0:
             raise RuntimeError(  # pragma: no cover
-                "No file found in '{}'.".format(file))
+                f"No file found in '{file}'.")
         return res
 
     def copy_file_contains(self, file, pattern, to, doFTP=True, doClean=False):
@@ -366,4 +361,4 @@ class CopyFileForFtp:
                 nb += 1
         if nb == 0:
             raise RuntimeError(  # pragma: no cover
-                "No file found in '{}'.".format(file))
+                f"No file found in '{file}'.")

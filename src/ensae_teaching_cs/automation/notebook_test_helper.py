@@ -235,7 +235,7 @@ def a_test_notebook_runner(filename, name, folder, valid=None, copy_files=None, 
     @param      fLOG            logging function
     """
     filename = os.path.abspath(filename)
-    temp = get_temp_folder(filename, "temp_notebook_123_{0}".format(name))
+    temp = get_temp_folder(filename, f"temp_notebook_123_{name}")
     doc = os.path.normpath(os.path.join(
         temp, "..", "..", "..", "_doc", "notebooks", folder))
     if not os.path.exists(doc):
@@ -253,8 +253,7 @@ def a_test_notebook_runner(filename, name, folder, valid=None, copy_files=None, 
             if not os.path.exists(dest_dir):
                 os.mkdir(dest_dir)
             src_file = os.path.join(doc, name_)
-            fLOG("[a_test_notebook_runner] copy '{0}' to '{1}'.".format(
-                src_file, dest_dir))
+            fLOG(f"[a_test_notebook_runner] copy '{src_file}' to '{dest_dir}'.")
             shutil.copy(src_file, dest_dir)
 
     import pyquickhelper

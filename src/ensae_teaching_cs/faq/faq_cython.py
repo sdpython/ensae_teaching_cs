@@ -90,7 +90,7 @@ def compile_cython_single_script(script, skip_warn=True, fLOG=noLOG):
     with open(filename, "w") as f:
         f.write(setup_script)
 
-    cmd = sys.executable + " -u {0} build_ext --inplace".format(filename)
+    cmd = sys.executable + f" -u {filename} build_ext --inplace"
 
     out, err = run_cmd(cmd, wait=True, fLOG=fLOG, change_path=current)
     if len(err) > 0:
@@ -108,8 +108,8 @@ def compile_cython_single_script(script, skip_warn=True, fLOG=noLOG):
             with open(script, "r", encoding="utf-8") as f:
                 content = f.read()
             raise CustomCythonError(
-                "CMD:\n{0}\nOUT:\n{1}ERR:\n{2}\nSCRIPT:\n{3}".format(cmd, out, err, content))
+                f"CMD:\n{cmd}\nOUT:\n{out}ERR:\n{err}\nSCRIPT:\n{content}")
         else:
             warnings.warn(
-                "[compile_cython_single_script] CMD:\n{0}\nOUT:\n{1}ERR:\n{2}".format(cmd, out, err))
+                f"[compile_cython_single_script] CMD:\n{cmd}\nOUT:\n{out}ERR:\n{err}")
     return out

@@ -15,7 +15,7 @@ def import_module(name, moduleName=None, url=None, glo=globals(), loc=locals()):
     @param      loc         locals()
     @return                 modules
     """
-    file = "%s.py" % name
+    file = f"{name}.py"
     if not os.path.exists(file):
         path = "../../../../complements_site_web"
         f2 = os.path.join(path, file)

@@ -110,7 +110,7 @@ class LatexIncludedFile:
                                  content, self.comment, content_type=typ)
         else:
             raise ValueError(  # pragma: no cover
-                "unable to read file %s, not python, not latex" % self.file)
+                f"unable to read file {self.file}, not python, not latex")
 
     def enumerate_code(self, skip_missing=False):
         """
@@ -127,7 +127,7 @@ class LatexIncludedFile:
             yield self.obj
         else:
             raise TypeError(  # pragma: no cover
-                "unexpected class for self.obj: %s" % str(type(self.obj)))
+                f"unexpected class for self.obj: {str(type(self.obj))}")
 
 
 class LatexFile:
@@ -163,7 +163,7 @@ class LatexFile:
         """
         usual
         """
-        return "file: %s" % self.file
+        return f"file: {self.file}"
 
     def read(self):
         """
@@ -325,17 +325,16 @@ class LatexFile:
             res.append(header)
         for code in self.enumerate_code(skip_missing=skip_missing):
             if code.comment is not None:
-                com = ("<p class=\"%s\">%s</p>" % (classcom, code.comment)
-                       ) if classcom is not None else ("<p>%s</p>" % code.comment)
+                com = (f"<p class=\"{classcom}\">{code.comment}</p>"
+                       ) if classcom is not None else (f"<p>{code.comment}</p>")
             else:
                 com = ("<p class=\"%s\">File: %s, line %d</p>" %
                        (classcom,
                            os.path.split(code.parent.file)[-1],
                            code.line[-1])) \
-                    if classcom is not None else ("<p>line %s</p>" % code.line)
+                    if classcom is not None else (f"<p>line {code.line}</p>")
             res.append(com)
-            res.append("<!-- File \"%s\", lines %s -->" %
-                       (code.parent.file, str(code.line)))
+            res.append(f"<!-- File \"{code.parent.file}\", lines {str(code.line)} -->")
 
             if classpre_type is not None and len(classpre_type) > 0 and \
                code.content_type is not None and len(code.content_type) > 0:

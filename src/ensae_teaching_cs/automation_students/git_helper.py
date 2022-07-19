@@ -72,7 +72,7 @@ def git_clone(local_folder, url_https, user=None, password=None, timeout=60,
 
         hg = os.path.join(local_folder, ".git")
         if os.path.exists(hg):
-            raise Exception("folder {0} should not exist".format(local_folder))
+            raise Exception(f"folder {local_folder} should not exist")
 
         if not os.path.exists(hg):
             cmds = """
@@ -95,18 +95,18 @@ def git_clone(local_folder, url_https, user=None, password=None, timeout=60,
 
         hg = os.path.join(local_folder, ".git")
         if os.path.exists(hg):
-            raise Exception("folder {0} should not exist".format(local_folder))
+            raise Exception(f"folder {local_folder} should not exist")
 
         final = os.path.split(url_user)[-1].replace(".git", "")
         locf = os.path.join(local_folder, final)
         if os.path.exists(locf):
             raise Exception(
-                "folder {0} should not exists before cloning".format(locf))
+                f"folder {locf} should not exists before cloning")
 
-        cmds = """
-                cd {0}
-                git clone {1} .
-                """.format(local_folder, url_user).replace("                ", "").strip(" \n\r\t")
+        cmds = f"""
+                cd {local_folder}
+                git clone {url_user} .
+                """.replace("                ", "").strip(" \n\r\t")
         cmd = cmds.replace("\n", "&")
         sin = ""  # "{0}\n".format(password)
         out, err = run_cmd(cmd, sin=sin, wait=True, timeout=timeout, fLOG=fLOG)
@@ -137,11 +137,11 @@ def git_change_remote_origin(local_folder, url_https, user=None, password=None,
 
     """
     url_user = git_url_user_password(url_https, user, password)
-    cmds = """
-            cd {0}
+    cmds = f"""
+            cd {local_folder}
             git remote remove origin
-            git remote add origin {1}
-            """.format(local_folder, url_user).replace("            ", "").strip(" \n\r\t")
+            git remote add origin {url_user}
+            """.replace("            ", "").strip(" \n\r\t")
     if add_fetch:
         cmds += "\ngit fetch"
     cmd = cmds.replace("\n", "&")
@@ -177,12 +177,12 @@ def git_commit_all(local_folder, url_https, message, user=None,
         git push -u origin master
 
     """
-    cmds = """
-            cd {0}
+    cmds = f"""
+            cd {local_folder}
             git add -A
-            git commit -m "{1}"
+            git commit -m "{message}"
             git push -u origin master
-            """.format(local_folder, message).replace("            ", "").strip(" \n\r\t")
+            """.replace("            ", "").strip(" \n\r\t")
     cmd = cmds.replace("\n", "&")
     sin = ""  # "{0}\n".format(password)
     out, err = run_cmd(cmd, sin=sin, wait=True, timeout=timeout, fLOG=fLOG)
@@ -362,7 +362,7 @@ def get_sections(path, suivi="suivi.rst"):
             content = f.read()
     except UnicodeDecodeError as e:
         raise ValueError(
-            'unable to parse file:\n  File "{0}", line 1'.format(filename)) from e
+            f'unable to parse file:\n  File "{filename}", line 1') from e
 
     lines = [_.strip("\r").rstrip() for _ in content.split("\n")]
     added_in = []
@@ -416,7 +416,7 @@ def git_url_user_password(url_https, user, password):
     :return:                     url
     """
     url_user = url_https.replace(
-        "https://", "https://{0}:{1}@".format(user, password))
+        "https://", f"https://{user}:{password}@")
     return url_user
 
 
@@ -428,5 +428,5 @@ def git_check_error(out, err, fLOG):
         fLOG("OUT:\n" + out)
     if len(err) > 0:
         if "error" in err.lower():
-            raise Exception("OUT:\n{0}\nERR:\n{1}".format(out, err))
+            raise Exception(f"OUT:\n{out}\nERR:\n{err}")
         raise Exception(err)

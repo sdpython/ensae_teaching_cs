@@ -61,8 +61,7 @@ def text_replace_div_gif(text, htmltext, alt, gif, prefix, inline, size):
             '"latex_inline"', '"latex_help_inline"')
         alt = alt.replace("\n", " ")
         px = "%dpx" % (size[0] / 2)
-        rep += ' <img src="%s" alt="%s" title="%s" width="%s" /> ' % (
-            filename, alt, alt, px)
+        rep += f' <img src="{filename}" alt="{alt}" title="{alt}" width="{px}" /> '
     text = text.replace(htmltext, rep)
     return text
 
@@ -97,7 +96,7 @@ def text_replace_span_gif(text, htmltext, alt, gif, prefix):
     filename = prefix + "/" + filename
     rep = "<!-- %s -->" % htmltext.replace('"latex"', '"latex_help"')
     alt = alt.replace("\n", " ")
-    rep += '<img src="%s" alt="%s" title="%s" />' % (filename, alt, alt)
+    rep += f'<img src="{filename}" alt="{alt}" title="{alt}" />'
     text = text.replace(htmltext, rep)
     return text
 

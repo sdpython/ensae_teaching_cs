@@ -31,7 +31,7 @@ def data_shape_files(name, cache=".", load=True):
         shp = [name for name in res if name.endswith('.shp')]
         if len(shp) == 0:
             raise FileNotFoundError(  # pragma: no cover
-                "Unable to find shp file in '{}'.".format(cache))
+                f"Unable to find shp file in '{cache}'.")
         import geopandas
         df = geopandas.read_file(shp[0])
         df['centroid'] = df['geometry'].apply(lambda r: r.centroid)
@@ -39,7 +39,7 @@ def data_shape_files(name, cache=".", load=True):
         df['DEPLAT'] = df['centroid'].apply(lambda r: r.y)
         return df
     raise ValueError(
-        "Unpexpected value for shape files: '{}'.".format(name))
+        f"Unpexpected value for shape files: '{name}'.")
 
 
 def load_french_departments():

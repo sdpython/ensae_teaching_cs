@@ -55,7 +55,7 @@ class CustomMagics(Magics):
                     import pyensae.datasource
                     r = pyensae.datasource.download_data(spl[1])
                     return r
-                raise Exception("unable to interpret: %r" % line)
+                raise Exception(f"unable to interpret: {line!r}")
             return self.ENSAEl(line)
         raise RuntimeError("Unable to interpret:\n" + cell)
 

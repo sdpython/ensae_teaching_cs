@@ -26,7 +26,7 @@ def Exception2Response(e):
     @return                 textReponse
     """
     text = traceback.format_exc()
-    return Text2Response("Exception: {0}\nSTACK:\n{1}".format(str(e), text))
+    return Text2Response(f"Exception: {str(e)}\nSTACK:\n{text}")
 
 
 class FlaskInThread(threading.Thread):

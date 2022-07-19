@@ -76,7 +76,7 @@ def get_pygame_screen_font(h, size, flags=0):
         screen = pygame.display.set_mode(size, flags)
     except pygame.error as e:
         raise Exception(
-            "Unable to create a screen, flags={0}".format(flags)) from e
+            f"Unable to create a screen, flags={flags}") from e
     font = pygame.font.Font("freesansbold.ttf", h)
     font_small = pygame.font.Font("freesansbold.ttf", 3 * h // 4)
     font_half = pygame.font.Font("freesansbold.ttf", 5 * h // 6)
@@ -154,7 +154,7 @@ def build_diff_image(pygame, screen, h, maxw, seq1=None, seq2=None, diff=None, f
                     opcodes.append(
                         ('insert', None, None, opcode[3], opcode[4]))
                 else:
-                    raise ValueError("unexpected: {0}".format(opcode))
+                    raise ValueError(f"unexpected: {opcode}")
 
             for opcode in opcodes:
                 if opcode[0] == "delete":
@@ -210,7 +210,7 @@ def build_diff_image(pygame, screen, h, maxw, seq1=None, seq2=None, diff=None, f
                     opcodes.append(
                         ('insert', None, None, opcode[3], opcode[4]))
                 else:
-                    raise ValueError("unexpected: {0}".format(opcode))
+                    raise ValueError(f"unexpected: {opcode}")
 
             for opcode in opcodes:
                 if opcode[0] == "delete":

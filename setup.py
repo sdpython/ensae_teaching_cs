@@ -9,7 +9,7 @@ from pyquicksetup import read_version, read_readme, default_cmdclass
 #########
 
 project_var_name = "ensae_teaching_cs"
-versionPython = "%s.%s" % (sys.version_info.major, sys.version_info.minor)
+versionPython = f"{sys.version_info.major}.{sys.version_info.minor}"
 path = "Lib/site-packages/" + project_var_name
 readme = 'README.rst'
 history = "HISTORY.rst"

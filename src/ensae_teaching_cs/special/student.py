@@ -30,7 +30,7 @@ class Student:
 
     def __repr__(self):
         "usual"
-        return "%s(%r)" % (self.__class__.__name__, self.qna)
+        return f"{self.__class__.__name__}({self.qna!r})"
 
     def count_anwers(self, threshold=0.5, counter=None):
         """

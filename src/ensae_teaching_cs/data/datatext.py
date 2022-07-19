@@ -22,7 +22,7 @@ def load_sentiment_dataset(cache="."):
     name = "sentiment_labelled_sentences.zip"
     res = download_data(name, whereTo=cache)
     if len(res) != 9:
-        raise ValueError("Unzipping '{0}' failed.".format(name))
+        raise ValueError(f"Unzipping '{name}' failed.")
     dfs = []
     for fi in res:
         if ".txt" not in fi or "readme" in fi or "__MACOSX" in fi:

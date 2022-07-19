@@ -45,15 +45,15 @@ school = "ENSAE"
 date = "20-Apr-2022"
 year = '1A'
 exam = 'projet'
-pattern = "Python_{0}_{1}".format(year, exam)
+pattern = f"Python_{year}_{exam}"
 group_def = "groupes.xlsx"
 col_subject, col_group, col_mail, col_student = "sujet", "groupe", "mail", "Nom"
-final_dest = ["2021-2022", "{}-{}".format(year, exam)]
+final_dest = ["2021-2022", f"{year}-{exam}"]
 
 
 if school == 'ENSAE':
     do_mail = True
-    mailfolder = ["ensae/ENSAE_%s" % year]
+    mailfolder = [f"ensae/ENSAE_{year}"]
     dest_folder = os.path.normpath(os.path.abspath(os.path.join(
         *([os.path.dirname(__file__)] + ([".."] * 5) + ["_data", "ecole", school] + final_dest))))
     print("dest", dest_folder)
@@ -74,8 +74,7 @@ if os.path.exists(path_df):
     df_group = pandas.read_excel(path_df, engine='openpyxl')
     for col in [col_subject, col_mail, col_group, col_student]:
         if col not in df_group.columns:
-            raise Exception('{0} not in {1}'.format(
-                col, list(df_group.columns)))
+            raise Exception(f'{col} not in {list(df_group.columns)}')
 else:
     df_group = None
 

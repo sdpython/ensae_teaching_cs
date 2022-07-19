@@ -32,8 +32,8 @@ class ElectionResults:
         if isinstance(file, list):
             self.tours = file
         else:
-            self.tours = [pandas.read_excel(file, sheet_name="%s T1" % level, engine='openpyxl'),
-                          pandas.read_excel(file, sheet_name="%s T2" % level, engine='openpyxl')]
+            self.tours = [pandas.read_excel(file, sheet_name=f"{level} T1", engine='openpyxl'),
+                          pandas.read_excel(file, sheet_name=f"{level} T2", engine='openpyxl')]
             for i, t in enumerate(self.tours):
                 if len(t) == 0:
                     raise Exception("no data for tour %d" % (i + 1))
@@ -43,7 +43,7 @@ class ElectionResults:
                     raise Exception("no data for tour %d" % i)
             try:
                 self.tours = [
-                    _.sort_values("Libellé du %s" % self.level, inplace=False) for _ in self.tours]
+                    _.sort_values(f"Libellé du {self.level}", inplace=False) for _ in self.tours]
             except Exception as e:
                 message = "unable to sort, shape={1} columns={0}".format(
                     ",".join(self.tours[0].columns), self.tours[0].shape)
@@ -130,7 +130,7 @@ class ElectionResults:
         """
         Returns the column associated to the level (their name depends on the level).
         """
-        return ["Code du %s" % self.level, "Libellé du %s" % self.level]
+        return [f"Code du {self.level}", f"Libellé du {self.level}"]
 
     @property
     def T0(self):
@@ -168,9 +168,9 @@ class ElectionResults:
             unique.sort()
         except TypeError as e:
             raise Exception("unable to sort " + str(unique) +
-                            "\ncolumns:{0}".format(",".join(tour.columns))) from e
+                            f"\ncolumns:{','.join(tour.columns)}") from e
 
-        columns0 = ["Code du %s" % self.level, "Libellé du %s" % self.level, ]
+        columns0 = [f"Code du {self.level}", f"Libellé du {self.level}", ]
         columns1 = ["Abstentions", "Blancs et nuls", ]
 
         def proc(row):

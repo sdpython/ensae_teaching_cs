@@ -85,7 +85,7 @@ def Arrow_Hurwicz(F, C, X0, p0, epsilon=0.1, rho=0.1,
         X0 = Xt
         p0 = pt
         if do_print and iter % 100 == 0:
-            print("i {0} diff {1:0.000}".format(itern, diff),
+            print(f"i {itern} diff {diff:0.000}",
                   ":", f, X0, p0, th)
 
     return {'x': X0, 'iteration': itern}

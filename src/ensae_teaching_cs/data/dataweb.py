@@ -35,7 +35,7 @@ def google_trends(name="macron", local=True, cache_folder=".", filename=True):
     @param          filename        return the filename (True) or the content (False)
     @return                         text content (str)
     """
-    return anyfile("google_trends_%s.csv" % name, local=local, cache_folder=cache_folder, filename=filename)
+    return anyfile(f"google_trends_{name}.csv", local=local, cache_folder=cache_folder, filename=filename)
 
 
 def twitter_zip(name="tweets_macron_sijetaispresident_201609", local=True, cache_folder=".",
@@ -60,6 +60,6 @@ def twitter_zip(name="tweets_macron_sijetaispresident_201609", local=True, cache
     else:
         if isinstance(res, list):
             if len(res) > 1:
-                raise ValueError("too many files: {0}".format(res))
+                raise ValueError(f"too many files: {res}")
             res = res[0]
         return res

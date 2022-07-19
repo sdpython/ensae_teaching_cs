@@ -22,7 +22,7 @@ def pyopencl_status():
     try:
         import pyopencl as cl
     except ImportError as e:
-        rows.append("pyopencl is not available due to {}".format(e))
+        rows.append(f"pyopencl is not available due to {e}")
         return "\n".join(rows)
 
     def catch(fct):

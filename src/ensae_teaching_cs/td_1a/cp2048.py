@@ -43,7 +43,7 @@ class Game2048:
             last_moves = self.moves[-3:]
         else:
             last_moves = self.moves
-        return "{}\n{}".format(str(self.game), str(last_moves))
+        return f"{str(self.game)}\n{str(last_moves)}"
 
     def gameover(self):
         "Checks the game is over or not. Returns True in that case."
