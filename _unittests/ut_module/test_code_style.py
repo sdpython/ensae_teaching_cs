@@ -99,11 +99,11 @@ class TestCodeStyle(ExtTestCase):
                    run_cmd_filter=_run_cmd_filter,
                    pylint_ignore=('C0103', 'C1801', 'R0201', 'R1705', 'W0108', 'W0613',
                                   'C0111', 'R1702', 'C0200', 'W0703', 'W0223',
-                                  'W020', 'W0212', 'C0123', 'C0302', 'W0221',
+                                  'W0212', 'C0123', 'C0302', 'W0221', 'R1728',
                                   'R0912', 'E0203', 'W0201', 'R1710', 'W0603',
                                   'R1711', 'R1714', 'W0107', 'W0640', 'C0415',
                                   'W1114', 'R1721', 'R1732', 'R1730', 'R1731',
-                                  'W1514', 'C0209', 'E0611', 'E0401'))
+                                  'W1514', 'C0209', 'E0611', 'E0401', 'C3001'))
 
     def test_style_test(self):
         fLOG(
@@ -158,10 +158,11 @@ class TestCodeStyle(ExtTestCase):
         check_pep8(test, fLOG=fLOG, neg_pattern="temp_.*", skip=skip,
                    verbose=False, run_cmd_filter=_run_cmd_filter,
                    pylint_ignore=('C0103', 'C1801', 'R0201', 'R1705', 'W0108', 'W0613',
-                                  'C0111', 'C0200', 'C0122', "W0123", 'W0703',
+                                  'C0111', 'C0200', "W0123", 'W0703', 'R1728',
                                   'W0212', 'W0201', 'R1711', 'R1714', 'W0107',
                                   'C0415', 'W1114', 'R1721', 'R1732', 'R1730',
-                                  'R1731', 'W1514', 'C0209', 'E0611', 'E0401'))
+                                  'R1731', 'W1514', 'C0209', 'E0611', 'E0401',
+                                  'C3001'))
 
 
 if __name__ == "__main__":
