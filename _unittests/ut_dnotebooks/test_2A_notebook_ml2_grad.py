@@ -12,7 +12,7 @@ from pyquickhelper.pycode import (
 import ensae_teaching_cs
 
 
-class TestNotebookRunner2aML2(unittest.TestCase):
+class TestNotebookRunner2aML2_grad(unittest.TestCase):
 
     def setUp(self):
         add_missing_development_version(["pymyinstall", "pyensae", "pymmails", "jyquickhelper"],
@@ -21,14 +21,14 @@ class TestNotebookRunner2aML2(unittest.TestCase):
     @skipif_appveyor("too long for appveyor")
     @skipif_travis("execution does not stop")
     @skipif_circleci("too long for circleci")
-    def test_notebook_runner_2a_ml(self):
+    def test_notebook_runner_2a_ml_grad(self):
         fLOG(
             __file__,
             self._testMethodName,
             OutputPrint=__name__ == "__main__")
         from ensae_teaching_cs.automation.notebook_test_helper import ls_notebooks, execute_notebooks, clean_function_1a
         from ensae_teaching_cs.data import simple_database
-        temp = get_temp_folder(__file__, "temp_notebook2a_ml2")
+        temp = get_temp_folder(__file__, "temp_notebook2a_ml2_grad")
         keepnote = ls_notebooks("td2a_ml")
         keepnote = [
             _ for _ in keepnote if (
@@ -51,7 +51,7 @@ class TestNotebookRunner2aML2(unittest.TestCase):
                 return False
             if "libraries" in n:
                 return False
-            if 'gradient' in n:
+            if 'gradient' not in n:
                 return False
             return True
 
