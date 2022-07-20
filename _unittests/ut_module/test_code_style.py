@@ -97,7 +97,7 @@ class TestCodeStyle(ExtTestCase):
 
         check_pep8(src_, fLOG=fLOG, skip=skip, verbose=False,
                    run_cmd_filter=_run_cmd_filter,
-                   pylint_ignore=('C0103', 'C1801', 'R0201', 'R1705', 'W0108', 'W0613',
+                   pylint_ignore=('C0103', 'C1801', 'R1705', 'W0108', 'W0613',
                                   'C0111', 'R1702', 'C0200', 'W0703', 'W0223',
                                   'W0212', 'C0123', 'C0302', 'W0221', 'R1728',
                                   'R0912', 'E0203', 'W0201', 'R1710', 'W0603',
@@ -157,7 +157,7 @@ class TestCodeStyle(ExtTestCase):
 
         check_pep8(test, fLOG=fLOG, neg_pattern="temp_.*", skip=skip,
                    verbose=False, run_cmd_filter=_run_cmd_filter,
-                   pylint_ignore=('C0103', 'C1801', 'R0201', 'R1705', 'W0108', 'W0613',
+                   pylint_ignore=('C0103', 'C1801', 'R1705', 'W0108', 'W0613',
                                   'C0111', 'C0200', "W0123", 'W0703', 'R1728',
                                   'W0212', 'W0201', 'R1711', 'R1714', 'W0107',
                                   'C0415', 'W1114', 'R1721', 'R1732', 'R1730',
