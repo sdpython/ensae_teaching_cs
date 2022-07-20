@@ -5,6 +5,8 @@
     :date: 2022-07-17
     :categories: articles
 
+    Deep Learning
+
     * `Training Deep Networks without Learning Rates Through Coin Betting
       <https://arxiv.org/abs/1705.07795>`_
     * `Model Comparison and Calibration Assessment: User Guide for 
@@ -31,6 +33,13 @@
     * `XTREME-S: Evaluating Cross-lingual Speech Representations
       <https://arxiv.org/abs/2203.10752>`_
 
+    Machine Learning
+
+    * `On the consistency of supervised learning with missing values
+      <https://arxiv.org/abs/1902.06931>`_
+    * `Why do tree-based models still outperform deep learning on tabular data?
+      <https://hal.archives-ouvertes.fr/hal-03723551>`_
+
     Un site
 
     * `paperwithcode <https://paperswithcode.com/>`_
@@ -38,3 +47,8 @@
     Librairies
     
     * `TorchArrow <https://github.com/pytorch/torcharrow>`_
+
+    Un benchmark
+
+    * `MIXED PRECISION TRAINING IN PRACTICE
+      <https://pytorch.org/blog/what-every-user-should-know-about-mixed-precision-training-in-pytorch/?utm_source=twitter&utm_medium=organic_social&utm_campaign=blog&utm_content=mixed-precision-training-in-pytorch>`_
