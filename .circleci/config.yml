@@ -97,11 +97,6 @@ jobs:
           key: v2-dependencies-{{ checksum "requirements.txt" }}
         
       - run:
-          name: install sklearn-onnx, onnxconverter-common
-          command: |
-            pip install sklearn-onnx
-
-      - run:
           name: check list of dependencies
           command: |
             pip freeze
