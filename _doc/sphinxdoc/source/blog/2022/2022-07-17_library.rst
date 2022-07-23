@@ -32,6 +32,8 @@
       <https://arxiv.org/abs/1606.01781>`_
     * `XTREME-S: Evaluating Cross-lingual Speech Representations
       <https://arxiv.org/abs/2203.10752>`_
+    * `DeepSpeed Compression: A composable library for extreme compression and zero-cost quantization
+      <https://www.microsoft.com/en-us/research/blog/deepspeed-compression-a-composable-library-for-extreme-compression-and-zero-cost-quantization/>`_
 
     Machine Learning
 
