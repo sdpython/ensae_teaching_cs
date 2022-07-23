@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.9.6
+      - image: cimg/python:3.10.5
     
     working_directory: ~/repo
     
@@ -14,11 +14,6 @@ jobs:
           - v2-dependencies-{{ checksum "requirements.txt" }}
           - v2-dependencies-
 
-#       - run:
-#           name: Install omp
-#           command: |
-#                     sudo apt-get install -y libomp-dev
-          
       - run:
           name: Install pandoc
           command: |
@@ -59,25 +54,31 @@ jobs:
             sudo apt-get install protobuf-compiler libprotoc-dev cmake
 
       - run:
-          name: Install libproj
+          name: Install dependencies for proj
           command: |
-            sudo apt-get install -y libgeos-dev libproj-dev proj-data graphviz
+            sudo apt-get install -y libgeos-dev proj-data graphviz sqlite3 libtiff5 libtiff5-dev libtiff-dev libsqlite3-dev libcurl4-gnutls-dev
 
       - run:
-          name: Install pyproj, shapely, cartopy
+          name: build proj
           command: |
-            python -m venv venv
-            . venv/bin/activate
-            pip install pyproj
-            pip uninstall -y shapely
-            pip install --no-binary shapely shapely
-            pip install cartopy
+            # see https://stackoverflow.com/questions/72442087/cant-install-proj-8-0-0-for-cartopy-linux
+            wget https://download.osgeo.org/proj/proj-9.0.0.tar.gz
+            tar -xf proj-9.0.0.tar.gz
+            cd proj-9.0.0
+            mkdir build && cd build
+            cmake ..
+            cmake --build .
+            sudo cmake --build . --target install
+            cd ..
+
+      - run:
+          name: install ldconfig
+          command: |
+            sudo ldconfig
 
       - run:
           name: Install standard libraries
           command: |
-            python -m venv venv
-            . venv/bin/activate
             pip install scipy matplotlib numpy cython pandas wheel pybind11 llvmlite numba
 
       - run:
@@ -90,8 +91,6 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            python3 -m venv venv
-            . venv/bin/activate
             pip install -r requirements.txt
 
       - save_cache:
@@ -102,22 +101,17 @@ jobs:
       - run:
           name: install sklearn-onnx, onnxconverter-common
           command: |
-            . venv/bin/activate
-            pip install git+https://github.com/xadupre/onnxconverter-common.git@jenkins --upgrade
-            pip install git+https://github.com/xadupre/sklearn-onnx.git@jenkins --upgrade
+            pip install sklearn-onnx
 
       - run:
           name: check list of dependencies
           command: |
-            python -m venv venv
-            . venv/bin/activate
             pip freeze
             apt list --installed
         
       - run:
           name: run tests
           command: |
-            . venv/bin/activate
             # pygame
             export AUDIODEV=null	
             export SDL_VIDEODRIVER=dummy	
@@ -131,24 +125,11 @@ jobs:
       - run:
           name: wheel
           command: |
-            . venv/bin/activate
             export PYTHONPATH=src
             python setup.py bdist_wheel
             mkdir -p test-reports/dist
             cp dist/*.whl test-reports/dist
             mkdir -p test-reports/src
-
-#      - run:
-#          name: documentation
-#          command: |
-#           . venv/bin/activate
-#           python setup.py build_sphinx
-#           
-#      - run:
-#          name: copy documentation
-#          command: |
-#           mkdir -p test-reports/doc
-#           zip -r -9  test-reports/doc/documentation_html.zip _doc/sphinxdoc/build/html
             
       - store_artifacts:
           path: test-reports
