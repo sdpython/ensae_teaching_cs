@@ -40,6 +40,11 @@
     * `Why do tree-based models still outperform deep learning on tabular data?
       <https://hal.archives-ouvertes.fr/hal-03723551>`_
 
+    Ecologie
+
+    * `Measuring the Carbon Intensity of AI in Cloud Instances
+      <https://arxiv.org/abs/2206.05229>`_
+
     Un site
 
     * `paperwithcode <https://paperswithcode.com/>`_
