@@ -859,7 +859,7 @@ Outils
       - Explorations autour des données liées au COVID-19
     * - module
       - description
-    * - :epkg:`botadi` (archivé)
+    * - :epkg:`botadi` **archivé**
       - Experimentation autour des chatbots.
     * - :epkg:`csharpy`
       - Outils, exemples pour utiliser du :epkg:`C#` depuis :epkg:`Python`
