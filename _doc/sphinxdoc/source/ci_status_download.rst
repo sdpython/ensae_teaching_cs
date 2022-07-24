@@ -67,11 +67,11 @@ On peut retrouver la plupart de ces résultats sur
         {'manydataapi', 'cpyquickhelper', 'mlstatpy', },
         {'mlinsights', 'mlprodict', 'onnxortext'},
         {'csharpy', 'csharpyml', },
-        {'lightmlboard', 'lightmlrestapi', 'pyrsslocal', 'pymmails', },
+        {'pyrsslocal', 'pymmails', },
         {'sparkouille', 'ensae_projects', 'actuariat_python', 'code_beatrix', 'jupytalk'},
         {'papierstat', 'teachpyx', 'ensae_teaching_cs', 'ensae_teaching_dl', 'teachpyx',
          'aftercovid', 'onnxcustom', 'deeponnxcustom'},
-        {'tkinterquickhelper', 'pysqllike', 'pyenbc', },
+        {'tkinterquickhelper', 'pyenbc', },
         {'nimbusml', },
         {'scikit-learn'},
     ]

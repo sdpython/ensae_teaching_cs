@@ -20,14 +20,14 @@ def get_teaching_modules(branch=True):
         print('\\n'.join(sorted(get_teaching_modules())))
     """
     mods = ['deeponnxcustom:main', 'onnxcustom',
-            "pymlbenchmark", "_benchmarks", "ensae_teaching_dl", "machinelearningext",
+            "pymlbenchmark", "_benchmarks", "ensae_teaching_dl",
             "lecture_citation", "pyquickhelper", "jyquickhelper",
             "python3_module_template", "mathenjeu", "pymmails", "pymyinstall",
-            "pyensae", "pyrsslocal", "pysqllike", "ensae_projects", "ensae_teaching_cs",
+            "pyensae", "pyrsslocal", "ensae_projects", "ensae_teaching_cs",
             "code_beatrix", "actuariat_python", "mlstatpy", "jupytalk", "teachpyx",
             "tkinterquickhelper", "cpyquickhelper", "pandas_streaming",
-            "lightmlboard", "lightmlrestapi", "mlinsights", "pyenbc", "mlprodict",
-            "papierstat", "sparkouille", "manydataapi", "csharpy", "csharpyml",
+            "mlinsights", "pyenbc", "mlprodict",
+            "papierstat", "sparkouille", "manydataapi",
             "wrapclib", "myblog", "_check_python_install", "onnxortext"]
     if not branch:
         mods = [m.split(':', maxsplit=1)[0] for m in mods]

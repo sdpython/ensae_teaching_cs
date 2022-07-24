@@ -233,44 +233,6 @@ Tableau de bord et statut des dépendances
       - .. image:: https://codecov.io/github/sdpython/lecture_citation/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/lecture_citation?branch=master
       -
-    * - :epkg:`lightmlboard`
-      - .. image:: https://travis-ci.com/sdpython/lightmlboard.svg?branch=master
-            :target: https://app.travis-ci.com/github/sdpython/lightmlboard
-            :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/6g0xro11tmc6t05d?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/lightmlboard
-            :alt: Build Status Windows
-      - .. image:: https://circleci.com/gh/sdpython/lightmlboard/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/lightmlboard/tree/master
-      - .. image:: https://badge.fury.io/py/lightmlboard.svg
-            :target: https://pypi.org/project/lightmlboard
-      - .. image:: http://img.shields.io/github/issues/sdpython/lightmlboard.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/lightmlboard/issues
-      - .. image:: https://codecov.io/github/sdpython/lightmlboard/coverage.svg?branch=master
-            :target: https://codecov.io/github/sdpython/lightmlboard?branch=master
-      - .. image:: http://www.xavierdupre.fr/app/lightmlboard/helpsphinx/_images/nbcov.png
-            :target: http://www.xavierdupre.fr/app/lightmlboard/helpsphinx/all_notebooks_coverage.html
-            :alt: Notebook Coverage
-    * - :epkg:`lightmlrestapi`
-      - .. image:: https://travis-ci.com/sdpython/lightmlrestapi.svg?branch=master
-            :target: https://app.travis-ci.com/github/sdpython/lightmlrestapi
-            :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/itkrtmperlhjm4xw?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/lightmlrestapi
-            :alt: Build Status Windows
-      - .. image:: https://circleci.com/gh/sdpython/lightmlrestapi/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/lightmlrestapi/tree/master
-      - .. image:: https://badge.fury.io/py/lightmlrestapi.svg
-            :target: https://pypi.org/project/lightmlrestapi
-      - .. image:: http://img.shields.io/github/issues/sdpython/lightmlrestapi.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/lightmlrestapi/issues
-      - .. image:: https://codecov.io/github/sdpython/lightmlrestapi/coverage.svg?branch=master
-            :target: https://codecov.io/github/sdpython/lightmlrestapi?branch=master
-      - .. image:: http://www.xavierdupre.fr/app/lightmlrestapi/helpsphinx/_images/nbcov.png
-            :target: http://www.xavierdupre.fr/app/lightmlrestapi/helpsphinx/all_notebooks_coverage.html
-            :alt: Notebook Coverage
     * - :epkg:`manydataapi`
       - .. image:: https://travis-ci.com/sdpython/manydataapi.svg?branch=master
             :target: https://app.travis-ci.com/github/sdpython/manydataapi
@@ -289,25 +251,6 @@ Tableau de bord et statut des dépendances
             :target: https://codecov.io/github/sdpython/manydataapi?branch=master
       - .. image:: http://www.xavierdupre.fr/app/manydataapi/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/manydataapi/helpsphinx/all_notebooks_coverage.html
-            :alt: Notebook Coverage
-    * - :epkg:`mathenjeu`
-      - .. image:: https://travis-ci.com/sdpython/mathenjeu.svg?branch=master
-            :target: https://app.travis-ci.com/github/sdpython/mathenjeu
-            :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/kewttt58ejfwduao?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/mathenjeu
-            :alt: Build Status Windows
-      - .. image:: https://circleci.com/gh/sdpython/mathenjeu/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/mathenjeu/tree/master
-      - .. image:: https://badge.fury.io/py/mathenjeu.svg
-            :target: https://pypi.org/project/mathenjeu
-      - .. image:: http://img.shields.io/github/issues/sdpython/mathenjeu.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/mathenjeu/issues
-      - .. image:: https://codecov.io/github/sdpython/mathenjeu/coverage.svg?branch=master
-            :target: https://codecov.io/github/sdpython/mathenjeu?branch=master
-      - .. image:: http://www.xavierdupre.fr/app/mathenjeu/helpsphinx/_images/nbcov.png
-            :target: http://www.xavierdupre.fr/app/mathenjeu/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
     * - :epkg:`mlinsights`
       - .. image:: https://travis-ci.com/sdpython/mlinsights.svg?branch=master
@@ -576,23 +519,6 @@ Tableau de bord et statut des dépendances
       - .. image:: https://codecov.io/github/sdpython/pyrsslocal/coverage.svg?branch=master
             :target: https://codecov.io/github/sdpython/pyrsslocal?branch=master
       -
-    * - `pysqllike <http://www.xavierdupre.fr/app/pysqllike/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.com/sdpython/pysqllike.svg?branch=master
-            :target: https://app.travis-ci.com/github/sdpython/pysqllike
-            :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/rrpks1pgivea23js?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/pysqllike
-            :alt: Build Status Windows
-      - .. image:: https://circleci.com/gh/sdpython/pysqllike/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/pysqllike/tree/master
-      - .. image:: https://badge.fury.io/py/pysqllike.svg
-            :target: https://pypi.org/project/pysqllike
-      - .. image:: http://img.shields.io/github/issues/sdpython/pysqllike.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/pysqllike/issues
-      - .. image:: https://codecov.io/github/sdpython/pysqllike/coverage.svg?branch=master
-            :target: https://codecov.io/github/sdpython/pysqllike?branch=master
-      -
     * - :epkg:`sparkouille`
       - .. image:: https://travis-ci.com/sdpython/sparkouille.svg?branch=master
             :target: https://app.travis-ci.com/github/sdpython/sparkouille
@@ -792,88 +718,11 @@ Tableau de bord et statut des dépendances
       -
 
 Les projets suivants lient :epkg:`C#` et :epkg:`python`.
-Ils ne sont pas maintenus de façon très soutenue.
-
-.. list-table::
-    :widths: 12 10 10 15 12 10 10 10
-    :header-rows: 1
-
-    * - Module
-      - Travis
-      - AppVeyor
-      - CircleCI / Azure / Codacy
-      - PyPi
-      - Issues
-      - Coverage
-      - Notebook Coverage
-    * - `csharpy <http://www.xavierdupre.fr/app/csharpy/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.com/sdpython/csharpy.svg?branch=master
-            :target: https://app.travis-ci.com/github/sdpython/csharpy
-            :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/ldrgt6sxeyfwtoo2?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/csharpy
-            :alt: Build Status Windows
-      - .. image:: https://circleci.com/gh/sdpython/csharpy/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/csharpy/tree/master
-      - .. image:: https://badge.fury.io/py/csharpy.svg
-            :target: https://pypi.org/project/csharpy
-      - .. image:: http://img.shields.io/github/issues/sdpython/csharpy.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/csharpy/issues
-      - .. image:: https://codecov.io/github/sdpython/csharpy/coverage.svg?branch=master
-            :target: https://codecov.io/github/sdpython/csharpy?branch=master
-      - .. image:: http://www.xavierdupre.fr/app/csharpy/helpsphinx/_images/nbcov.png
-            :target: http://www.xavierdupre.fr/app/csharpy/helpsphinx/all_notebooks_coverage.html
-            :alt: Notebook Coverage
-    * - `csharpyml <http://www.xavierdupre.fr/app/csharpyml/helpsphinx/index.html>`_
-      - .. image:: https://travis-ci.com/sdpython/csharpyml.svg?branch=master
-            :target: https://app.travis-ci.com/github/sdpython/csharpyml
-            :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/0achvn5m9ga8bx2o?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/csharpyml
-            :alt: Build Status Windows
-      - .. image:: https://circleci.com/gh/sdpython/csharpyml/tree/master.svg?style=svg
-            :target: https://circleci.com/gh/sdpython/csharpyml/tree/master
-      - .. image:: https://badge.fury.io/py/csharpyml.svg
-            :target: https://pypi.org/project/csharpyml
-      - .. image:: http://img.shields.io/github/issues/sdpython/csharpyml.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/csharpyml/issues
-      - .. image:: https://codecov.io/github/sdpython/csharpyml/coverage.svg?branch=master
-            :target: https://codecov.io/github/sdpython/csharpyml?branch=master
-      - .. image:: http://www.xavierdupre.fr/app/csharpyml/helpsphinx/_images/nbcov.png
-            :target: http://www.xavierdupre.fr/app/csharpyml/helpsphinx/all_notebooks_coverage.html
-            :alt: Notebook Coverage
-    * - Les derniers sont des
-      - projets
-      - exploratoires.
-      -
-      -
-      -
-      -
-      -
-    * - `machinelearning <https://github.com/sdpython/machinelearning>`_
-      -
-      -
-      -
-      -
-      -
-      -
-      -
-    * - `machinelearningext <https://github.com/sdpython/machinelearningext>`_
-      - .. image:: https://travis-ci.com/sdpython/machinelearningext.svg?branch=master
-            :target: https://app.travis-ci.com/github/sdpython/machinelearningext
-            :alt: Build status
-      - .. image:: https://ci.appveyor.com/api/projects/status/uwanivg3b5qibncs?svg=true
-            :target: https://ci.appveyor.com/project/sdpython/machinelearningext
-            :alt: Build Status Windows
-      -
-      -
-      - .. image:: http://img.shields.io/github/issues/sdpython/machinelearningext.png
-            :alt: GitHub Issues
-            :target: https://github.com/sdpython/machinelearningext/issues
-      -
-      -
+Ils ne sont plus maintenus :
+`csharpy <http://www.xavierdupre.fr/app/csharpy/helpsphinx/index.html>`_,
+`csharpyml <http://www.xavierdupre.fr/app/csharpyml/helpsphinx/index.html>`_.
+`machinelearning <https://github.com/sdpython/machinelearning>`_,
+`machinelearningext <https://github.com/sdpython/machinelearningext>`_.
 
 D'autres modules forkés sont disponibles sur
 `travis <https://travis-ci.com/sdpython/>`_,
@@ -1015,17 +864,17 @@ Outils
     * - :epkg:`csharpy`
       - Outils, exemples pour utiliser du :epkg:`C#` depuis :epkg:`Python`
         sous Windows ou Linux.
-    * - :epkg:`csharpyml`
-      - :epkg:`csharpy` + :epkg:`ML.net` + :epkg:`Scikit.ML`
+    * - :epkg:`csharpyml` **archivé**
+      - :epkg:`csharpy` **archivé** + :epkg:`ML.net` + :epkg:`Scikit.ML`
     * - `cpyquickhelper <http://www.xavierdupre.fr/app/cpyquickhelper/helpsphinx/index.html>`_
       - Fonctions, outils implémentées en C, C++ et habillées en Python. C'est aussi
         un template pour ceux qui souhaite réaliser un module en C/C++/Cython.
     * - :epkg:`deeponnxcustom`
       - ONNX, deep learning, onnxruntime, pytorch
-    * - :epkg:`lightmlboard`
+    * - :epkg:`lightmlboard` **archivé**
       - Implémentation d'un site web dédié aux compétitions de machine learning
         basé sur :epkg:`tornado`.
-    * - :epkg:`lightmlrestapi`
+    * - :epkg:`lightmlrestapi` **archivé**
       - Implémentation d'une :epkg:`REST API` avec :epkg:`falcon`.
     * - :epkg:`manydataapi`
       - Outils et bouts de codes pour accéder à différentes API de données.
@@ -1138,26 +987,6 @@ Contenu
       - Cours de programmation en Python. C'est la version internet et actualisée
         du livre paru en 2009 et disponible au format
         `PDF <http://www.xavierdupre.fr/site2013/index_documents.html>`_.
-
-Exploration
-+++++++++++
-
-.. list-table::
-    :widths: 5 15
-    :header-rows: 1
-
-    * - module
-      - description
-    * - `machinelearning <https://github.com/sdpython/machinelearning>`_
-      - *Microsoft* a mis en ligne sa librairie de machine learning écrite
-        principalement en C#,
-        `ML.net <https://github.com/dotnet/machinelearning>`_,
-        c'est just un fork.
-    * - `machinelearningext <https://github.com/sdpython/machinelearningext>`_
-      - *Microsoft* a mis en ligne sa librairie de machine learning écrite
-        principalement en C#,
-        `ML.net <https://github.com/dotnet/machinelearning>`_,
-        c'est un projet qui l'étend.
 
 Git Clone
 +++++++++
