@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @file
-@brief Implements command line ``python -m mathenjeu <command> <args>``.
+@brief Implements command line ``python -m ensae_teaching_cs <command> <args>``.
 """
 import sys
 from pyquickhelper.cli import cli_main_helper

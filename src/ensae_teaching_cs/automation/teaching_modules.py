@@ -22,7 +22,7 @@ def get_teaching_modules(branch=True):
     mods = ['deeponnxcustom:main', 'onnxcustom',
             "pymlbenchmark", "_benchmarks", "ensae_teaching_dl",
             "lecture_citation", "pyquickhelper", "jyquickhelper",
-            "python3_module_template", "mathenjeu", "pymmails", "pymyinstall",
+            "python3_module_template", "pymmails", "pymyinstall",
             "pyensae", "pyrsslocal", "ensae_projects", "ensae_teaching_cs",
             "code_beatrix", "actuariat_python", "mlstatpy", "jupytalk", "teachpyx",
             "tkinterquickhelper", "cpyquickhelper", "pandas_streaming",

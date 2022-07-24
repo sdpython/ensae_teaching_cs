@@ -878,7 +878,7 @@ Outils
       - Implémentation d'une :epkg:`REST API` avec :epkg:`falcon`.
     * - :epkg:`manydataapi`
       - Outils et bouts de codes pour accéder à différentes API de données.
-    * - :epkg:`mathenjeu`
+    * - :epkg:`mathenjeu` **archivé**
       - Applications web pour créer des QCM ou autre séries de
         questions sur internet.
     * - :epkg:`mlinsights`
