@@ -59,3 +59,10 @@
 
     * `MIXED PRECISION TRAINING IN PRACTICE
       <https://pytorch.org/blog/what-every-user-should-know-about-mixed-precision-training-in-pytorch/?utm_source=twitter&utm_medium=organic_social&utm_campaign=blog&utm_content=mixed-precision-training-in-pytorch>`_
+
+    Autres articles
+
+    * `On the Principles of Parsimony and Self-Consistency for the Emergence of Intelligence
+      <https://arxiv.org/abs/2207.04630>`_
+    * `Shift-Curvature, SGD, and Generalization
+      <https://arxiv.org/abs/2108.09507>`_
