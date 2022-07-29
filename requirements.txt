@@ -98,7 +98,7 @@ pylzma
 pymmails>=0.3
 pympler
 pymyinstall
-pyquickhelper>=1.10.3519
+pyquickhelper>=1.11.3752
 pyquicksetup
 pyrsslocal
 python-jenkins
