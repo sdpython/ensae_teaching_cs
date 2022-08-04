@@ -41,6 +41,8 @@
       <https://arxiv.org/abs/1902.06931>`_
     * `Why do tree-based models still outperform deep learning on tabular data?
       <https://hal.archives-ouvertes.fr/hal-03723551>`_
+    * `Evaluating machine learning models and their diagnostic value
+      <https://hal.inria.fr/hal-03682454/>`_
 
     Ecologie
 
