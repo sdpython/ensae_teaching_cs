@@ -34,6 +34,10 @@
       <https://arxiv.org/abs/2203.10752>`_
     * `DeepSpeed Compression: A composable library for extreme compression and zero-cost quantization
       <https://www.microsoft.com/en-us/research/blog/deepspeed-compression-a-composable-library-for-extreme-compression-and-zero-cost-quantization/>`_
+    * `Towards Robust Deep Learning using Entropic Losses
+      <https://arxiv.org/abs/2208.03566>`_
+    * `Few-shot Learning with Retrieval Augmented Language Models
+      <https://arxiv.org/abs/2208.03299>`_
 
     Machine Learning
 
