@@ -56,11 +56,12 @@ Plan proposé
 Liens, notebooks prévus pour les séances pratiques.
 Chaque session présentera un algorithme et des outils
 ou concepts informatiques utiles pour la manipulation
-de données.
+de données. La suite de cette page propose des énoncés
+chaque semaine mais l'essentiel est de maîtriser les notions
+qui suivent.
 
 Notions à connaître
 +++++++++++++++++++
-
 
 Algorithmes, structure de données
 
@@ -81,6 +82,34 @@ Techniques
 
 .. contents::
     :local:
+
+Séance 1 - 7/9 - introduction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Séance 2 - 14/9 - jeu de dictionnaires, regex
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Séance 3 - 21/9 - top k, profiling
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Séance 4 - 28/9 - edit distance, numpy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Séance 5 - 5/10 - TSP, dataframe avec données COVID
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Séance 6 - 12/10 - bag, json, xml, simulation COVID
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Séance 7 - 19/10 - graphes, flask
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Séance 8 - 26/10 - graphes
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* TD noté... lien après la séance,
+  énoncés des années précédentes :
+  :ref:`l-seances-notees-1A`
 
 Ensemble des énoncés des séances
 ++++++++++++++++++++++++++++++++
@@ -118,31 +147,3 @@ Enoncés écrits en 2022
 
 D'autres énoncés de séances sont disponibles depuis
 la page principale du cours :ref:`l-td1a`.
-
-Séance 1 - 7/9 - introduction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Séance 2 - 14/9 - jeu de dictionnaires, regex
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Séance 3 - 21/9 - top k, profiling
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Séance 4 - 28/9 - edit distance, numpy
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Séance 5 - 5/10 - TSP, dataframe avec données COVID
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Séance 6 - 12/10 - bag, json, xml, simulation COVID
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Séance 7 - 19/10 - graphes, flask
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Séance 8 - 26/10 - graphes
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* TD noté... lien après la séance,
-  énoncés des années précédentes :
-  :ref:`l-seances-notees-1A`
