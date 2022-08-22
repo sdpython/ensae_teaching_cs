@@ -62,7 +62,8 @@ de diffusions qui leur sont dédiés.
 :epkg:`R` est utilisé par les chercheurs
 mais il est peu pratique pour développer un site web ou un jeu.
 :epkg:`Python` est beaucoup plus polyvalent
-et de plus en plus populaire. Il est enseigné à l':epkg:`ENSAE` depuis 2004.
+et de plus en plus populaire notamment grâce aux deep learning.
+Il est enseigné à l':epkg:`ENSAE` depuis 2004.
 Les premiers pas sont parfois rebutants mais on arrive vite à
 quelque chose à condition d'y passer un peu de temps au démarrage.
 La programmation est indispensable pour traiter les données,
@@ -168,9 +169,10 @@ l'installation ``pip install <module>``
 Dépendences et automatisation
 +++++++++++++++++++++++++++++
 
-Ces cours représentent plus de 60 heures de cours et travaux pratiques suivis
-par plus de 200 élèves de l':epkg:`ENSAE` répartis sur trois années, la réception d'une centaine
-de projets. Cela nécessite un peu d'automatisation implémentée en :epkg:`Python`
+Ces cours représentent plus de 60 heures de cours et travaux pratiques.
+Ils sont exécutées chaque mois pour assurer que les codes qu'ils contiennent
+fonctionnent sans avoir à le faire au prélable.
+Cela nécessite un peu d'automatisation implémentée en :epkg:`Python`
 mise à disposition sous forme de modules (voir :ref:`listes des dépendances <ci-status>`).
 
 En diagonal

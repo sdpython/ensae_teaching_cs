@@ -75,12 +75,12 @@ Gaël Varoquaux, Xavier Dupré, ENSAE's students.
 Setup
 -----
 
-Continuous files
+See 
 `travis.yml <https://github.com/sdpython/ensae_teaching_cs/blob/master/.travis.yml>`_ or
 `appveyor.yml <https://github.com/sdpython/ensae_teaching_cs/blob/master/appveyor.yml>`_
 give indications on how to setup a machine to run most of the notebooks.
-All notebooks do not run on travis or appveyor due to the excessive
-amount of times it requires. They are being run a debian machine every week.
+All notebooks do not run on regular CI due to the excessive
+amount of time it requires. They are being run a debian machine every month.
 A `coverage page <http://www.xavierdupre.fr/app/ensae_teaching_cs/helpsphinx/all_notebooks_coverage.html>`_
 reports on which ones run and the last time it was run.
 
@@ -101,11 +101,11 @@ but they are not optional in most of the cases.
 `Miktex Basic Installer 64 bit <https://miktex.org/download>`_ (formula in the documentation)
 (check the option to silently install new packages),
 `Pandoc <http://pandoc.org/>`_ (documentation),
-`Python <https://www.python.org/>`_ 3.7, 64 bit
+`Python <https://www.python.org/>`_ 3.9, 64 bit
 (do not add the interpreter on the default `PATH` on Windows),
 `Scite <http://www.scintilla.org/SciTE.html>`_ (Windows),
-`Visual Studio 2017 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_ (Windows)
-(check C++, C#, Python, CLang) (Cython).
+`Visual Studio 2022 Community Edition <https://www.visualstudio.com/fr/vs/community/>`_ (Windows)
+(check C++, C#, Python, CLang) (Cython, pybind11).
 
 A *Jenkins* server was installed on a *debian* machine
 to run all the notebooks every week.
@@ -113,14 +113,6 @@ to run all the notebooks every week.
 `Last Console Output <https://wiki.jenkins.io/display/JENKINS/Display+Console+Output+Plugin>`_,
 `Next Executions <https://wiki.jenkins.io/display/JENKINS/Next+Executions>`_,
 `Text File <https://wiki.jenkins-ci.org/display/JENKINS/Text+File+Operations+Plugin>`_.
-Extension for `Jupyter <http://jupyter.org/>`_ notebooks
-can be installed with the following instructions but this is
-really optional.
-
-::
-
-    pip install widgetsnbextension
-    jupyter nbextension enable --py --sys-prefix widgetsnbextension
 
 A local PyPi server needs to be installed:
 
@@ -128,10 +120,6 @@ A local PyPi server needs to be installed:
 
     pypi-server.exe -u -p 8067 --disable-fallback ..\..\local_pypi\local_pypi_server
 
-Some Python scripts and notebooks use
-`keyring <https://pypi.python.org/pypi/keyring>`_
-to retrieve passwords, usually to access private data.
-You would have to set them to point to your own data.
 The following command line tells how to automatically add
 Jenkins jobs to a local Jenkins server:
 

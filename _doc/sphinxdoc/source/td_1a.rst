@@ -7,7 +7,7 @@ Algorithmes et programmation
 
 `Algorithmes et Programmation <https://www.ensae.fr/courses/algorithmes-et-programmation/>`_ (ENSAE)
 
-Plan approximatif du cours : :ref:`l-feuille-de-route-2021-1A`.
+Plan approximatif du cours : :ref:`l-feuille-de-route-2022-1A`.
 
 Cours animé par
 `Xavier Dupré <http://www.xavierdupre.fr/>`_
@@ -25,7 +25,7 @@ Le cours est évalué au premier semestre par la construction d'un
 package :epkg:`python` (:ref:`l-examens-1A-algo`) et d'un examen.
 Le second semestre est évalué par :ref:`projet informatique <l-projinfo1a>`.
 Si vous savez déjà programmer, vous devriez aller jusqu'au bout d'un des énoncés
-des :ref:`examens précédents <l-examens>` en moins de deux heures.
+des :ref:`examens précédents <l-examens>` en moins d'une heure et demie.
 L'informatique est plus souvent un outil qu'une matière à part entière.
 Le paragraphe :ref:`td1a-notions` propose deux profils d'utilisation
 et ce qu'il est suggéré de connaître pour chacun d'entre eux.
@@ -103,7 +103,7 @@ et qu'il est important de comprendre.
     notebooks/matrix_dictionary
     notebooks/coloriage_carre
 
-Au terme de ces six séances, si la programmation est nouvelle pour vous ou
+Au terme de ces séances, si la programmation est nouvelle pour vous ou
 si le langage vous paraît encore peu naturel,
 je vous encourage à faire d'autres exercices comme
 piocher dans les anciens :ref:`l-examens`, à regarder la liste des exercices
@@ -337,27 +337,6 @@ d'automatiser un processus de traitement de données
 et de le mettre en production. Voici les notions qu'il
 faut avoir comprises.
 
-Pour un profil plutôt analyste
-++++++++++++++++++++++++++++++
-
-Les données servent à comprendre. Les calculs sont moins
-importants qu'une bonne représentation d'un phénomène
-qu'on cherche à expliquer.
-
-*Ce qu'il faut maîtriser*
-
-* Les bases du langage :epkg:`Python` : boucles, tests, fonctions,
-  listes, dictionnaires,
-  modules, expressions régulières.
-* Le tri et la recherche dichotomique.
-* La notion de coût algorithmique.
-* Le calcul matriciel, les dataframes, les graphes.
-
-*Ce qu'il faut connaître*
-
-* Les classes.
-* La programmation dynamique.
-
 Pour un profil plutôt ingénieur
 +++++++++++++++++++++++++++++++
 
@@ -370,15 +349,18 @@ pour prendre cette décision.
 * Les bases du langage :epkg:`Python` : boucles, tests, fonctions,
   listes, dictionnaires,
   modules, expressions régulières.
-* Les classes,
-* Le tri, la recherche dichotomique, la programmation dynamique.
+* Les classes.
+* Le tri, la recherche dichotomique, la programmation dynamique
+  (plus court chemin dans un graphe, distance d'édition).
 * La notion de coût algorithmique.
-* Notion de graphes et de parcours dans un graphe.
-* Le calcul matriciel, les dataframes, les graphes.
+* Notion de graphes et de parcours dans un graphe
+  (connexité, ordonnancement, chemin hamiltonien).
+* Le calcul matriciel, les dataframes, les graphes (cartes).
+* Le format JSON, la sérialisation.
+* Les tests unitaires.
 
 *Ce qu'il faut connaître*
 
-* Les tests unitaires.
 * `Git <https://fr.wikipedia.org/wiki/Git>`_.
 * Des exercices de type `Google Jam <https://code.google.com/codejam/>`_.
 * Des accélérations du langage comme Cython.
@@ -548,3 +530,4 @@ revêt de plus en plus d'importance en datascience.
     questions/route_1A_2019
     questions/route_1A_2020
     questions/route_1A_2021
+    questions/route_1A_2022

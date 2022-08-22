@@ -78,7 +78,7 @@ et le `tri fusion <https://fr.wikipedia.org/wiki/Tri_fusion>`_.
 Version de Python
 +++++++++++++++++
 
-Les exercices et notebooks sont testées sur la version :epkg:`Python` 3.7.
+Les exercices et notebooks sont testées sur la version :epkg:`Python` 3.9.
 Ils fonctionneront également sur les versions 3.5 et 3.6. Le plus simple
 pour installer :epkg:`Python` est d'utiliser la distribution :epkg:`Anaconda`.
 La distribution standard fonctionne également en s'aidant ce cette page
