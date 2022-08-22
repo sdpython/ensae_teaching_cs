@@ -116,6 +116,9 @@ Enoncés écrits en 2022
 
 * test unitaires, notebooks, fichiers
 
+D'autres énoncés de séances sont disponibles depuis
+la page principale du cours :ref:`l-td1a`.
+
 Séance 1 - 7/9 - introduction
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
