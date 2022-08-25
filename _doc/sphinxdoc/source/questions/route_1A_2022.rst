@@ -83,30 +83,53 @@ Techniques
 .. contents::
     :local:
 
-Séance 1 - 7/9 - introduction
+Séance 1 - 7/9 - introduction, dictionnaire
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* :ref:`2022-09-07` (< 30 minutes)
+* :ref:`2020suffixrst`
+
+Séance 2 - 14/9 - programmation dynamique, voyageur de commerce
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* :ref:`2020editrst`
+* :ref:`2020suffixrst`
+
+Séance 3 - 21/9 - numpy, pandas
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* :ref:`2020numpyrst`
+* :ref:`2020pandasrst`
+
+Séance 4 - 28/9 - graphes
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* :ref:`2020graphrst`
+* :ref:`2020ordonnancementrst`
+
+Séance 5 - 5/10 - sérialisation, tests unitaires, profiling
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* sérialisation, json, xml, pickle (à venir)
+* tests unitaires (à venir)
+* timeit, profiling (cprofile), comparaison de produit matriciels (à venir)
+
+Séance 6 - 12/10 - expressions régulières, webscrapping
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* :ref:`2020regexrst`
+* webscrapping (à venir)
+
+Séance 7 - 19/10 - top k, tri
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Séance 2 - 14/9 - jeu de dictionnaires, regex
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Séance 3 - 21/9 - top k, profiling
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Séance 4 - 28/9 - edit distance, numpy
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Séance 5 - 5/10 - TSP, dataframe avec données COVID
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Séance 6 - 12/10 - bag, json, xml, simulation COVID
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Séance 7 - 19/10 - graphes, flask
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* :ref:`2020topkrst`
+* révisions en prévision du TD noté
 
 Séance 8 - 26/10 - graphes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+* :ref:`2020carterst`
 * TD noté... lien après la séance,
   énoncés des années précédentes :
   :ref:`l-seances-notees-1A`
