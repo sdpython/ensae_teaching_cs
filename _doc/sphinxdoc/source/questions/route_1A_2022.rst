@@ -68,7 +68,7 @@ Algorithmes, structure de données
 * Dictionnaires
 * Tri bulle, tri fusion
 * Recherche dichotomique
-* Graphe, composante dans un graphe
+* Graphe, prédécesseur, successeur, composante connexe dans un graphe
 * Plus court chemin dans un graphe, distance d'édition
 * Plus court chemin passant par tous les points d'un graphe
 
@@ -86,7 +86,7 @@ Techniques
 Séance 1 - 7/9 - introduction, dictionnaire
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* :ref:`2022-09-07` (< 30 minutes)
+* :ref:`2022-09-07 <blog-intro-2022-ensae>` (< 30 minutes)
 * :ref:`2020suffixrst`
 
 Séance 2 - 14/9 - programmation dynamique, voyageur de commerce
