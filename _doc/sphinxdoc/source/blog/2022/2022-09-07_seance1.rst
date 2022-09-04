@@ -6,31 +6,48 @@
     :categories: article
     :lid: blog-intro-2022-ensae
 
+    Xavier Dupré - *http://www.xavierdupre.fr*
+
     **Présentation**
 
     * Avant l'ENSAE, programmation en classes préparatoires, `Informatique en CPGE <https://info-llg.fr/>`_
+
       * concepts de base, tests, boucles, fonctions
       * calcul matriciel
       * notion de quelques algorithmes
       * langage python
+
     * Après l'ENSAE
+
       * réalisation de nombreux projets en python
       * plus grande culture algorithmique, graphes, algorithmes probabilistes
       * notion d'ingénierie logicielle
       * tests unitaires
       * notion de processeur, CPU, GPU
       * manipulations des données
+
     * Selon les options
+
       * langages plus bas niveau C/C++
       * autres langages, javascript pour les sites web, SQL pour les bases de données, R pour les statistiques
       * SAS...
+
     * Python à l'ENSAE depuis 2005
-      * beaucoup de choses ont changé depuis      
-    * Python : machine learning
+
+      * beaucoup de choses ont changé depuis, le langage python s'est largement répandu dans le monde professionnel
+      * Mon boulot en 2005
+      * Mon boulot aujourd'hui
+      * Même si la plupart des ingénieurs savent programmer, peu savent très bien programmer
+      * La double compétence mathématiques / informatique est rare.
+
+    * Python : le langage du machine learning
+
       * numpy, scikit-learn, pandas, matplotlib, jupyter
       * deep learning = python
       * automatisation, site web
+
     * Python : langage commun à toutes les universités de par le monde
+
       * facile, travail plus facile pour les professeurs également
       * interfaçage avec C++
 
@@ -49,35 +66,44 @@
     **Machine learning aujourd'hui**
 
     * Apprentissage fait avec python
+
       * :epkg:`scikit-learn`
       * deep learning : :epkg:`pytorch`
+
     * Code faisant les calculs écrit en C/C++/asm
+
       * :epkg:`numpy`, :epkg:`scipy`
-      * :epkg:`scikit-learn`, `_tree.pyx
-        <https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/tree/_tree.pyx>`_
-    * Déploiement (utilisation des modèles) sur
-      d'autres langages encore (javascript, C#, go, ...)
+      * :epkg:`scikit-learn`, `_tree.pyx <https://github.com/scikit-learn/scikit-learn/blob/main/sklearn/tree/_tree.pyx>`_
+
+    * Déploiement (utilisation des modèles) sur d'autres langages encore (javascript, C#, go, ...)
+
       * Python très lent malgré et difficile à maintenir
         d'une version de python à une autre
       * Le Cloud `AWS <https://aws.amazon.com/fr/>`_,
         `Azure <https://azure.microsoft.com/>`_ ...
+
     * Démocratisation dans de nombreux pays
+
       * `Health Data Hub <https://www.health-data-hub.fr/>`_
       * `data.gouv.fr <https://www.data.gouv.fr/fr/>`_
 
     **Deep Learning**
 
     * Le deep learning envahit la vie quotidienne
+
       * santé (aide au diagnotisque)
       * sécurité (vidéo surveillance),
       * automatisation (voiture)
       * publicité, objets connectées
       * ...
+
     * Besoin de calculs, besoin de codes rapides
+
       * CPU, GPU, TPU
       * `NVIDIA A100 <https://www.nvidia.com/en-us/data-center/a100/>`_,
         innovation matérielle et logicielle
       * recherche très active dans ce domaine
+
     * Modèles de plus en plus gros
     * Il ne suffit plus d'être bon en maths, ou bon en informatique,
       il faut être les deux
@@ -85,18 +111,27 @@
     **Ingéniérie logicielle**
 
     * Le point faible des ingénieurs français
+
       * On commence l'informatique avant la prépa dans d'autres pays
       * Pas assez de pratique, un bon codeur a beaucoup codé.
+
     * **tests unitaires :** à connaître avant d'aller passer un entretien d'embauche
     * intégration continue
+
       * A chaque modification, on vérifie que les tests unitaires passent.
+
     * documentation
+
       * C'est fastidieux mais indispensable dans un monde open source.
       * Les projets qui ont réussi ont toujours une bonne documentation.
+
     * culture algorithmique
+
       * un produit matriciel n'est pas aussi simple qu'on le dit quand on veut qu'il soit rapide
       * :ref:`l-algoculture`
+
     * git
+
       * Un outil injustement méconnu des juristes.
 
     **Thèse...**
@@ -142,11 +177,57 @@
       <https://www.francetvinfo.fr/monde/environnement/singapour-des-gratte-ciels-anti-pollution_2868081.html>`_)
     * Devenir le prochain `covidtracker <https://covidtracker.fr/>`_
     * Calculer l'exposition d'une économie à un certain type de produit...
-      `PSA : l’usine de Rennes à l’arrêt par manque de semi-conducteurs
-      <https://www.leparisien.fr/economie/psa-lusine-de-rennes-a-larret-par-manque-de-semi-conducteurs-19-08-2021-MADPPG5OMJA2LH5DYFHWB6CBTU.php>`_
-      `Panne Orange : quelles conséquences ?
-      <https://www.franceinter.fr/emissions/le-13-14/le-13-14-03-juin-2021>`_,
-      `Xavier Jaravel, meilleur jeune économiste 2021 pour ses travaux sur l'innovation et les inégalités
-      <https://start.lesechos.fr/societe/economie/xavier-jaravel-meilleur-jeune-economiste-2021-pour-ses-travaux-sur-linnovation-et-les-inegalites-1319721>`_,
+      `PSA : l'usine de Rennes à l’arrêt par manque de semi-conducteurs <https://www.leparisien.fr/economie/psa-lusine-de-rennes-a-larret-par-manque-de-semi-conducteurs-19-08-2021-MADPPG5OMJA2LH5DYFHWB6CBTU.php>`_
+      `Panne Orange : quelles conséquences ? <https://www.franceinter.fr/emissions/le-13-14/le-13-14-03-juin-2021>`_,
+      `Xavier Jaravel, meilleur jeune économiste 2021 pour ses travaux sur l'innovation et les inégalités <https://start.lesechos.fr/societe/economie/xavier-jaravel-meilleur-jeune-economiste-2021-pour-ses-travaux-sur-linnovation-et-les-inegalites-1319721>`_,
 
     Tout est sur `GitHub <https://github.com/sdpython>`_.
+
+    **Culture algorithme et informatique**
+
+    Connaissez-vous ?
+
+    * Debian ?
+    * git ?
+    * github ?
+    * les exceptions ?
+    * les expressions régulières ?
+    * json ?
+    * les graphes ?
+    * une table de hashage ?
+    * Comment résoudre un sudoku avec un programme ?
+    * Un algorithme de streaming ?
+    * Le problème du postier chinois ?
+    * Un problème d'appariement ?
+    * Un problème NP-complet ?
+    * la librairie openmp ?
+    * Un cache ?
+    * un float, un double ?
+    * un test unitaire ?
+    * ADA ?
+    * John Von Neumann ?
+    * Guido van Rossum ?
+    * INRIA ?
+
+    Programme :
+
+    :ref:`l-feuille-de-route-2022-1A`
+
+    **Notions à connaître**
+
+    Algorithmes, structure de données
+
+    * Dictionnaires
+    * Tri bulle, tri fusion
+    * Recherche dichotomique
+    * Graphe, prédécesseur, successeur, composante connexe dans un graphe
+    * Plus court chemin dans un graphe, distance d'édition
+    * Plus court chemin passant par tous les points d'un graphe
+
+    Techniques
+
+    * expression régulière
+    * profiling
+    * JSON, sérialisation avec pickle
+    * numpy, pandas, matplotlib
+    * tests unitaires

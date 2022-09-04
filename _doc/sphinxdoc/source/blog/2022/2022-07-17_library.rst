@@ -38,6 +38,8 @@
       <https://arxiv.org/abs/2208.03566>`_
     * `Few-shot Learning with Retrieval Augmented Language Models
       <https://arxiv.org/abs/2208.03299>`_
+    * `Multi-instrument Music Synthesis with Spectrogram Diffusion
+      <https://arxiv.org/abs/2206.05408>`_
 
     Machine Learning
 
