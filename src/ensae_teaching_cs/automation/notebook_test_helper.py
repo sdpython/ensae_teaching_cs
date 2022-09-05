@@ -253,7 +253,8 @@ def a_test_notebook_runner(filename, name, folder, valid=None, copy_files=None, 
             if not os.path.exists(dest_dir):
                 os.mkdir(dest_dir)
             src_file = os.path.join(doc, name_)
-            fLOG(f"[a_test_notebook_runner] copy '{src_file}' to '{dest_dir}'.")
+            fLOG(
+                f"[a_test_notebook_runner] copy '{src_file}' to '{dest_dir}'.")
             shutil.copy(src_file, dest_dir)
 
     import pyquickhelper

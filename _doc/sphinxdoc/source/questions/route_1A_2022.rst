@@ -110,7 +110,7 @@ Séance 4 - 28/9 - graphes
 Séance 5 - 5/10 - sérialisation, tests unitaires, profiling
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* sérialisation, json, xml, pickle (à venir)
+* :ref:`2022serialisationrst`
 * tests unitaires (à venir)
 * timeit, profiling (cprofile), comparaison de produit matriciels (à venir)
 
@@ -166,6 +166,7 @@ Enoncés écrits en 2021
 
 Enoncés écrits en 2022
 
+* :ref:`2022serialisationrst`
 * test unitaires, notebooks, fichiers
 
 D'autres énoncés de séances sont disponibles depuis

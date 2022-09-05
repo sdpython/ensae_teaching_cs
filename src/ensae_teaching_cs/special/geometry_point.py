@@ -75,7 +75,8 @@ class GeometryPoint:
         addition
         """
         if len(self) != len(x):
-            raise GeometryException(f"dimension problem {len(self)} != {len(x)}")
+            raise GeometryException(
+                f"dimension problem {len(self)} != {len(x)}")
         if len(self) == 2:
             self._x = (self._x[0] + x._x[0], self._x[1] + x._x[1])
         else:
@@ -87,7 +88,8 @@ class GeometryPoint:
         addition
         """
         if len(self) != len(x):
-            raise GeometryException(f"dimension problem {len(self)} != {len(x)}")
+            raise GeometryException(
+                f"dimension problem {len(self)} != {len(x)}")
         if len(self) == 2:
             return GeometryPoint(self._x[0] + x._x[0], self._x[1] + x._x[1])
         else:
@@ -98,7 +100,8 @@ class GeometryPoint:
         substraction
         """
         if len(self) != len(x):
-            raise GeometryException(f"dimension problem {len(self)} != {len(x)}")
+            raise GeometryException(
+                f"dimension problem {len(self)} != {len(x)}")
         if len(self) == 2:
             return GeometryPoint(self._x[0] - x._x[0], self._x[1] - x._x[1])
         return GeometryPoint(a - b for a, b in zip(self._x, x._x))
@@ -139,7 +142,8 @@ class GeometryPoint:
         comparison
         """
         if len(self) != len(x):
-            raise GeometryException(f"dimension problem {len(self)} != {len(x)}")
+            raise GeometryException(
+                f"dimension problem {len(self)} != {len(x)}")
         for a, b in zip(self._x, x._x):
             t = -1 if a < b else (0 if a == b else 1)
             if t != 0:

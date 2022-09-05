@@ -334,7 +334,8 @@ class LatexFile:
                            code.line[-1])) \
                     if classcom is not None else (f"<p>line {code.line}</p>")
             res.append(com)
-            res.append(f"<!-- File \"{code.parent.file}\", lines {str(code.line)} -->")
+            res.append(
+                f"<!-- File \"{code.parent.file}\", lines {str(code.line)} -->")
 
             if classpre_type is not None and len(classpre_type) > 0 and \
                code.content_type is not None and len(code.content_type) > 0:

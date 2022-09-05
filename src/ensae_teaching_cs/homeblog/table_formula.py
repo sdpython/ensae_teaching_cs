@@ -1706,9 +1706,11 @@ class TableFormula(_TableFormulaStat):
                 for k in keys:  # pylint: disable=C0206
                     v = keys[k]
                     if v[0] is None:
-                        keys[k] = ([defaultVal1], v[1])  # pylint: disable=E4702
+                        keys[k] = ([defaultVal1], v[1]
+                                   )  # pylint: disable=E4702
                     elif v[1] is None:
-                        keys[k] = (v[0], [defaultVal2])  # pylint: disable=E4702
+                        keys[k] = (v[0], [defaultVal2]
+                                   )  # pylint: disable=E4702
 
             if keepKey:
                 columns = [nameKey]

@@ -32,7 +32,8 @@ def trigger_on_specific_strings(content, filename=None, force_allow=None):
                                (os.environ[env], sub), "somewhere"),
                               ("C:\\%s\\__home_\\%s\\" %
                                (os.environ[env], sub), "somewhere"),
-                              (f"C:{os.environ[env]}__home_{sub}", "somewhere"),
+                              (f"C:{os.environ[env]}__home_{sub}",
+                               "somewhere"),
                               (f"{os.environ[env]}__home_{sub}", "somewhere")
                               ])
     for s, b in strep:

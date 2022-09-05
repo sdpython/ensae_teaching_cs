@@ -9,7 +9,7 @@
 
     * `Training Deep Networks without Learning Rates Through Coin Betting
       <https://arxiv.org/abs/1705.07795>`_
-    * `Model Comparison and Calibration Assessment: User Guide for 
+    * `Model Comparison and Calibration Assessment: User Guide for
       Consistent Scoring Functions in Machine Learning and Actuarial Practice
       <https://arxiv.org/abs/2202.12780>`_
     * `On Embeddings for Numerical Features in Tabular Deep Learning
@@ -60,7 +60,7 @@
     * `paperwithcode <https://paperswithcode.com/>`_
 
     Librairies
-    
+
     * `TorchArrow <https://github.com/pytorch/torcharrow>`_
 
     Un benchmark

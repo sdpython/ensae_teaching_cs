@@ -9,9 +9,7 @@ Algorithmes et programmation
 
 Plan approximatif du cours : :ref:`l-feuille-de-route-2022-1A`.
 
-Cours animé par
-`Xavier Dupré <http://www.xavierdupre.fr/>`_
-depuis 2001.
+Cours animé par `Xavier Dupré <http://www.xavierdupre.fr/>`_ depuis 2001.
 
 .. contents::
     :local:
@@ -45,7 +43,7 @@ dans le monde de l'entreprise, l'ingénieur *full stack*
 est celui qui maîtrise à la fois un domaine métier,
 celui pour lequel il a été formé, et les techniques informatiques
 qu'il sera amené à manipuler au quotidien. Tous les thèmes ne seront
-pas abordés, les thèmes suivant intéresseront sans doute les plus curieux.
+pas abordés.
 Les connaissances en informatique sont hétérogènes après les classes
 préparatoires, les énoncés sont à choisir en fonction des lacunes.
 
@@ -59,6 +57,7 @@ Au terme du cours, les élèves sauront :
 * construire un module python
 * maîtriser les bases des outils python permettant de
   manipuler et représenter les données
+* savoir écrire un test unitaire
 
 ------------
 
@@ -120,19 +119,22 @@ TD - Algorithmes
 ================
 
 Ces séances sont centrées autour de l'utilisation de la programmation
-pour un usage scientifique. On commence par les algorithmes et à la façon
-d'écrire un algorithme efficace car le principal défaut des algorithmes
-est leur lenteur. On a souvent des idées pour énumérer les solutions d'un problème
-et décrire les premières étapes avec les mains. Et puis, on se pose rapidement
-la question : **Comment le faire rapidement ?**
-Il y a deux questions qu'on doit se poser en premier pour entrevoir une solution.
+pour un usage scientifique. Il est rare de recoder un algorithme connu
+mais il est rare qu'un algorithme s'applique tel quel sans une quelconque
+optimisation pour un problème particulier.
+On a souvent des idées pour énumérer les solutions d'un problème
+et décrire les premières étapes avec les mains. Et puis, il faut écrire
+un algorithme qui fonctionne pour toutes les tailles de problèmes.
 
 #. Peut-on réécrire le problème par **récurrence** ?
    On aboutit le plus souvent à une solution issue de la programmation dynamique.
-   Le coût est **quadratique**.
+   Le coût est souvent **quadratique**.
 #. Peut-on **couper le problème en deux**, construire une solution sur
    chaque moitié puis recoller les solutions ? On procède de cette façon par dichotomie.
-   Le coût est **logarithmique**.
+   Le coût est souvent **logarithmique**.
+
+Il est toujours plus facile d'imaginer un algorithme quand on
+connaît déjà quelques algorithmes connus.
 
 .. toctree::
     :maxdepth: 2
@@ -143,12 +145,6 @@ Il y a deux questions qu'on doit se poser en premier pour entrevoir une solution
     specials/algorithm_culture
     specials/np_complet
     specials/graphes
-
-Ces deux façons de faire sont présentées durant dans les séances qui suivent :
-
-.. toctree::
-    :maxdepth: 2
-
     notebooks/_gs1a_A_programmation_dynamique
     notebooks/_gs1a_A_prog_dyn
     notebooks/_gs1a_A_arbre_graph
@@ -156,9 +152,8 @@ Ces deux façons de faire sont présentées durant dans les séances qui suivent
     notebooks/_gs1a_A_algo
     notebooks/_gs1a_A_image
 
-Plus on en connaît, plus il devient facile de les assembler pour résoudre
-des problèmes complexes. Il faut se construire une
-sorte de culture algorithmique (:ref:`l-algoculture`).
+Il est impossible de connaître tous les algorithmes.
+Il est toujours utile d'en apprendre de nouveaux : :ref:`l-algoculture`.
 La relecture du TD sur l'optimisation sous contrainte est conseillée
 à ceux qui souhaitent optimiser des portefeuilles d'actions.
 Il est préférable d'avoir fait la séance sur la distance de Jaccard
@@ -170,21 +165,10 @@ Les recruteurs testent votre capacité à programmer avec des exercices
 où ils vérifient que vous savez écrire du code et comparer la vitesse de deux
 algorithmes. Le plus souvent,
 il existe une façon naïve d'arriver au résultat et il existe un algorithme plus rapide.
-Il y a deux grandes astuces pour aller plus vite :
-
-* la programmation dynamique, son coût est en :math:`O(n^2)`,
-* la dichotomie, son coût est en :math:`O(\ln_2 n)`.
-
-Le tout est d'exprimer la solution en faisant apparaître l'un ou l'autre ou une
-combinaison des deux pour les problèmes
-les plus complexes.
-La programmation dynamique apparaît souvent
-quand on considère la solution sous forme récurrente.
-La dichotomie consiste à résoudre à couper l'ensemble de départ en deux,
-à résoudre le problème pour les deux sous-ensembles,
-puis à fusionner les deux solutions.
-Cela ne dépend pas du langage :epkg:`Python`.
-Pour vous exercer :
+La définition des algorithmes ne dépend pas du langage.
+En revanche, il est préférable de bien connaître un langage
+pour écrire un code rapide. En python, il est rare de ne pas utiliser :epkg:`numpy`.
+Quelques exercices classiques :
 
 .. toctree::
     :maxdepth: 1
@@ -235,6 +219,9 @@ Un peu plus ludique et présentés sous la forme de défis :
 TD - calcul matriciel, graphes, données - data science
 ======================================================
 
+En dix ans, le langage python s'est imposé comme le premier langage
+pour manipuler les données. Il n'est pas le plus efficace
+mais c'est celui qui aujourd'hui procure la plus grande agilité.
 La séance sur les dataframes propose des outils de manipulation et visualisation
 des données utiles pour tous les projets réalisés à l'école.
 Ces séances sont centrées sur les outils indispensables pour manipuler
@@ -252,6 +239,7 @@ sont incontournables pour manipuler les données en :epkg:`Python`.
     :maxdepth: 1
 
     notebooks/2020_regex
+    notebooks/2022_serialisation
     notebooks/td1a_cenonce_session_10
     notebooks/td1a_correction_session_10
     notebooks/decorrelation
@@ -263,7 +251,7 @@ sont incontournables pour manipuler les données en :epkg:`Python`.
     notebooks/td1a_cenonce_session_12_js
     notebooks/td1a_correction_session_12
 
-Il existe de nombreuses libraires de visualisation des données en :epkg:`Python` et
+Il existe de nombreuses librairies de visualisation des données en :epkg:`Python` et
 elles se sont multipliées depuis l'avènement des notebooks :
 `10 plotting libraries at PyData 2016
 <http://www.xavierdupre.fr/app/jupytalk/helpsphinx/2016/pydata2016.html>`_.
@@ -284,13 +272,16 @@ Une fois qu'on est agile avec les données, on peut facilement explorer,
 TD - Site web et pratiques logicielles
 ======================================
 
-Le langage :epkg:`Python` est au programme des classes préparatoires scientifique
+Le langage :epkg:`Python` est au programme des classes préparatoires scientifiques
 (`Prise en main du logiciel Python <https://www.ac-paris.fr/portail/jcms/p1_742307/prise-en-main-du-logiciel-python>`_)
 et les étudiants ont déjà vu ou parcouru des exercices algorithmiques
 (voir `MathPrepas, Programmation en Python <http://mathprepa.fr/python-project-euler-mpsi/>`_).
 **Cette partie s'adesse essentiellement à ceux qui ont déjà programmé.**
 On peut se pencher sur d'autres aspects logiciels tels que les
 tests unitaires, le templating, les sites Web, le scraping, encoding, les notebooks...
+Les **tests unitaires** et **git** font partie des pratiques logicielles qu'il faut
+connaître pour écrire du code sans trop de bugs et qu'il faut appliquer
+dès qu'un programme est conçu pour durer.
 
 *Lectures*
 
@@ -330,22 +321,6 @@ Deux exercices sont suggérés pour une séance de deux heures à choisir parmi 
 Les notions qu'il faut avoir comprises ou vues
 ==============================================
 
-La programmation est incontournable dès qu'on manipule des données.
-Les logiciels *clic-bouton* sont utiles pour explorer mais ils
-permettent difficilement de gérer de grands volumes,
-d'automatiser un processus de traitement de données
-et de le mettre en production. Voici les notions qu'il
-faut avoir comprises.
-
-Pour un profil plutôt ingénieur
-+++++++++++++++++++++++++++++++
-
-Les données servent à améliorer un processus de décision
-quitte à ne plus comprendre comment les variables sont assemblées
-pour prendre cette décision.
-
-*Ce qu'il faut maîtriser*
-
 * Les bases du langage :epkg:`Python` : boucles, tests, fonctions,
   listes, dictionnaires,
   modules, expressions régulières.
@@ -358,13 +333,7 @@ pour prendre cette décision.
 * Le calcul matriciel, les dataframes, les graphes (cartes).
 * Le format JSON, la sérialisation.
 * Les tests unitaires.
-
-*Ce qu'il faut connaître*
-
 * `Git <https://fr.wikipedia.org/wiki/Git>`_.
-* Des exercices de type `Google Jam <https://code.google.com/codejam/>`_.
-* Des accélérations du langage comme Cython.
-* Créer un site web avec Flask, Javacript.
 
 Séance notée
 ++++++++++++
@@ -384,15 +353,16 @@ Getting started
 Il faut vous reporter à la section :ref:`l-installation-courte`
 pour installer :epkg:`Python`. Certaines séances pratiques
 utilisent des données depuis ce site. Elles sont facilement
-téléchargeables avec ces deux modules :epkg:`pyquickhelper`
-et :epkg:`pyensae`.
+téléchargeables avec ces deux modules :epkg:`pyquickhelper`.
 
 Il faut ensuite un outil pour écrire des programmes.
 Si la majorité des exemples sont fournis sous forme de
 :epkg:`notebook` mais ce n'est pas le seul environnement de
 travail ce qu'on surnomme un :ref:`l-gs-ide`.
 :epkg:`Spyder` ou :epkg:`PyCharm`. Sous Windows,
-:epkg:`PTVS` dispose d'un bon débuggeur.
+:epkg:`PTVS` dispose d'un bon débuggeur. L'éditeur le plus utilisé
+est :epkg:`Visual Studio Code`. Il dispose de nombreuses extensions dont une
+pour travailler sur une machine distante.
 
 .. _l-td1a-biblio:
 
@@ -489,28 +459,6 @@ Bibliographie
 *Outils*
 
 * `PythonTutor <http://pythontutor.com/>`_ : pour suivre pas à pas l'exécution d'un programme (petit)
-
-Intervenants
-============
-
-* *2018-* :
-  Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_ *(professeur)*,
-  `Lucie Neirac <http://www.laneas.com/lucie-neirac>`_,
-  Benoît Choffin, `Laboratoire de Recherche en Informatique <https://www.lri.fr/>`_
-
-* *2017-2018* :
-  Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_ *(professeur)*,
-  Benjamin Donnot, `Lucie Neirac <http://www.laneas.com/lucie-neirac>`_,
-  Marc-Antoine Weisser, `Supélec <http://www.supelec.fr/>`_
-
-* *2016-2017* :
-  Xavier Dupré, `Microsoft France <https://www.microsoft.com/fr-fr/>`_ *(professeur)*,
-  Pierre Cordier, `Effiscience <http://effiscience.solutions/>`_,
-  Yves Gerey, `A2iA <http://www.a2ia.com/en>`_,
-  Charles de Ravel d'Esclapon, `Etaonis <http://www.etaonis.fr/>`_,
-  Arthur Renaud, `Etaonis <http://www.etaonis.fr/>`_,
-  Mehdi Seddar, `Artfact <http://www.artefact.is/>`_,
-  Marc-Antoine Weisser, `Supélec <http://www.supelec.fr/>`_.
 
 A propos du cours
 =================

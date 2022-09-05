@@ -1001,7 +1001,8 @@ def tsp_kruskal_algorithm(points, size=20, length=10, max_iter=None,
 
     before = len(points)
     points = [v[0] for v in groups.values()]
-    fLOG(f"[tsp_kruskal_algorithm] with no duplicates {len(points)} <= {before}")
+    fLOG(
+        f"[tsp_kruskal_algorithm] with no duplicates {len(points)} <= {before}")
 
     # begin of the algortihm
     fLOG(f"[tsp_kruskal_algorithm] arbre_poids_minimal nb={len(points)}")

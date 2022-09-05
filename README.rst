@@ -75,7 +75,7 @@ Gaël Varoquaux, Xavier Dupré, ENSAE's students.
 Setup
 -----
 
-See 
+See
 `travis.yml <https://github.com/sdpython/ensae_teaching_cs/blob/master/.travis.yml>`_ or
 `appveyor.yml <https://github.com/sdpython/ensae_teaching_cs/blob/master/appveyor.yml>`_
 give indications on how to setup a machine to run most of the notebooks.

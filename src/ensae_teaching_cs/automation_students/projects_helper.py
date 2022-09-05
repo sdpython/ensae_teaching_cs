@@ -157,7 +157,8 @@ def extract_students_mails_from_gmail_and_stores_in_folders(folder=".", filemail
         proj.unzip_convert(group)
 
     summary = os.path.join(folder, "index.html")
-    fLOG(f"[extract_students_mails_from_gmail_and_stores_in_folders] write summary '{summary}'")
+    fLOG(
+        f"[extract_students_mails_from_gmail_and_stores_in_folders] write summary '{summary}'")
     if os.path.exists(summary):
         os.remove(summary)
     proj.write_run_command()
