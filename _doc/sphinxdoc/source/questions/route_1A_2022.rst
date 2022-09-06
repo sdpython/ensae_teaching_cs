@@ -112,7 +112,7 @@ Séance 5 - 5/10 - sérialisation, tests unitaires, profiling
 
 * :ref:`2022serialisationrst`
 * tests unitaires (à venir)
-* timeit, profiling (cprofile), comparaison de produit matriciels (à venir)
+* :ref:`2022profilingrsrt`
 
 Séance 6 - 12/10 - expressions régulières, webscrapping
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -167,7 +167,8 @@ Enoncés écrits en 2021
 Enoncés écrits en 2022
 
 * :ref:`2022serialisationrst`
-* test unitaires, notebooks, fichiers
+* :ref:`2022profilingrsrt`
+* test unitaires
 
 D'autres énoncés de séances sont disponibles depuis
 la page principale du cours :ref:`l-td1a`.

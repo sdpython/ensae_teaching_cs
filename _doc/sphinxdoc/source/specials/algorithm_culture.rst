@@ -102,6 +102,10 @@ Catalogue d'algorithmes
     * `Complexité de Lempel-Ziv <https://github.com/Naereen/Lempel-Ziv_Complexity>`_ **algo**
 * Distance
     * `Python implementation of Kullback-Leibler divergences and kl-UCB indexes <https://github.com/Naereen/Kullback-Leibler-divergences-and-kl-UCB-indexes>`_ **algo**
+* Calcul matriciel
+    * `Winograd Minimum Filtering <https://arxiv.org/abs/2111.00977>`_ **algo** convolution rapide
+    * `im2col <http://www.xavierdupre.fr/app/onnxcustom/helpsphinx/notebooks/convolutation_matmul.html>`_ **algo**
+      ou comment réarranger une matrice pour transformer une convolution entre un produit matriciel
 * Diviser pour reigner
     * `dichotomie <http://fr.wikipedia.org/wiki/Dichotomie>`_ **algo**
     * `branch and bound <http://en.wikipedia.org/wiki/Branch_and_bound>`_ **algo**

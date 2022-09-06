@@ -293,6 +293,7 @@ dès qu'un programme est conçu pour durer.
     notebooks/git_notebook
     notebooks/profiling_example
     notebooks/2020_profile
+    notebooks/2022_profiling
     notebooks/notebook_convert
     notebooks/jupyter_custom_magics
     specials/python_cplusplus
