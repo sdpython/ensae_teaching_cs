@@ -151,6 +151,7 @@ connaît déjà quelques algorithmes connus.
     notebooks/_gs1a_A_optimisation_contrainte
     notebooks/_gs1a_A_algo
     notebooks/_gs1a_A_image
+    notebooks/_gs1a_A_hash
 
 Il est impossible de connaître tous les algorithmes.
 Il est toujours utile d'en apprendre de nouveaux : :ref:`l-algoculture`.

@@ -93,7 +93,7 @@ Séance 2 - 14/9 - programmation dynamique, voyageur de commerce
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * :ref:`2020editrst`
-* :ref:`2020suffixrst`
+* :ref:`2022hashrst`
 
 Séance 3 - 21/9 - numpy, pandas
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -112,7 +112,7 @@ Séance 5 - 5/10 - sérialisation, tests unitaires, profiling
 
 * :ref:`2022serialisationrst`
 * tests unitaires (à venir)
-* :ref:`2022profilingrsrt`
+* :ref:`2022profilingrst`
 
 Séance 6 - 12/10 - expressions régulières, webscrapping
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -167,7 +167,8 @@ Enoncés écrits en 2021
 Enoncés écrits en 2022
 
 * :ref:`2022serialisationrst`
-* :ref:`2022profilingrsrt`
+* :ref:`2022profilingrst`
+* :ref:`2022hashrst`
 * test unitaires
 
 D'autres énoncés de séances sont disponibles depuis

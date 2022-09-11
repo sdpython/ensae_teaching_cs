@@ -305,7 +305,7 @@ class TableFormula(_TableFormulaStat):
         return a ratio between two real values or an empty string if the denominateur is null
         @return   a real of an empty string
         """
-        return x * 1.0 / y if y != 0 else(0 if x == 0 else "")
+        return x * 1.0 / y if y != 0 else (0 if x == 0 else "")
 
     @staticmethod
     def bootstrap(values, function, nbdraws=-1, alpha=0.05):
@@ -2474,7 +2474,7 @@ class TableFormula(_TableFormulaStat):
                         try:
                             v = float(row[i])
                             row[i] = v
-                        except(ValueError, TypeError):
+                        except (ValueError, TypeError):
                             continue
         else:
             for row in tbl.values:
@@ -2504,7 +2504,7 @@ class TableFormula(_TableFormulaStat):
         else:
             for row in tbl.values:
                 for i in range(0, len(row)):
-                    if(subset_columns is None or i in subset) and isinstance(row[i], float):
+                    if (subset_columns is None or i in subset) and isinstance(row[i], float):
                         row[i] = format % row[i]
         return tbl
 
@@ -2533,7 +2533,7 @@ class TableFormula(_TableFormulaStat):
                         try:
                             v = str2datetime(row[i], format)
                             row[i] = v
-                        except(ValueError, TypeError):
+                        except (ValueError, TypeError):
                             continue
         else:
             for row in tbl.values:
