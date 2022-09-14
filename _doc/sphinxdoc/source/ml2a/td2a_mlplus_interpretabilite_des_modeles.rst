@@ -123,6 +123,8 @@ seulement.
   <https://arxiv.org/pdf/1906.08362.pdf>`_
 * `Controlling a confound in predictive models with a test set minimizing its effect
   <https://hal.archives-ouvertes.fr/hal-01831701/document>`_
+* `INTERPRÉTABILITÉ ET EXPLICABILITÉ (FORMALISÉ) DES MODÈLES PRÉDICTIFS
+  <https://freakonometrics.hypotheses.org/64328#more-64328>`_
 
 *Lectures : monotonie*
 
