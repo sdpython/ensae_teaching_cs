@@ -98,6 +98,8 @@ Séance 2 - 14/9 - programmation dynamique, voyageur de commerce
 Séance 3 - 21/9 - numpy, pandas
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+* :ref:`2022classesrst` : petit aperçu des classes pour mieux appréhender
+  les matrices et les dataframes
 * :ref:`2020numpyrst`
 * :ref:`2020pandasrst`
 
