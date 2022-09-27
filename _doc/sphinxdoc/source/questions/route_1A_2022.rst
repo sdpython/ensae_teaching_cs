@@ -109,6 +109,11 @@ Séance 4 - 28/9 - graphes
 * :ref:`2020graphrst`
 * :ref:`2020ordonnancementrst`
 
+Autres problèmes autour des graphes :
+
+* :ref:`2020tsprst`
+* :ref:`td1acenoncesession7rst`
+
 Séance 5 - 5/10 - sérialisation, tests unitaires, profiling
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -171,6 +176,7 @@ Enoncés écrits en 2022
 * :ref:`2022serialisationrst`
 * :ref:`2022profilingrst`
 * :ref:`2022hashrst`
+* :ref:`2022classesrst`
 * test unitaires
 
 D'autres énoncés de séances sont disponibles depuis
