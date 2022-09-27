@@ -199,7 +199,7 @@ def scatter_xyz(points, smooth=0, div=100, ax=None, **options):
         if Axes3D is None:
             raise ImportError("Unable to import mpl_toolkits.mplot3d")
         fig = plt.figure(figsize=options.get('figsize', None))
-        ax = fig.gca(projection='3d')
+        ax = fig.add_subplot(projection='3d')
     else:
         fig = None
 
