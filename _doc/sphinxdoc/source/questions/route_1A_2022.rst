@@ -118,7 +118,7 @@ Séance 5 - 5/10 - sérialisation, tests unitaires, profiling
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * :ref:`2022serialisationrst`
-* tests unitaires (à venir)
+* :ref:`2022unittestrst`
 * :ref:`2022profilingrst`
 
 Séance 6 - 12/10 - expressions régulières, webscrapping
@@ -177,7 +177,7 @@ Enoncés écrits en 2022
 * :ref:`2022profilingrst`
 * :ref:`2022hashrst`
 * :ref:`2022classesrst`
-* test unitaires
+* :ref:`2022unittestrst`
 
 D'autres énoncés de séances sont disponibles depuis
 la page principale du cours :ref:`l-td1a`.

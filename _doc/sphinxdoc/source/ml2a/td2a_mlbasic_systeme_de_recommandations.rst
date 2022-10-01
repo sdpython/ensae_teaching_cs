@@ -36,6 +36,8 @@ Système de recommandations
 * `Smart Adaptive Recommendations (SAR) Algorithm <https://github.com/Microsoft/Product-Recommendations/blob/master/doc/sar.md>`_
 * `Flexible, Scalable, Differentiable Simulation of Recommender Systems with RecSim NG
   <https://ai.googleblog.com/2021/04/flexible-scalable-differentiable.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+blogspot%2FgJZg+%28Google+AI+Blog%29>`_
+* `A quantum-inspired classical algorithm for recommendation systems
+  <https://arxiv.org/abs/1807.04271>`_
 
 *Modules*
 

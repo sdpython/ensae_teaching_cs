@@ -299,6 +299,7 @@ dès qu'un programme est conçu pour durer.
     notebooks/jupyter_custom_magics
     specials/python_cplusplus
     specials/gui
+    notebooks/2022_unit_test
 
 *Exercices*
 

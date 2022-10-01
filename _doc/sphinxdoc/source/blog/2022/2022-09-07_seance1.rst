@@ -3,7 +3,7 @@
     :title: Introduction à la programmation (sketch)
     :keywords: teachings
     :date: 2022-09-07
-    :categories: article
+    :categories: cours
     :lid: blog-intro-2022-ensae
 
     Xavier Dupré - *http://www.xavierdupre.fr*

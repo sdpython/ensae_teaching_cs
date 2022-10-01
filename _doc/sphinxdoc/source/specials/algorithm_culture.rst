@@ -215,6 +215,9 @@ Catalogue d'algorithmes
     * `LZMA <https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Markov_chain_algorithm>`_ **algo**
     * `LZ77 and LZ78 <https://en.wikipedia.org/wiki/LZ77_and_LZ78>`_ **algo**
     * `Squash Benchmark <http://quixdb.github.io/squash-benchmark/>`_
+* Algorithmes d'inspiration quantique
+    * `A quantum-inspired classical algorithm for recommendation systems
+      <https://arxiv.org/abs/1807.04271>`_
 
 Beaucoup de ces algorithmes sont implémentés dans ce projet :
 `TheAlgorithms <https://github.com/TheAlgorithms/Python>`_.
