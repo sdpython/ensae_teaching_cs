@@ -3,8 +3,7 @@
 """
 import os
 import unittest
-from pyquickhelper.loghelper import fLOG
-from pyquickhelper.pycode import fix_tkinter_issues_virtualenv
+from pyquickhelper.pycode import fix_tkinter_issues_virtualenv, ExtTestCase
 from pyensae.datasource import download_data
 from ensae_teaching_cs.special.rues_paris import (
     get_data, bellman, kruskal, possible_edges, distance_haversine,
@@ -14,13 +13,9 @@ from ensae_teaching_cs.special.rues_paris import (
     connected_components)
 
 
-class TestRueParis(unittest.TestCase):
+class TestRueParis(ExtTestCase):
 
     def test_get_data(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
         folder = os.path.join(
             os.path.abspath(
                 os.path.dirname(__file__)),
@@ -32,110 +27,82 @@ class TestRueParis(unittest.TestCase):
             if os.path.exists(f):
                 os.remove(f)
         try:
-            data = get_data(whereTo=folder, fLOG=fLOG, timeout=60)
+            data = get_data(whereTo=folder, timeout=60)
         except Exception as e:
             if "unable to retrieve data" in str(e):
                 return
             else:
                 raise Exception("*****" + str(e) + "*****") from e
 
-        fLOG(len(data))
         assert len(data) > 0
         total = sum(_[-1] for _ in data)
-        fLOG("total length", total)
+        self.assertGreater(total, 0)
 
     def test_algo(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
         folder = os.path.join(
             os.path.abspath(
                 os.path.dirname(__file__)),
             "temp_algo")
         if not os.path.exists(folder):
             os.mkdir(folder)
-        edges = get_data(whereTo=folder, fLOG=fLOG)
+        edges = get_data(whereTo=folder)
         edges = edges[:1000]
         max_segment = max(e[-1] for e in edges)
-        possibles = possible_edges(edges, max_segment / 8, fLOG=fLOG)
-        init = bellman(edges, fLOG=fLOG, allow=lambda e: e in possibles)
-        fLOG("---")
+        possibles = possible_edges(edges, max_segment / 8)
+        init = bellman(edges, allow=lambda e: e in possibles)
         init = bellman(
             edges,
-            fLOG=fLOG,
             allow=lambda e: e in possibles,
             init=init)
-        fLOG("---")
-        added = kruskal(edges, init, fLOG=fLOG)
+        added = kruskal(edges, init)
         d = graph_degree(edges + added)
         allow = sorted([k for k, v in d.items() if v % 2 == 1])
-        fLOG("degrees", allow)
         allow = set(allow)
-        fLOG("---")
-        init = bellman(edges, fLOG=fLOG,
+        init = bellman(edges,
                        allow=lambda e: e in possibles or e[
                            0] in allow or e[1] in allow,
                        init=init)
-        fLOG("---")
-        added = kruskal(edges, init, fLOG=fLOG)
+        added = kruskal(edges, init)
         d = graph_degree(edges + added)
         allow = sorted([k for k, v in d.items() if v % 2 == 1])
-        fLOG("degrees", allow)
+        self.assertEmpty(list(allow))
 
     def test_algo2(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
         folder = os.path.join(
             os.path.abspath(
                 os.path.dirname(__file__)),
             "temp_algo2")
         if not os.path.exists(folder):
             os.mkdir(folder)
-        edges = get_data(whereTo=folder, fLOG=fLOG)
+        edges = get_data(whereTo=folder)
         edges = edges[:1000]
-        added = eulerien_extension(edges, fLOG=fLOG, alpha=1 / 8)
+        added = eulerien_extension(edges, alpha=1 / 8)
         assert len(added) > 0
-        fLOG("nb added", len(added))
 
     def test_euler(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
         folder = os.path.join(
             os.path.abspath(
                 os.path.dirname(__file__)),
             "temp_rues_euler")
         if not os.path.exists(folder):
             os.mkdir(folder)
-        edges = get_data(whereTo=folder, fLOG=fLOG)
+        edges = get_data(whereTo=folder)
 
-        data = download_data("added.zip", whereTo=folder, fLOG=fLOG)
+        data = download_data("added.zip", whereTo=folder)
         with open(data[0], "r") as f:
             text = f.read()
         added_edges = eval(text)
         path = euler_path(edges, added_edges)
-        fLOG(len(path), len(edges) + len(added_edges))
-        for p in path[:5]:
-            fLOG(len(p), p)
-        for p in path[-5:]:
-            fLOG(len(p), p)
+        self.assertNotEmpty(path)
 
     def test_algo_euler4(self):
-        fLOG(
-            __file__,
-            self._testMethodName,
-            OutputPrint=__name__ == "__main__")
         folder = os.path.join(
             os.path.abspath(
                 os.path.dirname(__file__)),
             "temp_algo_euler4")
         if not os.path.exists(folder):
             os.mkdir(folder)
-        edges = get_data(whereTo=folder, fLOG=fLOG)
+        edges = get_data(whereTo=folder)
         edges = edges[:3]
 
         vertices = {}
@@ -187,9 +154,8 @@ class TestRueParis(unittest.TestCase):
 
         path = euler_path(edges, added)
         alls = edges + added
-        fLOG(len(alls), len(path))
-        #assert len(alls) == len(path)
+        self.assertEqual(len(alls), len(path))
 
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=2)
