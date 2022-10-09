@@ -125,7 +125,7 @@ Séance 6 - 12/10 - expressions régulières, webscrapping
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * :ref:`2020regexrst`
-* webscrapping (à venir)
+* :ref:`TD2AEcoWebScrapingcorrigerst`
 
 Séance 7 - 19/10 - top k, tri
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
