@@ -1,0 +1,73 @@
+%!TEX encoding =  IsoLatin
+\input{exo_begin.tex}%
+
+\firstpassagedo{
+\newcommand{\sametextforthisinterro}[0]{ 
+\huge ENSAE TD noté, mardi 26 octobre 2022
+
+\normalsize
+}
+
+\sametextforthisinterro
+}
+
+
+\exosubject{}
+\begin{xexercice}\label{td_note_label1_2023}%\indexfrr{énoncé}{pratique}
+
+On souhaite calculer pour chaque rue de France le médecin le plus proche (environ 100.000 médecins généralistes). On suppose qu'on dispose des coordonnées en deux dimensions des rues $X$ et de celles des médecins $Y$.
+
+\exequest Tirer deux matrices aléatoires pour $X$ et $Y$, de tailles différentes. La fonction retourne deux matrices de deux colonnes : \texttt{def tirage\_alea(n\_rues, n\_med):}
+
+\exequest Calculer toutes les distances entre $X$ et $Y$. On ne pourra pas utiliser la fonction \texttt{cdist} (pairwise distances) : \texttt{def pairwise\_distance(X, Y):}
+
+\exequest Ecrire un test unitaire qui vérifie le résultat lorsque $X$ et $Y$ sont la matrice identité $2\times 2$ ? (\texttt{def test\_distance():})
+
+\exequest Quel est le coût de l'algorithme (en nombre d'opérations) en fonction des dimensions de $X$ et $Y$ ?
+
+\exequest Ecrire une fonction qui retourne l'indice du médecin le plus proche pour chaque rue \texttt{def plus\_proche\_medecin(X, Y):}
+
+\exequest On crée une grille 10x10 pour quadriller l'espace. Ecrire une fonction qui calcule les coordonnées des points dans la grille pour plusieurs points. On propose la signature suivante où \texttt{p\_min} et \texttt{p\_max} sont les coins inférieur et supérieur de la grille. La fonction doit vérifier le test unitaire ci-dessous.
+
+\begin{tabular}{@{}p{9cm}r@{}}
+\vspace{-3cm}
+\begin{verbatimx}
+def grille(p, p_min, p_max, n=10):
+
+def test_grille():
+    r = grille(numpy.array([[0.41, 0.71], [0.39, 0.99]]),
+               p_min=numpy.array([0, 0]),
+               p_max=numpy.array([1, 1]), n=10)
+    assert r.tolist() == [[0.4, 0.7], [0.3, 0.9]]
+\end{verbatimx}
+&
+\includegraphics[width=6cm]{images/td2022xy.png} 
+\end{tabular}
+
+\exequest Ecrire une fonction qui crée un dictionaire où les clés sont les coordonnées d'une case de la grille, les valeurs, l'ensemble des points dans cette case. Cette fonction doit vérifier le test unitaire ci-dessous. Il faudra choisir \texttt{pmin} et \texttt{pmax} judicieusement.
+
+\begin{verbatimx}
+def map_grille_indices(x, n=10):
+		
+def test_map():
+    x = numpy.arange(8).reshape((-1, 2))
+    assert map_grille_indices(x, 2) == {(0.0, 0.0): [0, 1], (0.5, 0.5): [2], (1.0, 1.0): [3]}		
+\end{verbatimx}
+
+\exequest Modifier la fonction \texttt{pairwise\_distance} pour ne calculer que les distances des points dans la même case.
+
+\exequest Mesurer le temps pour deux matrices $X$ et $Y$ de dimensions $1000\times 2$ et $100 \times 2$.
+Laquelle est plus rapide et pourquoi ? On pourra notamment comparer les coûts algorithmiques. Imaginez une configuration dans laquelle les deux fonctions ont approximativement le même coût.
+
+\exequest On revient au problème initial : trouver le médecin de lplus proche. On utilise cette fonction plus rapide dans la fonction \texttt{def plus\_proche\_medecin(X, Y):}. Mais ça ne retourne pas toujours le bon résultat. Pourquoi ?
+
+\end{xexercice}
+
+\newpage
+
+
+
+
+
+
+\input{exo_end.tex}%
