@@ -64,7 +64,7 @@ class TestSimpleFlask(unittest.TestCase):
         self.assertIn("help for command: ask/for/help", c)
 
         # shutdown
-        c = requests.post(site + "shutdown/")
+        c = requests.post(site + "shutdown/")  # pylint: disable=W3101
         fLOG(c.text)
         self.assertIn("Server shutting down...", c.text)
 
