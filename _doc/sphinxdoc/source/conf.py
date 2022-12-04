@@ -180,6 +180,7 @@ epkg_dictionary.update({
     "Microsoft": 'https://fr.wikipedia.org/wiki/Microsoft',
     "miniconda": 'https://conda.io/miniconda.html',
     "mlinsights": 'http://www.xavierdupre.fr/app/mlinsights/helpsphinx/index.html',
+    "mloptonnx": 'https://github.com/sdpython/mloptonnx/',
     "mlprodict": 'http://www.xavierdupre.fr/app/mlprodict/helpsphinx/index.html',
     'ML.net': 'https://github.com/dotnet/machinelearning',
     "MPI": 'https://en.wikipedia.org/wiki/Message_Passing_Interface',

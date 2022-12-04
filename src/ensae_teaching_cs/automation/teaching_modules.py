@@ -26,7 +26,7 @@ def get_teaching_modules(branch=True):
             "pyensae", "pyrsslocal", "ensae_projects", "ensae_teaching_cs",
             "code_beatrix", "actuariat_python", "mlstatpy", "jupytalk", "teachpyx",
             "tkinterquickhelper", "cpyquickhelper", "pandas_streaming",
-            "mlinsights", "pyenbc", "mlprodict",
+            "mlinsights", "pyenbc", "mlprodict", "mloptonnx",
             "papierstat", "sparkouille", "manydataapi",
             "wrapclib", "myblog", "_check_python_install", "onnxortext"]
     if not branch:

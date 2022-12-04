@@ -568,3 +568,5 @@ _doc/notebooks/data/DEAL Flow automatisation 2019.xlsx
 _doc/notebooks/data/Jeu de données deal flow 2018.csv
 _latex/ensae/*.pdf
 _doc/notebooks/td1a_home/dummy.json
+_doc/notebooks/data/20*/*.csv
+_doc/notebooks/data/irep.zip

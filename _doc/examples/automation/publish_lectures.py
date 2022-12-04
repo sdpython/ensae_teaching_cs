@@ -68,6 +68,7 @@ modules = [
     "ensae_projects",
     "jupytalk",
     "jyquickhelper",
+    "mloptonnx",
     "mlstatpy",
     "onnxcustom",
     "pyensae",
