@@ -137,7 +137,7 @@ class TestRueParis(ExtTestCase):
         plt.savefig(os.path.join(folder, "graph1.png"))
         plt.close('all')
 
-        added = eulerien_extension(edges, fLOG=lambda *l: None,
+        added = eulerien_extension(edges, fLOG=lambda *l_: None,
                                    distance=distance_paris)
 
         for e in added:

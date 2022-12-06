@@ -25,9 +25,10 @@ def compile_cython_single_script(script, skip_warn=True, fLOG=noLOG):
     This function considers a script ``.pyx``, writes
     the proper setup file, and compiles it.
 
-    @param      script      filename
-    @param      skip_warn   skip warnings
-    @param      fLOG        logging function
+    :param script: filename
+    :param skip_warn: skip warnings
+    :param fLOG: logging function
+    :return: output
 
     The function applies the steps described in the basic tutorial
     :epkg:`The Basics of Cython`.
@@ -76,7 +77,7 @@ def compile_cython_single_script(script, skip_warn=True, fLOG=noLOG):
     name = os.path.split(script)[-1]
     namen = os.path.splitext(name)[0]
     setup_script = """
-        from distutils.core import setup
+        from setuptools import setup
         from Cython.Build import cythonize
         setup(
             name='{1}',
