@@ -5,16 +5,17 @@ import sys
 import unittest
 import time
 import requests
-from pyquickhelper.loghelper import fLOG, get_url_content
-from pyquickhelper.pycode import skipif_travis, skipif_circleci
+from pyquickhelper.loghelper import get_url_content
+from pyquickhelper.pycode import skipif_travis, skipif_circleci, ignore_warnings
 from ensae_teaching_cs.td_1a.simple_flask_site import create_application
 from ensae_teaching_cs.td_1a.flask_helper import FlaskInThread
 
 
 class TestSimpleFlask(unittest.TestCase):
 
+    @ignore_warnings(ResourceWarning)
     def test_flask_recommended(self):
-        app = create_application()
+        app = create_application({})
         with app.test_client() as cl:
             # main page
             c = cl.get("/")
@@ -33,7 +34,9 @@ class TestSimpleFlask(unittest.TestCase):
 
     @skipif_travis("urllib.error.URLError: <urlopen error [Errno 99] Cannot assign requested address")
     @skipif_circleci("urllib.error.URLError: <urlopen error [Errno 99] Cannot assign requested address")
-    @unittest.skipIf(not sys.platform.startswith("win"), reason="did not find the right settings to make it work.")
+    @unittest.skipIf(not sys.platform.startswith("win"),
+                     reason="did not find the right settings to make it work.")
+    @ignore_warnings(ResourceWarning)
     def test_flask_thread(self):
         """
         On Linux, this test fails unless the firewall
@@ -44,8 +47,10 @@ class TestSimpleFlask(unittest.TestCase):
             sudo ufw allow 5000
             sudo ufw enable
         """
-        app = create_application()
-        th = FlaskInThread(app, host="localhost", port=8025)
+        params = {}
+        app = create_application(params)
+        th = FlaskInThread(app, host="localhost", port=8025, debug=False)
+        params['thread'] = th
         th.start()
 
         site = "http://localhost:8025/"
@@ -60,22 +65,19 @@ class TestSimpleFlask(unittest.TestCase):
 
         # help for
         c = get_url_content(site + "help/ask/for/help")
-        fLOG(c)
         self.assertIn("help for command: ask/for/help", c)
 
         # shutdown
         c = requests.post(site + "shutdown/")  # pylint: disable=W3101
-        fLOG(c.text)
-        self.assertIn("Server shutting down...", c.text)
+        if c.text != '':
+            self.assertIn("Server shutting down...", c.text)
 
         nb = 0
         while th.is_alive() and nb < 5:
-            fLOG("waiting...", nb)
             time.sleep(1)
             nb += 1
 
         if th.is_alive():
-            fLOG("thread is still alive (1)?", th.is_alive())
             assert False
 
 
