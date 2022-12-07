@@ -96,9 +96,10 @@ Windows
 Certains modules nécessitent une compilation C++.
 :epkg:`Anaconda` fournit la plupart d'entre eux.
 Et Les plus utilisés sont de plus en plus disponibles sur
-`pypi <https://pypi.org/>`_. Pour les autres, il faut allez à
-`Unofficial Windows Binaries for Python Extension Packages
-<http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
+`pypi <https://pypi.org/>`_. Pour les autres, la plupart des
+modules sont disponibles sur `PyPi <https://pypi.org/>`_.
+Sinon il faudra passer par WSL (voir blog post du 
+:ref:`7 décembre 2022 <blog-cartopy-2022>`).
 Certains modules n'existent pas sous forme précompilée à
 moins de le faire soi-même. Il faut qu'un compilateur
 soit installée sur la machine et sans doute d'autres
@@ -200,10 +201,9 @@ souhaitée, il suffit de demander la version installée ::
 Sous :epkg:`Windows`, pour l'ajout d'un module ponctuel,
 si l'instruction ``pip install <module>`` ne fonctionne pas,
 c'est vraisemblablement parce que ce module contient une partie en C++.
-Dans ce cas, il faut aller voir sur ce site
-`Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
-s'il est disponible. S'il ne l'est pas, l'installation du module est
-réservée aux experts.
+S'il ne l'est pas, l'installation du module est
+réservée aux experts qui ne fuit pas les messages d'erreur
+d'un compilation C++.
 
 conda ou pip
 ++++++++++++
@@ -528,7 +528,6 @@ ou un prof fera l'affaire. Ensuite, des livres de mathématiques, des articles..
   répertoire de librairies :epkg:`Python` populaires (donc à regarder en premier)
 * `Trending Python <https://github.com/trending?l=python>`_
 * `Trending Python <https://github.com/trending?l=python&since=monthly>`_ (mensuel)
-* `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
 * conférence `pydata <http://pydata.org/>`_
 
 *Quelques articles*
@@ -583,8 +582,7 @@ Les modules suivant font partie du setup proposé aux étudiants (voir plus bas)
   pour faire du machine learning
 * **name** : nom du module
 * **kind** : façon d'installer le module sous Windows, si c'est *wheel*, cela signifie
-  que le module inclut une partie C++ qu'il est préférable de récupérer déjà compilée
-  via le site `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_.
+  que le module inclut une partie C++ qu'il est préférable de récupérer déjà compilée,
 * **version** : la version à installer car d'autres peuvent provoquer des conflits
 * **license** : license du module, toutes ne permettent pas un usage commercial,
   voir `choose a license <http://choosealicense.com/licenses/>`_,
