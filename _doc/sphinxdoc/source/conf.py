@@ -267,7 +267,7 @@ epkg_dictionary.update({
     "thorpy": 'http://www.thorpy.org/',
     "TSP": 'https://fr.wikipedia.org/wiki/Probl%C3%A8me_du_voyageur_de_commerce',
     "UCI": 'https://archive.ics.uci.edu/ml/datasets.html',
-    "Unofficial Windows Binaries for Python Extension Packages": 'https://www.lfd.uci.edu/~gohlke/pythonlibs/',
+    "Archived: Unofficial Windows Binaries for Python Extension Packages": 'https://www.lfd.uci.edu/~gohlke/pythonlibs/',
     "utf-8": "https://fr.wikipedia.org/wiki/UTF-8",
     "Visual Studio Code": "https://code.visualstudio.com/",
     "Windows": 'https://fr.wikipedia.org/wiki/Microsoft_Windows',

@@ -3,6 +3,7 @@
 @file
 @brief Helpers for :epkg:`Flask`.
 """
+import ctypes
 import traceback
 import threading
 from flask import Response
@@ -10,7 +11,7 @@ from flask import Response
 
 def Text2Response(text):
     """
-    convert a text into plain text
+    Converts a text into plain text.
 
     @param      text        text to convert
     @return                 textReponse
@@ -20,7 +21,7 @@ def Text2Response(text):
 
 def Exception2Response(e):
     """
-    convert an exception into plain text and display the stack trace
+    Converts an exception into plain text and display the stack trace.
 
     @param      e           Exception
     @return                 textReponse
@@ -33,23 +34,23 @@ class FlaskInThread(threading.Thread):
 
     """
     Defines a thread for the server.
+
+    :param app: :epkg:`Flask` application
     """
 
-    def __init__(self, app, host="localhost", port=8081):
-        """
-        @param      app     :epkg:`Flask` application
-        """
+    def __init__(self, app, host="localhost", port=8081, debug=False):
         threading.Thread.__init__(self)
         self._app = app
         self._host = host
         self._port = port
         self.daemon = True
+        self.debug = debug
 
     def run(self):
         """
         Starts the server.
         """
-        self._app.run(host=self._host, port=self._port)
+        self._app.run(host=self._host, port=self._port, debug=self.debug)
 
     def shutdown(self):
         """
@@ -57,14 +58,24 @@ class FlaskInThread(threading.Thread):
 
         * method run keeps a pointer on a server instance
           (the one owning method
-          `serve_forever <https://docs.python.org/3/library/socketserver.html#socketserver.BaseServer.serve_forever>`_)
+          `serve_forever
+          <https://docs.python.org/3/library/socketserver.html#socketserver.BaseServer.serve_forever>`_)
         * module `werkzeug <http://werkzeug.pocoo.org/>`_
           returns this instance in function
-          `serving.run_simple <https://github.com/mitsuhiko/werkzeug/blob/master/werkzeug/serving.py>`_
+          `serving.run_simple
+          <https://github.com/mitsuhiko/werkzeug/blob/master/werkzeug/serving.py>`_
         * module `Flask <http://flask.pocoo.org/>`_
           returns this instance in method
-          `app.Flask.run <https://github.com/mitsuhiko/flask/blob/master/flask/app.py>`_
+          `app.Flask.run
+          <https://github.com/mitsuhiko/flask/blob/master/flask/app.py>`_
         """
         raise NotImplementedError()
         # self.server.shutdown()
         # self.server.server_close()
+
+    def raise_exception(self):
+        thread_id = self.native_id
+        res = ctypes.pythonapi.PyThreadState_SetAsyncExc(thread_id,
+                                                         ctypes.py_object(SystemExit))
+        if res > 1:
+            ctypes.pythonapi.PyThreadState_SetAsyncExc(thread_id, 0)

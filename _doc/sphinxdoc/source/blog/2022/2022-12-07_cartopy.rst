@@ -1,0 +1,33 @@
+
+.. blogpost::
+    :title: Utilisation de cartopy sous Windows (sous WSL)
+    :keywords: cartopy, WSL, Ubuntu
+    :date: 2022-12-07
+    :categories: module
+    :lid: blog-cartopy-2022
+
+    Installer `cartopy
+    <https://scitools.org.uk/cartopy/docs/latest/>`_
+    est une vraie gageure. J'ai utilisé la version disponible sur
+    `Archived: Unofficial Windows Binaries for Python Extension Packages
+    <https://www.lfd.uci.edu/~gohlke/pythonlibs/#cartopy>`_
+    mais le site n'est plus maintenu et je veux bien comprendre
+    que c'est un travail ingrat qui requiert une attention
+    permenante (voir
+    `What to do when Gohlke's python wheel service shuts down?
+    <https://stackoverflow.com/questions/72581592/what-to-do-when-gohlkes-python-wheel-service-shuts-down>`_).
+    La seule option viable sous Windows est d'utiliser la distribution
+    Anaconda sous Windows.
+    L'autre option est d'installer une distribution Ubuntu
+    sous `Windows Subsystem for Linux?
+    <https://learn.microsoft.com/en-us/windows/wsl/about>`_ ou *WSL*
+    en abrégé. Ca marche très bien. Il suffit de démarrer le serveur
+    de notebook sous WSL avec une instruction comme celle-ci
+    `jupyter-notebook --NotebookApp.token= --NotebookApp.password=`
+    puis d'y accéder via son navigateur. Pour coder, il suffit
+    d'utiliser `Visual Studio Code <https://code.visualstudio.com/>_`
+    avec l'extension `Remote Development
+    <https://code.visualstudio.com/docs/remote/remote-overview>`_.
+    La version python 3.10.6 est installée par défaut sur le noyau
+    `Ubuntu 22.04.1
+    <https://apps.microsoft.com/store/detail/ubuntu-22041-lts/9PN20MSR04DW>_`.

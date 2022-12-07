@@ -158,13 +158,7 @@ ont élevé le niveau de fonctionnalités, les
 ont changé la façon de travailler.
 Les modules les plus utilisés sont maintenant fournis sur toutes les plate-formes
 avec la distribution `Anaconda <https://www.continuum.io/downloads>`_.
-
-Sous Windows, la plupart des modules sont disponibles.
-Quand bien même ce ne serait pas le cas, le site
-`Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
-proposent de nombreux modules qui nécessitent un compilateur C++. On les repère car
-l'installation ``pip install <module>``
-échoue à moins de savoir bidouiller sa machine.
+Sous Windows, la grande majorité des modules sont également disponibles.
 
 Dépendences et automatisation
 +++++++++++++++++++++++++++++

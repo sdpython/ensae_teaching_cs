@@ -8,18 +8,31 @@ from flask import Flask, request
 from .flask_helper import Text2Response, Exception2Response
 
 
-def create_application():
+def create_application(global_params):
     """
     Creates a :epkg:`Flask` application.
     """
+    if global_params is None:
+        global_params = {}
+    params = global_params
     log = logging.getLogger('werkzeug')
     log.setLevel(logging.ERROR)
     app = Flask(__name__)
 
+    def shutdown_server():
+        """
+        To shutdown the service.
+        """
+        func = request.environ.get('werkzeug.server.shutdown')
+        if func is None:
+            params['thread'].raise_exception()
+            return
+        func()
+
     @app.route('/shutdown/', methods=['POST'])
     def shutdown():  # pylint: disable=W0612
         """
-        shuts down the service
+        Shuts down the service.
         """
         shutdown_server()
         return Text2Response('Server shutting down...')
@@ -27,7 +40,7 @@ def create_application():
     @app.route('/help/<path:command>')
     def help_command(command):  # pylint: disable=W0612
         """
-        return a very basic help message on command command
+        Returns a very basic help message on command command.
 
         @param      command     command
         @return                 help
@@ -55,7 +68,7 @@ def create_application():
     @app.route('/')
     def main_page():  # pylint: disable=W0612
         """
-        defines the main page
+        Defines the main page.
         """
         message = """Simple Flask Site
                                 /                   help on command
@@ -67,13 +80,3 @@ def create_application():
         return Text2Response(message)
 
     return app
-
-
-def shutdown_server():
-    """
-    to shutdown the service
-    """
-    func = request.environ.get('werkzeug.server.shutdown')
-    if func is None:
-        raise RuntimeError('Not running with the Werkzeug Server')
-    func()

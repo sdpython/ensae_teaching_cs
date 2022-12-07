@@ -615,13 +615,6 @@ def information_about_package(name):
         simple d'installer des modules précompilés avec l'instruction ::
 
             conda install <module_compile>
-
-        L'autre option est d'utilser le site
-        `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
-        qui propose des versions compilées sous Windows d'un grand nombre de modules.
-        Il faut télécharger le fichier *.whl* puis l'installer avec l'instruction ``pip install <fichier.whl>``.
-        La différence entre les deux ooptions tient aux environnements virtuels, voir
-        `Python virtual environments <http://astropy.readthedocs.org/en/stable/development/workflow/virtual_pythons.html>`_.
     """
     from pyquickhelper.pycode.pip_helper import get_package_info
     return get_package_info(name)
