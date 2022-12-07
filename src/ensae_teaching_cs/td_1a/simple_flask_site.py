@@ -80,4 +80,3 @@ def create_application(global_params):
         return Text2Response(message)
 
     return app
-

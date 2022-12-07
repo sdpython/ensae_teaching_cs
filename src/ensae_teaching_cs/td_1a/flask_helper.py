@@ -76,6 +76,6 @@ class FlaskInThread(threading.Thread):
     def raise_exception(self):
         thread_id = self.native_id
         res = ctypes.pythonapi.PyThreadState_SetAsyncExc(thread_id,
-              ctypes.py_object(SystemExit))
+                                                         ctypes.py_object(SystemExit))
         if res > 1:
             ctypes.pythonapi.PyThreadState_SetAsyncExc(thread_id, 0)

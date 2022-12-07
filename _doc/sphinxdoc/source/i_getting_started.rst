@@ -98,7 +98,7 @@ Certains modules nécessitent une compilation C++.
 Et Les plus utilisés sont de plus en plus disponibles sur
 `pypi <https://pypi.org/>`_. Pour les autres, la plupart des
 modules sont disponibles sur `PyPi <https://pypi.org/>`_.
-Sinon il faudra passer par WSL (voir blog post du 
+Sinon il faudra passer par WSL (voir blog post du
 :ref:`7 décembre 2022 <blog-cartopy-2022>`).
 Certains modules n'existent pas sous forme précompilée à
 moins de le faire soi-même. Il faut qu'un compilateur

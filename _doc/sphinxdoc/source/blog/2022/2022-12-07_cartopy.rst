@@ -8,7 +8,7 @@
 
     Installer `cartopy
     <https://scitools.org.uk/cartopy/docs/latest/>`_
-    est une vraie gageure. J'ai utilisé la version disponible sur 
+    est une vraie gageure. J'ai utilisé la version disponible sur
     `Archived: Unofficial Windows Binaries for Python Extension Packages
     <https://www.lfd.uci.edu/~gohlke/pythonlibs/#cartopy>`_
     mais le site n'est plus maintenu et je veux bien comprendre

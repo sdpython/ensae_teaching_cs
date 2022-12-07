@@ -44,7 +44,8 @@ sets = [
     {'scikit-learn'},
 ]
 
-piv = df.pivot(index="month", columns="Project", values="num_downloads").fillna(0)
+piv = df.pivot(index="month", columns="Project",
+               values="num_downloads").fillna(0)
 
 fig, ax = plt.subplots(len(sets), 1, figsize=(12, 40))
 colormaps = ['Accent', "tab10", "Paired", "tab20"]
