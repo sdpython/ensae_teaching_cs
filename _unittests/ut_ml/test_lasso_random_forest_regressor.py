@@ -16,7 +16,7 @@ class TestLassoRandomForestRegressor(ExtTestCase):
 
     @ignore_warnings(ConvergenceWarning)
     def test_lasso_random_forest_regressor(self):
-        X, y = make_regression(1000, n_features=10)
+        X, y = make_regression(1000, n_features=10)  # pylint: disable=W0632
         X_train, X_test, y_train, y_test = train_test_split(X, y)
         rf2 = RandomForestRegressor()
         rf2.fit(X_train, y_train)
