@@ -4,18 +4,19 @@
 import unittest
 from io import BytesIO
 import pickle
-from sklearn.datasets import load_boston
+from sklearn.datasets import make_regression
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.model_selection import train_test_split
-from pyquickhelper.pycode import ExtTestCase
+from sklearn.exceptions import ConvergenceWarning
+from pyquickhelper.pycode import ExtTestCase, ignore_warnings
 from ensae_teaching_cs.ml.lasso_random_forest_regressor import LassoRandomForestRegressor
 
 
 class TestLassoRandomForestRegressor(ExtTestCase):
 
+    @ignore_warnings(ConvergenceWarning)
     def test_lasso_random_forest_regressor(self):
-        data = load_boston()
-        X, y = data.data, data.target  # pylint: disable=E1101
+        X, y = make_regression(1000, n_features=10)  # pylint: disable=W0632
         X_train, X_test, y_train, y_test = train_test_split(X, y)
         rf2 = RandomForestRegressor()
         rf2.fit(X_train, y_train)
