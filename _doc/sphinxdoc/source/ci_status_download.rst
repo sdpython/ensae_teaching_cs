@@ -21,10 +21,10 @@ On peut retrouver la plupart de ces résultats sur
         FORMAT_DATE("%Y%m", DATE(timestamp)) AS Month
     FROM `bigquery-public-data.pypi.file_downloads`
     WHERE
-      (__CONDITION__)
-      AND DATE(timestamp) BETWEEN DATE '2022-06-01' AND '2022-06-30'
-     GROUP BY `Project`, `Month`
-     ORDER BY `Month`, `Project`
+        (__CONDITION__)
+        AND DATE(timestamp) BETWEEN DATE '2022-12-01' AND '2022-12-31'
+        GROUP BY `Project`, `Month`
+        ORDER BY `Month`, `Project`
     """
 
     import textwrap
@@ -42,21 +42,6 @@ On peut retrouver la plupart de ces résultats sur
     cond = " OR ".join(conds)
     print(query.replace('__CONDITION__', '\n'.join(
         textwrap.wrap(cond, subsequent_indent='    '))))
-    """
-
-    from ensae_teaching_cs.automation import get_teaching_modules
-    modules = get_teaching_modules(branch=False)
-    modules.extend([
-        'onnx', 'onnxruntime', 'skl2onnx', 'keras2onnx', 'nimbusml',
-        'scikit-learn', 'pandas', 'numpy', 'jupyter', 'matplotlib',
-        'protobuf', 'nimbusml', 'aftercovid', 'onnxruntime-training',
-        'onnxconverter-common', 'tf2onnx', 'onnxruntime-extensions'])
-    modules = [m.split(':')[0] for m in modules]
-    dont = {'numpy', 'matplotlib', 'pandas', 'jupyter'}
-    modules = [_ for _ in modules if _ not in dont]
-    conds = ["file.project = '{0}'".format(m) for m in modules]
-    cond = " OR ".join(conds)
-    print(query.replace('__CONDITION__', cond))
 
 .. plot::
 
@@ -86,15 +71,18 @@ On peut retrouver la plupart de ces résultats sur
         {'mlinsights', 'mlprodict', 'onnxortext'},
         {'csharpy', 'csharpyml', },
         {'pyrsslocal', 'pymmails', },
-        {'sparkouille', 'ensae_projects', 'actuariat_python', 'code_beatrix', 'jupytalk'},
-        {'papierstat', 'teachpyx', 'ensae_teaching_cs', 'ensae_teaching_dl', 'teachpyx',
+        {'sparkouille', 'ensae_projects', 'actuariat_python',
+         'code_beatrix', 'jupytalk'},
+        {'papierstat', 'teachpyx', 'ensae_teaching_cs',
+         'ensae_teaching_dl', 'teachpyx',
          'aftercovid', 'onnxcustom', 'deeponnxcustom'},
         {'tkinterquickhelper', 'pyenbc', },
         {'nimbusml', },
         {'scikit-learn'},
     ]
 
-    piv = df.pivot(index="month", columns="Project", values="num_downloads").fillna(0)
+    piv = df.pivot(index="month", columns="Project",
+                   values="num_downloads").fillna(0)
 
     fig, ax = plt.subplots(len(sets), 1, figsize=(12,40))
     colormaps = ['Accent', "tab10", "Paired", "tab20"]

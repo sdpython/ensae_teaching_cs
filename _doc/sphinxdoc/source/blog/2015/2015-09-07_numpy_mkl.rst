@@ -6,10 +6,12 @@
     :categories: modules
 
     Sur la page
-    `Unofficial Windows Binaries for Python Extension Packages <http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy>`_,
+    `Archived: Unofficial Windows Binaries for Python Extension Packages
+    <http://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy>`_,
     on distingue deux versions de Numpy : *MKL* (Math Kernel Library) et *unoptimized*.
     La version *MKL* est la plus rapide comme le montre l'article
-    `Numpy/Scipy with Intel MKL <https://software.intel.com/en-us/articles/numpyscipy-with-intel-mkl>`_.
+    `Numpy/Scipy with Intel MKL
+    <https://software.intel.com/en-us/articles/numpyscipy-with-intel-mkl>`_.
     Elle est compilée avec un jeu d'instructions processeur étendu.
 
     Les instructions des processeurs sont très simples et s'exécutent
@@ -22,9 +24,11 @@
     addition terme à terme, multiplication... Comme elles sont
     très fréquentes et que tout le monde en a besoin, les processeurs ont développé
     des instructions complexes utilisant le parallèlisme :
-    `Parallelism in the Intel Math Kernel Library <https://software.intel.com/en-us/articles/parallelism-in-the-intel-math-kernel-library>`_.
+    `Parallelism in the Intel Math Kernel Library
+    <https://software.intel.com/en-us/articles/parallelism-in-the-intel-math-kernel-library>`_.
     Ces instructions portent le nom de
-    `SIMD (Single instruction, multiple data) <https://en.wikipedia.org/wiki/SIMD)>`_.
+    `SIMD (Single instruction, multiple data)
+    <https://en.wikipedia.org/wiki/SIMD)>`_.
     *Intel MKL* désigne une librairie mathématique qui implémente
     des opérations vectorielles avec ces instructions SIMD.
     Voir également `OpenMP <http://openmp.org/wp/>`_.

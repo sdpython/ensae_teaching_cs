@@ -42,10 +42,8 @@ Version de Python
 
 Les exercices et notebooks sont testés sur la version :epkg:`Python` 3.9.
 Le plus simple pour installer :epkg:`Python` est d'utiliser la distribution
-:epkg:`Anaconda`. La distribution standard fonctionne également en s'aidant de cette page
-`Unofficial Windows Binaries for Python Extension Packages
-<https://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
-pour *Windows* et de celle-ci pour la distribution
+:epkg:`Anaconda`. On peut également se débrouiller
+soi-même sur une distribution Linux comme
 *Debian 10* (Ubuntu est très similaire) :
 `Install Python 3.9 and many packages on Linux Debian 10
 <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx//blog/2021/2021-01-09_debian.html>`_.

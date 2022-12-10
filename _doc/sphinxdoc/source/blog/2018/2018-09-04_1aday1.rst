@@ -67,4 +67,4 @@
     Installation :
 
     * Linux : `Install Python 3.7 and many packages on Linux Debian 9 <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx//blog/2018/2018-08-19_python37.html>`_
-    * Windows : `Unofficial Windows Binaries for Python Extension Packages <https://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
+    * Windows : `Archived: Unofficial Windows Binaries for Python Extension Packages <https://www.lfd.uci.edu/~gohlke/pythonlibs/>`_

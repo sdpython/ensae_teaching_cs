@@ -82,10 +82,12 @@ Les exercices et notebooks sont testées sur la version :epkg:`Python` 3.9.
 Ils fonctionneront également sur les versions 3.5 et 3.6. Le plus simple
 pour installer :epkg:`Python` est d'utiliser la distribution :epkg:`Anaconda`.
 La distribution standard fonctionne également en s'aidant ce cette page
-`Unofficial Windows Binaries for Python Extension Packages <https://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
+`Archived: Unofficial Windows Binaries for Python Extension Packages
+<https://www.lfd.uci.edu/~gohlke/pythonlibs/>`_
 pour *Windows* et de celle-ci pour la distribution
 *Debian 9* (*Ubuntu est très similaire) :
-`Install Python 3.7 and many packages on Linux Debian 9 <http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2018/2018-08-19_python37.html>`_.
+`Install Python 3.7 and many packages on Linux Debian 9
+<http://www.xavierdupre.fr/app/pymyinstall/helpsphinx/blog/2018/2018-08-19_python37.html>`_.
 
 Notes
 +++++
