@@ -11,8 +11,9 @@ set_sphinx_variables(__file__, "Python dans tous ses états", "Xavier Dupré",
                      2022, "pydata_sphinx_theme", ['_static'],
                      locals(), add_extensions=None,
                      github_repo="https://github.com/sdpython/ensae_teaching_cs.git",
-                     extlinks=dict(
-                         issue=('https://github.com/sdpython/ensae_teaching_cs/issues/%s', 'issue')),
+                     extlinks=dict(issue=(
+                         'https://github.com/sdpython/ensae_teaching_cs/issues/%s',
+                         'issue %s')),
                      book=True, nblayout='table',
                      doc_version=ensae_teaching_cs.__version__)
 

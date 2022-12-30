@@ -95,7 +95,7 @@ class TestRst2HtmlLatex(unittest.TestCase):
                                 imgmath_latex_preamble=preamble,
                                 epkg_dictionary=links,
                                 extlinks=dict(issue=('https://link/%s',
-                                                     'issue {0} on GitHub')))
+                                                     'issue %s on GitHub')))
             except NotImplementedError as e:
                 if "Unknown node: todoext_node" in str(e):
                     warnings.warn("todoext has no outputs in latex")
