@@ -108,8 +108,8 @@ pywaffle
 qgrid
 semantic_version
 seasonal
-git+https://github.com/xadupre/onnxconverter-common.git@jenkins
-git+https://github.com/xadupre/sklearn-onnx.git@jenkins
+onnxconverter-common
+git+https://github.com/onnx/sklearn-onnx.git
 shapely
 sphinx_bootstrap_theme
 sphinx_gallery
