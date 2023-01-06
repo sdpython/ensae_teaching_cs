@@ -32,8 +32,6 @@ Dataframes
 
 .. autosignature:: ensae_teaching_cs.faq.faq_pandas.read_csv
 
-.. autosignature:: ensae_teaching_cs.td_2a.session_pandas.dfs2excel
-
 Graphes
 +++++++
 
