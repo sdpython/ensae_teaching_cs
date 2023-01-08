@@ -3,6 +3,7 @@ import sys
 import os
 from setuptools import find_packages, setup
 from pyquicksetup import read_version, read_readme, default_cmdclass
+from pyquicksetup.pyquick import _SetupCommand
 
 #########
 # settings
@@ -46,6 +47,34 @@ package_data = {project_var_name + ".encrypted": ["*.crypted", "*.vigenere"],
                 }
 
 
+class SetupCommandSphinx(_SetupCommand):
+    description = "Builds documentation."
+
+    user_options = [
+        ('layout=', None, 'format generation, default is html,rst.'),
+        ('nbformats=', None, 'format generation, default is ipynb,slides,html,python,rst,github'),
+    ]
+
+    def initialize_options(self):
+        self.layout = "html,rst"
+        self.nbformats = "ipynb,slides,html,python,rst,github"
+
+    def finalize_options(self):
+        pass
+
+    def run(self):
+        from pyquickhelper.pycode import process_standard_options_for_setup
+        parameters = self.get_parameters()
+        parameters['argv'] = ['build_sphinx']
+        parameters['layout'] = self.layout.split(',')
+        parameters['nbformats'] = self.nbformats.split(',')
+        process_standard_options_for_setup(**parameters)
+
+
+defcla = default_cmdclass().copy()
+defcla["build_sphinx"] = SetupCommandSphinx
+
+
 setup(
     name=project_var_name,
     version=read_version(__file__, project_var_name, subfolder='src'),
@@ -56,7 +85,7 @@ setup(
     download_url="https://github.com/sdpython/ensae_teaching_cs/",
     description=DESCRIPTION,
     long_description=read_readme(__file__),
-    cmdclass=default_cmdclass(),
+    cmdclass=defcla,
     keywords=KEYWORDS,
     classifiers=CLASSIFIERS,
     packages=packages,
