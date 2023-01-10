@@ -1,0 +1,11 @@
+
+.. blogpost::
+    :title: Forward, forward
+    :keywords: apprentissage, optimisation, gradient
+    :date: 2023-01-11
+    :categories: paper
+
+    Un article intéressant :
+
+    `The Forward-Forward Algorithm: Some Preliminary Investigations
+    <https://www.cs.toronto.edu/~hinton/FFA13.pdf>`_
