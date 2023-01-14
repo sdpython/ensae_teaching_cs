@@ -7,5 +7,17 @@
 
     Un article intéressant :
 
-    `The Forward-Forward Algorithm: Some Preliminary Investigations
-    <https://www.cs.toronto.edu/~hinton/FFA13.pdf>`_
+    * `The Forward-Forward Algorithm: Some Preliminary Investigations
+      <https://www.cs.toronto.edu/~hinton/FFA13.pdf>`_
+    * `Noise-contrastive estimation: A new estimation principle for unnormalized statistical models
+      <https://proceedings.mlr.press/v9/gutmann10a.html>`_
+
+    Et d'autres papiers :
+
+    * `A Succinct Summary of Reinforcement Learning
+      <https://arxiv.org/abs/2301.01379>`_
+    * `Top ML Papers of the Week (Jan 1-8)
+      <https://github.com/dair-ai/ML-Papers-of-the-Week>`_
+    * `sparseml <https://github.com/neuralmagic/sparseml>`_
+    * `solo-learn <https://github.com/vturrisi/solo-learn>`_
+    * `deepchecks <https://github.com/deepchecks/deepchecks>`_
