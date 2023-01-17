@@ -11,6 +11,8 @@
       <https://www.cs.toronto.edu/~hinton/FFA13.pdf>`_
     * `Noise-contrastive estimation: A new estimation principle for unnormalized statistical models
       <https://proceedings.mlr.press/v9/gutmann10a.html>`_
+    * `Training language models to follow instructions with human feedback
+      <https://arxiv.org/abs/2203.02155>`_
 
     Et d'autres papiers :
 
