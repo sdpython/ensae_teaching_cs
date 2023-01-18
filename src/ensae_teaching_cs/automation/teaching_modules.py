@@ -20,7 +20,7 @@ def get_teaching_modules(branch=True):
         print('\\n'.join(sorted(get_teaching_modules())))
     """
     mods = ['deeponnxcustom:main', 'onnxcustom',
-            "pymlbenchmark", "_benchmarks", "ensae_teaching_dl",
+            "pymlbenchmark", "ensae_teaching_dl",
             "lecture_citation", "pyquickhelper", "jyquickhelper",
             "python3_module_template", "pymmails", "pymyinstall",
             "pyensae", "pyrsslocal", "ensae_projects", "ensae_teaching_cs",

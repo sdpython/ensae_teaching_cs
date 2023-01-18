@@ -951,11 +951,6 @@ Contenu
 
     * - module
       - description
-    * - `benchmarks <http://www.xavierdupre.fr/app/_benchmarks/helpsphinx/index.html>`_
-      - Expériences de machine learning comparant deux approches.
-        C'est parti d'une pull request pour :epkg:`scikit-learn`
-        à propos de d'une meilleure implémentation d'un algorithme
-        de calcul des features polynômiales.
     * - `actuariat_python <http://www.xavierdupre.fr/app/actuariat_python/helpsphinx/index.html>`_
       - Contenu des enseignements donnés à l'Institut des Actuaires.
     * - `code_beatrix <http://lesenfantscodaient.fr>`_
