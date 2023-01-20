@@ -13,6 +13,10 @@
       <https://proceedings.mlr.press/v9/gutmann10a.html>`_
     * `Training language models to follow instructions with human feedback
       <https://arxiv.org/abs/2203.02155>`_
+    * `Attention Is All You Need
+      <https://proceedings.neurips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf>`_
+    * `Optimal Transport for Counterfactual Estimation: A Method for Causal Inference
+      <https://arxiv.org/abs/2301.07755>`_
 
     Et d'autres papiers :
 
