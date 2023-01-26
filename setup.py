@@ -52,7 +52,8 @@ class SetupCommandSphinx(_SetupCommand):
 
     user_options = [
         ('layout=', None, 'format generation, default is html,rst.'),
-        ('nbformats=', None, 'format generation, default is ipynb,slides,html,python,rst,github'),
+        ('nbformats=', None,
+         'format generation, default is ipynb,slides,html,python,rst,github'),
     ]
 
     def initialize_options(self):

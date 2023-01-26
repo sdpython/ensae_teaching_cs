@@ -142,6 +142,7 @@ connaît déjà quelques algorithmes connus.
     notebooks/recherche_dichotomique
     notebooks/nbheap
     notebooks/2020_topk
+    notebooks/pivot_gauss
     specials/algorithm_culture
     specials/np_complet
     specials/graphes
