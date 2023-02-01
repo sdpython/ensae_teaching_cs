@@ -17,7 +17,7 @@ set_sphinx_variables(__file__, "Python dans tous ses états", "Xavier Dupré",
                      book=True, nblayout='table',
                      doc_version=ensae_teaching_cs.__version__)
 
-html_logo = "phdoc_static/project_ico_small.png"
+html_logo = "_static/project_ico_small.png"
 language = "fr"
 html_split_index = True
 
