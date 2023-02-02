@@ -1,5 +1,5 @@
 
-.. image:: https://github.com/sdpython/ensae_teaching_cs/blob/master/_doc/sphinxdoc/source/phdoc_static/project_ico.png?raw=true
+.. image:: https://github.com/sdpython/ensae_teaching_cs/blob/master/_doc/sphinxdoc/source/_static/project_ico.png?raw=true
     :target: https://github.com/sdpython/ensae_teaching_cs/
 
 .. _l-README:
