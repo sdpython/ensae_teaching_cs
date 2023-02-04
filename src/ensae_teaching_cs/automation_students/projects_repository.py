@@ -382,7 +382,7 @@ class ProjectsRepository:
         folds = []
 
         if df.shape[1] == 0:
-            raise Exception("No column in the dataframe.")  # pragma: no cover
+            raise RuntimeError("No column in the dataframe.")  # pragma: no cover
 
         if col_group:
             gr = df.groupby(col_group)
@@ -860,7 +860,7 @@ class ProjectsRepository:
                     rel = os.path.relpath(name, loc)
                     dest = os.path.relpath(name, self._location)
                     if rel == dest:
-                        raise Exception(  # pragma: no cover
+                        raise RuntimeError(  # pragma: no cover
                             f"weird\n{rel}\n{dest}")
                     ssize = format_size(os.stat(name).st_size)
                     if "__MACOSX" not in rel and "__MACOSX" not in dest and \

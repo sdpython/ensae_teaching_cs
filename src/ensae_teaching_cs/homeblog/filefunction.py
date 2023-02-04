@@ -40,7 +40,7 @@ def isTemporaryFolder(path):
             break
         iter += 1
         if iter > 30:
-            raise Exception(
+            raise RuntimeError(
                 "unable to continue, too many subfolders: " + path + "\na,b: " + a + "," + b)
     if b.startswith("temp"):
         return True

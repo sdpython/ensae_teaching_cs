@@ -22,7 +22,7 @@ class TestSuivi(unittest.TestCase):
         groups = list(sorted(repo.Groups))
         gr = groups[0]
         if gr is None or len(gr) < 2:
-            raise Exception(f"Empty group '{gr}'")
+            raise AssertionError(f"Empty group '{gr}'")
         self.assertEqual(gr, 'group_el1')
         emails = repo.get_emails(gr)
         self.assertEqual(emails, ['name.lastname@something.fr', 'name.lastname@something',
@@ -44,16 +44,16 @@ class TestSuivi(unittest.TestCase):
         groups = list(sorted(repo.Groups))
         gr = groups[0]
         if gr is None or len(gr) < 2:
-            raise Exception(f"Empty group '{gr}'")
+            raise AssertionError(f"Empty group '{gr}'")
         self.assertEqual(gr, 'group_el1')
         sections = repo.get_sections(gr)
         names = [k for k in sorted(sections)]
         self.assertEqual(names, ['', 'extrait', 'next',
                                  'pitch', 'programme', 'rapport', 'title'])
         if sections["next"] != ['', '* module tweepy', '']:
-            raise Exception(sections["next"])
+            raise AssertionError(sections["next"])
         if sections["extrait"] != ['', '::', '', '    paragraphe 1', '', '    paragraphe 2', '']:
-            raise Exception(sections["extrait"])
+            raise AssertionError(sections["extrait"])
 
 
 if __name__ == "__main__":

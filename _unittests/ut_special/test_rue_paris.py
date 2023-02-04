@@ -32,7 +32,7 @@ class TestRueParis(ExtTestCase):
             if "unable to retrieve data" in str(e):
                 return
             else:
-                raise Exception("*****" + str(e) + "*****") from e
+                raise AssertionError("*****" + str(e) + "*****") from e
 
         assert len(data) > 0
         total = sum(_[-1] for _ in data)

@@ -53,7 +53,7 @@ def edit_distance(mot1, mot2):
             chemin.append(p)
             p = pred[p]
     except KeyError as e:
-        raise Exception("Issue with:\n'{0}'\n'{1}'\ndist={2}\npred={3}\np={4}".format(
+        raise RuntimeError("Issue with:\n'{0}'\n'{1}'\ndist={2}\npred={3}\np={4}".format(
             mot1, mot2, dist, pred, p)) from e
     chemin.reverse()
     return dist[len(mot1) - 1, len(mot2) - 1], chemin

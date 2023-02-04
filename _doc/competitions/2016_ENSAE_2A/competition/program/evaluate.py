@@ -110,5 +110,5 @@ def AUC(answers, scores):
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        raise Exception(f"bad arguments: {sys.argv}")
+        raise RuntimeError(f"bad arguments: {sys.argv}")
     main_codalab_wrapper(AUC, "AUC", sys.argv)

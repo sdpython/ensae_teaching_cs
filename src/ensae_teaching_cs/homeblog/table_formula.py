@@ -1019,7 +1019,7 @@ class TableFormula(_TableFormulaStat):
             for i, h in enumerate(self.header):
                 self.index[h] = i
         else:
-            raise Exception("unexpected format: " + str(type(lines[0])))
+            raise RuntimeError("unexpected format: " + str(type(lines[0])))
 
         self._auto_conversion(numeric_column)
 
@@ -1051,7 +1051,7 @@ class TableFormula(_TableFormulaStat):
                     elif isinstance(row[i], float):
                         row[i] = datetime.datetime.utcfromtimestamp(row[i])
                     else:
-                        raise Exception(
+                        raise RuntimeError(
                             f"unable to extract a date from type {type(row[i])}")
             elif condition(k):
                 for row in self.values:
@@ -1433,11 +1433,11 @@ class TableFormula(_TableFormulaStat):
             functionsAgg = [sum for f in functionsValue]
         if functionWeight is None:
             if columns is not None and len(columns) != len(functionsValue) + 1:
-                raise Exception("columns should have %d names not(%d)" % (
+                raise RuntimeError("columns should have %d names not(%d)" % (
                     len(functionsValue) + 1, len(columns)))
         else:
             if columns is not None and len(columns) != len(functionsValue) + 2:
-                raise Exception("columns should have %d names not(%d)" % (
+                raise RuntimeError("columns should have %d names not(%d)" % (
                     len(functionsValue) + 2, len(columns)))
         if columns is not None and not isinstance(columns[0], str):
             raise TypeError("expecting type str not %s in columns" %
@@ -2107,7 +2107,7 @@ class TableFormula(_TableFormulaStat):
             value = table.get(('A', 1.1), 2)
         """
         if "indexspecial" not in self.__dict__:
-            raise Exception("no index was created")
+            raise RuntimeError("no index was created")
         row = self.indexspecial[rowIndex]
         if column is None:
             return row
@@ -2559,7 +2559,7 @@ class TableFormula(_TableFormulaStat):
             values.sort()
             al = int(len(values) * removeExtreme / 2)
             if al == 0:
-                raise Exception(  # pragma: no cover
+                raise RuntimeError(  # pragma: no cover
                     "removeExtreme has no impact(%d,%f)" % (
                         len(values), len(values) * removeExtreme / 2))
             if al * 2 < len(values):
@@ -2618,7 +2618,7 @@ class TableFormula(_TableFormulaStat):
             values.sort()
             al = int(len(values) * removeExtreme / 2)
             if al == 0:
-                raise Exception(  # pragma: no cover
+                raise RuntimeError(  # pragma: no cover
                     "removeExtreme has no impact(%d,%f)" % (
                         len(values), len(values) * removeExtreme / 2))
             if al * 2 < len(values):
@@ -2643,7 +2643,7 @@ class TableFormula(_TableFormulaStat):
                 if x not in value:
                     # it means extremes were removed
                     continue
-                    #raise Exception("value %d,%f is not allowed min,max = [%f,%f]" %(x, temp[_], mi, ma))
+                    #raise RuntimeError("value %d,%f is not allowed min,max = [%f,%f]" %(x, temp[_], mi, ma))
                 value[x][_] = value[x].get(_, 0.) + 1.
                 su[_] = su.get(_, 0.) + 1.
 
@@ -2686,7 +2686,7 @@ class TableFormula(_TableFormulaStat):
             values.sort()
             al = int(len(values) * removeExtreme / 2)
             if al == 0:
-                raise Exception("removeExtreme has no impact(%d,%f)" % (
+                raise RuntimeError("removeExtreme has no impact(%d,%f)" % (
                     len(values), len(values) * removeExtreme / 2))
             if al * 2 < len(values):
                 values = values[al:len(values) - al]

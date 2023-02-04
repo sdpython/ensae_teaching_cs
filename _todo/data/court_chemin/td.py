@@ -16,20 +16,20 @@ def drawGraph(edges, script, image):
     import struct
     files = ["_graphviz_draw.exe"]
     if not os.path.exists(files[-1]):
-        # on télécharge les fichiers nécessaires d'abord
+        # on tï¿½lï¿½charge les fichiers nï¿½cessaires d'abord
         for f in files:
-            print "téléchargement de ", f
+            print "tï¿½lï¿½chargement de ", f
             url = "http://www.xavierdupre.fr/enseignement/tutoriel_python/graphviz/" + f
             u = urllib.urlopen(url, "rb")
             all = u.read()
             if "404 Not Found" in all:
-                raise Exception("fichier introuvable")
+                raise RuntimeError("fichier introuvable")
             u.close()
             u = open(f, "wb")
             u.write(struct.pack("c" * len(all), *all))
             u.close()
     if not os.path.exists(files[-1]):
-        raise Exception("mauvais téléchargement")
+        raise RuntimeError("mauvais tï¿½lï¿½chargement")
 
     if script == None:
         li = ["digraph{"]
@@ -52,17 +52,17 @@ def drawGraph(edges, script, image):
 
 def charge_donnees(file="matrix_distance_7398.txt"):
     if os.path.exists(file):
-        # si le fichier existe (il a déjà été téléchargé une fois)
+        # si le fichier existe (il a dï¿½jï¿½ ï¿½tï¿½ tï¿½lï¿½chargï¿½ une fois)
         f = open(file, "r")
         text = f.read()
         f.close()
     else:
-        # si le fichier n’existe pas
+        # si le fichier nï¿½existe pas
         link = "http://www.xavierdupre.fr/enseignement/td_python/" + \
             "python_td_minute/data/court_chemin/" + file
         url = urllib.urlopen(link)
         text = url.read()
-# on enregistre les données pour éviter de les télécharger une seconde fois
+# on enregistre les donnï¿½es pour ï¿½viter de les tï¿½lï¿½charger une seconde fois
         f = open(file, "w")
         f.write(text)
         f.close()
@@ -94,7 +94,7 @@ def graphviz_script(mat_dict):
         i1 = vertex[k[0]]
         i2 = vertex[k[1]]
         if i1 < i2 and v < 15000:
-            # on coupe des arcs car le tracé est trop long sinon
+            # on coupe des arcs car le tracï¿½ est trop long sinon
             script.append("%d -- %d [label=\"%skm\"];" % (i1, i2, v / 1000))
     script.append("}")
     return "\n".join(script)

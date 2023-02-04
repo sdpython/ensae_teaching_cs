@@ -25,7 +25,7 @@ class CustomMagics(Magics):
         if "blog" in line:
             return HTML(
                 '<a href="http://www.xavierdupre.fr/blog/xd_blog_nojs.html">blog</a>')
-        raise Exception("unknown command: " + line)
+        raise RuntimeError("unknown command: " + line)
 
     @cell_magic
     def ENSAEb(self, line, cell):
@@ -55,7 +55,7 @@ class CustomMagics(Magics):
                     import pyensae.datasource
                     r = pyensae.datasource.download_data(spl[1])
                     return r
-                raise Exception(f"unable to interpret: {line!r}")
+                raise RuntimeError(f"unable to interpret: {line!r}")
             return self.ENSAEl(line)
         raise RuntimeError("Unable to interpret:\n" + cell)
 

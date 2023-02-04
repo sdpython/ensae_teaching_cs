@@ -54,7 +54,7 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
             if rootn != roott:
                 pp = os.environ.get('PYTHONPATH', '')
                 if "SECONDTRY" in pp:
-                    raise Exception(
+                    raise AssertionError(
                         f"Infinite loog\n{rootn}\n{roott}\n**EXE\n{sys.executable}\n**PP\n{pp}\n****")
                 # We need to run this file with the main python.
                 # Otherwise it fails for tables: DLL load failed.
@@ -80,7 +80,7 @@ class TestNotebook123CoverageHuge(unittest.TestCase):
                     lines = [_ for _ in lines if _[0] != " "]
                     lines = [_ for _ in lines if "warning" not in _.lower()]
                     if len(lines) > 0:
-                        raise Exception("--CMD:\n{0}\n--OUT:\n{1}\n--ERR\n{2}\n--ERR2\n{3}\n--PP\n{4}".format(
+                        raise AssertionError("--CMD:\n{0}\n--OUT:\n{1}\n--ERR\n{2}\n--ERR2\n{3}\n--PP\n{4}".format(
                             cmd, out, err, "\n".join(lines), pp))
             return
 

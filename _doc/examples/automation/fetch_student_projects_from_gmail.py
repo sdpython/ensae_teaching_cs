@@ -74,7 +74,7 @@ if os.path.exists(path_df):
     df_group = pandas.read_excel(path_df, engine='openpyxl')
     for col in [col_subject, col_mail, col_group, col_student]:
         if col not in df_group.columns:
-            raise Exception(f'{col} not in {list(df_group.columns)}')
+            raise RuntimeError(f'{col} not in {list(df_group.columns)}')
 else:
     df_group = None
 

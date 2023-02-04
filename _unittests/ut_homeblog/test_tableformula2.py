@@ -85,7 +85,7 @@ class TestTableFormula2(unittest.TestCase):
         mat = TableFormula(df)
         assert len(mat) == 2344
         if not isinstance(mat.header, list):
-            raise Exception("expecting type: " + str(type(mat.header)))
+            raise AssertionError("expecting type: " + str(type(mat.header)))
         assert mat.header == ['index', 'Date', 'Open',
                               'High', 'Low', 'Close', 'Volume', 'Adj Close']
 

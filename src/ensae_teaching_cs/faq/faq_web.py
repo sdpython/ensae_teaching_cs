@@ -52,7 +52,7 @@ def webshot(img, url, navigator=default_driver, add_date=False,
     if not isinstance(img, list):
         img = [img]
     if len(url) != len(img):
-        raise Exception("different number of urls and images")
+        raise RuntimeError("different number of urls and images")
     for u, i in zip(url, img):
         fLOG("url", url, " into ", img)
         browser.get(u)
@@ -155,7 +155,7 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
     elif navigator == "edge":
         browser = webdriver.Edge()
     else:
-        raise Exception(
+        raise RuntimeError(
             f"unable to interpret the navigator '{navigator}'")
     fLOG("[_get_selenium_browser] navigator is started")
     return browser

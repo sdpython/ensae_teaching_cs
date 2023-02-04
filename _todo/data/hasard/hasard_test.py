@@ -1,7 +1,7 @@
 # coding:latin-1
 """
-On cherche à comparer deux fonctions qui simulent une variable aléatoire multinomiale.
-Elles utilisent deux fonctions différentes simulant une loi uniforme différente.
+On cherche ï¿½ comparer deux fonctions qui simulent une variable alï¿½atoire multinomiale.
+Elles utilisent deux fonctions diffï¿½rentes simulant une loi uniforme diffï¿½rente.
 """
 
 chideux_table = [3.84, 5.99, 7.82, 9.49, 11.07,
@@ -13,9 +13,9 @@ import numpy as np
 
 
 def tirage_entier(proba):
-    """tire un nombre aléatoire entre 1 et len(proba)
-    selon la distribution indiquée par proba
-    on suppose que chaque valeur * 100 est entière"""
+    """tire un nombre alï¿½atoire entre 1 et len(proba)
+    selon la distribution indiquï¿½e par proba
+    on suppose que chaque valeur * 100 est entiï¿½re"""
     r = random.randint(1, 10)
     x = 0
     i = 0
@@ -24,12 +24,12 @@ def tirage_entier(proba):
         if r <= x:
             return i + 1
         i += 1
-    raise Exception("impossible a priori sauf si sum(proba) != 1")
+    raise RuntimeError("impossible a priori sauf si sum(proba) != 1")
 
 
 def tirage_reel(vecteur):
-    """tire un nombre aléatoire entre 1 et len(vecteur)
-    selon la distribution indiquée par vecteur"""
+    """tire un nombre alï¿½atoire entre 1 et len(vecteur)
+    selon la distribution indiquï¿½e par vecteur"""
     a = random.uniform(0, 1)
     p = 0
     k = 1
@@ -54,7 +54,7 @@ def tirages(N, fonction, proba):
 
 
 def chideux(cont, proba):
-    """calcul le chi deux entre la distribution simulée et la distribution théorique"""
+    """calcul le chi deux entre la distribution simulï¿½e et la distribution thï¿½orique"""
     s = 0
     t = sum(cont.values())
     for i, v in enumerate(proba):
@@ -113,7 +113,7 @@ def tiragesT(T, N, fonction, p1, p2, p3):
 
 def proba2_th(t, p1, p2, p3):
     """
-    retourne la probabilité théorique de distribution du tirage t
+    retourne la probabilitï¿½ thï¿½orique de distribution du tirage t
     """
     if t == 1:
         return p1

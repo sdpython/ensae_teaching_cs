@@ -3,7 +3,7 @@
 
 \firstpassagedo{
 \newcommand{\sametextforthisinterro}[0]{ 
-\huge Formation pour l'Actuaire Data Scientist, TD noté
+\huge Formation pour l'Actuaire Data Scientist, TD notï¿½
 \normalsize
 }
 
@@ -12,13 +12,13 @@
 
 
 \exosubject{}
-\begin{xexercice}\label{td_note_label1__2016}%\indexfrr{énoncé}{pratique}
+\begin{xexercice}\label{td_note_label1__2016}%\indexfrr{ï¿½noncï¿½}{pratique}
 
 
-Louer ou acheter un appartement ? A surface égale, est-il préférable de louer ou d'acheter son appartement~? Cet exercice propose différentes questions afin d'y répondre. On rappelle le mécanisme d'un prêt. On emprunte une somme $K$ à un taux $p$ et on paye une mensualité $M$. Le taux mensuel est $m=(1+p)^\frac{1}{12}-1$. 
-Ce taux s'applique chaque mois sur la somme du capital restant à rembourser. Au mois suivant, l'emprunteur aura payé $M$ euros dont $Km$ en intérêt et $M-Km$ en capital. Le mois suivant, l'emprunteur doit rembourser $K-Km$.
+Louer ou acheter un appartement ? A surface ï¿½gale, est-il prï¿½fï¿½rable de louer ou d'acheter son appartement~? Cet exercice propose diffï¿½rentes questions afin d'y rï¿½pondre. On rappelle le mï¿½canisme d'un prï¿½t. On emprunte une somme $K$ ï¿½ un taux $p$ et on paye une mensualitï¿½ $M$. Le taux mensuel est $m=(1+p)^\frac{1}{12}-1$. 
+Ce taux s'applique chaque mois sur la somme du capital restant ï¿½ rembourser. Au mois suivant, l'emprunteur aura payï¿½ $M$ euros dont $Km$ en intï¿½rï¿½t et $M-Km$ en capital. Le mois suivant, l'emprunteur doit rembourser $K-Km$.
 
-\exequest La fonction suivante calcule toutes les mensualités de ce prêt.
+\exequest La fonction suivante calcule toutes les mensualitï¿½s de ce prï¿½t.
 
 \begin{verbatimx}
 def mensualites(K,M,p):
@@ -27,7 +27,7 @@ def mensualites(K,M,p):
         i = K * ((1+p)**(1.0/12)-1)
         cap = M-i
         if cap < 0:
-            raise Exception("cas exceptionnel")
+            raise RuntimeError("cas exceptionnel")
         K -= cap
         if K < 0:
             res.append(M + K)  #  ligne A
@@ -37,12 +37,12 @@ def mensualites(K,M,p):
 \end{verbatimx}
 
 \begin{itemize}
-\item Quelle relation relie le durée du prêt et la longueur de la liste retournée par la fonction ? (1 point)
+\item Quelle relation relie le durï¿½e du prï¿½t et la longueur de la liste retournï¿½e par la fonction ? (1 point)
 \item A quoi correspond le cas exceptionnel ? (1 point)
 \item A quoi sert la ligne A ? (1 point)
 \end{itemize}
 
-\exequest La fonction précédente calcule la durée d'un prêt en fonction du montant, de la mensualité et du taux d'intérêt ? Que fait la fonction suivante ? (1 point)
+\exequest La fonction prï¿½cï¿½dente calcule la durï¿½e d'un prï¿½t en fonction du montant, de la mensualitï¿½ et du taux d'intï¿½rï¿½t ? Que fait la fonction suivante ? (1 point)
 
 \begin{verbatimx}
 def somme_maximale(M,p,Y):
@@ -55,7 +55,7 @@ def somme_maximale(M,p,Y):
 \end{verbatimx}
 		
 
-\exequest A Paris, on loue un appartement pour $L$ euros du m$^2$. Un parisien loue son appartement de $S m^2$ pour $SL$ euros. Ce parisien peut dépenser $A$ euros par mois répartis en $SL$ le loyer et $A-SL$ les économies. Ecrire une fonction qui calcule les économies réalisées au bout de $Y$ années : (1~point)
+\exequest A Paris, on loue un appartement pour $L$ euros du m$^2$. Un parisien loue son appartement de $S m^2$ pour $SL$ euros. Ce parisien peut dï¿½penser $A$ euros par mois rï¿½partis en $SL$ le loyer et $A-SL$ les ï¿½conomies. Ecrire une fonction qui calcule les ï¿½conomies rï¿½alisï¿½es au bout de $Y$ annï¿½es : (1~point)
 
 \begin{verbatimx}
 def economie(A,S,L,r,Y):
@@ -64,35 +64,35 @@ def economie(A,S,L,r,Y):
 \end{verbatimx}
  
 
-\exequest En considérant que ce même parisien ne peut dépenser plus de $A$ euros par mois, qu'il ne possède rien au début de sa carrière professionnelle, on veut connaître la surface qu'il sera en mesure d'acheter chaque année entre 20 et 40 ans. On suppose qu'il peut se constituer un apport en capital issu de ces économies et d'un don de ses parents. On suppose que le prix au mètre carré à Paris est $C$ et qu'il veut emprunter avec un prêt d'une durée fixe. Voici les constantes à utiliser : (2~points)
+\exequest En considï¿½rant que ce mï¿½me parisien ne peut dï¿½penser plus de $A$ euros par mois, qu'il ne possï¿½de rien au dï¿½but de sa carriï¿½re professionnelle, on veut connaï¿½tre la surface qu'il sera en mesure d'acheter chaque annï¿½e entre 20 et 40 ans. On suppose qu'il peut se constituer un apport en capital issu de ces ï¿½conomies et d'un don de ses parents. On suppose que le prix au mï¿½tre carrï¿½ ï¿½ Paris est $C$ et qu'il veut emprunter avec un prï¿½t d'une durï¿½e fixe. Voici les constantes ï¿½ utiliser : (2~points)
 
 \begin{center}\begin{small}\begin{tabular}{l|r|l|l} 
-nom & valeur & unité & sens \\ \hline
+nom & valeur & unitï¿½ & sens \\ \hline
 D & 50000 & euros & don de ses parents \\
-A & 1200 & euros/mois & somme allouée au loyer + économies \\
+A & 1200 & euros/mois & somme allouï¿½e au loyer + ï¿½conomies \\
 S & 35 & $m^2$ &  surface de l'appartement \\
-L & 25 & euros/$m^2$ & prix du loyer au mètre carré \\
+L & 25 & euros/$m^2$ & prix du loyer au mï¿½tre carrï¿½ \\
 r & 0.01 & & rendement annuel de l'argent (livret A) \\
-Y & 20 &  années & durée de l'emprunt \\
-C & 8000 & euros/$m^2$ & prix d'achat au mètre carré \\
+Y & 20 &  annï¿½es & durï¿½e de l'emprunt \\
+C & 8000 & euros/$m^2$ & prix d'achat au mï¿½tre carrï¿½ \\
 p & 0.02 & & taux annuel de l'emprunt bancaire  
 \end{tabular}\end{small}\end{center}
 
 \begin{verbatimx}
 def tableau_surface(D,A,S,L,r,Y,C,p):
     # ....
-    return liste [(année, surface, prix)]
+    return liste [(annï¿½e, surface, prix)]
 \end{verbatimx}
 
-\exequest Même question mais on tient compte de l'inflation du prix du mètre carré à Paris, environ $i=5\%$ par ans. (2~points)
+\exequest Mï¿½me question mais on tient compte de l'inflation du prix du mï¿½tre carrï¿½ ï¿½ Paris, environ $i=5\%$ par ans. (2~points)
 
-\exequest Construire un dataframe avec les résultats de la fonction précédente. Ce dataframe aura une ligne pour chaque année et trois colonnes pour trois taux d'inflation différents : 3\%, 5\%, 7\%. Afficher les trois courbes sur le même graphique.
+\exequest Construire un dataframe avec les rï¿½sultats de la fonction prï¿½cï¿½dente. Ce dataframe aura une ligne pour chaque annï¿½e et trois colonnes pour trois taux d'inflation diffï¿½rents : 3\%, 5\%, 7\%. Afficher les trois courbes sur le mï¿½me graphique.
 
-\exequest Même question mais on tient compte d'une augmentation de salaire selon un scénario de votre choix. (2~points)
+\exequest Mï¿½me question mais on tient compte d'une augmentation de salaire selon un scï¿½nario de votre choix. (2~points)
 
-\exequest Construire un dataframe avec les résultats de la fonction précédente. Ce dataframe aura une ligne pour chaque année et trois colonnes pour trois scénarios différents. Afficher les trois courbes sur le même graphique. (1~point)
+\exequest Construire un dataframe avec les rï¿½sultats de la fonction prï¿½cï¿½dente. Ce dataframe aura une ligne pour chaque annï¿½e et trois colonnes pour trois scï¿½narios diffï¿½rents. Afficher les trois courbes sur le mï¿½me graphique. (1~point)
 
-\exequest Fusionner les deux tableaux de la manière la plus élégante qui soit. (1~point).
+\exequest Fusionner les deux tableaux de la maniï¿½re la plus ï¿½lï¿½gante qui soit. (1~point).
 
 
 \end{xexercice}
@@ -101,19 +101,19 @@ def tableau_surface(D,A,S,L,r,Y,C,p):
 \newpage 
 
 \exosubject{}
-\begin{xexercice}\label{td_note_label6_2016}%\indexfrr{énoncé}{pratique}
+\begin{xexercice}\label{td_note_label6_2016}%\indexfrr{ï¿½noncï¿½}{pratique}
 
 
-\exequest Michel perd souvent ses carnets de numéros et pour éviter d'importuner ses proches de recevoir des coups de fils impromptus, il utilise un code très simple. On découpe un numéro de téléphone par groupe de deux chiffres. Si la première lettre est une voyelle, il permute le groupe 2 avec le groupe 3 sinon il les laisse en l'état. Si la seconde lettre est une voyelle, il permute le groupe 3 et 4, rien en cas de consonnes. On ne fait rien si la lettre associée au dernier groupe est une voyelle. 
+\exequest Michel perd souvent ses carnets de numï¿½ros et pour ï¿½viter d'importuner ses proches de recevoir des coups de fils impromptus, il utilise un code trï¿½s simple. On dï¿½coupe un numï¿½ro de tï¿½lï¿½phone par groupe de deux chiffres. Si la premiï¿½re lettre est une voyelle, il permute le groupe 2 avec le groupe 3 sinon il les laisse en l'ï¿½tat. Si la seconde lettre est une voyelle, il permute le groupe 3 et 4, rien en cas de consonnes. On ne fait rien si la lettre associï¿½e au dernier groupe est une voyelle. 
 
 \begin{verbatimx}
 adele   06 64 34 22 67
            aa dd ee ll
 					
-Etape 1 06 34 64 22 67    on permute 64 et 34 car le groupe 64 est associé à la lettre a
-Etape 2 06 34 64 22 67    on ne fait rien car le groupe 34 est associé à la lettre d
-Etape 3 06 34 64 67 22    on permute 22 et 67 le groupe 22 est associé à la lettre e
-Etape 4 06 34 64 67 22    on ne fait rien car le groupe 34 est associé à la lettre l
+Etape 1 06 34 64 22 67    on permute 64 et 34 car le groupe 64 est associï¿½ ï¿½ la lettre a
+Etape 2 06 34 64 22 67    on ne fait rien car le groupe 34 est associï¿½ ï¿½ la lettre d
+Etape 3 06 34 64 67 22    on permute 22 et 67 le groupe 22 est associï¿½ ï¿½ la lettre e
+Etape 4 06 34 64 67 22    on ne fait rien car le groupe 34 est associï¿½ ï¿½ la lettre l
 \end{verbatimx}
 
 Un autre exemple :
@@ -123,12 +123,12 @@ adele   06 64 34 22 67 --> 06 34 64 67 22  lettres 06 aa dd ee ll
 gerard  06 64 34 22 68 --> 06 64 22 34 68  lettres 06 gg ee rr aa
 \end{verbatimx}
 
-Ecrire la fonction qui transforme un numéro. Il est recommandé de ne pas tenir compte des espaces. (2~points)
+Ecrire la fonction qui transforme un numï¿½ro. Il est recommandï¿½ de ne pas tenir compte des espaces. (2~points)
 
 \exequest Ecrire la fonction qui effectue la transformation inverse. (2~points)
 
 
-\exequest Est-ce que cela fonctionne pour le prénom \texttt{Maude} qui contient deux voyelles consécutives ? Peut-on encore retrouver le numéro codé ? (1~point)
+\exequest Est-ce que cela fonctionne pour le prï¿½nom \texttt{Maude} qui contient deux voyelles consï¿½cutives ? Peut-on encore retrouver le numï¿½ro codï¿½ ? (1~point)
 
 
 \end{xexercice}

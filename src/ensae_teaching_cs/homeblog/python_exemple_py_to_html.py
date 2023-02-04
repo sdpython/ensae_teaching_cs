@@ -154,7 +154,7 @@ def py_to_html_file(file, writehtml="", addTracking=True, title=None):
         page = py_page.replace(trackerMarker, tracking_code)
         html = page % (title or f, title or f, block, py2html__version__)
     except Exception as e:  # pragma: no cover
-        raise Exception(
+        raise RuntimeError(
             f"Not a python file, running it again '{file}'.") from e
 
     if len(writehtml) > 0:

@@ -32,7 +32,7 @@ class TestFaqPandas(unittest.TestCase):
                            sort_keys=["v", "i"], as_index=False)
         b = df_equal(exp, res)
         if not b:
-            raise Exception(
+            raise AssertionError(
                 f"dataframe not equal\nRES:\n{str(res)}\nEXP\n{str(exp)}")
 
     def test_df_equal(self):

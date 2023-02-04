@@ -23,11 +23,11 @@ def import_module (name, moduleName = None, url = None, glo = globals(), loc = l
         else :
             if url == None : url = "http://www.xavierdupre.fr/enseignement/tutoriel_python/graphviz/"
             url += file
-            print "téléchargement de ", url
+            print "tï¿½lï¿½chargement de ", url
             u = urllib2.urlopen (url, "r")
             all = u.read ()
             if "404 Not Found" in all and 'if "404 Not Found" in all :' not in all :
-                raise Exception ("fichier introuvable: " + name )
+                raise RuntimeError("fichier introuvable: " + name )
             u.close ()
         u = open (file, "w")
         u.write ( all )

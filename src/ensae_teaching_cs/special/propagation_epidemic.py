@@ -243,7 +243,7 @@ class Person:
                     self.state = 1
                     break
         else:
-            raise Exception("impossible")
+            raise RuntimeError("impossible")
 
     def evolution(self, dt, population):
         """

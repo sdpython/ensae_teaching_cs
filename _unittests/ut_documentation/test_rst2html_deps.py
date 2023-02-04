@@ -84,7 +84,7 @@ class TestRst2HtmlDeps(ExtTestCase):
                 with open(ji, "w", encoding="utf-8") as f:
                     f.write(text)
                 if "ERROR/" in text:
-                    raise Exception(text)
+                    raise AssertionError(text)
                 if "git clone" in text:
                     clone += 1
 

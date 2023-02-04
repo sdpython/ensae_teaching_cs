@@ -33,7 +33,7 @@ def get_file_per_folder(folder, deep=1):
                 res[te] = []
             res[te].append(fi)
         else:
-            raise Exception("deep should be 1 or 2")
+            raise RuntimeError("deep should be 1 or 2")
     return res
 
 
@@ -92,7 +92,7 @@ def normalize_folder(folder, fLOG=noLOG):
                 fLOG("rename", pat, " in ", nee)
                 neelast = os.path.split(nee)[-1]
                 if neelast[0] < 'A' or neelast[0] > 'Z':
-                    raise Exception("bad name for " +
+                    raise RuntimeError("bad name for " +
                                     neelast + "(" + nee + ")")
                 os.rename(pat, nee)
         alls.extend(norm)

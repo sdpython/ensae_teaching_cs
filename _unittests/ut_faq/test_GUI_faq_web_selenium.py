@@ -19,13 +19,13 @@ class TestLONGFaqWeb(ExtTestCase):
         self.assertNotEmpty(html)
         self.assertEqual(len(html[0]), 2)
         if "href" not in html[0][1]:
-            raise Exception(html)
+            raise AssertionError(html)
 
         html = webhtml(url, navigator=navigator)
         self.assertNotEmpty(html)
         self.assertEqual(len(html[0]), 2)
         if "href" not in html[0][1]:
-            raise Exception(html)
+            raise AssertionError(html)
 
     def test_selenium_image(self):
         if is_travis_or_appveyor():

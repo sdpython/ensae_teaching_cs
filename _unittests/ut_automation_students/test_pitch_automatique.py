@@ -37,7 +37,7 @@ class TestFeedback(ExtTestCase):
                 f.write(m[1])
             if i < len(exp):
                 if exp[i] not in m[1]:
-                    raise Exception(f"EXP\n{exp[i]}\nRES\n{m[1]}")
+                    raise AssertionError(f"EXP\n{exp[i]}\nRES\n{m[1]}")
 
     def test_enumerate_send_email(self):
         fLOG(

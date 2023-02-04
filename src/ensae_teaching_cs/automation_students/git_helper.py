@@ -72,7 +72,7 @@ def git_clone(local_folder, url_https, user=None, password=None, timeout=60,
 
         hg = os.path.join(local_folder, ".git")
         if os.path.exists(hg):
-            raise Exception(f"folder {local_folder} should not exist")
+            raise RuntimeError(f"folder {local_folder} should not exist")
 
         if not os.path.exists(hg):
             cmds = """
@@ -95,12 +95,12 @@ def git_clone(local_folder, url_https, user=None, password=None, timeout=60,
 
         hg = os.path.join(local_folder, ".git")
         if os.path.exists(hg):
-            raise Exception(f"folder {local_folder} should not exist")
+            raise RuntimeError(f"folder {local_folder} should not exist")
 
         final = os.path.split(url_user)[-1].replace(".git", "")
         locf = os.path.join(local_folder, final)
         if os.path.exists(locf):
-            raise Exception(
+            raise RuntimeError(
                 f"folder {locf} should not exists before cloning")
 
         cmds = f"""
@@ -212,14 +212,14 @@ def git_first_commit_all_projects(local_folder, user=None, password=None,
     _gitlab_regex = re.compile(".+1.*")
     gitlab = _gitlab_regex.findall(content)
     if len(gitlab) == 0:
-        raise Exception(
+        raise RuntimeError(
             "unable to find the regular expression {0} in {1}".format(
                 _gitlab_regex.pattern,
                 filename))
     if not isinstance(gitlab, list):
         raise TypeError("we expect a list for: " + str(gitlab))
     if len(gitlab) != 1:
-        raise Exception(
+        raise RuntimeError(
             "more than one gitlab repo is mentioned {0} in {1}".format(
                 _gitlab_regex.pattern,
                 filename))
@@ -287,7 +287,7 @@ def create_folders_from_dataframe(df, root, report="suivi.rst", col_student="Ele
     for name, group in gr:
         s = list(set(group[col_subject].copy()))
         if len(s) > 1:
-            raise Exception(
+            raise RuntimeError(
                 "more than one subject for group: " + str(name) + "\n" + str(s))
         # subject = s[0]
         eleves = list(group[col_student])
@@ -428,5 +428,5 @@ def git_check_error(out, err, fLOG):
         fLOG("OUT:\n" + out)
     if len(err) > 0:
         if "error" in err.lower():
-            raise Exception(f"OUT:\n{out}\nERR:\n{err}")
-        raise Exception(err)
+            raise RuntimeError(f"OUT:\n{out}\nERR:\n{err}")
+        raise RuntimeError(err)

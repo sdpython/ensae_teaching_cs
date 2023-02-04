@@ -97,7 +97,7 @@ def get_data(whereTo=".", timeout=None, fLOG=noLOG):
                      p2[0],
                      p2[1])))
         elif i > 0:
-            raise Exception(f"unable to interpret line {i}: " + line)
+            raise RuntimeError(f"unable to interpret line {i}: " + line)
 
     pairs = {}
     for e in edges:
@@ -413,18 +413,18 @@ def euler_path(edges, added_edges):
         for e in le:
             to = e[1] if v != e[1] else e[2]
             if to not in edges_from:
-                raise Exception(
+                raise RuntimeError(
                     "unable to find vertex {0} for edge {0},{1}".format(
                         to,
                         v))
             if to == v:
-                raise Exception(f"circular edge {to}")
+                raise RuntimeError(f"circular edge {to}")
 
     # loop
     path = _explore_path(edges_from, begin)
     for p in path:
         if len(p) == 0:
-            raise Exception("this exception should not happen")
+            raise RuntimeError("this exception should not happen")
     while len(edges_from) > 0:
         start = None
         for i, p in enumerate(path):
@@ -505,11 +505,11 @@ def _explore_path(edges_from, begin):
                 to = e[1] if n != e[1] else e[2]
                 nb -= 1
                 if nb < 0:
-                    raise Exception(f"algorithm issue {len(path)}")
+                    raise RuntimeError(f"algorithm issue {len(path)}")
 
         if len(edges_from[to]) == 1:
             if begin != to:
-                raise Exception("wrong algorithm")
+                raise RuntimeError("wrong algorithm")
             else:
                 stay = False
 

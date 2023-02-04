@@ -184,7 +184,7 @@ def load_and_modify_xml_dom(file, outfile, check_keywords=True):
         inter = [_ for _ in privateKeyClassificationMandatory
                  if _ in mod_keywords]
         if len(inter) == 0:
-            raise Exception("the post should be at least technical or recreative:\n  File: \"" + str(file) + "\ntitle: " + attr[
+            raise RuntimeError("the post should be at least technical or recreative:\n  File: \"" + str(file) + "\ntitle: " + attr[
                             "title"] + "\nkeywords: " + str(keywords) + "\nmandatory\n" + str(privateKeyClassificationMandatory) + "\"")
 
     attr["keywords"] = ", ".join(mod_keywords)

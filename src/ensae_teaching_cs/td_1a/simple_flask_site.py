@@ -47,7 +47,7 @@ def create_application(global_params):
         """
         try:
             if command is None or command == "exception":
-                raise Exception(f"no help for command: {command}")
+                raise RuntimeError(f"no help for command: {command}")
             return Text2Response(f"help for command: {command}")
         except Exception as e:
             return Exception2Response(e)

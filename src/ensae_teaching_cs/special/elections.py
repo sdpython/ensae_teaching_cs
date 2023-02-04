@@ -36,18 +36,18 @@ class ElectionResults:
                           pandas.read_excel(file, sheet_name=f"{level} T2", engine='openpyxl')]
             for i, t in enumerate(self.tours):
                 if len(t) == 0:
-                    raise Exception("no data for tour %d" % (i + 1))
+                    raise RuntimeError("no data for tour %d" % (i + 1))
             self.tours = [self.process_tour(_) for _ in self.tours]
             for i, t in enumerate(self.tours):
                 if len(t) == 0:
-                    raise Exception("no data for tour %d" % i)
+                    raise RuntimeError("no data for tour %d" % i)
             try:
                 self.tours = [
                     _.sort_values(f"Libellé du {self.level}", inplace=False) for _ in self.tours]
             except Exception as e:
                 message = "unable to sort, shape={1} columns={0}".format(
                     ",".join(self.tours[0].columns), self.tours[0].shape)
-                raise Exception(message) from e
+                raise RuntimeError(message) from e
 
     def get_candidates_votes(self, round):
         """
@@ -74,7 +74,7 @@ class ElectionResults:
         """
         if method == "N":
             if len(self.T0) != len(self.T1):
-                raise Exception(
+                raise RuntimeError(
                     "unable to proceed because of different numbers of regions")
             cols0 = [_ for _ in self.tours[
                 0].columns if _ not in self.LevelCol]
@@ -167,7 +167,7 @@ class ElectionResults:
         try:
             unique.sort()
         except TypeError as e:
-            raise Exception("unable to sort " + str(unique) +
+            raise RuntimeError("unable to sort " + str(unique) +
                             f"\ncolumns:{','.join(tour.columns)}") from e
 
         columns0 = [f"Code du {self.level}", f"Libellé du {self.level}", ]
@@ -291,7 +291,7 @@ class ElectionResults:
         @return                 two matrices
         """
         if len(self.T0) != len(self.T1):
-            raise Exception(
+            raise RuntimeError(
                 "unable to proceeed, we need to draw the same regions, assuming both matrices are sorted in the same order")
 
         def resample_matrix(mat, h):

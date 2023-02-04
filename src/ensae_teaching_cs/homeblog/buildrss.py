@@ -120,7 +120,7 @@ def file_build_rss(folder=".", outfile="blog/xdbrss.xml", now=datetime.datetime.
     rows = ["<?xml version=\"1.0\" encoding=\"utf-8\"?>"]
     rows.append(modelForARSSFeed)
     if len(rss) == 0:
-        raise Exception(
+        raise RuntimeError(
             f"No found file in '{folder}' (raw count {nbfile}).")
 
     rss.sort(reverse=True)
@@ -152,6 +152,6 @@ def check_encoding(file):
         f.read()
     except Exception as e:
         size = os.stat(file).st_size
-        raise Exception(
+        raise RuntimeError(
             f"issue with file (size {size})\n  File \"{file}\", line 1") from e
     f.close()

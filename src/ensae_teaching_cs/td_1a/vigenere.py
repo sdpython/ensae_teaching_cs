@@ -97,7 +97,7 @@ def PGCD(m, n):
             print(PGCD(50, 40))
     """
     if m <= 0 or n <= 0:
-        raise Exception("impossible de calculer le PGCD")
+        raise RuntimeError("impossible de calculer le PGCD")
     if m == 1 or n == 1:
         return 1
     if m == n:
@@ -154,7 +154,7 @@ def DecodeVigenereLongueurCle(message, mot=3):
 
     # on extrait le PGCD
     if len(dis) == 0:
-        raise Exception("impossible de determiner la clé")
+        raise RuntimeError("impossible de determiner la clé")
 
     if len(dis) == 1:
         return dis[0]

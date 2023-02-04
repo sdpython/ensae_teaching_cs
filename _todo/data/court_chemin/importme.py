@@ -32,7 +32,7 @@ def import_module(name, moduleName=None, url=None, glo=globals(), loc=locals()):
             u = urllib.urlopen(url, "r")
             all = u.read()
             if "404 Not Found" in all:
-                raise Exception("fichier introuvable")
+                raise RuntimeError("fichier introuvable")
             u.close()
         u = open(file, "w")
         u.write(all)

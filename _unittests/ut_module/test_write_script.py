@@ -21,10 +21,10 @@ class TestWriteScript(ExtTestCase):
             if "__" in content:
                 for line in content.split("\n"):
                     if "__" in line and "sys.path.append" not in line and "__file__" not in line:
-                        raise Exception(content)
+                        raise AssertionError(content)
             if ".xml" in c:
                 if '<outline text="' not in content:
-                    raise Exception(content)
+                    raise AssertionError(content)
 
 
 if __name__ == "__main__":

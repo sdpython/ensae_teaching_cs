@@ -352,7 +352,7 @@ def circuit_eulerien(villes, arbre, screen, pygame, fLOG):
             rows.append(f"arbre[{bm}]={arbre[bm]}")
             rows.append(f"arbre[{arbre[bm][0]}]={arbre[arbre[bm][0]]}")
             mes = "\n".join(rows)
-            raise Exception("this case should not happen\n" + mes)
+            raise RuntimeError("this case should not happen\n" + mes)
 
     if len(done) < len(villes):
         # something is wrong (it might an issue with duplicated points)
@@ -363,7 +363,7 @@ def circuit_eulerien(villes, arbre, screen, pygame, fLOG):
             rows.append(f"c{i}: i={c} -> {villes[c][0]},{villes[c][1]}")
         rows.append(f"bm={bm} ma={ma} bvec={vec2} vec={vec} bl={bl}")
         mes = "\n".join(rows)
-        raise Exception("circuit_eulerien cannot give a path:\n" + mes)
+        raise RuntimeError("circuit_eulerien cannot give a path:\n" + mes)
 
     return chemin
 
@@ -1020,7 +1020,7 @@ def tsp_kruskal_algorithm(points, size=20, length=10, max_iter=None,
     chemin = circuit_eulerien(points, arbre, screen, pygame, fLOG)
 
     if len(chemin) != len(points):
-        raise Exception(  # pragma: no cover
+        raise RuntimeError(  # pragma: no cover
             "The path should include all points: path:{0} points:{1}".format(
                 len(chemin), len(points)))
 

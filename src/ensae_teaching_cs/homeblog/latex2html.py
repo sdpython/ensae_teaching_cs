@@ -56,7 +56,7 @@ def convert_short_latex_into_png(latex, temp_folder=".", fLOG=print,
     os.chdir(cwd)
 
     if "FAILED" in err:
-        raise Exception(
+        raise RuntimeError(
             f"it failed\n-----\n{out}\n----------\n{err}")
     img = os.path.join(temp_folder, "eq0x.png")
     if not os.path.exists(img):

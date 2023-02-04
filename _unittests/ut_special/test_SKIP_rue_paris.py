@@ -32,7 +32,7 @@ class TestSKIPRueParis(unittest.TestCase):
             if "unable to retrieve data" in str(e):
                 return
             else:
-                raise Exception("*****" + str(e) + "*****") from e
+                raise AssertionError("*****" + str(e) + "*****") from e
 
         fLOG(len(data))
         assert len(data) > 0

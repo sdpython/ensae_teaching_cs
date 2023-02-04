@@ -54,7 +54,7 @@ def trigger_on_specific_strings(content, filename=None, force_allow=None):
             if s in ('administrateur', 'administrator'):
                 continue
             if s not in force_allow and s in lower_content:
-                raise Exception(
+                raise RuntimeError(
                     f'string {st}:{s} was found in\n  File "{filename}", line 1')
     return content
 
@@ -148,7 +148,7 @@ def publish_documentation(docs, ftpsite=None, login=None, password=None,
 
     nbnone = [v for k, v in params.items() if v is None or len(v) == 0]
     if len(nbnone) > 0:
-        raise Exception("one of the parameters is None:\n" + str(nbnone))
+        raise RuntimeError("one of the parameters is None:\n" + str(nbnone))
 
     password = params["password"]
     login = params["login"]

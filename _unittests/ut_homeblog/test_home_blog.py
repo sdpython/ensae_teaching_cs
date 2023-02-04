@@ -23,7 +23,7 @@ class TestHomeBlog(unittest.TestCase):
         filessite = explore_folder(blog)[1]
         filessite = [_.replace("\\", "/") for _ in filessite]
         if len(filessite) == 0:
-            raise Exception("no file found")
+            raise AssertionError("no file found")
 
         cpf = CopyFileForFtp("copyDates.txt", specificTrigger=True)
         cpf.copy_file_ext(os.path.join(temp, ".."), "py", temp, doFTP=False)

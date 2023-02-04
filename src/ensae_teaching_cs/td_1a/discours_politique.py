@@ -221,7 +221,7 @@ def get_elysee_speech_from_elysees(title, url="https://www.elysee.fr/"):
         full = title
     else:
         if not url.endswith("/"):
-            raise Exception("url should end with /: " + url)
+            raise RuntimeError("url should end with /: " + url)
         link = remove_accent(title.lower()).replace(
             " ", "-").replace("'", "-").replace('"', "")
         full = url + "/" + link + "/"

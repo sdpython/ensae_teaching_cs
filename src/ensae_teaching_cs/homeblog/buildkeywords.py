@@ -124,7 +124,7 @@ def file_all_keywords(folder=".",
                       exclude=None, allow_temp=False):
     keepfile = find_all_blogs_function(folder, exclude, allow_temp=allow_temp)
     if len(keepfile) == 0:
-        raise Exception("no found file")
+        raise RuntimeError("no found file")
     hist = {}
     store_keywords = {}
     files = []
@@ -418,12 +418,12 @@ def generate_html_article(res,
 
         if post != hist or overwrite:
             if "\xC3" in post:
-                #raise Exception("forbidden character ")
+                #raise RuntimeError("forbidden character ")
                 pass
             if not overwrite:
                 fLOG("  writing ", filename)
             if "### keywords ###" in post.lower():
-                raise Exception(
+                raise RuntimeError(
                     "unable to release that document with this string ### KEYWORDS ###,\nkeywords should be " + str(keystext))
             f = open(filename, "w", encoding="utf8")
             f.write(post)

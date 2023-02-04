@@ -54,15 +54,15 @@ def get_distance_ville(v1, v2, engine):
             try:
                 x = static_google_maps.directions(v1, v2)
             except googlemaps.GoogleMapsError, e:
-                raise Exception("unable to get direction for " +
+                raise RuntimeError("unable to get direction for " +
                                 v1 + "," + v2 + "\n" + str(e))
             r = str(x)
         else:
-            raise Exception("choose an engine in [ mappy, cara, googlemaps ]")
+            raise RuntimeError("choose an engine in [ mappy, cara, googlemaps ]")
 
         rl = r.lower()
         if v1.lower() not in rl or v2.lower() not in rl:
-            raise Exception(
+            raise RuntimeError(
                 "unable to find cities from url\n" + url + "\n" + r)
 
         f = codecs.open(file, "w", "utf-8")

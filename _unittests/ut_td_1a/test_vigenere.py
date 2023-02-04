@@ -88,7 +88,7 @@ class TestVigenere(unittest.TestCase):
                 if message[i] != decode[i]:
                     rows.append(
                         f"{i}: {message[i]} --- {decode[i]}")
-            raise Exception("\n".join(rows))
+            raise AssertionError("\n".join(rows))
 
     def test_vigenere_binary(self):
         fLOG(

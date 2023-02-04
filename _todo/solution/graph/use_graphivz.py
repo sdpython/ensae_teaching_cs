@@ -3,20 +3,20 @@ def import_Graphviz () :
     import os, urllib,struct
     files = [ "_graphviz_draw.exe"]
     if not os.path.exists (files[-1]) :
-        # on télécharge les fichiers nécessaires d'abord
+        # on tï¿½lï¿½charge les fichiers nï¿½cessaires d'abord
         for f in files :
-            print "téléchargement de ", f
+            print "tï¿½lï¿½chargement de ", f
             url = "http://www.xavierdupre.fr/enseignement/tutoriel_python/graphviz/" + f
             u = urllib.urlopen (url, "rb")
             all = u.read ()
             if "404 Not Found" in all :
-                raise Exception ("fichier introuvable")
+                raise RuntimeError("fichier introuvable")
             u.close ()
             u = open (f, "wb")
             u.write ( struct.pack ("c"*len(all), *all))
             u.close()
     if not os.path.exists (files[-1]) :
-        raise Exception ("mauvais téléchargement")
+        raise RuntimeError("mauvais tï¿½lï¿½chargement")
     return files
     
 def drawDiGraph (text, image) :
