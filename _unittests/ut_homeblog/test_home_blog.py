@@ -132,10 +132,10 @@ class TestHomeBlog(unittest.TestCase):
                     fLOG("******* processed", nbproc, "/",
                          len(cpf.modifiedFile), " size", siz)
 
-        # final checking
-        self.assertTrue(len(issues) == 0)
-        self.assertTrue(os.path.join(temp, "2017-01-08_nojs.html"))
-        self.assertTrue(os.path.join(temp, "javascript", "doxy.css"))
+            # final checking
+            self.assertTrue(len(issues) == 0)
+            self.assertTrue(os.path.join(temp, "2017-01-08_nojs.html"))
+            self.assertTrue(os.path.join(temp, "javascript", "doxy.css"))
 
 
 if __name__ == "__main__":
