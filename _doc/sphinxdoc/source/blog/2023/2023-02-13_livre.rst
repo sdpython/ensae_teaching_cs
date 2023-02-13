@@ -1,0 +1,9 @@
+
+.. blogpost::
+    :title: Un livre d'exercice sur le machine learning
+    :keywords: machine learning, exercice
+    :date: 2023-02-13
+    :categories: paper
+
+    `Exercises in Machine Learning
+    <https://arxiv.org/pdf/2206.13446.pdf>`_
