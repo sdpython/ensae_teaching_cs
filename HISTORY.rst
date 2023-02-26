@@ -1,23 +1,27 @@
 
+
 .. _l-HISTORY:
 
 =======
 History
 =======
 
-current - 2021-10-08 - 0.00Mb
+current - 2023-02-26 - 0.00Mb
 =============================
 
+
+0.0.0 - 2023-02-26 - 0.00Mb
+===========================
+
+* #114: Removes boston dataset (2022-12-09)
+* #113: Fixes notebook with maps (2022-12-07)
+* #112: Exam20 (2022-01-30)
+* #110: Cleaning (2021-11-06)
+* #109: Element séance 3A (2021-11-04)
+* #108: Examen 1A 2022 (2021-11-03)
 * #107: Puzzle and other things (2021-10-05)
 * #104: Links on all notebooks on github are broken. (2021-03-31)
 * #106: Update to python 3.9 (2021-01-05)
-
-0.10.3120 - 2021-01-05 - 6.67Mb
-===============================
-
-0.9.3079 - 2020-11-09 - 6.67Mb
-==============================
-
 * #105: Add function to add class names to results for ImageNet competition (2020-11-09)
 * #103: Add way to retrieve shapefiles for French departments (2020-10-12)
 * #100: Fix API issue with worldbank (notebook TD2A_eco_les_API.ipynb) (2020-06-25)
@@ -25,18 +29,10 @@ current - 2021-10-08 - 0.00Mb
 * #98: Update notebook after update to pandas 1.0 (2020-02-26)
 * #81: Notebook sur openmp (2020-01-30)
 * #97: Notebook sur topk with heap (2019-12-16)
-
-0.9.2894 - 2019-11-05 - 6.65Mb
-==============================
-
 * #96: Fix bug in 2048, see pystrat2048 (2019-11-04)
 * #93: Implémenter la solution de l'énigme des dés + notebook (2019-11-04)
 * #94: Enoncés et corrections du TD noté 2019-2020 (2019-10-22)
 * #95: Fix notebook on tastekid API (url has changed) (2019-10-20)
-
-0.9.2878 - 2019-10-15 - 6.65Mb
-==============================
-
 * #92: Add notebooks and helpers to load data for students projects (2019-10-15)
 * #91: Implements LassoRandomForestRegressor which reduces the number of trees of a random forest (2019-09-30)
 * #88: Fix failing unit test due to the move of the website. (2019-09-30)
