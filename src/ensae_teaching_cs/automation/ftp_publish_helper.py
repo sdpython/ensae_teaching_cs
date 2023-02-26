@@ -395,8 +395,9 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr",  # pylint: dis
             projects.append(proj)
 
     if transfer:
-        publish_documentation(projects, ftpsite=ftpsite, login=login, password=password,
-                              footer_html=footer, force_allow=force_allow, delay=delay,
-                              exc=exc_transfer, ftps=ftps, page_transform=page_transform,
-                              fLOG=fLOG)
+        publish_documentation(
+            projects, ftpsite=ftpsite, login=login, password=password,
+            footer_html=footer, force_allow=force_allow, delay=delay,
+            exc=exc_transfer, ftps=ftps, page_transform=page_transform,
+            fLOG=fLOG)
     return projects
