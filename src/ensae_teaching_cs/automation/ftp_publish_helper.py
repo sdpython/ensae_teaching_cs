@@ -275,6 +275,7 @@ def publish_teachings_to_web(login, ftpsite="ftp.xavierdupre.fr",  # pylint: dis
 
     if tracking_id is None:
         tracking_id = ""
+        footer = ""
     else:
         # footer = """
         # """.format(tracking_id)
