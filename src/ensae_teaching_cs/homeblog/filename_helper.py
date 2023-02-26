@@ -92,8 +92,7 @@ def normalize_folder(folder, fLOG=noLOG):
                 fLOG("rename", pat, " in ", nee)
                 neelast = os.path.split(nee)[-1]
                 if neelast[0] < 'A' or neelast[0] > 'Z':
-                    raise RuntimeError("bad name for " +
-                                    neelast + "(" + nee + ")")
+                    raise RuntimeError(f"Bad name for {neelast} ({nee}).")
                 os.rename(pat, nee)
         alls.extend(norm)
     return alls

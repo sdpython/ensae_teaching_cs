@@ -167,8 +167,9 @@ class ElectionResults:
         try:
             unique.sort()
         except TypeError as e:
-            raise RuntimeError("unable to sort " + str(unique) +
-                            f"\ncolumns:{','.join(tour.columns)}") from e
+            msg = ','.join(tour.columns)
+            raise RuntimeError(
+                f"Unable to sort {unique!r}\ncolumns:\n{msg}") from e
 
         columns0 = [f"Code du {self.level}", f"Libellé du {self.level}", ]
         columns1 = ["Abstentions", "Blancs et nuls", ]

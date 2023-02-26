@@ -151,7 +151,7 @@ def _get_selenium_browser(navigator, fLOG=noLOG):
                 fLOG("[_get_selenium_browser] found chromedriver:", chromed)
         else:
             chromed = 'operadriver'
-        browser = webdriver.Opera(chromed)
+        browser = webdriver.Opera(chromed)  # pylint: disable=E1101
     elif navigator == "edge":
         browser = webdriver.Edge()
     else:
