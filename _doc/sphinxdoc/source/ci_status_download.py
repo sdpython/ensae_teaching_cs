@@ -33,7 +33,7 @@ sets = [
     {'onnxruntime-training'},
     {'jyquickhelper', 'pymyinstall', 'pyquickhelper', 'pyensae'},
     {'manydataapi', 'cpyquickhelper', 'mlstatpy', },
-    {'mlinsights', 'mlprodict', 'onnxortext'},
+    {'mlinsights', 'mlprodict', 'onnxortext', 'onnx-array-api'},
     {'csharpy', 'csharpyml', },
     {'pyrsslocal', 'pymmails', },
     {'sparkouille', 'ensae_projects', 'actuariat_python', 'code_beatrix', 'jupytalk'},

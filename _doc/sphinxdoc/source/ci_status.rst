@@ -313,6 +313,19 @@ Tableau de bord et statut des dépendances
       - .. image:: http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/_images/nbcov.png
             :target: http://www.xavierdupre.fr/app/mlstatpy/helpsphinx/all_notebooks_coverage.html
             :alt: Notebook Coverage
+    * - `onnx-array-api <http://www.xavierdupre.fr/app/onnx-array-api/helpsphinx/index.html>`_
+      -
+      -
+      - .. image:: https://dev.azure.com/xavierdupre3/onnx-aray-api/_apis/build/status/sdpython.onnx-aray-api
+            :target: https://dev.azure.com/xavierdupre3/onnx-aray-api/
+      - .. image:: https://badge.fury.io/py/onnx-array-api.svg
+            :target: https://pypi.org/project/onnx-array-api
+      - .. image:: http://img.shields.io/github/issues/sdpython/onnx-array-api.png
+            :alt: GitHub Issues
+            :target: https://github.com/sdpython/onnx-array-api/issues
+      - .. image:: https://codecov.io/github/sdpython/onnx-array-api/coverage.svg?branch=master
+            :target: https://codecov.io/github/sdpython/onnx-array-api?branch=main
+      -
     * - `onnxcustom <http://www.xavierdupre.fr/app/onnxcustom/helpsphinx/index.html>`_
       - .. image:: https://travis-ci.com/sdpython/onnxcustom.svg?branch=master
             :target: https://app.travis-ci.com/github/sdpython/onnxcustom
