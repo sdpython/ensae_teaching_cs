@@ -201,6 +201,7 @@ epkg_dictionary.update({
     "onnx": "https://github.com/onnx/onnx",
     "ONNX": "https://onnx.ai/",
     'onnx-array-api': 'http://www.xavierdupre.fr/app/onnx-array-api/helpsphinx/index.html',
+    'onnx-extended': 'http://www.xavierdupre.fr/app/onnx-extended/helpsphinx/index.html',
     'onnxortext': 'http://www.xavierdupre.fr/app/onnxortext/helpsphinx/index.html',
     "OSM": 'https://www.openstreetmap.org/',
     "OS/X": 'https://fr.wikipedia.org/wiki/MacOS',

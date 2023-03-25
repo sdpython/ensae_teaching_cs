@@ -65,6 +65,7 @@ class TestRst2HtmlDeps(ExtTestCase):
                          onnxcustom='onnxcustom', onnxortext='onnxortext',
                          deeponnxcustom='deeponnxcustom')
             links["onnx-array-api"] = "onnx_array_api"
+            links["onnx-extended"] = "onnx_extended"
             links["scikit-learn"] = "skl"
             links.update({'ML.net': 'mlnet', 'C#': 'C#'})
             for full in fulls:
