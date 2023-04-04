@@ -1,0 +1,14 @@
+
+.. blogpost::
+    :title: Lecture
+    :keywords: machine learning, exercice
+    :date: 2023-04-05
+    :categories: paper
+
+    * `Using Bitwise Operations on Bitfields as a Primitive SIMD
+      <https://www.codeproject.com/Articles/5328556/Using-Bitwise-Operations-on-Bitfields-as-a-Primiti>`_
+    * `Accelerating Feedforward Computation via Parallel Nonlinear Equation Solving
+      <https://arxiv.org/abs/2002.03629>`_
+    * `Memory part 2: CPU caches <https://lwn.net/Articles/252125/>`_
+    * `Optimal Transport for Counterfactual Estimation: A Method for Causal Inference
+      <https://arxiv.org/pdf/2301.07755.pdf>`_
