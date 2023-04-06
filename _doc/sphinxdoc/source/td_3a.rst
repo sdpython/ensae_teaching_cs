@@ -14,7 +14,7 @@ Matthieu Durut,
 Xavier Dupré.
 
 Le cours est évalué avec un :ref:`projet informatique <l-projinfo3a>`.
-Programme de l'année 2021 : :ref:`l-feuille-de-route-2021-3A`.
+Programme de l'année 2021 : :ref:`l-feuille-de-route-2023-3A`.
 
 .. contents::
     :local:
@@ -829,3 +829,4 @@ Feuilles de routes des années passées
     questions/route_3A_2019
     questions/route_3A_2020
     questions/route_3A_2021
+    questions/route_3A_2023
