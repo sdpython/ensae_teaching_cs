@@ -31,6 +31,20 @@ Liens, notebooks prévus pour les séances pratiques.
 Séance 1
 ^^^^^^^^
 
+1.
+
+* hardware
+* ordinateur
+* mémoire partagée
+* ordre de grandeur vitesse CPU, communication
+
+2.
+
+* algorithmes répartis
+* multithread
+* `race condition <https://en.wikipedia.org/wiki/Race_condition>`_
+* verrou
+
 Séance 2
 ^^^^^^^^
 
