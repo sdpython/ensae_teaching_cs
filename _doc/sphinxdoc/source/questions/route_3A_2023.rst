@@ -111,6 +111,41 @@ Séance 3
 
 Séance pratique sur Spark.
 
+1.
+
+* Présentation de spark, objectif
+* HDFS, premiers pas avec Spark, `java <https://en.wikipedia.org/wiki/Java_(programming_language)>`_
+* Notion de spark dataframes
+* `parquet <https://parquet.apache.org/>`_
+
+2.
+
+* Lien avec SQL, group by, join
+* Importance de collect
+* `Spark SQL <https://spark.apache.org/sql/>`_
+* Lecture, écriture
+
+3.
+
+* Distribution : :ref:`hashdistributionrst`
+* Notion de skewed datasets
+* group by + count, group by + mediane
+* Exercice
+
+On veut calculer pour chaque français le nombre de points de vente alimentaires (~44.000)
+situé à moins de trois kilomètres du domicile. Comment faire ? On dispose que deux jeux
+de données :
+
+* la géolocalisation des points de vente alimentaires et leur taille
+* la géolocalisation des français (toutes les adresses connues dans les pages blanches)
+
+4.
+
+* `mllib <https://spark.apache.org/mllib/>`_
+* notion d'algorithmes de streaming, BJKST,
+  `Reservoir Sampling
+  <http://www.xavierdupre.fr/app/sparkouille/helpsphinx/notebooks/reservoir_sampling.html>`_
+
 Séance 4
 ^^^^^^^^
 
