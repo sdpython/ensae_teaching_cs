@@ -152,7 +152,42 @@ Séance 4
 Séance 5
 ^^^^^^^^
 
-Séance pratique sur CUDA.
+CUDA
+
+Les séances pratiques s'appuient sur le package
+`onnx-extended <https://github.com/sdpython/onnx-extended>`_.
+
+::
+
+    git clone https://github.com/sdpython/onnx-extended.git
+    cd onnx-extended
+    python setup.py build_ext --inplace
+
+1.
+
+* CUDA, threads, blocks, parallélisation
+* gestion de la mémoire
+* addition de deux vecteurs
+* code C++, template, macro
+
+2.
+
+* somme des éléments d'un vecteur, réduction
+* synthreads
+* GPU / CPU, __inline__, __globals__, `<<< >>>`
+
+3.
+
+* Profiling
+* device
+* A100, H100
+* float32, float16, float8
+* multiple nvidia on the same machine
+
+4.
+
+* torch
+* `td3a_cpp_deep <https://github.com/sdpython/td3a_cpp_deep>`_
 
 Séance 6
 ^^^^^^^^
