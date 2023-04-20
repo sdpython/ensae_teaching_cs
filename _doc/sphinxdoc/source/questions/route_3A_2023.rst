@@ -179,6 +179,7 @@ Les séances pratiques s'appuient sur le package
 3.
 
 * Profiling
+* `DLPack <https://github.com/dmlc/dlpack>`_
 * device
 * A100, H100
 * float32, float16, float8
