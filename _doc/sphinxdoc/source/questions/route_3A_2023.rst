@@ -169,9 +169,11 @@ Les séances pratiques s'appuient sur le package
 * gestion de la mémoire
 * addition de deux vecteurs
 * code C++, template, macro
+* gcc, nvcc
 
 2.
 
+* pointeurs
 * somme des éléments d'un vecteur, réduction
 * synthreads
 * GPU / CPU, __inline__, __globals__, `<<< >>>`
